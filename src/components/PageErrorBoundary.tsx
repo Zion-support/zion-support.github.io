@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import Link from 'next/link';
 import { ErrorBoundary, FallbackProps  } from 'react-error-boundary';
@@ -76,6 +77,8 @@ function PageErrorFallback(): any ({;
     <div className="min-h-screen bg-zion-blue flex items-center justify-center p-4">
       <div className="max-w-2xl w-full">
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
   },
@@ -257,6 +260,7 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName } PageErrorFall
     }
   },
 
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-zion-blue flex items-center justify-center p-4">
       <div className="max-w-2xl w-full">
@@ -291,10 +295,13 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName } PageErrorFall
             </div>
           )}
           {error?.message && (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <details className="bg-gray-50 rounded-lg p-4 mb-6">
               <summary className="cursor-pointer text-gray-700 font-medium">
                 Technical Details
               </summary>
+<<<<<<< HEAD
               <pre className='mt-2 text-sm text-gray-600 whitespace-pre-wrap break-all overflow-auto'>
                 {error.message}
               </pre>
@@ -311,6 +318,9 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName } PageErrorFall
             <Link
               href='/'
               className='flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors'
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <pre className="mt-2 text-sm text-gray-600 whitespace-pre-wrap break-all overflow-auto">
                 {error.message}
               </pre>;
@@ -330,6 +340,7 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName } PageErrorFall
             <Link 
               href="/"
               className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors"
+<<<<<<< HEAD
             >
               <Home className="w-4 h-4 mr-2" />
   const FallbackComponent =
@@ -371,6 +382,12 @@ export default function PageErrorBoundary({
 
           <div className="flex flex-col sm:flex-row gap-3 mb-6">;
             <button;
+=======
+
+
+            >
+              <Home className="w-4 h-4 mr-2" />
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Go Home
             </Link>
           </div>
@@ -493,7 +510,56 @@ export default function PageErrorBoundary({
               className="text-blue-400 hover:underline";
             >;
               support@zion.tech;
+<<<<<<< HEAD
 ;
+=======
+            </a>;
+            <Link href='/status' className='text - blue - 400 hover:underline'>;
+              Service Status;
+            </Link>;
+          </div>;
+        </div>;
+      </div>;
+    </div>);
+interface PageErrorBoundaryProps {
+  children: React.ReactNode;
+  page_name?: string;
+  fallback?: React.ComponentType < FallbackProps>;
+export default /**
+ * PageErrorBoundary - Function description
+ */
+function PageErrorBoundary() {
+  const handle_error = (error: Error, error_info: React.ErrorInfo) =>: any {
+    prodLogError (
+      `PageErrorBoundary caught error on ${page_name || 'unknown page'}:`,
+      error);
+    logErrorToProduction (
+      error instanceof Error ? error.message : String (error),
+      error instanceof Error ? error : undefined,
+      {
+        page: page_name || 'unknown',
+        component_stack: error_info.component_stack || undefined,
+        error_boundary: 'PageErrorBoundary',
+        timestamp: new Date ().toISOString (),
+
+      }
+    );
+  }
+
+
+  const FallbackComponent = null;
+    fallback ||
+
+
+    ((props: FallbackProps) => (
+      <PageErrorFallback {...props} pageName={pageName} />
+    ))
+      onReset={() => {        // Reset any application state if needed
+
+              href='mailto:support@zion && zion.tech'
+              className='text-blue-400 hover:underline'>;
+              support@zion && zion.tech;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         logInfo(`Resetting error boundary for ${pageName || 'page'}`)
 
@@ -541,16 +607,23 @@ export default function PageErrorBoundary({
               className="text-blue-400 hover:underline";
             >;
               support@zion.tech;
+<<<<<<< HEAD
             </a>;
             <Link href="/status" className="text-blue-400 hover:underline">;
             </a>;
             <Link href="/status" className="text-blue-400 hover:underline">;
+=======
+
+            </a>;
+            <Link href='/status' className='text-blue-400 hover:underline'>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Service Status;
             </Link>;
           </div>;
         </div>;
       </div>;
     </div>;
+<<<<<<< HEAD
     >
       {children}
 }
@@ -563,6 +636,48 @@ export default function PageErrorBoundary({
   );
 } ;
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+  );
+
+interface PageErrorBoundaryProps {;
+  children: React && React.ReactNode;
+  pageName?: string;
+  fallback?: React && React.ComponentType<FallbackProps>;
+
+const Component = React && React.memo(function PageErrorBoundary(): any ({;
+  children,;
+  pageName,;
+  fallback,;
+}: PageErrorBoundaryProps) {;
+  const handleError = (error: Error, errorInfo: React && React.ErrorInfo) => {;
+    prodLogError(;
+      `PageErrorBoundary caught error on ${pageName || 'unknown page'}:`,;
+      error;
+    );
+
+    logErrorToProduction(;
+      error instanceof Error ? error && error.message : String(error),;
+      error instanceof Error ? error : undefined,;
+      {;
+        page: pageName || 'unknown',;
+        componentStack: errorInfo && errorInfo.componentStack || undefined,;
+        errorBoundary: 'PageErrorBoundary',;
+        timestamp: new Date().toISOString(),;
+      }
+    );
+  };
+
+  const FallbackComponent =;
+    fallback ||;
+    ((props: FallbackProps) => (;
+      <PageErrorFallback {...props} pageName={pageName} />;
+    ));
+
+
+      onReset={() => {        // Reset any application state if needed;
+        logInfo(`Resetting error boundary for ${pageName || 'page'}`);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -572,6 +687,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 } ;
+<<<<<<< HEAD
+=======
+} ;
+};
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -629,6 +750,7 @@ export default function PageErrorBoundary({ ;
   )
 }
 }
+<<<<<<< HEAD
 }
 } ;
 } ;
@@ -638,3 +760,6 @@ export default function PageErrorBoundary({ ;
   );
 } ;
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

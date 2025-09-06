@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   talentId, 
   name, 
@@ -37,6 +38,8 @@ interface JobMatchProps {
   onViewDetails?: (matchId: string) => void;
   onInvite?: (matchId: string) => void
 talentId, ;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
 
@@ -51,6 +54,7 @@ talentId, ;
 
 }
 }
+<<<<<<< HEAD
 import React from 'react',;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -59,6 +63,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { Building, MapPin, Clock, DollarSign, Star } from 'lucide-react';
 import { formatDistanceToNow } from "date-fns",;
 import { JobMatch } from "@/types/jobs",;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   talent_id,
@@ -69,6 +75,7 @@ import { JobMatch } from "@/types/jobs",;
   location,
   category,
   match_percent,
+<<<<<<< HEAD
   skills,;
   onApply, ;
   onViewDetails, ;
@@ -300,3 +307,7 @@ export function JobMatchCard({;
 ;
 }
 }
+=======
+}
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

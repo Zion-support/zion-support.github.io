@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { useState } from "react"
 import { useJobApplications } from "@/hooks/useJobApplications"
@@ -23,10 +24,13 @@ import { formatDistanceToNow } from "date-fns",
 import Link from "next/link";
 import { ApplicationStatus } from "@/types/jobs";
 export function MyApplications() {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 default:
         return <Badge variant="outline">{status}</Badge>
     }
 
+<<<<<<< HEAD
   const { applications, isLoading, error } = useJobApplications()
   const getStatusBadge = (status: ApplicationStatus,) => {
 import {ApplicationStatus} from "@/types/jobs";
@@ -57,6 +61,9 @@ export function MyApplications() {
   }
 
   if (isLoading) {
+=======
+import {ApplicationStatus} from "@/types/jobs";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return (
       <div className="flex justify-center items-center p-8">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
@@ -86,12 +93,20 @@ export function MyApplications() {
   }
   return (
     <div className="grid gap-4 md:grid-cols-2">
+<<<<<<< HEAD
       {applications.map((application,) => (
       {applications.map((application) => (
+=======
+
+      {applications.map((application) => (
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <Card key={application.id}>
           <CardHeader className="pb-2">
             <div className="flex justify-between items-start">
               <CardTitle className="text-lg">
+<<<<<<< HEAD
       {applications.map((application,) => (
           <CardHeader className="pb-2">
             <div className="flex justify-between items-start">
@@ -99,6 +114,11 @@ export function MyApplications() {
                 {application.job?.title |"Unknown Job"}
                 {application.job?.title |"Unknown Job"}
                 {application.job?.title || "Unknown Job"}
+=======
+
+                {application.job?.title || "Unknown Job"}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </CardTitle>
               {getStatusBadge(application.status)}
             </div>
@@ -110,6 +130,10 @@ export function MyApplications() {
             <div className="space-y-3">
               {application.cover_letter && (
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -136,13 +160,25 @@ export function MyApplications() {;
       </div>;
     );
   }
+<<<<<<< HEAD
   if (error) {;
+=======
+
+
+  if (error) {;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return (
       <div className="text-center p-6 border rounded-md bg-red-50 text-red-800">;
         <p>{error}</p>;
       </div>;
     );
   }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (applications && applications.length === 0) {;
     return (
       <Card className="bg-muted/30">;
@@ -157,6 +193,11 @@ export function MyApplications() {;
       </Card>;
     );
   }
+<<<<<<< HEAD
+=======
+
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (;
     <div className="grid gap-4 md:grid-cols-2">;
       {applications.map((application) => (;
@@ -450,6 +491,7 @@ if ( {) {
         </Card>))}
     </div>);
 }
+<<<<<<< HEAD
   ),; export function MyApplications () {;
   const {;
   applications,  isLoading, error ;
@@ -498,10 +540,18 @@ default: return <Badge variant="outline"> {;
     </div>
   )
 }
+=======
 
     </div>;
   );
 }
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+    </div>;
+  );
+}
+<<<<<<< HEAD
 ;
 
     </div>;
@@ -509,3 +559,6 @@ default: return <Badge variant="outline"> {;
 };
 }
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

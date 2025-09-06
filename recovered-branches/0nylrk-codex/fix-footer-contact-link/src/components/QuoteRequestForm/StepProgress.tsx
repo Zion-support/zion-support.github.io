@@ -1,4 +1,9 @@
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { QuoteRequestSteps } from "../QuoteRequestForm",
 import { CheckIcon } from "@/components/icons",
 import { cn } from "@/lib/utils",
@@ -6,6 +11,7 @@ import { cn } from "@/lib/utils",
 
 interface StepProgressProps {
   currentStep: QuoteRequestSteps
+<<<<<<< HEAD
 }
 
 import {QuoteRequestSteps} from "../QuoteRequestForm";
@@ -24,10 +30,16 @@ export function StepProgress({ currentStep }: StepProgressProps) {
     { id: "details", label: "Details" }
     { id: "timeline", label: "Timeline" }
     { id: "budget", label: "Budget" }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     { id: "service", label: "Service" },
     { id: "details", label: "Details" },
     { id: "timeline", label: "Timeline" },
     { id: "budget", label: "Budget" },
+<<<<<<< HEAD
     { id: "summary", label: "Summary" };
   ];
     { id: "summary", label: "Summary" }
@@ -55,6 +67,8 @@ export function StepProgress({ currentStep }: StepProgressProps) {
     { id: "details", label: "Details" },
     { id: "timeline", label: "Timeline" },
     { id: "budget", label: "Budget" },
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   return (
@@ -69,11 +83,16 @@ export function StepProgress({ currentStep }: StepProgressProps) {
       </div>
       <div className="flex justify-between relative">
         {steps.map((step) => {
+<<<<<<< HEAD
           const status = getStepStatus(step.id),
+=======
+          const status = getStepStatus(step.id);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           return (
             <div key={step.id} className="flex flex-col items-center relative">
               <div
                 className={cn(
+<<<<<<< HEAD
                   "w-8 h-8 rounded-full flex items-center justify-center z-10 transition-colors";
                   status === "complete" ? "bg-zion-purple text-white" :
                   status === "current" ? "bg-zion-cyan border-2 border-zion-purple" :
@@ -121,12 +140,54 @@ interface StepProgressProps {;
 export function StepProgress({ currentStep }: StepProgressProps) {;
 
 
+=======
+
+
+export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const steps: { id: QuoteRequestSteps, label: string }[] = [;
     { id: "service", label: "Service" },;
     { id: "details", label: "Details" },;
     { id: "timeline", label: "Timeline" },;
     { id: "budget", label: "Budget" },;
     { id: "summary", label: "Summary" }
+<<<<<<< HEAD
+=======
+  ];
+
+  const getStepStatus = (stepId: QuoteRequestSteps) => {;
+    const stepOrder = steps && steps.findIndex(s => s && s.id === stepId);
+    const currentStepOrder = steps && steps.findIndex(s => s && s.id === currentStep);
+
+    if (stepOrder < currentStepOrder) return "complete";
+    if (stepOrder === currentStepOrder) return "current",;
+    return "upcoming";
+  };
+
+  return (
+    <div className="relative">;
+      <div className="absolute top-4 left-0 right-0 h-0 && 0.5 bg-zion-blue-light">;
+        <div
+          className="absolute h-full bg-zion-purple transition-all duration-500"
+          style={{ 
+            width: `${(steps && steps.findIndex(s => s && s.id === currentStep) / (steps && steps.length - 1)) * 100}%`;
+          }}
+        />;
+      </div>;
+
+      <div className="flex justify-between relative">;
+        {steps && steps.map((step) => {;
+          const status = getStepStatus(step && step.id);
+          return (
+            <div key={step && step.id} className="flex flex-col items-center relative">;
+              <div
+                className={cn(
+                  "w-8 h-8 rounded-full flex items-center justify-center z-10 transition-colors"
+                  status === "complete" ? "bg-zion-purple text-white" : 
+                  status === "current" ? "bg-zion-cyan border-2 border-zion-purple" : 
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                   "w-8 h-8 rounded-full flex items-center justify-center z-10 transition-colors",
                   status === "complete" ? "bg-zion-purple text-white" : 
@@ -156,6 +217,10 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
             </div>;
           );
         })}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </div>;
     </div>;
   );
@@ -241,6 +306,7 @@ import { cn } from "@/lib/utils",;
 interface StepProgressProps {;
   currentStep:QuoteRequestSteps;
 }
+<<<<<<< HEAD
 ;
 export function StepProgress({ currentStep } StepProgressProps) {;
   const steps:{ id:QuoteRequestSteps, label:string }[] = [;
@@ -310,3 +376,6 @@ export function StepProgress({ currentStep } StepProgressProps) {;
   );
 }
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

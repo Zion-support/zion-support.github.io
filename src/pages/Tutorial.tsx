@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import ReactMarkdown from "react-markdown";
 import type { Tutorial as TutorialType } from "@/types/tutorial";
 import Link from 'next/link'
@@ -41,6 +42,8 @@ export default function Tutorial({
   const router = useRouter();
   const slug = router.query.slug as string | undefined;
   const tutorial = initialTutorial || TUTORIALS.find(t => t.slug === slug);interface TutorialPageProps {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 tutorial?: TutorialType
 }
 export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProps) {
@@ -144,6 +147,7 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
         Tutorial not found.;
       </div>;
     );
+<<<<<<< HEAD
 
   if (!tutorial) {
     return (
@@ -151,6 +155,8 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
         Tutorial not found.
       </div>
     )
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   return (
     <>
@@ -158,6 +164,7 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
         <div className="container mx-auto max-w-3xl">
           <Button
+<<<<<<< HEAD
             variant="outline"
             className="mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
             asChild
@@ -234,14 +241,42 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
               — {typeof tutorial.author === 'string' ? tutorial.author : tutorial.author.name}
             </p>;
           )}
+=======
+            variant='outline'
+            className='mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
+            asChild>;
+            <Link href='/tutorials'>;
+              <ArrowLeft className='mr-2 h-4 w-4' /> Back to Tutorials;
+            </Link>;
+          </Button>;
+          <h1 className='text-3xl font-bold text-white mb-4'>;
+            {tutorial && tutorial.title}
+          </h1>;
+          <p className='text-zion-slate-light mb-8'>{tutorial && tutorial.excerpt}</p>;
+          <div className='prose prose-invert'>;
+            <ReactMarkdown>{tutorial && tutorial.content}</ReactMarkdown>;
+          </div>;
+          {tutorial && tutorial.author && (;
+            <p className='mt-8 text-white font-semibold'>;
+              —{' '}
+              {typeof tutorial && tutorial.author === 'string';
+                ? tutorial && tutorial.author;
+                : tutorial && tutorial.author.name}
+            </p>;
+          )}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </div>;
       </div>;
     </>;
   );
 }
+<<<<<<< HEAD
 ;
 ;
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import Link from 'next / link';
 import { use_router } from 'next / router';
@@ -310,4 +345,8 @@ if ( {) {
       </div>;
     </>);
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

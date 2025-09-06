@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from 'react';
 import Head from 'next/head';
 
@@ -7,10 +11,30 @@ import Head from 'next/head';
 import {useState} from 'react';
 
 
+<<<<<<< HEAD
+=======
+    try {;
+      const res = await fetch('/api/offworld/deploy', { method: 'POST' });      const res = await fetch('/api/offworld/deploy', { method: 'POST' }),;
+      const data = await res && res.json();
+      if (!res && res.ok) throw new Error(data?.error || 'Deploy failed');
+      setCid(data && data.cid);
+      setProvider(data && data.provider || '');
+      setStatus('Deployed successfully');
+    } catch (e: any) {;
+      setError(e && e.message);
+      setStatus('');    }
+  }
+  return (
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className='min-h-screen p-8'>      setStatus('Deployed successfully');
     } catch (e: any) {;
       setError(e && e.message),;
       setStatus('');
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   return (
     <div className='min-h-screen p-8'>;
@@ -46,6 +70,11 @@ import {useState} from 'react';
       <h1 className="text-2xl font-bold mb-4">Zion OS Offworld Deploy</h1>;
       <p className="mb-6">Export the site and pin it to IPFS for disconnected/offworld use.</p>;
       <button className="px-4 py-2 bg-black text-white rounded" onClick={handleDeploy}>Deploy to IPFS</button>;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="min-h-screen p-8">
       <Head>
         <title>Zion Offworld Deploy</title>
@@ -53,12 +82,18 @@ import {useState} from 'react';
       <h1 className="text-2xl font-bold mb-4">Zion OS Offworld Deploy</h1>
       <p className="mb-6">Export the site and pin it to IPFS for disconnected/offworld use.</p>
       <button className="px-4 py-2 bg-black text-white rounded" onClick={handleDeploy}>Deploy to IPFS</button>
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {status && <p className="mt-4 text-green-600">{status}</p>}
       {error && <p className="mt-4 text-red-600">{error}</p>}
       {cid && (;
         <div className="mt-6 space-y-2">;
           <div>CID: <code className="break-all">{cid}</code></div>;
           {provider && <div>Provider: {provider}</div>}
+<<<<<<< HEAD
     </div>;
   );
 }
@@ -68,6 +103,11 @@ import {useState} from 'react';
     </div>
   );
 }
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Head from 'next / head';
 export default /**
  * OffworldDeploy - Function description
@@ -188,6 +228,7 @@ function handle_deploy() {
   )
 
 }
+<<<<<<< HEAD
 
 
 import { useState  } from 'react';
@@ -285,3 +326,10 @@ export default function OffworldDeploy() {;
       )}
     </div>
   );
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

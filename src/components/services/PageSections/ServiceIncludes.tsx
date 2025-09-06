@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Check } from 'lucide-react'
 export function ServiceIncludes() {
   return (
@@ -35,11 +36,15 @@ export function ServiceIncludes() {
 
 
             </div>
+=======
+</div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div>
               <h3 className="text-white font-medium">Transportation to Site</h3>
               <p className="text-zion-slate-light">All travel costs to your location are included in the base price.</p>
             </div>
           </div>
+<<<<<<< HEAD
           <div className='flex items-start'>
             <div className='mt-1 mr-4'>
               <Check className='h-5 w-5 text-zion-cyan' />
@@ -56,12 +61,17 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Check className='h-5 w-5 text-zion-cyan' />
 ursor/fix-website-loading-errors-and-merge-6662
 
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           
           <div className="flex items-start">
             <div className="mt-1 mr-4">
               <Check className="h-5 w-5 text-zion-cyan" />
 
 
+<<<<<<< HEAD
             </div>
               <h3 className='text-white font-medium'>Technical Assessment</h3>
               <p className='text-zion-slate-light'>
@@ -76,19 +86,31 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Check className="h-5 w-5 text-zion-cyan" />
 
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>
             <div>
               <h3 className="text-white font-medium">First Hour of Service</h3>
               <p className="text-zion-slate-light">The first hour of technical work at your site is included.</p>
             </div>
           </div>
+<<<<<<< HEAD
           <div className='flex items-start'>
             <div className='mt-1 mr-4'>
               <Check className='h-5 w-5 text-zion-cyan' />
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           
           <div className="flex items-start">
             <div className="mt-1 mr-4">
               <Check className="h-5 w-5 text-zion-cyan" />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>
             <div>
               <h3 className="text-white font-medium">Technical Assessment</h3>
@@ -96,6 +118,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </div>
           </div>
         </div>
+<<<<<<< HEAD
         <div className='space-y-4'>
           <div className='flex items-start'>
             <div className='mt-1 mr-4'>
@@ -118,30 +141,50 @@ ursor/fix-website-loading-errors-and-merge-6662
               </p>
             </div>
           </div>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         
         <div className="space-y-4">
           <div className="flex items-start">
             <div className="mt-1 mr-4">
               <Check className="h-5 w-5 text-zion-cyan" />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>
             <div>
               <h3 className="text-white font-medium">Basic Hardware Diagnostics</h3>
               <p className="text-zion-slate-light">Component testing and hardware issue identification.</p>
             </div>
           </div>
+<<<<<<< HEAD
           <div className='flex items-start'>
             <div className='mt-1 mr-4'>
               <Check className='h-5 w-5 text-zion-cyan' />
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           
           <div className="flex items-start">
             <div className="mt-1 mr-4">
               <Check className="h-5 w-5 text-zion-cyan" />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>
             <div>
               <h3 className="text-white font-medium">Network Connectivity</h3>
               <p className="text-zion-slate-light">Troubleshooting of basic network connectivity problems.</p>
             </div>
           </div>
+<<<<<<< HEAD
           <div className='flex items-start'>
             <div className='mt-1 mr-4'>
               <Check className='h-5 w-5 text-zion-cyan' />
@@ -153,6 +196,13 @@ ursor/fix-website-loading-errors-and-merge-6662
               </p>            </div>
               <h3 className="text-white font-medium">Service Documentation</h3>
               <p className="text-zion-slate-light">Detailed report of work performed and recommendations.</p>
+=======
+
+
+import { Check } from 'lucide-react'
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function ServiceIncludes() {
   return (
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-8 my-20">
@@ -224,6 +274,7 @@ export function ServiceIncludes() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </div>;
   );
 };
@@ -236,6 +287,14 @@ export function ServiceIncludes() {
     </div>
   )
 }
+=======
+
+
+
+    </div>
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Check } from 'lucide-react';
 export function ServiceIncludes() {;
   return (;
@@ -447,6 +506,7 @@ function ServiceIncludes() {
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </div>;
   );
 }
@@ -454,3 +514,11 @@ function ServiceIncludes() {
 ursor/fix-website-loading-errors-and-merge-6662
     </div>);
 }
+=======
+
+  );
+}
+
+    </div>);
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

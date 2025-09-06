@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 export interface Revolutionary2026Service {;
   id: string;
@@ -1244,6 +1245,16 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
   },
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
+=======
+
+import { ServiceVariant } from '../types / service - variants';
+
+export interface Revolutionary2026Service {
+
+  {
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -1258,18 +1269,36 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
+<<<<<<< HEAD
     mobile: string, email: string,
     address: string,
     website: string
+=======
+      
+    mobile: string, email: string,
+    address: string,
+    website: string
+  
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
+<<<<<<< HEAD
 }
 export const revolutionary2026Services: Revolutionary2026Service[] = [
   // AI-Powered Business Intelligence & Analytics
   {
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+}
+
+export const revolutionary2026Services: Revolutionary2026Service[] = [
+  // AI-Powered Business Intelligence & Analytics
+  {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     id: 'ai-business-intelligence-suite-2026', name: 'AI Business Intelligence Suite 2026',
     tagline: 'Next-generation AI-powered business analytics and decision intelligence', price: '$299',
     period: '/month',
@@ -1290,6 +1319,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     competitors: ['TableauPower BILookerQlikDomo'], marketSize: '$29.5B market',
     growthRate: '220% annual growth', variant: 'ai-futuristic',
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
@@ -2404,6 +2434,12 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
+=======
+      
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       website: 'https://ziontechgroup.com';
@@ -2415,8 +2451,14 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4.8,
     reviews: 25;
 
+<<<<<<< HEAD
   }
 ];
+=======
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { ServiceVariant } from '../types/service-variants',;
 export interface Revolutionary2026Service {;
   id: string,;

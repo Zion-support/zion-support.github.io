@@ -1,14 +1,23 @@
 
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume  } from '@/types/resume';
 import { useAuth } from '@/hooks/useAuth';
 export function useFetchResume() {
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 export function useFetchResume() {;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -24,32 +33,53 @@ export function useFetchResume() {;
     try {
       // If resumeId is provided, fetch that specific resume
       // Otherwise, fetch the user's active resume or most recent resume
+<<<<<<< HEAD
 let resumeQuery = supabase && supabase.from('talent_resumes').select('*');
+=======
+
+      let resumeQuery = supabase && supabase.from('talent_resumes').select('*');
+      
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       if (resumeId) {
         resumeQuery = resumeQuery && resumeQuery.eq('id', resumeId)
       } else {
         resumeQuery = resumeQuery
           .eq('user_id', user && user.id)
+<<<<<<< HEAD
       let resumeQuery = supabase.from('talent_resumes').select('*');
       if (resumeId) {
         resumeQuery = resumeQuery.eq('id', resumeId)
       } else {
         resumeQuery = resumeQuery
           .eq('user_id', user.id)
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           .order('is_active', { ascending: false })
           .order('created_at', { ascending: false })
           .limit(1)
       }
+<<<<<<< HEAD
       const { data: resumeData, error: resumeError } = await resumeQuery && resumeQuery.single();
       if (resumeError) {
         if (resumeError && resumeError.code === 'PGRST116') {
       const { data: resumeData, error: resumeError } = await resumeQuery.single();
       if (resumeError) {
         if (resumeError.code === 'PGRST116') {
+=======
+
+      
+      const { data: resumeData, error: resumeError } = await resumeQuery && resumeQuery.single();
+      
+
+      if (resumeError) {
+        if (resumeError && resumeError.code === 'PGRST116') {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           // No resume found, this is not a critical error for a new user
           setResume(null);
           setIsLoading(false);
           return null
+<<<<<<< HEAD
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Resume } from '@/types/resume',;
@@ -62,6 +92,9 @@ export function useFetchResume() {;
   const fetchResume = async (resumeId?: string) => {;
     if (!user) {;
       setError('You must be logged in to access resumes'),;
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Resume} from '@/types / resume';
@@ -147,11 +180,20 @@ if ( {) {
         throw resumeError
       }
       
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Fetch work experience
       const { data: workData, error: workError } = await supabase
         .from('work_history')
         .select('*')
+<<<<<<< HEAD
         .eq('resume_id', resumeData.id)
+=======
+        .eq('resume_id', resumeData && resumeData.id)
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         .order('is_current', { ascending: false })
         .order('start_date', { ascending: false });
       if (workError) throw workError;
@@ -159,7 +201,11 @@ if ( {) {
       const { data: educationData, error: educationError } = await supabase
         .from('education')
         .select('*')
+<<<<<<< HEAD
         .eq('resume_id', resumeData.id)
+=======
+        .eq('resume_id', resumeData && resumeData.id)
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         .order('is_current', { ascending: false })
         .order('start_date', { ascending: false });
       if (educationError) throw educationError;
@@ -167,16 +213,27 @@ if ( {) {
       const { data: skillsData, error: skillsError } = await supabase
         .from('resume_skills')
         .select('*')
+<<<<<<< HEAD
         }
         throw resume_error;
       }
         .eq('resume_id', resumeData && resumeData.id);
         .eq('resume_id', resumeData.id);
+=======
+
+        .eq('resume_id', resumeData && resumeData.id);
+        
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       if (skillsError) throw skillsError;
       // Fetch certifications
       const { data: certData, error: certError } = await supabase
         .from('certifications')
         .select('*')
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         .eq('resume_id', resumeData && resumeData.id);
       if (certError) throw certError;
       const fullResume: Resume = {
@@ -511,5 +568,11 @@ is active: resumeData.is active
     error;
     resume;
 
+<<<<<<< HEAD
     fetchResume}
 }
+=======
+    fetch_resume}
+
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

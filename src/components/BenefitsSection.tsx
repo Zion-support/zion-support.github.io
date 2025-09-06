@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { GradientHeading } from "./GradientHeading",
 import { FeatureCard } from "./FeatureCard",
 import { GradientHeading } from "./GradientHeading";
@@ -21,11 +22,14 @@ interface BenefitsSectionProps {
   className?: string,
   style?: React.CSSProperties
 const getBenefits = (t: any,) => [
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const getBenefits = (t: any) => [
 
 
   {
 
+<<<<<<< HEAD
     icon: <TrendingDown className="w-8 h-8" />}],
 
 export function BenefitsSection({ className, style }: BenefitsSectionProps) {
@@ -77,6 +81,8 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {benefits.map((benefit, index) => (
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     title: t('benefits.ai_matchmaking'),
     description: t('benefits.ai_matchmaking_desc'),
     icon: <Bot className="w-8 h-8" />},
@@ -91,6 +97,10 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
   {
     title: t('benefits.cost_reduction'),
     description: t('benefits.cost_reduction_desc'),
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <GradientHeading>{t('home.benefits_title')}</GradientHeading>
           <p className='text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>
             {t('home.benefits_subtitle')}
@@ -267,8 +277,11 @@ function Page() {
   );
 
 
+<<<<<<< HEAD
   );
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 }
 ";
@@ -428,4 +441,8 @@ export default function Page() {
 }
 ;
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

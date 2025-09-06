@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const fs = require('fs');
 const path = require('path');
@@ -7,6 +8,8 @@ const { execSync } = require('child_process');
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,7 +28,10 @@ console.log('✅ Accessibility check completed');
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -37,6 +43,7 @@ console.log('✅ Accessibility check completed');
 >>>>>>> origin/main
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const fs = require('fs');
 const path = require('path');
@@ -154,6 +161,8 @@ if (require.main === module) {
 >>>>>>> origin/main
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -416,9 +425,12 @@ if (require.main === module) {
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const reportFile = path.join(
   reportsDir,
   `accessibility-report-${Date.now()}.json`
@@ -462,9 +474,12 @@ console.log(`📄 Accessibility report saved to: ${reportFile}`);
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -515,6 +530,9 @@ module.exports = AccessibilityChecker;
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

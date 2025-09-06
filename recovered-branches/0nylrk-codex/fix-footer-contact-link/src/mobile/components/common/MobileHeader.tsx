@@ -2,11 +2,16 @@
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react";
 import {useNavigate} from "react-router-dom";
 import {ChevronLeft, Bell, Settings} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {Button} from "@/components/ui/button";
+<<<<<<< HEAD
 import React from "react",
 import { useNavigate } from "react-router-dom",
 import { ChevronLeft, Bell, Settings } from "lucide-react",
@@ -15,12 +20,23 @@ import { Button } from "@/components/ui/button";
 interface MobileHeaderProps {
 
   title: string
+=======
+interface MobileHeaderProps {;
+  title: string,;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   showBack?: boolean;
   showNotifications?: boolean;
   showSettings?: boolean;
   className?: string;
   onNotificationsClick?: () => void;
+<<<<<<< HEAD
+=======
+  onSettingsClick?: () => void;
+}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function MobileHeader(): any ({;
   title;
   showBack = false;
@@ -31,10 +47,14 @@ export function MobileHeader(): any ({;
   onSettingsClick}: MobileHeaderProps) {;
   const navigate = useNavigate();
   return (
+<<<<<<< HEAD
 import { cn } from "@/lib/utils",
 import { Button } from "@/components/ui/button",
 import { cn } from "@/lib/utils",
 import { Button } from "@/components/ui/button",
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface MobileHeaderProps {
   title: string,
   showBack?: boolean,
@@ -42,6 +62,7 @@ interface MobileHeaderProps {
   showSettings?: boolean,
   className?: string,
   onNotificationsClick?: () => void,
+<<<<<<< HEAD
   onSettingsClick?: () => void
 }
 
@@ -80,6 +101,15 @@ export function MobileHeader({
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",
 
 
+=======
+
+  onSettingsClick?: () => void
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       className
     )}>
       <div className="flex items-center justify-between h-14 px-4">
@@ -89,9 +119,17 @@ export function MobileHeader({
               variant="ghost"
               size="icon"
               className="mr-2"
+<<<<<<< HEAD
     <headerclassName={cn(
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border"
       className
+=======
+
+    <headerclassName={cn(
+      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border"
+      className
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               onClick={() => navigate(-1)}
             >
               <ChevronLeft className="h-5 w-5" />
@@ -124,12 +162,16 @@ export function MobileHeader({
             </Button>
 
 
+<<<<<<< HEAD
           )}
         </div>
       </div>
     </header>
   )
 }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",;
 import { useNavigate } from "react-router-dom",;
 import { ChevronLeft, Bell, Settings } from "lucide-react",;
@@ -167,6 +209,7 @@ export function MobileHeader({;
     <header className={cn(;
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border";
       className;
+<<<<<<< HEAD
   onSettingsClick} MobileHeaderProps) {;
   const navigate = useNavigate(),;
 ;
@@ -174,10 +217,14 @@ export function MobileHeader({;
     <header className={cn(;
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",;
       className;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     )}>;
       <div className="flex items-center justify-between h-14 px-4">;
         <div className="flex items-center">;
           {showBack && (;
+<<<<<<< HEAD
             <Button ;
               variant="ghost" ;
               size="icon" ;
@@ -186,6 +233,13 @@ export function MobileHeader({;
               variant="ghost";
               size="icon";
               className="mr-2";
+=======
+            <Button
+              variant="ghost" 
+              size="icon" 
+              className="mr-2" 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               onClick={() => navigate(-1)}
             >;
               <ChevronLeft className="h-5 w-5" />;
@@ -194,10 +248,15 @@ export function MobileHeader({;
           )}
           <h1 className="text-lg font-medium leading-none truncate">;
             {title}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </h1>;
         </div>;
         <div className="flex items-center space-x-2">;
           {showNotifications && (;
+<<<<<<< HEAD
               size="icon"
               onClick={onNotificationsClick}>;
             <Button ;
@@ -210,10 +269,18 @@ export function MobileHeader({;
               size="icon";
               onClick={onNotificationsClick}
             >;
+=======
+            <Button
+              variant="ghost" 
+
+              size="icon"
+              onClick={onNotificationsClick}>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Bell className="h-5 w-5" />;
               <span className="sr-only">Notifications</span>;
             </Button>;
           )}
+<<<<<<< HEAD
           {showSettings && (;
               size="icon"
               onClick={onSettingsClick}>;
@@ -228,13 +295,54 @@ export function MobileHeader({;
               size="icon";
               onClick={onSettingsClick}
             >;
+=======
+
+          {showSettings && (;
+            <Button
+              variant="ghost" 
+
+              size="icon"
+              onClick={onSettingsClick}>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Settings className="h-5 w-5" />;
               <span className="sr-only">Settings</span>;
             </Button>;
           )}
+<<<<<<< HEAD
         </div>;
       </div>;
     </header>;
+=======
+
+        </div>;
+      </div>;
+    </header>;
+  );
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import React from './react';
+import { use_navigate } from './react-router-dom';
+import { ChevronLeft, Bell, Settings } from './lucide-react';
+import { cn } from '@/lib / utils';
+import { Button } from '@/components / ui / button';
+interface MobileHeaderProps {
+  title: string,
+  show_back?: boolean;
+  show_notifications?: boolean;
+  show_settings?: boolean;
+  class_name?: string;
+  onNotificationsClick?: () => void;
+  onSettingsClick?: () => void;
+}
+export /**
+ * MobileHeader - Function description
+ */
+function MobileHeader() {
+  const navigate = use_navigate ();
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <header className={cn (
       "sticky top - 0 z - 40 bg - background / 80 backdrop - blur - sm border - b border - border";
@@ -278,6 +386,7 @@ export function MobileHeader({;
       </div>;
     </header>);
 }
+<<<<<<< HEAD
   ),;}
  interface MobileHeaderProps {
   title: string;
@@ -318,3 +427,6 @@ className)
   );
 }
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,15 +1,20 @@
 
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/WorkspaceHeader.tsx
 
+<<<<<<< HEAD
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {type, Company} from "./CompanyDashboard";
 import {Bell, Users, Settings} from "lucide-react";
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { type Company } from "./CompanyDashboard",
 import { Bell, Users, Settings } from "lucide-react",
 
+<<<<<<< HEAD
 interface WorkspaceHeaderProps {
   company: Company
 }
@@ -65,6 +70,25 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
 
 }
 };
+=======
+
+
+
+
+interface WorkspaceHeaderProps {
+  company: Company
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+
+
+export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
+  return (
+=======
+
+};
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { type Company } from "./CompanyDashboard",;
@@ -75,6 +99,7 @@ interface WorkspaceHeaderProps {;
 ;
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {;
   return (;
+<<<<<<< HEAD
 export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
   return (
 
@@ -89,10 +114,14 @@ interface WorkspaceHeaderProps {;
 ;
 export function WorkspaceHeader({ company } WorkspaceHeaderProps) {;
   return (;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
         <div className="flex items-center gap-4">;
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border">;
+<<<<<<< HEAD
             <img ;
             <img;
               src={company.logoUrl || "/placeholder.svg"} ;
@@ -107,6 +136,22 @@ export function WorkspaceHeader({ company } WorkspaceHeaderProps) {;
             </p>;
           </div>;
         </div>;
+=======
+            <img
+              src={company && company.logoUrl || "/placeholder && placeholder.svg"} 
+              alt={company && company.name} 
+              className="max-h-10 max-w-10"
+            />;
+          </div>;
+          <div>;
+            <h1 className="text-3xl font-bold tracking-tight">{company && company.name} Workspace</h1>;
+            <p className="text-muted-foreground">;
+              {company && company.plan} Plan · {company && company.teamSize} team members;
+            </p>;
+          </div>;
+        </div>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="flex items-center gap-2">;
           <Button variant="outline" size="icon">;
             <Bell className="h-4 w-4" />;
@@ -119,8 +164,12 @@ export function WorkspaceHeader({ company } WorkspaceHeaderProps) {;
           </Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
       ;
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="grid grid-cols-1 sm: grid-cols-3 gap-4">;
         <div className="bg-card rounded-lg p-4 border border-border">;
           <div className="text-sm text-muted-foreground">Active Job Listings</div>;
@@ -136,6 +185,12 @@ export function WorkspaceHeader({ company } WorkspaceHeaderProps) {;
         </div>;
       </div>;
     </div>;
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 :recovered - branches / 0nylrk - codex / fix - footer - contact - link / src / components / enterprise / workspace / WorkspaceHeader.tsx;
 import React from './react';
@@ -198,6 +253,7 @@ function WorkspaceHeader() {
 ;
 
 
+<<<<<<< HEAD
   );}
  interface WorkspaceHeaderProps {
   company: Company 
@@ -219,3 +275,7 @@ function WorkspaceHeader() {
   );
 }
 ;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

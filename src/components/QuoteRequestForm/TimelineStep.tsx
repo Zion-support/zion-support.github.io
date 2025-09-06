@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { format } from 'date-fns'
 import { Calendar } from '@/components/ui/calendar'
 import { Button } from '@/components/ui/button'
@@ -12,6 +13,10 @@ import {
 } from '@/components/ui/popover'
 import { cn } from '@/lib/utils'
 import { QuoteFormData } from '@/types/quotes'
+=======
+<div
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface TimelineStepProps {
   formData: QuoteFormData
   updateFormData: (data: Partial<QuoteFormData>) => void
@@ -35,6 +40,7 @@ interface TimelineStepProps {
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
   return (
 
+<<<<<<< HEAD
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
 interface TimelineStepProps {
   formData: QuoteFormData;
@@ -153,6 +159,11 @@ export function TimelineStep(): any ({ formData, updateFormData }: TimelineStepP
                         format(formData.startDate, 'PPP')
                       ) : (
                         <span>Pick a date</span>
+=======
+    <div className="space-y-6">
+      <div>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData && formData.timeline === 'fixed'
                   ? 'bg-zion-purple/20 border-zion-purple'
@@ -255,10 +266,20 @@ function TimelineStep() {
               </p>;
             </div>;
           </div>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       variant="outline"
                       className={cn(
                         "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark",
                         !formData.startDate && "text-zion-slate-light"
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       )}
                     >
                       <CalendarIcon className="mr-2 h-4 w-4" />
@@ -267,19 +288,28 @@ function TimelineStep() {
                   </PopoverTrigger>
                   <PopoverContent className="w-auto p-0 bg-zion-blue-dark border border-zion-blue-light" align="start">
                     <Calendar
+<<<<<<< HEAD
                       mode='single'
                       selected={formData.startDate}
                       onSelect={date => updateFormData({ startDate: date })}                      initialFocus
                       className='p-3 pointer-events-auto'
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       mode="single"
                       selected={formData.startDate}
                       onSelect={(date) => updateFormData({ startDate: date })}
                       initialFocus
                       className="p-3 pointer-events-auto"
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     />
                   </PopoverContent>
                 </Popover>
               </div>
+<<<<<<< HEAD
               
               <div>
                 <Label className="block mb-2 text-zion-slate-light">End Date</Label>
@@ -336,6 +366,8 @@ function TimelineStep() {
                   </PopoverContent>
                 </Popover>
               </div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
               
@@ -558,11 +590,17 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
                 </Popover>;
               </div>;
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>)}
         </div>;
       </div>;
     </div>);
 }
+<<<<<<< HEAD
               ;
               <div>;
                 <Label className="block mb-2 text-zion-slate-light">Start Date</Label>;
@@ -626,3 +664,6 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
 }
 ;
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

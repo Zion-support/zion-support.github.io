@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import * as React from 'react';
 import {OTPInput, OTPInputContext} from 'input-otp';
 import {Dot} from 'lucide-react';
@@ -48,10 +49,46 @@ const InputOTP = React.forwardRef<
     containerClassName={cn(
       'flex items-center gap-2 has-[:disabled]:opacity-50'
       "flex items-center gap-2 has-[:disabled]:opacity-50",
+=======
+
+
+=======
+import * as React from "react"
+import { OTPInput, OTPInputContext } from "input-otp"
+import { Dot } from "lucide-react"
+
+
+
+
+import { cn } from "@/lib/utils"
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const InputOTP = React.forwardRef<
+  React.ElementRef<typeof OTPInput>
+  React.ComponentPropsWithoutRef<typeof OTPInput>
+></typeof>(({ className, containerClassName, ...props }, ref) => (
+=======
+
+const InputOTP = React && React.forwardRef<;
+  React && React.ElementRef<typeof OTPInput>,;
+  React && React.ComponentPropsWithoutRef<typeof OTPInput>;
+></typeof>(({ className, containerClassName, ...props }, ref) => (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  <OTPInput
+    ref={ref}
+    containerClassName={cn(
+
+
+      "flex items-center gap-2 has-[:disabled]:opacity-50",
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       containerClassName
     )}
     className={cn('disabled:cursor-not-allowed', className)}
     {...props}
+<<<<<<< HEAD
   />
 ));
 InputOTP.displayName = 'InputOTP';
@@ -98,6 +135,8 @@ const InputOTPSlot = React.forwardRef<
       )}
       {...props}
     >;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 InputOTP && InputOTP.displayName = 'InputOTP';
   />
@@ -135,12 +174,16 @@ const InputOTPSlot = React && React.forwardRef<;
         </div>
       )}
     </div>
+<<<<<<< HEAD
   );
 });
 InputOTPSlot.displayName = 'InputOTPSlot';
 const InputOTPSeparator = React.forwardRef<
   React.ElementRef<'div'>
   React.ComponentPropsWithoutRef<'div'>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   )
 })
 InputOTPSlot.displayName = "InputOTPSlot"
@@ -148,6 +191,15 @@ InputOTPSlot.displayName = "InputOTPSlot"
 const InputOTPSeparator = React.forwardRef<
   React.ElementRef<"div">,
   React.ComponentPropsWithoutRef<"div">
+<<<<<<< HEAD
+=======
+
+
+>(({ ...props }, ref) => (
+  <div ref={ref} role='separator' {...props}>
+    <Dot />
+  </div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     </div>;
   );
@@ -220,6 +272,7 @@ export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 InputOTPSeparator.displayName = "InputOTPSeparator"
 
 
+<<<<<<< HEAD
 InputOTP.displayName = "InputOTP";
 ;
 const InputOTPGroup = React.forwardRef<;
@@ -294,3 +347,6 @@ export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator };
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -13,6 +14,8 @@
   poweredByHeader: false
 /** @type {import ('next').NextConfig} */;
 const next_config = {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -20,6 +23,7 @@ const nextConfig = {
   poweredByHeader: false,
   eslint: {
     ignoreDuringBuilds: true
+<<<<<<< HEAD
   },
   typescript: {
   page_extensions: ["tsx", "ts", "jsx", "js"],
@@ -108,6 +112,8 @@ minimumCacheTTL: 31536000,
 
 
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
   
   // Webpack configuration to exclude problematic directories
@@ -179,6 +185,7 @@ origin/main
     if (dev) {
       config.watchOptions = {
         ignored: [
+<<<<<<< HEAD
 
   webpack: (config, { dev, is_server }) => {
 webpack: (config, { dev, is_server }) => {
@@ -189,6 +196,8 @@ if ( {) {
       config.watch_options = {
         ignored: [;
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           "**/node_modules/**",
           "**/.git/**",
           "**/pages_backup*/**",
@@ -226,6 +235,7 @@ if ( {) {
         poll: 1000,
         aggregateTimeout: 300
       }
+<<<<<<< HEAD
         aggregateTimeout: 300,
       };
     }
@@ -293,6 +303,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
   },
   webpack: (config, { dev, isServer }) => {
+=======
+    }
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (!dev && !isServer) {
       config.optimization.splitChunks = {
         chunks: 'all',
@@ -300,13 +314,17 @@ ursor/integrate-build-improve-and-re-verify-8f7d
           vendor: {
             test: /[\\/]node_modules[\\/]/,
             name: 'vendors',
+<<<<<<< HEAD
 origin/main
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             chunks: 'all'
           }
         }
       }
     }
 
+<<<<<<< HEAD
 
     }
     config && config.module.rules && rules.push({
@@ -316,6 +334,8 @@ origin/main
     });
     return config;
   }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Exclude apps directory from compilation
     config.module.rules.push({
       test: /\.(ts|tsx|js|jsx)$/,
@@ -351,6 +371,7 @@ origin/main
     ]
   }
 }
+<<<<<<< HEAD
           '**/node_modules/**',
           '**/.git/**',
           '**/pages_backup*/**',
@@ -440,3 +461,7 @@ export default next_config;
 export default nextConfig
 
 export default nextConfig
+=======
+
+export default nextConfig
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

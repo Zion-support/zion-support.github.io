@@ -29,12 +29,17 @@ export interface AdminAction {;
 }
 export interface FraudDetectionResult {
   is_fraud: boolean;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
 
 export interface FraudDetectionResult {;
 
   isFraud: boolean;
+<<<<<<< HEAD
 // Fraud detection types
 export type AdminActionType =
   | 'ban_user'
@@ -65,24 +70,62 @@ export interface FraudDetectionResult {;
   reasons: string[];
   suggestedActions: AdminActionType[]
   metadata: Record<string, any>;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  confidence: number;
+  reasons: string[];
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   suggested_actions: AdminActionType[],
   metadata: Record < string, any>;
 
 }
 export interface FraudDetectionConfig {
+<<<<<<< HEAD
 
 export interface FraudDetectionConfig {;
 
 export interface FraudDetectionConfig {;
+=======
+=======
+}
+
+
+export interface FraudDetectionConfig {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   enabled: boolean;
   rules: {
     suspiciousActivity: {
       enabled: boolean;
+<<<<<<< HEAD
+=======
+
+      threshold: number,
+    }
+    fake_profile: {
+      enabled: boolean;
+      threshold: number,
+    }
+    payment_fraud: {
+      enabled: boolean;
+      threshold: number,
+    }
+    spam: {
+      enabled: boolean;
+      threshold: number,
+    }
+  }
+  auto_actions: {
+    enabled: boolean;
+    actions: AdminActionType[];
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     confidence_threshold: number,
   }
 }
 
+<<<<<<< HEAD
 
 
 
@@ -107,8 +150,22 @@ export interface FraudDetectionConfig {;
     confidenceThreshold: number
   }
 
+=======
+=======
+
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     confidenceThreshold: number,
   };
 
+<<<<<<< HEAD
 }
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

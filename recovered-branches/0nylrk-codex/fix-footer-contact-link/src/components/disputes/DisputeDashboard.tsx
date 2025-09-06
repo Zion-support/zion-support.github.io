@@ -8,24 +8,41 @@ import {;
   CardTitle,;
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useEffect } from "react";
 import { useDisputes } from "@/hooks/useDisputes";
 import { DisputesList } from "./DisputesList";
 import {
+<<<<<<< HEAD
   Card
   CardContent
   CardDescription
   CardHeader
   CardTitle
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export function DisputeDashboard() {
 
@@ -37,6 +54,7 @@ export function DisputeDashboard() {
     refetch();
   }, [refetch]);
 
+<<<<<<< HEAD
 } from "@/components/ui/card";
 
 import { Button } from "@/components/ui/button";
@@ -62,6 +80,8 @@ import { Button } from "@/components/ui/button",
 import { ShieldAlert } from "lucide-react",
 export function DisputeDashboard() {
   const { disputes, isLoading, refetch } = useDisputes(),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   useEffect(() => {
     refetch()
@@ -71,6 +91,7 @@ export function DisputeDashboard() {
   const underReviewDisputes = disputes.filter(d => d.status === 'under_review'),
   const resolvedDisputes = disputes.filter(d => d.status === 'resolved'),
 
+<<<<<<< HEAD
   return (
     <div className="container mx-auto p-4 space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-4">
@@ -79,16 +100,35 @@ export function DisputeDashboard() {
           <p className="text-muted-foreground">Manage and resolve disputes between clients and talents</p>
         </div>
         
+=======
+
+
+  return (
+
+
+        
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <Button onClick={refetch} variant="outline">
           Refresh
         </Button>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       
 
 
+<<<<<<< HEAD
       
       
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="grid gap-4 md:grid-cols-3">
         <Card>
           <CardHeader className="pb-2">
@@ -99,6 +139,7 @@ export function DisputeDashboard() {
             <CardDescription>Awaiting review</CardDescription>
           </CardHeader>
           <CardContent>
+<<<<<<< HEAD
 export function DisputeDashboard() {;
   const { disputes, isLoading, refetch } = useDisputes();
   useEffect(() => {;
@@ -130,28 +171,48 @@ export function DisputeDashboard() {;
   const resolvedDisputes = disputes.filter(d => d.status === 'resolved'),;
 ;
   return (;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="container mx-auto p-4 space-y-6">;
       <div className="flex flex-wrap items-center justify-between gap-4">;
         <div>;
           <h1 className="text-3xl font-bold">Dispute Resolution Center</h1>;
+<<<<<<< HEAD
           <p className="text-muted-foreground">Manage and resolve disputes between clients and talents</p>;
         </div>;
         ;
+=======
+          <p className="text-muted-foreground">;
+            Manage and resolve disputes between clients and talents;
+          </p>;
+        </div>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <Button onClick={refetch} variant="outline">;
           Refresh;
         </Button>;
       </div>;
+<<<<<<< HEAD
       ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="grid gap-4 md:grid-cols-3">;
         <Card>;
           <CardHeader className="pb-2">;
             <CardTitle className="text-lg font-medium flex justify-between items-center">;
               <span>Open Disputes</span>;
+<<<<<<< HEAD
               <span className="text-xl font-bold">{openDisputes.length}</span>;
+=======
+              <span className="text-xl font-bold">{openDisputes && openDisputes.length}</span>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </CardTitle>;
             <CardDescription>Awaiting review</CardDescription>;
           </CardHeader>;
           <CardContent>;
+<<<<<<< HEAD
             <div
               className={`w-full bg-red-100 rounded-full h-2.5 dark:bg-red-900/20`}
             >
@@ -164,6 +225,16 @@ export function DisputeDashboard() {;
             </div>
           </CardContent>
         </Card>
+=======
+
+            <div
+              className={`w-full bg-red-100 rounded-full h-2 && 2.5 dark:bg-red-900/20`}>;
+              <div
+                className="bg-red-600 h-2 && 2.5 rounded-full"
+                style={{
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className={`w-full bg-red-100 rounded-full h-2.5 dark:bg-red-900/20`}>
               <div className="bg-red-600 h-2.5 rounded-full" style={{ 
                 width: `${Math.min(100, (openDisputes.length / Math.max(1, disputes.length)) * 100)}%` 
@@ -171,22 +242,39 @@ export function DisputeDashboard() {;
             </div>
           </CardContent>
         </Card>
+<<<<<<< HEAD
         
         
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-lg font-medium flex justify-between items-center">
               <span>Under Review</span>
+<<<<<<< HEAD
               <span className="text-xl font-bold">{underReviewDisputes.length}</span>
+=======
+              <span className="text-xl font-bold">
+                {underReviewDisputes.length}
+              </span>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </CardTitle>
             <CardDescription>Being actively processed</CardDescription>
           </CardHeader>
           <CardContent>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   width: `${Math && Math.min(100, (openDisputes && openDisputes.length / Math && Math.max(1, disputes && disputes.length)) * 100)}%`,
                 }}></div>;
             </div>;
           </CardContent>;
         </Card>;
+<<<<<<< HEAD
             <div className={`w-full bg-red-100 rounded-full h-2.5 dark:bg-red-900/20`}>;
               <div className="bg-red-600 h-2.5 rounded-full" style={{ ;
                 width:`${Math.min(100, (openDisputes.length / Math.max(1, disputes.length)) * 100)}%` ;
@@ -195,15 +283,25 @@ export function DisputeDashboard() {;
           </CardContent>;
         </Card>;
         ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <Card>;
           <CardHeader className="pb-2">;
             <CardTitle className="text-lg font-medium flex justify-between items-center">;
               <span>Under Review</span>;
+<<<<<<< HEAD
               <span className="text-xl font-bold">{underReviewDisputes.length}</span>;
+=======
+              <span className="text-xl font-bold">;
+                {underReviewDisputes && underReviewDisputes.length}
+              </span>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </CardTitle>;
             <CardDescription>Being actively processed</CardDescription>;
           </CardHeader>;
           <CardContent>;
+<<<<<<< HEAD
             <div
               className={`w-full bg-yellow-100 rounded-full h-2.5 dark:bg-yellow-900/20`}
             >
@@ -216,6 +314,16 @@ export function DisputeDashboard() {;
             </div>
           </CardContent>
         </Card>
+=======
+
+            <div
+              className={`w-full bg-yellow-100 rounded-full h-2 && 2.5 dark:bg-yellow-900/20`}>;
+              <div
+                className="bg-yellow-500 h-2 && 2.5 rounded-full"
+                style={{
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className={`w-full bg-yellow-100 rounded-full h-2.5 dark:bg-yellow-900/20`}>
               <div className="bg-yellow-500 h-2.5 rounded-full" style={{ 
                 width: `${Math.min(100, (underReviewDisputes.length / Math.max(1, disputes.length)) * 100)}%` 
@@ -223,17 +331,30 @@ export function DisputeDashboard() {;
             </div>
           </CardContent>
         </Card>
+<<<<<<< HEAD
         
         
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-lg font-medium flex justify-between items-center">
               <span>Resolved</span>
+<<<<<<< HEAD
               <span className="text-xl font-bold">{resolvedDisputes.length}</span>
+=======
+              <span className="text-xl font-bold">
+                {resolvedDisputes.length}
+              </span>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </CardTitle>
             <CardDescription>Successfully concluded</CardDescription>
           </CardHeader>
           <CardContent>
+<<<<<<< HEAD
                   width: `${Math && Math.min(100, (underReviewDisputes && underReviewDisputes.length / Math && Math.max(1, disputes && disputes.length)) * 100)}%`,
                 }}></div>;
 
@@ -246,18 +367,33 @@ export function DisputeDashboard() {;
                   width: `${Math.min(100, (resolvedDisputes.length / Math.max(1, disputes.length)) * 100)}%`
                 }}
               ></div>
+=======
+
+                  width: `${Math && Math.min(100, (underReviewDisputes && underReviewDisputes.length / Math && Math.max(1, disputes && disputes.length)) * 100)}%`,
+                }}></div>;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className={`w-full bg-green-100 rounded-full h-2.5 dark:bg-green-900/20`}>
               <div className="bg-green-500 h-2.5 rounded-full" style={{ 
                 width: `${Math.min(100, (resolvedDisputes.length / Math.max(1, disputes.length)) * 100)}%` 
               }}></div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>
           </CardContent>
         </Card>
       </div>
+<<<<<<< HEAD
       <DisputesList disputes={disputes} isLoading={isLoading} />
     </div>
   );
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       
       <DisputesList disputes={disputes} isLoading={isLoading} />
     </div>
@@ -317,6 +453,7 @@ export function DisputeDashboard() {;
               <div className="bg-yellow-500 h-2.5 rounded-full" style={{;
                 width: `${Math.min(100, (underReviewDisputes.length / Math.max(1, disputes.length)) * 100)}%`;
               }}></div>;
+<<<<<<< HEAD
             <div className={`w-full bg-yellow-100 rounded-full h-2.5 dark:bg-yellow-900/20`}>;
               <div className="bg-yellow-500 h-2.5 rounded-full" style={{ ;
                 width:`${Math.min(100, (underReviewDisputes.length / Math.max(1, disputes.length)) * 100)}%` ;
@@ -328,16 +465,39 @@ export function DisputeDashboard() {;
             </div>;
           </CardContent>;
         </Card>;
+=======
+
+            </div>;
+          </CardContent>;
+        </Card>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <Card>;
           <CardHeader className="pb-2">;
             <CardTitle className="text-lg font-medium flex justify-between items-center">;
               <span>Resolved</span>;
+<<<<<<< HEAD
               <span className="text-xl font-bold">{resolvedDisputes.length}</span>;
               <span className="text-xl font-bold">{resolvedDisputes.length}</span>;
+=======
+              <span className="text-xl font-bold">;
+                {resolvedDisputes && resolvedDisputes.length}
+              </span>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </CardTitle>;
             <CardDescription>Successfully concluded</CardDescription>;
           </CardHeader>;
           <CardContent>;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+            <div
+              className={`w-full bg-green-100 rounded-full h-2 && 2.5 dark:bg-green-900/20`}>;
+              <div
+                className="bg-green-500 h-2 && 2.5 rounded-full"
+                style={{
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   width: `${Math && Math.min(100, (resolvedDisputes && resolvedDisputes.length / Math && Math.max(1, disputes && disputes.length)) * 100)}%`,
                 }}></div>;
 import React, { useEffect } from './react';
@@ -446,6 +606,7 @@ function DisputeDashboard() {
                   width: `${Math.min (100, (resolved_disputes.length / Math.max (1, disputes.length)) * 100)}%`,
                 }}
               ></div>;
+<<<<<<< HEAD
             <div className={`w-full bg-green-100 rounded-full h-2.5 dark:bg-green-900/20`}>;
               <div className="bg-green-500 h-2.5 rounded-full" style={{ ;
                 width:`${Math.min(100, (resolvedDisputes.length / Math.max(1, disputes.length)) * 100)}%` ;
@@ -454,10 +615,14 @@ function DisputeDashboard() {
               <div className="bg-green-500 h-2.5 rounded-full" style={{;
                 width: `${Math.min(100, (resolvedDisputes.length / Math.max(1, disputes.length)) * 100)}%`;
               }}></div>;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>;
           </CardContent>;
         </Card>;
       </div>;
+<<<<<<< HEAD
 }
 ;
 
@@ -491,3 +656,16 @@ container mx-auto p-4 space-y-6"> <div className=" flex flex-wrap items-center j
   );
 }
 ;
+=======
+
+      <DisputesList disputes={disputes} is_loading={is_loading} />;
+    </div>);
+
+}
+=======
+}
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

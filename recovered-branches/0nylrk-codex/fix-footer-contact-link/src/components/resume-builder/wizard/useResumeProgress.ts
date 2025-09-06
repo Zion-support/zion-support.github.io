@@ -1,8 +1,14 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState, useEffect} from 'react';
 import {Resume} from '@/types/resume';
 export const useResumeProgress = (resume: Resume | null) => {;
 
 
+<<<<<<< HEAD
 
 import { useState, useEffect } from "react";
 import { Resume } from "@/types/resume";
@@ -13,6 +19,8 @@ export const useResumeProgress = (resume: Resume | null) => {
 import {useState, useEffect} from 'react';
 import {Resume} from '@/types/resume';
 export const useResumeProgress = (resume: Resume | null) => {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [progress, setProgress] = useState(0);
   useEffect(() => {
     // Calculate progress based on completed sections
@@ -20,13 +28,32 @@ export const useResumeProgress = (resume: Resume | null) => {;
       setProgress(0);
       return;
     }
+<<<<<<< HEAD
 
+=======
+    let completed = 0;
+    // Basic info is always considered (1 point)
+    completed += 1;
+    // Work experience (1 point if at least one entry)
+
+import { useState, useEffect  } from './react';
+import { Resume  } from '@/types / resume';
+export const useResumeProgress = (resume: Resume | null) =>: any {
+  const [progress, set_progress] = useState (0);
+;
+  useEffect (() => {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (resume.work_experience && resume.work_experience.length > 0) {
 
       completed += 1
 
+<<<<<<< HEAD
     if (resume.work_experience && resume.work_experience.length > 0) {
       completed += 1
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState, useEffect } from 'react',;
 import { Resume } from '@/types/resume',;
 export const useResumeProgress = (resume: Resume | null) => {;
@@ -51,6 +78,7 @@ if ( {) {
       completed += 1;
 
 
+<<<<<<< HEAD
     }
 ;
 let completed = 0;
@@ -102,6 +130,11 @@ let completed = 0;
 }
 
   return progress
+=======
+
+    }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
     const progressPercentage = (completed / 5) * 100,;
     setProgress(progressPercentage);
@@ -151,6 +184,7 @@ if ( {) {
 
 
 };
+<<<<<<< HEAD
 
 import { useState, useEffect } from 'react',;
 import { Resume } from '@/types/resume',;
@@ -205,3 +239,7 @@ export const useResumeProgress = (resume:Resume | null) => {;
 };
 
 };
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

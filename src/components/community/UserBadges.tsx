@@ -21,6 +21,7 @@ import { Trophy, Award, BadgeCheck, Star, MessageSquare } from 'lucide-react'
 import { Badge } from "@/types/community",
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
 
+<<<<<<< HEAD
 interface UserBadgesProps {
   badges: Badge[]
 }
@@ -33,6 +34,8 @@ const iconMap = {
 }
 export const UserBadges = ({ badges }: UserBadgesProps) => {
   if (!badges?.length) return null
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Trophy,
   Award,
   BadgeCheck,
@@ -43,6 +46,7 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
 export const UserBadges = ({ badges }: UserBadgesProps) => {
   if (!badges?.length) return null,
 
+<<<<<<< HEAD
 
   return (
     <div className="flex flex-wrap gap-2">
@@ -52,11 +56,21 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
 export default UserBadges
 
 
+=======
+
+  return (
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy;
 export default UserBadges;
 }
 }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,
         
         return (
@@ -89,6 +103,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 interface UserBadgesProps {;
   badges: Badge[];
 }
+<<<<<<< HEAD
 ;
 const iconMap = {;
   Trophy,;
@@ -132,6 +147,16 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
   );
 };
 export default UserBadges;
+=======
+
+const iconMap = {;
+  Trophy;
+  Award;
+  BadgeCheck;
+  Star;
+  MessageSquare;
+};
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export const UserBadges = ({ badges }: UserBadgesProps) => {;
   if (!badges?.length) return null;
@@ -145,4 +170,8 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
       {badges.map ((badge, ) => {
         // Get the correct icon component based on the badge's icon name;
         const IconComponent = icon_map[badge.icon as keyof typeof icon_map] || Trophy;
+<<<<<<< HEAD
 export default UserBadges;
+=======
+export default UserBadges;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

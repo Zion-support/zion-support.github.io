@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { GradientHeading } from './GradientHeading'
 import {
@@ -62,6 +63,11 @@ import { Button } from './ui/button';
 import { GradientHeading } from "./GradientHeading",
 export function GlobalServiceSection() {;
   return (
+=======
+export function GlobalServiceSection() {;
+  return (
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <section className='py-20 bg-zion-blue' id='global-services'>;
       <div className='container mx-auto px-4 sm:px-6 lg:px-8'>;
         <div className='text-center mb-16'>;
@@ -71,8 +77,15 @@ export function GlobalServiceSection() {;
             solutions for businesses of all sizes;
           </p>;
         </div>;
+<<<<<<< HEAD
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
           {services && services.map((service, index) => (;
+=======
+
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
+          {services && services.map((service, index) => (;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div
               key={index}
               className='bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300'>;
@@ -83,6 +96,7 @@ export function GlobalServiceSection() {;
               <p className='text-zion-slate-light mb-4'>;
                 {service && service.description}
               </p>            </div>;
+<<<<<<< HEAD
           ))}
 import { GradientHeading } from "./GradientHeading";
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from 'lucide-react'
@@ -123,6 +137,10 @@ export function GlobalServiceSection() {
     title: "Equipment Rentals",
     description: "Flexible rental options for temporary projects and scaling requirements",
     icon: <Truck className="h-10 w-10" />}],
+=======
+
+          ))}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export function GlobalServiceSection() {
   return (
@@ -133,6 +151,7 @@ export function GlobalServiceSection() {
           <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">
             Our 24x7x365 global IT service offering provides enterprise-grade solutions for businesses of all sizes
           </p>
+<<<<<<< HEAD
         </div>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {services.map((service, index) => (
@@ -153,6 +172,9 @@ export function GlobalServiceSection() {
           <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8'>            Get Your Free Commercial Proposal        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 ursor/fix-website-loading-errors-and-merge-6662
           {services.map((service, index) => (
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </div>
         <div className='flex justify-center mt-12'>
           <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8'>            Get Your Free Commercial Proposal        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -167,6 +189,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>
               <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
               <p className="text-zion-slate-light mb-4">{service.description}</p>
+<<<<<<< HEAD
             </div>
           ))}
         </div>
@@ -182,11 +205,17 @@ ursor/fix-website-loading-errors-and-merge-6662
           <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8'>        <div className="flex justify-center mt-12">
 
 
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>
           ))}
         </div>
 
         <div className="flex justify-center mt-12">
+<<<<<<< HEAD
       </div>;
     </section>;
   );
@@ -232,6 +261,8 @@ export function GlobalServiceSection() {;
           <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">;
             Our 24x7x365 global IT service offering provides enterprise-grade solutions for businesses of all sizes;
           </p>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -349,6 +380,7 @@ function GlobalServiceSection() {
           <Button className='bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white text - lg py - 6 px - 8'>        <div className="flex justify - center mt - 12">;
           <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white text - lg py - 6 px - 8">;
 
+<<<<<<< HEAD
 import { GradientHeading } from "./GradientHeading",;
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from 'lucide-react';
 import { Button } from "./ui/button",;
@@ -405,18 +437,25 @@ export function GlobalServiceSection() {;
         </div>;
         <div className="flex justify-center mt-12">;
           <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             Get Your Free Commercial Proposal;
           </Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </section>;
   );
 }
 ;
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 }
     </section>);
+<<<<<<< HEAD
 }
     </section>;
   );}
@@ -452,3 +491,6 @@ icon: <Recycle className="h-10 w-10" /> ;
 }"
     </section>);
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

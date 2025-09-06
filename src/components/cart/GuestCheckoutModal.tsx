@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
@@ -36,6 +37,8 @@ export default function GuestCheckoutModal({
     }
     setIsSubmitting(true)
     try {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 try {
       on_submit ({ email, address });
     } finally {
@@ -50,17 +53,28 @@ class ErrorBoundary extends React.Component {
       setIsSubmitting(false)
     }
   }
+<<<<<<< HEAD
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Input } from '@/components/ui/input',;
 import { Label } from '@/components/ui/label',;
 import { Textarea } from '@/components/ui/textarea',;
+=======
+}
+import React from 'react';
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {;
   Dialog,;
   DialogContent,;
   DialogDescription,;
   DialogFooter,;
   DialogHeader,;
+<<<<<<< HEAD
   DialogTitle} from '@/components/ui/dialog',;
 import { User, Mail, MapPin, CreditCard } from 'lucide-react';
 import { isProdDomain } from '@/utils/getStripe',;
@@ -84,11 +98,39 @@ export default function GuestCheckoutModal({;
       return;
     }
 ;
+=======
+  DialogTitle,;
+} from '@/components/ui/dialog';
+import { User, Mail, MapPin, CreditCard } from 'lucide-react';
+import { isProdDomain } from '@/utils/getStripe';
+
+interface GuestCheckoutModalProps {;
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+  onSubmit: (details: { email: string; address: string }) => void;
+export default function GuestCheckoutModal(): any ({;
+  open,;
+  onOpenChange,;
+  onSubmit,;
+}: GuestCheckoutModalProps) {;
+  const [email, setEmail] = useState('');
+  const [address, setAddress] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React && React.FormEvent) => {;
+    e && e.preventDefault();
+    if (!email || !address) {;
+      alert('Please fill in all required fields');
+      return;
+    }
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     setIsSubmitting(true);
     try {;
       onSubmit({ email, address });
     } finally {;
       setIsSubmitting(false);
+<<<<<<< HEAD
     }
   },
 
@@ -111,6 +153,8 @@ export default function GuestCheckoutModal({;
         )}
         <form onSubmit={handleSubmit} className='space-y-4'>
           <div className='space-y-2'>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -272,6 +316,7 @@ export default function GuestCheckoutModal({;
               Email Address
             </Label>
             <Input
+<<<<<<< HEAD
               id='guest-email'
               type='email'
               value={email || ''}
@@ -363,10 +408,15 @@ export default function GuestCheckoutModal({;
               ) : (
                 <>
                   <CreditCard className='h-4 w-4 mr-2' />
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {isSubmitting ? (
                 'Processing...'
               ) : (
                 <>
+<<<<<<< HEAD
                   <CreditCard className="h-4 w-4 mr-2" />
                   Continue to Payment
                 </>
@@ -383,6 +433,12 @@ export default function GuestCheckoutModal({;
 }
 };
 };
+=======
+                  <CreditCard className='h-4 w-4 mr-2' />
+                  Continue to Payment
+                </>
+              )}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               disabled={isSubmitting || !email || !address}
               className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'>;
@@ -421,6 +477,7 @@ export default function GuestCheckoutModal({;
           </DialogFooter>;
         </form>;
       </DialogContent>;
+<<<<<<< HEAD
 ;
 
 
@@ -428,9 +485,17 @@ export default function GuestCheckoutModal({;
   );
 }
 ;
+=======
+
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
     </Dialog>);
 }
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

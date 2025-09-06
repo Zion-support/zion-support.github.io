@@ -532,4 +532,8 @@ export default function RetailPage() {
   );
 };
 
+<<<<<<< HEAD
 export default Retail;
+=======
+export default Retail;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

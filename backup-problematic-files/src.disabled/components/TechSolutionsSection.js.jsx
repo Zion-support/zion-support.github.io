@@ -9,4 +9,8 @@ const TechSolutionsSection.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default TechSolutionsSection.js;
+=======
+export default TechSolutionsSection.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

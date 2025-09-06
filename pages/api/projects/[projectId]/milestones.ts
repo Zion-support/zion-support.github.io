@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../../utils/api/auth";
 import {
@@ -34,6 +35,9 @@ import { requireUser } from '../../../../utils/api/auth';
 import { addMilestone, getProject, assertParticipantOrAdmin, isClient } from '../../../../utils/api/projects';
 import { Milestone } from '../../../../utils/types/milestones';
 
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
@@ -44,6 +48,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!project) {
 
 
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
@@ -231,16 +236,34 @@ if (
       dueDate: body.dueDate,
       amountUsd: body.amountUsd,
       attachments: body.attachments || []
+=======
+  }
+
+  if (req && req.method === "POST") {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  if (req.method === 'POST') {
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    if (!isClient(project, user)) {
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     });
     res && res.status(201).json({ milestone: created });
     return;
   }
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
 
 
+<<<<<<< HEAD
 res.status(403).json({ error: 'Only client (or admin) can add milestones' });
       return
     }
@@ -259,6 +282,9 @@ res.status(403).json({ error: 'Only client (or admin) can add milestones' });
   res && res.setHeader("Allow", "GET, POST");
   res && res.status(405).end("Method Not Allowed");
 }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from './next';
 import { require_user  } from '../../../../utils / api / auth';
 import {
@@ -337,12 +363,13 @@ if ( {) {
   }
   res.set_header ("Allow", "GET, POST");
   res.status (405).end ("Method Not Allowed");
-  res.setHeader('AllowGET, POST'),
-  res.status(405).end('Method Not Allowed')
-
 }
+<<<<<<< HEAD
 
   res.setHeader('AllowGET, POST');
   res.status(405).end('Method Not Allowed')
 }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Please try again in a few moments.
             </p>
           </div>
@@ -44,6 +50,19 @@
 
 }
 
+<<<<<<< HEAD
+=======
+=======
+import React from 'react',
+import Head from 'next / head',
+import Link from 'next / link',
+export default /**
+ * Custom500 - Function description
+ */
+function Custom500() {
+  return (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from 'react';
 import Head from 'next/head';
@@ -105,6 +124,7 @@ export default function Custom500(req, res) {
     </>);
 }
 
+<<<<<<< HEAD
 import React from 'react';
 
 import Head from 'next/head';
@@ -248,3 +268,7 @@ export default function Custom500(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

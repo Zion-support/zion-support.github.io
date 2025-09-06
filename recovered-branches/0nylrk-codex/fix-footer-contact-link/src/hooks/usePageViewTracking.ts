@@ -2,14 +2,28 @@ import { useEffect } from 'react',
 import { useLocation } from 'react-router-dom',
 
 
+<<<<<<< HEAD
 import { useEffect  } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react',
 import { useLocation } from 'react-router-dom',
+=======
+
+import { useEffect } from 'react',
+import { useLocation } from 'react-router-dom',
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useEffect} from 'react';
 import {useLocation} from 'react-router-dom';
 import { useEffect } from 'react',
 import { useLocation } from 'react-router-dom',
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 /**
  * Custom hook to track page views for analytics purposes
  * Attaches event listeners to track route changes and logs page views
@@ -19,15 +33,23 @@ import { useLocation } from 'react-router-dom',
 export function usePageViewTracking() {
 
 
+<<<<<<< HEAD
 export function usePageViewTracking() {;
   const location = useLocation();
 export function usePageViewTracking() {
   const location = useLocation(),
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   const location = useLocation();
   useEffect(() => {
     const handleRouteChange = () => {
       // Track page view
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       console && console.log('Page view:', window && window.location.pathname)
     };
 
@@ -88,6 +110,7 @@ function usePageViewTracking() {
     console.log ('Page view:', location.pathname);
   }, [location.pathname]);
 }
+<<<<<<< HEAD
 
 import { useEffect } from 'react',;
 import { useLocation } from 'react-router-dom',;
@@ -144,3 +167,6 @@ export function usePageViewTracking() {;
   }, [location.pathname]);
 }
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

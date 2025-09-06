@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -438,6 +439,8 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {;
               <span>Password Strength</span>
               <span className={cn('font-medium', 
                 passwordStrength.strength >= 4 ? 'text-green-600' :
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 passwordStrength.strength >= 4 ? 'text-green-600' :
                 passwordStrength.strength >= 3 ? 'text-blue-600' :
                 passwordStrength.strength >= 2 ? 'text-yellow-600' : 'text-red-600'
@@ -479,7 +482,10 @@ passwordStrength.strength >= 4 ? 'text-green-600' :
             {errors.password.message}
           </p>
         )}
+<<<<<<< HEAD
       </div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   path: ["confirmPassword"]}),;
@@ -632,4 +638,8 @@ type SignupFormData = z.infer < typeof signup_schema>;
     </form>;
   );
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

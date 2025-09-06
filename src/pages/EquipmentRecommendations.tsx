@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useEffect, useState} from 'react'
 import {ProductListingCard} from '@/components/ProductListingCard'
 import {useAuth} from '@/hooks/useAuth'
@@ -27,6 +30,7 @@ export default function EquipmentRecommendations() {
   const [listings, setListings] = useState<ProductListing[]>([])
   const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState<boolean>(false)
+<<<<<<< HEAD
 import { useEffect, useState } from 'react',;
 import { ProductListingCard } from '@/components/ProductListingCard',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -34,6 +38,8 @@ import { fetchRecommendations } from '@/api/recommendations',;
 import type { ProductListing } from '@/types/listings',;
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog',;
 import { Button } from '@/components/ui/button',;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useEffect, useState} from 'react';
 import {ProductListingCard} from '@/components/ProductListingCard';
 import {useAuth} from '@/hooks/useAuth';
@@ -89,6 +95,12 @@ export default function EquipmentRecommendations() { const { isAuthenticated, us
 
 
       fetchRecommendations(user && user.id);
+<<<<<<< HEAD
+=======
+        .then(setListings);
+        .catch(() => setError(true));
+        .finally(() => setLoading(false));
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   useEffect((,) => {
     if (isAuthenticated && user?.id) {
@@ -99,6 +111,7 @@ export default function EquipmentRecommendations() { const { isAuthenticated, us
         .finally(() => setLoading(false)) }        .catch((,) => setError(true))
         .finally((,) => setLoading(false))
         .finally(() => setLoading(false))
+<<<<<<< HEAD
     }
   }, [isAuthenticated, user])
   if (!isAuthenticated) {
@@ -156,10 +169,21 @@ export default function EquipmentRecommendations() {;
     return (
       <Dialog open>
         <DialogContent className="bg-zion-blue border-zion-blue-light text-white">
+=======
+
+    }
+  }, [isAuthenticated, user]),
+
+  if (!isAuthenticated) {;
+    return (
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <DialogHeader>
             <DialogTitle>Authentication required</DialogTitle>
           </DialogHeader>
           <p>Please sign in to get personalized AI picks.</p>
+<<<<<<< HEAD
           <Button
             asChild
             className='mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white'
@@ -168,6 +192,13 @@ export default function EquipmentRecommendations() {;
               Sign In
             </Link>          </Button>          <Button asChild className="mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
           <Button asChild className="mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
+=======
+
+
+          <Button asChild className="mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Link href="/auth/login?returnTo=/equipment/recommendations">Sign In</Link>
         </DialogContent>
       </Dialog>
@@ -183,6 +214,7 @@ export default function EquipmentRecommendations() {;
     );
   }
   return (
+<<<<<<< HEAD
   }
   return (
     <div className='min-h-screen bg-zion-blue py-8 px-4'>
@@ -230,6 +262,11 @@ export default function EquipmentRecommendations() {;
       </div>;
     </div>;
   );
+=======
+
+
+        ))}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       </div>;
     </div>;
@@ -332,4 +369,8 @@ if ( {) {
 }
 
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

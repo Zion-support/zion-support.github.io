@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import {cn} from "@/lib/utils";
@@ -9,6 +10,10 @@ import ReactMarkdown from "react-markdown";
 import { cn } from "@/lib/utils";
 import ReactMarkdown from "react-markdown",
 import { cn } from "@/lib/utils",
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface MarkdownProps {
   content: string;
   className?: string
@@ -18,8 +23,27 @@ export function Markdown({ content, className }: MarkdownProps) {
     <div className={cn("prose dark:prose-invert max-w-none", className)}>
       <ReactMarkdown>{content}</ReactMarkdown>
     </div>
+<<<<<<< HEAD
 }
 
+=======
+
+import {cn} from "@/lib/utils";
+interface MarkdownProps {;
+  content: string,;
+  className?: string;
+}
+
+export function Markdown(): any ({ content, className }: MarkdownProps) {;
+  return (
+    <div className={cn("prose dark:prose-invert max-w-none", className)}>;
+      <ReactMarkdown>{content}</ReactMarkdown>;
+    </div>;
+  );
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from './react';
 import ReactMarkdown from './react - markdown';
 import { cn  } from '@/lib / utils';
@@ -44,6 +68,7 @@ function Markdown() {
 
 ;
 
+<<<<<<< HEAD
 
 import React from "react",;
 import ReactMarkdown from "react-markdown",;
@@ -76,3 +101,6 @@ export function Markdown({ content, className }: MarkdownProps) {;
 }
 ;
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

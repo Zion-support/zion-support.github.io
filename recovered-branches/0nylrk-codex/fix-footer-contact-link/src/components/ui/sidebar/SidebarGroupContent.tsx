@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from "react",
 import { cn } from "@/lib/utils",
@@ -19,6 +23,7 @@ export function SidebarGroupContent(): any ({ className, children, ...props }: S
 
   )
 
+<<<<<<< HEAD
 import React from "react";
 import { cn } from "@/lib/utils";
 import React from "react",
@@ -42,6 +47,9 @@ export function SidebarGroupContent({
   );
 }
   )
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",;
 import { cn } from "@/lib/utils",;
 interface SidebarGroupContentProps extends React.HTMLAttributes<HTMLDivElement> {;
@@ -51,6 +59,7 @@ interface SidebarGroupContentProps extends React.HTMLAttributes<HTMLDivElement> 
 ;
 export function SidebarGroupContent({ className, children, ...props }: SidebarGroupContentProps) {;
   return (;
+<<<<<<< HEAD
 }
 
 ;
@@ -62,3 +71,18 @@ export function SidebarGroupContent({ className, children, ...props }: SidebarGr
   );
 }
 ;
+=======
+
+    <div className={cn("space-y-1", className)} {...props}>;
+      {children}
+
+    </div>;
+  );
+}
+
+=======
+;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

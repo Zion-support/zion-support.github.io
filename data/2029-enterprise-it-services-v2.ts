@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface EnterpriseITService2029V2 {
 export interface EnterpriseITService2029V2 {;
   id: string;
@@ -514,6 +515,10 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
     support: ['24/7 operations supportIT expertsImplementation team'], compliance: ['SOC 2ISO 27001ITILCOBIT'],
     scalability: 'Enterprise-grade, multi-tenant support',
     roi: '450% within 18 months',
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     deployment: 'Cloud-native, hybrid options',
     support: ['24 / 7 operations support', 'IT experts', 'Implementation team'],
     compliance: ['SOC 2', 'ISO 27001', 'ITIL', 'COBIT'],    scalability: 'Enterprise - grade, multi - tenant support',    roi: '450% within 18 months',
@@ -521,6 +526,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
     maintenance: 'Fully autonomous, continuous optimization',
     training: 'IT operations training, certification',
     documentation: 'Operations guides, best practices',
+<<<<<<< HEAD
 ];      'Enterprise IT operations_data center management_application performance management_infrastructure automation_service desk automationIT service management';
     ];
     market_size: '$28.9B by 2029';
@@ -810,3 +816,22 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [;
     }
   }
 ];
+=======
+
+
+    }
+  }
+];
+
+;
+
+=======
+
+export interface EnterpriseITService2029V2 {;
+
+    }
+  }
+];
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

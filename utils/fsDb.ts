@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // File system database utilities
 export const fsDb = {
   // Add file system database functionality here
@@ -5,17 +6,39 @@ export const fsDb = {
   write: (path: string, data: any) => null
   exists: (path: string) => false
   delete: (path: string) => null
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   read: (path: string) => null,
   write: (path: string, data: any) => null,
   exists: (path: string) => false,
   delete: (path: string) => null;
 };
+<<<<<<< HEAD
+=======
+
+
+=======
+  read: (path: string) => null,
+  write: (path: string, data: any) => null,
+  exists: (path: string) => false,
+  delete: (path: string) => null;
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { promises as fs } from 'fs';
 import path from 'path';
 
 const DATA_DIR = path.join(process.cwd(), 'data');
 
+<<<<<<< HEAD
 export function readJson<T>(filePath: string, defaultValue: T): T {
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   try {
     const fullPath = path.join(DATA_DIR, filePath);
     const data = fs.readFileSync(fullPath, 'utf8');
@@ -25,6 +48,7 @@ export function readJson<T>(filePath: string, defaultValue: T): T {
   }
 }
 
+<<<<<<< HEAD
 export function writeJson<T>(filePath: string, data: T): void {
   try {
     const fullPath = path.join(DATA_DIR, filePath);
@@ -55,6 +79,11 @@ export async function writeJsonAsync<T>(filePath: string, data: T): Promise<void
   } catch (error) {
     console.error('Error writing JSON file:', error);
   }
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // File system database utilities;
 export const fs_db = {
   // Add file system database functionality here;
@@ -66,5 +95,10 @@ export const fs_db = {
 
 }
 
+<<<<<<< HEAD
 }
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

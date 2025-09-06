@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from 'react'
 import {
@@ -76,6 +77,8 @@ import { FileText, Plus, Search, Calendar } from 'lucide-react';
 export function QuickActions() {;
   const actions = [;
     {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -170,25 +173,39 @@ export function QuickActions() {
         <CardDescription>Fast access to common tasks</CardDescription>
       </CardHeader>
       <CardContent>
+<<<<<<< HEAD
         <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
           {actions.map(action => (
             <Button
               key={action.id}
               variant='outline'              className={`h-auto justify-start p-4 ${action.color}`}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {actions.map(action => (
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Button 
               key={action.id}
               variant="outline" 
               className={`h-auto justify-start p-4 ${action.color}`}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             >
               <div className="flex flex-col items-start text-left">
                 <div className="flex items-center">
                   {action.icon}
                   <span>{action.label}</span>
                 </div>
+<<<<<<< HEAD
             <Button
                 <span className='mt-1 text-xs text-muted-foreground'>
                   {action.description}
@@ -197,6 +214,11 @@ export function QuickActions() {
           {actions.map(action => (
             <Button
             <Button 
+=======
+
+            <Button 
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
               </div>
             </Button>
@@ -245,10 +267,16 @@ export function QuickActions() {;
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">;
           {actions.map(action => (;
             <Button;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               key={action.id}
               variant="outline"
               className={`h-auto justify-start p-4 ${action.color}`}
             >
+<<<<<<< HEAD
               variant="outline"
               className={`h-auto justify-start p-4 ${action.color}`}
             >
@@ -266,6 +294,8 @@ export function QuickActions() {;
     </Card>
   )
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               key={action.id}
               variant="outline"
@@ -354,6 +384,10 @@ export function QuickActions() {;
             </Button>
           ))}
         </div>;
+<<<<<<< HEAD
+=======
+      </CardContent>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </Card>;
   );
 }
@@ -403,4 +437,8 @@ const actions = [ {;
 }
 ;
 
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

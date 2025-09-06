@@ -1,22 +1,46 @@
 
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Loader2, Sparkles} from 'lucide-react';
 import {useResumeEnhancer} from '@/hooks / useResumeEnhancer';
 import {use_resume} from '@/hooks / use_resume';
 import {BulkAddSkillsProps} from './types';
+<<<<<<< HEAD
   const handleCategorizeSkills = async () => {;
     if (!bulkSkills || bulkSkills && bulkSkills.trim().length === 0) {;
       setError('Please enter some skills to categorize');
       return;
     }
+=======
+
+
+  const handleCategorizeSkills = async () => {;
+    if (!bulkSkills || bulkSkills && bulkSkills.trim().length === 0) {;
+
+      setError('Please enter some skills to categorize');
+      return;
+    }
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     setError(null);
     try {;
       const enhancedContent = await enhanceContent(;
         bulkSkills;
         'skill-categorization';
       );
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {Alert, AlertDescription} from '@/components / ui / alert';
 import {Textarea} from '@/components / ui / textarea';
 export const BulkAddSkills = ({ resume_id, on_success }: BulkAddSkillsProps) =>: any {
@@ -60,6 +84,7 @@ if ( {) {
               }
             }
           }
+<<<<<<< HEAD
 
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
@@ -124,20 +149,32 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
       setError('Please enter some skills to categorize'),;
       return;
     }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           // Reset the form and bulk input;
           setBulkSkills ('');
 ;
           // Refresh the skills;
           await on_success ();
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         } catch (err) {
           set_error ('Failed to parse categorized skills. Please try again.');
         }
       }
     } catch (err: any) {
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       if (enhancedContent) {;
         try {;
           // Parse the JSON response;
           const categorizedSkills = JSON && JSON.parse(enhancedContent);
+<<<<<<< HEAD
           // Add the categorized skills;
           for (const [category, skillsList] of Object && Object.entries(categorizedSkills)) {;
             if (Array && Array.isArray(skillsList)) {;
@@ -155,6 +192,12 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
           // Add the categorized skills;
           for (const [category, skillsList] of Object.entries(categorizedSkills)) {;
             if (Array.isArray(skillsList)) {;
+=======
+
+          // Add the categorized skills;
+          for (const [category, skillsList] of Object && Object.entries(categorizedSkills)) {;
+            if (Array && Array.isArray(skillsList)) {;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               for (const skillName of skillsList as string[]) {;
                 await addSkill(resumeId, {;
                   name: skillName,;
@@ -163,22 +206,42 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
               }
             }
           }
+<<<<<<< HEAD
 ;
           // Reset the form and bulk input;
           setBulkSkills(''),;
+=======
+
+          // Reset the form and bulk input;
+          setBulkSkills('');
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           // Refresh the skills;
           await onSuccess();
         } catch (err) {;
           setError('Failed to parse categorized skills. Please try again.');
+<<<<<<< HEAD
         }
       }
     } catch (err: any) {
       setError(err.message |'Failed to categorize skills')
     }
   }
+=======
+
+        }
+      }
+    } catch (err: any) {;
+      setError(err && err.message || 'Failed to categorize skills');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    }
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
   };
   },
+<<<<<<< HEAD
 
   return (
     <div className="bg-muted/40 p-6 rounded-lg">
@@ -199,6 +262,8 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
   },
   };
   },
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -282,6 +347,11 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
           onClick={handleCategorizeSkills}
           disabled={isEnhancing |!bulkSkills.trim()}
           disabled={isEnhancing || !bulkSkills.trim()}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           className="gap-2"
         >
           {isEnhancing ? (
@@ -369,6 +439,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
     </div>);
 }
 ;
+<<<<<<< HEAD
         ;
         <p className="text-xs text-muted-foreground mt-1">;
           AI will identify skills and categorize them automatically. This may take a moment to process.;
@@ -395,3 +466,6 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
 },
 };
 },
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

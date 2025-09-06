@@ -29,6 +29,7 @@ import { useRouter } from 'next/router';
         <h2>Background</h2>
         <p>Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes.
         High downtime, inefficient production scheduling, and quality control issues were impacting their bottom line
+<<<<<<< HEAD
 id: 'ai-automation-manufacturing',
       title: 'AI-Powered Manufacturing Automation',
       company: 'Global Manufacturing Corp',
@@ -69,8 +70,11 @@ export default function CaseStudyResourcePage() {
         <h2>Background</h2>
         <p>Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes.
         High downtime, inefficient production scheduling, and quality control issues were impacting their bottom line
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         and preventing them from meeting growing customer demands.</p>
         <h2>Challenge</h2>
+<<<<<<< HEAD
         <p>The company needed to modernize their manufacturing operations while maintaining high quality standards 
         and reducing operational costs. They required a solution that could adapt to changing production demands, _minimize human intervention, _and provide real-time insights into their operations.</p>
         
@@ -79,6 +83,9 @@ export default function CaseStudyResourcePage() {
         minimize human intervention, and provide real-time insights into their operations.</p>
         <h2>Solution</h2>
         <p>We implemented a comprehensive AI automation system that included:</p>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         <ul>
           <li><strong>Predictive Maintenance:</strong> AI algorithms that predict equipment failures before they occur</li>
@@ -115,6 +122,7 @@ export default function CaseStudyResourcePage() {
         of autonomous systems in traditional industries. The results exceeded expectations and positioned the company
         as a leader in smart manufacturing.</p>
       `
+<<<<<<< HEAD
     };
 import React from 'react',
 import Head from 'next / head',
@@ -181,12 +189,76 @@ function CaseStudyResourcePage() {
         for continued growth and success.</p>;
       `;
     },
+=======
+
+
+    {
+      id: 'content - generation - scale',
+      title: 'Scaling Content Generation 10x',
+      company: 'Digital Marketing Agency',
+      industry: 'Marketing',
+      results: '10x increase in content output, 85% improvement in engagement',
+
+
+      fullContent: `
+        <h2>Executive Summary</h2>
+        <p>This case study explores how autonomous AI systems can revolutionize content creation, enabling
+        marketing agencies to scale their operations dramatically while maintaining quality and creativity.</p>
+        <h2>Background</h2>
+        <p>A leading digital marketing agency was struggling to scale their content creation capabilities.
+        Their manual processes were limiting growth and preventing them from taking on new clients. The creative
+        team was overwhelmed, and content quality was beginning to suffer under the pressure.</p>
+        <h2>Challenge</h2>
+        <p>The agency needed to dramatically increase their content production capacity while maintaining
+        high quality standards and creative excellence. They required a solution that could handle multiple
+        content types and formats, adapt to different client needs, and maintain consistency across all outputs.</p>
+        <h2>Solution</h2>
+        <p>We implemented an autonomous content generation system that included:</p>
+        <ul>
+          <li><strong>AI-powered Content Creation:</strong> Natural language generation for various content types</li>
+          <li><strong>Automated Research:</strong> AI systems that gather and verify information</li>
+          <li><strong>Intelligent Content Optimization:</strong> SEO and engagement optimization algorithms</li>
+          <li><strong>Human Oversight:</strong> Creative directors review and refine AI-generated content</li>
+        </ul>
+        <h2>Implementation</h2>
+        <p>The system was deployed in 4 months with comprehensive training:</p>
+        <ul>
+          <li><strong>Month 1:</strong> System setup and content analysis</li>
+          <li><strong>Month 2:</strong> AI training and content generation</li>
+          <li><strong>Month 3:</strong> Integration and workflow optimization</li>
+          <li><strong>Month 4:</strong> Team training and full deployment</li>
+        </ul>
+        <h2>Results</h2>
+        <p>The transformation was remarkable:</p>
+        <ul>
+          <li><strong>10x increase in content output</strong> - From 50 to 500 pieces per month</li>
+          <li><strong>85% improvement in engagement</strong> - AI-optimized content performed significantly better</li>
+          <li><strong>70% reduction in production time</strong> - Automated workflows accelerated delivery</li>
+          <li><strong>95% client satisfaction</strong> - Higher quality and faster delivery improved client relationships</li>
+        </ul>
+        <h2>Key Learnings</h2>
+        <p>This project revealed several important insights:</p>
+        <ul>
+          <li>AI enhances human creativity rather than replacing it</li>
+          <li>Quality control processes are essential for AI-generated content</li>
+          <li>Client education about AI capabilities improves acceptance</li>
+          <li>Continuous learning systems improve content quality over time</li>
+        </ul>
+        <h2>Conclusion</h2>
+        <p>The AI content generation system transformed the agency's operations, enabling unprecedented scale
+        while maintaining creative excellence. The system continues to learn and improve, positioning the agency
+        for continued growth and success.</p>
+      `
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       id: 'cloud - infrastructure - optimization',
       title: 'Cloud Infrastructure Optimization',
       company: 'E - commerce Platform',
       industry: 'Technology',
       results: '50% reduction in cloud costs, 99.9% uptime achieved',
+<<<<<<< HEAD
   ];
   const caseStudy = caseStudies.find(study => study.id === id);
       id: 'content-generation-scale'
@@ -253,6 +325,10 @@ function CaseStudyResourcePage() {
       results: '50% reduction in cloud costs, 99.9% uptime achieved'
       description: 'Building self-healing, auto-scaling cloud infrastructure.'
       fullContent: `
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <h2>Executive Summary</h2>
         <p>This case study demonstrates how intelligent cloud infrastructure optimization can dramatically
         reduce costs while improving performance and reliability for high-traffic applications.</p>
@@ -303,13 +379,26 @@ function CaseStudyResourcePage() {
       `
     }
 
+<<<<<<< HEAD
   ]
   const caseStudy = caseStudies.find(study => study.id === id)
 
+=======
+
+
+=======
+
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function CaseStudyResourcePage(req, res) {
   try {
   const router = useRouter();
@@ -492,12 +581,21 @@ export default function CaseStudyResourcePage(req, res) {
   }
 }
 
+<<<<<<< HEAD
   ],
   const caseStudy = caseStudies.find(study => study.id === id),
   ],
   const caseStudy = caseStudies.find(study => study.id === id),
   ],
   const caseStudy = caseStudies.find(study => study.id === id),
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  ],
+  const caseStudy = caseStudies.find(study => study.id === id),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (!caseStudy) {
     return (
       <>
@@ -514,9 +612,13 @@ export default function CaseStudyResourcePage(req, res) {
 
 
 
+<<<<<<< HEAD
               <Link
               <Link 
               <Link
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 href="/resources"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -531,12 +633,19 @@ export default function CaseStudyResourcePage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 }
 
 
+<<<<<<< HEAD
 }
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <>
       <Head>
@@ -557,12 +666,22 @@ export default function CaseStudyResourcePage(req, res) {
               <div className="mb-6">
                 <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
 
+<<<<<<< HEAD
                   {caseStudy.industry}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   {caseStudy.industry  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>
@@ -577,6 +696,7 @@ export default function CaseStudyResourcePage(req, res) {
 
 
 
+<<<<<<< HEAD
               <div 
                 className="prose prose-invert max-w-none"
                 dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}
@@ -596,6 +716,9 @@ export default function CaseStudyResourcePage(req, res) {
             </div>
             <div className="text-center">
               <Link
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -606,11 +729,87 @@ export default function CaseStudyResourcePage(req, res) {
         </main>
       </div>
     </>
+<<<<<<< HEAD
 }
 
   );
 };
   )
+=======
+
+=======
+}
+
+=======
+      description: 'Building self - healing, auto - scaling cloud infrastructure.',
+      full_content: `;
+        <h2 > Executive Summary</h2>;
+        <p > This case study demonstrates how intelligent cloud infrastructure optimization can dramatically;
+        reduce costs while improving performance and reliability for high - traffic applications.</p>;
+        <h2 > Background</h2>;
+        <p > A growing e - commerce platform was experiencing skyrocketing cloud costs and frequent outages.;
+        Their infrastructure was not scaling efficiently with their business growth, leading to poor customer;
+        experience and high operational expenses.</p>;
+        <h2 > Challenge</h2>;
+        <p > The platform needed to optimize their cloud infrastructure for cost, performance, and reliability.;
+        They required a solution that could automatically adapt to traffic patterns, prevent outages, and;
+        optimize resource allocation in real - time.</p>;
+        <h2 > Solution</h2>;
+        <p > We designed and implemented a comprehensive cloud optimization system:</p>;
+        <ul>;
+          <li><strong > Auto - scaling Infrastructure:</strong> Intelligent resource allocation based on demand</li>;
+          <li><strong > Self - healing Systems:</strong> Automatic failure detection and recovery</li>;
+          <li><strong > Cost Optimization:</strong> AI algorithms for resource cost management</li>;
+          <li><strong > Performance Monitoring:</strong> Real - time metrics and alerting systems</li>;
+        </ul>;
+        <h2 > Implementation</h2>;
+        <p > The project was completed in 8 months with careful planning:</p>;
+        <ul>;
+          <li><strong > Months 1 - 2:</strong> Infrastructure analysis and design</li>;
+          <li><strong > Months 3 - 4:</strong> Core optimization systems deployment</li>;
+          <li><strong > Months 5 - 6:</strong> Integration and testing</li>;
+          <li><strong > Months 7 - 8:</strong> Gradual migration and optimization</li>;
+        </ul>;
+        <h2 > Results</h2>;
+        <p > The optimization delivered outstanding results:</p>;
+        <ul>;
+          <li><strong > 50% reduction in cloud costs</strong> - Intelligent resource allocation eliminated waste</li>;
+          <li><strong > 99.9% uptime achieved</strong> - Self - healing systems prevented outages</li>;
+          <li><strong > 3x improvement in performance</strong> - Optimized infrastructure handled traffic spikes</li>;
+          <li><strong > 40% faster page load times</strong> - Optimized resource delivery improved user experience</li>;
+        </ul>;
+        <h2 > Key Learnings</h2>;
+        <p > This project revealed several important insights:</p>;
+        <ul>;
+          <li > Gradual migration reduces risk and improves system stability</li>;
+          <li > Real - time monitoring is essential for optimization</li>;
+          <li > Cost optimization requires continuous monitoring and adjustment</li>;
+          <li > Self - healing systems significantly improve reliability</li>;
+        </ul>;
+        <h2 > Conclusion</h2>;
+        <p > The cloud infrastructure optimization project transformed the platform's performance and cost structure.;
+        The self - healing, auto - scaling infrastructure now supports continued business growth while maintaining;
+        optimal performance and cost efficiency.</p>;
+      `;
+    }
+  ],
+  const case_study = case_studies.find (study => study.id === id),
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <>;
+        <Head>;
+          <title > Case Study Resource Not Found | Zion Tech Group</title>;
+        </Head>;
+        <div className="min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to - slate - 950 text - white">;
+          <main className="container mx - auto px - 6 py - 12">;
+            <div className="max - w-4xl mx - auto text - center">;
+              <h1 className="text - 4xl font - bold mb - 6 text - white">Case Study Resource Not Found</h1>;
+              <p className="text - xl text - white / 80 mb - 8">;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   ];
   const caseStudy = caseStudies.find(study => study.id === id);
   if (!caseStudy) {;
@@ -700,6 +899,7 @@ export default function CaseStudyResourcePage(req, res) {
       </div>;
     </>);
 }
+<<<<<<< HEAD
 
 
     </>);
@@ -712,3 +912,11 @@ export default function CaseStudyResourcePage(req, res) {
   }
 }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

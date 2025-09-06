@@ -9,4 +9,8 @@ const CTASection.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default CTASection.js;
+=======
+export default CTASection.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

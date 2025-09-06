@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
 
+<<<<<<< HEAD
 import { useState } from 'react'
 import { Card, CardContent, CardFooter } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -30,11 +31,23 @@ interface ProjectCardProps {
   onEdit: (project: PortfolioProject) => void
   project: PortfolioProject;
   onEdit: (project: PortfolioProject) => void;
+=======
+import Image from 'next/image';
+import { PortfolioProject } from '@/types/resume';
+interface ProjectCardProps {
+
+
+  project: PortfolioProject;
+  onEdit: (project: PortfolioProject) => void;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onDelete: (projectId: string) => void; import Image from 'next/image'
 interface ProjectCardProps {
   project: PortfolioProject
   onEdit: (project: PortfolioProject,) => void
   onDelete: (projectId: string,) => void
+<<<<<<< HEAD
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const handleDelete = null;
 ;
@@ -46,6 +59,12 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
     }
     setDeleteDialogOpen(false)
   },
+=======
+}
+
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface ProjectCardProps {;
   project: PortfolioProject;
   onEdit: (project: PortfolioProject) => void;
@@ -172,9 +191,16 @@ interface ProjectCardProps {
 
 }
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
+<<<<<<< HEAD
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const handleDelete = null;
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false)
+=======
+
+  const [ deleteDialogOpen, setDeleteDialogOpen ] = useState(false),
+
+  
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleDelete = () => {
     if (project.id) {
       onDelete(project.id)
@@ -192,6 +218,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           <Image
             src={project.image_url}
             alt={project.title}
+<<<<<<< HEAD
             className='object-cover'
             loading='lazy'    <Card className="h-full flex flex-col">
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
@@ -230,6 +257,12 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             <div className='flex flex-wrap gap-1 mt-2'>
               {project.technologies.map((tech, index) => (
                 <Badge key={index} variant='secondary' className='text-xs'>                  {tech}                <Badge key={index} variant="secondary" className="text-xs">
+=======
+
+
+            className="object-cover"
+            loading="lazy"
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-muted">
@@ -252,12 +285,17 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
                 </Badge>
               ))}
             </div>
+<<<<<<< HEAD
           )}
           
           {project.technologies && project.technologies.length > 0 && (
             <div className="flex flex-wrap gap-1 mt-2">
               {project.technologies.map((tech, index) => (
                 <Badge key={index} variant="secondary" className="text-xs">
+=======
+
+          )}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           {project && project.technologies && project && project.technologies.length > 0 && (;
             <div className='flex flex-wrap gap-1 mt-2'>;
@@ -285,24 +323,41 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
                 <Badge key={index} variant="secondary" className="text-xs">;
 
 
+<<<<<<< HEAD
           
           {project.technologies && project.technologies.length > 0 && (
             <div className="flex flex-wrap gap-1 mt-2">
               {project.technologies.map((tech, index) => (
                 <Badge key={index} variant="secondary" className="text-xs">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   {tech}
                 </Badge>;
               ))}
             </div>;
           )}
+<<<<<<< HEAD
         </div>
       </CardContent>
+=======
+
+
+            <a
+              href={project && project.github_url}
+              target='_blank'
+              rel='noopener noreferrer'
+              aria-label='GitHub'
+              title='GitHub'
+              href = {project && project.github_url,}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       
       <CardFooter className="flex justify-between border-t bg-muted/40 p-4">
         <div className="flex gap-2">
           {project.github_url && (
             <a
               href={project.github_url}
+<<<<<<< HEAD
               rel="noopener noreferrer"
               aria-label="GitHub"
               title="GitHub"
@@ -320,12 +375,15 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
               </Button>;
             </a>;
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
               title="GitHub"
             >
+<<<<<<< HEAD
               <Button variant='ghost' size='icon' aria-label='GitHub link'>
                 <Github className='h-4 w-4' />
               </Button>
@@ -343,11 +401,14 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             </a>
           )}
         </div>              <Button variant="ghost" size="icon" aria-label="Live demo link">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Button variant="ghost" size="icon" aria-label="GitHub link">
                 <Github className="h-4 w-4" />
               </Button>
             </Link>
           )}
+<<<<<<< HEAD
 ;
           {project.demo_url && (;
             <a;
@@ -358,11 +419,32 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
               title="Live demo"
             >
               <Button variant="ghost" size="icon" aria-label="Live demo link">
+=======
+
+        </div>;
+
+        <div className='flex gap-2'>;
+
+          <Button
+            variant='ghost'
+            size='icon'
+            onClick={() => onEdit(project)}
+            aria-label='Edit project';
+          >;
+            <Edit className='h-4 w-4' />;
+          <Button
+            variant='ghost'
+            size='icon'
+            onClick={() => setDeleteDialogOpen(true)}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <Link className="h-4 w-4" />
               </Button>
             </Link>
           )}
         </div>
+<<<<<<< HEAD
         <div className='flex gap-2'>
           <Button
             variant='ghost'
@@ -381,6 +463,8 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           </Button>
         </div>
       </CardFooter>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         
         <div className="flex gap-2">
@@ -393,15 +477,38 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
         </div>
       </CardFooter>
       
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
           <AlertDialogHeader>
             <AlertDialogTitle>Delete Project</AlertDialogTitle>
             <AlertDialogDescription>
+<<<<<<< HEAD
               Are you sure you want to delete this project? This action cannot
               be undone.            </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>
+=======
+
+
+            aria-label='Delete project';
+          >;
+            <Trash2 className='h-4 w-4' />;
+          </Button>;
+        </div>;
+      </CardFooter>;
+
+      <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>;
+        <AlertDialogContent>;
+          <AlertDialogHeader>;
+            <AlertDialogTitle>Delete Project</AlertDialogTitle>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </p>)}
           {project.technologies && project.technologies.length > 0 && (
             <div className='flex flex - wrap gap - 1 mt - 2'>;
@@ -501,24 +608,59 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
               onClick={handleDelete}
 
 
+<<<<<<< HEAD
             <AlertDialogAction
               onClick={handleDelete}
               className='bg-destructive text-destructive-foreground'
             >              Delete              Are you sure you want to delete this project? This action cannot be undone.
               Are you sure you want to delete this project? This action cannot be undone.
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>
+<<<<<<< HEAD
             <AlertDialogAction
               onClick={handleDelete}
               className='bg-destructive text-destructive-foreground'
             >            <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">
             <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">
+=======
+
+
+            <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Delete
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
+<<<<<<< HEAD
+=======
+
+
+
+      </AlertDialog>
+    </Card>
+
+              className='bg-destructive text-destructive-foreground'>            <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">;
+            <AlertDialogCancel > Cancel</AlertDialogCancel>;
+            <AlertDialogAction;
+              on_click={handle_delete}
+              className='bg - destructive text - destructive - foreground';
+            >              Delete              Are you sure you want to delete this project? This action cannot be undone.;
+            </AlertDialogDescription>;
+          </AlertDialogHeader>;
+          <AlertDialogFooter>;
+            <AlertDialogCancel > Cancel</AlertDialogCancel>;
+            <AlertDialogAction;
+              on_click={handle_delete}
+              className='bg - destructive text - destructive - foreground';
+            >            <AlertDialogAction on_click={handle_delete} className="bg - destructive text - destructive - foreground">;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Delete;
             </AlertDialogAction>;
           </AlertDialogFooter>;
@@ -526,14 +668,18 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
       </AlertDialog>;
 
 
+<<<<<<< HEAD
   );
 }
       </AlertDialog>;
     </Card>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 };
 }
 }
+<<<<<<< HEAD
       </AlertDialog>
     </Card>
   )
@@ -542,3 +688,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 ;
     </Card>);
 }
+=======
+    </Card>);
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

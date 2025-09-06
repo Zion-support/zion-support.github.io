@@ -1,4 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD:src/pages/Profile.tsx
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/src/pages/Profile.tsx
 ;
 const Profile = () =>: any {
   return (
@@ -14,4 +18,8 @@ const Profile = () =>: any {
     </div>);
 }
 ;
+<<<<<<< HEAD:src/pages/Profile.tsx
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/src/pages/Profile.tsx
 export default Profile;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react"
 import { Star } from 'lucide-react'import { useForm } from "react-hook-form"
 import { Button } from "@/components/ui/button"
@@ -20,6 +21,8 @@ interface ReviewFormValues {
   timeliness_rating?: number
   would_work_again?: boolean
   is_anonymous?: boolean
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 rating?: number;
   review_text?: string;
   communication_rating?: number;
@@ -29,6 +32,7 @@ rating?: number;
   is_anonymous?: boolean;
 }
 
+<<<<<<< HEAD
 interface ReviewFormProps {
   projectId: string,
   revieweeId: string,
@@ -83,10 +87,20 @@ interface ReviewFormProps {
   revieweeId: string
   revieweeName: string
   onSubmit: (data: any) => Promise<boolean>
+=======
+
+interface ReviewFormProps {;
+  projectId: string,;
+  revieweeId: string,;
+  revieweeName: string,;
+  onSubmit: (data: any) => Promise<boolean>, ;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 
   )
 }
+<<<<<<< HEAD
 import { useState } from "react",;
 import { Star } from 'lucide-react';
 import { useForm } from "react-hook-form",;
@@ -399,6 +413,8 @@ export function ReviewForm({
   )
 }
 ;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface ReviewFormProps {
   project_id: string,
   reviewee_id: string,
@@ -406,4 +422,8 @@ interface ReviewFormProps {
   on_submit: (data: any) => Promise < boolean>,
   }
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

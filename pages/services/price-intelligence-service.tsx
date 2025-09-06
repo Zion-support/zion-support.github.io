@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import UseTokensButton from '../../components/tokens/UseTokensButton';
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 const PriceIntelligenceService: NextPage = () => {
   return (
@@ -20,13 +24,24 @@ const PriceIntelligenceService: NextPage = () => {
   )
 
 
+<<<<<<< HEAD
 },
 export default PriceIntelligenceService,
 
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+},
+export default PriceIntelligenceService,
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 },
 
 export default PriceIntelligenceService,
 
+<<<<<<< HEAD
 }
 export default PriceIntelligenceService;
 import type { NextPage } from 'next',
@@ -71,3 +86,7 @@ export default PriceIntelligenceService,
 
 export default PriceIntelligenceService,;
 export default PriceIntelligenceService,
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client',
 
 import Image from 'next/image';
@@ -12,6 +13,8 @@ import { ImageIcon } from 'lucide-react'
 interface SafeImageProps {;
   src: string;
   alt: string;  width?: number;interface SafeImageProps {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface SafeImageProps {
   src: string;
   alt: string;  width?: number;interface SafeImageProps {
@@ -22,6 +25,7 @@ interface SafeImageProps {
 
   // If we have an error and no fallback, show a placeholder
   if (hasError && (!fallbackSrc |currentSrc === fallbackSrc)) {
+<<<<<<< HEAD
         return (
       <div
         className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
@@ -115,6 +119,8 @@ export function SafeImage({
 
   // If we have an error and no fallback, show a placeholder
   if (hasError && (!fallbackSrc |currentSrc === fallbackSrc)) {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         return (
       <div
         className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
@@ -125,14 +131,22 @@ export function SafeImage({
         <ImageIcon className='w-6 h-6' />      </div>
     )
   }
+<<<<<<< HEAD
     />
 ;
     />;
+=======
+
+;
+    />;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );        aria-label={alt}
 'use client',;
 import Image from 'next/image',;
 import { useState } from 'react',;
 import { ImageIcon } from 'lucide-react';
+<<<<<<< HEAD
 interface SafeImageProps {;
   src: string,;
   alt: string,;
@@ -168,6 +182,76 @@ export function SafeImage({;
       setHasError(true);
     } else if (!hasError) {;
       setHasError(true);
+=======
+
+interface SafeImageProps {;
+  src: string;
+  alt: string;  width?: number;interface SafeImageProps {;
+  src: string,;
+  alt: string,;
+import { ImageIcon } from 'lucide-react';
+
+interface SafeImageProps {;
+  src: string,;
+  alt: string,;
+
+import { ImageIcon } from 'lucide-react'
+
+interface SafeImageProps {
+  src: string,
+  alt: string,
+
+  width?: number;
+  height?: number;
+  className?: string;
+  fallbackSrc?: string;
+  priority?: boolean;
+  sizes?: string;
+
+
+    }
+  }
+
+
+  // If we have an error and no fallback, show a placeholder;
+  if (hasError && (!fallbackSrc || currentSrc === fallbackSrc)) {;
+
+        return (
+      <div
+        className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
+        style={{ width, height }}
+        role="img"
+
+  quality?: number
+}
+
+export function SafeImage({
+  src;
+  alt;
+  width;
+  height;
+  className = '',
+  fallbackSrc;
+  priority = false,
+  sizes;
+  quality = 75}: SafeImageProps) {
+
+  const [ hasError, setHasError ] = useState(false),
+  const [ currentSrc, setCurrentSrc ] = useState(src),
+
+
+  const handleError = () => {
+    if (!hasError && fallbackSrc && currentSrc !== fallbackSrc) {
+      setCurrentSrc(fallbackSrc);
+      setHasError(true)
+    } else if (!hasError && src.startsWith('/')) {
+      // Try serving the image directly through our custom API route
+      const fallbackUrl = `/api/image${src}`,
+      setCurrentSrc(fallbackUrl);
+      setHasError(true)
+    } else if (!hasError) {
+      setHasError(true)
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   };
   // If we have an error and no fallback, show a placeholder;
@@ -178,11 +262,23 @@ export function SafeImage({;
         style={{ width, height }}
         role="img"
         aria-label={alt}
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       >
       </div>
     )
   }
+<<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     />
   ); return (
         aria-label = {alt,}>;
@@ -204,9 +300,12 @@ ursor/fix-website-loading-errors-and-merge-6662
   );  return (
 
 
+<<<<<<< HEAD
 
     />
   ); return (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <Image
       src = {currentSrc,}
       alt = {alt,}
@@ -217,6 +316,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       priority = {priority,}
       // Add unoptimized as fallback for problematic images
       unoptimized = {hasError,}
+<<<<<<< HEAD
     />
   )
 }
@@ -232,6 +332,14 @@ ursor/fix-website-loading-errors-and-merge-6662
       priority={priority}
       // Add unoptimized as fallback for problematic images;
       unoptimized={hasError}
+=======
+
+
+} 
+
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 }
     />;
@@ -326,4 +434,8 @@ if ( {) {
       unoptimized = {has_error, }
     />);
 }
+<<<<<<< HEAD
 } ;
+=======
+} ;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

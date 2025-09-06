@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 console && console.log('🔧 Fixing all syntax errors...');
 // Fix accessibility && accessibility.tsx
 const fixAccessibility = () => {
@@ -10,27 +15,52 @@ const fixAccessibility = () => {
     );
     fs && fs.writeFileSync('pages/accessibility && accessibility.tsx', content);
     console && console.log('✅ Fixed accessibility && accessibility.tsx');
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return true;
   } catch (error) {
     console && console.error('❌ Error fixing accessibility && accessibility.tsx:', error && error.message);
     return false;
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 };
 // Fix api && api.tsx
 const fixApi = () => {
   try {
     let content = fs && fs.readFileSync('pages/api && api.tsx', 'utf8');
+<<<<<<< HEAD
+=======
+    
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Ensure proper closing structure
     if (!content.includes('export default')) {;
       content += '\n\nexport default function API() {\n  return (\n    <div>\n      <h1>API Documentation</h1>\n    </div>\n  );\n}';
     }
+<<<<<<< HEAD
     fs && fs.writeFileSync('pages/api && api.tsx', content);
     console && console.log('✅ Fixed api && api.tsx');
+=======
+
+    
+    fs && fs.writeFileSync('pages/api && api.tsx', content);
+    console && console.log('✅ Fixed api && api.tsx');
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return true;
   } catch (error) {
     console && console.error('❌ Error fixing api && api.tsx:', error && error.message);
     return false;
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 };
 // Fix careers && careers.tsx
 const fixCareers = () => {
@@ -43,11 +73,19 @@ const fixCareers = () => {
     );
     fs && fs.writeFileSync('pages/careers && careers.tsx', content);
     console && console.log('✅ Fixed careers && careers.tsx');
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return true;
   } catch (error) {
     console && console.error('❌ Error fixing careers && careers.tsx:', error && error.message);
     return false;
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 };
 // Fix support && support.tsx
 const fixSupport = () => {
@@ -60,11 +98,19 @@ const fixSupport = () => {
     );
     fs && fs.writeFileSync('pages/support && support.tsx', content);
     console && console.log('✅ Fixed support && support.tsx');
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return true;
   } catch (error) {
     console && console.error('❌ Error fixing support && support.tsx:', error && error.message);
     return false;
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 };
 // Fix webinars && webinars.tsx
 const fixWebinars = () => {
@@ -77,6 +123,10 @@ const fixWebinars = () => {
     );
     fs && fs.writeFileSync('pages/webinars && webinars.tsx', content);
     console && console.log('✅ Fixed webinars && webinars.tsx');
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return true;
   } catch (error) {
     console && console.error('❌ Error fixing webinars && webinars.tsx:', error && error.message);
@@ -84,8 +134,16 @@ const fixWebinars = () => {
   }
 }
 // Main execution
+<<<<<<< HEAD
 const main = () => {
   console && console.log('Starting comprehensive syntax fixes...');
+=======
+
+const main = () => {
+  console && console.log('Starting comprehensive syntax fixes...');
+  
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const fixes = [
     fixAccessibility
     fixApi
@@ -220,7 +278,15 @@ const main = () =>: any {
       success_count++;
     }
   }
+<<<<<<< HEAD
   console && console.log(`\n✅ Fixed ${successCount}/${fixes && fixes.length} files`);
+=======
+
+  
+  console && console.log(`\n✅ Fixed ${successCount}/${fixes && fixes.length} files`);
+  
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (successCount > 0) {
     console && console.log('\n📝 Adding fixed files...');
     try {

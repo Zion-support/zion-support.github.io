@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }; import {
   FormField
   FormItem
@@ -9,12 +10,15 @@
 import { Input } from "@/components/ui/input"
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender"
 import { Card, CardContent } from "@/components/ui/card"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 } import {
   FormField;
   FormItem;
   FormLabel;
   FormControl;
   FormDescription;
+<<<<<<< HEAD
 
 
 import React, { useState } from "react";
@@ -35,6 +39,8 @@ import { Input } from "@/components/ui/input",
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender";
 import { Card, CardContent } from "@/components/ui/card";
 interface RateOptimizationSectionProps {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   control: Control<any>
   setValue: UseFormSetValue<any>
@@ -42,6 +48,18 @@ interface RateOptimizationSectionProps {
   yearsExperience: number
   location?: string
 
+<<<<<<< HEAD
+=======
+
+interface RateOptimizationSectionProps {
+  control: Control<any>,
+  setValue: UseFormSetValue<any>,
+  skills: string[],
+  yearsExperience: number,
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",
 import { Card, CardContent } from "@/components/ui/card",
 
@@ -51,12 +69,16 @@ interface RateOptimizationSectionProps {
   skills: string[],
   yearsExperience: number,
   location?: string,
+<<<<<<< HEAD
   location?: string
   location?: string,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   rateType: "hourly" | "fixed"
   location?: string,
   location?: string
 }
+<<<<<<< HEAD
 export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
 
   control
@@ -256,3 +278,6 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 }
 "},
 }
+=======
+export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

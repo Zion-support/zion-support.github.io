@@ -9,4 +9,8 @@ const AdvancedAnalytics.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AdvancedAnalytics.js;
+=======
+export default AdvancedAnalytics.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

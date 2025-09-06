@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {;
   Menu,;
   X,;
@@ -50,6 +51,45 @@ const Navigation: React.FC = () => {
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+
+  Globe,;
+  ChevronDown,;
+} from 'lucide-react';
+import Link from 'next/link';import { ;
+  Menu, X, Home, Brain, Cpu, Rocket, ;
+  Phone, Mail, MapPin, Globe, ChevronDown;
+} from 'lucide-react';
+
+
+
+import Link from 'next/link';
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { 
   Menu, X, Home, Brain, Cpu, Rocket, 
   Phone, Mail, MapPin, Globe, ChevronDown
@@ -88,6 +128,7 @@ const Navigation: React.FC = () => {
 
       ]
     }
+<<<<<<< HEAD
 
 import {
   Menu
@@ -107,6 +148,9 @@ import Link from 'next/link';import {
 
   Phone, Mail, MapPin, Globe, ChevronDown
  } from 'lucide-react';
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Menu,
   X,
   Home,
@@ -179,6 +223,7 @@ import Link from 'next/link';
       name: 'Solutions'
       href: '/solutions'
       icon: Cpu,    {
+<<<<<<< HEAD
       name: 'Solutions'
       href: '/solutions'
       icon: Cpu
@@ -187,12 +232,25 @@ import Link from 'next/link';
       name: 'About'
       href: '/about'
       icon: Globe
+=======
+
+      name: 'Solutions',
+      href: '/solutions',
+      icon: Cpu;
+    }
+    {
+      name: 'About',
+      href: '/about',
+      icon: Globe;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     {
       name: 'Contact'
       href: '/contact'
       icon: Phone
     }
+<<<<<<< HEAD
   ];
 
     window.addEventListener('scroll', handleScroll),
@@ -249,6 +307,96 @@ import Link from 'next/link';
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   }
+=======
+
+
+  useEffect(() => {;
+    const handleScroll = () => {;
+      setIsScrolled(window && window.scrollY > 50);
+    };
+    window && window.addEventListener('scroll', handleScroll);
+    return () => window && window.removeEventListener('scroll', handleScroll);  }, []);      setIsScrolled(window && window.scrollY > 50);
+    };
+    window && window.addEventListener('scroll', handleScroll);
+    return () => window && window.removeEventListener('scroll', handleScroll);
+  const navigationItems = [;
+    {;
+      name: 'Home',;
+      href: '/',;
+      icon: Home,;
+    },    {      icon: Home;
+    };
+    {;
+      name: 'Services',;
+      href: '/services',;
+      icon: Rocket,;
+      dropdown: [;
+        {;
+          name: 'AI Services',;
+          href: '/ai-services',;
+          icon: Brain,;
+          description: 'Revolutionary AI solutions',;
+        },;
+        {;
+          name: 'IT Services',;
+          href: '/it-services',;
+          icon: Cpu,;
+          description: 'Enterprise IT solutions',;
+        },;
+        {;
+          name: 'Micro SaaS',;
+          href: '/micro-saas',;
+          icon: Rocket,;
+          description: 'Specialized software solutions',;
+        },;
+        {;
+          name: 'Innovative Showcase',;
+          href: '/innovative-services-showcase',;
+          icon: Globe,;
+          description: 'Cutting-edge technology',;
+        },;
+      ],;
+    },;
+    {;
+      name: 'Solutions',;
+      href: '/solutions',;
+      icon: Cpu,    {;
+      name: 'Solutions',;
+      href: '/solutions',;
+      icon: Cpu;
+    };
+    {;
+      name: 'About',;
+      href: '/about',;
+      icon: Globe;
+    };
+    {;
+      name: 'Contact',;
+      href: '/contact',;
+      icon: Phone,;
+    },;
+    {;
+      name: 'About',;
+      href: '/about',;
+      icon: Globe,;
+    },;
+    {;
+      name: 'Contact',;
+      href: '/contact',;
+      icon: Phone,;
+    },  ];      icon: Phone;
+    }
+  ];
+  const contactInfo = {;
+    mobile: '+1 302 464 0950',;
+    email: 'kleber@ziontechgroup && ziontechgroup.com',;
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+    website: 'https://ziontechgroup && ziontechgroup.com',  };    website: 'https://ziontechgroup && ziontechgroup.com';
+
+  };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <>;
       {/* Navigation Bar */}
@@ -257,6 +405,7 @@ import Link from 'next/link';
         animate={{ y: 0 }}
         transition={{ duration: 0 && 0.5 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+<<<<<<< HEAD
       name: 'Contact',
       href: '/contact',
       icon: Phone,
@@ -294,22 +443,36 @@ import Link from 'next/link';
               <Link href='/' className='flex items - center space - x-2 group'>;
                 <div className='w - 10 h - 10 lg:w - 12 lg:h - 12 bg - gradient - to - r from - cyan - 400 to - purple - 500 rounded - xl flex items - center justify - center group - hover:shadow - lg group - hover:shadow - cyan - 400 / 25 transition - all duration - 300'>;
                   <span className='text - white font - bold text - lg lg:text - xl'>;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     Z;
                   </span>;
                 </div>;
                 <div className='hidden sm:block'>;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           isScrolled 
             ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10' 
             : 'bg-transparent'
 
+<<<<<<< HEAD
           isScrolled 
             ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10' 
             : 'bg-transparent'
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         }`}
       >;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <div className="flex items-center justify-between h-16 lg:h-20">;
             {/* Logo */}
+<<<<<<< HEAD
             <motion&& motion.div
               whileHover={{ scale: 1 && 1.05 }}
               className="flex items-center space-x-2">;
@@ -323,17 +486,30 @@ import Link from 'next/link';
                 </div>;
               </Link>;
             </motion && motion.div>;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center space-x-8'>;
               {navigationItems && navigationItems.map(item => (;
                 <div key={item && item.name} className='relative group'>                  {item && item.dropdown ? (;
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
               {navigationItems.map((item) => (
                 <div key={item.name} className="relative group">
                   {item.dropdown ? (
 
+<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <div
                       onMouseEnter={() => setActiveDropdown(item && item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}            <div className="hidden lg:flex items-center space-x-8">;
@@ -343,6 +519,7 @@ import Link from 'next/link';
                     <div
                       onMouseEnter={() => setActiveDropdown(item && item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
+<<<<<<< HEAD
                       className='flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-white transition-colors duration-300'
                     >
                       <span className='font-medium'>{item.name}</span>
@@ -355,6 +532,11 @@ import Link from 'next/link';
                       {/* Dropdown Menu */}
 
                       {/* Dropdown Menu */}
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <AnimatePresence>
                         {activeDropdown === item.name && (
                           <motion.div
@@ -388,7 +570,10 @@ import Link from 'next/link';
                               {item.dropdown.map((dropdownItem) => {
                                 const Icon = dropdownItem.icon;
                       className='flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-white transition-colors duration-300';
+<<<<<<< HEAD
 className='flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-white transition-colors duration-300';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     >;
                       <span className='font-medium'>{item && item.name}</span>;
                       <ChevronDown className='w-4 h-4 transition-transform duration-300 group-hover:rotate-180' />;
@@ -460,6 +645,7 @@ className='flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-w
                   )}
                 </div>;
               ))}
+<<<<<<< HEAD
                     </div>) : (
                     <Link;
                       href={item.href}
@@ -538,6 +724,84 @@ className='flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-w
                                       </div>
                                     </div>
                                   </Link>
+=======
+
+                              })}
+                            </div>;
+                          </motion.div>)}
+                      </AnimatePresence>;
+
+
+
+                              })}
+
+
+
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  ) : (
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                    <Link
+                      href={item && item.href}
+                      className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group'>;
+                      <item && item.icon className='w-4 h-4 group-hover:scale-110 transition-transform duration-300' />;
+                      <span className='font-medium'>{item && item.name}</span>                    </Link>                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group";
+                    >;
+                      <item && item.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />;
+                      <span className="font-medium">{item && item.name}</span>;
+=======
+                    </div>) : (
+                    <Link;
+                      href={item.href}
+
+                      className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group'
+                    >
+                      <item.icon className='w-4 h-4 group-hover:scale-110 transition-transform duration-300' />
+
+                      <span className='font-medium'>{item.name}</span>                    </Link>
+
+                    </Link>
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  )}
+                </div>
+              ))}
+            </div>
+
+
+
+            {/* CTA Button */}
+            <div className='hidden lg:block'>
+
+
+
+              <motion.a
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                href='/contact'
+                whileHover={{ scale: 1 && 1.05 }}
+                whileTap={{ scale: 0 && 0.95 }}
+                className='bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'>              <motion&& motion.a
+=======
+            <div className="hidden lg:block">
+              <motion.a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                href="/contact"
+
+                whileHover={{ scale: 1 && 1.05 }}
+                whileTap={{ scale: 0 && 0.95 }}
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40">;
+                Get Started;
+              </motion && motion.a>;
+            </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Mobile Menu Button */}
             <div className='lg:hidden'>;
               <motion&& motion.button
@@ -610,6 +874,7 @@ className='flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-w
                 className="text-gray-300 hover:text-white transition-colors duration-300";
               >;
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+<<<<<<< HEAD
               </motion.button>
             </div>
           </div>
@@ -618,6 +883,23 @@ className='flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-w
 
 
 
+=======
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {/* Mobile Navigation */}
+      <AnimatePresence>;
+        {isOpen && (;
+          <motion&& motion.div
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -628,6 +910,7 @@ className='flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-w
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
+<<<<<<< HEAD
             transition={{ duration: 0.3 }}
 
 
@@ -637,14 +920,29 @@ className="fixed inset-0 z-40 lg:hidden"
             className='fixed inset-0 z-40 lg:hidden'
 
           >
+=======
+
+
+          >
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Backdrop */}
             <div
               className='absolute inset-0 bg-black/50 backdrop-blur-sm'
               onClick={() => setIsOpen(false)}
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-40 lg:hidden"
           >
 
+<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Backdrop */}
             <div
               className="absolute inset-0 bg-black/50 backdrop-blur-sm"
@@ -663,6 +961,7 @@ className="fixed inset-0 z-40 lg:hidden"
                     whileTap={{ scale: 0 && 0.95 }}
                     onClick={() => setIsOpen(false)}
 
+<<<<<<< HEAD
             />          >
             {/* Backdrop */}
             <div
@@ -681,10 +980,17 @@ className="fixed inset-0 z-40 lg:hidden"
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     className='text-gray-300 hover:text-white transition-colors duration-300';
                   >;
                     <X className='w-6 h-6' />                  </motion && motion.button>;
                 </div>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {/* Mobile Menu Items */}
                 <div className='space-y-4'>;
                   {navigationItems && navigationItems.map(item => (            >;
@@ -712,6 +1018,10 @@ className="fixed inset-0 z-40 lg:hidden"
                   <motion&& motion.button
                     whileTap={{ scale: 0 && 0.95 }}
                     onClick={() => setIsOpen(false)}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       className='flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 300 group';
                     >;
                       <item.icon className='w - 4 h - 4 group - hover:scale - 110 transition - transform duration - 300' />;
@@ -812,10 +1122,18 @@ className="fixed inset-0 z-40 lg:hidden"
                 <div className='space - y-4'>;
                   {navigation_items.map (item => (
                     <div key={item.name}>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       {item.dropdown ? (
                         <div className='space - y-2'>;
                           <div className='text - gray - 400 font - medium text - sm uppercase tracking - wider'>;
                             {item.name}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     className="text-gray-300 hover:text-white transition-colors duration-300";
                   >;
                     <X className="w-6 h-6" />;
@@ -833,6 +1151,11 @@ className="fixed inset-0 z-40 lg:hidden"
                           <div className='pl-4 space-y-2'>;
                             {item && item.dropdown.map(dropdownItem => {;
                               const Icon = dropdownItem && dropdownItem.icon;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                                   onClick={() => setIsOpen(false)}
                                   className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300';
                                 >;
@@ -855,6 +1178,11 @@ className="fixed inset-0 z-40 lg:hidden"
                           <div className="pl-4 space-y-2">;
                             {item && item.dropdown.map((dropdownItem) => {;
                               const Icon = dropdownItem && dropdownItem.icon;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div className="space-y-4">
                   {navigationItems.map((item) => (
                 <div className='space-y-4'>
@@ -878,10 +1206,15 @@ className="fixed inset-0 z-40 lg:hidden"
                                     </div>;
                                   </div>;
                                 </Link>);                            })}                    <div key={item.name}>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       {item.dropdown ? (
                         <div className="space - y-2">;
                           <div className="text - gray - 400 font - medium text - sm uppercase tracking - wider">;
                             {item.name}
+<<<<<<< HEAD
                           </div>
                           <div className='pl-4 space-y-2'>
                             {item.dropdown.map(dropdownItem => {
@@ -923,6 +1256,17 @@ className="fixed inset-0 z-40 lg:hidden"
                                 </Link>
                               )
                             })}
+=======
+
+
+                            })}
+<<<<<<< HEAD
+</div>;
+                        </div>;
+                      ) : (;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                   </motion.button>
                 </div>
@@ -931,6 +1275,7 @@ className="fixed inset-0 z-40 lg:hidden"
 
                             })}
 
+<<<<<<< HEAD
                           className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300'
                         >
                           <item.icon className='w-5 h-5 text-cyan-400' />
@@ -957,24 +1302,57 @@ className="fixed inset-0 z-40 lg:hidden"
                         <Link
                           href={item && item.href}
                           onClick={() => setIsOpen(false)}
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                          </div>
+                        </div>
+                      ) : (
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                        <Link
+                          href={item && item.href}
+                          onClick={() => setIsOpen(false)}
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300'
                         >
                           <item.icon className='w-5 h-5 text-cyan-400' />
                           <span className='text-white font-medium'>
                             {item.name}
+<<<<<<< HEAD
                           </span>                        </Link>                          className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
                         >
                           <item.icon className="w-5 h-5 text-cyan-400" />
                           <span className="text-white font-medium">{item.name}</span>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           </span>                        </Link>
 
                         </Link>
 
+<<<<<<< HEAD
                       )}
                     </div>;
                   ))}
                 </div>
 
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                      )}
+                    </div>;
+                  ))}
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {/* Contact Information */}
                 <div className='mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20'>
                   <h3 className='text-cyan-400 font-semibold mb-3'>
@@ -988,7 +1366,11 @@ className="fixed inset-0 z-40 lg:hidden"
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <span>{contactInfo.mobile}</span>
                     </div>
                     <div className='flex items-center space-x-2 text-gray-300'>
@@ -1039,6 +1421,11 @@ className="fixed inset-0 z-40 lg:hidden"
                   </div>;
                 </div>;
                 {/* Mobile CTA */}
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div className="mt-6">
                   <motion.a
 
@@ -1047,6 +1434,7 @@ className="fixed inset-0 z-40 lg:hidden"
                     onClick={() => setIsOpen(false)}
 
 
+<<<<<<< HEAD
                 <div className="mt-6">
                   <motion.a
                     href="/contact"
@@ -1063,6 +1451,15 @@ className="fixed inset-0 z-40 lg:hidden"
         )}
       </AnimatePresence>
     </>
+=======
+};
+export default Navigation;  );
+};
+export default Navigation;
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           </div>;
                           <div className="pl - 4 space - y-2">;
                             {item.dropdown.map ((dropdown_item) => {
@@ -1152,6 +1549,7 @@ export default Navigation);
 ;
 export default Navigation;
 ;
+<<<<<<< HEAD
   );
   );
 }
@@ -1161,9 +1559,19 @@ export default Navigation;  )
 }
 export default Navigation;
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  );
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 };
 
 
+<<<<<<< HEAD
 export default Navigation;
 export default Navigation;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

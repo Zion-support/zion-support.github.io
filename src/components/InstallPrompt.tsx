@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import React, { useEffect, useState } from 'react';
 
@@ -33,6 +34,8 @@ interface BeforeInstallPromptEvent extends Event {;
     platform: string;
   }>,;
   prompt(): Promise<void>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 // Augment the WindowEventMap to include 'beforeinstallprompt'
 declare global {
@@ -51,12 +54,21 @@ export const InstallPrompt: React.FC = () => {
     const isDismissed = dismissUntil && Date.now() < Number(dismissUntil)
     const hasShown = safeSessionStorage.getItem(SHOWN_KEY)
     // Do not show prompt if already installed (standalone mode)
+<<<<<<< HEAD
     if (isDismissed |hasShown |window.matchMedia('(display-mode: standalone)').matches) {
       return
     if (isDismissed |hasShown |window.matchMedia('(display-mode: standalone)').matches) {
       return
     if (isDismissed || hasShown || window.matchMedia('(display-mode: standalone)').matches) {
       return;
+=======
+
+
+    if (isDismissed || hasShown || window.matchMedia('(display-mode: standalone)').matches) {
+      return;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     const handler = (e: BeforeInstallPromptEvent,) => {
       e.preventDefault()
@@ -520,4 +532,8 @@ export default InstallPrompt,
 main
 
     </>
+<<<<<<< HEAD
   )
+=======
+  )
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

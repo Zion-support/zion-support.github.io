@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState } from 'react'
 import { Dispute, DisputeStatus } from '@/types/disputes'
@@ -17,6 +18,8 @@ import Link from 'next/link'
 type DisputesListProps = {
   disputes: Dispute[]
 isLoading: boolean
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 export /**
  * DisputesList - Function description
@@ -31,6 +34,7 @@ function DisputesList() {
   const getStatusBadgeVariant = (status: DisputeStatus, ) =>: any {
     switch (status) {
       case 'open':;
+<<<<<<< HEAD
 }
 export function DisputesList({ disputes, isLoading }: DisputesListProps) {
   const [statusFilter, setStatusFilter] = useState<DisputeStatus | 'all'>(
@@ -43,10 +47,13 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
   const getStatusBadgeVariant = (status: DisputeStatus,) => {
     switch (status) {
       case 'open':
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         return 'default';
       case 'under_review':;
         return 'secondary';
       case 'resolved':;
+<<<<<<< HEAD
         return 'outline'; // Changed from "success" to "outline"
       case 'closed':
         return 'outline'
@@ -108,6 +115,18 @@ TableBody,
   TableHead,
   TableHeader,
 
+=======
+        return 'outline'; // Changed from './success'; to "outline";
+      case 'closed':;
+        return 'outline';
+      default:;
+        return 'default';
+import React, { useState } from './react';
+import { Dispute, DisputeStatus  } from '@/types / disputes';
+import { Button  } from '@/components / ui / button';
+import { Badge  } from '@/components / ui / badge';
+import {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Table;
   TableBody;
   TableCell;
@@ -144,12 +163,17 @@ import { Dispute, DisputeStatus } from "@/types/disputes",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
   TableRow} from "@/components/ui/table",
+<<<<<<< HEAD
 import Skeleton from "@/components/ui/skeleton",
 import { formatDistanceToNow } from "date-fns",
 import { ShieldAlert } from 'lucide-react'
@@ -158,6 +182,9 @@ import Link from "next/link",
         <div className="border rounded-md">
   disputes: Dispute[]
   isLoading: boolean
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React, { useState } from "react";
 import { Dispute, DisputeStatus } from "@/types/disputes";
@@ -178,15 +205,30 @@ type DisputesListProps = {;
   disputes: Dispute[],;
   isLoading: boolean;
 };
+<<<<<<< HEAD
 export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps) {;
   const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
   const filteredDisputes = statusFilter === "all" ;
     ? disputes ;
     : disputes && disputes.filter(dispute => dispute && dispute.status === statusFilter);
+=======
+
+export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps) {;
+  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
+
+  const filteredDisputes = statusFilter === "all" ;
+    ? disputes ;
+    : disputes && disputes.filter(dispute => dispute && dispute.status === statusFilter);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const getStatusBadgeVariant = (status: DisputeStatus) => {;
     switch (status) {;
   disputes: Dispute[],
   is_loading: boolean;
+<<<<<<< HEAD
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export /**
  * DisputesList - Function description
  */
@@ -201,6 +243,7 @@ function DisputesList() {
       case "under_review":;
         return "secondary";
       case "resolved":;
+<<<<<<< HEAD
 type DisputesListProps = {
   disputes: Dispute[]
   isLoading: boolean
@@ -270,6 +313,17 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
             <Skeleton key={status} className="h-10 w-24" />
           ))}
         </div>
+=======
+
+        return "outline", // Changed from './success'; to "outline";
+
+      case "closed":;
+        return "outline";
+      default:;
+        return "default";
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="border rounded-md">
           <Table>
             <TableHeader>
@@ -279,10 +333,15 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
                 <TableHead>Parties</TableHead>
                 <TableHead>Created</TableHead>
                 <TableHead>Status</TableHead>
+<<<<<<< HEAD
                 <TableHead className='text-right'>Actions</TableHead>              </TableRow>                <TableHead className="text-right">Actions</TableHead>
 ursor/fix-website-loading-errors-and-merge-6662
               </TableRow>
                 <TableHead className='text-right'>Actions</TableHead>              </TableRow>                <TableHead className="text-right">Actions</TableHead>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <TableHead className="text-right">Actions</TableHead>
 
 
@@ -297,6 +356,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <TableCell><Skeleton className="h-4 w-24" /></TableCell>
                   <TableCell><Skeleton className="h-6 w-20" /></TableCell>
                   <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>
+<<<<<<< HEAD
               ))}
             </TableBody>
           </Table>
@@ -321,6 +381,12 @@ ursor/fix-website-loading-errors-and-merge-6662
         <p className="text-muted-foreground mt-2">
 
 
+=======
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </TableRow>
 import React, { useState } from "react",;
 import { Dispute, DisputeStatus } from "@/types/disputes",;
@@ -451,10 +517,16 @@ export function DisputesList({ disputes, isLoading } DisputesListProps) {;
           </Table>;
         </div>;
       </div>;
+<<<<<<< HEAD
     );
   }
 
   if (disputes.length === 0) {
+=======
+
+    );
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   }
@@ -470,6 +542,7 @@ export function DisputesList({ disputes, isLoading } DisputesListProps) {;
 
   if (disputes && disputes.length === 0) {;
     return (
+<<<<<<< HEAD
 
   if (disputes.length === 0) {
     return (
@@ -481,11 +554,20 @@ export function DisputesList({ disputes, isLoading } DisputesListProps) {;
         <h3 className="text-xl font-medium">No disputes found</h3>
         <p className="text-muted-foreground mt-2">
       <div className="text-center py-12 border rounded-md bg-muted/20">
+=======
+      <div className='text-center py-12 border rounded-md bg-muted/20'>;
+        <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />;
+        <h3 className='text-xl font-medium'>No disputes found</h3>;
+        <p className='text-muted-foreground mt-2'>          No active disputes match the selected filter    );
+  }
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="text-center py-12 border rounded-md bg-muted/20">
         <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
         <h3 className="text-xl font-medium">No disputes found</h3>
         <p className="text-muted-foreground mt-2">
           No active disputes match the selected filter
+<<<<<<< HEAD
         </p>
       </div>
     )
@@ -534,6 +616,11 @@ ursor/fix-website-loading-errors-and-merge-6662
         </p>
       </div>
     )
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </p>
       </div>
     )
@@ -733,9 +820,13 @@ if ( {) {
           size="sm"
 ursor/fix-website-loading-errors-and-merge-6662
 
+<<<<<<< HEAD
   return (
     <div className="space-y-4">
     <div className="space-y-4">
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
         <Button
           variant={statusFilter === "all" ? "default" : "outline"}
@@ -751,7 +842,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
           size="sm"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           size="sm"
         >
           Open
@@ -762,9 +856,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
           size="sm"
 ursor/fix-website-loading-errors-and-merge-6662
           size="sm"
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           size="sm"
         >
           Under Review
@@ -775,9 +873,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
           size="sm"
 ursor/fix-website-loading-errors-and-merge-6662
           size="sm"
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           size="sm"
         >
           Resolved
@@ -788,19 +890,27 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
           size="sm"
 ursor/fix-website-loading-errors-and-merge-6662
           size="sm"
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           size="sm"
         >
           Closed
         </Button>
       </div>
+<<<<<<< HEAD
       <div className='border rounded-md overflow-hidden'>        <Table>      <div className="border rounded-md overflow-hidden">
 ursor/fix-website-loading-errors-and-merge-6662
       <div className="border rounded-md overflow-hidden">
         <Table>
       <div className='border rounded-md overflow-hidden'>        <Table>      <div className="border rounded-md overflow-hidden">
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       <div className="border rounded-md overflow-hidden">
 
@@ -814,6 +924,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <TableHead>Parties</TableHead>
               <TableHead>Created</TableHead>
               <TableHead>Status</TableHead>
+<<<<<<< HEAD
               <TableHead className='text-right'>Actions</TableHead>
             </TableRow>
           </TableHeader>
@@ -821,6 +932,10 @@ ursor/fix-website-loading-errors-and-merge-6662
             {filteredDisputes.map(dispute => (            </TableRow>
           </TableHeader>
           <TableBody>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <TableHead className="text-right">Actions</TableHead>
             </TableRow>
           </TableHeader>
@@ -829,6 +944,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
             {filteredDisputes.map((dispute) => (
               <TableRow key={dispute.id}>
+<<<<<<< HEAD
                 <TableCell className="font-mono text-xs">
                   {dispute.id.split('-')[0]}
                 </TableCell>
@@ -836,6 +952,17 @@ ursor/fix-website-loading-errors-and-merge-6662
                   {dispute.project?.title |'Unknown Project'}
                   {dispute.project?.title |'Unknown Project'}
                   {dispute.project?.title || 'Unknown Project'}
+=======
+                <TableCell className='font-mono text-xs'>
+                  {dispute.id.split('-')[0]}
+                </TableCell>
+                <TableCell>
+
+
+                  {dispute.project?.title || 'Unknown Project'}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </TableCell>
                 <TableCell>
                   <div className='flex flex-col text-sm'>
@@ -850,8 +977,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </TableCell>
                 <TableCell>
                   {formatDistanceToNow(new Date(dispute.created_at), {
+<<<<<<< HEAD
                     addSuffix: true
                   })}                      Talent: {dispute.talent_profile?.display_name |"Unknown Talent"}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <TableHead className="text-right">Actions</TableHead>
             </TableRow>
           </TableHeader>
@@ -880,10 +1011,18 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </span>
                     <span>
                       Talent: {dispute.talent_profile?.display_name || "Unknown Talent"}
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     </span>
                   </div>
                 </TableCell>
                 <TableCell>
+<<<<<<< HEAD
                   </div>
                 </TableCell>
                 <TableCell>
@@ -913,6 +1052,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </div>
                 </TableCell>
                 <TableCell>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           size="sm";
           size="sm";
@@ -1085,6 +1226,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                     {dispute.status.replace('_ ')}
                   </Badge>
                 </TableCell>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <TableCell className="text-right">
                   <Button asChild size="sm">
                     <Link href={`/dashboard/disputes/${dispute.id}`}>View Details</Link>
@@ -1093,6 +1238,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </TableRow>
             ))}
 
+<<<<<<< HEAD
             ))}
           </TableBody>
         </Table>
@@ -1120,6 +1266,15 @@ if (isLoading) {"
 }</TableCell> <TableCell> </Button> </TableCell> </TableRow>) )
 }</TableBody> </Table> </div> </div>)
 }"}
+=======
+                  {formatDistanceToNow (new Date (dispute.created_at), {
+                    add_suffix: true,
+                  })}
+                </TableCell>;
+                <TableCell>;
+                  <Badge variant={getStatusBadgeVariant (dispute.status)}>;
+                    {dispute.status.replace ('_', ' ')}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </Badge>;
                 </TableCell>;
                 <TableCell className="text-right">;
@@ -1127,8 +1282,30 @@ if (isLoading) {"
                     <Link href={`/dashboard/disputes/${dispute.id}`}>View Details</Link>;
                   </Button>;
                 </TableCell>;
+<<<<<<< HEAD
               </TableRow>;
             ))}
+=======
+              </TableRow>))}
+          </TableBody>;
+        </Table>;
+      </div>;
+    </div>);
+
+}
+// Check condition
+if ( {") {
+  $2
+}
+  return (<div className="space - y-4" > <div className="flex gap - 2 mb - 4" > {";
+  ["All", "Open", "Under Review",  "Resolved", "Closed" ].map ( (status) => (<Skeleton key= {
+  status ";
+}className="h - 10 w - 24" /> ";
+}</div> <div className="border rounded - md" > <Table> <TableHeader> <TableRow> <TableHead > Case ID</TableHead> <TableHead > Project</TableHead> <TableHead > Parties</TableHead> <TableHead > Created</TableHead> <TableHead > Status</TableHead> <TableHead className="text - right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
+  [...Array (5) ].map ( (, i) => (<TableRow key= {
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   addSuffix: true 
 }) 
 }</TableCell> <TableCell> </Button> </TableCell> </TableRow>) ) ;
@@ -1143,7 +1320,12 @@ if (isLoading) {"
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 }
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   i ";
 }> <TableCell><Skeleton className="h - 4 w - 24" /></TableCell> <TableCell><Skeleton className="h - 4 w - 40" /></TableCell> <TableCell><Skeleton className="h - 4 w - 32" /></TableCell> <TableCell><Skeleton className="h - 4 w - 24" /></TableCell> <TableCell><Skeleton className="h - 6 w - 20" /></TableCell> <TableCell className="text - right" ><Skeleton className="h - 9 w - 20 ml - auto" /></TableCell> </TableRow>) );
 }</TableBody> </Table> </div> </div>) ";
@@ -1202,4 +1384,8 @@ if (isLoading) {";
 }
 ;
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

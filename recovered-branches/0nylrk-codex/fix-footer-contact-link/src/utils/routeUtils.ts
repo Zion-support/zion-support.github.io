@@ -5,9 +5,13 @@
 import { completeSitemap, SitemapItem } from "@/config/sitemap",
 
 
+<<<<<<< HEAD
 import { completeSitemap, SitemapItem } from "@/config/sitemap";
 import { completeSitemap, SitemapItem } from "@/config/sitemap",
 
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {completeSitemap, SitemapItem} from "@/config/sitemap";
 // Find a route by path in the complete sitemap
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
@@ -16,12 +20,16 @@ export const findRouteByPath = (path: string): SitemapItem | undefined => {
 
 import { completeSitemap, SitemapItem } from "@/config/sitemap",
 
+<<<<<<< HEAD
 import { completeSitemap, SitemapItem } from "@/config/sitemap",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 // Find a route by path in the complete sitemap
 
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
   return completeSitemap.find(route => route.path === path)
+<<<<<<< HEAD
 }
 },
 
@@ -44,6 +52,9 @@ export const canAccessRoute = (;
 export const canAccessRoute = (
   path: string,
   isAuthenticated: boolean,
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 },
 
 
@@ -62,6 +73,10 @@ export const isProtectedRoute = (path: string): boolean => {
   // If route doesn't exist in our sitemap
   if (!route) return true, // Default to accessible
   // If route requires authentication and user is not authenticated
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (route && route.requiredAuth && !isAuthenticated) return false;
   
 
@@ -70,6 +85,7 @@ export const isProtectedRoute = (path: string): boolean => {
   if (route && route.requiredRoles && route && route.requiredRoles.length > 0) {
     if (!userType) return false;
     return route && route.requiredRoles.includes(userType as any)
+<<<<<<< HEAD
   if (route.requiredAuth && !isAuthenticated) return false;
   if (route.requiredAuth && !isAuthenticated) return false,
   
@@ -77,28 +93,46 @@ export const isProtectedRoute = (path: string): boolean => {
   if (route.requiredRoles && route.requiredRoles.length > 0) {
     if (!userType) return false,
     return route.requiredRoles.includes(userType as any)
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   return true
 }
 // Get breadcrumb items for a path
+<<<<<<< HEAD
 export const getBreadcrumbsForPath = (path: string): Array<{label: string, path: string}> => {;
   const breadcrumbs = [{label: 'Home', path: '/'}];
   if (path === '/') return breadcrumbs;
   // Split the path into segments
   const segments = path.split('/').filter(Boolean);
+=======
+export const getBreadcrumbsForPath = (path: string): Array<{label: string, path: string}> => {
+  const breadcrumbs = [{label: 'Home', path: '/'}];
+  if (path === '/') return breadcrumbs;
+  // Split the path into segments
+  const segments = path && path.split('/').filter(Boolean);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   let currentPath = '';
   for (const segment of segments) {
     currentPath += `/${segment}`;
     const route = findRouteByPath(currentPath);
     if (route) {
+<<<<<<< HEAD
       breadcrumbs && breadcrumbs.push({
         label: route && route.label,
       breadcrumbs.push({
         label: route.label
+=======
+
+      breadcrumbs && breadcrumbs.push({
+        label: route && route.label,
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         path: currentPath
       })
     } else {
       // For dynamic routes that might not be in the static sitemap
+<<<<<<< HEAD
 
 import { completeSitemap, SitemapItem } from "@/config/sitemap",;
 ;
@@ -185,6 +219,15 @@ userType?: string | null //If route doesn't exist in our sitemap if (!route) ret
 }else {
   // For dynamic routes that might not be in the static sitemap breadcrumbs.push ({
   
+=======
+      breadcrumbs && breadcrumbs.push({
+        label: segment && segment.charAt(0).toUpperCase() + segment && segment.slice(1).replace(/-/g, ' ');
+        path: currentPath
+      })
+    }
+  }
+  return breadcrumbs
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
   if (route.requiredAuth && !isAuthenticated) return false,
@@ -275,6 +318,7 @@ if ( {) {
 
 
 };
+<<<<<<< HEAD
 }
 ;
 }return breadcrumbs;
@@ -343,3 +387,7 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
 ;
   return breadcrumbs;
 };
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -27,4 +27,8 @@ const QuickAccess = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default QuickAccess;
+=======
+export default QuickAccess;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

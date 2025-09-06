@@ -1,9 +1,18 @@
 
+<<<<<<< HEAD
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
+import {Resend} from "npm: resend@2 ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
 import {Resend} from "npm: resend@2.0.0";
 
+<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { Resend } from "npm: resend@2.0.0",
@@ -47,10 +56,33 @@ const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || "",
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
+=======
+=======
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
+import { Resend } from "npm: resend@2.0.0",
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
+
+const resend = new Resend(Deno && Deno.env.get("RESEND_API_KEY"));
+const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") || "";
+const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || "";
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+serve(async (req) => {
+  // Handle CORS preflight requests
+  if (req && req.method === "OPTIONS") {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return new Response(null, { headers: corsHeaders })
   }
   try {
     // Use service role key for admin privileges
+<<<<<<< HEAD
     const thirtyMinutesFromNow = new Date(now && now.getTime() + 30 * 60000);
     
 
@@ -62,11 +94,29 @@ serve(async (req) => {
     // Get upcoming interviews in the next hour
     const now = new Date();
     const thirtyMinutesFromNow = new Date(now.getTime() + 30 * 60000);
+=======
+
+    const thirtyMinutesFromNow = new Date(now && now.getTime() + 30 * 60000);
+    
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const { data: interviews, error } = await supabase
       .from('interviews')
       .select(`
         *;
         clients: client_id(*)
+<<<<<<< HEAD
+=======
+        talents:talent_id(*)
+      `)
+      .eq('statusconfirmed')
+      .gte('scheduled_date', now && now.toISOString())
+      .lt('scheduled_date', thirtyMinutesFromNow && thirtyMinutesFromNow.toISOString())
+      .is('reminder_sent', null);
+    if (error) throw error;
+
+    
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     console && console.log(`Found ${interviews?.length || 0} interviews to send reminders for`);
     const results = [];
     if (interviews && interviews.length > 0) {
@@ -135,11 +185,16 @@ if ( {) {
       .select(`
         *,
         clients:client_id(*),
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         talents:talent_id(*)
       `)
       .eq('statusconfirmed')
       .gte('scheduled_date', now.toISOString())
       .lt('scheduled_date', thirtyMinutesFromNow.toISOString())
+<<<<<<< HEAD
       .is('reminder_sent', null);
     if (error) throw error;
     console.log(`Found ${interviews?.length |0} interviews to send reminders for`);
@@ -156,6 +211,9 @@ if ( {) {
               from: "Zion Marketplace <onboarding@resend.dev>";
               to: [clientEmail]
               subject: `Your interview with ${talentName} is starting soon!`;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       .is('reminder_sent', null),
     
     if (error) throw error,
@@ -165,6 +223,25 @@ if ( {) {
     const results = [],
     
     if (interviews && interviews.length > 0) {
+<<<<<<< HEAD
+=======
+
+      for (const interview of interviews) {
+        // Send email to client;
+        const client_email = interview.clients?.email;
+        const talent_name = interview.talents?.display_name || interview.talents?.full_name || "Talent";
+        const interview_date = new Date (interview.scheduled_date);
+;
+        // Check condition
+if ( {) {
+  $2
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+          try {
+            await resend.emails.send ({
+              from: "Zion Marketplace <onboarding@resend.dev>";
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         const clientEmail = interview && interview.clients?.email;
         const talentName = interview && interview.talents?.display_name || interview && interview.talents?.full_name || "Talent";
         const interviewDate = new Date(interview && interview.scheduled_date);
@@ -249,6 +326,7 @@ if ( {) {
             results && results.push(`Reminder sent to talent: ${talentEmail}`)
           } catch (emailError) {
             console && console.error(`Error sending reminder to talent ${talentEmail}:`, emailError)
+<<<<<<< HEAD
       for (const interview of interviews) {
         // Send email to client
         const clientEmail = interview.clients?.email,
@@ -305,12 +383,15 @@ if ( {) {
             results.push(`Reminder sent to talent: ${talentEmail}`)
           } catch (emailError) {
             console.error(`Error sending reminder to talent ${talentEmail}:`, emailError)
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           }
         }
         // Mark the interview as reminder sent
         await supabase
           .from('interviews')
           .update({ reminder_sent: new Date().toISOString() })
+<<<<<<< HEAD
           .eq('id', interview.id)
       }
     }
@@ -413,24 +494,45 @@ serve(async (req) => {;
           .eq('id', interview && interview.id)
       }
     }
+=======
+          .eq('id', interview && interview.id)
+      }
+    }
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
     }
     
     return new Response(JSON.stringify({ success: true, results }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       status: 200})
   } catch (error) {
     console.error("Error in send-interview-reminder function:", error);
     return new Response(JSON.stringify({ error: error.message }), {
       status: 200})
   } catch (error) {
+<<<<<<< HEAD
     console.error("Error in send-interview-reminder function:", error),
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" }
+=======
+    console && console.error("Error in send-interview-reminder function:", error);
+    return new Response(JSON && JSON.stringify({ error: error && error.message }), {
+      headers: { ...corsHeaders, "Content-Type": "application/json" };
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       status: 500})
   }
 });
 
+<<<<<<< HEAD
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
 ;
@@ -454,6 +556,9 @@ serve(async (req) => {;
       status: 500})
   }
 });
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               to: [talent_email],
               subject: `Your interview with ${client_name} is starting soon!`;
               html: `;
@@ -492,6 +597,7 @@ serve(async (req) => {;
   }
 });
 ;
+<<<<<<< HEAD
 
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2",;
@@ -638,3 +744,6 @@ try {
 });
   }
 });
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

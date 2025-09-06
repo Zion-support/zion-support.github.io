@@ -1,16 +1,25 @@
 
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume, ResumeBasicInfo  } from '@/types/resume';
 import { useAuth  } from '@/hooks/useAuth';
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
 export function useResumeActions() {
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume, ResumeBasicInfo} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useResumeActions() {;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -21,9 +30,14 @@ export function useResumeActions() {;
       return null
 
 
+<<<<<<< HEAD
     }
     setIsLoading(true);
     setError(null);
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Resume, ResumeBasicInfo } from '@/types/resume',;
@@ -39,30 +53,51 @@ export function useResumeActions() {;
       return null;
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     
     setIsLoading(true),
     setError(null),
     
+<<<<<<< HEAD
     
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {
       const { data, error } = await supabase
         .from('talent_resumes')
         .insert({
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           user_id: user && user.id;
           title: basicInfo && basicInfo.title;
           headline: basicInfo && basicInfo.headline,
           summary: basicInfo && basicInfo.summary
 
+<<<<<<< HEAD
           user_id: user.id;
           title: basicInfo.title;
           headline: basicInfo.headline
           summary: basicInfo.summary
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         })
         .select('id')
         .single();
       if (error) throw error;
       showSuccessToast("Resume created", "Your resume has been created successfully");
+<<<<<<< HEAD
+=======
+
+      
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       return data && data.id
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
@@ -113,6 +148,11 @@ if (throw error) {
       setIsLoading (false);
     }
   }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           user_id: user.id,
           title: basicInfo.title,
           headline: basicInfo.headline,
@@ -125,12 +165,17 @@ if (throw error) {
       
       showSuccessToast("Resume created", "Your resume has been created successfully"),
       
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       return data.id
     } catch (e: any) {
       return handleResumeError(e, 'Could not create resume') ? null : null
     } finally {
       setIsLoading(false)
 
+<<<<<<< HEAD
     }
   }
   const updateBasicInfo = async (resumeId: string, basicInfo: ResumeBasicInfo): Promise<boolean> => {
@@ -140,6 +185,10 @@ if (throw error) {
     }
     setIsLoading(true);
     setError(null);
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
     setIsLoading(true),;
     setError(null),;
@@ -169,16 +218,26 @@ if (throw error) {
       return false;
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     
     setIsLoading(true),
     setError(null),
     
+<<<<<<< HEAD
     
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {
       const { error } = await supabase
         .from('talent_resumes')
         .update({
+<<<<<<< HEAD
           title: basicInfo.title;
           headline: basicInfo.headline
           summary: basicInfo.summary
@@ -200,6 +259,9 @@ if (throw error) {
       return handleResumeError(e, 'Could not update resume')
     } finally {
       setIsLoading(false)
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           title: basicInfo && basicInfo.title;
           headline: basicInfo && basicInfo.headline,
           summary: basicInfo && basicInfo.summary
@@ -248,6 +310,7 @@ if (throw error) {
       setIsLoading(false)
 
 
+<<<<<<< HEAD
     }
   }
   const setActiveResume = async (resumeId: string): Promise<boolean> => {
@@ -257,6 +320,9 @@ if (throw error) {
     }
     setIsLoading(true);
     setError(null);
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
     setIsLoading(true),;
     setError(null),;
@@ -284,17 +350,30 @@ if (throw error) {
       return false;
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     
     setIsLoading(true),
     setError(null),
     
+<<<<<<< HEAD
     
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {
       // First, set all user's resumes to inactive
       const { error: resetError } = await supabase
         .from('talent_resumes')
         .update({ is_active: false })
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         .eq('user_id', user && user.id);
       
 
@@ -302,37 +381,61 @@ if (throw error) {
         .eq('user_id', user && user.id);
       if (resetError) throw resetError;
 
+<<<<<<< HEAD
         .eq('user_id', user.id);
       if (resetError) throw resetError;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         .eq('user_id', user.id),
       
       if (resetError) throw resetError,
       
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Then, set the selected resume as active
       const { error } = await supabase
         .from('talent_resumes')
         .update({ is_active: true })
         .eq('id', resumeId)
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         .eq('user_id', user && user.id);
       
 
       if (error) throw error;
       return showSuccessToast("Active resume set", "Your selected resume is now marked as active")
 
+<<<<<<< HEAD
         .eq('user_id', user.id);
       if (error) throw error;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         .eq('user_id', user.id),
       
       if (error) throw error,
       
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       return showSuccessToast("Active resume set", "Your selected resume is now marked as active")
     } catch (e: any) {
       return handleResumeError(e, 'Could not set active resume')
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
         .eq('user_id', user && user.id);
       if (error) throw error;
       return showSuccessToast("Active resume set", "Your selected resume is now marked as active")
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   const setActiveResume = async (resume_id: string): Promise < boolean> => {
     // Check condition
@@ -381,6 +484,7 @@ if (throw error) {
     create_resume;
     updateBasicInfo;
     setActiveResume}
+<<<<<<< HEAD
     }
   }
   return {
@@ -409,14 +513,24 @@ if (throw error) {
     } finally {;
       setIsLoading(false);
     }
+=======
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },;
   return {;
     isLoading,;
     error,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     createResume;
     updateBasicInfo;
 
     setActiveResume}
+<<<<<<< HEAD
 }
 ;
 
@@ -590,3 +704,10 @@ setActiveResume
 }
 }
 ;
+=======
+
+}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

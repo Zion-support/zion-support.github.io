@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :netlify/functions/cron-weekly-pagespeed.js
 :backup-problematic-files/netlify/functions/cron-weekly-pagespeed.js
 const { upsertFile } = require('./_lib/github'),;
@@ -43,6 +44,11 @@ exports.handler = async function() {;
 },;
 :backup-problematic-files/netlify/functions/cron-weekly-pagespeed.js
 :backup-problematic-files/netlify/functions/cron-weekly-pagespeed.js
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const { upsertFile } = require('./_lib/github');
 async function psi(url, strategy = 'mobile', key) {
   const endpoint = new URL('https: //www.googleapis.com/pagespeedonline/v5/runPagespeed');
@@ -87,6 +93,7 @@ exports.handler = async function () {
       body: JSON.stringify({ ok: true, pages: results.length })
     }
   } catch (e) {
+<<<<<<< HEAD
 :netlify/functions/cron-weekly-pagespeed.js
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
@@ -134,6 +141,9 @@ exports.handler = async function() {
 
 }
 
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
 };async function psi(url, strategy = 'mobile', key) {
@@ -178,6 +188,7 @@ exports.handler = async function() {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },
+<<<<<<< HEAD
 
 
 main:netlify/functions/cron-weekly-pagespeed.js
@@ -185,3 +196,11 @@ main:netlify/functions/cron-weekly-pagespeed.js
 :netlify/functions/cron-weekly-pagespeed.js
 main:netlify/functions/cron-weekly-pagespeed.js
 :backup-problematic-files/netlify/functions/cron-weekly-pagespeed.js
+=======
+
+=======
+
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/netlify/functions/cron-weekly-pagespeed.js
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

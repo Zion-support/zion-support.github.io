@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 
 } from "../../../utils/auth";
 export default async function handler(
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -29,6 +32,7 @@ export default async function handler(
     return res && res.status(400).json({ error: "Invalid id" });
 
 
+<<<<<<< HEAD
 return res && res.status(400).json({ error: "Invalid id" });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getDisputeById } from '../../../utils/fsdb';
@@ -36,6 +40,8 @@ import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../utils/auth
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query;
   if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' });
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const user = parseUserFromRequest(req);
   if (req && req.method === "GET") {
     const dispute = await getDisputeById(id);
@@ -43,6 +49,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try {
 
 
+<<<<<<< HEAD
   res && res.setHeader("Allow", "GET");
   return res && res.status(405).end("Method Not Allowed");
 
@@ -61,6 +68,25 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res && res.setHeader("Allow", "GET");
   return res && res.status(405).end("Method Not Allowed");
 }
+=======
+    }
+    return res && res.status(200).json({ dispute });
+  }
+
+
+  res && res.setHeader("Allow", "GET");
+  return res && res.status(405).end("Method Not Allowed");
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+}
+
+
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getDisputeById  } from '../../../utils / fsdb';
 import {
@@ -92,6 +118,7 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
     const dispute = await getDisputeById (id);
     if (return res.status (404).json ({ error: "Dispute not found" })) {
   $2
@@ -164,3 +191,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

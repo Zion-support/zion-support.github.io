@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 import React from "react";
 import {ClickableBadge} from "@/components/ui/clickable-badge";
 import {X} from "lucide-react";
@@ -9,6 +10,10 @@ import { ClickableBadge } from "@/components/ui/clickable-badge";
 import { X } from "lucide-react";
 import { ClickableBadge } from "@/components/ui/clickable-badge",
 import { X } from "lucide-react",
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface ActiveFiltersBarProps {
 
   selectedProductTypes: string[]
@@ -22,6 +27,7 @@ interface ActiveFiltersBarProps {
   onClearSearch: () => void
 }
 
+<<<<<<< HEAD
 export function ActiveFiltersBar({;
   selectedProductTypes;
   selectedLocations;
@@ -122,6 +128,11 @@ interface ActiveFiltersBarProps {;
 import React from "react",;
 import { ClickableBadge } from "@/components/ui/clickable-badge",;
 import { X } from "lucide-react",;
+=======
+import React from "react";
+import {ClickableBadge} from "@/components/ui/clickable-badge";
+import {X} from "lucide-react";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface ActiveFiltersBarProps {;
   selectedProductTypes: string[],;
   selectedLocations: string[],;
@@ -132,6 +143,7 @@ interface ActiveFiltersBarProps {;
   onRemoveRating: () => void,;
   onClearSearch: () => void;
 }
+<<<<<<< HEAD
 ;
 export function ActiveFiltersBar({;
   selectedProductTypes,;
@@ -163,45 +175,141 @@ export function ActiveFiltersBar({;
         </ClickableBadge>
       )}
       {selectedProductTypes.map(type => (
+=======
+
+export function ActiveFiltersBar(): any ({;
+
+  selectedProductTypes;
+  selectedLocations;
+  selectedAvailability;
+  selectedRating;
+  searchQuery;
+  onRemoveFilter;
+  onRemoveRating;
+
+
+
+
+  onClearSearch
+}: ActiveFiltersBarProps) {
+
+  const hasActiveFilters = 
+    selectedProductTypes.length > 0 || 
+    selectedLocations.length > 0 || 
+    selectedAvailability.length > 0 || 
+    selectedRating !== null ||
+    !!searchQuery,
+    
+  if (!hasActiveFilters) return null,
+  
+
+
+  return (
+    <div className="flex flex-wrap gap-2 items-center mb-4">
+      <span className="text-sm text-zion-slate-light">Active filters:</span>
+      {searchQuery && (
+
+  onClearSearch;
+}: ActiveFiltersBarProps) {;
+  const hasActiveFilters = ;
+    selectedProductTypes && selectedProductTypes.length > 0 || ;
+    selectedLocations && selectedLocations.length > 0 || ;
+    selectedAvailability && selectedAvailability.length > 0 || ;
+    selectedRating !== null ||;
+    !!searchQuery;
+
+  if (!hasActiveFilters) return null;
+
+  return (
+    <div className="flex flex-wrap gap-2 items-center mb-4">;
+      <span className="text-sm text-zion-slate-light">Active filters:</span>;
+
+      {searchQuery && (;
+
+        <ClickableBadge
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+          onClick={onClearSearch}>;
+=======
+
+        <ClickableBadge 
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+
+          onClick={onClearSearch}
+        >
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          Search: {searchQuery}
+          <X className="h-3 w-3" />;
+        </ClickableBadge>;
+      )}
+
+
+      {selectedProductTypes && selectedProductTypes.map(type => (;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <ClickableBadge
           key={`type-${type}`}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => onRemoveFilter('productTypes', type)}
+<<<<<<< HEAD
         >
           {type}
           <X className="h-3 w-3" />
         </ClickableBadge>
       ))}
       {selectedLocations.map(location => (
+=======
+        >;
+          {type}
+          <X className="h-3 w-3" />;
+        </ClickableBadge>;
+      ))}
+
+
+      {selectedLocations && selectedLocations.map(location => (;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <ClickableBadge
           key={`location-${location}`}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => onRemoveFilter('locations', location)}
+<<<<<<< HEAD
       ;
       {selectedLocations.map(location => (;
         <ClickableBadge ;
           key={`location-${location}`}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";          onClick={() => onRemoveFilter('locations', location)}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         >;
           {location}
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
+<<<<<<< HEAD
         >
           {location}
           <X className="h-3 w-3" />
         </ClickableBadge>
       ))}
       {selectedAvailability.map(availability => (
+=======
+
+
+      {selectedAvailability && selectedAvailability.map(availability => (;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <ClickableBadge
           key={`availability-${availability}`}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => onRemoveFilter('availability', availability)}
+<<<<<<< HEAD
       ;
       {selectedAvailability.map(availability => (;
         <ClickableBadge ;
           key={`availability-${availability}`}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";          onClick={() => onRemoveFilter('availability', availability)}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         >;
           {availability}
           <X className="h-3 w-3" />;
@@ -294,6 +402,7 @@ if (return null) {
         </ClickableBadge>)}
     </div>);
 }
+<<<<<<< HEAD
   ),;}
  interface ActiveFiltersBarProps {
   selectedProductTypes: string[];
@@ -353,3 +462,6 @@ return (<div className="flex flex-wrap gap-2 items-center mb-4" > <span classNam
     </div>
   )
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,11 +1,24 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
   const token = req && req.headers['x-admin-token'] || req && req.query.token;
   const superToken = process && process.env.SUPERADMIN_TOKEN;
   return !superToken || token === superToken;
+=======
+
+
+function isAuthorized(req: NextApiRequest): boolean {
+
+  const token = req && req.headers['x-admin-token'] || req && req.query.token;
+  const superToken = process && process.env.SUPERADMIN_TOKEN;
+  return !superToken || token === superToken;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const token = req.headers['x-admin-token'] |req.query.token;
   const superToken = process.env.SUPERADMIN_TOKEN;
   return !superToken |token === superToken;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
@@ -44,6 +57,30 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   }
   return res && res.status(200).json({ entries: entries && entries.slice(-200), byModule, byType, total: entries && entries.length });
 }
+=======
+  if (!isAuthorized(req))
+
+    return res && res.status(401).json({ error: 'Unauthorized' });function isAuthorized(req: NextApiRequest): boolean {
+  const token = req && req.headers['x-admin-token'] || req && req.query.token;
+  const superToken = process && process.env.SUPERADMIN_TOKEN;
+  return !superToken || token === superToken
+
+}
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+
+  }
+  const byModule: Record<string, number> = {};
+  const byType: Record<string, number> = {};
+
+
+  }
+  return res && res.status(200).json({ entries: entries && entries.slice(-200), byModule, byType, total: entries && entries.length });
+}
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { read_logs } from '@/utils / zion_brain';
 function is_authorized (req: NextApiRequest): boolean {
   const token = req.headers['x - admin - token'] || req.query.token;
@@ -109,10 +146,16 @@ if ( {) {
 return res.status (200).json ({ entries: entries.slice (-200), by_module, by_type, total: entries.length });
 
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   const byModule: Record<string, number> = {};
 
+<<<<<<< HEAD
 return res.status(200).json({ entries: entries.slice(-200), byModule, byType, total: entries.length });
 }
 
@@ -121,3 +164,7 @@ return res.status(200).json({ entries: entries.slice(-200), byModule, byType, to
 
 }
   const byType: Record<string, number> = {};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

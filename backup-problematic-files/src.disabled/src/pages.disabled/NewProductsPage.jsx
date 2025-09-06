@@ -27,4 +27,8 @@ const NewProductsPage = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default NewProductsPage;
+=======
+export default NewProductsPage;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

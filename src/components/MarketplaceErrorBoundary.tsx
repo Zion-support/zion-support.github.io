@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import React from 'react';
 import { ErrorBoundary, FallbackProps  } from 'react-error-boundary';
@@ -15,6 +16,12 @@ import React from 'react';
 import { mutate } from 'swr';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+=======
+import { mutate } from 'swr';
+import { Button } from '@/components/ui/button';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { RefreshCcw, AlertCircle } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface MarketplaceErrorFallbackProps extends FallbackProps {
@@ -52,6 +59,7 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
       // Re-call SWR mutate('*') to refresh all cached data
       await mutate(() => true, undefined, { revalidate: true });
 
+<<<<<<< HEAD
 function MarketplaceErrorFallback({
   error
   resetErrorBoundary
@@ -69,10 +77,49 @@ function MarketplaceErrorFallback({
     try {
       // Re-call SWR mutate('*') to refresh all cached data
       await mutate((,) => true, undefined, { revalidate: true })
+=======
+
+import {ErrorBoundary, FallbackProps} from 'react - error - boundary';
+import * as Sentry from '@sentry / nextjs';
+import { mutate } from 'swr';
+import { Button } from '@/components / ui / button';
+import { Alert, AlertDescription, AlertTitle } from '@/components / ui / alert';
+import { RefreshCcw, AlertCircle } from 'lucide-react';
+import { logErrorToProduction } from '@/utils / production_logger';
+interface MarketplaceErrorFallbackProps extends FallbackProps {
+  // Additional props if needed;
+/**
+ * MarketplaceErrorFallback - Function description
+ */
+function MarketplaceErrorFallback() {  const handle_retry = async () => {
+
+    try {
+      // Re - call SWR mutate ('*') to refresh all cached data;
+      await mutate (() => true, undefined, { revalidate: true });
+      resetErrorBoundary ();
+    } catch (retry_error) {
+      logErrorToProduction ('Error during retry:', { data: retry_error });
+      Sentry.capture_exception (retry_error) }
+  }
+  return (/**
+ * MarketplaceErrorFallback - Function description
+ */
+function MarketplaceErrorFallback() {
+  const handle_retry = async () => {
+    try {
+
+function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErrorFallbackProps) {
+  const handleRetry = async () => {
+    try {
+      // Re-call SWR mutate('*') to refresh all cached data
+      await mutate(() => true, undefined, { revalidate: true });
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       resetErrorBoundary()
     } catch (retryError) {
       logErrorToProduction('Error during retry:', { data: retryError })
       Sentry.captureException(retryError)
+<<<<<<< HEAD
     }
   }
   return (
@@ -103,11 +150,37 @@ import * as Sentry from '@sentry/nextjs';
 import React from 'react';
 import {ErrorBoundary, FallbackProps} from 'react-error-boundary';
 import * as Sentry from '@sentry/nextjs';
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { mutate } from 'swr';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { RefreshCcw, AlertCircle } from 'lucide-react';
+<<<<<<< HEAD
   };
+=======
+import { logErrorToProduction } from '@/utils/productionLogger';
+
+interface MarketplaceErrorFallbackProps extends FallbackProps {;
+  // Additional props if needed;
+
+function MarketplaceErrorFallback(): any ({;
+  error,;
+  resetErrorBoundary,;
+}: MarketplaceErrorFallbackProps) {  const handleRetry = async () => {;
+    try {;
+      // Re-call SWR mutate('*') to refresh all cached data;
+      await mutate(() => true, undefined, { revalidate: true });
+      resetErrorBoundary();
+    } catch (retryError) {;
+      logErrorToProduction('Error during retry:', { data: retryError });
+      Sentry && Sentry.captureException(retryError);    }
+    }
+
+  };
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (function MarketplaceErrorFallback(): any ({ error, resetErrorBoundary }: MarketplaceErrorFallbackProps) {;
   const handleRetry = async () => {;
     try {;
@@ -117,6 +190,7 @@ import { RefreshCcw, AlertCircle } from 'lucide-react';
     } catch (retryError) {;
       logErrorToProduction('Error during retry:', { data: retryError }),;
       Sentry && Sentry.captureException(retryError);
+<<<<<<< HEAD
     }
   }
 import {logErrorToProduction} from '@/utils/productionLogger',;
@@ -158,6 +232,15 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
           </Button>
           
           <Button 
+=======
+
+
+    }
+  }
+  return (
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             onClick={() => window.location.reload()}
             variant="outline"
             className="w-full"
@@ -165,18 +248,27 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
             Reload Page
           </Button>
         </div>
+<<<<<<< HEAD
         <div className='text-center text-sm text-muted-foreground'>
           If the problem persists, please{' '}
           <a
             href='mailto:support@example.com'
             className='text-primary hover:underline'          >
+=======
+
+        
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="text-center text-sm text-muted-foreground">
           If the problem persists, please{' '}
           <a
             href="mailto: support@example.com"
             className="text-primary hover:underline"
+<<<<<<< HEAD
         
         
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           >
 
@@ -189,6 +281,7 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
           <a 
             href="mailto: support@example.com" 
             className="text-primary hover:underline"
+<<<<<<< HEAD
           >
           >
           >
@@ -201,6 +294,10 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
     <ErrorBoundary
 ursor/fix-website-loading-errors-and-merge-6662
           >
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             contact support
           </a>
         </div>
@@ -381,6 +478,10 @@ export function MarketplaceErrorBoundary({
               'An unexpected error occurred while loading marketplace content.'}
           </AlertDescription>;
         </Alert>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className='flex flex-col space-y-2'>;
           <Button onClick={handleRetry} className='w-full' variant='default'>;
             <RefreshCcw className='mr-2 h-4 w-4' />;
@@ -401,6 +502,10 @@ export function MarketplaceErrorBoundary({
             Reload Page;
           </Button>;
         </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className='text-center text-sm text-muted-foreground'>;
           If the problem persists, please{' '}
           <a
@@ -419,6 +524,10 @@ export function MarketplaceErrorBoundary({
   );
 interface MarketplaceErrorBoundaryProps {;
   children: React && React.ReactNode;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function MarketplaceErrorBoundary(): any ({;
   children,;
 }: MarketplaceErrorBoundaryProps) {;
@@ -436,14 +545,21 @@ export function MarketplaceErrorBoundary(): any ({;
       Sentry && Sentry.captureException(error);
     });
   };
+<<<<<<< HEAD
       onError={handleError}
     >
       >;
+=======
+
+      >;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {children}
     </ErrorBoundary>;
   );
 }   return (
     <ErrorBoundary
+<<<<<<< HEAD
   );
 }
       FallbackComponent={MarketplaceErrorFallback}
@@ -457,6 +573,24 @@ export function MarketplaceErrorBoundary(): any ({;
 interface MarketplaceErrorBoundaryProps {
   children: React.ReactNode,
 }
+=======
+
+      FallbackComponent={MarketplaceErrorFallback}
+      onError={handleError}>;
+      {children}
+
+    </ErrorBoundary>;
+  );
+} ;
+
+  );
+}
+
+interface MarketplaceErrorBoundaryProps {
+  children: React.ReactNode,
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryProps) {
   const handleError = (error: Error, errorInfo: React.ErrorInfo) => {
     // Log boundary errors to Sentry
@@ -469,6 +603,11 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
       Sentry.captureException(error)
     })
   };
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <ErrorBoundary 
     <ErrorBoundary;
@@ -476,6 +615,7 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
       on_error={handle_error}
     >;
       {children}
+<<<<<<< HEAD
     </div>;
   );}
 ;
@@ -558,8 +698,14 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
 }
 }
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 } 
 
     </ErrorBoundary>);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

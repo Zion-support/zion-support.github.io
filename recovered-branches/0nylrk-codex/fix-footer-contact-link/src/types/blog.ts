@@ -4,6 +4,7 @@
 
 }
 export interface BlogPost {
+<<<<<<< HEAD
 export interface BlogAuthor {
 export interface BlogAuthor {;
   name: string;
@@ -15,12 +16,15 @@ export interface BlogAuthor {;
 export interface BlogPost {
 
 export interface BlogPost {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
   title: string;
   slug: string;
   excerpt: string;
   content: string;
   author: BlogAuthor;
+<<<<<<< HEAD
   publishedDate: string;
   readTime: string;
   category: string;
@@ -87,6 +91,30 @@ export interface GeneratedBlogContent {;
   imagePrompt?: string;
 }
 ;
+=======
+  published_date: string;
+  read_time: string;
+  category: string;
+  tags: string[];
+
+  featured_image: string;
+  is_featured?: boolean;
+  is_published?: boolean;
+  created_by?: string,
+  updated_at?: string;
+}
+// Type for generated blog content;
+
+export interface GeneratedBlogContent {
+  title: string;
+  meta_description: string;
+  body: string;
+  tags: string[];
+
+  tweet_summary?: string,
+  image_prompt?: string;
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Type for generated newsletter content;
 export interface GeneratedNewsletterContent {
   subject: string;
@@ -98,6 +126,7 @@ export interface GeneratedNewsletterContent {
 
 export interface BlogAuthor {;
 
+<<<<<<< HEAD
 // Type for generated newsletter content;
 export interface GeneratedNewsletterContent {;
   subject: string,;
@@ -106,3 +135,6 @@ export interface GeneratedNewsletterContent {;
   cta: string;
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

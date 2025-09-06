@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import type { TrustAppeal } from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
 
@@ -35,6 +36,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   const { userId, message, contactEmail } = req && req.body || {};
   if (!userId || !message) return res && res.status(400).json({ error: 'Missing userId or message' });
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const appeal: TrustAppeal = {
     userId;
     message;
@@ -52,8 +57,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 
 
+<<<<<<< HEAD
   return res && res.status(200).json({ ok: true, appeal });
 }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { TrustAppeal } from '../../../utils / types / trust';
 import { supabase } from '../../../utils / supabase / client';
 ;
@@ -106,9 +115,16 @@ if ( {) {
 return res.status (200).json ({ ok: true, appeal });
 
 }
+<<<<<<< HEAD
 
 return res.status(200).json({ ok: true, appeal });
 }
 
   return res.status(200).json({ ok: true, appeal });
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

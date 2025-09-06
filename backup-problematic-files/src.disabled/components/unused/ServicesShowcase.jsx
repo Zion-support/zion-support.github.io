@@ -27,4 +27,8 @@ const ServicesShowcase = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ServicesShowcase;
+=======
+export default ServicesShowcase;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

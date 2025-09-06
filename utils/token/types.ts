@@ -1,13 +1,23 @@
 
+<<<<<<< HEAD
 
 export type TokenSymbol = "ZION$";
 export type TokenSymbol = "ZION$",;
 export type TokenSymbol = "ZION$";
+=======
+export type TokenSymbol = "ZION$",
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export type TokenTransactionType =;
   | "earn";
   | "burn";
   | "issue";
   | "revoke";
+<<<<<<< HEAD
   | "redeem";
 export interface TokenTransaction {id: string;
   userId: string;
@@ -24,6 +34,9 @@ export interface TokenTransaction {;
 }
 export interface Wallet {userId: string;
   balance: number, // current token balance;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   | "redeem",
 export interface TokenTransaction {
   id: string,
@@ -33,6 +46,7 @@ export interface TokenTransaction {
   reason: string,
   metadata?: Record < string any>,
   created_at: string, // ISO timestamp;
+<<<<<<< HEAD
 }
 export interface Wallet {
   user_id: string,
@@ -118,3 +132,36 @@ export interface WalletSummary {;
   }
 }
 }
+=======
+}
+export interface Wallet {
+  user_id: string,
+  balance: number, // current token balance;
+=======
+
+  | "redeem",;
+export interface TokenTransaction {;
+
+
+}
+export interface TokenConfig {
+  symbol: TokenSymbol,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  usdPerToken: number, // e.g., 0.05 means 100 ZION$ = $5;
+
+
+
+
+}
+
+export interface WalletSummary {
+  wallet: Wallet,
+
+  transactions: TokenTransaction[];
+  config: TokenConfig;
+
+
+
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

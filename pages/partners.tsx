@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 import {
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import Head from 'next / head';
 
@@ -24,6 +28,7 @@ import {
   Clock,
   TrendingUp,
 
+<<<<<<< HEAD
   Handshake
   Globe
   Rocket
@@ -36,12 +41,15 @@ import {
   Users
   Clock
   TrendingUp;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 export default function PartnersPage() {
   const partners = [
     {
+<<<<<<< HEAD
       name: 'Microsoft Azure'
       category: 'Cloud Infrastructure'
       description:
@@ -167,6 +175,13 @@ export default function PartnersPage() {
     { number: '300%', label: 'Growth Rate', icon: TrendingUp }
   ];
 
+=======
+
+
+=======
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Handshake,
   Globe,
   Rocket,
@@ -177,6 +192,44 @@ export default function PartnersPage() {
   ExternalLink,
   Star,
   Users,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  Clock,
+  TrendingUp,
+} from 'lucide-react';
+import EnhancedNavigation from '../components / EnhancedNavigation';
+import EnhancedFooter from '../components / EnhancedFooter';
+export default /**
+ * PartnersPage - Function description
+ */
+function PartnersPage() {
+  const partners = [;
+    {
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       name: 'Microsoft Azure',
       category: 'Cloud Infrastructure',
       description:;
@@ -305,14 +358,24 @@ export default function PartnersPage() {
   ];
 ;
   return (
+<<<<<<< HEAD
         />;
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/partners' />      </Head>;
       <EnhancedNavigation />;
+=======
+
+        />;
+        <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/partners' />      </Head>;
+      <EnhancedNavigation />;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Hero Section */}
       <section className='relative pt-32 pb-20 px-6'>;
         <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 import { 
   Handshake, Globe, Rocket, Brain, Atom, Shield, 
   ArrowRight, ExternalLink, Star, Users, Clock, TrendingUp
@@ -505,10 +568,18 @@ export default function PartnersPage() {
   }
 }
             className="mb-8"
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
               Strategic Partners
             </h1>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
               Building the future of technology through strategic partnerships and collaboration
@@ -522,14 +593,38 @@ export default function PartnersPage() {
         </div>
       </section>
             transition={{ duration: 0 && 0.8 }}
+<<<<<<< HEAD
             <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
               Building the future of technology through strategic partnerships
               and collaboration            </p>
           </motion.div>
           <motion.div
+=======
+            className='mb-8'>;
+            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>;
+              Strategic Partners;
+            </h1>;
+            <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>;
+              Building the future of technology through strategic partnerships;
+              and collaboration            </p>;
+          </motion && motion.div>;
+          <motion&& motion.div
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
+<<<<<<< HEAD
+=======
+            className='mb - 12';
+          >;
+            <p className='text - lg text - white / 70 max - w-2xl mx - auto mb - 8'>;
+              Join our ecosystem of technology leaders, innovators, and industry;
+              experts to create transformative solutions that shape the future;
+              of computing.;
+            </p>;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
@@ -574,6 +669,7 @@ export default function PartnersPage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Stats Section */}
       <section className='py-16 px-6'>
         <div className='max-w-7xl mx-auto'>
@@ -829,10 +925,17 @@ export default function PartnersPage(req, res) {
   }
 }
                 className="text-center"
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-cyan-400" />
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
@@ -850,6 +953,7 @@ export default function PartnersPage(req, res) {
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
 
 
+<<<<<<< HEAD
                 <div className='text-3xl font-bold text-white mb-2'>
                   {stat.number}
                 </div>
@@ -861,10 +965,18 @@ export default function PartnersPage(req, res) {
       {/* Partnership Types */}
       <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>          <motion.div
+=======
+      {/* Partnership Types */}
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             className='text-center mb-16'
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
@@ -906,6 +1018,10 @@ export default function PartnersPage(req, res) {
   }
 }
             className="text-center mb-16"
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           >
             <h2 className="text-4xl font-bold text-white mb-6">Partnership Types</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
@@ -914,12 +1030,19 @@ export default function PartnersPage(req, res) {
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {partnershipTypes.map((type, index) => (
+<<<<<<< HEAD
               <motion.div
 
 
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {partnershipTypes.map((type, index) => (
               <motion.div
                 key={type.title}
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+              <motion.div
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className='text-center mb-16'>;
             <h2 className='text-4xl font-bold text-white mb-6'>;
               Partnership Types;
@@ -932,10 +1055,17 @@ export default function PartnersPage(req, res) {
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {partnershipTypes && partnershipTypes.map((type, index) => (;
               <motion&& motion.div
                 key={type && type.title}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
                 className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-blue-500/30 transition-all duration-300'
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {partnershipTypes.map((type, index) => (
@@ -966,12 +1096,17 @@ export default function PartnersPage(req, res) {
   }
 }
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-blue-500/30 transition-all duration-300"
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${type.color} rounded-2xl flex items-center justify-center mb-6`}>
                   <type.icon className="w-8 h-8 text-white" />
                 </div>
 
 
+<<<<<<< HEAD
                 <h3 className='text-2xl font-bold text-white mb-4'>
                   {type.title}
                 </h3>
@@ -984,21 +1119,54 @@ export default function PartnersPage(req, res) {
                     >
                       <div className='w-1.5 h-1.5 bg-cyan-400 rounded-full mr-3' />                      {benefit}
                     </li>
+=======
+
+                <h3 className="text-2xl font-bold text-white mb-4">{type.title}</h3>
+                <p className="text-white/70 mb-6">{type.description}</p>
+                <ul className="space-y-2">
+                  {type.benefits.map((benefit) => (
+                    <li key={benefit} className="flex items-center text-white/80">
+                      <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-3" />
+                      {benefit}
+                    </li>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   ))}
                 </ul>;
               </motion && motion.div>;
             ))}
 
+<<<<<<< HEAD
           </div>
         </div>
       </section>
       {/* Current Partners */}
       <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>          <motion.div
+=======
+          </div>;
+        </div>;
+      </section>;
+
+
+      {/* Current Partners */}
+      <section className='py-20 px-6'>;
+        <div className='max-w-7xl mx-auto'>          <motion&& motion.div
+
+=======
+
+      {/* Current Partners */}
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             className='text-center mb-16'
                 <h3 className="text-2xl font-bold text-white mb-4">{type.title}</h3>
                 <p className="text-white/70 mb-6">{type.description}</p>
@@ -1056,6 +1224,10 @@ export default function PartnersPage(req, res) {
   }
 }
             className="text-center mb-16"
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           >
             <h2 className="text-4xl font-bold text-white mb-6">Our Partners</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
@@ -1064,12 +1236,19 @@ export default function PartnersPage(req, res) {
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {partners.map((partner, index) => (
+<<<<<<< HEAD
               <motion.div
 
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {partners.map((partner, index) => (
               <motion.div
                 key={partner.name}
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+              <motion.div
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className='text-center mb-16'>;
             <h2 className='text-4xl font-bold text-white mb-6'>Our Partners</h2>;
             <p className='text-xl text-white/70 max-w-3xl mx-auto'>;
@@ -1080,10 +1259,17 @@ export default function PartnersPage(req, res) {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {partners && partners.map((partner, index) => (;
               <motion&& motion.div
                 key={partner && partner.name}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
             <button className='px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center justify - center gap - 2 mx - auto'>;
               Become a Partner;
               <ArrowRight className='w - 5 h - 5' />            </button>;
@@ -1130,6 +1316,10 @@ export default function PartnersPage(req, res) {
   }
 }
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               >
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-4">
@@ -1138,10 +1328,25 @@ export default function PartnersPage(req, res) {
                     </div>
                     <div className="flex items-center gap-2">
                       <span className="text-xs text-white/60 bg-white/5 px-2 py-1 rounded-full">
+<<<<<<< HEAD
 
 
                   <h3 className="text-xl font-bold text-white mb-3">{partner.name}</h3>
 <h3 className="text-xl font-bold text-white mb-3">{partner.name}</h3>
+=======
+<<<<<<< HEAD
+                        {partner.category}
+                      </span>
+                      <span className="text-xs text-white/40 bg-white/5 px-2 py-1 rounded">
+                        {partner.partnership}
+                      </span>
+                    </div>
+                  </div>
+
+
+
+                  <h3 className="text-xl font-bold text-white mb-3">{partner.name}</h3>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <p className="text-white/70 text-sm mb-4">{partner.description}</p>
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Benefits</h4>
@@ -1152,11 +1357,27 @@ export default function PartnersPage(req, res) {
                           {benefit}
                         </li>
                       ))}
+<<<<<<< HEAD
                     </ul>;
                   </div>;
                   <div className='flex items-center justify-between'>;
                   <div className="flex items-center justify-between">
 
+=======
+
+
+                    </ul>;
+                  </div>;
+                  <div className='flex items-center justify-between'>;
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+                  <div className="flex items-center justify-between">
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <a
                       href={partner && partner.website}
                       target='_blank'
@@ -1170,6 +1391,11 @@ export default function PartnersPage(req, res) {
                   </div>;
                 </div>;
               </motion && motion.div>;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   
                   <div className="flex items-center justify-between">
                     <a
@@ -1245,13 +1471,22 @@ export default function PartnersPage(req, res) {
                     >
                       Visit Website
                       <ExternalLink className="w-3 h-3" />
+<<<<<<< HEAD
                     </Link>
+=======
+<<<<<<< HEAD
+                    </a>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105">
                       Learn More
                     </button>
                   </div>
                 </div>
               </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             ))}
 
 
@@ -1262,6 +1497,7 @@ export default function PartnersPage(req, res) {
 }
 
           </div>;
+<<<<<<< HEAD
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
           </div>
@@ -1290,6 +1526,18 @@ export default function PartnersPage(req, res) {
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
+=======
+        </div>;
+      </section>;
+      {/* Become a Partner CTA */}
+      <section className='py-20 px-6'>;
+        <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
+      {/* Become a Partner CTA */}
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1310,7 +1558,15 @@ export default function PartnersPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
           >
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          >
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Partner with Us?
             </h2>
@@ -1323,11 +1579,21 @@ export default function PartnersPage(req, res) {
               </button>
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
                 Download Partnership Guide
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </button>
             </div>
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+      <EnhancedFooter />
+    </div>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ),
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Partnership Types</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > We offer various partnership models to meet your business objectives and growth goals </p> </motion.div> </li>) ) 
@@ -1337,6 +1603,38 @@ export default function PartnersPage(req, res) {
 
 
 }</div> </div> </section> <motion.div initial= {
+<<<<<<< HEAD
+=======
+=======
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}>;
+            <h2 className='text-4xl font-bold text-white mb-6'>;
+              Ready to Partner with Us?;
+            </h2>;
+            <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>;
+              Join our ecosystem of technology leaders and create innovative;
+              solutions that drive business transformation and growth.;
+            </p>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+              <button className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105'>;
+                Partnership Inquiry;
+              </button>;
+              <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>                Download Partnership Guide;
+              </button>;
+            </div>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+      <EnhancedFooter />;
+    </div>;
+  ),;
+}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Partnership Types</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > We offer various partnership models to meet your business objectives and growth goals </p> </motion && motion.div> </li>) ) ;
+}</ul> </motion && motion.div>) ) ;
+}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Our Partners</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Leading technology companies and organizations that trust us to deliver innovative solutions </p> </motion && motion.div> </span> </div> </div> </li>) ) ;
+}</ul> </div> <div className="flex items-center justify-between" > <a > Visit Website <ExternalLink className="w-3 h-3" /> </Link> <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105" > Learn More </button> </div> </div> </motion && motion.div>) ) ;
+}</div> </div> </section> <motion&& motion.div initial= {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <EnhancedFooter />
     </div>
 )
@@ -1357,6 +1655,10 @@ export default function PartnersPage(req, res) {
   opacity: 1, y: 0
 }transition= {
   {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   duration: 0 && 0.8 
 }viewport= {
   {
@@ -1364,10 +1666,14 @@ export default function PartnersPage(req, res) {
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Partner with Us? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Join our ecosystem of technology leaders and create innovative solutions that drive business transformation and growth. </p> Partnership Inquiry </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Download Partnership Guide </button> </div> </motion && motion.div> </div> </section> <EnhancedFooter /> </div>) ;
 
+<<<<<<< HEAD
   once: true 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Partner with Us? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Join our ecosystem of technology leaders and create innovative solutions that drive business transformation and growth. </p> Partnership Inquiry </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Download Partnership Guide </button> </div> </motion && motion.div> </div> </section> <EnhancedFooter /> </div>) ;
   )
 }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </p>;
                   <div className='mb - 4'>;
                     <h4 className='text - sm font - semibold text - white / 60 mb - 2 uppercase tracking - wider'>;
@@ -1443,6 +1749,10 @@ export default function PartnersPage(req, res) {
         </div>;
       </section>;
       <EnhancedFooter />;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>;
   );
   } catch (error) {
@@ -1453,3 +1763,8 @@ export default function PartnersPage(req, res) {
 ;
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

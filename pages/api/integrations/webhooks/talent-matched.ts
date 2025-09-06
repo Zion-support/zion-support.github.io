@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { writeState, readState } from "../../../../lib/integrations/fileStore";
@@ -8,13 +12,17 @@ export default async function handler(
 ) {
 
   try {
+<<<<<<< HEAD
 try {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (req && req.method !== "POST")
     return res && res.status(405).json({ error: "Method not allowed" });
   const { match } = req && req.body as {
     match?: { talentId: string; jobId: string; summary?: string };
   };
   if (!match) return res && res.status(400).json({ error: "Missing match payload" });
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { writeState, readState } from '../../../../lib/integrations/fileStore';
 import { crm } from '../../../../lib/integrations/connectors';
@@ -23,10 +31,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { match } = req.body as { match?: { talentId: string, jobId: string, summary?: string } };
   if (!match) return res.status(400).json({ error: 'Missing match payload' });
 // record Zapier event
+=======
+
+  // record Zapier event
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     s && s.events.push({
       id: eventId,
       type: "zion && zion.talent.matched",
       timestamp: Date && Date.now(),
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from './next';
 import { write_state, read_state  } from '../../../../lib / integrations / file_store';
 import { crm  } from '../../../../lib / integrations / connectors';
@@ -52,11 +71,16 @@ function handler() {
       id: event_id,
       type: "zion.talent.matched",
       timestamp: Date.now (),
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       payload: { match },
     });
   const eventId = `${Date.now()}-talent-matched`;
   writeState(s => {
     s.events.push({ id: eventId, type: 'zion.talent.matched', timestamp: Date.now(), payload: { match } })
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { writeState, readState } from "../../../../lib/integrations/fileStore";
@@ -113,6 +137,15 @@ export default async function handler(req, res) {
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     s.events.push({ id: eventId, type: 'zion.talent.matched', timestamp: Date.now(), payload: { match } });
   }),;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  });
+
+
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // log to connected CRMs as a note;
   const state = readState();
   const crms = state.connections.filter(c => ['salesforcehubspotzohopipedrive'].includes(c.providerId));
@@ -127,6 +160,10 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -135,6 +172,11 @@ export default async function handler(req, res) {
 
 
 }
+<<<<<<< HEAD
 }
 
 }
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

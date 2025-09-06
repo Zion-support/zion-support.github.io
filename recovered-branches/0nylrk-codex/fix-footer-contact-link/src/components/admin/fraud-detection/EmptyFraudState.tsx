@@ -4,6 +4,7 @@ import { Button  } from '@/components / ui / button';
 import { ShieldAlert  } from './lucide-react';
 interface EmptyFraudStateProps {
   has_filters: boolean;
+<<<<<<< HEAD
 
 
 import React from "react";
@@ -23,6 +24,11 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
   onResetFilters
 import { Button } from "@/components/ui/button",
 import { ShieldAlert } from "lucide-react",
+=======
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface EmptyFraudStateProps {
   hasFilters: boolean,
   onResetFilters: () => void
@@ -42,6 +48,10 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
           : "You don't have any fraud flags yet"}
       </p>
       {hasFilters && (
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>;
 );
 
@@ -90,6 +100,7 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({;
 
 
 };
+<<<<<<< HEAD
 
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -130,3 +141,7 @@ export const EmptyFraudState:React.FC<EmptyFraudStateProps> = ({ ;
 
   );
 };
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

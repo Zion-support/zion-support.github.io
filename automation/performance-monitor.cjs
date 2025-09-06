@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -45,11 +48,17 @@ class PerformanceMonitor {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -73,6 +82,9 @@ class PerformanceMonitor {
   }
   ensureLogDirectory() {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -85,6 +97,7 @@ class PerformanceMonitor {
     };
   };
   log(message) {}
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     const logDir = path.dirname(this.logFile);
@@ -94,9 +107,12 @@ class PerformanceMonitor {
   }
   log(message, level = 'INFO') {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const timestamp = new Date().toISOString();
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -113,6 +129,8 @@ class PerformanceMonitor {
     const timestamp = new Date().toISOString();
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -208,11 +226,17 @@ class PerformanceMonitor {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -250,9 +274,12 @@ class PerformanceMonitor {
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     } catch (error) {
       this.log(`Failed to get build metrics: ${error.message}`);
       return { error: error.message };
@@ -260,10 +287,13 @@ class PerformanceMonitor {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -317,9 +347,12 @@ class PerformanceMonitor {
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     } catch (error) {
       this.log(`Failed to get bundle metrics: ${error.message}`);
       return { error: error.message };
@@ -327,10 +360,13 @@ class PerformanceMonitor {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -462,6 +498,7 @@ class PerformanceMonitor {
             size += stat.size;
           }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -478,6 +515,8 @@ class PerformanceMonitor {
       };
       return getDirSize(buildDir);
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -487,8 +526,11 @@ class PerformanceMonitor {
         this.log('Bundle analysis completed');
       }
       await this.optimizeBuild();
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     } catch (error) {
       this.log(`Build size optimization failed: ${error.message}`);
     }
@@ -524,14 +566,18 @@ class PerformanceMonitor {
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const report = {
       lastCheck: this.lastCheck,
       projectRoot: this.projectRoot,
       recommendations: this.getPerformanceRecommendations(),
     };
+<<<<<<< HEAD
 <<<<<<< HEAD
     try {
       fs.writeFileSync(
@@ -617,6 +663,8 @@ class PerformanceMonitor {
   }
 }
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {
       fs.writeFileSync(
         this.performanceReportFile,
@@ -669,7 +717,10 @@ class PerformanceMonitor {
         );
       }
     }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return recommendations;
   }
 <<<<<<< HEAD
@@ -842,6 +893,9 @@ module.exports = PerformanceMonitor;
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

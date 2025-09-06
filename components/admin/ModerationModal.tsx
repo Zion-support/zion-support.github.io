@@ -2,6 +2,7 @@
 
   flag: any | null;
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -21,6 +22,8 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onAction: (;
     action: 'approve' | 'remove' | 'warn' | 'ban',;
     adminNotes?: string;
@@ -31,12 +34,21 @@ export default function ModerationModal(): any ({;
   onClose,;
   onAction,;
 }: ModerationModalProps) {;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   flag,
   onClose,
   onAction,
 }: ModerationModalProps) {;
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
   return (
@@ -46,6 +58,10 @@ export default function ModerationModal(): any ({;
           <div className='font-semibold'>Review Flag — {flag && flag.id}</div>;
           <button
             onClick={onClose}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className='text-gray-500 hover:text-gray-700'>;
             ✕;
           </button>;
@@ -99,6 +115,10 @@ export default function ModerationModal(): any ({;
             <label className='block text-sm font-medium mb-1'>;
               Admin Notes;
             </label>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <textarea
               value={adminNotes}
               onChange={e => setAdminNotes(e && e.target.value)}
@@ -135,6 +155,7 @@ export default function ModerationModal(): any ({;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 export type ModerationModalProps = {
   flag: any | null,
   onClose: () => void,
@@ -209,6 +230,10 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
         </div>
       </div>
     </div>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 }
   on_close: () => void;
@@ -382,6 +407,7 @@ if (return null) {
   )
 
 }
+<<<<<<< HEAD
 
   );
 
@@ -514,3 +540,12 @@ export default function ModerationModal({
 );
 }
   );
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  );
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

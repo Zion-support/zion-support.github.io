@@ -4,6 +4,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     }
 
 
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 
@@ -40,11 +41,17 @@ if (req.method === 'POST') {
     } catch (error) {
       return res.status (500).json ({ error: 'Failed to read changelog' });
     }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (req && req.method === 'POST') {
     try {
       const { version, changes, date } = req && req.body;
       if (!version || !changes || !Array && Array.isArray(changes)) {
         return res && res.status(400).json({ error: 'Missing required fields' });
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
       let changelog = [];
       try {
@@ -63,6 +70,10 @@ if (req.method === 'POST') {
       } catch {
         // File doesn't exist, start with empty array;
       }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         version,
         changes,
         date: date || new Date().toISOString()
@@ -70,6 +81,10 @@ if (req.method === 'POST') {
       changelog && changelog.unshift(newEntry);
       fs && fs.writeFileSync(p, JSON && JSON.stringify(changelog, null, 2));
       return res && res.status(201).json(newEntry);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     } catch (error) {
       return res && res.status(500).json({ error: 'Failed to update changelog' });
     }
@@ -79,6 +94,7 @@ if (req.method === 'POST') {
   res && res.setHeader('Allow', 'GET, POST');
   res && res.status(405).end('Method Not Allowed');
 
+<<<<<<< HEAD
   res && res.setHeader('Allow', 'GET, POST');
   res && res.status(405).end('Method Not Allowed');
 }
@@ -92,6 +108,9 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 
   }
 }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const new_entry = {
         version,
         changes,
@@ -109,6 +128,7 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   res.set_header ('Allow', 'GET, POST');
   res.status (405).end ('Method Not Allowed');
 }
+<<<<<<< HEAD
 
 
   res.setHeader('Allow', 'GET, POST');
@@ -153,3 +173,11 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

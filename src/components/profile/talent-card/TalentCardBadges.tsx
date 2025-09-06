@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 
 import React from "react";
 import { Badge } from "@/components/ui/badge";
@@ -62,6 +63,8 @@ export function TalentCardBadges({ featured }: TalentCardBadgesProps) {;
 }
   )
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from "react",
 import { Badge } from "@/components/ui/badge",
@@ -109,4 +112,8 @@ const TalentCardBadges = () => {
   );
 };
 
+<<<<<<< HEAD
 export default TalentCardBadges;
+=======
+export default TalentCardBadges;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

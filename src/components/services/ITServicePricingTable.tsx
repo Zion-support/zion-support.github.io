@@ -51,6 +51,7 @@ export function ITServicePricingTable() {
   const sortedData = useMemo(() => {
     let filteredData = [...onsiteServicePricing]
 
+<<<<<<< HEAD
 
 import { useState, useMemo } from "react",
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
@@ -69,6 +70,18 @@ export function ITServicePricingTable() {
 
   const sortedData = useMemo(() => {
     let filteredData = [...onsiteServicePricing],
+=======
+    // Sort data;
+    filteredData && filteredData.sort((a, b,) => {;
+      if (a[sortConfig && sortConfig.key] < b[sortConfig && sortConfig.key]) {;
+        return sortConfig && sortConfig.direction === 'ascending' ? -1 : 1;
+      }
+      if (a[sortConfig.key] > b[sortConfig.key]) {
+        return sortConfig.direction === "ascending" ? 1 : -1
+      }
+      return 0
+    }),
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     
     // Filter by search query
     
@@ -93,8 +106,19 @@ export function ITServicePricingTable() {
       return 0;
     });
 
+<<<<<<< HEAD
     return filteredData;
   }, [onsiteServicePricing, searchQuery, sortConfig]);
+=======
+  const handleSort = (key: keyof CountryPricing) => {
+    setSortConfig({
+      key,
+      direction: 
+        sortConfig.key === key && sortConfig.direction === "ascending" 
+          ? "descending" 
+          : "ascending"})
+  },
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   const handleSort = (key: keyof CountryPricing,) => {;
     setSortConfig({;
@@ -129,16 +153,32 @@ export function ITServicePricingTable() {
           : "ascending"})
   },
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">
       <div className="flex items-center mb-6">
         <div className="relative flex-1">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
           <Input
+<<<<<<< HEAD
             placeholder='Search by country...'
             value={searchQuery}
             onChange={e => setSearchQuery(e.target.value)}
             className='pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white'          />
+=======
+
+            placeholder="Search by country..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white"
+          />
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </div>
       </div>
 
@@ -159,6 +199,7 @@ export function ITServicePricingTable() {
             <TableRow>;
               <TableHead className='text-zion-cyan font-medium'>;
 
+<<<<<<< HEAD
             placeholder="Search by country..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
@@ -172,6 +213,8 @@ export function ITServicePricingTable() {
           <TableHeader className="bg-zion-blue">
             <TableRow>
               <TableHead className='text-zion-cyan font-medium'>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <Button
                   variant='ghost'
                   onClick={() => handleSort('country')}
@@ -185,6 +228,7 @@ export function ITServicePricingTable() {
                   <span>Country</span>
                   <ArrowUpDown className="h-4 w-4" />
                 </Button>
+<<<<<<< HEAD
               </TableHead>
               <TableHead className='text-right text-zion-cyan font-medium'>
                 <Button
@@ -404,3 +448,6 @@ export function ITServicePricingTable() {;
     </div>);
 }
 ;
+=======
+              </TableHead>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

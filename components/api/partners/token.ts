@@ -1,19 +1,29 @@
 
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { findPartnerByApiKey, signJwt } from "../../../utils/api/partnerAuth";
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
   if (req && req.method !== "POST") {
     res && res.setHeader("Allow", "POST");
     return res && res.status(405).json({ error: "Method Not Allowed" })
   }
+<<<<<<< HEAD
   const { apiKey, ttlSeconds } = req && req.body || {};
+=======
+
+  const { apiKey, ttlSeconds } = req && req.body || {};
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (!apiKey) {
     return res && res.status(400).json({ error: "apiKey required" })
   }
   const match = await findPartnerByApiKey(apiKey);
   if (!match) {
+<<<<<<< HEAD
     return res.status(401).json({ error: "Invalid API key" });
 import { findPartnerByApiKey, sign_jwt } from '../../../utils / api / partner_auth';
 ;
@@ -27,6 +37,10 @@ if ( {) {
 }
     res.set_header ('Allow', 'POST');
     return res.status (405).json ({ error: 'Method Not Allowed' });
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   const { api_key, ttl_seconds } = req.body || {}
   // Check condition
@@ -69,10 +83,19 @@ if ( {) {
   $2
 }
     return res.status (401).json ({ error: "Invalid API key" });
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   const { partner, api_key: key } = match;
   const token = sign_jwt (
     {
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       sub: partner && partner.id,
       apiKeyId: key && key.id,
       name: partner && partner.name,
@@ -85,13 +108,24 @@ if ( {) {
   );
   return res
     .status(200)
+<<<<<<< HEAD
       sub: partner.id, apiKeyId: key.id,
       name: partner.name, entityType: partner.entityType,
+=======
+
+      sub: partner.id, apiKeyId: key.id,
+      name: partner.name, entityType: partner.entityType,
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       useCaseType: partner.useCaseType} as any;
     typeof ttlSeconds === "number" ? Math.max(300, Math.min(86400, ttlSeconds)) : 3600
   );
   return res.status(200).json({ token, partner: { id: partner.id, name: partner.name } })
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     .json({ token, partner: { id: partner && partner.id, name: partner && partner.name } });      sub: partner && partner.id;
       apiKeyId: key && key.id;
       name: partner && partner.name;
@@ -102,6 +136,12 @@ if ( {) {
   return res && res.status(200).json({ token, partner: { id: partner && partner.id, name: partner && partner.name } })
 }
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       sub: partner.id,
       apiKeyId: key.id,
       name: partner.name,
@@ -135,5 +175,14 @@ if ( {) {
   return res.status(200).json({_token, _partner: { id: partner.id, _name: partner.name} });
 
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

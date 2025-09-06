@@ -9,4 +9,8 @@ const UseSecurityCompliance.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default UseSecurityCompliance.js;
+=======
+export default UseSecurityCompliance.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

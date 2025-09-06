@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 "use client",;
 import Link from "next/link",;
 import { ReactNode } from "react",;
@@ -40,6 +44,10 @@ export function FeatureCard({;
 
           e.preventDefault();
           onClick();
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 "use client",
 import Link from './next / link';,
 import { ReactNode  } from './react';,

@@ -46,6 +46,7 @@ if (return) {
       setIsSubmitting(false);
 
 
+<<<<<<< HEAD
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -70,6 +71,9 @@ export const MobileEmailCapture: React.FC = () => {;
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -99,6 +103,7 @@ export const MobileEmailCapture: React.FC = () => {
     } finally {
       setIsSubmitting(false)
     }
+<<<<<<< HEAD
   }
   },
 
@@ -212,6 +217,8 @@ export const MobileEmailCapture: React.FC = () => {;
     }
   };
   return (;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   },
 
@@ -227,6 +234,17 @@ export const MobileEmailCapture: React.FC = () => {;
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">;
             Subscribe to our mobile app updates and be the first to try new features before they're released to the public.;
           </p>;
+<<<<<<< HEAD
+=======
+
+          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">;
+
+            <Input
+              type="email"
+              placeholder="Enter your email address"
+              value={email}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               onChange={(e) => setEmail(e && e.target.value)}
               className="flex-grow bg-zion-blue-dark/70 text-white border-zion-purple/30 placeholder:text-gray-400";
               required;
@@ -274,6 +292,7 @@ export const MobileEmailCapture: React.FC = () => {;
             </Button>;
           </form>;
           <p className="text - sm text - gray - 400 mt - 4">;
+<<<<<<< HEAD
           ;
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">;
             <Input;
@@ -293,6 +312,9 @@ export const MobileEmailCapture: React.FC = () => {;
             </Button>;
           </form>;
           <p className="text-sm text-gray-400 mt-4">;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             We respect your privacy and will never share your information.;
           </p>;
         </div>;
@@ -301,6 +323,7 @@ export const MobileEmailCapture: React.FC = () => {;
 
 
 
+<<<<<<< HEAD
 };
     </section>);
 }
@@ -325,3 +348,13 @@ return (<section className=" py-16 bg-gradient-to-r from-zion-blue-dark to-zion-
     </section>;
   );
 };
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    </section>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -23,8 +29,12 @@ class ErrorBoundary extends React.Component {
 }
 
 
+<<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -57,6 +67,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 const phases = [;
   {}
+<<<<<<< HEAD
     title: 'Assessment & Planning,',
     description: 'Comprehensive analysis of current infrastructure and migration strategy development.,',
     icon: BarChart3,
@@ -64,10 +75,22 @@ const phases = [;
       'Infrastructure audit,',
       'Workload analysis',',
       'Migration strategy',',
+=======
+
+    title: 'Assessment & Planning,',;
+    description: 'Comprehensive analysis of current infrastructure and migration strategy development.,',;
+    icon: BarChart3,;
+    steps: [,;
+      'Infrastructure audit,',;
+      'Workload analysis',',;
+      'Migration strategy',',;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Risk assessment'';
     ];
   },
   {}
+<<<<<<< HEAD
     title: 'Design & Architecture,',
     description: 'Cloud-native architecture design and security framework implementation.,',
     icon: Settings,
@@ -75,10 +98,22 @@ const phases = [;
       'Cloud architecture design,',
       'Security framework',',
       'Scalability planning',',
+=======
+
+    title: 'Design & Architecture,',;
+    description: 'Cloud-native architecture design and security framework implementation.,',;
+    icon: Settings,;
+    steps: [,;
+      'Cloud architecture design,',;
+      'Security framework',',;
+      'Scalability planning',',;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Cost optimization'';
     ];
   },
   {}
+<<<<<<< HEAD
     title: 'Migration Execution,',
     description: 'Phased migration with minimal downtime and comprehensive testing.,',
     icon: Cloud,
@@ -86,10 +121,22 @@ const phases = [;
       'Data migration,',
       'Application migration',',
       'Testing & validation',',
+=======
+
+    title: 'Migration Execution,',;
+    description: 'Phased migration with minimal downtime and comprehensive testing.,',;
+    icon: Cloud,;
+    steps: [,;
+      'Data migration,',;
+      'Application migration',',;
+      'Testing & validation',',;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Go-live support'';
     ];
   },
   {}
+<<<<<<< HEAD
     title: 'Optimization,',
     description: 'Continuous monitoring and optimization for peak performance.,',
     icon: Zap,
@@ -97,12 +144,24 @@ const phases = [;
       'Performance monitoring,',
       'Cost optimization',',
       'Security updates',',
+=======
+
+    title: 'Optimization,',;
+    description: 'Continuous monitoring and optimization for peak performance.,',;
+    icon: Zap,;
+    steps: [,;
+      'Performance monitoring,',;
+      'Cost optimization',',;
+      'Security updates',',;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Continuous improvement'';
     ];
   }
 ;];
 const services = [;
   {}
+<<<<<<< HEAD
     title: 'AWS Migration,',
     description: 'Complete migration to Amazon Web Services with best practices and optimization.,',
     icon: Cloud,
@@ -110,10 +169,22 @@ const services = [;
       'EC2 instance migration,',
       'RDS database migration',',
       'S3 storage migration',',
+=======
+
+    title: 'AWS Migration,',;
+    description: 'Complete migration to Amazon Web Services with best practices and optimization.,',;
+    icon: Cloud,;
+    features: [,;
+      'EC2 instance migration,',;
+      'RDS database migration',',;
+      'S3 storage migration',',;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Lambda serverless functions'';
     ];
   },
   {}
+<<<<<<< HEAD
     title: 'Azure Migration,',
     description: 'Microsoft Azure cloud migration with enterprise-grade security and compliance.,',
     icon: Shield,
@@ -121,10 +192,22 @@ const services = [;
       'Azure Virtual Machines,',
       'Azure SQL Database',',
       'Azure Storage migration',',
+=======
+
+    title: 'Azure Migration,',;
+    description: 'Microsoft Azure cloud migration with enterprise-grade security and compliance.,',;
+    icon: Shield,;
+    features: [,;
+      'Azure Virtual Machines,',;
+      'Azure SQL Database',',;
+      'Azure Storage migration',',;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Azure Functions deployment'';
     ];
   },
   {}
+<<<<<<< HEAD
     title: 'Google Cloud Migration,',
     description: 'Google Cloud Platform migration with advanced AI and analytics capabilities.,',
     icon: Brain,
@@ -132,10 +215,22 @@ const services = [;
       'Compute Engine migration,',
       'Cloud SQL migration',',
       'Cloud Storage migration',',
+=======
+
+    title: 'Google Cloud Migration,',;
+    description: 'Google Cloud Platform migration with advanced AI and analytics capabilities.,',;
+    icon: Brain,;
+    features: [,;
+      'Compute Engine migration,',;
+      'Cloud SQL migration',',;
+      'Cloud Storage migration',',;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Cloud Functions deployment'';
     ];
   },
   {}
+<<<<<<< HEAD
     title: 'Multi-Cloud Strategy,',
     description: 'Hybrid and multi-cloud solutions for maximum flexibility and redundancy.,',
     icon: Globe,
@@ -143,12 +238,24 @@ const services = [;
       'Cross-cloud integration,',
       'Disaster recovery',',
       'Load balancing',',
+=======
+
+    title: 'Multi-Cloud Strategy,',;
+    description: 'Hybrid and multi-cloud solutions for maximum flexibility and redundancy.,',;
+    icon: Globe,;
+    features: [,;
+      'Cross-cloud integration,',;
+      'Disaster recovery',',;
+      'Load balancing',',;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Cost optimization'';
     ];
   }
 ;];
 const benefits = [;
   {}
+<<<<<<< HEAD
     title: 'Cost Reduction,',
     description: 'Reduce infrastructure costs by up to 40% with cloud optimization.,',
     icon: BarChart3;
@@ -167,6 +274,28 @@ const benefits = [;
     title: 'Better Performance,',
     description: 'Faster load times and improved application performance.,',
     icon: Smartphone;
+=======
+
+    title: 'Cost Reduction,',;
+    description: 'Reduce infrastructure costs by up to 40% with cloud optimization.,',;
+    icon: BarChart3,;
+  },;
+  {}
+    title: 'Enhanced Security,',;
+    description: 'Enterprise-grade security with automated updates and monitoring.,',;
+    icon: Shield,;
+  },;
+  {}
+    title: 'Improved Scalability,',;
+    description: 'Scale resources up or down based on demand automatically.,',;
+    icon: Zap,;
+  },;
+  {}
+    title: 'Better Performance,',;
+    description: 'Faster load times and improved application performance.,',;
+    icon: Smartphone,;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 ;];
 export default function CloudMigrationPage() {
@@ -193,8 +322,14 @@ export default function CloudMigrationPage() {
             >;
               <div className="flex items-center justify-center mb-6">";
                 <Cloud className="w-12 h-12 text-blue-400 mr-4" />";
+<<<<<<< HEAD
                 <h1 className="text-5xl md:text-6xl font-bold">";
                   Cloud;
+=======
+
+                <h1 className="text-5xl md: text-6xl font-bold">", Cloud,;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">";
                     Migration Solutions;
                   </span>;
@@ -204,12 +339,21 @@ export default function CloudMigrationPage() {
                 Seamlessly migrate your infrastructure to the cloud with our comprehensive migration services. 
                 Reduce costs, improve performance, and enhance security with AWS, Azure, or Google Cloud.,
               </p>;
+<<<<<<< HEAD
               <div className="flex flex-col sm:flex-row gap-4 justify-center">";
                 <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
                   Start Your Migration;
                 </Link>;
                 <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">";
                   View Migration Success Stories;
+=======
+
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",;
+                  Start Your Migration;
+                </Link>;
+                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-blue-600 transition-all duration-300 font-semibold">", View Migration Success Stories,;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </Link>;
               </div>;
             </motion.div>;
@@ -221,11 +365,19 @@ export default function CloudMigrationPage() {
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0.8 }}
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Our Cloud Migration Process;
+=======
+
+              transition={{ duration: 0 && 0.8 }}
+              className="text-center mb-16"">;
+              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Our Cloud Migration Process,;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 A proven methodology that ensures successful cloud migration;
@@ -265,11 +417,19 @@ export default function CloudMigrationPage() {
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0.8 }}
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Cloud Migration Services;
+=======
+
+              transition={{ duration: 0 && 0.8 }}
+              className="text-center mb-16"">;
+              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Cloud Migration Services,;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Choose from leading cloud providers or implement a multi-cloud strategy;
@@ -282,6 +442,7 @@ export default function CloudMigrationPage() {
                   key={service.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8""
                 >;
@@ -297,6 +458,25 @@ export default function CloudMigrationPage() {
                     <ul className="space-y-2">";
                       {service.features.map((feature, featureIndex) => (,
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
+=======
+
+                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                  className="bg-white rounded-2xl shadow-lg hover: shadow-2xl transition-all duration-300 p-8"">;
+                  <div className="flex items-center mb-6">";
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mr-4">";
+                      <service && service.icon className="w-6 h-6 text-white" />";
+                    </div>,;
+                    <h3 className="text-2xl font-bold text-gray-900">{service && service.title}</h3>";
+
+                  </div>;
+                  <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>"
+                  <div>;
+
+                    <h4 className="font-semibold text-gray-900 mb-3">Key Features: </h4>", <ul className="space-y-2">",;
+                      {service && service.features.map((feature, featureIndex) => (,;
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">";
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />";
                           {feature}
                         </li>,
@@ -314,11 +494,19 @@ export default function CloudMigrationPage() {
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0.8 }}
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Why Choose Our Cloud Migration?;
+=======
+
+              transition={{ duration: 0 && 0.8 }}
+              className="text-center mb-16"">;
+              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Why Choose Our Cloud Migration?,;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Our cloud migration services deliver measurable improvements in cost, 
@@ -350,23 +538,39 @@ export default function CloudMigrationPage() {
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0.8 }}
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Move to the Cloud?;
+=======
+
+              transition={{ duration: 0 && 0.8 }}>,;
+              <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready to Move to the Cloud?,;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </h2>;
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">";
                 Let our cloud migration experts help you seamlessly transition to the cloud;
                 with minimal downtime and maximum security.;
               </p>;
+<<<<<<< HEAD
               <div className="flex flex-col sm:flex-row gap-4 justify-center">";
                 <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
                   Start Your Cloud Migration;
                 </Link>;
                 <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">";
                   Learn About Our Expertise;
+=======
+
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",;
+                  Start Your Cloud Migration;
+                </Link>;
+                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-blue-600 transition-all duration-300 font-semibold">", Learn About Our Expertise,;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </Link>;
               </div>;
             </motion.div>;
@@ -376,9 +580,19 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     </Layout>;
 
 
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Move to the Cloud?

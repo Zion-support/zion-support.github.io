@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {Link} from 'react-router-dom';
 import { cn } from '@/lib / utils';
 import { NavLink } from './react-router-dom';
@@ -8,6 +12,7 @@ import {Link} from 'react-router-dom';
 import {cn} from "@/lib/utils";
 import {NavLink} from "react-router-dom";
 
+<<<<<<< HEAD
 
 import React from 'react';
 import { Link  } from 'react-router-dom';
@@ -16,16 +21,22 @@ import { NavLink } from "react-router-dom";
 import {Link} from 'react-router-dom';
 import {cn} from "@/lib/utils";
 import {NavLink} from "react-router-dom";
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react',
 import { Link } from 'react-router-dom',
 import { cn } from "@/lib/utils",
 import { NavLink } from "react-router-dom",
+<<<<<<< HEAD
 interface MainNavigationProps {
   className?: string
 }
 export function MainNavigation({ className }: MainNavigationProps) {
   return (
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 interface MainNavigationProps {
   class_name?: string;
@@ -140,6 +151,7 @@ export function MainNavigation({ className } MainNavigationProps) {;
 
             "text-sm font-medium transition-colors hover:text-primary",
 
+<<<<<<< HEAD
 
     <nav className={cn("hidden md:flex items-center space-x-6", className)}>
       <NavLink
@@ -148,6 +160,8 @@ export function MainNavigation({ className } MainNavigationProps) {;
           cn(
             "text-sm font-medium transition-colors hover: text-primary"
             "text-sm font-medium transition-colors hover:text-primary",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             isActive ? "text-zion-cyan" : "text-muted-foreground"
           )
         }
@@ -173,10 +187,16 @@ export function MainNavigation({ className } MainNavigationProps) {;
         to="/partners"
         className={({ isActive }) =>
           cn(
+<<<<<<< HEAD
             "text-sm font-medium transition-colors hover:text-primary",
 
             "text-sm font-medium transition-colors hover: text-primary"
             "text-sm font-medium transition-colors hover:text-primary",
+=======
+
+            "text-sm font-medium transition-colors hover:text-primary",
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             isActive ? "text-zion-cyan" : "text-muted-foreground"
           )
         }
@@ -186,6 +206,7 @@ export function MainNavigation({ className } MainNavigationProps) {;
       <NavLink
         to="/signup"
         className={({ isActive }) =>
+<<<<<<< HEAD
           cn(
             "text-sm font-medium transition-colors hover: text-primary";
             isActive ? "text-zion-cyan" : "text-muted-foreground"
@@ -293,3 +314,8 @@ isActive ? " text-zion-cyan": " text-muted-foreground";
 " bg-zion-purple px-4 py-2 rounded-md hover:bg-zion-purple-light") 
 }> Register </NavLink> </nav>) 
 }
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

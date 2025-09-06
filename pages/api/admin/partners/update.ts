@@ -4,6 +4,7 @@
 
     return res.status(200).json({ ok: true });
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { getServerSupabase } from '../../../../utils / supabase / server',
 export default async /**
@@ -48,6 +49,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (usingPlaceholder) {
       return res.status(200).json({ ok: true, mock: true });
     }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const supabase = getServerSupabase()
     const updates: any = {}
     if (status) updates.status = status
@@ -70,11 +74,18 @@ if (updates.commission_rate = commission_rate, ) {
   $2
 }
     return res.status (200).json ({ ok: true });
+<<<<<<< HEAD
+=======
+
+  } catch (e: any) {
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return res.status (500).json ({ error: e?.message });
   }
 
 }
 
+<<<<<<< HEAD
 }
 ;
 
@@ -108,11 +119,26 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+=======
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 }
 
 
+<<<<<<< HEAD
   }
 }
   }
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

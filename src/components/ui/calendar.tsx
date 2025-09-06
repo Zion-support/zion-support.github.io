@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 }/>)
 }"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 class_name, class_names,  showOutsideDays = true, ...props;
 }: CalendarProps) {
 }/>);
@@ -8,6 +11,7 @@ class_name, class_names,  showOutsideDays = true, ...props;
 }/>) ;
 }";
 
+<<<<<<< HEAD
 import * as React from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
@@ -35,9 +39,15 @@ export { Calendar }
 
 }/>) ;
 }";
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import * as React from "react",
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { DayPicker } from "react-day-picker",
 import { cn } from "@/lib/utils",
 import { buttonVariants } from "@/components/ui/button",
+<<<<<<< HEAD
 export type CalendarProps = React.ComponentProps<typeof DayPicker>,
+=======
+export type CalendarProps = React.ComponentProps<typeof DayPicker>,
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

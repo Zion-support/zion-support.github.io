@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {;
   Form,;
   FormControl,;
@@ -8,6 +12,7 @@ import {;
   FormLabel,;
   FormMessage,;
 
+<<<<<<< HEAD
 
 
 import React from "react";
@@ -24,6 +29,11 @@ import {
   FormItem
   FormLabel
   FormMessage
+=======
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Form,
   FormControl,
   FormDescription,
@@ -31,6 +41,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage,;
+<<<<<<< HEAD
 } from "@/components/ui/form";
 
 } from "@/components/ui/form";
@@ -74,16 +85,47 @@ Form
   FormItem
   FormLabel
   FormMessage
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 } from "@/components/ui/form";
 
 import { Badge } from "@/components/ui/badge";
 import { X } from "lucide-react";
+<<<<<<< HEAD
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>
 }
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>
 }
+=======
+
+
+export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
+
+  const { control, register, watch, setValue } = form;
+
+  const keywords = watch("keywords");
+  const platform = watch("platform");
+
+=======
+
+
+
+import React from "react",
+import { UseFormReturn } from "react-hook-form",
+import { AppMetadataValues } from "./MetadataManager",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
+import { Badge } from "@/components/ui/badge",
+import { X } from "lucide-react",
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>
 }
@@ -97,6 +139,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
   const platform = watch("platform"),
   
 
+<<<<<<< HEAD
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
   const { control, register, watch, setValue } = form;
   const keywords = watch("keywords");
@@ -115,6 +158,8 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
   const keywords = watch("keywords"),
   const platform = watch("platform"),
   
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" || e.key === ",") {
       e.preventDefault(),
@@ -137,6 +182,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
       "keywords",;
       keywords && keywords.filter((k) => k !== keyword),;
 
+<<<<<<< HEAD
       if (value && !keywords.includes(value)) {
         setValue("keywords", [...keywords, value]),
         e.currentTarget.value = ""
@@ -147,10 +193,17 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
     setValue(
       "keywords"
       keywords.filter((k) => k !== keyword)
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     );
   }
   const maxDescriptionLength = platform === "ios" ? 4000 : 4000;
   const longDescription = watch("longDescription");
+<<<<<<< HEAD
+=======
+  return (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   },
   
@@ -189,9 +242,13 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                     Max {platform === "ios" ? "30" : "50"} characters
                   </FormDescription>
                 </FormItem>
+<<<<<<< HEAD
               )}
             />
             <FormField
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",;
 import { UseFormReturn } from "react-hook-form",;
 import { AppMetadataValues } from "./MetadataManager",;
@@ -315,9 +372,18 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
                     />;
                   </FormControl>;
                   <FormDescription>;
+<<<<<<< HEAD
 )}
             />
             <FormField
+=======
+
+                </FormItem>;
+              )}
+            />;
+            <FormField;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               control={control}
               name="shortDescription"
@@ -336,6 +402,7 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
                   </FormDescription>
                 </FormItem>
               )}
+<<<<<<< HEAD
             />;
             <FormField;
 
@@ -346,18 +413,32 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
             <FormField
             />;
             <FormField;
+=======
+
+            />;
+            <FormField;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               control={control}
               name="longDescription"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Long Description</FormLabel>
                   <FormControl>
+<<<<<<< HEAD
                     <Textarea 
 
 <Textarea
 
                     <Textarea
                     <Textarea 
+=======
+
+                    <Textarea 
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       placeholder="Detailed description of your app"
                       className="min-h-32"
                       maxLength={maxDescriptionLength}
@@ -372,12 +453,27 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
             />
             
 
+<<<<<<< HEAD
             <div>
               <FormLabel htmlFor="keywords">Keywords</FormLabel>
             
             <div>
               <FormLabel htmlFor="keywords">Keywords</FormLabel>
               <Input 
+=======
+            
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            <div>
+              <FormLabel htmlFor="keywords">Keywords</FormLabel>
+=======
+            />;
+
+            <div>;
+              <FormLabel htmlFor="keywords">Keywords</FormLabel>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+              <Input
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 id="keywords"
                 placeholder="Add keywords (press Enter or comma to add)"
                 onKeyDown={addKeyword}
@@ -387,6 +483,7 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
               
 
 
+<<<<<<< HEAD
               <div className="flex flex-wrap gap-2 mt-2">
                 {keywords.map((keyword, index) => (
               />;
@@ -421,6 +518,28 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
                       type="button"
                     <button ;
                       type="button";
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              <div className="flex flex-wrap gap-2 mt-2">
+                {keywords.map((keyword, index) => (
+=======
+              />;
+
+              <div className="flex flex-wrap gap-2 mt-2">;
+                {keywords && keywords.map((keyword, index) => (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                  <Badge
+                    key={index}
+                    className="bg-zion-purple/60 hover:bg-zion-purple">;
+                    {keyword}
+
+
+                    <button 
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                      type="button"
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       onClick={() => removeKeyword(keyword)}
                       className="ml-1 hover:text-red-300";
                     >;
@@ -428,6 +547,7 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
                     </button>;
                   </Badge>;
                 ))}
+<<<<<<< HEAD
               />
 
               
@@ -450,6 +570,8 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
                 Add keywords to improve discoverability (max 100 characters total)
               </FormDescription>
             </div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               </div>;
               <FormDescription className="mt-2">;
@@ -459,6 +581,11 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
             </div>;
 
             
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <FormField
               control={control}
               name="version"
@@ -466,6 +593,10 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
                 <FormItem>
                   <FormLabel>App Version</FormLabel>
                   <FormControl>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 );
 
                     <Input 
@@ -525,6 +656,7 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
 
 
 };
+<<<<<<< HEAD
     </Card>);
 }
 ;
@@ -569,3 +701,7 @@ if (value && !keywords.includes (value) ) {
     </Card>;
   );
 };
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

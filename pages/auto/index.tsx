@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -27,17 +28,34 @@ const AutoIndex: NextPage = () => {
           <li className="border rounded p-4">
             <h2 className="font-semibold text-lg"><Link href="/auto/seo-audit">Autonomous SEO Auditor</Link></h2>
             <p className="text-sm text-gray-600">Scans pages for SEO gaps and commits a report for fixes.</p>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </li>
         </ul>
       </main>
     </div>
 
 
+<<<<<<< HEAD
+=======
+          </li>;
+        </ul>;
+      </main>;
+    </div>;
+  ),;
+};
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export default AutoIndex;
 
 
+<<<<<<< HEAD
 export default AutoIndex;
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Head from 'next / head';
 import Link from 'next / link';
           </li>;
@@ -48,6 +66,7 @@ import Link from 'next / link';
 ;
 export default AutoIndex;
 ;
+<<<<<<< HEAD
 
 export default AutoIndex
 
@@ -92,3 +111,6 @@ const AutoIndex: NextPage = () => {;
   );
 },;
 export default AutoIndex;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -5,8 +5,15 @@ import {useAuth} from "@/hooks/useAuth";
 import {Wallet} from "@/components/icons";
 import {toast} from "sonner";
 export function Web3Login() {;
+<<<<<<< HEAD
   const { loginWithWeb3 } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
+=======
+
+  const { loginWithWeb3 } = useAuth();
+  const [isLoading, setIsLoading] = useState(false);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleWeb3Login = async () => {;
     try {;
       setIsLoading(true);
@@ -20,6 +27,7 @@ export function Web3Login() {;
 
       // Check if wallet is available
       const ethereum = (window as any).ethereum;
+<<<<<<< HEAD
   const { loginWithWeb3 } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 import { useState } from "react",
@@ -40,6 +48,8 @@ export function Web3Login() {
       
       // Check if wallet is available
       const ethereum = (window as any).ethereum,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       if (!ethereum) {
         toast("Web3 wallet not found", {
           description: "Please install MetaMask or another compatible wallet"})
@@ -52,6 +62,11 @@ export function Web3Login() {
       console.error("Web3 login error:", error)
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Check if wallet is available;
       const ethereum = (window as any).ethereum;
       if (!ethereum) {;
@@ -72,10 +87,14 @@ export function Web3Login() {
 
   },
 
+<<<<<<< HEAD
 
     }
   }
   },
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   return (
     <Button
@@ -83,6 +102,10 @@ export function Web3Login() {
       variant="outline"
       className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
       onClick={handleWeb3Login}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       disabled={isLoading}
     >
       {isLoading ? (
@@ -99,10 +122,15 @@ export function Web3Login() {
           <Wallet className="h-5 w-5" />
         </>
 
+<<<<<<< HEAD
       )}
     </Button>
   )
 }
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -140,6 +168,7 @@ export function Web3Login() {;
       disabled={isLoading}
     >;
 
+<<<<<<< HEAD
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -186,6 +215,13 @@ export function Web3Login() {;
           <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">;
             <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>;
             <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>;
+=======
+      {isLoading ? (;
+        <span className="flex items-center">;
+          <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www && www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">;
+            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>;
+            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5 && 8V0C5.373 0 0 5 && 5.373 0 12h4zm2 5 && 5.291A7.962 7 && 7.962 0 014 12H0c0 3 && 3.042 1 && 1.135 5 && 5.824 3 7 && 7.938l3-2 && 2.647z"></path>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </svg>;
           Connecting...;
         </span>;
@@ -273,6 +309,7 @@ if (!ethereum) {
 }finally {
   setIsLoading (false) 
 }
+<<<<<<< HEAD
 };
 return (<Button type="button" variant="outline" className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan" onClick= {
   handleWeb3Login 
@@ -287,3 +324,6 @@ return (<Button type="button" variant="outline" className="w-full border border-
   );
 }
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

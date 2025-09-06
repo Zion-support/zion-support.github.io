@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 interface ContractHeaderProps {
   onCreateClick: () => void;
@@ -44,10 +45,13 @@ interface ContractHeaderProps {;
 ;
 export function ContractHeader({ onCreateClick }: ContractHeaderProps) {;
   return (;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 export function ContractHeader(): any ({ onCreateClick }: ContractHeaderProps) {;
   return (
+<<<<<<< HEAD
 
 import { Button } from "@/components/ui/button",;
 ;
@@ -57,6 +61,8 @@ interface ContractHeaderProps {;
 ;
 export function ContractHeader({ onCreateClick } ContractHeaderProps) {;
   return (;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="flex justify-between items-center mb-8">;
       <div>;
         <h1 className="text-3xl font-bold">Smart Contract Builder</h1>;
@@ -64,10 +70,18 @@ export function ContractHeader({ onCreateClick } ContractHeaderProps) {;
           Create legally binding agreements with optional blockchain deployment;
         </p>;
       </div>;
+<<<<<<< HEAD
       ;
       <Button size="lg" onClick={onCreateClick}>;
         Create New Contract;
       </Button>;
+=======
+
+      <Button size="lg" onClick={onCreateClick}>;
+        Create New Contract;
+      </Button>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import { Button } from "@/components/ui/button";
 interface ContractHeaderProps {
@@ -101,6 +115,7 @@ function ContractHeader() {
 }
 
 
+<<<<<<< HEAD
 }
   ),;}
  interface ContractHeaderProps {
@@ -119,3 +134,6 @@ function ContractHeader() {
   );
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface EmergingTechService2029V2 {;
 export interface EmergingTechService2029V2 {
 export interface EmergingTechService2029V2 {;
@@ -103,10 +104,15 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
       'Implementation team',
     ],
     compliance: ['FIPS 140 - 2', 'Common Criteria', 'SOC 2', 'ISO 27001'],    scalability: 'Enterprise - grade, global deployment',    roi: '600% within 24 months',
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     deployment: 'Hardware appliances, cloud options',
     maintenance: 'Continuous updates, security patches',
     training: 'Quantum security training, certification',
     documentation: 'Security guides, best practices',
+<<<<<<< HEAD
     api: 'Security management APIs',
     mobile: 'Mobile security apps',    security: 'Quantum - safe encryption, zero - trust',    backup: 'Secure backup, disaster recovery',
     monitoring: 'Real - time security monitoring',
@@ -421,6 +427,9 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
     maintenance: 'Continuous updates, security patches',
     training: 'Quantum security training, certification',
     documentation: 'Security guides, best practices',
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     api: 'Security management APIs', mobile: 'Mobile security apps',
     security: 'Quantum-safe encryption, zero-trust',
     backup: 'Secure backup, disaster recovery',
@@ -528,14 +537,24 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
     analytics: 'Trading analytics, performance reports',
     customization: 'Custom trading strategies, integration',
 
+<<<<<<< HEAD
 export interface EmergingTechService2029V2 {;
 
+=======
+
+=======
+
+export interface EmergingTechService2029V2 {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   }
 ];
 
 ;
 
+<<<<<<< HEAD
     white_label: 'Available for financial institutions',
     affiliate: '15% commission for referrals',    referral: '$100, 000 bonus for partnerships',    partnership: 'Financial institution partnerships',
     funding: 'Series C funding, $500M valuation',
@@ -878,3 +897,5 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
     }
   }
 ];
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

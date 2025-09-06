@@ -1,4 +1,8 @@
 import {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   LightBulbIcon,
   CpuChipIcon,
   AcademicCapIcon,
@@ -79,15 +83,27 @@ const research_impact = [;
     metric: 'Citations',
     value: '10, 000+',
     description: 'Academic citations demonstrating research influence'},
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   {
     metric: 'Patents Filed'
     value: '25+'
     description: 'Intellectual property protecting our innovations'}
   {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     metric: 'Research Collaborations',
     value: '50+',
     description: 'Partnerships with leading academic institutions'}];
 const academic_partners = [;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   {
     name: 'Stanford University'
     location: 'Stanford, CA'
@@ -113,6 +129,10 @@ export default /**
  * ResearchPage - Function description
  */
 function ResearchPage() {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className=&quot;bg - black & quot;>;
 
@@ -167,6 +187,10 @@ function ResearchPage() {
                       <span className=&quot;text-sm text-gray-400&quot;>{topic}</span>
                     </div>
                   ))}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <span className=&quot;bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent & quot;>;
                 Innovation;
               </span>;
@@ -272,6 +296,10 @@ const Page: React.FC<PageProps> = ({ className }) => {
         </div>;
       </div>;
       {/* Recent Publications */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -296,6 +324,29 @@ const Page: React.FC<PageProps> = ({ className }) => {
                     publication.impact === 'Breakthrough' ? 'bg-purple-600/20 text-purple-400' :
                     'bg-gray-600/20 text-gray-400'
                   }`}>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                    {publication.impact}
+                  </span>;
+                  <span className=&quot;text - sm text - gray - 400 & quot;>{publication.year}</span>;
+                </div>;
+                <h3 className=&quot;text - lg font - semibold text - white mb - 2&quot;>{publication.title}</h3>;
+                <p className=&quot;text - sm text - blue - 400 mb - 3&quot;>{publication.authors}</p>;
+                <p className=&quot;text - sm text - gray - 400 mb - 3&quot;>{publication.journal}</p>;
+                <p className=&quot;text - sm text - gray - 300 mb - 4&quot;>{publication.abstract}</p>;
+                <a;
+                  href={`https://doi.org/${publication.doi}`}
+                  target=&quot;_blank & quot;
+                  rel=&quot;noopener noreferrer & quot;
+                  className=&quot;text - sm font - semibold leading - 6 text - blue - 400 hover:text - blue - 300 transition - colors duration - 200 & quot;
+                >;
+                  View Publication <span aria - hidden=&quot;true & quot;>→</span>;
+                </Link>;
+              </div>))}
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
           <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Publications</h2>
@@ -368,6 +419,10 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 <p className=&quot;mt-2 text-sm text-gray-400&quot;>{item.description}</p>
               </div>
             ))}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
           <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Impact</h2>;
@@ -446,6 +501,10 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 <div className=&quot;space-y-3 text-gray-300&quot;>
                   <p className=&quot;flex items-center gap-2&quot;>
                     <GlobeAltIcon className=&quot;h-5 w-5 text-blue-400&quot; />
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
           <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Collaborations</h2>;
@@ -552,6 +611,10 @@ const Page: React.FC<PageProps> = ({ className }) => {
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl text - center & quot;>;
           <h2 className=&quot;text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;

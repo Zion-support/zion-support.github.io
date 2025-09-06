@@ -1,5 +1,10 @@
 #!/usr/bin/env node
+<<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
@@ -7,6 +12,7 @@ const { promisify } = require('util');
 const execAsync = promisify(exec);
 class BuildMonitor {
   constructor() {
+<<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
     this.logFile = path.join(__dirname, 'logs', 'build-monitor.log');
     this.reportFile = path.join(__dirname, 'reports', 'build-status.json');
@@ -148,6 +154,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     this.isRunning = false;
     this.checkInterval = parseInt(process.env.BUILD_CHECK_INTERVAL) || 300000; // 5 minutes
     this.logLevel = process.env.LOG_LEVEL || 'info';
@@ -166,6 +176,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       console.log(logMessage);
     }
   }
+<<<<<<< HEAD
 
 ursor/fix-syntax-push-and-merge-to-main-40de
     const report = {
@@ -223,6 +234,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   async checkBuildStatus() {
     try {
       this.log('info', 'Checking build status...');
@@ -242,6 +257,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         this.log('warn', 'No build found, triggering build...');
         await this.triggerBuild();
       }
+<<<<<<< HEAD
       
 ursor/fix-syntax-push-and-merge-to-main-40de
       if (report.healthScore < 70) {
@@ -253,6 +269,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       return true;
     } catch (error) {
       this.log('error', `Build check failed: ${error.message}`);
@@ -453,6 +473,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 const monitor = new BuildMonitor();
 if (require.main === module) {
 
+<<<<<<< HEAD
   const monitor = new BuildMonitor();
   monitor.run().catch(console.error);
   const monitor = new BuildMonitor();
@@ -461,6 +482,9 @@ if (require.main === module) {
   monitor.run().catch(console.error);
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const command = process.argv[2];
   switch (command) {
     case 'start':
@@ -489,6 +513,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 }
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 const fs = require('fs);
@@ -675,6 +703,12 @@ if (require.main === module) {
   const monitor = new BuildMonitor(),
   monitor.run().catch(console.error)}
 
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 module.exports = BuildMonitor;

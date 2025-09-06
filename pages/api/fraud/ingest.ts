@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { evaluateHeuristics } from "../../../utils/fraud/heuristics";
@@ -32,8 +36,29 @@ export default async function handler(
     return;
 
 
+<<<<<<< HEAD
   }
   try {
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { evaluateHeuristics } from '../../../utils/fraud/heuristics';
+import { classifyWithGPT } from '../../../utils/fraud/gpt';
+import { getFraudStore, newEvent } from '../../../utils/fraud/store';
+import { extractClientIp } from '../../../utils/ip';
+import { AdminActionRecord, GptClassification, GptClassificationLabel, MonitoredSource, StoredFraudRecord } from '../../../utils/fraud/types';
+import { sendWarningEmail } from '../../../utils/email';
+const allowedSources: MonitoredSource[] = ['signup', 'job_post', 'message', 'quote', 'review'];
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.status(405).json({ error: 'Method not allowed' });
+    return
+
+  }
+  try {
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const body = req && req.body || {};
     const source = body && body.source as MonitoredSource;
     if (!allowedSources && allowedSources.includes(source)) {
@@ -42,6 +67,11 @@ export default async function handler(
     }
     const userId = typeof body && body.userId === "string" ? body && body.userId : null;
     const content = typeof body && body.content === "string" ? body && body.content : null;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const metadata =
       body && body.metadata && typeof body && body.metadata === "object" ? body && body.metadata : null;
       res.status(400).json({ error: 'Invalid source' });
@@ -52,7 +82,14 @@ export default async function handler(
     const metadata = (body.metadata && typeof body.metadata === 'object') ? body.metadata : null;
     const ip = extractClientIp(req);
     const store = getFraudStore();
+<<<<<<< HEAD
       countEventsByIp: (ip, s, m) => store && store.countEventsByIp(ip, s, m),
+=======
+
+      countEventsByIp: (ip, s, m) => store && store.countEventsByIp(ip, s, m),
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from './next';
 import { evaluate_heuristics  } from '../../../utils / fraud / heuristics';
 import { classifyWithGPT  } from '../../../utils / fraud / gpt';
@@ -75,6 +112,62 @@ import {
   GptClassification,
   GptClassificationLabel,
   MonitoredSource,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  StoredFraudRecord,
+} from '../../../utils / fraud / types';
+import { sendWarningEmail  } from '../../../utils / email';
+;
+const allowed_sources: MonitoredSource[] = [;
+  "signup",
+  "job_post",
+  "message",
+  "quote",
+  "review",
+];
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    res.status (405).json ({ error: "Method not allowed" });
+    return;
+  }
+  try {
+    const body = req.body || {}
+    const source = body.source as MonitoredSource;
+    if () {) {
+  $2
+}
+      res.status (400).json ({ error: "Invalid source" });
+      return;
+    }
+    const user_id = typeof body.user_id === "string" ? body.user_id : null;
+    const content = typeof body.content === "string" ? body.content : null;
+    const metadata =;
+      body.metadata && typeof body.metadata === "object" ? body.metadata : null;
+    const ip = extractClientIp (req);
+    const store = getFraudStore ();
+    const event = new_event ({
+      source,
+      user_id,
+      content,
+      metadata,
+      ip_address: ip,
+    });
+;
+    const heuristic = await evaluate_heuristics (event, {
+      countEventsByIp: (ip, s, m) => store.countEventsByIp (ip, s, m),
+    });
+    // Privacy opt - out check for content analysis;
+    let gpt: GptClassification | undefined = undefined;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Check condition
 if ( {) {
   $2
@@ -85,6 +178,10 @@ if ( {) {
   $2
 }
         gpt = await classifyWithGPT (content, source);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
     } else // Check condition
 if ( {) {
@@ -92,14 +189,22 @@ if ( {) {
 }
       gpt = await classifyWithGPT (content, source);
     }
+<<<<<<< HEAD
       gpt?.label || (heuristic && heuristic.flagged ? "SUSPICIOUS" : "SAFE");
     if (heuristic && heuristic.severity === "high") combinedLabel = "DANGEROUS";
+=======
+
+      gpt?.label || (heuristic && heuristic.flagged ? "SUSPICIOUS" : "SAFE");
+    if (heuristic && heuristic.severity === "high") combinedLabel = "DANGEROUS";
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (gpt?.label === "DANGEROUS") combinedLabel = "DANGEROUS";
     const autoHide =
       process && process.env.FRAUD_AUTOHIDE === "true" &&
       combinedLabel !== "SAFE" &&
       source === "message";
     const stored: Omit<StoredFraudRecord, "id"> = {
+<<<<<<< HEAD
     const event = newEvent({ source, userId, content, metadata, ipAddress: ip });
     const heuristic = await evaluateHeuristics(event, { countEventsByIp: (ip, s, m) => store.countEventsByIp(ip, s, m) });
     // Privacy opt-out check for content analysis
@@ -117,10 +222,29 @@ if ( {) {
     if (gpt?.label === 'DANGEROUS') combinedLabel = 'DANGEROUS';
     const autoHide = (process.env.FRAUD_AUTOHIDE === 'true') && (combinedLabel !== 'SAFE') && (source === 'message');
     const stored: Omit<StoredFraudRecord, 'id'> = {
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       ...event,
       heuristic,
       gpt,
       autoHidden: !!autoHide,
+<<<<<<< HEAD
+=======
+
+
+      if (prior <= 1 && combinedLabel !== "SAFE") {
+        await sendWarningEmail({
+          toUserId: userId
+          subject: "Marketplace warning: suspicious activity detected"
+          body: `We detected potentially suspicious activity on your account (${source}). Please keep all payments on-platform and avoid sharing personal contact info.`
+        });
+      }
+    }
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     res && res.status(200).json({
       id: saved && saved.id,
       flagged: combinedLabel !== "SAFE",
@@ -129,6 +253,11 @@ if ( {) {
       gpt,
       autoHidden: saved && saved.autoHidden,
       createdAt: saved && saved.createdAt,
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     let combined_label: GptClassificationLabel =;
       gpt?.label || (heuristic.flagged ? "SUSPICIOUS" : "SAFE");
     // Check condition
@@ -175,6 +304,10 @@ if ( {) {
       gpt,
       auto_hidden: saved.auto_hidden,
       created_at: saved.created_at,
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     });
   } catch (e: any) {
 
@@ -185,8 +318,12 @@ if ( {) {
       .json({ error: "Internal error", details: e?.message |String(e) });
   }
 }
+<<<<<<< HEAD
       status: 'PENDING'};
 
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       status: 'PENDING'};
     const saved = await store.saveEvent(stored);
     if (process.env.FRAUD_EMAIL_WARNINGS === 'true' && userId) {
@@ -207,6 +344,7 @@ if ( {) {
     res.status(500).json({ error: 'Internal error', details: e?.message || String(e) })
   }
 }
+<<<<<<< HEAD
     res;
       .status (500);
       .json ({ error: "Internal error", details: e?.message || String (e) });
@@ -426,6 +564,13 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+    res;
+      .status (500);
+      .json ({ error: "Internal error", details: e?.message || String (e) });
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -479,5 +624,15 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
   }
 }
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

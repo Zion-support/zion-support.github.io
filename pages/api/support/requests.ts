@@ -1,10 +1,14 @@
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { readJson, writeJson } from '../../../utils/fsDb';
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { readJson, writeJson } from '../../../utils/fsDb',;
 ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     const requests = readJson<any[]>('support/requests.json', [])
@@ -23,6 +27,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 }
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { read_json, write_json } from '../../../utils / fs_db',
 ;
@@ -52,6 +60,7 @@ if ( {) {
   return res.status (405).json ({ error: 'Method not allowed' });
 }
 ;
+<<<<<<< HEAD
 
 
 }
@@ -118,3 +127,11 @@ export default async function handler(req, res) {
   }
 }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,9 +1,14 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       permanent: false}}
 }
 export default function ResumeIndex() { return null }
 
 
+<<<<<<< HEAD
 
 
       destination: '/resume/preview',
@@ -41,3 +46,10 @@ export default function ResumeIndex() { return null   } catch (error) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

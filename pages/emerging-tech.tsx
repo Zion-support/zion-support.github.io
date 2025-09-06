@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function EmergingTechPage() {
   const features = [
     'Blockchain, tokenization, and smart contract auditsIoT and edge orchestration with zero-trust patterns5G private networks and campus connectivityMetaverse and spatial computing experimentation'],
@@ -75,6 +76,22 @@ export default function EmergingTechPage() {
     { name: '5G Private Networks', href: '/5g-private-network-solutions' }
     { name: 'Metaverse AI Platform', href: '/metaverse-ai-development-platform' }]
 
+=======
+
+
+export default function EmergingTechPage() {
+  const features = [
+    'Blockchain, tokenization, and smart contract auditsIoT and edge orchestration with zero-trust patterns5G private networks and campus connectivityMetaverse and spatial computing experimentation'],
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  const solutions = [
+    { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' },
+    { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration' },
+    { name: '5G Private Networks', href: '/5g-private-network-solutions' },
+    { name: 'Metaverse AI Platform', href: '/metaverse-ai-development-platform' }],
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <Layout>
 import React from 'react',;
@@ -118,14 +135,22 @@ ursor/fix-lint-push-and-merge-to-main-ce13
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">Accelerate innovation responsibly across blockchain, IoT/edge, 5G, and spatial computing.</p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <a href="/contact" className="px-8 py-4">Start a Pilot</Link>
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</Link>
 
 
+<<<<<<< HEAD
               <a href="/contact" className="px-8 py-4">Start a Pilot</a>
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</a>
               <a href="/contact" className="px-8 py-4">Start a Pilot</Link>
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</Link>
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>
           </header>
           <section>
@@ -150,6 +175,7 @@ ursor/fix-lint-push-and-merge-to-main-ce13
                 <a key={s.name} href={s.href} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 transition-colors">
                   <div className="text-gray-200 font-semibold mb-2">{s.name}</div>
                   <p className="text-gray-300 text-sm">Learn more</p>
+<<<<<<< HEAD
                 </a>
               ))}
             </div>
@@ -158,6 +184,9 @@ ursor/fix-lint-push-and-merge-to-main-ce13
       </div>
     </Layout>
   )
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   );
 };
@@ -171,6 +200,10 @@ ursor/fix-lint-push-and-merge-to-main-ce13
 }
 }
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react',
 import Head from 'next / head',
 import Layout from '../components / layout / Layout',
@@ -237,8 +270,11 @@ function EmergingTechPage() {
           </section>;
         </div>;
       </div>;
+<<<<<<< HEAD
 }
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     </Layout>;
   );
@@ -247,4 +283,10 @@ function EmergingTechPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 }
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

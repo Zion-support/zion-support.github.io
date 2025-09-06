@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { NextRequest, NextResponse  } from './next / server';,
 import bcrypt from './bcryptjs';,
 import { prisma  } from '@/lib / prisma';,
@@ -32,10 +36,18 @@ if ( {) {
 }
       return NextResponse.json (
         { error: "User with this email already exists" },
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         { status: 400 }
       );
     }
     // Hash password;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const hashed_password = await bcrypt.hash (password, 12),
     // Create user;
     const user = await prisma.user.create ({
@@ -68,6 +80,13 @@ if ( {) {
     return NextResponse.json (
 
       { error: "Internal server error" }
+<<<<<<< HEAD
+=======
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { NextRequest, NextResponse } from "next/server",;
 import bcrypt from "bcryptjs",;
 import { prisma } from "@/lib/prisma",;
@@ -120,6 +139,10 @@ export async function POST(request: NextRequest) {;
     console.error("Registration error:", error);
     return NextResponse.json(;
       { error: "Internal server error" };
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       { status: 500 }
     );
   }

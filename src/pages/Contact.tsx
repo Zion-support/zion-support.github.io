@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import Button from '../components/Button';
 import Card from '../components/Card';
 
@@ -28,15 +29,30 @@ import Button from '../components/Button';
 import Card from '../components/Card';
 
 import React, { useState } from 'react';
+=======
+import { Header } from '../components/Header';
+import Footer from '../components/Footer';
+import { GradientHeading } from '../components/GradientHeading';
+import { Button } from '../components/ui/button';
+import { Input } from '../components/ui/input';
+import { Textarea } from '../components/ui/textarea';
+import { Card, CardContent } from '../components/ui/card';
+import { useToast } from '../components/ui/use-toast';
+import { Mail, MessageSquare, MapPin, Phone, Send } from 'lucide-react';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
-    message: ''
+    subject: '',
+    message: '',
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
+<<<<<<< HEAD
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
@@ -44,10 +60,13 @@ const Contact: React.FC = () => {
     });
   const [errors, setErrors] = useState<Record<string, string>>({});
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
+<<<<<<< HEAD
       [name]: value
     }));
     // Clear error when user starts typing
@@ -415,127 +434,114 @@ export default Contact;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+=======
+      [name]: value,
+    }));
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will get back to you soon.');
+    setIsSubmitting(true);
+
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      toast({
+        title: 'Message sent successfully!',
+        description: 'We\'ll get back to you within 24 hours.',
+      });
+      
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        subject: '',
+        message: '',
+      });
+    } catch (error) {
+      toast({
+        title: 'Error sending message',
+        description: 'Please try again later.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
+<<<<<<< HEAD
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
+=======
+  const contactInfo = [
+    {
+      icon: <Phone className="h-6 w-6 text-blue-500" />,
+      title: 'Phone',
+      content: '+1 (555) 123-4567',
+      description: 'Mon-Fri 9AM-6PM EST',
+    },
+    {
+      icon: <Mail className="h-6 w-6 text-green-500" />,
+      title: 'Email',
+      content: 'hello@ziontechgroup.com',
+      description: 'We respond within 24 hours',
+    },
+    {
+      icon: <MapPin className="h-6 w-6 text-purple-500" />,
+      title: 'Office',
+      content: '123 Tech Street, San Francisco, CA 94105',
+      description: 'Visit us anytime',
+    },
+    {
+      icon: <MessageSquare className="h-6 w-6 text-orange-500" />,
+      title: 'Live Chat',
+      content: 'Available 24/7',
+      description: 'Get instant support',
+    },
+  ];
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-extrabold mb-6 animate-fade-in">
-            Contact Us
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-slide-up">
-            Ready to transform your business with cutting-edge technology? 
-            Get in touch with our experts today.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <div>
-            <h2 className="text-3xl font-bold mb-6">Send us a Message</h2>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2">
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white"
-                  placeholder="Your full name"
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2">
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white"
-                  placeholder="your.email@example.com"
-                />
-              </div>
-              <div>
-                <label htmlFor="company" className="block text-sm font-medium mb-2">
-                  Company
-                </label>
-                <input
-                  type="text"
-                  id="company"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white"
-                  placeholder="Your company name"
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={5}
-                  className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white"
-                  placeholder="Tell us about your project or requirements..."
-                />
-              </div>
-              <Button type="submit" variant="primary" size="large" className="w-full">
-                Send Message
-              </Button>
-            </form>
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+      <Header onMenuClick={() => {}} />
+      
+      <main className="pt-20">
+        {/* Hero Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto text-center">
+            <GradientHeading text="Get In Touch" />
+            <p className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
+              Ready to transform your business? Let's discuss your project and see how 
+              we can help you achieve your goals.
+            </p>
           </div>
+        </section>
 
-          {/* Contact Information */}
-          <div>
-            <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
-            <div className="space-y-8">
-              <Card
-                title="Office Address"
-                description="364 E Main St STE 1008\nMiddletown, DE 19709\nUnited States"
-              />
-              <Card
-                title="Phone"
-                description="+1-302-464-0950"
-              />
-              <Card
-                title="Email"
-                description="kleber@ziontechgroup.com"
-              />
-              <Card
-                title="Business Hours"
-                description="Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM\nSunday: Closed"
-              />
+        {/* Contact Info */}
+        <section className="py-16 px-4">
+          <div className="container mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {contactInfo.map((info, index) => (
+                <Card key={index} className="p-6 text-center hover:shadow-lg transition-shadow">
+                  <div className="flex justify-center mb-4">
+                    {info.icon}
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2">{info.title}</h3>
+                  <p className="text-gray-900 font-medium mb-1">{info.content}</p>
+                  <p className="text-sm text-gray-600">{info.description}</p>
+                </Card>
+              ))}
             </div>
+          </div>
+        </section>
 
+<<<<<<< HEAD
             <div className="mt-8">
               <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
               <div className="flex space-x-4">
@@ -554,11 +560,160 @@ export default Contact;
                     <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.746-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z"/>
                   </svg>
                 </a>
+=======
+        {/* Contact Form */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto max-w-4xl">
+            <div className="grid lg:grid-cols-2 gap-12">
+              {/* Form */}
+              <Card className="p-8">
+                <h2 className="text-2xl font-bold mb-6">Send us a message</h2>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                        Name *
+                      </label>
+                      <Input
+                        id="name"
+                        name="name"
+                        type="text"
+                        required
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        placeholder="Your full name"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                        Email *
+                      </label>
+                      <Input
+                        id="email"
+                        name="email"
+                        type="email"
+                        required
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        placeholder="your.email@company.com"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                      Company
+                    </label>
+                    <Input
+                      id="company"
+                      name="company"
+                      type="text"
+                      value={formData.company}
+                      onChange={handleInputChange}
+                      placeholder="Your company name"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                      Subject *
+                    </label>
+                    <Input
+                      id="subject"
+                      name="subject"
+                      type="text"
+                      required
+                      value={formData.subject}
+                      onChange={handleInputChange}
+                      placeholder="What's this about?"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                      Message *
+                    </label>
+                    <Textarea
+                      id="message"
+                      name="message"
+                      required
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      placeholder="Tell us about your project..."
+                      rows={6}
+                    />
+                  </div>
+
+                  <Button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full"
+                    size="lg"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="h-4 w-4 mr-2" />
+                        Send Message
+                      </>
+                    )}
+                  </Button>
+                </form>
+              </Card>
+
+              {/* Additional Info */}
+              <div className="space-y-8">
+                <Card className="p-8">
+                  <h3 className="text-xl font-semibold mb-4">Why work with us?</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700">Expert team with 5+ years of experience</span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700">Proven track record of successful projects</span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700">24/7 support and maintenance</span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700">Competitive pricing and flexible terms</span>
+                    </li>
+                  </ul>
+                </Card>
+
+                <Card className="p-8">
+                  <h3 className="text-xl font-semibold mb-4">Response Time</h3>
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-700">Email inquiries</span>
+                      <span className="font-medium text-blue-600">Within 24 hours</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-700">Phone calls</span>
+                      <span className="font-medium text-blue-600">Within 2 hours</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-700">Live chat</span>
+                      <span className="font-medium text-blue-600">Immediate</span>
+                    </div>
+                  </div>
+                </Card>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
+
+      <Footer />
     </div>
   );
 };

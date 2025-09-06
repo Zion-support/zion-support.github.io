@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 
@@ -14,10 +15,17 @@ import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
 import { generateSearchSuggestions } from "@/data/marketplaceData",
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+=======
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {Link} from 'react-router-dom';
 import {Logo} from './Logo';
 import {UserMenu} from './UserMenu';
 import {LanguageSelector} from './LanguageSelector';
+<<<<<<< HEAD
 import {MainNavigation} from '@/layout/MainNavigation';
 import {useAuth} from '@/hooks/useAuth';
 import {useWhitelabel} from '@/context/WhitelabelContext';
@@ -28,6 +36,21 @@ import {useState} from "react";
 export interface HeaderProps {;
   hideLogin?: boolean;
   customLogo?: string;
+=======
+
+
+  // If we have a white-label tenant and no specific customTheme is provided;
+  // use the tenant's primary color;
+  const effectiveTheme = customTheme || (isWhitelabel ? {;
+
+    primaryColor;
+    backgroundColor: '#0f172a', // Default dark background;
+    textColor: '#ffffff', // Default light text;
+  } : undefined);
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react',
 import { Link } from 'react-router-dom',
 import { Logo } from './Logo',
@@ -40,17 +63,24 @@ import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
 import { generateSearchSuggestions } from "@/data/marketplaceData",
 import { useNavigate } from "react-router-dom",
 import { useState } from "react",
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export interface HeaderProps {
   hideLogin?: boolean,
   customLogo?: string,
 
+<<<<<<< HEAD
 export interface HeaderProps {
   hideLogin?: boolean,
   customLogo?: string,
 export interface HeaderProps {
   hideLogin?: boolean,
   customLogo?: string,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   customTheme?: {
 
     primaryColor: string
@@ -59,6 +89,7 @@ export interface HeaderProps {
   }
 }
 
+<<<<<<< HEAD
 export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {;
   const { user } = useAuth();
   const { isWhitelabel, primaryColor } = useWhitelabel();
@@ -94,6 +125,11 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
 
 
   
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const headerStyle = effectiveTheme ? {
     backgroundColor: effectiveTheme.backgroundColor
     color: effectiveTheme.textColor
@@ -140,6 +176,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
         </div>;
         <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">;
 
+<<<<<<< HEAD
   } : {}
   } : {},
 
@@ -164,10 +201,13 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
           <MainNavigation />
         </div>
         <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <EnhancedSearchInput
             value={query}
             onChange={setQuery}
             searchSuggestions={searchSuggestions}
+<<<<<<< HEAD
           />
         </form>
         <div className="flex items-center gap-2">
@@ -181,6 +221,13 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
     </header>
   )
 }
+=======
+
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react',;
 import { Link } from 'react-router-dom',;
 import { Logo } from './Logo',;
@@ -244,18 +291,36 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
             onChange={setQuery}
             searchSuggestions={searchSuggestions}
 
+<<<<<<< HEAD
 
 
           />;
         </form>;
         <div className="flex items-center gap-2">;
           <LanguageSelector />;
+=======
+          />;
+        </form>;
+
+        <div className="flex items-center gap-2">;
+          <LanguageSelector />;
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {!hideLogin && <UserMenu />}
         </div>;
       </div>;
     </header>;
   );
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {MainNavigation} from '@/layout / MainNavigation';
 import {use_auth} from '@/hooks / use_auth';
 import {use_whitelabel} from '@/context / WhitelabelContext';
@@ -352,6 +417,7 @@ export interface HeaderProps {;
     textColor:string;
   },;
 }
+<<<<<<< HEAD
 ;
 export function Header({ hideLogin = false, customLogo, customTheme } HeaderProps) {;
   const { user } = useAuth(),;
@@ -447,3 +513,6 @@ return (<header <div className="ml-6 flex-1" > <MainNavigation /> </div> <Enhanc
 }</div> </div> </header>) 
 }
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

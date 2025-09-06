@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from "react";
 import { Button } from "@/components/ui/button";
@@ -17,6 +21,7 @@ import { Badge  } from '@/components / ui / badge';
 import { ArrowRight  } from './lucide-react';
 import {
 
+<<<<<<< HEAD
 
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -32,10 +37,14 @@ import {
   CardFooter
   CardHeader
   CardTitle
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Card,
   CardContent,
   CardFooter,
   CardHeader,
+<<<<<<< HEAD
   CardTitle,
 } from '@/components / ui / card';
 interface GeneratedContent {
@@ -43,6 +52,9 @@ interface GeneratedContent {
   tags: string[];
   suggested_price: {
     min: number;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   key_points: string[];
 }
 interface GeneratedContentDisplayProps {
@@ -51,8 +63,11 @@ interface GeneratedContentDisplayProps {;
 
 } from "@/components/ui/card";
 
+<<<<<<< HEAD
   CardTitle,;
 } from "@/components/ui/card";
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -61,10 +76,17 @@ import { ArrowRight } from "lucide-react",
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface GeneratedContent {
   description: string,
   tags: string[],
   suggestedPrice: {
+<<<<<<< HEAD
     min: number;
 
     max: number;
@@ -73,6 +95,9 @@ interface GeneratedContent {
 
 }
 interface GeneratedContentDisplayProps {
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     min: number,
     max: number
   },
@@ -93,6 +118,7 @@ interface GeneratedContent {;
 }
 ;
 interface GeneratedContentDisplayProps {;
+<<<<<<< HEAD
   content: GeneratedContent;
   onApply: () => void
 }
@@ -102,6 +128,18 @@ export function GeneratedContentDisplay({
 }: GeneratedContentDisplayProps) {
 
 export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  content: GeneratedContent;
+
+
+
+export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
@@ -109,6 +147,15 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
       </CardHeader>
       <CardContent className="space-y-4">
         <div>
+<<<<<<< HEAD
+=======
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2">
+            Description
+          </h3>
+          <p className="text-white">{content.description}</p>
+        </div>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         
 
@@ -217,6 +264,7 @@ export function GeneratedContentDisplay({ content, onApply } GeneratedContentDis
         </div>;
       </CardContent>;
       <CardFooter>;
+<<<<<<< HEAD
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Description</h3>
           <p className="text-white">{content.description}</p>
         </div>
@@ -255,12 +303,16 @@ export function GeneratedContentDisplay({ content, onApply } GeneratedContentDis
       <CardFooter>
         <Button
           onClick={onApply}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white"
         >
           Apply to My Listing
           <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
       </CardFooter>
+<<<<<<< HEAD
     </Card>
   );
 }
@@ -275,6 +327,9 @@ export function GeneratedContentDisplay({ content, onApply } GeneratedContentDis
   );
 }
 ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </Card>
 
 
@@ -289,6 +344,7 @@ export function GeneratedContentDisplay({ content, onApply } GeneratedContentDis
           <ArrowRight className="ml-2 h-4 w-4" />;
         </Button>;
       </CardFooter>;
+<<<<<<< HEAD
     </Card>;
   );}
  interface GeneratedContent {
@@ -311,3 +367,8 @@ onApply: () => void
 }</div> </div> <div> </p> </div> <div>) ) 
 }</ul> </div> </CardContent> <CardFooter> <Button ml-2 h-4 w-4" /> </Button> </CardFooter> </Card>) 
 }
+=======
+    </Card>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

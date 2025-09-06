@@ -1,20 +1,36 @@
 
+<<<<<<< HEAD
 
 export const useRecordActivity = () => {;
   const { user } = useAuth();
 
+=======
+export const useRecordActivity = () => {;
+  const { user } = useAuth();
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useAuth } from '@/hooks/useAuth',
 import { supabase } from '@/integrations/supabase/client',
 import { MilestoneActivity } from './types',
 export const useRecordActivity = () => {
   const { user } = useAuth(),
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   
   const recordMilestoneActivity = async (
     milestoneId: string,
     action: string, 
     previousStatus: string | null, 
     newStatus: string,
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     comment?: string
   ) => {
     if (!user) return null
@@ -23,17 +39,22 @@ export const useRecordActivity = () => {
         .from('milestone_activities')
         .insert({
 
+<<<<<<< HEAD
           milestone_id: milestoneId;
           user_id: user.id;
           action;
           previous_status: previousStatus;
           new_status: newStatus
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           milestone_id: milestoneId,
           user_id: user.id,
           action,
           previous_status: previousStatus,
           new_status: newStatus,
 
+<<<<<<< HEAD
           comment})
         .select(`
           *,
@@ -41,10 +62,30 @@ export const useRecordActivity = () => {
         `)
         .single();
       if (error) throw error;
+=======
+
+          comment})
+        .select(`
+          *;
+          created_by_profile:profiles!user_id(display_name, avatar_url)
+        `)
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         .single(),
       
       if (error) throw error,
       
+<<<<<<< HEAD
+=======
+
+
+      return data
+    } catch (err: any) {
+      console && console.error("Error recording activity:", err);
+      return null
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {use_auth} from '@/hooks / use_auth';
 import {supabase} from '@/integrations / supabase / client';
 import {MilestoneActivity} from './types';
@@ -95,15 +136,23 @@ if (throw error) {
 ;
 
 
+<<<<<<< HEAD
       return data
     } catch (err: any) {
       console.error("Error recording activity:", err),
       return null
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   };
   
   return {
     recordMilestoneActivity
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
 import { MilestoneActivity } from './types',;
@@ -143,10 +192,15 @@ export const useRecordActivity = () => {;
   return {;
     recordMilestoneActivity;
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 
 };
 
+<<<<<<< HEAD
     }
   };
   return {;
@@ -158,3 +212,6 @@ export const useRecordActivity = () => {;
 }
 
 };
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

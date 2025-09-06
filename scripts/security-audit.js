@@ -1,9 +1,14 @@
 #!/usr/bin/env node
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (auditData && auditData.vulnerabilities && Object && Object.keys(auditData && auditData.vulnerabilities).length > 0) {
     console && console.log('⚠️  Security vulnerabilities found: '),
     Object && Object.entries(auditData && auditData.vulnerabilities).forEach(([pkg, vuln]) => {
       console && console.log(`   - ${pkg}: ${vuln && vuln.severity} - ${vuln && vuln.title}`);
 
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
@@ -20,12 +25,21 @@ try {
     console.log('⚠️  Security vulnerabilities found:');
     Object.entries(auditData.vulnerabilities).forEach(([pkg, vuln]) => {
       console.log(`   - ${pkg}: ${vuln.severity} - ${vuln.title}`);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     });
   } else {
     console.log('✅ No security vulnerabilities found in dependencies');
   }
 } catch (error) {
+<<<<<<< HEAD
   console.log('❌ Failed to run npm audit:', error.message);
+=======
+
+  console && console.log('❌ Failed to run npm audit:', error && error.message);
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 // Check for sensitive data in files
 console.log('\n🔍 Scanning for sensitive data...');
@@ -66,6 +80,7 @@ const scanDirectory = (dir, results = []) => {
 };
 
 const sensitiveResults = scanDirectory('.');
+<<<<<<< HEAD
 if (sensitiveResults.length > 0) {
   console.log('⚠️  Potential sensitive data found:');
   sensitiveResults.forEach(result => {
@@ -76,6 +91,21 @@ if (sensitiveResults.length > 0) {
   });
 } else {
   console.log('✅ No sensitive data patterns found');
+=======
+
+if (sensitiveResults && sensitiveResults.length > 0) {
+  console && console.log('⚠️  Potential sensitive data found: '),
+  sensitiveResults && sensitiveResults.forEach(result => {
+    console && console.log(`   - ${result && result.file}`);
+    result && result.matches.forEach(match => {
+      console && console.log(`     ${match && match.substring(0, 50)}...`);
+    });
+  });
+} else {
+  console && console.log('✅ No sensitive data patterns found');
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 // Check for outdated dependencies
 console.log('\n📅 Checking for outdated dependencies...');
@@ -83,16 +113,32 @@ try {
   const outdatedResult = execSync('npm outdated --json', { encoding: 'utf8' });
   const outdatedData = JSON.parse(outdatedResult);
   
+<<<<<<< HEAD
   if (Object.keys(outdatedData).length > 0) {
     console.log('⚠️  Outdated dependencies found:');
     Object.entries(outdatedData).forEach(([pkg, info]) => {
       console.log(`   - ${pkg}: ${info.current} → ${info.latest}`);
+=======
+
+  if (Object && Object.keys(outdatedData).length > 0) {
+    console && console.log('⚠️  Outdated dependencies found: '),
+    Object && Object.entries(outdatedData).forEach(([pkg, info]) => {
+      console && console.log(`   - ${pkg}: ${info && info.current} → ${info && info.latest}`);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     });
   } else {
     console.log('✅ All dependencies are up to date');
   }
 } catch (error) {
+<<<<<<< HEAD
   console.log('✅ All dependencies are up to date');
+=======
+
+  console && console.log('✅ All dependencies are up to date');
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 // Generate security report
 const securityReport = {
@@ -107,6 +153,7 @@ const securityReport = {
   ]
 };
 
+<<<<<<< HEAD
 fs.writeFileSync('security-audit-report.json', JSON.stringify(securityReport, null, 2));
 console.log('\n📊 Security audit report saved to security-audit-report.json');
 console.log('🔒 Security audit completed!');
@@ -121,11 +168,26 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 console.log('🔒 Security audit completed!');
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+console.log('🔒 Security audit completed!');
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const fs = require('fs');
 const path = require('path');
 
 console.log('🔒 Running security audit...');
 console.log('✅ Security audit completed');
+<<<<<<< HEAD
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
@@ -172,6 +234,11 @@ function log(msg, level = "INFO")
     log(`Sensitive files "present": ${found.join(", ")}`, "WARN"
     log("No sensitive files found in repo root")
   log(" Security audit completed")
+=======
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -336,12 +403,25 @@ class SecurityAuditor {
 // Run the security auditor
 const auditor = new SecurityAuditor();
 auditor.run().catch(console.error);
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const fs = require('fs');
 const path = require('path');
 
 console.log('🔒 Running security audit...');
 console.log('✅ Security audit completed');
 
+<<<<<<< HEAD
 origin/main
 origin/automation-improvements-final
+=======
+=======
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

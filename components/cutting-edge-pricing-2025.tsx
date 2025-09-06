@@ -1,8 +1,36 @@
 
+<<<<<<< HEAD
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+
+import Head from 'next/head';
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Head from 'next / head';
 import { motion } from 'framer-motion';
 
 
+<<<<<<< HEAD
 } from 'lucide-react';
 import {;
   Check,;
@@ -26,6 +54,10 @@ import {
 import React, { useState } from 'react',
 import React, { useState } from 'react';
 import Head from 'next/head';
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+} from 'lucide-react';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import { motion } from 'framer-motion';
 import {
@@ -52,6 +84,7 @@ import { cuttingEdgeAIServices2025  } from '../data/2025-cutting-edge-ai-service
 import { cuttingEdgeQuantumServices2025  } from '../data/2025-cutting-edge-quantum-services';
 import { cuttingEdgeEnterpriseITServices2025  } from '../data/2025-cutting-edge-enterprise-it';
 import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
+<<<<<<< HEAD
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -175,6 +208,9 @@ const serviceCategories = [
     description: 'Innovative business solutions for modern enterprises'
   }
 ];
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 const stats = [
   {
@@ -204,6 +240,15 @@ const stats = [
   { number: '$500B+', label: 'Market Coverage', icon: TrendingUp, color: 'text-purple-400' }
   { number: '99.9%', label: 'Success Rate', icon: Award, color: 'text-green-400' }
   { number: '24/7', label: 'Expert Support', icon: Users, color: 'text-pink-400' }
+<<<<<<< HEAD
+=======
+
+];
+
+
+export default function CuttingEdgePricing2025() {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 export default function CuttingEdgePricing2025() {;
@@ -212,11 +257,14 @@ export default function CuttingEdgePricing2025() {;
   const allServices = [
 
 
+<<<<<<< HEAD
 export default function CuttingEdgePricing2025() {
 
 export default function CuttingEdgePricing2025() {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const allServices = [
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
@@ -350,10 +398,17 @@ export default function CuttingEdgePricing2025() {;
     selectedCategory === 'all';
       ? allServices;
       : allServices && allServices.filter(service => service && service.category === selectedCategory);    ...cuttingEdgeAIServices2025;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     ...cuttingEdgeQuantumServices2025;
     ...cuttingEdgeEnterpriseITServices2025;
     ...cuttingEdgeMicroSaasServices2025;
   ];
+<<<<<<< HEAD
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -446,6 +501,8 @@ export default function CuttingEdgePricing2025() {;
                   Pricing 2025
                 </span>
               </motion.h1>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   const filteredServices = selectedCategory === 'all' ;
@@ -460,12 +517,24 @@ export default function CuttingEdgePricing2025() {;
       },;
     },  };        staggerChildren: 0 && 0.1;
 
+<<<<<<< HEAD
+=======
+      }
+    }
+  }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         duration: 0.5,
       },
     },  };
 
   };
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   return (
 
@@ -475,7 +544,13 @@ export default function CuttingEdgePricing2025() {;
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >                <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">
+<<<<<<< HEAD
                 <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">
+=======
+=======
+                <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   Pricing 2025
                 </span>
               </motion.h1>
@@ -486,6 +561,7 @@ export default function CuttingEdgePricing2025() {;
 
                 className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
 
+<<<<<<< HEAD
     ...cuttingEdgeAIServices2025;
   Check,
   Zap,
@@ -761,6 +837,14 @@ function CuttingEdgePricing2025() {
               >
                 Cutting-Edge
                 Experience revolutionary technology at competitive prices. Our cutting-edge services are designed to give you 
+=======
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >
+                Experience revolutionary technology at competitive prices. Our cutting-edge services are designed to give you 
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 a competitive advantage while maintaining affordability and value.
               </motion.p>
 {/* Hero Stats */}
@@ -824,9 +908,12 @@ function CuttingEdgePricing2025() {
               {/* Hero Stats */}
               <motion&& motion.div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12"
+<<<<<<< HEAD
 
                 initial={{ opacity: 0, y: 20 }}
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                 initial={{ opacity: 0, y: 20 }}
 
@@ -834,6 +921,10 @@ function CuttingEdgePricing2025() {
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
                 {stats.map((stat, index) => (
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <div key={index} className='text-center'>
                     <div className='flex justify-center mb-2'>
                       <div className='p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30'>
@@ -847,6 +938,7 @@ function CuttingEdgePricing2025() {
                     <div className='text-sm text-white/70'>{stat.label}</div>                  </div>
 
                   </div>
+<<<<<<< HEAD
 
 
 
@@ -863,6 +955,26 @@ function CuttingEdgePricing2025() {
 
 
 
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                ))}
+
+              </motion && motion.div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Pricing Tiers Section */}
         <section className='py-20 bg-gradient-to-b from-black via-purple-900/10 to-black'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">;
@@ -883,16 +995,27 @@ function CuttingEdgePricing2025() {
         <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
               <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
                 Choose the perfect plan for your business needs. All plans include our cutting-edge technology 
                 and world-class support to ensure your success.
@@ -901,6 +1024,30 @@ function CuttingEdgePricing2025() {
 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingTiers.map((tier, index) => (
                 <motion.div
+=======
+
+
+                </span>{' '}
+                Pricing Plans;
+              </h2>              className="text-center mb-16";
+            >;
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
+                <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">;
+                </span>{' '}
+
+              <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+                Choose the perfect plan for your business needs. All plans include our cutting-edge technology 
+
+                and world-class support to ensure your success.
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+              {pricingTiers.map((tier, index) => (
+
+                <motion.div
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 Pricing Plans;
               </h2>;
               <p className='text-xl text-white/80 max-w-3xl mx-auto leading-relaxed'>;
@@ -916,6 +1063,7 @@ function CuttingEdgePricing2025() {
             </motion && motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">;
                 <motion&& motion.div
+<<<<<<< HEAD
               className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -942,12 +1090,18 @@ function CuttingEdgePricing2025() {
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <motion.div
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
                   className={`relative group ${
+<<<<<<< HEAD
         duration: 0.5,
       },
     },  }        duration: 0.5;
@@ -1203,12 +1357,17 @@ function CuttingEdgePricing2025() {
                       ))}
                     </ul>
 
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <a
                       href={tier && tier.ctaLink}
                       className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
                         tier && tier.popular
                           ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg hover:shadow-cyan-500/25'
                           : 'border-2 border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10'
+<<<<<<< HEAD
                         </span>;
                       </div>;
                     </div>;
@@ -1241,6 +1400,8 @@ function CuttingEdgePricing2025() {
                       }`}
                     >
                       {tier.cta}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
                     </a>
@@ -1256,6 +1417,19 @@ function CuttingEdgePricing2025() {
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        {/* Service Categories Section */}
+        <section className='py-20 bg-gradient-to-b from-black via-purple-900/10 to-black'>;
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">;
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+            <motion&& motion.div
+
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <ArrowRight className='ml-2 w-4 h-4' />                    </a>                      <ArrowRight className="ml-2 w-4 h-4" />
                       <ArrowRight className='ml-2 w-4 h-4' />                    </a>
 
@@ -1271,21 +1445,51 @@ function CuttingEdgePricing2025() {
         <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
+=======
+
+
+                </span>{' '}
+
+                Categories;
+              </h2>;
+              <p className='text-xl text-white/80 max-w-3xl mx-auto leading-relaxed'>;
+                Explore our comprehensive range of cutting-edge services across;
+                multiple technology domains. Each category offers specialized;
+                solutions for different business needs.              </p>;
+            </motion && motion.div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Category Filter */}
             <div className='flex flex-wrap justify-center gap-4 mb-12'>              <buttonclassName="text-center mb-16">;
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">;
                 </span>{' '}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 Categories;
               </h2>;
               <p className='text-xl text-white/80 max-w-3xl mx-auto leading-relaxed'>;
@@ -1296,13 +1500,23 @@ function CuttingEdgePricing2025() {
                 Each category offers specialized solutions for different business needs.;
               </p>;
             </motion && motion.div>;
+<<<<<<< HEAD
             {/* Category Filter */}
             <div className='flex flex-wrap justify-center gap-4 mb-12'>            <div className="flex flex-wrap justify-center gap-4 mb-12">;
+=======
+
+
+            {/* Category Filter */}
+            <div className='flex flex-wrap justify-center gap-4 mb-12'>            <div className="flex flex-wrap justify-center gap-4 mb-12">;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
                 Explore our comprehensive range of cutting-edge services across multiple technology domains. 
                 Each category offers specialized solutions for different business needs.
               </p>
             </motion.div>
+<<<<<<< HEAD
             {/* Category Filter */}
             <div className='flex flex-wrap justify-center gap-4 mb-12'>            <div className="flex flex-wrap justify-center gap-4 mb-12">
               <button
@@ -1339,16 +1553,33 @@ function CuttingEdgePricing2025() {
                 Each category offers specialized solutions for different business needs.
               </p>
             </motion.div>
+=======
+
+            {/* Category Filter */}
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+              <button
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Category Filter */}
             <div className='flex flex-wrap justify-center gap-4 mb-12'>            <div className="flex flex-wrap justify-center gap-4 mb-12">
               <button
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 onClick={() => setSelectedCategory('all')}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
                   selectedCategory === 'all';
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white';
                     : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10';
                 }`}
+<<<<<<< HEAD
 
 
                 <button
@@ -1364,12 +1595,26 @@ function CuttingEdgePricing2025() {
                 <button
 
 
+=======
+
+
+                <button
+
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   key={category.name}
                   onClick={() => setSelectedCategory(category.name)}
                   className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                     selectedCategory === category.name
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
                       : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10'
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   }`}
                 >;
                   {category && category.name} ({category && category.services.length});
@@ -1378,10 +1623,23 @@ function CuttingEdgePricing2025() {
 
             </div>;
             </div>
+<<<<<<< HEAD
 
 
 
 
+=======
+<<<<<<< HEAD
+=======
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Services Grid */}
             <motion&& motion.div
               variants={containerVariants}
@@ -1396,6 +1654,10 @@ function CuttingEdgePricing2025() {
                 <motion&& motion.div
                   key={service && service.id}
                   variants={itemVariants}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <ArrowRight className='ml - 2 w - 4 h - 4' />                    </a>                      <ArrowRight className="ml - 2 w - 4 h - 4" />;
                     </a>;
                   </div>;
@@ -1485,10 +1747,18 @@ function CuttingEdgePricing2025() {
                     <div className='flex items - start justify - between mb - 4'>;
                       <div className='flex - 1'>;
                         <h3 className='text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors duration - 300'>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           {service.name}
                         </h3>;
                         <p className='text - white / 70 text - sm leading - relaxed mb - 4'>;
                           {service.description}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>
             {/* Services Grid */}
             <motion.div
@@ -1504,6 +1774,10 @@ function CuttingEdgePricing2025() {
                   variants={itemVariants}
                   className="group relative overflow-hidden rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-black/80 via-purple-900/10 to-black/80 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20"
                 >
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <div className="p-6">
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex-1">
@@ -1521,6 +1795,10 @@ function CuttingEdgePricing2025() {
                         </h3>;
                         <p className="text - white / 70 text - sm leading - relaxed mb - 4">;
                           {service.description}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   className='group relative overflow-hidden rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-black/80 via-purple-900/10 to-black/80 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20'>;
                   <div className='p-6'>;
                     <div className='flex items-start justify-between mb-4'>;
@@ -1551,18 +1829,32 @@ function CuttingEdgePricing2025() {
                         </div>;
                       </div>;
                     </div>;
+<<<<<<< HEAD
                     {/* Tags */}
                     <div className='flex flex-wrap gap-2 mb-4'>
                       {service.tags.slice(0, 3).map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                     <div className="flex flex-wrap gap-2 mb-4">
+<<<<<<< HEAD
                           className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >                    <div className="flex flex-wrap gap-2 mb-4">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       {service.tags.slice(0, 3).map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
                           className="px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                        >
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                           className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >
 
@@ -1583,6 +1875,11 @@ function CuttingEdgePricing2025() {
                       <span>Market: {service.marketSize}</span>
                       <span className='text-cyan-400'>{service.category}</span>
                     </div>
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >
 
                         >
@@ -1625,14 +1922,23 @@ function CuttingEdgePricing2025() {
                         ${service.pricing.starter.price}
                         <span className='text - sm font - normal text - white / 60'>;
                           /{service.pricing.starter.period}
+<<<<<<< HEAD
                     </div>
                     {/* Market Info */}
                     <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
+=======
+
+                    </div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                     {/* Market Info */}
                     <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
 
                       <span>Market: {service.marketSize}</span>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <span className="text-cyan-400">{service.category}</span>
                     </div>
                         </span>                      </div>;
@@ -1648,6 +1954,10 @@ function CuttingEdgePricing2025() {
                       </h4>;
                       <div className="text - 2xl font - bold text - white">;
                         ${service.pricing.starter.price}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     </div>;
                     {/* Market Info */}
                     <div className='flex items-center justify-between text-sm text-white/60 mb-4'>;
@@ -1666,6 +1976,7 @@ function CuttingEdgePricing2025() {
                         </span>                      </div>;
                     </div>;
                     {/* CTA */}
+<<<<<<< HEAD
                   {/* Hover Effect Overlay */}
                   <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />                </motion.div>                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 </motion.div>
@@ -1698,11 +2009,37 @@ function CuttingEdgePricing2025() {
                       </a>;
                     </div>;
                   </div>;
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   {/* Hover Effect Overlay */}
                   <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />                </motion.div>                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 </motion.div>
 
               ))}
+<<<<<<< HEAD
+=======
+
+            </motion && motion.div>;
+          </div>;
+        </section>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        {/* Contact CTA Section */}
+        <section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>;
+          <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">;
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
+            <motion&& motion.div
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </motion.div>
           </div>
         </section>
@@ -1718,9 +2055,12 @@ function CuttingEdgePricing2025() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
+<<<<<<< HEAD
 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
@@ -1732,6 +2072,10 @@ function CuttingEdgePricing2025() {
                 Contact us today for a personalized consultation.;
               </p>;
               <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <a
                   href='/contact'
                   className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25'>;
@@ -1739,8 +2083,15 @@ function CuttingEdgePricing2025() {
                   <ArrowRight className='ml-2 w-5 h-5' />;
                 </a>;
                 <a
+<<<<<<< HEAD
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Get Started?
+=======
+
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Get Started?
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </h2>
               <p className="text-xl text-white/80 mb-8 leading-relaxed">
                 Our team of experts is ready to help you choose the perfect plan and get you started with our
@@ -1756,6 +2107,12 @@ function CuttingEdgePricing2025() {
                 cutting-edge technology solutions. Contact us today for a personalized consultation.;
               </p>;
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <a
                   href="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">;
@@ -1763,6 +2120,7 @@ function CuttingEdgePricing2025() {
                   <ArrowRight className="ml-2 w-5 h-5" />;
                 </a>;
                 <a
+<<<<<<< HEAD
                   href={`tel:${contactInfo && contactInfo.mobile}`}
                   className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105">;
                   <Phone className="mr-2 w-5 h-5" />;
@@ -1770,11 +2128,21 @@ function CuttingEdgePricing2025() {
                 </a>;
               </div>;
               {/* Contact Info */}
+=======
+
+
+              {/* Contact Info */}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                 <div className="flex flex-col items-center">
                   <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center mb-3">
                     <Phone className="w-6 h-6 text-cyan-400" />
                   </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <div className="text-white font-semibold">Phone</div>
                   <a href={`tel:${contactInfo.mobile}`} className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
                     {contactInfo.mobile}
@@ -1802,7 +2170,53 @@ function CuttingEdgePricing2025() {
         </section>
       </Layout>
     </>
+<<<<<<< HEAD
                     href={`mailto:${contactInfo && contactInfo.email}`}
+=======
+
+                    href={`mailto:${contactInfo && contactInfo.email}`}
+                    className='text-cyan-400 hover:text-cyan-300 transition-colors duration-300'>;
+                    {contactInfo && contactInfo.email}
+                  </a>;
+                </div>;
+                <div className='flex flex-col items-center'>;
+                  <div className='w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center mb-3'>;
+                    <MapPin className='w-6 h-6 text-cyan-400' />;
+                  </div>;
+                  <div className='text-white font-semibold'>Address</div>;
+                  <div className='text-white/70 text-sm'>;
+                    {contactInfo && contactInfo.address}
+                  </div>                </div>                  </div>;
+                  <div className="text-white font-semibold">Phone</div>;
+                  <a href={`tel:${contactInfo && contactInfo.mobile}`} className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">;
+                    {contactInfo && contactInfo.mobile}
+                  </a>;
+                </div>;
+                <div className="flex flex-col items-center">;
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center mb-3">;
+                    <Mail className="w-6 h-6 text-cyan-400" />;
+                  </div>;
+                  <div className="text-white font-semibold">Email</div>;
+                  <a href={`mailto:${contactInfo && contactInfo.email}`} className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">;
+                    {contactInfo && contactInfo.email}
+                  </a>;
+                </div>;
+                <div className="flex flex-col items-center">;
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center mb-3">;
+                    <MapPin className="w-6 h-6 text-cyan-400" />;
+                  </div>;
+                  <div className="text-white font-semibold">Address</div>;
+                  <div className="text-white/70 text-sm">{contactInfo && contactInfo.address}</div>;
+                </div>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+      </Layout>;
+    </>;
+  );
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   );
 
@@ -1964,9 +2378,13 @@ function CuttingEdgePricing2025() {
       </Layout>;
     </>);
 }
+<<<<<<< HEAD
 );
   );
 }
 }
   );
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

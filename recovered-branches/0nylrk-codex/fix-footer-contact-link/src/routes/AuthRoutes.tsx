@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {Fragment} from "react";
 import {Route, Routes} from "react-router-dom";
 import Login from "@/pages/Login";
@@ -73,6 +74,8 @@ import { ProtectedRoute } from "@/components/ProtectedRoute",;
 import Onboarding from "@/pages/Onboarding",;
 import TalentOnboarding from "@/pages/TalentOnboarding",;
 import ServiceOnboarding from "@/pages/ServiceOnboarding",;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -82,6 +85,7 @@ const AuthRoutes = () => {;
     <Routes>;
       {/* Auth Routes */}
 
+<<<<<<< HEAD
 const AuthRoutes = () => {;
   return (
 
@@ -104,10 +108,13 @@ const AuthRoutes = () => {;
   return (;
     <Routes>;
       {/* Auth Routes */}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <Route path="/login" element={<Login />} />;
       <Route path="/signup" element={<Signup />} />;
       <Route path="/forgot-password" element={<ForgotPassword />} />;
       <Route path="/update-password" element={<UpdatePassword />} />;
+<<<<<<< HEAD
       ;
       {/* Onboarding Routes */}
       <Route ;
@@ -117,34 +124,57 @@ const AuthRoutes = () => {;
       <Route;
         path="/onboarding";
         element={;
+=======
+
+      {/* Onboarding Routes */}
+      <Route
+        path="/onboarding" 
+        element={
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <ProtectedRoute>;
             <Onboarding />;
           </ProtectedRoute>;
         } ;
       />;
+<<<<<<< HEAD
       <Route ;
         path="/talent-onboarding" ;
         element={;
       <Route;
         path="/talent-onboarding";
         element={;
+=======
+      <Route
+        path="/talent-onboarding" 
+        element={
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <ProtectedRoute>;
             <TalentOnboarding />;
           </ProtectedRoute>;
         } ;
       />;
+<<<<<<< HEAD
       <Route ;
         path="/service-onboarding" ;
         element={;
       <Route;
         path="/service-onboarding";
         element={;
+=======
+      <Route
+        path="/service-onboarding" 
+        element={
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <ProtectedRoute>;
             <ServiceOnboarding />;
           </ProtectedRoute>;
         } ;
       />;
     </Routes>;
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 };
 
 },
@@ -199,6 +229,7 @@ const AuthRoutes = () =>: any {
 ;
 export default AuthRoutes;
 ;
+<<<<<<< HEAD
   ),;
 },;
 ;
@@ -223,3 +254,6 @@ export default AuthRoutes;
   );
 },;
 export default AuthRoutes;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

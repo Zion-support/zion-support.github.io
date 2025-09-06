@@ -1,4 +1,5 @@
 import { Star } from 'lucide-react'
+<<<<<<< HEAD
 import React from 'react'; import { Star } from 'lucide-react'
 import React from "react"
 
@@ -12,14 +13,26 @@ import React from "react"
 import React from "react";
 import React from "react",
 import { Star } from 'lucide-react'
+=======
+
+import { Star } from 'lucide-react';
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
   const stats = [
+<<<<<<< HEAD
     { value: '4.8', label: 'App Store Rating' }
     { value: '50K+', label: 'Downloads' }
     { value: '96%', label: 'User Satisfaction' }
     { value: '12M+', label: 'Matches Made' }
+=======
+
+import { Star } from 'lucide-react';
+import { Star } from 'lucide-react';
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Star } from 'lucide-react';
 export const CommunityTrust: React.FC = () => {;
   // Stats display with social proof;
@@ -93,7 +106,10 @@ export const CommunityTrust: React.FC = () => {
     { value: "12M+", label: "Matches Made" }
   ],
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -108,6 +124,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             Join thousands of professionals who are already using the Zion mobile app to connect, hire, and work
           </p>
         </div>
+<<<<<<< HEAD
         {/* Stats Grid */}
         <div className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16'>
           {stats.map((stat, index) => (
@@ -130,6 +147,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                 className='w-6 h-6 text-zion-cyan'
                 fill='currentColor'
               />            ))}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>;
           <blockquote className='text-center text-lg text-white italic mb-4'>;
             "The Zion app has completely changed how I find tech talent. The AI;
@@ -162,6 +182,10 @@ export const CommunityTrust: React.FC = () => {;
     { value: "50K+", label: "Downloads" },;
     { value: "96%", label: "User Satisfaction" },;
     { value: "12M+", label: "Matches Made" }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   ];
   return (;
     <section className="py-16 bg-zion-blue">;
@@ -183,13 +207,21 @@ export const CommunityTrust: React.FC = () => {;
               <div className="text-zion-slate-light">{stat.label}</div>;
             </div>;
           ))}
+<<<<<<< HEAD
         </div>;
+=======
+
+        </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Rating display */}
         <div className="max-w-3xl mx-auto bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6">
           <div className="flex justify-center mb-4">
             {[1, 2, 3, 4, 5].map((star) => (
               <Star key={star} className="w-6 h-6 text-zion-cyan" fill="currentColor" />
             ))}
+<<<<<<< HEAD
           </div>
           <blockquote className="text-center text-lg text-white italic mb-4">
             "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere."
@@ -231,6 +263,10 @@ export const CommunityTrust: React.FC = () => {;
             {[1, 2, 3, 4, 5].map((star) => (
               <Star key={star} className="w-6 h-6 text-zion-cyan" fill="currentColor" />
             ))}
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>
           <blockquote className="text-center text-lg text-white italic mb-4">
             "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere."
@@ -281,6 +317,7 @@ export const CommunityTrust: React.FC = () => {;
 '"  )
 }
 
+<<<<<<< HEAD
   )
 },
 }</div>) ) 
@@ -288,6 +325,8 @@ export const CommunityTrust: React.FC = () => {;
 };
 '"  );
 };
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           </div>;
           <blockquote className="text-center text-lg text-white italic mb-4">;
@@ -306,12 +345,15 @@ export const CommunityTrust: React.FC = () => {;
   )
 },
 
+<<<<<<< HEAD
   )
 },
   )
 },
   )
 },
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }</div>) ) 
 }</div> <blockquote className="text-center text-lg text-white italic mb-4" > "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere." </blockquote> <div className="text-center" > <div className="font-semibold text-zion-cyan" >Sarah Johnson</div> <div className="text-sm text-zion-slate-light" >CTO at TechFlow</div> </div> </div> </div> </section>) ;
 };
@@ -376,4 +418,8 @@ export const CommunityTrust: React.FC = () => {;
 }</div> <blockquote className="text - center text - lg text - white italic mb - 4" > "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere." </blockquote> <div className="text - center" > <div className="font - semibold text - zion - cyan" >Sarah Johnson</div> <div className="text - sm text - zion - slate - light" >CTO at TechFlow</div> </div> </div> </div> </section>);
 }
 '"  );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,4 +9,8 @@ const MobileLaunchPage = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default MobileLaunchPage;
+=======
+export default MobileLaunchPage;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

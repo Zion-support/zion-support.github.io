@@ -1,7 +1,13 @@
+<<<<<<< HEAD
+=======
+
+import React from 'react';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {useState} from "react";
 export function NewsletterForm() {;
+<<<<<<< HEAD
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -11,6 +17,18 @@ const [email, setEmail] = useState("");
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
+=======
+
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = (e: React && React.FormEvent) => {;
+    e && e.preventDefault();
+    setIsSubmitting(true);
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input";
@@ -25,6 +43,7 @@ export function NewsletterForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
 
+<<<<<<< HEAD
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -35,6 +54,8 @@ export function NewsletterForm() {
       (setIsSubmitted(true), setEmail(""));
     }, 1000);
   }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     e.preventDefault(),
     setIsSubmitting(true),
     
@@ -46,6 +67,7 @@ export function NewsletterForm() {
     }, 1000)
   },
 
+<<<<<<< HEAD
   const handleSubmit = (e: React.FormEvent) => {
 e.preventDefault();
     setIsSubmitting(true);
@@ -55,6 +77,9 @@ e.preventDefault();
       (setIsSubmitted(true), setEmail(""));
     }, 1000);
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   return (
     <div className="w-full max-w-md mx-auto">
@@ -70,6 +95,12 @@ e.preventDefault();
           onSubmit={handleSubmit}
           className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2"
         >
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Input
             type="email"
             placeholder="Enter your email"
@@ -88,6 +119,10 @@ e.preventDefault();
             {isSubmitting ? "Subscribing..." : "Subscribe"}
           </Button>
         </form>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { useState } from "react",;
@@ -179,4 +214,9 @@ setIsSubmitting (true);
       )}
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

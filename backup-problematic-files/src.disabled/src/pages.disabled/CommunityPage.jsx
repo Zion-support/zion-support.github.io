@@ -27,4 +27,8 @@ const CommunityPage = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default CommunityPage;
+=======
+export default CommunityPage;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

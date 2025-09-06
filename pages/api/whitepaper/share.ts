@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // In-memory store for demo purposes. Replace with persistent storage in production.
 const store: Record<string, { markdown: string, createdAt: number, public: boolean }> = {};
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -6,15 +7,25 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
   store[id] = { markdown, createdAt: Date.now(), public: !!publicPreview };
   const url = `${process.env.NEXT_PUBLIC_BASE_URL || ''}/whitepaper/preview/${id}`;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   res.status(200).json({ id, url })
 }
 export function getShared(id: string) {
   return store[id]
+<<<<<<< HEAD
 }
 
 }
+=======
+
+=======
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { randomUUID } from 'crypto',
 // In - memory store for demo purposes. Replace with persistent storage in production.;
@@ -42,6 +53,7 @@ function get_shared() {
   return store[id];
 }
 ;
+<<<<<<< HEAD
 
 
 
@@ -96,3 +108,11 @@ export function getShared(id: string) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,16 +1,25 @@
 
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { WorkExperience  } from '@/types/resume';
 import { useAuth  } from '@/hooks/useAuth';
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
 export function useWorkExperience() {
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {WorkExperience} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useWorkExperience() {;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -21,9 +30,14 @@ export function useWorkExperience() {;
       return false
 
 
+<<<<<<< HEAD
     }
     setIsLoading(true);
     setError(null);
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { WorkExperience } from '@/types/resume',;
@@ -39,16 +53,29 @@ export function useWorkExperience() {;
       return false;
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     
     setIsLoading(true),
     setError(null),
     
+<<<<<<< HEAD
     
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {
       const { error } = await supabase
         .from('work_history')
         .insert({
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {WorkExperience} from '@/types / resume';
@@ -98,6 +125,7 @@ if ( {) {
         });
       if (error) throw error;
 
+<<<<<<< HEAD
           resume_id: resumeId;
           company_name: work.company_name;
           role_title: work.role_title;
@@ -109,6 +137,8 @@ if ( {) {
           location: work.location
         });
       if (error) throw error;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           resume_id: resumeId,
           company_name: work.company_name,
           role_title: work.role_title,
@@ -122,6 +152,13 @@ if ( {) {
       
       if (error) throw error,
       
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      return showSuccessToast("Work experience added", "Your work experience has been added to your resume")
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           company_logo_url: work.company_logo_url,
           location: work.location;
         });
@@ -138,6 +175,7 @@ if (throw error) {
       setIsLoading(false)
 
 
+<<<<<<< HEAD
       return showSuccessToast("Work experience added", "Your work experience has been added to your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not add work experience')
@@ -152,6 +190,9 @@ if (throw error) {
     }
     setIsLoading(true);
     setError(null);
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
     setIsLoading(true),;
     setError(null),;
@@ -183,16 +224,29 @@ if (throw error) {
       return false;
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     
     setIsLoading(true),
     setError(null),
     
+<<<<<<< HEAD
     
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {
       const { error } = await supabase
         .from('work_history')
         .update({
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   const updateWorkExperience = async (work_id: string, work: WorkExperience): Promise < boolean> => {
     // Check condition
@@ -226,6 +280,7 @@ if ( {) {
           company_logo_url: work && work.company_logo_url,
           location: work && work.location
 
+<<<<<<< HEAD
           company_name: work.company_name;
           role_title: work.role_title;
           start_date: formatDateForDB(work.start_date);
@@ -237,6 +292,13 @@ if ( {) {
         })
         .eq('id', workId);
       if (error) throw error;
+=======
+        })
+        .eq('id', workId);
+      if (error) throw error;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           company_name: work.company_name,
           role_title: work.role_title,
           start_date: formatDateForDB(work.start_date),
@@ -250,6 +312,13 @@ if ( {) {
       
       if (error) throw error,
       
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      return showSuccessToast("Work experience updated", "Your work experience has been updated")
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           company_logo_url: work.company_logo_url,
           location: work.location;
         });
@@ -267,6 +336,7 @@ if (throw error) {
       setIsLoading(false)
 
 
+<<<<<<< HEAD
       return showSuccessToast("Work experience updated", "Your work experience has been updated")
     } catch (e: any) {
       return handleResumeError(e, 'Could not update work experience')
@@ -281,6 +351,9 @@ if (throw error) {
     }
     setIsLoading(true);
     setError(null);
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
     setIsLoading(true),;
     setError(null),;
@@ -312,22 +385,37 @@ if (throw error) {
       return false;
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     
     setIsLoading(true),
     setError(null),
     
+<<<<<<< HEAD
     
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {
       const { error } = await supabase
         .from('work_history')
         .delete()
+<<<<<<< HEAD
         .eq('id', workId);
       if (error) throw error;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         .eq('id', workId),
       
       if (error) throw error,
       
+<<<<<<< HEAD
       return showSuccessToast("Work experience deleted", "Your work experience has been removed from your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not delete work experience')
@@ -338,6 +426,8 @@ if (throw error) {
       
       if (error) throw error,
       
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
       return showSuccessToast("Work experience deleted", "Your work experience has been removed from your resume")
@@ -372,20 +462,33 @@ if (throw error) {
 
   return {
     is_loading;
+<<<<<<< HEAD
     }
   }
   return {
     isLoading;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     error;
     addWorkExperience;
     updateWorkExperience;
 
+<<<<<<< HEAD
       setIsLoading(false)
 
 
     deleteWorkExperience
   }
 }
+=======
+    deleteWorkExperience;
+
+=======
+      setIsLoading(false)
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
     setIsLoading(true),;
     setError(null),;
@@ -409,6 +512,7 @@ if (throw error) {
     updateWorkExperience;
     deleteWorkExperience;
 
+<<<<<<< HEAD
   }
 }
   }
@@ -417,3 +521,10 @@ if (throw error) {
   }
 }
 ;
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

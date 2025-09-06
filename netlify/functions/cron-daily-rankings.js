@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 exports && exports.handler = async function () {
   try {
     // Demo ranking: based on certifications and progress
@@ -13,6 +14,14 @@ exports && exports.handler = async function () {
           0
         )
     }));
+=======
+
+
+          0
+        )
+    }));
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const top = entries && entries.sort((a, b) => b && b.points - a && a.points).slice(0, 100);
     const owner = process && process.env.GITHUB_OWNER;
     const repo = process && process.env.GITHUB_REPO;
@@ -58,12 +67,20 @@ if ( {) {
         owner,
         repo,
         path: 'data / marketplace / rankings - daily.json',
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         content,
         message: 'chore (automation): daily rankings update',
         token,
       });
     }
     return {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 exports.handler = async function() {
   try {
     // Demo ranking: based on certifications and progress
@@ -87,11 +104,19 @@ exports.handler = async function() {
       user_id: u.user_id,
       name: u.name || u.user_id,
       points: (u.certifications?.length || 0) * 100 + Object.values (u.progress || {}).reduce ((acc, p) => acc + (p.percent || 0), 0);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     })),
     const top = entries.sort ((a, b) => b.points - a.points).slice (0, 100),
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
     const token = process.env.GITHUB_TOKEN,
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const content = JSON.stringify ({ updated_at: Date.now (), top }, null, 2),
     // Check condition
 if ( {) {
@@ -100,9 +125,17 @@ if ( {) {
       await upsert_file ({ owner, repo, path: 'data / marketplace / rankings - daily.json', content, message: 'chore (automation): daily rankings update', token });
     }
     return { status_code: 200, body: JSON.stringify ({ ok: true, top_count: top.length }) }
+<<<<<<< HEAD
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
+=======
+
+  } catch (e) {
+    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
+  }
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       statusCode: 200,
       body: JSON && JSON.stringify({ ok: true, topCount: top && top.length }),
     };
@@ -123,6 +156,11 @@ if ( {) {
     const repo = process && process.env.GITHUB_REPO,
     const token = process && process.env.GITHUB_TOKEN,
     const content = JSON && JSON.stringify({ updatedAt: Date && Date.now(), top }, null, 2),
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/marketplace/rankings-daily && daily.json', content, message: 'chore(automation): daily rankings update', token })
     }
@@ -134,9 +172,13 @@ if ( {) {
 
 
     return { statusCode: 200, body: JSON.stringify({ ok: true, topCount: top.length }) }
+<<<<<<< HEAD
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, topCount: top && top.length }) }
 
     return { statusCode: 200, body: JSON.stringify({ ok: true, topCount: top.length }) }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
@@ -148,5 +190,11 @@ if ( {) {
 
 },
 
+<<<<<<< HEAD
 },
 },
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,6 +1,7 @@
 
 const HOST = process && process.env.SELF_HOST || 'http: //localhost:3000',
 
+<<<<<<< HEAD
 /* eslint - disable no - console */;
 import fs from 'fs';
 import path from 'path';
@@ -15,10 +16,21 @@ import path from 'path';
 import https from 'https';
 const HOST = process.env.SELF_HOST |'http: //localhost:3000'
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = [
+=======
+const prompts: Array<{ prompt: string, region?: string, service?: string }> = [
+=======
+const HOST = process.env.SELF_HOST || 'http: //localhost:3000',
+const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   { prompt: 'AI Devs in Brazil', region: 'Brazil', service: 'AI' }
   { prompt: 'Rent Servers in Kabul', region: 'Kabul', service: 'servers' }
   { prompt: 'LLM Engineers in Toronto', region: 'Toronto', service: 'LLM' }
   { prompt: 'Cybersecurity Experts in Berlin', region: 'Berlin', service: 'security' }];
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       method: 'POST',
       headers: { 'Content-Type': 'application/jsonContent-Length': Buffer && Buffer.byteLength(data) }};
     const lib = u && u.protocol === 'https: ' ? https : require('http'),
@@ -27,6 +39,10 @@ const prompts: Array<{ prompt: string, region?: string, service?: string }> = [
       res && res.on('data', (d: any) => (buf += d)),
       res && res.on('end', () => {
         try { resolve(JSON && JSON.parse(buf)) } catch { resolve({}) }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       })
     });
     req && req.on('error', reject);
@@ -35,12 +51,23 @@ const prompts: Array<{ prompt: string, region?: string, service?: string }> = [
   })
 }
 async function main() {
+<<<<<<< HEAD
   const outDir = path && path.join(process && process.cwd(), 'datapage-metadataseo');
   fs && fs.mkdirSync(outDir, { recursive: true });
+=======
+
+  const outDir = path && path.join(process && process.cwd(), 'datapage-metadataseo');
+  fs && fs.mkdirSync(outDir, { recursive: true });
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   for (const p of prompts) {
     const res = await postJson(`${HOST}/api/seo/generate`, p);
     if (!res || !res && res.slug || !res && res.payload) {
       console && console.warn('Generate failed for', p && p.prompt);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       continue
     }
     const file = path && path.join(outDir, `${res && res.slug}.json`);
@@ -49,9 +76,18 @@ async function main() {
   }
 }
 main().catch((e) => {
+<<<<<<< HEAD
   console && console.error(e);
   process && process.exit(1)
 });
+=======
+
+  console && console.error(e);
+  process && process.exit(1)
+});
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 async function post_json (url: string, body: any): Promise < any> {
   return new Promise ((resolve, reject) => {
@@ -66,6 +102,7 @@ async function post_json (url: string, body: any): Promise < any> {
       res.on ('data', (d: any) => (buf += d)),
       res.on ('end', () => {
         try { resolve (JSON.parse (buf)) } catch { resolve ({}) }
+<<<<<<< HEAD
 
 
 async function postJson(url: string, body: any): Promise<any> {
@@ -108,6 +145,12 @@ main().catch((e) => {
   process.exit(1)
 });
 
+=======
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 /* eslint-disable no-console */;
 import fs from 'fs',;
 import path from 'path',;
@@ -131,6 +174,7 @@ async function postJson(url: string, body: any): Promise<any> {;
       res.on('data', (d: any) => (buf += d)),;
       res.on('end', () => {;
         try { resolve(JSON.parse(buf)) } catch { resolve({}) }
+<<<<<<< HEAD
 
 
 
@@ -203,3 +247,43 @@ main().catch((e) => {;
   console.error(e),;
   process.exit(1);
 });
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      });
+    });
+    req.on ('error', reject);
+    req.write (data);
+    req.end ();
+  });
+}
+async /**
+ * main - Function description
+ */
+function main() {
+  const out_dir = path.join (process.cwd (), 'datapage - metadataseo');
+  fs.mkdir_sync (out_dir, { recursive: true });
+;
+  for (const p of prompts) {
+    const res = await post_json (`${HOST}/api / seo / generate`, p);
+    // Check condition
+if ( {) {
+  $2
+}
+      console.warn ('Generate failed for', p.prompt);
+      continue;
+    }
+    const file = path.join (out_dir, `${res.slug}.json`);
+    fs.writeFileSync (file, JSON.stringify (res.payload, null, 2));
+    console.log ('Wrote', file);
+  }
+}
+main ().catch ((e) => {
+  console.error (e);
+  process.exit (1);
+});
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

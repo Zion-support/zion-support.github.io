@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { useState } from "react",
 import { useForm } from "react-hook-form",
@@ -27,6 +28,8 @@ import { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { Button } from "@/components/ui/button",;
 import { Textarea } from "@/components/ui/textarea",;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 import { useState } from "react",;
@@ -69,12 +72,23 @@ Form
   FormItem
   FormMessage
 
+<<<<<<< HEAD
   FormMessage,
+=======
+
+interface ReplyFormValues {;
+
+  content: string;
+}
+
+FormMessage,;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 } from "@/components/ui/form";
 
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
+<<<<<<< HEAD
   FormMessage,
 } from '@/components / ui / form';
 import { Card, CardContent, CardFooter  } from '@/components / ui / card';
@@ -86,6 +100,13 @@ interface ReplyFormValues {
 interface ReplyFormValues {;
   content: string;
 }
+=======
+  };
+
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const form = useForm<ReplyFormValues>({;
     defaultValues: {;
       content: "",;
@@ -215,6 +236,7 @@ export const ReplyForm = ({ onSubmit, parentId } ReplyFormProps) => {;
 
                       placeholder={parentId ? "Write your reply..." : "Join the discussion..."}
 
+<<<<<<< HEAD
 } from "@/components/ui/form";
 
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
@@ -315,6 +337,9 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
                           : "Join the discussion..."
                       }
                       placeholder={parentId ? "Write your reply..." : "Join the discussion..."}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       className="min-h-[100px] resize-y"
                       {...field}
                     />
@@ -332,6 +357,7 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
         </Form>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   )
 },
 
@@ -370,10 +396,17 @@ export default ReplyForm;
   );
 }
 export default ReplyForm;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   )
 },
 
+<<<<<<< HEAD
 export default ReplyForm,
 export default ReplyForm;
 export default ReplyForm,
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

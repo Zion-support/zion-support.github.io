@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { MapPin } from 'lucide-react'
 import { TalentCardSkills } from './TalentCardSkills'
@@ -11,11 +12,14 @@ import { TalentCardSkills } from "./TalentCardSkills";
 import { TalentCardSkills } from "./TalentCardSkills",
 interface TalentCardContentProps {
   summary: string | undefined;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 summary: string | undefined;
   bio: string;
   timezone: string | undefined;
   skills: string[] | undefined
 
+<<<<<<< HEAD
 export function TalentCardContent({
   summary
   bio
@@ -23,6 +27,16 @@ export function TalentCardContent({
   skills
 }: TalentCardContentProps) {
   const [isHovering, setIsHovering] = useState(false)
+=======
+
+export function TalentCardContent(): any ({;
+  summary,;
+  bio,;
+  timezone,;
+  skills,;
+}: TalentCardContentProps) {;
+  const [isHovering, setIsHovering] = useState(false);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   return (
     <div>
@@ -38,17 +52,28 @@ export function TalentCardContent({
         className='overflow-hidden transition-all duration-300'        style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
+<<<<<<< HEAD
       >
         <p className='text-zion-slate mb-4'>{summary |bio}</p>
       </div>          <span>{timezone}</span>
         </div>
       )}
+=======
+
+      >;
+        <p className='text-zion-slate mb-4'>{summary || bio}</p>;
+      </div>          <span>{timezone}</span>;
+        </div>;
+      )}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Short bio or summary - longer on hover for desktop */}
       <div
         className="overflow-hidden transition-all duration-300" 
         style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
         onMouseEnter = {() => setIsHovering(true),}
         onMouseLeave = {() => setIsHovering(false),}
+<<<<<<< HEAD
       >
         <p className='text-zion-slate mb-4'>{summary |bio}</p>
       </div>
@@ -91,10 +116,24 @@ export function TalentCardContent({ summary, bio, timezone, skills }: TalentCard
         </div>
       )}
 ;
+=======
+      >;
+        <p className='text-zion-slate mb-4'>{summary || bio}</p>;
+      </div>;
+        <p className="text-zion-slate mb-4">;
+          {summary || bio}
+        </p>;
+      </div>;
+
+      <TalentCardSkills skills={skills} />;
+    </div>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Short bio or summary - longer on hover for desktop */}
       <div 
         className="overflow-hidden transition-all duration-300" 
         style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
+<<<<<<< HEAD
       <div 
         className="overflow-hidden transition-all duration-300" 
         style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
@@ -129,6 +168,8 @@ export function TalentCardContent({ summary, bio, timezone, skills }: TalentCard
 }
 ;
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React, { useState } from 'react';
 import { MapPin } from 'lucide-react';
@@ -177,4 +218,8 @@ function TalentCardContent() {
       </div>;
       <TalentCardSkills skills={skills} />;
     </div>);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

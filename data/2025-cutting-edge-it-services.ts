@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 export const cuttingEdgeITServices2025 = [
   {
     id: 'quantum-cloud-infrastructure-platform'
@@ -823,10 +824,22 @@ export const cuttingEdgeITServices2025 = [
       'Quality Assurance Protocols'
     ]
   }
+=======
+
+
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export const cuttingEdgeITServices2025 = [
+  {
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'DevOps Best Practices',
       'Security Standards',
       'Quality Assurance Protocols',
     ],
+<<<<<<< HEAD
 ];      'Software development automation_continuous deployment pipelines_performance monitoring and optimization_incident response automation_quality assurance automation';
     ];
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
@@ -844,6 +857,29 @@ export const cuttingEdgeITServices2025 = [
   }
 ];
 
+=======
+
+  },;
+
+
+];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
+=======
+];      'Software development automation_continuous deployment pipelines_performance monitoring and optimization_incident response automation_quality assurance automation';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    ];
+    integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
+
+
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const cuttingEdgeITServices2025 = [;
   {;
     id: 'quantum-cloud-infrastructure-platform',;
@@ -1050,7 +1086,16 @@ export const cuttingEdgeITServices2025 = [;
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'],;
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'];
 
+<<<<<<< HEAD
   }
 ];
   }
 ];
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+];
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

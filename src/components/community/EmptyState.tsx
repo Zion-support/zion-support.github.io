@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 import React from 'react',
 import Link from 'next/link';
 import React from 'react',
 import Link from 'next/link';
 import React from 'react'
 import Link from 'next/link'
+=======
+import React from 'react'
+import Link from 'next/link'
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { MessageSquare } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
@@ -64,6 +71,7 @@ interface EmptyStateProps {
   subtitle: string;
   cta: string;
   href: string;
+<<<<<<< HEAD
   hasSession: boolean
 
 const EmptyState: React.FC<EmptyStateProps> = ({
@@ -79,6 +87,9 @@ const EmptyState: React.FC<EmptyStateProps> = ({
       </div>
       <h2 className='text-xl font-medium mb-2'>{title}</h2>
       <p className='text-muted-foreground mb-6'>{subtitle}</p>      <TooltipProvider>      <h2 className="text-xl font-medium mb-2">{title}</h2>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import Link from 'next/link';
 import { MessageSquare } from 'lucide-react'
@@ -113,6 +124,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({;
               </Button>;
             ) : (;
               <Button disabled>{cta}</Button>;
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { MessageSquare } from 'lucide-react';
@@ -125,6 +137,8 @@ interface EmptyStateProps {;
   href: string,;
   hasSession: boolean;
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, hasSession }) => {
   return (
@@ -133,6 +147,10 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
         <MessageSquare className="h-10 w-10 text-zion-purple" />
       </div>
       <h2 className="text-xl font-medium mb-2">{title}</h2>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <p className="text-muted-foreground mb-6">{subtitle}</p>
       <TooltipProvider>
         <Tooltip>
@@ -144,6 +162,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
             ) : (
               <Button disabled>{cta}</Button>
             )}
+<<<<<<< HEAD
 
 
 
@@ -151,6 +170,14 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
 export default EmptyState
 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+          </TooltipTrigger>;
+          {!hasSession && <TooltipContent>Login required</TooltipContent>}
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </Tooltip>;
       </TooltipProvider>;
     </div>;
@@ -260,4 +287,8 @@ export default EmptyState
 },;
 export default EmptyState;
 },;
+<<<<<<< HEAD
 export default EmptyState;
+=======
+export default EmptyState;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

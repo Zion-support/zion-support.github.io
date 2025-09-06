@@ -5,6 +5,7 @@ import { Badge  } from '@/components / ui / badge';
 interface QuoteStatusCardsProps {
   status_counts: {
 
+<<<<<<< HEAD
 import React from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -110,11 +111,14 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 interface QuoteStatusCardsProps {
   statusCounts: {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     new: number;
     in_review: number;
     responded: number;
     accepted: number;
 
+<<<<<<< HEAD
     closed: number;
 
   }
@@ -124,6 +128,10 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({
 }) => {
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface QuoteStatusCardsProps {
   statusCounts: {
     new: number,
@@ -135,6 +143,11 @@ interface QuoteStatusCardsProps {
 }
 
 export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts }) => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
 
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
@@ -146,14 +159,27 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
           </CardTitle>
         </CardHeader>
         <CardContent>
+<<<<<<< HEAD
+=======
+          <p className="text-sm text-zion-slate-light">
+            Unreviewed quote requests
+          </p>
+        </CardContent>
+      </Card>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       
 
 
+<<<<<<< HEAD
           <p className="text-sm text-zion-slate-light">Unreviewed quote requests</p>
         </CardContent>
       </Card>
       
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -162,14 +188,27 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
           </CardTitle>
         </CardHeader>
         <CardContent>
+<<<<<<< HEAD
+=======
+          <p className="text-sm text-zion-slate-light">
+            Quotes being evaluated
+          </p>
+        </CardContent>
+      </Card>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       
 
 
+<<<<<<< HEAD
           <p className="text-sm text-zion-slate-light">Quotes being evaluated</p>
         </CardContent>
       </Card>
       
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -178,14 +217,27 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
           </CardTitle>
         </CardHeader>
         <CardContent>
+<<<<<<< HEAD
+=======
+          <p className="text-sm text-zion-slate-light">
+            Quotes with responses sent
+          </p>
+        </CardContent>
+      </Card>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       
 
 
+<<<<<<< HEAD
           <p className="text-sm text-zion-slate-light">Quotes with responses sent</p>
         </CardContent>
       </Card>
       
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -194,14 +246,27 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
           </CardTitle>
         </CardHeader>
         <CardContent>
+<<<<<<< HEAD
+=======
+          <p className="text-sm text-zion-slate-light">
+            Successfully converted quotes
+          </p>
+        </CardContent>
+      </Card>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       
 
 
+<<<<<<< HEAD
           <p className="text-sm text-zion-slate-light">Successfully converted quotes</p>
         </CardContent>
       </Card>
       
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">
@@ -210,6 +275,7 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
           </CardTitle>
         </CardHeader>
         <CardContent>
+<<<<<<< HEAD
           <p className="text-sm text-zion-slate-light">Finalized or declined quotes</p>
         </CardContent>
       </Card>
@@ -234,15 +300,58 @@ interface QuoteStatusCardsProps {;
 ;
 export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts }) => {;
   return (;
+=======
+          <p className="text-sm text-zion-slate-light">
+            Finalized or declined quotes
+          </p>
+        </CardContent>
+      </Card>
+
+export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({;
+  statusCounts,;
+}) => {;
+  return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">;
       <Card className="bg-zion-blue-dark border border-zion-blue-light">;
         <CardHeader className="pb-2">;
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">;
             New Requests;
+<<<<<<< HEAD
+=======
+            <Badge className="bg-blue-500">{statusCounts && statusCounts.new}</Badge>;
+          </CardTitle>;
+        </CardHeader>;
+        <CardContent>;
+          <p className="text-sm text-zion-slate-light">;
+=======
+    closed: number;
+  }
+}
+export const QuoteStatusCards: React.FC < QuoteStatusCardsProps> = ({
+  status_counts,
+}) => {
+  return (
+    <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 5 gap - 4 mb - 8">;
+      <Card className="bg - zion - blue - dark border border - zion - blue - light">;
+        <CardHeader className="pb - 2">;
+          <CardTitle className="text - lg font - medium text - white flex justify - between items - center">;
+            New Requests;
+            <Badge className="bg - blue - 500">{status_counts.new}</Badge>;
+          </CardTitle>;
+        </CardHeader>;
+        <CardContent>;
+          <p className="text - sm text - zion - slate - light">;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             Unreviewed quote requests;
           </p>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <Card className="bg - zion - blue - dark border border - zion - blue - light">;
         <CardHeader className="pb - 2">;
           <CardTitle className="text - lg font - medium text - white flex justify - between items - center">;
@@ -252,10 +361,18 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
         </CardHeader>;
         <CardContent>;
           <p className="text - sm text - zion - slate - light">;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             Quotes being evaluated;
           </p>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <Card className="bg - zion - blue - dark border border - zion - blue - light">;
         <CardHeader className="pb - 2">;
           <CardTitle className="text - lg font - medium text - white flex justify - between items - center">;
@@ -265,10 +382,18 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
         </CardHeader>;
         <CardContent>;
           <p className="text - sm text - zion - slate - light">;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             Quotes with responses sent;
           </p>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <Card className="bg - zion - blue - dark border border - zion - blue - light">;
         <CardHeader className="pb - 2">;
           <CardTitle className="text - lg font - medium text - white flex justify - between items - center">;
@@ -278,10 +403,18 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
         </CardHeader>;
         <CardContent>;
           <p className="text - sm text - zion - slate - light">;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             Successfully converted quotes;
           </p>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <Card className="bg - zion - blue - dark border border - zion - blue - light">;
         <CardHeader className="pb - 2">;
           <CardTitle className="text - lg font - medium text - white flex justify - between items - center">;
@@ -291,10 +424,15 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
         </CardHeader>;
         <CardContent>;
           <p className="text - sm text - zion - slate - light">;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             Finalized or declined quotes;
           </p>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
     </div>);
 }
 ;
@@ -308,10 +446,13 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
 
 
 export default QuoteStatusCards;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     </div>);
 }
 ;
+<<<<<<< HEAD
     closed: number;};
 }
 
@@ -426,8 +567,21 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = (_{_statusCount
           <p className="text-sm text-zion-slate-light">Finalized or declined quotes</p>;
         </CardContent>;
       </Card>;
+=======
+
+=======
+
+    </div>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>;
 );
 };
 
 export default QuoteStatusCards;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 "use client",
 import Link from './next / link';,
 import { ReactNode  } from './react';,
@@ -38,6 +42,13 @@ function CTAButton() {
 
     <Link;
       href={href}
+<<<<<<< HEAD
+=======
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 "use client",;
 import Link from "next/link",;
 import { ReactNode } from "react",;
@@ -73,6 +84,10 @@ export function CTAButton({;
   return (;
     <Link;
       href={href} ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       className={classes}
       on_click={on_click}
       role="button";

@@ -2,7 +2,18 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
+<<<<<<< HEAD
     return res && res.status(400).json({ error: 'Missing required fields' });
+=======
+
+  }
+  const { talentSlug, requesterName, requesterEmail, projectInfo } =
+    req && req.body || {};  const { talentSlug, requesterName, requesterEmail, projectInfo } = req && req.body || {};
+  if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {
+
+
+    return res.status(400).json({ error: 'Missing required fields' });
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 
 
@@ -10,12 +21,17 @@ import path from 'path';
 
   try {
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
     console && console.log('[Operator] New request to hire:', {
       timestamp,
       talentSlug,
       requesterName,
       requesterEmail,
       projectInfo,
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     });
     // Persist to data/requests as a simple CMS-like log
     const dir = path.join(process.cwd(), 'datarequests');
@@ -77,12 +93,19 @@ if ( {) {
   $2
 }
     const payload = {
+<<<<<<< HEAD
       timestamp,
     console.log('[Operator] New request to hire:', { timestamp, talentSlug, requesterName, requesterEmail, projectInfo });
+=======
+
+      timestamp,
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Persist to data/requests as a simple CMS-like log
     const dir = path && path.join(process && process.cwd(), 'datarequests');
     if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true });
     const payload = { timestamp, talentSlug, requesterName, requesterEmail, projectInfo };
+<<<<<<< HEAD
     const file = path.join(dir, `request-${timestamp.replace(/[:.]/g, '-')}.json`);
     fs.writeFileSync(file, JSON.stringify(payload, null, 2), 'utf8');
     // Email hooks could be integrated here (e && e.g., Resend, SendGrid, Nodemailer)
@@ -92,6 +115,21 @@ if ( {) {
     return res.status(500).json({ error: 'Internal error' })
   };
 }
+=======
+
+
+
+    // Email hooks could be integrated here (e && e.g., Resend, SendGrid, Nodemailer)
+    return res && res.status(200).json({ ok: true });
+  } catch (err) {
+
+
+  };
+}
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       talent_slug,
       requester_name,
       requester_email,
@@ -132,6 +170,7 @@ console.error ('Request - to - hire failed', err);
 
   }
 }
+<<<<<<< HEAD
 
 }
 
@@ -213,3 +252,18 @@ console.error('Request-to-hire failed', err);
     console.error('Request-to-hire failed', err);
     return res.status(500).json({ error: 'Internal error' });
   }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+}
+
+=======
+    console.error('Request-to-hire failed', err);
+    return res.status(500).json({ error: 'Internal error' });
+  }
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

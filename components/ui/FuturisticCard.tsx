@@ -18,14 +18,22 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 
 
+=======
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react";
 type Props = {;
 import React from './react';
 type Props = {
   title: string;
   description: string;
+<<<<<<< HEAD
   cta?: React && React.ReactNode;
 };
 export default function FuturisticCard(): any ({ title, description, cta }: Props) {;
@@ -33,6 +41,23 @@ export default function FuturisticCard(): any ({ title, description, cta }: Prop
       </div>;
     </div>;
   );
+=======
+
+  cta?: React && React.ReactNode;
+};
+
+
+export default function FuturisticCard(): any ({ title, description, cta }: Props) {;
+  return (
+<<<<<<< HEAD
+    <div className="futuristic-card">;
+      <div className="futuristic-card-glow" />;
+      <div className="relative z-10">;
+        <h3 className="font-semibold text-gray-100">{title}</h3>;
+        <p className="text-sm text-gray-300 mt-1">{description}</p>;
+        {cta && <div className="mt-3">{cta}</div>}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 export default /**
  * FuturisticCard - Function description
@@ -47,6 +72,12 @@ function FuturisticCard() {
         {cta && <div className="mt - 3">{cta}</div>}
       </div>;
     </div>);
+<<<<<<< HEAD
+=======
+
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </div>
 
     </div>
@@ -55,6 +86,7 @@ function FuturisticCard() {
 
 }
 
+<<<<<<< HEAD
 }
       </div>
     </div>
@@ -73,3 +105,6 @@ function FuturisticCard() {
   );
 }
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

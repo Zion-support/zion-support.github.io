@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import React from 'react',
 export default /**
  * SEOIndex - Function description
@@ -10,6 +11,8 @@ function SEOIndex() {
     // In a real app, list from API or build - time, here we rely on directory hint not available at runtime.;
     set_slugs ([]);
   }, []),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div>;
       <h1 className="text - 2xl font - semibold mb - 4">SEO Landing Pages</h1>;
@@ -17,7 +20,11 @@ function SEOIndex() {
 
 }
 
+<<<<<<< HEAD
 }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="text - sm text - gray - 500">Generated pages will appear once deployed.</div>) : (
         <ul className="list - disc ml - 5">;
           {slugs.map ((s) => (
@@ -52,14 +59,27 @@ export default function SEOIndex() {
       )}
     </div>
   )
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   );
 };
 
+<<<<<<< HEAD
   );
 };
   );
 };
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <li key={s}><a className="text-cyan-600" href={`/seo/${s}`}>{s}</Link></li>
           ))  } catch (error) {
     console.error("Error:", error);
@@ -78,7 +98,15 @@ export default function SEOIndex() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 
 }
 }
+=======
+
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

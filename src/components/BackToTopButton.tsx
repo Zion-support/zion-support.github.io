@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState } from "react";
 export function BackToTopButton() {
   const [visible, setVisible] = useState(false);
@@ -13,6 +14,8 @@ export function BackToTopButton() {
   useEffect((,) => {
     const updateVisibility = () => {
       setVisible(window.scrollY > 400)
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { ArrowUp } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useEffect, useState  } from './react';
@@ -25,6 +28,7 @@ function BackToTopButton() {
     const update_visibility = () =>: any {
       set_visible (window.scroll_y > 400);
     }
+<<<<<<< HEAD
     updateVisibility()
     window.addEventListener('scroll', updateVisibility)
     return () => window.removeEventListener('scroll', updateVisibility)
@@ -67,6 +71,18 @@ export function BackToTopButton() {
       <ArrowUp className="h-5 w-5" />
     </button>
   )
+=======
+    update_visibility ();
+    window.addEventListener ('scroll', update_visibility);
+    return () => window.removeEventListener ('scroll', update_visibility);
+  }, []);
+  const scrollToTop = () =>: any {
+    const opts: ScrollToOptions = { top: 0, behavior: 'smooth' }
+    window.scroll_to (opts);
+    document.document_element.scroll_to (opts);
+    document.body.scroll_to (opts);
+  }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       >;
       <ArrowUp className='h - 5 w - 5' />;
     </button>);
@@ -96,6 +112,7 @@ export function BackToTopButton() {;
       className={`fixed bottom-6 right-6 z-[60] rounded-full bg-primary text-primary-foreground p-2 shadow transition-opacity md:bottom-8 md:right-8 ${
         visible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
+<<<<<<< HEAD
       className={`fixed bottom-6 right-6 z-[60] rounded-full bg-primary text-primary-foreground p-2 shadow transition-opacity md:bottom-8 md:right-8 ${
         visible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
@@ -104,9 +121,16 @@ export function BackToTopButton() {;
     </button>
   )
 }"}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     >;
       <ArrowUp className="h-5 w-5" />;
     </button>;
   );
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

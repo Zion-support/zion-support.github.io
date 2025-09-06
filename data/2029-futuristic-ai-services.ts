@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface FuturisticAiService2029 {
 export interface FuturisticAiService2029 {;
   id: string;
@@ -28,11 +29,15 @@ export interface FuturisticAiService2029 {;
     mobile: string,;
     email: string,;
     address: string;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
   }
 }
 
@@ -64,6 +69,9 @@ export const futuristicAIServices2029: FuturisticAiService2029[] = [;
     },
   },
 ];      mobile: "+1 302 464 0950";
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -7,10 +8,22 @@ interface HiringAnalyticsProps {
   jobId?: string
 }
 export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
+=======
+import { useState, useEffect } from './react';
+import { useJobApplications } from '@/hooks / useJobApplications';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
+import {PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip} from 'recharts';
+
+interface HiringAnalyticsProps {
+  job_id?: string;
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState, useEffect} from "react";
 import {useJobApplications} from "@/hooks/useJobApplications";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip} from 'recharts';
+<<<<<<< HEAD
 interface HiringAnalyticsProps {
   jobId?: string
 }
@@ -100,6 +113,15 @@ interface HiringAnalyticsProps {;
 ;
 export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
   const { applications, isLoading } = useJobApplications(jobId),;
+=======
+
+interface HiringAnalyticsProps {;
+  jobId?: string;
+}
+
+export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
+  const { applications, isLoading } = useJobApplications(jobId);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [analyticsData, setAnalyticsData] = useState<{;
     statusDistribution: any[],;
     timeToHire: number,;
@@ -110,13 +132,61 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
     timeToHire: 0,;
     conversionRate: 0,;
     funnelData: []}),;
+<<<<<<< HEAD
   useEffect(() => {;
     if (applications && applications.length > 0) {;
       // Calculate status distribution;
+=======
+
+  useEffect(() => {;
+    if (applications && applications.length > 0) {;
+      // Calculate status distribution;
+      const statusCounts: Record<string, number> = {};
+      applications && applications.forEach(app => {;
+        statusCounts[app && app.status] = (statusCounts[app && app.status] || 0) + 1;
+      });
+
+      const statusDistribution = Object && Object.entries(statusCounts).map(([status, count]) => ({;
+        status;
+        count}));
+
+      // Calculate time to hire (in days);
+      const hiredApplications = applications && applications.filter(app => app && app.status === 'hired');
+      let avgTimeToHire = 0;
+
+      if (hiredApplications && hiredApplications.length > 0) {;
+        const totalDays = hiredApplications && hiredApplications.reduce((sum, app) => {;
+          const hireDate = new Date(app && app.updated_at);
+          const applyDate = new Date(app && app.created_at);
+          const daysDiff = (hireDate && hireDate.getTime() - applyDate && applyDate.getTime()) / (1000 * 3600 * 24);
+          return sum + daysDiff;
+        }, 0);
+
+        avgTimeToHire = Math && Math.round(totalDays / hiredApplications && hiredApplications.length);
+      }
+
+      // Calculate conversion rate;
+      const conversionRate = hiredApplications && hiredApplications.length > 0;
+        ? Math && Math.round((hiredApplications && hiredApplications.length / applications.length) * 100);
+        : 0;
+
+      // Funnel data;
+      const funnelData = [;
+        { name: 'Applied', value: applications.length },;
+        { name: 'Shortlisted', value: applications && applications.filter(app => app && app.status === 'shortlisted').length },;
+        { name: 'Interview', value: applications && applications.filter(app => app && app.status === 'interview').length },;
+        { name: 'Hired', value: applications && applications.filter(app => app && app.status === 'hired').length }],;
+
+      setAnalyticsData({;
+        statusDistribution;
+        timeToHire: avgTimeToHire,;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         conversionRate;
         funnelData});
     }
   }, [applications]);
+<<<<<<< HEAD
   if (isLoading) {;
     return <div>Loading analytics data...</div>;
   }
@@ -206,6 +276,35 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
   }, [applications]);
   if (isLoading) {;
     return <div>Loading analytics data...</div>;
+=======
+
+
+  if (isLoading) {;
+    return <div>Loading analytics data...</div>;
+  }
+
+  if (!applications || applications.length === 0) {;
+
+    return (
+      <Card className="text-center py-16">;
+        <CardContent>;
+          <h3 className="text-lg font-semibold mb-2">No data available</h3>;
+          <p className="text-muted-foreground mb-6">;
+            You need applications to generate analytics;
+          </p>;
+        </CardContent>;
+      </Card>;
+    );
+  }
+
+
+
+  const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'];
+
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   
   if (!applications || applications.length === 0) {
@@ -220,6 +319,7 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
       </Card>
     )
   }
+<<<<<<< HEAD
   
   const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'],
   
@@ -231,6 +331,15 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
   const COLORS = ['#0088FE#00C49F', '#FFBB28#FF8042', '#8884d8'],;
   ;
   return (;
+=======
+
+  
+  const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'],
+  
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
       {/* Status Distribution */}
       <Card>;
@@ -240,6 +349,7 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
         <CardContent className="h-64">;
           <ResponsiveContainer width="100%" height="100%">;
             <PieChart>;
+<<<<<<< HEAD
   const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'];
 
   
@@ -257,6 +367,10 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
             <PieChart>
               <Pie
                 data={analyticsData.statusDistribution}
+=======
+              <Pie
+                data={analyticsData && analyticsData.statusDistribution}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 cx="50%"
                 cy="50%"
                 labelLine={false}
@@ -264,6 +378,7 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
                 fill="#8884d8"
                 dataKey="count"
                 label={({name, percent}) => `${name}: ${(percent * 100).toFixed(0)}%`}
+<<<<<<< HEAD
               <Pie;
                 data={analyticsData.statusDistribution}
                 cx="50%";
@@ -273,6 +388,8 @@ export function HiringAnalytics({ jobId } HiringAnalyticsProps) {;
                 fill="#8884d8";
                 dataKey="count";
                 label={({name, percent}) => `${name} ${(percent * 100).toFixed(0)}%`}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               >;
                 {analyticsData.statusDistribution.map((entry, index) => (;
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />;
@@ -491,6 +608,7 @@ if ( {) {
                 {analytics_data.funnel_data.map ((entry, index) => (
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />))}
 
+<<<<<<< HEAD
                 {analyticsData.funnelData.map((entry, index) => (;
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />;
                 ))}
@@ -558,11 +676,17 @@ if ( {) {
     </div>
   )
 }
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </Bar>;
             </BarChart>;
           </ResponsiveContainer>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
     </div>;
   ),; interface HiringAnalyticsProps {
   jobId?: string 
@@ -610,3 +734,13 @@ if (applications && applications.length > 0) {
   );
 }
 ;
+=======
+
+    </div>);
+}
+
+=======
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

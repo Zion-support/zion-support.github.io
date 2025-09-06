@@ -1,15 +1,28 @@
 
 import {FormEvent, useState} from 'react';
 export default function VendorRegisterPage() {;
+<<<<<<< HEAD
 
 import {FormEvent, useState} from 'react';
 
+=======
+
+=======
+
+import {FormEvent, useState} from 'react';
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
   async function onSubmit(): any (e: FormEvent<HTMLFormElement>) {;
     e && e.preventDefault();
     setLoading(true);
     setMessage(null);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const form = e && e.currentTarget;
     const formData = new FormData(form);
     const payload = Object && Object.fromEntries(formData && formData.entries()),;
@@ -35,6 +48,11 @@ import {FormEvent, useState} from 'react';
       });
       const data = await res && res.json();
       if (!res && res.ok) throw new Error(data?.error || 'Failed to submit');
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           slug: String(payload.slug),
           name: String(payload.name),
           servicesOffered: String(payload.servicesOffered || '')
@@ -45,6 +63,7 @@ import {FormEvent, useState} from 'react';
           about: String(payload.about || ''),
           verificationDocs: String(payload.verificationDocs || '')
             .split()
+<<<<<<< HEAD
           slug: String(payload.slug),
           name: String(payload.name),
           servicesOffered: String(payload.servicesOffered || '')
@@ -90,6 +109,8 @@ export default function VendorRegisterPage() {;
           about: String(payload.about |'')
           verificationDocs: String(payload.verificationDocs |'')
             .split(',')
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             .map(s => s.trim())
             .filter(Boolean)
           caseStudies: []
@@ -125,6 +146,10 @@ export default function VendorRegisterPage() {;
       setMessage('Application submitted. Await approval.');
 
       form.reset()
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {FormEvent, useState} from 'react';
 export default /**
  * VendorRegisterPage - Function description
@@ -193,6 +218,7 @@ function on_submit() {
     } finally {
       set_loading (false);    }
   }
+<<<<<<< HEAD
   return (            .map (string => s.trim ());
             .filter (Boolean);
           team_size: Number (payload.team_size || 0),
@@ -211,6 +237,10 @@ function on_submit() {
     } catch (err: any) {
       set_message (err.message);
     } finally {
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (            .map(s => s && s.trim());
             .filter(Boolean);
           teamSize: Number(payload && payload.teamSize || 0),;
@@ -228,6 +258,7 @@ function on_submit() {
       setMessage(err && err.message);
     } finally {;
       setLoading(false);
+<<<<<<< HEAD
     }
   }
 
@@ -270,6 +301,16 @@ function on_submit() {
       {message && <div className="text-sm">{message}</div>}
       <div className="text-center text-xs text-gray-500">Powered by Zion</div>
     </div>
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    }
+  }
+<<<<<<< HEAD
+  return (
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 }
       set_loading (false);
@@ -377,6 +418,7 @@ function on_submit() {
   )
 
 }
+<<<<<<< HEAD
 
 
 
@@ -456,3 +498,12 @@ function on_submit() {
 
   return (
   return (
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

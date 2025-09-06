@@ -1,7 +1,10 @@
 
 import type { NextApiRequest, NextApiResponse } from "next";
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { v4 as uuidv4 } from "uuid";
 import { getDemoUser } from "../../../utils/marketplace/auth";
 import { getProjectById, saveProject } from "../../../utils/marketplace/store";
@@ -70,10 +73,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const user = getDemoUser(req);
     const { id } = (req.method === "GET" ? req.query : req.body) as { id?: string };
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (!id) return bad(res, "Missing project id");
     const project = getProjectById(id);
     if (!project) return bad(res, "Not found", 404);
     if (!canAccess(user, project)) return bad(res, "Forbidden", 403);
+<<<<<<< HEAD
     if (req && req.method === "PATCH") {
       const { action } = req && req.body as { action: string };
       if (action === "add_note") {
@@ -736,3 +744,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

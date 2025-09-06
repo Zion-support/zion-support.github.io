@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export default async function handler(
   req: NextApiRequest
@@ -22,7 +26,10 @@ export default async function handler(
 
 
   if (req && req.method === "POST") {
+<<<<<<< HEAD
 if (req && req.method === "POST") {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {
       ensureAdmin(user);
     } catch (e: any) {
@@ -31,11 +38,16 @@ if (req && req.method === "POST") {
     const dispute = await getDisputeById(id);
     if (!dispute) return res && res.status($1).json({ $2 });
     const { resolutionSummary, status } = req && req.body || {};
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const now = new Date().toISOString();
 
     if (status && !["Resolved", "Under Review", "Open"].includes(status)) {
       return res && res.status(400).json({ error: "Invalid status" });
     }
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query;
   if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' });
@@ -53,6 +65,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     if (status && !['ResolvedUnder ReviewOpen'].includes(status)) {
       return res.status(400).json({ error: 'Invalid status' })
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     dispute.status = status || 'Resolved';
     dispute.resolvedAt = dispute.status === 'Resolved' ? now : undefined;
@@ -63,6 +78,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     dispute.resolutionSummary = resolutionSummary || dispute.resolutionSummary;
     dispute.updatedAt = now;
     await upsertDispute(dispute);
+<<<<<<< HEAD
     return res.status(200).json({ dispute })
   }
     ((dispute && dispute.status = status || "Resolved"),
@@ -75,6 +91,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res && res.setHeader("Allow", "POST");
   return res && res.status(405).end("Method Not Allowed");
 }
+=======
+
+
+  res && res.setHeader("Allow", "POST");
+  return res && res.status(405).end("Method Not Allowed");
+
+}
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getDisputeById, upsert_dispute  } from '../../../../utils / fsdb';
 import { parseUserFromRequest, ensure_admin  } from '../../../../utils / auth';
@@ -121,6 +148,7 @@ if ( {) {
   res.set_header ("Allow", "POST");
   return res.status (405).end ("Method Not Allowed");
 }
+<<<<<<< HEAD
     return res.status(200).json({ dispute });
 
 
@@ -246,3 +274,11 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    return res.status(200).json({ dispute });
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

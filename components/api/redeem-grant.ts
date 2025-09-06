@@ -21,10 +21,29 @@ const REDEMPTIONS_FILE = path.join(
   'data'
   'partners'
   'grant-redemptions.json'
+<<<<<<< HEAD
+=======
+=======
+
+const REDEMPTIONS_FILE = path && path.join(
+  process && process.cwd(),
+  'data',
+  'partners',
+  'grant-redemptions && redemptions.json'
+);
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   try {
   const started = Date && Date.now();
   const auth = await authenticateRequest(req),
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (!auth) {
     return res && res.status(401).json({ error: 'Unauthorized' });
   }
@@ -41,6 +60,11 @@ const REDEMPTIONS_FILE = path.join(
   if (!studentEmail || !grantCode || !courseId) {
     await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 400);
     return res && res.status(400).json({ error: 'Missing required fields' });
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -84,6 +108,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await fs && fs.writeJSON(REDEMPTIONS_FILE, records, { spaces: 2 });
   await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 201);
   return res && res.status(201).json({ id: record && record.id, redeemedAt: now });  return res && res.status(201).json({ id: record && record.id, redeemedAt: now })
+<<<<<<< HEAD
 }
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
@@ -108,6 +133,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await fs.writeJSON(REDEMPTIONS_FILE, records, { spaces: 2 });
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 201);
   return res.status(201).json({ id: record.id, redeemedAt: now })
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
   authenticate_request,
   enforceRateLimit,
@@ -246,10 +274,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(201).json({ id: record.id, redeemedAt: now })
 
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   const { studentEmail, grantCode, courseId } = req.body || {};
   if (!studentEmail || !grantCode || !courseId) {
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
@@ -340,3 +374,7 @@ redeemedAt: now
 }
 }
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

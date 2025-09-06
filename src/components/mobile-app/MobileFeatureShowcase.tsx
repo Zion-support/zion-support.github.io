@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }
 export const MobileFeatureShowcase: React.FC = () => {
   const features = [
@@ -14,25 +15,48 @@ import React from "react",
 import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react'
 
     {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 {
       icon: <Star className="h-8 w-8 text-zion-purple" />
       title: "AI-Match Instantly"
       description: "Get matched with the perfect talent or jobs using our advanced AI algorithm."
     }
     },
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       icon: <CheckCircle className="h-8 w-8 text-zion-cyan" />
       title: "Track Milestones"
       description: "Monitor project progress and approve milestones directly from your phone."
+<<<<<<< HEAD
     }
     },
+=======
+
+
+    },
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       icon: <Mail className="h-8 w-8 text-zion-purple" />
       title: "Instant Messaging"
       description: "Chat with candidates or clients and receive notifications in real-time."
+<<<<<<< HEAD
 }
 export const MobileFeatureShowcase: React.FC = () => {
   const features = [
+=======
+
+
+    },
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       icon: <Users className="h-8 w-8 text-zion-cyan" />
       title: "Hire from Anywhere"
@@ -56,6 +80,7 @@ import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react'
       icon: <Smartphone className="h-8 w-8 text-zion-cyan" />
       title: "Biometric Security"
       description: "Login quickly and securely with Face ID or Touch ID on supported devices."
+<<<<<<< HEAD
     }
   ]
     <section id="features" className="py-16 bg-zion-blue">
@@ -85,6 +110,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       icon: <CheckCircle className="h-8 w-8 text-zion-cyan" />
       title: "Track Milestones"
       description: "Monitor project progress and approve milestones directly from your phone."
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
     },
@@ -249,6 +276,7 @@ export const MobileFeatureShowcase: React.FC = () => {;
   ];
   return (;
 
+<<<<<<< HEAD
 '"},
 ;
 };
@@ -283,6 +311,8 @@ export const MobileFeatureShowcase: React.FC = () => {;
     }
   ];
   return (;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <section id="features" className="py-16 bg-zion-blue">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-12">;
@@ -311,7 +341,15 @@ export const MobileFeatureShowcase: React.FC = () => {;
     </section>;
   );
 };
+<<<<<<< HEAD
 
 
 '"},
 }
+=======
+
+
+
+'"},
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+import { use_router } from 'next / router';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
+import { Button } from '@/components / ui / button';
+import { AlertTriangle } from 'lucide-react';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 const errorMessages: Record<string string> = {;
@@ -93,6 +100,7 @@ function AuthErrorPage() {
     </>);
 
 }
+<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -151,9 +159,18 @@ export default function AuthErrorPage() {
     </>
   )
 }
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

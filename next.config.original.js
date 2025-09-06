@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }
 };
 
@@ -8,6 +9,8 @@ export default nextConfig;
 },;
 ,;
 export default nextConfig;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 }
 ;
@@ -15,3 +18,7 @@ export default nextConfig;
 
 };
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",
 import { Link } from "react-router-dom",
 
@@ -277,6 +282,7 @@ function Footer() {
         </div>;
       </div>;
 
+<<<<<<< HEAD
 import { NewsletterForm } from "@/components/NewsletterForm",
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -354,12 +360,15 @@ export function Footer() {
               &copy, {new Date().getFullYear()} Zion Tech Group. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md: mt-0">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Link to="/privacy" className="text-zion-slate hover:text-zion-cyan text-sm transition-colors">Privacy Policy</Link>
               <Link to="/terms" className="text-zion-slate hover:text-zion-cyan text-sm transition-colors">Terms of Service</Link>
             </div>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </footer>
   );
 }
@@ -439,12 +448,16 @@ export function Footer() {;
           </div>;
         </div>;
       </div>;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </footer>
 
 
     </footer>;
   );
     </footer>);
+<<<<<<< HEAD
 }
     </footer>);
     </footer>;
@@ -457,3 +470,7 @@ export function Footer() {;
     </footer>;
   );
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

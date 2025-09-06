@@ -1,9 +1,14 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { ServiceVariant } from '../types / service - variants';
 
 export interface EmergingTech2026ServiceV4 {
 
   {
 
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 export interface EmergingTech2026ServiceV4 {;
   id: string;
@@ -647,6 +652,8 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [;
     growth_rate: '90% annual growth',
     variant: 'ai - futuristic',
     contact_info: {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -663,16 +670,30 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
     implementation_details: 'Comprehensive digital twin platform for smart cities with real - time modeling and predictive analytics.';
     launch_date: '2026 - 05 - 15';
+<<<<<<< HEAD
     customers: 30;
     rating: 4 && 4.8,
     reviews: 25
   }
 ];
+=======
+
+    customers: 30;
+
+    rating: 4 && 4.8,
+
+    reviews: 25
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -1359,6 +1380,7 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [;
 
 ;
 
+<<<<<<< HEAD
 ;
     }
     realImplementation: true
@@ -1787,3 +1809,5 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [;
     reviews: 25;
   }
 ];
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

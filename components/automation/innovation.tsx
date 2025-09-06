@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+
+
+};
+</header> {;
+  items && items.length === 0 && (<div className="text-gray-600 dark:text-gray-400" >No entries yet. The automation will populate this feed shortly.</div>) ;
+}</li>) ) ;
+}</ul> </div>) ;
+export default function InnovationDigest(): any ({ items }: Props) {;
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="space-y-6">;
       <header className="space-y-2">;
@@ -18,6 +32,14 @@
             {it && it.summary && <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">{it && it.summary}</p>}
           </li>;
         ))}
+<<<<<<< HEAD
+=======
+
+
+ 
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
  
 
 
@@ -54,10 +76,20 @@ export default function InnovationDigest({ items }: Props) {
 
 );
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </ul>;
     </div>;
   );
 }
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 </header> {
   items.length === 0 && (<div className="text - gray - 600 dark:text - gray - 400" >No entries yet. The automation will populate this feed shortly.</div>);
@@ -111,6 +143,7 @@ export default function InnovationDigest({ items }: Props) {
             {it.summary && <p className=&quot;mt-2 text-sm text-gray-600 dark:text-gray-300&quot;>{it.summary}</p>}
 
 }
+<<<<<<< HEAD
 </header> {
   items.length === 0 && (<div className="text-gray-600 dark:text-gray-400" >No entries yet. The automation will populate this feed shortly.</div>)
 }</li>) )
@@ -153,3 +186,6 @@ export default function InnovationDigest({ items }: Props) {
 }
   );
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

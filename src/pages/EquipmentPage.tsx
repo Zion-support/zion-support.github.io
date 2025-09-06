@@ -4,6 +4,7 @@ import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 
+<<<<<<< HEAD
 import { useRouter  } from 'next/router';
 import { useState, useEffect, useCallback, useMemo  } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
@@ -16,6 +17,8 @@ import { motion, AnimatePresence  } from 'framer-motion';
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, MapPin, Package, AlertTriangle, RefreshCw } from 'lucide-react'
 import { generateDatacenterEquipment, getEquipmentMarketStats, getRecommendedEquipment  } from '@/utils/equipmentAutoFeedAlgorithm';
 import { ProductListing  } from '@/types/listings';
@@ -30,6 +33,7 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 // Enhanced initial equipment with more variety
 const INITIAL_EQUIPMENT: ProductListing[] = [
   {
+<<<<<<< HEAD
     id: "nvidia-a100-server";
     title: "NVIDIA A100 GPU Training Server";
     description: "High-performance AI training server with 8x A100 GPUs, designed for demanding machine learning workloads.",
@@ -41,6 +45,10 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     tags: ["AI", "Machine Learning", "GPU"],
     author: { name: "NVIDIA", id: "nvidia" },
     images: ["https://images.unsplash.com/photo-1618599515406-3e5fd8cd9a27?auto;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     id: "nvidia-a100-server",
     title: "NVIDIA A100 GPU Training Server",
     description: "High-performance AI training server with 8x A100 GPUs, designed for demanding machine learning workloads.",
@@ -208,11 +216,16 @@ const EquipmentFilterControls = ({
     </Button>
   </div>
 ),
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 // Equipment card
 const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing, onViewDetails: () => void }) => {
   const { formatPrice } = useCurrency(),
   return (
+<<<<<<< HEAD
     <EquipmentErrorBoundary>
       <EquipmentPageContent />
     </EquipmentErrorBoundary>
@@ -400,6 +413,10 @@ function EquipmentPageContent() {;
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)
   }, []),
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   // Loading state
   if (loading && equipment.length === 0) {
@@ -418,6 +435,7 @@ function EquipmentPageContent() {;
 
 
 
+<<<<<<< HEAD
 }
 // Main export with error boundary
 export default function EquipmentPage() {
@@ -429,6 +447,9 @@ export default function EquipmentPage() {
 }
 
 
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Error state
   if (error && equipment.length === 0) {
     return (
@@ -546,6 +567,10 @@ export default function EquipmentPage() {
           loading={isFetching}
         />
       </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
         <AnimatePresence mode="popLayout">
@@ -648,4 +673,8 @@ function EquipmentPage() {
       <EquipmentPageContent />;
     </EquipmentErrorBoundary>);
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

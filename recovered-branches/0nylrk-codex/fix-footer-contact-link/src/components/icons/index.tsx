@@ -1,9 +1,14 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>,
     return <LucideIcon {...props} />;
   };
 
 
+<<<<<<< HEAD
 import React from 'react';
 import * as LucideIcons from 'lucide-react';
 // Alias for missing icons or for icons with different names
@@ -104,6 +109,8 @@ const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIco
     const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>,
     return <LucideIcon {...props} />;
   };
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   IconComponent.displayName = aliasName;
   return IconComponent
 }
@@ -113,9 +120,13 @@ const iconExports: Record<string, React.FC<IconProps>> = {}
 Object.entries(iconAliases).forEach(([alias, lucideName]) => {
   if (LucideIcons[lucideName]) {
     iconExports[alias] = createIconComponent(alias, lucideName)
+<<<<<<< HEAD
 import React from 'react',;
 import * as LucideIcons from 'lucide-react',;
 ;
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Alias for missing icons or for icons with different names;
 const iconAliases:Record<string keyof typeof LucideIcons> = {;
   // Grid views;
@@ -433,6 +444,7 @@ export const {;
 
 export const {;
 
+<<<<<<< HEAD
   } else {
     console.warn(`Icon '${lucideName}' not found in lucide-react`);
     // Use a fallback icon
@@ -442,6 +454,9 @@ export const {;
 export const {
 
 export const {;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   LayoutGrid;
   List;
   Zap;
@@ -506,6 +521,7 @@ export const {;
   BarChart;
   BookOpen;
   Key;
+<<<<<<< HEAD
   Tag} = iconExports;
 // Also export all original icons from lucide-react
 export * from 'lucide-react';
@@ -692,6 +708,8 @@ export const {;
   Tag} = iconExports;
 // Also export all original icons from lucide-react;
 export * from 'lucide-react';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -701,6 +719,7 @@ export * from 'lucide-react';
 ;
 // Also export all original icons from lucide-react;
 export * from 'lucide-react';
+<<<<<<< HEAD
 ;
 // Alias for missing icons or for icons with different names type IconProps = LucideIcons.LucideProps;
 // Create a type safe export for each icon const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIcons) => {
@@ -709,3 +728,10 @@ export * from 'lucide-react';
   
 };
 // Generate icon exports // Also export all original icons from lucide-react export * from 'lucide-react';
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -14,6 +14,20 @@ export function currentBadge(balance: number): Badge | null {;
 
 
   let current: Badge | null = null;
+<<<<<<< HEAD
+=======
+=======
+threshold: number, //token balance threshold ;
+};
+const BADGES: Badge[] = [;
+  { id: 'starter', label: 'Starter', threshold: 50 },;
+  { id: 'rising', label: 'Rising Star', threshold: 200 },;
+  { id: 'pro', label: 'Pro', threshold: 500 },;
+  { id: 'elite', label: 'Elite', threshold: 1000 },;
+];
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react";
 
 export type Badge = {
@@ -59,6 +73,10 @@ export default function Badges({ balance }: { balance: number }) {;
             balance >= b.threshold;
               ? 'bg - yellow - 100 border - yellow - 300 text - yellow - 800';
               : 'bg - gray - 100 border - gray - 200 text - gray - 500'          }`}  let current: Badge | null = null,
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   for (const b of BADGES) {
     // Check condition
 if (current = b) {
@@ -66,6 +84,7 @@ if (current = b) {
 }
 
 
+<<<<<<< HEAD
     <div className="flex gap-2 items-center flex-wrap">
       {BADGES.map((b) => (
         <span
@@ -73,6 +92,47 @@ if (current = b) {
           className={`px-3 py-1 rounded-full text-xs border ${
     </div>;
   );        <span className="ml-2 text-xs text-green-600">Current: {active && active.label}</span>;
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  return current;
+export default function Badges(): any ({ balance }: { balance: number }) {;
+  const active = currentBadge(balance);
+  return (
+
+
+  }
+  return current;
+}
+
+
+
+  return (
+    <div className='flex gap-2 items-center flex-wrap'>;
+      {BADGES && BADGES.map(b => (    <div className="flex gap-2 items-center flex-wrap">;
+      {BADGES && BADGES.map((b) => (;
+        <span
+          key={b && b.id}
+          className={`px-3 py-1 rounded-full text-xs border ${
+            balance>= b && b.threshold;
+              ? 'bg-yellow-100 border-yellow-300 text-yellow-800';
+              : 'bg-gray-100 border-gray-200 text-gray-500'              ? "bg-yellow-100 border-yellow-300 text-yellow-800";
+              : "bg-gray-100 border-gray-200 text-gray-500";
+          }`}
+          title={`Requires ${b && b.threshold} ZION$`}
+        >;
+          {b && b.label}
+        </span>;
+      ))}
+      {active && (;
+        <span className='ml-2 text-xs text-green-600'>;
+          Current: {active && active.label}
+        </span>;
+      )}
+
+    </div>;
+  );        <span className="ml-2 text-xs text-green-600">Current: {active && active.label}</span>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       )}
     </div>;
   );
@@ -98,6 +158,11 @@ function Badges() {
               ? 'bg - yellow - 100 border - yellow - 300 text - yellow - 800';
               : 'bg - gray - 100 border - gray - 200 text - gray - 500'              ? "bg - yellow - 100 border - yellow - 300 text - yellow - 800";
               : "bg - gray - 100 border - gray - 200 text - gray - 500";
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -118,6 +183,11 @@ export default function Badges({ balance }: { balance: number }) {
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           }`}
           title={`Requires ${b.threshold} ZION$`}
         >;
@@ -128,6 +198,7 @@ export default function Badges({ balance }: { balance: number }) {
         <span className='ml - 2 text - xs text - green - 600'>;
           Current: {active.label}
 
+<<<<<<< HEAD
         <span className='ml - 2 text - xs text - green - 600'>;
           Current: {active.label}
         </span>)}
@@ -200,3 +271,7 @@ export default function Badges({ balance }: { balance: number }) {
 
 }
   );
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

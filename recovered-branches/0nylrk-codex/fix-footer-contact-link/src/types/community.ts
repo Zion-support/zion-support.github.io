@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export type ForumCategory = 
 
 
@@ -8,18 +11,25 @@ export type ForumCategory =
   | 'ai-tools'
   | 'feedback'
   | 'announcements';
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export type ForumCategory =;
   | 'getting - hired';
   | 'project - help';
   | 'ai - tools';
   | 'feedback';
   | 'announcements';
+<<<<<<< HEAD
   id: ForumCategory;
   name: string;
   description: string;
   adminOnly: boolean
   icon: string
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -35,11 +45,19 @@ export interface ForumCategoryInfo {;
 
 }
 export interface ForumPost {
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
 
 export interface ForumPost {;
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
   title: string;
   content: string;
@@ -53,6 +71,7 @@ export interface ForumPost {;
   updated_at: string;
   upvotes: number;
   downvotes: number;
+<<<<<<< HEAD
 export interface ForumPost {
 
 export interface ForumPost {;
@@ -75,6 +94,8 @@ export interface ForumPost {;
   isLocked?: boolean
   isFeatured?: boolean
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   reply_count: number;
   is_answered?: boolean;
@@ -84,11 +105,19 @@ export interface ForumPost {;
 
 }
 export interface ForumReply {
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
 
 export interface ForumReply {;
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
   post_id: string;
   parentReplyId?: string;
@@ -100,6 +129,7 @@ export interface ForumReply {;
   created_at: string;
   updated_at: string;
   upvotes: number;
+<<<<<<< HEAD
 export interface ForumReply {
 
 export interface ForumReply {;
@@ -126,6 +156,8 @@ export interface Badge {;
   icon: string
   color: string
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   downvotes: number,
   is_answer?: boolean;
@@ -155,9 +187,12 @@ export interface CommunityUser {
 
 export interface UserBadge {;
 
+<<<<<<< HEAD
 export interface UserBadge {
 
 export interface UserBadge {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   userId: string;
   badgeId: string
   awardedAt: string
@@ -166,14 +201,19 @@ export interface UserBadge {;
 
 export interface CommunityUser {;
 
+<<<<<<< HEAD
 export interface CommunityUser {
 
 export interface CommunityUser {;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
   name: string;
   avatar?: string;
   role: string;
   reputation: number;
+<<<<<<< HEAD
   postCount: number;
   replyCount: number;
   badges: Badge[];
@@ -260,3 +300,11 @@ export interface CommunityUser {;
 }
 ;
 
+=======
+  post_count: number;
+  reply_count: number;
+  badges: Badge[];
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

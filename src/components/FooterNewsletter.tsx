@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useRef } from 'react';
 import { Input  } from '@/components/ui/input';
 import { Button  } from '@/components/ui/button';
@@ -307,14 +308,27 @@ export function FooterNewsletter(): React.ReactElement {;
         type="text"
         name="honeypot"
         value={honeypot}
+=======
+{/* Honeypot field */}
+      <input
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         onChange={e => setHoneypot(e && e.target.value)}
         tabIndex={-1}
         autoComplete='off';
         style={{ display: 'none' }}
       />;
+<<<<<<< HEAD
       <Button
         type="submit"
         disabled={isSubmitting}
+=======
+
+      <Button
+        type="submit"
+        disabled={isSubmitting}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple'>;
 
         type="text"
@@ -325,6 +339,7 @@ export function FooterNewsletter(): React.ReactElement {;
         tabIndex={-1}
 
 
+<<<<<<< HEAD
         type='text'
         type="text"
         value={honeypot}
@@ -352,6 +367,8 @@ export function FooterNewsletter(): React.ReactElement {;
 }
 }
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         autoComplete="off"
         style={{ display: 'none' }}
       />
@@ -364,6 +381,7 @@ export function FooterNewsletter(): React.ReactElement {;
         {isSubmitting ? (;
           <>;
             <Loader2 className='h-4 w-4 mr-2 animate-spin' />;
+<<<<<<< HEAD
             Subscribing...;
           </>;
         ) : (;
@@ -474,6 +492,8 @@ export function FooterNewsletter():React.ReactElement {;
         {isSubmitting ? (;
           <>;
             <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             Subscribing...;
           </>;
         ) : (;
@@ -481,6 +501,12 @@ export function FooterNewsletter():React.ReactElement {;
         )}
       </Button>;
     </form>;
+<<<<<<< HEAD
+=======
+  );
+
+} ;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 } ;
 
 import React, { useState, useRef } from 'react';
@@ -654,6 +680,7 @@ toast.error ('Unable to subscribe right now. Please try again later.', {;
 }finally {;
   setIsSubmitting (false) ;
 }
+<<<<<<< HEAD
 
 
 };
@@ -666,3 +693,6 @@ return (<form id="footer-newsletter-form" aria-label="Newsletter sign-up" onSubm
   );
 } ;
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

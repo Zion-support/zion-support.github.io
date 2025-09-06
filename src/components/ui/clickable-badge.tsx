@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { X } from 'lucide-react'
 import { cn } from '@/lib/utils'
@@ -111,6 +112,8 @@ export function ClickableBadge({
     </div>
   )
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function ClickableBadge({
 
 
@@ -143,6 +146,10 @@ export function ClickableBadge({;
         onRemove && "pl-2.5 pr-1.5 py-1";
         className;
       )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>
   )
   )
@@ -150,6 +157,7 @@ export function ClickableBadge({;
             e.stopPropagation()
             onRemove()
           }}
+<<<<<<< HEAD
           className="ml-1 rounded-full p-0.5 hover:bg-background/20"
           aria-label="Remove"
         >
@@ -161,6 +169,11 @@ export function ClickableBadge({;
 };
 }
           className="ml-1 rounded-full p-0.5 hover:bg-background/20";
+=======
+
+          className="ml-1 rounded-full p-0.5 hover:bg-background/20";
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           aria-label="Remove";
         >;
           <X className="h-3 w-3" />;
@@ -229,4 +242,8 @@ function ClickableBadge() {
         </button>)}
     </div>);
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

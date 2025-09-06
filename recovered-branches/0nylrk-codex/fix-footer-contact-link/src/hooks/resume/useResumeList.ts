@@ -1,14 +1,23 @@
 
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume  } from '@/types/resume';
 import { useAuth } from '@/hooks/useAuth';
 export function useResumeList() {
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 export function useResumeList() {;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -26,15 +35,27 @@ export function useResumeList() {;
       const { data: resumeData, error: resumeError } = await supabase
         .from('talent_resumes')
         .select('*')
+<<<<<<< HEAD
         .eq('user_id', user.id)
         .order('is_active', { ascending: false })
         .order('created_at', { ascending: false });
       if (resumeError) throw resumeError;
       if (!resumeData |resumeData.length === 0) {
+=======
+        .eq('user_id', user && user.id)
+        .order('is_active', { ascending: false })
+        .order('created_at', { ascending: false });
+      if (resumeError) throw resumeError;
+
+      
+      if (!resumeData || resumeData && resumeData.length === 0) {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         setResumes([]);
         return []
       }
       // Transform data to match Resume type
+<<<<<<< HEAD
           id: resume && resume.id;
           title: resume && resume.title;
           headline: resume && resume.headline,
@@ -183,6 +204,29 @@ export function useResumeList() {;
 
     fetch_resumes;
   }
+=======
+      const transformedResumes: Resume[] = resumeData && resumeData.map(resume => ({
+        id: resume && resume.id;
+        user_id: resume && resume.user_id;
+=======
+import {useState, useEffect} from 'react';
+import {supabase} from '@/integrations / supabase / client';
+import {Resume} from '@/types / resume';
+import {use_auth} from '@/hooks / use_auth';
+export /**
+ * useResumeList - Function description
+ */
+function useResumeList() {
+  const { user } = use_auth ();
+  const [is_loading, setIsLoading] = useState (false);
+  const [error, set_error] = useState < string | null>(null);
+  const [resumes, set_resumes] = useState < Resume[]>([]);
+;
+  const fetch_resumes = async () => {
+    // Check condition
+if ( {) {
+  $2
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
 import { useState, useEffect } from 'react',;
@@ -254,6 +298,7 @@ export function useResumeList() {;
     if (user) {;
       fetchResumes(),;
     }
+<<<<<<< HEAD
   }, [user]),;
   ;
   return {;
@@ -279,5 +324,17 @@ certifications: [];
 is active: resume.is active 
 }) );
 }
+=======
+  }, [user]);
+;
+
+  return {
+    is_loading;
+    error;
+    resumes;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 }

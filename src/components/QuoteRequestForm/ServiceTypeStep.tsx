@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { useEffect, useState } from "react",
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",
@@ -223,6 +224,11 @@ const listingSchema = z.object({
   const sourceListings = listings
 }
 
+=======
+}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   )
 }
 
@@ -357,4 +363,8 @@ const listing_schema = z.object ({
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

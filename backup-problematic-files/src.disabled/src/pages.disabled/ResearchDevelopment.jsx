@@ -9,4 +9,8 @@ const ResearchDevelopment = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ResearchDevelopment;
+=======
+export default ResearchDevelopment;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

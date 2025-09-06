@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 export interface EmergingTech2026Service {;
   id: string;
@@ -723,6 +724,16 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
   },
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
+=======
+
+import { ServiceVariant } from '../types / service - variants';
+
+export interface EmergingTech2026Service {
+
+  {
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -737,18 +748,36 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
+<<<<<<< HEAD
     mobile: string, email: string,
     address: string,
     website: string
+=======
+      
+    mobile: string, email: string,
+    address: string,
+    website: string
+  
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
+<<<<<<< HEAD
 }
 export const emergingTech2026Services: EmergingTech2026Service[] = [
   // Neuromorphic Computing Platform
   {
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+}
+
+export const emergingTech2026Services: EmergingTech2026Service[] = [
+  // Neuromorphic Computing Platform
+  {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     id: 'neuromorphic-computing-platform-2026', name: 'Neuromorphic Computing Platform 2026',
     tagline: 'Brain-inspired computing for next-generation AI and robotics',
     price: '$2,499',
@@ -769,6 +798,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     competitors: ['Intel LoihiIBM TrueNorthBrainChipQualcomm ZerothSpiNNaker'], marketSize: '$8.7B market',
     growthRate: '400% annual growth', variant: 'ai-futuristic',
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
@@ -1360,6 +1390,12 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
+=======
+      
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       website: 'https://ziontechgroup.com';
@@ -1371,8 +1407,14 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     rating: 4.8,
     reviews: 120;
 
+<<<<<<< HEAD
   }
 ];
+=======
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTech2026Service {;
   id: string,;

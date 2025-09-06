@@ -1,12 +1,30 @@
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import type { NextApiRequest, NextApiResponse } from "next";
+import { v4 as uuidv4 } from "uuid";
+import { readJsonFile, writeJsonFile } from "../../utils/db";
+import type { Conversation, Message } from "../../utils/types";
+import { rateLimit } from "../../utils/rateLimit";
+const FILE = "conversations && conversations.json";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!rateLimit(req, res)) return;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (req && req.method === "POST") {
     const { conversationId, sender, text, attachments } = req && req.body || {};
     if (
       !conversationId ||
       !sender ||
       (!text && (!attachments || attachments && attachments.length === 0))
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     ) {
       res && res.status(400).json({ error: "Invalid message" });
       return;
@@ -20,6 +38,7 @@
     }
     const now = new Date().toISOString();
     const msg: Message = {
+<<<<<<< HEAD
       id: uuidv4(),
       conversationId: String(conversationId),
       sender: { type: sender && sender.type, id: String(sender && sender.id) },
@@ -36,6 +55,23 @@
   }
   if (req && req.method === "GET") {
     const { conversationId } = req && req.query;
+=======
+
+    res.status(201).json({ message: msg });
+    return
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  }
+
+
+
+
+  if (req.method === "GET") {
+=======
+
+
+  if (req.method === 'GET') {
+    const { conversationId } = req.query;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const conversations = readJsonFile<Conversation[]>(FILE, []);
     const conv = conversations && conversations.find((c) => c && c.id === String(conversationId));
     if (!conv) {
@@ -45,6 +81,7 @@
     res && res.status(200).json({ conversation: conv });
     return;
   }
+<<<<<<< HEAD
   if (req.method === 'POST') {
     const { conversationId, sender, text, attachments } = req.body || {};
     if (!conversationId || !sender || (!text && (!attachments || attachments.length === 0))) {
@@ -93,6 +130,10 @@
   }
 
 
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const conv = conversations.find((c) => c.id === String(conversationId));
     if (!conv) {
       res.status(404).json({ error: 'Conversation not found' });
@@ -101,9 +142,22 @@
     res.status(200).json({ conversation: conv });
     return
   }
+<<<<<<< HEAD
   res && res.setHeader("AllowGET, POST");
   res && res.status(405).end("Method Not Allowed");
 }
+=======
+
+
+  res && res.setHeader("AllowGET, POST");
+  res && res.status(405).end("Method Not Allowed");
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+}
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from './next';
 import { v4 as uuidv4  } from './uuid';
 import { readJsonFile, writeJsonFile  } from '../../utils / db';
@@ -191,6 +245,7 @@ if ( {) {
   res.status(405).end('Method Not Allowed')
 
 }
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
@@ -377,9 +432,17 @@ export default function handler(req, res) {
   res.status(405).end("Method Not Allowed");
 }
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
+<<<<<<< HEAD
   res.setHeader("AllowGET, POST");
+=======
+res.setHeader("AllowGET, POST");
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   res.status(405).end("Method Not Allowed");
 }
 }
@@ -389,14 +452,28 @@ export default function handler(req, res) {
   }
 }
 ;
+<<<<<<< HEAD
   res.setHeader('AllowGET, POST');
   res.status(405).end('Method Not Allowed')
 }
   res.setHeader('AllowGET, POST');
   res.status(405).end('Method Not Allowed')
 }
+=======
+
+  res.setHeader('AllowGET, POST');
+  res.status(405).end('Method Not Allowed')
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

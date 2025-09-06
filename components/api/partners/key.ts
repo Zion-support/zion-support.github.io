@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 id: uuidv4(),
     partnerId: auth && auth.partner.id,
     key: uuidv4(),
@@ -19,6 +20,9 @@ id: uuidv4(),
   await saveApiKeys(keys);
   return res && res.status(201).json({ apiKey: newKey && newKey.key })
 }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from "next";
 import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";
 import { v4 as uuidv4 } from "uuid";
@@ -47,6 +51,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await saveApiKeys(keys);
   return res.status(201).json({ apiKey: newKey.key })
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   authenticate_request,
   listApiKeys,
   saveApiKeys,
@@ -148,6 +157,7 @@ if (existing.active = false) {
   return res.status(201).json({ apiKey: newKey.key })
 
 }
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
@@ -223,3 +233,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 }
   const newKey = {
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

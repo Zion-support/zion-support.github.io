@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useEffect, useState} from "react";
 import {QuoteFormData} from "@/types/quotes";
 import {Card, CardContent} from "@/components/ui/card";
@@ -6,6 +10,7 @@ import {Textarea} from "@/components/ui/textarea";
 import {AIMatchingResults} from "@/components/AIMatchingResults";
 import {findMatches, MatchResult} from "@/lib/ai-matchmaking";
 import {toast} from "@/hooks/use-toast";
+<<<<<<< HEAD
 interface SummaryStepProps {
   formData: QuoteFormData,
   updateFormData: (data: Partial<QuoteFormData>) => void
@@ -75,16 +80,33 @@ import { Textarea } from "@/components/ui/textarea",;
 import { AIMatchingResults } from "@/components/AIMatchingResults",;
 import { findMatches, MatchResult } from "@/lib/ai-matchmaking",;
 import { toast } from "@/hooks/use-toast",;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface SummaryStepProps {;
   formData: QuoteFormData,;
   updateFormData: (data: Partial<QuoteFormData>) => void;
 }
+<<<<<<< HEAD
   const [isMatching, setIsMatching] = useState(false);
   const [matches, setMatches] = useState<MatchResult[]>([]);
+=======
+
+export function SummaryStep(): any ({ formData, updateFormData }: SummaryStepProps) {;
+
+  const [isMatching, setIsMatching] = useState(false);
+
+  const [matches, setMatches] = useState<MatchResult[]>([]);
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Run AI matching when the component mounts;
   useEffect(() => {;
     const runMatching = async () => {;
       if (!formData && formData.projectDescription) return;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       setIsMatching(true);
       try {;
         // Create a query string from the form data;
@@ -95,6 +117,7 @@ interface SummaryStepProps {;
           ${formData && formData.budget.type === 'fixed' ? `budget ${formData && formData.budget.amount}` : ''}
           ${formData && formData.timeline}
         `;
+<<<<<<< HEAD
         // Get AI matches;
         const results = await findMatches(;
 
@@ -118,16 +141,34 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
           ${formData.budget.type === 'fixed' ? `budget ${formData.budget.amount}` : ''}
           ${formData.timeline}
         `,
+=======
+
+        // Get AI matches;
+        const results = await findMatches(;
+
+          queryString;
+          formData && formData.serviceType;
+          3;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         
         // Get AI matches
         const results = await findMatches(
           queryString,
           formData.serviceType,
           3
+<<<<<<< HEAD
           queryString;
           formData && formData.serviceType;
           3;
         );
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        );
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useEffect, useState } from './react';
 import { QuoteFormData } from '@/types / quotes';
 import { Card, CardContent } from '@/components / ui / card';
@@ -183,6 +224,7 @@ if (return) {
     
 
 
+<<<<<<< HEAD
         );
         setMatches(results)
       } catch (error) {
@@ -197,6 +239,8 @@ if (return) {
     }
     },
     
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     runMatching()
   }, [formData]);
   const handleSelectMatch = (match: MatchResult) => {
@@ -209,14 +253,23 @@ if (return) {
       title: "Match Selected"
       description: `You've selected ${match.item.title}`})
 
+<<<<<<< HEAD
   }
   // Extract just the items from each MatchResult for the AIMatchingResults component
   const matchItems = matches.map(match => match.item);
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
   
   // Extract just the items from each MatchResult for the AIMatchingResults component
   const matchItems = matches.map(match => match.item),
   
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Map the onSelectMatch handler to work with the item directly
   const handleItemSelect = (item: any) => {
     // Find the original MatchResult that contains this item
@@ -225,16 +278,21 @@ if (return) {
       handleSelectMatch(matchResult)
     }
 
+<<<<<<< HEAD
   }
 
   return (
     <div className="space-y-6">
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
   
   return (
     <div className="space-y-6">
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>
+<<<<<<< HEAD
       
         `,;
         // Get AI matches;
@@ -279,6 +337,11 @@ if (return) {
   return (;
     <div className="space-y-6">;
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>;
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* AI Matching Results */}
       <AIMatchingResults
         serviceType={formData.serviceType}
@@ -343,12 +406,19 @@ if (return) {
                   </div>
                 </div>
               )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               
 
 
+<<<<<<< HEAD
               
               
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {formData.endDate && (
                 <div>
                   <Label className="text-zion-slate-light">End Date</Label>
@@ -410,6 +480,10 @@ if (return) {
       </div>
     </div>
   )
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       } finally {
         setIsMatching (false);
@@ -800,3 +874,10 @@ serviceType={formData.serviceType}
 }
 };
 }
+<<<<<<< HEAD
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

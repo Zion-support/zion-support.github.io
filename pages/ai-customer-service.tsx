@@ -2,6 +2,7 @@
 }
 
 
+<<<<<<< HEAD
 }
 import React from 'react',
 import Head from 'next / head',
@@ -10,6 +11,8 @@ export default /**
  */
 function AICustomerService() {
   return (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <>;
       <Head>;
         <title > AI Customer Service | Zion Tech Group</title>;
@@ -24,6 +27,7 @@ function AICustomerService() {
       </div>;
     </>);
 }
+<<<<<<< HEAD
       </Head>
       <div className=&quot;min-h-screen bg-black text-white&quot;>
         <section className=&quot;container mx-auto px-4 py-20&quot;>
@@ -75,3 +79,8 @@ export default function AICustomerService(req, res) {
 ;
 
 ;
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

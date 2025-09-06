@@ -91,6 +91,7 @@ const Button: React.FC<ButtonProps> = ({;
 
   if (href) {;
 
+<<<<<<< HEAD
 import React from "react"
 import Link from "next/link"
 interface ButtonProps {
@@ -133,6 +134,36 @@ const Button: React.FC<ButtonProps> = ({
         {content}
       </Link>
     )
+=======
+    return (
+      <Link href={href} className={classes} style={style}>
+        {content}
+
+      </Link>;
+    );
+
+  const base_classes = "px - 4 py - 2 rounded - md font - medium transition - colors duration - 200";
+  const size_classes = {
+    sm: "px - 3 py - 1.5 text - sm",
+    md: "px - 4 py - 2 text - base",
+    lg: "px - 6 py - 3 text - lg",
+  }
+  const variant_classes = {
+    primary: "bg - blue - 600 text - white hover:bg - blue - 700 disabled:bg - gray - 400",
+    secondary: "bg - gray - 600 text - white hover:bg - gray - 700 disabled:bg - gray - 400",
+    outline: "border border - gray - 300 text - gray - 700 hover:bg - gray - 50 disabled:bg - gray - 100",
+  }
+  const classes = `${base_classes} ${size_classes[size]} ${variant_classes[variant]} ${class_name}`;
+  const content = <>{children}</>;
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <Link href={href} className={classes} style={style}>;
+        {content}
+      </Link>);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   return (
     <button
@@ -140,6 +171,7 @@ const Button: React.FC<ButtonProps> = ({
       className={classes}
       onClick={onClick}
       disabled={disabled}
+<<<<<<< HEAD
       style={style}
     >
       {content}
@@ -148,12 +180,21 @@ const Button: React.FC<ButtonProps> = ({
 };
 export { Button };
 import React from 'react';
+=======
+
+    </button>;
+  );
+};
+export { Button };
+export default Button;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link';
   size?: 'default' | 'sm' | 'lg' | 'icon';
   className?: string;
 }
+<<<<<<< HEAD
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant = 'default', size = 'default', ...props }, ref) => {
@@ -190,3 +231,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 Button.displayName = 'Button';
 export default Button;
 export default Button;
+=======
+export { Button }
+export default Button;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

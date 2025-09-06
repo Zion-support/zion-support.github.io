@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
@@ -169,6 +170,9 @@ export function JobMatchCard({;
       onInvite(matchId);
     }
   },
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -256,6 +260,7 @@ import React from 'react';
 
 
 
+<<<<<<< HEAD
 
   // Generate a formatted date for display
   const postedDate = new Date(),
@@ -332,6 +337,9 @@ import React from 'react';
     </Card>
   )
 }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>;
         </div>;
       </CardContent>;
@@ -340,8 +348,16 @@ import React from 'react';
 
 
 
+<<<<<<< HEAD
 }
 import React from 'react';
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent } from '@/components / ui / card';
@@ -587,6 +603,7 @@ onInvite
   if (onApply) {
   onApply (matchId) 
 }
+<<<<<<< HEAD
 };
 const handleViewDetails = () => {
   if (onViewDetails) {
@@ -620,3 +637,6 @@ postedDate.setDate (postedDate.getDate () - Math.floor (Math.random () * 14) ), 
 ;
 }
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

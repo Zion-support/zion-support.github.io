@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from "react";
 import Head from "next/head";
@@ -11,6 +15,40 @@ return (
         content="Space mission control, satellite operations, and secure communications consulting."
 
       />;
+<<<<<<< HEAD
+=======
+      <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/space-tech" />;
+    </Head>;
+    <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
+      <div className="max-w-7xl mx-auto space-y-12">;
+        <header className="text-center">;
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-600 mb-4">;
+            <Satellite className="w-8 h-8 text-white" />;
+          </div>;
+          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">;
+            Space Technology;
+          </h1>;
+          <p className="text-gray-300 text-lg max-w-3xl mx-auto">;
+            Secure, reliable operations for space and earth observation;
+            missions.;
+          </p>;
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">;
+            <a href="/contact" className="px-8 py-4">;
+              Discuss a Mission;
+            </a>;
+            <a href="/market-pricing" className="px-8 py-4">;
+              See Market Pricing;
+            </a>{" "}
+          </div>;
+        </header>;
+        <section>;
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">;
+            Capabilities;
+          </h2>;
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+            {features && features.map((f) => (;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div
                 key={f}
                 className="flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-700/60">;
@@ -18,9 +56,17 @@ return (
                 <span className="text-gray-200">{f}</span>{" "}
               </div>;
             ))}
+<<<<<<< HEAD
           </div>;
         </section>;
         <section className="text-center">;
+=======
+
+          </div>;
+        </section>;
+        <section className="text-center">;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <a
             href="/space-technology"
             className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">;
@@ -85,10 +131,20 @@ return (
           >;
             <Globe2 className="w - 4 h - 4" />{" "}
             <span > Explore detailed Space Technology offerings</span>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </a>;
         </section>;
       </div>;
     </div>;
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -215,6 +271,7 @@ export default function SpaceTechPage() {
       </div>
     </Layout>
   )
+<<<<<<< HEAD
   </Layout>);
 ;
 import React from 'react';
@@ -258,6 +315,16 @@ export default function SpaceTechPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+<<<<<<< HEAD
+}
+
+  </Layout>);
+;
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>;
           </section>;
           <section className="text-center">;
@@ -276,3 +343,9 @@ export default function SpaceTechPage(req, res) {
   }
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

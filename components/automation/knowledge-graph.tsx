@@ -1,4 +1,20 @@
+<<<<<<< HEAD
 export default function KnowledgeGraph({ report }: Props) {
+=======
+
+
+export default function KnowledgeGraph({ report }: Props) {
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+};
+) ) ;
+}</ul> </section> <section>) ) ;
+}</ul> </section> </div>) ;
+export default function KnowledgeGraph(): any ({ report }: Props) {;
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (!report) return <div>No knowledge graph yet.</div>;
   return (
     <div className="space-y-6">;
@@ -33,6 +49,11 @@ export default function KnowledgeGraph({ report }: Props) {
     </div>;
   );
 }
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 ) );
 }</ul> </section> <section>) );
@@ -91,10 +112,16 @@ export default function KnowledgeGraph({ report }: Props) {
             <li key={i} className=&quot;px-2 py-1 rounded bg-gray-100 dark:bg-gray-800&quot;>{t.term} <span className=&quot;text-gray-500&quot;>({t.count})</span></li>
 
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   );
 }
 
+<<<<<<< HEAD
 ) )
 }</ul> </section> <section>) )
 }</ul> </section> </div>)
@@ -145,3 +172,6 @@ export default function KnowledgeGraph({ report }: Props) {
 }
   );
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

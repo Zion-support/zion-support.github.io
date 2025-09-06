@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 import { Heart } from 'lucide-react'
 import { useWishlist  } from '@/hooks/useWishlist';
@@ -92,6 +93,22 @@ const stockStatus =;
   const imageAltText = productTitle;
   const isMobile = useMediaQuery('(max-width: 768px)'),;
   const isTablet = useMediaQuery('(max-width: 1200px)'),;
+=======
+const stockStatus =;
+    product && product.stock === undefined;
+      : 'In stock';
+
+  const stockVariant =;
+    product && product.stock === undefined;
+  const productTitle = product && product.title;
+
+  const imageUrl = Array && Array.isArray(product && product.images) && product && product.images.length > 0 ? product && product.images[0] : null;
+  const imageAltText = productTitle;
+
+  const isMobile = useMediaQuery('(max-width: 768px)'),;
+  const isTablet = useMediaQuery('(max-width: 1200px)'),;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
 
   );
@@ -99,11 +116,15 @@ const stockStatus =;
 
   );
 }
+<<<<<<< HEAD
 ;
 
 
   );
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const stock_status =;
     product.stock === undefined;
       : 'In stock';
@@ -118,6 +139,7 @@ const stockStatus =;
 }
   );
 }
+<<<<<<< HEAD
 import Link from 'next/link',;
 import { Heart } from 'lucide-react';
 import { useWishlist } from '@/hooks/useWishlist',;
@@ -377,3 +399,6 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
 }
 ;
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

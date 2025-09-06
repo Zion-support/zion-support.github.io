@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import Link from "next/link",;
 export const metadata = {;
@@ -9,6 +13,10 @@ export default function EnterpriseITPage() {;
 
 
     <div className="min-h-screen">;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Link from './next / link';,
 export const metadata = {
   title: "Enterprise IT Solutions - Zion Tech Group | Digital Transformation Services",
@@ -59,15 +67,23 @@ export default function EnterpriseITPage() {;
                 <p className="text - gray - 300 text - lg mb - 6 leading - relaxed">;
                   In today's digital - first world, enterprises need agile, scalable,
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <p className="text-gray-300 text-lg mb-6 leading-relaxed">;
 
                   In today's digital-first world, enterprises need agile, scalable,;
 
+<<<<<<< HEAD
                 <p className="text - gray - 300 text - lg mb - 6 leading - relaxed">;
                   In today's digital - first world, enterprises need agile, scalable,
                 <p className="text-gray-300 text-lg mb-6 leading-relaxed">;
                   In today's digital-first world, enterprises need agile, scalable;
                   In today's digital-first world, enterprises need agile, scalable,;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   and secure IT infrastructure to compete and thrive. Our comprehensive;
                   solutions help organizations modernize their technology stack while;
                   maintaining operational excellence.;
@@ -129,6 +145,7 @@ export default function EnterpriseITPage() {;
               <p className="text - gray - 400 mb - 4">;
                 Seamless migration to cloud platforms with strategic planning,
 
+<<<<<<< HEAD
 
                 Seamless migration to cloud platforms with strategic planning,;
 
@@ -139,6 +156,13 @@ export default function EnterpriseITPage() {;
               <p className="text-gray-400 mb-4">;
                 Seamless migration to cloud platforms with strategic planning;
                 Seamless migration to cloud platforms with strategic planning,;
+=======
+=======
+
+                Seamless migration to cloud platforms with strategic planning,;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 cost optimization, and performance tuning.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -164,6 +188,7 @@ export default function EnterpriseITPage() {;
               <p className="text - gray - 400 mb - 4">;
                 Streamline development and operations with automated CI / CD pipelines,
 
+<<<<<<< HEAD
 
                 Streamline development and operations with automated CI/CD pipelines,;
 
@@ -174,6 +199,13 @@ export default function EnterpriseITPage() {;
               <p className="text-gray-400 mb-4">;
                 Streamline development and operations with automated CI/CD pipelines;
                 Streamline development and operations with automated CI/CD pipelines,;
+=======
+=======
+
+                Streamline development and operations with automated CI/CD pipelines,;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 infrastructure as code, and monitoring solutions.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -198,6 +230,7 @@ export default function EnterpriseITPage() {;
               <p className="text - gray - 400 mb - 4">;
                 Comprehensive infrastructure management including server provisioning,
 
+<<<<<<< HEAD
 
                 Comprehensive infrastructure management including server provisioning,;
 
@@ -208,6 +241,13 @@ export default function EnterpriseITPage() {;
               <p className="text-gray-400 mb-4">;
                 Comprehensive infrastructure management including server provisioning;
                 Comprehensive infrastructure management including server provisioning,;
+=======
+=======
+
+                Comprehensive infrastructure management including server provisioning,;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 network configuration, and performance optimization.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -232,6 +272,7 @@ export default function EnterpriseITPage() {;
               <p className="text - gray - 400 mb - 4">;
                 Enterprise data solutions including warehousing, analytics,
 
+<<<<<<< HEAD
 
                 Enterprise data solutions including warehousing, analytics,;
 
@@ -242,6 +283,13 @@ export default function EnterpriseITPage() {;
               <p className="text-gray-400 mb-4">;
                 Enterprise data solutions including warehousing, analytics;
                 Enterprise data solutions including warehousing, analytics,;
+=======
+=======
+
+                Enterprise data solutions including warehousing, analytics,;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 and business intelligence platforms.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -288,6 +336,7 @@ export default function EnterpriseITPage() {;
               <p className="text - gray - 400 mb - 4">;
                 24 / 7 managed IT services including monitoring, maintenance,
 
+<<<<<<< HEAD
 
                 24/7 managed IT services including monitoring, maintenance,;
 
@@ -298,6 +347,13 @@ export default function EnterpriseITPage() {;
               <p className="text-gray-400 mb-4">;
                 24/7 managed IT services including monitoring, maintenance;
                 24/7 managed IT services including monitoring, maintenance,;
+=======
+=======
+
+                24/7 managed IT services including monitoring, maintenance,;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 and support for enterprise infrastructure.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -385,6 +441,7 @@ export default function EnterpriseITPage() {;
               <p className="text - gray - 400">;
                 Comprehensive evaluation of current infrastructure,
 
+<<<<<<< HEAD
 
                 Comprehensive evaluation of current infrastructure,;
 
@@ -395,6 +452,13 @@ export default function EnterpriseITPage() {;
               <p className="text-gray-400">;
                 Comprehensive evaluation of current infrastructure;
                 Comprehensive evaluation of current infrastructure,;
+=======
+=======
+
+                Comprehensive evaluation of current infrastructure,;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 identifying opportunities and challenges.;
               </p>;
             </div>;

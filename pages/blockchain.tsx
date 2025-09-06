@@ -6,6 +6,7 @@ export default /**
  */
 function Blockchain() {
   return (
+<<<<<<< HEAD
     <>;
       <Head>;
         <title > Blockchain Services - Zion Tech Group</title>;
@@ -83,10 +84,19 @@ export default function Blockchain(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+
+    <>;
+      <Head>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <title > Blockchain Services - Zion Tech Group</title>;
 
 
         <title>Blockchain Services - Zion Tech Group</title>
 
+<<<<<<< HEAD
 }
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

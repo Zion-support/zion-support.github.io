@@ -9,4 +9,8 @@ const MobileEmailCapture.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default MobileEmailCapture.js;
+=======
+export default MobileEmailCapture.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

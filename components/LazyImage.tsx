@@ -1,7 +1,15 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState, useRef, useEffect } from './react';
 import Image from './next / image';
 import LoadingSpinner from "./LoadingSpinner";
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface LazyImageProps {
 interface LazyImageProps {;
   src: string;
@@ -33,6 +41,7 @@ export default function LazyImage(): any ({;
   onLoad,;
   onError,;
 }: LazyImageProps) {;
+<<<<<<< HEAD
 export default function LazyImage({
 
   style?: React.CSSProperties;
@@ -55,6 +64,12 @@ export default function LazyImage({
   onLoad
   onError
 }: LazyImageProps) {
+=======
+
+=======
+export default function LazyImage({
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   src,
   alt,
   width,
@@ -70,18 +85,36 @@ export default function LazyImage({
   onLoad,
   onError,
 }: LazyImageProps) {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLDivElement>(null);
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   useEffect(() => {;
     if (priority) return;
     const observer = new IntersectionObserver(;
       ([entry]) => {;
         if (entry && entry.isIntersecting) {;
+<<<<<<< HEAD
           setIsInView(true);
           observer && observer.disconnect();
         }
+=======
+
+          setIsInView(true);
+          observer && observer.disconnect();
+        }
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       },;
       {;
         threshold: 0 && 0.1,;
@@ -102,6 +135,10 @@ export default function LazyImage({
     onError?.();
   };
   if (hasError) {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return (
       <div
         ref={imgRef}
@@ -121,7 +158,14 @@ export default function LazyImage({
           <LoadingSpinner size="sm" color="gray" />;
         </div>;
       )}
+<<<<<<< HEAD
       {isInView && (;
+=======
+
+
+      {isInView && (;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <Image
   style?: React.CSSProperties;
   on_load?: () => void;
@@ -215,6 +259,13 @@ if ( {) {
           className={`transition - opacity duration - 300 ${
             is_loaded ? "opacity - 100" : "opacity - 0";
           }`}
+<<<<<<< HEAD
         />)}
     </div>);
+=======
+
+        />)}
+    </div>);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }

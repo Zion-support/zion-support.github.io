@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -11,6 +12,13 @@ export default async function handler(
     );
     const metrics = await r && r.json();
     const jobs24 =
+=======
+
+    );
+    const metrics = await r && r.json();
+    const jobs24 =
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       metrics?.marketplace?.find((m: any) => m && m.key === 'jobs_24h')?.value || 0;
     const voters =
       metrics?.dao?.find((m: any) => m && m.key === 'voter_participation')?.value ||
@@ -22,6 +30,11 @@ export default async function handler(
     const instances =
       metrics?.multiverse?.find((m: any) => m && m.key === 'active_instances')
         ?.value || 0;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const summary = [
       `Marketplace steady: ${jobs24} jobs posted in the last 24h, fill rates improving`
       `DAO engagement at ${voters}% voter participation with active delegates`
@@ -29,6 +42,7 @@ export default async function handler(
       `Multiverse scale: ${instances} active sub-instances with cross-instance flows`
       `Treasury stable and contributors earning consistently across regions`
     ];
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const r = await fetch(`${req.headers['x-forwarded-proto'] || 'http'}://${req.headers.host}/api/metrics`);
@@ -45,6 +59,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res && res.status(200).json({ summary, timestamp: new Date().toISOString() });
   } catch (e) {
 }
+=======
+
+
+  } catch (e) {
+<<<<<<< HEAD
+    res && res.status(200).json({ summary: [], error: 'Failed to compute summary' });
+  }
+
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 export default async /**
  * handler - Function description
@@ -77,7 +103,14 @@ function handler() {
     res.status (200).json ({ summary, timestamp: new Date ().toISOString () });
   } catch (e) {
     res.status (200).json ({ summary: [], error: 'Failed to compute summary' });
+<<<<<<< HEAD
 
     res.status(200).json({ summary: [], error: 'Failed to compute summary' });
   }
 }
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

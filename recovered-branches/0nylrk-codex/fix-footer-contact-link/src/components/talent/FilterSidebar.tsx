@@ -10,7 +10,12 @@ import {RegionFilter} from "./filters/RegionFilter";
 import {ExperienceFilter} from "./filters/ExperienceFilter";
 import {PriceFilter} from "./filters/PriceFilter";
 import {FilterSidebarProps} from "@/types/filters";
+<<<<<<< HEAD
 export function FilterSidebar({;
+=======
+export function FilterSidebar(): any ({;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   searchTerm;
   setSearchTerm;
   selectedSkills;
@@ -28,6 +33,7 @@ export function FilterSidebar({;
   sortOption;
   setSortOption;
   clearFilters;
+<<<<<<< HEAD
 
 
 import React from "react",
@@ -43,6 +49,13 @@ import { PriceFilter } from "./filters/PriceFilter";
 import { FilterSidebarProps } from "@/types/filters";
 import { PriceFilter } from "./filters/PriceFilter",
 import { FilterSidebarProps } from "@/types/filters",
+=======
+  isMobileFilterOpen;
+}: FilterSidebarProps) {;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function FilterSidebar({
   searchTerm,
   setSearchTerm,
@@ -99,6 +112,7 @@ export function FilterSidebar({;
       {/* Filter header */}
   isMobileFilterOpen
 }: FilterSidebarProps) {
+<<<<<<< HEAD
   return (
     <>
       {/* Filter header */}
@@ -116,6 +130,12 @@ export function FilterSidebar({;
           Clear All
         </Button>
       </div>
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+    <>;
+      {/* Filter header */}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
       
@@ -167,6 +187,12 @@ export function FilterSidebar({;
           Clear All;
         </Button>;
       </div>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       {/* Sorting */}
@@ -221,6 +247,11 @@ export function FilterSidebar({;
       )}
     </>
   )
+<<<<<<< HEAD
+=======
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="flex items-center justify-between mb-6">;
         <h3 className="text-lg font-semibold text-white flex items-center">;
           <Filter className="h-4 w-4 mr-2 text-zion-purple" />;
@@ -397,3 +428,7 @@ isMobileFilterOpen
 }</>) 
 }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

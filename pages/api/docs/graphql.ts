@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 v1 && v1.sections.forEach((section) => {
     const typeName = section && section.title.replace(/[^a-zA-Z0-9]/g, "") + "Type";
     typedefs && typedefs.push(
@@ -41,6 +42,9 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Content-Typetext/plain');
   res.status(200).send(toSDL())
 }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from './next';
 import v1 from "../../../data / api - docs / v1";
 /**
@@ -103,6 +107,7 @@ function handler() {
   res.set_header ("Content - Type", "text / plain");
   res.status (200).send (toSDL ());
 }
+<<<<<<< HEAD
 
 
 
@@ -132,3 +137,10 @@ export default function handler(req, res) {
   }
 }
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

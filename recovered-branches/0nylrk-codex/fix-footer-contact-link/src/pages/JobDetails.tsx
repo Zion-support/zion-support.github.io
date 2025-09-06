@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -6,6 +10,7 @@ import {ApplyToJobModal} from '@/components/messaging/job-application';
 import {SEO} from '@/components/SEO';
 import {useWhitelabel} from '@/context/WhitelabelContext';
 export default function JobDetails() {;
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate  } from 'react-router-dom';
 import { Header  } from '@/components/Header';
@@ -24,11 +29,17 @@ import { useWhitelabel  } from '@/context/WhitelabelContext';
 export default function JobDetails() {
   // Cast to specify the expected route param type since useParams may be untyped
   const { jobId } = useParams() as { jobId?: string }
+=======
+  // Cast to specify the expected route param type since useParams may be untyped;
+  const { jobId } = useParams() as { jobId?: string };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const { job, isLoading, error } = useJobDetails(jobId);
   const { user, isAuthenticated } = useAuth();
 
   const navigate = useNavigate();
   const { isWhitelabel, brandName } = useWhitelabel();
+<<<<<<< HEAD
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
 import {ApplyToJobModal} from '@/components/messaging/job-application';
 import {SEO} from '@/components/SEO';
@@ -40,6 +51,11 @@ export default function JobDetails() {
   const { user, isAuthenticated } = useAuth();
   const navigate = useNavigate();
   const { isWhitelabel, brandName } = useWhitelabel();
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState, useEffect } from 'react',
 import { useParams, useNavigate } from 'react-router-dom',
 import { Header } from '@/components/Header',
@@ -62,6 +78,7 @@ export default function JobDetails() {
   const { user, isAuthenticated } = useAuth(),
   const navigate = useNavigate(),
   const { isWhitelabel, brandName } = useWhitelabel(),
+<<<<<<< HEAD
   
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
 
@@ -102,6 +119,14 @@ export default function JobDetails() {
   
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
 
+=======
+
+  
+  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (isLoading) {
 
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
@@ -174,12 +199,21 @@ export default function JobDetails() {;
   const formatBudget = (budget: any) => {
     if (!budget) return "Not specified"
     return `$${budget.min} - $${budget.max}`
+<<<<<<< HEAD
   }
   const isOwnJob = user?.id === job.client_id;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
 
   const isOwnJob = user?.id === job.client_id,
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <>
       <SEO
@@ -226,6 +260,11 @@ export default function JobDetails() {;
                       <Badge key={i} variant="secondary">
 
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState, useEffect } from 'react',;
 import { useParams, useNavigate } from 'react-router-dom',;
 import { Header } from '@/components/Header',;
@@ -278,32 +317,54 @@ export default function JobDetails() {;
       return;
     }
 ;
+<<<<<<< HEAD
   const handleApply = () => {;
     if (!isAuthenticated) {;
       toast && toast.error("Please log in to apply for this job");
       navigate('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`));
       return;
     }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {;
       toast && toast.error("Only job seekers can apply for jobs");
       return;
     }
+<<<<<<< HEAD
     setIsApplyModalOpen(true);
   };
+=======
+
+    setIsApplyModalOpen(true);
+  };
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleApplySuccess = async (appliedJobId: string) => {;
     toast && toast.success("Application submitted successfully!"),;
     setIsApplyModalOpen(false);
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const formatBudget = (budget: any) => {;
     if (!budget) return "Not specified",;
     return `$${budget && budget.min} - $${budget && budget.max}`;
   };
+<<<<<<< HEAD
   const isOwnJob = user?.id === job && job.client_id;
+=======
+
+  const isOwnJob = user?.id === job && job.client_id;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <>;
       <SEO
         title={`${job && job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
         description={job && job.description.substring(0, 160)}
+<<<<<<< HEAD
     ),;
   }
 ;
@@ -360,28 +421,41 @@ export default function JobDetails() {;
       <SEO;
         title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
         description={job.description.substring(0, 160)}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       />;
       <Header />;
       <main className="container mx-auto px-4 py-8">;
         <div className="mb-6">;
+<<<<<<< HEAD
           <Button ;
             variant="outline" ;
             size="sm";
           <Button;
             variant="outline";
             size="sm";
+=======
+          <Button
+            variant="outline" 
+            size="sm"
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             onClick={() => navigate('/jobs')}
           >;
             ← Back to Jobs;
           </Button>;
         </div>;
+<<<<<<< HEAD
         ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
           <div className="lg:col-span-2">;
             <Card>;
               <CardHeader>;
                 <div className="flex justify-between items-start">;
                   <div>;
+<<<<<<< HEAD
                     <CardTitle className="text-2xl mb-2">{job.title}</CardTitle>;
                     <div className="flex items-center text-muted-foreground">;
                       <Calendar className="mr-2 h-4 w-4" />;
@@ -396,12 +470,22 @@ export default function JobDetails() {;
                     </div>;
                   </div>;
                   <Badge>{job.category}</Badge>;
+=======
+                    <CardTitle className="text-2xl mb-2">{job && job.title}</CardTitle>;
+                    <div className="flex items-center text-muted-foreground">;
+                      <Calendar className="mr-2 h-4 w-4" />;
+                      <span>Posted {formatDistanceToNow(new Date(job && job.created_at), { addSuffix: true })}</span>;
+                    </div>;
+                  </div>;
+                  <Badge>{job && job.category}</Badge>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </div>;
               </CardHeader>;
               <CardContent className="space-y-6">;
                 <div>;
                   <h3 className="font-semibold text-lg mb-3">Job Description</h3>;
                   <div className="whitespace-pre-wrap">;
+<<<<<<< HEAD
                     {job.description}
                   </div>;
                 </div>;
@@ -454,6 +538,11 @@ export default function JobDetails() {;
                   </div>
                 </div>
                 {!isOwnJob && (
+=======
+                    {job && job.description}
+                  </div>;
+                </div>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                         {skill}
                       </Badge>;
@@ -509,6 +598,7 @@ export default function JobDetails() {;
                 
 
 
+<<<<<<< HEAD
                   <Button
                     className="w-full mt-4"
                   <Button 
@@ -520,6 +610,8 @@ export default function JobDetails() {;
                   </Button>
                 )}
                 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {isOwnJob && (
                   <div className="text-center p-2 bg-muted rounded-md mt-4">
                     <p className="text-sm text-muted-foreground">This is your job posting</p>
@@ -531,6 +623,10 @@ export default function JobDetails() {;
         </div>
       </main>
       <Footer />
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                 {isOwnJob && (;
                   <div className="text-center p-2 bg-muted rounded-md mt-4">;
@@ -754,6 +850,7 @@ if (return "Not specified", ) {
         />)}
     </>);
 }
+<<<<<<< HEAD
   ),;}
  const [isApplyModalOpen, setIsApplyModalOpen] = useState (false);
 if (error || !job) {
@@ -811,3 +908,6 @@ const isOwnJob = user?.id === job.client id;
     </>
   )
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

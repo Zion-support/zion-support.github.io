@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 interface ApplicationsTableProps {
 
@@ -7,7 +11,11 @@ interface ApplicationsTableProps {
   onViewApplication: (applicationId: string) => Promise<void>
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>
   onViewScore: (application: JobApplication) => void
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {format} from "date-fns";
 import {JobApplication} from "@/types/jobs";
 import {Avatar} from "@/components/ui/avatar";
@@ -20,6 +28,7 @@ import {Briefcase, User} from "lucide-react";
 import {HireConfirmationModal} from "@/components/hiring-tracker/HireConfirmationModal";
 import {useState} from "react";
 import {toast} from "@/hooks/use-toast";
+<<<<<<< HEAD
 import { format } from "date-fns",
 import { JobApplication } from "@/types/jobs",
 import { Avatar } from "@/components/ui/avatar",
@@ -50,12 +59,22 @@ interface ApplicationsTableProps {
   onViewApplication: (applicationId: string) => Promise<void>
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>
   onViewScore: (application: JobApplication) => void
+=======
+interface ApplicationsTableProps {;
+  applications: JobApplication[],;
+  processingId: string | null,;
+  onViewApplication: (applicationId: string) => Promise<void>,;
+  onStatusChange: (applicationId: string, newStatus: string) => Promise<void>,;
+  onViewScore: (application: JobApplication) => void;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 export function ApplicationsTable({
   applications
   processingId
   onViewApplication
 
+<<<<<<< HEAD
   onStatusChange;
   onViewScore
 }: ApplicationsTableProps) {
@@ -73,6 +92,8 @@ export function ApplicationsTable({
 }: ApplicationsTableProps) {
   const [hireModalOpen, setHireModalOpen] = useState(false),
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export function ApplicationsTable(): any ({ ;
   applications, ;
@@ -87,6 +108,7 @@ export function ApplicationsTable(): any ({ ;
   
 
 
+<<<<<<< HEAD
   
   const handleHireClick = (application: JobApplication) => {
     setSelectedApplication(application)
@@ -94,6 +116,8 @@ export function ApplicationsTable(): any ({ ;
   }
   },
   
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleHireConfirmed = () => {
     // This will be called after the hire confirmation is completed
     toast({
@@ -141,9 +165,18 @@ function ApplicationsTable() {
   }
 ;
 
+<<<<<<< HEAD
   },
   
 
+=======
+=======
+
+  },
+  
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <>;
       <div className="rounded - md border">;
@@ -164,6 +197,7 @@ function ApplicationsTable() {
                   <div className="flex items - center gap - 3">;
                     <Avatar className="h - 8 w - 8">;
                       {application.talent_profile?.profile_picture_url ? (
+<<<<<<< HEAD
   }
 
   },
@@ -214,6 +248,11 @@ function ApplicationsTable() {
                 </TableCell>
                 <TableCell className="hidden lg:table-cell">
                   {application.match_score !== undefined && application.match_score !== null ? (
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <ClickableBadge
                       variant="outline"
                       className="cursor-pointer"
@@ -235,6 +274,10 @@ function ApplicationsTable() {
                       <Briefcase className="h-3 w-3 mr-1" /> Hire
                     </ClickableBadge>
                     <ApplicationActions
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { format } from "date-fns",;
 import { JobApplication } from "@/types/jobs",;
 import { Avatar } from "@/components/ui/avatar",;
@@ -271,6 +314,10 @@ export function ApplicationsTable({;
 }: ApplicationsTableProps) {;
   const [hireModalOpen, setHireModalOpen] = useState(false),;
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleHireClick = (application: JobApplication) => {;
     setSelectedApplication(application),;
     setHireModalOpen(true);
@@ -338,6 +385,10 @@ export function ApplicationsTable({;
                   ) : (;
                     <span className="text-muted-foreground text-sm">Not scored</span>;
                   )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </TableCell>;
                 <TableCell className="text-right">;
                   <div className="flex items-center justify-end gap-2">;
@@ -348,7 +399,11 @@ export function ApplicationsTable({;
                     >;
                       <Briefcase className="h-3 w-3 mr-1" /> Hire;
                     </ClickableBadge>;
+<<<<<<< HEAD
                     <ApplicationActions
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         <img;
                           src={application.talent_profile.profile_picture_url}
                           alt={application.talent_profile.full_name || "Candidate"}
@@ -531,13 +586,22 @@ export function ApplicationsTable({ ;
           </TableBody>;
         </Table>;
       </div>;
+<<<<<<< HEAD
       ;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal;
         isOpen={hireModalOpen}
         onClose={() => setHireModalOpen(false)}
         application={selectedApplication || undefined}
         onConfirm={handleHireConfirmed}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       />;
     </>;
               </TableRow>))}
@@ -553,6 +617,7 @@ export function ApplicationsTable({ ;
       />;
     </>);
 }
+<<<<<<< HEAD
   ),;}
 };
   applications.map ( (application) => (<TableRow key= {
@@ -606,3 +671,6 @@ export function ApplicationsTable({ ;
     </>
   )
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 class UltimateAutomationFactory {; constructor() {; this && this.logsDir = path && path.join(process && process.cwd(), 'logs'); this && this.ensureLogsDir()};
 ; ensureLogsDir() {; if (!fs && fs.existsSync(this && this.logsDir)) {; fs && fs.mkdirSync(this && this.logsDir, { recursive: true })}};
 ; log(message, type = 'info') {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${type && type.toUpperCase()}] ${message}`; console && console.log(logMessage);
@@ -27,6 +28,8 @@ class UltimateAutomationFactory {;
     this.logsDir = path.join(process.cwd(), 'logs');
     this.ensureLogsDir();
 };
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   ensureLogsDir() {;
     if (!fs.existsSync(this.logsDir)) {;
@@ -115,6 +118,7 @@ class UltimateAutomationFactory {;
 };
 ;
 // CLI interface;
+<<<<<<< HEAD
 if (import.meta.url === `file: //${process.argv[1]}`) {;
   const factory = new UltimateAutomationFactory();
   factory.start().then(report => {;
@@ -241,6 +245,9 @@ if (import.meta.url === `file: //${process.argv[1]}`) {,
 };
 ,
 export default UltimateAutomationFactory,
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {exec_sync} from 'child_process';
 ;
 class UltimateAutomationFactory { constructor () { this.logs_dir = path.join (process.cwd (), 'logs'); this.ensureLogsDir ()}
@@ -276,10 +283,17 @@ if ( {) {
 ;
 export default UltimateAutomationFactory;
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 if (import.meta.url = = = `file: //${process.argv[1]}`) {; const factory = new UltimateAutomationFactory(); factory.start().then(report = > {; console.log('Ultimate Automation Factory completed: ', report.summary); process.exit(0)}).catch(error = > {; console.error('Ultimate Automation Factory failed: ', error); process.exit(1)})};
 ;
 export default UltimateAutomationFactory;
 
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import {execSync} from 'child_process';
@@ -409,3 +423,6 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
 },;
 ,;
 export default UltimateAutomationFactory;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

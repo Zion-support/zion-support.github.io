@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 'use client'
 import * as React from 'react'
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox'
 import {Check} from 'lucide-react'
 import {cn} from '@/lib/utils'
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 "use client"
 
 import * as React from "react"
@@ -12,10 +15,16 @@ import { Check } from 'lucide-react'
 
 import { cn } from "@/lib/utils"
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const Checkbox = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
 >(({ className, ...props }, ref) => (
   <CheckboxPrimitive.Root
+<<<<<<< HEAD
 
 
 const Checkbox = React.forwardRef<
@@ -23,6 +32,8 @@ const Checkbox = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
 ></typeof>(({ className, ...props }, ref) => (
   <CheckboxPrimitive.Root
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 'use client';
 
@@ -91,6 +102,7 @@ export { Checkbox };
 Checkbox.displayName = CheckboxPrimitive.Root.displayName
 export { Checkbox }
 
+<<<<<<< HEAD
 export { Checkbox }
 ;
 
@@ -98,3 +110,6 @@ export { Checkbox }
 ;
 
 Checkbox.displayName = CheckboxPrimitive.Root.displayName
+=======
+Checkbox.displayName = CheckboxPrimitive.Root.displayName
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useRouter } from 'next/router'
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm, ControllerRenderProps } from "react-hook-form"
@@ -420,6 +421,8 @@ export default function UpdatePassword() {;
 }
 ;
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 Form;
   FormControl;
   FormField;
@@ -456,4 +459,8 @@ type UpdatePasswordFormValues = z.infer < typeof updatePasswordSchema>;
     confirmPassword: z.string()})
   .refine((data) => data.password === data.confirmPassword, {
     message: "Passwords do not match",
+<<<<<<< HEAD
     path: ["confirmPassword"]}),
+=======
+    path: ["confirmPassword"]}),
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

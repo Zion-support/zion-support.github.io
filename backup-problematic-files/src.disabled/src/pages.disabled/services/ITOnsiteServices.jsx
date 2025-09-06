@@ -9,4 +9,8 @@ const ITOnsiteServices = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ITOnsiteServices;
+=======
+export default ITOnsiteServices;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

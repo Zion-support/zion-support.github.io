@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
@@ -18,6 +19,8 @@ interface BundleInfo {
   chunkCount: number;
   loadTime: number;
   cacheHitRate: number
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 totalSize: number;
   gzippedSize: number;
   chunkCount: number;
@@ -95,6 +98,7 @@ if (return) {
     if (typeof window === 'undefined') return;
     setIsCollecting(true)
     try {
+<<<<<<< HEAD
       // Get performance entries for script resources
       const resourceEntries = performance.getEntriesByType(
         'resource'
@@ -132,14 +136,62 @@ if (return) {
         loadTime: totalLoadTime / chunkData.length
         cacheHitRate: cacheHitRate * 100
       })
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         totalSize,
         gzippedSize,
         chunkCount: chunkData.length,;
         loadTime: totalLoadTime / chunkData.length,;
         cacheHitRate: cacheHitRate * 100;
       });
+<<<<<<< HEAD
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
       logErrorToProduction('Failed to collect bundle info:', { data: error })
+=======
+
+
+      setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
+      logErrorToProduction('Failed to collect bundle info:', { data: error })
+      // Get performance entries for script resources;
+      const resource_entries = performance.getEntriesByType (
+        'resource') as PerformanceResourceTiming[];
+      const script_entries = resource_entries.filter (
+        entry =>;
+          entry.name.includes ('/_next / static/') &&;
+          (entry.name.ends_with ('.js') || entry.name.ends_with ('.css')));
+      // Calculate bundle information;
+      let total_size = 0;
+      let totalLoadTime = 0;
+      const chunk_data: ChunkInfo[] = [];
+      const chunk_data: ChunkInfo[] = [],
+      script_entries.for_each (entry => {
+        const size = entry.transfer_size || entry.encodedBodySize || 0;
+        const load_time = entry.response_end - entry.request_start;
+        const cached = entry.transfer_size === 0;
+        totalLoadTime += load_time;
+        chunk_data.push ({
+          name: entry.name.split ('/').pop ()?.split ('?')[0] || 'unknown',
+          size,
+          load_time,
+          cached,
+        });
+      });
+      // Estimate gzipped size (roughly 70% of original);
+      const gzipped_size = total_size * 0.7;
+      const cacheHitRate =;
+        chunk_data.filter (chunk => chunk.cached).length / chunk_data.length;
+      setBundleInfo ({
+        total_size,
+        gzipped_size,
+        chunk_count: chunk_data.length,
+        load_time: totalLoadTime / chunk_data.length,
+        cacheHitRate: cacheHitRate * 100,
+      });
+      set_chunks (chunk_data.sort ((a, b) => b.size - a.size).slice (0, 5)); // Top 5 largest chunks    } catch (error) {
+      logErrorToProduction ('Failed to collect bundle info:', { data: error });
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     } finally {
       setIsCollecting(false)
     }
@@ -168,8 +220,11 @@ if (return) {
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -183,6 +238,10 @@ interface BundleInfo {;
   gzippedSize: number,;
   chunkCount: number,;
   loadTime: number,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   cacheHitRate: number;
 }
 ;
@@ -282,17 +341,29 @@ export function BundleAnalyzer() {;
     return null;
   }
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
       <div className='fixed bottom-20 right-4 z-50'>;
+=======
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (!isVisible) {
     return (
       <div className="fixed bottom-20 right-4 z-50">
         <Button
+<<<<<<< HEAD
           variant='outline'
           size='sm'
           onClick={toggleAnalyzer}
           className='bg-background/80 backdrop-blur-sm'        >
           <Package className='w-4 h-4 mr-2' />
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           variant="outline"
           size="sm"
           onClick={toggleAnalyzer}
@@ -322,6 +393,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </CardTitle>
             <div className="flex gap-2">
               <Button
+<<<<<<< HEAD
                 variant='ghost'
                 size='sm'
                 onClick={collectBundleInfo}
@@ -334,6 +406,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 size='sm'
                 onClick={toggleAnalyzer}
                 className='h-6 w-6 p-0'              >
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 variant="ghost"
                 size="sm"
                 onClick={collectBundleInfo}
@@ -389,6 +465,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Progress value={bundleInfo.cacheHitRate} className="h-2" />
               </div>
               <div>
+<<<<<<< HEAD
                 <div className='text-xs font-medium mb-2'>Largest Chunks:</div>
                 <div className='space-y-1'>
                   {chunks.map((chunk, index) => (
@@ -401,6 +478,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                           {index + 1}.
                         </span>
                         <span className='truncate' title={chunk.name}>                          {chunk.name}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 className='h-6 w-6 p-0'>;
   // Check condition
 if ( {) {
@@ -463,6 +543,11 @@ if ( {) {
                         <span className="w-4 text-muted-foreground">{index + 1}.</span>
                         <span className="truncate" title={chunk.name}>
                           {chunk.name}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         </span>
                         {chunk.cached && (
                           <Badge variant="outline" className="text-xs px-1 py-0">
@@ -470,10 +555,13 @@ if ( {) {
                           </Badge>
                         )}
                       </div>
+<<<<<<< HEAD
                       <Badge
                         className={getSizeColor(chunk.size)}
                         variant='outline'
                       >
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                       <Badge className={getSizeColor(chunk.size)} variant="outline">
 
@@ -524,15 +612,22 @@ if ( {) {
 
 }
 }
+<<<<<<< HEAD
             <div className="text-xs text-muted-foreground">
               {isCollecting ? 'Analyzing bundle...' : 'Click refresh to analyze'}
             </div>;
           )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </CardContent>;
       </Card>;
     </div>;
   );
 } ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
         
@@ -617,4 +712,8 @@ if ( {) {
         </CardContent>;
       </Card>;
     </div>);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

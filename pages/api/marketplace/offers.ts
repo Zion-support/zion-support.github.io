@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 import {
@@ -30,9 +34,61 @@ import {
 } from "../../../utils/marketplace/store";
 import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
 
+<<<<<<< HEAD
       }
       return bad (res, "Unknown role", 403);
     }
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import { v4 as uuidv4  } from './uuid';
+import {
+  assert_client,
+  assertTalentOrClientForOffer,
+  getDemoUser,
+} from '../../../utils / marketplace / auth';
+import {
+  getOfferById,
+  list_offers,
+  save_offer,
+  save_project,
+} from '../../../utils / marketplace / store';
+import { Offer, PaymentTerms, Project  } from '../../../utils / marketplace / types';
+/**
+ * bad - Function description
+ */
+function bad() {
+  return res.status (code).json ({ ok: false, error: message });
+}
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  try {
+    // Check condition
+if ( {) {
+  $2
+}
+      const user = getDemoUser (req);
+      // Check condition
+if ( {) {
+  $2
+}
+        const offers = list_offers ({ client_id: user.id });
+        return res.json ({ ok: true, offers });
+      }
+      // Check condition
+if ( {) {
+  $2
+}
+        const offers = list_offers ({ talent_slug: user.talent_slug });
+        return res.json ({ ok: true, offers });
+
+      }
+      return bad (res, "Unknown role", 403);
+    }
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (req && req.method === "POST") {
       // Create an offer (client sends an offer to confirm)
       const client = assertClient(req);
@@ -44,9 +100,17 @@ import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
         agreementUrl,
       } = req && req.body || {};
       if (!talentSlug || !startDateIso || !scopeSummary || !paymentTerms) {
+<<<<<<< HEAD
         return bad(res, "Missing required fields");
       }
       const offer: Offer = {
+=======
+
+        return bad(res, "Missing required fields");
+      }
+      const offer: Offer = {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         id: uuidv4(),
         createdAtIso: new Date().toISOString(),
         clientId: client && client.id,
@@ -75,15 +139,24 @@ if ( {) {
         createdAtIso: new Date ().toISOString (),
         client_id: client.id,
         talent_slug,
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         startDateIso,
         scope_summary,
         payment_terms: payment_terms as PaymentTerms,
         agreement_url,
         status: "SENT",
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
 import { assertClient, assertTalentOrClientForOffer, getDemoUser } from "../../../utils/marketplace/auth";
 import { getOfferById, listOffers, saveOffer, saveProject } from "../../../utils/marketplace/store";
+<<<<<<< HEAD
       }
       const offer: Offer = {
         id: uuidv4(),
@@ -110,6 +183,11 @@ import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
         req
         existing
         req.headers["x-demo-talent-slug"] as string
+=======
+import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (req && req.method === "PATCH") {
       // Update offer: accept or request changes
       const { id, action, changeRequestNote } = req && req.body || {};
@@ -179,6 +257,7 @@ if ( {) {
           return bad (res, "Only talent can accept", 403)) {
   $2
 }
+<<<<<<< HEAD
         existing.status = "CONFIRMED";
         // Create a project upon acceptance;
         const project: Project = {
@@ -227,6 +306,16 @@ if ( {) {
     return res.status(status).json({ ok: false, error: e?.message || "Server error" })
   }
 }
+=======
+
+        existing.status = "CONFIRMED";
+        // Create a project upon acceptance;
+        const project: Project = {
+
+
+  }
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           id: uuidv4 (),
           title: `Project with ${existing.talent_slug}`,
           summary: existing.scope_summary,
@@ -591,6 +680,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -807,6 +897,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -818,7 +911,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
   }
 }
   }
 }
+=======
+
+  }
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

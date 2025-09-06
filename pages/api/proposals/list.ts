@@ -6,10 +6,22 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
   if (req.method !== "GET") {;
     res.setHeader("Allow", "GET");
     return res.status(405).json({ error: "Method not allowed" });
 
+=======
+
+  if (req && req.method !== "GET") {
+    res && res.setHeader("Allow", "GET");
+    return res && res.status(405).json({ error: "Method not allowed" });
+  }
+
+
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 
   try {
@@ -25,6 +37,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 
 
+<<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { listProposals } from '../../../utils/data/proposals';
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const proposals = listProposals();
+    res.status(200).json({ proposals })
+  } catch (error: any) {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     res.status(500).json({ error: error?.message || 'Failed to list proposals' })
   }
 
@@ -74,6 +96,10 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -85,7 +111,15 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
   }
 }
   }
 }
+=======
+
+  }
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

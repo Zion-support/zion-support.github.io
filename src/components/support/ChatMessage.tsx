@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useMemo } from 'react'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { cn } from '@/lib/utils'
@@ -29,6 +30,8 @@ import { cn } from "@/lib/utils";
 import { format } from "date-fns";
 // Use the wrapper hook so TypeScript properly infers the return type
 // from the ThemeProvider context
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useTheme } from "@/hooks/useTheme";
 interface ChatMessageProps {;
   message: string;
@@ -65,6 +68,7 @@ interface ChatMessageProps {
   timestamp: Date
 }
 
+<<<<<<< HEAD
   return (
     <div className={cn('flex items-start gap-3', isUser && 'flex-row-reverse')}>;
       <Avatar className='h-8 w-8'>;
@@ -87,6 +91,8 @@ interface ChatMessageProps {
           </>;
         )}
       </Avatar>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>
       <Avatar className="h-8 w-8">
@@ -104,7 +110,14 @@ interface ChatMessageProps {
             <AvatarFallback className="bg-zion-purple text-white">Z</AvatarFallback>
           </>
         )}
+<<<<<<< HEAD
       </Avatar>
+=======
+
+      </Avatar>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div
         className={cn(
           'max-w-[80%] rounded-lg px-4 py-2 text-sm'
@@ -119,6 +132,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             : theme === 'dark'
               ? 'bg-zion-blue-light text-white'
               : 'bg-gray-100 text-gray-800'
+<<<<<<< HEAD
         )}
       >
         <div dangerouslySetInnerHTML={sanitizedHtml} />
@@ -134,6 +148,13 @@ ursor/fix-website-loading-errors-and-merge-6662
         >
           {format(timestamp, 'h:mm a')}
       
+=======
+
+        )}
+      >
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       
       <div className={cn(
         "max-w-[80%] rounded-lg px-4 py-2 text-sm",
@@ -143,6 +164,10 @@ ursor/fix-website-loading-errors-and-merge-6662
             ? "bg-zion-blue-light text-white"
             : "bg-gray-100 text-gray-800"
       )}>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div dangerouslySetInnerHTML={sanitizedHtml} />
         <div className={cn(
           "text-xs mt-1",
@@ -153,13 +178,17 @@ ursor/fix-website-loading-errors-and-merge-6662
               : "text-gray-500"
         )}>
           {format(timestamp, "h:mm a")}
+<<<<<<< HEAD
       </div>
     </div>
   )
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </div>
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
 },
 
@@ -172,6 +201,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 },
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 },
@@ -187,6 +218,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 // before we perform our link replacements below.
 function escapeHtml(unsafe: string): string {
   return unsafe
+<<<<<<< HEAD
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
@@ -210,6 +242,10 @@ function formatMessageWithLinks(message: string): string {
   )
   return formattedMessage; return formattedMessage
 }
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     .replace(/&/g, "&amp,")
     .replace(/</g, "<")
@@ -298,6 +334,10 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
               : "text-gray-500";
         )}>;
           {format(timestamp, "h:mm a")}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </div>;
       </div>;
     </div>;
@@ -309,6 +349,10 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 // before we perform our link replacements below.;
 function escapeHtml(unsafe: string): string {;
   return unsafe;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
@@ -428,6 +472,7 @@ export const ChatMessage: React.FC < ChatMessageProps> = ({
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 }
 }
 }
@@ -451,3 +496,34 @@ function formatMessageWithLinks(message: string): string {;
 }
 ;
 ;
+=======
+// A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy;
+// dependency like DOMPurify for now and instead escape the five critical;
+// characters. This ensures any user - supplied string is rendered harmless;
+// before we perform our link replacements below.;
+function escape_html (unsafe: string): string {
+  return unsafe;
+    .replace (/&/g, '&amp;');
+    .replace (/</g, '&lt;');
+    .replace (/>/g, '&gt;');
+    .replace (/"/g, '&quot;');
+    .replace (/'/g, '&#039;');
+function formatMessageWithLinks (message: string): string {
+  // First, escape any HTML so that user input cannot break out of the intended;
+  // markup.;
+  const safe_text = escape_html (message);
+  // Replace URLs;
+  const url_regex = /(https?:\/\/[^\s]+)/g;
+  let formatted_message = safe_text.replace (
+    url_regex,
+    '<a href="$1" target="_blank" rel="noopener noreferrer" class="text - zion - cyan underline hover:text - zion - cyan / 80">$1</a>');
+  // Replace help - center references like [Getting Started];
+  const helpCenterRegex = /\[([^\]]+)\]/g;
+  formatted_message = formatted_message.replace (
+    helpCenterRegex,
+    '<a href="/help/$1" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
+  )
+  return formattedMessage; return formattedMessage
+}
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

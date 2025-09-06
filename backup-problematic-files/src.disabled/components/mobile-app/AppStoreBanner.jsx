@@ -27,4 +27,8 @@ const AppStoreBanner = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AppStoreBanner;
+=======
+export default AppStoreBanner;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

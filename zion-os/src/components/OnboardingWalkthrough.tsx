@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 "use client",
 import { useState, useEffect  } from './react';,
 import { use_auth  } from '@/contexts / AuthContext';,
@@ -6,6 +10,7 @@ interface WalkthroughStep {
   title: string,
   description: string,
   target?: string,
+<<<<<<< HEAD
 "use client";
 import { useState, useEffect } from "react";
 import { useAuth } from "@/contexts/AuthContext";
@@ -13,6 +18,19 @@ interface WalkthroughStep {id: string;
   title: string;
   description: string;
   target?: string;
+=======
+=======
+
+"use client",;
+import { useState, useEffect } from "react",;
+import { useAuth } from "@/contexts/AuthContext",;
+interface WalkthroughStep {;
+  id: string,;
+  title: string,;
+  description: string,;
+  target?: string,;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   position: "top" | "bottom" | "left" | "right";
 }
 const walkthrough_steps: WalkthroughStep[] = [;
@@ -105,6 +123,7 @@ if ( {) {
 }
     return null;
   }
+<<<<<<< HEAD
   const currentStepData = walkthroughSteps[currentStep];
   if (!isVisible |isCompleted) {return null;
   }
@@ -196,6 +215,13 @@ export function OnboardingWalkthrough() {;
   }
 ;
   return (;
+=======
+
+;
+
+  return (;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <>;
       {/* Overlay */}
       <div className="fixed inset - 0 bg - black / 50 z - 40" on_click={handle_skip} />;
@@ -252,6 +278,12 @@ export function OnboardingWalkthrough() {;
       {/* Highlight Target Element */}
       {currentStepData.target && (
         <div;
+<<<<<<< HEAD
+=======
+
+          className="fixed z-30 pointer-events-none";
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           style={{;
             top: 0,;
             left: 0,;
@@ -263,6 +295,7 @@ export function OnboardingWalkthrough() {;
           <div;
             className="absolute border-2 border-blue-500 rounded-lg shadow-lg bg-blue-500/10";
 
+<<<<<<< HEAD
 
           className="fixed z-30 pointer-events-none";
           style={{top: 0;
@@ -279,16 +312,43 @@ export function OnboardingWalkthrough() {;
             style={{top: "50%";
               left: "50%";
               transform: "translate(-50%, -50%)";
+=======
+          className="fixed z - 30 pointer - events - none";
+          style={{
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0}}
+        >;
+          <div;
+            className="absolute border - 2 border - blue - 500 rounded - lg shadow - lg bg - blue - 500 / 10";
+            style={{
+              top: "50%",
+              left: "50%",
+              transform: "translate (-50%, -50%)",
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             style={{;
               top: "50%",;
               left: "50%",;
               transform: "translate(-50%, -50%)",;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               width: "300px";
               height: "200px"}}
           />;
         </div>)}
     </>);
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ;
 // Hook to add data attributes for walkthrough targeting;
@@ -297,6 +357,17 @@ export function useWalkthroughTarget(id: string) {;
 
 
     "data-walkthrough-target": id;
+<<<<<<< HEAD
+=======
+=======
+export /**
+ * useWalkthroughTarget - Function description
+ */
+function useWalkthroughTarget() {
+  return {
+    "data - walkthrough - target": id;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function useWalkthroughTarget(id: string) {return {;
 ;
 // Hook to add data attributes for walkthrough targeting;

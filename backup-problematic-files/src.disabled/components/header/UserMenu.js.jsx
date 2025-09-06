@@ -9,4 +9,8 @@ const UserMenu.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default UserMenu.js;
+=======
+export default UserMenu.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

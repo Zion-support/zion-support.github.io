@@ -1,17 +1,21 @@
 
 
+<<<<<<< HEAD
 import { useState } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { ApplicationCard } from "./ApplicationCard",
 import { LoadingState } from "./LoadingState",
 import { EmptyState } from "./EmptyState",
 import { ErrorState } from "./ErrorState",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from "react";
 import { useJobApplications } from "@/hooks/useJobApplications";
 import { ApplicationCard } from "./ApplicationCard";
 import { LoadingState } from "./LoadingState";
 import { EmptyState } from "./EmptyState";
 import { ErrorState } from "./ErrorState";
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { ApplicationStatus } from "@/types/jobs";
 export function ApplicationsTracker() {;
@@ -22,6 +26,25 @@ export function ApplicationsTracker() {
     "all"
   );
 
+=======
+
+import { Button } from "@/components/ui/button";
+import { ApplicationStatus } from "@/types/jobs";
+
+export function ApplicationsTracker() {
+
+
+  const { applications, isLoading, error } = useJobApplications();
+
+  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | "all">(;
+    "all",;
+
+  );
+
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { ApplicationCard } from "./ApplicationCard",
@@ -35,6 +58,7 @@ export function ApplicationsTracker() {
   const [statusFilter, setStatusFilter] = useState<ApplicationStatus | 'all'>('all'),
   
   if (isLoading) {
+<<<<<<< HEAD
     return <LoadingState />;
   }
   if (error) {
@@ -49,6 +73,9 @@ export function ApplicationsTracker() {
       ? applications
       : applications.filter((app) => app.status === statusFilter);
 
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return <LoadingState />
 import { useState } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
@@ -65,6 +92,7 @@ export function ApplicationsTracker() {;
     return <LoadingState />;
   }
 ;
+<<<<<<< HEAD
   if (error) {;
     return <ErrorState error={error} />;
   }
@@ -72,15 +100,32 @@ export function ApplicationsTracker() {;
   if (applications.length === 0) {;
     return <EmptyState />;
   }
+=======
+
+  if (error) {;
+    return <ErrorState error={error} />;
+  }
+
+  if (applications && applications.length === 0) {;
+    return <EmptyState />;
+  }
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   
   const filteredApplications = statusFilter === 'all' 
     ? applications
     : applications.filter(app => app.status === statusFilter),
   
+<<<<<<< HEAD
   const filteredApplications =;
     statusFilter === "all";
       ? applications;
       : applications && applications.filter((app) => app && app.status === statusFilter);
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="space-y-6">;
       <div className="flex flex-wrap gap-2">;
@@ -128,6 +173,7 @@ export function ApplicationsTracker() {;
         </Button>;
         <Button
           size="sm"
+<<<<<<< HEAD
   return (
     <div className="space-y-6">
       <div className="flex flex-wrap gap-2">
@@ -181,6 +227,8 @@ export function ApplicationsTracker() {;
           Not Selected
         </Button>
       </div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           variant={statusFilter === "rejected" ? "default" : "outline"}
           onClick={() => setStatusFilter("rejected")}
 
@@ -188,13 +236,21 @@ export function ApplicationsTracker() {;
       
 
 
+<<<<<<< HEAD
       
       
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-2">
         {filteredApplications.map((application) => (
           <ApplicationCard key={application.id} application={application} />
         ))}
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       
 
@@ -392,6 +448,7 @@ export function ApplicationsTracker() {;
           <ApplicationCard key={application.id} application={application} />;
         ))}
       </div>;
+<<<<<<< HEAD
       ;
       {filteredApplications.length === 0 && (;
         <div className="text-center p-8">;
@@ -426,3 +483,14 @@ if (isLoading) {
     </div>;
   );
 }
+=======
+      {filtered_applications.length === 0 && (
+        <div className="text - center p - 8">;
+          <p className="text - muted - foreground">;
+            No applications with this status.;
+          </p>;
+        </div>)}
+    </div>);
+
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

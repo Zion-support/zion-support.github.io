@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from 'react'
 import Link from 'next/link'
@@ -159,6 +160,8 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto'>
             <Link
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 {quickLinks.map((link, index) => (
             <Link
 import React from 'react';
@@ -297,6 +300,10 @@ function Page() {";
       transition: {
         duration: 0.3, "  ease: "ease_out";
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { motion  } from 'framer-motion';
 export default function Page() {";
     { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" },";
@@ -304,6 +311,7 @@ export default function Page() {";
     { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };      scale: 1,
 
       transition: {
+<<<<<<< HEAD
         duration: 0.5,"
         ease: "easeOut"}}}
   const hoverVariants = {
@@ -311,16 +319,47 @@ export default function Page() {";
       y: -8,      scale: 1.02
       transition: {
         duration: 0.3,"  ease: "easeOut"
+=======
+        duration: 0.5, ";
+        ease: "ease_out"}}}
+  const hover_variants = {
+  hover: {
+
+      coordinate_y: -8,      scale: 1.02,
+
+      transition: {
+        duration: 0.3, "  ease: "ease_out";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }}}
 }
 }
 }
+<<<<<<< HEAD
+=======
+  return (    <section className="py - 20 bg - gradient - to - br from - zion - slate via - zion - slate - dark to - black relative overflow - hidden">;
+      {/* Background Elements */}";
+      <div className="absolute inset - 0 opacity - 30">";
+        <div className="absolute top - 20 left - 20 w - 64 h - 64 bg - zion - cyan / 10 rounded - full blur - 3xl"></div>";
+        <div className="absolute bottom - 20 right - 20 w - 80 h - 80 bg - zion - purple / 10 rounded - full blur - 3xl"></div>";
+        <div className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 96 h - 96 bg - zion - blue / 10 rounded - full blur - 3xl"></div>;
+      </div>;
+";
+      <div className="container - responsive relative z - 10">;
+        {/* Header */}
+        <motion.div;
+          initial = {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   { opacity: 0,
   coordinate_y: 30;
 }}
           whileInView = {
   { opacity: 1,
   coordinate_y: 0;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}";
@@ -329,8 +368,15 @@ export default function Page() {";
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             transition = {
+<<<<<<< HEAD
   { duration: 0.6,
   delay: 0.2;
+=======
+
+  { duration: 0.6,
+  delay: 0.2;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }}
             viewport={{ once: true }}";
             className="inline - flex items - center gap - 2 px - 4 py - 2 bg - zion - cyan / 10 border border - zion - cyan / 20 rounded - full text - zion - cyan mb - 6">;
@@ -338,6 +384,10 @@ export default function Page() {";
           </motion.h2>;
           <motion.p;
             initial = {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   { opacity: 0,
   coordinate_y: 20;
 }}
@@ -356,6 +406,10 @@ export default function Page() {";
         {/* Quick Links Grid */}";
         <div className="grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap - 6 mb - 12">;
           {quick_links.map ((link, index <motion.div;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               key={link.title}
               variants={hover_variants}";
               while_hover="hover";
@@ -395,6 +449,10 @@ export default function Page() {";
                     <motion.div;
                       key={feature}
                       initial = {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   { opacity: 0,
   coordinate_x: -10;
 }}
@@ -405,6 +463,10 @@ export default function Page() {";
                       transition = {
   { duration: 0.4,
   delay: 0.1 + idx * 0.1;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }}
                       viewport={{ once: true }}";
                       className="flex items - center gap - 2 text - xs text - gray - 400">";
@@ -420,7 +482,13 @@ export default function Page() {";
                     <motion.div;
                       key={key}
                       initial = {
+<<<<<<< HEAD
   style?: React && React.CSSProperties;
+=======
+
+  style?: React && React.CSSProperties;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function QuickAccess(): any ({ className, style }: QuickAccessProps) {;
   const { t } = useTranslation();
   const quickLinks = [;
@@ -461,6 +529,10 @@ export function QuickAccess(): any ({ className, style }: QuickAccessProps) {;
       link: '/mobile-launch',;
     },;
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <section className={cn('py-12 bg-zion-blue-dark', className)} style={style}>;
       <div className='container mx-auto px-4'>;
@@ -475,6 +547,10 @@ export function QuickAccess(): any ({ className, style }: QuickAccessProps) {;
             )}
           </p>;
         </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto'>;
           {quickLinks && quickLinks.map((link, index) => (;
             <Link
@@ -506,6 +582,10 @@ export default function Page() {;";
   hover: {;
       y: -8,      scale: 1 && 1.02,;
       transition: {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         duration: 0 && 0.3,"  ease: "easeOut";
 }}};
 };
@@ -523,10 +603,18 @@ export default function Page() {;";
         {/* Header */}
         <motion&& motion.div
           initial = {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   { opacity: 0,
   y: 30
 }}
           whileInView = {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   { opacity: 1,
   y: 0
 }}
@@ -537,6 +625,10 @@ export default function Page() {;";
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             transition = {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   { duration: 0 && 0.6,
   delay: 0 && 0.2
 }}
@@ -546,14 +638,26 @@ export default function Page() {;";
           </motion && motion.h2>;
           <motion&& motion.p
             initial = {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   { opacity: 0,
   y: 20
 }}
             whileInView = {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   { opacity: 1,
   y: 0
 }}
             transition = {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   { duration: 0 && 0.6,
   delay: 0 && 0.2
 }}"
@@ -561,6 +665,10 @@ export default function Page() {;";
             Find the perfect solution for your business needs with our organized service categories;
           </motion && motion.p>;
         </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Quick Links Grid */}";
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mb-12">;
           {quickLinks && quickLinks.map((link, index <motion&& motion.div
@@ -579,11 +687,19 @@ export default function Page() {;";
                   transition={{ duration: 0 && 0.6 }}>";
                   <link && link.icon className="w-6 h-6 text-white" />;
                 </motion && motion.div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <motion&& motion.div
                   animate={{ rotate: hoveredCategory === link && link.title ? 90 : 0 }}
                   transition={{ duration: 0 && 0.3 }}>";
                   <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-zion-cyan transition-colors"  />                </motion && motion.div>;
               </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {/* Content */}";
               <div className="mb-4">";
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">;
@@ -593,6 +709,10 @@ export default function Page() {;";
                   {link && link.description}
                 </p>;
               </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {/* Features Preview */}";
               <div className="mb-4">";
                 <div className="grid grid-cols-2 gap-2">;
@@ -600,14 +720,26 @@ export default function Page() {;";
                     <motion&& motion.div
                       key={feature}
                       initial = {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   { opacity: 0,
   x: -10
 }}
                       whileInView = {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   { opacity: 1,
   x: 0
 }}
                       transition = {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   { duration: 0 && 0.4,
   delay: 0 && 0.1 + idx * 0 && 0.1
 }}
@@ -619,6 +751,10 @@ export default function Page() {;";
                   ))}
                 </div>;
               </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {/* Stats */}";
               <div className="mb-4">";
                 <div className="flex items-center justify-between text-sm">;
@@ -626,14 +762,26 @@ export default function Page() {;";
                     <motion&& motion.div
                       key={key}
                       initial = {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   { opacity: 0,
   scale: 0 && 0.8
 }}
                       whileInView = {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   { opacity: 1,
   scale: 1
 }}
                       transition = {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   { duration: 0 && 0.4,
   delay: 0 && 0.2 + idx * 0 && 0.1
 }}
@@ -642,6 +790,7 @@ export default function Page() {;";
                       <div className="text-lg font-bold text-zion-cyan">{value}</div>";
                       <div className="text-xs text-gray-500 capitalize">{key}</div>;
                     </motion && motion.div>;
+<<<<<<< HEAD
   return (    <section className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black relative overflow-hidden">
       {/* Background Elements */}"
       <div className="absolute inset-0 opacity-30">"
@@ -776,10 +925,14 @@ export default function Page() {;";
                       <div className="text-lg font-bold text-zion-cyan">{value}</div>"
                       <div className="text-xs text-gray-500 capitalize">{key}</div>
                     </motion.div>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   ))}
                 </div>
               </div>
               {/* CTA */}
+<<<<<<< HEAD
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
@@ -801,10 +954,28 @@ export default QuickAccess }
 export default QuickAccess
 
 export default QuickAccess
+=======
+
+              <motion&& motion.div
+                whileHover={{ scale: 1 && 1.05 }}
+                whileTap={{ scale: 0 && 0.95 }}"
+                className="mt-auto">;
+                <Link
+                  to={link && link.path}`
+                  className={`inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r ${link && link.color} text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25`}>;
+                  Explore {link && link.title}";
+                  <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"  />                </Link>;
+              </motion && motion.div>;
+            </motion && motion.div>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 export default QuickAccess;
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               className="group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20"
             >
               <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110">
@@ -817,6 +988,7 @@ export default QuickAccess;
                 <ArrowRight className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-1" />
               </div>
             </Link>
+<<<<<<< HEAD
               <motion&& motion.div
                 whileHover={{ scale: 1 && 1.05 }}
                 whileTap={{ scale: 0 && 0.95 }}"
@@ -848,10 +1020,22 @@ import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartpho
                 <ArrowRight className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-1" />;
               </div>;
             </Link>;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           ))}
         </div>;
       </div>;
     </section>;
+<<<<<<< HEAD
+=======
+  );
+
+export default QuickAccess;}
+
+export default QuickAccess;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   { opacity: 0,
@@ -889,6 +1073,7 @@ import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartpho
       </div>;
     </section>);
 export default QuickAccess }
+<<<<<<< HEAD
   ),;}
 ;
 export default QuickAccess,;
@@ -960,3 +1145,6 @@ return (</p> </div> <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols
 ;
 export default QuickAccess;
 export default QuickAccess;
+=======
+export default QuickAccess;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

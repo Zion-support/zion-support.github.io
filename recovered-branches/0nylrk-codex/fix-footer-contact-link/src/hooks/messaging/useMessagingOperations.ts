@@ -1,19 +1,29 @@
 
+<<<<<<< HEAD
 import { UserProfile, UserDetails  } from '@/types/auth';
 import { Message, Conversation, ConversationContextData  } from '@/types/messaging';
 import { useConversationState  } from './useConversationState';
 import { useConversations  } from './useConversations';
 import { useMessages } from './useMessages';
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {UserProfile, UserDetails} from '@/types/auth';
 import {Message, Conversation, ConversationContextData} from '@/types/messaging';
 import {useConversationState} from './useConversationState';
 import {useConversations} from './useConversations';
 import {useMessages} from './useMessages';
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Allow either UserProfile or UserDetails
 
 type UserWithProfile = UserProfile | UserDetails | null;
 /**
  * Hook that combines all messaging operations
+<<<<<<< HEAD
  */
 export function useMessagingOperations(user: UserWithProfile) {
   // State management
@@ -81,11 +91,47 @@ import { Message, Conversation, ConversationContextData } from '@/types/messagin
 import { useConversationState } from './useConversationState',;
 import { useConversations } from './useConversations',;
 import { useMessages } from './useMessages',;
+=======
+=======
+import {UserProfile, UserDetails} from '@/types / auth';
+import {Message, Conversation, ConversationContextData} from '@/types / messaging';
+import {useConversationState} from './useConversationState';
+import {use_conversations} from './use_conversations';
+import {use_messages} from './use_messages';
+// Allow either UserProfile or UserDetails;
+type UserWithProfile = UserProfile | UserDetails | null;
+;
+/**;
+* Hook that combines all messaging operations;
+*/;
+export /**
+ * useMessagingOperations - Function description
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+ */
+function useMessagingOperations() {
+  // State management;
+  const {
+    messages;
+    set_messages;
+    active_messages;
+    setActiveMessages;
+    conversations;
+    set_conversations;
+    unread_count;
+    setUnreadCount;
+    active_conversation;
+    setActiveConversation;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     is_loading,
     setIsLoading;
   } = useConversationState ();
 ;
   // Conversations management;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const {
     fetch_conversations;
     create_conversation;
@@ -93,9 +139,17 @@ import { useMessages } from './useMessages',;
     user;
     set_conversations;
     setUnreadCount;
+<<<<<<< HEAD
     setIsLoading);
 ;
   // Messages management;
+=======
+
+    setIsLoading);
+;
+  // Messages management;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const {
     load_messages;
     send_message;
@@ -109,8 +163,15 @@ import { useMessages } from './useMessages',;
     set_conversations;
     setUnreadCount;
     setIsLoading;
+<<<<<<< HEAD
     fetch_conversations);
 ;
+=======
+
+    fetch_conversations);
+;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return {
     // State;
     messages;
@@ -122,6 +183,10 @@ import { useMessages } from './useMessages',;
     setUnreadCount;
     active_conversation;
     setActiveConversation;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     is_loading;
 ;
     // Operations;
@@ -129,6 +194,7 @@ import { useMessages } from './useMessages',;
     create_conversation;
     markAsRead;
 
+<<<<<<< HEAD
     fetch_conversations;
     load_messages;
   }
@@ -212,5 +278,8 @@ export function useMessagingOperations(user: UserWithProfile) {;
     markAsRead;
     fetchConversations;
     loadMessages;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 }

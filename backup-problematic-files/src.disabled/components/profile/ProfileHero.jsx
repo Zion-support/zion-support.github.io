@@ -27,4 +27,8 @@ const ProfileHero = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ProfileHero;
+=======
+export default ProfileHero;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
 import {
@@ -22,12 +23,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
   }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   }
   try {
 
 
+<<<<<<< HEAD
 if (req && req.method !== "POST") {
     return res && res.status(405).json({ error: "Method not allowed" });
   }
@@ -38,6 +42,8 @@ if (req && req.method !== "POST") {
         projectId: string;
         fromRole: "client" | "talent";
         fromId: string;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from './next';
 import { v4 as uuidv4  } from './uuid';
 import {
@@ -63,11 +69,24 @@ if ( {) {
         project_id: string;
         from_role: "client" | "talent";
         from_id: string;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         rating: number;
         text: string;
         categories?: Review["categories"];
         anonymous?: boolean;
 
+<<<<<<< HEAD
+=======
+      };
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     const project = await findProjectById(projectId);
     if (!project) {
@@ -76,6 +95,7 @@ if ( {) {
       });
     }
 
+<<<<<<< HEAD
       };
 import type { NextApiRequest, NextApiResponse } from 'next';
 
@@ -192,6 +212,9 @@ if ( {) {
         error: "Reviews can only be submitted after project completion",
       });
     }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       return res.status(404).json({ error: 'Project not found' })
     }
     if (project.status !== 'Completed') {
@@ -208,6 +231,7 @@ if ( {) {
     if (project.status !== 'Completed') {
       return res.status(400).json({ error: 'Reviews can only be submitted after project completion' })
     }
+<<<<<<< HEAD
       return res.status(409).json({
         error: "You have already submitted a review for this project"
       });
@@ -484,6 +508,27 @@ if ( {) {
         error: "You have already submitted a review for this project",
       });
       return res.status(409).json({ error: 'You have already submitted a review for this project' })
+=======
+
+    const toRole = counterpartRole(fromRole);
+    const toId = toRole === 'talent' ? project.talentSlug : project.clientId;
+
+    const expectedFromId = fromRole === 'client' ? project.clientId : project.talentSlug;
+    if (expectedFromId !== fromId) {
+      return res.status(403).json({ error: 'Invalid reviewer for this project' })
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    }
+    const existing = await hasExistingReview(projectId, fromRole, fromId);
+    if (existing) {
+
+
+        error: "You have already submitted a review for this project",
+      });
+      return res.status(409).json({ error: 'You have already submitted a review for this project' })
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       return res.status(409).json({ error: 'You have already submitted a review for this project' })
 
@@ -491,8 +536,11 @@ if ( {) {
 
       .json({ message: "Review submitted", reviewId: review && review.id });
 
+<<<<<<< HEAD
     }
       .json({ message: "Review submitted", reviewId: review && review.id });
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error: any) {
     return res
       .status(500)
@@ -516,6 +564,12 @@ const now = new Date ().toISOString ();
       rating,
       text: String (text).trim (),
       categories,
+<<<<<<< HEAD
+=======
+
+      reported: false, reports: [],
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       id: uuidv4(),
       projectId,
@@ -572,3 +626,7 @@ const now = new Date ().toISOString ();
 
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

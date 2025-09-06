@@ -9,4 +9,8 @@ const BrokenLinkFixer = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default BrokenLinkFixer;
+=======
+export default BrokenLinkFixer;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

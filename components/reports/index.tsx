@@ -19,6 +19,7 @@ export default function ReportsIndex() {
     <div className="min-h-screen bg-slate-950 text-white">;
       <main className="container mx-auto px-4 py-12 max-w-7xl">;
         {/* Header */}
+<<<<<<< HEAD
         <div className="mt-12 text-center">
 
         {/* Content Categorizer Component */  } catch (error) {
@@ -84,14 +85,43 @@ function ReportsIndex() {
             className='inline - flex items - center gap - 2 text - cyan - 300 hover:text - cyan - 200 transition - colors duration - 200';
           >            ← Back to home        <div className="mt - 12 text - center">;
           <Link href="/" className="inline - flex items - center gap - 2 text - cyan - 300 hover: text - cyan - 200 transition - colors duration - 200">;
+=======
+
+
+        {/* Back to Home */}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             ← Back to home;
           </Link>;
         </div>;
       </main>;
+<<<<<<< HEAD
+=======
+
+  );
+}
+=======
+        <div className="mt-12 text-center">
+=======
+
+        {/* Content Categorizer Component */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <ContentCategorizer />;
+        {/* Back to Home */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="mt-12 text-center">
 
 
           <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">
+<<<<<<< HEAD
         {/* Header */}
         <div className=&quot;mb-8&quot;>
           <h1 className=&quot;text-4xl font-extrabold mb-2 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent&quot;>
@@ -145,6 +175,8 @@ export default function ReportsIndex() {
 }
         <div className="mt-12 text-center">
           <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             ← Back to home
           </Link>
         </div>
@@ -153,6 +185,7 @@ export default function ReportsIndex() {
     </div>);
 }
 
+<<<<<<< HEAD
 
 
     </div>
@@ -180,3 +213,10 @@ export default function ReportsIndex() {
   }
 }
 ;
+=======
+=======
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

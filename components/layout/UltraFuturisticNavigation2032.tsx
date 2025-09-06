@@ -1,13 +1,21 @@
 
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 
 
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
+=======
+
+import React, { useState, useEffect } from 'react';
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
   Menu
   X
   ChevronDown
@@ -89,8 +97,43 @@ import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
   Microscope, DollarSign, Home, Users, Briefcase
 
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState, useEffect } from 'react';
+import Link from 'next / link';
+import { motion, AnimatePresence } from 'framer-motion';
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Menu,
   X,
   ChevronDown,
@@ -166,11 +209,20 @@ import {
   BrainIcon,
   AtomIcon,
   MenuIcon,
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   CloseIcon,;
   ChevronRightIcon,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, ;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -179,6 +231,7 @@ import {
   Code, Wrench, Smartphone, BarChart3, Eye;
   Network, Server, HardDrive, Monitor;
 
+<<<<<<< HEAD
   Laptop, Watch, Headphones, Speaker, Mic
   Keyboard, Mouse, CpuIcon, DatabaseIcon
   CloudIcon, LockIcon, ShieldIcon, GlobeIcon;
@@ -190,6 +243,18 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
 }
+=======
+} from 'lucide-react';
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const serviceCategories = [
   {
     title: '🧠 AI & Consciousness 2030'
@@ -197,6 +262,7 @@ const serviceCategories = [
     color: 'from-violet-600 via-purple-600 to-indigo-600'
     description: 'Next-generation AI consciousness and emotional intelligence'
     services: [
+<<<<<<< HEAD
       {
         name: 'AI Consciousness Evolution Platform'
         href: '/ai-consciousness-evolution-platform'
@@ -225,6 +291,58 @@ const serviceCategories = [
   },  {      { name: 'AI Consciousness Evolution Platform', href: '/ai-consciousness-evolution-platform', description: 'Develop genuine AI consciousness', price: '$19,999/month' }
       { name: 'AI Emotional Intelligence Platform', href: '/ai-emotional-intelligence-platform', description: 'Real-time emotion analysis and response', price: '$3,999/month' }
       { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Multi-model creativity fusion', price: '$5,999/month' }
+=======
+
+  Laptop, Watch, Headphones, Speaker, Mic, ;
+  Keyboard, Mouse, CpuIcon, DatabaseIcon, ;
+  CloudIcon, LockIcon, ShieldIcon, GlobeIcon;
+  ZapIcon, SparklesIcon, BrainIcon, AtomIcon;
+  MenuIcon, CloseIcon, ChevronRightIcon;
+
+const contactInfo = {;
+  mobile: '+1 302 464 0950',;
+  email: 'kleber@ziontechgroup && ziontechgroup.com',;
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup && ziontechgroup.com',};  website: 'https://ziontechgroup && ziontechgroup.com';
+};
+
+const serviceCategories = [;
+  {;
+    title: '🧠 AI & Consciousness 2030',;
+    icon: BrainIcon,;
+    color: 'from-violet-600 via-purple-600 to-indigo-600',;
+    description: 'Next-generation AI consciousness and emotional intelligence',;
+    services: [;
+      {;
+        name: 'AI Consciousness Evolution Platform',;
+        href: '/ai-consciousness-evolution-platform',;
+        description: 'Develop genuine AI consciousness',;
+        price: '$19,999/month',;
+      },;
+      {;
+        name: 'AI Emotional Intelligence Platform',;
+        href: '/ai-emotional-intelligence-platform',;
+        description: 'Real-time emotion analysis and response',;
+        price: '$3,999/month',;
+      },;
+      {;
+        name: 'AI Creativity Orchestrator',;
+        href: '/ai-creativity-orchestrator',;
+        description: 'Multi-model creativity fusion',;
+        price: '$5,999/month',;
+      },;
+      {;
+        name: 'AI Autonomous Business Manager',;
+        href: '/ai-autonomous-business-manager',;
+        description: 'Fully autonomous business operations',;
+        price: '$12,999/month',;
+      },;
+    ],;
+  },  {      { name: 'AI Consciousness Evolution Platform', href: '/ai-consciousness-evolution-platform', description: 'Develop genuine AI consciousness', price: '$19,999/month' };
+
+      { name: 'AI Emotional Intelligence Platform', href: '/ai-emotional-intelligence-platform', description: 'Real-time emotion analysis and response', price: '$3,999/month' };
+      { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Multi-model creativity fusion', price: '$5,999/month' };
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       { name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager', description: 'Fully autonomous business operations', price: '$12,999/month' }
     ];
   };
@@ -236,6 +354,7 @@ const serviceCategories = [
     description: 'Quantum computing and beyond',
 
 
+<<<<<<< HEAD
         name: 'Synthetic Biology Automation Platform'
         href: '/synthetic-biology-automation-platform'
         description: 'Automate biology research'
@@ -265,6 +384,8 @@ const serviceCategories = [
 
 ];
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -273,6 +394,11 @@ const mainNavigation = [
   { name: 'Resources', href: '/resources', icon: BookOpen }
   { name: 'Case Studies', href: '/case-studies', icon: TrendingUp }
   { name: 'Blog', href: '/blog', icon: MessageCircle }
+<<<<<<< HEAD
+=======
+  { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ];
 
 const mainNavigation = [
@@ -358,8 +484,11 @@ const mainNavigation = [;
   { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
 
+<<<<<<< HEAD
   { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const companyLinks = [;
   { name: 'About Us', href: '/about' },;
   { name: 'Careers', href: '/careers' },;
@@ -389,6 +518,7 @@ export default function UltraFuturisticNavigation2032() {;
   return (
     <>;
       {/* Top Contact Bar */}
+<<<<<<< HEAD
       <div className='bg-gradient-to-r from-cyan-900/90 via-purple-900/90 to-pink-900/90 backdrop-blur-sm border-b border-cyan-500/20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex items-center justify-between py-2 text-sm'>
@@ -468,11 +598,22 @@ export default function UltraFuturisticNavigation2032() {;
           </div>
         </div>
       </div>
+=======
+
+
+              </a>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
           ? 'bg-black/95 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10' 
           : 'bg-transparent'
       }`}>
+<<<<<<< HEAD
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
@@ -503,6 +644,12 @@ export default function UltraFuturisticNavigation2032() {;
             <div className='hidden lg:flex items-center space-x-8'>
 
               {mainNavigation.map(item => (            {/* Logo */}
+=======
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-20">
+            {/* Logo */}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Rocket className="w-7 h-7 text-white" />
@@ -527,12 +674,27 @@ export default function UltraFuturisticNavigation2032() {;
                 </div>              </div>;
             </Link>;
             {/* Desktop Navigation */}
+<<<<<<< HEAD
+=======
+
+
+
+
+
+              {/* Services Dropdown */}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className='relative group'>;
                 <button className='text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group'>;
                   <Briefcase className='w-4 h-4 group-hover:scale-110 transition-transform' />;
                   <span>Services</span>;
                   <ChevronDown className='w-4 h-4 group-hover:rotate-180 transition-transform' />;
                 </button>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {/* Mega Menu */}
                 <div className='absolute top-full left-0 w-screen max-w-7xl transform -translate-x-1/2 left-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4'>;
                   <div className='bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-8 shadow-2xl shadow-cyan-500/20'>;
@@ -617,6 +779,11 @@ export default function UltraFuturisticNavigation2032() {;
                   <span>{item.name}</span>
                 </Link>
               ))}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {/* Services Dropdown */}
               <div className="relative group">;
                 <button className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group">;
@@ -624,7 +791,15 @@ export default function UltraFuturisticNavigation2032() {;
                   <span>Services</span>;
                   <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform" />;
                 </button>;
+<<<<<<< HEAD
                 {/* Mega Menu */}
+=======
+
+
+                {/* Mega Menu */}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div className="absolute top-full left-0 w-screen max-w-7xl transform -translate-x-1/2 left-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4">
                   <div className="bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-8 shadow-2xl shadow-cyan-500/20">
                     <div className="grid grid-cols-2 gap-8">
@@ -640,6 +815,7 @@ export default function UltraFuturisticNavigation2032() {;
                             </div>
                           </div>
                           <div className="space-y-2">
+<<<<<<< HEAD
               {mainNavigation.map(item => (
 
               </div>
@@ -648,6 +824,9 @@ export default function UltraFuturisticNavigation2032() {;
             {/* Desktop Navigation */}
 
 
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                             {category.services.map((service, serviceIndex) => (
                               <Link
                                 key={serviceIndex}
@@ -659,6 +838,7 @@ export default function UltraFuturisticNavigation2032() {;
 
 
 
+<<<<<<< HEAD
                               </Link>
 className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group"
                               >
@@ -688,10 +868,17 @@ className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group"
                                 </div>
 
                               </Link>
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                              </Link>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                             ))}
                           </div>;
                         </div>;
                       ))}
+<<<<<<< HEAD
                     </div>
                   </div>
                 </div>
@@ -704,14 +891,29 @@ className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group"
             <div className='hidden lg:flex items-center space-x-4'>
               <Link href='/contact'>
                 <button className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl'>                  Get Started            <div className="hidden lg:flex items-center space-x-4">
+=======
+
+            <div className="hidden lg:flex items-center space-x-4">
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Link href="/contact">
                 <button className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl">
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* CTA Buttons */}
             <div className='hidden lg:flex items-center space-x-4'>
               <Link href='/contact'>
                 <button className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl'>                  Get Started
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   Get Started
                 </button>
               </Link>
@@ -871,12 +1073,17 @@ className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group"
                 <button className='px - 6 py - 2 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 200 shadow - lg hover:shadow - xl'>                  Get Started            <div className="hidden lg:flex items - center space - x-4">;
               <Link href="/contact">;
                 <button className="px - 6 py - 2 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 200 shadow - lg hover:shadow - xl">;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   Get Started;
                 </button>;
               </Link>;
             </div>;
 
 
+<<<<<<< HEAD
 
             {/* Mobile Menu Button */}
             <button
@@ -904,6 +1111,31 @@ className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group"
 
 
 
+=======
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            {/* Mobile Menu Button */}
+            <button
+              onClick={toggleMenu}
+
+
+            </button>;
+          </div>;
+        </div>;
+      </nav>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -940,6 +1172,10 @@ className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group"
                     </div>;
                     <div>;
                       <div className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Mobile Menu */}
       <AnimatePresence>;
         {is_open && (
@@ -980,20 +1216,34 @@ className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group"
                       </div>;
                     </div>;
                   </div>;
+<<<<<<< HEAD
                     className='p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50'>;
                     <X className='w-6 h-6' />                  </button>;
                 </div>;
+=======
+
+                    className='p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50'>;
+                    <X className='w-6 h-6' />                  </button>;
+                </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {/* Mobile Navigation */}
                 <div className='space-y-6'>;
                   {mainNavigation && mainNavigation.map(item => (                    <Link
                       key={item && item.name}
                       href={item && item.href}
                       onClick={closeMenu}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       className='flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors p-3 rounded-lg hover:bg-gray-800/50'>;
                       <item && item.icon className='w-5 h-5' />                      <span>{item && item.name}</span>                  <button onClick={closeMenu} className="p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50">;
                     <X className="w-6 h-6" />;
                   </button>;
                 </div>;
+<<<<<<< HEAD
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-50 lg:hidden"
           >
@@ -1073,6 +1323,11 @@ className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group"
                       <span>{item.name}</span>
                     </Link>
                   ))}
+=======
+
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {/* Mobile Navigation */}
                 <div className='space-y-6'>;
                   {mainNavigation && mainNavigation.map(item => (                <div className="space-y-6">;
@@ -1090,6 +1345,7 @@ className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group"
                   ))}
 
                   {/* Services Accordion */}
+<<<<<<< HEAD
                   <div className='space-y-2'>
 
                     </Link>
@@ -1114,6 +1370,24 @@ className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group"
                           <div key={index} className="space-y-2">
                             <div className="text-sm font-medium text-cyan-400 py-2">{category.title}</div>
                             {category.services.map((service, serviceIndex) => (
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                    <button
+                      onClick={() =>;
+                        setActiveCategory(activeCategory === 0 ? null : 0);
+                      }
+                      className='w-full flex items-center justify-between p-3 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors';
+                    >;
+                      <span className='flex items-center space-x-3'>;
+                        <Briefcase className='w-5 h-5' />;
+                        <span>Services</span>;
+                      </span>;
+                      <ChevronRightIcon
+                        className={`w-5 h-5 transition-transform ${activeCategory === 0 ? 'rotate-90' : ''}`}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       />;
                     </button>;
                     {activeCategory === 0 && (;
@@ -1138,14 +1412,25 @@ className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group"
                           <div key={index} className="space-y-2">;
                             <div className="text-sm font-medium text-cyan-400 py-2">{category && category.title}</div>;
                             {category && category.services.map((service, serviceIndex) => (;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                               <Link
                                 key={serviceIndex}
                                 href={service && service.href}
                                 onClick={closeMenu}
+<<<<<<< HEAD
                                 className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-1'                              >                                className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-1"
                               >
                                 {service.name}
                               </Link>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                             ))}
                           </div>;
                         ))}
@@ -1155,6 +1440,7 @@ className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group"
                   </div>;
 
 
+<<<<<<< HEAD
 
 
 
@@ -1208,6 +1494,18 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-
                     <div className='space-y-2 text-sm text-gray-400'>
                       <div className='flex items-center space-x-2'>
                         <Phone className='w-4 h-4 text-cyan-400' />
+=======
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  {/* Company Links */}
+
+
+                      ))}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -1229,6 +1527,10 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-
                       <div className='flex items-center space-x-2'>
                         <MapPin className='w-4 h-4 text-pink-400' />
                         <span className='text-xs'>{contactInfo.address}</span>                      </div>                        <span>{contactInfo.mobile}</span>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                         <span>{contactInfo.mobile}</span>
                       </div>
@@ -1242,6 +1544,10 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-
                       </div>
                     </div>
                   </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     </div>;
                   </div>;
                   {/* Contact Info */}
@@ -1272,6 +1578,11 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-
                       </div>;
                     </div>;
                   </div>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   {/* CTA Button */}
                   <div className='pt-4'>;
                     <Link href='/contact' onClick={closeMenu}>;
@@ -1289,6 +1600,7 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-
 
         )}
 
+<<<<<<< HEAD
                   {/* CTA Button */}
                   <div className="pt-4">
                     <Link href="/contact" onClick={closeMenu}>
@@ -1303,15 +1615,30 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-
           </motion.div>
         )}
       </AnimatePresence>
+=======
+    </>
+      </AnimatePresence>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Spacer for fixed navigation */}
       <div className='h-20' />;
     </>;
   );      <div className="h-20" />;
     </>;
+<<<<<<< HEAD
 }
 
   );
 }
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  );
+
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <button;
                     on_click={close_menu}
                     className='p - 2 rounded - lg text - gray - 300 hover:text - cyan - 400 hover:bg - gray - 800 / 50';
@@ -1465,6 +1792,7 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-
     </>);      <div className="h - 20" />;
     </>);
 }
+<<<<<<< HEAD
 
 
       {/* Spacer for fixed navigation */}
@@ -1481,3 +1809,11 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-
       <div className='h-20' />
     </>
   );
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

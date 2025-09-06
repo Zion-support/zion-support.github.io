@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import React from 'react';
 
@@ -386,216 +387,39 @@ import Head from 'next/head';
 
 import React from 'react';
 import Head from 'next / head';
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from 'react';
 
-import React from "react";
-import Head from "next/head";
-
-import {
-  Check,
-  Star,
-  Zap,
-  Shield,
-  Users,
-  Globe,
-  ArrowRight,
-  ExternalLink,
-  TrendingUp,
-  Clock,
-  Target,
-  Building,
-  Rocket,
-  Award,
-  DollarSign,
-  ChartBar,
-  Lock,
-  Cpu,
-  Database,
-  Cloud,
-  Smartphone,
-  Palette,
-  Search,
-  MessageSquare,
-  FileText,
-  Calendar,
-  CreditCard,
-  BarChart3,
-  Settings,
-  Zap as ZapIcon,
-  Code,
-  BookOpen,
-  Activity,
-  Database as DatabaseIcon,
-  Play,
-  Mail,
-  Phone,
-  MapPin,
-  Filter,
-  Grid,
-  List,
-  ChevronDown,
-  ChevronUp,
-  Sparkles,
-  FlaskConical,
-  Dna,
-  Car,
-  Leaf,
-  Factory,
-  Truck,
-  Microscope,
-  GraduationCap,
-  ShieldCheck,
-  Brain,
-  Atom,
-  Globe2,
-  Bot,
-  ChevronRight,
-  Crown,
-  Infinity,
-  Zap as ZapIcon2,
-  Shield as ShieldIcon,
-  Users as UsersIcon,
-  Globe as GlobeIcon,
-  Cpu as CpuIcon,
-  Database as DatabaseIcon2,
-  Cloud as CloudIcon,
-  Smartphone as SmartphoneIcon,
-  Palette as PaletteIcon,
-  Search as SearchIcon,
-  MessageSquare as MessageSquareIcon,
-  FileText as FileTextIcon,
-  Calendar as CalendarIcon,
-  CreditCard as CreditCardIcon,
-  BarChart3 as BarChart3Icon,
-  Settings as SettingsIcon,
-  Zap as ZapIcon3,
-  Code as CodeIcon,
-  BookOpen as BookOpenIcon,
-  Activity as ActivityIcon,
-  Database as DatabaseIcon3,
-  Play as PlayIcon,
-  Mail as MailIcon,
-  Phone as PhoneIcon,
-  MapPin as MapPinIcon,
-  Filter as FilterIcon,
-  Grid as GridIcon,
-  List as ListIcon,
-  ChevronDown as ChevronDownIcon,
-  ChevronUp as ChevronUpIcon,
-  Sparkles as SparklesIcon,
-  FlaskConical as FlaskConicalIcon,
-  Dna as DnaIcon,
-  Car as CarIcon,
-  Leaf as LeafIcon,
-  Factory as FactoryIcon,
-  Truck as TruckIcon,
-  Microscope as MicroscopeIcon,
-  GraduationCap as GraduationCapIcon,
-  ShieldCheck as ShieldCheckIcon,
-  Brain as BrainIcon,
-  Atom as AtomIcon,
-  Globe2 as Globe2Icon,
-Bot as BotIcon,;
-  ChevronRight as ChevronRightIcon,;
-} from 'lucide-react';import Button from '../components/ui/Button';
-import Card from '../components/ui/Card';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-import {
-  enhancedRealMicroSaasServices,
-  getServicesByCategory,;
-  getPopularServices,;
-} from '../data/enhanced-real-micro-saas-services';
-import { nextGenerationAIServices } from '../data/next-generation-ai-services';
-import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
-import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
-export default function PricingPage() {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(
-    'monthly';
-  );  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
-
-  const contactInfo = {
-    mobile: "+1 302 464 0950",
-    email: "kleber@ziontechgroup.com",
-    address: "364 E Main St STE 1008 Middletown DE 19709",
-    website: "https://ziontechgroup.com",
-  };
-
-  const popularServices = getPopularServices();
-
-  // Combine all services for comprehensive pricing
-  const allServices = [
-    ...enhancedRealMicroSaasServices,
-    ...nextGenerationAIServices,
-    ...cuttingEdgeITServices,
-    ...innovativeMicroSaasV2Services,
-  ];
-
-  // Enhanced service categories with pricing
-  const serviceCategories = [
-    {
-      name: "Next-Generation AI",
-      description: "Revolutionary AI platforms",
-      services: [
-        "AI Multimodal Fusion",
-        "AI Autonomous Decision Engine",
-        "AI Emotional Intelligence",
-      ],
-      avgPrice: "$3,199/month",
-      savings: "Save 60-80% vs. competitors",
-    },
-    {
-      name: "Cutting-Edge IT Infrastructure",
-      description: "Advanced infrastructure solutions",
-      services: [
-        "Zero Trust Architecture",
-        "Edge Computing Orchestration",
-        "5G Private Networks",
-      ],
-      avgPrice: "$4,999/month",
-      savings: "Save 50-70% vs. competitors",
-    },
-    {
-      name: "Innovative Micro SaaS",
-      description: "Creative and practical SaaS tools",
-      services: [
-        "AI Brand Personality",
-        "Virtual Event Holograms",
-        "AI Meeting Transcriber",
-      ],
-      avgPrice: "$199/month",
-      savings: "Save 40-60% vs. competitors",
-    },
-    {
-      name: "Quantum & Space Technology",
-      description: "Quantum computing and space solutions",
-      services: [
-        "Quantum AI Hybrid",
-        "Space Technology Platform",
-        "Quantum Cybersecurity",
-      ],
-      avgPrice: "$5,999/month",
-      savings: "Save 70-85% vs. competitors",
-    },
-    {
-      name: "Enterprise IT Services",
-      description: "Comprehensive enterprise solutions",
-      services: ["Cloud Migration", "DevOps Automation", "Security Hardening"],
-      avgPrice: "$2,999/month",
-      savings: "Save 45-65% vs. competitors",
-    },
-  ];
-
-import React, { useState } from 'react';
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import Head from 'next/head';
+
+
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+import React from 'react';
+import Head from 'next/head';
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next / head';
 
 import Head from 'next/head';
 
 origin/automation-improvements-final
+=======
+
+
+=======
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+import React from 'react';
+import Head from 'next / head';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {
   Check
   Star
@@ -703,13 +527,25 @@ import {
   Bot as BotIcon
     ChevronRight as ChevronRightIcon
 } from 'lucide-react';
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as BookOpenIcon, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon } from 'lucide-react';
+=======
+
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as BookOpenIcon, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon } from 'lucide-react';
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {;
   Check,;
   Star,;
@@ -824,10 +660,19 @@ import {;
   enhancedRealMicroSaasServices,;
   getServicesByCategory,;
   getPopularServices,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 } from '../data/enhanced-real-micro-saas-services';
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
 import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
 import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices } from '../data/enhanced-real-micro-saas-services';
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
 import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
@@ -835,27 +680,45 @@ import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2'
 export default function PricingPage() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
 
     website: 'https://ziontechgroup.com'
+<<<<<<< HEAD
 }
   const popularServices = getPopularServices();
   // Combine all services for comprehensive pricing
   const allServices = [
+=======
+  }
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     ...enhancedRealMicroSaasServices;
     ...nextGenerationAIServices;
     ...cuttingEdgeITServices;
     ...innovativeMicroSaasV2Services
   ];
+
   // Enhanced service categories with pricing
   const serviceCategories = [
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Button from '../components / ui / Button';
 import Card from '../components / ui / Card';
 import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground';
@@ -894,9 +757,17 @@ function PricingPage() {
 ;
   // Enhanced service categories with pricing;
   const service_categories = [;
+<<<<<<< HEAD
     {
       name: 'Next - Generation AI',
       description: 'Revolutionary AI platforms',
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    {
+      name: 'Next - Generation AI',
+      description: 'Revolutionary AI platforms',
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       services: [;
         'AI Multimodal Fusion',
         'AI Autonomous Decision Engine',
@@ -905,6 +776,7 @@ function PricingPage() {
       avg_price: '$3, 199 / month',
       savings: 'Save 60 - 80% vs. competitors',
     },
+<<<<<<< HEAD
       services: [;
         'Zero Trust Architecture',
         'Edge Computing Orchestration',
@@ -915,23 +787,44 @@ function PricingPage() {
     {
       name: 'Cutting - Edge IT Infrastructure',
       description: 'Advanced infrastructure solutions',
+=======
+
+    {
+      name: 'Cutting - Edge IT Infrastructure',
+      description: 'Advanced infrastructure solutions',
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function PricingPage() {;
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(;
     'monthly';
   );  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const contactInfo = {;
     mobile: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup && ziontechgroup.com',;
   };
+<<<<<<< HEAD
   const popularServices = getPopularServices();
+=======
+
+  const popularServices = getPopularServices();
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Combine all services for comprehensive pricing;
   const allServices = [;
     ...enhancedRealMicroSaasServices,;
     ...nextGenerationAIServices,;
     ...cuttingEdgeITServices,;
     ...innovativeMicroSaasV2Services,  ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Enhanced service categories with pricing;
   const serviceCategories = [;
     {;
@@ -985,6 +878,10 @@ export default function PricingPage() {;
       avgPrice: '$2,999/month',;
       savings: 'Save 45-65% vs. competitors',;
     },  ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Enhanced pricing tiers with more realistic and comprehensive offerings;
   const pricingTiers = [;
     {;
@@ -1063,6 +960,10 @@ export default function PricingPage() {;
       cta: 'Contact Sales',;
       ctaVariant: 'primary' as const,;
     },  ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Service category pricing examples;
   const serviceCategoryPricing = [;
     {;
@@ -1125,6 +1026,10 @@ export default function PricingPage() {;
       startingPrice: '$299/month',;
       icon: <Rocket className='w-6 h-6' />,;
     },  ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Value propositions;
   const valuePropositions = [;
     {;
@@ -1138,6 +1043,10 @@ export default function PricingPage() {;
       title: 'Time to Value',;
       description: 'Get up and running in under 24 hours',;
       icon: <Clock className='w-8 h-8' />,;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       services: [;
         'Zero Trust Architecture',
         'Edge Computing Orchestration',
@@ -1145,6 +1054,7 @@ export default function PricingPage() {;
       ],
       avg_price: '$4, 999 / month',
       savings: 'Save 50 - 70% vs. competitors',
+<<<<<<< HEAD
   
   // Combine all services for comprehensive pricing
   const _allServices = [
@@ -1399,11 +1309,17 @@ name: 'Starter'
     }
   ];
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
     {
       name: 'Innovative Micro SaaS',
       description: 'Creative and practical SaaS tools',
+<<<<<<< HEAD
 services: [;
+=======
+      services: [;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         'AI Brand Personality',
         'Virtual Event Holograms',
         'AI Meeting Transcriber',
@@ -1414,7 +1330,11 @@ services: [;
     {
       name: 'Quantum & Space Technology',
       description: 'Quantum computing and space solutions',
+<<<<<<< HEAD
 services: [;
+=======
+      services: [;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         'Quantum AI Hybrid',
         'Space Technology Platform',
         'Quantum Cybersecurity',
@@ -1425,7 +1345,11 @@ services: [;
     {
       name: 'Enterprise IT Services',
       description: 'Comprehensive enterprise solutions',
+<<<<<<< HEAD
 services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
+=======
+      services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       avg_price: '$2, 999 / month',
       savings: 'Save 45 - 65% vs. competitors',
     },  ];
@@ -1585,12 +1509,20 @@ services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
       title: 'Time to Value',
       description: 'Get up and running in under 24 hours',
       icon: <Clock className='w - 8 h - 8' />,
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       metric: '<24h',
       detail: 'Setup Time',
     },
     {
       title: 'Global Reach',
       description: 'Available in 150+ countries worldwide',
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       icon: <Globe className='w - 8 h - 8' />,
       metric: '150+',
       detail: 'Countries',
@@ -1602,34 +1534,27 @@ services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
       metric: '99.99%',
       detail: 'Uptime SLA',
     },
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   ];
 ;
   return (
-<UltraFuturisticBackground variant='quantum' intensity='high'>;
+    <UltraFuturisticBackground variant='quantum' intensity='high'>;
       <Head>;
         <title>;
           Pricing - Zion Tech Group | Transparent Pricing for Revolutionary AI &;
           Quantum Services;
         </title>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         />;
         <meta name='author' content='Zion Tech Group' />;
         <meta name='robots' content='index, follow' />;
-      <Head>
 
-        <title>
-          Pricing - Zion Tech Group | Transparent Pricing for Revolutionary AI &
-          Quantum Services
-        </title>
-        <meta
-          name="description"
-          content="Transparent pricing for 500+ revolutionary micro SaaS services. Choose from Starter ($49/month), Professional ($149/month), or Enterprise ($499/month) plans with generous free trials."
-        />
-        <meta
-          name="keywords"
-          content="pricing, micro SaaS pricing, AI services pricing, quantum computing pricing, enterprise pricing"
-        />
-<meta name='author' content='Zion Tech Group' />
-        <meta name='robots' content='index, follow' />
 
         {/* Open Graph */}
         <meta
@@ -1644,8 +1569,16 @@ services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
         <meta property='og:url' content='https://ziontechgroup && ziontechgroup.com/pricing' />;
         <meta
           property='og:image'
+<<<<<<< HEAD
           content='https://ziontechgroup && ziontechgroup.com/og-image && image.jpg'
         />;
+=======
+
+          content='https://ziontechgroup && ziontechgroup.com/og-image && image.jpg'
+        />;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Twitter */}
         <meta name='twitter:card' content='summary_large_image' />;
         <meta
@@ -1659,6 +1592,7 @@ services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
         <meta
           name='twitter:image'
 
+<<<<<<< HEAD
         <title>
           Pricing - Zion Tech Group | Transparent Pricing for Revolutionary AI &
           Quantum Services
@@ -1702,6 +1636,14 @@ services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
           name='twitter:image'
           content='https://ziontechgroup.com/og-image.jpg'
         />
+=======
+  ];
+
+  return (
+    <UltraFuturisticBackground variant='quantum' intensity='high'>
+      <Head>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
       </Head>
@@ -1754,9 +1696,14 @@ services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
             generous free trials and access to our revolutionary AI & quantum
             computing services.
           </p>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           content='https://ziontechgroup && ziontechgroup.com/og-image && image.jpg'
         />;
       </Head>;
+
       <div className='container mx-auto px-4 py-12'>;
         {/* Hero Section */}
         <div className='text-center mb-16'>;
@@ -1764,6 +1711,7 @@ services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
             Transparent Pricing;
           </h1>;
           <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>;
+=======
         <meta;
           name='description';
           content='Transparent pricing for 500+ revolutionary micro SaaS services. Choose from Starter ($49 / month), Professional ($149 / month), or Enterprise ($499 / month) plans with generous free trials.';
@@ -1811,10 +1759,15 @@ services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
             Transparent Pricing;
           </h1>;
           <p className='text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto'>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             Choose the perfect plan for your business. All plans include;
             generous free trials and access to our revolutionary AI & quantum;
             computing services.;
           </p>;
+<<<<<<< HEAD
           {/* New 2026 Pricing Link */}
           <div className='mb-8 p-6 bg-gradient-to-r from-purple-800/60 to-pink-800/60 border border-purple-700/50 rounded-2xl max-w-4xl mx-auto'>
             <h3 className='text-2xl font-bold text-white mb-4'>
@@ -1828,6 +1781,11 @@ services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
 }
           <div className="mb-8 p-6 bg-gradient-to-r from-purple-800/60 to-pink-800/60 border border-purple-700/50 rounded-2xl max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               🚀 New for 2026: Revolutionary Services
             </h3>
             <p className='text-gray-300 mb-6'>
@@ -1847,6 +1805,7 @@ services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
               </span>;
             </Button>;
           </div>;
+<<<<<<< HEAD
           {/* Billing Toggle */}
         'Access to 50+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features'
       ];
@@ -2018,21 +1977,24 @@ icon: <TrendingUp className="w-8 h-8" />,
             </Button>
           </div>
 {/* Billing Toggle */}
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+          {/* Billing Toggle */}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className='flex items-center justify-center gap-4 mb-8'>;
             <span
               className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>;
               Monthly;
             </span>;
-          {/* Billing Toggle */}
-          <div className="flex items-center justify-center gap-4 mb-8">
-            <span
-              className={`text-lg ${billingCycle === "monthly" ? "text-white" : "text-gray-400"}`}
-            >
-
-              Monthly
-            </span>
-
             <button
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
           {/* Billing Toggle */  } catch (error) {
@@ -2051,13 +2013,18 @@ icon: <TrendingUp className="w-8 h-8" />,
                 )
               }
               className='relative inline-flex h-12 w-24 items-center rounded-full bg-slate-700/50 p-1 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50'            >
+<<<<<<< HEAD
 onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
               className="relative inline-flex h-12 w-24 items-center rounded-full bg-slate-700/50 p-1 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
             >
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <span
                 className={`inline-block h-10 w-10 transform rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 transition-transform ${
-                  billingCycle === "yearly" ? "translate-x-12" : "translate-x-0"
+                  billingCycle === 'yearly' ? 'translate-x-12' : 'translate-x-0'
                 }`}
+<<<<<<< HEAD
         {/* Pricing Tiers */}
         <div className='mb-20'>
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto'>            {pricingTiers.map((tier, index) => (
@@ -2136,10 +2103,21 @@ className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'
         <div className="mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {pricingTiers.map((tier, index) => (
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <UltraFuturisticCard
                 key={tier && tier.name}
                 variant={tier && tier.variant}
                 interactive={true}
+<<<<<<< HEAD
+=======
+
+
+                )}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* New 2026 Pricing Link */}
           <div className='mb - 8 p - 6 bg - gradient - to - r from - purple - 800 / 60 to - pink - 800 / 60 border border - purple - 700 / 50 rounded - 2xl max - w-4xl mx - auto'>;
             <h3 className='text - 2xl font - bold text - white mb - 4'>;
@@ -2214,6 +2192,10 @@ className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'
                   <div className='mb - 6'>;
                     <div className='flex items - baseline justify - center'>;
                       <span className='text - 5xl font - bold text - cyan - 400'>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         ${tier.price}
                       </span>;
                       <span className='text - xl text - gray - 400 ml - 2'>;
@@ -2241,10 +2223,12 @@ className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'
                   <div className='inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-6'>;
                     {tier && tier.icon}
                   </div>;
+
                   <h3 className='text-2xl font-bold text-white mb-2'>;
                     {tier && tier.name}
                   </h3>;
                   <p className='text-gray-300 mb-6'>{tier && tier.description}</p>;
+
                   <div className='mb-6'>;
                     <div className='flex items-baseline justify-center'>;
                       <span className='text-5xl font-bold text-cyan-400'>;
@@ -2258,6 +2242,7 @@ className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'
                       <div className='text-green-400 text-sm mt-2'>;
                         {tier && tier.savings}
                       </div>;
+<<<<<<< HEAD
                 glowIntensity={tier.popular ? 'high' : 'medium'}
                 className={`relative h-full ${tier.popular ? 'scale-105' : ''}`}
 
@@ -2358,9 +2343,31 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                   </ul>;
                   <Button
                     href={tier.name === "Enterprise" ? "/contact" : "/services"}
+=======
+
+                    )}
+                  </div>;
+
+                  <ul className='text-left space-y-3 mb-8'>;
+                    {tier && tier.features.map((feature, idx) => (;
+                      <li key={idx} className='flex items-start'>;
+                        <Check className='w-5 h-5 text-green-400 mr-3 mt-0 && 0.5 flex-shrink-0' />;
+                        <span className='text-gray-300'>{feature}</span>;
+                      </li>;
+                    ))}
+                  </ul>;
+
+
+
+                  <Button
+
+=======
+                    href={tier.name === 'Enterprise' ? '/contact' : '/services'}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     variant={tier.ctaVariant}
-size="lg"
+                    size="lg"
                     className="w-full"
+<<<<<<< HEAD
 
                   >
                     {tier.cta}
@@ -2371,12 +2378,33 @@ size="lg"
 ))}
 </div>;
         </div>;
+=======
+                  >
+                    {tier.cta}
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </div>
+              </UltraFuturisticCard>
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            ))}
+
+          </div>;
+        </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Value Propositions */}
         <div className='mb-20'>;
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>;
             Why Choose Zion Tech Group?;
           </h2>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {valuePropositions && valuePropositions.map((proposition, index) => (;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
                   >
@@ -2398,6 +2426,7 @@ size="lg"
           </div>
         </div>
         {/* Value Propositions */}
+<<<<<<< HEAD
         {/* Value Propositions */}
         {/* Value Propositions */}
         <div className="mb-20">
@@ -2417,14 +2446,24 @@ size="lg"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Zion Tech Group?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {valuePropositions.map((proposition, index) => (
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <UltraFuturisticCard
                 key={index}
-                variant={index % 2 === 0 ? "quantum" : "holographic"}
+                variant={index % 2 === 0 ? 'quantum' : 'holographic'}
                 interactive={true}
+<<<<<<< HEAD
 className="text-center p-6"
               >
                 <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-4'>
@@ -2460,11 +2499,17 @@ className="text-center p-6"
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
 
 
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             ))}
 
           </div>;
         </div>;
 
+<<<<<<< HEAD
             {serviceCategoryPricing.map((category, index) => (
               <UltraFuturisticCard
         {/* Service Category Pricing Examples */}
@@ -2490,8 +2535,73 @@ className="text-center p-6"
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Category Pricing</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {serviceCategoryPricing.map((category, index) => (
               <UltraFuturisticCard
+<<<<<<< HEAD
+=======
+=======
+                      </div>)}
+                  </div>;
+                  <ul className='text - left space - y-3 mb - 8'>;
+                    {tier.features.map ((feature, idx) => (
+                      <li key={idx} className='flex items - start'>;
+                        <Check className='w - 5 h - 5 text - green - 400 mr - 3 mt - 0.5 flex - shrink - 0' />;
+                        <span className='text - gray - 300'>{feature}</span>;
+                      </li>))}
+                  </ul>;
+                  <Button;
+                    href={tier.name === 'Enterprise' ? '/contact' : '/services'}
+                    variant={tier.cta_variant}
+                    size='lg';
+                    className='w - full';
+                  >;
+                    {tier.cta}
+                    <ArrowRight className='ml - 2 w - 5 h - 5' />                  </Button>;
+                </div>;
+              </UltraFuturisticCard>))}
+          </div>;
+        </div>;
+        {/* Value Propositions */}
+        <div className='mb - 20'>;
+          <h2 className='text - 3xl font - bold text - white mb - 12 text - center'>;
+            Why Choose Zion Tech Group?;
+          </h2>;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6'>            {value_propositions.map ((proposition, index) => (
+              <UltraFuturisticCard;
+                key={index}
+                variant={index % 2 === 0 ? 'quantum' : 'holographic'}
+                interactive={true}
+                className='text - center p - 6';
+              >;
+                <div className='inline - flex items - center justify - center w - 16 h - 16 rounded - full bg - gradient - to - r from - cyan - 500 to - purple - 500 mb - 4'>;
+                  {proposition.icon}
+                </div>;
+                <h3 className='text - xl font - bold text - white mb - 2'>;
+                  {proposition.title}
+                </h3>;
+                <p className='text - gray - 300 text - sm mb - 4'>;
+                  {proposition.description}
+                </p>;
+                <div className='text - 3xl font - bold text - cyan - 400 mb - 2'>;
+                  {proposition.metric}
+                </div>;
+                <div className='text - sm text - gray - 400'>;
+                  {proposition.detail}
+                </div>              </UltraFuturisticCard>))}
+          </div>;
+        </div>;
+        {/* Service Category Pricing Examples */}
+        <div className='mb - 20'>;
+          <h2 className='text - 3xl font - bold text - white mb - 12 text - center'>;
+            Service Category Pricing;
+          </h2>;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
+            {serviceCategoryPricing.map ((category, index) => (
+              <UltraFuturisticCard;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 key={index}
                 variant={
                   index % 3 === 0;
@@ -2501,17 +2611,28 @@ className="text-center p-6"
                       : 'neural';
                 }
                 interactive={true}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 className='p - 6';
               >;
                 <div className='flex items - center mb - 4'>;
                   <div className='inline - flex items - center justify - center w - 12 h - 12 rounded - full bg - gradient - to - r from - cyan - 500 to - purple - 500 mr - 4'>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     {category.icon}
                   </div>;
                   <div>;
                     <h3 className='text - lg font - bold text - white'>;
                       {category.category}
+<<<<<<< HEAD
                 <ul className='space-y-2 mb-4'>
                   {category.services.map((service, idx) => (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                 className='p-6'>;
                 <div className='flex items-center mb-4'>;
@@ -2527,14 +2648,20 @@ className="text-center p-6"
                     </div>;
                   </div>;
                 </div>;
+
                 <ul className='space-y-2 mb-4'>;
                   {category && category.services.map((service, idx) => (;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <li
                       key={idx}
                       className='text-sm text-gray-300 flex items-center'>;
                       <Check className='w-4 h-4 text-green-400 mr-2' />                      {service}
                     </li>;
                   ))}
+<<<<<<< HEAD
                 <ul className="space-y-2 mb-4">
                   {category.services.map((service, idx) => (
                     <li key={idx} className="text-sm text-gray-300 flex items-center">
@@ -2551,7 +2678,17 @@ className="text-center p-6"
   }
 }
                 </ul>
+=======
+
+
+
+
+                </ul>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </ul>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <Button
                   href='/services'
                   variant='secondary'
@@ -2560,6 +2697,11 @@ className="text-center p-6"
                   Explore Services;
                   <ChevronRight className='ml-2 w-4 h-4' />                </Button>;
               </UltraFuturisticCard>;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Category Pricing</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -2568,7 +2710,7 @@ className="text-center p-6"
                 key={index}
                 variant={index % 3 === 0 ? 'quantum' : index % 3 === 1 ? 'holographic' : 'neural'}
                 interactive={true}
-className="p-6"
+                className="p-6"
               >
                 <div className="flex items-center mb-4">
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mr-4">
@@ -2579,63 +2721,16 @@ className="p-6"
                     <div className="text-cyan-400 font-semibold">{category.startingPrice}</div>
                   </div>
                 </div>
-
-            {serviceCategoryPricing.map((category, index) => (
-              <UltraFuturisticCard
-                key={index}
-                variant={
-                  index % 3 === 0
-                    ? "quantum"
-                    : index % 3 === 1
-                      ? "holographic"
-                      : "neural"
-                }
-                interactive={true}
-                className="p-6"
-              >
-                <div className="flex items-center mb-4">
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mr-4">
-                    {category.icon}
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-white">
-                      {category.category}
-                    </h3>
-                    <div className="text-cyan-400 font-semibold">
-                      {category.startingPrice}
-                    </div>
-                  </div>
-                </div>
-<ul className='space-y-2 mb-4'>
-                  {category.services.map((service, idx) => (
-                    <li
-                      key={idx}
-                      className="text-sm text-gray-300 flex items-center"
-                    >
-                      <Check className="w-4 h-4 text-green-400 mr-2" />{" "}
-                      {service}
-                    </li>
-                  ))}
-
+                
                 <ul className="space-y-2 mb-4">
                   {category.services.map((service, idx) => (
                     <li key={idx} className="text-sm text-gray-300 flex items-center">
                       <Check className="w-4 h-4 text-green-400 mr-2" />
-{service}
+                      {service}
                     </li>
                   ))}
                 </ul>
-<Button
-                  href="/services"
-                  variant="secondary"
-                  size="sm"
-                  className="w-full"
-                >
-                  Explore Services
-                  <ChevronRight className="ml-2 w-4 h-4" />
-                </Button>
-
-                </ul>
+                
                 <Button
                   href="/services"
                   variant="secondary"
@@ -2643,6 +2738,12 @@ className="p-6"
                   className="w-full"
                 >
                   Explore Services
+<<<<<<< HEAD
+=======
+                  <ChevronRight className="ml-2 w-4 h-4" />
+                </Button>
+              </UltraFuturisticCard>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             ))}
 
@@ -2671,12 +2772,12 @@ className="p-6"
 
           </div>;
         </div>;
+<<<<<<< HEAD
 <ChevronRight className='ml-2 w-4 h-4' />                </Button>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-              </UltraFuturisticCard>
-))}
-</div>;
-        </div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Popular Services Pricing */}
         <div className='mb-20'>;
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>;
@@ -2684,6 +2785,7 @@ className="p-6"
           </h2>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {popularServices && popularServices.slice(0, 6).map((service, index) => (;
 
+<<<<<<< HEAD
         {/* Popular Services Pricing */}
         {/* Popular Services Pricing */}
         {/* Popular Services Pricing */}
@@ -2693,15 +2795,28 @@ className="p-6"
           </h2>
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {popularServices.slice(0, 6).map((service, index) => (
 
+=======
+=======
+
+        {/* Popular Services Pricing */}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Popular Services Pricing</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {popularServices.slice(0, 6).map((service, index) => (
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <UltraFuturisticCard
                 key={service && service.id}
                 variant={service && service.variant as any}
                 interactive={true}
+<<<<<<< HEAD
                     </h3>;
                     <div className='text - cyan - 400 font - semibold'>;
                       {category.starting_price}
@@ -2757,11 +2872,14 @@ className='p - 6';
                   <ul className='text-xs text-gray-300 space-y-1'>
                     {service.features.slice(0, 3).map((feature, idx) => (
                       <li key={idx} className='flex items-center'>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
                         <Check className='w-3 h-3 text-green-400 mr-2' />                        {feature}
                       </li>;
 
+<<<<<<< HEAD
 className='p-6'>;
                 <div className='text-center mb-4'>;
                   <div className='text-3xl mb-3'>{service && service.icon}</div>;
@@ -2784,6 +2902,9 @@ className='p-6'>;
                       <li key={idx} className='flex items-center'>;
                         <Check className='w-3 h-3 text-green-400 mr-2' />                        {feature}
                       </li>;
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 className="p-6"
               >
                 <div className="text-center mb-4">
@@ -2801,9 +2922,20 @@ className='p-6'>;
                         <Check className="w-3 h-3 text-green-400 mr-2" />
                         {feature}
                       </li>
+<<<<<<< HEAD
                     ))}
                   </ul>;
                 </div>;
+=======
+
+                    ))}
+
+                  </ul>;
+                </div>;
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <Button
                   href={service && service.link}
                   variant='primary'
@@ -2812,6 +2944,11 @@ className='p-6'>;
                   Learn More;
                   <ExternalLink className='ml-2 w-4 h-4' />                </Button>;
               </UltraFuturisticCard>;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 
                 <Button
                   href={service.link}
@@ -2825,6 +2962,7 @@ className='p-6'>;
                   Learn More
                   <ExternalLink className="ml-2 w-4 h-4" />
                 </Button>
+<<<<<<< HEAD
 
 
                 >
@@ -2853,6 +2991,16 @@ className='p-6'>;
                 to the selected services. No credit card required to start your
                 trial.
               </p>
+=======
+              </UltraFuturisticCard>
+
+
+
+
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </UltraFuturisticCard>
             <UltraFuturisticCard variant='holographic' className='p-6'>
               <h3 className='text-lg font-bold text-white mb-3'>
@@ -2881,6 +3029,7 @@ className='p-6'>;
                 No setup fees for any plan. All services are designed for
                 instant deployment with our AI-powered setup wizards.
               </p>            </UltraFuturisticCard>
+<<<<<<< HEAD
         {/* CTA Section */}
         <div className='text-center'>
           <UltraFuturisticCard
@@ -2956,30 +3105,73 @@ variant='primary'
               </UltraFuturisticCard>
 ))}
 <div className="mb-20">
+=======
+=======
+        <div className="mb-20">
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Frequently Asked Questions</h2>
           <div className="max-w-4xl mx-auto space-y-4">
             <UltraFuturisticCard variant="quantum" className="p-6">
               <h3 className="text-lg font-bold text-white mb-3">What's included in the free trial?</h3>
               <p className="text-gray-300">All plans include a generous free trial period with full access to the selected services. No credit card required to start your trial.</p>
             </UltraFuturisticCard>
+            
             <UltraFuturisticCard variant="holographic" className="p-6">
               <h3 className="text-lg font-bold text-white mb-3">Can I change my plan later?</h3>
               <p className="text-gray-300">Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing adjustments.</p>
             </UltraFuturisticCard>
+            
             <UltraFuturisticCard variant="neural" className="p-6">
               <h3 className="text-lg font-bold text-white mb-3">What support is included?</h3>
               <p className="text-gray-300">All plans include 24/7 support. Professional and Enterprise plans include priority support with dedicated account managers.</p>
             </UltraFuturisticCard>
+            
             <UltraFuturisticCard variant="quantum" className="p-6">
               <h3 className="text-lg font-bold text-white mb-3">Is there a setup fee?</h3>
               <p className="text-gray-300">No setup fees for any plan. All services are designed for instant deployment with our AI-powered setup wizards.</p>
             </UltraFuturisticCard>
+<<<<<<< HEAD
           </div>
         </div>
           </div>
         </div>
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+          </div>
+        </div>
+        {/* Contact Information */}
+
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">Get In Touch</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <UltraFuturisticCard variant="quantum" className="text-center p-6">
+              <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-white mb-3">Phone</h3>
+              <p className="text-cyan-400 text-lg font-semibold">{contactInfo.mobile}</p>
+              <p className="text-gray-400 text-sm mt-2">Available 24/7</p>
+            </UltraFuturisticCard>
+
+            <UltraFuturisticCard variant="holographic" className="text-center p-6">
+              <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-white mb-3">Email</h3>
+              <p className="text-purple-400 text-lg font-semibold">{contactInfo.email}</p>
+              <p className="text-gray-400 text-sm mt-2">Quick response guaranteed</p>
+            </UltraFuturisticCard>
+
+            <UltraFuturisticCard variant="neural" className="text-center p-6">
+              <MapPin className="w-12 h-12 text-green-400 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-white mb-3">Address</h3>
+              <p className="text-green-400 text-sm font-semibold leading-relaxed">{contactInfo.address}</p>
+              <p className="text-gray-400 text-sm mt-2">Global operations</p>
+            </UltraFuturisticCard>
+
+          </div>
+        </div>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>;
         </div>;
+
         {/* FAQ Section */}
         <div className='mb-20'>;
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>;
@@ -2996,6 +3188,7 @@ variant='primary'
                 trial.;
               </p>;
             </UltraFuturisticCard>;
+
             <UltraFuturisticCard variant='holographic' className='p-6'>;
               <h3 className='text-lg font-bold text-white mb-3'>;
                 Can I change my plan later?;
@@ -3006,6 +3199,7 @@ variant='primary'
                 adjustments.;
               </p>;
             </UltraFuturisticCard>;
+
             <UltraFuturisticCard variant='neural' className='p-6'>;
               <h3 className='text-lg font-bold text-white mb-3'>;
                 What support is included?;
@@ -3015,6 +3209,7 @@ variant='primary'
                 plans include priority support with dedicated account managers.;
               </p>;
             </UltraFuturisticCard>;
+
             <UltraFuturisticCard variant='quantum' className='p-6'>;
               <h3 className='text-lg font-bold text-white mb-3'>;
                 Is there a setup fee?;
@@ -3025,6 +3220,7 @@ variant='primary'
               </p>            </UltraFuturisticCard>;
           </div>;
         </div>;
+
         {/* Contact Information */}
         <div className='mb-16'>;
           <h2 className='text-3xl font-bold text-white mb-8 text-center'>;
@@ -3039,6 +3235,7 @@ variant='primary'
               </p>;
               <p className='text-gray-400 text-sm mt-2'>Available 24/7</p>;
             </UltraFuturisticCard>;
+
             <UltraFuturisticCard
               variant='holographic'
               className='text-center p-6'>;
@@ -3051,6 +3248,7 @@ variant='primary'
                 Quick response guaranteed;
               </p>;
             </UltraFuturisticCard>;
+
             <UltraFuturisticCard variant='neural' className='text-center p-6'>;
               <MapPin className='w-12 h-12 text-green-400 mx-auto mb-4' />;
               <h3 className='text-xl font-bold text-white mb-3'>Address</h3>;
@@ -3060,6 +3258,7 @@ variant='primary'
               <p className='text-gray-400 text-sm mt-2'>Global operations</p>            </UltraFuturisticCard>;
           </div>;
         </div>;
+<<<<<<< HEAD
         {/* CTA Section */}
         <div className='text-center'>
           <UltraFuturisticCard
@@ -3067,6 +3266,13 @@ variant='primary'
             className='p-12'
           >
             <h2 className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+=======
+
+
+        {/* CTA Section */}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -3082,12 +3288,17 @@ variant='primary'
               revolutionary AI & quantum computing services. No credit card
               required, instant setup, and full support included.
             </p>
+<<<<<<< HEAD
         {/* CTA Section */}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className='p-12'>;
             <h2 className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
               Ready to Get Started?;
             </h2>;
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>;
+=======
                   </div>;
                 </div>;
                 <div className='mb - 4'>;
@@ -3203,13 +3414,24 @@ variant='primary'
               Ready to Get Started?;
             </h2>;
             <p className='text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto'>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Start your free trial today and experience the power of;
               revolutionary AI & quantum computing services. No credit card;
               required, instant setup, and full support included.;
             </p>;
+<<<<<<< HEAD
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
             <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">
+=======
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Button
                 href='/services'
                 variant='primary'
@@ -3222,6 +3444,7 @@ variant='primary'
                 href='/contact'
                 variant='secondary'
                 size='lg'
+<<<<<<< HEAD
             <div className='text-sm text-gray-400'>
         <div className="text-center">
           <UltraFuturisticCard variant="quantum-holographic-advanced" className="p-12">
@@ -3480,6 +3703,9 @@ Can I change my plan later?
               <p className="mt-2">
                 ✓ 24/7 Support • ✓ 99.99% Uptime SLA • ✓ Global Infrastructure
 </p>            </div>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             <div className="text-sm text-gray-400">
               <p>✓ 30-90 Day Free Trials • ✓ No Credit Card Required • ✓ Instant Setup</p>
@@ -3492,11 +3718,15 @@ Can I change my plan later?
 
 
                 className='text-lg px-8 py-4'>;
+<<<<<<< HEAD
 className='text-lg px-8 py-4'>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 Contact Sales;
                 <MessageSquare className='ml-2 w-5 h-5' />;
               </Button>;
             </div>;
+
             <div className='text-sm text-gray-400'>;
               <p>;
                 ✓ 30-90 Day Free Trials • ✓ No Credit Card Required • ✓ Instant;
@@ -3504,6 +3734,11 @@ className='text-lg px-8 py-4'>;
               </p>;
               <p className='mt-2'>;
                 ✓ 24/7 Support • ✓ 99 && 99.99% Uptime SLA • ✓ Global Infrastructure;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className='flex flex - col sm:flex - row gap - 4 justify - center mb - 8'>;
   );
 
@@ -3600,10 +3835,24 @@ className='text-lg px-8 py-4'>;
               </p>;
               <p className='mt - 2'>;
                 ✓ 24 / 7 Support • ✓ 99.99% Uptime SLA • ✓ Global Infrastructure;
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </p>            </div>;
           </UltraFuturisticCard>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
+
+
+}
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     </UltraFuturisticBackground>
 
@@ -3615,12 +3864,26 @@ className='text-lg px-8 py-4'>;
   )
 
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 }
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
   )
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
     </UltraFuturisticBackground>);
 }
+<<<<<<< HEAD
   )
 
   )
@@ -3656,3 +3919,6 @@ origin/automation-improvements-final
   );
 }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

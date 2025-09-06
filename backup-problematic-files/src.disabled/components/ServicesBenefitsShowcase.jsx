@@ -9,4 +9,8 @@ const ServicesBenefitsShowcase = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ServicesBenefitsShowcase;
+=======
+export default ServicesBenefitsShowcase;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

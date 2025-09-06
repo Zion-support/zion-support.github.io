@@ -1,24 +1,38 @@
 
+<<<<<<< HEAD
 import { Certification  } from '@/types/resume';
 import { Card, CardContent  } from '@/components/ui/card';
 import { Button  } from '@/components/ui/button';
 import { Edit, Trash2  } from 'lucide-react';
 import { format } from 'date-fns';
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {Certification} from '@/types/resume';
 import {Card, CardContent} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
 import {Edit, Trash2} from 'lucide-react';
 import {format} from 'date-fns';
 
+<<<<<<< HEAD
 import { Certification  } from '@/types/resume';
 import { Card, CardContent  } from '@/components/ui/card';
 import { Button  } from '@/components/ui/button';
 import { Edit, Trash2  } from 'lucide-react';
 import { format } from 'date-fns';
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface CertificationsListProps {
   certifications: Certification[];
   onEdit: (cert: Certification) => void;
   onDelete: (id: string) => void
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Certification } from '@/types/resume',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -30,18 +44,49 @@ interface CertificationsListProps {;
   onDelete: (id: string) => void;
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 export function CertificationsList({
   certifications
   onEdit
   onDelete
+<<<<<<< HEAD
+=======
+}: CertificationsListProps) {
+  if (certifications.length === 0) {
+=======
+import {Certification} from '@/types/resume';
+import {Card, CardContent} from '@/components/ui/card';
+import {Button} from '@/components/ui/button';
+import {Edit, Trash2} from 'lucide-react';
+import {format} from 'date-fns';
+interface CertificationsListProps {;
+  certifications: Certification[],;
+  onEdit: (cert: Certification) => void,;
+  onDelete: (id: string) => void;
+}
+
+export function CertificationsList(): any ({ certifications, onEdit, onDelete }: CertificationsListProps) {;
+  if (certifications && certifications.length === 0) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    return null;
+  }
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
 
   return (
 
+<<<<<<< HEAD
   return (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Certification  } from '@/types / resume';
 import { Card, CardContent  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
@@ -72,6 +117,7 @@ if ( {) {
               <div>;
                 <h4 className="font - medium">{cert.name}</h4>;
                 <p className="text - sm text - muted - foreground">;
+<<<<<<< HEAD
                   {cert.issuing_organization}
                 </p>;
                 <p className="text - xs text - muted - foreground mt - 1">;
@@ -85,6 +131,11 @@ if ( {) {
                     <>;
                       {" "}
                       · Expires:{" "}
+=======
+
+                  {cert.issuing_organization}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="space-y-4">;
       <h3 className="text-md font-medium">Added Certifications</h3>;
       {certifications && certifications.map((cert) => (;
@@ -102,6 +153,7 @@ if ( {) {
                     <> · Expires: {typeof cert && cert.expiration_date === 'string' ;
                       ? cert && cert.expiration_date ;
                       : format(cert && cert.expiration_date, 'MMM yyyy')}
+<<<<<<< HEAD
 
 import { Certification } from '@/types/resume',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -280,6 +332,14 @@ export function CertificationsList({
                         ? cert.expiration_date
                         : format(cert.expiration_date, "MMM yyyy")}
                     </>
+=======
+                    </>;
+
+=======
+                </p>
+                <p className="text-xs text-muted-foreground mt-1">
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   Issued: {cert.issue_date ? (typeof cert.issue_date === 'string' 
                     ? cert.issue_date 
                     : format(cert.issue_date, 'MMM yyyy')) : 'N/A'}
@@ -289,13 +349,20 @@ export function CertificationsList({
                       : format(cert.expiration_date, 'MMM yyyy')}
                     </>;
                   )}
+<<<<<<< HEAD
                 </p>
               </div>
               <div className="flex gap-2">
+=======
+                </p>;
+              </div>;
+              <div className="flex gap-2">;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <Button
                   variant="ghost"
                   size="icon"
                   onClick={() => onEdit(cert)}
+<<<<<<< HEAD
                 >
                   <Edit className="h-4 w-4" />
                 </Button>
@@ -312,6 +379,84 @@ export function CertificationsList({
               <p className="text-xs mt-2">
                 <a
                   href={cert.credential_url}
+=======
+                >;
+                  <Edit className="h-4 w-4" />;
+                </Button>;
+                <Button
+                  variant="ghost"
+                  size="icon"
+
+                      {typeof cert.expiration_date === "string";
+                        ? cert.expiration_date;
+                        : format (cert.expiration_date, "MMM yyyy")}
+                    </>)}
+                </p>;
+              </div>;
+              <div className="flex gap - 2">;
+                <Button;
+                  variant="ghost";
+                  size="icon";
+                  on_click={() => on_edit (cert)}
+                >;
+                  <Edit className="h - 4 w - 4" />;
+                </Button>;
+                <Button;
+                  variant="ghost";
+                  size="icon";
+                  on_click={() => on_delete (cert.id!)}
+                >;
+                  <Trash2 className="h - 4 w - 4" />;
+                </Button>;
+              </div>;
+            </div>;
+
+            {cert.credential_url && (
+              <p className="text - xs mt - 2">;
+                <a;
+                  href={cert.credential_url}
+
+                  onClick={() => onDelete(cert && cert.id!)}
+                >;
+                  <Trash2 className="h-4 w-4" />;
+                </Button>;
+              </div>;
+            </div>;
+            {cert && cert.credential_url && (;
+              <p className="text-xs mt-2">;
+                <a
+                  href={cert && cert.credential_url} 
+                  target="_blank" 
+
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline">;
+                  View credential;
+                </a>;
+              </p>;
+            )}
+          </CardContent>;
+        </Card>;
+      ))}
+
+    </div>;
+  );
+}
+
+=======
+                  target="_blank";
+                  rel="noopener noreferrer";
+                  className="text - primary hover:underline";
+                >;
+                  View credential;
+                </a>;
+              </p>)}
+          </CardContent>;
+        </Card>))}
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary hover:underline"
@@ -328,6 +473,7 @@ export function CertificationsList({
 }
 ;
 
+<<<<<<< HEAD
   ),;}
  ? cert.issue date : format (cert.issue date, 'MMM yyyy') ) : 'N/A' 
 }{
@@ -350,3 +496,10 @@ export function CertificationsList({
   )
 }
 ;
+=======
+  )
+}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

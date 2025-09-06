@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from "react",
 import { cn } from "@/lib/utils",
@@ -19,6 +23,7 @@ export function SidebarContent(): any ({ className, children, ...props }: Sideba
 
   )
 
+<<<<<<< HEAD
 import React from "react";
 import { cn } from "@/lib/utils";
 import React from "react",
@@ -42,6 +47,9 @@ export function SidebarContent({
   );
 }
   )
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",;
 import { cn } from "@/lib/utils",;
 interface SidebarContentProps extends React.HTMLAttributes<HTMLDivElement> {;
@@ -51,6 +59,7 @@ interface SidebarContentProps extends React.HTMLAttributes<HTMLDivElement> {;
 ;
 export function SidebarContent({ className, children, ...props }: SidebarContentProps) {;
   return (;
+<<<<<<< HEAD
 }
 
 ;
@@ -62,3 +71,18 @@ export function SidebarContent({ className, children, ...props }: SidebarContent
   );
 }
 ;
+=======
+
+    <div className={cn("flex-1 px-2 py-4", className)} {...props}>;
+      {children}
+
+    </div>;
+  );
+}
+
+=======
+;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,4 +9,8 @@ const AIAutonomousManufacturing.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIAutonomousManufacturing.js;
+=======
+export default AIAutonomousManufacturing.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

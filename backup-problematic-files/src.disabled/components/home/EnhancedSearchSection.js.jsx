@@ -9,4 +9,8 @@ const EnhancedSearchSection.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default EnhancedSearchSection.js;
+=======
+export default EnhancedSearchSection.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,4 +9,8 @@ const AIAutonomousDecisionPlatform = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIAutonomousDecisionPlatform;
+=======
+export default AIAutonomousDecisionPlatform;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

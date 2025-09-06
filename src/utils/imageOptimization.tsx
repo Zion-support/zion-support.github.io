@@ -20,17 +20,48 @@ const imgRef = useRef<HTMLDivElement>(null);
 <defs> <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"> <stop offset="0%" style="stop-color:#f3f4f6, stop-opacity:1" /> <stop offset="100%" style="stop-color:#e5e7eb, stop-opacity:1" /> 100%"height=" 100%"fill=" url (#grad) "/> </svg>`) .toString ('base64')
 }`
 }
+
+export function OptimizedImage({
+  src,
+  alt,
+  width,
+  height,
+  className,
+  priority = false,
+  placeholder = 'empty',
+  blurDataURL,
+  quality = 75,
+  sizes,
+  onLoad,
+  onError,
+  fallbackSrc,
+  lazy = true,
+  ...props
+}: OptimizedImageProps) {
+  const [isLoading, setIsLoading] = useState(true)
+  const [hasError, setHasError] = useState(false)
+  const [isInView, setIsInView] = useState(!lazy || priority)
   const imgRef = useRef<HTMLDivElement>(null)
+
   // Intersection Observer for lazy loading
   useEffect(() => {
+<<<<<<< HEAD
     if (!lazy |priority |isInView) return
     if (!lazy |priority |isInView) return
     if (!lazy || priority || isInView) return;
+=======
+
+
+    if (!lazy || priority || isInView) return;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const observer = new IntersectionObserver(
-      ([entry],) => {
+      ([entry]) => {
         if (entry && entry.isIntersecting) {
           setIsInView(true)
           observer.disconnect()
+<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react',;
 import Image from 'next/image',;
 import { cn } from '@/lib/utils',;
@@ -49,6 +80,8 @@ interface OptimizedImageProps {;
   onError?: () => void,;
   fallbackSrc?: string,;
   lazy?: boolean;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const observer = new IntersectionObserver ( ([entry]) => {
   // Check condition
 if ( {) {
@@ -77,6 +110,7 @@ export function OptimizedImage({;
   const [isInView, setIsInView] = useState(!lazy || priority),;
   const imgRef = useRef<HTMLDivElement>(null),;
   // Intersection Observer for lazy loading;
+<<<<<<< HEAD
   useEffect(() => {;
     if (!lazy || priority || isInView) return,;
     const observer = new IntersectionObserver(;
@@ -106,16 +140,37 @@ export function OptimizedImage({;
     }
     // For internal images, Next.js will handle optimization
     return originalSrc
+=======
+
+    return () => observer.disconnect ();
+  }, [lazy, priority, isInView]);
+  // Generate WebP - compatible src;
+  const getOptimizedSrc = (original_src: string, ) =>: any {
+    // If it's already optimized or external, return as - is;
+    // Check condition
+if (||) {
+  $2
+}
+      original_src.includes ('/_next / image')) {
+      return original_src;
+    }
+    // For internal images, Next.js will handle optimization;
+    return original_src;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
+
   const handleLoad = () => {
     setIsLoading(false)
     onLoad?.()
   }
+
   const handleError = () => {
     setHasError(true)
     setIsLoading(false)
     onError?.()
   }
+<<<<<<< HEAD
       }
     // Generate a simple gray blur placeholder
     return `data:image/svg+xml;base64,${Buffer.from(
@@ -165,6 +220,23 @@ export function OptimizedImage({;
             <stop offset="0%" style="stop-color:#f3f4f6;stop-opacity:1" />
             <stop offset="100%" style="stop-color:#e5e7eb;stop-opacity:1" />
     
+=======
+
+  useEffect(() => {;
+    if (!lazy || priority || isInView) return,;
+    const observer = new IntersectionObserver(;
+      ([entry]) => {;
+        if (entry && entry.isIntersecting) {;
+          setIsInView(true),;
+          observer.disconnect();
+
+
+
+        }
+      }
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Generate a simple gray blur placeholder
     return `data: image/svg+xml,base64,${Buffer.from(
       `<svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">
@@ -176,12 +248,18 @@ export function OptimizedImage({;
         </defs>
         <rect width="100%" height="100%" fill="url(#grad)" />
       </svg>`
+<<<<<<< HEAD
   }
     >
       {isInView && !hasError && (
         <Image
     >
       {isInView && !hasError && (
+=======
+
+    ).toString('base64')}`
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
 
 
@@ -227,6 +305,7 @@ export function OptimizedImage({;
     }
 
     // For internal images, Next && Next.js will handle optimization;
+<<<<<<< HEAD
     ).toString('base64')}`
   }
     >
@@ -238,6 +317,8 @@ export function OptimizedImage({;
     <div
 ;
     // For internal images, Next.js will handle optimization;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return originalSrc;
   },;
   const handleLoad = () => {;
@@ -272,6 +353,13 @@ export function OptimizedImage({;
       style={{ width, height }}
     >;
       {isInView && !hasError && (;
+<<<<<<< HEAD
+=======
+
+        <Image;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           src={getOptimizedSrc(src)}
   // Generate blur placeholder;
   const generateBlurDataURL = () =>: any {
@@ -295,8 +383,11 @@ if (return blurDataURL) {
       {isInView && !has_error && (
         <Image;
           src={getOptimizedSrc (src)}
+<<<<<<< HEAD
         <Image;
           src={getOptimizedSrc(src)}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           alt={alt}
           width={width}
           height={height}
@@ -304,9 +395,15 @@ if (return blurDataURL) {
           blurDataURL={
             placeholder === 'blur' ? generateBlurDataURL() : undefined
           }
+<<<<<<< HEAD
           onLoad={handleLoad}
           onError={handleError}
           className={cn(            'transition-opacity duration-300'
+=======
+
+          className={cn(            'transition-opacity duration-300'
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           className={cn(            'transition-opacity duration-300',
 
@@ -319,11 +416,16 @@ if (return blurDataURL) {
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {...props}
         />
       )}
       {/* Loading placeholder */}
 
+<<<<<<< HEAD
         />
       )}
       {/* Loading placeholder */}
@@ -350,6 +452,13 @@ ursor/fix-website-loading-errors-and-merge-6662
         <div className='absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse' />
       {(isLoading && isInView) && (
         <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse" />
+=======
+
+      {(isLoading && isInView) && (
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse" />
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       )}
       {/* Error fallback */}
       {hasError && (
@@ -358,10 +467,18 @@ ursor/fix-website-loading-errors-and-merge-6662
             <img
               src={fallbackSrc}
               alt={alt}
+<<<<<<< HEAD
               className='max-w-full max-h-full object-contain'
               onLoad={handleLoad}            />
           ) : (
             <div className='text-gray-400 text-center'>
+=======
+
+              onLoad={handleLoad}            />;
+          ) : (;
+            <div className='text-gray-400 text-center'>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <svg
                 className='w-8 h-8 mx-auto mb-2'
                 fill='currentColor'
@@ -440,6 +557,8 @@ export function preloadImage(): any (src: string): Promise<void> {;
     const { src, alt, ...otherProps } = props
     return <OptimizedImage src={src} alt={alt} {...(otherProps as any)} />
   }
+}
+
 // Utility to preload critical images
 export function preloadImage(src: string): Promise<void> {
   return new Promise((resolve, reject) => {
@@ -460,12 +579,12 @@ export function getImageDimensions(
       resolve({ width: img.naturalWidth, height: img.naturalHeight })
     img.onerror = reject
     img.src = src
-  });    img.src = src
   })
 }
     img.onerror = reject
     img.src = src
   })
+<<<<<<< HEAD
 }
 
 
@@ -698,3 +817,6 @@ export function getImageDimensions (
     img.src = src;
   });
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

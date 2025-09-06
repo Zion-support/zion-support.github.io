@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type UIKitKind = 'ios' | 'android' | 'web';
 export interface TokenSet {
 
@@ -33,6 +34,9 @@ export async function buildTokenSet(fileId: string): Promise<TokenSet> {
       md: 16
       lg: 24
       xl: 32
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   tokens: TokenSet;
 }
@@ -209,10 +213,14 @@ export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit
 
 
   const tokens = await buildTokenSet(fileId);
+<<<<<<< HEAD
     }
   }
 }
 export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     };
   };
 }
@@ -226,6 +234,7 @@ export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit
 export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
   const tokens = await buildTokenSet(fileId);
   return {
+<<<<<<< HEAD
     components: {
       button: {
         primary: {
@@ -237,11 +246,39 @@ export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit
     tokens
   }
 
+=======
+
+    id,
+    type,
+    name,
+    properties,
+    children: []
+=======
+
+
+
+=======
+
+  };
+}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+          background_color: tokens.colors.primary,
+          padding: tokens.spacing.md;
+        }
+      }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
     tokens;
   }
 }
+<<<<<<< HEAD
 
   };
 
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

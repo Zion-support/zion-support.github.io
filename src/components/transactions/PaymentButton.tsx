@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import { useState } from "react",
@@ -276,6 +277,11 @@ export function PaymentButton({;
       setIsProcessing(true),;
       if (onPaymentInitiated) {;
         onPaymentInitiated();
+=======
+redirectUrl?: string
+}
+export function PaymentButton({
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
       
       // Call the create-checkout edge function
@@ -283,10 +289,13 @@ export function PaymentButton({;
         body: {
           amount,
           serviceId,
+<<<<<<< HEAD
           amount
           serviceId
           amount,
           serviceId,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           providerId,
           userId: user?.id,
           successUrl: redirectUrl || window.location.href,
@@ -314,6 +323,7 @@ export function PaymentButton({;
       // Reset button state after a short delay
       setTimeout(() => {
         setIsProcessing(false)
+<<<<<<< HEAD
       }, 1500)
     }
   }
@@ -466,3 +476,6 @@ toast ({
 }
 ;
 ;
+=======
+      }, 1500)
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

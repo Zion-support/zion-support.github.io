@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState  } from 'react';
 import EnhancedCard from '../../components/ui/EnhancedCard',
 import EnhancedButton from '../../components/ui/EnhancedButton',
@@ -33,6 +34,10 @@ export default function NewJobPage() {
       notify('Job posted! Invite talent to get responses.success')
     }, 800)
   },
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="max-w-2xl mx-auto">
       <EnhancedCard>
@@ -47,6 +52,7 @@ export default function NewJobPage() {
             <EnhancedButton type="submit" variant="primary">Publish</EnhancedButton>
           </form>
 
+<<<<<<< HEAD
           </form>;
   return (
     <div className="max-w-2xl mx-auto">
@@ -64,6 +70,17 @@ export default function NewJobPage() {
         )}
       </EnhancedCard>
     </div>
+=======
+
+          </form>;
+        )}
+      </EnhancedCard>;
+    </div>;
+  );
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   )
 }
 import {useState} from 'react';
@@ -75,8 +92,15 @@ import { use_toast } from '../../components / ui / NotificationSystem';
       </EnhancedCard>;
     </div>);
 ;
+<<<<<<< HEAD
 
 );
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -90,3 +114,9 @@ import { use_toast } from '../../components / ui / NotificationSystem';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

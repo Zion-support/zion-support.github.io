@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react'
 import { useForm, type ControllerRenderProps } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -100,6 +101,8 @@ import { useState } from 'react';
 import { useForm, type ControllerRenderProps } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Loader2 } from 'lucide-react';
 import { ContractFormValues } from '@/components/contracts/components/ContractForm';
 import { ContractTemplate } from '@/types/contracts';
@@ -302,23 +305,34 @@ export function TemplateSaveForm({;
     }
   },
   
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <FormField
           control={form.control}
+<<<<<<< HEAD
           name='title'
           render={({
             field
           }: {
             field: ControllerRenderProps<FormValues, 'title'>
           }) => (            <FormItem>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           name="title"
           render={({ field }: { field: ControllerRenderProps<FormValues "title"> }) => (
             <FormItem>
 
               <FormLabel>Template Name</FormLabel>
               <FormControl>
+<<<<<<< HEAD
                 <Input {...field} placeholder="Enter template name" />
               </FormControl>
               <FormMessage />
@@ -326,6 +340,13 @@ export function TemplateSaveForm({;
           )}
         />
         <FormField
+=======
+                <Input {...field} placeholder='Enter template name' />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             field: ControllerRenderProps<FormValues, 'title'>;
           }) => (            <FormItem>;
               <FormLabel>Template Name</FormLabel>;
@@ -342,6 +363,7 @@ export function TemplateSaveForm({;
         />;
         <FormField;
           control={form.control}
+<<<<<<< HEAD
           render={({
             field
           }: {
@@ -363,6 +385,14 @@ export function TemplateSaveForm({;
           render={({
             field
           }: {
+=======
+          name='is_default';
+
+          render={({
+            field
+          }: {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             field: ControllerRenderProps<FormValues, 'isDefault'>;
           }) => (;
             <FormItem className='flex items-center justify-between'>;
@@ -370,6 +400,7 @@ export function TemplateSaveForm({;
                 Set as default template;
               </FormLabel>;
               <FormControl>;
+<<<<<<< HEAD
           name='isDefault'
           render={({
             field
@@ -392,11 +423,15 @@ export function TemplateSaveForm({;
         />
         <div className='flex gap-2 justify-end'>
           <Button type='button' variant='outline' onClick={onCancel}>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <Switch
                   aria-label='Default template'
                   checked={field && field.value}
                   onCheckedChange={field && field.onChange}                />;
 
+<<<<<<< HEAD
 import { useState } from "react",;
 import { useForm, type ControllerRenderProps } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -465,6 +500,8 @@ export function TemplateSaveForm({;
     }
   },;
   ;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   };
   return (;
     <Form {...form}>;
@@ -505,11 +542,22 @@ export function TemplateSaveForm({;
               <FormMessage />;
             </FormItem>;
           )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         />
         
         <div className="flex gap-2 justify-end">
           <Button type="button" variant="outline" onClick={onCancel}>
+<<<<<<< HEAD
             Cancel
+=======
+
+
+            Cancel
+          </Button>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Button type='submit' disabled={saving}>
             field: ControllerRenderProps < FormValues, 'is_default'>;
           }) => (
@@ -556,15 +604,19 @@ try {
               </>;
             ) : (;
               `${editTemplate ? 'Update' : 'Save'} Template`;
+<<<<<<< HEAD
             Cancel
           </Button>
           <Button type="submit" disabled={saving}>
             {saving ? (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 Saving...
               </>
             ) : (
+<<<<<<< HEAD
               `${editTemplate ? 'Update' : 'Save'} Template`
             )}
           </Button>
@@ -599,17 +651,25 @@ try {
               </>;
             ) :(;
               `${editTemplate ? "Update" :"Save"} Template`;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   editTemplate ? "Update" : "Save" 
 }Template`) ;
 }</Button> </div> </form> </Form>) ;
 }"};
 
               `${editTemplate ? "Update" : "Save"} Template`
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             )}
           </Button>;
         </div>;
       </form>;
     </Form>;
+<<<<<<< HEAD
 setSaving (true);
 try {;
   if (editTemplate) {;
@@ -633,6 +693,11 @@ try {;
   editTemplate ? "Update" : "Save" ;
 }Template`) ;
 }</Button> </div> </form> </Form>) ;
+=======
+  );
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   // Check condition
 if ( {) {
@@ -653,4 +718,8 @@ if ( {) {
 }
 ;
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

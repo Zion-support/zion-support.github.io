@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   const bannerLink = isIOS ? appStoreUrl : googlePlayUrl
 import React, { useState, useEffect } from "react"
 import { safeStorage } from "@/utils/safeStorage"
@@ -18,12 +19,15 @@ import React, { useState, useEffect } from "react",
 import { safeStorage } from "@/utils/safeStorage",
 import { X, ArrowRight } from 'lucide-react'
 import Link from "next/link";
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useIsMobile } from "@/hooks/use-mobile";
 interface SmartAppBannerProps {
   appName?: string;
   appIconSrc?: string;
   appStoreUrl?: string;
   googlePlayUrl?: string;
+<<<<<<< HEAD
 import Link from "next/link",
 import { useIsMobile } from "@/hooks/use-mobile",
 interface SmartAppBannerProps {
@@ -32,6 +36,11 @@ interface SmartAppBannerProps {
   appStoreUrl?: string,
   googlePlayUrl?: string,
   delay?: number, // Delay in milliseconds before showing the banner
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
 
@@ -50,6 +59,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   googlePlayUrl = "/download",
   delay = 1500
 }) => {
+<<<<<<< HEAD
   const [isVisible, setIsVisible] = useState(false)
   const isMobile = useIsMobile()
   useEffect((,) => {
@@ -57,10 +67,15 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   const isMobile = useIsMobile(),
   
   useEffect(() => {
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Only show banner on mobile devices and if it hasn't been dismissed
     if (isMobile && !safeStorage.getItem("smartBannerDismissed")) {
       const timer = setTimeout(() => {
         setIsVisible(true)
+<<<<<<< HEAD
     if (isMobile && !safeStorage.getItem("smartBannerDismissed")) {
       const timer = setTimeout(() => {
         setIsVisible(true)
@@ -77,6 +92,10 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
     safeStorage.removeItem("smartBannerDismissed")
     setIsVisible(true)
   }
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }, delay),
       
       return () => clearTimeout(timer)
@@ -103,6 +122,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
       </div>
     ) : null
   }
+<<<<<<< HEAD
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
   const bannerLink = isIOS ? appStoreUrl : googlePlayUrl
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
@@ -110,6 +130,9 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   // Detect iOS or Android
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
   const bannerLink = isIOS ? appStoreUrl : googlePlayUrl
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   delay?: number; // Delay in milliseconds before showing the banner;
 }
 
@@ -124,6 +147,11 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent),
   const bannerLink = isIOS ? appStoreUrl : googlePlayUrl,
   
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="fixed top-0 left-0 right-0 bg-zion-blue-dark border-b border-zion-purple/30 p-3 z-50 animate-fade-in">
       <div className="flex items-center">
@@ -134,16 +162,21 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
             <div className="text-zion-cyan font-bold text-lg">Z</div>
           )}
         </div>
+<<<<<<< HEAD
           <h4 className="font-semibold text-white">{appName}</h4>
           <p className="text-xs text-gray-300">Get our app for the best experience</p>
         </div>
         
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         
 
         <div className="flex-1">
           <h4 className="font-semibold text-white">{appName}</h4>
           <p className="text-xs text-gray-300">Get our app for the best experience</p>
         </div>
+<<<<<<< HEAD
         
 
         <div className="flex items-center gap-3">
@@ -151,6 +184,11 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
         
 
         
+=======
+
+        
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="flex items-center gap-3">
           <Link
             href="/open-app"
@@ -159,7 +197,11 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
             View
             <ArrowRight className="w-3 h-3 ml-1" />
           </Link>
+<<<<<<< HEAD
           <button onClick={dismissBanner} className="text-gray-300" aria-label="Dismiss">
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           
 
           <button onClick={dismissBanner} className="text-gray-300" aria-label="Dismiss">
@@ -169,7 +211,10 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
       </div>
     </div>
   )
+<<<<<<< HEAD
 '"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 '";
 ;
@@ -241,6 +286,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
             <div className="text-zion-cyan font-bold text-lg">Z</div>;
           )}
 
+<<<<<<< HEAD
 }
 '"
 
@@ -308,6 +354,8 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
           ) : (;
             <div className="text-zion-cyan font-bold text-lg">Z</div>;
           )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </div>;
         <div className="flex-1">;
           <h4 className="font-semibold text-white">{appName}</h4>;
@@ -411,4 +459,8 @@ if ( {) {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 '";
+=======
+'";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

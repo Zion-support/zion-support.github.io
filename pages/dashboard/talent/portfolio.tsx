@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 } from '../../../components/ui/ResumePreview';
 import { createServerClient } from '../../../utils/supabase/server';
 export default function TalentPortfolio() {;
@@ -66,6 +67,34 @@ import { createServerClient } from '../../../utils/supabase/server';
 export default function TalentPortfolio() {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const ref = useRef<HTMLDivElement>(null);
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import {GetServerSideProps} from 'next';
+import React, { useRef, useState } from 'react';
+import PdfExportButton from '../../../components/ui/PdfExportButton';
+import ResumePreview, {;
+  ResumeData,;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const data: ResumeData = {
     name: 'Your Name',
     contact: {
@@ -96,6 +125,10 @@ return (
           <option value="dark">Dark</option>
         </select>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 return { props: {} };
 };
@@ -132,6 +165,10 @@ export const getServerSideProps: GetServerSideProps = async () => {
   }
   return { props: {} }
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import PdfExportButton from '../../../components / ui / PdfExportButton';
 
 import {GetServerSideProps} from 'next';
@@ -243,6 +280,7 @@ export const getServerSideProps: GetServerSideProps = async () => {;
   }
 return { props: {} }
 }
+<<<<<<< HEAD
 
 
 
@@ -276,3 +314,13 @@ export const getServerSideProps: GetServerSideProps = async () => {;
   }
 }
 };
+=======
+<<<<<<< HEAD
+;
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

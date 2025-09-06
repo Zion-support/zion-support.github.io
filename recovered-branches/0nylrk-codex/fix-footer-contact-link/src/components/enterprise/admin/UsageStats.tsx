@@ -1,29 +1,40 @@
 
 
+<<<<<<< HEAD
 import React from "react",
 import { Slider } from "@/components/ui/slider",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react";
 import { Slider } from "@/components/ui/slider";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
 import {
 
+<<<<<<< HEAD
   Card
   CardContent
   CardDescription
   CardFooter
   CardHeader
   CardTitle
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
 CardTitle,;
+<<<<<<< HEAD
 import React from "react",
 import { Slider } from "@/components/ui/slider",
 import { Badge } from "@/components/ui/badge",
@@ -39,6 +50,9 @@ Card
   CardTitle
 
   CardTitle,
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 } from "@/components/ui/card";
 import { Sparkles } from "lucide-react";
@@ -47,22 +61,40 @@ export function UsageStats() {
   const handleSaveChanges = () => {
     toast({
 
+<<<<<<< HEAD
 import React from "react",;
 import { Slider } from "@/components/ui/slider",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { toast } from "@/hooks/use-toast",;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {;
   Card,;
   CardContent,;
   CardDescription,;
   CardFooter,;
   CardHeader,;
+<<<<<<< HEAD
+=======
+  CardTitle,;
+} from "@/components/ui/card";
+import { Sparkles } from "lucide-react";
+import { Progress } from "@/components/ui/progress";
+export function UsageStats() {;
+  const handleSaveChanges = () => {;
+    toast({;
+      title: "Limits updated",;
+      description: "The new usage limits have been saved successfully.",;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       title: "Limits updated",
       description: "The new usage limits have been saved successfully.",;
 
+<<<<<<< HEAD
     });
   }
   return (
@@ -132,6 +164,19 @@ export function UsageStats() {
 
 
         
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    });
+  }
+
+  return (
+
+
+        
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <Card>
           <CardHeader>
             <CardTitle>Candidate Contacts</CardTitle>
@@ -142,7 +187,13 @@ export function UsageStats() {
           <CardContent className="space-y-4">
             <div>
               <div className="flex items-center justify-between mb-2">
+<<<<<<< HEAD
                 <div className="text-sm font-medium">Monthly contact credits</div>
+=======
+                <div className="text-sm font-medium">
+                  Monthly contact credits
+                </div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <Badge variant="outline">178 / 500</Badge>
               </div>
               <Progress value={35.6} className="h-2" />
@@ -157,14 +208,27 @@ export function UsageStats() {
             </div>
           </CardContent>
           <CardFooter>
+<<<<<<< HEAD
+=======
+            <Button size="sm" onClick={handleSaveChanges}>
+              Save Changes
+            </Button>
+          </CardFooter>
+        </Card>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         
 
 
+<<<<<<< HEAD
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
         
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <Card>
           <CardHeader>
             <CardTitle>AI Features</CardTitle>
@@ -190,14 +254,27 @@ export function UsageStats() {
             </div>
           </CardContent>
           <CardFooter>
+<<<<<<< HEAD
+=======
+            <Button size="sm" onClick={handleSaveChanges}>
+              Save Changes
+            </Button>
+          </CardFooter>
+        </Card>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         
 
 
+<<<<<<< HEAD
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
         
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <Card>
           <CardHeader>
             <CardTitle>Budget Controls</CardTitle>
@@ -234,15 +311,29 @@ export function UsageStats() {
             </div>
           </CardContent>
           <CardFooter>
+<<<<<<< HEAD
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
+=======
+            <Button size="sm" onClick={handleSaveChanges}>
+              Save Changes
+            </Button>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </CardFooter>
         </Card>
       </div>
 
+<<<<<<< HEAD
       
 
 
       
+=======
+
+      
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">
@@ -251,7 +342,12 @@ export function UsageStats() {
           <div>
             <h3 className="font-medium">Need higher limits?</h3>
             <p className="text-sm text-muted-foreground">
+<<<<<<< HEAD
               Contact your account manager to discuss custom limits for your enterprise.
+=======
+              Contact your account manager to discuss custom limits for your
+              enterprise.
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </p>
           </div>
         </div>
@@ -259,9 +355,16 @@ export function UsageStats() {
       </div>
     </div>
 
+<<<<<<< HEAD
 
   );
 }
+=======
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   )
 import React from "react",;
 import { Slider } from "@/components/ui/slider",;
@@ -492,6 +595,7 @@ export function UsageStats() {;
         <Button > Contact Us</Button>;
       </div>;
     </div>);
+<<<<<<< HEAD
 }
         <Button > Contact Us</Button>;
       </div>;
@@ -520,3 +624,7 @@ export function UsageStats() {;
   );
 }
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

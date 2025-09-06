@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import { use_auth } from '@/context / auth / AuthProvider';
 import { Search, Filter, Grid, List } from 'lucide-react';import { SEO } from '@/components / SEO';
 import { Button } from '@/components / ui / button';
@@ -21,10 +22,14 @@ import { Search, Filter, Grid, List } from 'lucide-react'
 import { SEO  } from '@/components/SEO';
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/context/auth/AuthProvider';
+<<<<<<< HEAD
 import { Search, Filter, Grid, List } from 'lucide-react';import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -38,6 +43,10 @@ import { BLOG_POSTS  } from '@/data/blog-posts';
 import { useDebounce  } from '@/hooks/useDebounce';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 interface BaseSearchResult {
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
   title: string;
   description?: string;
@@ -51,37 +60,87 @@ interface BaseSearchResult {
   tags?: string[];
   category?: string;
   date?: string;
+<<<<<<< HEAD
+=======
+
+;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface ProductSearchResult extends BaseSearchResult {
   type: 'product' | 'equipment';
   price?: number;
   rating?: number;
+<<<<<<< HEAD
+=======
+
+;
+
+interface TalentSearchResult extends BaseSearchResult {
+interface ProductSearchResult extends BaseSearchResult {;
+  type: 'product' | 'equipment';
+  price?: number;
+  rating?: number;
+interface TalentSearchResult extends BaseSearchResult {;
+  type: 'talent';
+  rating?: number;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 interface BlogSearchResult extends BaseSearchResult {
   type: 'blog';
 ;
+<<<<<<< HEAD
 interface CategorySearchResult extends BaseSearchResult {
 interface CategorySearchResult extends BaseSearchResult {;
   type: 'category';
 ;
+=======
+
+interface CategorySearchResult extends BaseSearchResult {
+interface CategorySearchResult extends BaseSearchResult {;
+  type: 'category';
+
+;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 type SearchResult =;
   | ProductSearchResult;
   | TalentSearchResult;
   | BlogSearchResult;
   | CategorySearchResult;
+<<<<<<< HEAD
 // Type guard functions;
 const hasPrice = (result: SearchResult): result is ProductSearchResult =>;
   result && result.type === 'product' || result && result.type === 'equipment';
+=======
+
+
+// Type guard functions;
+const hasPrice = (result: SearchResult): result is ProductSearchResult =>;
+  result && result.type === 'product' || result && result.type === 'equipment';
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const hasRating = (;
   result: SearchResult;
 ): result is ProductSearchResult | TalentSearchResult =>;
   result && result.type === 'product' ||;
   result && result.type === 'equipment' ||;
   result && result.type === 'talent';
+<<<<<<< HEAD
 interface SearchResultsPageProps {;
+=======
+
+interface SearchResultsPageProps {;
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   initialResults: SearchResult[];
   query: string;
   slug: string;
   totalCount: number;
+<<<<<<< HEAD
 interface OfflineFilters {;
 interface TalentSearchResult extends BaseSearchResult {
   type: 'talent';
@@ -113,6 +172,10 @@ interface SearchResultsPageProps {
   slug: string;
   totalCount: number;
 
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
@@ -212,10 +275,16 @@ interface SearchResultsPageProps {;
   slug: string;
   totalCount: number;
 interface OfflineFilters {
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   sortBy?: string;
   category?: string;
   minPrice?: number;
   maxPrice?: number;
+<<<<<<< HEAD
   minRating?: number;
 function offlineSearch(
   query: string
@@ -317,6 +386,10 @@ function offlineSearch(
         all && all.sort((a, b) => {;
           const aPrice = a && a.type === 'product' ? (a && a.price ?? 0) : 0;
           const bPrice = b && b.type === 'product' ? (b && b.price ?? 0) : 0;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           return aPrice - bPrice;        });
         break;
       case 'price_desc':;
@@ -325,6 +398,12 @@ function offlineSearch(
           const bPrice = b && b.type === 'product' ? (b && b.price ?? 0) : 0;
           return bPrice - aPrice;        });
         break;
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             b.type === 'product' || b.type === 'talent' ? (b.rating ?? 0) : 0;
 
@@ -493,12 +572,17 @@ function offlineSearch(;
           const bRating = (b.type === 'product' || b.type === 'talent') ? (b.rating ?? 0) : 0;
 
 
+<<<<<<< HEAD
       case 'rating':;
         all && all.sort((a, b) => {;
           const aRating =;
             a && a.type === 'product' || a && a.type === 'talent' ? (a && a.rating ?? 0) : 0;
           const bRating =;
             b && b.type === 'product' || b && b.type === 'talent' ? (b && b.rating ?? 0) : 0;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           return bRating - aRating;
         });
         break;
@@ -507,6 +591,11 @@ function offlineSearch(;
     }
   } else {;
     all && all.sort((a, b) => a && a.title.localeCompare(b && b.title));
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           return aPrice - bPrice
         });
         break;
@@ -519,6 +608,7 @@ function offlineSearch(;
         break;
       case 'rating':
         all.sort((a, b) => {
+<<<<<<< HEAD
 
   return { results: paginated, totalCount: all.length };
 
@@ -526,17 +616,47 @@ function offlineSearch(;
 const start = (page - 1) * limit;
   const paginated = all && all.slice(start, start + limit);
   return { results: paginated, totalCount: all && all.length };
+=======
+<<<<<<< HEAD
+          const aRating = (a.type === 'product' || a.type === 'talent') ? (a.rating ?? 0) : 0;
+          const bRating = (b.type === 'product' || b.type === 'talent') ? (b.rating ?? 0) : 0;
+          return bRating - aRating
+        });
+        break;
+      default: break
+    }
+  } else {
+    all.sort((a, b) => a.title.localeCompare(b.title))
+
+  }
+  const start = (page - 1) * limit;
+
+
+  const paginated = all && all.slice(start, start + limit);
+  return { results: paginated, totalCount: all && all.length };
+=======
+
+  return { results: paginated, totalCount: all.length };
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function SearchResultsPage(): any ({;
   initialResults,;
   query,;
   slug,;
   totalCount,;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }: SearchResultsPageProps) {  const router = useRouter();
   initialResults;
   query;
   slug;
   totalCount}: SearchResultsPageProps) {
   const router = useRouter();
+<<<<<<< HEAD
 
 }: SearchResultsPageProps) {  const router = useRouter();
 
@@ -739,6 +859,12 @@ export default function SearchResultsPage({
   query,
   slug,
   totalCount,;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }: SearchResultsPageProps) {  const router = useRouter();
   return { results: paginated, totalCount: all.length   } catch (error) {
     console.error("Error:", error);
@@ -755,6 +881,12 @@ export default function SearchResultsPage(req, res) {
   try {
   const router = useRouter();
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const { isAuthenticated } = useAuth();
   const [results, setResults] = useState<SearchResult[]>(initialResults);
   const [loading, setLoading] = useState(false);
@@ -768,6 +900,10 @@ export default function SearchResultsPage(req, res) {
   const [maxPrice, setMaxPrice] = useState('');
   const [minRating, setMinRating] = useState('');
   const [totalResults, setTotalResults] = useState(totalCount);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       logInfo(`Fetching search results for: ${searchTerm}, page: ${page}`),
       const params = new URLSearchParams({
         query: searchTerm,
@@ -775,6 +911,7 @@ export default function SearchResultsPage(req, res) {
         limit: '12',
         sort: sortBy}),
       if (categoryFilter !== 'all') params.append('category', categoryFilter);
+<<<<<<< HEAD
   // Fetch search results
   const fetchResults = async (searchTerm: string, page = 1) => {
     try {
@@ -797,6 +934,10 @@ export default function SearchResultsPage(req, res) {
         limit: '12';
         sort: sortBy});
       if (categoryFilter !== 'all') params.append('category', categoryFilter);
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   // Fetch search results;
   const fetchResults = async (searchTerm: string, page = 1) => {;
@@ -810,12 +951,20 @@ export default function SearchResultsPage(req, res) {
         sort: sortBy});
       if (categoryFilter !== 'all') params.append('category', categoryFilter);
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       if (minPrice) params.append('minPrice', minPrice);
       if (maxPrice) params.append('maxPrice', maxPrice);
       if (minRating) params.append('minRating', minRating);
       const response = await fetch(`/api/search?${params.toString()}`);
 
+<<<<<<< HEAD
       if (!response.ok) {
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Fetch search results;
   const fetchResults = async (searchTerm: string, page = 1) => {;
     try {;
@@ -841,6 +990,15 @@ export default function SearchResultsPage(req, res) {
         setResults(data && data.results || []);
       } else {;
         setResults(prev => [...prev, ...(data && data.results || [])]);
+<<<<<<< HEAD
+=======
+
+      }
+    } catch (error) {;
+      logErrorToProduction('Error fetching search results:', { data: error });
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       if (!response.ok) {;
         throw new Error(`Search API error: ${response.status}`);
@@ -865,14 +1023,24 @@ export default function SearchResultsPage(req, res) {
     } catch (error) {
       logErrorToProduction('Error fetching search results:', { data: error });
 
+<<<<<<< HEAD
       }
     } catch (error) {;
       logErrorToProduction('Error fetching search results:', { data: error });
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const offline = offlineSearch(searchTerm, page, 12, {;
         sortBy,;
         category: categoryFilter !== 'all' ? categoryFilter : undefined,;
         minPrice: minPrice ? Number(minPrice) : undefined,;
         maxPrice: maxPrice ? Number(maxPrice) : undefined,;
+<<<<<<< HEAD
+=======
+
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         minRating: minRating ? Number(minRating) : undefined}),;
 
       setTotalResults(offline.totalCount);
@@ -894,6 +1062,7 @@ export default function SearchResultsPage(req, res) {
   }
 }
   },;
+<<<<<<< HEAD
         minRating: minRating ? Number(minRating) : undefined,;
       });
       setTotalResults(offline && offline.totalCount);
@@ -1009,16 +1178,43 @@ export default function SearchResultsPage(req, res) {
       setResults([]);
       setTotalResults(0);    }
   }, [debouncedQuery]);
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  // Handle search input change;
+  const handleSearch = (newQuery: string) => {;
+    setSearchQuery(newQuery),;
+    if (newQuery && newQuery.trim()) {;
+      router && router.push(`/search?q=${encodeURIComponent(newQuery)}`, undefined, {;
+        shallow: true,;
+      });
+      setCurrentPage(1);    }
+  };
+  useEffect(() => {;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     fetchResults(searchQuery, nextPage)
   };
   const categories = Array.from(
     new Set(results.map((r) => r.category).filter(Boolean));
   );
+<<<<<<< HEAD
   const filteredResults = results.filter(r => {    if (
+=======
+<<<<<<< HEAD
+  const filteredResults = results.filter((r) => {
+    if (
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       categoryFilter !== 'all' &&
       categoryFilter &&
       r.category !== categoryFilter
     ) {
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (debouncedQuery.trim()) {;
 
       fetchResults(debouncedQuery, 1);
@@ -1034,11 +1230,24 @@ export default function SearchResultsPage(req, res) {
   }, [debouncedQuery]),;
 
   // Load more results;
+<<<<<<< HEAD
+=======
+  const loadMore = () => {;
+    const nextPage = currentPage + 1;
+    setCurrentPage(nextPage);
+    fetchResults(searchQuery, nextPage);
+  };
+  const categories = Array && Array.from(;
+    new Set(results && results.map(r => r && r.category).filter(Boolean));
+  );
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const filteredResults = results && results.filter(r => {    if (;
       categoryFilter !== 'all' &&;
       categoryFilter &&;
       r && r.category !== categoryFilter;
     ) {;
+<<<<<<< HEAD
       return false;
     }
     if (minPrice && r && r.type === 'product') {;
@@ -1051,6 +1260,15 @@ export default function SearchResultsPage(req, res) {
     }
     if (minRating && (r && r.type === 'product' || r && r.type === 'talent')) {;
       if ((r && r.rating ?? 0) < Number(minRating)) {;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      return false;
+
+    if (minRating && (r && r.type === 'product' || r && r.type === 'talent')) {;
+      if ((r && r.rating ?? 0) < Number(minRating)) {;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     date: b.published_date,
   }));
   let all = [...product_results, ...talent_results, ...blog_results];
@@ -1295,18 +1513,39 @@ if ( {) {
       }
     }
     return true;  });
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Group results by type for better display
   const groupedResults = filteredResults.reduce(
     (acc, result) => {
       if (!acc[result.type]) acc[result.type] = [];
       acc[result.type]!.push(result);
+<<<<<<< HEAD
     };
     {} as Record<string, SearchResult[]>;
   );
+=======
+
+      return acc
+    };
+    {} as Record<string, SearchResult[]>;
+  );
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const renderResultCard = (result: SearchResult) => {
     switch (result.type) {
       case 'product':
       case 'equipment':
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Group results by type for better display;
   const groupedResults = filteredResults && filteredResults.reduce(;
     (acc, result) => {;
@@ -1321,16 +1560,24 @@ if ( {) {
       case 'equipment':;
         return (
           <div key={result && result.id} data-testid='result-card'>            <ProductCard
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         return (
           <div key={result.id} data-testid="result-card">
             <ProductCard
 
               product={{
 
+<<<<<<< HEAD
         return (
           <div key={result.id} data-testid="result-card">
             <ProductCard
               product={{
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 id: result && result.id,
                 name: result && result.title,
                 title: result && result.title,
@@ -1377,6 +1624,7 @@ if (acc[result.type] = []) {
                 created_at: new Date ().toISOString (),
                 updated_at: new Date ().toISOString (),
                 stock: (result as any).stock,
+<<<<<<< HEAD
                 in_stock: ((result as any).stock || 0) > 0
               }}
             />
@@ -1384,6 +1632,14 @@ if (acc[result.type] = []) {
         );
       case 'talent':;
         return (
+=======
+
+
+        );
+      case 'talent':;
+        return (
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 id: result && result.id,
                 user_id: result && result.id,
                 full_name: result && result.title,
@@ -1396,6 +1652,7 @@ if (acc[result.type] = []) {
                 summary: result && result.description,
                 is_verified: false,
                 availability_type: 'available',
+<<<<<<< HEAD
           <div key={result.id} data-testid="result-card">
             <TalentCard
                 in_stock: ((result as any).stock || 0) > 0,              }}
@@ -1406,18 +1663,29 @@ if (acc[result.type] = []) {
           <div key={result.id} data - testid='result - card'>            <TalentCard;
 
               talent={{
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               }}
               onViewProfile={(id: string) => {;
                 router && router.push(`/talent/${id}`);
+<<<<<<< HEAD
           <div key={result.id} data-testid="result-card">
             <TalentCard
+=======
+
+=======
+          <div key={result.id} data-testid="result-card">
+            <TalentCard
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 in_stock: ((result as any).stock || 0) > 0,              }}
             />;
           </div>);
       case 'talent':;
         return (
           <div key={result.id} data - testid='result - card'>            <TalentCard;
+<<<<<<< HEAD
     return true
   }),
 
@@ -1574,6 +1842,13 @@ if (acc[result.type] = []) {
               onRequestHire={talent => {
                 router.push(`/talent/${talent.id}?action=hire`);              }}
               isAuthenticated={isAuthenticated}
+=======
+
+              talent={{
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 id: result.id,
                 user_id: result.id,
                 full_name: result.title,
@@ -1585,6 +1860,7 @@ if (acc[result.type] = []) {
                 bio: result.description,
                 summary: result.description,
                 is_verified: false,
+<<<<<<< HEAD
                 availability_type: 'available',
               }}
               onViewProfile={(id: string) => {
@@ -1634,10 +1910,19 @@ if (acc[result.type] = []) {
               title={result && result.title}
               description={result && result.description || ''}
               icon={result && result.image || '📁'}
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             />;
           </div>;
         );
       default:;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         return (
           <div
             key={result.id}
@@ -1651,7 +1936,14 @@ if (acc[result.type] = []) {
           </div>
         )
     }
+<<<<<<< HEAD
 };
+=======
+
+  };
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           >;
             <h3 className='font-semibold'>{result && result.title}</h3>;
             <p className='text-gray-600 dark:text-gray-200'>;
@@ -1661,6 +1953,7 @@ if (acc[result.type] = []) {
         );    }
   }
 
+<<<<<<< HEAD
 
   };
 
@@ -1711,6 +2004,14 @@ if (acc[result.type] = []) {
   }
 }
   },
+=======
+}
+  },
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <>;
       <SEO
@@ -1718,12 +2019,19 @@ if (acc[result.type] = []) {
         description={`Find ${query} and more in the Zion marketplace. Discover products, talent, and services.`}
         keywords={`${query}, search, marketplace, products, talent, services`}
 
+<<<<<<< HEAD
         title={`Search Results for "${query}" - Zion Marketplace`}
         description={`Find ${query} and more in the Zion marketplace. Discover products, talent, and services.`}
         keywords={`${query}, search, marketplace, products, talent, services`}
         canonical={`https://app && app.ziontechgroup.com/search/${slug}`}
       />;
       <div className='min-h-screen bg-gray-50 dark:bg-gray-900'>;
+=======
+        canonical={`https://app && app.ziontechgroup.com/search/${slug}`}
+      />;
+      <div className='min-h-screen bg-gray-50 dark:bg-gray-900'>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div
           className='container mx-auto px-4 py-8'
           data-testid='search-results'>;
@@ -1740,6 +2048,11 @@ if (acc[result.type] = []) {
                   {filteredResults && filteredResults.length > 0;
                     ? `Found ${filteredResults && filteredResults.length} results for "${query}"`;
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
 
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
@@ -1794,6 +2107,11 @@ if (acc[result.type] = []) {
                 >
                   {filteredResults.length > 0
                     ? `Found ${filteredResults.length} results for "${query}"`
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     : `No results found for "${query}"`}
 
                 </p>;
@@ -1803,12 +2121,15 @@ if (acc[result.type] = []) {
               {/* Search Input */}
 
 
+<<<<<<< HEAD
                     : `No results found for "${query}"`}
                 </p>;
               </div>;
               {/* Search Input */}
               <div className="relative w-full lg:w-96">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-200" />
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <Input
                   type="text"
                   value={searchQuery}
@@ -1845,6 +2166,7 @@ if (acc[result.type] = []) {
                   placeholder="Search marketplace..."
                   className="pl-10"
                 />
+<<<<<<< HEAD
 
               </div>
             </div>
@@ -1861,6 +2183,24 @@ if (acc[result.type] = []) {
 }
             <div className="flex flex-wrap items-center justify-between gap-4 mt-6">
               <div className="flex items-center gap-2 flex-wrap">
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+              </div>
+            </div>
+
+
+                  onChange={e => handleSearch(e && e.target.value)}
+                  placeholder='Search marketplace...';
+                  className='pl-10'                />;
+              </div>;
+            </div>;
+
+
+
+            {/* Controls */}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <Button
                   variant="outline"
                   size="sm"
@@ -1869,14 +2209,30 @@ if (acc[result.type] = []) {
                 >
                   <Filter className="h-4 w-4" />
                   Filters
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+                </Button>
+                <select
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
                   data-testid='filter-button'>;
                   <Filter className='h-4 w-4' />                  Filters;
                 </Button>;
+<<<<<<< HEAD
 
                 </Button>
                 <select
+=======
+                <select
+                  value={sortBy}
+                  onChange={e => setSortBy(e && e.target.value)}
+                  className='px-3 py-1 border border-gray-300 rounded-md text-sm';
+                  data-testid='sort-select';
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 router.push (`/talent/${id}`);
               }}
               onRequestHire={talent => {
@@ -1956,12 +2312,18 @@ if (acc[result.type] = []) {
                   on_change={e => setSortBy (e.target.value)}
                   className='px - 3 py - 1 border border - gray - 300 rounded - md text - sm';
                   data - testid='sort - select';
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 >;
                   <option value='relevance'>Relevance</option>;
                   <option value='newest'>Newest</option>;
                   <option value='price_asc'>Price: Low to High</option>;
                   <option value='price_desc'>Price: High to Low</option>;
                   <option value='rating'>Highest Rated</option>                </select>;
+<<<<<<< HEAD
                 </select>;
                 <div className='flex items-center gap-1'>;
                   <input
@@ -2004,26 +2366,57 @@ if (acc[result.type] = []) {
                   <option value="price_desc">Price: High to Low</option>
                   <option value="rating">Highest Rated</option>
                 </select>
+=======
+
+
+                <select
+                  value={categoryFilter}
+                  onChange={e => setCategoryFilter(e && e.target.value)}
+                  className='px-3 py-1 border border-gray-300 rounded-md text-sm';
+                >;
+                  <option value='all'>All Categories</option>;
+                  {categories && categories.map(c => (                    <option key={c} value={c}>;
+
+                      {c}
+                    </option>;
+                  ))}
+
+                <select
+                  value={categoryFilter}
+                  onChange={(e) => setCategoryFilter(e.target.value)}
+                  className="px-3 py-1 border border-gray-300 rounded-md text-sm"
+                >
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div className="flex items-center gap-1">
 
                   <option value="all">All Categories</option>
                   {categories.map((c) => (
                     <option key={c} value={c}>
                       {c  } catch (error) {
+<<<<<<< HEAD
                   <option value="all">All Categories</option>
                   {categories.map((c) => (
                     <option key={c} value={c}>
                 <select
                   value={categoryFilter  } catch (error) {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
                   onChange={(e) => setCategoryFilter(e.target.value)  } catch (error) {
+=======
+                    </option>;
+                  ))  } catch (error) {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
                   className="px-3 py-1 border border-gray-300 rounded-md text-sm"
                 >
                   <option value='all'>All Categories</option>
@@ -2032,6 +2425,19 @@ if (acc[result.type] = []) {
                     </option>
                   ))}
                 </select>
+=======
+                </select>
+                <div className="flex items-center gap-1">
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  <input
+                    type="number"
+                    placeholder="Min $"
+                    value={minPrice}
+                    onChange={(e) => setMinPrice(e.target.value)}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div className='flex items-center gap-1'>
                   <option value="all">All Categories</option>
                   {categories.map((c) => (
@@ -2080,8 +2486,21 @@ if (acc[result.type] = []) {
 }
                     className="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm"
                   />
+<<<<<<< HEAD
                 </div>
                 <select
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+                </div>
+                <select
+                  value={minRating}
+
+                    onChange={e => setMaxPrice(e && e.target.value)}
+                    className='w-20 px-2 py-1 border border-gray-300 rounded-md text-sm'                  />;
+                </div>;
+                  onChange={(e) => setMinRating(e.target.value)}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   value={minRating  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2101,6 +2520,16 @@ if (acc[result.type] = []) {
                 </select>
               </div>
 
+<<<<<<< HEAD
+=======
+
+                <select
+                  value={minRating}
+                  onChange={e => setMinRating(e && e.target.value)}
+                  className='px-3 py-1 border border-gray-300 rounded-md text-sm';
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <select;
                   value={category_filter}
                   on_change={e => setCategoryFilter (e.target.value)}
@@ -2131,6 +2560,11 @@ if (acc[result.type] = []) {
                   value={min_rating}
                   on_change={e => setMinRating (e.target.value)}
                   className='px - 3 py - 1 border border - gray - 300 rounded - md text - sm';
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 >;
                   <option value=''>All Ratings</option>;
                   <option value='4'>4★ & up</option>;
@@ -2138,6 +2572,29 @@ if (acc[result.type] = []) {
                   <option value='2'>2★ & up</option>;
                 </select>;
               </div>;
+<<<<<<< HEAD
+=======
+
+
+                <Button
+                  variant={viewMode === 'grid' ? 'default' : 'outline'}
+                  size='sm'
+                  onClick={() => setViewMode('grid')}
+                  data-testid='view-mode-grid';
+                  className={viewMode === 'grid' ? 'active' : ''}
+                >;
+                  <Grid className='h-4 w-4' />;
+                </Button>;
+                <Button
+                  variant={viewMode === 'list' ? 'default' : 'outline'}
+                  size='sm'
+                  onClick={() => setViewMode('list')}
+                  data-testid='view-mode-list';
+                  className={viewMode === 'list' ? 'active' : ''}
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               <div className="flex items-center gap-2">
 
@@ -2182,16 +2639,26 @@ if (acc[result.type] = []) {
   }
 }
                 >;
+<<<<<<< HEAD
                   <List className="h-4 w-4" />
                 </Button>
               </div>
             </div>
           </div>
 >;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <List className='h-4 w-4' />                </Button>;
               </div>;
             </div>;
           </div>;
+<<<<<<< HEAD
+=======
+
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className='flex items - center gap - 2'>;
                 <Button;
                   variant={view_mode === 'grid' ? 'default' : 'outline'}
@@ -2213,6 +2680,18 @@ if (acc[result.type] = []) {
               </div>;
             </div>;
           </div>;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+          {/* Loading State */}
+
+          {loading && results.length === 0 && (
+
+          {!loading && filteredResults.length === 0 && (
+            <div data-testid="search-empty-state">
+              <SearchEmptyState onRetry={() => fetchResults(searchQuery)} />
+            </div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           {filteredResults.length > 0 && (
             <div className="space-y-8">
@@ -2222,8 +2701,13 @@ if (acc[result.type] = []) {
                     {type}s ({typeResults.length})
 
                   </h2>
+<<<<<<< HEAD
           {/* Loading State */}
           {loading && results.length === 0 && (
+=======
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {filteredResults && filteredResults.length > 0 && (;
             <div className='space-y-8'>;
               {Object && Object.entries(groupedResults).map(([type, typeResults]) => (;
@@ -2336,6 +2820,7 @@ if (acc[result.type] = []) {
                 </div>;
               ))}
               {/* Load More Button */}
+<<<<<<< HEAD
               {results.length < totalResults && (
                 <div className="flex justify-center py-8">
                   <Button
@@ -2349,12 +2834,17 @@ if (acc[result.type] = []) {
                       </>
                     ) : (
                       'Load More Results'
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     )}
 </Button>;
                 </div>;
               )}
             </div>;
           )}
+<<<<<<< HEAD
         </div>
       </div>
     </>
@@ -2383,11 +2873,19 @@ export const getServerSideProps: GetServerSideProps<;
     logInfo(`Fetching search results for slug: ${slug}, query: ${query}`);
     const response = await fetch(;
       `${apiBaseUrl}/api/search?query=${encodeURIComponent(query)}&limit=12`    );
+=======
+
+
+      `${apiBaseUrl}/api/search?query=${encodeURIComponent(query)}&limit=12`    );
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       process.env.NEXT_PUBLIC_API_URL || 'http: //localhost:3000',
     logInfo(`Fetching search results for slug: ${slug}, query: ${query}`),
     const response = await fetch(
       `${apiBaseUrl}/api/search?query=${encodeURIComponent(query)}&limit=12`;
     );
+<<<<<<< HEAD
     let results = [];
     let totalCount = 0;
     if (response.ok) {
@@ -2395,11 +2893,95 @@ export const getServerSideProps: GetServerSideProps<;
       results = data.results |[];
       totalCount = data.totalCount |results.length;
       logInfo(`Server-side fetch successful: ${results.length} results`);
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+    let results = [];
+    let totalCount = 0;
+
+            <div className='flex justify - center py - 12'>;
+              <div className='animate - spin rounded - full h - 8 w - 8 border - b-2 border - blue - 600'></div>            </div>)}
+          {/* Empty State */}
+          {!loading && filtered_results.length === 0 && (
+            <div data - testid='search - empty - state'>              <SearchEmptyState on_retry={() => fetch_results (search_query)} />;
+            </div>)}
+          {/* Results */}
+          {filtered_results.length > 0 && (
+            <div className='space - y-8'>;
+              {Object.entries (grouped_results).map (([type, type_results]) => (
+                <div key={type}>;
+                  <h2 className='text - xl font - semibold text - gray - 900 dark:text - white mb - 4 capitalize'>                    {type}s ({type_results.length});
+                  </h2>;
+                  <div;
+                    className={
+                      view_mode === 'grid';
+                        ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 4 gap - 6';
+                        : 'space - y-4';
+                    }
+                  >;
+                    {type_results.map (renderResultCard)}
+                  </div>;
+                </div>))}
+              {/* Load More Button */}
+              {results.length < total_results && (
+                <div className='flex justify - center py - 8'>;
+                  <Button;
+                    on_click={load_more}
+                    disabled={loading}
+                    className='flex items - center gap - 2';
+                  >;
+                    {loading ? (
+                      <>;
+                        <div className='animate - spin rounded - full h - 4 w - 4 border - b-2 border - white'></div>                        Loading...;
+                      </>) : (
+                      'Load More Results')}
+                  </Button>;
+                </div>)}
+            </div>)}
+        </div>;
+      </div>;
+    </>);
+export const getServerSideProps: GetServerSideProps<;
+  SearchResultsPageProps;
+> = async (context: any) => {
+  const params = context.params;
+  const slug = params?.slug as string,
+  // Convert slug back to query term;
+  const query = slug ? slug.replace (/-/g, ' ') : '';
+;
+  try {
+    // In production, replace with your actual API base URL;
+    const apiBaseUrl =;
+      process.env.NEXT_PUBLIC_API_URL || 'http: //localhost:3000',
+    log_info (`Fetching search results for slug: ${slug}, query: ${query}`);
+;
+    const response = await fetch (
+      `${apiBaseUrl}/api / search?query=${encodeURIComponent (query)}&limit = 12`    );
+;
+    let results = [];
+    let total_count = 0;
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      const data = await response.json ();
+      results = data.results || [];
+      total_count = data.total_count || results.length;
+      log_info (`Server - side fetch successful: ${results.length} results`);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     } else {
       logErrorToProduction (
         `Search API error: ${response.status} ${response.status_text}`);
       const offline = offline_search (query, 1, 12, { sort_by: 'relevance' });
       results = offline.results;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (response && response.ok) {;
       const data = await response && response.json();
       results = data && data.results || [];
@@ -2430,12 +3012,75 @@ export const getServerSideProps: GetServerSideProps<;
         slug,;
         totalCount: offline && offline.totalCount,;
       },;
+<<<<<<< HEAD
     };  }
 
 }
 
 
 
+=======
+
+    };  }
+
+}
+<<<<<<< HEAD
+      results = data.results || [];
+      totalCount = data.totalCount || results.length;
+      logInfo(`Server-side fetch successful: ${results.length} results`)
+    } else {
+      logErrorToProduction(`Search API error: ${response.status} ${response.statusText}`),
+      const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' }),
+      results = offline.results;
+      totalCount = offline.totalCount
+    }
+    return {
+      props: {
+        initialResults: results,
+        query;
+        slug;
+        totalCount}}
+  } catch (error) {
+    logErrorToProduction('Error fetching search results:', { data: error }),
+    const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' }),
+    return {
+      props: {
+        initialResults: offline.results,
+        query;
+        slug;
+        totalCount: offline.totalCount}}
+  }
+
+};
+      total_count = offline.total_count;    }
+    return {
+      props: {
+        initial_results: results,
+        query,
+        slug,
+        total_count,
+      },
+    }
+  } catch (error) {
+    logErrorToProduction ('Error fetching search results:', { data: error });
+    const offline = offline_search (query, 1, 12, { sort_by: 'relevance' });
+;
+    return {
+      props: {
+        initial_results: offline.results,
+        query,
+        slug,
+total_count: offline.total_count,
+      },
+    }  }
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2551,10 +3196,16 @@ export const getServerSideProps: GetServerSideProps<;
     let totalCount = 0;
     if (response.ok) {;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const data = await response.json();
       results = data.results || [];
       totalCount = data.totalCount || results.length;
       logInfo(`Server-side fetch successful: ${results.length} results`);
+<<<<<<< HEAD
     } else {
       logErrorToProduction(
         `Search API error: ${response.status} ${response.statusText}`
@@ -2636,3 +3287,8 @@ totalCount: offline.totalCount,
 }
 };
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

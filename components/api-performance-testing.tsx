@@ -18,6 +18,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 
 
 import React from "react";
@@ -58,6 +59,26 @@ export default function ApiPerformanceTestingPage() {
   const features = [
     "k6/Gatling-compatible test runner",
     "SLO-aware latency reports",
+=======
+=======
+
+
+import React from "react";
+import SEO from "../components/SEO";
+import { Check, ExternalLink } from "lucide-react";
+
+
+import React from './react';
+import SEO from "../components / SEO";
+import { Check, ExternalLink  } from './lucide-react';
+export default /**
+ * ApiPerformanceTestingPage - Function description
+ */
+function ApiPerformanceTestingPage() {
+  const features = [;
+    "k6 / Gatling - compatible test runner",
+    "SLO - aware latency reports",
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     "Regression baselines per endpoint",
     "CI checks and PR annotations",
     "Synthetic traffic for staging",
@@ -116,10 +137,18 @@ export default function ApiPerformanceTestingPage() {
               className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";
             >;
               <ExternalLink className="w - 4 h - 4" /> Gatling OSS;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </a>;
           </div>;
         </section>;
       </main>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </>);
   return (
     <>;
@@ -197,6 +226,7 @@ export default function ApiPerformanceTestingPage() {
         </section>;
       </main>;
 
+<<<<<<< HEAD
 
     </>);
 }
@@ -365,3 +395,15 @@ return (
   );
 }
 
+=======
+}
+
+
+=======
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

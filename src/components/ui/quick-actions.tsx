@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState } from 'react'
 import { useAuth } from '@/hooks/useAuth'
@@ -5,6 +6,8 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { logErrorToProduction } from '@/utils/productionLogger'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
@@ -22,6 +25,7 @@ import {;
   Monitor,;
 } from 'lucide-react';
 interface QuickAction {;
+<<<<<<< HEAD
   id: string;
   label: string;
   description: string;
@@ -60,12 +64,15 @@ import {
 } from 'lucide-react'
 
 interface QuickAction {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
   label: string;
   description: string;
   icon: React.ReactNode;
   action: () => void;
   category: 'performance' | 'development' | 'maintenance';
+<<<<<<< HEAD
   const [isVisible, setIsVisible] = useState(false)
   const [isProcessing, setIsProcessing] = useState<string | null>(null)
   const executeAction = async (actionId: string, action: () => void) => {
@@ -87,20 +94,79 @@ export function QuickActions() {
   const [isVisible, setIsVisible] = useState(false)
   const [isProcessing, setIsProcessing] = useState<string | null>(null)
   const executeAction = async (actionId: string, action: () => void) => {
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   const [isVisible, setIsVisible] = useState(false);
   const [isProcessing, setIsProcessing] = useState<string | null>(null);
   const executeAction = async (actionId: string, action: () => void) => {;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     setIsProcessing(actionId);    try {
       await action()
     } catch (error) {
       logErrorToProduction(`Failed to execute action ${actionId}:`, {
         data: error
       })
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+import { use_auth } from '@/hooks / use_auth';
+import { Button } from '@/components / ui / button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
+import { Badge } from '@/components / ui / badge';
+import { logErrorToProduction } from '@/utils / production_logger';
+import {
+  Zap,
+  Download,
+  Trash2,
+  RefreshCw,
+  Settings,
+  Activity,
+  Package,
+  Monitor,
+} from 'lucide-react';
+interface QuickAction {
+  id: string;
+  label: string;
+  description: string;
+  icon: React.ReactNode;
+  action: () => void;
+  category: 'performance' | 'development' | 'maintenance';
+  dangerous?: boolean;
+export /**
+ * QuickActions - Function description
+ */
+function QuickActions() {
+  const { user } = use_auth ();
+  const is_admin = user?.user_type === 'admin' || user?.role === 'admin';
+  const is_allowed = process.env.NODE_ENV !== 'production' || is_admin;
+  // Check condition
+if ( {) {
+  $2
+}
+    return null;
+  }
+  const [is_visible, setIsVisible] = useState (false);
+  const [is_processing, setIsProcessing] = useState < string | null>(null);
+  const execute_action = async (action_id: string, action: () => void) => {
+    setIsProcessing (action_id);    try {
+      await action ();
+    } catch (error) {
+      logErrorToProduction (`Failed to execute action ${action_id}:`, {
+        data: error,
+      });
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     } finally {
       setIsProcessing(null)
     }
   }
+<<<<<<< HEAD
   const actions: QuickAction[] = [
     // Performance Actions
     {
@@ -132,6 +198,8 @@ export function QuickActions() {
       icon: <Trash2 className='w-4 h-4' />
       category: 'maintenance'
       dangerous: true
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       id: 'enable - performance - monitor',
 
@@ -174,6 +242,7 @@ export function QuickActions() {;
     }
   },
 
+<<<<<<< HEAD
 import React, { useState } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Button } from '@/components/ui/button',;
@@ -212,6 +281,11 @@ export function QuickActions() {;
     }
   },
 
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const actions: QuickAction[] = [
     // Performance Actions
     {
@@ -221,6 +295,7 @@ export function QuickActions() {;
       icon: <Activity className="w-4 h-4" />,
       category: 'performance',
       action: () => {
+<<<<<<< HEAD
         localStorage.setItem('performance-monitoringtrue'),
         window.location.reload()
       }},
@@ -237,6 +312,12 @@ export function QuickActions() {;
         localStorage.setItem('performance-monitoringtrue'),
         window.location.reload()
       }},
+=======
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       id: 'enable-bundle-analyzer',
       label: 'Enable Bundle Analyzer',
@@ -244,6 +325,7 @@ export function QuickActions() {;
       icon: <Package className="w-4 h-4" />,
       category: 'performance',
       action: () => {
+<<<<<<< HEAD
         localStorage.setItem('bundle-analyzertrue'),
         window.location.reload()
       }},
@@ -260,6 +342,12 @@ export function QuickActions() {;
         localStorage.setItem('bundle-analyzertrue'),
         window.location.reload()
       }},
+=======
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       id: 'clear-cache',
       label: 'Clear Cache',
@@ -327,6 +415,7 @@ if ( {) {
       action: () => {
         // Preload critical fonts
         const criticalFonts = [
+<<<<<<< HEAD
           '/fonts/inter-var.woff2'
           '/fonts/cal-sans.woff2'
           '/fonts/inter-var.woff2',
@@ -630,6 +719,10 @@ export function QuickActions() {;
           link.href = font,
           document.head.appendChild(link)
         }),
+=======
+
+  dangerous?: boolean;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         // Preload critical images
         const criticalImages = [
@@ -660,6 +753,7 @@ export function QuickActions() {;
           screen: {
             width: screen.width,
             height: screen.height,
+<<<<<<< HEAD
             colorDepth: screen.colorDepth,
           },
         }
@@ -676,6 +770,8 @@ export function QuickActions() {;
         URL.revokeObjectURL(url)
       },
     },
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             colorDepth: screen.colorDepth
           }
         },
@@ -693,6 +789,10 @@ export function QuickActions() {;
         document.body.removeChild(a),
         URL.revokeObjectURL(url)
       }},
+<<<<<<< HEAD
+=======
+    {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       id: 'test-error-boundary',
       label: 'Test Error Boundary',
       description: 'Trigger an error to test Sentry integration',
@@ -702,11 +802,15 @@ export function QuickActions() {;
       action: () => {
         throw new Error('Test error for Sentry integration - this is intentional!')
       }},
+<<<<<<< HEAD
         throw new Error(
           'Test error for Sentry integration - this is intentional!'
         )
       },
     },
+=======
+    {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       id: 'refresh-app',
       label: 'Hard Refresh',
       description: 'Force reload with cache bypass',
@@ -714,6 +818,7 @@ export function QuickActions() {;
       category: 'maintenance',
       action: () => {
         window.location.reload()
+<<<<<<< HEAD
       },
     },
   ]
@@ -781,6 +886,8 @@ export function QuickActions() {;
     maintenance:
       'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200',
   }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }}],
 
   const categorizedActions = {
@@ -792,18 +899,126 @@ export function QuickActions() {;
     performance: 'bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200',
     development: 'bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200',
     maintenance: 'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200'},
+<<<<<<< HEAD
 
 
 
+=======
+
+        const blob = new Blob([JSON && JSON.stringify(metrics, null, 2)], {;
+          type: 'application/json',;
+        });
+
+        const url = URL && URL.createObjectURL(blob);
+        const a = document && document.createElement('a');
+        a && a.href = url;
+        a && a.download = `performance-report-${Date && Date.now()}.json`;
+        document && document.body.appendChild(a);
+        a && a.click();
+        document && document.body.removeChild(a);
+        URL && URL.revokeObjectURL(url);
+      },;
+    },;
+    {;
+      id: 'test-error-boundary',;
+      label: 'Test Error Boundary',;
+      description: 'Trigger an error to test Sentry integration',;
+      icon: <Monitor className='w-4 h-4' />,;
+      category: 'development',;
+      dangerous: true,;
+      action: () => {;
+        throw new Error(;
+          'Test error for Sentry integration - this is intentional!';
+        );
+      },;
+    },;
+    {;
+      id: 'refresh-app',;
+      label: 'Hard Refresh',;
+      description: 'Force reload with cache bypass',;
+      icon: <RefreshCw className='w-4 h-4' />,;
+      category: 'maintenance',;
+      action: () => {;
+        window && window.location.reload();
+      },;
+    },;
+  ];
+
+  const categorizedActions = {;
+    performance: actions && actions.filter(a => a && a.category === 'performance'),;
+    development: actions && actions.filter(a => a && a.category === 'development'),;
+    maintenance: actions && actions.filter(a => a && a.category === 'maintenance'),;
+  };
+
+  const categoryColors = {;
+    performance:;
+      'bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200',;
+    development:;
+      'bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200',;
+    maintenance:;
+      'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200',;
+  };
+
+
+  if (!isVisible) {;
+
+
+    {
+      id: 'download-performance-report',
+      label: 'Download Performance Report',
+      description: 'Export current performance metrics',
+      icon: <Download className="w-4 h-4" />,
+      category: 'development',
+      action: () => {
+        const metrics = {
+          timestamp: new Date().toISOString(),
+          performance: window.window.window.performance.getEntriesByType('navigation')[0],
+          resources: window.window.window.performance.getEntriesByType('resource').slice(0, 20),
+          memory: (performance as any).memory || {},
+          userAgent: navigator.userAgent,
+          screen: {
+            width: screen.width,
+            height: screen.height,
+
+
+    {
+      id: 'test-error-boundary',
+      label: 'Test Error Boundary',
+      description: 'Trigger an error to test Sentry integration',
+      icon: <Monitor className="w-4 h-4" />,
+      category: 'development',
+      dangerous: true,
+      action: () => {
+
+
+    {
+      id: 'refresh-app',
+      label: 'Hard Refresh',
+      description: 'Force reload with cache bypass',
+      icon: <RefreshCw className="w-4 h-4" />,
+      category: 'maintenance',
+      action: () => {
+        window.location.reload()
+
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (!isVisible) {
     return (
       <div className="fixed bottom-4 left-4 z-50">
         <Button
+<<<<<<< HEAD
           variant='outline'
           size='sm'
           onClick={() => setIsVisible(true)}
           className='bg-background/80 backdrop-blur-sm'        >
           <Settings className='w-4 h-4 mr-2' />
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           variant="outline"
           size="sm"
           onClick={() => setIsVisible(true)}
@@ -845,6 +1060,7 @@ export function QuickActions() {;
             </Button>
           </div>
         </CardHeader>
+<<<<<<< HEAD
 
               variant='ghost'
               size='sm'
@@ -914,6 +1130,10 @@ export function QuickActions() {;
 }
 }
 
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <CardContent className="pt-0 space-y-4">
           {Object.entries(categorizedActions).map(([category, categoryActions]) => (
             <div key={category}>
@@ -958,6 +1178,10 @@ export function QuickActions() {;
     </div>;
   );
 } ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
         local_storage.clear ();
@@ -1146,4 +1370,8 @@ if ( {) {
     </div>);
 }
 }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

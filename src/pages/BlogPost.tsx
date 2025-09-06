@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
@@ -38,10 +39,13 @@ import { SEO } from "@/components/SEO"
 import JsonLd from "@/components/JsonLd"
 import { Button } from "@/components/ui/button"
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
 import type { BlogPost as BlogPostType } from "@/types/blog",
 import { Separator } from "@/components/ui/separator";
 import ReactMarkdown from 'react-markdown';
+<<<<<<< HEAD
 import { logErrorToProduction } from '@/utils/productionLogger';
 // Importing the sample blog posts - in a real app, you would fetch this from an API
 import { BLOG_POSTS } from "@/data/blog-posts";
@@ -51,6 +55,15 @@ import { BLOG_POSTS } from "@/data/blog-posts";
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
 import { BLOG_POSTS } from "@/data/blog-posts"
+=======
+
+import {logErrorToProduction} from '@/utils/productionLogger';
+// Importing the sample blog posts - in a real app, you would fetch this from an API;
+
+import { BLOG_POSTS } from "@/data/blog-posts";
+import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
+import { fetchWithRetry } from '@/utils/fetchWithRetry';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function BlogPost() {;
 
 import { BLOG_POSTS } from "@/data/blog-posts"
@@ -71,8 +84,12 @@ import {logErrorToProduction} from '@/utils/productionLogger',
 import { BLOG_POSTS } from "@/data/blog-posts",
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout',
 import { fetchWithRetry } from '@/utils/fetchWithRetry',
+<<<<<<< HEAD
 xport default function BlogPost() {
 export default function BlogPost() {
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export default function BlogPost() {
 
@@ -143,6 +160,11 @@ export default function BlogPost() {
         logErrorToProduction('Failed to fetch blog post', { data: err });
         setError('Failed to load article');
       };
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const currentPost = BLOG_POSTS.find(p => p.slug === slug);      if (currentPost) {
         setPost(currentPost)
         const related = BLOG_POSTS.filter(
@@ -168,6 +190,10 @@ if ( {) {
       }
       setIsLoading(false)
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     fetchPost()
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [slug, router])
@@ -254,7 +280,13 @@ export default function BlogPost() {;
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [slug, router]),
   
+<<<<<<< HEAD
   
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (isLoading && !timedOut) {
     return (
       <div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">
@@ -263,11 +295,15 @@ export default function BlogPost() {;
     )
   }
   if (!post && (error |timedOut)) {
+<<<<<<< HEAD
   if (!post && (error |timedOut)) {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if () {) {
   $2
 }
     return (
+<<<<<<< HEAD
       <div className="min-h-screen bg-zion-blue text-white p-8 flex flex-col justify-center items-center space-y-4">
         <p>Failed to load article.</p>
         <Button onClick={() => router.reload()}>Retry</Button>
@@ -276,6 +312,20 @@ export default function BlogPost() {;
   }
   // If post is still null after loading, show not found
   if (!post) {
+=======
+      <div className='min - h-screen bg - zion - blue text - white p - 8 flex flex - col justify - center items - center space - y-4'>;
+        <p > Failed to load article.</p>;
+        <Button on_click={(, ) => router.reload ()}>Retry</Button>;
+      </div>);
+  }
+
+  // If post is still null after loading, show not found;
+  // Check condition
+if ( {) {
+  $2
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return (
       <div className="min-h-screen bg-zion-blue text-white p-8 flex flex-col justify-center items-center space-y-4">
         <p>Article not found.</p>
@@ -285,6 +335,12 @@ export default function BlogPost() {;
   }
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Helper function to get share URL
   const getShareUrl = (platform: string) => {
     if (!post) return ''
@@ -301,6 +357,7 @@ if (return '') {
     switch (platform) {
       case 'facebook':        return `https://www.facebook.com/sharer/sharer.php?u=${url}`
     switch (platform) {
+<<<<<<< HEAD
       case 'facebook':
         return `https://www.facebook.com/sharer/sharer.php?u=${url}`
       case 'twitter':
@@ -317,6 +374,26 @@ if (return '') {
     description: post.excerpt
     image: post.featuredImage
     datePublished: post.publishedDate
+=======
+
+      case 'facebook':;
+        return `https://www.facebook.com / sharer / sharer.php?u=${url}`;
+      case 'twitter':;
+        return `https://twitter.com / intent / tweet?url=${url}&text=${title}`;
+      case 'linkedin':;
+        return `https://www.linkedin.com / share_article?mini = true & url=${url}&title=${title}`;
+      default:;
+        return '#';
+  }
+  const article_ld = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.excerpt,
+    image: post.featured_image,
+    date_published: post.published_date,
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     author: {
       '@type': 'Person'
       name: post.author.name
@@ -411,6 +488,14 @@ if (return '') {
     switch (platform) {;
       case 'facebook':;
 
+<<<<<<< HEAD
+=======
+
+
+
+
+  const articleLd = {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
@@ -419,6 +504,7 @@ if (return '') {
     datePublished: post.publishedDate,
     author: {
 
+<<<<<<< HEAD
       '@type': 'Person',
       name: post.author.name,
     },
@@ -494,11 +580,15 @@ if (return '') {
         keywords={post.tags.join(", ")}
         ogImage={post.featuredImage}
         canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       />
       <JsonLd data={articleLd} />
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
         <div className="container mx-auto">
           {/* Back to blog button */}
+<<<<<<< HEAD
           <div className="mb-8">
             <Button 
               variant="outline" 
@@ -513,6 +603,46 @@ if (return '') {
           </div>
           <div className="mb-8 max-w-4xl mx-auto">
             <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-4">
+=======
+          <div className='mb-8'>;
+            <Button
+              variant='outline'
+              className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
+
+      <SEO;
+        title={post.title}
+        description={post.excerpt}
+        keywords={post.tags.join (', ')}
+        og_image={post.featured_image}        canonical={`https://app.ziontechgroup.com / blog/${post.slug}`}
+      />;
+      <JsonLd data={article_ld} />;
+      <div className='min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4'>;
+        <div className='container mx - auto'>;
+          {/* Back to blog button */}
+          <div className='mb - 8'>;
+            <Button;
+              variant='outline';
+              className='border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white';
+              as_child;
+            >;
+              <Link href='/blog'>;
+                <ArrowLeft className='mr - 2 h - 4 w - 4' />;
+                Back to all articles;
+              </Link>;
+            </Button>;
+          </div>;
+
+
+          
+
+          {/* Article header */}
+          <div className="mb-8 max-w-4xl mx-auto">
+            <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-4">
+              {post.category}
+            </span>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              {post.title}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           
 
@@ -552,6 +682,7 @@ if (return '') {
                 </div>;
                 <div className='relative'>;
 
+<<<<<<< HEAD
           
           {/* Article header */}
           <div className="mb-8 max-w-4xl mx-auto">
@@ -587,16 +718,30 @@ if (return '') {
                   <span className='text-sm'>{post.readTime}</span>
                 </div>
                 <div className='relative'>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <Button
                     variant='ghost'
                     size='sm'
                     className='text-zion-slate-light hover:text-white hover:bg-zion-blue-dark'
+<<<<<<< HEAD
                     onClick={() => setShowShareMenu(!showShareMenu)}                  >
                     <Share2 className='h-4 w-4 mr-1' />
                     <span className='text-sm'>Share</span>
                   </Button>
                   {showShareMenu && (
                     <div className='absolute right-0 top-full mt-2 bg-zion-blue-dark border border-zion-blue-light rounded-md p-2 z-10'>
+=======
+
+                    onClick={() => setShowShareMenu(!showShareMenu)}                  >;
+                    <Share2 className='h-4 w-4 mr-1' />;
+                    <span className='text-sm'>Share</span>;
+                  </Button>;
+
+                  {showShareMenu && (;
+                    <div className='absolute right-0 top-full mt-2 bg-zion-blue-dark border border-zion-blue-light rounded-md p-2 z-10'>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <a
                         href={getShareUrl('facebook')}
                         target='_blank'
@@ -927,7 +1072,14 @@ if (return '') {
                       </div>;
                     </Link>;
             </div>
+<<<<<<< HEAD
             <Separator className='my-12 bg-zion-blue-light' />
+            
+            <Separator className="my-12 bg-zion-blue-light" />
+            
+
+=======
+
             
             <Separator className="my-12 bg-zion-blue-light" />
             
@@ -938,26 +1090,7 @@ if (return '') {
                 <h3 className="text-2xl font-bold text-white mb-6">Related Articles</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {relatedPosts.map(relatedPost => (
-                    <Link
-                      key={relatedPost.id}                      href={`/blog/${relatedPost.slug}`}
-                      className='bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden hover:border-zion-purple transition-all duration-300'
-                    >
-                      <div className='aspect-[16/9] relative'>
-                        <ImageWithRetry
-                          src={relatedPost.featuredImage}
-                          alt={
-                            relatedPost.featuredImageAlt |relatedPost.title
-                          }
-                          className='object-cover w-full h-full'
-                          fallbackSrc='/images/blog-placeholder.svg'                        />
-                      </div>
-                      <div className='p-4'>
-                        <span className='text-xs text-zion-cyan'>
-                          {relatedPost.category}
-                        </span>
-                        <h4 className='text-white font-bold mt-1 line-clamp-2'>
-                          {relatedPost.title}
-                        </h4>
+
                     <Link 
                       key={relatedPost.id}
                       href={`/blog/${relatedPost.slug}`}
@@ -978,9 +1111,100 @@ if (return '') {
                       </div>
                     </Link>
                   ))}
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+          {/* Featured image */}
+          <div className="mb-12 max-w-5xl mx-auto">
+            <div className="aspect-[21/9] rounded-lg overflow-hidden">
+              <ImageWithRetry
+                src={post.featuredImage}
+                alt={post.featuredImageAlt || post.title}
+                className="object-cover w-full h-full"
+                fallbackSrc="/images/blog-placeholder.svg"
+              />
+            </div>
+          </div>
+          
+          {/* Article content */}
+          <div className="max-w-4xl mx-auto">
+            <div className="prose prose-lg prose-invert max-w-none">
+              <ReactMarkdown>
+                {post.content}
+              </ReactMarkdown>;
+            </div>;
+            {/* Tags */}
+            <div className="flex flex-wrap gap-2 mt-12">
+              {post.tags.map(tag => (
+                <span 
+                  key={tag} 
+                  className="text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"
+                >
+                  #{tag}
+                </span>
+              ))}
+            </div>
+            
+            <Separator className="my-12 bg-zion-blue-light" />
+            
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+            {/* Related articles */}
+            {relatedPosts.length > 0 && (
+              <div className="mt-12">
+                <h3 className="text-2xl font-bold text-white mb-6">Related Articles</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {relatedPosts.map(relatedPost => (
+<<<<<<< HEAD
+                    <Link
+                      key={relatedPost.id}                      href={`/blog/${relatedPost.slug}`}
+                      className='bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden hover:border-zion-purple transition-all duration-300'
+                    >
+                      <div className='aspect-[16/9] relative'>
+                        <ImageWithRetry
+                          src={relatedPost.featuredImage}
+                          alt={
+                            relatedPost.featuredImageAlt |relatedPost.title
+                          }
+                          className='object-cover w-full h-full'
+                          fallbackSrc='/images/blog-placeholder.svg'                        />
+                      </div>
+                      <div className='p-4'>
+                        <span className='text-xs text-zion-cyan'>
+                          {relatedPost.category}
+                        </span>
+                        <h4 className='text-white font-bold mt-1 line-clamp-2'>
+                          {relatedPost.title}
+                        </h4>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                    <Link 
+                      key={relatedPost.id}
+                      href={`/blog/${relatedPost.slug}`}
+                      className="bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden hover:border-zion-purple transition-all duration-300"
+                    >
+                      <div className="aspect-[16/9] relative">
+                        <ImageWithRetry
+                          src={relatedPost.featuredImage}
+                          alt={relatedPost.featuredImageAlt || relatedPost.title}
+                          className="object-cover w-full h-full"
+                          fallbackSrc="/images/blog-placeholder.svg"
+                        />
+                      </div>
+                      <div className="p-4">
+                        <span className="text-xs text-zion-cyan">{relatedPost.category}</span>
+                        <h4 className="text-white font-bold mt-1 line-clamp-2">{relatedPost.title}</h4>
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                      </div>
+                    </Link>
+                  ))}
                 </div>
               </div>
             )}
+<<<<<<< HEAD
             <div className='mt-12 text-center'>
               <p className='text-zion-slate-light'>
 
@@ -1003,18 +1227,134 @@ if (return '') {
 }
 }
 }
+=======
+
+
+            <div className='mt-12 text-center'>;
+              <p className='text-zion-slate-light'>;
+
+                Ready to put these ideas into action? Explore our{' '}
+                <Link href='/services' className='text-zion-cyan underline'>;
+                  AI services;
+                </Link>{' '}
+                or browse expert{' '}
+                <Link href='/talent' className='text-zion-cyan underline'>;
+                  talent;
+                </Link>{' '}
+
+
+
+
+
+
+
+                Ready to put these ideas into action? Explore our{' '}
+                <Link href="/services" className="text-zion-cyan underline">AI services</Link>{' '}
+                or browse expert{' '}
+
+                <Link href="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </p>
             </div>
                 to accelerate your projects.;
               </p>;
             </div>;
 
+<<<<<<< HEAD
                 <Link href="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.
               </p>
             </div>
             {/* Navigation */}
             <div className="flex justify-between items-center mt-12">
               <Button
+=======
+            {/* Navigation */}
+            <div className="flex justify-between items-center mt-12">
+              <Button
+                variant='outline'
+                className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
+
+          {/* Featured image */}
+          <div className='mb - 12 max - w-5xl mx - auto'>;
+            <div className='aspect-[21 / 9] rounded - lg overflow - hidden'>;
+              <ImageWithRetry;
+                src={post.featured_image}
+                alt={post.featuredImageAlt || post.title}
+                className='object - cover w - full h - full';
+                fallback_src='/images / blog - placeholder.svg'              />;
+            </div>;
+          </div>;
+          {/* Article content */}
+          <div className='max - w-4xl mx - auto'>;
+            <div className='prose prose - lg prose - invert max - w-none'>;
+              <ReactMarkdown>{post.content}</ReactMarkdown>;
+            </div>;
+            {/* Tags */}
+            <div className='flex flex - wrap gap - 2 mt - 12'>;
+              {post.tags.map (tag => (
+                <span;
+                  key={tag}
+                  className='text - xs text - zion - slate - light bg - zion - blue - dark px - 3 py - 1 rounded - full'                >;
+                  #{tag}
+                </span>))}
+            </div>;
+            <Separator className='my - 12 bg - zion - blue - light' />;
+            {/* Related articles */}
+            {related_posts.length > 0 && (
+              <div className='mt - 12'>;
+                <h3 className='text - 2xl font - bold text - white mb - 6'>;
+                  Related Articles;
+                </h3>;
+                <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
+                  {related_posts.map (related_post => (
+                    <Link;
+                      key={related_post.id}                      href={`/blog/${related_post.slug}`}
+                      className='bg - zion - blue - dark border border - zion - blue - light rounded - lg overflow - hidden hover:border - zion - purple transition - all duration - 300';
+                    >;
+                      <div className='aspect-[16 / 9] relative'>;
+                        <ImageWithRetry;
+                          src={related_post.featured_image}
+                          alt={
+                            related_post.featuredImageAlt || related_post.title;
+                          }
+                          className='object - cover w - full h - full';
+                          fallback_src='/images / blog - placeholder.svg'                        />;
+                      </div>;
+                      <div className='p - 4'>;
+                        <span className='text - xs text - zion - cyan'>;
+                          {related_post.category}
+                        </span>;
+                        <h4 className='text - white font - bold mt - 1 line - clamp - 2'>;
+                          {related_post.title}
+                        </h4>;
+                      </div>;
+                    </Link>))}
+                </div>;
+              </div>)}
+            <div className='mt - 12 text - center'>;
+              <p className='text - zion - slate - light'>;
+                Ready to put these ideas into action? Explore our{' '}
+                <Link href='/services' className='text - zion - cyan underline'>;
+                  AI services;
+                </Link>{' '}
+                or browse expert{' '}
+                <Link href='/talent' className='text - zion - cyan underline'>;
+                  talent;
+                </Link>{' '}
+                to accelerate your projects.;
+              </p>;
+            </div>;
+            {/* Navigation */}
+            <div className='flex justify - between items - center mt - 12'>;
+              <Button;
+                variant='outline';
+                className='border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white';
+                as_child;
+              >;
+                <Link href='/blog'>;
+                  <ChevronLeft className='mr - 2 h - 4 w - 4' />;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   );
 };
@@ -1285,6 +1625,7 @@ export default function Page() {;
               whileInView={{ opacity: 1, coordinate_y: 0 }}
 
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
               className="bg - slate - 800 / 50 p - 8 rounded - 2xl border border - slate -700 / 50">;
               <h3 className="text - 2xl font - bold text - white mb - 4">;
                 About the Author;
@@ -1363,6 +1704,86 @@ export default function Page() {;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
+=======
+              className="bg-slate - 800 / 50 p - 8 rounded-2xl border border-slate -700 / 50">
+              <h3 className="text-2xl font - bold text-white mb-4">
+                About the Author
+              </h3>
+              <div className="flex items - start space - x-4">
+                <div className="w-16 h-16 bg-gradient - to - r from - cyan - 500 to - blue - 500 rounded-full flex items - center justify - center flex - shrink -0">
+                  <User className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <h4 className="text-xl font - semibold text-white mb-2">
+                    {blogPost.author}
+                  </h4>
+                  <p className="text-cyan - 400 mb-2">{blogPost.authorRole}</p>
+                  <p className="text-gray -300">{blogPost.authorBio}</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+      {/* Related Posts */}
+      <section className="py-20 bg-slate -800 / 50">
+        <div className="container mx - auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16">
+            <h2 className="text-4xl font - bold text-white mb-4">
+              Related Articles
+            </h2>
+            <p className="text-xl text-gray - 300 max - w-3xl mx -auto">
+              Continue exploring insights and analysis on related topics
+            </p>
+          </motion.div>
+          <div className="grid md:grid - cols - 3 gap-8 max - w-6xl mx -auto">
+            {blogPost.relatedPosts.map((post, index) => (<motion.article
+                key={post.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-slate - 700 / 50 rounded-xl border border-slate - 600 / 50 overflow-hidden hover:border-cyan - 400 / 50 transition - all duration -300 group">
+                <div className="h-48 bg-gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 flex items - center justify -center">
+                  <BookOpen className="w-16 h-16 text-cyan -400" />
+                </div>
+                <div className="p -6">
+                  <div className="flex items - center space - x-2 mb-3">
+                    <span className="px-3 py-1 bg-cyan - 500 / 20 text-cyan - 400 text-xs rounded-full font -medium">
+                      {getCategoryName(post.category) }
+                    </span>
+                  </div>
+                  <h3 className="text-lg font - bold text-white mb-3 group - hover:text-cyan - 400 transition - colors duration -200">
+                    {post.title}
+                  </h3>
+                  <p className="text-gray - 300 mb-4 line - clamp -3">
+                    {post.excerpt}
+                  </p>
+                  <div className="flex items - center justify - between text-sm text-gray -400">
+                    <div className="flex items - center space - x-2">
+                      <Calendar className="w-4 h-4" />
+                      <span>{formatDate(post.date) }</span>
+                    </div>
+                    <div className="flex items - center space - x-2">
+                      <Clock className="w-4 h-4" />
+                      <span>{post.readTime}</span>
+                    </div>
+                  </div>
+                </div>
+              </motion.article>) ) }
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */}
+      <section className="py-20">
+        <div className="container mx - auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             transition={{ duration: 0.8 }}
 
       <section className="py-12">;
@@ -1874,4 +2295,8 @@ export default function BlogPost() {return ("
 
 
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

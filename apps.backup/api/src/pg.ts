@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
   if (!pool) {;
 
 
@@ -9,6 +10,15 @@ export function getPool():Pool {
   if (!pool) {
 
   if (!pool) {;
+=======
+
+  if (!pool) {;
+
+
+=======
+  if (!pool) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     pool = new Pool({ connectionString:process.env.DATABASE_URL });
   }
   return pool;
@@ -19,9 +29,12 @@ export function getPool():Pool {
 export async function withUser<T>(userId:string, fn:(client:PoolClient) => Promise<T>):Promise<T> {;
 
 
+<<<<<<< HEAD
 export async function withUser<T>(userId:string, fn:(client:PoolClient) => Promise<T>):Promise<T> {
 
 export async function withUser<T>(userId:string, fn:(client:PoolClient) => Promise<T>):Promise<T> {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const client = await getPool().connect();
   try {
     await client.query('BEGIN');
@@ -52,6 +65,10 @@ export function getPool(): Pool {;
   }
   return pool;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 export async function withUser<T>(userId: string, fn: (client: PoolClient) => Promise<T>): Promise<T> {;
   const client = await getPool().connect(),;
@@ -59,10 +76,18 @@ export async function withUser<T>(userId: string, fn: (client: PoolClient) => Pr
     await client.query('BEGIN'),;
     await client.query(`SELECT set_config('app.current_user_id', $1, true)`, [userId]),;
     const result = await fn(client),;
+<<<<<<< HEAD
 
 
     await client.query('COMMIT');
     await client.query('COMMIT');
+=======
+
+
+
+    await client.query('COMMIT');
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return result;
   } catch (err) {
     await client.query('ROLLBACK');
@@ -83,6 +108,7 @@ client.release();  }
 
 }
 
+<<<<<<< HEAD
   } finally {
 client.release();  }
   } finally {
@@ -93,3 +119,7 @@ client.release();  }
   }
 }
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

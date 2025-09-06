@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Header } from '@/components/Header'
 import { SEO } from '@/components/SEO'
@@ -28,6 +29,8 @@ import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -78,6 +81,7 @@ import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function Ecommerce() {
   const schema = {
+<<<<<<< HEAD
 
   const schema = {
     '@context': 'https://schema.org'
@@ -95,6 +99,14 @@ export default function Ecommerce() {
         description='Buy and sell hardware, software and services in the Zion marketplace.'
         keywords='tech marketplace, buy IT hardware, sell AI solutions'
         canonical='https://app.ziontechgroup.com/features/e-commerce'
+=======
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "E-commerce Platform",
+    "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.",
+    "url": "https://app.ziontechgroup.com/features/e-commerce"
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   };
 
   return (
@@ -120,6 +132,7 @@ export default function Ecommerce() {
             </div>;
             <div>;
 
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import Link from 'next/link',
 export default function Ecommerce() {
@@ -138,6 +151,8 @@ export default function Ecommerce() {
         description='Buy and sell hardware, software and services in the Zion marketplace.'
         keywords='tech marketplace, buy IT hardware, sell AI solutions'
         canonical='https://app.ziontechgroup.com/features/e-commerce'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         title="E-commerce Platform"
         description="Buy and sell hardware, software and services in the Zion marketplace."
         keywords="tech marketplace, buy IT hardware, sell AI solutions"
@@ -150,10 +165,13 @@ export default function Ecommerce() {
       <script
         type="application/ld+json"
 
+<<<<<<< HEAD
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
@@ -187,6 +205,7 @@ export default function Ecommerce() {
               <p className="text-zion-slate-light">Yes, sellers can offer shipping to over 100 countries with real-time rates.</p>
             </div>
           </div>
+<<<<<<< HEAD
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/marketplace'>Start Shopping</Link>            </Button>      />
@@ -226,6 +245,11 @@ export default function Ecommerce() {
               <p className="text-zion-slate-light">Yes, sellers can offer shipping to over 100 countries with real-time rates.</p>
             </div>
           </div>
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="text-center">
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
@@ -274,8 +298,14 @@ export default function Ecommerce() {
       </main>
     </>
   )
+<<<<<<< HEAD
 }
 ;
+=======
+
+;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -311,6 +341,7 @@ export default function Ecommerce() {;
             Showcase your products with rich media listings and accept payments with Stripe-powered checkout.;
           </p>;
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">;
+<<<<<<< HEAD
             <img;
               src="https://placehold.co/800x400";
               alt="Screenshot of marketplace interface";
@@ -336,13 +367,27 @@ export default function Ecommerce() {;
           </div>;
           <div className="text-center">;
             <Button size="lg" className="bg-zion-purple text-white" asChild>;
+=======
+            <img
+              src="https://placehold && placehold.co/800x400"
+              alt="Screenshot of marketplace interface"
+              className="object-cover"
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Link href="/marketplace">Start Shopping</Link>;
             </Button>;
           </div>;
         </div>;
       </main>;
+<<<<<<< HEAD
     </>;
   );
 }
 ;
 ;
+=======
+
+
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

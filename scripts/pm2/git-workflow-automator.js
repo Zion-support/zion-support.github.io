@@ -1,9 +1,16 @@
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 #!/usr/bin/env node;
 /**; * Git Workflow Automator Script; * Automates git operations and workflow management; */;
 
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -804,6 +811,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 ;
 origin/main
 origin/automation-improvements-final
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 #!/usr/bin/env node;
 /**;
  * Git Workflow Automator Script;
@@ -984,11 +994,16 @@ async function main() {const automator = new GitWorkflowAutomator();
     process.exit(1);
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 }
 if (require.main === module) {main();
 }
 module.exports = GitWorkflowAutomator;#!/usr/bin/env node;
+<<<<<<< HEAD
 #!/usr/bin/env node;
 /**; * Git Workflow Automator Script; * Automates git operations and workflow management; */;
 
@@ -996,6 +1011,15 @@ module.exports = GitWorkflowAutomator;#!/usr/bin/env node;
 /**; * Git Workflow Automator Script; * Automates git operations and workflow management; */;
 #!/usr/bin/env node;
 /**; * Git Workflow Automator Script; * Automates git operations and workflow management; */;
+=======
+
+
+=======
+#!/usr/bin/env node;
+/**; * Git Workflow Automator Script; * Automates git operations and workflow management; */;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 #!/usr/bin/env node;
 /**;
  * Git Workflow Automator Script;
@@ -1008,6 +1032,10 @@ const path = require('path');const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ;
 
@@ -1464,6 +1492,7 @@ class GitWorkflowAutomator {constructor() {; this.logFile = './logs/pm2/git-work
     cwd: process.cwd()}); return result.trim().split('\t')[0]} catch (error) {this.log(`Failed to get repository size: ${error.message}`, 'ERROR'); return 'Unknown'}}; generateWorkflowRecommendations(gitStatus, branchCleanup, conflictCheck) {const recommendations = []; if (!gitStatus.workingDirectoryClean) {; recommendations.push('Working directory has uncommitted changes - consider committing or stashing')}; if (conflictCheck.hasConflicts) {recommendations.push('Merge conflicts detected - resolve before proceeding')}; if (branchCleanup.branchesToDelete > 10) {recommendations.push('Many old branches detected - consider regular cleanup')}; if (recommendations.length = = = 0) {recommendations.push('Git workflow is in good state')}; return recommendations}}
 ;
 
+<<<<<<< HEAD
 class GitWorkflowAutomator {; constructor() {; this.logFile = './logs/pm2/git-workflow.log'; this.errorFile = './logs/pm2/git-workflow-error.log'; this.workflowReport = './logs/git-workflow-report.json'; this.ensureLogDirectory()};
 ; ensureLogDirectory() {; const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) {; fs.mkdirSync(logDir, { recursive: true })}};
 ; log(message, level = 'INFO') {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`;
@@ -1513,6 +1542,9 @@ async function main() {; const automator = new GitWorkflowAutomator();
 if (require.main = = = module) {; main()};
 ;
 module.exports = GitWorkflowAutomator;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 class GitWorkflowAutomator {;
   constructor() {;
     this.logFile = './logs/pm2/git-workflow.log';
@@ -1742,7 +1774,13 @@ async function main() {;
   } catch (error) {;
     automator.log(`Git workflow automation failed: ${error.message}`, 'ERROR');
     process.exit(1);
+<<<<<<< HEAD
 #!/usr/bin/env node,
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 };
 };
 ;
@@ -2018,6 +2056,7 @@ if (require.main === module) {,
 };
 ,
 module.exports = GitWorkflowAutomator,
+<<<<<<< HEAD
 / Git Workflow Automation Scriptconst { execSync } = require("child_process");"const fs = require("fs");"const path = require("path");class GitWorkflowAutomator { constructor() { this.repoPath = process.cwd();" this.branch = "main"; } async checkGitStatus() { try {" const status = execSync("git status --porcelain", { encoding: "utf8" });" return status.trim().split("\n").filter(line => line.length > 0); } catch (error) {" console.error("Error checking git status:", error.message); return []; } } async getCurrentBranch() { try {" return execSync("git branch --show-current", { encoding: "utf8" }).trim(); } catch (error) {" console.error("Error getting current branch:", error.message);" return "main"; } } async stageChanges() { try {" execSync("git add .", { stdio: "inherit" });" console.log(" Changes staged successfully"); return true; } catch (error) {" console.error("Error staging changes:", error.message); return false; } } async commitChanges(message) { try {" execSync(`git commit -m "${message}"`, { stdio: "inherit" });" console.log(" Changes committed successfully"); return true; } catch (error) {" console.error("Error committing changes:", error.message); return false; } } async pushChanges() { try { const currentBranch = await this.getCurrentBranch();"` execSync(`git push origin ${currentBranch}`, { stdio: "inherit" });" console.log(" Changes pushed successfully"); return true; } catch (error) {" console.error("Error pushing changes:", error.message); return false; } } async runWorkflow() {" console.log(" Starting Git Workflow Automation."); const changes = await this.checkGitStatus(); if (changes.length === 0) {" console.log(" No changes to commit"); return true; }` console.log(` Found ${changes.length} changes to process`); const staged = await this.stageChanges(); if (!staged) return false;" const committed = await this.commitChanges("Automated commit: App improvements and automation fixes"); if (!committed) return false; const pushed = await this.pushChanges(); if (!pushed) return false;" console.log(" Git workflow completed successfully!"); return true; }}/ Run if called directlyif (require.main === module) { const automator = new GitWorkflowAutomator(); automator.runWorkflow().then(success => { process.exit(success ? 0 : 1); });}module.exports = GitWorkflowAutomator;'"`'"`
 // Git workflow automation for PM2;,
 _console.log('Git workflow automation initialized');
@@ -2031,6 +2070,22 @@ origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 origin/cursor/integrate-build-improve-and-re-verify-242d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+
+
+
+
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
+>>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
+
+
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 }
 if (require.main === module) {main();
@@ -2064,6 +2119,7 @@ class GitWorkflowAutomator {constructor() {; this.logFile = './logs/pm2/git-work
 async function main() {const automator = new GitWorkflowAutomator(); try {; await automator.automateGitWorkflow(); process.exit(0)} catch (error) {automator.log(`Git workflow automation failed: ${error.message}`, 'ERROR'); process.exit(1)}}
 if (require.main = = = module) {main()}
 module.exports = GitWorkflowAutomator;
+<<<<<<< HEAD
 async function main() {const automator = new GitWorkflowAutomator(); try {; await automator.automateGitWorkflow(); process.exit(0)} catch (error) {automator.log(`Git workflow automation failed: ${error.message}`, 'ERROR'); process.exit(1)}}
 if (require.main = = = module) {main()}
 module.exports = GitWorkflowAutomator;
@@ -2093,6 +2149,32 @@ if (require.main === module) {,;
 },;
 ,;
 module.exports = GitWorkflowAutomator,;
+=======
+
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/automation-improvements-final
+=======
+async function main() {const automator = new GitWorkflowAutomator(); try {; await automator.automateGitWorkflow(); process.exit(0)} catch (error) {automator.log(`Git workflow automation failed: ${error.message}`, 'ERROR'); process.exit(1)}}
+if (require.main = = = module) {main()}
+module.exports = GitWorkflowAutomator;
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+; try {; await automator && automator.automateGitWorkflow(); process && process.exit(0)} catch (error) {; automator && automator.log(`Git workflow automation failed: ${error && error.message}`, 'ERROR'); process && process.exit(1)}};
+
+if (require && require.main = = = module) {; main()};
+
+module && module.exports = GitWorkflowAutomator;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 ;
+<<<<<<< HEAD
+=======
+
+module.exports = GitWorkflowAutomator;
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

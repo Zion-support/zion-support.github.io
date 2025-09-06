@@ -1,4 +1,9 @@
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {ReferralReward} from "@/types/referrals";
 import {formatDate} from "@/utils/referralUtils";
@@ -18,6 +23,7 @@ interface RewardsCardProps {
 }
 export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
   if (isLoading) {
+<<<<<<< HEAD
 
 import {
   Card
@@ -43,11 +49,15 @@ interface RewardsCardProps {
   isLoading: boolean
 
 import {
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
+<<<<<<< HEAD
 } from "@/components/ui/card";
 import { ReferralReward } from "@/types/referrals";
 import { formatDate } from "@/utils/referralUtils";
@@ -99,6 +109,45 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
           </div>
         </CardContent>
       </Card>
+=======
+} from '@/components / ui / card';
+import { ReferralReward  } from '@/types / referrals';
+import { format_date  } from '@/utils / referral_utils';
+import { BadgeDollarSign, Badge  } from './lucide-react';
+interface RewardsCardProps {
+  rewards: ReferralReward[];
+  is_loading: boolean;
+}
+export /**
+ * RewardsCard - Function description
+ */
+function RewardsCard() {
+  // Check condition
+if ( {) {
+  $2
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    return (
+      <Card>;
+        <CardHeader>;
+          <CardTitle className="flex items - center gap - 2">;
+            <BadgeDollarSign className="h - 5 w - 5" />;
+            Your Rewards;
+          </CardTitle>;
+          <CardDescription>;
+            Rewards earned from successful referrals;
+          </CardDescription>;
+        </CardHeader>;
+        <CardContent>;
+          <div className="flex items - center justify - center p - 4">;
+            <div className="h - 8 w - 8 animate - spin rounded - full border - 4 border - primary border - t-transparent" />;
+          </div>;
+        </CardContent>;
+      </Card>);
+  }
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     );
   }
   return (
@@ -119,8 +168,15 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
               key={reward.id}
               className={`flex justify-between items-start ${
                 index !== rewards.length - 1 ? "border-b pb-3" : ""
+<<<<<<< HEAD
   )
 
+=======
+
+  )
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { ReferralReward } from "@/types/referrals",;
 import { formatDate } from "@/utils/referralUtils",;
@@ -130,6 +186,7 @@ interface RewardsCardProps {;
   rewards: ReferralReward[],;
   isLoading: boolean;
 }
+<<<<<<< HEAD
 export function RewardsCard(): any ({ rewards, isLoading }: RewardsCardProps) {;
   if (isLoading) {;
     return (
@@ -190,6 +247,12 @@ interface RewardsCardProps {;
 export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
   if (isLoading) {;
     return (;
+=======
+
+export function RewardsCard(): any ({ rewards, isLoading }: RewardsCardProps) {;
+  if (isLoading) {;
+    return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
@@ -211,9 +274,15 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
     return (;
     );
   }
+<<<<<<< HEAD
 ;
   if (rewards.length === 0) {;
     return (;
+=======
+
+  if (rewards && rewards.length === 0) {;
+    return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
@@ -231,6 +300,14 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
           </div>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    );
+  }
+  return (
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Check condition
 if ( {) {
   $2
@@ -291,6 +368,10 @@ if ( {) {
                   Earned on {format_date (reward.created_at)}
                 </p>;
                 {reward.expires_at && (
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <Card>;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
@@ -310,6 +391,7 @@ if ( {) {
               <div>;
                 <div className="flex items-center gap-2">;
                   {reward && reward.reward_type === 'credit' ? (;
+<<<<<<< HEAD
                     <BadgeDollarSign className="h-4 w-4 text-green-600" />;
                   ) : (;
                     <Badge className="h-4 w-4 text-blue-600" />;
@@ -352,27 +434,45 @@ if ( {) {
               <div>;
                 <div className="flex items-center gap-2">;
                   {reward.reward_type === 'credit' ? (;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <BadgeDollarSign className="h-4 w-4 text-green-600" />;
                   ) : (;
                     <Badge className="h-4 w-4 text-blue-600" />;
                   )}
                   <p className="font-medium">;
+<<<<<<< HEAD
                     {reward.reward_type === 'credit';
                       ? `$${reward.amount?.toFixed(2)} Credit`;
+=======
+                    {reward && reward.reward_type === 'credit';
+                      ? `$${reward && reward.amount?.toFixed(2)} Credit`;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       : 'Visibility Boost'}
                   </p>;
                 </div>;
                 <p className="text-xs text-muted-foreground mt-1">;
+<<<<<<< HEAD
                   Earned on {formatDate(reward.created_at)}
                 </p>;
                 {reward.expires_at && (;
                   <p className="text-xs text-muted-foreground">;
                     Expires on {formatDate(reward.expires_at)}
                   </p>;
+=======
+                  Earned on {formatDate(reward && reward.created_at)}
+                </p>;
+                {reward && reward.expires_at && (;
+                  <p className="text-xs text-muted-foreground">;
+                    Expires on {formatDate(reward && reward.expires_at)}
+                  </p>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 )}
               </div>;
             </div>;
           ))}
+<<<<<<< HEAD
         </div>;
       </CardContent>;
     </Card>;
@@ -423,7 +523,17 @@ isLoading: boolean
 }
 ;
 
+=======
+
+        </div>;
+      </CardContent>;
+    </Card>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 }
+<<<<<<< HEAD
 }
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

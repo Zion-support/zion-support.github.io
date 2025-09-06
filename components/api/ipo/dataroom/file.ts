@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
@@ -39,10 +44,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
   const section = String(req && req.query.section || "General");
+<<<<<<< HEAD
+=======
+  const file = String(req && req.query.file || "");
+  if (!file) return res && res.status(400).json({ error: "Missing file" });
+  const fullPath = path && path.join(
+    resolveDataPath(path && path.join("dataroom", section)),
+    file,
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
   if (!fs && fs.existsSync(fullPath))
     return res && res.status(404).json({ error: "Not found" });
   const contentType =
+<<<<<<< HEAD
     (mime && mime.lookup(fullPath) as string) || "application/octet-stream";
   res && res.setHeader("Content-Type", contentType);
   appendAuditLog({ type: "file_open", section, name: file });
@@ -50,10 +67,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const fullPath = path && path.join(
     resolveDataPath(path && path.join("dataroom", section)),
     file,
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
   if (!fs && fs.existsSync(fullPath))
     return res && res.status(404).json({ error: "Not found" });
   const contentType =
+<<<<<<< HEAD
     (mime && mime.lookup(fullPath) as string) || "application/octet-stream";
   res && res.setHeader("Content-Type", contentType);
   appendAuditLog({ type: "file_open", section, name: file });
@@ -68,6 +90,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Content-Type', contentType);
   appendAuditLog({ type: 'file_open', section, name: file });
   fs.createReadStream(fullPath).pipe(res)
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
@@ -184,14 +210,26 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   appendAuditLog ({ type: "file_open", section, name: file });
   fs.createReadStream (full_path).pipe (res);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   const section = String(req.query.section || 'General');
   const file = String(req.query.file || '');
   if (!file) return res.status(400).json({ error: 'Missing file' });
 
+<<<<<<< HEAD
   const section = String(req.query.section || 'General');
   const file = String(req.query.file || '');
   if (!file) return res.status(400).json({ error: 'Missing file' });
   const section = String(req.query.section || 'General');
   const file = String(req.query.file || '');
   if (!file) return res.status(400).json({ error: 'Missing file' });
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

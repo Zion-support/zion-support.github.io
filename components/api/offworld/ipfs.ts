@@ -9,6 +9,7 @@ import {
 } from '@/utils/offworld/ipfs';
 
 
+<<<<<<< HEAD
 ) {  const { action } = req && req.query;import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { action } = req && req.query;
@@ -25,6 +26,8 @@ import {
   publishManifesto,;
   OFFWORLD_TOPICS,;
 } from '@/utils/offworld/ipfs';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import {
   addJSON
@@ -33,18 +36,29 @@ import {
 } from '@/utils/offworld/ipfs';
 export default async function handler(
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   req: NextApiRequest,
   res: NextApiResponse;
 
 
+<<<<<<< HEAD
   req: NextApiRequest
   res: NextApiResponse
   req: NextApiRequest,
   res: NextApiResponse;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ) {  const { action } = req.query;import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { action } = req.query;
   const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ) {  const { action } = req && req.query;import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -70,11 +84,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
       if (!cid) return res.status(503).json({ error: 'IPFS unavailable' });
       return res.status(200).json({ cid, provider })
+<<<<<<< HEAD
     }
     if (req && req.method === 'POST' && action === 'broadcast') {
       const ok = await publishManifesto(
         OFFWORLD_TOPICS && OFFWORLD_TOPICS.manifesto,
         body?.message || ''
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    }
+    if (req && req.method === 'POST' && action === 'broadcast') {
+      const ok = await publishManifesto(
+
+        OFFWORLD_TOPICS && OFFWORLD_TOPICS.manifesto,
+        body?.message || ''
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       );
       return res && res.status(200).json({ ok });
     }
@@ -82,15 +108,90 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     return res && res.status(500).json({ error: e && e.message });
   }    }
+<<<<<<< HEAD
     if (req.method === 'POST' && action === 'broadcast') {
       const ok = await publishManifesto(OFFWORLD_TOPICS.manifesto, body?.message |'');
 
       return res.status(200).json({ ok })
+=======
+
+    if (req && req.method === 'POST' && action === 'broadcast') {
+      const ok = await publishManifesto(OFFWORLD_TOPICS && OFFWORLD_TOPICS.manifesto, body?.message || '');
+      return res && res.status(200).json({ ok })
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     return res && res.status(400).json({ error: 'Unsupported action' })
   } catch (e: any) {
 
 
+<<<<<<< HEAD
     return res.status(500).json({ error: e.message })
 }
 }
+=======
+}
+
+
+=======
+import {
+  addJSON,
+  publish_manifesto,
+  OFFWORLD_TOPICS,
+} from '@/utils / offworld / ipfs';
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {  const { action } = req.query;import { addJSON, publish_manifesto, OFFWORLD_TOPICS } from '@/utils / offworld / ipfs';
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  const { action } = req.query;
+  const body = typeof req.body === 'string' ? JSON.parse (req.body) : req.body;
+;
+  try {
+    // Check condition
+if ( {) {
+  $2
+}
+      const { cid, provider } = await addJSON (body);
+      if (return res.status (503).json ({ error: 'IPFS unavailable' })) {
+  $2
+}
+      return res.status (200).json ({ cid, provider });
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      const ok = await publish_manifesto (
+        OFFWORLD_TOPICS.manifesto,
+        body?.message || '');
+      return res.status (200).json ({ ok });
+    }
+    return res.status (400).json ({ error: 'Unsupported action' });
+  } catch (e: any) {
+    return res.status (500).json ({ error: e.message });
+  }    }
+    // Check condition
+if ( {) {
+  $2
+}
+      const ok = await publish_manifesto (OFFWORLD_TOPICS.manifesto, body?.message || '');
+      return res.status (200).json ({ ok });
+    }
+    return res.status (400).json ({ error: 'Unsupported action' });
+  } catch (e: any) {
+    return res.status (500).json ({ error: e.message });
+}
+  }
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

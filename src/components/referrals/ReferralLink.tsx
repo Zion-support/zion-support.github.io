@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import {
@@ -14,6 +15,8 @@ import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react'
 interface ReferralLinkProps {
   referralLink: string;
@@ -29,9 +32,12 @@ export function ReferralLink({
     onCopy()
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
+<<<<<<< HEAD
   }
   },
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import { useState } from 'react';
 import { Button } from '@/components / ui / button';
@@ -173,6 +179,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
 
 
   return (
+<<<<<<< HEAD
     <Card className="mt-6">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
@@ -186,10 +193,28 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
       <CardContent>
         <div className="flex flex-col space-y-3">
           <div className="flex space-x-2">
+=======
+
+    <Card className="mt - 6">;
+      <CardHeader>;
+        <CardTitle className="flex items - center gap - 2">;
+          <Link className="h - 5 w - 5" />;
+
+          Your Referral Link;
+        </CardTitle>;
+        <CardDescription>;
+          Share this link with others to earn rewards when they join and complete onboarding;
+        </CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Input
               value={referralLink}
               readOnly
               className="font-mono text-sm"
+<<<<<<< HEAD
             />
             <Button variant="outline" size="icon" onClick={handleCopy} aria-label="Copy referral link">
               <Copy className="h-4 w-4" />
@@ -240,6 +265,14 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
           {copied && (
               Copied to clipboard!
             </p>
+=======
+
+
+          )}
+        </div>
+      </CardContent>
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <CardFooter className='border-t bg-muted/50 p-4'>
         <div className='flex flex-col sm:flex-row w-full justify-between items-center gap-4'>
           <p className='text-sm text-muted-foreground'>
@@ -251,6 +284,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               size='sm'
               className='flex items-center gap-2'
               onClick={() => onShare('twitter')}            <Button
+<<<<<<< HEAD
               variant="outline"
               size="sm"
               className="flex items-center gap-2"
@@ -274,6 +308,8 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               readOnly
               className="font-mono text-sm"
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           )}
         </div>
@@ -290,15 +326,19 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
         </div>
       </CardContent>
 
+<<<<<<< HEAD
               variant="outline"
               size="sm"
               className="flex items-center gap-2"
               onClick = {() => onShare('twitter'),}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <CardFooter className="border-t bg-muted/50 p-4">
         <div className="flex flex-col sm:flex-row w-full justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">Share on social media:</p>
           <div className="flex space-x-2">
             <Button 
+<<<<<<< HEAD
               variant="outline" 
               size="sm"
               className="flex items-center gap-2"
@@ -316,23 +356,43 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               size="sm"
               className="flex items-center gap-2"
               onClick = {() => onShare('facebook'),}
+=======
+
+              variant="outline" 
+
+              size="sm"
+              className="flex items-center gap-2"
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Button 
               variant="outline" 
               size="sm"
               className="flex items-center gap-2"
+<<<<<<< HEAD
               onClick={() => onShare('facebook')}
               onClick = {() => onShare('facebook'),}
               onClick={() => onShare('facebook')}
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             >
               <Facebook className="h-4 w-4" />
               Facebook
             </Button>
+<<<<<<< HEAD
             <Button
               variant='outline'
               size='sm'
               className='flex items-center gap-2'
               onClick={() => onShare('linkedin')}            >
               <Share className='h-4 w-4' />              LinkedIn              <Share className="h-4 w-4" />
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Button 
               variant="outline" 
               size="sm"
@@ -340,10 +400,17 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               onClick={() => onShare('linkedin')}
             >
               <Share className="h-4 w-4" />
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               LinkedIn
             </Button>
           </div>
         </div>
+<<<<<<< HEAD
       </CardFooter>;
     </Card>;
   );
@@ -386,6 +453,13 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
       <CardContent>;
         <div className="flex flex-col space-y-3">;
           <div className="flex space-x-2">;
+=======
+
+              onClick={() => onShare('linkedin')}            >;
+              <Share className='h-4 w-4' />              LinkedIn              <Share className="h-4 w-4" />;
+        <div className="flex flex - col space - y-3">;
+          <div className="flex space - x-2">;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Input;
               value={referralLink}
               readOnly;
@@ -426,22 +500,36 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               Facebook;
             </Button>;
             <Button;
+<<<<<<< HEAD
               variant="outline";
               size="sm";
               className="flex items-center gap-2";
               onClick={() => onShare('linkedin')}
             >;
               <Share className="h-4 w-4" />;
+=======
+              variant='outline';
+              size='sm';
+              className='flex items - center gap - 2';
+              on_click={() => on_share ('linkedin')}            >;
+              <Share className='h - 4 w - 4' />              LinkedIn              <Share className="h - 4 w - 4" />;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               LinkedIn;
             </Button>;
           </div>;
         </div>;
       </CardFooter>;
+<<<<<<< HEAD
     </Card>;
   );
 }
 ;
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 }
     </Card>);
@@ -449,4 +537,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
       </CardFooter>
     </Card>
+<<<<<<< HEAD
   )
+=======
+  )
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

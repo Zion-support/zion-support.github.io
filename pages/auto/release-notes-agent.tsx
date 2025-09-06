@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 const ReleaseNotesAgent: NextPage = () => {
   return (
@@ -14,15 +18,28 @@ const ReleaseNotesAgent: NextPage = () => {
         <p>Summarizes the last 24 hours of commits into human-friendly release notes.</p>
 
 
+<<<<<<< HEAD
         <Link href="/data/reports/release/latest.json"><a className="text-blue-600 underline">Latest Release Notes (JSON)</Link></Link>
         <Link href="/data/reports/release/latest.json"><a className="text-blue-600 underline">Latest Release Notes (JSON)</Link></Link>
 
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+        <Link href="/data/reports/release/latest.json"><a className="text-blue-600 underline">Latest Release Notes (JSON)</Link></Link>
+=======
+=======
+        <Link href="/data/reports/release/latest.json"><a className="text-blue-600 underline">Latest Release Notes (JSON)</Link></Link>
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </main>
     </div>
   )
 },
 
 
+<<<<<<< HEAD
         <Link href="/data/reports/release/latest.json"><a className="text-blue-600 underline">Latest Release Notes (JSON)</a></Link>
       </main>
     </div>
@@ -71,3 +88,6 @@ export default ReleaseNotesAgent,
 
 export default ReleaseNotesAgent,;
 export default ReleaseNotesAgent,
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

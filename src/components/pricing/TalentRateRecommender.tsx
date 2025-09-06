@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 interface TalentRateRecommenderProps {
@@ -41,11 +42,17 @@ interface TalentRateRecommenderProps {
   yearsExperience: number
   location?: string
   onSuggestionApplied: (value: number,) => void
+=======
+import { Sparkles } from 'lucide-react'
+interface TalentRateRecommenderProps {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   skills: string[],
   yearsExperience: number,
   location?: string,
   onSuggestionApplied: (value: number,) => void,
   rateType: "hourly" | "fixed"
+<<<<<<< HEAD
 }
 
     }
@@ -125,6 +132,9 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
       
 ursor/fix-website-loading-errors-and-merge-6662
       
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Track this suggestion application
         trackPricingSuggestion({
           userId: user.id
@@ -257,6 +267,10 @@ ursor/fix-website-loading-errors-and-merge-6662
             disabled={skills.length === 0 || yearsExperience <= 0}
 
 
+<<<<<<< HEAD
+=======
+            className="w-full"
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           >
             <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI
           </Button>
@@ -267,6 +281,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Button>;
         ) : (;
           <PricingSuggestionBox
+<<<<<<< HEAD
           <PricingSuggestionBox
             suggestion = {suggestion,}
             isLoading = {isLoading,}
@@ -295,6 +310,8 @@ return (<div className="space-y-4" > <div> {"
 '"}
 }
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   rateType 
@@ -311,6 +328,7 @@ return (<div className="space-y-4" > <div> {"
           />;
         )}
 
+<<<<<<< HEAD
   rateType 
 }/>) 
 }</div> </div>) ;
@@ -323,10 +341,16 @@ return (<div className="space-y-4" > <div> {"
             rateType={rateType}
           />;
         )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </div>;
     </div>;
   );
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
     <div className="space - y-4">;
@@ -365,4 +389,8 @@ return (<div className="space - y-4" > <div> {";
 }</div> </div>);
 }
 '"},
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

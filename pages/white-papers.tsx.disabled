@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <:pages/white-papers.tsx.backup
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 <<<<<<< HEAD
 <:pages/white-papers.tsx.backup
@@ -188,7 +191,10 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import MainLayout from '../components/layout/MainLayout';
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {
   FileText,
   Download,
@@ -202,6 +208,7 @@ import {
   Star,
   Clock,
 <<<<<<< HEAD
+<<<<<<< HEAD
 <:pages/white-papers.tsx.backup
   Tag
 } from 'lucide-react';
@@ -209,6 +216,8 @@ import {
 import Layout from '../components/Layout';
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -239,7 +248,10 @@ import Layout from '../components/Layout';
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 const whitePaperCategories = [
   { name: 'AI & Machine Learning', count: 8, color: 'bg-blue-100 text-blue-800' },
@@ -353,9 +365,13 @@ const stats = [
   { number: '95%', label: 'Reader Satisfaction' }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> main
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> main
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -367,6 +383,7 @@ import {
   ArrowRight, 
   Tag, 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   ExternalLink 
 } from 'lucide-react';
@@ -377,6 +394,8 @@ import {
 } from 'lucide-react';
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <<<<<<< HEAD
 =======
   ExternalLink 
@@ -416,7 +435,10 @@ import {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 const whitePapers = [
   {
@@ -426,10 +448,14 @@ const whitePapers = [
 
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> main
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> main
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     author: "Dr. Sarah Chen",
     date: "2024-01-15",
     category: "Artificial Intelligence",
@@ -450,9 +476,12 @@ const whitePapers = [
 title: 'Cybersecurity Best Practices 2024',
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: 'Cybersecurity Best Practices 2024',
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 =======
 <<<<<<< HEAD
@@ -462,7 +491,10 @@ title: 'Cybersecurity Best Practices 2024',
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     description: 'Latest cybersecurity trends and protection strategies for modern businesses.',
     category: 'Cybersecurity',
     downloadCount: 1500,
@@ -471,10 +503,13 @@ title: 'Cybersecurity Best Practices 2024',
   }
 ;];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ];
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 =======
@@ -534,7 +569,10 @@ export default function WhitePapersPage() {
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export default function WhitePapersPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -668,6 +706,7 @@ export default function WhitePapersPage() {
 <<<<<<< HEAD
 title="White Papers - Zion Tech Group"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     id: 3,
     title: "Cybersecurity in the Digital Age: Protecting Your Assets",
@@ -699,6 +738,8 @@ export default function WhitePapersPage() {
 
 =======
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -714,7 +755,10 @@ export default function WhitePapersPage() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       description="Access our comprehensive collection of white papers covering AI, cloud solutions, cybersecurity, and more. Download free technical resources and insights."
       keywords="white papers, technical papers, AI research, cloud solutions, cybersecurity, business strategy, free downloads"
     >
@@ -740,10 +784,13 @@ export default function WhitePapersPage() {
                 </span>
               </h1>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 <<<<<<< HEAD
 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -760,6 +807,7 @@ export default function WhitePapersPage() {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -780,13 +828,41 @@ export default function WhitePapersPage() {
   return (
 
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+<<<<<<< HEAD
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                In-depth research and insights on the latest technology trends and industry developments
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+<<<<<<< HEAD
+=======
+=======
+
+  return (
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+
+  return (
+
+=======
 <<<<<<< HEAD
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 In-depth research and insights on the latest technology trends and industry developments
 =======
 >>>>>>> main
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <>
       <Head>
         <title>White Papers - Zion Tech Group</title>
@@ -807,9 +883,12 @@ export default function WhitePapersPage() {
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Download our comprehensive white papers on technology trends and best practices.
 <<<<<<< HEAD
+<<<<<<< HEAD
 <:pages/white-papers.tsx.backup
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -819,7 +898,10 @@ export default function WhitePapersPage() {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Access our comprehensive collection of technical white papers and research documents. 
@@ -901,12 +983,15 @@ export default function WhitePapersPage() {
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 </motion.div>
 
                 </motion.div>
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 <<<<<<< HEAD
 </motion.div>
@@ -1014,7 +1099,10 @@ export default function WhitePapersPage() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               ))}
             </div>
           </div>
@@ -1025,9 +1113,12 @@ export default function WhitePapersPage() {
 <section className="py-16 bg-gray-50">
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 <section className="py-16 bg-gray-50">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 =======
 <<<<<<< HEAD
@@ -1037,7 +1128,10 @@ export default function WhitePapersPage() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Research Categories</h2>
@@ -1059,9 +1153,12 @@ export default function WhitePapersPage() {
                   <div className="text-2xl font-bold text-gray-900">{category.count}</div>
                   <div className="text-sm text-gray-500">papers</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 =======
 >>>>>>> main
@@ -1100,7 +1197,10 @@ export default function WhitePapersPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> main
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </motion.div>
               ))}
             </div>
@@ -1108,10 +1208,13 @@ export default function WhitePapersPage() {
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 </Link>
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1159,7 +1262,10 @@ export default function WhitePapersPage() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Featured White Papers */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -1406,11 +1512,14 @@ export default function WhitePapersPage() {
         </section>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     </Layout>
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 <<<<<<< HEAD
 </Layout>
@@ -1443,7 +1552,10 @@ export default function WhitePapersPage() {
 =======
 >>>>>>> main
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
@@ -1477,8 +1589,11 @@ export default function WhitePapersPage() {
 
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> main
 >>>>>>> main
 <<<<<<< HEAD
@@ -1492,11 +1607,15 @@ export default function WhitePapersPage() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </motion.div>
           </div>
         </section>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <:pages/white-papers.tsx.backup
@@ -1513,6 +1632,8 @@ export default function WhitePapersPage() {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 <<<<<<< HEAD
 <:pages/white-papers.tsx.backup
@@ -1575,6 +1696,9 @@ export default function WhitePapersPage() {
     </MainLayout>
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 }

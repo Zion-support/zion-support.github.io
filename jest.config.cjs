@@ -1,9 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const nextJest = require('next/jest')
 
 const createJestConfig = nextJest({
   dir: './',
 })
+<<<<<<< HEAD
 =======
 const nextJest = require('next/jest');
 
@@ -11,11 +15,16 @@ const createJestConfig = nextJest({
   dir: './',
 });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jsdom',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
   },
@@ -40,6 +49,7 @@ const customJestConfig = {
   ],
 }
 
+<<<<<<< HEAD
 module.exports = createJestConfig(customJestConfig)
 =======
   testMatch: [
@@ -81,3 +91,6 @@ module.exports = createJestConfig(customJestConfig)
 
 module.exports = createJestConfig(customJestConfig);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+module.exports = createJestConfig(customJestConfig)
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

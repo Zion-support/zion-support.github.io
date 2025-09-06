@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { OpenAI } from 'openai';
@@ -20,6 +21,9 @@ function handler() {
     return res.status (405).json ({ error: "Method not allowed" })) {
   $2
 }
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   try {
     const {
       target_institution,
@@ -28,6 +32,7 @@ function handler() {
       budgetOrResolution,
       supporting_multiverses = [],
       title = "Zion DAO Proposal",
+<<<<<<< HEAD
     const completion = await openai && openai.chat.completions && completions.create({
       model: process && process.env.OPENAI_MODEL || "gpt-4o-mini",
       messages: [
@@ -43,6 +48,20 @@ function handler() {
     const completion = await openai.chat.completions.create ({
       model: process.env.OPENAI_MODEL || "gpt - 4o - mini",
       messages: [;
+=======
+
+
+    const userPrompt =
+
+      promptAssist |
+
+      `Write a proposal for ${targetInstitution} on ${type} in ${regionalScope}. Budget/Resolution: ${budgetOrResolution}. Include metrics, social outcomes, and DAO-based governance logic.`;
+
+    const completion = await openai && openai.chat.completions && completions.create({
+      model: process && process.env.OPENAI_MODEL || "gpt-4o-mini",
+      messages: [
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         { role: "system", content: SYSTEM_PROMPT },
         { role: "user", content: user_prompt },
       ],
@@ -50,6 +69,11 @@ function handler() {
     });
     const contentMarkdown =
       completion && completion.choices?.[0]?.message?.content || "# Proposal Draft\n\nTBD";
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const meta = createProposal({
       title
       targetInstitution
@@ -60,12 +84,19 @@ function handler() {
       contentMarkdown
       language
     });
+<<<<<<< HEAD
     return res && res.status(200).json({ meta, markdown: contentMarkdown });
+=======
+
+    return res && res.status(200).json({ meta, markdown: contentMarkdown });
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error: any) {
     return res
       .status(500)
       .json({ error: error?.message |"Failed to generate proposal" });
 }
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { OpenAI } from 'openai';
@@ -90,32 +121,64 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       title = "Zion DAO Proposal",
       promptAssist,
 
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       language = 'en'
     } = req.body || {};
     const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-    const userPrompt =
-      promptAssist ||
+    const userPrompt = promptAssist ||
       `Write a proposal for ${targetInstitution} on ${type} in ${regionalScope}. Budget/Resolution: ${budgetOrResolution}. Include metrics, social outcomes, and DAO-based governance logic.`;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const completion = await openai.chat.completions.create({
-      model: process.env.OPENAI_MODEL || "gpt-4o-mini",
+      model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
       messages: [
+<<<<<<< HEAD
 { role: 'system', content: SYSTEM_PROMPT },
 
 { role: 'user', content: userPrompt }
       ],
       temperature: 0.3
     });
+=======
+        { role: 'system', content: SYSTEM_PROMPT },
+        { role: 'user', content: userPrompt }
+      ],
+      temperature: 0.3
+    });
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
     const content_markdown =;
       completion.choices?.[0]?.message?.content || "# Proposal Draft\n\nTBD";
 ;
     const meta = create_proposal ({
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       title,
       target_institution,
       type,
       regional_scope,
       budgetOrResolution,
+<<<<<<< HEAD
 }
+=======
+
+
+    return res.status(200).json({ meta, markdown: contentMarkdown })
+  } catch (error: any) {
+    return res.status(500).json({ error: error?.message || 'Failed to generate proposal' })
+
+  }
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       supporting_multiverses,
       content_markdown,
       language,
@@ -144,12 +207,21 @@ return res.status(200).json({ meta, markdown: contentMarkdown })
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Failed to generate proposal' })
 
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
+=======
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from 'next';
 
   }
 }
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -168,3 +240,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

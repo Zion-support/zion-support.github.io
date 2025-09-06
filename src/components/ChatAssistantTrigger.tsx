@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react"
 import { MessageSquare } from 'lucide-react'import { Button } from "@/components/ui/button"
 import { ChatAssistant } from "@/components/ChatAssistant"
@@ -23,12 +24,15 @@ export function ChatAssistantTrigger() {
   const [isOpen, setIsOpen] = useState(false),
 
   // Handle sending messages to the AI chat assistant
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Handle sending messages to the AI chat assistant
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST"
         headers: {
+<<<<<<< HEAD
           "Content-Type": "application/json"}
           "Content-Type": "application/json"}
         body: JSON.stringify({
@@ -37,6 +41,10 @@ export function ChatAssistantTrigger() {
             avatarUrl: 'https://placehold.co/64x64?text=AI'
             role: 'Virtual Assistant';      if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         body: JSON.stringify({ ;
           messages: [{ role: "user", content: message }] ;
         })});
@@ -71,6 +79,11 @@ export function ChatAssistantTrigger() {;
         })}),;
       if (!response.ok) {;
         throw new Error("Failed to get response from AI assistant");
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [isOpen, setIsOpen] = useState(false);
 
   // Handle sending messages to the AI chat assistant;
@@ -105,11 +118,21 @@ export function ChatAssistantTrigger() {;
       logErrorToProduction('Error in AI chat:', { data: error }),;
       return Promise.resolve();
     }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },;
   return (;
     <>;
       <Button;
         onClick={() => setIsOpen(true)}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         size="icon"
         variant="outline"
         className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50"
@@ -117,7 +140,12 @@ export function ChatAssistantTrigger() {;
       >
         <MessageSquare className="h-5 w-5" />
       </Button>
+<<<<<<< HEAD
       
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       
       return Promise.resolve()
     } catch (error) {
@@ -126,6 +154,7 @@ export function ChatAssistantTrigger() {;
     }
   },
 
+<<<<<<< HEAD
   return (
     <>
       <Button
@@ -141,6 +170,23 @@ export function ChatAssistantTrigger() {;
       {isOpen && (
         <ChatAssistant
       {isOpen && (
+=======
+
+  return (
+    <>;
+      <Button
+        onClick = {(,) => setIsOpen(true),}
+
+        size="icon";
+        variant="outline";
+        className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50";
+        aria-label="Open chat assistant";
+      >;
+        <MessageSquare className="h-5 w-5" />;
+      </Button>;
+
+      {isOpen && (;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <ChatAssistant
           isOpen = {isOpen,}
           onClose = {(,) => setIsOpen(false),}
@@ -229,8 +275,14 @@ if ( {) {
   );
 }
 ;
+<<<<<<< HEAD
 ;
 ;
 
 
 ;
+=======
+
+
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

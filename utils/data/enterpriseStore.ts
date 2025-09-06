@@ -1,9 +1,21 @@
+<<<<<<< HEAD
 import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types/enterprise',;
 const generateId = () => Math.random().toString(36).slice(2, 10),;
 const seedCompany: CompanyRecord = {;
   id: 'cmp_acme',;
   name: 'Acme Corporation',;
 import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types/enterprise';
+=======
+
+import {
+  CompanyRecord,
+  CompanyMember,
+  EnterpriseRole,
+  InvoiceRecord,
+} from '../types/enterprise';
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const generateId = () => Math.random().toString(36).slice(2, 10);
 const seedCompany: CompanyRecord = {id: 'cmp_acme';
   name: 'Acme Corporation';
@@ -163,6 +175,7 @@ const seed_company: CompanyRecord = {
   list_invoices (company_id: string): InvoiceRecord[] {
     const company = companiesById[company_id];
     return company ? company.invoices : [];
+<<<<<<< HEAD
   }}
   }}
 const seedCompany: CompanyRecord = {;
@@ -300,3 +313,6 @@ export const store = {;
     const company = companiesById[companyId];
     return company ? company.invoices : [];
   }};
+=======
+  }}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

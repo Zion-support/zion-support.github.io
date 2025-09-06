@@ -9,4 +9,8 @@ const Projects = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Projects;
+=======
+export default Projects;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

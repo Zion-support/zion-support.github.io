@@ -9,4 +9,8 @@ const BusinessSolutionsPage = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default BusinessSolutionsPage;
+=======
+export default BusinessSolutionsPage;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

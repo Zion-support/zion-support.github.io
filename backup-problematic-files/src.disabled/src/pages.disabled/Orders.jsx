@@ -27,4 +27,8 @@ const Orders = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Orders;
+=======
+export default Orders;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

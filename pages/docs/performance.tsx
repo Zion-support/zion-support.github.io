@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 }
 import Head from 'next / head',
 export default /**
@@ -7,6 +8,8 @@ export default /**
  */
 function PerformanceDocRedirect() {
   return (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <>;
       <Head>;
         <meta http_equiv="refresh" content="0, url=/PERFORMANCE.md" />;
@@ -16,6 +19,7 @@ function PerformanceDocRedirect() {
       </main>;
     </>);
 }
+<<<<<<< HEAD
     <>
       <Head>
         <meta httpEquiv="refresh" content="0, url=/PERFORMANCE.md" />
@@ -57,3 +61,8 @@ export default function PerformanceDocRedirect(req, res) {
 
 ;
 ;
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

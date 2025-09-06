@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }}};
 }}},};
 export default function Jest.setup({ }: Jest.setupProps) {;
@@ -41,3 +42,19 @@ origin/automation-improvements-final
 }}},;
 }}};
 }}},;
+=======
+
+
+>>>>>>> origin/automation-improvements-final
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+}}}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+}}}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

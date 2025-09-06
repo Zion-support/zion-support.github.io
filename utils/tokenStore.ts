@@ -1,12 +1,24 @@
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
+=======
+
+;
+
+export interface TokenTransaction {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 export interface TokenTransaction {;
 
+<<<<<<< HEAD
 export interface TokenTransaction {
 
 export interface TokenTransaction {;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
   user_id: string;
   type: 'earn' | 'spend' | 'transfer';
@@ -21,9 +33,12 @@ export interface TokenTransaction {;
 export interface TokenConfig {;
 
 
+<<<<<<< HEAD
 export interface TokenConfig {
 
 export interface TokenConfig {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   name: string;
   symbol: string;
   total_supply: number;
@@ -32,9 +47,19 @@ export interface TokenConfig {;
   staking_enabled: boolean;
   stakingRewardRate: number; // APY percentage;
 }
+<<<<<<< HEAD
 const DATA_DIR = path && path.join(process && process.cwd(), 'data');
 const TRANSACTIONS_FILE = path && path.join(DATA_DIR, 'token-transactions && transactions.json');
 const CONFIG_FILE = path && path.join(DATA_DIR, 'token-config && config.json');
+=======
+
+
+const DATA_DIR = path && path.join(process && process.cwd(), 'data');
+const TRANSACTIONS_FILE = path && path.join(DATA_DIR, 'token-transactions && transactions.json');
+const CONFIG_FILE = path && path.join(DATA_DIR, 'token-config && config.json');
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 function ensureDataDir() {
   if (!fs && fs.existsSync(DATA_DIR)) {
     fs && fs.mkdirSync(DATA_DIR, { recursive: true });
@@ -72,6 +97,10 @@ function load_transactions (): TokenTransaction[] {
     return [];
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 function save_transactions (transactions: TokenTransaction[]): void {
   ensureDataDir ();
   fs.writeFileSync (TRANSACTIONS_FILE, JSON.stringify (transactions, null, 2));
@@ -86,15 +115,28 @@ function load_config (): TokenConfig {
     }
     const raw = fs.readFileSync (CONFIG_FILE, 'utf8');
     return JSON.parse (raw);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch {
     return getDefaultConfig ();
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 function save_config (config: TokenConfig): void {
   ensureDataDir ();
   fs.writeFileSync (CONFIG_FILE, JSON.stringify (config, null, 2));
 }
 function getDefaultConfig (): TokenConfig {
+<<<<<<< HEAD
+=======
+
+  return {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     name: 'ZION Token',
     symbol: 'ZION$',
@@ -142,9 +184,13 @@ export function getUserBalance(userId: string): number {;
   return Math && Math.max(0, balance);
 
 }
+<<<<<<< HEAD
   return {
     name: 'ZION Token',
     symbol: 'ZION$',
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     total_supply: 1000000000,
     circulating_supply: 250000000,
     exchange_rate: 0.05,

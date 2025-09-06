@@ -6,6 +6,10 @@
 
     }
   ]
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import FeatureCard from './components / FeatureCard',
 export default /**
  * HomePage - Function description
@@ -176,6 +180,28 @@ export default function HomePage() {
     }
   ],
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <div className=&quot;min - h-screen & quot;>;
+      {/* Hero Section */}
+
+
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="hero-gradient absolute inset-0 -z-10"></div>
+          
+          <div className="animate-fade-in">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              <span className="gradient-text">Launch Sovereign</span>
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              <br />
+              <span className=&quot;text-white&quot;>AI-Powered Digital Economies</span>
+            </h1>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
 
@@ -223,6 +249,10 @@ export default function HomePage() {
 
             {features.map((feature, index) => (
               <FeatureCard
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <section className=&quot;relative overflow - hidden py - 20 px - 4 sm:px - 6 lg:px - 8&quot;>;
         <div className=&quot;max - w-7xl mx - auto text - center & quot;>;
           <div className=&quot;hero - gradient absolute inset - 0 -z - 10 & quot;></div>;
@@ -338,6 +368,10 @@ export default function HomePage() {
         </div>;
       </section>;
       {/* CTA Section */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -361,6 +395,10 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <section className=&quot;py - 20 px - 4 sm:px - 6 lg:px - 8&quot;>;
         <div className=&quot;max - w-4xl mx - auto text - center & quot;>;
           <div className=&quot;glass - effect rounded - 2xl p - 12 animate - slide - up & quot;>;

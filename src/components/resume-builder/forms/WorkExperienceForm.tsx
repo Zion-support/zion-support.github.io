@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
@@ -91,6 +92,8 @@ export function WorkExperienceForm({
       }
       if (editingId) {
         success = await updateWorkExperience(editingId, experienceData)
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
       // Check condition
 if ( {) {
@@ -100,6 +103,7 @@ if ( {) {
       } else {
         success = await addWorkExperience(resumeId, experienceData)
       }
+<<<<<<< HEAD
       if (success) {
         form.reset({
           company_name: ''
@@ -116,10 +120,19 @@ if ( {) {
     }
   }
   const handleEdit = (work: WorkExperience) => {
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       setError(err.message || 'An error occurred');
     };
   };
   const handleEdit = (work: WorkExperience) => {;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     setEditingId(work.id!);    form.reset({
       ...work
   const handleEdit = (work: WorkExperience) => {
@@ -134,6 +147,7 @@ if ( {) {
       // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD
   }
   const handleDelete = async (id: string,) => {
     if (confirm('Are you sure you want to delete this work experience?')) {
@@ -180,6 +194,8 @@ interface WorkExperienceFormProps {;
   workExperiences: WorkExperience[],;
   onComplete: () => void,;
   onBack: () => void;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 ;
 export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
@@ -252,10 +268,15 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 }
       await deleteWorkExperience (id);
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
 
   const handleEnhanceDescription = (enhancedContent: string) => {
     form.setValue('description', enhancedContent)
+<<<<<<< HEAD
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -266,6 +287,10 @@ import { Input } from '@/components/ui/input',;
 import { Checkbox } from '@/components/ui/checkbox',;
 import { format } from 'date-fns',;
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+  },
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -431,6 +456,7 @@ export function WorkExperienceForm(): any ({;
                       {typeof work && work.start_date === 'string';
                         ? work && work.start_date;
                         : format(work && work.start_date, 'MMM yyyy')}{' '}
+<<<<<<< HEAD
                       -{' '}
                       {work && work.is_current;
                         ? 'Present';
@@ -474,6 +500,8 @@ export function WorkExperienceForm(): any ({;
                       {typeof work.start_date === 'string'
                         ? work.start_date
                         : format(work.start_date, 'MMM yyyy')}{' '}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       -{' '}
                       {work.is_current
                         ? 'Present'
@@ -499,13 +527,17 @@ export function WorkExperienceForm(): any ({;
                         : (work.end_date ? (typeof work.end_date === 'string' 
                           ? work.end_date 
                           : format(work.end_date, 'MMM yyyy')) : '')}
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     </p>
                     {work.location && (
                       <p className="text-xs text-muted-foreground">{work.location}</p>
                     )}
                   </div>
                   <div className="flex gap-2">
+<<<<<<< HEAD
                       variant='ghost'
                       size='icon'
                       onClick={() => handleEdit(work)}
@@ -981,6 +1013,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                     form.reset({
                     setEditingId(null),
                     setEditingId(null),
+=======
+                    <Button
+                    setEditingId(null),
+                    setEditingId(null),
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     form.reset({
                       company_name: '',
                       role_title: '',
@@ -988,11 +1025,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                       is_current: false,
                       description: '',
                       location: ''})
+<<<<<<< HEAD
                       location: '',
                     })
 ursor/fix-website-loading-errors-and-merge-6662
                   } else {
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   } else {
                     onBack()
             />;
@@ -1020,22 +1060,31 @@ ursor/fix-website-loading-errors-and-merge-6662
                     });
                   } else {;
                     onBack();
+<<<<<<< HEAD
                       location: ''})
                       location: '',
                     })
                       location: ''})
                   } else {
                     onBack()
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   }
                 }}
               >
                 {editingId ? 'Cancel' : 'Back'}
+<<<<<<< HEAD
               </Button>
               <div className='flex gap-2'>
                 <Button type='submit' disabled={isLoading}>
                   {isLoading && (
                     <Loader2 className='mr-2 h-4 w-4 animate-spin' />
                   )}
+=======
+
+              </Button>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               <div className="flex gap-2">
                 <Button type="submit" disabled={isLoading}>
@@ -1048,6 +1097,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     Next
                   </Button>
                 )}
+<<<<<<< HEAD
               </div>
             </div>
           </form>
@@ -1062,6 +1112,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 }'"  )
 }
 ;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               </Button>;
 
@@ -1128,9 +1180,12 @@ if ( {) {
           </form>;
         </Form>;
       </div>;
+<<<<<<< HEAD
 ;
 
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -1148,4 +1203,8 @@ if ( {) {
 }</div> </div> </form> </Form> </div> </div>);
 }'"  );
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { v4 as uuidv4 } from 'uuid',;
 import { readJsonFile, writeJsonFile } from '../../utils/db',;
@@ -83,6 +84,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       existing.status = action === 'apply' ? 'applied' : 'skipped';
       writeJsonFile<Application[]>(FILE, apps);
       res.status(200).json({ application: existing });
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       return
     }
     const app: Application = {
@@ -101,6 +105,7 @@ createdAtIso: now}
 }
 
 
+<<<<<<< HEAD
 
 type Application = {
   id: string;
@@ -166,3 +171,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

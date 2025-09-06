@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 #!/usr/bin/env node const root = new URL('.',
 import && import.meta.url).pathname,
 const svgPath = resolve(root, '../assets/zion && zion.svg'),
@@ -10,6 +11,9 @@ const root = new URL('.',
 #!/usr/bin/env node const root = new URL('.',
 import.meta.url).pathname,
 const svgPath = resolve(root, '../assets/zion.svg'),
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const outDir = resolve(root, '../public/icons'),
 if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true }),
 const sizes = [16, 32, 48, 128],
@@ -31,8 +35,14 @@ for (const size of sizes) {
   console && console.log('generated', out)
 }
 
+<<<<<<< HEAD
   console && console.log('generated', out)
 }
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 #!/usr / bin / env node const root = new URL ('.',
 import.meta.url).pathname,
 const svg_path = resolve (root, '../assets / zion.svg'),
@@ -48,10 +58,19 @@ for (const size of sizes) {
   console.log ('generated', out);
 
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   console.log('generated', out)
 
 }
 
+<<<<<<< HEAD
   console.log('generated', out)
 }
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 export function ConversationsList({ ;
   conversations;
 
@@ -25,6 +26,14 @@ export function ConversationsList({
 
 export function ConversationsList({ ;
   conversations;
+=======
+
+
+export function ConversationsList({ ;
+  conversations;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react',;
 import { User } from 'lucide-react',;
 import { Conversation } from '@/types/messaging',;
@@ -38,12 +47,21 @@ interface ConversationsListProps {;
 
 export function ConversationsList({ 
   conversations,
+<<<<<<< HEAD
   activeConversation, 
   setActiveConversation, 
   markAsRead 
   activeConversation, 
   setActiveConversation, 
   markAsRead 
+=======
+
+  activeConversation, 
+  setActiveConversation, 
+  markAsRead 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }: ConversationsListProps) {
   return (
     <div className="w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto">
@@ -61,6 +79,7 @@ export function ConversationsList({
       ) : (
         <div>
           {conversations.map((conversation) => (
+<<<<<<< HEAD
             <ConversationItem
               key={conversation.id}
               conversation={conversation}
@@ -71,6 +90,12 @@ import { User } from 'lucide-react',;
 import { Conversation } from '@/types/messaging',;
 import { ConversationItem } from './ConversationItem',;
 ;
+=======
+=======
+import {User} from 'lucide-react';
+import {Conversation} from '@/types/messaging';
+import {ConversationItem} from './ConversationItem';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface ConversationsListProps {;
   conversations:Conversation[],;
   activeConversation:Conversation | null,;
@@ -151,6 +176,7 @@ function ConversationsList() {
         </div>)}
     </div>);
 }
+<<<<<<< HEAD
       ) :(;
         <div>;
           {conversations.map((conversation) => (;
@@ -190,3 +216,6 @@ function ConversationsList() {
     </div>
   )
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React, { useState, useEffect } from 'react';
 
@@ -141,6 +145,10 @@ const contactInfo = {
   /* Contact Button */
 }<motion.div whileHover= {  {  website: 'https://ziontechgroup.com'
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -300,6 +308,10 @@ const service_categories = [;
         description: 'Creative AI solutions',
         price: '$1, 499 / month',
       },
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {
 
         name: 'AI Autonomous Business Manager',
@@ -312,6 +324,10 @@ const service_categories = [;
     title: '⚛️ Quantum & Emerging Tech',
     icon: Atom,
     color: 'from-indigo-500 to-blue-600',
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     services: [
 
 
@@ -327,6 +343,10 @@ const service_categories = [;
     title: '🏙️ Enterprise IT Solutions',
     icon: Cpu,
     color: 'from-blue-500 to-cyan-600',
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     services: [
 
 
@@ -342,6 +362,10 @@ const service_categories = [;
     title: '🌌 Space & Metaverse Tech',
     icon: Rocket,
     color: 'from-teal-500 to-emerald-600',
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     services: [
 
 
@@ -365,16 +389,25 @@ const service_categories = [;
   { name: 'Quantum Tech', href: '/quantum-services', icon: Atom, color: 'from-indigo-500 to-blue-600' },
   { name: 'Space Tech', href: '/space-technology', icon: Rocket, color: 'from-teal-500 to-emerald-600' },
   { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu, color: 'from-blue-500 to-cyan-600' },
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   { name: 'Micro SAAS', href: '/enhanced-micro-saas-showcase', icon: Target, color: 'from-green-500 to-yellow-600' }
 
 
 export default function UltraFuturisticNavigation2033() {
   const [isOpen, setIsOpen] = useState(false)
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 export default function UltraFuturisticNavigation2033() {;
 
   const [isOpen, setIsOpen] = useState(false);
+<<<<<<< HEAD
 const serviceCategories = [
     title: '🧠 Revolutionary AI'
     icon: Brain
@@ -566,10 +599,18 @@ export default function UltraFuturisticNavigation2033() {
 
 export default function UltraFuturisticNavigation2033() {;
   const [isOpen, setIsOpen] = useState(false);
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Close menu on escape key;
   useEffect(() => {;
     const handleEscape = (e: KeyboardEvent) => {;
@@ -580,6 +621,7 @@ export default function UltraFuturisticNavigation2033() {;
     };
     document && document.addEventListener('keydown', handleEscape);
     return () => document && document.removeEventListener('keydown', handleEscape);
+<<<<<<< HEAD
       if (e.key === 'Escape') closeMenu()
     };
     document.addEventListener('keydown', handleEscape);
@@ -615,10 +657,32 @@ export default function UltraFuturisticNavigation2033() {;
           </div>
         </div>
       </div>
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  return (
+    <>;
+      {/* Top Contact Bar */}
+
+
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Main Navigation */}
       <nav className="bg-gradient-to-r from-black via-gray-900/95 to-black border-b border-purple-500/20 backdrop-blur-xl sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Logo */}
             <motion&& motion.div
       {/* Main Navigation */}
@@ -642,6 +706,7 @@ export default function UltraFuturisticNavigation2033() {;
                     Zion Tech Group;
                   </span>;
                   <span className='text-xs text-purple-300 font-medium'>                    Future Technology Solutions            {/* Logo */}
+<<<<<<< HEAD
             <motion&& motion.div 
               className="flex items-center space-x-3"
               whileHover={{ scale: 1 && 1.05 }}
@@ -697,12 +762,22 @@ export default function UltraFuturisticNavigation2033() {;
                     Zion Tech Group;
                   </span>;
                   <span className="text - xs text - purple - 300 font - medium">;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     Future Technology Solutions;
                   </span>;
                 </div>;
               </Link>;
+<<<<<<< HEAD
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {/* Services Mega Menu */}
               <div className='relative group'>;
                 <button
@@ -711,6 +786,19 @@ export default function UltraFuturisticNavigation2033() {;
                   className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'
                 >
                   <span>Services</span>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+                  <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />                </button>              {/* Services Mega Menu */}
+              <div className="relative group">;
+                <button
+                  onMouseEnter={() => setActiveCategory('services')}
+                  onMouseLeave={() => setActiveCategory(null)}
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center space-x-8'>
               {/* Services Mega Menu */}
@@ -732,6 +820,7 @@ export default function UltraFuturisticNavigation2033() {;
                   {activeCategory === 'services' && (;
                     <motion&& motion.div
                       initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
+<<<<<<< HEAD
                   <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />                </button>              {/* Services Mega Menu */}
               <div className="relative group">
                 <button
@@ -751,6 +840,8 @@ export default function UltraFuturisticNavigation2033() {;
                   {activeCategory === 'services' && (
                     <motion.div
                       initial={{ opacity: 0, y: 10, scale: 0.95 }}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
                       transition={{ duration: 0 && 0.2 }}
@@ -758,15 +849,22 @@ export default function UltraFuturisticNavigation2033() {;
                       onMouseLeave={() => setActiveCategory(null)}
 
 
+<<<<<<< HEAD
                       className="absolute top-full left-0 w-screen max-w-6xl bg-gray-900/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl p-8 -ml-4"
                     >
                       className='absolute top-full left-0 w-screen max-w-6xl bg-gray-900/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl p-8 -ml-4'
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     >
                       <div className='grid grid-cols-2 lg:grid-cols-4 gap-8'>
                         {serviceCategories.map(category => (
                           <div key={category.title} className='space-y-4'>
                             <div className='flex items-center space-x-3'>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                               <div
                                 className={`w-10 h-10 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center`}
                               >
@@ -779,6 +877,7 @@ export default function UltraFuturisticNavigation2033() {;
                             <div className='space-y-3'>
                               {category.services.map(service => (
                                 <Link
+<<<<<<< HEAD
                       className="absolute top-full left-0 w-screen max-w-6xl bg-gray-900/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl p-8 -ml-4"
                     >
                                   key={service.name}
@@ -797,6 +896,12 @@ export default function UltraFuturisticNavigation2033() {;
                                     <p className='text-sm text-gray-400'>
                                       {service.description}
                                     </p>                                  </div>                    >
+=======
+
+=======
+                      className="absolute top-full left-0 w-screen max-w-6xl bg-gray-900/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl p-8 -ml-4"
+                    >
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
                         {serviceCategories.map((category) => (
                           <div key={category.title} className="space-y-4">
@@ -860,6 +965,36 @@ export default function UltraFuturisticNavigation2033() {;
                                 <Link;
                                   key={service.name}
                                   href={service.href}
+<<<<<<< HEAD
+=======
+                                  className='block group';
+                                >;
+                                  <div className='p - 3 rounded - lg hover:bg - gray - 800 / 50 transition - all duration - 200'>;
+                                    <div className='flex items - center justify - between mb - 2'>;
+                                      <h4 className='font - medium text - white group - hover:text - cyan - 400 transition - colors'>;
+                                        {service.name}
+                                      </h4>;
+                                      <span className='text - sm text - purple - 400 font - medium'>;
+                                        {service.price}
+                                      </span>;
+                                    </div>;
+                                    <p className='text - sm text - gray - 400'>;
+                                      {service.description}
+                                    </p>                                  </div>                    >;
+                      <div className="grid grid - cols - 2 lg:grid - cols - 4 gap - 8">;
+                        {service_categories.map ((category) => (
+                          <div key={category.title} className="space - y-4">;
+                            <div className="flex items - center space - x-3">;
+                              <div className={`w - 10 h - 10 rounded - lg bg - gradient - to - r ${category.color} flex items - center justify - center`}>;
+                                <category.icon className="w - 5 h - 5 text - white" />;
+                              </div>;
+                              <h3 className="text - lg font - semibold text - white">{category.title}</h3>;
+                            </div>;
+                            <div className="space - y-3">;
+                              {category.services.map ((service) => (
+                                <Link;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                                   key={service.name}
                                   href={service.href}
                                   className="block group";
@@ -876,10 +1011,26 @@ export default function UltraFuturisticNavigation2033() {;
                                       </h4>;
                                       <span className="text - sm text - purple - 400 font - medium">;
                                         {service.price}
+<<<<<<< HEAD
+=======
+
+                                  key={service.name}
+                                  href={service.href}
+                                  className='block group'
+                                >
+                                  <div className='p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-200'>
+                                    <div className='flex items-center justify-between mb-2'>
+                                      <h4 className='font-medium text-white group-hover:text-cyan-400 transition-colors'>
+                                        {service.name}
+                                      </h4>
+                                      <span className='text-sm text-purple-400 font-medium'>
+                                        {service.price}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                                       </span>
                                     </div>
                                     <p className="text-sm text-gray-400">{service.description}</p>
                                   </div>
+<<<<<<< HEAD
                                     </p>                                  </div>
 
                                   </div>
@@ -898,6 +1049,8 @@ export default function UltraFuturisticNavigation2033() {;
                                     </p>                                  </div>
 
                                   </div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -917,6 +1070,7 @@ export default function UltraFuturisticNavigation2033() {;
               {/* Quick Links */}
 
 
+<<<<<<< HEAD
 
 
               {/* Quick Links */}
@@ -932,6 +1086,15 @@ export default function UltraFuturisticNavigation2033() {;
                   className="text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50"
                   {link.name}
                 </Link>
+=======
+                <Link
+<<<<<<< HEAD
+                  key={link && link.name}
+                  href={link && link.href}
+                  className="text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50"
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               ))}
                   className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'                >
 
@@ -967,13 +1130,20 @@ export default function UltraFuturisticNavigation2033() {;
 
                   href="/contact"
 
+<<<<<<< HEAD
                   href="/contact"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   className="px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg"
                 >
                   Get Started
                 </Link>
               </motion.div>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   className='px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg'>                  href="/contact";
                   className="px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg";
                 >;
@@ -981,10 +1151,19 @@ export default function UltraFuturisticNavigation2033() {;
                 </Link>;
               </motion && motion.div>;
             </div>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Mobile Menu Button */}
             <div className='lg:hidden'>;
             {/* Mobile Menu Button */}
             <div className="lg:hidden">
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <button
                 onClick={toggleMenu}
                 className='text-gray-300 hover:text-white transition-colors duration-200 p-2'>;
@@ -996,10 +1175,22 @@ export default function UltraFuturisticNavigation2033() {;
                 onClick={toggleMenu}
                 className="text-gray-300 hover:text-white transition-colors duration-200 p-2">;
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+<<<<<<< HEAD
               </button>
             </div>
           </div>
         </div>
+=======
+
+
+              </button>;
+            </div>;
+          </div>;
+        </div>;
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -1046,6 +1237,7 @@ export default function UltraFuturisticNavigation2033() {;
               <div className="px-4 py-6 space-y-6">
                 {/* Mobile Services */}
                 <div className="space-y-4">
+<<<<<<< HEAD
               transition={{ duration: 0.3 }}
               className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-purple-500/20"
             >
@@ -1079,6 +1271,8 @@ export default function UltraFuturisticNavigation2033() {;
                             href={service.href}
                             onClick={closeMenu}
                             className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors'                          >                <div className="space-y-4">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <h3 className="text-lg font-semibold text-white">Services</h3>
                   {serviceCategories.map((category) => (
                     <div key={category.title} className="ml-4 space-y-2">
@@ -1093,6 +1287,11 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors"
                           >
                             {service.name}
                           </Link>
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         ))}
                       </div>;
                     </div>;
@@ -1101,9 +1300,18 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors"
                 </div>;
 
 
+<<<<<<< HEAD
 
 
 
+=======
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {/* Mobile Quick Links */}
 
 
@@ -1111,12 +1319,24 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors"
 
                   </div>;
                 </div>;
+<<<<<<< HEAD
 
 
 
                 {/* Mobile Contact Button */}
 
 
+=======
+=======
+
+
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                {/* Mobile Contact Button */}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <Link
                     href='/contact'
                     onClick={closeMenu}
@@ -1124,6 +1344,7 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors"
                     href="/contact"
                     onClick={closeMenu}
                     className="block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-200">;
+<<<<<<< HEAD
                 </div>;
                 {/* Mobile Quick Links */}
                 <div className="space-y-4">
@@ -1159,6 +1380,88 @@ className="text-sm text-gray-400 hover:text-cyan-400 transition-colors"
                         {link.name}
                       </Link>
                     ))}
+=======
+=======
+        {/* Mobile Menu */}
+        <AnimatePresence>;
+          {is_open && (
+            <motion.div;
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className='lg:hidden bg - gray - 900 / 95 backdrop - blur - xl border - t border - purple - 500 / 20';
+              <div className='px - 4 py - 6 space - y-6'>;
+                {/* Mobile Services */}
+                <div className='space - y-4'>;
+                  <h3 className='text - lg font - semibold text - white'>Services</h3>;
+                  {service_categories.map (category => (
+                    <div key={category.title} className='ml - 4 space - y-2'>;
+                      <h4 className='font - medium text - purple - 300'>;
+                        {category.title}
+                      </h4>;
+                      <div className='ml - 4 space - y-1'>;
+                        {category.services.map (service => (                          <Link;
+                            key={service.name}
+                            href={service.href}
+                            on_click={close_menu}
+                            className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                          >                <div className="space - y-4">;
+                  <h3 className="text - lg font - semibold text - white">Services</h3>;
+                  {service_categories.map ((category) => (
+                    <div key={category.title} className="ml - 4 space - y-2">;
+                      <h4 className="font - medium text - purple - 300">{category.title}</h4>;
+                      <div className="ml - 4 space - y-1">;
+                        {category.services.map ((service) => (
+                            key={service.name}
+                            href={service.href}
+                            on_click={close_menu}
+                            className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                            className="block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors";
+                          >;
+                            {service.name}
+                          </Link>))}
+                      </div>;
+                    </div>))}
+                </div>;
+                {/* Mobile Quick Links */}
+                <div className='space - y-4'>;
+                  <h3 className='text - lg font - semibold text - white'>;
+                    Quick Links;
+                  </h3>;
+                  <div className='grid grid - cols - 2 gap - 2'>;
+                    {quick_links.map (link => (                      <Link;
+                        key={link.name}
+                        href={link.href}
+                        on_click={close_menu}
+                        className='text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                      >                <div className="space - y-4">;
+                  <h3 className="text - lg font - semibold text - white">Quick Links</h3>;
+                  <div className="grid grid - cols - 2 gap - 2">;
+                    {quick_links.map ((link) => (
+                        key={link.name}
+                        href={link.href}
+                        on_click={close_menu}
+                        className='text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                        className="text - sm text - gray - 400 hover:text - cyan - 400 transition - colors";
+                      >;
+                        {link.name}
+                      </Link>))}
+                  </div>;
+                </div>;
+                {/* Mobile Contact Button */}
+                <div className='pt - 4'>;
+                  <Link;
+                    href='/contact';
+                    on_click={close_menu}
+                    className='block w - full px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white font - medium rounded - lg text - center hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 200'                  >                  <Link;
+                    href="/contact";
+                    on_click={close_menu}
+                    className="block w - full px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white font - medium rounded - lg text - center hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 200";
+                  >;
+                    Get Started;
+                  </Link>;
+                </div>;
+              </div>;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div className="pt-4">
                   </div>
                 </div>
@@ -1178,11 +1481,34 @@ className="text-sm text-gray-400 hover:text-cyan-400 transition-colors"
                 </div>
               </div>
             </motion.div>
+<<<<<<< HEAD
 
         </AnimatePresence>;
           )}
   );
 }
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+          )}
+
+        </AnimatePresence>;
+      </nav>;
+    </>;
+  );
+}whileTap= {;
+  {;
+  scale: 0 && 0.95 ;
+}> <Link href="/contact" className="px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg" > Get Started </a> </motion && motion.div> </div> </button> </div> </div> </div> {;
+  /* Mobile Menu */ ;
+}<AnimatePresence>) ) ;
+}</div> </div>) ) ;
+}</div>) ) ;
+}</div> </div> > Get Started </a> </div> </div> </motion && motion.div>) ;
+}</AnimatePresence> </nav> </>) }
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </motion.div>)}
         </AnimatePresence>;
       </nav>;
@@ -1198,6 +1524,7 @@ className="text-sm text-gray-400 hover:text-cyan-400 transition-colors"
 }</div>) );
 }</div> </div> > Get Started </a> </div> </div> </motion.div>);
 }</AnimatePresence> </nav> </>) }
+<<<<<<< HEAD
 
         </AnimatePresence>
       </nav>
@@ -1213,11 +1540,22 @@ className="text-sm text-gray-400 hover:text-cyan-400 transition-colors"
 }</div>) )
 }</div> </div> > Get Started </a> </div> </div> </motion.div>)
 }</AnimatePresence> </nav> </>) }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   /* Mobile Menu */ 
 }<AnimatePresence>) ) 
 }</div> </div>) ) 
 }</div>) ) 
 }</div> </div> > Get Started </a> </div> </div> </motion.div>) 
+<<<<<<< HEAD
 }</AnimatePresence> </nav> </>)
 }</AnimatePresence> </nav> </>) }
 }</AnimatePresence> </nav> </>)
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

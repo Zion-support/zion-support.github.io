@@ -9,6 +9,7 @@ import {formatDistanceToNow} from "date-fns";
 export function TransactionHistory() {;
   const { transactions, loading } = useWallet();
 
+<<<<<<< HEAD
 
   if (loading) {
     return (
@@ -26,12 +27,23 @@ export function TransactionHistory() {;
 ;
   if (loading) {;
     return (;
+=======
+  if (loading) {;
+
+=======
+
+
+  if (loading) {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <Card>;
         <CardHeader>;
           <CardTitle>Transaction History</CardTitle>;
           <CardDescription>Loading transactions...</CardDescription>;
         </CardHeader>;
       </Card>;
+<<<<<<< HEAD
 import React from "react",
 import { useWallet } from "@/hooks/useWallet",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -90,6 +102,18 @@ export function TransactionHistory() {
                         +{tx.amount} ZION$
                       </Badge>
                     </div>
+=======
+    );
+  }
+
+  const earnTransactions = transactions && transactions.filter(tx => tx && tx.transaction_type === 'earn');
+  const burnTransactions = transactions && transactions.filter(tx => tx && tx.transaction_type === 'burn');
+
+  return (
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",;
 import { useWallet } from "@/hooks/useWallet",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -113,6 +137,10 @@ export function TransactionHistory() {;
   const earnTransactions = transactions.filter(tx => tx.transaction_type === 'earn');
   const burnTransactions = transactions.filter(tx => tx.transaction_type === 'burn');
   return (;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <Card>;
       <CardHeader>;
         <CardTitle>Transaction History</CardTitle>;
@@ -126,6 +154,7 @@ export function TransactionHistory() {;
           </TabsList>;
           <TabsContent value="earned">;
             <ScrollArea className="h-64">;
+<<<<<<< HEAD
               {earnTransactions.length === 0 ? (;
                 <p className="text-center py-8 text-muted-foreground">No tokens earned yet</p>;
               ) : (;
@@ -222,6 +251,9 @@ export function TransactionHistory() {;
             <ScrollArea className="h-64">;
                   ))}
               {earnTransactions.length === 0 ? (;
+=======
+              {earnTransactions && earnTransactions.length === 0 ? (;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <p className="text-center py-8 text-muted-foreground">No tokens earned yet</p>;
               ) :(;
                 <div className="space-y-2 mt-2">;
@@ -365,3 +397,7 @@ return (<Card> <CardHeader> <CardTitle>Transaction History</CardTitle> <CardDesc
 }</ScrollArea> </TabsContent> </Tabs> </CardContent> </Card>) 
 }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

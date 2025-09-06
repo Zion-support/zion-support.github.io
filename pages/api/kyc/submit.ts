@@ -1,11 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 function load(): Record<string, KycProfile> {
   try {
 
     const raw = fs.readFileSync(FILE, 'utf8');
     return JSON.parse(raw)
 
+<<<<<<< HEAD
 import type { KycProfile } from '../../../utils/kyc';
 import { validateKycSubmission } from '[^']*';
 import { getAmlProvider } from '[^']*';
@@ -28,10 +33,13 @@ function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8');
     return JSON.parse(raw);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch {
     return {}
   }
 function save(db: Record<string, KycProfile>) {
+<<<<<<< HEAD
   fs.mkdirSync(DATA_DIR, { recursive: true });
   fs.writeFileSync(FILE, JSON.stringify(db, null, 2));
 }
@@ -51,12 +59,22 @@ export default async function handler(
     return res.status(405).json({ error: 'Method not allowed' });  const { userId } = req.body as { userId?: string };
   if (!userId) return res.status(400).json({ error: 'Missing userId' });
 if (req && req.method !== 'POST')
+=======
+<<<<<<< HEAD
+  fs && fs.mkdirSync(DATA_DIR, { recursive: true });
+  fs && fs.writeFileSync(FILE, JSON && JSON.stringify(db, null, 2));
+}
+
+
+  if (req && req.method !== 'POST')
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return res && res.status(405).json({ error: 'Method not allowed' });  const { userId } = req && req.body as { userId?: string };
   if (!userId) return res && res.status(400).json({ error: 'Missing userId' });
   const db = load();
   const profile = db[userId];
   if (!profile) return res && res.status($1).json({$2});
   const validation = validateKycSubmission(profile);
+<<<<<<< HEAD
       .json({ error: 'Missing data', missing: validation && validation.missing });
   // Simple AML check
   const aml = getAmlProvider();
@@ -80,11 +98,19 @@ if (req && req.method !== 'POST')
 profile.amlStatus = amlResult.status === 'clear' ? 'clear' : amlResult.status === 'match' ? 'match' : 'review';
   profile && profile.amlStatus =
     amlResult && amlResult.status === 'clear'
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       ? 'clear'
       : amlResult && amlResult.status === 'match'
         ? 'match'
         : 'review';
   // Flags and risk scoring
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const flags = new Set<string>(profile && profile.flags || []);
   if (amlResult && amlResult.status !== 'clear') flags && flags.add('aml_alert');
   const name = (
@@ -97,18 +123,27 @@ profile.amlStatus = amlResult.status === 'clear' ? 'clear' : amlResult.status ==
   const ip = (
     (req && req.headers['x-forwarded-for'] as string) ||
     req && req.socket.remoteAddress ||
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     ''
   )
     .split(',')[0]
     .trim();
   if (ip) {
     // naive duplicate IP heuristic: more than 2 submissions from same IP → flag
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const sameIpCount = Object && Object.values(db).filter(p =>
       (p && p.auditTrail || []).some(
         a => a && a.action === 'kyc_submitted' && (a && a.details as any)?.ip === ip
       )
     ).length;
     if (sameIpCount >= 2) flags && flags.add('duplicate_ip');  }
+<<<<<<< HEAD
     if (sameIpCount >= 2) flags.add('duplicate_ip');  }
 import { validateKycSubmission } from '../../../utils/kyc';
 import { getAmlProvider } from '../../../utils/aml';
@@ -119,6 +154,12 @@ const FILE = path.join(DATA_DIR, 'profiles.json');
     if (sameIpCount >= 2) flags && flags.add('duplicate_ip');  }
 
 
+=======
+
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 function load(): Record<string, KycProfile> {
@@ -127,6 +168,7 @@ function load(): Record<string, KycProfile> {
     return JSON.parse(raw);
 
 
+<<<<<<< HEAD
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8');
@@ -170,6 +212,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (sameIpCount >= 2) flags.add('duplicate_ip')
   }
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Compute simple risk score
   let riskScore = 10; // base low risk
   if (flags && flags.has('aml_alert')) riskScore += 50;
@@ -180,6 +225,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   profile && profile.riskScore = riskScore;
   profile && profile.status = 'submitted';
   const now = new Date().toISOString();
+<<<<<<< HEAD
   profile.lastUpdatedAt = now;
   profile.auditTrail.push({
     at: now
@@ -301,6 +347,44 @@ export default async function handler(req, res) {
   db[userId] = profile;
   save(db);
   res.status(200).json({ ok: true, profile, aml: amlResult })
+=======
+
+
+}
+<<<<<<< HEAD
+import type { KycProfile } from '../../../utils / kyc';
+import {validateKycSubmission} from '../../../utils / kyc';
+import {getAmlProvider} from '../../../utils / aml';
+import fs from 'fs';
+import path from 'path';
+;
+const DATA_DIR = path.join (process.cwd (), 'data', 'kyc');const FILE = path.join (DATA_DIR, 'profiles.json');
+;
+function load (): Record < string, KycProfile> {
+  try {
+    const raw = fs.readFileSync (FILE, 'utf8');
+    return JSON.parse (raw);
+  } catch {
+    return {}
+  }
+/**
+ * save - Function description
+ */
+function save() {
+  fs.mkdir_sync (DATA_DIR, { recursive: true });
+  fs.writeFileSync (FILE, JSON.stringify (db, null, 2));
+}
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (
+    return res.status (405).json ({ error: 'Method not allowed' })) {
+  $2
+}  const { user_id } = req.body as { user_id?: string }
+  if (return res.status (400).json ({ error: 'Missing user_id' })) {
+  $2
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
   const db = load ();
   const profile = db[user_id];
@@ -395,6 +479,7 @@ if ( {) {
 ;
 res.status (200).json ({ ok: true, profile, aml: aml_result });
 }
+<<<<<<< HEAD
   profile.lastUpdatedAt = now;
 
 
@@ -403,3 +488,11 @@ res.status (200).json ({ ok: true, profile, aml: aml_result });
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  profile.lastUpdatedAt = now;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 "use client",;
 import { useWalkthroughTarget } from "./OnboardingWalkthrough",;
@@ -8,6 +12,10 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {;
 
 
   return (;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 "use client",
 import { useWalkthroughTarget  } from './OnboardingWalkthrough';,
 import { use_auth  } from '@/contexts / AuthContext';,
@@ -61,6 +69,7 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {;
                   <span className="text - sm text - zinc - 400">;
                     Welcome, {user?.name || user?.email}
 
+<<<<<<< HEAD
 
                     Welcome, {user?.name || user?.email}
 
@@ -71,6 +80,13 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {;
                   <span className="text-sm text-zinc-400">;
                     Welcome, {user?.name |user?.email}
                     Welcome, {user?.name || user?.email}
+=======
+=======
+
+                    Welcome, {user?.name || user?.email}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </span>;
                   <button;
                     on_click={logout}

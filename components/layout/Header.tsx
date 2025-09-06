@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+
+
+    { name: 'Contact', href: '/contact', icon: Phone }
+  ];
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const service_categories = [;
     {
       name: 'Micro SaaS',
@@ -15,9 +23,17 @@
       name: 'AI Services',
       href: '/services / ai - services',
       description: 'Cutting - edge AI & machine learning',
+<<<<<<< HEAD
       popular: ['Quantum ML', 'Autonomous Systems', 'AI Cybersecurity', 'Drug Discovery'];
 }
   ];
+=======
+
+      popular: ['Quantum ML', 'Autonomous Systems', 'AI Cybersecurity', 'Drug Discovery'];
+}
+  ];
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     { ;
       name: 'Micro SaaS',;
       href: '/services/micro-saas',;
@@ -56,9 +72,17 @@
     { name: 'Partners', href: '/partners' },;
     { name: 'Team', href: '/team' },;
     { name: 'Careers', href: '/careers' },;
+<<<<<<< HEAD
   ];
   const isActive = (path: string) => location && location.pathname === path;
   const resourceCategories = [;
+=======
+
+  ];
+  const isActive = (path: string) => location && location.pathname === path;
+  const resourceCategories = [;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     { name: 'Blog', href: '/blog' },;
     { name: 'Case Studies', href: '/case-studies' },;
     { name: 'Webinars', href: '/webinars' },;
@@ -72,6 +96,11 @@
       isScrolled 
         ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50' 
         : 'bg-transparent'
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const service_categories = [;
     { name: 'AI Solutions', href: '/services / ai - solutions' },
     { name: 'Cloud & DevOps', href: '/services / cloud' },
@@ -111,11 +140,20 @@
       <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
         <div className="flex items - center justify - between h - 16">;
           {/* Logo */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="flex-shrink-0">;
             <Link href="/" className="text-2xl font-bold text-blue-600">;
               Zion Tech Group;
             </Link>;
           </div>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Desktop Navigation */}
           <div className="hidden md:block">;
             <div className="ml-10 flex items-baseline space-x-4">;
@@ -135,17 +173,31 @@
 
 
 
+<<<<<<< HEAD
             </div>;
           </div>;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Mobile menu button */}
           <div className="md:hidden">;
             <button              onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-700 hover:text-blue-600 p-2";
             >;
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+<<<<<<< HEAD
             </button>;
           </div>;
         </div>;
+=======
+
+            </button>;
+          </div>;
+        </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Mobile Navigation */}
         <AnimatePresence>;
           {isMenuOpen && (;
@@ -180,6 +232,11 @@ export default Header;
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="flex - shrink - 0">;
             <Link href="/" className="text - 2xl font - bold text - blue - 600">;
               Zion Tech Group;
@@ -237,6 +294,7 @@ export default Header;
 import React, { useState, useEffect } from 'react'; import Link from 'next / link'; import { use_router } from 'next / router'; import { motion, AnimatePresence } from 'framer-motion'; import { Menu, X, Home, Users, Briefcase, Phone, Mail, ChevronDown, Brain, Shield, Cloud, Database, Network, Zap, Target, DollarSign, BookOpen, Calendar, FileText, Award, Globe, Search, ArrowRight } from 'lucide-react'; import { Button } from '../ui / Button'; import { Badge } from '../ui / Badge'; const Header: React.FC = () => { const [is_scrolled, setIsScrolled] = useState (false); useEffect (() => { const handle_scroll = () =>: any { setIsScrolled (window.scroll_y > 0)} window.addEventListener ('scroll', handle_scroll); return () => window.removeEventListener ('scroll', handle_scroll)}, []); const navigation_items = [ { name: 'Home', href: '/' }, { name: 'Services', href: '/services' }, { name: 'Solutions', href: '/solutions' }, { name: 'About', href: '/about' }, { name: 'Careers', href: '/careers' }, { name: 'Contact', href: '/contact' }, ]; return ( <header className="sticky top - 0 z - 50 bg - slate - 900 / 95 backdrop - blur border - b border - slate - 800"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 h - 14 flex items - center justify - between"> <Link href="/" className="text - white font - bold">Zion Tech Group</Link> <nav className="hidden md:flex items - center gap - 6 text - sm"> {navigation_items.map ((item) => ( <Link key={item.name} href={item.href} className="text - gray - 300 hover:text - white"> {item.name} </Link> ))} </nav> </div> </header> )} export default Header;
 export default Header;
 ;
+<<<<<<< HEAD
             </div>
             <span className=&quot;text-xl font-bold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent&quot;>
               Zion Tech Group
@@ -505,3 +563,7 @@ import React,{ useState,useEffect } from 'react'; import Link from 'next/link'; 
 export default Header;
 
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

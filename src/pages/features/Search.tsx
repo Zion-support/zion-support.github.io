@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Header } from '@/components/Header'
 import { SEO } from '@/components/SEO'
@@ -28,6 +29,8 @@ import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -78,6 +81,7 @@ import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function SearchFeature() {
   const schema = {
+<<<<<<< HEAD
 
   const schema = {
     '@context': 'https://schema.org'
@@ -95,6 +99,14 @@ export default function SearchFeature() {
         description='Find exactly what you need with fast, filterable search powered by Elasticsearch.'
         keywords='search engine, filtering, tech marketplace search'
         canonical='https://app.ziontechgroup.com/features/search'
+=======
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Advanced Search",
+    "description": "Quickly locate products, services and talent using intelligent search filters.",
+    "url": "https://app.ziontechgroup.com/features/search"
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   };
 
   return (
@@ -131,6 +143,7 @@ export default function SearchFeature() {
             </div>;
           </div>;
 
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import Link from 'next/link',
 export default function SearchFeature() {
@@ -149,6 +162,8 @@ export default function SearchFeature() {
         description='Find exactly what you need with fast, filterable search powered by Elasticsearch.'
         keywords='search engine, filtering, tech marketplace search'
         canonical='https://app.ziontechgroup.com/features/search'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         title="Advanced Search"
         description="Find exactly what you need with fast, filterable search powered by Elasticsearch."
         keywords="search engine, filtering, tech marketplace search"
@@ -161,10 +176,13 @@ export default function SearchFeature() {
       <script
         type="application/ld+json"
 
+<<<<<<< HEAD
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
@@ -198,6 +216,7 @@ export default function SearchFeature() {
               <p className="text-zion-slate-light">A combination of relevance scoring and community ratings determines the order.</p>
             </div>
           </div>
+<<<<<<< HEAD
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/search'>Try Search</Link>            </Button>      />
@@ -237,6 +256,11 @@ export default function SearchFeature() {
               <p className="text-zion-slate-light">A combination of relevance scoring and community ratings determines the order.</p>
             </div>
           </div>
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="text-center">
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
@@ -285,8 +309,14 @@ export default function SearchFeature() {
       </main>
     </>
   )
+<<<<<<< HEAD
 }
 ;
+=======
+
+;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -322,6 +352,7 @@ export default function SearchFeature() {;
             Filter listings by skills, price, availability and more. Our engine helps you discover relevant results instantly.;
           </p>;
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">;
+<<<<<<< HEAD
             <img;
               src="https: //placehold.co/800x400";
               alt="Screenshot of search results";
@@ -347,13 +378,27 @@ export default function SearchFeature() {;
           </div>;
           <div className="text-center">;
             <Button size="lg" className="bg-zion-purple text-white" asChild>;
+=======
+            <img
+              src="https: //placehold && placehold.co/800x400"
+              alt="Screenshot of search results"
+              className="object-cover"
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Link href="/search">Try Search</Link>;
             </Button>;
           </div>;
         </div>;
       </main>;
+<<<<<<< HEAD
     </>;
   );
 }
 ;
 ;
+=======
+
+
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

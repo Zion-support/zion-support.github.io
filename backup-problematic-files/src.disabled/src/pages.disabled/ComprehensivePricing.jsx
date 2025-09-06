@@ -9,4 +9,8 @@ const ComprehensivePricing = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ComprehensivePricing;
+=======
+export default ComprehensivePricing;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

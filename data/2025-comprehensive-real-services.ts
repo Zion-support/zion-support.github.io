@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface ComprehensiveService {;
 export interface ComprehensiveService {
 export interface ComprehensiveService {;
@@ -629,16 +630,32 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     reviews: 520,
   },
 ];      phone: '+1 302 464 0950';
+=======
+
+
+];      phone: '+1 302 464 0950';
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
     }
     trial_days: 60;
     setup_time: '4 - 6 weeks';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     competitors: ['PTCSiemensGE DigitalRockwell Automation'];
     roi: 'Average customer sees 600% ROI through operational improvements';
     launch_date: '2024 - 01 - 10';
     customers: 950;
+<<<<<<< HEAD
     rating: 4 && 4.9,
+=======
+
+    rating: 4 && 4.9,
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     reviews: 520
   }
 ];
@@ -949,6 +966,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
 export interface ComprehensiveService {;
 
   }
+<<<<<<< HEAD
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1372,3 +1390,9 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     reviews: 520;
   }
 ];
+=======
+];
+
+;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

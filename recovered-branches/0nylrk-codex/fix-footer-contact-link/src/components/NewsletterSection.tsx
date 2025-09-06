@@ -1,4 +1,9 @@
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { GradientHeading } from "@/components/GradientHeading",
 import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",
 
@@ -11,12 +16,17 @@ import {EnhancedNewsletterForm} from "@/components/EnhancedNewsletterForm";
 import { GradientHeading } from "@/components/GradientHeading",
 import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",
 
+<<<<<<< HEAD
 import { GradientHeading } from "@/components/GradientHeading";
 import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
 
 import { GradientHeading } from "@/components/GradientHeading";
 import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function NewsletterSection() {
   return (
     <section className="py-20 bg-zion-blue-dark" id="newsletter">
@@ -33,6 +43,7 @@ export function NewsletterSection() {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   );
 }
   )
@@ -43,6 +54,11 @@ import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
 import { GradientHeading } from "@/components/GradientHeading",;
 import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",;
 ;
+=======
+
+import {GradientHeading} from "@/components/GradientHeading";
+import {EnhancedNewsletterForm} from "@/components/EnhancedNewsletterForm";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function NewsletterSection() {;
   return (;
     <section className="py-20 bg-zion-blue-dark" id="newsletter">;
@@ -69,6 +85,7 @@ export function NewsletterSection() {;
 ;
 
 
+<<<<<<< HEAD
     </section>);
 }
     </section>;
@@ -82,3 +99,6 @@ export function NewsletterSection() {;
 
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

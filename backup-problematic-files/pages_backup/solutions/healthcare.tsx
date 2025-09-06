@@ -642,7 +642,16 @@ export default function HealthcareSolutions() {;
     </Layout>
     </>
     </>
+<<<<<<< HEAD
   );
 };
 
 export default Healthcare;
+=======
+<<<<<<< HEAD
+    </Layout>
+  );
+};
+
+export default Healthcare;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

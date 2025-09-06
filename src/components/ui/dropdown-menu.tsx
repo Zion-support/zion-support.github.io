@@ -3,6 +3,7 @@ import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu"
 import { Check, ChevronRight, Circle } from 'lucide-react'
 
 
+<<<<<<< HEAD
 const DropdownMenu = DropdownMenuPrimitive.Root
 import * as React from &quot;react&quot;
 import * as DropdownMenuPrimitive from &quot;@radix-ui/react-dropdown-menu&quot;
@@ -16,6 +17,8 @@ import { cn } from &quot;@/lib/utils&quot;
 
 import { cn } from "@/lib/utils"
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const DropdownMenu = DropdownMenuPrimitive.Root
 const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger
 const DropdownMenuGroup = DropdownMenuPrimitive.Group
@@ -45,6 +48,7 @@ const DropdownMenuSubTrigger = React.forward_ref<;
 >(({ className, inset, children, ...props }, ref) => (;
   <DropdownMenuPrimitive.SubTrigger;
     ref={ref}
+<<<<<<< HEAD
 className={cn(
       &quot;flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent data-[state=open]:bg-accent&quot;
       inset && &quot;pl-8&quot;
@@ -54,6 +58,10 @@ className={cn(
 className={cn(
       &quot;flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent data-[state=open]:bg-accent&quot;
       inset && &quot;pl-8&quot;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     className={cn(
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent data-[state=open]:bg-accent",
       inset && "pl-8",
@@ -63,9 +71,14 @@ className={cn(
     {...props}
   >;
     {children}
+<<<<<<< HEAD
 <ChevronRight className=&quot;ml-auto h-4 w-4&quot; />
 ursor/fix-website-loading-errors-and-merge-6662
 <ChevronRight className=&quot;ml-auto h-4 w-4&quot; />
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <ChevronRight className="ml-auto h-4 w-4" />
 
 
@@ -79,9 +92,14 @@ const DropdownMenuSubContent = React.forwardRef<
   <DropdownMenuPrimitive.SubContent
     ref={ref}
     className={cn(
+<<<<<<< HEAD
       &quot;z-50 min-w-[8rem] overflow-hidden rounded-md border border-border bg-popover p-1 text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
 ursor/fix-website-loading-errors-and-merge-6662
       &quot;z-50 min-w-[8rem] overflow-hidden rounded-md border border-border bg-popover p-1 text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       "z-50 min-w-[8rem] overflow-hidden rounded-md border border-border bg-popover p-1 text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
 
 
@@ -92,9 +110,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 DropdownMenuSubContent.displayName =;
   DropdownMenuPrimitive.SubContent.displayName;
 const DropdownMenuContent = React.forwardRef<;
+<<<<<<< HEAD
   React.ElementRef<typeof DropdownMenuPrimitive.Content>;
 ursor/fix-website-loading-errors-and-merge-6662
   React.ElementRef<typeof DropdownMenuPrimitive.Content>;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   React.ElementRef<typeof DropdownMenuPrimitive.Content>,;
 
 
@@ -103,11 +126,16 @@ ursor/fix-website-loading-errors-and-merge-6662
     <DropdownMenuPrimitive.Content;
       ref={ref}
       sideOffset={sideOffset}
+<<<<<<< HEAD
 className={cn(
         &quot;z-50 min-w-[8rem] overflow-hidden rounded-md border border-border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
 ursor/fix-website-loading-errors-and-merge-6662
 className={cn(
         &quot;z-50 min-w-[8rem] overflow-hidden rounded-md border border-border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       className={cn(
         "z-50 min-w-[8rem] overflow-hidden rounded-md border border-border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
 
@@ -119,6 +147,10 @@ className={cn(
 ));
 DropdownMenuContent.displayName = DropdownMenuPrimitive.Content.displayName;
 const DropdownMenuItem = React.forwardRef<;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 className={cn (
       &quot;flex cursor - default select - none items - center rounded - sm px - 2 py - 1.5 text - sm outline - none focus:bg - accent data-[state = open]:bg - accent & quot;,
       inset && &quot;pl - 8&quot;,
@@ -172,6 +204,7 @@ const DropdownMenuItem = React.forward_ref<;
   <DropdownMenuPrimitive.Item;
     ref={ref}
 
+<<<<<<< HEAD
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Item> & {inset?: boolean;
   React.ElementRef<typeof DropdownMenuPrimitive.Item>,;
     inset?: boolean;
@@ -197,14 +230,27 @@ className={cn(
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       inset && "pl-8",
+=======
+
+    className={cn(
+      "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+      inset && "pl-8",
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       className
     {...props}
   />;
 ));
 DropdownMenuItem.displayName = DropdownMenuPrimitive.Item.displayName;
 const DropdownMenuCheckboxItem = React.forwardRef<;
+<<<<<<< HEAD
   React.ElementRef<typeof DropdownMenuPrimitive.CheckboxItem>;
   React.ElementRef<typeof DropdownMenuPrimitive.CheckboxItem>;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   React.ElementRef<typeof DropdownMenuPrimitive.CheckboxItem>,;
 
 
@@ -236,10 +282,13 @@ const DropdownMenuCheckboxItem = React.forward_ref<;
 className={cn (
       &quot;relative flex cursor - default select - none items - center rounded - sm py - 1.5 pl - 8 pr - 2 text - sm outline - none transition - colors focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
       class_name)}
+<<<<<<< HEAD
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       className
     )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     checked={checked}
     {...props}
   >
@@ -249,6 +298,7 @@ className={cn (
       </DropdownMenuPrimitive.ItemIndicator>
     </span>
     {children}
+<<<<<<< HEAD
   </DropdownMenuPrimitive.CheckboxItem>;
 ));
 DropdownMenuCheckboxItem.displayName =;
@@ -256,10 +306,18 @@ DropdownMenuCheckboxItem.displayName =;
 const DropdownMenuRadioItem = React.forwardRef<;
   React.ElementRef<typeof DropdownMenuPrimitive.RadioItem>;
   React.ElementRef<typeof DropdownMenuPrimitive.RadioItem>,;
+=======
+
+
+  React.ElementRef<typeof DropdownMenuPrimitive.RadioItem>,;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.RadioItem>;
 >(({ className, children, ...props }, ref) => (;
   <DropdownMenuPrimitive.RadioItem;
     ref={ref}
+<<<<<<< HEAD
   React.ElementRef<typeof DropdownMenuPrimitive.RadioItem>;
 >(({ className, children, ...props }, ref) => (;
   <DropdownMenuPrimitive.RadioItem;
@@ -298,6 +356,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >(({ className, children, ...props }, ref) => (;
   <DropdownMenuPrimitive.RadioItem;
     ref={ref}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
     className={cn(
@@ -318,10 +378,13 @@ const DropdownMenuRadioItem = React.forward_ref<;
 className={cn (
       &quot;relative flex cursor - default select - none items - center rounded - sm py - 1.5 pl - 8 pr - 2 text - sm outline - none transition - colors focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
       class_name)}
+<<<<<<< HEAD
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       className
     )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {...props}
   >
     <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
@@ -330,6 +393,7 @@ className={cn (
       </DropdownMenuPrimitive.ItemIndicator>
     </span>
     {children}
+<<<<<<< HEAD
   </DropdownMenuPrimitive.RadioItem>;
 ));
 DropdownMenuRadioItem.displayName = DropdownMenuPrimitive.RadioItem.displayName;
@@ -338,6 +402,15 @@ const DropdownMenuLabel = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Label> & {inset?: boolean;
   React.ElementRef<typeof DropdownMenuPrimitive.Label>,;
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Label> & {;
+=======
+
+  </DropdownMenuPrimitive.RadioItem>));
+DropdownMenuRadioItem.display_name = DropdownMenuPrimitive.RadioItem.display_name;
+const DropdownMenuLabel = React.forward_ref<;
+  React.ElementRef < typeof DropdownMenuPrimitive.Label>,
+  React.ComponentPropsWithoutRef < typeof DropdownMenuPrimitive.Label> & {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   React.ElementRef<typeof DropdownMenuPrimitive.Label>,;
 
@@ -347,21 +420,35 @@ const DropdownMenuLabel = React.forwardRef<;
 >(({ className, inset, ...props }, ref) => (;
   <DropdownMenuPrimitive.Label;
     ref={ref}
+<<<<<<< HEAD
 className={cn(
       &quot;px-2 py-1.5 text-sm font-semibold&quot;
       inset && &quot;pl-8&quot;
     className={cn(
       "px-2 py-1.5 text-sm font-semibold",
       inset && "pl-8",
+=======
+
+
+    className={cn(
+      "px-2 py-1.5 text-sm font-semibold",
+      inset && "pl-8",
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       className
     {...props}
   />;
 ));
 DropdownMenuLabel.displayName = DropdownMenuPrimitive.Label.displayName;
 const DropdownMenuSeparator = React.forwardRef<;
+<<<<<<< HEAD
   React.ElementRef<typeof DropdownMenuPrimitive.Separator>;
 ursor/fix-website-loading-errors-and-merge-6662
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator>;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   React.ElementRef<typeof DropdownMenuPrimitive.Separator>,;
 
@@ -403,6 +490,7 @@ const DropdownMenuShortcut = ({
   );
 }
 
+<<<<<<< HEAD
       className={cn(&quot;ml-auto text-xs tracking-widest opacity-60&quot; className)}
 ursor/fix-website-loading-errors-and-merge-6662
     />);
@@ -447,11 +535,17 @@ export {
   DropdownMenuSubContent
   DropdownMenuSubTrigger
   DropdownMenuRadioGroup}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 DropdownMenuShortcut.display_name = &quot;DropdownMenuShortcut & quot;
 ;
 
 DropdownMenuShortcut.displayName = "DropdownMenuShortcut"
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -465,4 +559,8 @@ export {
   DropdownMenuGroup,
   DropdownMenuPortal,
   DropdownMenuSub,
+<<<<<<< HEAD
   DropdownMenuSubContent,
+=======
+  DropdownMenuSubContent,
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

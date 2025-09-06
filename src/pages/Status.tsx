@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { logWarn } from '@/utils/productionLogger'
 import { logWarn } from '@/utils/productionLogger'
 import { SEO } from "@/components/SEO",
@@ -12,6 +13,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { logWarn } from '@/utils/productionLogger';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { logWarn } from '@/utils/productionLogger',
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface ServiceStatus {
   name: string
   status: 'operational' | 'degraded' | 'outage' | 'maintenance'
@@ -73,12 +76,15 @@ const FALLBACK_SERVICES: ServiceStatus[] = [
     
     return this.props.children;
   }
+<<<<<<< HEAD
 
         return <CheckCircle className="h-5 w-5 text-green-500" />
         return <Clock className="h-5 w-5 text-blue-500" />
       default:;
         return <AlertCircle className="h-5 w-5 text-gray-500" />};
 import React, { useState, useEffect } from 'react'; import { motion  } from 'framer-motion'; import { SEO } from '../components/SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default function Status() { const [lastUpdated, setLastUpdated] = useState(new Date()); const [isRefreshing, setIsRefreshing] = useState(false)
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
   )
@@ -378,6 +384,7 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
       </main>
     </>
   )
+<<<<<<< HEAD
 
 import { log_warn } from '@/utils / production_logger';
 interface ServiceStatus {
@@ -458,7 +465,14 @@ function Status() { const [last_updated, setLastUpdated] = useState (new Date ()
 }
 ;
 ;
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

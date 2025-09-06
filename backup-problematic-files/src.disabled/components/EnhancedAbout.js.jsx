@@ -9,4 +9,8 @@ const EnhancedAbout.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default EnhancedAbout.js;
+=======
+export default EnhancedAbout.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

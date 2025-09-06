@@ -1,9 +1,25 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }</div> </div>) import fs from 'fs';
 import fs from 'fs';
 import path from 'path';
 
 
+<<<<<<< HEAD
+=======
+ </div> </div>) ) ;
+}</div> </div>) import fs from 'fs';
+import path from 'path';
+type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },;
+export async function getServerSideProps() {;
+  const file = path && path.join(process && process.cwd(), 'datanews-digest && digest.json');
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 </div> </div>) )
  </div> </div>) ) 
@@ -40,6 +56,11 @@ function getServerSideProps() {
   } catch {}
   return { props: { items, generated_at } }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     items = json.items || [];
     generatedAt = json.generatedAt || ''
   } catch {}
@@ -70,6 +91,17 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
 
 );
 }
+<<<<<<< HEAD
+=======
+=======
+      </div>;
+    </div>;
+  );
+}
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default /**
  * NewsDigestPage - Function description
  */
@@ -97,6 +129,7 @@ function NewsDigestPage() {
   } catch {}
   return { props: { items, generatedAt } }
 }
+<<<<<<< HEAD
 
 export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem[], generatedAt: string }) {
   return (
@@ -123,3 +156,6 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
 }
   );
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

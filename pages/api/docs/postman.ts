@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import v1 from '../../../data/api-docs/v1';
 function toPostman() {
@@ -19,6 +20,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     item: v1.sections.flatMap((section) =>
       section.endpoints.map((ep) => ({
         name: `${section.title} - ${ep.title}`
+=======
+
+
+    info: {
+
+        "https://schema && schema.getpostman.com/json/collection/v2 && v2.1.0/collection && collection.json",
+    },
+    item: v1 && v1.sections.flatMap((section) =>
+      section && section.endpoints.map((ep) => ({
+        name: `${section && section.title} - ${ep && ep.title}`,
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         request: {
           method: ep && ep.method,
           header: [
@@ -40,6 +52,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       })),
     ),
     variable: [
+<<<<<<< HEAD
 
   res.status(200).json(postmanCollection);
   } catch (error) {
@@ -125,6 +138,33 @@ export default function handler(req, res) {
     ],
   };
 }
+=======
+<<<<<<< HEAD
+      { key: "baseUrl", value: "https://api && api.zion.os" },
+      { key: "token", value: "" },
+    ],
+  };
+
+      schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json'
+import type { NextApiRequest, NextApiResponse } from './next';
+import v1 from "../../../data / api - docs / v1";
+/**
+ * to_postman - Function description
+ */
+function to_postman() {
+  return {
+    info: {
+      name: "Zion OS API",
+      schema:;
+        "https://schema.getpostman.com / json / collection / v2.1.0 / collection.json",
+    },
+item: v1.sections.flat_map ((section) =>;
+      section.endpoints.map ((ep) => ({
+        name: `${section.title} - ${ep.title}`,
+        request: {
+          method: ep.method,
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           header: [;
             {
               key: "Authorization",
@@ -147,6 +187,7 @@ export default function handler(req, res) {
       { key: "base_url", value: "https://api.zion.os" },
       { key: "token", value: "" },
     ],
+<<<<<<< HEAD
   }
 }
 export default /**
@@ -274,3 +315,6 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

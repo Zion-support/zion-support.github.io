@@ -15,13 +15,19 @@ import {Alert, AlertDescription, AlertTitle} from "@/components/ui/alert";
 import {ShieldAlert, ArrowDown, Check, X, MessageSquare, Download} from "lucide-react";
 import {useAuth} from "@/hooks/useAuth";
 import {toast} from "sonner";
+<<<<<<< HEAD
 export function DisputeDetail() {
   // useParams may be untyped in this environment, so avoid passing a
+=======
+export function DisputeDetail() {;
+  // useParams may be untyped in this environment, so avoid passing a;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // type argument and cast the result instead to prevent TS2347 errors.;
   const { disputeId } = useParams() as { disputeId?: string };
   const navigate = useNavigate();
   const { user } = useAuth();
   const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes();
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react",
 import { useParams, useNavigate } from "react-router-dom",
 import { useDisputes } from "@/hooks/useDisputes",
@@ -46,20 +52,40 @@ export function DisputeDetail() {
   const navigate = useNavigate();
   const { user } = useAuth();
   const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes();
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [dispute, setDispute] = useState<any>(null);
   const [messages, setMessages] = useState<DisputeMessage[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [message, setMessage] = useState("");
   const [isSending, setIsSending] = useState(false);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [resolution, setResolution] = useState({;
     summary: "",;
     resolution_type: "compromise"}),;
   const [activeTab, setActiveTab] = useState("overview");
+<<<<<<< HEAD
   // Check if user is admin (placeholder - implement proper admin check);
   const isAdmin = user?.userType === "admin";
   useEffect(() => {;
     if (!disputeId) return;
     const loadDisputeData = async () => {;
+=======
+
+  // Check if user is admin (placeholder - implement proper admin check);
+  const isAdmin = user?.userType === "admin";
+
+  useEffect(() => {;
+    if (!disputeId) return;
+
+    const loadDisputeData = async () => {;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       setIsLoading(true);
       try {;
         const disputeData = await getDisputeById(disputeId);
@@ -69,6 +95,12 @@ export function DisputeDetail() {
           return;
         }
         setDispute(disputeData);
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         const messagesData = await getDisputeMessages(disputeId);
         setMessages(messagesData);
       } catch (error) {;
@@ -77,15 +109,29 @@ export function DisputeDetail() {
       } finally {;
         setIsLoading(false);
       }
+<<<<<<< HEAD
     };
     loadDisputeData();
   }, [disputeId, navigate, getDisputeById, getDisputeMessages]);
   const handleStatusChange = async (status: DisputeStatus) => {;
     if (!disputeId) return,;
+=======
+
+    };
+
+    loadDisputeData();
+  }, [disputeId, navigate, getDisputeById, getDisputeMessages]);
+
+  const handleStatusChange = async (status: DisputeStatus) => {;
+    if (!disputeId) return,;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const success = await updateDisputeStatus(disputeId, status);
     if (success && dispute) {;
       setDispute({ ...dispute, status });
     }
+<<<<<<< HEAD
   const [resolution, setResolution] = useState({
     summary: ""
     resolution_type: "compromise"})
@@ -118,6 +164,10 @@ export function DisputeDetail() {
   
   useEffect(() => {
     if (!disputeId) return,
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     const loadDisputeData = async () => {
       setIsLoading(true),
@@ -128,6 +178,7 @@ export function DisputeDetail() {
           navigate("/dashboard/disputes"),
           return
         }
+<<<<<<< HEAD
         setDispute(disputeData),
         
         const messagesData = await getDisputeMessages(disputeId),
@@ -136,12 +187,20 @@ export function DisputeDetail() {
         setDispute(disputeData),
         
         const messagesData = await getDisputeMessages(disputeId),
+=======
+
+        setDispute(disputeData),
+        
+        const messagesData = await getDisputeMessages(disputeId),
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         setMessages(messagesData)
       } catch (error) {
         console.error("Error loading dispute data:", error),
         toast.error("Failed to load dispute")
       } finally {
         setIsLoading(false)
+<<<<<<< HEAD
   };
 
       }
@@ -158,6 +217,12 @@ export function DisputeDetail() {
   const handleResolveDispute = async () => {
     if (!disputeId) return;
   };
+=======
+
+  };
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState, useEffect } from "react",;
 import { useParams, useNavigate } from "react-router-dom",;
 import { useDisputes } from "@/hooks/useDisputes",;
@@ -229,6 +294,7 @@ export function DisputeDetail() {;
   const handleResolveDispute = async () => {
     if (!disputeId) return,
     
+<<<<<<< HEAD
 
     
     const success = await resolveDispute(disputeId, resolution),
@@ -241,6 +307,20 @@ export function DisputeDetail() {;
     const success = await resolveDispute(disputeId, resolution);
     
     const success = await resolveDispute(disputeId, resolution),
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    if (!resolution.summary) {
+      toast.error("Please provide a resolution summary");
+      return
+    }
+
+
+    
+    const success = await resolveDispute(disputeId, resolution),
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (success && dispute) {
       setDispute({
         ...dispute
@@ -253,17 +333,26 @@ export function DisputeDetail() {;
 
   };
 
+<<<<<<< HEAD
 
   }
   const handleSendMessage = async () => {
     if (!disputeId |!message.trim()) return;
     setIsSending(true);
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
 
   const handleSendMessage = async () => {
     if (!disputeId || !message.trim()) return,
     
     setIsSending(true),
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {
       const success = await addDisputeMessage(disputeId, message, isAdmin),
       if (success) {
@@ -277,15 +366,29 @@ export function DisputeDetail() {;
     } finally {
       setIsSending(false)
 
+<<<<<<< HEAD
   },;
 
   };
   const handleResolveDispute = async () => {;
     if (!disputeId) return;
+=======
+
+=======
+  },;
+
+  const handleResolveDispute = async () => {;
+    if (!disputeId) return;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (!resolution && resolution.summary) {;
       toast && toast.error("Please provide a resolution summary");
       return;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const success = await resolveDispute(disputeId, resolution);
     if (success && dispute) {;
       setDispute({ ;
@@ -297,8 +400,16 @@ export function DisputeDetail() {;
       });
     }
   };
+<<<<<<< HEAD
   const handleSendMessage = async () => {;
     if (!disputeId || !message && message.trim()) return;
+=======
+
+  const handleSendMessage = async () => {;
+    if (!disputeId || !message && message.trim()) return;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     setIsSending(true);
     try {;
       const success = await addDisputeMessage(disputeId, message, isAdmin);
@@ -313,6 +424,7 @@ export function DisputeDetail() {;
     } finally {;
       setIsSending(false);
     }
+<<<<<<< HEAD
   };
   if (isLoading) {;
     return (
@@ -364,6 +476,14 @@ export function DisputeDetail() {;
   },;
   if (isLoading) {;
     return (;
+=======
+
+  };
+
+  if (isLoading) {;
+
+    return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="p-8 text-center">;
         <div className="w-8 h-8 mx-auto mb-4 animate-spin border-4 border-primary border-t-transparent rounded-full"></div>;
         <p>Loading dispute details...</p>;
@@ -372,12 +492,21 @@ export function DisputeDetail() {;
 
 
 
+<<<<<<< HEAD
   }
 
 
   }
 
   if (!dispute) {
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return (
       <div className="p-8 text-center">
         <p>Dispute not found</p>
@@ -389,6 +518,10 @@ export function DisputeDetail() {;
   }
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       case "open": return "default",
       case "under_review": return "secondary",
 
@@ -398,6 +531,7 @@ export function DisputeDetail() {;
 
 ;
 
+<<<<<<< HEAD
   }
   if (!dispute) {;
     return (
@@ -420,6 +554,11 @@ export function DisputeDetail() {;
 ;
   if (!dispute) {;
     return (;
+=======
+  if (!dispute) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="p-8 text-center">;
         <p>Dispute not found</p>;
         <Button onClick={() => navigate("/dashboard/disputes")} className="mt-4">;
@@ -428,6 +567,11 @@ export function DisputeDetail() {;
       </div>;
     );
   }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const getStatusBadgeVariant = (status: DisputeStatus) => {;
     switch (status) {;
       case "open": return "default";
@@ -698,6 +842,10 @@ export function DisputeDetail() {;
       case "closed": return "outline",;
       default: return "default";
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },;
   return (;
     <div className="container mx-auto p-4 space-y-6">;
@@ -706,6 +854,12 @@ export function DisputeDetail() {;
           <div className="flex items-center gap-2">;
             <h1 className="text-2xl font-bold">Dispute Case</h1>;
             <Badge variant={getStatusBadgeVariant(dispute.status)}>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {dispute.status.replace('_ ')}
             </Badge>
           </div>
@@ -724,6 +878,7 @@ export function DisputeDetail() {;
           )}
         </div>
       </div>
+<<<<<<< HEAD
       {dispute.status === "resolved" && dispute.resolution_summary && (
         <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">
           <Check className="h-4 w-4" />
@@ -734,6 +889,9 @@ export function DisputeDetail() {;
         </Alert>
       )}
   }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   return (
     <div className="container mx - auto p - 4 space - y-6">;
@@ -766,7 +924,12 @@ export function DisputeDetail() {;
           <AlertDescription>;
             {dispute.resolution_summary}
       
+<<<<<<< HEAD
       
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2">
           <Tabs value={activeTab} onValueChange={setActiveTab}>
@@ -815,6 +978,10 @@ export function DisputeDetail() {;
                           <span>Under review</span>
                         </li>
                       )}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </AlertDescription>;
         </Alert>)}
       <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 6">;
@@ -863,10 +1030,18 @@ export function DisputeDetail() {;
                           <Badge variant="outline" className="h - 6 w - 6 rounded - full p - 0 flex items - center justify - center">2</Badge>;
                           <span > Under review</span>;
                         </li>)}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       {dispute.resolved_at && (
                         <li className="flex gap - 2 items - center">;
                           <Badge variant="outline" className="h - 6 w - 6 rounded - full p - 0 flex items - center justify - center">;
                             {dispute.status !== "open" ? "3" : "2"}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="container mx-auto p-4 space-y-6">;
       <div className="flex flex-wrap items-center justify-between gap-4">;
         <div>;
@@ -880,6 +1055,10 @@ export function DisputeDetail() {;
             Reported {formatDistanceToNow(new Date(dispute && dispute.created_at), { addSuffix: true })}
           </p>;
         </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="flex gap-2">;
           <Button variant="outline" onClick={() => navigate("/dashboard/disputes")}>;
             Back to List;
@@ -891,6 +1070,10 @@ export function DisputeDetail() {;
           )}
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {dispute && dispute.status === "resolved" && dispute && dispute.resolution_summary && (;
         <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">;
           <Check className="h-4 w-4" />;
@@ -900,6 +1083,7 @@ export function DisputeDetail() {;
           </AlertDescription>;
         </Alert>;
       )}
+<<<<<<< HEAD
   if (!dispute) {;
     return (;
       <div className="p-8 text-center">;
@@ -958,6 +1142,9 @@ export function DisputeDetail() {;
         </Alert>;
       )}
       ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
         <div className="lg:col-span-2">;
           <Tabs value={activeTab} onValueChange={setActiveTab}>;
@@ -967,7 +1154,11 @@ export function DisputeDetail() {;
               <TabsTrigger value="attachments">Attachments</TabsTrigger>;
               {isAdmin && <TabsTrigger value="admin">Admin Notes</TabsTrigger>}
             </TabsList>;
+<<<<<<< HEAD
             ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <TabsContent value="overview" className="space-y-6">;
               <Card>;
                 <CardHeader>;
@@ -977,6 +1168,7 @@ export function DisputeDetail() {;
                 <CardContent className="space-y-4">;
                   <div>;
                     <h3 className="font-medium">Reason</h3>;
+<<<<<<< HEAD
                     <p>{disputeReasonLabels[dispute.reason_code as any] || dispute.reason_code}</p>;
                   </div>;
                   ;
@@ -998,20 +1190,51 @@ export function DisputeDetail() {;
                     </div>;
                   )}
                   ;
+=======
+                    <p>{disputeReasonLabels[dispute && dispute.reason_code as any] || dispute && dispute.reason_code}</p>;
+                  </div>;
+
+                  <div>;
+                    <h3 className="font-medium">Description</h3>;
+                    <p className="whitespace-pre-wrap">{dispute && dispute.description}</p>;
+                  </div>;
+
+                  <div>;
+                    <h3 className="font-medium">Project</h3>;
+                    <p>{dispute && dispute.project?.title || "Unknown Project"}</p>;
+                    <p className="text-sm text-muted-foreground">{dispute && dispute.project?.scope_summary}</p>;
+                  </div>;
+
+                  {dispute && dispute.milestone_id && (;
+                    <div>;
+                      <h3 className="font-medium">Related Milestone</h3>;
+                      <p className="text-sm">Milestone ID: {dispute && dispute.milestone_id}</p>;
+                    </div>;
+                  )}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <div>;
                     <h3 className="font-medium">Timeline</h3>;
                     <ul className="space-y-2 mt-2">;
                       <li className="flex gap-2 items-center">;
                         <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">1</Badge>;
+<<<<<<< HEAD
                         <span>Created on {format(new Date(dispute.created_at), "MMM d, yyyy 'at' h:mm a")}</span>;
                       </li>;
                       ;
                       {dispute.status !== "open" && (;
+=======
+                        <span>Created on {format(new Date(dispute && dispute.created_at), "MMM d, yyyy 'at' h:mm a")}</span>;
+                      </li>;
+
+                      {dispute && dispute.status !== "open" && (;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         <li className="flex gap-2 items-center">;
                           <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">2</Badge>;
                           <span>Under review</span>;
                         </li>;
                       )}
+<<<<<<< HEAD
                       ;
                       {dispute.resolved_at && (;
                         <li className="flex gap-2 items-center">;
@@ -1019,23 +1242,53 @@ export function DisputeDetail() {;
                             {dispute.status !== "open" ? "3" :"2"}
                           </Badge>;
                           <span>Resolved on {format(new Date(dispute.resolved_at), "MMM d, yyyy 'at' h:mm a")}</span>;
+=======
+
+                      {dispute && dispute.resolved_at && (;
+                        <li className="flex gap-2 items-center">;
+                          <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">;
+                            {dispute && dispute.status !== "open" ? "3" : "2"}
+                          </Badge>;
+                          <span>Resolved on {format(new Date(dispute && dispute.resolved_at), "MMM d, yyyy 'at' h:mm a")}</span>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         </li>;
                       )}
                     </ul>;
                   </div>;
                 </CardContent>;
               </Card>;
+<<<<<<< HEAD
               ;
               {dispute.status === "resolved" && (;
+=======
+
+              {dispute && dispute.status === "resolved" && (;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <Card>;
                   <CardHeader>;
                     <CardTitle>Resolution</CardTitle>;
                   </CardHeader>;
                   <CardContent>;
+<<<<<<< HEAD
+=======
+                    <p className="whitespace-pre-wrap">{dispute && dispute.resolution_summary}</p>;
+
+                    {dispute && dispute.resolution_type && (;
+                      <div className="mt-4">;
+                        <Badge>;
+                          Resolution: {dispute && dispute.resolution_type.replace('_ ')}
+                        </Badge>;
+                      </div>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     )}
                   </CardContent>;
                 </Card>;
               )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           </Badge>;
                           <span > Resolved on {format (new Date (dispute.resolved_at), "MMM d, yyyy 'at' h:mm a")}</span>;
                         </li>)}
@@ -1067,6 +1320,10 @@ export function DisputeDetail() {;
                 </CardHeader>;
                 <CardContent>;
                   <div className="space - y-6 max - h-[600px] overflow - y-auto p - 2">;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     {messages.length === 0 ? (
                       <div className="text - center py - 12">;
                         <MessageSquare className="mx - auto h - 12 w - 12 text - muted - foreground mb - 2" />;
@@ -1076,6 +1333,7 @@ export function DisputeDetail() {;
                         .filter (msg => !msg.is_admin_note);
                         .map ((msg) => {
                           const isCurrentUser = user?.id === msg.user_id;
+<<<<<<< HEAD
             </TabsContent>;
                     <p className="whitespace-pre-wrap">{dispute.resolution_summary}</p>;
                     ;
@@ -1090,6 +1348,11 @@ export function DisputeDetail() {;
               )}
             </TabsContent>;
             ;
+=======
+=======
+            </TabsContent>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <TabsContent value="messages" className="space-y-6">;
               <Card>;
                 <CardHeader>;
@@ -1098,11 +1361,26 @@ export function DisputeDetail() {;
                 </CardHeader>;
                 <CardContent>;
                   <div className="space-y-6 max-h-[600px] overflow-y-auto p-2">;
+<<<<<<< HEAD
                     {messages.length === 0 ? (;
+=======
+                    {messages && messages.length === 0 ? (;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <div className="text-center py-12">;
                         <MessageSquare className="mx-auto h-12 w-12 text-muted-foreground mb-2" />;
                         <p className="text-muted-foreground">No messages yet</p>;
                       </div>;
+<<<<<<< HEAD
+=======
+                    ) : (;
+                      messages;
+                        .filter(msg => !msg && msg.is_admin_note);
+                        .map((msg) => {;
+                          const isCurrentUser = user?.id === msg && msg.user_id;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                          return (
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                                 } p-4 rounded-lg`}>;
                                 <div className="flex items-center gap-2 mb-2">;
                                   <Avatar className="h-6 w-6">;
@@ -1122,6 +1400,7 @@ export function DisputeDetail() {;
                               </div>;
                             </div>;
                           );
+<<<<<<< HEAD
                     ) :(;
                       messages;
                         .filter(msg => !msg.is_admin_note);
@@ -1158,11 +1437,25 @@ export function DisputeDetail() {;
                             </div>;
                           ),;
                         });
+=======
+                        });
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     )}
                   </div>;
                 </CardContent>;
                 <CardFooter>;
                   <div className="w-full space-y-4">;
+<<<<<<< HEAD
+=======
+                    <Textarea
+                      placeholder="Type your message here..."
+                      value={message}
+                      onChange={(e) => setMessage(e && e.target.value)}
+                      className="min-h-[100px]";
+                      disabled={isSending}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                             <div;
                               key={msg.id}
                               className={`flex ${isCurrentUser ? 'justify - end' : 'justify - start'}`}
@@ -1206,6 +1499,7 @@ export function DisputeDetail() {;
                     <div className="flex justify - end">;
                       <Button on_click={handleSendMessage} disabled={is_sending || !message.trim ()}>;
                         {is_sending ? "Sending..." : "Send Message"}
+<<<<<<< HEAD
                     <Textarea;
                       placeholder="Type your message here...";
                       value={message}
@@ -1216,12 +1510,15 @@ export function DisputeDetail() {;
                     <div className="flex justify-end">;
                       <Button onClick={handleSendMessage} disabled={isSending || !message.trim()}>;
                         {isSending ? "Sending..." :"Send Message"}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       </Button>;
                     </div>;
                   </div>;
                 </CardFooter>;
               </Card>;
             </TabsContent>;
+<<<<<<< HEAD
             ;
             <TabsContent value="attachments">;
               <Card>;
@@ -1233,10 +1530,23 @@ export function DisputeDetail() {;
                   <div className="text-center py-12">;
                     <Download className="mx-auto h-12 w-12 text-muted-foreground mb-2" />;
                     <p className="text-muted-foreground">No attachments available</p>;
+=======
+            <TabsContent value="attachments">;
+              <Card>;
+                <CardHeader>;
+                  <CardTitle > Attachments</CardTitle>;
+                  <CardDescription > Files related to this dispute</CardDescription>;
+                </CardHeader>;
+                <CardContent>;
+                  <div className="text - center py - 12">;
+                    <Download className="mx - auto h - 12 w - 12 text - muted - foreground mb - 2" />;
+                    <p className="text - muted - foreground">No attachments available</p>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </div>;
                 </CardContent>;
               </Card>;
             </TabsContent>;
+<<<<<<< HEAD
             ;
             {isAdmin && (;
               <TabsContent value="admin" className="space-y-6">;
@@ -1252,26 +1562,55 @@ export function DisputeDetail() {;
                         <Button ;
                           variant="outline" ;
                           onClick={() => handleStatusChange("open")}
+=======
+            {is_admin && (
+              <TabsContent value="admin" className="space - y-6">;
+                <Card>;
+                  <CardHeader>;
+                    <CardTitle > Admin Actions</CardTitle>;
+                    <CardDescription > Handle this dispute as an administrator</CardDescription>;
+                  </CardHeader>;
+                  <CardContent className="space - y-6">;
+                    <div>;
+                      <h3 className="font - medium mb - 2">Change Status</h3>;
+                      <div className="flex gap - 2">;
+                        <Button;
+                          variant="outline";
+                          on_click={() => handleStatusChange ("open")}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           disabled={dispute.status === "open"}
                         >;
                           Mark as Open;
                         </Button>;
+<<<<<<< HEAD
                         <Button ;
                           variant="outline" ;
                           onClick={() => handleStatusChange("under_review")}
+=======
+                        <Button;
+                          variant="outline";
+                          on_click={() => handleStatusChange ("under_review")}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           disabled={dispute.status === "under_review"}
                         >;
                           Mark as Under Review;
                         </Button>;
+<<<<<<< HEAD
                         <Button ;
                           variant="outline" ;
                           onClick={() => handleStatusChange("closed")}
+=======
+                        <Button;
+                          variant="outline";
+                          on_click={() => handleStatusChange ("closed")}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           disabled={dispute.status === "closed"}
                         >;
                           Close Dispute;
                         </Button>;
                       </div>;
                     </div>;
+<<<<<<< HEAD
                       {dispute.resolved_at && (
                         <li className="flex gap-2 items-center">
                           <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">
@@ -1468,6 +1807,18 @@ export function DisputeDetail() {;
                                 </Avatar>
                                 <span className="text-sm font-medium">
                                   {msg.user_profile?.display_name |'Admin'}
+=======
+
+                    {dispute.status !== "resolved" && (
+                      <div>;
+                        <h3 className="font - medium mb - 2">Resolve Dispute</h3>;
+                        <div className="space - y-4">;
+                          <Textarea;
+                            placeholder="Enter resolution summary...";
+                            value={resolution.summary}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
                     <div>;
                       <h3 className="font-medium mb-2">Admin Notes</h3>;
@@ -1486,6 +1837,11 @@ export function DisputeDetail() {;
                                 </Avatar>
                                 <span className="text-sm font-medium">
                                   {msg.user_profile?.display_name || 'Admin'}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                                 </span>
                               </div>
                               <span className="text-xs opacity-70">
@@ -1510,6 +1866,10 @@ export function DisputeDetail() {;
                           onClick={() => {
                             if (message.trim()) {
                               addDisputeMessage(disputeId!, message, true).then(() => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     />;
                     <div className="flex justify-end">;
                       <Button onClick={handleSendMessage} disabled={isSending || !message && message.trim()}>;
@@ -1639,11 +1999,16 @@ export function DisputeDetail() {;
                         <Button;
                           variant="outline";
                           onClick={() => {;
+<<<<<<< HEAD
                             if (message.trim()) {;
+=======
+                            if (message && message.trim()) {;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                               addDisputeMessage(disputeId!, message, true).then(() => {;
                                 getDisputeMessages(disputeId!).then(setMessages);
                                 setMessage("");
                               });
+<<<<<<< HEAD
                             }
                           }}
                         >
@@ -1721,6 +2086,10 @@ export function DisputeDetail() {;
       </div>
     </div>
   )
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                             on_change={(e) => set_resolution ({ ...resolution, summary: e.target.value })}
                             className="min - h-[100px]";
                           />;
@@ -1945,6 +2314,7 @@ setMessages (messagesData)
 }
 ;
 
+<<<<<<< HEAD
 };
 }, [disputeId, navigate, getDisputeById, getDisputeMessages]);
 }
@@ -2053,3 +2423,6 @@ formatDistanceToNow (new Date (dispute.created at), {
 }
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

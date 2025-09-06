@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from "react",
 import { cn } from "@/lib/utils",
@@ -19,6 +23,7 @@ export function SidebarGroup(): any ({ className, children, ...props }: SidebarG
 
   )
 
+<<<<<<< HEAD
 import React from "react";
 import { cn } from "@/lib/utils";
 import React from "react",
@@ -42,6 +47,9 @@ export function SidebarGroup({
   );
 }
   )
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",;
 import { cn } from "@/lib/utils",;
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {;
@@ -51,6 +59,7 @@ interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {;
 ;
 export function SidebarGroup({ className, children, ...props }: SidebarGroupProps) {;
   return (;
+<<<<<<< HEAD
 }
 
 ;
@@ -62,3 +71,18 @@ export function SidebarGroup({ className, children, ...props }: SidebarGroupProp
   );
 }
 ;
+=======
+
+    <div className={cn("mb-4", className)} {...props}>;
+      {children}
+
+    </div>;
+  );
+}
+
+=======
+;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

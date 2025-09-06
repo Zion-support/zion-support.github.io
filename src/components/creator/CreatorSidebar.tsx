@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {
 
   Bell
@@ -7,11 +8,14 @@ import {
   Search
   Settings
   Users
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 } from 'lucide-react'; import {
 
 } from "@/components/ui/sidebar";
 
 
+<<<<<<< HEAD
   Bell,
   FileText,
   Home,
@@ -41,10 +45,13 @@ import {
   // SidebarGroupLabel, // Not needed
   // SidebarGroupContent, // Not needed
 } from "@/components/ui/sidebar"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarContent>
+<<<<<<< HEAD
         <SidebarGroup title='Dashboard'>
           <SidebarMenuItem href='/creator-dashboard' icon={<Home size={16} />}>
             <span>Home</span>
@@ -69,6 +76,13 @@ export function AppSidebar() {
             <span>Profile</span>
           </SidebarMenuItem>
           <SidebarMenuItem href='/settings' icon={<Settings size={16} />}>            <span>Settings</span>            <span>Home</span>
+=======
+
+        <SidebarGroup title="Dashboard">
+          <SidebarMenuItem href="/creator-dashboard" icon={<Home size={16} />}>
+            <span>Home</span>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </SidebarMenuItem>
           <SidebarMenuItem href="/messaging" icon={<Mail size={16} />}>
             <span>Messages</span>
@@ -94,6 +108,7 @@ export function AppSidebar() {
           </SidebarMenuItem>
         </SidebarGroup>
       </SidebarContent>
+<<<<<<< HEAD
     </Sidebar>
   )
 }
@@ -107,6 +122,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
   );
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import {;
   Bell,;
@@ -281,6 +299,7 @@ function AppSidebar() {
         </SidebarGroup>;
       </SidebarContent>;
     </Sidebar>);
+<<<<<<< HEAD
     </Sidebar>
   )
 }
@@ -290,3 +309,6 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-reac
 };
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-react'
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

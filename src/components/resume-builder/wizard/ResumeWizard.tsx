@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { useResume  } from '@/hooks/useResume';
@@ -152,12 +153,31 @@ export function ResumeWizard() {;
   },
 if (isLoading) {
     return (
+=======
+if (isLoading) {
+    return (
+      <div className="flex justify-center items-center h-64">;
+        <Loader2 className="h-8 w-8 animate-spin text-primary" />;
+      </div>;
+    );
+  }
+
+
+  
+
+
+  if (error) {
+
+  if (error) {;
+    return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="flex justify-center items-center h-64">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
       </div>
     )
   }
 
+<<<<<<< HEAD
   
 ursor/fix-website-loading-errors-and-merge-6662
       <div className="flex justify-center items-center h-64">;
@@ -195,6 +215,12 @@ ursor/fix-website-loading-errors-and-merge-6662
     )
   }
   
+=======
+
+  
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (!resume && !showNewResumeForm) {
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />
   }
@@ -210,6 +236,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         onCreateResume = {handleCreateNewResume,}
         onCancel = {(,) => setShowNewResumeForm(false),}
         isLoading = {isLoading,}
+<<<<<<< HEAD
 ;
   if (!resume && !showNewResumeForm) {;
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
@@ -221,10 +248,14 @@ ursor/fix-website-loading-errors-and-merge-6662
         onCreateResume={handleCreateNewResume}
         onCancel={() => setShowNewResumeForm(false)}
         isLoading={isLoading}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       />;
     );
   }
 
+<<<<<<< HEAD
   return (
   
     <div className="space-y-6">
@@ -238,6 +269,12 @@ ursor/fix-website-loading-errors-and-merge-6662
     )
   }
   
+=======
+
+
+  
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   if (!resume && !showNewResumeForm) {;
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
@@ -261,10 +298,19 @@ ursor/fix-website-loading-errors-and-merge-6662
         <h1 className="text-2xl font-bold">Resume Builder</h1>
         <div className="flex gap-4 flex-wrap items-center">
           {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
+<<<<<<< HEAD
           <Button
             onClick = {(,) => setShowNewResumeForm(true),}
           <Button;
             onClick={() => setShowNewResumeForm(true)}
+=======
+
+
+          <Button;
+            onClick={() => setShowNewResumeForm(true)}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             variant="outline"
             size="sm"
             className="gap-2"
@@ -274,8 +320,13 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Button>
         </div>
       </div>
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
       
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       
 
 
@@ -284,6 +335,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <h2 className="text-xl font-semibold">{resume?.basic_info?.title |'My Resume'}</h2>
             <ResumeProgress resume={resume} progress={progress} />
           </div>
+<<<<<<< HEAD
           
           <Tabs value={activeTab} onValueChange={setActiveTab}>
             <ResumeSteps
@@ -306,6 +358,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                 onPrevStep={prevStep}
 ursor/fix-website-loading-errors-and-merge-6662
           <Tabs value={activeTab} onValueChange={setActiveTab}>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           
 
@@ -375,18 +430,23 @@ if ( {) {
 
             {resume && (;
 
+<<<<<<< HEAD
             {resume && (
               <ResumeStepContent
             {resume && (
               <ResumeStepContent
             {resume && (
               <ResumeStepContent 
+=======
+              <ResumeStepContent
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 activeTab = {activeTab,}
                 resume = {resume as Resume,}
                 onNextStep = {nextStep,}
                 onPrevStep = {prevStep,}
               />
             )}
+<<<<<<< HEAD
           </Tabs>
         </CardContent>
       </Card>
@@ -444,6 +504,9 @@ if ( {) {
                 onPrevStep={prevStep}
               />;
             )}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </Tabs>;
         </CardContent>;
       </Card>;
@@ -506,4 +569,8 @@ if ( {) {
   prev_step;
 }/>);
 }</Tabs> </CardContent> </Card> </div>);
+<<<<<<< HEAD
 }'"}
+=======
+}'"}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

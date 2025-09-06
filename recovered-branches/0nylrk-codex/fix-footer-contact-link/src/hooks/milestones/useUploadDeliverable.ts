@@ -1,5 +1,11 @@
 
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
@@ -7,6 +13,7 @@ import {toast} from 'sonner';
 import {useRecordActivity} from './useRecordActivity';
 
 
+<<<<<<< HEAD
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
@@ -18,10 +25,17 @@ export const useUploadDeliverable = () => {
   const { recordMilestoneActivity } = useRecordActivity();
   const uploadDeliverable = async (milestoneId: string, projectId: string, file: File) => {
     if (!user |!projectId) return null;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const useUploadDeliverable = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { recordMilestoneActivity } = useRecordActivity();
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
@@ -31,10 +45,19 @@ export const useUploadDeliverable = () => {
   const { user } = useAuth(),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { recordMilestoneActivity } = useRecordActivity(),
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   
   const uploadDeliverable = async (milestoneId: string, projectId: string, file: File) => {
     if (!user || !projectId) return null,
     
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {
       setIsSubmitting(true)
       // Get the current milestone
@@ -42,6 +65,7 @@ export const useUploadDeliverable = () => {
         .from('project_milestones')
         .select('*')
         .eq('id', milestoneId)
+<<<<<<< HEAD
         .single();
       if (fetchError) throw fetchError;
       if (!milestone) throw new Error("Milestone not found");
@@ -56,11 +80,30 @@ export const useUploadDeliverable = () => {
         added_by: user.id
       }
       const deliverables = [...(milestone.deliverables |[]), newDeliverable];
+=======
+
+        id: crypto && crypto.randomUUID();
+        filename: file && file.name;
+        size: file && file.size;
+        type: file && file.type;
+        added_at: new Date().toISOString(),
+        added_by: user && user.id
+      };
+      
+      const deliverables = [...(milestone && milestone.deliverables || []), newDeliverable];
+      
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const { error } = await supabase
         .from('project_milestones')
         .update({ deliverables })
         .eq('id', milestoneId);
       if (error) throw error;
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         .single(),
       
       if (fetchError) throw fetchError,
@@ -86,6 +129,7 @@ export const useUploadDeliverable = () => {
         
       if (error) throw error,
       
+<<<<<<< HEAD
       // Create activity record
       await recordMilestoneActivity(
         milestoneId
@@ -224,6 +268,8 @@ export const useUploadDeliverable = () => {;
         
       if (error) throw error,
       
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       // Create activity record
       await recordMilestoneActivity(
@@ -306,6 +352,11 @@ if (throw error) {
       setIsSubmitting (false);
     }
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       ),
       
       toast.success("Deliverable added successfully"),
@@ -327,6 +378,7 @@ if (throw error) {
   }
 }
 ;
+<<<<<<< HEAD
 
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -426,3 +478,6 @@ isSubmitting
 };
   }
 };
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

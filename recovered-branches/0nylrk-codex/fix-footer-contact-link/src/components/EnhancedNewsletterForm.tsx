@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -20,6 +24,7 @@ export function EnhancedNewsletterForm() {
   const [email, setEmail] = useState(""),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [isSubmitted, setIsSubmitted] = useState(false),
+<<<<<<< HEAD
 
   const handleSubmit = (e: React.FormEvent) => {
 e.preventDefault();
@@ -53,6 +58,11 @@ e.preventDefault();
           <p className="text-zion-slate-light text-sm">Get exclusive offers, trending AI news, and early access to best deals</p>
         </div>
       </div>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+  const handleSubmit = (e: React.FormEvent) => {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     e.preventDefault(),
     setIsSubmitting(true),
@@ -125,11 +135,20 @@ export function EnhancedNewsletterForm() {;
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Input
             type="email"
             placeholder="Enter your email"
             className="flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"
             value={email}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="mt-4 flex items-center text-xs text-zion-slate-light">;
         <div className="flex -space-x-1 mr-2">;
           {[...Array(3)].map((_, i) => (;
@@ -177,6 +196,56 @@ export function EnhancedNewsletterForm() {;
         <span>Join 10,000+ tech professionals who already subscribe</span>;
       </div>;
     </div>;
+<<<<<<< HEAD
+=======
+  );
+=======
+      {is_submitted ? (
+        <div className="text - center p - 4 rounded - lg bg - zion - purple / 20 border border - zion - purple / 40">;
+          <p className="text - white font - medium">Thank you for subscribing!</p>;
+          <p className="text - zion - slate - light mt - 1">;
+            We'll keep you updated with the latest from Zion.;
+          </p>;
+        </div>) : (
+        <form;
+          on_submit={handle_submit}
+          className="flex flex - col space - y-3 sm:flex - row sm:space - y-0 sm:space - x-2";
+        >;
+          <Input;
+            type="email";
+            placeholder="Enter your email";
+            className="flex - grow bg - zion - blue - dark text - white border - zion - purple / 20 focus:border - zion - purple focus:ring - zion - purple";
+            value={email}
+            on_change={(e: React.ChangeEvent < HTMLInputElement>) =>;
+              set_email (e.target.value);
+            }
+            required;
+          />;
+          <Button;
+            type="submit";
+            disabled={is_submitting}
+            className="bg - gradient - to - r from - zion - purple to - zion - purple - dark text - white hover:from - zion - purple - light hover:to - zion - purple";
+          >;
+            {is_submitting ? "Subscribing..." : "Subscribe"}
+          </Button>;
+        </form>)}
+      <div className="mt - 4 flex items - center text - xs text - zion - slate - light">;
+        <div className="flex -space - x-1 mr - 2">;
+          {[...Array (3)].map ((_, i) => (
+            <div;
+              key={i}
+              className="h - 5 w - 5 rounded - full border border - zion - blue - dark bg - zion - blue flex items - center justify - center text - zion - cyan";
+            >;
+              {String.fromCharCode (65 + i)}
+            </div>))}
+        </div>;
+        <span > Join 10, 000+ tech professionals who already subscribe</span>;
+      </div>;
+    </div>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
             required
           />
@@ -189,6 +258,7 @@ export function EnhancedNewsletterForm() {;
           </Button>
         </form>
       )}
+<<<<<<< HEAD
 <div className="mt-4 flex items-center text-xs text-zion-slate-light">
         <div className="flex -space-x-1 mr-2">
           {[...Array(3)].map((_, i) => (
@@ -295,3 +365,10 @@ setIsSubmitting (true);
 }</div> <span>Join 10, 000+ tech professionals who already subscribe</span> </div> </div>) 
 }
 }
+=======
+
+
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

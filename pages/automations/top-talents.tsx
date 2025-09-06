@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import type { NextPage, GetServerSideProps } from "next";
 import fs from "fs";
@@ -7,6 +11,7 @@ import Link from "next/link";
 
 type TalentItem = {;
 
+<<<<<<< HEAD
 
 
 
@@ -34,6 +39,24 @@ const TopTalentsPage: NextPage<Props> = ({ items }) => {;
       </div>;
     </main>;
   );
+=======
+  talentSlug: string;
+  talentName: string;
+  averageRating: number;
+  totalReviews: number;
+
+=======
+
+
+};
+type Props = { items: TalentItem[] };
+
+
+
+
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextPage, GetServerSideProps } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -65,12 +88,15 @@ const TopTalentsPage: NextPage<Props> = ({ items }) => {
     </main>
 
 
+<<<<<<< HEAD
 export const getServerSideProps: GetServerSideProps = async () => {
   const p = path.join(process.cwd(), 'publicautomationstop-talents.json');
   let items: TalentItem[] = [];
   try {
     const raw = fs.readFileSync(p, "utf8");
     const data = JSON.parse(raw);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 };
 export const getServerSideProps: GetServerSideProps = async () => {;
   const p = path && path.join(;
@@ -89,6 +115,12 @@ export const getServerSideProps: GetServerSideProps = async () => {;
   return { props: { items } }
 }
 export default TopTalentsPage;
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextPage, GetServerSideProps } from './next';
 import fs from './fs';
 import path from './path';
@@ -148,6 +180,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
 
 export default TopTalentsPage;
 ;
+<<<<<<< HEAD
               </div>
               <span className=&quot;pill&quot;>Auto</span>
             </div>
@@ -269,3 +302,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
 }
 };
 export default TopTalentsPage;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

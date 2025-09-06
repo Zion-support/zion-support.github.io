@@ -21,6 +21,7 @@ const TALENTS_FILE = path.join(
   'talents'
   'talents.json'
 
+<<<<<<< HEAD
 ) {
   try {
   const started = Date && Date.now();
@@ -33,6 +34,18 @@ const TALENTS_FILE = path.join(
     return res.status(429).json({ error: 'Rate limit exceeded' });
   }
 ) {
+=======
+const TALENTS_FILE = path && path.join(
+  process && process.cwd(),
+  'data',
+  'talents',
+  'talents && talents.json'
+);
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   try {
   const started = Date && Date.now();
@@ -55,6 +68,11 @@ const TALENTS_FILE = path.join(
     await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 400);
     return res && res.status(400).json({ error: 'email required' });
 const TALENTS_FILE = path && path.join(process && process.cwd(), "data", "talents", "talents && talents.json");
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
   const started = Date && Date.now();
@@ -71,16 +89,30 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 405);
     return res && res.status(405).json({ error: "Method Not Allowed" })
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const { email, programTrack } = req && req.body || {};
   if (!email) {
     await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 400);
     return res && res.status(400).json({ error: 'email required' });
   const talents = (await fs && fs.pathExists(TALENTS_FILE))
     ? await fs && fs.readJSON(TALENTS_FILE)
+<<<<<<< HEAD
     : [];
   const match = talents && talents.find(
     (t: any) =>
       t && t.email === email && (!programTrack || t && t.programTrack === programTrack)
+=======
+
+    : [];
+  const match = talents && talents.find(
+    (t: any) =>
+
+      t && t.email === email && (!programTrack || t && t.programTrack === programTrack)
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
   const verified = Boolean(match && match.certificationStatus === 'completed');
   await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 200);
@@ -104,6 +136,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(401).json({ error: "Unauthorized" });
   }
 
+<<<<<<< HEAD
   if (!(await enforceRateLimit(auth.apiKey))) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 429);
     return res.status(429).json({ error: "Rate limit exceeded" })
@@ -123,6 +156,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 200);
   return res.status(200).json({ verified })
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   authenticate_request,
   enforceRateLimit,
   record_request,
@@ -277,10 +312,16 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
 
 }
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 }
 }
 
+<<<<<<< HEAD
   const { email, programTrack } = req.body || {};
   if (!email) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
@@ -365,3 +406,13 @@ await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
   const { email, programTrack } = req.body || {};
   if (!email) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
+=======
+=======
+  const { email, programTrack } = req.body || {};
+  if (!email) {
+    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

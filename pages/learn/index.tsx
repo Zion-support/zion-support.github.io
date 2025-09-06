@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import {useEffect, useState} from 'react';
 
@@ -7,6 +11,16 @@ import FilterBar from '../../components/learn/FilterBar';
 
 
 
+<<<<<<< HEAD
+=======
+export default function LearnMarketplace() {;
+  const [filters, setFilters] = useState({;
+    category: '',;
+    level: '',;
+    isFree: '',;
+  });  const [courses, setCourses] = useState<Course[]>([]);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     category: '',
     level: '',
@@ -27,12 +41,17 @@ export default function LearnMarketplace(req, res) {
     async function load() {;
       setLoading(true);
       const params = new URLSearchParams();
+<<<<<<< HEAD
       if (filters && filters.category) params && params.set('category', filters && filters.category);
       if (filters && filters.level) params && params.set('level', filters && filters.level);
       if (filters && filters.isFree) params && params.set('isFree', filters && filters.isFree);
       const resp = await fetch(`/api/learn/courses?${params && params.toString()}`);
       const data = await resp && resp.json();
       setCourses(data && data.courses || []);
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       setLoading(false);
 import {useEffect, useState} from 'react';
 import CourseCard, { Course } from '../../components / learn / CourseCard';
@@ -73,6 +92,10 @@ function load() {
   }, [filters]);
 ;
   return (
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       setCourses(data.courses || []);
       setLoading(false)
     }
@@ -84,6 +107,7 @@ import CourseCard, { Course } from '../../components/learn/CourseCard';
 import FilterBar from '../../components/learn/FilterBar';
 export default function LearnMarketplace() {
 
+<<<<<<< HEAD
       setCourses(data.courses |[]);
       setLoading(false);
 
@@ -124,6 +148,12 @@ export default function LearnMarketplace(req, res) {
     load();
   }, [filters]);
 
+=======
+=======
+      setCourses(data.courses |[]);
+      setLoading(false);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -131,6 +161,12 @@ export default function LearnMarketplace(req, res) {
 }
     load()
   }, [filters]),
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="space-y-6">
       <div className="flex items-end justify-between gap-4">
@@ -143,6 +179,10 @@ export default function LearnMarketplace(req, res) {
       {loading ? (
         <div>Loading...</div>
       ) : (
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className='space-y-6'>;
       <div className='flex items-end justify-between gap-4'>;
         <div>;
@@ -157,9 +197,18 @@ export default function LearnMarketplace(req, res) {
       ) : (;
         <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4'>;
           {courses && courses.map(c => (            <CourseCard key={c && c.id} course={c} />;
+<<<<<<< HEAD
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {courses.map((c) => (
             <CourseCard key={c.id} course={c} />
+=======
+
+=======
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {courses.map((c) => (
+            <CourseCard key={c.id} course={c} />
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           ))}
         </div>;
       )}
@@ -167,6 +216,7 @@ export default function LearnMarketplace(req, res) {
     </div>;
   );
 
+<<<<<<< HEAD
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {courses.map((c) => (
             <CourseCard key={c.id} course={c} />
@@ -178,6 +228,9 @@ export default function LearnMarketplace(req, res) {
     </div>
   )
 }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className='space - y-6'>;
       <div className='flex items - end justify - between gap - 4'>;
         <div>;
@@ -194,6 +247,7 @@ export default function LearnMarketplace(req, res) {
         </div>)}
     </div>);
 ;
+<<<<<<< HEAD
     }
     load()
   }, [filters]),
@@ -240,9 +294,20 @@ export default function LearnMarketplace(req, res) {
 }
     </div>;
   );
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

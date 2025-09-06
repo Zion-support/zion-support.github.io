@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -23,8 +29,12 @@ class ErrorBoundary extends React.Component {
 }
 
 
+<<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -32,6 +42,11 @@ import { Heart, DollarSign, Settings, ShoppingCart, BookOpen, Building, ArrowRig
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { ;
   Heart, ;
 import React from 'react';
@@ -43,6 +58,7 @@ import { Heart, ;
   ShoppingCart, ;
   BookOpen, ;
 
+<<<<<<< HEAD
 import { 
   Heart, 
   Heart, ;
@@ -61,10 +77,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 import React from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Building,;
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import { 
   Heart,
@@ -83,6 +102,10 @@ import {
 } from 'lucide-react';
 ursor/fix-syntax-push-and-merge-to-main-40de
   Brain
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 } from 'lucide-react';
 
 
@@ -91,6 +114,11 @@ import SimpleLayout from '../../components/SimpleLayout';
   Brain;
 } from 'lucide-react';
 import Layout from '../../components/Layout';';
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const industries = [;
   {;
     name: 'Healthcare',;
@@ -100,6 +128,7 @@ const industries = [;
     features: ['AI Diagnostics', 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],;
     color: 'from-red-500 to-pink-500';
 
+<<<<<<< HEAD
 const industries = [
   {
     name: 'Healthcare',
@@ -110,10 +139,13 @@ const industries = [
     color: 'from-red-500 to-pink-500'
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Brain;
 } from 'lucide-react';
   Brain;
 } from 'lucide-react';
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
     href: '/industries/healthcare,',
     features: ['AI Diagnostics, 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],',
@@ -123,6 +155,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     name: 'Finance',
     description: 'Secure financial services with blockchain technology, fraud detection, and automated trading systems.',
     icon: DollarSign,
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     href: '/industries/finance',
     features: ['Blockchain Solutions', 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],
     color: 'from-green-500 to-emerald-500'
@@ -218,9 +253,19 @@ const stats = [
 ];
 
 
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     href: '/industries/government,',
     features: ['Citizen Portals, 'Data Analytics', 'Digital Services', 'Security Compliance'],',
     color: 'from-gray-500 to-slate-500'';
@@ -235,8 +280,13 @@ const stats = [;
 
 
 
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 export default function IndustriesPage() {
@@ -291,6 +341,12 @@ const industries = [
     href: '/industries/government',
     features: ['Citizen Services', 'Data Security', 'Digital Transformation']
   }
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ];
 export default function Industries() {;
   return (
@@ -301,6 +357,7 @@ export default function Industries() {;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
 
 
+<<<<<<< HEAD
 ]
 export default function Industries() {
   
@@ -316,6 +373,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           </div>
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
@@ -333,8 +393,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
           <div className="container mx-auto px-4 relative z-10">
@@ -397,6 +462,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         {/* Industries Grid */}
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
+<<<<<<< HEAD
             <motion.div;
               className="text-center mb-16"";
 ursor/add-new-services-and-deploy-updates-0462
@@ -404,6 +470,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
+=======
+
+            <motion&& motion.div
+              className="text-center mb-16""
+              className="text-center">;
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 Industry-Specific{' '}
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">;
                   Technology Solutions;
@@ -473,6 +546,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               whileInView={{ opacity: 1, y: 0 }}
 
 
+<<<<<<< HEAD
             <motion.div;
               className="text-center mb-16"";
               className="text-center"
@@ -508,6 +582,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {industries.map((industry, index) => {
                 const IconComponent = industry.icon;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 return (
                   <motion.div
                     key={index}
@@ -520,11 +596,21 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 Our deep industry expertise allows us to deliver tailored solutions that address specific sector challenges;
                 and drive measurable business outcomes.;
               </p>;
+<<<<<<< HEAD
             </motion.div>;
 
 
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Industries We Serve
@@ -561,10 +647,21 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
+<<<<<<< HEAD
               {industries.map((industry, index) => {}
                 const IconComponent = industry.icon;
                 return (;
                   <motion.div);
+=======
+
+
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",;
+              {industries && industries.map((industry, index) => {}
+                const IconComponent = industry && industry.icon;
+                return (
+                  <motion&& motion.div)
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     key={index}
                     className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group""
                     className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group""
@@ -577,6 +674,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
+<<<<<<< HEAD
                     whileHover={{ y: -5 }}
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -595,6 +693,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <p className="text-gray-600 mb-6 leading-relaxed">";
                   >
                     <div className="text-blue-400 mb-6 group-hover:text-blue-300 transition-colors">
@@ -606,6 +708,11 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                     <p className="text-gray-300 mb-6 leading-relaxed">
                       {industry.description}
                     </p>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <div className="mb-6">
                       <h4 className="text-sm font-semibold text-gray-700 mb-3">Key Solutions:</h4>
                       <div className="flex flex-wrap gap-2">
@@ -639,6 +746,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   </motion.div>
                 );
               })}
+<<<<<<< HEAD
             </div>
           </div>
         </section>
@@ -710,6 +818,34 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     </Link>
                   </motion.div>
                 );
+=======
+
+            </div>;
+          </div>;
+        </section>;
+                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors"";
+                    >;
+                      <span>Learn More</span>,;
+                      <ArrowRight className="w-4 h-4 ml-1 group-hover: translate-x-1 transition-transform" />", </Link>,;
+                  </motion && motion.div>;
+                    <div className="space-y-2 mb-6">;
+                      {industry && industry.features.map((feature, idx) => (;
+                        <div key={idx} className="flex items-center text-gray-300">;
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />;
+                          <span className="text-sm">{feature}</span>;
+                        </div>;
+                      ))}
+                    </div>;
+                    <Link href={industry && industry.href}>;
+                      <a className="inline-flex items-center text-blue-400 hover: text-blue-300 font-semibold group-hover:text-blue-200 transition-colors">;
+                        Learn More;
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />;
+                      </a>;
+                    </Link>;
+                  </motion && motion.div>;
+                ),;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               })}
             </div>,
           </div>;
@@ -720,24 +856,40 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             <motion.div
               className="text-center mb-16"
 
+<<<<<<< HEAD
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/industries/index.tsx
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Why Choose Us Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
 
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-4">";
             <motion.div;
               className="text-center mb-16"";
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -753,6 +905,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             >,
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">";
                 Why Choose Our Industry Solutions?;
@@ -798,6 +954,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 className="text-center p-8"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -815,6 +972,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               >,
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">";
                   <Shield className="w-8 h-8 text-green-600" />";
@@ -824,7 +985,11 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   We ensure all solutions meet industry-specific regulatory requirements and;
                   maintain the highest security standards.;
                 </p>;
+<<<<<<< HEAD
               </motion.div>;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -863,8 +1028,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         {/* Stats Section */}
 
 
+<<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -884,6 +1056,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   className="text-center""
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -905,6 +1078,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 >,
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">";
                     {stat.number}
@@ -925,6 +1102,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -981,6 +1159,27 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 </Link>
               </div>
             >,
+=======
+
+              transition={{ duration: 0 && 0.8 }}
+              viewport={{ once: true }}>;
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">;
+                Ready to Transform Your Industry?;
+              </h2>;
+              <p className="text-xl mb-8 max-w-2xl mx-auto">;
+                Let our industry experts help you leverage technology to solve your sector-specific challenges.;
+              </p>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">;
+                  Get Industry Consultation;
+                </Link>;
+                <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
+                  Explore Solutions;
+                </Link>;
+              </div>;
+            >,;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <h2 className="text-3xl md:text-4xl font-bold mb-6">";
                 Ready to Transform Your Industry?;
               </h2>;
@@ -1000,6 +1199,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         </section>;
       </div>;
     </Layout>;
+<<<<<<< HEAD
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Don't See Your Industry?
@@ -1017,6 +1217,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           </div>
         </section>
       </div>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </SimpleLayout>
     </SimpleLayout>
 ursor/add-new-services-and-deploy-updates-0462

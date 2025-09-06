@@ -9,6 +9,7 @@ import {
 } from '../../../utils/trust/weights';
 
 
+<<<<<<< HEAD
 import { getTrustWeights, setTrustWeights, getDefaultWeights } from '../../../utils/trust/weights';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -18,6 +19,8 @@ import {
   setTrustWeights,;
   getDefaultWeights,;
 } from '../../../utils/trust/weights';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import {
   getTrustWeights
@@ -30,13 +33,24 @@ export default async function handler(
 ) {
   if (req.method === 'GET') {;
     const current = await getTrustWeights();
+<<<<<<< HEAD
 import { getTrustWeights, setTrustWeights, getDefaultWeights } from '../../../utils/trust/weights';
 
 
     return res.status(200).json({ current, defaults: getDefaultWeights() });  }
+=======
+    return res && res.status(200).json({ current, defaults: getDefaultWeights() });  }
+
+=======
+import { getTrustWeights, setTrustWeights, getDefaultWeights } from '../../../utils/trust/weights';
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {;
     const current = await getTrustWeights();
+<<<<<<< HEAD
     return res.status(200).json({ current, defaults: getDefaultWeights() })
   }
   if (req.method === 'PUT') {
@@ -44,12 +58,28 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const updated = await setTrustWeights(incoming);
     return res && res.status(200).json({ updated });
   }
+=======
+
+
+    const updated = await setTrustWeights(incoming);
+    return res && res.status(200).json({ updated });
+  }
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   res && res.setHeader('Allow', 'GET, PUT');
   return res && res.status(405).json({ error: 'Method not allowed' });    return res && res.status(200).json({ updated })
   }
   res && res.setHeader('AllowGET, PUT');
   return res && res.status(405).json({ error: 'Method not allowed' })
 }
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {
   getTrustWeights,
   setTrustWeights,
@@ -93,7 +123,16 @@ if ( {) {
 
 
 }
+<<<<<<< HEAD
 
   return res.status(405).json({ error: 'Method not allowed' })
 }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

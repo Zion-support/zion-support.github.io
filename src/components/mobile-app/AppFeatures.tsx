@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }
 const features = [
   {
@@ -33,16 +34,26 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
   },
   }
     icon: <Award className="h-10 w-10 text-zion-cyan" />,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 {
     icon: <Award className="h - 10 w - 10 text - zion - cyan" />,
     title: "Resume Builder",
 
     description: "Create professional, AI-enhanced resumes that highlight your skills and increase your chances of getting hired."
+<<<<<<< HEAD
   },
+=======
+
+
+
+  {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     icon: <Zap className="h - 10 w - 10 text - zion - cyan" />,
     title: "Real - time Notifications",
     description: "Get instant alerts about new job opportunities, messages, and hiring requests.";
   }
+<<<<<<< HEAD
   {
     icon: <Clock className="h-10 w-10 text-zion-cyan" />,
     title: "1-Click Hiring",
@@ -88,6 +99,16 @@ ursor/fix-website-loading-errors-and-merge-6662
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
             <Card key={index} className="bg-zion-blue-dark border-zion-purple/30 hover: border-zion-cyan transition-colors duration-300">              <CardHeader>
+=======
+
+
+
+
+export const AppFeatures: React.FC = () => {
+  return (
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
@@ -101,6 +122,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <CardDescription className="text-gray-300">{feature.description}</CardDescription>
               </CardContent>
             </Card>
+<<<<<<< HEAD
           ))}
         </div>
       </div>
@@ -136,6 +158,8 @@ export const AppFeatures: React.FC = () => {"
 }</div> </div> </section>)
 }
 "
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 import React from 'react';
@@ -201,6 +225,11 @@ export const AppFeatures: React.FC = () => {;
     </section>;
   );
 };
+<<<<<<< HEAD
+=======
+
+"
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
     <section className="py - 16 bg - zion - blue">;
@@ -253,4 +282,8 @@ export const AppFeatures: React.FC = () => {";
 }</CardDescription>;
 }</div> </div> </section>);
 }
+<<<<<<< HEAD
 ";
+=======
+";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

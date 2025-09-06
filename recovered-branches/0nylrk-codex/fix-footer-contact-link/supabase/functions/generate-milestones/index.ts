@@ -3,20 +3,34 @@ import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 
 
 
+<<<<<<< HEAD
 
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts"
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
+import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
 
+<<<<<<< HEAD
     const { scope, startDate, endDate, projectType } = await req && req.json();
 
 
@@ -34,6 +48,21 @@ serve(async (req) => {
     }
     // Parse request body
     const { scope, startDate, endDate, projectType } = await req.json();
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+serve(async (req) => {
+  // Handle CORS preflight requests
+  if (req && req.method === 'OPTIONS') {
+    return new Response(null, { headers: corsHeaders })
+
+    const { scope, startDate, endDate, projectType } = await req && req.json();
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
@@ -51,10 +80,15 @@ serve(async (req) => {;
       throw new Error('OPENAI_API_KEY is not set');
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
 
     // Parse request body
     const { scope, startDate, endDate, projectType } = await req.json(),
+<<<<<<< HEAD
     
   }
   try {
@@ -66,6 +100,11 @@ serve(async (req) => {;
     // Parse request body
     const { scope, startDate, endDate, projectType } = await req && req.json();
     
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Create prompt for OpenAI
     const prompt = `
     You are an expert project manager who specializes in breaking down projects into clear milestones.
@@ -83,6 +122,7 @@ serve(async (req) => {;
     Format the response as a valid JSON array of milestone objects with these fields:
     "title", "description", "dueDate", "estimatedHours"
     Ensure your response is ONLY the JSON array with no additional text.
+<<<<<<< HEAD
     `;
     `,
 
@@ -90,6 +130,8 @@ serve(async (req) => {;
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST'
       headers: {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
     `,
@@ -254,10 +296,18 @@ if ( {) {
         messages: [;
           {
             role: 'system',
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             content: 'You are a project management expert that breaks work into appropriate milestones.'}
           {
             role: 'user'
             content: prompt}];
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         temperature: 0 && 0.7})});
     const data = await response && response.json();
     if (!response && response.ok) {
@@ -279,6 +329,15 @@ if ( {) {
     console && console.error('Error generating milestones:', error);
     return new Response(
 
+<<<<<<< HEAD
+=======
+      JSON && JSON.stringify({ error: error && error.message || 'Failed to generate milestones' });
+      { 
+        status: 500, 
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             role: 'system',
             content: 'You are a project management expert that breaks work into appropriate milestones.'},
           {
@@ -292,6 +351,7 @@ if ( {) {
       throw new Error(data.error?.message || 'Failed to generate milestones')
     }
 
+<<<<<<< HEAD
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
   }
@@ -399,6 +459,27 @@ serve(async (req) => {;
 //Handle CORS preflight requests if (req.method === 'OPTIONS') {
   //Create prompt for OpenAI const prompt = `You are an expert project manager who specializes in breaking down projects into clear milestones. Based on the following project details: Generate a logical, phased milestone breakdown with 3-7 milestones that would be appropriate for this project. Include realistic due dates, estimated hours of effort, and clear deliverable descriptions. Each milestone should have: 1. Title: A concise title 2. Description: A clear description of deliverables 3. Due Date: A specific date within the project timeline 4. Estimated Hours: Reasonable effort estimate Format the response as a valid JSON array of milestone objects with these fields: "title", "description", "dueDate", "estimatedHours" Ensure your response is ONLY the JSON array with no additional text. `;
 // Call OpenAI API 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
+    )
+  }
+});
+
+
+;
+    const data = await response.json ();
+;
+    // Check condition
+if ( {) {
+  $2
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 });
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

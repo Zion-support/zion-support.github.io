@@ -9,4 +9,8 @@ const AIAutonomousIntegration = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIAutonomousIntegration;
+=======
+export default AIAutonomousIntegration;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

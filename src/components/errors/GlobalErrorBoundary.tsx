@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -27,12 +28,15 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {
   AlertTriangle,
   RefreshCw,
   Home,
   Bug,
   Send,
+<<<<<<< HEAD
   Clipboard,
   Clipboard,
   Clipboard,
@@ -42,6 +46,12 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import * as Sentry from '@sentry/nextjs'
 import {logErrorToProduction} from '@/utils/productionLogger';
+=======
+
+
+  Clipboard,;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 } from 'lucide-react';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
@@ -49,6 +59,7 @@ import { Badge } from '@/components / ui / badge';
 import * as Sentry from '@sentry / nextjs';
 import { logErrorToProduction } from '@/utils / production_logger';
 interface ErrorBoundaryState {
+<<<<<<< HEAD
   hasError: boolean
   error: Error | null
   errorInfo: ErrorInfo | null
@@ -112,17 +123,47 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       userFeedback: ''
       showDetails: false
     } }    ,}
+=======
+  has_error: boolean;
+  error: Error | null;
+  error_info: ErrorInfo | null;
+  error_id: string | null;
+  retry_count: number;
+  user_feedback: string;
+  show_details: boolean;
+interface ErrorBoundaryProps {
+  children: ReactNode;
+  fallback?: ReactNode;
+
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  enableRetry?: boolean;
+
+  maxRetries?: number;
+
+  showReportButton?: boolean;
+  context?: string;  enable_retry?: boolean;
+  max_retries?: number;
+  showReportButton?: boolean;
+  context?: string;
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       hasError: false,
       error: null,
       errorInfo: null,
       errorId: null,
       retryCount: 0,
       userFeedback: '',
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       showDetails: false
     }
   }
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
     return {
+<<<<<<< HEAD
       hasError: true,
       error
 'use client';
@@ -226,6 +267,11 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
     });
   }
       hasError: true
+=======
+
+      hasError: true,
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       error
     }
   }
@@ -236,6 +282,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
     const errorId = this.generateErrorId()
     // Enhanced error logging
     const enhancedError = {
+<<<<<<< HEAD
       ...error
     // Enhanced error logging
     const enhancedError = {
@@ -277,6 +324,9 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
     // Custom error handler
     if (this.props.onError) {
       this.props.onError(error, errorInfo)
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       ...error;
       componentStack: errorInfo.componentStack,
       errorBoundary: this.props.context || 'GlobalErrorBoundary',
@@ -408,6 +458,10 @@ if ( {) {
   }
   componentWillUnmount() {
     // Clear any pending retry timeouts
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     this.retryTimeouts.forEach(timeout => clearTimeout(timeout))
   }
   private generateErrorId(): string {
@@ -415,14 +469,29 @@ if ( {) {
   }
   private generateErrorId(): string {
     return `err_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+<<<<<<< HEAD
+=======
+
+  }
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   private getUserId(): string | null {
     // Try to get user ID from various sources
     if (typeof window !== 'undefined') {
       try {
         // Check localStorage, sessionStorage, or cookies
+<<<<<<< HEAD
         return localStorage.getItem('userId') || 
                sessionStorage.getItem('userId') || 
                null
+=======
+
+        return localStorage.getItem('userId') || 
+               sessionStorage.getItem('userId') || 
+               null
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Report to Sentry;
     Sentry.with_scope (scope => {
       scope.set_tag (
@@ -506,6 +575,7 @@ if ( {) {
           null);
       } catch {
         return null;
+<<<<<<< HEAD
 ;
   private getBuildInfo() {;
     return {;
@@ -628,15 +698,230 @@ if ( {) {
       logErrorToProduction('Failed to report error:', { data:err });
     }
     return null
+=======
+      }
+    }
+
+
+'use client';
+
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {;
+  AlertTriangle,;
+  RefreshCw,;
+  Home,;
+  Bug,;
+  Send,;
+  Clipboard,;
+} from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import * as Sentry from '@sentry/nextjs';
+import { logErrorToProduction } from '@/utils/productionLogger';
+
+interface ErrorBoundaryState {;
+  hasError: boolean;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
+  errorId: string | null;
+  retryCount: number;
+  userFeedback: string;
+  showDetails: boolean;
+
+interface ErrorBoundaryProps {;
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  enableRetry?: boolean;
+  maxRetries?: number;
+  showReportButton?: boolean;
+  context?: string;  enableRetry?: boolean;
+  maxRetries?: number;
+  showReportButton?: boolean;
+  context?: string;
+}
+
+export class GlobalErrorBoundary extends Component<;
+  ErrorBoundaryProps,;
+  ErrorBoundaryState;
+> {;
+  private retryTimeouts: NodeJS && NodeJS.Timeout[] = [];
+
+  constructor(props: ErrorBoundaryProps) {;
+    super(props);
+export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {;
+  private retryTimeouts: NodeJS && NodeJS.Timeout[] = [];
+
+  constructor(props: ErrorBoundaryProps) {;
+    super(props);
+
+    this && this.state = {;
+      hasError: false,;
+      error: null,;
+      errorInfo: null,;
+      errorId: null,;
+      retryCount: 0,;
+      userFeedback: '',;
+      showDetails: false,;
+    };  }    ,}
+      showDetails: false;
+    }
+  }
+
+  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {;
+    return {;
+      hasError: true,;
+      error,;
+    };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {;
+    const errorId = this && this.generateErrorId();
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {;
+    const errorId = this && this.generateErrorId();
+
+    // Enhanced error logging;
+    const enhancedError = {;
+      ...error,;
+    // Enhanced error logging;
+    const enhancedError = {;
+      ...error,      componentStack: errorInfo && errorInfo.componentStack,      ...error;
+      componentStack: errorInfo && errorInfo.componentStack,;
+      errorBoundary: this && this.props.context || 'GlobalErrorBoundary',;
+      timestamp: new Date().toISOString(),;
+      userAgent: typeof window !== 'undefined' ? navigator && navigator.userAgent : 'SSR',;
+      url: typeof window !== 'undefined' ? window && window.location.href : 'SSR',;
+      userId: this && this.getUserId(),;
+      buildInfo: this && this.getBuildInfo(),;
+    };
+    // Log to console in development;
+    if (process && process.env.NODE_ENV === 'development') {;
+      console && console.group('🚨 Error Boundary Caught Error');
+      logErrorToProduction('Error:', { data: error });
+      logErrorToProduction('Error Info:', { data: errorInfo });
+      logErrorToProduction('Enhanced Error:', { data: enhancedError });
+      console && console.groupEnd();
+    }
+
+    // Report to Sentry;
+    Sentry && Sentry.withScope(scope => {;
+      scope && scope.setTag(;
+        'errorBoundary',;
+        this && this.props.context || 'GlobalErrorBoundary';
+      );
+      scope && scope.setLevel('error');      scope && scope.setContext('errorInfo', {;
+        componentStack: errorInfo && errorInfo.componentStack,;
+        retryCount: this && this.state.retryCount,;
+      });
+
+      Sentry && Sentry.captureException(error);
+    });
+
+    // Custom error handler;
+    if (this && this.props.onError) {;
+      this && this.props.onError(error, errorInfo);
+    }
+
+    this && this.setState({;
+      errorInfo,;
+      errorId,;
+    });  }
+
+  componentWillUnmount() {;
+    // Clear any pending retry timeouts;
+      errorInfo;
+      errorId;
+    });
+
+    // Log to console in development;
+    if (process && process.env.NODE_ENV === 'development') {;
+      console && console.group('🚨 Error Boundary Caught Error');
+      logErrorToProduction('Error:', { data: error });
+      logErrorToProduction('Error Info:', { data: errorInfo });
+      logErrorToProduction('Enhanced Error:', { data: enhancedError });
+      console && console.groupEnd();
+    }
+
+    // Report to Sentry;
+    Sentry && Sentry.withScope((scope) => {;
+      scope && scope.setTag('errorBoundary', this && this.props.context || 'GlobalErrorBoundary');
+      scope && scope.setLevel('error');
+      scope && scope.setContext('errorInfo', {;
+        componentStack: errorInfo && errorInfo.componentStack,;
+        retryCount: this && this.state.retryCount;
+      });
+
+      Sentry && Sentry.captureException(error);
+    });
+
+    // Custom error handler;
+    if (this && this.props.onError) {;
+      this && this.props.onError(error, errorInfo);
+    }
+
+    this && this.setState({;
+      errorInfo;
+      errorId;
+    });
+  }
+
+  componentWillUnmount() {;
+    // Clear any pending retry timeouts;
+    this && this.retryTimeouts.forEach(timeout => clearTimeout(timeout));
+  }
+
+  private generateErrorId(): string {;
+    return `err_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;  }    this && this.retryTimeouts.forEach(timeout => clearTimeout(timeout));
+  }
+
+  private generateErrorId(): string {;
+    return `err_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
+
+  private getUserId(): string | null {;
+    // Try to get user ID from various sources;
+    if (typeof window !== 'undefined') {;
+      try {;
+        // Check localStorage, sessionStorage, or cookies;
+        return (
+          localStorage && localStorage.getItem('userId') ||;
+          sessionStorage && sessionStorage.getItem('userId') ||;
+          null;
+        );
+      } catch {;
+        return null;
+      }
+    }
+    return null;  }      } catch {;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         return null;
       }
     }
     return null;
   }
+<<<<<<< HEAD
+=======
+
+    return null
+        return null;
+      }
+    }
+    return null;
+
+  }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   private getBuildInfo () {
     return {
       version: process.env.NEXT_PUBLIC_APP_VERSION || 'unknown',
       environment: process.env.NODE_ENV,
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return 'This appears to be a temporary issue. Please try again.'
       build_time: process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown',
     }
@@ -735,8 +1020,16 @@ if ( {) {
       return 'You may need to log in again or check your permissions.';
     }
     return 'This appears to be a temporary issue. Please try again.';
+<<<<<<< HEAD
   }
   private retry = () => {
+=======
+
+  }
+  private retry = () => {
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const timeout = setTimeout(() => {
       this.setState({
         hasError: false,
@@ -744,6 +1037,7 @@ if ( {) {
         errorInfo: null,
         errorId: null,
         retryCount: this.state.retryCount + 1,
+<<<<<<< HEAD
         return (
           localStorage.getItem('userId') |
           sessionStorage.getItem('userId') |
@@ -845,6 +1139,9 @@ if ( {) {
         errorInfo: null
         errorId: null
         retryCount: this.state.retryCount + 1
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         showDetails: false
       })
     }, retryDelay)
@@ -877,6 +1174,10 @@ if ( {) {
     }, retry_delay);
     this.retry_timeouts.push (timeout);
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const error_details = {
       error_id: this.state.error_id,
       message: this.state.error?.message,
@@ -886,6 +1187,10 @@ if ( {) {
       url: typeof window !== 'undefined' ? window.location.href : 'unknown',
       user_agent:;
         typeof window !== 'undefined' ? navigator.user_agent : 'unknown',
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     try {
       await navigator.clipboard.write_text (
@@ -895,6 +1200,11 @@ if ( {) {
       logErrorToProduction ('Failed to copy error details:', { data: err });
     }
   }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   private copyErrorDetails = async () => {
     const errorDetails = {
       errorId: this.state.errorId,
@@ -905,6 +1215,11 @@ if ( {) {
       url: typeof window !== 'undefined' ? window.location.href : 'unknown',
       userAgent: typeof window !== 'undefined' ? navigator.userAgent : 'unknown'
     }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   private report_error = async () => {
     // Check condition
 if (return) {
@@ -921,6 +1236,7 @@ if (return) {
       logErrorToProduction ('Failed to copy error details:', { data: err });
     }
   }
+<<<<<<< HEAD
     if (!this.state.error || !this.state.errorId) return
   }
   private copyErrorDetails = async () => {
@@ -955,11 +1271,23 @@ if (return) {
   }
   private reportError = async () => {
     if (!this.state.error |!this.state.errorId) return
+=======
+
+    if (!this.state.error || !this.state.errorId) return
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {
       // Report to your error reporting service
       const response = await fetch('/api/error-report', {
         method: 'POST'
         headers: {
+<<<<<<< HEAD
+=======
+
+      
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           'Content-Type': 'application/json'
         }
           errorId: this.state.errorId
@@ -976,6 +1304,7 @@ if (return) {
       });          timestamp: new Date().toISOString()
         })
       })
+<<<<<<< HEAD
       if (response.ok) {
         // Show success message
 'use client';
@@ -1282,6 +1611,11 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
       userAgent:
         typeof window !== 'undefined' ? navigator.userAgent : 'unknown',
     }
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       if (response.ok) {
         // Show success message
   private report_error = async () => {
@@ -1297,6 +1631,7 @@ if (return) {
           'Content - Type': 'application / json',
         },
           error_id: this.state.error_id,
+<<<<<<< HEAD
     try {
       await navigator.clipboard.writeText(
         JSON.stringify(errorDetails, null, 2)
@@ -1327,11 +1662,14 @@ if (return) {
           'Content-Type': 'application/json',
         },
           errorId: this.state.errorId,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           error: {
             message: this.state.error.message,
             stack: this.state.error.stack,
             name: this.state.error.name,
           },
+<<<<<<< HEAD
           errorInfo: this.state.errorInfo,
           userFeedback: this.state.userFeedback,
           context: this.props.context,
@@ -1501,6 +1839,31 @@ if (return) {
     }
   }
 
+=======
+          error_info: this.state.error_info,
+          user_feedback: this.state.user_feedback,
+          context: this.props.context,
+          timestamp: new Date ().toISOString (),
+        }),
+      });          timestamp: new Date ().toISOString ();
+        });
+      });
+      // Check condition
+if ( {) {
+  $2
+}
+        // Show success message;
+      }
+    } catch (err) {
+      logErrorToProduction ('Failed to report error:', { data: err });
+    }    }
+  }
+
+
+
+    }
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     this.setState({
       errorInfo,
       errorId,
@@ -1508,6 +1871,7 @@ if (return) {
 
 
 
+<<<<<<< HEAD
   private goHome = () => {
     if (typeof window !== 'undefined') {
       window.location.href = '/'
@@ -1523,20 +1887,29 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   private goHome = () => {
     if (typeof window !== 'undefined') {
       window.location.href = '/'
     }
   }
+<<<<<<< HEAD
   private goHome = () => {
     if (typeof window !== 'undefined') {
       window.location.href = '/'
     }
   } }
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   render() {
     if (this.state.hasError && this.state.error) {
       // Use custom fallback if provided
       if (this.props.fallback) {
+<<<<<<< HEAD
         return this.props.fallback
         return this.props.fallback
       }
@@ -1556,10 +1929,29 @@ ursor/fix-website-loading-errors-and-merge-6662
 
         return this.props.fallback;
 
+=======
+
+
+        return this.props.fallback;
+
+
+  private getBuildInfo() {;
+    return {;
+      version: process && process.env.NEXT_PUBLIC_APP_VERSION || 'unknown',;
+      environment: process && process.env.NODE_ENV,;
+      buildTime: process && process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown',;
+    };
+  }
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
 
       const severity = this.getErrorSeverity(this.state.error)
       const suggestion = this.getErrorSuggestion(this.state.error)
+<<<<<<< HEAD
       const canRetry = null;
         this.props.enableRetry !== false &&
         this.state.retryCount < (this.props.maxRetries || 3)
@@ -1746,10 +2138,18 @@ ursor/fix-website-loading-errors-and-merge-6662
         this && this.state.retryCount < (this && this.props.maxRetries || 3);
       return (
         <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950/20 dark:to-orange-950/20">
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const canRetry = this.props.enableRetry !== false && 
                        this.state.retryCount < (this.props.maxRetries || 3)
 
       return (
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950/20 dark:to-orange-950/20">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -1771,6 +2171,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <CardTitle className="text-2xl font-bold text-gray-900 dark:text-gray-100">
                   Oops! Something went wrong
                 </CardTitle>
+<<<<<<< HEAD
             <Card className='w-full max-w-2xl border-red-200 bg-white dark:bg-gray-900'>
               <CardHeader className='text-center'>
                 <div className='mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20'>
@@ -1808,11 +2209,17 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </Badge>
                   {this.state.errorId && (
                     <Badge variant='outline' className='text-xs'>                    <Badge variant="outline" className="text-xs">
+=======
+
+                    <Badge variant="outline" className="text-xs">
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       ID: {this.state.errorId.slice(-8)}
                     </Badge>
                   )}
                 </div>
               </CardHeader>
+<<<<<<< HEAD
               <CardContent className='space-y-6'>
                 <div className='text-center'>
                   <p className='text-gray-600 dark:text-gray-300 mb-4'>
@@ -1827,12 +2234,20 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <p className="text-sm text-orange-600 dark:text-orange-400">
                       Retry attempt: {this.state.retryCount}/{this.props.maxRetries |3}
 
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       {this.props.maxRetries || 3}                    </p>                    {suggestion}
                   </p>
                   {this.state.retryCount > 0 && (
                     <p className="text-sm text-orange-600 dark:text-orange-400">
                       Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
+<<<<<<< HEAD
                     </p>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     </p>
                 <div className="flex items-center justify-center gap-2 mt-2">
                   <Badge 
@@ -1848,11 +2263,21 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </div>
               </CardHeader>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <CardContent className="space-y-6">
                 <div className="text-center">
                   <p className="text-gray-600 dark:text-gray-300 mb-4">
                     {suggestion}
                   </p>
+<<<<<<< HEAD
+=======
+                  {this.state.retryCount > 0 && (
+                    <p className="text-sm text-orange-600 dark:text-orange-400">
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     }>;
                     {severity && severity.toUpperCase()}
                   </Badge>;
@@ -1955,6 +2380,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       Try Again
                     </Button>
                   )}
+<<<<<<< HEAD
                   )}
                   <Button
                     onClick={this.goHome}
@@ -1999,11 +2425,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                     size="sm"
                     className="flex items-center gap-2"
                   >
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                     <Bug className="h-4 w-4" />
                     {this.state.showDetails ? 'Hide' : 'Show'} Details
                   </Button>
                 </div>
+<<<<<<< HEAD
                     {this.state.showDetails ? 'Hide' : 'Show'} Details
                   </Button>
                 </div>
@@ -2036,6 +2466,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                     {this.state.showDetails ? 'Hide' : 'Show'} Details
                   </Button>
                 </div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
                   )}
@@ -2149,7 +2581,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                             {this.state.error.message}
                           </code>
                         </div>
+<<<<<<< HEAD
                         {process.env.NODE_ENV === 'development' &&
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -2398,11 +2834,16 @@ if ( {) {
                               onClick={this && this.reportError}
                               variant='outline'
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         {process.env.NODE_ENV === 'development' && this.state.error.stack && (
                           <div>
                             <h4 className="font-semibold text-sm mb-2">Stack Trace:</h4>
                             <pre className="p-3 bg-gray-50 dark:bg-gray-800 rounded text-xs overflow-auto max-h-32">
                               {this.state.error.stack}
+<<<<<<< HEAD
                             </pre>;
                           </div>;
                         )}
@@ -2427,6 +2868,16 @@ if ( {) {
                         <div className="flex gap-2">
                           <Button onClick={this.copyErrorDetails} variant="outline" size="sm">
                             <Clipboard className="h-4 w-4 mr-2" />
+=======
+                            </pre>
+                          </div>
+                        )}
+
+
+                        <div className="flex gap-2">
+                          <Button onClick={this.copyErrorDetails} variant="outline" size="sm">
+                            <Clipboard className="h-4 w-4 mr-2" />
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                             Copy Details
                           </Button>
                           {this.props.showReportButton !== false && (
@@ -2438,6 +2889,7 @@ if ( {) {
                           {this.props.showReportButton !== false && (
 
 
+<<<<<<< HEAD
                             <Button onClick={this.reportError} variant="outline" size="sm">
                               Report Issue
                             </Button>
@@ -2458,10 +2910,13 @@ if ( {) {
                       </div>;
                     </motion && motion.div>;
                   )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                             <Button onClick={this.reportError} variant="outline" size="sm">
                               <Send className="h-4 w-4 mr-2" />
                               Report Issue
                             </Button>
+<<<<<<< HEAD
                           )}
                         </div>
                       </div>
@@ -2701,6 +3156,28 @@ export const withErrorBoundary = <P extends object>(;
 ;
 export default GlobalErrorBoundary;
       );
+=======
+                              size='sm'>;
+                              <Send className='h-4 w-4 mr-2' />                              Report Issue;
+                        <div className="flex gap-2">;
+                          <Button onClick={this && this.copyErrorDetails} variant="outline" size="sm">;
+                            <Clipboard className="h-4 w-4 mr-2" />;
+                            Copy Details;
+                          </Button>;
+
+                          {this && this.props.showReportButton !== false && (;
+                            <Button onClick={this && this.reportError} variant="outline" size="sm">;
+                              <Send className="h-4 w-4 mr-2" />;
+                              Report Issue;
+                            </Button>;
+
+
+                          )}
+                        </div>;
+                      </div>;
+                    </motion && motion.div>;
+                  )}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     }
 
@@ -2906,4 +3383,8 @@ timestamp: new Date () .toISOString () ;
 
   }
 // Hook for programmatic error boundary
+<<<<<<< HEAD
 export const useErrorBoundary = () => {
+=======
+export const useErrorBoundary = () => {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

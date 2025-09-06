@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 
 } from 'lucide-react';
@@ -21,18 +22,27 @@ import {
   MessageSquare,
   TrendingUp,;
   History;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';
 import {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Card
   CardContent
   CardDescription
   CardHeader
   CardTitle;
 } from '@/components/ui/card';import { Button } from '@/components/ui/button';import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
+<<<<<<< HEAD
   Card,
   CardContent,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import {;
   Gift,;
@@ -55,6 +65,12 @@ import {;
   CardHeader;
   CardTitle;
 } from '@/components/ui/card';import { Button } from '@/components/ui/button';import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react';
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -73,7 +89,12 @@ import { formatDistanceToNow } from 'date-fns';
 
 import Link from 'next/link';
 import { LoginModal } from '@/components/auth/LoginModal';
+<<<<<<< HEAD
 export default function PointsPage() {;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const { isAuthenticated, user } = useAuth();
   const { ledger, balance, loading, fetchLedger } = usePoints();
   const [loginOpen, setLoginOpen] = useState(false);
@@ -83,6 +104,13 @@ export default function PointsPage() {;
     id: string;
     cost: number;
     title: string;
+<<<<<<< HEAD
+=======
+
+  }) {    if (!user?.id) return;  async function handleRedeem(reward: { id: string, cost: number, title: string }) {
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export default function PointsPage() { const { isAuthenticated, user  } = useAuth(),
   const { ledger, balance, loading, fetchLedger  } = usePoints(),
@@ -91,13 +119,17 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
 
 
   async function handleRedeem(reward: { id: string, cost: number, title: string }) {
+<<<<<<< HEAD
   }) {    if (!user?.id) return;  async function handleRedeem(reward: { id: string, cost: number, title: string }) {
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (!user?.id) return;
     setRedeeming(true);
     try {
       await fetch('/api/points/redeem', {
 
+<<<<<<< HEAD
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
 
@@ -107,6 +139,12 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
           reward: reward.title
         })
 import React, { useState } from 'react',;
+=======
+} from '@/components / ui / card';import { Button } from '@/components / ui / button';import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react';
+import { use_auth } from '@/hooks / use_auth';
+import { use_points } from '@/hooks / use_points';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react';
 import { use_auth } from '@/hooks / use_auth';
 import { use_points } from '@/hooks / use_points';
@@ -154,6 +192,7 @@ if (return) {
       });
       await fetchLedger();
     } finally {
+<<<<<<< HEAD
       setRedeeming(false);    }      });
       await fetchLedger()
     } finally {
@@ -177,6 +216,12 @@ export default function PointsPage() {;
   async function handleRedeem(reward: { id: string, cost: number, title: string }) {;
     if (!user?.id) return,;
     setRedeeming(true),;
+=======
+
+  }) {    if (!user?.id) return;  async function handleRedeem(): any (reward: { id: string, cost: number, title: string }) {;
+    if (!user?.id) return;
+    setRedeeming(true);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {;
       await fetch('/api/points/redeem', {;
         method: 'POST',;
@@ -185,6 +230,23 @@ export default function PointsPage() {;
       }),;
       await fetchLedger();
     } finally {;
+<<<<<<< HEAD
+=======
+      setRedeeming(false);    }      });
+      await fetchLedger();
+    } finally {;
+
+      setRedeeming(false);
+
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ userId: user.id, cost: reward.cost, reward: reward.title })
+      });
+      await fetchLedger()
+    } finally {
+      setRedeeming(false)
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
     }
@@ -212,12 +274,15 @@ ursor/fix-website-loading-errors-and-merge-6662
       points: '100 pts',
       action: 'Browse Marketplace',
 
+<<<<<<< HEAD
       setRedeeming(false);
     }
   }
 
   const earningOpportunities = [
     {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       icon: <Users className='h-5 w-5' />
       title: 'Sign Up & Profile Setup'
       description: 'Complete your profile and verify your email'
@@ -230,6 +295,40 @@ ursor/fix-website-loading-errors-and-merge-6662
       points: '100 pts'
       action: 'Browse Marketplace'
     }
+<<<<<<< HEAD
+=======
+
+    {
+
+      icon: <MessageSquare className='h - 5 w - 5' />,
+      title: 'Community Engagement',
+      description: 'Post in the community or comment on discussions',
+      points: '25 pts per post',
+      action: 'Join Community',
+    },
+    {
+      icon: <Users className='h - 5 w - 5' />,
+
+      title: 'Refer Friends',
+      description: 'Invite friends to join Zion marketplace',
+      points: '200 pts per referral',
+      action: 'Share Referral Link',
+
+
+
+      icon: <Users className="h-5 w-5" />,
+      title: "Sign Up & Profile Setup",
+      description: "Complete your profile and verify your email",
+      points: "50 pts",
+      action: isAuthenticated ? "✓ Completed" : "Get Started"
+
+
+
+
+    },
+    {
+      icon: <ShoppingBag className="h-5 w-5" />,
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       title: "First Purchase",
       description: "Make your first purchase on the marketplace",
       points: "100 pts",
@@ -245,6 +344,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       action: "Share Referral Link";
     }
 
+<<<<<<< HEAD
     {
       icon: <MessageSquare className='h-5 w-5' />
       title: 'Community Engagement'
@@ -253,6 +353,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       action: 'Join Community'
     }
     {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       icon: <Users className='h-5 w-5' />
       title: 'Refer Friends'
       description: 'Invite friends to join Zion marketplace'
@@ -260,6 +362,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       action: 'Share Referral Link'
     },  ];
   const upcomingRewards = [
+<<<<<<< HEAD
     { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },      title: "Refer Friends"
       description: "Invite friends to join Zion marketplace"
       points: "200 pts per referral"
@@ -267,6 +370,9 @@ ursor/fix-website-loading-errors-and-merge-6662
     }
   const upcomingRewards = [
     { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       id: 'premium1'
       title: 'Premium Features (1 month)'
@@ -280,12 +386,17 @@ ursor/fix-website-loading-errors-and-merge-6662
       category: 'Merchandise'
     }
     {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       id: 'coupon25'
       title: '$25 Off Coupon'
       cost: 2000
       category: 'Discount'
     }
     { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }
+<<<<<<< HEAD
       icon: <Users className='h-5 w-5' />,
       title: 'Sign Up & Profile Setup',
       description: 'Complete your profile and verify your email',
@@ -309,6 +420,9 @@ ursor/fix-website-loading-errors-and-merge-6662
       description: "Make your first purchase on the marketplace",
       points: "100 pts",
       action: "Browse Marketplace"
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const earningOpportunities = [;
     {;
       icon: <Users className='h-5 w-5' />,;
@@ -336,6 +450,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       description: 'Invite friends to join Zion marketplace',;
       points: '200 pts per referral',;
       action: 'Share Referral Link',;
+<<<<<<< HEAD
     },  ];
 
   const upcomingRewards = [;
@@ -373,6 +488,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       description: 'Invite friends to join Zion marketplace',
       points: '200 pts per referral',
       action: 'Share Referral Link',
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },  ];
 
   const upcomingRewards = [
@@ -390,6 +507,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       points: "200 pts per referral",
       action: "Share Referral Link"
     }
+<<<<<<< HEAD
 
 
 
@@ -425,10 +543,56 @@ ursor/fix-website-loading-errors-and-merge-6662
     { id: 'coupon25', title: '$25 Off Coupon', cost: 2000, category: 'Discount' };
     { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }
   ],
+=======
+  ],;
+  const upcomingRewards = [;
+    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },;
+    {;
+      id: 'premium1',;
+      title: 'Premium Features (1 month)',;
+      cost: 1000,;
+      category: 'Subscription',;
+    },;
+    {;
+      id: 'swag',;
+      title: 'Zion Swag Pack',;
+      cost: 1500,;
+      category: 'Merchandise',;
+    },;
+    {;
+      id: 'coupon25',;
+      title: '$25 Off Coupon',;
+      cost: 2000,;
+      category: 'Discount',;
+    },;
+    { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' },;
+    },
+    {
+
+
+      description: "Invite friends to join Zion marketplace",
+      points: "200 pts per referral",
+      action: "Share Referral Link"
+    }
+
+
+
+  if (!isAuthenticated) {;
+    return (
+
+    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },
+    { id: 'premium1', title: 'Premium Features (1 month)', cost: 1000, category: 'Subscription' },
+    { id: 'swag', title: 'Zion Swag Pack', cost: 1500, category: 'Merchandise' },
+    { id: 'coupon25', title: '$25 Off Coupon', cost: 2000, category: 'Discount' },
+    { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }
+  ];
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   if (!isAuthenticated) {
     return (
       <>
+<<<<<<< HEAD
         <div className='container py-10 max-w-4xl'>
           <div className='text-center mb-8'>
             <Gift className='h-16 w-16 text-primary mx-auto mb-4' />
@@ -441,6 +605,11 @@ ursor/fix-website-loading-errors-and-merge-6662
             </Button>
           </div>
             <Button onClick={(,) => setLoginOpen(true)} size="lg">
+=======
+      <>
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="container py-10 max-w-4xl">
           <div className="text-center mb-8">
             <Gift className="h-16 w-16 text-primary mx-auto mb-4" />
@@ -455,29 +624,45 @@ ursor/fix-website-loading-errors-and-merge-6662
               Join Now to Start Earning
             </Button>
           </div>
+<<<<<<< HEAD
           <div className='grid md:grid-cols-2 gap-8 mb-12'>
             <Card>
               <CardHeader>
                 <CardTitle className='flex items-center gap-2'>
                   <TrendingUp className='h-5 w-5' />                  How to Earn Points          <div className="grid md:grid-cols-2 gap-8 mb-12">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <TrendingUp className="h-5 w-5" />
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                   How to Earn Points
 
 
+<<<<<<< HEAD
                   How to Earn Points
                   How to Earn Points
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </CardTitle>
                   Multiple ways to accumulate rewards
                 </CardDescription>
               </CardHeader>
+<<<<<<< HEAD
               <CardContent className='space-y-4'>
                 {earningOpportunities.map((opportunity, index) => (
                   <div
@@ -496,6 +681,9 @@ ursor/fix-website-loading-errors-and-merge-6662
               <CardContent className="space-y-4">
                 {earningOpportunities.map((opportunity, index) => (
                   <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Check condition
 if ( {) {
   $2
@@ -558,6 +746,7 @@ if ( {) {
                       <h4 className="font-medium">{opportunity.title}</h4>
                       <p className="text-sm text-muted-foreground">{opportunity.description}</p>
                     </div>
+<<<<<<< HEAD
                     <Badge variant='secondary'>{opportunity.points}</Badge>                  </div>                    </div>
 ursor/fix-website-loading-errors-and-merge-6662
                     <Badge variant="secondary">{opportunity.points}</Badge>
@@ -566,6 +755,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+=======
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <Badge variant="secondary">{opportunity.points}</Badge>
                   </div>
                 ))}
@@ -573,6 +768,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </Card>
             <Card>
               <CardHeader>
+<<<<<<< HEAD
                 <CardTitle className='flex items-center gap-2'>
                   <Gift className='h-5 w-5' />                  Upcoming Rewards                <CardTitle className="flex items-center gap-2">
 ursor/fix-website-loading-errors-and-merge-6662
@@ -581,6 +777,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <Gift className='h-5 w-5' />                  Upcoming Rewards                <CardTitle className="flex items-center gap-2">
                 <CardTitle className="flex items-center gap-2">
                   <Gift className="h-5 w-5" />
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <CardTitle className="flex items-center gap-2">
 
                 <CardTitle className="flex items-center gap-2">
@@ -593,6 +792,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   What you can redeem your points for
                 </CardDescription>
               </CardHeader>
+<<<<<<< HEAD
               <CardContent className='space-y-4'>
                 {upcomingRewards.map((reward, index) => (
                   <div
@@ -608,6 +808,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <Badge variant="outline">{reward.cost}</Badge>
 
 
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <CardContent className="space-y-4">
                 {upcomingRewards.map((reward, index) => (
                   <div key={index} className="flex items-center justify-between p-3 rounded-lg border">
@@ -615,7 +820,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <h4 className="font-medium">{reward.title}</h4>
                       <p className="text-sm text-muted-foreground">{reward.category}</p>
                     </div>
+<<<<<<< HEAD
                     <Badge variant="outline">{reward.cost}</Badge>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -625,6 +833,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </CardContent>
             </Card>
           </div>
+<<<<<<< HEAD
           <Card className='text-center'>
             <CardContent className='pt-6'>
               <Star className='h-12 w-12 text-primary mx-auto mb-4' />
@@ -637,6 +846,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+=======
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Card className="text-center">
             <CardContent className="pt-6">
               <Star className="h-12 w-12 text-primary mx-auto mb-4" />
@@ -648,7 +863,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 Create Account
               </Button>
             </CardContent>
+<<<<<<< HEAD
             </CardContent>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -833,6 +1051,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     );
   }
   return (
+<<<<<<< HEAD
     <div className='container py-10 max-w-4xl'>
       <div className='text-center mb-8'>
         <Gift className='h-16 w-16 text-primary mx-auto mb-4' />
@@ -868,12 +1087,17 @@ ursor/fix-website-loading-errors-and-merge-6662
         <p className="text-xl text-muted-foreground">Points Available</p>
         {!loading && balance === 0 && (
           <p className="text-sm text-muted-foreground mt-2">
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <p className="text-sm text-muted-foreground mt-2">
             You haven't earned any points yet. Complete the tasks below to start
             earning and redeem rewards.
           </p>
         )}
       </div>
+<<<<<<< HEAD
       <div className='grid md:grid-cols-2 gap-8 mb-12'>
         <Card>
           <CardHeader>
@@ -882,13 +1106,22 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+=======
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="grid md:grid-cols-2 gap-8 mb-12">
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <TrendingUp className="h-5 w-5" />
               Keep Earning
+<<<<<<< HEAD
               Keep Earning
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -896,6 +1129,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               More ways to boost your point balance
             </CardDescription>
           </CardHeader>
+<<<<<<< HEAD
           <CardContent className='space-y-4'>
             {earningOpportunities.map((opportunity, index) => (
               <div
@@ -914,6 +1148,9 @@ ursor/fix-website-loading-errors-and-merge-6662
           <CardContent className="space-y-4">
             {earningOpportunities.map((opportunity, index) => (
               <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
       </>);
   }
@@ -989,6 +1226,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <h4 className="font-medium">{opportunity.title}</h4>
                   <p className="text-sm text-muted-foreground">{opportunity.description}</p>
                 </div>
+<<<<<<< HEAD
                 <div className='text-right'>
                   <Badge variant='secondary' className='mb-1'>
                     {opportunity.points}
@@ -999,6 +1237,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+=======
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div className="text-right">
                   <p className="text-xs text-muted-foreground">{opportunity.action}</p>
                 </div>
@@ -1008,6 +1252,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </Card>
         <Card>
           <CardHeader>
+<<<<<<< HEAD
             <CardTitle className='flex items-center gap-2'>
               <Gift className='h-5 w-5' />              Available Rewards            <CardTitle className="flex items-center gap-2">
 ursor/fix-website-loading-errors-and-merge-6662
@@ -1016,6 +1261,9 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Gift className='h-5 w-5' />              Available Rewards            <CardTitle className="flex items-center gap-2">
             <CardTitle className="flex items-center gap-2">
               <Gift className="h-5 w-5" />
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <CardTitle className="flex items-center gap-2">
 
             <CardTitle className="flex items-center gap-2">
@@ -1028,6 +1276,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               Redeem your points for these rewards
             </CardDescription>
           </CardHeader>
+<<<<<<< HEAD
           <CardContent className='space-y-4'>
             {upcomingRewards.map(reward => (
               <div
@@ -1038,6 +1287,45 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <p className='text-sm text-muted-foreground'>
                     {reward.category}
                   </p>
+=======
+
+                  </p>                </div>                </div>;
+                <div className="text - right">;
+                  <Badge variant="secondary" className="mb - 1">{opportunity.points}</Badge>;
+                  <p className="text - xs text - muted - foreground">{opportunity.action}</p>;
+                </div>;
+              </div>))}
+          </CardContent>;
+        </Card>;
+        <Card>;
+          <CardHeader>;
+            <CardTitle className='flex items - center gap - 2'>;
+              <Gift className='h - 5 w - 5' />              Available Rewards            <CardTitle className="flex items - center gap - 2">;
+              <Gift className="h - 5 w - 5" />;
+              Available Rewards;
+            </CardTitle>;
+            <CardDescription>;
+              Redeem your points for these rewards;
+            </CardDescription>;
+          </CardHeader>;
+          <CardContent className='space - y-4'>;
+            {upcoming_rewards.map (reward => (
+              <div;
+                key={reward.id}
+                className='flex items - center justify - between p - 3 rounded - lg border';
+              >;
+                  <h4 className='font - medium'>{reward.title}</h4>;
+                  <p className='text - sm text - muted - foreground'>;
+
+                    {reward.category}
+                  </p>;
+                </div>;
+                <div className='text - right space - y-1'>;
+                  <Badge variant='outline' className='mb - 1'>;
+                    {reward.cost} pts;
+                  </Badge>;
+                  {balance >= reward.cost ? (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
         </div>;
@@ -1156,6 +1444,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <div>
                   <h4 className="font-medium">{reward.title}</h4>
                   <p className="text-sm text-muted-foreground">{reward.category}</p>
+<<<<<<< HEAD
                 </div>
                 <div className="text-right space-y-1">
                   <Badge variant="outline" className="mb-1">{reward.cost} pts</Badge>
@@ -1163,6 +1452,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <Button
                       size='sm'
                       onClick={() => handleRedeem(reward)}
+=======
+
+                    <Button;
+                      size='sm';
+                      on_click={() => handle_redeem (reward)}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       disabled={redeeming}
                     >                      {redeeming ? 'Processing...' : 'Redeem'}
                     </Button>
@@ -1170,6 +1465,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <p className='text-xs text-muted-foreground'>
                       Need more points
                     </p>                  )}
+<<<<<<< HEAD
 
                 </div>
                 <div className="text-right space-y-1">
@@ -1219,6 +1515,27 @@ ursor/fix-website-loading-errors-and-merge-6662
             <History className='h-5 w-5' />            Points History          <CardTitle className="flex items-center gap-2">
           <CardTitle className="flex items-center gap-2">
             <History className="h-5 w-5" />
+=======
+                    <p className="text - xs text - muted - foreground">Need more points</p>;
+                <div>;
+                  <h4 className="font - medium">{reward.title}</h4>;
+                  <p className="text - sm text - muted - foreground">{reward.category}</p>;
+                </div>;
+                <div className="text - right space - y-1">;
+                  <Badge variant="outline" className="mb - 1">{reward.cost} pts</Badge>;
+
+                  {balance >= reward.cost ? (
+                    <Button size="sm" on_click={() => handle_redeem (reward)} disabled={redeeming}>;
+
+                </div>
+                <div className="text-right space-y-1">
+                  <Badge variant="outline" className="mb-1">{reward.cost} pts</Badge>
+                  {balance >= reward.cost ? (
+
+                    <Button size="sm" onClick={() => handleRedeem(reward)} disabled={redeeming}>
+                      {redeeming ? 'Processing...' : 'Redeem'}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
             ))}
@@ -1235,6 +1552,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </CardHeader>
         <CardContent>
           {ledger.length === 0 ? (
+<<<<<<< HEAD
             <p className='text-center py-8 text-muted-foreground'>
               No points activity yet.
             </p>
@@ -1249,6 +1567,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                       variant="outline"
                       className={entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <p className="text-center py-8 text-muted-foreground">No points activity yet.</p>
           ) : (
             <ScrollArea className="h-64">
@@ -1258,6 +1580,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 {ledger.map(entry => (
                   <div key={entry.id} className="flex items-center justify-between py-2 border-b">
                     <div>
+<<<<<<< HEAD
                 {ledger.map(entry => (
                   <div key={entry.id} className="flex items-center justify-between py-2 border-b">
                     <div>
@@ -1267,12 +1590,48 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <p className='text-xs text-muted-foreground'>
                         {formatDistanceToNow(new Date(entry.created_at), {
                           addSuffix: true
+=======
+
+          </CardContent>;
+        </Card>;
+      </div>;
+
+      <Card>;
+        <CardHeader>;
+          <CardTitle className='flex items-center gap-2'>;
+            <History className='h-5 w-5' />            Points History          <CardTitle className="flex items-center gap-2">;
+            <History className="h-5 w-5" />;
+            Points History;
+          </CardTitle>;
+          <CardDescription>Your recent points activity</CardDescription>;
+        </CardHeader>;
+        <CardContent>;
+          {ledger && ledger.length === 0 ? (;
+            <p className='text-center py-8 text-muted-foreground'>;
+              No points activity yet.;
+            </p>;
+            <ScrollArea className='h-64'>;
+              <div className='space-y-2 mt-2'>;
+                {ledger && ledger.map(entry => (;
+                  <div
+                    key={entry && entry.id}
+                    className='flex items-center justify-between py-2 border-b'>;
+                    <div>;
+                      <p className='font-medium capitalize'>;
+                        {entry && entry.reason || 'adjustment'}
+                      </p>;
+                      <p className='text-xs text-muted-foreground'>;
+                        {formatDistanceToNow(new Date(entry && entry.created_at), {;
+                          addSuffix: true,;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         })}
                       </p>
                     </div>
                     <Badge
                       variant='outline'
                       className={
+<<<<<<< HEAD
                         entry.delta >= 0
                           ? 'bg-green-100 text-green-800'
                           : 'bg-red-100 text-red-800'
@@ -1289,11 +1648,21 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <Badge
                       variant="outline"
                       className={entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}
+=======
+
+
+                        entry && entry.delta>= 0;
+                          ? 'bg-green-100 text-green-800';
+                          : 'bg-red-100 text-red-800';
+                      }                      variant="outline";
+                      className = {entry && entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800',}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     >;
                       {entry.delta >= 0 ? '+' : ''}
                       {entry.delta} pts;
                     </Badge>;
                   </div>;
+<<<<<<< HEAD
                 ))}
               </div>
             </ScrollArea>
@@ -1311,6 +1680,12 @@ ursor/fix-website-loading-errors-and-merge-6662
           <p className='text-muted-foreground mb-4'>
             We're finalizing the redemption system. Keep earning points -
             they'll be ready to spend soon!
+=======
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 ))}
               </div>;
             </ScrollArea>;
@@ -1325,10 +1700,17 @@ ursor/fix-website-loading-errors-and-merge-6662
           <h3 className="text-2xl font-bold mb-2">Full Rewards System Coming Soon</h3>
           <p className="text-muted-foreground mb-4">
             We're finalizing the redemption system. Keep earning points - they'll be ready to spend soon!
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </p>
             <Button variant="outline" asChild>
               <Link href="/marketplace">Browse Marketplace</Link>
             </Button>
+<<<<<<< HEAD
             <Button variant='outline' asChild>
               <Link href='/community'>Join Community</Link>            <Button variant="outline" asChild>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -1337,6 +1719,9 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Link href='/community'>Join Community</Link>            <Button variant="outline" asChild>
             <Button variant="outline" asChild>
               <Link href="/community">Join Community</Link>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             <Button variant="outline" asChild>
 
@@ -1347,6 +1732,10 @@ ursor/fix-website-loading-errors-and-merge-6662
         </CardContent>
       </Card>
     </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </CardContent>;
       </Card>;
 
@@ -1465,6 +1854,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
   )
 }
+<<<<<<< HEAD
   );
 }
 ;
@@ -1472,3 +1862,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 ;
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

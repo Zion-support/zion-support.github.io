@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {SEO} from "@/components/SEO";
 import {GradientHeading} from "@/components/GradientHeading";
 import {Button} from "@/components/ui/button";
@@ -15,20 +16,33 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { AppLayout } from "@/layout/AppLayout";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { AppLayout } from "@/layout/AppLayout",
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function Careers() {
   // Sample job listings
 
   const jobs = {
     engineering: [
       {
+<<<<<<< HEAD
         title: "Senior Frontend Engineer"
         location: "Remote"
         type: "Full-time"
         department: "Engineering"
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         title: "Senior Frontend Engineer",
         location: "Remote",
         type: "Full-time",
         department: "Engineering",
+<<<<<<< HEAD
         description: "Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI-powered marketplace.";
       };
         description: "Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI-powered marketplace."
@@ -53,6 +67,8 @@ export default function Careers() {
         location: "Remote",
         type: "Full-time",
         department: "Engineering",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
       {
@@ -62,6 +78,7 @@ export default function Careers() {
         department: "Engineering"
         description: "Develop end-to-end features across our platform, working with modern technologies like React, Node.js, and PostgreSQL."
       }
+<<<<<<< HEAD
 
     ],
     product: [
@@ -72,12 +89,24 @@ export default function Careers() {
         department: "Product"
         description: "Lead product development initiatives to enhance our marketplace experience for both talent and clients."
       }
+=======
+    ];
+    product: [
+      {
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         title: "Product Manager",
         location: "New York, NY",
         type: "Full-time",
         department: "Product",
         description: "Lead product development initiatives to enhance our marketplace experience for both talent and clients."
       },
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {
         title: "UX/UI Designer"
         location: "Remote"
@@ -85,7 +114,11 @@ export default function Careers() {
         department: "Product"
         description: "Create intuitive and engaging user experiences that make complex technology accessible to all users."
       }
+<<<<<<< HEAD
     ],
+=======
+    ];
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     marketing: [
       {
         title: "Growth Marketing Manager"
@@ -94,21 +127,33 @@ export default function Careers() {
         department: "Marketing"
         description: "Drive user acquisition and engagement strategies across multiple channels to grow our marketplace."
 
+<<<<<<< HEAD
       }
       {
         title: "Content Strategist"
         location: "London, UK";
         type: "Full-time"
         department: "Marketing"
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       },
       {
         title: "Content Strategist",
         location: "London, UK",
         type: "Full-time",
         department: "Marketing",
+<<<<<<< HEAD
         description: "Develop compelling content that educates and inspires our audience about the future of AI and technology."
       }
     ],
+=======
+
+
+        description: "Develop compelling content that educates and inspires our audience about the future of AI and technology."
+      }
+    ];
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     operations: [
       {
         title: "Community Manager"
@@ -117,11 +162,18 @@ export default function Careers() {
         department: "Operations"
         description: "Build and nurture our growing community of AI specialists, developers, and tech enthusiasts."
 
+<<<<<<< HEAD
       },
 
 
       }
       },
+=======
+
+      },
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {
         title: "Talent Acquisition Specialist"
         location: "Remote"
@@ -136,9 +188,12 @@ export default function Careers() {
 
 
 
+<<<<<<< HEAD
   }
   },
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Benefits list
   const benefits = [
     {
@@ -150,11 +205,18 @@ export default function Careers() {
         </svg>
       )
 
+<<<<<<< HEAD
     },
 
 
     }
     },
+=======
+
+    },
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       title: "Health & Wellness"
       description: "Comprehensive health insurance and wellness programs to keep you at your best."
@@ -164,11 +226,18 @@ export default function Careers() {
         </svg>
       )
 
+<<<<<<< HEAD
     },
 
 
     }
     },
+=======
+
+    },
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       title: "Continuous Learning"
       description: "Education stipends and dedicated learning time to help you grow professionally."
@@ -177,6 +246,128 @@ export default function Careers() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
         </svg>
       )
+<<<<<<< HEAD
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import {SEO} from "@/components/SEO";
+import {GradientHeading} from "@/components/GradientHeading";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent} from "@/components/ui/card";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {AppLayout} from "@/layout/AppLayout";
+export default function Careers() {;
+  // Sample job listings;
+  const jobs = {;
+    engineering: [;
+      {;
+        title: "Senior Frontend Engineer",;
+        location: "Remote",;
+        type: "Full-time",;
+        department: "Engineering",;
+        description: "Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI-powered marketplace.";
+      };
+      {;
+        title: "AI Research Engineer",;
+        location: "San Francisco, CA";
+        type: "Full-time",;
+        department: "Engineering",;
+        description: "Work on cutting-edge AI technologies to power our matching algorithms and recommendation systems.";
+      };
+      {;
+        title: "Full Stack Developer",;
+        location: "Remote",;
+        type: "Full-time",;
+        department: "Engineering",;
+        description: "Develop end-to-end features across our platform, working with modern technologies like React, Node && Node.js, and PostgreSQL.";
+      }
+    ];
+    product: [;
+      {;
+        title: "Product Manager",;
+        location: "New York, NY";
+        type: "Full-time",;
+        department: "Product",;
+        description: "Lead product development initiatives to enhance our marketplace experience for both talent and clients.";
+      };
+      {;
+        title: "UX/UI Designer",;
+        location: "Remote",;
+        type: "Full-time",;
+        department: "Product",;
+=======
+import { SEO } from '@/components / SEO';
+import { GradientHeading } from '@/components / GradientHeading';
+import { Button } from '@/components / ui / button';
+import { Card, CardContent } from '@/components / ui / card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+import { AppLayout } from '@/layout / AppLayout';
+export default /**
+ * Careers - Function description
+ */
+function Careers() {
+  // Sample job listings;
+  const jobs = {
+    engineering: [;
+      {
+        title: "Senior Frontend Engineer",
+        location: "Remote",
+        type: "Full - time",
+        department: "Engineering",
+        description: "Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI - powered marketplace.";
+      }
+      {
+        title: "AI Research Engineer",
+        location: "San Francisco, CA";
+        type: "Full - time",
+        department: "Engineering",
+        description: "Work on cutting - edge AI technologies to power our matching algorithms and recommendation systems.";
+      }
+      {
+        title: "Full Stack Developer",
+        location: "Remote",
+        type: "Full - time",
+        department: "Engineering",
+        description: "Develop end - to - end features across our platform, working with modern technologies like React, Node.js, and PostgreSQL.";
+      }
+    ];
+    product: [;
+      {
+        title: "Product Manager",
+        location: "New York, NY";
+        type: "Full - time",
+        department: "Product",
+        description: "Lead product development initiatives to enhance our marketplace experience for both talent and clients.";
+      }
+      {
+        title: "UX / UI Designer",
+        location: "Remote",
+        type: "Full - time",
+        department: "Product",
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         description: "Create intuitive and engaging user experiences that make complex technology accessible to all users.";
       }
@@ -198,20 +389,30 @@ export default function Careers() {
       }
     ];
     operations: [;
+<<<<<<< HEAD
     }
     {
       title: "Competitive Compensation"
       description: "Salary packages that recognize your value, plus equity options to share in our success.";
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
     {
       title: "Competitive Compensation",
       description: "Salary packages that recognize your value, plus equity options to share in our success.",
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       icon: (
         <svg className="w-10 h-10 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       )
     }
+<<<<<<< HEAD
   ];
   ],
 
@@ -301,6 +502,8 @@ export default function Careers() {
                         </div>
                       </CardContent>
                     </Card>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   ],
 
@@ -430,6 +633,10 @@ export default function Careers() {;
     }
   ];
   return (;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <AppLayout>;
       <SEO
         title="Careers at Zion - Join Our Team" 
@@ -445,6 +652,10 @@ export default function Careers() {;
               Help us build the future of AI and technology;
             </p>;
           </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">;
             <div>;
               <h2 className="text-3xl font-bold text-white mb-6">Why Work at Zion?</h2>;
@@ -486,6 +697,10 @@ export default function Careers() {;
           </div>;
           <div className="mb-24">;
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Open Positions</h2>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Tabs defaultValue="engineering" className="w-full">;
               <TabsList className="bg-zion-blue-dark border border-zion-blue-light mb-8 w-full flex flex-wrap justify-center">;
                 <TabsTrigger value="engineering" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Engineering</TabsTrigger>;
@@ -493,6 +708,10 @@ export default function Careers() {;
                 <TabsTrigger value="marketing" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Marketing</TabsTrigger>;
                 <TabsTrigger value="operations" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Operations</TabsTrigger>;
               </TabsList>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {Object && Object.entries(jobs).map(([department, jobList]) => (;
                 <TabsContent key={department} value={department} className="space-y-6">;
                   {jobList && jobList.map((job, index) => (;
@@ -770,11 +989,17 @@ export default function Careers() {;
                             </div>;
                             <p className="text-zion-slate-light mb-4">{job.description}</p>;
                           </div>;
+<<<<<<< HEAD
                           <Button className="w-full md:w-auto mt-4 md:mt-0 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
+=======
+                          <Button className="w - full md:w - auto mt - 4 md:mt - 0 bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                             Apply Now;
                           </Button>;
                         </div>;
                       </CardContent>;
+<<<<<<< HEAD
                     </Card>;
                   ))}
                 </TabsContent>
@@ -795,6 +1020,10 @@ export default function Careers() {;
       </main>
     </AppLayout>
   )
+=======
+
+                    </Card>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -821,7 +1050,12 @@ export default function Careers() {;
               We're always looking for talented individuals who are passionate about AI and technology.;
               Send us your resume and let's start a conversation.;
             </p>;
+<<<<<<< HEAD
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
+=======
+            <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Send General Application;
             </Button>;
           </div>;
@@ -831,6 +1065,7 @@ export default function Careers() {;
 
 
 
+<<<<<<< HEAD
 }
     </AppLayout>);
     </AppLayout>;
@@ -911,3 +1146,12 @@ return (<AppLayout> <SEO /> <main className="min-h-screen bg-zion-blue pt-24 pb-
   );
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    </AppLayout>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

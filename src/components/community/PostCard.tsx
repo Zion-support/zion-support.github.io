@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import {formatDistanceToNow} from "date-fns"
 import Link from "next/link"
@@ -11,6 +12,8 @@ import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { ForumPost } from "@/types/community"
 import { logInfo } from '@/utils/productionLogger'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -34,10 +37,16 @@ import { Button } from "@/components/ui/button",
 import { cn } from "@/lib/utils",
 import { ForumPost } from "@/types/community",
 import { logInfo } from '@/utils/productionLogger',
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface PostCardProps {
   post: ForumPost
   compact?: boolean
 }
+<<<<<<< HEAD
 const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })
   return (
@@ -65,12 +74,15 @@ interface PostCardProps {
   post: ForumPost
   compact?: boolean
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
 
 
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -117,6 +129,8 @@ export const PostCard = React && React.memo(PostCardComponent);
 PostCard && PostCard.displayName = 'PostCard';
 export default PostCard;
       "transition-shadow hover: shadow-md",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       "transition-shadow hover: shadow-md",
 import React from 'react';
@@ -304,4 +318,8 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
 export default PostCard;
 
 
+<<<<<<< HEAD
 export default PostCard;
+=======
+export default PostCard;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

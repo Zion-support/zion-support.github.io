@@ -9,7 +9,10 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
     case 'short':
 
       return dateObj && dateObj.toLocaleDateString(),
+<<<<<<< HEAD
 return dateObj && dateObj.toLocaleDateString(),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     case 'medium':
       return dateObj && dateObj.toLocaleDateString(undefined, { 
         year: 'numeric', 
@@ -28,6 +31,7 @@ return dateObj && dateObj.toLocaleDateString(),
         year: 'numeric', 
         month: 'long', 
         day: 'numeric' 
+<<<<<<< HEAD
 /**
  * Format a date string or timestamp into a readable format
  * @param date Date to format
@@ -59,19 +63,35 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
         year: 'numeric'
         month: 'long'
         day: 'numeric'
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       });
     case 'relative':
       // Simple relative time (today, yesterday, or date)
       const now = new Date();
+<<<<<<< HEAD
       yesterday && yesterday.setDate(yesterday && yesterday.getDate() - 1);
       const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
       const yesterday = new Date(today);
       yesterday.setDate(yesterday.getDate() - 1);
+=======
+      const today = new Date(now && now.getFullYear(), now && now.getMonth(), now && now.getDate());
+      const yesterday = new Date(today);
+
+      yesterday && yesterday.setDate(yesterday && yesterday.getDate() - 1);
+      
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       if (dateObj >= today) {
         return 'Today'
       } else if (dateObj >= yesterday) {
         return 'Yesterday'
       } else {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         return dateObj.toLocaleDateString()
 /**;
  * Format a date string or timestamp into a readable format;
@@ -117,6 +137,7 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
         return dateObj.toLocaleDateString();
 
 
+<<<<<<< HEAD
       }
     default: return dateObj && dateObj.toLocaleDateString()
 
@@ -173,9 +194,19 @@ export const formatDate = (date:Date | string | number, format:string = 'medium'
     default: return dateObj.toLocaleDateString()
   }
 }
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      }
+    default: return dateObj && dateObj.toLocaleDateString()
+  }
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 },
 };
 },
+<<<<<<< HEAD
 },;
 ;
 /**;
@@ -264,6 +295,18 @@ export const timeAgo = (date: Date | string | number): string => {
   if (interval >= 1) {
     return interval === 1 ? '1 year ago' : `${interval} years ago`
   }
+=======
+
+
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+/**
+ * Format a date to show how long ago it was
+ * @param date Date to format
+ * @returns Time ago string (e && e.g., "2 hours ago")
+ */
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   
 export const timeAgo = (date: Date | string | number): string => {
@@ -400,6 +443,7 @@ if ( {) {
 export const timeAgo = (date: Date | string | number): string => {
 
 };
+<<<<<<< HEAD
 };
 /** * Format a date to show how long ago it was * @param date Date to format * @returns Time ago string (e.g., "2 hours ago") */ if (interval >= 1) {
   return interval === 1 ? '1 year ago' : `$ {
@@ -451,3 +495,7 @@ export const timeAgo = (date: Date | string | number): string => {
 ;
   return seconds <= 5 ? 'just now' : `${Math.floor(seconds)} seconds ago`;
 };
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

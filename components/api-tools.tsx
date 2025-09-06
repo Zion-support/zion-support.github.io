@@ -1,16 +1,24 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import Head from 'next/head';
 
 
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import React from 'react';
 import Head from 'next/head';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
+<<<<<<< HEAD
   Code
   Database
   Globe
@@ -18,6 +26,9 @@ import {
   Zap
   Bot
   BarChart3
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -55,6 +66,7 @@ import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import {
 
+<<<<<<< HEAD
   Lock
   ArrowRight
   CheckCircle
@@ -64,6 +76,9 @@ import {
   BookOpen
   Github
   Terminal;} from 'lucide-react';import {
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Code,
   Database,
   Globe,
@@ -78,10 +93,16 @@ import {
   ExternalLink,
   Play,
   BookOpen,
+<<<<<<< HEAD
   Github,
   Terminal,;} from 'lucide-react';import { 
   Github,;
   Terminal,;} from 'lucide-react';import { ;
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Code;
   Database,
   Globe,
@@ -97,6 +118,10 @@ import {
   Play;
   BookOpen;
   Github;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -127,8 +152,12 @@ import {
     'Analytics'
   ];
   const [selectedCategory, setSelectedCategory] = React.useState('All');
+<<<<<<< HEAD
   Terminal
 } from 'lucide-react';
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function ApiToolsPage() {;
   const apiTools = [;
     {;
@@ -562,10 +591,20 @@ function ApiToolsPage() {
     'Integration',
     'AI / ML',
     'Analytics',
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <>;
       <Head>  const filteredTools = selectedCategory === 'All' ;
     ? apiTools ;
     : apiTools && apiTools.filter(tool => tool && tool.category === selectedCategory);
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   ];
   const [selected_category, setSelectedCategory] = React.useState ('All');
 ;
@@ -574,6 +613,7 @@ function ApiToolsPage() {
       ? api_tools;
       : api_tools.filter (tool => tool.category === selected_category);
   return (
+<<<<<<< HEAD
 
     <>;
       <Head>  const filtered_tools = selected_category === 'All';
@@ -816,6 +856,9 @@ rating: 4.9,
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
       {/* Hero Section */}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <section className='relative py-24 bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.15),transparent_50%)]' />
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(99,102,241,0.1),transparent_50%)]' />
@@ -834,6 +877,10 @@ rating: 4.9,
           </p>
           <div className='flex flex-wrap justify-center gap-4 mb-8'>
             {categories.map(category => (              <button      </Head>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       icon: <Code className="w-8 h-8 text-white" />,
       title: 'CodeGen API - AI-Powered Code Generation',
       description: 'Generate production-ready code in multiple languages using natural language descriptions and AI.',
@@ -1070,6 +1117,10 @@ rating: 4.9,
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             {categories.map((category) => (
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
@@ -1110,7 +1161,17 @@ rating: 4.9,
           </p>;
           <div className="flex flex-wrap justify-center gap-4 mb-8">;
             {categories && categories.map((category) => (;
+<<<<<<< HEAD
               <button
+=======
+
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+              <button
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <>
       <Head>
 
@@ -1118,10 +1179,15 @@ rating: 4.9,
               <button
 
 
+<<<<<<< HEAD
               <button
 
               <button
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${;
@@ -1131,6 +1197,7 @@ rating: 4.9,
                 }`}
               >;
                 {category}
+<<<<<<< HEAD
               </button>
             ))}
           </div>
@@ -1145,6 +1212,10 @@ rating: 4.9,
               {selectedCategory === 'All'
                 ? 'All API Tools'
                 : `${selectedCategory} APIs`}
+=======
+              </button>;
+            ))}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           </div>;
         </div>;
@@ -1157,8 +1228,11 @@ rating: 4.9,
       {/* API Tools Grid */}
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               {filteredTools.length} APIs available. Each tool is
@@ -1179,6 +1253,10 @@ rating: 4.9,
                       {tool && tool.icon}
                     </div>;
                     <div
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <meta;
           name='description';
           content='Discover powerful APIs and developer tools for building modern applications. From AI - powered code generation to real - time data synchronization, we provide the building blocks you need.';
@@ -1279,6 +1357,10 @@ rating: 4.9,
                   <div className='flex - 1'>;
                     <div className='flex items - center justify - between mb - 3'>;
                       <h3 className='text - 2xl font - bold text - white group - hover:text - indigo - 400 transition - colors duration - 300'>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         {tool.title}
                       </h3>;
                       <div className='flex items - center space - x-2'>;
@@ -1286,6 +1368,10 @@ rating: 4.9,
                           <Star className='w - 4 h - 4 fill - current' />;
                           <span className='ml - 1 text - sm font - medium'>;
                             {tool.rating}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
@@ -1320,18 +1406,27 @@ rating: 4.9,
                           <Star className="w-4 h-4 fill-current" />
                           <span className="ml-1 text-sm font-medium">{tool.rating}</span>
                         </div>
+<<<<<<< HEAD
                         <span className='px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-medium'>                          {tool.status}
                         </span>
                       </div>
                     </div>
                     <p className='text-gray-400 leading-relaxed mb-6'>                        <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-medium">
+=======
+<<<<<<< HEAD
+                        <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-medium">
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           {tool.status}
                         </span>
                       </div>
                     </div>
 
                           </span>;
+<<<<<<< HEAD
 </span>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         </div>;
                         <span className='px - 2 py - 1 bg - green - 500 / 20 text - green - 400 text - xs rounded - full font - medium'>                          {tool.status}
                         </span>;
@@ -1348,12 +1443,16 @@ rating: 4.9,
                     <div className='grid grid - cols - 3 gap - 4 mb - 6'>;
                       <div className='text - center p - 3 bg - gray - 800 / 50 rounded - lg'>;
                         <div className='text - lg font - bold text - indigo - 400'>;
+<<<<<<< HEAD
                     <p className='text-gray-400 leading-relaxed mb-6'>
                       {tool.description}
                     </p>
                     <div className='grid grid-cols-3 gap-4 mb-6'>
                       <div className='text-center p-3 bg-gray-800/50 rounded-lg'>
                         <div className='text-lg font-bold text-indigo-400'>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           {tool.users}
                         </div>;
                         <div className='text - xs text - gray - 500'>Users</div>;
@@ -1370,6 +1469,10 @@ rating: 4.9,
                         </div>;
                         <div className='text - lg font - bold text - green - 400'>;
                           {tool.pricing.free}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${tool && tool.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`}
                     />;
                   </div>;
@@ -1423,6 +1526,10 @@ rating: 4.9,
                       {tool && tool.features;
                         .slice(0, 3);
                         .map((feature, featureIndex) => (;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           <li
                             key={featureIndex}
                             className='flex items-center text-gray-300 text-sm'>;
@@ -1430,8 +1537,15 @@ rating: 4.9,
                             {feature}
                           </li>;
                         ))}
+<<<<<<< HEAD
                     </ul>;
                     <div className='flex flex-wrap gap-3'>;
+=======
+
+                    </ul>;
+                    <div className='flex flex-wrap gap-3'>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <Button
                         href={tool && tool.website}
                         variant='primary'
@@ -1440,6 +1554,7 @@ rating: 4.9,
                         <ExternalLink className='w-4 h-4 mr-2' />                        Visit API;
                       </Button>;
                       <Button
+<<<<<<< HEAD
                     <p className="text-gray-400 leading-relaxed mb-6">
                       {tool.description}
                     </p>
@@ -1464,6 +1579,39 @@ rating: 4.9,
                           {feature}
                         </li>;
                       ))}
+=======
+
+
+                        href={tool && tool.docs}                      {tool && tool.description}
+                    </p>;
+                    <div className="grid grid-cols-3 gap-4 mb-6">;
+                      <div className="text-center p-3 bg-gray-800/50 rounded-lg">;
+                        <div className="text-lg font-bold text-indigo-400">{tool && tool.users}</div>;
+                        <div className="text-xs text-gray-500">Users</div>;
+                      </div>;
+                      <div className="text-center p-3 bg-gray-800/50 rounded-lg">;
+                        <div className="text-lg font-bold text-green-400">{tool && tool.responseTime}</div>;
+                        <div className="text-xs text-gray-500">Response</div>;
+                      </div>;
+                      <div className="text-center p-3 bg-gray-800/50 rounded-lg">;
+                        <div className="text-sm font-medium text-gray-300">Starting at</div>;
+                        <div className="text-lg font-bold text-green-400">{tool && tool.pricing.free}</div>;
+                      </div>;
+                    </div>;
+                    <ul className="space-y-2 mb-6">;
+                      {tool && tool.features.slice(0, 3).map((feature, featureIndex) => (;
+                        <li key={featureIndex} className="flex items-center text-gray-300 text-sm">;
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />;
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+                          {feature}
+                        </li>;
+                      ))}
+
+                    </ul>;
+                    <div className="flex flex-wrap gap-3">;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <Button
                         href={tool && tool.website}
                     </ul>
@@ -1472,15 +1620,19 @@ rating: 4.9,
                         href={tool.website}
                         variant="primary"
                         size="sm"
+<<<<<<< HEAD
                         className="bg-indigo-600 hover:bg-indigo-700"
                       >
                         <ExternalLink className="w-4 h-4 mr-2" />
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
                         Visit API
                       </Button>
                       <Button
                         href={tool.docs}
+<<<<<<< HEAD
                         variant='outline'
                         size='sm'
                         className='border-gray-600 text-gray-300 hover:border-indigo-500 hover:text-indigo-400'
@@ -1489,6 +1641,9 @@ rating: 4.9,
                       </Button>
                       <Button
                         href={tool.github}                        variant="outline"
+=======
+                        variant="outline"
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         size="sm"
                         className="border-gray-600 text-gray-300 hover:border-indigo-500 hover:text-indigo-400"
                       >
@@ -1502,11 +1657,16 @@ variant="ghost"
                         className="text-gray-400 hover:text-indigo-400"
                       >
                         <Github className="w-4 h-4 mr-2" />
+<<<<<<< HEAD
+=======
+                        GitHub
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       </Button>
                     </div>
                   </div>
                 </div>
               </Card>
+<<<<<<< HEAD
             ))}
           </div>
         </div>
@@ -1517,6 +1677,11 @@ variant="ghost"
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
             <h2 className='text-3xl sm:text-4xl font-bold mb-6 text-white'>
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            ))}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -1525,8 +1690,11 @@ variant="ghost"
       {/* Developer Resources */}
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Developer Resources
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -1580,6 +1748,10 @@ variant="ghost"
               <Button href='/sdk' variant='outline' size='sm'>
                 Browse SDKs
                 <ArrowRight className='w-4 h-4 ml-2' />              </Button>                <ArrowRight className="w-4 h-4 ml-2" />
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <section className="py-24 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
@@ -1631,6 +1803,10 @@ variant="ghost"
               <Button href="/sdk" variant="outline" size="sm">
                 Browse SDKs
                 <ArrowRight className="w-4 h-4 ml-2" />
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </Button>
             </Card>
           </div>
@@ -1651,6 +1827,11 @@ variant="ghost"
               Developer Resources;
             </h2>;
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         </div>;
                       </div>;
                     </div>;
@@ -1751,10 +1932,16 @@ variant="ghost"
               Developer Resources;
             </h2>;
             <p className='text - xl text - gray - 400 max - w-3xl mx - auto'>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Everything you need to get started and build amazing applications;
               with our APIs.;
             </p>;
           </div>;
+<<<<<<< HEAD
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>;
             <Card className='text - center border border - gray - 700 hover:border - indigo - 500 / 30'>;
               <div className='w - 16 h - 16 bg - indigo - 500 / 20 rounded - 2xl flex items - center justify - center mx - auto mb - 6'>;
@@ -1764,11 +1951,16 @@ variant="ghost"
                 Comprehensive Documentation;
               </h3>;
               <p className='text - gray - 400 mb - 6'>;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 Detailed API references, code examples, and integration guides;
                 for every service.;
               </p>;
               <Button href='/docs' variant='outline' size='sm'>;
                 Explore Docs;
+<<<<<<< HEAD
                 <ArrowRight className='w - 4 h - 4 ml - 2' />              </Button>;
             </Card>;
             <Card className='text - center border border - gray - 700 hover:border - indigo - 500 / 30'>;
@@ -1779,11 +1971,16 @@ variant="ghost"
                 Interactive Playground;
               </h3>;
               <p className='text - gray - 400 mb - 6'>;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 Test APIs directly in your browser with our interactive testing;
                 environment.;
               </p>;
               <Button href='/playground' variant='outline' size='sm'>;
                 Try Playground;
+<<<<<<< HEAD
                 <ArrowRight className='w - 4 h - 4 ml - 2' />;
               </Button>;
             </Card>;
@@ -1795,17 +1992,27 @@ variant="ghost"
                 Open Source SDKs;
               </h3>;
               <p className='text - gray - 400 mb - 6'>;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 Official SDKs and client libraries for popular programming;
                 languages and frameworks.;
               </p>;
               <Button href='/sdk' variant='outline' size='sm'>;
                 Browse SDKs;
+<<<<<<< HEAD
                 <ArrowRight className='w - 4 h - 4 ml - 2' />              </Button>                <ArrowRight className="w - 4 h - 4 ml - 2" />;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </Button>;
             </Card>;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
       <section className="py-24 bg-gradient-to-r from-indigo-600 to-indigo-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -1869,11 +2076,32 @@ variant="ghost"
 }
   );
 }
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+              View Documentation;
+            </Button>;
+          </div>;
+        </div>;
+      </section>;
+
+
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </>);
 );
   );
 }
+<<<<<<< HEAD
 
 }
   );
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

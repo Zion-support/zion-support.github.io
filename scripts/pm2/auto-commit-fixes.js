@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -36,6 +37,8 @@ class AutoCommitFixes {,;
     } catch (error) {,;
       console.error('Error writing to log: file:', error.message);
     },;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 #!/usr / bin / env node;
 const fs = require ('fs');
@@ -50,6 +53,7 @@ class AutoCommitFixes { constructor () { this.project_root = process.cwd (); thi
 ;
 ;
 
+<<<<<<< HEAD
 ;
 #!/usr/bin/env node,;
 const fs = require('fs'),;
@@ -110,3 +114,7 @@ class AutoCommitFixes {,
     } catch (error) {,
       console.error('Error writing to log file:', error.message)
     };
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

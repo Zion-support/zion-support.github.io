@@ -9,4 +9,8 @@ const UseAnalytics.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default UseAnalytics.js;
+=======
+export default UseAnalytics.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

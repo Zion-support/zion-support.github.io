@@ -1,5 +1,10 @@
 
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react";
 
 
@@ -10,6 +15,7 @@ export default function CertificatePreview({
   userId = "demo-user",
 }: {;
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -33,6 +39,9 @@ export default function CertificatePreview(): any ({;
   courseId,;
   userId = "demo-user",;
 }: {;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   courseId: string;
   userId?: string;
 }) {;
@@ -52,6 +61,11 @@ export default function CertificatePreview(): any ({;
       </div>;
       <a
         href={url}
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 export default function CertificatePreview({ courseId, userId = 'demo-user' }: { courseId: string, userId?: string }) {
 
@@ -62,6 +76,7 @@ export default function CertificatePreview({ courseId, userId = 'demo-user' }: {
     </div>
 
 
+<<<<<<< HEAD
         className="mt-3 inline-block px-4 py-2 bg-indigo-600 text-white rounded">;
         Download PDF;
       </a>;
@@ -69,6 +84,9 @@ export default function CertificatePreview({ courseId, userId = 'demo-user' }: {
   );
 import React from 'react';
 export default function CertificatePreview({ courseId, userId = 'demo-user' }: { courseId: string, userId?: string }) {
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
   return (
     <div className="border rounded p-4">;
@@ -86,11 +104,19 @@ export default function CertificatePreview({ courseId, userId = 'demo-user' }: {
       </a>;
     </div>;
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
 }
 
+<<<<<<< HEAD
 }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from './react';
 ;
 export default /**
@@ -145,6 +171,7 @@ function CertificatePreview() {
   )
 
 }
+<<<<<<< HEAD
 
 
 import React from "react";
@@ -206,3 +233,9 @@ export default function CertificatePreview({
   );
 }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

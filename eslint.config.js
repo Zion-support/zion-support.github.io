@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -128,6 +129,28 @@ export default [
       'node_modules/**',
       '.eslintrc.js',
       'coverage/**',
+=======
+import js from '@eslint/js';
+import globals from 'globals';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsparser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
+
+export default [
+  js.configs.recommended,
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    ignores: [
+      '.next/**',
+      'out/**',
+      'dist/**',
+      'build/**',
+      'node_modules/**',
+      'coverage/**',
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
@@ -142,6 +165,7 @@ export default [
       '**/*.temp.*',
       '**/*.test.*',
       '**/*.spec.*',
+<<<<<<< HEAD
       '**/test-utils.*',
       '**/jest.setup.*',
       '**/jest.config.*',
@@ -278,6 +302,9 @@ export default [
       '**/performance-*.txt',
       'backup-problematic-files/**'
       '**/performance-*.txt'
+=======
+      '**/performance-*.txt',
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       '**/zion-os/**',
       '**/zion-website/**',
       '**/zion-academy/**',
@@ -287,6 +314,7 @@ export default [
       '**/*.bundle.js',
       '**/public/**',
       '**/static/**',
+<<<<<<< HEAD
     ],
     languageOptions: {
       parser: typescriptParser,
@@ -462,12 +490,53 @@ export default [
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       parser: typescriptParser,
+=======
+      'temp_exclude/**',
+      'test_build/**',
+      'tests/**',
+      'types/**',
+      'utils/**',
+      'vite.config.js',
+      'vite.config.ts',
+      'zion-website/**',
+      'zion_academy/**',
+      'ultimate-*.cjs',
+      'test-next.js',
+      'src_backup_temp/**',
+      'temp-backup/**',
+      'temp_components/**',
+      'temp_conflicts/**',
+      'temp_working/**',
+      'supabase/**',
+      'super-syntax-fixer.cjs',
+      'system-monitor.cjs',
+      'tailwind.config.js',
+      'start-dev.js',
+      'structural-fix.js',
+      'types/service-variants.js',
+      'utils/accessibility-utils.js',
+      'utils/csrf-protection.js',
+      'utils/dynamic-imports.js',
+      'utils/env-security.js',
+      'utils/input-validation.js',
+      'utils/performance-monitor.js',
+      'utils/performance-optimizations.js',
+      'utils/rate-limiting.js',
+      'utils/security-headers.js',
+      'utils/seo-utils.js',
+      'zion-website/**',
+      'zion_academy/**'
+    ],
+    languageOptions: {
+      parser: tsparser,
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
           jsx: true
         }
+<<<<<<< HEAD
       }
     },
     plugins: {
@@ -544,16 +613,27 @@ export default [
         require: 'readonly',
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+      },
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        React: 'readonly',
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         jest: 'readonly',
         describe: 'readonly',
         it: 'readonly',
         test: 'readonly',
         expect: 'readonly',
+<<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         beforeEach: 'readonly',
         afterEach: 'readonly',
         beforeAll: 'readonly',
         afterAll: 'readonly'
+<<<<<<< HEAD
 
         ...globals && globals.browser,
         ...globals && globals.node,
@@ -602,16 +682,19 @@ origin/automation-improvements-final
         ecmaFeatures: {
           jsx: true
         }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
     },
     plugins: {
-      "@typescript-eslint": tseslint,
+      '@typescript-eslint': tseslint,
       react,
-      "react-hooks": reactHooks,
-      "react-refresh": reactRefresh,
-      "jsx-a11y": jsxA11y
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
+      'jsx-a11y': jsxA11y
     },
     rules: {
+<<<<<<< HEAD
       ...tseslint && tseslint.configs.recommended && recommended.rules,
       ...react && react.configs.recommended && recommended.rules,
       ...reactHooks && reactHooks.configs.recommended && recommended.rules,
@@ -654,15 +737,29 @@ origin/automation-improvements-final
     rules: {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+      ...tseslint.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      ...jsxA11y.configs.recommended.rules,
+      'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true }
+      ],
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
       'react-hooks/exhaustive-deps': 'warn',
       'no-undef': 'off',
+<<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'no-unused-vars': 'off',
       'no-console': 'warn',
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off'
+<<<<<<< HEAD
 
 
 
@@ -682,37 +779,40 @@ origin/main
 origin/automation-improvements-final
       "react/react-in-jsx-scope": "off"
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
     settings: {
       react: {
-        version: "detect"
+        version: 'detect'
       }
     }
   },
   {
     files: [
-      "**/*.cjs",
-      "**/scripts/**/*.js",
-      "**/automation/**/*.js",
-      "**/pm2/**/*.js"
+      '**/*.cjs',
+      '**/scripts/**/*.js',
+      '**/automation/**/*.js',
+      '**/pm2/**/*.js'
     ],
     languageOptions: {
       ecmaVersion: 2021,
-      sourceType: "script",
+      sourceType: 'script',
       globals: {
-        ...globals && globals.node,
-        console: "readonly",
-        process: "readonly",
-        require: "readonly",
-        module: "readonly",
-        exports: "readonly",
-        __dirname: "readonly",
-        __filename: "readonly",
-        Buffer: "readonly",
-        global: "readonly"
+        ...globals.node,
+        console: 'readonly',
+        process: 'readonly',
+        require: 'readonly',
+        module: 'readonly',
+        exports: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        Buffer: 'readonly',
+        global: 'readonly'
       }
     },
     rules: {
+<<<<<<< HEAD
       "no-unused-vars": "warn",
       "no-console": "warn",
 
@@ -734,10 +834,13 @@ origin/automation-improvements-final
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       ...next.configs.recommended.rules,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'no-undef': 'error'
     }
+<<<<<<< HEAD
 
   }
 ];
@@ -801,3 +904,7 @@ origin/automation-improvements-final
 ];
   }
 ];
+=======
+  }
+];
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

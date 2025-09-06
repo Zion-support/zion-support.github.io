@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 'use client',
 import React, { useState } from 'react',
 import Link from 'next / link',
@@ -16,6 +20,10 @@ export default /**
 function InteractiveCard() {
   const [is_hovered, setIsHovered] = useState (false),
   return (
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <Link;
       href={href}
       className={`group block p - 8 rounded - 2xl border border - white / 10 hover:border - white / 30 bg - black / 20 hover:bg - black / 40 transition - all duration - 500 transform hover:scale - 105 hover:shadow - 2xl backdrop - blur - sm hover - lift ${class_name}`}
@@ -24,6 +32,7 @@ function InteractiveCard() {
       aria - label={`Navigate to ${title} page`}
 >;
       <div className=&quot;relative & quot;>;
+<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -55,6 +64,9 @@ interface InteractiveCardProps {;
   className?: string,;
   children?: React.ReactNode;
 }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 'use client',;
 import React, { useState } from 'react',;
@@ -83,6 +95,7 @@ export default function InteractiveCard({;
   return (;
     <Link;
       href={href}
+<<<<<<< HEAD
 ;
 export default function InteractiveCard({;
   title,;
@@ -97,10 +110,13 @@ export default function InteractiveCard({;
   return (;
     <Link;
       href={href}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       className={`group block p-8 rounded-2xl border border-white/10 hover:border-white/30 bg-black/20 hover:bg-black/40 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm hover-lift ${className}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       aria-label={`Navigate to ${title} page`}
+<<<<<<< HEAD
     >
       <div className="relative">
 
@@ -108,13 +124,42 @@ export default function InteractiveCard({;
       <div className=&quot;relative&quot;>
     >
       <div className="relative">
+=======
+
+    >
+      <div className="relative">
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Animated background */}
         <div;
           className={`absolute inset - 0 bg - gradient - to - r ${color} rounded - xl opacity - 0 group - hover:opacity - 10 transition - opacity duration - 500 blur - xl`}
         />;
         {/* Icon */}
+<<<<<<< HEAD
 
         <div className="relative z-10 text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
+=======
+
+
+        <div className="relative z-10 text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
+          {icon}
+        </div>;
+        {/* Content */}
+        <div className="relative z-10">
+          <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300">
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            {title}
+          </h3>;
+          <p className=&quot;text - gray - 400 leading - relaxed text - lg mb - 6&quot;>;
+            {description}
+          </p>;
+          {/* Custom children or default arrow */}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 {children || (
 
@@ -168,6 +213,7 @@ export default function InteractiveCard({;
           style={{
             background: `linear - gradient (45deg, var (--${color.split ('-')[1]}-500), var (--${color.split ('-')[3]}-500))`;
 
+<<<<<<< HEAD
           style={{;
             background: `linear-gradient(45deg, var(--${color.split('-')[1]}-500), var(--${color.split('-')[3]}-500))`;
 
@@ -218,17 +264,30 @@ export default function InteractiveCard({;
           style={{background: `linear-gradient(45deg, var(--${color.split('-')[1]}-500), var(--${color.split('-')[3]}-500))`;
           style={{;
             background: `linear-gradient(45deg, var(--${color.split('-')[1]}-500), var(--${color.split('-')[3]}-500))`;
+=======
+=======
+
+          style={{;
+            background: `linear-gradient(45deg, var(--${color.split('-')[1]}-500), var(--${color.split('-')[3]}-500))`;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           }}
         />;
       </div>;
     </Link>);
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export /**
  * FeatureCard - Function description
  */
 function FeatureCard() {
   return (
 
+<<<<<<< HEAD
 
 export /**
  * FeatureCard - Function description
@@ -242,6 +301,10 @@ export function FeatureCard({title;
   stats;
   className = '';
 }: InteractiveCardProps & { stats?: { label: string, value: string }[] }) {return (;
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 export function FeatureCard({;
   title,;
@@ -252,6 +315,11 @@ export function FeatureCard({;
   className = '';
 }: InteractiveCardProps & { stats?: { label: string, value: string }[] }) {;
   return (;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <InteractiveCard;
       title={title}
       description={description}
@@ -272,6 +340,10 @@ export function FeatureCard({;
         </div>)}
     </InteractiveCard>);
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export /**
  * TestimonialCard - Function description
  */
@@ -280,6 +352,7 @@ function TestimonialCard() {
     <div className={`bg - black / 30 backdrop - blur - sm border border - white / 10 rounded - 2xl p - 8 hover:bg - black / 50 transition - all duration - 300 transform hover:scale - 105 ${class_name}`}>;
       {/* Quote icon */}
 <div className=&quot;text - 4xl mb - 4&quot;>💬</div>;
+<<<<<<< HEAD
       {/* Rating */}
       <div className=&quot;flex mb - 4&quot;>;
         {Array.from ({ length: rating }).map ((_, i) => (
@@ -333,6 +406,10 @@ export function TestimonialCard({;
   return (;
     <div className={`bg-black/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-black/50 transition-all duration-300 transform hover:scale-105 ${className}`}>;
       {/* Quote icon */}
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ;
 export function TestimonialCard({;
@@ -354,11 +431,15 @@ export function TestimonialCard({;
     <div className={`bg-black/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-black/50 transition-all duration-300 transform hover:scale-105 ${className}`}>;
       {/* Quote icon */}
 
+<<<<<<< HEAD
       <div className="text-4xl mb-4">💬</div>
       
 <div className=&quot;text-4xl mb-4&quot;>💬</div>
       <div className="text-4xl mb-4">💬</div>
       
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Rating */}
       <div className="flex mb-4">
         {Array.from({ length: rating }).map((_, i) => (
@@ -369,6 +450,7 @@ export function TestimonialCard({;
       </div>;
       {/* Quote */}
 
+<<<<<<< HEAD
       <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
         "{quote}"
 
@@ -378,6 +460,23 @@ export function TestimonialCard({;
         &quot;{quote}&quot;
       <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
         "{quote}"
+=======
+
+      <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
+        "{quote}"
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      </blockquote>
+=======
+      <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
+        "{quote}"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </blockquote>
       {/* Author info */}
       <div className="border-t border-white/10 pt-4">

@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 export default function NotFound(){return (<main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>404 - Not Found</h1></main>)}\"
 module.exports = default function NotFound(){return (<main style={{ padding: ""40px"",fontFamily: "sans-serif" }}><h1>404 - Not Found</h1></main>)}"'"'"
 import React from 'react';
@@ -15,6 +16,13 @@ module.exports = default function NotFound(){return (<main style={{ padding: ""4
 import React from 'react';
 interface 404.routeProps {
   // Add props here as needed
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function NotFound(){return (<main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>404 - Not Found</h1></main>)}\"
 module.exports = default function NotFound(){return (<main style={{ padding: ""40px"",fontFamily: "sans-serif" }}><h1>404 - Not Found</h1></main>)}"'"'"
 export default function NotFound(){return (<main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>404 - Not Found</h1></main>)}\"
@@ -29,7 +37,12 @@ interface 404.routeProps {
   // Add props here as needed
 }
 
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function 404.route({ }: 404.routeProps) {
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -68,6 +81,7 @@ export default function 404 && 404.route({ }: 404 && 404.routeProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
+<<<<<<< HEAD
 
 
 
@@ -80,3 +94,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

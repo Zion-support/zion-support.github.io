@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface UserDetails {
 export interface UserDetails {;
   id?: string;
@@ -14,6 +15,12 @@ export interface UserDetails {;
 
   permissions?: string[];
   company_id?: string;
+=======
+
+  permissions?: string[];
+  company_id?: string;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   bio?: string;
   created_at?: string;
   updated_at?: string;
@@ -31,6 +38,7 @@ export interface UserProfile {
   avatar_url?: string;
   headline?: string;
   role?: string;
+<<<<<<< HEAD
   permissions?: string[],
   companyId?: string;
   bio?: string;
@@ -130,6 +138,12 @@ export interface AuthContextType {;
   signIn?: (email: string, password: string) => Promise<{ error: any }>,;
   signOut?: () => Promise<void>;
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>;
+=======
+
+  permissions?: string[],
+  company_id?: string;
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Update AuthContextType definition to match implementation;
 export interface AuthContextType {
   user: UserDetails | null;
@@ -152,6 +166,7 @@ export interface UserDetails {;
 
 }
 ;
+<<<<<<< HEAD
 }
 export interface UserDetails {;
   id?:string,;
@@ -209,3 +224,7 @@ export interface AuthContextType {;
 ;
 }
 ;
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

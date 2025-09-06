@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { format } from "date-fns";
 
 import { format } from "date-fns";
@@ -49,6 +50,8 @@ import { ContractFormValues } from "./ContractForm"
 
 interface ProjectDetailsFieldsProps {
   form: UseFormReturn<ContractFormValues>;  form: UseFormReturn<ContractFormValues>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { format } from "date-fns";
 import { CalendarIcon } from 'lucide-react';
 import { UseFormReturn, ControllerRenderProps } from "react-hook-form";
@@ -90,10 +93,15 @@ interface ProjectDetailsFieldsProps {;
 
   form: UseFormReturn<ContractFormValues>;  form: UseFormReturn<ContractFormValues>
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps) {;
   return (
     <>;
       <FormField
+<<<<<<< HEAD
 export /**
  * ProjectDetailsFields - Function description
  */
@@ -153,6 +161,21 @@ import {
   FormDescription, 
   FormMessage 
 } from "@/components/ui/form",
+=======
+
+
+        render={({
+          field
+        }: {
+
+        control={form.control}
+
+        name="projectName"
+        render={({ field }: { field: ControllerRenderProps<ContractFormValues, "projectName"> }) => (
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Button } from "@/components/ui/button",
@@ -189,22 +212,33 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
         control={form.control}
         name="projectName"
         render={({ field }: { field: ControllerRenderProps<ContractFormValues "projectName"> }) => (
+<<<<<<< HEAD
             <FormLabel>Project Name</FormLabel>
             <FormControl>
               <Input placeholder="AI Website Development" {...field} />
 ursor/fix-website-loading-errors-and-merge-6662
 
 
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <FormItem>
             <FormLabel>Project Name</FormLabel>
             <FormControl>
               <Input placeholder="AI Website Development" {...field} />
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </FormControl>
 
             <FormMessage />
           </FormItem>
         )}
       />
+<<<<<<< HEAD
       <FormField
         control={form.control}
         name='scopeSummary'
@@ -223,6 +257,9 @@ ursor/fix-website-loading-errors-and-merge-6662
           </FormItem>
         )}
       />
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           field: ControllerRenderProps<ContractFormValues, 'projectName'>;
         }) => (;
           <FormItem>;
@@ -243,13 +280,23 @@ ursor/fix-website-loading-errors-and-merge-6662
             <FormLabel>Project Name</FormLabel>;
             <FormControl>;
               <Input placeholder="AI Website Development" {...field} />;
+<<<<<<< HEAD
+=======
+
+            </FormControl>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <FormMessage />;
           </FormItem>;
         )}
       />;
+<<<<<<< HEAD
       <FormField
         control={form && form.control}
         name='scopeSummary'
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           field: ControllerRenderProps < ContractFormValues, 'project_name'>;
         }) => (
           <FormItem>;
@@ -309,6 +356,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 className='min-h-[120px]'                placeholder="Describe the project scope, deliverables, and expectations..."
                 className="min-h-[120px]"
                 {...field}
+<<<<<<< HEAD
               />
             </FormControl>
             <FormDescription>
@@ -342,6 +390,15 @@ ursor/fix-website-loading-errors-and-merge-6662
             <FormLabel>Scope Summary</FormLabel>;
             <FormControl>;
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+              />;
+            </FormControl>;
+            <FormDescription>;
+              Be specific about what is included and any limitations;
+            </FormDescription>;
+            <FormMessage />;
+          </FormItem>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         )}
       />;
       <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>;
@@ -524,13 +581,17 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
 
 
 
+<<<<<<< HEAD
         )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         )}
       />
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <FormField
           control={form.control}
+<<<<<<< HEAD
           name='startDate'
           render={({
             field,
@@ -548,10 +609,15 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
           render={({ field }: { field: ControllerRenderProps<ContractFormValues "startDate"> }) => (
             <FormItem className="flex flex-col">
               <FormLabel>Start Date</FormLabel>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
+<<<<<<< HEAD
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
@@ -563,6 +629,13 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                       variant={"outline"}
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
                     >
+=======
+
+                      variant={"outline"}
+                      className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
+                    >
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       {field.value ? (
                         format(field.value, "PPP")
                       ) : (
@@ -574,6 +647,7 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                 </PopoverTrigger>
                 <PopoverContent className="w-auto p-0" align="start">
                   <Calendar
+<<<<<<< HEAD
                     mode='single'
                     selected={field.value}
                     onSelect={field.onChange}
@@ -593,6 +667,9 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                 </PopoverTrigger>
                 <PopoverContent className="w-auto p-0" align="start">
                   <Calendar
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     mode="single"
       />;
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
@@ -656,6 +733,7 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
           control = {form && form.control,}
           name="endDate"
           render={({ field }: { field: ControllerRenderProps<ContractFormValues, "endDate"> },) => (;
+<<<<<<< HEAD
                     mode="single"
       />;
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
@@ -672,6 +750,8 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                       variant={"outline"}
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
                     >;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       {field.value ? (;
                         format(field.value, "PPP");
                       ) : (;
@@ -684,6 +764,10 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                 <PopoverContent className='w-auto p-0' align='start'>
                   <Calendar
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     initialFocus
                   />
                 </PopoverContent>
@@ -691,6 +775,7 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
               <FormMessage />
             </FormItem>
           )}
+<<<<<<< HEAD
         />
         <FormField
           control={form.control}
@@ -719,10 +804,15 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
           render={({ field }: { field: ControllerRenderProps<ContractFormValues "endDate"> }) => (
             <FormItem className="flex flex-col">
               <FormLabel>End Date (Optional)</FormLabel>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
+<<<<<<< HEAD
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
@@ -731,6 +821,9 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                       {field.value ? (
                       variant={'outline'}
                       className={`w-full pl-3 text-left font-normal ${!field.value && 'text-muted-foreground'}`}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       variant={"outline"}
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
                     >
@@ -800,11 +893,16 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                     <Button
                       variant={"outline"}
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     >
                       {field.value ? (
                         format(field.value, "PPP")
                       ) : (
                         <span>Pick a date</span>
+<<<<<<< HEAD
                     selected={field && field.value || undefined}
                     onSelect={field && field.onChange}
                     disabled={date => date < form && form.getValues('startDate')}                    initialFocus                    mode="single";
@@ -908,6 +1006,8 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
   );
 }
 ;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     selected={field && field.value || undefined}
                     onSelect={field && field.onChange}
                     disabled={(date) => date < form && form.getValues("startDate")}
@@ -978,6 +1078,7 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                 Leave empty if the end date is flexible;
               </FormDescription>;
               <FormMessage />;
+<<<<<<< HEAD
             </FormItem>;
           )}
         />;
@@ -1007,3 +1108,8 @@ FormMessage interface ProjectDetailsFieldsProps {;
 }/> </div> </>) ;
 }"
 ;
+=======
+
+
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

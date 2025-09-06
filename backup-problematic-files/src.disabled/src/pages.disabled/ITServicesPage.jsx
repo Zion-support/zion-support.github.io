@@ -9,4 +9,8 @@ const ITServicesPage = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ITServicesPage;
+=======
+export default ITServicesPage;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 
 			pricePerMonthUSD={2999  } catch (error) {
@@ -74,11 +75,24 @@ export default function AIAutonomousEcosystemManager() {
 				"Integrations: Kubernetes, Slack/Teams, Jira, GitHub"
 			]}
 			industries={["Platform Teams", "R&D", "Operations", "Security"]}
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 			pricePerMonthUSD={2999  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 			implementationWeeks="Implementation: 4–8 weeks"
 			roiNote="Average ROI 4–9x within 6 months"
 			features={[
@@ -88,6 +102,7 @@ export default function AIAutonomousEcosystemManager() {
 				"Sandboxing and E2E approvals for sensitive actions",
 				"Cost and performance optimization",
 				"Integrations: Kubernetes, Slack/Teams, Jira, GitHub"
+<<<<<<< HEAD
 			]}
 			industries={["Platform Teams", "R&D", "Operations", "Security"]}
 			canonical="https: //ziontechgroup.com/ai-autonomous-ecosystem-manager"
@@ -115,3 +130,8 @@ export default function AIAutonomousEcosystemManager() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

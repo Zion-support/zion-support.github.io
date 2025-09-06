@@ -9,4 +9,8 @@ const AIResearchAssistant.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIResearchAssistant.js;
+=======
+export default AIResearchAssistant.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

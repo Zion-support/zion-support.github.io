@@ -1,10 +1,24 @@
 
+<<<<<<< HEAD
 
+=======
+import { MapPin  } from './lucide-react';
+import { PaymentButton  } from '@/components / transactions / PaymentButton';
+import { CountryPricing  } from '@/data / onsiteServicePricing';
+import { toast  } from '@/hooks / use - toast';
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface PaymentSectionProps {
   selected_country: CountryPricing;
 }
 
 
+<<<<<<< HEAD
       title: "Processing your request",
 
 
@@ -48,6 +62,11 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
       description: "You'll be redirected to our secure payment portal momentarily."})
   },
   
+=======
+      title: "Processing your request",
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="text-center">
       <p className="text-zion-slate-light mb-2">Selected Country</p>
@@ -57,6 +76,10 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
       </h4>
       <p className="text-2xl font-bold text-zion-cyan mb-6">
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { MapPin } from "lucide-react",;
 import { PaymentButton } from "@/components/transactions/PaymentButton",;
 import { CountryPricing } from "@/data/onsiteServicePricing",;
@@ -80,13 +103,23 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {;
         {selectedCountry.country}
       </h4>;
       <p className="text-2xl font-bold text-zion-cyan mb-6">;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         ${selectedCountry.pricePerIncident.toFixed(2)}
       </p>
       <PaymentButton
         amount={selectedCountry.pricePerIncident}
+<<<<<<< HEAD
 interface PaymentSectionProps {
   selected_country: CountryPricing;
 }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {MapPin} from "lucide-react";
 import {PaymentButton} from "@/components/transactions/PaymentButton";
 import {CountryPricing} from "@/data/onsiteServicePricing";
@@ -94,6 +127,10 @@ import {toast} from "@/hooks/use-toast";
 interface PaymentSectionProps {;
   selectedCountry: CountryPricing;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps) {;
   // Handle successful payment;
   const handlePaymentInitiated = () => {;
@@ -101,6 +138,7 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
       title: "Processing your request",;
       description: "You'll be redirected to our secure payment portal momentarily."});
   };
+<<<<<<< HEAD
   return (
 
 import { MapPin } from "lucide-react",;
@@ -121,10 +159,15 @@ export function PaymentSection({ selectedCountry } PaymentSectionProps) {;
   },;
   ;
   return (;
+=======
+
+  return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="text-center">;
       <p className="text-zion-slate-light mb-2">Selected Country</p>;
       <h4 className="text-xl font-bold text-white mb-2 flex items-center justify-center">;
         <MapPin className="mr-2 h-5 w-5 text-zion-purple" />;
+<<<<<<< HEAD
         serviceId="it-onsite-service"
         providerId="zion-tech-group"
         buttonText={`Pay for Service in ${selectedCountry.country}`}
@@ -139,6 +182,9 @@ export function PaymentSection({ selectedCountry } PaymentSectionProps) {;
     </div>
 
         {selectedCountry.country}
+=======
+        {selectedCountry && selectedCountry.country}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </h4>;
       <p className="text-2xl font-bold text-zion-cyan mb-6">;        ${selectedCountry.pricePerIncident.toFixed(2)}
       </p>;
@@ -214,6 +260,10 @@ function PaymentSection() {
 }
 ;
 
+<<<<<<< HEAD
   )
 }
 ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

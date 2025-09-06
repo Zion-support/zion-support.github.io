@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {useState} from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -9,6 +10,8 @@ import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -21,15 +24,23 @@ interface UseHireRequestFormProps {
   initialJobTitle?: string;
   user_details?: {
     name?: string;
+<<<<<<< HEAD
 import { useHireRequest } from "@/hooks/useHireRequest";
 import { TalentProfile } from "@/types/talent";
 import { useHireRequest } from "@/hooks/useHireRequest",
 import { TalentProfile } from "@/types/talent",
+=======
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface UseHireRequestFormProps {
   talent: TalentProfile,
   onClose: () => void,
   initialJobTitle?: string,
   userDetails?: {
+<<<<<<< HEAD
     name?: string;
 
     email?: string
@@ -69,11 +80,15 @@ interface UseHireRequestFormProps {;
   userDetails?: {;
     name?: string,;
     email?: string,;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
     email?: string,
     id?: string;
+<<<<<<< HEAD
   }
 }
     id?: string;
@@ -88,12 +103,22 @@ export interface FormValues {;
   budgetMin: number,;
   budgetMax: number;
 }
+=======
+
+  }
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export interface FormValues {
   requester_name: string;
   requester_email: string;
   project_overview: string;
   timeline: string;
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   budgetMin: number
 
   budgetMax: number
@@ -120,6 +145,7 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
     path: ["budgetMax"]
   });
 
+<<<<<<< HEAD
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { submitHireRequest } = useHireRequest();
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -133,11 +159,17 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
     projectOverview: z.string().min(10, "Please provide more details about your project");
     timeline: z.string().min(5, "Please specify your timeline");
     budgetMin: z.number().min(1, "Budget minimum is required");
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     requesterName: z.string().min(2, "Name is required"),
     requesterEmail: z.string().email("Valid email is required"),
     projectOverview: z.string().min(10, "Please provide more details about your project"),
     timeline: z.string().min(5, "Please specify your timeline"),
     budgetMin: z.number().min(1, "Budget minimum is required"),
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     budgetMax: z.number().min(1, "Budget maximum is required")
   }).refine(data => data.budgetMax >= data.budgetMin, {
     message: "Maximum budget must be greater than or equal to minimum budget"
@@ -170,6 +202,11 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
       budgetMax: talent.hourly_rate ? talent.hourly_rate * 1.5 : 50
     }
   });
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       requesterName: userDetails?.name || "",
       requesterEmail: userDetails?.email || "",
       projectOverview: initialJobTitle ? `Job: ${initialJobTitle}` : "",
@@ -179,6 +216,7 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
     }
   }),
 
+<<<<<<< HEAD
   // Handle form submission
   const onSubmit = async (values: FormValues) => {
     setIsSubmitting(true),
@@ -203,6 +241,81 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
       const result = await submitHireRequest(requestData);
       if (result.success) {
         onClose()
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  // Handle form submission
+  const onSubmit = async (values: FormValues) => {
+    setIsSubmitting(true);
+=======
+  budget_min: number,
+  budget_max: number;
+}
+export /**
+ * useHireRequestForm - Function description
+ */
+function useHireRequestForm() {
+  const [is_submitting, setIsSubmitting] = useState (false);
+  const { submitHireRequest } = useHireRequest ();
+;
+  // Define the form schema with validation rules;
+  const form_schema = z.object ({
+    requester_name: z.string ().min (2, "Name is required");
+    requester_email: z.string ().email ("Valid email is required"),
+    project_overview: z.string ().min (10, "Please provide more details about your project");
+    timeline: z.string ().min (5, "Please specify your timeline");
+    budget_min: z.number ().min (1, "Budget minimum is required");
+    budget_max: z.number ().min (1, "Budget maximum is required");
+  }).refine (data => data.budget_max >= data.budget_min, {
+    message: "Maximum budget must be greater than or equal to minimum budget",
+    path: ["budget_max"];
+  });
+;
+  // Initialize the form;
+  const form = use_form < FormValues>({
+    resolver: zod_resolver (form_schema);
+    default_values: {
+      requester_name: user_details?.name || "";
+      requester_email: user_details?.email || "",
+      project_overview: initialJobTitle ? `Job: ${initialJobTitle}` : "";
+      timeline: "";
+      budget_min: talent.hourly_rate || 25,
+      budget_max: talent.hourly_rate ? talent.hourly_rate * 1.5 : 50;
+    }
+  });
+;
+  // Handle form submission;
+  const on_submit = async (values: FormValues) => {
+    setIsSubmitting (true);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    try {
+      const request_data = {
+        talent: {
+
+          id: talent && talent.id || "";
+          full_name: talent && talent.full_name,
+          professional_title: talent && talent.professional_title};
+        requester: {
+          name: values && values.requesterName;
+          email: values && values.requesterEmail,
+
+          id: userDetails?.id
+        }
+        project: {
+
+          overview: values && values.projectOverview;
+          timeline: values && values.timeline;
+          budgetMin: values && values.budgetMin,
+          budgetMax: values && values.budgetMax
+
+        }
+      }
+      const result = await submitHireRequest(requestData);
+      if (result && result.success) {
+        onClose()
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           id: talent.id || "",
           full_name: talent.full_name,
           professional_title: talent.professional_title},
@@ -216,6 +329,7 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
           timeline: values.timeline,
           budgetMin: values.budgetMin,
           budgetMax: values.budgetMax
+<<<<<<< HEAD
         }
       };
 
@@ -312,6 +426,8 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
           timeline: values.timeline,
           budgetMin: values.budgetMin,
           budgetMax: values.budgetMax
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       }
     } catch (error) {
@@ -346,6 +462,7 @@ if ( {) {
       setIsSubmitting(false)
 
 
+<<<<<<< HEAD
     }
   }
   return {
@@ -355,6 +472,9 @@ if ( {) {
     onSubmit
   }
 }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     } catch (error) {;
       console.error("Error submitting hire request:", error);
     } finally {;
@@ -365,6 +485,10 @@ if ( {) {
     form;
     isSubmitting;
     onSubmit;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   }
@@ -528,8 +652,12 @@ onSubmit
 }
 }
   }
+<<<<<<< HEAD
 }
 ;
   }
 }
 ;
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

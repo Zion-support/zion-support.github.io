@@ -8,6 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { ReferralStats as ReferralStatsType } from "@/types/referrals",
 import { Award, Share, Star, TrendingUp } from 'lucide-react'
 
+<<<<<<< HEAD
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ReferralStats as ReferralStatsType } from "@/types/referrals";
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -37,11 +38,15 @@ import { Star } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { ReferralStats as ReferralStatsType } from "@/types/referrals",
 import { Award, Share, Star, TrendingUp } from 'lucide-react'
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 interface ReferralStatsProps {
 
   stats: ReferralStatsType
   isLoading: boolean
+<<<<<<< HEAD
 }
 export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
   const statCards = [
@@ -78,6 +83,8 @@ interface ReferralStatsProps {
 
   stats: ReferralStatsType
   isLoading: boolean
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { ReferralStats as ReferralStatsType } from '@/types / referrals';
 import { Award, Share, Star, TrendingUp } from 'lucide-react';
@@ -187,6 +194,7 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
         </Card>;
       ))}
 
+<<<<<<< HEAD
 
   return (
     <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-4'>
@@ -219,6 +227,8 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
       description: "Credits earned from referrals"}],
 
   return (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         <Card key={i}>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -227,6 +237,7 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
           </CardHeader>
           <CardContent>
             {isLoading ? (
+<<<<<<< HEAD
               <div className='h-6 w-20 bg-muted animate-pulse rounded' />
             ) : (
               <>
@@ -235,6 +246,10 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
                   {card.description}
                 </p>              </>              <div className="h-6 w-20 bg-muted animate-pulse rounded" />
               <div className="h-6 w-20 bg-muted animate-pulse rounded" />
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className="h-6 w-20 bg-muted animate-pulse rounded" />
 
 
@@ -242,6 +257,10 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
               <>
                 <div className="text-2xl font-bold">{card.value}</div>
                 <p className="text-xs text-muted-foreground">{card.description}</p>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       title: 'Total Referrals',
       icon: <Share className='h - 5 w - 5 text - muted - foreground' />,
       description: "People you've invited",
@@ -329,6 +348,10 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {;
   return (;
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">;
       {statCards.map((card, i) => (;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <Card key={i}>;
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">;
             <CardTitle className="text-sm font-medium">{card.title}</CardTitle>;
@@ -349,6 +372,11 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {;
     </div>;
   );
 }
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 ;
 ;
+=======
+
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

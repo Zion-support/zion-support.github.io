@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Button  } from '@/components/ui/button';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, FileText, Link } from 'lucide-react'; import { PdfExportButton } from '../PdfExportButton'
@@ -8,10 +9,13 @@ import { ArrowLeft, FileText, Link } from 'lucide-react'
 import { PdfExportButton  } from '../PdfExportButton';
 import { Resume  } from '@/types/resume';
 import { useState  } from 'react';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { PdfExportButton } from '../PdfExportButton';
 import { Resume } from '@/types/resume';
 import { useState } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';
+<<<<<<< HEAD
 interface PreviewHeaderProps {
   resume: Resume;
   onBack: () => void
@@ -36,16 +40,32 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
           left: 0
           top: 0
           width: 100%
+=======
+
+
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         }
         .no-print {
           display: none !important }
       }
+<<<<<<< HEAD
     `
     document.head.appendChild(style)
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         }
         .print-section, .print-section * {
           visibility: visible
         }
+<<<<<<< HEAD
         .print-section {
           position: absolute
           left: 0
@@ -94,6 +114,8 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
         .print - section, .print - section * {
           visibility: visible;
         }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         .print-section {;
           position: absolute,;
@@ -131,15 +153,19 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
         <PdfExportButton resume={resume} />;
 
 
+<<<<<<< HEAD
       </Button>
       <div
         className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}
       >
         <PdfExportButton resume={resume} />
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <Button
           variant='outline'
           onClick={handleBrowserPrint}
           disabled={isPrinting}
+<<<<<<< HEAD
           className='gap-2'        >
           <FileText className='h-4 w-4' />
           Print
@@ -235,16 +261,37 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
           Print
         </Button>
         
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <Button variant="outline" className="gap-2">
         
           <Link className="h-4 w-4" />
           Add to Profile
         </Button>
       </div>
+<<<<<<< HEAD
     </div>;
   );
 };
 }
+=======
+
+
+          className='gap-2'>;
+          <FileText className='h-4 w-4' />;
+          Print;
+        </Button>;
+
+        <Button variant='outline' className='gap-2'>;
+          <Link className='h-4 w-4' />          Add to Profile        ;
+        <Button variant="outline" className="gap-2">;
+          <Link className="h-4 w-4" />;
+          Add to Profile;
+        </Button>;
+      </div>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>;
   );
 };
@@ -301,4 +348,8 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
 }
 
     </div>
+<<<<<<< HEAD
   )
+=======
+  )
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

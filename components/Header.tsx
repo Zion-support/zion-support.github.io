@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -20,12 +24,18 @@ class ErrorBoundary extends React.Component {
 
 
 "use client";
+<<<<<<< HEAD
 "use client";
+=======
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 "use client";
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+<<<<<<< HEAD
   Menu,
 
 'use client';
@@ -39,11 +49,14 @@ import {
   X, 
   Phone, 
   Mail, 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 "use client";
 ;
 import React, { useState, useEffect } from './react';
 import Link from './next / link';
+<<<<<<< HEAD
 import {
 'use client';
 
@@ -73,6 +86,12 @@ Instagram,
   Menu, 
 
 origin/automation-improvements-final
+=======
+
+import {
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   X,
   ChevronDown,
   Code,
@@ -88,11 +107,18 @@ origin/automation-improvements-final
   Factory,
   Truck,
 
+<<<<<<< HEAD
 
 
 CreditCard,
 
   CreditCard,
+=======
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Menu
   X
   ChevronDown
@@ -141,6 +167,10 @@ export default function Header() {;
   const [isScrolled, setIsScrolled] = useState(false);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 } from './lucide-react';
 ;
 export default /**
@@ -162,11 +192,16 @@ function Header() {
     }
     window.addEventListener ("scroll", handle_scroll);
     return () => window.removeEventListener ("scroll", handle_scroll);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }, []);
 ;
   const services_dropdown = [;
     {
 
+<<<<<<< HEAD
   ];
   const solutionsDropdown = [
     {
@@ -222,10 +257,15 @@ title: "Educational Platforms"
 
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
+<<<<<<< HEAD
             <Link href="/" className="text-2xl font-bold text-blue-600">
               Zion Tech Group
             </Link>
@@ -283,6 +323,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
 
 
+=======
+
+
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Link href="/" className="flex items-center">
               <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-2">
                 <Brain className="h-5 w-5 text-white" />
@@ -292,6 +339,7 @@ import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
 
 
 
+<<<<<<< HEAD
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -366,6 +414,9 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Top Bar */}
       <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4">
@@ -384,6 +435,7 @@ const Header = () => {
               <MapPin className="w-4 h-4" />
               <span>364 E Main St STE 1008, Middletown, DE 19709</span>
             </div>
+<<<<<<< HEAD
 </div>
 {/* Desktop Navigation */}
 
@@ -430,6 +482,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
           <nav className="hidden lg:flex space-x-8">
 origin/main
             {navigation.map((item) => (
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -437,6 +492,7 @@ origin/main
 
 
   useEffect(() => {;
+<<<<<<< HEAD
               <Link
                 key={item.name}
                 href={item.href}
@@ -648,6 +704,123 @@ origin/main
             </div>
             {/* Regular Navigation Items */}
             {navigation.slice(0, 2).map((item) => (
+=======
+    const handleScroll = () => {;
+      setIsScrolled(window && window.scrollY > 0);
+    };
+    window && window.addEventListener("scroll", handleScroll);
+    return () => window && window.removeEventListener("scroll", handleScroll);
+  }, []);
+  const servicesDropdown = [;
+    {;
+      title: "Web Development",;
+      description: "Custom websites and web applications",;
+      href: "/services/web-development",;
+      icon: Code,;
+    },;
+    {;
+      title: "Mobile Development",;
+      description: "iOS and Android applications",;
+      href: "/services/mobile-development",;
+      icon: Smartphone,;
+    },;
+    {;
+      title: "Cloud Solutions",;
+      description: "Scalable cloud infrastructure",;
+      href: "/services/cloud-solutions",;
+      icon: Cloud,;
+    },;
+    {;
+      title: "Database Management",;
+      description: "Database design and optimization",;
+      href: "/services/database-management",;
+      icon: Database,;
+    },;
+    {;
+      title: "Security Services",;
+      description: "Cybersecurity and data protection",;
+      href: "/services/security",;
+      icon: Shield,;
+    },;
+    {;
+      title: "Performance Optimization",;
+      description: "Speed and efficiency improvements",;
+      href: "/services/performance",;
+      icon: Zap,;
+    },;
+  ];
+  const solutionsDropdown = [;
+    {;
+      title: "Enterprise Solutions",;
+      description: "Comprehensive business technology solutions",;
+      href: "/solutions/enterprise",;
+      icon: Building,;
+    },;
+    {;
+      title: "E-commerce Platforms",;
+      description: "Online store development and management",;
+      href: "/solutions/ecommerce",;
+      icon: ShoppingCart,;
+    },;
+    {;
+      title: "Healthcare Technology",;
+      description: "Specialized healthcare IT solutions",;
+      href: "/solutions/healthcare",;
+      icon: Heart,;
+    },;
+    {;
+      title: "Educational Platforms",;
+      description: "Learning management systems",;
+      href: "/solutions/education",;
+      icon: GraduationCap,;
+    },;
+  ];
+  const industriesDropdown = [;
+    { name: "Manufacturing", href: "/industries/manufacturing", icon: Factory },;
+    { name: "Logistics", href: "/industries/logistics", icon: Truck },;
+    { name: "Finance", href: "/industries/finance", icon: CreditCard },;
+    { name: "Healthcare", href: "/industries/healthcare", icon: Heart },;
+    { name: "Education", href: "/industries/education", icon: GraduationCap },;
+    { name: "Retail", href: "/industries/retail", icon: ShoppingCart },;
+  ];
+  const navigation = [;
+    { name: "Home", href: "/" },;
+    {;
+      name: "Services",;
+      href: "/services",;
+      submenu: [;
+        { name: "AI Services", href: "/ai-services", icon: Brain },;
+        { name: "IT Services", href: "/it-services", icon: Network },;
+        { name: "Micro SAAS", href: "/micro-saas", icon: Cloud },;
+      ],;
+    },;
+    { name: "About", href: "/about" },;
+    { name: "Services", href: "/services" },;
+    { name: "Solutions", href: "/solutions" },;
+    { name: "Industries", href: "/industries" },;
+    { name: "Contact", href: "/contact" },;
+  ];
+  const handleServiceClick = (href: string) => {;
+    closeMenu();
+    window && window.location.href = href;
+  };
+  return (
+    <header className="bg-white shadow-lg sticky top-0 z-50">;
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+        <div className="flex justify-between items-center h-16">;
+          {/* Logo */}
+          <div className="flex-shrink-0">;
+            <Link href="/" className="text-2xl font-bold text-blue-600">;
+              Zion Tech Group;
+            </Link>;
+          </div>;
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex space-x-8">;
+            {navigation && navigation.map((item) => (;
+
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Link
                 key={item && item.name}
                 href={item && item.href}
@@ -655,6 +828,7 @@ origin/main
                 {item && item.name}
               </Link>;
             ))}
+<<<<<<< HEAD
 origin/automation-improvements-final
               <Link
                 key={item.name}
@@ -664,18 +838,24 @@ origin/automation-improvements-final
                 {item.name}
               </Link>
             ))}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           </div>
 
           </nav>;
 
 
+<<<<<<< HEAD
 
 </div>
           </nav>;
           </div>
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4 text-sm text-gray-600">
@@ -703,7 +883,10 @@ origin/automation-improvements-final
           <div className="hidden lg:flex items-center space-x-4">;
             <Link
               href="/contact"
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200"
 origin/main
@@ -730,9 +913,28 @@ origin/main
           </div>
 
         </div>
+<<<<<<< HEAD
       </nav>
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
+=======
+
+=======
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200">;
+              Get Started;
+            </Link>;
+          </div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+            >
+              Get Started
+            </Link>
+          </div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           {/* Mobile Menu Button */}
           <button
@@ -743,6 +945,7 @@ origin/automation-improvements-final
             ) : (;
               <Menu className="h-6 w-6" />;
             )}
+<<<<<<< HEAD
       </nav>
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -756,6 +959,10 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
           </button>;
 </button>;
+=======
+
+          </button>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </div>;
 
 
@@ -800,6 +1007,7 @@ origin/main
                 <Link
                   href="/contact"
                   onClick={closeMenu}
+<<<<<<< HEAD
 className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200">;
                   Get Started;
                 </Link>;
@@ -821,6 +1029,9 @@ className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-
     </header>
 
   );
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       title: "Web Development",
       description: "Custom websites and web applications",
       href: "/services / web - development",
@@ -988,6 +1199,12 @@ className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-
         </AnimatePresence>;
       </div>;
     </header>);
+<<<<<<< HEAD
+=======
+
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200"
 
                   className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200"
@@ -1020,3 +1237,8 @@ className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-
 export default Header;
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

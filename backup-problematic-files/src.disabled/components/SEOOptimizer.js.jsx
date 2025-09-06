@@ -9,4 +9,8 @@ const SEOOptimizer.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default SEOOptimizer.js;
+=======
+export default SEOOptimizer.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

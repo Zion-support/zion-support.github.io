@@ -2,6 +2,9 @@
 const fs = require('fs');
 const path = require('path');
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 console.log('🔧 Fixing final syntax errors...');
 
@@ -141,8 +144,11 @@ if (require.main === module) {
 module.exports = { fixFinalSyntax };
 =======
 #!/usr/bin/env node
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 console.log('🔧 Fixing final syntax errors...');
 

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const fs = require ('fs'),
 const path = require ('path'),
 console.log ('🔍 Debugging Next.js project structure...'),
@@ -34,6 +38,7 @@ if (fs.existsSync('pages')) {;
 console.log('🔍 Checking for problematic files...'),;
 
 
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 console.log('🔍 Debugging Next.js project structure...');
@@ -95,12 +100,15 @@ console.log('🔍 Checking for problematic files...'),;
 const problematicFiles = [];
 const problematicFiles = [],;
 const problematicFiles = [];
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const allFiles = getAllFiles('.', ['.tsx.ts.jsx.js']),;
 for (const file of allFiles) {;
   try {;
     const content = fs.readFileSync(file, 'utf8'),;
 
 
+<<<<<<< HEAD
     if (content.includes('') || content.includes('
 }
 }
@@ -138,3 +146,7 @@ function getAllFiles(dir, extensions) {;
 }
 ;
 console.log('✅ Debug completed'),;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

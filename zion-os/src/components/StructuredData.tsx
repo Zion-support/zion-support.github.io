@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 "use client",;
 export function StructuredData() {;
   const structuredData = {;
@@ -50,6 +54,10 @@ export function StructuredData() {;
   };
 
   return (;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 "use client",
 export /**
  * StructuredData - Function description

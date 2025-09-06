@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { UseFormReturn } from "react-hook-form";
 import {
@@ -14,6 +15,11 @@ import { FormValues } from "./useHireRequestForm";
 interface BudgetFieldsProps {
   form: UseFormReturn<FormValues>;
   talent?: TalentProfile
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",
 import { UseFormReturn } from "react-hook-form",
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
@@ -23,6 +29,7 @@ import { FormValues } from "./useHireRequestForm",
 interface BudgetFieldsProps {
   form: UseFormReturn<FormValues>;
   talent?: TalentProfile;
+<<<<<<< HEAD
 }
 export function BudgetFields({ form, talent }: BudgetFieldsProps) {
   return (
@@ -96,6 +103,32 @@ interface BudgetFieldsProps {;
 
 }
 export function BudgetFields({ form, talent }: BudgetFieldsProps) {
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+export function BudgetFields({ form, talent }: BudgetFieldsProps) {
+=======
+import {UseFormReturn} from "react-hook-form";
+import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
+import {Input} from "@/components/ui/input";
+import {TalentProfile} from "@/types/talent";
+import {FormValues} from "./useHireRequestForm";
+interface BudgetFieldsProps {;
+  form: UseFormReturn<FormValues>,;
+  talent?: TalentProfile;
+}
+
+export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  return (
+    <>;
+      <FormField
+        control={form && form.control}
+        name="budgetMin"
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from './react';
 import { UseFormReturn  } from './react - hook - form';
 import {
@@ -244,6 +277,7 @@ export function BudgetFields({ form, talent } BudgetFieldsProps) {;
 }
 ;
 
+<<<<<<< HEAD
     </>;
   ),;}
  interface BudgetFieldsProps {
@@ -267,3 +301,6 @@ talent?: TalentProfile
   )
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,4 +1,30 @@
 
+<<<<<<< HEAD
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from "react";
 import {useNavigate} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -12,9 +38,20 @@ import {Button} from "@/components/ui/button";
 import {TalentProfile} from "@/types/talent";
 export default function TalentDirectory() {;
   const navigate = useNavigate();
+<<<<<<< HEAD
     filteredTalents;
     isLoading;
     searchTerm;
+=======
+
+  // Use our custom hook to manage state;
+  const {;
+
+    filteredTalents;
+    isLoading;
+    searchTerm;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from './react';
 import { use_navigate } from './react-router-dom';
 import { AppLayout } from '@/layout / AppLayout';
@@ -46,6 +83,7 @@ function TalentDirectory() {
     experience_range;
     setExperienceRange;
     sort_option;
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -78,11 +116,14 @@ export default function TalentDirectory() {
     experienceRange;
     setExperienceRange;
     sortOption;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     setSortOption;
     isMobileFilterOpen;
     setIsMobileFilterOpen;
     isHireModalOpen;
     setIsHireModalOpen;
+<<<<<<< HEAD
     selectedTalent;
     setSelectedTalent;
     expandedSections;
@@ -94,6 +135,19 @@ export default function TalentDirectory() {
     clearFilters;
     toggleSection;
     handleToggleSave} = useTalentDirectory();
+=======
+    selected_talent;
+    setSelectedTalent;
+
+
+
+
+
+  const navigate = useNavigate();
+  // Use our custom hook to manage state
+  const {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     filteredTalents,
     isLoading,
     searchTerm,
@@ -123,6 +177,7 @@ export default function TalentDirectory() {
     toggleSection,
     handleToggleSave} = useTalentDirectory(),
   
+<<<<<<< HEAD
   const handleRequestHire = (talent: TalentProfile) => {
     setSelectedTalent(talent)
     setIsHireModalOpen(true)
@@ -131,6 +186,13 @@ export default function TalentDirectory() {
     // Navigate to the talent profile page
     navigate(`/talent/${id}`)
   }
+=======
+
+  const handleRequestHire = (talent: TalentProfile) => {
+    setSelectedTalent(talent)
+    setIsHireModalOpen(true)
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
   
   const viewProfile = (id: string) => {
@@ -138,6 +200,11 @@ export default function TalentDirectory() {
     navigate(`/talent/${id}`)
   },
   
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <AppLayout>
       <div className="container mx-auto px-4 py-8">
@@ -148,11 +215,18 @@ export default function TalentDirectory() {
               Connect with expert AI developers, data scientists, ML engineers, and tech professionals for your projects.
             </p>
           </div>
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Main content */}
           <div className="flex flex-col lg:flex-row gap-6">
             {/* Sidebar - Desktop */}
             <div className="w-full lg:w-64 shrink-0 hidden lg:block">
               <FilterSidebar
+<<<<<<< HEAD
                 searchTerm={searchTerm}
                 setSearchTerm={setSearchTerm}
                 selectedSkills={selectedSkills}
@@ -172,6 +246,9 @@ export default function TalentDirectory() {
                 clearFilters={clearFilters}
               />
             </div>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -215,6 +292,7 @@ export default function TalentDirectory() {;
     clearFilters,;
     toggleSection,;
     handleToggleSave} = useTalentDirectory(),;
+<<<<<<< HEAD
   const handleRequestHire = (talent: TalentProfile) => {;
     setSelectedTalent(talent),;
     setIsHireModalOpen(true);
@@ -291,6 +369,20 @@ export default function TalentDirectory() {;
     navigate(`/talent/${id}`);
   },;
   return (;
+=======
+
+  const handleRequestHire = (talent: TalentProfile) => {;
+    setSelectedTalent(talent),;
+    setIsHireModalOpen(true);
+  };
+
+  const viewProfile = (id: string) => {;
+    // Navigate to the talent profile page;
+    navigate(`/talent/${id}`);
+  };
+
+  return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <AppLayout>;
       <div className="container mx-auto px-4 py-8">;
         <div className="flex flex-col space-y-8">;
@@ -300,6 +392,7 @@ export default function TalentDirectory() {;
               Connect with expert AI developers, data scientists, ML engineers, and tech professionals for your projects.;
             </p>;
           </div>;
+<<<<<<< HEAD
           ;
           {/* Main content */}
           <div className="flex flex-col lg:flex-row gap-6">;
@@ -307,6 +400,10 @@ export default function TalentDirectory() {;
             <div className="w-full lg:w-64 shrink-0 hidden lg:block">;
               <FilterSidebar;
                 searchTerm={searchTerm}
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     expanded_sections;
     is_authenticated;
     saved_talents;
@@ -418,6 +515,7 @@ export default function TalentDirectory() {;
                 price_range;
               isAuthenticated={isAuthenticated}
 
+<<<<<<< HEAD
             
             {/* Results */}
             <TalentResults
@@ -437,6 +535,8 @@ export default function TalentDirectory() {;
                 toggleRegion;
                 priceRange;
                 setPriceRange;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               activeFiltersProps={{;
                 selectedSkills,;
                 toggleSkill,;
@@ -446,9 +546,18 @@ export default function TalentDirectory() {;
                 toggleRegion,;
                 priceRange,;
                 setPriceRange,;
+<<<<<<< HEAD
                 setPriceRange;
                 experience_range;
                 setExperienceRange;
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                experienceRange;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                setExperienceRange;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 selectedSkills
                 toggleSkill
                 selectedAvailability
@@ -482,6 +591,7 @@ export default function TalentDirectory() {;
                 <div className="w-80 h-full bg-zion-blue-dark overflow-y-auto p-4 ml-auto">;
                   <div className="flex justify-between items-center mb-4">;
                     <h3 className="font-bold text-white">Filter & Sort</h3>;
+<<<<<<< HEAD
                     <Button;
                       variant="ghost";
                       size="sm";
@@ -503,10 +613,13 @@ export default function TalentDirectory() {;
                 <div className="w-80 h-full bg-zion-blue-dark overflow-y-auto p-4 ml-auto">
                   <div className="flex justify-between items-center mb-4">
                     <h3 className="font-bold text-white">Filter & Sort</h3>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <Button
                       variant="ghost"
                       size="sm"
                       onClick={() => setIsMobileFilterOpen(false)}
+<<<<<<< HEAD
                       className="text-zion-slate-light h-8 w-8 p-0"
                     >
                       <X className="h-4 w-4" />
@@ -537,6 +650,15 @@ export default function TalentDirectory() {;
               </div>
             )}
                   <FilterSidebar;
+=======
+                      className="text-zion-slate-light h-8 w-8 p-0";
+                    >;
+                      <X className="h-4 w-4" />;
+                      <span className="sr-only">Close</span>;
+                    </Button>;
+                  </div>;
+                  <FilterSidebar
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     searchTerm={searchTerm}
                 clear_filters}}
             />;
@@ -689,6 +811,7 @@ return (<AppLayout> <div className="container mx-auto px-4 py-8" > <div classNam
 }
 ;
 
+<<<<<<< HEAD
 }/> <Button variant="ghost" size="sm" onClick= {
   () => setIsMobileFilterOpen (false) 
 }className="text-zion-slate-light h-8 w-8 p-0" > <X className="h-4 w-4" /> <span className="sr-only" >Close</span> </Button> </div> <FilterSidebar searchTerm= {
@@ -733,3 +856,6 @@ return (<AppLayout> <div className="container mx-auto px-4 py-8" > <div classNam
   );
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 // This is a simple script wrapper to execute our icon update script
 import { exec  } from 'child_process';
@@ -6,15 +7,29 @@ import path from 'path';
 
 const scriptPath = path.join(__dirname, '../../scripts/update-icon-imports.js');
 console.log('Running icon import updater...');
+=======
+const scriptPath = path && path.join(__dirname, '../../scripts/update-icon-imports && imports.js');
+
+console && console.log('Running icon import updater...');
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { exec } from 'child_process',
 import path from 'path',
 const scriptPath = path.join(__dirname, '../../scripts/update-icon-imports.js'),
 
 // // // console.log('Running icon import updater...'),
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 exec(`node ${scriptPath}`, (error, stdout, stderr) => {
   if (error) {
     console && console.error(`Error executing script: ${error}`);
     return
+<<<<<<< HEAD
   }
 exec(`node ${scriptPath}`, (error, stdout, stderr) => {
   if (error) {
@@ -32,6 +47,8 @@ exec(`node ${scriptPath}`, (error, stdout, stderr) => {
   // // // console.log(stdout),
   if (stderr) {
     console.error(stderr)
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   
   console.log('Icon imports updated successfully!')
@@ -101,6 +118,7 @@ if ( {) {
   }
   
 
+<<<<<<< HEAD
 });
 ;
 
@@ -137,3 +155,9 @@ return
 });
 });
 });
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+});
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

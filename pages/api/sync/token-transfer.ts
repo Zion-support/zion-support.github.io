@@ -1,5 +1,9 @@
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 import { signPayload } from "../../../utils/sync/signature";
@@ -12,6 +16,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!state.config.optIn |state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
+<<<<<<< HEAD
   const { txId, token, amount, fromSubnet, toSubnet, timestamp } = req.body as {
     txId: string
     token: string
@@ -22,6 +27,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   };
   if (!txId || !token || typeof amount !== "number" || !fromSubnet || !toSubnet) {
     return res.status(400).json({ error: "txId, token, amount, fromSubnet, toSubnet required" })
+=======
+
+  };
+  if (!txId || !token || typeof amount !== "number" || !fromSubnet || !toSubnet) {
+    return res.status(400).json({ error: "txId, token, amount, fromSubnet, toSubnet required" })
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   if (!txId |!token |typeof amount !== "number" |!fromSubnet |!toSubnet) {
     return res.status(400).json({ error: "txId, token, amount, fromSubnet, toSubnet required" })
@@ -29,6 +41,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const version = nextVersionFor(state, txId)
   const event = {
 
+<<<<<<< HEAD
     eventId: uuidv4(), type: "token_transfer" as const,
     payload: {
        id: txId, txId, token, amount, fromSubnet, toSubnet, timestamp: timestamp || Date.now() 
@@ -41,6 +54,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const headers: Record<string, string> = {};
   const sig = signPayload(body);
   if (sig) headers["x-zion-signature"] = sig;
+=======
+
+  const { txId, token, amount, fromSubnet, toSubnet, timestamp } = req.body as {
+    txId: string,
+    token: string,
+    amount: number,
+    fromSubnet: string,
+    toSubnet: string,
+    timestamp?: number
+  },
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
@@ -103,14 +131,26 @@ if (headers["x - zion - signature"] = sig, ) {
       .filter ((p) => !p.paused);
       .map (async (peer) => {
         const url = new URL ("/api / sync / publish", peer.base_url).to_string (),
+<<<<<<< HEAD
         try {
           await axios.post (url, body, { headers, timeout: 5000 });
         } catch {}
 }
+=======
+
+        try {
+          await axios.post (url, body, { headers, timeout: 5000 });
+        } catch {}
+
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       })),
   return res.status (200).json ({ status: "created", version, event_id: event.event_id });
 }
 ;
+<<<<<<< HEAD
 
   }
 
@@ -348,6 +388,12 @@ export default async function handler(req, res) {
   )
 
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
         try {
           await axios.post(url, body, { headers, timeout: 5000 })
@@ -463,5 +509,11 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 }
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

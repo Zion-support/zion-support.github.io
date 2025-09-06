@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {format} from "date-fns";
 import {List, RefreshCw} from "lucide-react";
@@ -26,10 +27,18 @@ export function ApiLogs() {
   const formatTimestamp = (timestamp: string) => {
     return format(new Date(timestamp), 'yyyy-MM-dd HH: mm:ss')
   }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function ApiLogs() {;
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
   const [pageSize, setPageSize] = useState(25);
   const [currentPage, setCurrentPage] = useState(0);
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState, useEffect } from "react",
 import { format } from "date-fns",
 import { List, RefreshCw } from "lucide-react",
@@ -43,7 +52,11 @@ export function ApiLogs() {
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys(),
   const [pageSize, setPageSize] = useState(25),
   const [currentPage, setCurrentPage] = useState(0),
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   
   // Load logs on mount and when pagination changes
   useEffect(() => {
@@ -59,7 +72,12 @@ export function ApiLogs() {
     return format(new Date(timestamp), 'yyyy-MM-dd HH: mm:ss')
   },
   
+<<<<<<< HEAD
   
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Helper to get badge color based on status code
   const getStatusBadge = (statusCode: number) => {
     if (statusCode >= 200 && statusCode < 300) {
@@ -71,11 +89,54 @@ export function ApiLogs() {
     } else {
       return <Badge className="bg-blue-700">Other</Badge>
     }
+<<<<<<< HEAD
   }
   // Calculate pagination info
   const totalPages = Math.ceil(totalLogs / pageSize);
   const hasNextPage = currentPage < totalPages - 1;
   const hasPrevPage = currentPage > 0;
+=======
+
+export function ApiLogs() {;
+  const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
+  const [pageSize, setPageSize] = useState(25);
+  const [currentPage, setCurrentPage] = useState(0);
+
+  // Load logs on mount and when pagination changes;
+  useEffect(() => {;
+    fetchApiLogs(pageSize, currentPage * pageSize);
+  }, [pageSize, currentPage]);
+
+  const handleRefresh = () => {;
+    fetchApiLogs(pageSize, currentPage * pageSize);
+  };
+
+  // Helper to format the timestamp;
+  const formatTimestamp = (timestamp: string) => {;
+    return format(new Date(timestamp), 'yyyy-MM-dd HH: mm:ss');
+  };
+
+  // Helper to get badge color based on status code;
+  const getStatusBadge = (statusCode: number) => {;
+    if (statusCode >= 200 && statusCode < 300) {;
+      return <Badge className="bg-green-700">Success</Badge>;
+    } else if (statusCode >= 400 && statusCode < 500) {;
+      return <Badge className="bg-amber-700">Client Error</Badge>;
+    } else if (statusCode >= 500) {;
+      return <Badge className="bg-red-700">Server Error</Badge>;
+    } else {;
+      return <Badge className="bg-blue-700">Other</Badge>;
+    }
+  };
+
+  // Calculate pagination info;
+  const totalPages = Math && Math.ceil(totalLogs / pageSize);
+
+  const hasNextPage = currentPage < totalPages - 1;
+  const hasPrevPage = currentPage > 0;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
   
   // Calculate pagination info
@@ -83,6 +144,7 @@ export function ApiLogs() {
   const hasNextPage = currentPage < totalPages - 1,
   const hasPrevPage = currentPage > 0,
 
+<<<<<<< HEAD
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>
@@ -150,6 +212,15 @@ export function ApiLogs() {;
                 setPageSize(Number(value));
 
                 setCurrentPage(0), // Reset to first page when changing page size
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+
+=======
+            <Select
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState, useEffect } from "react",;
 import { format } from "date-fns",;
 import { List, RefreshCw } from "lucide-react",;
@@ -192,6 +263,7 @@ export function ApiLogs() {;
   const hasNextPage = currentPage < totalPages - 1,;
   const hasPrevPage = currentPage > 0;
   return (;
+<<<<<<< HEAD
   ;
   // Load logs on mount and when pagination changes;
   useEffect(() => {;
@@ -226,6 +298,9 @@ export function ApiLogs() {;
   const hasPrevPage = currentPage > 0,;
 ;
   return (;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <Card className="bg-zinc-900 border-zinc-800 text-white">;
       <CardHeader>;
         <CardTitle className="text-xl flex items-center">;
@@ -235,16 +310,33 @@ export function ApiLogs() {;
           View logs of requests made using your API keys.;
         </CardDescription>;
       </CardHeader>;
+<<<<<<< HEAD
       ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <CardContent>;
         <div className="flex justify-between items-center mb-6">;
           <div className="flex items-center space-x-2">;
             <span className="text-sm text-zinc-400">Show</span>;
+<<<<<<< HEAD
             <Select;
               value={pageSize.toString()}
               onValueChange={(value) => {;
                 setPageSize(Number(value));
                 setCurrentPage(0), // Reset to first page when changing page size;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+            <Select
+              value={pageSize && pageSize.toString()}
+              onValueChange={(value) => {;
+                setPageSize(Number(value));
+
+                setCurrentPage(0), // Reset to first page when changing page size;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               }}
             >
               <SelectTrigger className="w-20 bg-zinc-800 border-zinc-700">
@@ -308,10 +400,14 @@ export function ApiLogs() {;
                           log.method === 'GET'
                             ? "border-green-500 text-green-400"
                             : log.method === 'POST'
+<<<<<<< HEAD
             <Select;
               value={pageSize.toString()}
               onValueChange={(value) => {;
                 setPageSize(Number(value)),;
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 setCurrentPage(0), // Reset to first page when changing page size;
               }}
             >;
@@ -327,12 +423,20 @@ export function ApiLogs() {;
             </Select>;
             <span className="text-sm text-zinc-400">per page</span>;
           </div>;
+<<<<<<< HEAD
           ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Button variant="outline" size="sm" onClick={handleRefresh}>;
             <RefreshCw size={14} className="mr-1" /> Refresh;
           </Button>;
         </div>;
+<<<<<<< HEAD
         ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="overflow-x-auto">;
           <table className="w-full border-collapse">;
             <thead>;
@@ -355,7 +459,11 @@ export function ApiLogs() {;
                     </div>;
                   </td>;
                 </tr>;
+<<<<<<< HEAD
               ) :logs.length === 0 ? (;
+=======
+              ) : logs && logs.length === 0 ? (;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <tr>;
                   <td colSpan={6} className="text-center py-12">;
                     <div className="flex flex-col items-center">;
@@ -367,6 +475,26 @@ export function ApiLogs() {;
                     </div>;
                   </td>;
                 </tr>;
+<<<<<<< HEAD
+=======
+              ) : (;
+                logs && logs.map((log) => (;
+                  <tr key={log && log.id} className="border-b border-zinc-800 hover:bg-zinc-800/40">;
+                    <td className="px-4 py-3 text-sm">{formatTimestamp(log && log.created_at)}</td>;
+                    <td className="px-4 py-3">;
+                      <Badge
+                        variant="outline"
+                        className={
+                          log && log.method === 'GET' 
+                            ? "border-green-500 text-green-400" 
+                            : log && log.method === 'POST' 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                            ? "border-blue-500 text-blue-400"
+                            : log && log.method === 'PUT'
+                            ? "border-yellow-500 text-yellow-400"
+                            : "border-red-500 text-red-400"
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         }>;
                         {log && log.method}
                       </Badge>;
@@ -382,6 +510,7 @@ export function ApiLogs() {;
                       {log && log.response_time_ms ? `${log && log.response_time_ms}ms` : '-'}
                     </td>;
                     <td className="px-4 py-3 text-sm">{log && log.ip_address || '-'}</td>;
+<<<<<<< HEAD
               ) :(;
                 logs.map((log) => (;
                   <tr key={log.id} className="border-b border-zinc-800 hover:bg-zinc-800/40">;
@@ -413,12 +542,15 @@ export function ApiLogs() {;
                       {log.response_time_ms ? `${log.response_time_ms}ms` :'-'}
                     </td>;
                     <td className="px-4 py-3 text-sm">{log.ip_address || '-'}</td>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </tr>;
                 ));
               )}
             </tbody>;
           </table>;
         </div>;
+<<<<<<< HEAD
               <Button
                 variant="outline"
                 size="sm"
@@ -717,19 +849,36 @@ bg-zinc-900 border-zinc-800 text-white"> <CardHeader> </CardTitle> <CardDescript
               Showing {currentPage * pageSize + 1} to {Math.min((currentPage + 1) * pageSize, totalLogs)} of {totalLogs} logs
             </div>
             <div className="flex space-x-2">
+=======
+
+        {logs && logs.length > 0 && (;
+          <div className="mt-4 flex justify-between items-center">;
+            <div className="text-sm text-zinc-500">;
+              Showing {currentPage * pageSize + 1} to {Math && Math.min((currentPage + 1) * pageSize, totalLogs)} of {totalLogs} logs;
+            </div>;
+            <div className="flex space-x-2">;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Button
                 variant="outline"
                 size="sm"
                 disabled={!hasPrevPage}
                 onClick={() => setCurrentPage(currentPage - 1)}
+<<<<<<< HEAD
               >
                 Previous
               </Button>
+=======
+              >;
+                Previous;
+              </Button>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Button
                 variant="outline"
                 size="sm"
                 disabled={!hasNextPage}
                 onClick={() => setCurrentPage(currentPage + 1)}
+<<<<<<< HEAD
               >
                 Next
               </Button>
@@ -740,8 +889,30 @@ bg-zinc-900 border-zinc-800 text-white"> <CardHeader> </CardTitle> <CardDescript
     </Card>
   )
 }
+=======
+              >;
+                Next;
+              </Button>;
+            </div>;
+          </div>;
+        )}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </CardContent>;
     </Card>;
   );
 }
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import { useState, useEffect } from './react';
+import { format } from './date - fns';
+import { List, RefreshCw } from './lucide-react';
+import { useApiKeys, type, ApiLog } from '@/hooks / useApiKeys';
+;
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

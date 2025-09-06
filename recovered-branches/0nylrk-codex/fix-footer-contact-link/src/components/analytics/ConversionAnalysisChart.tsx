@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 } from "@/components/ui/card";
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 interface ConversionAnalysisProps {;
@@ -23,11 +24,26 @@ import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 interface ConversionAnalysisProps {
+=======
+
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardHeader,;
+  CardTitle,;
+
+} from "@/components/ui/card";
+
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
+interface ConversionAnalysisProps {;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   data: Array<Record<string, any>>;
   timeRange: string;
   onTimeRangeChange: (range: string) => void
 }
 
+<<<<<<< HEAD
 export function ConversionAnalysisChart({
   data
   timeRange
@@ -37,6 +53,8 @@ export function ConversionAnalysisChart({
     data && data.length > 0
       ? Object.keys(data[0]).filter((key) => key !== "date")
       : [];
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export function ConversionAnalysisChart(): any ({;
   data,;
@@ -70,6 +88,7 @@ interface ConversionAnalysisProps {
   onTimeRangeChange: (range: string) => void
 }
 
+<<<<<<< HEAD
 export function ConversionAnalysisChart({
   data,
   timeRange,
@@ -79,10 +98,15 @@ export function ConversionAnalysisChart({
     data && data.length > 0
       ? Object.keys(data[0]).filter((key) => key !== "date");
       : [];
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: ConversionAnalysisProps) {
   const dataKeys = data && data.length > 0
     ? Object.keys(data[0]).filter(key => key !== 'date')
     : [],
+<<<<<<< HEAD
 
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -102,6 +126,8 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
   const dataKeys = data && data.length > 0
     ? Object.keys(data[0]).filter(key => key !== 'date')
     : [],
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -148,11 +174,16 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange } C
         <CardDescription className="text-zion-slate-light">Track different conversion types</CardDescription>;
       </CardHeader>;
       <CardContent>;
+<<<<<<< HEAD
           timeRange={timeRange}
           onTimeRangeChange={onTimeRangeChange}
         />
       </CardContent>
     </Card>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
@@ -178,11 +209,24 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
           data={data || []}
           dataKeys={dataKeys}
           type="bar"
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           timeRange={timeRange}
           onTimeRangeChange={onTimeRangeChange}
         />;
       </CardContent>;
     </Card>;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  );
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <AnalyticsChart;
           title="";
           data={data || []}
@@ -192,6 +236,7 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
           onTimeRangeChange={onTimeRangeChange}
         />;
       </CardContent>;
+<<<<<<< HEAD
     </Card>;
   ),;}
  interface ConversionAnalysisProps {
@@ -207,3 +252,8 @@ return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader
 }
   );
 }
+=======
+    </Card>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

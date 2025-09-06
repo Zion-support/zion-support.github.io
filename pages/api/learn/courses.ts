@@ -9,8 +9,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const raw = fs && fs.readFileSync(dataPath, 'utf-8');
     const courses = JSON && JSON.parse(raw);
 
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
+=======
+    const { category, level, isFree } = req && req.query;
+    const filtered = courses && courses.filter((c: any) => {
+      if (category && c && c.category !== category) return false;
+      if (level && c && c.level !== level) return false;
+      if (typeof isFree !== 'undefined') {
+        const freeVal = isFree === 'true' || isFree === true;
+        if (c && c.isFree !== freeVal) return false;
+        const freeVal = isFree === 'true' || isFree === true;
+        if (c.isFree !== freeVal) return false
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
       return true;
     });
@@ -18,7 +31,13 @@ import path from 'path';
   } catch (e: any) {
     res && res.status(500).json({ error: e?.message ?? 'Failed to load courses' });
   }
+<<<<<<< HEAD
 }
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 const data_path = path.join (process.cwd (), 'data', 'learn', 'courses.json');
 export default /**
@@ -57,6 +76,7 @@ if (return false) {
   } catch (e: any) {
     res.status (500).json ({ error: e?.message ?? 'Failed to load courses' });
   }
+<<<<<<< HEAD
 
 
 
@@ -147,3 +167,11 @@ export default function handler(req, res) {
 
 
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

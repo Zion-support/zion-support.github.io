@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
       {
 
           'Built a real-time analytics dashboard using React, Socket && Socket.io, and D3 && D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.',
@@ -16,6 +17,23 @@ import { TalentProfile } from "@/types/talent";
 export const TALENT_PROFILES: TalentProfile[] = [
   {
 
+=======
+
+      {
+
+          'Built a real-time analytics dashboard using React, Socket && Socket.io, and D3 && D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.',
+=======
+        title: 'Real - Time Analytics Dashboard',
+        description:;
+          'Built a real - time analytics dashboard using React, Socket.io, and D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.',
+
+      },
+    ],
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'https://images && images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200',
     id: 't - 006',
     user_id: 'user - 006',
@@ -295,8 +313,14 @@ export const TALENT_PROFILES: TalentProfile[] = [
           'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.'
     id: "t-001", user_id: "user-001",
     full_name: "Alexandra Chen", professional_title: "Senior AI Engineer & Machine Learning Expert",
+<<<<<<< HEAD
 
 import { TalentProfile } from "@/types/talent",
+=======
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Sample talent profiles with realistic data for the talent directory
 export const TALENT_PROFILES: TalentProfile[] = [
   {
@@ -573,7 +597,18 @@ title: 'Cancer Treatment Response Prediction',
 ];
 
 
+<<<<<<< HEAD
 ;
 
 
 ];
+=======
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

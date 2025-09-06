@@ -1,9 +1,15 @@
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function ProjectMilestonesContent() {;
   const { projectId } = useParams() as { projectId?: string };
 
 
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from 'react';
 
@@ -20,6 +26,8 @@ export function ProjectMilestonesContent() {
 
 export function ProjectMilestonesContent() {;
   const { projectId } = useParams() as { projectId?: string };
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const { user } = useAuth();
   const { getProjectById } = useProjects();
   const {
@@ -27,13 +35,31 @@ export function ProjectMilestonesContent() {;
     activities;
     isLoading: milestonesLoading
 
+<<<<<<< HEAD
 
+=======
+=======
+
+export function ProjectMilestonesContent() {;
+  const { projectId } = useParams() as { projectId?: string };
+  const { user } = useAuth();
+  const { getProjectById } = useProjects();
+  const { ;
+    milestones, ;
+    activities;
+    isLoading: milestonesLoading, ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     createMilestone;
     updateMilestoneStatus;
     deleteMilestone;
     uploadDeliverable;
     isSubmitting;
+<<<<<<< HEAD
     refetch
+=======
+    refetch;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } = useMilestones(projectId);
   const [project, setProject] = useState<any>(null),
   const [isLoading, setIsLoading] = useState(true);
@@ -41,6 +67,7 @@ export function ProjectMilestonesContent() {;
   const { job, isLoading: jobLoading } = useJobDetails(project?.job_id),;
   const { isUnderDispute, disputeId } = useDisputeCheck(projectId);
 
+<<<<<<< HEAD
   const { job, isLoading: jobLoading } = useJobDetails(project?.job_id)
 
   const { isUnderDispute, disputeId } = useDisputeCheck(projectId);
@@ -93,6 +120,19 @@ export function ProjectMilestonesContent() {;
       if (!projectId) return;
       setIsLoading(true);
       try {;
+=======
+  const { job, isLoading: jobLoading } = useJobDetails(project?.job_id),;
+
+  const { isUnderDispute, disputeId } = useDisputeCheck(projectId);
+
+  useEffect(() => {;
+    async function loadProject() {;
+      if (!projectId) return;
+
+      setIsLoading(true);
+      try {;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         const projectData = await getProjectById(projectId);
         if (projectData) {;
           setProject(projectData);
@@ -100,6 +140,10 @@ export function ProjectMilestonesContent() {;
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         }
       } catch (error) {;
         console && console.error("Error loading project:", error);
@@ -107,6 +151,7 @@ export function ProjectMilestonesContent() {;
         setIsLoading(false);
       }
     }
+<<<<<<< HEAD
   useEffect(() => {;
     async function loadProject() {;
       if (!projectId) return,;
@@ -134,11 +179,23 @@ export function ProjectMilestonesContent() {;
   // Determine project type based on job category or default to "Other"
   const projectType = job?.category |"Other";
   if (isLoading |!project) {
+=======
+
+
+
+    loadProject();
+    refetch();
+  }, [projectId, getProjectById, refetch]);
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     
     loadProject(),
     refetch()
   }, [projectId, getProjectById, refetch]),
 
+<<<<<<< HEAD
   const handleMilestoneCreated = async () => {
     await refetch()
   },
@@ -213,6 +270,8 @@ export function ProjectMilestonesContent() {;
     refetch()
   }, [projectId, getProjectById, refetch]),
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   const handleMilestoneCreated = async () => {;
     await refetch();
@@ -236,6 +295,7 @@ export function ProjectMilestonesContent() {;
   }
 
 
+<<<<<<< HEAD
     loadProject();
     refetch();
   }, [projectId, getProjectById, refetch]);
@@ -396,13 +456,70 @@ export function ProjectMilestonesContent() {;
         <h2 className="text-2xl font-bold">Payment Milestones</h2>;
         <ProjectActions;
           projectId={projectId || ''}
+=======
+  const handleMilestoneSubmit = async (data: any) => {;
+    if (!projectId) return,;
+
+    // Ensure all required fields are present;
+    const milestoneData = {;
+      project_id: projectId,;
+      title: data && data.title,;
+      description: data && data.description || "",;
+      amount: data && data.amount,;
+      status: "pending" as const,;
+      due_date: data && data.due_date ? data && data.due_date.toISOString() : undefined;
+    };
+
+    await createMilestone(milestoneData);
+    setActiveTab('milestones');
+    await handleMilestoneCreated();
+  };
+
+  return (
+    <div className="container mx-auto py-8 px-4">;
+      <ProjectHeader title={project && project.job?.title || "Untitled Project"} />;
+
+      <div className="flex justify-between items-center my-6">;
+        <h2 className="text-2xl font-bold">Payment Milestones</h2>;
+        <ProjectActions
+=======
+
+    },
+    
+    await createMilestone(milestoneData),
+    setActiveTab('milestones'),
+    await handleMilestoneCreated()
+  },
+
+
+  return (
+    <div className="container mx-auto py-8 px-4">
+
+      <ProjectHeader title={project.job?.title || "Untitled Project"} />
+
+      <div className="flex justify-between items-center my-6">
+        <h2 className="text-2xl font-bold">Payment Milestones</h2>
+
+        <ProjectActions 
+
+
+          projectId={projectId || ''}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           isUnderDispute={isUnderDispute}
           disputeId={disputeId}
           isTalent={isTalent}
           onAddMilestone={() => setActiveTab('create')}
+<<<<<<< HEAD
         />;
       </div>;
       ;
+=======
+
+        />;
+      </div>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <Tabs value={activeTab} onValueChange={setActiveTab}>;
         <TabsList className="mb-6">;
           <TabsTrigger value="milestones">Milestones</TabsTrigger>;
@@ -412,6 +529,7 @@ export function ProjectMilestonesContent() {;
           )}
         </TabsList>;
 
+<<<<<<< HEAD
           <MilestoneManager 
             projectId={projectId || ''}
 
@@ -435,14 +553,33 @@ export function ProjectMilestonesContent() {;
             projectId={projectId |''}
           <MilestoneManager 
             projectId={projectId || ''}
+=======
+        <TabsContent value="milestones">;
+          <MilestoneManager
+            projectId={projectId || ''}
+
+=======
+
+          <MilestoneManager 
+            projectId={projectId || ''}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             milestones={milestones}
             activities={activities}
             isLoading={milestonesLoading}
             isClient={isClient}
             isTalent={isTalent}
+<<<<<<< HEAD
             paymentTerms={project.paymentterms}
             isSubmitting={isSubmitting}
             onCreateMilestone={createMilestone}
+=======
+            paymentTerms={project && project.payment_terms}
+            isSubmitting={isSubmitting}
+            onCreateMilestone={createMilestone}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {use_params} from 'react-router-dom';
 import {use_projects} from '@/hooks / use_projects';
 import {use_milestones} from '@/hooks / use_milestones';
@@ -624,9 +761,19 @@ if (return, ) {
               projectType={projectType}
             />;
           )}
+<<<<<<< HEAD
         </TabsContent>;
       </Tabs>;
     </div>;
+=======
+
+        </TabsContent>;
+      </Tabs>;
+    </div>;
+  );
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           />;
         </TabsContent>;
         <TabsContent value="activity">;
@@ -654,6 +801,7 @@ try {
 }
 ;
 
+<<<<<<< HEAD
 }loadProject ();
 refetch () 
 }, [projectId, getProjectById, refetch]);
@@ -750,3 +898,6 @@ await handleMilestoneCreated ()
   );
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

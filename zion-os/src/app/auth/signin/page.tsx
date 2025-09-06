@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 "use client",;
 import { useState } from "react",;
@@ -81,6 +85,7 @@ function SignInPage() {
                 <p className="text - red - 400 text - sm">{error}</p>;
               </div>)}
 
+<<<<<<< HEAD
 ;
 
 "use client";
@@ -140,6 +145,13 @@ export default function SignInPage() {;
               </div>;
             )}
 ;
+=======
+=======
+
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div>;
               <label html_for="email" className="block text - sm font - medium text - zinc - 300 mb - 2">;
                 Email Address;

@@ -1,6 +1,20 @@
 import fs from 'fs';
 import path from 'path';
 
+<<<<<<< HEAD
+=======
+
+  content: string | null,
+  generated_at: string | null;
+}
+;
+export default /**
+ * ChangelogPage - Function description
+ */
+function ChangelogPage() {
+  return (
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <main className='mx - auto max - w-4xl px - 4 py - 12'>;
       <h1 className='text - 2xl font - bold text - gray - 900'>Changelog</h1>;
       {generated_at && (
@@ -11,6 +25,10 @@ import path from 'path';
         </pre>) : (
         <div className='mt - 6 rounded - xl border border - gray - 200 bg - white p - 6 text - gray - 600'>          No changelog generated yet.      {generated_at && (
         <p className="mt - 2 text - sm text - gray - 600">Generated: {generated_at}</p>)}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {content ? (
         <pre className="mt - 6 whitespace - pre - wrap rounded - xl border border - gray - 200 bg - white p - 6 text - sm text - gray - 800 shadow - sm">;
 {content}
@@ -20,6 +38,15 @@ import path from 'path';
         </div>)}
     </main>);
 }
+<<<<<<< HEAD
+=======
+
+
+
+  );
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
 
   } catch {
@@ -40,8 +67,18 @@ export async function getStaticProps() {;
   }    return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
   } catch {;
 
+<<<<<<< HEAD
     return { props: { content: null, generatedAt: null }, revalidate: 300 }
 }
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    return { props: { content: null, generatedAt: null }, revalidate: 300 }
+}
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export async /**
  * getStaticProps - Function description
  */
@@ -74,10 +111,16 @@ function getStaticProps() {
     </main>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch {
 
     return { props: { content: null, generatedAt: null }, revalidate: 300 };
 
+<<<<<<< HEAD
 
 export async function getStaticProps() {
   try {
@@ -166,3 +209,7 @@ export async function getStaticProps() {
 
 }
   }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

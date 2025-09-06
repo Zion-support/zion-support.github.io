@@ -1,10 +1,21 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' });
 
 import fs from 'fs',
 import path from 'path';
 import OpenAI from 'openai';
+=======
+
+=======
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' });
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req && req.method !== 'POST') {
+    res && res.setHeader('Allow', 'POST');
+    return res && res.status(405).json({ error: 'Method not allowed' });
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY |'' });
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -42,10 +53,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const region = regionMatch ? regionMatch[1].trim() : undefined;
       const serviceMatch = prompt && prompt.match(/^(.*?)\s+in\s+/i);
       const service = serviceMatch ? serviceMatch[1].trim() : undefined;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const genReq = await fetch(`${process && process.env.SELF_HOST || 'http://localhost:3000'}/api/seo/generate`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON && JSON.stringify({ prompt, region, service })
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       });
       const gen = await genReq && genReq.json();
       const genReq = await fetch(`${process.env.SELF_HOST |'http://localhost:3000'}/api/seo/generate`, {
@@ -69,16 +88,32 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console && console.error(e),
     return res && res.status(500).json({ error: 'Failed to schedule landing pages' })
 
+<<<<<<< HEAD
+=======
+  }
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import fs from 'fs';
 import path from 'path';
 import OpenAI from 'openai';
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' });
 
 
+<<<<<<< HEAD
   }
 }
 const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY || '' });
@@ -230,3 +265,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 };
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

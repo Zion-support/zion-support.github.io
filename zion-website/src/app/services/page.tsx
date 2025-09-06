@@ -1,4 +1,8 @@
 import {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   UserGroupIcon,
   LightBulbIcon,
   CogIcon,
@@ -58,6 +62,10 @@ const professional_services = [;
     ],
     duration: '2 - 6 weeks'}];
 const service_process = [;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   {
     step: '01'
     title: 'Discovery & Assessment'
@@ -79,6 +87,10 @@ const service_process = [;
     description: 'Seamless deployment with comprehensive training to maximize adoption and value.'
     icon: AcademicCapIcon}
   {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     step: '05',
     title: 'Ongoing Support',
     description: 'Continuous monitoring, optimization, and support to ensure lasting success.',
@@ -88,11 +100,19 @@ const reasonsToChoose = [;
     name: 'Expert Team',
     description: 'World - class AI researchers and engineers with decades of combined experience.',
     icon: UserGroupIcon},
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   {
     name: 'Proven Track Record'
     description: 'Successfully delivered 500+ AI solutions across diverse industries worldwide.'
     icon: ChartBarIcon}
   {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     name: 'Cutting - Edge Technology',
     description: 'Access to the latest AI research and technology innovations.',
     icon: LightBulbIcon},
@@ -104,6 +124,10 @@ export default /**
  * ServicesPage - Function description
  */
 function ServicesPage() {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className=&quot;bg - black & quot;>;
 
@@ -170,6 +194,10 @@ function ServicesPage() {
                 </div>
               </div>
             ))}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <span className=&quot;bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent & quot;>;
                 AI Services;
               </span>;
@@ -328,6 +356,10 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 </div>
               </div>
             ))}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
           <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Our Process</h2>;
@@ -394,6 +426,10 @@ const Page: React.FC<PageProps> = ({ className }) => {
         </div>;
       </div>;
       {/* Why Choose Us */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -413,6 +449,18 @@ const Page: React.FC<PageProps> = ({ className }) => {
               <div key={reason.name} className="flex flex-col group">
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
                   <reason.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  {reason.name}
+                </dt>;
+                <dd className=&quot;mt - 4 flex flex - auto flex - col text - base leading - 7 text - gray - 300 & quot;>;
+                  <p className=&quot;flex - auto & quot;>{reason.description}</p>;
+                </dd>;
+              </div>))}
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
           <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Why Choose Us</h2>
@@ -445,17 +493,24 @@ const Page: React.FC<PageProps> = ({ className }) => {
       </div>;
       {/* CTA section */}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
 
 
+<<<<<<< HEAD
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl text-center&quot;>
           <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             Ready to get started?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
@@ -479,3 +534,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
 };
 
 export default Page;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from "react"
 import { useAuth } from "@/hooks/useAuth"
 import { supabase } from "@/integrations/supabase/client"
@@ -25,6 +26,8 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 interface JobsListProps {
 
 import { useState, useEffect } from "react",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
@@ -34,6 +37,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge",
 import { Loader2, Edit, X, Eye } from 'lucide-react'
 import { format } from "date-fns",
+<<<<<<< HEAD
 import Link from "next/link";
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface JobsListProps {
@@ -47,6 +51,10 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
   useEffect((,) => {
     const fetchJobs = async () => {
       if (!user) return
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Link from "next/link",
 import {logErrorToProduction} from '@/utils/productionLogger',
 interface JobsListProps {
@@ -70,9 +78,13 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
           .from("jobs")
           .select("*")
           .eq("client_id", user.id)
+<<<<<<< HEAD
           .order("created_at", { ascending: false })
         if (filter) {
           query = query.eq("status", filter)
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState, useEffect  } from './react';
 import { use_auth  } from '@/hooks / use_auth';
 import { supabase  } from '@/integrations / supabase / client';
@@ -290,6 +302,11 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
     fetchJobs()
   }, [user, filter]),
 
+<<<<<<< HEAD
+=======
+          .order("created_at", { ascending: false }),
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (isLoading) {
     return (
       <div className="flex justify-center items-center p-8">
@@ -301,16 +318,24 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
     return (
       <div className="text-center p-8 border rounded-md bg-muted/20">
         <p className="text-lg text-muted-foreground">
+<<<<<<< HEAD
           {filter
             ? `No jobs with status "${filter}" found.`
             : "You haven't posted any jobs yet.", }
           {filter
             ? `No jobs with status "${filter}" found.`
             : "You haven't posted any jobs yet.", }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {filter 
             ? `No jobs with status "${filter}" found.` 
             : "You haven't posted any jobs yet."
           }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </p>
         <Button asChild className="mt-4">
           <Link href="/post-job">Post Your First Job</Link>
@@ -318,6 +343,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
       </div>
     )
   }
+<<<<<<< HEAD
   const getStatusColor = (status: JobStatus,) => {
     switch (status) {
   const getStatusColor = (status: JobStatus,) => {
@@ -337,14 +363,22 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
         return "bg-yellow-100 text-yellow-800",
       case "filled":
         return "bg-green-100 text-green-800",
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       case "closed":
         return "bg-gray-100 text-gray-800"
       default:
         return "bg-gray-100 text-gray-800"
+<<<<<<< HEAD
     }
         return "bg-gray-100 text-gray-800"
       default:
         return "bg-gray-100 text-gray-800"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 interface JobsListProps {;
   filter?: JobStatus;
@@ -382,6 +416,7 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
 
 
 
+<<<<<<< HEAD
   return (
     <div className="grid gap-6 md:grid-cols-2">
       {jobs.map((job,) => (
@@ -391,12 +426,17 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
 
   },
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="grid gap-6 md:grid-cols-2">
       {jobs.map((job) => (
         <Card 
           key={job.id} 
+<<<<<<< HEAD
           className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
             onSelectJob ? "cursor-pointer" : ""
           }`}
@@ -420,6 +460,7 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
               {job.description}
             </p>
             <div className="flex flex-wrap gap-1 mt-2">
+<<<<<<< HEAD
               {job.skills.slice(0, 3).map((skill, index,) => (
                 <Badge key={index} variant="outline" className="text-xs">
                 </Badge>
@@ -430,18 +471,29 @@ ursor/fix-website-loading-errors-and-merge-6662
     return (
               {job.skills.slice(0, 3).map((skill, index,) => (
                 <Badge key={index} variant="outline" className="text-xs">
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {job.skills.slice(0, 3).map((skill, index) => (
                 <Badge key={index} variant="outline" className="text-xs">
     },;
     fetchJobs();
+<<<<<<< HEAD
   }, [user, filter]),;
   if (isLoading) {;
     return (;
+=======
+  }, [user, filter]);
+
+  if (isLoading) {;
+    return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="flex justify-center items-center p-8">;
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
       </div>;
     );
   }
+<<<<<<< HEAD
 ;
   if (jobs.length === 0) {;
     return (;
@@ -451,6 +503,15 @@ ursor/fix-website-loading-errors-and-merge-6662
             ? `No jobs with status "${filter}" found.`;
             : "You haven't posted any jobs yet.";
           }
+=======
+
+  if (jobs && jobs.length === 0) {;
+    return (<div className="text-center p-8 border rounded-md bg-muted/20">;
+        <p className="text-lg text-muted-foreground">;
+          {filter ;
+            ? `No jobs with status "${filter}" found.` ;
+            : "You haven't posted any jobs yet.", }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </p>;
         <Button asChild className="mt-4">;
           <Link href="/post-job">Post Your First Job</Link>;
@@ -458,6 +519,21 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>;
     );
   }
+<<<<<<< HEAD
+=======
+
+  const getStatusColor = (status: JobStatus,) => {;
+    switch (status) {;
+      case "new": return "bg-blue-100 text-blue-800";
+      case "in_progress":;
+        return "bg-yellow-100 text-yellow-800";
+      case "filled":;
+        return "bg-green-100 text-green-800";
+      case "closed":;
+        return "bg-gray-100 text-gray-800",;
+      default:;
+        return "bg-gray-100 text-gray-800";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const getStatusColor = (status: JobStatus, ) =>: any {
     switch (status) {
       case "new": return "bg - blue - 100 text - blue - 800";
@@ -471,15 +547,26 @@ ursor/fix-website-loading-errors-and-merge-6662
         return "bg - gray - 100 text - gray - 800";
     }
   }
+<<<<<<< HEAD
   return (
+=======
+
+  return (
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="grid gap-6 md:grid-cols-2">;
       {jobs && jobs.map((job,) => (;
         <Card
           key = {job && job.id,}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
             onSelectJob ? "cursor-pointer" : ""
           }`}
           onClick = {(,) => onSelectJob?.(job && job.id, job && job.title),}
+<<<<<<< HEAD
   },;
 ;
   return (;
@@ -491,10 +578,13 @@ ursor/fix-website-loading-errors-and-merge-6662
             onSelectJob ? "cursor-pointer" :"";
           }`}
           onClick={() => onSelectJob?.(job.id, job.title)}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         >;
           <CardHeader className="p-4">;
             <div className="flex justify-between items-start">;
               <div>;
+<<<<<<< HEAD
                 <CardTitle className="text-xl">{job.title}</CardTitle>;
                 <CardDescription className="mt-1">;
                   Posted {format(new Date(job.created_at), "PPP")}
@@ -576,6 +666,16 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Button variant="outline" size="sm">;
                 <X className="h-4 w-4" />;
               </Button>;
+=======
+                <CardTitle className="text-xl">{job && job.title}</CardTitle>;
+                <CardDescription className="mt-1">;
+                  Posted {format(new Date(job && job.created_at), "PPP")}
+                </CardDescription>;
+              </div>;
+              <Badge className={getStatusColor(job && job.status)}>;
+                {job && job.status.replace("_", " ").toUpperCase()}
+              </Badge>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>;
           </CardFooter>;
         </Card>;
@@ -664,6 +764,7 @@ return (<div className="grid gap - 6 md:grid - cols - 2" > {
 }</div> <div className="mt - 1 text - sm"> </Link> </Button> <Button variant=" outline"size=" sm"> <X className="h - 4 w - 4" /> </Button> </div> </CardFooter> </Card>) );
 }</div>);
 }'"}
+<<<<<<< HEAD
                 <Badge key={index} variant="outline" className="text-xs">;
                   {skill}
                 </Badge>
@@ -673,6 +774,8 @@ return (<div className="grid gap - 6 md:grid - cols - 2" > {
                   +{job.skills.length - 3} more
                 </Badge>
               )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>
             <div className="mt-3 text-sm">
               <span className="font-medium">Budget:</span> ${job.budget.min} - ${job.budget.max}
@@ -697,6 +800,7 @@ return (<div className="grid gap - 6 md:grid - cols - 2" > {
                 <X className="h-4 w-4" />
               </Button>
             </div>
+<<<<<<< HEAD
     </div>
   )
         </Card>
@@ -799,3 +903,6 @@ return (<div className="grid gap-6 md:grid-cols-2" > {;
 }</div>) ;
 }'"
           </CardFooter>
+=======
+          </CardFooter>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

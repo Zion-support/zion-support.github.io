@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 "use client",;
 import { useState, useEffect, useRef } from "react",;
@@ -10,6 +14,10 @@ export function Navigation() {;
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   return (;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 "use client",
 import { useState, useEffect, useRef  } from './react';,
 import Link from './next / link';,
@@ -211,16 +219,23 @@ export function Navigation() {;
                 <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M21 21l - 6-6m2 - 5a7 7 0 11 - 14 0 7 7 0 0114 0z" />;
               </svg>;
             </div>;
+<<<<<<< HEAD
           </div>;
         )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           </div>)}
 
 
 ;
 
+<<<<<<< HEAD
 ;
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="lg:hidden animate - fade - in">;
@@ -297,11 +312,18 @@ export function Navigation() {;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     </nav>;
   );
 }
+<<<<<<< HEAD
 }
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

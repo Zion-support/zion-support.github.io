@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src/components/jobs/TranslatableJobForm.tsx
 
 import React, { useState } from "react"
 import { Button } from "@/components/ui/button"
@@ -345,10 +346,16 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         description: error instanceof Error ? error.message : t('translation.unknown_error'),;
         variant: "destructive"});
     }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/src/components/jobs/TranslatableJobForm.tsx
 }
   }
   // Ensure all translations are available;
   const ensureAllTranslations = async () => {
+<<<<<<< HEAD:src/components/jobs/TranslatableJobForm.tsx
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/src/components/jobs/TranslatableJobForm.tsx
 interface TranslatableJobFormProps {;
   onSubmit: (formData: any) => void;
   isSubmitting?: boolean;}
@@ -415,7 +422,14 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
     const promises = [];
 }
   );
+<<<<<<< HEAD:src/components/jobs/TranslatableJobForm.tsx
 }
+=======
+
+}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/src/components/jobs/TranslatableJobForm.tsx
 export function TranslatableJobForm({ onSubmit, isSubmitting;
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
@@ -595,17 +609,22 @@ export function TranslatableJobForm({ onSubmit, isSubmitting;
           ) : (
             t('jobs.post_job_button')
           )}
+<<<<<<< HEAD:src/components/jobs/TranslatableJobForm.tsx
         </Button>
       </div>
     </form>
   )
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/src/components/jobs/TranslatableJobForm.tsx
 
         </Button>;
       </div>;
     </form>;
   );
 }
+<<<<<<< HEAD:src/components/jobs/TranslatableJobForm.tsx
         </Button>;
       </div>;
     </form>;
@@ -613,3 +632,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting;
 }
 ;
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/src/components/jobs/TranslatableJobForm.tsx

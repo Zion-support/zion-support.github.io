@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { Review } from "@/types/reviews",
 import { ReviewCard } from "./ReviewCard",
 
@@ -14,6 +15,22 @@ import { ReviewCard } from "./ReviewCard",
 import { Review } from "@/types/reviews";
 import { ReviewCard } from "./ReviewCard";
 
+=======
+
+
+import { Review } from "@/types/reviews",
+import { ReviewCard } from "./ReviewCard",
+
+=======
+import {Review} from "@/types/reviews";
+import {ReviewCard} from "./ReviewCard";
+=======
+import { Review } from "@/types/reviews",
+import { ReviewCard } from "./ReviewCard",
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface ReviewsListProps {
   reviews: Review[];
   isLoading: boolean;
@@ -23,6 +40,7 @@ export function ReviewsList({
   reviews
   isLoading
   onReportReview
+<<<<<<< HEAD
 
 import { Review } from "@/types/reviews";
 import { ReviewCard } from "./ReviewCard";
@@ -79,6 +97,35 @@ export function ReviewsList({
             </div>))}
       </div>);
   }
+=======
+}: ReviewsListProps) {
+  if (isLoading) {
+=======
+import { Review  } from '@/types / reviews';
+import { ReviewCard  } from './ReviewCard';
+interface ReviewsListProps {
+  reviews: Review[];
+  is_loading: boolean;
+  onReportReview: (review_id: string, reason: string) => Promise < boolean>;
+}
+export /**
+ * ReviewsList - Function description
+ */
+function ReviewsList() {
+  // Check condition
+if ( {) {
+  $2
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    return (
+      <div className="space - y-4">;
+        {Array (3);
+          .fill (0);
+          .map ((_, i) => (
+            <div;
+              key={i}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {Review} from "@/types/reviews";
 import {ReviewCard} from "./ReviewCard";
 interface ReviewsListProps {;
@@ -86,6 +133,7 @@ interface ReviewsListProps {;
   isLoading: boolean,;
   onReportReview: (reviewId: string, reason: string) => Promise<boolean>;
 }
+<<<<<<< HEAD
 export function ReviewsList(): any ({ reviews, isLoading, onReportReview }: ReviewsListProps) {;
   if (isLoading) {;
     return (
@@ -127,6 +175,12 @@ interface ReviewsListProps {;
 export function ReviewsList({ reviews, isLoading, onReportReview }: ReviewsListProps) {;
   if (isLoading) {;
     return (;
+=======
+
+export function ReviewsList(): any ({ reviews, isLoading, onReportReview }: ReviewsListProps) {;
+  if (isLoading) {;
+    return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="space-y-4">;
         {Array(3).fill(0).map((_, i) => (;
           <div key={i} className="border rounded-lg p-4 bg-card animate-pulse">;
@@ -143,6 +197,10 @@ export function ReviewsList({ reviews, isLoading, onReportReview }: ReviewsListP
               <div className="h-6 w-16 bg-muted rounded"></div>;
             </div>;
           </div>;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               className="border rounded-lg p-4 bg-card animate-pulse"
             >
               <div className="flex items-center gap-3 mb-3">
@@ -169,6 +227,12 @@ export function ReviewsList({ reviews, isLoading, onReportReview }: ReviewsListP
 
         ))}
       </div>;
+<<<<<<< HEAD
+=======
+    );
+  }
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (reviews && reviews.length === 0) {;
     return (
     ),;
@@ -227,6 +291,7 @@ if ( {) {
 }
 ;
 
+<<<<<<< HEAD
     ),;
   }
   ;
@@ -291,3 +356,6 @@ return (
   )
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

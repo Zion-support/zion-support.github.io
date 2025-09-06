@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 interface ErrorStateProps {
@@ -44,13 +49,18 @@ import { Card, CardContent } from "@/components/ui/card",
 interface ErrorStateProps {
   error: string
 }
+<<<<<<< HEAD
 export function ErrorState({ error }: ErrorStateProps) {
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <Card className="border-red-200">
       <CardContent className="p-6 text-center">
         <h3 className="text-lg font-medium text-red-600 mb-1">Something went wrong</h3>
         <p className="text-muted-foreground">{error}</p>
       </CardContent>
+<<<<<<< HEAD
     </Card>
   );
 }
@@ -76,6 +86,9 @@ export function ErrorState({ error } ErrorStateProps) {;
         <h3 className="text-lg font-medium text-red-600 mb-1">Something went wrong</h3>;
         <p className="text-muted-foreground">{error}</p>;
       </CardContent>;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </Card>
 
     </Card>;
@@ -83,6 +96,7 @@ export function ErrorState({ error } ErrorStateProps) {;
 }
 
 
+<<<<<<< HEAD
     </Card>;
   ),;}
  interface ErrorStateProps {
@@ -98,3 +112,6 @@ export function ErrorState({ error } ErrorStateProps) {;
   );
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

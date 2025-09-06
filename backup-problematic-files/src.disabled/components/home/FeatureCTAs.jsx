@@ -27,4 +27,8 @@ const FeatureCTAs = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default FeatureCTAs;
+=======
+export default FeatureCTAs;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

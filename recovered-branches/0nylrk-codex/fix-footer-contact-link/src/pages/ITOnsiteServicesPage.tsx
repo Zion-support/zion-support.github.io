@@ -15,6 +15,7 @@ import {ServiceProcessSteps} from "@/components/services/PageSections/ServicePro
 import {ServiceIncludes} from "@/components/services/PageSections/ServiceIncludes";
 import {EnterpriseCallToAction} from "@/components/services/PageSections/EnterpriseCallToAction";
 export default function ITOnsiteServicesPage() {;
+<<<<<<< HEAD
   const [searchParams] = useSearchParams();
   const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
@@ -53,6 +54,18 @@ export default function ITOnsiteServicesPage() {
   // Check for success parameter in URL
   const success = searchParams.get("success"),
   
+=======
+
+  const [searchParams] = useSearchParams();
+  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),
+  const [searchQuery, setSearchQuery] = useState("");
+
+
+
+  
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Show success toast if redirected from successful payment
   useEffect(() => {
     if (success === "true") {
@@ -61,14 +74,23 @@ export default function ITOnsiteServicesPage() {
         description: "Your IT onsite service request has been received. Our team will contact you shortly."})
     }
 
+<<<<<<< HEAD
   }, [success]);
   // Popular countries for the featured cards
   const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"];
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }, [success]),
   
   // Popular countries for the featured cards
   const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"],
   
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Filter countries based on search query
   const filteredCountries = onsiteServicePricing
     .filter(country =>
@@ -77,6 +99,7 @@ export default function ITOnsiteServicesPage() {
     .sort((a, b) => {
       // First, sort by popular status
 
+<<<<<<< HEAD
       const aIsPopular = popularCountries.includes(a.country);
       const bIsPopular = popularCountries.includes(b.country);
       if (aIsPopular && !bIsPopular) return -1;
@@ -84,6 +107,9 @@ export default function ITOnsiteServicesPage() {
       // Then sort alphabetically
       return a.country.localeCompare(b.country)
     });
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const aIsPopular = popularCountries.includes(a.country),
       const bIsPopular = popularCountries.includes(b.country),
       
@@ -94,6 +120,11 @@ export default function ITOnsiteServicesPage() {
       return a.country.localeCompare(b.country)
     }),
   
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleCountrySelect = (country: CountryPricing) => {
     setSelectedCountry(country)
     // Scroll to the service details section
@@ -102,18 +133,29 @@ export default function ITOnsiteServicesPage() {
     }, 100)
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   },
   
 
+<<<<<<< HEAD
   }
 
   },
   
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <AppLayout>
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState, useEffect } from "react",;
 import { useSearchParams } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -133,6 +175,7 @@ export default function ITOnsiteServicesPage() {;
   const [searchParams] = useSearchParams(),;
   const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),;
   const [searchQuery, setSearchQuery] = useState(""),;
+<<<<<<< HEAD
   const [searchParams] = useSearchParams();
   const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),
   const [searchQuery, setSearchQuery] = useState("");
@@ -165,6 +208,12 @@ export default function ITOnsiteServicesPage() {;
   ;
   // Check for success parameter in URL;
   const success = searchParams.get("success"),;
+=======
+
+  // Check for success parameter in URL;
+  const success = searchParams && searchParams.get("success");
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Show success toast if redirected from successful payment;
   useEffect(() => {;
     if (success === "true") {;
@@ -183,6 +232,7 @@ export default function ITOnsiteServicesPage() {;
         title: "Payment Successful",;
         description: "Your IT onsite service request has been received. Our team will contact you shortly."});
     }
+<<<<<<< HEAD
   }, [success]),;
   // Popular countries for the featured cards;
   const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"],;
@@ -240,17 +290,81 @@ export default function ITOnsiteServicesPage() {;
           <div className="mb-12">
             <CountryTabs
             <CountryTabs 
+=======
+  }, [success]);
+
+  // Popular countries for the featured cards;
+  const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"];
+
+  // Filter countries based on search query;
+  const filteredCountries = onsiteServicePricing;
+    .filter(country => ;
+      country && country.country.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
+    );
+    .sort((a, b) => {;
+      // First, sort by popular status;
+      const aIsPopular = popularCountries && popularCountries.includes(a && a.country);
+      const bIsPopular = popularCountries && popularCountries.includes(b && b.country);
+
+      if (aIsPopular && !bIsPopular) return -1;
+      if (!aIsPopular && bIsPopular) return 1;
+
+      // Then sort alphabetically;
+      return a && a.country.localeCompare(b && b.country);
+    });
+
+  const handleCountrySelect = (country: CountryPricing) => {;
+    setSelectedCountry(country),;
+
+    // Scroll to the service details section;
+    setTimeout(() => {;
+      document && document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+  return (
+    <AppLayout>;
+      <section className="py-16 bg-zion-blue">;
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          {/* Hero Section with Features */}
+
+          <PageHero />;
+
+          {/* Country Selection Tabs */}
+          <div className="mb-12">;
+
+            <CountryTabs
+=======
+
+            <CountryTabs 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               popularCountries={popularCountries}
               filteredCountries={filteredCountries}
               handleCountrySelect={handleCountrySelect}
               searchQuery={searchQuery}
               setSearchQuery={setSearchQuery}
+<<<<<<< HEAD
             />
           </div>
+=======
+
+            />;
+          </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Service Details Section */}
           <ServiceDetailsSection
             selectedCountry={selectedCountry}
             setSelectedCountry={setSelectedCountry}
+<<<<<<< HEAD
           />
           {/* How It Works Section */}
           <ServiceProcessSteps />
@@ -275,6 +389,9 @@ export default function ITOnsiteServicesPage() {;
       <QuoteFormSection />
     </AppLayout>
   )
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           />;
           ;
           {/* How It Works Section */}
@@ -425,6 +542,7 @@ if (return 1) {
 
 }
 
+<<<<<<< HEAD
 }, [success]);
 //Popular countries for the featured cards if (!aIsPopular && bIsPopular) return 1;
 //Then sort alphabetically return (<AppLayout> <section className="py-16 bg-zion-blue"> <div className="container mx-auto px-4 sm:px-6 lg:px-8"> {
@@ -455,3 +573,6 @@ if (return 1) {
 }
 ;
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

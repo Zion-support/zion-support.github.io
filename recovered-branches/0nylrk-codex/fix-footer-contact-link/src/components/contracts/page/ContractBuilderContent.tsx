@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { SmartContractBuilder  } from '@/components/contracts/SmartContractBuilder';
 import { ContractBuilder  } from '@/components/contracts/ContractBuilder';
@@ -8,6 +9,9 @@ import { ContractTypeCards  } from './ContractTypeCards';
 import { RecentContractsTable  } from './RecentContractsTable';
 import { TalentProfile  } from '@/types/talent';
 import { useAuth } from '@/hooks/useAuth';
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import {SmartContractBuilder} from '@/components/contracts/SmartContractBuilder';
 import {ContractBuilder} from '@/components/contracts/ContractBuilder';
@@ -16,6 +20,7 @@ import {ContractTypeCards} from './ContractTypeCards';
 import {RecentContractsTable} from './RecentContractsTable';
 import {TalentProfile} from '@/types/talent';
 import {useAuth} from '@/hooks/useAuth';
+<<<<<<< HEAD
 // Mock data for demo purposes
 
 const mockTalent: TalentProfile = {
@@ -28,6 +33,15 @@ const mockTalent: TalentProfile = {
   skills: ['ReactNode.jsSmart Contracts']}
 export function ContractBuilderContent() {
 export function ContractBuilderContent() {;
+=======
+
+// Mock data for demo purposes
+
+
+export function ContractBuilderContent() {;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const { user } = useAuth();
   const [showBuilderType, setShowBuilderType] = useState<'none' | 'standard' | 'smart'>('none');
   const [recentContracts, setRecentContracts] = useState([
@@ -50,9 +64,14 @@ export function ContractBuilderContent() {;
   ]);
 
 
+<<<<<<< HEAD
   const handleContractGenerated = (content: string) => {
     console.log('Contract generated:', content.substring(0, 100) + '...')
   }
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from 'react',;
 import { SmartContractBuilder } from '@/components/contracts/SmartContractBuilder',;
 import { ContractBuilder } from '@/components/contracts/ContractBuilder',;
@@ -91,11 +110,22 @@ export function ContractBuilderContent() {;
       isSmartContract: false;
     }
   ]),
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   const handleContractGenerated = (content: string) => {
     // // // console.log('Contract generated:', content.substring(0, 100) + '...')
   },
 
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleViewContract = (contractId: string) => {
     console.log('Viewing contract:', contractId);
     // Future implementation: View specific contract details
@@ -104,15 +134,19 @@ export function ContractBuilderContent() {;
   },
 
 
+<<<<<<< HEAD
   const handleViewContract = (contractId: string) => {
     // // // console.log('Viewing contract:', contractId),
     // Future implementation: View specific contract details
   }
   },
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   return (
     <>
       <ContractHeader onCreateClick={() => setShowBuilderType('smart')} />
+<<<<<<< HEAD
       <ContractTypeCards
       
       <ContractTypeCards 
@@ -128,6 +162,9 @@ export function ContractBuilderContent() {;
     <>;
       <ContractHeader onCreateClick={() => setShowBuilderType('smart')} />;
       <ContractTypeCards;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       
       <ContractTypeCards 
@@ -141,7 +178,23 @@ export function ContractBuilderContent() {;
         onViewContract={handleViewContract}
       />
       {showBuilderType === 'standard' && (
+<<<<<<< HEAD
       {showBuilderType === 'smart' && (;
+=======
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+import {useState} from 'react';
+import {SmartContractBuilder} from '@/components / contracts / SmartContractBuilder';
+import {ContractBuilder} from '@/components / contracts / ContractBuilder';
+import {ContractHeader} from './ContractHeader';
+import {ContractTypeCards} from './ContractTypeCards';
+import {RecentContractsTable} from './RecentContractsTable';
+
+
+      {showBuilderType === 'smart' && (;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <SmartContractBuilder
 
 import { useState } from 'react',;
@@ -300,6 +353,7 @@ function ContractBuilderContent() {
         />)}
     </>);
 }
+<<<<<<< HEAD
   ),;}
  //Future implementation: View specific contract details 
 };
@@ -358,3 +412,6 @@ function ContractBuilderContent() {
     </>
   )
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

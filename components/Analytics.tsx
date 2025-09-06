@@ -1,9 +1,41 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import Head from 'next / head';
 ;
 interface AnalyticsProps {
   tracking_id?: string;
 }
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useEffect } from 'react';
+
+import Head from 'next / head';
+;
+
+interface AnalyticsProps {
+  tracking_id?: string;
+}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface AnalyticsProps {;
   trackingId?: string;
 }
@@ -20,9 +52,17 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
       window && window.dataLayer = window && window.dataLayer || [];
       function gtag(): any (...args: unknown[]) {;
         window && window.dataLayer.push(args),;
+<<<<<<< HEAD
       }
       window && window.gtag = gtag;
       gtag('js', new Date());
+=======
+
+      }
+      window && window.gtag = gtag;
+      gtag('js', new Date());
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       gtag('config', trackingId, {;
         page_title: document && document.title,;
         page_location: window && window.location.href,;
@@ -79,6 +119,10 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
   };
   // Expose tracking functions globally for use in other components;
   if (typeof window !== 'undefined') {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     (window as any).trackEvent = trackEvent;
 const Analytics: React.FC < AnalyticsProps> = ({ tracking_id = 'G - XXXXXXXXXX' }) => {
   useEffect (() => {
@@ -182,13 +226,47 @@ if ( {) {
   }
   return (
     <Head>;
+<<<<<<< HEAD
       <script;
         dangerouslySetInnerHTML={{
+=======
+
+      <script;
+        dangerouslySetInnerHTML={{
+<<<<<<< HEAD
+          __html: `;
+            // Performance monitoring;
+            // Check condition
+if ( {) {
+  $2
+}
+              window.addEventListener ('load', function () {
+                set_timeout (function () {
+                  const perf_data = performance.getEntriesByType ('navigation')[0];
+                  // Check condition
+if ( {) {
+  $2
+}
+                    const load_time = perf_data.loadEventEnd - perf_data.loadEventStart;
+                    // Check condition
+if ( {) {
+  $2
+}
+                      window.gtag ('event', 'timing_complete', {
+                        name: 'load',
+                        value: Math.round (load_time),
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                         name: 'load',
                         value: Math.round(loadTime),
 
                       });
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           __html: `
             // Performance monitoring
             if ('performance' in window) {
@@ -212,6 +290,7 @@ if ( {) {
                       })
                     }
                   }
+<<<<<<< HEAD
 }
                 }, 0);
               });
@@ -219,6 +298,18 @@ if ( {) {
           `
           `,
         }}
+=======
+<<<<<<< HEAD
+                }, 0)
+              })
+            }
+
+    </Head>);
+}
+;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           `,
 
@@ -231,8 +322,13 @@ export default Analytics;
 };
 
 
+<<<<<<< HEAD
 export default Analytics;
 }
 };
 
 export default Analytics;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default Analytics;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

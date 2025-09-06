@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 const fs = require('fs');
@@ -118,6 +119,8 @@ fixer.run().catch(console.error);
 module.exports = MergeConflictFixer;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 const fs = require('fs');
 const path = require('path');
@@ -251,8 +254,12 @@ try {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.log('\n✨ Merge conflict resolution script completed!');
 =======
 console.log('\n✨ Merge conflict resolution script completed!');
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+console.log('\n✨ Merge conflict resolution script completed!');
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

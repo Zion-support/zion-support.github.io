@@ -1,4 +1,30 @@
 
+<<<<<<< HEAD
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState, useEffect } from "react";
 import {useParams, useNavigate} from "react-router-dom";
 import {TalentProfile} from "@/components/profile/TalentProfile";
@@ -15,15 +41,23 @@ import {Button} from "@/components/ui/button";
 import {useAuth} from "@/hooks/useAuth";
 import {UserProfile} from "@/types/auth";
 import {toast} from "@/hooks/use-toast";
+<<<<<<< HEAD
 export default function TalentProfilePage() {
   // Cast to specify the expected route param type since useParams may be untyped;
   const { id } = useParams() as { id?: string };
+=======
+export default function TalentProfilePage() {;
+  // Cast to specify the expected route param type since useParams may be untyped;
+  const { id } = useParams() as { id?: string };
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const navigate = useNavigate();
   const { profile, isLoading, error } = useTalentProfile(id);
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
   const [isMessageModalOpen, setIsMessageModalOpen] = useState(false);
   const { userDetails } = useAuthStatus();
   const { isAuthenticated, user } = useAuth();
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react",
 import { useParams, useNavigate } from "react-router-dom",
 import { TalentProfile } from "@/components/profile/TalentProfile",
@@ -60,6 +94,11 @@ export default function TalentProfilePage() {
   const [isMessageModalOpen, setIsMessageModalOpen] = useState(false),
   const { userDetails } = useAuthStatus(),
   const { isAuthenticated, user } = useAuth(),
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   // Create a compatible UserProfile from UserDetails or the authenticated user
   const userProfile: UserProfile = user ? {
@@ -86,9 +125,12 @@ export default function TalentProfilePage() {
 
 
 
+<<<<<<< HEAD
   }
   },
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Handle loading error gracefully
   useEffect(() => {
     if (error) {
@@ -97,10 +139,14 @@ export default function TalentProfilePage() {
         description: "There was a problem loading this talent profile. Please try again."
         variant: "destructive"})
 
+<<<<<<< HEAD
     }
   }, [error]);
   if (isLoading) {
     return <ProfileLoadingState />
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState, useEffect } from "react",;
 import { useParams, useNavigate } from "react-router-dom",;
 import { TalentProfile } from "@/components/profile/TalentProfile",;
@@ -157,6 +203,12 @@ export default function TalentProfilePage() {;
   }, [error]),;
   if (isLoading) {;
     return <ProfileLoadingState />;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   if (error |!profile) {
     return <ProfileErrorState error={error} />
@@ -166,7 +218,10 @@ export default function TalentProfilePage() {;
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleRequestHire = () => {
     if (!isAuthenticated) {
       toast({
@@ -183,9 +238,12 @@ export default function TalentProfilePage() {;
 
 
 
+<<<<<<< HEAD
   }
   },
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleMessageTalent = () => {
     if (!isAuthenticated) {
       toast({
@@ -196,18 +254,24 @@ export default function TalentProfilePage() {;
       return
     }
     setIsMessageModalOpen(true)
+<<<<<<< HEAD
   }
 
   return (
     <div className="min-h-screen bg-zion-blue pb-12">
       <TalentProfile
         profile={profile}
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
 
   return (
     <div className="min-h-screen bg-zion-blue pb-12">
       <TalentProfile 
         profile={profile} 
+<<<<<<< HEAD
 ;
   const handleRequestHire = () => {;
     if (!isAuthenticated) {;
@@ -242,6 +306,8 @@ export default function TalentProfilePage() {;
     <div className="min-h-screen bg-zion-blue pb-12">
       <TalentProfile 
         profile={profile} 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
         onRequestHire={handleRequestHire}
@@ -259,6 +325,10 @@ export default function TalentProfilePage() {;
             <Handshake className="mr-2 h-4 w-4" />
             Hire Now
           </Button>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   // Create a compatible UserProfile from UserDetails or the authenticated user;
   const userProfile: UserProfile = user ? {;
@@ -379,10 +449,26 @@ export default function TalentProfilePage() {;
         onMessageTalent={handleMessageTalent}
       />;
       <BackToDirectoryButton />;
+<<<<<<< HEAD
+=======
+
+      {/* Sticky action buttons that appear when scrolling */}
+      <StickyAction>;
+        <div className="p-2 flex gap-2">;
+          <Button
+            size="sm"
+            className="bg-zion-purple text-white hover:bg-zion-purple-dark"
+            onClick={handleRequestHire}>;
+            <Handshake className="mr-2 h-4 w-4" />;
+            Hire Now;
+          </Button>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Button
             size="sm"
             variant="outline"
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+<<<<<<< HEAD
             onClick={handleMessageTalent}
           >
             <MessageSquare className="mr-2 h-4 w-4" />
@@ -390,6 +476,8 @@ export default function TalentProfilePage() {;
           </Button>
         </div>
       </StickyAction>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             onClick={handleMessageTalent}>;
             <MessageSquare className="mr-2 h-4 w-4" />;
@@ -548,23 +636,33 @@ if ( {) {
         </div>;
       </StickyAction>;
       
+<<<<<<< HEAD
       
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Request to Hire Modal */}
       <HireRequestModal
         talent={profile}
         isOpen={isHireModalOpen}
         onClose={() => setIsHireModalOpen(false)}
         userDetails={userProfile}
+<<<<<<< HEAD
       />
       {/* Message Talent Modal */}
       <MessageTalentModal
         talent={profile}
         isOpen={isMessageModalOpen}
         onClose={() => setIsMessageModalOpen(false)}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       />;
 
 
+<<<<<<< HEAD
       />
     </div>
   )
@@ -574,6 +672,9 @@ if ( {) {
   );
 }
       ;
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Request to Hire Modal */}
       <HireRequestModal ;
         talent={profile}        isOpen={isHireModalOpen}
@@ -625,6 +726,7 @@ if (error) {
 }
 ;
 
+<<<<<<< HEAD
 }, [error]);
 return;
 }setIsHireModalOpen (true) 
@@ -664,3 +766,6 @@ const handleMessageTalent = () => {
 }/> </div>) 
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

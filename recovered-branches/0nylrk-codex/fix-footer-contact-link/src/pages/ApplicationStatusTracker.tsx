@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
 import {ApplicationsTracker} from "@/components/jobs/applications";
@@ -11,6 +12,8 @@ import { SEO } from "@/components/SEO",
 import { ApplicationsTracker } from "@/components/jobs/applications",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Briefcase, Inbox } from "lucide-react",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -19,6 +22,7 @@ function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile(),
   
 
+<<<<<<< HEAD
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useIsMobile } from "@/hooks/use-mobile";
 function ApplicationStatusTrackerContent() {
@@ -30,6 +34,9 @@ import { useIsMobile } from "@/hooks/use-mobile",
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile(),
   
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <>
       <SEO
@@ -59,6 +66,7 @@ function ApplicationStatusTrackerContent() {
     </>
   )
 
+<<<<<<< HEAD
 
 }
 export default function ApplicationStatusTracker() {
@@ -70,6 +78,19 @@ export default function ApplicationStatusTracker() {
     </ProtectedRoute>
   )
 }
+=======
+import {AppLayout} from "@/layout/AppLayout";
+import {SEO} from "@/components/SEO";
+import {ApplicationsTracker} from "@/components/jobs/applications";
+import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
+import {Briefcase, Inbox} from "lucide-react";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import {useIsMobile} from "@/hooks/use-mobile";
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;
 import { ApplicationsTracker } from "@/components/jobs/applications",;
@@ -77,6 +98,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Briefcase, Inbox } from "lucide-react",;
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
 import { useIsMobile } from "@/hooks/use-mobile",;
+<<<<<<< HEAD
 function ApplicationStatusTrackerContent() {;
   const isMobile = useIsMobile();
   return (;
@@ -85,6 +107,19 @@ function ApplicationStatusTrackerContent() {;
         title="Application Status Tracker | Zion AI Marketplace";
         description="Track the status of your job applications in the Zion AI marketplace.";
       />;
+=======
+
+function ApplicationStatusTrackerContent() {;
+  const isMobile = useIsMobile();
+
+  return (
+    <>;
+      <SEO
+        title="Application Status Tracker | Zion AI Marketplace" 
+        description="Track the status of your job applications in the Zion AI marketplace." 
+      />;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="container mx-auto px-4 py-8">;
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">;
           <div>;
@@ -93,6 +128,7 @@ function ApplicationStatusTrackerContent() {;
           </div>;
         </div>;
 
+<<<<<<< HEAD
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;
 import { ApplicationsTracker } from "@/components/jobs/applications",;
@@ -119,6 +155,8 @@ function ApplicationStatusTrackerContent() {;
           </div>;
         </div>;
 ;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="grid grid-cols-1 gap-6">;
           <Card>;
             <CardHeader className="border-b bg-muted/50">;
@@ -134,6 +172,10 @@ function ApplicationStatusTrackerContent() {;
         </div>;
       </div>;
     </>;
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 }
 export default function ApplicationStatusTracker() {;
@@ -184,17 +226,22 @@ export default /**
  */
 function ApplicationStatusTracker() {
   return (
+<<<<<<< HEAD
   ),;
   );
 }
 ;
 export default function ApplicationStatusTracker() {;
   return (;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <ProtectedRoute>;
       <AppLayout>;
         <ApplicationStatusTrackerContent />;
       </AppLayout>;
 
+<<<<<<< HEAD
 
 
 }
@@ -229,3 +276,12 @@ export default function ApplicationStatusTracker() {
   )
 }
 ;
+=======
+    </ProtectedRoute>);
+=======
+
+
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

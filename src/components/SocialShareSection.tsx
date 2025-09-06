@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   const shareUrl =
 import { Button } from './ui/button'
 import { Twitter, Facebook, Linkedin, Link } from 'lucide-react'
@@ -162,6 +163,8 @@ export function SocialShareSection() {
     }],
 
   return (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 return (
     <section className="py-12 bg-zion-blue">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -170,6 +173,7 @@ return (
             <h3 className="text-xl font-bold text-white mb-2">Share Zion with Your Network</h3>
             <p className="text-zion-slate-light">Help others discover the future of AI & tech marketplace</p>
           </div>
+<<<<<<< HEAD
           <div className='flex flex-wrap gap-3'>
             {shareLinks.map((link, index) => (              <Button
                 key = {index,}
@@ -198,6 +202,9 @@ return (
 }</div> </div> </div> </section>)
 }'"
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 };
 }</div> </div> </div> </section>) ;
 }'";
@@ -298,11 +305,30 @@ export function SocialShareSection() {;
       </div>;
     </section>;
   );
+<<<<<<< HEAD
 ;
 
 
 }
 ;
+=======
+
+  navigator && navigator.clipboard.writeText (window && window.location.href) .then ( () => {;
+  toast ({;
+
+}) .catch ( () => {;
+  toast ({;
+  title: t ('errors && errors.failed to copy');
+});
+};
+}</div> </div> </div> </section>) ;
+}'";
+}
+
+}</div> </div> </div> </section>)
+}'"
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -368,4 +394,8 @@ export function SocialShareSection() {;
 }</div> </div> </div> </section>);
 }'";
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

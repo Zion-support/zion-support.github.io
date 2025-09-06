@@ -17,6 +17,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useCallback, useEffect, useState } from 'react';
+<<<<<<< HEAD
 import dynamic from 'next/dynamic';
 const isClient = typeof window !== 'undefined';
 
@@ -28,16 +29,31 @@ type Web3LoginModalProps = {
     chain: 'evm' | 'sol';
     displayName?: string;
   }) => void;};const isClient = typeof window !== 'undefined';
+=======
+
+
+const isClient = typeof window !== 'undefined';
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 type Web3LoginModalProps = {
   isOpen: boolean
   onClose: () => void
   onLoggedIn?: (user: { address: string, chain: 'evm' | 'sol', displayName?: string }) => void
+<<<<<<< HEAD
 }
+=======
+
+};
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   useEffect(() => {
     if (!isOpen) {
+<<<<<<< HEAD
       setError(null);
       setLoading(false)
 
@@ -54,10 +70,39 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
     }
   }, [isOpen]);
   const handleEvmConnect = useCallback(async () => {;
+=======
+
+type Web3LoginModalProps = {;
+  isOpen: boolean,;
+  onClose: () => void,;
+  onLoggedIn?: (user: { address: string, chain: 'evm' | 'sol', displayName?: string }) => void;
+};
+function ModalInner(): any ({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {;
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  useEffect(() => {;
+    if (!isOpen) {;
+
+      setError(null);
+      setLoading(false);    }      setLoading(false);
+
+=======
+      setError(null);
+      setLoading(false)
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    }
+  }, [isOpen]);
+
+
+  const handleEvmConnect = useCallback(async () => {;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     setError(null);
     setLoading(true);
     try {;
       const Web3ModalCtor = (await import('web3modal')).default;
+<<<<<<< HEAD
       const WalletConnectProvider = (await import('@walletconnect/web3-provider')).default;
       const web3Modal = new Web3ModalCtor({
         cacheProvider: false
@@ -135,6 +180,17 @@ if ( {) {
           }
         }
       });              rpc: { 1: 'https://cloudflare-eth.com' }}}}})
+=======
+
+
+          walletconnect: {
+            package: WalletConnectProvider
+            options: {
+
+              rpc: { 1: 'https://cloudflare-eth.com' }}}}}),
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const provider = await web3Modal.connect();
       const ethers = await import('ethers');
       const web3Provider = new ethers.providers.Web3Provider(provider as any);
@@ -147,13 +203,64 @@ if ( {) {
       const origin = window.location.origin;
       const statement = 'Sign in to Zion with your wallet. No gas required.';
       const issuedAt = new Date().toISOString();
+<<<<<<< HEAD
       onLoggedIn?.({ address, chain: 'evm' });
       on_close ();
     } catch (e: any) {
+=======
+
+      const siweMessage = `${address} wants you to sign in with your Ethereum account:\n\n${statement}\n\nURI: ${origin}\nVersion: 1\nChain ID: ${network.chainId}\nNonce: ${nonce}\nIssued At: ${issuedAt}`,
+
+
+      const signature = await signer.signMessage(siweMessage);
+      const verifyRes = await fetch('/api/auth/verify-evm', {
+
+              rpc: { 1: 'https://cloudflare - eth.com' },
+            },
+          },
+        },
+      });              rpc: { 1: 'https://cloudflare - eth.com' }}}}}),
+      const provider = await web3Modal.connect ();
+      const ethers = await import ('ethers');
+      const web3Provider = new ethers.providers.Web3Provider (provider as any);
+      const signer = web3Provider.get_signer ();
+      const address = (await signer.get_address ()).toLowerCase ();
+      const network = await web3Provider.get_network ();
+;
+      const nonce_res = await fetch ('/api / auth / nonce');
+      const { nonce } = await nonce_res.json ();
+;
+      const domain = window.location.host;
+      const origin = window.location.origin;
+      const statement = 'Sign in to Zion with your wallet. No gas required.';
+      const issued_at = new Date ().toISOString ();
+      const siwe_message = `${address} wants you to sign in with your Ethereum account:\n\n${statement}\n\nURI: ${origin}\n_version: 1\n_chain ID: ${network.chain_id}\n_nonce: ${nonce}\n_issued At: ${issued_at}`;      const siwe_message = `${address} wants you to sign in with your Ethereum account:\n\n${statement}\n\nURI: ${origin}\n_version: 1\n_chain ID: ${network.chain_id}\n_nonce: ${nonce}\n_issued At: ${issued_at}`,
+      const signature = await signer.sign_message (siwe_message);
+;
+      const verify_res = await fetch ('/api / auth / verify - evm', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({
+          message: siwe_message,
+          signature,
+          address,
+          chain_id: network.chain_id,
+        }),
+      });
+      if (throw new Error ('Failed to verify signature')) {
+  $2
+}
+
+      onLoggedIn?.({ address, chain: 'evm' });
+      on_close ();
+    } catch (e: any) {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: siweMessage, signature, address, chainId: network.chainId })}),
       if (!verifyRes.ok) throw new Error('Failed to verify signature');
+<<<<<<< HEAD
       onLoggedIn?.({ address, chain: 'evm' }),
       const siweMessage = `${address} wants you to sign in with your Ethereum account:\n\n${statement}\n\nURI: ${origin}\nVersion: 1\nChain ID: ${network.chainId}\nNonce: ${nonce}\nIssued At: ${issuedAt}`;      const siweMessage = `${address} wants you to sign in with your Ethereum account:\n\n${statement}\n\nURI: ${origin}\nVersion: 1\nChain ID: ${network.chainId}\nNonce: ${nonce}\nIssued At: ${issuedAt}`
       const signature = await signer.signMessage(siweMessage);
@@ -176,12 +283,73 @@ if ( {) {
     } finally {
       setLoading(false);    }      if (!verifyRes.ok) throw new Error('Failed to verify signature');
       onLoggedIn?.({ address, chain: 'evm' })
+=======
+
+      onLoggedIn?.({ address, chain: 'evm' }),
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       onClose()
     } catch (e: any) {
       console.error(e);
       setError(e?.message |'Wallet connection failed')
     } finally {
       setLoading(false)
+<<<<<<< HEAD
+=======
+
+
+      const web3Modal = new Web3ModalCtor({;
+        cacheProvider: false,;
+        providerOptions: {;
+          walletconnect: {;
+            package: WalletConnectProvider,;
+            options: {;
+              rpc: { 1: 'https://cloudflare-eth && eth.com' },;
+            },;
+          },;
+        },;
+      });              rpc: { 1: 'https://cloudflare-eth && eth.com' }}}}}),;
+      const provider = await web3Modal && web3Modal.connect();
+      const ethers = await import('ethers');
+      const web3Provider = new ethers && ethers.providers.Web3Provider(provider as any);
+      const signer = web3Provider && web3Provider.getSigner();
+      const address = (await signer && signer.getAddress()).toLowerCase();
+      const network = await web3Provider && web3Provider.getNetwork();
+      const nonceRes = await fetch('/api/auth/nonce');
+      const { nonce } = await nonceRes && nonceRes.json();
+      const domain = window && window.location.host;
+      const origin = window && window.location.origin;
+      const statement = 'Sign in to Zion with your wallet. No gas required.';
+      const issuedAt = new Date().toISOString();
+      const siweMessage = `${address} wants you to sign in with your Ethereum account:\n\n${statement}\n\nURI: ${origin}\nVersion: 1\nChain ID: ${network && network.chainId}\nNonce: ${nonce}\nIssued At: ${issuedAt}`;      const siweMessage = `${address} wants you to sign in with your Ethereum account:\n\n${statement}\n\nURI: ${origin}\nVersion: 1\nChain ID: ${network && network.chainId}\nNonce: ${nonce}\nIssued At: ${issuedAt}`,;
+      const signature = await signer && signer.signMessage(siweMessage);
+      const verifyRes = await fetch('/api/auth/verify-evm', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON && JSON.stringify({;
+          message: siweMessage,;
+          signature,;
+          address,;
+          chainId: network && network.chainId,;
+        }),;
+      });
+      if (!verifyRes && verifyRes.ok) throw new Error('Failed to verify signature');
+      onLoggedIn?.({ address, chain: 'evm' });
+      onClose();
+    } catch (e: any) {;
+      console && console.error(e);
+      setError(e?.message || 'Wallet connection failed');
+    } finally {;
+      setLoading(false);    }      if (!verifyRes && verifyRes.ok) throw new Error('Failed to verify signature');
+      onLoggedIn?.({ address, chain: 'evm' }),;
+      onClose();
+    } catch (e: any) {;
+      console && console.error(e);
+      setError(e?.message || 'Wallet connection failed');
+    } finally {;
+      setLoading(false);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   }, [onClose, onLoggedIn]);
   const handlePhantomConnect = useCallback(async () => {;
@@ -189,22 +357,37 @@ if ( {) {
     setLoading(true);
     try {;
       const provider = (window as any)?.solana;
+<<<<<<< HEAD
       if (!provider || !provider && provider.isPhantom) {;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         throw new Error('Phantom not found. Install the Phantom extension');
       }
       const resp = await provider && provider.connect();
       const publicKey: string = resp && resp.publicKey.toString();
       const nonceRes = await fetch('/api/auth/nonce');
+<<<<<<< HEAD
       const { nonce } = await nonceRes && nonceRes.json();
       if (!provider || !provider.isPhantom) {
         throw new Error('Phantom not found. Install the Phantom extension')
       }
       const resp = await provider.connect();
       const publicKey: string = resp.publicKey.toString(),
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const statement =;
         'Sign in to Zion with your Solana wallet. No gas required.';
       const message = `Sign-in with Solana\n\n${statement}\nNonce: ${nonce}\nAddress: ${publicKey}\nIssued At: ${new Date().toISOString()}`;      const encodedMessage = new TextEncoder().encode(message);        throw new Error('Phantom not found. Install the Phantom extension');
       }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const resp = await provider && provider.connect();
       const publicKey: string = resp && resp.publicKey.toString(),;
       const nonceRes = await fetch('/api/auth/nonce');
@@ -214,6 +397,7 @@ if ( {) {
       const message = `Sign-in with Solana\n\n${statement}\nNonce: ${nonce}\nAddress: ${publicKey}\nIssued At: ${new Date().toISOString()}`;      const statement = 'Sign in to Zion with your Solana wallet. No gas required.';
       const message = `Sign-in with Solana\n\n${statement}\nNonce: ${nonce}\nAddress: ${publicKey}\nIssued At: ${new Date().toISOString()}`,;
 
+<<<<<<< HEAD
       setLoading(false);    }
 
 
@@ -273,6 +457,31 @@ if ( {) {
       onLoggedIn?.({ address: publicKey, chain: 'sol' })
       setLoading(false);    }
 
+=======
+      const encodedMessage = new TextEncoder().encode(message);
+      const { signature } = await provider && provider.signMessage(encodedMessage, 'utf8');
+      const bs58 = (await import('bs58')).default;
+
+
+      const statement = 'Sign in to Zion with your Solana wallet. No gas required.';
+      const message = `Sign-in with Solana\n\n${statement}\nNonce: ${nonce}\nAddress: ${publicKey}\nIssued At: ${new Date().toISOString()}`,
+      const encodedMessage = new TextEncoder().encode(message);
+      const { signature } = await provider.signMessage(encodedMessage, 'utf8');
+      const bs58 = (await import('bs58')).default;
+
+      const verifyRes = await fetch('/api/auth/verify-sol', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message, signature: bs58.encode(signature), publicKey })});
+      if (!verifyRes.ok) throw new Error('Failed to verify Phantom signature');
+=======
+
+=======
+      setLoading(false);    }
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       onLoggedIn?.({ address: publicKey, chain: 'sol' }),
       onClose()
     } catch (e: any) {
@@ -306,16 +515,22 @@ if ( {) {
       setError(e?.message || 'Phantom connection failed');
     } finally {;
       setLoading(false);
+<<<<<<< HEAD
       setLoading(false);    }
 
       setLoading(false);    }
 
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   }, [onClose, onLoggedIn]);
   if (!isOpen) return null;
   return (
 
 
+<<<<<<< HEAD
       console.error (e);
       set_error (e?.message || 'Wallet connection failed');
     } finally {
@@ -434,10 +649,13 @@ if (return null) {
             on_click={on_close}
             className='text - sm text - gray - 600 dark:text - gray - 300';
           >;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             Cancel;
           </button>;
         </div>;
       </div>;
+<<<<<<< HEAD
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
       <div className="w-full max-w-md rounded-xl bg-white dark: bg-neutral-900 p-6 shadow-2xl">
         <div className="mb-4">
@@ -475,6 +693,11 @@ export default function Web3LoginModal(): any (props: Web3LoginModalProps) {;
   if (!isClient) return null;
   return <ModalInner {...props} />;
 }
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default /**
  * Web3LoginModal - Function description
  */
@@ -656,11 +879,17 @@ export default function Web3LoginModal(props: Web3LoginModalProps) {;
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 export default function Web3LoginModal(props: Web3LoginModalProps) {;
   if (!isClient) return null;
 
+<<<<<<< HEAD
 export default function Web3LoginModal(props: Web3LoginModalProps) {
   if (!isClient) return null;
 
@@ -673,3 +902,6 @@ export default function Web3LoginModal(props: Web3LoginModalProps) {;
   return <ModalInner {...props} />
 }
   return <ModalInner {...props} />;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

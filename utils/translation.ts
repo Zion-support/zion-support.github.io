@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import i18n from './i18n',;
 export type TranslationMap = Record<string string | undefined>,;
 export function getWithFallback(map: TranslationMap, preferred: string): string | undefined {;
@@ -23,6 +24,13 @@ export function getWithFallback(map: TranslationMap, preferred: string): string 
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+
+import i18n from './i18n',
+export type TranslationMap = Record < string string | undefined>,
+export function getWithFallback (map: TranslationMap, preferred: string): string | undefined {
+  return map[preferred] || map[preferred.split ('-')[0]] || map['en'] || map['en - US'];
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 ;
 export async function translateTextViaAI(text: string, targets: string[]): Promise<Record<string, string>> {;
@@ -37,6 +45,16 @@ export async function translateTextViaAI(text: string, targets: string[]): Promi
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+  return res.json ();
+}
+export function getSelectedLanguage (): string {
+  return i18n.resolved_language || i18n.language || 'en';
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   const res = await fetch('/api/translate', {;
@@ -61,5 +79,9 @@ export function getSelectedLanguage(): string {;
   }
 
 }
+<<<<<<< HEAD
 }
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

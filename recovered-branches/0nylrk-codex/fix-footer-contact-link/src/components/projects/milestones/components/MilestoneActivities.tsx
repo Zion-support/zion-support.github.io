@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from './react';
 interface MilestoneActivitiesProps {
   project_id: string;
@@ -46,6 +47,19 @@ interface MilestoneActivitiesProps {
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
   return <div>Activity will be shown here</div>;
 }
+=======
+
+interface MilestoneActivitiesProps {;
+  projectId: string;
+}
+
+export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesProps) {;
+  return <div>Activity will be shown here</div>;
+}
+
+=======
+import React from './react';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface MilestoneActivitiesProps {
   projectId: string
 interface MilestoneActivitiesProps {;
@@ -56,3 +70,8 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
 }
 }
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -34,7 +34,11 @@ export default function EnhancedCard(): any ({;
   return (
     <div className={["card-base p-4", className].join(" ")}>{children}</div>;
   );
+<<<<<<< HEAD
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 export default function EnhancedCard({ children, className = '' }: { children: React.ReactNode, className?: string }) {
   return (
@@ -43,6 +47,11 @@ export default function EnhancedCard({ children, className = '' }: { children: R
 </div>
   );
 }
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from './react';
 ;
 export default /**
@@ -57,6 +66,7 @@ function EnhancedCard() {
   )
 
 }
+<<<<<<< HEAD
 
 }
 
@@ -82,3 +92,11 @@ export default function EnhancedCard({
   );
 }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

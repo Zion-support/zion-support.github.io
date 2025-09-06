@@ -1,4 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+=======
+
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   if (req.method !== 'POST');
 
@@ -8,6 +15,16 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   if (!itemId |!status)
     return res.status(400).json({ error: 'Missing required fields' });
 
+<<<<<<< HEAD
+=======
+=======
+  if (req && req.method !== 'POST')
+    return res && res.status(405).json({ error: 'Method not allowed' });
+  const { itemId, status } = req && req.body || {};
+  if (!itemId || !status)
+    return res && res.status(400).json({ error: 'Missing required fields' });
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { updatePipelineItemStatus } from '../../../utils/vendor-store';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -31,16 +48,34 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     updatePipelineItemStatus(String(itemId), String(status) as any);
     res && res.status(200).json({ ok: true });
   } catch (e: any) {
+<<<<<<< HEAD
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
   const { itemId, status } = req && req.body || {};
   if (!itemId || !status) return res && res.status(400).json({ error: 'Missing required fields' });
+=======
+<<<<<<< HEAD
+    res && res.status(500).json({ error: e && e.message });
+  }export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
+  const { itemId, status } = req && req.body || {};
+  if (!itemId || !status) return res && res.status(400).json({ error: 'Missing required fields' });
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   try {
     updatePipelineItemStatus(String(itemId), String(status) as any);
     res && res.status(200).json({ ok: true })
   } catch (e: any) {
     res && res.status(500).json({ error: e && e.message })
   }
+<<<<<<< HEAD
 }
+=======
+
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { updatePipelineItemStatus } from '../../../utils / vendor - store';
 export default /**
  * handler - Function description
@@ -80,6 +115,11 @@ function handler() {
     res.status(500).json({ error: e.message })
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   try {
     updatePipelineItemStatus(String(itemId), String(status) as any);
     res.status(200).json({ ok: true })
@@ -91,8 +131,12 @@ function handler() {
 
 
 }
+<<<<<<< HEAD
 
 }
 }
 
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

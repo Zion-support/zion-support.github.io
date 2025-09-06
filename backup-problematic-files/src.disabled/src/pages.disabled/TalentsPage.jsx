@@ -27,4 +27,8 @@ const TalentsPage = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default TalentsPage;
+=======
+export default TalentsPage;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

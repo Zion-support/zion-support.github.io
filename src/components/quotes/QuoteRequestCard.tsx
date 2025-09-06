@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react",
 import { format } from "date-fns",
@@ -19,6 +20,8 @@ type QuoteRequestCardProps = {
   onToggleArchive: (id: string, isArchived: boolean) => void
 },
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react"
 import {format} from "date-fns"
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card"
@@ -33,6 +36,7 @@ type QuoteRequestCardProps = {
   onToggleArchive: (id: string, isArchived: boolean) => void
 }
 export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
+<<<<<<< HEAD
   onMarkAsResponded
 }) => {
   // Format date for display
@@ -64,6 +68,8 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
           <CalendarIcon className="h-4 w-4" />
           <span>Timeline: {quote.timeline}</span>
         </div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   quote,
@@ -108,6 +114,7 @@ export const QuoteRequestCard: React.FC < QuoteRequestCardProps> = ({
     try {
       return format(new Date(dateString), 'PP')
     } catch (e) {
+<<<<<<< HEAD
   return (
 
 
@@ -143,11 +150,59 @@ export const QuoteRequestCard: React.FC < QuoteRequestCardProps> = ({
         
         <p className="text-white line-clamp-3 mb-4">{quote.project_summary}</p>
         
+=======
+
+import React from "react";
+import {format} from "date-fns";
+import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {QuoteStatusBadge} from "@/components/quotes/QuoteStatusBadge";
+import {Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon} from 'lucide-react';
+import type { QuoteRequest } from "@/types/quotes";
+type QuoteRequestCardProps = {;
+  quote: QuoteRequest,;
+  onViewDetails: (quote: QuoteRequest) => void,;
+  onMarkAsResponded?: (id: string) => void,;
+  onToggleArchive: (id: string, isArchived: boolean) => void;
+};
+export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
+  quote;
+  onViewDetails;
+  onMarkAsResponded,;
+  onToggleArchive;
+},) => {;
+  // Format date for display;
+  const formatDate = (dateString: string,) => {;
+    try {;
+      return format(new Date(dateString), 'PP');
+    } catch (e) {;
+      return dateString;
+
+    }
+
+
+  },
+
+
+
+  return (
+
+
+        
+        <p className="text-white line-clamp-3 mb-4">{quote.project_summary}</p>
+        
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">
           <CalendarIcon className="h-4 w-4" />
           <span>Timeline: {quote.timeline}</span>
         </div>
+<<<<<<< HEAD
     <Card key={quote && quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <Card key={quote && quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
 
         
@@ -269,6 +324,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
           <div className="flex items-center">;
             {quote && quote.status !== 'responded' && onMarkAsResponded && (;
 
+<<<<<<< HEAD
         
         <div className="flex justify-between items-center mt-4">
           <Button
@@ -283,6 +339,8 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
           
           <div className="flex items-center">
             {quote.status !== 'responded' && onMarkAsResponded && (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Button
                 variant="ghost"
                 size="sm"
@@ -293,6 +351,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
                 Mark Responded
               </Button>
             )}
+<<<<<<< HEAD
             
             <Button
               variant="ghost"
@@ -405,10 +464,26 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
               className="flex items-center gap-1";
             >;
               {quote.is_archived ? (;
+=======
+
+
+
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick = {() => onToggleArchive(quote && quote.id, !quote && quote.is_archived),}
+              className="flex items-center gap-1";
+            >;
+              {quote && quote.is_archived ? (;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <RefreshCw className="h-4 w-4" />;
               ) : (;
                 <ArchiveIcon className="h-4 w-4" />;
               )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </Button>;
           </div>;
         </div>;
@@ -480,4 +555,8 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
     </Card>);
 }
 "},
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

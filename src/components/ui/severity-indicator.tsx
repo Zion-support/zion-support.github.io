@@ -2,6 +2,7 @@ size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4"
 
 
 interface SeverityIndicatorProps {
+<<<<<<< HEAD
   severity: "safe" | "suspicious" | "dangerous"
   showIcon?: boolean
   showText?: boolean
@@ -19,6 +20,12 @@ export function SeverityIndicator({
 import React from "react",
 import { cn } from "@/lib/utils",
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
+=======
+  severity: "safe" | "suspicious" | "dangerous",
+  showIcon?: boolean,
+  showText?: boolean,
+  size?: "sm" | "md" | "lg",
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   className?: string
@@ -27,6 +34,7 @@ export function SeverityIndicator({
   severity, 
   showIcon = true, 
   showText = true, 
+<<<<<<< HEAD
   size = "md"
       default:
         return <CheckCircle className={cn(
@@ -51,6 +59,10 @@ export function SeverityIndicator({
           size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4",
         )} />
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           "text-green-500"
         )} />;
 ;
@@ -61,6 +73,7 @@ interface SeverityIndicatorProps {
   size?: "sm" | "md" | "lg",
   className?: string
 }
+<<<<<<< HEAD
     }
   }
 
@@ -96,10 +109,22 @@ export function SeverityIndicator({
           size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4",
           "text-green-500"
         )} />
+=======
+export function SeverityIndicator ({
+  severity,
+  show_icon = true,
+  show_text = true,
+  size = "md";
+      default:;
+        return <CheckCircle className={cn (
+          size === "sm" ? "h - 3 w - 3" : size === "lg" ? "h - 5 w - 5" : "h - 4 w - 4";
+          "text - green - 500")} />;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   }
 
   return (
+<<<<<<< HEAD
     <div className={cn("flex items-center gap-1", className)}>
       {showIcon && getSeverityIcon()}
       {showText && <span className="capitalize text-sm">{severity}</span>}
@@ -155,6 +180,11 @@ export function SeverityIndicator({;
 
 }
 ;
+=======
+
+    <div className={cn("flex items-center gap-1", className)}>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       {showIcon && getSeverityIcon()}
       {showText && <span className="capitalize text-sm">{severity}</span>}
@@ -214,4 +244,8 @@ export function SeverityIndicator({;
   );
 
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

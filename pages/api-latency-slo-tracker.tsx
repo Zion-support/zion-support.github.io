@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>
         </div>
       </div>
@@ -7,6 +12,7 @@
 }
 
 
+<<<<<<< HEAD
 
 import React from 'react';
 
@@ -59,6 +65,15 @@ export default function ApiLatencySloTrackerPage(req, res) {
         <meta name="description" content="Define, monitor, and alert on p95/p99 API SLOs with synthetic and real-user monitoring and optional status pages." />;
         <link rel="canonical" href="https://ziontechgroup.com/api-latency-slo-tracker" />;
       </Head>;
+=======
+    <Layout>;
+      <Head>;
+        <title > API Latency SLO Tracker | Zion Tech Group</title>;
+        <meta name="description" content="Define, monitor, and alert on p95 / p99 API SLOs with synthetic and real - user monitoring and optional status pages." />;
+        <link rel="canonical" href="https://ziontechgroup.com / api - latency - slo - tracker" />;
+      </Head>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto space-y-6">;
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-rose-400 to-pink-500 bg-clip-text text-transparent">API Latency SLO Tracker</h1>;
@@ -72,6 +87,7 @@ export default function ApiLatencySloTrackerPage(req, res) {
   }
 }
 
+<<<<<<< HEAD
           </div>;
           <div className="flex gap-3">;
             <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-rose-600 to-pink-700 text-white">Start from $129/mo</a>;
@@ -88,3 +104,8 @@ export default function ApiLatencySloTrackerPage(req, res) {
 }
 ;
 ;
+=======
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

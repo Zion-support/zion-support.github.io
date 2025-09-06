@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {  Carousel,  Carousel,
   CarouselContent,
   CarouselItem,
@@ -40,6 +41,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 const testimonials = CASE_STUDIES,
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {  Carousel,  Carousel
   CarouselContent
   CarouselItem
@@ -64,7 +67,23 @@ import { CASE_STUDIES } from "@/data/case-studies"
 const testimonials = CASE_STUDIES
 export function TestimonialCarousel() {
   return (
+<<<<<<< HEAD
           <Carousel
+=======
+    <section className='py-20 bg-zion-blue-dark'>
+      <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='text-center mb-12'>
+          <h3 className='text-3xl font-bold text-white mb-3'>
+            What Our Users Say
+          </h3>
+          <p className='text-zion-slate-light text-lg max-w-2xl mx-auto'>
+            Discover how Zion is transforming the tech and AI marketplace
+            ecosystem
+          </p>
+        </div>
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {  Carousel,  Carousel,;
   CarouselContent,;
   CarouselItem,;
@@ -137,10 +156,15 @@ function TestimonialCarousel() {
         </div>;
         <div className='max - w-5xl mx - auto px - 8'>;
           <Carousel;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             opts={{
               align: 'start'
               loop: true
             }}
+<<<<<<< HEAD
 import {
   Carousel,
   CarouselContent,
@@ -208,6 +232,9 @@ export function TestimonialCarousel() {
                             height={80}
                             loading='lazy'
                           <Image
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             className='w - full';
           >;
@@ -224,6 +251,7 @@ export function TestimonialCarousel() {
                       <div className="flex - shrink - 0 flex flex - col items - center">;
                         <Avatar className="h - 20 w - 20 border - 2 border - zion - cyan mb - 3">;
                             src={testimonial.avatar}
+<<<<<<< HEAD
 
                           <Image
 import {;
@@ -264,6 +292,8 @@ export function TestimonialCarousel() {;
                     <CardContent className="p-8 flex flex-col md:flex-row gap-6 flex-1">;
                       <div className="flex-shrink-0 flex flex-col items-center">;
                         <Avatar className="h-20 w-20 border-2 border-zion-cyan mb-3">;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                             alt={testimonial.author}
             className='w-full'>;
             <CarouselContent>;
@@ -278,8 +308,13 @@ export function TestimonialCarousel() {;
                     <CardContent className="p-8 flex flex-col md:flex-row gap-6 flex-1">;
                       <div className="flex-shrink-0 flex flex-col items-center">;
                         <Avatar className="h-20 w-20 border-2 border-zion-cyan mb-3">;
+<<<<<<< HEAD
                             src={testimonial && testimonial.avatar}
                             alt={testimonial && testimonial.author}
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                             width={80}
                             height={80}
 
@@ -288,23 +323,34 @@ export function TestimonialCarousel() {;
                           <Image;
 
 
+<<<<<<< HEAD
                           <Image;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                             src={testimonial.avatar}
                             alt={testimonial.author}
                             width={80}
                             height={80}
+<<<<<<< HEAD
                             loading="lazy"
                           />
 
                             loading='lazy'
                             loading="lazy"
                           />
+=======
+
+                            loading="lazy"
+                          />
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         </Avatar>
                         <div className="text-center md:text-left">
                           <p className="font-bold text-zion-cyan">{testimonial.author}</p>
                           <p className="text-zion-slate-light text-sm">{testimonial.role}</p>
                         </div>
                       </div>
+<<<<<<< HEAD
                       <div className='flex-1'>
                         <div className='flex items-center gap-3 mb-4'>                          <Image
                       <div className="flex-1">
@@ -316,6 +362,8 @@ export function TestimonialCarousel() {;
                           <p className="text-zion-slate-light text-sm">{testimonial.role}</p>
                         </div>
                       </div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -327,6 +375,7 @@ export function TestimonialCarousel() {;
                             alt={`${testimonial && testimonial.company} logo`}
                             width={32}
                             height={32}
+<<<<<<< HEAD
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-4">
                           <Image
@@ -343,11 +392,16 @@ export function TestimonialCarousel() {;
                             loading="lazy"
                           />
                           <span className="text-white font-semibold">{testimonial.company}</span>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         </div>
                         <Quote className="h-10 w-10 text-zion-cyan opacity-30 mb-3" />
                         <p className="text-white text-lg mb-6">"{testimonial.quote}"</p>
                       </div>
                     </CardContent>
+<<<<<<< HEAD
                     <CardFooter className='p-6 pt-0'>
                       <Button
                         variant='link'
@@ -369,6 +423,8 @@ export function TestimonialCarousel() {;
                         <p className="text-white text-lg mb-6">"{testimonial.quote}"</p>
                       </div>
                     </CardContent>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -382,6 +438,7 @@ export function TestimonialCarousel() {;
                 </CarouselItem>
               ))}
             </CarouselContent>
+<<<<<<< HEAD
             <div className='flex justify-center mt-8 gap-2'>
               <CarouselPrevious className='relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple' />
               <CarouselNext className='relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple' />            </div>            <div className="flex justify-center mt-8 gap-2">
@@ -396,17 +453,34 @@ ursor/fix-website-loading-errors-and-merge-6662
               <CarouselNext className='relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple' />            </div>            <div className="flex justify-center mt-8 gap-2">
             <div className="flex justify-center mt-8 gap-2">
 
+=======
+
+
+            <div className="flex justify-center mt-8 gap-2">
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
               <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
             </div>
           </Carousel>
         </div>
+<<<<<<< HEAD
       </div>;
     </section>;
   );
 };
       </div>
     </section>
+=======
+
+
+
+      </div>
+    </section>
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </CarouselContent>;
             <div className='flex justify-center mt-8 gap-2'>;
               <CarouselPrevious className='relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple' />;
@@ -487,6 +561,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <CarouselNext className='relative static right - 0 translate - y-0 bg - zion - blue - dark border - zion - purple / 30 text - zion - cyan hover:bg - zion - blue - light hover:text - zion - cyan hover:border - zion - purple' />            </div>            <div className="flex justify - center mt - 8 gap - 2">;
               <CarouselPrevious className="relative static left - 0 translate - y-0 bg - zion - blue - dark border - zion - purple / 30 text - zion - cyan hover: bg - zion - blue - light hover:text - zion - cyan hover:border - zion - purple" />;
               <CarouselNext className="relative static right - 0 translate - y-0 bg - zion - blue - dark border - zion - purple / 30 text - zion - cyan hover:bg - zion - blue - light hover:text - zion - cyan hover:border - zion - purple" />;
+<<<<<<< HEAD
                             loading="lazy";
                           />;
                         </Avatar>;
@@ -532,10 +607,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 
               <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
               <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>;
           </Carousel>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </section>;
   );
 }
@@ -557,3 +636,11 @@ Discover how Zion is transforming the tech and AI marketplace ecosystem </p> </d
 }
     </section>);
 }
+=======
+
+
+  );
+}
+    </section>);
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

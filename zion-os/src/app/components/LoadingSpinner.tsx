@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface LoadingSpinnerProps {;
   size?: 'sm' | 'md' | 'lg',;
   text?: string,;
@@ -25,6 +29,10 @@ export default function LoadingSpinner({ size = 'md', text, className = '' }: Lo
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg',
   text?: string,

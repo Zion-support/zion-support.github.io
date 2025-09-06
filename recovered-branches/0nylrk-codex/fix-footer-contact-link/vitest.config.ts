@@ -6,6 +6,10 @@ import {defineConfig} from 'vitest/config';
 import path from 'node: path'
 
 export default defineConfig({
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       '@': path ;
   test: {
     environment: 'jsdom';
@@ -23,6 +27,7 @@ export default define_config ({
     environment: 'jsdom';
     setup_files: './tests / setup.ts',
 
+<<<<<<< HEAD
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src')}}
@@ -32,12 +37,19 @@ export default define_config ({
     setupFiles: './tests/setup.ts'
     globals: true}});
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   resolve: {;
     alias: {;
       '@': path.resolve(__dirname, './src')}};
   test: {
     environment: 'jsdom';
     setupFiles: './tests/setup.ts',
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { defineConfig } from 'vitest/config',;
 import path from 'node: path',;
 export default defineConfig({;
@@ -50,5 +62,9 @@ export default defineConfig({;
 
     globals: true}});
 ;
+<<<<<<< HEAD
     globals: true}});
     globals: true}});
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { X } from 'lucide-react'
 import React from 'react'
 import { ClickableBadge } from '@/components/ui/clickable-badge'
@@ -12,6 +13,8 @@ import { ClickableBadge } from "@/components/ui/clickable-badge";
 import { Button } from "@/components/ui/button";
 import { ClickableBadge } from "@/components/ui/clickable-badge",
 import { Button } from "@/components/ui/button",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { X } from 'lucide-react'
 interface ActiveFiltersProps {
 
@@ -40,6 +43,7 @@ interface ActiveFiltersProps {
   clearFilters: () => void
 }
 
+<<<<<<< HEAD
 export function ActiveFilters({
 
   selectedSkills
@@ -64,6 +68,15 @@ export function ActiveFilters({
     priceRange[0] !== 50 |
     priceRange[1] !== 200
   if (!hasActiveFilters) return null
+=======
+
+
+
+
+  const hasActiveFilters = null;
+    selectedSkills.length > 0 ||
+    selectedAvailability.length > 0 ||
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     selectedRegions.length > 0 ||
     experienceRange[0] !== 0 ||
@@ -79,6 +92,7 @@ export function ActiveFilters({
   
   if (!hasActiveFilters) return null,
 
+<<<<<<< HEAD
 
 
 
@@ -120,10 +134,16 @@ export function ActiveFilters({
           className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
           onClick={() => setPriceRange([50, 200])}        >
 
+=======
+  const hasActiveFilters = null;
+    selectedSkills.length > 0 ||
+    selectedAvailability.length > 0 ||
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     selectedRegions.length > 0 ||
     experienceRange[0] !== 0 ||
     experienceRange[1] !== 15 ||
     priceRange[0] !== 50 ||
+<<<<<<< HEAD
 
 
     selectedRegions.length > 0 ||
@@ -135,6 +155,8 @@ export function ActiveFilters({
   
   if (!hasActiveFilters) return null,
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="mb-6 flex flex-wrap gap-2 items-center">
       <span className="text-zion-slate-light text-sm">Active filters:</span>
@@ -147,6 +169,10 @@ import React from "react",;
 import { ClickableBadge } from "@/components/ui/clickable-badge",;
 import { Button } from "@/components/ui/button",;
 import { X } from 'lucide-react';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface ActiveFiltersProps {;
   selectedSkills: string[],;
   toggleSkill: (skill: string) => void,;
@@ -199,9 +225,17 @@ export function ActiveFilters({;
           <X className="h-3 w-3" />
         </ClickableBadge>
       ))}
+<<<<<<< HEAD
 ;
       {selectedAvailability.map(status => (;
         <ClickableBadge;
+=======
+
+
+      {selectedAvailability && selectedAvailability.map(status => (;
+
+        <ClickableBadge
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           key={status}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => toggleAvailability(status)}
@@ -212,33 +246,56 @@ export function ActiveFilters({;
           <X className="h-3 w-3" />
         </ClickableBadge>
       ))}
+<<<<<<< HEAD
 ;
       {selectedRegions.map(region => (;
         <ClickableBadge;
+=======
+
+
+      {selectedRegions && selectedRegions.map(region => (;
+
+        <ClickableBadge
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           key={region}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => toggleRegion(region)}
         >;
           {region}
+<<<<<<< HEAD
           key={region}
           className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
           onClick={() => toggleRegion(region)}        >;
           {region}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
       {(priceRange[0] !== 50 || priceRange[1] !== 200) && (;
 
         <ClickableBadge
           className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
+<<<<<<< HEAD
           onClick={() => setPriceRange([50, 200])}        >;
           ${priceRange[0]}-${priceRange[1]}/hr;
           <X className='h-3 w-3' />;
         </ClickableBadge>;
+=======
+          onClick={() => setPriceRange([50, 200])}        >
+        <ClickableBadge 
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+          onClick={() => setPriceRange([50, 200])}
+        >
+          ${priceRange[0]}-${priceRange[1]}/hr
+          <X className="h-3 w-3" />
+        </ClickableBadge>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       )}
 
 
       {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (;
 
+<<<<<<< HEAD
         <ClickableBadge
           className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
           onClick={() => setExperienceRange([0, 15])}        >;
@@ -285,13 +342,27 @@ export function ActiveFilters({;
           onClick={() => setExperienceRange([0, 15])}        >
       
       {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (
+=======
+        <ClickableBadge
+          className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
+          onClick={() => setExperienceRange([0, 15])}        >
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <ClickableBadge 
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => setExperienceRange([0, 15])}
         >
+<<<<<<< HEAD
           <X className="h-3 w-3" />
         </ClickableBadge>
       )}
+=======
+          {experienceRange[0]}-{experienceRange[1]} years
+          <X className="h-3 w-3" />
+        </ClickableBadge>
+      )}
+          <X className="h-3 w-3" />
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         </ClickableBadge>
       ))}
@@ -324,8 +395,13 @@ export function ActiveFilters({;
         variant='ghost'
         size='sm'
         onClick={clearFilters}
+<<<<<<< HEAD
         className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent'      >
       
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         Clear All
       </Button>
     </div>
@@ -340,12 +416,21 @@ export function ActiveFilters({;
         onClick={clearFilters}
         className="h-7 text-xs text-zion-purple hover: text-zion-purple-light hover:bg-transparent"
       >
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         Clear All
       </Button>
     </div>
   )
+<<<<<<< HEAD
 }
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent'>;
 
@@ -380,13 +465,20 @@ export function ActiveFilters({;
         onClick={clearFilters}
         className="h-7 text-xs text-zion-purple hover: text-zion-purple-light hover:bg-transparent";
       >;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         Clear All;
       </Button>;
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
 ;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -490,4 +582,8 @@ if (return null) {
       </Button>;
     </div>);
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Button } from '@/components/ui/button';
 import {
 import { Button } from '@/components/ui/button';
@@ -8,6 +9,8 @@ import {
   CardHeader
   CardTitle
   Card,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 Card,
   CardContent,
   CardDescription,
@@ -58,7 +61,12 @@ xport default function Partners() {;
   const { user, isAuthenticated } = useAuth();
   const router = useRouter();
   const [authServiceAvailable, setAuthServiceAvailable] = useState(true);
+<<<<<<< HEAD
   useEffect(() => {
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -79,6 +87,7 @@ import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks
 import { PartnerDashboard } from "@/components/partners/PartnerDashboard",
 import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard",
 import { PartnerResources } from "@/components/partners/PartnerResources",
+<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth";
 import { useRouter  } from 'next/router';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
@@ -106,6 +115,15 @@ export default function Partners() {
 import { useAuth } from "@/hooks/useAuth",
 import { useRouter } from 'next/router',
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+=======
+
+  logInfo('PartnersPage rendering'),;
+  const [activeTab, setActiveTab] = useState("overview"),;
+  const { t } = useTranslation(),;
+  const { user, isAuthenticated } = useAuth(),;
+  const router = useRouter(),;
+  const [authServiceAvailable, setAuthServiceAvailable] = useState(true),;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export default function Partners() {
 
@@ -114,6 +132,7 @@ export default function Partners() {
   const { t } = useTranslation(),
   const { user, isAuthenticated } = useAuth(),
   const router = useRouter(),
+<<<<<<< HEAD
   const [authServiceAvailable, setAuthServiceAvailable] = useState(true),
 
   useEffect((,) => {
@@ -1420,3 +1439,6 @@ function check_health() {
   )
 }
 ;
+=======
+  const [authServiceAvailable, setAuthServiceAvailable] = useState(true),
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

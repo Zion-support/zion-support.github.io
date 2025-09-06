@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 export interface FraudRecord {
   id: string;
@@ -346,6 +347,15 @@ export function newEvent(partial: Partial<FraudEvent> & Pick<FraudEvent 'source'
 :backup-problematic-files/utils/fraud/store.ts
 export interface FraudRecord {
 :backup-problematic-files/utils/fraud/store.ts
+=======
+export interface FraudRecord {;
+
+=======
+
+
+export interface FraudRecord {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/utils/fraud/store.ts
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
   type: string;
   severity: 'low' | 'medium' | 'high' | 'critical';
@@ -356,9 +366,16 @@ export interface FraudRecord {
   adminId?: string;
   resolution?: string;
 }
+<<<<<<< HEAD
 export interface MonthlyReport {
 
 export interface MonthlyReport {;
+=======
+
+
+export interface MonthlyReport {;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   month: string;
   totalCases: number;
   resolvedCases: number;
@@ -408,9 +425,18 @@ class FraudStore {
   }
 }
 export const fraudStore = new FraudStore();
+<<<<<<< HEAD
 :utils/fraud/store.ts
 export const getFraudStore = () => fraudStore;
 export const getFraudStore = () => fraudStore;
 main:utils/fraud/store.ts
 :backup-problematic-files/utils/fraud/store.ts
 :backup-problematic-files/utils/fraud/store.ts
+=======
+
+export const getFraudStore = () => fraudStore;
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

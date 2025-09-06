@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from "react"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -17,11 +18,14 @@ interface ChangelogManagerProps {
   platform: AppPlatform;
 import { AppPlatform } from "./MetadataManager";
 import { AppPlatform } from "./MetadataManager",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface ChangelogManagerProps {
   platform: AppPlatform
 }
 
 type ChangelogEntry = {
+<<<<<<< HEAD
   id: string
   version: string
   date: string
@@ -29,6 +33,19 @@ type ChangelogEntry = {
 }
     })
   }
+=======
+
+  id: string;
+  version: string;
+  date: string;
+  changes: string,
+
+}
+    })
+  }
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string,
   version: string,
   date: string,
@@ -67,21 +84,34 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
     })
   },
   
+<<<<<<< HEAD
   const handleRemoveEntry = (id: string) => {
     setEntries(entries.filter(entry => entry.id !== id))
   }
   )
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleRemoveEntry = (id: string) => {
     setEntries(entries.filter(entry => entry.id !== id)),
   };
   );
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 };  const handleRemoveEntry = (id: string,) => {
   }
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,) => {
     const { name, value } = e.target
     setNewEntry(prev => ({ ...prev, [name]: value }))
   }
+<<<<<<< HEAD
+=======
+
+import { Plus, Trash2 } from 'lucide-react'import { AppPlatform } from "./MetadataManager";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
@@ -94,14 +124,23 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Input
                 placeholder="Version (e.g. 1.0.1)"
                 name="version"
+<<<<<<< HEAD
                 value = {newEntry.version,}
                 onChange = {handleInputChange,}
                 value={newEntry.version}
                 onChange={handleInputChange}
+=======
+
+                value={newEntry.version}
+                onChange={handleInputChange}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               />
               <Input
                 type="date"
                 name="date"
+<<<<<<< HEAD
                 value = {newEntry.version,}
                 onChange = {handleInputChange,}
               <Input
@@ -116,6 +155,11 @@ ursor/fix-website-loading-errors-and-merge-6662
               onClick = {handleAddEntry,}
               disabled = {!newEntry.version |!newEntry.changes,}
               disabled = {!newEntry.version || !newEntry.changes,}
+=======
+
+              disabled = {!newEntry.version || !newEntry.changes,}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -183,6 +227,10 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                 value={newEntry.version}
                 onChange={handleInputChange}
               />;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Input;
                 type="date";
                 name="date";
@@ -193,9 +241,15 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
             <Button;
               onClick={handleAddEntry}
               disabled={!newEntry.version || !newEntry.changes}
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 
 
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             >
               Add
             </Button>
@@ -213,6 +267,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           <Textarea
             placeholder="What's new in this version?"
             name="changes"
+<<<<<<< HEAD
             value = {newEntry.changes,}
             onChange = {handleInputChange,}
             rows = {3,}
@@ -221,6 +276,10 @@ ursor/fix-website-loading-errors-and-merge-6662
             {entries.map((entry,) => (
               <div
                 key = {entry.id,}
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             value={newEntry.changes}
             onChange={handleInputChange}
             rows={3}
@@ -280,8 +339,11 @@ ursor/fix-website-loading-errors-and-merge-6662
       </CardContent>;
     </Card>;
   );
+<<<<<<< HEAD
 };
 };
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   const handleRemoveEntry = (id: string) =>: any {
@@ -362,4 +424,8 @@ ursor/fix-website-loading-errors-and-merge-6662
     </Card>);
 },
 ;
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

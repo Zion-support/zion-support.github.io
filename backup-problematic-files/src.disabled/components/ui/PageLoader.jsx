@@ -9,4 +9,8 @@ const PageLoader = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default PageLoader;
+=======
+export default PageLoader;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

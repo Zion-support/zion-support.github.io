@@ -9,4 +9,8 @@ const PerformanceOptimizer = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default PerformanceOptimizer;
+=======
+export default PerformanceOptimizer;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

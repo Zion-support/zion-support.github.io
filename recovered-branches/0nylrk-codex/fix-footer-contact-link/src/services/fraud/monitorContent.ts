@@ -4,6 +4,7 @@
 export const monitorContent = async (;
 
 
+<<<<<<< HEAD
 // Content monitoring functionality
 import { FraudFlag, FraudSeverity  } from '@/types/fraud';
 import { analyzeContent  } from './analyzeContent';
@@ -14,6 +15,8 @@ import { flagContent } from './flagContent';
 
 export const monitorContent = async (
 export const monitorContent = async (;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   userId: string;
   userEmail: string | undefined;
   contentType: FraudFlag['content_type'];
@@ -21,18 +24,31 @@ export const monitorContent = async (;
   content: string
 ): Promise<void> => {
   const analysis = analyzeContent(content);
+<<<<<<< HEAD
 if (analysis && analysis.isSuspicious) {
     let severity: FraudSeverity = analysis && analysis.reasons.length > 2 ? 'dangerous' : 'suspicious',
+=======
+
+  
+  if (analysis && analysis.isSuspicious) {
+    let severity: FraudSeverity = analysis && analysis.reasons.length > 2 ? 'dangerous' : 'suspicious',
+    
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // If contains highly suspicious phrases, mark as dangerous
     if (analysis && analysis.reasons.some(r => 
       r && r.includes('payment') || 
       r && r.includes('external') || 
       r && r.includes('bypass')
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     )) {
       severity = 'dangerous'
 
 
 
+<<<<<<< HEAD
   if (analysis.isSuspicious) {
     let severity: FraudSeverity = analysis.reasons.length > 2 ? 'dangerous' : 'suspicious'
     // If contains highly suspicious phrases, mark as dangerous
@@ -43,6 +59,9 @@ if (analysis && analysis.isSuspicious) {
     )) {
       severity = 'dangerous'
     }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Content monitoring functionality;
 import { FraudFlag, FraudSeverity } from '@/types/fraud',;
 import { analyzeContent } from './analyzeContent',;
@@ -67,6 +86,10 @@ export const monitorContent = async (;
       r.includes('bypass');
     )) {;
       severity = 'dangerous';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
     }
@@ -216,6 +239,7 @@ if ( {) {
   }
 }
 ;
+<<<<<<< HEAD
 }
 };
     }
@@ -224,3 +248,6 @@ if ( {) {
     }
   }
 };
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

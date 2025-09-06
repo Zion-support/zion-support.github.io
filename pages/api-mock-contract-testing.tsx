@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     { name: 'Starter', price: '$69/month', items: ['1 project5 mocksOpenAPI importCI status checks'] },
     { name: 'Team', price: '$149/month', items: ['5 projectsUnlimited mocksRecord/replaySlack alerts'] },
     { name: 'Enterprise', price: 'Custom', items: ['SAML/SSORBACPrivate cloud/VPCPremium support'] }
@@ -17,6 +18,31 @@
       name: 'Enterprise',;
       price: 'Custom',;
       items: ['SAML/SSO', 'RBAC', 'Private cloud/VPC', 'Premium support'],;
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Head from 'next / head';
 import {FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check, } from 'lucide-react';
 import Layout from '../components / layout / Layout';
@@ -66,18 +92,34 @@ function ApiMockContractTestingPage() {
     },  ];
 ;
   return (
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           href='https://ziontechgroup && ziontechgroup.com/api-mock-contract-testing'
         />;
       </Head>;
       <div className='min-h-screen py-20 px-4 sm:px-6 lg:px-8'>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <ServiceAds
           heading='API Quality Fast-Track'
           subheading='Mock, validate, and ship with confidence.'
           items={adItems}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         />;
         <div className='max-w-5xl mx-auto mt-8'>;
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>;
             {tiers && tiers.map(t => (;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div
                 key={t && t.name}
                 className='bg-black/30 border border-gray-700/50 rounded-2xl p-6'>;
@@ -97,6 +139,7 @@ function ApiMockContractTestingPage() {
                     </li>                  ))}
                 </ul>;
               </div>;
+<<<<<<< HEAD
             ))}
 import React from 'react',
 import Head from 'next/head';
@@ -277,6 +320,12 @@ export default function ApiMockContractTestingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+            ))}
+
+            ))}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>
           <div className="mt-8 max-w-3xl mx-auto bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4">
@@ -285,14 +334,113 @@ export default function ApiMockContractTestingPage(req, res) {
               <div className="flex items-center justify-center gap-2 text-green-400 w-4 h-4 text-xs"><MapPin /><span >{contactInfo.address}</span></div>
             </div>
             <div className="text-center">
+<<<<<<< HEAD
               <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Book a Demo</Link>
             </div>
+=======
+
+              <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Book a Demo</Link>
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>
         </div>
       </div>
     </Layout>
+<<<<<<< HEAD
           </div>;
 
+=======
+
+          </div>;
+
+          <div className='mt-8 max-w-3xl mx-auto bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30'>;
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4'>;
+              <div className='flex items-center justify-center gap-2 text-cyan-400 w-4 h-4'>;
+                <Phone />;
+                <span>{contactInfo && contactInfo.mobile}</span>;
+              </div>;
+              <div className='flex items-center justify-center gap-2 text-purple-400 w-4 h-4'>;
+                <Mail />;
+                <span>{contactInfo && contactInfo.email}</span>;
+              </div>;
+              <div className='flex items-center justify-center gap-2 text-green-400 w-4 h-4 text-xs'>;
+                <MapPin />;
+                <span>{contactInfo && contactInfo.address}</span>;
+              </div>;
+            </div>;
+            <div className='text-center'>;
+              <a
+                href='/contact'
+                className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl'>;
+    <Layout>;
+      <Head>;
+        <title > API Mock & Contract Testing | Zion Tech Group</title>;
+        <meta;
+          name='description';
+          content='OpenAPI / GraphQL mock servers, contract tests in CI, and deployment gates with snapshot diffs and approvals.';
+        />;
+        <link;
+          rel='canonical';
+          href='https://ziontechgroup.com / api - mock - contract - testing';
+        />;
+      </Head>;
+      <div className='min - h-screen py - 20 px - 4 sm:px - 6 lg:px - 8'>;
+        <ServiceAds;
+          heading='API Quality Fast - Track';
+          subheading='Mock, validate, and ship with confidence.';
+          items={ad_items}
+        />;
+        <div className='max - w-5xl mx - auto mt - 8'>;
+          <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
+            {tiers.map (t => (
+              <div;
+                key={t.name}
+                className='bg - black / 30 border border - gray - 700 / 50 rounded - 2xl p - 6';
+              >;
+                <div className='flex items - center gap - 2 mb - 2'>;
+                  <ShieldCheck className='w - 5 h - 5 text - cyan - 400' />;
+                  <h3 className='text - white text - xl font - bold'>{t.name}</h3>;
+                </div>;
+                <div className='text - cyan - 400 font - semibold mb - 4'>;
+                  {t.price}
+                </div>;
+                <ul className='space - y-2 text - gray - 300 text - sm'>;
+                  {t.items.map (index => (
+                    <li;
+                      key={i}
+                      className='flex items - start gap - 2 w - 4 h - 4 mt - 0.5 text - emerald - 400';
+                    >;
+                      <Check /> <span>{i}</span>;
+                    </li>                  ))}
+                </ul>;
+              </div>))}
+          </div>;
+          <div className='mt - 8 max - w-3xl mx - auto bg - black / 20 backdrop - blur - xl rounded - 2xl p - 6 border border - cyan - 500 / 30'>;
+            <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 4 text - sm mb - 4'>;
+              <div className='flex items - center justify - center gap - 2 text - cyan - 400 w - 4 h - 4'>;
+                <Phone />;
+                <span>{contact_info.mobile}</span>;
+              </div>;
+              <div className='flex items - center justify - center gap - 2 text - purple - 400 w - 4 h - 4'>;
+                <Mail />;
+                <span>{contact_info.email}</span>;
+              </div>;
+              <div className='flex items - center justify - center gap - 2 text - green - 400 w - 4 h - 4 text - xs'>;
+                <MapPin />;
+                <span>{contact_info.address}</span>;
+              </div>;
+            </div>;
+            <div className='text - center'>;
+              <a;
+                href='/contact';
+                className='bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 6 py - 3 rounded - xl';
+              >;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 Book a Demo;
               </a>            </div>;
           </div>;
@@ -300,14 +448,25 @@ export default function ApiMockContractTestingPage(req, res) {
       </div>;
 
 
+<<<<<<< HEAD
 }
 
+=======
+=======
+
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   )
 }
 
     </Layout>);
 ;
 
+<<<<<<< HEAD
 ;
 
 
@@ -325,3 +484,12 @@ export default function ApiMockContractTestingPage(req, res) {
   }
 }
 ;
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

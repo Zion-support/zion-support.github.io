@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
   const { name, niche, socials, payout_method, desired_code } = req && req.body || {};
   if (!name || !desired_code) return res && res.status($1).json({ $2 });
@@ -28,6 +29,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     if (usingPlaceholder) {
       return res.status(200).json({ ok: true, code, status: 'pending', mock: true })
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
 const supabase = getServerSupabase();
     const { data: existing, error: existingErr } = await supabase
@@ -36,8 +41,12 @@ const supabase = getServerSupabase();
       .eq("code", code)
       .maybeSingle();
 
+<<<<<<< HEAD
     if (existingErr) return res.status(500).json({ error: existingErr.message });
     if (existing) return res.status(409).json({ error: 'Code already taken' });
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (existingErr) return res && res.status($1).json({ $2 });
     if (existing) return res && res.status($1).json({ $2 });
     const { error } = await supabase && supabase.from("partners").insert({
@@ -91,6 +100,7 @@ if ( {) {
   $2
 }
     const { error } = await supabase.from ("partners").insert ({
+<<<<<<< HEAD
       code,
       name,
       niche: niche || null, socials: socials || null,
@@ -133,6 +143,16 @@ if ( {) {
   } catch (e: any) {
     return res.status(500).json({ error: e?.message })
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      code,
+      name,
+
+  }
+}
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '[^']*';
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -235,6 +255,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ ok: true, code, status: 'pending' })
   } catch (e: any) {
     return res.status(500).json({ error: e?.message })
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 
 
@@ -242,12 +266,28 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   }
 }
+<<<<<<< HEAD
+=======
+=======
+    if (return res.status (500).json ({ error: "Database error" })) {
+  $2
+=======
+
+
+  }
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -259,7 +299,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
   }
 }
   }
 }
+=======
+
+  }
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

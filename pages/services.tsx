@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -15,6 +16,14 @@ import React from 'react';
 
 import Link from 'next/link';
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 origin/main
 origin/automation-improvements-final
@@ -26,6 +35,10 @@ import Link from 'next/link';
 
 export default function Services() {
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Link from 'next / link';
 ;
 type Service = {
@@ -35,6 +48,10 @@ type Service = {;
   pricing: string;
   link: string;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const microSaaS: Service[] = [;
   {;
     name: 'Cloud Cost Guard (FinOps Assistant)',;
@@ -1559,6 +1576,10 @@ export default function Services(): React.JSX.Element {;
             <divstyle={{ 
               fontSize: 13, color: color, fontWeight: 600,
               background: `${color}10`, padding: '6px 12px',
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               borderRadius: 8, display: 'inline-block'
             }}>{s && s.pricing}</div>;
           </a>;
@@ -1567,6 +1588,7 @@ export default function Services(): React.JSX.Element {;
     </section>;
   );
   return (
+<<<<<<< HEAD
     <mainstyle={{ 
       background: 'linear-gradient(135deg, #f8fafc, #f1f5f9)', 
       minHeight: 'calc(100vh - 120px)' 
@@ -3261,11 +3283,22 @@ export default function Services() {
     const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer)
   }, []);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   }, []);
 
 
+<<<<<<< HEAD
+=======
+  const contact: ContactInfo = {;
+    phone: '+1 302 464 0950',;
+    email: 'kleber@ziontechgroup && ziontechgroup.com',;
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+    site: 'https://ziontechgroup && ziontechgroup.com',;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   };
             </div>;
           </div>;
@@ -3496,6 +3529,7 @@ function Services() {
 
 
         <section className="py-20 bg-gray-50">
+<<<<<<< HEAD
         <section className="py-20 bg-gray-50">
 
   const contact: ContactInfo = {
@@ -3525,6 +3559,8 @@ function Services() {
             </motion.div>
           </div>
         </section>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -3533,6 +3569,54 @@ function Services() {
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+<<<<<<< HEAD
+=======
+                Why Choose Us?
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We deliver exceptional results through our proven expertise and commitment to excellence.
+              </p>
+            </motion.div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <motion.div
+            </div>;
+          </div>;
+        </section>;
+        <section className="py-20 bg-gray-50">;
+          <div className="container mx-auto px-4">;
+            <motion&& motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8 }}
+              className="text-center mb-16">;
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
+                Why Choose Us?;
+              </h2>;
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+                We deliver exceptional results through our proven expertise and commitment to excellence.;
+              </p>;
+            </motion && motion.div>;
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
+              {benefits && benefits.map((benefit, index) => (;
+                <motion&& motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                  className="text-center p-6">;
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">;
+                    <benefit && benefit.icon className="h-8 w-8 text-blue-600" />;
+                  </div>;
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">;
+                    {benefit && benefit.title}
+                  </h3>;
+                  <p className="text-gray-600">;
+                    {benefit && benefit.description}
+                  </p>;
+                </motion && motion.div>;
+              ))}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -3540,6 +3624,10 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     site: 'https://ziontechgroup.com'
   };
   const serviceCategories = [
@@ -3551,8 +3639,15 @@ count: '150+',
       services: [
         'AI-Powered Video Clip MakerSmart Contract AnalyzerCybersecurity Threat IntelligenceMulti-Language Website TranslatorPredictive Inventory OptimizerReal-Time Analytics DashboardAutomated Customer SupportBlockchain Transaction Monitor'
       ];
+<<<<<<< HEAD
       href: '/micro-saas'
     }
+=======
+
+      href: '/micro-saas'
+    }
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   ];
   const getColorClasses = (color: string) => {
     const colors = {
@@ -3560,12 +3655,21 @@ count: '150+',
   const _getColorClasses = (_color: string) => {_const _colors = {
 
       blue: {
+<<<<<<< HEAD
+=======
+      
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         bg: 'bg-blue-600',
         hover: 'hover:bg-blue-700',
         text: 'text-blue-400',
         border: 'border-blue-500/40',
         ring: 'focus:ring-blue-500'
+<<<<<<< HEAD
 },
+=======
+      
+    },
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     purple: {
         bg: 'bg-purple-600',
         hover: 'hover:bg-purple-700',
@@ -3581,6 +3685,15 @@ count: '150+',
         border: 'border-green-500/40',
         ring: 'focus:ring-green-500'
       }
+<<<<<<< HEAD
+=======
+    };
+    return colors[color as keyof typeof colors] || colors.blue
+  };
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       id: 'ai-automation',
       title: 'AI Automation Platform',
@@ -3615,17 +3728,31 @@ count: '150+',
     },
     {
 
+<<<<<<< HEAD
 };
     return colors[color as keyof typeof colors] || colors.blue
   };
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <>
       <Head>
         <title>Our Services - Zion Tech Group</title>
+<<<<<<< HEAD
 
 
 
 
+=======
+
+=======
+
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <ErrorBoundary level='page'>
         <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>
 export default function Services() {;
@@ -3750,7 +3877,10 @@ export default function Services() {;
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </section>
           {/* Service Categories */}
           <section className='py-16 px-4' role='main'>
@@ -3758,6 +3888,11 @@ export default function Services() {;
               <div className='grid lg:grid-cols-3 gap-8'>
                 {serviceCategories.map((category, index) => {
                   const colors = getColorClasses(category.color);
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     >
                       <div className='flex items-center justify-between mb-6'>                        <h3 className={`text-2xl font-bold ${colors.text}`}>
         <meta name="description" content="Explore our comprehensive range of micro SaaS products, AI services, and IT solutions. 350+ innovative services to transform your business." />
@@ -3799,6 +3934,11 @@ export default function Services() {;
                     >
                       <div className="flex items-center justify-between mb-6">
                         <h3 className={`text-2xl font-bold ${colors.text}`}>
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </div>;
                   <button className="w - full bg - blue - 600 text - white px - 4 py - 2 rounded - lg hover:bg - blue - 700 transition - colors">;
                     Learn More;
@@ -3980,6 +4120,10 @@ function Services() {
                         </h3>;
                         <span className={`text - 3xl font - bold ${colors.text}`}>;
                           {category.count}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>;
                 350+ Innovative Solutions for Modern Businesses;
               </p>;
@@ -3996,6 +4140,11 @@ function Services() {
               <div className='grid lg:grid-cols-3 gap-8'>;
                 {serviceCategories && serviceCategories.map((category, index) => {;
                   const colors = getColorClasses(category && category.color);
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     >;
                       <div className='flex items-center justify-between mb-6'>                        <h3 className={`text-2xl font-bold ${colors && colors.text}`}>;
                           {category && category.title}
@@ -4010,9 +4159,18 @@ function Services() {
                       <ul className='text-slate-400 space-y-2 mb-8'>;
                         {category && category.services.map((service, serviceIndex) => (;
                           <li key={serviceIndex} className='flex items-center'>;
+<<<<<<< HEAD
                             <span className='w-2 h-2 bg-blue-400 rounded-full mr-3 flex-shrink-0'></span>                            {service}
                           </li>;
                         ))}
+=======
+
+
+                            <span className='w-2 h-2 bg-blue-400 rounded-full mr-3 flex-shrink-0'></span>                            {service}
+                          </li>;
+                        ))}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         </span>;
                       </div>;
                       <p className='text - slate - 300 mb - 6'>;
@@ -4024,15 +4182,30 @@ function Services() {
                             <span className='w - 2 h - 2 bg - blue - 400 rounded - full mr - 3 flex - shrink - 0'></span>                            {service}
                           </li>))}
                       </ul>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <Link                        href={category.href}
                         className={`inline - flex items - center px - 6 py - 3 ${colors.bg} ${colors.hover} rounded - lg font - semibold transition - all duration - 300 hover:scale - 105 focus:outline - none focus:ring - 2 ${colors.ring} focus:ring - offset - 2 focus:ring - offset - slate - 900`}
                       >;
                         View All {category.title}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       </ul>;
                       <Link                        href={category && category.href}
                         className={`inline-flex items-center px-6 py-3 ${colors && colors.bg} ${colors && colors.hover} rounded-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 ${colors && colors.ring} focus:ring-offset-2 focus:ring-offset-slate-900`}
                       >;
                         View All {category && category.title}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         <svg
                           className='ml-2 w-4 h-4'
                           fill='none'
@@ -4049,6 +4222,7 @@ function Services() {
                     </div>;
                   );
                 })}
+<<<<<<< HEAD
               </div>;
             </div>;
           </div>;
@@ -4062,6 +4236,10 @@ function Services() {
               <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>;
                 <div className='text-center'>;
                   <div className='w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <svg
                       className='w-8 h-8 text-white'
                       fill='none'
@@ -4072,6 +4250,7 @@ function Services() {
                         strokeLinejoin='round'
                         strokeWidth={2}
                         d='M13 10V3L4 14h7v7l9-11h-7z'
+<<<<<<< HEAD
                       />;
                     </svg>;
                   </div>;
@@ -4082,6 +4261,10 @@ function Services() {
                 </div>;
                 <div className='text-center'>;
                   <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <svg
                       className='w-8 h-8 text-white'
                       fill='none'
@@ -4092,6 +4275,7 @@ function Services() {
                         strokeLinejoin='round'
                         strokeWidth={2}
                         d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
+<<<<<<< HEAD
                       />;
                     </svg>;
                   </div>;
@@ -4102,6 +4286,10 @@ function Services() {
                 </div>;
                 <div className='text-center'>;
                   <div className='w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <svg
                       className='w-8 h-8 text-white'
                       fill='none'
@@ -4112,6 +4300,7 @@ function Services() {
                         strokeLinejoin='round'
                         strokeWidth={2}
                         d='M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z'
+<<<<<<< HEAD
                       />;
                     </svg>;
                   </div>;
@@ -4122,6 +4311,10 @@ function Services() {
                 </div>;
                 <div className='text-center'>;
                   <div className='w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <svg
                       className='w-8 h-8 text-white'
                       fill='none'
@@ -4131,6 +4324,7 @@ function Services() {
                         strokeLinecap='round'
                         strokeLinejoin='round'
                         strokeWidth={2}
+<<<<<<< HEAD
                         d='M18 && M18.364 5 && 5.636l-3 && 3.536 3 && 3.536m0 5 && 5.656l3.536 3 && 3.536M9.172 9 && 9.172L5.636 5 && 5.636m3.536 9 && 9.192L5.636 18 && 18.364M12 2 && 2.25a9.75 9 && 9.75 0 100 19 && 19.5 9 && 9.75 9 && 9.75 0 000-19 && 19.5z'
                       />;
                     </svg>;
@@ -4269,10 +4463,40 @@ function Services() {
                 Ready to Get Started?;
               </h2>;
               <p className='text - lg text - slate - 300 mb - 8'>;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 Contact our experts today to discuss your project requirements;
                 and discover how our innovative solutions can transform your;
                 business.;
               </p>;
+<<<<<<< HEAD
+=======
+
+
+                <Link
+                  href='/contact'
+                  className='px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors'>;
+                  Get a Quote;
+                </Link>;
+                <a
+                  href={`tel:${contact && contact.phone.replace(/[^\d+]/g, '')}`}
+                  className='px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors'>;
+                  Call {contact && contact.phone}
+                </a>;
+                <a
+                  href={`mailto:${contact && contact.email}`}
+                  className='px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors'>;
+                  Email Us;
+                </a>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+    </>;
+  );
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
             </p>
@@ -4293,7 +4517,10 @@ function Services() {
 
   );
                       
+<<<<<<< HEAD
   );
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <p className="text-slate-300 mb-6">
                         {category.description}
                       </p>
@@ -4431,8 +4658,20 @@ className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold 
         </main>
       </ErrorBoundary>
     </>
+<<<<<<< HEAD
   )
 }
+=======
+
+
+
+  )
+>>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <section className="py-16 px-4 bg-slate-900/40">;
           <div className="max-w-4xl mx-auto text-center">;
             <h2 className="text-3xl md:text-4xl font-bold mb-8">;
@@ -5177,6 +5416,34 @@ export default function Services() {
                 </a>;
                 <a;
                   href={`mailto:${contact.email}`}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                  className='px - 8 py - 3 bg - slate - 800 hover:bg - slate - 700 border border - white / 10 rounded - lg font - semibold transition - colors'                >;
+                  Email Us;
+                </a>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+    </>);
+;
+        <section className="py - 16 px - 4 bg - slate - 900 / 40">;
+          <div className="max - w-4xl mx - auto text - center">;
+            <h2 className="text - 3xl md:text - 4xl font - bold mb - 8">;
+              Ready to Get Started?;
+            </h2>;
+            <p className="text - lg text - slate - 300 mb - 8">;
+              Contact our experts to discuss your project requirements and discover;
+              how our solutions can drive your business forward.;
+            </p>;
+            <div className="flex flex - col sm:flex - row items - center justify - center gap - 4">;
+              <Link href="/contact" className="btn - primary">;
+                Get a Quote;
+              </Link>;
+              <Link href="/contact" className="btn - secondary">;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 Schedule Consultation;
               </Link>;
             </div>;
@@ -5185,6 +5452,7 @@ export default function Services() {
       </main>;
       <Footer />;
 
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -5335,9 +5603,24 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 
   )
 }
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+    </>);
+);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

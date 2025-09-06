@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from 'react'
 import {
   Card
@@ -73,6 +76,7 @@ interface Improvement {;
   impact: 'high' | 'medium' | 'low';
   category: 'performance' | 'security' | 'ux' | 'build'
 
+<<<<<<< HEAD
 const PerformanceDashboard: React.FC = () => {
   const [metrics] = useState<PerformanceMetrics>({
     buildSize: '959 MB'
@@ -195,6 +199,9 @@ interface Improvement {;
   description: string,;
   status: 'completed' | 'in-progress' | 'planned',;
   impact: 'high' | 'medium' | 'low',;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from 'react';
 import {
   Card,
@@ -385,6 +392,7 @@ const PerformanceDashboard: React.FC = () => {;
     }
   ],
 
+<<<<<<< HEAD
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'completed': return <CheckCircle className="h-4 w-4 text-green-500" />,
@@ -417,10 +425,13 @@ const PerformanceDashboard: React.FC = () => {;
       case 'build': return <TrendingUp className="h-4 w-4" />,
       default: return <CheckCircle className="h-4 w-4" />
     }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
 
   const completedImprovements = improvements.filter(imp => imp.status === 'completed'),
 
+<<<<<<< HEAD
   return (
     <div className="space-y-6 p-6">
       <div className="flex items-center justify-between">
@@ -431,6 +442,8 @@ const PerformanceDashboard: React.FC = () => {;
       </div>
       {/* Metrics Overview */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -519,6 +532,10 @@ ursor/fix-website-loading-errors-and-merge-6662
               <span className='text-sm font-semibold text-green-600'>
                 Healthy
               </span>
+<<<<<<< HEAD
+=======
+            </div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </CardContent>
         </Card>
       </div>
@@ -600,10 +617,13 @@ const PerformanceDashboard: React.FC = () => {;
         return <TrendingUp className='h-4 w-4 text-blue-500' />;
       default:;
         return <AlertCircle className='h-4 w-4 text-gray-500' />;
+<<<<<<< HEAD
             </div>
           </CardContent>
         </Card>
       </div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Completed Improvements */}
       <Card>
         <CardHeader>
@@ -616,6 +636,7 @@ const PerformanceDashboard: React.FC = () => {;
           </CardDescription>
         </CardHeader>
         <CardContent>
+<<<<<<< HEAD
           <div className='space-y-4'>
             {completedImprovements.map(improvement => (
               <div
@@ -623,11 +644,19 @@ const PerformanceDashboard: React.FC = () => {;
                 className='flex items-start space-x-3 p-3 border rounded-lg'
               >
                 <div className='flex-shrink-0 mt-1'>                  {getCategoryIcon(improvement.category)}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="space-y-4">
             {completedImprovements.map((improvement) => (
               <div key={improvement.id} className="flex items-start space-x-3 p-3 border rounded-lg">
                 <div className="flex-shrink-0 mt-1">
                   {getCategoryIcon(improvement.category)}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between">
@@ -641,6 +670,7 @@ const PerformanceDashboard: React.FC = () => {;
                       {getStatusIcon(improvement.status)}
                     </div>
                   </div>
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
                   <p className="text-sm text-gray-600 mt-1">
   },;
@@ -753,6 +783,9 @@ ursor/fix-website-loading-errors-and-merge-6662
               <span className='text - sm font - semibold text - green - 600'>;
                 Healthy;
               </span>;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <p className="text-sm text-gray-600 mt-1">
   },;
   const getCategoryIcon = (category: string) => {;
@@ -763,6 +796,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       case 'build': return <TrendingUp className="h-4 w-4" />,;
       default: return <CheckCircle className="h-4 w-4" />;
     }
+<<<<<<< HEAD
   },;
   const completedImprovements = improvements.filter(imp => imp.status === 'completed'),;
   return (;
@@ -810,10 +844,130 @@ ursor/fix-website-loading-errors-and-merge-6662
             <div className="flex items-center space-x-2">;
               <CheckCircle className="h-5 w-5 text-green-500" />;
               <span className="text-sm font-semibold text-green-600">Healthy</span>;
+=======
+  };
+
+  const getImpactColor = (impact: string,) => {;
+    switch (impact) {;
+      case 'high':;
+        return 'bg-red-100 text-red-800';
+      case 'medium':;
+        return 'bg-yellow-100 text-yellow-800';
+      case 'low':;
+        return 'bg-green-100 text-green-800';
+      default:;
+        return 'bg-gray-100 text-gray-800';
+    }
+  };
+
+  const getCategoryIcon = (category: string,) => {;
+    switch (category) {;
+      case 'performance':;
+        return <Zap className='h-4 w-4' />;
+      case 'security':;
+        return <Shield className='h-4 w-4' />;
+      case 'ux':;
+        return <Search className='h-4 w-4' />;
+      case 'build':;
+        return <TrendingUp className='h-4 w-4' />;
+      default:;
+        return <CheckCircle className='h-4 w-4' />;
+    }
+  };
+
+  const completedImprovements = improvements && improvements.filter(;
+    imp => imp && imp.status === 'completed';
+  );
+
+  return (
+    <div className='space-y-6 p-6'>;
+      <div className='flex items-center justify-between'>;
+        <h1 className='text-3xl font-bold text-gray-900'>;
+          Performance Dashboard;
+        </h1>;
+        <Badge className='bg-green-100 text-green-800'>;
+          {completedImprovements && completedImprovements.length} Improvements Completed;
+        </Badge>;
+      </div>;
+
+      {/* Metrics Overview */}
+      <div className='grid grid-cols-1 md:grid-cols-4 gap-4 mb-6'>;
+        <Card>;
+          <CardHeader className='pb-2'>;
+            <CardTitle className='text-sm font-medium text-gray-600'>;
+    <div className='space - y-6 p - 6'>;
+      <div className='flex items - center justify - between'>;
+        <h1 className='text - 3xl font - bold text - gray - 900'>;
+          Performance Dashboard;
+        </h1>;
+        <Badge className='bg - green - 100 text - green - 800'>;
+          {completed_improvements.length} Improvements Completed;
+        </Badge>;
+      </div>;
+      {/* Metrics Overview */}
+      <div className='grid grid - cols - 1 md:grid - cols - 4 gap - 4 mb - 6'>;
+        <Card>;
+          <CardHeader className='pb - 2'>;
+            <CardTitle className='text - sm font - medium text - gray - 600'>;
+              Build Size;
+            </CardTitle>;
+          </CardHeader>;
+          <CardContent>;
+
+            <div className='text - 2xl font - bold'>{metrics.build_size}</div>;
+            <p className='text - xs text - gray - 500'>Total build output</p>;
+          </CardContent>;
+        </Card>;
+        <Card>;
+          <CardHeader className='pb - 2'>;
+            <CardTitle className='text - sm font - medium text - gray - 600'>;
+
+              Page Count;
+            </CardTitle>;
+          </CardHeader>;
+          <CardContent>;
+
+            <div className='text - 2xl font - bold'>{metrics.page_count}</div>;
+            <p className='text - xs text - gray - 500'>Generated pages</p>;
+          </CardContent>;
+        </Card>;
+        <Card>;
+          <CardHeader className='pb - 2'>;
+            <CardTitle className='text - sm font - medium text - gray - 600'>;
+
+              Load Time;
+            </CardTitle>;
+          </CardHeader>;
+          <CardContent>;
+
+            <div className='text - 2xl font - bold'>{metrics.load_time}s</div>;
+            <p className='text - xs text - gray - 500'>Average page load</p>;
+          </CardContent>;
+        </Card>;
+        <Card>;
+          <CardHeader className='pb - 2'>;
+            <CardTitle className='text - sm font - medium text - gray - 600'>;
+
+              Health Status;
+            </CardTitle>;
+          </CardHeader>;
+          <CardContent>;
+
+            <div className='flex items - center space - x-2'>;
+              <CheckCircle className='h - 5 w - 5 text - green - 500' />;
+              <span className='text - sm font - semibold text - green - 600'>;
+
+                Healthy;
+              </span>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>;
           </CardContent>;
         </Card>;
       </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Completed Improvements */}
       <Card>;
         <CardHeader>;
@@ -827,6 +981,10 @@ ursor/fix-website-loading-errors-and-merge-6662
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Completed Improvements */}
       <Card>
         <CardHeader>
@@ -855,6 +1013,16 @@ ursor/fix-website-loading-errors-and-merge-6662
                       {getStatusIcon(improvement.status)}
                     </div>
                   </div>
+<<<<<<< HEAD
+=======
+
+
+                  <p className='text-sm text-gray-600 mt-1'>
+                    {improvement.description}
+                  </p>
+                </div>
+              </div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             ))}
 
           </div>;
@@ -882,6 +1050,11 @@ ursor/fix-website-loading-errors-and-merge-6662
       <div className="flex space-x-4">
         <Button onClick={() => window.open('/api/health/environment_blank')} variant="outline">
           <Shield className="h-4 w-4 mr-2" />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           Check Health Status
         </Button>
         <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">
@@ -891,6 +1064,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
     </div>
   )
+<<<<<<< HEAD
 export default PerformanceDashboard
 export default PerformanceDashboard
 export default PerformanceDashboard
@@ -899,6 +1073,8 @@ export default PerformanceDashboard
 export default PerformanceDashboard
 export default PerformanceDashboard
 export default PerformanceDashboard
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           variant='outline';
         >;
@@ -919,6 +1095,7 @@ export default PerformanceDashboard,
         </Button>;
         <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">;
           <TrendingUp className="h-4 w-4 mr-2" />;
+<<<<<<< HEAD
           </div>;
         </CardContent>;
       </Card>;
@@ -938,11 +1115,21 @@ export default PerformanceDashboard,
           variant='outline';
         >;
           <TrendingUp className='h-4 w-4 mr-2' />;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           Bundle Analysis;
         </Button>;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+=======
+};
+
+export default PerformanceDashboard;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export default PerformanceDashboard, ;
 export default PerformanceDashboard, ;
@@ -998,6 +1185,7 @@ export default PerformanceDashboard, ;
 }
 export default PerformanceDashboard;
 export default PerformanceDashboard,
+<<<<<<< HEAD
 import React, { useState } from 'react',;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Badge } from '@/components/ui/badge',;
@@ -1250,3 +1438,6 @@ export default PerformanceDashboard;
 },;
 export default PerformanceDashboard;
 export default PerformanceDashboard,
+=======
+export default PerformanceDashboard,
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

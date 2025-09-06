@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
   showAfterScroll?: number;
 
 import React, { useEffect, useState } from "react",
@@ -33,10 +34,30 @@ interface StickyActionProps {
   position?: "bottom" | "top"
 }
 export function StickyAction({
+=======
+
+
+import React, { useEffect, useState } from "react";
+import {cn} from "@/lib/utils";
+import {motion, AnimatePresence} from "framer-motion";
+
+interface StickyActionProps {;
+  className?: string;
+  children: React && React.ReactNode,;
+
+  showAfterScroll?: number;
+  position?: "bottom" | "top";
+}
+
+
+export function StickyAction(): any ({;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   className;
   children;
 
   showAfterScroll = 300;
+<<<<<<< HEAD
   position = "bottom"
 }: StickyActionProps) {
   const [isVisible, setIsVisible] = useState(false);
@@ -56,10 +77,21 @@ export function StickyAction(): any ({;
   position = "bottom";
 }: StickyActionProps) {;
   const [isVisible, setIsVisible] = useState(false);
+=======
+  position = "bottom";
+}: StickyActionProps) {;
+  const [isVisible, setIsVisible] = useState(false);
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > showAfterScroll) {
         setIsVisible(true)
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useEffect, useState } from './react';
 import { cn } from '@/lib / utils';
 import { motion, AnimatePresence } from './framer-motion';
@@ -97,6 +129,7 @@ if ( {) {
     }
   }, [showAfterScroll]);
 
+<<<<<<< HEAD
       } else {
         setIsVisible(false)
       }
@@ -106,6 +139,11 @@ if ( {) {
       window.removeEventListener("scroll", handleScroll)
     }
   }, [showAfterScroll]);
+=======
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
 
     window.addEventListener("scroll", handleScroll),
@@ -114,17 +152,29 @@ if ( {) {
     }
   }, [showAfterScroll]),
 
+<<<<<<< HEAD
   const positionClasses = {
     bottom: "bottom-4"
     top: "top-20"
   }
   },
 
+=======
+
+  const positionClasses = {
+    bottom: "bottom-4"
+    top: "top-20"
+
+  },
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <AnimatePresence>
       {isVisible && (
         <motion.div
 
+<<<<<<< HEAD
           initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
@@ -133,6 +183,10 @@ if ( {) {
             "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4";
             positionClasses[position];
 
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
 import React, { useEffect, useState } from "react",;
 import { cn } from "@/lib/utils",;
@@ -151,16 +205,46 @@ export function StickyAction({;
   position = "bottom";
 }: StickyActionProps) {;
   const [isVisible, setIsVisible] = useState(false),;
+<<<<<<< HEAD
   useEffect(() => {;
     const handleScroll = () => {;
       if (window && window.scrollY > showAfterScroll) {;
   useEffect(() => {;
     const handleScroll = () => {;
       if (window.scrollY > showAfterScroll) {;
+=======
+
+  useEffect(() => {;
+    const handleScroll = () => {;
+      if (window && window.scrollY > showAfterScroll) {;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         setIsVisible(true);
       } else {;
         setIsVisible(false);
       }
+<<<<<<< HEAD
+=======
+    };
+
+    window && window.addEventListener("scroll", handleScroll);
+    return () => {;
+      window && window.removeEventListener("scroll", handleScroll);
+    }
+  }, [showAfterScroll]);
+
+  const positionClasses = {;
+    bottom: "bottom-4",;
+    top: "top-20";
+  };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  return (
+    <AnimatePresence>;
+      {isVisible && (;
+        <motion&& motion.div
+          initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4"
             positionClasses[position]
 
@@ -207,6 +291,7 @@ export function StickyAction({;
         </motion.div>)}
     </AnimatePresence>);
 }
+<<<<<<< HEAD
 
 import React, { useEffect, useState } from "react",;
 import { cn } from "@/lib/utils",;
@@ -273,3 +358,6 @@ export function StickyAction({;
     </AnimatePresence>
   )
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

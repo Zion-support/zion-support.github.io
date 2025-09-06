@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface NextGenAi2026Service {;
 export interface NextGenAi2026Service {
 export interface NextGenAi2026Service {;
@@ -68,6 +69,10 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [;
     }
   }
 ]
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     id: "2026-next-gen-ai",
     name: "2026 Next-Gen AI Platform",
     tagline: "Next-generation AI for 2026",
@@ -84,6 +89,7 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [;
     category: "Next-Gen AI 2026",
     realImplementation: true,
     contactInfo: {
+<<<<<<< HEAD
 ],
 
 
@@ -104,3 +110,20 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [;
 ];
 ],
 ];
+=======
+
+
+
+      email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709";
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    }
+  }
+
+],
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
@@ -21,6 +22,8 @@ import { Loader, Sparkles } from "lucide-react",
 import { supabase } from "@/integrations/supabase/client",
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
 import { useForm } from "react-hook-form",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from './react';
 import { use_toast } from '@/hooks / use - toast';
 import { Button } from '@/components / ui / button';
@@ -43,6 +46,7 @@ type FormData = z.infer < typeof form_schema>;
 
 import z from "zod";
 
+<<<<<<< HEAD
 import {zodResolver} from "@hookform/resolvers/zod";
 const formSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters");
@@ -51,6 +55,8 @@ const formSchema = z.object({
 type FormData = z.infer<typeof formSchema>;
 import z from "zod",
 import { zodResolver } from "@hookform/resolvers/zod",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const formSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
   keyFeatures: z.string(),
@@ -58,6 +64,11 @@ const formSchema = z.object({
 
 type FormData = z.infer<typeof formSchema>,
 
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface ServiceDescriptionFormProps {
   onDescriptionGenerated: (description: string) => void;
 }
@@ -66,6 +77,7 @@ interface ServiceDescriptionFormProps {
 
 
 
+<<<<<<< HEAD
 interface ServiceDescriptionFormProps {
   onDescriptionGenerated: (description: string) => void
 }
@@ -79,6 +91,8 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
   const { toast } = useToast(),
   const [isLoading, setIsLoading] = useState(false),
   
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema)
     defaultValues: {
@@ -89,6 +103,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
     setIsLoading(true)
     try {
       const { data: response, error } = await supabase.functions.invoke('generate-service-description', {
+<<<<<<< HEAD
         body: {
           title: data.title
           keyFeatures: data.keyFeatures
@@ -97,10 +112,15 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
       });
       if (error) {
         throw new Error(error.message)
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         body: { 
           title: data.title, 
           keyFeatures: data.keyFeatures, 
           targetAudience: data.targetAudience 
+<<<<<<< HEAD
         }
       });
 
@@ -156,6 +176,10 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
           targetAudience: data.targetAudience 
 
 
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
       if (response.error) {
         throw new Error(response.error)
@@ -167,16 +191,23 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
       
 
 
+<<<<<<< HEAD
       onDescriptionGenerated(response.description);
 
       onDescriptionGenerated(response.description),
       
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast({
         title: "Description Generated"
         description: "Your professional service description has been created."
       })
     } catch (error) {
+<<<<<<< HEAD
       console.error("Error generating description:", error),
+=======
+      console.error("Error generating description:", error);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast({
         title: "Generation Failed"
         description: error instanceof Error ? error.message : "Failed to generate description. Please try again."
@@ -184,9 +215,13 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
       })
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
 interface ServiceDescriptionFormProps {
   onDescriptionGenerated: (description: string) => void;
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const formSchema = z && z.object({;
   title: z && z.string().min(3, "Title must be at least 3 characters");
   keyFeatures: z && z.string(),;
@@ -328,6 +363,10 @@ export function ServiceDescriptionForm({ onDescriptionGenerated } ServiceDescrip
   }
   },
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
@@ -345,10 +384,15 @@ export function ServiceDescriptionForm({ onDescriptionGenerated } ServiceDescrip
             <FormField
               control={form.control}
               name="title"
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               render={({ field }) => (
                 <FormItem>
                   <FormLabel className="text-zion-slate-light">Service Title</FormLabel>
                   <FormControl>
+<<<<<<< HEAD
                     <Input
                       {...field}
                       placeholder="e.g. Professional Web Design Services"
@@ -403,10 +447,14 @@ export function ServiceDescriptionForm({ onDescriptionGenerated } ServiceDescrip
             <FormField;
               control={form.control}
               name="title";
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel className="text-zion-slate-light">Service Title</FormLabel>;
                   <FormControl>;
+<<<<<<< HEAD
                       className="bg-zion-blue border border-zion-blue-light text-white"
                     <Input ;
                       {...field} ;
@@ -447,12 +495,20 @@ export function ServiceDescriptionForm({ onDescriptionGenerated } ServiceDescrip
                       {...field}
                       placeholder="Enter key features, separated by commas";
                       className="bg-zion-blue border border-zion-blue-light text-white min-h-20";
+=======
+                    <Input
+                      {...field} 
+                      placeholder="e && e.g. Professional Web Design Services"
+
+                      className="bg-zion-blue border border-zion-blue-light text-white"
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       disabled={isLoading}
                     />;
                   </FormControl>;
                   <FormMessage />;
                 </FormItem>;
               )}
+<<<<<<< HEAD
             />;
             <FormField;
               control={form.control}
@@ -461,11 +517,32 @@ export function ServiceDescriptionForm({ onDescriptionGenerated } ServiceDescrip
                 <FormItem>
                   <FormLabel className="text-zion-slate-light">Key Features</FormLabel>
                   <FormControl>
+=======
+
+            />;
+
+
+            <FormField
+              control={form && form.control}
+=======
+
+
+              control={form.control}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              name="keyFeatures"
+
+              render={({ field }) => (;
+                <FormItem>;
+                  <FormLabel className="text-zion-slate-light">Key Features</FormLabel>;
+                  <FormControl>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <Textarea
                       {...field}
                       placeholder="Enter key features, separated by commas"
                       className="bg-zion-blue border border-zion-blue-light text-white min-h-20"
                       disabled={isLoading}
+<<<<<<< HEAD
                     />
                   </FormControl>
                   <FormMessage />
@@ -486,6 +563,14 @@ export function ServiceDescriptionForm({ onDescriptionGenerated } ServiceDescrip
 
 
                       placeholder="e.g. Small businesses, Startups, E-commerce brands"
+=======
+                    />;
+                  </FormControl>;
+                  <FormMessage />;
+                </FormItem>;
+              )}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             />;
             <FormField
               control={form && form.control}
@@ -608,6 +693,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated } ServiceDescrip
                   Generate Description;
                 </>)}
 
+<<<<<<< HEAD
                     <Input
                       {...field}
                     <Input 
@@ -646,10 +732,16 @@ export function ServiceDescriptionForm({ onDescriptionGenerated } ServiceDescrip
     </Card>
   )
 }
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </Button>;
           </form>;
         </Form>;
       </CardContent>;
+<<<<<<< HEAD
     </Card>;
   ),; const formSchema = z.object ({
   title: z.string () .min (3, "Title must be at least 3 characters");
@@ -690,3 +782,13 @@ if (error) {
   );
 }
 ;
+=======
+
+    </Card>);
+}
+
+=======
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

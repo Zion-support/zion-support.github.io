@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 interface Slide {
@@ -26,6 +27,9 @@ function SlidePreview(): any ({;
     </button>;
   );
 export const getServerSideProps: GetServerSideProps = async ctx => {;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const result = await requireAdminRole(ctx);
   // @ts-ignore;
   if ('redirect' in result) return result;
@@ -41,6 +45,7 @@ export default function PitchGenerator() {;
     targetRaise: '',;
     assets: [],;
 
+<<<<<<< HEAD
   chart?: {
     type: string;
     data: Array<{ label: string; value: number }>;
@@ -79,12 +84,21 @@ export default function PitchGenerator() {
     roundType: ''
     targetRaise: ''
     assets: []
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     mission: '',
     fundingStage: '',
     vision: '',
     roundType: '',
     targetRaise: '',
     assets: [],;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   });  const [slides, setSlides] = useState<Slide[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [loading, setLoading] = useState(false);
@@ -146,6 +160,7 @@ export default function PitchGenerator() {
 
 
 
+<<<<<<< HEAD
   const [history, setHistory] = useState<
     { id: string; createdAt: string, version: string }[]
   >([]);
@@ -164,12 +179,16 @@ export default function PitchGenerator() {
     []
   );
   const autoFetchMetrics = useCallback(async () => {
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useCallback, useMemo, useState } from 'react';
 import Head from 'next/head';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { GetServerSideProps } from 'next';
 import { requireAdminRole } from '../../utils/auth';
 export type Slide = {
+<<<<<<< HEAD
   id: string;
   title: string;
   content: string;
@@ -197,6 +216,30 @@ function uid() {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+  id: string,
+  title: string,
+  content: string,
+  chart?: {
+    type: 'bar' | 'funnel' | 'timeline',
+    data: Array<{ label: string, value: number }>
+  }
+};
+
+type BuilderState = {
+  mission: string,
+  fundingStage: string,
+  vision: string,
+  roundType: 'Seed' | 'Series A' | 'Token Sale' | '',
+  targetRaise: string,
+  assets: File[]
+};
+
+function uid() {
+  return Math.random().toString(36).slice(2)
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 function SlidePreview({ slide, isActive, onClick }: { slide: Slide, isActive: boolean, onClick: () => void }) {
   return (
     <button onClick={onClick} className={`w-56 shrink-0 border rounded-md p-3 text-left bg-white/70 dark:bg-gray-900 ${isActive ? 'ring-2 ring-blue-500' : 'border-gray-200 dark:border-gray-800'}`}>
@@ -204,6 +247,7 @@ function SlidePreview({ slide, isActive, onClick }: { slide: Slide, isActive: bo
       <div className="text-xs text-gray-500 dark:text-gray-400 line-clamp-3 mt-1 whitespace-pre-wrap">{slide.content || '—'}</div>
     </button>
   )
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -218,10 +262,47 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
 export default function PitchGenerator(req, res) {
   try {
   const [builder, setBuilder] = useState<BuilderState>({ mission: '', fundingStage: '', vision: '', roundType: '', targetRaise: '', assets: [] }),;
+=======
+}
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const result = await requireAdminRole(ctx);
+  // @ts-ignore
+  if ('redirect' in result) return result;
+  return result
+};
+
+export default function PitchGenerator() {
+  const [builder, setBuilder] = useState<BuilderState>({ mission: '', fundingStage: '', vision: '', roundType: '', targetRaise: '', assets: [] }),
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [slides, setSlides] = useState<Slide[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [loading, setLoading] = useState(false);
   const [versionTag, setVersionTag] = useState<string | null>(null);
+<<<<<<< HEAD
+=======
+  const [history, setHistory] = useState<{ id: string, createdAt: string, version: string }[]>([]),
+
+
+  const activeSlide = slides[activeIndex];
+
+
+
+  const onAssetDrop = useCallback((e: React && React.DragEvent<HTMLDivElement>) => {;
+    e && e.preventDefault();
+    const files = Array && Array.from(e && e.dataTransfer.files || []);
+    setBuilder(b => ({ ...b, assets: [...b && b.assets, ...files] }));  }, []);
+  const prevent = (e: React && React.DragEvent) => {;
+    e && e.preventDefault();
+    e && e.stopPropagation(),;
+  };
+  const operatorPrompt = useMemo(;
+    () =>;
+      `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`,;
+    [];
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
   const autoFetchMetrics = useCallback(async () => {;
     const files = Array.from(e.dataTransfer.files || []);
@@ -236,6 +317,10 @@ export default function PitchGenerator(req, res) {
     setLoading(true);
     try {;
       const res = await fetch('/api/admin/pitch/metrics');
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     >;
       <div className='font - semibold text - sm line - clamp - 2'>;
         {slide.title || 'Untitled'}
@@ -260,10 +345,15 @@ if (return result) {
       const res = await fetch ('/api / admin / pitch / metrics');
       const data = await res.json ();
       return data;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     } catch (e) {;
       return {};
     } finally {;
       setLoading(false);    }
+<<<<<<< HEAD
       const data = await res.json();
     </button>
   )
@@ -312,10 +402,16 @@ export default function PitchGenerator() {
       setLoading(false)
     }
 }, []);
+=======
+
+  }, []);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const buildDeck = useCallback(async () => {;
     setLoading(true);
     try {;
       const metrics = await autoFetchMetrics();
+<<<<<<< HEAD
       const res = await fetch('/api/admin/pitch/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -346,6 +442,10 @@ operatorPrompt;
       setHistory(h => [;
         { id: uid(), createdAt: new Date().toISOString(), version: v },;
         ...h,;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       ]);
     } catch (e) {;
       // noop;
@@ -353,6 +453,10 @@ operatorPrompt;
       setLoading(false);
     }
   }, [autoFetchMetrics, builder, operatorPrompt]);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   const build_deck = useCallback (async () => {
     set_loading (true);
@@ -395,6 +499,10 @@ if (return) {
           method: 'POST',
           headers: { 'Content - Type': 'application / json' },
           body: JSON.stringify ({ slide: slides[idx] }),
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         });
         const json = await res.json ();
         set_slides (arr =>;
@@ -469,8 +577,35 @@ if (return) {
                   ...s
                   title: json.title |s.title
                   content: json.content |s.content
+<<<<<<< HEAD
     },;
     [slides];
+=======
+<<<<<<< HEAD
+  const rephraseSlide = useCallback(;
+    async (idx: number) => {;
+      if (!slides[idx]) return;
+      setLoading(true),;
+      try {;
+        const res = await fetch('/api/admin/pitch/rewrite', {;
+          method: 'POST',;
+          headers: { 'Content-Type': 'application/json' },;
+          body: JSON && JSON.stringify({ slide: slides[idx] }),;
+        });
+        const json = await res && res.json();
+        setSlides(arr =>;
+          arr && arr.map((s, i) =>;
+            i === idx;
+              ? {;
+                  ...s,;
+                  title: json && json.title || s && s.title,;
+                  content: json && json.content || s && s.content,;
+                }
+
+    },;
+    [slides];
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
   const addSlide = useCallback(async () => {;
 
@@ -549,11 +684,16 @@ if (return) {
           title: json && json.title || 'New Slide',;
           content: json && json.content || '',;
         },;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       ]);
       setActiveIndex(slides && slides.length);
     } catch (e) {;
     } finally {;
       setLoading(false);    }
+<<<<<<< HEAD
       setHistory((h) => [{ id: uid(), createdAt: new Date().toISOString(), version: v }, ...h])
     } catch (e) {
       // noop
@@ -708,6 +848,10 @@ const json = await res.json();
     try {
       const res = await fetch('/api/admin/pitch/export', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slides, format: 'pdf', version: versionTag }) }),;
       const blob = await res.blob();
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
@@ -719,10 +863,20 @@ const json = await res.json();
     } finally {
       setLoading(false)
     }
+<<<<<<< HEAD
 }, [slides, versionTag]);
   const exportGoogleSlides = useCallback(async () => {
     setLoading(true);
     try {
+=======
+
+  }, [slides, versionTag]);
+  const exportGoogleSlides = useCallback(async () => {
+    setLoading(true);
+    try {
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }, [slides && slides.length]);
   const exportPdf = useCallback(async () => {;
     setLoading(true);
@@ -762,6 +916,7 @@ const json = await res.json();
     } finally {;
       setLoading(false);    }
   }, [slides, versionTag]);
+<<<<<<< HEAD
       const res = await fetch('/api/admin/pitch/export', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slides, format: 'gslides', version: versionTag }) }),
       const json = await res.json();
       if (json && json.url) {
@@ -778,10 +933,16 @@ const json = await res.json();
   const renderChartPreview = (slide: Slide) => {
     if (!slide.chart) return null
     const { type, data } = slide.chart;
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const updateActiveSlide = (updates: Partial<Slide>) => {;
     setSlides(arr =>;
       arr && arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s));
     );  };
+<<<<<<< HEAD
   const renderChartPreview = (slide: Slide) => {;
     if (!slide && slide.chart) return null,;
     const { type, data } = slide && slide.chart;
@@ -852,6 +1013,18 @@ const json = await res.json();
     if (!slide.chart) return null,
     const { type, data } = slide.chart,
     return (
+=======
+
+  const renderChartPreview = (slide: Slide) => {;
+    if (!slide && slide.chart) return null,;
+    const { type, data } = slide && slide.chart;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    return (
+
+
+    return (
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="mt-3">
         <div className="text-xs text-gray-500 dark:text-gray-400">Chart preview: {type}</div>
         <div className="flex gap-2 items-end h-24 mt-2">
@@ -867,6 +1040,7 @@ const json = await res.json();
               <div className="flex flex-col gap-1">
                 {data.map((d, idx) => (
 
+<<<<<<< HEAD
                   <div key={d.label} className="bg-purple-500 text-white text-xs px-2 py-1" style={{ width: `${100 - idx * 12}%` }}>{d.label}: {d.value}</div>
                   <div
                     key={d.label}
@@ -879,6 +1053,10 @@ const json = await res.json();
             </div>
           )}
                   <div key={d.label} className="bg-purple-500 text-white text-xs px-2 py-1" style={{ width: `${100 - idx * 12}%` }}>{d.label}: {d.value}</div>
+=======
+
+                  <div key={d.label} className="bg-purple-500 text-white text-xs px-2 py-1" style={{ width: `${100 - idx * 12}%` }}>{d.label}: {d.value}</div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -891,6 +1069,12 @@ const json = await res.json();
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {type === 'timeline' && (
             <div className="text-xs grid grid-cols-4 gap-2 w-full">
               {data.map((d) => (
@@ -899,19 +1083,195 @@ const json = await res.json();
                   <div>{d.value}</div>
                 </div>
 
+<<<<<<< HEAD
               ))}
             </div>;
           )}
+=======
+              disabled={loading || slides && slides.length === 0}
+              className='px-3 py-2 rounded bg-gray-900 text-white disabled:opacity-50'>;
+              Download PDF;
+            </button>;
+            <button
+              onClick={exportGoogleSlides}
+              disabled={loading || slides && slides.length === 0}
+              className='px-3 py-2 rounded bg-green-600 text-white disabled:opacity-50'>;
+              : s));
+      } catch (e) {
+      } finally {
+        set_loading (false);
+      }
+    },
+    [slides]);
+  const add_slide = useCallback (async () => {
+    set_loading (true);
+    try {
+      const res = await fetch ('/api / admin / pitch / add - slide', { method: 'POST' });
+      const json = await res.json ();
+      set_slides (arr => [;
+        ...arr,
+        {
+          id: uid (),
+          title: json.title || 'New Slide',
+          content: json.content || '',
+        },
+      ]);
+      setActiveIndex (slides.length);
+    } catch (e) {
+    } finally {
+      set_loading (false);    }
+  }, [slides.length]);
+;
+  const export_pdf = useCallback (async () => {
+    set_loading (true);
+    try {
+      const res = await fetch ('/api / admin / pitch / export', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({ slides, format: 'pdf', version: version_tag }),
+      });      const blob = await res.blob ();
+      const url = URL.createObjectURL (blob);
+      const array = document.create_element ('a');
+      a.href = url;
+      a.download = `pitch - deck-${version_tag || 'draft'}.pdf`;
+      a.click ();
+      URL.revokeObjectURL (url);
+    } catch (e) {
+    } finally {
+      set_loading (false);    }
+  }, [slides, version_tag]);
+;
+  const exportGoogleSlides = useCallback (async () => {
+    set_loading (true);
+    try {
+      const res = await fetch ('/api / admin / pitch / export', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({
+          slides,
+          format: 'gslides',
+          version: version_tag,
+        }),
+      });
+      const json = await res.json ();
+      // Check condition
+if ( {) {
+  $2
+}
+        window.open (json.url, '_blank');
+      }
+    } catch (e) {
+    } finally {
+      set_loading (false);    }
+  }, [slides, version_tag]);
+;
+  const updateActiveSlide = (updates: Partial < Slide>) =>: any {
+    set_slides (arr =>;
+      arr.map ((s, i) => (index === active_index ? { ...s, ...updates } : s)));  }
+;
+  const renderChartPreview = (slide: Slide) =>: any {
+    // Check condition
+if (return null, ) {
+  $2
+}
+    const { type, data } = slide.chart;
+    return (
+      <div className='mt - 3'>;
+        <div className='text - xs text - gray - 500 dark:text - gray - 400'>;
+          Chart preview: {type}
+        </div>;
+        <div className='flex gap - 2 items - end h - 24 mt - 2'>;
+          {type === 'bar' &&;
+            data.map (d => (
+              <div;
+                key={d.label}
+                className='bg - blue - 500 w - 6';
+                style={{ height: `${Math.max (4, d.value)}px` }}
+                title={`${d.label}: ${d.value}`}
+              />))}
+          {type === 'funnel' && (
+            <div className='w - full'>;
+              <div className='flex flex - col gap - 1'>;
+                {data.map ((d, idx) => (
+                  <div;
+                    key={d.label}
+                    className='bg - purple - 500 text - white text - xs px - 2 py - 1';
+                    style={{ width: `${100 - idx * 12}%` }}
+                  >;
+                    {d.label}: {d.value}
+                  </div>                ))}
+              </div>;
+            </div>)}
+          {type === 'timeline' && (
+            <div className='text - xs grid grid - cols - 4 gap - 2 w - full'>;
+              {data.map (d => (
+                <div key={d.label} className='border p - 1 rounded'>;
+                  <div className='font - medium'>{d.label}</div>                  <div>{d.value}</div>;
+                </div>))}
+            </div>)}
+        </div>;
+      </div>);
+  }
+;
+  return (
+    <>;
+      <Head>;
+        <title > Pitch Generator - Admin</title>;
+        <meta name="description" content="Generate pitch decks and presentations" />;
+      </Head>;
+      <div className='space - y-6'>;
+        <div className='flex items - center justify - between'>;
+          <h1 className='text - 2xl font - semibold'>Pitch Generator</h1>;
+          <div className='flex gap - 2'>;
+            <button;
+              on_click={build_deck}
+              disabled={loading}
+              className='px - 3 py - 2 rounded bg - blue - 600 text - white disabled:opacity - 50';
+            >;
+              Generate Deck;
+            </button>;
+            <button;
+              on_click={export_pdf}
+              disabled={loading || slides.length === 0}
+              className='px - 3 py - 2 rounded bg - gray - 900 text - white disabled:opacity - 50';
+            >;
+              Download PDF;
+            </button>;
+            <button;
+              on_click={exportGoogleSlides}
+              disabled={loading || slides.length === 0}
+              className='px - 3 py - 2 rounded bg - green - 600 text - white disabled:opacity - 50';
+            >;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Export to Google Slides;
             </button>;
           </div>;
         </div>;
+<<<<<<< HEAD
                 className='w-full border rounded px-2 py-1 bg-transparent';
               />;
+=======
+
+                className='w-full border rounded px-2 py-1 bg-transparent';
+              />;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div
                 onDrop={onAssetDrop}
                 onDragOver={prevent}
                 onDragEnter={prevent}
+<<<<<<< HEAD
+=======
+
+                className='px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm'
+              >
+                Refresh
+              </button>
+              <ul className='text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300'>                <li>Active users (30d)</li>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </div>
       </div>
     )
@@ -965,6 +1325,7 @@ const json = await res.json();
       </Head>
 
 
+<<<<<<< HEAD
       <div className='space-y-6'>
         <div className='flex items-center justify-between'>
           <h1 className='text-2xl font-semibold'>Pitch Generator</h1>
@@ -1051,6 +1412,9 @@ const json = await res.json();
                 onDragEnter={prevent}
                 className='mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400'
               >
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="space-y-6">
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-semibold">Pitch Generator</h1>
@@ -1060,6 +1424,7 @@ const json = await res.json();
             <button onClick={exportGoogleSlides} disabled={loading || slides.length === 0} className="px-3 py-2 rounded bg-green-600 text-white disabled:opacity-50">Export to Google Slides</button>
           </div>
         </div>
+<<<<<<< HEAD
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
           <div className='lg:col-span-1 space-y-4'>
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
@@ -1120,6 +1485,11 @@ const json = await res.json();
               <label className="block text-sm mt-3 mb-1">Target raise amount</label>
               <input value={builder.targetRaise} onChange={(e) => setBuilder({ ...builder, targetRaise: e.target.value })} className="w-full border rounded px-2 py-1 bg-transparent" />
               <div onDrop={onAssetDrop} onDragOver={prevent} onDragEnter={prevent} className="mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400">
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 Drag & drop logos, photos here
                 <div className="text-xs mt-1">{builder.assets.length} file(s) added</div>
               </div>
@@ -1138,6 +1508,13 @@ const json = await res.json();
               <button onClick={autoFetchMetrics} className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm">Refresh</button>
               <ul className="text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300">
                 <li>Active users (30d)</li>
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <li>GMV, MRR, YoY growth</li>
                 <li>Total completed projects</li>
                 <li>Global reach</li>
@@ -1145,6 +1522,10 @@ const json = await res.json();
                 <li>Notable clients or case studies</li>
               </ul>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                 Version: {versionTag || '—'}
 
@@ -1153,6 +1534,41 @@ const json = await res.json();
               <ul className='mt-2 space-y-1 text-sm'>
                 {history.map(h => (
                 className='mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400'>;
+<<<<<<< HEAD
+=======
+                Drag & drop logos, photos here;
+                <div className='text-xs mt-1'>;
+                  {builder && builder.assets.length} file(s) added;
+                </div>;
+              </div>;
+            </div>;
+            <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>;
+              <div className='font-medium mb-2'>Auto Data</div>;
+              <button
+                onClick={autoFetchMetrics}
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                className='px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm'>;
+                Refresh;
+              </button>;
+              <ul className='text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300'>                <li>Active users (30d)</li>;
+                <li>GMV, MRR, YoY growth</li>;
+                <li>Total completed projects</li>;
+                <li>Global reach</li>;
+                <li>Conversion funnel</li>;
+                <li>Notable clients or case studies</li>;
+              </ul>;
+            </div>;
+            <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>;
+              <div className='font-medium mb-2'>History</div>;
+              <div className='text-xs text-gray-500 dark:text-gray-400'>;
+                Version: {versionTag || '—'}
+              </div>;
+              <ul className='mt-2 space-y-1 text-sm'>;
+                {history && history.map(h => (;
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <li
                     key={h && h.id}
                     className='flex justify-between border rounded px-2 py-1'>;
@@ -1161,6 +1577,11 @@ const json = await res.json();
                       {new Date(h && h.createdAt).toLocaleString()}
                     </span>                  </li>;
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="font-medium mb-2">History</div>
               <div className="text-xs text-gray-500 dark:text-gray-400">Version: {versionTag || '—'}</div>
@@ -1170,7 +1591,14 @@ const json = await res.json();
                     <span>{h.version}</span>
                     <span className="text-gray-500 dark:text-gray-400">{new Date(h.createdAt).toLocaleString()}</span>
                   </li>
+<<<<<<< HEAD
                 ))}
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                ))}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </ul>;
             </div>;
           </div>;
@@ -1184,6 +1612,10 @@ const json = await res.json();
               </div>;
               <div className='mt-3 flex gap-3 overflow-x-auto py-2'>;
                 {slides && slides.map((s, i) => (;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <SlidePreview
                     key={s && s.id}
                     slide={s}
@@ -1193,6 +1625,10 @@ const json = await res.json();
                 ))}
                 <button
                   onClick={addSlide}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   className='w-56 shrink-0 border rounded-md p-3 text-left bg-gray-50 dark:bg-gray-800 border-dashed border-2 text-gray-500'>;
         <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 6'>;
           <div className='lg:col - span - 1 space - y-4'>;
@@ -1313,10 +1749,18 @@ const json = await res.json();
                   on_click={add_slide}
                   className='w - 56 shrink - 0 border rounded - md p - 3 text - left bg - gray - 50 dark:bg - gray - 800 border - dashed border - 2 text - gray - 500';
                 >;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   + Add Slide;
                 </button>;
               </div>;
             </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Active Slide Editor */}
             {active_slide && (
               <div className='border rounded - md p - 4 bg - white / 70 dark:bg - gray - 900'>;
@@ -1331,11 +1775,19 @@ const json = await res.json();
                       on_click={() => rephrase_slide (active_index)}
                       disabled={loading}
                       className='px - 2 py - 1 rounded bg - blue - 600 text - white text - sm disabled:opacity - 50';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     >;
                       Rephrase;
                     </button>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 />;
                 <div className='mt-4 grid grid-cols-3 gap-2 text-sm'>;
                   <button
@@ -1351,12 +1803,20 @@ const json = await res.json();
                           ],;
                         },;
                       });
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     }
                     className='border rounded px-2 py-1';
                   >;
                     Bar Chart;
                   </button>;
                   <button
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     onClick={() =>;
                       updateActiveSlide({;
                         chart: {;
@@ -1368,12 +1828,20 @@ const json = await res.json();
                           ],;
                         },;
                       });
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     }
                     className='border rounded px-2 py-1';
                   >;
                     Funnel;
                   </button>;
                   <button
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     onClick={() =>;
                       updateActiveSlide({;
                         chart: {;
@@ -1385,6 +1853,10 @@ const json = await res.json();
                           ],;
                         },;
                       });
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     }
                     className='border rounded px-2 py-1';
                   >;
@@ -1392,6 +1864,11 @@ const json = await res.json();
                   </button>;
                 </div>              </div>;
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="lg:col-span-2 space-y-4">
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="flex items-center justify-between">
@@ -1421,6 +1898,11 @@ const json = await res.json();
                 </div>
                 {renderChartPreview(activeSlide)}
               </div>
+<<<<<<< HEAD
+=======
+
+            )}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -1488,12 +1970,22 @@ const json = await res.json();
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
             )}
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>;
         </div>;
       </main>;
     </>;
   );
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </div>
     </EnhancedLayout>
   )
@@ -1621,11 +2113,20 @@ const json = await res.json();
                         },
                       });
                     }
+<<<<<<< HEAD
+=======
+                    className='border rounded px - 2 py - 1';
+                  >;
+                    Timeline;
+                  </button>;
+                </div>              </div>)}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>;
         </div>;
 </main>;
     </>);
 ;
+<<<<<<< HEAD
                     className='border rounded px-2 py-1'
                   >
                     Timeline
@@ -1705,9 +2206,20 @@ const json = await res.json();
       </div>;
     </EnhancedLayout>;
   );
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

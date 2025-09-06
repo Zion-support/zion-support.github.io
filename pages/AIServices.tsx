@@ -1,14 +1,33 @@
 
+<<<<<<< HEAD
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+<<<<<<< HEAD
     return this.props.children;
   }
 }
@@ -322,10 +341,30 @@ origin/automation-improvements-final
 import React from "react";
 import Layout from "../components/Layout";
 origin/main
+=======
+    
+    return this.props.children;
+  }
+}
+
+import React from "react";
+import Layout from "../components/Layout";
+
+import React from 'react';
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function AIServices() {
   return (
     <Layout
       title="AI Services - Zion Tech Group"
+<<<<<<< HEAD
+=======
+      description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more."
+    >
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
             <h1 className="text-4xl font-bold text-gray-900 mb-4">AI Services</h1>
@@ -337,6 +376,10 @@ export default function AIServices() {
             <p className="text-gray-600">AI Services page is under construction.</p>
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -506,6 +549,10 @@ export default function AIServices() {
         </div>
       </div>
     </Layout>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function AIServices() {;
   return (
     <Layout
@@ -524,6 +571,10 @@ export default function AIServices() {;
           </div>;
           <div className="text-center">;
             <p className="text-gray-600">;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from './react';
 import Layout from "../components / Layout";
 ;
@@ -549,6 +600,10 @@ function AIServices() {
           </div>;
           <div className="text - center">;
             <p className="text - gray - 600">;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               AI Services page is under construction.;
             </p>;
           </div>;
@@ -556,6 +611,7 @@ function AIServices() {
       </div>;
 
 
+<<<<<<< HEAD
       description="Comprehensive AI solutions for modern businesses"
       description="Comprehensive AI services including machine learning, computer vision, NLP, and cutting-edge quantum AI solutions."
     >
@@ -1257,6 +1313,8 @@ origin/automation-improvements-final
       </div>
     </Layout>;
   );
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1269,7 +1327,15 @@ origin/automation-improvements-final
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
+=======
+
+
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -1363,6 +1429,7 @@ export default function AIServices() {
     </Layout>
   );
 
+<<<<<<< HEAD
 }
 }
     </Layout>);
@@ -1373,3 +1440,19 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
 }
+=======
+
+
+}
+
+=======
+
+>>>>>>> origin/automation-improvements-final
+=======
+}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+    </Layout>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

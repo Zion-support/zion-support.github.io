@@ -1,9 +1,15 @@
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import {useEffect, useState} from 'react';
 
 
 
+<<<<<<< HEAD
 import { useEffect, useState  } from 'react';
 import { Header  } from '@/components/Header';
 import { Footer  } from '@/components/Footer';
@@ -30,11 +36,19 @@ import {ProtectedRoute} from '@/components/ProtectedRoute';
 import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs';
 import {useToast} from '@/hooks/use-toast';
 export default function TokenManager() {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const { user } = useAuth();
   const { toast } = useToast();
   const [transactions, setTransactions] = useState<TokenTransaction[]>([]),
   const [userId, setUserId] = useState('');
   const [amount, setAmount] = useState(0);
+<<<<<<< HEAD
+=======
+
+  const isAdmin = user?.userType === 'admin';
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {Header} from '@/components / Header';
 import {Footer} from '@/components / Footer';
 import {Card, CardContent, CardHeader, CardTitle} from '@/components / ui / card';
@@ -130,8 +144,12 @@ if ( {) {
 
   };
 
+<<<<<<< HEAD
   }
   };
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useEffect, useState } from 'react',;
 import { Header } from '@/components/Header',;
 import { Footer } from '@/components/Footer',;
@@ -151,6 +169,7 @@ export default function TokenManager() {;
   const [userId, setUserId] = useState(''),;
   const [amount, setAmount] = useState(0),;
   const isAdmin = user?.userType === 'admin',;
+<<<<<<< HEAD
       });
       fetch_transactions ();
     } else {
@@ -186,19 +205,34 @@ export default function TokenManager() {;
   useEffect(() => {;
     if (isAdmin) fetchTransactions();
   }, [isAdmin]),;
+=======
+
+  useEffect(() => {;
+    if (isAdmin) fetchTransactions();
+  }, [isAdmin]);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const fetchTransactions = async () => {;
     const { data, error } = await supabase;
       .from('token_transactions');
       .select('*');
       .order('created_at', { ascending: false });
+<<<<<<< HEAD
       .limit(100),;
     if (!error) setTransactions(data || []);
   },;
+=======
+      .limit(100);
+    if (!error) setTransactions(data || []);
+  };
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleIssue = async (type: 'earn' | 'burn') => {;
     if (!userId || amount <= 0) return,;
     const res = await fetch(`/functions/v1/token-manager/${type === 'earn' ? 'earn' : 'burn'}`, {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
+<<<<<<< HEAD
   }
   return (
       .order('created_at', { ascending:false });
@@ -229,6 +263,33 @@ export default function TokenManager() {;
   },;
 ;
   return (;
+=======
+      body: JSON && JSON.stringify({ userId, amount })});
+    if (res && res.ok) {;
+      toast({;
+        title: 'Success',;
+        description: 'Transaction processed';
+      });
+      fetchTransactions();
+    } else {;
+      const err = await res && res.json();
+      toast({;
+        title: 'Error',;
+        description: err && err.error || 'Failed',;
+        variant: 'destructive';
+      });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    }
+
+  },
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+  return (
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <ProtectedRoute adminOnly>;
       <div>;
         <Header />;
@@ -240,14 +301,32 @@ export default function TokenManager() {;
                 <CardTitle>Issue or Revoke Tokens</CardTitle>;
               </CardHeader>;
               <CardContent className="space-y-4">;
+<<<<<<< HEAD
                 <Input placeholder="User ID" value={userId} onChange={e => setUserId(e.target.value)} />;
                 <Input type="number" placeholder="Amount" value={amount} onChange={e => setAmount(parseInt(e.target.value))} />;
+=======
+                <Input placeholder="User ID" value={userId} onChange={e => setUserId(e && e.target.value)} />;
+                <Input type="number" placeholder="Amount" value={amount} onChange={e => setAmount(parseInt(e && e.target.value))} />;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div className="flex gap-2">;
                   <Button onClick={() => handleIssue('earn')}>Issue</Button>;
                   <Button variant="destructive" onClick={() => handleIssue('burn')}>Revoke</Button>;
                 </div>;
               </CardContent>;
             </Card>;
+<<<<<<< HEAD
+=======
+
+            <Tabs defaultValue="history">;
+=======
+      const err = await res.json ();
+      toast ({
+        title: 'Error',
+        description: err.error || 'Failed',
+        variant: 'destructive';
+      });
+    }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 ;
   return (
@@ -271,12 +350,17 @@ export default function TokenManager() {;
               </CardContent>;
             </Card>;
             <Tabs default_value="history">;
+<<<<<<< HEAD
 ;
             <Tabs defaultValue="history">;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <TabsList>;
                 <TabsTrigger value="history">Transaction History</TabsTrigger>;
               </TabsList>;
               <TabsContent value="history">;
+<<<<<<< HEAD
                 <ul className="space-y-2">;
                   {transactions.map(tx => (;
                     <li key={tx.id} className="flex justify-between border-b py-2 text-white">;
@@ -284,6 +368,16 @@ export default function TokenManager() {;
                       <span>{tx.transaction_type === 'earn' ? '' :'-'}{tx.amount}</span>;
                     </li>;
                   ))}
+=======
+
+                <ul className="space - y-2">;
+                  {transactions.map (tx => (
+                    <li key={tx.id} className="flex justify - between border - b py - 2 text - white">;
+                      <span>{tx.user_id}</span>;
+                      <span>{tx.transaction_type === 'earn' ? '+' : '-'}{tx.amount}</span>;
+                    </li>))}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </ul>;
               </TabsContent>;
             </Tabs>;
@@ -291,6 +385,7 @@ export default function TokenManager() {;
         </div>;
         <Footer />;
       </div>;
+<<<<<<< HEAD
     </ProtectedRoute>;
   ),; const fetchTransactions = async () => {
   const {
@@ -358,4 +453,9 @@ return (<ProtectedRoute adminOnly> <div> <Header /> <div className="min-h-screen
       </div>
     </ProtectedRoute>
   )
+=======
+
+    </ProtectedRoute>);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }

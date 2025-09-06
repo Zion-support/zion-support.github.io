@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     onboardingStatus.responseReceived
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all")
@@ -120,6 +121,19 @@ function ClientDashboardContent() {
                 <TabsTrigger value="closed" className={isMobile ? 'flex-1' : ''}>Closed</TabsTrigger>
               </TabsList>
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+function ClientDashboardContent() {;
+  const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
+  const { jobs, isLoading } = useJobs();
+  const [selectedJobId, setSelectedJobId] = useState<string | null>(null);
+  const [selectedJobTitle, setSelectedJobTitle] = useState<string>("");
+  const isMobile = useIsMobile();
+  const onboardingStatus = useOnboardingStatus();
+  const showAdvanced =;
+    onboardingStatus && onboardingStatus.jobPosted &&;
+    onboardingStatus && onboardingStatus.inviteSent &&;
+    onboardingStatus && onboardingStatus.responseReceived;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import { useState, useEffect } from "react",;
 import { JobsList } from "@/components/jobs/JobsList",;
@@ -254,6 +268,7 @@ if ( {) {
               <AdvancedOnboardingSteps />
             </div>
           )}
+<<<<<<< HEAD
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
@@ -266,6 +281,13 @@ if ( {) {
                 <TabsTrigger value="closed" className={isMobile ? 'flex-1' : ''}>Closed</TabsTrigger>
               </TabsList>
               
+=======
+
+
+              
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <TabsContent value="all" className="mt-0">
               </TabsContent>
               <TabsContent value="new" className="mt-0">
@@ -282,10 +304,51 @@ if ( {) {
               </TabsContent>
             </Tabs>
           </div>
+<<<<<<< HEAD
   return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"}
           
           <div>
             <div className="sticky top-4 space-y-6">
+=======
+
+        {/* New Onboarding Steps */}
+        <div className="mb - 8">;
+          <ClientOnboardingSteps />;
+          {show_advanced && (
+            <div className="mt - 6">;
+              <AdvancedOnboardingSteps />;
+            </div>)}
+        </div>;
+        <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 8">;
+          <div className="lg:col - span - 2">;
+            <Tabs default_value="all" onValueChange={(value, ) => setActiveTab (value as JobStatus | "all")}>;
+              <TabsList className={`mb - 6 ${is_mobile ? 'w - full' : ''}`}>;
+                <TabsTrigger value="all" className={is_mobile ? 'flex - 1' : ''}>All</TabsTrigger>;
+                <TabsTrigger value="new" className={is_mobile ? 'flex - 1' : ''}>New</TabsTrigger>;
+                <TabsTrigger value="in_progress" className={is_mobile ? 'flex - 1' : ''}>Active</TabsTrigger>;
+                <TabsTrigger value="filled" className={is_mobile ? 'flex - 1' : ''}>Filled</TabsTrigger>;
+                <TabsTrigger value="closed" className={is_mobile ? 'flex - 1' : ''}>Closed</TabsTrigger>;
+              </TabsList>;
+              <TabsContent value="all" className="mt - 0">;
+                <JobsList onSelectJob={handleJobSelect} />;
+              </TabsContent>;
+              <TabsContent value="new" className="mt - 0">;
+                <JobsList filter="new" onSelectJob={handleJobSelect} />;
+              </TabsContent>;
+              <TabsContent value="in_progress" className="mt - 0">;
+                <JobsList filter="in_progress" onSelectJob={handleJobSelect} />;
+              </TabsContent>;
+              <TabsContent value="filled" className="mt - 0">;
+                <JobsList filter="filled" onSelectJob={handleJobSelect} />;
+              </TabsContent>;
+              <TabsContent value="closed" className="mt - 0">;
+                <JobsList filter="closed" onSelectJob={handleJobSelect} />;
+              </TabsContent>;
+            </Tabs>;
+          </div>;
+          <div>;
+            <div className="sticky top - 4 space - y-6">;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {/* Active Projects Card */}
               <ActiveProjectsCard />;
               {/* Upcoming Interviews Card */}
@@ -297,6 +360,7 @@ if ( {) {
                   AI Talent Suggestions;
                 </h2>;
 
+<<<<<<< HEAD
           <div>
             <div className="sticky top-4 space-y-6">
               {/* Active Projects Card */}
@@ -309,6 +373,8 @@ if ( {) {
                   <BriefcaseIcon className="mr-2 h-5 w-5 text-primary" />
                   AI Talent Suggestions
                 </h2>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {selectedJobId ? (
                   <SuggestedTalents jobId={selectedJobId} />
                 ) : (
@@ -327,6 +393,43 @@ if ( {) {
   )
 }
 
+<<<<<<< HEAD
+=======
+        </div>;
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
+          <div className="lg:col-span-2">;
+            <Tabs defaultValue="all" onValueChange={(value,) => setActiveTab(value as JobStatus | "all")}>;
+              <TabsList className={`mb-6 ${isMobile ? 'w-full' : ''}`}>;
+                <TabsTrigger value="all" className={isMobile ? 'flex-1' : ''}>All</TabsTrigger>;
+                <TabsTrigger value="new" className={isMobile ? 'flex-1' : ''}>New</TabsTrigger>;
+                <TabsTrigger value="in_progress" className={isMobile ? 'flex-1' : ''}>Active</TabsTrigger>;
+                <TabsTrigger value="filled" className={isMobile ? 'flex-1' : ''}>Filled</TabsTrigger>;
+                <TabsTrigger value="closed" className={isMobile ? 'flex-1' : ''}>Closed</TabsTrigger>;
+              </TabsList>;
+
+              <TabsContent value="all" className="mt-0">;
+                <JobsList onSelectJob={handleJobSelect} />;
+              </TabsContent>;
+              <TabsContent value="new" className="mt-0">;
+                <JobsList filter="new" onSelectJob={handleJobSelect} />;
+              </TabsContent>;
+              <TabsContent value="in_progress" className="mt-0">;
+                <JobsList filter="in_progress" onSelectJob={handleJobSelect} />;
+              </TabsContent>;
+              <TabsContent value="filled" className="mt-0">;
+                <JobsList filter="filled" onSelectJob={handleJobSelect} />;
+              </TabsContent>;
+              <TabsContent value="closed" className="mt-0">;
+                <JobsList filter="closed" onSelectJob={handleJobSelect} />;
+              </TabsContent>;
+            </Tabs>;
+          </div>;
+
+          <div>;
+            <div className="sticky top-4 space-y-6">;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"};
 ;
 
@@ -334,6 +437,7 @@ if ( {) {
           <div>
             <div className="sticky top-4 space-y-6">
 
+<<<<<<< HEAD
 export default function ClientDashboard() {
   return (
     <ProtectedRoute>
@@ -379,6 +483,8 @@ return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Mana
           
           <div>
             <div className="sticky top-4 space-y-6">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {/* Active Projects Card */}
               <ActiveProjectsCard />;
               {/* Upcoming Interviews Card */}
@@ -413,6 +519,11 @@ export default function ClientDashboard() {;
       <ClientDashboardContent />;
     </ProtectedRoute>;
   );
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export default /**
  * ClientDashboard - Function description
@@ -460,6 +571,10 @@ return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Mana
 function ClientDashboard() {
   return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"}
 }
+<<<<<<< HEAD
 ;
 }
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

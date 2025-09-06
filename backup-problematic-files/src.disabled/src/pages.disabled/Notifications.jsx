@@ -9,4 +9,8 @@ const Notifications = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Notifications;
+=======
+export default Notifications;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

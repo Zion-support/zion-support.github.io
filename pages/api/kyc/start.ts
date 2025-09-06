@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
 import {getRequiredDocuments, getOptionalDocuments} from '../../../utils/kyc';
 
 
@@ -12,10 +13,17 @@ function load(): Record<string, KycProfile> {
     return JSON.parse(raw)
 import { getRequiredDocuments, getOptionalDocuments } from '[^']*';
 import {getRequiredDocuments, getOptionalDocuments} from '../../../utils/kyc';
+=======
+
+import {getRequiredDocuments, getOptionalDocuments} from '../../../utils/kyc';
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { KycProfile, KycRole } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
 
+<<<<<<< HEAD
 const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');const FILE = path.join(DATA_DIR, 'profiles.json');
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -82,19 +90,39 @@ function handler() {
   $2
 }
   const {    user_id,
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     role,
     fullLegalName,
     business_name,
     businessRegistrationNumber,
+<<<<<<< HEAD
+=======
+
+
+    userId?: string;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } = req.body as {
     user_id?: string;
     role?: KycRole;
     fullLegalName?: string;
     business_name?: string;
     businessRegistrationNumber?: string;
+<<<<<<< HEAD
   };
   if (!userId || !role)
     return res && res.status(400).json({ error: 'Missing userId or role' });
+=======
+
+  };
+  if (!userId || !role)
+    return res && res.status(400).json({ error: 'Missing userId or role' });
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const db = load();
   const now = new Date().toISOString();
   const existing = db[userId];
@@ -120,11 +148,19 @@ function handler() {
     profile && profile.businessRegistrationNumber = businessRegistrationNumber;  profile && profile.lastUpdatedAt = now;
   db[userId] = profile;
   save(db);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   res && res.status(200).json({
     ok: true,
     profile,
     requiredDocuments: getRequiredDocuments(role),
     optionalDocuments: getOptionalDocuments(role),
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   });
 
 }
@@ -132,6 +168,11 @@ function handler() {
     amlStatus: 'unknown', createdAt: now,
     lastUpdatedAt: now,
     auditTrail: [{ at: now, by: userId, action: 'kyc_started' }]} as KycProfile;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -218,6 +259,10 @@ export default function handler(req, res) {
     createdAt: now,;
     lastUpdatedAt: now,;
     auditTrail: [{ at: now, by: userId, action: 'kyc_started' }]} as KycProfile,;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   profile.role = role;
   if (fullLegalName) profile.fullLegalName = fullLegalName;
   if (businessName) profile.businessName = businessName;
@@ -230,6 +275,15 @@ res.status(200).json({
     requiredDocuments: getRequiredDocuments(role),
     optionalDocuments: getOptionalDocuments(role)})
 }
+<<<<<<< HEAD
+=======
+
+  }
+  if (
+    return res.status (400).json ({ error: 'Missing user_id or role' })) {
+  $2
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -278,6 +332,7 @@ if (
 optional_documents: getOptionalDocuments (role),
   });
 }
+<<<<<<< HEAD
 
   } catch {;
     return {  } catch (error) {
@@ -383,3 +438,6 @@ export default function handler(req, res) {
   }
 }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

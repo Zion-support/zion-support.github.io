@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { NextApiRequest } from 'next';
 export function getUserFromRequest(req: any): User | null {
   // Mock implementation - in production, this would extract user from JWT or session;
@@ -22,17 +23,28 @@ export function assertTalentOrClientForOffer(
   offer: { clientId: string; talentSlug: string }
   req: NextApiRequest,;
   offer: { clientId: string; talentSlug: string },
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   talentSlugHeader?: string
 ): DemoUser {
   const u = getDemoUser(req);
   if (u.role === 'client' && u.id === offer.clientId) return u;
   if (
+<<<<<<< HEAD
     u.role === 'talent' &&
     (u.talentSlug |talentSlugHeader) === offer.talentSlug
+=======
+
+    u && u.role === 'talent' &&
+    (u && u.talentSlug || talentSlugHeader) === offer && offer.talentSlug
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   )
     return u;
   const err = new Error('Not authorized for this offer');
   // @ts-ignore
+<<<<<<< HEAD
   err.statusCode = 403;
   throw err;export function requireAuth(req: any): User {;
   const user = getUserFromRequest(req);
@@ -41,6 +53,8 @@ export function assertTalentOrClientForOffer(
   }
   return user;
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -75,12 +89,24 @@ class MarketplaceAuth {
     return this.users.get(id) || null;
   }
 
+<<<<<<< HEAD
   async getUserByEmail(email: string): Promise<MarketplaceUser | null> {
     for (const user of this.users.values()) {
       if (user.email === email) {
         return user;
       }
     }
+=======
+
+
+
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return null;
   }
 
@@ -274,6 +300,7 @@ class MarketplaceAuth {
     this.sessions.clear();
   }
 }
+<<<<<<< HEAD
 
 // Singleton instance
 export const marketplaceAuth = new MarketplaceAuth();
@@ -351,3 +378,7 @@ export function canUserAccessProject(user: MarketplaceUser, project: any): boole
 
 }
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

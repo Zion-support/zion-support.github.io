@@ -5,7 +5,19 @@ import React from 'react';
 
 
 const contactMethods = [
+<<<<<<< HEAD
 import {
+=======
+=======
+  EnvelopeIcon,
+  PhoneIcon,
+  MapPinIcon,
+  ClockIcon,
+  ChatBubbleLeftRightIcon;
+} from '@heroicons / react / 24 / outline';
+const contact_methods = [;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   EnvelopeIcon
   PhoneIcon
   MapPinIcon
@@ -22,6 +34,10 @@ const contactMethods = [
     href: 'mailto:contact@ziontechgroup.com'
     icon: EnvelopeIcon}
   {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     name: 'Phone',
     description: 'Speak with an expert',
     value: '+1 (555) 123 - 4567',
@@ -53,12 +69,23 @@ const office_locations = [;
     email: 'tokyo@ziontechgroup.com',
     hours: 'Mon - Fri: 9:00 AM - 6:00 PM JST'}];
 const faqs = [;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   {
     question: 'What industries do you serve?'
     answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, and technology. Our AI solutions are designed to be adaptable across different sectors.'}
   {
+<<<<<<< HEAD
     question: 'How long does implementation take?',
     answer: 'Implementation timelines vary depending on the complexity of your project. Simple integrations can take 2 - 4 weeks, while complex enterprise solutions typically take 3 - 6 months.'},
+=======
+
+    question: 'How long does implementation take?',
+    answer: 'Implementation timelines vary depending on the complexity of your project. Simple integrations can take 2 - 4 weeks, while complex enterprise solutions typically take 3 - 6 months.'},
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   {
     question: 'Do you provide ongoing support?'
     answer: 'Yes, we provide comprehensive ongoing support including technical assistance, updates, training, and optimization services to ensure your AI solutions continue to deliver value.'}
@@ -70,6 +97,10 @@ export default /**
  * ContactPage - Function description
  */
 function ContactPage() {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className=&quot;bg - black & quot;>;
 
@@ -81,6 +112,21 @@ function ContactPage() {
           <div className=&quot;text - center & quot;>;
             <h1 className=&quot;text - 4xl font - bold tracking - tight text - white sm:text - 6xl & quot;>;
               Get in{' '}
+<<<<<<< HEAD
+=======
+
+
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+              Ready to transform your business with AI? Let's discuss how our cutting-edge 
+
+
+              technology can accelerate your growth and innovation.
+            </p>
+          </div>
+        </div>
+      </div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <span className=&quot;bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent & quot;>;
                 Touch;
               </span>;
@@ -107,6 +153,28 @@ function ContactPage() {
                 <dt className=&quot;flex items - center gap - x-3 text - base font - semibold leading - 7 text - white & quot;>;
                   <method.icon className=&quot;h - 5 w - 5 flex - none text - blue - 400 & quot; aria - hidden=&quot;true & quot; />;
                   {method.name}
+<<<<<<< HEAD
+=======
+
+                </dt>
+
+                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
+                  <p className="flex-auto">{method.description}</p>
+                  <p className="mt-6">
+                    <a 
+                      href={method.href} 
+                      className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200"
+
+
+                    >
+                      {method.value} <span aria-hidden=&quot;true&quot;>→</span>
+                    </Link>
+                  </p>
+                </dd>
+              </div>
+            ))}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </dt>;
                 <dd className=&quot;mt - 4 flex flex - auto flex - col text - base leading - 7 text - gray - 300 & quot;>;
                   <p className=&quot;flex - auto & quot;>{method.description}</p>;
@@ -187,6 +255,10 @@ export default function ContactPage() {
         </div>;
       </div>;
       {/* Contact form */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -266,6 +338,27 @@ export default function ContactPage() {
                     id="message"
                     rows={4}
 
+<<<<<<< HEAD
+=======
+                    className=&quot;block w - full rounded - md border - 0 bg - white / 5 px - 3.5 py - 2 text - white shadow - sm ring - 1 ring - inset ring - white / 10 focus:ring - 2 focus:ring - inset focus:ring - blue - 500 sm:text - sm sm:leading - 6&quot;
+                    default_value={''}
+                  />;
+                </div>;
+              </div>;
+            </div>;
+            <div className=&quot;mt - 8 flex justify - end & quot;>;
+              <button;
+                type=&quot;submit & quot;
+                className=&quot;rounded - md bg - blue - 600 px - 3.5 py - 2.5 text - center text - sm font - semibold text - white shadow - sm hover:bg - blue - 500 focus - visible:outline focus - visible:outline - 2 focus - visible:outline - offset - 2 focus - visible:outline - blue - 600 transition - all duration - 200 hover:scale - 105 & quot;
+              >;
+                Send message;
+              </button>;
+            </div>;
+          </form>;
+        </div>;
+      </div>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Office locations */}
       <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
@@ -432,6 +525,10 @@ export default function ContactPage() {
         </div>;
       </div>;
       {/* FAQ */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -447,6 +544,15 @@ export default function ContactPage() {
             {faqs.map((faq, index) => (
               <div key={index} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
                 <dt className="text-lg font-semibold leading-7 text-white mb-4">
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  {faq.question}
+                </dt>;
+                <dd className=&quot;text - base leading - 7 text - gray - 300 & quot;>;
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
           <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Frequently Asked</h2>
@@ -474,17 +580,24 @@ export default function ContactPage() {
       </div>;
       {/* CTA section */}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
 
 
+<<<<<<< HEAD
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl text-center&quot;>
           <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             Ready to get started?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
@@ -508,3 +621,7 @@ export default function ContactPage() {
 };
 
 export default Page;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

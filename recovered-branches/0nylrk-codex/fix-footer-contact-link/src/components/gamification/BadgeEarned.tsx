@@ -2,11 +2,21 @@
 import React from './react';
 import { getBadgeMeta, BadgeKey } from './badge_config';
 
+<<<<<<< HEAD
 import React from './react';
 import { getBadgeMeta, BadgeKey } from './badge_config';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface BadgeEarnedProps {
   badge: BadgeKey
+<<<<<<< HEAD
 import {getBadgeMeta, BadgeKey} from "./badgeConfig";
+=======
+
+=======
+import {getBadgeMeta, BadgeKey} from "./badgeConfig";
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface BadgeEarnedProps {;
   badge: BadgeKey,;
   size?: number;
@@ -27,6 +37,7 @@ export const BadgeEarned: React.FC < BadgeEarnedProps> = ({
 
 import {getBadgeMeta, BadgeKey} from "./badgeConfig";
 
+<<<<<<< HEAD
 import React from "react";
 import { getBadgeMeta, BadgeKey } from "./badgeConfig";
 interface BadgeEarnedProps {
@@ -43,6 +54,15 @@ import { getBadgeMeta, BadgeKey } from "./badgeConfig",
 import React from "react",
 import { getBadgeMeta, BadgeKey } from "./badgeConfig",
 
+=======
+=======
+import React from "react",
+import { getBadgeMeta, BadgeKey } from "./badgeConfig",
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface BadgeEarnedProps {
   badge: BadgeKey,
   size?: number,
@@ -51,6 +71,7 @@ interface BadgeEarnedProps {
   earnedDate?: string
 }
 
+<<<<<<< HEAD
 export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
   badge;
   size = 44;
@@ -76,16 +97,26 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
 
 
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="flex flex-col items-center text-center gap-1 px-2">;
       <div
         style={{
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           background: meta && meta.bg,
           borderRadius: "9999px",
           width: size,
           height: size,
           display: "flex",
           alignItems: "center",
+<<<<<<< HEAD
           justifyContent: "center"}}
         className="shadow hover-scale"
 
@@ -101,12 +132,22 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
           alignItems: "center"
           justifyContent: "center"}}
         className="shadow hover-scale"
+=======
+
+          justifyContent: "center"}}
+        className="shadow hover-scale"
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         title={meta.name}
       >
         <Icon color={meta.color} size={size * 0.7} />
       </div>
       {showName && (
         <span className="text-xs font-semibold mt-1" style={{ color: meta.color }}>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",;
 import { getBadgeMeta, BadgeKey } from "./badgeConfig",;
 interface BadgeEarnedProps {;
@@ -146,15 +187,44 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
         <span className="text-xs font-semibold mt-1" style={{ color: meta.color }}>;
 
 
+<<<<<<< HEAD
+=======
+          {meta.name}
+        </span>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      )}
+      {earnedDate && (;
+        <span className="text-[10px] text-gray-400">;
+          {earnedDate}
+        </span>;
+      )}
+      {showDesc && (;
+        <span className="text-xs text-zion-slate-light">{meta && meta.description}</span>;
+      )}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     </div>;
   );
 
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>;
   );
 
 
+<<<<<<< HEAD
 };
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   show_name = true;
   show_desc = false,
   earned_date}) => {
@@ -194,6 +264,7 @@ if (return null) {
     </div>);
 }
 ;
+<<<<<<< HEAD
 
 import React from "react",;
 import { getBadgeMeta, BadgeKey } from "./badgeConfig",;
@@ -290,3 +361,6 @@ flex flex-col items-center text-center gap-1 px-2" > <div style= {
     </div>;
   );
 };
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

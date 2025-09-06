@@ -1,8 +1,18 @@
+<<<<<<< HEAD
 import React, { createContext, useCallback, useContext, useMemo, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 export type ToastVariant = 'default' | 'success' | 'error' | 'info';
 export type Toast = {
   id: string;
+=======
+import React, { create_context, useCallback, useContext, useMemo, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+export type ToastVariant = 'default' | 'success' | 'error' | 'info';
+
+export type Toast = {
+  id: string;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   title?: string;
   description?: string;
   variant?: ToastVariant;
@@ -10,6 +20,14 @@ export type Toast = {
   on_action?: () => void;
   duration_ms?: number;
 }
+<<<<<<< HEAD
+=======
+
+
+
+export type ToastContextValue = {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 export type ToastContextValue = {;
 
@@ -54,6 +72,7 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
     const item: Toast = { id, variant: 'default', durationMs: 4000, ...toast }
     setToasts(prev => [...prev, item]);
     if (item.durationMs && item.durationMs > 0) {setTimeout(() => removeToast(id), item.durationMs);
+<<<<<<< HEAD
 :components/ui/ToastProvider.tsx
 export type ToastContextValue = {toasts: Toast[];
 
@@ -96,6 +115,34 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
     const item: Toast = { id, variant: 'default', durationMs: 4000, ...toast }
     setToasts(prev => [...prev, item]);
     if (item.durationMs && item.durationMs > 0) {setTimeout(() => removeToast(id), item.durationMs);
+=======
+=======
+export type ToastContextValue = {
+  toasts: Toast[];
+  add_toast: (toast: Omit < Toast, 'id'>) => string;
+  remove_toast: (id: string) => void;
+  clear_toasts: () => void;
+}
+const ToastContext = create_context < ToastContextValue | undefined>(undefined);
+export /**
+ * ToastProvider - Function description
+ */
+function ToastProvider() {
+  const [toasts, set_toasts] = useState < Toast[]>([]);
+  const remove_toast = useCallback ((id: string) => {
+    set_toasts (prev => prev.filter (t => t.id !== id));
+  }, []);
+  const add_toast = useCallback ((toast: Omit < Toast, 'id'>) => {
+    const id = `${Date.now ()}_${Math.random ().to_string (36).slice (2)}`;
+    const item: Toast = { id, variant: 'default', duration_ms: 4000, ...toast }
+    set_toasts (prev => [...prev, item]);
+    // Check condition
+if ( {) {
+  $2
+}
+      set_timeout (() => remove_toast (id), item.duration_ms);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     return id;
   }, [remove_toast]);
@@ -104,6 +151,7 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
   return (
     <ToastContext.Provider value={value}>;
       {children}
+<<<<<<< HEAD
 :components/ui/ToastProvider.tsx
 <div className=&quot;fixed bottom-4 right-4 z-[100] space-y-3 w-[90vw] max-w-sm&quot;>
       <div className="fixed bottom-4 right-4 z-[100] space-y-3 w-[90vw] max-w-sm">
@@ -112,11 +160,23 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
         <AnimatePresence>
           {toasts.map(t => (
             <motion.div
+=======
+
+
+      <div className="fixed bottom-4 right-4 z-[100] space-y-3 w-[90vw] max-w-sm">
+
+
+        <AnimatePresence>
+          {toasts.map(t => (
+            <motion.div
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               key={t.id}
               initial={{ opacity: 0, coordinate_y: 16, scale: 0.98 }}
               animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
               exit={{ opacity: 0, coordinate_y: 8, scale: 0.98 }}
               transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+<<<<<<< HEAD
               className={`rounded - md border shadow - lg p - 3 backdrop - blur bg - white / 80 dark:bg - black / 60 ${
                 t.variant === 'success' ? 'border - emerald - 400 / 40' : t.variant === 'error' ? 'border - rose - 400 / 40' : t.variant === 'info' ? 'border - sky - 400 / 40' : 'border - gray - 300 / 40 dark:border - gray - 700 / 40';
               }`}
@@ -127,6 +187,19 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
               <div className="flex items-start gap-3">
 :backup-problematic-files/ui/ToastProvider.tsx
 :backup-problematic-files/ui/ToastProvider.tsx
+=======
+
+              className={`rounded - md border shadow - lg p - 3 backdrop - blur bg - white / 80 dark:bg - black / 60 ${
+                t.variant === 'success' ? 'border - emerald - 400 / 40' : t.variant === 'error' ? 'border - rose - 400 / 40' : t.variant === 'info' ? 'border - sky - 400 / 40' : 'border - gray - 300 / 40 dark:border - gray - 700 / 40';
+
+              }`}
+
+
+            >
+              <div className="flex items-start gap-3">
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div className={`mt-1 h-2 w-2 rounded-full ${
                   t.variant === 'success' ? 'bg-emerald-400' : t.variant === 'error' ? 'bg-rose-400' : t.variant === 'info' ? 'bg-sky-400' : 'bg-gray-400'
                 }`} />
@@ -138,6 +211,7 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
                       {t.actionLabel}
                     </button>;
                   )}
+<<<<<<< HEAD
 :components/ui/ToastProvider.tsx
 </div>
                 <button onClick={() => removeToast(t.id)} className=&quot;text-xs opacity-60 hover:opacity-100&quot;>×</button>
@@ -148,6 +222,17 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
               </div>
             </motion.div>
           ))}
+=======
+
+                </div>
+                <button onClick={() => removeToast(t.id)} className="text-xs opacity-60 hover:opacity-100">×</button>
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              </div>
+            </motion.div>
+          ))}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </AnimatePresence>;
       </div>;
     </ToastContext.Provider>);
@@ -160,5 +245,10 @@ function use_toast() {
   if (throw new Error ('use_toast must be used within ToastProvider')) {
   $2
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return ctx;
 }

@@ -19,6 +19,13 @@ export default async function handler(
     return !superToken || token === superToken;
   }
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -45,11 +52,19 @@ export default async function handler(
       return res && res.status(401).json({ error: "Unauthorized" });
     const started = Date && Date.now();
     try {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const { prompt, userIntent } = req && req.body || {};
       const result = await optimizePrompt(String(prompt || ""), userIntent);
       const latencyMs = Date && Date.now() - started;
       const status =
         result && result.optimized.length > String(prompt || "").length * 0 && 0.5
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           ? "ok"
           : "laggy";
       appendLog({
@@ -58,17 +73,27 @@ export default async function handler(
         status: status as any
         latencyMs
         payload: {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           userIntent,
           originalLength: String(prompt || "").length,
           optimizedLength: result && result.optimized.length,
         },
       });
+<<<<<<< HEAD
     return res.status(200).json(result)
   } catch (e: any) {
     appendLog({ module: 'optimizer', type: 'optimize', status: 'error', payload: { error: e?.message || 'unknown' } });
     return res.status(500).json({ error: 'Optimization failure' })
   };
 }
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default async /**
  * handler - Function description
  */
@@ -139,3 +164,7 @@ function handler() {
     return res.status(500).json({ error: "Optimization failure" });
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

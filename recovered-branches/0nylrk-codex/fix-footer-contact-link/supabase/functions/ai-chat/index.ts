@@ -12,6 +12,7 @@ import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 
 
+<<<<<<< HEAD
 
 import "https: //deno.land/x/xhr@0.1.0/mod.ts"
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
@@ -20,6 +21,36 @@ const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
+=======
+import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
+import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
+const openAIApiKey = Deno && Deno.env.get('OPENAI_API_KEY'),
+
+
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
+interface Message {
+  role: string
+  content: string
+=======
+import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
+import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';
+const openAIApiKey = Deno.env.get ('OPENAI_API_KEY'),
+const cors_headers = {
+  'Access - Control - Allow - Origin': '*Access - Control - Allow - Headers': 'authorization, x - client - info, apikey, content - type'}
+;
+interface Message {
+  role: string,
+  content: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY'),
@@ -30,9 +61,13 @@ const corsHeaders = {
 interface Message {
   role: string
   content: string
+<<<<<<< HEAD
 interface Message {
   role: string
   content: string
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY'),;
@@ -41,10 +76,17 @@ const corsHeaders = {;
 interface Message {;
   role: string,;
   content: string;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 interface RequestBody {
   messages: Message[];
 }
+<<<<<<< HEAD
 }
 interface RequestBody {
   messages: Message[]
@@ -54,6 +96,8 @@ serve(async (req) => {
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
   }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -64,10 +108,13 @@ serve(async (req) => {
     const { messages } = await req && req.json() as RequestBody;
 
 
+<<<<<<< HEAD
     const { messages } = await req && req.json() as RequestBody;
 
   try {
     const { messages } = await req.json() as RequestBody;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Prepare the system message to define the assistant's behavior
     const systemMessage: Message = {
       role: 'system'
@@ -75,6 +122,7 @@ serve(async (req) => {
     }
     // Combine the system message with user messages
     const combinedMessages = [systemMessage, ...messages];
+<<<<<<< HEAD
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST'
       headers: {
@@ -96,6 +144,12 @@ serve(async (req) => {
     // Log this interaction for analytics (in a real implementation)
     // This would track common questions, successful interactions, etc.
     console.log('AI chat interaction logged');
+=======
+
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   try {;
     const { messages } = await req.json() as RequestBody,;
@@ -121,6 +175,10 @@ serve(async (req) => {
       throw new Error(data.error.message);
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
 
     const assistantMessage = data.choices[0].message.content,
@@ -129,6 +187,11 @@ serve(async (req) => {
     // This would track common questions, successful interactions, etc.
     // // // console.log('AI chat interaction logged'),
 
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return new Response(JSON.stringify({ message: assistantMessage }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
   } catch (error) {
@@ -210,6 +273,7 @@ if ( {) {
     // Log this interaction for analytics (in a real implementation);
     // This would track common questions, successful interactions, etc.;
 
+<<<<<<< HEAD
     return new Response(JSON.stringify({ message: assistantMessage }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
   } catch (error) {
@@ -224,6 +288,8 @@ if ( {) {
     const assistantMessage = data.choices[0].message.content,;
     // Log this interaction for analytics (in a real implementation);
     // This would track common questions, successful interactions, etc.;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // // // console.log('AI chat interaction logged'),;
     return new Response(JSON.stringify({ message: assistantMessage }), {;
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
@@ -237,6 +303,7 @@ if ( {) {
   }
 });
 ;
+<<<<<<< HEAD
 
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts",;
@@ -342,3 +409,6 @@ headers: {
 });
   }
 });
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

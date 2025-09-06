@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react'
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react'
 
@@ -105,6 +106,8 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 import CodeBlock from "./CodeBlock";
 export function ApiKeysManager() { const { 
     keys,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 keys,
 
     loading, 
@@ -112,6 +115,7 @@ keys,
     fetchApiKeys, 
     createApiKey, 
     regenerateApiKey, 
+<<<<<<< HEAD
 export function ApiKeysManager() {
   const { 
     keys,
@@ -141,10 +145,20 @@ export function ApiKeysManager() {
   const [keyName, setKeyName] = useState(""),
   const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),
 
+=======
+
+    revokeApiKey,
+
+
+  const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Load keys on mount
   useState(() => {
     fetchApiKeys()
 
+<<<<<<< HEAD
   })
   const handleCreateKey = async () => {
     if (keyName.trim() === '' |selectedScopes.length === 0) return
@@ -155,17 +169,38 @@ export function ApiKeysManager() {
     setSelectedScopes([]) };
   const handleRegenerateKey = async (keyId: string) => {;
     await regenerateApiKey(keyId);
+=======
+
+    if (keyName.trim() === '' || selectedScopes.length === 0) return;
+
+
+    await createApiKey(keyName, selectedScopes)
+    setShowCreateDialog(false)
+    setKeyName('')
+    setSelectedScopes([]) }
+  const handleRegenerateKey = async (keyId: string) => {
+    await regenerateApiKey(keyId)
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     setShowRegenerateConfirm(null);  useState(() => {
     fetchApiKeys()
   })
   const handleCreateKey = async () => {
+<<<<<<< HEAD
     if (keyName.trim() === "" |selectedScopes.length === 0) return
     if (keyName.trim() === "" |selectedScopes.length === 0) return
     if (keyName.trim() === "" || selectedScopes.length === 0) return;
+=======
+
+
+    if (keyName.trim() === "" || selectedScopes.length === 0) return;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     await createApiKey(keyName, selectedScopes)
     setShowCreateDialog(false)
     setKeyName("")
     setSelectedScopes([])
+<<<<<<< HEAD
     revokeApiKey;
     clearNewApiKey
    } = useApiKeys(),
@@ -180,6 +215,9 @@ export function ApiKeysManager() {
     fetchApiKeys()
   })
   const handleCreateKey = async () => {
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from 'react';
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react';
 import { format } from 'date - fns';
@@ -341,6 +379,10 @@ function ApiKeysManager() {
     label: string;
     description: string;
   }[] = [;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       value: 'jobs:read'
       label: 'Read Jobs'
@@ -362,6 +404,10 @@ function ApiKeysManager() {
       description: 'Create and manage quotes'
     }
     {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (keyName.trim() === "" || selectedScopes.length === 0) return;
     await createApiKey(keyName, selectedScopes);
     setShowCreateDialog(false);
@@ -389,6 +435,7 @@ function ApiKeysManager() {
       prev.includes(scope) 
         ? prev.filter(s => s !== scope) 
         : [...prev, scope]
+<<<<<<< HEAD
       value: 'webhooks:manage'
       label: 'Manage Webhooks'
       description: 'Set up and manage webhook endpoints'
@@ -398,10 +445,17 @@ function ApiKeysManager() {
   const toggleScope = (scope: ApiKeyScope) => {
     setSelectedScopes(prev =>
       prev.includes(scope) ? prev.filter(s => s !== scope) : [...prev, scope]
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     )
   }
   const getExampleCode = (key: string) => {    return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\
   -H "Authorization: Bearer ${key}" \\
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       value: 'webhooks:manage',
       label: 'Manage Webhooks',
       description: 'Set up and manage webhook endpoints',
@@ -727,10 +781,15 @@ export function ApiKeysManager() {;
   },
 
   const handleRegenerateKey = async (keyId: string) => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     await regenerateApiKey(keyId),
     setShowRegenerateConfirm(null)
   },
   
+<<<<<<< HEAD
     setShowDeleteConfirm(null)
   }
   // Scope options
@@ -811,10 +870,22 @@ export function ApiKeysManager() {;
                 </div>
                 
                 <div className="space-y-2">
+=======
+
+  const handleRevokeKey = async (keyId: string) => {
+
+    await revokeApiKey(keyId),
+    setShowDeleteConfirm(null)
+  }
+  // Scope options
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <Label>Scopes</Label>
                   <div className="grid gap-2 pt-2">
                     {scopeOptions.map((scope) => (
                       <div key={scope.value} className="flex items-center space-x-2">
+<<<<<<< HEAD
                   <div className="grid gap-2 pt-2">
                     {scopeOptions.map((scope) => (
                       <div key={scope.value} className="flex items-center space-x-2">
@@ -1072,10 +1143,17 @@ export function ApiKeysManager() {;
                         <Checkbox;
                           id={scope.value} ;
                           checked={selectedScopes.includes(scope.value)}
+=======
+
+                        <Checkbox 
+                          id={scope.value} 
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           onCheckedChange={() => toggleScope(scope.value)}
                         />
                         <Label
                           htmlFor={scope.value}
+<<<<<<< HEAD
                           className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'
                         >
                           {scope.label}
@@ -1085,11 +1163,17 @@ export function ApiKeysManager() {;
                         >
                           {scope.label}
                           <span className="block text-xs text-zinc-400 mt-1">{scope.description}</span>
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                         >
                           {scope.label}
                           <span className="block text-xs text-zinc-400 mt-1">{scope.description}</span>
                         </Label>
+<<<<<<< HEAD
                       </div>
                     ))}
                   </div>
@@ -1120,6 +1204,8 @@ export function ApiKeysManager() {;
                           {scope.label}
                           <span className="block text-xs text-zinc-400 mt-1">{scope.description}</span>
                         </Label>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -1128,6 +1214,7 @@ export function ApiKeysManager() {;
 
 
 
+<<<<<<< HEAD
               
               <DialogFooter>
                 <Button variant="outline" onClick={handleDialogClose}>Cancel</Button>
@@ -1137,11 +1224,17 @@ export function ApiKeysManager() {;
                 <Button variant="outline" onClick={handleDialogClose}>Cancel</Button>
                 <Button onClick={handleCreateKey} disabled={keyName.trim() === "" || selectedScopes.length === 0}>
                   Create Key
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </Button>
             </DialogContent>
           </Dialog>
         </div>
+<<<<<<< HEAD
         {newApiKey && (
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </div>;
                 </div>;
               </div>;
@@ -1291,6 +1384,7 @@ export function ApiKeysManager() {;
                 <Check size={16} className="mr-2 text-green-500" /> New API Key Generated
               </span>
               <Button
+<<<<<<< HEAD
                 variant='ghost'
                 size='icon'
                 className='h-6 w-6'                onClick={clearNewApiKey}        {/* New API Key Alert */}
@@ -1301,6 +1395,8 @@ export function ApiKeysManager() {;
                 <Check size={16} className="mr-2 text-green-500" /> New API Key Generated
               </span>
               <Button
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
                 variant="ghost"
@@ -1308,13 +1404,45 @@ export function ApiKeysManager() {;
                 className="h-6 w-6"
                 onClick={clearNewApiKey}
 
+<<<<<<< HEAD
                 onClick = {clearNewApiKey,}
+=======
+
+        {/* API Keys List */}
+        <div className="space - y-4">;
+          {loading ? (
+            <div className="text - center py - 8 text - zinc - 500">Loading API keys...</div>) : keys.length === 0 ? (
+            <div className="text - center py - 8 text - zinc - 500">;
+              <Key className="mx - auto mb - 2 opacity - 30" size={24} />;
+              <p > No API keys found.</p>;
+              <p className="text - sm mt - 1">Create one to access the Zion APIs.</p>;
+            </div>) : (
+            keys.map ((key) => (
+              <div key={key.id} className="p - 4 border border - zinc - 800 rounded - lg">;
+                <div className="flex items - center justify - between">;
+                  <div className="flex items - center">;
+                    <div>;
+                      <h3 className="font - medium">{key.name}</h3>;
+                      <div className="flex items - center space - x-2 mt - 1">;
+                        <span className="text - sm text - zinc - 400 font - mono">{key.key_prefix}••••••••••••</span>;
+                        {key.is_active ? (
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               >
                 <X size={14} />
               </Button>
             </div>
+<<<<<<< HEAD
             <p className='text-sm text-zinc-300 mb-2'>
             <p className="text-sm text-zinc-300 mb-2">
+=======
+
+            <p className="text-sm text-zinc-300 mb-2">
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               This key will only be displayed once. Please save it securely.
             </p>
             <CodeBlock code={newApiKey} className="mb-3" />
@@ -1324,6 +1452,7 @@ export function ApiKeysManager() {;
             <CodeBlock code={getExampleCode(newApiKey)} language="bash" />
           </div>
         )}
+<<<<<<< HEAD
               <Button;
                 variant="ghost";
                 size="icon";
@@ -1334,6 +1463,10 @@ export function ApiKeysManager() {;
               </Button>;
             </div>;
             <p className="text-sm text-zinc-300 mb-2">
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         {/* API Keys List */}
         <div className='space-y-4'>
@@ -1342,11 +1475,15 @@ export function ApiKeysManager() {;
         <div className="space-y-4">
           {loading ? (
 
+<<<<<<< HEAD
         {/* API Keys List */}
         <div className='space-y-4'>
 ;
         {/* API Keys List */}
         <div className="space-y-4">
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {loading ? (
             <div className="text-center py-8 text-zinc-500">Loading API keys...</div>
           ) : keys.length === 0 ? (
@@ -1356,6 +1493,7 @@ export function ApiKeysManager() {;
               <p className="text-sm mt-1">Create one to access the Zion APIs.</p>
             </div>
           ) : (
+<<<<<<< HEAD
             keys.map(key => (
               <div
                 key={key.id}
@@ -1368,6 +1506,9 @@ export function ApiKeysManager() {;
                         <span className='text-sm text-zinc-400 font-mono'>
                           {key.key_prefix}••••••••••••
                         </span>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             keys.map((key) => (
               <div key={key.id} className="p-4 border border-zinc-800 rounded-lg">
                 <div className="flex items-center justify-between">
@@ -1376,6 +1517,7 @@ export function ApiKeysManager() {;
                       <h3 className="font-medium">{key.name}</h3>
                       <div className="flex items-center space-x-2 mt-1">
                         <span className="text-sm text-zinc-400 font-mono">{key.key_prefix}••••••••••••</span>
+<<<<<<< HEAD
                         {key.is_active ? (
                           <Badge className="bg-green-700 text-white">Active</Badge>
                         ) : (
@@ -1425,6 +1567,8 @@ export function ApiKeysManager() {;
                       <h3 className="font-medium">{key.name}</h3>
                       <div className="flex items-center space-x-2 mt-1">
                         <span className="text-sm text-zinc-400 font-mono">{key.key_prefix}••••••••••••</span>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                         {key.is_active ? (
                           <Badge className="bg-green-700 text-white">Active</Badge>
@@ -1436,6 +1580,7 @@ export function ApiKeysManager() {;
                       </div>
                     </div>
                   </div>
+<<<<<<< HEAD
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       </div>;
@@ -1443,6 +1588,14 @@ export function ApiKeysManager() {;
                   </div>;
                           <Badge variant="secondary" className="bg-red-900 text-white border-red-800">Revoked</Badge>;
             <p className="text-sm text-zinc-300 mb-2">;
+=======
+
+                      </div>;
+                    </div>;
+                  </div>;
+
+                          <Badge variant="secondary" className="bg-red-900 text-white border-red-800">Revoked</Badge>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               This key will only be displayed once. Please save it securely.;
             </p>;
             <CodeBlock code={newApiKey} className="mb-3" />;
@@ -1452,17 +1605,26 @@ export function ApiKeysManager() {;
             <CodeBlock code={getExampleCode(newApiKey)} language="bash" />;
           </div>;
         )}
+<<<<<<< HEAD
         ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* API Keys List */}
         <div className="space-y-4">;
           {loading ? (;
             <div className="text-center py-8 text-zinc-500">Loading API keys...</div>;
+<<<<<<< HEAD
           ) :keys.length === 0 ? (;
+=======
+          ) : keys && keys.length === 0 ? (;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className="text-center py-8 text-zinc-500">;
               <Key className="mx-auto mb-2 opacity-30" size={24} />;
               <p>No API keys found.</p>;
               <p className="text-sm mt-1">Create one to access the Zion APIs.</p>;
             </div>;
+<<<<<<< HEAD
           ) :(;
             keys.map((key) => (;
               <div key={key.id} className="p-4 border border-zinc-800 rounded-lg">;
@@ -1475,11 +1637,26 @@ export function ApiKeysManager() {;
                         {key.is_active ? (;
                           <Badge className="bg-green-700 text-white">Active</Badge>;
                         ) :(;
+=======
+          ) : (;
+            keys && keys.map((key) => (;
+              <div key={key && key.id} className="p-4 border border-zinc-800 rounded-lg">;
+                <div className="flex items-center justify-between">;
+                  <div className="flex items-center">;
+                    <div>;
+                      <h3 className="font-medium">{key && key.name}</h3>;
+                      <div className="flex items-center space-x-2 mt-1">;
+                        <span className="text-sm text-zinc-400 font-mono">{key && key.key_prefix}••••••••••••</span>;
+                        {key && key.is_active ? (;
+                          <Badge className="bg-green-700 text-white">Active</Badge>;
+                        ) : (;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           <Badge variant="secondary" className="bg-red-900 text-white border-red-800">Revoked</Badge>;
                         )}
                       </div>;
                     </div>;
                   </div>;
+<<<<<<< HEAD
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       <Button
@@ -1494,6 +1671,23 @@ export function ApiKeysManager() {;
                       align='end'
                       className='bg-zinc-900 border-zinc-800 text-white'
                     >
+=======
+
+                  <DropdownMenu>;
+                    <DropdownMenuTrigger asChild>;
+
+                      <Button
+                        variant='ghost'
+                        size='icon'
+                        aria-label='More options'>;
+                        <MoreVertical size={16} />;
+                      </Button>;
+                    </DropdownMenuTrigger>;
+                    <DropdownMenuContent
+                      align='end'
+                      className='bg-zinc-900 border-zinc-800 text-white'>;
+                      <DropdownMenuItem
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         onClick={() => setShowRegenerateConfirm(key && key.id)}
                         className='cursor-pointer';
                         disabled={!key && key.is_active}
@@ -1504,6 +1698,7 @@ export function ApiKeysManager() {;
                         <RefreshCw size={14} className='mr-2' /> Regenerate;
                       </DropdownMenuItem>;
                       <DropdownMenuItem
+<<<<<<< HEAD
                   
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
@@ -1570,10 +1765,15 @@ export function ApiKeysManager() {;
                         disabled={!key.is_active}
                       >
                         <X size={14} className="mr-2" /> Revoke
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       </DropdownMenuItem>
                     </DropdownMenuContent>
                   </DropdownMenu>
                 </div>
+<<<<<<< HEAD
                 <div className='mt-3 flex flex-wrap gap-2'>
                   {key.scopes.map(scope => (
                     <Badge
@@ -1582,12 +1782,42 @@ export function ApiKeysManager() {;
                       className='bg-zinc-800 text-zinc-300 hover:bg-zinc-800'                    >
                 <div className="mt-3 flex flex-wrap gap-2">
                   {key.scopes.map((scope,) => (
+=======
+
+                
+
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {key.scopes.map((scope,) => (
+                        onClick={() => setShowDeleteConfirm(key && key.id)}
+                        className='cursor-pointer text-red-500';
+                        disabled={!key && key.is_active}                      >;
+                        <X size={14} className='mr-2' /> Revoke                      </DropdownMenuItem>;
+                    </DropdownMenuContent>;
+                  </DropdownMenu>;
+                </div>                        <X size={14} className="mr-2" /> Revoke;
+                      </DropdownMenuItem>;
+                    </DropdownMenuContent>;
+                  </DropdownMenu>;
+                </div>;
+
+                <div className='mt-3 flex flex-wrap gap-2'>;
+                  {key && key.scopes.map(scope => (;
+                    <Badge
+                      key={scope}
+                      variant='secondary'
+                      className='bg-zinc-800 text-zinc-300 hover:bg-zinc-800'>                ;
+                <div className="mt-3 flex flex-wrap gap-2">;
+                  {key && key.scopes.map((scope,) => (;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <Badge
                       key = {scope,}
                       variant="secondary"
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
 
 
+<<<<<<< HEAD
                       {scope}
                     </Badge>;
                   ))}
@@ -1621,6 +1851,8 @@ export function ApiKeysManager() {;
                         : 'Never'}
                     </PopoverTrigger>
                     <PopoverContent className="bg-zinc-900 border-zinc-800 text-white w-64 p-3">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 
                 <div className="mt-3 flex flex-wrap gap-2">
                   {key.scopes.map((scope) => (
@@ -1629,6 +1861,7 @@ export function ApiKeysManager() {;
                       variant="secondary"
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
                     >
+<<<<<<< HEAD
                       {scope}
                     </Badge>
                   ))}
@@ -1652,19 +1885,69 @@ export function ApiKeysManager() {;
                               new Date(key.last_used_at)
                               'MMM d, yyyy HH:mm:ss'
                             )                          : 'This API key has never been used'}                    <PopoverContent className="bg-zinc-900 border-zinc-800 text-white w-64 p-3">
+=======
+
+
+                      {scope}
+                    </Badge>;
+                  ))}
+
+                    >
+
+                      {scope}
+                    </Badge>;
+                  ))}
+
+
+                </div>;
+
+                <div className='mt-3 text-xs text-zinc-500 flex items-center space-x-4'>;
+                  <span>;
+                    Created: {format(new Date(key && key.created_at), 'MMM d, yyyy')}
+                  </span>;
+                    <PopoverTrigger className='flex items-center hover:text-zinc-300'>;
+                      <Clock size={12} className='mr-1' />;
+                      Last used:{' '}
+                      {key && key.last_used_at;
+                        ? format(new Date(key && key.last_used_at), 'MMM d, yyyy');
+                        : 'Never'}
+
+                </div>
+                
+                <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">
+                  <span>Created: {format(new Date(key.created_at), 'MMM d, yyyy')}</span>
+                  <Popover>
+                    <PopoverTrigger className="flex items-center hover:text-zinc-300">
+                      <Clock size={12} className="mr-1" />
+                      Last used: {key.last_used_at 
+                        ? format(new Date(key.last_used_at), 'MMM d, yyyy') 
+                        : 'Never'}
+                    </PopoverTrigger>
+                    <PopoverContent className="bg-zinc-900 border-zinc-800 text-white w-64 p-3">
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <p className="text-sm mb-1">Last Used</p>
                       <p className="text-xs text-zinc-400">
                         {key.last_used_at
                           ? format(new Date(key.last_used_at), 'MMM d, yyyy HH:mm:ss')
+<<<<<<< HEAD
                           : 'This API key has never been used'}
+=======
+
+                          : 'This API key has never been used'}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       </p>
                     </PopoverContent>
                   </Popover>
                   {key.expires_at && (
+<<<<<<< HEAD
                     <span>
                       Expires: {format(new Date(key.expires_at), 'MMM d, yyyy')}
                     </span>                  )}                    <span>Expires: {format(new Date(key.expires_at), 'MMM d, yyyy')}</span>
                   )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                     </PopoverTrigger>;
                     <PopoverContent className='bg-zinc-900 border-zinc-800 text-white w-64 p-3'>;
@@ -1724,6 +2007,7 @@ export function ApiKeysManager() {;
               </div>;
             ));
           )}
+<<<<<<< HEAD
                 </div>
               </div>
             ))
@@ -1737,11 +2021,19 @@ export function ApiKeysManager() {;
         </div>
         <Button variant='outline' size='sm' onClick={fetchApiKeys}>          Refresh
         <Button variant='outline' size='sm' onClick={fetchApiKeys}>          Refresh      
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <CardFooter className="justify-between border-t border-zinc-800 py-4">
         <div className="text-xs text-zinc-500">
           Keep your API keys secure. They have the same permissions as your account.
         </div>
         <Button variant="outline" size="sm" onClick={fetchApiKeys}>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           Refresh
         </Button>
       </CardFooter>
@@ -1881,6 +2173,7 @@ export function ApiKeysManager() {;
       <AlertDialog 
         open={showRegenerateConfirm !== null} 
         onOpenChange={(open) => !open && setShowRegenerateConfirm(null)}
+<<<<<<< HEAD
         </Button>
       </CardFooter>
       {/* Regenerate Key Confirmation Dialog */}
@@ -1908,6 +2201,9 @@ export function ApiKeysManager() {;
             <AlertDialogAction
               onClick = {() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm),}
               className="bg-blue-600 hover:bg-blue-700"
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       >
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">
           <AlertDialogHeader>
@@ -1930,6 +2226,7 @@ export function ApiKeysManager() {;
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
+<<<<<<< HEAD
       {/* Delete Key Confirmation Dialog */}
       <AlertDialog
         open={showDeleteConfirm !== null}
@@ -1954,10 +2251,13 @@ export function ApiKeysManager() {;
             <AlertDialogAction
               onClick = {() => showDeleteConfirm && handleRevokeKey(showDeleteConfirm),}
               className="bg-red-600 hover: bg-red-700"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               className='bg-blue-600 hover:bg-blue-700'            >;
             <AlertDialogAction
               onClick = {() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm),}
               className="bg-blue-600 hover:bg-blue-700";
+<<<<<<< HEAD
       >;
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">;
           <AlertDialogHeader>;
@@ -2068,11 +2368,17 @@ export function ApiKeysManager() {;
       <AlertDialog;
         open={showRegenerateConfirm !== null} ;
         onOpenChange={(open) => !open && setShowRegenerateConfirm(null)}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       >;
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">;
           <AlertDialogHeader>;
             <AlertDialogTitle>Regenerate API Key?</AlertDialogTitle>;
             <AlertDialogDescription className="text-zinc-400">;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <AlertDialogCancel className='bg - transparent text - white hover:bg - zinc - 800 border - zinc - 700'>;
               Cancel;
             </AlertDialogCancel>;
@@ -2096,27 +2402,48 @@ export function ApiKeysManager() {;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
+<<<<<<< HEAD
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">;
               Cancel;
             </AlertDialogCancel>;
             <AlertDialogAction;
               onClick={() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
               className="bg-blue-600 hover:bg-blue-700";
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             >;
               Regenerate;
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
+<<<<<<< HEAD
               className='bg-red-600 hover:bg-red-700'            >;
             <AlertDialogAction
               onClick = {() => showDeleteConfirm && handleRevokeKey(showDeleteConfirm),}
               className="bg-red-600 hover: bg-red-700";
+=======
+
+
+              This action will revoke the API key and it can no longer be used;
+              to access the API. This action cannot be undone.;
+            </AlertDialogDescription>;
+          </AlertDialogHeader>;
+          <AlertDialogFooter>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       >;
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">;
           <AlertDialogHeader>;
             <AlertDialogTitle>Revoke API Key?</AlertDialogTitle>;
             <AlertDialogDescription className="text-zinc-400">;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <AlertDialogCancel className='bg - transparent text - white hover:bg - zinc - 800 border - zinc - 700'>;
               Cancel;
             </AlertDialogCancel>;
@@ -2133,11 +2460,16 @@ export function ApiKeysManager() {;
           <AlertDialogHeader>;
             <AlertDialogTitle > Revoke API Key?</AlertDialogTitle>;
             <AlertDialogDescription className="text - zinc - 400">;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               This action will revoke the API key and it can no longer be used to access the API.;
               This action cannot be undone.;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
+<<<<<<< HEAD
             <AlertDialogCancel className="bg - transparent text - white hover:bg - zinc - 800 border - zinc - 700">;
               Cancel;
             </AlertDialogCancel>;
@@ -2167,12 +2499,17 @@ export function ApiKeysManager() {;
             <AlertDialogAction;
               onClick={() => showDeleteConfirm && handleRevokeKey(showDeleteConfirm)}
               className="bg-red-600 hover: bg-red-700";
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             >;
               Revoke;
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
+<<<<<<< HEAD
     </Card>;
   );
 }
@@ -2328,3 +2665,8 @@ setShowCreateDialog (false) ;
 }> <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white"> <AlertDialogHeader> <AlertDialogTitle>Revoke API Key?</AlertDialogTitle> <AlertDialogDescription className="text-zinc-400"> This action will revoke the API key and it can no longer be used to access the API. This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700"> Cancel </AlertDialogCancel> <AlertDialogAction > Revoke </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>) ;
 }'"
 ;
+=======
+
+
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

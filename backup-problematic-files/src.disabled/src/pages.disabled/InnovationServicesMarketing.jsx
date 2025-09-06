@@ -9,4 +9,8 @@ const InnovationServicesMarketing = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default InnovationServicesMarketing;
+=======
+export default InnovationServicesMarketing;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

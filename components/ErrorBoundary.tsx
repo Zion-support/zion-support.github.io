@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 'use client';
 
 ;
@@ -6,6 +14,7 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
 
+<<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 'use client';
@@ -18,6 +27,12 @@ interface Props {
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
+=======
+interface Props {;
+  children: ReactNode;
+  level?: string;
+  fallback?: ReactNode;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 }
@@ -51,10 +66,14 @@ interface State {;
 
 
 
+<<<<<<< HEAD
 }
 
 }
 
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
@@ -82,12 +101,21 @@ interface Props {
   fallback?: ReactNode;
 }
 
+<<<<<<< HEAD
 interface State {
   hasError: boolean,
   error?: Error;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+=======
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
@@ -95,6 +123,12 @@ class ErrorBoundary extends Component<Props, State> {
     this && this.state = { hasError: false };
   }
   static getDerivedStateFromError(error: Error): State {
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 class ErrorBoundary extends Component<Props, State> {;
   constructor(props: Props) {;
     super(props);
@@ -103,10 +137,18 @@ class ErrorBoundary extends Component<Props, State> {;
 
   static getDerivedStateFromError(error: Error): State {;
     // Update state so the next render will show the fallback UI;
+<<<<<<< HEAD
     // Update state so the next render will show the fallback UI
     // Update state so the next render will show the fallback UI
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return { hasError: true, error };
 
 
@@ -123,6 +165,7 @@ origin/automation-improvements-final
     return { hasError: true, error };
     return { hasError: true, error }
   }
+<<<<<<< HEAD
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);    this.setState({
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -130,17 +173,27 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     
     this.setState({
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
 
+<<<<<<< HEAD
 
 
 origin/automation-improvements-final
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       error,
       error_info;
     });
 
+<<<<<<< HEAD
 
       error,
       error_info;
@@ -148,12 +201,20 @@ origin/automation-improvements-final
 
     // You can also log the error to an error reporting service here
     // Example: logErrorToService(error, errorInfo);
+=======
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
+<<<<<<< HEAD
     console.error('Error caught by boundary:', error, errorInfo);    this.setState({
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
       error
@@ -167,6 +228,13 @@ origin/automation-improvements-final
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
     console.error('Error caught by boundary:', error, errorInfo);    this.setState({
+<<<<<<< HEAD
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       error
       errorInfo
     });
@@ -181,6 +249,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     if (process.env.NODE_ENV === 'production') {
       // Here you would typically send to an error reporting service
       console.error('Production error:', error, errorInfo);
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {;
     console && console.error('Error caught by boundary:', error, errorInfo);    this && this.setState({;
       error,;
@@ -193,10 +266,25 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     if (this && this.props.onError) {;
       this && this.props.onError(error, errorInfo);
     }
+<<<<<<< HEAD
     }
 
     }
 origin/main
+=======
+    // Log to external service in production;
+    if (process && process.env.NODE_ENV === 'production') {;
+      // Here you would typically send to an error reporting service;
+      console && console.error('Production error:', error, errorInfo);
+
+    }
+<<<<<<< HEAD
+=======
+    }
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // You can also log the error to an error reporting service here
     // Example: logErrorToService(error, errorInfo);
     // Log error for debugging in development
@@ -204,6 +292,7 @@ origin/main
       // eslint-disable-next-line no-console
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
   }
@@ -216,6 +305,15 @@ origin/automation-improvements-final
     if (this.state.hasError) {
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+=======
+
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+  }
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Fallback UI
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -305,6 +403,7 @@ class ErrorBoundary extends Component<Props, State> {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD
   static getDerivedStateFromError(error: Error): State {
     // Update state so the next render will show the fallback UI
     return { hasError: true, error };
@@ -395,6 +494,11 @@ export default class ErrorBoundary extends Component<Props, State> {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -405,6 +509,7 @@ export default class ErrorBoundary extends Component<Props, State> {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('Uncaught error:', error, errorInfo);
     } catch (error) {
@@ -428,10 +533,20 @@ export default class ErrorBoundary extends Component<Props, State> {
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+class ErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
   } catch (error) {
     console.error("Error:", error);
@@ -466,6 +581,11 @@ export default class ErrorBoundary extends Component<Props, State> {
               </p>
             </div>
             <div className="space-y-3">
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <button
                 onClick={() => typeof window !== 'undefined' && window.location.reload()  } catch (error) {
     console.error("Error:", error);
@@ -509,9 +629,18 @@ export default class ErrorBoundary extends Component<Props, State> {
               <button 
                 onClick={() => this.setState({ hasError: false })} 
                 className="w-full px-6 py-3 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors font-semibold"
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+=======
+
+
+
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 onClick={() => this.setState({ hasError: false })  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -526,13 +655,24 @@ origin/automation-improvements-final
   }
 }
                 className="w-full px-6 py-3 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors font-semibold"
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               >
                 Try Again
               </button>
             </div>
             {process.env.NODE_ENV === 'development' && this.state.error && (
+<<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <details className="mt-4 p-4 bg-gray-100 rounded-md">
                 <summary className="cursor-pointer font-medium text-gray-700">
                   Error Details (Development)
@@ -540,12 +680,27 @@ origin/automation-improvements-final
                 <pre className="mt-2 text-xs text-gray-600 overflow-auto">
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <details className="mt-6 text-left">
                 <summary className="cursor-pointer text-sm text-slate-400 hover:text-slate-300">
                   Error Details (Development)
                 </summary>
                 <pre className="mt-2 p-4 bg-slate-800 rounded text-xs overflow-auto">
                   {this.state.error.stack}
+<<<<<<< HEAD
+=======
+
+
+
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <details className="mt-6 text-left">
                 <summary className="cursor-pointer text-sm text-slate-400 hover:text-slate-300">
                   Error Details (Development)
@@ -564,6 +719,7 @@ origin/automation-improvements-final
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
@@ -579,6 +735,35 @@ origin/automation-improvements-final
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                </pre>
+              </details>
+                onClick={() => this && this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
+                className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition-colors";
+              >;
+                Try Again;
+              </button>;
+            </div>;
+            {process && process.env.NODE_ENV === 'development' && this && this.state.error && (;
+              <details className="mt-4 p-4 bg-gray-100 rounded-md">;
+                <summary className="cursor-pointer font-medium text-gray-700">;
+                  Error Details (Development);
+                </summary>;
+                <pre className="mt-2 text-xs text-gray-600 overflow-auto">;
+                  {this && this.state.error && error.toString()}
+                  {this && this.state.errorInfo?.componentStack}
+                </pre>;
+              </details>;
+            )}
+          </div>;
+    // Log the error to an error reporting service;
+    console && console.error('ErrorBoundary caught an error:', error, errorInfo);
+    this && this.setState({ error, errorInfo });
+  }
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
     // Log error to external service (e.g., Sentry);
     // Check condition
@@ -736,11 +921,20 @@ if ( {) {
               border: 'none',
               border_radius: '4px',
               cursor: 'pointer';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             }}
           >;
             Reload Page;
           </button>;
           {process.env.NODE_ENV === 'development' && this.state.error && (
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   render() {;
     if (this && this.state.hasError) {;
       // You can render any custom fallback UI;
@@ -776,6 +970,10 @@ if ( {) {
                 padding: '10px', 
                 borderRadius: '4px',
                 overflow: 'auto',
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 fontSize: '12px'
               }}>;
                 {this && this.state.error && error.toString()}
@@ -783,15 +981,55 @@ if ( {) {
               </pre>;
             </details>;
           )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        </div>;
+=======
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  public render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen bg-slate-950 flex items-center justify-center">
+          <div className="text-center text-white">
+            <h1 className="text-2xl font-bold mb-4">Something went wrong</h1>
+            <button
+              onClick={() => window.location.reload()  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              className="px-4 py-2 bg-blue-600 rounded-lg hover:bg-blue-700"
+            >
+              Reload Page
+            </button>
+          </div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         </div>
       );
     }
 
 
+<<<<<<< HEAD
         </div>
       );
     }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return this && this.props.children;
   }
 }
@@ -807,11 +1045,14 @@ class ErrorBoundary extends Component<Props, State> {;
 }
 
 
+<<<<<<< HEAD
     super(props);
     this && this.state = { hasError: false };
 }
   static getDerivedStateFromError(error: Error): State {return { hasError: true, error }
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {;
     console && console.error('ErrorBoundary caught an error:', error, errorInfo);
     this && this.setState({ error, errorInfo });
@@ -825,6 +1066,10 @@ class ErrorBoundary extends Component<Props, State> {;
         return this && this.props.fallback;
 }
       return (
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">;
           <div className="max-w-md w-full bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center">;
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">;
@@ -885,7 +1130,14 @@ if ( {) {
             <p className="text - gray - 300 mb - 6">;
               We're sorry, but something unexpected happened. Please try refreshing the page or contact support if the problem persists.;
             </p>;
+<<<<<<< HEAD
             {process && process.env.NODE_ENV === 'development' && this && this.state.error && (;
+=======
+
+
+            {process && process.env.NODE_ENV === 'development' && this && this.state.error && (;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <details className="text-left mb-6">;
                 <summary className="text-gray-400 cursor-pointer mb-2">;
                   Error Details (Development);
@@ -933,11 +1185,20 @@ if ( {) {
           </div>;
         </div>);
 }
+<<<<<<< HEAD
     return this && this.props.children;
+=======
+
+
+    return this && this.props.children;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return this.props.children;
 }
 }
 export default ErrorBoundary;
+<<<<<<< HEAD
         </div>
       );
       } catch (error) {
@@ -984,3 +1245,9 @@ export default ErrorBoundary;
 }
 
 
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

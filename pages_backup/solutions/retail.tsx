@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Layout from '../../components/Layout';
 import { ShoppingCart, Users, BarChart, Smartphone, Package } from 'lucide-react';
 import React from 'react';
@@ -82,6 +83,10 @@ const features = [;
     description: 'End-to-end supply chain visibility and optimization using AI and machine learning.'';
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     title: 'E-commerce Platform',
     description: 'Complete online shopping experience with advanced features'
   },
@@ -106,6 +111,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     description: 'Real-time inventory tracking and automated reordering'
   },
   {
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function RetailSolutions() {;
 
 
@@ -117,6 +128,7 @@ export default function RetailSolutions() {;
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
 
+<<<<<<< HEAD
     icon: ArrowRight,
     title: 'Omnichannel',
     description: 'Seamless integration across all sales channels'
@@ -298,6 +310,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   
     >
       <div className="min-h-screen bg-white">
@@ -465,6 +479,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       <span className="text-gray-700">{benefit}</span>
                     </li>
                   ))}
+<<<<<<< HEAD
                 </ul>
               </div>
               <div className="bg-gradient-to-r from-purple-600 to-pink-700 p-8 rounded-xl text-white">
@@ -484,6 +499,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 </motion.div>
               ))}
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -574,6 +593,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
       </div>;
     </Layout>;
         {/* Benefits Section */}
@@ -612,6 +632,15 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>
           </div>
         </section>

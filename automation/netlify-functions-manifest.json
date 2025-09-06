@@ -1,6 +1,13 @@
 {
+<<<<<<< HEAD
   "generatedAt": "2025-08-26T13:57:08.259Z",
   "generatedAt": "2025-08-26T12:40:09.094Z",
+=======
+
+  "generatedAt": "2025-08-26T13:57:08.259Z",
+  "generatedAt": "2025-08-26T12:40:09.094Z",
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   "functions": [],
   "note": "Placeholder manifest generated because scripts/generate-netlify-functions-manifest.cjs was missing."
 }

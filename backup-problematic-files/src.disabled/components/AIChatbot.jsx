@@ -9,4 +9,8 @@ const AIChatbot = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIChatbot;
+=======
+export default AIChatbot;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

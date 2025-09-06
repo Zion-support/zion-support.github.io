@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {useState} from "react";
 import {useParams} from "react-router-dom";
 import {AppHeader} from "@/layout/AppHeader";
@@ -12,6 +13,15 @@ import {Briefcase} from "lucide-react";
 function HiringTrackerContent() {
   const { jobId } = useParams() as { jobId?: string }
   const [activeTab, setActiveTab] = useState<string>("kanban");
+=======
+function HiringTrackerContent() {;
+  const { jobId } = useParams() as { jobId?: string };
+
+  const [activeTab, setActiveTab] = useState<string>("kanban");
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from "react",
 import { useParams } from "react-router-dom",
 import { AppHeader } from "@/layout/AppHeader",
@@ -26,6 +36,7 @@ function HiringTrackerContent() {
   const { jobId } = useParams() as { jobId?: string },
   const [activeTab, setActiveTab] = useState<string>("kanban"),
 
+<<<<<<< HEAD
   return (
     <>
       <SEO
@@ -94,6 +105,17 @@ export default function HiringTracker() {
     </ProtectedRoute>
   )
 }
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from "react",;
 import { useParams } from "react-router-dom",;
 import { AppHeader } from "@/layout/AppHeader",;
@@ -108,14 +130,19 @@ function HiringTrackerContent() {;
   const { jobId } = useParams() as { jobId?: string },;
   const [activeTab, setActiveTab] = useState<string>("kanban");
   return (;
+<<<<<<< HEAD
 function HiringTrackerContent() {;
   const { jobId } = useParams() as { jobId?: string };
   const [activeTab, setActiveTab] = useState<string>("kanban");
   return (
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <>;
       <SEO
         title="Hiring Tracker | Zion AI Marketplace" 
         description="Manage your candidate pipeline in the Zion AI Marketplace." 
+<<<<<<< HEAD
 
 import { useState } from "react",;
 import { useParams } from "react-router-dom",;
@@ -141,6 +168,8 @@ function HiringTrackerContent() {;
       <SEO;
         title="Hiring Tracker | Zion AI Marketplace";
         description="Manage your candidate pipeline in the Zion AI Marketplace.";
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       />;
       <AppHeader />;
       <main className="container mx-auto px-4 py-8">;
@@ -155,12 +184,17 @@ function HiringTrackerContent() {;
             </p>;
           </div>;
         </div>;
+<<<<<<< HEAD
 ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">;
           <TabsList>;
             <TabsTrigger value="kanban">Kanban Board</TabsTrigger>;
             <TabsTrigger value="analytics">Analytics</TabsTrigger>;
           </TabsList>;
+<<<<<<< HEAD
           ;
           <TabsContent value="kanban" className="mt-6">;
             <KanbanBoard jobId={jobId} />;
@@ -169,6 +203,13 @@ function HiringTrackerContent() {;
           <TabsContent value="kanban" className="mt-6">;
             <KanbanBoard jobId={jobId} />;
           </TabsContent>;
+=======
+
+          <TabsContent value="kanban" className="mt-6">;
+            <KanbanBoard jobId={jobId} />;
+          </TabsContent>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <TabsContent value="analytics" className="mt-6">;
             <HiringAnalytics jobId={jobId} />;
           </TabsContent>;
@@ -180,6 +221,7 @@ function HiringTrackerContent() {;
 export default function HiringTracker() {;
   return (
   );
+<<<<<<< HEAD
 }
 ;
 export default function HiringTracker() {;
@@ -192,6 +234,28 @@ export default function HiringTracker() {;
 
 
 ;
+=======
+
+import { useState } from './react';
+import { use_params } from './react-router-dom';
+import { AppHeader } from '@/layout / AppHeader';
+import { Footer } from '@/components / Footer';
+import { KanbanBoard } from '@/components / hiring - tracker / KanbanBoard';
+import { HiringAnalytics } from '@/components / hiring - tracker / HiringAnalytics';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+import { SEO } from '@/components / SEO';
+import { ProtectedRoute } from '@/components / ProtectedRoute';
+import { Briefcase } from './lucide-react';
+/**
+ * HiringTrackerContent - Function description
+ */
+function HiringTrackerContent() {
+  const { job_id } = use_params () as { job_id?: string }
+  const [active_tab, setActiveTab] = useState < string>("kanban");
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
 export default function HiringTracker() {
@@ -201,6 +265,11 @@ export default function HiringTracker() {
     </ProtectedRoute>
   )
 }
+<<<<<<< HEAD
+=======
+
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <>;
       <SEO;
@@ -245,6 +314,7 @@ function HiringTracker() {
       <HiringTrackerContent />;
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
   ),;
 }
 ;
@@ -258,3 +328,6 @@ export default function HiringTracker() {;
 }export default function HiringTracker () {
   return (<ProtectedRoute> <HiringTrackerContent /> </ProtectedRoute> 
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

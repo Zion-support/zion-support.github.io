@@ -4,6 +4,7 @@
   const { projectId } = useParams() as { projectId: string },;
 
 
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useParams  } from 'react-router-dom';
 import { Header  } from '@/components/Header';
@@ -19,6 +20,8 @@ export default function ProjectRoom() {
 
   const { projectId } = useParams() as { projectId: string }
   const { projectId } = useParams() as { projectId: string },;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [activeTab, setActiveTab] = useState('chat');
   const [isInCall, setIsInCall] = useState(false);
   const [callParticipants, setCallParticipants] = useState<Array<{
@@ -40,6 +43,7 @@ export default function ProjectRoom() {
       isMuted: false
     }
   ]);
+<<<<<<< HEAD
 import React, { useState } from 'react',;
 import { useParams } from 'react-router-dom',;
 import { Header } from '@/components/Header',;
@@ -72,6 +76,8 @@ export default function ProjectRoom() {;
       isMuted: false;
     }
   ]),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const startVideoCall = () => {
 import {useParams} from 'react-router-dom';
 import {Header} from '@/components/Header';
@@ -91,6 +97,14 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components / ui / tabs
 import {MessageSquare, FileText, Video, Calendar, Users, Settings, X} from 'lucide-react';
 import {VideoCallRoom} from '@/components / video / VideoCallRoom';
 import {toast} from 'sonner';
+<<<<<<< HEAD
+=======
+
+  ]),
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   
   
   const startVideoCall = () => {
@@ -102,6 +116,7 @@ import {toast} from 'sonner';
     if (activeTab !== 'video') {
       setActiveTab('video')
     }
+<<<<<<< HEAD
   },
   
 
@@ -129,6 +144,48 @@ import {toast} from 'sonner';
       toast(`${randomUser.name} joined the call`)
     }
   }
+=======
+
+  },
+  
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  const endVideoCall = () => {
+    setIsInCall(false);
+    toast.info("Video call ended", {
+      description: "Call duration and participants will be logged"
+    })
+
+  };
+
+  const endVideoCall = () => {;
+    setIsInCall(false);
+    toast && toast.info("Video call ended", {;
+      description: "Call duration and participants will be logged";
+    });
+  };
+
+  const simulateUserJoining = () => {;
+    // This is just for demo purposes - in a real app, this would be handled by the video call service;
+    const mockUsers = [;
+      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },;
+      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },;
+      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
+    ];
+
+    const randomUser = mockUsers[Math && Math.floor(Math && Math.random() * mockUsers && mockUsers.length)];
+
+    if (!callParticipants && callParticipants.find(p => p && p.id === randomUser && randomUser.id)) {;
+
+      setCallParticipants(prev => [...prev, randomUser]);
+      toast(`${randomUser && randomUser.name} joined the call`);
+    }
+
+  };
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   },
   
@@ -137,6 +194,7 @@ import {toast} from 'sonner';
     const mockUsers = [
       { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
       { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
+<<<<<<< HEAD
       { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
     ];
     
@@ -279,12 +337,23 @@ export default function ProjectRoom() {;
   },;
   ;
   return (;
+=======
+
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <>;
       <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project" />;
       <Header />;
       <main className="container mx-auto py-8">;
         <div className="flex justify-between items-center mb-6">;
+<<<<<<< HEAD
           <h1 className="text-3xl font-bold">Project Room:{projectId}</h1>;
+=======
+          <h1 className="text-3xl font-bold">Project Room: {projectId}</h1>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="flex gap-2">;
             {isInCall && (;
               <Button variant="destructive" className="flex items-center gap-2">;
@@ -292,10 +361,18 @@ export default function ProjectRoom() {;
                 End Call;
               </Button>;
             )}
+<<<<<<< HEAD
             <Button variant="outline">Invite Team Member</Button>;
           </div>;
         </div>;
         ;
+=======
+
+            <Button variant="outline">Invite Team Member</Button>;
+          </div>;
+        </div>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">;
           <TabsList className="grid grid-cols-6 md:w-fit">;
             <TabsTrigger value="chat" className="flex items-center gap-2">;
@@ -315,6 +392,7 @@ export default function ProjectRoom() {;
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>;
                 </span>;
               )}
+<<<<<<< HEAD
   
   return (
     <>
@@ -401,6 +479,8 @@ export default function ProjectRoom() {;
               <CardContent className="min-h-[400px] p-4">
                 {isInCall ? (
                   <div className="space-y-4">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </TabsTrigger>;
             <TabsTrigger value="calendar" className="flex items-center gap-2">;
               <Calendar className="h-4 w-4" />;
@@ -415,7 +495,11 @@ export default function ProjectRoom() {;
               <span className="hidden sm:inline">Settings</span>;
             </TabsTrigger>;
           </TabsList>;
+<<<<<<< HEAD
           ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <TabsContent value="chat" className="space-y-4">;
             <Card>;
               <CardHeader>;
@@ -429,7 +513,11 @@ export default function ProjectRoom() {;
               </CardContent>;
             </Card>;
           </TabsContent>;
+<<<<<<< HEAD
           ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <TabsContent value="files" className="space-y-4">;
             <Card>;
               <CardHeader>;
@@ -443,7 +531,11 @@ export default function ProjectRoom() {;
               </CardContent>;
             </Card>;
           </TabsContent>;
+<<<<<<< HEAD
           ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <TabsContent value="video" className="space-y-4">;
             <Card>;
               <CardHeader>;
@@ -454,8 +546,17 @@ export default function ProjectRoom() {;
                 {isInCall ? (;
                   <div className="space-y-4">;
 
+<<<<<<< HEAD
                     <VideoCallRoom 
 
+=======
+                    <VideoCallRoom
+=======
+
+                    <VideoCallRoom 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       roomId={`project-${projectId}`}
                       participants={callParticipants}
                       onLeave={endVideoCall}
@@ -463,12 +564,15 @@ export default function ProjectRoom() {;
                     />;
 
 
+<<<<<<< HEAD
                     <VideoCallRoom ;
                       roomId={`project-${projectId}`}
                       participants={callParticipants}
                       onLeave={endVideoCall}
                     />;
                     ;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     {/* This button is just for demo/testing purposes */}
                     <div className="flex justify-center mt-4">;
                       <Button variant="outline" onClick={simulateUserJoining} className="text-sm">;
@@ -476,7 +580,11 @@ export default function ProjectRoom() {;
                       </Button>;
                     </div>;
                   </div>;
+<<<<<<< HEAD
                 ) :(;
+=======
+                ) : (;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <div className="flex flex-col items-center justify-center h-[400px] space-y-4">;
                     <p className="text-muted-foreground">Start a video call with your team</p>;
                     <div className="flex gap-2">;
@@ -491,6 +599,7 @@ export default function ProjectRoom() {;
                     </div>;
                   </div>;
                 )}
+<<<<<<< HEAD
                     <VideoCallRoom
                     <VideoCallRoom 
                       roomId={`project-${projectId}`}
@@ -566,6 +675,8 @@ export default function ProjectRoom() {;
       <Footer />
     </>
   )
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               </CardContent>;
             </Card>;
@@ -622,6 +733,7 @@ export default function ProjectRoom() {;
 
 }
 
+<<<<<<< HEAD
 };
 const endVideoCall = () => {
   
@@ -645,3 +757,6 @@ return (<> End Call </Button>)
 }
 ;
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

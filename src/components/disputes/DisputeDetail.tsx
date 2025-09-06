@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from "react";
 import { useRouter  } from 'next/router';
@@ -480,6 +481,54 @@ import React, { useState, useEffect } from "react",;
 import { useRouter } from 'next/router',;
 import { useDisputes } from "@/hooks/useDisputes",;
 import {logErrorToProduction} from '@/utils/productionLogger',;
+=======
+}
+
+    const success = await resolve_dispute (dispute_id, {
+      summary: resolution.summary,
+      resolution_type:;
+        (resolution.resolution_type as ResolutionType) || 'compromise',
+    });
+    // Check condition
+if ( {) {
+  $2
+}
+      set_dispute ({
+        ...dispute,
+        resolution_summary: resolution.summary,
+        resolution_type: resolution.resolution_type,
+        resolved_at: new Date ().toISOString (),
+      });
+
+    } else {
+      toast.error ('Failed to resolve dispute');
+    }
+  }
+  const handleSendMessage = async () => {
+
+    if () return) {
+  $2
+}
+    setIsSending (true);
+
+    try {
+      const success = await addDisputeMessage (dispute_id, message, is_admin);
+      // Check condition
+if ( {) {
+  $2
+}
+        // Refresh messages;
+        const updated_messages = await getDisputeMessages (dispute_id);
+        set_messages (updated_messages);
+        set_message ('');
+      }
+    } catch (error) {
+      logErrorToProduction ('Error sending message:', { data: error });
+    } finally {
+      setIsSending (false);
+    }
+  }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Check condition
 if ( {) {
   $2
@@ -490,6 +539,10 @@ if ( {) {
         <p > Loading dispute details...</p>;
       </div>);
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {logErrorToProduction} from '@/utils/productionLogger';
 import {;
   Dispute,;
@@ -498,6 +551,10 @@ import {;
   DisputeStatus,;
   ResolutionType,;
 } from '@/types/disputes';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -517,6 +574,10 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { ArrowDown, Check, MessageSquare, Download } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from 'sonner';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function DisputeDetail() {;
   const router = useRouter();
   const { disputeId } = router && router.query as { disputeId?: string };
@@ -528,6 +589,10 @@ export function DisputeDetail() {;
     getDisputeMessages,;
     addDisputeMessage,;
   } = useDisputes();
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [dispute, setDispute] = useState<Dispute | null>(null);
   const [messages, setMessages] = useState<DisputeMessage[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -541,9 +606,18 @@ export function DisputeDetail() {;
     summary: '',;
     resolution_type: 'compromise',;
   });
+<<<<<<< HEAD
   const [activeTab, setActiveTab] = useState('overview');
   // Check if user is admin (placeholder - implement proper admin check);
   const isAdmin = user?.userType === 'admin';
+=======
+
+  const [activeTab, setActiveTab] = useState('overview');
+
+  // Check if user is admin (placeholder - implement proper admin check);
+  const isAdmin = user?.userType === 'admin';
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   useEffect(() => {;
     if (!disputeId) return;
     const loadDisputeData = async () => {;
@@ -556,6 +630,10 @@ export function DisputeDetail() {;
           return;
         }
         setDispute(disputeData);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         const messagesData = await getDisputeMessages(disputeId);
         setMessages(messagesData);
       } catch (error) {;
@@ -565,6 +643,7 @@ export function DisputeDetail() {;
         setIsLoading(false);
       }
     };
+<<<<<<< HEAD
     loadDisputeData();
   }, [disputeId, getDisputeById, getDisputeMessages, router]);
   const handleStatusChange = async (status: DisputeStatus) => {;
@@ -628,10 +707,20 @@ export function DisputeDetail() {;
   const handleStatusChange = async (status: DisputeStatus) => {;
     if (!disputeId) return,;
     const success = await updateDisputeStatus(disputeId, status),;
+=======
+
+    loadDisputeData();
+  }, [disputeId, getDisputeById, getDisputeMessages, router]);
+
+  const handleStatusChange = async (status: DisputeStatus) => {;
+    if (!disputeId) return;
+    const success = await updateDisputeStatus(disputeId, status);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (success) {;
       // Update the dispute object with the new status;
       setDispute({ ...dispute!, status: status });
     } else {;
+<<<<<<< HEAD
       toast.error("Failed to update dispute status");
     }
   },;
@@ -665,18 +754,69 @@ export function DisputeDetail() {;
         const updatedMessages = await getDisputeMessages(disputeId),;
         setMessages(updatedMessages),;
         setMessage("");
+=======
+      toast && toast.error('Failed to update dispute status');
+    }
+  };
+
+  const handleResolveDispute = async () => {;
+    if (!disputeId) return;
+
+    if (!resolution && resolution.summary) {;
+      toast && toast.error('Please provide a resolution summary');
+      return;
+    }
+
+    const success = await resolveDispute(disputeId, {;
+      summary: resolution && resolution.summary,;
+      resolution_type:;
+        (resolution && resolution.resolution_type as ResolutionType) || 'compromise',;
+    });
+    if (success && dispute) {;
+      setDispute({;
+        ...dispute,;
+        resolution_summary: resolution && resolution.summary,;
+        resolution_type: resolution && resolution.resolution_type,;
+        resolved_at: new Date().toISOString(),;
+      });
+    } else {;
+      toast && toast.error('Failed to resolve dispute');
+    }
+  };
+
+  const handleSendMessage = async () => {;
+    if (!disputeId || !message && message.trim()) return;
+
+    setIsSending(true);
+    try {;
+      const success = await addDisputeMessage(disputeId, message, isAdmin);
+      if (success) {;
+        // Refresh messages;
+        const updatedMessages = await getDisputeMessages(disputeId);
+        setMessages(updatedMessages);
+        setMessage('');
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
     } catch (error) {;
       logErrorToProduction('Error sending message:', { data: error });
     } finally {;
       setIsSending(false);
     }
+<<<<<<< HEAD
+=======
+  };
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (isLoading) {;
 
       summary: resolution.summary,
 
   if (isLoading) {
+<<<<<<< HEAD
   if (isLoading) {;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return (
       <div className='p-8 text-center'>;
         <div className='w-8 h-8 mx-auto mb-4 animate-spin border-4 border-primary border-t-transparent rounded-full'></div>;
@@ -684,6 +824,7 @@ export function DisputeDetail() {;
       </div>;
     );
   }
+<<<<<<< HEAD
   if (!dispute) {;
     return (
   },
@@ -706,6 +847,15 @@ export function DisputeDetail() {;
         >          Back to Disputes
         <Button onClick={() => router.push("/dashboard/disputes")} className="mt-4">
           Back to Disputes
+=======
+
+  if (!dispute) {;
+    return (
+
+      <div className="p-8 text-center">
+        <p>Dispute not found</p>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <Button onClick={() => router.push("/dashboard/disputes")} className="mt-4">
           Back to Disputes
 
@@ -714,9 +864,13 @@ export function DisputeDetail() {;
       </div>
     )
   }
+<<<<<<< HEAD
       <div className='p-8 text-center'>;
         <p>Dispute not found</p>;
         <Button
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           onClick={() => router && router.push('/dashboard/disputes')}
           className='mt-4';
         >          Back to Disputes;
@@ -743,16 +897,20 @@ if ( {) {
   const getStatusBadgeVariant = (status: DisputeStatus, ) =>: any {
     switch (status) {
       case 'open':;
+<<<<<<< HEAD
       case 'under_review':;
         return 'secondary';
       case 'resolved':;
   const getStatusBadgeVariant = (status: DisputeStatus,) => {
     switch (status) {
       case 'open':
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         return 'default';
       case 'under_review':;
         return 'secondary';
       case 'resolved':;
+<<<<<<< HEAD
         return 'outline'; // Changed from "success" to "outline"
       case 'closed':
         return 'outline'
@@ -762,6 +920,11 @@ if ( {) {
   }
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
+=======
+
+        return 'outline'; // Changed from './success'; to "outline";
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       case 'closed':;
         return 'outline';
       default:;
@@ -805,6 +968,7 @@ if ( {) {
               {dispute.status.replace('_ ')}
             </Badge>
           </div>
+<<<<<<< HEAD
           <p className='text-muted-foreground'>
             Reported{' '}
             {formatDistanceToNow(new Date(dispute?.created_at |''), {
@@ -832,10 +996,14 @@ if ( {) {
           </Button>
           {isAdmin && dispute?.status === 'open' && (
             <Button onClick={() => handleStatusChange('under_review')}>              Start Review
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <p className="text-muted-foreground">
             Reported {formatDistanceToNow(new Date(dispute?.created_at || ""), { addSuffix: true })}
           </p>
         </div>
+<<<<<<< HEAD
         <div className='flex gap-2'>
           <Button
             variant='outline'
@@ -845,11 +1013,14 @@ if ( {) {
           </Button>
           {isAdmin && dispute?.status === 'open' && (
             <Button onClick={() => handleStatusChange('under_review')}>              Start Review
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             </Button>
           )}
 
 
+<<<<<<< HEAD
 
       {dispute.status === "resolved" && dispute.resolution_summary && (
         <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">
@@ -877,16 +1048,26 @@ if ( {) {
       )}
       <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
         <div className='lg:col-span-2'>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       {dispute.status === "resolved" && dispute.resolution_summary && (
         <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">
           <Check className="h-4 w-4" />
           <AlertTitle>This dispute has been resolved</AlertTitle>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <AlertTitle>This dispute has been resolved</AlertTitle>
           <AlertDescription>{dispute.resolution_summary}</AlertDescription>
         </Alert>
       )}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
         <div className='lg:col-span-2'>
 
@@ -894,6 +1075,10 @@ if ( {) {
         <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">
           <Check className="h-4 w-4" />
           <AlertTitle>This dispute has been resolved</AlertTitle>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <AlertDescription>
   },;
   if (isLoading) {;
@@ -962,6 +1147,7 @@ if ( {) {
       
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2">
+<<<<<<< HEAD
           <Tabs value={activeTab} onValueChange={setActiveTab}>
             <TabsList className="mb-6">
               <TabsTrigger value="overview">Overview</TabsTrigger>
@@ -971,6 +1157,10 @@ if ( {) {
             </TabsList>
             <TabsContent value='overview' className='space-y-6'>
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           <Tabs value={activeTab} onValueChange={setActiveTab}>
             <TabsList className='mb-6'>
@@ -1115,6 +1305,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <p>{dispute.project?.title || "Unknown Project"}</p>
                     <p className="text-sm text-muted-foreground">{dispute.project?.scope_summary}</p>
                   </div>
+<<<<<<< HEAD
                   
                   {dispute.milestone_id && (
                     <div>
@@ -1126,13 +1317,25 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <h3 className='font-medium'>Timeline</h3>
                     <ul className='space-y-2 mt-2'>
                       <li className='flex gap-2 items-center'>
+=======
+
+                  
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   {dispute.milestone_id && (
                     <div>;
                       <h3 className='font - medium'>Related Milestone</h3>;
                       <p className='text - sm'>;
                         Milestone ID: {dispute.milestone_id}
+<<<<<<< HEAD
         </div>;
       </div>;
+=======
+
+        </div>;
+      </div>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {dispute && dispute.status === 'resolved' && dispute && dispute.resolution_summary && (;
         <Alert className='bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900'>;
           <Check className='h-4 w-4' />;
@@ -1140,6 +1343,10 @@ ursor/fix-website-loading-errors-and-merge-6662
           <AlertDescription>{dispute && dispute.resolution_summary}</AlertDescription>;
         </Alert>;
       )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>;
         <div className='lg:col-span-2'>;
           <Tabs value={activeTab} onValueChange={setActiveTab}>;
@@ -1149,6 +1356,10 @@ ursor/fix-website-loading-errors-and-merge-6662
               <TabsTrigger value='attachments'>Attachments</TabsTrigger>;
               {isAdmin && <TabsTrigger value='admin'>Admin Notes</TabsTrigger>}
             </TabsList>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <TabsContent value='overview' className='space-y-6'>;
               <Card>;
                 <CardHeader>;
@@ -1165,10 +1376,18 @@ ursor/fix-website-loading-errors-and-merge-6662
                         dispute && dispute.reason_code}
                     </p>;
                   </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <div>;
                     <h3 className='font-medium'>Description</h3>;
                     <p className='whitespace-pre-wrap'>{dispute && dispute.description}</p>;
                   </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <div>;
                     <h3 className='font-medium'>Project</h3>;
                     <p>{dispute && dispute.project?.title || 'Unknown Project'}</p>;
@@ -1176,6 +1395,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                       {dispute && dispute.project?.scope_summary}
                     </p>;
                   </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   {dispute && dispute.milestone_id && (;
                     <div>;
                       <h3 className='font-medium'>Related Milestone</h3>;
@@ -1184,10 +1407,18 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </p>;
                     </div>;
                   )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <div>;
                     <h3 className='font-medium'>Timeline</h3>;
                     <ul className='space-y-2 mt-2'>;
                       <li className='flex gap-2 items-center'>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         <Badge
                           variant='outline'
                           className='h-6 w-6 rounded-full p-0 flex items-center justify-center'>;
@@ -1205,14 +1436,25 @@ ursor/fix-website-loading-errors-and-merge-6662
                         </Badge>;
                         <span>;
                           Created on{' '}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           {format(;
                             new Date(dispute && dispute.created_at),;
                             "MMM d, yyyy 'at' h:mm a";
                           )}
                         </span>;
                       </li>;
+<<<<<<< HEAD
                       {dispute && dispute.status !== 'open' && (;
                         <li className='flex gap-2 items-center'>;
+=======
+
+                      {dispute && dispute.status !== 'open' && (;
+                        <li className='flex gap-2 items-center'>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           <Badge
                             variant='outline'
                             className='h-6 w-6 rounded-full p-0 flex items-center justify-center'>;
@@ -1221,6 +1463,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                           <span>Under review</span>;
                         </li>;
                       )}
+<<<<<<< HEAD
                         <Badge
                           variant='outline'
                           className='h-6 w-6 rounded-full p-0 flex items-center justify-center'
@@ -1237,6 +1480,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </li>
                       {dispute.status !== 'open' && (
                         <li className='flex gap-2 items-center'>
+=======
+
+
+                      {dispute && dispute.resolved_at && (;
+                        <li className='flex gap-2 items-center'>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           <Badge
                             variant='outline'
                             className='h-6 w-6 rounded-full p-0 flex items-center justify-center'>;
@@ -1261,6 +1511,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                         <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">1</Badge>
                         <span>Created on {format(new Date(dispute.created_at), "MMM d, yyyy 'at' h:mm a")}</span>
                       </li>
+<<<<<<< HEAD
                       {dispute.status !== 'open' && (
                         <li className='flex gap-2 items-center'>
                           <Badge
@@ -1277,11 +1528,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                         </li>
                       )}
                       
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       {dispute.resolved_at && (
                         <li className="flex gap-2 items-center">
                           <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">
                             {dispute.status !== "open" ? "3" : "2"}
                           </Badge>
+<<<<<<< HEAD
                           <span>
                             Resolved on{' '}
                             {format(
@@ -1350,6 +1605,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                     {dispute.resolution_type && (
                       <div className='mt-4'>
                         <Badge>
+=======
+
+                          <span>Resolved on {format(new Date(dispute.resolved_at), "MMM d, yyyy 'at' h:mm a")}</span>
+
+                        </li>
+                      )}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                           {format (
                             new Date (dispute.created_at),
@@ -1575,6 +1837,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <div className='text-center py-12'>
                         <MessageSquare className='mx-auto h-12 w-12 text-muted-foreground mb-2' />
                         <p className='text-muted-foreground'>No messages yet</p>
+<<<<<<< HEAD
             <TabsContent value='messages' className='space-y-6'>
             
             <TabsContent value="messages" className="space-y-6">
@@ -1589,10 +1852,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <div className="text-center py-12">
                         <MessageSquare className="mx-auto h-12 w-12 text-muted-foreground mb-2" />
                         <p className="text-muted-foreground">No messages yet</p>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       </div>
                     ) : (
                       messages
                         .filter(msg => !msg.is_admin_note)
+<<<<<<< HEAD
                         .map(msg => {
                           const isCurrentUser = user?.id === msg.user_id
                                                       >
@@ -1600,11 +1866,39 @@ ursor/fix-website-loading-errors-and-merge-6662
                         .map(msg => {
                           const isCurrentUser = user?.id === msg.user_id
                                                       >
+=======
+
+            </TabsContent>;
+
+            <TabsContent value='messages' className='space-y-6'>;
+              <Card>;
+                <CardHeader>;
+                  <CardTitle>Messages</CardTitle>;
+                  <CardDescription>;
+                    Communication regarding this dispute;
+                  </CardDescription>;
+                </CardHeader>;
+                <CardContent>;
+                  <div className='space-y-6 max-h-[600px] overflow-y-auto p-2'>;
+                    {messages && messages.length === 0 ? (;
+                      <div className='text-center py-12'>;
+                        <MessageSquare className='mx-auto h-12 w-12 text-muted-foreground mb-2' />;
+                        <p className='text-muted-foreground'>No messages yet</p>;
+                      </div>;
+                    ) : (;
+                      messages;
+                        .filter(msg => !msg && msg.is_admin_note);
+                        .map(msg => {;
+                          const isCurrentUser = user?.id === msg && msg.user_id;
+                                                      >;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                               <div
                                 className={`max-w-[80%] ${
                                   isCurrentUser
                                     ? 'bg-primary text-primary-foreground'
                                     : 'bg-muted'
+<<<<<<< HEAD
                                 } p-4 rounded-lg`}
                               >
                                 <div className='flex items-center gap-2 mb-2'>
@@ -1651,6 +1945,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                       >
                         {isSending ? 'Sending...' : 'Send Message'}
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+                                } p-4 rounded-lg`}>;
+                                <div className='flex items-center gap-2 mb-2'>;
+                                  <Avatar className='h-6 w-6'>;
+                                    <AvatarImage
+                                      src={msg && msg.user_profile?.avatar_url}
+                                      alt={
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                                         msg && msg.user_profile?.display_name ||
                                         'User avatar'
                                       }
@@ -1759,6 +2062,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <CardFooter>;
                           );
                         });
+<<<<<<< HEAD
                     )}
                   </div>
                 </CardContent>
@@ -1776,6 +2080,19 @@ ursor/fix-website-loading-errors-and-merge-6662
                         disabled={isSending |!message.trim()}
                       >
                         {isSending ? 'Sending...' : 'Send Message'}
+=======
+
+
+
+                    )}
+                  </div>;
+                </CardContent>;
+                <CardFooter>;
+                  <div className='w-full space-y-4'>;
+                    <Textarea
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       placeholder="Type your message here..."
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
@@ -1785,14 +2102,23 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <div className="flex justify-end">
                       <Button onClick={handleSendMessage} disabled={isSending || !message.trim()}>
                         {isSending ? "Sending..." : "Send Message"}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       </Button>
                     </div>
                   </div>
                 </CardFooter>
               </Card>
             </TabsContent>
+<<<<<<< HEAD
             <TabsContent value='attachments'>
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             
             <TabsContent value="attachments">
@@ -1810,6 +2136,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <p className='text-muted-foreground'>
                       No attachments available
                     </p>
+<<<<<<< HEAD
             <TabsContent value='attachments'>
             
             <TabsContent value="attachments">
@@ -1822,18 +2149,28 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <div className="text-center py-12">
                     <Download className="mx-auto h-12 w-12 text-muted-foreground mb-2" />
                     <p className="text-muted-foreground">No attachments available</p>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </div>
                 </CardContent>
               </Card>
             </TabsContent>
+<<<<<<< HEAD
               <TabsContent value="admin" className="space-y-6">
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             
 
 
             {isAdmin && (
               <TabsContent value='admin' className='space-y-6'>
+<<<<<<< HEAD
+=======
+                <Card>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <CardHeader>
                     <CardTitle>Admin Actions</CardTitle>
                     <CardDescription>
@@ -1841,6 +2178,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </CardDescription>
                   </CardHeader>
                   <CardContent className='space-y-6'>
+<<<<<<< HEAD
                     <div>
             
             {isAdmin && (
@@ -1973,6 +2311,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </div>
                     )}
                     
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <div>
                       <h3 className="font-medium mb-2">Admin Notes</h3>
                       <div className="space-y-4 max-h-[300px] overflow-y-auto p-2">
@@ -2133,6 +2473,15 @@ ursor/fix-website-loading-errors-and-merge-6662
             </TabsContent>;
 
 
+<<<<<<< HEAD
+=======
+                    <CardDescription>;
+                      Handle this dispute as an administrator;
+                    </CardDescription>;
+                  </CardHeader>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <h3 className="font-medium mb-2">Change Status</h3>
                       <div className="flex gap-2">
                         <Button 
@@ -2342,6 +2691,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                               </select>;
                             </div>;
                           </div>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           .map((msg) => (
                           <div key={msg.id} className="bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900">
                             <div className="flex items-center justify-between mb-2">
@@ -2355,6 +2709,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                                 <span className="text-sm font-medium">
                                   {msg.user_profile?.display_name || 'Admin'}
                                 </span>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                               </div>
                               <p className='whitespace-pre-wrap text-sm'>
                                 {msg.message}
@@ -2362,16 +2721,20 @@ ursor/fix-website-loading-errors-and-merge-6662
                             </div>
 
 
+<<<<<<< HEAD
                               </div>
                               <span className="text-xs opacity-70">
                                 {format(new Date(msg.created_at), 'MMM d, h:mm a')}
                               </span>
                             </div>
                           ))}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                             <p className="whitespace-pre-wrap text-sm">{msg.message}</p>
                           </div>
                         ))}
                         
+<<<<<<< HEAD
                         {!messages.some(msg => msg.is_admin_note) && (
                           <p className="text-sm text-muted-foreground italic">No admin notes yet</p>
                         )}
@@ -2382,6 +2745,17 @@ ursor/fix-website-loading-errors-and-merge-6662
                           placeholder='Add an admin note (only visible to administrators)...'
                           value={adminNote}
                           onChange={e => setAdminNote(e.target.value)}                        />
+=======
+
+
+                        {!messages.some(msg => msg.is_admin_note) && (
+                          <p className='text-sm text-muted-foreground italic'>
+                            No admin notes yet
+                          </p>
+                        )}
+                      </div>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                                         msg && msg.user_profile?.display_name ||
                                         'Admin avatar'
                                       }
@@ -2543,6 +2917,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                               })
                             }
 
+<<<<<<< HEAD
                           }}
                           }}
                         >
@@ -2563,6 +2938,9 @@ ursor/fix-website-loading-errors-and-merge-6662
             <CardContent className='space-y-6'>
               <div className='flex items-start gap-4'>
                 <Avatar className='h-10 w-10'>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           }}
                     ;
                     {dispute.status !== "resolved" && (;
@@ -2656,23 +3034,47 @@ ursor/fix-website-loading-errors-and-merge-6662
         <div className='space-y-6'>
         
         <div className="space-y-6">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Card>
             <CardHeader>
               <CardTitle>Parties Involved</CardTitle>
             </CardHeader>
+<<<<<<< HEAD
               </TabsContent>;
             )}
           </Tabs>;
         </div>;
         ;
         <div className="space-y-6">;
+=======
+
+          </Tabs>;
+        </div>;
+
+        <div className='space-y-6'>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Card>;
             <CardHeader>;
               <CardTitle>Parties Involved</CardTitle>;
             </CardHeader>;
+<<<<<<< HEAD
                   <AvatarImage
                     src={dispute && dispute.client_profile?.avatar_url}
                     alt={
+=======
+            <CardContent className='space-y-6'>;
+              <div className='flex items-start gap-4'>;
+                <Avatar className='h-10 w-10'>;
+
+                  <AvatarImage
+                    src={dispute && dispute.client_profile?.avatar_url}
+                    alt={
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       dispute && dispute.client_profile?.display_name || 'Client avatar'
                     }
                   />;
@@ -2685,6 +3087,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </p>;
                 </div>;
               </div>;
+<<<<<<< HEAD
               <div className='flex justify-center'>;
                 <ArrowDown className='h-6 w-6 text-muted-foreground' />;
               </div>;
@@ -2725,6 +3128,21 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <p className='font-medium'>Talent</p>
                   <p className='text-sm text-muted-foreground'>
                     {dispute.talent_profile?.display_name |'Unknown Talent'}
+=======
+
+              <div className='flex justify-center'>;
+                <ArrowDown className='h-6 w-6 text-muted-foreground' />;
+              </div>;
+
+              <div className='flex items-start gap-4'>;
+                <Avatar className='h-10 w-10'>;
+
+                  <AvatarImage
+                    src={dispute && dispute.talent_profile?.avatar_url}
+                    alt={
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <CardContent className="space-y-6">
               <div className="flex items-start gap-4">
                 <Avatar className="h-10 w-10">
@@ -2738,6 +3156,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </p>
                 </div>
               </div>
+<<<<<<< HEAD
               <div className='flex justify-center'>
                 <ArrowDown className='h-6 w-6 text-muted-foreground' />
               </div>
@@ -2763,12 +3182,20 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <p className="font-medium">Talent</p>
                   <p className="text-sm text-muted-foreground">
                     {dispute.talent_profile?.display_name || "Unknown Talent"}
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </p>
                 </div>
               </div>
             </CardContent>
           </Card>
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           
 
@@ -2805,6 +3232,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       ? 'Talent'
                       : 'Unknown'}
                 </span>
+<<<<<<< HEAD
           
           <Card>
             <CardHeader>
@@ -2828,6 +3256,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="flex justify-between">
                 <span className="font-medium">Raised by:</span>
                 <span>{dispute.client_profile && dispute.talent_profile && dispute.raised_by === (dispute.client_profile as any).id ? "Client" : dispute.talent_profile && dispute.raised_by === (dispute.talent_profile as any).id ? "Talent" : "Unknown"}</span>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </div>
             </CardContent>
           </Card>
@@ -2835,9 +3265,12 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
     </div>
   )
+<<<<<<< HEAD
                   <AvatarImage
                     src={dispute && dispute.talent_profile?.avatar_url}
                     alt={
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       dispute && dispute.talent_profile?.display_name || 'Talent avatar'
                     }
                   />;
@@ -2847,6 +3280,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <p className='font-medium'>Talent</p>;
                   <p className='text-sm text-muted-foreground'>;
                     {dispute && dispute.talent_profile?.display_name || 'Unknown Talent'}
+<<<<<<< HEAD
             <CardContent className="space-y-6">;
               <div className="flex items-start gap-4">;
                 <Avatar className="h-10 w-10">;
@@ -2874,16 +3308,23 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <p className="font-medium">Talent</p>;
                   <p className="text-sm text-muted-foreground">;
                     {dispute.talent_profile?.display_name || "Unknown Talent"}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </p>;
                 </div>;
               </div>;
             </CardContent>;
           </Card>;
+<<<<<<< HEAD
           ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Card>;
             <CardHeader>;
               <CardTitle>Case Information</CardTitle>;
             </CardHeader>;
+<<<<<<< HEAD
             <CardContent className="space-y-4 text-sm">;
               <div className="flex justify-between">;
                 <span className="font-medium">Case ID:</span>;
@@ -2902,11 +3343,123 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="flex justify-between">;
                 <span className="font-medium">Raised by:</span>;
                 <span>{dispute.client_profile && dispute.talent_profile && dispute.raised_by === (dispute.client_profile as any).id ? "Client" :dispute.talent_profile && dispute.raised_by === (dispute.talent_profile as any).id ? "Talent" :"Unknown"}</span>;
+=======
+            <CardContent className='space-y-4 text-sm'>;
+              <div className='flex justify-between'>;
+                <span className='font-medium'>Case ID:</span>;
+                <span className='font-mono'>{dispute && dispute.id}</span>;
+              </div>;
+              <div className='flex justify-between'>;
+                <span className='font-medium'>Created:</span>;
+                <span>;
+                  {format(new Date(dispute && dispute.created_at), 'MMM d, yyyy')}
+                </span>;
+              </div>;
+              <div className='flex justify-between'>;
+                <span className='font-medium'>Status:</span>;
+                <Badge variant={getStatusBadgeVariant(dispute && dispute.status)}>;
+                  {dispute && dispute.status.replace('_', ' ')}
+                </Badge>;
+              </div>;
+              <div className='flex justify-between'>;
+                <span className='font-medium'>Raised by:</span>;
+                <span>;
+                  {dispute && dispute.client_profile &&;
+                  dispute && dispute.talent_profile &&;
+                  dispute && dispute.raised_by === (dispute && dispute.client_profile as any).id;
+                    ? 'Client';
+                    : dispute && dispute.talent_profile &&;
+                        dispute && dispute.raised_by === (dispute && dispute.talent_profile as any).id;
+                      ? 'Talent';
+                      : 'Unknown'}
+              </TabsContent>)}
+          </Tabs>;
+        </div>;
+        <div className='space - y-6'>;
+          <Card>;
+            <CardHeader>;
+              <CardTitle > Parties Involved</CardTitle>;
+            </CardHeader>;
+            <CardContent className='space - y-6'>;
+              <div className='flex items - start gap - 4'>;
+                <Avatar className='h - 10 w - 10'>;
+                  <AvatarImage;
+                    src={dispute.client_profile?.avatar_url}
+                    alt={
+                      dispute.client_profile?.display_name || 'Client avatar';
+                    }
+                  />;
+                  <AvatarFallback > C</AvatarFallback>;
+                </Avatar>;
+                <div>;
+                  <p className='font - medium'>Client</p>;
+                  <p className='text - sm text - muted - foreground'>;
+                    {dispute.client_profile?.display_name || 'Unknown Client'}
+                  </p>;
+                </div>;
+              </div>;
+              <div className='flex justify - center'>;
+                <ArrowDown className='h - 6 w - 6 text - muted - foreground' />;
+              </div>;
+              <div className='flex items - start gap - 4'>;
+                <Avatar className='h - 10 w - 10'>;
+                  <AvatarImage;
+                    src={dispute.talent_profile?.avatar_url}
+                    alt={
+                      dispute.talent_profile?.display_name || 'Talent avatar';
+                    }
+                  />;
+                  <AvatarFallback > T</AvatarFallback>;
+                </Avatar>;
+                <div>;
+                  <p className='font - medium'>Talent</p>;
+                  <p className='text - sm text - muted - foreground'>;
+                    {dispute.talent_profile?.display_name || 'Unknown Talent'}
+                  </p>;
+                </div>;
+              </div>;
+            </CardContent>;
+          </Card>;
+          <Card>;
+            <CardHeader>;
+              <CardTitle > Case Information</CardTitle>;
+            </CardHeader>;
+            <CardContent className='space - y-4 text - sm'>;
+              <div className='flex justify - between'>;
+                <span className='font - medium'>Case ID:</span>;
+                <span className='font - mono'>{dispute.id}</span>;
+              </div>;
+              <div className='flex justify - between'>;
+                <span className='font - medium'>Created:</span>;
+                <span>;
+                  {format (new Date (dispute.created_at), 'MMM d, yyyy')}
+                </span>;
+              </div>;
+              <div className='flex justify - between'>;
+                <span className='font - medium'>Status:</span>;
+                <Badge variant={getStatusBadgeVariant (dispute.status)}>;
+                  {dispute.status.replace ('_', ' ')}
+                </Badge>;
+              </div>;
+              <div className='flex justify - between'>;
+                <span className='font - medium'>Raised by:</span>;
+                <span>;
+                  {dispute.client_profile &&;
+                  dispute.talent_profile &&;
+                  dispute.raised_by === (dispute.client_profile as any).id;
+                    ? 'Client';
+                    : dispute.talent_profile &&;
+                        dispute.raised_by === (dispute.talent_profile as any).id;
+                      ? 'Talent';
+                      : 'Unknown'}
+                </span>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </div>;
             </CardContent>;
           </Card>;
         </div>;
       </div>;
+<<<<<<< HEAD
   if (!disputeId |!message.trim () ) return
 }
 }, [disputeId, getDisputeById, getDisputeMessages, router])
@@ -3033,6 +3586,11 @@ setMessages (messagesData) ;
   ;
 }finally {;
   setIsLoading (false) ;
+=======
+
+    </div>);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 };
 }, [disputeId, getDisputeById, getDisputeMessages, router]);
@@ -3154,4 +3712,8 @@ container mx-auto p-4 space-y-6" > <div className="flex flex-wrap items-center j
 
 ;
 
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

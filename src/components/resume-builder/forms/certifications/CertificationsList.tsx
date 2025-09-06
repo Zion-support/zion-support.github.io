@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Certification  } from '@/types/resume';
 import { Card, CardContent  } from '@/components/ui/card';
 import { Button  } from '@/components/ui/button';
@@ -21,6 +22,8 @@ export function CertificationsList({
   onDelete
 }: CertificationsListProps) {  if (certifications.length === 0) {
 export function CertificationsList({ certifications, onEdit, onDelete }: CertificationsListProps) {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface CertificationsListProps {
   certifications: Certification[]
   onEdit: (cert: Certification) => void
@@ -30,11 +33,14 @@ interface CertificationsListProps {
 export function CertificationsList({ certifications, onEdit, onDelete }: CertificationsListProps) {
   if (certifications.length === 0) {
     return null
+<<<<<<< HEAD
 import { Certification } from '@/types/resume',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
 import { Edit, Trash2 } from 'lucide-react';
 import { format } from 'date-fns',;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface CertificationsListProps {;
   certifications: Certification[];
   onEdit: (cert: Certification) => void;
@@ -56,6 +62,7 @@ interface CertificationsListProps {;
   onDelete: (id: string) => void;
 }
 
+<<<<<<< HEAD
   return (
     <div className="space-y-4">
       <h3 className="text-md font-medium">Added Certifications</h3>
@@ -111,10 +118,32 @@ interface CertificationsListProps {;
                 </p>
               </div>
               <div className='flex gap-2'>
+=======
+export function CertificationsList(): any ({ certifications, onEdit, onDelete }: CertificationsListProps) {;
+  if (certifications && certifications.length === 0) {;
+
+import { Certification } from '@/types/resume';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Edit, Trash2 } from 'lucide-react'
+import { format } from 'date-fns';
+interface CertificationsListProps {
+  certifications: Certification[],
+  on_edit: (cert: Certification) => void,
+  on_delete: (id: string) => void;
+}
+
+    return null;
+  }
+  return (
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <Button
                   variant="ghost"
                   size="icon"
                   onClick={() => onEdit(cert)}
+<<<<<<< HEAD
                   aria-label='Edit certification'                  variant="ghost"
                   size="icon"
                   onClick = {() => onEdit(cert),}
@@ -197,6 +226,10 @@ interface CertificationsListProps {
             </div>
             {cert.credential_url && (
               <p className='text-xs mt-2'>
+=======
+
+                  className='text-primary hover:underline'>              <p className="text-xs mt-2">;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <a
                   href = {cert && cert.credential_url,}
 
@@ -216,10 +249,16 @@ interface CertificationsListProps {
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-primary hover:underline"
+<<<<<<< HEAD
                   View credential
                 </a>;
               </p>;
                 >
+=======
+
+                >
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   View credential
                 </Link>
               </p>
@@ -227,6 +266,10 @@ interface CertificationsListProps {
           </CardContent>;
         </Card>;
       ))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>;
   );
 }
@@ -329,4 +372,8 @@ if ( {) {
         </Card>))}
     </div>);
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

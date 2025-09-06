@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 import { Job } from "@/types/jobs";
 export const JOB_POSTS: Job[] = [
   {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 ];
@@ -8,17 +11,39 @@ export const JOB_POSTS: Job[] = [
 updated at: "2024-05-05"
 }];
 
+<<<<<<< HEAD
 
+=======
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 created at: "2024 - 05 - 05";
 updated at: "2024 - 05 - 05";
 }];
 ;
+<<<<<<< HEAD
 
 import { Job } from "@/types/jobs",
 export const JOB_POSTS: Job[] = [
 import { Job } from '@/types/jobs';
 import { Job } from "@/types/jobs",
 export const JOB_POSTS: Job[] = [
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+import { Job } from "@/types/jobs",
+export const JOB_POSTS: Job[] = [
+=======
+import { Job } from '@/types/jobs';
+=======
+import { Job } from "@/types/jobs",
+export const JOB_POSTS: Job[] = [
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   {
     id: "job-1",
     client_id: "client-1",
@@ -32,6 +57,7 @@ export const JOB_POSTS: Job[] = [
     created_at: "2024-05-10",
     updated_at: "2024-05-10"},
   {
+<<<<<<< HEAD
 id: 'job-2',
     client_id: 'client-2',
     title: 'Part-time DevOps Engineer',
@@ -89,3 +115,8 @@ export const JOB_POSTS: Job[] = [;
     updated_at: "2024-05-05"}
 ];
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

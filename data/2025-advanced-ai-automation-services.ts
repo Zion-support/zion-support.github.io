@@ -1,9 +1,14 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { ServiceVariant } from '../types / service - variants';
 
 export interface AdvancedAIAutomationService {
 
   {
 
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 export interface AdvancedAIAutomationService {;
   id: string;
@@ -387,6 +392,9 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
   }, ];
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -438,6 +446,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     variant: 'ai-code-enterprise',
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+<<<<<<< HEAD
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -445,6 +454,25 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
 ;
   }
 ];
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+
+      website: 'https://ziontechgroup.com';
+    }
+<<<<<<< HEAD
+    real_implementation: true,
+    implementation_details: 'AI - powered sales intelligence platform with predictive analytics, customer insights, and performance optimization.';
+    launch_date: '2024 - 10 - 01';
+    customers: 89;
+    rating: 4.8,
+    reviews: 38;
+
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
     realImplementation: true
     implementationDetails:

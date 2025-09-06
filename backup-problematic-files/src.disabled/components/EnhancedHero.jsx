@@ -9,4 +9,8 @@ const EnhancedHero = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default EnhancedHero;
+=======
+export default EnhancedHero;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

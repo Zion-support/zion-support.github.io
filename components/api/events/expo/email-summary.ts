@@ -1,10 +1,28 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    }
+    // TODO: Integrate with actual provider
+    return res && res.status(200).json({ status: 'queued', provider });
+  } catch (e: any) {
+return res
+      .status(500)
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       .json({ error: e && e.message || 'Failed to queue emails' });
   }    return res && res.status(500).json({ error: e && e.message || 'Failed to queue emails' })
   };
 }
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 export default async /**
  * handler - Function description
@@ -57,8 +75,18 @@ return res
   }    return res.status(500).json({ error: e.message |'Failed to queue emails' })
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       .json({ error: e.message || 'Failed to queue emails' });
   }    return res.status(500).json({ error: e.message || 'Failed to queue emails' })
   };
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

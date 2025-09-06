@@ -1,11 +1,16 @@
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from "react";
 import Head from "next/head";
 
 
 export default function LocationsPage() {
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -27,6 +32,9 @@ class ErrorBoundary extends React.Component {
 import React from "react";
 import Head from "next/head";
 export default function LocationsPage() {;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
       <Head>;
@@ -97,6 +105,10 @@ function LocationsPage() {
           .;
         </p>;
       </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>);
   return (
     <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
@@ -128,10 +140,20 @@ function LocationsPage() {
           or email{" "}
           <a className="text - cyan - 400" href="mailto:kleber@ziontechgroup.com">;
             kleber@ziontechgroup.com;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </a>;
           .;
         </p>;
       </div>;
+<<<<<<< HEAD
+=======
+
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
@@ -159,6 +181,7 @@ function LocationsPage() {
 				<p className="text-slate-300">Call <a className="text-cyan-400" href="tel: +13024640950">+1 302 464 0950</a> or email <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p>
 			</div>
 		</div>
+<<<<<<< HEAD
 );
 }
     </div>);
@@ -247,3 +270,16 @@ export default function LocationsPage() {
   );
 }
 }
+=======
+	);
+
+}
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

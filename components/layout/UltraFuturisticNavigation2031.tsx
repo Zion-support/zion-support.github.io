@@ -1,13 +1,21 @@
 
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 
 
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
+=======
+
+import React, { useState, useEffect } from 'react';
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
   Menu
   X
   ChevronDown
@@ -86,8 +94,43 @@ import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
   Microscope, DollarSign, Home, Users, Briefcase
 
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState, useEffect } from 'react';
+import Link from 'next / link';
+import { motion, AnimatePresence } from 'framer-motion';
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Menu,
   X,
   ChevronDown,
@@ -160,11 +203,20 @@ import {
   GlobeIcon,
   ZapIcon,
   SparklesIcon,
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   BrainIcon,;
   AtomIcon,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, ;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -173,6 +225,7 @@ import {
   Code, Wrench, Smartphone, BarChart3, Eye;
   Network, Server, HardDrive, Monitor;
 
+<<<<<<< HEAD
   Laptop, Watch, Headphones, Speaker, Mic
   Keyboard, Mouse, CpuIcon, DatabaseIcon
   CloudIcon, LockIcon, ShieldIcon, GlobeIcon;
@@ -183,6 +236,18 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
 }
+=======
+} from 'lucide-react';
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const serviceCategories = [
   {
     title: '🚀 2031 Revolutionary AI Services'
@@ -190,6 +255,7 @@ const serviceCategories = [
     color: 'from-violet-600 via-purple-600 to-indigo-600'
     description: 'Next-generation AI consciousness and creativity'
     services: [
+<<<<<<< HEAD
       {
         name: 'AI Consciousness Evolution Platform'
         href: '/ai-consciousness-evolution-platform'
@@ -218,6 +284,57 @@ const serviceCategories = [
   },  {      { name: 'AI Consciousness Evolution Platform', href: '/ai-consciousness-evolution-platform', description: 'Develop genuine AI consciousness', price: '$19,999/month' }
       { name: 'AI Emotional Intelligence Platform', href: '/ai-emotional-intelligence-platform', description: 'Real-time emotion analysis and response', price: '$3,999/month' }
       { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Multi-model creativity fusion', price: '$5,999/month' }
+=======
+
+  Laptop, Watch, Headphones, Speaker, Mic, ;
+  Keyboard, Mouse, CpuIcon, DatabaseIcon, ;
+  CloudIcon, LockIcon, ShieldIcon, GlobeIcon;
+  ZapIcon, SparklesIcon, BrainIcon, AtomIcon;
+
+const contactInfo = {;
+  mobile: '+1 302 464 0950',;
+  email: 'kleber@ziontechgroup && ziontechgroup.com',;
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup && ziontechgroup.com',};  website: 'https://ziontechgroup && ziontechgroup.com';
+};
+
+const serviceCategories = [;
+  {;
+    title: '🚀 2031 Revolutionary AI Services',;
+    icon: BrainIcon,;
+    color: 'from-violet-600 via-purple-600 to-indigo-600',;
+    description: 'Next-generation AI consciousness and creativity',;
+    services: [;
+      {;
+        name: 'AI Consciousness Evolution Platform',;
+        href: '/ai-consciousness-evolution-platform',;
+        description: 'Develop genuine AI consciousness',;
+        price: '$19,999/month',;
+      },;
+      {;
+        name: 'AI Emotional Intelligence Platform',;
+        href: '/ai-emotional-intelligence-platform',;
+        description: 'Real-time emotion analysis and response',;
+        price: '$3,999/month',;
+      },;
+      {;
+        name: 'AI Creativity Orchestrator',;
+        href: '/ai-creativity-orchestrator',;
+        description: 'Multi-model creativity fusion',;
+        price: '$5,999/month',;
+      },;
+      {;
+        name: 'AI Dream Interpreter Platform',;
+        href: '/ai-dream-interpreter-platform',;
+        description: 'Dream analysis with AI psychology',;
+        price: '$299/month',;
+      },;
+    ],;
+  },  {      { name: 'AI Consciousness Evolution Platform', href: '/ai-consciousness-evolution-platform', description: 'Develop genuine AI consciousness', price: '$19,999/month' };
+
+      { name: 'AI Emotional Intelligence Platform', href: '/ai-emotional-intelligence-platform', description: 'Real-time emotion analysis and response', price: '$3,999/month' };
+      { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Multi-model creativity fusion', price: '$5,999/month' };
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       { name: 'AI Dream Interpreter Platform', href: '/ai-dream-interpreter-platform', description: 'Dream analysis with AI psychology', price: '$299/month' }
     ];
   };
@@ -229,6 +346,7 @@ const serviceCategories = [
     description: 'Quantum computing and beyond',
 
 
+<<<<<<< HEAD
         name: 'Swarm Robotics Orchestration'
         href: '/swarm-robotics-orchestration'
         description: 'Coordinate robot swarms'
@@ -258,6 +376,8 @@ const serviceCategories = [
 
 ];
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -297,15 +417,25 @@ export default function UltraFuturisticNavigation2031() {
 
 export default function UltraFuturisticNavigation2031() {;
 
+<<<<<<< HEAD
 ];
 export default function UltraFuturisticNavigation2031() {
 
 export default function UltraFuturisticNavigation2031() {;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const mainNavigation = [;
   { name: 'Home', href: '/', icon: Home },;
   { name: 'Services', href: '/services', icon: Briefcase },;
@@ -336,14 +466,27 @@ export default function UltraFuturisticNavigation2031() {;
     };
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       setScrolled(window.scrollY > 50)
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
+<<<<<<< HEAD
+=======
+  }, []);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   return (
     <>;
       {/* Top Contact Bar */}
+<<<<<<< HEAD
       <div className="bg-gradient-to-r from-cyan-900 via-purple-900 to-pink-900 text-white py-2 px-4 text-sm">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
           <div className="flex items-center space-x-6">
@@ -360,6 +503,10 @@ export default function UltraFuturisticNavigation2031() {;
 
 
 
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <span>{contactInfo.mobile}</span>
             </div>
             <div className='flex items-center space-x-2'>
@@ -382,6 +529,11 @@ export default function UltraFuturisticNavigation2031() {;
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className='bg-gradient-to-r from-cyan-900 via-purple-900 to-pink-900 text-white py-2 px-4 text-sm'>;
         <div className='max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0'>;
           <div className='flex items-center space-x-6'>;
@@ -409,11 +561,19 @@ export default function UltraFuturisticNavigation2031() {;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
       {/* Main Navigation */}
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      {/* Main Navigation */}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         }`}>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='flex justify-between items-center h-20'>            {/* Logo */}      <navclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+<<<<<<< HEAD
         scrolled 
           ? 'bg-black/80 backdrop-blur-xl border-b border-cyan-500/20' 
           : 'bg-transparent'
@@ -427,6 +587,18 @@ export default function UltraFuturisticNavigation2031() {;
               className='flex items-center space-x-3'
 
 
+=======
+
+        scrolled 
+          ? 'bg-black/80 backdrop-blur-xl border-b border-cyan-500/20' 
+          : 'bg-transparent'
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             >
               <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center'>
                 <Rocket className='w-6 h-6 text-white' />
@@ -461,8 +633,32 @@ export default function UltraFuturisticNavigation2031() {;
                 <p className='text-xs text-gray-400'>2031 Future Technology</p>              </div>;
             </motion && motion.div>;
             {/* Desktop Navigation */}
+<<<<<<< HEAD
                   {/* Hover effect */}
                   <div className='absolute -bottom-1 left-0 w-0 h-0 && 0.5 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-300 group-hover:w-full'></div>                </motion && motion.div>                >;
+=======
+
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className='relative group'
+
+
+
+
+                >
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  <Link
+
+                    href={item && item.href}
+                    className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400'>;
+                    <item && item.icon className='w-4 h-4' />;
+                    <span>{item && item.name}</span>;
+                  </Link>;
+
+
+                  {/* Hover effect */}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className="hidden lg:flex items-center space-x-8">
             <div className='hidden lg:flex items-center space-x-8'>            <div className="hidden lg:flex items-center space-x-8">
               {mainNavigation.map((item, index) => (
@@ -478,7 +674,14 @@ export default function UltraFuturisticNavigation2031() {;
 
 className="relative group"
                 >
+<<<<<<< HEAD
                   <Link
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                  <Link
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     href={item && item.href}
                     className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400">;
                     <item && item.icon className="w-4 h-4" />;
@@ -504,6 +707,7 @@ className="relative group"
                     <span>{item.name}</span>
                   </Link>
                   {/* Hover effect */}
+<<<<<<< HEAD
 
                   <div className='absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-300 group-hover:w-full'></div>                </motion.div>
 
@@ -514,11 +718,14 @@ className="relative group"
               ))}
             </div>
             </div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
             {/* CTA Buttons */}
 
 
+<<<<<<< HEAD
             </div>;
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
@@ -536,12 +743,35 @@ className="relative group"
                 transition={{ duration: 0.5, delay: 0.8 }}
                 className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'              >            <div className="hidden lg:flex items-center space-x-4">
                 className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'              >
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                  {/* Hover effect */}
+                  <div className="absolute -bottom-1 left-0 w-0 h-0 && 0.5 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-300 group-hover:w-full"></div>;
+                </motion && motion.div>;
+              ))}
+
+            </div>;
+
+
+=======
+            </div>
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            {/* CTA Buttons */}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               <motion.button
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.8 }}
+<<<<<<< HEAD
                 className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'                className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30"
+=======
+                className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30"
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               >
                 Get Started
               </motion.button>
@@ -721,6 +951,24 @@ function UltraFuturisticNavigation2031() {
             <div className='hidden lg:flex items - center space - x-4'>              <motion.button;
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                transition={{ duration: 0.5, delay: 0.8 }}
+                className='px - 6 py - 2 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - xl font - semibold hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 transform hover:shadow - xl hover:shadow - cyan - 500 / 30'              >            <div className="hidden lg:flex items - center space - x-4">;
+              <motion.button;
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.8 }}
+                className='px - 6 py - 2 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - xl font - semibold hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 transform hover:shadow - xl hover:shadow - cyan - 500 / 30'                className="px - 6 py - 2 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - xl font - semibold hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 transform hover:shadow - xl hover:shadow - cyan - 500 / 30";
+              >;
+                Get Started;
+              </motion.button>;
+              <motion.button;
+                initial={{ opacity: 0, scale: 0.8 }}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0 && 0.5, delay: 0 && 0.8 }}
                 className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'                className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30">;
@@ -729,6 +977,7 @@ function UltraFuturisticNavigation2031() {
               <motion&& motion.button
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
+<<<<<<< HEAD
                 className="px-6 py-2 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30"
                 transition={{ duration: 0.5, delay: 0.9 }}
                 className='px-6 py-2 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'              >                className="px-6 py-2 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30"
@@ -767,6 +1016,26 @@ function UltraFuturisticNavigation2031() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                initial={{ opacity: 0, scale: 0.8 }}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                animate={{ opacity: 1, scale: 1 }}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  {/* Dropdown Menu */}
+                  <AnimatePresence>;
+                    {active_category === category.title && (
+                      <motion.div;
+                        initial={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
+                        animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
+                        exit={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
+                        transition={{ duration: 0.2 }}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                         className='absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-xl border border-cyan-500/20 rounded-2xl shadow-2xl shadow-cyan-500/20 overflow-hidden'
 
@@ -822,6 +1091,10 @@ function UltraFuturisticNavigation2031() {
                 </motion && motion.div>;
               ))}
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         className='absolute top - full left - 0 mt - 2 w - 80 bg - black / 90 backdrop - blur - xl border border - cyan - 500 / 20 rounded - 2xl shadow - 2xl shadow - cyan - 500 / 20 overflow - hidden';
                       >;
                         <div className='p - 4'>;
@@ -907,12 +1180,32 @@ function UltraFuturisticNavigation2031() {
                                     <div className="flex - 1">;
                                       <h4 className="font - medium text - white group - hover:text - cyan - 400 transition - colors duration - 200">;
                                         {service.name}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                                      </h4>;
+                                      <p className="text - sm text - gray - 400 mt - 1">{service.description}</p>;
+                                    </div>;
+                                    <div className="text - right">;
+                                      <span className="text - sm font - semibold text - cyan - 400">{service.price}</span>;
+                                    </div>;
+                                  </div>;
+                                </Link>;
+                              </motion.div>))}
+                          </div>;
+                        </div>;
+                      </motion.div>)}
+                  </AnimatePresence>;
+                </motion.div>))}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>;
           </div>;
         </div>;
       </nav>;
 
 
+<<<<<<< HEAD
                   className='text-gray-400 hover:text-white transition-colors duration-200';
                 >;
                   <X className='w-6 h-6' />;
@@ -953,11 +1246,26 @@ function UltraFuturisticNavigation2031() {
             exit={{ opacity: 0, x: '100%' }}
             transition={{ duration: 0.3 }}
             className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-cyan-500/20 z-50 lg:hidden'
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {/* Mobile Navigation Menu */}
+      <AnimatePresence>;
+        {isOpen && (;
+          <motion&& motion.div
+            initial={{ opacity: 0, x: '100%' }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: '100%' }}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           >
             <div className='p-6'>
               <div className='flex justify-between items-center mb-8'>
                 <h2 className='text-xl font-bold text-white'>Menu</h2>
+<<<<<<< HEAD
                 <button
                   onClick={() => setIsOpen(false)}
                   className='text-gray-400 hover:text-white transition-colors duration-200'
@@ -969,6 +1277,23 @@ function UltraFuturisticNavigation2031() {
                 {mainNavigation.map(item => (                  <Link
                     key={item.name}
                     href={item.href}
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                <button
+                  onClick={() => setIsOpen(false)}
+
+                  className='text-gray-400 hover:text-white transition-colors duration-200';
+                >;
+                  <X className='w-6 h-6' />;
+                </button>;
+              </div>;
+
+              <div className='space-y-6'>;
+                {mainNavigation && mainNavigation.map(item => (                  <Link
+                    key={item && item.name}
+                    href={item && item.href}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     onClick={() => setIsOpen(false)}
                     className='flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 hover:text-cyan-400'          >;
             <div className="p-6">;
@@ -982,8 +1307,21 @@ function UltraFuturisticNavigation2031() {
                 <h2 className="text-xl font-bold text-white">Menu</h2>
                 <button
                   onClick={() => setIsOpen(false)}
+<<<<<<< HEAD
               <div className="space-y-6">;
                 {mainNavigation && mainNavigation.map((item) => (;
+=======
+
+                  className="text-gray-400 hover:text-white transition-colors duration-200";
+                >;
+                  <X className="w-6 h-6" />;
+                </button>;
+              </div>;
+
+              <div className="space-y-6">;
+                {mainNavigation && mainNavigation.map((item) => (;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <Link
                     key={item && item.name}
                     href={item && item.href}
@@ -994,6 +1332,7 @@ function UltraFuturisticNavigation2031() {
                     <span className='text-lg'>{item && item.name}</span>;
                   </Link>;
                 ))}
+<<<<<<< HEAD
                   className="text-gray-400 hover:text-white transition-colors duration-200"
                 >
                   <X className="w-6 h-6" />
@@ -1001,10 +1340,14 @@ function UltraFuturisticNavigation2031() {
               </div>
               <div className="space-y-6">
                 {mainNavigation.map((item) => (
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <Link
                     key={item.name}
                     href={item.href}
                     onClick={() => setIsOpen(false)}
+<<<<<<< HEAD
                     className='flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 hover:text-cyan-400'
                   >
                     <item.icon className='w-5 h-5' />
@@ -1017,6 +1360,11 @@ function UltraFuturisticNavigation2031() {
                       Get Started
                     </button>
                     <button className='w-full px-6 py-3 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-200'>                      Contact Us                  >
+=======
+                    className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 hover:text-cyan-400"
+                  >
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <item.icon className="w-5 h-5" />
                     <span className="text-lg">{item.name}</span>
                   </Link>
@@ -1043,6 +1391,7 @@ function UltraFuturisticNavigation2031() {
   )
 }
 
+<<<<<<< HEAD
 
 
 
@@ -1051,6 +1400,12 @@ function UltraFuturisticNavigation2031() {
     </>
   )
 }
+=======
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div className='pt-6 border-t border-gray-800'>;
                   <div className='space-y-4'>;
                     <button className='w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200'>;
@@ -1168,6 +1523,7 @@ function UltraFuturisticNavigation2031() {
   )
 
 }
+<<<<<<< HEAD
       {/* Spacer for fixed navigation */}
       <div className='h-32 lg:h-40'></div>
     </>
@@ -1192,3 +1548,6 @@ function UltraFuturisticNavigation2031() {
       <div className='h-32 lg:h-40'></div>
     </>
   );
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

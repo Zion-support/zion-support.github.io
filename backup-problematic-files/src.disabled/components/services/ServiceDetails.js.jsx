@@ -9,4 +9,8 @@ const ServiceDetails.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ServiceDetails.js;
+=======
+export default ServiceDetails.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

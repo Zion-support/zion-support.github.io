@@ -16,6 +16,7 @@ export default function OnsiteSupport({ }: OnsiteSupportProps) {
 
 
 
+<<<<<<< HEAD
 
 
 :src.pages.disabled/OnsiteSupport.jsx
@@ -33,3 +34,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 }
 :temp_exclude/src.pages.disabled/OnsiteSupport.jsx
+=======
+}
+
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

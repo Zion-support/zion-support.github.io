@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 interface UseLocalStorageProps {
@@ -10,7 +14,25 @@ interface UseLocalStorageProps {
 }
 
 
+<<<<<<< HEAD
 };
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+};
+
+export const useLocalStorage = <T>(key: string, initialValue: T) => {
+  const [storedValue, setStoredValue] = useState<T>(() => {
+
+
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 export const useLocalStorage = <T>(ke:y:string, initialValu:e:T) => {const [storedValue, setStoredValue] = useState<T>(() => {;
 export const useLocalStorage = <T>(ke:y:string, initialValu:e:T) => {;
@@ -101,6 +123,7 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
       }
     } catch (error) {
       // eslint-disable-next-line no-console
+<<<<<<< HEAD
       console && console.error(`Error setting localStorage key "${key}":`, error);
   };
   return [storedValue, setValue] as const;
@@ -126,6 +149,15 @@ export default function UseLocalStorage({ }: UseLocalStorageProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+=======
+
+      console && console.error(`Error setting localStorage key "${key}":`, error);
+
+  };
+
+  return [storedValue, setValue] as const;
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       console && console.error(`Error setting localStorage key "${key}":`, error)};
 
   };
@@ -150,17 +182,25 @@ export default function UseLocalStorage({ }: UseLocalStorageProps) {
 }
 }
 
+<<<<<<< HEAD
 origin/automation-improvements-final
 };
 };
 export default useLocalStorage;
 ursor/fix-lint-push-and-merge-to-main-ae4e
+=======
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       console.error(`Error setting localStorage key "${key}":`, error)}
   }
   return [storedValue, setValue] as const}
 origin/main
 }
 }
+<<<<<<< HEAD
 }
 }
 ursor/add-new-services-and-deploy-updates-0462
@@ -228,12 +268,24 @@ if ( {) {
 }
 }
 }
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+<<<<<<< HEAD
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+
+;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       console.error(`Error setting localStorage key "${key}":`, error)};
   };
   return [storedValue, setValue] as const};
 };
 };
 };
+<<<<<<< HEAD
 };
 export default useLocalStorage;
 
@@ -241,3 +293,11 @@ export default useLocalStorage;
 };
 export default useLocalStorage;
 ursor/fix-lint-push-and-merge-to-main-ae4e
+=======
+
+};
+export default useLocalStorage;
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

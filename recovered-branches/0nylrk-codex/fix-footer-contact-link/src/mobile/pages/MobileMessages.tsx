@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 import React, { useState } from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
@@ -13,6 +14,10 @@ import { MobileConversationList } from "../components/messaging/MobileConversati
 import { MobileChatView } from "../components/messaging/MobileChatView";
 import { MobileConversationList } from "../components/messaging/MobileConversationList",
 import { MobileChatView } from "../components/messaging/MobileChatView",
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Mock data for demonstration
 
 const mockConversations = [
@@ -69,6 +74,7 @@ const mockMessages: Message[] = [
     isMe: false
     status: "read"}
   {
+<<<<<<< HEAD
     id: "4"
     content: "Yes, I'm available for the next few months. My hourly rate is $75 for this kind of project. Can you share more details about the specific requirements?";
     timestamp: "10:40 AM"
@@ -153,6 +159,14 @@ import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
 import { MobileConversationList } from "../components/messaging/MobileConversationList",;
 import { MobileChatView } from "../components/messaging/MobileChatView",;
+=======
+
+import React, { useState } from "react";
+import {MobileHeader} from "../components/common/MobileHeader";
+import {BottomNavigation} from "../components/common/BottomNavigation";
+import {MobileConversationList} from "../components/messaging/MobileConversationList";
+import {MobileChatView} from "../components/messaging/MobileChatView";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Mock data for demonstration;
 const mockConversations = [;
   {;
@@ -180,6 +194,10 @@ const mockConversations = [;
     lastMessage: "Your application has been received. We'll review it shortly.",;
     timestamp: "Mon",;
     unreadCount: 0}],;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Define the Message type to resolve the type error;
 interface Message {;
   id: string,;
@@ -188,7 +206,11 @@ interface Message {;
   isMe: boolean,;
   status: "read" | "sent" | "delivered";
 }
+<<<<<<< HEAD
 ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const mockMessages: Message[] = [;
   {;
     id: "1",;
@@ -210,7 +232,11 @@ const mockMessages: Message[] = [;
     status: "read"},;
   {;
     id: "4",;
+<<<<<<< HEAD
     content: "Yes, I'm available for the next few months. My hourly rate is $75 for this kind of project. Can you share more details about the specific requirements?",;
+=======
+    content: "Yes, I'm available for the next few months. My hourly rate is $75 for this kind of project. Can you share more details about the specific requirements?";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     timestamp: "10:40 AM",;
     isMe: true,;
     status: "read"},;
@@ -220,6 +246,7 @@ const mockMessages: Message[] = [;
     timestamp: "10:45 AM",;
     isMe: false,;
     status: "read"}],;
+<<<<<<< HEAD
 export function MobileMessages() {;
   const [activeConversation, setActiveConversation] = useState<string | null>(null),;
   const [messages, setMessages] = useState<Message[]>(mockMessages),;
@@ -233,10 +260,37 @@ export function MobileMessages() {;
     const newMessage: Message = {;
       id: `${Date.now()}`,;
       content,;
+=======
+
+export function MobileMessages() {;
+  const [activeConversation, setActiveConversation] = useState<string | null>(null);
+  const [messages, setMessages] = useState<Message[]>(mockMessages);
+
+  const handleSelectConversation = (id: string) => {;
+    setActiveConversation(id);
+  };
+
+  const handleBack = () => {;
+    setActiveConversation(null);
+  };
+
+  const handleSendMessage = (content: string) => {;
+    const newMessage: Message = {;
+      id: `${Date && Date.now()}`,;
+      content;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       timestamp: "Just now",;
       isMe: true,;
       status: "sent"},;
     setMessages([...messages, newMessage]);
+<<<<<<< HEAD
+=======
+  };
+
+  const currentContact = mockConversations && mockConversations.find(c => c && c.id === activeConversation);
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="min-h-screen flex flex-col">;
       {activeConversation ? (;
@@ -517,6 +571,7 @@ export function MobileMessages() {;
         </>)}
     </div>);
 }
+<<<<<<< HEAD
   ),;}
    id: string;
 content: string;
@@ -570,3 +625,6 @@ isMe: true;
     </div>
   )
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -46,6 +46,10 @@ import {Check, ExternalLink} from 'lucide-react';
               </div>;
 
                 rel='noreferrer'>;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className='rounded - 2xl border border - emerald - 400 / 30 p - 6'>;
                 <h3 className='text - xl font - bold'>Enterprise</h3>;
                 <p className='mt - 2 text - gray - 300'>;
@@ -56,6 +60,7 @@ import {Check, ExternalLink} from 'lucide-react';
             </div>;
             <p className='mt - 4 text - sm text - gray - 400'>;
               Market references:{' '}
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -386,6 +391,8 @@ export default function ApiPerformanceTestingPage() {
 			</section>
 		</div>
 	)
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <a;
                 className='underline hover:text - cyan - 300';
                 href='https://k6.io / pricing/';
@@ -428,6 +435,7 @@ export default function ApiPerformanceTestingPage() {
     </div>;
   );
 
+<<<<<<< HEAD
 
 
 import React from 'react';
@@ -497,3 +505,31 @@ export default function ApiPerformanceTestingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+=======
+<div className='mt - 14 flex flex - wrap items - center gap - 4'>;
+            <Link;
+              href='/contact';
+              className='px - 5 py - 3 rounded - lg bg - cyan - 500 text - black font - semibold';
+            >;
+              Talk to Sales;
+            </Link>;
+            <a;
+              href='mailto:kleber@ziontechgroup.com';
+              className='px - 5 py - 3 rounded - lg border border - white / 20';
+            >;
+              Email: kleber@ziontechgroup.com;
+            </a>;
+            <span className='text - gray - 400'>Call: +1 302 464 0950</span>;
+          </div>;
+        </div>;
+      </section>;
+    </div>);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

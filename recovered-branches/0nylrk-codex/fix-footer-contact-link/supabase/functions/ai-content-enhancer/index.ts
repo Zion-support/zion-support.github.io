@@ -1,16 +1,34 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
 import {createClient} from "https: //esm ;
 
+<<<<<<< HEAD
 
 
 import "https: //deno.land/x/xhr@0.1.0/mod.ts"
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+serve(async (req) => {
+  // Handle CORS preflight requests
+  if (req && req.method === "OPTIONS") {
+    return new Response(null, { headers: corsHeaders })
+  }
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -24,6 +42,7 @@ import "https: //deno.land/x/xhr@0.1.0/mod.ts",
     if (!openAiKey) {
       throw new Error("OPENAI_API_KEY is not defined")
 
+<<<<<<< HEAD
   try {
     const { content, enhancementType, context, instructions } = await req && req.json();
     const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
@@ -62,6 +81,9 @@ serve(async (req) => {
     const openAiKey = Deno.env.get("OPENAI_API_KEY");
     if (!openAiKey) {
       throw new Error("OPENAI_API_KEY is not defined")
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   try {;
     const { content, enhancementType, context, instructions } = await req.json(),;
@@ -78,10 +100,18 @@ serve(async (req) => {
     }
     if (!openAiKey) {;
       throw new Error("OPENAI_API_KEY is not defined");
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     if (!content && !context) {
       throw new Error("Either content or context is required")
     }
+<<<<<<< HEAD
     // Determine the system prompt based on enhancement type
     let systemPrompt = "";
     let userPrompt = "";
@@ -101,6 +131,8 @@ serve(async (req) => {
         break;
       default: systemPrompt = "You are a professional content enhancement assistant. Improve the given text to be more impactful and professional."
         userPrompt = `Enhance this professional text to be more impactful: ${content}. ${context ? `Additional context: ${context}` : ''}`
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     // Determine the system prompt based on enhancement type
     let systemPrompt = "",
@@ -207,17 +239,34 @@ if ( {) {
       case "work - description": system_prompt = "You are an expert resume writer specializing in professional work descriptions. Create impactful bullet points that showcase skills and achievements.";
         user_prompt = `Enhance this work description with 3 - 5 bullet points that highlight accomplishments and skills: ${content}. Use action verbs, include metrics where possible, and focus on achievements rather than duties. ${context ? `Role context: ${context}` : ''}`;
         break;
+<<<<<<< HEAD
+=======
+
+
+
+    // Determine the system prompt based on enhancement type
+    let systemPrompt = "",
+    let userPrompt = "",
+
+    switch (enhancementType) {
+      case "resume-summary":
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     // Add custom instructions if provided
     if (instructions) {
       userPrompt += ` Additional instructions: ${instructions}`
     }
 
+<<<<<<< HEAD
 
     // Call OpenAI API
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST"
       headers: {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -241,6 +290,7 @@ if ( {) {
           {
 
 
+<<<<<<< HEAD
         "Authorization": `Bearer ${openAiKey}`;
         "Content-Type": "application/json"}
         "Authorization": `Bearer ${openAiKey}`,
@@ -255,6 +305,8 @@ if ( {) {
             role: "user"
             content: userPrompt}];
         temperature: 0.7})});
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             role: "system",
             content: systemPrompt},
           {
@@ -262,6 +314,15 @@ if ( {) {
             content: userPrompt}],
         temperature: 0.7})}),
 
+<<<<<<< HEAD
+=======
+
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
+    }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         temperature: 0 && 0.7})});
 
@@ -342,6 +403,7 @@ if ( {) {
     );
 
 
+<<<<<<< HEAD
     if (!response.ok) {
       const errorData = await response.json(),
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
@@ -370,6 +432,9 @@ if ( {) {
   }
 });
 
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
     // Call OpenAI API;
     const response = await fetch("https://api.openai.com/v1/chat/completions", {;
@@ -414,6 +479,7 @@ if ( {) {
   }
 });
 ;
+<<<<<<< HEAD
 ;
     // Determine the system prompt based on enhancement type;
     let systemPrompt = "",;
@@ -534,3 +600,6 @@ return new Response (JSON.stringify ({
 });
   }
 });
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

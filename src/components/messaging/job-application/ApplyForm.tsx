@@ -1,3 +1,4 @@
+<<<<<<< HEAD
       let fullMessage = message
 import React, { useState } from 'react'
 import { Button } from "@/components/ui/button"
@@ -365,6 +366,43 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       })
     } finally {
       setIsSubmitting(false)
+=======
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Loader2 } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { useJobApplications } from '@/hooks/useJobApplications';
+import { useMessaging } from '@/context/MessagingContext';
+import { toast } from '@/hooks/use-toast';
+import { ResumeSelector, ResumeOption } from '../resume-selector';
+import { MessageTab } from './MessageTab';
+import { ResumeTab } from './ResumeTab';
+import { Job } from './types';
+import { logErrorToProduction } from '@/utils/productionLogger';
+
+interface ApplyFormProps {
+  job: Job;
+  onClose: () => void;
+}
+
+export const ApplyForm: React.FC<ApplyFormProps> = ({ job, onClose }) => {
+  const [activeTab, setActiveTab] = useState('message');
+  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
+  const [message, setMessage] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  const { applyToJob } = useJobApplications();
+  const { sendMessage } = useMessaging();
+
+  const handleSubmit = async () => {
+    if (!selectedResume) {
+      toast({
+        title: 'Resume required',
+        description: 'Please select a resume before applying.',
+        variant: 'destructive',
+      });
+      return;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   }
   },
@@ -386,87 +424,35 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
   return (
 
 
-    try {;
-      setIsSubmitting(true);
-
-      // First submit the application to the job applications table;
-      const applicationSuccess = await applyToJob(;
-        job && job.id;
-        message;
-        selectedResume && selectedResume.type === 'ai_resume';
-          ? selectedResumeId || undefined;
-          : undefined;
-        selectedResume && selectedResume.type === 'custom_upload';
-          ? selectedResume && selectedResume.file;
-          : undefined;
-      );
-
-      if (!applicationSuccess) {;
-        throw new Error("Failed to submit application");
-      }
-
-      // Format message with proposal link if provided;
-      let fullMessage = message;
-
-      if (proposalLink) {;
-        fullMessage += `\n\nHere's a link to my proposal: ${proposalLink}`;
-      }
-
-      // Add info about attached resume if available;
-      if (selectedResume) {;
-        fullMessage += `\n\nI've attached my resume: ${selectedResume && selectedResume.title}`;
-      }
-
-      // Create context data for the conversation;
-      const contextData = {;
-        title: job && job.title,;
-        description: job && job.description,;
-        attachedResume: selectedResume ? {;
-          id: selectedResume && selectedResume.id,;
-          title: selectedResume && selectedResume.title,;
-          type: selectedResume.type;
-        } : null;
-      };
-
-      // Create conversation with the job client;
-      await createConversation(;
-        job && job.client_id;
-        fullMessage;
-        'job';
-        job && job.id;
-        contextData;
-      );
-
-      // Call onApplySuccess to update job status in the UI;
-      if (onApplySuccess) {;
-        await onApplySuccess(job && job.id);
-      }
-
-      toast({;
-        title: "Application sent",;
-        description: `Your application for "${job && job.title}" has been sent.`}),;
-      onClose();
-    } catch (error) {;
-      logErrorToProduction('Failed to send application:', { data: error }),;
-      toast({;
-        title: "Application failed",;
-        description: "There was an error sending your application. Please try again.",;
-        variant: "destructive";
+    setIsSubmitting(true);
+    try {
+      await applyToJob(job.id, {
+        resumeId: selectedResume.id,
+        message,
       });
-    } finally {;
-      setIsSubmitting(false),;
-      toast ({
-        title: "Application sent",
-        description: `Your application for "${job.title}" has been sent.`}),
-      on_close ();
+
+      // Send a message to the job poster
+      await sendMessage({
+        content: `I'm interested in the ${job.title} position. ${message}`,
+        recipientId: job.posterId,
+        jobId: job.id,
+      });
+
+      toast({
+        title: 'Application submitted',
+        description: 'Your application has been sent successfully.',
+      });
+      
+      onClose();
     } catch (error) {
-      logErrorToProduction ('Failed to send application:', { data: error }),
-      toast ({
-        title: "Application failed",
-        description: "There was an error sending your application. Please try again.",
-        variant: "destructive";
+      logErrorToProduction('Job application failed', error);
+      toast({
+        title: 'Application failed',
+        description: 'There was an error submitting your application.',
+        variant: 'destructive',
       });
     } finally {
+<<<<<<< HEAD
       setIsSubmitting (false),
     }
   }
@@ -585,6 +571,50 @@ ursor/fix-website-loading-errors-and-merge-6662
           onClick={handleApply}
           disabled={isSubmitting}
           className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+=======
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
+    <div className="space-y-6">
+      <div className="flex items-center justify-between">
+        <h2 className="text-xl font-semibold">Apply to {job.title}</h2>
+        <Button variant="outline" onClick={onClose}>
+          Close
+        </Button>
+      </div>
+
+      <Tabs value={activeTab} onValueChange={setActiveTab}>
+        <TabsList className="grid w-full grid-cols-2">
+          <TabsTrigger value="message">Message</TabsTrigger>
+          <TabsTrigger value="resume">Resume</TabsTrigger>
+        </TabsList>
+
+        <TabsContent value="message" className="space-y-4">
+          <MessageTab
+            message={message}
+            onMessageChange={setMessage}
+            job={job}
+          />
+        </TabsContent>
+
+        <TabsContent value="resume" className="space-y-4">
+          <ResumeTab
+            selectedResume={selectedResume}
+            onResumeSelect={setSelectedResume}
+          />
+        </TabsContent>
+      </Tabs>
+
+      <div className="flex justify-end space-x-2">
+        <Button variant="outline" onClick={onClose}>
+          Cancel
+        </Button>
+        <Button
+          onClick={handleSubmit}
+          disabled={isSubmitting || !selectedResume}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         >
           {isSubmitting ? (
             <>
@@ -594,6 +624,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           ) : (
             'Submit Application'
           )}
+<<<<<<< HEAD
   return
 }//First submit the application to the job applications table const applicationSuccess = await applyToJob (job.id, message, selectedResume && selectedResume.type === 'ai resume'? selectedResumeId |undefined : undefined, selectedResume && selectedResume.type === 'custom upload'? selectedResume.file : undefined)
         </Button>
@@ -783,3 +814,10 @@ return (<> <Tabs value= {
 ;
 }
 ;
+=======
+        </Button>
+      </div>
+    </div>
+  );
+};
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

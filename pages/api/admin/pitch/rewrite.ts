@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 const { slide } = req.body || {};
   if (!slide) return res.status(400).json({ error: 'Missing slide' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -17,6 +18,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
   const { slide } = req.body |{}
   if (!slide) return res.status(400).json({ error: 'Missing slide' })
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   try {
     const prompt = `Rephrase the following slide content for an investor deck. Keep it 120-150 words, punchy, and data-driven. Return JSON with keys title and content.
 Title: ${slide.title}\nContent:\n${slide.content}`
@@ -28,6 +31,7 @@ Title: ${slide.title}\nContent:\n${slide.content}`
         messages: [
 
 
+<<<<<<< HEAD
 
 
   }
@@ -92,3 +96,21 @@ ${slide.content}`;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    } catch (err) {
+      // keep original if AI fails;
+    }
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+  }
+}
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

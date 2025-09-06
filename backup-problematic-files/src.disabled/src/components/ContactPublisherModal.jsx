@@ -9,4 +9,8 @@ const ContactPublisherModal = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ContactPublisherModal;
+=======
+export default ContactPublisherModal;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

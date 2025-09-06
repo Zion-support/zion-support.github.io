@@ -24,6 +24,7 @@ import {useTranslation} from "react-i18next";
 import {useLanguage} from "@/context/LanguageContext";
 import {ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone} from "lucide-react";
 
+<<<<<<< HEAD
 export default function Index() {
 export default function Index() {;
   const { t } = useTranslation();
@@ -72,6 +73,8 @@ export default function Index() {
       description: t("home.tool_ai_matcher_desc")
       icon: <Sparkles className="h-6 w-6 text-zion-cyan" />
       link: "/match"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 export default function Index() {;
@@ -84,57 +87,89 @@ export default function Index() {;
     },
 
 
+<<<<<<< HEAD
     }
     },
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       title: t("home.tool_talent")
       description: t("home.tool_talent_desc")
       icon: <Users className="h-6 w-6 text-zion-purple" />
       link: "/talent"
 
+<<<<<<< HEAD
     },
 
 
     }
     },
+=======
+
+    },
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       title: t("home.tool_services")
       description: t("home.tool_services_desc")
       icon: <Zap className="h-6 w-6 text-zion-cyan" />
       link: "/services"
 
+<<<<<<< HEAD
     },
 
 
     }
     },
+=======
+
+    },
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       title: t("home.tool_equipment")
       description: t("home.tool_equipment_desc")
       icon: <Settings className="h-6 w-6 text-zion-purple" />
       link: "/equipment"
 
+<<<<<<< HEAD
     },
 
 
     }
     },
+=======
+
+    },
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       title: t("home.tool_analytics")
       description: t("home.tool_analytics_desc")
       icon: <BarChart3 className="h-6 w-6 text-zion-cyan" />
       link: "/analytics"
 
+<<<<<<< HEAD
     },
 
 
     }
     },
+=======
+
+    },
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       title: "Mobile App"
       description: "Take Zion with you on the go with our mobile app for iOS and Android"
       icon: <Smartphone className="h-6 w-6 text-zion-purple" />
       link: "/mobile-launch"
+<<<<<<< HEAD
     }
   ],
 
@@ -148,6 +183,9 @@ export default function Index() {;
       />
       <Header />
       <HeroSection />
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   // Tools and features showcase;
 // Tools and features showcase;
@@ -256,6 +294,7 @@ function Index() {
   ];
 ;
   return (
+<<<<<<< HEAD
       {/* Quick Access Tools Section */}
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
@@ -284,6 +323,10 @@ function Index() {
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />
                 </div>
               </Link>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { TrustedBySection } from "@/components/TrustedBySection",;
@@ -394,6 +437,12 @@ export default function Index() {;
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />;
                 </div>;
               </Link>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             ))}
           </div>
         </div>
@@ -414,6 +463,11 @@ export default function Index() {;
       <Footer />
     </div>
   )
+<<<<<<< HEAD
+=======
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="min-h-screen bg-zion-blue text-white">;
       <SEO
         title={t("home && home.seo_title")} 
@@ -631,3 +685,7 @@ min-h-screen bg-zion-blue text-white" > <SEO /> <Header /> <HeroSection /> </p> 
 }<SocialShareSection /> <WaitlistSection /> <FloatingCTA /> <Footer /> </div>) 
 }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 export const generateId = (prefix: string = 'id'): string => {
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
 }
@@ -8,6 +9,9 @@ export const generateId = (prefix: string = 'id'): string => {;
 };
 
 export const announceToScreenReader = (message: string): void => {;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (typeof window === 'undefined') return;
   const announcement = document.createElement('div');
   announcement.setAttribute('aria-live', 'polite');
@@ -22,7 +26,11 @@ export const announceToScreenReader = (message: string): void => {;
 }
 export const trapFocus = (element: HTMLElement): (() => void) => {
   const focusableElements = element.querySelectorAll(
+<<<<<<< HEAD
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+=======
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
   const firstElement = focusableElements[0] as HTMLElement;
   const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
@@ -34,6 +42,7 @@ export const trapFocus = (element: HTMLElement): (() => void) => {
         e.preventDefault();
       }
     } else {
+<<<<<<< HEAD
       if (document.activeElement === lastElement) {
         firstElement.focus();
         e.preventDefault();
@@ -69,6 +78,19 @@ export const isHighContrast = (color1: string, color2: string): boolean => {
   return getContrastRatio(color1, color2) >= 4.5;
 }
 export const validateAriaLabel = (element: HTMLElement): boolean => {
+=======
+      // Check condition
+if ( {) {
+  $2
+}
+        first_element.focus ();
+        e.prevent_default ();
+      }
+    }
+  }
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 };
 
 export const isHighContrast = (color1: string, color2: string): boolean => {;
@@ -76,6 +98,11 @@ export const isHighContrast = (color1: string, color2: string): boolean => {;
 };
 
 export const validateAriaLabel = (element: HTMLElement): boolean => {;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const hasAriaLabel = element.hasAttribute('aria-label');
   const hasAriaLabelledBy = element.hasAttribute('aria-labelledby');
   const hasVisibleText = element.textContent?.trim().length > 0;
@@ -83,6 +110,10 @@ export const validateAriaLabel = (element: HTMLElement): boolean => {;
 }
 export const getFocusableElements = (container: HTMLElement): HTMLElement[] => {
   const focusableSelectors = [
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   element.addEventListener ('keydown', handleTabKey);
 ;
@@ -161,6 +192,7 @@ export const isElementInViewport = (element: HTMLElement): boolean => {
 export const isElementInViewport = (element: HTMLElement): boolean => {;
 
   const rect = element.getBoundingClientRect();
+<<<<<<< HEAD
   return (
     'button:not([disabled])'
     'input:not([disabled])'
@@ -188,6 +220,10 @@ export const isElementInViewport = (element: HTMLElement): boolean => {;
     rect.bottom <= (window.innerHeight |document.documentElement.clientHeight) &&
     rect.right <= (window.innerWidth |document.documentElement.clientWidth)
   );
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 };
@@ -199,6 +235,7 @@ export const scrollToElement = (element: HTMLElement, behavior: ScrollBehavior =
 export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {;
 
 
+<<<<<<< HEAD
 }
 export const scrollToElement = (element: HTMLElement, behavior: ScrollBehavior = 'smooth'): void => {
   element.scrollIntoView({ behavior, block: 'start' });
@@ -211,6 +248,8 @@ export const scrollToElement = (element: HTMLElement, behavior: ScrollBehavior =
 };
 
 export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const skipLink = document.createElement('a');
   skipLink.href = `#${targetId}`;
   skipLink.textContent = text;
@@ -223,10 +262,17 @@ export const createSkipLink = (targetId: string, text: string = 'Skip to main co
       scrollToElement(target);
     }
   });
+<<<<<<< HEAD
   
 
   return skipLink;
 }
+=======
+
+
+  
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -266,5 +312,10 @@ if ( {) {
 ;
   return skip_link;
 }
+<<<<<<< HEAD
   return skipLink;
 };
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

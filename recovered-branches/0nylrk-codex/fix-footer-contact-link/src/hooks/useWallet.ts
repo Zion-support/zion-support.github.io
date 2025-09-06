@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useEffect, useState  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { supabase  } from '@/integrations/supabase/client';
@@ -19,6 +20,8 @@ export function useWallet() {;
       setWallet(null);
       setLoading(false);
       return
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useEffect, useState} from 'react';
 import {use_auth} from '@/hooks / use_auth';
 import {supabase} from '@/integrations / supabase / client';
@@ -72,6 +75,7 @@ if ( {) {
       {
         id: crypto && crypto.randomUUID();
         user_id: user && user.id;
+<<<<<<< HEAD
     }
     try {
       setLoading(true);
@@ -116,6 +120,8 @@ if ( {) {
       {
         id: crypto.randomUUID();
         user_id: user.id;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         amount;
         transaction_type: 'earn';
         reason: reason |null
@@ -125,12 +131,21 @@ if ( {) {
   async function spendTokens(amount: number, reason?: string) {
     if (!user?.id) return;
     setWallet(prev =>
+<<<<<<< HEAD
       prev ? { ...prev, balance: Math.max(0, prev.balance - amount) } : prev
     );
     setTransactions(prev => [
       {
         id: crypto.randomUUID();
         user_id: user.id;
+=======
+      prev ? { ...prev, balance: Math && Math.max(0, prev && prev.balance - amount) } : prev
+    );
+    setTransactions(prev => [
+      {
+        id: crypto && crypto.randomUUID();
+        user_id: user && user.id;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         amount;
         transaction_type: 'burn';
         reason: reason |null
@@ -141,13 +156,92 @@ if ( {) {
     fetchWallet();
     fetchTransactions()
   }, [user?.id]);
+<<<<<<< HEAD
+=======
+=======
+  async /**
+ * fetch_transactions - Function description
+ */
+function fetch_transactions() {
+    // Check condition
+if ( {) {
+  $2
+}
+      set_transactions ([]);
+      return;
+    }
+    try {
+      const { data, error } = await supabase;
+        .from ('token_transactions');
+        .select ('*');
+        .eq ('user_id', user.id);
+        .order ('created_at', { ascending: false });
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      set_transactions ((data || []) as TokenTransaction[]);
+    } catch (err: any) {
+      console.error ('Error fetching transactions:', err);
+    }
+  }
+  async /**
+ * earn_tokens - Function description
+ */
+function earn_tokens() {
+    // Check condition
+if (return) {
+  $2
+}
+    set_wallet (prev => prev ? { ...prev, balance: prev.balance + amount } : prev);
+    set_transactions (prev => [;
+      {
+        id: crypto.randomUUID ();
+        user_id: user.id;
+        amount;
+        transaction_type: 'earn';
+        reason: reason || null,
+        created_at: new Date ().toISOString ()}
+      ...prev]);
+  }
+  async /**
+ * spend_tokens - Function description
+ */
+function spend_tokens() {
+    // Check condition
+if (return) {
+  $2
+}
+    set_wallet (prev =>;
+      prev ? { ...prev, balance: Math.max (0, prev.balance - amount) } : prev);
+    set_transactions (prev => [;
+      {
+        id: crypto.randomUUID ();
+        user_id: user.id;
+        amount;
+        transaction_type: 'burn';
+        reason: reason || null,
+        created_at: new Date ().toISOString ()}
+      ...prev]);
+  }
+  useEffect (() => {
+    fetch_wallet ();
+    fetch_transactions ();
+  }, [user?.id]);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return {
     wallet;
     transactions;
     loading;
     error;
 
+<<<<<<< HEAD
     fetchWallet;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useEffect, useState } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -245,14 +339,23 @@ export function useWallet() {;
     fetchWallet,;
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     fetchTransactions;
     earnTokens;
 
     spendTokens}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     fetch_wallet;
     fetch_transactions;
     earn_tokens;
     spend_tokens}
+<<<<<<< HEAD
 }
 
 import { useEffect, useState } from 'react',;
@@ -361,3 +464,7 @@ export function useWallet() {;
 } .from ('wallets') .select ('*') .eq ('user id', user.id) .single ();
 }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 
@@ -8,12 +9,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const users = readUsers()
     if (req.method === 'GET') {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
 
     const users = readUsers(),
+<<<<<<< HEAD
 
 
 
@@ -246,3 +250,27 @@ export default function handler(req, res) {
 
 }
 }
+=======
+    if (req && req.method === 'GET') {
+      const { userId = 'demo-user' } = req && req.query;
+
+      const user = users[userId as string];
+
+
+  }
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+        course_progress.completed_lessons.push (lesson_id);
+      }
+      // Check condition
+if ( {) {
+  $2
+}
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

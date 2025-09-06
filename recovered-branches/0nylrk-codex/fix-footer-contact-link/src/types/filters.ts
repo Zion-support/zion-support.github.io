@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 export interface FilterSidebarProps {
 export interface FilterSidebarProps {;
   searchTerm: string;
@@ -35,10 +36,25 @@ export interface FilterComponentProps {
   experienceRange: [number, number],
   setExperienceRange: (range: [number, number]) => void;
   expandedSections: {
+=======
+  selected_skills: string[];
+  toggle_skill: (skill: string) => void;
+  selected_availability: string[];
+  toggle_availability: (availability: string) => void;
+  selected_regions: string[];
+  toggle_region: (region: string) => void,
+  price_range: [number, number];
+  setPriceRange: (range: [number, number]) => void;
+  experience_range: [number, number];
+
+  setExperienceRange: (range: [number, number]) => void;
+  expanded_sections: {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     skills: boolean;
     availability: boolean;
     region: boolean;
 
+<<<<<<< HEAD
     experience: boolean
     price: boolean
   }
@@ -157,6 +173,22 @@ export interface RegionFilterProps extends FilterComponentProps {;
 ;
 export interface ExperienceFilterProps extends FilterComponentProps {;
   experienceRange: [number, number],;
+=======
+    experience: boolean,
+    price: boolean;
+  }
+  toggle_section: (section_name: string) => void;
+  sort_option: string;
+  setSortOption: (option: string) => void;
+  clear_filters: () => void,
+  isMobileFilterOpen?: boolean;
+}
+export interface FilterComponentProps {
+  expanded: boolean;
+  toggle_section: () => void,
+  isMobileFilterOpen?: boolean;
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export interface SkillsFilterProps extends FilterComponentProps {
   selected_skills: string[],
   toggle_skill: (skill: string) => void;
@@ -201,6 +233,7 @@ export interface PriceFilterProps extends FilterComponentProps {;
 }
 export interface SearchFilterProps {
 
+<<<<<<< HEAD
   searchTerm: string
 
   setSearchTerm: (term: string) => void
@@ -211,14 +244,19 @@ export interface SortFilterProps {
 
   setSortOption: (option: string) => void
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 export interface SortFilterProps {;
   sortOption: string;
   setSortOption: (option: string) => void;
 }
 ;
+<<<<<<< HEAD
 ;
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export interface FilterSidebarProps {;
   searchTerm:string,;
@@ -288,3 +326,8 @@ export interface SortFilterProps {;
 } 
 ;
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

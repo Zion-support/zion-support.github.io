@@ -4,6 +4,7 @@ import Head from 'next / head';
 import Link from 'next / link';
 ;
 
+<<<<<<< HEAD
 
 
 import Head from 'next / head';
@@ -12,11 +13,21 @@ import Link from 'next / link';
 import Head from 'next/head';
 import Link from 'next/link';
 
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const PerformancePage: React.FC = () => {
   const performance_metrics = [;
     {
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       category: 'System Performance',
       metrics: [;
         { name: 'Response Time', value: '45ms', status: 'excellent', trend: '+12%' },
@@ -152,6 +163,7 @@ const PerformancePage: React.FC = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
       status: 'completed';
     }
   ];
@@ -165,6 +177,8 @@ const PerformancePage: React.FC = () => {
       default: return 'text - gray - 400';
     }
   }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   const getTrendColor = (trend: string) =>: any {
     return trend.starts_with ('+') ? 'text - green - 400' : 'text - red - 400';
@@ -208,6 +222,10 @@ const PerformancePage: React.FC = () => {
             <p className="text - gray - 300 text - sm mt - 2">Real - time monitoring</p>;
           </div>;
         </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Performance Metrics */}
         <div className="mb - 8">;
           <h2 className="text - 2xl font - bold mb - 6 text - white">Performance Metrics</h2>;
@@ -443,6 +461,18 @@ const PerformancePage: React.FC = () => {
                         </span>;
                         <span className={`text - sm ${getTrendColor (metric.trend)}`}>;
                           {metric.trend}
+<<<<<<< HEAD
+=======
+
+                        </span>;
+                      </div>;
+                    </div>))}
+                </div>;
+              </div>))}
+          </div>;
+        </div>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Recent Reports */}
         <div className="mb - 8">;
           <h2 className="text - 2xl font - bold mb - 6 text - white">Recent Reports</h2>;
@@ -453,6 +483,31 @@ const PerformancePage: React.FC = () => {
                   <h3 className="text - lg font - semibold text - white">{report.title}</h3>;
                   <span className="px - 2 py - 1 bg - green - 500 / 20 text - green - 400 text - xs rounded - full">;
                     {report.status}
+<<<<<<< HEAD
+=======
+
+
+        {/* Performance Metrics */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold mb-6 text-white">Performance Metrics</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {performanceMetrics.map((section, sectionIndex) => (
+              <div key={sectionIndex} className="bg-white/10 rounded-xl p-6 border border-white/20">
+                <h3 className="text-xl font-semibold mb-4 text-cyan-400">{section.category}</h3>
+                <div className="space-y-4">
+                  {section.metrics.map((metric, metricIndex) => (
+                    <div key={metricIndex} className="flex justify-between items-center">
+                      <span className="text-gray-300">{metric.name}</span>
+                      <div className="flex items-center space-x-3">
+                        <span className={`font-semibold ${getStatusColor(metric.status)}`}>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           {metric.value  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -687,6 +742,7 @@ const PerformancePage: React.FC = () => {
 }
 ;
 
+<<<<<<< HEAD
 };
 
                         </span>
@@ -855,4 +911,11 @@ const PerformancePage: React.FC = () => {
 }
 };
 
+=======
+=======
+
+};
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default PerformancePage;

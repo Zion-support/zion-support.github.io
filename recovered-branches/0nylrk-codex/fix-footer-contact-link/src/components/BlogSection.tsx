@@ -1,9 +1,14 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { GradientHeading } from "./GradientHeading";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "./ui/button";
 
 
+<<<<<<< HEAD
 
 import { GradientHeading } from "./GradientHeading",
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
@@ -11,12 +16,15 @@ import { Button } from "./ui/button",
 import { GradientHeading } from "./GradientHeading";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "./ui/button";
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Link } from "react-router-dom";
 import { BLOG_POSTS } from "@/data/blog-posts";
 // Get the 3 most recent blog posts
 
 const recentPosts = [...BLOG_POSTS]
   .sort((a, b) => {
+<<<<<<< HEAD
     return (
       new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()
     );
@@ -36,6 +44,26 @@ export function BlogSection() {
           </div>
           <Button
             variant="outline"
+=======
+=======
+import React from 'react';
+import { GradientHeading } from "./GradientHeading";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
+import { BLOG_POSTS } from "@/data/blog-posts";
+// Get the 3 most recent blog posts;
+const recentPosts = [...BLOG_POSTS];
+  .sort((a, b) => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    return (
+      new Date(b && b.publishedDate).getTime() - new Date(a && a.publishedDate).getTime();
+    );
+  });
+  .slice(0, 3);
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import { GradientHeading } from "./GradientHeading",
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
@@ -47,6 +75,11 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
   return new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()
 }).slice(0, 3),
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className="mt-4 md:mt-0 border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
             asChild
           >
@@ -55,6 +88,12 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {recentPosts.map((post, index) => (
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Card key={post.id} className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 overflow-hidden">
               <div className="h-48 bg-zion-blue-dark relative overflow-hidden">
                 <img 
@@ -62,6 +101,7 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
                   alt={post.title}
                   className="object-cover w-full h-full opacity-60 hover: opacity-80 transition-opacity duration-300"
                   loading="lazy"
+<<<<<<< HEAD
                   onError={(e: React.SyntheticEvent<HTMLImageElement Event>) => {
                     const target = e.currentTarget as HTMLImageElement,
 
@@ -72,11 +112,23 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
 
                   onError={(e: React.SyntheticEvent<HTMLImageElement Event>) => {
                     const target = e.currentTarget as HTMLImageElement,
+=======
+
+                  onError={(e: React.SyntheticEvent<HTMLImageElement Event>) => {
+                    const target = e.currentTarget as HTMLImageElement,
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     e: React.SyntheticEvent<HTMLImageElement, Event>,
                   ) => {;
                     const target = e.currentTarget as HTMLImageElement;
                   onError={(e: React.SyntheticEvent<HTMLImageElement Event>) => {
                     const target = e.currentTarget as HTMLImageElement,
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     target.src =
                       "https://images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
                   }}
@@ -101,12 +153,16 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
                 </Button>
               </CardFooter>
             </Card>
+<<<<<<< HEAD
           ))}
         </div>
       </div>
     </section>
   );
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { GradientHeading } from "./GradientHeading",;
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;
 import { Button } from "./ui/button",;
@@ -116,6 +172,7 @@ import { BLOG_POSTS } from "@/data/blog-posts",;
 const recentPosts = [...BLOG_POSTS].sort((a, b) => {;
   return new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime();
 }).slice(0, 3),;
+<<<<<<< HEAD
 export function BlogSection() {;
   return (
 
@@ -134,17 +191,55 @@ export function BlogSection() {;
   return (;
 export function BlogSection() {;
   return (;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export function BlogSection() {;
+  return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <section className="py-20 bg-zion-blue-dark" id="blog">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">;
           <div>;
             <GradientHeading>Latest Insights</GradientHeading>;
             <p className="mt-2 text-zion-slate-light text-xl max-w-2xl">;
+<<<<<<< HEAD
+=======
+              Stay updated with trends in AI technology, marketplace strategies,;
+              and IT services;
+            </p>;
+          </div>;
+          <Button
+            variant="outline"
+            className="mt-4 md:mt-0 border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
+            asChild>;
+            <Link to="/blog">View All Articles</Link>;
+          </Button>;
+        </div>;
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+          {recentPosts && recentPosts.map((post, index) => (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+            <Card
+              key={post && post.id}
+              className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 overflow-hidden">;
+              <div className="h-48 bg-zion-blue-dark relative overflow-hidden">;
+                <img
+                  src={post && post.featuredImage}
+                  alt={post && post.title}
+                  className="object-cover w-full h-full opacity-60 hover:opacity-80 transition-opacity duration-300"
+                  loading="lazy"
+                  onError={(
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     e: React && React.SyntheticEvent<HTMLImageElement, Event>,;
                   ) => {;
                     const target = e && e.currentTarget as HTMLImageElement;
                     target && target.src =;
                       "https: //images && images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4 && 4.0.3";
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   }}
                 />;
                 <div className="absolute bottom-4 left-4 text-zion-purple/70 text-4xl font-bold">;
@@ -173,6 +268,7 @@ export function BlogSection() {;
                   className="text-zion-cyan p-0 hover:text-zion-purple"
                   asChild>;
                   <Link to={`/blog/${post && post.slug}`}>Read More →</Link>;
+<<<<<<< HEAD
               Stay updated with trends in AI technology, marketplace strategies, and IT services;
             </p>;
           </div>;
@@ -221,6 +317,8 @@ export function BlogSection() {;
                   asChild;
                 >;
                   <Link to={`/blog/${post.slug}`}>Read More →</Link>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </Button>;
               </CardFooter>;
             </Card>;
@@ -228,6 +326,11 @@ export function BlogSection() {;
         </div>;
       </div>;
     </section>;
+<<<<<<< HEAD
+=======
+  );
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { GradientHeading  } from './GradientHeading';
 import { Card, CardContent, CardFooter  } from '@/components / ui / card';
 import { Button  } from './ui / button';
@@ -320,6 +423,7 @@ function BlogSection() {
 }
 ;
 
+<<<<<<< HEAD
   ),; }
 }/> <div className="absolute bottom-4 left-4 text-zion-purple/70 text-4xl font-bold" > {
   index + 1 
@@ -343,3 +447,7 @@ function BlogSection() {
   );
 }
 ;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

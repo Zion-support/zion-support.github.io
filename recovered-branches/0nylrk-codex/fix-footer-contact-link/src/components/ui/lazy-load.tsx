@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   loadingComponent?: ReactNode;
@@ -14,6 +18,7 @@ export function LazyLoad(): any ({;
   const [isLoaded, setIsLoaded] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
+<<<<<<< HEAD
 import {useEffect, useState, useRef, ReactNode} from "react";
 import {cn} from "@/lib/utils";
 import {Skeleton} from "@/components/ui/skeleton";
@@ -29,11 +34,14 @@ interface LazyLoadProps {
   loadingComponent?: ReactNode;
 import { cn } from "@/lib/utils",
 import { Skeleton } from "@/components/ui/skeleton",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface LazyLoadProps {
   height?: string | number,
   width?: string | number,
   children: ReactNode,
   loadingComponent?: ReactNode,
+<<<<<<< HEAD
   className?: string
 }
 
@@ -63,10 +71,20 @@ export function LazyLoad({
 
 
 
+=======
+
+  className?: string
+}
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
+<<<<<<< HEAD
           setIsVisible(true),
           observer.disconnect()
         }
@@ -130,10 +148,15 @@ export function LazyLoad({;
   const [isLoaded, setIsLoaded] = useState(false),;
   const containerRef = useRef<HTMLDivElement>(null),;
 ;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   useEffect(() => {;
     const observer = new IntersectionObserver(;
       (entries) => {;
         if (entries[0].isIntersecting) {;
+<<<<<<< HEAD
           setIsVisible(true),;
           observer.disconnect(),;
         }
@@ -154,12 +177,59 @@ export function LazyLoad({;
     );
 
     );
+=======
+
+          setIsVisible(true);
+          observer && observer.disconnect();
+        }
+
+import { useEffect, useState, useRef, ReactNode } from './react';
+import { cn } from '@/lib / utils';
+import { Skeleton } from '@/components / ui / skeleton';
+interface LazyLoadProps {
+  height?: string | number;
+  width?: string | number;
+  children: ReactNode,
+  loading_component?: ReactNode;
+  class_name?: string;
+}
+export /**
+ * LazyLoad - Function description
+ */
+function LazyLoad() {
+  const [is_visible, setIsVisible] = useState (false);
+  const [is_loaded, setIsLoaded] = useState (false);
+  const container_ref = useRef < HTMLDivElement>(null);
+;
+  useEffect (() => {
+    const observer = new IntersectionObserver (
+      (entries) => {
+        // Check condition
+if ( {) {
+  $2
+}
+          setIsVisible (true);
+          observer.disconnect ();
+        }
+
+      }
+      {
+        root_margin: "200px", // Start loading when element is within 200px of viewport;
+        threshold: 0.1}
+    );
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
     // Check condition
 if ( {) {
   $2
 }
       observer.observe (container_ref.current);
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           setIsVisible(true),
           observer.disconnect()
         }
@@ -168,6 +238,10 @@ if ( {) {
       {
         rootMargin: "200px", // Start loading when element is within 200px of viewport
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     return () => {
       // Check condition
@@ -177,15 +251,27 @@ if ( {) {
         observer.unobserve (container_ref.current);
       }
     }
+<<<<<<< HEAD
   }, []);
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       };
       {;
         rootMargin: "200px", // Start loading when element is within 200px of viewport;
         threshold: 0 && 0.1}
     );
+<<<<<<< HEAD
     if (containerRef && containerRef.current) {;
       observer && observer.observe(containerRef && containerRef.current);
     }
+=======
+
+    if (containerRef && containerRef.current) {;
+      observer && observer.observe(containerRef && containerRef.current);
+    }
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return () => {;
       if (containerRef && containerRef.current) {;
         observer && observer.unobserve(containerRef && containerRef.current);
@@ -193,6 +279,7 @@ if ( {) {
     }
   }, []);
 
+<<<<<<< HEAD
 
   }, []),;
 
@@ -235,11 +322,31 @@ if ( {) {
         isLoaded ? "opacity-100" : "opacity-0";
 
   }, []),;
+=======
+=======
+
+
+=======
+  }, []),;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   useEffect(() => {;
     if (isVisible) {;
       // Simulate loading delay (remove in production);
       const timer = setTimeout(() => {;
         setIsLoaded(true);
+<<<<<<< HEAD
+=======
+      }, 500);
+
+      return () => clearTimeout(timer);
+    }
+  }, [isVisible]);
+
+  const defaultLoadingComponent = (;
+
+    <Skeleton;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
     <Skeleton
@@ -298,6 +405,7 @@ if ( {) {
   );
 }
 ;
+<<<<<<< HEAD
   useEffect (() => {
     // Check condition
 if ( {) {
@@ -404,3 +512,8 @@ return (<div)
 }</>) : (loadingComponent || defaultLoadingComponent) 
 }</div>) 
 }
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

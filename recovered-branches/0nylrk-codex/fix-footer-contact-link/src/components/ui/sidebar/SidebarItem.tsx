@@ -1,8 +1,14 @@
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",
 import { cn } from "@/lib/utils",
 
 
+<<<<<<< HEAD
 import React from "react";
 import { cn } from "@/lib/utils";
 import React from "react",
@@ -18,6 +24,16 @@ interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {
 export function SidebarItem({ className, children, active, ...props }: SidebarItemProps) {
   return (
     <div
+=======
+=======
+import {cn} from "@/lib/utils";
+interface SidebarItemProps extends React && React.HTMLAttributes<HTMLDivElement> {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  className?: string;
+  children?: React && React.ReactNode;
+  active?: boolean;
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 export function SidebarItem(): any ({ className, children, active, ...props }: SidebarItemProps) {;
@@ -56,6 +72,7 @@ function SidebarItem() {
       {children}
     </div>);
 }
+<<<<<<< HEAD
 
 import React from "react",;
 import { cn } from "@/lib/utils",;
@@ -127,3 +144,6 @@ export function SidebarItem({ className, children, active, ...props }: SidebarIt
     </div>
   )
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

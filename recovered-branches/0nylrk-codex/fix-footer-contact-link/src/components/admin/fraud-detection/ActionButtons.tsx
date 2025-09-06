@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react",
 import { Button } from "@/components/ui/button";
@@ -24,6 +25,8 @@ import { Eye, Info, AlertTriangle, Ban } from "lucide-react";
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Eye, Info, AlertTriangle, Ban } from "lucide-react",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 import React from './react';
@@ -45,9 +48,18 @@ interface ActionButtonsProps {
 }
 
 export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {
+<<<<<<< HEAD
   return (
 
     <div className="flex space-x-2">
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+
+    <div className="flex space-x-2">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from './react';
 import { Button  } from '@/components / ui / button';
@@ -70,9 +82,13 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({;
 }) => {;
   return (
     <div className="flex space-x-2">;
+<<<<<<< HEAD
   return (
 
     <div className="flex space-x-2">
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <Button
         variant="ghost"
         size="icon"
@@ -99,14 +115,21 @@ export const ActionButtons:React.FC<ActionButtonsProps> = ({ flagId, status, onA
       >;
         <Eye className="h-4 w-4" />;
       </Button>;
+<<<<<<< HEAD
         onClick={() => alert("View details (would open a detailed view)")}
       >
         <Eye className="h-4 w-4" />
       </Button>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <Button
         variant="ghost"
         size="icon"
         title="Send Warning"
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         onClick={() => onAction(flagId, 'warning')}
         disabled={status === 'actioned' || status === 'ignored'}
@@ -124,15 +147,23 @@ export const ActionButtons:React.FC<ActionButtonsProps> = ({ flagId, status, onA
       >;
         <Info className="h-4 w-4" />;
       </Button>;
+<<<<<<< HEAD
 onClick={() => onAction(flagId, "warning")}
         disabled={status === "actioned" |status === "ignored"}
       >
         <Info className="h-4 w-4" />
       </Button>
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <Button
         variant="ghost"
         size="icon"
         title="Suspend User"
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         onClick={() => onAction(flagId, 'suspension')}
         disabled={status === 'actioned' || status === 'ignored'}
@@ -150,26 +181,37 @@ onClick={() => onAction(flagId, "warning")}
       >;
         <AlertTriangle className="h-4 w-4" />;
       </Button>;
+<<<<<<< HEAD
 onClick={() => onAction(flagId, "suspension")}
         disabled={status === "actioned" |status === "ignored"}
       >
         <AlertTriangle className="h-4 w-4" />
       </Button>
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <Button
         variant="ghost"
         size="icon"
         title="Ban User"
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         disabled={status === "actioned" || status === "ignored"}
 
         onClick={() => onAction(flagId, 'ban')}
         disabled={status === 'actioned' || status === 'ignored'}
 
+<<<<<<< HEAD
 onClick={() => onAction(flagId, "ban")}
         disabled={status === "actioned" |status === "ignored"}
         onClick={() => onAction(flagId, "ban")}
         disabled={status === "actioned" |status === "ignored"}
         onClick={() => onAction(flagId, 'ban')}
         disabled={status === 'actioned' || status === 'ignored'}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       >
         <Ban className="h-4 w-4" />
       </Button>
@@ -177,6 +219,7 @@ onClick={() => onAction(flagId, "ban")}
         <Button
           variant="ghost"
           size="sm"
+<<<<<<< HEAD
     </div>;
 );
 
@@ -188,6 +231,8 @@ onClick={() => onAction(flagId, "ban")}
     </div>
   );
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     </div>;
 );
@@ -345,6 +390,7 @@ export const ActionButtons: React.FC < ActionButtonsProps> = ({
 
 
 };
+<<<<<<< HEAD
   ),;
 },; interface ActionButtonsProps {
   flagId: string;
@@ -372,3 +418,7 @@ onClick={() => onAction(flagId, "ignore")}
 
   );
 };
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

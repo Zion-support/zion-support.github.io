@@ -27,4 +27,8 @@ const CategoryDetail = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default CategoryDetail;
+=======
+export default CategoryDetail;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

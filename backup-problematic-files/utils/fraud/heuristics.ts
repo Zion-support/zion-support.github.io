@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+
+
+}
+
+  const lower = text && text.toLowerCase();
+  return suspiciousLinkHosts && suspiciousLinkHosts.some(host => lower && lower.includes(host));
+
+
+=======
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 function containsSuspiciousPhrase(text: string): string[] {
 
   const lower = text && text.toLowerCase();
@@ -257,6 +270,7 @@ export function runHeuristics(data: any): HeuristicResult {
   const label = flags.size > 0 ? 'SUSPICIOUS' : 'SAFE';
   return {
 
+<<<<<<< HEAD
 :utils/fraud/heuristics.ts
 import { FraudEvent, HeuristicEvaluation, MonitoredSource } from './types';
 const suspiciousLinkHosts = [
@@ -390,10 +404,18 @@ export function runHeuristics(data: any): HeuristicResult {
   const confidence = flags.size > 0 ? 0.8 : 0.1;
   const label = flags.size > 0 ? 'SUSPICIOUS' : 'SAFE';
   return {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     flagged: reasons.length > 0
     reasons
     severity
   }
+<<<<<<< HEAD
+=======
+
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
 export function isHighRiskEvent(result: HeuristicResult): boolean {
@@ -405,7 +427,13 @@ export function shouldBlockEvent(result: HeuristicResult): boolean {
 }
   }
 }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   return {;
     flagged: reasons.length > 0;
@@ -413,6 +441,7 @@ export function shouldBlockEvent(result: HeuristicResult): boolean {
     severity}
 }
 
+<<<<<<< HEAD
 
 main:utils/fraud/heuristics.ts
 :backup-problematic-files/utils/fraud/heuristics.ts
@@ -422,3 +451,12 @@ main:utils/fraud/heuristics.ts
 }
 main:utils/fraud/heuristics.ts
 :backup-problematic-files/utils/fraud/heuristics.ts
+=======
+=======
+
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/utils/fraud/heuristics.ts
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

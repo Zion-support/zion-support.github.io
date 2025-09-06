@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { BadgeCheck, Star, Clock, Award } from 'lucide-react'
 import { cn } from '@/lib/utils'
@@ -32,12 +33,15 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
   const { icon: Icon, text, colors } = badgeConfig[type]
     >
       <Icon className='w-3 h-3' />
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import { BadgeCheck, Star, Clock, Award } from 'lucide-react';
 import { cn } from '@/lib/utils';
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated';
 interface ProfileBadgeProps {;
   type: BadgeType;
+<<<<<<< HEAD
   className?: string;  type: BadgeType,
 interface ProfileBadgeProps {;
   type: BadgeType;
@@ -68,6 +72,18 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 interface ProfileBadgeProps {
   type: BadgeType,
+=======
+  className?: string;  type: BadgeType,;
+  className?: string;
+}
+
+
+interface ProfileBadgeProps {
+  type: BadgeType,
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   className?: string
 }
 
@@ -75,6 +91,7 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
   const badgeConfig = {
     verified: {
       icon: BadgeCheck,
+<<<<<<< HEAD
       text: "Verified",
       colors: "bg-blue-500/20 text-blue-400"},
     featured: {
@@ -90,6 +107,12 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       text: "Verified",
       colors: "bg-blue-500/20 text-blue-400"},
     featured: {
+=======
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       icon: Star,
       text: "Featured",
       colors: "bg-yellow-500/20 text-yellow-400"},
@@ -99,6 +122,7 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       colors: "bg-green-500/20 text-green-400"},
     "top-rated": {
       icon: Award,
+<<<<<<< HEAD
       text: 'Top Rated',
       colors: 'bg - purple - 500 / 20 text - purple - 400',
     },
@@ -158,6 +182,10 @@ ursor/fix-website-loading-errors-and-merge-6662
     </div>
   )
 import React from "react",;
+=======
+
+import React from 'react';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { BadgeCheck, Star, Clock, Award } from 'lucide-react';
 import { cn } from "@/lib/utils",;
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',;
@@ -193,8 +221,24 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {;
     )}>;
       <Icon className="w-3 h-3" />;
       <span>{text}</span>;
+<<<<<<< HEAD
     </div>;
   );
 }
 ;
 }
+=======
+    </div>);
+  type, class_name;
+}: ProfileBadgeProps) {
+  const badge_config = {
+  verified: {
+  const {
+  icon: Icon,  text, colors;
+}= badge_config[type];
+}> <Icon className="w - 3 h - 3" /> <span> {
+  text;
+}</span>;
+}'"  );
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

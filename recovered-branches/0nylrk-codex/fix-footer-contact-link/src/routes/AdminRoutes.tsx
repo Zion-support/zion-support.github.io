@@ -1,9 +1,15 @@
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 
 
+<<<<<<< HEAD
 
 import {Fragment} from "react";
 import {Route, Routes} from "react-router-dom";
@@ -11,6 +17,9 @@ import {ProtectedRoute} from "@/components/ProtectedRoute";
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Admin Pages
 import QuoteManager from "@/pages/admin/QuoteManager",
 import ReviewsModeration from "@/pages/admin/ReviewsModeration",
@@ -20,11 +29,16 @@ import AppMetadataManager from "@/pages/admin/AppMetadataManager",
 import SupportRequests from "@/pages/admin/SupportRequests",
 import FraudDetection from "@/pages/admin/FraudDetection",
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import TokenManager from "@/pages/admin/TokenManager",
 import IntegrationsPage from "@/pages/admin/IntegrationsPage",
 
 
 const AdminRoutes = () => {
+<<<<<<< HEAD
 
 import { Fragment } from "react",;
 import { Route, Routes } from "react-router-dom",;
@@ -134,6 +148,26 @@ const AdminRoutes = () => {;
       <Route;
         path="/admin/quotes";
         element={;
+=======
+=======
+// Admin Pages;
+import QuoteManager from "@/pages/admin/QuoteManager";
+import ReviewsModeration from "@/pages/admin/ReviewsModeration";
+import WhitelabelManager from "@/pages/admin/WhitelabelManager";
+import PartnerManager from "@/pages/admin/PartnerManager";
+import AppMetadataManager from "@/pages/admin/AppMetadataManager";
+import SupportRequests from "@/pages/admin/SupportRequests";
+import FraudDetection from "@/pages/admin/FraudDetection";
+import TokenManager from "@/pages/admin/TokenManager";
+import IntegrationsPage from "@/pages/admin/IntegrationsPage";
+const AdminRoutes = () => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  return (
+    <Routes>;
+      <Route
+        path="/admin/quotes"
+        element={
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <ProtectedRoute adminOnly={true}>;
             <QuoteManager />;
           </ProtectedRoute>;
@@ -377,6 +411,7 @@ const AdminRoutes = () =>: any {
 
 export default AdminRoutes;
 ;
+<<<<<<< HEAD
 <Routes> <Route path="/admin/quotes" element= {
   <ProtectedRoute adminOnly= {
   true 
@@ -395,3 +430,6 @@ export default AdminRoutes;
   );
 },;
 export default AdminRoutes;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from "next/link";
 import { GradientHeading } from "./GradientHeading";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -13,6 +14,8 @@ import { Button } from "./ui/button",
 import { fireEvent } from '@/lib/analytics',
 import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react'
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Link from 'next/link'
 import { GradientHeading } from './GradientHeading'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
@@ -40,6 +43,7 @@ import { Zap } from 'lucide-react'
 export function FeaturesGuideSection() {
   const features = [
     {
+<<<<<<< HEAD
       id: 'ai-matcher'
       title: 'AI Matcher'
       description:
@@ -53,6 +57,10 @@ export function FeaturesGuideSection() {
       ]
       link: '/match'
       buttonText: 'Try AI Matcher'
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         'Navigate to the AI Matcher page from the homepage or marketplace',
         'Fill in your project requirements and specifications',
         'Review the AI-recommended matches tailored to your needs',
@@ -322,6 +330,10 @@ import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, P
 export function FeaturesGuideSection() {
   const features = [
     {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       id: "ai-matcher",
       title: "AI Matcher",
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
@@ -575,8 +587,12 @@ export function FeaturesGuideSection() {;
       ],;
       link: "/help";
       buttonText: "View Resources";
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
     }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     {
       id: 'talent-directory'
@@ -701,12 +717,20 @@ ursor/fix-website-loading-errors-and-merge-6662
               <TabsTrigger
                 key={feature.id}
                 value={feature.id}
+<<<<<<< HEAD
                 className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'              >                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       id: "ai-matcher",
       title: "AI Matcher",
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
       icon: <Sparkles className = "h-10 w-10 text-zion-cyan" />,
+<<<<<<< HEAD
                 className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'              >                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       instructions: [
         "Navigate to the AI Matcher page from the homepage or marketplace"
         "Fill in your project requirements and specifications"
@@ -1416,6 +1440,10 @@ function FeaturesGuideSection() {
           </TabsList>
 
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {features.slice(4).map(feature => (
               <TabsTrigger
                 key={feature.id}
@@ -1586,6 +1614,12 @@ export function FeaturesGuideSection() {;
                 {feature.title}
               </TabsTrigger>;
             ))}
+<<<<<<< HEAD
+=======
+          </TabsList>
+          {features.map(feature => (
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       link: "/help",
       button_text: "View Resources";
     }
@@ -1638,7 +1672,11 @@ export function FeaturesGuideSection() {;
                   </h3>;
                   <p className='text - zion - slate - light mb - 6'>;
                     {feature.description}
+<<<<<<< HEAD
           {features.map(feature => (
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <TabsContent key={feature.id} value={feature.id} className="mt-8">
               <div className="bg-zion-blue rounded-lg border border-zion-blue-light p-6 md:p-8 flex flex-col md:flex-row gap-8">
                 <div className="md:w-1/3 flex flex-col items-center md:items-start">
@@ -1647,6 +1685,7 @@ export function FeaturesGuideSection() {;
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-zion-slate-light mb-6">{feature.description}</p>
+<<<<<<< HEAD
                   <Button
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                   >
@@ -1671,6 +1710,10 @@ export function FeaturesGuideSection() {;
                       <li key={idx} className="text-zion-slate-light">
                         <span className="text-zion-cyan mr-2">{idx + 1}.</span>
                       </li>
+=======
+                  <Button 
+                    className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
                     asChild
@@ -1800,6 +1843,7 @@ export function FeaturesGuideSection() {;
                 </div>;
               </div>;
             </TabsContent>;
+<<<<<<< HEAD
                 
                 <div className="md:w-2/3 bg-zion-blue-dark p-6 rounded-lg">
                   <h4 className="text-xl font-semibold text-white mb-4">How to Use</h4>
@@ -1809,6 +1853,21 @@ export function FeaturesGuideSection() {;
                         <span className="text-zion-cyan mr-2">{idx + 1}.</span>
                         {instruction}
                       </li>;
+=======
+          ))}
+
+
+          <Button
+            variant='outline'
+            className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10'
+            asChild>;
+            <Link
+              href='/marketplace'              onClick={() => fireEvent('explore_marketplace_click')}
+              href="/marketplace";
+              onClick = {() => fireEvent('explore_marketplace_click'),}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     ))}
                   </ol>
                 </div>
@@ -1816,11 +1875,16 @@ export function FeaturesGuideSection() {;
             </TabsContent>
           ))}
         </Tabs>
+<<<<<<< HEAD
         <div className='mt-12 text-center'>
 ursor/fix-website-loading-errors-and-merge-6662
         <div className="mt-12 text-center">
           <Button
         <div className='mt-12 text-center'>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         
         <div className="mt-12 text-center">
 
@@ -1831,9 +1895,17 @@ ursor/fix-website-loading-errors-and-merge-6662
             asChild
           >
             <Link
+<<<<<<< HEAD
               href='/marketplace'              onClick={() => fireEvent('explore_marketplace_click')}
               href="/marketplace"
               onClick = {() => fireEvent('explore_marketplace_click'),}
+=======
+
+
+
+              href="/marketplace"
+              onClick={() => fireEvent('explore_marketplace_click')}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             >
               Explore Full Marketplace
               <ArrowRight className="ml-2 h-4 w-4" />
@@ -1844,6 +1916,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   );
 };
 
@@ -1851,6 +1924,10 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 }
   )
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             >;
               Explore Full Marketplace;
               <ArrowRight className='ml-2 h-4 w-4' />            </Link>              <ArrowRight className="ml-2 h-4 w-4" />;
@@ -1977,4 +2054,8 @@ const features = [ {;
 }
 
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

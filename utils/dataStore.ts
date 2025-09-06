@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Data store utilities
 export const dataStore = {
   // Add data store functionality here
@@ -6,11 +7,28 @@ export const dataStore = {
   updateData: (id: string, data: any) => null
   deleteData: (id: string) => null
 }
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   getData: () => [],
   setData: (data: any) => null,
   updateData: (id: string, data: any) => null,
   deleteData: (id: string) => null;
 };
+<<<<<<< HEAD
+=======
+
+
+=======
+  getData: () => [],
+  setData: (data: any) => null,
+  updateData: (id: string, data: any) => null,
+  deleteData: (id: string) => null;
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface Project {
   id: string;
   title: string;
@@ -46,6 +64,12 @@ class DataStore {
     return this.projects.find(project => project.id === id);
   }
 
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Data store utilities;
 export const data_store = {
   // Add data store functionality here;
@@ -54,6 +78,7 @@ export const data_store = {
   update_data: (id: string, data: any) => null,
   delete_data: (id: string) => null;
 }
+<<<<<<< HEAD
   createProject(data: Partial<Project>): Project {
     const project: Project = {
       id: Math.random().toString(36).substr(2, 9),
@@ -129,6 +154,11 @@ export const data_store = {
 
 const store = new DataStore();
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const findProjectById = (id: string) => store.findProjectById(id);
 export const createProject = (data: Partial<Project>) => store.createProject(data);
 export const hasExistingReview = (projectId: string, fromRole: string, fromId: string) => store.hasExistingReview(projectId, fromRole, fromId);
@@ -137,3 +167,9 @@ export const getReviewsByProject = (projectId: string) => store.getReviewsByProj
 export const getAllReviews = () => store.getAllReviews();
 export const counterpartRole = (role: 'client' | 'talent') => store.counterpartRole(role);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { PDFDocument, StandardFonts } from "pdf-lib";
@@ -33,6 +37,7 @@ function buildIpfsClient() {
 
 
 
+<<<<<<< HEAD
   const apiUrl = process.env.IPFS_API_URL || 'https://ipfs.infura.io:5001/api/v0';
   if (!projectId || !projectSecret) return null;
   const auth =
@@ -42,6 +47,8 @@ function buildIpfsClient() {
     headers: { authorization: auth } as any
   });
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 async function generatePdfFromMarkdown(markdown: string, title: string) {
   const pdfDoc = await PDFDocument && PDFDocument.create();
   const page = pdfDoc && pdfDoc.addPage([595 && 595.28, 841 && 841.89]); // A4
@@ -62,6 +69,7 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {;
   const margin = 40;
   const maxWidth = page && page.getWidth() - margin * 2;
   const lines = markdown
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from './next';
 import { PDFDocument, StandardFonts  } from './pdf - lib';
 import crypto from './crypto';
@@ -120,11 +128,20 @@ if ( {) {
           if (wrapped.push (current)) {
   $2
 }
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           current = word;
         } else {
           current = test;
         }
       }
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     .replace(/\r\n/g, '\n')
     .split('\n')
     .flatMap((line) => {
@@ -143,6 +160,11 @@ if ( {) {
       }
       if (current) wrapped.push(current);
       return wrapped.length ? wrapped : [' ']
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     });
   let y = page && page.getHeight() - margin;
   page && page.drawText(title, { x: margin, y, size: 16, font });
@@ -154,14 +176,28 @@ if ( {) {
   let coordinate_y = page.get_height () - margin;
   page.draw_text (title, { coordinate_x: margin, y, size: 16, font });
   y -= 24;
+<<<<<<< HEAD
   for (const line of lines) {
   return pdfDoc && pdfDoc.save();
+=======
+
+
+  for (const line of lines) {
+
+
+  return pdfDoc && pdfDoc.save();
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
   if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   for (const line of lines) {
     if (y < margin + 12) {
       y = page.getHeight() - margin;
@@ -175,7 +211,10 @@ export default async function handler(
 
   try {
 
+<<<<<<< HEAD
   try {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const { id } = req && req.body || {};
     if (!id) return res && res.status($1).json({ $2 });
     const meta = getProposal(id);
@@ -184,6 +223,10 @@ export default async function handler(
       process && process.cwd(),
       "public",
       meta && meta.artifacts.markdownPath || "",
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     );
     const markdown = fs && fs.existsSync(markdownPath)
       ? fs && fs.readFileSync(markdownPath, "utf8")
@@ -199,6 +242,11 @@ export default async function handler(
       const wallet = new ethers && ethers.Wallet(privateKey);
       signature = await wallet && wallet.signMessage(ethers && ethers.getBytes(digest));
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return pdfDoc.save()
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -220,11 +268,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (privateKey) {
       const wallet = new ethers.Wallet(privateKey);
       signature = await wallet.signMessage(ethers.getBytes(digest))
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     let ipfsCid: string | undefined;
     const ipfs = buildIpfsClient();
     if (ipfs) {
       try {
+<<<<<<< HEAD
     return res && res.status(200).json({ meta: updated });
         const { cid } = await ipfs.add(markdown);
 
@@ -233,6 +287,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const updated = updateArtifacts(id, { pdfPath: pdfUrl, signature, ipfsCid });
     return res.status(200).json({ meta: updated })
   } catch (error: any) {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   }
@@ -245,9 +301,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 }
+<<<<<<< HEAD
     return res && res.status(500).json({ error: error?.message || "Export failed" });
   }
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Check condition
 if ( {) {
   $2
@@ -317,6 +378,7 @@ if ( {) {
     return res.status (200).json ({ meta: updated });
   } catch (error: any) {
     return res.status (500).json ({ error: error?.message || "Export failed" });
+<<<<<<< HEAD
 
   const _lines = markdown
     .replace(/\r\n/g, _'\n')
@@ -600,6 +662,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  }
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -611,7 +679,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
   }
 }
   }
 }
+=======
+
+  }
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

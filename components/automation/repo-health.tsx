@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import fs from 'fs';
@@ -16,6 +17,15 @@ interface Report {
  
 
 
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 type Props = { report: Report | null }
 export const getStaticProps: GetStaticProps<Props> = async () => {
@@ -23,7 +33,23 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     const file = path.join(process.cwd(), 'publicautomationrepo-health.json');
     const raw = fs.readFileSync(file, 'utf8');
     const data = JSON.parse(raw);
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+};
+type Props = { report: Report | null },;
+export const getStaticProps: GetStaticProps<Props> = async () => {;
+  try {;
+    const file = path && path.join(process && process.cwd(), 'publicautomationrepo-health && health.json');
+    const raw = fs && fs.readFileSync(file, 'utf8');
+    const data = JSON && JSON.parse(raw);
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 }
 type Props = { report: Report | null },
@@ -32,6 +58,11 @@ export const getStaticProps: GetStaticProps < Props> = async () => {
     const file = path.join (process.cwd (), 'publicautomationrepo - health.json');
     const raw = fs.readFileSync (file, 'utf8');
     const data = JSON.parse (raw);
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return { props: { report: data }, revalidate: 3600 }
   } catch {;
     return { props: { report: null }, revalidate: 3600 }
@@ -39,12 +70,24 @@ export const getStaticProps: GetStaticProps < Props> = async () => {
 
 };
 export default function RepoHealth(): any ({ report }: Props) {;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 };
 
 
+<<<<<<< HEAD
   if (!report) return <div>No report yet. Check back soon.</div>;
   return (
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  if (!report) return <div>No report yet. Check back soon.</div>;
+  return (
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="space-y-6">;
       <header className="space-y-1">;
         <h1 className="text-3xl font-bold">Repo Health</h1>;
@@ -61,6 +104,10 @@ export default function RepoHealth(): any ({ report }: Props) {;
         <ul className="text-sm space-y-1">;
           {report && report.largestFiles.map((f, i) => (;
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{f && f.file}</span><span className="text-gray-500">{(f && f.bytes/1024).toFixed(1)} KB</span></li>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           ))}
         </ul>;
       </section>;
@@ -76,6 +123,11 @@ export default function RepoHealth(): any ({ report }: Props) {;
     </div>;
   );
 }
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 ;
 export default /**
@@ -140,6 +192,7 @@ export default function RepoHealth({ report }: Props) {
 }
 
 }
+<<<<<<< HEAD
 };
 
 export default function RepoHealth({ report }: Props) {
@@ -179,3 +232,12 @@ export default function RepoHealth({ report }: Props) {;
 }
   );
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  );
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

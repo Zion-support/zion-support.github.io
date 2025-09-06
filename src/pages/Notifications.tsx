@@ -68,6 +68,33 @@ const getNotificationIcon = (;
   type: NotificationType,;
   className: string = 'h-5 w-5') => {;
   switch (type) {;
+<<<<<<< HEAD
+=======
+    case 'message':;
+      return <MessageCircle className={cn(className, 'text-blue-500')} />,;
+    case 'quote_request':;
+      return <Briefcase className={cn(className, 'text-purple-500')} />,;
+    case 'booking_confirmation':;
+      return <CheckCircle className={cn(className, 'text-green-500')} />,;
+    case 'hire_request':;
+      return <UserCheck className={cn(className, 'text-zion-purple')} />,;
+    case 'onboarding':;
+      return <Settings className={cn(className, 'text-zion-cyan')} />,;
+    case 'system':;
+      return <AlertCircle className={cn(className, 'text-yellow-500')} />,;
+    case 'project_update':;
+      return <Briefcase className={cn(className, 'text-indigo-400')} />,;
+    case 'milestone_complete':;
+      return <CheckCircle className={cn(className, 'text-green-500')} />,;
+    case 'order_status':;
+      return <Package className={cn(className, 'text-orange-500')} />,;
+    default:;
+      return <Bell className={cn(className, 'text-gray-500')} />;
+  }
+},
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ;
 const getNotificationIcon = (type: string) =>: any {
@@ -141,6 +168,7 @@ const getNotificationTypeBadge = (type: NotificationType) => {;
     default:;
       return <Badge variant="outline">Notification</Badge>;
   }
+<<<<<<< HEAD
 },;
 const NotificationCard: React.FC<{;
   notification: {;
@@ -336,3 +364,7 @@ export default function NotificationsPage() {
   );
 }
 ;
+=======
+}
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState } from 'react'
 import {
@@ -39,10 +40,16 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Badge } from "@/components/ui/badge",
 import { Search, Filter } from 'lucide-react'
 import { SEO } from "@/components/SEO",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Mock data for support requests
 
 const MOCK_SUPPORT_REQUESTS = [
   {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from 'react';
 import {
   Card,
@@ -83,6 +90,7 @@ const MOCK_SUPPORT_REQUESTS = [;
     last_updated: '2023 - 12 - 15T15:45:00Z',
     category: 'authentication',
 
+<<<<<<< HEAD
 const MOCK_SUPPORT_REQUESTS = [
   {
     id: 'SR-1001'
@@ -210,6 +218,8 @@ export default function SupportRequests() {
     setCategoryFilter(null)
   }
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     id: "SR-1001",
     user: "john.doe@example.com",
     userId: "user-123",
@@ -219,6 +229,10 @@ export default function SupportRequests() {
     createdAt: "2023-12-15T14:30:00Z",
     lastUpdated: "2023-12-15T15:45:00Z",
     category: "authentication"
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
   {
     id: "SR-1002",
@@ -276,6 +290,7 @@ export default function SupportRequests() {
     category: "verification"
   },
   {
+<<<<<<< HEAD
     id: 'SR-1007',
     user: 'jamie.taylor@tech.org',
     userId: 'user-345',
@@ -347,6 +362,14 @@ export default function SupportRequests() {
     createdAt: "2023-12-10T15:10:00Z",
     lastUpdated: "2023-12-13T11:25:00Z",
     category: "profile"
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 ],
 
@@ -483,6 +506,7 @@ export default function SupportRequests() {;
     if (categoryFilter && request.category !== categoryFilter) {;
       return false;
     }
+<<<<<<< HEAD
     
     return true
   }),
@@ -524,6 +548,9 @@ export default function SupportRequests() {;
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return true;
   });
 
@@ -555,24 +582,34 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Button className="bg-zion-purple hover:bg-zion-purple-light">
 
 
+<<<<<<< HEAD
           <div className='mt-4 md:mt-0'>
             <Button className='bg-zion-purple hover:bg-zion-purple-light'>
           
           <div className="mt-4 md:mt-0">
             <Button className="bg-zion-purple hover:bg-zion-purple-light">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               New Support Case
             </Button>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         
 
 
+<<<<<<< HEAD
         {/* Status Cards */}
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8'>
             <CardHeader className='pb-2'>
               <CardTitle className='text-2xl font-bold'>{openCount}</CardTitle>
         
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Status Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           <Card>
@@ -581,6 +618,10 @@ ursor/fix-website-loading-errors-and-merge-6662
               <CardDescription>Open Requests</CardDescription>
             </CardHeader>
           </Card>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           
 
@@ -591,6 +632,10 @@ ursor/fix-website-loading-errors-and-merge-6662
               <CardDescription>In Progress</CardDescription>
             </CardHeader>
           </Card>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           
 
@@ -601,6 +646,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <CardDescription>Resolved</CardDescription>
             </CardHeader>
           </Card>
+<<<<<<< HEAD
             <CardHeader className="pb-2">
               <CardTitle className="text-2xl font-bold">{totalCount}</CardTitle>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -624,6 +670,13 @@ ursor/fix-website-loading-errors-and-merge-6662
             <CardHeader className='pb-2'>
               <CardTitle className='text-2xl font-bold'>{totalCount}</CardTitle>
           
+=======
+
+
+          
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-2xl font-bold">{totalCount}</CardTitle>
@@ -631,6 +684,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </CardHeader>
           </Card>
         </div>
+<<<<<<< HEAD
         <Tabs defaultValue='all' className='mb-8'>
             <TabsTrigger value="all">All Requests</TabsTrigger>
             <TabsTrigger value="escalated">Escalated</TabsTrigger>
@@ -646,6 +700,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 onValueChange={value => setStatusFilter(value |null)}
 ursor/fix-website-loading-errors-and-merge-6662
         <Tabs defaultValue='all' className='mb-8'>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         
         <Tabs defaultValue="all" className="mb-8">
 
@@ -656,9 +714,77 @@ ursor/fix-website-loading-errors-and-merge-6662
             <TabsTrigger value="ai-flagged">AI Flagged</TabsTrigger>
             <TabsTrigger value="need-response">Need Response</TabsTrigger>
           </TabsList>
+<<<<<<< HEAD
           <TabsContent value='all' className='mt-6'>
           
           <TabsContent value="all" className="mt-6">
+=======
+
+      />;
+      <div className='container mx-auto px-4 py-8'>;
+        <div className='flex flex-col md:flex-row items-start md:items-center justify-between mb-8'>;
+          <div>;
+            <h1 className='text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent'>;
+              Support Requests;
+            </h1>;
+            <p className='text-zion-slate-light mt-2'>;
+              Manage and respond to user support requests and issues;
+            </p>;
+          </div>;
+
+          <div className='mt-4 md:mt-0'>;
+            <Button className='bg-zion-purple hover:bg-zion-purple-light'>;
+              New Support Case;
+            </Button>;
+          </div>;
+        </div>;
+
+        {/* Status Cards */}
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8'>;
+          <Card>;
+            <CardHeader className='pb-2'>;
+              <CardTitle className='text-2xl font-bold'>{openCount}</CardTitle>;
+              <CardDescription>Open Requests</CardDescription>;
+            </CardHeader>;
+          </Card>;
+
+          <Card>;
+            <CardHeader className='pb-2'>;
+              <CardTitle className='text-2xl font-bold'>;
+                {inProgressCount}
+              </CardTitle>;
+              <CardDescription>In Progress</CardDescription>;
+            </CardHeader>;
+          </Card>;
+
+          <Card>;
+            <CardHeader className='pb-2'>;
+              <CardTitle className='text-2xl font-bold'>;
+                {resolvedCount}
+              </CardTitle>;
+              <CardDescription>Resolved</CardDescription>;
+            </CardHeader>;
+          </Card>;
+
+          <Card>;
+            <CardHeader className='pb-2'>;
+              <CardTitle className='text-2xl font-bold'>{totalCount}</CardTitle>;
+              <CardDescription>Total Requests</CardDescription>;
+            </CardHeader>;
+          </Card>;
+        </div>;
+
+        <Tabs defaultValue='all' className='mb-8'>;
+          <TabsList>;
+            <TabsTrigger value='all'>All Requests</TabsTrigger>;
+            <TabsTrigger value='escalated'>Escalated</TabsTrigger>;
+            <TabsTrigger value='ai-flagged'>AI Flagged</TabsTrigger>;
+            <TabsTrigger value='need-response'>Need Response</TabsTrigger>;
+          </TabsList>;
+
+          <TabsContent value='all' className='mt-6'>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           
           <TabsContent value="all" className="mt-6">
@@ -668,6 +794,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="relative flex-1">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
                 <Input
+<<<<<<< HEAD
                   placeholder='Search by ID, user or issue...'
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}
@@ -678,6 +805,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                 onValueChange={value => setStatusFilter(value |null)}
                 value={statusFilter || ''}
                 onValueChange={value => setStatusFilter(value || null)}
+=======
+
+
+                value={statusFilter || ''}
+                onValueChange={value => setStatusFilter(value || null)}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               >
                 <SelectTrigger className='w-[180px]'>
                   <SelectValue placeholder='Status' />
@@ -691,6 +825,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Status" />
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -705,6 +840,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Priority" />
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -716,11 +853,19 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <SelectItem value="resolved">Resolved</SelectItem>
                 </SelectContent>
               </Select>
+<<<<<<< HEAD
               <Select
                 value={priorityFilter |''}
                 onValueChange={value => setPriorityFilter(value |null)}
                 value={priorityFilter || ''}
                 onValueChange={value => setPriorityFilter(value || null)}
+=======
+
+
+                value={priorityFilter || ''}
+                onValueChange={value => setPriorityFilter(value || null)}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               >
                 <SelectTrigger className='w-[180px]'>
                   <SelectValue placeholder='Priority' />
@@ -728,10 +873,13 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Priority" />
+<<<<<<< HEAD
               
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Category" />
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -743,11 +891,19 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <SelectItem value="low">Low</SelectItem>
                 </SelectContent>
               </Select>
+<<<<<<< HEAD
               <Select
                 value={categoryFilter |''}
                 onValueChange={value => setCategoryFilter(value |null)}
                 value={categoryFilter || ''}
                 onValueChange={value => setCategoryFilter(value || null)}
+=======
+
+
+                value={categoryFilter || ''}
+                onValueChange={value => setCategoryFilter(value || null)}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               >
                 <SelectTrigger className='w-[180px]'>
                   <SelectValue placeholder='Category' />
@@ -755,6 +911,12 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Category" />
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="">All Categories</SelectItem>
@@ -766,6 +928,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <SelectItem value="profile">Profile</SelectItem>
                 </SelectContent>
               </Select>
+<<<<<<< HEAD
               <Button
                 variant='outline'
                 onClick={resetFilters}
@@ -774,6 +937,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Filter className='h-4 w-4 mr-2' /> Reset Filters
               </Button>
             </div>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   onChange={e => setSearchQuery(e && e.target.value)}
                   className='pl-10'                />;
               </div>;
@@ -782,17 +948,25 @@ ursor/fix-website-loading-errors-and-merge-6662
                 value={statusFilter || ''}
                 onValueChange={value => setStatusFilter(value || null)}
 
+<<<<<<< HEAD
                         <TableCell>{request.user}</TableCell>
                         <TableCell className="max-w-xs truncate">{request.issue}</TableCell>
                         <TableCell>
 
                             {request.priority}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               
               <Button variant="outline" onClick={resetFilters} className="md:w-auto">
                 <Filter className="h-4 w-4 mr-2" /> Reset Filters
               </Button>
             </div>
             
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Support Requests Table */}
             <Card>
               <CardContent className="p-0">
@@ -811,6 +985,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </TableRow>
                   </TableHeader>
                   <TableBody>
+<<<<<<< HEAD
                     {filteredRequests.map(request => (                      <TableRow key={request.id}>
                         <TableCell className='font-medium'>
                           {request.id}
@@ -867,6 +1042,13 @@ ursor/fix-website-loading-errors-and-merge-6662
               <p className='text-zion-slate-light'>
                 These support requests have been waiting for an agent response
                 for over 24 hours.
+=======
+
+                    {filteredRequests.map((request) => (
+                      <TableRow key={request.id}>
+                        <TableCell className="font-medium">{request.id}</TableCell>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         <TableCell>{request.user}</TableCell>
                         <TableCell className="max-w-xs truncate">{request.issue}</TableCell>
                         <TableCell>
@@ -968,6 +1150,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <SelectValue placeholder='Status' />;
                 </SelectTrigger>;
                 <SelectContent>;
+<<<<<<< HEAD
                   <SelectItem value="">All Statuses</SelectItem>;
                   <SelectItem value="open">Open</SelectItem>;
                   <SelectItem value="in-progress">In Progress</SelectItem>;
@@ -977,6 +1160,22 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>;
                 <SelectTrigger className="w-[180px]">;
                   <SelectValue placeholder="Priority" />;
+=======
+                  <SelectItem value=''>All Statuses</SelectItem>;
+                  <SelectItem value='open'>Open</SelectItem>;
+
+                  <SelectItem value='in - progress'>In Progress</SelectItem>;
+                  <SelectItem value='resolved'>Resolved</SelectItem>;
+                </SelectContent>;
+              </Select>;
+              <Select;
+                value={priority_filter || ''}
+                onValueChange={value => setPriorityFilter (value || null)}
+
+              >;
+                <SelectTrigger className='w-[180px]'>;
+                  <SelectValue placeholder='Priority' />;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </SelectTrigger>;
                 <SelectContent>;
                   <SelectItem value="">All Priorities</SelectItem>;
@@ -985,9 +1184,20 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <SelectItem value="low">Low</SelectItem>;
                 </SelectContent>;
               </Select>;
+<<<<<<< HEAD
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>;
                 <SelectTrigger className="w-[180px]">;
                   <SelectValue placeholder="Category" />;
+=======
+
+              <Select;
+                value={category_filter || ''}
+                onValueChange={value => setCategoryFilter (value || null)}
+
+              >;
+                <SelectTrigger className='w-[180px]'>;
+                  <SelectValue placeholder='Category' />;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </SelectTrigger>;
                 <SelectContent>;
                   <SelectItem value="">All Categories</SelectItem>;
@@ -999,12 +1209,23 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <SelectItem value="profile">Profile</SelectItem>;
                 </SelectContent>;
               </Select>;
+<<<<<<< HEAD
               <Button variant="outline" onClick={resetFilters} className="md:w-auto">;
                 <Filter className="h-4 w-4 mr-2" /> Reset Filters;
+=======
+
+              <Button;
+                variant='outline';
+                on_click={reset_filters}
+                className='md:w - auto';
+              >;
+                <Filter className='h - 4 w - 4 mr - 2' /> Reset Filters;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </Button>;
             </div>;
             {/* Support Requests Table */}
             <Card>;
+<<<<<<< HEAD
               <CardContent className="p-0">;
                 <Table>;
                   <TableHeader>;
@@ -1024,6 +1245,28 @@ ursor/fix-website-loading-errors-and-merge-6662
                     {filteredRequests.map((request) => (;
                       <TableRow key={request.id}>;
                         <TableCell className="font-medium">{request.id}</TableCell>;
+=======
+              <CardContent className='p - 0'>;
+                <Table>;
+                  <TableHeader>;
+                    <TableRow>;
+                      <TableHead > ID</TableHead>;
+                      <TableHead > User</TableHead>;
+                      <TableHead > Issue</TableHead>;
+                      <TableHead > Status</TableHead>;
+                      <TableHead > Priority</TableHead>;
+                      <TableHead > Category</TableHead>;
+                      <TableHead > Created</TableHead>;
+                      <TableHead > Last Updated</TableHead>;
+                      <TableHead > Actions</TableHead>;
+                    </TableRow>;
+                  </TableHeader>;
+                  <TableBody>;
+                    {filtered_requests.map (request => (                      <TableRow key={request.id}>;
+                        <TableCell className='font - medium'>;
+                          {request.id}
+                        </TableCell>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         <TableCell>{request.user}</TableCell>;
                         <TableCell className="max-w-xs truncate">{request.issue}</TableCell>;
                         <TableCell>;
@@ -1038,6 +1281,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                           </Badge>;
                         </TableCell>;
                         <TableCell>;
+<<<<<<< HEAD
                           <Badge variant={;
                             request.priority === 'high';
                               ? 'destructive';
@@ -1068,6 +1312,35 @@ ursor/fix-website-loading-errors-and-merge-6662
               <p className='text-zion-slate-light'>
                 This tab will show support requests that have been escalated by
                 agents or the system.
+=======
+
+                            {request.priority}
+                          </Badge>;
+                        </TableCell>;
+                        <TableCell>{request.category}</TableCell>;
+                        <TableCell>;
+                          {new Date (request.created_at).toLocaleDateString ()}
+                        </TableCell>;
+                        <TableCell>;
+                          {new Date (request.last_updated).toLocaleDateString ()}
+                        </TableCell>;
+                        <TableCell>;
+                          <Button variant='ghost' size='sm'>;
+                            View;
+                          </Button>;
+                          <Button variant='ghost' size='sm'>;
+                            Assign;
+                          </Button>;
+                        </TableCell>;
+
+
+          
+          <TabsContent value="escalated" className="mt-6">
+            <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">
+              <h3 className="text-xl font-medium mb-4">Escalated Requests</h3>
+              <p className="text-zion-slate-light">
+                This tab will show support requests that have been escalated by agents or the system.
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </p>
             </div>
           </TabsContent>
@@ -1080,6 +1353,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </p>
             </div>
           </TabsContent>
+<<<<<<< HEAD
           <TabsContent value='need-response' className='mt-6'>
             <div className='bg-zion-blue-light/20 p-8 rounded-lg text-center'>
               <h3 className='text-xl font-medium mb-4'>Awaiting Response</h3>
@@ -1104,18 +1378,29 @@ ursor/fix-website-loading-errors-and-merge-6662
               </p>
             </div>
           </TabsContent>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           
           <TabsContent value="need-response" className="mt-6">
             <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">
               <h3 className="text-xl font-medium mb-4">Awaiting Response</h3>
               <p className="text-zion-slate-light">
                 These support requests have been waiting for an agent response for over 24 hours.
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </p>
           </TabsContent>
         </Tabs>
       </div>
     </>
   )
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </TableBody>;
                 </Table>;
               </CardContent>;
@@ -1261,4 +1546,8 @@ ursor/fix-website-loading-errors-and-merge-6662
   new Date (request.last_updated) .toLocaleDateString () ";
 }</TableCell> <TableCell> <Button variant=" ghost"size=" sm">View</Button> <Button variant=" ghost"size=" sm">Assign</Button> </TableCell> </TableRow>) ) ";
 }</TableBody> </Table> </CardContent> </Card> </TabsContent> <TabsContent value=" escalated"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">Escalated Requests</h3> <p className=" text - zion - slate - light"> This tab will show support requests that have been escalated by agents or the system. </p> </div> </TabsContent> <TabsContent value=" ai - flagged"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">AI Flagged Issues</h3> <p className=" text - zion - slate - light"> This tab shows issues that our AI system has identified as requiring human attention. </p> </div> </TabsContent> <TabsContent value=" need - response"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">Awaiting Response</h3> <p className=" text - zion - slate - light" > These support requests have been waiting for an agent response for over 24 hours. </p> </div> </TabsContent> </Tabs> </div> </>);
+<<<<<<< HEAD
 }'"}
+=======
+}'"}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

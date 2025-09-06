@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useRef, useState} from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
@@ -8,6 +12,7 @@ import {useReferrals} from "@/hooks/useReferrals";
 import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
 import {Label} from "@/components/ui/label";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+<<<<<<< HEAD
 export function PartnerReferralLinks() {;
   const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -24,11 +29,17 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 export function PartnerReferralLinks() {
+=======
+
+export function PartnerReferralLinks() {;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const [selectedCampaign, setSelectedCampaign] = useState<string>("default");
   const [customParam, setCustomParam] = useState<string>("");
+<<<<<<< HEAD
   const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([])
   // Get the base referral link
   const baseLink = getReferralLink();
@@ -40,13 +51,22 @@ export function PartnerReferralLinks() {
   const [isDialogOpen, setIsDialogOpen] = useState(false),
   const [selectedCampaign, setSelectedCampaign] = useState<string>("default"),
   const [customParam, setCustomParam] = useState<string>(""),
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),
   
   // Get the base referral link
   const baseLink = getReferralLink(),
   
 
+<<<<<<< HEAD
   
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleCopyLink = (link: string) => {
     navigator.clipboard.writeText(link)
     toast({
@@ -55,16 +75,25 @@ export function PartnerReferralLinks() {
       variant: "default"
     })
 
+<<<<<<< HEAD
   }
   const handleGenerateLink = () => {
     if (baseLink) {
       const url = new URL(baseLink);
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
   
   const handleGenerateLink = () => {
     if (baseLink) {
       const url = new URL(baseLink),
       
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Add custom campaign parameter if selected
       if (selectedCampaign !== "default") {
         url.searchParams.append("campaign", selectedCampaign)
@@ -76,6 +105,10 @@ export function PartnerReferralLinks() {
       const newLink = {
         name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`
         link: url.toString()
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),;
   // Get the base referral link;
   const baseLink = getReferralLink();
@@ -106,12 +139,17 @@ export function PartnerReferralLinks() {
       setIsDialogOpen(false);
       setCustomParam("");
     }
+<<<<<<< HEAD
       }
       setGeneratedLinks(prev => [...prev, newLink]);
       setIsDialogOpen(false);
       setCustomParam("")
     }
   }
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       },
       
       setGeneratedLinks(prev => [...prev, newLink]),
@@ -120,16 +158,28 @@ export function PartnerReferralLinks() {
     }
   },
   
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleDownloadLinks = () => {
     const allLinks = [
       { name: "Default", link: baseLink }
       ...generatedLinks
+<<<<<<< HEAD
   };
+=======
+
+  };
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleDownloadLinks = () => {;
     const allLinks = [;
       { name: "Default", link: baseLink },;
       ...generatedLinks;
     ];
+<<<<<<< HEAD
     const csvContent = [;
     ];
     ],
@@ -148,6 +198,23 @@ export function PartnerReferralLinks() {
     link.click();
     document.body.removeChild(link)
   }
+=======
+
+    const csvContent = [;
+
+      "Name,Link";
+      ...allLinks && allLinks.map(l => `${l && l.name},${l && l.link}`);
+    ].join("\n");
+
+
+    ],
+    
+
+    const csvContent = [
+      "Name,Link",
+      ...allLinks.map(l => `${l.name},${l.link}`)
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     ].join("\n"),
     
     const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' }),
@@ -160,6 +227,11 @@ export function PartnerReferralLinks() {
     link.click(),
     document.body.removeChild(link)
   },
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   return (
     <div className="space-y-6">
@@ -167,6 +239,7 @@ export function PartnerReferralLinks() {
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <span>Your Referral Link</span>
+<<<<<<< HEAD
             <Button
               variant="outline"
               size="sm"
@@ -239,6 +312,9 @@ export function PartnerReferralLinks() {;
     document.body.appendChild(link),;
     link.click();
     document.body.removeChild(link);
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       "Name,Link";
       ...allLinks && allLinks.map(l => `${l && l.name},${l && l.link}`);
@@ -254,6 +330,7 @@ export function PartnerReferralLinks() {;
     document && document.body.removeChild(link);
   };
   return (
+<<<<<<< HEAD
 import { useRef, useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -334,6 +411,8 @@ export function PartnerReferralLinks() {;
   return (;
   };
   return (;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="space-y-6">;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;
@@ -343,11 +422,16 @@ export function PartnerReferralLinks() {;
               variant="outline" 
               size="sm" 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             <Button 
               variant="outline" 
               size="sm" 
 
+<<<<<<< HEAD
             <Button
               variant="outline" 
               size="sm" 
@@ -359,6 +443,11 @@ export function PartnerReferralLinks() {;
               onClick={handleDownloadLinks}
               className="flex items-center gap-2";
             >;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              onClick={handleDownloadLinks}
+              className="flex items-center gap-2">;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Download className="h-4 w-4" />;
               Export Links;
             </Button>;
@@ -367,6 +456,7 @@ export function PartnerReferralLinks() {;
         </CardHeader>;
         <CardContent>;
           <div className="flex space-x-2">;
+<<<<<<< HEAD
             <Button;
               variant="outline";
               size="sm";
@@ -381,14 +471,20 @@ export function PartnerReferralLinks() {;
         </CardHeader>
         <CardContent>
           <div className="flex space-x-2">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Input
               value={baseLink}
               readOnly
               className="font-mono text-sm"
+<<<<<<< HEAD
             <Input;
               value={baseLink}
               readOnly;
               className="font-mono text-sm";
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             />;
             <Button variant="outline" onClick={() => handleCopyLink(baseLink)}>;
               <Copy className="h-4 w-4" />;
@@ -767,6 +863,7 @@ if ( {) {
         )}
       </div>;
     </div>;
+<<<<<<< HEAD
   ),; export function PartnerReferralLinks () {
   const {
   referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia 
@@ -819,4 +916,56 @@ document.body.removeChild (link);
       </div>
     </div>
   )
+=======
+  );
+=======
+      <div className="grid gap - 4">;
+        {generated_links.length > 0 ? (
+          generated_links.map ((item, index) => (
+            <Card key={index} className="bg - zion - blue - dark border - zion - blue - light">;
+              <CardHeader className="pb - 2">;
+                <CardTitle className="text - base flex items - center justify - between">;
+                  <div className="flex items - center gap - 2">;
+                    <Link className="h - 4 w - 4 text - zion - purple" />;
+                    <span>{item.name || "Campaign Link"}</span>;
+                  </div>;
+                </CardTitle>;
+              </CardHeader>;
+              <CardContent className="pb - 4">;
+                <div className="flex space - x-2">;
+                  <Input;
+                    value={item.link}
+                    read_only;
+                    className="font - mono text - xs";
+                  />;
+                  <Button;
+                    variant="outline";
+                    size="sm";
+                    on_click={() => handleCopyLink (item.link)}
+                  >;
+                    <Copy className="h - 4 w - 4" />;
+                    <span className="sr - only">Copy</span>;
+                  </Button>;
+                </div>;
+              </CardContent>;
+            </Card>))) : (
+          <Card className="bg - zion - blue / 20 border - dashed border - zion - blue - light">;
+            <CardContent className="flex flex - col items - center justify - center p - 6">;
+              <p className="text - zion - slate - light text - center mb - 4">;
+                Create custom campaign links to track different marketing efforts;
+              </p>;
+              <Button;
+                variant="outline";
+                on_click={() => setIsDialogOpen (true)}
+                className="flex items - center gap - 2";
+              >;
+                <Plus className="h - 4 w - 4" />;
+                Create First Link;
+              </Button>;
+            </CardContent>;
+          </Card>)}
+      </div>;
+    </div>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }

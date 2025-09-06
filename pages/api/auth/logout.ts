@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { NextApiRequest, NextApiResponse } from 'next',;
 import { clearUserCookie } from '../../../utils/auth',;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -9,6 +10,8 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   res.status(200).json({ success: true })
 
@@ -21,6 +24,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ success: true })
 
 
+<<<<<<< HEAD
 import { clearUserCookie } from '../../../utils/auth';
 export default function handler(req, res) {
   try {
@@ -31,3 +35,25 @@ export default function handler(req, res) {
   }
 }
 }
+=======
+=======
+import { NextApiRequest, NextApiResponse } from 'next',
+import { clearUserCookie } from '../../../utils / auth',
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status (405).json ({ error: 'Method not allowed' }), ) {
+  $2
+}
+  clearUserCookie (res),
+  res.status (200).json ({ success: true });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

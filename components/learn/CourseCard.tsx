@@ -1,15 +1,23 @@
 
 
+<<<<<<< HEAD
 
 
 import Link from 'next / link';
 export type Course = {
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
   title: string;
   duration_minutes: number;
   level: string;
   is_free: boolean;
   category: string;
+<<<<<<< HEAD
 export type Course = {
   id: string,
   certification_badge: string;
@@ -89,6 +97,16 @@ export default function CourseCard({ course }: { course: Course }) {
     </div>;
   );
 }
+=======
+
+
+
+export default function CourseCard(): any ({ course }: { course: Course }) {;
+  return (
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   certification_badge: string,
   description?: string;
 export default /**
@@ -135,8 +153,19 @@ function CourseCard() {
       </div>
     </div>
 
+<<<<<<< HEAD
   );
 
   );
 }
   );
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  );
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,4 +1,19 @@
 
+<<<<<<< HEAD
+=======
+
+ 
+
+
+=======
+
+import fs from 'fs';
+import path from 'path';
+import type { GetStaticProps } from 'next';
+type Item = { source: string, name: string, url: string, description?: string, downloads?: number };
+type Props = { pypi: Item[], crates: Item[], github: { [k: string]: Item[] } },
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const getStaticProps: GetStaticProps<Props> = async () => {
 ;
 }
@@ -8,6 +23,7 @@ export const getStaticProps: GetStaticProps < Props> = async () => {
     const file = path.join (process.cwd (), 'publicautomationtech - radar.json');
     const raw = fs.readFileSync (file, 'utf8');
     const data = JSON.parse (raw);
+<<<<<<< HEAD
  
 
  
@@ -25,17 +41,40 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
         pypi: data.ecosystems.pypi |[]
         crates: data.ecosystems.crates |[]
         github: data.ecosystems.github |{}}
+=======
+    return {
+      props: {
+
+};
+type Props = { pypi: Item[], crates: Item[], github: { [k: string]: Item[] } },;
+export const getStaticProps: GetStaticProps<Props> = async () => {;
+  try {;
+    const file = path && path.join(process && process.cwd(), 'publicautomationtech-radar && radar.json');
+    const raw = fs && fs.readFileSync(file, 'utf8');
+    const data = JSON && JSON.parse(raw);
+    return {;
+      props: {;
+        pypi: data && data.ecosystems.pypi || [],;
+        crates: data && data.ecosystems.crates || [],;
+        github: data && data.ecosystems.github || {}},;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         pypi: data.ecosystems.pypi || [],
         crates: data.ecosystems.crates || [],
         github: data.ecosystems.github || {}},
 
+<<<<<<< HEAD
         pypi: data.ecosystems.pypi || [],
         crates: data.ecosystems.crates || [],
         github: data.ecosystems.github || {}},
         pypi: data.ecosystems.pypi || [],
         crates: data.ecosystems.crates || [],
         github: data.ecosystems.github || {}},
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       revalidate: 7200}
   } catch {;
     return { props: { pypi: [], crates: [], github: {} }, revalidate: 7200 }
@@ -67,6 +106,10 @@ export default function TechRadar({ pypi, crates, github }: Props) {;
               <a href={it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 dark:text-cyan-400">{it.name}</a>
               {typeof it.downloads === 'number' && (
                 <div className="text-xs text-gray-500">Downloads: {it.downloads.toLocaleString()}</div>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 };
 export default function TechRadar(): any ({ pypi, crates, github }: Props) {;
   const langs = Object && Object.keys(github);
@@ -84,9 +127,17 @@ export default function TechRadar(): any ({ pypi, crates, github }: Props) {;
               <a href={it && it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 dark:text-cyan-400">{it && it.name}</a>;
               {typeof it && it.downloads === 'number' && (;
                 <div className="text-xs text-gray-500">Downloads: {it && it.downloads.toLocaleString()}</div>;
+<<<<<<< HEAD
               )}
             </li>;
           ))}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+              )}
+            </li>;
+          ))}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </ul>;
       </section>;
       <section>;
@@ -109,13 +160,26 @@ export default function TechRadar(): any ({ pypi, crates, github }: Props) {;
                 <a href={it && it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 dark:text-cyan-400">{it && it.name}</a>;
                 {it && it.description && <div className="text-sm text-gray-600 dark:text-gray-300">{it && it.description}</div>}
               </li>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             ))}
           </ul>;
         </section>;
       ))}
+<<<<<<< HEAD
     </div>;
   );
 }
+=======
+
+    </div>;
+  );
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 ;
 export default /**
@@ -186,6 +250,7 @@ export default function TechRadar({ pypi, crates, github }: Props) {
 
   );
 }
+<<<<<<< HEAD
 
 };
 
@@ -240,3 +305,13 @@ export default function TechRadar({ pypi, crates, github }: Props) {;
 }
   );
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    </div>
+
+  );
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

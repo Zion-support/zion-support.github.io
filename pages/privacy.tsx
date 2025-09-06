@@ -298,6 +298,7 @@ origin/automation-improvements-final
           </div>
         </section>
 
+<<<<<<< HEAD
 import React from 'react';
 import React from 'react';
 import Head from 'next/head';
@@ -311,6 +312,8 @@ import AnalyticsTracker from '../components/AnalyticsTracker';
 import ErrorBoundary from '../components/ErrorBoundary';
 import { motion } from 'framer-motion';
 return (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               transition={{ duration: 0 && 0.8 }}
               className="text-center">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
@@ -323,10 +326,22 @@ return (
             </motion && motion.div>;
           </div>;
         </section>;
+<<<<<<< HEAD
 
 
 
 
+=======
+
+
+=======
+
+
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Content Section */}
         <section className="py-16 px-4">;
           <div className="max-w-4xl mx-auto">;
@@ -880,15 +895,20 @@ const PrivacyPage: React.FC = () => {
 
 
 
+<<<<<<< HEAD
                 <h3 className="text-xl font-semibold mb-4">
                   Personal Information
                 </h3>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <h2 className="text-2xl font-bold mb-6">Information We Collect</h2>
                 <p className="mb-6">
                   We collect information you provide directly to us, such as when you create an account, 
                   use our services, or contact us for support.
                 </p>
+                
                 <h3 className="text-xl font-semibold mb-4">Personal Information</h3>
+<<<<<<< HEAD
 
 
 origin/automation-improvements-final
@@ -903,14 +923,27 @@ origin/automation-improvements-final
                   <li>Payment information</li>
                 </ul>
 
+=======
+
+
+
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <h3 className="text-xl font-semibold mb-4">
                   Usage Information
                 </h3>
+=======
                 <h3 className="text-xl font-semibold mb-4">Usage Information</h3>
+<<<<<<< HEAD
 origin/automation-improvements-final
                 <h3 className="text-xl font-semibold mb-4">
                   Usage Information
                 </h3>
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <ul className="list-disc pl-6 mb-6">
                   <li>How you use our services</li>
                   <li>Device information</li>
@@ -922,6 +955,12 @@ origin/automation-improvements-final
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <h2 className="text-2xl font-bold mb-6 mt-12">
                   How We Use Your Information
                 </h2>
@@ -936,7 +975,14 @@ origin/automation-improvements-final
                 <p className="mb-6">
                   We use the information we collect to provide, maintain, and improve our services.
                 </p>
+<<<<<<< HEAD
 origin/automation-improvements-final
+=======
+                
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <ul className="list-disc pl-6 mb-6">
                   <li>Provide and maintain our services</li>
                   <li>Process transactions</li>
@@ -949,6 +995,12 @@ origin/automation-improvements-final
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <h2 className="text-2xl font-bold mb-6 mt-12">
                   Information Sharing
                 </h2>
@@ -956,10 +1008,18 @@ origin/automation-improvements-final
                   We do not sell, trade, or otherwise transfer your personal
                   information to third parties without your consent, except as
                   described in this policy.
+<<<<<<< HEAD
+=======
+
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <h2 className="text-2xl font-bold mb-6 mt-12">Information Sharing</h2>
                 <p className="mb-6">
                   We do not sell, trade, or otherwise transfer your personal information to third parties 
                   without your consent, except as described in this policy.
+<<<<<<< HEAD
 origin/automation-improvements-final
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
@@ -985,6 +1045,26 @@ origin/automation-improvements-final
                   If you have any questions about this Privacy Policy, please
                   contact us at:
                 </p>
+=======
+
+                </p>
+                <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
+                <p className="mb-6">
+
+                  We implement appropriate security measures to protect your personal information against 
+                  unauthorized access, alteration, disclosure, or destruction.
+
+                </p>
+                <h2 className="text-2xl font-bold mb-6 mt-12">Your Rights</h2>
+                <p className="mb-6">
+
+                  You have the right to access, update, or delete your personal information. You may also 
+                  opt out of certain communications from us.
+
+                </p>
+                <h2 className="text-2xl font-bold mb-6 mt-12">Contact Us</h2>
+                <p className="mb-6">
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                   If you have any questions about this Privacy Policy, please contact us at:
                 </p>
@@ -1009,6 +1089,7 @@ origin/automation-improvements-final
                   contact us at:
                 </p>
 
+<<<<<<< HEAD
 
 
                 <h2 className="text-2xl font-bold mb-6 mt-12">Information Sharing</h2>
@@ -1030,6 +1111,10 @@ origin/automation-improvements-final
                 <p className="mb-6">
                   If you have any questions about this Privacy Policy, please contact us at:
                 </p>
+=======
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div className="bg-gray-50 rounded-lg p-6">
                   <div className="flex items-center mb-4">
                     <Mail className="w-5 h-5 text-blue-600 mr-3" />
@@ -1049,15 +1134,28 @@ origin/automation-improvements-final
                   </div>
                 </div>
 
+<<<<<<< HEAD
 
 
 
+=======
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <p className="text-sm text-gray-600 mt-8">
+=======
                 <p className="text-sm text-gray-600 mt-8">
+<<<<<<< HEAD
 <p className="text-sm text-gray-600 mt-8">
                 <p className="text-sm text-gray-600 mt-8">
 origin/automation-improvements-final
 <p className="text-sm text-gray-600 mt-8">
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   Last updated: January 2024
                 </p>
               </div>
@@ -1065,6 +1163,7 @@ origin/automation-improvements-final
           </div>
         </section>
       </div>
+<<<<<<< HEAD
     </MainLayout>
   );
 }
@@ -1201,6 +1300,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
             </div>
           </section>
     </MainLayout>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               transition={{ duration: 0 && 0.8 }}
               className="bg-white rounded-2xl shadow-lg p-8 md:p-12">;
               <div className="prose prose-lg max-w-none">;
@@ -1208,25 +1310,12 @@ ursor/integrate-build-improve-and-re-verify-8f7d
                   Information We Collect;
                 </h2>;
                 <p className="mb-6">;
+=======
 import React from './react';
 import Head from './next / head';
 import Link from './next / link';
 import { motion  } from './framer-motion';
 import {
-
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import {
-Shield
-  Lock
-  Eye
-  Database
-  Mail
-  Phone
-  MapPin
-  Users
   Shield,
   Lock,
   Eye,
@@ -1234,7 +1323,7 @@ Shield
   Mail,
   Phone,
   MapPin,
-Users,
+  Users,
 } from './lucide-react';
 import MainLayout from "../components / layout / MainLayout";
 ;
@@ -1283,10 +1372,18 @@ function PrivacyPage() {
                   Information We Collect;
                 </h2>;
                 <p className="mb - 6">;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   We collect information you provide directly to us, such as;
                   when you create an account, use our services, or contact us;
                   for support.;
                 </p>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <h3 className="text - xl font - semibold mb - 4">;
                   Personal Information;
                 </h3>;
@@ -1326,10 +1423,18 @@ function PrivacyPage() {
                   Information Sharing;
                 </h2>;
                 <p className="mb - 6">;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   We do not sell, trade, or otherwise transfer your personal;
                   information to third parties without your consent, except as;
                   described in this policy.;
                 </p>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Data Security</h2>;
                 <p className="mb - 6">;
                   We implement appropriate security measures to protect your;
@@ -1338,10 +1443,15 @@ function PrivacyPage() {
                 </p>;
                 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Your Rights</h2>;
                 <p className="mb - 6">;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   You have the right to access, update, or delete your personal;
                   information. You may also opt out of certain communications;
                   from us.;
                 </p>;
+<<<<<<< HEAD
     <ErrorBoundary>
       <SEOOptimizer />
       <AnalyticsTracker />
@@ -2006,6 +2116,9 @@ className="space-y-12"
                     <User className=&quot;w-5 h-5&quot; />
                     Contact Form
                   </Link>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                 </div>
               </motion.div>
@@ -2015,15 +2128,30 @@ className="space-y-12"
       </Layout>
     </ErrorBoundary>
 
+<<<<<<< HEAD
+=======
+  );
+};
+export default PrivacyPage;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   )
 };
+
 export default PrivacyPage;
+<<<<<<< HEAD
+=======
+
+ 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
                 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Contact Us</h2>;
+<<<<<<< HEAD
 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Contact Us</h2>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <p className="mb - 6">;
                   If you have any questions about this Privacy Policy, please;
                   contact us at:;
@@ -2056,6 +2184,7 @@ export default PrivacyPage;
       </div>;
     </MainLayout>);
 }
+<<<<<<< HEAD
 
 
  
@@ -2069,3 +2198,7 @@ origin/main
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

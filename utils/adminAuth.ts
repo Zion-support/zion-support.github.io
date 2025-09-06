@@ -1,13 +1,17 @@
 
 
+<<<<<<< HEAD
 import type { NextApiRequest } from 'next';
 export interface Session {
 
 export interface Session {;
   userId: string;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   email: string;
   role: 'admin' | 'user' | 'guest';
 }
+<<<<<<< HEAD
 export function getSessionFromReq(req: NextApiRequest): Session | null {
   // Mock implementation - replace with actual session logic;
   const authHeader = req.headers.authorization;
@@ -22,6 +26,9 @@ export function getSessionFromReq(req: NextApiRequest): Session | null {
   
   return { userId: 'user-1', email: 'user@zion.os', role: 'user' };
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   // Check for internal agent headers or IPs;
   const userAgent = req.headers['user-agent'] || '';
@@ -182,6 +189,7 @@ export const is_admin = () =>: any {
 
 
 
+<<<<<<< HEAD
 export function isInternalAgentRequest(req: NextApiRequest): boolean {
   // Check for internal agent headers or IPs
   const userAgent = req.headers['user-agent'] |'';
@@ -195,5 +203,14 @@ export const isAdmin = () => {
   return true;
 }
 
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

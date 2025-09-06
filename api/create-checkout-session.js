@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function handler(req, res) {
   res.status(200).json({ message: "Checkout session created" })}
 import Stripe from 'stripe';
@@ -66,6 +67,11 @@ export default function handler(req,res) { res.status(200).json({ message: 'Chec
 export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       url: session.url
     })
   } catch (err) {,

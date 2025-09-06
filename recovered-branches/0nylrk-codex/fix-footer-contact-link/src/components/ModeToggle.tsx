@@ -1,10 +1,19 @@
+<<<<<<< HEAD
 import {Moon, Sun} from "lucide-react";
 import {Button} from "@/components/ui/button";
+=======
+
+
+import {Moon, Sun} from "lucide-react";
+import {Button} from "@/components/ui/button";
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Create a simplified theme hook for offline mode;
 const useTheme = () => ({;
   theme: "dark",;
   setTheme: (theme: string) => console && console.log(`Theme would change to: ${theme}`);
 });
+<<<<<<< HEAD
 export function ModeToggle() {;
 import { Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -54,16 +63,30 @@ theme: "dark"
 });
 export function ModeToggle() {
   const { theme, setTheme } = useTheme(),
+=======
+
+export function ModeToggle() {;
+
+  const { theme, setTheme } = useTheme();
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   return (
     <Button
       variant="ghost"
       size="icon"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+<<<<<<< HEAD
     >;
       {theme === "dark" ? (;
         <Sun className="h-5 w-5 text-yellow-300" />;
       ) : (;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import { Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -90,6 +113,11 @@ export function ModeToggle() {;
       )}
       <span className="sr-only">Toggle theme</span>;
     </Button>;
+<<<<<<< HEAD
+=======
+  );
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     >
       {theme === "dark" ? (
         <Sun className="h-5 w-5 text-yellow-300" />
@@ -98,11 +126,15 @@ export function ModeToggle() {;
       )}
       <span className="sr-only">Toggle theme</span>
     </Button>
+<<<<<<< HEAD
   );
 }
   )
 import { Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   )
 
 
@@ -133,6 +165,7 @@ function ModeToggle() {
       <span className="sr - only">Toggle theme</span>;
     </Button>);
 }
+<<<<<<< HEAD
   ),;}
  export function ModeToggle () {
   const {
@@ -151,3 +184,6 @@ return (<Button variant="ghost" size="icon" onClick= {
 
 }
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 import Head from 'next/head',
+=======
+
+
+import Head from 'next/head';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Link from 'next/link';
 
 import React from 'react'
@@ -274,6 +280,10 @@ function FutureOfWork() {
     <>;
       <Head>;
         <title>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
@@ -442,10 +452,18 @@ function FutureOfWork() {
                   </li>;
                 </ul>;
                 <p className='text - white / 90 mb - 4'>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   This collaboration model has proven to be 40% more effective;
                   than either humans or AI working alone.;
                 </p>;
               </section>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <section className='mb - 12'>;
                 <h2 className='text - 2xl font - semibold mb - 6 text - green - 400'>;
                   New Roles and Opportunities;
@@ -473,11 +491,19 @@ function FutureOfWork() {
                   </li>;
                 </ul>;
                 <p className='text - white / 90 mb - 4'>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   These roles require a unique blend of technical skills and;
                   human understanding—qualities that are becoming increasingly;
                   valuable in the modern workplace.;
                 </p>;
               </section>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <section className='mb - 12'>;
                 <h2 className='text - 2xl font - semibold mb - 6 text - blue - 400'>;
                   Skills for the Future;
@@ -535,10 +561,18 @@ function FutureOfWork() {
                   </li>;
                 </ul>;
                 <p className='text - white / 90 mb - 4'>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   Our workplace design principles ensure that AI systems enhance;
                   rather than disrupt human workflows.;
                 </p>;
               </section>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     className='px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300'>;
               <section className='mb - 12'>;
                 <h2 className='text - 2xl font - semibold mb - 6 text - yellow - 400'>;
@@ -592,6 +626,10 @@ function FutureOfWork() {
                     href='/services';
                     className='px - 6 py - 3 border border - white / 20 text - white rounded - lg hover:border - cyan - 400 / 50 transition - all duration - 300';
                   >;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     Explore Solutions;
                   </Link>;
                 </div>;
@@ -602,6 +640,7 @@ function FutureOfWork() {
       </div>;
 
 
+<<<<<<< HEAD
     </>);
 }
     </>);
@@ -1121,3 +1160,11 @@ export default function FutureOfWork(req, res) {
   }
 }
 ;
+=======
+=======
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

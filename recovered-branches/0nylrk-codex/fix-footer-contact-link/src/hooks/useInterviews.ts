@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { useAuth } from "@/hooks/useAuth";
 import { supabase  } from '@/integrations/supabase/client';
@@ -8,6 +9,9 @@ export function useInterviews() {
   const [interviews, setInterviews] = useState<Interview[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null),
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from '@/integrations/supabase/client';
@@ -17,6 +21,7 @@ export function useInterviews() {;
   const [interviews, setInterviews] = useState<Interview[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
   const { user } = useAuth();
 import { useState } from 'react',
 import { useAuth } from "@/hooks/useAuth",
@@ -29,11 +34,17 @@ export function useInterviews() {
   const [error, setError] = useState<string | null>(null),
   const { user } = useAuth(),
 
+=======
+
+
+  const { user } = useAuth();
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Request an interview as a client
 
   const requestInterview = async (interviewRequest: InterviewRequest): Promise<Interview | null> => {
     if (!user) {
       toast({
+<<<<<<< HEAD
         title: "Authentication required";
         description: "You must be logged in to request interviews"
         title: "Authentication required",
@@ -42,18 +53,60 @@ export function useInterviews() {
       }),
       return null
     }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         title: "Authentication required",
         description: "You must be logged in to request interviews",
 
 
         variant: "destructive"
+<<<<<<< HEAD
     setIsLoading(true);
     setError(null);
+=======
+=======
+import {useState} from 'react';
+import { use_auth } from '@/hooks / use_auth';
+import {supabase} from '@/integrations / supabase / client';
+import {Interview, InterviewRequest, InterviewResponse} from '@/types / interview';
+import {toast} from '@/components / ui / use - toast';
+export /**
+ * use_interviews - Function description
+ */
+function use_interviews() {
+  const [interviews, set_interviews] = useState < Interview[]>([]);
+  const [is_loading, setIsLoading] = useState (false);
+  const [error, set_error] = useState < string | null>(null);
+  const { user } = use_auth ();
+;
+  // Request an interview as a client;
+  const request_interview = async (interview_request: InterviewRequest): Promise < Interview | null> => {
+    // Check condition
+if ( {) {
+  $2
+}
+      toast ({
+        title: "Authentication required";
+        description: "You must be logged in to request interviews",
+        variant: "destructive";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      });
+      return null;
+    }
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     setIsLoading(true),
     setError(null),
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {
       // Insert the interview into the database
       const { data, error: insertError } = await supabase
@@ -69,6 +122,7 @@ export function useInterviews() {
           meeting_platform: interviewRequest && interviewRequest.meeting_platform;
           interview_type: interviewRequest && interviewRequest.interview_type;
           title: interviewRequest && interviewRequest.title,
+<<<<<<< HEAD
           client_id: interviewRequest.client_id;
           talent_id: interviewRequest.talent_id;
           scheduled_date: interviewRequest.scheduled_date;
@@ -81,6 +135,14 @@ export function useInterviews() {
           status: 'requested'})
         .select('*')
         .single();
+=======
+
+          status: 'requested'})
+        .select('*')
+        .single();
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           client_id: interviewRequest.client_id,
           talent_id: interviewRequest.talent_id,
           scheduled_date: interviewRequest.scheduled_date,
@@ -94,13 +156,25 @@ export function useInterviews() {
         .select('*')
         .single(),
 
+<<<<<<< HEAD
       if (insertError) {
         console.error("Error requesting interview:", insertError),
         setError(insertError.message),
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      if (insertError) {
+        console && console.error("Error requesting interview:", insertError);
+        setError(insertError && insertError.message);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         return null
       }
       // Create notification for talent
       await createInterviewNotification(
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         interviewRequest.talent_id,
         'interview_requestNew Interview Request',
         `You have received an interview request for ${interviewRequest.scheduled_date}`,
@@ -160,6 +234,7 @@ if ( {) {
       setIsLoading(false)
 
 
+<<<<<<< HEAD
       );
       ),
 
@@ -180,6 +255,9 @@ if ( {) {
     }
     setIsLoading(true);
     setError(null);
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from 'react',;
 import { useAuth } from "@/hooks/useAuth",;
 import { supabase } from '@/integrations/supabase/client',;
@@ -200,9 +278,13 @@ export function useInterviews() {;
       }),;
       return null;
     }
+<<<<<<< HEAD
       setIsLoading (false);
     }
   }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   // Fetch interviews for the current user (as client or talent);
   const fetch_interviews = async (): Promise < Interview[]> => {
@@ -217,6 +299,7 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 ;
     setIsLoading(true),;
     setError(null),;
@@ -265,13 +348,20 @@ if ( {) {
       setInterviews([]),;
       return [];
     }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     setIsLoading(true),
     setError(null),
 
+<<<<<<< HEAD
     setIsLoading (true);
     set_error (null);
 ;
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {
       // Get interviews where the user is either the client or the talent;
       const { data, error: fetch_error } = await supabase;
@@ -319,6 +409,7 @@ if ( {) {
         .order('scheduled_date', { ascending: true });
         .order('scheduled_date', { ascending: true }),
 
+<<<<<<< HEAD
       if (fetchError) {
         console.error("Error fetching interviews:", fetchError),
         setError(fetchError.message),
@@ -326,6 +417,8 @@ if ( {) {
       }
       // Transform the data to match Interview type
       const formattedInterviews = data.map((interview: any): Interview => ({
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         id: interview.id;
         client_id: interview.client_id;
         talent_id: interview.talent_id;
@@ -344,6 +437,10 @@ if ( {) {
         talent_name: interview.talents?.full_name;
         client_avatar: interview.clients?.avatar_url
         talent_avatar: interview.talents?.profile_picture_url}));
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const formattedInterviews = data && data.map((interview: any): Interview => ({
         id: interview && interview.id;
         client_id: interview && interview.client_id;
@@ -366,7 +463,10 @@ if ( {) {
       setInterviews(formattedInterviews);
       const formattedInterviews = data.map((interview: any): Interview => ({
 
+<<<<<<< HEAD
       setInterviews(formattedInterviews);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         id: interview.id,
         client_id: interview.client_id,
         talent_id: interview.talent_id,
@@ -387,6 +487,17 @@ if ( {) {
         talent_avatar: interview.talents?.profile_picture_url})),
 
       setInterviews(formattedInterviews),
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      return formattedInterviews
+    } catch (err: any) {
+      console && console.error("Error in fetchInterviews:", err);
+      setError(err && err.message);
+      return []
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
       set_interviews (formatted_interviews);
       return formatted_interviews;
@@ -420,6 +531,10 @@ if ( {) {
   }
   },
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Respond to an interview request (as talent)
   const respondToInterview = async (
     interviewId: string,
@@ -427,6 +542,7 @@ if ( {) {
   ): Promise<boolean> => {
     if (!user?.id) {
       toast({
+<<<<<<< HEAD
         title: "Authentication required";
         description: "You must be logged in to respond to interviews"
         title: "Authentication required",
@@ -435,6 +551,9 @@ if ( {) {
       }),
       return false
     }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         title: "Authentication required",
         description: "You must be logged in to respond to interviews",
 
@@ -445,17 +564,31 @@ if ( {) {
       });
       return false;
     }
+<<<<<<< HEAD
     setIsLoading(true);
     setError(null);
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     setIsLoading(true),
     setError(null),
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {
       // Update the interview status
       const { error: updateError } = await supabase
         .from('interviews')
         .update({
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           status: response && response.status,
           updated_at: new Date().toISOString()
         })
@@ -468,6 +601,7 @@ if ( {) {
       if (updateError) {
         console && console.error("Error responding to interview:", updateError);
         setError(updateError && updateError.message);
+<<<<<<< HEAD
           status: response.status
           updated_at: new Date().toISOString()
         })
@@ -477,6 +611,8 @@ if ( {) {
       if (updateError) {
         console.error("Error responding to interview:", updateError),
         setError(updateError.message),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         return false
       }
       // Get the interview to notify the client
@@ -484,9 +620,13 @@ if ( {) {
         .from('interviews')
         .select('*')
         .eq('id', interviewId)
+<<<<<<< HEAD
       }
       // Create notification for client
       let notificationType = 'interview_confirmed';
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     setIsLoading (true);
     set_error (null);
 ;
@@ -525,15 +665,26 @@ if ( {) {
       }
       // Create notification for client;
       let notification_type = 'interview_confirmed';
+<<<<<<< HEAD
       let title = 'Interview Confirmed';
       let message = `Your interview request for ${interview && interview.scheduled_date} has been confirmed`;
       if (response && response.status === 'declined') {
+=======
+
+      let title = 'Interview Confirmed';
+
+      let message = `Your interview request for ${interview && interview.scheduled_date} has been confirmed`;
+
+      if (response && response.status === 'declined') {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         notificationType = 'interview_declined';
         title = 'Interview Declined';
         message = `Your interview request has been declined`
       } else if (response && response.status === 'rescheduled') {
         notificationType = 'interview_rescheduled';
         title = 'Interview Rescheduled';
+<<<<<<< HEAD
         message = `Your interview has been rescheduled to ${response && response.alternative_date || 'a new time'}`
       }
 
@@ -668,6 +819,8 @@ if ( {) {
         title = 'Interview Rescheduled',;
         message = `Your interview has been rescheduled to ${response.alternative_date || 'a new time'}`;
       }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         message = `Your interview has been rescheduled to ${response && response.alternative_date || 'a new time'}`
 
@@ -761,9 +914,12 @@ if ( {) {
   },
 
 
+<<<<<<< HEAD
   }
   },
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Helper function to create interview notifications
   const createInterviewNotification = async (
     userId: string,
@@ -774,6 +930,7 @@ if ( {) {
   ) => {
     try {
       await supabase.from('notifications').insert({
+<<<<<<< HEAD
         user_id: userId;
         type;
         title;
@@ -859,10 +1016,17 @@ if ( {) {
       if (fetchError) {;
         setError(fetchError.message),;
         return false;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       }
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Check if user is part of this interview
       if (interview && interview.client_id !== user && user.id && interview && interview.talent_id !== user && user.id) {
         setError("You don't have permission to cancel this interview");
@@ -873,6 +1037,7 @@ if ( {) {
         : interview && interview.client_id;
 
 
+<<<<<<< HEAD
 
 
 
@@ -900,6 +1065,13 @@ if ( {) {
         ? interview.talent_id
         : interview.client_id;
 
+=======
+=======
+
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
       // Check if user is part of this interview;
       if (interview.client_id !== user.id && interview.talent_id !== user.id) {;
@@ -920,14 +1092,25 @@ if ( {) {
         return false;
       }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Determine who to notify
       const notifyUserId = interview.client_id === user.id
         ? interview.talent_id
         : interview.client_id,
 
+<<<<<<< HEAD
       const notifyUserId = interview && interview.client_id === user && user.id
         ? interview && interview.talent_id
         : interview && interview.client_id;
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Create notification for the other party
       await createInterviewNotification(
         notifyUserId;
@@ -1040,6 +1223,10 @@ if ( {) {
     error;
     request_interview;
     fetch_interviews;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },;
   return {;
     interviews,;
@@ -1047,6 +1234,10 @@ if ( {) {
     error,;
     requestInterview,;
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     fetchInterviews;
     respondToInterview;
 
@@ -1057,6 +1248,7 @@ if ( {) {
 }
 ;
 
+<<<<<<< HEAD
     respondToInterview;
     cancel_interview}
 
@@ -1388,3 +1580,6 @@ export function useInterviews() {;
 }
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

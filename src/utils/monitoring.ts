@@ -32,6 +32,7 @@ export const trackPerformance = () => {
 
 export const trackPerformance = () => {;
   console.log('Tracking performance...');
+<<<<<<< HEAD
 }
 };
   });
@@ -40,3 +41,7 @@ export const trackPerformance = () => {;
   });
 };
 };
+=======
+
+};
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

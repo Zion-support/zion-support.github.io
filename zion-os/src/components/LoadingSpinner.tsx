@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 "use client",;
 interface LoadingSpinnerProps {;
   size?: "small" | "medium" | "large",;
@@ -13,6 +17,10 @@ export function LoadingSpinner({ size = "medium", className = "" }: LoadingSpinn
 
   return (;
     <div className={`${sizeClasses[size]} ${className}`} role="status" aria-label="Loading">;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 "use client",
 interface LoadingSpinnerProps {
   size?: "small" | "medium" | "large",

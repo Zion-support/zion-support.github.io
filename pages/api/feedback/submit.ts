@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -18,6 +21,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const entry = {
 
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -31,6 +35,12 @@ function readAll(): any[] {
     return JSON.parse(raw || '[]')
   } catch {
     return []
+=======
+  if (req && req.method !== "POST") return res && res.status(405).end();
+  const { responseId, rating, comment, pagePath, aiModel } = req && req.body || {};
+  if (!responseId || !rating || !["up", "down"].includes(rating)) {
+    return res && res.status(400).json({ error: "Missing responseId or rating" });
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 }
 function writeAll(rows: any[]) {
@@ -45,6 +55,12 @@ function writeAll(rows: any[]) {
     userAgent: req && req.headers["user-agent"] || "",
     ts: Date && Date.now(),
   };
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const rows = readAll();
   rows && rows.push(entry);
   writeAll(rows);
@@ -68,6 +84,11 @@ function writeAll(rows: any[]) {
   return res.status(200).json({ ok: true })
 
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
 import path from './path';
@@ -203,6 +224,7 @@ export default function handler(req, res) {
 
 
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
@@ -335,3 +357,7 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

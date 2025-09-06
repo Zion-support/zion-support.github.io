@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>
         </div>
       </div>
@@ -7,6 +12,7 @@
 }
 
 
+<<<<<<< HEAD
 
 import React from 'react';
 
@@ -59,6 +65,15 @@ export default function SsoUserLifecycleAutomationPage(req, res) {
         <meta name="description" content="Automate Joiner/Mover/Leaver across SSO/SCIM apps with approvals, logging, and policies." />;
         <link rel="canonical" href="https://ziontechgroup.com/sso-user-lifecycle-automation" />;
       </Head>;
+=======
+    <Layout>;
+      <Head>;
+        <title > SSO User Lifecycle Automation | Zion Tech Group</title>;
+        <meta name="description" content="Automate Joiner / Mover / Leaver across SSO / SCIM apps with approvals, logging, and policies." />;
+        <link rel="canonical" href="https://ziontechgroup.com / sso - user - lifecycle - automation" />;
+      </Head>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto space-y-6">;
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text text-transparent">SSO User Lifecycle Automation</h1>;
@@ -72,6 +87,7 @@ export default function SsoUserLifecycleAutomationPage(req, res) {
   }
 }
 
+<<<<<<< HEAD
           </div>;
           <div className="flex gap-3">;
             <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-green-700 text-white">Start from $299/mo</a>;
@@ -88,3 +104,8 @@ export default function SsoUserLifecycleAutomationPage(req, res) {
 }
 ;
 ;
+=======
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

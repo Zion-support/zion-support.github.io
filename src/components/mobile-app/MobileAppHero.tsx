@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }
 import React from "react"
 import Link from "next/link"
@@ -56,17 +57,30 @@ ursor/fix-website-loading-errors-and-merge-6662
             
             <Link href="/open-app">
               <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover:bg-white/10">
+=======
+<Link href="/open-app">
+              <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover: bg-white/10">
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 Open App
                 <ArrowRight size={20} />
               </Button>
             </Link>
           </div>
+<<<<<<< HEAD
           
           
+=======
+
+
+          
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="flex-1 flex justify-center">
             <div className="relative w-64 h-auto">
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
               <Phone className="w-full h-auto text-white" />
+<<<<<<< HEAD
             <div className="relative w-64 h-auto">
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
               <Phone className="w-full h-auto text-white" />
@@ -78,6 +92,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             <div className="relative w-64 h-auto">
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
               <Phone className="w-full h-auto text-white" />
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   // These would come from environment variables or a config;
   const appStoreUrl = "#", // Replace with actual App Store URL when available;
@@ -130,6 +146,7 @@ import { AppStoreButtons } from "./AppStoreButtons";
 };
 ";
 
+<<<<<<< HEAD
               {/* This would be replaced with an actual phone mockup image in production */}
             </div>
           </div>
@@ -143,6 +160,8 @@ import { AppStoreButtons } from "./AppStoreButtons";
   );
 };
 ";
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",;
 import Link from "next/link",;
 import { ArrowRight, Phone } from 'lucide-react';
@@ -188,6 +207,14 @@ export const MobileAppHero: React.FC = () => {;
     </section>;
   );
 };
+<<<<<<< HEAD
 
 
 ";
+=======
+
+"
+
+
+";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

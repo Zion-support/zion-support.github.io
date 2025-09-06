@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { cn } from '../../lib/utils';
 // Define HTML element types
@@ -125,17 +126,38 @@ const CardDescription = React.forward_ref<;
     ref={ref}
     className={cn ("text - sm text - muted - foreground", class_name)}
     {...props}
+=======
+
+
+    ref={ref}
+    className={cn ("text - sm text - muted - foreground", class_name)}
+    {...props}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const CardContent = React && React.forwardRef<;
   HTMLDivElement,;
   React && React.HTMLAttributes<HTMLDivElement>;
 >(({ className, ...props }, ref) => (;
+<<<<<<< HEAD
   <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />;
 ));
 CardContent && CardContent.displayName = "CardContent";
+=======
+
+  <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />;
+));
+CardContent && CardContent.displayName = "CardContent";
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const CardFooter = React && React.forwardRef<;
   HTMLDivElement,;
   React && React.HTMLAttributes<HTMLDivElement>;
 >(({ className, ...props }, ref) => (;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   <div
   />));
 CardDescription.display_name = "CardDescription";
@@ -155,6 +177,10 @@ const CardFooter = React.forward_ref<;
     ref={ref}
     className={cn ("flex items - center p - 6 pt - 0", class_name)}
     {...props}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 
 import React from 'react',;
@@ -188,6 +214,15 @@ const Card: React.FC<CardProps> = ({
   const hoverClasses = hover ? 'hover: border-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-1 hover:bg-gray-900/80 focus-within:border-blue-500/50 focus-within:shadow-lg focus-within:shadow-blue-500/20' : ''
   const clickableClasses = onClick ? 'cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black' : ''
   const classes = `${baseClasses} ${hoverClasses} ${clickableClasses} ${className}`
+<<<<<<< HEAD
+=======
+=======
+  />));
+CardFooter.display_name = "CardFooter";
+;
+import React from 'react',
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   />;
 ));
 CardFooter.displayName = "CardFooter";
@@ -218,10 +253,22 @@ const Card: React.FC<CardProps> = ({
       on_click={on_click}
     >;
       {/* Subtle background pattern */}
+<<<<<<< HEAD
       <div className="absolute inset - 0 bg - gradient - to - br from - blue - 500 / 5 via - transparent to - purple - 500 / 5 opacity - 0 hover:opacity - 100 transition - opacity duration - 300" />;
       {/* Content wrapper */}
       <div className="relative z - 10">;
         {children}
+=======
+
+      <div className="absolute inset - 0 bg - gradient - to - br from - blue - 500 / 5 via - transparent to - purple - 500 / 5 opacity - 0 hover:opacity - 100 transition - opacity duration - 300" />;
+
+      {/* Content wrapper */}
+      <div className="relative z - 10">;
+        {children}
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </div>;
       {/* Hover glow effect */}
       {hover && (
@@ -231,6 +278,7 @@ const Card: React.FC<CardProps> = ({
 },
 export default Card,
 ;
+<<<<<<< HEAD
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
 
 
@@ -252,6 +300,18 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 export default Card,;
 ;
 
+=======
+
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
 
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

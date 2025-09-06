@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import EmptyState from '../../components/ui/EmptyState';
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 const Messages: NextPage = () => {
   return (
@@ -8,11 +12,17 @@ const Messages: NextPage = () => {
       <Head>
         <title>Messages - Zion</title>
       </Head>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <h1 className="text-2xl font-semibold">Messages</h1>
       <EmptyState
         title="No messages yet"
         description="Start a conversation by requesting a quote or responding to an existing one."
 
+<<<<<<< HEAD
         icon={<span>📫</span>}
         primaryAction={{ label: 'Explore talent', href: '/talent' }}
         secondaryAction={{ label: 'Browse services', href: '/services' }}
@@ -21,6 +31,10 @@ const Messages: NextPage = () => {
   )
 }
 export default Messages;
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextPage } from 'next',
 import Head from 'next / head',
 import EmptyState from '../../components / ui / EmptyState',
@@ -38,6 +52,7 @@ const Messages: NextPage = () => {
         primary_action={{ label: 'Explore talent', href: '/talent' }}
         secondary_action={{ label: 'Browse services', href: '/services' }}
       />;
+<<<<<<< HEAD
     </div>);
 },
 export default Messages,
@@ -77,9 +92,17 @@ export default Messages,;
   }
 }
       />;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>;
   );
 },;
 export default Messages;
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

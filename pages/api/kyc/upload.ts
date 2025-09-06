@@ -1,4 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import type { KycDocumentMeta, KycProfile } from '../../../utils/kyc';
 import fs from 'fs';
@@ -10,6 +14,7 @@ const FILE = path.join(DATA_DIR, 'profiles.json');
 
 
 
+<<<<<<< HEAD
 function load(): Record<string, KycProfile> {
   try {
   };
@@ -50,6 +55,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   if (!userId |!kind |!filename)
     return res.status(400).json({ error: 'Missing userId, kind or filename' });
+=======
+const DATA_DIR = path && path.join(process && process.cwd(), 'data', 'kyc');const FILE = path && path.join(DATA_DIR, 'profiles && profiles.json');
+const DATA_DIR = path.join(process.cwd(), 'datakyc');
+const FILE = path.join(DATA_DIR, 'profiles.json');
+
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+function load(): Record<string, KycProfile> {
+  try {
+
+  };
+  if (!userId || !kind || !filename)
+    return res && res.status(400).json({ error: 'Missing userId, kind or filename' });
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const db = load();
   const profile = db[userId];
   if (!profile)
@@ -66,6 +87,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     uploadedAt
   }
   // Replace or add
+<<<<<<< HEAD
   const withoutSameKind = (profile && profile.documents || []).filter(
     d => d && d.kind !== kind
   );
@@ -82,6 +104,31 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.status(200).json({ ok: true, profile });
 }
 uploadedAt};
+=======
+
+  }
+}
+function save(db: Record<string, KycProfile>) {
+  fs.mkdirSync(DATA_DIR, { recursive: true });
+  fs.writeFileSync(FILE, JSON.stringify(db, null, 2))
+}
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { userId, kind, filename } = req.body as { userId?: string, kind?: KycDocumentMeta['kind'], filename?: string };
+  if (!userId || !kind || !filename) return res.status(400).json({ error: 'Missing userId, kind or filename' });
+const db = load();
+  const profile = db[userId];
+  if (!profile) return res.status(404).json({ error: 'Profile not found. Start KYC first.' });
+  const id = crypto.randomUUID();
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  const uploadedAt = new Date().toISOString();
+  const doc: KycDocumentMeta = {
+    id,
+    kind,
+    filename,
+
+    uploadedAt};
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Replace or add
   const withoutSameKind = (profile.documents || []).filter((d) => d.kind !== kind);
   profile.documents = [...withoutSameKind, doc];
@@ -173,6 +220,7 @@ if (
 ;
 res.status (200).json ({ ok: true, profile });
 }
+<<<<<<< HEAD
 
   } catch {;
     return {  } catch (error) {
@@ -264,3 +312,6 @@ export default function handler(req, res) {
   }
 }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

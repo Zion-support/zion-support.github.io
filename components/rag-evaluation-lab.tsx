@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   return (
@@ -6,11 +10,41 @@
         title='RAG Evaluation Lab'
         description='Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production-grade evals and CI gates.'
 
+<<<<<<< HEAD
+=======
+import React from 'react';
+import SEO from '../components / SEO';
+import Link from 'next / link';
+;
+  return (
+    <>;
+      <SEO;
+        title='RAG Evaluation Lab';
+        description='Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production - grade evals and CI gates.';
+      />;
+      <section className='relative pt - 28 pb - 16 md:pt - 36 md:pb - 24'>;
+        <div className='container mx - auto px - 4'>;
+          <h1 className='text - 3xl md:text - 5xl font - extrabold tracking - tight gradient - text - cyan - purple'>;
+            RAG Evaluation Lab;
+          </h1>;
+          <p className='mt - 6 text - lg text - gray - 300 max - w-3xl'>;
+            Production - ready evaluations for retrieval - augmented generation.;
+            Track accuracy, hallucination rate, latency, and cost. Integrate;
+            with CI to prevent regressions.;
+          </p>;
+          <div className='mt - 8 grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
+            {[;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {
                 title: 'Grounding & Faithfulness'
                 desc: 'Measure factual consistency, citation quality, and hallucination rate.'
               }
               {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       />;
       <section className='relative pt-28 pb-16 md:pt-36 md:pb-24'>;
         <div className='container mx-auto px-4'>;
@@ -49,6 +83,10 @@
                 desc: 'Team dashboards, API access, and exportable reports.',;
               },;
             ].map(f => (;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div
                 key={f && f.title}
                 className='rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur'>;
@@ -108,10 +146,18 @@
                 <p className='mt - 4 text - 3xl font - bold'>;
                   $149;
                   <span className='text - base font - normal text - gray - 300'>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     /mo;
                   </span>;
                 </p>;
               </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className='rounded - 2xl border border - blue - 400 / 30 p - 6'>;
                 <h3 className='text - xl font - bold'>Growth</h3>;
                 <p className='mt - 2 text - gray - 300'>;
@@ -120,11 +166,21 @@
                 <p className='mt - 4 text - 3xl font - bold'>;
                   $449;
                   <span className='text - base font - normal text - gray - 300'>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     /mo;
                   </span>;
                 </p>;
               </div>;
+<<<<<<< HEAD
                 rel='noreferrer'>;
+=======
+
+                rel='noreferrer'>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className='rounded - 2xl border border - purple - 400 / 30 p - 6'>;
                 <h3 className='text - xl font - bold'>Enterprise</h3>;
                 <p className='mt - 2 text - gray - 300'>;
@@ -159,11 +215,16 @@
                 target='_blank';
                 rel='noreferrer';
               >;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 promptfoo;
               </a>;
               .;
             </p>;
           </div>;
+<<<<<<< HEAD
 export default function RAGEvaluationLabPage() {
 	return(<>
 			<SEO title="RAG Evaluation Lab" description="Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production-grade evals and CI gates." />
@@ -417,3 +478,40 @@ import Link from 'next/link';
 
 }
 }
+=======
+
+
+=======
+          <div className='mt - 12 flex flex - wrap items - center gap - 4'>;
+            <Link;
+              href='/contact';
+              className='px - 5 py - 3 rounded - lg bg - cyan - 400 text - black font - semibold';
+            >;
+              Start Evaluating;
+            </Link>;
+            <a;
+              href='mailto:kleber@ziontechgroup.com';
+              className='px - 5 py - 3 rounded - lg border border - white / 20';
+            >;
+              Email: kleber@ziontechgroup.com;
+            </a>;
+            <span className='text - gray - 400'>Call: +1 302 464 0950</span>;
+          </div>;
+        </div>;
+      </section>;
+    </>);					<div className="mt - 12 flex flex - wrap items - center gap - 4">;
+      <Link href="/contact" className="px - 5 py - 3 rounded - lg bg - cyan - 400 text - black font - semibold">Start Evaluating</Link>;
+      <a href="mailto:kleber@ziontechgroup.com" className="px - 5 py - 3 rounded - lg border border - white / 20">Email: kleber@ziontechgroup.com</a>;
+      <span className="text - gray - 400">Call: +1 302 464 0950</span>;
+    </div>;
+    </div>;
+  </section>;
+  </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 export default function Contact() {;
+=======
+
+
+export default function Contact() {;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div>
       <main>

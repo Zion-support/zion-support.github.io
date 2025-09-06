@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -10,21 +11,37 @@ const SAMPLE_QUERIES = [
 ];
 
 const SKILLS = [
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+<<<<<<< HEAD
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+=======
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+<<<<<<< HEAD
     return this.props.children;
   }
 }
@@ -111,6 +128,8 @@ class ErrorBoundary extends React.Component {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     
     return this.props.children;
   }
@@ -120,9 +139,12 @@ import type { NextApiRequest, NextApiResponse } from "next";
 const SAMPLE_QUERIES = [
 
 
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 const SAMPLE_QUERIES = [
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   "React developers under $50/hr"
   "Part-time DevOps jobs in LATAM"
   "AI/ML engineers for startup"
@@ -133,6 +155,11 @@ const SAMPLE_QUERIES = [
   "Mobile app developers iOS/Android"
   "Cloud architects AWS/Azure"
   "DevOps engineers with Kubernetes"
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   "React developers under $50/hr",
   "Part-time DevOps jobs in LATAM",
   "AI/ML engineers for startup",
@@ -157,17 +184,36 @@ const SAMPLE_QUERIES = [;
   if (req.method !== "GET") {;
 
 
+<<<<<<< HEAD
 ];
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method !== "GET") {
   if (req.method !== "GET") {
   if (req.method !== "GET") {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     res.setHeader("Allow", "GET");
     return res.status(405).json({ error: "Method not allowed" });
 
 }
   const { q = "" } = req.query;
+<<<<<<< HEAD
+=======
+
+  if (req && req.method !== "GET") {
+    res && res.setHeader("Allow", "GET");
+    return res && res.status(405).json({ error: "Method not allowed" });
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  }
+
+
+
+  const suggestions = SAMPLE_QUERIES && SAMPLE_QUERIES.filter((s) =>
+    s && s.toLowerCase().includes(query),
+  ).slice(0, 5);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   return res && res.status(200).json({ suggestions });
   res.status(200).json({ ok: true, suggestions: Array.from(suggestions).slice(0, 8) });
@@ -180,6 +226,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD
 
   const query = String(q).toLowerCase();
   if (!query) {
@@ -189,6 +236,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     s && s.toLowerCase().includes(query),
   ).slice(0, 5);
 return res && res.status(200).json({ suggestions });
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 ;
 export default /**
@@ -199,6 +248,7 @@ function handler() {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
     res.set_header ("Allow", "GET");
     return res.status (405).json ({ error: "Method not allowed" });
   }
@@ -256,3 +306,9 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

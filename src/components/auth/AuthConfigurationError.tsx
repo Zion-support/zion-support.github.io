@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -26,6 +29,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import React from 'react'
 import Link from 'next/link'
 import {
+<<<<<<< HEAD
   AlertTriangle
   ExternalLink
   RefreshCw
@@ -34,11 +38,19 @@ import {
 import React from 'react'
 import Link from 'next/link'
 import {
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   AlertTriangle,
   ExternalLink,
   RefreshCw,
   Settings,;
   CheckCircle;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 } from 'lucide-react'; import { Button } from '@/components/ui/button'; import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Alert, AlertDescription } from '@/components/ui/alert'
@@ -46,6 +58,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert'
 import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+<<<<<<< HEAD
 interface AuthConfigurationErrorProps {
   onRetry?: () => void;
   showSetupButton?: boolean
@@ -114,6 +127,14 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
       window.location.reload();
     }
   },
+=======
+interface AuthConfigurationErrorProps {;
+  onRetry?: () => void;
+
+  showSetupButton?: boolean
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export function AuthConfigurationError(): any ({;
   onRetry,;
@@ -178,6 +199,10 @@ if ( {) {
 ursor/fix-website-loading-errors-and-merge-6662
         <div className="bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6">
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6">
           <div className="text-center mb-6">
             <div className="mx-auto mb-4 h-16 w-16 rounded-full bg-red-100 flex items-center justify-center">
@@ -190,6 +215,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               The sign-up system needs to be configured before users can create accounts
             </p>
           </div>
+<<<<<<< HEAD
           <Alert variant="destructive" className="mb-6">
             <AlertTriangle className="h-4 w-4" />
             <AlertDescription>
@@ -197,15 +223,26 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+=======
+
+
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Alert variant="destructive" className="mb-6">
             <AlertTriangle className="h-4 w-4" />
             <AlertDescription>
               <strong>Critical Issue #1:</strong> Auth0 environment variables are not configured. 
+<<<<<<< HEAD
           <div className='bg-gray-50 rounded-lg p-4 mb-6'>
             <h3 className='font-semibold text-gray-900 mb-2'>
               Missing Configuration:
             </h3>
             <ul className='text-sm text-gray-700 space-y-1'>              <li>• AUTH0_SECRET</li>          <div className="bg-gray-50 rounded-lg p-4 mb-6">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               New users cannot sign up until this is resolved.
             </AlertDescription>
           </Alert>
@@ -215,9 +252,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
           <div className="bg-gray-50 rounded-lg p-4 mb-6">
             <h3 className="font-semibold text-gray-900 mb-2">Missing Configuration:</h3>
           <div className="bg-gray-50 rounded-lg p-4 mb-6">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <h3 className="font-semibold text-gray-900 mb-2">Missing Configuration:</h3>
             <ul className="text-sm text-gray-700 space-y-1">
               <li>• AUTH0_SECRET</li>
@@ -227,6 +267,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <li>• AUTH0_CLIENT_SECRET</li>
             </ul>
           </div>
+<<<<<<< HEAD
           {/* Action Buttons */}
           <div className='flex flex-col sm:flex-row gap-3 mb-6'>
             {showSetupButton && (
@@ -246,6 +287,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                 Setup Guide
               </Button>
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className='bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6'>;
           <div className='text-center mb-6'>;
             <div className='mx-auto mb-4 h-16 w-16 rounded-full bg-red-100 flex items-center justify-center'>;
@@ -298,6 +342,10 @@ ursor/fix-website-loading-errors-and-merge-6662
               The sign-up system needs to be configured before users can create accounts;
             </p>;
           </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Alert variant="destructive" className="mb-6">;
             <AlertTriangle className="h-4 w-4" />;
             <AlertDescription>;
@@ -364,6 +412,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <ul className='text - sm text - gray - 700 space - y-1'>              <li>• AUTH0_SECRET</li>          <div className="bg - gray - 50 rounded - lg p - 4 mb - 6">;
             <h3 className="font - semibold text - gray - 900 mb - 2">Missing Configuration:</h3>;
             <ul className="text - sm text - gray - 700 space - y-1">;
+<<<<<<< HEAD
 import React from 'react',;
 import Link from 'next/link',;
 import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react';
@@ -418,6 +467,8 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
           <div className="bg-gray-50 rounded-lg p-4 mb-6">;
             <h3 className="font-semibold text-gray-900 mb-2">Missing Configuration:</h3>;
             <ul className="text-sm text-gray-700 space-y-1">;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <li>• AUTH0_SECRET</li>;
               <li>• AUTH0_BASE_URL</li>;
               <li>• AUTH0_ISSUER_BASE_URL</li>;
@@ -425,6 +476,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
               <li>• AUTH0_CLIENT_SECRET</li>;
             </ul>;
           </div>;
+<<<<<<< HEAD
 ;
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 mb-6">;
@@ -443,11 +495,39 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
             )}
 ;
             <Button;
+=======
+
+                onClick = {(,) => window && window.open('/AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'),}
+                className="bg-blue-600 hover:bg-blue-700 text-white flex-1";
+              >;
+                <Settings className='w-4 h-4 mr-2' />;
+                Setup Guide;
+              </Button>;
+
+            )}
+            <Button
+              onClick={handleRefresh}
+              variant='outline'
+
+          <div className="flex flex-col sm:flex-row gap-3 mb-6">
+            {showSetupButton && (
+              <Button 
+                onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
+                className="bg-blue-600 hover:bg-blue-700 text-white flex-1"
+              >
+                <Settings className="w-4 h-4 mr-2" />
+                Setup Guide
+              </Button>
+            )}
+            
+            <Button 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               onClick={handleRefresh}
               variant="outline" 
               className="flex-1"
             >
               <RefreshCw className="w-4 h-4 mr-2" />
+<<<<<<< HEAD
               Check Again
             </Button>
           </div>
@@ -465,6 +545,8 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
             ;
             <Button ;
               onClick={handleRefresh}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               Check Again
             </Button>
@@ -477,11 +559,22 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
 
           {/* Quick Setup Steps */}
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="border-t pt-6">
             <h3 className="font-semibold text-gray-900 mb-3">Quick Setup Steps:</h3>
             <ol className="space-y-3 text-sm">
               <li className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">1</span>
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div>
                   <strong>Create Auth0 Account:</strong>
                   <br />
@@ -492,6 +585,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
                     className="text-blue-600 hover:underline inline-flex items-center gap-1"
                   >
                     Visit Auth0 Dashboard <ExternalLink className="w-3 h-3" />
+<<<<<<< HEAD
                   </Link>
                 </div>
               </li>
@@ -511,6 +605,13 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
                   </a>
                 </div>
               </li>
+=======
+
+                  </Link>
+                </div>
+              </li>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               
 
 
@@ -522,6 +623,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
                   Create a "Regular Web Application" named "Zion AI Marketplace"
                 </div>
               </li>
+<<<<<<< HEAD
               <li className='flex items-start gap-3'>
                 <span className='flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold'>
                   3
@@ -542,6 +644,14 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
                 <div>
                   <strong>Restart Application:</strong>
                   <br />
+=======
+
+
+              
+              <li className="flex items-start gap-3">
+                <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">3</span>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                 <div>
                   <strong>Configure Environment:</strong>
@@ -670,11 +780,15 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
               <li className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">3</span>
                 <div>
+<<<<<<< HEAD
                   Run{' '}
                   <code className='bg-gray-100 px-1 rounded'>
                     npm run dev
                   </code>{' '}
                   to apply changes                </div>                <div>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <strong>Configure Environment:</strong>
                   <br />
                   Copy credentials to <code className="bg-gray-100 px-1 rounded">.env.local</code> file
@@ -761,7 +875,11 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
             </ol>;
           </div>;
         </div>;
+<<<<<<< HEAD
         {/* Alternative Actions Card */}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="bg-blue-50 rounded-xl border border-blue-200 p-6">
           <h3 className="font-semibold text-blue-900 mb-3">Alternative Actions:</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -772,6 +890,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
               <span>Browse Marketplace</span>
               <ExternalLink className="w-4 h-4" />
             </Link>
+<<<<<<< HEAD
             <Link 
               href="/talent" 
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
@@ -784,11 +903,15 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
             
             <Link 
               href="/talent" 
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
             >
               <span>View Talent Pool</span>
               <ExternalLink className="w-4 h-4" />
             </Link>
+<<<<<<< HEAD
             <Link 
               href="/help" 
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
@@ -798,6 +921,10 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
               href="/help" 
             <Link
               href="/help"
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
             
@@ -808,12 +935,16 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
               <span>Contact Support</span>
               <ExternalLink className="w-4 h-4" />
             </Link>
+<<<<<<< HEAD
             <Link
               href="/status"
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
             >
               <span>System Status</span>
             
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'>;
               <span>Browse Marketplace</span>            >;
               <span>Browse Marketplace</span>;
@@ -822,11 +953,17 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
             
 
             
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Link 
               href="/status" 
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
             >
               <span>System Status</span>
+<<<<<<< HEAD
               <ExternalLink className='w-4 h-4' />
             </Link>
             <Link
@@ -863,6 +1000,10 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
               <span>System Status</span>
               <ExternalLink className="w-4 h-4" />
             </Link>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
           </div>
@@ -871,6 +1012,10 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
         {showSetupButton && (
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="mt-6 text-center">
             <div className="bg-green-50 rounded-lg border border-green-200 p-4">
               <div className="flex items-center justify-center gap-2 text-green-700 mb-2">
@@ -884,6 +1029,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
                 Run the setup script to configure Auth0 interactively:
               </p>
 
+<<<<<<< HEAD
               <ExternalLink className="w-4 h-4" />
             </Link>
           </div>
@@ -908,6 +1054,11 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
               <p className="text-sm text-green-600 mb-3">
                 Run the setup script to configure Auth0 interactively:
               </p>
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <code className="bg-green-100 text-green-800 px-3 py-1 rounded text-sm">
                 npm run setup:auth0
               </code>
@@ -1056,9 +1207,12 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 export default AuthConfigurationError }
 export default AuthConfigurationError
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               onClick = {() => window && window.open('/AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'),}
 
@@ -1083,6 +1237,10 @@ export default AuthConfigurationError;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 }
 export default AuthConfigurationError;}
@@ -1233,4 +1391,8 @@ export default AuthConfigurationError,
 export default AuthConfigurationError;
 }
 ;
+<<<<<<< HEAD
 export default AuthConfigurationError;
+=======
+export default AuthConfigurationError;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

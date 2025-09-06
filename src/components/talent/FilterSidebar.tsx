@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import { Filter } from 'lucide-react'
@@ -12,6 +13,8 @@ import { FilterSidebarProps } from '@/types/filters'
 
 import React from "react",
 import { Button } from "@/components/ui/button",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Filter } from 'lucide-react'
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -21,6 +24,7 @@ import { SkillsFilter } from "./filters/SkillsFilter",
 import { AvailabilityFilter } from "./filters/AvailabilityFilter",
 import { RegionFilter } from "./filters/RegionFilter",
 import { ExperienceFilter } from "./filters/ExperienceFilter",
+<<<<<<< HEAD
 import { PriceFilter } from "./filters/PriceFilter";
 import { FilterSidebarProps } from "@/types/filters";
 export function FilterSidebar({
@@ -47,6 +51,10 @@ export function FilterSidebar({
   sortOption,
   setSortOption,
   clearFilters,
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Filter } from 'lucide-react';
@@ -107,6 +115,7 @@ export function FilterSidebar(): any ({;
   return (
     <>
       {/* Filter header */}
+<<<<<<< HEAD
       <div className='flex items-center justify-between mb-6'>
         <h3 className='text-lg font-semibold text-white flex items-center'>
           <Filter className='h-4 w-4 mr-2 text-zion-purple' />  searchTerm
@@ -144,6 +153,13 @@ export function FilterSidebar(): any ({;
         </Button>
       </div>
           className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent"
+=======
+
+      <div className="flex items-center justify-between mb-6">
+        <h3 className="text-lg font-semibold text-white flex items-center">
+          <Filter className="h-4 w-4 mr-2 text-zion-purple" />
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           Filters
         </h3>
         <Button
@@ -201,10 +217,15 @@ export function FilterSidebar({
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-lg font-semibold text-white flex items-center">
           <Filter className="h-4 w-4 mr-2 text-zion-purple" />
+<<<<<<< HEAD
           Filters
         <Button 
           variant="ghost" 
           size="sm" 
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           Filters
         </h3>
         <Button 
@@ -215,6 +236,11 @@ export function FilterSidebar({
           Clear All
         </Button>
       </div>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -297,34 +323,70 @@ export function FilterSidebar({;
         toggleSkill={toggleSkill}
         expanded={expandedSections.skills}
         toggleSection={() => toggleSection('skills')}
+<<<<<<< HEAD
         isMobileFilterOpen={isMobileFilterOpen}      />
+=======
+
+        isMobileFilterOpen={isMobileFilterOpen}      />;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Availability */}
       <AvailabilityFilter
         selectedAvailability={selectedAvailability}
         toggleAvailability={toggleAvailability}
         expanded={expandedSections.availability}
         toggleSection={() => toggleSection('availability')}
+<<<<<<< HEAD
         isMobileFilterOpen={isMobileFilterOpen}      />
+=======
+
+        isMobileFilterOpen={isMobileFilterOpen}      />;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Region */}
       <RegionFilter
         selectedRegions={selectedRegions}
         toggleRegion={toggleRegion}
         expanded={expandedSections.region}
         toggleSection={() => toggleSection('region')}
+<<<<<<< HEAD
         isMobileFilterOpen={isMobileFilterOpen}      />
+=======
+
+        isMobileFilterOpen={isMobileFilterOpen}      />;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Years of Experience */}
       <ExperienceFilter
         experienceRange={experienceRange}
         setExperienceRange={setExperienceRange}
         expanded={expandedSections.experience}
         toggleSection={() => toggleSection('experience')}
+<<<<<<< HEAD
         isMobileFilterOpen={isMobileFilterOpen}      />
+=======
+
+        isMobileFilterOpen={isMobileFilterOpen}      />;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Price Range */}
       <PriceFilter
         priceRange={priceRange}
         setPriceRange={setPriceRange}
         expanded={expandedSections.price}
         toggleSection={() => toggleSection('price')}
+<<<<<<< HEAD
+=======
+
+        isMobileFilterOpen={isMobileFilterOpen}      />;
+
+      {isMobileFilterOpen && (;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <Button
           onClick={() =>;
             window && window.dispatchEvent(new CustomEvent('closeMobileFilter'));
@@ -480,6 +542,10 @@ ursor/fix-website-loading-errors-and-merge-6662
           onClick = {(,) => window.dispatchEvent(new CustomEvent('closeMobileFilter')),}
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4"
       {/* Search */}
@@ -636,4 +702,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 };
 }
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

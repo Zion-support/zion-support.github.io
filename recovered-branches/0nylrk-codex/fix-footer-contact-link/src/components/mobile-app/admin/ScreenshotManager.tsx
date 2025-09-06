@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState, useRef } from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -68,6 +69,8 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       addScreenshots(Array.from(e.target.files));
     }
   },
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState, useRef } from './react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -87,11 +90,17 @@ type Screenshot = {
     // Filter for image files only
     const imageFiles = files.filter(file => file.type.startsWith('image/')),
     
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (imageFiles.length === 0) {
       toast.error("Please select valid image files")
       return
     }
     // Limit the number of screenshots
+<<<<<<< HEAD
     const maxScreenshots = platform === "ios" ? 10 : 8;
     const availableSlots = maxScreenshots - screenshots.length;
     if (availableSlots <= 0) {
@@ -134,10 +143,15 @@ type Screenshot = {
       addScreenshots(Array.from(e.dataTransfer.files))
     }
   }
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const maxScreenshots = platform === "ios" ? 10 : 8,
     const availableSlots = maxScreenshots - screenshots.length,
     
     if (availableSlots <= 0) {
+<<<<<<< HEAD
       toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`);
       return
     }
@@ -254,12 +268,22 @@ type Screenshot = {
 
   
   
+=======
+
+  
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
         <CardTitle className="text-lg">App Screenshots</CardTitle>
       </CardHeader>
       <CardContent>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState, useRef } from "react";
 import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -438,20 +462,29 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
               ? "border-zion-cyan bg-zion-cyan/10" 
 
 
+<<<<<<< HEAD
         <div
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${
             isDragging
               ? "border-zion-cyan bg-zion-cyan/10"
             isDragging 
               ? "border-zion-cyan bg-zion-cyan/10" 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               : "border-zion-purple/30"
           }`}
           onDragOver={handleDragOver}
           onDragLeave={handleDragLeave}
+<<<<<<< HEAD
           onDrop={handleDrop}
         >
           <Upload className="mx-auto h-8 w-8 text-gray-400 mb-2" />
           <p className="text-sm mb-2">Drag & drop screenshots here</p>
+=======
+          onDrop={handleDrop}>;
+          <Upload className="mx-auto h-8 w-8 text-gray-400 mb-2" />;
+          <p className="text-sm mb-2">Drag & drop screenshots here</p>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <input
             ref={fileInputRef}
             type="file"
@@ -459,6 +492,7 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
             accept="image/*"
             onChange={handleFileSelect}
             className="hidden"
+<<<<<<< HEAD
         <div ;
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${;
             isDragging ;
@@ -478,6 +512,9 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
             accept="image/*";
             onChange={handleFileSelect}
             className="hidden";
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           />;
           <Button ;
             variant="outline" ;
@@ -520,6 +557,7 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
 
 
 
+<<<<<<< HEAD
         </div>;
       </CardContent>;
     </Card>;
@@ -527,6 +565,22 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
 
 
 };
+=======
+
+=======
+        </div>;
+      </CardContent>;
+    </Card>;
+  );
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string,
   url: string,
   file: File;
@@ -683,6 +737,7 @@ if ( {) {
     </Card>);
 }
 ;
+<<<<<<< HEAD
   ),;
 },; interface ScreenshotManagerProps {
   platform: AppPlatform 
@@ -753,3 +808,6 @@ return filtered;
     </Card>;
   );
 };
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

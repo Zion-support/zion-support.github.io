@@ -9,4 +9,8 @@ const LinkHealthChecker.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default LinkHealthChecker.js;
+=======
+export default LinkHealthChecker.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

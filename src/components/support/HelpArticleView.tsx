@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
@@ -22,6 +23,16 @@ interface HelpArticleViewProps {
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null)
+=======
+interface HelpArticleViewProps {
+  articleId: string
+}
+
+
+  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null)
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Find the article in all categories
   let article = null;
   for (const category of HELP_CATEGORIES) {
@@ -38,9 +49,12 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   const handleFeedback = (type: "helpful" | "not-helpful") => {
     setFeedbackGiven(type)
   return new Date(date).toLocaleDateString("en-US", {
+<<<<<<< HEAD
     year: "numeric"
     month: "long"
     day: "numeric", })
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {;
@@ -73,10 +87,13 @@ function HelpArticleView() {
   const [feedback_given, setFeedbackGiven] = useState<"helpful" | "not - helpful" | null>(null);
   // Find the article in all categories;
   let article;
+<<<<<<< HEAD
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),
   
   // Find the article in all categories
   let article,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   for (const category of HELP_CATEGORIES) {
     const found = category.articles.find(a => a.id === articleId),
     if (found) {
@@ -254,6 +271,11 @@ function formatDate(date: string): string {;
     day: "numeric";
   });
 }
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 ;
 ;
+=======
+
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

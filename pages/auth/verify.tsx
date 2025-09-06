@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -10,6 +11,10 @@ const Verify: NextPage = () => {
         <title>Verify - Zion Tech Solutions</title>
         <meta name="description" content="Verify page" />
       </Head>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <main>
         <h1>Verify</h1>
         <p>This page is under construction.</p>
@@ -17,8 +22,11 @@ const Verify: NextPage = () => {
     </div>
 
 
+<<<<<<< HEAD
   )
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <main>;
         <h1>Verify</h1>;
         <p>This page is under construction.</p>;
@@ -27,6 +35,12 @@ const Verify: NextPage = () => {
   ),;
 };
 export default Verify;
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Head from 'next / head';
       <main>;
         <h1 > Verify</h1>;
@@ -37,6 +51,7 @@ import Head from 'next / head';
 ;
 export default Verify;
 ;
+<<<<<<< HEAD
 
 
 
@@ -52,3 +67,11 @@ export default Verify;
 
 },
 export default Verify,
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react";
 import {
 
@@ -6,28 +7,41 @@ import {
 
 
 import React from "react",;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {;
   Table,;
   TableBody,;
   TableCell,;
   TableHead,;
   TableHeader,;
+<<<<<<< HEAD
+=======
+  TableRow,;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from "react";
 import {
 
+<<<<<<< HEAD
   Table
   TableBody
   TableCell
   TableHead
   TableHeader
   TableRow
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
 TableRow,;
+<<<<<<< HEAD
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from "lucide-react";
@@ -42,12 +56,17 @@ Table
   TableHead
   TableHeader
   TableRow
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+<<<<<<< HEAD
 export function TeamActivity() {
   // Mock activity data
 
@@ -101,6 +120,10 @@ export function TeamActivity() {
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3)
       category: "billing"
     }
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       id: 6,
       user: "Jamie Smith",
       action: "Updated budget",
@@ -108,6 +131,7 @@ export function TeamActivity() {
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3),
       category: "billing",
     },;
+<<<<<<< HEAD
   ];
   // Function to format the date in a readable way
   const formatDate = (date: Date) => {
@@ -116,6 +140,11 @@ export function TeamActivity() {
     const diffMins = Math.floor(diffMs / (1000 * 60));
     const diffHrs = Math.floor(diffMs / (1000 * 60 * 60));
     const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+=======
+
+  ];
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from "react",
 import {
@@ -129,6 +158,7 @@ import { Badge } from "@/components/ui/badge",
 import { CalendarIcon, Search } from "lucide-react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
+<<<<<<< HEAD
 id: 6
       user: "Jamie Smith"
       action: "Updated budget"
@@ -144,6 +174,8 @@ id: 6
     const diffMins = Math.floor(diffMs / (1000 * 60));
     const diffHrs = Math.floor(diffMs / (1000 * 60 * 60));
     const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function TeamActivity() {
   // Mock activity data
   const activities = [
@@ -198,12 +230,19 @@ export function TeamActivity() {
     const diffHrs = Math.floor(diffMs / (1000 * 60 * 60)),
     const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24)),
 
+<<<<<<< HEAD
   TableRow} from "@/components/ui/table",;
 import { Badge } from "@/components/ui/badge",;
 import { CalendarIcon, Search } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 ;
+=======
+
+
+    if (diffMins < 60) {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function TeamActivity() {;
   // Mock activity data;
   const activities = [;
@@ -314,6 +353,7 @@ export function TeamActivity() {;
         <h3 className="text-xl font-medium">Recent Team Activity</h3>;
         <div className="flex items-center gap-2">;
           <div className="relative">;
+<<<<<<< HEAD
     if (diffMins < 60) {
       return `${diffMins} minutes ago`
     } else if (diffHrs < 24) {
@@ -355,10 +395,14 @@ export function TeamActivity() {;
         <div className="flex items-center gap-2">
           <div className="relative">
             <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+=======
+            <Search className="absolute left-2 && 2.5 top-2 && 2.5 h-4 w-4 text-muted-foreground" />;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Input
               type="search"
               placeholder="Search activities..."
               className="w-[200px] md:w-[300px] pl-9"
+<<<<<<< HEAD
             />
           </div>
           <Button variant="outline" size="icon" className="h-10 w-10">
@@ -388,6 +432,10 @@ export function TeamActivity() {;
                 <TableCell>{getCategoryBadge(activity.category)}</TableCell>
                 <TableCell className="text-muted-foreground">
 
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from "react",;
 import {;
@@ -519,6 +567,10 @@ export function TeamActivity() {;
                 <TableCell>{getCategoryBadge(activity.category)}</TableCell>;
                 <TableCell className="text-muted-foreground">;
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   {formatDate(activity.timestamp)}
                 </TableCell>
               </TableRow>
@@ -526,9 +578,16 @@ export function TeamActivity() {;
           </TableBody>
         </Table>
       </div>
+<<<<<<< HEAD
       
 
       
+=======
+
+      
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="flex items-center justify-between">
         <Button variant="outline" size="sm">
           Previous
@@ -541,10 +600,15 @@ export function TeamActivity() {;
         </Button>
       </div>
     </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   )
 }
 ;
 
+<<<<<<< HEAD
                 <TableCell>{getCategoryBadge (activity.category)}</TableCell>;
                 <TableCell className="text - muted - foreground">;
                   {format_date (activity.timestamp)}
@@ -662,3 +726,7 @@ return (<div className="space-y-6" > <div className="flex items-center justify-b
   )
 }
 ;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

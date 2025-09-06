@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 "use client",;
 import { useState } from "react",;
@@ -38,6 +42,10 @@ export default function SignUpPage() {;
           <h1 className="text-3xl font-bold text-white mb-2">Join Zion OS</h1>;
           <p className="text-zinc-400 mb-4">;
             Start your free trial and launch sovereign AI-powered digital economies;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 "use client",
 import { useState  } from './react';,
 import Link from './next / link';,
@@ -157,6 +165,7 @@ export default function SignUpPage() {;
             </li>;
           </ul>;
         </div>;
+<<<<<<< HEAD
         <div className="bg-zinc-800/50 backdrop-blur-sm rounded-xl p-6 border border-zinc-700/50">;
           <form onSubmit={handleSubmit} className="space-y-6">;
             {error && (;
@@ -164,6 +173,15 @@ export default function SignUpPage() {;
                 <p className="text-red-400 text-sm">{error}</p>;
               </div>;
             )}
+=======
+
+        <div className="bg - zinc - 800 / 50 backdrop - blur - sm rounded - xl p - 6 border border - zinc - 700 / 50">;
+          <form on_submit={handle_submit} className="space - y-6">;
+            {error && (
+              <div className="bg - red - 500 / 10 border border - red - 500 / 20 rounded - lg p - 3">;
+                <p className="text - red - 400 text - sm">{error}</p>;
+              </div>)}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         <div className="bg - zinc - 800 / 50 backdrop - blur - sm rounded - xl p - 6 border border - zinc - 700 / 50">;
           <form on_submit={handle_submit} className="space - y-6">;
@@ -175,8 +193,12 @@ export default function SignUpPage() {;
 
 ;
 
+<<<<<<< HEAD
 ;
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div>;
               <label html_for="name" className="block text - sm font - medium text - zinc - 300 mb - 2">;
                 Full Name;

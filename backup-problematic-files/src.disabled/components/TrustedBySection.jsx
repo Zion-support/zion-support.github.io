@@ -27,4 +27,8 @@ const TrustedBySection = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default TrustedBySection;
+=======
+export default TrustedBySection;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,4 +9,8 @@ const LoadingSpinner = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default LoadingSpinner;
+=======
+export default LoadingSpinner;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

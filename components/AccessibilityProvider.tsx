@@ -2,6 +2,7 @@
 
 interface AccessibilityContextType {;
 
+<<<<<<< HEAD
 
 
 
@@ -10,6 +11,14 @@ interface AccessibilityContextType {;
 import React, { createContext, useContext, useState, ReactNode } from "react";
 
 interface AccessibilityContextType {
+=======
+=======
+
+
+
+interface AccessibilityContextType {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
@@ -23,7 +32,10 @@ interface AccessibilityContextType {
   toggleLargeText: () => void;
   toggleReducedMotion: () => void;
 }
+<<<<<<< HEAD
 export const useAccessibility = () => {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -41,6 +53,10 @@ interface AccessibilityProviderProps {
 }
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const AccessibilityContext = createContext<;
   AccessibilityContextType | undefined;
 >(undefined);
@@ -61,6 +77,7 @@ interface AccessibilityProviderProps {;
   children,
 }) => {;
 
+<<<<<<< HEAD
 interface AccessibilityProviderProps {
   children: React.ReactNode;
 }
@@ -69,12 +86,25 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
 }) => {
   children,
 }) => {;
+=======
+=======
+
+  children,
+}) => {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [highContrast, setHighContrast] = useState(false);
   const [largeText, setLargeText] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
   const toggleHighContrast = () => setHighContrast(!highContrast);
   const toggleLargeText = () => setLargeText(!largeText);
   const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const value = {;
     highContrast,;
     largeText,;
@@ -83,6 +113,11 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
     toggleLargeText,;
     toggleReducedMotion,;
   };
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <AccessibilityContext && AccessibilityContext.Provider value={value}>;
       <div
@@ -92,13 +127,71 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
     </AccessibilityContext && AccessibilityContext.Provider>;
   );
 
+<<<<<<< HEAD
 }
 export default AccessibilityProvider;
+=======
+const AccessibilityContext = create_context<;
+  AccessibilityContextType | undefined;
+>(undefined);
+;
+export const use_accessibility = () =>: any {
+  const context = useContext (AccessibilityContext);
+  // Check condition
+if ( {) {
+  $2
+}
+    throw new Error (
+      "use_accessibility must be used within an AccessibilityProvider",
+    );
+  }
+  return context;
+}
+;
+interface AccessibilityProviderProps {
+  children: React.ReactNode;
+}
+export const AccessibilityProvider: React.FC < AccessibilityProviderProps> = ({
+  children,
+}) => {
+  const [high_contrast, setHighContrast] = useState (false);
+  const [large_text, setLargeText] = useState (false);
+  const [reduced_motion, setReducedMotion] = useState (false);
+;
+  const toggleHighContrast = () =>: any setHighContrast (!high_contrast);
+  const toggleLargeText = () =>: any setLargeText (!large_text);
+  const toggleReducedMotion = () =>: any setReducedMotion (!reduced_motion);
+;
+  const value = {
+    high_contrast,
+    large_text,
+    reduced_motion,
+    toggleHighContrast,
+    toggleLargeText,
+    toggleReducedMotion,
+  }
+;
+  return (
+    <AccessibilityContext.Provider value={value}>;
+      <div;
+        className={`${high_contrast ? "high - contrast" : ""} ${large_text ? "large - text" : ""} ${reduced_motion ? "reduced - motion" : ""}`}
+      >;
+        {children}
+      </div>;
+    </AccessibilityContext.Provider>);
+}
+;
+export default AccessibilityProvider;
+;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 };
 
 export default AccessibilityProvider;
 
+<<<<<<< HEAD
 };
 
 export default AccessibilityProvider;
@@ -107,3 +200,6 @@ export default AccessibilityProvider;
 };
 
 export default AccessibilityProvider;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

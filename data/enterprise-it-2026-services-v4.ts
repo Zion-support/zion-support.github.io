@@ -1,9 +1,14 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { ServiceVariant } from '../types / service - variants';
 
 export interface EnterpriseIT2026ServiceV4 {
 
   {
 
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 export interface EnterpriseIT2026ServiceV4 {;
   id: string;
@@ -659,6 +664,8 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [;
     growth_rate: '65% annual growth',
     variant: 'quantum - futuristic',
     contact_info: {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -675,16 +682,30 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
     implementation_details: 'Quantum - safe cloud storage platform with quantum - resistant encryption and distributed storage.';
     launch_date: '2026 - 05 - 01';
+<<<<<<< HEAD
     customers: 40;
     rating: 4 && 4.9,
     reviews: 32
   }
 ];
+=======
+
+    customers: 40;
+
+    rating: 4 && 4.9,
+
+    reviews: 32
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -1368,6 +1389,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [;
 
 ;
 
+<<<<<<< HEAD
 ;
     }
     realImplementation: true
@@ -1796,3 +1818,5 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [;
     reviews: 32;
   }
 ];
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

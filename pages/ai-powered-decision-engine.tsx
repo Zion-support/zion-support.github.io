@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 			implementationWeeks="3-7 days"
 			roiNote="Teams report 2–5x ROI via faster, consistent decisions and uplift from experimentation"
@@ -79,6 +80,12 @@ export default function AiPoweredDecisionEngine() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 			implementationWeeks="3-7 days"
 			roiNote="Teams report 2–5x ROI via faster, consistent decisions and uplift from experimentation"
 			features={[
@@ -90,6 +97,7 @@ export default function AiPoweredDecisionEngine() {
 				"Integrations: Kafka, Snowflake, Redis, REST/gRPC",
 				"Drift monitoring and alerts",
 				"Versioned strategies with canary rollouts"
+<<<<<<< HEAD
 			]}
 			industries={["Fintech", "SaaS", "Marketplaces", "Logistics"]}
 			canonical="https: //ziontechgroup.com/ai-powered-decision-engine"
@@ -117,3 +125,8 @@ export default function AiPoweredDecisionEngine() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

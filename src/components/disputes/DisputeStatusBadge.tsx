@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Badge } from "@/components/ui/badge";
 
 import { Badge } from "@/components/ui/badge";
@@ -19,6 +20,8 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
       break
   }
 interface DisputeStatusBadgeProps {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 status: 'open' | 'under_review' | 'resolved' | 'closed';
 
 export function DisputeStatusBadge(): any ({ status }: DisputeStatusBadgeProps) {;
@@ -57,6 +60,7 @@ function DisputeStatusBadge() {
       break;
     default:;
       break;
+<<<<<<< HEAD
   }
     case 'resolved':
       variant = 'outline'
@@ -72,6 +76,8 @@ interface DisputeStatusBadgeProps {
 import { Badge } from "@/components/ui/badge",
 import { ShieldAlert } from 'lucide-react'
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 interface DisputeStatusBadgeProps {
   status: 'open' | 'under_review' | 'resolved' | 'closed'
@@ -94,6 +100,7 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
       variant = "outline",
       message = "This dispute has been closed",
       break,
+<<<<<<< HEAD
       break
   }
   
@@ -148,6 +155,16 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
   }
 ;
   return (;
+=======
+
+
+
+    default:
+      break
+  }
+  return (
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <Tooltip>;
       <TooltipTrigger asChild>;
         <Badge variant={variant} className='flex items-center gap-1'>;
@@ -161,6 +178,7 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
           <ShieldAlert className='h - 3 w - 3' />;
           <span > Under Dispute</span>;
 
+<<<<<<< HEAD
 import { Badge } from "@/components/ui/badge",;
 import { ShieldAlert } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",;
@@ -196,15 +214,20 @@ export function DisputeStatusBadge({ status } DisputeStatusBadgeProps) {;
         <Badge variant={variant} className="flex items-center gap-1">;
           <ShieldAlert className="h-3 w-3" />;
           <span>Under Dispute</span>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </Badge>;
       </TooltipTrigger>;
       <TooltipContent>;
         <p>{message}</p>;
       </TooltipContent>;
+<<<<<<< HEAD
     </Tooltip>;
   );
 }
 ;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -214,6 +237,7 @@ export function DisputeStatusBadge({ status } DisputeStatusBadgeProps) {;
 
       </TooltipContent>
     </Tooltip>
+<<<<<<< HEAD
     </Tooltip>;
   ),;}
  interface DisputeStatusBadgeProps {;
@@ -235,3 +259,6 @@ message ;
 }</p> </TooltipContent> </Tooltip>) ;
 }'"
   )
+=======
+  )
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

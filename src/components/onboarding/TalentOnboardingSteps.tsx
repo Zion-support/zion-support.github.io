@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { useAuth } from '@/hooks/useAuth'
 import { useOnboardingStatus } from '@/hooks/useOnboardingStatus'
@@ -19,6 +20,8 @@ export function TalentOnboardingSteps() {
   return <OnboardingTracker steps={steps} />
 }
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 return <OnboardingTracker steps={steps} />
 
 import React from 'react';
@@ -35,6 +38,7 @@ function TalentOnboardingSteps() {
   const steps: OnboardingStep[] = [;
 
 
+<<<<<<< HEAD
   const steps: OnboardingStep[] = [
     {
       id: 'profile',
@@ -87,6 +91,8 @@ export function TalentOnboardingSteps() {
   const { user } = useAuth(),
   const onboardingStatus = useOnboardingStatus(),
   
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const steps: OnboardingStep[] = [
     {
       id: "profile",
@@ -107,6 +113,7 @@ export function TalentOnboardingSteps() {
       link: "/profile/availability",
       action: "Set"},
     {
+<<<<<<< HEAD
       id: "match",
       label: "Receive your first job match",
       completed: onboardingStatus.matchReceived,
@@ -157,3 +164,9 @@ export function TalentOnboardingSteps() {;
 }
 ;
       completed: onboardingStatus.matchReceived,
+=======
+
+      id: "match",
+      label: "Receive your first job match",
+      completed: onboardingStatus.matchReceived,
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

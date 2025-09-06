@@ -16,6 +16,7 @@ export default function ProductsAdminPage({ }: ProductsAdminPageProps) {
 
 
 
+<<<<<<< HEAD
 
 
 :src.pages.disabled/ProductsAdminPage.jsx
@@ -33,3 +34,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 }
 :temp_exclude/src.pages.disabled/ProductsAdminPage.jsx
+=======
+}
+
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

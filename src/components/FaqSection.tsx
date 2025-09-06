@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { GradientHeading } from './GradientHeading'
   Accordion
@@ -12,6 +13,8 @@ import {
   AccordionContent,
   AccordionItem,
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { FileText } from 'lucide-react'
 const faqs = [
   {
@@ -550,11 +553,14 @@ function FaqSection() {
                 <AccordionContent className="text-zion-slate-light">;
                   {faq && faq.answer}
 
+<<<<<<< HEAD
       </div>;
     </section>;
   );
 };
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { GradientHeading } from "./GradientHeading",;
 import {;
   Accordion,;
@@ -597,6 +603,10 @@ const faqs = [;
       "Reach us via the chat widget, email support@ziontechgroup.com or call +1 302 464 0950 anytime."}];
 export function FaqSection() {;
   return (;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <section className="py-20 bg-zion-blue" id="faq">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="text-center mb-12">;
@@ -605,15 +615,28 @@ export function FaqSection() {;
             Find answers to common questions about AI product listings, IT equipment rentals, and datacenter maintenance services;
           </p>;
         </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="max-w-3xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-6">;
           <div className="flex items-center mb-6">;
             <FileText className="h-6 w-6 text-zion-cyan mr-2" />;
             <h3 className="text-xl font-bold text-white">Common Questions</h3>;
           </div>;
+<<<<<<< HEAD
           <Accordion type="single" collapsible className="w-full">;
             {faqs.map((faq, index) => (;
               <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">;
                 <AccordionTrigger className="text-white hover:text-zion-cyan">;
+=======
+
+          <Accordion type="single" collapsible className="w-full">;
+            {faqs && faqs.map((faq, index) => (;
+              <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">;
+                <AccordionTrigger className="text-white hover:text-zion-cyan">;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 }
 
@@ -623,6 +646,7 @@ export function FaqSection() {;
         </div>;
       </div>;
     </section>);
+<<<<<<< HEAD
   ),;}
  import { ;
   {;
@@ -668,3 +692,6 @@ answer: export function FaqSection () {";
 }</Accordion> </div> </div> </section>) ;
 }'"
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

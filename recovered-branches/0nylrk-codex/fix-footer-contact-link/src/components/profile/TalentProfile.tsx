@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 interface TalentProfileProps {
 
@@ -7,7 +11,10 @@ interface TalentProfileProps {
 
   onMessageTalent?: () => void
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react";
 import {Handshake, MessageSquare, Star} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -22,11 +29,23 @@ import {ProfileRatings} from "./ProfileRatings";
 import {TalentProfile, as, TalentProfileType} from "@/types/talent";
 import {useAuth} from "@/hooks/useAuth";
 import {Availability} from "@/types/profile";
+<<<<<<< HEAD
+=======
+interface TalentProfileProps {;
+  profile: TalentProfileType,;
+  onRequestHire: () => void,;
+  onMessageTalent?: () => void;
+}
+
+export function TalentProfile(): any ({ ;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   profile;
   onRequestHire;
   onMessageTalent;
 }: TalentProfileProps) {;
   const { isAuthenticated } = useAuth();
+<<<<<<< HEAD
 import React from "react",
 import { Handshake, MessageSquare, Star } from "lucide-react",
 import { Button } from "@/components/ui/button",
@@ -67,6 +86,14 @@ export function TalentProfile({
 }: TalentProfileProps) {
   const { isAuthenticated } = useAuth(),
   
+=======
+
+}
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Create proper availability object from talent profile
 
   const availability: Availability = {
@@ -74,39 +101,85 @@ export function TalentProfile({
             profile.availability_type === 'part_time' ? 'limited' : 'unavailable'
     message: `${profile.professional_title} with ${profile.years_experience} years of experience`
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
   
 
 
+<<<<<<< HEAD
   }
   },
   
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Create proper skills array for ProfileSkills component
   const skillsArray = profile.skills?.map(skill => ({
     name: skill
     level: 3 // Default level since we don't have this data
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   })) || [],
   
 
 
+<<<<<<< HEAD
   })) |[];
   })) || [],
   
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Create proper projects array for ProfileProjects component
   const projectsArray = profile.key_projects?.map((proj, i) => ({
     id: `project-${i}`
     title: proj.title
     description: proj.description
     date: new Date().toISOString() // Default date since we don't have this data
+<<<<<<< HEAD
   })) |[];
 
   return (
     <div className="container mx-auto px-4 py-8">
+=======
+
+
+  // Create proper availability object from talent profile;
+  const availability: Availability = {;
+    status: profile && profile.availability_type === 'full_time' ? 'available' : ;
+            profile && profile.availability_type === 'part_time' ? 'limited' : 'unavailable',;
+    message: `${profile && profile.professional_title} with ${profile && profile.years_experience} years of experience`;
+  };
+
+  // Create proper skills array for ProfileSkills component;
+  const skillsArray = profile && profile.skills?.map(skill => ({;
+    name: skill,;
+    level: 3 // Default level since we don't have this data;
+  })) || [];
+
+  // Create proper projects array for ProfileProjects component;
+  const projectsArray = profile && profile.key_projects?.map((proj, i) => ({;
+    id: `project-${i}`,;
+    title: proj && proj.title,;
+    description: proj && proj.description,;
+    date: new Date().toISOString() // Default date since we don't have this data;
+  })) || [];
+
+
+  return (
+    <div className="container mx-auto px-4 py-8">;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   })) || [],
   
   return (
     <div className="container mx-auto px-4 py-8">
+<<<<<<< HEAD
 import React from "react",;
 import { Handshake, MessageSquare, Star } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -181,18 +254,35 @@ export function TalentProfile({;
   return (
     <div className="container mx-auto px-4 py-8">
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Profile Header */}
       <ProfileHero
         name={profile && profile.full_name}
         title={profile && profile.professional_title}
         avatarUrl={profile && profile.profile_picture_url}
         profileType="talent"
+<<<<<<< HEAD
         rating={profile && profile.average_rating}
         reviewCount={profile && profile.rating_count}
       />;
       {/* Main content area */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">;
         {/* Left Column - Skills & Info */}
+=======
+
+        rating={profile && profile.average_rating}
+        reviewCount={profile && profile.rating_count}
+      />;
+
+
+      {/* Main content area */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">;
+        {/* Left Column - Skills & Info */}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="space-y-8">;
           <ProfileSkills skills={skillsArray} />;
           <ProfileAvailability availability={availability} />;
@@ -202,6 +292,7 @@ export function TalentProfile({;
             profileType="talent"
           />;
         </div>;
+<<<<<<< HEAD
       {/* Profile Header */}
       <ProfileHero
         name={profile.full_name}
@@ -232,13 +323,24 @@ export function TalentProfile({;
               <p className="text-zion-slate whitespace-pre-wrap">{profile.bio}</p>
             </div>
           </div>
+=======
+
+
+        {/* Right Column - Bio & Projects */}
+        <div className="lg:col-span-2 space-y-8">;
+          {/* Bio Section */}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
           
 
 
+<<<<<<< HEAD
           
           
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Projects Section */}
           <ProfileProjects projects={projectsArray} />
           {/* Ratings Section */}
@@ -248,19 +350,30 @@ export function TalentProfile({;
               Reviews & Ratings
             </h2>
 
+<<<<<<< HEAD
             <ProfileRatings 
 
 
             <ProfileRatings
             <ProfileRatings 
+=======
+
+            <ProfileRatings 
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               userId={profile.id}
               averageRating={profile.average_rating}
               ratingCount={profile.rating_count}
             />
           </div>
+<<<<<<< HEAD
         {/* Right Column - Bio & Projects */}
         <div className="lg:col-span-2 space-y-8">;
           {/* Bio Section */}
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from './react';
 import { Handshake, MessageSquare, Star } from './lucide-react';
 import { Button } from '@/components / ui / button';
@@ -574,6 +687,7 @@ export function TalentProfile({ ;
       </div>;
     </div>);
 }
+<<<<<<< HEAD
   ),;}
  interface TalentProfileProps {
   profile: TalentProfileType;
@@ -667,3 +781,6 @@ return (</div> </div> {
     </div>
   )
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

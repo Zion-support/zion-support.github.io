@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -23,6 +27,7 @@ import Layout from "../components/Layout";
 export default function AIServices() {
   return (
 <Layout
+<<<<<<< HEAD
 
 import React from 'react';
 import Layout from '../components/Layout';
@@ -54,6 +59,10 @@ origin/automation-improvements-final
             <p className="text-gray-600">
               AI Services page is under construction.
             </p>
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <h1 className="text-4xl font-bold text-gray-900 mb-4">AI Services</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Transform your business with cutting-edge AI solutions and services.
@@ -62,10 +71,20 @@ origin/automation-improvements-final
           <div className="text-center">
             <p className="text-gray-600">AI Services page is under construction.</p>
 
+<<<<<<< HEAD
 
 
 
 origin/automation-improvements-final
+=======
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Link from 'next/link',
 import Head from 'next/head';
 import { useState, useEffect  } from 'react';
@@ -88,10 +107,13 @@ export default function AIServices() {
         </div>
       </div>
 
+<<<<<<< HEAD
           </div>
         </div>
       </div>
 </Layout>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more.">;
       <div className="min-h-screen bg-gray-50 py-20">;
         <div className="container mx-auto px-4">;
@@ -130,15 +152,28 @@ function AIServices() {
           </div>;
           <div className="text - center">;
             <p className="text - gray - 600">;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               AI Services page is under construction.;
             </p>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </Layout>;
   );
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
@@ -323,11 +358,19 @@ category: 'specialized',
             </div>
           </section>
           {/* Category Filter */}
+<<<<<<< HEAD
 }
 
 }
 
 }
+=======
+
+=======
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import Head from 'next/head';
 import ErrorBoundary from '../components/ErrorBoundary';
@@ -373,12 +416,18 @@ export default function AIServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <section className="py-8 px-4">
             <div className="max-w-6xl mx-auto">
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 {categories.map((category) => (
                   <button
 
+<<<<<<< HEAD
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
                     className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
@@ -395,6 +444,9 @@ export default function AIServices() {
           </section>
 
           {/* Services Grid */}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     key={category.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -430,6 +482,7 @@ export default function AIServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
                     className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
@@ -445,6 +498,10 @@ key={category.id}
             </div>
           </section>
           {/* Services Grid */}
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <section className="py-16 px-4" role="main">
             <div className="max-w-7xl mx-auto">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -471,11 +528,15 @@ key={category.id}
                         Popular
                       </div>
 
+<<<<<<< HEAD
                     )}
                     
                     <h3 className="text-xl font-bold mb-3">{service.name}</h3>
                     <p className="text-slate-300 mb-4 text-sm">{service.description}</p>
                     
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -487,6 +548,10 @@ key={category.id}
                     <h3 className="text-xl font-bold mb-3">{service.name}</h3>
                     <p className="text-slate-300 mb-4 text-sm">{service.description}</p>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-purple-400 mb-2">Key Features:</h4>
                       <ul className="text-slate-400 text-sm space-y-1">
@@ -494,11 +559,14 @@ key={category.id}
                           <li key={featureIndex} className="flex items-center">
                             <span className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-2 flex-shrink-0"></span>
 
+<<<<<<< HEAD
                             {feature}
                           </li>
                         ))}
                       </ul>
                     </div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                             {feature  } catch (error) {
     console.error("Error:", error);
@@ -511,9 +579,12 @@ key={category.id}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 {feature}
                           </li>
                         ))}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       </ul>
                     </div>
                     <div className="mb-4">
@@ -522,6 +593,7 @@ key={category.id}
                         {service.useCases.map((useCase, useCaseIndex) => (
                           <span key={useCaseIndex} className="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">
 
+<<<<<<< HEAD
                             {useCase}
                           </span>
                         ))}
@@ -533,6 +605,9 @@ key={category.id}
                       <span className="text-xs text-slate-500 capitalize">{service.category.replace('- ')}</span>
                     </div>
                     
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                             {useCase  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -544,26 +619,38 @@ key={category.id}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 {useCase}
                           </span>
                         ))}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       </div>
                     </div>
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-2xl font-bold text-green-400">{service.price}</span>
                       <span className="text-xs text-slate-500 capitalize">{service.category.replace('-', ' ')}</span>
                     </div>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <button className="w-full py-2 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
                       Learn More
                     </button>
                   </div>
 
+<<<<<<< HEAD
                 ))}
               </div>
             </div>
           </section>
 
           {/* AI Capabilities Section */}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -582,7 +669,10 @@ key={category.id}
             </div>
           </section>
 
+<<<<<<< HEAD
 {/* AI Capabilities Section */}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           <section className="py-16 px-4 bg-slate-900/40">
             <div className="max-w-6xl mx-auto">
@@ -592,7 +682,11 @@ key={category.id}
 
 
 
+<<<<<<< HEAD
               
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -606,7 +700,11 @@ key={category.id}
 
 
 
+<<<<<<< HEAD
                 
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div className="text-center">
                   <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -620,7 +718,11 @@ key={category.id}
 
 
 
+<<<<<<< HEAD
                 
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div className="text-center">
                   <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -633,7 +735,11 @@ key={category.id}
 
 
 
+<<<<<<< HEAD
                 
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div className="text-center">
                   <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -654,6 +760,11 @@ key={category.id}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <section className="py-16 px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-8">
@@ -661,6 +772,7 @@ key={category.id}
               </h2>
               <p className="text-lg text-slate-300 mb-8">
 
+<<<<<<< HEAD
                 Contact our AI experts to discuss how our advanced artificial intelligence services 
                 can transform your business operations and drive innovation.
               </p>
@@ -668,23 +780,32 @@ key={category.id}
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link 
                   href="/contact" 
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 Contact our AI experts to discuss how our advanced artificial intelligence services
                 can transform your business operations and drive innovation.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link
                   href="/contact"
+<<<<<<< HEAD
 Contact our AI experts to discuss how our advanced artificial intelligence services 
                 can transform your business operations and drive innovation.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link 
                   href="/contact"
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors"
                 >
                   Get AI Consultation
                 </Link>
 
+<<<<<<< HEAD
                 <a 
                   href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} 
                   className="px-8 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold transition-colors"
@@ -694,6 +815,9 @@ Contact our AI experts to discuss how our advanced artificial intelligence servi
                 <a 
                   href={`mailto:${contact.email}`} 
                   className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <a
                   href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`  } catch (error) {
     console.error("Error:", error);
@@ -701,9 +825,12 @@ Contact our AI experts to discuss how our advanced artificial intelligence servi
   }
 }
                   className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
+<<<<<<< HEAD
 <a 
                   href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} 
 className="px-8 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold transition-colors"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 >
                   Call {contact.phone  } catch (error) {
     console.error("Error:", error);
@@ -728,6 +855,7 @@ className="px-8 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold tra
       </ErrorBoundary>
     </>
 
+<<<<<<< HEAD
 }
 
 
@@ -785,6 +913,19 @@ origin/automation-improvements-final
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+}
+
+=======
+
+>>>>>>> origin/automation-improvements-final
+}
+}
+    </Layout>);
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <section className="py-16 px-4 bg-slate-900/40">;
             <div className="max-w-6xl mx-auto">;
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">;
@@ -923,3 +1064,8 @@ export default function AIServicesPage(req, res) {
 ;
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

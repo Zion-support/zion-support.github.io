@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 import { useEffect, useState } from "react";
 import { useRouter  } from 'next/router';
 import { useRouterReady, useRouteChange  } from '@/hooks/useRouterReady';
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
 import { generateSearchSuggestions } from "@/data/marketplaceData",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -38,8 +41,13 @@ import {
   Tabs;
   TabsContent;
   TabsList;
+<<<<<<< HEAD
   TabsTrigger} from "@/components/ui/tabs",
 import { Loader2 } from 'lucide-react'
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const pageKey = `search-${routeKey}-${router.asPath}`
 import { useRouter } from 'next/router'
 import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady'
@@ -69,6 +77,34 @@ import {
 
 
 import { Loader2 } from 'lucide-react'
+<<<<<<< HEAD
+=======
+  const pageKey = `search-${routeKey}-${router.asPath}`
+import { useRouter } from 'next/router'
+import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady'
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput"
+import { generateSearchSuggestions } from "@/data/marketplaceData"
+import { SearchSuggestion } from "@/types/search"
+import {logErrorToProduction} from '@/utils/productionLogger'
+import {
+  Tabs
+  TabsContent
+  TabsList
+  TabsTrigger} from "@/components/ui/tabs"
+import { useEffect, useState } from "react",
+import { useRouter } from 'next/router',
+import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady',
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
+import { generateSearchSuggestions } from "@/data/marketplaceData",
+import { SearchSuggestion } from "@/types/search",
+import {logErrorToProduction} from '@/utils/productionLogger',
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger} from "@/components/ui/tabs",
+import { Loader2 } from 'lucide-react'
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 interface SearchResult {
 
@@ -85,6 +121,7 @@ interface SearchResult {
   description: string
 }
 function highlight(text: string, term: string) {
+<<<<<<< HEAD
 
   if (!term) return text
   if (!term) return text,
@@ -418,6 +455,8 @@ export default function SearchPage() {;
             }}
             searchSuggestions = {suggestions,}
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },;
   const handleSubmit = (e: React.FormEvent) => {;
     e.preventDefault(),;
@@ -426,6 +465,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     }
   },
 
+<<<<<<< HEAD
   // Add key prop to force re-render when route changes
   const pageKey = `search-${routeKey}-${router.asPath}`,
 
@@ -438,6 +478,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div key={pageKey}>
       <main className="container mx-auto px-4 py-8">
@@ -455,6 +500,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               setQuery(searchTerm);
               router.push(`/search?q=${encodeURIComponent(searchTerm)}`);
             }}
+<<<<<<< HEAD
             searchSuggestions = {suggestions,}
             onSelectSuggestion={(suggestion) => {;
               const searchTerm = suggestion.text.trim();
@@ -462,6 +508,11 @@ ursor/fix-website-loading-errors-and-merge-6662
               router.push(`/search?q=${encodeURIComponent(searchTerm)}`);
             }}
             searchSuggestions={suggestions}
+=======
+            searchSuggestions={suggestions}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             placeholder="Search talent, jobs, and projects..."
         </form>
         {loading && (
@@ -498,6 +549,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         {!loading && marketplaceResults.length === 0 && blogResults.length === 0 && query && (
           <p className="text-zion-slate-light">No results found for "{query}".</p>
         )}
+<<<<<<< HEAD
         {!loading && marketplaceResults.length > 0 && (
           <Tabs defaultValue="products" className="space-y-4">
             <TabsList className="mb-4">
@@ -516,6 +568,9 @@ ursor/fix-website-loading-errors-and-merge-6662
             </TabsList>
             <TabsContent value="products" className="space-y-4">
               {results
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {!loading && marketplaceResults && marketplaceResults.length > 0 && (;
           <Tabs defaultValue="products" className="space-y-4">;
             <TabsList className="mb-4">;
@@ -541,6 +596,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 .filter((r) => r.type === "product" || r.type === "service")
                 .map((r) => (
 
+<<<<<<< HEAD
                   <div
                     key={`${r.type}-${r.id}`}
                     className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
@@ -568,6 +624,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 .map((r,) => (
                 .filter((r) => r.type === "product" || r.type === "service")
                 .map((r) => (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <div
                     key={`${r.type}-${r.id}`}
                     className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
@@ -634,6 +692,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </TabsContent>
           </Tabs>
         )}
+<<<<<<< HEAD
 return
       </main>
     </div>
@@ -650,6 +709,13 @@ if (query.trim () ) {
   setResults ([])
 return
 return;
+=======
+
+
+return;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }setLoading (true)
 try {
   const res = await fetch (`/api/search?query=$ {
@@ -814,11 +880,17 @@ logErrorToProduction ('Search API response structure is not as expected:', {
 })
 setResults ([])
 }finally {
+<<<<<<< HEAD
   setLoading (false)
+=======
+  set_loading (false);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 const handleSubmit = (e: React.FormEvent) => {
   e.preventDefault ()
 router.push (`/search?q=$ {
+<<<<<<< HEAD
   encodeURIComponent (query.trim () )
 }`)
 }
@@ -846,6 +918,37 @@ router.push (`/search?q=$ {
 }</TabsContent> </Tabs>)
 }</main> </div>)
 }'"  )
+=======
+
+  encodeURIComponent (query.trim () );
+}`);
+}
+//Add key prop to force re - render when route changes </div>);
+}{
+  !loading && marketplace_results.length === 0 && blog_results.length > 0 && (<div> <p className="text - zion - slate - light mb - 2" >No marketplace results found. Related blog posts:</p> <div className="space - y-4" > {
+  blog_results.map (r => (</div>) );
+}</div> </div>);
+}</p> </div>) );
+}</TabsContent> <div key= {
+  `talent-$ {
+  r.id;
+}` ";
+}className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4" > </p> </div>) );
+}</TabsContent> <div key= {
+  `doc-$ {
+  r.id;
+}` ";
+}className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4" > </p> </div>) );
+}</TabsContent> <div key= {
+  `blog-$ {
+  r.id;
+}` ";
+}className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4" > </p> </div>) );
+}</TabsContent> </Tabs>);
+}</main> </div>);
+}'"  );
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {/* Sort Options */}
               <div  className="mb-6">
                 <label className="block text-sm font - medium text-gray - 700 mb-2">Sort By</label>
@@ -883,6 +986,7 @@ router.push (`/search?q=$ {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="max - w-6xl mx -auto">
           {/* Results Count */}
+<<<<<<< HEAD
           <div  className="mb-6">
             <p className="text-slate -300">
               {searchQuery ? `Found ${filteredResults.length} results for "${searchQuery}"` : `Showing ${filteredResults.length} items`}
@@ -922,6 +1026,43 @@ router.push (`/search?q=$ {
       </main>;
     </div>;
   );
+=======
+
+
+;
+
+
+      </main>;
+    </div>;
+  );
+
+          <div  className="mb - 6">;
+            <p className="text - slate -300">;
+              {search_query ? `Found ${filtered_results.length} results for "${search_query}"` : `Showing ${filtered_results.length} items`}
+            </p>;
+            <div className="grid md:grid - cols - 2 gap - 8 mb - 12">;
+              <div className="bg - white p - 6 rounded - lg shadow - md">;
+                <h2 className="text - 2xl font - semibold mb - 4">Our Services</h2>;
+                <ul className="text - gray - 600 space - y-2">;
+                  <li>• Professional Solutions</li>;
+                  <li>• Expert Implementation</li>;
+                  <li>• 24 / 7 Support</li>;
+                  <li>• Custom Development</li>;
+                </ul>;
+              </div>;
+              <div className="bg - white p - 6 rounded - lg shadow - md">;
+                <h2 className="text - 2xl font - semibold mb - 4">Why Choose Us</h2>;
+                <ul className="text - gray - 600 space - y-2">;
+
+                  <li>• Industry Expertise</li>;
+                  <li>• Proven Results</li>;
+                  <li>• Scalable Solutions</li>;
+                  <li>• Competitive Pricing</li>;
+                </ul>;
+              </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
               <Link href="/pricing/" className="bg - blue - 600 text - white px - 6 py - 3 rounded - lg hover:bg - blue - 700 transition - colors">;
@@ -934,6 +1075,10 @@ router.push (`/search?q=$ {
     </>);
 }
 }
+<<<<<<< HEAD
 ;
 }
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

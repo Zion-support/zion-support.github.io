@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 export interface TenantInfo {
 export interface TenantInfo {;
   id: string;
@@ -34,6 +35,8 @@ export interface TenantInfo {;
   landing_page_copy: {;
     headline: string,;
     subtitle: string,;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     subtitle: string,
     cta: string;
   }
@@ -48,6 +51,7 @@ export interface TenantResponse {
 
 export interface TenantInfo {;
 
+<<<<<<< HEAD
     cta: string;
   },;
   is_active: boolean;
@@ -65,3 +69,6 @@ export interface TenantResponse {
   error?: string
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

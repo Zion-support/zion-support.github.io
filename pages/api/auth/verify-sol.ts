@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const cookieHeader = req.headers.cookie || '';
     const match = cookieHeader.match(/siwe-nonce=([^]+)/);
     if (!match) return res.status(400).json({ error: 'Missing nonce' });
@@ -97,8 +98,15 @@ import jwt from 'jsonwebtoken';
 
   }
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

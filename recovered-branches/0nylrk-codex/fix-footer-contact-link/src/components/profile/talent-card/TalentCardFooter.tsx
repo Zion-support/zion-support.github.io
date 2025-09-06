@@ -2,6 +2,10 @@
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from "react";
 import {Star} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -11,8 +15,23 @@ import {HireRequestModal} from "@/components/profile/hire-request";
 import {useAuthStatus} from "@/hooks/talent";
 import {UserProfile} from "@/types/auth";
 import {useNavigate} from "react-router-dom";
+<<<<<<< HEAD
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
   const { userDetails } = useAuthStatus();
+=======
+interface TalentCardFooterProps {;
+  profile: TalentProfile,;
+  onViewProfile: (id: string) => void,;
+  onRequestHire?: (profile: TalentProfile) => void;
+}
+
+export function TalentCardFooter(): any ({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {;
+
+  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
+  const { userDetails } = useAuthStatus();
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from './react';
 import { Star } from './lucide-react';
 import { Button } from '@/components / ui / button';
@@ -59,6 +78,10 @@ if ( {) {
       setIsHireModalOpen (true);
     }
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Create a compatible UserProfile from UserDetails;
   const userProfile: UserProfile = {;
     id: userDetails?.id,;
@@ -72,6 +95,10 @@ if ( {) {
   // Handle request to hire;
   const handleRequestHire = (e: React && React.MouseEvent) => {;
     e && e.stopPropagation(),;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (onRequestHire) {;
       onRequestHire(profile);
     } else {;
@@ -79,6 +106,7 @@ if ( {) {
       setIsHireModalOpen(true);
     }
   };
+<<<<<<< HEAD
   // Handle view profile;
   const handleViewProfile = (e: React && React.MouseEvent) => {;
     e && e.stopPropagation(),;
@@ -241,23 +269,72 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
           <Button 
             variant="default" 
             size="sm" 
+=======
+
+  // Handle view profile;
+  const handleViewProfile = (e: React && React.MouseEvent) => {;
+    e && e.stopPropagation(),;
+
+    // Navigate to the talent profile page;
+    navigate(`/talent/${profile && profile.id || ''}`);
+
+    // Also call the onViewProfile callback if provided;
+    if (onViewProfile) {;
+      onViewProfile(profile && profile.id || '');
+
+    }
+  }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+  return (
+    <>;
+      <div className="mt-4 pt-4 border-t border-zion-blue-light flex items-center justify-between">;
+        {/* Experience or Hourly Rate */}
+        <div>;
+          {profile && profile.hourly_rate ? (;
+            <div>;
+              <span className="text-zion-slate-light text-xs">Hourly Rate</span>;
+              <div className="text-white font-bold">${profile && profile.hourly_rate}/hr</div>;
+            </div>;
+          ) : (;
+            <div className="flex items-center gap-1">;
+              <Star className="h-4 w-4 text-zion-purple" />;
+              <span className="text-zion-slate-light">{profile && profile.years_experience} years exp.</span>;
+            </div>;
+          )}
+
+
+          <Button 
+            variant="default" 
+            size="sm" 
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             onClick={handleRequestHire}
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             Hire
           </Button>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Button 
             variant="outline" 
             size="sm" 
 
 
+<<<<<<< HEAD
           <Button
             variant="outline"
             size="sm"
           <Button 
             variant="outline" 
             size="sm" 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             onClick={handleViewProfile}
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
           >
@@ -266,6 +343,10 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
           </Button>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </div>;
         {/* Action Buttons */}
         <div className="flex gap-2">;
@@ -318,14 +399,20 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
 
       
 
+<<<<<<< HEAD
       
       
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Hire Request Modal */}
       <HireRequestModal
         talent={profile}
         isOpen={isHireModalOpen}
         onClose={() => setIsHireModalOpen(false)}
         userDetails={userProfile}
+<<<<<<< HEAD
       ;
       {/* Hire Request Modal */}
       <HireRequestModal;
@@ -446,8 +533,20 @@ profile.id || ''
     </>
   )
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       />;
     </>;
   );
 }
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+;
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

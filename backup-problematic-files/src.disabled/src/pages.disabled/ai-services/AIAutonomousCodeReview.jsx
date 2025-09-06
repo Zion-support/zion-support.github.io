@@ -9,4 +9,8 @@ const AIAutonomousCodeReview = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIAutonomousCodeReview;
+=======
+export default AIAutonomousCodeReview;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

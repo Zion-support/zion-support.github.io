@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -18,6 +19,8 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react";
 import clsx from "clsx";
 export type EnhancedButtonProps =;
@@ -25,7 +28,13 @@ export type EnhancedButtonProps =;
     variant?: "primary" | "secondary" | "ghost";
     size?: "sm" | "md" | "lg";
     fullWidth?: boolean;
+<<<<<<< HEAD
   };
+=======
+
+  };
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const baseStyles =;
   "inline-flex items-center justify-center font-semibold rounded-md transition focus:outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]";
 const sizeStyles: Record<NonNullable<EnhancedButtonProps["size"]>, string> = {;
@@ -50,6 +59,7 @@ export default function EnhancedButton(): any ({;
   fullWidth,;
   ...props;
 }: EnhancedButtonProps) {;
+<<<<<<< HEAD
 import React from 'react';
 import clsx from 'clsx';
 export type EnhancedButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -109,6 +119,13 @@ export default function EnhancedButton({
   return (
     <button
 className={clsx(
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  return (
+    <button
+      className={clsx(
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         baseStyles
         sizeStyles[size]
         variantStyles[variant]
@@ -116,9 +133,16 @@ className={clsx(
         className
       )}
       {...props}
+<<<<<<< HEAD
 />;
   );
 }
+=======
+
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from './react';
 import clsx from './clsx';
 export type EnhancedButtonProps =;
@@ -161,6 +185,7 @@ function EnhancedButton() {
       {...props}
     />);
 }
+<<<<<<< HEAD
 
     />
   );
@@ -181,3 +206,15 @@ const EnhancedButton: React.FC<EnhancedButtonProps> = ({ className }) => {
 };
 
 export default EnhancedButton;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+}
+=======
+    />;
+);
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

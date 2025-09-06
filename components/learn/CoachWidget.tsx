@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 export default function CoachWidget() {;
   const [input, setInput] = useState('');
@@ -11,11 +12,42 @@ export default function CoachWidget() {;
       const resp = await fetch('/api/learn/coach', {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
+=======
+
+
+export default function CoachWidget() {;
+
+  const [input, setInput] = useState('');
+  const [reply, setReply] = useState<string | null>(null),
+  const [loading, setLoading] = useState(false);
+
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         body: JSON.stringify({ prompt: input })
       });
       const data = await resp.json();
       setReply(data.text |'');
     } finally {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  async function ask() {;
+    if (!input && input.trim()) return;
+    setLoading(true);
+    try {;
+      const resp = await fetch('/api/learn/coach', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON && JSON.stringify({ prompt: input }),;
+      });
+      const data = await resp && resp.json();
+      setReply(data && data.text || '');
+    } finally {;
+      setLoading(false);    }
+  }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -25,16 +57,25 @@ export default function CoachWidget() {;
 
   return (      });
 
+<<<<<<< HEAD
   return (      });
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const data = await resp && resp.json();
       setReply(data && data.text || '');
     } finally {;
       setLoading(false);
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   }
   return (
 
 
+<<<<<<< HEAD
     </div>;
   );
 }
@@ -46,6 +87,8 @@ export default function CoachWidget() {;
       </div>
       {reply && <div className="mt-2 text-sm text-gray-800 dark:text-gray-200">{reply}</div>}
     </div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 }
 import React, { useState } from 'react';
@@ -139,6 +182,7 @@ function ask() {
 
 
 
+<<<<<<< HEAD
 
   return (
     <div className='border rounded p-3'>
@@ -168,3 +212,17 @@ function ask() {
 
   return (
   return (
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    }
+  }
+
+
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

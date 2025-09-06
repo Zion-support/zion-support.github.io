@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import { Loader2 } from 'lucide-react'
@@ -9,6 +10,8 @@ export function LoadingState() {
     </div>
   )
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function LoadingState() {;
   return (
     <div className='flex justify-center items-center p-8'>;
@@ -46,4 +49,8 @@ export function LoadingState() {
     </div>
   ),
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

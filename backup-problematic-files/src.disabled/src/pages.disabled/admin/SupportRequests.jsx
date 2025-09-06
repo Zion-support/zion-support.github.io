@@ -9,4 +9,8 @@ const SupportRequests = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default SupportRequests;
+=======
+export default SupportRequests;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

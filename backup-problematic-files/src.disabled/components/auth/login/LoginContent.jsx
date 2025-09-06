@@ -27,4 +27,8 @@ const LoginContent = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default LoginContent;
+=======
+export default LoginContent;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

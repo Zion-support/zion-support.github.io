@@ -9,4 +9,8 @@ const FloatingCTA.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default FloatingCTA.js;
+=======
+export default FloatingCTA.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

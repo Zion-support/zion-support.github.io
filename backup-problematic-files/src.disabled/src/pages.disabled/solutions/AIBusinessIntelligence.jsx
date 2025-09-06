@@ -9,4 +9,8 @@ const AIBusinessIntelligence = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIBusinessIntelligence;
+=======
+export default AIBusinessIntelligence;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

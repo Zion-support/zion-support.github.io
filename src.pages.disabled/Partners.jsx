@@ -16,6 +16,7 @@ export default function Partners({ }: PartnersProps) {
 
 
 
+<<<<<<< HEAD
 
 
 :src.pages.disabled/Partners.jsx
@@ -33,3 +34,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 }
 :temp_exclude/src.pages.disabled/Partners.jsx
+=======
+}
+
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

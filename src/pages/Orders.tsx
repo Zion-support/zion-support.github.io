@@ -1,14 +1,21 @@
+<<<<<<< HEAD
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
 import Link from 'next/link'; // Changed from react-router-dom
 import { useAuth } from '@/hooks/useAuth';
 import { useGetOrdersQuery } from '@/hooks/useOrders';
 import {
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
 import Link from 'next/link'; // Changed from react-router-dom
 import { useAuth } from '@/hooks/useAuth';
 import { useGetOrdersQuery } from '@/hooks/useOrders';
 import {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Table
   TableBody
   TableCell
@@ -148,8 +155,16 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </TableCell>;
               </TableRow>;
 
+<<<<<<< HEAD
   }
   },
+=======
+            ))}
+          </TableBody>
+        </Table>
+      ) : orders.length === 0 ? (
+        <EmptyState
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
           icon={<FileText className="h-10 w-10" />}
@@ -170,6 +185,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </TableRow>
           </TableHeader>
           <TableBody>
+<<<<<<< HEAD
             {Array.from({ length: 3 }).map((_, i) => (
               <TableRow key={i}>
                 <TableCell><Skeleton className="h-4 w-20" /></TableCell>
@@ -208,6 +224,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 ursor/fix-website-loading-errors-and-merge-6662
             {orders.map(order => (              <TableRow key={order.orderId}>
                 <TableCell className='font-medium'>{order.orderId}</TableCell>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {orders.map((order) => (
               <TableRow key={order.orderId}>
                 <TableCell className="font-medium">{order.orderId}</TableCell>
@@ -217,8 +237,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <TableCell>{getStatusBadge(order.status)}</TableCell>
                 <TableCell>
                   <Link
+<<<<<<< HEAD
                     href={`/orders/${order.orderId}`} // Changed to href
                     className="text-zion-purple underline"
+=======
+                    href={`/orders/${order.orderId}`}
+                    className='text-zion-purple underline'
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   >
                     View
                   </Link>
@@ -261,15 +286,22 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 ;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </TableBody>;
         </Table>;
       )}
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
 ;
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 ;
@@ -378,4 +410,8 @@ function OrdersPage() {
         </Table>)}
     </div>);
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

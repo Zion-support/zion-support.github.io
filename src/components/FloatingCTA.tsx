@@ -1,12 +1,25 @@
 import { Button } from "@/components/ui/button",
 
 
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
+=======
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { useState, useEffect } from "react";
+
+
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
+import { useState, useEffect } from 'react'
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { X } from 'lucide-react'
 
   const [isVisible, setIsVisible] = useState(false)
@@ -21,6 +34,7 @@ import { X } from 'lucide-react';
   // TODO: Add dependencies if needed;
   return () => {
     // Cleanup function;
+<<<<<<< HEAD
   return () => {
     // Cleanup function;
 };
@@ -56,6 +70,12 @@ export function FloatingCTA() {
     const handleScroll = () => {
       const scrollPosition = window.scrollY
       const threshold = 600; // Show CTA after scrolling 600px
+=======
+}
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function FloatingCTA() {
 
 import { Button } from "@/components/ui/button",
@@ -63,10 +83,17 @@ import Link from "next/link",
 import { useState, useEffect } from "react",
 import { X } from 'lucide-react'
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false),
   const [isClosed, setIsClosed] = useState(false),
 
+<<<<<<< HEAD
 xport function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false),
   const [isClosed, setIsClosed] = useState(false),
@@ -78,11 +105,15 @@ xport function FloatingCTA() {
     const handleScroll = () => {;
       const scrollPosition = window.scrollY;
       const threshold = 600; // Show CTA after scrolling 600px
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY,
       const threshold = 600, // Show CTA after scrolling 600px
 
+<<<<<<< HEAD
       if (scrollPosition > threshold && !isClosed) {
         setIsVisible(true)
       } else {
@@ -112,6 +143,9 @@ xport function FloatingCTA() {
   }
   if (!isVisible) return null
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       if (scrollPosition > threshold && !isClosed) {
         setIsVisible(true)
 }, []); []);
@@ -252,6 +286,7 @@ export function FloatingCTA() {;
           >
             <Link href="/signup">Register Now</Link>
           </Button>
+<<<<<<< HEAD
           <button
             onClick={handleClose}
             className="text-zion-slate hover: text-white p-1"
@@ -266,6 +301,11 @@ ursor/fix-website-loading-errors-and-merge-6662
             aria-label='Close'          >
             <X className='w-5 h-5' />          </button>
             <X className="w-5 h-5" />
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <button 
             onClick={handleClose}
             className="text-zion-slate hover: text-white p-1"
@@ -280,6 +320,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
 }, [isClosed])
 return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in" > <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between" > <div className="mr-4" > <p className="text-white font-medium" >Ready to explore Zion?</p> <p className="text-zion-slate-light text-sm" >Register today to access all features!</p> </div> <div className="flex items-center gap-2" > <Button variant="default" size="sm" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap" asChild > <Link href="/signup" >Register Now</Link> </Button> <button aria-label="Close" w-5 h-5" /> </button> </div> </div> </div>)
@@ -305,6 +346,9 @@ return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50
 '"
 }
 ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             aria-label='Close'           aria-label="Button">;
             <X className='w-5 h-5' />          </button>;
             <X className="w-5 h-5" />;
@@ -359,6 +403,7 @@ export function FloatingCTA() {;
             className="text-zion-slate hover: text-white p-1";
             aria-label="Close";
           >;
+<<<<<<< HEAD
 }
 }, [isClosed])
 return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in" > <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between" > <div className="mr-4" > <p className="text-white font-medium" >Ready to explore Zion?</p> <p className="text-zion-slate-light text-sm" >Register today to access all features!</p> </div> <div className="flex items-center gap-2" > <Button variant="default" size="sm" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap" asChild > <Link href="/signup" >Register Now</Link> </Button> <button aria-label="Close" w-5 h-5" /> </button> </div> </div> </div>)
@@ -370,12 +415,19 @@ return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50
             aria-label='Close'           aria-label="Button">;
             <X className='w-5 h-5' />          </button>;
             <X className="w-5 h-5" />;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <X className="w-5 h-5" />;
           </button>;
         </div>;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }, [is_closed]);
   const handle_close = () =>: any {
     setIsClosed (true);
@@ -520,4 +572,8 @@ return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50
 }
 ;
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

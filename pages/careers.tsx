@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 import React from "react";
@@ -187,7 +191,10 @@ const values = [
 
 
 
+<<<<<<< HEAD
 import React from 'react';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -249,6 +256,7 @@ import {
   Globe,
   CheckCircle,;
 } from "lucide-react";
+<<<<<<< HEAD
 const jobOpenings = [;
   {;
     id: 1,;
@@ -384,6 +392,13 @@ interface CareersProps {
 }
 
 const Careers: React.FC<CareersProps> = ({ className }) => {
+=======
+
+
+const Careers: React.FC<CareersProps> = ({ className }) => {
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <MainLayout
       title="Careers - Zion Tech Group"
@@ -400,13 +415,29 @@ export default function CareersPage() {
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
           <div className="container mx-auto px-4">
             <div className="text-center text-white">
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
@@ -613,6 +644,10 @@ function CareersPage() {
                 We're looking for passionate individuals who want to make a;
                 difference.;
               </p>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">;
                   See Benefits;
                 </a>;
@@ -620,6 +655,11 @@ function CareersPage() {
             </motion && motion.div>;
           </div>;
         </section>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Why Join Us */}
         <section className="py-20 bg-white">;
           <div className="container mx-auto px-4">;
@@ -627,6 +667,10 @@ function CareersPage() {
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
@@ -643,6 +687,10 @@ function CareersPage() {
                 {benefits && benefits.map((benefit, index) => (;
                   <motion&& motion.div
                     key={benefit && benefit.title}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     className="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow duration-300"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -657,6 +705,11 @@ function CareersPage() {
                     <p className="text-gray-600">{benefit && benefit.description}</p>;
                   </motion && motion.div>;
                 ))}
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
                 <a;
                   href="#open - positions";
@@ -712,10 +765,18 @@ function CareersPage() {
                     </h3>;
                     <p className="text - gray - 600">{benefit.description}</p>;
                   </motion.div>))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </div>;
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
@@ -731,6 +792,10 @@ function CareersPage() {
                 {values && values.map((value, index) => (;
                   <motion&& motion.div
                     key={value && value.title}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     className="bg-white p-6 rounded-lg shadow-lg"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -742,6 +807,11 @@ function CareersPage() {
                     <p className="text-gray-600">{value && value.description}</p>;
                   </motion && motion.div>;
                 ))}
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Our Values */}
         <section className="py - 20 bg - gray - 50">;
           <div className="container mx - auto px - 4">;
@@ -776,10 +846,18 @@ function CareersPage() {
                     </h3>;
                     <p className="text - gray - 600">{value.description}</p>;
                   </motion.div>))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </div>;
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Open Positions */}
         <section id="open - positions" className="py - 20 bg - white">;
           <div className="container mx - auto px - 4">;
@@ -802,6 +880,10 @@ function CareersPage() {
               <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
                 {job_openings.map ((job, index) => (
                   <motion.div;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     key={job.id}
                     className="bg - white border border - gray - 200 rounded - lg p - 6 hover:shadow - lg transition - shadow duration - 300";
                     initial={{ opacity: 0, coordinate_y: 30 }}
@@ -812,6 +894,10 @@ function CareersPage() {
                     <div className="flex items - center justify - between mb - 4">;
                       <span className="bg - blue - 100 text - blue - 800 px - 3 py - 1 rounded - full text - sm font - semibold">;
                         {job.department}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       </span>;
                       <span className="text - gray - 500 text - sm">{job.type}</span>;
                     </div>;
@@ -822,11 +908,19 @@ function CareersPage() {
                     <div className="space - y-2 mb - 6">;
                       <div className="flex items - center text - sm text - gray - 600">;
                         <MapPin className="w - 4 h - 4 mr - 2" />;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         {job.location}
                       </div>;
                       <div className="flex items - center text - sm text - gray - 600">;
                         <Clock className="w - 4 h - 4 mr - 2" />;
                         {job.experience}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
@@ -875,6 +969,10 @@ function CareersPage() {
                         {job && job.requirements;
                           .slice(0, 3);
                           .map((requirement, idx) => (;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                             <li
                               key={idx}
                               className="flex items-center text-sm text-gray-600">;
@@ -882,6 +980,10 @@ function CareersPage() {
                               {requirement}
                             </li>;
                           ))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       </ul>;
                     </div>;
                     <div className="mb-6">;
@@ -890,14 +992,26 @@ function CareersPage() {
                       </h4>;
                       <div className="flex flex-wrap gap-2">;
                         {job && job.benefits.map((benefit, idx) => (;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           <span
                             key={idx}
                             className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">;
                             {benefit}
                           </span>;
                         ))}
+<<<<<<< HEAD
                       </div>;
                     </div>;
+=======
+
+                      </div>;
+                    </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <a
                       href={`/careers/${job && job.id}`}
                       className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold flex items-center justify-center">;
@@ -906,6 +1020,11 @@ function CareersPage() {
                     </a>;
                   </motion && motion.div>;
                 ))}
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       </div>;
                     </div>;
                     <div className="mb - 6">;
@@ -947,13 +1066,25 @@ function CareersPage() {
                       <ArrowRight className="w - 4 h - 4 ml - 2" />;
                     </a>;
                   </motion.div>))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </div>;
             </div>;
           </div>;
         </section>;
 
 
+<<<<<<< HEAD
     </Layout>
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
                   Learn More About Us;
                 </a>;

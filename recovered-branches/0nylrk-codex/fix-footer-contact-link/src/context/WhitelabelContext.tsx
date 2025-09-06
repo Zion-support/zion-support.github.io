@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { useWhitelabelTenant, WhitelabelTenant } from '@/hooks/useWhitelabelTenant';
 export interface WhitelabelContextType {
@@ -15,10 +16,18 @@ export interface WhitelabelContextType {
 
     cta: string
   }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     headline: string,
     subtitle: string,
     cta: string;
   };
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   tenant: WhitelabelTenant | null
 }
 
@@ -96,9 +105,12 @@ interface WhitelabelProviderProps {
 export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
 
 
+<<<<<<< HEAD
 export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
 
 export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext);
   const { tenant, isLoading } = useWhitelabelTenant();
   useEffect(() => {
@@ -113,6 +125,7 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
         tenant: tenant})
     } else if (!isLoading) {
       setContextValue(defaultContext)
+<<<<<<< HEAD
     }
   }, [tenant, isLoading]);
   return (
@@ -158,10 +171,14 @@ export const useWhitelabel = (): WhitelabelContextType => {;
   if (!context) {;
     throw new Error('useWhitelabel must be used within a WhitelabelProvider');
   }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Cast is used here because the context default is `null` until provided by;
   // `WhitelabelProvider`. The runtime check above guarantees it's defined.;
   return context as WhitelabelContextType;
 };
+<<<<<<< HEAD
 interface WhitelabelProviderProps {;
   children: ReactNode;
 }
@@ -179,10 +196,22 @@ interface WhitelabelProviderProps {;
 export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
   const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext),;
   const { tenant, isLoading } = useWhitelabelTenant(),;
+=======
+
+interface WhitelabelProviderProps {;
+  children: ReactNode;
+}
+
+export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
+  const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext);
+  const { tenant, isLoading } = useWhitelabelTenant();
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   useEffect(() => {;
     if (!isLoading && tenant) {;
       setContextValue({;
         isWhitelabel: true,;
+<<<<<<< HEAD
         primaryColor: tenant.primary_color,;
         logoUrl: tenant.logo_url,;
         brandName: tenant.brand_name,;
@@ -193,6 +222,23 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
       setContextValue(defaultContext);
     }
   }, [tenant, isLoading]);
+=======
+        primaryColor: tenant && tenant.primary_color,;
+        logoUrl: tenant && tenant.logo_url,;
+        brandName: tenant && tenant.brand_name,;
+        themePreset: tenant && tenant.theme_preset,;
+        landingPageCopy: tenant && tenant.landing_page_copy,;
+        tenant: tenant});
+    } else if (!isLoading) {;
+      setContextValue(defaultContext);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    }
+  }, [tenant, isLoading]);
+  return (
+    <WhitelabelContext && WhitelabelContext.Provider value={contextValue}>;
+      {children}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </WhitelabelContext && WhitelabelContext.Provider>;
   );
 };
@@ -350,3 +396,10 @@ export const WhitelabelProvider = ({ children } WhitelabelProviderProps) => {;
     </WhitelabelContext.Provider>;
   );
 };
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

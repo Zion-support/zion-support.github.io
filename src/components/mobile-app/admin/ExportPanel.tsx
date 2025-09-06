@@ -5,6 +5,7 @@ import { Download } from 'lucide-react'
 import { AppPlatform, AppMetadataValues } from "./MetadataManager",
 import { toast } from "sonner";
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+<<<<<<< HEAD
 interface ExportPanelProps {
 
   platform: AppPlatform
@@ -18,6 +19,26 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
       if (format === 'json') {
         content = JSON.stringify(metadata, null, 2)
         fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
+=======
+
+import { log_info, logErrorToProduction } from '@/utils / production_logger';
+interface ExportPanelProps {
+  platform: AppPlatform,
+  metadata: AppMetadataValues;
+}
+export const ExportPanel: React.FC < ExportPanelProps> = ({ platform, metadata }, ) => {
+  const handle_export = (format: 'json' | 'csv', ) =>: any {
+    try {
+      let content: string,
+      let file_name: string,
+      // Check condition
+if ( {) {
+  $2
+}
+        content = JSON.stringify (metadata, null, 2);
+        file_name = `zion - app - metadata-${platform}-${metadata.version}.json`;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       } else {
         // Convert object to CSV format
         const headers = ['appTitleshortDescriptionlongDescriptionversionplatform']
@@ -33,6 +54,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
         content += '\n\nKeywords:\n' + metadata.keywords.join();
 };        fileName = `zion-app-metadata-${platform}-${metadata.version}.csv`
       }
+<<<<<<< HEAD
       // Create download link
       const blob = new Blob([content], { type: format === 'json' ? 'application/json' : 'text/csv' })
       const url = URL.createObjectURL(blob)
@@ -146,6 +168,8 @@ if ( {) {
         content += '\n\n_keywords:\n' + metadata.keywords.join ();
 }        file_name = `zion - app - metadata-${platform}-${metadata.version}.csv`;
       }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 interface ExportPanelProps {;
   platform: AppPlatform,;
@@ -283,4 +307,8 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
 
     </Card>);
 },
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

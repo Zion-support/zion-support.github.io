@@ -18,10 +18,16 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useEffect } from 'react';
+<<<<<<< HEAD
 export default function GitHubRedirect() {;
   useEffect(() => {;
     if (typeof window !== 'undefined') {;
       window && window.location.replace('https: //github && github.com/Zion-Holdings'),;
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Head from 'next / head';
 export default /**
  * GitHubRedirect - Function description
@@ -42,11 +48,20 @@ if ( {) {
   return (
     <>;
       <Head>;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 }
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function GitHubRedirect() {
 	useEffect(() => {
 		if (typeof window !== 'undefined') {
@@ -70,6 +85,10 @@ Continue to GitHub
 		</>
 	)
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <title > GitHub | Zion Tech Group</title>;
         <link rel='canonical' href='https: //github.com / Zion - Holdings' />;
         <meta;
@@ -89,6 +108,7 @@ Continue to GitHub
     </>);
 ;
 
+<<<<<<< HEAD
 
 					Continue to GitHub
 				</Link>
@@ -178,3 +198,11 @@ export default function GitHubRedirect(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

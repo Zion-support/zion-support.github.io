@@ -26,6 +26,7 @@ const config: Config = {
     container: {
 
 
+<<<<<<< HEAD
 import {Config} from "tailwindcss";
 import {fontFamily} from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
@@ -51,10 +52,13 @@ const config: Config = {
       padding: "2rem"
       screens: {
         "2xl": "1400px"}}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       center: true,
       padding: "2rem",
       screens: {
         "2xl": "1400px"}},
+<<<<<<< HEAD
         sans: ["var(--font-sans)", ...fontFamily && fontFamily.sans]};
 
     extend: {
@@ -108,6 +112,21 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)"}
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans]}
+=======
+
+
+    extend: {
+      colors: {
+        border: "hsl (var (--border))";
+        input: "hsl (var (--input))";
+        ring: "hsl (var (--ring))";
+        background: "hsl (var (--background))";
+        foreground: "hsl (var (--foreground))";
+        primary: {
+
+        sans: ["var(--font-sans)", ...fontFamily && fontFamily.sans]};
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       keyframes: {
         "accordion-down": {
           from: { height: "0" }
@@ -117,8 +136,16 @@ const config: Config = {
           to: { height: "0" }}}
       animation: {
 
+<<<<<<< HEAD
         "accordion-down": "accordion-down 0.2s ease-out"
         "accordion-up": "accordion-up 0.2s ease-out"}}}
+=======
+        "accordion-down": "accordion-down 0 && 0.2s ease-out",
+        "accordion-up": "accordion-up 0 && 0.2s ease-out"}}};
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))"},
         secondary: {
@@ -172,11 +199,17 @@ const config: Config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out"}}},
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   plugins: [
     animatePlugin
     plugin(function({ addUtilities }) {
       const newUtilities = {
         '.rtl': {
+<<<<<<< HEAD
           direction: 'rtl'
           textAlign: 'right'}
         '.ltr': {
@@ -190,10 +223,80 @@ export default config;
           textAlign: 'right'},
         '.ltr': {
           direction: 'ltr',
+=======
+
+          DEFAULT: "hsl (var (--primary))",
+          foreground: "hsl (var (--primary - foreground))"}
+        secondary: {
+          DEFAULT: "hsl (var (--secondary))",
+          foreground: "hsl (var (--secondary - foreground))"}
+        destructive: {
+          DEFAULT: "hsl (var (--destructive))",
+          foreground: "hsl (var (--destructive - foreground))"}
+        muted: {
+          DEFAULT: "hsl (var (--muted))",
+          foreground: "hsl (var (--muted - foreground))"}
+        accent: {
+          DEFAULT: "hsl (var (--accent))",
+          foreground: "hsl (var (--accent - foreground))"}
+        popover: {
+          DEFAULT: "hsl (var (--popover))",
+          foreground: "hsl (var (--popover - foreground))"}
+        card: {
+          DEFAULT: "hsl (var (--card))",
+          foreground: "hsl (var (--card - foreground))"}
+        // Custom Zion colors;
+        "zion - blue": {
+          DEFAULT: "#0a0f1f";
+          light: "#1e263b",
+          dark: "#090c1a"}
+        "zion - purple": {
+          DEFAULT: "#a855f7";
+          light: "#d8b4fe",
+          dark: "#9333ea"}
+        "zion - cyan": {
+          DEFAULT: "#00e5ff";
+          light: "#7df9ff",
+          dark: "#00c4cc"}
+        "zion - slate": {
+          DEFAULT: "#94A3B8";
+          light: "#CBD5E1",
+          dark: "#64748B"}}
+      border_radius: {
+        lg: "var (--radius)";
+        md: "calc (var (--radius) - 2px)",
+        sm: "calc (var (--radius) - 4px)"}
+      font_family: {
+        sans: ["var (--font - sans)", ...font_family.sans]}
+      keyframes: {
+        "accordion - down": {
+          from: { height: "0" }
+          to: { height: "var (--radix - accordion - content - height)" }}
+        "accordion - up": {
+          from: { height: "var (--radix - accordion - content - height)" }
+          to: { height: "0" }}}
+      animation: {
+        "accordion - down": "accordion - down 0.2s ease - out",
+        "accordion - up": "accordion - up 0.2s ease - out"}}}
+  plugins: [;
+    animate_plugin,
+    plugin (function ({ add_utilities }) {
+      const new_utilities = {
+        '.rtl': {
+=======
+
+
+          direction: 'rtl',
+          text_align: 'right'}
+        '.ltr': {
+          direction: 'ltr',
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           textAlign: 'left'}},
       addUtilities(newUtilities)
     })]},
 
+<<<<<<< HEAD
 export default config,
 import { Config } from "tailwindcss",;
 import { fontFamily } from "tailwindcss/defaultTheme",;
@@ -355,9 +458,15 @@ const config: Config = {;
       addUtilities(newUtilities)
     })]},
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 export default config;
 ;
+<<<<<<< HEAD
 export default config;
 export default config;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   const formattedRating = null;
 import { Star } from 'lucide-react'
 import { Progress } from "@/components/ui/progress",
@@ -81,6 +82,8 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
       </div>
                     i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
           <h3 className="text-xl font-bold">{formattedRating}</h3>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <h3 className="text-xl font-bold">{formattedRating}</h3>
           <div className="flex items-center">
             <div className="flex mr-2">
@@ -125,6 +128,7 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
               ))}
             </div>
 
+<<<<<<< HEAD
             <span className="text-sm text-muted-foreground">
 
 
@@ -132,11 +136,18 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
               {totalReviews} {totalReviews === 1 ? 'review' : 'reviews'}            <span className="text-sm text-muted-foreground">
             <span className="text-sm text-muted-foreground">
               {totalReviews} {totalReviews === 1 ? "review" : "reviews"}
+=======
+
+            <span className="text-sm text-muted-foreground">
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {totalReviews} {totalReviews === 1 ? "review" : "reviews"}
             </span>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
       {ratingDistribution && (
         <div className='space-y-2'>
           {[5, 4, 3, 2, 1].map(rating => (
@@ -147,6 +158,14 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
                 value={getPercentage(ratingDistribution[rating] |0)}
                 className='h-2'        <div className="space-y-2">
           {[5, 4, 3, 2, 1].map((rating,) => (
+=======
+
+      
+      {ratingDistribution && (
+        <div className="space-y-2">
+          {[5, 4, 3, 2, 1].map((rating) => (
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div key={rating} className="flex items-center gap-2">
               <div className="w-6 text-sm text-right">{rating}</div>
               <Star className="h-3 w-3 text-yellow-400" />
@@ -154,6 +173,15 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
                 value = {getPercentage(ratingDistribution[rating] |0),}
                 className="h-2"
               />
+<<<<<<< HEAD
+=======
+
+              <div className="w-8 text-xs text-muted-foreground">
+                {ratingDistribution[rating] || 0}
+
+              </div>
+            </div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Star } from 'lucide-react';
 import { Progress } from '@/components / ui / progress';
 import { Progress  } from '@/components / ui / progress';
@@ -218,6 +246,7 @@ if (return 0) {
       {ratingDistribution && (
         <div className="space-y-2">
           {[5, 4, 3, 2, 1].map((rating) => (
+<<<<<<< HEAD
                 value = {getPercentage(ratingDistribution[rating] || 0),}
                 className="h-2" 
               />
@@ -237,6 +266,8 @@ if (return 0) {
 }</div>)
 }</div>)
 }"}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
             <div key={rating} className="flex items-center gap-2">
@@ -305,4 +336,8 @@ if (return 0) {
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

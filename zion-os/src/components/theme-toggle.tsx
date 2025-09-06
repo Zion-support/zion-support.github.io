@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 "use client",;
 import { useTheme } from "@/components/theme-provider",;
 import { Moon, Sun, Monitor } from "lucide-react",;
@@ -16,6 +20,10 @@ export function ThemeToggle() {;
 
               ? "bg-zion-blue text-white";
               : "text-zinc-400 hover:text-zinc-100";
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 "use client",
 import { use_theme  } from '@/components / theme - provider';,
 import { Moon, Sun, Monitor  } from './lucide-react';,
@@ -67,12 +75,16 @@ export function ThemeToggle() {;
             theme === "system";
               ? "bg - zion - blue text - white";
               : "text - zinc - 400 hover:text - zinc - 100";
+<<<<<<< HEAD
           onClick={() => setTheme("system")}
           className={`rounded px-2 py-1 text-sm transition-colors ${theme === "system";
           className={`rounded px-2 py-1 text-sm transition-colors ${;
             theme === "system";
               ? "bg-zion-blue text-white";
               : "text-zinc-400 hover:text-zinc-100";
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           }`}
           aria - label="Switch to system theme";
           aria - pressed={theme === "system"}
@@ -86,12 +98,16 @@ export function ThemeToggle() {;
             theme === "dark";
               ? "bg - zion - blue text - white";
               : "text - zinc - 400 hover:text - zinc - 100";
+<<<<<<< HEAD
           onClick={() => setTheme("dark")}
           className={`rounded px-2 py-1 text-sm transition-colors ${theme === "dark";
           className={`rounded px-2 py-1 text-sm transition-colors ${;
             theme === "dark";
               ? "bg-zion-blue text-white";
               : "text-zinc-400 hover:text-zinc-100";
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           }`}
           aria - label="Switch to dark theme";
           aria - pressed={theme === "dark"}

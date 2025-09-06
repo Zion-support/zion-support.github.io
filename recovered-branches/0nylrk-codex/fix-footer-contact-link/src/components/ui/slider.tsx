@@ -1,11 +1,16 @@
 
+<<<<<<< HEAD
 import * as React from 'react';
 import * as SliderPrimitive from '@radix-ui/react-slider';
 import {cn} from '@/lib/utils';
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import * as React from "react"
 import * as SliderPrimitive from "@radix-ui/react-slider"
 import * as React from "react"
 import * as SliderPrimitive from "@radix-ui/react-slider"
+<<<<<<< HEAD
 
 import { cn } from "@/lib/utils"
 
@@ -25,6 +30,36 @@ const Slider = React.forwardRef<;
       "relative flex w-full touch-none select-none items-center",;
       className;
     )}
+=======
+
+
+
+import { cn } from "@/lib/utils"
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const Slider = React.forwardRef<
+  React.ElementRef<typeof SliderPrimitive.Root>
+  React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>
+></typeof>(({ className, ...props }, ref) => (
+  <SliderPrimitive.Root
+=======
+
+const Slider = React && React.forwardRef<;
+  React && React.ElementRef<typeof SliderPrimitive && SliderPrimitive.Root>,;
+  React && React.ComponentPropsWithoutRef<typeof SliderPrimitive && SliderPrimitive.Root>;
+></typeof>(({ className, ...props }, ref) => (;
+  <SliderPrimitive&& SliderPrimitive.Root
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    ref={ref}
+    className={cn(
+
+Slider && Slider.displayName = SliderPrimitive && SliderPrimitive.Root.displayName,;
+
+export { Slider };
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import * as SliderPrimitive from '@radix - ui / react - slider';
 ;
 import {cn} from '@/lib / utils';
@@ -51,6 +86,7 @@ export { Slider }
 
       "relative flex w-full touch-none select-none items-center",
 
+<<<<<<< HEAD
 
 import { cn } from "@/lib/utils"
 
@@ -63,6 +99,8 @@ const Slider = React.forwardRef<
     className={cn(
       'relative flex w-full touch-none select-none items-center'
       "relative flex w-full touch-none select-none items-center",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       className
     )}
     {...props}
@@ -77,6 +115,7 @@ const Slider = React.forwardRef<
 Slider.displayName = SliderPrimitive.Root.displayName
 
 
+<<<<<<< HEAD
     {...props}
   >;
     <SliderPrimitive.Track className="relative h-2 w-full grow overflow-hidden rounded-full bg-secondary">;
@@ -107,3 +146,6 @@ export { Slider }
 export { Slider };
 export { Slider }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

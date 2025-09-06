@@ -1,6 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -19,6 +22,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (!requireSuperadminApi(req, res)) return;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { amount } = req.body |{}
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -27,6 +31,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });  const { amount } = req.body |{};export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(405).json({ error: 'Method not allowed' });  const { amount } = req.body || {};export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return res.status(405).json({ error: 'Method not allowed' });  const { amount } = req.body || {};export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (!requireSuperadminApi(req, res)) return;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
@@ -46,9 +53,26 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   commits && commits.push(record);
   writeJsonFile('deal/soft-commits && commits.json', commits);
   res && res.status(200).json(record);  res && res.status(200).json(record)
+<<<<<<< HEAD
 }
 
 
+=======
+
+}
+
+=======
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  res.status(200).json(record)
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {
 
   Select
@@ -21,6 +22,12 @@ import {
 
 SelectValue} from "@/components/ui/select",
 import { SortFilterProps } from "@/types/filters",
+=======
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
   return (
@@ -41,6 +48,7 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
         </SelectContent>
       </Select>
     </div>
+<<<<<<< HEAD
   );
 }
   )
@@ -64,6 +72,13 @@ import { SortFilterProps } from "@/types/filters",;
 ;
 export function SortFilter({ sortOption, setSortOption } SortFilterProps) {;
   return (;
+=======
+
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {SortFilterProps} from "@/types/filters";
+export function SortFilter(): any ({ sortOption, setSortOption }: SortFilterProps) {;
+  return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="mb-6">;
       <label className="text-sm font-medium text-zion-slate-light mb-2 block">;
         Sort by;
@@ -112,6 +127,7 @@ function SortFilter() {
 
   )
 
+<<<<<<< HEAD
           <SelectItem value="price-low">Price:Low to High</SelectItem>;
           <SelectItem value="price-high">Price:High to Low</SelectItem>;
         </SelectContent>;
@@ -134,3 +150,6 @@ function SortFilter() {
 
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

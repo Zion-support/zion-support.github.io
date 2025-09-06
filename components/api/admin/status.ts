@@ -1,6 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
+=======
+
+
+
+import {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   getSessionFromReq,;
   isInternalAgentRequest,;
@@ -15,9 +23,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 }
 
+<<<<<<< HEAD
+=======
+=======
+  res.status(200).json({ status, insights })
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
 
+<<<<<<< HEAD
 
 import {
   getSessionFromReq
@@ -45,3 +59,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 res.status(200).json({ status, insights });  res.status(200).json({ status, insights })
 }
 
+=======
+  res.status(200).json({ status, insights })
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

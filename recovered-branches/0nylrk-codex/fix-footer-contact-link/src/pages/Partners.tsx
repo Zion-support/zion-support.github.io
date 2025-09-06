@@ -12,6 +12,7 @@ import {PartnerResources} from "@/components/partners/PartnerResources";
 import {useAuth} from "@/hooks/useAuth";
 import {useNavigate} from "react-router-dom";
 export default function Partners() {;
+<<<<<<< HEAD
   const [activeTab, setActiveTab] = useState("overview");
   const { user, isAuthenticated } = useAuth();
   const navigate = useNavigate();
@@ -28,10 +29,14 @@ import { PartnerResources } from "@/components/partners/PartnerResources",
 import { useAuth } from "@/hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 export default function Partners() {
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [activeTab, setActiveTab] = useState("overview");
   const { user, isAuthenticated } = useAuth();
 
   const navigate = useNavigate();
+<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth",
 import { useNavigate } from "react-router-dom",
 export default function Partners() {
@@ -197,11 +202,19 @@ export default function Partners() {;
   const navigate = useNavigate();
 
 
+=======
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   // If not authenticated, display partner program info and signup CTA;
   if (!isAuthenticated) {;
     return (
 
+<<<<<<< HEAD
 
           <Button 
             size="lg" 
@@ -226,12 +239,18 @@ export default function Partners() {;
   // If not authenticated, display partner program info and signup CTA;
   if (!isAuthenticated) {;
     return (;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="container max-w-6xl py-10">;
         <div className="text-center mb-8">;
           <h1 className="text-4xl font-bold tracking-tight text-white mb-2">Zion AI Partner Program</h1>;
           <p className="text-xl text-zion-slate-light">Earn rewards by referring AI talent and clients to our marketplace</p>;
         </div>;
+<<<<<<< HEAD
 ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="grid md:grid-cols-2 gap-8 mb-12">;
           <Card className="bg-zion-blue-dark border-zion-blue-light">;
             <CardHeader>;
@@ -240,24 +259,36 @@ export default function Partners() {;
             </CardHeader>;
             <CardContent className="space-y-4">;
               <div className="flex items-start gap-3">;
+<<<<<<< HEAD
                 <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" />;
                 <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" />;
+=======
+                <CheckCircle className="h-5 w-5 text-zion-cyan mt-0 && 0.5" />;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div>;
                   <p className="font-medium text-white">Monetize your audience</p>;
                   <p className="text-sm text-zion-slate-light">Earn commissions from successful referrals</p>;
                 </div>;
               </div>;
               <div className="flex items-start gap-3">;
+<<<<<<< HEAD
                 <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" />;
                 <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" />;
+=======
+                <CheckCircle className="h-5 w-5 text-zion-cyan mt-0 && 0.5" />;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div>;
                   <p className="font-medium text-white">Exclusive insights</p>;
                   <p className="text-sm text-zion-slate-light">Get early access to AI marketplace trends</p>;
                 </div>;
               </div>;
               <div className="flex items-start gap-3">;
+<<<<<<< HEAD
                 <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" />;
                 <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" />;
+=======
+                <CheckCircle className="h-5 w-5 text-zion-cyan mt-0 && 0.5" />;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div>;
                   <p className="font-medium text-white">Marketing resources</p>;
                   <p className="text-sm text-zion-slate-light">Access our partner toolkit with ready-to-use materials</p>;
@@ -265,7 +296,11 @@ export default function Partners() {;
               </div>;
             </CardContent>;
           </Card>;
+<<<<<<< HEAD
 ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Card className="bg-zion-blue-dark border-zion-blue-light">;
             <CardHeader>;
               <CardTitle className="text-white">For AI Organizations</CardTitle>;
@@ -273,24 +308,36 @@ export default function Partners() {;
             </CardHeader>;
             <CardContent className="space-y-4">;
               <div className="flex items-start gap-3">;
+<<<<<<< HEAD
                 <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" />;
                 <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" />;
+=======
+                <CheckCircle className="h-5 w-5 text-zion-purple mt-0 && 0.5" />;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div>;
                   <p className="font-medium text-white">Expand your ecosystem</p>;
                   <p className="text-sm text-zion-slate-light">Connect your community to AI job opportunities</p>;
                 </div>;
               </div>;
               <div className="flex items-start gap-3">;
+<<<<<<< HEAD
                 <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" />;
                 <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" />;
+=======
+                <CheckCircle className="h-5 w-5 text-zion-purple mt-0 && 0.5" />;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div>;
                   <p className="font-medium text-white">Co-branded opportunities</p>;
                   <p className="text-sm text-zion-slate-light">Create joint content and events</p>;
                 </div>;
               </div>;
               <div className="flex items-start gap-3">;
+<<<<<<< HEAD
                 <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" />;
                 <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" />;
+=======
+                <CheckCircle className="h-5 w-5 text-zion-purple mt-0 && 0.5" />;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div>;
                   <p className="font-medium text-white">Custom tracking</p>;
                   <p className="text-sm text-zion-slate-light">Detailed analytics on your referral performance</p>;
@@ -299,7 +346,11 @@ export default function Partners() {;
             </CardContent>;
           </Card>;
         </div>;
+<<<<<<< HEAD
 ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="text-center mb-12">;
           <h2 className="text-2xl font-bold text-white mb-4">How It Works</h2>;
           <div className="grid md:grid-cols-3 gap-6">;
@@ -314,7 +365,11 @@ export default function Partners() {;
                 <p>Sign up and get approved as a Zion AI partner with your own dashboard</p>;
               </CardContent>;
             </Card>;
+<<<<<<< HEAD
             ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Card className="bg-zion-blue-dark border-zion-blue-light">;
               <CardHeader className="text-center pb-2">;
                 <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4">;
@@ -326,7 +381,11 @@ export default function Partners() {;
                 <p>Generate custom referral links and promote to your audience</p>;
               </CardContent>;
             </Card>;
+<<<<<<< HEAD
             ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Card className="bg-zion-blue-dark border-zion-blue-light">;
               <CardHeader className="text-center pb-2">;
                 <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4">;
@@ -340,6 +399,7 @@ export default function Partners() {;
             </Card>;
           </div>;
         </div>;
+<<<<<<< HEAD
 ;
         <div className="flex justify-center gap-4">;
           <Button ;
@@ -349,10 +409,18 @@ export default function Partners() {;
           <Button;
             size="lg";
             className="bg-zion-purple hover:bg-zion-purple-dark";
+=======
+
+        <div className="flex justify-center gap-4">;
+          <Button
+            size="lg" 
+            className="bg-zion-purple hover:bg-zion-purple-dark"
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             onClick={() => navigate('/signup')}
           >;
             Apply to Join;
           </Button>;
+<<<<<<< HEAD
           <Button;
             size="lg";
             variant="outline";
@@ -365,6 +433,8 @@ export default function Partners() {;
       </div>
     )
   }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Button
             size="lg" 
             variant="outline" 
@@ -392,6 +462,12 @@ export default function Partners() {;
       </div>;
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Authenticated user view - Partner Dashboard
   return (
     <div className="container max-w-7xl py-10">
@@ -442,6 +518,10 @@ export default function Partners() {;
       </Tabs>
     </div>
   )
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   // Authenticated user view - Partner Dashboard;
   return (
@@ -476,6 +556,7 @@ export default function Partners() {;
 }
 ;
 
+<<<<<<< HEAD
         ;
         <TabsContent value="overview" className="space-y-4">;
           <PartnerDashboard />;
@@ -517,3 +598,6 @@ export default function Partners() {;
 }
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

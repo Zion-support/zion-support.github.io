@@ -9,4 +9,8 @@ const Partners = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Partners;
+=======
+export default Partners;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

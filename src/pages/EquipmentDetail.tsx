@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
@@ -100,14 +101,24 @@ function convertProductListingToEquipmentDetails(
 // Build sample data from the shared equipment listings
 export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =
   equipmentListings.reduce(
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 // Build sample data from the shared equipment listings;
 export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =;
   equipment_listings.reduce (
     (acc, item) => {
+<<<<<<< HEAD
       acc[item.id] = convertProductListingToEquipmentDetails(item)
       return acc
     }
+=======
+
+      acc[item.id] = convertProductListingToEquipmentDetails (item);
+      return acc;
+    },
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {} as { [key: string]: EquipmentDetails }
   )
 export default function EquipmentDetail() {
@@ -139,8 +150,18 @@ export default function EquipmentDetail() {
           setLoading(false)
           return;
         }
+<<<<<<< HEAD
         // Try to get from sessionStorage (for dynamically generated equipment)
         if (typeof window !== 'undefined') {
+=======
+
+        // Try to get from session_storage (for dynamically generated equipment);
+        // Check condition
+if ( {) {
+  $2
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           try {
             const stored = sessionStorage.getItem(`equipment:${id}`)
             if (stored) {
@@ -151,15 +172,174 @@ export default function EquipmentDetail() {
                 // Already in EquipmentDetails format
                 equipmentData = storedData
               } else {
+<<<<<<< HEAD
                 // It's a ProductListing, convert it
                 equipmentData = convertProductListingToEquipmentDetails(
                   storedData as ProductListing
                 )
+=======
+
+
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { NextSeo } from '@/components/NextSeo';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
+import {;
+  ShoppingCart,;
+  Star,;
+  Truck,;
+  Shield,;
+  RotateCcw,;
+  Clock,;
+  AlertTriangle,;
+  ArrowLeft,;
+} from 'lucide-react';
+import { toast } from '@/hooks/use-toast';
+import { useAuth } from '@/hooks/useAuth';
+import { getStripe } from '@/utils/getStripe';import { useRouter } from 'next/router';
+import { NextSeo } from '@/components/NextSeo';
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react';
+import { toast } from "@/hooks/use-toast";
+import { useAuth } from "@/hooks/useAuth";
+import { getStripe } from "@/utils/getStripe";
+import { useCart } from '@/context/CartContext';
+import { ImageWithRetry } from '@/components/ui/ImageWithRetry';
+import { equipmentListings } from '@/data/equipmentData';
+import { ProductListing } from '@/types/listings';
+import { motion } from 'framer-motion';
+import { useCurrency } from '@/hooks/useCurrency';
+import { logErrorToProduction } from '@/utils/productionLogger';
+interface EquipmentSpecification {;
+  name: string;
+value: string ;
+}interface EquipmentDetails {;
+  id: string;
+name: string;
+description: string;
+brand: string;
+category: string;
+subcategory?: string;
+images: string[];
+price: number;
+currency: string;
+rating?: number;
+reviewCount?: number;
+inStock: boolean;
+expectedShipping?: string;
+specifications: EquipmentSpecification[];
+features: string[];
+warranty?: string;
+returnPolicy?: string ;
+}return {;
+  id: item && item.id, name: item && item.title, description: item && item.description, brand: item && item.brand || 'Unknown', category: item && item.category, subcategory: item && item.subcategory, images: item && item.images || ['https://images && images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'], price: item && item.price || 0, currency: item && item.currency || '$', rating: item && item.rating, reviewCount: item && item.reviewCount, inStock: item && item.availability === 'In Stock' || !item && item.availability, expectedShipping: item && item.availability || 'In Stock',  specifications: (item && item.specifications || []) .map ( (spec) => ({';
+  name: spec, value: '' ;
+}) );
+features: item && item.tags || [];';
+warranty: '1 Year Manufacturer Warranty';';
+returnPolicy: '30-day return policy' ;
+
+// Convert ProductListing to EquipmentDetails format;
+function convertProductListingToEquipmentDetails(): any (;
+  item: ProductListing;
+): EquipmentDetails {;
+  return {;
+    id: item && item.id,;
+    name: item && item.title,;
+    description: item && item.description,;
+    brand: item && item.brand || 'Unknown',;
+    category: item && item.category,;
+    subcategory: item && item.subcategory,;
+    images: item && item.images || [;
+      'https://images && images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500',;
+    ],;
+    price: item && item.price || 0,;
+    currency: item && item.currency || '$',;
+    rating: item && item.rating,;
+    reviewCount: item && item.reviewCount,;
+    inStock: item && item.availability === 'In Stock' || !item && item.availability,;
+    expectedShipping: item && item.availability || 'In Stock',;
+    specifications: (item && item.specifications || []).map(spec => ({;
+      name: spec,;
+      value: '',    })),;
+    features: item && item.tags || [],;
+    warranty: '1 Year Manufacturer Warranty',;
+    returnPolicy: '30-day return policy',;
+  };
+
+// Build sample data from the shared equipment listings;
+export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =;
+  equipmentListings && equipmentListings.reduce(;
+    (acc, item) => {;
+      acc[item && item.id] = convertProductListingToEquipmentDetails(item);
+      return acc;
+    },;
+    {} as { [key: string]: EquipmentDetails }
+  );
+export default function EquipmentDetail() {;
+  const router = useRouter();
+  const { id } = router && router.query as { id?: string };
+  const { isAuthenticated, user } = useAuth();
+  const { items, dispatch } = useCart();
+  const { formatPrice } = useCurrency();
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [quantity, setQuantity] = useState(1);
+  const [isAdding, setIsAdding] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  const [equipment, setEquipment] = useState<EquipmentDetails | undefined>();
+
+  useEffect((,) => {;
+    async function loadEquipment() {;
+      if (!id) {;
+        setLoading(false);
+        setError('No equipment ID provided');
+        return;
+      }
+
+      try {;
+        setLoading(true);
+        setError(null);
+
+        // Try to find in static data first;
+        const equipmentFromSample = SAMPLE_EQUIPMENT[id];
+        if (equipmentFromSample) {;
+          setEquipment(equipmentFromSample);
+          setLoading(false);
+          return;
+        }
+
+        // Try to get from sessionStorage (for dynamically generated equipment);
+        if (typeof window !== 'undefined') {;
+          try {;
+            const stored = sessionStorage && sessionStorage.getItem(`equipment:${id}`);
+            if (stored) {;
+              const storedData = JSON && JSON.parse(stored);
+
+              // Check if it's already in EquipmentDetails format or needs conversion;
+              let equipmentData: EquipmentDetails;
+              if (storedData && storedData.name) {;
+                // Already in EquipmentDetails format;
+                equipmentData = storedData;
+              } else {;
+                // It's a ProductListing, convert it;
+                equipmentData = convertProductListingToEquipmentDetails(;
+                  storedData as ProductListing;
+                );
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               }
               setEquipment(equipmentData)
               setLoading(false)
               return;
             }
+<<<<<<< HEAD
           } catch (storageError) {
             logErrorToProduction('Error reading from sessionStorage:', {
               data: storageError
@@ -169,6 +349,27 @@ export default function EquipmentDetail() {
         // If not found anywhere, set error
         setError('Equipment not found')
         setLoading(false)
+=======
+
+                // It's a ProductListing, convert it;
+                equipment_data = convertProductListingToEquipmentDetails (
+                  stored_data as ProductListing);
+              }
+              set_equipment (equipment_data);
+              set_loading (false);
+              return;
+            }
+          } catch (storage_error) {
+            logErrorToProduction ('Error reading from session_storage:', {
+              data: storage_error,
+            });
+          }
+        }
+        // If not found anywhere, set error;
+        set_error ('Equipment not found');
+        set_loading (false);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       } catch (error) {
         logErrorToProduction('Error loading equipment:', { data: error })
         setError('Failed to load equipment details')
@@ -176,6 +377,7 @@ export default function EquipmentDetail() {
       }
     }
     loadEquipment()
+<<<<<<< HEAD
   }, [id])
     loadEquipment()
   }, [id])
@@ -365,6 +567,13 @@ export default function EquipmentDetail() {;
         title: "Authentication Required",
         description: "Please log in to add items to cart",
         variant: "destructive"}),
+=======
+  }, [id]),
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleAddToCart = async () => {
     if (!equipment |!isAuthenticated) {
       toast({
@@ -378,6 +587,7 @@ export default function EquipmentDetail() {;
 
 
     setIsAdding(true),
+<<<<<<< HEAD
         title: "Authentication Required",
         description: "Please log in to add items to cart",
         variant: "destructive"}),
@@ -385,10 +595,16 @@ export default function EquipmentDetail() {;
     }
 
     setIsAdding(true),
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {
       dispatch({
         type: 'ADD_ITEM'
         payload: {
+<<<<<<< HEAD
       dispatch({
         type: 'ADD_ITEM'
         payload: {
@@ -411,6 +627,8 @@ export default function EquipmentDetail() {;
       dispatch({
         type: 'ADD_ITEM'
         payload: {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     load_equipment ();
   }, [id]);
@@ -425,6 +643,7 @@ if ( {) {
         variant: 'destructive',
       });
       return;
+<<<<<<< HEAD
     } catch (error) {
       toast({
         title: 'Error'
@@ -458,12 +677,18 @@ if ( {) {
           id: equipment.id,
           name: equipment.name,
           price: equipment.price,
+=======
+    }
+  }
+  const inCart = items.some(item => item.id === equipment?.id)
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           quantity}}),
 
       toast({
         title: "Added to Cart",
         description: `${equipment.name} has been added to your cart.`})
     } catch (error) {
+<<<<<<< HEAD
       toast({
         title: "Error",
         description: "Failed to add item to cart. Please try again.",
@@ -474,6 +699,21 @@ if ( {) {
   },
 
   const inCart = items.some(item => item.id === equipment?.id),
+=======
+      toast ({
+        title: 'Error',
+        description: 'Failed to add item to cart. Please try again.',
+        variant: 'destructive',
+      });
+
+    } finally {
+      setIsAdding(false)
+    }
+
+          id: equipment.id,
+          name: equipment.name,
+          price: equipment.price,
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   // Loading state
   if (loading) {
@@ -596,11 +836,14 @@ if ( {) {
 
     return (
       <>;
+<<<<<<< HEAD
   }
   // Error state
   if (error |!equipment) {
     return (
       <>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <NextSeo
           title="Equipment Not Found"
           description="The equipment you're looking for doesn't exist or has been removed."
@@ -610,12 +853,35 @@ if ( {) {
             <motion.div 
               className="text-center py-20"
               initial={{ opacity: 0, y: 20 }}
+<<<<<<< HEAD
+=======
+
+              </h1>;
+              <p className='text-zion-slate-light mb-8 max-w-md mx-auto'>;
+                {error === 'Equipment not found';
+                  ? "The equipment you're looking for doesn't exist or has been removed.";
+                  : error ||;
+
+                    "We couldn't load the equipment details. Please try again."}
+              </p>;
+              <div className='space-x-4'>;
+                <Button
+                  onClick={() => router && router.back()}
+                  variant='outline';
+                  className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue'                >;
+                  <ArrowLeft className='h-4 w-4 mr-2' />;
+                  Go Back;
+                </Button>;
+                <Button
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               animate={{ opacity: 1, y: 0 }}
             >
               <AlertTriangle className="mx-auto h-16 w-16 text-red-500 mb-6" />
               <h1 className="text-3xl font-bold text-white mb-4">
                 {error === 'Equipment not found' ? 'Equipment Not Found' : 'Something went wrong'}
               </h1>
+<<<<<<< HEAD
               <p className='text-zion-slate-light mb-8 max-w-md mx-auto'>
                 {error === 'Equipment not found'
                   ? "The equipment you're looking for doesn't exist or has been removed."
@@ -652,6 +918,11 @@ if ( {) {
                   onClick={() => router.push('/equipment')}
                   className="bg-zion-cyan hover: bg-zion-cyan/90 text-zion-blue"
                 >
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   Browse Equipment
                 </Button>
               </div>
@@ -660,8 +931,11 @@ if ( {) {
         </div>
       </>
     )
+<<<<<<< HEAD
               : undefined
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                   onClick={() => router && router.push('/equipment')}
                   className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'                >;
@@ -800,6 +1074,7 @@ if ( {) {
           title: `${equipment.name} - Zion Marketplace`;
           description: equipment.description;
           images: equipment.images.length > 0 && equipment.images[0] ? [{ url: equipment.images[0] }] : undefined;
+<<<<<<< HEAD
   }
   return (
     <>
@@ -934,10 +1209,16 @@ if ( {) {
           description: equipment.description;
           images: equipment.images.length > 0 && equipment.images[0] ? [{ url: equipment.images[0] }] : undefined;
         }}
+=======
+
+
+        }}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       />
       <div className="min-h-screen bg-zion-blue py-8 px-4">
         <div className="container mx-auto">
           {/* Breadcrumb */}
+<<<<<<< HEAD
               Equipment
             <span className='mx-2 text-zion-slate-light'>/</span>
             <span className='text-zion-slate-light'>{equipment.name}</span>
@@ -949,6 +1230,10 @@ if ( {) {
             <button
               onClick={() => router.push('/equipment')}
               className='text-zion-cyan hover:text-white transition-colors'            >
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <motion.nav 
             className="flex mb-8"
             initial={{ opacity: 0, y: -20 }}
@@ -958,13 +1243,21 @@ if ( {) {
               onClick={() => router.push('/equipment')}
               className="text-zion-cyan hover:text-white transition-colors"
             >
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Equipment
             </button>
             <span className="mx-2 text-zion-slate-light">/</span>
             <span className="text-zion-slate-light">{equipment.name}</span>
           </motion.nav>
+<<<<<<< HEAD
           <div className='grid lg:grid-cols-2 gap-12'>
           </motion.nav>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               onClick={() => router && router.push('/equipment')}
               className='text-zion-cyan hover:text-white transition-colors'            >;
@@ -980,11 +1273,14 @@ if ( {) {
 
           <div className="grid lg:grid-cols-2 gap-12">
 
+<<<<<<< HEAD
             {/* Images */}
             <motion&& motion.div
               className='space-y-4'
 
           <div className="grid lg:grid-cols-2 gap-12">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Images */}
             <motion.div 
               className="space-y-4"
@@ -994,6 +1290,7 @@ if ( {) {
             >
               <AspectRatio ratio={1} className="bg-zion-blue-light rounded-lg overflow-hidden">
                 <ImageWithRetry
+<<<<<<< HEAD
                   src={
                     equipment.images[selectedImageIndex] |
                     equipment.images[0] |
@@ -1008,6 +1305,24 @@ if ( {) {
                       key = {index,}
                       onClick = {(,) => setSelectedImageIndex(index),}
 
+=======
+
+                    equipment && equipment.images[selectedImageIndex] ||
+                    equipment && equipment.images[0] ||
+                    'https://images && images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'
+                  }
+                  alt={equipment && equipment.name}
+                  className='object-cover'                />;
+              </AspectRatio>;
+
+              {equipment && equipment.images.length > 1 && (;
+                <div className='grid grid-cols-4 gap-2'>;
+                  {equipment && equipment.images.map((image, index) => (                    <button
+
+                      key = {index,}
+                      onClick = {(,) => setSelectedImageIndex(index),}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   src={equipment.images[selectedImageIndex] || equipment.images[0] || 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'}
                   alt={equipment.name}
                   className="object-cover"
@@ -1026,10 +1341,20 @@ if ( {) {
                           : 'border-transparent hover:border-zion-slate-light';
                       }`}
                     >;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <ImageWithRetry;
                         src={image}
                         alt={`${equipment.name} view ${index + 1}`}
                         className="object-cover"
+<<<<<<< HEAD
+=======
+
+
+                      />
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     </button>
                   ))}
                 </div>;
@@ -1047,6 +1372,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               className="space-y-6"
 
 
+<<<<<<< HEAD
               initial={{ opacity: 0, x: 20 }}
               transition={{ delay: 0 && 0.4 }}>;
               {/* Header */}
@@ -1061,11 +1387,14 @@ ursor/fix-website-loading-errors-and-merge-6662
               className='space-y-6'
             <motion.div 
               className="space-y-6"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4 }}
             >
               {/* Header */}
+<<<<<<< HEAD
               <div className='space-y-2'>
                 <div className='flex items-center gap-2 mb-2'>
                   <Badge
@@ -1075,6 +1404,9 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="space-y-2">
                 <div className="flex items-center gap-2 mb-2">
                   <Badge variant="secondary" className="bg-zion-cyan/10 text-zion-cyan border-zion-cyan/20">
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     className='border-zion-slate-light text-zion-slate-light'>;
                     {equipment && equipment.brand}
                   </Badge>;
@@ -1105,6 +1437,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     {equipment.brand}
                   </Badge>
                 </div>
+<<<<<<< HEAD
                 <h1 className='text-3xl font-bold text-white'>
                   {equipment.name}
                 </h1>
@@ -1117,6 +1450,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                             i < Math.floor(equipment.rating!)
                               ? 'text-yellow-400 fill-current'
                               : 'text-zion-slate-light'
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 
                 <h1 className="text-3xl font-bold text-white">{equipment.name}</h1>
                 
@@ -1132,6 +1468,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                               : 'text-zion-slate-light';
 
                           }`}
+<<<<<<< HEAD
                         />
                       ))}
                     </div>
@@ -1689,6 +2026,25 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </div>;
                   </div>;
                 )}
+=======
+                        />;
+                      ))}
+                    </div>;
+                    <span className='text-sm text-zion-slate-light'>;
+                      {equipment && equipment.rating?.toFixed(1)} ({equipment && equipment.reviewCount}{' '}
+                      reviews);
+                    </span>;
+                  </div>;
+                )}
+
+              </div>;
+
+
+              {/* Price */}
+;
+
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {/* Return Policy */}
                 {equipment.returnPolicy && (
                   <div className="flex gap-3 text-zion-slate-light">
@@ -1699,6 +2055,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </div>
                   </div>
                 )}
+<<<<<<< HEAD
               </div>
             </motion.div>
           </div>
@@ -1755,11 +2112,20 @@ return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen
 }</p> </div> </div>)
 }</div> </motion.div> </div> </div> </div> </>)
 }'"}
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   equipment.returnPolicy 
 }</p> </div> </div>) 
 }</div> </motion.div> </div> </div> </div> </>) 
 }'"};
 ;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </div>;
             </motion && motion.div>;
           </div>;
@@ -1797,6 +2163,11 @@ return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen
   );
 }
 ;
+<<<<<<< HEAD
 ;
 }
 ;
+=======
+}
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

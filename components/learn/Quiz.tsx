@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 type Question = {
   id: string,
@@ -42,6 +43,31 @@ export default function Quiz({ questions, onComplete }: Props) {;
     0;
   );
   function submit() {;
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     setSubmitted(true);
     onComplete(score);
   }
@@ -56,7 +82,14 @@ export default function Quiz({ questions, onComplete }: Props) {;
             {q && q.options.map((opt, i) => (;
               <label key={i} className='flex items-center gap-2'>;
                 <input
+<<<<<<< HEAD
 };
+=======
+
+=======
+};
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   type='radio'                  name={q.id}
   function submit() {
     setSubmitted(true);
@@ -66,16 +99,28 @@ export default function Quiz({ questions, onComplete }: Props) {;
 
 
 
+<<<<<<< HEAD
                   type='radio'                  name={q && q.id}
 };
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function Quiz({ questions, onComplete }: Props) {
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [submitted, setSubmitted] = useState(false);
   const score = questions.reduce((acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0), 0);
+<<<<<<< HEAD
   function submit() {
     setSubmitted(true);
     onComplete(score)
   }
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  function submit() {
+
+    setSubmitted(true)
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     onComplete(score)
   }
@@ -91,6 +136,7 @@ export default function Quiz({ questions, onComplete }: Props) {
                   type="radio"
 
 
+<<<<<<< HEAD
   answer_index: number;
 }
 ;
@@ -171,6 +217,9 @@ function submit() {
     </div>;
   );
 }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className='mt - 2 text - sm'>;
               {answers[q.id] === q.answer_index ? (
                 <span className='text - green - 600'>Correct</span>) : (
@@ -214,6 +263,7 @@ function submit() {
 
   );
 }
+<<<<<<< HEAD
 
 
 
@@ -239,3 +289,16 @@ function submit() {
 
 }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  );
+}
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

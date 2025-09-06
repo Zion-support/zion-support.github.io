@@ -1,7 +1,13 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react";
 import Link from "next/link";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from "lucide-react";
 
+<<<<<<< HEAD
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
 import React from 'react';
@@ -16,6 +22,14 @@ const contactInfo = null;
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
+=======
+
+const EnhancedFooter: React.FC = () => {;
+  const currentYear = new Date().getFullYear();
+
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const company = null;
   ];
   const resources = null;
@@ -119,7 +133,13 @@ export default function EnhancedFooter() {
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
     { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github }
   ];
+<<<<<<< HEAD
 
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
 
 
@@ -139,11 +159,86 @@ export default function EnhancedFooter() {
 
             </p>
             <div className="flex space-x-4">
+<<<<<<< HEAD
 
+=======
+=======
+    <footer className="bg-gray-900 text-white">;
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
+          {" "}
+          {/* Company Info */}
+          <div className="space-y-4">;
+            <div className="text-2xl font-bold text-blue-400 mb-4">;
+              Zion Tech Group;
+            </div>;
+            <p className="text-gray-300 mb-6">;
+              Leading technology solutions provider helping businesses transform;
+              their digital presence.;
+            </p>;
+            <div className="flex space-x-4">;
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white transition-colors">;
+                <Linkedin className="h-5 w-5" />;
+              </a>;
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white transition-colors">;
+                <Twitter className="h-5 w-5" />;
+              </a>;
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white transition-colors">;
+                <Github className="h-5 w-5" />;
+import React from './react';
+import Link from './next / link';
+import { Mail, Phone, MapPin, Linkedin, Twitter, Github  } from './lucide-react';
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
+<<<<<<< HEAD
+=======
+    <footer className="bg - gray - 900 text - white">;
+      <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12">;
+        <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
+          {" "}
+          {/* Company Info */}
+          <div className="space - y-4">;
+            <div className="text - 2xl font - bold text - blue - 400 mb - 4">;
+              Zion Tech Group;
+            </div>;
+            <p className="text - gray - 300 mb - 6">;
+              Leading technology solutions provider helping businesses transform;
+              their digital presence.;
+            </p>;
+            <div className="flex space - x-4">;
+              <a;
+                href="#";
+                className="text - gray - 400 hover:text - white transition - colors";
+              >;
+                <Linkedin className="h - 5 w - 5" />;
+              </a>;
+              <a;
+                href="#";
+                className="text - gray - 400 hover:text - white transition - colors";
+              >;
+                <Twitter className="h - 5 w - 5" />;
+              </a>;
+              <a;
+                href="#";
+                className="text - gray - 400 hover:text - white transition - colors";
+              >;
+                <Github className="h - 5 w - 5" />;
+              </a>;
+            </div>;
+          </div>;
+          {/* Services */}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="space - y-4">;
             <h3 className="text - lg font - semibold">Services</h3>;
             <ul className="space - y-2">;
@@ -152,36 +247,68 @@ const EnhancedFooter: React.FC = () => {
                   href="/services / web - development";
                   className="text - gray - 300 hover:text - white transition - colors";
                 >;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   Web Development;
                 </Link>;
               </li>;
               <li>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <Link;
                   href="/services / mobile - apps";
                   className="text - gray - 300 hover:text - white transition - colors";
                 >;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   Mobile Apps;
                 </Link>;
               </li>;
               <li>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <Link;
                   href="/services / ai - solutions";
                   className="text - gray - 300 hover:text - white transition - colors";
                 >;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   AI Solutions;
                 </Link>;
               </li>;
               <li>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <Link;
                   href="/services / cloud - services";
                   className="text - gray - 300 hover:text - white transition - colors";
                 >;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   Cloud Services;
                 </Link>;
               </li>;
             </ul>;
           </div>;
           {/* Company */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="space - y-4">;
             <h3 className="text - lg font - semibold">Company</h3>;
             <ul className="space - y-2">;
@@ -190,36 +317,68 @@ const EnhancedFooter: React.FC = () => {
                   href="/about";
                   className="text - gray - 300 hover:text - white transition - colors";
                 >;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   About Us;
                 </Link>;
               </li>;
               <li>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <Link;
                   href="/careers";
                   className="text - gray - 300 hover:text - white transition - colors";
                 >;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   Careers;
                 </Link>;
               </li>;
               <li>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <Link;
                   href="/blog";
                   className="text - gray - 300 hover:text - white transition - colors";
                 >;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   Blog;
                 </Link>;
               </li>;
               <li>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <Link;
                   href="/contact";
                   className="text - gray - 300 hover:text - white transition - colors";
                 >;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   Contact;
                 </Link>;
               </li>;
             </ul>;
           </div>;
           {/* Contact Info */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="space-y-4">;
             <h3 className="text-lg font-semibold">Contact</h3>;
             <div className="space-y-2">;
@@ -234,6 +393,10 @@ const EnhancedFooter: React.FC = () => {
               <div className="flex items-center space-x-2">;
                 <MapPin className="h-4 w-4 text-gray-400" />;
                 <span className="text-gray-300">New York, NY</span>;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="space - y-4">;
             <h3 className="text - lg font - semibold">Contact</h3>;
             <div className="space - y-2">;
@@ -248,10 +411,18 @@ const EnhancedFooter: React.FC = () => {
               <div className="flex items - center space - x-2">;
                 <MapPin className="h - 4 w - 4 text - gray - 400" />;
                 <span className="text - gray - 300">New York, NY</span>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </div>;
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="border - t border - gray - 800 mt - 8 pt - 8">;
           <div className="flex flex - col md:flex - row justify - between items - center">;
 <p className="text - gray - 400 text - sm">;
@@ -268,6 +439,10 @@ const EnhancedFooter: React.FC = () => {
                 href="/terms";
                 className="text - gray - 400 hover:text - white text - sm transition - colors";
               >;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 Terms of Service;
               </Link>;
             </div>;
@@ -275,11 +450,18 @@ const EnhancedFooter: React.FC = () => {
         </div>;
       </div>;
 
+<<<<<<< HEAD
+=======
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </footer>);
 }
 ;
 export default EnhancedFooter;
 ;
+<<<<<<< HEAD
 
 };
 
@@ -478,8 +660,18 @@ export default EnhancedFooter;
   );
 }
 export default EnhancedFooter;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 };
 
 export default EnhancedFooter;
 
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

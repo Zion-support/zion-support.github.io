@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 "use client",;
 import { useState } from "react",;
@@ -105,6 +109,10 @@ export default function DeploymentNotification({;
   return (;
     <div className="fixed top-4 right-4 z-50 space-y-3 max-w-md">;
       {updates.map((update) => (;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 "use client",
 import { useState  } from './react';,
 import {
@@ -366,6 +374,7 @@ export default function DeploymentNotification({;
                 <div className="p - 1 bg - white / 20 rounded">;
                   {getVerticalIcon (update.vertical || 'GENERAL')}
 
+<<<<<<< HEAD
                   {getVerticalIcon(update.vertical || 'GENERAL')}
 
           {update.instanceName && (;
@@ -374,6 +383,13 @@ export default function DeploymentNotification({;
                 <div className="p-1 bg-white/20 rounded">;
                   {getVerticalIcon(update.vertical |'GENERAL')}
                   {getVerticalIcon(update.vertical || 'GENERAL')}
+=======
+=======
+
+                  {getVerticalIcon(update.vertical || 'GENERAL')}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </div>;
                 <span className="font - medium text - white text - sm">;
                   {update.instance_name}
@@ -393,16 +409,23 @@ export default function DeploymentNotification({;
                     {update.domain}
                   </span>)}
               </div>;
+<<<<<<< HEAD
             </div>;
           )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             </div>)}
 
 
 ;
 
+<<<<<<< HEAD
 ;
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Progress Bar (for deployment updates) */}
           {update.progress !== undefined && (
             <div className="mb - 3 space - y-2">;
@@ -416,27 +439,49 @@ export default function DeploymentNotification({;
                   style={{ width: `${update.progress}%` }}
                 ></div>;
               </div>;
+<<<<<<< HEAD
             </div>;
           )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             </div>)}
 
 
 ;
 
+<<<<<<< HEAD
 ;
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Action Buttons */}
           {update.actions && update.actions.length > 0 && (
             <div className="flex gap - 2 pt - 2 border - t border - white / 20">;
               {update.actions.map ((action, index) => (
                 <button;
                   key={index}
+<<<<<<< HEAD
+=======
+
+                  onClick={() => handleAction(update.id, action.action)}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   className={`flex-1 flex items-center justify-center gap-2 px-3 py-2 text-xs font-medium rounded-lg transition-all duration-200 ${;
                     action.action === 'deploy' || action.action === 'retry';
 
 
                       ? 'bg-blue-600 hover:bg-blue-700 text-white';
+<<<<<<< HEAD
+=======
+=======
+                  on_click={() => handle_action (update.id, action.action)}
+                  className={`flex - 1 flex items - center justify - center gap - 2 px - 3 py - 2 text - xs font - medium rounded - lg transition - all duration - 200 ${
+                    action.action === 'deploy' || action.action === 'retry';
+                      ? 'bg - blue - 600 hover:bg - blue - 700 text - white';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   onClick={() => handleAction(update.id, action.action)}
                   className={`flex-1 flex items-center justify-center gap-2 px-3 py-2 text-xs font-medium rounded-lg transition-all duration-200 ${action.action === 'deploy' |action.action === 'retry';
                   className={`flex-1 flex items-center justify-center gap-2 px-3 py-2 text-xs font-medium rounded-lg transition-all duration-200 ${;
@@ -452,10 +497,13 @@ export default function DeploymentNotification({;
                   {action.action === 'retry' && <Rocket className="w - 3 h - 3" />}
                   {action.action === 'configure' && <Settings className="w - 3 h - 3" />}
                   <span>{action.label}</span>;
+<<<<<<< HEAD
                 </button>;
               ))}
             </div>;
           )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                 </button>))}
             </div>)}
@@ -463,8 +511,12 @@ export default function DeploymentNotification({;
 
 ;
 
+<<<<<<< HEAD
 ;
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Timestamp */}
           <div className="absolute bottom - 2 right - 4 text - xs text - white / 60">;
             {format_timestamp (update.timestamp)}
@@ -472,7 +524,11 @@ export default function DeploymentNotification({;
         </div>))}
     </div>);
 }
+<<<<<<< HEAD
 // Example usage with mock data;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export /**
  * DeploymentNotificationExample - Function description
  */
@@ -533,6 +589,7 @@ export function DeploymentNotificationExample() {;
   const handle_action = (id: string, action: string) =>: any {
     // // // console.log (`Action ${action} for update ${id}`);
     // Handle different actions here;
+<<<<<<< HEAD
   }
 ;
 // Example usage with mock data;
@@ -578,6 +635,13 @@ export function DeploymentNotificationExample() {;
     // Handle different actions here;
   };
   return (;
+=======
+
+  };
+
+  return (;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <DeploymentNotification;
       updates={updates}
       on_dismiss={handle_dismiss}

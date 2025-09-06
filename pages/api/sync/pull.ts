@@ -4,6 +4,17 @@
 
 
     instanceId: state.config.instanceId,
+<<<<<<< HEAD
+=======
+    lastSyncedAt: state.lastSyncedAt,
+    events,
+    scope: requestedScope
+  });
+}
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from './next';,
 import { read_state, filterEventsByScope  } from '../../../utils / sync / storage';,
 ;
@@ -37,6 +48,7 @@ function handler() {
     scope: requestedScope})
 
 }
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -112,3 +124,13 @@ export default function handler(req, res) {
   }
 }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+    instanceId: state.config.instanceId,
+    lastSyncedAt: state.lastSyncedAt,
+    events,
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

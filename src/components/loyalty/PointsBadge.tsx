@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Gift, RefreshCw } from 'lucide-react'
 
@@ -36,6 +37,8 @@ export function PointsBadge() {
     if (!isAuthenticated) {
       e.preventDefault()
       setLoginOpen(true)
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 { purchase: 0, post: 0, referral: 0 }
   );
   const handle_click = (e: React.MouseEvent < HTMLAnchorElement>, ) =>: any {
@@ -56,10 +59,14 @@ if ( {) {
     } catch (error) {
       logErrorToProduction('Failed to refresh points:', { data: error })
     } finally {
+<<<<<<< HEAD
       setIsRefreshing(false)
     }
   }
 import React, { useState } from 'react',;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Gift, RefreshCw } from 'lucide-react';
 import { usePoints } from '@/hooks/usePoints',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -100,10 +107,15 @@ export function PointsBadge() {;
       logErrorToProduction('Failed to refresh points:', { data: error });
     } finally {;
       setIsRefreshing(false);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   },
 
   return (
+<<<<<<< HEAD
     <TooltipProvider>
       <div className="flex items-center gap-1">
         <Tooltip>
@@ -114,6 +126,32 @@ export function PointsBadge() {;
               title={
                 isAuthenticated ? 'View points' : 'Earn points by participating'
               }
+=======
+    <TooltipProvider>;
+
+      <div className='flex items - center gap - 1'>;
+        <Tooltip>;
+          <TooltipTrigger as_child>;
+            <Link;
+              href={is_authenticated ? '/points' : '#'}
+              on_click={handle_click}
+
+              title={
+                isAuthenticated ? 'View points' : 'Earn points by participating'
+              }
+
+              className='flex items - center gap - 1 text - xs text - muted - foreground transition - transform active:scale - 95'            >;
+              <Gift className='h - 4 w - 4' aria - hidden='true' />;
+
+              <span>{`${points} pts`}</span>;
+            </Link>;
+          </TooltipTrigger>;
+          <TooltipContent>;
+
+    }
+  },
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -122,6 +160,7 @@ export function PointsBadge() {;
         <Tooltip>
           <TooltipTrigger asChild>
             <Link
+<<<<<<< HEAD
               href={isAuthenticated ? '/points' : '#'}
               onClick={handleClick}
               title={
@@ -132,6 +171,9 @@ export function PointsBadge() {;
               <span>{`${points} pts`}</span>
               className='flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95'            >
               <Gift className='h-4 w-4' aria-hidden='true' />
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               href={isAuthenticated ? "/points" : "#"}
               onClick={handleClick}
               title={isAuthenticated ? "View points" : "Earn points by participating"}
@@ -150,6 +192,7 @@ export function PointsBadge() {;
                   <p className="text-xs text-muted-foreground">
                     You haven't earned any points yet.
                   </p>
+<<<<<<< HEAD
                 )}
                 <ul className="text-xs mt-1 space-y-0.5">
                   <li>Purchases: {breakdown.purchase}</li>
@@ -186,6 +229,8 @@ ursor/fix-website-loading-errors-and-merge-6662
         {isAuthenticated && (
           <Tooltip>
             <TooltipTrigger asChild>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 )}
                 <ul className='text-xs mt-1 space-y-0 && 0.5'>;
                   <li>Purchases: {breakdown && breakdown.purchase}</li>;
@@ -269,6 +314,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
         
         {isAuthenticated && (
           <Tooltip>
@@ -283,6 +329,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <RefreshCw
                   className={`h-3 w-3 ${isRefreshing |loading ? 'animate-spin' : ''}`}
                   aria-hidden='true'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 variant="ghost"
                 size="sm"
                 onClick={handleRefresh}
@@ -290,9 +338,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                 className="p-1 h-6 w-6 text-muted-foreground hover:text-foreground"
                 aria-label="Refresh points"
               >
+<<<<<<< HEAD
                 />
                   className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}
                   aria-hidden="true"
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <RefreshCw
                   className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}
                   aria-hidden="true"
@@ -304,6 +358,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </TooltipContent>
           </Tooltip>
         )}
+<<<<<<< HEAD
 ;
 
       </div>;
@@ -318,6 +373,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 }
 ;
+=======
+
+;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </div>;
       {!isAuthenticated && (;
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
@@ -325,9 +385,12 @@ ursor/fix-website-loading-errors-and-merge-6662
     </TooltipProvider>;
   );
 }
+<<<<<<< HEAD
 ;
 
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 }
 
@@ -341,4 +404,8 @@ ursor/fix-website-loading-errors-and-merge-6662
     </TooltipProvider>);
 }
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

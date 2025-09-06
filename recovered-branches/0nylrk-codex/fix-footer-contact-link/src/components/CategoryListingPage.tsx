@@ -2,6 +2,11 @@
 
 
 
+<<<<<<< HEAD
+=======
+
+import React from 'react';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -11,6 +16,18 @@ import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Select, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
 import {Search, Filter, ArrowDownAZ, ArrowUpZA} from "lucide-react";
+<<<<<<< HEAD
+=======
+
+// Example listing type;
+interface Listing {;
+  id: string,;
+  title: string,;
+  description: string,;
+  category: string,;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -21,6 +38,7 @@ import { Input } from '@/components / ui / input';
 import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components / ui / select';
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from './lucide-react';
 // Example listing type;
+<<<<<<< HEAD
 // Example listing type
 import { useState } from "react",
 import { Header } from "@/components/Header",
@@ -123,11 +141,22 @@ import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/u
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from "lucide-react",
 
 // Example listing type
+=======
+=======
+// Example listing type
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface Listing {
   id: string,
   title: string,
   description: string,
   category: string,
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   subcategory?: string,
   image?: string,
   tags?: string[],
@@ -138,6 +167,7 @@ interface Listing {
   reviewCount?: number,
   price?: number | null,
   createdAt: string
+<<<<<<< HEAD
 import { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -163,10 +193,14 @@ interface Listing {;
   reviewCount?: number,;
   price?: number | null,;
   createdAt: string;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 }
 ;
 
+<<<<<<< HEAD
   subcategory?: string;
   image?: string;
   tags?: string[];
@@ -178,6 +212,8 @@ interface Listing {;
   price?: number | null;
 }
 ;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface CategoryListingPageProps {;
   title: string,;
   description: string,;
@@ -186,6 +222,7 @@ interface CategoryListingPageProps {;
   filterOptions?: { label: string, value: string }[];
 }
 
+<<<<<<< HEAD
 export function CategoryListingPage({ 
   title, ;
   description;
@@ -410,6 +447,8 @@ export function CategoryListingPage({ ;
           <div className="text-center mb-12">;
             <GradientHeading>{title}</GradientHeading>;
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -428,6 +467,7 @@ export function CategoryListingPage({ ;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
               <div className="relative">;
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />;
+<<<<<<< HEAD
               {description}
             </p>
           </div>
@@ -436,10 +476,13 @@ export function CategoryListingPage({ ;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <Input
                   type="text"
                   placeholder="Search listings..."
                   value={searchQuery}
+<<<<<<< HEAD
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)}
                   className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
                 />
@@ -491,6 +534,8 @@ export function CategoryListingPage({ ;
               {searchQuery && ` for "${searchQuery}"`}
             </p>
           </div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                   onChange={(e: React && React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e && e.target.value)}
                   className="pl-10 bg-zion-blue border border-zion-blue-light text-white";
@@ -546,12 +591,23 @@ export function CategoryListingPage({ ;
           </div>;
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Listings Grid */}
           {processedListings.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {processedListings.map((listing) => (
                 <ListingScoreCard
+<<<<<<< HEAD
 ;
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Results Count */}
           <div className="mb-6">;
             <p className="text-zion-slate-light">;
@@ -561,6 +617,7 @@ export function CategoryListingPage({ ;
           </div>;
 ;
           {/* Listings Grid */}
+<<<<<<< HEAD
           {processedListings.length > 0 ? (;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
               {processedListings.map((listing) => (;
@@ -574,6 +631,13 @@ export function CategoryListingPage({ ;
                   author_image={listing.author_image}
                   ai_score={listing.ai_score}
                   rating={listing.rating}
+=======
+          {processed_listings.length > 0 ? (
+            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
+              {processed_listings.map ((listing) => (
+                <ListingScoreCard;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   key={listing.id}
                   title={listing.title}
                   description={listing.description}
@@ -581,6 +645,7 @@ export function CategoryListingPage({ ;
                   image={listing.image}
                   tags={listing.tags}
                   author={listing.author}
+<<<<<<< HEAD
                   authorImage={listing.authorImage}
                   aiScore={listing.aiScore}
                   rating={listing.rating}
@@ -595,6 +660,11 @@ export function CategoryListingPage({ ;
               <Button
                 variant="outline"
                 onClick={() => {
+=======
+                  author_image={listing.author_image}
+                  ai_score={listing.ai_score}
+                  rating={listing.rating}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             </p>;
           </div>;
@@ -619,9 +689,12 @@ export function CategoryListingPage({ ;
 
                   setSearchQuery(""),
 
+<<<<<<< HEAD
                   setSearchQuery("");
 
                   setSearchQuery(""),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   setSelectedFilter(filterOptions[0].value)
                 }}
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
@@ -630,11 +703,16 @@ export function CategoryListingPage({ ;
               </Button>
             </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>;
           ) : (;
             <div className="text-center py-20">;
               <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>;
               <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>;
+<<<<<<< HEAD
                   reviewCount={listing.reviewCount}
                 />;
               ))}
@@ -656,11 +734,22 @@ export function CategoryListingPage({ ;
                   setSearchQuery("");
                   setSelectedFilter(filterOptions[0].value);
                 }}
+=======
+              <Button
+                variant="outline" 
+                onClick={() => {;
+                  setSearchQuery("");
+                  setSelectedFilter(filterOptions[0].value);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                }}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
               >
                 Clear all filters
               </Button>
             </div>
+<<<<<<< HEAD
   ),; //Example listing type interface Listing {
   id: string;
 title: string;
@@ -806,4 +895,38 @@ case 'z-a': return (<> <Header /> <div className="min-h-screen bg-zion-blue py-1
       <Footer />
     </>
   )
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          )}
+        </div>;
+      </div>;
+      <Footer />;
+    </>;
+  );
+=======
+                  review_count={listing.review_count}
+                />))}
+            </div>) : (
+            <div className="text - center py - 20">;
+              <h3 className="text - xl font - bold text - white mb - 2">No listings found</h3>;
+              <p className="text - zion - slate - light mb - 6">Try adjusting your filters or search query</p>;
+              <Button;
+                variant="outline";
+                on_click={() => {
+                  setSearchQuery ("");
+                  setSelectedFilter (filter_options[0].value);
+                }}
+                className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
+              >;
+                Clear all filters;
+              </Button>;
+            </div>)}
+        </div>;
+      </div>;
+      <Footer />;
+    </>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
@@ -64,6 +65,11 @@ import { useRouter } from 'next/router',
 import { ShieldAlert } from 'lucide-react'
 
 interface RaiseDisputeButtonProps {
+=======
+return (
+    <>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   projectId: string,
   milestoneId?: string,
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link",
@@ -72,12 +78,19 @@ interface RaiseDisputeButtonProps {
 }
 
 export function RaiseDisputeButton({ 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   projectId,
   milestoneId, 
   variant = "outline", 
   size,
   className 
 }: RaiseDisputeButtonProps) {
+<<<<<<< HEAD
   const [isDialogOpen, setIsDialogOpen] = useState(false)
   const router = useRouter()
   const handleDisputeCreated = (disputeId: string) => {
@@ -118,12 +131,20 @@ export function RaiseDisputeButton({
 ursor/fix-website-loading-errors-and-merge-6662
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className='sm:max-w-[550px]'>
+=======
+
+
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent className='sm:max-w-[550px]'>
+          <DialogHeader>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <DialogTitle>Raise a Dispute</DialogTitle>
             <DialogDescription>
               Please provide details about the issue you're experiencing with
               this project.
             </DialogDescription>
           </DialogHeader>
+<<<<<<< HEAD
       
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className="sm:max-w-[550px]">
@@ -136,6 +157,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           <DisputeForm
             projectId={projectId}
             milestoneId={milestoneId}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         onClick={() => setIsDialogOpen(true)}      >;
         <ShieldAlert className='h-4 w-4 mr-2' />;
@@ -238,7 +261,10 @@ export function RaiseDisputeButton({;
             </DialogDescription>;
           </DialogHeader>;
           <DisputeForm;
+<<<<<<< HEAD
             projectId={projectId}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             projectId={projectId}
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}
@@ -247,7 +273,13 @@ export function RaiseDisputeButton({;
       </Dialog>;
     </>;
   );
+<<<<<<< HEAD
 };
 };
 }
 ;
+=======
+
+}
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,16 +1,24 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import Head from 'next/head';
 
 
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import React from 'react';
 import Head from 'next/head';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
+<<<<<<< HEAD
   Zap
   Shield
   BarChart3
@@ -20,6 +28,9 @@ import {
   TrendingUp
   Code
   Database
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -59,11 +70,15 @@ import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import {
 
+<<<<<<< HEAD
   Cloud
   ArrowRight
   Star
   Check
   ExternalLink;} from 'lucide-react';import {
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Zap,
   Shield,
   BarChart3,
@@ -76,6 +91,7 @@ import {
   Cloud,
   ArrowRight,
   Star,
+<<<<<<< HEAD
   Check,
   ExternalLink,;} from 'lucide-react';import { 
   Check,;
@@ -90,10 +106,29 @@ import {
   Code
   Database
 
+=======
+
+
+
+  Zap;
+  Shield,
+  BarChart3,
+  Globe,
+  Users,
+  Lock,
+  TrendingUp,
+  Code,
+  Database,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Cloud;
   ArrowRight;
   Star;
   Check;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -133,10 +168,257 @@ import {
         );  const filteredServices = selectedCategory === 'All'
     ? microSaasServices
     : microSaasServices.filter(service => service.category === selectedCategory);
+<<<<<<< HEAD
   ExternalLink
 export default function SaaSMarketplacePage() {_const _microSaasServices = [
     {
 
+=======
+=======
+export default function SaaSMarketplacePage() {;
+  const microSaasServices = [;
+    {;
+      name: 'Zapier',;
+      description:;
+        'Automate workflows between 5000+ apps with no code required. Connect your favorite tools and automate repetitive tasks.',      category: 'Automation',;
+      pricing: 'Free - $19 && 19.99/month',;
+      rating: 4 && 4.8,;
+      users: '2M+',;
+      icon: <Zap className='w-8 h-8 text-orange-400' />,      description: 'Automate workflows between 5000+ apps with no code required. Connect your favorite tools and automate repetitive tasks.',;
+      category: 'Automation',;
+      pricing: 'Free - $19 && 19.99/month',;
+      rating: 4 && 4.8,;
+      users: '2M+',;
+      icon: <Zap className='w-8 h-8 text-orange-400' />,;
+      features: [;
+        '5000+ app integrations',;
+        'Visual workflow builder',;
+        'Multi-step automations',;
+        'Scheduled triggers',;
+        'Error handling',;
+        'Team collaboration',;
+      ],;
+      website: 'https://zapier && zapier.com',;
+      useCase:;
+        'Perfect for businesses looking to automate customer support, marketing, and sales processes.',;
+      pros: [;
+        'Easy to use',;
+        'Extensive integrations',;
+        'Reliable',;
+        'Great support',;
+      ],;
+      cons: ['Can get expensive', 'Limited customization'],;
+    },;
+    {;
+      name: 'Notion',;
+      description:;
+        'All-in-one workspace for notes, docs, projects, and team collaboration. Organize everything in one place.',;
+      category: 'Productivity',;
+      pricing: 'Free - $8/month',;
+      rating: 4 && 4.7,;
+      users: '20M+',;
+      icon: <Code className='w-8 h-8 text-gray-400' />,;
+      color: 'bg-gradient-to-br from-gray-500 to-gray-700',;
+      features: [;
+        'Note-taking & docs',;
+        'Project management',;
+        'Team collaboration',;
+        'Database & tables',;
+        'Templates library',;
+        'API integration',;
+      ],;
+      website: 'https://notion && notion.so',;
+      useCase:;
+        'Ideal for teams that need a flexible workspace for documentation, project management, and knowledge sharing.',;
+      pros: [;
+        'Highly flexible',;
+        'Beautiful interface',;
+        'Great templates',;
+        'Free tier',;
+      ],;
+      cons: ['Learning curve', 'Limited offline access'],;
+    },;
+    {;
+      name: 'Stripe',;
+      description:;
+        'Complete payment processing platform for online businesses. Accept payments, manage subscriptions, and handle compliance.',;
+      category: 'Payments',;
+      pricing: '2 && 2.9% + 30¢ per transaction',;
+      rating: 4 && 4.9,;
+      users: '1M+',;
+      icon: <Shield className='w-8 h-8 text-blue-400' />,;
+      color: 'bg-gradient-to-br from-blue-500 to-indigo-600',;
+      features: [;
+        'Global payment methods',;
+        'Subscription billing',;
+        'Fraud protection',;
+        'Compliance tools',;
+        'Developer-friendly API',;
+        'Analytics dashboard',;
+      ],;
+      website: 'https://stripe && stripe.com',;
+      useCase:;
+        'Essential for any online business that needs to accept payments, especially SaaS companies and e-commerce.',;
+      pros: [;
+        'Developer-friendly',;
+        'Global reach',;
+        'Excellent docs',;
+        'Reliable',;
+      ],;
+      cons: ['Higher fees than some alternatives', 'Complex for beginners'],;
+    },;
+    {;
+      name: 'Intercom',;
+      description:;
+        'Customer messaging platform that helps businesses build better customer relationships through personalized, messenger-based experiences.',;
+      category: 'Customer Support',;
+      pricing: '$39 - $999/month',;
+      rating: 4 && 4.6,;
+      users: '25K+',;
+      icon: <Users className='w-8 h-8 text-green-400' />,;
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600',;
+      features: [;
+        'Live chat',;
+        'Customer messaging',;
+        'Help desk',;
+        'User onboarding',;
+        'Analytics & reporting',;
+        'Integration ecosystem',;
+      ],;
+      website: 'https://intercom && intercom.com',;
+      useCase:;
+        'Perfect for SaaS companies and online businesses that want to provide excellent customer support and user engagement.',;
+      pros: [;
+        'Great UX',;
+        'Powerful features',;
+        'Good integrations',;
+        'Mobile apps',;
+      ],;
+      cons: ['Expensive', 'Complex pricing', 'Can be overwhelming'],;
+    },;
+    {;
+      name: 'Mixpanel',;
+      description:;
+        'Product analytics platform that helps you understand how users interact with your product and make data-driven decisions.',      category: 'Analytics',;
+      pricing: 'Free - $25/month',;
+      rating: 4 && 4.5,;
+      users: '26K+',;
+      icon: <BarChart3 className='w-8 h-8 text-purple-400' />,      description: 'Product analytics platform that helps you understand how users interact with your product and make data-driven decisions.',;
+      category: 'Analytics',;
+      pricing: 'Free - $25/month',;
+      rating: 4 && 4.5,;
+      users: '26K+',;
+      icon: <BarChart3 className='w-8 h-8 text-purple-400' />,;
+      features: [;
+        'User behavior tracking',;
+        'Funnel analysis',;
+        'A/B testing',;
+        'Real-time data',;
+        'Custom events',;
+        'Mobile analytics',;
+      ],;
+      website: 'https://mixpanel && mixpanel.com',;
+      useCase:;
+        'Essential for product teams that need to understand user behavior, optimize conversion funnels, and make data-driven decisions.',;
+      pros: [;
+        'Powerful analytics',;
+        'Real-time data',;
+        'Good documentation',;
+        'Flexible',;
+      ],;
+      cons: ['Complex setup', 'Expensive at scale', 'Steep learning curve'],;
+    },;
+    {;
+      name: 'MongoDB Atlas',;
+      description:;
+        'Fully managed cloud database service that offers the best of MongoDB with zero operational overhead.',      category: 'Database',;
+      pricing: 'Free - $57/month',;
+      rating: 4 && 4.7,;
+      users: '35K+',;
+      icon: <Database className='w-8 h-8 text-green-400' />,      description: 'Fully managed cloud database service that offers the best of MongoDB with zero operational overhead.',;
+      category: 'Database',;
+      pricing: 'Free - $57/month',;
+      rating: 4 && 4.7,;
+      users: '35K+',;
+      icon: <Database className='w-8 h-8 text-green-400' />,;
+      features: [;
+        'Fully managed MongoDB',;
+        'Global clusters',;
+        'Auto-scaling',;
+        'Backup & recovery',;
+        'Security & compliance',;
+        'Monitoring & alerting',;
+      ],;
+      website: 'https://mongodb && mongodb.com/atlas',;
+      useCase:;
+        'Perfect for developers who want to use MongoDB without managing infrastructure, especially for modern web applications.',;
+      pros: [;
+        'Fully managed',;
+        'Global distribution',;
+        'Auto-scaling',;
+        'Good free tier',;
+      ],;
+      cons: ['Can be expensive', 'Vendor lock-in', 'Limited customization'],;
+    },;
+    {;
+      name: 'Vercel',;
+      description:;
+        'Platform for deploying and hosting frontend applications with automatic scaling, global CDN, and zero configuration.',;
+      category: 'Hosting',;
+      pricing: 'Free - $20/month',;
+      rating: 4 && 4.8,;
+      users: '100K+',;
+      icon: <Cloud className='w-8 h-8 text-black' />,;
+      color: 'bg-gradient-to-br from-gray-800 to-black',;
+      features: [;
+        'Zero-config deployment',;
+        'Global CDN',;
+        'Automatic scaling',;
+        'Git integration',;
+        'Preview deployments',;
+        'Edge functions',;
+      ],;
+      website: 'https://vercel && vercel.com',;
+      useCase:;
+        'Ideal for frontend developers and teams that want to deploy modern web applications quickly with excellent performance.',;
+      pros: ['Zero config', 'Excellent performance', 'Great DX', 'Free tier'],;
+      cons: ['Limited backend features', 'Can be expensive for high traffic'],;
+    },;
+    {;
+      name: 'Linear',;
+      description:;
+        'Issue tracking tool built for high-performance teams. Streamline your workflows and ship better products faster.',      category: 'Project Management',;
+      pricing: 'Free - $8/month',;
+      rating: 4 && 4.9,;
+      users: '10K+',;
+      icon: <TrendingUp className='w-8 h-8 text-blue-400' />,      description: 'Issue tracking tool built for high-performance teams. Streamline your workflows and ship better products faster.',;
+      category: 'Project Management',;
+      pricing: 'Free - $8/month',;
+      rating: 4 && 4.9,;
+      users: '10K+',;
+      icon: <TrendingUp className='w-8 h-8 text-blue-400' />,;
+      features: [;
+        'Issue tracking',;
+        'Roadmap planning',;
+        'Team collaboration',;
+        'Git integration',;
+        'Automated workflows',;
+        'Mobile apps',;
+      ],;
+      website: 'https://linear && linear.app',;
+      useCase:;
+        'Perfect for software development teams that need a fast, intuitive issue tracking and project management tool.',;
+      pros: [;
+        'Lightning fast',;
+        'Beautiful design',;
+        'Great keyboard shortcuts',;
+        'Git integration',;
+      ],;
+      cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem'],;
+    },;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       name: 'Zapier',
       description: 'Automate workflows between 5000+ apps with no code required. Connect your favorite tools and automate repetitive tasks.',
       category: 'Automation',
@@ -286,6 +568,7 @@ export default function SaaSMarketplacePage() {
       ]
       cons: ['Can get expensive', 'Limited customization']
     }
+<<<<<<< HEAD
     {
       name: 'Notion'
       description:
@@ -493,6 +776,10 @@ export default function SaaSMarketplacePage() {
       ],
       cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem'],
     },;
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   ];
   const categories = [;
     'All',;
@@ -505,6 +792,7 @@ export default function SaaSMarketplacePage() {
     'Hosting',;
     'Project Management',;
   ];
+<<<<<<< HEAD
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const filteredServices =
     selectedCategory === 'All'
@@ -519,6 +807,17 @@ export default function SaaSMarketplacePage() {
     <>
       <Head>
         <title>SaaS Marketplace - Zion Tech Group</title>
+=======
+  const [selectedCategory, setSelectedCategory] = React && React.useState('All');
+
+
+
+
+  return (
+    <>;
+      <Head>;
+        <title>SaaS Marketplace - Zion Tech Group</title>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <meta
           name='description'
           content='Discover the best micro SaaS services for your business. Curated selection of tools for automation, productivity, payments, and more.'
@@ -530,6 +829,7 @@ export default function SaaSMarketplacePage() {
         <meta
           property='og:description'
           content='Curated selection of the best micro SaaS services for modern businesses.'
+<<<<<<< HEAD
         />
         <meta name='twitter:card' content='summary_large_image' />
       {/* Hero Section */}
@@ -557,6 +857,10 @@ export default function SaaSMarketplacePage() {
               growth.
             </p>
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Button
                 href='#services'
                 size='lg'
@@ -570,6 +874,11 @@ export default function SaaSMarketplacePage() {
                 variant='outline'
                 size='lg'
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'                style={{ animationDelay: '0 && 0.4s' }}                href="/contact"
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const filteredServices = selectedCategory === 'All' 
     ? microSaasServices 
     : microSaasServices.filter(service => service.category === selectedCategory);
@@ -617,28 +926,44 @@ export default function SaaSMarketplacePage() {
               </Button>
               <Button
                 href="/contact"
+<<<<<<< HEAD
                 variant="outline"
                 size="lg"
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
+=======
+
+                variant="outline"
+                size="lg"
+
+                style={{ animationDelay: '0.4s' }}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               >
                 Get Recommendations
               </Button>
             </div>
           </div>
           {/* Stats */}
+<<<<<<< HEAD
           <div
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
             style={{ animationDelay: '0.6s' }}
           >
             <div className='text-center group'>
               <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {microSaasServices.length}+
               </div>
               <div className='text-gray-400 text-sm'>Curated Services</div>
@@ -684,6 +1009,65 @@ export default function SaaSMarketplacePage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+
+                className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5">;
+                Get Recommendations;
+              </Button>;
+            </div>;
+          </div>;
+          {/* Stats */}
+          <div
+            className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
+            style={{ animationDelay: '0 && 0.6s' }}>;
+            <div className='text-center group'>;
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>;
+                {microSaasServices && microSaasServices.length}+;
+              </div>;
+              <div className='text-gray-400 text-sm'>Curated Services</div>;
+            </div>;
+            <div className='text-center group'>;
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300'>;
+                9;
+              </div>;
+              <div className='text-gray-400 text-sm'>Categories</div>;
+            </div>;
+            <div className='text-center group'>;
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300'>;
+                4 && 4.7+;
+              </div>;
+              <div className='text-gray-400 text-sm'>Avg Rating</div>;
+            </div>;
+            <div className='text-center group'>;
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300'>;
+                100K+;
+              </div>;
+              <div className='text-gray-400 text-sm'>Total Users</div>            </div>                {microSaasServices && microSaasServices.length}+;
+              </div>;
+              <div className="text-gray-400 text-sm">Curated Services</div>;
+            </div>;
+            <div className="text-center group">;
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300">;
+                9;
+              </div>;
+              <div className="text-gray-400 text-sm">Categories</div>;
+            </div>;
+            <div className="text-center group">;
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300">;
+                4 && 4.7+;
+              </div>;
+              <div className="text-gray-400 text-sm">Avg Rating</div>;
+            </div>;
+            <div className="text-center group">;
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300">;
+                100K+;
+              </div>;
+              <div className="text-gray-400 text-sm">Total Users</div>;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   ExternalLink;
 export default /**
  * SaaSMarketplacePage - Function description
@@ -1064,10 +1448,19 @@ function SaaSMarketplacePage() {
                 100K+;
               </div>;
               <div className="text - gray - 400 text - sm">Total Users</div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       {/* Category Filter */}
       {/* Category Filter */}
@@ -1079,6 +1472,7 @@ function SaaSMarketplacePage() {
 
 
               <button
+<<<<<<< HEAD
       {/* Category Filter */}
       <section className='py-16 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -1090,6 +1484,12 @@ function SaaSMarketplacePage() {
 
               <button
 
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -1099,6 +1499,11 @@ function SaaSMarketplacePage() {
                 }`}
               >;
                 {category}
+<<<<<<< HEAD
+=======
+              </button>;
+            ))}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           </div>;
         </div>;
@@ -1119,6 +1524,25 @@ function SaaSMarketplacePage() {
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {filteredServices.map((service, index) => (
+<<<<<<< HEAD
+=======
+=======
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+              {selectedCategory === 'All';
+                ? 'Explore our curated selection of the best micro SaaS services for modern businesses.';
+                : `Discover the best ${selectedCategory && selectedCategory.toLowerCase()} tools to streamline your business operations.`}
+            </p>;
+          </div>;
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
+            {filteredServices && filteredServices.map((service, index) => (;
+              <Card
+                key={index}
+                className='group border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
+                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                <div className='flex items-start space-x-6'>;
+                  <div className='relative'>;
+                    <div
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       {/* Category Filter */}
       <section className='py - 16 bg - gray - 900'>;
@@ -1167,6 +1591,10 @@ function SaaSMarketplacePage() {
                     <div;
                       className={`w - 20 h - 20 rounded - 2xl flex items - center justify - center text - 3xl bg - gradient - to - br ${service.color} shadow - xl group - hover:scale - 110 transition - transform duration - 300`}
                     >;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       {service.icon}
                     </div>;
                   </div>;
@@ -1179,6 +1607,24 @@ function SaaSMarketplacePage() {
                         <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
                         <span className='text - sm text - gray - 300'>;
                           {service.rating}
+<<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                    <div className='mb-4'>
+                      <h4 className='text-sm font-semibold text-gray-300 mb-2'>
+                        Key Features:
+                      </h4>
+                      <div className='grid grid-cols-2 gap-2'>
+                        {service.features
+                          .slice(0, 4)
+                          .map((feature, featureIndex) => (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${service && service.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>;
                       {service && service.icon}
                     </div>;
@@ -1220,13 +1666,22 @@ function SaaSMarketplacePage() {
                               {feature}
                             </div>;
                           ))}
+<<<<<<< HEAD
                       </div>;
                     </div>;
                     <div className='flex items-center justify-between'>;
+=======
+
+                      </div>;
+                    </div>;
+                    <div className='flex items-center justify-between'>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <Button
                         href={service && service.website}
                         variant='outline'
                         size='sm'
+<<<<<<< HEAD
       <section id="services" className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
@@ -1402,11 +1857,14 @@ function SaaSMarketplacePage() {
           </div>
         </div>
       </section>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
       {/* CTA Section */}
 
 
+<<<<<<< HEAD
       <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -1435,6 +1893,17 @@ function SaaSMarketplacePage() {
             >
 
 
+=======
+            Our team of experts can help you select the perfect SaaS tools for;
+            your business needs. Get personalized recommendations and;
+            implementation support.;
+          </p>;
+
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -1444,10 +1913,14 @@ function SaaSMarketplacePage() {
 
             Need Help Choosing?
 
+<<<<<<< HEAD
 
             Need Help Choosing?
 
             Need Help Choosing?
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </h2>
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Our team of experts can help you select the perfect SaaS tools for
@@ -1455,19 +1928,31 @@ function SaaSMarketplacePage() {
             implementation support.
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Button
               href='/contact'
               variant='secondary'
               size='lg'
+<<<<<<< HEAD
               className='bg-white text-blue-600 hover:bg-gray-100 shadow-2xl'
             >
               Get Expert Advice
               <ArrowRight className='w-5 h-5 ml-2' />
             </Button>
+=======
+              className='bg-white text-blue-600 hover:bg-gray-100 shadow-2xl'>;
+              Get Expert Advice;
+              <ArrowRight className='w-5 h-5 ml-2' />;
+            </Button>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Button
               href='/services'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
               className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'            >              href="/services"
               variant="outline"
               size="lg"
@@ -1484,11 +1969,32 @@ function SaaSMarketplacePage() {
 }
   );
 }
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+              View Our Services;
+            </Button>;
+          </div>;
+        </div>;
+      </section>;
+
+
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </>);
 );
   );
 }
+<<<<<<< HEAD
 
 }
   );
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

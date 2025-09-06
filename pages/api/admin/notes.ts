@@ -1,8 +1,21 @@
+<<<<<<< HEAD
   id: string;
+=======
+
+  id: string;
+  targetType: string;
+  targetId: string;
+  text: string;
+  authorId: string;
+  createdAt: number;
+};
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const notesStore: Note[] = [];
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { randomUUID } from 'crypto';
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { randomUUID } from 'crypto',;
 type Note = {
@@ -14,11 +27,15 @@ type Note = {
   createdAt: number
 }
 const notesStore: Note[] = []
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const isAdmin = req.headers['x-admin'] === 'true'
   if (!isAdmin) return res.status(403).json({ error: 'Admin only' })
   if (req.method === 'GET') {
 
+<<<<<<< HEAD
     const { targetType, targetId } = req.query;
     if (!targetType || Array.isArray(targetType)) {
       return res.status(400).json({ error: 'Invalid targetType' });
@@ -32,6 +49,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(200).json({ notes });
   }
 if (req.method === 'POST') {
+=======
+
+  }
+  if (req.method === 'POST') {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const authorId = String(req.headers['x-admin-user'] || 'admin');
     const { targetType, targetId, text } = req.body || {};
     if (!targetType || !targetId || !text?.trim()) {
@@ -53,6 +76,7 @@ if (req.method === 'POST') {
 export function getAllNotes(): Note[] {
   return [...notesStore].sort((a, b) => b.createdAt - a.createdAt);
 
+<<<<<<< HEAD
 
 
 export function getAllNotes(): Note[] {
@@ -112,3 +136,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { 
   Brain;
 import React from 'react';
@@ -18,6 +19,57 @@ import {
   CheckCircle
   TrendingUp
   Shield;} from 'lucide-react';import {
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+
+import {;
+  Brain,;
+  MessageSquare,;
+  Image,;
+  Video,;
+  Code,;
+  FileText,;
+  Zap,;
+  Star,;
+  ExternalLink,;
+  CheckCircle,;
+  TrendingUp,;
+  Shield,;} from 'lucide-react';import { ;
+  Brain;
+  MessageSquare, ;
+  Image, ;
+  Video, ;
+  Code, ;
+  FileText, ;
+  Zap, ;
+import Head from 'next / head';
+import Card from '../components / ui / Card';
+import Button from '../components / ui / Button';
+import {
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Brain,
   MessageSquare,
   Image,
@@ -28,6 +80,7 @@ import {
   Star,
   ExternalLink,
   CheckCircle,
+<<<<<<< HEAD
   TrendingUp,
   Shield,;} from 'lucide-react';import { 
   TrendingUp,;
@@ -40,10 +93,27 @@ import {
   FileText
   Zap
 
+=======
+
+
+
+  Brain;
+  MessageSquare,
+  Image,
+  Video,
+  Code,
+  FileText,
+  Zap,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Star;
   ExternalLink;
   CheckCircle;
   TrendingUp;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -64,7 +134,48 @@ import {
       textColor: 'text-green-400'
       gradient: 'from-green-400 to-emerald-500'
       popular: true
+<<<<<<< HEAD
   Shield
+=======
+=======
+      icon: <Brain className="w-8 h-8 text-white" />,
+      title: 'ChatGPT Plus',
+      description: 'Advanced AI chatbot with enhanced reasoning, web browsing, and plugin capabilities for professional use.',
+    features: [
+        'Advanced reasoning & analysisWeb browsing & real-time infoPlugin ecosystem accessCode generation & debuggingProfessional writing assistance'
+      ];
+      pricing: '$20/month',
+      marketPrice: '$20/month',
+  Shield;
+export default /**
+ * AiToolsPage - Function description
+ */
+function AiToolsPage() {
+  const ai_tools = [;
+    {
+      icon: <Brain className='w - 8 h - 8 text - white' />,
+      description:;
+        'Advanced AI chatbot with enhanced reasoning, web browsing, and plugin capabilities for professional use.',
+      features: [;
+        'Advanced reasoning & analysis',
+        'Web browsing & real - time info',
+        'Plugin ecosystem access',
+        'Code generation & debugging',
+        'Professional writing assistance',
+      ],      pricing: '$20 / month',        'Advanced reasoning & analysis_web browsing & real - time info_plugin ecosystem access_code generation & debugging_professional writing assistance';
+      ];
+      pricing: '$20 / month',
+      market_price: '$20 / month',
+      website: 'https://chat.openai.com',
+      color: 'bg - gradient - to - br from - green - 500 to - emerald - 600',
+      text_color: 'text - green - 400',
+      gradient: 'from - green - 400 to - emerald - 500',
+      popular: true,
+      category: 'Conversational AI'
+    }
+    {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       pricing: '$10-30/month',
       marketPrice: '$10-30/month',
       icon: <Image className='w - 8 h - 8 text - white' />,
@@ -86,14 +197,26 @@ import {
       ];
       pricing: '$10 - 30 / month',
       market_price: '$10 - 30 / month',
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       website: 'https://midjourney.com',
       color: 'bg - gradient - to - br from - purple - 500 to - pink - 600',
       text_color: 'text - purple - 400',
       gradient: 'from - purple - 400 to - pink - 500',
       popular: true,
+<<<<<<< HEAD
       category: 'Image Generation'
     }
     {
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+      category: 'Image Generation'
+    }
+    {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function AiToolsPage() {;
   const aiTools = [;
     {;
@@ -206,6 +329,7 @@ export default function AiToolsPage() {;
       ],      pricing: '$20/month',    {;
       icon: <MessageSquare className="w-8 h-8 text-white" />,;
       title: 'Claude Pro',;
+<<<<<<< HEAD
       description: 'Anthropic\'s advanced AI assistant with superior reasoning, analysis, and document processing capabilities.';
       features: [;
         'Advanced reasoning abilitiesDocument analysisCode generationCreative writingResearch assistance';
@@ -432,11 +556,26 @@ export default function AiToolsPage() {
       category: 'Content Creation'
     },  ];      category: 'Content Creation'
     }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         'Advanced reasoning abilities',
         'Document analysis',
         'Code generation',
         'Creative writing',
         'Research assistance',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      ],      pricing: '$20 / month',    {
+      icon: <MessageSquare className="w - 8 h - 8 text - white" />,
+      title: 'Claude Pro',
+      description: 'Anthropic's advanced AI assistant with superior reasoning, analysis, and document processing capabilities.';
+      features: [;
+        'Advanced reasoning abilities_document analysis_code generation_creative writing_research assistance';
+      ];
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       pricing: '$20 / month',
       market_price: '$20 / month',
       website: 'https://claude.ai',
@@ -444,9 +583,18 @@ export default function AiToolsPage() {
       text_color: 'text - orange - 400',
       gradient: 'from - orange - 400 to - red - 500',
       popular: false,
+<<<<<<< HEAD
     },  ];
 
 
+=======
+
+=======
+    },  ];
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   ];
 
 ;
@@ -454,6 +602,7 @@ export default function AiToolsPage() {
 
     {
 
+<<<<<<< HEAD
       category: 'Conversational AI',
     },
       icon: <FileText className='w - 8 h - 8 text - white' />,
@@ -486,22 +635,38 @@ export default function AiToolsPage() {
         'Team collaboration',
         'Enterprise integrations',
 };
+=======
+      title: 'AI Market Size',
+      value: '$136.6B',
+      growth: '+37% YoY',
+      description: 'Global AI market value in 2024'
+    };
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       title: 'AI Adoption Rate',
       value: '35%',
       growth: '+12% YoY',
       description: 'Businesses actively using AI tools'
+<<<<<<< HEAD
 };
+=======
+    };
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       title: 'AI Investment',
       value: '$93.5B',
       growth: '+28% YoY',
       description: 'Global AI investment in 2024'
+<<<<<<< HEAD
 };
+=======
+    };
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       title: 'AI Productivity Gain',
       value: '40%',
       growth: '+15% YoY',
+<<<<<<< HEAD
 description: 'Average productivity improvement',
     },  ];      description: 'Global AI market value in 2024';
     }
@@ -587,6 +752,9 @@ description: 'Average productivity improvement',
       tools: 1,
       avg_price: '$82 / month',
     },      avg_price: '$82 / month';
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   ];
 ;
@@ -596,6 +764,10 @@ description: 'Average productivity improvement',
         <title>;
           AI Tools & Services | Zion Tech Group - Real AI Solutions with Pricing;
         </title>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       name: 'Conversational AI',
       description: 'Chatbots, virtual assistants, and language models',
     tools: 3,
@@ -612,18 +784,27 @@ description: 'Average productivity improvement',
       description: 'AI-assisted programming and development tools',
       tools: 1,
       avgPrice: '$10/month'
+<<<<<<< HEAD
 };
+=======
+    };
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       name: 'Video Generation',
       description: 'AI video creation and editing tools',
       tools: 1,
       avgPrice: '$44/month'
+<<<<<<< HEAD
 };
+=======
+    };
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       name: 'Content Creation',
       description: 'AI-powered writing and content generation',
       tools: 1,
       avgPrice: '$82/month'
+<<<<<<< HEAD
     }
 ];
   return (
@@ -631,10 +812,23 @@ description: 'Average productivity improvement',
       <Head>
         <title>AI Tools & Services | Zion Tech Group - Real AI Solutions with Pricing</title>
 <meta name="description" content="Discover real AI tools and services including ChatGPT, Midjourney, GitHub Copilot, and more. All tools include real pricing, features, and direct links." />
+=======
+
+    }
+  ];
+
+  return (
+
+    <>
+      <Head>
+        <title>AI Tools & Services | Zion Tech Group - Real AI Solutions with Pricing</title>
+        <meta name="description" content="Discover real AI tools and services including ChatGPT, Midjourney, GitHub Copilot, and more. All tools include real pricing, features, and direct links." />
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <meta property="og:title" content="AI Tools & Services | Zion Tech Group" />
         <meta property="og:description" content="Real AI tools with pricing and direct links to help boost your productivity and creativity." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+<<<<<<< HEAD
       ],      pricing: '$39-125/month',
 
       pricing: '$39-125/month',
@@ -793,6 +987,10 @@ description: 'Average productivity improvement',
             Curated AI tools and services that actually work. Each tool has been
             tested and verified to provide real value for professionals and
             businesses. No hype - just results.          </p>      </Head>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]" />
@@ -812,6 +1010,121 @@ description: 'Average productivity improvement',
           </p>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+      {/* AI Market Statistics */}
+
+
+        />;
+        <meta name='twitter:card' content='summary_large_image' />;
+      </Head>;
+      {/* Hero Section */}
+      <section className='relative section-padding bg-gradient-cursor overflow-hidden'>;
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0 && 0.08),transparent_50%)]' />;
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0 && 0.06),transparent_50%)]' />;
+        <div className='absolute inset-0 bg-grid opacity-10' />;
+        <div className='relative z-10 container-cursor text-center'>;
+          <div className='inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6'>;
+            <span className='w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse' />;
+            AI Tools & Services;
+          </div>;
+          <h1 className='text-responsive-xl font-black mb-8 gradient-text text-shadow-lg'>;
+            Real AI Tools for Real Results;
+          </h1>;
+          <p className='text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed'>;
+            Curated AI tools and services that actually work. Each tool has been;
+            tested and verified to provide real value for professionals and;
+            businesses. No hype - just results.          </p>      </Head>;
+      {/* Hero Section */}
+      <section className="relative section-padding bg-gradient-cursor overflow-hidden">;
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0 && 0.08),transparent_50%)]" />;
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0 && 0.06),transparent_50%)]" />;
+        <div className="absolute inset-0 bg-grid opacity-10" />;
+        <div className="relative z-10 container-cursor text-center">;
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6">;
+            <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" />;
+            AI Tools & Services;
+          </div>;
+          <h1 className="text-responsive-xl font-black mb-8 gradient-text text-shadow-lg">;
+            Real AI Tools for Real Results;
+          </h1>;
+          <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed">;
+            Curated AI tools and services that actually work. Each tool has been tested and verified to provide ;
+            real value for professionals and businesses. No hype - just results.;
+          </p>;
+        </div>;
+      </section>;
+      {/* AI Market Statistics */}
+      <section className='section-padding bg-gradient-cursor-accent'>;
+        <div className='container-cursor'>;
+          <div className='text-center mb-20'>;
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
+            </h2>;
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+        <meta;
+          name='description';
+          content='Discover real AI tools and services including ChatGPT, Midjourney, GitHub Copilot, and more. All tools include real pricing, features, and direct links.';
+        />;
+        <meta;
+          property='og:title';
+          content='AI Tools & Services | Zion Tech Group';
+        />;
+        <meta;
+          property='og:description';
+          content='Real AI tools with pricing and direct links to help boost your productivity and creativity.';
+        />;
+        <meta name='twitter:card' content='summary_large_image' />;
+      </Head>;
+      {/* Hero Section */}
+      <section className='relative section - padding bg - gradient - cursor overflow - hidden'>;
+        <div className='absolute inset - 0 bg-[radial - gradient (circle_at_30%_20%, rgba (0, 122, 204, 0.08), transparent_50%)]' />;
+        <div className='absolute inset - 0 bg-[radial - gradient (circle_at_70%_80%, rgba (0, 122, 204, 0.06), transparent_50%)]' />;
+        <div className='absolute inset - 0 bg - grid opacity - 10' />;
+        <div className='relative z - 10 container - cursor text - center'>;
+          <div className='inline - flex items - center px - 4 py - 2 rounded - full bg - cursor - blue / 10 border border - cursor - blue / 20 text - cursor - blue text - sm font - medium mb - 6'>;
+            <span className='w - 2 h - 2 bg - cursor - blue rounded - full mr - 2 animate - pulse' />;
+            AI Tools & Services;
+          </div>;
+          <h1 className='text - responsive - xl font - black mb - 8 gradient - text text - shadow - lg'>;
+            Real AI Tools for Real Results;
+          </h1>;
+          <p className='text - responsive - md text - gray - 300 max - w-5xl mx - auto leading - relaxed'>;
+            Curated AI tools and services that actually work. Each tool has been;
+            tested and verified to provide real value for professionals and;
+            businesses. No hype - just results.          </p>      </Head>;
+      {/* Hero Section */}
+      <section className="relative section - padding bg - gradient - cursor overflow - hidden">;
+        <div className="absolute inset - 0 bg-[radial - gradient (circle_at_30%_20%, rgba (0, 122, 204, 0.08), transparent_50%)]" />;
+        <div className="absolute inset - 0 bg-[radial - gradient (circle_at_70%_80%, rgba (0, 122, 204, 0.06), transparent_50%)]" />;
+        <div className="absolute inset - 0 bg - grid opacity - 10" />;
+        <div className="relative z - 10 container - cursor text - center">;
+          <div className="inline - flex items - center px - 4 py - 2 rounded - full bg - cursor - blue / 10 border border - cursor - blue / 20 text - cursor - blue text - sm font - medium mb - 6">;
+            <span className="w - 2 h - 2 bg - cursor - blue rounded - full mr - 2 animate - pulse" />;
+            AI Tools & Services;
+          </div>;
+          <h1 className="text - responsive - xl font - black mb - 8 gradient - text text - shadow - lg">;
+            Real AI Tools for Real Results;
+          </h1>;
+          <p className="text - responsive - md text - gray - 300 max - w-5xl mx - auto leading - relaxed">;
+            Curated AI tools and services that actually work. Each tool has been tested and verified to provide;
+            real value for professionals and businesses. No hype - just results.;
+          </p>;
+        </div>;
+      </section>;
+      {/* AI Market Statistics */}
+      <section className='section - padding bg - gradient - cursor - accent'>;
+        <div className='container - cursor'>;
+          <div className='text - center mb - 20'>;
+            <h2 className='text - responsive - lg font - bold mb - 8 gradient - text text - shadow'>;
+            </h2>;
+            <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
+              Understanding the AI landscape helps you make informed decisions;
+              about which tools to invest in.;
+            </p>;
+          </div>;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <section className="section-padding bg-gradient-cursor-accent">
         <div className="container-cursor">
           <div className="text-center mb-20">
@@ -863,6 +1176,7 @@ description: 'Average productivity improvement',
                   <div className="text-2xl font-bold text-cursor-blue mb-2">{stat.value}</div>
                   <div className="text-sm text-green-400 mb-3">{stat.growth}</div>
                   <p className="text-sm text-gray-400">{stat.description}</p>
+<<<<<<< HEAD
               </Card>
             ))}
           </div>
@@ -875,6 +1189,13 @@ description: 'Average productivity improvement',
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+=======
+                </div>
+              </Card>
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            ))}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -886,8 +1207,12 @@ description: 'Average productivity improvement',
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Curated AI Tools & Services
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -926,11 +1251,18 @@ description: 'Average productivity improvement',
           </div>;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             {aiTools && aiTools.map((tool, index) => (;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Card
                 key={index}
                 className={`card-hover group border-gradient-blue relative ${
                   tool && tool.popular ? 'ring-2 ring-cursor-blue ring-opacity-50' : ''
                 }`}
+<<<<<<< HEAD
                 <div className='flex items-start space-x-6'>;
                   <div className='relative'>;
                     <div
@@ -1091,6 +1423,91 @@ description: 'Average productivity improvement',
                       ))}
                     </ul>;
                     <div className='flex items-center justify-between'>;
+=======
+
+
+                        {tool.title}
+                      </h3>;
+                      <span className="text - xs bg - gray - 800 text - gray - 300 px - 2 py - 1 rounded - full">;
+                        {tool.category}
+
+                      className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${tool && tool.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`}
+                    />;
+                  </div>;
+                  <div className='flex-1'>;
+                    <div className='flex items-center justify-between mb-2'>;
+                      <h3 className={`text-2xl font-bold ${tool && tool.textColor}`}>;
+                        {tool && tool.title}
+                      </h3>;
+                      <span className='text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full'>;
+                        {tool && tool.category}
+                      </span>;
+                    </div>;
+                    <p className='text-gray-400 leading-relaxed mb-6'>;
+                      {tool && tool.description}
+                    </p>;
+                    <div className='mb-6'>;
+                      <div className='flex items-center justify-between mb-3'>;
+                        <span className='text-sm text-gray-500'>;
+                          Service Price:;
+                        </span>;
+                        <span className='text-lg font-semibold text-cursor-blue'>;
+                          {tool && tool.pricing}
+                        </span>;
+                      </div>;
+                      <div className='flex items-center justify-between mb-3'>;
+                        <span className='text-sm text-gray-500'>;
+                          Market Average:;
+                        </span>;
+                        <span className='text-sm text-gray-400'>;
+                          {tool && tool.marketPrice}
+                        </span>;
+                      </div>;
+                    </div>;
+                    <ul className='space-y-2 mb-6'>;
+                      {tool && tool.features.map((feature, featureIndex) => (;
+                        <li
+                          key={featureIndex}
+                          className='flex items-center text-gray-300'>;
+                          <CheckCircle className='w-4 h-4 text-green-400 mr-3 flex-shrink-0' />                          {feature}                      {tool && tool.icon}
+                    </div>;
+                    <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${tool && tool.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />;
+                  </div>;
+                  <div className="flex-1">;
+                    <div className="flex items-center justify-between mb-2">;
+                      <h3 className={`text-2xl font-bold ${tool && tool.textColor}`}>;
+                        {tool && tool.title}
+                      </h3>;
+                      <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">;
+                        {tool && tool.category}
+                      </span>;
+                    </div>;
+                    <p className="text-gray-400 leading-relaxed mb-6">;
+                      {tool && tool.description}
+                    </p>;
+                    <div className="mb-6">;
+                      <div className="flex items-center justify-between mb-3">;
+                        <span className="text-sm text-gray-500">Service Price:</span>;
+                        <span className="text-lg font-semibold text-cursor-blue">{tool && tool.pricing}</span>;
+                      </div>;
+                      <div className="flex items-center justify-between mb-3">;
+                        <span className="text-sm text-gray-500">Market Average:</span>;
+                        <span className="text-sm text-gray-400">{tool && tool.marketPrice}</span>;
+                      </div>;
+                    </div>;
+                    <ul className="space-y-2 mb-6">;
+                      {tool && tool.features.map((feature, featureIndex) => (;
+                        <li key={featureIndex} className="flex items-center text-gray-300">;
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />;
+
+                          {feature}
+                        </li>;
+                      ))}
+
+                    </ul>;
+                    <div className='flex items-center justify-between'>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <Button
                         href={tool && tool.website}
                         variant='primary'
@@ -1120,6 +1537,7 @@ description: 'Average productivity improvement',
                 </div>;
               </Card>;
 
+<<<<<<< HEAD
                     </p>
                     <div className="mb-6">
                       <div className="flex items-center justify-between mb-3">
@@ -1135,10 +1553,14 @@ description: 'Average productivity improvement',
                       {tool.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           {feature}
                         </li>
                       ))}
                     </ul>
+<<<<<<< HEAD
                     <div className='flex items-center justify-between'>
                       <Button
                         href={tool.website}
@@ -1154,6 +1576,11 @@ description: 'Average productivity improvement',
                         <div className='text-xs text-cursor-blue font-mono'>
                           {tool.website}
                         </div>                      </div>                      <Button
+=======
+
+                    <div className="flex items-center justify-between">
+                      <Button
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         href={tool.website}
                         variant="primary"
                         size="sm"
@@ -1193,7 +1620,88 @@ description: 'Average productivity improvement',
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {aiCategories.map((category, index) => (
           </div>;
+<<<<<<< HEAD
             ))}
+=======
+        </div>;
+      </section>;
+      {/* AI Categories Overview */}
+      <section className='section-padding bg-gradient-cursor-accent'>;
+        <div className='container-cursor'>;
+          <div className='text-center mb-20'>;
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
+            </h2>;
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+                      </span>;
+                    </div>;
+                    <p className="text - gray - 400 leading - relaxed mb - 6">;
+                      {tool.description}
+                    </p>;
+                    <div className="mb - 6">;
+                      <div className="flex items - center justify - between mb - 3">;
+                        <span className="text - sm text - gray - 500">Service Price:</span>;
+                        <span className="text - lg font - semibold text - cursor - blue">{tool.pricing}</span>;
+                      </div>;
+                      <div className="flex items - center justify - between mb - 3">;
+                        <span className="text - sm text - gray - 500">Market Average:</span>;
+                        <span className="text - sm text - gray - 400">{tool.market_price}</span>;
+                      </div>;
+                    </div>;
+                    <ul className="space - y-2 mb - 6">;
+                      {tool.features.map ((feature, feature_index) => (
+                        <li key={feature_index} className="flex items - center text - gray - 300">;
+                          <CheckCircle className="w - 4 h - 4 text - green - 400 mr - 3 flex - shrink - 0" />;
+                          {feature}
+                        </li>))}
+                    </ul>;
+                    <div className='flex items - center justify - between'>;
+                      <Button;
+                        href={tool.website}
+                        variant='primary';
+                        size='sm';
+                        className='bg - cursor - blue hover:bg - cursor - blue - dark';
+                      >;
+                        Try Tool;
+                        <ExternalLink className='w - 4 h - 4 ml - 2' />;
+                      </Button>;
+                      <div className='text - right'>;
+                        <div className='text - xs text - gray - 500'>Direct Link</div>;
+                        <div className='text - xs text - cursor - blue font - mono'>;
+                          {tool.website}
+                        </div>                      </div>                      <Button;
+                        href={tool.website}
+                        variant="primary";
+                        size="sm";
+                        className="bg - cursor - blue hover:bg - cursor - blue - dark";
+                      >;
+                        Try Tool;
+                        <ExternalLink className="w - 4 h - 4 ml - 2" />;
+                      </Button>;
+                      <div className="text - right">;
+                        <div className="text - xs text - gray - 500">Direct Link</div>;
+                        <div className="text - xs text - cursor - blue font - mono">{tool.website}</div>;
+                      </div>;
+                    </div>;
+                  </div>;
+                </div>;
+              </Card>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* AI Categories Overview */}
+      <section className='section - padding bg - gradient - cursor - accent'>;
+        <div className='container - cursor'>;
+          <div className='text - center mb - 20'>;
+            <h2 className='text - responsive - lg font - bold mb - 8 gradient - text text - shadow'>;
+            </h2>;
+            <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
+              Understanding the different types of AI tools helps you build a;
+              comprehensive toolkit for your needs.;
+            </p>;
+          </div>;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <section className="section-padding bg-gradient-cursor-accent">
         <div className="container-cursor">
           <div className="text-center mb-20">
@@ -1254,6 +1762,7 @@ description: 'Average productivity improvement',
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-gray-500">Tools Available: <span className="text-white">{category.tools}</span></span>
                     <span className="text-cursor-blue font-semibold">{category.avgPrice}</span>
+<<<<<<< HEAD
                 </div>
               </Card>
             ))}
@@ -1267,6 +1776,14 @@ description: 'Average productivity improvement',
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+=======
+                  </div>
+                </div>
+              </Card>
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            ))}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -1278,8 +1795,12 @@ description: 'Average productivity improvement',
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Getting Started with AI Tools
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1323,6 +1844,7 @@ description: 'Average productivity improvement',
                 </ul>
               </div>
             </Card>
+<<<<<<< HEAD
             <Card className='card-hover border-gradient-blue'>
               <div className='p-6'>
                 <div className='w-16 h-16 bg-cursor-blue/10 rounded-full flex items-center justify-center mx-auto mb-4'>
@@ -1336,6 +1858,16 @@ description: 'Average productivity improvement',
                   and ensure quality output.
                 </p>
                 <ul className='space-y-2 text-sm text-gray-300'>                  <li>• Always review and edit AI-generated content</li>                </div>
+=======
+
+
+            <Card className="card-hover border-gradient-blue">
+              <div className="p-6">
+                <div className="w-16 h-16 bg-cursor-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-8 h-8 text-cursor-blue" />
+                </div>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <h3 className="text-xl font-semibold text-white mb-3">Best Practices</h3>
                 <p className="text-gray-400 mb-4">
                   Follow proven strategies to get the most out of your AI tools and ensure quality output.
@@ -1350,6 +1882,64 @@ description: 'Average productivity improvement',
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+</div>;
+        </div>;
+      </section>;
+      {/* AI Implementation Guide */}
+      <section className='section-padding bg-gradient-cursor'>;
+        <div className='container-cursor'>;
+          <div className='text-center mb-20'>;
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
+              Getting Started with AI Tools;
+            </h2>;
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
+            {ai_categories.map ((category, index) => (
+              <Card;
+                key={index}
+                className='card - hover border - gradient - blue';
+                style={{ animation_delay: `${index * 0.1}s` }}
+              >;
+                <div className='p - 6'>;
+                  <h3 className='text - xl font - semibold text - white mb - 3'>;
+                    {category.name}
+                  </h3>;
+                  <p className='text - gray - 400 mb - 4'>{category.description}</p>;
+                  <div className='flex items - center justify - between text - sm'>;
+                    <span className='text - gray - 500'>;
+                      Tools Available:{' '}
+                      <span className='text - white'>{category.tools}</span>;
+                    </span>;
+                    <span className='text - cursor - blue font - semibold'>;
+                      {category.avg_price}
+                    </span>                  </div>                <div className="p - 6">;
+                  <h3 className="text - xl font - semibold text - white mb - 3">{category.name}</h3>;
+                  <p className="text - gray - 400 mb - 4">{category.description}</p>;
+                  <div className="flex items - center justify - between text - sm">;
+                    <span className="text - gray - 500">Tools Available: <span className="text - white">{category.tools}</span></span>;
+                    <span className="text - cursor - blue font - semibold">{category.avg_price}</span>;
+                </div>;
+              </Card>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* AI Implementation Guide */}
+      <section className='section - padding bg - gradient - cursor'>;
+        <div className='container - cursor'>;
+          <div className='text - center mb - 20'>;
+            <h2 className='text - responsive - lg font - bold mb - 8 gradient - text text - shadow'>;
+              Getting Started with AI Tools;
+            </h2>;
+            <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
+              Practical advice for implementing AI tools in your workflow and;
+              maximizing their value.;
+            </p>;
+          </div>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 8'>;
             <Card className='card - hover border - gradient - blue'>;
               <div className='p - 6'>;
@@ -1380,12 +1970,20 @@ description: 'Average productivity improvement',
                   Begin with one AI tool that addresses your most immediate need. Master it before adding more.;
                 </p>;
                 <ul className="space - y-2 text - sm text - gray - 300">;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <li>• Choose based on your primary use case</li>;
                   <li>• Start with free tiers when available</li>;
                   <li>• Focus on one tool at a time</li>;
                 </ul>;
               </div>;
             </Card>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Card className='card - hover border - gradient - blue'>;
               <div className='p - 6'>;
                 <div className='w - 16 h - 16 bg - cursor - blue / 10 rounded - full flex items - center justify - center mx - auto mb - 4'>;
@@ -1405,6 +2003,10 @@ description: 'Average productivity improvement',
                 </p>;
                 <ul className="space - y-2 text - sm text - gray - 300">;
                   <li>• Always review and edit AI - generated content</li>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <li>• Use specific, detailed prompts</li>;
                   <li>• Maintain human oversight and creativity</li>;
                 </ul>;
@@ -1413,6 +2015,11 @@ description: 'Average productivity improvement',
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <section className="section-padding bg-gradient-cursor-accent">
         <div className="container-cursor text-center">
           <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
@@ -1443,7 +2050,15 @@ href="/contact"
               size="lg"
               className="border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white"
             >
+<<<<<<< HEAD
               Get AI Consultation
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+              Get AI Consultation
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* CTA Section */}
       <section className='section - padding bg - gradient - cursor - accent'>;
         <div className='container - cursor text - center'>;
@@ -1481,10 +2096,15 @@ href="/contact"
               size="lg";
               className="border - cursor - blue text - cursor - blue hover:bg - cursor - blue hover:text - white";
               Get AI Consultation;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </Button>;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
     </>);
 }
   );
@@ -1513,12 +2133,24 @@ href="/contact"
               href='/contact'
               variant='outline'
               size='lg'
+=======
+
+  );
+}
+
+=======
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'            >              href="/micro-saas"
               variant="primary"
               size="lg"
               className="bg-cursor-blue hover:bg-cursor-blue-dark"
               Explore More Tools
             </Button>
+<<<<<<< HEAD
             <Button
 
             <Button
@@ -1538,3 +2170,10 @@ href="/contact"
 );
 }
             <Button
+=======
+
+            <Button
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

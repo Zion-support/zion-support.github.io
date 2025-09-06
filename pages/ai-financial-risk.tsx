@@ -3,6 +3,7 @@ import NextHead from 'next/head';
 import { DollarSign, Check, Phone, Mail, MapPin } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import { innovativeAIServices } from '../data/innovative-ai-services';
 export default function AIFinancialRiskPage() {
   const service = innovativeAIServices.find(s => (s.link || '').endsWith('/ai-financial-risk'));
@@ -53,6 +54,15 @@ function AIFinancialRiskPage() {
   }
 ;
 const AIFinancialRisk: React.FC = () => {
+=======
+
+    <UltraAdvancedFuturisticBackground>;
+      <NextHead>;
+        <title>;
+          {service?.name || 'AI Financial Risk Management'} - Zion Tech Group;
+        </title>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           href='https://ziontechgroup && ziontechgroup.com/ai-financial-risk'
         />;
       </NextHead>;
@@ -86,6 +96,10 @@ const AIFinancialRisk: React.FC = () => {
                     'Real-time alerts',;
                   ];
                 ).map((feat, i) => (;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <li
                     key={i}
                     className='flex items-start space-x-3 text-slate-200'>;
@@ -93,6 +107,10 @@ const AIFinancialRisk: React.FC = () => {
                     <span>{feat}</span>;
                   </li>;
                 ))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </ul>;
             </div>;
             <div className='bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit'>;
@@ -157,11 +175,16 @@ const AIFinancialRisk: React.FC = () => {
                   <div className='text - 3xl font - bold text - white'>;
                     {service?.price || 'Custom pricing'}
                     <span className='text - slate - 400 text - base'>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       {service?.period || ''}
                     </span>;
                   </div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
         <title>{service?.name || 'AI Financial Risk Management'} - Zion Tech Group</title>
         <meta name="description" content={service?.description || 'Advanced risk models, stress testing, and anomaly detection for financial institutions.'} />
         <link rel="canonical" href="https://ziontechgroup.com/ai-financial-risk" />
@@ -298,19 +321,49 @@ export default function AIFinancialRiskPage() {
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{contactInfo.address}</span></div>
               </div>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
 
                 className='w-full'>;
+=======
+
+
+                className='w-full'>;
+                Discuss Controls;
+              </Button>;
+              <div className='mt-6 space-y-3 text-sm text-slate-300'>;
+                <div className='flex items-center space-x-2'>;
+                  <Phone className='w-4 h-4 text-cyan-400' />;
+                  <span>{contactInfo && contactInfo.mobile}</span>;
+                </div>;
+                <div className='flex items-center space-x-2'>;
+                  <Mail className='w-4 h-4 text-purple-400' />;
+                  <span>{contactInfo && contactInfo.email}</span>;
+                </div>;
+                <div className='flex items-center space-x-2'>;
+                  <MapPin className='w-4 h-4 text-green-400' />;
+                  <span className='text-xs'>{contactInfo && contactInfo.address}</span>;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 }
 }
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Button;
                 href='/contact';
                 variant='quantum';
@@ -331,6 +384,11 @@ export default function AIFinancialRiskPage() {
                 <div className='flex items - center space - x-2'>;
                   <MapPin className='w - 4 h - 4 text - green - 400' />;
                   <span className='text - xs'>{contact_info.address}</span>;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </div>              </div>;
 );
 
@@ -399,10 +457,21 @@ export default function AIFinancialRiskPage(req, res) {
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </UltraAdvancedFuturisticBackground>);
 ;
     </UltraAdvancedFuturisticBackground>;
   );
+=======
+
+
+=======
+    </UltraAdvancedFuturisticBackground>);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -410,3 +479,9 @@ export default function AIFinancialRiskPage(req, res) {
 }
 ;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

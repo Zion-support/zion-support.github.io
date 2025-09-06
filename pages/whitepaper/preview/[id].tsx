@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useRouter} from 'next/router';
 import {useEffect, useState} from 'react';
 
@@ -29,6 +33,10 @@ export default function WhitepaperPreview() {
       .catch(() => setNotFound(true));
   }, [id]);
   if (notFound);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return (
       <div className='container mx-auto px-4 py-6'>;
         Preview not available or expired.;
@@ -37,11 +45,16 @@ export default function WhitepaperPreview() {
   if (!markdown);
     return <div className='container mx-auto px-4 py-6'>Loading…</div>;
   return (
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className='container mx-auto px-4 py-6'>;
       <h1 className='text-xl font-semibold mb-4'>Whitepaper Preview</h1>;
       <pre className='whitespace-pre-wrap text-sm leading-6'>{markdown}</pre>;
     </div>;
   );
+<<<<<<< HEAD
       .then((r) => (r.ok ? r.json() : Promise.reject()))
       .then((d) => setMarkdown(d.markdown || ''))
       .catch(() => setNotFound(true))
@@ -71,6 +84,9 @@ function WhitepaperPreview() {
   $2
 }
     // Simple client fetch from a volatile in - memory store endpoint (for demo we echo in query);
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // In a production app, this would fetch from a real DB.;
     fetch (`/api / whitepaper / get?id=${id}`);
       .then (r => (r.ok ? r.json () : Promise.reject ()));
@@ -86,6 +102,7 @@ if (
 
 
 
+<<<<<<< HEAD
       <div className='container mx - auto px - 4 py - 6'>;
         Preview not available or expired.;
       </div>);
@@ -181,3 +198,7 @@ export default function WhitepaperPreview(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,5 +1,9 @@
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 import { signPayload } from "../../../utils/sync/signature";
@@ -14,9 +18,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   const { fromDAO, toDAO, resolutionId, decision, timestamp } = req.body as {
     fromDAO: string, toDAO: string, resolutionId: string, decision: "endorse" | "reject", timestamp?: number
+<<<<<<< HEAD
   };
   if (!fromDAO || !toDAO || !resolutionId || !decision) {
     return res.status(400).json({ error: "fromDAO, toDAO, resolutionId, decision required" })
+=======
+
+  };
+  if (!fromDAO || !toDAO || !resolutionId || !decision) {
+    return res.status(400).json({ error: "fromDAO, toDAO, resolutionId, decision required" })
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   if (!fromDAO |!toDAO |!resolutionId |!decision) {
     return res.status(400).json({ error: "fromDAO, toDAO, resolutionId, decision required" })
@@ -25,6 +37,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const event = {
 
 
+<<<<<<< HEAD
   upsertEvent(state, event);
   writeState(state);
 
@@ -36,10 +49,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     timestamp: Date.now()};
   upsertEvent(state, event);
   writeState(state);
+=======
+
+  upsertEvent(state, event);
+  writeState(state);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const body = { ...event, propagate: false };
   const headers: Record<string, string> = {};
   const sig = signPayload(body);
   if (sig) headers["x-zion-signature"] = sig;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
@@ -173,14 +197,26 @@ if (headers["x - zion - signature"] = sig, ) {
       .filter ((p) => !p.paused);
       .map (async (peer) => {
         const url = new URL ("/api / sync / publish", peer.base_url).to_string (),
+<<<<<<< HEAD
         try {
           await axios.post (url, body, { headers, timeout: 5000 });
         } catch {}
 }
+=======
+
+        try {
+          await axios.post (url, body, { headers, timeout: 5000 });
+        } catch {}
+
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       })),
   return res.status (200).json ({ status: "created", version, event_id: event.event_id });
 }
 ;
+<<<<<<< HEAD
 
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
@@ -381,6 +417,12 @@ export default async function handler(req, res) {
   )
 
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
         try {
           await axios.post(url, body, { headers, timeout: 5000 })
@@ -491,5 +533,11 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 }
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

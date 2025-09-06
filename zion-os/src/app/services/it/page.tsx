@@ -1,9 +1,17 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export default function ITServicesPage() {;
   return (;
 
 
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default /**
  * ITServicesPage - Function description
  */
@@ -95,6 +103,7 @@ export default function ITServicesPage() {;
               <p className="text - zinc - 300 mb - 6 text - lg">;
                 Accelerate your software delivery with automated deployment pipelines,
 
+<<<<<<< HEAD
                 Accelerate your software delivery with automated deployment pipelines,;
 
             {/* DevOps & CI/CD */}
@@ -104,6 +113,13 @@ export default function ITServicesPage() {;
               <p className="text-zinc-300 mb-6 text-lg">;
                 Accelerate your software delivery with automated deployment pipelines;
                 Accelerate your software delivery with automated deployment pipelines,;
+=======
+=======
+
+                Accelerate your software delivery with automated deployment pipelines,;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 infrastructure as code, and DevOps culture implementation that drives innovation.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -149,6 +165,7 @@ export default function ITServicesPage() {;
               <p className="text - zinc - 300 mb - 6 text - lg">;
                 Protect your business with comprehensive cybersecurity solutions including security audits,
 
+<<<<<<< HEAD
                 Protect your business with comprehensive cybersecurity solutions including security audits,;
 
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
@@ -157,6 +174,13 @@ export default function ITServicesPage() {;
               <p className="text-zinc-300 mb-6 text-lg">;
                 Protect your business with comprehensive cybersecurity solutions including security audits;
                 Protect your business with comprehensive cybersecurity solutions including security audits,;
+=======
+=======
+
+                Protect your business with comprehensive cybersecurity solutions including security audits,;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 penetration testing, compliance frameworks, and incident response planning.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -288,6 +312,7 @@ export default function ITServicesPage() {;
               <p className="text - zinc - 300 mb - 6 text - lg">;
                 Guide your organization through end - to - end digital transformation with strategic consulting,
 
+<<<<<<< HEAD
                 Guide your organization through end-to-end digital transformation with strategic consulting,;
 
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
@@ -296,6 +321,13 @@ export default function ITServicesPage() {;
               <p className="text-zinc-300 mb-6 text-lg">;
                 Guide your organization through end-to-end digital transformation with strategic consulting;
                 Guide your organization through end-to-end digital transformation with strategic consulting,;
+=======
+=======
+
+                Guide your organization through end-to-end digital transformation with strategic consulting,;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 legacy system modernization, and change management expertise.;
               </p>;
               <div className="space - y-4 mb - 8">;

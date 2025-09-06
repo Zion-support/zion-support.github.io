@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>
         </div>
       </div>
@@ -7,6 +12,7 @@
 }
 
 
+<<<<<<< HEAD
 
 import React from 'react';
 
@@ -59,6 +65,15 @@ export default function GitHubComplianceBotPage(req, res) {
         <meta name="description" content="Automated GitHub compliance checks for SOC 2, ISO 27001, secrets scanning, and repo hygiene with reports and alerts." />;
         <link rel="canonical" href="https://ziontechgroup.com/github-compliance-bot" />;
       </Head>;
+=======
+    <Layout>;
+      <Head>;
+        <title > GitHub Compliance Bot | Zion Tech Group</title>;
+        <meta name="description" content="Automated GitHub compliance checks for SOC 2, ISO 27001, secrets scanning, and repo hygiene with reports and alerts." />;
+        <link rel="canonical" href="https://ziontechgroup.com / github - compliance - bot" />;
+      </Head>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto space-y-6">;
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent">GitHub Compliance Bot</h1>;
@@ -72,6 +87,7 @@ export default function GitHubComplianceBotPage(req, res) {
   }
 }
 
+<<<<<<< HEAD
           </div>;
           <div className="flex gap-3">;
             <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-700 text-white">Start from $149/mo</a>;
@@ -88,3 +104,8 @@ export default function GitHubComplianceBotPage(req, res) {
 }
 ;
 ;
+=======
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

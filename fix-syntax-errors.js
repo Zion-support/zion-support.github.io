@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 #!/usr / bin / env node;
 import fs from './fs';
@@ -36,6 +40,7 @@ if (.ends_with (") {
           modified = true;
           return match.trim () + ";";
 
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 import fs from "fs";
@@ -70,11 +75,14 @@ files.forEach((file) => {
         if (!match.trim().endsWith(";")) {
           modified = true;
           return match.trim() + ";";
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         }
         return match;
       },
     );
 
+<<<<<<< HEAD
     // Fix other common syntax issues
     // Fix missing semicolons after variable declarations
     content = content.replace(
@@ -97,6 +105,33 @@ files.forEach((file) => {
           !match.includes("export") &&
           !match.includes("import")
         ) {
+=======
+;
+    // Fix other common syntax issues;
+    // Fix missing semicolons after variable declarations;
+    content = content.replace (
+      /(\w+)\s*=\s*[^;]+(?!)\s*$/gm,
+      (match, var_name) => {
+        // Check condition
+if (&&) {
+  $2
+}
+          !match.includes ("if") &&;
+          !match.includes ("for") &&;
+          !match.includes ("while") &&;
+          !match.includes ("switch") &&;
+          !match.includes ("try") &&;
+          !match.includes ("catch") &&;
+          !match.includes ("finally") &&;
+          !match.includes ("return") &&;
+          !match.includes ("throw") &&;
+          !match.includes ("break") &&;
+          !match.includes ("continue") &&;
+          !match.includes ("debugger") &&;
+          !match.includes ("export") &&;
+          !match.includes ("import")) {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           modified = true;
           return match + ";";
         }
@@ -104,6 +139,7 @@ files.forEach((file) => {
       },
     );
 
+<<<<<<< HEAD
     if (modified) {
       fs.writeFileSync(filePath, content, "utf8");
       console.log(`Fixed: ${file}`);
@@ -112,10 +148,30 @@ files.forEach((file) => {
   } catch (error) {
     console.error(`Error processing ${file}:`, error.message);
   }
+=======
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      fs.writeFileSync (file_path, content, "utf8");
+      console.log (`Fixed: ${file}`);
+      total_fixed++;
+    }
+  } catch (error) {
+    console.error (`Error processing ${file}:`, error.message);
+
+  }
+
+});
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 });
 
 console.log(`\nTotal files fixed: ${totalFixed}`);
   }
+<<<<<<< HEAD
 }},
 ,
 // Run all fixes,
@@ -126,6 +182,11 @@ fixApiDocs();
 fixCareers();
 ,
 console.log('🎉 Syntax error fixes completed');
+=======
+
+}},
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Run all fixes,
 fixFooter(),
 fixAccessibility(),
@@ -141,3 +202,9 @@ fixAiServices(),;
 fixApiDocs(),;
 fixCareers(),;
 // // // console.log('🎉 Syntax error fixes completed'),;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

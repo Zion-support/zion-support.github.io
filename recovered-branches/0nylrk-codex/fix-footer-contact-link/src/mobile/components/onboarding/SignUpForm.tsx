@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react";
 import {Label} from "@/components/ui/label";
 import {Input} from "@/components/ui/input";
@@ -43,6 +44,8 @@ export function SignUpForm() {
   const [isLoading, setIsLoading] = useState(false),
   const [signupMode, setSignupMode] = useState(true),
   const [error, setError] = useState(""),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -52,6 +55,7 @@ export function SignUpForm() {
     setError("")
 
 
+<<<<<<< HEAD
   
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target,
@@ -62,6 +66,8 @@ export function SignUpForm() {
     e.preventDefault();
     setError("");
     setIsLoading(true)
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
   
   const handleSubmit = async (e: React.FormEvent) => {
@@ -69,6 +75,11 @@ export function SignUpForm() {
     setError(""),
     setIsLoading(true),
     
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {
       if (signupMode) {
         const { error } = await signup(formData.email, formData.password, {
@@ -79,18 +90,39 @@ export function SignUpForm() {
         navigate("/mobile")
       } else {
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         const { error } = await login(formData.email, formData.password),
         
 
 
+<<<<<<< HEAD
         const { error } = await login(formData.email, formData.password);
         const { error } = await login(formData.email, formData.password),
         
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         if (error) {
           throw new Error(error)
         }
         navigate("/mobile")
 
+<<<<<<< HEAD
+=======
+import React, { useState } from "react";
+import {Label} from "@/components/ui/label";
+import {Input} from "@/components/ui/input";
+import {Button} from "@/components/ui/button";
+import {useNavigate} from "react-router-dom";
+import {useAuth} from "@/hooks/useAuth";
+import {AlertCircle} from "lucide-react";
+import {Alert, AlertDescription} from "@/components/ui/alert";
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from "react",;
 import { Label } from "@/components/ui/label",;
 import { Input } from "@/components/ui/input",;
@@ -99,22 +131,67 @@ import { useNavigate } from "react-router-dom",;
 import { useAuth } from "@/hooks/useAuth",;
 import { AlertCircle } from "lucide-react",;
 import { Alert, AlertDescription } from "@/components/ui/alert",;
+<<<<<<< HEAD
 export function SignUpForm() {;
   const navigate = useNavigate();
   const { signup, login, loginWithGoogle } = useAuth();
 export function SignUpForm() {;
   const navigate = useNavigate(),;
   const { signup, login, loginWithGoogle } = useAuth(),;
+=======
+
+export function SignUpForm() {;
+  const navigate = useNavigate();
+  const { signup, login, loginWithGoogle } = useAuth();
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [formData, setFormData] = useState({;
     email: "",;
     password: "",;
     name: ""}),;
+<<<<<<< HEAD
       }
     } catch (err: any) {;
       setError(err && err.message);
     } finally {;
       setIsLoading(false);
     }
+=======
+  const [isLoading, setIsLoading] = useState(false);
+  const [signupMode, setSignupMode] = useState(true);
+  const [error, setError] = useState("");
+
+  const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
+    const { name, value } = e && e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+    setError("");
+  };
+
+  const handleSubmit = async (e: React && React.FormEvent) => {;
+    e && e.preventDefault();
+    setError("");
+    setIsLoading(true),;
+
+    try {;
+      if (signupMode) {;
+        const { error } = await signup(formData && formData.email, formData && formData.password, {;
+          name: formData && formData.name}),;
+
+        if (error) {;
+          throw new Error(error);
+        }
+
+        navigate("/mobile");
+      } else {;
+        const { error } = await login(formData && formData.email, formData && formData.password);
+
+        if (error) {;
+          throw new Error(error);
+        }
+
+        navigate("/mobile");
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from './react';
 import { Label } from '@/components / ui / label';
 import { Input } from '@/components / ui / input';
@@ -229,23 +306,41 @@ if ( {) {
 
   };
 
+<<<<<<< HEAD
   };
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleGoogleLogin = async () => {;
     try {;
       await loginWithGoogle();
     } catch (err: any) {;
+<<<<<<< HEAD
   };
 
 
+=======
+      setError(err && err.message);
+    }
+  };
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   };
 
   
+<<<<<<< HEAD
   };
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="space-y-4 px-4">;
       <h2 className="text-xl font-medium text-center">;
         {signupMode ? "Create your account" : "Welcome back"}
+<<<<<<< HEAD
       setError(err.message);
     }
   },
@@ -269,16 +364,21 @@ if ( {) {
           </svg>
           Continue with Google
         </Button>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
         <Button 
           variant="outline" 
 
 
+<<<<<<< HEAD
         <Button
           variant="outline"
         <Button 
           variant="outline" 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           className="w-full py-6 relative"
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
@@ -302,6 +402,10 @@ if ( {) {
         {signupMode && (
           <div className="space-y-2">
             <Label htmlFor="name">Full name</Label>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </h2>;
       <div className="space-y-2">;
         <Button
@@ -449,12 +553,21 @@ export function SignUpForm() {;
             />
           </div>
         )}
+<<<<<<< HEAD
         <div className="space-y-2">
           <Label htmlFor="email">Email address</Label>
+=======
+
+
+        <div className="space-y-2">;
+          <Label htmlFor="email">Email address</Label>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Input
             id="email"
             name="email"
             type="email"
+<<<<<<< HEAD
           />;
         </div>;
         <div className="space-y-2">;
@@ -467,10 +580,24 @@ export function SignUpForm() {;
         </div>
         <div className="space-y-2">
           <Label htmlFor="password">Password</Label>
+=======
+            value={formData && formData.email}
+            onChange={handleInputChange}
+            required
+            placeholder="Enter your email"
+
+          />;
+        </div>;
+
+        <div className="space-y-2">;
+          <Label htmlFor="password">Password</Label>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Input
             id="password"
             name="password"
             type="password"
+<<<<<<< HEAD
 
 
         <Button 
@@ -487,6 +614,18 @@ export function SignUpForm() {;
           type="submit"
         <Button 
           type="submit" 
+=======
+            value={formData && formData.password}
+            onChange={handleInputChange}
+            required
+            placeholder="Create a password"
+
+
+        <Button 
+          type="submit" 
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           className="w-full py-6"
           disabled={isLoading}
         >
@@ -502,6 +641,10 @@ export function SignUpForm() {;
         {signupMode
           ? "Already have an account? "
           : "Don't have an account? "
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           />;
         </div>;
         <Button
@@ -520,6 +663,7 @@ export function SignUpForm() {;
         {signupMode;
           ? "Already have an account? ";
           : "Don't have an account? ";
+<<<<<<< HEAD
             <Input;
               id="name";
               name="name";
@@ -581,17 +725,25 @@ export function SignUpForm() {;
           className="p-0 h-auto";
           onClick={() => setSignupMode(!signupMode)}
         >;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         }
         <Button
           variant="link"
           className="p-0 h-auto"
           onClick={() => setSignupMode(!signupMode)}
+<<<<<<< HEAD
         >
           {signupMode ? "Sign In" : "Sign Up"}
         </Button>
       </p>
     </div>
   )
+=======
+        >;
+          {signupMode ? "Sign In" : "Sign Up"}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           {signupMode ? "Sign In" : "Sign Up"}
         </Button>;
@@ -602,6 +754,7 @@ export function SignUpForm() {;
 
 }
 ;
+<<<<<<< HEAD
   return (
     <div className="space - y-4 px - 4">;
       <h2 className="text - xl font - medium text - center">;
@@ -741,3 +894,8 @@ if (error) {
 }
 }
 ;
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

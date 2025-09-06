@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {SearchSuggestion, SearchHighlight} from "@/types/search";
 
 
@@ -11,6 +12,20 @@ import { SearchSuggestion, SearchHighlight } from "@/types/search",
 import React from "react",
 import { SearchSuggestion, SearchHighlight } from "@/types/search",
 
+=======
+
+
+import {SearchSuggestion, SearchHighlight} from "@/types/search";
+
+=======
+import React from "react",
+import { SearchSuggestion, SearchHighlight } from "@/types/search",
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface AutocompleteSuggestionsProps {
 
   suggestions: SearchSuggestion[]
@@ -19,6 +34,10 @@ interface AutocompleteSuggestionsProps {
 
   visible: boolean
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",;
 import { SearchSuggestion, SearchHighlight } from "@/types/search",;
 interface AutocompleteSuggestionsProps {;
@@ -26,6 +45,12 @@ interface AutocompleteSuggestionsProps {;
   searchTerm: string,;
   onSelectSuggestion: (suggestion: string) => void,;
   visible: boolean;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 // Helper function to highlight matching text
 
@@ -33,16 +58,24 @@ const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {
   if (!searchTerm |searchTerm.length === 0) {
     return { before: '', match: text, after: '' }
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   
 
 
+<<<<<<< HEAD
   
   
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const lowerText = text.toLowerCase();
   const lowerSearchTerm = searchTerm.toLowerCase();
   const index = lowerText.indexOf(lowerSearchTerm);
   if (index === -1) {
+<<<<<<< HEAD
 
 
     return { before: '', match: text, after: '' }
@@ -60,12 +93,54 @@ export function AutocompleteSuggestions({
   visible
 }: AutocompleteSuggestionsProps) {
   if (!visible |suggestions.length === 0) return null;
+=======
+=======
+import React from './react';
+import { SearchSuggestion, SearchHighlight } from '@/types / search';
+interface AutocompleteSuggestionsProps {
+  suggestions: SearchSuggestion[],
+  search_term: string,
+  onSelectSuggestion: (suggestion: string) => void,
+  visible: boolean;
+}
+// Helper function to highlight matching text;
+const highlight_match = (text: string, search_term: string): SearchHighlight => {
+  // Check condition
+if ( {) {
+  $2
+}
+    return { before: '', match: text, after: '' }
+  }
+  const lower_text = text.toLowerCase ();
+  const lowerSearchTerm = search_term.toLowerCase ();
+  const index = lower_text.index_of (lowerSearchTerm);
+;
+  // Check condition
+if ( {) {
+  $2
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    return { before: '', match: text, after: '' }
+  }
+  return {
+    before: text.substring (0, index);
+    match: text.substring (index, index + search_term.length);
+    after: text.substring (index + search_term.length);
+  }
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 };
 
 export function AutocompleteSuggestions({ 
   suggestions, 
   searchTerm, ;
   onSelectSuggestion;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   const lowerText = text.toLowerCase(),;
   const lowerSearchTerm = searchTerm.toLowerCase(),;
@@ -85,15 +160,25 @@ export function AutocompleteSuggestions({
   suggestions, 
   searchTerm, 
   onSelectSuggestion,
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   visible 
 }: AutocompleteSuggestionsProps) {
   if (!visible || suggestions.length === 0) return null,
   
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="absolute z-50 top-full left-0 right-0 mt-1 bg-zion-blue-dark border border-zion-blue-light rounded-lg shadow-lg overflow-hidden">
       <ul className="py-2 max-h-60 overflow-y-auto">
         {suggestions.map((suggestion, index) => {
+<<<<<<< HEAD
           const highlight = highlightMatch(suggestion.text, searchTerm);
 
           const highlight = highlightMatch(suggestion.text, searchTerm),
@@ -115,6 +200,9 @@ export function AutocompleteSuggestions({
             </li>
           )
         })}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           const highlight = highlightMatch(suggestion.text, searchTerm),
           
@@ -175,14 +263,19 @@ export function AutocompleteSuggestions(): any ({ ;
             </li>;
           );
         })}
+<<<<<<< HEAD
       </ul>
     </div>
   )
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </ul>;
     </div>;
   );
 }
+<<<<<<< HEAD
 export /**
  * AutocompleteSuggestions - Function description
  */
@@ -217,6 +310,10 @@ interface AutocompleteSuggestionsProps {;
   searchTerm:string,;
   onSelectSuggestion:(suggestion:string) => void,;
   visible:boolean;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 ;
 // Helper function to highlight matching text;
@@ -314,6 +411,7 @@ interface AutocompleteSuggestionsProps {suggestions: SearchSuggestion[];
   onSelectSuggestion: (suggestion: string) => void;
   visible: boolean}
 
+<<<<<<< HEAD
 // Helper function to highlight matching text,
 const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {if (!searchTerm || searchTerm.length === 0) {
     return { before: '', match: text, after: ''}
@@ -398,3 +496,5 @@ return (<li key= {
 }</ul> </div>) 
 }
 ;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

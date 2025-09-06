@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { NextApiRequest, NextApiResponse } from 'next',;
 const bwipjs = require('bwip-js'),
@@ -65,3 +66,9 @@ export default async function handler(req, res) {
 }
   }
 }
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

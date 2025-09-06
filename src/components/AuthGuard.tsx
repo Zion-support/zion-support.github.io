@@ -1,3 +1,4 @@
+<<<<<<< HEAD
       const redirectTo = options?.redirectTo || '/login'
       const returnUrl = options?.returnUrl || router.asPath
           if (!requireAuth({ showToast: false })) return false,
@@ -27,6 +28,8 @@ interface AuthGuardProps {;
 }
 
       const redirectTo = options?.redirectTo |'/login'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const redirectTo = options?.redirectTo |'/login'
       const returnUrl = options?.returnUrl |router.asPath
           if (!requireAuth({ showToast: false })) return false
@@ -37,9 +40,12 @@ const redirectTo = options?.redirectTo |'/login'
     isAuthenticated
     user
 
+<<<<<<< HEAD
     isLoading}
 }
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 const redirectTo = options?.redirectTo || '/login';
       const returnUrl = options?.returnUrl || router && router.asPath;
@@ -50,6 +56,7 @@ const redirectTo = options?.redirectTo || '/login';
     if (isLoading) return,
 
     const userRoles = user?.role ? [user && user.role] : [];
+<<<<<<< HEAD
     requireAuth;
     requireRole;
     checkPermission;
@@ -322,9 +329,35 @@ export function useAuthGuard() {;
     requireAuth,;
     requireRole,;
     checkPermission,;
+=======
+
+    requireAuth;
+    requireRole;
+    checkPermission;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     isAuthenticated;
     user;
     isLoading}
 }
+<<<<<<< HEAD
 ;
 ;
+=======
+
+
+
+      const redirect_to = options?.redirect_to || '/login';
+      const return_url = options?.return_url || router.as_path;
+          if () return false, ) {
+  $2
+}
+    const user_roles = user?.role ? [user.role] : [];
+    require_auth;
+    require_role;
+    check_permission;
+    is_authenticated;
+    user;
+    is_loading}
+}
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

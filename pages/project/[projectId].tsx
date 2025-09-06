@@ -1,18 +1,46 @@
 
 
+<<<<<<< HEAD
+=======
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import FeedbackModal from "../../components/ui/FeedbackModal";
+export default function ProjectPage() {
+  const router = useRouter()
+  const { projectId } = router.query as { projectId?: string }
+  const [project, setProject] = useState<any | null>(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+  const [note, setNote] = useState("")
+  const headers = {
+    "x-demo-user-role": "client"
+    "x-demo-user-id": "client-1"
+    // For talent view demo, swap role and provide slug
+    // "x-demo-user-role": "talent"
+    // "x-demo-talent-slug": "ava-chen"} as Record<string, string>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useEffect, useState } from "react",
 import { useRouter } from "next/router",
 import FeedbackModal from "../../components/ui/FeedbackModal",
 
 
+<<<<<<< HEAD
 import { useEffect, useState } from "react",;
 import { useRouter } from "next/router",;
 import FeedbackModal from "../../components/ui/FeedbackModal",;
 import { useEffect, useState } from "react",
 import { useRouter } from "next/router",
 import FeedbackModal from "../../components/ui/FeedbackModal",
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function ProjectPage() {
   const router = useRouter(),
   const { projectId } = router.query as { projectId?: string },
@@ -30,10 +58,18 @@ export default function ProjectPage() {
     // "x-demo-talent-slug": "ava-chen"} as Record<string, string>,
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   useEffect(() => {
     async function load() {
       if (!projectId) return
       try {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         setLoading(true),
         const res = await fetch(`/api/marketplace/projects?id=${projectId}`, { headers }),
@@ -41,10 +77,67 @@ export default function ProjectPage() {
         if (!json.ok) throw new Error(json.error || "Failed to load project"),
 
 
+<<<<<<< HEAD
         setLoading(true)
         const res = await fetch(`/api/marketplace/projects?id=${projectId}`, { headers })
         const json = await res.json()
         if (!json.ok) throw new Error(json.error |"Failed to load project")
+=======
+        setProject(json.project)
+import { useEffect, useState  } from './react';,
+import { use_router  } from './next / router';,
+import FeedbackModal from "../../components / ui / FeedbackModal",
+export default /**
+ * ProjectPage - Function description
+ */
+function ProjectPage() {
+  const router = use_router (),
+  const { project_id } = router.query as { project_id?: string },
+  const [project, set_project] = useState < any | null>(null),
+  const [loading, set_loading] = useState (true),
+  const [error, set_error] = useState < string | null>(null),
+  const [note, set_note] = useState (""),
+  const headers = {
+    "x - demo - user - role": "client",
+    "x - demo - user - id": "client - 1",
+    // For talent view demo, swap role and provide slug;
+    // "x - demo - user - role": "talent",
+    // "x - demo - talent - slug": "ava - chen"} as Record < string, string>,
+  useEffect (() => {
+    async /**
+ * load - Function description
+ */
+function load() {
+      // Check condition
+if (return, ) {
+  $2
+}
+      try {
+        set_loading (true),
+        const res = await fetch (`/api / marketplace / projects?id=${project_id}`, { headers }),
+        const json = await res.json (),
+        if (throw new Error (json.error || "Failed to load project"), ) {
+  $2
+}
+        set_project (json.project);
+      } catch (e: any) {
+        set_error (e.message);
+      } finally {
+
+        setLoading(false)
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    load()
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }, [projectId]),
   const [showFeedback, setShowFeedback] = useState(false),
   async function addNote() {
@@ -85,9 +178,13 @@ export default function ProjectPage() {
       setProject(json.project)
 
       setShowFeedback(true)
+<<<<<<< HEAD
         set_loading (false);
       }
     }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     load ();
   }, [project_id]),
   const [show_feedback, setShowFeedback] = useState (false),
@@ -126,6 +223,7 @@ if ( {) {
       setShowFeedback (true);
     }
   }
+<<<<<<< HEAD
   return (
     <div className="max - w-4xl mx - auto p - 6 space - y-6">;
       {loading && <div > Loading…</div>}
@@ -272,12 +370,17 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   async function markCompleted() {
     const res = await fetch(`/api/marketplace/projects`, {
       method: "PATCH",
@@ -321,11 +424,20 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+  return (
+    <div className="max-w-4xl mx-auto p-6 space-y-6">
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {project && (
         <div className="space-y-6">
           <div className="flex items-center gap-3">
             <h1 className="text-2xl font-semibold">Project Kickoff</h1>
             <span className={`px-2 py-0.5 rounded text-xs ${project.status === "ACTIVE" ? "bg-emerald-100 text-emerald-700" : "bg-gray-200"}`}>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {project.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -333,16 +445,34 @@ if ( {) {
 }
 
 
+<<<<<<< HEAD
               <div><b>Client</b>: {_project.clientId}</div>
               <div><b>Talent</b>: {_project.talentSlug}</div>
               <div><b>Start</b>: {_new Date(project.startDateIso).toLocaleDateString()}</div>
               <div className="mt-2">{_project.summary}</div>
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            </span>
+          </div>
+
+          <section className="rounded border p-4">
+            <h2 className="font-medium mb-2">Project Summary</h2>
+            <div className="text-sm">
+              <div><b>Client</b>: {project.clientId}</div>
+              <div><b>Talent</b>: {project.talentSlug}</div>
+              <div><b>Start</b>: {new Date(project.startDateIso).toLocaleDateString()}</div>
+              <div className="mt-2">{project.summary}</div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>
           </section>
 
           <section className="rounded border p-4">
             <h2 className="font-medium mb-2">Timeline</h2>
             <ul className="list-disc pl-6 space-y-1 text-sm">
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </span>;
           </div>;
           <section className="rounded border p - 4">;
@@ -363,6 +493,7 @@ if ( {) {
                   <li key={m.id}>
                     <span className="font-medium">{m.title}</span>
 
+<<<<<<< HEAD
               {_project.timeline?.length ? (_project.timeline.map((m: unknown) => (
                   <li key={m.id}>
                     <span className="font-medium">{_m.title}</span>
@@ -402,6 +533,8 @@ if ( {) {
               ) : (
                 <li>No timeline defined</li>
               )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import FeedbackModal from "../../components/ui/FeedbackModal";
@@ -550,6 +683,18 @@ export default function ProjectPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            </ul>
+          </section>
+          <section className="rounded border p-4">
+            <h2 className="font-medium mb-2">Documents</h2>
+            <ul className="list-disc pl-6 space-y-1 text-sm">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </li>))) : (
                 <li > No timeline defined</li>)}
             </ul>;
@@ -557,19 +702,28 @@ export default function ProjectPage(req, res) {
           <section className="rounded border p - 4">;
             <h2 className="font - medium mb - 2">Documents</h2>;
             <ul className="list - disc pl - 6 space - y-1 text - sm">;
+<<<<<<< HEAD
             </ul>
           </section>
           <section className="rounded border p-4">
             <h2 className="font-medium mb-2">Documents</h2>
             <ul className="list-disc pl-6 space-y-1 text-sm">
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {project.documents?.length ? (
                 project.documents.map((d: any) => (
                   <li key={d.id}>
                     {d.url ? (
+<<<<<<< HEAD
                       <a href={d.url} className="text-indigo-600 underline" target="_blank" rel="noreferrer">{d.name}</a>
                     ) : (
                       <span>{d.name}</span>
                     )}
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <a href={d.url} className="text-indigo-600 underline" target="_blank" rel="noreferrer">{d.name}</Link>
                     ) : (
                       <span>{d.name}</span>
@@ -578,6 +732,12 @@ export default function ProjectPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <span className="text-gray-500"> • uploaded {new Date(d.uploadedAtIso).toLocaleString()}</span>
                   </li>
                 ))
@@ -597,24 +757,44 @@ export default function ProjectPage(req, res) {
                 project.notes.map((n: any) => (
                   <div key={n.id} className="text-sm">
 
+<<<<<<< HEAD
                     <span className="font-medium">{n.authorRole}</span>: {n.content}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <span className="font-medium">{n.authorRole}</span>: {n.content  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <span className="text-gray-500"> • {new Date(n.createdAtIso).toLocaleString()}</span>
                   </div>
                 ))
               ) : (
                 <div className="text-sm text-gray-600">No notes yet.</div>
 
+<<<<<<< HEAD
               )}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>
             <div className="flex gap-2">
               <input value={note} onChange={(e) => setNote(e.target.value)} placeholder="Add a note" className="flex-1 border rounded px-3 py-2" />
@@ -624,6 +804,7 @@ export default function ProjectPage(req, res) {
           <div className="flex justify-end">
             {project.status !== "COMPLETED" && (
               <button onClick={markCompleted} className="px-4 py-2 rounded bg-emerald-600 text-white">Mark as Completed</button>
+<<<<<<< HEAD
 }
 
             )}
@@ -638,6 +819,13 @@ export default function ProjectPage(req, res) {
       />
     </div>
   )
+=======
+
+=======
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 };
             )  } catch (error) {
@@ -652,6 +840,12 @@ export default function ProjectPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   );
 };
@@ -696,7 +890,15 @@ export default function ProjectPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 
 }
 }
+=======
+
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

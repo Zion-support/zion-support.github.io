@@ -9,4 +9,8 @@ const ServiceProviderRegistrationForm = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ServiceProviderRegistrationForm;
+=======
+export default ServiceProviderRegistrationForm;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -27,4 +27,8 @@ const MobileBottomNav = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default MobileBottomNav;
+=======
+export default MobileBottomNav;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

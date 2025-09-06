@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import "dotenv / config",
 import express from './express';,
 import cors from './cors';,
@@ -24,6 +28,7 @@ if ( {) {
   $2
 }
       return res.status (400).json ({ error: "Invalid input", details: error.issues });
+<<<<<<< HEAD
 
 import "dotenv/config";
 import express from "express";
@@ -52,6 +57,10 @@ app.post("/api/ai/milestones", async (req, res) => {try {;
 });
 const port = process.env.PORT ? Number(process.env.PORT) : 4321;
 app.listen(port, () => {// // // console.log(`zion-ai-assistant listening on http://localhost:${port}`);
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import "dotenv/config",;
 import express from "express",;
 import cors from "cors",;
@@ -75,14 +84,24 @@ app.post("/api/ai/milestones", async (req, res) => {;
   } catch (error) {;
     if (error instanceof z.ZodError) {;
       return res.status(400).json({ error: "Invalid input", details: error.issues });
+<<<<<<< HEAD
     }
     console.error(error),;
     res.status(500).json({ error: "Failed to generate milestones" });
   }
+=======
+
+    }
+    console.error (error),
+    res.status (500).json ({ error: "Failed to generate milestones" });
+  }
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }),;
 const port = process.env.PORT ? Number(process.env.PORT) : 4321,;
 app.listen(port, () => {;
   // // // console.log(`zion-ai-assistant listening on http://localhost:${port}`);
+<<<<<<< HEAD
 }),
 const port = process.env.PORT ? Number (process.env.PORT) : 4321,
 app.listen (port, () => {
@@ -128,3 +147,8 @@ app.listen(port, () => {;
 });
 });
 });
+=======
+
+
+});
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

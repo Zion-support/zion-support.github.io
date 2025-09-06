@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useFetchResume  } from './useFetchResume';
 import { useResumeActions } from './useResumeActions';
 export function useResumeBasic() {
@@ -19,6 +20,8 @@ export function useResumeBasic() {;
     updateBasicInfo: resumeActions.updateBasicInfo
 
     updateBasicInfo: resumeActions.updateBasicInfo,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useFetchResume } from './useFetchResume',;
 import { useResumeActions } from './useResumeActions',;
 export function useResumeBasic() {;
@@ -33,6 +36,10 @@ export function useResumeBasic() {;
     // From useResumeActions;
     createResume: resumeActions.createResume;
     updateBasicInfo: resumeActions.updateBasicInfo;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
     setActiveResume: resumeActions.setActiveResume}
@@ -61,3 +68,7 @@ export function useResumeBasic() {;
 }
     setActiveResume: resumeActions.setActiveResume}
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

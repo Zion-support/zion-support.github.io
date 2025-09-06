@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from 'react'
 import * as DialogPrimitive from '@radix-ui/react-dialog'
 import {X} from 'lucide-react'
@@ -6,6 +7,8 @@ const Dialog = DialogPrimitive.Root
 const DialogTrigger = DialogPrimitive.Trigger
 const DialogPortal = DialogPrimitive.Portal
 const DialogClose = DialogPrimitive.Close
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import * as React from "react"
 import * as DialogPrimitive from "@radix-ui/react-dialog"
 import { X } from 'lucide-react'
@@ -20,10 +23,16 @@ const DialogPortal = DialogPrimitive.Portal
 
 const DialogClose = DialogPrimitive.Close
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const DialogOverlay = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Overlay
+<<<<<<< HEAD
 
 
 const DialogOverlay = React.forwardRef<
@@ -31,6 +40,8 @@ const DialogOverlay = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
 ></typeof>(({ className, ...props }, ref) => (
   <DialogPrimitive.Overlay
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import * as React from 'react';
 import * as DialogPrimitive from '@radix-ui/react-dialog';
@@ -88,6 +99,7 @@ const DialogContent = React && React.forwardRef<;
 ursor/fix-website-loading-errors-and-merge-6662
 
 
+<<<<<<< HEAD
       ref={ref}
       className={cn(
         'fixed left-[50%] top-[50%] z-50 grid w-full max-w-[calc(100vw-2rem)] sm:max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] rounded-lg'
@@ -96,6 +108,12 @@ ursor/fix-website-loading-errors-and-merge-6662
       ref={ref}
       className={cn(
         'fixed left-[50%] top-[50%] z-50 grid w-full max-w-[calc(100vw-2rem)] sm:max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] rounded-lg'
+=======
+
+      ref={ref}
+      className={cn(
+        'fixed left-[50%] top-[50%] z-50 grid w-full max-w-[calc(100vw-2rem)] sm:max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] rounded-lg'
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       "fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
       className
     )}
@@ -118,6 +136,7 @@ const DialogContent = React.forwardRef<;
       {...props}
     >
       {children}
+<<<<<<< HEAD
       <DialogPrimitive.Close className='absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover: opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground'>
         <X className='h-4 w-4' />
         <span className='sr-only'>Close</span>
@@ -127,6 +146,10 @@ const DialogContent = React.forwardRef<;
       <DialogPrimitive.Close className='absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover: opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground'>
         <X className='h-4 w-4' />
         <span className='sr-only'>Close</span>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <DialogPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
         <X className="h-4 w-4" />
         <span className="sr-only">Close</span>
@@ -136,12 +159,15 @@ const DialogContent = React.forwardRef<;
     </DialogPrimitive.Content>
   </DialogPortal>
 ))
+<<<<<<< HEAD
 
 
 
 DialogContent.displayName = DialogPrimitive.Content.displayName
 DialogContent.displayName = DialogPrimitive.Content.displayName,
 DialogContent.displayName = DialogPrimitive.Content.displayName
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -152,7 +178,15 @@ const DialogHeader = ({
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn(
+<<<<<<< HEAD
       'flex flex-col space-y-1.5 text-center sm:text-left'
+=======
+
+
+      "flex flex-col space-y-1.5 text-center sm:text-left",
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       className
     )}
 import * as React from 'react';
@@ -281,6 +315,7 @@ DialogFooter.displayName = "DialogFooter"
 
 DialogFooter.displayName = "DialogFooter"
 
+<<<<<<< HEAD
 const DialogTitle = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Title>
@@ -344,6 +379,8 @@ const DialogDescription = React.forwardRef<;
   DialogTitle
   DialogDescription
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Dialog,
   DialogPortal,
   DialogOverlay,
@@ -368,6 +405,7 @@ export {;
   DialogTrigger,;
   DialogContent,;
   DialogHeader,;
+<<<<<<< HEAD
   DialogFooter;
   DialogTitle;
   DialogDescription}
@@ -376,3 +414,22 @@ export {;
   DialogTitle;
   DialogDescription}
 ;
+=======
+
+  Dialog,
+  DialogPortal,
+  DialogOverlay,
+  DialogClose,
+  DialogTrigger,
+  DialogContent,
+  DialogHeader,
+  DialogFooter,
+  DialogTitle,
+  DialogDescription,
+}
+
+  DialogFooter;
+  DialogTitle;
+  DialogDescription}
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

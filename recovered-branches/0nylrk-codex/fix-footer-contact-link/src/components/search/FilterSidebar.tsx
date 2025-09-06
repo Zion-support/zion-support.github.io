@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Checkbox} from "@/components/ui/checkbox";
@@ -13,6 +14,10 @@ import { Filter, X, Star } from "lucide-react";
 import { FilterOptions } from "@/types/search";
 import { Filter, X, Star } from "lucide-react",
 import { FilterOptions } from "@/types/search",
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface FilterSidebarProps {
   filters: {
 
@@ -20,6 +25,7 @@ interface FilterSidebarProps {
     selectedLocations: string[]
     selectedAvailability: string[]
     selectedRating: number | null
+<<<<<<< HEAD
   }
   filterOptions: FilterOptions
   onFilterChange: (filterType: string, value: string) => void
@@ -63,28 +69,49 @@ import { Button } from "@/components/ui/button",;
 import { Checkbox } from "@/components/ui/checkbox",;
 import { Filter, X, Star } from "lucide-react",;
 import { FilterOptions } from "@/types/search",;
+=======
+
+import React from "react";
+import {Button} from "@/components/ui/button";
+import {Checkbox} from "@/components/ui/checkbox";
+import {Filter, X, Star} from "lucide-react";
+import {FilterOptions} from "@/types/search";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface FilterSidebarProps {;
   filters: {;
     selectedProductTypes: string[],;
     selectedLocations: string[],;
     selectedAvailability: string[],;
     selectedRating: number | null;
+<<<<<<< HEAD
   },;
+=======
+  };
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   filterOptions: FilterOptions,;
   onFilterChange: (filterType: string, value: string) => void,;
   onRatingChange: (rating: number | null) => void,;
   onClearFilters: () => void;
 }
+<<<<<<< HEAD
   filters;
   filterOptions;
 ;
 export function FilterSidebar({;
   filters,;
   filterOptions,;
+=======
+
+export function FilterSidebar(): any ({;
+
+  filters;
+  filterOptions;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onFilterChange;
   onRatingChange;
   onClearFilters;
 }: FilterSidebarProps) {;
+<<<<<<< HEAD
   return (;
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4">;
       <div className="flex items-center justify-between mb-4">;
@@ -95,6 +122,8 @@ export function FilterSidebar({;
           variant="outline";
           size="sm";
           className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
 
 
@@ -202,7 +231,11 @@ export function FilterSidebar({;
           ))}
         </div>
       </div>
+<<<<<<< HEAD
   return (
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4">;
       <div className="flex items-center justify-between mb-4">;
         <h3 className="text-lg font-medium text-white flex items-center">;
@@ -380,6 +413,7 @@ export function FilterSidebar(_{_filters, _filterOptions, _onFilterChange, _onRa
           Minimum Rating;
         </label>;
         <div className="flex flex-wrap gap-2">;
+<<<<<<< HEAD
       {/* Rating Filter */}
       <div className="mb-6">
         <label className="text-sm font-medium text-zion-slate-light block mb-2">
@@ -387,11 +421,18 @@ export function FilterSidebar(_{_filters, _filterOptions, _onFilterChange, _onRa
         </label>
         <div className="flex flex-wrap gap-2">
           {[null, ...filterOptions.ratingOptions].map((rating) => (
+=======
+          {[null, ...filterOptions && filterOptions.ratingOptions].map((rating) => (;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Button
               key={rating === null ? 'any' : rating}
               variant="outline"
               size="sm"
               onClick={() => onRatingChange(rating)}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               className={`${;
                 filters && filters.selectedRating === rating ;
                   ? "bg-zion-purple/20 border-zion-purple text-zion-purple" ;
@@ -557,6 +598,7 @@ function FilterSidebar() {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
   ),;}
   return (<div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4" > <div className="flex items-center justify-between mb-4" > <h3 className="text-lg font-medium text-white flex items-center" > <Filter className="mr-2 h-5 w-5" /> Filters outline"size=" sm"className=" border-zion-purple text-zion-purple hover:bg-zion-purple/10"onClick= {
   onClearFilters 
@@ -597,3 +639,6 @@ function FilterSidebar() {
     </div>
   )
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

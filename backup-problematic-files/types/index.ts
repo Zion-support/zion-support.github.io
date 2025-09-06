@@ -1,10 +1,17 @@
 // Contact information
 export interface ContactInfo {
+<<<<<<< HEAD
 export interface ContactInfo {;
 export interface ContactInfo {
   phone: string, email: string,
   address: string, site: string,
 export interface Service {;
+=======
+  phone: string;
+  email: string;
+  address: string;
+  site: string;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
 // Service interfaces
@@ -37,6 +44,7 @@ export interface ServiceCategory {
 
 // SEO and performance
 export interface SEOProps {
+<<<<<<< HEAD
   title?: string;
   description?: string;
   title: string;
@@ -115,6 +123,14 @@ export interface AnimationState {,
   isLoaded: boolean,
   hasError: boolean,
 };
+=======
+  title: string;
+  description: string;
+  keywords?: string;
+  canonical?: string;
+  ogImage?: string;
+  noindex?: boolean;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
 export interface PerformanceMetrics {
@@ -305,7 +321,11 @@ export interface User {
     experience: number;
     location: string;
     timezone: string;
+<<<<<<< HEAD
   }
+=======
+  };
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   preferences: {
     theme: 'light' | 'dark' | 'auto';
     language: string;
@@ -313,6 +333,7 @@ export interface User {
       email: boolean;
       push: boolean;
       sms: boolean;
+<<<<<<< HEAD
     }
   }
   activity: {
@@ -328,6 +349,23 @@ export interface User {
     end_date: Date;
     features: string[];
   }
+=======
+    };
+  };
+  activity: {
+    lastLogin: Date;
+    loginCount: number;
+    projects: string[];
+    tasks: string[];
+  };
+  subscription: {
+    plan: 'free' | 'basic' | 'premium' | 'enterprise';
+    status: 'active' | 'inactive' | 'cancelled' | 'expired';
+    startDate: Date;
+    endDate: Date;
+    features: string[];
+  };
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
 export interface UserPreferences {
@@ -373,7 +411,11 @@ export interface Notification {
   action?: {
     label: string;
     url: string;
+<<<<<<< HEAD
   }
+=======
+  };
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   category: 'system' | 'project' | 'team' | 'client' | 'billing';
   priority: 'low' | 'medium' | 'high';
   expires?: Date;
@@ -435,25 +477,46 @@ export interface Project {
 
 // Component props
 export interface BaseComponentProps {
+<<<<<<< HEAD
   class_name?: string;
+=======
+  className?: string;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   children?: React.ReactNode;
   id?: string;
   disabled?: boolean;
   loading?: boolean;
+<<<<<<< HEAD
   on_click?: () => void;
   type?: 'button' | 'submit' | 'reset';
 }
 export interface InputProps {
   class_name?: string;
+=======
+  onClick?: () => void;
+  type?: 'button' | 'submit' | 'reset';
+}
+
+export interface InputProps {
+  className?: string;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   children?: React.ReactNode;
   id?: string;
   disabled?: boolean;
   loading?: boolean;
+<<<<<<< HEAD
   on_click?: () => void;
   type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number';
   placeholder?: string;
   value?: string;
   on_change?: (value: string) => void;
+=======
+  onClick?: () => void;
+  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number';
+  placeholder?: string;
+  value?: string;
+  onChange?: (value: string) => void;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   error?: string;
   required?: boolean;
 }
@@ -465,4 +528,8 @@ export interface Environment {
   NEXT_PUBLIC_APP_URL?: string;
   NEXT_PUBLIC_GA_ID?: string;
   NEXT_PUBLIC_SENTRY_DSN?: string;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

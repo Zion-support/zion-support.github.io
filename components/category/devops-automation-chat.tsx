@@ -1,6 +1,22 @@
 
 
 
+<<<<<<< HEAD
+=======
+      <main>;
+        <h1>DevopsAutomationChat</h1>;
+        <p>Blog content coming soon...</p>;
+        <a href="/blog">Back to Blog</a>;
+      </main>;
+    </div>;
+  );
+}
+export default DevopsAutomationChat;
+
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -19,6 +35,11 @@ const DevopsAutomationChat: NextPage = () => {
 
         <title>DevopsAutomationChat - Zion Tech Solutions</title>
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -42,6 +63,7 @@ const DevopsAutomationChat: NextPage = () => {
 ;
 export default DevopsAutomationChat;
 ;
+<<<<<<< HEAD
     <div>
       <Head>
         <title>DevopsAutomationChat - Zion Tech Solutions</title>
@@ -89,3 +111,6 @@ export default DevopsAutomationChat;
 
         <title>DevopsAutomationChat - Zion Tech Solutions</title>
         <title>DevopsAutomationChat - Zion Tech Solutions</title>
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

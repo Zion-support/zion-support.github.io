@@ -1624,8 +1624,13 @@ export default function News() {;
     </>;
   );
 }
+<<<<<<< HEAD
 :temp_conflicts/pages/news.tsx
 ;
 }
 }
 :backup-problematic-files/temp_conflicts/pages/news.tsx
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

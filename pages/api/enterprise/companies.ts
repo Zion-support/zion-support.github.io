@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { store } from '[^']*';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -107,12 +108,17 @@ export default function handler(req, res) {
   }
 
   return res.status(405).json({ error: 'method_not_allowed' })
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
     return res.status (201).json (created);
   }
   res.set_header ("Allow", "GET, POST");
   return res.status (405).end ("Method Not Allowed");
 }
+<<<<<<< HEAD
 
 
     const companies = store.listCompanies();
@@ -207,3 +213,10 @@ export default function handler(req, res) {
   }
 }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 import * as React from 'react'
 import * as NavigationMenuPrimitive from '@radix-ui/react-navigation-menu'
 import {cva} from 'class-variance-authority'
 import {ChevronDown} from 'lucide-react'
 import {cn} from '@/lib/utils'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import * as React from "react"
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu"
 import { cva } from "class-variance-authority"
@@ -10,10 +13,16 @@ import { ChevronDown } from 'lucide-react'
 
 import { cn } from "@/lib/utils"
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const NavigationMenu = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root>
 >(({ className, children, ...props }, ref) => (
   <NavigationMenuPrimitive.Root
+<<<<<<< HEAD
 
 
 const NavigationMenu = React.forwardRef<
@@ -21,6 +30,8 @@ const NavigationMenu = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root>
 ></typeof>(({ className, children, ...props }, ref) => (
   <NavigationMenuPrimitive.Root
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import * as React from 'react';
 import * as NavigationMenuPrimitive from '@radix-ui/react-navigation-menu';
@@ -41,11 +52,17 @@ const NavigationMenu = React && React.forwardRef<;
     className={cn(
       'relative z-10 flex w-full flex-1 items-center justify-center sm:max-w-max'
       "relative z-10 flex w-full flex-1 items-center justify-center sm:max-w-max",
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       className
     )}
     {...props}
   >
     {children}
+<<<<<<< HEAD
     ref={ref}
     className={cn(
       'group flex flex-1 list-none items-center justify-center space-x-1'
@@ -58,6 +75,20 @@ const NavigationMenuList = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitiv</typeof>e.List>
 >(({ className, ...props }, ref) => (
   <NavigationMenuPrimitive.List
+=======
+
+    <NavigationMenuViewport />;
+  </NavigationMenuPrimitive && NavigationMenuPrimitive.Root>;
+));
+NavigationMenu && NavigationMenu.displayName = NavigationMenuPrimitive && NavigationMenuPrimitive.Root.displayName;
+
+const NavigationMenuList = React && React.forwardRef<;
+  React && React.ElementRef<typeof NavigationMenuPrimitive && NavigationMenuPrimitive.List>,;
+  React && React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitiv</typeof>e && e.List>;
+>(({ className, ...props }, ref) => (;
+  <NavigationMenuPrimitive&& NavigationMenuPrimitive.List
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     ref={ref}
     className={cn(
       'group flex flex-1 list-none items-center justify-center space-x-1'
@@ -72,6 +103,7 @@ const NavigationMenuList = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.List>;
 >(({ className, ...props }, ref) => (;
   <NavigationMenuPrimitive.List;
+<<<<<<< HEAD
     ref={ref}
     className={cn(
       "group flex flex-1 list-none items-center justify-center space-x-1",
@@ -94,6 +126,10 @@ const navigationMenuTriggerStyle = cva(
 const NavigationMenuTrigger = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Trigger>
   React.ComponentPropsWithoutRef<typeof NavigationMenuPr</typeof>imitive.Trigger>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     ref={ref}
     className={cn(
       "group flex flex-1 list-none items-center justify-center space-x-1",
@@ -110,17 +146,23 @@ const NavigationMenuItem = NavigationMenuPrimitive.Item
 
 
 const navigationMenuTriggerStyle = cva(
+<<<<<<< HEAD
 
 const NavigationMenuItem = NavigationMenuPrimitive.Item
 
 const navigationMenuTriggerStyle = cva(
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
 )
 
 const NavigationMenuTrigger = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Trigger>
+<<<<<<< HEAD
 >(({ className, children, ...props }, ref) => (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >(({ className, children, ...props }, ref) => (
   <NavigationMenuPrimitive.Trigger
   />;
@@ -138,8 +180,11 @@ const NavigationMenuTrigger = React && React.forwardRef<;
   React && React.ComponentPropsWithoutRef<typeof NavigationMenuPr</typeof>imitive && imitive.Trigger>;
 >(({ className, children, ...props }, ref) => (;
   <NavigationMenuPrimitive&& NavigationMenuPrimitive.Trigger
+<<<<<<< HEAD
 >(({ className, children, ...props }, ref) => (
   <NavigationMenuPrimitive.Trigger
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     ref={ref}
     className={cn(navigationMenuTriggerStyle(), "group", className)}
     {...props}
@@ -210,11 +255,33 @@ const NavigationMenuViewport = React.forwardRef<
     <NavigationMenuPrimitive.Viewport
       className={cn(
 
+<<<<<<< HEAD
+=======
+  />;
+));
+NavigationMenuContent && NavigationMenuContent.displayName = NavigationMenuPrimitive && NavigationMenuPrimitive.Content.displayName;
+
+const NavigationMenuLink = NavigationMenuPrimitive && NavigationMenuPrimitive.Link;
+
+const NavigationMenuViewport = React && React.forwardRef<;
+  React && React.ElementRef<typeof NavigationMenuPrimitive && NavigationMenuPrimitive.Viewport>,;
+  React && React.ComponentPropsWithoutRef<typeof</typeof> NavigationMenuPrimitive && NavigationMenuPrimitive.Viewport>;
+>(({ className, ...props }, ref) => (;
+  <div className={cn('absolute left-0 top-full z-50 flex justify-center')}>;
+    <NavigationMenuPrimitive&& NavigationMenuPrimitive.Viewport
+      className={cn(
+        'origin-top-center relative mt-1 && 1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]',
+
+
+        "origin-top-center relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] w-full overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]",
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         className
       )}
       ref={ref}
       {...props}
 
+<<<<<<< HEAD
 const NavigationMenuViewport = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Viewport>
   React.ComponentPropsWithoutRef<typeof</typeof> NavigationMenuPrimitive.Viewport>
@@ -251,6 +318,8 @@ const NavigationMenuViewport = React.forwardRef<
       ref={ref}
       {...props}
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
     />;
@@ -263,9 +332,18 @@ const NavigationMenuIndicator = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Indicator>;
 >(({ className, ...props }, ref) => (;
   <NavigationMenuPrimitive.Indicator;
+<<<<<<< HEAD
     className={cn(
       "top-full z-[1] flex h-1.5 items-end justify-center overflow-hidden data-[state=visible]:animate-in data-[state=hidden]:animate-out data-[state=hidden]:fade-out data-[state=visible]:fade-in",
       className
+=======
+
+
+
+    ref={ref}
+    className={cn(
+      "top-full z-[1] flex h-1.5 items-end justify-center overflow-hidden data-[state=visible]:animate-in data-[state=hidden]:animate-out data-[state=hidden]:fade-out data-[state=visible]:fade-in",
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       className
     )}
 import * as React from 'react';
@@ -289,18 +367,22 @@ const NavigationMenu = React.forward_ref<;
 ));
 NavigationMenuViewport && NavigationMenuViewport.displayName =;
   NavigationMenuPrimitive && NavigationMenuPrimitive.Viewport.displayName;
+<<<<<<< HEAD
     ref={ref}
     className={cn(
       "top-full z-[1] flex h-1.5 items-end justify-center overflow-hidden data-[state=visible]:animate-in data-[state=hidden]:animate-out data-[state=hidden]:fade-out data-[state=visible]:fade-in",
       className
     )}
     {...props}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   >
     <div className="relative top-[60%] h-2 w-2 rotate-45 rounded-tl-sm bg-border shadow-md" />
   </NavigationMenuPrimitive.Indicator>
 ))
 NavigationMenuIndicator.displayName =
   NavigationMenuPrimitive.Indicator.displayName
+<<<<<<< HEAD
 export {
   navigationMenuTriggerStyle
   NavigationMenu
@@ -312,6 +394,9 @@ export {
   NavigationMenuIndicator
   NavigationMenuViewport
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 const NavigationMenuIndicator = React && React.forwardRef<;
@@ -341,6 +426,7 @@ export {
   NavigationMenuItem,
   NavigationMenuContent,
   NavigationMenuTrigger,
+<<<<<<< HEAD
   NavigationMenuLink,;
   NavigationMenuIndicator,;
   NavigationMenuViewport;
@@ -349,3 +435,11 @@ export {
   NavigationMenuIndicator,
   NavigationMenuViewport}
 ;
+=======
+
+
+  NavigationMenuLink,
+  NavigationMenuIndicator,
+  NavigationMenuViewport}
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

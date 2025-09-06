@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 import { Button  } from '@/components/ui/button';
@@ -7,6 +8,12 @@ import { PdfExportButton  } from '../PdfExportButton';
 import { Resume  } from '@/types/resume';
 import { useState  } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';
+=======
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {Button} from '@/components/ui/button';
 import {ArrowLeft, FileText, Link} from 'lucide-react';
 import {PdfExportButton} from '../PdfExportButton';
@@ -14,16 +21,21 @@ import {Resume} from '@/types/resume';
 import {useState} from 'react';
 import {useIsMobile} from '@/hooks/use-mobile';
 
+<<<<<<< HEAD
 import { Button  } from '@/components/ui/button';
 import { ArrowLeft, FileText, Link  } from 'lucide-react';
 import { PdfExportButton  } from '../PdfExportButton';
 import { Resume  } from '@/types/resume';
 import { useState  } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface PreviewHeaderProps {
   resume: Resume;
   onBack: () => void
 }
+<<<<<<< HEAD
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
 
@@ -54,6 +66,8 @@ interface PreviewHeaderProps {;
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
   const [isPrinting, setIsPrinting] = useState(false),;
   const isMobile = useIsMobile(),;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
@@ -76,6 +90,7 @@ export function PreviewHeader(): any ({ resume, onBack }: PreviewHeaderProps) {;
       @media print {;
         body * {;
           visibility: hidden;
+<<<<<<< HEAD
   const handleBrowserPrint = () => {;
     setIsPrinting(true),;
     // Inject print-specific CSS only for the duration of printing;
@@ -88,15 +103,22 @@ export function PreviewHeader(): any ({ resume, onBack }: PreviewHeaderProps) {;
         .print-section, .print-section * {
           visibility: visible
         }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         .print-section {
           position: absolute
           left: 0
           top: 0
           width: 100%
+<<<<<<< HEAD
         }
         .print-section, .print-section * {;
           visibility: visible;
         }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         .print-section {;
           position: absolute,;
           left: 0,;
@@ -152,6 +174,7 @@ function PreviewHeader() {
 
 
     
+<<<<<<< HEAD
         }
         .no-print {
           display: none !important
@@ -172,6 +195,8 @@ function PreviewHeader() {
     `,
     document.head.appendChild(style),
     
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Trigger print dialog
     window.print(),
     
@@ -181,6 +206,11 @@ function PreviewHeader() {
       setIsPrinting(false)
     }, 1000)
   },
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   return (
     <div
@@ -190,6 +220,10 @@ function PreviewHeader() {
         <ArrowLeft className="h-4 w-4" />
         Back
       </Button>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}>
         <PdfExportButton resume={resume} />
@@ -198,6 +232,7 @@ function PreviewHeader() {
           onClick={handleBrowserPrint} 
 
 
+<<<<<<< HEAD
 <div
       <div
         className={`flex ${isMobile ? "flex-col" : "flex-row"} space-${isMobile ? "y-2" : "x-2"} no-print`}
@@ -211,20 +246,29 @@ function PreviewHeader() {
         <Button 
           variant="outline" 
           onClick={handleBrowserPrint} 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           disabled={isPrinting}
           className="gap-2"
         >
           <FileText className="h-4 w-4" />
           Print
         </Button>
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <Button variant="outline" className="gap-2">
           <Link className="h-4 w-4" />
           Add to Profile
         </Button>
       </div>
     </div>
+<<<<<<< HEAD
     `;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     document && document.head.appendChild(style);
     // Trigger print dialog;
     window && window.print();
@@ -406,6 +450,11 @@ document.head.appendChild (style);
 }
 ;
 
+<<<<<<< HEAD
   )
 }
 ;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

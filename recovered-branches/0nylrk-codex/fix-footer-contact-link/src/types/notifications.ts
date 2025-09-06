@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface Notification {
 export interface Notification {;
   id: string;
@@ -21,6 +22,8 @@ export interface Notification {;
   read: boolean,;
   created_at: string;
   updated_at: string;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   created_at: string,
   updated_at: string;
@@ -30,5 +33,9 @@ export interface Notification {;
 export interface Notification {;
 
 }
+<<<<<<< HEAD
 }
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

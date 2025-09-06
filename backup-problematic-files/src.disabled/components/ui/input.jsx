@@ -27,4 +27,8 @@ const Input = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Input;
+=======
+export default Input;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

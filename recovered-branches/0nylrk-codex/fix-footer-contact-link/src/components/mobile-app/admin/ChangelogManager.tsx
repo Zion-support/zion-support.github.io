@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Plus, Trash2 } from "lucide-react";
 import { AppPlatform } from "./MetadataManager";
 
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -14,10 +15,13 @@ import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 interface ChangelogManagerProps {
   platform: AppPlatform
+<<<<<<< HEAD
 }
 
 import { Plus, Trash2 } from "lucide-react";
@@ -126,6 +130,11 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
     const { name, value } = e.target,
     setNewEntry(prev => ({ ...prev, [name]: value }))
   },
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 type ChangelogEntry = {;
 import React, { useState } from './react';
 import { Card, CardHeader, CardTitle, CardContent  } from '@/components / ui / card';
@@ -187,6 +196,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                 type="date"
                 name="date"
 
+<<<<<<< HEAD
                 value={newEntry.date}
                 onChange={handleInputChange}
               />
@@ -194,6 +204,10 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
             <Button
               onClick={handleAddEntry}
               disabled={!newEntry.version |!newEntry.changes}
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -478,15 +492,22 @@ onClick={handleAddEntry}
   );
 }
 
+<<<<<<< HEAD
             
             {entries.length === 0 && (
 );
               <p className="text-center text-gray-400 py-4">No changelog entries yet</p>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             )}
           </div>;
         </div>;
       </CardContent>;
     </Card>;
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
       id: "1",
       version: "1.0.0",
@@ -604,6 +625,7 @@ if (return) {
 
 
 };
+<<<<<<< HEAD
   ),;
 },; interface ChangelogManagerProps {
   platform: AppPlatform 
@@ -640,3 +662,7 @@ date: new Date () .toISOString () .split ('T') [0];
 };
 
 };
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

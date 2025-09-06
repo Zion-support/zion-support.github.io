@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { useTheme } from "@/hooks/useTheme";
@@ -80,10 +81,29 @@ export function LanguageThemeSelector() {
               key={language.code}
 key={language.code}
               className={`cursor-pointer transition-all ${
+=======
+key={language.code}
+              className={`cursor-pointer transition-all ${
+                selectedLanguage === language.code
+                  ? "border-primary bg-primary/5"
+              onClick = {(,) => setSelectedLanguage(language && language.code),}
+            >;
+              <CardContent className='p-3 flex items-center justify-between'>;
+                <div className='flex items-center'>;
+                  <span className='text-xl mr-2'>{language && language.flag}</span>;
+                  <span>{language && language.name}</span>;
+                </div>;
+                {selectedLanguage === language && language.code && (;
+                  <Check className='h-4 w-4 text-primary' />                )}          {languages && languages.map((language) => (;
+            <Card
+              key={language && language.code}
+              className={`cursor-pointer transition-all ${
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 selectedLanguage === language.code 
                   ? "border-primary bg-primary/5" 
                   : "border-border hover:border-primary/40"
               }`}
+<<<<<<< HEAD
               onClick={() => setSelectedLanguage(language.code)}
             >
               <CardContent className="p-3 flex items-center justify-between">
@@ -209,6 +229,10 @@ export function LanguageThemeSelector() {;
           Select your preferred appearance
         </p>
         <div className='flex gap-3 mt-4'>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               onClick={() => setSelectedLanguage(language.code)}
 
             >;
@@ -235,11 +259,14 @@ export function LanguageThemeSelector() {;
 
         <div className='flex gap-3 mt-4'>;
 
+<<<<<<< HEAD
               theme === 'light'
                 ? 'border-primary bg-primary/5'
                 : 'border-border hover:border-primary/40'
 ursor/fix-website-loading-errors-and-merge-6662
             }`}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Card
               theme === 'light'
                 ? 'border-primary bg-primary/5'
@@ -278,6 +305,10 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
       </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="space-y-2">
         <h2 className="text-xl font-medium">Choose theme</h2>
         <p className="text-muted-foreground">Select your preferred appearance</p>
@@ -300,6 +331,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               {theme === 'light' && (
                 <Check className="h-4 w-4 text-primary mt-2" />
               )}
+<<<<<<< HEAD
 
             </CardContent>;
           </Card>;
@@ -366,10 +398,41 @@ ursor/fix-website-loading-errors-and-merge-6662
   )
 }
 
+=======
+
+            </CardContent>;
+          </Card>;
+
+          <Card
+            className={`flex-1 cursor-pointer transition-all ${
+            </CardContent>
+          </Card>
+
+          <Card 
+            className={`flex-1 cursor-pointer transition-all ${
+
+          
+          <Card 
+            className={`flex-1 cursor-pointer transition-all ${
+
+
+
+              theme === 'dark' 
+                ? "border-primary bg-primary/5" 
+                : "border-border hover:border-primary/40"
+            }`}
+            onClick={() => setTheme('dark')}
+
+
+              )}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </div>;
     </div>;
   );
 };
+<<<<<<< HEAD
             </CardContent>;
           </Card>;
         </div>;
@@ -378,6 +441,10 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 }
 ;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import { use_theme } from '@/hooks / use_theme';
@@ -511,4 +578,8 @@ function LanguageThemeSelector() {
 
     </div>);
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

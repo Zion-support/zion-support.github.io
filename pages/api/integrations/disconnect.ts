@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { writeState } from '[^']*';
 import { getProviderById } from '[^']*';
@@ -24,12 +25,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       providerId: providerId as any
       level: "info"
       action: "disconnect"
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     });
   });
 
 }
 
+<<<<<<< HEAD
 if (req && req.method !== "POST")
     return res && res.status(405).json({ error: "Method not allowed" });
   const { providerId } = req && req.body as { providerId?: string };
@@ -73,6 +78,9 @@ function handler() {
       action: "disconnect",
     });
   });
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { writeState } from '../../../lib/integrations/fileStore';
 import { getProviderById } from '../../../lib/integrations/registry';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -96,6 +104,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 res.status (200).json ({ ok: true });
 }
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -139,3 +148,10 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
     updateJobMatchStatus
     updateJobMatchStatus, 
@@ -58,6 +59,8 @@ import { Loader2 } from 'lucide-react'import { Badge  } from '@/components / ui 
 import { useJobSuggestions  } from '@/hooks / useJobSuggestions';
 import { JobMatchesCard  } from './JobMatchesCard';
 import { NoJobsCard  } from './NoJobsCard';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface SuggestedJobsProps {
   talent_id?: string;
 }
@@ -82,6 +85,7 @@ function SuggestedJobs() {
   const handle_decline = (match_id: string) =>: any {
     updateJobMatchStatus (match_id, 'declined');
   }
+<<<<<<< HEAD
       newMatches,
       viewedMatches,
       appliedMatches ;
@@ -108,6 +112,8 @@ function SuggestedJobs() {
     updateJobMatchStatus(matchId, 'declined')
   },
   if (isLoading) {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   const { user } = useAuth(),
   const currentTalentId = talentId || user?.id,
@@ -142,18 +148,26 @@ import { Loader2 } from 'lucide-react'import { Badge } from "@/components/ui/bad
 import { useJobSuggestions } from "@/hooks/useJobSuggestions";
 import { JobMatchesCard } from "./JobMatchesCard";
 import { NoJobsCard } from "./NoJobsCard";
+<<<<<<< HEAD
 
   if (isLoading) {
     return (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="flex items-center justify-center p-6">
         <Loader2 className="w-6 h-6 animate-spin text-primary" />
       </div>
     )
+<<<<<<< HEAD
   }
   }
   if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {
     return <NoJobsCard />
   }
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useAuth } from "@/hooks/useAuth",;
 import { Loader2 } from 'lucide-react';
 import { Badge } from "@/components/ui/badge",;
@@ -163,6 +177,10 @@ import { NoJobsCard } from "./NoJobsCard",;
 interface SuggestedJobsProps {;
   talentId?: string;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
   const { user } = useAuth();
   const currentTalentId = talentId || user?.id;
@@ -175,6 +193,7 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
       appliedMatches ;
     } ;
   } = useJobSuggestions(currentTalentId);
+<<<<<<< HEAD
   const handleApply = (matchId: string, jobId: string) => {;
     updateJobMatchStatus(matchId, 'applied');    // In a real app, this might redirect to application form or open a modal;
 interface SuggestedJobsProps {;
@@ -197,16 +216,28 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
     updateJobMatchStatus(matchId, 'applied'),;
     // In a real app, this might redirect to application form or open a modal;
   };
+=======
+
+  const handleApply = (matchId: string, jobId: string) => {;
+    updateJobMatchStatus(matchId, 'applied');    // In a real app, this might redirect to application form or open a modal;
+  };
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleDecline = (matchId: string) => {;
     updateJobMatchStatus(matchId, 'declined');
   };
   if (isLoading) {;
+<<<<<<< HEAD
     return (;
+=======
+    return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="flex items-center justify-center p-6">;
         <Loader2 className="w-6 h-6 animate-spin text-primary" />;
       </div>;
     );
   }
+<<<<<<< HEAD
   return (
   
     <div className="space-y-6">
@@ -230,6 +261,14 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
           <div className="grid gap-4 md:grid-cols-2">
             {newMatches.map(match => (
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+  if (newMatches && newMatches.length === 0 && viewedMatches && viewedMatches.length === 0 && appliedMatches && appliedMatches.length === 0) {;
+    return <NoJobsCard />;
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   }
 
@@ -296,6 +335,7 @@ export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
 
 
           
+<<<<<<< HEAD
           <div className="grid gap-4 md:grid-cols-2">
             {newMatches.map(match => (
               <JobMatchesCard
@@ -304,6 +344,8 @@ export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
           
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="grid gap-4 md:grid-cols-2">
             {newMatches.map(match => (
               <JobMatchesCard 
@@ -312,6 +354,7 @@ export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
                 onApply={handleApply} 
                 onDecline={handleDecline} 
               />
+<<<<<<< HEAD
                 match = {match,}
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
@@ -341,6 +384,16 @@ export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
         </div>
       )}
 ;
+=======
+            ))}
+          </div>;
+        </div>;
+      )}
+
+
+;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       
 ;
 
@@ -350,8 +403,22 @@ export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-medium">Previously Viewed</h3>
           </div>
+<<<<<<< HEAD
           <div className="grid gap-4 md:grid-cols-2">
             {viewedMatches.map(match => (
+=======
+
+
+      {/* Previously Viewed Section */}
+      {viewedMatches && viewedMatches.length > 0 && (;
+        <div className="space-y-4">;
+          <div className="flex items-center justify-between">;
+            <h3 className="text-lg font-medium">Previously Viewed</h3>;
+          </div>;
+
+          <div className="grid gap-4 md:grid-cols-2">;
+            {viewedMatches && viewedMatches.map(match => (;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <JobMatchesCard
                 key = {match && match.id,}
 
@@ -362,6 +429,7 @@ export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
 
 
           
+<<<<<<< HEAD
           <div className="grid gap-4 md:grid-cols-2">
             {viewedMatches.map(match => (
               <JobMatchesCard
@@ -370,6 +438,8 @@ export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
           
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="grid gap-4 md:grid-cols-2">
             {viewedMatches.map(match => (
               <JobMatchesCard 
@@ -378,6 +448,7 @@ export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
                 onApply={handleApply} 
                 onDecline={handleDecline} 
               />
+<<<<<<< HEAD
       {viewedMatches && viewedMatches.length > 0 && (;
       {viewedMatches.length > 0 && (;
         <div className="space-y-4">;
@@ -406,6 +477,16 @@ export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
         </div>
       )}
 ;
+=======
+            ))}
+          </div>;
+        </div>;
+      )}
+
+
+;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       
 ;
 
@@ -415,8 +496,12 @@ export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-medium">Applied Jobs</h3>
           </div>
+<<<<<<< HEAD
               <JobMatchesCard
                 key = {match.id,}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               <JobMatchesCard 
 
@@ -433,12 +518,17 @@ export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
           <div className="grid gap-4 md:grid-cols-2">
             {appliedMatches.map(match => (
               <JobMatchesCard
+<<<<<<< HEAD
               <JobMatchesCard 
                 key = {match.id,}
+=======
+                key = {match && match.id,}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 match = {match,}
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
                 showApplied = {true,}
+<<<<<<< HEAD
           
               />
           
@@ -520,6 +610,8 @@ if (isLoading) {
                 match={match} ;
                 onApply={handleApply} ;                onDecline={handleDecline}
                 showApplied={true}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               />;
 
 
@@ -722,4 +814,8 @@ if ( {) {
 }
 ;
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

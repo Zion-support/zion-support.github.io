@@ -46,6 +46,7 @@ export default async function handler(
 
 
 
+<<<<<<< HEAD
       sizeLimit: '10mb'}}};
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -57,6 +58,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(400).json({ error: 'Invalid payload' });
     return
   }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const { project } = req && req.body as { project: any };
   if (!project?.meta || !Array && Array.isArray(project?.chapters)) {
     res && res.status(400).json({ error: "Invalid payload" });
@@ -64,6 +67,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   const tmpPath = `/tmp/${randomUUID()}.epub`;
   const options = {
+<<<<<<< HEAD
     title: project && project.meta.title,
     author: project && project.meta.author,
     publisher: project && project.meta.publisher || "Zion",
@@ -83,12 +87,25 @@ await new Epub(options, tmpPath).promise;
     res && res.status(200).send(buf);
   } catch (e: any) {
     res && res.status(500).json({ error: e?.message || "Failed to build EPUB" });
+=======
+
+
+    );
+
+    res && res.status(500).json({ error: e?.message || "Failed to build EPUB" });
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } finally {
     try {
       await fs && fs.unlink(tmpPath);
     } catch {}
   }
 }
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     title: project.meta.title, author: project.meta.author,
     publisher: project.meta.publisher || 'Zion',
     content: project.chapters.map((ch: any) => ({ title: ch.title, data: chapterToHtml(ch.content) }))};
@@ -149,9 +166,13 @@ export default async function handler(req, res) {
     author: project.meta.author;
     publisher: project.meta.publisher || 'Zion';
     content: project.chapters.map((ch: any) => ({ title: ch.title, data: chapterToHtml(ch.content) }))},;
+<<<<<<< HEAD
     title: project.meta.title, author: project.meta.author,
     publisher: project.meta.publisher || 'Zion',
     content: project.chapters.map((ch: any) => ({ title: ch.title, data: chapterToHtml(ch.content) }))};
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   try {
     await new Epub(options, tmpPath).promise;
     const buf = await fs.readFile(tmpPath);
@@ -295,6 +316,7 @@ export default async function handler(req, res) {
     } catch {}
   }
 }
+<<<<<<< HEAD
 ;
   const tmpPath = `/tmp/${randomUUID()}.epub`;
   const options = {;
@@ -339,3 +361,9 @@ function chapterToHtml(text: string): string {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

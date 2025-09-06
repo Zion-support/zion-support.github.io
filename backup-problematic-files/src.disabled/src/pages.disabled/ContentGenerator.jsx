@@ -27,4 +27,8 @@ const ContentGenerator = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ContentGenerator;
+=======
+export default ContentGenerator;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

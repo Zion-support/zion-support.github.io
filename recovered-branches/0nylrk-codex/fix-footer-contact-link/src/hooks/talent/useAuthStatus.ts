@@ -1,20 +1,32 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 
 
 export function useAuthStatus() {
   // Mock authenticated status
+<<<<<<< HEAD
 
 import { useState } from 'react';
 import {useState} from 'react';
 export function useAuthStatus() {
   // Mock authenticated status;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   // Mock user details
   const [userDetails, setUserDetails] = useState({
     id: 'user-123';
     name: 'Demo User';
 
+<<<<<<< HEAD
     email: 'demo@example.com'
+=======
+    email: 'demo@example && example.com',
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     avatar: ''
   });
@@ -27,11 +39,19 @@ export function useAuthStatus() {
       if (isSaved) {
         setSavedTalents(prev => [...prev, talentId])
       } else {
+<<<<<<< HEAD
         setSavedTalents(prev => prev.filter(id => id !== talentId))
       }
     } else {
       // In a real app, we might show a login prompt
       console.log('User needs to log in to save talents')
+=======
+        setSavedTalents(prev => prev && prev.filter(id => id !== talentId))
+      }
+    } else {
+      // In a real app, we might show a login prompt
+      console && console.log('User needs to log in to save talents')
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   }
   // For demo purposes, let's provide a login/logout toggle
@@ -43,7 +63,13 @@ export function useAuthStatus() {
     userDetails;
     savedTalents;
     handleToggleSave;
+<<<<<<< HEAD
   }
+=======
+
+    toggleAuth
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 export /**
  * useAuthStatus - Function description
@@ -87,6 +113,7 @@ if ( {) {
       console.log ('User needs to log in to save talents');
     }
 
+<<<<<<< HEAD
 
     toggleAuth
   }
@@ -119,6 +146,8 @@ export function useAuthStatus() {;
       // In a real app, we might show a login prompt;
       // // // console.log('User needs to log in to save talents');
     }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },;
   // For demo purposes, let's provide a login/logout toggle;
   const toggleAuth = () => {;
@@ -146,6 +175,7 @@ export function useAuthStatus() {;
     handleToggleSave;
     toggle_auth;
   }
+<<<<<<< HEAD
 
 import { useState } from 'react',;
 ;
@@ -213,3 +243,7 @@ toggleAuth
   }
 }
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

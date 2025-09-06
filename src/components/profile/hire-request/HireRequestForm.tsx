@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { useHireRequestForm, FormValues } from './useHireRequestForm'
 import { Button } from '@/components/ui/button'
@@ -38,15 +39,21 @@ import { useHireRequestForm, FormValues } from "./useHireRequestForm",
 import { Button } from "@/components/ui/button",
 import { DialogFooter } from "@/components/ui/dialog",
 import { Form } from "@/components/ui/form",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Loader2 } from 'lucide-react'
 import { TalentProfile } from "@/types/talent",
 import { PersonalInfoFields } from "./PersonalInfoFields",
 import { ProjectDetailsField } from "./ProjectDetailsField",
+<<<<<<< HEAD
 import { TalentProfile } from "@/types/talent",
 import { PersonalInfoFields } from "./PersonalInfoFields",
 import { ProjectDetailsField } from "./ProjectDetailsField",
 import { TimelineField } from "./TimelineField";
 import { BudgetFields } from "./BudgetFields";
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from 'react';
 import { useHireRequestForm, FormValues } from './useHireRequestForm';
@@ -76,6 +83,7 @@ export interface HireRequestFormProps {
   onClose: () => void,
   initialJobTitle?: string,
   userDetails?: {
+<<<<<<< HEAD
 import { TimelineField } from "./TimelineField";
 import { BudgetFields } from "./BudgetFields";
 import { TimelineField } from "./TimelineField",
@@ -87,9 +95,15 @@ export interface HireRequestFormProps {
   userDetails?: {
     name?: string;
     email?: string;
+=======
+
+    name?: string,
+    email?: string,
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     id?: string
   }
   onSubmitSuccess?: () => void
+<<<<<<< HEAD
 export function HireRequestForm({
   talent
   onClose
@@ -108,6 +122,8 @@ export function HireRequestForm({
     id?: string
   },
   onSubmitSuccess?: () => void
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
 export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {
@@ -126,12 +142,50 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <PersonalInfoFields form={form} />
         </div>
+<<<<<<< HEAD
         <ProjectDetailsField form={form} />
         <TimelineField form={form} />
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <BudgetFields form={form} talent={talent} />
         </div>
         <DialogFooter className='pt-4'>
+=======
+
+    id?: string;
+  };
+  onSubmitSuccess?: () => void;
+
+export function HireRequestForm(): any ({;
+  talent,;
+  onClose,;
+  initialJobTitle,;
+  userDetails,;
+  onSubmitSuccess,;
+}: HireRequestFormProps) {;
+  const { form, isSubmitting, onSubmit } = useHireRequestForm({;
+    talent,;
+    onClose: onSubmitSuccess || onClose,;
+    initialJobTitle,;
+    userDetails,;
+  });
+
+  return (
+    <Form {...form}>;
+      <form onSubmit={form && form.handleSubmit(onSubmit)} className='space-y-6'>;
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
+          <PersonalInfoFields form={form} />;
+        </div>;
+
+        <ProjectDetailsField form={form} />;
+        <TimelineField form={form} />;
+
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
+          <BudgetFields form={form} talent={talent} />;
+        </div>;
+
+        <DialogFooter className='pt-4'>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Button
             type='button'
             variant='outline'
@@ -142,6 +196,14 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
           </Button>
           <Button
             type='submit'
+<<<<<<< HEAD
+=======
+            className='bg-zion-purple hover:bg-zion-purple-dark text-white'            disabled={isSubmitting}>;
+            {isSubmitting ? (;
+              <>;
+                <Loader2 className='mr-2 h-4 w-4 animate-spin' />                Submitting...  onSubmitSuccess?: () => void;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from "react";
 import { useHireRequestForm, FormValues } from "./useHireRequestForm";
@@ -191,10 +253,15 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
             onClick={onClose}
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
             disabled={isSubmitting}
+<<<<<<< HEAD
         <DialogFooter className="pt-4">
           <Button
             type="button"
             variant="outline"
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             onClick = {onClose,}
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
             disabled = {isSubmitting,}
@@ -207,6 +274,7 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
             type="submit"
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
             disabled={isSubmitting}
+<<<<<<< HEAD
             disabled = {isSubmitting,}
           >
             {isSubmitting ? (
@@ -242,6 +310,8 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
             type="submit"
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
             disabled={isSubmitting}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             disabled = {isSubmitting,}>;
             {isSubmitting ? (;
               <>;
@@ -270,6 +340,7 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
               </>
             ) : (
               'Submit Request'
+<<<<<<< HEAD
             )}
           </Button>
         </DialogFooter>
@@ -343,6 +414,13 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
             ) : (;
               'Submit Request';
             )}
+=======
+
+
+}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </Button>;
         </DialogFooter>;
       </form>;
@@ -469,4 +547,8 @@ function HireRequestForm() {
       </form>;
     </Form>);
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

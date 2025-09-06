@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import {Button} from '@/components/ui/button'
 import Link from 'next/link'
@@ -42,6 +43,8 @@ interface ProjectActionsProps {;
   onAddMilestone: () => void;
 }
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 onAddMilestone
 }: ProjectActionsProps) {
 
@@ -73,6 +76,7 @@ export function ProjectActions(): any ({;
       {isTalent && !isUnderDispute && (;
         <Button onClick={onAddMilestone}>Add Milestone</Button>;
 
+<<<<<<< HEAD
 export function ProjectActions({
   projectId,
   isUnderDispute,
@@ -80,21 +84,28 @@ export function ProjectActions({
   isTalent,
   onAddMilestone
 }: ProjectActionsProps) {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="flex gap-2">
       {isUnderDispute && disputeId ? (
         <Button variant="outline" asChild>
           <Link href={`/dashboard/disputes/${disputeId}`}>
+<<<<<<< HEAD
             <ShieldAlert className='h-4 w-4 mr-2' />            View Active Dispute
           </Link>
         </Button>
       ) : (
         <RaiseDisputeButton projectId={projectId} variant='outline' />            <ShieldAlert className="h-4 w-4 mr-2" />
             <ShieldAlert className="h-4 w-4 mr-2" />
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             View Active Dispute
           </Link>
         </Button>
       ) : (
+<<<<<<< HEAD
             <ShieldAlert className='h-4 w-4 mr-2' />            View Active Dispute
           </Link>
         </Button>
@@ -111,6 +122,10 @@ export function ProjectActions({
           variant="outline"
         />
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     </div>;
   );
@@ -118,6 +133,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
         <RaiseDisputeButton projectId={projectId} variant='outline' />
       {isTalent && !isUnderDispute && (
         <Button onClick={onAddMilestone}>Add Milestone</Button>
@@ -141,12 +157,18 @@ ursor/fix-website-loading-errors-and-merge-6662
           projectId={projectId}
           variant="outline"
         />
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       )}
       {isTalent && !isUnderDispute && (;
         <Button onClick={onAddMilestone}>;
           Add Milestone;
         </Button>;
       )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>;
   );
 }
@@ -191,4 +213,8 @@ function ProjectActions() {
         </Button>)}
     </div>);
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

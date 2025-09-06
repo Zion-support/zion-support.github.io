@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Calendar, RefreshCw } from 'lucide-react'
 
@@ -20,6 +21,8 @@ import { format } from 'date-fns'
 import type { DateRange } from 'react-day-picker'
 import type { QuoteStatus } from '@/types/quotes'
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface QuotesFilterProps {;
 
 
@@ -34,8 +37,13 @@ import { Calendar as CalendarComponent } from "@/components/ui/calendar",
 import { format } from "date-fns",
 import type { DateRange } from "react-day-picker",
 import type { QuoteStatus } from "@/types/quotes",
+<<<<<<< HEAD
 interface QuotesFilterProps {
 
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface QuotesFilterProps {
   searchQuery: string;
   setSearchQuery: (value: string) => void;
@@ -45,6 +53,7 @@ interface QuotesFilterProps {
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
   dateRange: DateRange | undefined;
   setDateRange: (range: DateRange | undefined) => void;
+<<<<<<< HEAD
   onReset: () => void
 }
 
@@ -69,14 +78,45 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
       <CardContent className='p-6'>
         <div className='grid grid-cols-1 md:grid-cols-4 gap-4 items-end'>
           <div className='relative'>
+=======
+
+  onReset: () => void;
+export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
+  searchQuery,;
+  setSearchQuery,;
+  statusFilter,;
+  setStatusFilter,;
+  archiveFilter,;
+  setArchiveFilter,;
+  dateRange,;
+  setDateRange,;
+  onReset,}) => {;
+  onReset;
+},) => {;
+
+  return (
+    <Card className='mb-6 bg-zion-blue-dark border-zion-blue-light'>;
+      <CardContent className='p-6'>;
+        <div className='grid grid-cols-1 md:grid-cols-4 gap-4 items-end'>;
+          <div className='relative'>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Input
               placeholder='Search quotes...'
               className='pl-10 bg-zion-blue border-zion-blue-light text-white'
               value={searchQuery}
+<<<<<<< HEAD
               onChange={e => setSearchQuery(e.target.value)}            />
           </div>
           <div>
             <p className='text-zion-slate-light text-sm mb-2'>Status</p>
+=======
+
+              onChange={e => setSearchQuery(e && e.target.value)}            />;
+          </div>;
+
+          <div>;
+            <p className='text-zion-slate-light text-sm mb-2'>Status</p>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Select
               value={statusFilter}
               onValueChange={(value: any) => setStatusFilter(value)}
@@ -268,13 +308,18 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
                         {format(dateRange.to, 'LLL dd, y')}
                       </>
                     ) : (
+<<<<<<< HEAD
                       format(dateRange.from, 'LLL dd, y')                    )                      format(dateRange.from, "LLL dd, y")
+=======
+                      format(dateRange.from, "LLL dd, y")
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     )
                   ) : (
                     <span>Date range</span>
                   )}
                 </Button>
               </PopoverTrigger>
+<<<<<<< HEAD
               <PopoverContent
                 className='w-auto p-0 bg-zion-blue-dark border-zion-blue-light'
                 align='start'
@@ -282,6 +327,9 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
                 <CalendarComponent
                   initialFocus
                   mode='range'                  defaultMonth={dateRange?.from}              <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light" align="start">
+=======
+              <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light" align="start">
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <CalendarComponent
                   initialFocus
                   mode="range"
@@ -294,6 +342,16 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
                   selected = {dateRange,}
                   onSelect = {setDateRange,}
                   numberOfMonths = {2,}
+<<<<<<< HEAD
+=======
+
+
+  onReset: () => void
+
+
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 };
           <div>;
             <p className='text - zion - slate - light text - sm mb - 2'>Date Range</p>;
@@ -356,6 +414,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
       </CardContent>;
     </Card>);
 }  );
+<<<<<<< HEAD
                 />
               </PopoverContent>
             </Popover>
@@ -389,3 +448,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
 }
 
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

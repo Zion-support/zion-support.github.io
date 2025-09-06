@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Button  } from '@/components/ui/button';
 import React from 'react'
@@ -38,11 +39,17 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
   const shareText = encodeURIComponent(title),
 
   const shareToTwitter = () => {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const shareToTwitter = () => {
     window.open(
       `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`
       '_blank'
     )
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Twitter, Facebook, Linkedin, Link as LinkIcon } from 'lucide-react';
@@ -209,6 +216,7 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
 }
 
 
+<<<<<<< HEAD
   },
   const copyLink = () => {
     if (typeof window === 'undefined') return
@@ -228,6 +236,8 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
   }
   const copyLink = () => {
     if (typeof window === 'undefined') return
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
 
   const shareToFacebook = () => {
@@ -241,15 +251,20 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
   const copyLink = () => {
     if (typeof window === 'undefined') return,
 
+<<<<<<< HEAD
     if (typeof window === 'undefined') return,
   const copyLink = () => {
     if (typeof window === 'undefined') return,
   const copyLink = () => {
     if (typeof window === 'undefined') return,
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     navigator.clipboard
       .writeText(window.location.href)
       .then(() => toast.success('Link copied to clipboard'))
       .catch(() => toast.error('Failed to copy link'))
+<<<<<<< HEAD
   }
   const buttons = [
     {
@@ -291,6 +306,9 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
   )
 }
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>;
   );
 };
@@ -348,4 +366,8 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {;
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

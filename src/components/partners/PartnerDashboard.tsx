@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {;
   Card,;
   CardContent,;
@@ -88,17 +91,37 @@ export function PartnerDashboard() {
     pendingReferrals: 8,
     completedReferrals: 34,
     conversionRate: 18.5,
+<<<<<<< HEAD
     totalRevenue: 850.0,
     pendingRevenue: 200.0,
 
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     totalRevenue: 850.00,
     pendingRevenue: 200.00
   },
   
+<<<<<<< HEAD
 
   return (
     <div className="space-y-6">
       {/* Stats Overview */}
+=======
+  return (
+    <div className="space-y-6">
+      {/* Stats Overview */}
+
+
+export function PartnerDashboard() {
+  // Placeholder data - would come from API in real implementation
+  const stats = {
+    totalReferrals: 42,
+    pendingReferrals: 8,
+    completedReferrals: 34,
+    conversionRate: 18.5,
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     totalRevenue: 850.00,
     pendingRevenue: 200.00
   };
@@ -113,6 +136,7 @@ export function PartnerDashboard() {
             <Users className="h-4 w-4 text-zion-cyan" />
           </CardHeader>
           <CardContent>
+<<<<<<< HEAD
             <div className='text-2xl font-bold'>{stats.totalReferrals}</div>
             <p className='text-xs text-zion-slate-light'>
               {stats.completedReferrals} completed, {stats.pendingReferrals}{' '}
@@ -140,12 +164,24 @@ export function PartnerDashboard() {
         </Card>            <div className="text-2xl font-bold">{stats.totalReferrals}</div>
             <div className="text-2xl font-bold">{stats.totalReferrals}</div>
             <div className="text-2xl font-bold">{stats.totalReferrals}</div>
+=======
+            <div className="text-2xl font-bold">{stats.totalReferrals}</div>
+
+
+            <div className="text-2xl font-bold">{stats.totalReferrals}</div>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <p className="text-xs text-zion-slate-light">
             </p>
           </CardContent>
         </Card>
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
         
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         
 
 
@@ -160,6 +196,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </p>
           </CardContent>
         </Card>
+<<<<<<< HEAD
         <Card className='bg-zion-blue-dark border-zion-blue-light'>
           <CardHeader className='flex flex-row items-center justify-between pb-2'>
             <CardTitle className='text-sm font-medium'>
@@ -176,6 +213,9 @@ ursor/fix-website-loading-errors-and-merge-6662
         
             <p className='text-xs text-zion-slate-light'>              ${stats.pendingRevenue} pending payout        
         
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         
 
 
@@ -191,7 +231,10 @@ ursor/fix-website-loading-errors-and-merge-6662
             <div className="text-2xl font-bold">${stats.totalRevenue}</div>
             <p className="text-xs text-zion-slate-light">
               ${stats.pendingRevenue} pending payout
+<<<<<<< HEAD
               ${stats.pendingRevenue} pending payout
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -201,9 +244,15 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
       
       {/* Performance Chart */}
+<<<<<<< HEAD
       {/* Performance Chart */}      {/* Performance Chart */}
       
       {/* Performance Chart */}
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardTitle>Performance Overview</CardTitle>
           <CardDescription>Track your referral performance over time</CardDescription>
@@ -213,6 +262,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <LineChart className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />
             <p className="text-zion-slate-light">Detailed analytics will be available soon</p>
           </div>
+<<<<<<< HEAD
         </CardContent>
       </Card>
       {/* Recent Referrals */}
@@ -222,6 +272,10 @@ ursor/fix-website-loading-errors-and-merge-6662
           <CardDescription>
             Track your referral performance over time
           </CardDescription>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       
       {/* Recent Referrals */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -244,12 +298,17 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
         </CardContent>
       </Card>
+<<<<<<< HEAD
       {/* Recent Referrals */}
       <Card className='bg-zion-blue-dark border-zion-blue-light'>
         <CardHeader className='flex flex-row items-center justify-between'>          <div>
             <CardTitle>Recent Referrals</CardTitle>
             <CardDescription>Your latest partner referrals</CardDescription>
           </div>          </div>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </CardContent>
       </Card>
       {/* Recent Referrals */}
@@ -259,6 +318,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <CardTitle>Recent Referrals</CardTitle>
             <CardDescription>Your latest partner referrals</CardDescription>
           </div>
+<<<<<<< HEAD
           <Button variant='outline' size='sm'>
             View All
           </Button>
@@ -546,3 +606,18 @@ function PartnerDashboard() {
     </div>);
 }
 ;
+=======
+
+          <Button variant="outline" size="sm">View All</Button>
+        </CardHeader>
+        <CardContent>
+          <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">
+            <Users className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />
+            <p className="text-zion-slate-light mb-4">No referrals yet</p>
+            <p className="text-xs text-zion-slate-light">
+              Start sharing your referral links to earn rewards
+
+            </p>
+          </div>
+        </CardContent>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

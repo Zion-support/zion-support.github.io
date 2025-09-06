@@ -27,4 +27,8 @@ const PerformanceOptimizedHero = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default PerformanceOptimizedHero;
+=======
+export default PerformanceOptimizedHero;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

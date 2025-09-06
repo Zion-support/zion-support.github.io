@@ -1,6 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import Head from 'next / head';
 import Link from 'next / link';
@@ -8,6 +11,10 @@ import Link from 'next / link';
 const Blueprint20250818124039: React.FC = () => {
   const blueprint_details = {
     id: 'blueprint - 2025 - 08 - 18 - 124039',
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 const Blueprint20250818124039: React.FC = () => {
@@ -15,6 +22,7 @@ const Blueprint20250818124039: React.FC = () => {
 
     id: 'blueprint-2025-08-18-124039',
 
+<<<<<<< HEAD
 
 const Blueprint20250818124039: React.FC = () => {
   const blueprintDetails = {
@@ -79,16 +87,26 @@ const Blueprint20250818124039: React.FC = () => {
       status: 'development'
     }
     id: 'blueprint-2025-08-18-124039',
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     name: 'Quantum Integration Blueprint',
     description: 'Quantum computing integration framework for optimization problems',
     category: 'Research & Development',
     status: 'research',
     complexity: 'critical',
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     lastUpdated: '2025-08-18 12:40:39',
     version: '0.9.0'
   };
 
   const quantumComponents = [
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       name: 'Quantum Simulator',
       description: 'Classical simulation of quantum algorithms',
@@ -117,6 +135,7 @@ const Blueprint20250818124039: React.FC = () => {
 
   const features = [
 
+<<<<<<< HEAD
       health: 'warning';
     }
   ];
@@ -133,6 +152,8 @@ const Blueprint20250818124039: React.FC = () => {
 }
   ];
   const features = [
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       feature: 'Quantum Algorithm Optimization',
       description: 'Optimization algorithms using quantum principles',
@@ -155,6 +176,11 @@ const Blueprint20250818124039: React.FC = () => {
       feature: 'Quantum Simulation',
       description: 'Simulation of quantum systems and materials',
       benefit: 'Advanced scientific research capabilities',
+<<<<<<< HEAD
+=======
+
+      status: 'development'
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   ];
@@ -181,6 +207,19 @@ const Blueprint20250818124039: React.FC = () => {
 
 
   const getHealthColor = (health: string) => {
+<<<<<<< HEAD
+=======
+=======
+;
+  const getHealthColor = (health: string) =>: any {
+    switch (health) {
+
+      case 'excellent': return 'bg-green-500/20 text-green-400';
+      case 'good': return 'bg-yellow-500/20 text-yellow-400';
+      case 'warning': return 'bg-orange-500/20 text-orange-400';
+      case 'critical': return 'bg-red-500/20 text-red-400';
+      default: return 'bg-gray-500/20 text-gray-400';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   };
 
@@ -262,6 +301,7 @@ const Blueprint20250818124039: React.FC = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
       case 'excellent': return 'bg - green - 500 / 20 text - green - 400';
       case 'good': return 'bg - yellow - 500 / 20 text - yellow - 400';
       case 'warning': return 'bg - orange - 500 / 20 text - orange - 400';
@@ -269,6 +309,8 @@ const Blueprint20250818124039: React.FC = () => {
       default: return 'bg - gray - 500 / 20 text - gray - 400';
     }
   }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   return (
     <div className="min - h-screen bg - gradient - to - br from - gray - 900 via - indigo - 900 to - gray - 900 text - white">;
@@ -313,6 +355,10 @@ const Blueprint20250818124039: React.FC = () => {
             <p className="text - gray - 300 text - sm mt - 2">Recently updated</p>;
           </div>;
         </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Quantum Components */}
         <div className="mb - 8">;
           <h2 className="text - 2xl font - bold mb - 6 text - white">Quantum Computing Components</h2>;
@@ -329,11 +375,19 @@ const Blueprint20250818124039: React.FC = () => {
                 <div className="flex justify - between items - center">;
                   <span className={`text - xs ${getStatusColor (component.status)}`}>;
                     ● {component.status}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </span>;
                 </div>;
               </div>))}
           </div>;
         </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Features */}
         <div className="mb - 8">;
           <h2 className="text - 2xl font - bold mb - 6 text - white">Key Features</h2>;
@@ -344,6 +398,27 @@ const Blueprint20250818124039: React.FC = () => {
                   <h3 className="text - lg font - semibold text - white">{feature.feature}</h3>;
                   <span className={`px - 2 py - 1 text - xs rounded - full ${getStatusColor (feature.status)}`}>;
                     {feature.status}
+<<<<<<< HEAD
+=======
+
+
+        {/* Quantum Components */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold mb-6 text-white">Quantum Computing Components</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {quantumComponents.map((component, index) => (
+              <div key={index} className="bg-white/10 rounded-xl p-6 border border-white/20">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-lg font-semibold text-white">{component.name}</h3>
+                  <span className={`px-2 py-1 text-xs rounded-full ${getHealthColor(component.health)}`}>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     {component.health  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -694,6 +769,7 @@ const Blueprint20250818124039: React.FC = () => {
 }
 ;
 
+<<<<<<< HEAD
 };
 
       status: 'development'
@@ -1040,4 +1116,11 @@ const Blueprint20250818124039: React.FC = () => {
 }
 };
 
+=======
+=======
+
+};
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default Blueprint20250818124039;

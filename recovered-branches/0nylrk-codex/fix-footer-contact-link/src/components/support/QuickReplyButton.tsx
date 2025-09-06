@@ -12,7 +12,20 @@ interface QuickReplyButtonProps {
   text: string;
   onClick: () => void
 }
+<<<<<<< HEAD
 export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
+=======
+
+export function QuickReplyButton(): any ({ text, onClick }: QuickReplyButtonProps) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  return (
+    <Button
+
+      variant="outline"
+      size="sm"
+      className={cn(
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         "border-zion-purple/30 hover: bg-zion-purple hover:text-white",
 
@@ -84,6 +97,7 @@ function QuickReplyButton() {
 }
 ;
 
+<<<<<<< HEAD
 
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -159,3 +173,6 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
   )
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

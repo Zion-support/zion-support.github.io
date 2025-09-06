@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import {
@@ -42,6 +43,8 @@ import { toast } from "@/components/ui/use-toast";
 import { useInterviews } from "@/hooks/useInterviews";
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface InterviewRequestFormProps {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {;
@@ -83,6 +86,7 @@ interface InterviewRequestFormProps {;
   onClose: () => void;
   userDetails?: UserProfile
 
+<<<<<<< HEAD
 const formSchema = z.object({
   date: z
     .date({
@@ -105,6 +109,9 @@ export function InterviewRequestForm({
 }: InterviewRequestFormProps) {
   const { requestInterview } = useInterviews()
   const [isSubmitting, setIsSubmitting] = useState(false)
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import {
@@ -222,7 +229,13 @@ interface InterviewRequestFormProps {
   userDetails?: UserProfile
 }
 
+<<<<<<< HEAD
 onst formSchema = z.object({
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const formSchema = z.object({
   date: z.date({
     required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {
@@ -232,6 +245,7 @@ const formSchema = z.object({
   duration: z.string().min(1, "Please select the interview duration."),
   platform: z.string().min(1, "Please select a meeting platform."),
   meetingLink: z.string().optional(),
+<<<<<<< HEAD
   title: z.string().min(3, 'Please provide a brief title for the interview.'),
   notes: z.string().optional(),
 })
@@ -248,10 +262,14 @@ export function InterviewRequestForm({
 export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {
   const { requestInterview } = useInterviews(),
   const [isSubmitting, setIsSubmitting] = useState(false),
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema)
     defaultValues: {
+<<<<<<< HEAD
       title: `Interview with ${talent.full_name}`
       duration: '30'
       platform: 'zoom'
@@ -348,11 +366,19 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         meeting_platform: values.platform as any,
         meeting_link: values.meetingLink,
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+      title: `Interview with ${talent.full_name}`,
+
+      await requestInterview({
+        talent_id: talent.id,
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         client_id: user_details.id,
         scheduled_date: scheduled_date.toISOString (),
         duration_minutes: duration_minutes,
         notes: values.notes,
         meeting_platform: values.platform as any,
+<<<<<<< HEAD
         meeting_link: values.meetingLink,
         interview_type: 'video',
         title: values.title,
@@ -389,6 +415,14 @@ ursor/fix-website-loading-errors-and-merge-6662
     }
   }
   const timeSlots = [
+=======
+
+        meeting_link: values.meetingLink,
+
+
+
+    } finally {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       setIsSubmitting (false);
     }
   }
@@ -516,6 +550,7 @@ export function InterviewRequestForm(): any ({;
 
   ]
 
+<<<<<<< HEAD
     '09:00'
     '09:30'
     '10:00'
@@ -539,6 +574,8 @@ export function InterviewRequestForm(): any ({;
     '19:00'
     '19:30'
     '20:00'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     '09:00',
     '09:30',
     '10:00',
@@ -562,6 +599,11 @@ export function InterviewRequestForm(): any ({;
     '19:00',
     '19:30',
     '20:00',
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   ]
     "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
     "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",
@@ -569,17 +611,27 @@ export function InterviewRequestForm(): any ({;
     "18:00", "18:30", "19:00", "19:30", "20: 00"
   ],
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
         <div className="flex items-center mb-6">
           <div className="flex-shrink-0 h-12 w-12 rounded-full overflow-hidden mr-4">
             <img
+<<<<<<< HEAD
               src={talent.profile_picture_url |'/placeholder.svg'}
               alt={talent.full_name}
               className='h-full w-full object-cover'
               loading='lazy'            />
               src={talent.profile_picture_url |'/placeholder.svg'}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               src={talent.profile_picture_url || '/placeholder.svg'}
               alt={talent.full_name}
               className='h-full w-full object-cover'
@@ -590,6 +642,10 @@ export function InterviewRequestForm(): any ({;
               loading="lazy"
             />
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>
             <h3 className="text-lg font-medium text-white">{talent.full_name}</h3>
             <p className="text-sm text-zion-slate-light">{talent.professional_title}</p>
@@ -638,14 +694,22 @@ export function InterviewRequestForm(): any ({;
 
               <FormLabel>Interview Title</FormLabel>
               <FormControl>
+<<<<<<< HEAD
                 <Input placeholder="Brief title for the interview" {...field} />
+=======
+                <Input placeholder='Brief title for the interview' {...field} />
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
+<<<<<<< HEAD
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <FormField
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             field: ControllerRenderProps<z && z.infer<typeof formSchema>, 'title'>;
           }) => (            <FormItem>;
               <FormLabel>Interview Title</FormLabel>;
@@ -688,15 +752,23 @@ export function InterviewRequestForm(): any ({;
                     <FormControl>
                       <Button
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <Popover>
                   <PopoverTrigger asChild>
                     <FormControl>
                       <Button
+<<<<<<< HEAD
                         variant='outline'
                         className={cn(
                           'w-full pl-3 text-left font-normal'
                           !field.value && 'text-muted-foreground'
                         )}                      >
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -706,6 +778,7 @@ export function InterviewRequestForm(): any ({;
                           !field.value && "text-muted-foreground"
                         )}
                       >
+<<<<<<< HEAD
                         {field.value ? (
                           format(field.value, "PPP")
                         ) : (
@@ -724,6 +797,10 @@ export function InterviewRequestForm(): any ({;
                         date < new Date() |date > addDays(new Date(), 90)
                       }                      initialFocus
                       className='p-3 pointer-events-auto'
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                         {field.value ? (
                           format(field.value, 'PPP')
@@ -760,11 +837,17 @@ export function InterviewRequestForm(): any ({;
                       disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
                       initialFocus
                       className="p-3 pointer-events-auto"
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     />
                   </PopoverContent>
                 </Popover>
                 <FormMessage />
               </FormItem>
+<<<<<<< HEAD
             )}
           />
           <FormField
@@ -775,6 +858,9 @@ export function InterviewRequestForm(): any ({;
             }: {
               field: ControllerRenderProps<z.infer<typeof formSchema>, 'time'>
             }) => (              <FormItem>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       selected={field && field.value}
                       onSelect={field && field.onChange}
                       disabled={date =>;
@@ -917,6 +1003,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "date"> }) => (;
               <FormItem className="flex flex-col">;
                 <FormLabel>Date</FormLabel>;
+<<<<<<< HEAD
                 <Popover>;
                   <PopoverTrigger asChild>;
                     <FormControl>;
@@ -939,6 +1026,27 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                   <PopoverContent className="w-auto p-0" align="start">;
                     <Calendar;
                       mode="single";
+=======
+
+                <Popover>;
+                  <PopoverTrigger as_child>;
+                    <FormControl>;
+                      <Button;
+                        variant='outline';
+                        className={cn (
+                          'w - full pl - 3 text - left font - normal',
+                          !field.value && 'text - muted - foreground')}                      >;
+                        {field.value ? (
+                          format (field.value, 'PPP')) : (
+                          <span > Pick a date</span>)}
+                        <CalendarIcon className='ml - auto h - 4 w - 4 opacity - 50' />;
+                      </Button>;
+                    </FormControl>;
+                  </PopoverTrigger>;
+                  <PopoverContent className='w - auto p - 0' align='start'>;
+                    <Calendar;
+                      mode='single';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       selected={field.value}
                       on_select={field.on_change}
                       disabled={date =>;
@@ -949,8 +1057,13 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                   </PopoverContent>;
                 </Popover>;
                 <FormMessage />;
+<<<<<<< HEAD
               </FormItem>;
             )}
+=======
+
+              </FormItem>)}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           />;
           <FormField;
             control={form.control}
@@ -990,6 +1103,11 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             name="time"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "time"> }) => (
               <FormItem>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <FormLabel>Time</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
@@ -997,11 +1115,15 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                       <SelectValue placeholder="Select time" />
                     </SelectTrigger>
                   </FormControl>
+<<<<<<< HEAD
                   <SelectContent className='max-h-[300px]'>
                     {timeSlots.map(time => (                      <SelectItem key={time} value={time}>
                         {time}
                   <SelectContent className='max-h-[300px]'>
                     {timeSlots.map(time => (                      <SelectItem key={time} value={time}>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <SelectContent className="max-h-[300px]">
                     {timeSlots.map((time) => (
                       <SelectItem key={time} value={time}>
@@ -1016,6 +1138,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             )}
           />
         </div>
+<<<<<<< HEAD
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <FormField
@@ -1029,6 +1152,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 'duration'
               >
             }) => (              <FormItem>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
@@ -1048,7 +1174,10 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 'duration'
               >
             }) => (              <FormItem>
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
@@ -1056,6 +1185,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             name="duration"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "duration"> }) => (
               <FormItem>
+<<<<<<< HEAD
                 <FormLabel>Duration</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
@@ -1075,6 +1205,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             )}
           />
                 <FormLabel>Duration</FormLabel>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <FormLabel>Duration</FormLabel>
                 z && z.infer<typeof formSchema>,;
                 'duration';
@@ -1125,22 +1257,30 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             render={({
               field
             }: {
+<<<<<<< HEAD
               field: ControllerRenderProps<
                 z.infer<typeof formSchema>
                 'platform'
               >
             }) => (              <FormItem>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           />;
           <FormField;
             control={form.control}
             name="platform"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "platform"> }) => (
               <FormItem>
+<<<<<<< HEAD
           />
         </div>
         {form.watch('platform') !== 'in-app' && (
 ursor/fix-website-loading-errors-and-merge-6662
                 <FormLabel>Platform</FormLabel>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
                 <FormLabel>Platform</FormLabel>
@@ -1242,6 +1382,11 @@ ursor/fix-website-loading-errors-and-merge-6662
             name="meetingLink"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "meetingLink"> }) => (
               <FormItem>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <FormLabel>Meeting Link (Optional)</FormLabel>
                 <FormControl>
                   <Input
@@ -1254,8 +1399,12 @@ ursor/fix-website-loading-errors-and-merge-6662
             )}
           />
         )}
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
           control={form && form.control}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
         <FormField
@@ -1279,6 +1428,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   placeholder="Share what you'd like to discuss in this interview"
                   className='h-20'
 
+<<<<<<< HEAD
 
         <FormField
           control={form.control}
@@ -1293,6 +1443,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Textarea
                   placeholder="Share what you'd like to discuss in this interview"
                   className='h-20'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
         <FormField;
           control={form.control}
@@ -1304,6 +1456,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Textarea 
                   placeholder="Share what you'd like to discuss in this interview"
                   className="h-20"
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   {...field}
                 />
               </FormControl>
@@ -1312,10 +1470,15 @@ ursor/fix-website-loading-errors-and-merge-6662
           )}
         />
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="flex justify-end gap-4 pt-4">
           <Button variant="outline" onClick={onClose} type="button">
 
             Cancel
+<<<<<<< HEAD
         <div className='flex justify-end gap-4 pt-4'>
           <Button variant='outline' onClick={onClose} type='button'>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -1331,11 +1494,17 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Button>
           <Button type="submit" disabled={isSubmitting}>
             {isSubmitting ? "Scheduling..." : "Schedule Interview"}
+=======
+          </Button>
+          <Button type='submit' disabled={isSubmitting}>
+            {isSubmitting ? 'Scheduling...' : 'Schedule Interview'}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </Button>
         </div>
       </form>
     </Form>
   )
+<<<<<<< HEAD
 }setIsSubmitting (true)
 }catch (error) {
   logErrorToProduction ('Failed to schedule interview:', {
@@ -1345,10 +1514,19 @@ toast ({
 }finally {
   setIsSubmitting (false)
 }"
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 toast ({;
 }finally {;
   setIsSubmitting (false) ;
 }";
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }const timeSlots = [ "09:00", "09:30", "10:00", "10:30", "11:00", "11:30";"
 "12:00", "12:30", "13:00", "13:30", "14:00", "14:30";"
 "15:00", "15:30", "16:00", "16:30", "17:00", "17:30";"
@@ -1385,6 +1563,7 @@ toast ({;
 }<FormField <FormItem> <FormLabel>Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>)
 }/> </Button> </div> </form> </Form>)
 }'"}
+<<<<<<< HEAD
 
 }
 ;
@@ -1393,6 +1572,8 @@ toast ({;
 ;
 }
 ;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 }
@@ -1459,4 +1640,8 @@ toast ({
 }/> </Button> </div> </form> </Form>);
 }'"}
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

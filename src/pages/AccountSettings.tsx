@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { useLocalStorage  } from '@/hooks';
 import { Header  } from '@/components/Header';
@@ -166,10 +167,17 @@ export default function AccountSettings() {;
       toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`);
     } catch (error: any) {;
       toast.error(error.message || 'Failed to connect wallet');
+=======
+toast.success (
+        `Wallet connected: ${address.slice (0, 6)}...${address.slice (-4)}`);
+    } catch (error: any) {
+      toast.error (error.message || 'Failed to connect wallet');
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   },
 
   return (
+<<<<<<< HEAD
     <>
       <SEO title="Account Settings" description="Manage your account" />
     <>
@@ -178,14 +186,33 @@ export default function AccountSettings() {;
       <main className='container mx-auto py-8 px-4'>
         <h1 className='text-3xl font-bold mb-6 text-white'>Account Settings</h1>
         <div className='grid gap-6 md:grid-cols-2'>
+=======
+
+
+
+
+
+
+
+  return (
+    <>
+      <SEO title="Account Settings" description="Manage your account" />
+      <Header />
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <main className="container mx-auto py-8 px-4">
         <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>
         
         <div className="grid gap-6 md:grid-cols-2">
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Card>
               <CardTitle>Profile Settings</CardTitle>
               <CardDescription>Manage your personal information and privacy</CardDescription>
             </CardHeader>
+<<<<<<< HEAD
 
           <Card>
             <CardHeader>
@@ -194,6 +221,8 @@ export default function AccountSettings() {;
                 Manage your personal information and privacy
               </CardDescription>
             </CardHeader>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     <>;
       <SEO title='Account Settings' description='Manage your account' />;
@@ -227,6 +256,7 @@ export default function AccountSettings() {;
                 <Label htmlFor='didHandle'>Web3 Identity Handle</Label>;
                 <div className='flex gap-2'>;
 
+<<<<<<< HEAD
                   <Input
                     id='didHandle'
                     value={didHandle}
@@ -250,6 +280,8 @@ export default function AccountSettings() {;
               <div className='space-y-2'>
                 <Label htmlFor='didHandle'>Web3 Identity Handle</Label>
                 <div className='flex gap-2'>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <Input
                     id='didHandle'
                     value={didHandle}
@@ -260,8 +292,17 @@ export default function AccountSettings() {;
                     variant='outline'
                     onClick={handleConnectWallet}
                     type='button'
+<<<<<<< HEAD
                     className='flex items-center gap-1'                  >
                     <Wallet className='h-4 w-4' />
+=======
+
+            <CardContent className="space-y-6">
+              <div className="space-y-2">
+                <Label htmlFor="email">Email Address</Label>
+                <Input
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   id="email"
                   value={user?.email || ''}
                   disabled
@@ -293,6 +334,7 @@ export default function AccountSettings() {;
                   Link your decentralized identity to display on your profile
                 </p>
               </div>
+<<<<<<< HEAD
               <div className='flex items-center justify-between'>
                 <div className='space-y-0.5'>
                   <Label htmlFor='displayWeb3'>Display Web3 Identity</Label>
@@ -310,6 +352,10 @@ export default function AccountSettings() {;
                 <div className='space-y-0.5'>
                   <Label htmlFor='backup' className='flex items-center gap-1'>
                     <Database className='h-4 w-4' />
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               
               <div className="flex items-center justify-between">
                 <div className="space-y-0.5">
@@ -338,6 +384,46 @@ export default function AccountSettings() {;
                   </p>
                 </div>
                 <Switch
+<<<<<<< HEAD
+=======
+
+                    className='flex items-center gap-1'>;
+                    <Wallet className='h-4 w-4' />;
+                    Connect;
+                  </Button>;
+                </div>;
+                <p className='text-xs text-gray-500 mt-1'>;
+                  Link your decentralized identity to display on your profile;
+                </p>;
+              </div>;
+
+              <div className='flex items-center justify-between'>;
+                <div className='space-y-0 && 0.5'>;
+                  <Label htmlFor='displayWeb3'>Display Web3 Identity</Label>;
+                  <p className='text-xs text-gray-500'>;
+                    Show your Web3 handle instead of email;
+                  </p>;
+                </div>;
+                <Switch
+                  id='displayWeb3'
+                  checked={displayWeb3}
+                  onCheckedChange={setDisplayWeb3}                />;
+              </div>;
+
+              <Separator />;
+
+              <div className='flex items-center justify-between'>;
+                <div className='space-y-0 && 0.5'>;
+                  <Label htmlFor='backup' className='flex items-center gap-1'>;
+                    <Database className='h-4 w-4' />;
+                    Decentralized Backup;
+                  </Label>;
+                  <p className='text-xs text-gray-500'>;
+                    Backup your profile data to IPFS/Arweave;
+                  </p>;
+                </div>;
+                <Switch
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   id='backup'
                   checked={enableBackup}
                   onCheckedChange={setEnableBackup}                />;
@@ -349,6 +435,7 @@ export default function AccountSettings() {;
                   is in beta.;
                 </div>;
 
+<<<<<<< HEAD
                   id='backup'
                   checked={enableBackup}
                   onCheckedChange={setEnableBackup}                />
@@ -358,6 +445,8 @@ export default function AccountSettings() {;
                   Data will be backed up to decentralized storage. This feature
                   is in beta.
                 </div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               )}
               <Button
                 onClick={handleSave}
@@ -381,11 +470,15 @@ export default function AccountSettings() {;
                 disabled={isSubmitting}
                 className="w-full"
               >
+<<<<<<< HEAD
                 {isSubmitting ? 'Saving...' : 'Save Settings'}
                 {!isSubmitting && <Save className="ml-2 h-4 w-4" />}
               </Button>
             </CardContent>
           </Card>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {isSubmitting ? 'Saving...' : 'Save Settings'}
                 {!isSubmitting && <Save className='ml-2 h-4 w-4' />}
 
@@ -393,8 +486,11 @@ export default function AccountSettings() {;
           
 
 
+<<<<<<< HEAD
           
           
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Card>
               <CardTitle>Web3 Features</CardTitle>
               <CardDescription>Manage your Web3 connections and features</CardDescription>
@@ -688,7 +784,10 @@ export default function AccountSettings() {;
                 <p className='text - xs text - gray - 500 mt - 1'>;
                   {enable_backup;
                     ? 'Restore your profile data from decentralized storage';
+<<<<<<< HEAD
                     : 'Enable backup first to use this feature'}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     : 'Enable backup first to use this feature'}
                 </p>;
               </div>;
@@ -696,12 +795,19 @@ export default function AccountSettings() {;
           </Card>;
         </div>;
       </main>;
+<<<<<<< HEAD
 ;
 
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
     </>);
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

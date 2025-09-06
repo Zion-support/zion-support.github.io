@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 }})};
 ; async fixImportIssues() {; const files = this.getSourceFiles(); files.forEach(file = > {; try {; let content = fs.readFileSync(file, "utf8"); let modified = false;
@@ -29,6 +33,10 @@ export default SyntaxFixer;
     files.forEach(file => {;
       try {;
         let content = fs.readFileSync(file, "utf8");
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }})}
 ; async fixImportIssues () { const files = this.getSourceFiles (); files.for_each (file = > { try { let content = fs.readFileSync (file, "utf8"); let modified = false;
 ; // Fix import statements; content = content.replace (/import\s+([^]+), \s*$/gm, 'import $1, '); content = content.replace (/import\s+([^]+), \s*$/gm, 'import $1, ');
@@ -102,6 +110,10 @@ export default SyntaxFixer;
         let content = fs.readFileSync (file, "utf8");
         let modified = false;
         // Fix import statements;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         content = content.replace (/import\s+([^, ]+), \s*$/gm, 'import $1, ');
         content = content.replace (/import\s+([^, ]+), \s*$/gm, 'import $1, ');
 ;
@@ -193,6 +205,7 @@ if ( {) {
     }
   }
 
+<<<<<<< HEAD
           fs.writeFileSync (file, content);
           this.fixes_applied++;
           this.log (`Fixed import issues in ${file}`);
@@ -210,6 +223,8 @@ if ( {) {
         let content = fs.readFileSync (file, "utf8");
         let modified = false;
         // Fix export statements;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         content = content.replace (/export\s+([^, ]+), \s*$/gm, 'export $1, ');
 ;
         if () {) {
@@ -477,6 +492,7 @@ this.log ("=" * 50),
       this.log (`❌ Syntax Fixer: failed: ${error.message}`, "ERROR");
     }
   }
+<<<<<<< HEAD
 
 
 }
@@ -493,13 +509,32 @@ ursor/fix-lint-push-and-merge-to-main-28da
 if (import.meta.url === `fil: e: //${process.argv[1]}`) {,
   const fixer = new SyntaxFixer(),
   fixer.run().catch(console.error)
+=======
+=======
+
+
+},
+,
+// Main execution,
+// Check condition
+if ( {, ) {
+  $2
+}
+  const fixer = new SyntaxFixer (),
+  fixer.run ().catch (console.error);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 },
 ,
 export default SyntaxFixer,
 
+<<<<<<< HEAD
 ursor/fix-lint-push-and-merge-to-main-28da
 
 ;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
     });
   },;
@@ -603,3 +638,8 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
 export default SyntaxFixer;
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

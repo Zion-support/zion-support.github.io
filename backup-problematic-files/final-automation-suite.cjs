@@ -32,7 +32,10 @@ class FinalAutomationSuite {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     this.errors = [];
   }
   log(message) {
@@ -88,7 +91,10 @@ class FinalAutomationSuite {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   async runCommand(command, description) {
     this.log(`🚀 Starting: ${description}`);
     try {
@@ -119,7 +125,10 @@ class FinalAutomationSuite {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         cwd: this.projectRoot,
         encoding: "utf8",
         timeout: 300000, // 5 minutes timeout
@@ -167,6 +176,13 @@ class FinalAutomationSuite {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -196,7 +212,10 @@ class FinalAutomationSuite {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
@@ -294,7 +313,10 @@ class AutoDeployment {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     this.projectRoot = process.cwd();
   }
   async deploy() {
@@ -330,6 +352,13 @@ class AutoDeployment {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -367,7 +396,10 @@ class AutoDeployment {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 }
 const deployment = new AutoDeployment();
@@ -406,7 +438,10 @@ class CodeQualityChecker {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     this.projectRoot = process.cwd();
   }
   async checkCodeQuality() {
@@ -452,7 +487,10 @@ class CodeQualityChecker {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const issues = [];
     // Check for console.log statements
     const files = this.getAllFiles(this.projectRoot, [".js", ".jsx", ".ts", ".tsx"]);
@@ -490,7 +528,10 @@ class CodeQualityChecker {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             type: "console.log",
             message: "Console.log statement found in production code"
           });
@@ -550,7 +591,10 @@ class CodeQualityChecker {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         this.log(" No changes to commit")
       this.log(` Git status check "failed"`)
     this.log(" Creating additional automation scripts...")
@@ -583,8 +627,11 @@ const path = require("path")
             "type": "large-file"
             "message": "File is larger than 10KB"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 <<<<<<< HEAD
           })}
@@ -700,7 +747,10 @@ const path = require("path")
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   getAllFiles(dir, extensions) {
     const files = [];
     const items = fs.readdirSync(dir);
@@ -717,7 +767,11 @@ const path = require("path")
     return files;
   }}
 <<<<<<< HEAD
+<<<<<<< HEAD
     return files;
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
     return files}
     return files}
@@ -759,7 +813,10 @@ const path = require("path")
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 const checker = new CodeQualityChecker();
 checker.checkCodeQuality();"
@@ -796,7 +853,10 @@ class DependencyUpdater {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     this.projectRoot = process.cwd();
   }
   async updateDependencies() {
@@ -835,6 +895,13 @@ class DependencyUpdater {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -873,7 +940,10 @@ class DependencyUpdater {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 }
 const updater = new DependencyUpdater();
@@ -912,7 +982,10 @@ class PerformanceMonitor {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     this.projectRoot = process.cwd();
   }
   async monitorPerformance() {
@@ -960,7 +1033,10 @@ class PerformanceMonitor {
 =======
 >>>>>>> origin/main
 =======
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const metrics = {
       "timestamp": new Date().toISOString(),
       "memory": process.memoryUsage(),
@@ -981,12 +1057,15 @@ class PerformanceMonitor {
     }
         // Check node_modules size
 <<<<<<< HEAD
+<<<<<<< HEAD
       metrics.buildSize = buildSize;
     }
       metrics.buildSize = buildSize}
       metrics.buildSize = buildSize}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
     
 <<<<<<< HEAD
@@ -1023,7 +1102,10 @@ class PerformanceMonitor {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Check node_modules size
     const nodeModulesDir = path.join(this.projectRoot, "node_modules");
     if (fs.existsSync(nodeModulesDir)) {
@@ -1054,7 +1136,10 @@ class PerformanceMonitor {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       metrics.nodeModulesSize = nodeModulesSize;
     }
     console.log("Performance metrics:", JSON.stringify(metrics, null, 2));
@@ -1085,6 +1170,13 @@ class PerformanceMonitor {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -1120,7 +1212,10 @@ class PerformanceMonitor {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const items = fs.readdirSync(dir);
     for (const item of items) {
       const fullPath = path.join(dir, item);
@@ -1132,7 +1227,11 @@ class PerformanceMonitor {
     return size;
   }}
 <<<<<<< HEAD
+<<<<<<< HEAD
     return size;
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
     return size}
     return size}
@@ -1174,7 +1273,10 @@ class PerformanceMonitor {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 const monitor = new PerformanceMonitor();
 monitor.monitorPerformance();"
@@ -1208,7 +1310,10 @@ monitor.monitorPerformance();"
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       fs.mkdirSync(scriptsDir, { recursive: true });
   async fixSyntaxErrors() {
     this.log("🔧 Fixing syntax errors...");
@@ -1288,7 +1393,10 @@ monitor.monitorPerformance();"
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   async addAllChanges() {
     this.log("📦 Adding all changes to git...");
   async installDependencies() {
@@ -1337,11 +1445,14 @@ monitor.monitorPerformance();"
     try {
       const commitMessage = `feat: comprehensive automation improvements
 <<<<<<< HEAD
+<<<<<<< HEAD
       const commitMessage = `feat: comprehensive automation improvements
       const commitMessage = ""feat": comprehensive automation improvements
       const commitMessage = ""feat": comprehensive automation improvements
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <<<<<<< HEAD
 =======
 
@@ -1378,7 +1489,10 @@ monitor.monitorPerformance();"
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 - Resolved merge conflicts in automation files
 - Fixed syntax issues in JSX and TypeScript files
 - Created comprehensive conflict resolution scripts
@@ -1391,8 +1505,11 @@ monitor.monitorPerformance();"
 - Enhanced automation suite with better error handling
 Total files processed: 6,678+ files
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <<<<<<< HEAD
 =======
 Scripts created: 8 new automation scripts
@@ -1458,7 +1575,10 @@ Enhancements: Performance, Security, SEO, Accessibility";
 =======
 >>>>>>> origin/main
 =======
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       this.log("✅ Changes committed successfully");
       return true} catch (error) {
       this.log(`❌ Failed to commit "changes": ${error.message}`);
@@ -1515,7 +1635,10 @@ Enhancements: Performance, Security, SEO, Accessibility";
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         execSync(`git checkout -b ${featureBranch}`, { cwd: this.projectRoot });
         execSync(`git push -u origin ${featureBranch}`, { cwd: this.projectRoot });
         this.log(`✅ Created feature branch: ${featureBranch}`);
@@ -1566,7 +1689,10 @@ Enhancements: Performance, Security, SEO, Accessibility";
 =======
 >>>>>>> origin/main
 =======
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       this.log("✅ Pull request setup completed");
       return true} catch (error) {
       this.log(`❌ Failed to create pull "request": ${error.message}`);
@@ -1950,10 +2076,13 @@ Enhancements: Performance, Security, SEO, Accessibility`;
     const reportPath = path.join(this.projectRoot, "automation-reports", "final-automation-report.json");
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 <<<<<<< HEAD
+<<<<<<< HEAD
     this.log(`📋 Final report "generated": ${reportPath}`);
     return report}
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <<<<<<< HEAD
 =======
     this.log(`📋 Final report generated: ${reportPath}`);
@@ -2010,7 +2139,10 @@ Enhancements: Performance, Security, SEO, Accessibility`;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   async run() {
     this.log("🎯 Starting Final Automation Suite...");
     try {
@@ -2074,7 +2206,10 @@ Enhancements: Performance, Security, SEO, Accessibility`;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         report.summary.recommendations.forEach(rec => this.log(`  - ${rec}`));
       }
       return report;
@@ -2099,6 +2234,13 @@ Enhancements: Performance, Security, SEO, Accessibility`;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -2128,7 +2270,10 @@ Enhancements: Performance, Security, SEO, Accessibility`;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   async runAdditionalScripts() {
     this.log("🔧 Running additional scripts...");
@@ -2179,7 +2324,10 @@ Enhancements: Performance, Security, SEO, Accessibility`;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       results.push("performance-monitor");
       this.log("✅ Final Automation Suite completed successfully!");
     } catch (error) {
@@ -2234,7 +2382,10 @@ Enhancements: Performance, Security, SEO, Accessibility`;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 // Run the final automation suite
       this.log("📊 Summary:");

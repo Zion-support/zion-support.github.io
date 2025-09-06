@@ -6,6 +6,7 @@
   return events;export function resetState(): void {
   state = { ...defaultState }
 
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { MultiverseState, InstanceConfig, SyncEvent } from './types';
@@ -93,8 +94,20 @@ export function filterEventsByScope(
   }
   return events;export function resetState(): void {
   state = { ...defaultState }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const default_state: SyncState = {
   config: {
     instance_id: 'default - instance',
@@ -104,22 +117,40 @@ const default_state: SyncState = {
     paused: false;
   },
   lastSyncedAt: new Date ().toISOString ();
+<<<<<<< HEAD
   return events;export function resetState(): void {;
   state = { ...defaultState };
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
 }
 }
 }
+<<<<<<< HEAD
   return events;export function resetState(): void {;
   state = { ...defaultState };
 }
 
+=======
+  const entity_id = getEntityId (event);
+  const current_version = state.latestVersionByEntityId[entity_id] || 0;
+  const is_newer = event.version > current_version;
+;
+  // Check condition
+if ( {) {
+  $2
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 }
 }
   return events;export function reset_state (): void {
   state = { ...default_state }
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

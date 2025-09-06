@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   title = "Complete Your Profile"
   title = "Complete Your Profile", 
   title = "Complete Your Profile"
@@ -74,11 +75,14 @@ export function OnboardingTracker({
         <h3 className="text-lg font-medium text-white">{title}</h3>
         <div className="text-sm font-medium text-zion-cyan">{progress}% Complete</div>
       </div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 {/* Progress bar */}
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
         <div 
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
 
+<<<<<<< HEAD
       {/* Progress bar */}
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
         <div
@@ -107,6 +111,8 @@ export function OnboardingTracker({;
       <div className="flex items-center justify-between mb-4">;
         <h3 className="text-lg font-medium text-white">{title}</h3>;
         <div className="text-sm font-medium text-zion-cyan">{progress}% Complete</div>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       {/* Steps list */}
       <div className="space-y-3">;
@@ -134,6 +140,41 @@ export function OnboardingTracker({;
                 </Link>;
               </Button>;
 
+<<<<<<< HEAD
+=======
+            )}
+          </div>
+        ))}
+
+  title = "Complete Your Profile",
+import React from './react';
+import { CheckCircle, Circle, ArrowRight } from 'lucide-react'import { cn  } from '@/lib / utils';
+import { Button  } from '@/components / ui / button';
+import Link from './next / link';
+export interface OnboardingStep {
+  id: string,
+  label: string,
+  completed: boolean,
+  link: string,
+  action?: string;
+}
+interface OnboardingTrackerProps {
+  steps: OnboardingStep[],
+  title?: string;
+  class_name?: string;
+}
+export /**
+ * OnboardingTracker - Function description
+ */
+function OnboardingTracker() {
+  const completed_steps = steps.filter (step => step.completed).length;
+  const progress = Math.round ((completed_steps / steps.length) * 100);
+  return (
+    <div className={cn ("rounded - lg border border - zion - blue - light bg - zion - blue - dark / 60 p - 4 md:p - 6", class_name)}>;
+      <div className="flex items - center justify - between mb - 4">;
+        <h3 className="text - lg font - medium text - white">{title}</h3>;
+        <div className="text - sm font - medium text - zion - cyan">{progress}% Complete</div>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </div>;
       {/* Progress bar */}
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">;
@@ -182,6 +223,7 @@ export function OnboardingTracker({;
               <div className="text - sm font - medium text - white">{step.label}</div>;
             </div>;
             {!step.completed && step.action && (
+<<<<<<< HEAD
               <Button
                 asChild
                 variant="ghost"
@@ -198,10 +240,27 @@ export function OnboardingTracker({;
       </div>
     </div>
   )
+=======
+              <Button;
+                as_child;
+                variant="ghost";
+                size="sm";
+                className="text - zion - purple hover:text - zion - cyan hover:bg - zion - blue";
+              >;
+                <Link href={step.link}>;
+                  {step.action} <ArrowRight className="ml - 1 h - 4 w - 4" />;
+                </Link>;
+              </Button>)}
+          </div>))}
+      </div>;
+    </div>);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }></div> </div> {
   /* Steps list */ "
 }<div className="space-y-3" > {
   steps.map ( (step) => (<div key= {
+<<<<<<< HEAD
   step.id "
 }className="flex items-center" > <div className="mr-3" > {"
   step.completed ? (<CheckCircle className="h-5 w-5 text-zion-cyan" /> h-5 w-5 text-zion-slate-light"/>)
@@ -212,6 +271,17 @@ export function OnboardingTracker({;
 }</div>) )
 }</div> </div>)
 }"}
+=======
+
+
+  step.link 
+}> </Link> </Button>) 
+}</div>) ) ;
+}</div> </div>) ;
+}"};
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </div>;
     </div>;
   );
@@ -240,4 +310,8 @@ export function OnboardingTracker({;
 }
 ;
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

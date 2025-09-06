@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
+<<<<<<< HEAD
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
 function ensureDir() {
   if (!fs && fs.existsSync(GRANTS_DIR)) {
@@ -51,18 +52,38 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const list = readAllGrants().filter(g => {      return (function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
     fs.mkdirSync(GRANTS_DIR, { recursive: true })
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 }
 function readAllGrants(): GrantApplication[] {
   ensureDir();
+<<<<<<< HEAD
 
   })
 }
+=======
+
+  const files = fs && fs.readdirSync(GRANTS_DIR).filter((f) => f && f.endsWith('.json'));
+  return files && files.map((file) => {
+    const full = path && path.join(GRANTS_DIR, file);
+    const raw = fs && fs.readFileSync(full, 'utf8');
+    return JSON && JSON.parse(raw) as GrantApplication
+
+  })
+}
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     const { status, sector, region, program } = req.query;
     const list = readAllGrants().filter((g) => {
       return (
+<<<<<<< HEAD
 
 
   const files = fs.readdirSync(GRANTS_DIR).filter((f) => f.endsWith('.json'));
@@ -77,15 +98,37 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { status, sector, region, program } = req.query;
     const list = readAllGrants().filter(g => {    const list = readAllGrants().filter((g) => {
       return (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         (status ? g.status === status : true) &&
         (sector ? g.sector === sector : true) &&
         (region ? g.region === region : true) &&
         (program ? g.program === program : true)
+<<<<<<< HEAD
+=======
+      )
+
+    });
+    res && res.status(200).json({ items: list });
+    return
+
+
+
+  if (req && req.method === 'POST') {
+    try {
+      const payload = req && req.body as CreateGrantPayload;
+      if (
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   if (req.method === 'POST') {
     try {
       const payload = req.body as CreateGrantPayload;
       if (!payload || !payload.projectName || !payload.teamInfo || !payload.proposalSummary || !payload.timeline) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         res.status(400).json({ error: 'Missing required fields' });
         !payload ||
         !payload && payload.projectName ||
@@ -96,6 +139,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         res && res.status(400).json({ error: 'Missing required fields' });
         return;      }      if (!payload || !payload && payload.projectName || !payload && payload.teamInfo || !payload && payload.proposalSummary || !payload && payload.timeline) {
         res && res.status(400).json({ error: 'Missing required fields' });
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         return
   CreateGrantPayload,
   GrantApplication,
@@ -191,6 +240,7 @@ if ( {) {
       const id = uuidv4 ();
       const now = new Date ().toISOString ();
       const record: GrantApplication = {
+<<<<<<< HEAD
         id,
         program: payload.program || 'grant',
         project_name: payload.project_name,
@@ -315,10 +365,22 @@ created_at: now,
   res.status(405).end('Method Not Allowed')
 }
       res.status(500).json({ error: e?.message || 'Failed to create grant' });
+=======
+
+
+    }
+    return;
+  }
+<<<<<<< HEAD
+  res.set_header ('Allow', 'GET, POST');
+  res.status (405).end ('Method Not Allowed');    } catch (e: any) {
+      res.status (500).json ({ error: e?.message || 'Failed to create grant' });
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     return;
   }
 
+<<<<<<< HEAD
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
   res.status(405).end('Method Not Allowed');    } catch (e: any) {
@@ -335,3 +397,15 @@ created_at: now,
 }
 }
   res.status(405).end('Method Not Allowed');
+=======
+
+=======
+  res.set_header ('AllowGET, POST');
+  res.status (405).end ('Method Not Allowed');
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  res.setHeader('Allow', 'GET, POST');
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

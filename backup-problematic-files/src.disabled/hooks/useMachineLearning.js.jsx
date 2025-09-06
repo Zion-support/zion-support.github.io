@@ -9,4 +9,8 @@ const UseMachineLearning.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default UseMachineLearning.js;
+=======
+export default UseMachineLearning.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

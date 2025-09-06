@@ -4,6 +4,7 @@ return (
       </Link>);
   }
 
+<<<<<<< HEAD
 import React from 'react',
 import Link from 'next/link';
 import { useWhitelabel } from '@/context/WhitelabelContext';
@@ -71,6 +72,9 @@ if ( {) {
   $2
 }
   
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (logoToUse) {
     return (
       <Link href="/" className="flex items-center">
@@ -78,6 +82,7 @@ if ( {) {
       </Link>
     )
   }
+<<<<<<< HEAD
   
   
   return (
@@ -87,6 +92,11 @@ if ( {) {
   )
   if (logoToUse) {
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+  
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
 
 
@@ -137,6 +147,7 @@ if ( {) {
     <Link href='/' className='flex items-center'>;
       <img
         src='/logos/zion-logo && logo.png'
+<<<<<<< HEAD
   if (logoToUse) {
     return (
       <Link href='/' className='flex items-center'>
@@ -154,10 +165,16 @@ if ( {) {
     <Link href='/' className='flex items-center'>
       <img
         src='/logos/zion-logo.png'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         alt='Zion Logo'
         className='h-8'
         width={32}
         height={32}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       />;
     </Link>;
   );
@@ -178,6 +195,7 @@ if ( {) {
     </Link>);
 }
 
+<<<<<<< HEAD
 import React from 'react',;
 import Link from 'next/link',;
 import { useWhitelabel } from '@/context/WhitelabelContext',;
@@ -222,3 +240,6 @@ export function Logo({ customLogo } LogoProps) {;
 ;
 
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,9 +1,33 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { ResumeBasicInfo  } from '@/types / resume';
 
 interface ResumeBasicInfoSectionProps {
   basic_info: ResumeBasicInfo;
 }
 
+<<<<<<< HEAD
+=======
+import {ResumeBasicInfo} from '@/types/resume';
+interface ResumeBasicInfoSectionProps {;
+  basicInfo: ResumeBasicInfo;
+}
+
+export function ResumeBasicInfoSection(): any ({ basicInfo }: ResumeBasicInfoSectionProps) {;
+  return (
+    <div className="space-y-2 border-b pb-4 mb-6">;
+      <h1 className="text-2xl font-bold">{basicInfo && basicInfo.headline || basicInfo && basicInfo.title}</h1>;
+      {basicInfo && basicInfo.summary && (;
+        <p className="text-sm">{basicInfo && basicInfo.summary}</p>;
+      )}
+    </div>;
+  );
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export /**
  * ResumeBasicInfoSection - Function description
  */
@@ -16,6 +40,11 @@ function ResumeBasicInfoSection() {
       {basic_info.summary && <p className="text - sm">{basic_info.summary}</p>}
     </div>);
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 }
@@ -24,6 +53,7 @@ export function ResumeBasicInfoSection({ basicInfo }: ResumeBasicInfoSectionProp
   return (
     <div className="space-y-2 border-b pb-4 mb-6">
       <h1 className="text-2xl font-bold">{basicInfo.headline || basicInfo.title}</h1>
+<<<<<<< HEAD
 import { ResumeBasicInfo } from '@/types/resume';
 import {ResumeBasicInfo} from '@/types/resume';
 interface ResumeBasicInfoSectionProps {
@@ -58,11 +88,18 @@ export function ResumeBasicInfoSection({
     </div>;
   );
 }
+=======
+      {basicInfo.summary && (
+        <p className="text-sm">{basicInfo.summary}</p>
+      )}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>
   )
 }
 ;
 
+<<<<<<< HEAD
 import { ResumeBasicInfo } from '@/types/resume',;
 ;
 interface ResumeBasicInfoSectionProps {;
@@ -90,3 +127,6 @@ export function ResumeBasicInfoSection({ basicInfo } ResumeBasicInfoSectionProps
 }
 ;
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

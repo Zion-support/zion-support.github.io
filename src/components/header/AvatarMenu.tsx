@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default AvatarMenu;
 export default AvatarMenu;
 import React from 'react',
@@ -161,6 +162,8 @@ export const AvatarMenu: React.FC = () => {
 },
 
 export default AvatarMenu,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 
 const AvatarMenu = () => {
@@ -171,4 +174,8 @@ const AvatarMenu = () => {
   );
 };
 
+<<<<<<< HEAD
 export default AvatarMenu;
+=======
+export default AvatarMenu;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 }
 
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
@@ -30,3 +31,23 @@ export default function AIAutonomousMarketingPlatform(req, res) {
   }
 }
 ;
+=======
+
+=======
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
+;
+export async /**
+ * getStaticProps - Function description
+ */
+function getStaticProps() {
+return (getSlugStaticProps as any)({ params: { slug: 'ai - autonomous - marketing - platform' } });
+}
+export default /**
+ * AIAutonomousMarketingPlatform - Function description
+ */
+function AIAutonomousMarketingPlatform() {
+return <ServicePage {...props} />;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

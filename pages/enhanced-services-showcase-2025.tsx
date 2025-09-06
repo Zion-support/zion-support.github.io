@@ -1,9 +1,14 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from 'react';
 import Head from 'next / head';
 
 import { motion, AnimatePresence } from 'framer-motion';
 
 
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -134,6 +139,8 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
       case 'price-low':
         filtered.sort(
           (a, b) => parsePriceToNumber(a.price) - parsePriceToNumber(b.price)
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {;
   Search,;
   Star,;
@@ -200,6 +207,7 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
       if (typeof price === 'string') {;
         const match = price && price.replace(/[^0-9.]/g, '');
         const parsed = parseFloat(match || '0');
+<<<<<<< HEAD
         return isNaN(parsed) ? 0 : parsed
       }
       return 0
@@ -391,6 +399,18 @@ if ( {) {
       transition: {
     }
   };
+=======
+
+
+    visible: {
+      opacity: 1
+      transition: {
+
+    }
+  };
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
@@ -400,9 +420,24 @@ if ( {) {
         duration: 0.5
       }
     }
+<<<<<<< HEAD
 
 
   const containerVariants = {;
+=======
+
+
+
+  const containerVariants = {;
+    hidden: { opacity: 0 },;
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0 && 0.1,;
+      },;
+    },  };
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 
 import React, { useState } from 'react';
@@ -553,6 +588,11 @@ export default function EnhancedServicesShowcase2025(req, res) {
   };
     >;
       <div className='min-h-screen'>;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         stagger_children: 0.1,
       },
     },  }
@@ -570,11 +610,17 @@ export default function EnhancedServicesShowcase2025(req, res) {
 ;
     >;
       <div className='min - h-screen'>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <Head>;
           <title>;
             2025 Innovative Services Showcase - Zion Tech Group | Revolutionary;
             AI, Quantum & Emerging Tech;
           </title>;
+<<<<<<< HEAD
             href='https://ziontechgroup && ziontechgroup.com/enhanced-services-showcase-2025'
           />;
         </Head>;
@@ -632,6 +678,39 @@ export default function EnhancedServicesShowcase2025(req, res) {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+=======
+
+
+          <meta
+            name='description'
+            content="Explore Zion Tech Group's revolutionary 2025 services: AI platforms, quantum computing, blockchain infrastructure, IoT solutions, and cutting-edge emerging technologies. Contact: +1 302 464 0950"
+          />;
+          <meta
+            name='keywords'
+            content='AI services 2025, quantum computing, blockchain, IoT, edge computing, 5G, cybersecurity, metaverse, space technology, Zion Tech Group'
+          />;
+          <meta name='author' content='Zion Tech Group' />;
+          <meta
+            property='og:title'
+            content='2025 Innovative Services Showcase - Zion Tech Group'
+          />;
+          <meta
+            property='og:description'
+            content='Revolutionary AI, quantum computing, and emerging technology services for 2025. Contact: +1 302 464 0950'
+          />;
+          <meta
+            property='og:url'
+            content='https://ziontechgroup && ziontechgroup.com/enhanced-services-showcase-2025'
+          />;
+          <meta property='og:type' content='website' />;
+          <link
+            rel='canonical'
+
+
+            >
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               transition={{ duration: 0 && 0.8 }}>;
               <div className='flex items-center justify-center mb-6'>;
                 <Sparkles className='w-12 h-12 text-cyan-400 mr-4' />;
@@ -648,6 +727,13 @@ export default function EnhancedServicesShowcase2025(req, res) {
                 Discover our cutting-edge solutions that are transforming;
                 industries and driving the future of technology;
               </p>;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {/* Service Statistics */}
               <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>;
                 <div className='text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl'>;
@@ -671,6 +757,7 @@ export default function EnhancedServicesShowcase2025(req, res) {
                 <div className='text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl'>;
                   <div className='text-3xl font-bold text-pink-400'>;
                     {spaceCount + cybersecurityCount}
+<<<<<<< HEAD
               <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>
                 <div className='text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl'>
                   <div className='text-3xl font-bold text-cyan-400'>
@@ -686,6 +773,10 @@ export default function EnhancedServicesShowcase2025(req, res) {
                 <div className="text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl">
                   <div className="text-3xl font-bold text-cyan-400">{allServices.length}</div>
                   <div className="text-gray-400">Total Services</div>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </div>
                 <div className="text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl">
                   <div className="text-3xl font-bold text-purple-400">{aiCount + quantumCount}</div>
@@ -699,10 +790,15 @@ export default function EnhancedServicesShowcase2025(req, res) {
                   <div className="text-3xl font-bold text-pink-400">{spaceCount + cybersecurityCount}</div>
                   <div className="text-gray-400">Specialized</div>
                 </div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </div>
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 
                   </div>;
         {/* Search and Filters */}
@@ -724,12 +820,38 @@ export default function EnhancedServicesShowcase2025(req, res) {
             <div className="bg-gray-800/40 border border-gray-700 rounded-2xl p-6">
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
 
+=======
+
+
+                  </div>;
+                  <div className='text-gray-400'>Specialized</div>                </div>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+
+
+
+        {/* Search and Filters */}
+
+
+                  <input
+                    type="text"
+                    placeholder="Search services..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  />
+                </div>
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     onChange={e => setSearchTerm(e && e.target.value)}
                     className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'                  />;
                 </div>;
                 {/* Category Filter */}
                 <select
                   value={selectedCategory}
+<<<<<<< HEAD
                   onChange={(e) => setSelectedCategory(e.target.value)} className="px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
                   {categories.map((category) => (
                     <option key={category.id} value={category.id}>
@@ -737,6 +859,17 @@ export default function EnhancedServicesShowcase2025(req, res) {
                     </option>
                   ))}
 </select>;
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                  ))}
+
+                </select>;
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <meta;
             name='description';
             content="Explore Zion Tech Group's revolutionary 2025 services: AI platforms, quantum computing, blockchain infrastructure, IoT solutions, and cutting - edge emerging technologies. Contact: +1 302 464 0950";
@@ -840,6 +973,7 @@ export default function EnhancedServicesShowcase2025(req, res) {
                       {category.name} ({category.count});
                     </option>))}
                 </select>;
+<<<<<<< HEAD
                   on_change={e => setSelectedPriceRange (e.target.value)}
                 {/* Price Range Filter */}
                 <select;
@@ -861,6 +995,28 @@ export default function EnhancedServicesShowcase2025(req, res) {
                     </option>
                   ))}
 on_change={e => setSelectedPriceRange (e.target.value)}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                {/* Price Range Filter */}
+                <select;
+                  value={selectedPriceRange}
+
+
+                  ))}
+
+                </select>;
+
+
+                {/* Sort Options */}
+                <select
+                  value={sortBy}
+
+
+                  ))}
+
+=======
+                  on_change={e => setSelectedPriceRange (e.target.value)}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   className='px - 4 py - 3 bg - gray - 700 / 50 border border - gray - 600 rounded - xl text - white focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent';
                 >;
                   {price_ranges.map (range => (                    <option key={range.id} value={range.id}>;
@@ -876,6 +1032,7 @@ on_change={e => setSelectedPriceRange (e.target.value)}
                   {sort_options.map (option => (                    <option key={option.id} value={option.id}>;
                       {option.name}
                     </option>))}
+<<<<<<< HEAD
                 {/* Search */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1007,11 +1164,22 @@ on_change={e => setSelectedPriceRange (e.target.value)}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </select>;
               </div>;
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
+=======
+
+
+            <motion.div
+              variants={containerVariants}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Services Grid */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1053,6 +1221,13 @@ on_change={e => setSelectedPriceRange (e.target.value)}
                           <Star className="w-4 h-4 fill-current" />
                           <span>Popular</span>
                         </div>
+<<<<<<< HEAD
+=======
+
+                    </h3>;
+                    <p className='text - gray - 300 text - sm mb - 4 line - clamp - 2'>                      {service.description}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                       )  } catch (error) {
     console.error("Error:", error);
@@ -1086,6 +1261,7 @@ on_change={e => setSelectedPriceRange (e.target.value)}
                         {service.price}
                         <span className='text - gray - 400 text - lg'>;
                           {service.period}
+<<<<<<< HEAD
                     <div className="flex items-center justify-between mb-4">
                       <div className="text-2xl font-bold text-cyan-400">
                         {service.price}<span className="text-gray-400 text-lg">{service.period}</span>
@@ -1137,10 +1313,18 @@ on_change={e => setSelectedPriceRange (e.target.value)}
                     <div className="flex items-center justify-between mb-4">
                       <div className="text-2xl font-bold text-cyan-400">
                         {service.price}<span className="text-gray-400 text-lg">{service.period}</span>
+=======
+
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="text-2xl font-bold text-cyan-400">
+                        {service.price}<span className="text-gray-400 text-lg">{service.period}</span>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       </div>
                       <div className="flex items-center space-x-2 text-sm text-gray-400">
                         <Users className="w-4 h-4" />
                         <span>{service.customers}</span>
+<<<<<<< HEAD
                       </div>
                     </div>
 
@@ -1173,11 +1357,47 @@ on_change={e => setSelectedPriceRange (e.target.value)}
                     <div className='flex items-center justify-between mb-6 text-sm'>
                       <div className='flex items-center space-x-1 text-green-400'>
                         <TrendingUp className='w-4 h-4' />
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+                      </div>
+                    </div>
+
+                    </div>;
+                    {/* Service Title and Description */}
+                    <h3 className='text-xl font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors'>;
+                      {service && service.name}
+                    </h3>;
+                    <p className='text-gray-300 text-sm mb-4 line-clamp-2'>                      {service && service.description}
+                    </p>;
+                    {/* Price and Customer Count */}
+                    <div className='flex items-center justify-between mb-4'>;
+                      <div className='text-2xl font-bold text-cyan-400'>;
+                        {service && service.price}
+                        <span className='text-gray-400 text-lg'>;
+                          {service && service.period}
+                        </span>;
+                      </div>;
+                      <div className='flex items-center space-x-2 text-sm text-gray-400'>;
+                        <Users className='w-4 h-4' />                        <span>{service && service.customers}</span>;
+                      </div>;
+                    </div>;
+
+
+                    {/* Key Features */}
+
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     {/* Key Features */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <div className="mb-6">
                       <div className="text-sm text-gray-400 mb-2">Key Features:</div>
                       <ul className="space-y-1">
@@ -1186,6 +1406,7 @@ on_change={e => setSelectedPriceRange (e.target.value)}
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                             <span className="line-clamp-1">{feature}</span>
                           </li>
+<<<<<<< HEAD
                       </div>
                     </div>
                     {/* ROI and Setup Time */}
@@ -1222,11 +1443,31 @@ on_change={e => setSelectedPriceRange (e.target.value)}
                     <div className="flex items-center justify-between mb-6 text-sm">
                       <div className="flex items-center space-x-1 text-green-400">
                         <TrendingUp className="w-4 h-4" />
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                        ))}
+
+                    <div className="mb-6 p-3 bg-gray-700/40 rounded-lg">
+                      <div className="text-xs text-gray-400 mb-1">Market Position</div>
+                      <div className="text-sm text-gray-300 line-clamp-2">
+                        {service.marketPosition}
+
+                      </div>
+                    </div>
+                    {/* ROI and Setup Time */}
+
+                    <div className="flex items-center justify-between mb-6 text-sm">
+                      <div className="flex items-center space-x-1 text-green-400">
+                        <TrendingUp className="w-4 h-4" />
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         <span>Average ROI</span>
                       </div>
                       <div className="flex items-center space-x-1 text-blue-400">
                         <Clock className="w-4 h-4" />
                         <span>{service.setupTime}</span>
+<<<<<<< HEAD
                       </div>
                     </div>
                     {/* Action Buttons */}
@@ -1249,12 +1490,44 @@ on_change={e => setSelectedPriceRange (e.target.value)}
                     {/* Contact Information */}
                     {/* Action Buttons */}
                     <div className='flex gap-3'>
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+                      </div>
+                    </div>
+
+                      </ul>;
+                    </div>;
+                    {/* Market Position */}
+                    <div className='mb-6 p-3 bg-gray-700/40 rounded-lg'>;
+                      <div className='text-xs text-gray-400 mb-1'>;
+                        Market Position;
+                      </div>;
+                      <div className='text-sm text-gray-300 line-clamp-2'>                        {service && service.marketPosition}
+                      </div>;
+                    </div>;
+                    {/* ROI and Setup Time */}
+                    <div className='flex items-center justify-between mb-6 text-sm'>;
+                      <div className='flex items-center space-x-1 text-green-400'>;
+                        <TrendingUp className='w-4 h-4' />;
+                        <span>Average ROI</span>;
+                      </div>;
+                      <div className='flex items-center space-x-1 text-blue-400'>;
+                        <Clock className='w-4 h-4' />                        <span>{service && service.setupTime}</span>;
+                      </div>;
+                    </div>;
+
+
+                    {/* Action Buttons */}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     {/* Action Buttons */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                     <div className="flex gap-3">
+<<<<<<< HEAD
                       <a
                         href={service.link  } catch (error) {
     console.error("Error:", error);
@@ -1286,6 +1559,23 @@ on_change={e => setSelectedPriceRange (e.target.value)}
                       <div className="text-xs text-gray-400 mb-2">Contact Information:</div>
                       <div className="text-xs text-gray-300 space-y-1">
                         <div>📱 {service.contactInfo.mobile}</div>
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                      <a
+                        href={service && service.link}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-xl text-center text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center'>;
+                        Learn More;
+                        <ArrowRight className='w-4 h-4 ml-2' />;
+                      </a>;
+                      <a
+                        href='/contact'
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         <div>✉️ {service.contactInfo.email}</div>
                         <div>🌐 {service.contactInfo.website}</div>
                       </div>
@@ -1298,9 +1588,13 @@ on_change={e => setSelectedPriceRange (e.target.value)}
 
 
 
+<<<<<<< HEAD
 className='flex-1 bg-gray-700/60 text-white px-4 py-2 rounded-xl text-center text-sm font-medium hover:bg-gray-600/60 transition-all duration-300 border border-gray-600 hover:border-gray-500'>                        Contact Us;
                       </a>;
                     </div>;
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     {/* Contact Information */}
                     <div className='mt-4 pt-4 border-t border-gray-700'>;
                       <div className='text-xs text-gray-400 mb-2'>;
@@ -1313,8 +1607,16 @@ className='flex-1 bg-gray-700/60 text-white px-4 py-2 rounded-xl text-center tex
                     </div>;
                   </motion && motion.div>;
                 ))}
+<<<<<<< HEAD
               </AnimatePresence>;
             </motion && motion.div>;
+=======
+
+              </AnimatePresence>;
+            </motion && motion.div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* No Results Message */}
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
@@ -1329,6 +1631,12 @@ className='flex-1 bg-gray-700/60 text-white px-4 py-2 rounded-xl text-center tex
                   Try adjusting your search criteria or filters;
                 </p>              </motion && motion.div>;
 
+<<<<<<< HEAD
+=======
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         </span>;
                       </div>;
                       <div className='flex items - center space - x-2 text - sm text - gray - 400'>;
@@ -1411,6 +1719,7 @@ className='flex-1 bg-gray-700/60 text-white px-4 py-2 rounded-xl text-center tex
               <motion.div;
                 initial={{ opacity: 0 }}
 
+<<<<<<< HEAD
         {/* Call to Action */}
         <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -1421,10 +1730,22 @@ className='flex-1 bg-gray-700/60 text-white px-4 py-2 rounded-xl text-center tex
         {/* Call to Action */}
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
+=======
+          </div>;
+        </section>;
+
+
+        {/* Call to Action */}
+        <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>;
+          <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Call to Action */}
         <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
+<<<<<<< HEAD
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
                   </motion.div>
@@ -1493,6 +1814,9 @@ className='flex-1 bg-gray-700/60 text-white px-4 py-2 rounded-xl text-center tex
         <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1508,13 +1832,22 @@ className='flex-1 bg-gray-700/60 text-white px-4 py-2 rounded-xl text-center tex
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
             >
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            >
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Join thousands of companies achieving breakthrough results with our revolutionary services
               </p>
+<<<<<<< HEAD
               {/* Contact Information */}
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>
                 <div className='flex items-center justify-center space-x-3'>
@@ -1529,6 +1862,9 @@ className='flex-1 bg-gray-700/60 text-white px-4 py-2 rounded-xl text-center tex
                 <div className="flex items-center justify-center space-x-3">
                   <div className="w-12 h-12 bg-cyan-500/20 rounded-full flex items-center justify-center">
                     <Target className="w-6 h-6 text-cyan-400" />
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </div>
                   <span className="text-lg text-white">+1 302 464 0950</span>
                 </div>
@@ -1545,6 +1881,7 @@ className='flex-1 bg-gray-700/60 text-white px-4 py-2 rounded-xl text-center tex
                   <span className="text-lg text-white">364 E Main St STE 1008 Middletown DE 19709</span>
                 </div>
               </div>
+<<<<<<< HEAD
               {/* Action Buttons */}
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a 
@@ -1570,12 +1907,53 @@ className='flex-1 bg-gray-700/60 text-white px-4 py-2 rounded-xl text-center tex
 
               {/* Action Buttons */}
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>
+=======
+
+              transition={{ duration: 0 && 0.8 }}>;
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+                Ready to Transform Your Business?;
+              </h2>;
+              <p className='text-xl text-gray-300 mb-8'>;
+                Join thousands of companies achieving breakthrough results with;
+                our revolutionary services;
+              </p>;
+              {/* Contact Information */}
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>;
+                <div className='flex items-center justify-center space-x-3'>;
+                  <div className='w-12 h-12 bg-cyan-500/20 rounded-full flex items-center justify-center'>;
+                    <Target className='w-6 h-6 text-cyan-400' />;
+                  </div>;
+                  <span className='text-lg text-white'>+1 302 464 0950</span>;
+                </div>;
+                <div className='flex items-center justify-center space-x-3'>;
+                  <div className='w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center'>;
+                    <Award className='w-6 h-6 text-purple-400' />;
+                  </div>;
+                  <span className='text-lg text-white'>;
+                    kleber@ziontechgroup && ziontechgroup.com;
+                  </span>;
+                </div>;
+                <div className='flex items-center justify-center space-x-3'>;
+                  <div className='w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center'>;
+                    <Lightbulb className='w-6 h-6 text-green-400' />;
+                  </div>;
+                  <span className='text-lg text-white'>;
+                    364 E Main St STE 1008 Middletown DE 19709;
+                  </span>                </div>;
+              </div>;
+
+
+              {/* Action Buttons */}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {/* Action Buttons */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
+<<<<<<< HEAD
                 <a
                   href="/contact" className="inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-500 hover:via-blue-400 hover:to-blue-500 text-white shadow-lg hover:shadow-xl border border-blue-500/20 no-underline">
                   <span className="relative">Start Your Transformation</span>
@@ -1595,6 +1973,31 @@ className='flex-1 bg-gray-700/60 text-white px-4 py-2 rounded-xl text-center tex
                   href='/pricing'
 
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                <a
+                  href='/contact'
+                  className='inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-500 hover:via-blue-400 hover:to-blue-500 text-white shadow-lg hover:shadow-xl border border-blue-500/20 no-underline'>;
+                  <span className='relative'>Start Your Transformation</span>;
+                  <Rocket className='ml-2 w-6 h-6' />;
+                </a>;
+                <a
+                  href='/pricing'
+
+
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </EnhancedFuturisticBackground>;
+  );
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   )
 }
                 animate={{ opacity: 1 }}
@@ -1735,10 +2138,25 @@ className='flex-1 bg-gray-700/60 text-white px-4 py-2 rounded-xl text-center tex
           </div>;
         </section>;
       </div>;
+<<<<<<< HEAD
     </EnhancedFuturisticBackground>;
   );
+=======
+<<<<<<< HEAD
+    </EnhancedFuturisticBackground>);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

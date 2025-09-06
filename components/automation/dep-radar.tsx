@@ -1,5 +1,23 @@
 
 
+<<<<<<< HEAD
+=======
+}</div>) import fs from 'fs';
+import fs from 'fs';
+import path from 'path';
+
+
+type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'devDependency' },
+export async function getServerSideProps() {;
+
+
+  const file = path.join(process.cwd(), 'datadep-radar.json');
+  let outdated: Outdated[] = [];  let generatedAt = '';
+  try {
+    const raw = fs.readFileSync(file, 'utf-8');
+    const json = JSON.parse(raw);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     outdated = json.outdated || [];
     generatedAt = json.generatedAt || ''
@@ -10,6 +28,11 @@
 
 
 export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outdated[], generatedAt: string }) {
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ) : (<div className="overflow-auto border rounded" > <table className="min-w-full text-sm" > <thead className="bg-gray-50" > <tr> <th className="text-left p-2" >Package</th> <th className="text-left p-2" >Current</th> <th className="text-left p-2" >Latest</th> <th className="text-left p-2" >Type</th> </tr> </thead> <tbody> {;
   outdated && outdated.map (o => (</tr>) ) ;
 }</tbody> </table> </div>) ;
@@ -50,11 +73,21 @@ function getServerSideProps() {
   } catch {}
   return { props: { outdated, generated_at } }
 }
+<<<<<<< HEAD
+=======
+
+
+
+
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>;
   );
 }
 
 
+<<<<<<< HEAD
     outdated = json.outdated || [];
     generatedAt = json.generatedAt || ''
   } catch {}
@@ -62,6 +95,13 @@ function getServerSideProps() {
 }
 
 export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outdated[], generatedAt: string }) {
+=======
+=======
+export default /**
+ * DepRadarPage - Function description
+ */
+function DepRadarPage() {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="space - y-6">;
       <h1 className="text - 2xl font - semibold">AI Automation: Dependency Radar</h1>;
@@ -104,6 +144,7 @@ export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outd
   } catch {}
   return { props: { outdated, generatedAt } }
 }
+<<<<<<< HEAD
 
 export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outdated[], generatedAt: string }) {
   return (
@@ -144,3 +185,6 @@ export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outd
 }
   );
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

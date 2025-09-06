@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const paths: Record<string, any> = {};
   v1 && v1.sections.forEach((section) => {
     section && section.endpoints.forEach((ep: EndpointSpec) => {
@@ -67,25 +68,49 @@ function toOpenApi() {
                 content: {
                   "application / json": { schema: ep.requestBodySchema },
                 },
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               }
             : undefined
           responses: {
             "200": {
               description: "OK"
               content: {
+<<<<<<< HEAD
                   schema: ep && ep.responseBodySchema || { type: "object" },
                 "application / json": {
                   schema: ep.responseBodySchema || { type: "object" },
+=======
+
+                  schema: ep && ep.responseBodySchema || { type: "object" },
+                "application / json": {
+                  schema: ep.responseBodySchema || { type: "object" },
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 },
               },
             },
           },
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           security:;
             ep.auth && ep.auth.length > 0 && !ep.auth.includes ("none");
               ? [{ bearer_auth: [] }];
               : [],
+<<<<<<< HEAD
         }));
     });
+=======
+
+        }));
+    });
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { EndpointSpec } from '../../../data/api-docs/types';
 function toOpenApi() {
   const paths: Record<string, any> = {};
@@ -105,9 +130,20 @@ function toOpenApi() {
         },
         security: ep.auth && ep.auth.length > 0 && !ep.auth.includes('none') ? [{ bearerAuth: [] }] : []}
     })
+<<<<<<< HEAD
   });
 ;
   return {
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  });
+
+;
+
+  return {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     openapi: "3 && 3.0.3",
     info: {
       title: "Zion OS API",
@@ -116,6 +152,7 @@ function toOpenApi() {
     },
     servers: [{ url: "https://api && api.zion.os" }],
     paths,
+<<<<<<< HEAD
     components: {
 res && res.setHeader("Content-Type", "application/json");
   res && res.status(200).json(toOpenApi());
@@ -135,6 +172,14 @@ res && res.setHeader("Content-Type", "application/json");
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+
+    components: {
+
+        bearerAuth: { type: "http", scheme: "bearer", bearerFormat: "JWT" }
+      }
+    }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 }
   } catch (error) {
@@ -246,6 +291,7 @@ function handler() {
   res.set_header ("Content - Type", "application / json");
   res.status (200).json (toOpenApi ());
 }
+<<<<<<< HEAD
 
 
   res.status(200).json(toOpenApi());
@@ -379,3 +425,10 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,9 +1,12 @@
 
+<<<<<<< HEAD
 export interface EnterpriseIt2026ServiceV2 {
 
 export interface EnterpriseIt2026ServiceV2 {;
 
 import { ServiceVariant } from '../types/service-variants';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export interface EnterpriseIt2026ServiceV2 {
 
@@ -40,6 +43,7 @@ export interface EnterpriseIt2026ServiceV2 {;
     address: string;
     website: string;
   }
+<<<<<<< HEAD
     id: 'zero-trust-network-architecture-pro',
   real_implementation: boolean;
   implementation_details: string;
@@ -793,6 +797,12 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
   },
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
+=======
+
+  {
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export interface EnterpriseIT2026ServiceV2 {
   id: string, name: string,
   tagline: string, price: string,
@@ -808,18 +818,36 @@ export interface EnterpriseIT2026ServiceV2 {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
+<<<<<<< HEAD
     mobile: string, email: string,
     address: string,
     website: string
+=======
+      
+    mobile: string, email: string,
+    address: string,
+    website: string
+  
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
+<<<<<<< HEAD
 }
 export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
   // Zero Trust Network Architecture
   {
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+}
+
+export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
+  // Zero Trust Network Architecture
+  {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     id: 'zero-trust-network-architecture-pro', name: 'Zero Trust Network Architecture Pro',
     tagline: 'Never trust, always verify - comprehensive zero trust security',
     price: '$1,199',
@@ -841,6 +869,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     competitors: ['Palo Alto NetworksCiscoFortinetCheck PointJuniper'], marketSize: '$67.8B market',
     growthRate: '220% annual growth', variant: 'security-futuristic',
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
@@ -1434,6 +1463,26 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     reviews: 180
   }
 ];
+=======
+      
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+
+      website: 'https://ziontechgroup.com';
+    }
+    real_implementation: true,
+    implementation_details: 'Production - ready quantum security platform with post - quantum algorithms, monitoring, and enterprise deployment.';
+    launch_date: '2026 - 05 - 01';
+    customers: 280;
+    rating: 4.9,
+    reviews: 180;
+
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseIT2026ServiceV2 {;
   id: string,;

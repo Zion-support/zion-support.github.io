@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../lib/integrations/fileStore";
@@ -8,6 +12,15 @@ export default async function handler(
 ) {
 
   try {
+<<<<<<< HEAD
+=======
+  if (req && req.method !== "POST")
+    return res && res.status(405).json({ error: "Method not allowed" });
+  const { providerId } = req && req.body as { providerId?: string };
+  if (!providerId || !getProviderById(providerId)) {
+    return res && res.status(400).json({ error: "Invalid providerId" });
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   const state = readState();
   const conn = state && state.connections.find((c) => c && c.providerId === providerId);
@@ -30,11 +43,24 @@ function handler() {
   $2
 }
 
+<<<<<<< HEAD
 
+=======
+    });
+
+}
+
+=======
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 
+<<<<<<< HEAD
   const { provider_id } = req.body as { provider_id?: string }
   if () {) {
   $2
@@ -55,6 +81,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       level: "info",
       action: "resync",
     });
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../lib/integrations/fileStore';
 import { getProviderById } from '../../../lib/integrations/registry';
@@ -89,6 +117,7 @@ export default async function handler(
   res.status(200).json({ ok: true })
 }
 
+<<<<<<< HEAD
   });
   res.status (200).json ({ ok: true });
 }
@@ -130,8 +159,27 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+    const target = s.connections.find ((c) => c.provider_id === provider_id);
+    // Check condition
+if (target.lastSyncAt = now) {
+  $2
+}
+  });
+  res.status (200).json ({ ok: true });
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

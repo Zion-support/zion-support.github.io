@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { SEO } from '@/components/SEO'
 import { GradientHeading } from '@/components/GradientHeading'
 import { Button } from '@/components/ui/button'
@@ -37,6 +38,8 @@ export default function Careers() {
       title: 'Flexible Work'
       description:
         'Remote-first culture with flexible hours to support your productivity and work-life balance.'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Benefits list
   const benefits = [
     {
@@ -454,6 +457,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <p className="text-zion-slate-light">{benefit.description}</p>
                 </div>
               ))}
+<<<<<<< HEAD
             </div>
           </div>
           <div className='mb-24'>
@@ -462,6 +466,20 @@ ursor/fix-website-loading-errors-and-merge-6662
             </h2>
             <Tabs defaultValue='engineering' className='w-full'>
               <TabsList className='bg-zion-blue-dark border border-zion-blue-light mb-8 w-full flex flex-wrap justify-center'>
+=======
+
+            </div>;
+          </div>;
+
+          <div className='mb-24'>;
+            <h2 className='text-3xl font-bold text-white mb-12 text-center'>;
+              Open Positions;
+            </h2>;
+
+            <Tabs defaultValue='engineering' className='w-full'>;
+              <TabsList className='bg-zion-blue-dark border border-zion-blue-light mb-8 w-full flex flex-wrap justify-center'>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <TabsTrigger
                   value='engineering'
                   className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'
@@ -482,12 +500,23 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </TabsTrigger>
                 <TabsTrigger
                   value='operations'
+<<<<<<< HEAD
                   className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'
                 >
                   Operations
                 </TabsTrigger>
               </TabsList>
               {Object.entries(jobs).map(([department, jobList]) => (
+=======
+
+                  className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'>;
+                  Operations;
+                </TabsTrigger>;
+              </TabsList>;
+
+              {Object && Object.entries(jobs).map(([department, jobList]) => (;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <TabsContent
                   key={department}
                   value={department}
@@ -496,6 +525,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   {jobList.map((job, index) => (
                     <Card
                       key={index}
+<<<<<<< HEAD
                       className='bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-colors'>;
                       <CardContent className='p-6'>;
                         <div className='flex flex-col md:flex-row md:items-center md:justify-between'>                          <div>;
@@ -517,6 +547,52 @@ ursor/fix-website-loading-errors-and-merge-6662
                               {job && job.description}
                             </p>;
                           </div>;
+=======
+                      className='bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-colors'
+                    >
+                      <CardContent className='p-6'>
+                        <div className='flex flex-col md:flex-row md:items-center md:justify-between'>                          <div>
+                            <h3 className='text-xl font-bold text-white mb-2'>
+                              {job.title}
+                            </h3>
+                            <div className='flex flex-wrap gap-2 mb-4'>
+                              <span className='text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full'>
+                                {job.location}
+                              </span>
+                              <span className='text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full'>
+                                {job.type}
+                              </span>
+                              <span className='text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full'>
+                                {job.department}
+                              </span>
+          
+          <div className="mb-24">
+            <h2 className="text-3xl font-bold text-white mb-12 text-center">Open Positions</h2>
+            
+            <Tabs defaultValue="engineering" className="w-full">
+              <TabsList className="bg-zion-blue-dark border border-zion-blue-light mb-8 w-full flex flex-wrap justify-center">
+                <TabsTrigger value="engineering" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Engineering</TabsTrigger>
+                <TabsTrigger value="product" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Product</TabsTrigger>
+                <TabsTrigger value="marketing" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Marketing</TabsTrigger>
+                <TabsTrigger value="operations" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Operations</TabsTrigger>
+              </TabsList>
+              
+              {Object.entries(jobs).map(([department, jobList]) => (
+                <TabsContent key={department} value={department} className="space-y-6">
+                  {jobList.map((job, index) => (
+                    <Card key={index} className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-colors">
+                      <CardContent className="p-6">
+                        <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                          <div>
+                            <h3 className="text-xl font-bold text-white mb-2">{job.title}</h3>
+                            <div className="flex flex-wrap gap-2 mb-4">
+                              <span className="text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full">{job.location}</span>
+                              <span className="text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full">{job.type}</span>
+                              <span className="text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full">{job.department}</span>
+                            </div>
+                            <p className="text-zion-slate-light mb-4">{job.description}</p>
+                          </div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           <Button
                             asChild
                             className='w-full md:w-auto mt-4 md:mt-0 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'>;
@@ -574,6 +650,7 @@ function Careers() {
                         </div>
                       </CardContent>
                     </Card>
+<<<<<<< HEAD
                 </TabsContent>
               ))}
             </Tabs>
@@ -587,6 +664,9 @@ function Careers() {
               about AI and technology. Send us your resume and let's start a
               conversation. You can also apply directly by emailing us at
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { SEO } from "@/components/SEO",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -764,6 +844,10 @@ export default function Careers() {;
               We're always looking for talented individuals who are passionate about AI and technology.
               Send us your resume and let's start a conversation. You can also
               apply directly by emailing us at
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <a
                 href={`mailto:${applyEmail}`}
                 className="text-zion-cyan hover:text-zion-purple transition-colors"
@@ -774,6 +858,7 @@ export default function Careers() {;
             </p>
             <Button
               asChild
+<<<<<<< HEAD
               className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
             >
               <a href={`mailto:${applyEmail}`}>Send General Application</Link>
@@ -799,6 +884,33 @@ const Careers: React.FC = () => {
 }
 ;
 
+=======
+
+              className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'>;
+              <a href={`mailto:${applyEmail}`}>Send General Application</a>;
+            </Button>;
+          </div>;
+        </div>;
+      </main>;
+    </>;
+  );
+import React from 'react';
+import { SEO } from '../components/SEO';
+const Careers: React.FC = () => {;
+  return (<>;
+      <SEO title="Careers - Zion Tech Group" />;
+      <div className="min-h-screen bg-white py-20">;
+        <div className="max-w-4xl mx-auto px-4">;
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Careers</h1>;
+          <p className="text-lg text-gray-600">Content coming soon...</p>;
+        </div>;
+      </div>;
+    </>;
+  );
+};
+export default Careers;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
 export default Careers
@@ -861,4 +973,8 @@ export default Careers;
 }
 ;
 export default Careers;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

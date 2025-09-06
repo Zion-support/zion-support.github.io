@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface EmergingTechService2026 {;
 export interface EmergingTechService2026 {
 export interface EmergingTechService2026 {;
@@ -30,10 +31,16 @@ export interface EmergingTechService2026 {;
     mobile: string;
     email: string;
     address: string;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 };
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const emergingTechServices2026: EmergingTechService2026[] = [
   // Quantum Computing Services
   {
@@ -41,6 +48,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
 
 ];
 
+<<<<<<< HEAD
 
     website: string;
   }
@@ -543,6 +551,11 @@ export const emergingTechServices2026: EmergingTechService2026[] = [;
       'Real-time simulation and modeling',
   // Digital Twin & Simulation;
   {
+=======
+  return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular);
+};
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     id: 'ai-digital-twin-platform'
     name: 'AI Digital Twin Platform'
     tagline:
@@ -632,9 +645,13 @@ export const getEmergingTechServices2026ByCategory = (category: string) => {
 export const getPopularEmergingTechServices2026 = () => {
 };
 
+<<<<<<< HEAD
 export const getPopularEmergingTechServices2026 = () => {;
   return emergingTechServices2026.filter(service => service.popular);
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const getEmergingTechServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
@@ -651,10 +668,16 @@ export const getEmergingTechServices2026ByPriceRange = (
   });
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export interface EmergingTechService2026 {;
 
 };
+<<<<<<< HEAD
 
 export interface EmergingTechService2026 {;
   id: string,;
@@ -982,3 +1005,7 @@ export const getEmergingTechServices2026ByPriceRange = (minPrice: number, maxPri
     return price >= minPrice && price <= maxPrice;
   });
 };
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

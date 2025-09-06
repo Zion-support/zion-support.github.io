@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
     return <Badge variant={style.variant}>{category}</Badge>
   }
@@ -235,13 +236,20 @@ if ( {) {
   const getCategoryBadge = (category: string, ) =>: any {
     const category_styles: Record < string, { variant: "default" | "outline" | "secondary" | "destructive" }> = {
       jobs: { variant: "default" },
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 jobs: { variant: "default" },
       candidates: { variant: "outline" },
       team: { variant: "secondary" },
       billing: { variant: "destructive" }},
+<<<<<<< HEAD
     const style = category_styles[category] || { variant: "default" as const },
     return <Badge variant={style.variant}>{category}</Badge>;
   }
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return <Badge variant={style && style.variant}>{category}</Badge>;
   };
 import React from "react";
@@ -486,6 +494,55 @@ export function TeamActivity() {;
       <div className="flex items-center justify-between">;
         <h3 className="text-xl font-medium">Recent Team Activity</h3>;
         <div className="flex items-center gap-2">;
+<<<<<<< HEAD
+=======
+
+          <div className="relative">;
+            <Search className="absolute left - 2.5 top - 2.5 h - 4 w - 4 text - muted - foreground" />;
+            <Input;
+              type="search";
+              placeholder="Search activities...";
+              className="w-[200px] md:w-[300px] pl - 9";
+            />;
+          </div>;
+          <Button variant="outline" size="icon" className="h - 10 w - 10" aria - label="Filter by date">;
+            <CalendarIcon className="h - 4 w - 4" />;
+          </Button>;
+        </div>;
+      </div>;
+      <div className="rounded - md border">;
+        <Table>;
+          <TableHeader>;
+            <TableRow>;
+              <TableHead > User</TableHead>;
+              <TableHead > Activity</TableHead>;
+              <TableHead > Target</TableHead>;
+              <TableHead > Category</TableHead>;
+              <TableHead > Time</TableHead>;
+            </TableRow>;
+          </TableHeader>;
+          <TableBody>;
+            {activities.map ((activity, ) => (
+              <TableRow key={activity.id}>;
+                <TableCell className="font - medium">{activity.user}</TableCell>;
+                <TableCell>{activity.action}</TableCell>;
+                <TableCell>;
+                  <span className="font - medium">{activity.target}</span>;
+                </TableCell>;
+                <TableCell>{getCategoryBadge (activity.category)}</TableCell>;
+                <TableCell className="text - muted - foreground">;
+                  {format_date (activity.timestamp)}
+                </TableCell>;
+              </TableRow>))}
+          </TableBody>;
+        </Table>;
+      </div>;
+      <div className="flex items - center justify - between">;
+        <Button variant="outline" size="sm">;
+          Previous;
+        </Button>;
+        <div className="text - sm text - muted - foreground">;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           Page 1 of 10;
         </div>;
         <Button variant="outline" size="sm">;
@@ -498,6 +555,7 @@ const getCategoryBadge = (category: string) =>: any {
 }";
   activities.map ( (activity) => (<TableRow key= {
 
+<<<<<<< HEAD
 import React from "react",;
 import {;
   Table,;
@@ -598,6 +656,8 @@ export function TeamActivity() {;
               type="search";
               placeholder="Search activities...";
               className="w-[200px] md:w-[300px] pl-9";
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             />;
           </div>;
           <Button variant="outline" size="icon" className="h-10 w-10" aria-label="Filter by date">;
@@ -605,6 +665,10 @@ export function TeamActivity() {;
           </Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="rounded-md border">;
         <Table>;
           <TableHeader>;
@@ -617,6 +681,7 @@ export function TeamActivity() {;
             </TableRow>;
           </TableHeader>;
           <TableBody>;
+<<<<<<< HEAD
             {activities.map((activity) => (;
               <TableRow key={activity.id}>;
                 <TableCell className="font-medium">{activity.user}</TableCell>;
@@ -645,6 +710,8 @@ export function TeamActivity() {;
             </TableRow>;
           </TableHeader>;
           <TableBody>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {activities && activities.map((activity,) => (;
               <TableRow key={activity && activity.id}>;
                 <TableCell className="font-medium">{activity && activity.user}</TableCell>;
@@ -694,7 +761,11 @@ const getCategoryBadge = (category: string) => {;
           </TableBody>
         </Table>
       </div>
+<<<<<<< HEAD
       <div className="flex items-center justify-between">
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       
 
       <div className="flex items-center justify-between">
@@ -707,6 +778,7 @@ const getCategoryBadge = (category: string) => {;
         <Button variant="outline" size="sm">
           Next
         </Button>
+<<<<<<< HEAD
 const getCategoryBadge = (category: string) => {
 };"
     </div>
@@ -815,3 +887,6 @@ const getCategoryBadge = (category: string) => {;
 }
 ;
       </div>
+=======
+      </div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

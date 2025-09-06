@@ -10,13 +10,24 @@ import {basicInfoSchema, BasicInfoFormData} from "./schema";
 import {PersonalInfoFields} from "./PersonalInfoFields";
 import {ContactFields} from "./ContactFields";
 export interface BasicInfoFormProps {;
+<<<<<<< HEAD
   resumeId?: string;
   initialData?: Partial<BasicInfoFormData>;
   onSave: (data: BasicInfoFormData) => void,;
+=======
+
+  resumeId?: string;
+
+  initialData?: Partial<BasicInfoFormData>;
+
+  onSave: (data: BasicInfoFormData) => void,;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   skills?: string[];
   yearsExperience?: number;
   onComplete?: () => void;
 }
+<<<<<<< HEAD
 export function BasicInfoForm(): any ({;
   resumeId;
   resumeId?: string;
@@ -57,17 +68,36 @@ export function BasicInfoForm({;
   skills = [];
   yearsExperience = 0;
 export function BasicInfoForm({
+=======
+
+
+export function BasicInfoForm(): any ({;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   resumeId;
 
   initialData = {}
   onSave;
   skills = [];
   yearsExperience = 0;
+<<<<<<< HEAD
   resumeId,
   initialData = {},
   onSave,
   skills = [],
   yearsExperience = 0,
+=======
+
+
+
+  onComplete?: () => void
+}
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onComplete
 }: BasicInfoFormProps) {
   const form = useForm<BasicInfoFormData>({
@@ -75,6 +105,7 @@ export function BasicInfoForm({
     defaultValues: {
 
 
+<<<<<<< HEAD
       fullName: ""
       title: ""
       email: ""
@@ -85,6 +116,8 @@ export function BasicInfoForm({
       github: ""
       hourlyRate: 0
       ...initialData}});
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       fullName: "",
       title: "",
       email: "",
@@ -96,12 +129,22 @@ export function BasicInfoForm({
       hourlyRate: 0,
       ...initialData}}),
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   useEffect(() => {
     if (initialData) {
       Object.entries(initialData).forEach(([key, value]) => {
         if (value !== undefined) {
           form.setValue(key as keyof BasicInfoFormData, value as any)
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState, useEffect } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -127,6 +170,10 @@ export function BasicInfoForm({;
   onSave,;
   skills = [],;
   yearsExperience = 0,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onComplete;
 }: BasicInfoFormProps) {;
   const form = useForm<BasicInfoFormData>({;
@@ -141,6 +188,7 @@ export function BasicInfoForm({;
       linkedin: "",;
       github: "",;
       hourlyRate: 0,;
+<<<<<<< HEAD
 
 
   };
@@ -208,11 +256,61 @@ export function BasicInfoForm({;
 
   return (
 
+=======
+      ...initialData}});
+
+  useEffect(() => {;
+    if (initialData) {;
+      Object && Object.entries(initialData).forEach(([key, value]) => {;
+        if (value !== undefined) {;
+
+          form.setValue(key as keyof BasicInfoFormData, value as any);
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        }
+      });
+    }
+
+
+=======
+
+  };
+
+=======
+  }, [initialData, form]),;
+
+  const handleSubmit = (data: BasicInfoFormData) => {;
+    onSave(data),;
+    if (onComplete) {;
+      onComplete();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    }
+
+  },
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+  return (
+
+    <Form {...form}>;
+      <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-6">;
+        <Card className="p-6 space-y-6">;
+          <PersonalInfoFields control={form && form.control} />;
+          <ContactFields control={form && form.control} />;
+
+          <div className="pt-4 border-t border-gray-200">;
+            <h3 className="text-lg font-medium mb-4">Rate Information</h3>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <RateOptimizationSection
               control={form && form.control}
               setValue={form && form.setValue}
               skills={skills}
 
+<<<<<<< HEAD
               yearsExperience={yearsExperience || 0}
 
 
@@ -250,6 +348,12 @@ export function BasicInfoForm({;
               skills={skills}
               yearsExperience={yearsExperience |0}
               yearsExperience={yearsExperience || 0}
+=======
+
+              yearsExperience={yearsExperience || 0}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               location={form.getValues("location")}
               rateType="hourly"
             />
@@ -261,6 +365,10 @@ export function BasicInfoForm({;
       </form>
     </Form>
   )
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               yearsExperience={yearsExperience || 0}
               location={form && form.getValues("location")}
               rateType="hourly"
@@ -333,6 +441,7 @@ function BasicInfoForm() {
       hourly_rate: 0,
       ...initial_data}});
 ;
+<<<<<<< HEAD
   useEffect (() => {
     // Check condition
 if ( {) {
@@ -425,3 +534,8 @@ if (initialData) {
 }
 }
 ;
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

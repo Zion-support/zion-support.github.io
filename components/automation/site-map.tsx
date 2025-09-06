@@ -66,6 +66,23 @@ import path from 'path';
 
 
 export default function SiteMapIntelPage({ routes, generatedAt }: { routes: RouteInfo[], generatedAt: string }) {
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+ <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) ;
+}</tbody> </table> </div> </div>) import fs from 'fs';
+import path from 'path';
+type RouteInfo = { path: string, lastModified: string },;
+export async function getServerSideProps() {;
+  const file = path && path.join(process && process.cwd(), 'datasite-map && map.json');
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) )
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
  <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
 }</tbody> </table> </div> </div>) import fs from 'fs';
 import path from 'path';
@@ -94,6 +111,34 @@ function getServerSideProps() {
   try {
     const raw = fs.readFileSync(file, 'utf-8');
     const json = JSON.parse(raw);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    routes = json.routes |[];
+    generatedAt = json.generatedAt |''
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  } catch {}
+  return { props: { routes, generated_at } }
+}
+
+
+    </div>;
+
+
+);
+}
+=======
+          </tbody>;
+        </table>;
+      </div>;
+    </div>;
+  );
+}
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default /**
  * SiteMapIntelPage - Function description
  */
@@ -128,6 +173,7 @@ function SiteMapIntelPage() {
   } catch {}
   return { props: { routes, generatedAt } }
 }
+<<<<<<< HEAD
 
 export default function SiteMapIntelPage({ routes, generatedAt }: { routes: RouteInfo[], generatedAt: string }) {
   return (
@@ -158,3 +204,6 @@ export default function SiteMapIntelPage({ routes, generatedAt }: { routes: Rout
 }
   );
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -5,17 +5,24 @@ import nodemailer from "nodemailer";
 import crypto from "crypto";
 import {
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   getProposal,
   updateProposalMeta,
   updateArtifacts,;
 
 
+<<<<<<< HEAD
   getProposal
   updateProposalMeta
   updateArtifacts
   getProposal,
   updateProposalMeta,
   updateArtifacts,;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 } from "../../../utils/data/proposals";
 async function submitByEmail(
   to: string
@@ -23,22 +30,41 @@ async function submitByEmail(
   text: string
   attachments: any[] = []
 ) {
+<<<<<<< HEAD
+=======
+
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 import crypto from 'crypto';
 import { getProposal, updateProposalMeta, updateArtifacts } from '../../../utils/data/proposals';
+<<<<<<< HEAD
 async function submitByEmail(to: string, subject: string, text: string, attachments: any[] = []) {;
+=======
+
+async function submitByEmail(to: string, subject: string, text: string, attachments: any[] = []) {;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const host = process.env.EMAIL_HOST;
   const port = Number(process.env.EMAIL_PORT |587);
   const user = process.env.EMAIL_USER;
   const pass = process.env.EMAIL_PASS;
+<<<<<<< HEAD
   const from = process.env.EMAIL_FROM |user;
   if (!host |!user |!pass) throw new Error("Email not configured");
   const from = process.env.EMAIL_FROM || user;
@@ -99,6 +125,8 @@ export default async function handler(
   } catch (error: any) {
     return res
       .status(500)
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   const host = process && process.env.EMAIL_HOST;
   const port = Number(process && process.env.EMAIL_PORT || 587);
@@ -128,6 +156,10 @@ function submitByEmail() {
   $2
 }
   const transporter = nodemailer.create_transport ({
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     host,
     port,
     secure: port === 465,
@@ -136,6 +168,7 @@ function submitByEmail() {
     const { id, channels = ["email"], emailTo, delegateNote } = req && req.body || {};
     if (!id) return res && res.status($1).json({ $2 });
   const from = process.env.EMAIL_FROM || user;
+<<<<<<< HEAD
   if (!host || !user || !pass) throw new Error('Email not configured');
   const transporter = nodemailer.createTransport({ host, port, secure: port === 465, auth: { user, pass } });
   await transporter.sendMail({ from, to, subject, text, attachments });
@@ -145,10 +178,39 @@ function submitByEmail() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+<<<<<<< HEAD
+  if (!host || !user || !pass) throw new Error("Email not configured");
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const transporter = nodemailer.createTransport({
+    host
+    port
+    secure: port === 465
+    auth: { user, pass }
+  });
+
+  try {
+
+  try {
+    const { id, channels = ['email'], emailTo, delegateNote } = req.body || {};
+    if (!id) return res.status(400).json({ error: 'id is required' });
+    const meta = getProposal(id);
+    if (!meta) return res.status(404).json({ error: 'Proposal not found' });
+    // Email submission
+
+    if (channels.includes('email')) {
+      const to = emailTo || process.env.UN_GATEWAY_EMAIL || 'example@un.org';
+      const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;
+      const text = `Please find the proposal attached.\n\nTitle: ${meta.title}\nTarget: ${meta.targetInstitution}\nType: ${meta.type}\nRegion: ${meta.regionalScope}\nBudget/Resolution: ${meta.budgetOrResolution}\n\nDAO Governance: See document.\n\nDelegate Note: ${delegateNote || 'N/A'}`;
+      await submitByEmail(to, subject, text)
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     // ENS record hash (default: compute and store hash only)
     let ensRecordHash: string | undefined;
     try {
+<<<<<<< HEAD
   await transporter.send_mail ({ from, to, subject, text, attachments });
 }
 export default async /**
@@ -190,6 +252,20 @@ function handler() {
   } catch (error: any) {
     return res
       .status(500)
+=======
+
+
+      ensRecordHash = `0x${hash}`;
+      update_artifacts (id, { ensRecordHash });
+    } catch {}
+
+    return res && res.status(200).json({ meta: updated });
+
+  } catch (error: any) {
+    return res
+      .status(500)
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       .json({ error: error?.message |"Submission failed" });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
@@ -236,6 +312,11 @@ export default async function handler(req, res) {
     return res.status(200).json({ meta: updated })
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Submission failed' })
+<<<<<<< HEAD
+=======
+
+  }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
     const updated = updateProposalMeta (id, (m) => ({
       ...m,
@@ -255,6 +336,11 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   const from = process.env.EMAIL_FROM || user;
 
@@ -286,7 +372,15 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
   }
 }
   }
 }
+=======
+
+  }
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

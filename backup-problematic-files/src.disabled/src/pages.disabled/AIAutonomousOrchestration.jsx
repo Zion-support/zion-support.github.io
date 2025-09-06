@@ -9,4 +9,8 @@ const AIAutonomousOrchestration = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIAutonomousOrchestration;
+=======
+export default AIAutonomousOrchestration;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -361,6 +361,7 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
     </div>;
   );
 
+<<<<<<< HEAD
       </div>;
     </div>;
   );
@@ -374,3 +375,13 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
 
 }
 ;
+=======
+
+
+      </div>;
+    </div>);
+}
+
+}
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from 'react'
 import { cn } from '@/lib/utils'
@@ -100,6 +101,8 @@ import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import Image from 'next/image';interface ListingCardProps {;
   id?: string,;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 id?: string,;
   title: string,;
   description: string,;
@@ -110,8 +113,24 @@ id?: string,;
   className?: string,;
   profileType?: 'service' | 'talent';
 }
+<<<<<<< HEAD
 ;
 export function ListingCard({;
+=======
+
+interface ListingCardProps {;
+  id?: string;
+  title: string;
+  description: string;
+  images?: string[];
+  category: string;
+  tags?: string[];
+  author?: { name: string; id?: string; avatarUrl?: string; email?: string };
+  className?: string;
+  profileType?: 'service' | 'talent';
+
+export function ListingCard(): any ({;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id,;
   title,;
   description,;
@@ -120,11 +139,49 @@ export function ListingCard({;
   tags,;
   author,;
   className,;
+<<<<<<< HEAD
         </h3>;
         <p className='text-zion-slate mb-4 flex-grow'>{description}</p>;
         {tags && tags.length > 0 && (;
           <div className='flex flex-wrap gap-2 mb-4'>;
             {tags && tags.map((tag, i) => (;
+=======
+  profileType = 'service',;
+}: ListingCardProps) {;
+  // Generate a profile ID based on the listing data;
+  // In a real app, this would be a proper ID from the database;
+  const profileId =;
+    id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
+
+      >;
+      {images && images.length > 0 && images[0] && (;
+        <div className='h-48 w-full overflow-hidden relative'>;
+          <Image
+            src={images[0]}
+            alt={title}
+            className='object-cover transition-transform duration-300 group-hover:scale-105'
+            loading='lazy'          />;
+        </div>;
+      )}
+      <div className='flex flex-col p-4 flex-grow'>;
+        <div className='mb-2'>;
+          <Badge
+            variant='secondary'
+            className='bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30'>;
+            {category}
+          </Badge>;
+        </div>;
+        <h3 className='text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors'>;
+          {title}
+
+        </h3>;
+        <p className='text-zion-slate mb-4 flex-grow'>{description}</p>;
+
+        {tags && tags.length > 0 && (;
+          <div className='flex flex-wrap gap-2 mb-4'>;
+            {tags && tags.map((tag, i) => (;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Badge
                 key={i}
                 variant='outline'
@@ -132,12 +189,19 @@ export function ListingCard({;
           <div className="flex flex-wrap gap-2 mb-4">;
             {tags && tags.map((tag, i) => (;
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">;
+<<<<<<< HEAD
   const profileId = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
+=======
+
+  const profileId = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <Link
       href = {`/profile/${profileId}`}
       tabIndex={0}
       className={cn(
+<<<<<<< HEAD
         "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover: border-zion-purple/50 transition-all duration-300 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple",
   profileType = 'service';
 }: ListingCardProps) {;
@@ -153,17 +217,30 @@ export function ListingCard({;
         className
       )}
     >
+=======
+
+        "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover: border-zion-purple/50 transition-all duration-300 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple",
+        className
+      )}
+    >
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {images && images.length > 0 && images[0] && (
         <div className="h-48 w-full overflow-hidden relative">
           <Image
             src={images[0]}
             alt={title}
+<<<<<<< HEAD
             className='object-cover transition-transform duration-300 group-hover:scale-105'
             loading='lazy'          />
 ursor/fix-website-loading-errors-and-merge-6662
         </div>
             className='object-cover transition-transform duration-300 group-hover:scale-105'
             loading='lazy'          />
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className="object-cover transition-transform duration-300 group-hover:scale-105"
             loading="lazy"
           />
@@ -177,18 +254,28 @@ ursor/fix-website-loading-errors-and-merge-6662
             {category}
           </Badge>
         </div>
+<<<<<<< HEAD
         <h3 className='text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors'>
           {title}
         </h3>
         <p className='text-zion-slate mb-4 flex-grow'>{description}</p>
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
         <p className="text-zion-slate mb-4 flex-grow">{description}</p>
+=======
+
+
+
+        <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
+        <p className="text-zion-slate mb-4 flex-grow">{description}</p>
+        
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {tags && tags.length > 0 && (
 
 
 
           <div className="flex flex-wrap gap-2 mb-4">
             {tags.map((tag, i) => (
+<<<<<<< HEAD
               <Badge
                 key={i}
                 variant='outline'
@@ -202,6 +289,10 @@ ursor/fix-website-loading-errors-and-merge-6662
         
 ursor/fix-website-loading-errors-and-merge-6662
                 {tag}
+=======
+              <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
+                {tag}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
               </Badge>;
@@ -264,6 +355,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             ) : (
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
             )}
+<<<<<<< HEAD
 ;"}) })"
             <span className="text-sm text-zion-slate-light">{author.name}</span>
           </div>
@@ -276,12 +368,15 @@ ursor/fix-website-loading-errors-and-merge-6662
             ) : (
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
             )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
             <span className="text-sm text-zion-slate-light">{author.name}</span>
           </div>
         )}
+<<<<<<< HEAD
       </div>
     </Link>
   );
@@ -291,11 +386,17 @@ ursor/fix-website-loading-errors-and-merge-6662
             <span className="text-sm text-zion-slate-light">{author.name}</span>
           </div>
         )}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </div>;
     </Link>;
   );
 }
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 ;"}) })"
@@ -396,6 +497,7 @@ function ListingCard() {
       </div>;
     </Link>);
 }"}) })";
+<<<<<<< HEAD
 import React from "react",;
 import { cn } from "@/lib/utils",;
 import { Badge } from "@/components/ui/badge",;
@@ -514,3 +616,6 @@ profileType = 'service' ;
 }'"
 ;
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

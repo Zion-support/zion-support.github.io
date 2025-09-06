@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Card} from "@/components/ui/card";
@@ -12,6 +13,22 @@ import { toast } from "@/components/ui/use-toast",
 import { HELP_CATEGORIES } from "./help-content";
 interface HelpArticleViewProps {
 import { HELP_CATEGORIES } from "./help-content",
+=======
+
+import React, { useState } from './react';
+import { Button  } from '@/components / ui / button';
+import { Card  } from '@/components / ui / card';
+import { ThumbsUp, ThumbsDown  } from './lucide-react';
+import { toast  } from '@/components / ui / use - toast';
+import { HELP_CATEGORIES  } from './help - content';
+
+interface HelpArticleViewProps {
+  article_id: string;
+}
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface HelpArticleViewProps {
   articleId: string
 }
@@ -20,10 +37,13 @@ interface HelpArticleViewProps {
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),
 
+<<<<<<< HEAD
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {;
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   
   // Find the article in all categories
   let article,
@@ -32,6 +52,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
     if (found) {
       article = found,
       break
+<<<<<<< HEAD
 import { HELP_CATEGORIES } from "./help-content";
 interface HelpArticleViewProps {
 
@@ -58,10 +79,16 @@ interface HelpArticleViewProps {;
 
   articleId: string;
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   articleId: string;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
 
   const [feedbackGiven, setFeedbackGiven] = useState<
@@ -71,9 +98,16 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   // Find the article in all categories
   let article = null;
   for (const category of HELP_CATEGORIES) {
+<<<<<<< HEAD
 interface HelpArticleViewProps {
   article_id: string;
 }
+=======
+
+    const found = category.articles.find((a) => a.id === articleId);
+    if (found) {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Card} from "@/components/ui/card";
@@ -83,13 +117,25 @@ import {HELP_CATEGORIES} from "./help-content";
 interface HelpArticleViewProps {;
   articleId: string;
 }
+<<<<<<< HEAD
 export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {;
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
+=======
+
+export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {;
+  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Find the article in all categories;
   let article;
   for (const category of HELP_CATEGORIES) {;
     const found = category && category.articles.find(a => a && a.id === articleId);
     if (found) {;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export /**
  * HelpArticleView - Function description
  */
@@ -106,12 +152,24 @@ function HelpArticleView() {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
       article = found;
       break;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      article = found;
+      break;
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   }
 
 
+<<<<<<< HEAD
 
     }
   }
@@ -128,6 +186,8 @@ if ( {) {
             : "We'll work on improving this article."
       }));
   }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   
   const handleFeedback = (type: "helpful" | "not-helpful") => {
     setFeedbackGiven(type),
@@ -140,6 +200,7 @@ if ( {) {
         : "We'll work on improving this article."})
   },
   
+<<<<<<< HEAD
     const found = category.articles.find((a) => a.id === articleId);
     if (found) {
       article = found;
@@ -161,11 +222,19 @@ const handleFeedback = (type: "helpful" | "not-helpful") => {
             : "We'll work on improving this article."
       }));
   }
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div>
       <Card className="p-6">
         <h2 className="text-2xl font-bold mb-4">{article.title}</h2>
+<<<<<<< HEAD
 <div className="flex items-center text-sm text-zion-slate-light mb-6">
+=======
+        <div className="flex items-center text-sm text-zion-slate-light mb-6">
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <span>Last updated: {formatDate(article.lastUpdated)}</span>
         </div>
         <div className="prose dark:prose-invert max-w-none mb-8">
@@ -173,12 +242,16 @@ const handleFeedback = (type: "helpful" | "not-helpful") => {
             <p key={idx}>{paragraph}</p>
           ))}
         </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="border-t border-gray-200 dark:border-gray-700 pt-6 mt-6">
           <div className="flex flex-col sm:flex-row items-center justify-between">
             <div className="text-sm text-zion-slate-light mb-4 sm:mb-0">
               Was this article helpful?
             </div>
+<<<<<<< HEAD
 
             <div className="flex items-center space-x-3">
               <Button
@@ -226,6 +299,10 @@ const handleFeedback = (type: "helpful" | "not-helpful") => {
                 Contact Support
               </Button>
             </div>
+=======
+            <div className="flex items-center space-x-3">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   if (!article) {;
     return <div>Article not found</div>;
@@ -464,6 +541,7 @@ function formatDate(date: string): string {;
   })
   })
 
+<<<<<<< HEAD
 ;
 function formatDate(date:string):string {;
   return new Date(date).toLocaleDateString("en-US", {;
@@ -500,3 +578,6 @@ year: "numeric"
   });
 }
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

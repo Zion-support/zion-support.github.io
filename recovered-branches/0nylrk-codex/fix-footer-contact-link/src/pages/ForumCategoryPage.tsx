@@ -14,6 +14,7 @@ import {ForumPost, ForumCategoryInfo} from "@/types/community";
 import {Badge} from "@/components/ui/badge";
 import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare, Briefcase, Code, FileText, Megaphone, Search} from "@/components/icons";
+<<<<<<< HEAD
 // Mock category data
 const categoriesInfo: Record<string, ForumCategoryInfo> = {
   "getting-hired": {
@@ -27,6 +28,12 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
 
     icon: "Briefcase"
   }
+=======
+
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from "react",
 import { useParams, Link } from "react-router-dom",
 import { Button } from "@/components/ui/button",
@@ -54,12 +61,21 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
     description: "Tips, strategies, and questions about getting hired on the platform.",
 
 
+<<<<<<< HEAD
     adminOnly: false,
     icon: "Briefcase"
   },
     adminOnly: false,
     icon: "Briefcase"
   },
+=======
+
+    adminOnly: false,
+    icon: "Briefcase"
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   "project-help": {
 
     id: "project-help"
@@ -69,6 +85,7 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
 
     icon: "MessageSquare"
 
+<<<<<<< HEAD
   }
   "ai-tools": {
 
@@ -79,6 +96,9 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
 
     icon: "Code"
   }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
   "ai-tools": {
     id: "ai-tools",
@@ -87,6 +107,11 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
     adminOnly: false,
     icon: "Code"
   },
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   "feedback": {
 
     id: "feedback"
@@ -96,11 +121,18 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
 
     icon: "FileText"
 
+<<<<<<< HEAD
   },
 
 
   }
   },
+=======
+
+  },
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   "announcements": {
 
     id: "announcements"
@@ -195,6 +227,7 @@ const postsByCategory: Record < string, ForumPost[]> = {
 }
 },
 
+<<<<<<< HEAD
 // Mock data for posts by category
 const postsByCategory: Record<string ForumPost[]> = {
   "getting-hired": [
@@ -215,11 +248,17 @@ const postsByCategory: Record<string ForumPost[]> = {
       replyCount: 8
       isPinned: true
       isFeatured: true
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     {
       id: "6"
       title: "Portfolio pieces that clients actually care about"
       content: "After submitting dozens of applications, I've found that these types of projects tend to get the most attention...";
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       author_id: "user6",
       author_name: "James Wilson",
       category_id: "getting - hired",
@@ -229,6 +268,7 @@ const postsByCategory: Record<string ForumPost[]> = {
       upvotes: 19,
       downvotes: 2,
       reply_count: 6;
+<<<<<<< HEAD
       authorId: "user6"
       authorName: "James Wilson"
       categoryId: "getting-hired"
@@ -237,6 +277,10 @@ const postsByCategory: Record<string ForumPost[]> = {
       updatedAt: "2025-04-07T11:30:00Z"
       upvotes: 19
       downvotes: 2
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       id: "2",
       title: "How to build an effective AI talent profile?",
       content: "I'm looking to improve my profile to get more client attention. What are the key elements I should focus on?",
@@ -265,11 +309,22 @@ const postsByCategory: Record<string ForumPost[]> = {
       updatedAt: "2025-04-07T11:30:00Z",
       upvotes: 19,
       downvotes: 2,
+<<<<<<< HEAD
+=======
+
+      replyCount: 6
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   ];
   "project - help": [;
     {
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       id: "3",
       title: "Looking for feedback on my automated testing approach",
@@ -284,6 +339,7 @@ const postsByCategory: Record<string ForumPost[]> = {
       downvotes: 0,
       reply_count: 2;
     }
+<<<<<<< HEAD
       replyCount: 6
     }
   ],
@@ -328,17 +384,40 @@ const postsByCategory: Record<string ForumPost[]> = {
       downvotes: 0,
       replyCount: 2
     },
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       id: "5",
       title: "How to handle client scope creep?",
       content: "I'm working on a project where the client keeps adding requirements...",
+<<<<<<< HEAD
       reply_count: 7,
       is_answered: true;
+=======
+      author_id: "user5",
+      author_name: "David Lin",
+      category_id: "project - help",
+      tags: ["client - management", "scope", "projects"];
+      created_at: "2025 - 04 - 08T10:20:00Z",
+      updated_at: "2025 - 04 - 08T10:20:00Z",
+      upvotes: 24,
+      downvotes: 0,
+
+      replyCount: 7,
+
+      isAnswered: true
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   ];
   "ai - tools": [;
     {
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       id: "1",
       title: "Best practices for AI model fine - tuning",
@@ -357,6 +436,7 @@ const postsByCategory: Record<string ForumPost[]> = {
       is_answered: true,
       is_featured: true;
     }
+<<<<<<< HEAD
       authorId: "user5",
       authorName: "David Lin",
       categoryId: "project-help",
@@ -417,16 +497,38 @@ const postsByCategory: Record<string ForumPost[]> = {
       isAnswered: true,
       isFeatured: true
     },
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       id: "7",
       title: "Comparing different vector embedding models",
       content: "I've been experimenting with these different embedding models and here are my findings...",
+<<<<<<< HEAD
       reply_count: 9;
+=======
+      author_id: "user7",
+      author_name: "Lisa Park",
+      category_id: "ai - tools",
+      tags: ["embeddings", "vectors", "similarity - search"];
+      created_at: "2025 - 04 - 05T16:40:00Z",
+      updated_at: "2025 - 04 - 05T16:40:00Z",
+      upvotes: 31,
+      downvotes: 0,
+
+
+      replyCount: 9
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   ];
   "feedback": [;
     {
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       id: "4",
       title: "Feature request: Team collaboration tools",
@@ -441,6 +543,7 @@ const postsByCategory: Record<string ForumPost[]> = {
       downvotes: 1,
       reply_count: 3;
     }
+<<<<<<< HEAD
       authorId: "user7",
       authorName: "Lisa Park",
       categoryId: "ai-tools",
@@ -492,11 +595,28 @@ const postsByCategory: Record<string ForumPost[]> = {
       downvotes: 1,
       replyCount: 3
     },
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       id: "8",
       title: "Suggestion for improving the jobs matching algorithm",
       content: "I think the job matching could be improved by considering these additional factors...",
+<<<<<<< HEAD
       reply_count: 5;
+=======
+      author_id: "user8",
+      author_name: "Ryan Mitchell",
+      category_id: "feedback",
+      tags: ["matching", "jobs", "algorithm"];
+      created_at: "2025 - 04 - 04T08:10:00Z",
+      updated_at: "2025 - 04 - 04T08:10:00Z",
+      upvotes: 17,
+      downvotes: 3,
+
+
+      replyCount: 5
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   ];
   "announcements": [;
@@ -760,6 +880,7 @@ export default function ForumCategoryPage() {;
 },
 
 
+<<<<<<< HEAD
       authorId: "user8",
       authorName: "Ryan Mitchell",
       categoryId: "feedback",
@@ -840,6 +961,8 @@ export default function ForumCategoryPage() {;
   ]
 },
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const iconMap = {
   "Briefcase": Briefcase,
   "MessageSquare": MessageSquare,
@@ -847,6 +970,7 @@ const iconMap = {
   "FileText": FileText,
   "Megaphone": Megaphone
 
+<<<<<<< HEAD
 }
 export default function ForumCategoryPage() {
   // useParams is typed as `any` in this environment due to missing type
@@ -855,10 +979,13 @@ export default function ForumCategoryPage() {
   const { user } = useAuth();
   const [searchQuery, setSearchQuery] = useState("");
   if (!categoryId |!categoriesInfo[categoryId]) {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 },
 
 export default function ForumCategoryPage() {
   // useParams is typed as `any` in this environment due to missing type
+<<<<<<< HEAD
     return (
 
 import { useState } from "react",;
@@ -1102,6 +1229,11 @@ export default function ForumCategoryPage() {;
   ;
   if (!categoryId || !categoriesInfo[categoryId]) {;
     return (;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <AppLayout>;
         <div className="container py-8">;
           <h1>Category not found</h1>;
@@ -1110,6 +1242,7 @@ export default function ForumCategoryPage() {;
           </Button>;
         </div>;
       </AppLayout>;
+<<<<<<< HEAD
 
   // definitions, so avoid passing a type argument to prevent TS2347.;
   const { categoryId } = useParams();
@@ -1135,11 +1268,22 @@ export default function ForumCategoryPage() {;
   const category = categoriesInfo[categoryId];
   const IconComponent = iconMap[category.icon as keyof typeof iconMap] |MessageSquare;
   const posts = postsByCategory[categoryId] |[];
+=======
+    );
+  }
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   
   const category = categoriesInfo[categoryId],
   const IconComponent = iconMap[category.icon as keyof typeof iconMap] || MessageSquare,
   const posts = postsByCategory[categoryId] || [],
   
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Filter posts based on search query
   const filteredPosts = searchQuery
     ? posts.filter(post =>
@@ -1148,15 +1292,23 @@ export default function ForumCategoryPage() {;
         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       )
 
+<<<<<<< HEAD
     : posts;
   // For announcements, check if user is admin
   const canCreatePost = categoryId !== "announcements" |(user?.userType === 'admin' |user?.role === 'admin');
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     : posts,
   
   // For announcements, check if user is admin
   const canCreatePost = categoryId !== "announcements" || (user?.userType === 'admin' || user?.role === 'admin'),
   
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <AppLayout>
       <SEO
@@ -1193,12 +1345,26 @@ export default function ForumCategoryPage() {;
         <div className="mb-6">
           <div className="relative">
             <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+<<<<<<< HEAD
             <Input
               placeholder="Search posts in this category..."
               className="pl-10"
             <Input
               placeholder="Search posts in this category..."
               className="pl-10"
+=======
+
+
+  const category = categoriesInfo[categoryId];
+  const IconComponent = iconMap[category && category.icon as keyof typeof iconMap] || MessageSquare;
+  const posts = postsByCategory[categoryId] || [];
+
+=======
+            <Input
+              placeholder="Search posts in this category..."
+              className="pl-10"
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from "react",;
 import { useParams, Link } from "react-router-dom",;
 import { Button } from "@/components/ui/button",;
@@ -1449,9 +1615,13 @@ export default function ForumCategoryPage() {;
   const category = categoriesInfo[categoryId],;
   const IconComponent = iconMap[category.icon as keyof typeof iconMap] || MessageSquare,;
   const posts = postsByCategory[categoryId] || [],;
+<<<<<<< HEAD
   const category = categoriesInfo[categoryId];
   const IconComponent = iconMap[category && category.icon as keyof typeof iconMap] || MessageSquare;
   const posts = postsByCategory[categoryId] || [];
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Filter posts based on search query;
   const filteredPosts = searchQuery;
     ? posts && posts.filter(post => ;
@@ -1460,8 +1630,15 @@ export default function ForumCategoryPage() {;
         post && post.tags.some(tag => tag && tag.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()));
       );
     : posts;
+<<<<<<< HEAD
   // For announcements, check if user is admin;
   const canCreatePost = categoryId !== "announcements" || (user?.userType === 'admin' || user?.role === 'admin');
+=======
+
+  // For announcements, check if user is admin;
+  const canCreatePost = categoryId !== "announcements" || (user?.userType === 'admin' || user?.role === 'admin');
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <AppLayout>;
       <SEO
@@ -1469,6 +1646,7 @@ export default function ForumCategoryPage() {;
         description={category && category.description}
         keywords={`community, forum, ${category && category.id}, discussion, AI marketplace, questions, answers`}
       />;
+<<<<<<< HEAD
     ),;
   }
   ;
@@ -1858,24 +2036,41 @@ return (<AppLayout> <div className="container py-8"> <h1>Category not found</h1>
 }</div>) 
 }</div> </AppLayout>) 
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="container py-8">;
         <div className="flex items-center gap-3 mb-6">;
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;
             Forum;
           </Link>;
           <span className="text-muted-foreground">/</span>;
+<<<<<<< HEAD
           <span className="font-medium">{category.name}</span>;
         </div>;
+=======
+          <span className="font-medium">{category && category.name}</span>;
+        </div>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">;
           <div className="flex items-center gap-4">;
             <div className="p-3 bg-zion-purple/10 rounded-full">;
               <IconComponent className="h-8 w-8 text-zion-purple" />;
             </div>;
             <div>;
+<<<<<<< HEAD
               <h1 className="text-3xl font-bold">{category.name}</h1>;
               <p className="text-muted-foreground mt-1">{category.description}</p>;
             </div>;
           </div>;
+=======
+              <h1 className="text-3xl font-bold">{category && category.name}</h1>;
+              <p className="text-muted-foreground mt-1">{category && category.description}</p>;
+            </div>;
+          </div>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {canCreatePost && (;
             <Button asChild>;
               <Link to={user ? `/community/create?category=${categoryId}` : `/login?next=/community/create?category=${categoryId}`}>;
@@ -1884,6 +2079,7 @@ return (<AppLayout> <div className="container py-8"> <h1>Category not found</h1>
             </Button>;
           )}
         </div>;
+<<<<<<< HEAD
         <div className="mb-6">;
           <div className="relative">;
             <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />;
@@ -1918,8 +2114,61 @@ return (<AppLayout> <div className="container py-8"> <h1>Category not found</h1>
     </AppLayout>
   )
 }
+=======
+
+        <div className="mb-6">;
+          <div className="relative">;
+            <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />;
+
+            <Input;
+              placeholder="Search posts in this category...";
+              className="pl-10";
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              value={searchQuery}
+
+              onChange={(e) => setSearchQuery(e && e.target.value)}
+            />;
+          </div>;
+        </div>;
+
+        {posts && posts.length > 0 ? (;
+          <div className="space-y-4">;
+            {filteredPosts && filteredPosts.map((post) => (;
+              <PostCard key={post && post.id} post={post} />;
+            ))}
+          </div>;
+        ) : (;
+          <div className="text-center py-16">;
+            <h2 className="text-xl font-medium mb-2">No posts yet</h2>;
+            <p className="text-muted-foreground mb-6">Be the first to start a discussion in this category!</p>;
+
+            {canCreatePost && (;
+              <Button asChild>;
+                <Link to={user ? `/community/create?category=${categoryId}` : `/login?next=/community/create?category=${categoryId}`}>;
+                  Create New Post;
+                </Link>;
+              </Button>;
+
+            )}
+          </div>;
+        )}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </div>;
     </AppLayout>;
   );
 }
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  "Megaphone": Megaphone;
+}
+;
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

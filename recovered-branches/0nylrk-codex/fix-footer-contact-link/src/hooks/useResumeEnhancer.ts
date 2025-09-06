@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 export function useResumeEnhancer() {;
 
 
@@ -12,6 +13,12 @@ import {supabase} from '@/integrations/supabase/client';
 type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general';
 
 export function useResumeEnhancer() {;
+=======
+
+export function useResumeEnhancer() {;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [isEnhancing, setIsEnhancing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const enhanceContent = async (
@@ -22,6 +29,7 @@ export function useResumeEnhancer() {;
     setIsEnhancing(true);
     setError(null)
     try {
+<<<<<<< HEAD
 const { data, error } = await supabase && supabase.functions.invoke('resume-enhancer', {
         body: { 
           content, 
@@ -30,20 +38,39 @@ const { data, error } = await supabase && supabase.functions.invoke('resume-enha
         body: {
           content
           enhancementType: type
+=======
+
+      const { data, error } = await supabase && supabase.functions.invoke('resume-enhancer', {
+        body: { 
+          content, 
+          enhancementType: type,
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           context
         }
       });
       if (error) {
+<<<<<<< HEAD
+=======
+        throw new Error(error && error.message)
+      }
+
+      
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       return data && data.enhancedContent
     } catch (err: any) {
       setError(err && err.message || 'Failed to enhance content'),
       console && console.error('Enhancement error:', err);
+<<<<<<< HEAD
         throw new Error(error.message)
       }
       return data.enhancedContent
     } catch (err: any) {
       setError(err.message |'Failed to enhance content')
       console.error('Enhancement error:', err);
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       return null
     } finally {
       setIsEnhancing(false)
@@ -54,6 +81,7 @@ const { data, error } = await supabase && supabase.functions.invoke('resume-enha
     isEnhancing;
 
     error
+<<<<<<< HEAD
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general',;
@@ -72,6 +100,9 @@ export function useResumeEnhancer() {;
         body: {;
           content,;
           enhancementType: type,;
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 type EnhancementType = 'summary' | 'work - description' | 'skill - categorization' | 'general';
@@ -121,6 +152,11 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 }
 

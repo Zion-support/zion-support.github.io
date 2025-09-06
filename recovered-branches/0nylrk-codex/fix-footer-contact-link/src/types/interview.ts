@@ -1,9 +1,12 @@
 
+<<<<<<< HEAD
 
   | 'cancelled';
 export type InterviewType = 'video' | 'phone' | 'in-person';
 export type MeetingPlatform = 'zoom' | 'google-meet' | 'teams' | 'other' | 'in-app';
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export type InterviewStatus =;
   | 'requested';
   | 'confirmed';
@@ -18,18 +21,34 @@ export type MeetingPlatform = 'zoom' | 'google - meet' | 'teams' | 'other' | 'in
 ;
 
 export interface Interview {
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export type InterviewStatus = 
   | 'requested' 
   | 'confirmed' 
   | 'declined' 
   | 'rescheduled' 
   | 'completed' ;
+<<<<<<< HEAD
   | 'cancelled';
 export type InterviewType = 'video' | 'phone' | 'in-person';
 export type MeetingPlatform = 'zoom' | 'google-meet' | 'teams' | 'other' | 'in-app';
 export interface Interview {
 
 export interface Interview {;
+=======
+
+  | 'cancelled';
+export type InterviewType = 'video' | 'phone' | 'in-person';
+export type MeetingPlatform = 'zoom' | 'google-meet' | 'teams' | 'other' | 'in-app';
+
+
+export interface Interview {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
   client_id: string;
   talent_id: string;
@@ -57,12 +76,16 @@ export interface InterviewRequest {
 
 export interface InterviewRequest {;
 
+<<<<<<< HEAD
   client_avatar?: string
   talent_avatar?: string
 }
 export interface InterviewRequest {
 
 export interface InterviewRequest {;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   talent_id: string;
   client_id: string;
   scheduled_date: string;
@@ -76,11 +99,16 @@ export interface InterviewRequest {;
 
 }
 export interface InterviewResponse {
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
 
 export interface InterviewResponse {;
 
+<<<<<<< HEAD
   interview_id: string;
   status: InterviewStatus;
 
@@ -148,3 +176,13 @@ export interface InterviewResponse {;
   alternative_date?: string,
   message?: string;
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  interview_id: string;
+  status: InterviewStatus;
+
+  alternative_date?: string,
+  message?: string;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

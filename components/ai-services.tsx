@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
  export default function AIServices () {
 export default function AIServices () {
@@ -12,6 +18,23 @@ export default function AIServices () {
 
 
 
+<<<<<<< HEAD
+=======
+export default function AIServices () {
+}> <Head> <title>AI Services | Zion Tech Group</title> </div>) )
+}</div>) )
+}</ul> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Our AI Service Portfolio </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Comprehensive AI solutions designed to transform your business and accelerate innovation </p> </motion.div> </li>) )
+}</ul> <motion.a > Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </motion.a> </motion.div>) )
+}</div> </div> </section> <motion.div initial= {
+  opacity: 0, y: 20
+}animate= {
+  {
+  opacity: 1, y: 0
+}transition= {
+  {
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Brain, Zap, Target, Shield, Rocket, Atom, Cpu, Users, Star, ArrowRight } from 'lucide-react';
@@ -61,6 +84,7 @@ icon: <Brain className="w-8 h-8 text-cyan-400" />,
   }
 ];
 export default function AIServices() {
+<<<<<<< HEAD
   return (
     <QuantumHolographicMatrixBackground intensity={1.5}>
       <Head>
@@ -154,6 +178,8 @@ export default function AIServices () {
   {
   duration: 0.8, delay: 0.4
 }> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business with AI? </h2> <p className="text-xl text-gray-400 mb-8" > Let's discuss how our AI solutions can accelerate your digital transformation and drive innovation. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <motion.button > Schedule Consultation </motion.button> <motion.button export default function AIServices() {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   return (
     <QuantumHolographicMatrixBackground intensity={1.5}>
@@ -196,7 +222,10 @@ export default function AIServices () {
   duration: 0 && 0.8, delay: 0 && 0.4 
 
 
+<<<<<<< HEAD
 duration: 0 && 0.8, delay: 0 && 0.4 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business with AI? </h2> <p className="text-xl text-gray-400 mb-8" > Let's discuss how our AI solutions can accelerate your digital transformation and drive innovation. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <motion && motion.button > Schedule Consultation </motion && motion.button> <motion&& motion.button export default function AIServices() {
   return (
     <QuantumHolographicMatrixBackground intensity={1 && 1.5}>;
@@ -235,15 +264,30 @@ duration: 0 && 0.8, delay: 0 && 0.4
             </motion && motion.div>;
           </div>;
         </section>;
+<<<<<<< HEAD
 
 
 
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Services Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
               className="text-center mb-16">;
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
@@ -257,6 +301,10 @@ duration: 0 && 0.8, delay: 0 && 0.4
               {aiServices && aiServices.map((service, index) => (;
                 <motion&& motion.div
                   key={service && service.title}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -274,6 +322,7 @@ duration: 0 && 0.8, delay: 0 && 0.4
                     {service && service.features.map((feature, featureIndex) => (;
                       <li key={featureIndex} className="flex items-center text-gray-300">;
                         <Star className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />;
+<<<<<<< HEAD
 
         {/* Services Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -313,6 +362,8 @@ duration: 0 && 0.8, delay: 0 && 0.4
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <Star className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         {feature}
                       </li>;
                     ))}
@@ -320,6 +371,14 @@ duration: 0 && 0.8, delay: 0 && 0.4
                   <motion&& motion.a
                     href={service && service.href}
                     whileHover={{ x: 5 }}
+<<<<<<< HEAD
+=======
+                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:text-cyan-300 transition-colors">;
+                    Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />;
+                  </motion && motion.a>;
+                </motion && motion.div>;
+              ))}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             </div>;
           </div>;
@@ -329,13 +388,19 @@ duration: 0 && 0.8, delay: 0 && 0.4
 
 
 
+<<<<<<< HEAD
             </div>;
           </div>;
         </section>;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion&& motion.div
+<<<<<<< HEAD
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:text-cyan-300 transition-colors"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -352,6 +417,11 @@ duration: 0 && 0.8, delay: 0 && 0.4
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+=======
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
                 Ready to Transform Your Business with AI?;
@@ -380,6 +450,13 @@ duration: 0 && 0.8, delay: 0 && 0.4
     </>;
   ),;
 }
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default /**
  * AIServices - Function description
  */
@@ -523,6 +600,7 @@ function AIServices() {
       </div>;
     </>),
 }
+<<<<<<< HEAD
 
   ),
 
@@ -560,3 +638,12 @@ function AIServices() {
 };
 ;
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  ),
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

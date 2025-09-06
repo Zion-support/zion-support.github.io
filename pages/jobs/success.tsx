@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+
+
+=======
+import Link from 'next / link',
+export default /**
+ * JobSuccessPage - Function description
+ */
+function JobSuccessPage() {
+  return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="max - w-xl text - center mx - auto py - 16">;
       <div className="mx - auto mb - 6 h - 20 w - 20 rounded - full bg - green - 100 dark: bg - green - 900 / 30 flex items - center justify - center">;
         <span className="text - 3xl">✅</span>;
@@ -10,6 +22,7 @@
       </div>;
     </div>);
 }
+<<<<<<< HEAD
       </div>
       <h1 className=&quot;text-xl font-semibold mb-2&quot;>Job posted successfully</h1>
       <p className=&quot;text-sm opacity-80 mb-6&quot;>We are matching your job with top talent. You will be notified as applications come in.</p>
@@ -65,3 +78,7 @@ export default function JobSuccessPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

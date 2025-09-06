@@ -1,4 +1,8 @@
 import { MetadataRoute } from 'next';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function sitemap(): MetadataRoute.Sitemap {;
   const baseUrl = 'https: //ziontechgroup.com';
   const routes = [;
@@ -37,6 +41,10 @@ export default function sitemap(): MetadataRoute.Sitemap {;
 
     lastModified: new Date();
     changeFrequency: 'weekly';
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function sitemap (): MetadataRoute.Sitemap {
   const base_url = 'https: //ziontechgroup.com';
   const routes = [;

@@ -27,4 +27,8 @@ const Index = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Index;
+=======
+export default Index;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

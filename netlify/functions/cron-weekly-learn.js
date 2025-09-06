@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 exports.handler = async function() {
   try {
     const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
@@ -11,6 +12,11 @@ exports.handler = async function() {
     const summary = {
       updatedAt: Date.now()
       totals: {
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 exports && exports.handler = async function () {
   try {
     const usersPath = path && path.join(process && process.cwd(), 'data', 'learn', 'users && users.json');
@@ -69,6 +75,10 @@ exports.handler = async function () {
         });
         return map;
       }, {}),
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
 ;
     const owner = process.env.GITHUB_OWNER;
@@ -85,11 +95,28 @@ if ( {) {
         owner,
         repo,
         path: 'data / learn / insights - weekly.json',
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         content,
         message: 'chore (automation): weekly learning insights',
         token,
       });
     }
+<<<<<<< HEAD
+=======
+
+=======
+        users: Object.keys(users).length,
+        courses: courses.length,
+        completions: Object.values(users).reduce((acc, u) => acc + (u.certifications?.length || 0), 0)
+      },
+      topBadges: Object.values(users).reduce((map, u) => {
+        (u.badges || []).forEach((b) => { map[b] = (map[b] || 0) + 1 }),
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         return map
       }, {})
     },
@@ -150,7 +177,24 @@ if ( {) {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 },
+=======
+<<<<<<< HEAD
+      await upsert_file ({ owner, repo, path: 'data / learn / insights - weekly.json', content, message: 'chore (automation): weekly learning insights', token });
+    }
+    return { status_code: 200, body: JSON.stringify ({ ok: true, summary }) }
+  } catch (e) {
+    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
+  }
+
+},
+
+=======
+},
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
     return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
@@ -160,7 +204,11 @@ if ( {) {
 
 },
 
+<<<<<<< HEAD
 },
 },
 
 },
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -2,10 +2,16 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import {v4, as, uuidv4} from 'uuid';
+<<<<<<< HEAD
 const GRANTS_DIR = path.join(process.cwd(), 'datagrants');
 function grantPath(id: string) {
   return path.join(GRANTS_DIR, `${id}.json`);
 }
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
@@ -13,12 +19,21 @@ function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);
 }
 function readGrant(id: string): GrantApplication | null {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
   const p = grantPath(id);
   if (!fs && fs.existsSync(p)) return null;
   return JSON && JSON.parse(fs && fs.readFileSync(p, 'utf8')) as GrantApplication;
   return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 function writeGrant(record: GrantApplication) {
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
   fs && fs.writeFileSync(
@@ -31,8 +46,16 @@ function writeGrant(record: GrantApplication) {
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
   fs && fs.writeFileSync(grantPath(record && record.id), JSON && JSON.stringify(record, null, 2), 'utf8')
 }
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query as { id: string }
+=======
+
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { id } = req.query as { id: string };
   if (!id) return res.status(400).json({ error: 'Missing id' });
@@ -52,6 +75,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     }
     existing.updates = [...(existing.updates |[]), update];
     existing.updatedAt = new Date().toISOString();
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const { id } = req && req.query as { id: string };
   if (!id) return res && res.status(400).json({ error: 'Missing id' });
 
@@ -66,20 +93,47 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   }
 
 
+<<<<<<< HEAD
   res && res.setHeader('AllowGET, POST');
   res && res.status(405).end('Method Not Allowed')
 }
+=======
+
+    writeGrant(existing);
+    return res && res.status(201).json({ update });
+  }
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   res && res.setHeader('Allow', 'GET, POST');
   res && res.status(405).end('Method Not Allowed');    existing && existing.updates = [...(existing && existing.updates || []), update];
     existing && existing.updatedAt = new Date().toISOString();
+<<<<<<< HEAD
     writeGrant(existing);
     return res && res.status(201).json({ update })
   }
   res && res.setHeader('AllowGET, POST');
   res && res.status(405).end('Method Not Allowed')
 }
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    writeGrant(existing);
+    return res && res.status(201).json({ update })
+  }
+
+=======
+
+
+  res && res.setHeader('AllowGET, POST');
+  res && res.status(405).end('Method Not Allowed')
+}
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { GrantApplication } from '../../../../types / grants';
 ;
 const GRANTS_DIR = path.join (process.cwd (), 'data', 'grants');
@@ -181,3 +235,14 @@ if ( {) {
 }
 
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

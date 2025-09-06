@@ -9,4 +9,8 @@ const LanguageSelector.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default LanguageSelector.js;
+=======
+export default LanguageSelector.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

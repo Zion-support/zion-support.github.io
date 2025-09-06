@@ -1,11 +1,21 @@
+<<<<<<< HEAD
 import { useEffect, useMemo, useState  } from 'react';
 import Head from 'next/head';
 
 interface ProviderMeta {
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
   name: string;
   category: 'crm' | 'ats';
   description?: string;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface ConnectionMap {;
   [providerId: string]: any,;
 function StatusIcon(): any ({;
@@ -14,16 +24,35 @@ function StatusIcon(): any ({;
   status: 'connected' | 'warning' | 'disconnected',;
 }) {;
   const label =;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     status === 'connected' ? '✅' : status === 'warning' ? '⚠️' : '❌';
   return (
     <span className='text-xl' title={status}>;
       {label}
     </span>;
   );
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string }
 interface ConnectionMap { [providerId: string]: any }
+<<<<<<< HEAD
+=======
+
+
+interface ConnectionMap {;
+  [key: string]: boolean,;
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import { useEffect, useMemo, useState } from 'react';
 import React, { useState } from 'react';
@@ -49,13 +78,18 @@ function StatusIcon({ status }: { status: 'connected' | 'warning' | 'disconnecte
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 interface ConnectionMap {;
   [key: string]: boolean,;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function AdminIntegrationsPage() {
   const [providers, setProviders] = useState<ProviderMeta[]>([]);
   const [connections, setConnections] = useState<ConnectionMap>({});
   const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState<string | null>(null);
+<<<<<<< HEAD
   const [syncRules, setSyncRules] = useState<any>({ autoCreateContacts: true, pushNotesMode: 'auto', autoSyncApplicants: true, autoUploadResumes: true }),
   async function refresh() {
     const [p, s] = await Promise.all([
@@ -71,20 +105,69 @@ export default function AdminIntegrationsPage() {
     setLoading(true)
     try {
       // Open mock oauth popup
+=======
+
+  const [syncRules, setSyncRules] = useState<any>({;
+    autoCreateContacts: true,;
+    pushNotesMode: 'auto',;
+    autoSyncApplicants: true,;
+    autoUploadResumes: true,;
+  });
+  async function refresh() {;
+    const [p, s] = await Promise && Promise.all([;
+      fetch('/api/integrations/providers').then(r => r && r.json()),;
+      fetch('/api/integrations/status').then(r => r && r.json()),;
+    ]);
+    setProviders(p && p.providers || []);
+    setConnections(s && s.connections || {});
+  }
+  useEffect(() => {;
+    refresh();
+  }, []);
+  async function connect(): any (providerId: string) {;
+    setLoading(true),;
+    try {;
+      // Open mock oauth popup;
+      window && window.open(;
+        `/api/integrations/oauth/${providerId}/start`,;
+        'oauth',;
+        'width=500,height=700';
+      );
+      await new Promise(r => setTimeout(r, 500));
+      await fetch('/api/integrations/connect', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON && JSON.stringify({ providerId, syncRules }),;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       });
       await refresh();
     } finally {;
       setLoading(false);
     }  }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       window.open(`/api/integrations/oauth/${providerId}/start`, 'oauthwidth=500,height=700');
       await new Promise(r => setTimeout(r, 500));
       await fetch('/api/integrations/connect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId, syncRules }) });
       await refresh()
     } finally { setLoading(false) }
   }
+<<<<<<< HEAD
   async function disconnect(providerId: string) {
     setLoading(true)
     try {
+=======
+
+
+  async function disconnect(providerId: string) {
+    setLoading(true)
+    try {
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   async function disconnect(): any (providerId: string) {;
     setLoading(true),;
     try {;
@@ -92,11 +175,20 @@ export default function AdminIntegrationsPage() {
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ providerId }),;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       });
       await refresh();
     } finally {;
       setLoading(false);
     }  }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   async function resync(): any (providerId: string) {;
     setLoading(true),;
     try {;
@@ -104,17 +196,53 @@ export default function AdminIntegrationsPage() {
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ providerId }),;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       });
       await refresh();
     } finally {;
       setLoading(false);
     }
   }
+<<<<<<< HEAD
+=======
+
+  const [syncRules, setSyncRules] = useState<any>({ autoCreateContacts: true, pushNotesMode: 'auto', autoSyncApplicants: true, autoUploadResumes: true });
+  async function refresh() {
+    const [p, s] = await Promise.all([
+      fetch('/api/integrations/providers').then(r => r.json()),
+      fetch('/api/integrations/status').then(r => r.json())
+    ]);
+    setProviders(p.providers || []);
+    setConnections(s.connections || {});
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  useEffect(() => { refresh(); }, []);
+  async function connect(providerId: string) {
+    setLoading(true);
+    try {
+      // Open mock oauth popup
+      window.open(`/api/integrations/oauth/${providerId}/start`, 'oauthwidth=500,height=700');
+      await new Promise(r => setTimeout(r, 500));
+      await fetch('/api/integrations/connect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId, syncRules }) });
+      await refresh();
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   function Card({ p }: { p: ProviderMeta }) {
     const conn = connections[p.id] |{ status: 'disconnected' }
     const isConnected = conn.status === 'connected';
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       await fetch('/api/integrations/disconnect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId }) }),
       await refresh()
     } finally { setLoading(false) }
@@ -136,6 +264,7 @@ export default function AdminIntegrationsPage() {
   function Card(): any ({ p }: { p: ProviderMeta }) {;
     const conn = connections[p && p.id] || { status: 'disconnected' };
     const isConnected = conn && conn.status === 'connected';
+<<<<<<< HEAD
       window.open(
         `/api/integrations/oauth/${providerId}/start`
         'oauth'
@@ -369,16 +498,24 @@ export default function AdminIntegrationsPage() {
               <button onClick={() => setSelected(p.id)} className="px-3 py-1.5 rounded border text-sm">Configure</button>
               <button onClick={() => disconnect(p.id)} disabled={loading} className="px-3 py-1.5 rounded border text-sm">Disconnect</button>
             </>
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   function RulesModal() {
 
+<<<<<<< HEAD
 function RulesModal() {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   function RulesModal() {;
     if (!selected) return null;
     const provider = providers && providers.find(p => p && p.id === selected)!;
     const isCrm = provider && provider.category === 'crm';
     return (
+<<<<<<< HEAD
                     checked={!!syncRules && syncRules.autoCreateContacts}
                     onChange={e =>;
                       setSyncRules({;
@@ -626,16 +763,29 @@ if (return null) {
                         checked={sync_rules.pushNotesMode === 'auto'}
                         on_change={() =>;
                           setSyncRules ({ ...sync_rules, pushNotesMode: 'auto' });
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         }
                       />{' '}
                       Auto;
                     </label>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         checked={syncRules && syncRules.pushNotesMode === 'manual'}
                         onChange={() =>;
                           setSyncRules({;
                             ...syncRules,;
                             pushNotesMode: 'manual',;
                           });
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <label className='flex items - center gap - 2'>;
                       <input;
                         type='radio';
@@ -651,12 +801,20 @@ if (return null) {
                       Manual only;
                     </label>                  </div>;
                 </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     checked={!!syncRules && syncRules.autoSyncApplicants}
                     onChange={e =>;
                       setSyncRules({;
                         ...syncRules,;
                         autoSyncApplicants: e && e.target.checked,;
                       });
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     }
                   />{' '}
                   Auto-sync applicants;
@@ -664,12 +822,20 @@ if (return null) {
                 <label className='flex items-center gap-2'>;
                   <input
                     type='checkbox'
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     checked={!!syncRules && syncRules.autoUploadResumes}
                     onChange={e =>;
                       setSyncRules({;
                         ...syncRules,;
                         autoUploadResumes: e && e.target.checked,;
                       });
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     }
                   />{' '}
                   Auto-upload resumes;
@@ -737,6 +903,10 @@ if (return null) {
             </button>;
           </div>;
         </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <>;
       <Head>;
         <title>Admin Integrations • Zion</title>;
@@ -746,6 +916,10 @@ if (return null) {
         <p className='text-sm text-gray-600 mb-6'>;
           Connect your CRM and ATS to sync contacts, applicants, and activity.;
         </p>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <section className='mb-8'>;
           <h2 className='text-lg font-semibold mb-3'>CRM</h2>;
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>;
@@ -754,6 +928,10 @@ if (return null) {
             ))}
           </div>;
         </section>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <section className='mb-10'>;
           <h2 className='text-lg font-semibold mb-3'>ATS</h2>;
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>;
@@ -762,11 +940,16 @@ if (return null) {
             ))}
           </div>;
         </section>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <section className='mb-10'>;
           <h2 className='text-lg font-semibold mb-2'>Zapier</h2>;
           <div className='text-sm text-gray-600'>Polling endpoints:</div>;
           <ul className='list-disc pl-6 text-sm mt-2'>;
             <li>;
+<<<<<<< HEAD
               New Zion Job Posted → GET{' '}
               <code>/api/integrations/zapier/jobs-posted?since=TIMESTAMP</code>;
             </li>;
@@ -891,11 +1074,15 @@ if (return null) {
           <div className='text-sm text-gray-600'>Polling endpoints:</div>
           <ul className='list-disc pl-6 text-sm mt-2'>
             <li>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               New Zion Job Posted → GET{' '}
               <code>/api/integrations/zapier/jobs-posted?since=TIMESTAMP</code>
             </li>
             <li>
               Talent Matched → GET{' '}
+<<<<<<< HEAD
               <code>
                 /api/integrations/zapier/talent-matched?since=TIMESTAMP
               </code>
@@ -977,10 +1164,18 @@ if (return null) {
             <li>New Zion Job Posted → GET <code>/api/integrations/zapier/jobs-posted?since=TIMESTAMP</code></li>
             <li>Talent Matched → GET <code>/api/integrations/zapier/talent-matched?since=TIMESTAMP</code></li>
           </ul>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </section>
         <section>
           <h2 className="text-lg font-semibold mb-2">Manual Overrides</h2>
           <ManualOverrideForm />
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </section>
       </main>
       <RulesModal />
@@ -988,37 +1183,66 @@ if (return null) {
 
 
               <code>;
+<<<<<<< HEAD
 <code>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 /api/integrations/zapier/talent-matched?since=TIMESTAMP;
               </code>;
             </li>          </ul>;
         </section>;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   )
 }
 
 
+<<<<<<< HEAD
   )
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <section>;
           <h2 className='text-lg font-semibold mb-2'>Manual Overrides</h2>          <ManualOverrideForm />;
         </section>;
       </main>;
       <RulesModal />;
     </>;
+<<<<<<< HEAD
   );
 function ManualOverrideForm() {;
   );
 function ManualOverrideForm() {
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  );
+function ManualOverrideForm() {;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [jobId, setJobId] = useState('');
   const [disableCrmSync, setDisableCrmSync] = useState(false);
   const [disableAtsSync, setDisableAtsSync] = useState(false);
   const [message, setMessage] = useState('');
+<<<<<<< HEAD
   async function save() {
+=======
+
+
+  async function save() {;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     setMessage('');
     const res = await fetch('/api/integrations/overrides', {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
       body: JSON && JSON.stringify({ jobId, disableCrmSync, disableAtsSync }),;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     });
     if (res && res.ok) setMessage('Saved');
     else setMessage('Error');
@@ -1045,6 +1269,41 @@ function ManualOverrideForm() {
   }
 }
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl'>;
+      <div className='grid grid-cols-1 gap-3'>;
+        <label className='text-sm'>;
+          Job/Post ID;
+          <input
+            value={jobId}
+            onChange={e => setJobId(e && e.target.value)}
+            placeholder='job_123';
+            className='w-full mt-1 px-3 py-2 rounded border bg-transparent';
+          />;
+        </label>;
+        <label className='flex items-center gap-2 text-sm'>;
+          <input
+            type='checkbox'
+            checked={disableCrmSync}
+            onChange={e => setDisableCrmSync(e && e.target.checked)}
+          />{' '}
+          Disable CRM sync;
+        </label>;
+        <label className='flex items-center gap-2 text-sm'>;
+          <input
+            type='checkbox'
+            checked={disableAtsSync}
+            onChange={e => setDisableAtsSync(e && e.target.checked)}
+          />{' '}
+          Disable ATS sync;
+        </label>;
+        <div className='flex items-center gap-2'>;
+          <button
+            onClick={save}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className='px-3 py-1 && 1.5 rounded bg-black text-white text-sm'>;
             Save Override;
           </button>;
@@ -1053,9 +1312,14 @@ function ManualOverrideForm() {
       </div>;
     </div>;
   );
+<<<<<<< HEAD
     const res = await fetch('/api/integrations/overrides', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ jobId, disableCrmSync, disableAtsSync }) });
     if (res.ok) setMessage('Saved'), else setMessage('Error')
   }
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl">
       <div className="grid grid-cols-1 gap-3">
@@ -1071,8 +1335,11 @@ function ManualOverrideForm() {
       </div>
     </div>
 
+<<<<<<< HEAD
   )
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </div>);  }
   return (
     <>;
@@ -1184,8 +1451,14 @@ function save() {
     </div>);
 ;
 
+<<<<<<< HEAD
 
 );
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 }
 }
@@ -1193,6 +1466,11 @@ function save() {
 }
 }
 }
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   ),
   } catch (error) {
     console.error("Error:", error);
@@ -1200,3 +1478,9 @@ function save() {
   }
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,9 +1,12 @@
 
+<<<<<<< HEAD
 export interface EmergingTechService {
 
 export interface EmergingTechService {;
 
 import { ServiceVariant } from '../types/service-variants';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export interface EmergingTechService {
 
@@ -40,6 +43,7 @@ export interface EmergingTechService {;
     address: string;
     website: string;
   }
+<<<<<<< HEAD
     id: 'space-mining-platform',
   real_implementation: boolean;
   implementation_details: string;
@@ -1127,14 +1131,27 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
       'VR headsets, AR devices, Gaming platforms, Social platforms',
     ],
     use_cases: [;
+=======
+
+  {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Virtual experiences, Gaming, Education, Social interaction, Entertainment',
     ],
     roi: 'Metaverse companies report 1000x improvement in graphics quality and 500% increase in user engagement.',
     competitors: ['No direct competitors - first quantum metaverse platform'],
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     market_size: '$35.5B quantum metaverse market',
     growth_rate: '85% annual growth',
     variant: 'quantum - metaverse - enterprise',
     contact_info: {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1151,16 +1168,30 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
     implementation_details: 'Quantum metaverse platform with enhanced graphics and AI capabilities.';
     launch_date: '2024 - 04 - 30';
+<<<<<<< HEAD
     customers: 18;
     rating: 4 && 4.8,
     reviews: 11
   }
 ];
+=======
+
+    customers: 18;
+
+    rating: 4 && 4.8,
+
+    reviews: 11
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export interface EmergingTechService2025 {
   id: string, name: string,
   tagline: string, price: string,
@@ -2333,6 +2364,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
 
 ;
 
+<<<<<<< HEAD
 ;
     }
     realImplementation: true
@@ -3025,3 +3057,5 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     reviews: 11;
   }
 ];
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

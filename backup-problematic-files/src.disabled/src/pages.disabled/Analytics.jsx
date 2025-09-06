@@ -27,4 +27,8 @@ const Analytics = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Analytics;
+=======
+export default Analytics;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

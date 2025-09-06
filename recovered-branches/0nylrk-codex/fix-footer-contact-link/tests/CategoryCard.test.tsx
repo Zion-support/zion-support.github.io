@@ -1,8 +1,17 @@
 
+<<<<<<< HEAD
+=======
+import {render, screen} from '@testing-library/react',;
+import {MemoryRouter} from 'react-router-dom',;
+import {CategoryCard} from '@/components/CategoryCard',;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {render, screen} from '@testing-library/react',
 import {MemoryRouter} from 'react-router-dom',
 import {CategoryCard} from '@/components/CategoryCard',
 
+<<<<<<< HEAD
 import { render, screen  } from '@testing-library/react';
 import { MemoryRouter  } from 'react-router-dom';
 import { CategoryCard } from '@/components/CategoryCard';
@@ -23,16 +32,31 @@ import { CategoryCard } from '@/components/CategoryCard',
 import { render, screen } from '@testing-library/react',
 import { MemoryRouter } from 'react-router-dom',
 import { CategoryCard } from '@/components/CategoryCard',
+=======
+=======
+import { render, screen } from '@testing-library/react',
+import { MemoryRouter } from 'react-router-dom',
+import { CategoryCard } from '@/components/CategoryCard',
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 it('renders category card with link to slug', () => {
   render(
     <MemoryRouter>
       <CategoryCard title="Test Category" description="desc" icon="*" />
     </MemoryRouter>
   ),
+<<<<<<< HEAD
   const link = screen && screen.getByRole('link', { name: /test category/i }),;
   expect(link).toHaveAttribute('href/category/test-category'),;
 }),;
 it('normalizes slug with special characters', () => {;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+it('renders category card with link to slug', () => {;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   render(;
     <MemoryRouter>;
       <CategoryCard title='R&D Tools!' description='desc' icon='*' />;
@@ -83,10 +107,14 @@ it ('treats underscores as spaces in slug', () => {
   const link = screen.getByRole ('link', { name: /ai_tools / i });
   expect (link).toHaveAttribute ('href / category / ai - tools');
 
+<<<<<<< HEAD
   const link = screen.getByRole('link', { name: /test category/i }),
   expect(link).toHaveAttribute('href/category/test-category')
 }),
 
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 it('normalizes slug with special characters', () => {
   render(
     <MemoryRouter>
@@ -117,6 +145,7 @@ it('treats underscores as spaces in slug', () => {
   ),
 
   const link = screen.getByRole('link', { name: /ai_tools/i }),
+<<<<<<< HEAD
 import { render, screen } from '@testing-library/react',;
 import { MemoryRouter } from 'react-router-dom',;
 import { CategoryCard } from '@/components/CategoryCard',;
@@ -175,3 +204,11 @@ it ('treats underscores as spaces in slug', () => {
 ;
   expect(link).toHaveAttribute('href/category/ai-tools')
 }),
+=======
+
+  expect(link).toHaveAttribute('href/category/ai-tools')
+}),
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,4 +9,8 @@ const MainSidebar = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default MainSidebar;
+=======
+export default MainSidebar;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

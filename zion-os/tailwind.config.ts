@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { Config } from 'tailwindcss';
 const config: Config = {
   content: [;
@@ -28,8 +32,16 @@ const config: Config = {
         xs: '2px'},
       background_image: {
         'gradient - radial': 'radial - gradient (var (--tw - gradient - stops))gradient - conic': 'conic - gradient (from 180deg at 50% 50%, var (--tw - gradient - stops))'}}},
+<<<<<<< HEAD
 ;
 
   plugins: []}
 ;
+=======
+
+  plugins: []}
+
+;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default config;

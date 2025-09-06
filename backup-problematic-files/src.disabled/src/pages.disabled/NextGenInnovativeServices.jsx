@@ -9,4 +9,8 @@ const NextGenInnovativeServices = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default NextGenInnovativeServices;
+=======
+export default NextGenInnovativeServices;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

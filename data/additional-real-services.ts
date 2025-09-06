@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   id: string;
   name: string;
@@ -24,8 +28,33 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
   {
 
     address: string;
+<<<<<<< HEAD
 export interface AdditionalRealService {;
 export interface AdditionalRealService {
+=======
+  }
+;
+export const additionalEnhancedServices: AdditionalRealService[] = [;
+  {
+    id: 'ai - automation - suite',
+    name: 'AI Automation Suite',
+    tagline: 'Intelligent automation for modern businesses',
+    price: '$79 / month',
+    description:;
+      'Comprehensive AI - powered automation platform that streamlines business processes and increases efficiency.',
+    features: [;
+      'Workflow automation',
+      'AI decision making',
+      'Integration APIs',
+      'Custom workflows',
+      'Analytics dashboard',
+    ],
+    link: '/services / ai - automation - suite',
+    category: 'AI & Automation',
+    real_implementation: true,
+    contact_info: {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -61,6 +90,7 @@ export interface AdditionalRealService {
   }
 export const additionalEnhancedServices: AdditionalRealService[] = [
   {
+<<<<<<< HEAD
     id: 'ai-automation-suite'
     name: 'AI Automation Suite'
     tagline: 'Intelligent automation for modern businesses'
@@ -125,12 +155,23 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     category: 'Data & Analytics',
     real_implementation: true,
     contact_info: {
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
 ];      mobile: "+1 302 464 0950";
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     id: "ai-automation-suite",
     name: "AI Automation Suite",
@@ -172,10 +213,21 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     contactInfo: {
 
       address: "364 E Main St STE 1008 Middletown DE 19709"
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
+<<<<<<< HEAD
+=======
+
+];
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 ];
     id: "ai-automation-suite",

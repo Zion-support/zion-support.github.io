@@ -4,6 +4,7 @@ import Head from 'next / head';
 import Link from 'next / link';
 ;
 
+<<<<<<< HEAD
 
 
 import Head from 'next / head';
@@ -12,16 +13,27 @@ import Link from 'next / link';
 import Head from 'next/head';
 import Link from 'next/link';
 
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const UltimateRedundancyBlueprint: React.FC = () => {
   const system_features = [;
     {
 
       name: 'Quantum - Level Redundancy',
       description: 'Advanced redundancy patterns with quantum - inspired algorithms',
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       name: 'Quantum-Level Redundancy',
       description: 'Advanced redundancy patterns with quantum-inspired algorithms',
 
+<<<<<<< HEAD
       name: 'Quantum - Level Redundancy',
       description: 'Advanced redundancy patterns with quantum - inspired algorithms',
       status: 'active',
@@ -110,6 +122,8 @@ const UltimateRedundancyBlueprint: React.FC = () => {
     { metric: 'Prediction Accuracy', value: '98.7%', target: '95%', status: 'exceeded' }
       name: 'Quantum-Level Redundancy',
       description: 'Advanced redundancy patterns with quantum-inspired algorithms',
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       status: 'active',
       priority: 'critical',
       health: 'excellent'
@@ -179,9 +193,12 @@ const UltimateRedundancyBlueprint: React.FC = () => {
       capability: 'Automated Disaster Recovery',
       description: 'Intelligent disaster recovery orchestration',
       benefit: 'Minimal downtime during major incidents',
+<<<<<<< HEAD
       status: 'implemented';
     }
   ];
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       status: 'implemented'
 
@@ -220,6 +237,7 @@ const UltimateRedundancyBlueprint: React.FC = () => {
 
 
   const getPriorityColor = (priority: string) => {
+<<<<<<< HEAD
     { metric: 'Prediction Accuracy', value: '98.7%', target: '95%', status: 'exceeded' }
   ];
 ;
@@ -232,6 +250,9 @@ const UltimateRedundancyBlueprint: React.FC = () => {
       default: return 'text - gray - 400';
     }
   }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   const getPriorityColor = (priority: string) =>: any {
     switch (priority) {
@@ -308,6 +329,7 @@ const UltimateRedundancyBlueprint: React.FC = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
       case 'critical': return 'bg - red - 500 / 20 text - red - 400';
       case 'high': return 'bg - orange - 500 / 20 text - orange - 400';
       case 'medium': return 'bg - yellow - 500 / 20 text - yellow - 400';
@@ -315,6 +337,8 @@ const UltimateRedundancyBlueprint: React.FC = () => {
       default: return 'bg - gray - 500 / 20 text - gray - 400';
     }
   }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   return (
     <div className="min - h-screen bg - gradient - to - br from - gray - 900 via - red - 900 to - gray - 900 text - white">;
@@ -359,6 +383,10 @@ const UltimateRedundancyBlueprint: React.FC = () => {
             <p className="text - gray - 300 text - sm mt - 2">Recently enhanced</p>;
           </div>;
         </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* System Features */}
         <div className="mb - 8">;
           <h2 className="text - 2xl font - bold mb - 6 text - white">Advanced System Features</h2>;
@@ -375,6 +403,27 @@ const UltimateRedundancyBlueprint: React.FC = () => {
                 <div className="flex justify - between items - center">;
                   <span className={`text - xs ${getStatusColor (feature.status)}`}>;
                     ● {feature.status}
+<<<<<<< HEAD
+=======
+
+
+        {/* System Features */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold mb-6 text-white">Advanced System Features</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {systemFeatures.map((feature, index) => (
+              <div key={index} className="bg-white/10 rounded-xl p-6 border border-white/20">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-lg font-semibold text-white">{feature.name}</h3>
+                  <span className={`px-2 py-1 text-xs rounded-full ${getPriorityColor(feature.priority)}`}>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     {feature.priority  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -404,6 +453,10 @@ const UltimateRedundancyBlueprint: React.FC = () => {
               </div>))}
           </div>;
         </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Advanced Capabilities */}
         <div className="mb - 8">;
           <h2 className="text - 2xl font - bold mb - 6 text - white">Advanced Capabilities</h2>;
@@ -414,6 +467,34 @@ const UltimateRedundancyBlueprint: React.FC = () => {
                   <h3 className="text - lg font - semibold text - white">{capability.capability}</h3>;
                   <span className={`px - 2 py - 1 text - xs rounded - full ${getStatusColor (capability.status)}`}>;
                     {capability.status}
+<<<<<<< HEAD
+=======
+
+
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>
+        </div>
+        {/* Advanced Capabilities */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold mb-6 text-white">Advanced Capabilities</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {advancedCapabilities.map((capability, index) => (
+              <div key={index} className="bg-white/10 rounded-xl p-6 border border-white/20">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-lg font-semibold text-white">{capability.capability}</h3>
+                  <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(capability.status)}`}>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     {capability.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -433,6 +514,10 @@ const UltimateRedundancyBlueprint: React.FC = () => {
               </div>))}
           </div>;
         </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Performance Metrics */}
         <div className="mb - 8">;
           <h2 className="text - 2xl font - bold mb - 6 text - white">Performance Metrics</h2>;
@@ -456,6 +541,47 @@ const UltimateRedundancyBlueprint: React.FC = () => {
                       <td className="py - 3 px - 4">;
                         <span className={`px - 2 py - 1 text - xs rounded - full ${getStatusColor (metric.status)}`}>;
                           {metric.status}
+<<<<<<< HEAD
+=======
+
+
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>
+        </div>
+        {/* Performance Metrics */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold mb-6 text-white">Performance Metrics</h2>
+          <div className="bg-white/10 rounded-xl p-6 border border-white/20">
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="border-b border-white/20">
+                    <th className="text-left py-3 px-4 text-red-400">Metric</th>
+                    <th className="text-left py-3 px-4 text-red-400">Current Value</th>
+                    <th className="text-left py-3 px-4 text-red-400">Target</th>
+                    <th className="text-left py-3 px-4 text-red-400">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {performanceMetrics.map((metric, index) => (
+                    <tr key={index} className="border-b border-white/10">
+                      <td className="py-3 px-4 text-white">{metric.metric}</td>
+                      <td className="py-3 px-4 text-green-400 font-semibold">{metric.value}</td>
+                      <td className="py-3 px-4 text-gray-300">{metric.target}</td>
+                      <td className="py-3 px-4">
+                        <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(metric.status)}`}>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           {metric.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -700,6 +826,7 @@ const UltimateRedundancyBlueprint: React.FC = () => {
 }
 ;
 
+<<<<<<< HEAD
 };
 
       status: 'implemented'
@@ -1061,4 +1188,11 @@ const UltimateRedundancyBlueprint: React.FC = () => {
 }
 };
 
+=======
+=======
+
+};
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default UltimateRedundancyBlueprint;

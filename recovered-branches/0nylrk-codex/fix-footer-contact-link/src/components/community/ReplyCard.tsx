@@ -7,10 +7,17 @@ import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {ForumReply} from "@/types/community";
 import {cn} from "@/lib/utils";
+<<<<<<< HEAD
+=======
+interface ReplyCardProps {;
+  reply: ForumReply,;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onMarkAnswer?: () => void;
   canMarkAnswer?: boolean;
   className?: string;
 }
+<<<<<<< HEAD
 import { formatDistanceToNow } from "date-fns",
 import { ThumbsUp, ThumbsDown, CheckCircle } from "@/components/icons",
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
@@ -34,6 +41,12 @@ export const ReplyCard = ({
   canMarkAnswer = false;
 import { ForumReply } from "@/types/community",
 import { cn } from "@/lib/utils",
+=======
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface ReplyCardProps {
   reply: ForumReply,
   onMarkAnswer?: () => void,
@@ -48,17 +61,25 @@ export const ReplyCard = ({
   onMarkAnswer, 
   canMarkAnswer = false,
 
+<<<<<<< HEAD
 export const ReplyCard = ({ ;
   reply;
 export const ReplyCard = ({ 
   reply,
   onMarkAnswer, 
   canMarkAnswer = false,
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   className
 }: ReplyCardProps) => {
   const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true })
   return (
     <Card className={cn(
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const ReplyCard = ({ ;
   reply;
   onMarkAnswer, ;
@@ -67,10 +88,13 @@ export const ReplyCard = ({ ;
       "transition-shadow",
       reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20",
 
+<<<<<<< HEAD
       "transition-shadow";
       reply.isAnswer && "border-green-500/50 bg-green-50 dark: bg-green-950/20"
       "transition-shadow",
       reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       className
     )}>
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">
@@ -85,6 +109,10 @@ export const ReplyCard = ({ ;
             </span>
             {reply.authorRole && (
               <Badge variant="outline" className="ml-2 text-xs">
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { formatDistanceToNow } from "date-fns",;
 import { ThumbsUp, ThumbsDown, CheckCircle } from "@/components/icons",;
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
@@ -104,6 +132,7 @@ export const ReplyCard = ({;
   reply,;
   onMarkAnswer,;
   canMarkAnswer = false,;
+<<<<<<< HEAD
   className;
 }: ReplyCardProps) => {;
   const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true }),;
@@ -117,10 +146,29 @@ export const ReplyCard = ({;
         <Avatar className="h-8 w-8">;
           <AvatarImage src={reply.authorAvatar} />;
           <AvatarFallback>{reply.authorName.charAt(0)}</AvatarFallback>;
+=======
+
+  className;
+}: ReplyCardProps) => {;
+  const timeAgo = formatDistanceToNow(new Date(reply && reply.createdAt), { addSuffix: true }),;
+
+  return (
+    <CardclassName={cn(
+      "transition-shadow"
+      reply && reply.isAnswer && "border-green-500/50 bg-green-50 dark: bg-green-950/20",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      className
+    )}>;
+      <CardHeader className="flex flex-row items-start gap-4 space-y-0">;
+        <Avatar className="h-8 w-8">;
+          <AvatarImage src={reply && reply.authorAvatar} />;
+          <AvatarFallback>{reply && reply.authorName.charAt(0)}</AvatarFallback>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </Avatar>;
         <div className="flex-1">;
           <div className="flex items-center">;
             <span className="font-medium">;
+<<<<<<< HEAD
               {reply.authorName}
             </span>;
             {reply.authorRole && (;
@@ -160,6 +208,28 @@ export const ReplyCard = ({;
             Mark as Answer
           </Button>
         )}
+=======
+              {reply && reply.authorName}
+            </span>;
+            {reply && reply.authorRole && (;
+              <Badge variant="outline" className="ml-2 text-xs">;
+
+
+
+                {reply.authorRole}
+              </Badge>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            )}
+            {reply && reply.isAnswer && (;
+              <Badge className="ml-2 bg-green-500 text-white">;
+                <CheckCircle className="h-3 w-3 mr-1" />;
+                Answer;
+              </Badge>;
+            )}
+          </div>;
+          <div className="text-xs text-muted-foreground">;
+            {timeAgo}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           </div>;
         </div>;
@@ -186,17 +256,29 @@ export const ReplyCard = ({;
         )}
 
 
+<<<<<<< HEAD
       </CardFooter>
     </Card>
   )
 }
 export default ReplyCard;
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </CardFooter>;
     </Card>;
   );
 };
+<<<<<<< HEAD
 export default ReplyCard;
+=======
+
+
+
+export default ReplyCard;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { formatDistanceToNow } from './date - fns';
 import { ThumbsUp, ThumbsDown, CheckCircle } from '@/components / icons';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components / ui / card';
@@ -273,6 +355,7 @@ export const ReplyCard = ({
 ;
 export default ReplyCard;
 ;
+<<<<<<< HEAD
 
 import { formatDistanceToNow } from "date-fns",;
 import { ThumbsUp, ThumbsDown, CheckCircle } from "@/components/icons",;
@@ -396,3 +479,6 @@ className)
 export default ReplyCard;
 export default ReplyCard;
 export default ReplyCard;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

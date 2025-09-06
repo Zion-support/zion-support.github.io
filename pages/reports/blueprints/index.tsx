@@ -4,6 +4,7 @@ import Head from 'next / head';
 import Link from 'next / link';
 ;
 
+<<<<<<< HEAD
 
 
 import Head from 'next / head';
@@ -15,6 +16,16 @@ import Link from 'next/link';
 const BlueprintsIndexPage: React.FC = () => {
   const blueprint_categories = [;
     {
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const BlueprintsIndexPage: React.FC = () => {
+  const blueprint_categories = [;
+    {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       category: 'System Architecture',
       blueprints: [;
         {
@@ -27,10 +38,15 @@ const BlueprintsIndexPage: React.FC = () => {
         },
         {
           id: 'ultimate - redundancy',
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       category: 'System Architecture',
       blueprints: [
 
+<<<<<<< HEAD
           id: 'comprehensive-redundancy',
           name: 'Comprehensive Redundancy System',
           description: 'Multi-layer redundancy architecture for maximum uptime',
@@ -394,6 +410,8 @@ const BlueprintsIndexPage: React.FC = () => {
         {
         { 
         {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           id: 'comprehensive-redundancy',
           name: 'Comprehensive Redundancy System',
           description: 'Multi-layer redundancy architecture for maximum uptime',
@@ -401,31 +419,51 @@ const BlueprintsIndexPage: React.FC = () => {
           complexity: 'high',
           lastUpdated: '2025-01-17'
         },
+<<<<<<< HEAD
         {
         { 
         {
           id: 'ultimate-redundancy',
+=======
+
+
+          id: 'ultimate-redundancy',
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           name: 'Ultimate Redundancy System',
           description: 'Advanced redundancy with automated failover',
           status: 'active',
           complexity: 'critical',
+<<<<<<< HEAD
           lastUpdated: '2025-01-16'
         },
         {
         { 
         {
+=======
+
+          lastUpdated: '2025-01-16'
+        },
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           id: 'github-actions-automation',
           name: 'GitHub Actions Automation',
           description: 'Complete CI/CD automation with self-healing',
           status: 'active',
           complexity: 'high',
           lastUpdated: '2025-01-15'
+<<<<<<< HEAD
         }
           } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       ]
     },
     {
@@ -441,6 +479,78 @@ const BlueprintsIndexPage: React.FC = () => {
           complexity: 'medium',
           lastUpdated: '2025-01-14'
         },
+<<<<<<< HEAD
+=======
+
+
+          id: 'canary-deployment',
+
+          name: 'Canary Deployment',
+          description: 'Gradual rollout with traffic splitting',
+          status: 'active',
+          complexity: 'high',
+
+          lastUpdated: '2025-01-13'
+        },
+
+
+          id: 'rolling-update',
+
+          name: 'Rolling Update Strategy',
+          description: 'Sequential instance updates with health monitoring',
+          status: 'active',
+          complexity: 'medium',
+
+          lastUpdated: '2025-01-12'
+
+
+      ]
+    },
+    {
+      category: 'Monitoring & Observability',
+      blueprints: [
+
+
+          id: 'health-check-system',
+
+          name: 'Health Check System',
+          description: 'Comprehensive health monitoring and alerting',
+          status: 'active',
+          complexity: 'medium',
+
+          lastUpdated: '2025-01-11'
+        },
+
+
+          id: 'performance-monitoring',
+          name: 'Performance Monitoring',
+          description: 'Real-time performance metrics and alerting',
+          status: 'active',
+          complexity: 'medium',
+          lastUpdated: '2025-01-10'
+        },
+
+
+          id: 'logging-aggregation',
+
+          name: 'Logging Aggregation',
+          description: 'Centralized logging with search and analytics',
+          status: 'active',
+          complexity: 'low',
+
+;
+  const recent_blueprints = [;
+=======
+          lastUpdated: '2025-01-09'
+
+
+  const recentBlueprints = [
+
+    {
+      category: 'Deployment Patterns',
+      blueprints: [
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {
         { 
         {
@@ -536,6 +646,12 @@ const BlueprintsIndexPage: React.FC = () => {
       id: 'blueprint-2025-01-17-130921',
       name: 'Quantum Integration Blueprint',
       description: 'Quantum computing integration framework',
+<<<<<<< HEAD
+=======
+
+      date: '2025-01-17',
+      status: 'research'
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   ];
@@ -575,16 +691,21 @@ const BlueprintsIndexPage: React.FC = () => {
   };
 
 
+<<<<<<< HEAD
       date: '2025-01-17',
       status: 'research'
     }
   ];
 
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   ];
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -622,6 +743,13 @@ const BlueprintsIndexPage: React.FC = () => {
   }
 }
   };
+=======
+  };
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 text-white">
       <Head>
@@ -631,12 +759,22 @@ const BlueprintsIndexPage: React.FC = () => {
       </Head>
       <div className="container mx-auto px-4 py-8">
 
+<<<<<<< HEAD
         {/* Header */}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Header */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="mb-8">
           <Link href="/reports" className="text-cyan-400 hover:text-cyan-300 transition-colors">
             ← Back to Reports
@@ -649,12 +787,22 @@ const BlueprintsIndexPage: React.FC = () => {
           </p>
         </div>
 
+<<<<<<< HEAD
         {/* Blueprint Overview */}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Blueprint Overview */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-indigo-400">Total Blueprints</h3>
@@ -678,12 +826,22 @@ const BlueprintsIndexPage: React.FC = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Blueprint Categories */}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Blueprint Categories */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Blueprint Categories</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -694,6 +852,10 @@ const BlueprintsIndexPage: React.FC = () => {
                   {category.blueprints.map((blueprint, blueprintIndex) => (
                     <div key={blueprintIndex} className="border-l-2 border-indigo-400/30 pl-4">
                       <div className="flex justify-between items-start mb-2">
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   return (
     <div className="min - h-screen bg - gradient - to - br from - gray - 900 via - indigo - 900 to - gray - 900 text - white">;
@@ -754,11 +916,14 @@ const BlueprintsIndexPage: React.FC = () => {
                           className="text - white font - medium hover:text - indigo - 300 transition - colors";
                         >;
 
+<<<<<<< HEAD
                         <Link
                         <Link 
                           href={`/reports/blueprints/${blueprint.id}`}
                           className="text-white font-medium hover:text-indigo-300 transition-colors"
                         >
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           {blueprint.name}
                         </Link>;
                         <span className={`px - 2 py - 1 text - xs rounded - full ${getComplexityColor (blueprint.complexity)}`}>;
@@ -769,6 +934,18 @@ const BlueprintsIndexPage: React.FC = () => {
                       <div className="flex justify - between items - center text - xs">;
                         <span className={`${getStatusColor (blueprint.status)}`}>;
                           ● {blueprint.status}
+<<<<<<< HEAD
+=======
+
+
+
+                        </span>
+                      </div>
+                      <p className="text-gray-300 text-sm mb-2">{blueprint.description}</p>
+                      <div className="flex justify-between items-center text-xs">
+                        <span className={`${getStatusColor(blueprint.status)}`}>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           ● {blueprint.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -789,6 +966,10 @@ const BlueprintsIndexPage: React.FC = () => {
               </div>))}
           </div>;
         </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Recent Blueprints */}
         <div className="mb - 8">;
           <h2 className="text - 2xl font - bold mb - 6 text - white">Recent Blueprints</h2>;
@@ -799,6 +980,41 @@ const BlueprintsIndexPage: React.FC = () => {
                   <h3 className="text - lg font - semibold text - white">{blueprint.name}</h3>;
                   <span className={`px - 2 py - 1 text - xs rounded - full ${getStatusColor (blueprint.status)}`}>;
                     {blueprint.status}
+<<<<<<< HEAD
+=======
+
+
+                  ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                </div>
+              </div>
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>
+        </div>
+        {/* Recent Blueprints */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold mb-6 text-white">Recent Blueprints</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {recentBlueprints.map((blueprint) => (
+              <div key={blueprint.id} className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-indigo-400/30 transition-all duration-300">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-lg font-semibold text-white">{blueprint.name}</h3>
+                  <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(blueprint.status)}`}>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     {blueprint.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -986,6 +1202,7 @@ const BlueprintsIndexPage: React.FC = () => {
 }
 ;
 
+<<<<<<< HEAD
 };
 
                           {blueprint.complexity}
@@ -1171,4 +1388,11 @@ const BlueprintsIndexPage: React.FC = () => {
 }
 };
 
+=======
+=======
+
+};
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default BlueprintsIndexPage;

@@ -17,4 +17,8 @@ const Startup: React.FC<StartupProps> = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Startup;
+=======
+export default Startup;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

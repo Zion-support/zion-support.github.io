@@ -9,4 +9,8 @@ const InteractiveHero.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default InteractiveHero.js;
+=======
+export default InteractiveHero.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { useAuth } from '@/hooks/useAuth'
@@ -22,21 +25,68 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 
 import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react'
 import { cn } from '@/lib/utils';
+<<<<<<< HEAD
+=======
+interface WizardStep {;
+  title: string;
+  description: string;
+  icon: React && React.ReactNode;
+  action: {;
+    text: string;
+
+import { useState, useEffect } from 'react';
+import { use_router } from 'next / router';
+import { use_auth } from '@/hooks / use_auth';
+import { Button } from '@/components / ui / button';
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components / ui / card';
+  Rocket,
+  FileText,
+  Users,
+  Calendar,
+  Eye,
+  MessageSquare,
+} from 'lucide-react';
+import { cn } from '@/lib / utils';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
+import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface WizardStep {
   title: string;
   description: string;
   icon: React.ReactNode;
   action: {
     text: string;
+<<<<<<< HEAD
     url: string
   }
   skipText?: string
 interface OnboardingWizardProps {
+=======
+    url: string;
+
+  }
+  skipText?: string
+interface OnboardingWizardProps {
+
+    url: string;
+  };
+  skipText?: string;
+
+interface OnboardingWizardProps {;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   type: 'client' | 'talent';
   onComplete: () => void;
   onSkip: () => void;
   className?: string
 
+<<<<<<< HEAD
   type
   onComplete
   onSkip
@@ -142,11 +192,14 @@ interface OnboardingWizardProps {
     }
   }
     >
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export function OnboardingWizard(): any ({;
   type,;
   onComplete,;
 
+<<<<<<< HEAD
 export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
   const [currentStep, setCurrentStep] = useState(0),
   const router = useRouter(), // Changed from useNavigate to useRouter
@@ -198,12 +251,24 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         url: "/profile"
   type,
   onComplete,
+=======
+
+
+  type,
+  onComplete,
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onSkip,;
   className,;
 }: OnboardingWizardProps) {;
   const [currentStep, setCurrentStep] = useState(0);
+<<<<<<< HEAD
   const router = useRouter(); // Changed from useNavigate to useRouter;
   const { user } = useAuth();
+=======
+  const router = useRouter(); // Changed from useNavigate to useRouter
+  const { user } = useAuth()
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
           </div>;
@@ -454,6 +519,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
           </div>
         </div>
 
+<<<<<<< HEAD
         <div className="flex flex-col items-center text-center p-4">
           <div className="bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4">
             {steps[currentStep]?.icon}
@@ -473,6 +539,8 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
             variant='ghost'
             className='text-zion-slate-light hover:text-white'
             onClick={handleSkip}          >
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           className="w-full bg-zion-purple hover:bg-zion-purple-light"
           onClick={handleAction}
         >;
@@ -485,6 +553,10 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
             className="text-zion-slate-light hover:text-white"
             onClick={handleSkip}
           >;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {steps[currentStep]?.skipText}
           </Button>
         )}
@@ -508,8 +580,11 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
     </Card>;
   );
 }
+<<<<<<< HEAD
 ;
 ;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -680,4 +755,8 @@ if ( {) {
       </CardFooter>;
     </Card>);
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

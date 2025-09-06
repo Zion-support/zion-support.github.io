@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react",
 import { Badge } from "@/components/ui/badge";
 import { Award } from "lucide-react";
@@ -20,12 +21,19 @@ interface TalentCardBadgesProps {
 
 
 
+=======
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface TalentCardBadgesProps {
   featured: boolean | undefined;
 }
 
 
 
+<<<<<<< HEAD
 if (!featured) return null;
 
 export function TalentCardBadges({ featured }: TalentCardBadgesProps) {;
@@ -34,6 +42,9 @@ export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
   if (!featured) return null;
   if (!featured) return null,
   
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="absolute top-0 left-0 bg-gradient-to-r from-zion-purple to-zion-cyan p-2 rounded-tl-lg rounded-br-lg z-10">
       <Badge className="bg-transparent border-0 flex items-center gap-1 text-white px-0">
@@ -41,10 +52,19 @@ export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
         <span>Featured</span>
       </Badge>
     </div>
+<<<<<<< HEAD
   );
 }
   )
   )
+=======
+
+import React from "react";
+import {Badge} from "@/components/ui/badge";
+import {Award} from "lucide-react";
+interface TalentCardBadgesProps {;
+  featured: boolean | undefined;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
@@ -76,6 +96,7 @@ if (return null) {
   )
   )
 
+<<<<<<< HEAD
 
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
@@ -107,3 +128,6 @@ absolute top-0 left-0 bg-gradient-to-r from-zion-purple to-zion-cyan p-2 rounded
 }
 
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

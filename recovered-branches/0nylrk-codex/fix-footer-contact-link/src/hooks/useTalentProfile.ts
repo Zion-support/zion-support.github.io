@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {TalentProfile, as, TalentProfileType} from "@/types/talent";
 import {ProfileData} from "@/types/profile";
@@ -15,6 +16,8 @@ import { TalentProfile as TalentProfileType } from "@/types/talent",
 import { ProfileData } from "@/types/profile",
 import { MOCK_TALENTS } from "@/data/mockTalents",
 import { MOCK_PROFILES } from "@/data/mockProfiles",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -33,6 +36,7 @@ import { MOCK_PROFILES } from "@/data/mockProfiles",
       
 
 
+<<<<<<< HEAD
 import { convertProfileToTalentProfile } from "@/utils/profileConverter";
 export function useTalentProfile(id: string | undefined) {
   const [profile, setProfile] = useState<TalentProfileType | null>(null);
@@ -60,10 +64,16 @@ export function useTalentProfile(id: string | undefined) {
       setIsLoading(true),
       setError(null),
       
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       try {
         // In a real implementation, we would fetch from Supabase
         // For now, we'll use mock data
         setTimeout(() => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           const foundProfile = MOCK_TALENTS && MOCK_TALENTS.find(talent => talent && talent.id === id);
           
 
@@ -212,6 +222,14 @@ export function useTalentProfile(id: string | undefined) {;
     };
     fetchProfile();
   }, [id]);
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return { profile, isLoading, error, mockProfileData }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         console.error ("Error fetching profile:", err);
         set_error ("Failed to load profile data");
         setIsLoading (false);
@@ -222,6 +240,7 @@ export function useTalentProfile(id: string | undefined) {;
   }, [id]);
 ;
   return { profile, is_loading, error, mockProfileData }
+<<<<<<< HEAD
 }
 
 import { useState, useEffect } from "react",;
@@ -305,3 +324,7 @@ if (mockProfile) {
 }
   return { profile, isLoading, error, mockProfileData }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

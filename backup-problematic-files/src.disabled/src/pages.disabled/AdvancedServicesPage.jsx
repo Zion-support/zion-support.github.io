@@ -9,4 +9,8 @@ const AdvancedServicesPage = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AdvancedServicesPage;
+=======
+export default AdvancedServicesPage;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

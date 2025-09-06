@@ -1,3 +1,4 @@
+<<<<<<< HEAD
       description: "AI-driven insights for asset lifecycle management and optimization",
       color: "from-red-500 to-orange-500"
 
@@ -163,6 +164,16 @@ import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
   Monitor, Brain, Cpu, Zap, Shield, Globe,
+=======
+
+
+    {
+      icon: Brain,
+
+      title: "AI - Powered Asset Discovery",
+      description: "Intelligent detection and cataloging of all IT assets across your network",
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Rocket, Target, TrendingUp, Users, CheckCircle,
   ArrowRight, Star, Award, Clock, DollarSign,
   Database, Network, Server, Laptop, Smartphone
@@ -180,16 +191,27 @@ const AIPoweredITAssetManagement = () => {
       title: "Real-Time Monitoring",
       description: "Continuous monitoring and health assessment of all IT assets",
       color: "from-blue-500 to-cyan-500"
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
     {
       icon: Shield,
       title: "Security Compliance",
       description: "Automated security audits and compliance monitoring for all assets",
+<<<<<<< HEAD
       color: "from-emerald-500 to-teal-500"
+=======
+
+      color: "from-emerald-500 to-teal-500"
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
     {
       icon: TrendingUp,
       title: "Predictive Analytics",
+<<<<<<< HEAD
       description: "AI-driven insights for asset lifecycle management and optimization",
       color: "from-red-500 to-orange-500"
     }
@@ -208,11 +230,28 @@ const AIPoweredITAssetManagement = () => {
 }
   ],
   const assetTypes = [
+=======
+
+  ],
+  const asset_types = [;
+=======
+      description: "AI-driven insights for asset lifecycle management and optimization",
+      color: "from-red-500 to-orange-500"
+
+
+  ],
+  const assetTypes = [
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     "Hardware devices (servers, workstations, mobile devices)",
     "Software licenses and applications",
     "Network infrastructure and equipment",
     "Cloud resources and virtual machines",
     "Security devices and appliances",
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     "Peripheral devices and accessories",
     "Peripheral devices and accessories"
   ],
@@ -241,6 +280,48 @@ const AIPoweredITAssetManagement = () => {
       title: "Efficiency Boost",
       value: "200%",
       description: "Increased operational efficiency"
+<<<<<<< HEAD
+=======
+
+
+  ],
+  const capabilities = [
+    "Automated asset discovery and inventory",
+    "Real-time health monitoring and alerts",
+    "Predictive maintenance scheduling",
+    "License compliance management",
+    "Security vulnerability assessment",
+    "Asset lifecycle optimization",
+    "Cost allocation and tracking",
+    "Integration with existing IT tools"
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+=======
+      description: "Reduction in IT asset costs"
+    },
+    {
+      icon: Clock,
+      title: "Time Savings",
+      value: "60%",
+      description: "Faster asset management"
+    },
+    {
+      icon: Shield,
+      title: "Security Improvement",
+      value: "90%",
+      description: "Better security compliance"
+    },
+    {
+      icon: TrendingUp,
+      title: "Efficiency Boost",
+      value: "200%",
+      description: "Increased operational efficiency"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
       } catch (error) {
     console.error("Error:", error);
@@ -311,6 +392,10 @@ export default AIPoweredITAssetManagement;
         <meta property="og:url" content="https://ziontechgroup.com/ai-powered-it-asset-management" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -334,6 +419,67 @@ export default AIPoweredITAssetManagement;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
+=======
+=======
+=======
+      description: "Reduction in IT asset costs";
+    },
+    {
+      icon: Clock,
+      title: "Time Savings",
+      value: "60%",
+      description: "Faster asset management";
+    },
+    {
+      icon: Shield,
+      title: "Security Improvement",
+      value: "90%",
+      description: "Better security compliance";
+    },
+    {
+      icon: TrendingUp,
+      title: "Efficiency Boost",
+      value: "200%",
+      description: "Increased operational efficiency";
+    }
+  ],
+  const capabilities = [;
+    "Automated asset discovery and inventory",
+    "Real - time health monitoring and alerts",
+    "Predictive maintenance scheduling",
+    "License compliance management",
+    "Security vulnerability assessment",
+    "Asset lifecycle optimization",
+    "Cost allocation and tracking",
+    "Integration with existing IT tools";
+  ],
+  return (
+    <>;
+      <Head>;
+        <title > AI - Powered IT Asset Management - Zion Tech Group</title>;
+        <meta name="description" content="Revolutionary AI - powered IT asset management platform that provides intelligent discovery, monitoring, and optimization of all your IT infrastructure and assets." />;
+        <meta name="keywords" content="IT asset management, AI monitoring, asset discovery, IT infrastructure, predictive maintenance" />;
+        <meta property="og:title" content="AI - Powered IT Asset Management - Zion Tech Group" />;
+        <meta property="og:description" content="Revolutionary AI - powered IT asset management platform." />;
+        <meta property="og:type" content="website" />;
+        <meta property="og:url" content="https://ziontechgroup.com / ai - powered - it - asset - management" />;
+      </Head>;
+      <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - indigo - 900 to - slate - 900">;
+        {/* Hero Section */}
+        <section className="relative overflow - hidden py - 20 px - 4 sm:px - 6 lg:px - 8">;
+          <div className="absolute inset - 0 bg - gradient - to - r from - indigo - 600 / 20 to - purple - 600 / 20"></div>;
+          <div className="relative max - w-7xl mx - auto text - center">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+
+
+                Transform your IT operations with intelligent asset management that discovers,
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 Transform your IT operations with intelligent asset management that discovers, 
                 Transform your IT operations with intelligent asset management that discovers,
 
@@ -575,10 +721,82 @@ const AIPoweredITAssetManagement = () => {;
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto">;
             <motion.div;
+<<<<<<< HEAD
               initial={{ opacity: 0, coordinate_y: 20 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+=======
+
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Revolutionary Features
+              </h2>
+              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+                Experience the future of IT asset management with our AI-powered platform
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <motion.div
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               className="text - center mb - 16";
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
@@ -591,11 +809,31 @@ const AIPoweredITAssetManagement = () => {;
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
               {features.map ((feature, index) => (
                 <motion.div;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50 hover:border-indigo-500/50 transition-all duration-300"
+                >
+                  <div className={`inline-flex p-3 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-400">{feature.description}</p>
+                </motion.div>
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 900 / 50 p - 6 rounded - xl border border - slate - 700 / 50 hover:border - indigo - 500 / 50 transition - all duration - 300";
                 >;
                   <div className={`inline - flex p - 3 bg - gradient - to - r ${feature.color} rounded - lg mb - 4`}>;
@@ -607,6 +845,10 @@ const AIPoweredITAssetManagement = () => {;
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Asset Types Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - r from - slate - 800 / 50 to - slate - 900 / 50">;
           <div className="max - w-7xl mx - auto">;
@@ -615,9 +857,116 @@ const AIPoweredITAssetManagement = () => {;
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {assetTypes.map((assetType, index) => (
                 <motion.div
+=======
+
+
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </div>;
+          </div>;
+        </section>;
+        {/* Asset Types Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Comprehensive Asset Coverage
+              </h2>
+              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+                Manage every type of IT asset across your entire infrastructure
+              </p>
+            </motion.div>
+
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {assetTypes.map((assetType, index) => (
+                <motion.div
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               className="text - center mb - 16";
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
@@ -630,11 +979,28 @@ const AIPoweredITAssetManagement = () => {;
             <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
               {asset_types.map ((asset_type, index) => (
                 <motion.div;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   key={index}
                   initial={{ opacity: 0, coordinate_x: -20 }}
                   whileInView={{ opacity: 1, coordinate_x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  className="flex items-center space-x-3"
+                >
+                  <CheckCircle className="w-6 h-6 text-indigo-400 flex-shrink-0" />
+                  <span className="text-gray-300">{assetType}</span>
+                </motion.div>
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   className="flex items - center space - x-3";
                 >;
                   <CheckCircle className="w - 6 h - 6 text - indigo - 400 flex - shrink - 0" />;
@@ -643,6 +1009,10 @@ const AIPoweredITAssetManagement = () => {;
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Benefits Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto">;
@@ -651,6 +1021,111 @@ const AIPoweredITAssetManagement = () => {;
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
+=======
+
+
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </div>;
+          </div>;
+        </section>;
+        {/* Benefits Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Measurable Results
+              </h2>
+              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+                See the real impact of AI-powered asset management on your IT operations
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <motion.div
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               className="text - center mb - 16";
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
@@ -663,11 +1138,34 @@ const AIPoweredITAssetManagement = () => {;
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
               {benefits.map ((benefit, index) => (
                 <motion.div;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  className="text-center"
+                >
+                  <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50">
+                    <div className="inline-flex p-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg mb-4">
+                      <benefit.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <div className="text-3xl font-bold text-indigo-400 mb-2">{benefit.value}</div>
+                    <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
+                    <p className="text-gray-400 text-sm">{benefit.description}</p>
+                  </div>
+                </motion.div>
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   className="text - center";
                 >;
                   <div className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 900 / 50 p - 6 rounded - xl border border - slate - 700 / 50">;
@@ -682,6 +1180,10 @@ const AIPoweredITAssetManagement = () => {;
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Capabilities Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - r from - slate - 800 / 50 to - slate - 900 / 50">;
           <div className="max - w-7xl mx - auto">;
@@ -690,6 +1192,111 @@ const AIPoweredITAssetManagement = () => {;
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
+=======
+
+
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </div>;
+          </div>;
+        </section>;
+        {/* Capabilities Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Advanced Capabilities
+              </h2>
+              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+                Comprehensive asset management capabilities powered by artificial intelligence
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {capabilities.map((capability, index) => (
+                <motion.div
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               className="text - center mb - 16";
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
@@ -702,11 +1309,27 @@ const AIPoweredITAssetManagement = () => {;
             <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
               {capabilities.map ((capability, index) => (
                 <motion.div;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   key={index}
                   initial={{ opacity: 0, coordinate_x: -20 }}
                   whileInView={{ opacity: 1, coordinate_x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  className="flex items-center space-x-3"
+                >
+                  <CheckCircle className="w-6 h-6 text-indigo-400 flex-shrink-0" />
+                  <span className="text-gray-300">{capability}</span>
+                </motion.div>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               ))  } catch (error) {
     console.error("Error:", error);
@@ -746,6 +1369,11 @@ const AIPoweredITAssetManagement = () => {;
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   className="flex items - center space - x-3";
                 >;
                   <CheckCircle className="w - 6 h - 6 text - indigo - 400 flex - shrink - 0" />;
@@ -762,7 +1390,14 @@ const AIPoweredITAssetManagement = () => {;
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 };
+=======
+
+};
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default AIPoweredITAssetManagement;
             >;
               <h2 className="text - 3xl md: text - 4xl font - bold text - white mb - 6">;
@@ -788,6 +1423,7 @@ export default AIPoweredITAssetManagement;
 },
 export default AIPoweredITAssetManagement,
 ;
+<<<<<<< HEAD
 
 },
 
@@ -2061,3 +2697,11 @@ export default AIPoweredITAssetManagement,
   );
 },;
 export default AIPoweredITAssetManagement;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+},
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

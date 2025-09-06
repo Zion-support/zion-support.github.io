@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Header } from '@/components/Header'
 import { SEO } from '@/components/SEO'
@@ -28,6 +29,8 @@ import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -78,6 +81,7 @@ import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function InstantMessaging() {
   const schema = {
+<<<<<<< HEAD
 
   const schema = {
     '@context': 'https://schema.org'
@@ -95,6 +99,14 @@ export default function InstantMessaging() {
         description='Negotiate deals and collaborate instantly with real-time chat.'
         keywords='real-time messaging, Socket.IO chat, project communication'
         canonical='https://app.ziontechgroup.com/features/instant-messaging'
+=======
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Instant Messaging",
+    "description": "Chat in real time with clients and freelancers using Socket.IO based messaging.",
+    "url": "https://app.ziontechgroup.com/features/instant-messaging"
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   };
 
   return (
@@ -131,6 +143,7 @@ export default function InstantMessaging() {
             </div>;
           </div>;
 
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import Link from 'next/link',
 export default function InstantMessaging() {
@@ -149,6 +162,8 @@ export default function InstantMessaging() {
         description='Negotiate deals and collaborate instantly with real-time chat.'
         keywords='real-time messaging, Socket.IO chat, project communication'
         canonical='https://app.ziontechgroup.com/features/instant-messaging'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         title="Instant Messaging"
         description="Negotiate deals and collaborate instantly with real-time chat."
         keywords="real-time messaging, Socket.IO chat, project communication"
@@ -161,10 +176,13 @@ export default function InstantMessaging() {
       <script
         type="application/ld+json"
 
+<<<<<<< HEAD
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
@@ -198,6 +216,7 @@ export default function InstantMessaging() {
               <p className="text-zion-slate-light">You can mute rooms or disable notifications in your account settings.</p>
             </div>
           </div>
+<<<<<<< HEAD
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/open-app'>Start Chatting</Link>            </Button>      />
@@ -237,6 +256,11 @@ export default function InstantMessaging() {
               <p className="text-zion-slate-light">You can mute rooms or disable notifications in your account settings.</p>
             </div>
           </div>
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="text-center">
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
@@ -285,8 +309,14 @@ export default function InstantMessaging() {
       </main>
     </>
   )
+<<<<<<< HEAD
 }
 ;
+=======
+
+;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -322,6 +352,7 @@ export default function InstantMessaging() {;
             Communicate with partners and support staff instantly from any device.;
           </p>;
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">;
+<<<<<<< HEAD
             <img;
               src="https://placehold.co/800x400";
               alt="Screenshot of chat interface";
@@ -348,12 +379,26 @@ export default function InstantMessaging() {;
           <div className="text-center">;
             <Button size="lg" className="bg-zion-purple text-white" asChild>;
               <Link href="/open-app">Start Chatting</Link>;
+=======
+            <img
+              src="https://placehold && placehold.co/800x400"
+              alt="Screenshot of chat interface"
+              className="object-cover"
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </Button>;
           </div>;
         </div>;
       </main>;
+<<<<<<< HEAD
     </>;
   );
 }
 ;
 ;
+=======
+
+
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

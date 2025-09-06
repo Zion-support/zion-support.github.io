@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 };
 export default function InviteBanner(): any ({;
   message,;
@@ -52,6 +53,10 @@ function InviteBanner() {
         >          Join Meetingtype Props = {
   message: string
   message: string,;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onJoin?: () => void;
   canJoin?: boolean
 }
@@ -62,9 +67,20 @@ function InviteBanner() {
 };
 export default function InviteBanner(): any ({ message, onJoin, canJoin = true }: Props) {;
   return (
+<<<<<<< HEAD
     </div>;
   );
 }
+=======
+    <div className="w-full bg-gray-900 text-white p-3 rounded border border-gray-700 flex items-center justify-between">;
+      <span className="text-sm">{message}</span>;
+      {onJoin && (;
+        <button onClick={onJoin} disabled={!canJoin} className={`px-3 py-2 rounded ${canJoin ? 'bg-cyan-600 text-white' : 'bg-gray-700 text-gray-400'}`}>;
+          Join Meeting;
+        </button>;
+      )}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 type Props = {
   message: string,
@@ -72,6 +88,7 @@ type Props = {
   can_join?: boolean;
 }
 
+<<<<<<< HEAD
     </div>
   );
 
@@ -112,3 +129,12 @@ function InviteBanner() {
   );
 }
 }
+=======
+=======
+
+    </div>
+  );
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

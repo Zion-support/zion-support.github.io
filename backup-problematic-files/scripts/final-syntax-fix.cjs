@@ -3,11 +3,14 @@ const fs = require('fs');
 const path = require('path');
 <<<<<<< HEAD
 console.log('🔧 Final Syntax Fix');
+<<<<<<< HEAD
 console.log('====');
 =======
 
 console.log('🔧 Final Syntax Fix');
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Function to fix specific syntax errors
 function fixSpecificErrors(content) {
   return content

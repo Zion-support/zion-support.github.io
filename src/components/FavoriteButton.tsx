@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import React from 'react'
 import { Heart } from 'lucide-react'
@@ -13,11 +14,14 @@ import {
   TooltipProvider
   TooltipTrigger
 } from '@/components/ui/tooltip'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 return (
     <>;
       <TooltipProvider>;
         <Tooltip>;
 
+<<<<<<< HEAD
 interface FavoriteButtonProps {
   itemId: string;
   className?: string
@@ -121,6 +125,22 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
       // Add to favorites`
       // console.log(`Added ${itemType} ${itemId} to favorites`)}  }
   return ()
+=======
+                )}              />;
+            </button>;
+          </TooltipTrigger>;
+          {!isAuthenticated && <TooltipContent>Login required</TooltipContent>}
+        </Tooltip>;
+      </TooltipProvider>;
+      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
+    </>;
+  );
+}
+      // Add to favorites`;
+      // console && console.log(`Added ${itemType} ${itemId} to favorites`)}  };
+  return ();
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <button
       onClick = {handleToggleFavorite}`
       className={`absolute top-2 right-2 p-2 rounded-full transition-all duration-300 ${isFavorited'
@@ -128,7 +148,13 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
           : 'bg-zion-blue-dark/80 hover:bg-zion-cyan text-white'`
 } ${className}`}
       aria-label={isFavorited ? 'Remove from favorites' : 'Add to favorites'}
+<<<<<<< HEAD
     >
+=======
+
+     aria-label="Button">;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <Heart`
         className={`w-4 h-4 transition-all duration-300 ${
           isFavorited ? 'fill-current' : ''`
@@ -142,6 +168,7 @@ className: {`w-4 h-4 transition-all duration-300 ${
     </button>;) }
 '`
 }
+<<<<<<< HEAD
               className={cn(
                 'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors',
                 className
@@ -165,6 +192,56 @@ className: {`w-4 h-4 transition-all duration-300 ${
 
           <TooltipTrigger as_child>;
             <button;
+=======
+
+          <TooltipTrigger as_child>;
+            <button;
+              class_name = {cn (
+                'absolute top - 2 right - 2 z - 10 p - 2 rounded - full bg - zion - blue - dark / 80 hover:bg - zion - blue - light / 30 transition - colors',
+                class_name)}
+              on_click={handle_click}
+              aria - label={
+                active ? 'Remove from favorites' : 'Save to favorites';
+              }            >;
+              <Heart;
+                class_name = {cn (
+                  'h - 4 w - 4 transition - transform duration - 200',
+                  active;
+                    ? 'fill - red - 500 text - red - 500 scale - 110';
+                    : 'text - zion - slate')}              />;
+            </button>;
+          </TooltipTrigger>;
+          {!is_authenticated && <TooltipContent > Login required</TooltipContent>}
+        </Tooltip>;
+      </TooltipProvider>;
+      <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
+    </>);
+}
+      // Add to favorites`;
+      // console.log (`Added ${item_type} ${item_id} to favorites`)}  }
+  return ();
+    <button;
+      on_click = {handleToggleFavorite}`;
+      className={`absolute top - 2 right - 2 p - 2 rounded - full transition - all duration - 300 ${is_favorited';
+          ? 'bg - red - 500 hover:bg - red - 600 text - white'';
+          : 'bg - zion - blue - dark / 80 hover:bg - zion - cyan text - white'`;
+} ${class_name}`}
+      aria - label={is_favorited ? 'Remove from favorites' : 'Add to favorites'}
+    >;
+      <Heart`;
+        className={`w - 4 h - 4 transition - all duration - 300 ${
+          is_favorited ? 'fill - current' : ''`;
+}`}
+      />    </button>)}`;
+class_name: {`w - 4 h - 4 transition - all duration - 300 ${
+          is_favorited ? 'fill - current' : '';`;
+}`}
+      />;
+    </button>) }
+'`;
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -173,6 +250,7 @@ className: {`w-4 h-4 transition-all duration-300 ${
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
+<<<<<<< HEAD
               className={cn(;
                 'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors';
                 className;
@@ -197,3 +275,6 @@ className: {`w-4 h-4 transition-all duration-300 ${
 }
 ;
             <button
+=======
+            <button
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

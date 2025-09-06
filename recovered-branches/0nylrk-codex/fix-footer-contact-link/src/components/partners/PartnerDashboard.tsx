@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {BarChart, DollarSign, LineChart, TrendingUp, Users} from "lucide-react";
@@ -50,6 +51,8 @@ export function PartnerDashboard() {
     totalRevenue: 850.0
     pendingRevenue: 200.0
   }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -58,6 +61,12 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button",
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from "lucide-react",
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
   const stats = {
@@ -65,6 +74,7 @@ export function PartnerDashboard() {
     pendingReferrals: 8,
     completedReferrals: 34,
     conversionRate: 18.5,
+<<<<<<< HEAD
 totalRevenue: 850.00,
 pendingRevenue: 200.00;
   };
@@ -167,6 +177,9 @@ pendingRevenue: 200.00;
       </Card>
     </div>
   return (
+=======
+    totalRevenue: 850.00,
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   );
 }
@@ -279,6 +292,7 @@ export function PartnerDashboard() {;
 }
     </div>);
 }
+<<<<<<< HEAD
     </div>);
 }
     </div>;
@@ -309,3 +323,6 @@ return (<div className="space-y-6" > {
 
 }
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

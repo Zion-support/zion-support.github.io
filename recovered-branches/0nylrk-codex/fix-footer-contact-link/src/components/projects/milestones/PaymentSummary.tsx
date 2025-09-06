@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import React from 'react',;
 import { Milestone } from '@/hooks/useMilestones',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -30,6 +31,11 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
     .filter((m) => m.status === "paid")
     .reduce((sum, m) => sum + parseFloat(m.amount.toString()), 0)
     .toFixed(2);
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react',;
 import { Milestone } from '@/hooks/useMilestones',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -37,11 +43,18 @@ import { CreditCard } from 'lucide-react',;
 interface PaymentSummaryProps {;
   milestones: Milestone[],;
   paymentTerms: string | null;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {
   const totalPayment = milestones.reduce(
     (sum, m) => sum + parseFloat(m.amount.toString()), 
+<<<<<<< HEAD
     0
   ).toFixed(2),
 
@@ -52,6 +65,12 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
   
 0;
   ).toFixed(2);
+=======
+
+    0
+  ).toFixed(2),
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   
   const paidAmount = milestones
     .filter(m => m.status === 'paid')
@@ -60,6 +79,7 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
       0
     ).toFixed(2),
 
+<<<<<<< HEAD
 import React from "react";
 import { Milestone } from "@/hooks/useMilestones";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -82,6 +102,10 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
     .reduce((sum, m) => sum + parseFloat(m.amount.toString()), 0)
     .toFixed(2);
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <Card className="mb-8 bg-muted/30">
       <CardHeader className="pb-3">
@@ -95,13 +119,17 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
             <p className="text-sm text-muted-foreground mb-1">Total Payment</p>
             <p className="text-2xl font-semibold">${totalPayment}</p>
           </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div>
             <p className="text-sm text-muted-foreground mb-1">Payment Terms</p>
             <p className="font-medium capitalize">
               {paymentTerms |"Not specified"}
             </p>
           </div>
+<<<<<<< HEAD
 <div>
             <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
 
@@ -117,17 +145,35 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
 );
 }
   );
+=======
+          <div>
+            <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
+
+import {Milestone} from '@/hooks/useMilestones';
+import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
+import {CreditCard} from 'lucide-react';
+interface PaymentSummaryProps {;
+  milestones: Milestone[],;
+  paymentTerms: string | null;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
             <p className="font-medium">
               ${paidAmount}
+<<<<<<< HEAD
   )
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </p>;
           </div>;
         </div>;
       </CardContent>;
     </Card>;
   );
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             <p className="font-medium">
               ${paidAmount}
@@ -183,6 +229,7 @@ export const PaymentSummary: React.FC < PaymentSummaryProps> = ({
     </Card>);
 }
 ;
+<<<<<<< HEAD
 
 import React from 'react',;
 import { Milestone } from '@/hooks/useMilestones',;
@@ -248,3 +295,6 @@ export const PaymentSummary:React.FC<PaymentSummaryProps> = ({ milestones, payme
 };
 
 };
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

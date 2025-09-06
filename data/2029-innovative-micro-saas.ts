@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 export interface InnovativeMicroSaas2029 {
 
 export interface InnovativeMicroSaas2029 {
   id: string;
 export interface InnovativeMicroSaas2029 {  id: string;
+=======
+
+export interface InnovativeMicroSaas2029 {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   name: string;
   tagline: string;
   price: string;
@@ -14,10 +20,19 @@ export interface InnovativeMicroSaas2029 {  id: string;
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
     address: string;
   };
     address: string;
   };
+=======
+
+
+    address: string;
+  };
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export interface InnovativeMicroSaas2029 {;
   id: string,;
   name: string,;
@@ -31,6 +46,12 @@ export interface InnovativeMicroSaas2029 {;
   contactInfo: {;
     mobile: string,;
     email: string,;
+<<<<<<< HEAD
+=======
+    address: string;
+  }
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -40,6 +61,10 @@ export interface InnovativeMicroSaas2029 {;
 export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [
   {
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     address: string;
   }
 }
@@ -66,12 +91,22 @@ export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [;
     category: 'Innovative Micro SAAS 2029',
     real_implementation: true,
     contact_info: {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
 ];      mobile: "+1 302 464 0950";
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     id: "2029-innovative-micro-saas",
     name: "2029 Innovative Micro SAAS Platform",
@@ -94,6 +129,10 @@ export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [;
     }
   }
 ];
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],

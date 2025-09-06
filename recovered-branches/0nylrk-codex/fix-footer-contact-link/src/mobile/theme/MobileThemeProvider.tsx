@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react";
 import { useTheme } from "@/hooks/useTheme";
 interface MobileThemeProviderProps {
@@ -17,6 +18,8 @@ interface MobileThemeProviderProps {
 import React from "react",;
 import { useTheme } from "@/hooks/useTheme",;
 interface MobileThemeProviderProps {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from './react';
 import { use_theme } from '@/hooks / use_theme';
 
@@ -52,6 +55,7 @@ function MobileThemeProvider() {
       {children}
     </div>);
 }
+<<<<<<< HEAD
 
 import React from "react",;
 import { useTheme } from "@/hooks/useTheme",;
@@ -94,3 +98,6 @@ export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
     </div>
   )
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

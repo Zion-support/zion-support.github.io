@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface AdvancedITService {
 export interface AdvancedITService {;
   id: string;
@@ -144,6 +145,13 @@ export const advancedITServices: AdvancedITService[] = [;
     reviews: 4,
   },
   {
+=======
+
+
+  {
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     id: 'edge - computing - orchestrator',
     name: 'Edge Computing Orchestrator',
     tagline: 'Intelligent edge computing management and optimization',
@@ -152,6 +160,10 @@ export const advancedITServices: AdvancedITService[] = [;
     description:;
       'Advanced edge computing orchestration platform that intelligently manages distributed computing resources, optimizes performance, and reduces latency for IoT and real - time applications.',
     features: [;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Intelligent resource allocation',
       'Real - time performance optimization',
       'Edge device management',
@@ -165,6 +177,11 @@ export const advancedITServices: AdvancedITService[] = [;
     ],
     popular: true,
     icon: '🌐',
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     color: 'from - green - 600 to - emerald - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / edge - computing - orchestrator',
@@ -206,6 +223,10 @@ export const advancedITServices: AdvancedITService[] = [;
     growth_rate: '250% annual growth',
     variant: 'edge - futuristic',
     contact_info: {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -220,6 +241,11 @@ export const advancedITServices: AdvancedITService[] = [;
     reviews: 89,
   },
   {
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     id: 'zero - trust - security - platform',
     name: 'Zero Trust Security Platform',
     tagline: 'Comprehensive zero trust security implementation',
@@ -228,6 +254,10 @@ export const advancedITServices: AdvancedITService[] = [;
     description:;
       'Enterprise - grade zero trust security platform implementing the latest security principles with continuous verification, micro - segmentation, and advanced threat detection.',
     features: [;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Continuous identity verification',
       'Micro - segmentation',
       'Advanced threat detection',
@@ -241,6 +271,11 @@ export const advancedITServices: AdvancedITService[] = [;
     ],
     popular: true,
     icon: '🛡️',
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     color: 'from - red - 600 to - orange - 700',
     text_color: 'text - red - 400',
     link: 'https://ziontechgroup.com / zero - trust - security - platform',
@@ -282,6 +317,10 @@ export const advancedITServices: AdvancedITService[] = [;
     growth_rate: '200% annual growth',
     variant: 'zero - trust - futuristic',
     contact_info: {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -296,6 +335,10 @@ export const advancedITServices: AdvancedITService[] = [;
     reviews: 45,
   },
   {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'AI-powered automation',
     id: 'ai - powered - devops - platform',
     name: 'AI - Powered DevOps Platform',
@@ -306,6 +349,10 @@ export const advancedITServices: AdvancedITService[] = [;
       'Revolutionary AI - powered DevOps platform that automates deployment, testing, and monitoring while providing intelligent insights and optimization recommendations.',
     features: [;
       'AI - powered automation',
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Intelligent testing',
       'Predictive monitoring',
       'Performance optimization',
@@ -318,6 +365,11 @@ export const advancedITServices: AdvancedITService[] = [;
     ],
     popular: true,
     icon: '⚡',
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     color: 'from - purple - 600 to - pink - 700',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / ai - powered - devops - platform',
@@ -361,6 +413,10 @@ export const advancedITServices: AdvancedITService[] = [;
     growth_rate: '180% annual growth',
     variant: 'ai - devops - futuristic',
     contact_info: {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -375,6 +431,11 @@ export const advancedITServices: AdvancedITService[] = [;
     reviews: 123,
   },
   {
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     id: 'blockchain - enterprise - platform',
     name: 'Blockchain Enterprise Platform',
     tagline: 'Enterprise - grade blockchain solutions and infrastructure',
@@ -383,6 +444,10 @@ export const advancedITServices: AdvancedITService[] = [;
     description:;
       'Complete enterprise blockchain platform providing secure, scalable, and compliant blockchain solutions for business applications, smart contracts, and decentralized systems.',
     features: [;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Enterprise blockchain networks',
       'Smart contract development',
       'Token management',
@@ -396,6 +461,11 @@ export const advancedITServices: AdvancedITService[] = [;
     ],
     popular: true,
     icon: '🔗',
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     color: 'from - yellow - 600 to - orange - 700',
     text_color: 'text - yellow - 400',
     link: 'https://ziontechgroup.com / blockchain - enterprise - platform',
@@ -437,6 +507,10 @@ export const advancedITServices: AdvancedITService[] = [;
     growth_rate: '300% annual growth',
     variant: 'blockchain - futuristic',
     contact_info: {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -451,6 +525,11 @@ export const advancedITServices: AdvancedITService[] = [;
     reviews: 34,
   },
   {
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     id: 'quantum - data - center',
     name: 'Quantum Data Center',
     tagline: 'Next - generation quantum - enhanced data center infrastructure',
@@ -459,6 +538,10 @@ export const advancedITServices: AdvancedITService[] = [;
     description:;
       'Revolutionary quantum - enhanced data center providing unprecedented performance, security, and efficiency through quantum computing integration and AI optimization.',
     features: [;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Quantum computing integration',
       'AI - powered optimization',
       'Advanced security',
@@ -472,6 +555,11 @@ export const advancedITServices: AdvancedITService[] = [;
     ],
     popular: true,
     icon: '🏢',
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 400',
     link: 'https://ziontechgroup.com / quantum - data - center',
@@ -513,6 +601,10 @@ export const advancedITServices: AdvancedITService[] = [;
     growth_rate: '150% annual growth',
     variant: 'quantum - infrastructure',
     contact_info: {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -527,6 +619,11 @@ export const advancedITServices: AdvancedITService[] = [;
     reviews: 6,
   },
   {
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     id: 'ai - powered - network - security',
     name: 'AI - Powered Network Security',
     tagline: 'Intelligent network security with AI threat detection',
@@ -535,6 +632,10 @@ export const advancedITServices: AdvancedITService[] = [;
     description:;
       'Advanced AI - powered network security platform providing real - time threat detection, automated response, and intelligent security analytics for enterprise networks.',
     features: [;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'AI threat detection',
       'Real - time monitoring',
       'Automated response',
@@ -548,6 +649,11 @@ export const advancedITServices: AdvancedITService[] = [;
     ],
     popular: true,
     icon: '🔒',
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     color: 'from - indigo - 600 to - purple - 700',
     text_color: 'text - indigo - 400',
     link: 'https://ziontechgroup.com / ai - powered - network - security',
@@ -589,6 +695,10 @@ export const advancedITServices: AdvancedITService[] = [;
     growth_rate: '180% annual growth',
     variant: 'ai - network - futuristic',
     contact_info: {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -603,6 +713,11 @@ export const advancedITServices: AdvancedITService[] = [;
     reviews: 89,
   },
   {
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     id: 'quantum - iot - platform',
     name: 'Quantum IoT Platform',
     tagline: 'Quantum - enhanced IoT with AI intelligence',
@@ -611,6 +726,10 @@ export const advancedITServices: AdvancedITService[] = [;
     description:;
       'Revolutionary quantum - enhanced IoT platform providing secure, intelligent, and scalable IoT solutions with quantum encryption and AI - powered analytics.',
     features: [;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Quantum encryption',
       'AI - powered analytics',
       'Real - time monitoring',
@@ -624,6 +743,11 @@ export const advancedITServices: AdvancedITService[] = [;
     ],
     popular: true,
     icon: '📱',
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     color: 'from - green - 600 to - teal - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / quantum - iot - platform',
@@ -665,6 +789,10 @@ export const advancedITServices: AdvancedITService[] = [;
     growth_rate: '250% annual growth',
     variant: 'quantum - iot - futuristic',
     contact_info: {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -679,6 +807,20 @@ export const advancedITServices: AdvancedITService[] = [;
     reviews: 123,
   },
   {
+<<<<<<< HEAD
+=======
+
+=======
+    id: 'ai - powered - cloud - migration',
+    name: 'AI - Powered Cloud Migration',
+    tagline: 'Intelligent cloud migration and optimization',
+    price: '$5, 999',
+    period: '/month',
+    description:;
+      'Advanced AI - powered cloud migration platform that intelligently analyzes, plans, and executes cloud migrations while optimizing costs and performance.',
+    features: [;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'AI migration planning',
       'Cost optimization',
       'Performance analysis',
@@ -692,6 +834,11 @@ export const advancedITServices: AdvancedITService[] = [;
     ],
     popular: true,
     icon: '☁️',
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     color: 'from - blue - 600 to - indigo - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / ai - powered - cloud - migration',
@@ -733,6 +880,10 @@ export const advancedITServices: AdvancedITService[] = [;
     growth_rate: '200% annual growth',
     variant: 'ai - migration - futuristic',
     contact_info: {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -830,6 +981,7 @@ export const advancedITServices: AdvancedITService[] = [;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -854,6 +1006,16 @@ export const advancedITServices: AdvancedITService[] = [;
   reviews: number
 }
     rating: 4.8
+=======
+
+
+    realImplementation: true;
+    implementationDetails: 'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.';
+    launchDate: '2024-10-01';
+    customers: 89;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     rating: 4 && 4.8,
     reviews: 45
       website: 'https://ziontechgroup.com';
@@ -865,12 +1027,23 @@ export const advancedITServices: AdvancedITService[] = [;
     rating: 4.8,
     reviews: 45;
   }
+<<<<<<< HEAD
 ;
+=======
+
+];
+
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export interface AdvancedITService {;
 
   }
 ];
+<<<<<<< HEAD
 ];
 ;
   }
@@ -1305,3 +1478,7 @@ export const advancedITServices: AdvancedITService[] = [;
     reviews: 45;
   }
 ];
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

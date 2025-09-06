@@ -43,6 +43,7 @@ export function matchIntent(query: string, articles: HelpArticle[]): IntentMatch
   // Add support functionality here;
   log_event: (event: any) => null,
   get_articles: () => [],
+<<<<<<< HEAD
 // Support utilities
 export const support = {
   // Add support functionality here
@@ -52,6 +53,8 @@ export const support = {
 }
   logEvent: (event: any) => null,
   getArticles: () => [],
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   getArticleById: (id: string) => null;
 };
 
@@ -59,8 +62,13 @@ export const logSupportEventToOperator = (event: any) => {
   // Add support event logging functionality here;
   return null;
 }
+<<<<<<< HEAD
 
 }
 };
 
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

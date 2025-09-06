@@ -9,4 +9,8 @@ const Accessibility-auditor = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Accessibility-auditor;
+=======
+export default Accessibility-auditor;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

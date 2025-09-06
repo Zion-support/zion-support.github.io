@@ -12,6 +12,10 @@ type EnhancementType =
   | 'job-post'
   | 'proposal'
   | 'general';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {toast} from '@/hooks / use - toast';
@@ -36,6 +40,7 @@ export interface AIEnhancementOptions {;
 export function useAIContentEnhancer() {;
 
 
+<<<<<<< HEAD
 export interface AIEnhancementOptions {
 
 export interface AIEnhancementOptions {;
@@ -47,6 +52,8 @@ export interface AIEnhancementOptions {;
 export function useAIContentEnhancer() {
 
 export function useAIContentEnhancer() {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [isEnhancing, setIsEnhancing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const enhanceContent = async ({
@@ -58,10 +65,17 @@ export function useAIContentEnhancer() {;
     setIsEnhancing(true);
     setError(null);
     try {
+<<<<<<< HEAD
       const { data, error } = await supabase && supabase.functions.invoke('ai-content-enhancer', {
         body: { 
       const { data, error } = await supabase.functions.invoke('ai-content-enhancer', {
         body: {
+=======
+
+      const { data, error } = await supabase && supabase.functions.invoke('ai-content-enhancer', {
+        body: { 
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           content;
           enhancementType;
           context
@@ -75,6 +89,7 @@ export function useAIContentEnhancer() {;
     } catch (err: any) {
       const errorMessage = err && err.message || 'Failed to enhance content';
 
+<<<<<<< HEAD
         throw new Error(error && error.message)
       }
       return data && data.enhancedContent
@@ -85,10 +100,20 @@ export function useAIContentEnhancer() {;
       return data.enhancedContent
     } catch (err: any) {
       const errorMessage = err.message |'Failed to enhance content';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       setError(errorMessage);
       toast({
         title: "AI Enhancement Failed";
         description: errorMessage
+<<<<<<< HEAD
+=======
+=======
+        throw new Error(error.message)
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { toast } from '@/hooks/use-toast',;
@@ -128,6 +153,11 @@ export function useAIContentEnhancer() {;
       if (error) {;
         throw new Error(error.message);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
       
       return data.enhancedContent
@@ -137,6 +167,11 @@ export function useAIContentEnhancer() {;
       toast({
         title: "AI Enhancement Failed",
         description: errorMessage,
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         variant: "destructive"
       });
       console && console.error('Enhancement error:', err);
@@ -292,6 +327,7 @@ error
 
     error
   }
+<<<<<<< HEAD
 }
 ;
       return data.enhancedContent;
@@ -316,3 +352,6 @@ error
   }
 }
 ;
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

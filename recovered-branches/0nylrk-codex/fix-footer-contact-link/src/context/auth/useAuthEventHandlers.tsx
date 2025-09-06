@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 import {toast} from "@/hooks/use-toast";
 import type { UserProfile } from "@/types/auth";
 import {checkNewRegistration} from "@/utils/authUtils";
@@ -12,6 +13,10 @@ import { useNavigate } from 'react-router-dom';
 import type { UserProfile } from "@/types/auth",
 import { checkNewRegistration } from "@/utils/authUtils",
 import { useNavigate } from 'react-router-dom',
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 /**
  * Custom hook for auth event handling
  */
@@ -30,6 +35,10 @@ export function useAuthEventHandlers(
     setTimeout(() => {
       if (mappedUser) {
         checkNewRegistration(mappedUser)
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       }
 
@@ -37,6 +46,7 @@ export function useAuthEventHandlers(
     // Check if user needs to complete onboarding
     if (!mappedUser.profileComplete && navigate) {
       setOnboardingStep('profile');
+<<<<<<< HEAD
       };
     }, 0);
       }
@@ -46,6 +56,8 @@ export function useAuthEventHandlers(
     // Check if user needs to complete onboarding
     if (!mappedUser.profileComplete && navigate) {
       setOnboardingStep('profile'),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast({
         title: "Complete your profile"
         description: "Please complete your profile information to get started"
@@ -58,14 +70,18 @@ export function useAuthEventHandlers(
 
 
 
+<<<<<<< HEAD
   }
   },
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleSignedOut = () => {
     toast({
       title: "Signed out"
       description: "You have been successfully logged out"
       variant: "default"})
+<<<<<<< HEAD
   }
   return {
     handleSignedIn;
@@ -93,31 +109,73 @@ export function useAuthEventHandlers(;
       title: "Welcome back!",;
       description: `You're now signed in as ${mappedUser.displayName || mappedUser.email}`,;
       variant: "default"}),;
+=======
+
+import {checkNewRegistration} from "@/utils/authUtils";
+import {useNavigate} from 'react-router-dom';
+/**;
+ * Custom hook for auth event handling;
+ */;
+export function useAuthEventHandlers(): any (;
+  setUser: React && React.Dispatch<React && React.SetStateAction<UserProfile | null>>,;
+  setOnboardingStep: React && React.Dispatch<React && React.SetStateAction<string | null>>;
+) {;
+  const navigate = useNavigate(),;
+
+  const handleSignedIn = (mappedUser: UserProfile) => {;
+    toast({;
+      title: "Welcome back!",;
+      description: `You're now signed in as ${mappedUser && mappedUser.displayName || mappedUser && mappedUser.email}`,;
+      variant: "default"}),;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Check for new registration and send welcome email if needed;
     setTimeout(() => {;
       if (mappedUser) {;
         checkNewRegistration(mappedUser);
       }
+<<<<<<< HEAD
     }, 0),;
     // Check if user needs to complete onboarding;
     if (!mappedUser.profileComplete && navigate) {;
       setOnboardingStep('profile'),;
+=======
+    }, 0);
+
+    // Check if user needs to complete onboarding;
+    if (!mappedUser && mappedUser.profileComplete && navigate) {;
+      setOnboardingStep('profile');
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast({;
         title: "Complete your profile",;
         description: "Please complete your profile information to get started",;
         variant: "default"}),;
       navigate('/onboarding');
     }
+<<<<<<< HEAD
   },;
+=======
+  };
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleSignedOut = () => {;
     toast({;
       title: "Signed out",;
       description: "You have been successfully logged out",;
       variant: "default"});
   };
+<<<<<<< HEAD
   return {;
     handleSignedIn;
     handleSignedOut;
+=======
+
+  return {;
+    handleSignedIn;
+    handleSignedOut;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { toast } from '@/hooks / use - toast';
 import type { UserProfile } from "@/types / auth";
 import { checkNewRegistration } from '@/utils / auth_utils';
@@ -176,6 +234,10 @@ if ( {) {
     handleSignedIn,
     handleSignedOut
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 }
 

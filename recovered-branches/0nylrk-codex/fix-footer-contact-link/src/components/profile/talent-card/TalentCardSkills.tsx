@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from "react",
 import { Badge } from "@/components/ui/badge",
@@ -16,6 +21,11 @@ import { Badge } from "@/components/ui/badge";
 import React from "react";
 import { Badge } from "@/components/ui/badge";
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface TalentCardSkillsProps {
   skills: string[] | undefined;
 }
@@ -26,6 +36,7 @@ export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
   // Get top skills (limit to 4)
 
 
+<<<<<<< HEAD
 // Get top skills (limit to 4);
   const topSkills = skills.slice(0, 4) || [];
   // Get top skills (limit to 4);
@@ -33,14 +44,27 @@ export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
   // Get top skills (limit to 4)
   const topSkills = skills.slice(0, 4) |[];
   const topSkills = skills.slice(0, 4) || [],
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   return (
     <div className="flex flex-wrap gap-1 mb-5">
       {topSkills.map((skill) => (
+<<<<<<< HEAD
+=======
+
+import {Badge} from "@/components/ui/badge";
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <Badge
           key={skill}
           className="bg-zion-purple/10 hover:bg-zion-purple/30 text-zion-purple border-0"
         >
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
 
@@ -98,6 +122,7 @@ function TalentCardSkills() {
         </Badge>)}
     </div>);
 }
+<<<<<<< HEAD
 
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
@@ -128,3 +153,6 @@ export function TalentCardSkills({ skills = [] } TalentCardSkillsProps) {;
     </div>
   );
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

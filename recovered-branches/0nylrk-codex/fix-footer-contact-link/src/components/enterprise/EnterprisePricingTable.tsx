@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Check, X} from "lucide-react";
@@ -27,6 +28,10 @@ import {
   TableHeader,
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function EnterprisePricingTable() {
 
   const plans = [
@@ -49,6 +54,7 @@ export function EnterprisePricingTable() {
         { name: "Dedicated success manager", included: false }]}
     {
 
+<<<<<<< HEAD
       name: "Business",;
       price: "$1,999";
 
@@ -65,10 +71,25 @@ export function EnterprisePricingTable() {
       price: "$1,999";
       name: "Business",
       price: "$1,999",
+=======
+
+      name: "Business",;
+      price: "$1,999";
+
+=======
+      name: "Business",
+      price: "$1,999",
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       billing: "/month",
       description: "Ideal for growing companies",
       users: "Up to 50 users",
       popular: true,
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       features: [
         { name: "Private hiring portal", included: true }
         { name: "Dedicated talent pool", included: true }
@@ -117,6 +138,16 @@ export function EnterprisePricingTable() {
                       {plan.popular && (
                         <Badge className="mb-2 bg-zion-purple">Most Popular</Badge>
 
+<<<<<<< HEAD
+=======
+import React from "react";
+import {Button} from "@/components/ui/button";
+import {Check, X} from "lucide-react";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Badge} from "@/components/ui/badge";
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Check, X } from "lucide-react",;
@@ -128,6 +159,10 @@ import {;
   TableHeader,;
   TableRow} from "@/components/ui/table",;
 import { Badge } from "@/components/ui/badge",;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function EnterprisePricingTable() {;
   const plans = [;
     {;
@@ -149,7 +184,11 @@ export function EnterprisePricingTable() {;
         { name: "Dedicated success manager", included: false }]},;
     {;
       name: "Business",;
+<<<<<<< HEAD
       price: "$1,999",;
+=======
+      price: "$1,999";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       billing: "/month",;
       description: "Ideal for growing companies",;
       users: "Up to 50 users",;
@@ -179,6 +218,7 @@ export function EnterprisePricingTable() {;
         { name: "Admin dashboard", included: true },;
         { name: "Team collaboration", included: true },;
         { name: "API access", included: true },;
+<<<<<<< HEAD
 
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -250,6 +290,12 @@ export function EnterprisePricingTable() {;
         { name: "Custom integrations", included: true };
         { name: "Dedicated success manager", included: true }]}];
   return (;
+=======
+        { name: "Custom integrations", included: true },;
+        { name: "Dedicated success manager", included: true }]}],;
+
+  return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <section id="pricing" className="py-20 px-4 md:px-6">;
       <div className="container mx-auto max-w-7xl">;
         <div className="text-center mb-12">;
@@ -258,12 +304,28 @@ export function EnterprisePricingTable() {;
             Choose the perfect plan for your team size and requirements;
           </p>;
         </div>;
+<<<<<<< HEAD
 ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="overflow-x-auto">;
           <Table className="border rounded-lg">;
             <TableHeader>;
               <TableRow>;
                 <TableHead className="w-[200px]">Plan Features</TableHead>;
+<<<<<<< HEAD
+=======
+                {plans && plans.map((plan) => (;
+                  <TableHead key={plan && plan.name} className="text-center">;
+                    <div className="flex flex-col items-center">;
+                      {plan && plan.popular && (;
+                        <Badge className="mb-2 bg-zion-purple">Most Popular</Badge>;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       )}
                       <span className="font-bold text-xl">{plan && plan.name}</span>;
                       <div className="flex items-baseline mt-1">;
@@ -421,6 +483,7 @@ function EnterprisePricingTable() {
       </div>;
     </section>);
 }
+<<<<<<< HEAD
 ;
         <div className="mt-8 text-center text-sm text-muted-foreground">;
           All plans include SSL security, 99.9% uptime SLA, and dedicated support;
@@ -600,3 +663,6 @@ features: [ return (<section id=" pricing"className="py-20 px-4 md:px-6"> plans.
     </section>
   )
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

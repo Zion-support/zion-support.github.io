@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 
@@ -16,11 +17,18 @@ interface AIEnhancementButtonProps {
   className?: string;
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
+=======
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Sparkles, Loader2, RefreshCw, Check, X} from '@/components/icons';
 import {useAIContentEnhancer, AIEnhancementOptions} from '@/hooks/useAIContentEnhancer';
 import {toast} from '@/hooks/use-toast';
+<<<<<<< HEAD
 interface AIEnhancementButtonProps {;
   options: AIEnhancementOptions,;
   onEnhanced: (enhancedContent: string) => void,;
@@ -30,6 +38,10 @@ interface AIEnhancementButtonProps {;
   size?: "default" | "sm" | "lg" | "icon";
   contentLength?: number;
 }
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function AIEnhancementButton(): any ({;
   options;
   onEnhanced;
@@ -42,6 +54,12 @@ export function AIEnhancementButton(): any ({;
   const { enhanceContent, isEnhancing } = useAIContentEnhancer();
   const [showActions, setShowActions] = useState(false);
   const [generatedContent, setGeneratedContent] = useState<string | null>(null);
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from 'react',
 import { Button } from '@/components/ui/button',
 import { Sparkles, Loader2, RefreshCw, Check, X } from '@/components/icons',
@@ -49,6 +67,10 @@ import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContent
 import { toast } from '@/hooks/use-toast',
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface AIEnhancementButtonProps {
   options: AIEnhancementOptions,
   onEnhanced: (enhancedContent: string) => void,
@@ -59,6 +81,7 @@ interface AIEnhancementButtonProps {
   contentLength?: number
 }
 
+<<<<<<< HEAD
 export function AIEnhancementButton({;
   options;
   onEnhanced;
@@ -93,6 +116,11 @@ export function AIEnhancementButton({
 
 
   
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleEnhance = async () => {
     if ((!options.content |options.content.trim().length < contentLength) &&
         (!options.context |options.context.trim().length < contentLength)) {
@@ -102,6 +130,7 @@ export function AIEnhancementButton({
         variant: "destructive"
 
 
+<<<<<<< HEAD
   };
 
       });
@@ -114,6 +143,13 @@ export function AIEnhancementButton({
     }
   }
   };
+=======
+=======
+
+  };
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }),
       return
 import { useState } from 'react',;
@@ -143,24 +179,56 @@ export function AIEnhancementButton({;
   const { enhanceContent, isEnhancing } = useAIContentEnhancer(),;
   const [showActions, setShowActions] = useState(false),;
   const [generatedContent, setGeneratedContent] = useState<string | null>(null),;
+<<<<<<< HEAD
   const handleEnhance = async () => {;
     if ((!options && options.content || options && options.content.trim().length < contentLength) && ;
         (!options && options.context || options && options.context.trim().length < contentLength)) {;
   const handleEnhance = async () => {;
     if ((!options.content || options.content.trim().length < contentLength) &&;
         (!options.context || options.context.trim().length < contentLength)) {;
+=======
+
+  const handleEnhance = async () => {;
+    if ((!options && options.content || options && options.content.trim().length < contentLength) && ;
+        (!options && options.context || options && options.context.trim().length < contentLength)) {;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast({;
         title: "Not enough content",;
         description: `Please enter at least ${contentLength} characters before enhancing.`,;
         variant: "destructive";
+<<<<<<< HEAD
 
 
   
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      });
+      return;
+    }
+
+
+    const enhancedContent = await enhanceContent(options);
+
+    if (enhancedContent) {;
+
+      setGeneratedContent(enhancedContent);
+      setShowActions(true);
+    }
+
+  },
+
+
+
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleAccept = () => {
     if (generatedContent) {
       onEnhanced(generatedContent);
       setShowActions(false);
       setGeneratedContent(null);
+<<<<<<< HEAD
       }),;
       return;
     }
@@ -177,21 +245,35 @@ export function AIEnhancementButton({;
       onEnhanced(generatedContent),
       setShowActions(false),
       setGeneratedContent(null),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast({
         title: "Content applied"
         description: "AI-enhanced content has been applied."})
     }
 
+<<<<<<< HEAD
   }
   const handleRegenerate = async () => {
     await handleEnhance()
   }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
   
   const handleRegenerate = async () => {
     await handleEnhance()
   },
   
+<<<<<<< HEAD
+=======
+
+
+  const handleCancel = () => {
+    setShowActions(false);
+    setGeneratedContent(null)
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   };
 
@@ -199,6 +281,7 @@ export function AIEnhancementButton({;
   },
   
 
+<<<<<<< HEAD
   const handleCancel = () => {
     setShowActions(false),
     setGeneratedContent(null)
@@ -206,6 +289,8 @@ export function AIEnhancementButton({;
 
   },
   
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (showActions) {
     return (
       <div className="flex gap-2 items-center">
@@ -250,24 +335,45 @@ export function AIEnhancementButton({;
   return (
     <Button
       type="button"
+<<<<<<< HEAD
   },;
   const handleAccept = () => {;
     if (generatedContent) {;
       onEnhanced(generatedContent),;
       setShowActions(false),;
       setGeneratedContent(null),;
+=======
+
+  },;
+
+  const handleAccept = () => {;
+    if (generatedContent) {;
+      onEnhanced(generatedContent);
+      setShowActions(false);
+      setGeneratedContent(null);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast({;
         title: "Content applied",;
         description: "AI-enhanced content has been applied."});
     }
+<<<<<<< HEAD
   },;
   const handleRegenerate = async () => {;
     await handleEnhance();
   },;
+=======
+  };
+
+  const handleRegenerate = async () => {;
+    await handleEnhance();
+  };
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleCancel = () => {;
     setShowActions(false);
     setGeneratedContent(null);
   };
+<<<<<<< HEAD
   if (showActions) {;
     return (;
       <div className="flex gap-2 items-center">;
@@ -281,34 +387,64 @@ export function AIEnhancementButton({;
           <Check className="h-4 w-4 mr-1" />
           Apply
         </Button>
+=======
+
+  if (showActions) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    return (
+      <div className="flex gap-2 items-center">;
+        <Button
+          type="button"
+          variant="ghost"
+          size="sm"
+          onClick={handleAccept}
+          className="text-green-500 hover:text-green-700 hover:bg-green-100/20">;
+          <Check className="h-4 w-4 mr-1" />;
+          Apply;
+        </Button>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <Button
           type="button"
           variant="ghost"
           size="sm"
           onClick={handleRegenerate}
           className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20"
+<<<<<<< HEAD
           disabled={isEnhancing}
         >;
+=======
+          disabled={isEnhancing}>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {isEnhancing ? (;
             <Loader2 className="h-4 w-4 mr-1 animate-spin" />;
           ) : (;
             <RefreshCw className="h-4 w-4 mr-1" />;
           )}
+<<<<<<< HEAD
           Regenerate
         </Button>
+=======
+          Regenerate;
+        </Button>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <Button
           type="button"
           variant="ghost"
           size="sm"
           onClick={handleCancel}
+<<<<<<< HEAD
           className="text-gray-500 hover: text-gray-700 hover:bg-gray-100/20";
         >;
+=======
+          className="text-gray-500 hover: text-gray-700 hover:bg-gray-100/20">;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <X className="h-4 w-4 mr-1" />;
           Cancel;
         </Button>;
       </div>;
     );
   }
+<<<<<<< HEAD
 ;
   return (;
     <Button;
@@ -328,6 +464,8 @@ export function AIEnhancementButton({;
     </Button>
   )
   },;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     const enhancedContent = await enhanceContent(options);
     if (enhancedContent) {;
@@ -538,6 +676,7 @@ return
 }
 ;
 
+<<<<<<< HEAD
 }
 };
 <Button type="button" variant="ghost" size="sm" onClick= {
@@ -550,3 +689,6 @@ return
 }
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

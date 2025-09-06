@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import React from 'react',
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom";
@@ -20,6 +21,11 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom",
 import { ArrowLeft } from "lucide-react",
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface ProfileErrorStateProps {
   error: string | null;
 }
@@ -27,7 +33,11 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
   return (
     <div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4">
       <div className="text-red-400 mb-4 text-xl">
+<<<<<<< HEAD
 {error |"Something went wrong"}
+=======
+        {error |"Something went wrong"}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </div>
       <Button asChild>
         <Link
@@ -39,6 +49,7 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
         </Link>
       </Button>
     </div>
+<<<<<<< HEAD
   );
 }
   )
@@ -59,6 +70,19 @@ interface ProfileErrorStateProps {;
 ;
 export function ProfileErrorState({ error } ProfileErrorStateProps) {;
   return (;
+=======
+
+import React from 'react';
+import {Button} from "@/components/ui/button";
+import {Link} from "react-router-dom";
+import {ArrowLeft} from "lucide-react";
+interface ProfileErrorStateProps {;
+  error: string | null;
+}
+
+export function ProfileErrorState(): any ({ error }: ProfileErrorStateProps) {;
+  return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4">;
       <div className="text-red-400 mb-4 text-xl">{error || "Something went wrong"}</div>;
       <Button asChild>;
@@ -105,6 +129,7 @@ function ProfileErrorState() {
 
 ;
 
+<<<<<<< HEAD
   );}
  interface ProfileErrorStateProps {
   error: string | null 
@@ -124,3 +149,6 @@ function ProfileErrorState() {
 }
 ;
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

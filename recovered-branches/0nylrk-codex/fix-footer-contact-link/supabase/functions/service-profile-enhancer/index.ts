@@ -1,22 +1,44 @@
+<<<<<<< HEAD
 import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server ;
 
 
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts";
+=======
+
+import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server ;
+
+=======
+import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface ServiceProfileData {
   name: string;
   title: string;
   bio: string;
 
+<<<<<<< HEAD
   services?: string[]
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts";
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface ServiceProfileData {
   name: string,
   title: string,
   bio: string,
   services?: string[],
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   location: string
 }
 serve(async (req) => {
@@ -26,16 +48,28 @@ serve(async (req) => {
     const headers = {
 
 
+<<<<<<< HEAD
       "Access-Control-Allow-Origin": "*";
       "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type";
       "Content-Type": "application/json"}
       "Access-Control-Allow-Origin": "*";
       "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type";
       "Content-Type": "application/json"}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
       "Content-Type": "application/json"},
 
+<<<<<<< HEAD
+=======
+
+
+    // Handle CORS preflight request
+    if (req && req.method === "OPTIONS") {
+      return new Response(null, { headers, status: 204 })
+    }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
     const reqData = await req && req.json();
@@ -51,6 +85,7 @@ serve(async (req) => {
     const providerData = reqData.providerData as ServiceProfileData,
     
 
+<<<<<<< HEAD
     // Handle CORS preflight request
     if (req.method === "OPTIONS") {
       return new Response(null, { headers, status: 204 })
@@ -61,15 +96,20 @@ serve(async (req) => {
     const reqData = await req.json(),
     const providerData = reqData.providerData as ServiceProfileData,
     
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Validate input
     if (!providerData |!providerData.bio) {
       return new Response(
         JSON.stringify({
 
+<<<<<<< HEAD
           error: "Missing required service provider data"});
         { headers, status: 400 }
       )
     }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           error: "Missing required service provider data"}),
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
 interface ServiceProfileData {;
@@ -77,6 +117,51 @@ interface ServiceProfileData {;
   title: string,;
   bio: string,;
   services?: string[],;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  location: string;
+}
+serve (async (req) => {
+  try {
+    // CORS headers;
+    const headers = {
+      "Access - Control - Allow - Origin": "*";
+      "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type";
+      "Content - Type": "application / json"}
+;
+    // Handle CORS preflight request;
+    // Check condition
+if ( {) {
+  $2
+}
+      return new Response (null, { headers, status: 204 });
+    }
+    const req_data = await req.json ();
+    const provider_data = req_data.provider_data as ServiceProfileData;
+;
+    // Validate input;
+    // Check condition
+if ( {) {
+  $2
+}
+      return new Response (
+        JSON.stringify ({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+          error: "Missing required service provider data"});
+        { headers, status: 400 }
+      );
+    }
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    // Get OpenAI API key from environment
+    const apiKey = Deno && Deno.env.get("OPENAI_API_KEY");
+    if (!apiKey) {
+      return new Response(
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     // Get OpenAI API key from environment;
     const api_key = Deno.env.get ("OPENAI_API_KEY");
@@ -86,6 +171,7 @@ if ( {) {
 }
       return new Response (
         JSON.stringify ({
+<<<<<<< HEAD
           error: "OpenAI API key not configured"});
         JSON.stringify({
 
@@ -121,6 +207,13 @@ serve(async (req) => {;
       return new Response(
         JSON.stringify({
           error: "OpenAI API key not configured"});
+=======
+
+          error: "OpenAI API key not configured"});
+=======
+        JSON.stringify({
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           error: "OpenAI API key not configured"}),
 ;
     // Get OpenAI API key from environment;
@@ -129,6 +222,7 @@ serve(async (req) => {;
       return new Response(;
         JSON.stringify({;
           error: "OpenAI API key not configured"}),;
+<<<<<<< HEAD
         { headers, status: 500 }
       )
     }
@@ -140,6 +234,14 @@ serve(async (req) => {;
     Business/Service Title: ${providerData.title}
     Location: ${providerData.location}
     Current Bio: ${providerData.bio}
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        { headers, status: 500 }
+      );
+    }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
     ${providerData.services && providerData.services.length > 0 
@@ -157,6 +259,7 @@ serve(async (req) => {;
     Focus on highlighting their unique value proposition, expertise, and professionalism.
 
 
+<<<<<<< HEAD
     ${providerData.services && providerData.services.length > 0
     ${providerData.services && providerData.services.length > 0 
       ? `Current Services: ${providerData.services.join(", ")}`
@@ -167,11 +270,23 @@ serve(async (req) => {;
       "services": ["Service 1", "Service 2", "Service 3", ...]
     }
     `;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     Only respond with JSON in this exact format:
     {
       "summary": "Professional summary goes here...",
       "services": ["Service 1", "Service 2", "Service 3", ...]
     }
+<<<<<<< HEAD
+=======
+    `,
+
+
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST"
+      headers: {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         Authorization: `Bearer ${apiKey}`,
         "Content-Type": "application/json"},
 
@@ -220,6 +335,7 @@ serve(async (req) => {;
             role: "system",
     `,
 
+<<<<<<< HEAD
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST"
       headers: {
@@ -232,13 +348,20 @@ serve(async (req) => {;
         messages: [
           {
             role: "system"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             content: "You are an expert at creating professional service descriptions for marketplaces."}
           {
             role: "user"
             content: prompt}];
+<<<<<<< HEAD
         temperature: 0.7
         max_tokens: 800})});
     const responseData = await response.json();
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             role: "system",
             content: "You are an expert at creating professional service descriptions for marketplaces."},
           {
@@ -249,6 +372,7 @@ serve(async (req) => {;
 
     const responseData = await response.json(),
     
+<<<<<<< HEAD
     if (!response.ok) {
       console.error("OpenAI API error:", responseData),
       return new Response(
@@ -274,12 +398,32 @@ serve(async (req) => {;
         temperature: 0 && 0.7,
         max_tokens: 800})});
     const responseData = await response && response.json();
+=======
+
+
+    if (!response.ok) {
+      console.error("OpenAI API error:", responseData);
+      return new Response(
+        JSON.stringify({
+
+        temperature: 0 && 0.7,
+        max_tokens: 800})});
+
+    const responseData = await response && response.json();
+    
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (!response && response.ok) {
       console && console.error("OpenAI API error:", responseData);
       return new Response(
         JSON && JSON.stringify({
           error: "Failed to generate enhanced profile content",
+<<<<<<< HEAD
           details: responseData});
+=======
+
+          details: responseData});
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
     const response_data = await response.json ();
 ;
@@ -292,6 +436,7 @@ if ( {) {
         JSON.stringify ({
           error: "Failed to generate enhanced profile content",
           details: response_data});
+<<<<<<< HEAD
         { headers, status: 500 }
       );
     }
@@ -337,6 +482,12 @@ if ( {) {
         JSON.stringify({;
           summary: parsedContent.summary,;
           services: parsedContent.services}),;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+        { headers, status: 500 }
+      );
+    }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {
 
       const content = responseData && responseData.choices[0].message && message.content;
@@ -349,6 +500,7 @@ if ( {) {
       )
     } catch (error) {
       console.error("Error parsing AI response:", error),
+<<<<<<< HEAD
     try {
       const content = responseData && responseData.choices[0].message && message.content;
       const parsedContent = JSON && JSON.parse(content);
@@ -368,6 +520,10 @@ if ( {) {
         JSON.stringify({;
           error: "Failed to parse AI response",;
           raw: responseData.choices[0]?.message?.content}),;
+=======
+
+      return new Response(
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         JSON && JSON.stringify({
           summary: parsedContent && parsedContent.summary,
           services: parsedContent && parsedContent.services});
@@ -409,6 +565,7 @@ if ( {) {
     return new Response(
       JSON.stringify({
 
+<<<<<<< HEAD
         { headers, status: 500 }
       )
     }
@@ -422,12 +579,15 @@ if ( {) {
           "Content-Type": "application/json"
           "Access-Control-Allow-Origin": "*"}
         status: 500
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         error: "Internal server error"}),
       { 
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*"}, 
         status: 500 
+<<<<<<< HEAD
   } catch (error) {;
     console.error("Function error:", error),;
     return new Response(;
@@ -445,6 +605,10 @@ if ( {) {
           "Access-Control-Allow-Origin": "*"}, 
         status: 500 
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
     );
   }
@@ -454,6 +618,7 @@ if ( {) {
 ;
 
 
+<<<<<<< HEAD
 ;
 
 import { serve } from "https://deno.land/std@0.177.0/http/server.ts",;
@@ -648,3 +813,6 @@ raw: responseData.choices[0]?.message?.content
   }
 });
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,4 +9,8 @@ const AIAutonomousQualityAssurance = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIAutonomousQualityAssurance;
+=======
+export default AIAutonomousQualityAssurance;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Layout from '../../components/Layout';
 import { GraduationCap, Users, BookOpen, Laptop, Globe } from 'lucide-react';
 import React from 'react';
@@ -44,6 +45,10 @@ const features = [;
     icon: GraduationCap,
     title: 'Learning Management Systems,',
     description: 'Comprehensive LMS platforms that support online and blended learning environments.'';
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
   {}
 
@@ -64,6 +69,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     description: 'Platforms for creating, managing, and delivering educational content and resources.',
   },
   {}
+<<<<<<< HEAD
     icon: Laptop,
     title: 'Virtual Classrooms,',
     description: 'Advanced virtual classroom solutions with video conferencing and collaboration tools.'';
@@ -226,6 +232,50 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     icon: Users,
     title: 'Teacher Resources',
     description: 'Professional development and teaching support tools'
+=======
+    icon: BookOpen,;
+    title: 'Digital Content Management,',;
+    description: 'Platforms for creating, managing, and delivering educational content and resources.',;
+  },;
+  {}
+
+    icon: Laptop,;
+    title: 'Virtual Classrooms,',;
+    description: 'Advanced virtual classroom solutions with video conferencing and collaboration tools.'',;
+  },;
+  {}
+    icon: Globe,;
+    title: 'Accessibility Solutions,',;
+    description: 'ADA-compliant educational technology that ensures equal access for all students.'',;
+    title: 'Learning Management Systems',;
+    description: 'Comprehensive LMS platforms for online and blended learning';
+  },;
+  {;
+    icon: Users,;
+    title: 'Student Information Systems',;
+    description: 'Complete student data management and academic tracking';
+  },;
+  {}
+    icon: BookOpen,;
+    title: 'Digital Content Management',;
+    description: 'Interactive digital content creation and distribution';
+  },;
+  {;
+    icon: CheckCircle,;
+    title: 'Assessment Tools',;
+    description: 'Advanced testing and evaluation platforms';
+  },;
+  {;
+    icon: ArrowRight,;
+    title: 'Parent Portal',;
+    description: 'Communication and engagement tools for parents';
+  },;
+  {;
+    icon: Users,;
+    title: 'Teacher Resources',;
+    description: 'Professional development and teaching support tools';
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 ;];
 const solutions = [;
@@ -303,6 +353,13 @@ const benefits = [
   'Reduced operational costs',
   'Accessible learning for all students'
 ];
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function EducationSolutions() {;
     title: 'Virtual Classrooms',;
     description: 'Online learning platform with video conferencing and collaboration',;
@@ -313,9 +370,13 @@ export default function EducationSolutions() {;
 export default function EducationSolutionsPage() {;
 
 
+<<<<<<< HEAD
 export default function EducationSolutions() {
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <Layout
       title="Education Solutions - Zion Tech Group"
@@ -324,6 +385,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   
     >
       <div className="min-h-screen bg-white">
@@ -492,6 +557,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       <span className="text-gray-700">{benefit}</span>
                     </li>
                   ))}
+<<<<<<< HEAD
                 </ul>
               </div>
               <div className="bg-gradient-to-r from-indigo-600 to-blue-700 p-8 rounded-xl text-white">
@@ -519,6 +585,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 </motion.div>
               ))}
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -609,6 +679,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
       </div>;
     </Layout>;
         {/* Benefits Section */}
@@ -647,6 +718,15 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>
           </div>
         </section>

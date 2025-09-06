@@ -9,4 +9,8 @@ const CustomerExperience = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default CustomerExperience;
+=======
+export default CustomerExperience;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

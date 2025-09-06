@@ -60,12 +60,17 @@ import { Button } from "@/components/ui/button";
 import { Download, FileText, Mail, BarChart3 } from "lucide-react";
 import { Link } from "react-router-dom";
 
+<<<<<<< HEAD
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Download, FileText, Mail, BarChart3 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Download, FileText, Mail, BarChart3 } from "lucide-react",
 import { Link } from "react-router-dom",
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function BillingHeader() {
   return (
     <div className="space-y-2">
@@ -91,6 +96,7 @@ export function BillingHeader() {
       <p className="text-muted-foreground">
         Manage your subscription, view invoice history, and update payment methods.
       </p>
+<<<<<<< HEAD
     </div>
   );
 }
@@ -137,3 +143,9 @@ export function BillingHeader() {;
   );
 }
 ;
+=======
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

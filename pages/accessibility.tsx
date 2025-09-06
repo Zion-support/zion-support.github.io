@@ -20,6 +20,7 @@ import React from 'react';
 
 import Link from 'next/link';
 import MainLayout from '../components/layout/MainLayout';
+<<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 import Link from 'next/link';
@@ -39,11 +40,29 @@ import {
   Zap
   FileText
   Settings
+=======
+=======
+import Link from 'next / link';
+import MainLayout from '../components / layout / MainLayout';
+import { motion } from 'framer-motion';
+
+  Eye,
+  Ear,
+  Hand,
+  Brain,
+  CheckCircle,
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Eye, 
   Ear, 
   Hand, 
   Brain, 
   CheckCircle, 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   AlertTriangle,
   Globe,
   Users,
@@ -51,9 +70,19 @@ import {
   Zap,
   FileText,
   Settings;
+<<<<<<< HEAD
 } from 'lucide-react';
 const accessibility_features = [;
   {
+=======
+
+
+
+} from 'lucide-react';
+const accessibility_features = [;
+  {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {;
   Eye, ;
   Ear, ;
@@ -211,6 +240,7 @@ const accessibilityGuidelines = [;
       "Customizable timing";
     ];
 
+<<<<<<< HEAD
 import Head from 'next/head';
 import Layout from '../components/Layout';
 
@@ -223,6 +253,8 @@ import Layout from '../components/Layout';
 
 export default function AccessibilityPage() {
 export default function AccessibilityPage() {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 ];
 import Head from 'next/head';
@@ -380,6 +412,17 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
 
+<<<<<<< HEAD
+=======
+
+
+=======
+
+>>>>>>> origin/automation-improvements-final
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function AccessibilityPage() {
 interface AccessibilityProps {
   className?: string;
@@ -404,6 +447,10 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <motion.div
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               transition={{ duration: 0 && 0.8 }}
               className="text-center max-w-4xl mx-auto">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
@@ -587,6 +634,10 @@ origin/automation-improvements-final
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
@@ -599,6 +650,10 @@ origin/automation-improvements-final
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {accessibilityGuidelines && accessibilityGuidelines.map((category, index) => (;
                 <motion&& motion.div
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   key={index}
                   className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-all duration-300"
                   initial={{ opacity: 0, y: 30 }}
@@ -618,12 +673,25 @@ origin/automation-improvements-final
                   </ul>;
                 </motion && motion.div>;
               ))}
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+=======
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </div>
     </MainLayout>
             </div>;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
@@ -28,6 +29,8 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
   const [talents, setTalents] = useState([]),
   const [isLoading, setIsLoading] = useState(true),
   const [isProcessing, setIsProcessing] = useState(false),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 export function SuggestedTalents(): any ({ jobId, jobTitle }: SuggestedTalentsProps) {;
@@ -72,6 +75,7 @@ function SuggestedTalents() {
           `;
           *;
           talent_profile: talent_id (
+<<<<<<< HEAD
 
   const fetchSuggestedTalents = async () => {
     setIsLoading(true),
@@ -82,6 +86,9 @@ function SuggestedTalents() {
           `
           *;
           talent_profile: talent_id(
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             id;
             user_id;
             full_name;
@@ -93,6 +100,10 @@ function SuggestedTalents() {
             key_projects;
             skills;
             location;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             category,;
             company_name;
           );
@@ -113,6 +124,7 @@ function SuggestedTalents() {
       setIsLoading(false);
     }
 
+<<<<<<< HEAD
             category
             company_name
           )
@@ -121,6 +133,25 @@ function SuggestedTalents() {
         .eq("job_id", jobId);
       if (error) throw error;
       setTalents(data |[]);
+=======
+
+
+interface SuggestedTalentsProps {
+  jobId: string,
+
+  jobTitle?: string
+}
+
+
+
+
+  const fetchSuggestedTalents = async () => {
+    setIsLoading(true),
+    try {
+      const { data, error } = await supabase
+        .from("suggested_talents")
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         .select(`
           *,
           talent_profile:talent_id(
@@ -143,6 +174,7 @@ function SuggestedTalents() {
 
       if (error) throw error,
       setTalents(data || [])
+<<<<<<< HEAD
     } catch (error) {
       console.error("Error fetching suggested talents:", error),
       toast({
@@ -155,10 +187,17 @@ function SuggestedTalents() {
         description: "Failed to load suggested talents. Please try again later.",
         variant: "destructive"})
 
+=======
+
+    } catch (error) {
+      console.error("Error fetching suggested talents:", error),
+      toast({
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         title: "Error",
         description: "Failed to load suggested talents. Please try again later.",
         variant: "destructive"})
+<<<<<<< HEAD
     } finally {
       setIsLoading(false)
     }
@@ -173,10 +212,28 @@ function SuggestedTalents() {
       description: `Navigating to talent profile: ${talentId}`
     });
   }
+=======
+
+    } finally {
+      setIsLoading(false)
+    }
+
+  },
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  const handleViewProfile = (talentId: string) => {
+    // Implement logic to view talent profile
+    console.log("View talent profile:", talentId);
+    toast({
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       title: "View Profile",
       description: `Navigating to talent profile: ${talentId}`})
   },
 
+<<<<<<< HEAD
   const handleInvite = (talentId: string) => {
     // Implement logic to invite talent
     // // // console.log("Invite talent:", talentId),
@@ -226,6 +283,125 @@ function SuggestedTalents() {
 
   // Transform data to match JobMatchCard component props
   const transformedTalents = talents.map((talent) => {
+=======
+
+
+  const handleInvite = (talentId: string) => {
+    // Implement logic to invite talent
+    console.log("Invite talent:", talentId);
+    toast({
+
+  };
+
+  const handleViewProfile = (talentId: string) => {;
+    // Implement logic to view talent profile;
+    console && console.log("View talent profile:", talentId);
+    toast({;
+      title: "View Profile",;
+      description: `Navigating to talent profile: ${talentId}`,;
+    });
+  };
+
+  const handleInvite = (talentId: string) => {;
+    // Implement logic to invite talent;
+    console && console.log("Invite talent:", talentId);
+    toast({;
+      title: "Invite Talent",;
+      description: `Inviting talent: ${talentId}`,;
+    });
+  };
+
+  const handleRefresh = () => {;
+
+    setIsProcessing(true);
+    fetchSuggestedTalents().finally(() => {;
+      setIsProcessing(false);
+    });
+
+  };
+
+  useEffect(() => {;
+    if (jobId) {;
+      fetchSuggestedTalents();
+    }
+  }, [jobId]);
+
+  // Transform data to match JobMatchCard component props;
+  const transformedTalents = talents && talents.map((talent) => {;
+    return {;
+      id: talent && talent.talent_profile?.id || "",;
+      name: talent && talent.talent_profile?.full_name || "Talent",;
+      title: talent && talent.talent_profile?.professional_title || "Talent",;
+      company: talent && talent.talent_profile?.company_name || "",;
+      avatar: talent && talent.talent_profile?.profile_picture_url || "",;
+      location: talent && talent.talent_profile?.location || "Remote",;
+      category: talent && talent.talent_profile?.category || "Technology",;
+      matchPercent: talent && talent.match_score || 85,;
+      skills: talent && talent.talent_profile?.skills || [],;
+    };
+
+=======
+            category,
+            company_name);
+        `,
+        );
+        .eq ("job_id", job_id);
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      set_talents (data || []);
+    } catch (error) {
+      console.error ("Error fetching suggested talents:", error);
+      toast ({
+        title: "Error",
+        description:;
+          "Failed to load suggested talents. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading (false);
+    }
+  }
+;
+  const handleViewProfile = (talent_id: string) =>: any {
+    // Implement logic to view talent profile;
+    console.log ("View talent profile:", talent_id);
+    toast ({
+      title: "View Profile",
+      description: `Navigating to talent profile: ${talent_id}`,
+    });
+  }
+;
+  const handle_invite = (talent_id: string) =>: any {
+    // Implement logic to invite talent;
+    console.log ("Invite talent:", talent_id);
+    toast ({
+      title: "Invite Talent",
+      description: `Inviting talent: ${talent_id}`,
+    });
+  }
+;
+  const handle_refresh = () =>: any {
+    setIsProcessing (true);
+    fetchSuggestedTalents ().finally (() => {
+      setIsProcessing (false);
+    });
+  }
+;
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      fetchSuggestedTalents ();
+    }
+  }, [job_id]);
+;
+  // Transform data to match JobMatchCard component props;
+  const transformed_talents = talents.map ((talent) => {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return {
       id: talent.talent_profile?.id || "",
       name: talent.talent_profile?.full_name || "Talent",
@@ -234,6 +410,7 @@ function SuggestedTalents() {
       avatar: talent.talent_profile?.profile_picture_url || "",
       location: talent.talent_profile?.location || "Remote",
       category: talent.talent_profile?.category || "Technology",
+<<<<<<< HEAD
       matchPercent: talent.match_score || 85,
       skills: talent.talent_profile?.skills || [],
     };
@@ -437,6 +614,8 @@ if ( {) {
       avatar: talent.talent_profile?.profile_picture_url || "",
       location: talent.talent_profile?.location || "Remote",
       category: talent.talent_profile?.category || "Technology",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       match_percent: talent.match_score || 85,
       skills: talent.talent_profile?.skills || [],
     }
@@ -472,12 +651,20 @@ if ( {) {
       
 
 
+<<<<<<< HEAD
       
       
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <CardContent className="pt-6">
         {isLoading ? (
           <div>Loading suggested talents...</div>
         ) : talents.length === 0 ? (
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </CardTitle>;
       </CardHeader>;
       <CardContent className="pt-6">;
@@ -532,6 +719,7 @@ if ( {) {
                 key={talent.id}
                 match_id={talent.id}
                 talent_id={talent.id}
+<<<<<<< HEAD
 
 import { useEffect, useState } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -656,14 +844,22 @@ export function SuggestedTalents({ jobId, jobTitle } SuggestedTalentsProps) {;
                 key={talent.id}
                 matchId={talent.id}
                 talentId={talent.id}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 name={talent.name}
                 title={talent.title}
                 company={talent.company}
                 avatar={talent.avatar}
                 location={talent.location}
                 category={talent.category}
+<<<<<<< HEAD
                 matchPercent={talent.matchPercent}
                 skills={talent.skills}
+=======
+                match_percent={talent.match_percent}
+                skills={talent.skills}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 onApply={() => handleViewProfile(talent.id)}
                 onViewDetails={() => handleViewProfile(talent.id)}
                 onInvite={() => handleInvite(talent.id)}
@@ -671,15 +867,20 @@ export function SuggestedTalents({ jobId, jobTitle } SuggestedTalentsProps) {;
             ))}
           </div>
         )}
+<<<<<<< HEAD
       </CardContent>
     </Card>
   );
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </CardContent>;
     </Card>;
   );
 }
 ;
+<<<<<<< HEAD
                 onApply={() => handleViewProfile(talent.id)}
                 onViewDetails={() => handleViewProfile(talent.id)}
                 onInvite={() => handleInvite(talent.id)}
@@ -757,3 +958,8 @@ const handleViewProfile = (talentId: string) => {
 }</div>) 
 }</CardContent> </Card>) 
 }
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

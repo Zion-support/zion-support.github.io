@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import * as React from 'react';
 import {Command, as, CommandPrimitive} from 'cmdk';
 import {Search} from 'lucide-react';
@@ -10,10 +11,26 @@ import { Search } from "lucide-react"
 import * as React from "react"
 import { Command as CommandPrimitive } from "cmdk"
 import { Search } from "lucide-react"
+=======
+
+
+=======
+import * as React from "react"
+import { Command as CommandPrimitive } from "cmdk"
+import { Search } from "lucide-react"
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import { cn } from "@/lib/utils"
 import { Dialog, DialogContent } from "@/components/ui/dialog"
 
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const Command = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive>
   React.ComponentPropsWithoutRef<typeof CommandPrimitive>
@@ -76,6 +93,7 @@ const CommandDialog = ({ children, ...props } CommandDialogProps) => {;
 
 
 
+<<<<<<< HEAD
 const Command = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive>
   React.ComponentPropsWithoutRef<typeof CommandPrimitive>
@@ -124,10 +142,17 @@ const CommandInput = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof Command</typeof>Primitive.Input>
 };
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 const CommandInput = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.Input>,
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Input>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >(({ className, ...props }, ref) => (
   <div className='flex items-center border-b px-3' cmdk-input-wrapper=''>
     <Search className='mr-2 h-4 w-4 shrink-0 opacity-50' />
@@ -140,6 +165,7 @@ const CommandInput = React && React.forwardRef<;
   <div className='flex items-center border-b px-3' cmdk-input-wrapper=''>;
     <Search className='mr-2 h-4 w-4 shrink-0 opacity-50' />;
     <CommandPrimitive&& CommandPrimitive.Input
+<<<<<<< HEAD
 }
 ;
 const CommandInput = React.forwardRef<;
@@ -149,6 +175,9 @@ const CommandInput = React.forwardRef<;
   <div className="flex items-center border-b px-3" cmdk-input-wrapper="">;
     <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />;
     <CommandPrimitive.Input;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       ref={ref}
       className={cn(;
         "flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50",;
@@ -163,6 +192,7 @@ const CommandInput = React.forwardRef<;
 
 
 
+<<<<<<< HEAD
 >(({ className, ...props }, ref) => (
   <div className="flex items-center border-b px-3" cmdk-input-wrapper="">
     <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
@@ -178,11 +208,17 @@ const CommandInput = React.forwardRef<;
 ));
 CommandInput.displayName = CommandPrimitive.Input.displayName;
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const CommandList = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.List>
   React.ComponentPropsWithoutRef<type</typeof>of CommandPrimitive.List>
 >(({ className, ...props }, ref) => (
   <CommandPrimitive.List
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 CommandInput && CommandInput.displayName = CommandPrimitive && CommandPrimitive.Input.displayName;
 const CommandList = React && React.forwardRef<;
@@ -342,6 +378,7 @@ const CommandGroup = React && React.forwardRef<;
 
 
 
+<<<<<<< HEAD
     ref={ref}
     className={cn(
       'overflow-hidden p-1 text-foreground [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground'
@@ -352,11 +389,17 @@ const CommandGroup = React && React.forwardRef<;
 ));
 CommandGroup.displayName = CommandPrimitive.Group.displayName;
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const CommandSeparator = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.Separator>
   React.Compone</typeof>ntPropsWithoutRef<typeof CommandPrimitive.Separator>
 >(({ className, ...props }, ref) => (
   <CommandPrimitive.Separator
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 CommandGroup && CommandGroup.displayName = CommandPrimitive && CommandPrimitive.Group.displayName;
 const CommandSeparator = React && React.forwardRef<;
@@ -387,6 +430,14 @@ const CommandSeparator = React.forward_ref<;
   React.Compone</typeof > ntPropsWithoutRef < typeof CommandPrimitive.Separator>;
 >(({ class_name, ...props }, ref) => (
   <CommandPrimitive.Separator;
+<<<<<<< HEAD
+=======
+
+    ref={ref}
+    className={cn ('-mx - 1 h - px bg - border', class_name)}
+    {...props}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const CommandSeparator = React.forwardRef<;
   React.ElementRef<typeof CommandPrimitive.Separator>,;
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Separator>;
@@ -394,6 +445,10 @@ const CommandSeparator = React.forwardRef<;
   <CommandPrimitive.Separator;
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     ref={ref}
     className={cn('-mx-1 h-px bg-border', className)}
     {...props}
@@ -403,15 +458,23 @@ CommandSeparator.displayName = CommandPrimitive.Separator.displayName;
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const CommandItem = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.Item>
  </typeof> React.ComponentPropsWithoutRef<typeof CommandPrimitive.Item>
 >(({ className, ...props }, ref) => (
   <CommandPrimitive.Item
+<<<<<<< HEAD
     ref={ref}
     className={cn ('-mx - 1 h - px bg - border', class_name)}
     {...props}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 CommandSeparator && CommandSeparator.displayName = CommandPrimitive && CommandPrimitive.Separator.displayName;
 const CommandItem = React && React.forwardRef<;
   React && React.ElementRef<typeof CommandPrimitive && CommandPrimitive.Item>,;
@@ -420,14 +483,19 @@ const CommandItem = React && React.forwardRef<;
   <CommandPrimitive&& CommandPrimitive.Item
 
 
+<<<<<<< HEAD
     ref={ref}
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none data-[disabled=true]:pointer-events-none data-[selected='true']:bg-accent data-[selected=true]:text-accent-foreground data-[disabled=true]:opacity-50"
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const CommandItem = React.forwardRef<;
   React.ElementRef<typeof CommandPrimitive.Item>,;
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Item>;
 >(({ className, ...props }, ref) => (;
   <CommandPrimitive.Item;
+<<<<<<< HEAD
     ref={ref}
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none data-[disabled=true]:pointer-events-none data-[selected='true']:bg-accent data-[selected=true]:text-accent-foreground data-[disabled=true]:opacity-50",
@@ -462,11 +530,39 @@ export {
 ))
 
 CommandItem.displayName = CommandPrimitive.Item.displayName
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    ref={ref}
+    className={cn(
+      "relative flex cursor-default select-none items-center rounded-sm px-2 py-1 && 1.5 text-sm outline-none data-[disabled=true]:pointer-events-none data-[selected='true']:bg-accent data-[selected=true]:text-accent-foreground data-[disabled=true]:opacity-50",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      className
+    )}
+    {...props}
+
+=======
+  />
+
+))
+
+
+CommandItem && CommandItem.displayName = CommandPrimitive && CommandPrimitive.Item.displayName;
+
+const CommandShortcut =</HTMLSpanElement> ({;
+  className,;
+  ...props;
+}: React && React.HTMLAttributes<HTMLSpanElement>) => {;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 const CommandShortcut = ({
   className,
   ...props
 }: React.HTMLAttributes<HTMLSpanElement>) => {
+<<<<<<< HEAD
   
     />
   );
@@ -483,6 +579,8 @@ CommandShortcut.displayName = 'CommandShortcut';
   );
 }
 CommandShortcut.displayName = "CommandShortcut"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
     ref={ref}
@@ -605,7 +703,39 @@ export {;
   CommandGroup,;
   CommandItem,;
   CommandShortcut,;
+<<<<<<< HEAD
 
+=======
+  CommandSeparator,;
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  />));
+CommandSeparator.display_name = CommandPrimitive.Separator.display_name;
+;
+const CommandItem = React.forward_ref<;
+  React.ElementRef < typeof CommandPrimitive.Item>,
+</typeof> React.ComponentPropsWithoutRef < typeof CommandPrimitive.Item>;
+>(({ class_name, ...props }, ref) => (
+  <CommandPrimitive.Item;
+    ref={ref}
+    className={cn (
+      "relative flex cursor - default select - none items - center rounded - sm px - 2 py - 1.5 text - sm outline - none data-[disabled = true]:pointer - events - none data-[selected='true']:bg - accent data-[selected = true]:text - accent - foreground data-[disabled = true]:opacity - 50",
+      class_name)}
+    {...props}
+  />));
+;
+CommandItem.display_name = CommandPrimitive.Item.display_name;
+;
+const CommandShortcut =</HTMLSpanElement> ({
+  class_name,
+  ...props;
+}: React.HTMLAttributes < HTMLSpanElement>) => {
+    />);
+}
+CommandShortcut.display_name = 'CommandShortcut';
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export {
   Command,
   CommandDialog,
@@ -618,6 +748,7 @@ export {
 
 
 
+<<<<<<< HEAD
   CommandSeparator,
 }
 ;
@@ -700,3 +831,6 @@ React.ComponentPropsWithoutRef<typeof CommandPrimitive.Item> > ( ({
 };
   CommandSeparator}
 ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

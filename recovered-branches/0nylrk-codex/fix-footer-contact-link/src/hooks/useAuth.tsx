@@ -1,9 +1,17 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { create_context, useContext, useState, useEffect, ReactNode } from './react';
 import { supabase } from '@/integrations / supabase / client';
 import { AuthContext } from '@/context / auth / AuthContext';
 import type { UserDetails as AuthUserDetails } from "@/types / auth";
 // Define types for our context;
 export interface UserDetails {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id?: string;
   name?: string;
   email?: string;
@@ -13,6 +21,7 @@ export interface UserDetails {
   headline?: string;
   profile_complete?: boolean;
   role?: string;
+<<<<<<< HEAD
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {AuthContext} from "@/context/auth/AuthContext";
@@ -93,6 +102,11 @@ export interface UserDetails {;
   bio?: string,;
   createdAt?: string,;
   updatedAt?: string;
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 ;
 export interface AuthContextType {;
@@ -114,6 +128,10 @@ export interface AuthContextType {;
   loginWithWeb3: () => Promise<void>;
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   user: UserDetails | null
   isAuthenticated: boolean
@@ -140,6 +158,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<UserDetails | null>(null),
 
 
+<<<<<<< HEAD
 export function AuthProvider({ children }: { children: ReactNode }) {;
   const [user, setUser] = useState<UserDetails | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -148,10 +167,18 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [isLoading, setIsLoading] = useState(true);
   const [isLoading, setIsLoading] = useState(true),
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Mock auth functions for now - these would connect to Supabase in a real implementation
 
   const signIn = async (email: string, password: string) => {
     // This would be replaced with actual Supabase auth
+<<<<<<< HEAD
+=======
+    console.log("Sign in attempted with:", email);
+    // Mock successful sign-in
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export interface AuthContextType {;
   user: UserDetails | null,;
@@ -192,6 +219,7 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       companyId: "company-123";
     });
     return { error: null }
+<<<<<<< HEAD
     // // // console.log("Sign in attempted with:", email),
     // Mock successful sign-in
     setUser({
@@ -203,6 +231,10 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       profileComplete: true
       role: "enterprise_admin"
       permissions: ["billing_access", "admin_access", "team_management"];
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     setUser({ 
       id: "mock-user-id", 
       email, 
@@ -212,6 +244,22 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       profileComplete: true,
       role: "enterprise_admin",
       permissions: ["billing_access", "admin_access", "team_management"],
+<<<<<<< HEAD
+=======
+
+      companyId: "company-123"
+    }),
+    return { error: null }
+
+  },
+
+
+
+  const signOut = async () => {
+    // This would be replaced with actual Supabase auth
+    console.log("Sign out attempted");
+    setUser(null)
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   },
@@ -221,6 +269,7 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
   const signUp = async (email: string, password: string, userData?: Partial<UserDetails>) => {
     // This would be replaced with actual Supabase auth
     console.log("Sign up attempted with:", email, userData);
+<<<<<<< HEAD
       companyId: "company-123"
     }),
     return { error: null }
@@ -237,6 +286,8 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
   const signUp = async (email: string, password: string, userData?: Partial<UserDetails>) => {
     // This would be replaced with actual Supabase auth
     // // // console.log("Sign up attempted with:", email, userData),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Mock successful sign-up
     setUser({
       id: "mock-user-id"
@@ -245,6 +296,11 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       name: userData?.name |"New User"
       userType: userData?.userType
       profileComplete: false
+<<<<<<< HEAD
+=======
+    });
+    return { error: null }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   },
@@ -264,6 +320,7 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
   const updateProfile = async (data: Partial<UserDetails>) => {
     // Mock implementation
     console.log("Profile update requested with:", data);
+<<<<<<< HEAD
     }),
     return { error: null }
   }
@@ -279,6 +336,8 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
   const updateProfile = async (data: Partial<UserDetails>) => {
     // Mock implementation
     // // // console.log("Profile update requested with:", data),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (user) {
       setUser({ ...user, ...data })
     }
@@ -291,11 +350,14 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
 
   const loginWithGoogle = async () => {
     console.log("Google login requested");
+<<<<<<< HEAD
   }
   },
 
   const loginWithGoogle = async () => {
     // // // console.log("Google login requested"),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Mock implementation
     setUser({
       id: "google-user-id"
@@ -312,11 +374,14 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
 
   const loginWithFacebook = async () => {
     console.log("Facebook login requested");
+<<<<<<< HEAD
   }
   },
 
   const loginWithFacebook = async () => {
     // // // console.log("Facebook login requested"),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Mock implementation
     setUser({
       id: "facebook-user-id"
@@ -333,11 +398,14 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
 
   const loginWithTwitter = async () => {
     console.log("Twitter login requested");
+<<<<<<< HEAD
   }
   },
 
   const loginWithTwitter = async () => {
     // // // console.log("Twitter login requested"),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Mock implementation
     setUser({
       id: "twitter-user-id"
@@ -364,13 +432,17 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
   },
 
 
+<<<<<<< HEAD
   }
   },
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const loginWithWeb3 = async () => {
     // // // console.log("Web3 login requested"),
     const ethereum = (window as any).ethereum,
     if (!ethereum) {
+<<<<<<< HEAD
 
 
       console.warn("No wallet detected");
@@ -430,12 +502,20 @@ export function useAuth(): AuthContextType {
   }
   return context
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 // Custom hook to use the auth context
 export function useAuth(): AuthContextType {;
   const context = useContext(AuthContext);
   if (context === undefined) {
     throw new Error("useAuth must be used within an AuthProvider")
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       console.warn("No wallet detected"),
       return
 ;
@@ -473,10 +553,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {;
     setUser({;
       id: "mock-user-id",;
       email,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       displayName: userData?.name || "New User",;
       name: userData?.name || "New User",;
       userType: userData?.userType,;
       profileComplete: false;
+<<<<<<< HEAD
     });
     return { error: null }
   };
@@ -490,6 +575,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {;
     console && console.log("Profile update requested with:", data);
     if (user) {;
       setUser({ ...user, ...data });
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   permissions?: string[];
   company_id?: string;
   bio?: string;
@@ -634,6 +722,10 @@ if ( {) {
     setUser({ ;
       id: "google-user-id", ;
       email: "google@example && example.com", ;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }),;
     return { error: null }
   },;
@@ -656,11 +748,19 @@ if ( {) {
     setUser({;
       id: "google-user-id",;
       email: "google@example.com",;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       displayName: "Google User",;
       name: "Google User",;
       profileComplete: true;
     });
+<<<<<<< HEAD
   };
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },;
   const loginWithFacebook = async () => {;
     // // // console.log("Facebook login requested"),;
@@ -680,10 +780,15 @@ if ( {) {
     setUser({;
       id: "twitter-user-id",;
       email: "twitter@example.com",;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       displayName: "Twitter User",;
       name: "Twitter User",;
       profileComplete: true;
     });
+<<<<<<< HEAD
   };
   const loginWithWeb3 = async () => {;
     console && console.log("Web3 login requested");
@@ -692,6 +797,9 @@ if ( {) {
       console && console.warn("No wallet detected");
       return;
     }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const accounts = await ethereum.request ({ method: 'eth_requestAccounts' }),
       const address = accounts[0];
       await ethereum.request ({
@@ -707,6 +815,11 @@ if ( {) {
       console.error ('Web3 login failed', err);
     }
   }
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },;
   const loginWithWeb3 = async () => {;
     // // // console.log("Web3 login requested"),;
@@ -715,6 +828,10 @@ if ( {) {
       console.warn("No wallet detected"),;
       return;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {;
       const accounts = await ethereum && ethereum.request({ method: 'eth_requestAccounts' }),;
       const address = accounts[0];
@@ -722,6 +839,7 @@ if ( {) {
         method: 'personal_sign',;
         params: [address, address];
       });
+<<<<<<< HEAD
     try {;
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),;
       const address = accounts[0],;
@@ -729,12 +847,33 @@ if ( {) {
         method: 'personal_sign',;
         params: [address, address];
       }),;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       setUser({;
         id: address,;
         displayName: address,;
         profileComplete: true;
       });
     } catch (err) {;
+<<<<<<< HEAD
+=======
+      console && console.error('Web3 login failed', err);
+    }
+  };
+
+  // Check for existing session on mount;
+  useEffect(() => {;
+    // Mock loading state and then set a null user to simulate no session;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    setIsLoading(true);
+    setTimeout(() => {;
+      setUser(null);
+      setIsLoading(false);
+    }, 100);
+  }, []);
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const value = {;
     user;
     isAuthenticated: !!user,;
@@ -742,10 +881,18 @@ if ( {) {
     signIn;
     signOut;
     signUp;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Add aliases for compatibility;
     login: signIn,;
     logout: signOut,;
     signup: signUp,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     resetPassword;
     updateProfile;
     loginWithGoogle;
@@ -828,6 +975,7 @@ export interface UserDetails {;
   createdAt?:string,;
   updatedAt?:string,;
 }
+<<<<<<< HEAD
 ;
 export interface AuthContextType {;
   user:UserDetails | null,;
@@ -1016,3 +1164,6 @@ export function useAuth(): AuthContextType {;
   return context;
 }
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

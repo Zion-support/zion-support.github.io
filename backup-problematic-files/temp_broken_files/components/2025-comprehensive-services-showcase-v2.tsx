@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
@@ -387,6 +388,10 @@ className="space-y-20"
                   <div className={_`inline-flex p-4 rounded-2xl bg-gradient-to-r ${category.color} mb-6`}>
 :backup-problematic-files/temp_broken_files/components/2025-comprehensive-services-showcase-v2.tsx
 :backup-problematic-files/temp_broken_files/components/2025-comprehensive-services-showcase-v2.tsx
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     {category.icon}
                   </div>;
                   <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">;
@@ -394,6 +399,7 @@ className="space-y-20"
                   </h3>;
                   <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
                     {category.description}
+<<<<<<< HEAD
 :components/2025-comprehensive-services-showcase-v2.tsx
                   </p>;
                 </div>;
@@ -405,6 +411,9 @@ className="space-y-20"
                       whileHover={{ y: -5 }}
                     >;
                       <h4 className="text-xl font-semibold text-white mb-3">;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </p>
                 </div>
                 
@@ -416,18 +425,30 @@ key={service.id}
                       whileHover={_{ y: -5}}
                     >
                       <h4 className="text-xl font-semibold text-white mb-3">
+<<<<<<< HEAD
 :backup-problematic-files/temp_broken_files/components/2025-comprehensive-services-showcase-v2.tsx
 :backup-problematic-files/temp_broken_files/components/2025-comprehensive-services-showcase-v2.tsx
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         {service.title}
                       </h4>;
                       <p className="text-gray-300 mb-4">;
                         {service.description}
                       </p>;
+<<<<<<< HEAD
                       ;
 :components/2025-comprehensive-services-showcase-v2.tsx
                       ;
 :backup-problematic-files/temp_broken_files/components/2025-comprehensive-services-showcase-v2.tsx
 :backup-problematic-files/temp_broken_files/components/2025-comprehensive-services-showcase-v2.tsx
+=======
+
+                      ;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <div className="space-y-3 mb-6">;
                         <div className="flex items-center text-sm text-cyan-400">;
                           <TrendingUp className="w-4 h-4 mr-2" />;
@@ -436,6 +457,7 @@ key={service.id}
                         <div className="flex items-center text-sm text-green-400">;
                           <Star className="w-4 h-4 mr-2" />;
                           {service.growthRate}
+<<<<<<< HEAD
 :components/2025-comprehensive-services-showcase-v2.tsx
                         </div>;
                       </div>;
@@ -457,6 +479,9 @@ key={service.id}
                         Learn More <ArrowRight className="w-4 h-4 ml-2" />;
                       </a>;
                     </motion.div>;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         </div>
                       </div>
                       
@@ -479,12 +504,18 @@ href={_`/services/${service.slug}`}
                         Learn More <ArrowRight className="w-4 h-4 ml-2" />
                       </a>
                     </motion.div>
+<<<<<<< HEAD
 :backup-problematic-files/temp_broken_files/components/2025-comprehensive-services-showcase-v2.tsx
 :backup-problematic-files/temp_broken_files/components/2025-comprehensive-services-showcase-v2.tsx
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   ))}
                 </div>;
               </motion.div>;
             ))}
+<<<<<<< HEAD
 :components/2025-comprehensive-services-showcase-v2.tsx
           </motion.div>;
         </div>;
@@ -573,6 +604,9 @@ href={_`/services/${service.slug}`}
     </div>;
   );
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </motion.div>
         </div>
       </section>
@@ -661,5 +695,10 @@ href="https://ziontechgroup.com"
       </section>
     </div>
   )}
+<<<<<<< HEAD
 :backup-problematic-files/temp_broken_files/components/2025-comprehensive-services-showcase-v2.tsx
 :backup-problematic-files/temp_broken_files/components/2025-comprehensive-services-showcase-v2.tsx
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

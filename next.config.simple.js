@@ -1,6 +1,10 @@
 
 /** @type {import ('next').NextConfig} */;
 const next_config = {
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   reactStrictMode: true,
@@ -17,6 +21,7 @@ const next_config = {
   // Output configuration;
   output: 'standalone',
 
+<<<<<<< HEAD
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 reactStrictMode: true
@@ -62,6 +67,8 @@ reactStrictMode: true
   },
 // Output configuration
   output: 'standalone',
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Trailing slash
   trailingSlash: false,
   // Base path
@@ -71,12 +78,18 @@ reactStrictMode: true
   // Generate ETags
   generateEtags: true,
   // Dist directory
+<<<<<<< HEAD
   distDir: ".next",
 };
 
 module.exports = nextConfig;
 
 module.exports = nextConfig;
+=======
+  distDir: '.next',
+};
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 module.exports = nextConfig;
 module.exports = nextConfig;

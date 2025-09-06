@@ -9,4 +9,8 @@ const AIAutonomousDevOpsSecurity = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIAutonomousDevOpsSecurity;
+=======
+export default AIAutonomousDevOpsSecurity;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

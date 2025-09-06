@@ -1,18 +1,24 @@
 ...formData;            startDate: startDate?.toISOString(),
 
+<<<<<<< HEAD
             endDate: endDate?.toISOString()}
 ...formData;            startDate: startDate?.toISOString()
 ursor/fix-website-loading-errors-and-merge-6662
 
 ...formData;            startDate: startDate?.toISOString()
 ...formData;            startDate: startDate?.toISOString(),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             endDate: endDate?.toISOString()}
         }
       })
 
 }
 }
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ;
 
@@ -505,4 +511,8 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
     </Dialog>;
   );
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

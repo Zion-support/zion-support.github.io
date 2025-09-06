@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Button } from '@/components/ui/button'
 import { Sparkles, Loader2 } from 'lucide-react'
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer'
@@ -41,6 +42,8 @@ interface AIEnhancementButtonProps {
   onEnhanced: (enhancedContent: string) => void;
   buttonText?: string;
   className?: string
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function AIEnhancementButton({
 
   currentContent
@@ -50,6 +53,7 @@ export function AIEnhancementButton({
   buttonText = 'Enhance with AI'
   className
 }: AIEnhancementButtonProps) {
+<<<<<<< HEAD
   const { enhanceContent, isEnhancing } = useResumeEnhancer()
   const [error, setError] = useState<string | null>(null)
   const handleEnhance = async () => {
@@ -100,6 +104,11 @@ export function AIEnhancementButton({
   const handleEnhance = async () => {
     if (!currentContent || currentContent.trim().length < 10) {
       setError('Please enter at least some basic content before enhancing'),
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       return
     }
     setError(null)
@@ -267,9 +276,13 @@ if (.length < 10) {) {
 }
 ;
 
+<<<<<<< HEAD
   )
 }
 ;
 ;
 }
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

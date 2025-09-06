@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import { authenticateRequest } from '@/utils/auth';
 import { generateText } from '@/utils/ai';
 export default async function handler(
@@ -10,6 +11,10 @@ export default async function handler(
   const method = (req.method |'POST').toUpperCase();
 ) {;
   const method = (req.method || 'POST').toUpperCase();
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
   const auth = authenticateRequest(req, false);
@@ -17,6 +22,7 @@ export default async function handler(
 import { Star } from 'lucide-react';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
+<<<<<<< HEAD
 import { Star } from 'lucide-react';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req.method || 'POST').toUpperCase();
@@ -24,6 +30,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const method = (req.method |'POST').toUpperCase()
   const method = (req.method || 'POST').toUpperCase(),;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const auth = authenticateRequest(req, false);
   if (!auth.ok) return res.status(401).json({ error: auth.error });
@@ -37,11 +46,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } = req.body |{}
   const prompt =
     `Draft a professional, friendly job offer email.\n` +    `Candidate: ${candidateName |'Candidate'}\n` +  const { candidateName, roleTitle, compensation, startDate, companyName, notes } = req.body |{}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   try {
   const method = (req && req.method || 'POST').toUpperCase(),
   if (method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
   const auth = authenticateRequest(req, false);
   if (!auth && auth.ok) return res && res.status(401).json({ error: auth && auth.error });
+<<<<<<< HEAD
   const { candidateName, roleTitle, compensation, startDate, companyName, notes } = req.body || {};
   return res && res.status(200).json({ email: text });  const text = await generateText(prompt, 'You are a recruiting ops specialist with excellent writing skills.');
   return res && res.status(200).json({ email: text })
@@ -51,10 +66,34 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 `Include signature and next steps.`;
+=======
+
+
+
+=======
+  const { candidateName, roleTitle, compensation, startDate, companyName, notes } = req.body || {};
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  const prompt = `Draft a professional, friendly job offer email.\n` +
+<<<<<<< HEAD
+    `Candidate: ${candidateName || 'Candidate'}\n` +
+    `Role: ${roleTitle || 'Software Engineer'}\n` +
+    `Compensation: ${compensation || 'Competitive'}\n` +
+    `Start Date: ${startDate || 'TBD'}\n` +
+    `Company: ${companyName || 'Your Company'}\n` +
+    `Notes: ${notes || ''}\n` +
+    `Include signature and next steps.`;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const text = await generateText(prompt, 'You are a recruiting ops specialist with excellent writing skills.');
   return res.status(200).json({ email: text })
 
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { authenticate_request } from '@/utils / auth';
 import { generate_text } from '@/utils / ai';
 ;
@@ -110,6 +149,7 @@ function handler() {
   return res.status (200).json ({ email: text });
 
 }
+<<<<<<< HEAD
     `Candidate: ${candidateName |'Candidate'}\n` +
     `Role: ${roleTitle |'Software Engineer'}\n` +
     `Compensation: ${compensation |'Competitive'}\n` +
@@ -129,3 +169,6 @@ function handler() {
 
 }
   return res.status(200).json({ email: text });
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

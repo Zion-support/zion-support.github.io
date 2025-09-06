@@ -1,19 +1,44 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState, useEffect} from 'react';
 
 
 export function useIsMobile() {
   const [isMobile, setIsMobile] = useState(
     typeof window !== 'undefined' ? window && window.innerWidth < 768 : false
+<<<<<<< HEAD
 
 import { useState, useEffect } from 'react';
 import {useState, useEffect} from 'react';
 export function useIsMobile() {
   const [isMobile, setIsMobile] = useState(
     typeof window !== 'undefined' ? window.innerWidth < 768 : false;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
   useEffect(() => {
 
     const handleResize = () => {
+<<<<<<< HEAD
+=======
+
+      setIsMobile(window && window.innerWidth < 768)
+    };
+
+
+    if (typeof window !== 'undefined') {
+      window && window.addEventListener('resize', handleResize);
+      return () => window && window.removeEventListener('resize', handleResize)
+    }
+    return undefined
+  }, []);
+
+  return isMobile
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState, useEffect} from 'react';
 export /**
  * useIsMobile - Function description
@@ -38,6 +63,7 @@ if ( {) {
   }, []);
 
 
+<<<<<<< HEAD
       setIsMobile(window.innerWidth < 768)
     }
     if (typeof window !== 'undefined') {
@@ -49,6 +75,9 @@ if ( {) {
 
   return isMobile
 }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState, useEffect } from 'react',;
 export function useIsMobile() {;
   const [isMobile, setIsMobile] = useState(;
@@ -65,11 +94,16 @@ export function useIsMobile() {;
     return undefined;
   }, []);
   return isMobile;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 }
 ;
   return is_mobile;
+<<<<<<< HEAD
 }
 
 import { useState, useEffect } from 'react',;
@@ -100,3 +134,7 @@ return isMobile
 ;
 }
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

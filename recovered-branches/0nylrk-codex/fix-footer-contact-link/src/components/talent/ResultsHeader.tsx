@@ -8,6 +8,7 @@ interface ResultsHeaderProps {
   isLoading: boolean;
   resultCount: number
 
+<<<<<<< HEAD
 import { Loader2 } from "lucide-react";
 
 interface ResultsHeaderProps {
@@ -19,6 +20,21 @@ interface ResultsHeaderProps {
   isLoading: boolean;
   resultCount: number;
 
+=======
+
+import { Loader2 } from "lucide-react",
+
+=======
+import {Loader2} from "lucide-react";
+=======
+import { Loader2 } from "lucide-react",
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+interface ResultsHeaderProps {
+  isLoading: boolean;
+  resultCount: number
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
   return (
@@ -31,6 +47,7 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
       ) : (
         <span>
 
+<<<<<<< HEAD
 import { Loader2 } from "lucide-react",;
 ;
 interface ResultsHeaderProps {;
@@ -56,6 +73,16 @@ interface ResultsHeaderProps {;
 ;
 export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {;
   return (;
+=======
+import {Loader2} from "lucide-react";
+interface ResultsHeaderProps {;
+  isLoading: boolean,;
+  resultCount: number;
+}
+
+export function ResultsHeader(): any ({ isLoading, resultCount }: ResultsHeaderProps) {;
+  return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="flex items-center mb-6 text-zion-slate-light">;
       {isLoading ? (;
         <div className="flex items-center">;
@@ -68,12 +95,16 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {;
             "No talents found. Try adjusting your filters.";
           ) : (;
             `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`;
+<<<<<<< HEAD
 
           )}
         </span>;
 
       )}
     </div>
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           {resultCount === 0 ? (
             "No talents found. Try adjusting your filters."
@@ -116,6 +147,7 @@ function ResultsHeader() {
 }
 ;
 
+<<<<<<< HEAD
       ) :(;
         <span>;
           {resultCount === 0 ? (;
@@ -155,3 +187,6 @@ resultCount: number
   )
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

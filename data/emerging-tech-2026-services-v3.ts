@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface EmergingTech2026ServiceV3 {
 export interface EmergingTech2026ServiceV3 {;
   id: string;
@@ -28,11 +29,15 @@ export interface EmergingTech2026ServiceV3 {;
     mobile: string,;
     email: string,;
     address: string;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
   }
 }
 
@@ -64,6 +69,9 @@ export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [;
     },
   },
 ];      mobile: "+1 302 464 0950";
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],

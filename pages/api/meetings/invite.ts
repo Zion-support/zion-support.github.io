@@ -1,13 +1,27 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createClient } from "@supabase/supabase-js";
 
 
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createClient } from "@supabase/supabase-js";
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL |"";
 const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"";
+=======
+const url = process && process.env.NEXT_PUBLIC_SUPABASE_URL || "";
+const key = process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "";
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -68,7 +82,17 @@ if ( {) {
       event: "call_invite",
       payload: { project_id, room_name, inviter_name },
     });
+<<<<<<< HEAD
 }
+=======
+
+
+  }
+
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
     return res.status (200).json ({ ok: true });
   } catch (e) {
@@ -105,6 +129,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -116,7 +144,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
   }
 }
   }
 }
+=======
+
+  }
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

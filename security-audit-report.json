@@ -139,6 +139,7 @@
   ],
   "recommendations": [
     {
+<<<<<<< HEAD
       "type": "file_permissions",
       "message": "package.json is world-readable",
       "severity": "medium"
@@ -162,6 +163,9 @@
     "Add security headers to Next.js configuration"
   ]
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       "priority": "high",
       "category": "dependencies",
       "message": "Update dependencies with known vulnerabilities",
@@ -208,3 +212,7 @@
   }
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

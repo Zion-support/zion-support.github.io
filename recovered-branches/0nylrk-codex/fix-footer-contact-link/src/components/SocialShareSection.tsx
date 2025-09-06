@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {Button} from "./ui/button";
 import {Twitter, Facebook, Linkedin, Link} from "@/components/icons";
 import {toast} from "./ui/use-toast";
@@ -47,6 +48,11 @@ export function SocialShareSection() {
 
 
   
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const copyLinkToClipboard = () => {
     navigator.clipboard.writeText(window.location.href)
       .then(() => {
@@ -67,9 +73,12 @@ export function SocialShareSection() {
 
 
 
+<<<<<<< HEAD
   }
   },
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const shareLinks = [
     {
       name: "Twitter"
@@ -77,38 +86,67 @@ export function SocialShareSection() {
       color: "bg-[#1DA1F2] hover:bg-[#1DA1F2]/80"
       onClick: shareToTwitter
 
+<<<<<<< HEAD
     },
 
 
     }
     },
+=======
+
+    },
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       name: "Facebook"
       icon: <Facebook className="h-5 w-5" />
       color: "bg-[#4267B2] hover:bg-[#4267B2]/80"
       onClick: shareToFacebook
 
+<<<<<<< HEAD
     },
 
 
     }
     },
+=======
+
+    },
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       name: "LinkedIn"
       icon: <Linkedin className="h-5 w-5" />
       color: "bg-[#0077B5] hover:bg-[#0077B5]/80"
       onClick: shareToLinkedIn
 
+<<<<<<< HEAD
     },
 
 
     }
     },
+=======
+
+    },
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       name: "Copy Link"
       icon: <Link className="h-5 w-5" />
       color: "bg-zion-blue-dark hover:bg-zion-blue-dark/80"
       onClick: copyLinkToClipboard
+<<<<<<< HEAD
+=======
+
+import {Button} from "./ui/button";
+import {Twitter, Facebook, Linkedin, Link} from "@/components/icons";
+import {toast} from "./ui/use-toast";
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }],
 
   return (
@@ -126,6 +164,7 @@ export function SocialShareSection() {
                 className={`${link.color} text-white`}
                 size="sm"
 
+<<<<<<< HEAD
 import { Button } from "./ui/button",;
 import { Twitter, Facebook, Linkedin, Link } from "@/components/icons",;
 import { toast } from "./ui/use-toast",;
@@ -177,6 +216,34 @@ export function SocialShareSection() {;
   },;
   const copyLinkToClipboard = () => {;
     navigator.clipboard.writeText(window.location.href);
+=======
+
+=======
+import { Button } from "./ui/button",;
+import { Twitter, Facebook, Linkedin, Link } from "@/components/icons",;
+import { toast } from "./ui/use-toast",;
+
+export function SocialShareSection() {;
+  // Current URL and text to share;
+  const shareUrl = encodeURIComponent(window && window.location.href);
+  const shareText = encodeURIComponent("Check out Zion - The Future of AI & Tech Marketplace");
+
+  // Social sharing functions;
+  const shareToTwitter = () => {;
+    window && window.open(`https://twitter && twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`, "_blank");
+  };
+
+  const shareToFacebook = () => {;
+    window && window.open(`https://www && www.facebook.com/sharer/sharer && sharer.php?u=${shareUrl}`, "_blank");
+  };
+
+  const shareToLinkedIn = () => {;
+    window && window.open(`https://www && www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, "_blank");
+  };
+
+  const copyLinkToClipboard = () => {;
+    navigator && navigator.clipboard.writeText(window && window.location.href);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       .then(() => {;
         toast({;
           title: "Link Copied!",;
@@ -189,28 +256,129 @@ export function SocialShareSection() {;
           variant: "destructive";
         });
       });
+<<<<<<< HEAD
   },;
+=======
+  };
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const shareLinks = [;
     {;
       name: "Twitter",;
       icon: <Twitter className="h-5 w-5" />,;
       color: "bg-[#1DA1F2] hover:bg-[#1DA1F2]/80",;
       onClick: shareToTwitter;
+<<<<<<< HEAD
     },;
+=======
+    };
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {;
       name: "Facebook",;
       icon: <Facebook className="h-5 w-5" />,;
       color: "bg-[#4267B2] hover:bg-[#4267B2]/80",;
       onClick: shareToFacebook;
+<<<<<<< HEAD
     },;
+=======
+    };
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {;
       name: "LinkedIn",;
       icon: <Linkedin className="h-5 w-5" />,;
       color: "bg-[#0077B5] hover:bg-[#0077B5]/80",;
       onClick: shareToLinkedIn;
+<<<<<<< HEAD
 
 
 }
+=======
+    };
+    {;
+      name: "Copy Link",;
+      icon: <Link className="h-5 w-5" />,;
+      color: "bg-zion-blue-dark hover:bg-zion-blue-dark/80",;
+      onClick: copyLinkToClipboard;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import { Button } from './ui / button';
+import { Twitter, Facebook, Linkedin, Link } from '@/components / icons';
+import { toast } from './ui / use - toast';
+export /**
+ * SocialShareSection - Function description
+ */
+function SocialShareSection() {
+  // Current URL and text to share;
+  const share_url = encodeURIComponent (window.location.href);
+  const share_text = encodeURIComponent ("Check out Zion - The Future of AI & Tech Marketplace");
+;
+  // Social sharing functions;
+  const shareToTwitter = () =>: any {
+    window.open (`https://twitter.com / intent / tweet?url=${share_url}&text=${share_text}`, "_blank");
+  }
+;
+  const shareToFacebook = () =>: any {
+    window.open (`https://www.facebook.com / sharer / sharer.php?u=${share_url}`, "_blank");
+  }
+;
+  const shareToLinkedIn = () =>: any {
+    window.open (`https://www.linkedin.com / sharing / share - offsite/?url=${share_url}`, "_blank");
+  }
+;
+  const copyLinkToClipboard = () =>: any {
+    navigator.clipboard.write_text (window.location.href);
+      .then (() => {
+        toast ({
+          title: "Link Copied!",
+          description: "The link has been copied to your clipboard"});
+      });
+      .catch (() => {
+        toast ({
+          title: "Failed to copy",
+          description: "Please try again or copy the URL manually",
+          variant: "destructive";
+        });
+      });
+  }
+;
+  const share_links = [;
+    {
+      name: "Twitter",
+      icon: <Twitter className="h - 5 w - 5" />,
+      color: "bg-[#1DA1F2] hover:bg-[#1DA1F2]/80",
+      on_click: shareToTwitter;
+    }
+    {
+      name: "Facebook",
+      icon: <Facebook className="h - 5 w - 5" />,
+      color: "bg-[#4267B2] hover:bg-[#4267B2]/80",
+      on_click: shareToFacebook;
+    }
+    {
+      name: "LinkedIn",
+      icon: <Linkedin className="h - 5 w - 5" />,
+      color: "bg-[#0077B5] hover:bg-[#0077B5]/80",
+      on_click: shareToLinkedIn;
+    }
+    {
+      name: "Copy Link",
+      icon: <Link className="h - 5 w - 5" />,
+      color: "bg - zion - blue - dark hover:bg - zion - blue - dark / 80",
+      on_click: copyLinkToClipboard;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    }];
+;
+  return (
+
+            {shareLinks.map((link, index) => (;
+              <Button;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>;
         </div>;
       </div>;
@@ -240,6 +408,7 @@ export function SocialShareSection() {;
       </div>;
     </section>);
 }
+<<<<<<< HEAD
 
 import { Button } from "./ui/button",;
 import { Twitter, Facebook, Linkedin, Link } from "@/components/icons",;
@@ -327,3 +496,6 @@ export function SocialShareSection() {;
 ;
 }
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

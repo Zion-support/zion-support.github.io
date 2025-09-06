@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const features = [
 
 import React from "react";
@@ -5,6 +6,8 @@ import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
 
 import React from 'react'
 import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react'
 import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
 
@@ -154,6 +157,7 @@ function EnterpriseFeatures() {
           {features && features.map(feature => (;
             <div
 
+<<<<<<< HEAD
 export function EnterpriseFeatures() {
   return (
     <section id='features' className='py-20 px-4 md:px-6 bg-muted/50'>
@@ -169,6 +173,8 @@ export function EnterpriseFeatures() {
         </div>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {features.map(feature => (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div
               key={feature.title}
               className='bg-card rounded-lg p-6 shadow-sm border border-border transition-all hover:shadow-md'            >
@@ -177,6 +183,7 @@ export function EnterpriseFeatures() {
               </div>
               <h3 className='font-bold text-xl mb-3'>{feature.title}</h3>
               <p className='text-muted-foreground'>{feature.description}</p>            </div>
+<<<<<<< HEAD
               <h3 className="font-bold text-xl mb-3">{feature.title}</h3>
               <p className="text-muted-foreground">{feature.description}</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -197,6 +204,10 @@ export function EnterpriseFeatures() {
     </section>
   )
 }
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             </div>
 
@@ -245,6 +256,10 @@ export function EnterpriseFeatures() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature) => (
             <div
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               key={feature.title}
               className="bg-card rounded-lg p-6 shadow-sm border border-border transition-all hover:shadow-md"
             >
@@ -254,6 +269,10 @@ export function EnterpriseFeatures() {
               <h3 className="font-bold text-xl mb-3">{feature.title}</h3>
               <p className="text-muted-foreground">{feature.description}</p>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",;
 import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react';
 const features = [;
@@ -322,6 +341,7 @@ export function EnterpriseFeatures() {;
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">;
             Our enterprise solutions offer powerful tools designed for large teams and complex hiring needs;
           </p>;
+<<<<<<< HEAD
         </div>;
 ;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
@@ -356,6 +376,14 @@ export function EnterpriseFeatures() {;
 };
 }
 }
+=======
+
+        </div>;
+      </div>;
+    </section>;
+  );
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 }
         <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
@@ -436,4 +464,8 @@ icon: Settings ;
 ;
 
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

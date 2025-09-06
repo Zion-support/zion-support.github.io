@@ -1,8 +1,11 @@
 
+<<<<<<< HEAD
 import { createNotification  } from './createNotification';
 import { HireRequestNotificationParams } from './types';
 import { createNotification } from './createNotification',
 import { HireRequestNotificationParams } from './types',
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {createNotification} from './createNotification';
 import {HireRequestNotificationParams} from './types';
 /**
@@ -14,17 +17,26 @@ export async function createHireRequestNotifications({;
   requesterName;
 import { createNotification } from './createNotification',
 import { HireRequestNotificationParams } from './types',
+<<<<<<< HEAD
 import { createNotification } from './createNotification',
 import { HireRequestNotificationParams } from './types',
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 /**
  * Creates a hire request notification for admin and talent
  */
 export async function createHireRequestNotifications({
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   try {
   const projectInfo = projectType 
     ? `${projectType} project` 
 
+<<<<<<< HEAD
   talentId;
   adminId;
   requesterName;
@@ -38,6 +50,8 @@ export async function createHireRequestNotifications({
 
   const projectInfo = projectType
     ? `${projectType} project`
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     : "project";
   const summaryText = projectSummary
     ? `: "${projectSummary}"`
@@ -66,16 +80,30 @@ export async function createHireRequestNotifications({
       actionText: 'Review Request'
     });
     return {
+<<<<<<< HEAD
+=======
+
+      success: talentNotification && talentNotification.success && adminNotification && adminNotification.success;
+      talentNotification,
+
+      adminNotification
+=======
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   talentId,
   adminId,
   requesterName,
 
+<<<<<<< HEAD
       success: talentNotification.success && adminNotification.success;
       talentNotification
       adminNotification
   talentId,
   adminId,
   requesterName,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   requesterEmail, 
   projectType,
   projectSummary,
@@ -118,6 +146,7 @@ export async function createHireRequestNotifications({
       success: talentNotification.success && adminNotification.success,
       talentNotification,
       adminNotification
+<<<<<<< HEAD
 import { createNotification } from './createNotification',;
 import { HireRequestNotificationParams } from './types',;
 /**;
@@ -165,6 +194,9 @@ export async function createHireRequestNotifications({;
       success: talentNotification.success && adminNotification.success,;
       talentNotification;
       adminNotification;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     }
   }
@@ -227,11 +259,15 @@ if ( {) {
   return {
     success: talent_notification.success,
     talent_notification;
+<<<<<<< HEAD
     }
   }
   return {
     success: talentNotification.success
 
     talentNotification
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 }

@@ -9,4 +9,8 @@ const CloudInfrastructure = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default CloudInfrastructure;
+=======
+export default CloudInfrastructure;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

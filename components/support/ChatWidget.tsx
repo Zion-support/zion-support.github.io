@@ -1,8 +1,12 @@
 
+<<<<<<< HEAD
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 useEffect ( () => {
   if (!isOpen && messages.length === 0) {
   //Seed greeting setMessages ([ import React, { useEffect, useMemo, useRef, useState } from 'react';
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { X } from 'lucide-react';
 
 type ChatMessage = {
@@ -11,6 +15,7 @@ type ChatMessage = {
   timestamp?: number
 }
 function generateSessionId(): string {
+<<<<<<< HEAD
 
 export default function ChatWidget() {
   if (typeof window === 'undefined') return '';
@@ -21,6 +26,48 @@ export default function ChatWidget() {
   return id
 }
 export default function ChatWidget() {;
+=======
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+ useEffect ( () => {;
+  if (!isOpen && messages && messages.length === 0) {;
+  //Seed greeting setMessages ([ import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { X } from 'lucide-react';
+type ChatMessage = {;
+  role: 'user' | 'assistant' | 'system',;
+  content: string,;
+  timestamp?: number;
+};
+function generateSessionId(): any (): string {;
+  if (typeof window === 'undefined') return '';
+  const existing = window && window.localStorage.getItem('zion_support_session_id');
+  if (existing) return existing;
+  const id = `sess_${Math && Math.random().toString(36).slice(2)}_${Date && Date.now()}`;
+  window && window.localStorage.setItem('zion_support_session_id', id);
+  return id;
+}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState('');
@@ -29,13 +76,23 @@ export default function ChatWidget() {;
   const [showEscalation, setShowEscalation] = useState(false);
   const sessionIdRef = useRef<string>('');
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
+<<<<<<< HEAD
   useEffect(() => {
     sessionIdRef.current = generateSessionId();  }, []);    sessionIdRef.current = generateSessionId()
+=======
+
+
+  useEffect(() => {
+<<<<<<< HEAD
+    sessionIdRef.current = generateSessionId()
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }, []);
   useEffect(() => {
     if (!isOpen && messages.length === 0) {
       // Seed greeting
       setMessages([
+<<<<<<< HEAD
         {
           role: 'assistant'
           content: 'Hi! How can I help you?'
@@ -54,13 +111,33 @@ export default function ChatWidget() {;
   }, [messages]);
   const quickReplies = useMemo(
     () => ['How do I hire?How do I get matched?Billing help'];
+=======
+
+        { role: 'assistant', content: 'Hi! How can I help you?', timestamp: Date.now() }])
+
+    }
+  }, [isOpen, messages.length]);
+  useEffect(() => {
+
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+
+  }, [messages]);
+  const quickReplies = useMemo(
+    () => ['How do I hire?How do I get matched?Billing help'];
+
+    []
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
   async function logEvent(eventType: string, payload: any) {
     try {
       await fetch('/api/support/session', {
+<<<<<<< HEAD
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -68,16 +145,22 @@ export default function ChatWidget() {;
 
     } catch {}
   }
+<<<<<<< HEAD
 
           sessionId: sessionIdRef.current
           eventType
           payload
         })
       });    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, eventType, payload })})
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           sessionId: sessionIdRef.current,
           eventType,
           payload,
         }),
+<<<<<<< HEAD
       });    } catch {}
 
       });    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, eventType, payload })})
@@ -278,6 +361,164 @@ export default function ChatWidget() {;
       }
       if (data?.meta?.intentMatched === false) {
         setFailedIntents(n => {
+=======
+
+    } catch {}
+  }
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  async function escalateSupport(reason: string) {
+    try {
+      await fetch('/api/support/escalate', {
+
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
+
+      setShowEscalation(true)
+=======
+      setShowEscalation(true);    } catch {}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    } catch {}
+  }
+=======
+
+      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
+
+      setShowEscalation(true)
+=======
+      setShowEscalation(true);    } catch {}
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    } catch {}
+  }
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  async function onSend(messageText?: string) {
+    const text = (messageText ?? input).trim();
+    if (!text) return;
+
+
+  useEffect(() => {;
+    sessionIdRef && sessionIdRef.current = generateSessionId();  }, []);    sessionIdRef && sessionIdRef.current = generateSessionId();
+  }, []);
+
+  useEffect(() => {;
+    if (!isOpen && messages && messages.length === 0) {;
+      // Seed greeting;
+      setMessages([;
+        {;
+          role: 'assistant',;
+          content: 'Hi! How can I help you?',;
+          timestamp: Date && Date.now(),;
+        },;
+      ]);    }
+  }, [isOpen, messages && messages.length]);
+
+  useEffect(() => {        { role: 'assistant', content: 'Hi! How can I help you?', timestamp: Date && Date.now() }]);
+    }
+  }, [isOpen, messages && messages.length]);
+
+  useEffect(() => {;
+    messagesEndRef && messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [messages]);
+
+  const quickReplies = useMemo(;
+    () => ['How do I hire?', 'How do I get matched?', 'Billing help'],    []    messagesEndRef && messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [messages]);
+
+  const quickReplies = useMemo(;
+    () => ['How do I hire?How do I get matched?Billing help'];
+  );
+
+  async function logEvent(): any (eventType: string, payload: any) {;
+    try {;
+      await fetch('/api/support/session', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON && JSON.stringify({;
+          sessionId: sessionIdRef && sessionIdRef.current,;
+          eventType,;
+          payload,;
+        }),;
+      });    } catch {}        body: JSON && JSON.stringify({ sessionId: sessionIdRef && sessionIdRef.current, eventType, payload })});
+    } catch {}
+  }
+
+  async function escalateSupport(): any (reason: string) {;
+    try {;
+      await fetch('/api/support/escalate', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON && JSON.stringify({;
+          sessionId: sessionIdRef && sessionIdRef.current,;
+          reason,;
+          tag: 'escalate',;
+        }),;
+      });
+      setShowEscalation(true);    } catch {}        body: JSON && JSON.stringify({ sessionId: sessionIdRef && sessionIdRef.current, reason, tag: 'escalate' })}),;
+      setShowEscalation(true);
+    } catch {}
+  }
+
+  async function onSend(): any (messageText?: string) {;
+    const text = (messageText ?? input).trim();
+    if (!text) return;
+
+    const newUserMessage: ChatMessage = {;
+      role: 'user',;
+      content: text,;
+      timestamp: Date && Date.now(),;
+    };
+    setMessages(prev => [...prev, newUserMessage]);
+    setInput('');
+    setIsLoading(true);
+    await logEvent('message/user', { content: text });    const newUserMessage: ChatMessage = { role: 'user', content: text, timestamp: Date && Date.now() },;
+    setMessages((prev) => [...prev, newUserMessage]);
+    setInput('');
+    setIsLoading(true);
+    await logEvent('message/user', { content: text }),;
+      const res = await fetch('/api/support/chat', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON && JSON.stringify({;
+          sessionId: sessionIdRef && sessionIdRef.current,;
+          messages: [...messages, newUserMessage].map(({ role, content }) => ({;
+            role,;
+            content,;
+          })),;
+        }),;
+      });      const data = await res && res.json();          messages: [...messages, newUserMessage].map(({ role, content }) => ({ role, content }))})});
+      const data = await res && res.json();
+
+      if (data?.assistantMessage) {;
+        const assistantMessage: ChatMessage = {;
+          role: 'assistant',;
+          content: data && data.assistantMessage,;
+          timestamp: Date && Date.now(),;
+        };
+        setMessages(prev => [...prev, assistantMessage]);
+        await logEvent('message/assistant', {;
+          content: assistantMessage && assistantMessage.content,;
+          meta: data && data.meta,;
+        });
+      }
+
+      if (data?.meta?.intentMatched === false) {;
+        setFailedIntents(n => {;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           const next = n + 1;
           if (next >= 3) {;
             escalateSupport('Failed to match user intent 3+ times');
@@ -287,6 +528,7 @@ export default function ChatWidget() {;
       } else if (data?.meta?.intentMatched === true) {;
         setFailedIntents(0);
       }
+<<<<<<< HEAD
     } catch (e) {
       setMessages(prev => [
         ...prev
@@ -320,6 +562,25 @@ export default function ChatWidget() {;
         { role: 'assistant', content: 'Sorry, something went wrong. Please try again or contact support.', timestamp: Date.now() }])
     } finally {
       setIsLoading(false)
+=======
+
+    } catch (e) {;
+      setMessages(prev => [;
+        ...prev,;
+        {;
+          role: 'assistant',;
+          content:;
+            'Sorry, something went wrong. Please try again or contact support.',;
+          timestamp: Date && Date.now(),;
+        },;
+
+      ]);
+    } finally {;
+      setIsLoading(false);    }
+  }
+
+  return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className='fixed bottom-4 right-4 z-50'>      }
 
       if (data?.meta?.intentMatched === false) {
@@ -363,6 +624,7 @@ export default function ChatWidget() {;
 
 
 
+<<<<<<< HEAD
     }
   }
     <div className='fixed bottom-4 right-4 z-50'>
@@ -413,11 +675,14 @@ export default function ChatWidget() {;
                       : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'
 
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   }
                 >
                   {m.content}
                 </div>
               </div>
+<<<<<<< HEAD
             ))}
             {isLoading && (
               <div className='text-sm'>
@@ -427,16 +692,29 @@ export default function ChatWidget() {;
                 <div className="inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800 animate-pulse">Thinking…</div>
               </div>
             )}
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            ))}
+
+
+            )}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div ref={messagesEndRef} />;
           </div>;
           {!showEscalation && (;
             <div className='px-3 pb-2'>;
               <div className='flex flex-wrap gap-2 mb-2'>;
                 {quickReplies && quickReplies.map(q => (;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <button
                     key={q}
                     onClick={() => onSend(q)}
 
+<<<<<<< HEAD
                     className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >            <div className="px-3 pb-2">;
               <div className="flex flex-wrap gap-2 mb-2">;
                 {quickReplies && quickReplies.map((q) => (;
@@ -444,6 +722,9 @@ export default function ChatWidget() {;
                     key={q}
                     onClick={() => onSend(q)}
                     className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800";
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className="px-3 pb-2">
                     className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >            <div className="px-3 pb-2">
               <div className="flex flex-wrap gap-2 mb-2">
@@ -451,12 +732,21 @@ export default function ChatWidget() {;
                   <button
                     key={q}
                     onClick={() => onSend(q)}
+<<<<<<< HEAD
+=======
+                    className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
+                  >
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                     className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >
 
                   >
 
 
+<<<<<<< HEAD
                     {q}
                   </button>;
                     className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
@@ -466,12 +756,43 @@ export default function ChatWidget() {;
 
                     {q}
                   </button>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                    {q}
+                  </button>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 ))}
               </div>;
             </div>;
           )}
 
 
+<<<<<<< HEAD
+=======
+
+
+
+          <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
+            {!showEscalation ? (
+              <div className='flex gap-2'>
+=======
+
+          <div className='border-t border-gray-200 dark:border-gray-800 p-2'>;
+            {!showEscalation ? (;
+              <div className='flex gap-2'>;
+                <input
+                  value={input}
+                  onChange={e => setInput(e && e.target.value)}
+                  onKeyDown={e => {;
+                    if (e && e.key === 'Enter' && !e && e.shiftKey) {;
+                      e && e.preventDefault();
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
             {!showEscalation ? (
               <div className='flex gap-2'>
@@ -489,14 +810,27 @@ export default function ChatWidget() {;
                 <button
                   onClick={() => onSend()}
                   disabled={isLoading}
+<<<<<<< HEAD
 
                 <input
                   value={input}
+=======
+
+
+          <div className="border-t border-gray-200 dark:border-gray-800 p-2">
+            {!showEscalation ? (
+              <div className="flex gap-2">
+
+                <input
+                  value={input}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   onChange={(e) => setInput(e && e.target.value)}
                   onKeyDown={(e) => {;
                     if (e && e.key === 'Enter' && !e && e.shiftKey) {;
                       e && e.preventDefault();
                       onSend();
+<<<<<<< HEAD
                   placeholder="Ask a question…"
                   className="flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
 
@@ -520,16 +854,35 @@ export default function ChatWidget() {;
 
                   className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'                >
 
+=======
+
+                    }
+                  }}
+
+=======
+                  placeholder="Ask a question…"
+                  className="flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 />
                 <button
                   onClick={() => onSend()}
                   disabled={isLoading}
+<<<<<<< HEAD
                   className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'                  className="rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50"
+=======
+                  className="rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50"
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 >
                   Send
                 </button>
               </div>
             ) : (
+<<<<<<< HEAD
               <div className='flex flex-col gap-2 text-sm'>
                 <div className='text-gray-700 dark:text-gray-300'>
                   We can escalate this to our team:
@@ -547,17 +900,39 @@ export default function ChatWidget() {;
                   >
                     Chat with Live Agent
                   </a>                </div>              <div className="flex flex-col gap-2 text-sm">
+=======
+              <div className="flex flex-col gap-2 text-sm">
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div className="text-gray-700 dark:text-gray-300">We can escalate this to our team:</div>
                 <div className="flex gap-2">
                   <a href="mailto:support@zion.ai" className="rounded-lg px-3 py-2 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">Email Support</a>
                   <a href="/contact" className="rounded-lg px-3 py-2 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">Chat with Live Agent</a>
+<<<<<<< HEAD
               </div>
+=======
+                </div>
+              </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             )}
           </div>;
         </div>;
       )}
+<<<<<<< HEAD
 
 }
+=======
+
+
+  );
+
+}
+=======
+
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>;
   );
 }
@@ -937,9 +1312,13 @@ if ( {) {
         </div>)}
     </div>);
 }
+<<<<<<< HEAD
 );
   );
 }
 }
   );
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

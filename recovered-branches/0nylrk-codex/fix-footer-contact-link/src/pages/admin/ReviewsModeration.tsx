@@ -9,6 +9,7 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Star, AlertTriangle} from "lucide-react";
 import {toast} from "@/components/ui/use-toast";
+<<<<<<< HEAD
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
 import { SEO } from "@/components/SEO",
@@ -20,19 +21,30 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Star, AlertTriangle } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
 function ReviewsModerationContent() {
+=======
+function ReviewsModerationContent() {;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [activeTab, setActiveTab] = useState("pending");
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
+<<<<<<< HEAD
 import { Star, AlertTriangle } from "lucide-react",
 import { toast } from "@/components/ui/use-toast",
 import { Star, AlertTriangle } from "lucide-react",
 import { toast } from "@/components/ui/use-toast",
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 function ReviewsModerationContent() {
   const [activeTab, setActiveTab] = useState("pending"),
   const [reviews, setReviews] = useState([]),
   const [isLoading, setIsLoading] = useState(true),
   
+<<<<<<< HEAD
   const fetchReviews = async () => {
     setIsLoading(true),
     try {
@@ -51,6 +63,10 @@ function ReviewsModerationContent() {
     }
   
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const fetchReviews = async () => {
   const [activeTab, setActiveTab] = useState("pending");
   const [reviews, setReviews] = useState([]);
@@ -90,22 +106,31 @@ function ReviewsModerationContent() {
     fetchReviews()
   }
 
+<<<<<<< HEAD
   },
 
   useEffect(() => {
     fetchReviews()
   }, [activeTab]),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   const handleRefresh = () => {
     fetchReviews()
   },
   
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <>;
       <SEO
         title="Review Moderation | Zion AI Marketplace"
         description="Moderate and manage reviews in the Zion AI Marketplace"
 
+<<<<<<< HEAD
 import { AppHeader } from "@/layout/AppHeader",;
 import { Footer } from "@/components/Footer",;
 import { SEO } from "@/components/SEO",;
@@ -153,6 +178,8 @@ function ReviewsModerationContent() {;
       <SEO;
         title="Review Moderation | Zion AI Marketplace";
         description="Moderate and manage reviews in the Zion AI Marketplace";
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       />;
       <AppHeader />;
       <main className="container mx-auto px-4 py-8">;
@@ -162,7 +189,11 @@ function ReviewsModerationContent() {;
             <p className="text-muted-foreground mt-1">Manage, approve, or reject reviews</p>;
           </div>;
         </div>;
+<<<<<<< HEAD
         ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <Card>;
           <CardHeader>;
             <CardTitle className="flex items-center gap-2">;
@@ -179,6 +210,7 @@ function ReviewsModerationContent() {;
                 <TabsTrigger value="pending">Pending Reviews</TabsTrigger>;
                 <TabsTrigger value="reported">Reported Reviews</TabsTrigger>;
               </TabsList>;
+<<<<<<< HEAD
                 <ReviewsModerationTable
               ;
               <TabsContent value="pending" className="mt-0">;
@@ -217,10 +249,16 @@ function ReviewsModerationContent() {;
                 <TabsTrigger value="reported">Reported Reviews</TabsTrigger>
               </TabsList>
               <TabsContent value="pending" className="mt-0">
+=======
+
+              <TabsContent value="pending" className="mt-0">;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <ReviewsModerationTable
                   reviews={reviews}
                   isLoading={isLoading}
                   onRefresh={handleRefresh}
+<<<<<<< HEAD
                 />
               </TabsContent>
               <TabsContent value="reported" className="mt-0">
@@ -250,6 +288,13 @@ export default function ReviewsModeration() {
     </ProtectedRoute>
   )
 }
+=======
+
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { AppHeader } from "@/layout/AppHeader",;
 import { Footer } from "@/components/Footer",;
 import { SEO } from "@/components/SEO",;
@@ -322,11 +367,18 @@ function ReviewsModerationContent() {;
                   reviews={reviews}
                   isLoading={isLoading}
                   onRefresh={handleRefresh}
+<<<<<<< HEAD
                 />;
               </TabsContent>;
               ;
                 />;
               </TabsContent>;
+=======
+
+                />;
+              </TabsContent>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <TabsContent value="reported" className="mt-0">;
                 <div className="text-center py-12 border rounded-lg">;
                   <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2" />;
@@ -346,6 +398,7 @@ function ReviewsModerationContent() {;
 export default function ReviewsModeration() {;
   return (
   );
+<<<<<<< HEAD
 }
 ;
 export default function ReviewsModeration() {;
@@ -358,6 +411,29 @@ export default function ReviewsModeration() {;
 
 
 ;
+=======
+
+import { AppHeader } from '@/layout / AppHeader';
+import { Footer } from '@/components / Footer';
+import { SEO } from '@/components / SEO';
+import { ReviewsModerationTable } from '@/components / admin / reviews / ReviewsModerationTable';
+import { ProtectedRoute } from '@/components / ProtectedRoute';
+import { useState, useEffect } from './react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
+import { Star, AlertTriangle } from './lucide-react';
+import { toast } from '@/components / ui / use - toast';
+/**
+ * ReviewsModerationContent - Function description
+ */
+function ReviewsModerationContent() {
+  const [active_tab, setActiveTab] = useState ("pending");
+  const [reviews, set_reviews] = useState ([]);
+  const [is_loading, setIsLoading] = useState (true);
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
 export default function ReviewsModeration() {
@@ -367,6 +443,11 @@ export default function ReviewsModeration() {
     </ProtectedRoute>
   )
 }
+<<<<<<< HEAD
+=======
+
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const fetch_reviews = async () => {
     setIsLoading (true);
     try {
@@ -455,6 +536,7 @@ function ReviewsModeration() {
       <ReviewsModerationContent />;
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
   ),;
 }
 ;
@@ -484,3 +566,6 @@ return (<> <SEO title="Review Moderation | Zion AI Marketplace" description="Mod
 }export default function ReviewsModeration () {
   return (<ProtectedRoute> <ReviewsModerationContent /> </ProtectedRoute> 
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import {logErrorToProduction} from '@/utils/productionLogger';
@@ -241,6 +242,8 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {;
   );
 }
 ;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 
 const PdfExportButton = () => {
@@ -251,4 +254,8 @@ const PdfExportButton = () => {
   );
 };
 
+<<<<<<< HEAD
 export default PdfExportButton;
+=======
+export default PdfExportButton;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

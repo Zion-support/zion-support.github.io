@@ -1,10 +1,18 @@
 import type { GetServerSideProps } from 'next';
 
+<<<<<<< HEAD
 export default function AgencyDashboardPage({ vendor }: Props) {
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default function AgencyDashboardPage({ vendor }: Props) {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },;
 export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
 
 
+<<<<<<< HEAD
 import { FormEvent, useEffect, useState } from 'react';
 import type { Vendor } from '../utils/vendor-types';
 
@@ -16,14 +24,29 @@ export default function AgencyDashboardPage({ vendor }: Props) {;
 type Props = { vendor: Vendor | null };
 
 export default function AgencyDashboardPage({ vendor }: Props) {
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [activeVendor, setActiveVendor] = useState(vendor);
   const [pkgTitle, setPkgTitle] = useState('');
   const [pkgDesc, setPkgDesc] = useState('');
   const [pkgPrice, setPkgPrice] = useState<number | ''>('');
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   if (!activeVendor) return <div className="text-gray-500">No vendor found. Please apply first.</div>;
 
 
+<<<<<<< HEAD
+=======
+  if (!activeVendor);
+    return (
+      <div className='text-gray-500'>No vendor found. Please apply first.</div>;
+    );  if (!activeVendor) return <div className="text-gray-500">No vendor found. Please apply first.</div>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   async function saveProfile(): any (e: FormEvent<HTMLFormElement>) {;
@@ -41,6 +64,11 @@ export default function AgencyDashboardPage({ vendor }: Props) {
         .split(',');
         .map(s => s && s.trim());
         .filter(Boolean),;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         .filter(Boolean),
 
@@ -49,15 +77,22 @@ export default function AgencyDashboardPage({ vendor }: Props) {
     setActiveVendor(updated);  }
 
 
+<<<<<<< HEAD
     } as Vendor;
     // For MVP, update via direct API not implemented; keep local preview only;
     setActiveVendor(updated);  }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   function addPackage() {;
     if (!pkgTitle || !pkgPrice || !activeVendor) return;      name: String(formData && formData.get('name') || activeVendor && activeVendor.name),;
       about: String(formData && formData.get('about') || activeVendor && activeVendor.about || ''),;
       servicesOffered: String(formData && formData.get('servicesOffered') || activeVendor && activeVendor.servicesOffered?.join() || '');
         .split();
         .map(s => s && s.trim());
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         .filter(Boolean)} as Vendor;
     // For MVP, update via direct API not implemented, keep local preview only;
     setActiveVendor(updated);
@@ -74,6 +109,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
         description: pkgDesc,;
         priceUsd: Number(pkgPrice),;
       },;
+<<<<<<< HEAD
   if (!activeVendor)
     return (
       <div className='text-gray-500'>No vendor found. Please apply first.</div>
@@ -118,12 +154,19 @@ export default function AgencyDashboardPage({ vendor }: Props) {
         description: pkgDesc
         priceUsd: Number(pkgPrice)
       }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     ];
     setActiveVendor({ ...activeVendor, packages });
     setPkgTitle('');
     setPkgDesc('');
     setPkgPrice('');
   }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         .filter(Boolean)} as Vendor;
     // For MVP, update via direct API not implemented, keep local preview only
     setActiveVendor(updated)
@@ -132,6 +175,10 @@ export default function AgencyDashboardPage({ vendor }: Props) {
 
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className='space-y-8'>;
       <div className='flex items-center justify-between'>;
@@ -141,9 +188,17 @@ export default function AgencyDashboardPage({ vendor }: Props) {
             Pending Verification;
           </span>;
         )}
+<<<<<<< HEAD
       </div>;
       <section className='space-y-4'>;
         <h2 className='text-lg font-medium'>Profile</h2>;
+=======
+
+      </div>;
+      <section className='space-y-4'>;
+        <h2 className='text-lg font-medium'>Profile</h2>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <form
           onSubmit={saveProfile}
           className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
@@ -159,7 +214,13 @@ export default function AgencyDashboardPage({ vendor }: Props) {
             <label className='block text-sm mb-1'>About</label>;
             <textarea
               name='about'
+<<<<<<< HEAD
               defaultValue={activeVendor && activeVendor.about || ''}
+=======
+
+              defaultValue={activeVendor && activeVendor.about || ''}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               rows={4}
               className='w-full border rounded px-3 py-2 bg-transparent'
             />;
@@ -168,6 +229,10 @@ export default function AgencyDashboardPage({ vendor }: Props) {
             <label className='block text-sm mb-1'>Services Offered</label>;
             <input
               name='servicesOffered'
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               defaultValue={activeVendor && activeVendor.servicesOffered?.join(', ') || ''}
               className='w-full border rounded px-3 py-2 bg-transparent'
             />;
@@ -178,6 +243,16 @@ export default function AgencyDashboardPage({ vendor }: Props) {
             </button>          </div>;
         </form>;
       </section>;
+<<<<<<< HEAD
+=======
+
+      <section className='space-y-3'>;
+        <h2 className='text-lg font-medium'>Publish Packages</h2>;
+
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>    setActiveVendor({ ...activeVendor, packages });
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       ...activeVendor;
       name: String(formData.get('name') || activeVendor.name),
       about: String(formData.get('about') || activeVendor.about || ''),
@@ -198,6 +273,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
       priceUsd: Number(pkgPrice)}],
     setActiveVendor({ ...activeVendor, packages });
 
+<<<<<<< HEAD
       <section className='space-y-3'>;
         <h2 className='text-lg font-medium'>Publish Packages</h2>;
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>    setActiveVendor({ ...activeVendor, packages });
@@ -335,11 +411,15 @@ setActiveVendor({ ...activeVendor, packages });
       <section className='space-y-3'>
         <h2 className='text-lg font-medium'>Publish Packages</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>    setActiveVendor({ ...activeVendor, packages });
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     setPkgTitle('');
     setPkgDesc('');
     setPkgPrice('')
   }
   return (
+<<<<<<< HEAD
     <div className="space-y-8">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-semibold">Agency Dashboard</h1>
@@ -365,6 +445,8 @@ setActiveVendor({ ...activeVendor, packages });
           </div>
         </form>
       </section>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     <div className="space-y-8">;
       <div className="flex items-center justify-between">;
@@ -439,6 +521,7 @@ function Pipeline({ vendorId }: { vendorId: string }) {
     const data = await res.json();
     setItems(data.items || [])
 
+<<<<<<< HEAD
       <section className='space-y-3'>
         <h2 className='text-lg font-medium'>Publish Packages</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
@@ -503,6 +586,12 @@ function Pipeline({ vendorId }: { vendorId: string }) {
   );
 }
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
+=======
+  }
+
+  async function changeStatus(itemId: string, status: string) {
+    await fetch('/api/vendors/update-pipeline', {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           </div>
         </form>
@@ -535,6 +624,7 @@ function Pipeline({ vendorId }: { vendorId: string }) {
 
 }
 
+<<<<<<< HEAD
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ itemId, status })}),
@@ -547,6 +637,13 @@ function Pipeline({ vendorId }: { vendorId: string }) {
   )
 }
 function Pipeline(): any ({ vendorId }: { vendorId: string }) {;
+=======
+function Pipeline(): any ({ vendorId }: { vendorId: string }) {;
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 function Pipeline({ vendorId }: { vendorId: string }) {
   const [items, setItems] = useState<any[]>([]);
@@ -569,12 +666,15 @@ function Pipeline({ vendorId }: { vendorId: string }) {
   useEffect(() => {;
 
 
+<<<<<<< HEAD
 
   }
 
   }
 
   useEffect(() => {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     fetchItems();
   }, []);
   return (
@@ -597,9 +697,13 @@ function Pipeline({ vendorId }: { vendorId: string }) {
             onChange={e => changeStatus(item && item.id, e && e.target.value)}
             className='border rounded px-2 py-1 bg-transparent text-sm';
 
+<<<<<<< HEAD
             defaultValue={item && item.status}
             onChange={e => changeStatus(item && item.id, e && e.target.value)}
             className='border rounded px-2 py-1 bg-transparent text-sm';
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {FormEvent, useEffect, useState} from 'react';
 import type { Vendor } from '../utils / vendor - types';
 ;
@@ -870,6 +974,11 @@ function change_status() {
             default_value={item.status}
             on_change={e => change_status (item.id, e.target.value)}
             className='border rounded px - 2 py - 1 bg - transparent text - sm';
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           >;
             <option value='lead'>Lead</option>;
             <option value='qualified'>Qualified</option>;
@@ -877,14 +986,20 @@ function change_status() {
             <option value='in_progress'>In Progress</option>;
             <option value='complete'>Complete</option>;
             <option value='lost'>Lost</option>          </select>;
+<<<<<<< HEAD
         </div>))}
     </div>          <select default_value={item.status} on_change={e => change_status (item.id, e.target.value)} className="border rounded px - 2 py - 1 bg - transparent text - sm">;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <option value="lead">Lead</option>;
             <option value="qualified">Qualified</option>;
             <option value="proposal">Proposal</option>;
             <option value="in_progress">In Progress</option>;
             <option value="complete">Complete</option>;
             <option value="lost">Lost</option>;
+<<<<<<< HEAD
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
             defaultValue={item.status}
             onChange={e => changeStatus(item.id, e.target.value)}
@@ -910,6 +1025,10 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {;
     </div>
   );
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
   const { listVendors } = await import('../utils/vendor-store');
@@ -929,9 +1048,34 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {;
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] || null, // tie to auth later;
   return { props: { vendor } }
+<<<<<<< HEAD
 };
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     </div>
 };
+<<<<<<< HEAD
     </div>
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+        </div>))}
+    </div>);
+;
+export const getServerSideProps: GetServerSideProps < Props> = async () => {
+  const { list_vendors } = await import ('../utils / vendor - store');
+  const vendor = list_vendors ()[0] || null; // tie to auth later;
+  return { props: { vendor } }
+}  );
+}
+export const getServerSideProps: GetServerSideProps < Props> = async () => {
+  const { list_vendors } = await import ('../utils / vendor - store');
+  const vendor = list_vendors ()[0] || null, // tie to auth later;
+  return { props: { vendor } }
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

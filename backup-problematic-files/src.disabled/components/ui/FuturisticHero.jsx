@@ -9,4 +9,8 @@ const FuturisticHero = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default FuturisticHero;
+=======
+export default FuturisticHero;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

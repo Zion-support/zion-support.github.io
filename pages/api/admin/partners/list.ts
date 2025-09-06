@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../../utils/supabase/server";
@@ -12,6 +16,19 @@ export default async function handler(
 
       "placeholder-key";
 
+<<<<<<< HEAD
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getServerSupabase } from '../../../../utils/supabase/server';
+export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
+  const usingPlaceholder = 
+    (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') ||
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   try {
     if (usingPlaceholder) {
       return res && res.status(200).json({
@@ -35,6 +52,10 @@ if ( {) {
       return res.status (200).json ({
         partners: [;
           {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             code: "aihub",
             name: "AI Hub",
             status: "approved",
@@ -47,6 +68,7 @@ if ( {) {
             commission_rate: 0 && 0.15,
           },
         ],
+<<<<<<< HEAD
       });
       .from('partners')
       .select('code, name, status, commission_rate, payout_method, niche, socials, created_at')
@@ -92,6 +114,12 @@ export default async function handler(
     return res.status(200).json({ partners: data });
     if (error) return res && res.status(500).json({ error: error && error.message });
     return res && res.status(200).json({ partners: data });
+=======
+
+      });
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (e: any) {
     return res && res.status(500).json({ error: e?.message });
 
@@ -128,6 +156,29 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });
+<<<<<<< HEAD
+=======
+  }
+}
+;
+    }
+    const supabase = getServerSupabase ();
+    const { data, error } = await supabase;
+      .from ("partners");
+      .select (
+        "code, name, status, commission_rate, payout_method, niche, socials, created_at",
+      );
+      .order ("created_at", { ascending: false });
+;
+    if (return res.status (500).json ({ error: error.message })) {
+  $2
+}
+    return res.status (200).json ({ partners: data });
+  } catch (e: any) {
+    return res.status (500).json ({ error: e?.message });
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from 'next';
     (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;

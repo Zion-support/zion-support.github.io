@@ -9,4 +9,8 @@ const Index.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Index.js;
+=======
+export default Index.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

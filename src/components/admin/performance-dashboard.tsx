@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -23,6 +24,8 @@ interface PerformanceMetrics {
   bundleSize: number
   loadTime: number
   performanceScore: number
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -78,6 +81,7 @@ interface PerformanceMetrics {
   lcp: number; // Largest Contentful Paint;
   cls: number; // Cumulative Layout Shift;
   fid: number; // First Input Delay;
+<<<<<<< HEAD
 interface BundleChunk {
   name: string;
   size: number;
@@ -256,10 +260,13 @@ if (return '0 B') {
   lcp: number; // Largest Contentful Paint
   cls: number; // Cumulative Layout Shift
   fid: number; // First Input Delay
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 interface BundleChunk {
   name: string;
   size: number;
+<<<<<<< HEAD
   loadTime: number;
   cached: boolean;
   type: string
@@ -430,11 +437,220 @@ interface PerformanceMetrics {;
   fid: number, // First Input Delay;
 }
   type: string;
+=======
+  load_time: number;
+  cached: boolean;
+  type: string;
+export /**
+ * PerformanceDashboard - Function description
+ */
+function PerformanceDashboard() {
+  const [metrics, set_metrics] = useState < PerformanceMetrics | null>(null);
+  const [chunks, set_chunks] = useState < BundleChunk[]>([]);
+  const [is_loading, setIsLoading] = useState (false);
+  const [last_updated, setLastUpdated] = useState < Date | null>(null);
+  const collect_metrics = async () => {
+    try {
+      // Collect performance metrics;
+      const memory_info = (performance as any).memory;
+      const navigation_entry = performance.getEntriesByType (
+        'navigation')[0] as PerformanceNavigationTiming;
+      const resource_count = performance.getEntriesByType ('resource').length;
+      const performance_metrics: PerformanceMetrics = {
+        bundle_size: 0, // This would need to be calculated separately;
+        load_time: navigation_entry;
+          ? navigation_entry.loadEventEnd - navigation_entry.fetch_start;
+          : 0,
+        performance_score: 0, // This would need to be calculated;
+        chunk_count: resource_count,
+        cacheHitRate: 0, // This would need to be calculated from resource timing;
+        fcp: 0, // First Contentful Paint - would need Performance Observer;
+        lcp: 0, // Largest Contentful Paint - would need Performance Observer;
+        cls: 0, // Cumulative Layout Shift - would need Performance Observer;
+        fid: 0, // First Input Delay - would need Performance Observer;
+      }
+      set_metrics (performance_metrics);
+      log_info ('Performance metrics collected successfully', {
+        load_time: performance_metrics.load_time,
+        resource_count: performance_metrics.chunk_count,
+      });
+    } catch (error) {
+      logErrorToProduction ('Failed to collect performance metrics', error, {
+        component: 'PerformanceDashboard',
+        action: 'collect_metrics',
+      });
+      // Set fallback metrics;
+      set_metrics ({
+        bundle_size: 0,
+        load_time: 0,
+        performance_score: 0,
+        chunk_count: 0,
+        cacheHitRate: 0,
+        fcp: 0,
+        lcp: 0,
+        cls: 0,
+        fid: 0,
+      });
+
+    }
+  }
+  const collectWebVitals = async (): Promise < Partial < PerformanceMetrics>> => {
+    // Check condition
+if (return {}
+    const vitals: Partial < PerformanceMetrics> = {}
+    // Collect navigation timing) {
+  $2
+}
+    const navigation = performance.getEntriesByType (
+      'navigation')[0] as PerformanceNavigationTiming;
+    // Check condition
+if ( {) {
+  $2
+}
+      vitals.fcp = navigation.loadEventEnd - navigation.loadEventStart;
+      vitals.lcp = navigation.loadEventEnd - navigation.fetch_start;
+    }
+
+    // Use PerformanceObserver for more accurate metrics;
+    // Check condition
+if ( {) {
+  $2
+}
+      return new Promise (resolve => {
+        const observer = new PerformanceObserver (list => {
+          list.get_entries ().for_each (entry => {            // Check condition
+if ( {) {
+  $2
+}
+              // Check condition
+if ( {) {
+  $2
+}
+                vitals.fcp = entry.start_time;
+
+              }
+            }
+            // Check condition
+if ( {) {
+  $2
+}
+              vitals.lcp = entry.start_time;
+            }
+
+            // Check condition
+if ( {) {
+  $2
+}
+              vitals.cls = (vitals.cls || 0) + (entry as any).value;
+
+            }
+            // Check condition
+if ( {) {
+  $2
+}
+              vitals.fid = (entry as any).processing_start - entry.start_time;
+            }
+
+          });
+        });
+        observer.observe ({
+          entry_types: [;
+            'paint',
+            'largest - contentful - paint',
+            'layout - shift',
+            'first - input',
+          ],
+        });
+        // Resolve after a short delay;
+        set_timeout (() => {
+          observer.disconnect ();
+          resolve (vitals);
+        }, 2000);
+      }) }
+    return vitals;
+  }
+  const collectChunkData = async (): Promise < BundleChunk[]> => {
+    // Check condition
+if (return []) {
+  $2
+}
+    const resource_entries = performance.getEntriesByType (
+      'resource') as PerformanceResourceTiming[];
+    const script_entries = resource_entries.filter (
+      entry =>;
+        entry.name.includes ('/_next / static/') && entry.name.ends_with ('.js'));
+    return script_entries;
+      .map (entry => ({
+        name: entry.name.split ('/').pop ()?.split ('?')[0] || 'unknown',
+        size: entry.transfer_size || entry.encodedBodySize || 0,
+        load_time: entry.response_end - entry.request_start,
+        cached: entry.transfer_size === 0,
+        type: categorize_chunk (entry.name),
+      }));
+      .sort ((a, b) => b.size - a.size);
+
+  }
+  const categorize_chunk = (filename: string): string => {
+    if () return 'framework') {
+  $2
+}
+    if () return 'vendor') {
+  $2
+}
+    if () return 'page') {
+  $2
+}
+    if () return 'chunk') {
+  $2
+}
+    return 'other';
+  }
+  const format_size = (bytes: number): string => {
+    // Check condition
+if (return '0 B') {
+  $2
+}
+    const key = 1024;
+    const sizes = ['B', 'KB', 'MB', 'GB'];
+    const index = Math.floor (Math.log (bytes) / Math.log (k));
+    return parse_float ((bytes / Math.pow (k, i)).to_fixed (1)) + ' ' + sizes[i];
+  }
+  const getScoreColor = (score: number): string => {
+    // Check condition
+if (return 'text - green - 600') {
+  $2
+}
+    // Check condition
+if (return 'text - yellow - 600') {
+  $2
+}
+    return 'text - red - 600';
+  }
+  const getScoreIcon = (score: number) =>: any {
+    // Check condition
+if (return <CheckCircle className='w - 4 h - 4 text - green - 600' />) {
+  $2
+}
+    // Check condition
+if (
+      return <AlertTriangle className='w - 4 h - 4 text - yellow - 600' />) {
+  $2
+}
+    return <AlertTriangle className='w - 4 h - 4 text - red - 600' />;
+  }
+
+  type: string;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function PerformanceDashboard() {;
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [chunks, setChunks] = useState<BundleChunk[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const collectMetrics = async () => {;
     try {;
       // Collect performance metrics;
@@ -443,11 +659,16 @@ export function PerformanceDashboard() {;
         'navigation';
       )[0] as PerformanceNavigationTiming;
       const resourceCount = performance && performance.getEntriesByType('resource').length;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const performanceMetrics: PerformanceMetrics = {;
         bundleSize: 0, // This would need to be calculated separately;
         loadTime: navigationEntry;
           ? navigationEntry && navigationEntry.loadEventEnd - navigationEntry && navigationEntry.fetchStart;
           : 0,;
+<<<<<<< HEAD
 ;
 interface BundleChunk {;
   name: string,;
@@ -471,24 +692,41 @@ export function PerformanceDashboard() {;
       const performanceMetrics: PerformanceMetrics = {;
         bundleSize: 0, // This would need to be calculated separately;
         loadTime: navigationEntry ? navigationEntry.loadEventEnd - navigationEntry.fetchStart : 0,;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         performanceScore: 0, // This would need to be calculated;
         chunkCount: resourceCount,;
         cacheHitRate: 0, // This would need to be calculated from resource timing;
         fcp: 0, // First Contentful Paint - would need Performance Observer;
         lcp: 0, // Largest Contentful Paint - would need Performance Observer;
         cls: 0, // Cumulative Layout Shift - would need Performance Observer;
+<<<<<<< HEAD
         fid: 0  // First Input Delay - would need Performance Observer;
       },;
       setMetrics(performanceMetrics),;
       logInfo('Performance metrics collected successfully', {;
         loadTime: performanceMetrics.loadTime,;
         resourceCount: performanceMetrics.chunkCount;
+=======
+        fid: 0, // First Input Delay - would need Performance Observer;
+      };
+
+      setMetrics(performanceMetrics);
+      logInfo('Performance metrics collected successfully', {;
+        loadTime: performanceMetrics && performanceMetrics.loadTime,;
+        resourceCount: performanceMetrics && performanceMetrics.chunkCount,;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       });
     } catch (error) {;
       logErrorToProduction('Failed to collect performance metrics', error, {;
         component: 'PerformanceDashboard',;
+<<<<<<< HEAD
         action: 'collectMetrics';
       }),;
+=======
+        action: 'collectMetrics',;
+      });
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Set fallback metrics;
       setMetrics({;
         bundleSize: 0,;
@@ -499,6 +737,7 @@ export function PerformanceDashboard() {;
         fcp: 0,;
         lcp: 0,;
         cls: 0,;
+<<<<<<< HEAD
         fid: 0;
       });
     }
@@ -597,6 +836,64 @@ export function PerformanceDashboard() {;
 
     return () => clearInterval(interval)
   }, []),
+=======
+        fid: 0,;
+      });
+    }
+  };
+
+  const collectWebVitals = async (): Promise<Partial<PerformanceMetrics>> => {;
+    if (typeof window === 'undefined') return {};
+
+    const vitals: Partial<PerformanceMetrics> = {};
+
+    // Collect navigation timing;
+    const navigation = performance && performance.getEntriesByType(;
+      'navigation';
+    )[0] as PerformanceNavigationTiming;
+    if (navigation) {;
+      vitals && vitals.fcp = navigation && navigation.loadEventEnd - navigation && navigation.loadEventStart;
+      vitals && vitals.lcp = navigation && navigation.loadEventEnd - navigation && navigation.fetchStart;
+    }
+
+    // Use PerformanceObserver for more accurate metrics;
+    if ('PerformanceObserver' in window) {;
+      return new Promise(resolve => {;
+        const observer = new PerformanceObserver(list => {;
+          list && list.getEntries().forEach(entry => {            if (entry && entry.entryType === 'paint') {;
+              if (entry && entry.name === 'first-contentful-paint') {;
+                vitals && vitals.fcp = entry && entry.startTime;
+              }
+            }
+            if (entry && entry.entryType === 'largest-contentful-paint') {;
+              vitals && vitals.lcp = entry && entry.startTime;
+            }
+            if (entry && entry.entryType === 'layout-shift') {;
+              vitals && vitals.cls = (vitals && vitals.cls || 0) + (entry as any).value;
+            }
+            if (entry && entry.entryType === 'first-input') {;
+              vitals && vitals.fid = (entry as any).processingStart - entry && entry.startTime;
+            }
+          });
+        });
+
+        observer && observer.observe({;
+          entryTypes: [;
+            'paint',;
+            'largest-contentful-paint',;
+            'layout-shift',;
+            'first-input',;
+          ],;
+        });
+
+        // Resolve after a short delay;
+        setTimeout(() => {;
+          observer && observer.disconnect();
+          resolve(vitals);
+        }, 2000);
+      });    }
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   return (
     <div className="space-y-6">
@@ -609,6 +906,7 @@ export function PerformanceDashboard() {;
           </p>
         </div>
         <Button onClick={collectMetrics} disabled={isLoading}>
+<<<<<<< HEAD
           <RefreshCw
             className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`}
           />
@@ -620,6 +918,11 @@ export function PerformanceDashboard() {;
               {lastUpdated && (
                 <p className='text-sm text-muted-foreground'>
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+          <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return vitals;
   };
   const collectChunkData = async (): Promise<BundleChunk[]> => {;
@@ -1139,6 +1442,7 @@ export function PerformanceDashboard() {;
         </CardHeader>;
         <CardContent>;
 
+<<<<<<< HEAD
               {lastUpdated && (
                 <p className='text-sm text-muted-foreground'>
               
@@ -1214,6 +1518,8 @@ export function PerformanceDashboard() {;
         </div>
       )}
       {/* Bundle Chunks */}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
@@ -1223,6 +1529,7 @@ export function PerformanceDashboard() {;
         </CardHeader>
         <CardContent>
           {chunks.length > 0 ? (
+<<<<<<< HEAD
             <div className='space-y-2'>
               {chunks.slice(0, 10).map((chunk, index) => (
                 <div
@@ -1231,12 +1538,20 @@ export function PerformanceDashboard() {;
                 >
                   <div className='flex items-center gap-3'>
                     <span className='text-sm font-mono text-muted-foreground'>                      {index + 1}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className="space-y-2">
               {chunks.slice(0, 10).map((chunk, index) => (
                 <div key={chunk.name} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded">
                   <div className="flex items-center gap-3">
                     <span className="text-sm font-mono text-muted-foreground">
                       {index + 1}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     </span>
                     <div>
                       <p className="font-medium text-sm">{chunk.name}</p>
@@ -1278,6 +1593,7 @@ export function PerformanceDashboard() {;
             </div>;
           ) : (;
             <p className='text-center py-8 text-muted-foreground'>;
+<<<<<<< HEAD
           {chunks.length > 0 ? (;
             <div className="space-y-2">;
               {chunks.slice(0, 10).map((chunk, index) => (;
@@ -1361,6 +1677,12 @@ export function PerformanceDashboard() {;
               <CheckCircle className='w-5 h-5 text-green-600 mt-0.5' />
                 <p className="font-medium text-green-900 dark:text-green-100">
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+              No chunk data available. Refresh to collect metrics.;
+            </p>;
+          )}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             
             <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded">
@@ -1369,10 +1691,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 
               <div>
                 <p className='font-medium text-green-900 dark:text-green-100'>
+<<<<<<< HEAD
+=======
+                  Performance monitoring active
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </p>
                 <p className='text-sm text-green-700 dark:text-green-300'>
                   Real-time performance tracking is helping optimize your
                   application
+<<<<<<< HEAD
             <div className='flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded'>
               <CheckCircle className='w-5 h-5 text-green-600 mt-0.5' />
             
@@ -1390,6 +1717,12 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="flex items-start gap-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded">
                 <AlertTriangle className="w-5 h-5 text-yellow-600 mt-0.5" />
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+                </p>
+              </div>
+            </div>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             
 
@@ -1397,12 +1730,17 @@ ursor/fix-website-loading-errors-and-merge-6662
             {metrics && metrics.bundleSize > 2 * 1024 * 1024 && (
               <div className='flex items-start gap-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded'>
                 <AlertTriangle className='w-5 h-5 text-yellow-600 mt-0.5' />
+<<<<<<< HEAD
+=======
+                <div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <p className='font-medium text-yellow-900 dark:text-yellow-100'>
                     Consider more aggressive code splitting
                   </p>
                   <p className='text-sm text-yellow-700 dark:text-yellow-300'>
                     Bundle size is above 2MB. Consider implementing dynamic
                     imports for heavy components
+<<<<<<< HEAD
             
             {metrics && metrics.bundleSize > 2 * 1024 * 1024 && (
               <div className="flex items-start gap-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded">
@@ -1413,10 +1751,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </p>
                   <p className="text-sm text-yellow-700 dark:text-yellow-300">
                     Bundle size is above 2MB. Consider implementing dynamic imports for heavy components
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </p>
                 </div>
               </div>
             )}
+<<<<<<< HEAD
 }
 }
               ;
@@ -1439,10 +1780,22 @@ ursor/fix-website-loading-errors-and-merge-6662
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
             <TrendingUp className="w-5 h-5" />;
+=======
+
+        </CardContent>;
+      </Card>;
+
+      {/* Recommendations */}
+      <Card>;
+        <CardHeader>;
+          <CardTitle className='flex items-center gap-2'>;
+            <TrendingUp className='w-5 h-5' />;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             Optimization Recommendations;
           </CardTitle>;
         </CardHeader>;
         <CardContent>;
+<<<<<<< HEAD
           <div className="space-y-3">;
             <div className="flex items-start gap-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded">;
               <CheckCircle className="w-5 h-5 text-blue-600 mt-0.5" />;
@@ -1477,10 +1830,50 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </p>;
                   <p className="text-sm text-yellow-700 dark:text-yellow-300">;
                     Bundle size is above 2MB. Consider implementing dynamic imports for heavy components;
+=======
+          <div className='space-y-3'>;
+            <div className='flex items-start gap-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded'>;
+              <CheckCircle className='w-5 h-5 text-blue-600 mt-0 && 0.5' />;
+              <div>;
+                <p className='font-medium text-blue-900 dark:text-blue-100'>;
+                  Bundle splitting implemented;
+                </p>;
+                <p className='text-sm text-blue-700 dark:text-blue-300'>;
+                  Your bundle is properly split into framework, vendor, and;
+                  application chunks;
+                </p>;
+              </div>;
+            </div>;
+
+            <div className='flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded'>;
+              <CheckCircle className='w-5 h-5 text-green-600 mt-0 && 0.5' />;
+              <div>;
+                <p className='font-medium text-green-900 dark:text-green-100'>;
+                  Performance monitoring active;
+                </p>;
+                <p className='text-sm text-green-700 dark:text-green-300'>;
+                  Real-time performance tracking is helping optimize your;
+                  application;
+                </p>;
+              </div>;
+            </div>;
+
+            {metrics && metrics.bundleSize > 2 * 1024 * 1024 && (;
+              <div className='flex items-start gap-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded'>;
+                <AlertTriangle className='w-5 h-5 text-yellow-600 mt-0 && 0.5' />;
+                <div>;
+                  <p className='font-medium text-yellow-900 dark:text-yellow-100'>;
+                    Consider more aggressive code splitting;
+                  </p>;
+                  <p className='text-sm text-yellow-700 dark:text-yellow-300'>;
+                    Bundle size is above 2MB. Consider implementing dynamic;
+                    imports for heavy components;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </p>;
                 </div>;
               </div>;
             )}
+<<<<<<< HEAD
           </div>
         </CardContent>
       </Card>
@@ -1489,6 +1882,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 }
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -1498,6 +1893,11 @@ ursor/fix-website-loading-errors-and-merge-6662
     </div>;
 
 } ;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           {chunks.length > 0 ? (
             <div className='space - y-2'>;
@@ -1654,4 +2054,8 @@ return (<div className="space-y-6" > {;
 } ;
 }
 }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

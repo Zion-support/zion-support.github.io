@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   const isGuest = !auth?.isAuthenticated
   const handleSendMessage = async (messageContent: string) => {
     if (!messageContent.trim()) return;
@@ -192,6 +193,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
   useState
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 useState
   useEffect
   useRef
@@ -384,6 +387,11 @@ if ( {) {
         valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn
       const newMessages = null;
         valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn,
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       setLoggedInMessages(newMessages)
     }
   }
@@ -620,6 +628,7 @@ export function ChatAssistant(): any ({;
       className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
       role="dialog"
       aria-modal="true"
+<<<<<<< HEAD
 import React, {;
   useState,;
   useEffect,;
@@ -814,18 +823,28 @@ export function ChatAssistant({;
       aria-modal="true";
       aria-labelledby="chat-assistant-title";
     >;
+=======
+      aria-labelledby="chat-assistant-title">;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">;
         {/* Header */}
         <div className="bg-zion-blue-dark p-3 flex items-center justify-between border-b border-zion-purple/20">;
           <div className="flex items-center space-x-3">;
             <Avatar className="h-10 w-10 border border-zion-purple/20">;
+<<<<<<< HEAD
               <AvatarImage src={recipient.avatarUrl} alt={recipient.name} />;
               <AvatarFallback className="bg-zion-purple/20 text-white">;
                 {recipient.name.charAt(0).toUpperCase()}
+=======
+              <AvatarImage src={recipient && recipient.avatarUrl} alt={recipient && recipient.name} />;
+              <AvatarFallback className="bg-zion-purple/20 text-white">;
+                {recipient && recipient.name.charAt(0).toUpperCase()}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </AvatarFallback>;
             </Avatar>;
             <div>;
               <h2 id="chat-assistant-title" className="font-medium text-white">;
+<<<<<<< HEAD
       aria-labelledby="chat-assistant-title"
     >
       <div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">
@@ -847,12 +866,25 @@ export function ChatAssistant({;
               )}
             </div>
           </div>
+=======
+                {recipient && recipient.name}
+              </h2>;
+              {recipient && recipient.role && (;
+                <div className="text-xs text-zion-slate">{recipient && recipient.role}</div>;
+              )}
+            </div>;
+          </div>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Button
             variant="ghost"
             size="icon"
             className="text-white hover:bg-zion-purple/10 rounded-full"
+<<<<<<< HEAD
             onClick = {onClose,}
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             onClick={onClose}
 
@@ -861,7 +893,10 @@ ursor/fix-website-loading-errors-and-merge-6662
             <X className="h-5 w-5" />
           </Button>
         </div>
+<<<<<<< HEAD
             onClick = {onClose,}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             aria-label="Close chat">;
             <X className="h-5 w-5" />;
           </Button>;
@@ -890,6 +925,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">;
             {contextHeader}
           </div>;
+<<<<<<< HEAD
         )}
 ;
         {/* Messages */}
@@ -905,10 +941,16 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">
             {contextHeader}
           </div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         )}
         {/* Messages */}
         <div
           className="flex-1 overflow-y-auto p-4 space-y-4"
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           aria-live="polite"
         >
           {currentMessages.length === 0 ? (
@@ -916,6 +958,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <p>Start a conversation with {recipient.name}</p>
               {starterQuestions.length > 0 && (
                 <div className="flex flex-wrap justify-center gap-2">
+<<<<<<< HEAD
                   {starterQuestions.map((q, idx,) => (
                     <Button
                       key = {idx,}
@@ -957,6 +1000,9 @@ ursor/fix-website-loading-errors-and-merge-6662
           <ChatInput onSend={handleSendMessage} />;
         </div>;
       </div>;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   {starterQuestions.map((q, idx) => (
                     <Button
                       key={idx}
@@ -967,6 +1013,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
                       {q}
+<<<<<<< HEAD
                     </Button>
                   ))}
                 </div>
@@ -985,10 +1032,35 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
       </div>
       {showGuestModal && guestMessage && (
+=======
+                    </Button>;
+                  ))}
+                </div>;
+              )}
+            </div>;
+          ) : (;
+            currentMessages && currentMessages.map((msg,) => (;
+              <ChatMessage key={msg && msg.id} role={msg && msg.role} message={msg && msg.message} />;
+            ));
+          )}
+
+          <div ref={messagesEndRef} />;
+        </div>;
+
+        {/* Input */}
+        <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">;
+          <ChatInput onSend={handleSendMessage} />;
+        </div>;
+      </div>;
+
+      {showGuestModal && guestMessage && (;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div
           className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4"
           role="dialog"
           aria-modal="true"
+<<<<<<< HEAD
 ;
       {showGuestModal && guestMessage && (;
         <div;
@@ -1002,12 +1074,20 @@ ursor/fix-website-loading-errors-and-merge-6662
               id="confirm-message-title";
               className="text-lg font-semibold text-white mb-4";
             >;
+=======
+          aria-labelledby="confirm-message-title">;
+          <div className="bg-zion-blue-darker p-6 rounded-lg shadow-xl w-full max-w-md">;
+            <h3
+              id="confirm-message-title"
+              className="text-lg font-semibold text-white mb-4">;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Confirm Message;
             </h3>;
             <p className="text-zion-slate mb-6 whitespace-pre-wrap break-words">;
               {guestMessage}
             </p>;
             <div className="flex justify-end space-x-3">;
+<<<<<<< HEAD
                 onClick = {handleModalCancel,}
           aria-labelledby="confirm-message-title"
         >
@@ -1030,6 +1110,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               >
                 Cancel
               </Button>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Button
                 onClick = {handleModalSendConfirm,}
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
@@ -1369,4 +1451,8 @@ return (<div className="fixed inset-0 bg-black/50 z-50 flex items-center justify
 }
 }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

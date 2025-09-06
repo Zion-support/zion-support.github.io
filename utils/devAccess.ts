@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
@@ -19,6 +20,15 @@ export function getGitStatus(): { connected: boolean; branch?: string } {
   try {
     const gitDir = path.join(process.cwd(), '.git');
     if (!fs.existsSync(gitDir)) return { connected: false }
+=======
+  roles: DevRole[];
+  userId?: string;
+}
+
+    const gitDir = path && path.join(process && process.cwd(), '.git');
+    if (!fs && fs.existsSync(gitDir)) return { connected: false };
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const branch = execSync('git rev-parse --abbrev-ref HEAD', {
       stdio: ['ignore', 'pipe', 'ignore'],
     })
@@ -51,6 +61,7 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
   const token = req && req.headers['x-dev-token'] || req && req.headers['x-admin-token'];
   const adminToken = process && process.env.ADMIN_TOKEN;
 
+<<<<<<< HEAD
     return { connected: true, branch }
   } catch {
     return { connected: false }
@@ -62,12 +73,18 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
   // TODO: integrate real auth; for now, check a header and env var for dev
   const token = req.headers['x-dev-token'] |req.headers['x-admin-token'];
   const adminToken = process.env.ADMIN_TOKEN;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (token && adminToken && token === adminToken) {
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
   }
   return { isAuthenticated: false, roles: [] }
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (token && adminToken && token === adminToken) {
 
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
@@ -78,8 +95,12 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function requireRoles(
   req: ApiRequest,
   res: ApiResponse,
@@ -268,5 +289,10 @@ if ( {) {
 }
 
 
+<<<<<<< HEAD
 }
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,4 +1,9 @@
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {Users, Shield, Briefcase, Award, Settings, Globe} from "lucide-react";
 
 import React from "react",
@@ -12,6 +17,7 @@ const features = [
     description: "Access to a curated pool of pre - vetted talent matched to your industry and needs.",
     icon: Users},
 
+<<<<<<< HEAD
 import React from "react";
 import {Users, Shield, Briefcase, Award, Settings, Globe} from "lucide-react";
 import React from "react",
@@ -30,6 +36,8 @@ const features = [
     title: "Dedicated Talent Pool"
     description: "Access to a curated pool of pre-vetted talent matched to your industry and needs."
     icon: Users}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   {
     title: "Custom SLA"
     description: "Get guaranteed response times and dedicated support with our custom SLAs."
@@ -43,9 +51,14 @@ const features = [
     description: "Powerful analytics and management tools for team leaders and administrators."
     icon: Settings}
   {
+<<<<<<< HEAD
     title: "Global Access"
     description: "Connect with talent across multiple regions with localized interfaces."
     icon: Globe}]
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export function EnterpriseFeatures() {
   return (
@@ -71,6 +84,10 @@ export function EnterpriseFeatures() {
               <h3 className="font-bold text-xl mb-3">{feature.title}</h3>
               <p className="text-muted-foreground">{feature.description}</p>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 };
 
 import React from "react",;
@@ -80,6 +97,7 @@ const features = [;
   {;
     title: "Private Hiring Portal",;
     description: "Create a secure, private hiring portal accessible only to your team members.";
+<<<<<<< HEAD
           ))}
         </div>
       </div>
@@ -93,6 +111,8 @@ const features = [;
   {;
     title: "Private Hiring Portal",;
     description: "Create a secure, private hiring portal accessible only to your team members.",;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     icon: Shield},;
   {;
     title: "Dedicated Talent Pool",;
@@ -113,6 +133,7 @@ const features = [;
   {;
     title: "Global Access",;
     description: "Connect with talent across multiple regions with localized interfaces.",;
+<<<<<<< HEAD
 
 import React from "react",;
 import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",;
@@ -148,6 +169,14 @@ export function EnterpriseFeatures() {;
     icon: Globe}];
 export function EnterpriseFeatures() {;
   return (;
+=======
+    icon: Globe}],;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+export function EnterpriseFeatures() {;
+  return (
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <section className="py-20 px-4 md:px-6 bg-muted/50">;
       <div className="container mx-auto max-w-6xl">;
         <div className="text-center mb-16">;
@@ -158,6 +187,7 @@ export function EnterpriseFeatures() {;
             Our enterprise solutions offer powerful tools designed for large teams and complex hiring needs;
           </p>;
         </div>;
+<<<<<<< HEAD
           {features.map((feature) => (;
           {features && features.map((feature) => (;
             <div
@@ -227,3 +257,17 @@ icon: Settings
 }
 ;
 ;
+=======
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+
+=======
+          {features.map((feature) => (;
+            <div;
+}
+
+
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {createNotification} from './createNotification';
 import {SystemNotificationParams} from './types';
 
@@ -6,6 +11,7 @@ import {SystemNotificationParams} from './types';
  * Creates a system notification for a user
  */
 export async function createSystemNotification({
+<<<<<<< HEAD
 
 import { createNotification  } from './createNotification';
 import { SystemNotificationParams } from './types';
@@ -15,6 +21,8 @@ import {SystemNotificationParams} from './types';
  * Creates a system notification for a user
  */
 export async function createSystemNotification({;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   userId;
   title;
   message;
@@ -23,6 +31,10 @@ export async function createSystemNotification({;
   actionText = null;
   sendEmail = false
 }: SystemNotificationParams) {
+<<<<<<< HEAD
+=======
+  try {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return createNotification({
     userId;
     title;
@@ -33,6 +45,13 @@ export async function createSystemNotification({;
 
     actionText
   })
+<<<<<<< HEAD
+=======
+
+import {create_notification} from './create_notification';
+import {SystemNotificationParams} from './types';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 import { createNotification } from './createNotification',;
@@ -59,6 +78,7 @@ function createSystemNotification() {
 
 }
 ;
+<<<<<<< HEAD
 }
 
 import { createNotification } from './createNotification',;
@@ -89,3 +109,7 @@ export async function createSystemNotification({;
   });
 }
 ;
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

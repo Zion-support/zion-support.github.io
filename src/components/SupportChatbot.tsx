@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 import { useState, useRef, useEffect  } from 'react';
 import { MessageSquare, X } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
 import { ChatMessage, ChatInput  } from '@/components/ChatAssistant';
 import {logErrorToProduction} from '@/utils/productionLogger';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
     set_messages (prev => [...prev, user_msg]);
     set_loading (true);
@@ -34,6 +37,7 @@ import { Button } from '@/components/ui/button',;
 import { ChatMessage, ChatInput } from '@/components/ChatAssistant',;
 import {logErrorToProduction} from '@/utils/productionLogger',;
 
+<<<<<<< HEAD
 
 // Fallback responses when API is unavailable
 
@@ -52,10 +56,21 @@ const FALLBACK_RESPONSES = [
   'I understand you need assistance. For immediate help, please visit our help center or reach out to support@ziontechgroup.com.'
   "I'm currently experiencing technical difficulties, but I'd be happy to help you get to the right resource. Try browsing our documentation or contacting support."
   'While I work on resolving my connection issues, you can find helpful information in our help section or contact our support team for immediate assistance.'
+=======
+interface Msg { id: string, role: 'user' | 'assistant', message: string }
+
+
+
+// Fallback responses when API is unavailable
+
+const FALLBACK_RESPONSES = [
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   "I'm here to help! You can browse our help documentation, contact support at support@ziontechgroup.com, or try asking your question in a different way.",
   "Thanks for reaching out! While I'm having trouble connecting to my knowledge base, I can suggest checking our FAQ section or contacting our support team directly.",
   "I understand you need assistance. For immediate help, please visit our help center or reach out to support@ziontechgroup.com.",
   "I'm currently experiencing technical difficulties, but I'd be happy to help you get to the right resource. Try browsing our documentation or contacting support.",
+<<<<<<< HEAD
   'While I work on resolving my connection issues, you can find helpful information in our help section or contact our support team for immediate assistance.',
 ]
 export function SupportChatbot() {
@@ -175,12 +190,16 @@ export function SupportChatbot() {
 
 ursor/fix-website-loading-errors-and-merge-6662
       // If Supabase function fails, try local API fallback
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // If Supabase function fails, try local API fallback
       if (!res.ok) {
         res = await fetch('/api/kb-chat', {
           method: 'POST'
           headers: { 'Content-Type': 'application/json' }
           body: JSON.stringify({
+<<<<<<< HEAD
             messages: [
               ...messages.map(m => ({ role: m.role, content: m.message }))
               { role: 'user', content: text }
@@ -197,6 +216,10 @@ ursor/fix-website-loading-errors-and-merge-6662
           ''
         const finalMsg =
           message.trim() |
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         const message = null;
           data.message ||
           data.choices?.[0]?.message?.content ||
@@ -205,6 +228,11 @@ ursor/fix-website-loading-errors-and-merge-6662
           ''
         const finalMsg = null;
           message.trim() ||
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           FALLBACK_RESPONSES[
             Math.floor(Math.random() * FALLBACK_RESPONSES.length)
           ] |
@@ -228,14 +256,24 @@ ursor/fix-website-loading-errors-and-merge-6662
         let buffer = ''
         let accumulated = ''
         while (!done) {
+<<<<<<< HEAD
           const result = await reader.read()
           done = result.done
           buffer += decoder.decode(result.value |new Uint8Array())
           const lines = buffer.split('\n')
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           const result = await reader.read();
           done = result.done;
           buffer += decoder.decode(result.value || new Uint8Array());
           const lines = buffer.split('\n');
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           for (let i = 0; i < lines.length - 1; i++) {
             let line = lines[i]?.trim()
             if (!line) continue
@@ -247,6 +285,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               }
               try {
                 const json = JSON.parse(line)
+<<<<<<< HEAD
                 const token =
                   json.choices?.[0]?.delta?.content |
                   json.choices?.[0]?.text |
@@ -256,6 +295,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                 const token = null;
                   json.choices?.[0]?.delta?.content ||
                   json.choices?.[0]?.text ||
+=======
+
+
+                const token = null;
+                  json.choices?.[0]?.delta?.content ||
+                  json.choices?.[0]?.text ||
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   ''
                 if (token) {
                   accumulated += token
@@ -264,6 +312,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       m.id === botId ? { ...m, message: accumulated } : m
                     )
                   )
+<<<<<<< HEAD
             messages: [...messages.map(m => ({ role: m.role, content: m.message })), { role: 'user', content: text }]
           })
         }),
@@ -301,6 +350,8 @@ ursor/fix-website-loading-errors-and-merge-6662
         {
           method: 'POST'
           headers: {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface Msg {;
   id: string;
   role: 'user' | 'assistant';
@@ -635,6 +686,11 @@ export function SupportChatbot() {;
           accumulated.trim() |
         const final = null;
           accumulated.trim() ||
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           FALLBACK_RESPONSES[
             Math.floor(Math.random() * FALLBACK_RESPONSES.length)
           ] |
@@ -646,7 +702,11 @@ export function SupportChatbot() {;
     } catch (err) {
       logErrorToProduction('Chatbot error:', { data: err })
       // Provide a helpful fallback response instead of generic error
+<<<<<<< HEAD
       const fallbackResponse = null;
+=======
+      const fallbackResponse =
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         FALLBACK_RESPONSES[
           Math.floor(Math.random() * FALLBACK_RESPONSES.length)
         ] |
@@ -655,12 +715,40 @@ export function SupportChatbot() {;
         id: Date.now().toString() + '-e'
         role: 'assistant'
         message: fallbackResponse
+<<<<<<< HEAD
+=======
+
+          buffer = lines[lines.length - 1] || '';
+        }
+        const final =;
+          accumulated.trim () ||;
+          FALLBACK_RESPONSES[;
+            Math.floor (Math.random () * FALLBACK_RESPONSES.length);
+          ] ||;
+          "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance.";
+        set_messages (prev =>;
+          prev.map (m => (m.id === bot_id ? { ...m, message: final } : m)));
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
       setMessages(prev => [...prev, errorMsg])
     } finally {
       setLoading(false)
       setTyping(false)
     }
+<<<<<<< HEAD
+=======
+
+  }
+  if (!open) {
+    
+        onClick={() => setOpen(true)}
+        size='icon'
+        variant='outline'
+        className='fixed bottom-4 right-20 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-40'
+        aria-label='Open help chat'      >
+        <MessageSquare className='h-5 w-5' />
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         const final = accumulated.trim() ||
           (FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance."),
         setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: final } : m))
@@ -692,6 +780,7 @@ export function SupportChatbot() {;
         setMessages(prev =>;
           prev && prev.map(m => (m && m.id === botId ? { ...m, message: final } : m));
         );
+<<<<<<< HEAD
   }
   if (!open) {
     
@@ -719,6 +808,8 @@ export function SupportChatbot() {;
     } finally {
       setLoading(false),
       setTyping(false)
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   },
 
@@ -732,6 +823,7 @@ export function SupportChatbot() {;
         aria-label="Open help chat"
       >
         <MessageSquare className="h-5 w-5" />
+<<<<<<< HEAD
       </Button>
     )
       </Button>
@@ -747,6 +839,11 @@ export function SupportChatbot() {;
         className='fixed bottom-4 right-20 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-40'
         aria-label='Open help chat'      >
         <MessageSquare className='h-5 w-5' />
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </Button>
     )
   }
@@ -755,12 +852,16 @@ export function SupportChatbot() {;
       <div className="bg-zion-blue-dark p-2 flex justify-between items-center">
         <span className="text-white font-medium">Help Bot</span>
         <Button
+<<<<<<< HEAD
           variant='ghost'
           size='icon'
           className='text-white'
           onClick={() => setOpen(false)}
           aria-label='Close help bot'        >
           <X className='h-5 w-5' />
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           variant="ghost"
           size="icon"
           className="text-white"
@@ -777,11 +878,15 @@ export function SupportChatbot() {;
             role="assistant" 
             message="Hi! I'm here to help you with questions about Zion. What can I assist you with today?" 
           />
+<<<<<<< HEAD
         {messages.map(m => (
           <ChatMessage key={m.id} role={m.role} message={m.message} />
         ))}
         {typing && <ChatMessage role='assistant' message='...' />}
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         const final = accumulated.trim() ||;
           (FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance."),;
         setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: final } : m));
@@ -799,6 +904,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         role: 'assistant',;
         message: fallbackResponse,;
       };
+<<<<<<< HEAD
         const final = accumulated.trim() ||;
           (FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance."),;
         setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: final } : m));
@@ -812,6 +918,8 @@ ursor/fix-website-loading-errors-and-merge-6662
         role: 'assistant',;
         message: fallbackResponse;
       },;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       setMessages(prev => [...prev, errorMsg]);
     } finally {;
       setLoading(false);
@@ -820,6 +928,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   }
 
 
+<<<<<<< HEAD
           buffer = lines[lines.length - 1] || '',;
         }
         const final = accumulated.trim() ||;
@@ -865,6 +974,19 @@ ursor/fix-website-loading-errors-and-merge-6662
       </Button>;
     );
   }
+=======
+  if (!open) {;
+
+        onClick={() => setOpen(true)}
+        size='icon';
+        variant='outline';
+        className='fixed bottom-4 right-20 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-40';
+        aria-label='Open help chat'      >;
+        <MessageSquare className='h-5 w-5' />;
+      </Button>;
+    );
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   return (
     <div className='fixed bottom-4 right-20 bg-zion-blue w-80 max-w-full rounded-lg shadow-xl flex flex-col z-40'>;
@@ -906,10 +1028,14 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
     </div>
   )
+<<<<<<< HEAD
 ;
 }
 ;
         {typing && <ChatMessage role='assistant' message='...' />}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div ref={endRef} />;
       </div>;
       <div className='p-2 border-t border-zion-purple/20 bg-zion-blue-dark/30'>;
@@ -1112,6 +1238,7 @@ setTyping (false)
 }/> </div> </div> </div>)
 }'"
 }
+<<<<<<< HEAD
 }
 }
 ;
@@ -1119,3 +1246,6 @@ setTyping (false)
 }
 ;
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

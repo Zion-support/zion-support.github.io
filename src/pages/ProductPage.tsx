@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useRouter } from 'next/router', // Changed from useParams
 import { useEffect, useState  } from 'react';
 import { useRouter } from 'next/router', // Changed from useParams
@@ -73,10 +74,20 @@ export default function ProductPage() {;
 ursor/fix-website-loading-errors-and-merge-6662
 
 
+=======
+if (!id) return;
+      try {;
+        const res = await fetch(`/api/products/${id}`);
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         }
         // Fail silently and fall back to local data
         logErrorToProduction('Error fetching product', { data: err })
       }
+<<<<<<< HEAD
     }
     };
 
@@ -106,6 +117,19 @@ ursor/fix-website-loading-errors-and-merge-6662
     toast.success(`1× ${product.title} added`);
     setTimeout(() => setAdding(false), 500)
   }
+=======
+
+
+    };
+
+
+
+    // Only fetch if id is available (from router)
+    if (id) {
+      fetchProduct();
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
     }
@@ -137,8 +161,11 @@ ursor/fix-website-loading-errors-and-merge-6662
     return <div className="p-6 text-white">Product not found</div>
   }, [id]), // id is now from router.query;
 
+<<<<<<< HEAD
     return <div className="p-6 text-white">Product not found</div>
   }, [id]), // id is now from router.query;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (!product && !id) { // If no id from router yet, it might still be loading;
     return <div className="p-6 text-white">Loading product details...</div>;
   }
@@ -167,23 +194,32 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
   return (;
     <>;
       <SEO;
         title={product.title}
         description={product.description}
         ogImage={product.images?.[0]}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       />
         <h1 className="text-2xl font-bold mb-4">{product.title}</h1>
         {product.images?.length ? (
           <div className="mb-4 relative w-full h-64">
             <Image
+<<<<<<< HEAD
               src = {product.images[0] |'/placeholder.svg',}
               alt = {product.title,}
               src = {product.images[0] |'/placeholder.svg',}
               alt = {product.title,}
               src={product.images[0] || '/placeholder.svg'}
               alt={product.title}
+=======
+
+              src = {product.images[0] |'/placeholder.svg',}
+              alt = {product.title,}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
               src={product.images[0] || '/placeholder.svg'}
@@ -194,6 +230,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
         ) : null}
         <p className="mb-6">{product.description}</p>
+<<<<<<< HEAD
         <Button onClick={handleAdd} disabled={adding |inCart}>
           {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
         <Button onClick={handleAdd} disabled={adding |inCart}>
@@ -225,6 +262,28 @@ product.title ;
         <Button onClick={handleAdd} disabled={adding || inCart}>
           {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
 ;
+=======
+
+        title = {product && product.title,}
+        description = {product && product.description,}
+        ogImage = {product && product.images?.[0],}
+      />;
+      <div className="min-h-screen bg-zion-blue p-6 text-white">;
+        <h1 className="text-2xl font-bold mb-4">{product && product.title}</h1>;
+        {product && product.images?.length ? (;
+          <div className="mb-4 relative w-full h-64">;
+            <Image
+              src = {product && product.images[0] || '/placeholder && placeholder.svg',}
+              alt = {product && product.title,}
+              className="object-cover rounded-md"
+            />;
+          </div>;
+        ) : null}
+        <p className="mb-6">{product && product.description}</p>;
+        <Button onClick={handleAdd} disabled={adding || inCart}>;
+
+          {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </Button>;
       </div>;
     </>;
@@ -255,6 +314,7 @@ function ProductPage() {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 ;
   useEffect (() => {
     const fetch_product = async () => {
@@ -332,6 +392,13 @@ if (return) {
         <p className="mb - 6">{product.description}</p>;
         <Button on_click={handle_add} disabled={adding || in_cart}>;
           {in_cart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
+=======
+      const found_product = NEW_PRODUCTS.find ((p) => p.id === id);
+      set_product (found_product || null);
+    }
+  }, [id]);
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </Button>;
       </div>;
     </>);
@@ -363,4 +430,8 @@ product.title ;
   product.images?.[0] ;
 }/> </Button> </div> </>) ;
 }';
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

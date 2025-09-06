@@ -5,14 +5,22 @@ import fs from "fs";
 import path from "path";
 import { getDisputeById } from "../../../../utils/fsdb";
 import {
+<<<<<<< HEAD
   const { id, fileName } = req && req.query as { id?: string; fileName?: string };
 
+=======
+
+  const { id, fileName } = req && req.query as { id?: string; fileName?: string };
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   parseUserFromRequest,
   ensureInvolvedOrAdmin,;
 } from "../../../../utils/auth";
 
 export default async function handler(
+<<<<<<< HEAD
   parseUserFromRequest
   ensureInvolvedOrAdmin
 } from "../../../../utils/auth";
@@ -27,16 +35,28 @@ export default async function handler(
 } from "../../../../utils/auth";
 
 export default async function handler(
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
   const { id, fileName } = req.query as { id?: string; fileName?: string };
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (
     !id |
     !fileName |
     typeof id !== "string" |
     typeof fileName !== "string"
   ) {
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return res.status(400).json({ error: "Invalid parameters" });
   }
 
@@ -62,7 +82,12 @@ export default async function handler(
 }
 
 
+<<<<<<< HEAD
     return res && res.status(400).json({ error: "Invalid parameters" });
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -72,11 +97,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { id, fileName } = req.query as { id?: string, fileName?: string };
   if (!id || !fileName || typeof id !== 'string' || typeof fileName !== 'string') {
     return res.status(400).json({ error: 'Invalid parameters' })
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   const user = parseUserFromRequest(req);
   const dispute = await getDisputeById(id);
   if (!dispute) return res && res.status($1).json({ $2 });
   try {
+<<<<<<< HEAD
     ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId)
   } catch (e: any) {
     return res.status(e.statusCode || 403).json({ error: 'Forbidden' })
@@ -220,3 +251,8 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

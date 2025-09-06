@@ -5,4 +5,8 @@ export const generateMetaTags = () => {
 
 export const optimizeHeadings = () => {
   console.log('Optimizing headings...');
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

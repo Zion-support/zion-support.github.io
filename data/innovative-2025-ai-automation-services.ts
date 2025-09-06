@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface InnovativeAIAutomationService {;
 export interface InnovativeAIAutomationService {
 export interface InnovativeAIAutomationService {;
@@ -31,10 +32,13 @@ export interface InnovativeAIAutomationService {;
     mobile: string;
     email: string;
     address: string;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   }
 
+<<<<<<< HEAD
   customers: number;
   rating: number;
   reviews: number;
@@ -483,6 +487,27 @@ export interface InnovativeAIAutomationService {;
   }
 ];
 export interface InnovativeAIAutomationService {;
+=======
+=======
+
+export interface InnovativeAIAutomationService {;
+
+  }
+
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+;
+=======
+<<<<<<< HEAD
+  }
+];
+=======
+export interface InnovativeAIAutomationService {;
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string,;
   name: string,;
   tagline: string,;

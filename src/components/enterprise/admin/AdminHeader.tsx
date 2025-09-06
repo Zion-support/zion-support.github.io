@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import { Download, Settings } from 'lucide-react'
@@ -13,6 +14,8 @@ export function AdminHeader() {;
   // const { user } = useAuth(); // Unused but available;
   const { company } = useCompanyWorkspace();
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",
 import { Button } from "@/components/ui/button";
 import { Download, Settings } from 'lucide-react'
@@ -20,6 +23,12 @@ import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
 export function AdminHeader() {
   // const { user } = useAuth(), // Unused but available
   const { company } = useCompanyWorkspace();
+<<<<<<< HEAD
+=======
+  return (
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Download, Settings } from 'lucide-react'
@@ -31,6 +40,7 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
 
 
 
+<<<<<<< HEAD
   return (
     <div className="space-y-4">
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
@@ -38,6 +48,8 @@ export function AdminHeader() {
   // const { user } = useAuth(), // Unused but available
   const { company } = useCompanyWorkspace(),
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -46,12 +58,20 @@ export function AdminHeader() {
           <p className="text-muted-foreground mt-1">
             Manage your company's account, team members, and subscription
           </p>
+<<<<<<< HEAD
         </div>
         <div className="flex items-center gap-2">
+=======
+
+        </div>
+        <div className="flex items-center gap-2">
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Button variant="outline" size="sm" className="gap-2">
             <Settings className="h-4 w-4" />
             Settings
           </Button>
+<<<<<<< HEAD
           <Button variant='outline' size='sm' className='gap-2'>
             <Download className='h-4 w-4' />            Export Data
           </Button>
@@ -67,17 +87,29 @@ export function AdminHeader() {
 
 
 
+=======
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Button variant="outline" size="sm" className="gap-2">
             <Download className="h-4 w-4" />
             Export Data
           </Button>
         </div>
       </div>
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+      
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Subscription Plan</div>
           <div className="text-xl font-medium">{company?.plan || "Enterprise"}</div>
+<<<<<<< HEAD
       <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
         <div className='bg-card rounded-lg p-4 border border-border'>
           <div className='text-sm text-muted-foreground'>Subscription Plan</div>
@@ -114,6 +146,9 @@ ursor/fix-website-loading-errors-and-merge-6662
             <h2 className="font-medium">{company?.name |"Company Name"}</h2>
             <p className="text-sm text-muted-foreground">
               Workspace URL: {company?.workspaceUrl |"loading..."}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </div>
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Team Members</div>
@@ -129,6 +164,10 @@ ursor/fix-website-loading-errors-and-merge-6662
         <div className="flex items-center gap-4">
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center">
             <img
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               src={company?.logoUrl || "/placeholder.svg"}
               alt={company?.name || "Company"}
               className="max-h-10 max-w-10"
@@ -136,6 +175,10 @@ ursor/fix-website-loading-errors-and-merge-6662
             />
           </div>
           <div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="bg-card rounded-lg p-4 border border-border">
@@ -152,10 +195,15 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
       </div>
       
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="bg-muted/50 rounded-lg p-4 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center">
             <img
+<<<<<<< HEAD
       
         <div className="flex items-center gap-4">
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center">
@@ -165,6 +213,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 ursor/fix-website-loading-errors-and-merge-6662
               src={company?.logoUrl |"/placeholder.svg"}
               alt={company?.name |"Company"}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               src={company?.logoUrl || "/placeholder.svg"}
               alt={company?.name || "Company"}
 
@@ -178,6 +229,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
             <h2 className="font-medium">{company?.name || "Company Name"}</h2>
+<<<<<<< HEAD
             <h2 className="font-medium">{company?.name |"Company Name"}</h2>
             <p className="text-sm text-muted-foreground">
               Workspace URL: {company?.workspaceUrl || "loading..."}
@@ -187,6 +239,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             <p className="text-sm text-muted-foreground">
               Workspace URL: {company?.workspaceUrl |"loading..."}
             <h2 className="font-medium">{company?.name || "Company Name"}</h2>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <p className="text-sm text-muted-foreground">
               Workspace URL: {company?.workspaceUrl || "loading..."}
             </p>
@@ -195,9 +249,13 @@ ursor/fix-website-loading-errors-and-merge-6662
         <Button>Customize Workspace</Button>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
 ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className='space-y-4'>;
       <div className='flex items-center justify-between'>;
 
@@ -213,8 +271,12 @@ export function AdminHeader() {;
   return (;
     <div className="space-y-4">;
       <div className="flex items-center justify-between">;
+<<<<<<< HEAD
     <div className='space-y-4'>;
       <div className='flex items-center justify-between'>;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div>;
           <h1 className='text-3xl font-bold tracking-tight'>;
             Enterprise Admin Dashboard;
@@ -233,6 +295,7 @@ export function AdminHeader() {;
           </Button>;
         </div>;
       </div>        <div className="flex items-center gap-2">;
+<<<<<<< HEAD
 
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -253,6 +316,8 @@ export function AdminHeader() {;
           </p>;
         </div>;
         <div className="flex items-center gap-2">;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Button variant="outline" size="sm" className="gap-2">;
             <Settings className="h-4 w-4" />;
             Settings;
@@ -300,6 +365,13 @@ function AdminHeader() {
           </Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
+
+  );
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 4'>;
         <div className='bg - card rounded - lg p - 4 border border - border'>;
           <div className='text - sm text - muted - foreground'>Subscription Plan</div>;
@@ -353,6 +425,7 @@ function AdminHeader() {
               src={company?.logo_url || "/placeholder.svg"}
               alt={company?.name || "Company"}
               className="max - h-10 max - w-10";
+<<<<<<< HEAD
       ;
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
         <div className="bg-card rounded-lg p-4 border border-border">;
@@ -375,10 +448,13 @@ function AdminHeader() {
               src={company?.logoUrl || "/placeholder.svg"}
               alt={company?.name || "Company"}
               className="max-h-10 max-w-10";
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               loading="lazy";
             />;
           </div>;
           <div>;
+<<<<<<< HEAD
             <h2 className="font-medium">{company?.name || "Company Name"}</h2>;
             <p className="text-sm text-muted-foreground">;
               Workspace URL:{company?.workspaceUrl || "loading..."}
@@ -395,3 +471,16 @@ function AdminHeader() {
 }
 ;
 ;
+=======
+            <h2 className="font - medium">{company?.name || "Company Name"}</h2>;
+            <p className="text - sm text - muted - foreground">;
+              Workspace URL: {company?.workspace_url || "loading..."}
+            </p>;
+          </div>;
+        </div>;
+        <Button > Customize Workspace</Button>;
+      </div>;
+    </div>);
+}
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

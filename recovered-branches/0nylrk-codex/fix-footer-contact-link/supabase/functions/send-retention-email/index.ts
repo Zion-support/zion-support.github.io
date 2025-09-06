@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0"
@@ -8,10 +9,42 @@ const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 // Initialize Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 && 2.45.0",
+import {Resend} from "npm: resend@2 ;
+// Initialize Resend with API key
+const resend = new Resend(Deno && Deno.env.get("RESEND_API_KEY"));
+
+// Initialize Supabase client
+const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
+const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*";
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+<<<<<<< HEAD
+=======
+=======
+import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
+import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.45.0';,
+import { Resend } from 'npm: resend@2.0.0';
+// Initialize Resend with API key;
+const resend = new Resend (Deno.env.get ("RESEND_API_KEY"));
+;
+// Initialize Supabase client;
+const supabase_url = Deno.env.get ("SUPABASE_URL")!;
+const supabaseServiceKey = Deno.env.get ("SUPABASE_SERVICE_ROLE_KEY")!,
+const supabase = create_client (supabase_url, supabaseServiceKey);
+;
+const cors_headers = {
+  "Access - Control - Allow - Origin": "*";
+  "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface EmailData {
   user_id: string;
   email_type: string;
@@ -19,12 +52,24 @@ interface EmailData {
   user_type: string;
   days_inactive?: number;
   onboarding_status?: any;
+<<<<<<< HEAD
+=======
+
+
+
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
+import {Resend} from "npm: resend@2.0.0";
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 import { Resend } from "npm: resend@2.0.0",
 
 
 
+<<<<<<< HEAD
   job_id?: string
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
@@ -32,6 +77,8 @@ import {Resend} from "npm: resend@2.0.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 import { Resend } from "npm: resend@2.0.0",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Initialize Resend with API key
 const resend = new Resend(Deno.env.get("RESEND_API_KEY")),
 
@@ -52,27 +99,51 @@ interface EmailData {
   days_inactive?: number,
   onboarding_status?: any,
   job_id?: string,
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   job_title?: string
 }
 serve(async (req) => {
   // Handle CORS preflight requests
+<<<<<<< HEAD
   if (req.method === "OPTIONS") {
+=======
+  if (req && req.method === "OPTIONS") {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return new Response(null, { headers: corsHeaders })
   }
   try {
     // Extract job data from request
 
+<<<<<<< HEAD
     const jobData = await req.json();
     const { id: jobId, payload } = jobData;
     const emailData = payload as EmailData;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const jobData = await req.json(),
     const { id: jobId, payload } = jobData,
     const emailData = payload as EmailData,
     
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Fetch user's email
     const { data: userData, error: userError } = await supabase
       .from("profiles")
       .select("id, display_name, avatar_url, user_type")
+<<<<<<< HEAD
+=======
+
+      .eq("id", emailData.user_id)
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       .single(),
     
 
@@ -89,6 +160,7 @@ serve(async (req) => {
 
       .eq("id", emailData.user_id)
 
+<<<<<<< HEAD
       .eq("id", emailData.user_id)
       .single();
       .single(),
@@ -105,6 +177,8 @@ serve(async (req) => {
       throw new Error(`Error fetching user email: ${authError.message}`)
     }
     const userEmail = authUser.email;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       .single(),
     
     if (authError) {
@@ -112,13 +186,19 @@ serve(async (req) => {
     }
     
     const userEmail = authUser.email,
+<<<<<<< HEAD
     const userEmail = authUser && authUser.email;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (!userEmail) {
       throw new Error("User email not found")
     }
     // Generate email content based on email type
 
 
+<<<<<<< HEAD
     const { subject, html } = await generateEmail(emailData, userData);
     // Send email via Resend
     const emailResponse = await resend.emails.send({
@@ -126,6 +206,8 @@ serve(async (req) => {
       to: userEmail;
       subject: subject
       html: html});
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const { subject, html } = await generateEmail(emailData, userData),
 
     // Send email via Resend
@@ -135,6 +217,14 @@ serve(async (req) => {
       subject: subject,
       html: html}),
 
+<<<<<<< HEAD
+=======
+
+
+    if (emailResponse.error) {
+      throw new Error(`Failed to send email: ${emailResponse.error.message}`)
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     const { subject, html } = await generateEmail(emailData, userData);
     // Send email via Resend
@@ -145,8 +235,12 @@ serve(async (req) => {
       html: html});
     if (emailResponse && emailResponse.error) {
       throw new Error(`Failed to send email: ${emailResponse && emailResponse.error.message}`)
+<<<<<<< HEAD
     if (emailResponse.error) {
       throw new Error(`Failed to send email: ${emailResponse.error.message}`)
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     // Update job status
     await supabase
@@ -160,19 +254,32 @@ serve(async (req) => {
 
 
 
+<<<<<<< HEAD
       .eq("id", jobId);
       .eq("id", jobId),
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Update email campaign record
     await supabase
       .from("email_campaigns")
       .update({
         status: "sent"
         sent_at: new Date().toISOString()})
+<<<<<<< HEAD
       .eq("user_id", emailData.user_id)
       .eq("campaign_type", emailData.email_type);
     return new Response(
       JSON.stringify({
+=======
+
+      .eq("user_id", emailData && emailData.user_id)
+      .eq("campaign_type", emailData && emailData.email_type);
+
+
+    return new Response(
+      JSON && JSON.stringify({
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         success: true;
         message: "Email sent successfully"
         email: emailResponse});
@@ -180,6 +287,7 @@ serve(async (req) => {
         headers: {
           ...corsHeaders
           "Content-Type": "application/json"}
+<<<<<<< HEAD
         status: 200}
     )
   } catch (error) {
@@ -203,6 +311,133 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
   let nextAction = "";
   let ctaLink = "/dashboard";
   let ctaText = "Go to Dashboard";
+=======
+=======
+  job_id?: string,
+  job_title?: string;
+}
+serve (async (req) => {
+  // Handle CORS preflight requests;
+  // Check condition
+if ( {) {
+  $2
+}
+    return new Response (null, { headers: cors_headers });
+  }
+  try {
+    // Extract job data from request;
+    const job_data = await req.json ();
+    const { id: job_id, payload } = job_data;
+    const email_data = payload as EmailData;
+;
+    // Fetch user's email;
+    const { data: user_data, error: user_error } = await supabase;
+      .from ("profiles");
+      .select ("id, display_name, avatar_url, user_type");
+      .eq ("id", email_data.user_id);
+      .single ();
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      throw new Error (`Error fetching user data: ${user_error.message}`);
+    }
+    const { data: auth_user, error: auth_error } = await supabase;
+      .from ("auth.users");
+      .select ("email");
+      .eq ("id", email_data.user_id);
+      .single ();
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      throw new Error (`Error fetching user email: ${auth_error.message}`);
+    }
+    const user_email = auth_user.email;
+    // Check condition
+if ( {) {
+  $2
+}
+      throw new Error ("User email not found");
+    }
+    // Generate email content based on email type;
+    const { subject, html } = await generate_email (email_data, user_data);
+;
+    // Send email via Resend;
+    const email_response = await resend.emails.send ({
+      from: "Zion AI Marketplace <notifications@zion.ai>";
+      to: user_email;
+      subject: subject,
+      html: html});
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      throw new Error (`Failed to send email: ${email_response.error.message}`);
+    }
+    // Update job status;
+    await supabase;
+      .from ("scheduled_jobs");
+      .update ({
+        status: "completed",
+        completed_at: new Date ().toISOString ()});
+      .eq ("id", job_id);
+;
+    // Update email campaign record;
+    await supabase;
+      .from ("email_campaigns");
+      .update ({
+        status: "sent",
+        sent_at: new Date ().toISOString ()});
+      .eq ("user_id", email_data.user_id);
+      .eq ("campaign_type", email_data.email_type);
+;
+    return new Response (
+      JSON.stringify ({
+        success: true;
+        message: "Email sent successfully",
+        email: email_response});
+      {
+        headers: {
+          ...cors_headers,
+          "Content - Type": "application / json"}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+        status: 200}
+    );
+  } catch (error) {
+
+    console.error ("Error in send - retention - email function:", error);
+;
+    return new Response (
+      JSON.stringify ({
+        success: false,
+
+        error: error.message});
+=======
+    console && console.error("Error in send-retention-email function:", error);
+
+    return new Response(
+      JSON && JSON.stringify({
+        success: false,
+        error: error && error.message});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      {
+        headers: {
+
+          ...cors_headers,
+          "Content - Type": "application / json"}
+
+        status: 500}
+    );
+  }
+});
+
+      .eq("user_id", emailData.user_id)
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       .eq("campaign_type", emailData.email_type),
 
     return new Response(
@@ -226,6 +461,7 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
       {
         headers: {
           ...corsHeaders,
+<<<<<<< HEAD
           "Content-Type": "application/json"};
         status: 500}
     )
@@ -471,6 +707,9 @@ if ( {) {
     );
   }
 });
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 async function generateEmail(emailData: EmailData, userData: any): Promise<{ subject: string, html: string }> {
   const { email_type, display_name, user_type } = emailData,
@@ -482,9 +721,17 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
   let ctaText = "Go to Dashboard",
 
 
+<<<<<<< HEAD
   if (email_type === "welcome_series") {
     // Customize based on user type
     if (user_type === "jobSeeker" |user_type === "creator") {
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  if (email_type === "welcome_series") {
+    // Customize based on user type
+    if (user_type === "jobSeeker" |user_type === "creator") {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 async function generate_email (email_data: EmailData, user_data: any): Promise<{ subject: string, html: string }> {
   const { email_type, display_name, user_type } = email_data;
@@ -504,6 +751,10 @@ if ( {) {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       return {
         subject: `Welcome to Zion AI Marketplace, ${first_name}!`;
         html: `;
@@ -552,10 +803,20 @@ if ( {) {
 
     if (emailData && emailData.onboarding_status) {
       const onboarding = emailData && emailData.onboarding_status;
+<<<<<<< HEAD
       if (user_type === "jobSeeker" || user_type === "creator") {
         if (!onboarding && onboarding.profile_completed) {
           nextAction = "complete your profile";
           ctaLink = "/profile";
+=======
+      
+      if (user_type === "jobSeeker" || user_type === "creator") {
+        if (!onboarding && onboarding.profile_completed) {
+
+          nextAction = "complete your profile";
+          ctaLink = "/profile";
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (emailData.onboarding_status) {
 
       const onboarding = emailData.onboarding_status,
@@ -565,6 +826,10 @@ if ( {) {
         if (!onboarding.profile_completed) {
           nextAction = "complete your profile",
           ctaLink = "/profile",
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           ctaText = "Complete Your Profile"
         } else if (!onboarding && onboarding.skills_added) {
           nextAction = "add your skills to get matched with the right opportunities";
@@ -573,6 +838,7 @@ if ( {) {
         } else if (!onboarding && onboarding.availability_set) {
           nextAction = "set your availability to help clients find you";
           ctaLink = "/profile/settings";
+<<<<<<< HEAD
   if (email_type === "welcome_series") {
     // Customize based on user type
     if (user_type === "jobSeeker" |user_type === "creator") {
@@ -640,10 +906,13 @@ if ( {) {
         } else if (!onboarding.availability_set) {
           nextAction = "set your availability to help clients find you",
           ctaLink = "/profile/settings",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           ctaText = "Set Your Availability"
         }
       } else {
         // For clients
+<<<<<<< HEAD
         if (!onboarding.job_posted) {
           nextAction = "post your first job to start finding talent",
           ctaLink = "/post-job",
@@ -652,10 +921,76 @@ if ( {) {
           nextAction = "invite talent to speed up your hiring process",
           ctaLink = "/talent",
           ctaText = "Find Talent"
+=======
+        if (!onboarding && onboarding.job_posted) {
+          nextAction = "post your first job to start finding talent";
+          ctaLink = "/post-job";
+          ctaText = "Post a Job"
+        } else if (!onboarding && onboarding.talent_invited) {
+          nextAction = "invite talent to speed up your hiring process";
+          ctaLink = "/talent";
+          ctaText = "Find Talent"
+=======
+  } else // Check condition
+if ( {) {
+  $2
+}
+    // Day 3 incomplete action reminder;
+    // Check condition
+if ( {) {
+  $2
+}
+      const onboarding = email_data.onboarding_status;
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        // Check condition
+if ( {) {
+  $2
+}
+          next_action = "complete your profile";
+          cta_link = "/profile";
+          cta_text = "Complete Your Profile";
+        } else // Check condition
+if ( {) {
+  $2
+}
+          next_action = "add your skills to get matched with the right opportunities";
+          cta_link = "/profile / skills";
+          cta_text = "Add Your Skills";
+        } else // Check condition
+if ( {) {
+  $2
+}
+          next_action = "set your availability to help clients find you";
+          cta_link = "/profile / settings";
+          cta_text = "Set Your Availability";
+        }
+      } else {
+        // For clients;
+        // Check condition
+if ( {) {
+  $2
+}
+          next_action = "post your first job to start finding talent";
+          cta_link = "/post - job";
+          cta_text = "Post a Job";
+        } else // Check condition
+if ( {) {
+  $2
+}
+          next_action = "invite talent to speed up your hiring process";
+          cta_link = "/talent";
+          cta_text = "Find Talent";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         }
       }
     }
     return {
+<<<<<<< HEAD
       subject: `${firstName}, one quick step to unlock more opportunities`,
       html: `
         <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">
@@ -785,6 +1120,8 @@ if ( {) {
   }
   // Default generic email
   return {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       subject: `${first_name}, one quick step to unlock more opportunities`;
       html: `;
@@ -915,6 +1252,11 @@ if ( {) {
     subject: `${firstName}, we miss you at Zion AI Marketplace`;
 
     subject: `${firstName}, we miss you at Zion AI Marketplace`,
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     html: `
       <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">
         <h2>We've missed you!</h2>
@@ -930,11 +1272,20 @@ if ( {) {
         </div>
         <p>The Zion AI Marketplace Team</p>
       </div>
+<<<<<<< HEAD
       subject: `Tips to find the perfect talent for "${email_data.job_title}"`;
 
 
     `}
 }
+=======
+
+      subject: `Tips to find the perfect talent for "${email_data.job_title}"`;
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }),;
 async function generateEmail(emailData: EmailData, userData: any): Promise<{ subject: string, html: string }> {;
   const { email_type, display_name, user_type } = emailData,;
@@ -1026,6 +1377,7 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
     return {;
       subject: `${firstName}, one quick step to unlock more opportunities`,;
 
+<<<<<<< HEAD
 
 
     `}
@@ -1405,3 +1757,48 @@ async function generateEmail(emailData:EmailData, userData:any):Promise<{ subjec
     `}
 }
 ;
+=======
+      html: `;
+        <div style="font - family: sans - serif, max - width: 600px, margin: 0 auto, ">;
+          <h2 > Let's find talent for your job</h2>;
+          <p > Hi ${first_name}, </p>;
+          <p > We noticed your job "${email_data.job_title}" has been open for a while. Here are some tips to attract more qualified candidates: </p>;
+          <ul>;
+            <li > Review and update your job description with more details</li>;
+            <li > Consider adjusting your budget range if possible</li>;
+            <li > Proactively invite talent from our directory</li>;
+            <li > Add more specific skills requirements</li>;
+          </ul>;
+          <div style="margin: 25px 0, ">;
+            <a href="${supabase_url}/dashboard / jobs/${email_data.job_id}" style="background - color: #9b87f5, color: white, padding: 12px 20px, text - decoration: none, border - radius: 4px, ">Update Job Post</a>;
+          </div>;
+          <p > The Zion AI Marketplace Team</p>;
+        </div>;
+      `}
+  }
+  // Default generic email;
+  return {
+    subject: `${first_name}, we miss you at Zion AI Marketplace`;
+    html: `;
+      <div style="font - family: sans - serif, max - width: 600px, margin: 0 auto, ">;
+        <h2 > We've missed you!</h2>;
+        <p > Hi ${first_name}, </p>;
+        <p > We noticed you haven't been active on Zion AI Marketplace recently.</p>;
+        <p > Log back in to see what's new and connect with ${
+          user_type === "job_seeker" || user_type === "creator";
+            ? "clients looking for your skills";
+            : "talented AI professionals";
+        }.</p>;
+        <div style="margin: 25px 0, ">;
+          <a href="${supabase_url}/dashboard" style="background - color: #9b87f5, color: white, padding: 12px 20px, text - decoration: none, border - radius: 4px, ">Log In Now</a>;
+        </div>;
+        <p > The Zion AI Marketplace Team</p>;
+      </div>;
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    `}
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

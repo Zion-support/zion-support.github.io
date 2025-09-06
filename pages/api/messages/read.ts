@@ -1,5 +1,23 @@
+<<<<<<< HEAD
   res.status(200).json({ success: true })
 }
+=======
+
+
+  const user = requireUser(req, res);
+  if (!user) return;
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { conversationId } = req.body || {};
+  if (!conversationId) return res.status(400).json({ error: 'Missing conversationId' });
+  const conv = getConversationById(conversationId);
+  if (!conv || !conv.participants.includes(user.id)) return res.status(404).json({ error: 'Conversation not found' });
+  markAsRead(conversationId, user.id);
+  res.status(200).json({ success: true })
+}
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { NextApiRequest, NextApiResponse } from 'next',
 import { require_user } from '../../../utils / auth',
 import { getConversationById, markAsRead } from '../../../utils / messaging / storage',
@@ -28,6 +46,7 @@ if (return, ) {
   res.status (200).json ({ success: true });
 }
 ;
+<<<<<<< HEAD
 }
 
 
@@ -81,11 +100,24 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 
 }
 }
+=======
+
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,4 +9,8 @@ const TermsOfService = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default TermsOfService;
+=======
+export default TermsOfService;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

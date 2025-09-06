@@ -1,13 +1,21 @@
 
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 
 
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
+=======
+
+import React, { useState, useEffect } from 'react';
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
   Menu
   X
   ChevronDown
@@ -115,8 +123,43 @@ import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
   Microscope, DollarSign, Home, Users, Briefcase
 
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState, useEffect } from 'react';
+import Link from 'next / link';
+import { motion, AnimatePresence } from 'framer-motion';
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Menu,
   X,
   ChevronDown,
@@ -218,11 +261,20 @@ import {
   Twitter,
   Facebook,
   Instagram,
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Youtube,;
   Github,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, ;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -230,12 +282,23 @@ import {
   Leaf, Sun, Moon, Wind, Droplets, Mountain;
   Code, Wrench, Smartphone, BarChart3, Eye;
   Network, Server, HardDrive, Monitor;
+<<<<<<< HEAD
   Laptop, Watch, Headphones, Speaker, Mic,
   Keyboard, Mouse, CpuIcon, DatabaseIcon,
 
   Laptop, Watch, Headphones, Speaker, Mic
   Keyboard, Mouse, CpuIcon, DatabaseIcon
 
+=======
+
+  Laptop, Watch, Headphones, Speaker, Mic, ;
+  Keyboard, Mouse, CpuIcon, DatabaseIcon, ;
+
+=======
+  Laptop, Watch, Headphones, Speaker, Mic,
+  Keyboard, Mouse, CpuIcon, DatabaseIcon,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   CloudIcon, LockIcon, ShieldIcon, GlobeIcon;
   ZapIcon, SparklesIcon, BrainIcon, AtomIcon;
   HeartIcon, RocketIcon, ShieldIcon as ShieldIcon2;
@@ -245,6 +308,7 @@ import {
   PaletteIcon, VideoIcon, LockIcon as LockIcon2;
   GlobeIcon as GlobeIcon2, CpuIcon as CpuIcon2;
   Handshake, LifeBuoy, Activity;
+<<<<<<< HEAD
   Linkedin, Twitter, Facebook, Instagram, Youtube, Github
 
 const contactInfo = {
@@ -260,6 +324,15 @@ const serviceCategories = [
     color: 'from-violet-600 via-purple-600 to-indigo-600'
     description: 'Next-generation AI consciousness and creativity'
     services: [
+=======
+
+
+    title: '⚛️ Quantum & Emerging Tech',
+    icon: AtomIcon,
+    color: 'from - indigo - 600 via - blue - 600 to - cyan - 600',
+    description: 'Quantum computing and beyond',
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     services: [;
       {
         name: 'Quantum Machine Learning',
@@ -292,10 +365,18 @@ const serviceCategories = [
       { name: 'AI Climate Modeling', href: '/ai - climate - modeling - platform', description: 'Predict climate change with AI', price: '$1, 299 / month' }
     ];
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     title: '🏙️ Enterprise IT Solutions',
     icon: CpuIcon,
     color: 'from - blue - 600 via - cyan - 600 to - teal - 600',
     description: 'Autonomous enterprise infrastructure',
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     services: [;
       {
         name: 'API Security & Monitoring',
@@ -328,10 +409,18 @@ const serviceCategories = [
       { name: 'Project Management AI', href: '/project - management - ai - platform', description: 'AI - powered project management', price: '$199 / month' }
     ];
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     title: '🛒 Business Automation',
     icon: ShoppingCart,
     color: 'from - teal - 600 via - emerald - 600 to - green - 600',
     description: 'Streamline business operations',
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     services: [;
       {
         name: 'E - commerce Automation',
@@ -364,10 +453,18 @@ const serviceCategories = [
       { name: 'Legal Document Automation', href: '/legal - document - automation', description: 'Automate legal document creation', price: '$399 / month' }
     ];
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     title: '🤖 Robotics & Automation',
     icon: RocketIcon,
     color: 'from - green - 600 via - yellow - 600 to - orange - 600',
     description: 'Intelligent automation solutions',
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     services: [;
       {
         name: 'Autonomous Robotics Platform',
@@ -400,10 +497,29 @@ const serviceCategories = [
       { name: 'AI Business Intelligence', href: '/ai - business - intelligence - suite', description: 'Intelligent business insights', price: '$299 / month' }
     ];
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     title: '🔬 Research & Development',
     icon: MicroscopeIcon,
     color: 'from - orange - 600 via - red - 600 to - pink - 600',
     description: 'Breakthrough research solutions',
+<<<<<<< HEAD
+=======
+
+
+const quickLinks = [
+  { name: 'Home', href: '/', icon: Home }
+  { name: 'Services', href: '/services', icon: Briefcase }
+  { name: 'Solutions', href: '/solutions', icon: Target }
+  { name: 'Pricing', href: '/pricing-2034', icon: DollarSign }
+  { name: 'Resources', href: '/resources', icon: BookOpen }
+  { name: 'Case Studies', href: '/case-studies', icon: FileText }
+  { name: 'Blog', href: '/blog', icon: MessageCircle }
+  { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ];
 const quickLinks = [
     services: [;
@@ -439,6 +555,10 @@ const quickLinks = [
     ];
   }
 const quick_links = [;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   { name: 'Home', href: '/', icon: Home },
   { name: 'Services', href: '/services', icon: Briefcase },
   { name: 'Solutions', href: '/solutions', icon: Target },
@@ -446,11 +566,17 @@ const quick_links = [;
   { name: 'Resources', href: '/resources', icon: BookOpen },
   { name: 'Case Studies', href: '/case - studies', icon: FileText },
   { name: 'Blog', href: '/blog', icon: MessageCircle },
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   { name: 'Contact', href: '/contact', icon: MessageCircle }, ];  { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
 ;
 const company_links = [;
 
+<<<<<<< HEAD
 const _serviceCategories = [
   {_title: '🧠 Revolutionary AI Services', _icon: BrainIcon, _color: 'from-violet-600 via-purple-600 to-indigo-600', _description: 'Next-generation AI consciousness and creativity', _services: [
       { name: 'AI Business Intelligence Pro', _href: '/ai-business-intelligence-pro', _description: 'Transform data into actionable insights', _price: '$299/month'},
@@ -509,11 +635,14 @@ const quickLinks = [
 
 const companyLinks = [
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   { name: 'About Us', href: '/about', icon: Users },
   { name: 'Careers', href: '/careers', icon: Briefcase },
   { name: 'News', href: '/news', icon: FileText },
   { name: 'Partners', href: '/partners', icon: Handshake },
   { name: 'Support', href: '/support', icon: LifeBuoy },
+<<<<<<< HEAD
   { name: 'Status', href: '/status', icon: Activity }
 ];
       setIsScrolled(window.scrollY > 50)
@@ -802,20 +931,29 @@ const socialLinks = [
 const certifications = [
   'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant'
 ];
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+  { name: 'Status', href: '/status', icon: Activity }
+];
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
 export default function UltraFuturisticNavigation2034() {;
 
 
+<<<<<<< HEAD
 export default function UltraFuturisticNavigation2034() {
 
 export default function UltraFuturisticNavigation2034() {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
+<<<<<<< HEAD
       setIsScrolled(window.scrollY > 50);
     }
     window.addEventListener('scroll', handleScroll);
@@ -826,6 +964,12 @@ export default function UltraFuturisticNavigation2034() {;
   }
   const closeDropdown = () => {
     setActiveDropdown(null);  };    }
+=======
+
+      setIsScrolled(window.scrollY > 50)
+    };
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
   }, []);
@@ -834,6 +978,12 @@ export default function UltraFuturisticNavigation2034() {;
   }
   const closeDropdown = () => {
     setActiveDropdown(null)
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const quickLinks = [;
   { name: 'Home', href: '/', icon: Home },;
   { name: 'Services', href: '/services', icon: Briefcase },;
@@ -918,7 +1068,10 @@ export default function UltraFuturisticNavigation2034() {;
   return (
     <>;
       {/* Top Contact Bar */}
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
                 {contactInfo.mobile}
@@ -936,6 +1089,10 @@ export default function UltraFuturisticNavigation2034() {;
               </span>
             </div>
           </div>                {contactInfo.mobile}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between">
           <div className="flex items-center space-x-6">
@@ -965,7 +1122,13 @@ export default function UltraFuturisticNavigation2034() {;
               </span>
             </div>
           </div>
+<<<<<<< HEAD
           <div className="flex items-center space-x-4">
+=======
+
+          <div className="flex items-center space-x-4">
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className="flex items-center space-x-2">
               <Star className="w-4 h-4 text-yellow-400" />
               <span className="text-yellow-400 font-semibold">5.0 Rating</span>
@@ -973,12 +1136,24 @@ export default function UltraFuturisticNavigation2034() {;
             <div className="flex items-center space-x-2">
               <Users className="w-4 h-4 text-green-400" />
               <span className="text-green-400 font-semibold">50K+ Customers</span>
+<<<<<<< HEAD
       <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm'>;
             </div>
           </div>
         </div>
       </div>
 <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm'>;
+=======
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+      <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm'>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>;
           <div className='flex items-center space-x-6'>;
             <div className='flex items-center space-x-2'>;
@@ -1034,11 +1209,19 @@ export default function UltraFuturisticNavigation2034() {;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
       {/* Main Navigation */}
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      {/* Main Navigation */}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         }`}>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='flex items-center justify-between h-20'>            {/* Logo */}      <navclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+<<<<<<< HEAD
         isScrolled 
           ? 'bg-black/90 backdrop-blur-xl border-b border-cyan-500/20' 
           : 'bg-transparent'
@@ -1052,6 +1235,18 @@ export default function UltraFuturisticNavigation2034() {;
               className='flex items-center space-x-3'
 
 
+=======
+
+        isScrolled 
+          ? 'bg-black/90 backdrop-blur-xl border-b border-cyan-500/20' 
+          : 'bg-transparent'
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             >
               <div className='relative'>
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>
@@ -1112,6 +1307,7 @@ export default function UltraFuturisticNavigation2034() {;
               </div>;
             </motion && motion.div>;
             {/* Desktop Navigation */}
+<<<<<<< HEAD
             <div className='hidden lg:flex items-center space-x-8'>
               {quickLinks.map(link => (
                 <Link
@@ -1121,6 +1317,10 @@ export default function UltraFuturisticNavigation2034() {;
                   {link.name}
                 </Link>
               ))}
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className="hidden lg:flex items-center space-x-8">
               {quickLinks.map((link) => (
                 <Link
@@ -1384,11 +1584,34 @@ function UltraFuturisticNavigation2034() {
                             <Link;
                               key={service.name}
                               href={service.href}
+<<<<<<< HEAD
+=======
+                              className='block text - xs text - gray - 300 hover:text - cyan - 400 transition - colors'                            >              {/* Services Dropdown */}
+              <div className="relative group">;
+                <button className="flex items - center space - x-1 text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 font - medium">;
+                  <span > Services</span>;
+                  <ChevronDown className="w - 4 h - 4" />;
+                </button>;
+                <div className="absolute top - full left - 0 w - 96 bg - black / 95 backdrop - blur - xl border border - cyan - 500 / 20 rounded - xl p - 4 opacity - 0 invisible group - hover:opacity - 100 group - hover:visible transition - all duration - 300 transform translate - y-2 group - hover:translate - y-0">;
+                  <div className="grid grid - cols - 2 gap - 4">;
+                    {service_categories.slice (0, 4).map ((category) => (
+                      <div key={category.title} className="p - 3 rounded - lg hover:bg - cyan - 500 / 10 transition - colors">;
+                        <div className="flex items - center space - x-2 mb - 2">;
+                          <category.icon className="w - 5 h - 5 text - cyan - 400" />;
+                          <h3 className="text - sm font - semibold text - white">{category.title.split (' ')[0]}</h3>;
+                        </div>;
+                        <p className="text - xs text - gray - 400 mb - 2">{category.description}</p>;
+                        <div className="space - y-1">;
+                          {category.services.slice (0, 2).map ((service) => (
+                            <Link;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                               key={service.name}
                               href={service.href}
                               className="block text - xs text - gray - 300 hover:text - cyan - 400 transition - colors";
                             >;
                               {service.name}
+<<<<<<< HEAD
                   </div>
                   <div className="mt-4 pt-4 border-t border-cyan-500/20">
                     <Link
@@ -1405,6 +1628,9 @@ function UltraFuturisticNavigation2034() {
                   {link.name}
                 </Link>
               ))}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                             >
                               {service.name}
@@ -1415,6 +1641,7 @@ function UltraFuturisticNavigation2034() {
                     ))}
                   </div>
                   <div className='mt-4 pt-4 border-t border-cyan-500/20'>
+<<<<<<< HEAD
                     <Link
                       href='/services'
                       className='flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200'
@@ -1423,11 +1650,32 @@ function UltraFuturisticNavigation2034() {
                       <ArrowRight className='w-4 h-4 ml-2' />                    </Link>                    <Link
                       href="/services"
                 href="/contact"
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                    <Link
+                      href='/services'
+                      className='flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200'>;
+                      View All Services;
+                      <ArrowRight className='w-4 h-4 ml-2' />                    </Link>                    <Link
+=======
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-cyan-500/20">
+                    <Link
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+                      href="/services"
+
+                href="/contact"
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium"
               >
                 Get Started
               </Link>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       className="flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200">;
                       View All Services;
                       <ArrowRight className="w-4 h-4 ml-2" />;
@@ -1465,12 +1713,24 @@ function UltraFuturisticNavigation2034() {
                 href='/contact';
                 className='px - 6 py - 2 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 font - medium'              >                href="/contact";
                 className="px - 6 py - 2 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 font - medium";
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               >;
                 Get Started;
               </Link>;
             </div>;
+<<<<<<< HEAD
             {/* Mobile Menu Button */}
             <div className="lg:hidden">
+=======
+
+
+            {/* Mobile Menu Button */}
+            <div className="lg:hidden">
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className='text-gray-300 hover:text-cyan-400 transition-colors';
@@ -1484,6 +1744,7 @@ function UltraFuturisticNavigation2034() {
                 className="text-gray-300 hover:text-cyan-400 transition-colors";
               >;
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+<<<<<<< HEAD
               </button>
             </div>
           </div>
@@ -1493,6 +1754,22 @@ function UltraFuturisticNavigation2034() {
 
 
 
+=======
+
+
+              </button>;
+            </div>;
+          </div>;
+        </div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isOpen && (;
@@ -1500,6 +1777,7 @@ function UltraFuturisticNavigation2034() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0.3 }}
 
         {/* Mobile Menu */}
@@ -1548,6 +1826,10 @@ function UltraFuturisticNavigation2034() {
                         activeDropdown === category.title ? 'rotate-180' : ''
                       }`} />
 
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     </button>
                     <AnimatePresence>
                       {activeDropdown === category.title && (
@@ -1625,7 +1907,10 @@ function UltraFuturisticNavigation2034() {
                   onClick={() => setIsOpen(false)}
                   className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center";
                           className='mt - 3 ml - 4 space - y-2';
+<<<<<<< HEAD
 className='mt - 3 ml - 4 space - y-2';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         >;
                           {category.services.map (service => (                            <Link;
                               key={service.name}
@@ -1656,6 +1941,11 @@ className='mt - 3 ml - 4 space - y-2';
                   Get Started;
                 </Link>;
               </div>;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 
                 <Link
                           className='mt-3 ml-4 space-y-2'
@@ -1694,10 +1984,23 @@ className='mt - 3 ml - 4 space - y-2';
                 </Link>
               </div>
             </motion.div>
+<<<<<<< HEAD
 
       <div className="h-20"></div>
 
           )}
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+          )}
+
+      <div className="h-20"></div>
+
+    </>
+        </AnimatePresence>;
+      </nav>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
       {/* Spacer for fixed navigation */}
@@ -1705,8 +2008,19 @@ className='mt - 3 ml - 4 space - y-2';
     </>;
   );      <div className="h-20"></div>;
     </>;
+<<<<<<< HEAD
   );
 }
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  );
+
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </motion.div>)}
         </AnimatePresence>;
       </nav>;
@@ -1715,6 +2029,7 @@ className='mt - 3 ml - 4 space - y-2';
     </>);      <div className="h - 20"></div>;
     </>);
 }
+<<<<<<< HEAD
 
         </AnimatePresence>
       </nav>
@@ -1730,3 +2045,10 @@ className='mt - 3 ml - 4 space - y-2';
       <div className='h-20'></div>
     </>
   );
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

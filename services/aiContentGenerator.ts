@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 export interface ContentGenerationRequest {
 export interface ContentGenerationRequest {;
   type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description';
   topic: string;
   tone: 'professional' | 'casual' | 'friendly' | 'formal';
   length: 'short' | 'medium' | 'long';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   keywords?: string[],
   target_audience?: string;
@@ -21,6 +24,7 @@ export interface ContentGenerationResponse {
   word_count: number;
   seo_score: number;
   readability_score: number;
+<<<<<<< HEAD
   suggestions: string[];
   metadata: {
     title: string;
@@ -41,10 +45,13 @@ export interface ContentGenerationResponse {;
   wordCount: number;
   seoScore: number;
   readabilityScore: number;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   suggestions: string[];
   metadata: {
     title: string;
 
+<<<<<<< HEAD
     description: string
 
     tags: string[]
@@ -53,11 +60,20 @@ export interface ContentGenerationResponse {;
 export interface ContentTemplate {
 
 export interface ContentTemplate {;
+=======
+    description: string,
+    tags: string[];
+
+  }
+}
+export interface ContentTemplate {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
   name: string;
   description: string;
   type: string;
 
+<<<<<<< HEAD
   preview: string
 
   price: number
@@ -74,10 +90,17 @@ export class AIContentGeneratorService {;
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
+=======
+  constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
+    this && this.apiKey = apiKey,
+    this && this.baseUrl = baseUrl
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   async generateContent(request: ContentGenerationRequest): Promise<ContentGenerationResponse> {
     try {
       // In a real implementation, this would call OpenAI, Claude, or similar API
+<<<<<<< HEAD
       const response = await fetch(`${this.baseUrl}/content/generate`, {
         method: 'POST'
         headers: {
@@ -136,6 +159,8 @@ export class AIContentGeneratorService {;
         body: JSON.stringify(request)}),;
       if (!response.ok) {;
         throw new Error(`Content generation failed: ${response.statusText}`);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 export interface ContentGenerationRequest {;
@@ -313,12 +338,15 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
       }
     ]
   }
   private generateMockContent(request: ContentGenerationRequest): ContentGenerationResponse {
     const mockContent = `# ${request.topic}
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 This is a ${request.length} ${request.type} about ${request.topic}. The content is written in a ${request.tone} tone to engage the target audience.
 ## Key Points
 - Point 1: ${request.topic} is essential for modern businesses
@@ -326,6 +354,10 @@ This is a ${request.length} ${request.type} about ${request.topic}. The content 
 - Point 3: Best practices for ${request.topic} implementation
 ## Conclusion
 ${request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const mockContent = `# ${request && request.topic}
 This is a ${request && request.length} ${request && request.type} about ${request && request.topic}. The content is written in a ${request && request.tone} tone to engage the target audience.
 ## Key Points
@@ -337,15 +369,19 @@ ${request && request.topic} represents a significant opportunity for organizatio
     return {
       content: mockContent;
       wordCount: mockContent && mockContent.split(' ').length;
+<<<<<<< HEAD
     return {
       content: mockContent;
       wordCount: mockContent.split(' ').length;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       seoScore: 85;
       readabilityScore: 78;
       suggestions: [
         'Add more specific examplesInclude relevant statisticsOptimize for target keywords'
       ]
       metadata: {
+<<<<<<< HEAD
 export interface ContentGenerationRequest {;
   type:'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description',;
   topic:string,;
@@ -477,6 +513,11 @@ ${request.topic} represents a significant opportunity for organizations looking 
         title: `${request.topic} - Complete Guide`;
         description: `Learn everything about ${request.topic} and how to implement it effectively.`;
         tags: [request.topic, request.type, 'guidetutorial']
+=======
+        title: `${request && request.topic} - Complete Guide`;
+        description: `Learn everything about ${request && request.topic} and how to implement it effectively.`;
+        tags: [request && request.topic, request && request.type, 'guidetutorial']
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
     }
   }
@@ -485,6 +526,7 @@ ${request.topic} represents a significant opportunity for organizations looking 
     readabilityScore: number;
     suggestions: string[]
     keywordDensity: Record<string, number>
+<<<<<<< HEAD
   }> {
     // Mock content analysis
     return {
@@ -500,12 +542,18 @@ ${request.topic} represents a significant opportunity for organizations looking 
   private generateMockContent (request: ContentGenerationRequest): ContentGenerationResponse {
     const mock_content = `# ${request.topic}
 ;
+=======
+=======
+  private generateMockContent (request: ContentGenerationRequest): ContentGenerationResponse {
+    const mock_content = `# ${request.topic}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 This is a ${request.length} ${request.type} about ${request.topic}. The content is written in a ${request.tone} tone to engage the target audience.;
 ## Key Points;
 - Point 1: ${request.topic} is essential for modern businesses;
 - Point 2: Implementing ${request.topic} can improve efficiency;
 - Point 3: Best practices for ${request.topic} implementation;
 ## Conclusion;
+<<<<<<< HEAD
 ${request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`,;
     return {;
       content: mockContent,;
@@ -518,11 +566,38 @@ ${request.topic} represents a significant opportunity for organizations looking 
       metadata: {;
         title: `${request.topic} - Complete Guide`,;
         description: `Learn everything about ${request.topic} and how to implement it effectively.`,;
+=======
+${request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`;
+;
+    return {
+      content: mock_content;
+      word_count: mock_content.split (' ').length;
+      seo_score: 85;
+      readability_score: 78;
+      suggestions: [;
+        'Add more specific examples_include relevant statistics_optimize for target keywords';
+      ],
+      metadata: {
+        title: `${request.topic} - Complete Guide`;
+        description: `Learn everything about ${request.topic} and how to implement it effectively.`;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         tags: [request.topic, request.type, 'guidetutorial'];
       }
     }
   }
+<<<<<<< HEAD
     return {
+=======
+  async analyze_content (content: string): Promise<{
+    seo_score: number;
+    readability_score: number;
+    suggestions: string[],
+    keyword_density: Record < string, number>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  }> {
+    // Mock content analysis;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         'content': 2 && 2.1;
         'seo': 1 && 1.8,
         'marketing': 1 && 1.5
@@ -535,6 +610,7 @@ ${request.topic} represents a significant opportunity for organizations looking 
         'content': 2.1;
         'seo': 1.8,
         'marketing': 1.5;
+<<<<<<< HEAD
 ;
   async analyzeContent(content: string): Promise<{;
     seoScore: number,;
@@ -543,6 +619,10 @@ ${request.topic} represents a significant opportunity for organizations looking 
     keywordDensity: Record<string number>;
   }> {;
     // Mock content analysis;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return {;
       seoScore: Math.floor(Math.random() * 30) + 70,;
       readabilityScore: Math.floor(Math.random() * 30) + 70,;
@@ -553,11 +633,19 @@ ${request.topic} represents a significant opportunity for organizations looking 
         'content': 2.1,;
         'seo': 1.8,;
         'marketing': 1.5;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
     }
   }
 }
 
+<<<<<<< HEAD
 ;
   async analyzeContent(content:string):Promise<{;
     seoScore:number,;
@@ -582,21 +670,34 @@ ${request.topic} represents a significant opportunity for organizations looking 
   }
 }
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
 
 // Pricing tiers for the AI Content Generator
+<<<<<<< HEAD
 // Pricing tiers for the AI Content Generator;
+=======
+=======
+// Pricing tiers for the AI Content Generator;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const AI_CONTENT_PRICING = {
   starter: {
     name: 'Starter';
     price: 29;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     period: '/month',
     features: [;
       '100 content generations per month_basic templatesSEO analysis_email support_standard quality';
     ];
 
+<<<<<<< HEAD
 // Pricing tiers for the AI Content Generator
 export const AI_CONTENT_PRICING = {
   starter: {;
@@ -606,22 +707,33 @@ export const AI_CONTENT_PRICING = {
     features: [
       '100 content generations per monthBasic templatesSEO analysisEmail supportStandard quality'
     ]
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   professional: {
     name: 'Professional';
     price: 99;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     period: '/month',
     features: [;
       '500 content generations per month_premium templates_advanced SEO analysis_priority support_high quality output_custom brandingAPI access';
     ];
+<<<<<<< HEAD
     period: '/month'
     features: [
       '500 content generations per monthPremium templatesAdvanced SEO analysisPriority supportHigh quality outputCustom brandingAPI access'
     ]
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   enterprise: {
     name: 'Enterprise';
     price: 299;
+<<<<<<< HEAD
     period: '/month'
     features: [
       'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee'
@@ -633,6 +745,14 @@ export const AI_CONTENT_PRICING = {
   }
 }
 
+=======
+
+    period: '/month',
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 // Pricing tiers for the AI Content Generator;
 export const AI_CONTENT_PRICING = {;
@@ -640,6 +760,7 @@ export const AI_CONTENT_PRICING = {;
     name: 'Starter',;
     price: 29,;
     period: '/month',;
+<<<<<<< HEAD
 ;
 // Pricing tiers for the AI Content Generator;
 export const AI_CONTENT_PRICING = {;
@@ -679,6 +800,13 @@ export const AI_CONTENT_PRICING = {;
     features: [;
       '100 content generations per monthBasic templatesSEO analysisEmail supportStandard quality';
     ];
+=======
+
+    features: [;
+      'Unlimited content generations_custom templates_advanced analytics_dedicated support_highest quality_white - label options_custom integrationsSLA guarantee';
+    ];
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },;
   professional: {;
     name: 'Professional',;
@@ -697,6 +825,7 @@ export const AI_CONTENT_PRICING = {;
     ];
 
 
+<<<<<<< HEAD
   }
 },; async generateContent (request: ContentGenerationRequest) : Promise<ContentGenerationResponse> {
   try {
@@ -741,3 +870,11 @@ body: JSON.stringify (request)
 };
   }
 };
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -26,6 +26,7 @@ import React, { useState } from 'react';
 
 } from 'lucide-react';import Button from '../components/ui/Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 
+<<<<<<< HEAD
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 
 import React, { useState } from 'react',
@@ -208,15 +209,34 @@ import {
   GraduationCap as GraduationCapIcon,;
   ShieldCheck as ShieldCheckIcon,;
 } from 'lucide-react';import Button from '../components/ui/Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
+=======
+=======
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
 import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
 import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
+<<<<<<< HEAD
+=======
+
+
+} from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
 
 
+<<<<<<< HEAD
+=======
+export default function InnovativeServicesPage() {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {
   innovativeMicroSaasServices
   getInnovativeServicesByCategory
@@ -239,10 +259,22 @@ export default function InnovativeServicesPage() {;
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('innovation');
   const [showFilters, setShowFilters] = useState(false);
+<<<<<<< HEAD
   ];
   const sortOptions = [
 import Head from 'next / head';
 import {
+=======
+
+
+
+    { value: '1001-2000', label: '$1,001 - $2,000' };
+    { value: '2001-3000', label: '$2,001 - $3,000' };
+    { value: '3001-5000', label: '$3,001 - $5,000' };
+    { value: '5001+', label: '$5,001+' }
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Check,
   Star,
   Zap,
@@ -328,6 +360,22 @@ import {
   Factory as FactoryIcon,
   Truck as TruckIcon,
   Microscope as MicroscopeIcon,
+<<<<<<< HEAD
+=======
+
+  GraduationCap as GraduationCapIcon,;
+  ShieldCheck as ShieldCheckIcon,;
+
+} from 'lucide-react';import Button from '../components/ui/Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
+import Button from '../components/ui/Button';
+import Card from '../components/ui/Card';
+import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
+import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
+import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
+import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
+import {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   innovativeMicroSaasServices,
   getInnovativeServicesByCategory,
   getPopularInnovativeServices,
@@ -364,6 +412,7 @@ export default function InnovativeServicesPage() {;
   ];
 
     filteredServices = filteredServices.filter(service =>
+<<<<<<< HEAD
   GraduationCap as GraduationCapIcon,
   ShieldCheck as ShieldCheckIcon,
 } from 'lucide-react';import Button from '../components / ui / Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
@@ -414,13 +463,21 @@ function InnovativeServicesPage() {
   // Search filter
   if (searchQuery) {_filteredServices = filteredServices.filter(service =>
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.category.toLowerCase().includes(searchQuery.toLowerCase())
     )
   }
+<<<<<<< HEAD
 // Sort services
+=======
+
+
+  // Sort services
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   filteredServices.sort((a, b) => {
     switch (sortBy) {
       case 'price':
@@ -484,6 +541,7 @@ if ( {) {
       case 'category':;
         return a.category.locale_compare (b.category);
       case 'roi': {
+<<<<<<< HEAD
         const aRoi = parseInt(a.roi.match(/\d+/)?.[0] || '0');
         const bRoi = parseInt(b.roi.match(/\d+/)?.[0] || '0');
 
@@ -583,6 +641,15 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
           (innovationOrder[bLevel as keyof typeof innovationOrder] |0)
         );
       }    }              default: {
+=======
+
+        const aRoi = parseInt(a.roi.match(/\d+/)?.[0] || '0');
+        const bRoi = parseInt(b.roi.match(/\d+/)?.[0] || '0');
+        return bRoi - aRoi
+      }
+              default: {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           // Innovation level sorting
           const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
           const aLevel = a.innovationLevel.split(' - ')[0];
@@ -596,8 +663,14 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   }
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
+<<<<<<< HEAD
     }
   });
         }
@@ -610,12 +683,60 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
 };
+=======
+  // Search filter;
+  if (searchQuery) {;
+    filteredServices = filteredServices && filteredServices.filter(;
+      service =>;
+        service && service.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+        service && service.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+        service && service.tagline.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+        service && service.category.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
+    );  }    filteredServices = filteredServices && filteredServices.filter(service =>;
+      service && service.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+      service && service.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+      service && service.tagline.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+      service && service.category.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
+    );
+  // Sort services;
+  filteredServices && filteredServices.sort((a, b) => {;
+    switch (sortBy) {;
+      case 'price':;
+        return a && a.price.monthly - b && b.price.monthly;
+      case 'popularity':;
+        return (b && b.popular ? 1 : 0) - (a && a.popular ? 1 : 0);
+      case 'category':;
+        return a && a.category.localeCompare(b && b.category);
+      case 'roi': {;
+        const aRoi = parseInt(a && a.roi.match(/\d+/)?.[0] || '0');
+        const bRoi = parseInt(b && b.roi.match(/\d+/)?.[0] || '0');
+        return bRoi - aRoi;
+      }
+      default: {;
+        // Innovation level sorting;
+        const innovationOrder = { Breakthrough: 3, Advanced: 2, Standard: 1 };
+        const aLevel = a && a.innovationLevel.split(' - ')[0];
+        const bLevel = b && b.innovationLevel.split(' - ')[0];
+        return (
+          (innovationOrder[aLevel as keyof typeof innovationOrder] || 0) -;
+          (innovationOrder[bLevel as keyof typeof innovationOrder] || 0);
+        );
+      }    }              default: {;
+          // Innovation level sorting;
+          const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 };
+          const aLevel = a && a.innovationLevel.split(' - ')[0];
+          const bLevel = b && b.innovationLevel.split(' - ')[0];
+          return (innovationOrder[aLevel as keyof typeof innovationOrder] || 0) - (innovationOrder[bLevel as keyof typeof innovationOrder] || 0);
+        }
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   };
 
 
   };
 
+<<<<<<< HEAD
   const popularServices = getPopularInnovativeServices();
   const categories = getInnovativeServiceCategories();
   return (
@@ -683,6 +804,21 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
               </div>
             </div>
           </section>
+=======
+
+  const popularServices = getPopularInnovativeServices();
+  const categories = getInnovativeServiceCategories();
+  return (
+
+
+                  </div>;
+                </div>;
+              </div>;
+            </div>;
+          </section>;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <section className="px-4 sm:px-6 lg:px-8 mb-12">
             <div className="max-w-7xl mx-auto">
               <div className="bg-black/20 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
@@ -706,16 +842,29 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                   <div className="flex-1">
                     <div className="relative">
                       <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <input
                         type="text"
                         placeholder="Search innovative services..."
                         value={searchQuery}
+<<<<<<< HEAD
                         onChange={(e) => setSearchQuery(e && e.target.value)}
                         className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
                       />;
                     </div>;
                   </div>;
                   {/* Category Filter */}
+=======
+
+
+                  {/* Category Filter */}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <div className="flex-shrink-0">
                     <select
                       value={selectedCategory}
@@ -731,12 +880,21 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                       <option value="All">All Categories</option>
                       {categories.map((category) => (
                         <option key={category.name} value={category.name}>
+<<<<<<< HEAD
+=======
+=======
+                      onChange={e => setSelectedCategory(e.target.value)}
+                      className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
+                    >
+                      <option value='All'>All Categories</option>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                       {categories.map(category => (                        <option key={category.name} value={category.name}>
 
                         <option key={category.name} value={category.name}>
 
 
+<<<<<<< HEAD
                     </select>;
                   </div>;
 
@@ -822,6 +980,61 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                           {option.value}
                         </option>
                       ))}
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                          {category.name} ({category.count})
+                        </option>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                      ))}
+
+                    </select>;
+                  </div>;
+=======
+
+
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                  {/* Price Range Filter */}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                          {range.label}
+                        </option>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                      ))}
+
+                    </select>;
+                  </div>;
+=======
+
+
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                  {/* Sort Options */}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                          {option.value}
+                        </option>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                      ))}
+
+                    </select>;
+                  </div>;
+
+
+                  {/* View Mode Toggle */}
+                  <div className='flex-shrink-0'>;
+                    <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>;
+                  {/* View Mode Toggle */}
+                  <div className="flex-shrink-0">
+                    <div className="flex bg-white/10 rounded-xl p-1 border border-white/20">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     </select>
                   </div>
                   {/* View Mode Toggle */}
@@ -829,6 +1042,13 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                     <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>
 
                   {/* View Mode Toggle */}
+<<<<<<< HEAD
+=======
+                  <div className="flex-shrink-0">
+                    <div className="flex bg-white/10 rounded-xl p-1 border border-white/20">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
                   {/* View Mode Toggle */}
@@ -836,9 +1056,14 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                     <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>
 
 
+<<<<<<< HEAD
                   <div className='flex-shrink-0'>
                     <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <button
                         onClick={() => setViewMode('grid')}
                         className={`px-3 py-2 rounded-lg transition-all ${;
@@ -846,12 +1071,17 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                             ? 'bg-cyan-500 text-white';
                             : 'text-gray-400 hover:text-white';
                         }`}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       >
                         <Grid className="w-5 h-5" />
                       </button>
                       <button
                         onClick={() => setViewMode('list')}
                         className={`px-3 py-2 rounded-lg transition-all ${
+<<<<<<< HEAD
                           viewMode === 'list'
                             ? 'bg-cyan-500 text-white'
                             : 'text-gray-400 hover:text-white'
@@ -864,12 +1094,17 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
 
                       </button>
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </section>
+<<<<<<< HEAD
                         </div>;
                         {/* Tagline */}
                         <p className='text-gray-300 mb-4 font-medium'>;
@@ -903,6 +1138,139 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                     <QuantumHolographicCard key={service.id} className='group'>
                       <div className='p-6'>
                         {/* Service Header */}
+=======
+<<<<<<< HEAD
+>;
+                        <List className="w-5 h-5" />;
+          {/* Filters and Search */}
+          <section className='px - 4 sm:px - 6 lg:px - 8 mb - 12'>;
+            <div className='max - w-7xl mx - auto'>;
+              <div className='bg - black / 20 backdrop - blur - lg rounded - 2xl p - 6 border border - white / 10'>;
+                <div className='flex flex - col lg:flex - row gap - 6'>;
+                  {/* Search */}
+                  <div className='flex - 1'>;
+                    <div className='relative'>;
+                      <Search className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5' />;
+                      <input;
+                        type='text';
+                        placeholder='Search innovative services...';
+                        value={search_query}
+                        on_change={e => setSearchQuery (e.target.value)}
+                        className='w - full pl - 10 pr - 4 py - 3 bg - white / 10 border border - white / 20 rounded - xl text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent'                      />                  {/* Search */}
+                  <div className="flex - 1">;
+                    <div className="relative">;
+                      <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5" />;
+                      <input;
+                        type="text";
+                        placeholder="Search innovative services...";
+                        value={search_query}
+                        on_change={(e) => setSearchQuery (e.target.value)}
+                        className="w - full pl - 10 pr - 4 py - 3 bg - white / 10 border border - white / 20 rounded - xl text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent";
+                      />;
+                    </div>;
+                  </div>;
+                  {/* Category Filter */}
+                  <div className='flex - shrink - 0'>;
+                    <select;
+                      value={selected_category}
+                      on_change={e => setSelectedCategory (e.target.value)}
+                      className='px - 4 py - 3 bg - white / 10 border border - white / 20 rounded - xl text - white focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent';
+                    >;
+                      <option value='All'>All Categories</option>;
+                      {categories.map (category => (                        <option key={category.name} value={category.name}>                    <select;
+                      value={selected_category}
+                      on_change={(e) => setSelectedCategory (e.target.value)}
+                      className="px - 4 py - 3 bg - white / 10 border border - white / 20 rounded - xl text - white focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent";
+                    >;
+                      <option value="All">All Categories</option>;
+                      {categories.map ((category) => (
+                        <option key={category.name} value={category.name}>;
+                          {category.name} ({category.count});
+                        </option>))}
+                    </select>;
+                  </div>;
+                  {/* Price Range Filter */}
+                  <div className='flex - shrink - 0'>;
+                    <select;
+                      value={price_range}
+                      on_change={e => setPriceRange (e.target.value)}
+                      className='px - 4 py - 3 bg - white / 10 border border - white / 20 rounded - xl text - white focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent';
+                    >;
+                      {price_ranges.map (range => (                        <option key={range.value} value={range.value}>                    <select;
+                      value={price_range}
+                      on_change={(e) => setPriceRange (e.target.value)}
+                      className="px - 4 py - 3 bg - white / 10 border border - white / 20 rounded - xl text - white focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent";
+                    >;
+                      {price_ranges.map ((range) => (
+                        <option key={range.value} value={range.value}>;
+                          {range.label}
+                        </option>))}
+                    </select>;
+                  </div>;
+                  {/* Sort Options */}
+                  <div className='flex - shrink - 0'>;
+                    <select;
+                      value={sort_by}
+                      on_change={e => setSortBy (e.target.value)}
+                      className='px - 4 py - 3 bg - white / 10 border border - white / 20 rounded - xl text - white focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent';
+                    >;
+                      {sort_options.map (option => (                        <option key={option.value} value={option.value}>                    <select;
+                      value={sort_by}
+                      on_change={(e) => setSortBy (e.target.value)}
+                      className="px - 4 py - 3 bg - white / 10 border border - white / 20 rounded - xl text - white focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent";
+                    >;
+                      {sort_options.map ((option) => (
+                        <option key={option.value} value={option.value}>;
+                          {option.value}
+                        </option>))}
+                    </select>;
+                  </div>;
+                  {/* View Mode Toggle */}
+                  <div className='flex - shrink - 0'>;
+                    <div className='flex bg - white / 10 rounded - xl p - 1 border border - white / 20'>;
+                      <button;
+                        on_click={() => setViewMode ('grid')}
+                        className={`px - 3 py - 2 rounded - lg transition - all ${
+                          view_mode === 'grid';
+                            ? 'bg - cyan - 500 text - white';
+                            : 'text - gray - 400 hover:text - white';
+                        }`}
+                      >;
+                        <Grid className='w - 5 h - 5' />                      </button>                      <button;
+                        on_click={() => setViewMode ('list')}
+                        className={`px - 3 py - 2 rounded - lg transition - all ${
+                          view_mode === 'grid' ? 'bg - cyan - 500 text - white' : 'text - gray - 400 hover:text - white';
+                        }`}
+                      >;
+                        <Grid className="w - 5 h - 5" />;
+                      </button>;
+                      <button;
+                        on_click={() => setViewMode ('list')}
+                        className={`px - 3 py - 2 rounded - lg transition - all ${
+                          view_mode === 'list';
+                            ? 'bg - cyan - 500 text - white';
+                            : 'text - gray - 400 hover:text - white';
+                        }`}
+                      >;
+                        <List className='w - 5 h - 5' />                      </button>                          view_mode === 'list' ? 'bg - cyan - 500 text - white' : 'text - gray - 400 hover:text - white';
+                        }`}
+                      >;
+                        <List className="w - 5 h - 5" />;
+                    </div>;
+                  </div>;
+                </div>;
+              </div>;
+            </div>;
+          </section>;
+
+
+                        </div>;
+                        {/* Tagline */}
+
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         <div className='flex items-start justify-between mb-4'>
                           <div className='flex items-center space-x-3'>
                             <div className='text-3xl'>{service.icon}</div>
@@ -917,6 +1285,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                           </div>
                           {service.popular && (
 
+<<<<<<< HEAD
                             <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold'>                              POPULAR              {filteredServices.length === 0 ? (
                 <div className="text-center py-20">
                   <div className="text-6xl mb-4">🔍</div>
@@ -970,6 +1339,8 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                             </div>
                           )}
                         </div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                             <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold'>                              POPULAR
 
                               POPULAR
@@ -978,6 +1349,11 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                           )}
                         </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         {/* Tagline */}
                         <p className='text-gray-300 mb-4 font-medium'>
                           {service.tagline}
@@ -985,7 +1361,12 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         {/* Description */}
                         <p className='text-gray-400 text-sm mb-6 leading-relaxed'>
                           {service.description}
@@ -1000,6 +1381,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                           </div>
                           <div className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-lg text-xs font-bold text-center'>                            {service.innovationLevel}
                         {/* Description */}
+<<<<<<< HEAD
                         <p className="text-gray-400 text-sm mb-6 leading-relaxed">{service.description}</p>
                         {/* Innovation Level */}
                         <div className="mb-4">
@@ -1030,6 +1412,11 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                             </div>                          </div>
                         </div>
                         {/* Key Features */}                        <div className="grid grid-cols-2 gap-4 mb-6">
+=======
+
+                        <div className="grid grid-cols-2 gap-4 mb-6">
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           <div className="text-center">
                             <div className="text-2xl font-bold text-cyan-400">${service.price.monthly.toLocaleString()}</div>
                             <div className="text-xs text-gray-400">per month</div>
@@ -1037,7 +1424,13 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                           <div className="text-center">
                             <div className="text-lg font-bold text-green-400">{service.roi.split(' ')[0]}</div>
                             <div className="text-xs text-gray-400">average ROI</div>
+<<<<<<< HEAD
                           </div>
+=======
+
+                          </div>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         </div>
                         <p className="text-gray-400 text-sm mb-6 leading-relaxed">{service && service.description}</p>;
                         {/* Innovation Level */}
@@ -1078,6 +1471,11 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                             <div className="text-xs text-gray-400">average ROI</div>;
                         </div>;
                         {/* Key Features */}
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         <div className="mb-6">
                           <h4 className="text-sm font-semibold text-white mb-3">Key Features</h4>
                           <div className="space-y-2">
@@ -1089,15 +1487,22 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                             ))}
                             {service.features.length > 3 && (
                               <div className="text-xs text-cyan-400 text-center pt-2">
+<<<<<<< HEAD
                               </div>
                             )}
                           </div>
                         </div>
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                            )}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                         <div className='grid grid-cols-2 gap-4 mb-6 text-xs'>
 
 
 
+<<<<<<< HEAD
                         {/* Market Info */}
                         <div className='grid grid-cols-2 gap-4 mb-6 text-xs'>
 
@@ -1113,6 +1518,9 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                         {/* Market Info */}
                         <div className='grid grid-cols-2 gap-4 mb-6 text-xs'>
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           <div>
                             <div className='text-gray-400'>Market Size</div>
                             <div className='text-white font-medium'>
@@ -1152,18 +1560,35 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                             </div>                          </div>;
                         </div>;
                         {/* CTA Buttons */}
+<<<<<<< HEAD
                         <div className="flex space-x-3">
                           <Button
                             href={service.link}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                             className='px-4'>;
                             <Mail className='w-4 h-4' />                          </Button>;
                         </div>;
+<<<<<<< HEAD
                         {/* Contact Info */}                          <Button
                             href={service && service.link}
                         <div className="flex space-x-3">
                           <Button
                             href={service.link}
+=======
+
+
+                        {/* Contact Info */}                          <Button
+                            href={service && service.link}
+
+=======
+                        <div className="flex space-x-3">
+                          <Button
+                            href={service.link}
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                             variant="primary"
                             className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">;
                             Learn More;
@@ -1172,10 +1597,15 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                           <Button
                             href={`mailto:${contactInfo && contactInfo.email}?subject=Inquiry about ${service && service.name}`}
                             variant="secondary"
+<<<<<<< HEAD
                             className="px-4">;
                             <Mail className="w-4 h-4" />;
                           </Button>;
                         </div>;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         {/* Contact Info */}
                         <div className='mt-4 pt-4 border-t border-white/10 text-xs text-gray-400 text-center'>;
                           <div>;
@@ -1188,6 +1618,11 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                       </div>;
                     </QuantumHolographicCard>;
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         {/* Contact Info */}
                         <div className="mt-4 pt-4 border-t border-white/10 text-xs text-gray-400 text-center">
                           <div>Contact: {contactInfo.mobile} | {contactInfo.email}</div>
@@ -1195,6 +1630,11 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                         </div>
                       </div>
                     </QuantumHolographicCard>
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   ))}
 </div>;
               )}
@@ -1217,6 +1657,10 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                   and cutting-edge technology.
                 </p>
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>;
           </section>;
           {/* Call to Action */}
@@ -1261,12 +1705,19 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                     href={`mailto:${contactInfo && contactInfo.email}`}
                     variant='secondary'
 
+<<<<<<< HEAD
                     className='px-8 py-4 text-lg'                  Ready to Lead the Future?
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <section className="px-4 sm:px-6 lg:px-8 mb-20">
             <div className="max-w-4xl mx-auto text-center">
               <EnhancedFuturisticCard className="p-12">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   Ready to Lead the Future?
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                   Join the revolution with our breakthrough micro SAAS services.
@@ -1283,6 +1734,7 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                     href={`tel:${contactInfo && contactInfo.mobile}`}
                     variant="primary"
 
+<<<<<<< HEAD
                     className='px-8 py-4 text-lg'
 
                     className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-8 py-4 text-lg"
@@ -1311,11 +1763,28 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
                   <div className="mt-1">Website: {contactInfo.website}</div>
                     className='px-8 py-4 text-lg'
 
+=======
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-8 py-4 text-lg"
+                  >
+                    <Phone className="w-5 h-5 mr-2" />
+=======
+
+                    className='px-8 py-4 text-lg'
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     Call Now: {contactInfo.mobile}
                   </Button>
                   <Button
                     href={`mailto:${contactInfo.email}`}
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </div>
               </EnhancedFuturisticCard>
             </div>
@@ -1323,25 +1792,277 @@ const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
         </div>
       </QuantumHolographicBackground>
     </>
+<<<<<<< HEAD
                     className='px-8 py-4 text-lg'>;
+=======
+
+                    className='px-8 py-4 text-lg'>;
+                    <Mail className='w-5 h-5 mr-2' />;
+                    Email Us;
+                  </Button>;
+                </div>;
+                <div className='mt-8 text-sm text-gray-400'>;
+                  <div>Address: {contactInfo && contactInfo.address}</div>;
+                  <div className='mt-1'>Website: {contactInfo && contactInfo.website}</div>                </div>                  >;
+                    <Mail className="w-5 h-5 mr-2" />;
+                    Email Us;
+                  </Button>;
+                </div>;
+                <div className="mt-8 text-sm text-gray-400">;
+                  <div>Address: {contactInfo && contactInfo.address}</div>;
+                  <div className="mt-1">Website: {contactInfo && contactInfo.website}</div>;
+                        <p className='text - gray - 300 mb - 4 font - medium'>;
+                          {service.tagline}
+                        </p>;
+                        {/* Description */}
+                        <p className='text - gray - 400 text - sm mb - 6 leading - relaxed'>;
+                          {service.description}
+                        </p>;
+                        {/* Innovation Level */}
+                        <div className='mb - 4'>;
+                          <div className='flex items - center space - x-2 mb - 2'>;
+                            <Sparkles className='w - 4 h - 4 text - yellow - 400' />;
+                            <span className='text - sm font - medium text - yellow - 400'>;
+                              Innovation Level;
+                            </span>;
+                          </div>;
+                          <div className='bg - gradient - to - r from - purple - 500 to - pink - 500 text - white px - 3 py - 1 rounded - lg text - xs font - bold text - center'>                            {service.innovation_level}
+                        {/* Description */}
+                        <p className="text - gray - 400 text - sm mb - 6 leading - relaxed">{service.description}</p>;
+                        {/* Innovation Level */}
+                        <div className="mb - 4">;
+                          <div className="flex items - center space - x-2 mb - 2">;
+                            <Sparkles className="w - 4 h - 4 text - yellow - 400" />;
+                            <span className="text - sm font - medium text - yellow - 400">Innovation Level</span>;
+                          </div>;
+                          <div className="bg - gradient - to - r from - purple - 500 to - pink - 500 text - white px - 3 py - 1 rounded - lg text - xs font - bold text - center">;
+                            {service.innovation_level}
+                          </div>;
+                        </div>;
+                        {/* Price and ROI */}
+                        <div className='grid grid - cols - 2 gap - 4 mb - 6'>;
+                          <div className='text - center'>;
+                            <div className='text - 2xl font - bold text - cyan - 400'>;
+                              ${service.price.monthly.toLocaleString ()}
+                            </div>;
+                            <div className='text - xs text - gray - 400'>;
+                              per month;
+                            </div>;
+                          </div>;
+                          <div className='text - center'>;
+                            <div className='text - lg font - bold text - green - 400'>;
+                              {service.roi.split (' ')[0]}
+                            </div>;
+                            <div className='text - xs text - gray - 400'>;
+                              average ROI;
+                            </div>                          </div>;
+                        </div>;
+                        {/* Key Features */}                        <div className="grid grid - cols - 2 gap - 4 mb - 6">;
+                          <div className="text - center">;
+                            <div className="text - 2xl font - bold text - cyan - 400">${service.price.monthly.toLocaleString ()}</div>;
+                            <div className="text - xs text - gray - 400">per month</div>;
+                          </div>;
+                          <div className="text - center">;
+                            <div className="text - lg font - bold text - green - 400">{service.roi.split (' ')[0]}</div>;
+                            <div className="text - xs text - gray - 400">average ROI</div>;
+                        </div>;
+                        {/* Key Features */}
+                        <div className='mb - 6'>;
+                          <h4 className='text - sm font - semibold text - white mb - 3'>;
+                            Key Features;
+                          </h4>;
+                          <div className='space - y-2'>;
+                            {service.features;
+                              .slice (0, 3);
+                              .map ((feature, index) => (
+                                <div;
+                                  key={index}
+                                  className='flex items - center space - x-2';
+                                >;
+                                  <Check className='w - 4 h - 4 text - green - 400 flex - shrink - 0' />;
+                                  <span className='text - xs text - gray - 300'>;
+                                    {feature}
+                                  </span>;
+                                </div>))}
+                            {service.features.length > 3 && (
+                              <div className='text - xs text - cyan - 400 text - center pt - 2'>                                +{service.features.length - 3} more features                        <div className="mb - 6">;
+                          <h4 className="text - sm font - semibold text - white mb - 3">Key Features</h4>;
+                          <div className="space - y-2">;
+                            {service.features.slice (0, 3).map ((feature, index) => (
+                              <div key={index} className="flex items - center space - x-2">;
+                                <Check className="w - 4 h - 4 text - green - 400 flex - shrink - 0" />;
+                                <span className="text - xs text - gray - 300">{feature}</span>;
+                              </div>))}
+                            {service.features.length > 3 && (
+                              <div className="text - xs text - cyan - 400 text - center pt - 2">;
+                              </div>)}
+                          </div>;
+                        </div>;
+                        {/* Market Info */}
+                        <div className='grid grid - cols - 2 gap - 4 mb - 6 text - xs'>;
+                          <div>;
+                            <div className='text - gray - 400'>Market Size</div>;
+                            <div className='text - white font - medium'>;
+                              {service.market_size}
+                            </div>;
+                          </div>;
+                          <div>;
+                            <div className='text - gray - 400'>Growth Rate</div>;
+                            <div className='text - white font - medium'>;
+                              {service.growth_rate}
+                            </div>                          </div>;
+                        </div>;
+                        {/* CTA Buttons */}
+                        <div className='flex space - x-3'>                          <div>;
+                            <div className="text - gray - 400">Market Size</div>;
+                            <div className="text - white font - medium">{service.market_size}</div>;
+                          </div>;
+                          <div>;
+                            <div className="text - gray - 400">Growth Rate</div>;
+                            <div className="text - white font - medium">{service.growth_rate}</div>;
+                          </div>;
+                        </div>;
+                        {/* CTA Buttons */}
+                        <div className='flex space - x-3'>;
+                          <Button;
+                            href={service.link}
+                            variant='primary';
+                            className='flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700';
+                          >;
+                            Learn More;
+                            <ArrowRight className='w - 4 h - 4 ml - 2' />;
+                          </Button>;
+                          <Button;
+                            href={`mailto:${contact_info.email}?subject = Inquiry about ${service.name}`}
+                            variant='secondary';
+                            className='px - 4';
+                          >;
+                            <Mail className='w - 4 h - 4' />                          </Button>;
+                        </div>;
+                        {/* Contact Info */}                          <Button;
+                            href={service.link}
+                            variant="primary";
+                            className="flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700";
+                          >;
+                            Learn More;
+                            <ArrowRight className="w - 4 h - 4 ml - 2" />;
+                          </Button>;
+                          <Button;
+                            href={`mailto:${contact_info.email}?subject = Inquiry about ${service.name}`}
+                            variant="secondary";
+                            className="px - 4";
+                          >;
+                            <Mail className="w - 4 h - 4" />;
+                          </Button>;
+                        </div>;
+                        {/* Contact Info */}
+                        <div className='mt - 4 pt - 4 border - t border - white / 10 text - xs text - gray - 400 text - center'>;
+                          <div>;
+                            Contact: {contact_info.mobile} | {contact_info.email}
+                          </div>;
+                          <div className='mt - 1'>{contact_info.website}</div>                        </div>                        <div className="mt - 4 pt - 4 border - t border - white / 10 text - xs text - gray - 400 text - center">;
+                          <div > Contact: {contact_info.mobile} | {contact_info.email}</div>;
+                          <div className="mt - 1">{contact_info.website}</div>;
+                        </div>;
+                      </div>;
+                    </QuantumHolographicCard>))}
+                </div>)}
+            </div>;
+          </section>;
+          {/* Call to Action */}
+          <section className='px - 4 sm:px - 6 lg:px - 8 mb - 20'>;
+            <div className='max - w-4xl mx - auto text - center'>;
+              <EnhancedFuturisticCard className='p - 12'>;
+                <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
+                  Ready to Lead the Future?;
+                </h2>;
+                <p className='text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto'>;
+                  Join the revolution with our breakthrough micro SAAS services.;
+                  Transform your business with quantum AI, autonomous systems,
+                  and cutting - edge technology.;
+                </p>;
+                <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
+                  <Button;
+                    href={`tel:${contact_info.mobile}`}
+                    variant='primary';
+                    className='bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 px - 8 py - 4 text - lg';
+                  >;
+                    <Phone className='w - 5 h - 5 mr - 2' />                    Call Now: {contact_info.mobile}
+                  </Button>;
+                  <Button;
+                    href={`mailto:${contact_info.email}`}
+                    variant='secondary';
+                    className='px - 8 py - 4 text - lg'                  Ready to Lead the Future?;
+                </h2>;
+                <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto">;
+                  Join the revolution with our breakthrough micro SAAS services.;
+                  Transform your business with quantum AI, autonomous systems, and cutting - edge technology.;
+                </p>;
+                <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+                  <Button;
+                    href={`tel:${contact_info.mobile}`}
+                    variant="primary";
+                    className="bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 px - 8 py - 4 text - lg";
+                  >;
+                    <Phone className="w - 5 h - 5 mr - 2" />;
+                    Call Now: {contact_info.mobile}
+                  </Button>;
+                  <Button;
+                    href={`mailto:${contact_info.email}`}
+                    variant='secondary';
+                    className='px - 8 py - 4 text - lg';
+                  >;
+                    <Mail className='w - 5 h - 5 mr - 2' />;
+                    Email Us;
+                  </Button>;
+                </div>;
+                <div className='mt - 8 text - sm text - gray - 400'>;
+                  <div > Address: {contact_info.address}</div>;
+                  <div className='mt - 1'>Website: {contact_info.website}</div>                </div>                  >;
+                    <Mail className="w - 5 h - 5 mr - 2" />;
+                    Email Us;
+                  </Button>;
+                </div>;
+                <div className="mt - 8 text - sm text - gray - 400">;
+                  <div > Address: {contact_info.address}</div>;
+                  <div className="mt - 1">Website: {contact_info.website}</div>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </div>;
               </EnhancedFuturisticCard>;
             </div>;
           </section>;
         </div>;
       </QuantumHolographicBackground>;
+<<<<<<< HEAD
 
   );
 
   );
 }
+=======
+
+  );
+}
+
+=======
+
+  );
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </>);
 );
   );
 }
+<<<<<<< HEAD
 
 }
 }
 }
   );
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

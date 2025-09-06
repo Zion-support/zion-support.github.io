@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 const fetcher = (url: string) => fetch(url).then(r => r && r.json());
 const fetcher = (url: string) => fetch(url).then((r) => r.json()),
 export default function JobApplicantsPage() {
@@ -13,13 +14,20 @@ export default function JobApplicantsPage() {;
   const { data: appsData } = useSWR(;
     id ? `/api/applications?jobId=${id}` : null,;
     fetcher;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );  const { data: jobData } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
 
 
   const job = jobData?.job;
   const applications = (appsData?.applications as any[]) |[];
   return (
+<<<<<<< HEAD
 import {use_router} from 'next / router';
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import useSWR from 'swr';
 import {TALENT_PROFILES} from '../../../../data / talent';
 import Link from 'next / link';
@@ -69,6 +77,10 @@ function JobApplicantsPage() {
               </div>;
             </div>);
         })}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {applications && applications.map(a => {;
           const talent = TALENT_PROFILES && TALENT_PROFILES.find(t => t && t.slug === a && a.talentSlug);
             >;
@@ -90,6 +102,7 @@ function JobApplicantsPage() {
       </div>;
     </div>;
   );
+<<<<<<< HEAD
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-semibold">Applicants</h1>
@@ -233,3 +246,6 @@ export default function JobApplicantsPage() {_const _router = useRouter();
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -52,12 +52,19 @@ export function useMilestoneGenerator() {;
       const { data, error } = await supabase.functions.invoke('generate-milestones', {
       const { data, error } = await supabase && supabase.functions.invoke('generate-milestones', {
 
+<<<<<<< HEAD
       setIsGenerating(true),
       const { data, error } = await supabase && supabase.functions.invoke('generate-milestones', {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         body: input
       });
       if (error) throw error;
       // Mark each milestone as AI generated
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const milestonesWithFlag = data && data.milestones.map((milestone: any) => ({
   due_date: string;
   estimated_hours: number,
@@ -96,6 +103,7 @@ if (throw error) {
       setIsGenerating (false);
     }
   }
+<<<<<<< HEAD
       const milestonesWithFlag = data.milestones.map((milestone: any) => ({
         ...milestone
         isAiGenerated: true}));
@@ -114,6 +122,9 @@ if (throw error) {
   }
   return {
     generateMilestones;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { toast } from 'sonner',;
@@ -161,6 +172,10 @@ export function useMilestoneGenerator() {;
   },;
   return {;
     generateMilestones,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
     generatedMilestones;
@@ -175,6 +190,10 @@ export function useMilestoneGenerator() {;
     generate_milestones;
     generated_milestones;
     is_generating;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     clearGeneratedMilestones}
 }
 

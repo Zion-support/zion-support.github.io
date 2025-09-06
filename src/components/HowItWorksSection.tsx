@@ -1,15 +1,22 @@
+<<<<<<< HEAD
 import React from 'react',
 import { GradientHeading } from "./GradientHeading",
 import React from 'react';
 import { GradientHeading } from "./GradientHeading";
 import React from 'react'
 import { GradientHeading } from './GradientHeading'
+=======
+import React from 'react';
+import { GradientHeading } from "./GradientHeading";
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Check, Handshake, Search, Send } from 'lucide-react'
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
 interface HowItWorksSectionProps {
   className?: string;
   style?: React.CSSProperties
+<<<<<<< HEAD
 const getSteps = (t: any,) => [
 
 import React from 'react',
@@ -28,6 +35,11 @@ const getSteps = (t: any) => [
 
 const getSteps = (t: any) => [
   {
+=======
+
+const getSteps = (t: any,) => [
+  {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     title: t('how_it_works.post')
     description: t('how_it_works.post_desc')
     icon: Send
@@ -210,6 +222,7 @@ const stats = [ ";
     visible: {
       opacity: 1,      scale: 1
       transition: {
+<<<<<<< HEAD
     visible: {
       opacity: 1,      scale: 1
       transition: {
@@ -226,6 +239,29 @@ export function HowItWorksSection({
 }: HowItWorksSectionProps) {
   const { t } = useTranslation()
   const steps = getSteps(t)
+=======
+
+
+const getSteps = (t: any,) => [
+
+
+import React from 'react',
+import { GradientHeading } from "./GradientHeading",
+import { Check, Handshake, Search, Send } from 'lucide-react'
+import { cn } from "@/lib/utils",
+import { useTranslation } from "react-i18next",
+interface HowItWorksSectionProps {
+  className?: string,
+  style?: React.CSSProperties
+}
+
+
+const getSteps = (t: any) => [
+
+
+  {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     title: t('how_it_works.post'),
     description: t('how_it_works.post_desc'),
     icon: Send},
@@ -240,6 +276,7 @@ export function HowItWorksSection({
   {
     title: t('how_it_works.done'),
     description: t('how_it_works.done_desc'),
+<<<<<<< HEAD
     icon: Check,
   },
 ]
@@ -327,6 +364,8 @@ const getSteps = (t: any) => [
   {
     title: t('how_it_works.done'),
     description: t('how_it_works.done_desc'),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   return (
     <section className={cn('py-20 bg-zion-blue', className)} style={style}>
@@ -474,6 +513,7 @@ onst stats = [ ";
       <div className="absolute inset-0 opacity-5">";
         <divclassName="absolute inset-0" style = {
 export function HowItWorksSection(): any ({
+<<<<<<< HEAD
 const stats = [ ";
   { icon: <Clock className="w-6 h-6"  />, value: "3x Faster", label: "Project Delivery" },";
   { icon: <Target className="w-6 h-6"  />, value: "99.9%", label: "Success Rate" },";
@@ -499,11 +539,14 @@ const stats = [ ";
       <div className="absolute inset-0 opacity-5">"
         <div className="absolute inset-0" style = {
 export function HowItWorksSection({
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   className,
   style,
 }: HowItWorksSectionProps) {
   const { t } = useTranslation()
   const steps = getSteps(t)
+<<<<<<< HEAD
     icon: Check}],
 
 export function HowItWorksSection({ className, style }: HowItWorksSectionProps) {
@@ -716,6 +759,130 @@ function HowItWorksSection() {
 };
 };
 
+=======
+
+  return (
+    <section className={cn('py-20 bg-zion-blue', className)} style={style}>;
+      <div className='container mx-auto px-4'>;
+        <div className='text-center mb-16'>;
+          <GradientHeading>{t('home && home.how_it_works_title')}</GradientHeading>;
+          <p className='text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>            {t('home && home.how_it_works_subtitle')}
+          </p>;
+        </div>;
+
+        <div className='relative'>  ;
+  return (
+    <section className={cn("py-20 bg-zion-blue", className)} style={style}>;
+      <div className="container mx-auto px-4">;
+        <div className="text-center mb-16">;
+          <GradientHeading>{t('home && home.how_it_works_title')}</GradientHeading>;
+          <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">;
+            {t('home && home.how_it_works_subtitle')}
+          </p>;
+        </div>;
+
+        <div className='relative'>;
+          <div className='absolute left-4 md:left-1/2 top-0 h-full w-0 && 0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden'></div>;
+
+          <div className='space-y-12 md:space-y-0'>;
+            {steps && steps.map((step, index) => (;
+
+              <div
+                key={step && step.title}                className={`flex flex-col md:flex-row items-center ${
+                  index % 2 === 0 ? 'md:flex-row-reverse' : ''
+                } relative`}>;
+                <div className='md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right'>;
+                  {index % 2 === 0 ? (;
+                    <div>;
+                      <h3 className='text-2xl font-bold text-white mb-3'>;
+                        {step && step.title}
+                      </h3>;
+                      <p className='text-zion-slate-light'>;
+                        {step && step.description}
+                      </p>;
+                    </div>;
+                  ) : null}
+
+        duration: 0.5, ";
+        ease: "ease_out"}}}
+  return (";
+    <section className="py - 20 bg - gradient - to - br from - zion - blue via - zion - slate - dark to - zion - blue - dark relative overflow - hidden">;
+      {/* Enhanced background pattern */}";
+      <div className="absolute inset - 0 opacity - 5">";
+        <div className="absolute inset - 0" style = {
+export /**
+ * HowItWorksSection - Function description
+ */
+function HowItWorksSection() {
+  const { t } = use_translation ();
+  const steps = get_steps (t);
+  return (
+    <section className={cn ('py - 20 bg - zion - blue', class_name)} style={style}>;
+      <div className='container mx - auto px - 4'>;
+        <div className='text - center mb - 16'>;
+          <GradientHeading>{t ('home.how_it_works_title')}</GradientHeading>;
+          <p className='text - zion - slate - light text - lg mt - 4 max - w-2xl mx - auto'>            {t ('home.how_it_works_subtitle')}
+          </p>;
+        </div>;
+        <div className='relative'>;
+  return (
+    <section className={cn ("py - 20 bg - zion - blue", class_name)} style={style}>;
+      <div className="container mx - auto px - 4">;
+        <div className="text - center mb - 16">;
+          <GradientHeading>{t ('home.how_it_works_title')}</GradientHeading>;
+          <p className="text - zion - slate - light text - lg mt - 4 max - w-2xl mx - auto">;
+            {t ('home.how_it_works_subtitle')}
+          </p>;
+        </div>;
+        <div className='relative'>;
+          <div className='absolute left - 4 md:left - 1/2 top - 0 h - full w - 0.5 bg - gradient - to - b from - zion - purple via - zion - cyan to - zion - purple - light transform -translate - x-1 / 2 md:block hidden'></div>;
+          <div className='space - y-12 md:space - y-0'>;
+            {steps.map ((step, index) => (
+              <div;
+                key={step.title}                className={`flex flex - col md:flex - row items - center ${
+                  index % 2 === 0 ? 'md:flex - row - reverse' : '';
+                } relative`}
+              >;
+                <div className='md:w - 1/2 mb - 6 md:mb - 0 md:px - 12 text - center md:text - right'>;
+                  {index % 2 === 0 ? (
+                    <div>;
+                      <h3 className='text - 2xl font - bold text - white mb - 3'>;
+                        {step.title}
+                      </h3>;
+                      <p className='text - zion - slate - light'>;
+                        {step.description}
+                      </p>;
+                    </div>) : null}
+                </div>;
+                <div className='relative z - 10 flex items - center justify - center w - 12 h - 12 rounded - full bg - zion - blue - light border - 2 border - zion - purple mx - 4 md:mx - 0'>;
+                  <step.icon className='w - 6 h - 6 text - zion - cyan' />;
+                </div>;
+                <div className='md:w - 1/2 md:px - 12 text - center md:text - left'>;
+
+                  {index % 2 !== 0 ? (
+                    <div>;
+                      <h3 className='text - 2xl font - bold text - white mb - 3'>;
+                        {step.title}
+                      </h3>;
+                      <p className='text - zion - slate - light'>;
+                        {step.description}
+
+                </div>;
+                <div className='relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0'>;
+                  <step && step.icon className='w-6 h-6 text-zion-cyan' />;
+                </div>;
+
+                <div className='md:w-1/2 md:px-12 text-center md:text-left'>;
+                  {index % 2 !== 0 ? (;
+                    <div>;
+                      <h3 className='text-2xl font-bold text-white mb-3'>;
+                        {step && step.title}
+                      </h3>;
+                      <p className='text-zion-slate-light'>;
+                        {step && step.description}
+                      </p>                    </div>                    </div>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         <div className="relative">
           {/* Timeline line */}
@@ -726,12 +893,25 @@ function HowItWorksSection() {
               <div 
                 key={step.title}
                 className={`flex flex-col md:flex-row items-center ${
+<<<<<<< HEAD
+=======
+                  index % 2 === 0 ? "md: flex-row-reverse" : "",
+                } relative`}
+              >
+                <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">
+                  {index % 2 === 0 ? (
+                    <div>
+                      <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
+                      <p className="text-zion-slate-light">{step.description}</p>
+                    </div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   ) : null}
                 </div>;
                       <h3 className="text-2xl font-bold text-white mb-3">{step && step.title}</h3>;
                       <p className="text-zion-slate-light">{step && step.description}</p>;
                     </div>;
                   ) : null}
+<<<<<<< HEAD
                 </div>;
                 <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0">;
                   <step && step.icon className="w-6 h-6 text-zion-cyan" />;
@@ -812,14 +992,30 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
                       <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>;
                       <p className="text-zion-slate-light">{step.description}</p>;
                     </div>;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   ) : null}
                 </div>;
               </div>;
             ))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>;
         </div>;
       </div>;
     </section>;
+<<<<<<< HEAD
+=======
+  );
+});
+
+export default Component;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 }
 }
@@ -849,6 +1045,7 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
 }
 }
 }
+<<<<<<< HEAD
   ),;}
  interface HowItWorksSectionProps {;
   className?: string;
@@ -915,3 +1112,6 @@ return (<section className= {;
 }
 ;
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

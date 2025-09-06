@@ -1,8 +1,13 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     writeJson('support/requests.json', reqs)
   }
   return res.status(200).json({ ok: true, id })
 
+<<<<<<< HEAD
 }
 
   // If premium support: create a support request to prioritize
@@ -14,6 +19,12 @@
   }
   return res.status(200).json({ ok: true, id })
 }
+=======
+=======
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { read_json, write_json } from '../../../utils / fs_db',
 ;
@@ -46,6 +57,7 @@ if ( {) {
   return res.status (200).json ({ ok: true, id });
 }
 ;
+<<<<<<< HEAD
 }
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -127,3 +139,11 @@ export default async function handler(req, res) {
 
 }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

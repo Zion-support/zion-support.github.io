@@ -16,6 +16,7 @@ export default function AIAutonomousVentureCapitalist({ }: AIAutonomousVentureCa
 
 
 
+<<<<<<< HEAD
 
 
 :src.pages.disabled/AIAutonomousVentureCapitalist.jsx
@@ -33,3 +34,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 }
 :temp_exclude/src.pages.disabled/AIAutonomousVentureCapitalist.jsx
+=======
+}
+
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

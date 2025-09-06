@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { useWallet } from '@/hooks/useWallet'
 import React, { useState } from 'react'
@@ -129,6 +130,8 @@ export function RedeemTokensCard() {
     type: 'credit'
   }
 ],
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 return (
     <Card>;
       <CardHeader>;
@@ -282,6 +285,7 @@ export function RedeemTokensCard() {
         </Dialog>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   );
 };
 }
@@ -351,6 +355,9 @@ export function RedeemTokensCard() {;
         <Dialog open={open} onOpenChange={setOpen}>;
           <DialogTrigger asChild>;
             <Button className="w-full">View Available Rewards</Button>;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <Dialog open={open} onOpenChange={set_open}>;
           <DialogTrigger as_child>;
             <Button className='w - full'>View Available Rewards</Button>;
@@ -383,21 +390,44 @@ export function RedeemTokensCard() {;
                 </div>;
               ))}
             </div>;
+<<<<<<< HEAD
             <div className="flex justify-between">;
               <Button variant="outline" size="sm" onClick={() => setOpen(false)}>Close</Button>;
               <Button variant="ghost" size="sm">;
                 Learn More <ExternalLink className="ml-1 h-3 w-3" />;
+=======
+            <div className='flex justify - between'>;
+              <Button;
+                variant='outline';
+                size='sm';
+                on_click={() => set_open (false)}
+
+              >;
+                Close;
+              </Button>;
+              <Button variant='ghost' size='sm'>;
+
+                Learn More <ExternalLink className='ml - 1 h - 3 w - 3' />;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </Button>;
             </div>;
           </DialogContent>;
         </Dialog>;
       </CardContent>;
+<<<<<<< HEAD
   )
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
     </Card>);
 }
 
+<<<<<<< HEAD
   )
+=======
+  )
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

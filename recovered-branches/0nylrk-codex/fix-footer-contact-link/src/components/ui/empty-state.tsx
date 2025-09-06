@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 import React from "react";
 import {cn} from "@/lib/utils";
 import {Button} from "@/components/ui/button";
@@ -11,18 +12,50 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface EmptyStateProps {
 
   icon: React.ReactNode
   title: string
   description: string
   action?: {
+<<<<<<< HEAD
+=======
+
+import React from "react";
+import {cn} from "@/lib/utils";
+import {Button} from "@/components/ui/button";
+import {Link} from "react-router-dom";
+interface EmptyStateProps {;
+  icon: React && React.ReactNode,;
+  title: string,;
+  description: string,;
+  action?: {;
+    text: string,;
+    href?: string;
+    onClick?: () => void;
+  };
+  secondaryAction?: {;
+    text: string,;
+    href?: string;
+    onClick?: () => void;
+  };
+  className?: string;
+}
+
+export function EmptyState(): any ({;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   icon;
   title;
   description;
   action;
   secondaryAction;
   className}: EmptyStateProps) {;
+<<<<<<< HEAD
 
     text: string
 
@@ -36,6 +69,10 @@ interface EmptyStateProps {
     href?: string;
     onClick?: () => void
   }
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     text: string,
     href?: string,
     onClick?: () => void
@@ -45,6 +82,7 @@ interface EmptyStateProps {
     href?: string,
     onClick?: () => void
   },
+<<<<<<< HEAD
   className?: string
 }
 
@@ -61,10 +99,21 @@ export function EmptyState({
   action,
   secondaryAction,
   className}: EmptyStateProps) {
+=======
+
+  className?: string
+}
+
+
+
+  className}: EmptyStateProps) {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div
 
       className={cn(
+<<<<<<< HEAD
         "flex flex-col items-center justify-center text-center p-6 md: p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50"
 
         "flex flex-col items-center justify-center text-center p-6 md:p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50",
@@ -145,6 +194,9 @@ export function EmptyState({;
       )}
     >
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6">
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         "flex flex-col items-center justify-center text-center p-6 md:p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50",
 
@@ -179,6 +231,19 @@ export function EmptyState({;
 
 
 
+<<<<<<< HEAD
+=======
+              onClick={action.onClick}
+            >
+              {action.text}
+            </Button>
+          )
+        )}
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {secondaryAction && (
           secondaryAction.href ? (
             <Button asChild variant="outline" size="lg" className="border-zion-blue-light hover:bg-zion-blue-light">
@@ -280,6 +345,7 @@ function EmptyState() {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
   ),;}
  interface EmptyStateProps {
   icon: React.ReactNode;
@@ -342,3 +408,6 @@ className?: string
     </div>
   )
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

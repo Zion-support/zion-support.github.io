@@ -35,6 +35,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ProfileProject } from "@/types/profile";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+<<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { ProfileProject } from "@/types/profile";
@@ -67,6 +68,8 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { ProfileProject } from "@/types/profile",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { FileText } from 'lucide-react'
 
 interface ProfileProjectsProps {
@@ -89,6 +92,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
                 <img
 
 
+<<<<<<< HEAD
               </AspectRatio>
                   className='w-full h-full object-cover'
                   loading='lazy'                />
@@ -100,6 +104,8 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </AspectRatio>
             ) : (
               <div className="h-40 w-full flex items-center justify-center bg-zion-blue">
@@ -156,8 +162,11 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
               <AspectRatio ratio={16/9}>;
                 <img;
                   src={project.imageUrl}
+<<<<<<< HEAD
 
                   src={project.imageUrl}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   alt={project.title}
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -168,8 +177,14 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
                 <FileText className="text-zion-purple h-12 w-12 opacity-50" />
               </div>
             )}
+<<<<<<< HEAD
             
             
+=======
+
+            
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <CardContent className="p-4">
               <h4 className="text-white font-medium mb-2">{project.title}</h4>
               <p className="text-zion-slate text-sm mb-3 line-clamp-2">{project.description}</p>
@@ -179,7 +194,10 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">
                       {tag}
                     </Badge>
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
             <CardContent className="p-4">;
               <h4 className="text-white font-medium mb-2">{project.title}</h4>;
@@ -202,10 +220,15 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   ))}
                 </div>
               )}
 
+<<<<<<< HEAD
                 </div>
               )}
               <div className='text-xs text-zion-slate-light mt-2'>                {project.date}
@@ -215,18 +238,23 @@ ursor/fix-website-loading-errors-and-merge-6662
                   ))}
                 </div>
               )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               
 
 
 
               <div className='text-xs text-zion-slate-light mt-2'>                {project.date}              
 
+<<<<<<< HEAD
                   ))}
                 </div>
               )}
               <div className='text-xs text-zion-slate-light mt-2'>                {project.date}
 
               <div className='text-xs text-zion-slate-light mt-2'>                {project.date}              
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className="text-xs text-zion-slate-light mt-2">
                 {project.date}
               </div>
@@ -234,8 +262,13 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Card>
         ))}
       </div>
+<<<<<<< HEAD
     </div>
   )
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>;
   );
 };
@@ -243,10 +276,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 }
 }
+<<<<<<< HEAD
 }
               
               <div className="text-xs text-zion-slate-light mt-2">
                 {project.date}
+=======
+
+
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               <div className='text-xs text-zion-slate-light mt-2'>                {project && project.date}              ;
               <div className="text-xs text-zion-slate-light mt-2">;
@@ -332,4 +371,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,18 +1,39 @@
+<<<<<<< HEAD
+=======
+
+import React from 'react';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useNavigate} from "react-router-dom";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {ProductListing} from "@/types/listings";
 import {Star, DollarSign} from "lucide-react";
+<<<<<<< HEAD
   view?: 'grid' | 'list';
   onRequestQuote?: (id: string) => void;
 }
 export function ProductListingCard(): any ({ ;
   listing, ;
+=======
+
+interface ProductListingCardProps {;
+  listing: ProductListing,;
+
+  view?: 'grid' | 'list';
+  onRequestQuote?: (id: string) => void;
+}
+
+
+export function ProductListingCard(): any ({ ;
+  listing, ;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   view = 'grid';
   onRequestQuote;
 }: ProductListingCardProps) {;
   const isGrid = view === 'grid';
   const navigate = useNavigate();
+<<<<<<< HEAD
 import { useNavigate } from "react-router-dom",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -37,6 +58,10 @@ export function ProductListingCard({
     : '/placeholder.svg';
 import { ProductListing } from "@/types/listings",
 import { Star, DollarSign } from "lucide-react",
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 interface ProductListingCardProps {
   listing: ProductListing,
@@ -45,6 +70,7 @@ interface ProductListingCardProps {
 }
 
 export function ProductListingCard({ 
+<<<<<<< HEAD
   listing, 
   view = 'grid',
 
@@ -52,6 +78,12 @@ export function ProductListingCard({
   view = 'grid';
   listing, 
   view = 'grid',
+=======
+
+  listing, 
+  view = 'grid',
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onRequestQuote
 }: ProductListingCardProps) {
   const isGrid = view === 'grid',
@@ -77,6 +109,7 @@ interface ProductListingCardProps {
   listing: ProductListing,
   view?: 'grid' | 'list';
 
+<<<<<<< HEAD
     
   // Format price display
   const formatPrice = () => {
@@ -95,6 +128,8 @@ interface ProductListingCardProps {
   const handleRequestQuote = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation()
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
 
   // Handle image loading errors
@@ -112,15 +147,23 @@ interface ProductListingCardProps {
     e.preventDefault(),
     e.stopPropagation(),
     
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (onRequestQuote) {
       onRequestQuote(listing.id)
     } else {
       // Default behavior if no handler provided
       navigate(`/request-quote?listing=${listing.id}`)
+<<<<<<< HEAD
     }
   }
   return (
     <div className={`bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer`} onClick={handleViewListing}>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useNavigate } from "react-router-dom",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -129,27 +172,101 @@ import { Star, DollarSign } from "lucide-react",;
 interface ProductListingCardProps {;
   listing: ProductListing,;
   view?: 'grid' | 'list',;
+<<<<<<< HEAD
+=======
+
+  onRequestQuote?: (id: string) => void;
+}
+export /**
+ * ProductListingCard - Function description
+ */
+function ProductListingCard() {
+  const is_grid = view === 'grid';
+  const navigate = use_navigate ();
+;
+  // Get the first image or use a placeholder;
+  const image_url = listing.images && listing.images.length > 0;
+    ? listing.images[0];
+    : '/placeholder.svg';
+;
+  // Format price display;
+  const format_price = () =>: any {
+    // Check condition
+if (return "Custom pricing") {
+  $2
+}
+    return `${listing.currency}${listing.price.toLocaleString ()}`;
+  }
+;
+  // Handle image loading errors;
+  const handleImageError = (e: React.SyntheticEvent < HTMLImageElement>) =>: any {
+    e.current_target.src = '/placeholder.svg';
+  }
+;
+  // Handle navigating to listing detail;
+  const handleViewListing = () =>: any {
+    navigate (`/listing/${listing.id}`);
+  }
+;
+  // Handle request quote button click;
+  const handleRequestQuote = (e: React.MouseEvent) =>: any {
+    e.prevent_default ();
+    e.stop_propagation (),
+    // Check condition
+if ( {) {
+  $2
+}
+      onRequestQuote (listing.id);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    } else {
+      // Default behavior if no handler provided;
+      navigate (`/request - quote?listing=${listing.id}`);
+    }
+  }
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Get the first image or use a placeholder;
   const imageUrl = listing && listing.images && listing && listing.images.length > 0 ;
     ? listing && listing.images[0] ;
     : '/placeholder && placeholder.svg';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Format price display;
   const formatPrice = () => {;
     if (listing && listing.price === null) return "Custom pricing";
     return `${listing && listing.currency}${listing && listing.price.toLocaleString()}`;
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Handle image loading errors;
   const handleImageError = (e: React && React.SyntheticEvent<HTMLImageElement>) => {;
     e && e.currentTarget.src = '/placeholder && placeholder.svg';
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Handle navigating to listing detail;
   const handleViewListing = () => {;
     navigate(`/listing/${listing && listing.id}`);
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Handle request quote button click;
   const handleRequestQuote = (e: React && React.MouseEvent) => {;
     e && e.preventDefault();
     e && e.stopPropagation(),;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (onRequestQuote) {;
       onRequestQuote(listing && listing.id);
     } else {;
@@ -157,17 +274,32 @@ interface ProductListingCardProps {;
       navigate(`/request-quote?listing=${listing && listing.id}`);
     }
   };
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className={`bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer`} onClick={handleViewListing}>;
 
 
 
+<<<<<<< HEAD
       {/* Image */}
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {/* Image */}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className={isGrid ? 'block w-full' : 'block w-1/3'} onClick={handleViewListing}>;
         <div className={`relative ${isGrid ? 'h-48' : 'h-full'}`}>;
           <img
             src={imageUrl} 
             alt={listing && listing.title}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className="w-full h-full object-cover"
             onError={handleImageError}
           />;
@@ -176,8 +308,16 @@ interface ProductListingCardProps {;
               Featured;
             </Badge>;
           )}
+<<<<<<< HEAD
         </div>;
       </div>;
+=======
+
+        </div>;
+      </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Content */}
       <div className={`flex flex-col justify-between ${isGrid ? 'p-4 flex-1' : 'p-4 flex-1'}`}>;
         <div>;
@@ -195,6 +335,7 @@ interface ProductListingCardProps {;
                 )}
               </div>;
             )}
+<<<<<<< HEAD
   onRequestQuote?: (id: string) => void;
 }
 ;
@@ -312,6 +453,9 @@ export function ProductListingCard({;
             <Button
               size="sm"
               onClick={(e) => {
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   return (
     <div className={`bg - zion - blue - dark border border - zion - blue - light rounded - lg overflow - hidden flex ${is_grid ? 'flex - col' : 'flex - row'} cursor - pointer`} on_click={handleViewListing}>;
@@ -394,6 +538,11 @@ export function ProductListingCard({;
                 e.stopPropagation();
 
                 e.stopPropagation(),
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 navigate(`/listing/${listing.id}`)
               }}
               className="bg-zion-purple hover:bg-zion-purple-dark text-white"
@@ -401,8 +550,12 @@ export function ProductListingCard({;
               Buy Now
             </Button>
             {onRequestQuote && (
+<<<<<<< HEAD
               </span>;
             )}
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>;
           <div className="flex gap-2">;
             <Button
@@ -416,10 +569,15 @@ export function ProductListingCard({;
               Buy Now;
             </Button>;
             {onRequestQuote && (;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Button
                 size="sm"
                 variant="outline"
                 onClick={handleRequestQuote}
+<<<<<<< HEAD
 import { useNavigate } from "react-router-dom",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -568,6 +726,9 @@ export function ProductListingCard({ ;
                 onClick={handleRequestQuote}
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
               >;
+=======
+                className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 Request Quote;
               </Button>;
             )}
@@ -575,6 +736,7 @@ export function ProductListingCard({ ;
         </div>;
       </div>;
     </div>;
+<<<<<<< HEAD
   ),; interface ProductListingCardProps {
   listing: ProductListing;
 view?: 'grid' | 'list';
@@ -639,4 +801,58 @@ return (<div className= {
       </div>
     </div>
   )
+=======
+  );
+=======
+          </p>;
+          {/* Tags */}
+          {listing.tags && listing.tags.length > 0 && (
+            <div className="flex flex - wrap gap - 1 mb - 4">;
+              {listing.tags.map ((tag, idx) => (
+                <span;
+                  key={idx}
+                  className="text - xs text - zion - slate bg - zion - blue - light / 20 px - 2 py - 1 rounded - full";
+                >;
+                  {tag}
+                </span>))}
+            </div>)}
+        </div>;
+        {/* Footer with price and button */}
+        <div className="flex items - center justify - between mt - auto pt - 3 border - t border - zion - blue - light">;
+          <div className="text - sm font - medium">;
+            {listing.price !== null ? (
+              <div className="flex items - center text - zion - purple">;
+                <DollarSign className="h - 4 w - 4 mr - 1" />;
+                {format_price ()}
+              </div>) : (
+              <span className="text - zion - slate - light">;
+                {format_price ()}
+              </span>)}
+          </div>;
+          <div className="flex gap - 2">;
+            <Button;
+              size="sm";
+              on_click={(e) => {
+                e.stop_propagation ();
+                navigate (`/listing/${listing.id}`);
+              }}
+              className="bg - zion - purple hover:bg - zion - purple - dark text - white";
+            >;
+              Buy Now;
+            </Button>;
+            {onRequestQuote && (
+              <Button;
+                size="sm";
+                variant="outline";
+                on_click={handleRequestQuote}
+                className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
+              >;
+                Request Quote;
+              </Button>)}
+          </div>;
+        </div>;
+      </div>;
+    </div>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }

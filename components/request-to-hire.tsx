@@ -18,6 +18,7 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import { useEffect, useMemo, useState } from 'react';
+<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import { TALENT_PROFILES } from '../data/talent';
 export default function RequestToHirePage() {
@@ -30,6 +31,8 @@ export default function RequestToHirePage() {;
     () => TALENT_PROFILES.find(t => t.slug === talent)
     [talent]
   );export default function RequestToHirePage() {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   const router = useRouter();
@@ -38,14 +41,44 @@ export default function RequestToHirePage() {;
 
 
   const [form, setForm] = useState({
+<<<<<<< HEAD
   const router = useRouter();
   const { talent } = router.query as { talent?: string }
   const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent), [talent]);
   const [form, setForm] = useState({
+=======
+=======
+import { use_router } from 'next / router';
+import { TALENT_PROFILES } from '../data / talent';
+;
+export default /**
+ * RequestToHirePage - Function description
+ */
+function RequestToHirePage() {
+  const router = use_router ();
+  const { talent } = router.query as { talent?: string }
+  const selected = useMemo (
+    () => TALENT_PROFILES.find (t => t.slug === talent),
+    [talent]);export default /**
+ * RequestToHirePage - Function description
+ */
+function RequestToHirePage() {
+  const router = use_router ();
+  const { talent } = router.query as { talent?: string }
+  const selected = useMemo (() => TALENT_PROFILES.find (t => t.slug === talent), [talent]);
+  const [form, set_form] = useState ({
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     name: '',
     email: '',
     budget: '',
     timeline: '',
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function RequestToHirePage() {;
   const router = useRouter();
   const { talent } = router && router.query as { talent?: string };
@@ -76,10 +109,16 @@ export default function RequestToHirePage() {;
     if (!form && form.name || !form && form.email || !form && form.description) {;
       setError('Please fill in name, email, and description.');
       return;    }      return;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     setError(null);
     if (!form.name || !form.email || !form.description) {
       setError('Please fill in name, email, and description.');
       return
+<<<<<<< HEAD
     }
           ...form;
           budget: normalizedBudget,
@@ -124,6 +163,16 @@ export default function RequestToHirePage() {;
     } finally {
       setSubmitting(false);    }          budget: normalizedBudget
           talentSlug: selected?.slug |null})})
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    }
+
+          ...form;
+          budget: normalizedBudget,
+          talentSlug: selected?.slug || null})}),
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const data = await res.json();
       if (!res.ok) throw new Error(data.error |'Failed to submit');
       setResult({ id: data.id, message: 'Request submitted successfully.' })
@@ -165,6 +214,12 @@ export default function RequestToHirePage() {;
       setError(err && err.message || 'Something went wrong');
     } finally {;
       setSubmitting(false);
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   }
   if (result) {;
@@ -237,19 +292,34 @@ export default function RequestToHirePage() {;
           disabled={submitting}
           className='px-4 py-2 rounded bg-black text-white'>          {submitting ? 'Submitting…' : 'Submit Request'}      </div>;
     );
+<<<<<<< HEAD
     }
   };
 
     }
   };
+=======
+
+=======
+    }
+  };
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (result) {
     return (
       <div className="max-w-xl mx-auto py-12">
         <h1 className="text-2xl font-semibold mb-2">Thanks!</h1>
         <p className="text-gray-600 mb-4">We received your request. We will notify the appropriate team.</p>
         <div className="text-sm text-gray-500">Confirmation ID: {result.id}</div>
+<<<<<<< HEAD
 </div>
     )
+=======
+      </div>
+    )
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   return (
     <div className="max-w-xl mx-auto">;
@@ -277,13 +347,24 @@ export default function RequestToHirePage() {;
         </div>;
         {error && <div className="text-sm text-red-600">{error}</div>}
 
+<<<<<<< HEAD
         <button disabled={submitting} className="px-4 py-2 rounded bg-black text-white">
           {submitting ? 'Submitting…' : 'Submit Request'}
+=======
+
+          {submitting ? 'Submitting…' : 'Submit Request'}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </button>;
       </form>;
     </div>;
   );
 }
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 }
     description: '',
@@ -582,8 +663,18 @@ if ( {) {
 
   );
 }
+<<<<<<< HEAD
 
 );
 }
   );
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  );
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -3,6 +3,7 @@ import * as RadioGroupPrimitive from "@radix-ui/react-radio-group"
 import { Circle } from 'lucide-react'
 
 
+<<<<<<< HEAD
 const RadioGroup = React.forwardRef<
 import * as React from &quot;react&quot;
 import * as RadioGroupPrimitive from &quot;@radix-ui/react-radio-group&quot;
@@ -16,14 +17,38 @@ import { cn } from &quot;@/lib/utils&quot;
 
 import { cn } from "@/lib/utils"
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const RadioGroup = React.forwardRef<
   React.ElementRef<typeof RadioGroupPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>
 >(({ className, ...props }, ref) => {
+<<<<<<< HEAD
   return (
     <RadioGroupPrimitive.Root
       className={cn(&quot;grid gap-2&quot; className)}
       className={cn("grid gap-2", className)}
+=======
+
+import * as React from &quot;react & quot;
+import * as RadioGroupPrimitive from &quot;@radix - ui / react - radio - group & quot;
+import { Circle } from 'lucide-react';
+import { cn } from &quot;@/lib / utils & quot;
+;
+const RadioGroup = React.forward_ref<;
+  React.ElementRef < typeof RadioGroupPrimitive.Root>,
+  React.ComponentPropsWithoutRef < typeof RadioGroupPrimitive.Root>;
+>(({ class_name, ...props }, ref) => {
+
+  return (
+    <RadioGroupPrimitive.Root;
+      className={cn (&quot;grid gap - 2&quot;, class_name)}
+  return (
+    <RadioGroupPrimitive.Root
+
+      className={cn("grid gap-2", className)}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {...props}
       className={cn(&quot;grid gap-2&quot; className)}
 ursor/fix-website-loading-errors-and-merge-6662
@@ -31,6 +56,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     />;
   );
 });
+<<<<<<< HEAD
 RadioGroup.displayName = RadioGroupPrimitive.Root.displayName;
 const RadioGroupItem = React.forwardRef<;
 
@@ -55,11 +81,19 @@ const RadioGroupItem = React.forwardRef<;
 className={cn(
         &quot;aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50&quot;
   React.ElementRef<typeof RadioGroupPrimitive.Item>,;
+=======
+
+
+
+  React.ElementRef<typeof RadioGroupPrimitive.Item>,;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>;
 >(({ className, ...props }, ref) => {;
   return (;
     <RadioGroupPrimitive.Item;
       ref={ref}
+<<<<<<< HEAD
       className={cn(
         "aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
 className={cn(
@@ -72,6 +106,10 @@ className={cn(
       className={cn(
         "aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
 
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         className
       {...props}
     >
@@ -82,6 +120,7 @@ className={cn(
   )
 })
 RadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName
+<<<<<<< HEAD
 export { RadioGroup, RadioGroupItem }
 export { RadioGroup, RadioGroupItem };
 export { RadioGroup, RadioGroupItem }
@@ -91,6 +130,8 @@ export { RadioGroup, RadioGroupItem }
 export { RadioGroup, RadioGroupItem }
 ;
 export { RadioGroup, RadioGroupItem };
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export { RadioGroup, RadioGroupItem }
 ;
@@ -123,4 +164,8 @@ export { RadioGroup, RadioGroupItem }
 export { RadioGroup, RadioGroupItem };
 
 export { RadioGroup, RadioGroupItem }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

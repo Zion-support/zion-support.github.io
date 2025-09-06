@@ -1,6 +1,13 @@
 
+<<<<<<< HEAD
 
 
+=======
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import {useLoadMilestones} from './useLoadMilestones';
 import {useCreateMilestone} from './useCreateMilestone';
@@ -8,6 +15,10 @@ import {useUpdateMilestone} from './useUpdateMilestone';
 import {useDeleteMilestone} from './useDeleteMilestone';
 import {useUploadDeliverable} from './useUploadDeliverable';
 import {MilestoneStatus} from './types';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const use_milestones = (project_id?: string) =>: any {
   const { milestones, activities, is_loading, error, refetch } = useLoadMilestones (project_id);
   const { create_milestone, is_submitting: is_creating } = useCreateMilestone (project_id);
@@ -27,6 +38,10 @@ if (return null, ) {
     return await upload_deliverable (milestone_id, project_id, file);
   }
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return {
     milestones;
     activities;
@@ -35,6 +50,7 @@ if (return null, ) {
     is_submitting;
     create_milestone;
     updateMilestoneStatus;
+<<<<<<< HEAD
 export const useMilestones = (projectId?: string) => {;
   const { milestones, activities, isLoading, error, refetch } = useLoadMilestones(projectId);
   const { createMilestone, isSubmitting: isCreating } = useCreateMilestone(projectId);
@@ -60,6 +76,8 @@ export const useMilestones = (projectId?: string) => {;
     deleteMilestone;
     uploadDeliverable: handleUploadDeliverable
     refetch
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     update_milestone;
     delete_milestone;
@@ -67,9 +85,13 @@ export const useMilestones = (projectId?: string) => {;
     refetch;
 
 
+<<<<<<< HEAD
   }
 }
 
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from 'react',;
 import { useLoadMilestones } from './useLoadMilestones',;
 import { useCreateMilestone } from './useCreateMilestone',;
@@ -107,6 +129,7 @@ export const useMilestones = (projectId?: string) => {;
   }
 }
 ;
+<<<<<<< HEAD
 
 import { useState } from 'react',;
 import { useLoadMilestones } from './useLoadMilestones',;
@@ -150,3 +173,6 @@ export const useMilestones = (projectId?:string) => {;
 };
   }
 };
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

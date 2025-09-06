@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from "react";
 import {MatchResultItem} from "@/lib/ai-matchmaking";
 import {Card, CardContent} from "@/components/ui/card";
@@ -7,18 +11,36 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {BarChart3, BriefcaseIcon, Monitor, User} from "@/components/icons";
 import {Skeleton} from "@/components/ui/skeleton";
 import {cn} from "@/lib/utils";
+<<<<<<< HEAD
+=======
+interface AIMatchingResultsProps {;
+  matches: MatchResultItem[],;
+  onSelectMatch?: (match: MatchResultItem) => void,;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   isLoading?: boolean;
   projectDescription?: string;
   serviceType?: string;
 }
+<<<<<<< HEAD
 export function AIMatchingResults(): any ({;
   matches;
   onSelectMatch;
+=======
+
+
+export function AIMatchingResults(): any ({;
+
+  matches;
+  onSelectMatch;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   isLoading = false;
   projectDescription = "";
   serviceType: _serviceType = "";
 }: AIMatchingResultsProps) {;
   const [activeTab, setActiveTab] = useState("all");
+<<<<<<< HEAD
 import { useState } from "react",
 import { MatchResultItem } from "@/lib/ai-matchmaking",
 import { Card, CardContent } from "@/components/ui/card",
@@ -37,12 +59,18 @@ interface AIMatchingResultsProps {
   projectDescription?: string;
 import { Skeleton } from "@/components/ui/skeleton",
 import { cn } from "@/lib/utils",
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface AIMatchingResultsProps {
   matches: MatchResultItem[],
   onSelectMatch?: (match: MatchResultItem) => void,
   isLoading?: boolean,
   projectDescription?: string,
 
+<<<<<<< HEAD
 
   serviceType?: string
 }
@@ -69,6 +97,14 @@ export function AIMatchingResults({
 }: AIMatchingResultsProps) {
   const [activeTab, setActiveTab] = useState("all"),
   
+=======
+  serviceType?: string
+}
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Group matches by category
   const categories = {
     all: matches
@@ -77,6 +113,7 @@ export function AIMatchingResults({
     equipment: matches.filter(match => match.category.toLowerCase().includes("equipment"))
 
 
+<<<<<<< HEAD
   }
   // Get the icon for a category
   const getCategoryIcon = (category: string) => {
@@ -85,6 +122,10 @@ export function AIMatchingResults({
     if (lowerCategory.includes("equipment")) return Monitor
     return BriefcaseIcon
   }
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
   
   // Get the icon for a category
@@ -95,6 +136,10 @@ export function AIMatchingResults({
     return BriefcaseIcon
   },
   
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -121,6 +166,10 @@ export function AIMatchingResults({
               <p className="text-xs text-zion-slate-light">Your search:</p>
               <p className="text-sm text-white">{projectDescription}</p>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from "react",;
 import { MatchResultItem } from "@/lib/ai-matchmaking",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -146,6 +195,10 @@ export function AIMatchingResults({;
   serviceType: _serviceType = "";
 }: AIMatchingResultsProps) {;
   const [activeTab, setActiveTab] = useState("all"),;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Group matches by category;
   const categories = {;
     all: matches,;
@@ -153,6 +206,10 @@ export function AIMatchingResults({;
     services: matches && matches.filter(match => match && match.category.toLowerCase().includes("service")),;
     equipment: matches && matches.filter(match => match && match.category.toLowerCase().includes("equipment"));
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Get the icon for a category;
   const getCategoryIcon = (category: string) => {;
     const lowerCategory = category && category.toLowerCase();
@@ -160,6 +217,7 @@ export function AIMatchingResults({;
     if (lowerCategory && lowerCategory.includes("equipment")) return Monitor,;
     return BriefcaseIcon;
   };
+<<<<<<< HEAD
   if (isLoading) {;
     return (
 import { useState } from "react",;
@@ -215,6 +273,12 @@ export function AIMatchingResults({;
   },;
   if (isLoading) {;
     return (;
+=======
+
+  if (isLoading) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="space-y-4">;
         <Skeleton className="h-10 w-full" />;
         <div className="space-y-3">;
@@ -232,9 +296,17 @@ export function AIMatchingResults({;
     return (;
     );
   }
+<<<<<<< HEAD
 ;
   if (matches.length === 0) {;
     return (;
+=======
+
+
+  if (matches && matches.length === 0) {;
+
+    return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <Card className="bg-zion-blue-dark border-zion-blue-light text-center p-6">;
         <CardContent className="pt-6">;
           <BarChart3 className="h-12 w-12 mx-auto text-zion-slate-light mb-3" />;
@@ -248,6 +320,7 @@ export function AIMatchingResults({;
               <p className="text-sm text-white">{projectDescription}</p>;
             </div>;
 
+<<<<<<< HEAD
   
 
 
@@ -257,6 +330,21 @@ export function AIMatchingResults({;
     )
   }
   
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          )}
+        </CardContent>;
+      </Card>;
+    );
+  }
+
+
+  
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="space-y-4">
       <Tabs defaultValue="all" value={activeTab} onValueChange={setActiveTab} className="w-full">
@@ -276,6 +364,10 @@ export function AIMatchingResults({;
         </TabsList>
         {Object.entries(categories).map(([tab, items]) => (
           <TabsContent key={tab} value={tab} className="mt-4 space-y-3">
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from './react';
 import { MatchResultItem } from '@/lib / ai - matchmaking';
 import { Card, CardContent } from '@/components / ui / card';
@@ -517,6 +609,7 @@ if (isLoading) {
                         match.category.toLowerCase().includes("talent") ? "bg-zion-cyan" :
                         match.category.toLowerCase().includes("service") ? "bg-zion-purple" :
 
+<<<<<<< HEAD
                         "bg-green-500"
                       )} />
                       <div className="flex-1 p-4">
@@ -572,4 +665,6 @@ if (isLoading) {
       </Tabs>
     </div>
   )
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }

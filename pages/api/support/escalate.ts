@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJson, writeJson } from "../../../utils/fsDb";
@@ -14,6 +18,25 @@ export default async function handler(
     reason?: string;
     tag?: string;
 
+<<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import { read_json, write_json  } from '../../../utils / fs_db';
+import { tagOperatorSession  } from '../../../utils / operator';
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (
+    return res.status (405).json ({ error: "Method not allowed" })) {
+  $2
+}
+  const { session_id, reason, tag } = req.body as {
+    session_id: string;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJson, writeJson } from "../../../utils/fsDb";
@@ -34,6 +57,10 @@ export default async function handler(
 }
   const requests = read_json < any[]>("support / requests.json", []);
   const id = `sr_${Math.random ().to_string (36).slice (2)}_${Date.now ()}`;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const record = {
     id
     sessionId
@@ -55,6 +82,7 @@ export default async function handler(
     reason: reason ?? "User requested escalation",
     tag: tag ?? "escalate",
     status: "open",
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJson, writeJson } from '../../../utils/fsDb';
 import { tagOperatorSession } from '../../../utils/operator';
@@ -70,6 +98,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await tagOperatorSession(sessionId, tag ?? 'escalate');
   return res.status(200).json({ ok: true, id })
 }
+=======
+
+}
+
+    created_at: Date.now (),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   } catch (error) {
     console.error("Error:", error);
@@ -83,6 +118,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 }
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -107,3 +143,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

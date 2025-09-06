@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './src/components/ErrorBoundary';
@@ -9,8 +12,13 @@ import Footer from './src/components/Footer';
 import LandingPage from './src/pages/LandingPage';
 import AboutPage from './src/pages/About';
 import ContactPage from './src/pages/Contact';
+<<<<<<< HEAD
 import ServicesPage from './src/pages/ServicesPage';
 import PricingPage from './src/pages/PricingPage';
+=======
+import ServicesPage from './src/pages/Services';
+import PricingPage from './src/pages/Pricing';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export default function App() {
   return (
@@ -32,6 +40,7 @@ export default function App() {
         </div>
       </Router>
     </ErrorBoundary>
+<<<<<<< HEAD
 
 import React, { JSX } from 'react';
 
@@ -76,3 +85,7 @@ function App() {
 }
   );
 }
+=======
+  );
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

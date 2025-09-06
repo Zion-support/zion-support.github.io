@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { useState } from "react"
 import { Badge } from "@/components/ui/badge"
@@ -59,12 +60,15 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
     switch (suggestion) {
       case "Strongly Recommended": return "bg-green-100 text-green-800"
   // Get suggestion color
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Get suggestion color
   const getSuggestionColor = (suggestion: string | undefined,) => {
     switch (suggestion) {
 
       case "Strongly Recommended": return "bg-green-100 text-green-800",
 
+<<<<<<< HEAD
   const hasScore = typeof application.match_score === 'number'
       let attempts = 0
       const maxAttempts = 10
@@ -73,14 +77,21 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
     switch (suggestion) {
       case "Strongly Recommended": return "bg-green-100 text-green-800"
       case "Strongly Recommended": return "bg-green-100 text-green-800",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       case "Recommended for Review":
         return "bg-blue-100 text-blue-800"
       case "Low Match":
         return "bg-orange-100 text-orange-800"
       default:
         return "bg-gray-100 text-gray-800"
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
     }
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -124,18 +135,28 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       const { error } = await supabase.rpc(
         'trigger_resume_scoring'
         { application_id: application.id }
+<<<<<<< HEAD
       )
       if (error) throw error
       toast.success("Resume scoring has been initiated")
       )
       if (error) throw error
       toast.success("Resume scoring has been initiated")
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       ),
       
       if (error) throw error,
       
       toast.success("Resume scoring has been initiated"),
       
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Poll for results every 3 seconds for up to 30 seconds
       let attempts = 0
       const maxAttempts = 10
@@ -147,6 +168,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
           .eq("id", application.id)
           .single()
         if (error) {
+<<<<<<< HEAD
           setIsScoring(false)
           toast.error("Failed to check scoring status")
           return
@@ -187,12 +209,106 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       toast.error(`Failed to score resume: ${error.message}`)
     }
   }
+=======
+
+interface ApplicationScoreCardProps {;
+  application: JobApplication,;
+  onScoreUpdated?: (updatedApplication: JobApplication,) => void;
+}
+
+export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: ApplicationScoreCardProps) {;
+  const [isScoring, setIsScoring] = useState(false);
+
+  // Determine if application has been scored;
+  const hasScore = typeof application && application.match_score === 'number';
+
+
+      let attempts = 0;
+      const maxAttempts = 10;
+
+  // Get suggestion color;
+  const getSuggestionColor = (suggestion: string | undefined,) => {;
+    switch (suggestion) {;
+      case "Strongly Recommended": return "bg-green-100 text-green-800",;
+      case "Recommended for Review":;
+        return "bg-blue-100 text-blue-800",;
+      case "Low Match":;
+        return "bg-orange-100 text-orange-800",;
+      default:;
+        return "bg-gray-100 text-gray-800";
+    }
+  },;
+
+  // Trigger the scoring process;
+  const handleScore = async () => {;
+    try {;
+      setIsScoring(true),;
+
+      // Call the trigger_resume_scoring function;
+      const { error } = await supabase && supabase.rpc(;
+        'trigger_resume_scoring',;
+        { application_id: application && application.id }
+      ),;
+
+      if (error) throw error,;
+
+      toast && toast.success("Resume scoring has been initiated"),;
+
+      // Poll for results every 3 seconds for up to 30 seconds;
+      let attempts = 0,;
+      const maxAttempts = 10,;
+
+      const checkScore = async () => {;
+        attempts++,;
+
+        const { data, error } = await supabase;
+          .from("job_applications");
+          .select("*");
+          .eq("id", application && application.id);
+          .single(),;
+
+        if (error) {;
+          setIsScoring(false),;
+          toast && toast.error("Failed to check scoring status"),;
+          return;
+        }
+
+        if (data && data.scored_at) {;
+          setIsScoring(false),;
+          toast && toast.success("Resume scoring completed"),;
+          if (onScoreUpdated) onScoreUpdated(data as JobApplication),;
+          return;
+        }
+
+        if (attempts < maxAttempts) {;
+          setTimeout(checkScore, 3000);
+        } else {;
+          setIsScoring(false),;
+          toast && toast.info("Scoring is taking longer than expected. Check back later.");
+        }
+      },;
+
+          setIsScoring(false),
+          toast.error("Failed to check scoring status"),
+          return;
+
+        }
+        if (data.scored_at) {
+
+          setIsScoring(false),
+          toast.success("Resume scoring completed"),
+          if (onScoreUpdated) onScoreUpdated(data as JobApplication),
+
+        }
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         
         if (attempts < maxAttempts) {
           setTimeout(checkScore, 3000)
         } else {
           setIsScoring(false),
           toast.info("Scoring is taking longer than expected. Check back later.")
+<<<<<<< HEAD
         }
       },
       
@@ -302,15 +418,23 @@ export function ApplicationScoreCard({ application, onScoreUpdated } Application
         } else {
           setIsScoring(false),
           toast.info("Scoring is taking longer than expected. Check back later.")
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     }
   },
 
+<<<<<<< HEAD
   },
   // Render the score result or button to score
 ursor/fix-website-loading-errors-and-merge-6662
 
       setTimeout(checkScore, 3000);
+=======
+
+      setTimeout(checkScore, 3000);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     } catch (error: any) {;
       setIsScoring(false),;
       toast && toast.error(`Failed to score resume: ${error && error.message}`);
@@ -319,6 +443,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
   // Render the score result or button to score;
   return (
+<<<<<<< HEAD
       ;
       // Call the trigger_resume_scoring function;
       const { error } = await supabase.rpc(;
@@ -374,10 +499,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
   // Render the score result or button to score;
   return (;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <Card className="overflow-hidden">;
       <CardHeader className="pb-3">;
         <CardTitle className="text-lg font-medium flex items-center justify-between">;
           Resume Match Score;
+<<<<<<< HEAD
           </Badge>;
         </CardTitle>;
       </CardHeader>;
@@ -387,6 +515,15 @@ ursor/fix-website-loading-errors-and-merge-6662
         </CardTitle>;
       </CardHeader>;
       ;
+=======
+          <Badge variant={hasScore ? "default" : "outline"} className="ml-2">;
+            {hasScore ? "SCORED" : "NOT SCORED"}
+
+          </Badge>;
+        </CardTitle>;
+      </CardHeader>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <CardContent>;
         {hasScore ? (;
           <div>;
@@ -397,6 +534,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>;
               <div>;
                 <div className="text-sm text-muted-foreground">Match Score</div>;
+<<<<<<< HEAD
                 <div className="font-semibold text-xl">{application.match_score}/100</div>;
               </div>;
             </div>;
@@ -404,10 +542,20 @@ ursor/fix-website-loading-errors-and-merge-6662
             {/* Summary */}
             <div className="flex items-start mb-4">;
               <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0.5">;
+=======
+                <div className="font-semibold text-xl">{application && application.match_score}/100</div>;
+              </div>;
+            </div>;
+
+            {/* Summary */}
+            <div className="flex items-start mb-4">;
+              <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0 && 0.5">;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <BarChart2 className="h-5 w-5 text-primary" />;
               </div>;
               <div>;
                 <div className="text-sm text-muted-foreground">Summary</div>;
+<<<<<<< HEAD
             {/* Suggestion */}
             <div className="flex items-start">;
               <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0 && 0.5">;
@@ -418,18 +566,43 @@ ursor/fix-website-loading-errors-and-merge-6662
             {/* Suggestion */}
             <div className="flex items-start">;
               <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0.5">;
+=======
+                <div className="font-medium">{application && application.match_summary}</div>;
+              </div>;
+            </div>;
+
+
+            {/* Suggestion */}
+            <div className="flex items-start">;
+              <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0 && 0.5">;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <Lightbulb className="h-5 w-5 text-primary" />;
               </div>;
               <div>;
                 <div className="text-sm text-muted-foreground">Suggestion</div>;
+<<<<<<< HEAD
                 <Badge className={getSuggestionColor(application.match_suggestion)}>;
                   {application.match_suggestion}
+=======
+                <Badge className={getSuggestionColor(application && application.match_suggestion)}>;
+                  {application && application.match_suggestion}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </Badge>;
                 {scoredDate && (;
                   <div className="text-xs text-muted-foreground mt-1">;
                     Scored on {scoredDate}
+<<<<<<< HEAD
               </div>;
             </div>;
+=======
+                  </div>;
+                )}
+
+              </div>;
+            </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Breakdown (Collapsible) */}
             {application && application.match_breakdown && (;
               <div className="mt-4 pt-4 border-t">;
@@ -454,6 +627,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
                     )}
+<<<<<<< HEAD
 
                     )}
                     
@@ -534,6 +708,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </div>;
                       </div>;
                     )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     
                     {application.match_breakdown.experience_match && (
                       <div>
@@ -885,8 +1061,11 @@ if ( {) {
                   Scoring Resume...;
                 </>;
               )}
+<<<<<<< HEAD
               ) :(;
                 "Score Resume";              )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </Button>;
           </div>;
         )}
@@ -896,6 +1075,12 @@ if ( {) {
 
       </CardContent>;
     </Card>;
+<<<<<<< HEAD
+=======
+  );
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           <p > Missing certs: {application.match_breakdown.certifications_match.missing.join (", ")}</p>)}
                       </div>)}
                     {application.match_breakdown.education_match && (
@@ -999,4 +1184,8 @@ return ;
 ;
 ;
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

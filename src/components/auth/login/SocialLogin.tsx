@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   const [isLoading, setIsLoading] = useState(false);
   const handleGoogle = null;
 import { Facebook, Twitter, Loader2 } from 'lucide-react'
@@ -32,12 +33,15 @@ export function SocialLogin() {
       <div className="relative">
         <div className="absolute inset-0 flex items-center">
           <div className="w-full border-t border-zion-blue-light" />
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 return (
     <div className='mt-6'>
       <div className='relative'>
         <div className='absolute inset-0 flex items-center'>
           <div className='w-full border-t border-zion-blue-light' />
         </div>
+<<<<<<< HEAD
         <div className="relative flex justify-center text-sm">
           <span className="px-2 bg-zion-blue-dark text-zion-slate-light">Or continue with</span>
         </div>
@@ -50,6 +54,15 @@ return (
           onClick={handleGoogle}
           disabled={isLoading}        >
           <span className='sr-only'>Sign in with Google</span>
+=======
+        <div className='relative flex justify-center text-sm'>
+          <span className='px-2 bg-zion-blue-dark text-zion-slate-light'>
+            Or continue with
+          </span>
+        </div>
+      </div>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import { Facebook, Twitter, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -110,6 +123,11 @@ function SocialLogin() {
           disabled={isLoading}
         >
           <span className="sr-only">Sign in with Google</span>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {isLoading ? (
             <Loader2 className="h-5 w-5 animate-spin" />
           ) : (
@@ -122,6 +140,7 @@ function SocialLogin() {
           )}
         </Button>;
         <Button
+<<<<<<< HEAD
           )}
         </Button>
         <Button
@@ -141,6 +160,10 @@ function SocialLogin() {
           disabled={isLoading}        >
           <span className='sr-only'>Sign in with Twitter</span>
           <Twitter className='h-5 w-5' />
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </Button>
         <Web3Login />
       </div>
@@ -166,13 +189,22 @@ function SocialLogin() {
         >
           <span className="sr-only">Sign in with Twitter</span>
           <Twitter className="h-5 w-5" />
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </Button>
         <Web3Login />
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           disabled={isLoading}        >;
           <span className='sr-only'>Sign in with Twitter</span>;
@@ -239,16 +271,27 @@ export function SocialLogin() {;
         >;
           <span className="sr-only">Sign in with Twitter</span>;
           <Twitter className="h-5 w-5" />;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </Button>;
         <Web3Login />;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 ;
 
 
 }
 ;
+=======
+
+}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       <div className='mt - 6 grid grid - cols - 4 gap - 3'>;
         <Button;
@@ -306,4 +349,8 @@ export function SocialLogin() {;
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

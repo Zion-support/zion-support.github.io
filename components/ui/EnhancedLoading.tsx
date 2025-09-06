@@ -18,8 +18,15 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 
 
+=======
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react";
 type EnhancedLoadingProps = {;
   lines?: number;
@@ -46,15 +53,25 @@ function EnhancedLoading() {
         <div key={idx} className="skeleton h - 4 rounded" />))}
     </div>);
 
+<<<<<<< HEAD
+=======
+}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>
 
   );
 
 }
 
+<<<<<<< HEAD
       ))}
     </div>;
     </div>
   );
 }
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

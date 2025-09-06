@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
@@ -83,6 +84,8 @@ export function ProjectForm({
       let success = false
       if (isEditing && project?.id) {
         success = await updateProject(project.id, projectData)
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
       let success = false;
       // Check condition
@@ -94,13 +97,38 @@ if ( {) {
         const projectId = await addProject(projectData)
         success = !!projectId
       }
+<<<<<<< HEAD
       if (success) {
         onSuccess()
         form.reset()
+=======
+
+      // Check condition
+if ( {) {
+  $2
+}
+        on_success ();
+        form.reset ();
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
     } catch (error) {
       logErrorToProduction('Error saving project:', { data: error })
     } finally {
+<<<<<<< HEAD
+=======
+
+
+import React from 'react';
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { logErrorToProduction } from '@/utils/productionLogger';import {;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       setIsLoading(false)
     }
   }
@@ -191,17 +219,29 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
     } finally {;
       setIsLoading(false);
     }
+<<<<<<< HEAD
+=======
+
+  },
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   
 
 
 
   return (
+<<<<<<< HEAD
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(onSubmit)} className='space-y-4'>;
+=======
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+        <FormField
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         />;
 
 
+<<<<<<< HEAD
   },
   
   return (
@@ -224,6 +264,8 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
             </FormItem>
           )}
         />
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <FormField
           control={form.control}
           name='description'
@@ -240,6 +282,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
     <Form {...form}>;
       <form on_submit={form.handle_submit (on_submit)} className='space - y-4'>;
         <FormField;
+<<<<<<< HEAD
           control={form.control}
                   {...field}
         />;
@@ -271,6 +314,8 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
           )}
         />
         <FormField
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           control={form.control}
           name='description'
           render={({ field }: { field: any }) => (            <FormItem>
@@ -520,6 +565,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
               </FormItem>
             )}
 
+<<<<<<< HEAD
           />
           <FormField
             control={form.control}
@@ -548,6 +594,14 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         <FormField
           control={form && form.control}
           name='image_url'
+=======
+          />;
+        </div>;
+
+        <FormField
+          control={form.control}
+          name='image_url'
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           render={({ field }: { field: any }) => (            <FormItem>;
               <FormLabel className='flex items-center gap-2'>;
                 <FileImage className='h-4 w-4' />;
@@ -561,11 +615,20 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         </div>;
         <FormField;
           control={form.control}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           name="image_url"
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel className="flex items-center gap-2">
                 <FileImage className="h-4 w-4" />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 Screenshot URL
               </FormLabel>
               <FormControl>
@@ -576,10 +639,13 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
           )}
         />
         {/* Future file upload field would go here */}
+<<<<<<< HEAD
         <div className='flex justify-end space-x-2 pt-4'>
           <Button type='button' variant='outline' onClick={onCancel}>
         />;
         {/* Future file upload field would go here */}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         
         <div className="flex justify-end space-x-2 pt-4">
           <Button type="button" variant="outline" onClick={onCancel}>
@@ -592,6 +658,11 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
           </Button>
         </div>
       </form>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     </Form>
   )
@@ -616,9 +687,12 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
     </Form>
   )
 }
+<<<<<<< HEAD
 }
 ;
 ;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
 }
@@ -639,4 +713,8 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       </form>;
     </Form>);
 }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,4 +9,8 @@ const AccessibilityPanel.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AccessibilityPanel.js;
+=======
+export default AccessibilityPanel.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

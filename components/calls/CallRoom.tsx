@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {;
   Room,;
   RoomEvent,;
@@ -17,17 +18,55 @@ import {
   LocalParticipant
   createLocalTracks
   VideoPresets;
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
+
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Room,
   RoomEvent,
   RemoteParticipant,
   LocalParticipant,
   createLocalTracks,;
   VideoPresets,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 } from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
 export type StartMode = 'video' | 'audio';
+<<<<<<< HEAD
 type Props = {;
+=======
+
+
+type Props = {;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   projectId: string;
   userId: string;
   displayName: string;
@@ -49,6 +88,7 @@ export default function CallRoom(): any ({;
   onLeave,;
 }: Props) {;
 
+<<<<<<< HEAD
 }
 export default function CallRoom({
   projectId
@@ -60,6 +100,10 @@ export default function CallRoom({
   startMode
   onLeave
 }: Props) {
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   projectId,
   userId,
   displayName,
@@ -69,10 +113,20 @@ export default function CallRoom({
   startMode,
   onLeave,
 }: Props) {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<;
     Array<RemoteParticipant | LocalParticipant>;
   >([]);  const [connectedAt, setConnectedAt] = useState<number | null>(null);import ParticipantTile from './ParticipantTile';
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Room, RoomEvent, RemoteParticipant, LocalParticipant, createLocalTracks, VideoPresets } from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
 
@@ -100,10 +154,25 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
     if (startMode === 'video') {
 
 
+<<<<<<< HEAD
 import { Room, RoomEvent, RemoteParticipant, LocalParticipant, createLocalTracks, VideoPresets } from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
 export type StartMode = 'video' | 'audio';
+=======
+type Props = {;
+  projectId: string,;
+  userId: string,;
+  displayName: string,;
+  roomName: string,;
+  serverUrl: string,;
+  token: string,;
+  startMode: StartMode,;
+  onLeave?: (durationSec: number) => void;
+};
+export default function CallRoom(): any ({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 type Props = {
   projectId: string
   userId: string
@@ -134,10 +203,15 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
       localTracks = await createLocalTracks({;
         audio: true,;
         video: VideoPresets && VideoPresets.h720,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       });
     } else {;
       localTracks = await createLocalTracks({ audio: true, video: false });
     }
+<<<<<<< HEAD
     await r && r.connect(serverUrl, token, {;
       autoSubscribe: true,;
     });
@@ -147,11 +221,24 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
       localTracks = await createLocalTracks({ audio: true, video: false })
     }
 setRoom(r);
+=======
+
+
+    await r && r.connect(serverUrl, token, {;
+      autoSubscribe: true,;
+    });
+
+    // publish local tracks;
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    setRoom(r);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     setConnectedAt(Date && Date.now());
     rebuild(r);
     // eslint-disable-next-line react-hooks/exhaustive-deps  }, [serverUrl, token, startMode]);    } else {;
       localTracks = await createLocalTracks({ audio: true, video: false });
     }
+<<<<<<< HEAD
     }
 
     }
@@ -172,11 +259,18 @@ setRoom(r);
     for (const t of localTracks) {
       await r.localParticipant.publishTrack(t)
     }
+=======
+
+=======
+    }
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     setRoom(r);
     setConnectedAt(Date.now());
     rebuild(r);
     // eslint-disable-next-line react-hooks/exhaustive-deps  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [serverUrl, token, startMode]);
+<<<<<<< HEAD
   const rebuild = (current?: Room | null) => {
     const r = current |room;
     if (!r) return;
@@ -196,6 +290,35 @@ setRoom(r);
     };  }, [connect]);
   const handleLeave = () => {
     if (room) {        room.disconnect()
+=======
+
+
+    await r && r.connect(serverUrl, token, {;
+      autoSubscribe: true}),;
+    // publish local tracks;
+    for (const t of localTracks) {;
+      await r && r.localParticipant.publishTrack(t);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    }
+    setRoom(r);
+    setConnectedAt(Date && Date.now());
+    rebuild(r);
+    // eslint-disable-next-line react-hooks/exhaustive-deps  // eslint-disable-next-line react-hooks/exhaustive-deps;
+  }, [serverUrl, token, startMode]);
+
+
+  const rebuild = (current?: Room | null) => {;
+    const r = current || room;
+    if (!r) return;
+
+  };
+
+  useEffect(() => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    connect();
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
     }
   }, [connect]);
@@ -214,13 +337,18 @@ setRoom(r);
   const handleLeave = () => {;
     if (room) {;
       room && room.disconnect();
+<<<<<<< HEAD
       room.disconnect();
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     const durationSec = connectedAt;
       ? Math && Math.round((Date && Date.now() - connectedAt) / 1000);
       : 0;
     onLeave?.(durationSec);  };      room && room.disconnect();
     }
+<<<<<<< HEAD
     const durationSec = connectedAt ? Math.round((Date.now() - connectedAt) / 1000) : 0;
     onLeave?.(durationSec)
 
@@ -228,12 +356,21 @@ setRoom(r);
 
   const gridCols = useMemo(() => {
     const count = participants.length |1;
+=======
+
+
+  const gridCols = useMemo(() => {
+    const count = participants.length |1;
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const durationSec = connectedAt ? Math && Math.round((Date && Date.now() - connectedAt) / 1000) : 0;
     onLeave?.(durationSec);
   const gridCols = useMemo(() => {;
     const count = participants && participants.length || 1;
     if (count <= 1) return 'grid-cols-1';
     if (count === 2) return 'grid-cols-2';
+<<<<<<< HEAD
     if (count <= 4) return 'grid-cols-2 md: grid-cols-2',
     if (count <= 6) return 'grid-cols-2 md: grid-cols-3',
     return 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4'
@@ -275,8 +412,212 @@ setRoom(r);
 
 );
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         ))}
       </div>
     </div>
+<<<<<<< HEAD
   );
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  );
+
+  Room,
+  RoomEvent,
+  RemoteParticipant,
+  LocalParticipant,
+  createLocalTracks,
+  VideoPresets,
+} from 'livekit - client';
+import ParticipantTile from './ParticipantTile';
+import Controls from './Controls';
+;
+export type StartMode = 'video' | 'audio';
+;
+type Props = {
+  project_id: string;
+  user_id: string;
+  display_name: string;
+  room_name: string;
+  server_url: string;
+  token: string;
+  start_mode: StartMode;
+  on_leave?: (duration_sec: number) => void;
+}
+;
+export default /**
+ * CallRoom - Function description
+ */
+function CallRoom() {
+  const [room, set_room] = useState < Room | null>(null);
+  const [participants, set_participants] = useState<;
+    Array < RemoteParticipant | LocalParticipant>;
+  >([]);  const [connected_at, setConnectedAt] = useState < number | null>(null);import ParticipantTile from './ParticipantTile';
+import Controls from './Controls';
+export type StartMode = 'video' | 'audio';
+;
+type Props = {
+  project_id: string,
+  user_id: string,
+  display_name: string,
+  room_name: string,
+  server_url: string,
+  token: string,
+  start_mode: StartMode,
+  on_leave?: (duration_sec: number) => void;
+}
+;
+export default /**
+ * CallRoom - Function description
+ */
+function CallRoom() {
+  const [room, set_room] = useState < Room | null>(null);
+  const [participants, set_participants] = useState < Array < RemoteParticipant | LocalParticipant>>([]);
+  const [connected_at, setConnectedAt] = useState < number | null>(null);
+;
+  const connect = useCallback (async () => {
+    const r = new Room ();
+;
+    r.on (RoomEvent.ParticipantConnected, () => rebuild ());
+    r.on (RoomEvent.ParticipantDisconnected, () => rebuild ());
+    r.on (RoomEvent.ActiveSpeakersChanged, () => rebuild ());
+    r.on (RoomEvent.LocalTrackPublished, () => rebuild ());
+    r.on (RoomEvent.TrackSubscribed, () => rebuild ());
+;
+    // create local tracks per start mode;
+    let local_tracks: any[] = [];
+    // Check condition
+if ( {) {
+  $2
+}
+      local_tracks = await createLocalTracks ({
+        audio: true,
+        video: VideoPresets.h720,
+      });
+    } else {
+      local_tracks = await createLocalTracks ({ audio: true, video: false });
+    }
+    await r.connect (server_url, token, {
+      auto_subscribe: true,
+    });
+;
+    // publish local tracks;
+    set_room (r);
+    setConnectedAt (Date.now ());
+    rebuild (r);
+    // eslint - disable - next - line react - hooks / exhaustive - deps  }, [server_url, token, start_mode]);    } else {
+      local_tracks = await createLocalTracks ({ audio: true, video: false });
+    }
+    await r.connect (server_url, token, {
+      auto_subscribe: true}),
+    // publish local tracks;
+    for (const t of local_tracks) {
+      await r.local_participant.publish_track (t);
+    }
+    set_room (r);
+    setConnectedAt (Date.now ());
+    rebuild (r);
+    // eslint - disable - next - line react - hooks / exhaustive - deps  // eslint - disable - next - line react - hooks / exhaustive - deps;
+  }, [server_url, token, start_mode]);
+;
+  const rebuild = (current?: Room | null) =>: any {
+    const r = current || room;
+    // Check condition
+if (return) {
+  $2
+}
+    const list: Array < RemoteParticipant | LocalParticipant> = [;
+      r.local_participant,
+      ...Array.from (r.participants.values ()),
+    ];
+    set_participants (list);  }    const list: Array < RemoteParticipant | LocalParticipant> = [r.local_participant, ...Array.from (r.participants.values ())];
+    set_participants (list);
+  }
+;
+  useEffect (() => {
+    connect ();
+    return () => {
+      // Check condition
+if ( {) {
+  $2
+}
+        room.disconnect ();
+      }
+    }  }, [connect]);
+;
+  const handle_leave = () =>: any {
+    if ( {        room.disconnect ()) {
+  $2
+}
+      }
+    }
+  }, [connect]);
+;
+  const handle_leave = () =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      room.disconnect ();
+    }
+    const duration_sec = connected_at;
+      ? Math.round ((Date.now () - connected_at) / 1000);
+      : 0;
+    on_leave?.(duration_sec);  }      room.disconnect ();
+    }
+    const duration_sec = connected_at ? Math.round ((Date.now () - connected_at) / 1000) : 0;
+    on_leave?.(duration_sec);
+  const grid_cols = useMemo (() => {
+    const count = participants.length || 1;
+    // Check condition
+if (return 'grid - cols - 1') {
+  $2
+}
+    // Check condition
+if (return 'grid - cols - 2') {
+  $2
+}
+    // Check condition
+if (return 'grid - cols - 2 md:grid - cols - 2') {
+  $2
+}
+    return 'grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 4';
+  }, [participants.length]);
+;
+  return (
+    <div className='min - h-screen bg - gray - 950 text - gray - 100 flex flex - col'>;
+      <div className='p - 4 flex items - center justify - between border - b border - gray - 800'>;
+        <div>;
+          <h2 className='text - lg font - semibold'>Project Room: {project_id}</h2>;
+          <p className='text - xs text - gray - 400'>Room {room_name}</p>;
+        </div>;
+        <Controls room={room} on_leave={handle_leave} accent='cyan' />      </div>;
+      <div className={`flex - 1 p - 4 grid gap - 4 ${grid_cols}`}>;
+        {participants.map ((p, idx) => (        <Controls room={room} on_leave={handle_leave} accent="cyan" />;
+      </div>;
+      <div className={`flex - 1 p - 4 grid gap - 4 ${grid_cols}`}>;
+        {participants.map ((p, idx) => (
+          <ParticipantTile;
+            key={String ((p as any).sid || (p as any).identity) + idx}
+            participant={p}
+            is_local={p instanceof LocalParticipant}
+            display_name={
+              (p as any).name ||;
+              (p instanceof LocalParticipant ? 'You' : undefined);
+            }
+          />        ))}
+      </div>;
+    </div>);
+}          <ParticipantTile key={String ((p as any).sid || (p as any).identity) + idx} participant={p} is_local={p instanceof LocalParticipant} display_name={(p as any).name || (p instanceof LocalParticipant ? 'You' : undefined)} />))}
+      </div>;
+    </div>);
+}
+
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

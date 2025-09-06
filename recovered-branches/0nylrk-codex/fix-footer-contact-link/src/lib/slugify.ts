@@ -1,13 +1,22 @@
 
 
 
+<<<<<<< HEAD
 export function slugify(title: string, separator = "-"): string {;
   const sep = separator;
   const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+=======
+=======
+export function slugify(title: string, separator = "-"): string {;
+  const sep = separator;
+  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export function slugify(title: string, separator = "-"): string {
   const sep = separator;
   const escaped = sep && sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+<<<<<<< HEAD
 
 export function slugify(title: string, separator = "-"): string {;
   const sep = separator;
@@ -15,6 +24,8 @@ export function slugify(title: string, separator = "-"): string {;
 export function slugify(title: string, separator = "-"): string {
   const sep = separator,
   const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   return title
     .trim()
@@ -36,6 +47,12 @@ export function unslugify(slug: string, separator = "-"): string {
   return slug
     .split(separator)
     .filter(Boolean)
+<<<<<<< HEAD
+=======
+    .map(w => w && w.charAt(0).toUpperCase() + w && w.slice(1))
+    .join(" ")
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function slugify (title: string, separator = "-"): string {
   const sep = separator;
   const escaped = sep.replace (/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -44,6 +61,10 @@ export function slugify (title: string, separator = "-"): string {
 
 ;
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function slugify(title: string, separator = "-"): string {;
   const sep = separator,;
   const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -67,6 +88,7 @@ export function slugify(title: string, separator = "-"): string {;
 export function unslugify (slug: string, separator = "-"): string {
   return slug;
 
+<<<<<<< HEAD
 
     .split (separator);
     .filter (Boolean);
@@ -104,9 +126,18 @@ export function slugify(title: string, separator = "-"): string {;
  */;
 export function unslugify(slug: string, separator = "-"): string {;
   return slug;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     .split(separator);
     .filter(Boolean);
     .map(w => w.charAt(0).toUpperCase() + w.slice(1));
     .join(" ");
 }
 ;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

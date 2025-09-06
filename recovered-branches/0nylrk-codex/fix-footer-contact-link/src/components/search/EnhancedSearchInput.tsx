@@ -2,20 +2,37 @@
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState, useEffect, useRef } from "react";
 import {Search, X} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {AutocompleteSuggestions} from "@/components/search/AutocompleteSuggestions";
 import {SearchSuggestion} from "@/types/search";
+<<<<<<< HEAD
   placeholder?: string;
   searchSuggestions: SearchSuggestion[];
 }
+=======
+interface EnhancedSearchInputProps {;
+  value: string,;
+  onChange: (value: string) => void,;
+
+  placeholder?: string;
+  searchSuggestions: SearchSuggestion[];
+}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function EnhancedSearchInput(): any ({ ;
   value;
   onChange, ;
   placeholder = "Search...", ;
   searchSuggestions ;
 }: EnhancedSearchInputProps) {;
+<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from "react",
 import { Search, X } from "lucide-react",
 import { Input } from "@/components/ui/input",
@@ -36,14 +53,21 @@ export function EnhancedSearchInput({
   placeholder = "Search..."
   searchSuggestions
 }: EnhancedSearchInputProps) {
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [isFocused, setIsFocused] = useState(false);
   const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+<<<<<<< HEAD
 import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",
 import { SearchSuggestion } from "@/types/search",
 import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",
 import { SearchSuggestion } from "@/types/search",
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string) => void,
@@ -55,10 +79,13 @@ interface EnhancedSearchInputProps {
 export function EnhancedSearchInput({ 
   value,
 
+<<<<<<< HEAD
 export function EnhancedSearchInput({ ;
   value;
 export function EnhancedSearchInput({ 
   value,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onChange, 
   placeholder = "Search...", 
   searchSuggestions 
@@ -69,10 +96,15 @@ export function EnhancedSearchInput({
   const containerRef = useRef<HTMLDivElement>(null),
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Filter suggestions based on input value
   useEffect(() => {
     if (!value) {
       // Show recent searches when input is empty
+<<<<<<< HEAD
 
 
       setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent')),
@@ -105,6 +137,14 @@ export function EnhancedSearchInput({
     inputRef.current?.blur()
   }
 
+=======
+      setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent'));
+      return
+
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState, useEffect, useRef } from "react",;
 import { Search, X } from "lucide-react",;
 import { Input } from "@/components/ui/input",;
@@ -153,6 +193,10 @@ export function EnhancedSearchInput({;
         setIsFocused(false);
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
     }
     
@@ -166,13 +210,22 @@ export function EnhancedSearchInput({;
     inputRef.current?.blur()
   },
   
+<<<<<<< HEAD
   
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="relative w-full" ref={containerRef}>
       <div className="relative">
         <Search
           className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate"
         />
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React, { useState, useEffect, useRef } from "react",;
 import { Search, X } from "lucide-react",;
@@ -206,6 +259,11 @@ export function EnhancedSearchInput({ ;
         <Input
           ref={inputRef}
           type="text"
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
     document.addEventListener("mousedown", handleClickOutside),;
     return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -224,6 +282,7 @@ export function EnhancedSearchInput({ ;
         <Input;
           ref={inputRef}
           type="text";
+<<<<<<< HEAD
       setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent')),;
       return,;
     }
@@ -277,11 +336,28 @@ export function EnhancedSearchInput({ ;
         {value && (;
           <button ;
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white";
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          value={value}
+          onChange={(e) => onChange(e && e.target.value)}
+          onFocus={() => setIsFocused(true)}
+          placeholder={placeholder}
+
+          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate";
+        />;
+        {value && (;
+
+          <button
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             onClick={() => onChange('')}
           >;
             <X className="h-4 w-4" />;
           </button>;
         )}
+<<<<<<< HEAD
       </div>;
       ;
       <AutocompleteSuggestions;
@@ -300,11 +376,21 @@ export function EnhancedSearchInput({ ;
           </button>
         )}
       </div>
+=======
+
+      </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <AutocompleteSuggestions
         suggestions={filteredSuggestions}
         searchTerm={value}
         onSelectSuggestion={handleSelectSuggestion}
         visible={isFocused}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       />;
     </div>;
 import React, { useState, useEffect, useRef } from './react';
@@ -403,6 +489,7 @@ function handleClickOutside() {
       />;
     </div>);
 }
+<<<<<<< HEAD
   ),;}
  interface EnhancedSearchInputProps {
   value: string;
@@ -444,3 +531,6 @@ if (!value) {
     </div>
   )
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

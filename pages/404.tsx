@@ -3,12 +3,21 @@ import React from 'react';
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </Link>
         </main>
       </div>
     </>
+<<<<<<< HEAD
 );
+=======
+  );
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Head from 'next / head';
 import Link from 'next / link';
 ;
@@ -34,6 +43,7 @@ const NotFoundPage: NextPage = () => {
       <Head>;
           </Link>;
         </div>;
+<<<<<<< HEAD
 }
 
 
@@ -120,6 +130,9 @@ export default function Custom404(req, res) {
             Go Home;
           </Link>;
         </div>;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </main>;
     </>;
   );
@@ -127,5 +140,13 @@ export default function Custom404(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 }
+=======
+
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

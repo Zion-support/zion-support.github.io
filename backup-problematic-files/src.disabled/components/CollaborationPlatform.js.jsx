@@ -9,4 +9,8 @@ const CollaborationPlatform.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default CollaborationPlatform.js;
+=======
+export default CollaborationPlatform.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

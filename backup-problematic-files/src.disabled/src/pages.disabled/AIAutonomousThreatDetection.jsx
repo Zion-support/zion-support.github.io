@@ -9,4 +9,8 @@ const AIAutonomousThreatDetection = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIAutonomousThreatDetection;
+=======
+export default AIAutonomousThreatDetection;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

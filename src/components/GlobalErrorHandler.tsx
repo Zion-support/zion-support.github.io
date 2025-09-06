@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, {
   createContext
@@ -14,6 +15,8 @@ import * as Sentry from '@sentry/nextjs';
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface ErrorContextType {
   reportError: (error: Error, context?: any) => void;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 reportError: (error: Error, context?: any) => void;
   showRetryableError: (error: Error, retryAction?: () => void) => void;
   showNetworkError: (retryAction?: () => void) => void;
@@ -105,6 +108,7 @@ if ( {) {
             on_click: retry_action,
           }
 
+<<<<<<< HEAD
 }, [])
 export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
   const [retryCount, setRetryCount] = useState<Record<string, number>>({})
@@ -174,6 +178,95 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
         ? {
             label: 'Log In'
             onClick: loginAction
+=======
+
+  create_context,
+  useContext,
+  useState,
+  useCallback,
+  ReactNode,
+} from 'react';
+import { toast } from '@/hooks / use - toast';
+import { Button } from '@/components / ui / button';
+import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react';
+import * as Sentry from '@sentry / nextjs';
+import { logErrorToProduction } from '@/utils / production_logger';
+interface ErrorContextType {
+  report_error: (error: Error, context?: any) => void;
+  showRetryableError: (error: Error, retry_action?: () => void) => void;
+  showNetworkError: (retry_action?: () => void) => void;
+  showAuthError: (login_action?: () => void) => void;
+  clearAllErrors: () => void;
+}, []);
+export /**
+ * GlobalErrorHandler - Function description
+ */
+function GlobalErrorHandler() {
+  const [retry_count, setRetryCount] = useState < Record < string, number>>({});
+  const report_error = useCallback ((error: Error, context?: any, ) => {
+    // Log to console for development;
+    // Check condition
+if ( {) {
+  $2
+}
+      logErrorToProduction ('Global Error Handler:', error, context);
+    }
+    // Report to Sentry for production;
+    // Check condition
+if ( {) {
+  $2
+}
+      Sentry.with_scope (scope => {        // Check condition
+if ( {) {
+  $2
+}
+          scope.set_context ('error_context', context);
+
+        }
+        scope.set_level ('error');
+        Sentry.capture_exception (error);
+      });
+    }
+
+  }, []);
+  const showRetryableError = useCallback (
+    (error: Error, retry_action?: () => void) => {
+      const error_key = error.message;
+      const currentRetryCount = retry_count[error_key] || 0;
+      report_error (error, { retry_count: currentRetryCount });
+      // Show user - friendly error message with retry option;
+      toast ({
+        title: 'Something went wrong',
+        description: getErrorMessage (error),
+        variant: 'destructive',
+        action: retry_action;
+          ? {
+              label: 'Try Again',
+              on_click: () => {
+                setRetryCount (prev => ({
+                  ...prev,
+                  [error_key]: currentRetryCount + 1,
+                }));
+                retry_action ();
+              },
+            }
+          : undefined,
+      });
+    },
+    [retry_count, report_error]);
+  const showNetworkError = useCallback ((retry_action?: () => void) => {
+    const is_online = typeof navigator !== 'undefined' ? navigator.on_line : true;
+    toast ({
+      title: is_online ? 'Connection Issue' : 'No Internet Connection',
+      description: is_online;
+        ? 'Unable to connect to our servers. Please check your connection and try again.';
+        : 'You appear to be offline. Please check your internet connection.',
+      variant: 'destructive',
+      action: retry_action;
+        ? {
+            label: 'Retry',
+            on_click: retry_action,
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           }
         : undefined,
     });
@@ -188,6 +281,7 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
             label: 'Log In',
             on_click: login_action,
           }
+<<<<<<< HEAD
         : undefined
     })
   }, [])
@@ -200,6 +294,8 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
     showNetworkError
     showAuthError
     clearAllErrors
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         : undefined,
     });
   }, []);
@@ -212,14 +308,26 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
     showNetworkError,
     showAuthError,
     clearAllErrors,
+<<<<<<< HEAD
   }
 export function GlobalErrorHandler(): any ({ children }: GlobalErrorHandlerProps) {;
   const [retryCount, setRetryCount] = useState<Record<string, number>>({});
+=======
+
+  }
+export function GlobalErrorHandler(): any ({ children }: GlobalErrorHandlerProps) {;
+  const [retryCount, setRetryCount] = useState<Record<string, number>>({});
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const reportError = useCallback((error: Error, context?: any,) => {;
     // Log to console for development;
     if (process && process.env.NODE_ENV === 'development') {;
       logErrorToProduction('Global Error Handler:', error, context);
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Report to Sentry for production;
     if (process && process.env.NODE_ENV === 'production') {;
       Sentry && Sentry.withScope(scope => {        if (context) {;
@@ -230,11 +338,19 @@ export function GlobalErrorHandler(): any ({ children }: GlobalErrorHandlerProps
       });
     }
   }, []);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const showRetryableError = useCallback(;
     (error: Error, retryAction?: () => void) => {;
       const errorKey = error && error.message;
       const currentRetryCount = retryCount[errorKey] || 0;
       reportError(error, { retryCount: currentRetryCount });
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Show user-friendly error message with retry option;
       toast({;
         title: 'Something went wrong',;
@@ -256,6 +372,10 @@ export function GlobalErrorHandler(): any ({ children }: GlobalErrorHandlerProps
     },;
     [retryCount, reportError];
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const showNetworkError = useCallback((retryAction?: () => void) => {;
     const isOnline = typeof navigator !== 'undefined' ? navigator && navigator.onLine : true;
     toast({;
@@ -272,6 +392,10 @@ export function GlobalErrorHandler(): any ({ children }: GlobalErrorHandlerProps
         : undefined,;
     });
   }, []);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const showAuthError = useCallback((loginAction?: (,) => void) => {;
     toast({;
       title: 'Authentication Required',;
@@ -285,9 +409,17 @@ export function GlobalErrorHandler(): any ({ children }: GlobalErrorHandlerProps
         : undefined,;
     });
   }, []);
+<<<<<<< HEAD
   const clearAllErrors = useCallback(() => {;
     setRetryCount({});    // Clear any active toasts would go here if the toast system supports it;
   }, []);
+=======
+
+  const clearAllErrors = useCallback(() => {;
+    setRetryCount({});    // Clear any active toasts would go here if the toast system supports it;
+  }, []);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const contextValue: ErrorContextType = {;
     reportError,;
     showRetryableError,;
@@ -297,6 +429,10 @@ export function GlobalErrorHandler(): any ({ children }: GlobalErrorHandlerProps
   };
 
   return (
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <ErrorContext.Provider value={context_value}>;
       {children}
     </ErrorContext.Provider>);
@@ -382,6 +518,10 @@ if ( {) {
   const handleAsyncOperation = useCallback (
     async <T, >(
       operation: () => Promise < T>,
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       options?: {
         on_error?: (error: Error) => void;
         retry_action?: () => void;
@@ -389,6 +529,10 @@ if ( {) {
       }
     ): Promise < T | null> => {
       try {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         const result = await operation ();
         // Check condition
 if ( {) {
@@ -400,6 +544,10 @@ if ( {) {
           });
         }
         return result;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       } catch (error: any) {
         report_error (error);
         // Check condition
@@ -408,8 +556,15 @@ if ( {) {
 }
           options.on_error (error);
         } else {
+<<<<<<< HEAD
     </ErrorContext && ErrorContext.Provider>;
   );
+=======
+
+    </ErrorContext && ErrorContext.Provider>;
+  );
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function useGlobalErrorHandler(): any (): ErrorContextType {;
   const context = useContext(ErrorContext);
   if (!context) {;
@@ -418,9 +573,17 @@ export function useGlobalErrorHandler(): any (): ErrorContextType {;
     );
   }
   return context;
+<<<<<<< HEAD
 // Helper function to convert technical errors to user-friendly messages;
 function getErrorMessage(): any (error: Error): string {;
   const message = error && error.message.toLowerCase(),;
+=======
+
+// Helper function to convert technical errors to user-friendly messages;
+function getErrorMessage(): any (error: Error): string {;
+  const message = error && error.message.toLowerCase(),;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (;
     message && message.includes('fetch') ||;
     message && message.includes('network') ||;
@@ -428,6 +591,10 @@ function getErrorMessage(): any (error: Error): string {;
   ) {;
     return 'Unable to connect to our servers. Please check your internet connection.';
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (;
     message && message.includes('auth') ||;
     message && message.includes('unauthorized') ||;
@@ -435,6 +602,7 @@ function getErrorMessage(): any (error: Error): string {;
   ) {;
     return 'Your session has expired. Please log in again.';
   }
+<<<<<<< HEAD
   if (message && message.includes('forbidden') || message && message.includes('403')) {;
     return "You don't have permission to perform this action.";
   }
@@ -452,10 +620,40 @@ function getErrorMessage(): any (error: Error): string {;
   }
   // Fallback for unknown errors;
   return 'An unexpected error occurred. Please try again.';
+=======
+
+  if (message && message.includes('forbidden') || message && message.includes('403')) {;
+    return "You don't have permission to perform this action.";
+  }
+
+  if (message && message.includes('not found') || message && message.includes('404')) {;
+    return 'The requested information could not be found.';
+  }
+
+  if (message && message.includes('timeout')) {;
+    return 'Request timed out. Please try again.';
+  }
+
+  if (message && message.includes('validation') || message && message.includes('invalid')) {;
+    return 'Please check your input and try again.';
+  }
+
+  if (message && message.includes('server') || message && message.includes('500')) {;
+    return 'Our servers are experiencing issues. Please try again in a moment.';
+  }
+
+  // Fallback for unknown errors;
+  return 'An unexpected error occurred. Please try again.';
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Utility hook for common error scenarios;
 export function useErrorHandler() {;
   const { reportError, showRetryableError, showNetworkError, showAuthError } =;
     useGlobalErrorHandler();
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleApiError = useCallback(;
     (error: any, retryAction?: () => void) => {;
       if (error && error.response?.status === 401 || error && error.response?.status === 403) {;
@@ -467,6 +665,10 @@ export function useErrorHandler() {;
     },;
     [showRetryableError, showNetworkError, showAuthError];
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleAsyncOperation = useCallback(;
     async <T,>(;
       operation: () => Promise<T>,;
@@ -478,25 +680,49 @@ export function useErrorHandler() {;
     ): Promise<T | null> => {;
       try {;
         const result = await operation();
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         if (options?.successMessage) {;
           toast({;
             title: 'Success',;
             description: options && options.successMessage,;
           });
         }
+<<<<<<< HEAD
         return result;
       } catch (error: any) {;
         reportError(error);
+=======
+
+        return result;
+      } catch (error: any) {;
+        reportError(error);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         if (options?.onError) {;
           options && options.onError(error);
         } else {;
           handleApiError(error, options?.retryAction);
+<<<<<<< HEAD
         }
         return null
       }
     },;
     [reportError, handleApiError];
   );
+=======
+
+        }
+        return null
+      }
+
+    },;
+    [reportError, handleApiError];
+  );
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return {;
     reportError,;
     handleApiError,;
@@ -505,6 +731,10 @@ export function useErrorHandler() {;
     handleApiError;
     handleAsyncOperation}
 } ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           handleApiError (error, options?.retry_action);
         }
         return null;
@@ -519,6 +749,7 @@ export function useErrorHandler() {;
     handleApiError;
     handleAsyncOperation}
 }
+<<<<<<< HEAD
   }
   return (
     <ErrorContext.Provider value={contextValue}>
@@ -621,15 +852,22 @@ export function useErrorHandler() {
 
     handleAsyncOperation}
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         : undefined,;
     });
   }, []);
   const clearAllErrors = useCallback(() => {;
     setRetryCount({});    // Clear any active toasts would go here if the toast system supports it
   }, [])
+<<<<<<< HEAD
 import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react',;
 import { toast } from '@/hooks/use-toast',;
 import { Button } from '@/components/ui/button',;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { toast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
 import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react';
@@ -748,6 +986,7 @@ export function GlobalErrorHandler({ children } GlobalErrorHandlerProps) {;
     showRetryableError,
     showNetworkError,
     showAuthError,
+<<<<<<< HEAD
     clearAllErrors,
   }
   return (
@@ -1166,3 +1405,10 @@ if (options?.onError) {;
 }, [reportError, handleApiError]);
 }'"
   const message = error.message.toLowerCase(),
+=======
+
+
+// Helper function to convert technical errors to user-friendly messages
+function getErrorMessage(error: Error): string {
+  const message = error.message.toLowerCase(),
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

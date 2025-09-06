@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link'
 import {
   DropdownMenu
@@ -37,11 +38,14 @@ export function ApplicationActions({
 }: ApplicationActionsProps) {
   return (
     <div className='flex items-center justify-end gap-2'>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 return (
     <div className='flex items-center justify-end gap-2'>;
       <Button
         variant='outline'
         size='sm'
+<<<<<<< HEAD
         onClick={() => onViewApplication(application.id)}
         disabled={!!application.viewed_at}    <div className="flex items-center justify-end gap-2">
       <Button
@@ -54,6 +58,23 @@ return (
       </Button>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
+=======
+
+        onClick={() => onViewApplication(application && application.id)}
+        disabled={!!application && application.viewed_at}    <div className="flex items-center justify-end gap-2">;
+      <Button
+        variant="outline" 
+        size="sm" 
+        onClick = {(,) => onViewApplication(application && application.id),}
+        disabled = {!!application && application.viewed_at,}
+      >;
+        <Eye className='h-4 w-4' />;
+      </Button>;
+
+      <DropdownMenu>;
+        <DropdownMenuTrigger asChild>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Button
             variant='outline'
             size='sm'
@@ -79,6 +100,7 @@ return (
             Schedule Interview
           </DropdownMenuItem>
           <DropdownMenuItem
+<<<<<<< HEAD
             onClick={() => onStatusChange(application.id, 'hired')}          >
             Shortlist
           </DropdownMenuItem>
@@ -92,6 +114,9 @@ return (
             Hire
           </DropdownMenuItem>
           <DropdownMenuItem
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             onClick={() => onStatusChange(application.id, 'rejected')}
             className='text-red-600'          >            onClick={() => onStatusChange(application.id, "hired")}
 
@@ -113,7 +138,46 @@ interface ApplicationActionsProps {
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
 }
 
+<<<<<<< HEAD
             Reject
+=======
+export function ApplicationActions({
+  application;
+  processingId;
+  onViewApplication;
+  onStatusChange
+}: ApplicationActionsProps) {
+  return (
+    <div className="flex items-center justify-end gap-2">
+      <Button 
+        variant="outline" 
+        size="sm" 
+        onClick={() => onViewApplication(application.id)}
+        disabled={!!application.viewed_at}
+      >
+        <Eye className="h-4 w-4" />
+      </Button>
+      
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button 
+            variant="outline" 
+            size="sm"
+            disabled={processingId === application.id}
+          >
+            {processingId === application.id ? (
+              <Loader2 className="h-4 w-4 animate-spin" />
+            ) : (
+              <>Status <ChevronDown className="h-4 w-4 ml-1" /></>
+            )}
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="end">
+          <DropdownMenuItem 
+            onClick={() => onStatusChange(application.id, "shortlisted")}
+          >
+            Shortlist
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </DropdownMenuItem>
       <Button
         variant="default"
@@ -148,13 +212,17 @@ interface ApplicationActionsProps {
       
 
 
+<<<<<<< HEAD
       
       
       
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <Button 
         size="sm"
         asChild
       >
+<<<<<<< HEAD
         <Link href={`/messages?talentId=${application.talent_id}`}>
         <Link href={`/messages?talentId=${application.talent_id}`}>
         <Link href={`/messages?talentId=${application.talent_id}`}>
@@ -182,6 +250,32 @@ import {;
   DropdownMenuTrigger;
 } from "@/components/ui/dropdown-menu",;
 import { Button } from "@/components/ui/button",;
+=======
+
+            onClick={() => onStatusChange(application && application.id, 'hired')}          >;
+            Shortlist;
+          </DropdownMenuItem>;
+          <DropdownMenuItem
+            onClick = {() => onStatusChange(application && application.id, "interview"),}          >;
+            Schedule Interview;
+          </DropdownMenuItem>;
+          <DropdownMenuItem
+            onClick = {() => onStatusChange(application && application.id, "hired"),}
+          >;
+            Hire;
+          </DropdownMenuItem>;
+          <DropdownMenuItem
+
+            onClick={() => onStatusChange(application && application.id, 'rejected')}
+            className='text-red-600'          >            onClick={() => onStatusChange(application && application.id, "hired")}
+          >;
+            Hire;
+          </DropdownMenuItem>;
+          <DropdownMenuItem
+            onClick={() => onStatusChange(application && application.id, "rejected")}
+            className="text-red-600";
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Link from 'next / link';
 import {
   DropdownMenu,
@@ -246,13 +340,26 @@ export function ApplicationActions({;
             Hire;
           </DropdownMenuItem>;
           <DropdownMenuItem;
+<<<<<<< HEAD
             onClick={() => onStatusChange(application.id, "rejected")}
             className="text-red-600";
+=======
+            on_click={() => onStatusChange (application.id, 'rejected')}
+            className='text - red - 600'          >            on_click={() => onStatusChange (application.id, "hired")}
+          >;
+            Hire;
+          </DropdownMenuItem>;
+          <DropdownMenuItem;
+            on_click={() => onStatusChange (application.id, "rejected")}
+            className="text - red - 600";
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           >;
             Reject;
           </DropdownMenuItem>;
         </DropdownMenuContent>;
       </DropdownMenu>;
+<<<<<<< HEAD
       <Button variant='default' size='sm' as_child>        <Link href={`/messages?talent_id=${application.talent_id}`}>;
       <Button;
         variant="default";
@@ -278,3 +385,20 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 ;
 }
+=======
+
+
+  );
+}
+      <Button variant='default' size='sm' as_child>        <Link href={`/messages?talent_id=${application.talent_id}`}>;
+      <Button;
+        variant="default";
+        size="sm";
+        as_child;
+      >;
+          Contact;
+        </Link>;
+      </Button>;
+    </div>);
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

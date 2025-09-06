@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     if (!scope |!startDate |!projectType) {
       return
 import React, { useState } from 'react'
@@ -18,12 +19,15 @@ import { format, parseISO } from 'date-fns'
 import { Badge } from '@/components/ui/badge'
 
 interface AIMilestoneGeneratorProps {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface AIMilestoneGeneratorProps {;
   scope: string;
   startDate: string;
   endDate: string | null;
   projectType: string;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void;
+<<<<<<< HEAD
   onAddMilestone: (milestone: GeneratedMilestone) => void
 export function AIMilestoneGenerator({
 
@@ -48,6 +52,16 @@ export function AIMilestoneGenerator({
       return
     if (!scope || !startDate || !projectType) {
       return;
+=======
+
+
+
+
+    if (!scope || !startDate || !projectType) {
+      return;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     const input: MilestoneInput = {
       scope
@@ -119,11 +133,21 @@ if ( {) {
     clearGeneratedMilestones()
     setSelectedMilestones({})
   }
+<<<<<<< HEAD
   const toggleMilestoneSelection = (index: number,) => {
     setSelectedMilestones(prev => ({
       ...prev
       [index]: !prev[index]
     }))
+=======
+
+  const toggleMilestoneSelection = (index: number, ) =>: any {
+    setSelectedMilestones (prev => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   const handleAddSingleMilestone = (milestone: GeneratedMilestone) => {
     onAddMilestone(milestone)
@@ -132,6 +156,10 @@ if ( {) {
     try {
       return format(parseISO(dateString), 'MMM dd, yyyy')
     } catch (error) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       return dateString
     }
   }
@@ -156,6 +184,10 @@ interface AIMilestoneGeneratorProps {;
   endDate: string | null,;
   projectType: string,;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onAddMilestone: (milestone: GeneratedMilestone) => void;
 }
 ;
@@ -211,6 +243,7 @@ export function AIMilestoneGenerator({;
     } catch (error) {;
       return dateString;
     }
+<<<<<<< HEAD
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <h3 className="text-lg font-medium flex items-center">
@@ -242,6 +275,14 @@ export function AIMilestoneGenerator({;
 ursor/fix-website-loading-errors-and-merge-6662
   },
 
+=======
+
+  },
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -250,14 +291,27 @@ ursor/fix-website-loading-errors-and-merge-6662
           AI Milestone Generator
         </h3>
         <Button
+<<<<<<< HEAD
           variant='outline'
           onClick={handleGenerateMilestones}
           disabled={isGenerating |!scope |!startDate |!projectType}        >
           disabled={isGenerating || !scope || !startDate || !projectType}        >
+=======
+
+
+          disabled={isGenerating || !scope || !startDate || !projectType}        >
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           variant="outline"
           onClick={handleGenerateMilestones}
           disabled={isGenerating || !scope || !startDate || !projectType}
         >
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {isGenerating ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -278,6 +332,33 @@ ursor/fix-website-loading-errors-and-merge-6662
               <p className="text-sm text-muted-foreground">
                 {generatedMilestones.length} milestones generated based on your project scope
               </p>
+<<<<<<< HEAD
+=======
+
+          disabled={isGenerating || !scope || !startDate || !projectType}>;
+          {isGenerating ? (;
+            <>;
+              <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
+              Generating...;
+            </>;
+          ) : (;
+            <>;
+              <Sparkles className='mr-2 h-4 w-4' />;
+              Generate Milestones;
+            </>;
+          )}
+        </Button>;
+      </div>;
+
+      {generatedMilestones && generatedMilestones.length > 0 && (;
+        <Card>;
+          <CardContent className='pt-6'>;
+            <div className='flex justify-between items-center mb-4'>;
+              <p className='text-sm text-muted-foreground'>;
+                {generatedMilestones && generatedMilestones.length} milestones generated based on your;
+                project scope;
+              </p>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Button
                 onClick={handleAddToProject}
                 disabled={!Object && Object.values(selectedMilestones).some(Boolean)}>;
@@ -288,6 +369,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Accordion type='multiple' className='w-full'>;
               {generatedMilestones && generatedMilestones.map((milestone, index) => (;
 
+<<<<<<< HEAD
               <Button
                 onClick={handleAddToProject}
                 disabled={!Object.values(selectedMilestones).some(Boolean)}              >
@@ -296,6 +378,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             </div>
             <Accordion type='multiple' className='w-full'>
               {generatedMilestones.map((milestone, index) => (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <AccordionItem
                   value={`item-${index}`}
                   key={index}
@@ -408,12 +492,18 @@ ursor/fix-website-loading-errors-and-merge-6662
                           <span className="font-medium">{milestone.title}</span>
                           <Badge variant="secondary" className="ml-2 flex items-center">
                             <Sparkles className="w-3 h-3 mr-1" />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                             AI Suggested
                           </Badge>
                         </div>
                       </AccordionTrigger>
                     </div>
                     <Button
+<<<<<<< HEAD
 
                       variant="ghost"
                       size="sm"
@@ -428,9 +518,30 @@ ursor/fix-website-loading-errors-and-merge-6662
                         e.stopPropagation()
                         handleAddSingleMilestone(milestone) }}
                       className='mr-2'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                       <Plus className="h-4 w-4" />
 
+<<<<<<< HEAD
+=======
+                      variant="ghost"
+                      size="sm"
+                      onClick={(e) => {
+                        e.stopPropagation(),
+                        handleAddSingleMilestone(milestone)
+                      }}
+                      className="mr-2"
+
+
+                      variant="ghost"
+                      size="sm"
+                      onClick={(e) => {
+                        e.stopPropagation(),
+                        handleAddSingleMilestone(milestone)
+                      }}
+                      className="mr-2"
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     >
                       <Plus className='h-4 w-4' />
                       <Plus className="h-4 w-4" />
@@ -449,6 +560,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </div>
                   </AccordionContent>
                 </AccordionItem>
+<<<<<<< HEAD
               ))}
             </Accordion>
           </CardContent>
@@ -458,10 +570,39 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 };
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+                      onClick={e => {;
+                        e && e.stopPropagation();
+                        handleAddSingleMilestone(milestone);                      }}
+                      className='mr-2';
+                    >;
+                      <Plus className='h-4 w-4' />;
+                    </Button>;
+                  </div>;
+                  <AccordionContent>;
+                    <div className='pl-6 space-y-2'>;
+                      <p className='text-sm'>{milestone && milestone.description}</p>;
+                      <div className='flex items-center text-sm text-muted-foreground'>;
+                        <Calendar className='w-4 h-4 mr-1' />;
+                        Due: {formatDate(milestone && milestone.dueDate)}
+                      </div>;
+                      <div className='text-sm text-muted-foreground'>;
+                        Estimated effort: {milestone && milestone.estimatedHours} hours;
+                      </div>;
+                    </div>;
+                  </AccordionContent>;
+                </AccordionItem>;
+
+              ))}
+              ))}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </Accordion>;
           </CardContent>;
         </Card>;
       )}
+<<<<<<< HEAD
     </div>
   )
 }
@@ -470,3 +611,39 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 ;
 }
+=======
+
+    </div>;
+  );
+}
+
+                    <Button;
+                      variant='ghost';
+                      size='sm';
+                      on_click={e => {
+                        e.stop_propagation ();
+                        handleAddSingleMilestone (milestone) }}
+                      className='mr - 2';
+                    >;
+                      <Plus className='h - 4 w - 4' />;
+                    </Button>;
+                  </div>;
+                  <AccordionContent>;
+                    <div className='pl - 6 space - y-2'>;
+                      <p className='text - sm'>{milestone.description}</p>;
+                      <div className='flex items - center text - sm text - muted - foreground'>;
+                        <Calendar className='w - 4 h - 4 mr - 1' />;
+                        Due: {format_date (milestone.due_date)}
+                      </div>;
+                      <div className='text - sm text - muted - foreground'>;
+                        Estimated effort: {milestone.estimated_hours} hours;
+                      </div>;
+                    </div>;
+                  </AccordionContent>;
+                </AccordionItem>))}
+            </Accordion>;
+          </CardContent>;
+        </Card>)}
+    </div>);
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

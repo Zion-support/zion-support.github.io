@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {useParams, Link} from "react-router-dom";
 import {Header} from "@/components/header/Header";
 import {Footer} from "@/components/Footer";
@@ -42,12 +43,19 @@ export default function CategoryDetail() {
   const navigate = useNavigate(),
   const [isLoading, setIsLoading] = useState(true),
   const [listings, setListings] = useState(MARKETPLACE_LISTINGS),
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [category, setCategory] = useState<{title: string, description: string, icon: JSX.Element}>({
     title: ""
     description: ""
     icon: <Bot className="w-6 h-6" />
 
 
+<<<<<<< HEAD
   });
   // Map of category slugs to their display data
   const categoryData = {
@@ -66,6 +74,8 @@ export default function CategoryDetail() {
       description: "Rent or buy specialized hardware, servers, and devices";
       icon: <Code className="w-6 h-6" />
     }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }),
 
   // Map of category slugs to their display data
@@ -85,87 +95,148 @@ export default function CategoryDetail() {
       description: "Rent or buy specialized hardware, servers, and devices",
       icon: <Code className="w-6 h-6" />
     },
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     'innovation': {
       title: "Innovation"
       description: "Discover cutting-edge solutions and tech breakthroughs"
       icon: <Bot className="w-6 h-6" />
 
+<<<<<<< HEAD
     },
 
 
     }
     },
+=======
+
+    },
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     'ai-models-apis': {
       title: "AI Models & APIs"
       description: "Access cutting-edge AI models with easy integration"
       icon: <Brain className="w-6 h-6" />
 
+<<<<<<< HEAD
     },
 
 
     }
     },
+=======
+
+    },
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     'content-creation': {
       title: "Content Creation"
       description: "Generate high-quality content for your projects"
       icon: <PenLine className="w-6 h-6" />
 
+<<<<<<< HEAD
     },
 
 
     }
     },
+=======
+
+    },
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     'data-analysis': {
       title: "Data Analysis"
       description: "Extract insights from complex datasets"
       icon: <BarChart className="w-6 h-6" />
 
+<<<<<<< HEAD
     },
 
 
     }
     },
+=======
+
+    },
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     'computer-vision': {
       title: "Computer Vision"
       description: "Image and video processing solutions"
       icon: <Eye className="w-6 h-6" />
 
+<<<<<<< HEAD
     },
 
 
     }
     },
+=======
+
+    },
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     'virtual-assistants': {
       title: "Virtual Assistants"
       description: "Intelligent automation for your workflow"
       icon: <Bot className="w-6 h-6" />
 
+<<<<<<< HEAD
     },
 
 
     }
     },
+=======
+
+    },
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     'voice-speech': {
       title: "Voice & Speech"
       description: "Speech recognition and synthesis tools"
       icon: <Mic className="w-6 h-6" />
 
+<<<<<<< HEAD
     },
 
 
     }
     },
+=======
+
+    },
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     'developer-tools': {
       title: "Developer Tools"
       description: "AI-powered coding assistance and automation"
       icon: <Code className="w-6 h-6" />
+<<<<<<< HEAD
     }
     },
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     },
 
 
+<<<<<<< HEAD
     },
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     'business-solutions': {
       title: "Business Solutions"
       description: "Enterprise AI integrations and services"
@@ -173,17 +244,25 @@ export default function CategoryDetail() {
     }
 
 
+<<<<<<< HEAD
   }
   useEffect(() => {
     setIsLoading(true);
   }
   useEffect(() => {
     setIsLoading(true);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
 
   useEffect(() => {
     setIsLoading(true),
     
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Find the category data based on slug
     const currentCategory = categoryData[slug as keyof typeof categoryData] |{
       title: slug?.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ') |"Category"
@@ -191,6 +270,7 @@ export default function CategoryDetail() {
       icon: <Bot className="w-6 h-6" />
 
 
+<<<<<<< HEAD
     }
     setCategory(currentCategory);
     // Filter listings by category
@@ -198,6 +278,8 @@ export default function CategoryDetail() {
     const filteredListings = MARKETPLACE_LISTINGS.filter(listing =>
       listing.category.toLowerCase() === categoryTitle.toLowerCase()
     );
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
     
     setCategory(currentCategory),
@@ -208,6 +290,7 @@ export default function CategoryDetail() {
       listing.category.toLowerCase() === categoryTitle.toLowerCase()
     ),
     
+<<<<<<< HEAD
     // If we don't have real listings for this category, generate placeholder listings
     const listingsToShow = filteredListings.length > 0 ? filteredListings :
       Array(4).fill(null).map((_, index) => ({
@@ -218,6 +301,13 @@ export default function CategoryDetail() {
         price: Math.floor(Math.random() * 500) + 50
         currency: "$"
         tags: [`${slug}`, "ai", "tool"];
+=======
+
+    // If we don't have real listings for this category, generate placeholder listings
+    const listingsToShow = filteredListings.length > 0 ? filteredListings :
+      Array(4).fill(null).map((_, index) => ({
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         id: `${slug}-${index}`,
         title: `${currentCategory.title} Product ${index + 1}`,
         description: `A great ${currentCategory.title.toLowerCase()} solution for your needs.`,
@@ -225,15 +315,148 @@ export default function CategoryDetail() {
         price: Math.floor(Math.random() * 500) + 50,
         currency: "$",
         tags: [`${slug}`, "ai", "tool"],
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         author: {
           name: `Provider ${index + 1}`
           id: `author-${index + 1}`
           avatarUrl: undefined
 
+<<<<<<< HEAD
+=======
+import {useParams, Link} from "react-router-dom";
+import {Header} from "@/components/header/Header";
+import {Footer} from "@/components/Footer";
+import {GradientHeading} from "@/components/GradientHeading";
+import {ProductListingCard} from "@/components/ProductListingCard";
+import {useState, useEffect} from "react";
+import {Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase} from "lucide-react";
+import {MARKETPLACE_LISTINGS} from "@/data/listingData";
+import {useNavigate} from "react-router-dom";
+import {toast} from "@/hooks/use-toast";
+export default function CategoryDetail() {;
+  // Cast to specify the expected route param type since useParams may be untyped;
+  const { slug } = useParams() as { slug?: string };
+  const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(true);
+  const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
+  const [category, setCategory] = useState<{title: string, description: string, icon: JSX && JSX.Element}>({;
+    title: "",;
+    description: "",;
+    icon: <Bot className="w-6 h-6" />;
+  });
+
+  // Map of category slugs to their display data;
+  const categoryData = {;
+    'services': {;
+      title: "Services",;
+      description: "On-demand IT support, consulting, development, and more";
+      icon: <Briefcase className="w-6 h-6" />;
+    };
+    'talents': {;
+      title: "Talents",;
+      description: "Connect with AI experts, developers, and tech specialists";
+      icon: <Brain className="w-6 h-6" />;
+    };
+    'equipment': {;
+      title: "Equipment",;
+      description: "Rent or buy specialized hardware, servers, and devices";
+      icon: <Code className="w-6 h-6" />;
+    };
+    'innovation': {;
+      title: "Innovation",;
+      description: "Discover cutting-edge solutions and tech breakthroughs",;
+      icon: <Bot className="w-6 h-6" />;
+    };
+    'ai-models-apis': {;
+      title: "AI Models & APIs",;
+      description: "Access cutting-edge AI models with easy integration",;
+      icon: <Brain className="w-6 h-6" />;
+    };
+    'content-creation': {;
+      title: "Content Creation",;
+      description: "Generate high-quality content for your projects",;
+      icon: <PenLine className="w-6 h-6" />;
+    };
+    'data-analysis': {;
+      title: "Data Analysis",;
+      description: "Extract insights from complex datasets",;
+      icon: <BarChart className="w-6 h-6" />;
+    };
+    'computer-vision': {;
+      title: "Computer Vision",;
+      description: "Image and video processing solutions",;
+      icon: <Eye className="w-6 h-6" />;
+    };
+    'virtual-assistants': {;
+      title: "Virtual Assistants",;
+      description: "Intelligent automation for your workflow",;
+      icon: <Bot className="w-6 h-6" />;
+    };
+    'voice-speech': {;
+      title: "Voice & Speech",;
+      description: "Speech recognition and synthesis tools",;
+      icon: <Mic className="w-6 h-6" />;
+    };
+    'developer-tools': {;
+      title: "Developer Tools",;
+      description: "AI-powered coding assistance and automation",;
+      icon: <Code className="w-6 h-6" />;
+    };
+    'business-solutions': {;
+      title: "Business Solutions",;
+      description: "Enterprise AI integrations and services",;
+      icon: <Briefcase className="w-6 h-6" />;
+    }
+  };
+
+  useEffect(() => {;
+    setIsLoading(true);
+
+    // Find the category data based on slug;
+    const currentCategory = categoryData[slug as keyof typeof categoryData] || {;
+      title: slug?.split('-').map(word => word && word.charAt(0).toUpperCase() + word && word.slice(1)).join(' ') || "Category",;
+      description: "Explore our collection in this category",;
+      icon: <Bot className="w-6 h-6" />;
+    };
+
+    setCategory(currentCategory);
+
+    // Filter listings by category;
+    const categoryTitle = currentCategory && currentCategory.title;
+    const filteredListings = MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.filter(listing => ;
+      listing && listing.category.toLowerCase() === categoryTitle && categoryTitle.toLowerCase();
+    );
+
+    // If we don't have real listings for this category, generate placeholder listings;
+    const listingsToShow = filteredListings && filteredListings.length > 0 ? filteredListings : ;
+      Array(4).fill(null).map((_, index) => ({;
+        id: `${slug}-${index}`,;
+        title: `${currentCategory && currentCategory.title} Product ${index + 1}`,;
+        description: `A great ${currentCategory && currentCategory.title.toLowerCase()} solution for your needs.`,;
+        category: currentCategory && currentCategory.title,;
+        price: Math && Math.floor(Math && Math.random() * 500) + 50,;
+        currency: "$",;
+        tags: [`${slug}`, "ai", "tool"];
+        author: {;
+          name: `Provider ${index + 1}`,;
+          id: `author-${index + 1}`,;
+          avatarUrl: undefined;
+        };
+        images: [`/placeholder && placeholder.svg`],;
+        createdAt: new Date().toISOString(),;
+        rating: Math && Math.floor(Math && Math.random() * 5) + 1,;
+        reviewCount: Math && Math.floor(Math && Math.random() * 100);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }));
     setListings(listingsToShow);
     setIsLoading(false);
   }, [slug]);
+<<<<<<< HEAD
         }
         images: [`/placeholder.svg`]
         createdAt: new Date().toISOString()
@@ -243,6 +466,10 @@ export default function CategoryDetail() {
     setListings(listingsToShow);
     setIsLoading(false)
   }, [slug]);
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         },
         images: [`/placeholder.svg`],
         createdAt: new Date().toISOString(),
@@ -254,6 +481,11 @@ export default function CategoryDetail() {
     setIsLoading(false)
   }, [slug]),
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
     const listing = listings.find(item => item.id === listingId)
@@ -262,13 +494,20 @@ export default function CategoryDetail() {
         title: "Quote Requested"
         description: `Your quote request for ${listing.title} has been sent.`
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }),
       
 
 
+<<<<<<< HEAD
       });
       }),
       
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Navigate to the quote request page with the listing information
       navigate("/request-quote", {
         state: {
@@ -280,6 +519,11 @@ export default function CategoryDetail() {
             image: listing.images?.[0]
 
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useParams, Link } from "react-router-dom",;
 import { Header } from "@/components/header/Header",;
 import { Footer } from "@/components/Footer",;
@@ -401,6 +645,10 @@ export default function CategoryDetail() {;
     setListings(listingsToShow),;
     setIsLoading(false);
   }, [slug]),;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Handle requesting a quote;
   const handleRequestQuote = (listingId: string) => {;
     const listing = listings && listings.find(item => item && item.id === listingId),;
@@ -570,6 +818,7 @@ if ( {) {
             title: listing.title,
             category: listing.category,
             image: listing.images?.[0];
+<<<<<<< HEAD
   // Handle requesting a quote;
   const handleRequestQuote = (listingId: string) => {;
     const listing = listings.find(item => item.id === listingId),;
@@ -583,10 +832,20 @@ if ( {) {
         state: {;
           serviceType: listing.category,;
           specificItem: {;
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             id: listing.id,;
             title: listing.title,;
             category: listing.category;
             image: listing.images?.[0];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           }
         }
       });
@@ -594,13 +853,25 @@ if ( {) {
 
   },
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   };
   },
 
+<<<<<<< HEAD
 
   return (
 
   }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+  return (
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   return (
     <>;
@@ -615,6 +886,10 @@ if ( {) {
           <div className="text - center mb - 12">;
             <div className="flex justify - center mb - 6">;
               <div className="text - zion - cyan p - 4 bg - zion - blue - dark rounded - full">;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {category.icon}
               </div>;
             </div>;
@@ -623,6 +898,7 @@ if ( {) {
             </GradientHeading>;
             <p className="text - zion - slate - light text - lg max - w-3xl mx - auto">;
               {category.description}
+<<<<<<< HEAD
           }
         }
       })
@@ -662,6 +938,8 @@ if ( {) {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {listings.map((listing) => (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
                 <ProductListingCard 
@@ -888,6 +1166,7 @@ export default function CategoryDetail() {;
               ))}
             </div>;
           )}
+<<<<<<< HEAD
                 <ProductListingCard
                   key={listing.id}
                 <ProductListingCard 
@@ -904,10 +1183,19 @@ export default function CategoryDetail() {;
     </>
   )
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </div>;
       </div>;
       <Footer />;
     </>;
+<<<<<<< HEAD
+=======
+  );
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </p>;
           </div>;
           {is_loading ? (
@@ -1001,6 +1289,7 @@ icon: <Briefcase className="w-6 h-6" />
 }
 ;
 
+<<<<<<< HEAD
 };
 useEffect ( () => {
   setIsLoading (true);
@@ -1051,3 +1340,6 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue" > <div classNam
   );
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

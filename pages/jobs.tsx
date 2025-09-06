@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
     title: 'Senior Full-Stack Engineer (Next.js + AI)',
     description: 'Build modern AI-enabled web apps at Zion Tech Solutions.',
 datePosted: new Date().toISOString().slice(0, 10);
@@ -16,6 +17,9 @@ const Jobs: NextPage = () => {
     employment_type: 'FULL_TIME',
     valid_through: new Date (Date.now () + 1000 * 60 * 60 * 24 * 30).toISOString ().slice (0, 10),
     base_salary: {
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       currency: 'USD',
       value: 160000,
       unit_text: 'YEAR'},
@@ -26,6 +30,13 @@ const Jobs: NextPage = () => {
       logo: 'https://ziontechgroup.netlify.app / logo.png'},
     jobLocationType: 'TELECOMMUTE'} as const,
 
+<<<<<<< HEAD
+=======
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
 
     <div>;
@@ -33,6 +44,7 @@ const Jobs: NextPage = () => {
       <JobPostingJsonLd;
         date_posted={job.date_posted}
 
+<<<<<<< HEAD
   return (
     <div>;
       <Seo title="Jobs" description="Open roles at Zion Tech Solutions." />;
@@ -108,11 +120,14 @@ const Jobs: NextPage = () => {
       <Seo title="Jobs" description="Open roles at Zion Tech Solutions." />
       <JobPostingJsonLd
         datePosted={job.datePosted}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         description={job.description}
         employmentType={job.employmentType}
         hiringOrganization={job.hiringOrganization}
         jobLocationType={job.jobLocationType}
         title={job.title}
+<<<<<<< HEAD
         valid_through={job.valid_through}
         base_salary={job.base_salary}
         validThrough={job.validThrough}
@@ -169,15 +184,31 @@ export default Jobs,;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+=======
+        valid_through={job.valid_through}
+        base_salary={job.base_salary}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       />;
       <main>;
         <h1>Jobs</h1>;
         <p>{job.title}</p>;
         <p>{job.description}</p>;
       </main>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>;
   );
 },;
 export default Jobs;
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

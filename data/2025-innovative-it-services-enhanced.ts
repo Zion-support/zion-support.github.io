@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 import { ServiceVariant } from '../types/service-variants';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   id: string;
@@ -34,6 +37,7 @@ import { ServiceVariant } from '../types/service-variants';
     address: string;
     website: string;
   }
+<<<<<<< HEAD
     id: 'quantum-cloud-infrastructure',
   real_implementation: boolean;
   implementation_details: string;
@@ -1628,6 +1632,11 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [;
     growth_rate: '40% annual growth',
     variant: 'blockchain - enterprise',
     contact_info: {
+=======
+
+  {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1644,16 +1653,30 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
     implementation_details: 'Cloud - based blockchain platform with multi - chain support and enterprise features.';
     launch_date: '2024 - 09 - 01';
+<<<<<<< HEAD
     customers: 123;
     rating: 4 && 4.8,
     reviews: 52
   }
 ];
+=======
+
+    customers: 123;
+
+    rating: 4 && 4.8,
+
+    reviews: 52
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export interface InnovativeITService2025 {
   id: string, name: string,
   tagline: string, price: string,
@@ -3538,6 +3561,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [;
 
 ;
 
+<<<<<<< HEAD
 ;
     }
     realImplementation: true
@@ -4626,3 +4650,5 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [;
     reviews: 52;
   }
 ];
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

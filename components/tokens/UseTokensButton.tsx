@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,6 +25,8 @@ import UseTokensModal, { RedemptionType } from "./UseTokensModal";
 export default function UseTokensButton(): any ({;
   serviceId,;
   defaultType,;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }: {;
 export default function UseTokensButton({
 serviceId
@@ -60,6 +63,7 @@ export default function UseTokensButton({ serviceId, defaultType }: { serviceId?
       />
     </>
 
+<<<<<<< HEAD
 export default function UseTokensButton({ serviceId, defaultType }: { serviceId?: string, defaultType?: RedemptionType }) {
   serviceId,
   defaultType,
@@ -85,6 +89,9 @@ export default function UseTokensButton({ serviceId, defaultType }: { serviceId?
     </>
 );
   );
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [open, setOpen] = useState(false);
   return (
     <>;
@@ -102,7 +109,16 @@ export default function UseTokensButton({ serviceId, defaultType }: { serviceId?
       />;
     </>;
   );
+<<<<<<< HEAD
 }
+=======
+
+}
+
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from './react';
 import UseTokensModal, { RedemptionType } from "./UseTokensModal";
 ;
@@ -146,6 +162,7 @@ function UseTokensButton() {
   )
 
 }
+<<<<<<< HEAD
 
 
   const [open, setOpen] = useState(false);
@@ -186,3 +203,9 @@ function UseTokensButton() {
 
 }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

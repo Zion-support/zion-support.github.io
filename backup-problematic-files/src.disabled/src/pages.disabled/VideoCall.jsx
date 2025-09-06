@@ -9,4 +9,8 @@ const VideoCall = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default VideoCall;
+=======
+export default VideoCall;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

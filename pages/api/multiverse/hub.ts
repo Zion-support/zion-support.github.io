@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -7,6 +11,25 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 }
 
+<<<<<<< HEAD
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from './next';,
+import { read_state  } from '../../../utils / sync / storage';,
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  const state = read_state (),
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (200).json ({
+      route: "/multiverse / hub",
+      instance_id: state.config.instance_id,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -42,10 +65,15 @@ export default async function handler(req, res) {
 
       route: "/multiverse/hub",
       instanceId: state.config.instanceId,
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       peers: state.config.peers,
       scope: state.config.scope,
       opt_in: state.config.opt_in,
       paused: state.config.paused,
+<<<<<<< HEAD
 lastSyncedAt: state.lastSyncedAt});
   }
 }
@@ -186,3 +214,9 @@ export default async function handler(req, res) {
 
 }
 }
+=======
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

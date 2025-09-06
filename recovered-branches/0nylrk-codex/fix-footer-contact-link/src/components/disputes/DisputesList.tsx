@@ -12,6 +12,11 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {formatDistanceToNow} from "date-fns";
 import {ShieldAlert} from "lucide-react";
 import {Link} from "react-router-dom";
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from "react",
 import { Dispute, DisputeStatus } from "@/types/disputes",
 import { Button } from "@/components/ui/button",
@@ -27,6 +32,7 @@ import { Skeleton } from "@/components/ui/skeleton",
 import { formatDistanceToNow } from "date-fns",
 import { ShieldAlert } from "lucide-react",
 import { Link } from "react-router-dom",
+<<<<<<< HEAD
 type DisputesListProps = {
   disputes: Dispute[]
   isLoading: boolean
@@ -46,6 +52,8 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
   const filteredDisputes = statusFilter === "all" 
     ? disputes 
     : disputes.filter(dispute => dispute.status === statusFilter),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -59,14 +67,22 @@ type DisputesListProps = {
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
       case "open": return "default";
+<<<<<<< HEAD
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
       case "open": return "default",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       case "under_review":
         return "secondary"
       case "resolved":
         return "outline", // Changed from "success" to "outline"
       case "closed":
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         return "outline",
       default:
         return "default"
@@ -74,8 +90,11 @@ type DisputesListProps = {
 
   },
 
+<<<<<<< HEAD
   }
   },
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   if (isLoading) {
     return (
@@ -107,6 +126,10 @@ type DisputesListProps = {
                   <TableCell><Skeleton className="h-6 w-20" /></TableCell>
                   <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>
                 </TableRow>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from "react",;
 import { Dispute, DisputeStatus } from "@/types/disputes",;
 import { Button } from "@/components/ui/button",;
@@ -122,10 +145,15 @@ import { Skeleton } from "@/components/ui/skeleton",;
 import { formatDistanceToNow } from "date-fns",;
 import { ShieldAlert } from "lucide-react",;
 import { Link } from "react-router-dom",;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 type DisputesListProps = {;
   disputes: Dispute[],;
   isLoading: boolean;
 };
+<<<<<<< HEAD
 export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps) {;
   const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
   const filteredDisputes = statusFilter === "all" ;
@@ -178,15 +206,67 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
   const getStatusBadgeVariant = (status: DisputeStatus) => {;
     switch (status) {;
       case "open": return "default",;
+=======
+
+export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps) {;
+  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
+
+  const filteredDisputes = statusFilter === "all" ;
+    ? disputes ;
+    : disputes && disputes.filter(dispute => dispute && dispute.status === statusFilter);
+
+  const getStatusBadgeVariant = (status: DisputeStatus) => {;
+    switch (status) {;
+      case "open": return "default";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       case "under_review":;
         return "secondary",;
       case "resolved":;
         return "outline", // Changed from "success" to "outline";
       case "closed":;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import React, { useState } from './react';
+import { Dispute, DisputeStatus } from '@/types / disputes';
+import { Button } from '@/components / ui / button';
+import { Badge } from '@/components / ui / badge';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
+import { Skeleton } from '@/components / ui / skeleton';
+import { formatDistanceToNow } from './date - fns';
+import { ShieldAlert } from './lucide-react';
+import { Link } from './react-router-dom';
+type DisputesListProps = {
+  disputes: Dispute[],
+  is_loading: boolean;
+}
+;
+export /**
+ * DisputesList - Function description
+ */
+function DisputesList() {
+  const [status_filter, setStatusFilter] = useState < DisputeStatus | "all">("all");
+;
+  const filtered_disputes = status_filter === "all";
+    ? disputes;
+    : disputes.filter (dispute => dispute.status === status_filter);
+;
+  const getStatusBadgeVariant = (status: DisputeStatus) =>: any {
+    switch (status) {
+      case "open": return "default";
+      case "under_review":;
+        return "secondary",
+      case "resolved":;
+        return "outline", // Changed from './success'; to "outline";
+      case "closed":;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         return "outline";
       default:;
         return "default";
     }
+<<<<<<< HEAD
   if (disputes && disputes.length === 0) {;
     return (
         return "outline",;
@@ -383,6 +463,8 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
                 </TableCell>
               </TableRow>
             ))}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   }
 ;
@@ -511,19 +593,30 @@ if ( {) {
                   </div>;
                 </TableCell>;
                 <TableCell>;
+<<<<<<< HEAD
           </TableBody>
         </Table>
       </div>
     </div>
   )
 }
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </TableBody>;
         </Table>;
       </div>;
     </div>;
   );
 }
+<<<<<<< HEAD
                   {formatDistanceToNow(new Date(dispute.created_at), { addSuffix:true })}
+=======
+
+                  {formatDistanceToNow (new Date (dispute.created_at), { add_suffix: true })}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </TableCell>;
                 <TableCell>;
                   <Badge variant={getStatusBadgeVariant(dispute.status)}>;
@@ -560,6 +653,7 @@ export function DisputesList ({
 }
 ;
 
+<<<<<<< HEAD
 };
 if (isLoading) {
   return (<div className="space-y-4" > <div className="flex gap-2 mb-4" > {
@@ -582,3 +676,6 @@ if (isLoading) {
 }</TableBody> </Table> </div> </div>) 
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

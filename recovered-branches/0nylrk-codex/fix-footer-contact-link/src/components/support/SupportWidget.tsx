@@ -8,12 +8,18 @@ import {useTheme} from "@/hooks/useTheme";
 export function SupportWidget() {;
   const [isOpen, setIsOpen] = useState(false);
   const { theme } = useTheme();
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <>;
       {/* Fixed button in the bottom right */}
       {!isOpen && (;
         <Button
 
+<<<<<<< HEAD
 
 
       {/* Fixed button in the bottom right */}
@@ -109,10 +115,40 @@ export function SupportWidget() {;
             "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col";
             theme === "dark"
               ? "bg-zion-blue-dark border border-zion-blue-light"
+=======
+=======
+
+
+      {/* Fixed button in the bottom right */}
+      {!isOpen && (
+        <Button
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          onClick={() => setIsOpen(true)}
+          size="icon";
+          className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50";
+          aria-label="Open support";
+        >;
+          <MessageSquare className="h-6 w-6" />;
+        </Button>;
+      )}
+
+
+      {/* Support panel */}
+      {isOpen && (;
+        <div
+          className={cn(
+            "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col"
+            theme === "dark" 
+              ? "bg-zion-blue-dark border border-zion-blue-light" 
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col",
             theme === "dark" 
               ? "bg-zion-blue-dark border border-zion-blue-light" 
+<<<<<<< HEAD
               : "bg-white border border-gray-200"
           )}
           style={{ height: "600px", maxHeight: "80vh" }}
@@ -125,24 +161,46 @@ export function SupportWidget() {;
               </h3>
             </div>
             <div className="flex items-center gap-2">
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              : "bg-white border border-gray-200"
+          )}
+          style={{ height: "600px", maxHeight: "80vh" }}>;
+          <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">;
+            <div className="flex items-center">;
+              <MessageSquare className="h-5 w-5 text-zion-cyan mr-2" />;
+              <h3 className={cn("font-semibold", theme === "dark" ? "text-white" : "text-gray-800")}>;
+                Zion Support;
+              </h3>;
+            </div>;
+            <div className="flex items-center gap-2">;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Button
                 variant="ghost"
                 size="icon"
                 className="h-8 w-8 rounded-full"
+<<<<<<< HEAD
               <Button;
                 variant="ghost";
                 size="icon";
                 className="h-8 w-8 rounded-full";
                 onClick={() => window.location.href = "/help"}
+=======
+                onClick={() => window && window.location.href = "/help"}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 aria-label="Help center";
               >;
                 <Info className="h-5 w-5" />;
               </Button>;
+<<<<<<< HEAD
                 onClick={() => window.location.href = "/help"}
                 aria-label="Help center"
               >
                 <Info className="h-5 w-5" />
               </Button>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Button
                 variant="ghost"
                 size="icon"
@@ -152,6 +210,10 @@ export function SupportWidget() {;
                 size="icon";
                 className="h-8 w-8 rounded-full";
                 onClick={() => setIsOpen(false)}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 aria-label="Close support";
               >;
                 <X className="h-5 w-5" />;
@@ -230,6 +292,7 @@ function SupportWidget() {
         </div>)}
     </>);
 }
+<<<<<<< HEAD
   ),;}
  export function SupportWidget () {
   const [isOpen, setIsOpen] = useState (false);
@@ -261,3 +324,6 @@ const {
     </>
   )
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

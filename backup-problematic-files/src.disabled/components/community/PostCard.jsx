@@ -9,4 +9,8 @@ const PostCard = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default PostCard;
+=======
+export default PostCard;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

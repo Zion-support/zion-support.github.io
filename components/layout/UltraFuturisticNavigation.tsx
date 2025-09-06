@@ -1,15 +1,54 @@
 
+<<<<<<< HEAD
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useState, useEffect } from 'react';
+
+import Link from 'next/link';
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 
+<<<<<<< HEAD
 
   className = '',;
 
+=======
+=======
+
+  className = '',;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }: UltraFuturisticNavigationProps) {  const [isOpen, setIsOpen] = useState(false);
 interface UltraFuturisticNavigationProps {;
   className?: string;
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Rocket, Brain, Atom, Shield } from 'lucide-react';
 
 interface UltraFuturisticNavigationProps {
@@ -20,6 +59,7 @@ interface UltraFuturisticNavigationProps {
 
 
 export default function UltraFuturisticNavigation({ className = '' }: UltraFuturisticNavigationProps) {;
+<<<<<<< HEAD
 import {;
   Menu,;
   X,;
@@ -86,11 +126,16 @@ interface UltraFuturisticNavigationProps {
 export default function UltraFuturisticNavigation({ className = '' }: UltraFuturisticNavigationProps) {
 
 export default function UltraFuturisticNavigation({ className = '' }: UltraFuturisticNavigationProps) {;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   useEffect(() => {
     const handleScroll = () => {
+<<<<<<< HEAD
   const _navigationItems = [
     {_name: 'Services', _href: '/services', _hasDropdown: true, _dropdownItems: [
         { name: 'AI & Machine Learning', _href: '/services/ai-ml', _icon: Brain, _color: 'from-purple-500 to-pink-600'},
@@ -99,6 +144,8 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
         {_name: 'IT Solutions', _href: '/services/it-solutions', _icon: Rocket, _color: 'from-green-500 to-emerald-600'},
         {_name: 'View All Services', _href: '/services', _icon: Rocket, _color: 'from-gray-500 to-gray-600'}
       ]
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       setIsScrolled(window.scrollY > 20);
     }
     window.addEventListener('scroll', handleScroll);
@@ -139,6 +186,7 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
         {
 
 
+<<<<<<< HEAD
           name: 'View All Services'
           href: '/services'
           icon: Rocket
@@ -160,6 +208,8 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
     { name: 'About', href: '/about' }
     { name: 'Contact', href: '/contact' }
     { name: 'Pricing', href: '/pricing' }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           name: 'View All Services',
           href: '/services',
           icon: Rocket,
@@ -170,6 +220,7 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
     { name: 'Solutions', href: '/solutions' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
+<<<<<<< HEAD
     { name: 'Pricing', href: '/pricing' },  ];
 
   ];
@@ -188,6 +239,12 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
 
   ];
 
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -229,6 +286,7 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
         : 'bg-transparent'
 
 
+<<<<<<< HEAD
         : 'bg-transparent'
     } ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -240,6 +298,8 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
             className='flex items-center space-x-3'
 
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           >
             <div className='w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center shadow-2xl'>
               <Rocket className='w-7 h-7 text-white' />
@@ -280,6 +340,10 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
               </div>            </div>;
           </motion && motion.div>;
           {/* Desktop Navigation */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item, index) => (
               <div key={item.name} className="relative group">
@@ -288,6 +352,10 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                   <div
                     onMouseEnter={() => setActiveDropdown(item && item.name)}
                     onMouseLeave={() => setActiveDropdown(null)}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   >;
                     <button className='flex items-center space-x-1 text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50'>;
                       <span>{item && item.name}</span>;
@@ -295,9 +363,20 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                     </button>                      <span>{item && item.name}</span>;
                       <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />;
                     </button>;
+<<<<<<< HEAD
 
 
 
+=======
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     {/* Dropdown Menu */}
                     <AnimatePresence>;
                       {activeDropdown === item && item.name && (;
@@ -362,6 +441,7 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                 )}
               </div>;
             ))}
+<<<<<<< HEAD
           </div>;
           {/* Contact Info & CTA */}
           <div className='hidden lg:flex items-center space-x-6'>;
@@ -370,6 +450,23 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                       <span>{item.name}</span>
                       <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
                     </button>
+=======
+
+                    {/* Dropdown Menu */}
+                    <AnimatePresence>;
+                      {active_dropdown === item.name && (
+                        <motion.div;
+                          initial={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
+                          animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
+                          exit={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
+                          transition={{ duration: 0.2 }}
+
+                                  <div
+                                    className={`w-10 h-10 bg-gradient-to-r ${dropdownItem.color} rounded-lg flex items-center justify-center group-hover/item:scale-110 transition-transform duration-300`}
+                                  >
+                                    <dropdownItem.icon className='w-5 h-5 text-white' />
+                                  </div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
                                 </Link>
@@ -399,6 +496,10 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                     href={item.href}
                     className="text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50"
                   >
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           className='absolute top - full left - 0 mt - 2 w - 80 bg - gray - 900 / 95 backdrop - blur - xl border border - gray - 700 / 50 rounded - 2xl shadow - 2xl overflow - hidden';
                         >;
                           <div className='p - 4'>;
@@ -449,6 +550,10 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                     href={item.href}
                     className='text - gray - 300 hover:text - white transition - colors duration - 300 py - 2 px - 3 rounded - lg hover:bg - gray - 800 / 50'                  >                    className="text - gray - 300 hover:text - white transition - colors duration - 300 py - 2 px - 3 rounded - lg hover:bg - gray - 800 / 50";
                   >;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     {item.name}
                   </Link>)}
               </div>))}
@@ -459,14 +564,33 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
           {/* Contact Info & CTA */}
 
+<<<<<<< HEAD
                 <span>{contactInfo.mobile}</span>
               </div>
             </div>
+=======
+
+            {/* Contact Info */}
+            <div className='flex items-center space-x-4 text-sm text-gray-300'>;
+              <div className='flex items-center space-x-2'>;
+                <Phone className='w-4 h-4 text-cyan-400' />                <span>{contactInfo && contactInfo.mobile}</span>          <div className="hidden lg:flex items-center space-x-6">;
+            {/* Contact Info */}
+
+                <span>{contactInfo.mobile}</span>
+
+              </div>
+            </div>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className="flex items-center space-x-4 text-sm text-gray-300">;
               <div className="flex items-center space-x-2">;
                 <Phone className="w-4 h-4 text-cyan-400" />;
               </div>;
             </div>;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -480,11 +604,16 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                 href='/contact'
                 className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-cyan-500/30'>;
                 <Rocket className='w-4 h-4 mr-2' />                Get Started              <Link
+<<<<<<< HEAD
             {/* CTA Button */}
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
+<<<<<<< HEAD
 
                     {/* Dropdown Menu */}
                     <AnimatePresence>
@@ -577,16 +706,31 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
               <Link
                 href="/contact"
+=======
+              <Link
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+                href="/contact"
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-cyan-500/30">;
                 <Rocket className="w-4 h-4 mr-2" />;
                 Get Started;
               </Link>;
             </motion && motion.div>;
           </div>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Mobile Menu Button */}
           <div className='lg:hidden'>;
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <button
               onClick={() => setIsOpen(!isOpen)}
               className='text-gray-300 hover:text-white transition-colors duration-300 p-2 rounded-lg hover:bg-gray-800/50';
@@ -600,6 +744,7 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
               className="text-gray-300 hover:text-white transition-colors duration-300 p-2 rounded-lg hover:bg-gray-800/50";
             >;
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+<<<<<<< HEAD
             </button>
           </div>
         </div>
@@ -607,6 +752,22 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
 
 
+=======
+
+
+            </button>;
+          </div>;
+        </div>;
+      </div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -614,6 +775,7 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
+<<<<<<< HEAD
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50 overflow-hidden"
           >
@@ -660,15 +822,37 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
                       {activeDropdown === item.name && (
                         <motion.div
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                      {activeDropdown === item.name && (
+                        <motion.div
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         />;
                       </button>;
                       {activeDropdown === item && item.name && (;
                         <motion&& motion.div
+<<<<<<< HEAD
+=======
+
+
+                          initial={{ opacity: 0, y: -10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -10 }}
+
+                          transition={{ duration: 0.2 }}
+                          className='ml-4 mt-2 space-y-2'
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
                         >
                           {item.dropdownItems?.map(dropdownItem => (
+<<<<<<< HEAD
                           initial={{ opacity: 0, y: -10 }}
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: -10 }}
@@ -677,6 +861,9 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
                         >
                           {item.dropdownItems?.map(dropdownItem => (
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                             <Link
                               key={dropdownItem.name}
                               href={dropdownItem.href}
@@ -684,10 +871,13 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                               onClick={() => setIsOpen(false)}
                             >
                               <div
+<<<<<<< HEAD
                                 className={`w-8 h-8 bg-gradient-to-r ${dropdownItem.color} rounded-lg flex items-center justify-center`}
                               >
                                 <dropdownItem.icon className='w-4 h-4 text-white' />
                               </div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                           transition={{ duration: 0.2 }}
                           className="ml-4 mt-2 space-y-2"
@@ -695,6 +885,7 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                               <span className='text-gray-300 hover:text-white transition-colors'>                                {dropdownItem.name}                        >
                           {item.dropdownItems?.map((dropdownItem) => (
 
+<<<<<<< HEAD
                             >
                               <div className={`w-8 h-8 bg-gradient-to-r ${dropdownItem.color} rounded-lg flex items-center justify-center`}>
                                 <dropdownItem.icon className="w-4 h-4 text-white" />
@@ -707,6 +898,20 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
                               </span>
                             </Link>
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                            <Link
+                              key={dropdownItem && dropdownItem.name}
+                              href={dropdownItem && dropdownItem.href}
+                              className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-300"
+                              onClick={() => setIsOpen(false)}
+
+
+                              </span>
+                            </Link>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           ))}
                         </motion && motion.div>;
                       )}
@@ -715,7 +920,15 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                     <Link
 
 
+<<<<<<< HEAD
                       href={item.href}
+=======
+                      onClick={() => setIsOpen(false)}
+                    >;
+                      {item && item.name}
+                    </Link>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                       className='block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50'                      onClick={() => setIsOpen(false)}
 
@@ -742,8 +955,13 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
               </div>
               {/* Mobile CTA */}
               <div className='pt-4'>                  <span>{contactInfo.mobile}</span>
+<<<<<<< HEAD
                   )}
                 </div>;
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       className='block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50'                      onClick={() => setIsOpen(false)}                      className="block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50"
                       onClick={() => setIsOpen(false)}
                       className='block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50'                      onClick={() => setIsOpen(false)}
@@ -773,6 +991,11 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                   <span className="text-sm">{contactInfo.address}</span>
                 </div>
               </div>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className='pt-6 border-t border-gray-700/50 space-y-3'>;
                 <div className='flex items-center space-x-3 text-gray-300'>;
                   <Phone className='w-4 h-4 text-cyan-400' />;
@@ -787,6 +1010,10 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                   <span className='text-sm'>{contactInfo && contactInfo.address}</span>                </div>;
               </div>;
               {/* Mobile CTA */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Mobile Menu */}
       <AnimatePresence>;
         {is_open && (
@@ -906,10 +1133,19 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                   on_click={() => setIsOpen (false)}
                 >;
                   <Rocket className="w - 5 h - 5 inline mr - 2" />;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   Get Started;
                 </Link>;
               </div>;
             </div>;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className="pt-4">
                 <Link
                   href="/contact"
@@ -922,6 +1158,12 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
               </div>
             </div>
           </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+        )}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       </AnimatePresence>;
     </nav>;
@@ -933,12 +1175,22 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
   );
 
+<<<<<<< HEAD
         )}
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+          </motion.div>)}
+      </AnimatePresence>;
+    </nav>);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </AnimatePresence>
     </nav>
 );
   );
 }
+<<<<<<< HEAD
 
 }
 }
@@ -947,3 +1199,6 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 }
   );
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

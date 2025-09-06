@@ -27,4 +27,8 @@ const PostJob = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default PostJob;
+=======
+export default PostJob;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

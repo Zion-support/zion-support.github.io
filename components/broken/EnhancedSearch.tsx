@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }];
 setIsSearching (true);
 
@@ -83,6 +89,7 @@ setIsSearching (false) ;
   {
   opacity: 0, y: -10, scale: 0 && 0.95 
 
+<<<<<<< HEAD
 
 //Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
  //Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
@@ -126,6 +133,9 @@ setIsSearching (false)
   showResults && (<motion.div initial= {
   {
   opacity: 0, y: -10, scale: 0.95
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }animate= {
   {
   opacity: 1, y: 0, scale: 1
@@ -143,6 +153,10 @@ setIsSearching (false)
 
 }className="absolute top-full left-0 right-0 mt-2 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl z-50 max-h-96 overflow-y-auto" > {
   /* Filters */
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   opacity: 0, coordinate_y: -10, scale: 0.95;
 }animate= {
   {
@@ -155,6 +169,7 @@ setIsSearching (false)
   duration: 0.2;
 }className="absolute top - full left - 0 right - 0 mt - 2 bg - gray - 900 / 95 backdrop - blur - md border border - gray - 700 rounded - xl shadow - 2xl z - 50 max - h-96 overflow - y-auto" > {
   /* Filters */;
+<<<<<<< HEAD
 }{
   show_filters && (<div className="p - 4 border - b border - gray - 700"> <div className="flex items - center gap - 2 mb - 3"> <Filter className="w - 4 h - 4 text - gray - 400" /> <span className="text - sm font - medium text - gray - 300">Filter by Category</span> </div> <div className="flex flex - wrap gap - 2"> {
   categories.map ( (category) => (<button key= {
@@ -162,6 +177,19 @@ setIsSearching (false)
 }transition= {
   {
   duration: 0 && 0.2 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}{
+  show_filters && (<div className="p - 4 border - b border - gray - 700"> <div className="flex items - center gap - 2 mb - 3"> <Filter className="w - 4 h - 4 text - gray - 400" /> <span className="text - sm font - medium text - gray - 300">Filter by Category</span> </div> <div className="flex flex - wrap gap - 2"> {
+  categories.map ( (category) => (<button key= {
+
+  opacity: 0, y: -10, scale: 0 && 0.95 
+
+}transition= {
+  {
+  duration: 0 && 0.2 
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }className="absolute top-full left-0 right-0 mt-2 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl z-50 max-h-96 overflow-y-auto"> {;
   /* Filters */ ;
 }{;
@@ -189,6 +217,7 @@ setIsSearching (false)
   /* Search Suggestions */ ;
 }<AnimatePresence> {;
   showSuggestions && suggestions && suggestions.length > 0 && (<motion&& motion.div initial= {
+<<<<<<< HEAD
   opacity: 0, y: -10, scale: 0.95
 }transition= {
   {
@@ -226,6 +255,9 @@ setIsSearching (false)
   /* Search Suggestions */
 }<AnimatePresence> {
   showSuggestions && suggestions.length > 0 && (<motion.div initial= {
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   {
   opacity: 0, y: -10
 }animate= {
@@ -233,16 +265,37 @@ setIsSearching (false)
   opacity: 1, y: 0
 }exit= {
   {
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, X, Filter, TrendingUp, Clock, Star, Zap, Brain, Atom, Shield, Rocket } from 'lucide-react';
 
+<<<<<<< HEAD
 features?: string[];
+=======
+interface SearchResult {
+  id: string,
+  name: string,
+  description: string,
+  category: string,
+  type: string,
+  slug: string,
+  relevance: number,
+  features?: string[];
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   pricing?: {
     starter?: string;
     enterprise?: string
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface SearchProps {
   onSearch: (query: string) => void,
   onResultSelect: (result: SearchResult) => void,
@@ -250,6 +303,10 @@ interface SearchProps {
   className?: string;
   showFilters?: boolean
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const EnhancedSearch: React.FC<SearchProps> = ({
   onSearch;
   onResultSelect;
@@ -266,10 +323,15 @@ const EnhancedSearch: React.FC<SearchProps> = ({
   const [popularSearches] = useState([
     'AI ConsciousnessQuantum ComputingCybersecurityBusiness IntelligenceSpace TechnologyAutonomous Systems'
   ]);
+<<<<<<< HEAD
   // Mock search results - in real app, this would come from API
 
   // Mock search results - in real app, _this would come from API
 
+=======
+
+  // Mock search results - in real app, this would come from API
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const mockSearchResults: SearchResult[] = [
     {
       id: '1',
@@ -281,7 +343,11 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       relevance: 95,
       features: ['Emotional IntelligenceSelf-AwarenessConsciousness Evolution'],
       pricing: { starter: '$999/month', enterprise: 'Contact Sales' }
+<<<<<<< HEAD
 };
+=======
+    };
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       id: '2',
       name: 'Quantum AI Hybrid Computing',
@@ -292,7 +358,11 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       relevance: 92,
       features: ['Quantum SupremacyAI IntegrationHybrid Computing'],
       pricing: { starter: '$1,499/month', enterprise: 'Contact Sales' }
+<<<<<<< HEAD
 };
+=======
+    };
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       id: '3',
       name: 'Quantum Cybersecurity Intelligence',
@@ -304,38 +374,72 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       features: ['Quantum ResistanceThreat PredictionAI Security'],
       pricing: { starter: '$799/month', enterprise: 'Contact Sales' }
     }
+<<<<<<< HEAD
 ];
+=======
+  ];
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const categories = [
     { id: 'ai', name: 'AI & ML', icon: Brain, color: 'from-purple-500 to-pink-500' },
     { id: 'quantum', name: 'Quantum', icon: Atom, color: 'from-blue-500 to-cyan-500' },
     { id: 'security', name: 'Security', icon: Shield, color: 'from-red-500 to-orange-500' },
     { id: 'business', name: 'Business', icon: Rocket, color: 'from-emerald-500 to-teal-500' }
+<<<<<<< HEAD
 ];
+=======
+  ];
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Debounced search function
   const debouncedSearch = useCallback(
     useMemo(
       () => debounce((searchQuery: string) => {
         if (searchQuery.trim().length < 2) {
+<<<<<<< HEAD
 setResults([]);
           setShowResults(false);
           return
         }
         setIsSearching(true);
+=======
+          setResults([]);
+          setShowResults(false);
+          return
+        }
+
+        setIsSearching(true);
+        
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         // Simulate API call delay
         setTimeout(() => {
           const filteredResults = mockSearchResults.filter(result => {
             const matchesQuery = result.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                                result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                                result.category.toLowerCase().includes(searchQuery.toLowerCase());
+<<<<<<< HEAD
+=======
+            
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             const matchesFilters = selectedFilters.length === 0 || 
                                  selectedFilters.some(filter => 
                                    result.category.toLowerCase().includes(filter.toLowerCase()) ||
                                    result.type.toLowerCase().includes(filter.toLowerCase())
                                  );
+<<<<<<< HEAD
             return matchesQuery && matchesFilters
           });
           // Sort by relevance
           const sortedResults = filteredResults.sort((a, b) => b.relevance - a.relevance);
+=======
+            
+            return matchesQuery && matchesFilters
+          });
+
+          // Sort by relevance
+          const sortedResults = filteredResults.sort((a, b) => b.relevance - a.relevance);
+          
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           setResults(sortedResults);
           setShowResults(true);
           setIsSearching(false)
@@ -345,18 +449,34 @@ setResults([]);
     );
     [selectedFilters]
   );
+<<<<<<< HEAD
   useEffect(() => {
     debouncedSearch(query)
   }, [query, debouncedSearch]);
+=======
+
+  useEffect(() => {
+    debouncedSearch(query)
+  }, [query, debouncedSearch]);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Handle search input change
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setQuery(value);
+<<<<<<< HEAD
+=======
+    
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (value.trim().length === 0) {
       setShowResults(false);
       setResults([])
     }
   }, [suggestions, selectedIndex, query, handleSearch]);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Close search on outside click
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -364,6 +484,10 @@ setResults([]);
         setIsOpen(false)
       }
     };
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Handle search submission
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -373,17 +497,26 @@ setResults([]);
       setShowResults(false)
     }
   }, [router, handleSearch]);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Handle quick action click
   const handleQuickAction = useCallback((action: string) => {
     router.push(action);
     setIsOpen(false)
   }, [router]);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Add search to history
   const addToSearchHistory = (searchTerm: string) => {
     const newHistory = [searchTerm, ...searchHistory.filter(item => item !== searchTerm)].slice(0, 5);
     setSearchHistory(newHistory);
     localStorage.setItem('zion-search-history', JSON.stringify(newHistory))
   };
+<<<<<<< HEAD
   // Load search history from localStorage
   useEffect(() => {
     const savedHistory = localStorage.getItem('zion-search-history');
@@ -441,12 +574,19 @@ setResults([]);
   useEffect(() => {
     const savedHistory = localStorage.getItem('zion-search-history')
 
+=======
+
+  // Load search history from localStorage
+  useEffect(() => {
+    const savedHistory = localStorage.getItem('zion-search-history');
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (savedHistory) {
       try {
         setSearchHistory(JSON.parse(savedHistory))
       } catch (error) {
         console.error('Failed to parse search history:', error)
       }
+<<<<<<< HEAD
 }
   }, []);
   // Handle filter toggle
@@ -458,23 +598,44 @@ setResults([]);
   // Handle filter toggle
   const _toggleFilter = (_filterId: string) => {_setSelectedFilters(prev => 
 
+=======
+    }
+  }, []);
+
+  // Handle filter toggle
+  const toggleFilter = (filterId: string) => {
+    setSelectedFilters(prev => 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       prev.includes(filterId) 
         ? prev.filter(id => id !== filterId)
         : [...prev, filterId]
     )
+<<<<<<< HEAD
 };
+=======
+  };
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Handle result selection
   const handleResultSelect = (result: SearchResult) => {
     onResultSelect(result);
     setShowResults(false);
     setQuery('')
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Clear search
   const clearSearch = () => {
     setQuery('');
     setShowResults(false);
     setResults([])
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className={`relative ${className}`}>
       {/* Search Form */}
@@ -489,6 +650,10 @@ setResults([]);
             className="w-full pl-12 pr-20 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
             onFocus={() => setShowResults(true)}
           />
+<<<<<<< HEAD
+=======
+          
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Clear Button */}
           {query && (
             <button
@@ -499,6 +664,10 @@ setResults([]);
               <X className="w-4 h-4" />
             </button>
           )}
+<<<<<<< HEAD
+=======
+          
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Search Button */}
           <button
             type="submit"
@@ -508,7 +677,12 @@ setResults([]);
           </button>
         </div>
       </form>
+<<<<<<< HEAD
 {/* Search Results Dropdown */}
+=======
+
+      {/* Search Results Dropdown */}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <AnimatePresence>
         {showResults && (
           <motion.div
@@ -526,7 +700,11 @@ setResults([]);
                   <span className="text-sm font-medium text-gray-300">Filter by Category</span>
                 </div>
                 <div className="flex flex-wrap gap-2">
+<<<<<<< HEAD
 {categories.map((category) => (
+=======
+                  {categories.map((category) => (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <button
                       key={category.id}
                       onClick={() => toggleFilter(category.id)}
@@ -537,12 +715,20 @@ setResults([]);
                       }`}
                     >
                       <category.icon className="w-3 h-3" />
+<<<<<<< HEAD
 {category.name}
+=======
+                      {category.name}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     </button>
                   )}
                   <div className="flex-shrink-0 pr-4">
                     <button
+<<<<<<< HEAD
 onClick={() => handleSearch()}
+=======
+                      onClick={() => handleSearch()}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       disabled={isSearching || !query.trim()}
                       className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
@@ -550,6 +736,10 @@ onClick={() => handleSearch()}
                     </button>
                   </div>
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {/* Search Suggestions */}
                 <AnimatePresence>
                   {showSuggestions && suggestions.length > 0 && (
@@ -575,7 +765,12 @@ onClick={() => handleSearch()}
                           ))}
                         </div>
                       </div>
+<<<<<<< HEAD
 {/* Suggestions */}
+=======
+
+                      {/* Suggestions */}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <div className="max-h-64 overflow-y-auto">
                         {suggestions.map((suggestion) => (
                           <button
@@ -601,14 +796,23 @@ onClick={() => handleSearch()}
                 </AnimatePresence>
               </div>
             )}
+<<<<<<< HEAD
 {/* Search Results */}
+=======
+
+            {/* Search Results */}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className="p-4">
               {isSearching ? (
                 <div className="flex items-center justify-center py-8">
                   <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-400"></div>
                   <span className="ml-3 text-gray-400">Searching...</span>
                 </div>
+<<<<<<< HEAD
 ) : results.length > 0 ? (
+=======
+              ) : results.length > 0 ? (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div className="space-y-3">
                   {results.map((result) => (
                     <motion.div
@@ -634,7 +838,11 @@ onClick={() => handleSearch()}
                         </div>
                         <div className="flex items-center gap-1 text-cyan-400">
                           <Star className="w-4 h-4 fill-current" />
+<<<<<<< HEAD
 <span className="text-xs">{result.relevance}</span>
+=======
+                          <span className="text-xs">{result.relevance}</span>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         </div>
                       </div>
                     </motion.div>
@@ -642,7 +850,11 @@ onClick={() => handleSearch()}
                 </div>
               ) : query.trim().length > 0 ? (
                 <div className="text-center py-8">
+<<<<<<< HEAD
 <div className="text-gray-400 mb-2">No results found for "{query}"</div>
+=======
+                  <div className="text-gray-400 mb-2">No results found for "{query}"</div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <div className="text-sm text-gray-500">Try adjusting your search terms or filters</div>
                 </div>
               ) : (
@@ -655,7 +867,11 @@ onClick={() => handleSearch()}
                         <span className="text-sm font-medium text-gray-300">Recent Searches</span>
                       </div>
                       <div className="flex flex-wrap gap-2">
+<<<<<<< HEAD
 {searchHistory.map((term, index) => (
+=======
+                        {searchHistory.map((term, index) => (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           <button
                             key={index}
                             onClick={() => setQuery(term)}
@@ -667,14 +883,23 @@ onClick={() => handleSearch()}
                       </div>
                     </div>
                   )}
+<<<<<<< HEAD
 {/* Popular Searches */}
+=======
+
+                  {/* Popular Searches */}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <div>
                     <div className="flex items-center gap-2 mb-3">
                       <TrendingUp className="w-4 h-4 text-gray-400" />
                       <span className="text-sm font-medium text-gray-300">Popular Searches</span>
                     </div>
                     <div className="flex flex-wrap gap-2">
+<<<<<<< HEAD
 {popularSearches.map((term, index) => (
+=======
+                      {popularSearches.map((term, index) => (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         <button
                           key={index}
                           onClick={() => setQuery(term)}
@@ -694,6 +919,7 @@ onClick={() => handleSearch()}
     </div>
   )
 };
+<<<<<<< HEAD
   opacity: 0, y: -10
 }className="absolute top-full left-0 right-0 mt-2 bg-gray-900 border border-gray-700 rounded-xl shadow-2xl overflow-hidden z-10" > {
   /* Quick Actions */
@@ -778,6 +1004,10 @@ onClick={() => handleSearch()}
 // Debounce utility function function debounce<T extends (...args: unknown[]) => any> (func: T;
 wait: number
 }export default EnhancedSearch;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Debounce utility function
 function debounce<T extends (...args: any[]) => any>(
   func: T
@@ -785,6 +1015,16 @@ function debounce<T extends (...args: any[]) => any>(
 ): (...args: Parameters<T>) => void {
   let timeout: NodeJS.Timeout
   return (...args: Parameters<T>) => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+clearTimeout(timeout)
+    timeout = setTimeout(() => func(...args), wait)
+  }
+  opacity: 0, y: -10 
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }className="absolute top-full left-0 right-0 mt-2 bg-gray-900 border border-gray-700 rounded-xl shadow-2xl overflow-hidden z-10"> {;
   /* Quick Actions */ ;
 }<div className="p-4 border-b border-gray-700"> <h3 className="text-sm font-medium text-gray-400 mb-3">Quick Actions</h3> <div className="grid grid-cols-2 gap-2"> {;
@@ -883,6 +1123,13 @@ export default EnhancedSearch;
 
 
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   category.id;
 }on_click= {
   () => toggle_filter (category.id);
@@ -1008,6 +1255,7 @@ function debounce < T extends (...args: any[]) => any>(
 }
 export default EnhancedSearch;
 ;
+<<<<<<< HEAD
     clearTimeout(timeout)
     timeout = setTimeout(() => func(...args), wait)
   }
@@ -1022,3 +1270,6 @@ export default EnhancedSearch;
 }
 }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

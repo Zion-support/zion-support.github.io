@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 import React, { useState } from 'react';
 
@@ -23,6 +24,13 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 export interface TreeNode {;
+=======
+=======
+
+import React, { useState } from 'react';
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   name: string;
   path: string;
   type: 'folder' | 'file';
@@ -41,6 +49,10 @@ function NodeItem({
   node
   depth
   onDeploy
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 interface TreeProps {
   nodes: TreeNode[];
@@ -63,10 +75,18 @@ function NodeItem(): any ({;
   depth: number;
 
 import React, { useState } from "react";
+<<<<<<< HEAD
 export interface TreeNode {
   name: string
   path: string
   type: "folder" | "file"
+=======
+
+
+export interface TreeNode {
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
   const toggle = () => setOpen(v => !v);
   const copyPath = async () => {;
@@ -76,10 +96,19 @@ export interface TreeNode {;
   path: string,;
   type: "folder" | "file",;
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   name: string,
   path: string,
   type: "folder" | "file",;
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   exists?: boolean;
   children?: TreeNode[];
 }
@@ -92,6 +121,7 @@ interface TreeProps {;
 
 function NodeItem(): any ({ node, depth, onDeploy }: { node: TreeNode, depth: number, onDeploy?: (path: string) => void }) {;
 
+<<<<<<< HEAD
   exists?: boolean;
   children?: TreeNode[];
 }
@@ -161,10 +191,13 @@ interface TreeProps {
   onDeploy?: (path: string) => void
 }
 function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, onDeploy?: (path: string) => void }) {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [open, setOpen] = useState<boolean>(false);
 
   const hasChildren = Array.isArray(node.children) && node.children.length > 0;
   const toggle = () => setOpen((v) => !v);
+<<<<<<< HEAD
   const copyPath = async () => {
     await navigator.clipboard.writeText(node.path)
   }
@@ -179,11 +212,23 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
       } as any
       body: JSON.stringify({ path: node.path })
     });  };      headers: {
+=======
+
+  };
+
+  const clonePath = async () => {
+    const url = `${window.location.origin}/api/dev/source-map`;
+    await fetch(url, {
+      method: "POST",
+      headers: {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         "Content-Type": "application/json";
         // Expect an admin token in local storage, fall back to prompt
         "x-admin-token": localStorage.getItem("ADMIN_TOKEN") |""} as any;
       body: JSON.stringify({ path: node.path })})
 
+<<<<<<< HEAD
   on_deploy?: (path: string) => void;
 }) {
   const [open, set_open] = useState < boolean>(false);
@@ -266,15 +311,51 @@ function NodeItem ({ node, depth, on_deploy }: { node: TreeNode, depth: number, 
             on_click={deploy}
             title='Auto - deploy';
           >;
+=======
+
+  const copyPath = async () => {;
+    await navigator && navigator.clipboard.writeText(node && node.path);
+=======
+
+  };
+  const clonePath = async () => {;
+    const url = `${window && window.location.origin}/api/dev/source-map`;
+    await fetch(url, {;
+      method: 'POST',;
+      headers: {;
+        'Content-Type': 'application/json',;
+        // Expect an admin token in local storage, fall back to prompt;
+        'x-admin-token': localStorage && localStorage.getItem('ADMIN_TOKEN') || '',;
+      } as any,;
+      body: JSON && JSON.stringify({ path: node && node.path }),;
+    });  };      headers: {;
+        "Content-Type": "application/json";
+        // Expect an admin token in local storage, fall back to prompt;
+        "x-admin-token": localStorage && localStorage.getItem("ADMIN_TOKEN") || ""} as any;
+      body: JSON && JSON.stringify({ path: node && node.path })});
+  };
+  const deploy = () => onDeploy && onDeploy(node && node.path);
+  return (
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             Deploy;
           </button>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {has_children && open && (
         <div className='ml - 4 border - l pl - 2'>;
           {node.children!.map (child => (
             <NodeItem;
               key={child.path}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               node={child}
               depth={depth + 1}
               on_deploy={on_deploy}
@@ -289,6 +370,7 @@ function NodeItem ({ node, depth, on_deploy }: { node: TreeNode, depth: number, 
 
 export function Tree(): any ({ nodes, onDeploy }: TreeProps) {;
 
+<<<<<<< HEAD
     <div className="ml-2">
       <div className="flex items-center gap-2 py-1">
         {hasChildren ? (
@@ -302,6 +384,8 @@ export function Tree(): any ({ nodes, onDeploy }: TreeProps) {;
         <span className={`font - mono text - sm ${node.exists ? "text - green - 600" : "text - gray - 500"}`}>;
           {node.path}
 export function Tree(): any ({ nodes, onDeploy }: TreeProps) {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="w-full">;
       {nodes && nodes.map((n) => (;
@@ -311,6 +395,11 @@ export function Tree(): any ({ nodes, onDeploy }: TreeProps) {;
     </div>;
 
   );
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </span>;
         <div className="ml - auto flex gap - 2">;
           <button className="px - 2 py - 0.5 text - xs bg - gray - 100 rounded" on_click={copy_path} title="Copy path">Copy</button>;
@@ -344,16 +433,31 @@ function Tree() {
       ))}
     </div>);
 ;
+<<<<<<< HEAD
 export default Tree;
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+export default Tree;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }</div> </div> {;
   hasChildren && open && (<div className="ml-4 border-l pl-2"> {;
   node && node.children!.map ( (child) => (<NodeItemkey= {
   child && child.path 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }node= {
   child
 }depth= {
   depth + 1
 }onDeploy= {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onDeploy 
 }/>) ) ;
 }</div>) ;
@@ -364,19 +468,30 @@ export default Tree;
   return (<div className="w-full"> {;
   nodes && nodes.map ( (n) => (<NodeItemkey= {
   n && n.path 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }node= {
   n
 }depth= {
   0
 }onDeploy= {
+<<<<<<< HEAD
   onDeploy 
 }/>) ) ;
 }</div>) ;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   onDeploy 
 }/>) ) ;
 }</div>) ;
+<<<<<<< HEAD
 }export default Tree;}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default Tree;
     <div className="w-full">
       {nodes.map((n) => (
@@ -390,8 +505,15 @@ export default Tree;
       ))}
     </div>
   );
+<<<<<<< HEAD
 }
 export default Tree;
+=======
+
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   child.path;
 }node= {
   child;
@@ -420,6 +542,7 @@ function Tree() {
 }export default Tree;}
 export default Tree;
 ;
+<<<<<<< HEAD
 
 }
 
@@ -590,3 +713,6 @@ export default Tree;
   );
     </div>
   );
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

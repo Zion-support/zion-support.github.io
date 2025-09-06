@@ -1,13 +1,22 @@
 
 
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Sparkles, Loader2  } from 'lucide-react';
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Sparkles, Loader2} from 'lucide-react';
 import {useResumeEnhancer} from '@/hooks/useResumeEnhancer';
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface AIEnhancementButtonProps {
 
   currentContent: string
@@ -15,6 +24,12 @@ interface AIEnhancementButtonProps {
   context?: string;
   onEnhanced: (enhancedContent: string) => void
 
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Sparkles, Loader2} from 'lucide-react';
@@ -22,16 +37,23 @@ import {Sparkles, Loader2} from 'lucide-react';
 export function AIEnhancementButton({;
 
 
+<<<<<<< HEAD
   buttonText?: string;
   className?: string
 }
 export function AIEnhancementButton({
 
 export function AIEnhancementButton({;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   currentContent;
   enhancementType;
   context;
   onEnhanced;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   buttonText = "Enhance with AI";
 
 
@@ -44,6 +66,7 @@ export function AIEnhancementButton({;
 
 
 
+<<<<<<< HEAD
   buttonText = "Enhance with AI";
   className;
 }: AIEnhancementButtonProps) {;
@@ -54,18 +77,26 @@ export function AIEnhancementButton({;
       setError('Please enter at least some basic content before enhancing');
       return;
     }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     setError(null);
     const enhancedContent = await enhanceContent(;
       currentContent;
       enhancementType;
       context;
     );
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (enhancedContent) {;
       onEnhanced(enhancedContent);
     }
   };
 
 
+<<<<<<< HEAD
   buttonText = "Enhance with AI";
   className
 }: AIEnhancementButtonProps) {
@@ -88,6 +119,11 @@ export function AIEnhancementButton({;
   }
 
   buttonText = "Enhance with AI";
+=======
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Sparkles, Loader2 } from 'lucide-react',;
@@ -117,6 +153,7 @@ export function AIEnhancementButton({
       setError('Please enter at least some basic content before enhancing'),
       return
     }
+<<<<<<< HEAD
     
     setError(null);
     const enhancedContent = await enhanceContent(
@@ -144,6 +181,13 @@ export function AIEnhancementButton({
   
   
   
+=======
+
+
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <Button
       type="button"
@@ -151,6 +195,7 @@ export function AIEnhancementButton({
       size="sm"
       className={`h-6 gap-1 text-primary hover:text-primary ${className}`}
       onClick={handleEnhance}
+<<<<<<< HEAD
 
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
@@ -204,6 +249,9 @@ export function AIEnhancementButton({;
       onClick={handleEnhance}
       disabled={isEnhancing}
     >;
+=======
+      disabled={isEnhancing}>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {isEnhancing ? (;
         <Loader2 className="h-3 w-3 animate-spin" />;
       ) :(;
@@ -231,6 +279,7 @@ function AIEnhancementButton() {
   const { enhance_content, is_enhancing } = useResumeEnhancer ();
   const [error, set_error] = useState < string | null>(null);
 ;
+<<<<<<< HEAD
   const handle_enhance = async () => {
     // Check condition
 if (.length < 10) {) {
@@ -288,3 +337,8 @@ context);
 }
 }
 ;
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

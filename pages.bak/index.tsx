@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 export default function Home() { return (<main style={{\"padding\": \'20\'}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}
 module.exports = default function Home() { return (<main style={{padding: "20"}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}'"'"
 import React from 'react';
@@ -15,6 +16,13 @@ module.exports = default function Home() { return (<main style={{padding: "20"}}
 import React from 'react';
 interface IndexProps {
   // Add props here as needed
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function Home() { return (<main style={{\"padding\": \'20\'}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}
 module.exports = default function Home() { return (<main style={{padding: "20"}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}'"'"
 export default function Home() { return (<main style={{\"padding\": \'20\'}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}
@@ -29,7 +37,12 @@ interface IndexProps {
   // Add props here as needed
 }
 
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function Index({ }: IndexProps) {
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -68,6 +81,7 @@ export default function Index(): any ({ }: IndexProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
+<<<<<<< HEAD
 
 
 
@@ -80,3 +94,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

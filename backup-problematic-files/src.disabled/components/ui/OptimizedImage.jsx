@@ -9,4 +9,8 @@ const OptimizedImage = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default OptimizedImage;
+=======
+export default OptimizedImage;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

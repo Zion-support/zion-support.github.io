@@ -43,10 +43,16 @@ import {;
   Factory,;
   Car,;
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
 
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -72,6 +78,8 @@ import {
   Bot
   Factory
   Car
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Menu,
   X,
   ChevronDown,
@@ -93,6 +101,7 @@ import {
   Bot,
   Factory,
   Car,;
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -118,6 +127,10 @@ Menu
   Factory
   Car
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 } from "lucide-react";
 import Link from "next/link";
 interface EnhancedNavigationProps {;
@@ -280,6 +293,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
     return () => window && window.removeEventListener("scroll", handleScroll);
   }, []);
 
+<<<<<<< HEAD
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)
   }, []),
@@ -469,6 +483,13 @@ const EnhancedNavigation: React.FC < EnhancedNavigationProps> = ({
     { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' }
 ];
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  ];
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   const contact_info = {
     mobile: "+1 302 464 0950",
@@ -517,7 +538,11 @@ const EnhancedNavigation: React.FC < EnhancedNavigationProps> = ({
             initial={{ opacity: 0, coordinate_x: -20 }}
             animate={{ opacity: 1, coordinate_x: 0 }}
             transition={{ duration: 0.5 }}
+<<<<<<< HEAD
 className="flex items - center space - x-3";
+=======
+            className="flex items - center space - x-3";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           >;
             <Link href="/" className="flex items - center space - x-3 group">;
               <div className="relative">;
@@ -531,16 +556,28 @@ className="flex items - center space - x-3";
                   Zion Tech Group;
                 </div>;
                 <div className="text - xs text - cyan - 400">;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   Revolutionary Technology;
                 </div>;
               </div>;
             </Link>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       />;
                     </button>;
                     <AnimatePresence>;
                       {activeDropdown === item && item.name && (;
                         <motion&& motion.div
                           initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
                           transition={{ duration: 0 && 0.2 }}
@@ -561,14 +598,22 @@ className="flex items - center space - x-3";
                   </div>;
                 ) : (;
                   <Link
+<<<<<<< HEAD
 href={item && item.href}
+=======
+                    href={item && item.href}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2">;
                     {item && item.name}
                   </Link>;
                 )}
               </motion && motion.div>;
             ))}
+<<<<<<< HEAD
 </div>;
+=======
+          </div>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Right side actions */}
           <div className="hidden lg:flex items-center space-x-4">;
             {/* Search */}
@@ -645,10 +690,15 @@ href={item && item.href}
 
 
 
+<<<<<<< HEAD
 transition={{ duration: 0 && 0.5, delay: 0 && 0.6 }}
               className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300">;
               <Search className="w-5 h-5" />;
             </motion && motion.button>;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Notifications */}
             <motion&& motion.button
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -668,6 +718,7 @@ transition={{ duration: 0 && 0.5, delay: 0 && 0.6 }}
             </motion && motion.button>;
 
 
+<<<<<<< HEAD
 
 
 
@@ -682,6 +733,14 @@ transition={{ duration: 0 && 0.5, delay: 0 && 0.6 }}
               <div className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full animate-pulse" />
             </motion.button>
 
+=======
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* CTA Button */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -695,11 +754,16 @@ transition={{ duration: 0 && 0.5, delay: 0 && 0.6 }}
             </motion && motion.div>;
           </div>;
           {/* Mobile menu button */}
+<<<<<<< HEAD
 <motion&& motion.button
+=======
+          <motion&& motion.button
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             initial={{ opacity: 0, scale: 0 && 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0 && 0.5, delay: 0 && 0.9 }}
             onClick={() => setIsOpen(!isOpen)}
+<<<<<<< HEAD
 
           </motion && motion.button>;
         </div>;
@@ -715,16 +779,36 @@ className="lg:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 
           </motion && motion.button>;
         </div>;
       </div>;
+=======
+            className="lg:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300";
+          >;
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+
+          </motion && motion.button>;
+        </div>;
+      </div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (;
           <motion&& motion.div
+<<<<<<< HEAD
 
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
@@ -738,14 +822,23 @@ className="lg:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 
                   type="text"
                   placeholder="Search services..."
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+<<<<<<< HEAD
                 />;
               </div>;
+=======
+
+                />;
+              </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {/* Navigation Items */}
               {navigationItems && navigationItems.map((item) => (;
                 <div key={item && item.name} className="space-y-2">;
                   <Link
                     href={item && item.href}
                     onClick={() => setIsOpen(false)}
+<<<<<<< HEAD
 className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2";
                   >;
                     {item && item.name}
@@ -753,6 +846,18 @@ className="block text-gray-300 hover:text-cyan-400 transition-colors duration-30
                   {item && item.hasDropdown && item && item.dropdownItems && (;
                     <div className="ml-4 space-y-1">;
                       {item && item.dropdownItems.map((dropdownItem) => (;
+=======
+
+                    className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2";
+                  >;
+                    {item && item.name}
+                  </Link>;
+
+                  {item && item.hasDropdown && item && item.dropdownItems && (;
+                    <div className="ml-4 space-y-1">;
+                      {item && item.dropdownItems.map((dropdownItem) => (;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         <Link
                           key={dropdownItem && dropdownItem.name}
                           href={dropdownItem && dropdownItem.href}
@@ -766,6 +871,10 @@ className="block text-gray-400 hover:text-cyan-400 transition-colors duration-30
                   )}
                 </div>;
               ))}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         <Link
                           key={dropdownItem.name}
                           href={dropdownItem.href}
@@ -783,7 +892,10 @@ className="block text-gray-400 hover:text-cyan-400 transition-colors duration-30
 
               {/* Contact Info */}
 
+<<<<<<< HEAD
 {/* Contact Info */}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className="pt-4 border-t border-cyan-500/20">;
                 <div className="space-y-2 text-sm text-gray-400">;
                   <div className="flex items-center space-x-2">;
@@ -796,6 +908,11 @@ className="block text-gray-400 hover:text-cyan-400 transition-colors duration-30
                   </div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {/* Mobile CTA */}
               <div className="pt-4">;
                 <Link
@@ -900,17 +1017,27 @@ className="block text-gray-400 hover:text-cyan-400 transition-colors duration-30
                 </Link>;
               </div>;
             </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </motion.div>)}
       </AnimatePresence>;
     </nav>);
 }
 export default EnhancedNavigation;
 ;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </AnimatePresence>
     </nav>
 
 };
 
+<<<<<<< HEAD
 export default EnhancedNavigation;
 
 );
@@ -955,9 +1082,16 @@ export default EnhancedNavigation;
 };
 export default EnhancedNavigation;
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default EnhancedNavigation;
 );
 };
 export default EnhancedNavigation;
 
+<<<<<<< HEAD
 export default EnhancedNavigation;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

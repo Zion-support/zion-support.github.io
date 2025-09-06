@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 
 import Head from 'next / head';
 import Link from 'next / link';
@@ -95,6 +96,22 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
     { metric: 'MTTR', value: '15 min', target: '30 min', status: 'exceeded' }
     { metric: 'Change Failure Rate', value: '0.8%', target: '2%', status: 'exceeded' }
 
+=======
+
+import Head from 'next / head';
+import Link from 'next / link';
+;
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const GitHubActionsAutomationBlueprint: React.FC = () => {
+  const automation_workflows = [;
+    {
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
       name: 'Continuous Integration',
@@ -129,7 +146,25 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
       description: 'Automated content creation and optimization',
       status: 'active',
       frequency: 'hourly',
+<<<<<<< HEAD
       health: 'excellent'
+=======
+
+      health: 'excellent'
+
+  const automationFeatures = [
+
+    {
+      feature: 'Self - Healing CI / CD',
+      description: 'Automatic detection and resolution of pipeline failures',
+      benefit: 'Reduced manual intervention and faster deployments',
+      status: 'implemented';
+=======
+      health: 'excellent'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   ];
 
@@ -200,6 +235,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
 
   const getFrequencyColor = (frequency: string) => {
+<<<<<<< HEAD
     { metric: 'Change Failure Rate', value: '0.8%', target: '2%', status: 'exceeded' }
   ];
 ;
@@ -212,6 +248,9 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
       default: return 'text - gray - 400';
     }
   }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   const getFrequencyColor = (frequency: string) =>: any {
     switch (frequency) {
@@ -288,6 +327,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
       case 'on - push': return 'bg - blue - 500 / 20 text - blue - 400';
       case 'on - merge': return 'bg - green - 500 / 20 text - green - 400';
       case 'daily': return 'bg - yellow - 500 / 20 text - yellow - 400';
@@ -296,6 +336,8 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
       default: return 'bg - gray - 500 / 20 text - gray - 400';
     }
   }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   return (
     <div className="min - h-screen bg - gradient - to - br from - gray - 900 via - green - 900 to - gray - 900 text - white">;
@@ -340,6 +382,10 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
             <p className="text - gray - 300 text - sm mt - 2">Recently optimized</p>;
           </div>;
         </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Automation Workflows */}
         <div className="mb - 8">;
           <h2 className="text - 2xl font - bold mb - 6 text - white">Automation Workflows</h2>;
@@ -356,6 +402,27 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
                 <div className="flex justify - between items - center">;
                   <span className={`text - xs ${getStatusColor (workflow.status)}`}>;
                     ● {workflow.status}
+<<<<<<< HEAD
+=======
+
+
+        {/* Automation Workflows */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold mb-6 text-white">Automation Workflows</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {automationWorkflows.map((workflow, index) => (
+              <div key={index} className="bg-white/10 rounded-xl p-6 border border-white/20">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-lg font-semibold text-white">{workflow.name}</h3>
+                  <span className={`px-2 py-1 text-xs rounded-full ${getFrequencyColor(workflow.frequency)}`}>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     {workflow.frequency  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -385,6 +452,10 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
               </div>))}
           </div>;
         </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Automation Features */}
         <div className="mb - 8">;
           <h2 className="text - 2xl font - bold mb - 6 text - white">Automation Features</h2>;
@@ -395,6 +466,34 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
                   <h3 className="text - lg font - semibold text - white">{feature.feature}</h3>;
                   <span className={`px - 2 py - 1 text - xs rounded - full ${getStatusColor (feature.status)}`}>;
                     {feature.status}
+<<<<<<< HEAD
+=======
+
+
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>
+        </div>
+        {/* Automation Features */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold mb-6 text-white">Automation Features</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {automationFeatures.map((feature, index) => (
+              <div key={index} className="bg-white/10 rounded-xl p-6 border border-white/20">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-lg font-semibold text-white">{feature.feature}</h3>
+                  <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(feature.status)}`}>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     {feature.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -414,6 +513,10 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
               </div>))}
           </div>;
         </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Performance Metrics */}
         <div className="mb - 8">;
           <h2 className="text - 2xl font - bold mb - 6 text - white">Performance Metrics</h2>;
@@ -437,6 +540,47 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
                       <td className="py - 3 px - 4">;
                         <span className={`px - 2 py - 1 text - xs rounded - full ${getStatusColor (metric.status)}`}>;
                           {metric.status}
+<<<<<<< HEAD
+=======
+
+
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>
+        </div>
+        {/* Performance Metrics */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold mb-6 text-white">Performance Metrics</h2>
+          <div className="bg-white/10 rounded-xl p-6 border border-white/20">
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="border-b border-white/20">
+                    <th className="text-left py-3 px-4 text-green-400">Metric</th>
+                    <th className="text-left py-3 px-4 text-green-400">Current Value</th>
+                    <th className="text-left py-3 px-4 text-green-400">Target</th>
+                    <th className="text-left py-3 px-4 text-green-400">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {performanceMetrics.map((metric, index) => (
+                    <tr key={index} className="border-b border-white/10">
+                      <td className="py-3 px-4 text-white">{metric.metric}</td>
+                      <td className="py-3 px-4 text-green-400 font-semibold">{metric.value}</td>
+                      <td className="py-3 px-4 text-gray-300">{metric.target}</td>
+                      <td className="py-3 px-4">
+                        <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(metric.status)}`}>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           {metric.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -681,6 +825,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 }
 ;
 
+<<<<<<< HEAD
 };
 
       status: 'implemented'
@@ -1049,4 +1194,11 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 }
 };
 
+=======
+=======
+
+};
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default GitHubActionsAutomationBlueprint;

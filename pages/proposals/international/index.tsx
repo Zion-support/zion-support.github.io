@@ -3,6 +3,7 @@
       const data = await res.json();
       setItems(data.proposals || []);
 
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import React, { useEffect, useState } from 'react',;
 ;
@@ -15,6 +16,8 @@ export default function InternationalProposals() {
       const res = await fetch('/api/proposals/list')
       const data = await res.json()
       setItems(data.proposals |[])
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       setLoading(false)
     })()
   }, [])
@@ -23,6 +26,37 @@ export default function InternationalProposals() {
     const res = await fetch('/api/proposals/list')
     const data = await res.json()
     setItems(data.proposals |[])
+<<<<<<< HEAD
+=======
+
+=======
+import React, { useEffect, useState } from 'react',
+;
+export default /**
+ * InternationalProposals - Function description
+ */
+function InternationalProposals() {
+  const [items, set_items] = useState < any[]>([]),
+  const [loading, set_loading] = useState (true),
+  useEffect (() => {
+    (async () => {
+      const res = await fetch ('/api / proposals / list'),
+      const data = await res.json (),
+      set_items (data.proposals || []),
+      set_loading (false);
+    })();
+  }, []),
+  async /**
+ * update_status - Function description
+ */
+function update_status() {
+    await fetch ('/api / proposals / status', { method: 'POST', headers: { 'Content - Type': 'application / json' }, body: JSON.stringify ({ id, status }) }),
+    const res = await fetch ('/api / proposals / list'),
+    const data = await res.json (),
+    set_items (data.proposals || []);
+  }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   }
@@ -65,7 +99,11 @@ export default function InternationalProposals() {
 
 }
 
+<<<<<<< HEAD
 }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div > Loading…</div>) : (
         <div className="grid gap - 4">;
           {items.map ((p) => (
@@ -121,6 +159,7 @@ export default function InternationalProposals() {
   )
 
 }
+<<<<<<< HEAD
 
 
   }
@@ -201,11 +240,22 @@ export default function InternationalProposals(req, res) {
             </div>
           ))}
           {!items.length && <div className="opacity-70">No proposals yet.</div>}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </div>
       )}
     </div>
   );
 };
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -228,7 +278,15 @@ export default function InternationalProposals(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 
 }
 }
+=======
+
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

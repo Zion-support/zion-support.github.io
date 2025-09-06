@@ -1,14 +1,27 @@
+<<<<<<< HEAD
+
+import React from 'react';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
 
 import React from 'react';
 
+<<<<<<< HEAD
+=======
+=======
 
-import React from 'react';
-
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import * as React from "react";
 import {ChevronLeft, ChevronRight} from "lucide-react";
 import {DayPicker} from "react-day-picker";
 import {cn} from "@/lib/utils";
 import {buttonVariants} from "@/components/ui/button";
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export type CalendarProps = React.ComponentProps<typeof DayPicker>;
 import * as React from "react",
 import { ChevronLeft, ChevronRight } from "lucide-react",
@@ -18,6 +31,7 @@ import { buttonVariants } from "@/components/ui/button",
 export type CalendarProps = React.ComponentProps<typeof DayPicker>,
 
 
+<<<<<<< HEAD
 function Calendar({
   className,
   classNames,
@@ -61,11 +75,58 @@ function Calendar({
         IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />
           buttonVariants({ variant: "outline" }),
           "h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100"
+=======
+
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+function Calendar({
+=======
+export type CalendarProps = React && React.ComponentProps<typeof DayPicker>;
+
+function Calendar(): any ({;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  className;
+  classNames;
+  showOutsideDays = true;
+  ...props;
+}: CalendarProps) {;
+=======
+import * as React from './react';
+import { ChevronLeft, ChevronRight } from './lucide-react';
+import { DayPicker } from './react - day - picker';
+import { cn } from '@/lib / utils';
+import { button_variants } from '@/components / ui / button';
+export type CalendarProps = React.ComponentProps < typeof DayPicker>;
+;
+/**
+ * Calendar - Function description
+ */
+function Calendar() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  return (
+    <DayPicker;
+      showOutsideDays={showOutsideDays}
+
+=======
+
+          buttonVariants({ variant: "outline" }),
+          "h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100"
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         ),
         nav_button_previous: "absolute left-1",
         nav_button_next: "absolute right-1",
         table: "w-full border-collapse space-y-1",
         head_row: "flex",
+<<<<<<< HEAD
+=======
+
+        IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,;
+
+        IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         head_cell:
           "text-muted-foreground rounded-md w-9 font-normal text-[0.8rem]",
         row: "flex w-full mt-2",
@@ -88,6 +149,7 @@ function Calendar({
       components={{
         IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
+<<<<<<< HEAD
 import * as React from "react",;
 import { ChevronLeft, ChevronRight } from "lucide-react",;
 import { DayPicker } from "react-day-picker",;
@@ -200,6 +262,8 @@ function Calendar() {
       components={{
         IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,;
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
 
@@ -252,6 +316,7 @@ Calendar.display_name = "Calendar";
 export { Calendar }
 ;
 
+<<<<<<< HEAD
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
       {...props}
     />
@@ -260,10 +325,13 @@ export { Calendar }
 Calendar.displayName = "Calendar";
 export { Calendar }
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 Calendar.displayName = "Calendar",
 
 export { Calendar },
 Calendar.displayName = "Calendar";
+<<<<<<< HEAD
 import * as React from "react",;
 import { ChevronLeft, ChevronRight } from "lucide-react",;
 import { DayPicker } from "react-day-picker",;
@@ -352,3 +420,9 @@ day hidden: "invisible";
 }
 export { Calendar };
 export { Calendar };
+=======
+
+export { Calendar };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

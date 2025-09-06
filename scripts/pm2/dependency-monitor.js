@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -706,6 +707,8 @@ const monitor = new DependencyMonitor(),;
 monitor.run().catch(error => {,;
   process.exit(1);
 }),;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
       , vulnerabilities: {, total: 0, critical: 0, high: 0, moderate: 0,
@@ -1074,3 +1077,7 @@ monitor.run ().catch (error = > { process.exit (1)});
 
 monitor.run().catch(error = > {; process.exit(1)});
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

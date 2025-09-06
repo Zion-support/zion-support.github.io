@@ -1,5 +1,11 @@
 
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
@@ -8,6 +14,7 @@ import {Milestone, MilestoneStatus} from './types';
 import {useRecordActivity} from './useRecordActivity';
 
 
+<<<<<<< HEAD
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
@@ -22,10 +29,17 @@ export const useUpdateMilestone = () => {
     if (!user) return false;
     try {
       setIsSubmitting(true);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const useUpdateMilestone = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { recordMilestoneActivity } = useRecordActivity();
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
@@ -36,7 +50,11 @@ export const useUpdateMilestone = () => {
   const { user } = useAuth(),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { recordMilestoneActivity } = useRecordActivity(),
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   
   const updateMilestoneStatus = async (milestoneId: string, newStatus: MilestoneStatus, comment?: string) => {
     if (!user) return false,
@@ -44,12 +62,22 @@ export const useUpdateMilestone = () => {
     try {
       setIsSubmitting(true),
       
+<<<<<<< HEAD
       
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Get the current status
       const { data: milestoneData, error: fetchError } = await supabase
         .from('project_milestones')
         .select('status')
         .eq('id', milestoneId)
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         .single(),
 
@@ -61,6 +89,7 @@ export const useUpdateMilestone = () => {
       
 
 
+<<<<<<< HEAD
       const previousStatus = milestoneData && milestoneData.status;
         .single();
       if (fetchError) throw fetchError;
@@ -73,11 +102,14 @@ export const useUpdateMilestone = () => {
       
       const previousStatus = milestoneData.status,
       
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Update the milestone status
       const { error } = await supabase
         .from('project_milestones')
         .update({ status: newStatus })
 
+<<<<<<< HEAD
         .eq('id', milestoneId),
 
       
@@ -88,6 +120,24 @@ export const useUpdateMilestone = () => {
       console && console.error("Error updating milestone status:", err);
       toast && toast.error("Failed to update status: " + err && err.message),
       return false
+=======
+=======
+
+        .eq('id', milestoneId),
+
+      
+      toast && toast.success(`Milestone status changed to ${newStatus}`);
+      
+      return true
+    } catch (err: any) {
+
+      console.error("Error updating milestone status:", err),
+      toast.error("Failed to update status: " + err.message),
+
+
+      return false
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const useUpdateMilestone = () =>: any {
   const { user } = use_auth ();
   const [is_submitting, setIsSubmitting] = useState (false);
@@ -140,6 +190,7 @@ if (throw error) {
     } finally {
       setIsSubmitting (false);
     }
+<<<<<<< HEAD
       toast.success(`Milestone status changed to ${newStatus}`);
       return true
     } catch (err: any) {
@@ -165,16 +216,26 @@ if (throw error) {
   }
   const updateMilestone = async (milestoneId: string, data: Partial<Milestone>) => {
     if (!user) return false;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
   
   const updateMilestone = async (milestoneId: string, data: Partial<Milestone>) => {
     if (!user) return false,
     
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {
       setIsSubmitting(true)
       const { error } = await supabase
         .from('project_milestones')
         .update(data)
+<<<<<<< HEAD
         .eq('id', milestoneId);
       if (error) throw error;
       // Create activity record
@@ -285,6 +346,8 @@ export const useUpdateMilestone = () => {;
     updateMilestoneStatus,;
     updateMilestone;
     isSubmitting;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
         .eq('id', milestoneId),
@@ -339,6 +402,7 @@ if (throw error) {
 }
 ;
 
+<<<<<<< HEAD
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -460,3 +524,5 @@ isSubmitting
 };
   }
 };
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

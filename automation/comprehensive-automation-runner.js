@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const __filename = fileURLToPath(import && import.meta.url);
 const __dirname = path && path.dirname(__filename);
 class ComprehensiveAutomationRunner {; constructor() {; this && this.logFile = path && path.join(__dirname, "logs", "comprehensive-automation && automation.log"); this && this.resultsFile = path && path.join(__dirname, "reports", "comprehensive-results && results.json"); this && this.ensureDirectories(); this && this.results = {; timestamp: new Date().toISOString(),
@@ -499,6 +500,11 @@ class ComprehensiveAutomationRunner {,;
       this.log("=" * 50),
 
 
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import fs from './fs';
 import path from './path';
 import { exec_sync, spawn } from './child_process';
@@ -583,6 +589,7 @@ if ( {) {
 ;
 export default ComprehensiveAutomationRunner;
 ;
+<<<<<<< HEAD
 
       this.log(`🎯 Overall: Score: ${score}/100 (${this.results.overall.status})`),
       this.log("📊 Detailed results saved to reports/comprehensive-results.json"),
@@ -658,3 +665,10 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
 },;
 ,;
 export default ComprehensiveAutomationRunner;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

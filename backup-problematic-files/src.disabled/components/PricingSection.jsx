@@ -9,4 +9,8 @@ const PricingSection = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default PricingSection;
+=======
+export default PricingSection;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

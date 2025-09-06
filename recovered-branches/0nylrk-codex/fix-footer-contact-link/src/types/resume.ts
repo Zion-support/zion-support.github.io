@@ -4,6 +4,7 @@
 
 }
 export interface WorkExperience {
+<<<<<<< HEAD
 export interface ResumeBasicInfo {
 export interface ResumeBasicInfo {;
   id?: string;
@@ -16,6 +17,8 @@ export interface ResumeBasicInfo {;
 export interface WorkExperience {
 
 export interface WorkExperience {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id?: string;
   company_name: string;
   role_title: string;
@@ -24,6 +27,7 @@ export interface WorkExperience {;
   is_current: boolean;
   description?: string;
 
+<<<<<<< HEAD
 export interface Education {
   company_logo_url?: string
 
@@ -32,6 +36,13 @@ export interface Education {
 export interface Education {
 
 export interface Education {;
+=======
+  company_logo_url?: string,
+  location?: string;
+
+}
+export interface Education {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id?: string;
   institution: string;
   degree: string;
@@ -41,6 +52,7 @@ export interface Education {;
   is_current: boolean;
   description?: string;
 
+<<<<<<< HEAD
 export interface Skill {
   institution_logo_url?: string
 
@@ -49,10 +61,18 @@ export interface Skill {
 export interface Skill {
 
 export interface Skill {;
+=======
+  institution_logo_url?: string,
+  location?: string;
+
+}
+export interface Skill {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id?: string;
   name: string;
   proficiency?: number;
 
+<<<<<<< HEAD
 export interface Certification {
   category?: string
 
@@ -61,12 +81,20 @@ export interface Certification {
 export interface Certification {
 
 export interface Certification {;
+=======
+  category?: string,
+  years_experience?: number;
+
+}
+export interface Certification {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id?: string;
   name: string;
   issuing_organization: string;
   issue_date?: Date | string;
   expiration_date?: Date | string;
 
+<<<<<<< HEAD
 export interface PortfolioProject {
   credential_id?: string
 
@@ -75,6 +103,13 @@ export interface PortfolioProject {
 export interface PortfolioProject {
 
 export interface PortfolioProject {;
+=======
+  credential_id?: string,
+  credential_url?: string;
+
+}
+export interface PortfolioProject {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id?: string;
   title: string;
   description?: string;
@@ -82,6 +117,7 @@ export interface PortfolioProject {;
   image_url?: string;
   github_url?: string;
 
+<<<<<<< HEAD
 export interface Resume {
   demo_url?: string
 
@@ -90,6 +126,13 @@ export interface Resume {
 export interface Resume {
 
 export interface Resume {;
+=======
+  demo_url?: string,
+  pdf_url?: string;
+
+}
+export interface Resume {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id?: string;
   user_id?: string;
   basic_info: ResumeBasicInfo;
@@ -98,6 +141,7 @@ export interface Resume {;
   skills: Skill[];
   certifications: Certification[];
 
+<<<<<<< HEAD
   portfolio_projects?: PortfolioProject[]
 
   is_active: boolean
@@ -172,6 +216,8 @@ export interface Resume {;
   skills: Skill[],;
   certifications: Certification[],;
   portfolio_projects?: PortfolioProject[];
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   portfolio_projects?: PortfolioProject[],
   is_active: boolean;
 
@@ -180,6 +226,10 @@ export interface Resume {;
 
 export interface ResumeBasicInfo {;
 
+<<<<<<< HEAD
   is_active: boolean;
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

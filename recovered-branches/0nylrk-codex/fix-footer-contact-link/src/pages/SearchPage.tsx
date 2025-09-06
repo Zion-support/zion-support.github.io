@@ -1,4 +1,31 @@
 
+<<<<<<< HEAD
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useEffect, useState} from "react";
 import {useNavigate, useSearchParams} from "react-router-dom";
 import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
@@ -7,6 +34,7 @@ import {SearchSuggestion} from "@/types/search";
 import {useAISearch} from "@/hooks/useAISearch";
 import {AppLayout} from "@/layout/AppLayout";
 export default function SearchPage() {;
+<<<<<<< HEAD
   const [params] = useSearchParams();
   const navigate = useNavigate();
   const [params] = useSearchParams();
@@ -39,6 +67,19 @@ export default function SearchPage() {
   const { results, loading, search } = useAISearch(),
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
 
+=======
+
+  const [params] = useSearchParams();
+
+  const navigate = useNavigate();
+
+
+
+  const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   useEffect(() => {
     if (initial) {
       search(initial)
@@ -74,8 +115,16 @@ export default function SearchPage() {;
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     navigate(`/search?q=${encodeURIComponent(query)}`);
+<<<<<<< HEAD
     search(query)
   }
+=======
+    search(query);
+  };
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }, [initial]),
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -83,15 +132,24 @@ export default function SearchPage() {;
     navigate(`/search?q=${encodeURIComponent(query)}`),
     search(query)
   },
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <AppLayout>;
       <main className="container mx-auto px-4 py-8">;
         <form onSubmit={handleSubmit} className="mb-6">;
+<<<<<<< HEAD
 
   return (
     <AppLayout>
       <main className="container mx-auto px-4 py-8">
         <form onSubmit={handleSubmit} className="mb-6">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <EnhancedSearchInput
             value={query}
             onChange={setQuery}
@@ -104,9 +162,12 @@ export default function SearchPage() {;
 
 
 
+<<<<<<< HEAD
           />
         </form>
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useEffect, useState } from "react",;
 import { useNavigate, useSearchParams } from "react-router-dom",;
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
@@ -142,8 +203,14 @@ export default function SearchPage() {;
             placeholder="Search talent, jobs, and projects...";
           />;
         </form>;
+<<<<<<< HEAD
           />;
         </form>;
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {loading && <p className="text-zion-slate-light">Searching...</p>}
         {!loading && results && results.length === 0 && (;
           <p className="text-zion-slate-light">No results found.</p>;
@@ -265,6 +332,7 @@ if ( {) {
       </main>;
     </AppLayout>);
 }
+<<<<<<< HEAD
   ),;}
  const suggestions: SearchSuggestion[] = generateSearchSuggestions ();
   loading && <p className="text-zion-slate-light">Searching...</p> 
@@ -312,3 +380,6 @@ if ( {) {
     </AppLayout>
   )
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

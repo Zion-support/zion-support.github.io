@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Slider} from "@/components/ui/slider";
@@ -69,11 +70,36 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
       setActiveFilters([...activeFilters, filter]);
     }
   },
+=======
+
+import React, { useState } from './react';
+import { Button } from '@/components / ui / button';
+import { Slider } from '@/components / ui / slider';
+import { Switch } from '@/components / ui / switch';
+import { Input } from '@/components / ui / input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
+import { X, Filter } from './lucide-react';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from '@/components / ui / sheet';
+import { Badge } from '@/components / ui / badge';
+import { Label } from '@/components / ui / label';
+
+interface BrowseFiltersProps {
+  type: "jobs" | "talents";
+}
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   
   const removeFilter = (filter: string) => {
     setActiveFilters(activeFilters.filter(f => f !== filter))
   },
   
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="space-y-3">
       <div className="flex justify-between items-center px-4">
@@ -127,9 +153,13 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                         defaultValue={[0, 10]}
                         max={20}
                         step={1}
+<<<<<<< HEAD
 interface BrowseFiltersProps {
   type: "jobs" | "talents";
 }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Slider} from "@/components/ui/slider";
@@ -143,16 +173,31 @@ import {Label} from "@/components/ui/label";
 interface BrowseFiltersProps {;
   type: "jobs" | "talents";
 }
+<<<<<<< HEAD
 export function BrowseFilters(): any ({ type }: BrowseFiltersProps) {;
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
+=======
+
+export function BrowseFilters(): any ({ type }: BrowseFiltersProps) {;
+  const [activeFilters, setActiveFilters] = useState<string[]>([]);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const addFilter = (filter: string) => {;
     if (!activeFilters && activeFilters.includes(filter)) {;
       setActiveFilters([...activeFilters, filter]);
     }
   };
+<<<<<<< HEAD
   const removeFilter = (filter: string) => {;
     setActiveFilters(activeFilters && activeFilters.filter(f => f !== filter));
   };
+=======
+
+  const removeFilter = (filter: string) => {;
+    setActiveFilters(activeFilters && activeFilters.filter(f => f !== filter));
+  };
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="space-y-3">;
       <div className="flex justify-between items-center px-4">;
@@ -168,6 +213,10 @@ export function BrowseFilters(): any ({ type }: BrowseFiltersProps) {;
               <SheetHeader>;
                 <SheetTitle>Filter {type === "jobs" ? "Jobs" : "Talents"}</SheetTitle>;
               </SheetHeader>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className="py-6 space-y-6">;
                 {type === "jobs" ? (;
                   <>;
@@ -180,6 +229,10 @@ export function BrowseFilters(): any ({ type }: BrowseFiltersProps) {;
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Freelance</Badge>;
                       </div>;
                     </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <div className="space-y-2">;
                       <Label>Experience Level</Label>;
                       <div className="flex gap-2 flex-wrap">;
@@ -200,12 +253,20 @@ export function BrowseFilters(): any ({ type }: BrowseFiltersProps) {;
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Content</Badge>;
                       </div>;
                     </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <div className="space-y-2">;
                       <Label>Experience (years)</Label>;
                       <Slider
                         defaultValue={[0, 10]} 
                         max={20} 
                         step={1} 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         className="my-4"
                       />;
                       <div className="flex justify-between text-xs text-muted-foreground">;
@@ -215,8 +276,16 @@ export function BrowseFilters(): any ({ type }: BrowseFiltersProps) {;
                     </div>;
                   </>;
                 )}
+<<<<<<< HEAD
                 <div className="space-y-2">;
                   <Label>Location</Label>;
+=======
+
+
+                <div className="space-y-2">;
+                  <Label>Location</Label>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export /**
  * BrowseFilters - Function description
  */
@@ -297,6 +366,7 @@ function BrowseFilters() {
                   </>)}
                 <div className="space - y-2">;
                   <Label > Location</Label>;
+<<<<<<< HEAD
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Slider } from "@/components/ui/slider",;
@@ -393,6 +463,9 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
                 ;
                 <div className="space-y-2">;
                   <Label>Location</Label>;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <Select>;
                     <SelectTrigger>;
                       <SelectValue placeholder="Select location" />;
@@ -405,6 +478,7 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
                     </SelectContent>;
                   </Select>;
                 </div>;
+<<<<<<< HEAD
                 ;
                 <div className="space-y-2">;
                   <Label>Salary Range</Label>;
@@ -442,6 +516,42 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
           ;
           <Select>;
             <SelectTrigger className="w-[120px] h-8">;
+=======
+
+                <div className="space - y-2">;
+                  <Label > Salary Range</Label>;
+                  <div className="flex gap - 4 items - center">;
+                    <Input placeholder="Min" type="number" className="w - full" />;
+                    <span > to</span>;
+                    <Input placeholder="Max" type="number" className="w - full" />;
+                  </div>;
+                </div>;
+                <div className="space - y-2">;
+                  <Label > Skills</Label>;
+                  <div className="grid grid - cols - 2 gap - 2">;
+                    <Badge variant="outline" className="cursor - pointer hover:bg - primary / 5 justify - start">JavaScript</Badge>;
+                    <Badge variant="outline" className="cursor - pointer hover:bg - primary / 5 justify - start">React</Badge>;
+                    <Badge variant="outline" className="cursor - pointer hover:bg - primary / 5 justify - start">Python</Badge>;
+                    <Badge variant="outline" className="cursor - pointer hover:bg - primary / 5 justify - start">Figma</Badge>;
+                    <Badge variant="outline" className="cursor - pointer hover:bg - primary / 5 justify - start">UI / UX</Badge>;
+                    <Badge variant="outline" className="cursor - pointer hover:bg - primary / 5 justify - start">Node.js</Badge>;
+                  </div>;
+                </div>;
+                <div className="flex items - center justify - between">;
+                  <Label > Only show verified profiles</Label>;
+                  <Switch />;
+                </div>;
+              </div>;
+              <SheetFooter>;
+                <Button variant="outline" className="w - full">Reset</Button>;
+                <Button className="w - full" on_click={() => add_filter ("Experience: 3+ years")}>Apply Filters</Button>;
+              </SheetFooter>;
+            </SheetContent>;
+          </Sheet>;
+          <Select>;
+            <SelectTrigger className="w-[120px] h - 8">;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <SelectValue placeholder="Sort By" />;
             </SelectTrigger>;
             <SelectContent>;
@@ -450,6 +560,7 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
               <SelectItem value="salary">Highest Pay</SelectItem>;
             </SelectContent>;
           </Select>;
+<<<<<<< HEAD
           ;
           {activeFilters.map((filter) => (;
             <Badge ;
@@ -460,6 +571,10 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
               {filter}
               <X ;
                 className="h-3 w-3 cursor-pointer" ;
+=======
+
+                className="h-3 w-3 cursor-pointer" 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 onClick={() => removeFilter(filter)} ;
               />;
             </Badge>;
@@ -467,6 +582,13 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
         </div>;
       </div>;
     </div>;
+<<<<<<< HEAD
+=======
+  );
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {active_filters.map ((filter) => (
             <Badge;
               key={filter}
@@ -483,6 +605,7 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
       </div>;
     </div>);
 }
+<<<<<<< HEAD
   ),;}
  
 }export function BrowseFilters ({
@@ -580,3 +703,6 @@ if (!activeFilters.includes (filter) ) {
     </div>
   )
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

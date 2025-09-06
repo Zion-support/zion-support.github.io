@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import Link from "next/link",;
 export const metadata = {;
@@ -9,6 +13,10 @@ export default function SpaceTechPage() {;
 
 
     <div className="min-h-screen">;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Link from './next / link';,
 export const metadata = {
   title: "Space Technology Solutions - Zion Tech Group | Satellite & Space Services",
@@ -118,6 +126,7 @@ export default function SpaceTechPage() {;
               <p className="text - gray - 400 mb - 4">;
                 High - speed satellite internet, global connectivity solutions,
 
+<<<<<<< HEAD
 
                 High-speed satellite internet, global connectivity solutions,;
 
@@ -128,6 +137,13 @@ export default function SpaceTechPage() {;
               <p className="text-gray-400 mb-4">;
                 High-speed satellite internet, global connectivity solutions;
                 High-speed satellite internet, global connectivity solutions,;
+=======
+=======
+
+                High-speed satellite internet, global connectivity solutions,;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 and communication infrastructure for remote regions.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   const router = useRouter();
@@ -9,7 +12,11 @@ import React from 'react';
   const [file, setFile] = React.useState<File | null>(null);
   const [sending, setSending] = React.useState(false);
 
+<<<<<<< HEAD
   React.useEffect(() => {
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useRouter} from 'next/router';
 import {useCurrentUser} from '../../hooks/useCurrentUser';
 export default function ComposePage() {;
@@ -42,6 +49,35 @@ export default function ComposePage() {;
       : type === 'apply';
         ? { type: 'application', jobId, jobTitle }
 
+<<<<<<< HEAD
+=======
+
+  React.useEffect(() => {;
+    if (!loading && !user) router.replace('/auth');
+  }, [loading, user, router]),;
+  if (!user) return null,;
+  const headerTitle = type === 'invite' ? `Invite ${recipientName || talentName || 'Talent'}` : type === 'apply' ? `Apply to ${jobTitle || 'Job'}` : 'New Message';
+  const context = type === 'invite';
+    ? { type: 'invite', jobId, jobTitle, talentId, talentName   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    : type === 'apply';
+    ? { type: 'application', jobId, jobTitle   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    : { type: 'general' },;
+  const onSend = async () => {;
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+
+
+    setSending(true);
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (!loading && !user) router.replace('/auth')
   }, [loading, user, router]);
   if (!user) return null;
@@ -53,12 +89,22 @@ export default function ComposePage() {;
     : type === 'apply'
     ? { type: 'application', jobId, jobTitle }
     : { type: 'general' },
+<<<<<<< HEAD
 const onSend = async () => {
+=======
+
+  const onSend = async () => {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         : { type: 'general' };
   const onSend = async () => {;
     if (!recipientId && !talentId) return alert('Missing recipient');
     if (!message && message.trim() && !file && !linkUrl) return;
     setSending(true);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     let attachmentBase64: string | undefined,
     if (file) {
       const buff = await file.arrayBuffer();
@@ -66,10 +112,19 @@ const onSend = async () => {
       const mime = file.type || 'application/octet-stream';
       attachmentBase64 = `data:${mime},base64,${base64}`
     }
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       const mime = file.type || 'application/octet-stream';
       const mime = file.type || 'application/octet-stream';
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const res = await fetch('/api/messages/compose', {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
@@ -92,9 +147,17 @@ const onSend = async () => {
         attachmentName: file?.name,;
         context,;
       }),;
+<<<<<<< HEAD
     });
     const data = await res && res.json();
     setSending(false);
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    });
+    const data = await res && res.json();
+    setSending(false);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (data?.conversation?.id);
       router && router.replace(`/messages/${data && data.conversation.id}`);
   };
@@ -107,6 +170,10 @@ const onSend = async () => {
             <p className='text-sm text-gray-500'>;
               {type === 'invite' && jobTitle;
                 ? `Hi ${talentName || recipientName || ''}, I’d like to invite you to discuss a project: ${jobTitle}`;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 : null}
               {type === 'apply' && jobTitle ? `Applying to: ${jobTitle}` : null}
             </p>;
@@ -116,11 +183,19 @@ const onSend = async () => {
               value={message}
               onChange={e => setMessage(e && e.target.value)}
               rows={6}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               className='w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500';
               placeholder={;
                 type === 'invite' && jobTitle;
                   ? `Hi ${talentName || recipientName || ''}, I’d like to invite you to discuss a project: ${jobTitle}`;
                   : 'Write your message...';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               }
             />;
             <input
@@ -132,21 +207,37 @@ const onSend = async () => {
             />;
             <input
               type='file'
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               onChange={e => setFile(e && e.target.files?.[0] || null)}
               className='text-sm';
             />;
           </div>;
           <div className='p-4 border-t flex justify-end'>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <button
               onClick={onSend}
               disabled={sending}
               className='px-4 py-2 rounded-lg bg-indigo-600 text-white shadow hover:bg-indigo-700 disabled:opacity-50'>;
               {sending ? 'Sending...' : 'Send'}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </button>          </div>;
         </div>;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         recipientId: recipientId || talentId,
         body: message,
         linkUrl: linkUrl || undefined,
@@ -181,6 +272,10 @@ const onSend = async () => {
           </div>
 <div className="p-4 space-y-3">
             <textarea
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               value={message  } catch (error) {
     console.error("Error:", error);
@@ -205,11 +300,14 @@ const onSend = async () => {
 }
 
 
+<<<<<<< HEAD
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               rows={6}
 className="w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
               placeholder={type === 'invite' && jobTitle ? `Hi ${talentName || recipientName || ''}, I’d like to invite you to discuss a project: ${jobTitle}` : 'Write your message...'}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             />
             <input type="url" value={linkUrl} onChange={(e) => setLinkUrl(e.target.value)} placeholder="Optional proposal or portfolio link" className="border rounded-lg p-2 w-full" />
             <input type="file" onChange={(e) => setFile(e.target.files?.[0] || null)} className="text-sm" />
@@ -228,6 +326,10 @@ className="w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ri
 
   )
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {use_router} from 'next / router';
 import {useCurrentUser} from '../../hooks / useCurrentUser';
 export default /**
@@ -416,6 +518,7 @@ export default function ComposePage(req, res) {
                   ? `Hi ${talent_name || recipient_name || ''}, I’d like to invite you to discuss a project: ${job_title}`;
                   : 'Write your message...';
               }
+<<<<<<< HEAD
 
 
             />
@@ -470,3 +573,39 @@ export default function ComposePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+<<<<<<< HEAD
+            />;
+            <input;
+              type='url';
+              value={link_url}
+              on_change={e => setLinkUrl (e.target.value)}
+              placeholder='Optional proposal or portfolio link';
+              className='border rounded - lg p - 2 w - full';
+            />;
+            <input;
+              type='file';
+              on_change={e => set_file (e.target.files?.[0] || null)}
+              className='text - sm';
+            />;
+          </div>;
+          <div className='p - 4 border - t flex justify - end'>;
+            <button;
+              on_click={on_send}
+              disabled={sending}
+              className='px - 4 py - 2 rounded - lg bg - indigo - 600 text - white shadow hover:bg - indigo - 700 disabled:opacity - 50';
+            >;
+              {sending ? 'Sending...' : 'Send'}
+            </button>          </div>;
+        </div>;
+      </div>;
+    </div>);
+;
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

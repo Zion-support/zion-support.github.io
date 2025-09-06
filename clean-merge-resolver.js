@@ -131,10 +131,18 @@ function getAllFiles(dir, extensions) {;
     }
   } catch (error) {
     // Skip directories that can't be read;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   return files;
 }
 // Main execution;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 async /**
  * main - Function description
  */
@@ -169,13 +177,38 @@ function main() {
     } catch (error) {
       console.log ('⚠️  Merge conflicts detected. Resolving...'),
       // Find files with merge conflicts;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      const conflict_files = exec_sync ('git diff --name - only --diff - filter = U', { encoding: 'utf8' }),
+      if () {) {
+  $2
+}
+        console.log ('Found merge conflicts in:', conflict_files.trim ()),
+        // Resolve conflicts by accepting our version;
+        const files = conflict_files.trim ().split ('\n'),
+        for (const file of files) {
+          if () {) {
+  $2
+}
+            console.log (`Resolving conflicts in: ${file}`),
+            try {
+              exec_sync (`git checkout --ours "${file}"`);
+            } catch (e) {
+              exec_sync (`git checkout --theirs "${file}"`);
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== '.git') {;
         files = files.concat(getAllFiles(fullPath, extensions));
 
+<<<<<<< HEAD
       const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
       if (conflictFiles.trim()) {console.log('Found merge conflicts in:', conflictFiles.trim());
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       } else if (extensions.some(ext => item.endsWith(ext))) {;
         files.push(fullPath);
       }
@@ -221,6 +254,7 @@ async function main() {;
       const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' }),;
       if (conflictFiles.trim()) {;
         console.log('Found merge conflicts in:', conflictFiles.trim()),;
+<<<<<<< HEAD
         // Resolve conflicts by accepting our version;
         const files = conflictFiles.trim().split('\n');
         const files = conflictFiles.trim().split('\n'),;
@@ -230,25 +264,47 @@ async function main() {;
             console.log(`Resolving conflicts in: ${file}`);
             try {execSync(`git checkout --ours "${file}"`);
             } catch (e) {execSync(`git checkout --theirs "${file}"`);
+=======
+
+        // Resolve conflicts by accepting our version;
+
+
+        for (const file of files) {;
+          if (file.trim()) {;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             console.log(`Resolving conflicts in: ${file}`),;
             try {;
               execSync(`git checkout --ours "${file}"`);
             } catch (e) {;
               execSync(`git checkout --theirs "${file}"`);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             }
             exec_sync (`git add "${file}"`);
           }
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ;
 
 
+<<<<<<< HEAD
 ;
 ;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         // Commit the merge;
         exec_sync ('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"');
       }
     }
+<<<<<<< HEAD
     // Now scan for and fix any remaining merge conflicts in files;
 
     console.log('🔍 Scanning for merge conflicts in files...');
@@ -258,10 +314,27 @@ async function main() {;
       try {;
         const content = fs.readFileSync(file, 'utf8');
         if (content.includes('') |content.includes('
+=======
+
+    console.log ('🔍 Scanning for merge conflicts in files...'),
+    const files = getAllFiles (process.cwd (), ['.tsx.ts.jsx.js', '.json.md.css']),
+    let fixed_count = 0,
+    for (const file of files) {
+      try {
+        const content = fs.readFileSync (file, 'utf8'),
+        // Check condition
+if (|| content.includes (') {
+  $2
+}
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
     // Now scan for and fix any remaining merge conflicts in files;
     console.log('🔍 Scanning for merge conflicts in files...'),;
     const files = getAllFiles(process.cwd(), ['.tsx.ts.jsx.js', '.json.md.css']),;
+<<<<<<< HEAD
     let fixedCount = 0,;
     for (const file of files) {;
       try {;
@@ -330,3 +403,8 @@ async function main() {;
 }
 ;
 main().catch(console.error),;
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

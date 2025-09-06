@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Heart } from 'lucide-react'
 import { cn } from "@/lib/utils",
@@ -127,12 +128,21 @@ export function TalentCardSaveButton({;
       return;
     }
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     setLocalIsSaved(!localIsSaved)
     if (onToggleSave) {
       onToggleSave(profileId, !localIsSaved)
     }
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     toast({
       title: localIsSaved ? 'Removed from favorites' : 'Added to favorites'
       description: localIsSaved
@@ -189,6 +199,7 @@ export function TalentCardSaveButton(): any ({;
         className={cn(
           'h-4 w-4 transition-colors'
           localIsSaved ? 'fill-red-500 text-red-500' : 'text-zion-slate'
+<<<<<<< HEAD
         )}      />
 
     </button>
@@ -200,6 +211,18 @@ export function TalentCardSaveButton(): any ({;
 }"
 }
 
+=======
+
+        )}      />;
+    </button>;
+  );
+
+
+    </button>
+  )
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }variant: "default" 
 }) 
 };
@@ -217,6 +240,11 @@ export function TalentCardSaveButton(): any ({;
     })
   },
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import { Heart } from 'lucide-react';
 import { cn } from '@/lib / utils';
@@ -261,6 +289,7 @@ if ( {) {
     }
     toast ({
       title: localIsSaved ? 'Removed from favorites' : 'Added to favorites',
+<<<<<<< HEAD
   return (
     <button 
       className="absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors"
@@ -278,6 +307,8 @@ if ( {) {
 ;
     toast({;
       title: localIsSaved ? "Removed from favorites" : "Added to favorites",;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       description: localIsSaved;
         ? `${profileName} has been removed from your favorites`;
         : `${profileName} has been added to your favorites`,;
@@ -299,9 +330,18 @@ if ( {) {
     </button>;
   );
 }
+<<<<<<< HEAD
 ;
 ;
 
 
 
 ;
+=======
+}/> </button>);
+}";
+}
+
+
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

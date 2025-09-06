@@ -1,9 +1,33 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }</div> </div>) import fs from 'fs';
 import fs from 'fs';
 import path from 'path';
 
 
+<<<<<<< HEAD
+=======
+ </div>) ) ;
+}</div> </div>) import fs from 'fs';
+import path from 'path';
+import {TALENT_PROFILES} from '../../data/talent';
+type TalentSummary = { slug: string, summary: string },;
+export async function getServerSideProps() {;
+  const file = path && path.join(process && process.cwd(), 'datatalent_ai && datatalent_ai.json');
+  let generatedAt = '';
+  let summaries: TalentSummary[] = [];  try {;
+    const raw = fs && fs.readFileSync(file, 'utf-8');
+    const json = JSON && JSON.parse(raw);
+    generatedAt = json && json.generatedAt || '';
+    summaries = json && json.summaries || [];
+  } catch {}
+  return { props: { generatedAt, summaries } }
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     generatedAt = json.generatedAt || '';
     summaries = json.summaries || []
@@ -33,9 +57,12 @@ import path from 'path';
     </div>
 
 
+<<<<<<< HEAD
   } catch {}
   return { props: { generatedAt, summaries } }
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function TalentUpdatesPage(): any ({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {;
   const map = new Map(summaries && summaries.map(s => [s && s.slug, s && s.summary]));
   return (
@@ -54,6 +81,11 @@ export default function TalentUpdatesPage(): any ({ generatedAt, summaries }: { 
     </div>;
   );
 }
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {TALENT_PROFILES} from '../../data / talent';
 type TalentSummary = { slug: string, summary: string },
 export async /**
@@ -115,10 +147,16 @@ export async function getServerSideProps() {;
   } catch {}
   return { props: { generatedAt, summaries } }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   );
 }
 
+<<<<<<< HEAD
 
 export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {
 export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {;
@@ -142,3 +180,6 @@ export default function TalentUpdatesPage({ generatedAt, summaries }: { generate
 }
   );
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -27,6 +28,11 @@ export default function GlowCard(): any ({;
   title: string;
   children: React && React.ReactNode;
 }) {;
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="group relative rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-5 hover:bg-white/10 transition-colors">;
       <div className="absolute -inset-px rounded-xl bg-gradient-to-r from-cyan-500/0 via-fuchsia-500/0 to-violet-500/0 group-hover:from-cyan-500/20 group-hover:via-fuchsia-500/20 group-hover:to-violet-500/20 blur-xl" />;
@@ -45,7 +51,11 @@ export default function GlowCard(): any ({;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 export default function GlowCard({ title, children }: { title: string, children: React.ReactNode }) {
 import React from "react";
@@ -68,6 +78,11 @@ export default function GlowCard({
       <div className="relative">
         <h3 className="text-lg font-semibold mb-2 tracking-wide">{title}</h3>
 }
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from './react';
 ;
 export default /**
@@ -95,6 +110,7 @@ function GlowCard() {
   )
 
 }
+<<<<<<< HEAD
 
 }
 
@@ -113,3 +129,11 @@ function GlowCard() {
   );
 }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

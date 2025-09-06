@@ -9,4 +9,8 @@ const Checkout = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Checkout;
+=======
+export default Checkout;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

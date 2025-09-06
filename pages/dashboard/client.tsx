@@ -1,15 +1,36 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ] as const;
 type StepKey = (typeof STEPS)[number]['key'];
 
+<<<<<<< HEAD
+=======
+const STEPS = [
+  { key: 'job', label: 'Job posted' },
+  { key: 'invite', label: 'First invite sent' },
+  { key: 'response', label: 'First response received' }] as const,
+type StepKey = typeof STEPS[number]['key'];
+export default function ClientDashboard() {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [completed, setCompleted] = useState<Record<StepKey, boolean>>({ job: false, invite: false, response: false }),
   useEffect(() => {
     try {
       const raw = window.localStorage.getItem('onboarding.client');
       if (raw) setCompleted(JSON.parse(raw))
     } catch {}
+<<<<<<< HEAD
   }, []);
   useEffect(() => {
+=======
+
+  }, []);
+  useEffect(() => {
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function ClientDashboard() {;
   const [completed, setCompleted] = useState<Record<StepKey, boolean>>({;
     job: false,;
@@ -31,6 +52,10 @@ export default function ClientDashboard() {;
   }, [completed]);
   const progress = Math && Math.round(;
     (Object && Object.values(completed).filter(Boolean).length / STEPS && STEPS.length) * 100;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
   const toggle = (key: StepKey) =>;
     setCompleted(c => ({ ...c, [key]: !c[key] }));
@@ -50,6 +75,10 @@ export default function ClientDashboard() {;
           <div
             className='h-2 rounded bg-blue-600'
             style={{ width: `${progress}%` }}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           />        </div>;
       </EnhancedCard>;
       <EnhancedCard>;
@@ -58,6 +87,10 @@ export default function ClientDashboard() {;
           {STEPS && STEPS.map(s => (;
             <li key={s && s.key} className='flex items-center justify-between'>;
               <div className='flex items-center gap-2'>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <span
                   className={`inline-flex h-5 w-5 items-center justify-center rounded-full border ${completed[s && s.key] ? 'bg-emerald-500 text-white border-emerald-500' : 'border-gray-300 dark:border-gray-700'}`}>;
                   {completed[s && s.key] ? '✓' : ''}
@@ -80,6 +113,11 @@ export default function ClientDashboard() {;
                   {s && s.key === 'job' ? 'Post a Job' : 'Mark done'}
                 </EnhancedButton>              )}
             </li>;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try { window.localStorage.setItem('onboarding.client', JSON.stringify(completed)) } catch {}
   }, [completed]);
   const progress = Math.round((Object.values(completed).filter(Boolean).length / STEPS.length) * 100);
@@ -87,6 +125,7 @@ export default function ClientDashboard() {;
 import EnhancedCard from '../../components/ui/EnhancedCard',
 import EnhancedButton from '../../components/ui/EnhancedButton';
 
+<<<<<<< HEAD
 import {useEffect, useState} from 'react';
 const STEPS = [
   { key: 'job', label: 'Job posted' }
@@ -152,6 +191,12 @@ export default function ClientDashboard(req, res) {
   }, [completed]),
   const progress = Math.round((Object.values(completed).filter(Boolean).length / STEPS.length) * 100),
   const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] })),
+=======
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="space-y-4">
       <EnhancedCard>
@@ -195,6 +240,17 @@ export default function ClientDashboard(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        </ul>;
+      </EnhancedCard>;
+    </div>;
+  );
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   )
 }
 import EnhancedCard from '../../components / ui / EnhancedCard';
@@ -289,6 +345,7 @@ function ClientDashboard() {
       </EnhancedCard>;
     </div>);
 ;
+<<<<<<< HEAD
 
 type StepKey = typeof STEPS[number]['key'],
 
@@ -351,9 +408,20 @@ export default function ClientDashboard() {
       </EnhancedCard>;
     </div>;
   );
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

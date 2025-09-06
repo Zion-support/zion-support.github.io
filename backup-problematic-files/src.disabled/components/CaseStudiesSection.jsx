@@ -9,4 +9,8 @@ const CaseStudiesSection = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default CaseStudiesSection;
+=======
+export default CaseStudiesSection;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

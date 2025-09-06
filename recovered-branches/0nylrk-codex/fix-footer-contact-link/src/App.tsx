@@ -96,6 +96,7 @@ import { ThemeProvider  } from './components / ThemeProvider';
 import { WhitelabelProvider  } from './context / WhitelabelContext';
 import { Toaster  } from './components / ui / toaster';
 import { Toaster, as, SonnerToaster  } from './components / ui / sonner';
+<<<<<<< HEAD
 import React, { Suspense } from 'react';
 import { Routes, Route  } from 'react-router-dom';
 import './App.css',
@@ -164,6 +165,9 @@ import { WhitelabelProvider } from "./context/WhitelabelContext",
 import { Toaster } from "./components/ui/toaster",
 import { Toaster as SonnerToaster } from "./components/ui/sonner",
 import {
+=======
+import {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   AuthRoutes,
   DashboardRoutes,
   MarketplaceRoutes,
@@ -263,6 +267,7 @@ import {
   EnterpriseRoutes,
   CommunityRoutes,
 
+<<<<<<< HEAD
   DeveloperRoutes,;
 } from "./routes";
 const Home = React.lazy(() => import("./pages/Home"));
@@ -282,6 +287,8 @@ const ITOnsiteServicesPage = React.lazy(
 );
 const OpenAppRedirect = React.lazy(() => import("./pages/OpenAppRedirect"));
 const ContactPage = React.lazy(() => import("./pages/Contact"));
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   DeveloperRoutes
 } from './routes',
 const Home = React.lazy(() => import('./pages/Home')),
@@ -299,6 +306,10 @@ const Signup = React.lazy(() => import('./pages/Signup')),
 const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage')),
 const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect')),
 const ContactPage = React.lazy(() => import('./pages/Contact')),
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -343,6 +354,7 @@ const App = () => {
         <SonnerToaster position="top-right" />
       </ThemeProvider>
     </WhitelabelProvider>
+<<<<<<< HEAD
   );
 }
 export default App;
@@ -430,6 +442,9 @@ const App = () => {;
     </WhitelabelProvider>;
   );
 },;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   )
 },
 
@@ -443,5 +458,9 @@ export default App;
 ;
 export default App;
 ;
+<<<<<<< HEAD
 export default App;
 export default App;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

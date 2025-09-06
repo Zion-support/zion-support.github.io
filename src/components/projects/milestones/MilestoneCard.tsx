@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import {
   Card
@@ -16,6 +17,8 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { format } from 'date-fns',
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Check, ArrowDown, X } from 'lucide-react'
 import { useDisputeCheck  } from '@/hooks/useDisputeCheck';
 import { DisputeStatusBadge  } from '@/components/disputes/DisputeStatusBadge';
@@ -101,9 +104,15 @@ export function MilestoneCard(): any ({;
 
 
         return 'bg-green-500';
+<<<<<<< HEAD
       case 'in_progress':
         return 'bg-blue-500';
       case 'pending':
+=======
+      case 'in_progress':;
+        return 'bg-blue-500',;
+      case 'pending':;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         return 'bg-yellow-500';
       case 'rejected':
         return 'bg-red-500';
@@ -256,6 +265,7 @@ export function MilestoneCard({;
     };
   }
   
+<<<<<<< HEAD
   return (
       <CardHeader className="pb-2">
         <div className="flex justify-between items-start">
@@ -270,6 +280,8 @@ export function MilestoneCard({;
     }
   }
   
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <Card>
       <CardHeader className="pb-2">
@@ -277,6 +289,7 @@ export function MilestoneCard({;
           <div>
             <CardTitle className="text-xl">{title}</CardTitle>
             {dueDate && (
+<<<<<<< HEAD
               <p className='text-sm text-muted-foreground'>                Due: {format(new Date(dueDate), 'MMM d, yyyy')}
               </p>
             )}
@@ -288,11 +301,14 @@ export function MilestoneCard({;
           <div>
             <CardTitle className="text-xl">{title}</CardTitle>
             {dueDate && (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <p className="text-sm text-muted-foreground">
                 Due: {format(new Date(dueDate), 'MMM d, yyyy')}
               </p>
             )}
           </div>
+<<<<<<< HEAD
           <div className='flex gap-2'>
             <Badge
               variant='outline'
@@ -300,6 +316,9 @@ export function MilestoneCard({;
             >
               {status.replace('_', ' ')}
             </Badge>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>
 
 
@@ -309,16 +328,26 @@ export function MilestoneCard({;
             </Badge>
             
             {isUnderDispute && disputeStatus && (
+<<<<<<< HEAD
             
             {isUnderDispute && disputeStatus && (
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <DisputeStatusBadge status={disputeStatus} />
           </div>
         </div>
       </CardHeader>
+<<<<<<< HEAD
       <CardContent className='pb-2'>
         {description && <p className='text-muted-foreground'>{description}</p>}
         <div className='mt-4'>
           <p className='text-xl font-bold'>${amount.toFixed(2)}</p>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       
       <CardContent className="pb-2">
@@ -334,6 +363,7 @@ export function MilestoneCard({;
       <CardFooter className='pt-2 flex justify-between'>
         <div>
           {status !== 'completed' && status !== 'rejected' && (
+<<<<<<< HEAD
             <RaiseDisputeButton
               projectId={projectId}
               milestoneId={id}
@@ -357,6 +387,12 @@ export function MilestoneCard({;
               Actions frozen due to dispute
             </Button>
           </div>;
+=======
+
+              className={`capitalize ${getStatusBadgeColor()} text-white`}>;
+              {status && status.replace('_', ' ')}
+            </Badge>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="flex gap-2">;
             <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>;
               {status && status.replace('_ ')}
@@ -384,6 +420,7 @@ export function MilestoneCard({;
               projectId={projectId}
               milestoneId={id}
               variant='ghost'
+<<<<<<< HEAD
               size='sm'            <RaiseDisputeButton
               projectId = {projectId,}
               milestoneId = {id,}
@@ -425,11 +462,20 @@ export function MilestoneCard({;
             <RaiseDisputeButton 
               projectId={projectId} 
               milestoneId={id} 
+=======
+
+              variant="ghost"
+              size="sm"
+            />;
+          )}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               variant="ghost"
               size="sm"
             />
           )}
         </div>
+<<<<<<< HEAD
         <div className='flex gap-2'>
           {status === 'pending' && onReject && !isUnderDispute && (
             <Button variant='outline' size='sm' onClick={() => onReject(id)}>
@@ -464,6 +510,14 @@ export function MilestoneCard({;
   )
 }
 
+=======
+
+
+          {status === 'pending' && onReject && !isUnderDispute && (
+            <Button variant='outline' size='sm' onClick={() => onReject(id)}>
+              <X className='h-4 w-4 mr-1' /> Reject            </Button>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         
         <div className="flex gap-2">
           {status === 'pending' && onReject && !isUnderDispute && (
@@ -483,6 +537,7 @@ export function MilestoneCard({;
           )}
           
           {isUnderDispute && (
+<<<<<<< HEAD
     </Card>;
   );
 };
@@ -498,6 +553,9 @@ export function MilestoneCard({;
               <DisputeStatusBadge status={disputeStatus} />;
             )}
           </div>;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </div>;
       </CardHeader>;
       <CardContent className="pb-2">;
@@ -542,8 +600,12 @@ export function MilestoneCard({;
     </Card>;
   );
 }
+<<<<<<< HEAD
 ;
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 }
       <CardHeader className='pb - 2'>;
@@ -614,4 +676,8 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>;
       </CardFooter>;
     </Card>);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

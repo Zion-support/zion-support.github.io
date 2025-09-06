@@ -7,6 +7,7 @@ interface FraudTabContentProps {
 import React from "react";
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react";
 import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
+<<<<<<< HEAD
 import React from "react",
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",
 
@@ -34,6 +35,13 @@ import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
 import React from "react",
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",
 
+=======
+
+=======
+import React from "react",
+import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 interface FraudTabContentProps {
@@ -83,9 +91,13 @@ export const FraudTabContent:React.FC<FraudTabContentProps> = ({ tabValue }) => 
         </div>;
       );
         </div>
+<<<<<<< HEAD
       );
       ),
     
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     case 'dangerous':
       return (
         <div className="bg-red-50 dark:bg-red-950/20 p-8 rounded-lg text-center">
@@ -95,13 +107,20 @@ export const FraudTabContent:React.FC<FraudTabContentProps> = ({ tabValue }) => 
             This tab shows high-priority dangerous flags requiring immediate attention.
           </p>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       ),
     
 
 
+<<<<<<< HEAD
       );
       ),
     
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     case 'actioned':
       return (
         <div className="bg-green-50 dark:bg-green-950/20 p-8 rounded-lg text-center">
@@ -116,10 +135,17 @@ export const FraudTabContent:React.FC<FraudTabContentProps> = ({ tabValue }) => 
       return null
 
 
+<<<<<<< HEAD
 
   }
 }
 
+=======
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",;
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",;
 interface FraudTabContentProps {;
@@ -148,12 +174,18 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
           </p>;
         </div>;
       ),;
+<<<<<<< HEAD
       ),;
     ;
     case 'actioned':;
       return (;
     case 'actioned':;
       return (;
+=======
+
+    case 'actioned':;
+      return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="bg-green-50 dark:bg-green-950/20 p-8 rounded-lg text-center">;
           <CheckCircle className="mx-auto h-12 w-12 text-green-500 mb-4" />;
           <h3 className="text-xl font-medium mb-4">Actioned Flags</h3>;
@@ -161,6 +193,13 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
             This tab shows flags where action has already been taken.;
           </p>;
         </div>;
+<<<<<<< HEAD
+=======
+      ),;
+
+    default:;
+      return null;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -202,6 +241,7 @@ export const FraudTabContent: React.FC < FraudTabContentProps> = ({ tab_value })
   }
 }
 ;
+<<<<<<< HEAD
     ;
     default:;
       return null;
@@ -220,3 +260,6 @@ default:
       return null;
   }
 };
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {format} from "date-fns";
 
 import React from "react";
@@ -19,6 +20,13 @@ import { QuoteStatusBadge } from "./QuoteStatusBadge";
 import type { QuoteRequest } from "@/types/quotes";
 import { format } from "date-fns";
 import {format} from "date-fns";
+=======
+
+
+import {format} from "date-fns";
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",
 import { 
   Dialog,
@@ -36,6 +44,7 @@ import type { QuoteRequest } from "@/types/quotes",
 import { format } from "date-fns",
 
 
+<<<<<<< HEAD
 import React from "react";
 
 import {
@@ -54,6 +63,10 @@ import type { QuoteRequest } from "@/types/quotes";
 
 import { format } from "date-fns";
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface QuoteDetailsProps {
   quote: QuoteRequest | null;
   isOpen: boolean;
@@ -62,6 +75,7 @@ import {format} from "date-fns";
 
   };
 
+<<<<<<< HEAD
 }
 
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
@@ -75,6 +89,14 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
     }
   }
   };
+=======
+import {format} from "date-fns";
+=======
+
+  };
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",;
 import {;
   Dialog,;
@@ -90,11 +112,24 @@ import { Separator } from "@/components/ui/separator",;
 import { QuoteStatusBadge } from "./QuoteStatusBadge",;
 import type { QuoteRequest } from "@/types/quotes",;
 import { format } from "date-fns",;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface QuoteDetailsProps {;
   quote: QuoteRequest | null,;
   isOpen: boolean,;
   onClose: () => void;
+<<<<<<< HEAD
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+}
+
+export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
+  if (!quote) return null;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from './react';
 import {
   Dialog,
@@ -125,15 +160,25 @@ if (return null) {
 if (return "Not specified") {
   $2
 }
+<<<<<<< HEAD
     try {
       return format (new Date (date_string), "PPP");
     } catch (e) {
+=======
+
+    try {
+      return format (new Date (date_string), "PPP");
+    } catch (e) {
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const formatDate = (dateString?: string) => {;
     if (!dateString) return 'Not specified';
     try {;
       return format(new Date(dateString), 'PPP');
     } catch (e) {;
 
+<<<<<<< HEAD
 
 
 
@@ -179,10 +224,25 @@ export const QuoteDetails = ({ quote, isOpen, onClose } QuoteDetailsProps) => {;
   },;
 ;
   return (;
+=======
+      return dateString;
+    }
+
+  },
+
+
+
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>;
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">;
         <DialogHeader>;
           <DialogTitle className="text-2xl flex items-center justify-between">;
+<<<<<<< HEAD
             <span>{quote.project_name}</span>;
             <QuoteStatusBadge status={quote.status} />;
           </DialogTitle>;
@@ -193,6 +253,18 @@ export const QuoteDetails = ({ quote, isOpen, onClose } QuoteDetailsProps) => {;
         ;
         <Separator className="my-4" />;
         ;
+=======
+            <span>{quote && quote.project_name}</span>;
+            <QuoteStatusBadge status={quote && quote.status} />;
+          </DialogTitle>;
+          <DialogDescription>;
+            Quote request submitted on {formatDate(quote && quote.created_at)}
+          </DialogDescription>;
+        </DialogHeader>;
+
+        <Separator className="my-4" />;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
           <Card>;
             <CardContent className="pt-6">;
@@ -200,32 +272,53 @@ export const QuoteDetails = ({ quote, isOpen, onClose } QuoteDetailsProps) => {;
               <div className="space-y-2">;
                 <div className="flex items-center gap-2">;
                   <User className="h-4 w-4 text-gray-500" />;
+<<<<<<< HEAD
                   <span>{quote.requester_name}</span>;
                 </div>;
                 <div className="flex items-center gap-2">;
                   <Mail className="h-4 w-4 text-gray-500" />;
                   <span>{quote.requester_email}</span>;
+=======
+                  <span>{quote && quote.requester_name}</span>;
+                </div>;
+                <div className="flex items-center gap-2">;
+                  <Mail className="h-4 w-4 text-gray-500" />;
+                  <span>{quote && quote.requester_email}</span>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </div>;
               </div>;
             </CardContent>;
           </Card>;
+<<<<<<< HEAD
           ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Card>;
             <CardContent className="pt-6">;
               <h3 className="text-lg font-medium mb-3">Project Timeline</h3>;
               <div className="space-y-2">;
                 <div className="flex items-center gap-2">;
                   <Calendar className="h-4 w-4 text-gray-500" />;
+<<<<<<< HEAD
                   <span>Start date:{formatDate(quote.start_date)}</span>;
                 </div>;
                 <div className="flex items-center gap-2">;
                   <Clock className="h-4 w-4 text-gray-500" />;
                   <span>Timeline:{quote.timeline}</span>;
+=======
+                  <span>Start date: {formatDate(quote && quote.start_date)}</span>;
+                </div>;
+                <div className="flex items-center gap-2">;
+                  <Clock className="h-4 w-4 text-gray-500" />;
+                  <span>Timeline: {quote && quote.timeline}</span>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </div>;
               </div>;
             </CardContent>;
           </Card>;
         </div>;
+<<<<<<< HEAD
 ;
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
   if (!quote) return null,;
@@ -316,6 +409,20 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
         </div>
       </DialogContent>
     </Dialog>
+=======
+
+        <Card className="mt-6">;
+          <CardContent className="pt-6">;
+            <h3 className="text-lg font-medium mb-3">Project Details</h3>;
+            <p className="mb-4">{quote && quote.project_summary}</p>;
+
+            {quote && quote.project_description && (;
+              <>;
+                <h4 className="font-medium mt-4">Additional Details</h4>;
+                <p>{quote && quote.project_description}</p>;
+              </>;
+            )}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             <div className="mt-6 flex items-center gap-2">;
               <DollarSign className="h-4 w-4 text-gray-500" />;
@@ -442,6 +549,7 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
 
   )
 
+<<<<<<< HEAD
   ),;
 },; import {
   Dialog;
@@ -496,3 +604,6 @@ return (<Dialog open= {
 },
 };
 },
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

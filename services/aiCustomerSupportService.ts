@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface Attachment {
 export interface Attachment {;
   id: string;
@@ -6,10 +7,13 @@ export interface Attachment {;
   mimeType: string;
   size: number;
   url: string;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   uploaded_at: Date,
   uploaded_by: string;
 
+<<<<<<< HEAD
 export interface Attachment {
   id: string;
   filename: string;
@@ -29,31 +33,52 @@ export interface SupportTicket {
 export interface SupportTicket {
 
 export interface SupportTicket {;
+=======
+}
+export interface SupportTicket {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
   title: string;
   description: string;
   status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed';
   priority: 'low' | 'medium' | 'high' | 'critical';
   category: 'technical' | 'billing' | 'feature_request' | 'bug_report' | 'general';
+<<<<<<< HEAD
   customerId: string;
+=======
+  customer_id: string;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   assignedAgentId?: string;
   tags: string[];
   attachments: Attachment[];
   messages: TicketMessage[];
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   created_at: Date;
   updated_at: Date;
   resolved_at?: Date,
   firstResponseTime?: number, // in minutes;
   resolution_time?: number, // in hours;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 export interface TicketMessage {
   id: string;
   content: string;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   sender_type: 'customer' | 'agent' | 'system';
   sender_id: string;
   is_internal: boolean;
   created_at: Date,
   attachments: Attachment[];
+<<<<<<< HEAD
 }
 export interface Customer {
   createdAt: Date;
@@ -80,17 +105,27 @@ export interface TicketMessage {;
 export interface Customer {
 
 export interface Customer {;
+=======
+
+}
+export interface Customer {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
   name: string;
   email: string;
   company?: string;
   plan: 'free' | 'basic' | 'pro' | 'enterprise';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   total_tickets: number;
   resolved_tickets: number,
   averageResponseTime: number, // in minutes;
   satisfaction_score: number, // 1 - 5;
   lastContactDate: Date,
   created_at: Date;
+<<<<<<< HEAD
 }
 export interface SupportAgent {
   totalTickets: number;
@@ -105,11 +140,17 @@ export interface SupportAgent {
 export interface SupportAgent {
 
 export interface SupportAgent {;
+=======
+
+}
+export interface SupportAgent {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
   name: string;
   email: string;
   role: 'tier1' | 'tier2' | 'tier3' | 'supervisor';
   skills: string[];
+<<<<<<< HEAD
   isAvailable: boolean;
   currentTickets: number;
 
@@ -131,14 +172,41 @@ export interface ChatbotSession {
   customerId: string;
   startTime: Date;
   endTime?: Date;
+=======
+
+  is_available: boolean;
+  current_tickets: number;
+  max_tickets: number,
+  performance: AgentPerformance;
+}
+export interface AgentPerformance {
+  tickets_resolved: number,
+  averageResolutionTime: number, // in hours;
+  customer_satisfaction: number, // 1 - 5;
+  firstResponseTime: number, // in minutes;
+  escalation_rate: number, // percentage;
+
+}
+export interface ChatbotSession {
+  id: string;
+  customer_id: string;
+  start_time: Date;
+  end_time?: Date;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   messages: ChatbotMessage[];
   intent: string;
   confidence: number;
   resolved: boolean;
 
+<<<<<<< HEAD
   escalated: boolean
 
   satisfaction: number, // 1-5
+=======
+  escalated: boolean,
+  satisfaction: number, // 1 - 5;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 export interface ChatbotMessage {
   id: string;
@@ -146,9 +214,15 @@ export interface ChatbotMessage {
   sender: 'customer' | 'bot';
   timestamp: Date;
 
+<<<<<<< HEAD
   intent?: string
 
   confidence?: number
+=======
+  intent?: string,
+  confidence?: number;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 export interface KnowledgeBaseArticle {
   id: string;
@@ -158,6 +232,7 @@ export interface KnowledgeBaseArticle {
   tags: string[];
   views: number;
   helpful: number;
+<<<<<<< HEAD
   notHelpful: number;
 
   lastUpdated: Date
@@ -176,6 +251,26 @@ export interface SupportAnalytics {
   topCategories: Array<{ category: string, count: number }>;
 
   agentPerformance: Array<{ agentId: string, ticketsResolved: number, satisfaction: number }>
+=======
+
+  not_helpful: number;
+  last_updated: Date,
+  created_by: string;
+
+}
+export interface SupportAnalytics {
+  total_tickets: number;
+  open_tickets: number;
+  resolved_tickets: number;
+  averageResolutionTime: number;
+  averageFirstResponseTime: number;
+
+  customer_satisfaction: number;
+  chatbotResolutionRate: number,
+  top_categories: Array<{ category: string, count: number }>;
+  agent_performance: Array<{ agent_id: string, tickets_resolved: number, satisfaction: number }>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 export interface AIRecommendation {
   type: 'ticket_prioritization' | 'agent_assignment' | 'knowledge_base' | 'chatbot_improvement';
@@ -183,14 +278,21 @@ export interface AIRecommendation {
   description: string;
   impact: 'low' | 'medium' | 'high';
 
+<<<<<<< HEAD
   confidence: number
 
   actionItems: string[]
+=======
+  confidence: number,
+  action_items: string[];
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 class AICustomerSupportService {
   private tickets: SupportTicket[] = [];
   private customers: Customer[] = [];
   private agents: SupportAgent[] = [];
+<<<<<<< HEAD
   private chatbotSessions: ChatbotSession[] = [];
   private knowledgeBase: KnowledgeBaseArticle[] = [];
   private analytics: SupportAnalytics;
@@ -199,10 +301,20 @@ class AICustomerSupportService {
     this.initializeSampleData()
 
     this.updateAnalytics()
+=======
+  private chatbot_sessions: ChatbotSession[] = [];
+  private knowledge_base: KnowledgeBaseArticle[] = [];
+  private analytics: SupportAnalytics;
+
+    this && this.initializeSampleData(),
+    this && this.updateAnalytics()
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   private initializeSampleData() {
     // Initialize sample customers
 
+<<<<<<< HEAD
     this.customers = [
       {
         id: 'cust_001';
@@ -216,10 +328,44 @@ class AICustomerSupportService {
         satisfactionScore: 4.5;
         lastContactDate: new Date('2025-01-10')
         createdAt: new Date('2024-06-01')
+=======
+    this && this.customers = [
+
+=======
+;
+  constructor () {
+    this.initializeSampleData (),
+    this.update_analytics ();
+  }
+  private initializeSampleData () {
+    // Initialize sample customers;
+    this.customers = [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      {
+        id: 'cust_001';
+        name: 'John Doe';
+        email: 'john && john.doe@company && company.com';
+        company: 'TechCorp Inc.';
+        plan: 'pro';
+        total_tickets: 5;
+        resolved_tickets: 4;
+        averageResponseTime: 15;
+
+        satisfactionScore: 4 && 4.5;
+        lastContactDate: new Date('2025-01-10'),
+
+        createdAt: new Date('2024-06-01')
+=======
+        satisfaction_score: 4.5;
+        lastContactDate: new Date ('2025 - 01 - 10'),
+        created_at: new Date ('2024 - 06 - 01');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
       {
         id: 'cust_002';
         name: 'Jane Smith';
+<<<<<<< HEAD
         email: 'jane.smith@startup.com';
         company: 'StartupXYZ';
         plan: 'basic';
@@ -228,10 +374,23 @@ class AICustomerSupportService {
         averageResponseTime: 25;
         satisfactionScore: 4.0;
         lastContactDate: new Date('2025-01-08')
+=======
+        email: 'jane && jane.smith@startup && startup.com';
+        company: 'StartupXYZ';
+        plan: 'basic';
+        total_tickets: 3;
+        resolved_tickets: 3;
+        averageResponseTime: 25;
+
+        satisfactionScore: 4 && 4.0;
+        lastContactDate: new Date('2025-01-08'),
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         createdAt: new Date('2024-08-15')
       }
     ];
     // Initialize sample agents
+<<<<<<< HEAD
     this.agents = [
       {
         id: 'agent_001';
@@ -248,11 +407,48 @@ class AICustomerSupportService {
           customerSatisfaction: 4.6;
           firstResponseTime: 12
           escalationRate: 8
+=======
+    this && this.agents = [
+=======
+        satisfaction_score: 4.0;
+        lastContactDate: new Date ('2025 - 01 - 08'),
+        created_at: new Date ('2024 - 08 - 15');
+      }
+    ];
+;
+    // Initialize sample agents;
+    this.agents = [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      {
+        id: 'agent_001';
+        name: 'Mike Johnson';
+        email: 'mike && mike.johnson@ziontech && ziontech.com';
+        role: 'tier2';
+        skills: ['Technical SupportAPI IntegrationDatabase Issues'];
+        is_available: true;
+        current_tickets: 2;
+        max_tickets: 5;
+        performance: {
+
+          averageResolutionTime: 2 && 2.5;
+          customerSatisfaction: 4 && 4.6;
+          firstResponseTime: 12,
+
+          escalationRate: 8
+=======
+          tickets_resolved: 45;
+          averageResolutionTime: 2.5;
+          customer_satisfaction: 4.6;
+          firstResponseTime: 12,
+          escalation_rate: 8;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         }
       }
       {
         id: 'agent_002';
         name: 'Lisa Chen';
+<<<<<<< HEAD
         email: 'lisa.chen@ziontech.com';
         role: 'tier1';
         skills: ['General SupportBillingAccount Management'];
@@ -264,12 +460,43 @@ class AICustomerSupportService {
           averageResolutionTime: 1.8;
           customerSatisfaction: 4.4;
           firstResponseTime: 8
+=======
+        email: 'lisa && lisa.chen@ziontech && ziontech.com';
+        role: 'tier1';
+        skills: ['General SupportBillingAccount Management'];
+        is_available: true;
+        current_tickets: 1;
+        max_tickets: 8;
+        performance: {
+
+          averageResolutionTime: 1 && 1.8;
+          customerSatisfaction: 4 && 4.4;
+          firstResponseTime: 8,
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           escalationRate: 15
         }
       }
     ];
     // Initialize sample tickets
+<<<<<<< HEAD
     this.tickets = [
+=======
+    this && this.tickets = [
+=======
+          tickets_resolved: 78;
+          averageResolutionTime: 1.8;
+          customer_satisfaction: 4.4;
+          firstResponseTime: 8,
+          escalation_rate: 15;
+        }
+      }
+    ];
+;
+    // Initialize sample tickets;
+    this.tickets = [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {
         id: 'ticket_001';
         title: 'API Integration Issue';
@@ -277,6 +504,7 @@ class AICustomerSupportService {
         status: 'in_progress';
         priority: 'high';
         category: 'technical';
+<<<<<<< HEAD
         customerId: 'cust_001';
         assignedAgentId: 'agent_001';
         tags: ['apiintegrationerror'];
@@ -290,10 +518,28 @@ class AICustomerSupportService {
             isInternal: false;
             createdAt: new Date('2025-01-10T10:00:00Z')
             attachments: []
+=======
+        customer_id: 'cust_001';
+        assignedAgentId: 'agent_001';
+        tags: ['apiintegrationerror'];
+        attachments: [];
+        messages: [;
+          {
+            id: 'msg_001';
+            content: 'Getting 500 error when trying to integrate with our CRM system. Can you help?';
+
+            sender_type: 'customer';
+            sender_id: 'cust_001';
+            is_internal: false;
+            created_at: new Date ('2025 - 01 - 10T10:00:00Z'),
+            attachments: [];
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           }
           {
             id: 'msg_002'
             content: 'Hi John, I can help you with this API integration issue. Let me investigate the error.';
+<<<<<<< HEAD
             senderType: 'agent';
             senderId: 'agent_001';
             isInternal: false;
@@ -1020,6 +1266,9 @@ class AICustomerSupportService {
           {
             id: 'msg_002'
             content: 'Hi John, I can help you with this API integration issue. Let me investigate the error.';
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             sender_type: 'agent';
             sender_id: 'agent_001';
             is_internal: false;
@@ -1034,6 +1283,7 @@ class AICustomerSupportService {
     ];
 ;
     // Initialize knowledge base;
+<<<<<<< HEAD
             attachments: [];
           }
         ],;
@@ -1055,6 +1305,8 @@ class AICustomerSupportService {
         notHelpful: 12,;
         lastUpdated: new Date('2025-01-05'),;
         createdBy: 'agent_001';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     this.knowledge_base = [;
       {
         id: 'kb_001';
@@ -1070,6 +1322,7 @@ class AICustomerSupportService {
   async createTicket(ticketData: Omit<SupportTicket, 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket> {
     const ticket: SupportTicket = {
       id: `ticket_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
+<<<<<<< HEAD
       }
     ]
   }
@@ -1077,12 +1330,15 @@ class AICustomerSupportService {
   async createTicket(ticketData: Omit<SupportTicket, 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket> {
     const ticket: SupportTicket = {
       id: `ticket_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       ...ticketData;
       status: 'open';
       attachments: [];
       messages: [];
       createdAt: new Date()
       updatedAt: new Date()
+<<<<<<< HEAD
         not_helpful: 12;
         last_updated: new Date ('2025 - 01 - 05'),
         created_by: 'agent_001';
@@ -1130,6 +1386,32 @@ class AICustomerSupportService {
         if (ticket.createdAt && ticket.resolvedAt) {
           ticket.resolutionTime = (ticket.resolvedAt.getTime() - ticket.createdAt.getTime()) / (1000 * 60 * 60)
 
+=======
+
+    };
+
+    this && this.tickets.push(ticket);
+    this && this.updateAnalytics();
+
+    return ticket
+  }
+  async assignTicket(ticketId: string, agentId: string): Promise<void> {
+    const ticket = this && this.tickets.find(t => t && t.id === ticketId);
+    if (ticket) {
+
+      ticket && ticket.assignedAgentId = agentId;
+      ticket && ticket.status = 'in_progress';
+      ticket && ticket.updatedAt = new Date(),
+      this && this.updateAnalytics()
+
+    }
+  }
+  async updateTicketStatus(ticketId: string, status: SupportTicket['status']): Promise<void> {
+    const ticket = this && this.tickets.find(t => t && t.id === ticketId);
+    if (ticket) {
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   async createTicket(ticketData: Omit<SupportTicket 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket> {;
     const ticket: SupportTicket = {;
@@ -1167,9 +1449,18 @@ class AICustomerSupportService {
           ticket.resolutionTime = (ticket.resolvedAt.getTime() - ticket.createdAt.getTime()) / (1000 * 60 * 60);
 
 
+<<<<<<< HEAD
         }
       }
       this.updateAnalytics()
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        }
+      }
+      this.updateAnalytics()
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       ticket && ticket.status = status;
       ticket && ticket.updatedAt = new Date();
       if (status === 'resolved') {
@@ -1673,19 +1964,37 @@ class AICustomerSupportService {;
   }
 
   async addMessageToTicket(ticketId: string, messageData: Omit<TicketMessage, 'id' | 'createdAt'>): Promise<TicketMessage> {
+<<<<<<< HEAD
     const ticket = this.tickets.find(t => t.id === ticketId);
+=======
+    const ticket = this && this.tickets.find(t => t && t.id === ticketId);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (!ticket) {
       throw new Error(`Ticket ${ticketId} not found`)
     }
     const message: TicketMessage = {
+<<<<<<< HEAD
     };
     ticket && ticket.messages.push(message);
     ticket && ticket.updatedAt = new Date();
+=======
+      id: `msg_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
+      ...messageData;
+      createdAt: new Date()
+
+    };
+
+    ticket && ticket.messages.push(message);
+    ticket && ticket.updatedAt = new Date();
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Update first response time if this is the first agent response
     if (message && message.senderType === 'agent' && !ticket && ticket.firstResponseTime) {
       const firstResponseTime = (message && message.createdAt.getTime() - ticket && ticket.createdAt.getTime()) / (1000 * 60);
       ticket && ticket.firstResponseTime = firstResponseTime
     }
+<<<<<<< HEAD
     this && this.updateAnalytics();
       id: `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       ...messageData;
@@ -1699,23 +2008,130 @@ class AICustomerSupportService {;
       ticket.firstResponseTime = firstResponseTime
     }
     this.updateAnalytics();
+=======
+
+
+    this && this.updateAnalytics();
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return message
   }
   async startChatbotSession(customerId: string): Promise<ChatbotSession> {
     const session: ChatbotSession = {
+<<<<<<< HEAD
       id: `chat_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       customerId;
       startTime: new Date();
+=======
+      id: `chat_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
+      customerId;
+      startTime: new Date();
+=======
+  async create_ticket (ticket_data: Omit < SupportTicket, 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'created_at' | 'updated_at'>): Promise < SupportTicket> {
+    const ticket: SupportTicket = {
+      id: `ticket_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
+      ...ticket_data;
+      status: 'open';
+      attachments: [];
+      messages: [];
+      created_at: new Date (),
+      updated_at: new Date ();
+    }
+;
+    this.tickets.push (ticket);
+    this.update_analytics ();
+    return ticket;
+  }
+  async assign_ticket (ticket_id: string, agent_id: string): Promise < void> {
+    const ticket = this.tickets.find (t => t.id === ticket_id);
+    // Check condition
+if ( {) {
+  $2
+}
+      ticket.assignedAgentId = agent_id;
+      ticket.status = 'in_progress';
+      ticket.updated_at = new Date (),
+      this.update_analytics ();
+    }
+  }
+  async updateTicketStatus (ticket_id: string, status: SupportTicket['status']): Promise < void> {
+    const ticket = this.tickets.find (t => t.id === ticket_id);
+    // Check condition
+if ( {) {
+  $2
+}
+      ticket.status = status;
+      ticket.updated_at = new Date ();
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        ticket.resolved_at = new Date (),
+        // Check condition
+if ( {) {
+  $2
+}
+          ticket.resolution_time = (ticket.resolved_at.get_time () - ticket.created_at.get_time ()) / (1000 * 60 * 60);
+        }
+      }
+      this.update_analytics ();
+    }
+  }
+  async addMessageToTicket (ticket_id: string, message_data: Omit < TicketMessage, 'id' | 'created_at'>): Promise < TicketMessage> {
+    const ticket = this.tickets.find (t => t.id === ticket_id);
+    // Check condition
+if ( {) {
+  $2
+}
+      throw new Error (`Ticket ${ticket_id} not found`);
+    }
+    const message: TicketMessage = {
+      id: `msg_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
+      ...message_data;
+      created_at: new Date ();
+    }
+;
+    ticket.messages.push (message);
+    ticket.updated_at = new Date ();
+;
+    // Update first response time if this is the first agent response;
+    // Check condition
+if ( {) {
+  $2
+}
+      const firstResponseTime = (message.created_at.get_time () - ticket.created_at.get_time ()) / (1000 * 60);
+      ticket.firstResponseTime = firstResponseTime;
+    }
+    this.update_analytics ();
+    return message;
+  }
+  async startChatbotSession (customer_id: string): Promise < ChatbotSession> {
+    const session: ChatbotSession = {
+      id: `chat_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
+      customer_id;
+      start_time: new Date ();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       messages: [];
       intent: '';
       confidence: 0;
       resolved: false;
+<<<<<<< HEAD
     };
     this && this.chatbotSessions.push(session);
+=======
+
+    };
+
+    this && this.chatbotSessions.push(session);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return session
   }
   async addChatbotMessage(sessionId: string, messageData: Omit<ChatbotMessage, 'id' | 'timestamp'>): Promise<ChatbotMessage> {
     const session = this && this.chatbotSessions.find(s => s && s.id === sessionId);
+<<<<<<< HEAD
       escalated: false
       satisfaction: 0
     }
@@ -1724,10 +2140,13 @@ class AICustomerSupportService {;
   }
   async addChatbotMessage(sessionId: string, messageData: Omit<ChatbotMessage, 'id' | 'timestamp'>): Promise<ChatbotMessage> {
     const session = this.chatbotSessions.find(s => s.id === sessionId);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (!session) {
       throw new Error(`Session ${sessionId} not found`)
     }
     const message: ChatbotMessage = {
+<<<<<<< HEAD
     };
     session && session.messages.push(message);
     // Simulate AI intent detection
@@ -1738,6 +2157,19 @@ class AICustomerSupportService {;
     }
     session.messages.push(message);
     // Simulate AI intent detection
+=======
+      id: `chat_msg_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
+      ...messageData;
+      timestamp: new Date()
+
+    };
+
+    session && session.messages.push(message);
+
+
+    // Simulate AI intent detection
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (message.sender === 'customer') {
       const intent = this.detectIntent(message.content);
       session.intent = intent.intent;
@@ -1801,10 +2233,15 @@ class AICustomerSupportService {;
       session.confidence = intent.confidence;
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     return message
   }
 
+<<<<<<< HEAD
 
   private detectIntent(message: string): { intent: string, confidence: number } {
     }
@@ -1813,22 +2250,39 @@ class AICustomerSupportService {;
   private detectIntent(message: string): { intent: string, confidence: number } {
     const lowerMessage = message.toLowerCase();
     if (lowerMessage.includes('login') |lowerMessage.includes('password')) {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   private detectIntent(message: string): { intent: string, confidence: number } {
     const lowerMessage = message.toLowerCase();
     
     if (lowerMessage.includes('login') || lowerMessage.includes('password')) {
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   private detectIntent(message: string): { intent: string, confidence: number } {;
     const lowerMessage = message.toLowerCase(),;
     if (lowerMessage.includes('login') || lowerMessage.includes('password')) {;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       return { intent: 'authentication_issue', confidence: 0.9 }
     } else if (lowerMessage.includes('billing') |lowerMessage.includes('payment')) {
       return { intent: 'billing_question', confidence: 0.85 }
     } else if (lowerMessage.includes('api') |lowerMessage.includes('integration')) {
       return { intent: 'technical_support', confidence: 0.8 }
     } else if (lowerMessage.includes('feature') |lowerMessage.includes('request')) {
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       escalated: false,
       satisfaction: 0;
     }
@@ -1914,6 +2368,7 @@ if ( {) {
     }
   }
 
+<<<<<<< HEAD
   async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void> {
     const session = this.chatbotSessions.find(s => s.id === sessionId);
     if (session) {
@@ -1922,17 +2377,24 @@ if ( {) {
       session.escalated = escalated;
       session.satisfaction = satisfaction
       this.updateAnalytics()
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   }
   async createKnowledgeBaseArticle(articleData: Omit<KnowledgeBaseArticle, 'id' | 'views' | 'helpful' | 'notHelpful' | 'createdBy' | 'lastUpdated'>): Promise<KnowledgeBaseArticle> {
     const article: KnowledgeBaseArticle = {
+<<<<<<< HEAD
       id: `kb_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+=======
+      id: `kb_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       ...articleData;
       views: 0;
       helpful: 0;
       notHelpful: 0;
       createdBy: 'system'
       lastUpdated: new Date()
+<<<<<<< HEAD
     };
     this && this.knowledgeBase.push(article);
     return article
@@ -1940,6 +2402,16 @@ if ( {) {
     }
     this.knowledgeBase.push(article);
     return article
+=======
+
+    };
+
+    this && this.knowledgeBase.push(article);
+
+    return article
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void> {;
     const session = this.chatbotSessions.find(s => s.id === sessionId),;
@@ -1966,8 +2438,16 @@ if ( {) {
     return article;
 
 
+<<<<<<< HEAD
   }
   async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+  async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const lowerQuery = query && query.toLowerCase(),
     return this && this.knowledgeBase.filter(article => 
       article && article.title.toLowerCase().includes(lowerQuery) ||
@@ -2033,6 +2513,7 @@ if ( {) {
   $2
 }
       recommendations.push ({
+<<<<<<< HEAD
   }
   async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {
     const lowerQuery = query.toLowerCase()
@@ -2051,10 +2532,17 @@ if ( {) {
     ).length;
     if (highPriorityOpenTickets > 5) {
       recommendations.push({
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         type: 'ticket_prioritization';
         title: 'High Priority Ticket Backlog';
         description: 'Too many high priority tickets are waiting for attention';
         impact: 'high';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const availableAgents = this && this.agents.filter(a => a && a.isAvailable && a && a.currentTickets < a && a.maxTickets);
     const unassignedTickets = this && this.tickets.filter(t => !t && t.assignedAgentId && t && t.status === 'open').length;
     if (availableAgents && availableAgents.length > 0 && unassignedTickets > 0) {
@@ -2074,6 +2562,7 @@ if ( {) {
   $2
 }
       recommendations.push ({
+<<<<<<< HEAD
         confidence: 90
         actionItems: [
           'Reallocate agents to handle high priority ticketsImplement automated prioritization systemReview ticket classification criteria'
@@ -2085,10 +2574,17 @@ if ( {) {
     const unassignedTickets = this.tickets.filter(t => !t.assignedAgentId && t.status === 'open').length;
     if (availableAgents.length > 0 && unassignedTickets > 0) {
       recommendations.push({
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         type: 'agent_assignment';
         title: 'Unassigned Tickets Available';
         description: 'There are unassigned tickets and available agents';
         impact: 'medium';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         confidence: 85,
         action_items: [;
           'Automatically assign tickets to available agents_implement load balancing for ticket distribution_review agent availability and workload';
@@ -2102,6 +2598,7 @@ if ( {) {
   $2
 }
       recommendations.push ({
+<<<<<<< HEAD
         confidence: 85
         actionItems: [
           'Automatically assign tickets to available agentsImplement load balancing for ticket distributionReview agent availability and workload'
@@ -2112,16 +2609,24 @@ if ( {) {
     const lowViewedArticles = this.knowledgeBase.filter(a => a.views < 10);
     if (lowViewedArticles.length > 5) {
       recommendations.push({
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         type: 'knowledge_base';
         title: 'Underutilized Knowledge Base Articles';
         description: 'Several articles have very low view counts';
         impact: 'low';
+<<<<<<< HEAD
         confidence: 75
         actionItems: [
           'Review and update low-performing articlesImprove article discoverabilityConsider consolidating similar articles'
         ]
       })
 
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   async getAIRecommendations(): Promise<AIRecommendation[]> {;
     const recommendations: AIRecommendation[] = [],;
@@ -2171,6 +2676,10 @@ if ( {) {
           'Review and update low-performing articlesImprove article discoverabilityConsider consolidating similar articles';
         ];
       });
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
     }
@@ -2383,8 +2892,16 @@ if ( {) {
       agentPerformance;
 
 
+<<<<<<< HEAD
     }
   }
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    }
+  }
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return this && this.tickets.find(t => t && t.id === ticketId) || null
   }
   async getTickets(status?: SupportTicket['status']): Promise<SupportTicket[]> {
@@ -2452,6 +2969,7 @@ if ( {) {
 }
 export const aiCustomerSupportService = new AICustomerSupportService ();
 ;
+<<<<<<< HEAD
 ;
   private updateAnalytics():void {;
     const totalTickets = this.tickets.length,;
@@ -2678,3 +3196,6 @@ export const aiCustomerSupportService = new AICustomerSupportService();
 
 ;
 export const aiCustomerSupportService = new AICustomerSupportService();
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

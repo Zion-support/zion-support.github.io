@@ -1,14 +1,24 @@
 
+<<<<<<< HEAD
 import {createClient} from '@supabase/supabase-js';
 export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 if (!supabaseUrl |!supabaseAnonKey) {
   throw new Error('Missing Supabase environment variables')
+=======
+
+
+
+import {createClient} from '@supabase/supabase-js';
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { createClient } from '@supabase/supabase-js',;
 export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL,;
 export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY,;
 if (!supabaseUrl || !supabaseAnonKey) {;
   throw new Error('Missing Supabase environment variables');
+<<<<<<< HEAD
 }
 // Utility to detect network connectivity. navigator.onLine is not reliable in
 // all environments, so we also try a small request with a short timeout.
@@ -59,6 +69,8 @@ export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL,;
 export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY,;
 if (!supabaseUrl || !supabaseAnonKey) {;
   throw new Error('Missing Supabase environment variables');
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 }
@@ -112,6 +124,13 @@ export const safe_fetch: typeof fetch = async (input, init) => {
     return await fetch (input, init);
   } catch (err) {
 
+<<<<<<< HEAD
+=======
+export const getFromProfiles = () => supabase && supabase.from('profiles');
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { createClient } from '@supabase/supabase-js',;
 export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL,;
 export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY,;
@@ -146,10 +165,14 @@ export const checkOnline = async (): Promise<boolean> => {;
   if (typeof navigator !== 'undefined' && !navigator.onLine) {;
     return false;
   }
+<<<<<<< HEAD
 export const checkOnline = async ():Promise<boolean> => {;
   if (typeof navigator !== 'undefined' && !navigator.onLine) {;
     return false,;
   }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   try {;
     const controller = new AbortController(),;
     const id = setTimeout(() => controller.abort(), 3000),;
@@ -213,3 +236,8 @@ export const getFromProfiles = () => supabase.from('profiles'),;
 });
 // Helper function to get profiles table;
 export const getFromProfiles = () => supabase.from('profiles');
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -7,7 +7,14 @@ export function MessageTab(): any ({;
   setProposalLink,;
 }: MessageTabProps) {;
 
+<<<<<<< HEAD
 
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="space-y-4">;
       <div>;
@@ -17,6 +24,7 @@ export function MessageTab(): any ({;
         <Textarea
           id="message"
           value={message}
+<<<<<<< HEAD
 import React from "react";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
@@ -65,6 +73,8 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
           placeholder="Write a message to the job poster..."
         />
       </div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           onChange={(e) => setMessage(e && e.target.value)}
 
@@ -98,13 +108,18 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
 
       <div>
         <Label htmlFor="proposalLink" className="text-white">Link to Proposal/Portfolio (Optional)</Label>
+<<<<<<< HEAD
       
       <div>
         <Label htmlFor="proposalLink" className="text-white">Link to Proposal/Portfolio (Optional)</Label>
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <Input
           id="proposalLink"
           type="url"
           value={proposalLink}
+<<<<<<< HEAD
           onChange={(e) => setProposalLink(e && e.target.value)}
           className="bg-zion-blue-dark/20 border-zion-purple/30 text-white";
           placeholder="https: //...";
@@ -112,6 +127,9 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
       </div>;
     </div>;
   );
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from './react';
 import { Textarea  } from '@/components / ui / textarea';
 import { Input  } from '@/components / ui / input';
@@ -154,11 +172,18 @@ function MessageTab() {
         />;
       </div>;
     </div>);
+<<<<<<< HEAD
+=======
+
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           onChange={(e) => setProposalLink(e.target.value)}
           className="bg-zion-blue-dark/20 border-zion-purple/30 text-white"
           placeholder="https: //..."
         />
       </div>
+<<<<<<< HEAD
     </div>
   );
 }
@@ -197,6 +222,9 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
           value={proposalLink}
           onChange={(e) => setProposalLink(e.target.value)}
           className="bg-zion-blue-dark/20 border-zion-purple/30 text-white";
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>
 
     </div>;
@@ -204,6 +232,7 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
 }
 
 
+<<<<<<< HEAD
           placeholder="https://...";
         />;
       </div>;
@@ -228,3 +257,6 @@ setProposalLink: (link: string) => void
   );
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

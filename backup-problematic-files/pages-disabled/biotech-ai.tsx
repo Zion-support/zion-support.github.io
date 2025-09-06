@@ -1,17 +1,41 @@
+<<<<<<< HEAD
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+<<<<<<< HEAD
+=======
+    
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return this.props.children;
   }
 }
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next / head';
 import {Activity, Phone, Mail, MapPin, Check, ArrowRight} from 'lucide-react';
 import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground';
@@ -120,3 +144,6 @@ export default function IncidentAutomationSuitePage() {
   )
 }
 ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

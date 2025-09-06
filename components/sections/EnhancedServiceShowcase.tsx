@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 interface Service {
   Star,
   Users,
@@ -18,6 +19,33 @@ interface Service {
   Cloud,
 import Button from '../ui / Button';
 interface Service {
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useState, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+
+interface Service {
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {;
   Star,;
   Users,;
@@ -66,12 +94,19 @@ interface Service {;
   market_size: string;
   growth_rate: string;
   variant: string;
+<<<<<<< HEAD
   contact_info: {
+=======
+
+  contact_info: {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     mobile: string;
     email: string;
     address: string;
     website: string;
   }
+<<<<<<< HEAD
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -80,10 +115,29 @@ interface Service {;
   reviews: number;
 ;
 interface EnhancedServiceShowcaseProps {
+=======
+
+  real_implementation: boolean;
+  implementation_details: string;
+  launch_date: string;
+
+  customers: number;
+  rating: number;
+  reviews: number;
+
+;
+interface EnhancedServiceShowcaseProps {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   title: string;
   subtitle: string;
   show_filters?: boolean;
   services?: Service[];
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { 
   Star, Users, TrendingUp, DollarSign, Clock, 
   CheckCircle, ArrowRight, Zap, Shield, Rocket;
@@ -139,15 +193,30 @@ interface EnhancedServiceShowcaseProps {
 }
 const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
   title;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   subtitle;
   showFilters = false;
   services = []
   maxServices = 12
+<<<<<<< HEAD
 }) => {
+=======
+
+}) => {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('popular');
   const categories = [
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   max_services?: number;
 ;
 const EnhancedServiceShowcase: React.FC < EnhancedServiceShowcaseProps> = ({
@@ -165,26 +234,49 @@ const EnhancedServiceShowcase: React.FC < EnhancedServiceShowcaseProps> = ({
   const [sort_by, setSortBy] = useState < string>('popular');
 ;
   const categories = [;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     { id: 'all', name: 'All Services', icon: '🚀' },
     { id: 'ai', name: 'AI & ML', icon: '🧠' },
     { id: 'quantum', name: 'Quantum', icon: '⚛️' },
     { id: 'blockchain', name: 'Blockchain', icon: '⛓️' },
     { id: 'enterprise', name: 'Enterprise', icon: '🏢' },
     { id: 'emerging', name: 'Emerging Tech', icon: '🌟' }
+<<<<<<< HEAD
 ];
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+  ];
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     { id: 'all', name: 'All Prices' },
     { id: 'low', name: 'Under $1K/month' },
     { id: 'medium', name: '$1K - $5K/month' },
     { id: 'high', name: '$5K - $20K/month' },
     { id: 'premium', name: '$20K+/month' }
+<<<<<<< HEAD
 ];
   const sortOptions = [
+=======
+
+  ];
+  const sortOptions = [
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     { id: 'popular', name: 'Most Popular' },
     { id: 'rating', name: 'Highest Rated' },
     { id: 'roi', name: 'Best ROI' },
     { id: 'price-low', name: 'Price Low to High' },
     { id: 'price-high', name: 'Price High to Low' }
+<<<<<<< HEAD
 ];
+=======
+  ];
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const filteredServices = useMemo(() => {
     const filtered = services.filter(service => {
       const matchesCategory = selectedCategory === 'all' |
@@ -210,6 +302,10 @@ const EnhancedServiceShowcase: React.FC < EnhancedServiceShowcaseProps> = ({
         break;
       case 'roi':
         filtered.sort((a, b) => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
   title,;
   subtitle,;
@@ -427,6 +523,10 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
       default:;
         break;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           const aROI = parseInt(a.roi.match(/\d+/)?.[0] || '0');
           const bROI = parseInt(b.roi.match(/\d+/)?.[0] || '0');
           return bROI - aROI
@@ -471,6 +571,10 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             className='text - 4xl md:text - 5xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent mb - 6'          >        });
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         break;
       case 'price - low':;
         filtered.sort ((a, b) => parse_float (a.price.replace (/[$]/g, '')) - parse_float (b.price.replace (/[$]/g, '')));
@@ -478,8 +582,16 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
       case 'price - high':;
         filtered.sort ((a, b) => parse_float (b.price.replace (/[$]/g, '')) - parse_float (a.price.replace (/[$]/g, '')));
         break;
+<<<<<<< HEAD
     return filtered && filtered.slice(0, maxServices);
   }, [services, selectedCategory, selectedPriceRange, sortBy, maxServices]);
+=======
+
+
+    return filtered && filtered.slice(0, maxServices);
+  }, [services, selectedCategory, selectedPriceRange, sortBy, maxServices]);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const stats = [;
     {;
       label: 'Total Services',;
@@ -507,6 +619,10 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
       icon: TrendingUp,;
       color: 'text-purple-400',;
     },;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   ];
   ];
 
@@ -530,18 +646,28 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
         break;
       default: break;
     }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return filtered && filtered.slice(0, maxServices);
   }, [services, selectedCategory, selectedPriceRange, sortBy, maxServices]);
   const stats = [;
     { label: 'Total Services', value: services && services.length, icon: Rocket, color: 'text-blue-400' },;
     { label: 'Active Customers', value: services && services.reduce((sum, s) => sum + (s && s.customers || 0), 0), icon: Users, color: 'text-green-400' },;
     { label: 'Average Rating', value: (services && services.reduce((sum, s) => sum + (s && s.rating || 0), 0) / services && services.length).toFixed(1), icon: Star, color: 'text-yellow-400' },;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     { label: 'Market Growth', value: '300%+', icon: TrendingUp, color: 'text-purple-400' }
   ];
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
         {/* Header */}
+<<<<<<< HEAD
         <div className="text-center mb-16">
                              (selectedCategory === 'ai' && (service.category.includes('AI') || service.category.includes('Machine Learning'))) ||
                              (selectedCategory === 'quantum' && (service.category.includes('Quantum') || service.category.includes('Space'))) ||
@@ -872,6 +998,8 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
           >
 
             {title}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
             {subtitle}
@@ -880,6 +1008,25 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            {title}
+          </motion && motion.h2>;
+          <motion&& motion.p
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+
+
+            {subtitle}
+
+          </motion && motion.p>;
+
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'          >
 
           >
@@ -888,19 +1035,27 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
           </motion.p>
 
 
+<<<<<<< HEAD
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
           >
             {subtitle}
           </motion && motion.p>;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Stats */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
 
 
+<<<<<<< HEAD
             transition={{ duration: 0.8, delay: 0.4 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           >
             {stats.map((stat, index) => (
           </motion.h2>
@@ -955,26 +1110,39 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
           </motion.div>
         </div>
 
+<<<<<<< HEAD
             ))}
           </motion.div>
         </div>
 
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Filters */}
         {showFilters && (;
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
 
+<<<<<<< HEAD
 
           >
             <div className='bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50'>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
             transition={{ duration: 0.8, delay: 0.6 }}
             className='mb-12'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           >
             <div className='bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50'>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {/* Category Filter */}
                 <div>
                   <label className='block text-sm font-medium text-gray-300 mb-3'>
@@ -989,42 +1157,79 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
             <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
+<<<<<<< HEAD
                     onChange={e => setSelectedCategory(e.target.value)}
                     className='w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                   >
                     {categories.map(category => (                      <option key={category.id} value={category.id}>          >
             <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {/* Category Filter */}
                 <div>;
                   <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-Category">Category</label>;
                   <select
                     value={selectedCategory}
 
+<<<<<<< HEAD
+=======
+
+                        {category.icon} {category.name}
+                      </option>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                    ))}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </select>;
                 </div>;
 
 
+<<<<<<< HEAD
 
 
 
                 {/* Price Range Filter */}
 
 
+=======
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                {/* Price Range Filter */}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         {range.name}
 
                   </select>;
                 </div>;
 
 
+<<<<<<< HEAD
 
 
 
+=======
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {/* Sort Options */}
 
 
                         {option.name}
                       </option>
+<<<<<<< HEAD
                     ))}
 
                     onChange={(e) => setSelectedCategory(e.target.value)}
@@ -1191,10 +1396,50 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                         {option.name}
                       </option>
                     ))}
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                    ))}
+
+                      </option>))}
+                  </select>;
+                </div>;
+                {/* Sort Options */}
+                <div>;
+                  <label className='block text - sm font - medium text - gray - 300 mb - 3'>;
+                    Sort By;
+                  </label>;
+                  <select;
+                    value={sort_by}
+                    on_change={e => setSortBy (e.target.value)}
+                    className='w - full bg - gray - 800 / 50 border border - gray - 600 rounded - lg px - 4 py - 2 text - white focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent';
+                  >;
+                    {sort_options.map (option => (                      <option key={option.id} value={option.id}>                  <select;
+                    value={sort_by}
+                    on_change={(e) => setSortBy (e.target.value)}
+                    className="w - full bg - gray - 800 / 50 border border - gray - 600 rounded - lg px - 4 py - 2 text - white focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent";
+                  >;
+                    {sort_options.map ((option) => (
+                      <option key={option.id} value={option.id}>;
+                        {option.name}
+                      </option>))}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </select>;
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
+=======
+
+                  </select>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -1204,6 +1449,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
           whileInView={{ opacity: 1, y: 0 }}
 
 
+<<<<<<< HEAD
           transition={{ duration: 0.8, delay: 0.8 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                   </select>
@@ -1221,6 +1467,8 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'        >          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'        >
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         >
           <AnimatePresence>
             {filteredServices.map((service, index) => (
@@ -1282,6 +1530,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       <div className='text - 3xl'>{service.icon}</div>;
                       <div className='text - right'>;
                         <div className='text - 2xl font - bold text - white'>;
+<<<<<<< HEAD
                 whileHover={{ y: -5, scale: 1.02 }}
                 className='group'
 
@@ -1310,10 +1559,14 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       <div className='text-3xl'>{service.icon}</div>
                       <div className='text-right'>
                         <div className='text-2xl font-bold text-white'>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           {service.price}
                         </div>;
                         <div className='text - sm text - gray - 400'>;
                           {service.period}
+<<<<<<< HEAD
                         </div>
 
                       </div>
@@ -1322,6 +1575,17 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       {service.name}
                     </h3>
                     <p className='text-gray-300 text-sm leading-relaxed'>                      {service.tagline}                      </div>
+=======
+
+                  <div className="mb-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="text-3xl">{service.icon}</div>
+                      <div className="text-right">
+                        <div className="text-2xl font-bold text-white">{service.price}</div>
+                        <div className="text-sm text-gray-400">{service.period}</div>
+                      </div>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     </div>
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                     </h3>;
@@ -1332,6 +1596,48 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                     </h3>;
                     <p className="text - gray - 300 text - sm leading - relaxed">;
                       {service.tagline}
+<<<<<<< HEAD
+=======
+
+                  <div className='mb-6'>;
+                    <div className='flex items-center justify-between mb-4'>;
+                      <div className='text-3xl'>{service && service.icon}</div>;
+                      <div className='text-right'>;
+                        <div className='text-2xl font-bold text-white'>;
+                          {service && service.price}
+                        </div>;
+                        <div className='text-sm text-gray-400'>;
+                          {service && service.period}
+                        </div>;
+                      </div>;
+                    </div>;
+                    <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>;
+                      {service && service.name}
+                    </h3>;
+                    <p className='text-gray-300 text-sm leading-relaxed'>                      {service && service.tagline}                      </div>;
+                    </div>;
+                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">;
+                      {service && service.name}
+                    </h3>;
+                    <p className="text-gray-300 text-sm leading-relaxed">;
+                      {service && service.tagline}
+                    </p>;
+                  </div>;
+
+
+                  {/* Features */}
+
+                        </div>
+
+
+
+
+                      </div>
+                    </div>
+                    <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
+                      {service.name}
+                    </h3>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                     <p className='text-gray-300 text-sm leading-relaxed'>                      {service.tagline}
 
@@ -1352,7 +1658,11 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                         <li key={idx} className="text-sm text-gray-400 flex items-start">;
                           <span className="text-cyan-400 mr-2">•</span>;
 
+<<<<<<< HEAD
                   {/* Features */}
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-gray-300 mb-3 flex items-center">
                       <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
@@ -1373,11 +1683,19 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       {service.features.slice(0, 4).map((feature, idx) => (
                         <li key={idx} className="text-sm text-gray-400 flex items-start">
                           <span className="text-cyan-400 mr-2">•</span>
+<<<<<<< HEAD
                           {feature}
                         </li>;
                       ))}
                     </ul>
                   </div>
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                          {feature}
+                        </li>;
+                      ))}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -1386,12 +1704,16 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
 
 
+<<<<<<< HEAD
                   {/* Stats */}
                   <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
 
                   {/* Stats */}
                   <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <div>
                       <div className='text-lg font-bold text-white'>
                         {service.rating}
@@ -1427,27 +1749,49 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
                   <div className="mb-6 p-4 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20">
 
+<<<<<<< HEAD
                   <div className="mb-6 p-4 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20">
                   <div className='mb-6 p-4 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20'>
                     <div className='text-sm text-green-400 font-semibold mb-1'>
                       🚀 ROI Promise
                     </div>
                     <div className='text-xs text-gray-300 leading-relaxed'>                      {service.roi}                  <div className="mb-6 p-4 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <div className="text-sm text-green-400 font-semibold mb-1">🚀 ROI Promise</div>
                     <div className="text-xs text-gray-300 leading-relaxed">
                       {service.roi}
 
+<<<<<<< HEAD
                       {service.roi}
 
                     </div>
                   </div>
                   {/* Market Position */}
                   <div className="mb-6 p-4 bg-gray-800/30 rounded-lg">
+=======
+
+                      {service.roi}
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                    </div>
+                  </div>
+                  {/* Market Position */}
+
+                  <div className="mb-6 p-4 bg-gray-800/30 rounded-lg">
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <div className="text-sm text-cyan-400 font-semibold mb-2">📊 Market Position</div>
                     <div className="text-xs text-gray-300 leading-relaxed">
                       {service.marketPosition}
                     </div>
                   </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     </ul>;
                   </div>;
                   {/* Stats */}
@@ -1505,6 +1849,15 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       {service && service.marketPosition}
                     </div>;
                   </div>;
+<<<<<<< HEAD
+=======
+
+
+                  {/* CTA */}
+
+                  {/* CTA */}
+                  <div className='mt-auto'>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -1512,7 +1865,16 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       href={service && service.link}
                       variant='primary'
 
+<<<<<<< HEAD
                   {/* CTA */}
+=======
+                      className='w-full group-hover:bg-cyan-500 transition-colors'>;
+                      Get Started;
+                      <ArrowRight className='ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform' />                    </Button>;
+                  </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   {/* Contact Info */}                    <Button
                       href={service && service.link}
                   <div className="mt-auto">
@@ -1521,11 +1883,20 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                     <Button
                       href={service.link}
                       variant="primary"
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       className="w-full group-hover:bg-cyan-500 transition-colors">;
                       Get Started;
                       <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />;
                     </Button>;
                   </div>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   {/* Contact Info */}
                   <div className='mt-4 text-center'>;
                     <div className='text-xs text-gray-500'>;
@@ -1548,6 +1919,11 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                 </div>;
               </motion && motion.div>;
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   {/* Contact Info */}
                   <div className="mt-4 text-center">
                     <div className="text-xs text-gray-500">
@@ -1555,6 +1931,16 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                     </div>
                     <div className="text-xs text-gray-500">
                       Email: <span className="text-cyan-400">{service.contactInfo.email}</span>
+<<<<<<< HEAD
+=======
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            ))}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           </AnimatePresence>;
         </motion && motion.div>;
@@ -1563,6 +1949,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
 
 
+<<<<<<< HEAD
                   </div>
                 </div>
               </motion.div>
@@ -1627,6 +2014,14 @@ Schedule a Consultation
               started today and see the future of business technology.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        {/* Call to Action */}
+        <motion&& motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
               <Button
@@ -1667,6 +2062,7 @@ Schedule a Consultation
   );
 
 
+<<<<<<< HEAD
               <Button
                 href='/contact'
                 variant='primary'
@@ -1704,6 +2100,15 @@ Schedule a Consultation
         </motion.div>
       </div>
     </section>
+=======
+};
+export default EnhancedServiceShowcase;  );
+};
+export default EnhancedServiceShowcase;
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     </p>;
                   </div>;
                   {/* Features */}
@@ -1885,11 +2290,17 @@ export default EnhancedServiceShowcase);
 ;
 export default EnhancedServiceShowcase;
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 
 };
 
 
+<<<<<<< HEAD
   );
 }
 };
@@ -1907,3 +2318,7 @@ export default EnhancedServiceShowcase;
 }
 }
 export default EnhancedServiceShowcase;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

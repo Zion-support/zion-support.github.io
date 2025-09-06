@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react',
 import React from "react";
 import { ResumeSelector, ResumeOption } from "../resume-selector";
@@ -30,6 +31,8 @@ export function ResumeTab({
   return (
     <div className="space-y-4">
       <ResumeSelector onResumeSelected={handleResumeSelected} />
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from './react';
 import { ResumeSelector, ResumeOption  } from '../resume - selector';
@@ -47,6 +50,7 @@ export function ResumeTab(): any ({;
   onApply,;
   isSubmitting = false,;
 }: ResumeTabProps) {;
+<<<<<<< HEAD
       {onApply && (
         <div className="mt-6">
           <Button
@@ -74,10 +78,13 @@ export interface ResumeTabProps {;
 }
 ;
 export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, onApply, isSubmitting = false }: ResumeTabProps) {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleResumeSelected = (resume: ResumeOption) => {;
     if (onResumeSelected) {;
       onResumeSelected(resume);
     }
+<<<<<<< HEAD
     }
   }
   return (
@@ -93,11 +100,28 @@ export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, 
     <div className="space-y-4">
       <ResumeSelector onResumeSelected={handleResumeSelected} />
       
+=======
+
+    if (onSelectResume) {;
+      onSelectResume(resume && resume.id);
+
+    }
+  }
+
+  return (
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {onApply && (
         <div className="mt-6">
           <Button 
             onClick={onApply} 
             disabled={!selectedResumeId || isSubmitting}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className="w-full"
           >
             {isSubmitting ? "Submitting..." : "Submit Application"}
@@ -107,15 +131,23 @@ export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, 
           
 
 
+<<<<<<< HEAD
             className="w-full"
           >
             {isSubmitting ? 'Submitting...' : 'Submit Application'}
           </Button>
           
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {!selectedResumeId && (
             <p className="text-sm text-muted-foreground mt-2">
               Please select a resume to continue
             </p>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="space-y-4">;
       <ResumeSelector onResumeSelected={handleResumeSelected} />;
       {onApply && (;
@@ -179,6 +211,7 @@ if ( {) {
             </p>)}
         </div>)}
     </div>);
+<<<<<<< HEAD
 }
 
 import React from 'react',;
@@ -249,3 +282,7 @@ isSubmitting?: boolean
     </div>;
   );
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

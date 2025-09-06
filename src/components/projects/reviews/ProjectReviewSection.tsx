@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Project  } from '@/types/projects';
 import { useState } from "react",
 import { Project } from '@/types/projects'
@@ -22,6 +23,8 @@ import { useReviews } from '@/hooks/useReviews'
 import { useAuth } from '@/hooks/useAuth'
 interface ProjectReviewSectionProps {
   project: Project
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const { user } = useAuth()
   const { reviews, userReview, isLoading, reportReview } = useReviews(
@@ -34,6 +37,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const clientProfile = project?.talent_profile
   const talentProfile = project.talent_profile
   // Determine who the current user needs to review
+<<<<<<< HEAD
   const revieweeId = isClient ? project.talent_id : project.client_id
   const revieweeName = isClient
     ? talentProfile?.full_name |'Talent'
@@ -52,6 +56,18 @@ import { useAuth } from "@/hooks/useAuth",
 interface ProjectReviewSectionProps {
   project: Project
 }
+=======
+  const revieweeId = isClient ? project.talent_id : project.client_id,
+  const revieweeName = isClient 
+    ? talentProfile?.full_name || "Talent" 
+    : clientProfile?.full_name || "Client",
+
+
+  const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
+  const hasLeftReview = userReview != null,
+  
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const { user } = useAuth(),
@@ -74,12 +90,15 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
   const hasLeftReview = userReview != null,
   
+<<<<<<< HEAD
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
   const hasLeftReview = userReview != null,
   
     <Card className="mt-6">
 
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <Card className='mt-6'>
         <CardTitle className='flex items-center gap-2'>
@@ -100,6 +119,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
       
 
       <CardContent>
+<<<<<<< HEAD
       <CardContent>
         {isCompleted ? (
           <div className='space-y-6'>
@@ -107,10 +127,13 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
               <div className='border-b pb-4 mb-4'>
       
       <CardContent>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {isCompleted ? (
           <div className="space-y-6">
             {(isClient || isTalent) && (
               <div className="border-b pb-4 mb-4">
+<<<<<<< HEAD
                   <div className="bg-muted/20 rounded-lg p-4 text-center">
                     <h3 className="font-medium mb-2">Share your experience</h3>
                     <p className="text-sm text-muted-foreground mb-3">
@@ -118,6 +141,8 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
                   <div className='bg-muted/20 rounded-lg p-4 text-center'>
                     <h3 className='font-medium mb-2'>Share your experience</h3>
                     <p className='text-sm text-muted-foreground mb-3'>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {canLeaveReview ? (
                   <div className="bg-muted/20 rounded-lg p-4 text-center">
                     <h3 className="font-medium mb-2">Share your experience</h3>
@@ -129,17 +154,26 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
                     </Button>
                   </div>
                 ) : hasLeftReview ? (
+<<<<<<< HEAD
+=======
+
+import { useState } from 'react';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <div className="bg-muted/20 rounded-lg p-4 text-center">
                     <h3 className="font-medium mb-2">Thank you for your review!</h3>
                     <p className="text-sm text-muted-foreground mb-3">
                       Your review is {userReview.status === "approved" ? "published" : "pending approval"}
                     </p>
+<<<<<<< HEAD
                     {userReview.status === 'pending' && (
                       <Button
                         variant='outline'
                         onClick={() => setIsReviewModalOpen(true)}
                       >                        Edit Review
                       </Button>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     {userReview.status === "pending" && (
                       <Button variant="outline" onClick={() => setIsReviewModalOpen(true)}>
                         Edit Review
@@ -147,6 +181,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
 import { Project } from '@/types/projects',;
 import { useState } from "react",;
 
+<<<<<<< HEAD
 import { Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {;
@@ -246,6 +281,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </Button>
 import { Project } from '@/types/projects',;
 import { useState } from "react",;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Star } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -300,25 +337,54 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
                     </Button>;
                   </div>;
                 ) : hasLeftReview ? (;
+<<<<<<< HEAD
                   <div className="bg-muted/20 rounded-lg p-4 text-center">;
                     <h3 className="font-medium mb-2">Thank you for your review!</h3>;
                     <p className="text-sm text-muted-foreground mb-3">;
                       Your review is {userReview.status === "approved" ? "published" : "pending approval"}
+=======
+                  <div className='bg-muted/20 rounded-lg p-4 text-center'>;
+                    <h3 className='font-medium mb-2'>;
+                      Thank you for your review!;
+                    </h3>;
+                    <p className='text-sm text-muted-foreground mb-3'>;
+                      Your review is{' '}
+                      {userReview && userReview.status === 'approved';
+                        ? 'published';
+                        : 'pending approval'}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     </p>;
                     {userReview.status === "pending" && (;
                       <Button variant="outline" onClick={() => setIsReviewModalOpen(true)}>;
                         Edit Review;
                       </Button>;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     )}
                   </div>
                 ) : null}
               </div>
             )}
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <ReviewsList
               reviews = {reviews,}
               isLoading = {isLoading,}
               onReportReview = {reportReview,}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </CardContent>;
 
       {/* Review Modal */}
@@ -462,6 +528,7 @@ function ProjectReviewSection() {
               able to leave reviews;
             </p>;
           </div>)}
+<<<<<<< HEAD
       </CardContent>
       {/* Review Modal */}
       {(isClient |isTalent) && (
@@ -481,6 +548,8 @@ function ProjectReviewSection() {
   );
 };
 };
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </CardContent>;
       {/* Review Modal */}
       {(isClient || isTalent) && (;
@@ -495,6 +564,11 @@ function ProjectReviewSection() {
     </Card>;
   );
 }
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 ;
 ;
+=======
+
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

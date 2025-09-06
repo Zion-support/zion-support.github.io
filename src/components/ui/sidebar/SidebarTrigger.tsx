@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import { Menu, X } from 'lucide-react'
@@ -5,6 +6,8 @@ import { useSidebar } from "./sidebar-context";
 import { cn } from "@/lib/utils";
 interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {
   className?: string
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import { Button } from '@/components/ui/button';
 
@@ -40,6 +43,7 @@ export function SidebarTrigger(): any ({ className, ...props }: SidebarTriggerPr
 };
 
 }
+<<<<<<< HEAD
 ;
 
 
@@ -78,3 +82,8 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
 ;
 
 ;
+=======
+
+
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

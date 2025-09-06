@@ -1,5 +1,18 @@
+<<<<<<< HEAD
 
 type Props = {;
+=======
+
+
+import React from "react";
+import type { NextPage, GetServerSideProps } from "next";
+import ReviewForm from "../../components/reviews/ReviewForm";
+import { findProjectById } from "../../utils/dataStore";
+
+
+type Props = {;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   projectId: string;
   fromRole: "client" | "talent";
   fromId: string;
@@ -18,6 +31,11 @@ type Props = {
   reason?: string
 };
 const ReviewSubmitPage: NextPage<Props> = ({ projectId, fromRole, fromId, valid, reason }) => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (!valid) {
     return (
       <main className="max-w-2xl mx-auto p-6">
@@ -26,6 +44,7 @@ const ReviewSubmitPage: NextPage<Props> = ({ projectId, fromRole, fromId, valid,
 };
 
 
+<<<<<<< HEAD
 };
 };
 export const getServerSideProps: GetServerSideProps = async (ctx) => {;
@@ -146,6 +165,8 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const project = await findProjectById(projectId);
   if (!project) {
     return { props: { projectId, fromRole: role, fromId, valid: false, reason: 'Project not found' } } as any
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   if (project && project.status !== "Completed") {;
     return {;
@@ -170,8 +191,18 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
       reason: valid ? null : "Invalid reviewer for this project",;
     },;
   } as any;
+<<<<<<< HEAD
 }
 export default ReviewSubmitPage;
+=======
+
+}
+
+export default ReviewSubmitPage;
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         project_id,
         from_role: role,
         from_id,
@@ -239,6 +270,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
 export default ReviewSubmitPage;
 ;
+<<<<<<< HEAD
 
 const ReviewSubmitPage: NextPage<Props> = (_{_projectId, _fromRole, _fromId, _valid, _reason}) => {_if (!valid) {
     return (
@@ -493,3 +525,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   return { props: { projectId, fromRole: role, fromId, valid, reason: valid ? null : 'Invalid reviewer for this project' } } as any;
 };
 export default ReviewSubmitPage;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

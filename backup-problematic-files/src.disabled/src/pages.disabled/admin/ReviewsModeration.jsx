@@ -27,4 +27,8 @@ const ReviewsModeration = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ReviewsModeration;
+=======
+export default ReviewsModeration;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

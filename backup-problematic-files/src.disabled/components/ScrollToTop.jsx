@@ -27,4 +27,8 @@ const ScrollToTop = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ScrollToTop;
+=======
+export default ScrollToTop;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
 import React from 'react';
 interface TeamProps {
@@ -13,6 +14,10 @@ import React from 'react';
 interface TeamProps {
   // Add props here as needed
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function Team({ }: TeamProps) {
   return (
     <div>
@@ -24,6 +29,7 @@ export default function Team({ }: TeamProps) {
 }
 
 
+<<<<<<< HEAD
 }
 }
 }
@@ -31,3 +37,6 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

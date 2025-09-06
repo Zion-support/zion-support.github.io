@@ -17,6 +17,7 @@ document && document.addEventListener('DOMContentLoaded', () => {
   document && document.getElementById('view-notifications')?.addEventListener('click', () => {
     chrome && chrome.runtime.sendMessage({ type: 'view-notifications' })
 
+<<<<<<< HEAD
 async function ask() {
   const prompt = document.getElementById('prompt').value
   if (!prompt.trim()) {
@@ -43,6 +44,20 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('view-notifications')?.addEventListener('click', () => {
     chrome.runtime.sendMessage({ type: 'view-notifications' })
   })
+=======
+  try {
+  const prompt = document && document.getElementById('prompt').value,
+  if (!prompt && prompt.trim()) {
+    document && document.getElementById('output').textContent = 'Please enter a prompt.',
+    return
+  }
+  const res = await chrome && chrome.runtime.sendMessage({ type: 'ask', prompt }),
+  document && document.getElementById('output').textContent = res && res.answer
+
+}
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -77,6 +92,7 @@ document.addEventListener ('DOMContentLoaded', () => {
 }),
 ;
 
+<<<<<<< HEAD
 async function ask() {;
   const prompt = document.getElementById('prompt').value,;
   if (!prompt.trim()) {;
@@ -86,6 +102,13 @@ async function ask() {;
   const res = await chrome.runtime.sendMessage({ type:'ask', prompt }),;
   document.getElementById('output').textContent = res.answer,;
 }
+=======
+=======
+}),
+;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 // Attach handlers once the DOM is fully loaded to avoid null element errors;
 document.addEventListener('DOMContentLoaded', () => {;
@@ -101,6 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {;
   });
 }),;
 
+<<<<<<< HEAD
 ;
   document.getElementById('post-job')?.addEventListener('click', () => {;
     chrome.runtime.sendMessage({ type:'post-job' }),;
@@ -112,3 +136,8 @@ document.addEventListener('DOMContentLoaded', () => {;
     chrome.runtime.sendMessage({ type:'view-notifications' }),;
   }),;
 }),; 
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

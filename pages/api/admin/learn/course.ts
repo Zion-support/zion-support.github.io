@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
@@ -19,6 +20,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.setHeader('AllowPOST')
     return res.status(405).end('Method Not Allowed')
 
+=======
+
+
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   try {
     const body = req.body |{}
@@ -52,6 +59,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     const existingIndex = courses.findIndex((c: any) => c.id === body.id);
     if (existingIndex >= 0) {
+<<<<<<< HEAD
       courses[existingIndex] = { ...courses[existingIndex], ...body };
     } else {
       courses.push (body);
@@ -91,3 +99,35 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+      courses[existingIndex] = { ...courses[existingIndex], ...body };
+    } else {
+      courses.push(body);
+    }
+
+
+}
+
+=======
+    fs.writeFileSync (courses_path, JSON.stringify (courses, null, 2)),
+    res.status (200).json ({ ok: true, course: body });
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    fs.writeFileSync(coursesPath, JSON.stringify(courses, null, 2))
+    res.status(200).json({ ok: true, course: body })
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  } catch (e: any) {
+    res.status (500).json ({ error: e?.message ?? 'Failed to save course' });
+  }
+}
+<<<<<<< HEAD
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

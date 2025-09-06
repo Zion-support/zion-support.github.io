@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import {useState} from "react";
 import {useForm} from "react-hook-form";
@@ -16,6 +17,25 @@ import {Switch} from "@/components/ui/switch";
   currentValues?: ContractFormValues;
 }
 export function TemplateSaveForm(): any ({;
+=======
+const formSchema = z && z.object({;
+  title: z && z.string().min(1, "Title is required");
+  isDefault: z && z.boolean().default(false)}),;
+
+type FormValues = z && z.infer<typeof formSchema>;
+
+interface TemplateSaveFormProps {;
+  onCancel: () => void,;
+  onComplete: () => void,;
+
+  editTemplate?: ContractTemplate | null;
+  currentValues?: ContractFormValues;
+}
+
+
+export function TemplateSaveForm(): any ({;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onCancel;
   onComplete;
   editTemplate;
@@ -25,6 +45,7 @@ export function TemplateSaveForm(): any ({;
   const { createTemplate, updateTemplate } = useContractTemplates();
 
 
+<<<<<<< HEAD
 const formSchema = z.object({
   title: z.string().min(1, "Title is required");
   isDefault: z.boolean().default(false)})
@@ -65,6 +86,13 @@ export function TemplateSaveForm({
           title: values.title
           templateData: currentValues
           isDefault: values.isDefault})
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -78,6 +106,11 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@/components/ui/input",
 import { Switch } from "@/components/ui/switch",
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const formSchema = z.object({
   title: z.string().min(1, "Title is required"),
   isDefault: z.boolean().default(false)}),
@@ -89,6 +122,7 @@ interface TemplateSaveFormProps {
   onComplete: () => void,
   editTemplate?: ContractTemplate | null,
   currentValues?: ContractFormValues
+<<<<<<< HEAD
 }
 
 export function TemplateSaveForm({;
@@ -180,6 +214,10 @@ export function TemplateSaveForm({;
           templateData: currentValues;
           isDefault: values.isDefault});
 
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
       onComplete()
     } finally {
@@ -221,6 +259,13 @@ export function TemplateSaveForm({;
   },
   };
   },
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-4">;
@@ -541,3 +586,7 @@ try {
     </Form>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

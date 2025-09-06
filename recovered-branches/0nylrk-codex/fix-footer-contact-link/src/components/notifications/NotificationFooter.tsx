@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from './react';
 import { Button  } from '@/components / ui / button';
 import { use_navigate  } from './react-router-dom';
@@ -6,6 +10,7 @@ interface NotificationFooterProps {
   on_close: () => void;
 }
 
+<<<<<<< HEAD
 import React from './react';
 import { Button  } from '@/components / ui / button';
 import { use_navigate  } from './react-router-dom';
@@ -14,6 +19,11 @@ interface NotificationFooterProps {
 }
 import {Button} from '@/components/ui/button';
 import {useNavigate} from 'react-router-dom';
+=======
+import {Button} from '@/components/ui/button';
+import {useNavigate} from 'react-router-dom';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   onClose: () => void
@@ -22,6 +32,10 @@ import {useNavigate} from 'react-router-dom';
 export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {;
   const navigate = useNavigate();
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import { useNavigate } from 'react-router-dom',;
@@ -29,6 +43,7 @@ import { useNavigate } from 'react-router-dom',;
 interface NotificationFooterProps {;
   onClose: () => void;
 }
+<<<<<<< HEAD
 import React from 'react';
 import { Button  } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
@@ -65,10 +80,17 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose 
   },
 export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {;
   const navigate = useNavigate();
+=======
+
+export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {;
+  const navigate = useNavigate();
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleViewAll = () => {;
     onClose();
     navigate('/notifications');
   };
+<<<<<<< HEAD
   return (
     <div className="p-3 text-center border-t border-zion-blue-light">;
 import React from "react";
@@ -91,6 +113,12 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({
   
   return (
     <div className="p-3 text-center border-t border-zion-blue-light">
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  return (
+    <div className="p-3 text-center border-t border-zion-blue-light">;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <Button
         variant="link"
         size="sm"
@@ -142,6 +170,7 @@ export const NotificationFooter: React.FC < NotificationFooterProps> = ({
     </div>);
 }
 ;
+<<<<<<< HEAD
 
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
@@ -187,3 +216,6 @@ export const NotificationFooter:React.FC<NotificationFooterProps> = ({ onClose }
 };
 
 };
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

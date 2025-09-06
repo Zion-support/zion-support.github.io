@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react'
 import { useMutation } from '@tanstack/react-query'
 import { Check, X, User, Star, MoreHorizontal } from 'lucide-react'
@@ -122,11 +123,14 @@ import { Review, ReviewStatus } from "@/types/reviews",
 
 import {
   Dialog,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 Dialog,
   DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
+<<<<<<< HEAD
   DialogTitle,
 } from '@/components/ui/dialog'
   DropdownMenu,
@@ -256,12 +260,18 @@ export function ReviewsModerationTable({
         title: "Review updated",
         description: `Review has been ${data.status}.`}),
       onRefresh(),
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       setViewDetailsOpen(false)
     },
     onError: (error: Error) => {
       toast({
         title: "Error",
         description: `Failed to update review: ${error.message}`,
+<<<<<<< HEAD
         variant: 'destructive',
       })
     },
@@ -284,6 +294,11 @@ export function ReviewsModerationTable({
       .join("")
       .toUpperCase()
   },
+=======
+
+
+  if (isLoading) {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     return (
       <div className='space - y-4'>;
@@ -293,10 +308,18 @@ export function ReviewsModerationTable({
         <div className='h - 16 w - full bg - muted rounded animate - pulse' />;
       </div>);
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Check condition
 if ( {) {
   $2
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return (
       <div className='py - 10 text - center'>;
         <h3 className='text - lg font - medium mb - 2'>No reviews to moderate</h3>;
@@ -305,8 +328,15 @@ if ( {) {
         </p>;
       </div>);
   }
+<<<<<<< HEAD
   const handle_approve = (review_id: string) =>: any {
     updateReviewStatus ({ review_id, status: 'approved' });
+=======
+
+  const handle_approve = (review_id: string) =>: any {
+    updateReviewStatus ({ review_id, status: 'approved' });
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   const handle_reject = (review_id: string) =>: any {
     updateReviewStatus ({ review_id, status: 'rejected' });
@@ -315,6 +345,7 @@ if ( {) {
     setSelectedReview (review);
     setViewDetailsOpen (true);
   }
+<<<<<<< HEAD
 import { useState } from "react",;
 import { useMutation } from "@tanstack/react-query",;
 import { Check, X, User, Star, MoreHorizontal } from 'lucide-react';
@@ -323,25 +354,157 @@ import { toast } from "@/hooks/use-toast",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Review, ReviewStatus } from "@/types/reviews",;
 ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {;
   Table,;
   TableBody,;
   TableCell,;
   TableHead,;
   TableHeader,;
+<<<<<<< HEAD
   TableRow} from "@/components/ui/table",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import {;
+=======
+  TableRow,;
+} from '@/components/ui/table';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';import {;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Dialog,;
   DialogContent,;
   DialogDescription,;
   DialogFooter,;
   DialogHeader,;
+<<<<<<< HEAD
   DialogTitle} from "@/components/ui/dialog",;
+=======
+  DialogTitle,;
+} from '@/components/ui/dialog';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {;
   DropdownMenu,;
   DropdownMenuContent,;
   DropdownMenuItem,;
+<<<<<<< HEAD
+=======
+  DropdownMenuTrigger,;
+} from '@/components/ui/dropdown-menu';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+interface ReviewsModerationTableProps {;
+  reviews: Review[];
+isLoading: boolean;
+onRefresh: () => void ;
+}export function ReviewsModerationTable(): any ({;
+  reviews;
+isLoading;
+onRefresh ;
+}: ReviewsModerationTableProps) {;
+  const [selectedReview, setSelectedReview] = useState<Review | null> (null);
+const [viewDetailsOpen,  setViewDetailsOpen] = useState (false);
+const {;
+  mutate: updateReviewStatus, isPending ;
+}= useMutation ({;
+  mutationFn: async ({;
+  reviewId;
+status ;
+}: {;
+  reviewId: string;
+status: ReviewStatus ;
+}) => {;
+  const {;
+  error ;
+}= await supabase .from ("reviews") .update ({;
+  status ;
+}) if (error) throw error;
+return {;
+  reviewId, status ;
+
+export function ReviewsModerationTable(): any ({;
+  reviews,;
+  isLoading,;
+  onRefresh,;
+}: ReviewsModerationTableProps) {;
+  const [selectedReview, setSelectedReview] = useState<Review | null>(null);
+  const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
+
+  const { mutate: updateReviewStatus, isPending } = useMutation({;
+    mutationFn: async ({;
+      reviewId,;
+      status,;
+    }: {;
+      reviewId: string;
+      status: ReviewStatus;
+    }) => {      const { error } = await supabase;
+        .from('reviews');
+        .update({ status });
+        .eq('id', reviewId);
+
+      if (error) throw error;
+      return { reviewId, status };
+    },;
+    onSuccess: data => {      toast({;
+        title: 'Review updated',;
+        description: `Review has been ${data && data.status}.`,;
+      });
+      onRefresh();
+      setViewDetailsOpen(false);
+    },;
+    onError: (error: Error,) => {;
+      toast({;
+        title: 'Error',;
+        description: `Failed to update review: ${error && error.message}`,;
+        variant: 'destructive',;
+      });
+    },;
+  });
+
+  const getInitials = (name: string,) => {;
+    return name;
+      .split(' ');
+      .map(n => n[0]);
+      .join('');
+      .toUpperCase();
+  };
+  if (isLoading) {;
+    return (
+      <div className='space-y-4'>;
+        <div className='h-12 w-full bg-muted rounded animate-pulse' />;
+        <div className='h-16 w-full bg-muted rounded animate-pulse' />;
+        <div className='h-16 w-full bg-muted rounded animate-pulse' />;
+        <div className='h-16 w-full bg-muted rounded animate-pulse' />;
+      </div>;
+    );
+  }
+
+  if (reviews && reviews.length === 0) {;
+    return (
+      <div className='py-10 text-center'>;
+        <h3 className='text-lg font-medium mb-2'>No reviews to moderate</h3>;
+        <p className='text-muted-foreground'>;
+          All reviews have been processed. Check back later for new submissions.;
+        </p>;
+      </div>;
+    );
+  }
+
+  const handleApprove = (reviewId: string) => {;
+    updateReviewStatus({ reviewId, status: 'approved' });
+  };
+
+  const handleReject = (reviewId: string) => {;
+    updateReviewStatus({ reviewId, status: 'rejected' });
+  };
+
+  const handleViewDetails = (review: Review) => {;
+    setSelectedReview(review);
+    setViewDetailsOpen(true);
+  };
+  const renderStars = (rating: number,) => {;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return (
       <div className='flex'>;
         {[1, 2, 3, 4, 5].map(star => (;
@@ -349,6 +512,10 @@ import {;
             key={star}
             className={`h-4 w-4 ${star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}          />;
         ))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const render_stars = (rating: number, ) =>: any {
     return (
       <div className='flex'>;
@@ -357,12 +524,17 @@ import {;
             key={star}
             className={`h - 4 w - 4 ${star <= rating ? 'fill - yellow - 400 text - yellow - 400' : 'text - gray - 300'}`}          />))}
       </div>);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
       </div>;
     );
   };
 
   return (
+<<<<<<< HEAD
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -465,11 +637,14 @@ export function ReviewsModerationTable({;
   },;
 ;
   return (;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <>;
       <Table>;
         <TableHeader>;
           <TableRow>;
 
+<<<<<<< HEAD
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -481,6 +656,8 @@ export function ReviewsModerationTable({;
     )
   }
   if (reviews.length === 0) {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return (
       <div className="py-10 text-center">
         <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3>
@@ -489,6 +666,7 @@ export function ReviewsModerationTable({;
         </p>
       </div>
     )
+<<<<<<< HEAD
   }
   const handleApprove = (reviewId: string) => {
   }
@@ -685,6 +863,9 @@ export function ReviewsModerationTable({;
       <Table>;
         <TableHeader>;
           <TableRow>;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
                     ) : (
@@ -702,6 +883,7 @@ export function ReviewsModerationTable({;
                         ) : (;
                           <User className='h-4 w-4' />;
                         )}
+<<<<<<< HEAD
             <TableHead>Reviewer</TableHead>;
             <TableHead>Rating</TableHead>;
             <TableHead>Date</TableHead>;
@@ -720,6 +902,10 @@ export function ReviewsModerationTable({;
                       <AvatarImage;
                         src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name || ""}
+=======
+                      </AvatarFallback>;
+                    )}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
                       <span className="text-sm font-medium">
@@ -729,16 +915,25 @@ export function ReviewsModerationTable({;
                       </span>
                   </Avatar>;
                   <div>;
+<<<<<<< HEAD
                     {review.is_anonymous ? (;
                       <span className="text-sm font-medium">Anonymous</span>;
                     ) :(;
                       <span className="text-sm font-medium">;
                         {review.reviewer_profile?.display_name || "User"}
+=======
+                    {review && review.is_anonymous ? (;
+                      <span className='text-sm font-medium'>Anonymous</span>;
+                    ) : (;
+                      <span className='text-sm font-medium'>;
+                        {review && review.reviewer_profile?.display_name || 'User'}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       </span>;
                     )}
                   </div>;
                 </div>;
               </TableCell>;
+<<<<<<< HEAD
               <TableCell>{renderStars(review.rating)}</TableCell>;
               <TableCell>;
                 {format(new Date(review.created_at), "MMM d, yyyy")}
@@ -820,6 +1015,100 @@ export function ReviewsModerationTable({;
               </TableCell>
               <TableCell>
                 {review.report_count > 0 ? (
+=======
+              <TableCell>{renderStars(review && review.rating)}</TableCell>;
+              <TableCell>;
+                {format(new Date(review && review.created_at), 'MMM d, yyyy')}
+              </TableCell>;
+              <TableCell>;
+                <Badge variant='outline'>;
+                  {review && review.status.charAt(0).toUpperCase() +;
+                    review && review.status.slice(1)}
+                </Badge>;
+              </TableCell>;
+              <TableCell>;
+                {review && review.report_count > 0 ? (;
+                  <Badge variant='destructive'>{review && review.report_count}</Badge>;
+                ) : (;
+                  'None';
+                )}
+
+                          onClick={() =>;
+                            updateReviewStatus({;
+                              reviewId: review && review.id,;
+                              status: 'rejected',;
+                            });
+
+                          }
+                        >;
+                          Mark as rejected;
+                        </DropdownMenuItem>;
+                      )}
+                      {review && review.status === 'rejected' && (;
+                        <DropdownMenuItem
+
+                          onClick={() =>;
+                            updateReviewStatus({;
+                              reviewId: review && review.id,;
+                              status: 'approved',;
+                            });
+
+                          }
+                        >                          Mark as approved;
+                        </DropdownMenuItem>;
+                      )}
+            <TableHead > Reviewer</TableHead>;
+            <TableHead > Rating</TableHead>;
+            <TableHead > Date</TableHead>;
+            <TableHead > Status</TableHead>;
+            <TableHead > Reports</TableHead>;
+            <TableHead className='text - right'>Actions</TableHead>;
+          </TableRow>;
+        </TableHeader>;
+        <TableBody>;
+          {reviews.map (review => (            <TableRow key={review.id}>;
+              <TableCell>;
+                <div className='flex items - center gap - 2'>;
+                  <Avatar className='h - 8 w - 8'>;
+                    {review.reviewer_profile?.avatar_url ? (
+                      <AvatarImage;
+                        src={review.reviewer_profile.avatar_url}
+                        alt={review.reviewer_profile.display_name || ''}                      />) : (
+                      <AvatarFallback>;
+                        {review.reviewer_profile?.display_name ? (
+                          get_initials (review.reviewer_profile.display_name)) : (
+                          <User className='h - 4 w - 4' />)}
+                      </AvatarFallback>)}
+                  </Avatar>;
+                  <div>;
+                    {review.is_anonymous ? (
+                      <span className='text - sm font - medium'>Anonymous</span>) : (
+                      <span className='text - sm font - medium'>;
+                        {review.reviewer_profile?.display_name || 'User'}
+                      </span>)}
+                  </div>;
+                </div>;
+              </TableCell>;
+              <TableCell>{render_stars (review.rating)}</TableCell>;
+              <TableCell>;
+                {format (new Date (review.created_at), 'MMM d, yyyy')}
+              </TableCell>;
+              <TableCell>;
+                <Badge variant='outline'>;
+                  {review.status.char_at (0).toUpperCase () +;
+                    review.status.slice (1)}
+                </Badge>;
+              </TableCell>;
+              <TableCell>;
+                {review.report_count > 0 ? (
+                  <Badge variant='destructive'>{review.report_count}</Badge>) : (
+                  'None')}
+              </TableCell>;
+              <TableCell className='text - right'>;
+                <div className='flex justify - end gap - 2'>;
+                  {review.status === 'pending' && (
+                    <>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <Button;
                         variant="ghost";
                         size="sm";
@@ -846,16 +1135,20 @@ export function ReviewsModerationTable({;
                 </div>;
               </TableCell>;
 
+<<<<<<< HEAD
                   <Badge variant="destructive">{review.report_count}</Badge>
                 ) : (
                   "None"
                 )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </TableCell>
               <TableCell className="text-right">
                 <div className="flex justify-end gap-2">
                   {review.status === "pending" && (
                     <>
                       <Button
+<<<<<<< HEAD
                         size='sm'
                         variant='outline'
                         className='h-8 w-8 p-0'
@@ -870,6 +1163,9 @@ export function ReviewsModerationTable({;
                         onClick={() => handleReject(review.id)}
                         disabled={isPending}                      >
                         <X className='h-4 w-4 text-red-500' />
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         size="sm"
                         variant="outline"
                         className="h-8 w-8 p-0"
@@ -886,6 +1182,11 @@ export function ReviewsModerationTable({;
                         disabled={isPending}
                       >
                         <X className="h-4 w-4 text-red-500" />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       </Button>
                     </>
                   )}
@@ -903,6 +1204,7 @@ export function ReviewsModerationTable({;
                       <DropdownMenuItem onClick={() => handleViewDetails(review)}>
                         View details
                       </DropdownMenuItem>
+<<<<<<< HEAD
                       {review.status === 'approved' && (
                         <DropdownMenuItem
                           onClick={() =>
@@ -925,6 +1227,9 @@ export function ReviewsModerationTable({;
                           }
                         >                          Mark as approved
                         </DropdownMenuItem>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       {review.status === "approved" && (
                         <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: "rejected" })}>
                           Mark as rejected
@@ -942,6 +1247,7 @@ export function ReviewsModerationTable({;
               </TableCell>
             </TableRow>
           ))}
+<<<<<<< HEAD
         </TableBody>
       </Table>
       {selectedReview && (
@@ -965,6 +1271,10 @@ ursor/fix-website-loading-errors-and-merge-6662
             <div className='space-y-4'>
               <div className='flex items-center justify-between'>
                 <div className='flex items-center gap-2'>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             <div className="space-y-4">
               <div className="flex items-center justify-between">
@@ -976,11 +1286,18 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <AvatarImage
                         src={selectedReview.reviewer_profile.avatar_url}
 
+<<<<<<< HEAD
                         alt={selectedReview.reviewer_profile.display_name || ''}                      />
 
 
                         alt={selectedReview.reviewer_profile.display_name |''}                      />
                         alt={selectedReview.reviewer_profile.display_name || ''}                      />
+=======
+
+                        alt={selectedReview.reviewer_profile.display_name || ''}                      />
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     ) : (
                       <AvatarFallback>
                         {selectedReview.reviewer_profile?.display_name ? (
@@ -989,8 +1306,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                           )
                         ) : (
                           <User className='h-4 w-4' />
+<<<<<<< HEAD
                         alt={selectedReview.reviewer_profile.display_name || ""}
                       />;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </TableBody>;
       </Table>;
       {selectedReview && (;
@@ -1091,6 +1411,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </div>
                 <div>{renderStars(selectedReview.rating)}</div>
               </div>
+<<<<<<< HEAD
               <div className='border rounded-md p-3 bg-muted/20'>
                 <p className='whitespace-pre-wrap'>
                   {selectedReview.review_text}
@@ -1099,6 +1420,10 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className='space-y-2'>
                 <h4 className='text-sm font-medium'>Additional Ratings</h4>
                 <div className='flex flex-wrap gap-2'>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               <div className="border rounded-md p-3 bg-muted/20">
                 <p className="whitespace-pre-wrap">{selectedReview.review_text}</p>
@@ -1107,6 +1432,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="space-y-2">
                 <h4 className="text-sm font-medium">Additional Ratings</h4>
                 <div className="flex flex-wrap gap-2">
+<<<<<<< HEAD
                       variant={
                         selectedReview.would_work_again
                           ? 'default'
@@ -1115,12 +1441,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                       {selectedReview.would_work_again
                         ? 'Would work again'
                         : 'Would not work again'}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
                   {selectedReview.communication_rating && (
                     <Badge variant='outline'>
                       Communication: {selectedReview.communication_rating}/5
                     </Badge>
+<<<<<<< HEAD
                     )}
                   </Avatar>;
                   <div>;
@@ -1184,10 +1513,74 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <h4 className="text-sm font-medium text-red-800">Reports:{selectedReview.report_count}</h4>;
                   <p className="text-sm text-red-700">;
                     This review has been reported by users and may need investigation.;
+=======
+                  </Avatar>;
+                  <div>;
+                    <div className='font-medium'>;
+                      {selectedReview && selectedReview.is_anonymous;
+                        ? 'Anonymous';
+                        : selectedReview && selectedReview.reviewer_profile?.display_name ||;
+                          'User'}
+                    </div>;
+                    <Badge variant='outline'>{selectedReview && selectedReview.status}</Badge>;
+                  </div>;
+                </div>;
+                <div>{renderStars(selectedReview && selectedReview.rating)}</div>;
+              </div>;
+
+              <div className='border rounded-md p-3 bg-muted/20'>;
+                <p className='whitespace-pre-wrap'>;
+                  {selectedReview && selectedReview.review_text}
+                </p>;
+              </div>;
+
+              <div className='space-y-2'>;
+                <h4 className='text-sm font-medium'>Additional Ratings</h4>;
+                <div className='flex flex-wrap gap-2'>;
+                  {selectedReview && selectedReview.communication_rating && (;
+                    <Badge variant='outline'>;
+                      Communication: {selectedReview && selectedReview.communication_rating}/5;
+                    </Badge>;
+                  )}
+                  {selectedReview && selectedReview.quality_rating && (;
+                    <Badge variant='outline'>;
+                      Quality: {selectedReview && selectedReview.quality_rating}/5;
+                    </Badge>;
+                  )}
+                  {selectedReview && selectedReview.timeliness_rating && (;
+                    <Badge variant='outline'>;
+                      Timeliness: {selectedReview && selectedReview.timeliness_rating}/5;
+                    </Badge>;
+                  )}
+                  {selectedReview && selectedReview.would_work_again !== undefined && (;
+                    <Badge
+
+
+                      variant={selectedReview.would_work_again ? "default" : "secondary"}
+                    >
+                      {selectedReview.would_work_again ? "Would work again" : "Would not work again"}
+
+
+                    </Badge>
+                  )}
+
+                </div>;
+              </div>;
+
+              {selectedReview && selectedReview.report_count > 0 && (;
+                <div className='bg-red-50 border border-red-200 rounded-md p-3'>;
+                  <h4 className='text-sm font-medium text-red-800'>;
+                    Reports: {selectedReview && selectedReview.report_count}
+                  </h4>;
+                  <p className='text-sm text-red-700'>;
+                    This review has been reported by users and may need;
+                    investigation.;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </p>;
                 </div>;
               )}
             </div>;
+<<<<<<< HEAD
                   <Button
                       variant={selectedReview.would_work_again ? "default" : "secondary"}
                     >
@@ -1208,10 +1601,19 @@ ursor/fix-website-loading-errors-and-merge-6662
             <DialogFooter>
               {selectedReview.status === "pending" && (
                 <>
+=======
+
+            <DialogFooter>;
+              {selectedReview && selectedReview.status === 'pending' && (;
+                <>;
+
+                  <Button
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     variant='destructive'
                     onClick={() => handleReject(selectedReview && selectedReview.id)}
                     disabled={isPending}                  >;
                   <Button
+<<<<<<< HEAD
                     variant='destructive'
                     onClick={() => handleReject(selectedReview.id)}
                     disabled={isPending}                  >
@@ -1249,20 +1651,30 @@ ursor/fix-website-loading-errors-and-merge-6662
                   disabled={isPending}                >
                   Mark as Approved
                 </Button>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     variant="destructive"
                     onClick={() => handleReject(selectedReview.id)}
                     disabled={isPending}
                   >;
                     Reject;
                   </Button>;
+<<<<<<< HEAD
                   <Button;
                     onClick={() => handleApprove(selectedReview.id)}
                     disabled={isPending}
+=======
+                  <Button
+                    onClick = {() => handleApprove(selectedReview && selectedReview.id),}
+                    disabled = {isPending,}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   >;
                     Approve;
                   </Button>;
                 </>;
               )}
+<<<<<<< HEAD
               {selectedReview.status === "approved" && (
                 <Button
                   variant="destructive"
@@ -1296,10 +1708,51 @@ ursor/fix-website-loading-errors-and-merge-6662
   star
 }/>) )
 }</div>)
+=======
+              {selectedReview && selectedReview.status === 'approved' && (;
+                <Button
+                  variant='destructive'
+
+                  onClick={() =>;
+                    updateReviewStatus({;
+                      reviewId: selectedReview && selectedReview.id,;
+                      status: 'rejected',;
+                    });
+
+                  }
+                  disabled={isPending}                >;
+                  Mark as Rejected;
+                </Button>;
+              )}
+              {selectedReview && selectedReview.status === 'rejected' && (;
+                <Button
+
+                  onClick={() =>;
+                    updateReviewStatus({;
+                      reviewId: selectedReview && selectedReview.id,;
+                      status: 'approved',;
+                    });
+
+                  }
+                  disabled={isPending}                >;
+                  Mark as Approved;
+                </Button>;
+
+
+
+              )}
+            </DialogFooter>;
+          </DialogContent>;
+        </Dialog>;
+      )}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   [1, 2, 3,  4, 5].map ( (star) => (<Star key= {;
   star ;
 }/>) ) ;
 }</div>) ;
+<<<<<<< HEAD
 };"
 return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <TableHead>Rating</TableHead> <TableHead>Date</TableHead> <TableHead>Status</TableHead> <TableHead>Reports</TableHead> <TableHead className="text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
   reviews.map ( (review) => (<TableRow key= {
@@ -1380,6 +1833,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                   disabled={isPending}                >;
                   Mark as Approved;
                 </Button>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -1561,6 +2016,11 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
 }</span>);
 }</AvatarFallback>)
 }</AvatarFallback>) 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }</Avatar> <div> </Badge> </div> </div> <div> {
   renderStars (selectedReview.rating) "
 }</div> </div> <div className="border rounded-md p-3 bg-muted/20"> <p className="whitespace-pre-wrap"> {
@@ -1590,12 +2050,15 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
 }</DialogFooter> </DialogContent> </Dialog>)
 }</>)
 }"}
+<<<<<<< HEAD
     </>;
   );
 }
 }</div> </div> </TableCell> <TableCell> {
   render_stars (review.rating) ";
 }</TableCell> <TableCell> </TableCell> <TableCell> <Badge variant=" outline"> {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </>;
   );
 };
@@ -1779,8 +2242,12 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
 }</DialogFooter> </DialogContent> </Dialog>);
 }</>);
 }"}
+<<<<<<< HEAD
 }"
     </>;
   );
 }
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

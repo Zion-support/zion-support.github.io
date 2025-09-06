@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface RealMicroSaasService {;
 export interface RealMicroSaasService {
 export interface RealMicroSaasService {;
@@ -2718,6 +2719,12 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     reviews: 6,
   },];
 
+=======
+
+
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     id: 'ai-legal-document-generator'
     name: 'AI Legal Document Generator'
     tagline: 'Generate legally compliant documents in seconds with AI'
@@ -4048,6 +4055,17 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     reviews: 6
   },];
 // Helper functions
+<<<<<<< HEAD
+=======
+export const getServicesByCategory = (category: string) => {
+
+  }, ];
+;
+// Helper functions;
+export const getServicesByCategory = (category: string) =>: any {
+  return realMicroSaasServices.filter (service => service.category === category);    id: 'data - contracts - hub';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const getServicesByCategory = (category: string) => {;
   return realMicroSaasServices.filter(service => service.category === category);    id: 'data-contracts-hub';
     name: 'Data Contracts Hub';
@@ -4063,18 +4081,34 @@ export const getServicesByCategory = (category: string) => {;
     tech_stack: ['TypeScriptPostgreSQLdbt'];
     real_implementation: true,
     implementation_details: 'Contracts as code, PR checks, lineage view.';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     roi: 'Reduce data breakage incidents by 50–70%.';
     use_cases: ['Warehouse governance_analytics contracts'];
     integrations: ['dbtGitHubBigQuery'];
     support: 'Email support';
     compliance: ['GDPR'];
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com / services / data - contracts - hub';
+=======
+
+    link: 'https://ziontechgroup.com / services / data - contracts - hub';
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     icon: '📜';
     color: 'from - lime - 600 to - green - 700';
     popular: false;
     launch_date: '2025 - 02 - 08';
     customers: 19;
+<<<<<<< HEAD
     rating: 4 && 4.6,
+=======
+
+    rating: 4 && 4.6,
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     reviews: 6
   }
 ];
@@ -4104,15 +4138,29 @@ use_cases: ['NPSBeta feedback_lead qual'];
 integrations: ['HubSpotSegmentZapier'];
 support: 'Email support, templates library';
 compliance: ['GDPRCCPA'];
+<<<<<<< HEAD
 link: 'https://ziontechgroup.com / mobile - surveys';
+=======
+
+link: 'https://ziontechgroup.com / mobile - surveys';
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 icon: '📱';
 color: 'from - emerald - 600 to - teal - 700';
 popular: false;
 launch_date: '2024 - 12 - 10';
 customers: 95;
+<<<<<<< HEAD
 rating: 4 && 4.6;
 reviews: 22 
 };
+=======
+
+rating: 4 && 4.6;
+reviews: 22 
+};
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 marketPosition: 'Alternative to Notion templates + Asana. Faster to start with curated flows.';
 competitors: ['AsanaClickUpNotion'];
 techStack: ['Next && Next.jsPrismaPostgreSQL'];
@@ -4130,15 +4178,30 @@ use_cases: ['Client delivery_editorial calendar_sprints'];
 integrations: ['Google CalendarSlackLinear'];
 support: 'Email support';
 compliance: ['GDPR'];
+<<<<<<< HEAD
 link: 'https://ziontechgroup.com / productivity - planner';
+=======
+
+link: 'https://ziontechgroup.com / productivity - planner';
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 icon: '🗓️';
 color: 'from - purple - 600 to - pink - 600';
 popular: false;
 launch_date: '2025 - 01 - 20';
 customers: 60;
+<<<<<<< HEAD
 rating: 4 && 4.5;
 reviews: 14 
 };
+=======
+
+rating: 4 && 4.5;
+reviews: 14 
+};
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const serviceCategories = [
   'Legal Technology'
   'Customer Service & Support'
@@ -4165,6 +4228,12 @@ export const serviceCategories = [
   'Financial Technology'
   'Education Technology'
   'Enterprise IT'
+<<<<<<< HEAD
+=======
+];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   'Legal Technology',
   'Customer Service & Support',
   'Digital Marketing & SEO',
@@ -4191,6 +4260,24 @@ export const serviceCategories = [
   'Education Technology',
   'Enterprise IT',;
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
+<<<<<<< HEAD
+=======
+  return realMicroSaasServices.filter(service => service.category === category)
+};
+export const getServicesByPriceRange = (min: number, max: number) => {
+  return realMicroSaasServices.filter(service => {
+    const price = parseFloat(service.price.replace('$', '').replace(, ''));
+    return price >= min && (max === Infinity || price <= max)
+  })
+};
+export const getPopularServices = () => {
+  return realMicroSaasServices.filter(service => service.popular)
+};
+export const serviceCategories = [
+  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
 reviews: 14;
 }
@@ -4229,7 +4316,14 @@ export const service_categories = [;
   'Enterprise IT'
 ];
 
+<<<<<<< HEAD
 export interface RealMicroSaasService {;
+=======
+
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string,;
   name: string,;
   tagline: string,;
@@ -4263,6 +4357,7 @@ export interface RealMicroSaasService {;
   }
 }
 ;
+<<<<<<< HEAD
 export const realMicroSaasServices: RealMicroSaasService[] = [;
   // AI-Powered Business Solutions;
   {;
@@ -5934,3 +6029,11 @@ export const serviceCategories = [;
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology',;
   'Enterprise IT';
 ];
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+export interface RealMicroSaasService {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -642,7 +642,16 @@ export default function FinanceSolutions() {;
     </Layout>
     </>
     </>
+<<<<<<< HEAD
   );
 };
 
 export default Finance;
+=======
+<<<<<<< HEAD
+    </Layout>
+  );
+};
+
+export default Finance;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

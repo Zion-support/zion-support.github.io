@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
@@ -15,6 +16,8 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
 import { useWallet as useAppWallet } from "../../../context/WalletContext.tsx", // Renamed to avoid conflict if useWallet hook is defined locally
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
@@ -23,6 +26,7 @@ import { Wallet } from 'lucide-react'import { toast } from "sonner";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function Web3Login() {;
 
+<<<<<<< HEAD
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { useAuth } from "@/hooks/useAuth",
@@ -41,11 +45,16 @@ export function Web3Login() {
       toast("Web3 login unavailable", {
         description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."})
       return
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleWeb3Login = async () => {
     if (!isWalletSystemAvailable) {
       toast("Web3 login unavailable", {
         description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."}),
       return;
+<<<<<<< HEAD
     try {
       setIsLoading(true)
       // Check if Ethereum provider (e.g., MetaMask) is available
@@ -55,34 +64,51 @@ export function Web3Login() {
       setIsLoading(true)
       // Check if Ethereum provider (e.g., MetaMask) is available
       const ethereum = (window as any).ethereum
+=======
+
+    }
+    try {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       setIsLoading(true),
       
       // Check if Ethereum provider (e.g., MetaMask) is available
       const ethereum = (window as any).ethereum,
+<<<<<<< HEAD
       if (!ethereum) {
         toast("Web3 wallet not found", {
           description: "Please install MetaMask or another compatible wallet."})
         return
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       if (!ethereum) {
         toast("Web3 wallet not found", {
           description: "Please install MetaMask or another compatible wallet."}),
         return;
+<<<<<<< HEAD
       await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
 
       
       await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow
       
 
+<<<<<<< HEAD
       }
       await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow
       
       await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow
       
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     } catch (error: any) {
       toast("Login failed", {
         description: error.message |"Failed to connect wallet. Please try again."})
       logErrorToProduction('Web3 login error:', { data: error })
+<<<<<<< HEAD
   }
   const buttonDisabled = isLoading |!isWalletSystemAvailable
   const buttonTitle = !isWalletSystemAvailable
@@ -92,6 +118,8 @@ export function Web3Login() {
 
   )
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState  } from './react';
 import { Button  } from '@/components / ui / button';
 import { use_auth  } from '@/hooks / use_auth';
@@ -146,6 +174,7 @@ if ( {) {
 
   },
 
+<<<<<<< HEAD
   const buttonDisabled = isLoading || !isWalletSystemAvailable,
   const buttonTitle = !isWalletSystemAvailable
     ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured."
@@ -193,31 +222,53 @@ export function Web3Login() {;
   const { loginWithWeb3 } = useAuth(),;
   const { isWalletSystemAvailable } = useAppWallet(),;
   const [isLoading, setIsLoading] = useState(false),;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleWeb3Login = async () => {;
     if (!isWalletSystemAvailable) {;
       toast("Web3 login unavailable", {;
         description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."}),;
       return;
     }
+<<<<<<< HEAD
 ;
     try {;
       setIsLoading(true),;
       // Check if Ethereum provider (e.g., MetaMask) is available;
       const ethereum = (window as any).ethereum,;
+=======
+
+    try {;
+      setIsLoading(true);
+
+      // Check if Ethereum provider (e && e.g., MetaMask) is available;
+      const ethereum = (window as any).ethereum;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       if (!ethereum) {;
         toast("Web3 wallet not found", {;
           description: "Please install MetaMask or another compatible wallet."}),;
         return;
       }
+<<<<<<< HEAD
 ;
       await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow;
     } catch (error: any) {;
       toast("Login failed", {;
         description: error.message || "Failed to connect wallet. Please try again."}),;
+=======
+
+      await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow;
+
+    } catch (error: any) {;
+      toast("Login failed", {;
+        description: error && error.message || "Failed to connect wallet. Please try again."}),;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       logErrorToProduction('Web3 login error:', { data: error });
     } finally {;
       setIsLoading(false);
     }
+<<<<<<< HEAD
   },;
   const buttonDisabled = isLoading || !isWalletSystemAvailable,;
   const buttonTitle = !isWalletSystemAvailable;
@@ -246,6 +297,14 @@ export function Web3Login() {;
         <Wallet className="h-5 w-5 mr-2" /> Sign in with Web3;
         <span className="sr-only">Sign in with Web3</span>;
       </>;
+=======
+  };
+
+  const buttonDisabled = isLoading || !isWalletSystemAvailable;
+  const buttonTitle = !isWalletSystemAvailable;
+    ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured.";
+    : "";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   )
 }
@@ -256,6 +315,7 @@ export function Web3Login() {;
 }
   );
 }
+<<<<<<< HEAD
 ;
 
 
@@ -278,3 +338,8 @@ export function Web3Login() {;
 ;
 
 ;
+=======
+
+
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

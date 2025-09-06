@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 import { useEffect  } from 'react';
 import { useRouter } from 'next/router';
 export default function WhitepaperGeneratorRedirect() {
 
 
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useEffect} from 'react';
 import {useRouter} from 'next/router';
 export default function WhitepaperGeneratorRedirect() {;
@@ -14,11 +19,20 @@ export default function WhitepaperGeneratorRedirect() {;
     router && router.replace('/tokenomics');
   }, [router]);
   return null;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 }
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 export default function WhitepaperGeneratorRedirect() {
@@ -39,6 +53,7 @@ function WhitepaperGeneratorRedirect() {
 router.replace ('/tokenomics');
   }, [router]);
   return null;
+<<<<<<< HEAD
 ;
 }
 
@@ -52,6 +67,9 @@ export default function WhitepaperGeneratorRedirect(req, res) {
     router.replace('/tokenomics');
   }, [router]);
   return null;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -59,3 +77,8 @@ export default function WhitepaperGeneratorRedirect(req, res) {
 }
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

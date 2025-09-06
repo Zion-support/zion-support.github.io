@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { formatDistanceToNow } from "date-fns"
 import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react'import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
@@ -84,12 +85,15 @@ export const ReplyCard = ({
             </span>
             {reply.authorRole && (
               <Badge variant="outline" className="ml-2 text-xs">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 className
     )}>;
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">;
         <Avatar className="h-8 w-8">;
           <AvatarImage src={reply && reply.authorAvatar} alt={reply && reply.authorName} />;
           <AvatarFallback>{reply && reply.authorName.charAt(0)}</AvatarFallback>;
+<<<<<<< HEAD
         </Avatar>;
         <div className="flex-1">;
           <div className="flex items-center">;
@@ -144,10 +148,13 @@ export const ReplyCard = ({;
         <Avatar className="h-8 w-8">;
           <AvatarImage src={reply.authorAvatar} alt={reply.authorName} />;
           <AvatarFallback>{reply.authorName.charAt(0)}</AvatarFallback>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </Avatar>;
         <div className="flex-1">;
           <div className="flex items-center">;
             <span className="font-medium">;
+<<<<<<< HEAD
               {reply.authorName}
             </span>;
             {reply.authorRole && (;
@@ -172,6 +179,29 @@ export const ReplyCard = ({;
       </CardContent>
 ursor/fix-website-loading-errors-and-merge-6662
       <CardFooter className="flex justify-between">
+=======
+              {reply && reply.authorName}
+            </span>;
+            {reply && reply.authorRole && (;
+              <Badge variant="outline" className="ml-2 text-xs">;
+
+
+
+                {reply.authorRole}
+              </Badge>
+            )}
+            {reply && reply.isAnswer && (;
+              <Badge className="ml-2 bg-green-500 text-white">;
+                <CheckCircle className="h-3 w-3 mr-1" />;
+                Answer;
+              </Badge>;
+            )}
+          </div>;
+          <div className="text-xs text-muted-foreground">;
+            {timeAgo}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       
 
 
@@ -317,4 +347,8 @@ export const ReplyCard = ({
       </CardFooter>;
     </Card>);
 }
+<<<<<<< HEAD
 export default ReplyCard;
+=======
+export default ReplyCard;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

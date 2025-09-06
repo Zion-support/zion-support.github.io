@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import Link from 'next/link';
 import EnhancedMarketplaceCard from '../../components/ui/EnhancedMarketplaceCard';
 import EnhancedLoading from '../../components/ui/EnhancedLoading';
@@ -35,6 +36,10 @@ export default function JobsListPage() {
       subtitle: 'Remote • Part-time',;
       description: 'Design pipelines for training/inference at scale.',;
     },;
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Link from 'next / link';
 import EnhancedMarketplaceCard from '../../components / ui / EnhancedMarketplaceCard';
 import EnhancedLoading from '../../components / ui / EnhancedLoading';
@@ -64,10 +69,18 @@ function JobsListPage() {
       description: 'Design pipelines for training / inference at scale.',
     },
   ];
+<<<<<<< HEAD
 export default function JobsListPage() {
   const [loading, setLoading] = useState(true);
   useEffect(() => { const t = setTimeout(() => setLoading(false), 500), return () => clearTimeout(t) }, []);
 
+=======
+<<<<<<< HEAD
+;
+  return (
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function JobsListPage() {
   const [loading, setLoading] = useState(true);
   useEffect(() => { const t = setTimeout(() => setLoading(false), 500), return () => clearTimeout(t) }, []);
@@ -99,6 +112,7 @@ export default function JobsListPage() {
             <Link key={j.slug} href={`/jobs/${j.slug}`}>
               <a>
                 <EnhancedMarketplaceCard title={j.title} subtitle={j.subtitle} description={j.description} footer={<span className="text-blue-600">View Job →</span>} />
+<<<<<<< HEAD
     </div>;
   );
 
@@ -107,6 +121,16 @@ export default function JobsListPage() {
       )}
     </div>;
   );
+=======
+<<<<<<< HEAD
+              </a>
+            </Link>
+
+    </div>;
+  );
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>
   )
 }
@@ -128,10 +152,17 @@ export default function JobsListPage() {
         </div>)}
     </div>);
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 }
 
+<<<<<<< HEAD
               </Link>
             </Link>
           ))}
@@ -141,6 +172,9 @@ export default function JobsListPage() {
 );
 
 }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -160,3 +194,9 @@ export default function JobsListPage() {
   }
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

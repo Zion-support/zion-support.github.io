@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import {useRouter} from 'next/router';
 
@@ -17,13 +21,32 @@ export default function EditJobPage(req, res) {
   try {
 
 
+<<<<<<< HEAD
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [category, setCategory] = useState('');
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  const router = useRouter();
+  const { id } = router && router.query;
+  const { data } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
+  const job = data?.job;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       setTitle(job.title || '');
       setDescription(job.description || '');
       setCategory(job.category || '')
     }
+<<<<<<< HEAD
+=======
+
+  }, [job]);
+  async function save() {
+    await fetch(`/api/jobs/${id}`, {
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ title, description, category })});
@@ -31,6 +54,7 @@ export default function EditJobPage(req, res) {
   }
 
 
+<<<<<<< HEAD
   }, [job]);
 
   const [title, setTitle] = useState(''),
@@ -52,6 +76,8 @@ export default function EditJobPage(req, res) {
 body: JSON.stringify({ title, description, category })});
     router.push('/client/dashboard')
   }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   useEffect(() => {;
     if (job) {;
       setTitle(job && job.title || '');
@@ -66,6 +92,7 @@ body: JSON.stringify({ title, description, category })});
     });
     router && router.push('/client/dashboard');  }
   if (!job) return <div>Loading…</div>;
+<<<<<<< HEAD
   return (
           onClick={save}>;
           Save;
@@ -206,3 +233,18 @@ function save() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

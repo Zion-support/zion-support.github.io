@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react'
 import { useInterviews } from '@/hooks/useInterviews'
 import { Interview } from '@/types/interview'
@@ -381,6 +382,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+=======
+import { Calendar, Clock, Video } from 'lucide-react'
+import { format, isAfter, parseISO, startOfDay } from "date-fns";
+function InterviewsContent() {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <>;
 
@@ -416,6 +422,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <span className="ml-2 bg-primary rounded-full px-2 py-0.5 text-xs">
 
 
+<<<<<<< HEAD
                   {upcomingInterviews.length}
               )}
             </TabsTrigger>
@@ -470,6 +477,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               Upcoming
               {upcomingInterviews.length > 0 && (
                 <span className="ml-2 bg-primary rounded-full px-2 py-0.5 text-xs">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   {upcomingInterviews.length}
                 </span>
               )}
@@ -477,16 +486,25 @@ ursor/fix-website-loading-errors-and-merge-6662
             <TabsTrigger value="pending">
               Pending
               {pendingInterviews.length > 0 && (
+<<<<<<< HEAD
                 <span className='ml-2 bg-amber-500 rounded-full px-2 py-0.5 text-xs'>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <span className="ml-2 bg-amber-500 rounded-full px-2 py-0.5 text-xs">
 
                   {pendingInterviews.length}
                 </span>
               )}
+<<<<<<< HEAD
             </TabsTrigger>
             <TabsTrigger value="past">Past</TabsTrigger>
           </TabsList>
           <TabsContent value='upcoming' className='space-y-6'>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           
           <TabsContent value="upcoming" className="space-y-6">
 
@@ -505,21 +523,28 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>
             )}
           </TabsContent>
+<<<<<<< HEAD
           <TabsContent value='pending' className='space-y-6'>
               <div className="flex justify-center py-12">
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           
           <TabsContent value="pending" className="space-y-6">
 
 
+<<<<<<< HEAD
             {isLoading ? (
               <div className='flex justify-center py-12'>
                 <div className='animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full'></div>
           <TabsContent value='pending' className='space-y-6'>
           
           <TabsContent value="pending" className="space-y-6">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {isLoading ? (
               <div className="flex justify-center py-12">
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
@@ -534,21 +559,28 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>
             )}
           </TabsContent>
+<<<<<<< HEAD
           <TabsContent value='past' className='space-y-6'>
               <div className="flex justify-center py-12">
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           
           <TabsContent value="past" className="space-y-6">
 
 
+<<<<<<< HEAD
             {isLoading ? (
               <div className='flex justify-center py-12'>
                 <div className='animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full'></div>
           <TabsContent value='past' className='space-y-6'>
           
           <TabsContent value="past" className="space-y-6">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {isLoading ? (
               <div className="flex justify-center py-12">
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
@@ -562,6 +594,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <p className="text-muted-foreground">Your interview history will appear here.</p>
               </div>
             )}
+<<<<<<< HEAD
           </TabsContent>
         </Tabs>
       </main>
@@ -571,16 +604,46 @@ export default function Interviews() {
   return (
     <ProtectedRoute>
       <InterviewsContent />
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </TabsTrigger>;
             <TabsTrigger value='past'>Past</TabsTrigger>;
           </TabsList>;
 
+<<<<<<< HEAD
     </ProtectedRoute>;
   );
 };
 };
 }
 }
+=======
+
+          <TabsContent value='upcoming' className='space-y-6'>;
+            {isLoading ? (;
+              <div className='flex justify-center py-12'>;
+                <div className='animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full'></div>;
+              </div>;
+            ) : upcomingInterviews && upcomingInterviews.length > 0 ? (;
+              renderInterviewGroups(upcomingGrouped);
+            ) : (;
+              <div className='text-center py-12 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light'>;
+                <Video className='h-12 w-12 mx-auto text-muted-foreground mb-4' />;
+                <h3 className='text-xl font-medium mb-2'>;
+                  No upcoming interviews;
+                </h3>;
+                <p className='text-muted-foreground mb-6'>;
+                  You don't have any scheduled interviews coming up.;
+                </p>;
+              </div>;
+            )}
+          </TabsContent>;
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </TabsContent>;
         </Tabs>;
       </main>;
@@ -681,4 +744,8 @@ function Interviews() {
     </ProtectedRoute>);
 }
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

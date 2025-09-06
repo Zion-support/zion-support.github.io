@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type SyncScope = "full" | "dao" | "marketplace";
 export interface Peer {id: string;
 export type SyncScope = "full" | "dao" | "marketplace",;
@@ -19,12 +20,21 @@ export interface Peer {;
   id: string;
   baseUrl: string, // e.g., https: //zion-latam.example.org;
   scope?: SyncScope,;
+=======
+
+export type SyncScope = "full" | "dao" | "marketplace",
+export interface Peer {
+  id: string,
+  base_url: string, // e.g., https: //zion - latam.example.org;
+  scope?: SyncScope,
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   paused?: boolean;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 ;
 export interface InstanceConfig {;
   instanceId: string;
@@ -50,6 +60,20 @@ export interface Peer {;
 }
 
 
+=======
+export interface InstanceConfig {
+  instance_id: string,
+  opt_in: boolean,
+  paused: boolean,
+  scope: SyncScope,
+  peers: Peer[],
+  secret_configured: boolean;
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 ;
 export interface InstanceConfig {;
@@ -72,6 +96,7 @@ export type SyncEventType =;
   | "token_transfer";
   | "talent_mobility";
   | "dao_endorsement";
+<<<<<<< HEAD
   | "leaderboard_entry";
 export interface BaseEventPayload {id: string;
 }
@@ -153,6 +178,9 @@ export interface ProposalPayload extends BaseEventPayload {;
 ;
 export interface TokenTransferPayload extends BaseEventPayload {;
   txId: string;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   | "leaderboard_entry",;
 export interface BaseEventPayload {;
@@ -165,6 +193,10 @@ export interface BaseEventPayload {;
   toSubnet: string;
   timestamp: number;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -175,6 +207,7 @@ export interface TalentMobilityPayload extends BaseEventPayload {;
   personId: string;
 
 
+<<<<<<< HEAD
 }
 export interface TalentMobilityPayload extends BaseEventPayload {personId: string;
   } catch (error) {
@@ -185,11 +218,14 @@ export interface TalentMobilityPayload extends BaseEventPayload {personId: strin
 ;
 export interface TalentMobilityPayload extends BaseEventPayload {;
   personId: string;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   fromNation: string;
   toNation: string;
   role: string;
   startDate: string;
   endDate?: string;
+<<<<<<< HEAD
   | "leaderboard_entry",
 export interface BaseEventPayload {
   id: string;
@@ -207,10 +243,22 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {subjectId: st
   rank?: number;
   period?: string, // e.g., 2025-Q3;
 }
+=======
+
+  | "leaderboard_entry",
+export interface BaseEventPayload {
+  id: string;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 ;
 export interface DaoEndorsementPayload extends BaseEventPayload {;
@@ -219,14 +267,23 @@ export interface DaoEndorsementPayload extends BaseEventPayload {;
   resolutionId: string;
   decision: "endorse" | "reject",;
   timestamp: number;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 ;
 export interface LeaderboardEntryPayload extends BaseEventPayload {;
   subjectId: string, // userId or teamId;
+<<<<<<< HEAD
   score: number,;
   category: string, // e.g., grants, contributions;
   rank?: number,;
@@ -244,6 +301,11 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {;
 }
 }
 ;
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 ;
 export type SyncEventPayload =;
@@ -252,10 +314,15 @@ export type SyncEventPayload =;
   | TalentMobilityPayload;
   | DaoEndorsementPayload;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   | LeaderboardEntryPayload,;
 export interface SyncEvent {;
 
 
+<<<<<<< HEAD
   | LeaderboardEntryPayload;
 export interface SyncEvent {eventId: string;
   type: SyncEventType;
@@ -272,10 +339,16 @@ export interface SyncEvent {;
   eventId: string;
   type: SyncEventType,;
   payload: SyncEventPayload,;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   originInstanceId: string;
   version: number;
   timestamp: number;
   merkleRoot?: string, // required for proposal events;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   | LeaderboardEntryPayload,
 export interface SyncEvent {
   event_id: string,
@@ -293,18 +366,22 @@ export interface MultiverseState {
   latestVersionByEntityId: Record < string number>,
   proposalMerkleById: Record < string string>;
 
+<<<<<<< HEAD
 }
 export interface MultiverseState {config: InstanceConfig;
   lastSyncedAt: number;
   seenEventIds: Record<string true>;
   latestVersionByEntityId: Record<string number>;
   proposalMerkleById: Record<string string>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   events: SyncEvent[];
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
   } catch (error) {
     console.error("Error:", error);
@@ -329,6 +406,10 @@ export interface MultiverseState {;
   latestVersionByEntityId: Record<string, number>,;
   proposalMerkleById: Record<string, string>;
   events: SyncEvent[];
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -336,4 +417,8 @@ export interface MultiverseState {;
 
 }
 }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

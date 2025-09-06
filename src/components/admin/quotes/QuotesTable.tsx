@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   quotes
   isArchived = false
@@ -77,35 +78,55 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
 
 ursor/fix-website-loading-errors-and-merge-6662
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 export const QuotesTable: React.FC<QuotesTableProps> = ({
 
 
 
 
+<<<<<<< HEAD
 
 }
 export const QuotesTable: React.FC<QuotesTableProps> = ({
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   quotes
   isArchived = false
   isLoading
   updateStatus
   toggleArchive
+<<<<<<< HEAD
   deleteQuote
   deleteQuote
   deleteQuote
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   quotes,
   isArchived = false,
   isLoading,
   updateStatus,
   toggleArchive,
+<<<<<<< HEAD
 }) => {
   onViewDetails
 },) => {
   deleteQuote,
   onViewDetails
 }) => {
+=======
+
+
+
+  deleteQuote,
+  onViewDetails
+},) => {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="overflow-x-auto">
       <Table>
@@ -137,12 +158,21 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
             </TableRow>
           ) : (
             quotes.map(quote => (
+<<<<<<< HEAD
               <TableRow
                 key = {quote.id,}
               <TableRow
                 key = {quote.id,}
               <TableRow 
                 key={quote.id}
+=======
+
+
+              <TableRow 
+                key={quote.id}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 className="border-zion-blue-light hover:bg-zion-blue"
               >
                 <TableCell className="text-white">
@@ -229,6 +259,7 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                   <div className="font-medium">{quote.project_name}</div>
                   <div className="text-sm text-zion-slate-light truncate max-w-[200px]">
                     {quote.project_summary}
+<<<<<<< HEAD
                   </div>
                 </TableCell>
                 <TableCell className="text-white">
@@ -251,20 +282,34 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                       variant="ghost"
                       size="icon"
                       onClick = {() => onViewDetails(quote),}
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <Button 
                       variant="ghost" 
                       size="icon" 
                       onClick={() => onViewDetails(quote)}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     >
                       <Eye className="h-4 w-4" />
                       <span className="sr-only">View Details</span>
                     </Button>
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
                     {isArchived ? (
                         <Button
                           variant="ghost"
                           size="icon"
                           onClick = {(,) => toggleArchive(quote.id, false),}
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     
 
 
@@ -273,13 +318,22 @@ ursor/fix-website-loading-errors-and-merge-6662
                         <Button
                           variant="ghost"
                           size="icon"
+<<<<<<< HEAD
                           onClick={() => toggleArchive(quote.id, false)}
+=======
+                          onClick = {(,) => toggleArchive(quote.id, false),}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         >
                           <Archive className="h-4 w-4" />
                           <span className="sr-only">Unarchive</span>
                         </Button>
                         <Button
                           variant="ghost"
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   quotes;
   isArchived = false;
 import React from "react";
@@ -339,20 +393,28 @@ import {formatDate} from "@/utils/dateUtils";
                             <Archive className="h-4 w-4 mr-2" />
                             Archive
                           </DropdownMenuItem>
+<<<<<<< HEAD
                           <DropdownMenuItem
                             onClick = {() => {
                               if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
                                 deleteQuote(quote.id)
                               } }}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           <DropdownMenuItem 
                             onClick={() => {
                               if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
                                 deleteQuote(quote.id)
+<<<<<<< HEAD
                               }
                             }}
                               } }}
                               }
                             }}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                             className="text-red-500"
                           >
                             <Trash2 className="h-4 w-4 mr-2" />
@@ -360,6 +422,7 @@ import {formatDate} from "@/utils/dateUtils";
                           </DropdownMenuItem>
                         </DropdownMenuContent>
                       </DropdownMenu>
+<<<<<<< HEAD
                   </div>
                 </TableCell>
               </TableRow>
@@ -370,6 +433,9 @@ import {formatDate} from "@/utils/dateUtils";
 '"
 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",;
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react';
 import {;
@@ -474,6 +540,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                       variant="ghost" 
                       size="icon" 
                       onClick = {() => onViewDetails(quote),}
+<<<<<<< HEAD
 
 import React from "react",;
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react';
@@ -597,10 +664,13 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                       variant="ghost";
                       size="icon";
                       onClick={() => onViewDetails(quote)}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     >;
                       <Eye className="h-4 w-4" />;
                       <span className="sr-only">View Details</span>;
                     </Button>;
+<<<<<<< HEAD
                     ;
                     {isArchived ? (;
                       <>;
@@ -614,10 +684,20 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                           variant="ghost";
                           size="icon";
                           onClick={() => toggleArchive(quote.id, false)}
+=======
+
+                    {isArchived ? (;
+                      <>;
+                        <Button
+                          variant="ghost" 
+                          size="icon"
+                          onClick = {(,) => toggleArchive(quote && quote.id, false),}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         >;
                           <Archive className="h-4 w-4" />;
                           <span className="sr-only">Unarchive</span>;
                         </Button>;
+<<<<<<< HEAD
                         <Button ;
                           variant="ghost" ;
                         <Button;
@@ -629,6 +709,18 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                               deleteQuote(quote.id);
                             }
                           }}
+=======
+                        <Button
+                          variant="ghost" 
+                          size="icon"
+                          className="text-red-500"
+                          onClick = {() => {;
+                            if (window && window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {;
+                              deleteQuote(quote && quote.id);
+                            ,}
+                          }}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         >;
                           <Trash2 className="h-4 w-4" />;
                           <span className="sr-only">Delete</span>;
@@ -644,6 +736,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                           </Button>;
                         </DropdownMenuTrigger>;
                         <DropdownMenuContent align="end">;
+<<<<<<< HEAD
                           <DropdownMenuItem onClick={() => updateStatus(quote.id, 'new')}>;
                             Mark as New;
                           </DropdownMenuItem>;
@@ -669,12 +762,43 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                                 deleteQuote(quote.id);
                               }
                             }}
+=======
+                          <DropdownMenuItem onClick={(,) => updateStatus(quote && quote.id, 'new')}>;
+                            Mark as New;
+                          </DropdownMenuItem>;
+                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'in_review')}>;
+                            Mark as In Review;
+                          </DropdownMenuItem>;
+                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'responded')}>;
+                            Mark as Responded;
+                          </DropdownMenuItem>;
+                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'accepted')}>;
+                            Mark as Accepted;
+                          </DropdownMenuItem>;
+                          <DropdownMenuItem onClick={() => updateStatus(quote && quote.id, 'closed')}>;
+                            Mark as Closed;
+                          </DropdownMenuItem>;
+                          <DropdownMenuItem onClick={() => toggleArchive(quote && quote.id, true)}>;
+                            <Archive className="h-4 w-4 mr-2" />;
+                            Archive;
+                          </DropdownMenuItem>;
+                          <DropdownMenuItem
+                            onClick = {() => {;
+                              if (window && window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {;
+                                deleteQuote(quote && quote.id);
+                              };                            }}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                             className="text-red-500";
                           >;
                             <Trash2 className="h-4 w-4 mr-2" />;
                             Delete;
                           </DropdownMenuItem>;
                         </DropdownMenuContent>;
+<<<<<<< HEAD
+=======
+                      </DropdownMenu>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     )}
                       </DropdownMenu>;                    )}
                   </div>;
@@ -682,9 +806,24 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
               </TableRow>;
             ));
           )}
+<<<<<<< HEAD
         </TableBody>;
       </Table>;
     </div>;
+=======
+
+
+  );
+};
+'";
+
+
+        </TableBody>;
+      </Table>;
+    </div>;
+  );
+};
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 '"
 
@@ -789,6 +928,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
       </Table>;
     </div>);
 }
+<<<<<<< HEAD
   ),;
 },; import { ;
   {;
@@ -878,3 +1018,6 @@ onViewDetails ;
   );
 };
 '";
+=======
+'";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

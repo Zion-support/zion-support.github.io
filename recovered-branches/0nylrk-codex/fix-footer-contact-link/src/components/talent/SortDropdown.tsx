@@ -2,6 +2,7 @@
 
 
 
+<<<<<<< HEAD
 import React from "react",
 import { Button } from "@/components/ui/button",
 import React from "react";
@@ -36,11 +37,44 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { SORT_OPTIONS } from "@/data/sortOptions";
 import { SortDesc, ChevronDown } from "lucide-react";
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+import React from './react';
+import { Button  } from '@/components / ui / button';
+import { SORT_OPTIONS  } from '@/data / sort_options';
+import { SortDesc, ChevronDown  } from './lucide-react';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+<<<<<<< HEAD
+=======
+} from '@/components / ui / dropdown - menu';
+;
+interface SortDropdownProps {
+  sort_option: string;
+  setSortOption: (option: string) => void;
+}
+export /**
+ * SortDropdown - Function description
+ */
+function SortDropdown() {
+  return (
+    <DropdownMenu>;
+      <DropdownMenuTrigger as_child>;
+        <Button;
+          variant="outline";
+          className="w - full justify - between border - zion - blue - light text - white";
+        >;
+          <div className="flex items - center gap - 2">;
+            <SortDesc className="h - 4 w - 4 text - zion - purple" />;
+            {SORT_OPTIONS.find ((opt) => opt.value === sort_option)?.label ||;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               "Sort by"}
           </div>;
           <ChevronDown className="h - 4 w - 4 ml - 2 opacity - 50" />;
@@ -142,6 +176,7 @@ export function SortDropdown({ sortOption, setSortOption } SortDropdownProps) {;
       </DropdownMenuContent>;
     </DropdownMenu>);
 }
+<<<<<<< HEAD
 } from "@/components/ui/dropdown-menu";
 
 interface SortDropdownProps {
@@ -160,6 +195,10 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
           <div className="flex items-center gap-2">
             <SortDesc className="h-4 w-4 text-zion-purple" />
 {SORT_OPTIONS.find((opt) => opt.value === sortOption)?.label |
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               "Sort by"}
           </div>
           <ChevronDown className="h-4 w-4 ml-2 opacity-50" />
@@ -174,6 +213,7 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
             key={option.value}
             onClick={() => setSortOption(option.value)}
             className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
+<<<<<<< HEAD
               sortOption === option.value
                 ? "bg-zion-purple/20 text-zion-purple"
                 : ""
@@ -236,6 +276,9 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
         ))}
       </DropdownMenuContent>;
     </DropdownMenu>;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : ""
 
   );
@@ -243,6 +286,7 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
 
 }
 ;
+<<<<<<< HEAD
   ),;}
  import {
   DropdownMenu;
@@ -271,3 +315,7 @@ setSortOption: (option: string) => void
 }
 }
 ;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

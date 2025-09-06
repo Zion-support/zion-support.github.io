@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Slider } from '@/components/ui/slider'
 import { Switch } from '@/components/ui/switch'
 import { Input } from '@/components/ui/input'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 return (
     <div className='space-y-3'>;
       <div className='flex justify-between items-center px-4'>;
@@ -195,17 +198,24 @@ import { Slider } from "@/components/ui/slider",
 import { Switch } from "@/components/ui/switch",
 import { Input } from "@/components/ui/input",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Slider } from "@/components/ui/slider",
 import { Switch } from "@/components/ui/switch",
 import { Input } from "@/components/ui/input",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { X, Filter } from 'lucide-react'
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
 import { Badge } from "@/components/ui/badge",
 import { Label } from "@/components/ui/label",
 interface BrowseFiltersProps {
+<<<<<<< HEAD
   type: 'jobs' | 'talents'
 export function BrowseFilters({ type }: BrowseFiltersProps) {
   const [activeFilters, setActiveFilters] = useState<string[]>([])
@@ -244,6 +254,10 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
   },
   
   
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="space-y-3">
       <div className="flex justify-between items-center px-4">
@@ -259,11 +273,15 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
               <SheetHeader>
                 <SheetTitle>Filter {type === "jobs" ? "Jobs" : "Talents"}</SheetTitle>
               </SheetHeader>
+<<<<<<< HEAD
               <div className='py-6 space-y-6'>
                 {type === 'jobs' ? (
                   <>
               <div className='py-6 space-y-6'>
                 {type === 'jobs' ? (
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               
               <div className="py-6 space-y-6">
                 {type === "jobs" ? (
@@ -278,9 +296,13 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Freelance</Badge>
                       </div>
                     </div>
+<<<<<<< HEAD
                     <div className='space-y-2'>
                       <Label>Experience Level</Label>
                     <div className='space-y-2'>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     
                     <div className="space-y-2">
 
@@ -303,6 +325,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Content</Badge>
                       </div>
                     </div>
+<<<<<<< HEAD
                     <div className='space-y-2'>
                       <Label>Experience (years)</Label>
                       <Slider
@@ -312,6 +335,9 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                         step={1}
                         className='my-4'                      />
                       <div className='flex justify-between text-xs text-muted-foreground'>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     
                     <div className="space-y-2">
                       <Label>Experience (years)</Label>
@@ -330,7 +356,11 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                     </div>
                   </>
                 )}
+<<<<<<< HEAD
                 <div className='space-y-2'>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 
                 <div className="space-y-2">
 
@@ -349,15 +379,33 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </SelectContent>
                   </Select>
                 </div>
+<<<<<<< HEAD
                 <div className='space-y-2'>
                   <div className="flex gap-4 items-center">
                     <Input placeholder="Min" type="number" className="w-full" />
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
 
                 
                 <div className="space-y-2">
 
 
+                  <Label>Salary Range</Label>
+                  <div className="flex gap-4 items-center">
+                    <Input placeholder="Min" type="number" className="w-full" />
+                    <span>to</span>
+                    <Input placeholder="Max" type="number" className="w-full" />
+                  </div>
+                </div>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+                
+                <div className="space-y-2">
+
+
+<<<<<<< HEAD
                   <Label>Salary Range</Label>
                   <div className='flex gap-4 items-center'>
                     <Input placeholder='Min' type='number' className='w-full' />
@@ -388,6 +436,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 ursor/fix-website-loading-errors-and-merge-6662
                   <Label>Skills</Label>
                   <div className='grid grid-cols-2 gap-2'>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <Label>Skills</Label>
                   <div className='grid grid-cols-2 gap-2'>
 
@@ -427,6 +477,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <div className="flex items-center justify-between">
 
 
+<<<<<<< HEAD
                 <div className='space-y-2'>
                 
                 <div className="space-y-2">
@@ -453,22 +504,40 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <div className='flex items-center justify-between'>
                 
                 <div className="flex items-center justify-between">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <Label>Only show verified profiles</Label>
                   <Switch />
                 </div>
               </div>
+<<<<<<< HEAD
               
               
+=======
+
+
+              
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <SheetFooter>
                 <Button variant="outline" className="w-full">Reset</Button>
                 <Button className="w-full" onClick={() => addFilter("Experience: 3+ years")}>Apply Filters</Button>
               </SheetFooter>
             </SheetContent>
           </Sheet>
+<<<<<<< HEAD
           <Select>
             <SelectTrigger className='w-[120px] h-8'>
               <SelectValue placeholder='Sort By' />
           
+=======
+
+
+          
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Select>
             <SelectTrigger className="w-[120px] h-8">
               <SelectValue placeholder="Sort By" />
@@ -479,6 +548,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <SelectItem value="salary">Highest Pay</SelectItem>
             </SelectContent>
           </Select>
+<<<<<<< HEAD
           {activeFilters.map(filter => (
             <Badge
               key={filter}
@@ -496,6 +566,8 @@ ursor/fix-website-loading-errors-and-merge-6662
     </div>
   )
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                       className='cursor-pointer hover:bg-primary/5 justify-start'>;
                       Node && Node.js;
@@ -617,13 +689,20 @@ ursor/fix-website-loading-errors-and-merge-6662
               />
             </Badge>
           ))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </div>;
       </div>;
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
 ;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -642,4 +721,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

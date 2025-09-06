@@ -1,13 +1,23 @@
 
+<<<<<<< HEAD
 
 import "https: //deno.land/x/xhr@0.1.0/mod.ts"
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
 const OPENAI_API_KEY = Deno.env.get("OPENAI_API_KEY");
+=======
+import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
+import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
+import {createClient} from "https: //esm ;
+const OPENAI_API_KEY = Deno && Deno.env.get("OPENAI_API_KEY");
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
+<<<<<<< HEAD
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
 const OPENAI_API_KEY = Deno.env.get("OPENAI_API_KEY");
@@ -22,6 +32,13 @@ const corsHeaders = {
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+serve(async (req) => {
+  // Handle CORS preflight requests
+  if (req && req.method === "OPTIONS") {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return new Response(null, { headers: corsHeaders })
   }
   try {
@@ -34,7 +51,16 @@ serve(async (req) => {
 
     if (!content || content.trim() === "") {
 
+<<<<<<< HEAD
       throw new Error("Content is required")
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      throw new Error("Content is required")
+    }
+    if (!OPENAI_API_KEY) {
+      throw new Error("OpenAI API key is not configured")
+    }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts",;
@@ -69,6 +95,7 @@ serve(async (req) => {;
 
     // Prepare system prompt based on content type
     let systemPrompt = "You are a professional translator. Translate the content accurately while maintaining the original meaning, tone, and format.";
+<<<<<<< HEAD
     const { content, sourceLanguage = "en", targetLanguages = ["es", "pt", "ar"], contentType } = await req.json();
     if (!content |content.trim() === "") {
     const { content, sourceLanguage = "en", targetLanguages = ["es", "pt", "ar"], contentType } = await req.json(),
@@ -82,12 +109,15 @@ serve(async (req) => {;
 
     // Prepare system prompt based on content type
     let systemPrompt = "You are a professional translator. Translate the content accurately while maintaining the original meaning, tone, and format.",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (contentType === "job") {
       systemPrompt = "You are a professional translator specializing in job descriptions. Translate the content accurately while maintaining the professional tone and technical terminology."
     } else if (contentType === "profile") {
       systemPrompt = "You are a professional translator specializing in professional profiles. Translate the content accurately while maintaining the professional tone and highlighting skills appropriately."
 
 
+<<<<<<< HEAD
     }
     // Create translations for each target language
     const translations = {}
@@ -96,6 +126,10 @@ serve(async (req) => {;
         translations[targetLang] = content;
         continue
       }
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
     // Prepare system prompt based on content type;
     let systemPrompt = "You are a professional translator. Translate the content accurately while maintaining the original meaning, tone, and format.",;
@@ -113,6 +147,10 @@ serve(async (req) => {;
         continue;
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
 
       const response = await fetch("https://api.openai.com/v1/chat/completions", {
@@ -122,6 +160,7 @@ serve(async (req) => {;
           "Authorization": `Bearer ${OPENAI_API_KEY}`,
           "Content-Type": "application/json"},
 
+<<<<<<< HEAD
         body: JSON.stringify({
       
 ;
@@ -200,6 +239,21 @@ serve(async (req) => {;
 
               role: "system"
               content: systemPrompt}
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        body: JSON.stringify({
+=======
+      
+      const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          "Authorization": `Bearer ${OPENAI_API_KEY}`;
+          "Content-Type": "application/json"};
+        body: JSON && JSON.stringify({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+          model: "gpt-4o-mini";
+          messages: [
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {
               role: "user"
               content: `Translate the following ${contentType |"content"} from ${sourceLanguage} to ${targetLang}:
@@ -293,19 +347,29 @@ if ( {) {
     return new Response(
       JSON && JSON.stringify({
         translations});
+<<<<<<< HEAD
     }
 
     return new Response(
       JSON.stringify({
         translations}),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
   } catch (error) {
+<<<<<<< HEAD
     console.error("Error in translate-content function:", error),
     return new Response(
       JSON.stringify({
         error: error.message}),
+=======
+    console && console.error("Error in translate-content function:", error);
+    return new Response(
+      JSON && JSON.stringify({
+        error: error && error.message});
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
@@ -313,8 +377,13 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
   }
 });
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
       // Check condition
 if ( {) {
@@ -373,6 +442,7 @@ if ( {) {
 });
 
 ;
+<<<<<<< HEAD
     return new Response(;
       JSON.stringify({;
         translations}),;
@@ -390,3 +460,6 @@ if ( {) {
     );
   }
 });
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

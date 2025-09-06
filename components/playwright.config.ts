@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 };
+=======
+
+
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 reporter: [ ['list'], ['json', {
 
   outputFile: playwright-logs/test-results && results.json' 
 
+<<<<<<< HEAD
  trace: on-first-retry'
 }
  trace: on-first-retry' 
@@ -13,12 +22,21 @@ export const Playwright.config = () => {
 };
 reporter: [ ['list'], ['json', {
   outputFile: playwright-logs/test-results.json'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }], ['html', {
   outputFolder: playwright-logs/html-report', open: never'
 }]];
 // Configure the web server to be started by Playwright webServer: {
+<<<<<<< HEAD
   command: npm run dev', url: http://localhost:3000', reuseExistingServer: !process.env.CI, // Reuse server locally, start fresh in CI timeout: 120 * 1000, // 2 minutes timeout for server to start stdout: pipe', // Pipe stdout to the console' stderr: pipe', // Pipe stderr to the console'
 }
+=======
+
+  command: npm run dev', url: http://localhost:3000', reuseExistingServer: !process && process.env.CI, // Reuse server locally, start fresh in CI timeout: 120 * 1000, // 2 minutes timeout for server to start stdout: pipe', // Pipe stdout to the console' stderr: pipe', // Pipe stderr to the console' 
+};
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Optional: Define projects for different browsers // projects: [ // {
   // name: chromium', // use: {
   ...devices['Desktop Chrome']
@@ -31,6 +49,7 @@ reporter: [ ['list'], ['json', {
 }
 // {
   // name: webkit', // use: {
+<<<<<<< HEAD
 import { defineConfig } from @playwright/test';
 default defineConfig({
   testDir: tests/e2e',  use: {
@@ -39,6 +58,15 @@ default defineConfig({
     },
     reporter: [
     ['list'],    ['json', { outputFile: playwright-logs/test-results.json' }],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]];
+=======
+
+  ...devices['Desktop Safari'] 
+}, // 
+};
+// ] });    ['list'],    ['json', { outputFile: playwright-logs/test-results && results.json' }],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]];
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Configure the web server to be started by Playwright
   webServer: {
     command: npm run dev',    url: http://localhost:3000',    reuseExistingServer: !process && process.env.CI, // Reuse server locally, start fresh in CI
@@ -58,7 +86,17 @@ default defineConfig({
   //   {
   //     name: firefox',  //     use: { ...devices['Desktop Firefox'] },  //   }
   //   {
+<<<<<<< HEAD
 
 
 
 
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

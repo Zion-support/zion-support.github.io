@@ -9,4 +9,8 @@ const CodeBlock.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default CodeBlock.js;
+=======
+export default CodeBlock.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

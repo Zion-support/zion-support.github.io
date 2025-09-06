@@ -18,12 +18,16 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useMemo, useState } from 'react';
+<<<<<<< HEAD
 type DistributionItem = { label: string, percent: number },
 type DistributionItem = { label: string; percent: number }
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`;
 export default function TokenomicsWhitepaperBuilder() {;
 import React, { useMemo, useState } from 'react';
 import Head from 'next/head';
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`;
 export default function TokenomicsWhitepaperBuilder() {
@@ -38,6 +42,7 @@ export default function TokenomicsWhitepaperBuilder() {;
   const [legalReview, setLegalReview] = useState(false);
   const [tokenName, setTokenName] = useState('ZION$');
   const [tokenSupply, setTokenSupply] = useState('1,000,000,000');
+<<<<<<< HEAD
   const [rewardsLogic, setRewardsLogic] = useState<string>(;
     'Earn via contributions, referrals, and successful task completions; burn on dispute resolution fees and premium access';
   );  const [distribution, setDistribution] = useState<DistributionItem[]>([;
@@ -174,6 +179,50 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
     { label: 'Investors', percent: 15 },;
     { label: 'Liquidity & Market Making', percent: 10 },;
 
+=======
+
+
+  const [generatedMarkdown, setGeneratedMarkdown] = useState<string>('');
+  const [isGenerating, setIsGenerating] = useState<boolean>(false);
+  const [activeSection, setActiveSection] =;
+    useState<string>('Executive Summary');
+  const previewMarkdown = useMemo(() => {;
+    return (
+      generatedMarkdown ||;
+      buildLocalMarkdown({;
+        tokenName,;
+        tokenSupply,;
+        useCases,;
+        rewardsLogic,;
+        distribution,;
+        governance,;
+        jurisdiction,;
+        legalReview,;
+      });
+    );
+  }, [;
+    generatedMarkdown,;
+    tokenName,;
+    tokenSupply,;
+    useCases,;
+    rewardsLogic,;
+    distribution,;
+    governance,;
+    jurisdiction,;
+    legalReview,;
+  ]);
+  async function handleGenerate() {;
+    try {;
+      setIsGenerating(true);
+      const res = await fetch('/api/whitepaper/generate', {;
+        method: 'POST',;
+        headers: {;
+          'Content-Type': 'application/json',;
+          'X-Admin': isAdmin ? 'true' : 'false',;
+        },;
+        body: JSON && JSON.stringify({;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     { label: 'Advisors & Partnerships', percent: 5 }]),;
   const [governance, setGovernance] = useState<string>('One-token-one-vote with quadratic weighting for proposals, staking required for proposal submission, delegated voting supported'),;
   const [jurisdiction, setJurisdiction] = useState<string>('US');
@@ -208,6 +257,7 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
           governance,;
           jurisdiction,;
           operatorPrompt,;
+<<<<<<< HEAD
           legalReview})}),;
       if (!res.ok) throw new Error('Failed to generate');
       const data = await res.json();
@@ -234,6 +284,34 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
+=======
+<<<<<<< HEAD
+          legalReview,;
+        }),;
+      });
+      if (!res && res.ok) throw new Error('Failed to generate');
+      const data = await res && res.json();
+      setGeneratedMarkdown(data && data.markdown || '');
+    } catch (e) {;
+      console && console.error(e);
+      alert('Generation failed');
+    } finally {;
+      setIsGenerating(false);    }
+  }
+
+      const blob = new Blob([previewMarkdown], { type: 'text/markdown,charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+
+      const a = document.createElement('a');
+      a.href = url;
+<<<<<<< HEAD
+      a.download = `${tokenName.toLowerCase().replace(/\s+/g, '-')}-whitepaper.md`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   async function handleDownload(): any (ext: 'md' | 'pdf') {;
     if (ext === 'md') {;
       const blob = new Blob([previewMarkdown], {;
@@ -250,6 +328,10 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ markdown: previewMarkdown, tokenName }),;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       });
       if (!res && res.ok) {;
         alert('PDF export failed');
@@ -259,6 +341,12 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
       window && window.open(url, '_blank');
     }
   }
+<<<<<<< HEAD
+=======
+
+      const item = { ...copy[index] }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       URL.revokeObjectURL(url)
     } else {
       const res = await fetch('/api/whitepaper/export', {
@@ -432,6 +520,7 @@ if (item.label = value) {
   $2
 }
       copy[index] = item;
+<<<<<<< HEAD
   function addDistributionItem() {;
     setDistribution(prev => [...prev, { label: 'New Allocation', percent: 0 }]);
   }
@@ -518,6 +607,18 @@ if (item.label = value) {
     const res = await fetch('/api/whitepaper/share', {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
+=======
+
+
+      alert('Failed to create share link');
+      return;
+    }
+    const { url } = await res && res.json();
+    await navigator && navigator.clipboard.writeText(url);
+    alert('Shareable link copied to clipboard');
+  }
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -563,6 +664,7 @@ function handleShareableLink() {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
       alert ('Failed to create share link');
       return;
     }
@@ -582,6 +684,9 @@ if ( {) {
   return (
     <>;
       <Head>;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               className='px-3 py-1 rounded-md bg-indigo-600 text-white'>;
         <title > Tokenomics Whitepaper Generator</title>;
       </Head>;
@@ -609,10 +714,18 @@ if ( {) {
               on_click={handleShareableLink}
               className='px - 3 py - 1 rounded - md bg - indigo - 600 text - white';
             >;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Create Share Link;
             </button>;
           </div>;
         </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 6'>;
           <div className='space - y-6'>;
             <div className='rounded - lg border p - 4 space - y-4'>;
@@ -669,6 +782,10 @@ if ( {) {
                     className='w - full border rounded - md px - 3 py - 2';
                     value={jurisdiction}
                     on_change={e => set_jurisdiction (e.target.value)}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   >;
                     <option value='US'>US</option>;
                     <option value='EU'>EU</option>;
@@ -676,6 +793,10 @@ if ( {) {
                     <option value='AE'>UAE</option>;
                   </select>;
                 </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     onChange={e => setLegalReview(e && e.target.checked)}
                   />;
                   <label htmlFor='legalReview' className='text-sm'>;
@@ -687,10 +808,18 @@ if ( {) {
                     on_change={e => setLegalReview (e.target.checked)}
                   />;
                   <label html_for='legal_review' className='text - sm'>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     Submit to Counsel;
                   </label>                </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     className='px-3 py-1 rounded-md bg-gray-900 text-white'>;
             <div className='rounded - lg border p - 4 space - y-3'>;
               <h3 className='font - medium'>Distribution</h3>;
@@ -730,10 +859,18 @@ if ( {) {
                     on_click={addDistributionItem}
                     className='px - 3 py - 1 rounded - md bg - gray - 900 text - white';
                   >;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     Add allocation;
                   </button>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   className='px-4 py-2 rounded-md border';
               <div className='mt - 3'>                <DistributionDonut data={distribution} />;
               </div>;
@@ -757,12 +894,22 @@ if ( {) {
                 <button;
                   on_click={() => setGeneratedMarkdown ('')}
                   className='px - 4 py - 2 rounded - md border';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 >;
                   Clear AI Draft;
                 </button>;
               </div>;
             </div>;
+<<<<<<< HEAD
                   className='px-3 py-2 rounded-md border';
+=======
+
+                  className='px-3 py-2 rounded-md border';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className='rounded - lg border p - 4 space - y-2'>;
               <h3 className='font - medium'>Output</h3>;
               <div className='flex gap - 3'>;
@@ -775,12 +922,23 @@ if ( {) {
                 <button;
                   on_click={() => handle_download ('pdf')}
                   className='px - 3 py - 2 rounded - md border';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 >;
                   Download PDF;
                 </button>              </div>;
             </div>;
           </div>;
+<<<<<<< HEAD
 function buildLocalMarkdown(): any (input: {;
+=======
+
+
+function buildLocalMarkdown(): any (input: {;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   tokenName: string;
   tokenSupply: string;
   useCases: string;
@@ -810,6 +968,7 @@ function jurisdictionalNote(): any (j: string) {;
     default:;
       return 'Intended strictly for utility use.';
   }
+<<<<<<< HEAD
       return copy
     })
   }
@@ -850,6 +1009,11 @@ function jurisdictionalNote(): any (j: string) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const sections = [
     'Executive Summary'
     'Market Context'
@@ -891,6 +1055,13 @@ function jurisdictionalNote(): any (j: string) {;
             <div className="rounded-lg border p-4 space-y-4">
               <h2 className="font-medium">Builder Inputs</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div>
                   <label className="text-xs opacity-70">Token name</label>
                   <input className="w-full border rounded-md px-3 py-2" value={tokenName} onChange={(e) => setTokenName(e.target.value)} />
@@ -921,11 +1092,16 @@ function jurisdictionalNote(): any (j: string) {;
                   </select>
                 </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div className="flex items-center gap-2">
                   <input id="legalReview" type="checkbox" checked={legalReview} onChange={(e) => setLegalReview(e.target.checked)} />
                   <label htmlFor="legalReview" className="text-sm">Submit to Counsel</label>
 
 
+<<<<<<< HEAD
                 <div className='flex items-center gap-2'>
                   <input
                     id='legalReview'
@@ -982,6 +1158,9 @@ function jurisdictionalNote(): any (j: string) {;
                 <div className="flex items-center gap-2">
                   <input id="legalReview" type="checkbox" checked={legalReview} onChange={(e) => setLegalReview(e.target.checked)} />
                   <label htmlFor="legalReview" className="text-sm">Submit to Counsel</label>
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </div>
               </div>
             </div>
@@ -1009,6 +1188,7 @@ function jurisdictionalNote(): any (j: string) {;
               </div>
             </div>
 
+<<<<<<< HEAD
                   disabled={!isAdmin || isGenerating}
 
             <div className='rounded-lg border p-4 space-y-3'>
@@ -1023,6 +1203,11 @@ function jurisdictionalNote(): any (j: string) {;
                 <button
                   disabled={!isAdmin |isGenerating}
                   disabled={!isAdmin || isGenerating}
+=======
+
+                  disabled={!isAdmin || isGenerating}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   onClick={handleGenerate}
                   className='px-4 py-2 rounded-md bg-indigo-600 text-white disabled:opacity-50'
                 >
@@ -1033,11 +1218,19 @@ function jurisdictionalNote(): any (j: string) {;
                   className='px-4 py-2 rounded-md border'
                 >
                   Clear AI Draft
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             <div className="rounded-lg border p-4 space-y-3">
               <h3 className="font-medium">Operator Prompt</h3>
               <textarea className="w-full border rounded-md px-3 py-2" rows={4} value={operatorPrompt} onChange={(e) => setOperatorPrompt(e.target.value)} />
               <div className="flex gap-3">
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <button disabled={!isAdmin || isGenerating} onClick={handleGenerate} className="px-4 py-2 rounded-md bg-indigo-600 text-white disabled:opacity-50">
                   {isGenerating ? 'Generating…' : 'Generate with GPT'  } catch (error) {
     console.error("Error:", error);
@@ -1046,6 +1239,11 @@ function jurisdictionalNote(): any (j: string) {;
 }
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </button>
                 <button onClick={() => setGeneratedMarkdown('')} className="px-4 py-2 rounded-md border">Clear AI Draft</button>
               </div>
@@ -1092,11 +1290,34 @@ function jurisdictionalNote(): any (j: string) {;
               <div className="flex gap-2 overflow-x-auto">
                 {sections.map((s) => (
                   <button key={s} onClick={() => setActiveSection(s)} className={`px-3 py-1 rounded-md border ${activeSection === s ? 'bg-gray-900 text-white' : ''}`}>{s}</button>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              </div>
+<span className="text-xs opacity-60">Auto-updating preview</span>
+=======
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </div>
               <span className="text-xs opacity-60">Auto-updating preview</span>
             </div>
@@ -1105,6 +1326,10 @@ function jurisdictionalNote(): any (j: string) {;
         </div>
       </div>
     </>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   )
@@ -1124,6 +1349,10 @@ function buildLocalMarkdown(input: {;
   legalReview: boolean;
 }) {;
   const distLines = input.distribution.map((d) => `- ${d.label}: ${d.percent}%`).join('\n');
+<<<<<<< HEAD
+=======
+  const disclaimer = input.legalReview ? `\n\n> Submitted for legal review. Draft may change pending counsel feedback.` : '';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return `# ${input.tokenName} Tokenomics Whitepaper\n\n## Executive Summary\n${input.tokenName} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives and trust minimization.\n\n## Utility & Usage\n${input.useCases}.\n\n## Rewards System\n${input.rewardsLogic}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input.tokenSupply}.\n\n## Governance Model\n${input.governance}.\n\n## Risks + Disclaimers\nThis is not financial advice. ${jurisdictionalNote(input.jurisdiction)}${disclaimer}\n`
 }
 function jurisdictionalNote(j: string) {
@@ -1168,6 +1397,7 @@ function jurisdictional_note() {
     case 'US':;
       return 'The token is intended for utility purposes and not as a security within the meaning of U.S. securities laws.';
 
+<<<<<<< HEAD
 
 function DistributionDonut(): any ({ data }: { data: DistributionItem[] }) {;
   // Simple textual donut placeholder until a chart lib is added;
@@ -1201,6 +1431,16 @@ function buildLocalMarkdown(input: {;
 function DistributionDonut({ data }: { data: DistributionItem[] }) {
   // Simple textual donut placeholder until a chart lib is added
   const total = data.reduce((a, b) => a + b.percent, 0) |1;
+=======
+function DistributionDonut(): any ({ data }: { data: DistributionItem[] }) {;
+  // Simple textual donut placeholder until a chart lib is added;
+  const total = data && data.reduce((a, b) => a + b && b.percent, 0) || 1;
+
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 ;
 function jurisdictionalNote(j: string) {;
@@ -1225,6 +1465,7 @@ function jurisdictionalNote(j: string) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 function DistributionDonut({ data }: { data: DistributionItem[] }) {
   // Simple textual donut placeholder until a chart lib is added
   const total = data.reduce((a, b) => a + b.percent, 0) || 1,
@@ -1243,10 +1484,21 @@ function DistributionDonut({ data }: { data: DistributionItem[] }) {
 function DistributionDonut({ data }: { data: DistributionItem[] }) {
   // Simple textual donut placeholder until a chart lib is added
   const total = data.reduce((a, b) => a + b.percent, 0) || 1,
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+function DistributionDonut({ data }: { data: DistributionItem[] }) {
+  // Simple textual donut placeholder until a chart lib is added
+  const total = data.reduce((a, b) => a + b.percent, 0) || 1,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
 
 
 
+<<<<<<< HEAD
 function MarkdownPreview({ markdown, activeSection }: { markdown: string, activeSection: string }) {
   // Very lightweight section filter: split by headings
   const parts = useMemo(() => {
@@ -1259,6 +1511,8 @@ const map: Record<string, string> = {}
     });
     return map
   }, [markdown]);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 function MarkdownPreview(): any ({;
   markdown,;
   activeSection,;
@@ -1295,6 +1549,7 @@ function MarkdownPreview({
     return map;  }, [markdown]);
   const content = parts[activeSection] |'';
   return (
+<<<<<<< HEAD
     <pre className='whitespace-pre-wrap text-sm leading-6'>;
       {content || markdown}
     </pre>;
@@ -1304,6 +1559,72 @@ function MarkdownPreview({
 
 }
 
+=======
+
+
+=======
+    case 'EU':;
+      return 'Designed for utility under EU frameworks; subject to MiCA and local guidelines as applicable.';
+    case 'SG':;
+      return 'Intended utility token under MAS guidance; prospective purchasers should not view it as capital markets products.';
+    case 'AE':;
+      return 'Intended utility token within relevant UAE free zone guidance; not an investment product.';
+    default:;
+      return 'Intended strictly for utility use.';
+  }
+/**
+ * DistributionDonut - Function description
+ */
+function DistributionDonut() {
+  // Simple textual donut placeholder until a chart lib is added;
+  const total = data.reduce ((a, b) => a + b.percent, 0) || 1;
+  return (
+    <div className='space - y-1 text - sm'>;
+      {data.map ((d, idx) => (
+        <div key={idx} className='flex items - center gap - 2'>;
+          <div className='h - 2 bg - gray - 200 rounded w - full'>;
+            <div;
+              className='h - 2 bg - indigo - 600 rounded';
+              style={{ width: `${(d.percent / total) * 100}%` }}
+            />;
+          </div>;
+          <span className='w - 48 truncate'>;
+            {d.label} ({d.percent}%);
+          </span>;
+        </div>))}
+    </div>);
+;
+/**
+ * MarkdownPreview - Function description
+ */
+function MarkdownPreview() {  // Very lightweight section filter: split by headings;
+  const parts = useMemo (() => {
+    const sections = markdown.split (/\n## /g),
+    const map: Record < string, string> = {}
+    sections.for_each ((s, i) => {
+      // Check condition
+if (return) {
+  $2
+} // first is H1;
+      const [title_line, ...rest] = s.split ('\n');
+      map[title_line.trim ()] = rest.join ('\n');
+    });
+    return map;  }, [markdown]);
+;
+  const content = parts[active_section] || '';
+;
+  return (
+<pre className='whitespace - pre - wrap text - sm leading - 6'>;
+      {content || markdown}
+    </pre>);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1319,6 +1640,11 @@ function MarkdownPreview({
 function MarkdownPreview({ markdown, activeSection }: { markdown: string, activeSection: string }) {
   // Very lightweight section filter: split by headings
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const parts = useMemo(() => {
     const sections = markdown.split(/\n## /g),
     const map: Record<string, string> = {},
@@ -1331,6 +1657,7 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
   }, [markdown]),
   const content = parts[activeSection] || '',
   return (
+<<<<<<< HEAD
 <pre className='whitespace-pre-wrap text-sm leading-6'>
       {content || markdown}
     </pre>
@@ -1366,3 +1693,8 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
   }
 }
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

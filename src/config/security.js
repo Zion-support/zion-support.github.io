@@ -3,6 +3,7 @@ export const securityConfig = {
   // Content Security Policy
   csp: {
     directives: {
+<<<<<<< HEAD
       defaultSrc: ["'self'"]
       styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"]
       fontSrc: ["'self'", "https://fonts.gstatic.com"]
@@ -13,6 +14,20 @@ export const securityConfig = {
       objectSrc: ["'none'"]
       baseUri: ["'self'"]
       formAction: ["'self'"]
+=======
+
+      defaultSrc: ["'self'"],
+      styleSrc: ["'self'", "'unsafe-inline'", "https://fonts && fonts.googleapis.com"],
+      fontSrc: ["'self'", "https://fonts && fonts.gstatic.com"],
+      imgSrc: ["'self'", "data:", "https:"],
+      scriptSrc: ["'self'"],
+      connectSrc: ["'self'"],
+      frameSrc: ["'none'"],
+      objectSrc: ["'none'"],
+      baseUri: ["'self'"],
+      formAction: ["'self'"],
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       upgradeInsecureRequests: []
     }
   }

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 
@@ -22,6 +23,11 @@ Dialog
 import { Save, ChevronDown, Plus, Loader2 } from "lucide-react";
 import { Resume } from "@/types/resume";
 import { useResume } from "@/hooks/useResume";
+=======
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import {useState} from 'react';
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
@@ -31,11 +37,17 @@ import {Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle} from '@/
 import {Save, ChevronDown, Plus, Loader2} from 'lucide-react';
 import {Resume} from '@/types/resume';
 import {useResume} from '@/hooks/useResume';
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface ResumeVersionSelectorProps {
   currentResume: Resume;
   onResumeChange: (resumeId: string) => void
 }
 
+<<<<<<< HEAD
 export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {;
 
 
@@ -47,11 +59,22 @@ export function ResumeVersionSelector({
 }: ResumeVersionSelectorProps) {
 
 export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {;
+=======
+
+export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const { createResume, fetchResume } = useResume();
   const [saveDialogOpen, setSaveDialogOpen] = useState(false);
   const [newResumeTitle, setNewResumeTitle] = useState('');
   const [existingResumes, setExistingResumes] = useState<Resume[]>([]),
   const [isLoading, setIsLoading] = useState(false);
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleCreateNewVersion = async () => {;
     if (newResumeTitle && newResumeTitle.trim()) {;
       setIsLoading(true);
@@ -62,6 +85,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         setSaveDialogOpen(false);
         setNewResumeTitle('');
 
+<<<<<<< HEAD
   const handleCreateNewVersion = async () => {
     if (newResumeTitle.trim()) {
       setIsLoading(true);
@@ -71,15 +95,25 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         onResumeChange(resumeId);
         setSaveDialogOpen(false);
         setNewResumeTitle("");
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
       setIsLoading(false);
     }
   }
+<<<<<<< HEAD
 
         setNewResumeTitle('')
 
 
         setNewResumeTitle('')
+=======
+=======
+
+        setNewResumeTitle('')
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from 'react',;
 import {;
   DropdownMenu,;
@@ -114,6 +148,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         onResumeChange(resumeId),;
         setSaveDialogOpen(false);
         setNewResumeTitle('');
+<<<<<<< HEAD
       }
       setIsLoading(false);
     }
@@ -170,6 +205,11 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
           </div>
           <DialogFooter>
 
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
       setIsLoading(false);
     }
@@ -215,6 +255,7 @@ onClick={handleCreateNewVersion}
       </Dialog>
     </div>
 
+<<<<<<< HEAD
 import { useState } from 'react',;
 import { ;
   DropdownMenu,;
@@ -257,6 +298,8 @@ export function ResumeVersionSelector({ currentResume, onResumeChange } ResumeVe
   },;
 ;
   return (;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="flex items-center gap-2">;
       <span className="text-sm text-muted-foreground">Resume:</span>;
       <DropdownMenu>;
@@ -324,6 +367,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange } ResumeVe
   )
 }
 
+<<<<<<< HEAD
 };
 > {
   resume.basic info.title 
@@ -341,3 +385,6 @@ export function ResumeVersionSelector({ currentResume, onResumeChange } ResumeVe
 }
 ;
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

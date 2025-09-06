@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Star, StarHalf } from 'lucide-react'
 import React from 'react';
 import React from 'react',
@@ -8,6 +9,8 @@ import React from 'react';
 }
 ;
 import React from 'react',
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Star, StarHalf } from 'lucide-react'
 
 export function RatingStars({ value;
@@ -22,6 +25,7 @@ export function RatingStars({ value;
             />
           )
         }
+<<<<<<< HEAD
         if (i === filled && half) {
           return (
             <StarHalf
@@ -31,6 +35,15 @@ export function RatingStars({ value;
         if (i === filled && half) {;
           return (;
             <StarHalf;
+=======
+
+
+        if (i === filled && half) {;
+          return (;
+            <StarHalf;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               key={i}
               className="h-4 w-4 fill-zion-cyan text-zion-cyan"
             />
@@ -40,6 +53,7 @@ export function RatingStars({ value;
       })}
       {typeof count === 'number' && (
         <span className="text-xs ml-1">({count})</span>
+<<<<<<< HEAD
       )}
     </div>
   )
@@ -104,6 +118,10 @@ export function RatingStars({ value = 0, count } { value?:number, count?:number 
 }) </span> ;
 }</div>) ;
 }'"
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               className="h-4 w-4 fill-zion-cyan text-zion-cyan";
             />;
           );
@@ -112,6 +130,11 @@ export function RatingStars({ value = 0, count } { value?:number, count?:number 
       })}
       {typeof count === 'number' && (;
         <span className="text-xs ml-1">({count})</span>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       )}
     </div>
   )
@@ -128,4 +151,8 @@ export function RatingStars({ value = 0, count } { value?:number, count?:number 
 }
 }
 
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

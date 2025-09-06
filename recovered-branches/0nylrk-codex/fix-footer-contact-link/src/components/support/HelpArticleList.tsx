@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {HELP_CATEGORIES} from "./help-content";
 
@@ -36,17 +37,27 @@ export function HelpArticleList({
   if (!category) {
     return <div>Category not found</div>;
   }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {HELP_CATEGORIES} from "./help-content";
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { HELP_CATEGORIES } from "./help-content",
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface HelpArticleListProps {
   categoryId: string,
   onArticleSelect: (articleId: string) => void,
   searchQuery: string
 }
 
+<<<<<<< HEAD
 export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {;
   const category = HELP_CATEGORIES.find(cat => cat.id === categoryId);
   
@@ -96,10 +107,24 @@ export function HelpArticleList({
 
   }
   
+=======
+
+  }
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Filter articles based on search query
   const filteredArticles = searchQuery
     ? category.articles.filter(
         (article) =>
+<<<<<<< HEAD
+=======
+          article.title.toLowerCase().includes(searchQuery.toLowerCase()) |
+          article.content.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     : category.articles,
   
@@ -119,7 +144,10 @@ article.title.toLowerCase().includes(searchQuery.toLowerCase()) |
         <h2 className="text-2xl font-bold mb-2">{category.name}</h2>
         <p className="text-zion-slate-light">{category.description}</p>
       </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {filteredArticles.length === 0 ? (
         <div className="text-center py-8">
           <h3 className="text-lg font-medium mb-2">No articles found</h3>
@@ -130,6 +158,7 @@ article.title.toLowerCase().includes(searchQuery.toLowerCase()) |
       ) : (
         <div className="space-y-4">
           {filteredArticles.map((article) => (
+<<<<<<< HEAD
             <Card
               key={article.id}
               className="cursor-pointer hover:border-zion-purple/50 transition-colors"
@@ -153,6 +182,9 @@ article.title.toLowerCase().includes(searchQuery.toLowerCase()) |
     </div>
   );
 }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {HELP_CATEGORIES} from "./help-content";
 interface HelpArticleListProps {;
@@ -343,6 +375,7 @@ function format_date (date: string): string {
   })
   })
 
+<<<<<<< HEAD
 ;
 function formatDate(date:string):string {;
   return new Date(date).toLocaleDateString("en-US", {;
@@ -389,3 +422,6 @@ function formatDate(date: string): string {;
   });
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

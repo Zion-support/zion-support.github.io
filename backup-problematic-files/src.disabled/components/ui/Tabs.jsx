@@ -9,4 +9,8 @@ const Tabs = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Tabs;
+=======
+export default Tabs;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

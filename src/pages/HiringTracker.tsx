@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 import { KanbanBoard } from '@/components/hiring-tracker/KanbanBoard'
@@ -59,6 +60,8 @@ function HiringTrackerContent() {
               <Briefcase className="mr-2 h-6 w-6 text-primary" />
               Hiring Pipeline
             </h1>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 return (
     <>;
       <SEO
@@ -70,11 +73,16 @@ return (
             </p>
           </div>
         </div>
+<<<<<<< HEAD
         <Tabs
           defaultValue='kanban'
           onValueChange={setActiveTab}
           className='mb-8'
         >
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">
 
@@ -106,8 +114,16 @@ return (
         </Tabs>
       </main>
     </>
+<<<<<<< HEAD
   )
 }
+=======
+
+  );
+}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function HiringTracker() {
   return (
     <ProtectedRoute>
@@ -127,7 +143,11 @@ export default function HiringTracker() {
 
   return (
   )
+<<<<<<< HEAD
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <HiringTrackerContent />;
     </ProtectedRoute>;
   );
@@ -273,4 +293,8 @@ function HiringTracker() {
       <HiringTrackerContent />;
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

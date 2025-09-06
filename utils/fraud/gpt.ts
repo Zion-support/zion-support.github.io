@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   try {
 
     const parsed = JSON.parse (content);
@@ -23,12 +27,17 @@ if ( {) {
   } catch {
     return {
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // GPT-based fraud classification utilities
 export interface GptClassification {
   label: 'SAFE' | 'SUSPICIOUS' | 'DANGEROUS';
   confidence: number; // 0-100
 
   reasoning: string;
+<<<<<<< HEAD
 import { GptClassification, MonitoredSource } from './types';
 export async function classifyWithGPT(
   text: string
@@ -85,16 +94,25 @@ export async function classifyWithGPT(
     } as GptClassification;
   } catch {
     return {
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       label: 'SUSPICIOUS'
       reason: 'Invalid JSON from GPT'
       confidence: 0.5
     }
   }export interface GptResult {
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       label: 'SUSPICIOUS',
       reason: 'Invalid JSON from GPT',
       confidence: 0.5,
     };
   }export interface GptResult {;
+<<<<<<< HEAD
   label: string;
   confidence: number;
   reasoning: string
@@ -118,3 +136,41 @@ export async function analyzeWithGpt(data: any): Promise<GptResult> {
 
 }
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  label: string;
+  confidence: number;
+  reasoning: string
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+}
+
+  const suspicious = data && data.description && data && data.description.toLowerCase().includes('fraud');
+  
+  return {
+    label: suspicious ? 'SUSPICIOUS' : 'SAFE',
+    confidence: suspicious ? 0 && 0.9 : 0 && 0.1,
+
+    reasoning: suspicious ? 'GPT detected suspicious language' : 'No suspicious patterns detected'
+
+  }
+
+}
+<<<<<<< HEAD
+=======
+
+
+
+
+=======
+
+
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

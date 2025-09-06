@@ -1,9 +1,16 @@
 
+<<<<<<< HEAD
 import React from 'react';
 
 
 import React from 'react',
 import React from 'react';
+=======
+
+import React from 'react';
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Head from 'next/head';
 import Link from 'next/link';
 export default function AutomationInsightsPage() {
@@ -14,14 +21,23 @@ export default function AutomationInsightsPage() {
       title: 'AI Automation Trends 2025'
       description:
 
+<<<<<<< HEAD
         'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends'
       readTime: '8 min read'
       featured: true
     }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends',
       readTime: '8 min read',
       featured: true;
     };
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       id: 'autonomous-systems'
       title: 'Building Autonomous Systems'
@@ -109,6 +125,10 @@ export default function AutomationInsightsPage() {
       label: 'Pages Generated'
       description: 'Content created autonomously'
     },  ];      description: 'Content created autonomously'
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -153,6 +173,7 @@ import React from 'react';
             </h1>;
             <p className='text-xl text-white/80 max-w-3xl mx-auto'>;
 
+<<<<<<< HEAD
     }
   ];
 
@@ -207,6 +228,9 @@ import React from 'react';
                     <div className="text-4xl font-bold text-fuchsia-400 mb-2">{item.metric}</div>
                     <div className="text-lg font-semibold text-white mb-1">{item.label}</div>
                     <div className="text-sm text-white/70">{item.description}</div>
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <meta;
           name='description';
           content="Explore Zion Tech Group's automation insights, trends, and expertise in building autonomous systems.";
@@ -243,6 +267,7 @@ import React from 'react';
             {/* Automation Trends */}
 
 
+<<<<<<< HEAD
                 ))}
               </div>
             </div>
@@ -253,17 +278,26 @@ import React from 'react';
               </div>
             </div>
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Automation Trends */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
                 Latest Automation Trends
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+<<<<<<< HEAD
 
 
                 {automationTrends.map((trend, index) => (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                 {automationTrends.map((trend, index) => (
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <div
                     key={index}
                     className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300'
@@ -281,16 +315,22 @@ import React from 'react';
                     </h3>
                     <p className='text-white/70 mb-4'>{trend.description}</p>
                     <Link
+<<<<<<< HEAD
                       href={`/blog/${trend.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
                     >
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             <div className="mb-16">
               <h2 className="text-3xl font-bold mb-8 text-center text-fuchsia-400">Latest Automation Trends</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {automationTrends.map((trend, index) => (
 
+<<<<<<< HEAD
                       Read More <span className='ml-1'>→</span>                    </Link>                {automationTrends.map((trend, index) => (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
                     <div className="flex items-center justify-between mb-4">
                       <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full">{trend.category}</span>
@@ -304,14 +344,26 @@ import React from 'react';
                     >
                       Read More <span className="ml-1">→</span>
                     </Link>
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       Read More <span className='ml-1'>→</span>                    </Link>
 
                     </Link>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </div>
                 ))}
               </div>
             </div>
+<<<<<<< HEAD
 
             {/* Automation Tools & Frameworks */}
             <div className='mb-16'>
@@ -349,6 +401,8 @@ import React from 'react';
                     <div className="flex justify-center gap-2">
                       <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{tool.type}</span>
                       <span className="px-3 py-1 bg-purple-400/20 text-purple-400 text-sm rounded-full">{tool.complexity}</span>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                       href={`/blog/${trend && trend.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'>;
@@ -387,12 +441,15 @@ import React from 'react';
 
 
             {/* Call to Action */}
+<<<<<<< HEAD
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Call to Action */}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>
               <h2 className='text-3xl font-bold mb-4 text-white'>
                 Ready to Automate Your Business?
@@ -400,13 +457,20 @@ import React from 'react';
               <p className='text-xl text-white/80 mb-6'>
                 Let our experts help you build the automation systems of the
                 future
+<<<<<<< HEAD
 
 
               </p>
               <div className='flex flex-wrap justify-center gap-4'>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               </p>
               <div className='flex flex-wrap justify-center gap-4'>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <Link
                   href='/contact'
                   className='px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105'
@@ -415,8 +479,13 @@ import React from 'react';
                 </Link>
                 <Link
                   href='/case-studies'
+<<<<<<< HEAD
                   className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'                >              </p>
               <div className="flex flex-wrap justify-center gap-4">
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <Link
                   href="/contact"
                   className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
@@ -436,6 +505,7 @@ import React from 'react';
         </main>
       </div>
     </>
+<<<<<<< HEAD
   );
 }
     </>);
@@ -446,3 +516,19 @@ import React from 'react';
 }
   );
 }
+=======
+
+                  View Case Studies;
+                </Link>;
+              </div>;
+            </div>;
+          </section>;
+        </main>;
+      </div>;
+
+
+}
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

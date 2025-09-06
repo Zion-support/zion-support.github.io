@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
@@ -38,8 +43,39 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
   const section = String(req && req.query.section || "General");
+<<<<<<< HEAD
     file,
   );
+=======
+  const file = String(req && req.query.file || "");
+  if (!file) return res && res.status(400).json({ error: "Missing file" });
+  const fullPath = path && path.join(
+    resolveDataPath(path && path.join("dataroom", section)),
+import type { NextApiRequest, NextApiResponse } from './next';
+import fs from './fs';
+import path from './path';
+import mime from './mime - types';
+import { appendAuditLog, resolveDataPath  } from '../../../../utils / api / storage';
+import { requireSuperadminApi  } from '../../../../utils / api / auth';
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if () return) {
+  $2
+}
+  const section = String (req.query.section || "General");
+  const file = String (req.query.file || "");
+  if (return res.status (400).json ({ error: "Missing file" })) {
+  $2
+}
+  const full_path = path.join (
+    resolveDataPath (path.join ("dataroom", section)),
+
+    file,
+  );
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     (mime && mime.lookup(fullPath) as string) || "application/octet-stream";
   res && res.setHeader("Content-Type", contentType);
   res && res.setHeader(
@@ -52,6 +88,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   res && res.setHeader(
     "Content-Disposition",
     `attachment, filename="${path && path.basename(fullPath)}"`,
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
   appendAuditLog({ type: "file_download", section, name: file });
   fs && fs.createReadStream(fullPath).pipe(res);
@@ -160,6 +200,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   appendAuditLog ({ type: "file_download", section, name: file });
   fs.createReadStream (full_path).pipe (res);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -167,3 +214,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const section = String(req.query.section || 'General');
   const file = String(req.query.file || '');
   if (!file) return res.status(400).json({ error: 'Missing file' });
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

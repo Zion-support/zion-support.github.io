@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { useState  } from 'react';
 import { useState } from 'react'
@@ -294,6 +295,25 @@ export function CodeBlock({ ;
         onClick={handleCopyClick}
         aria-label='Copy code'      >
         {copied ? <Check size={16} /> : <Copy size={16} />}
+=======
+))}
+          </div>;
+        )}
+
+
+        <code className="language-javascript">{code}</code>
+      </pre>
+      <button
+        className="absolute top-2 right-2 p-2 rounded-md hover:bg-zinc-800 transition-colors"
+        onClick={handleCopyClick}
+        aria-label="Copy code"
+      >
+        {copied ? <Check size={16} /> : <Copy size={16} />}
+      </button>
+      {language && (
+        <div className="absolute top-2 left-2 px-2 py-1 text-xs rounded-md bg-zinc-800 text-zinc-400">
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           {language}
         </div>;
@@ -374,6 +394,7 @@ export default CodeBlock;
   );
 }
 ;
+<<<<<<< HEAD
   ),;}
 ;
 export default CodeBlock,;
@@ -423,3 +444,6 @@ showLineNumbers && "pl-12 relative") ;
 }export default CodeBlock;
 '"
 export default CodeBlock;
+=======
+export default CodeBlock;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

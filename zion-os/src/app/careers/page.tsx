@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const metadata = {
   title: 'Careers - Zion Tech Group',
   description: 'Join our team of AI innovators and help shape the future of autonomous business operations and digital economies.',
@@ -13,6 +17,7 @@ function CareersPage() {
       location: 'Remote / Global',
       type: 'Full - time',
       description: 'Lead cutting - edge research in AI consciousness, autonomous systems, and quantum neural networks.',
+<<<<<<< HEAD
 export const metadata = {title: 'Careers - Zion Tech Group';
   description: 'Join our team of AI innovators and help shape the future of autonomous business operations and digital economies.';
   keywords: 'careers, jobs, Zion Tech Group, AI jobs, technology careers, quantum computing jobs'}
@@ -23,6 +28,23 @@ export default function CareersPage() {const openPositions = [;
       location: 'Remote / Global';
       type: 'Full-time';
       description: 'Lead cutting-edge research in AI consciousness, autonomous systems, and quantum neural networks.';
+=======
+=======
+
+export const metadata = {;
+  title: 'Careers - Zion Tech Group',;
+  description: 'Join our team of AI innovators and help shape the future of autonomous business operations and digital economies.',;
+  keywords: 'careers, jobs, Zion Tech Group, AI jobs, technology careers, quantum computing jobs'},;
+export default function CareersPage() {;
+  const openPositions = [;
+    {;
+      title: 'Senior AI Research Engineer',;
+      department: 'Research & Development',;
+      location: 'Remote / Global',;
+      type: 'Full-time',;
+      description: 'Lead cutting-edge research in AI consciousness, autonomous systems, and quantum neural networks.',;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       requirements: [;
         'PhD in Computer Science, AI, or related field5+ years experience in AI research_expertise in machine learning and neural networks_experience with quantum computing concepts']},
     {
@@ -50,6 +72,7 @@ export default function CareersPage() {const openPositions = [;
       requirements: [;
         '5+ years experience in cybersecurity_expertise in threat detection and prevention_knowledge of AI security and adversarial attacks_relevant certifications (CISSP, CEH, etc.)']}],
   const benefits = [;
+<<<<<<< HEAD
     {title: 'Remote First';
       description: 'Work from anywhere in the world with our distributed team.';
       icon: '🌍'}
@@ -106,6 +129,9 @@ export default function CareersPage() {;
       requirements: [;
         '5+ years experience in cybersecurityExpertise in threat detection and preventionKnowledge of AI security and adversarial attacksRelevant certifications (CISSP, CEH, etc.)']}],;
   const benefits = [;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {;
       title: 'Remote First',;
       description: 'Work from anywhere in the world with our distributed team.',;
@@ -129,6 +155,11 @@ export default function CareersPage() {;
     {;
       title: 'Health & Wellness',;
       description: 'Comprehensive health coverage and wellness programs.',;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       icon: '🏥'}];
   return (
     <div className="space - y-16">;

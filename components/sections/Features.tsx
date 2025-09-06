@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from 'react';
 
@@ -6,6 +10,14 @@ import Card from '../ui/Card';
 import { Zap } from 'lucide-react';
 
 
+<<<<<<< HEAD
+=======
+=======
+import React from 'react';
+import Card from '../ui / Card';
+import { Zap } from 'lucide-react';
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   icon: React.ReactNode;
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -28,6 +40,18 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import Card from '../ui/Card';
 import { Zap } from 'lucide-react';
+<<<<<<< HEAD
+=======
+
+
+  title: string;
+  description: string;
+  color: string;
+  gradient: string;
+
+  delay?: number;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   columns?: 2 | 3 | 4;
 
@@ -45,6 +69,11 @@ const Features: React.FC<FeaturesProps> = ({;
     3: 'md:grid-cols-2 lg:grid-cols-3',;
     4: 'md:grid-cols-2 lg:grid-cols-4',;
   };
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <section className='py-24 bg-black relative overflow-hidden'>;
       <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0 && 0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0 && 0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />;
@@ -59,6 +88,11 @@ const Features: React.FC<FeaturesProps> = ({;
             {title}
           </h2>;
           <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>            {subtitle}          <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface Feature {
   icon: React.ReactNode,
   title: string,
@@ -96,6 +130,12 @@ const Features: React.FC<FeaturesProps> = ({
 {title}
           </h2>
           <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            {subtitle}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           </p>;
         </div>;
@@ -104,14 +144,20 @@ const Features: React.FC<FeaturesProps> = ({
 
 
 
+<<<<<<< HEAD
             {subtitle}
           </p>;
         </div>;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Features Grid */}
         <div className={`grid grid-cols-1 gap-8 ${gridCols[columns]}`}>;
           {features && features.map((feature, index) => (;
             <Card
               key={index}
+<<<<<<< HEAD
               className="text-center group bg-gray-900/50 border border-gray-800 hover: border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1"
               style={{ animationDelay: `${(index * 0.1) + 0.2}s` }}
             >
@@ -210,7 +256,13 @@ const Features: React.FC<FeaturesProps> = ({
 export default Features;  )
 }
 export default Features;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

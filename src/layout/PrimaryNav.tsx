@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { logDebug, logErrorToProduction  } from '@/utils/productionLogger';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
 import { Logo  } from '@/components/header/Logo';
@@ -78,6 +81,7 @@ function PrimaryNav() {
   const suggestions = generateSearchSuggestions ();
   let unread_count = 0;
 
+<<<<<<< HEAD
 import { useState } from 'react'
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger'
 import Link from 'next/link'
@@ -112,10 +116,13 @@ export function PrimaryNav() {
   const [query, setQuery] = useState('')
   const suggestions = generateSearchSuggestions()
   let unreadCount = 0
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   try {
     const messaging = useMessaging()
     unreadCount = messaging.unreadCount
   } catch {
+<<<<<<< HEAD
   }
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -123,10 +130,20 @@ export function PrimaryNav() {
   }
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+=======
+
+    // context not available
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   };
 ;
   const handleSubmit = (e: React.FormEvent) => {;
     e.preventDefault();
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const trimmed = query.trim();    if (trimmed) {
       logDebug('PrimaryNav search submit:', { query: trimmed })
       router
@@ -153,6 +170,7 @@ if ( {) {
             query: trimmed,
             component: 'PrimaryNav',
           })) }
+<<<<<<< HEAD
   }
   }
 import { useState } from 'react',;
@@ -177,6 +195,8 @@ import { Menu, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next',;
 import { CartDrawer } from '@/components/cart/CartDrawer',;
 import { LoginModal } from '@/components/auth/LoginModal',;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 export function PrimaryNav() {;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false),;
@@ -234,6 +254,7 @@ export function PrimaryNav() {;
       >
         <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap">
           <Logo />
+<<<<<<< HEAD
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
           <div className='hidden lg:block order-1 flex-shrink-0'>
             <ResponsiveNavigation
@@ -251,6 +272,9 @@ export function PrimaryNav() {;
               className='flex-shrink-0'
               style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>;
             />          </div>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
           <div className="hidden lg:block order-1 flex-shrink-0">
@@ -265,6 +289,34 @@ export function PrimaryNav() {;
               <EnhancedSearchInput
                 value={query}
                 onChange={setQuery}
+<<<<<<< HEAD
+=======
+
+      <header;
+        className='sticky top - 0 z - 70 w - full border - b border - primary / 20 bg - card / 90 backdrop - blur - md';
+        role='navigation';
+        aria - label='Primary';
+        data - testid='header';
+      >;
+        <div className='container flex items - center justify - between gap - 2 min - h-16 px - 4 sm:px - 6 max-[320px]:flex - wrap'>;
+          <Logo />;
+          {/* Navigation - hidden on mobile and tablets, shown on desktop */}
+          <div className='hidden lg:block order - 1 flex - shrink - 0'>;
+            <ResponsiveNavigation;
+              openLoginModal={returnToPath => setLoginOpen (true)}
+            />          </div>;
+          {/* Actions container with responsive layout */}
+          <div className='hidden lg:flex items - center gap - 2 order - 2 flex - shrink - 0 min - w-0'>;
+            {/* Search form with clamped width */}
+            <form;
+              on_submit={handle_submit}
+              className='flex - shrink - 0';
+              style={{ width: 'clamp (12rem, 20vw, 16rem)' }}
+            >;
+              <EnhancedSearchInput;
+                value={query}
+                on_change={set_query}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 onSelectSuggestion={sugg => {
                   log_debug ('PrimaryNav search suggestion selected:', {
                     suggestion: sugg,
@@ -289,6 +341,7 @@ if ( {) {
                     // Blog posts navigate to blog detail page;
                     router.push (`/blog/${sugg.slug}`);
 
+<<<<<<< HEAD
                 onSelectSuggestion={sugg => {
                   logDebug('PrimaryNav search suggestion selected:', {
                     suggestion: sugg
@@ -303,10 +356,13 @@ if ( {) {
                   } else if (sugg.type === 'blog' && sugg.slug) {
                     // Blog posts navigate to blog detail page
                     router.push(`/blog/${sugg.slug}`)
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   } else {
                     // Default: search results page with query parameter
                     router.push(`/search?q=${encodeURIComponent(sugg.text)}`)
                   }
+<<<<<<< HEAD
                   setQuery('')
                   // Track analytics event
                   if (typeof window !== 'undefined' && window.gtag) {
@@ -351,6 +407,8 @@ if ( {) {
                     // Default: search results page with query parameter;
                     router.push (`/search?q=${encodeURIComponent (sugg.text)}`);
                   }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                 onSelectSuggestion={sugg => {;
                   logDebug('PrimaryNav search suggestion selected:', {;
@@ -362,6 +420,10 @@ if ( {) {
                   logDebug('PrimaryNav search suggestion selected:', { suggestion: sugg }),;
                   // Handle different suggestion types with proper navigation;
                   if (sugg.id) {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     // Product listings with IDs go to product detail page;
                     router.push(`/marketplace/listing/${sugg.id}`);
                   } else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {;
@@ -475,11 +537,20 @@ if ( {) {
               />;
             </form>;
             {/* Compact actions group */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className="flex items-center gap-1">
               <PointsBadge />
               <CartDrawer />
             </div>
             
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Compact controls group */}
             <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">
               <ModeToggle />
@@ -491,6 +562,7 @@ if ( {) {
               {!isLoggedIn && (
                 <>
                   <Link
+<<<<<<< HEAD
                     href='/auth/login'
                     className='text-sm hover:text-primary whitespace-nowrap'
                     data-testid='login-link'
@@ -498,6 +570,9 @@ if ( {) {
                       e.preventDefault()
                       setLoginOpen(true) }}
                   >
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     href="/auth/login"
                     className="text-sm hover: text-primary whitespace-nowrap"
                     data-testid="login-link"
@@ -509,14 +584,22 @@ if ( {) {
               <CartDrawer />;
             </div>;
             {/* Compact controls group */}
+<<<<<<< HEAD
             <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">;
+=======
+            <div className='flex items - center gap - 1 border - l border - primary / 20 pl - 1 ml - 1'>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <ModeToggle />;
               <LanguageSelector />;
             </div>;
             {/* Auth links - flex wrap for very small screens */}
+<<<<<<< HEAD
             <div className="flex items-center gap-1 flex-wrap">;
               {!isLoggedIn && (;
                 <>;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <Link;
                     href="/auth/login";
                     className="text-sm hover: text-primary whitespace-nowrap";
@@ -526,6 +609,11 @@ if ( {) {
                       setLoginOpen(true);
                     }}
                   >;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     {t('auth.login')}
                   </Link>
                     onClick={e => {;
@@ -534,8 +622,11 @@ if ( {) {
                   >;
                     {t('auth && auth.login')}
                   </Link>;
+<<<<<<< HEAD
                     {t('auth.login')}
                   </Link>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <Link
                     href="/signup"
                     className="text-sm hover:text-primary whitespace-nowrap"
@@ -561,6 +652,7 @@ if ( {) {
             {!isLoggedIn && (
               <Link
 
+<<<<<<< HEAD
                 {t('auth.login')}
               </Link>
             )}
@@ -585,6 +677,8 @@ if ( {) {
                   setLoginOpen(true) }}
 
               >
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 href="/auth/login"
                 className="text-sm hover:text-primary"
                 data-testid="login-link"
@@ -609,6 +703,7 @@ if ( {) {
               </Link>
             )}
             {isLoggedIn && <UserMenu />}
+<<<<<<< HEAD
           </div>
               {isLoggedIn && <UserMenu  />}
             </div>
@@ -619,6 +714,66 @@ if ( {) {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
             aria-label={t('general.toggle_mobile_menu')}          >
+=======
+
+                onClick={e => {;
+                  e && e.preventDefault();
+                  setLoginOpen(true);                }}
+              >;
+                {t('auth && auth.login')}
+              </Link>;
+            )}
+            {isLoggedIn && <UserMenu />}
+          </div>;
+
+
+            <div className='flex items - center gap - 1 flex - wrap'>;
+              {!isLoggedIn && (
+                <>;
+                  <Link;
+                    href='/auth / login';
+                    className='text - sm hover:text - primary whitespace - nowrap';
+                    data - testid='login - link';
+                    on_click={e => {
+                      e.prevent_default ();
+                      setLoginOpen (true) }}
+                  >;
+                    {t ('auth.login')}
+                  </Link>;
+                  <Link;
+                    href='/signup';
+                    className='text - sm hover:text - primary whitespace - nowrap';
+                  >;
+                    {t ('auth.signup')}
+                  </Link>;
+                </>)}
+              {isLoggedIn && <UserMenu />}
+            </div>;
+          </div>;
+          {/* Tablet view (md to lg) - simplified controls */}
+          <div className='hidden md:flex lg:hidden items - center gap - 2 order - 2'>;
+            <ModeToggle />;
+            <LanguageSelector />;
+            {!isLoggedIn && (
+              <Link;
+                href='/auth / login';
+                className='text - sm hover:text - primary';
+                data - testid='login - link';
+                on_click={e => {
+                  e.prevent_default ();
+                  setLoginOpen (true) }}
+              >;
+                {t ('auth.login')}
+              </Link>)}
+            {isLoggedIn && <UserMenu />}
+          </div>;
+              {isLoggedIn && <UserMenu  />}
+            </div>;
+          </div>;
+          {/* Mobile menu button */}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>;
           {/* Mobile menu button */}
           <button
@@ -627,6 +782,11 @@ if ( {) {
             aria-expanded={mobileMenuOpen}
             aria-label={t('general.toggle_mobile_menu')}
           >
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {mobileMenuOpen ? (
               <X className="h-6 w-6" />
             ) : (
@@ -638,6 +798,7 @@ if ( {) {
       {mobileMenuOpen && (
         <div className="lg:hidden fixed inset-0 z-60 pt-16">
           <div
+<<<<<<< HEAD
   unreadCount
             className='absolute inset-0 bg-black/50 backdrop-blur-sm'
             onClick={() => setMobileMenuOpen(false)}
@@ -654,6 +815,126 @@ if ( {) {
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
   )
+=======
+
+      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
+    </>;
+  );
+
+};
+return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header" > <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap" > <Logo /> ;
+}setQuery ('');
+//Track analytics event ;
+
+}searchSuggestions= {;
+  suggestions ;
+}/> </form> <PointsBadge /> <CartDrawer /> </div> <ModeToggle /> <LanguageSelector /> </div> <LinkonClick={
+  (e) => {;
+  > {';
+  t ('auth && auth.login') ";
+}</Link> <Link href="/signup" className="text-sm hover:text-primary whitespace-nowrap" > {';
+  t ('auth && auth.signup') ;
+}</Link> </>) ;
+}{;
+  isLoggedIn && <UserMenu /> ;
+}</div> </div> <ModeToggle /> <LanguageSelector /> {";
+  !isLoggedIn && (<Linkhref="/auth/login" className="text-sm hover:text-primary" data-testid="login-link" onClick={
+  (e) => {;
+  e && e.preventDefault ();
+setLoginOpen (true) ;
+}';
+}t ('auth && auth.login') ;
+}</Link>) ;
+}{;
+  isLoggedIn && <UserMenu /> ;
+}</div> {;
+  /* Mobile menu button */ ";
+}<button) : (<Menu className="h-6 w-6" />) ";
+}</button> </div> </header> <divclassName="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={
+  () => setMobileMenuOpen (false) ";
+}aria-hidden="true" /> <div className="relative bg-card border-t border-primary/20 max-h-[calc (100vh-4rem) ] overflow-y-auto" > <MobileMenuunreadCount= {
+  unreadCount 
+}onClose= {
+  () => setMobileMenuOpen (false) ;
+}openLoginModal= {;
+  (returnToPath) => setLoginOpen (true) ;
+}/> </div> </div>) ;
+}{;
+  isMobile && <MobileBottomNavunreadCount= {
+  unreadCount 
+}/> ;
+}<LoginModalisOpen= {
+  loginOpen 
+}onOpenChange= {
+  setLoginOpen 
+}/> </>) ;
+}'"  { opacity: 0,;
+  height: 0;
+}}
+              animate = {;
+
+  { opacity: 1,;
+  height: 'auto';
+}}
+              exit = {;
+
+  { opacity: 0,;
+  height: 0;
+}}
+              transition={{ duration: 0 && 0.3 }}";
+              className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10">";
+              <div className="px-4 py-6 space-y-4">;
+                {services && services.map((category, index) => (;
+                  <div key={index}>";
+                    <h3 className="text-sm font-semibold text-cyan-400 mb-2">;
+                      {category && category.category}
+                    </h3>";
+                    <div className="space-y-2 ml-4">;
+                      {category && category.items.map((service: unknown, serviceIndex: unknown ;
+                        <Link
+                          key={serviceIndex}
+                          to={service && service.path}"
+                          className="block text-gray-300 hover:text-white transition-colors duration-200"
+                          onClick={( setIsOpen(false)}>;
+                          {service && service.name}
+                        </Link>;
+                      ))}
+                    </div>;
+                  </div>;
+                ))}
+
+                <div className="pt-4 border-t border-white/10 space-y-2">;
+                  <Linkto="/solutions"
+                    className="block text-gray-300 hover:text-white transition-colors duration-200"
+                    onClick={: unknown setIsOpen(false)}>;
+                    Solutions;
+                  </Link>;
+                  <Linkto="/about"
+                    className="block text-gray-300 hover:text-white transition-colors duration-200"
+                    onClick={: unknown setIsOpen(false)}>;
+                    About;
+                  </Link>;
+                  <Linkto="/blog"
+                    className="block text-gray-300 hover:text-white transition-colors duration-200"
+                    onClick={: unknown setIsOpen(false)}>;
+                    Blog;
+                  </Link>;
+                  <Linkto="/contact"
+                    className="block text-gray-300 hover:text-white transition-colors duration-200"
+                    onClick={: unknown setIsOpen(false)}>;
+                    Contact;
+                  </Link>;
+                </div>;
+              </div>;
+            </motion && motion.div>;
+          )};
+        </AnimatePresence>;
+      </nav>;
+    </header>;
+  )}
+'"`;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header" > <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap" > <Logo />
 }setQuery ('')
@@ -696,6 +977,11 @@ setLoginOpen (true)
   unreadCount
 
   unreadCount 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }/>
 }<LoginModal isOpen= {
   loginOpen
@@ -712,6 +998,7 @@ setLoginOpen (true)
               exit = {
   { opacity: 0
   height: 0
+<<<<<<< HEAD
 ;
 ;
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
@@ -725,6 +1012,8 @@ setLoginOpen (true)
               openLoginModal={(returnToPath) => setLoginOpen(true)}
             />;
           </div>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <button;
             className='lg:hidden p - 2 rounded focus:outline - none flex - shrink - 0';
             on_click={() => setMobileMenuOpen (!mobileMenuOpen)}
@@ -851,6 +1140,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 '"`;
 }
 
+<<<<<<< HEAD
       )}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
@@ -859,3 +1149,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 ;
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

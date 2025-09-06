@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import type { NextPage, GetServerSideProps } from 'next';
@@ -5,14 +6,26 @@ import fs from 'fs';
 import path from 'path';
 
 type Props = { urlCount: number }
+=======
+
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextPage, GetServerSideProps } from 'next',
 import fs from 'fs',
 import path from 'path',
 type Props = { urlCount: number },
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const SitemapStatus: NextPage<Props> = ({ urlCount }) => {
   return (
     <main className="space-y-4">
       <h1 className="text-2xl font-semibold">Sitemap Status</h1>
+<<<<<<< HEAD
       <p className="text-sm text-gray-600">Nightly generated. <a className="text-blue-500 underline" href="/sitemap.xml">View sitemap</a></p>
       <p className="text-sm text-gray-600">Nightly generated. <a className="text-blue-500 underline" href="/sitemap.xml">View sitemap</Link></p>
       <div className="enhanced-card">
@@ -32,6 +45,9 @@ export const getServerSideProps: GetServerSideProps = async () => {
   return { props: { urlCount } }
 }
 export default SitemapStatus;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       <p className="text-sm text-gray-600">Nightly generated. <a className="text-blue-500 underline" href="/sitemap.xml">View sitemap</Link></p>
 
@@ -50,6 +66,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
   const p = path.join(process.cwd(), 'publicsitemap.xml')
   let urlCount = 0
   try {
+<<<<<<< HEAD
     const raw = fs.readFileSync (p, 'utf8'),
     url_count = (raw.match (/<url>/g) || []).length;
   } catch {}
@@ -74,10 +91,18 @@ export const getServerSideProps: GetServerSideProps = async () => {
 export default SitemapStatus
 
 
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const raw = fs.readFileSync(p, 'utf8'),
     urlCount = (raw.match(/<url>/g) || []).length
     const raw = fs.readFileSync(p, 'utf8'),
     urlCount = (raw.match(/<url>/g) || []).length
+<<<<<<< HEAD
   } catch {}
   return { props: { urlCount } }
 },
@@ -102,3 +127,7 @@ export default SitemapStatus;
     const raw = fs.readFileSync(p, 'utf8'),
     urlCount = (raw.match(/<url>/g) || []).length
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

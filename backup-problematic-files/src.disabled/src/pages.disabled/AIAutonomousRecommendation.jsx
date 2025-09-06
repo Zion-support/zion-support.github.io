@@ -9,4 +9,8 @@ const AIAutonomousRecommendation = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIAutonomousRecommendation;
+=======
+export default AIAutonomousRecommendation;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

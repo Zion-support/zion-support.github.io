@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
   useMemo,;
   useState,;} from 'react';} from 'react';
 
@@ -34,19 +35,35 @@ export type User = {
   createContext,
   useContext,
   useEffect,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   useMemo,;
   useState,;} from 'react';} from 'react';
 
 export type UserRole = 'client' | 'talent';
 
+<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 export type UserRole = 'client' | 'talent';
 export type User = {;
+=======
+
+
+=======
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+export type UserRole = 'client' | 'talent';
+
+export type User = {;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
   name: string;
   role: UserRole;
   avatarUrl?: string;
   onboardingCompleted: boolean;
+<<<<<<< HEAD
 }
 export type UserContextValue = {
   user: User | null;
@@ -92,6 +109,8 @@ export function UserProvider({ children }: { children: React.ReactNode }) {;
   const [user, setUser] = useState<User | null>(null);
   useEffect(() => {;
     try {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 };
 export type UserContextValue = {;
@@ -117,10 +136,17 @@ export type UserContextValue = {
   logout: () => void;
 
 
+<<<<<<< HEAD
+=======
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const raw = localStorage.getItem('zion.user');
       if (raw) {
         setUser(JSON.parse(raw));
       } else {
+<<<<<<< HEAD
 import React, {
   createContext,
   useContext,
@@ -212,6 +238,9 @@ export function UserProvider({ children } { children:React.ReactNode }) {;
       if (raw) {;
         setUser(JSON.parse(raw));
       } else {;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         setUser(DEFAULT_USER);
       }
     } catch {;
@@ -257,17 +286,26 @@ export function UserProvider({ children } { children:React.ReactNode }) {;
     }
   }, []);
 
+<<<<<<< HEAD
   useEffect(() => {
     try {
       if (user) localStorage.setItem('zion.user', JSON.stringify(user));
       else localStorage.removeItem('zion.user');
     } catch {}  }, [user]);  }, [user]);
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const value = useMemo<UserContextValue>(
     () => ({
       user
       setUser
       logout: () => setUser(null)
       completeOnboarding: () =>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   useEffect(() => {;
     try {;
       if (user) localStorage && localStorage.setItem('zion && zion.user', JSON && JSON.stringify(user));
@@ -293,6 +331,12 @@ export function useUser() {
   if (!ctx) throw new Error('useUser must be used within UserProvider');
   return ctx;
 
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   useEffect(() => {;
     try {;
       if (user) localStorage.setItem('zion.user', JSON.stringify(user));
@@ -306,6 +350,7 @@ export function useUser() {
     completeOnboarding: () => setUser(prev => prev ? { ...prev, onboardingCompleted: true } : prev)}), [user]);
 
 
+<<<<<<< HEAD
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 
 ;
@@ -324,6 +369,47 @@ export function useUser() {;
   const ctx = useContext(UserContext);
   if (!ctx) throw new Error('useUser must be used within UserProvider');
   return ctx;
+=======
+
+  return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+export function useUser() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  const ctx = useContext(UserContext);
+  if (!ctx) throw new Error('useUser must be used within UserProvider');
+  return ctx;
+
+=======
+        setUser(prev =>
+          prev
+            ? {
+                ...prev,
+                onboardingCompleted: true
+              }
+            : prev
+        )
+    }),
+    [user]
+  );
+
+  return (
+    <UserContext.Provider value={value}>
+      {children}
+    </UserContext.Provider>
+  );
+}
+
+export function useUser() {
+  const ctx = useContext(UserContext);
+  if (!ctx) {
+    throw new Error('useUser must be used within UserProvider');
+  }
+  return ctx;
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         set_user (DEFAULT_USER);
       }
     } catch {
@@ -362,6 +448,7 @@ function use_user() {
 ;
 
 
+<<<<<<< HEAD
 }import React, {
   createContext, useContext, useEffect, useMemo, useState 
 }from 'react' export type UserRole = 'client' | 'talent' export type User = {
@@ -405,3 +492,6 @@ function use_user() {
 }
 }
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Link from "next/link",;
 export const metadata = {;
   title: "Quantum Neural Network Platform - Zion Tech Group",;
@@ -8,6 +12,10 @@ export default function QuantumNeuralNetworkPlatformPage() {;
 
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Link from './next / link';,
 export const metadata = {
   title: "Quantum Neural Network Platform - Zion Tech Group",

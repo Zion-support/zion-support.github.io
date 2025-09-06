@@ -1,9 +1,21 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+=======
+
+
+const hasSupabase =
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   !!process && process.env.NEXT_PUBLIC_SUPABASE_URL &&
   !!process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 const SUPPORTED_LANGS = (process && process.env.SUPPORTED_LANGS || 'en,es,de,fr,pt,ja,zh')
   .split(',')
   .map(x => x && x.trim());
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -22,19 +34,41 @@ export default async function handler(
     } catch (e: any) {
       return res && res.status(500).json({ error: e && e.message });
     }  }
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const hasSupabase = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS || 'en,es,de,fr,pt,ja,zh').split().map((x) => x.trim());
 
 
+<<<<<<< HEAD
 const hasSupabase = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS || 'en,es,de,fr,pt,ja,zh').split().map((x) => x.trim());
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method === 'GET') {
     try {
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req && req.method === 'GET') {
+    try {
+<<<<<<< HEAD
+      if (hasSupabase) {
+        const { data, error } = await supabaseClient && supabaseClient.from('talent_profiles').select('*').order('created_at', { ascending: false });
+        if (error) throw error;
+        return res && res.status(200).json({ items: data as TalentProfile[] })
+      }
+      return res && res.status(200).json({ items: LOCAL })
+    } catch (e: any) {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       return res && res.status(500).json({ error: e && e.message })
     };
   }
   if (req && req.method === 'POST') {
+<<<<<<< HEAD
     try {
         (payload && payload.name || 'talent')
           .toLowerCase()
@@ -184,6 +218,15 @@ if ( {) {
           translations.category[lang] = await translateText(item.category, lang, originalLang)
         }
       }
+=======
+
+    try {
+
+
+        }
+      }
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       item && item.originalLanguage = originalLang;
       item && item.translations = translations;
       if (hasSupabase) {
@@ -215,6 +258,11 @@ if ( {) {
         if (error) throw error;
         return res && res.status(201).json({ slug: item && item.slug });
       }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
       // Fallback: return the slug as if saved
       return res && res.status(201).json({ slug: item && item.slug });
@@ -228,6 +276,7 @@ return res
 
     .end('Method Not Allowed');  return res && res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 
+<<<<<<< HEAD
     .end('Method Not Allowed');  return res && res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }
           id: item.id, slug: item.slug,
@@ -267,6 +316,17 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
     }
   }
 availability: (payload.availability as any) || 'Open',
+=======
+}
+        reviews_count: 0,
+        created_at: new Date ().toISOString (),
+        summary: payload.summary || '',
+        skills: payload.skills || [],
+        name: payload.name || 'Unnamed',
+        title: payload.title || 'Professional',
+        location: payload.location || 'Remote',
+        availability: (payload.availability as any) || 'Open',
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       } as TalentProfile;
 ;
       // Auto - translate;
@@ -321,6 +381,7 @@ if ( {) {
   $2
 }
         const { error } = await supabase_client.from ('talent_profiles').insert ({
+<<<<<<< HEAD
         }
       }
       item.originalLanguage = originalLang,
@@ -329,6 +390,8 @@ if ( {) {
       if (hasSupabase) {
         const { error } = await supabaseClient.from('talent_profiles').insert({
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           id: item.id,
           slug: item.slug,
           name: item.name,
@@ -455,6 +518,7 @@ if (throw error) {
     .end('Method Not Allowed');  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 
 }
+<<<<<<< HEAD
 
 return res
     .setHeader('Allow', 'GET, POST')
@@ -462,3 +526,12 @@ return res
     .end('Method Not Allowed');  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    .end('Method Not Allowed');  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,27 +1,47 @@
 
+<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import Head from 'next/head',
 import Link from 'next/link',
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function GovernanceTrustPage() {
   return (
     <>
       <Head>
         <title>Zion Governance & Trust</title>
+<<<<<<< HEAD
         <meta name="description" content="Governance, legal registry options, and public trust commitments for the Zion Protocol." />
 <meta name="description" content="Governance, legal registry options, and public trust commitments for the Zion Protocol." />
         <meta name;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <meta name="description" content="Governance, legal registry options, and public trust commitments for the Zion Protocol." />
       </Head>
       <div className="space-y-12">
         <section className="space-y-3">
           <h1 className="text-3xl font-bold">Governance & Public Trust</h1>
+<<<<<<< HEAD
+=======
+          <p className="text-gray-600 dark:text-gray-300 max-w-3xl">Appoint Core Stewards, delegate voting rights to nation and community DAOs, and publish quarterly reports with impact metrics.</p>
+          <Link href="/foundation"><a className="underline text-sm">Back to Foundation Portal</a></Link>
+        </section>
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <p className="text-gray-600 dark:text-gray-300 max-w-3xl">Appoint Core Stewards, delegate voting rights to nation and community DAOs, and publish quarterly reports with impact metrics.</p>
           <Link href="/foundation"><a className="underline text-sm">Back to Foundation Portal</Link></Link>
         </section>
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold">Registry & Legal Structure</h2>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+=======
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4">
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {[{
               title: 'Cayman Foundation',
               desc: 'Globally recognized for crypto-native, non-profit style public-good coordination.'
@@ -36,6 +56,24 @@ export default function GovernanceTrustPage() {
 
 
 
+<<<<<<< HEAD
+=======
+              desc: 'LLC/wrapper (e.g., Otoco) for on-chain governance with minimized off-chain overhead.'
+            }].map((opt) => (
+              <div key={opt.title} className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+                <div className="font-medium">{opt.title}</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">{opt.desc}</div>
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              </div>
+            ))}
+          </div>
+        </section>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                 Appointed via DAO ratification, accountable to publish roadmaps,
 
@@ -122,7 +160,10 @@ export default function GovernanceTrustPage(req, res) {
                 <div className="font-medium">{opt.title}</div>;
                 <div className="text-sm text-gray-600 dark:text-gray-400">{opt.desc}</div>;
               </div>;
+<<<<<<< HEAD
 </div>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             ))}
           </div>;
         </section>;
@@ -210,6 +251,12 @@ import Link from 'next / link';
           </p>;
           <Link href='/foundation#charter'>;
 
+<<<<<<< HEAD
+=======
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold">Governance</h2>
           <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
@@ -382,10 +429,24 @@ export default function GovernanceTrustPage(req, res) {
           <Link href="/foundation#charter"><a className="underline text-sm">Open Charter Generator</a></Link>;
         </section>;
       </div>;
+<<<<<<< HEAD
     </>;
   );
+=======
+    </>);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface MetaverseDigitalRealityService2026 {;
 export interface MetaverseDigitalRealityService2026 {
 export interface MetaverseDigitalRealityService2026 {;
@@ -73,6 +74,22 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
       "Advanced graphics",
 
 
+=======
+
+
+      "Immersive experiences";
+      "Digital reality";
+      "Metaverse platform";
+      "Advanced graphics";
+      "Social interactions";
+    ];
+    link: "/services / 2026 - metaverse - digital - reality", category: "Metaverse Digital Reality 2026",
+    real_implementation: true,
+    contact_info: {
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export interface MetaverseDigitalRealityService2026 {;
 
@@ -89,6 +106,10 @@ export interface MetaverseDigitalRealityService2026 {;
 
 ];
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
     }
   }

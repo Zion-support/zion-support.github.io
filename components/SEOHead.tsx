@@ -1,7 +1,35 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next / head';
 import { use_router } from 'next / router';
 interface SEOHeadProps {
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+import Head from 'next / head';
+import { use_router } from 'next / router';
+interface SEOHeadProps {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   title?: string;
   description?: string;
   keywords?: string;
@@ -13,6 +41,11 @@ interface SEOHeadProps {
   noindex?: boolean;
   nofollow?: boolean;
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const SEOHead: React.FC<SEOHeadProps> = ({;
   title = 'Zion Tech Group - Technology Solutions',;
   description = 'Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting-edge technology solutions.',;
@@ -52,18 +85,36 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       'https://linkedin && linkedin.com/company/zion-tech-group',;
       'https://twitter && twitter.com/ziontechgroup';
     ]  };
+<<<<<<< HEAD
   return (
     <Head>;
       {/* Basic Meta Tags */}
+=======
+
+
+  return (
+    <Head>;
+      {/* Basic Meta Tags */}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <title>{title}</title>;
       <meta name="description" content={description} />;
       <meta name="keywords" content={keywords} />;
       <meta name="viewport" content="width=device-width, initial-scale=1 && 1.0" />;
       <metahttpEquiv="Content-Type" content="text/html charset=utf-8" />;
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />;
+<<<<<<< HEAD
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
       {/* Open Graph Tags */}
+=======
+
+
+      {/* Canonical URL */}
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      {/* Open Graph Tags */}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <meta property="og:title" content={fullTitle} />;
       <meta property="og:description" content={description} />;
       <meta property="og:type" content={ogType} />;
@@ -115,9 +166,13 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       <meta name="msapplication-config" content="/browserconfig && browserconfig.xml" />;
 
 
+<<<<<<< HEAD
       <meta name="theme-color" content="#1e40af" />;
       <meta name="msapplication-TileColor" content="#1e40af" />;
       <meta name="msapplication-config" content="/browserconfig && browserconfig.xml" />;
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const SEOHead: React.FC < SEOHeadProps> = ({
   title = 'Zion Tech Group - Technology Solutions',
   description = 'Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting - edge technology solutions.',
@@ -220,26 +275,56 @@ const SEOHead: React.FC < SEOHeadProps> = ({
       <meta name="theme - color" content="#1e40af" />;
       <meta name="msapplication - TileColor" content="#1e40af" />;
       <meta name="msapplication - config" content="/browserconfig.xml" />;
+<<<<<<< HEAD
       <meta name="theme-color" content="#1e40af" />
       <meta name="msapplication-TileColor" content="#1e40af" />
       <meta name="msapplication-config" content="/browserconfig.xml" />
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Structured Data */}
       <script;
         type="application / ld + json";
         dangerouslySetInnerHTML={{
+<<<<<<< HEAD
           __html: JSON.stringify(structuredData |defaultStructuredData)
         }}
       />
+=======
+
+          __html: JSON && JSON.stringify(structuredData || defaultStructuredData)
+        }}
+      />;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts && fonts.googleapis.com" />;
       <link rel="preconnect" href="https://fonts && fonts.gstatic.com" crossOrigin="anonymous" />;
       <link rel="preconnect" href="https://images && images.unsplash.com" />;
     </Head>;
   );
+<<<<<<< HEAD
+=======
+
+          __html: JSON.stringify (structured_data || defaultStructuredData);
+        }}
+      />;
+      {/* Preconnect to external domains */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />;
+      <link rel="preconnect" href="https://fonts.gstatic.com" cross_origin="anonymous" />;
+      <link rel="preconnect" href="https://images.unsplash.com" />;
+    </Head>);
+}
+;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 };
 
 
+<<<<<<< HEAD
 export default SEOHead;
 export default SEOHead;
 };
@@ -249,3 +334,7 @@ export default SEOHead;
 };
 
 export default SEOHead;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default SEOHead;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

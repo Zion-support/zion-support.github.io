@@ -3,6 +3,7 @@
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 
       }
 import { useState, useEffect  } from 'react';
@@ -127,6 +128,8 @@ export function ZionGPTModelManager() {;
     try {;
       // If activating, deactivate all other models with the same purpose;
       if (!currentActive) {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         await supabase;
           .from('model_versions');
           .update({ active: false });
@@ -309,12 +312,16 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <Button
                         variant="ghost"
                         size="sm"
+<<<<<<< HEAD
                         onClick={() => checkTrainingStatus(model.id)}
                         disabled={activeJobs[model.id]}
                         onClick = {(,) => checkTrainingStatus(model.id),}
                         disabled = {activeJobs[model.id],}
                         onClick={() => checkTrainingStatus(model.id)}
                         disabled={activeJobs[model.id]}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       >
                         {activeJobs[model.id] ? (
                           <Loader2 className="h-4 w-4 animate-spin" />
@@ -339,6 +346,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                         variant={model.active ? "outline" : "default"}
                         size="sm"
                         onClick={() => toggleModelActive(model.id, model.active, model.purpose)}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       >
                         {model.active ? (
                           <>
@@ -351,17 +363,24 @@ ursor/fix-website-loading-errors-and-merge-6662
                         )}
                       </Button>;
                     ) : (;
+<<<<<<< HEAD
                         )}
                       </Button>
                     ) : (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <Button
                         variant="ghost"
                         size="sm"
                         className="text-red-500"
+<<<<<<< HEAD
                         title = {model.errorMessage |"Training failed",}
                         title={model.errorMessage || "Training failed"}
                         title = {model.errorMessage || "Training failed",}
                         title={model.errorMessage || "Training failed"}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         title = {model && model.errorMessage || "Training failed",}>;
                         <AlertCircle className="h-4 w-4 mr-1" /> Error;
                       </Button>;
@@ -378,6 +397,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                         <AlertCircle className="h-4 w-4 mr-1" /> Error
                       </Button>
                     )}
+<<<<<<< HEAD
                         title = {model.errorMessage |"Training failed",}
                         title = {model.errorMessage || "Training failed",}
                         title={model.errorMessage || "Training failed"}
@@ -388,18 +408,26 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </TableRow>
             </TableBody>
           </Table>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </TableCell>;
                 </TableRow>;
 
               ))}
             </TableBody>;
           </Table>;
+<<<<<<< HEAD
+=======
+        )}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </CardContent>;
     </Card>;
   );
 }
 
 
+<<<<<<< HEAD
 
                   </TableCell>
                 </TableRow>
@@ -416,6 +444,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 ;
 main
+=======
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
   return (
     <Card className="w - full">;
@@ -504,4 +536,8 @@ main
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

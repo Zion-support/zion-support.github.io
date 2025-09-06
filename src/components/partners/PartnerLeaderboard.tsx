@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 import { Star } from 'lucide-react'
@@ -28,6 +29,8 @@ import { Crown, Medal, Trophy } from 'lucide-react'
   referrals: number,
   earnings: number,
   badges: string[]
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 badges: string[]
 }
 export function PartnerLeaderboard() {
@@ -42,9 +45,14 @@ export function PartnerLeaderboard() {
       referrals: 178
       earnings: 4500
       badges: ["gold", "trending"]
+<<<<<<< HEAD
     }
 ursor/fix-website-loading-errors-and-merge-6662
     }
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
 
 
@@ -55,9 +63,14 @@ ursor/fix-website-loading-errors-and-merge-6662
       referrals: 145
       earnings: 3625
       badges: ["silver"]
+<<<<<<< HEAD
     }
 ursor/fix-website-loading-errors-and-merge-6662
     }
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
 
 
@@ -68,9 +81,14 @@ ursor/fix-website-loading-errors-and-merge-6662
       referrals: 124
       earnings: 3100
       badges: ["bronze"]
+<<<<<<< HEAD
     }
 ursor/fix-website-loading-errors-and-merge-6662
     }
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
 
 
@@ -81,6 +99,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       referrals: 98
       earnings: 2450
       badges: []
+<<<<<<< HEAD
     }
     }
     {
@@ -141,6 +160,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { Badge } from "@/components/ui/badge",;
 import { Crown, Medal, Trophy } from 'lucide-react';
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface LeaderboardEntry {;
   id: string,;
   rank: number,;
@@ -211,6 +233,7 @@ export function PartnerLeaderboard() {;
         return <Medal className="h-5 w-5 text-amber-700" />;
       default:;
         return <span className="text-sm font-semibold">{rank}</span>;
+<<<<<<< HEAD
     }
   };
   return (;
@@ -336,6 +359,11 @@ export function PartnerLeaderboard() {;
         </CardContent>
       </Card>
     </div>
+=======
+
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   )
 }
 
@@ -406,4 +434,8 @@ function PartnerLeaderboard() {
       earnings: 2175,
 
 
+<<<<<<< HEAD
       badges: ["newcomer"]
+=======
+      badges: ["newcomer"]
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

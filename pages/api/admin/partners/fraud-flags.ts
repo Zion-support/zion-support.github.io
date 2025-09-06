@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../../utils/supabase/server';
 import type { NextApiRequest, NextApiResponse } from 'next',;
@@ -20,24 +21,32 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           },
         ],
       });
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     const supabase = getServerSupabase()
     const { data, error } = await supabase
       .from('referral_events')
       .select('ip_address, created_at')
       .eq('partner_code', code)
+<<<<<<< HEAD
 .gte('created_at', new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString())
     if (error) return res.status(500).json({ error: error.message })
     const counts = new Map<string, number>()
     for (const row of data |[]) {
       const key = (row as any).ip_address |'unknown'
       counts.set(key, (counts.get(key) |0) + 1)
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     const flags: any[] = []
     counts.forEach((count, ip) => {
       if (count > 30 && ip !== 'unknown') {
 
 
+<<<<<<< HEAD
 
         flags.push({
           type: 'suspicious_ip',
@@ -52,10 +61,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 }
 
 
+<<<<<<< HEAD
 ;
     return res.status(500).json({ error: e?.message })
   };
@@ -86,3 +102,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

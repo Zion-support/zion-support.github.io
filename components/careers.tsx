@@ -31,6 +31,10 @@ const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.fi
 }</motion.div> {
   /* General Application */
 }<motion.div > <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto" > <h2 className="text-2xl font-bold text-white mb-4" >Don't See the Right Fit?</h2> <p className="text-gray-300 mb-6" > We're always looking for talented individuals to join our team. Send us your resume and let's discuss how you can contribute to our mission. </p> <a href="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Send Your Resume <ArrowRight className="w-5 h-5 ml-2" /> </a> <a href="/about" className="inline-flex items-center px-6 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300" > Learn More About Us </a> </div> </div> </motion.div> </div> </Layout>)
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -75,11 +79,64 @@ class ErrorBoundary extends React.Component {
 }</motion && motion.div> {;
   /* General Application */ ;
 }<motion && motion.div > <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto" > <h2 className="text-2xl font-bold text-white mb-4" >Don't See the Right Fit?</h2> <p className="text-gray-300 mb-6" > We're always looking for talented individuals to join our team. Send us your resume and let's discuss how you can contribute to our mission. </p> <a href="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Send Your Resume <ArrowRight className="w-5 h-5 ml-2" /> </a> <a href="/about" className="inline-flex items-center px-6 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300" > Learn More About Us </a> </div> </div> </motion && motion.div> </div> </Layout>) ;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+};export default CareersPage;import React, { useState } from 'react';
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
+=======
+ const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
+=======
+ const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+> <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6" > Join Our Team </h1> </p> </motion.div> {
+  /* Company Culture */
+}<motion.div </div>) )
+}</div> </motion.div> {
+  /* Benefits */
+}<motion.div </div>) )
+}</div> </div> </motion.div> {
+  /* Job Openings */
+}<motion.div > <h2 className="text-3xl font-bold text-white text-center mb-8" >Open Positions</h2> key= {
+  dept.id
+}onClick= {
+  () => setSelectedDepartment (dept.id)
+}className= {
+  `px-4 py-2 rounded-lg font-medium transition-all duration-300 $ {
+  selectedDepartment === dept.id ? 'bg-blue-500 text-white' : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
+}`
+}> {
+  dept.name
+}</button>) )
+}</div> > <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4" > <div> </span> </div> </div> <a > Apply Now <ArrowRight className="w-5 h-5 ml-2" /> </a> </div> </li>) )
+}</ul> </div> </motion.div>) )
+}</div> We don't have any open positions in this department at the moment. Check back later or send us your resume for future opportunities. </p> </div>)
+}</motion.div> {
+  /* General Application */
+}<motion.div > <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto" > <h2 className="text-2xl font-bold text-white mb-4" >Don't See the Right Fit?</h2> <p className="text-gray-300 mb-6" > We're always looking for talented individuals to join our team. Send us your resume and let's discuss how you can contribute to our mission. </p> <a href="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Send Your Resume <ArrowRight className="w-5 h-5 ml-2" /> </a> <a href="/about" className="inline-flex items-center px-6 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300" > Learn More About Us </a> </div> </div> </motion.div> </div> </Layout>)
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+};export default CareersPage;import React, { useState } from 'react';
+import React, { useState } from 'react';
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import {motion} from 'framer-motion';
 import {Users, Rocket, Brain, Globe, Award, Zap, Heart, Star, ArrowRight, CheckCircle, Briefcase} from 'lucide-react';
+<<<<<<< HEAD
 export default function Careers() {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -107,6 +164,10 @@ export default function Careers() {;
       requirements: [
         'Advanced degree in Computer Science, AI, or related fieldExpertise in Python, TensorFlow, PyTorchExperience with large language models and neural networksStrong problem-solving and analytical skills'
       ]
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const filtered_jobs = selected_department === 'all' ? job_openings : job_openings.filter (job => job.department === selected_department);
 > <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - blue - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent mb - 6" > Join Our Team </h1> </p> </motion.div> {
   /* Company Culture */;
@@ -153,6 +214,7 @@ function Careers() {
     { id: 'space - tech', name: 'Space Technology' },
     { id: 'sales', name: 'Sales & Business Development' },
     { id: 'marketing', name: 'Marketing' },
+<<<<<<< HEAD
 
 export default function Careers() {;
   const [selectedDepartment, setSelectedDepartment] = useState('all');
@@ -164,6 +226,8 @@ export default function Careers() {;
     { id: 'space-tech', name: 'Space Technology' }
     { id: 'sales', name: 'Sales & Business Development' }
     { id: 'marketing', name: 'Marketing' }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     { id: 'operations', name: 'Operations' }
   ];
 ;
@@ -185,6 +249,10 @@ export default function Careers() {;
       title: 'Quantum Computing Researcher'
       department: 'quantum'
       location: 'Remote / Middletown, DE';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       type: 'Full - time',
       experience: '3+ years',
       description: 'Research and develop quantum algorithms and quantum computing solutions.',
@@ -203,18 +271,30 @@ export default function Careers() {;
       requirements: [;
         'Degree in Aerospace Engineering, Physics, or related field_experience with satellite design and space systems_knowledge of orbital mechanics and space environment_familiarity with space industry standards and regulations';
       ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     {
       id: 4
       title: 'Full Stack Developer'
       department: 'engineering'
       location: 'Remote / Middletown, DE';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       type: 'Full - time',
       experience: '3+ years',
       description: 'Build scalable web applications and cloud - based solutions.',
       requirements: [;
         'Experience with React, Node.js, and cloud platforms_knowledge of modern web technologies and APIsUnderstanding of software architecture and design patterns_experience with DevOps and CI / CD practices';
       ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     {
       id: 5
@@ -433,10 +513,13 @@ export default function Careers() {;
 
 
 
+<<<<<<< HEAD
         {/* Benefits */}
         <motion&& motion.div 
           </div>;
         </motion && motion.div>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Benefits */}
         <motion&& motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -470,9 +553,12 @@ export default function Careers() {;
           </div>;
         </motion && motion.div>;
 
+<<<<<<< HEAD
             </div>;
           </div>;
         </motion && motion.div>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Job Openings */}
         <motion&& motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -480,6 +566,11 @@ export default function Careers() {;
           transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
           className="mb-16">;
           <h2 className="text-3xl font-bold text-white text-center mb-8">Open Positions</h2>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Department Filter */}
           <div className="flex flex-wrap justify-center gap-3 mb-8">;
             {departments && departments.map((dept) => (;
@@ -495,6 +586,14 @@ export default function Careers() {;
                 {dept && dept.name}
               </button>;
             ))}
+<<<<<<< HEAD
+=======
+
+          </div>;
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Department Filter */}
           <div className="flex flex-wrap justify-center gap-3 mb-8">
             {departments.map((dept) => (
@@ -514,7 +613,12 @@ export default function Careers() {;
 
 
 
+<<<<<<< HEAD
           </div>;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Job Listings */}
           <div className="space-y-6">;
             {filteredJobs && filteredJobs.map((job) => (;
@@ -581,6 +685,10 @@ export default function Careers() {;
     </Layout>
   )
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     href={`/contact?position=${encodeURIComponent(job && job.title)}`}
                     className="mt-4 lg:mt-0 inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">;
                     Apply Now;
@@ -844,7 +952,15 @@ export default function Careers() {;
               </a>;
             </div>;
           </div>;
+<<<<<<< HEAD
 export default CareersPage;
+=======
+
+
+export default CareersPage;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </motion.div>;
       </div>;
     </Layout>);
@@ -852,6 +968,7 @@ export default CareersPage;
 ;
 export default CareersPage;
 ;
+<<<<<<< HEAD
 
 export default CareersPage;
 
@@ -1138,3 +1255,11 @@ export default CareersPage;
 export default CareersPage;
 
 export default CareersPage;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+export default CareersPage;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

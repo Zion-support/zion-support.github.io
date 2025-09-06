@@ -27,4 +27,8 @@ const CheckoutPage = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default CheckoutPage;
+=======
+export default CheckoutPage;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

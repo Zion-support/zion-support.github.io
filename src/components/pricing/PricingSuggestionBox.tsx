@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import {
@@ -16,6 +17,8 @@ interface PricingSuggestionBoxProps {
   onApplySuggestion: () => void
   rateType: 'hourly' | 'fixed'
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import {;
@@ -32,14 +35,26 @@ interface PricingSuggestionBoxProps {;
   suggestion: PricingSuggestion | null;
   isLoading: boolean;
   onApplySuggestion: () => void;
+<<<<<<< HEAD
   suggestion: PricingSuggestion | null;
   isLoading: boolean;
   onApplySuggestion: () => void;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip",
 import { Card, CardContent } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
+=======
+import { Loader2, Info, ThumbsUp } from 'lucide-react'
+import { PricingSuggestion } from "@/services/pricingSuggestionService",
+interface PricingSuggestionBoxProps {
+  suggestion: PricingSuggestion | null,
+  isLoading: boolean,
+  onApplySuggestion: () => void,
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   rateType: "hourly" | "fixed"
 }
 
@@ -90,7 +105,10 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
             <Loader2 className="h-10 w-10 animate-spin text-muted-foreground mx-auto mb-4" />
             <p className="text-sm text-muted-foreground">
               Generating optimal pricing suggestion...
+<<<<<<< HEAD
               Generating optimal pricing suggestion...
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -101,7 +119,10 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
 
     )
 
+<<<<<<< HEAD
     ) }    )
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   if (!suggestion) {
     return null
@@ -149,6 +170,10 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
   }
 
   const confidenceColor = {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     High: "bg-green-100 text-green-800",
     Medium: "bg-yellow-100 text-yellow-800",
     Low: "bg-red-100 text-red-800"}[suggestion.confidence],
@@ -161,6 +186,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
       <CardContent className="p-5 space-y-4">
           <h4 className="font-semibold">AI Suggested Price</h4>
           <Badge variant="outline" className={confidenceColor}>
+<<<<<<< HEAD
           </Badge>
         </div>
         <div className='bg-muted/50 rounded-md p-3 text-center'>
@@ -181,6 +207,8 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
                 <Button
                   variant='default'            ${suggestion.minRate.toFixed(0)} - ${suggestion.maxRate.toFixed(0)}
           </span>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         <div className="bg-muted/50 rounded-md p-3 text-center">
           <span className="text-2xl font-bold">
@@ -190,6 +218,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
             {rateType === "hourly" ? "/hour" : " total"}
           </span>
         </div>
+<<<<<<< HEAD
 
         <div className="flex items-start space-x-2 text-sm text-muted-foreground">
           <Info className="h-4 w-4 flex-shrink-0 mt-1" />
@@ -199,6 +228,8 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
         <div className="bg-muted/50 rounded-md p-3 text-center">
@@ -258,11 +289,16 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
           </TooltipProvider>
         </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         
         <p className="text-xs text-center text-muted-foreground pt-2">
           Based on market data & trends. You can adjust as needed.
 
 
+<<<<<<< HEAD
         </p>
       </CardContent>
     </Card>
@@ -273,6 +309,8 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
     </Card>
   )
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </p>
       </CardContent>
     </Card>
@@ -280,11 +318,20 @@ ursor/fix-website-loading-errors-and-merge-6662
 
         <p className='text-xs text-center text-muted-foreground pt-2'>          Based on market data & trends. You can adjust as needed.
         
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <p className="text-xs text-center text-muted-foreground pt-2">
           Based on market data & trends. You can adjust as needed.
         </p>
       </CardContent>
     </Card>
+<<<<<<< HEAD
+=======
+  )
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   );
 };
@@ -326,6 +373,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   variant="default";
                   onClick={onApplySuggestion}
 
+<<<<<<< HEAD
   )
 }
 "
@@ -377,6 +425,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Button;
                   variant="default";
                   onClick={onApplySuggestion}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   className="w-full";
                 >;
                   <ThumbsUp className="h-4 w-4 mr-2" /> Apply Suggestion;
@@ -395,6 +445,10 @@ ursor/fix-website-loading-errors-and-merge-6662
     </Card>;
   );
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 };
@@ -528,4 +582,8 @@ if ( {) {
     </Card>);
 }
 "  );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

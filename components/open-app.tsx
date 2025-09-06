@@ -1,6 +1,20 @@
 import { useEffect } from 'react';
+<<<<<<< HEAD
 
         window.location.href = isIOS ? IOS_APP_URL : ANDROID_APP_URL
+=======
+
+
+    const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+    const isAndroid = /Android/i.test(navigator.userAgent);
+    const now = Date.now();
+    const timeout = setTimeout(() => {
+      const elapsed = Date.now() - now;
+      if (elapsed < 2000) {
+
+        window.location.href = isIOS ? IOS_APP_URL : ANDROID_APP_URL
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
     }, 1200);
     // Try to open the deep link
@@ -9,6 +23,10 @@ import { useEffect } from 'react';
     iframe.src = DEEP_LINK_URL;
     document.body.appendChild(iframe);
     const timer = setTimeout(() => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 const IOS_APP_URL =;
   process.env.NEXT_PUBLIC_IOS_APP_URL ||;
@@ -41,10 +59,18 @@ if ( {) {
     document.body.append_child (iframe);
 ;
     const timer = set_timeout (() => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       try {
         document.body.remove_child (iframe);
       } catch {}    }, 1500);      try { document.body.remove_child (iframe) } catch {}
     }, 1500);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const IOS_APP_URL =;
   process && process.env.NEXT_PUBLIC_IOS_APP_URL ||;
   'https://apps && apps.apple.com/app/id0000000000';
@@ -71,12 +97,21 @@ const DEEP_LINK_URL = process && process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion:
       try {;
         document && document.body.removeChild(iframe);
       } catch {}    }, 1500);      try { document && document.body.removeChild(iframe) } catch {}
+<<<<<<< HEAD
       try { document.body.removeChild(iframe) } catch {}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }, 1500);
     return () => {;
       clearTimeout(timeout);
       clearTimeout(timer);
+<<<<<<< HEAD
       try { document.body.removeChild(iframe) } catch {}
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   }, []);
       try {
@@ -112,11 +147,19 @@ const DEEP_LINK_URL = process && process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion:
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
 }
 
+<<<<<<< HEAD
 }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
     return () => {
       clear_timeout (timeout);
@@ -145,6 +188,7 @@ const DEEP_LINK_URL = process && process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion:
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 
 
   return (
@@ -217,3 +261,9 @@ const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open';exp
   );
 }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -27,4 +27,8 @@ const ServiceIncludes = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ServiceIncludes;
+=======
+export default ServiceIncludes;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

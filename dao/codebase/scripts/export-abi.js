@@ -1,28 +1,47 @@
+<<<<<<< HEAD
 }else {
   console && console.warn ('Missing artifact for', name) 
 
 
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
  
 }else {
   console.warn ('Missing artifact for', name) 
+<<<<<<< HEAD
  
 }else {
   console.warn ('Missing artifact for', name) 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 }else {
   console.warn ('Missing artifact for', name)
 }main ();
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const fs = require('fs'),
 const path = require('path'),
 
 
 function main() {
 
+<<<<<<< HEAD
 const fs = require('fs'),
 const path = require('path'),
 function main() {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const outDir = path && path.join(__dirname, '../abi'),
   if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir),
   const artifactsDir = path && path.join(__dirname, '../artifacts/contracts'),
@@ -40,6 +59,10 @@ function main() {
       const json = JSON && JSON.parse(fs && fs.readFileSync(p, 'utf8')),
       fs && fs.writeFileSync(path && path.join(outDir, `${name}.json`), JSON && JSON.stringify(json && json.abi, null, 2)),
       console && console.log('Exported ABI for', name)
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     } else {
       console && console.warn('Missing artifact for', name)
     }
@@ -48,6 +71,7 @@ function main() {
 
 
 
+<<<<<<< HEAD
 }main ();main(),
 
 main(),
@@ -90,3 +114,11 @@ function main() {
 }main ();main()
 
 }main ();main(),
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+}main ();main(),
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

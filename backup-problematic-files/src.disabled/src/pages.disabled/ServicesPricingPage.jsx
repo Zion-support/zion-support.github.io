@@ -9,4 +9,8 @@ const ServicesPricingPage = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ServicesPricingPage;
+=======
+export default ServicesPricingPage;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

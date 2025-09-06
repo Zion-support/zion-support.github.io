@@ -13,6 +13,7 @@ return (
           </li>;
 
 import { Gift } from 'lucide-react'
+<<<<<<< HEAD
 
   )
 }
@@ -48,6 +49,8 @@ const REWARDS = [
 }
   );
 };
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 const REWARDS = [
   { id: 'coupon5', title: '$5 Coupon', cost: 500 },
@@ -67,13 +70,23 @@ export default function RewardsPage() {
             </div>
             <Gift className="h-5 w-5" />
           </li>
+<<<<<<< HEAD
         ))}
+=======
+
+        ))}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </ul>;
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 }
 import { Gift } from 'lucide-react';
@@ -104,4 +117,8 @@ const REWARDS = [;
       </ul>;
     </div>);
 }
+<<<<<<< HEAD
 import { Gift } from 'lucide-react'
+=======
+import { Gift } from 'lucide-react'
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Layout from '../../components/Layout';
 import { DollarSign, Shield, TrendingUp, Users, Database } from 'lucide-react';
 import React from 'react';
@@ -80,6 +81,10 @@ import Layout from '../../components/Layout';
 import { DollarSign, Shield, TrendingUp, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const features = [
   {
     icon: DollarSign,
@@ -98,6 +103,12 @@ const features = [
   },
   {
     icon: Users,
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function FinanceSolutions() {;
 
 
@@ -109,6 +120,7 @@ export default function FinanceSolutions() {;
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
 
+<<<<<<< HEAD
     title: 'Customer Portal',
     description: 'Secure customer-facing applications and services'
   },
@@ -308,6 +320,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   
     >
       <div className="min-h-screen bg-white">
@@ -475,6 +489,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       <span className="text-gray-700">{benefit}</span>
                     </li>
                   ))}
+<<<<<<< HEAD
                 </ul>
               </div>
               <div className="bg-gradient-to-r from-blue-600 to-green-700 p-8 rounded-xl text-white">
@@ -502,6 +517,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 </motion.div>
               ))}
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -592,6 +611,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
       </div>;
     </Layout>;
         {/* Benefits Section */}
@@ -630,6 +650,15 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>
           </div>
         </section>

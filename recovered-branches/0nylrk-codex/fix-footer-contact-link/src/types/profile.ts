@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -20,6 +24,7 @@ export interface ProfileProject {
 
 }
 export interface ProfileExperience {
+<<<<<<< HEAD
 export interface ProfileSkill {
 
   name: string
@@ -43,10 +48,20 @@ export interface ProfileProject {;
 export interface ProfileExperience {
 
 export interface ProfileExperience {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
   role: string;
   company: string;
   description: string;
+<<<<<<< HEAD
+=======
+
+  start_date: string;
+  end_date?: string,
+  current?: boolean;
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export interface Availability {
   status: 'available' | 'limited' | 'unavailable';
   next_available?: string;
@@ -59,6 +74,7 @@ export interface ProfileData {
   name: string;
   title: string;
   avatar_url: string;
+<<<<<<< HEAD
   startDate: string;
 
   endDate?: string
@@ -82,18 +98,27 @@ export interface ProfileData {;
   name: string;
   title: string;
   avatarUrl: string;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   coverImageUrl?: string;
   bio: string;
   location?: string;
   rating?: number;
+<<<<<<< HEAD
   reviewCount?: number;
   aiScore?: number;
   profileType: 'service' | 'talent';
+=======
+  review_count?: number;
+  ai_score?: number;
+  profile_type: 'service' | 'talent';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   skills: ProfileSkill[];
   projects: ProfileProject[];
   experience: ProfileExperience[];
   availability: Availability;
 
+<<<<<<< HEAD
   hourlyRate?: number
 
   contactEmail?: string
@@ -151,3 +176,11 @@ export interface ProfileData {;
   contactEmail?: string;
 }
 ;
+=======
+  hourly_rate?: number,
+  contact_email?: string;
+
+}
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

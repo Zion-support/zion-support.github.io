@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { cn } from &quot;@/lib/utils&quot;
 import { cn } from "@/lib/utils"
 
@@ -6,6 +7,8 @@ function Skeleton({
   className
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { cn } from &quot;@/lib / utils & quot;
 ;
 /**
@@ -30,6 +33,7 @@ function Skeleton({;
 ;
 }
 ;
+<<<<<<< HEAD
 export { Skeleton } function Skeleton ({
   className, ...props 
 }: React.HTMLAttributes<HTMLDivElement>) {
@@ -49,4 +53,7 @@ export { Skeleton }
 export { Skeleton };
 export { Skeleton }
 ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;

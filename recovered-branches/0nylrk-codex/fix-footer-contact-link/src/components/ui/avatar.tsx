@@ -1,11 +1,16 @@
 
+<<<<<<< HEAD
 import * as React from 'react';
 import * as AvatarPrimitive from '@radix-ui/react-avatar';
 import {cn} from '@/lib/utils';
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import * as React from "react"
 import * as AvatarPrimitive from "@radix-ui/react-avatar"
 import * as React from "react"
 import * as AvatarPrimitive from "@radix-ui/react-avatar"
+<<<<<<< HEAD
 
 import { cn } from "@/lib/utils"
 
@@ -21,6 +26,31 @@ const Avatar = React.forwardRef<;
 >(({ className, ...props }, ref) => (;
   <AvatarPrimitive.Root;
     ref={ref}
+=======
+
+
+
+import { cn } from "@/lib/utils"
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const Avatar = React.forwardRef<
+  React.ElementRef<typeof AvatarPrimitive.Root>
+  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root>
+></typeof>(({ className, ...props }, ref) => (
+  <AvatarPrimitive.Root
+=======
+
+const Avatar = React && React.forwardRef<;
+  React && React.ElementRef<typeof AvatarPrimitive && AvatarPrimitive.Root>,;
+  React && React.ComponentPropsWithoutRef<typeof AvatarPrimitive && AvatarPrimitive.Root>;
+></typeof>(({ className, ...props }, ref) => (;
+  <AvatarPrimitive&& AvatarPrimitive.Root
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    ref={ref}
+    className={cn(
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       "relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full",
 
@@ -38,6 +68,7 @@ const Avatar = React.forwardRef<;
 
 
 
+<<<<<<< HEAD
 
 import { cn } from "@/lib/utils"
 
@@ -57,11 +88,17 @@ const Avatar = React.forwardRef<
 ));
 Avatar.displayName = AvatarPrimitive.Root.displayName;
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const AvatarImage = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Image>
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive</typeof>.Image>
 >(({ className, ...props }, ref) => (
   <AvatarPrimitive.Image
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 Avatar && Avatar.displayName = AvatarPrimitive && AvatarPrimitive.Root.displayName;
 const AvatarImage = React && React.forwardRef<;
@@ -91,6 +128,14 @@ const AvatarImage = React.forward_ref<;
   React.ComponentPropsWithoutRef < typeof AvatarPrimitive</typeof>.Image>;
 >(({ class_name, ...props }, ref) => (
   <AvatarPrimitive.Image;
+<<<<<<< HEAD
+=======
+
+    ref={ref}
+    className={cn ('aspect - square h - full w - full', class_name)}
+    {...props}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const AvatarImage = React.forwardRef<;
   React.ElementRef<typeof AvatarPrimitive.Image>,;
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>;
@@ -98,6 +143,10 @@ const AvatarImage = React.forwardRef<;
   <AvatarPrimitive.Image;
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     ref={ref}
     className={cn('aspect-square h-full w-full', className)}
     {...props}
@@ -107,21 +156,30 @@ AvatarImage.displayName = AvatarPrimitive.Image.displayName;
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const AvatarFallback = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Fallback>
   React.ComponentPropsWithoutRef<typeof AvatarPri</typeof>mitive.Fallback>
 >(({ className, ...props }, ref) => (
   <AvatarPrimitive.Fallback
+<<<<<<< HEAD
     ref={ref}
     className={cn ('aspect - square h - full w - full', class_name)}
     {...props}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 AvatarImage && AvatarImage.displayName = AvatarPrimitive && AvatarPrimitive.Image.displayName;
 const AvatarFallback = React && React.forwardRef<;
   React && React.ElementRef<typeof AvatarPrimitive && AvatarPrimitive.Fallback>,;
   React && React.ComponentPropsWithoutRef<typeof AvatarPri</typeof>mitive && mitive.Fallback>;
 >(({ className, ...props }, ref) => (;
   <AvatarPrimitive&& AvatarPrimitive.Fallback
+<<<<<<< HEAD
 Avatar.displayName = AvatarPrimitive.Root.displayName;
 ;
 const AvatarImage = React.forwardRef<;
@@ -139,12 +197,23 @@ AvatarImage.displayName = AvatarPrimitive.Image.displayName;
     ref={ref}
     className={cn(
       'flex h-full w-full items-center justify-center rounded-full bg-muted'
+=======
+
+    ref={ref}
+    className={cn(
+      'flex h-full w-full items-center justify-center rounded-full bg-muted'
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const AvatarFallback = React.forwardRef<;
   React.ElementRef<typeof AvatarPrimitive.Fallback>,;
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Fallback>;
 >(({ className, ...props }, ref) => (;
   <AvatarPrimitive.Fallback;
 
+<<<<<<< HEAD
     ref={ref}
     className={cn(
       "flex h-full w-full items-center justify-center rounded-full bg-muted",
@@ -152,6 +221,16 @@ const AvatarFallback = React.forwardRef<;
     className={cn(;
       "flex h-full w-full items-center justify-center rounded-full bg-muted",;
       className;
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    ref={ref}
+    className={cn(
+      "flex h-full w-full items-center justify-center rounded-full bg-muted",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      className
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     )}
     {...props}
   />;
@@ -184,6 +263,7 @@ AvatarFallback.display_name = AvatarPrimitive.Fallback.display_name;
 ;
 export { Avatar, AvatarImage, AvatarFallback }
 ;
+<<<<<<< HEAD
 AvatarFallback.displayName = AvatarPrimitive.Fallback.displayName;
 ;
 export { Avatar, AvatarImage, AvatarFallback }import * as React from "react" import * as AvatarPrimitive from "@radix-ui/react-avatar" const Avatar = React.forwardRef< React.ElementRef<typeof AvatarPrimitive.Root>;
@@ -220,3 +300,6 @@ export { Avatar, AvatarImage, AvatarFallback }
 export { Avatar, AvatarImage, AvatarFallback };
 export { Avatar, AvatarImage, AvatarFallback }
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

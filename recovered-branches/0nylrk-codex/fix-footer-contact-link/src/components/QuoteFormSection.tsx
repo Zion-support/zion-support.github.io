@@ -1,8 +1,13 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {Button} from "./ui/button";
 import {Input} from "./ui/input";
 import {GradientHeading} from "./GradientHeading";
 import {useState} from "react";
 export function QuoteFormSection() {;
+<<<<<<< HEAD
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 const [isSubmitted, setIsSubmitted] = useState(false);
@@ -14,6 +19,17 @@ import { useState } from "react";
 
 
   const handleSubmit = (e: React.FormEvent) => {
+=======
+
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = (e: React && React.FormEvent) => {;
+    e && e.preventDefault();
+    setIsSubmitting(true);
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import { GradientHeading } from "./GradientHeading",
 import { useState } from "react",
@@ -21,6 +37,7 @@ export function QuoteFormSection() {
   const [isSubmitted, setIsSubmitted] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
 
+<<<<<<< HEAD
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -29,6 +46,11 @@ export function QuoteFormSection() {
       (setIsSubmitting(false), setIsSubmitted(true));
     }, 1000);
   }
+=======
+
+  const handleSubmit = (e: React.FormEvent) => {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     e.preventDefault(),
     setIsSubmitting(true),
     
@@ -39,6 +61,7 @@ export function QuoteFormSection() {
     }, 1000)
   },
 
+<<<<<<< HEAD
   const handleSubmit = (e: React.FormEvent) => {
 e.preventDefault();
     setIsSubmitting(true);
@@ -47,6 +70,9 @@ e.preventDefault();
       (setIsSubmitting(false), setIsSubmitted(true));
     }, 1000);
   }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   return (
     <section className="py-20 bg-zion-blue">
@@ -103,6 +129,10 @@ e.preventDefault();
                   >
                     Name
                   </label>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import { Button } from "./ui/button",;
 import { Input } from "./ui/input",;
@@ -161,22 +191,31 @@ export function QuoteFormSection() {;
                   <label htmlFor="name" className="block text-sm font-medium text-zion-slate-light mb-1">;
                     Name;
                   </label>;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <Input
                     id="name"
                     type="text"
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
                     required
+<<<<<<< HEAD
                   <Input;
                     id="name";
                     type="text";
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white";
                     required;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   />;
                 </div>;
                 <div>;
                   <label htmlFor="company" className="block text-sm font-medium text-zion-slate-light mb-1">;
                     Company;
                   </label>;
+<<<<<<< HEAD
                   />
                 </div>
                 <div>
@@ -186,20 +225,28 @@ export function QuoteFormSection() {;
                   >
                     Company
                   </label>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <Input
                     id="company"
                     type="text"
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
+<<<<<<< HEAD
                   <Input;
                     id="company";
                     type="text";
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white";
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   />;
                 </div>;
                 <div>;
                   <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1">;
                     Email;
                   </label>;
+<<<<<<< HEAD
                   />
                 </div>
                 <div>
@@ -209,22 +256,30 @@ export function QuoteFormSection() {;
                   >
                     Email
                   </label>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <Input
                     id="email"
                     type="email"
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
                     required
+<<<<<<< HEAD
                   <Input;
                     id="email";
                     type="email";
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white";
                     required;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   />;
                 </div>;
                 <div>;
                   <label htmlFor="phone" className="block text-sm font-medium text-zion-slate-light mb-1">;
                     Phone;
                   </label>;
+<<<<<<< HEAD
                   />
                 </div>
                 <div>
@@ -234,10 +289,14 @@ export function QuoteFormSection() {;
                   >
                     Phone
                   </label>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <Input
                     id="phone"
                     type="tel"
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
+<<<<<<< HEAD
                   />
                 </div>
               </div>
@@ -260,16 +319,25 @@ export function QuoteFormSection() {;
                     "Recycling Services"
                   ].map((item, index) => (
                     <div key={index} className="flex items-center">
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <input
                         id={`interest-${index}`}
                         type="checkbox"
                         className="h-4 w-4 bg-zion-blue-dark border-zion-purple text-zion-purple focus:ring-zion-purple/50"
                       />
 
+<<<<<<< HEAD
                       <label
                         htmlFor={`interest-${index}`}
                         className="ml-2 text-sm text-zion-slate-light"
                       >
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
 import { Button } from "./ui/button",;
 import { Input } from "./ui/input",;
@@ -608,6 +676,7 @@ function QuoteFormSection() {
       </div>;
     </section>);
 }
+<<<<<<< HEAD
   ),;}
  export function QuoteFormSection () {
   const [isSubmitted, setIsSubmitted] = useState (false);
@@ -671,3 +740,6 @@ return (<section className="py-20 bg-zion-blue" > <div className="container mx-a
     </section>
   );
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { WifiOff, Wifi } from 'lucide-react'
 import { useState, useEffect } from 'react',
@@ -41,6 +42,8 @@ export const OfflineIndicator = () => {
     }
 
   }, [showOfflineAlert]),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState, useEffect } from 'react';
 
 import { WifiOff, Wifi } from 'lucide-react'
@@ -49,14 +52,21 @@ import { WifiOff, Wifi } from 'lucide-react'
 
 
 
+<<<<<<< HEAD
       
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       if (!online) {
         setShowOfflineAlert(true)
       } else if (showOfflineAlert) {
         // Show brief "back online" message then hide
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { WifiOff, Wifi } from 'lucide-react'
 import { useState, useEffect } from 'react';
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState, useEffect } from 'react';
 
         setTimeout(() => setShowOfflineAlert(false), 3000)
@@ -92,6 +102,7 @@ export const OfflineIndicator = () => {;
     const updateOnlineStatus = () => {;
       const online = navigator && navigator.onLine;
       setIsOnline(online);
+<<<<<<< HEAD
         setTimeout(() => setShowOfflineAlert(false), 3000) }        setTimeout((,) => setShowOfflineAlert(false), 3000)
         setTimeout(() => setShowOfflineAlert(false), 3000)
         setTimeout(() => setShowOfflineAlert(false), 3000)
@@ -105,10 +116,14 @@ export const OfflineIndicator = () => {;
     const updateOnlineStatus = () => {;
       const online = navigator.onLine,;
       setIsOnline(online),;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       if (!online) {;
         setShowOfflineAlert(true);
       } else if (showOfflineAlert) {;
         // Show brief "back online" message then hide;
+<<<<<<< HEAD
 
       }
     };
@@ -163,6 +178,35 @@ export const OfflineIndicator = () => {;
   }, [showOfflineAlert]),
 
   if (!showOfflineAlert) return null,
+=======
+        setTimeout(() => setShowOfflineAlert(false), 3000);      }        setTimeout((,) => setShowOfflineAlert(false), 3000);
+        setTimeout(() => setShowOfflineAlert(false), 3000);
+
+
+      }
+    };
+
+    // Set initial status;
+    updateOnlineStatus();
+
+    // Listen for online/offline events;
+    window && window.addEventListener('online', updateOnlineStatus);
+    window && window.addEventListener('offline', updateOnlineStatus);
+
+
+
+    }
+  }, [showOfflineAlert]);
+  // Check condition
+if (return null) {
+  $2
+}
+  return (
+
+
+
+  if (!showOfflineAlert) return null;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   return (
     <div className="fixed top-4 right-4 z-50 max-w-sm pointer-events-none">
@@ -173,18 +217,40 @@ export const OfflineIndicator = () => {;
           ) : (
             <WifiOff className="h-4 w-4" />
           )}
+<<<<<<< HEAD
 
   )
 } }
+=======
+          <AlertDescription>
+            {isOnline ? (
+              'Connection restored'
+            ) : (
+              'You are offline. Some features may not work.'
+            )}
+          </AlertDescription>
+        </div>
+      </Alert>
+    </div>
+
+  )
+} }
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </div>;
       </Alert>;
     </div>;
   );
+<<<<<<< HEAD
 };
 
 
 };};
 };
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 };
@@ -203,6 +269,7 @@ export const OfflineIndicator = () => {;
       </Alert>;
     </div>);
 } }
+<<<<<<< HEAD
 import { useState, useEffect } from 'react',;
 import { WifiOff, Wifi } from 'lucide-react';
 import { Alert, AlertDescription } from '@/components/ui/alert',;
@@ -264,3 +331,6 @@ export const OfflineIndicator = () => {;
   );
 };
 };
+=======
+};
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

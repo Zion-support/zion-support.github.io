@@ -1,11 +1,27 @@
 import { useState } from 'react';
 
+<<<<<<< HEAD
 export type FeedbackContext = { actionType?: string, metadata?: any };
 export default function FeedbackModal({
+=======
+
+  isOpen: boolean;
+  onClose: (submitted: boolean) => void;
+  defaultContext?: FeedbackContext;
+  defaultKind?: 'general' | 'bug' | 'feature';
+  userHeaders?: Record<string, string>;}) {export default function FeedbackModal(): any ({;
+
+=======
+export type FeedbackContext = { actionType?: string, metadata?: any };
+export default function FeedbackModal({
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   isOpen;
   onClose;
   defaultContext;
   defaultKind = 'general';
+<<<<<<< HEAD
   userHeaders}: {;
   isOpen: boolean,;
   onClose: (submitted: boolean) => void,;
@@ -13,12 +29,28 @@ export default function FeedbackModal({
   defaultKind?: 'general' | 'bug' | 'feature';
   userHeaders?: Record<string, string>
 }) {
+=======
+
+  userHeaders}: {;
+  isOpen: boolean,;
+  onClose: (submitted: boolean) => void,;
+
+  defaultContext?: FeedbackContext;
+  defaultKind?: 'general' | 'bug' | 'feature';
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [rating, setRating] = useState<number>(0);
   const [hover, setHover] = useState<number>(0);
   const [kind, setKind] = useState<'general' | 'bug' | 'feature'>(defaultKind);
   const [comment, setComment] = useState('');
   const [loading, setLoading] = useState(false);
   if (!isOpen) return null;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   async function submit() {;
     if (rating < 1) return onClose(false);
     setLoading(true);
@@ -32,11 +64,19 @@ export default function FeedbackModal({
           kind,;
           context: defaultContext || {},;
         }),;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       });
 
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         method: 'POST',
         headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) };
         body: JSON.stringify({ rating, comment, kind, context: defaultContext || {} })})
@@ -48,6 +88,11 @@ export default function FeedbackModal({
     onClose(true)
   }
   return (
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
       <div className="bg-white w-full max-w-md rounded shadow-lg p-5 space-y-4">
         <div className="text-lg font-medium">Was this helpful?</div>
@@ -57,12 +102,24 @@ export default function FeedbackModal({
 
 
             <button
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               key={n}
               onMouseEnter={() => setHover(n)}
               onMouseLeave={() => setHover(0)}
               onClick={() => setRating(n)}
+<<<<<<< HEAD
               className={;
                 hover >= n || rating >= n ? 'text-yellow-500' : 'text-gray-300';
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               }
               aria-label={`${n} stars`}
             >;
@@ -221,8 +278,15 @@ function submit() {
             </label>;
           </div>;
         </div>;
+<<<<<<< HEAD
             disabled={loading || rating < 1}
             className='px-3 py-2 rounded bg-gray-900 text-white'>;
+=======
+
+            disabled={loading || rating < 1}
+            className='px-3 py-2 rounded bg-gray-900 text-white'>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {loading ? 'Submitting…' : 'Submit'}
           </button>        </div>;
       </div>;
@@ -234,6 +298,10 @@ function submit() {
               aria-label={`${n} stars`}
             >★</button>
           ))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </div>;
         <div className="text-sm">;
           <label className="block mb-1" htmlFor="input-Optional comment">Optional comment</label>;
@@ -253,8 +321,13 @@ function submit() {
         </div>;
       </div>;
     </div>;
+<<<<<<< HEAD
   );
 }
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <button onClick={submit} disabled={loading || rating<1} className="px-3 py-2 rounded bg-gray-900 text-white">{loading? 'Submitting…' : 'Submit'}</button>
         </div>
       </div>
@@ -351,6 +424,7 @@ function submit() {
   )
 
 }
+<<<<<<< HEAD
 
 export type FeedbackContext = { actionType?: string; metadata?: any }
 export default function FeedbackModal({
@@ -522,3 +596,6 @@ export default function FeedbackModal({
 
 }
   );
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

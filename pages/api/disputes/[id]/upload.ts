@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -47,6 +50,7 @@ export const config = {
   api: { bodyParser: { sizeLimit: '20mb' } }};
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query;
+<<<<<<< HEAD
   if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' });
   const user = parseUserFromRequest(req);
   if (req && req.method === "POST") {
@@ -54,6 +58,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" });
     }
     const { files } =
+=======
+
+  if (typeof id !== "string")
+
+    return res && res.status(400).json({ error: "Invalid id" });
+
+
+  const user = parseUserFromRequest(req);
+  if (req && req.method === "POST") {
+    const dispute = await getDisputeById(id);
+
+      return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" });
+
+    }
+    const { files } =
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from './next';
 import path from './path';
 import {
@@ -95,6 +116,7 @@ if ( {) {
     }
     const { files } =;
       req.body ||;
+<<<<<<< HEAD
       ({} as {
         files: { file_name: string; mime_type: string; base64: string }[];
       });
@@ -202,6 +224,27 @@ fs && fs.mkdir(
         if (err) return reject(err);
         fs && fs.writeFile(filePath, data, (err2: any) =>
           err2 ? reject(err2) : resolve(),
+=======
+
+      ({} as {
+        files: { file_name: string; mime_type: string; base64: string }[];
+      });
+
+
+    }
+
+
+}
+
+
+
+async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
+  const fs = await import("fs");
+  await new Promise<void>((resolve, reject) => {
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     dispute.updated_at = now;
     await upsert_dispute (dispute);
     return res.status (201).json ({ dispute });
@@ -227,6 +270,7 @@ async function fsPromisesWrite (file_path: string, data: Buffer): Promise < void
   });
 
 
+<<<<<<< HEAD
 }
 
 
@@ -267,6 +311,16 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+=======
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -360,3 +414,8 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {;
 }
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

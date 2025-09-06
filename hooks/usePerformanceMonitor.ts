@@ -1,5 +1,6 @@
 ;
 interface PerformanceMetrics {
+<<<<<<< HEAD
   loadTime: number, firstContentfulPaint: number
   largestContentfulPaint: number, firstInputDelay: number
   cumulativeLayoutShift: number
@@ -21,6 +22,8 @@ export function usePerformanceMonitor() {;
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.entryType === 'navigation') {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       const entries = list && list.getEntries();
       
@@ -33,9 +36,17 @@ export function usePerformanceMonitor() {;
           }));
         }
         if (entry && entry.entryType === 'paint') {
+<<<<<<< HEAD
           const paintEntry = entry as PerformancePaintTiming;
           if (paintEntry && paintEntry.name === 'first-contentful-paint') {
             setMetrics(prev => ({
+=======
+
+          const paintEntry = entry as PerformancePaintTiming;
+          if (paintEntry && paintEntry.name === 'first-contentful-paint') {
+            setMetrics(prev => ({
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               ...prev,
               firstContentfulPaint: paintEntry && paintEntry.startTime,
             }));
@@ -60,6 +71,11 @@ export function usePerformanceMonitor() {;
           setMetrics(prev => ({
             ...prev,
             cumulativeLayoutShift: (prev?.cumulativeLayoutShift || 0) + clsEntry && clsEntry.value,
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   load_time: number, firstContentfulPaint: number,
   largestContentfulPaint: number, firstInputDelay: number,
   cumulativeLayoutShift: number,
@@ -146,8 +162,15 @@ if ( {) {
         }
       });
     });
+<<<<<<< HEAD
       observer && observer.disconnect();
     };
+=======
+
+      observer && observer.disconnect();
+    };
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }, []);
   return { metrics, isSupported }
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
@@ -32,10 +33,13 @@ interface SmartContractBuilderProps {;
 }
 export function SmartContractBuilder(): any ({;
   isOpen;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 isOpen;
   onClose;
   talent;
   clientName;
+<<<<<<< HEAD
   onContractGenerated}: SmartContractBuilderProps) {
   const [activeTab, setActiveTab] = useState<string>("form"),
   const [generatedContract, setGeneratedContract] = useState<string | null>(null),
@@ -56,6 +60,9 @@ isOpen;
     setFormValues(templateData)
   }
   // Convert ContractFormValues to contract content string
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface SmartContractBuilderProps {
   is_open: boolean,
   on_close: () => void,
@@ -84,6 +91,7 @@ function SmartContractBuilder() {
     setFormValues (template_data);
   }
   // Convert ContractFormValues to contract content string;
+<<<<<<< HEAD
   const handleDeployContract = async () => {
     if (!generatedContract) return;
     try {
@@ -188,6 +196,30 @@ import {logErrorToProduction} from '@/utils/productionLogger';
   useEffect(() => {
   // TODO: Add dependencies if needed
   return () => {
+=======
+
+  const handleDeployContract = async () => {
+    // Check condition
+if (return) {
+  $2
+}
+    try {
+      setDeployStatus ('deploying');
+      const contract_info = await deploySmartContract (generated_contract, deploy_options);
+      // Check condition
+if ( {) {
+  $2
+}
+        setDeploymentInfo (contract_info);
+        setDeployStatus ('deployed');
+        toast.success ("Smart contract deployed successfully!");
+      } else {
+        setDeployStatus ('error');
+        toast.error ("Failed to deploy smart contract");
+      }
+    } catch (error) {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onContractGenerated}: SmartContractBuilderProps) {;
   const [activeTab, setActiveTab] = useState<string>("form");
   const [generatedContract, setGeneratedContract] = useState<string | null>(null);
@@ -202,6 +234,7 @@ import {logErrorToProduction} from '@/utils/productionLogger';
   });
   const [deployStatus, setDeployStatus] = useState<string>('');
   const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null);
+<<<<<<< HEAD
   const { deploySmartContract } = useSmartContracts();
   const handleLoadTemplate = (templateData: ContractFormValues,) => {;
     setFormValues(templateData);
@@ -212,6 +245,24 @@ import {logErrorToProduction} from '@/utils/productionLogger';
     try {;
       setDeployStatus('deploying');
       const contractInfo = await deploySmartContract(generatedContract, deployOptions);
+=======
+
+  const { deploySmartContract } = useSmartContracts();
+
+  const handleLoadTemplate = (templateData: ContractFormValues,) => {;
+    setFormValues(templateData);
+  };
+
+  // Convert ContractFormValues to contract content string;
+
+  const handleDeployContract = async () => {;
+    if (!generatedContract) return;
+
+    try {;
+      setDeployStatus('deploying');
+      const contractInfo = await deploySmartContract(generatedContract, deployOptions);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       if (contractInfo) {;
         setDeploymentInfo(contractInfo);
         setDeployStatus('deployed');
@@ -258,6 +309,10 @@ interface SmartContractBuilderProps {;
   clientName: string; // Assuming clientName is passed as a prop;
   onContractGenerated?: (contractContent: string) => void; // For Solidity;
   onLegalDraftGenerated?: (markdownContent: string) => void; // For Markdown;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onDeploy?: (contractContent: string) => void}
 // Helper to ensure milestones are always an array
       logErrorToProduction ('Error deploying contract:', { data: error }),
@@ -300,6 +355,10 @@ interface SmartContractBuilderProps {
   on_deploy?: (contract_content: string) => void}
 // Helper to ensure milestones are always an array;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export /**
  * SmartContractBuilder - Function description
  */
@@ -335,9 +394,17 @@ function SmartContractBuilder() {
   // Prefill form with talent and client name (existing useEffect);
   useEffect (() => {
   // TODO: Add dependencies if needed;
+<<<<<<< HEAD
   return () => {
     // Cleanup function;
 }
+=======
+
+  return () => {
+    // Cleanup function;
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return []};
 export function SmartContractBuilder(): any ({;
   isOpen,;
@@ -369,16 +436,28 @@ export function SmartContractBuilder(): any ({;
   const [selectedNetwork, setSelectedNetwork] = useState<'ethereum' | 'polygon' | ''>('');
   // clientWalletAddress and talentWalletAddress might be part of formValues or separate state;
   // For now, let's assume they can be part of formValues or derived if prefilled.// We'll use formValues && formValues.clientWalletAddress and formValues && formValues.talentWalletAddress;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [onChainDeploymentStatus, setOnChainDeploymentStatus] = useState<'idle' | 'connecting' | 'fetching_code' | 'deploying' | 'success' | 'error'>('idle');
   const [transactionHash, setTransactionHash] = useState<string | null>(null);
   const [deployedContractAddress, setDeployedContractAddress] = useState<string | null>(null);
   const [deploymentError, setDeploymentError] = useState<string | null>(null);
   const [populatedSolidityCode, setPopulatedSolidityCode] = useState<string | null>(null); // Bytecode from generate-smart-contract;
   const [contractAbi, setContractAbi] = useState<any | null>(null); // ABI based on contractType;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // This hook might be for the older Solidity template system.// We are now using supabase function 'generate-smart-contract' for Solidity for deployment && deployment.const { generateSolidityContract: generateSolidityFromHook, deploySmartContract: deployViaHook } = useSmartContracts();
   // Prefill form with talent and client name(existing useEffect);
   useEffect(() => {;
   // TODO: Add dependencies if needed;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return () => {;
     // Cleanup function;
 };
@@ -401,6 +480,10 @@ export function SmartContractBuilder(): any ({;
         deadline: prev?.deadline || '',;
         governingLaw: prev?.governingLaw || '',;
         disputeResolution: prev?.disputeResolution || '',,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }, []); []);
     if ( { // Only prefill if form_values is not already set (e.g., by a template)) {
   $2
@@ -430,6 +513,10 @@ export function SmartContractBuilder(): any ({;
     setActiveTab ("form")}
   // For generating Solidity (existing logic, adapted);
       return}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {;
       // Assuming generateSolidityContract now primarily uses formValues;
       // and talent/clientName are for context or specific template variables && variables.setGeneratedSolidityContract(solidityCode);
@@ -454,6 +541,7 @@ export function SmartContractBuilder(): any ({;
         body: payload,,;
 });
       if(error) {;
+<<<<<<< HEAD
     // Cleanup function
 }
 }, []); [])
@@ -507,11 +595,18 @@ export function SmartContractBuilder(): any ({;
         body: payload,
 })
       if(error) {
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         throw error}
       if(data && data.markdownContent) { // Assuming your Supabase func returns { markdownContent: "..." }
         setGeneratedMarkdownContract(data.markdownContent)
         if(onLegalDraftGenerated) {
           onLegalDraftGenerated(data.markdownContent)}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const { data, error } = await supabase.functions.invoke ('generate - contract', {
         body: payload, ,
 });
@@ -537,6 +632,10 @@ if ( {) {
       setLegalDraftError (err.message || "Failed to generate legal draft.");
       toast.error (err.message || "Failed to generate legal draft.")} finally {
       setIsLoadingLegalDraft (false)}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
       toast.info ("Generating PDF...");
       html2pdf ().from (element).set (opt).save ();
@@ -547,6 +646,7 @@ if ( {) {
       toast.warn ("No draft content available to download or form values missing.")}
   }
       return}
+<<<<<<< HEAD
         setActiveTab("preview_markdown"); // Switch to a new tab for Markdown preview
         toast.success("Legal draft generated successfully!")} else {
         throw new Error("No content received from draft generator.")}
@@ -808,6 +908,9 @@ setActiveTab ("preview")
           </TabsContent>
         </Tabs>
         <TemplateManager
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         setActiveTab("preview_markdown"); // Switch to a new tab for Markdown preview;
         toast && toast.success("Legal draft generated successfully!")} else {;
         throw new Error("No content received from draft generator.")}
@@ -889,6 +992,7 @@ setActiveTab ("preview")
     // This is called by ContractForm's own submit/generate button.// Let's make this one generate the Solidity code, as per existing flow && flow.setFormValues(values); // Update formValues state first;
     handleGenerateSolidity(); // Then generate Solidity.};
   return (<Dialog open={isOpen} onOpenChange={onClose}>;
+<<<<<<< HEAD
 import { useState } from "react",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
@@ -902,6 +1006,8 @@ import { DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts",
 import { useSmartContracts } from "@/hooks/useSmartContracts",
 import { toast } from "sonner",
 import {logErrorToProduction} from '@/utils/productionLogger',
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
         <DialogHeader>;
           <DialogTitle>Smart Contract Builder</DialogTitle>;
@@ -911,6 +1017,14 @@ import {logErrorToProduction} from '@/utils/productionLogger',
         <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">;
           <div className="flex justify-between items-center mb-4">;
             <TabsList className="grid grid-cols-3"> {/* Added new tab */}
+<<<<<<< HEAD
+=======
+              <TabsTrigger value="form">1 && 1.Details</TabsTrigger>;
+              <TabsTrigger value="preview_markdown" disabled={!generatedMarkdownContract}>2 && 2.Legal Draft</TabsTrigger>;
+              <TabsTrigger value="preview_solidity" disabled={!enableOnChainAgreement && !generatedSolidityContract}>3 && 3.On-Chain Contract</TabsTrigger>;
+            </TabsList>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* This button seems out of place if it's just for templates, maybe move into "form" tab? */}
             {/* <Button
               variant="outline"
@@ -1219,11 +1333,17 @@ export function SmartContractBuilder({;
                 onClick={() => setTemplateManagerOpen(true)}
                 className="flex gap-1";
               >;
+<<<<<<< HEAD
                 <Save className="h-4 w-4" />;
+=======
+                <Save className="h - 4 w - 4" />;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 Templates;
               </Button>;
             </div>;
           </div>;
+<<<<<<< HEAD
           <TabsContent value="form" className="pt-4">;
             <ContractForm;
               talent={talent}
@@ -1246,10 +1366,22 @@ export function SmartContractBuilder({;
                   talent={talent}
                   onClose={onClose}
                   deploymentInfo={deploymentInfo}
+=======
+
+            />;
+          </TabsContent>;
+
+          <TabsContent value="preview" className="pt-4">;
+            {generatedContract && (;
+              <div>;
+
+                <ContractPreview
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   generatedContract = {generatedContract,}
                   talent = {talent,}
                   onClose = {onClose,}
                   deploymentInfo = {deploymentInfo,}
+<<<<<<< HEAD
                 />
                 {!deploymentInfo && deployOptions.deployToChain && (
                   <div className="mt-6 flex justify-center">
@@ -1265,11 +1397,34 @@ export function SmartContractBuilder({;
             )}
           </TabsContent>
         </Tabs>
+=======
+
+                />;
+
+                {!deploymentInfo && deployOptions && deployOptions.deployToChain && (;
+                  <div className="mt-6 flex justify-center">;
+
+                    <Button
+                      onClick = {handleDeployContract,}
+                      disabled = {deployStatus === 'deploying',}
+                      className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">;
+                      {deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}
+                    </Button>;
+                  </div>                )}
+              </div>;
+            )}
+
+          </TabsContent>;
+        </Tabs>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <TemplateManager
           isOpen = {templateManagerOpen,}
           onClose = {() => setTemplateManagerOpen(false),}
           onSelectTemplate = {handleLoadTemplate,}
           currentValues = {formValues,}
+<<<<<<< HEAD
         />
       </DialogContent>
     </Dialog>
@@ -1290,6 +1445,30 @@ setActiveTab ("preview")
 }onContractGenerated= {
   handleFormSubmit 
 }/> </TabsContent> <div> <ContractPreview generatedContract= {
+=======
+
+        />;
+      </DialogContent>;
+    </Dialog>;
+  );
+
+};
+//Modified to match the expected interface const handleFormSubmit = (contract: string) => {';
+  //This should be a function that takes a string (contract content) //Since we need to adapt the interface, we'll implement the simplest solution that works if (onContractGenerated) {;
+  setGeneratedContract (contract);";
+setActiveTab ("preview");
+};";
+  talent ;
+}clientName= {;
+  clientName ;
+}initialValues= {;
+  formValues ;
+}onFormValuesChange= {;
+  setFormValues ;
+}onContractGenerated= {;
+  handleFormSubmit ;
+}/> </TabsContent> <div> <ContractPreviewgeneratedContract= {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   generatedContract 
 }talent= {
   talent 
@@ -1297,6 +1476,7 @@ setActiveTab ("preview")
   onClose 
 }deploymentInfo= {
   deploymentInfo 
+<<<<<<< HEAD
 }/> > {'
   deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain' 
 }</Button> </div>) 
@@ -1376,6 +1556,26 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </div>;                )}
               </div>;
             )}
+=======
+}/> > {';
+  deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain' ;
+}</Button> </div>) ;
+}</div>) ;
+}</TabsContent> </Tabs> <TemplateManagerisOpen= {
+  templateManagerOpen 
+}onClose= {
+  () => setTemplateManagerOpen (false) ;
+}onSelectTemplate= {;
+  handleLoadTemplate ;
+}currentValues= {;
+  formValues ;
+}/> </DialogContent> </Dialog>) ;
+
+}'"            {!enableOnChainAgreement && <p className="text-muted-foreground p-4 text-center">Enable on-chain agreement to deploy this contract to a blockchain.</p>}
+            {/* Fallback for old Solidity preview if needed, or remove if fully replaced by on-chain flow */}
+
+            {/* {generatedSolidityContract && !deployOptions && deployOptions.deployToChain && !enableOnChainAgreement && ( ... )} */}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </TabsContent>;
         </Tabs>;
         ;
@@ -1392,6 +1592,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
+<<<<<<< HEAD
 ;
 
 
@@ -1401,6 +1602,9 @@ ursor/fix-website-loading-errors-and-merge-6662
     </Dialog>
   )}
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ;
 
@@ -1446,6 +1650,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       </DialogContent>;
     </Dialog>);
 }
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 //Modified to match the expected interface const handleFormSubmit = (contract: string) =>: any {';
   //This should be a function that takes a string (contract content) //Since we need to adapt the interface, we'll implement the simplest solution that works // Check condition
@@ -1508,3 +1713,7 @@ setActiveTab ("preview");
 }
 ;
 ;
+=======
+
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

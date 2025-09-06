@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface InnovativeITService {
 export interface InnovativeITService {;
   id: string;
@@ -132,6 +133,13 @@ export const innovativeITServices: InnovativeITService[] = [;
     reviews: 400,
   },
   {
+=======
+
+
+  {
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     id: 'edge - computing - platform',
     name: 'Edge Computing Platform',
     tagline: 'Distributed computing at the network edge',
@@ -140,6 +148,10 @@ export const innovativeITServices: InnovativeITService[] = [;
     description:;
       'Advanced edge computing platform that brings computation and data storage closer to data sources, reducing latency and improving performance.',
     features: [;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Distributed edge nodes',
       'Real - time data processing',
       'Low - latency computing',
@@ -153,6 +165,11 @@ export const innovativeITServices: InnovativeITService[] = [;
     ],
     popular: true,
     icon: '🌐',
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     color: 'from - blue - 500 to - cyan - 600',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / edge - computing - platform',
@@ -165,6 +182,10 @@ export const innovativeITServices: InnovativeITService[] = [;
     category: 'IT & Edge Computing',
     real_service: true,
     technology: [;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Edge Computing',
       'IoT',
       '5G',
@@ -175,6 +196,11 @@ export const innovativeITServices: InnovativeITService[] = [;
       'Python',
       'AWS',
     ],
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     integrations: [;
       'AWS IoT',
       'Azure IoT',
@@ -205,6 +231,10 @@ export const innovativeITServices: InnovativeITService[] = [;
     growth_rate: '180% annual growth',
     variant: 'quantum',
     contact_info: {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -219,6 +249,11 @@ export const innovativeITServices: InnovativeITService[] = [;
     reviews: 750,
   },
   {
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     id: 'quantum - computing - as - a-service',
     name: 'Quantum Computing as a Service',
     tagline: 'Access to quantum computing power',
@@ -227,6 +262,10 @@ export const innovativeITServices: InnovativeITService[] = [;
     description:;
       'Cloud - based quantum computing service that provides access to quantum processors for research, optimization, and machine learning applications.',
     features: [;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Quantum processor access',
       'Quantum algorithm library',
       'Hybrid quantum - classical computing',
@@ -240,6 +279,11 @@ export const innovativeITServices: InnovativeITService[] = [;
     ],
     popular: true,
     icon: '⚛️',
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     color: 'from - purple - 500 to - indigo - 600',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / quantum - computing - as - a-service',
@@ -252,6 +296,10 @@ export const innovativeITServices: InnovativeITService[] = [;
     category: 'IT & Quantum Computing',
     real_service: true,
     technology: [;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Quantum Computing',
       'Quantum Algorithms',
       'Python',
@@ -261,6 +309,11 @@ export const innovativeITServices: InnovativeITService[] = [;
       'Node && Node.js',
       'AWS',
     ],
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     integrations: [;
       'Jupyter Notebooks',
       'Python',
@@ -291,6 +344,10 @@ export const innovativeITServices: InnovativeITService[] = [;
     growth_rate: '250% annual growth',
     variant: 'quantum - advanced',
     contact_info: {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -305,6 +362,10 @@ export const innovativeITServices: InnovativeITService[] = [;
     reviews: 150,
   },
   {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Multi-consensus algorithms',
     id: 'blockchain - enterprise - platform',
     name: 'Blockchain Enterprise Platform',
@@ -315,6 +376,10 @@ export const innovativeITServices: InnovativeITService[] = [;
       'Comprehensive blockchain platform for enterprises, providing secure, scalable, and compliant blockchain solutions for various business applications.',
     features: [;
       'Multi - consensus algorithms',
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Smart contract development',
       'Enterprise security',
       'Scalability solutions',
@@ -327,6 +392,11 @@ export const innovativeITServices: InnovativeITService[] = [;
     ],
     popular: true,
     icon: '🔗',
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     color: 'from - green - 500 to - emerald - 600',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / blockchain - enterprise - platform',
@@ -339,6 +409,10 @@ export const innovativeITServices: InnovativeITService[] = [;
     category: 'IT & Blockchain',
     real_service: true,
     technology: [;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Blockchain',
       'Smart Contracts',
       'Solidity',
@@ -349,6 +423,11 @@ export const innovativeITServices: InnovativeITService[] = [;
       'Kubernetes',
       'AWS',
     ],
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     integrations: [;
       'Ethereum',
       'Hyperledger',
@@ -380,6 +459,10 @@ export const innovativeITServices: InnovativeITService[] = [;
     growth_rate: '160% annual growth',
     variant: 'quantum - blockchain',
     contact_info: {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -394,6 +477,10 @@ export const innovativeITServices: InnovativeITService[] = [;
     reviews: 300,
   },
   {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'CI/CD pipelines',
     id: 'devops - automation - platform',
     name: 'DevOps Automation Platform',
@@ -404,6 +491,10 @@ export const innovativeITServices: InnovativeITService[] = [;
       'Comprehensive DevOps platform that automates the entire software development lifecycle, from code commit to production deployment.',
     features: [;
       'CI / CD pipelines',
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Infrastructure as Code',
       'Container orchestration',
       'Monitoring and alerting',
@@ -416,6 +507,10 @@ export const innovativeITServices: InnovativeITService[] = [;
     ],
     popular: true,
     icon: '🚀',
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'CI/CD',
     color: 'from - orange - 500 to - yellow - 600',
     text_color: 'text - orange - 400',
@@ -430,6 +525,10 @@ export const innovativeITServices: InnovativeITService[] = [;
     real_service: true,
     technology: [;
       'CI / CD',
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Kubernetes',
       'Docker',
       'Terraform',
@@ -439,6 +538,11 @@ export const innovativeITServices: InnovativeITService[] = [;
       'Python',
       'AWS',
     ],
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     integrations: [;
       'GitHub',
       'GitLab',
@@ -470,6 +574,10 @@ export const innovativeITServices: InnovativeITService[] = [;
     growth_rate: '130% annual growth',
     variant: 'cyberpunk',
     contact_info: {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -485,6 +593,11 @@ export const innovativeITServices: InnovativeITService[] = [;
   },
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -535,16 +648,37 @@ export const innovativeITServices: InnovativeITService[] = [
 
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
+<<<<<<< HEAD
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
+=======
+      website: 'https://ziontechgroup.com';
+    }
+<<<<<<< HEAD
+    real_implementation: true,
+    implementation_details: 'Complete DevOps automation platform with CI / CD, infrastructure management, and comprehensive monitoring capabilities.';
+    launch_date: '2024 - 01 - 20';
+    customers: 2500;
+    rating: 4.7,
+    reviews: 1250;
+
+  }
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export interface InnovativeITService {;
 
   }
 
 ];
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   }
 ];

@@ -9,7 +9,20 @@ const values = [
     name: 'Innovation First'
     description: 'We push the boundaries of what\'s possible, constantly exploring new frontiers in AI and technology.'
     icon: LightBulbIcon}
+<<<<<<< HEAD
 import {
+=======
+=======
+  UserGroupIcon,
+  LightBulbIcon,
+  GlobeAltIcon,
+  ShieldCheckIcon,
+  AcademicCapIcon,
+  RocketLaunchIcon;
+} from '@heroicons / react / 24 / outline';
+const values = [;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   UserGroupIcon
   LightBulbIcon
   GlobeAltIcon
@@ -54,6 +67,19 @@ const team = [;
     bio: 'Leading researcher in autonomous systems and AI ethics, with publications in top - tier journals.',
     image: '/images / team / elena - petrov.jpg'},
   {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    name: 'James Kim',
+    role: 'Chief Operations Officer',
+    bio: 'Former Fortune 500 executive, specializing in scaling AI operations and enterprise deployment.',
+    image: '/images / team / james - kim.jpg'}];
+export default /**
+ * AboutPage - Function description
+ */
+function AboutPage() {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className=&quot;bg - black & quot;>;
 
@@ -65,6 +91,36 @@ const team = [;
           <div className=&quot;text - center & quot;>;
             <h1 className=&quot;text - 4xl font - bold tracking - tight text - white sm:text - 6xl & quot;>;
               About{' '}
+<<<<<<< HEAD
+=======
+
+
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+              We are pioneers in artificial intelligence, quantum computing, and autonomous systems, 
+
+
+              dedicated to transforming industries and advancing human potential through technology.
+            </p>
+          </div>
+        </div>
+      </div>
+      {/* Mission & Vision */}
+      <div className=&quot;mx-auto max-w-7xl px-6 sm:px-6 lg:px-8&quot;>
+        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
+          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Our Purpose</h2>
+          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+            Mission & Vision
+          </p>
+        </div>
+        <div className=&quot;mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none&quot;>
+          <div className=&quot;grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2&quot;>
+            <div className=&quot;bg-white/5 p-8 rounded-2xl backdrop-blur-sm&quot;>
+              <div className=&quot;flex items-center gap-x-3 mb-4&quot;>
+                <RocketLaunchIcon className=&quot;h-8 w-8 text-blue-400&quot; />
+                <h3 className=&quot;text-xl font-semibold text-white&quot;>Our Mission</h3>
+              </div>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               <p className="text-gray-300">
                 To accelerate human progress through cutting-edge AI and technology solutions that solve 
@@ -123,6 +179,10 @@ const team = [;
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <span className=&quot;bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent & quot;>;
                 Zion Tech Group;
               </span>;
@@ -353,6 +413,10 @@ export default function AboutPage() {
         </div>;
       </div>;
       {/* Leadership Team */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -384,6 +448,20 @@ export default function AboutPage() {
               <div className="max-w-xl">
                 <div className="group relative">
                   <h3 className="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-blue-400 transition-colors duration-200">
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                    {person.name}
+                  </h3>;
+                  <p className=&quot;mt - 2 text - sm text - blue - 400 & quot;>{person.role}</p>;
+                  <p className=&quot;mt - 5 line - clamp - 3 text - sm leading - 6 text - gray - 300 & quot;>{person.bio}</p>;
+                </div>;
+              </div>;
+            </article>))}
+        </div>;
+      </div>;
+      {/* CTA section */}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
@@ -414,6 +492,10 @@ export default function AboutPage() {
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl text - center & quot;>;
           <h2 className=&quot;text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;

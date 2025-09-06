@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 :components/reviews/ReviewForm.tsx
 
 :backup-problematic-files/reviews/ReviewForm.tsx
@@ -61,6 +62,12 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
       setSubmitting(false);
 :backup-problematic-files/reviews/ReviewForm.tsx
 :backup-problematic-files/reviews/ReviewForm.tsx
+=======
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {
   submitting ? 'Submitting...' : 'Submit Review'
 }</button> </form>)
@@ -69,6 +76,7 @@ type Props = {
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;};import React, { useState } from 'react';
 import StarRating from './StarRating';
 export type ReviewFormValues = {
+<<<<<<< HEAD
   projectId: string
   fromRole: 'client' | 'talent'
   fromId: string
@@ -89,12 +97,19 @@ export type ReviewFormValues = {
   rating: number,
   text: string,
   categories?: {
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   projectId: string,
   fromRole: 'client' | 'talent',
   fromId: string,
   rating: number,
   text: string,
   categories?: {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     communication?: number;
     qualityOfWork?: number;
     timeliness?: number;
@@ -105,6 +120,7 @@ export type ReviewFormValues = {
 type Props = {
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>
 const ReviewForm: React.FC<Props> = ({ initial }) => {
+<<<<<<< HEAD
     communication?: number;
     qualityOfWork?: number;
     timeliness?: number;
@@ -150,6 +166,8 @@ export type ReviewFormValues = {;
 type Props = {;
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;
 const ReviewForm: React.FC<Props> = ({ initial }) => {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [rating, setRating] = useState(0);
   const [text, setText] = useState('');
   const [anonymous, setAnonymous] = useState(false);
@@ -159,6 +177,7 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
   const [wouldWorkWithAgain, setWouldWorkWithAgain] = useState<boolean>(false);
   const [submitting, setSubmitting] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
+<<<<<<< HEAD
     wouldWorkWithAgain?: boolean;
   }
   anonymous?: boolean;
@@ -197,12 +216,32 @@ function handle_submit() {
           anonymous,
           categories: {
 communication
+=======
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setSubmitting(true);
+    setMessage(null)
+    try {
+      const res = await fetch('/api/reviews/submit', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({
+          projectId: initial.projectId
+          fromRole: initial.fromRole
+          fromId: initial.fromId
+          rating
+          text
+          anonymous
+          categories: {
+            communication
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             qualityOfWork
             timeliness
             wouldWorkWithAgain
           }
         })
       });
+<<<<<<< HEAD
   async function handleSubmit(): any (e: React && React.FormEvent) {;
     e && e.preventDefault();
     setSubmitting(true);
@@ -232,6 +271,14 @@ communication
     } catch (err: any) {;
       setMessage(err && err.message);
     } finally {;
+=======
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error |'Failed to submit');
+      setMessage('Review submitted! Pending admin approval.');
+    } catch (err: any) {
+      setMessage(err.message);
+    } finally {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       setSubmitting(false);    }
   }
   return (
@@ -240,6 +287,7 @@ communication
         <label className='block text-sm font-medium mb-2'>Overall Rating</label>        <StarRating value={rating} onChange={setRating} />
       </div>
       <div>
+<<<<<<< HEAD
         <label className='block text-sm font-medium mb-2'>Your Review</label>
 
 
@@ -435,15 +483,42 @@ export default ReviewForm,
 
 :backup-problematic-files/reviews/ReviewForm.tsx
 :backup-problematic-files/reviews/ReviewForm.tsx
+=======
+
+=======
+        <label className='block text-sm font-medium mb-2'>Your Review</label>
+
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/ReviewForm.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    }
+  }
+  return (
+
+
+        <StarRating value={rating} onChange={setRating} />
+      </div>
+      <div>
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       >
         {submitting ? 'Submitting...' : 'Submit Review'}
       </button>
       {message && <p className='text-sm'>{message}</p>}
+<<<<<<< HEAD
 
 :components/reviews/ReviewForm.tsx
 
 :backup-problematic-files/reviews/ReviewForm.tsx
 :backup-problematic-files/reviews/ReviewForm.tsx
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </form>
   );
 }
@@ -451,9 +526,20 @@ export default ReviewForm;    </form>
   )
 }
 export default ReviewForm;
+<<<<<<< HEAD
 :components/reviews/ReviewForm.tsx
 
 main:components/reviews/ReviewForm.tsx
 :backup-problematic-files/reviews/ReviewForm.tsx
 main:components/reviews/ReviewForm.tsx
 :backup-problematic-files/reviews/ReviewForm.tsx
+=======
+
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/reviews/ReviewForm.tsx
+=======
+=======
+>>>>>>> main:components/reviews/ReviewForm.tsx
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/ReviewForm.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

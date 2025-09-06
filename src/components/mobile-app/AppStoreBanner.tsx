@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }
 import React, { useState, useEffect } from "react"
 import { safeStorage } from "@/utils/safeStorage"
@@ -68,6 +69,8 @@ export const AppStoreBanner: React.FC = () => {
   
   return (
   
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 return (
     <div className="fixed bottom-16 left-0 right-0 bg-zion-blue-dark border-t border-zion-purple/30 p-3 z-40">
       <div className="flex items-center">
@@ -93,6 +96,7 @@ return (
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );
 };
 '"};
@@ -108,6 +112,14 @@ import React, { useState, useEffect } from "react",;
 import { safeStorage } from "@/utils/safeStorage",;
 import { X } from 'lucide-react';
 import { useIsMobile } from "@/hooks/use-mobile",;
+=======
+
+
+};
+import React, { useState, useEffect } from "react";
+import { safeStorage } from "@/utils/safeStorage";
+import { X } from 'lucide-react'import { useIsMobile } from "@/hooks/use-mobile";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const AppStoreBanner: React.FC = () => {;
   const [isVisible, setIsVisible] = useState(false),;
   const isMobile = useIsMobile(),;
@@ -155,7 +167,14 @@ export const AppStoreBanner: React.FC = () => {;
     </div>;
   );
 };
+<<<<<<< HEAD
   )
+=======
+'"},;
+
+};
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   // Only render on mobile devices;
@@ -192,4 +211,8 @@ if (return null) {
 '"},
 }
 
+<<<<<<< HEAD
   )
+=======
+  )
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

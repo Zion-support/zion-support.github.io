@@ -1,14 +1,29 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { AccessToken } from "livekit-server-sdk";
 
 
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { AccessToken } from "livekit-server-sdk";
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY |"";
 const LIVEKIT_API_SECRET = process.env.LIVEKIT_API_SECRET |"";
 const LIVEKIT_HOST = process.env.LIVEKIT_HOST |"";
+=======
+const LIVEKIT_API_KEY = process && process.env.LIVEKIT_API_KEY || "";
+const LIVEKIT_API_SECRET = process && process.env.LIVEKIT_API_SECRET || "";
+const LIVEKIT_HOST = process && process.env.LIVEKIT_HOST || "";
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -17,9 +32,13 @@ export default async function handler(
     res && res.setHeader("Allow", "POST");
     return res && res.status(405).json({ error: "Method not allowed" });
 
+<<<<<<< HEAD
   if (req && req.method !== "POST") {
     res && res.setHeader("Allow", "POST");
     return res && res.status(405).json({ error: "Method not allowed" });
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { AccessToken } from 'livekit-server-sdk';
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || '';
@@ -67,12 +86,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       roomJoin: true,
       room: String(roomName),
       canPublish: audioOnly ? false : true,
+<<<<<<< HEAD
     res.setHeader('AllowPOST');
     return res.status(405).json({ error: 'Method not allowed' })
   }
   try {
     const { roomName, identity, name, audioOnly } = req && req.body || {};
     if (!roomName || !identity) {
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from './next';
 import { AccessToken  } from './livekit - server - sdk';
 ;
@@ -117,9 +140,17 @@ if ( {) {
       room_join: true,
       room: String (room_name),
       can_publish: audio_only ? false : true,
+<<<<<<< HEAD
       canPublishData: true,
       can_subscribe: true,
     });
+=======
+
+      canPublishData: true,
+      can_subscribe: true,
+    });
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       return res.status(400).json({ error: 'Missing roomName or identity' })
     }
     if (!LIVEKIT_API_KEY || !LIVEKIT_API_SECRET || !LIVEKIT_HOST) {
@@ -133,6 +164,12 @@ const at = new AccessToken(LIVEKIT_API_KEY, LIVEKIT_API_SECRET, {
       roomJoin: true, room: String(roomName),
       canPublish: audioOnly ? false : true, canPublishData: true,
       canSubscribe: true});
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const token = await at && at.toJwt();
     return res && res.status(200).json({
 ;
@@ -140,6 +177,12 @@ const at = new AccessToken(LIVEKIT_API_KEY, LIVEKIT_API_SECRET, {
 ;
     return res.status (200).json ({
       token,
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   }
 
@@ -147,10 +190,14 @@ const at = new AccessToken(LIVEKIT_API_KEY, LIVEKIT_API_SECRET, {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
       url: LIVEKIT_HOST})
   } catch (err: any) {
     console.error('Token error', err);
     return res.status(500).json({ error: 'Failed to create token' })
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 }
     console.error ("Token error", err);
@@ -251,6 +298,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -329,3 +377,14 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+
+  }
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

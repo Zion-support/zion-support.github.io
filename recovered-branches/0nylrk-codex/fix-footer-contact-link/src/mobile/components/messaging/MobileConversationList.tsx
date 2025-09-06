@@ -2,6 +2,10 @@
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react";
 import {Card} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
@@ -9,6 +13,7 @@ import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Search} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {cn} from "@/lib/utils";
+<<<<<<< HEAD
 import React from "react",
 import { Card } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
@@ -36,6 +41,25 @@ interface MobileConversationListProps {
 }
 import { Input } from "@/components/ui/input",
 import { cn } from "@/lib/utils",
+=======
+interface Conversation {;
+  id: string,;
+  name: string,;
+  avatar?: string;
+  lastMessage: string,;
+  timestamp: string,;
+  unreadCount: number,;
+  isTyping?: boolean;
+}
+
+interface MobileConversationListProps {;
+  conversations: Conversation[],;
+
+  activeConversation?: string;
+  onSelectConversation: (id: string) => void;
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface Conversation {
   id: string,
   name: string,
@@ -44,6 +68,7 @@ interface Conversation {
   timestamp: string,
   unreadCount: number,
   isTyping?: boolean
+<<<<<<< HEAD
 }
 
 interface MobileConversationListProps {
@@ -78,10 +103,13 @@ interface MobileConversationListProps {;
   onSelectConversation: (id: string) => void;
 }
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
 export function MobileConversationList({
+<<<<<<< HEAD
 
   activeConversation?: string;
   onSelectConversation: (id: string) => void;
@@ -149,6 +177,14 @@ interface MobileConversationListProps {;
 export function MobileConversationList({;
   conversations,;
   activeConversation,;
+=======
+=======
+
+export function MobileConversationList(): any ({;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  conversations;
+  activeConversation;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onSelectConversation;
 } MobileConversationListProps) {;
   return (;
@@ -174,6 +210,11 @@ export function MobileConversationList({;
               "px-4";
 
               "px-4",
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               activeConversation === conversation.id && "bg-primary/5"
             )}
             onClick={() => onSelectConversation(conversation.id)}
@@ -195,11 +236,18 @@ export function MobileConversationList({;
                 <div className="flex justify-between items-center">
                   <p className="text-sm text-muted-foreground truncate">
 
+<<<<<<< HEAD
                     {conversation.isTyping 
 
 
                     {conversation.isTyping
                     {conversation.isTyping 
+=======
+
+                    {conversation.isTyping 
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       ? <em>Typing...</em>
                       : conversation.lastMessage}
                   </p>
@@ -207,9 +255,13 @@ export function MobileConversationList({;
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
                       {conversation.unreadCount}
                     </Badge>
+<<<<<<< HEAD
           <div
             key={conversation && conversation.id}
             className={cn(
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               "px-4"
               activeConversation === conversation && conversation.id && "bg-primary/5"
             )}
@@ -370,6 +422,7 @@ function MobileConversationList() {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
   ),;}
  interface Conversation {
   id: string;
@@ -416,3 +469,6 @@ onSelectConversation
     </div>
   )
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

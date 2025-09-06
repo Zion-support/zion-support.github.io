@@ -18,6 +18,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 import React from "react";
 import Layout from "../components/Layout";
 export default function ITServices() {;
@@ -76,6 +77,14 @@ origin/automation-improvements-final
 import React from "react";
 import Layout from "../components/Layout";
 origin/main
+=======
+
+import React from "react";
+import Layout from "../components/Layout";
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function ITServices() {
   return (
     <Layout
@@ -112,6 +121,11 @@ origin/automation-improvements-final
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+    </Layout>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function ITServices() {;
   return (
     <Layout
@@ -159,10 +173,14 @@ function ITServices() {
         </div>;
       </div>;
 
+<<<<<<< HEAD
     </Layout>;
   );
 }
 }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 }
@@ -758,9 +776,18 @@ export default function ITServices() {
       </section>
     </Layout>
   );
+<<<<<<< HEAD
 }
     </Layout>);
 }
+=======
+
+
+
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d

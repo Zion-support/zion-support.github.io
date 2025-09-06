@@ -78,10 +78,13 @@ export interface SkillsFormProps {;
   skills: Skill[],;
   onComplete: () => void,;
   onBack: () => void;
+<<<<<<< HEAD
 export interface AddSkillFormProps {
 resumeId: string;
   onAddSkill: (skill: Skill) => Promise<boolean>;
   defaultCategory?: string
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 ;
 export interface SkillItemProps {;
@@ -102,6 +105,11 @@ export interface AddSkillFormProps {;
   defaultCategory?: string;
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 export interface BulkAddSkillsProps {
   resumeId: string;
@@ -125,7 +133,12 @@ export interface BulkAddSkillsProps {
 ;
 
 ;
+<<<<<<< HEAD
 
 
 ;
 ;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import { ServiceVariant } from '../types / service - variants';
 ;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
   name: string;
   tagline: string;
@@ -10,6 +15,12 @@ import { ServiceVariant } from '../types / service - variants';
   popular?: boolean;
   icon: string;
   color: string;
+<<<<<<< HEAD
+=======
+
+  link: string;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export interface Q3Service {
   id: string, name: string,
   tagline: string, price: string,
@@ -17,11 +28,16 @@ export interface Q3Service {
   features: string[], popular?: boolean,
   icon: string, color: string,
   textColor: string, link: string,
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   marketPosition?: string;
   targetAudience?: string;
   trialDays?: number;
   setupTime?: string;
 
+<<<<<<< HEAD
   useCases?: string[];
 
 
@@ -30,6 +46,17 @@ export interface Q3Service {
   integrations?: string[];
   useCases?: string[],
   useCases?: string[];
+=======
+  category: string, realService: boolean,
+
+  technology?: string[];
+  integrations?: string[];
+
+
+  useCases?: string[];
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   roi?: string;
   competitors?: string[],
   marketSize?: string;
@@ -50,6 +77,7 @@ export interface Q3Service {
   customers?: number;
   rating?: number;
 
+<<<<<<< HEAD
 
   reviews?: number;
 
@@ -90,6 +118,8 @@ const contact = {;
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 const contact = {
 
@@ -117,6 +147,7 @@ export const realServicesQ32025: Q3Service[] = [
   {
 
 
+<<<<<<< HEAD
 }
 export const realServicesQ32025: Q3Service[] = [
   {
@@ -148,12 +179,19 @@ export const realServicesQ32025: Q3Service[] = [
     color: 'from-emerald-600 to-teal-700'
     textColor: 'text-emerald-300'
     link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Churn and retention analysis',
       'Cohort and funnel dashboards',
       'Price testing and packaging experiments',
       'Revenue leakage detection',
       'Revenue forecasting models',
       'Weekly executive summaries',
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     tagline: 'Churn insights, cohort analysis, and pricing experiments for SaaS growth',
     price: '$599',
     period: '/month',
@@ -162,16 +200,25 @@ export const realServicesQ32025: Q3Service[] = [
       'Churn and retention analysisCohort and funnel dashboards',
       'Price testing and packaging experimentsRevenue leakage detection',
       'Revenue forecasting modelsWeekly executive summaries'
+<<<<<<< HEAD
     ],
     popular: true,
     icon: '📊',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization',
+=======
+
+
+    ],
+    popular: true,
+    icon: '📊',
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     link: 'https://ziontechgroup && ziontechgroup.com/services/subscription-analytics-revenue-optimization';
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
 
+<<<<<<< HEAD
     marketPosition:
       'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',    features: [
       'Churn and retention analysisCohort and funnel dashboardsPrice testing and packaging experimentsRevenue leakage detectionRevenue forecasting modelsWeekly executive summaries';
@@ -182,6 +229,8 @@ export const realServicesQ32025: Q3Service[] = [
     textColor: 'text-emerald-300';
     link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization';
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams';
     trialDays: 14;
     setupTime: '1–2 weeks';
@@ -212,6 +261,7 @@ export const realServicesQ32025: Q3Service[] = [
     growth_rate: '30% YoY';
     variant: 'ai - futuristic';
     customers: 24;
+<<<<<<< HEAD
     rating: 4 && 4.9;
     reviews: 31,
     // @ts - expect - error augment common shape for UI components that expect contact_info;
@@ -244,6 +294,22 @@ export const realServicesQ32025: Q3Service[] = [
     customers: 12;
     rating: 4 && 4.8;
     reviews: 18,
+=======
+
+    rating: 4 && 4.9;
+    reviews: 31,
+
+    roi: 'Launch revenue in under 2 weeks, save 40–80 hours of setup.';
+    competitors: ['Lemon SqueezyGumroadPaddle'];
+    customers: 12;
+
+    rating: 4 && 4.8;
+    reviews: 18,
+
+    // @ts-expect-error augment common shape for UI components that expect contactInfo
+    contactInfo: contact
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // @ts - expect - error augment common shape for UI components that expect contact_info;
     contact_info: contact;
   }
@@ -260,8 +326,15 @@ export const realServicesQ32025: Q3Service[] = [
       'Automatic link suggestions and anchors_orphan page and pillar clustering_click - through rate experiments_reporting and recommendations_sitemap and crawl improvements';
     ];
     icon: '🔗';
+<<<<<<< HEAD
     link: 'https://ziontechgroup && ziontechgroup.com/services/wordpress-internal-linking-automation';
     marketPosition: 'Comparable to Link Whisper with managed tuning and reporting.',
+=======
+
+    link: 'https://ziontechgroup && ziontechgroup.com/services/wordpress-internal-linking-automation';
+    marketPosition: 'Comparable to Link Whisper with managed tuning and reporting.',
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     targetAudience: 'Content sites, ecommerce, publishers on WordPress';
     trialDays: 7;
     setupTime: '2–4 days';
@@ -280,8 +353,18 @@ export const realServicesQ32025: Q3Service[] = [
     roi: '5–25% organic uplift in 8–12 weeks on content libraries.';
     competitors: ['Link WhisperInternal Link Juicer'];
     customers: 30;
+<<<<<<< HEAD
     rating: 4 && 4.7;
     reviews: 22,
+=======
+
+    rating: 4 && 4.7;
+    reviews: 22,
+
+    // @ts-expect-error augment common shape for UI components that expect contactInfo
+    contactInfo: contact
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // @ts - expect - error augment common shape for UI components that expect contact_info;
     contact_info: contact;
   }
@@ -292,6 +375,10 @@ export const realServicesQ32025: Q3Service[] = [
     name: 'Ecommerce Reviews & UGC Activation';
     tagline: 'Deploy reviews and UGC workflows that increase trust and conversion';
     price: '$999';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     period: '/project',
     description: 'We implement reviews and UGC collection across your storefront with on - brand widgets, post - purchase triggers, and moderation pipelines. Includes KPI dashboards for conversion lift.';
     features: [;
@@ -311,6 +398,7 @@ export const realServicesQ32025: Q3Service[] = [
     use_cases: ['Increase trust_lift CVRCollect UGC for ads'];
     roi: '2–10% CVR lift on PDPs post - deployment.';
     competitors: ['YotpoJudge.meLooxStamped.io'];
+<<<<<<< HEAD
     customers: 10;
     rating: 4 && 4.8;
     reviews: 12,
@@ -430,6 +518,14 @@ export const realServicesQ32025: Q3Service[] = [
     description:;
       'We implement reviews and UGC collection across your storefront with on - brand widgets, post - purchase triggers, and moderation pipelines. Includes KPI dashboards for conversion lift.',
     features: [;
+=======
+
+    customers: 10;
+
+    rating: 4 && 4.8;
+    reviews: 12,
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Reviews widget integration',
       'Email / SMS post - purchase triggers',
       'Photo / video UGC capture',
@@ -437,11 +533,16 @@ export const realServicesQ32025: Q3Service[] = [
       'Conversion impact reporting',
     ],
     icon: '⭐',
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     id: 'subscription-analytics-revenue-optimization', name: 'Subscription Analytics & Revenue Optimization',
     tagline: 'Churn insights, cohort analysis, and pricing experiments for SaaS growth',
     price: '$599', period: '/month',
     description: 'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports.',
     features: [
+<<<<<<< HEAD
       'Churn and retention analysisCohort and funnel dashboardsPrice testing and packaging experimentsRevenue leakage detectionRevenue forecasting modelsWeekly executive summaries'
     ];
     popular: true, icon: '📊',
@@ -667,6 +768,9 @@ export const realServicesQ32025: Q3Service[] = [
     customers: 10
     rating: 4.8
     reviews: 12
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // @ts-expect-error augment common shape for UI components that expect contactInfo
     contactInfo: contact
   },];    contactInfo: contact

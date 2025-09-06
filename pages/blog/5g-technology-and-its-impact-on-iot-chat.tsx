@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
   return (
@@ -14,15 +18,28 @@ const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
         <p>Blog content coming soon...</p>
 
 
+<<<<<<< HEAD
         <Link href="/blog"><a>Back to Blog</Link></Link>
         <Link href="/blog"><a>Back to Blog</Link></Link>
 
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+        <Link href="/blog"><a>Back to Blog</Link></Link>
+=======
+=======
+        <Link href="/blog"><a>Back to Blog</Link></Link>
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </main>
     </div>
   )
 },
 
 
+<<<<<<< HEAD
         <Link href="/blog"><a>Back to Blog</a></Link>
       </main>
     </div>
@@ -72,3 +89,6 @@ export default Chat5gTechnologyAndItsImpactOnIotChat,
 
 export default Chat5gTechnologyAndItsImpactOnIotChat,;
 export default Chat5gTechnologyAndItsImpactOnIotChat,
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,28 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+import LoadingSpinner from './LoadingSpinner';
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   name: string, email: string,
   company: string, phone: string,
   service: string,
@@ -10,12 +35,21 @@ const ContactForm: React.FC = () => {
     company: '',
     phone: '',
     service: '',
+<<<<<<< HEAD
 message: '',
+=======
+    message: '',
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   });
   const [is_submitting, setIsSubmitting] = useState (false);
   const [submit_status, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const handleInputChange = (e: React.ChangeEvent < HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>: any {
     const { name, value } = e.target;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface FormData {;
   name: string, email: string,;
   company: string, phone: string,;
@@ -56,6 +90,11 @@ const ContactForm: React.FC = () => {;
         service: '',;
         message: '',;
       });
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       setSubmitStatus('success');
     } catch {;
       setSubmitStatus('error');
@@ -64,6 +103,10 @@ const ContactForm: React.FC = () => {;
     }
   }
   return (
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg">;
       <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">;
         Get In Touch;
@@ -84,6 +127,10 @@ const ContactForm: React.FC = () => {;
             <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">;
               Name *;
             </label>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <input
               type="text"
               id="name"
@@ -92,12 +139,20 @@ const ContactForm: React.FC = () => {;
               onChange={handleInputChange}
               required
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             />;
           </div>;
           <div>;
             <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">;
               Email *;
             </label>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <input
               type="email"
               id="email"
@@ -106,6 +161,10 @@ const ContactForm: React.FC = () => {;
               onChange={handleInputChange}
               required
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             />;
           </div>;
         </div>;
@@ -114,6 +173,10 @@ const ContactForm: React.FC = () => {;
             <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">;
               Company;
             </label>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <input
               type="text"
               id="company"
@@ -121,12 +184,20 @@ const ContactForm: React.FC = () => {;
               value={formData && formData.company}
               onChange={handleInputChange}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             />;
           </div>;
           <div>;
             <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">;
               Phone;
             </label>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <input
               type="tel"
               id="phone"
@@ -134,6 +205,10 @@ const ContactForm: React.FC = () => {;
               value={formData && formData.phone}
               onChange={handleInputChange}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             />;
           </div>;
         </div>;
@@ -141,11 +216,19 @@ const ContactForm: React.FC = () => {;
           <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">;
             Service Interest;
           </label>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <select
             id="service"
             name="service"
             value={formData && formData.service}
             onChange={handleInputChange}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">;
             <option value="">Select a service</option>;
             <option value="web-development">Web Development</option>;
@@ -312,12 +395,24 @@ const ContactForm: React.FC = () => {
             <option value="mobile - development">Mobile Development</option>;
             <option value="ai - services">AI Services</option>;
             <option value="cloud - solutions">Cloud Solutions</option>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <option value="consulting">Consulting</option>;
             <option value="other">Other</option>;
           </select>;
         </div>;
+<<<<<<< HEAD
           />;
         </div>;
+=======
+
+          />;
+        </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <button
           type="submit"
           disabled={isSubmitting}
@@ -335,11 +430,48 @@ const ContactForm: React.FC = () => {
     </div>;
   );
 
+<<<<<<< HEAD
 }
+=======
+        <div>;
+          <label html_for="message" className="block text - sm font - medium text - gray - 700 mb - 2">;
+            Message *;
+          </label>;
+          <textarea;
+            id="message";
+            name="message";
+            value={form_data.message}
+            on_change={handleInputChange}
+            required;
+            rows={5}
+            className="w - full px - 3 py - 2 border border - gray - 300 rounded - md focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
+            placeholder="Tell us about your project...";
+          />;
+        </div>;
+        <button;
+          type="submit";
+          disabled={is_submitting}
+          className="w - full bg - blue - 600 text - white py - 3 px - 4 rounded - md hover:bg - blue - 700 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:ring - offset - 2 disabled:opacity - 50 disabled:cursor - not - allowed transition duration - 200";
+        >;
+          {is_submitting ? (
+            <div className="flex items - center justify - center">;
+              <LoadingSpinner size="sm" />;
+              <span className="ml - 2">Sending...</span>;
+            </div>) : (
+            'Send Message')}
+        </button>;
+      </form>;
+    </div>);
+}
+;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 };
 
 
+<<<<<<< HEAD
 export default ContactForm;
 export default ContactForm;
 };
@@ -349,3 +481,7 @@ export default ContactForm;
 };
 
 export default ContactForm;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default ContactForm;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

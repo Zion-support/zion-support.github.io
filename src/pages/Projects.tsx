@@ -50,14 +50,19 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import Link from "next/link",
+<<<<<<< HEAD
 import React from 'react'
 import { useProjects } from '@/hooks/useProjects'
 import { SEO } from '@/components/SEO'
 import {
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import { Clock, Briefcase } from 'lucide-react'
 
 
+<<<<<<< HEAD
   Card,
   CardContent,
   CardDescription,
@@ -81,6 +86,8 @@ import React from 'react'
 import { useProjects } from '@/hooks/useProjects'
 import { SEO } from '@/components/SEO'
 import {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Card
   CardContent
   CardDescription
@@ -97,6 +104,35 @@ function ProjectsContent() { const { projects, isLoading  } = useProjects()
 function ProjectsContent() {
 
   const { projects, isLoading } = useProjects()
+<<<<<<< HEAD
+=======
+
+function ProjectsContent() { const { projects, isLoading  } = useProjects(),;
+function ProjectsContent() {;
+  const { projects, isLoading } = useProjects(),;
+
+  return (
+    <>;
+      <SEO
+        title='My Projects | Zion AI Marketplace'
+        description='View and manage your projects.'
+
+import React from "react";
+import { useProjects } from "@/hooks/useProjects";
+import { SEO } from "@/components/SEO";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
+import { Clock, Briefcase } from 'lucide-react'
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star } from 'lucide-react';
+
+
+function ProjectsContent() { const { projects, isLoading  } = useProjects(),
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   return (
     <>
@@ -105,13 +141,18 @@ function ProjectsContent() {
         <div className="mb-8">
           <h1 className="text-3xl font-bold">My Projects</h1>
           <p className="text-muted-foreground mt-1">All of your current and past projects</p>
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
         </div>
         </div>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {isLoading ? (
         ) : projects.length === 0 ? (
           <p>You don't have any projects yet.</p>
         ) : (
+<<<<<<< HEAD
           <div className='grid gap-6'>
             {projects.map(project => (
           <div className='grid gap-6'>
@@ -130,10 +171,21 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <CardTitle className='flex items-center gap-2'>
                     <Briefcase className='h-5 w-5 text-primary' />
                     <span>{project.job?.title |'Project'}</span>
+=======
+
+          <div className="grid gap-6">
+            {projects.map((project) => (
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="grid gap-6">
             {projects.map((project) => (
           <div className="grid gap-6">
             {projects.map((project) => (
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Card key={project.id}>
                   <CardTitle className="flex items-center gap-2">
                     <Briefcase className="h-5 w-5 text-primary" />
@@ -148,6 +200,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
+<<<<<<< HEAD
                     {project.job?.description |"Project details"}
                   <p className='text-sm text-muted-foreground line-clamp-2'>
                     {project.job?.description |'Project details'}
@@ -337,3 +390,10 @@ export default function Projects() {;
 }
 ;
 ;
+=======
+
+                  <Button asChild variant='outline' className='w-full'>                    <Link href={`/project/${project.id}`}>View Details</Link>                  <p className="text-sm text-muted-foreground line-clamp-2">
+            ))}
+          </div>
+        )}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -10,6 +10,7 @@ import {;
 import React from "react";
 import {
 
+<<<<<<< HEAD
 
 import React from "react";
 import {
@@ -18,11 +19,14 @@ import {
   CardDescription
   CardHeader
   CardTitle
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,;
+<<<<<<< HEAD
 } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 export function TeamStats() {;
@@ -67,6 +71,17 @@ export function TeamStats() {
               <p className="text-xs text-muted-foreground">
                 Interviews this month
               </p>
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+} from "@/components/ui/card";
+
+import { Progress } from "@/components/ui/progress";
+export function TeamStats() {;
+  return (
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -88,22 +103,37 @@ export function TeamStats() {
           <p className="text-xs text-muted-foreground">18 seats available</p>
         </div>
         
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <p className="text-xl font-bold">24</p>
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         
 
 
+<<<<<<< HEAD
         
         
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="pt-4 text-center border-t border-border mt-4">
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">
             View Full Analytics
           </button>
         </div>
       </CardContent>
+<<<<<<< HEAD
     </Card>
   );
 }
@@ -120,14 +150,21 @@ import { Progress } from "@/components/ui/progress",;
 ;
 export function TeamStats() {;
   return (;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <Card>;
       <CardHeader>;
         <CardTitle>Team Stats</CardTitle>;
         <CardDescription>Performance metrics for your team</CardDescription>;
       </CardHeader>;
       <CardContent className="space-y-4">;
+<<<<<<< HEAD
         <div className="space-y-1.5">;
         <div className="space-y-1.5">;
+=======
+        <div className="space-y-1 && 1.5">;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="flex items-center justify-between text-sm">;
             <span>Team capacity</span>;
             <span className="font-medium">32 / 50 seats used</span>;
@@ -135,7 +172,11 @@ export function TeamStats() {;
           <Progress value={64} className="h-2" />;
           <p className="text-xs text-muted-foreground">18 seats available</p>;
         </div>;
+<<<<<<< HEAD
         ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="space-y-4 pt-2">;
           <div className="grid grid-cols-2 gap-4">;
             <div className="space-y-1">;
@@ -151,21 +192,91 @@ export function TeamStats() {;
               <p className="text-xl font-bold">14d</p>;
             </div>;
             <div className="space-y-1">;
+<<<<<<< HEAD
               <p className="text-xs text-muted-foreground">Interviews this month</p>;
               <p className="text-xs text-muted-foreground">Interviews this month</p>;
+=======
+              <p className="text-xs text-muted-foreground">;
+                Interviews this month;
+              </p>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <p className="text-xl font-bold">24</p>;
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
         ;
         <div className="pt-4 text-center border-t border-border mt-4">;
           <button className="text-sm text-blue-500 font-medium hover:text-blue-700">;
         <div className="pt-4 text-center border-t border-border mt-4">;
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
+=======
+
+        <div className="pt-4 text-center border-t border-border mt-4">;
+          <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
+=======
+import React from './react';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components / ui / card';
+import { Progress  } from '@/components / ui / progress';
+export /**
+ * TeamStats - Function description
+ */
+function TeamStats() {
+  return (
+    <Card>;
+      <CardHeader>;
+        <CardTitle > Team Stats</CardTitle>;
+        <CardDescription > Performance metrics for your team</CardDescription>;
+      </CardHeader>;
+      <CardContent className="space - y-4">;
+        <div className="space - y-1.5">;
+          <div className="flex items - center justify - between text - sm">;
+            <span > Team capacity</span>;
+            <span className="font - medium">32 / 50 seats used</span>;
+          </div>;
+          <Progress value={64} className="h - 2" />;
+          <p className="text - xs text - muted - foreground">18 seats available</p>;
+        </div>;
+        <div className="space - y-4 pt - 2">;
+          <div className="grid grid - cols - 2 gap - 4">;
+            <div className="space - y-1">;
+              <p className="text - xs text - muted - foreground">Active projects</p>;
+              <p className="text - xl font - bold">12</p>;
+            </div>;
+            <div className="space - y-1">;
+              <p className="text - xs text - muted - foreground">Job postings</p>;
+              <p className="text - xl font - bold">8</p>;
+            </div>;
+            <div className="space - y-1">;
+              <p className="text - xs text - muted - foreground">Avg. time to hire</p>;
+              <p className="text - xl font - bold">14d</p>;
+            </div>;
+            <div className="space - y-1">;
+              <p className="text - xs text - muted - foreground">;
+                Interviews this month;
+              </p>;
+              <p className="text - xl font - bold">24</p>;
+            </div>;
+          </div>;
+        </div>;
+        <div className="pt - 4 text - center border - t border - border mt - 4">;
+          <button className="text - sm text - blue - 500 font - medium hover: text - blue - 700">;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             View Full Analytics;
           </button>;
         </div>;
       </CardContent>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     </Card>
 
@@ -173,6 +284,7 @@ export function TeamStats() {;
     </Card>;
   );
     </Card>);
+<<<<<<< HEAD
 }
     </Card>);
 }
@@ -187,3 +299,7 @@ export function TeamStats() {;
   );
 }
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

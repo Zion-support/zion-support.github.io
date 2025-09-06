@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useCurrency } from '@/hooks/useCurrency'
 import {logErrorToProduction} from '@/utils/productionLogger'
 import { useCurrency } from '@/hooks/useCurrency'
@@ -37,6 +38,8 @@ interface Transaction {
   service?: {
     title?: string
   }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export /**
  * TransactionHistory - Function description
  */
@@ -55,6 +58,7 @@ function TransactionHistory() {
 if (return []) {
   $2
 }
+<<<<<<< HEAD
 export function TransactionHistory() {
   const { user } = useAuth();
   const { toast } = useToast();
@@ -572,6 +576,18 @@ export function TransactionHistory() {;
               const canCancel = isClient && isPending,;
               const canRefund = isClient && transaction.status === 'released';
               const counterpartyName = isClient;
+=======
+          provider:profiles ! provider_id (display_name);
+      query = query.order ('created_at', { ascending: false }),
+    },
+              const is_client = user?.id === transaction.user_id;              const is_pending =;
+                transaction.status === 'pending' || transaction.status === 'in_escrow';
+              const isInEscrow = transaction.in_escrow;
+              const can_release = !is_client && is_pending && isInEscrow;
+              const can_cancel = is_client && is_pending;
+              const can_refund = is_client && transaction.status === 'released';
+              const counterparty_name = is_client;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 ? transaction.provider?.display_name || 'Service Provider';
                 : 'Client';
               return (;
@@ -679,5 +695,9 @@ export function TransactionHistory() {;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

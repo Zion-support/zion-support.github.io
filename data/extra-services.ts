@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   id: string;
   name: string;
@@ -24,8 +28,33 @@ export const extraServices: ExtraService[] = [
   {
 
     address: string;
+<<<<<<< HEAD
 export interface ExtraService {;
 export interface ExtraService {
+=======
+  }
+;
+export const extra_services: ExtraService[] = [;
+  {
+    id: 'cloud - migration - expert',
+    name: 'Cloud Migration Expert',
+    tagline: 'Seamless cloud migration and optimization',
+    price: '$99 / hour',
+    description:;
+      'Professional cloud migration services for businesses looking to modernize their infrastructure.',
+    features: [;
+      'AWS / Azure / GCP migration',
+      'Performance optimization',
+      'Cost analysis',
+      'Security implementation',
+      '24 / 7 support',
+    ],
+    link: '/services / cloud - migration - expert',
+    category: 'Cloud Services',
+    real_implementation: true,
+    contact_info: {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -61,6 +90,7 @@ export interface ExtraService {
   }
 export const extraServices: ExtraService[] = [
   {
+<<<<<<< HEAD
     id: 'cloud-migration-expert'
     name: 'Cloud Migration Expert'
     tagline: 'Seamless cloud migration and optimization'
@@ -125,12 +155,23 @@ export const extraServices: ExtraService[] = [
     category: 'Security',
     real_implementation: true,
     contact_info: {
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
 ];      mobile: "+1 302 464 0950";
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     id: "cloud-migration-expert",
     name: "Cloud Migration Expert",
@@ -172,10 +213,21 @@ export const extraServices: ExtraService[] = [
     contactInfo: {
 
       address: "364 E Main St STE 1008 Middletown DE 19709"
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
+<<<<<<< HEAD
+=======
+
+];
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 ];
     id: "cloud-migration-expert",

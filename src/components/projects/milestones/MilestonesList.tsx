@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }; import React, { useState } from 'react'
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones'
 import { useAuth } from '@/hooks/useAuth'
@@ -115,6 +116,8 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   },
 
   if (isLoading) {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 if (isLoading) {
     return (
       <div className="space-y-4">
@@ -140,13 +143,22 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
     )
   }
+<<<<<<< HEAD
   
   
+=======
+
+
+  
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (milestones.length === 0 && !showAddForm) {
     return (
       <EmptyState
         icon={<span className="text-3xl">📊</span>}
         title="No Milestones Yet"
+<<<<<<< HEAD
         description = {isClient ?
           "Break down the project into manageable milestones to track progress and payments." :
           "No milestones have been created for this project yet.",}
@@ -159,6 +171,9 @@ ursor/fix-website-loading-errors-and-merge-6662
       />
     )
   }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         description={isClient ? 
           "Break down the project into manageable milestones to track progress and payments." : 
@@ -168,11 +183,33 @@ ursor/fix-website-loading-errors-and-merge-6662
             text: "Create First Milestone",
             onClick: () => setShowAddForm(true)
           } : undefined
+<<<<<<< HEAD
         }
       />;
     );
   }
 
+=======
+        }
+
+  }
+
+
+  if (milestones && milestones.length === 0 && !showAddForm) {;
+    return (
+      <EmptyState
+        icon = {<span className="text-3xl">📊</span>,}
+        title="No Milestones Yet";
+        description = {isClient ? ;
+          "Break down the project into manageable milestones to track progress and payments." : ;
+          "No milestones have been created for this project yet.",}
+        action={isClient ? ;
+          {;
+            text: "Create First Milestone",;
+            onClick: (,) => setShowAddForm(true);
+          } : undefined;
+        }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="space-y-6">
       {isClient && !showAddForm && (
@@ -183,12 +220,30 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Button>
         </div>
       )}
+<<<<<<< HEAD
       
       
+=======
+
+
+      
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {showAddForm && (
         <Card>
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>
+<<<<<<< HEAD
+=======
+
+
+      {showAddForm && (;
+        <Card>;
+          <CardContent className="pt-6">;
+            <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <AddMilestoneForm
             <AddMilestoneForm 
               onSubmit = {handleSubmit,}
@@ -211,9 +266,12 @@ ursor/fix-website-loading-errors-and-merge-6662
       <div className="space-y-4">;
         {milestones && milestones.map((milestone,) => (;
 
+<<<<<<< HEAD
       )}
       <div className="space-y-4">
         {milestones.map((milestone,) => (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <MilestoneCard
             key = {milestone.id,}
             id = {milestone.id,}
@@ -227,6 +285,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             onReject = {onReject,}
           />
         ))}
+<<<<<<< HEAD
       </div>
     </div>
   )
@@ -257,11 +316,17 @@ ursor/fix-website-loading-errors-and-merge-6662
             onReject={onReject}
           />;
         ))}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </div>;
     </div>;
   );
 };
+<<<<<<< HEAD
             <AddMilestoneForm 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   // Check condition
 if ( {) {
@@ -337,4 +402,8 @@ if ( {) {
 }
 ";
 
+<<<<<<< HEAD
             <AddMilestoneForm
+=======
+            <AddMilestoneForm
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

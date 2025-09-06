@@ -2,6 +2,10 @@
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
@@ -10,6 +14,7 @@ import {supabase} from "@/integrations/supabase/client";
 import {AIListingForm} from "./AIListingForm";
 import {GeneratedContentDisplay} from "./GeneratedContentDisplay";
 import {LoadingContentSkeleton} from "./LoadingContentSkeleton";
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -92,22 +97,43 @@ import { supabase } from "@/integrations/supabase/client",;
 import { AIListingForm } from "./AIListingForm",;
 import { GeneratedContentDisplay } from "./GeneratedContentDisplay",;
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton",;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface GeneratedContent {;
   description: string,;
   tags: string[],;
   suggestedPrice: {;
     min: number,;
     max: number;
+<<<<<<< HEAD
+=======
+  };
+  keyPoints: string[];
+}
+
+interface AIListingGeneratorProps {;
+  onApplyGenerated?: (content: GeneratedContent) => void,;
+  initialValues?: {;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     title?: string;
     category?: string;
     keyFeatures?: string;
     targetAudience?: string;
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
   const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from './react';
 import { use_toast } from '@/hooks / use - toast';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
@@ -142,6 +168,7 @@ function AIListingGenerator() {
   const [is_loading, setIsLoading] = useState (false);
   const [generated_content, setGeneratedContent] = useState < GeneratedContent | null>(null);
 ;
+<<<<<<< HEAD
   },;
   keyPoints: string[];
 }
@@ -178,6 +205,8 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       }),;
       if (error) {;
         throw new Error(error.message);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handle_generate = async ({
     title;
     category;
@@ -195,6 +224,11 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       const { data, error } = await supabase.functions.invoke ('ai - listing - generator', {
         body: { title, category, key_features, target_audience }
       });
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
       if (data.error) {
         throw new Error(data.error)
@@ -204,7 +238,10 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       setGeneratedContent(data.generated);
       toast({
         title: "Content Generated"
@@ -217,6 +254,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again."
         variant: "destructive"
       })
+<<<<<<< HEAD
     } finally {
       setIsLoading(false)
     }
@@ -245,6 +283,9 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
           </p>
         </CardHeader>
         <CardContent>
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
       // Check condition
 if ( {) {
@@ -297,6 +338,7 @@ if ( {) {
         throw new Error(data && data.error);
       }
       setGeneratedContent(data && data.generated);
+<<<<<<< HEAD
           <AIListingForm
             onSubmit={handleGenerate}
             isLoading={isLoading}
@@ -305,20 +347,45 @@ if ( {) {
             isLoading={isLoading} 
 ;
       setGeneratedContent(data.generated),;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast({;
         title: "Content Generated",;
         description: "AI has created optimized listing content for you.";
       });
     } catch (error) {;
+<<<<<<< HEAD
       console.error("Error generating content:", error),;
       toast({;
         title: "Generation Failed",;
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",;
+=======
+      console && console.error("Error generating content:", error);
+      toast({;
+        title: "Generation Failed",;
+        description: error instanceof Error ? error && error.message : "Failed to generate content. Please try again.",;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         variant: "destructive";
       });
     } finally {;
       setIsLoading(false);
     }
+<<<<<<< HEAD
+=======
+  };
+
+  const handleApply = () => {;
+    if (generatedContent && onApplyGenerated) {;
+      onApplyGenerated(generatedContent);
+      toast({;
+        title: "Content Applied",;
+        description: "The generated content has been applied to your listing.";
+      });
+
+    }
+  }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
 
   },
@@ -326,9 +393,12 @@ if ( {) {
 
   return (
 
+<<<<<<< HEAD
     }
   }
   return (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="space-y-6">;
       <Card className="border border-zion-blue-light bg-zion-blue-dark">;
         <CardHeader>;
@@ -403,6 +473,7 @@ if ( {) {
         <GeneratedContentDisplay content={generated_content} on_apply={handle_apply} />)}
     </div>);
 
+<<<<<<< HEAD
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -521,3 +592,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} } AILi
   );
 }
 ;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

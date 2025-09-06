@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 import { motion } from 'framer-motion';
 
@@ -23,6 +24,13 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import { motion } from 'framer-motion';
+=======
+=======
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+import { motion } from 'framer-motion';
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { ;
   Shield, ;
   Rocket, ;
@@ -91,8 +99,11 @@ const solutions = [
     ]
     color: "from-orange-600 to-orange-800"
 
+<<<<<<< HEAD
 } from 'lucide-react';
 import Layout from '../../components/Layout';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const solutions = [;
   {;
     title: "Enterprise Solutions",;
@@ -162,6 +173,10 @@ const stats = [;
   { number: '24/7', label: 'Support Available' }
 ];
 export default function SolutionsPage() {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <Layout
       title="Solutions - Zion Tech Group"
@@ -169,6 +184,10 @@ export default function SolutionsPage() {;
       keywords="enterprise solutions, startup solutions, custom development, industry solutions, technology consulting">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         {/* Hero Section */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
@@ -176,12 +195,17 @@ export default function SolutionsPage() {;
           </div>;
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               className="text-center">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
                 Technology Solutions for{' '}
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
@@ -296,6 +320,246 @@ export default function SolutionsPage() {
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
+=======
+
+
+=======
+import type { NextPage } from 'next',
+import Head from 'next/head',
+import Link from 'next/link',
+const SolutionsPage: NextPage = () => {
+  const solutions = [
+    // Healthcare Solutions
+    {
+      category: "Healthcare & Life Sciences",
+      solutions: [
+        {
+          name: "AI-Powered Medical Imaging",
+          description: "Advanced AI algorithms for medical image analysis, diagnosis assistance, and treatment planning.",
+          useCases: ["Radiology departments", "Medical research", "Telemedicine platforms", "Clinical trials"],
+          benefits: ["Improved diagnostic accuracy", "Faster diagnosis", "Reduced costs", "Better patient outcomes"],
+          pricing: "$15,000 - $75,000",
+          link: "https://ziontechgroup.com/solutions/healthcare-ai",
+          icon: "🏥"
+        },
+        {
+          name: "Healthcare Data Analytics Platform",
+          description: "Comprehensive healthcare analytics solution for patient data, operational efficiency, and predictive insights.",
+          useCases: ["Hospitals", "Clinics", "Health insurance", "Pharmaceutical companies"],
+          benefits: ["Patient care optimization", "Operational efficiency", "Cost reduction", "Compliance management"],
+          pricing: "$25,000 - $100,000",
+          link: "https://ziontechgroup.com/solutions/healthcare-analytics",
+          icon: "📊"
+        },
+        {
+          name: "Telemedicine Platform",
+          description: "Secure, HIPAA-compliant telemedicine solution with AI-powered triage and appointment scheduling.",
+          useCases: ["Primary care", "Specialist consultations", "Mental health", "Rural healthcare"],
+          benefits: ["Improved access to care", "Reduced travel costs", "Better patient engagement", "Scalable operations"],
+          pricing: "$20,000 - $80,000",
+          link: "https://ziontechgroup.com/solutions/telemedicine",
+          icon: "💻"
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      ]
+    },
+    // Financial Services Solutions
+    {
+      category: "Financial Services & FinTech",
+      solutions: [
+        {
+          name: "AI-Powered Risk Assessment",
+          description: "Machine learning-based risk assessment and fraud detection for financial institutions.",
+          useCases: ["Banks", "Credit unions", "Insurance companies", "Investment firms"],
+          benefits: ["Reduced fraud losses", "Better risk management", "Compliance automation", "Improved customer experience"],
+          pricing: "$30,000 - $120,000",
+          link: "https://ziontechgroup.com/solutions/financial-risk-ai",
+          icon: "🏦"
+        },
+        {
+          name: "Blockchain Payment Solutions",
+          description: "Secure, fast, and cost-effective blockchain-based payment and settlement systems.",
+          useCases: ["Cross-border payments", "Supply chain finance", "Digital assets", "Smart contracts"],
+          benefits: ["Faster settlements", "Lower transaction costs", "Enhanced security", "Transparency"],
+          pricing: "$40,000 - $150,000",
+          link: "https://ziontechgroup.com/solutions/blockchain-payments",
+          icon: "⛓️"
+        },
+        {
+          name: "RegTech Compliance Platform",
+          description: "Automated regulatory compliance and reporting platform for financial institutions.",
+          useCases: ["Anti-money laundering", "KYC verification", "Regulatory reporting", "Audit trails"],
+          benefits: ["Automated compliance", "Reduced manual work", "Real-time monitoring", "Audit readiness"],
+          pricing: "$35,000 - $100,000",
+          link: "https://ziontechgroup.com/solutions/regtech-compliance",
+          icon: "📋"
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      ]
+    },
+    // Manufacturing & Industry 4.0
+    {
+      category: "Manufacturing & Industry 4.0",
+      solutions: [
+        {
+          name: "IoT Manufacturing Platform",
+          description: "Comprehensive IoT solution for smart manufacturing, predictive maintenance, and quality control.",
+          useCases: ["Production lines", "Quality control", "Predictive maintenance", "Supply chain management"],
+          benefits: ["Reduced downtime", "Improved quality", "Cost optimization", "Real-time monitoring"],
+          pricing: "$50,000 - $200,000",
+          link: "https://ziontechgroup.com/solutions/iot-manufacturing",
+          icon: "🏭"
+        },
+        {
+          name: "AI Quality Control System",
+          description: "Computer vision and AI-powered quality control for manufacturing processes.",
+          useCases: ["Automotive", "Electronics", "Food processing", "Pharmaceuticals"],
+          benefits: ["Zero defect production", "24/7 monitoring", "Cost reduction", "Quality consistency"],
+          pricing: "$40,000 - $150,000",
+          link: "https://ziontechgroup.com/solutions/ai-quality-control",
+          icon: "🔍"
+        },
+        {
+          name: "Digital Twin Platform",
+          description: "Digital twin technology for manufacturing optimization and predictive analytics.",
+          useCases: ["Process optimization", "Predictive maintenance", "Training simulation", "Performance analysis"],
+          benefits: ["Process optimization", "Reduced costs", "Better decision making", "Risk mitigation"],
+          pricing: "$60,000 - $250,000",
+          link: "https://ziontechgroup.com/solutions/digital-twin",
+          icon: "🔄"
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      ]
+    },
+    // Retail & E-commerce Solutions
+    {
+      category: "Retail & E-commerce",
+      solutions: [
+        {
+          name: "AI-Powered Customer Analytics",
+          description: "Advanced customer behavior analysis and personalized marketing automation platform.",
+          useCases: ["Online retail", "Brick-and-mortar stores", "Marketplaces", "Subscription services"],
+          benefits: ["Increased sales", "Better customer retention", "Personalized experiences", "Marketing optimization"],
+          pricing: "$20,000 - $80,000",
+          link: "https://ziontechgroup.com/solutions/retail-analytics",
+          icon: "🛒"
+        },
+        {
+          name: "Omnichannel Commerce Platform",
+          description: "Unified commerce platform for seamless customer experience across all channels.",
+          useCases: ["Multi-channel retail", "B2B commerce", "Marketplace operations", "Inventory management"],
+          benefits: ["Unified customer experience", "Increased sales", "Operational efficiency", "Better inventory management"],
+          pricing: "$35,000 - $120,000",
+          link: "https://ziontechgroup.com/solutions/omnichannel-commerce",
+          icon: "🔄"
+        },
+        {
+          name: "AR/VR Shopping Experience",
+          description: "Immersive shopping experiences with augmented and virtual reality technology.",
+          useCases: ["Furniture retail", "Fashion", "Home improvement", "Automotive"],
+          benefits: ["Enhanced customer engagement", "Reduced returns", "Better product visualization", "Competitive advantage"],
+          pricing: "$45,000 - $180,000",
+          link: "https://ziontechgroup.com/solutions/ar-vr-shopping",
+          icon: "🥽"
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      ]
+    },
+    // Education & Training Solutions
+    {
+      category: "Education & Training",
+      solutions: [
+        {
+          name: "AI-Powered Learning Platform",
+          description: "Personalized learning platform with AI-driven content recommendations and adaptive assessments.",
+          useCases: ["K-12 education", "Higher education", "Corporate training", "Professional development"],
+          benefits: ["Personalized learning", "Better engagement", "Improved outcomes", "Scalable delivery"],
+          pricing: "$25,000 - $100,000",
+          link: "https://ziontechgroup.com/solutions/ai-learning",
+          icon: "🎓"
+        },
+        {
+          name: "Virtual Reality Training",
+          description: "Immersive VR training solutions for high-risk industries and skill development.",
+          useCases: ["Healthcare training", "Industrial safety", "Military training", "Skill development"],
+          benefits: ["Safe training environment", "Cost-effective", "Realistic scenarios", "Better retention"],
+          pricing: "$35,000 - $150,000",
+          link: "https://ziontechgroup.com/solutions/vr-training",
+          icon: "🥽"
+        },
+        {
+          name: "Learning Analytics Dashboard",
+          description: "Comprehensive analytics platform for tracking learning outcomes and performance metrics.",
+          useCases: ["Educational institutions", "Training organizations", "Corporate L&D", "Government agencies"],
+          benefits: ["Performance tracking", "Data-driven decisions", "ROI measurement", "Continuous improvement"],
+          pricing: "$15,000 - $60,000",
+          link: "https://ziontechgroup.com/solutions/learning-analytics",
+          icon: "📊"
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      ]
+    },
+    // Government & Public Sector
+    {
+      category: "Government & Public Sector",
+      solutions: [
+        {
+          name: "Smart City Platform",
+          description: "Comprehensive smart city solution for urban planning, traffic management, and citizen services.",
+          useCases: ["Urban planning", "Traffic management", "Public safety", "Citizen services"],
+          benefits: ["Improved efficiency", "Better citizen experience", "Cost reduction", "Data-driven decisions"],
+          pricing: "$100,000 - $500,000",
+          link: "https://ziontechgroup.com/solutions/smart-city",
+          icon: "🏙️"
+        },
+        {
+          name: "Government Data Analytics",
+          description: "Advanced analytics platform for government data analysis and decision support.",
+          useCases: ["Policy analysis", "Resource allocation", "Performance monitoring", "Public reporting"],
+          benefits: ["Better policy decisions", "Transparency", "Efficiency improvement", "Public trust"],
+          pricing: "$50,000 - $200,000",
+          link: "https://ziontechgroup.com/solutions/government-analytics",
+          icon: "📊"
+        },
+        {
+          name: "Digital Identity Platform",
+          description: "Secure digital identity and authentication platform for government services.",
+          useCases: ["Citizen services", "Voting systems", "Healthcare access", "Financial services"],
+          benefits: ["Secure access", "Reduced fraud", "Better service delivery", "Cost savings"],
+          pricing: "$75,000 - $300,000",
+          link: "https://ziontechgroup.com/solutions/digital-identity",
+          icon: "🆔"
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+
+  }
+}
+      ];
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+  return (
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 From startups to enterprises, we provide tailored technology solutions that drive growth, 
 
 
@@ -558,6 +822,7 @@ const SolutionsPage: NextPage = () => {
           {solutions.map((category, categoryIndex) => (
             <div key={categoryIndex} className="bg-white rounded-2xl shadow-xl p-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+<<<<<<< HEAD
                 {category.category}
               </h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -659,6 +924,10 @@ const SolutionsPage: NextPage = () => {
 </motion.div>
           </div>
         </section>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">;
                   Every Business;
                 </span>;
@@ -678,6 +947,7 @@ const SolutionsPage: NextPage = () => {
             </motion && motion.div>;
           </div>;
         </section>;
+<<<<<<< HEAD
 import Link from 'next / link';
 import { motion } from 'framer-motion';
 import {
@@ -830,6 +1100,23 @@ function SolutionsPage() {
             <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">;
               {solutions.map ((solution, index) => {
                 const IconComponent = solution.icon;
+=======
+
+
+
+        {/* Solutions Grid */}
+        <section className="py-20 bg-gray-50">;
+          <div className="container mx-auto px-4">;
+            <motion&& motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+
+
+                const IconComponent = solution.icon;
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">;
@@ -842,11 +1129,20 @@ function SolutionsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
               {solutions && solutions.map((solution, index) => {;
                 const IconComponent = solution && solution.icon;
+<<<<<<< HEAD
                 return (
+=======
+
+
+                return (
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     whileHover={{ y: -5 }}>;
                     <div className={`w-16 h-16 bg-gradient-to-r ${solution && solution.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>;
                       <IconComponent className="w-8 h-8 text-white" />;
                     </div>;
+<<<<<<< HEAD
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">;
                       {solution && solution.title}
                     </h3>;
@@ -861,6 +1157,18 @@ function SolutionsPage() {
                         </li>;
                       ))}
                     </ul>;
+=======
+
+
+                          {feature}
+                        </li>;
+                      ))}
+
+                    </ul>;
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <Link
                       href={solution && solution.href}
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors">;
@@ -870,9 +1178,14 @@ function SolutionsPage() {
                   </motion && motion.div>;
                 );
               })}
+<<<<<<< HEAD
             </div>;
           </div>;
         </section>;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Industries Section */}
         <section className="py-20 bg-white">;
           <div className="container mx-auto px-4">;
@@ -880,6 +1193,7 @@ function SolutionsPage() {
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">;
@@ -892,6 +1206,10 @@ function SolutionsPage() {
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">;
               {industries && industries.map((industry, index) => (;
                 <motion&& motion.div
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   key={index}
                   className="text-center p-6 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors group cursor-pointer"
                   initial={{ opacity: 0, y: 30 }}
@@ -907,9 +1225,14 @@ function SolutionsPage() {
                   </div>;
                 </motion && motion.div>;
               ))}
+<<<<<<< HEAD
             </div>;
           </div>;
         </section>;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Stats Section */}
         <section className="py-20 bg-gray-900 text-white">;
           <div className="container mx-auto px-4">;
@@ -928,9 +1251,14 @@ function SolutionsPage() {
                   <div className="text-gray-300 font-medium">{stat && stat.label}</div>;
                 </motion && motion.div>;
               ))}
+<<<<<<< HEAD
             </div>;
           </div>;
         </section>;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
           <div className="container mx-auto px-4 text-center">;
@@ -960,6 +1288,7 @@ function SolutionsPage() {
     </Layout>;
   );
 }
+<<<<<<< HEAD
   );
 };
 export default SolutionsPage;
@@ -1068,6 +1397,14 @@ href="/contact"
   )
 };
 export default SolutionsPage;
+=======
+
+
+};
+export default SolutionsPage;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <motion.div;
           description: "Comprehensive smart city solution for urban planning, traffic management, and citizen services.",
           useCases: ["Urban planning", "Traffic management", "Public safety", "Citizen services"],
@@ -1424,6 +1761,7 @@ export default SolutionsPage;
     </Layout>);
 }
   );
+<<<<<<< HEAD
                     <Link;
                       href={solution.link  } catch (error) {
   )
@@ -1443,10 +1781,23 @@ export default SolutionsPage;
 }
                   </div>
                 ))  } catch (error) {
+=======
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+;
+export default SolutionsPage;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+                    <Link;
+                      href={solution.link  } catch (error) {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
               </div>;
             </div>;
           ))  } catch (error) {
@@ -1570,6 +1921,15 @@ export default SolutionsPage;
       </main>
     </div>
   )
+=======
+                      className="inline-block bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors w-full text-center"
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    >
+                      <span>Explore {solution.title}</span>
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 export default SolutionsPage;
@@ -1577,6 +1937,7 @@ export default SolutionsPage;
 
 export default SolutionsPage;
 
+<<<<<<< HEAD
 };
 
 },
@@ -1695,3 +2056,6 @@ export default SolutionsPage,
 export default SolutionsPage;
 
 export default SolutionsPage;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

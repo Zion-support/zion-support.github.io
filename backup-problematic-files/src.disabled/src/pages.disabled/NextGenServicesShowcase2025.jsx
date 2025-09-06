@@ -9,4 +9,8 @@ const NextGenServicesShowcase2025 = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default NextGenServicesShowcase2025;
+=======
+export default NextGenServicesShowcase2025;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

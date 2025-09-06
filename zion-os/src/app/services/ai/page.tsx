@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export default function AIServicesPage() {;
   return (;
@@ -15,6 +19,10 @@ export default function AIServicesPage() {;
 
 
             we deliver enterprise-grade AI solutions that drive real results.;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default /**
  * AIServicesPage - Function description
  */
@@ -71,6 +79,7 @@ export default function AIServicesPage() {;
               <p className="text - zinc - 300 mb - 6 text - lg">;
                 Enterprise - grade AI assistant with custom knowledge base integration, workflow automation,
 
+<<<<<<< HEAD
                 Enterprise-grade AI assistant with custom knowledge base integration, workflow automation,;
 
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
@@ -79,6 +88,13 @@ export default function AIServicesPage() {;
               <p className="text-zinc-300 mb-6 text-lg">;
                 Enterprise-grade AI assistant with custom knowledge base integration, workflow automation;
                 Enterprise-grade AI assistant with custom knowledge base integration, workflow automation,;
+=======
+=======
+
+                Enterprise-grade AI assistant with custom knowledge base integration, workflow automation,;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 and seamless integration with your existing systems.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -123,6 +139,10 @@ export default function AIServicesPage() {;
 
 
                 SEO-optimized content for blogs, social media, and marketing materials.;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">✍️</div>;
               <h2 className="text - 3xl font - bold mb - 4">AI Content Generation</h2>;
@@ -180,6 +200,7 @@ export default function AIServicesPage() {;
               <p className="text - zinc - 300 mb - 6 text - lg">;
                 Transform your data into actionable insights with machine learning - powered analytics,
 
+<<<<<<< HEAD
                 Transform your data into actionable insights with machine learning-powered analytics,;
 
             {/* AI-Powered Analytics */}
@@ -189,6 +210,13 @@ export default function AIServicesPage() {;
               <p className="text-zinc-300 mb-6 text-lg">;
                 Transform your data into actionable insights with machine learning-powered analytics;
                 Transform your data into actionable insights with machine learning-powered analytics,;
+=======
+=======
+
+                Transform your data into actionable insights with machine learning-powered analytics,;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 predictive modeling, and intelligent business intelligence solutions.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -234,6 +262,7 @@ export default function AIServicesPage() {;
               <p className="text - zinc - 300 mb - 6 text - lg">;
                 Provide 24 / 7 intelligent customer support with AI - powered chatbots, virtual assistants,
 
+<<<<<<< HEAD
                 Provide 24/7 intelligent customer support with AI-powered chatbots, virtual assistants,;
 
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
@@ -242,6 +271,13 @@ export default function AIServicesPage() {;
               <p className="text-zinc-300 mb-6 text-lg">;
                 Provide 24/7 intelligent customer support with AI-powered chatbots, virtual assistants;
                 Provide 24/7 intelligent customer support with AI-powered chatbots, virtual assistants,;
+=======
+=======
+
+                Provide 24/7 intelligent customer support with AI-powered chatbots, virtual assistants,;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 and automated customer service solutions that never sleep.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -286,6 +322,10 @@ export default function AIServicesPage() {;
 
 
                 document processing, and AI-powered business process optimization.;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">⚙️</div>;
               <h2 className="text - 3xl font - bold mb - 4">AI Process Automation</h2>;
@@ -343,6 +383,7 @@ export default function AIServicesPage() {;
               <p className="text - zinc - 300 mb - 6 text - lg">;
                 Protect your enterprise with AI - powered threat detection, compliance monitoring,
 
+<<<<<<< HEAD
                 Protect your enterprise with AI-powered threat detection, compliance monitoring,;
 
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
@@ -351,6 +392,13 @@ export default function AIServicesPage() {;
               <p className="text-zinc-300 mb-6 text-lg">;
                 Protect your enterprise with AI-powered threat detection, compliance monitoring;
                 Protect your enterprise with AI-powered threat detection, compliance monitoring,;
+=======
+=======
+
+                Protect your enterprise with AI-powered threat detection, compliance monitoring,;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 and automated security solutions that adapt to evolving threats.;
               </p>;
               <div className="space - y-4 mb - 8">;

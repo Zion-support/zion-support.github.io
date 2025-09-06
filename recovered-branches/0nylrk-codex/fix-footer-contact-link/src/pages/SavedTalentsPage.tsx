@@ -11,6 +11,7 @@ import {toast} from "@/components/ui/use-toast";
 import {useNavigate} from "react-router-dom";
 export default function SavedTalentsPage() {;
 
+<<<<<<< HEAD
 
 
 
@@ -153,6 +154,72 @@ export default function SavedTalentsPage() {;
           .select(
             `
             talent_profile (
+=======
+  const { user } = useAuth();
+  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
+  const [isLoading, setIsLoading] = useState(true);
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+  useEffect(() => {;
+    const fetchSavedTalents = async () => {;
+
+      setIsLoading(true);
+      try {;
+        if (!user) {;
+          console && console.warn("User not authenticated.");
+          return;
+        }
+
+import { useState, useEffect } from './react';
+import { AppHeader } from '@/layout / AppHeader';
+import { Footer } from '@/components / Footer';
+import { SEO } from '@/components / SEO';
+import { TalentCard } from '@/components / talent / TalentCard';
+import { use_auth } from '@/hooks / use_auth';
+import { supabase } from '@/integrations / supabase / client';
+import { TalentProfile } from '@/types / talent';
+import { toast } from '@/components / ui / use - toast';
+import { use_navigate } from './react-router-dom';
+export default /**
+ * SavedTalentsPage - Function description
+ */
+function SavedTalentsPage() {
+  const { user } = use_auth ();
+  const [saved_talents, setSavedTalents] = useState < TalentProfile[]>([]);
+  const [is_loading, setIsLoading] = useState (true);
+  const navigate = use_navigate ();
+;
+  useEffect (() => {
+    const fetchSavedTalents = async () => {
+      setIsLoading (true);
+      try {
+        // Check condition
+if ( {) {
+  $2
+}
+          console.warn ("User not authenticated.");
+          return;
+        }
+        const { data, error } = await supabase;
+          .from ("saved_talents");
+          .select (
+            `;
+
+            talent_profile (
+=======
+
+        const { data, error } = await supabase;
+          .from("saved_talents");
+          .select(;
+            `;
+            talent_profile (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               id;
               user_id;
               full_name;
@@ -165,6 +232,7 @@ export default function SavedTalentsPage() {;
               skills;
               location;
               availability;
+<<<<<<< HEAD
               is_verified
             )
           `
@@ -173,17 +241,23 @@ export default function SavedTalentsPage() {;
         if (error) {
           throw error
         }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         if (data) {
           // Extract talent profiles and convert to TalentProfile type
           const talentProfiles = data.map(
             item => item.talent_profile as unknown as TalentProfile
+<<<<<<< HEAD
           .eq("user_id", user && user.id);
 
           );
@@ -205,11 +279,56 @@ export default function SavedTalentsPage() {;
             );
           `;
           );
+=======
+
+              is_verified;
+            );
+          `;
+
+          );
+          .eq("user_id", user && user.id);
+
+=======
+          );
+
+          .eq("user_id", user.id),;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        if (error) {;
+          throw error;
+=======
+              is_verified);
+          `);
+          .eq ("user_id", user.id);
+;
+        // Check condition
+if ( {) {
+  $2
+}
+          throw error;
+        }
+        // Check condition
+if ( {) {
+  $2
+}
+          // Extract talent profiles and convert to TalentProfile type;
+          const talent_profiles = data.map (
+            item => item.talent_profile as unknown as TalentProfile);
+          setSavedTalents (talent_profiles);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+        }
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      } catch (error) {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         console.error ("Error fetching saved talents:", error);
         toast ({
           title: "Error",
           description: "Failed to load saved talents. Please try again later.",
           variant: "destructive"});
+<<<<<<< HEAD
       } finally {
         setIsLoading (false);
           .eq("user_id", user.id),;
@@ -248,6 +367,14 @@ export default function SavedTalentsPage() {;
   const handleViewProfile = (talentId: string) => {
     navigate(`/talent/${talentId}`)
   }
+=======
+
+      } finally {
+        setIsLoading (false);
+      }
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
 
     fetchSavedTalents()
@@ -257,8 +384,15 @@ export default function SavedTalentsPage() {;
     navigate(`/talent/${talentId}`)
   },
 
+<<<<<<< HEAD
   const handleRequestHire = (talent: TalentProfile) => {
     // // // console.log("Request to hire:", talent),
+=======
+
+
+  const handleRequestHire = (talent: TalentProfile) => {
+    console.log("Request to hire:", talent);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     toast({
       title: "Hire Request Sent"
       description: `A hire request has been sent to ${talent.full_name}.`})
@@ -268,9 +402,12 @@ export default function SavedTalentsPage() {;
 
 
 
+<<<<<<< HEAD
   }
   },
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleToggleSave = async (talentId: string, isCurrentlySaved: boolean) => {
     try {
       if (!user) {
@@ -278,6 +415,7 @@ export default function SavedTalentsPage() {;
         return
 
 
+<<<<<<< HEAD
       }
       if (isCurrentlySaved) {
         // Remove from saved talents
@@ -289,6 +427,10 @@ export default function SavedTalentsPage() {;
         if (error) {
           throw error
         }
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       } catch (error) {;
         console.error("Error fetching saved talents:", error),;
         toast({;
@@ -326,6 +468,10 @@ export default function SavedTalentsPage() {;
           .eq('talent_id', talentId),;
         if (error) {;
           throw error;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
         }
@@ -333,11 +479,14 @@ export default function SavedTalentsPage() {;
         setSavedTalents(prevTalents =>
           prevTalents.filter(talent => talent.id !== talentId)
         );
+<<<<<<< HEAD
         }
   
         setSavedTalents(prevTalents =>
           prevTalents.filter(talent => talent.id !== talentId)
         ),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         toast({
           title: "Talent Removed"
           description: "Talent removed from saved list."})
@@ -354,6 +503,10 @@ export default function SavedTalentsPage() {;
           .from('talent_profiles')
           .select('*')
           .eq('id', talentId)
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           .single(),
   
@@ -361,11 +514,14 @@ export default function SavedTalentsPage() {;
 
         if (talentError) {
           console.error("Error fetching talent profile:", talentError);
+<<<<<<< HEAD
           .single();
           .single(),
   
         if (talentError) {
           console.error("Error fetching talent profile:", talentError),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           toast({
             title: "Error"
             description: "Failed to update saved talents. Please try again later."
@@ -373,18 +529,27 @@ export default function SavedTalentsPage() {;
           return
         }
         if (talentData) {
+<<<<<<< HEAD
           setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]),
+=======
+          setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           toast({
             title: "Talent Saved"
             description: "Talent saved to your list."})
         }
       }
     } catch (error) {
+<<<<<<< HEAD
       console.error("Error toggling saved talent:", error),
+=======
+      console.error("Error toggling saved talent:", error);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast({
         title: "Error"
         description: "Failed to update saved talents. Please try again later."
         variant: "destructive"})
+<<<<<<< HEAD
     },;
 ;
     fetchSavedTalents(),;
@@ -502,6 +667,8 @@ export default function SavedTalentsPage() {;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
             {savedTalents.map((talent) => (
               <TalentCard
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               <TalentCard
 
@@ -558,6 +725,10 @@ export default function SavedTalentsPage() {;
       <SEO;
         title="Saved Talents | Zion AI Marketplace";
         description="View and manage your saved talents in the Zion AI Marketplace";
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       />;
       <AppHeader />;
       <div className="container mx-auto px-4 py-8">;
@@ -565,9 +736,20 @@ export default function SavedTalentsPage() {;
         <p className="text-muted-foreground">;
           Here are the talents you've saved for future reference.;
         </p>;
+<<<<<<< HEAD
             {savedTalents && savedTalents.map((talent) => (;
               <TalentCard
                 key={talent && talent.id}
+=======
+
+        {isLoading ? (;
+          <div className="text-center py-8">Loading saved talents...</div>;
+        ) : savedTalents && savedTalents.length === 0 ? (;
+          <div className="text-center py-8">No talents saved yet.</div>;
+        ) : (;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
     fetchSavedTalents ();
   }, [user]);
@@ -770,6 +952,7 @@ is verified) `) if (data) {
 }
 ;
 
+<<<<<<< HEAD
 };
 }, [user]);
 };
@@ -813,3 +996,6 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
 }</div> <Footer /> </>) 
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

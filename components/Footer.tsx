@@ -29,6 +29,7 @@ import {;
   Linkedin,;
   Instagram,;
   ArrowRight,;
+<<<<<<< HEAD
 } from "lucide-react";
 import React from 'react;';
 import Link from 'next/link';
@@ -61,6 +62,19 @@ import {
 import React from 'react;';
 import Link from 'next/link';
 
+=======
+
+} from "lucide-react";
+
+import React from 'react;';
+import Link from 'next/link';
+
+export default function Footer() {
+  const currentYear = new Date().getFullYear();
+  const footerLinks = {
+    services: [
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from './react';
 import Link from './next / link';
 import {
@@ -188,7 +202,11 @@ export default function Footer() {;
       { name: 'White Papers', href: '/white-papers' },
       { name: 'Support', href: '/support' }
     ]
+<<<<<<< HEAD
 export default function Footer() {
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function Footer() {;
   const currentYear = new Date().getFullYear();
   const footerLinks = {;
@@ -225,6 +243,12 @@ export default function Footer() {;
       { name: "Support", href: "/support" },;
     ],;
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   };
 
   };
@@ -245,11 +269,14 @@ origin/automation-improvements-final
       <div className="container mx-auto px-4 py-12">;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">;
           {/* Company Info */}
+<<<<<<< HEAD
           <div className="lg:col-span-2">
             <Link href="/" className="text-2xl font-bold text-white mb-4 block">
               Zion Tech Group
             </Link>
             <p className="text-gray-300 mb-6 max-w-md">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           <div className="lg:col-span-2">;
             <Link href="/" className="text-2xl font-bold text-white mb-4 block">;
@@ -261,12 +288,18 @@ origin/automation-improvements-final
               blockchain, IoT, and digital transformation services.;
             </p>;
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, 
               quantum computing, blockchain, IoT, and digital transformation services.
             </p>
             
 
+<<<<<<< HEAD
               Leading technology solutions provider specializing in AI,
               cybersecurity, cloud infrastructure, quantum computing,
               blockchain, IoT, and digital transformation services.
@@ -280,10 +313,14 @@ origin/automation-improvements-final
             </p>
             
 origin/automation-improvements-final
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Leading technology solutions provider specializing in AI
               cybersecurity, cloud infrastructure, quantum computing
               blockchain, IoT, and digital transformation services.
             </p>
+<<<<<<< HEAD
             {/* Contact Info */}
                 <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
             {/* Contact Info */}
@@ -298,6 +335,9 @@ origin/automation-improvements-final
               </div>
               <div className="flex items-start text-gray-300">
                 <MapPin className="w-4 h-4 mr-3 mt-1 flex-shrink-0" />
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Contact Info */}
 
 
@@ -307,8 +347,20 @@ origin/automation-improvements-final
                   <br />
                   Middletown DE 19709
                 </span>
+<<<<<<< HEAD
                 <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
                 <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+=======
+=======
+
+
+                <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+
+
+=======
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook, Instagram } from lucide-react';
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear(),
@@ -396,23 +448,43 @@ const Footer: React.FC = () => {
               <div className="flex items-center">
                 <MapPin className=w-4 h-4 mr-2 text-blue-400" />
                 <span>364 E Main St STE 1008 Middletown DE 19709</span>
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <span>
                   364 E Main St STE 1008
                   <br />
                   Middletown DE 19709
                 </span>
 
+<<<<<<< HEAD
 origin/main
 origin/automation-improvements-final
+=======
+=======
+
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </div>
             </div>
           </div>
           {/* Services */}
           <div>
+<<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               {footerLinks.services.map((link) => (
@@ -431,10 +503,18 @@ origin/automation-improvements-final
                   </Link>
                 </li>
 
+<<<<<<< HEAD
 
               ))}
             </ul>
           </div>
+=======
+=======
+
+
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <h3 className="text-lg font-semibold mb-6>Services</h3>
             <div className="space-y-4">
               {Object.entries(services).map(([category, links]) => (
@@ -457,6 +537,50 @@ origin/automation-improvements-final
               ))}
             </ul>
           </div>
+<<<<<<< HEAD
+=======
+
+
+
+=======
+
+>>>>>>> origin/automation-improvements-final
+=======
+            <div className="space-y-3">;
+              <div className="flex items-center text-gray-300">;
+                <Phone className="w-4 h-4 mr-3" />;
+                <span>+1 302 464 0950</span>;
+              </div>;
+              <div className="flex items-center text-gray-300">;
+                <Mail className="w-4 h-4 mr-3" />;
+                <span>kleber@ziontechgroup && ziontechgroup.com</span>;
+              </div>;
+              <div className="flex items-start text-gray-300">;
+                <MapPin className="w-4 h-4 mr-3 mt-1 flex-shrink-0" />;
+                <span>;
+                  364 E Main St STE 1008;
+                  <br />;
+                  Middletown DE 19709;
+                </span>;
+              </div>;
+            </div>;
+          </div>;
+          {/* Services */}
+          <div>;
+            <h3 className="text-lg font-semibold mb-4">Services</h3>;
+            <ul className="space-y-2">;
+              {footerLinks && footerLinks.services.map((link) => (;
+                <li key={link && link.name}>;
+                  <Link
+                    href={link && link.href}
+                    className="text-gray-300 hover:text-white transition-colors">;
+                    {link && link.name}
+                  </Link>;
+                </li>;
+              ))}
+            </ul>;
+          </div>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Solutions */}
           <div>;
             <h3 className="text-lg font-semibold mb-4">Solutions</h3>;
@@ -489,12 +613,22 @@ origin/automation-improvements-final
                   <Link
                     href={link.href}
                     className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
+<<<<<<< HEAD
 
 
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+=======
+
+=======
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   >
                     {link.name}
                   </Link>
@@ -504,6 +638,10 @@ origin/automation-improvements-final
           </div>
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     href={link && link.href}
                     className="text-gray-300 hover:text-white transition-colors">;
                     {link && link.name}
@@ -534,12 +672,22 @@ origin/automation-improvements-final
                   <Link
                     href={link.href}
                     className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
+<<<<<<< HEAD
 
 
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+=======
+
+=======
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   >
                     {link.name}
                   </Link>
@@ -548,11 +696,20 @@ origin/automation-improvements-final
             </ul>
 
 
+<<<<<<< HEAD
 
 ursor/integrate-build-improve-and-re-verify-8f7d
             
 origin/main
 origin/automation-improvements-final
+=======
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
               {footerLinks.resources.map((link) => (
@@ -575,6 +732,11 @@ origin/automation-improvements-final
                   </Link>;
                 </li>;
               ))}
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 ;
   return (
@@ -667,10 +829,18 @@ origin/automation-improvements-final
                     {link.name}
                   </Link>;
                 </li>))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </ul>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               />;
               <button className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center">;
                 Subscribe;
@@ -687,6 +857,11 @@ origin/automation-improvements-final
             <div className="text-gray-400 text-sm mb-4 md:mb-0">;
               © {currentYear} Zion Tech Group. All rights reserved.;
             </div>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Social Links */}
             <div className="flex space-x-4 mb-4 md:mb-0">;
               <a
@@ -714,6 +889,7 @@ origin/automation-improvements-final
                 href="https://instagram && instagram.com/ziontechgroup"
                 target="_blank"
                 rel="noopener noreferrer"
+<<<<<<< HEAD
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <Instagram className="w-5 h-5" />
@@ -721,12 +897,29 @@ origin/automation-improvements-final
             </div>
             {/* Legal Links */}
             <div className="flex space-x-6 text-sm">
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Link
                 href="/privacy"
                 className="text-gray-400 hover:text-white transition-colors"
               >
+<<<<<<< HEAD
               <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
               <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
+=======
+=======
+
+
+              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
+
+
+=======
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Social Links */}
             <div className=mt-6">
               <h4 className="text-sm font-medium text-blue-400 mb-3>Follow Us</h4>
@@ -755,15 +948,29 @@ origin/automation-improvements-final
             </div>
             <div className="flex space-x-6 text-sm>
               <Link href="/privacy" className=text-gray-400 hover:text-white transition-colors">
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Link
                 href="/privacy"
                 className="text-gray-400 hover:text-white transition-colors"
               >
 
+<<<<<<< HEAD
 origin/main
 origin/automation-improvements-final
+=======
+=======
+
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 Privacy Policy
               </Link>
                 className="text-gray-400 hover:text-white transition-colors">;
@@ -874,6 +1081,7 @@ origin/automation-improvements-final
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 }
     </footer>);
 }
@@ -898,3 +1106,19 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 }
+=======
+
+
+=======
+}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+    </footer>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

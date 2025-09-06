@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from "react"
 import {Header} from "@/components/Header"
 import {SEO} from "@/components/SEO"
@@ -43,6 +44,8 @@ export default function TenantOnboarding() {
   const [activeTab, setActiveTab] = useState("company"),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [formData, setFormData] = useState({
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const [formData, setFormData] = useState({
 
     brand_name: ""
@@ -55,12 +58,17 @@ const [formData, setFormData] = useState({
     custom_domain: ""
 
     is_co_branded: true
+<<<<<<< HEAD
   });
   // Check if user has admin role
   const isAdmin = null;
   });
   // Check if user has admin role
   const isAdmin = null;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   })
   // Check if user has admin role
   const isAdmin = user?.role === "admin";
@@ -153,7 +161,10 @@ const [formData, setFormData] = useState({
     }
   },
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   return (
       <SEO 
@@ -365,9 +376,13 @@ ursor/fix-website-loading-errors-and-merge-6662
       </main>
     </>
   )
+<<<<<<< HEAD
 }
 ursor/fix-website-loading-errors-and-merge-6662
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -710,6 +725,11 @@ export default function TenantOnboarding() {;
     </>;
   );
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { SEO } from '@/components / SEO';
@@ -748,5 +768,9 @@ function TenantOnboarding() {
       }
   );
 }
+<<<<<<< HEAD
 ;
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

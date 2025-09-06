@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import type { BlogAuthor } from '@/types/blog';
 interface AuthorBioProps {
@@ -40,11 +41,14 @@ export function AuthorBio({ author }: AuthorBioProps) {
         <p className="font-medium text-lg">{author.name}</p>
         {author.title && <p className="text-sm text-muted-foreground mb-2">{author.title}</p>}
       <img
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <img
         src={author.avatarUrl}
         alt={author.name}
         className="w-16 h-16 rounded-full mr-4 mb-4 md: mb-0"
         onError={(e) => {
+<<<<<<< HEAD
           const target = e.currentTarget as HTMLImageElement
           target.src = '/images/blog-placeholder.svg'
         }}
@@ -71,19 +75,33 @@ export function AuthorBio({ author }: AuthorBioProps) {
         className="w-16 h-16 rounded-full mr-4 mb-4 md: mb-0"
         onError={(e) => {
           const target = e.currentTarget as HTMLImageElement,
+=======
+
+          const target = e.currentTarget as HTMLImageElement,
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           target.src = '/images/blog-placeholder.svg'
         }}
       />
       <div>
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
         <p className="font-medium text-lg">{author.name}</p>
 
+=======
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <p className="font-medium text-lg">{author.name}</p>
         {author.title && <p className="text-sm text-muted-foreground mb-2">{author.title}</p>}
         <p>{author.bio}</p>
       </div>
     </div>
   )
+<<<<<<< HEAD
 }/> <div> <p className="font-medium text-lg" > {
   author.name
 }</p> {"
@@ -94,6 +112,9 @@ ursor/fix-website-loading-errors-and-merge-6662
   author.bio
 }</p>
 }'"}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 interface AuthorBioProps {;
@@ -294,4 +315,8 @@ export function AuthorBio({ author } AuthorBioProps) {;
 }
 ;
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

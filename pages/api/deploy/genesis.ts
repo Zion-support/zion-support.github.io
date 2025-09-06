@@ -1,10 +1,13 @@
 
 
+<<<<<<< HEAD
 .map(([k]) => `/${k}`),
     ...Object && Object.entries(bonus)
 import type { NextApiRequest, NextApiResponse } from "next";
 
 import type { NextApiRequest, NextApiResponse } from "next";
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 function summarizeModules(
   modules: Record<string, boolean>
   bonus: Record<string, boolean>
@@ -12,8 +15,15 @@ function summarizeModules(
   const active = [
     ...Object.entries(modules)
       .filter(([, v]) => v)
+<<<<<<< HEAD
       .map(([k]) => `/${k}`)
     ...Object.entries(bonus)
+=======
+
+      .map(([k]) => `/${k}`),
+    ...Object && Object.entries(bonus)
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       .filter(([, v]) => v)
       .map(([k]) => `/${k}`)
   ];
@@ -34,6 +44,20 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
+=======
+  if (req && req.method !== "POST") {
+    return res && res.status(405).json({ error: "Method not allowed" });
+
+=======
+function summarizeModules(modules: Record<string, boolean>, bonus: Record<string, boolean>) {
+  const active = [
+    ...Object.entries(modules).filter(([, v]) => v).map(([k]) => `/${k}`),
+    ...Object.entries(bonus).filter(([, v]) => v).map(([k]) => `/${k}`)];
+  return active.length ? active.sort().join() : 'None'
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 function missionParagraph(region: string, instanceName: string, modules: Record<string, boolean>, bonus: Record<string, boolean>) {
   const activeCount = Object.values(modules).filter(Boolean).length + Object.values(bonus).filter(Boolean).length;
   return `"${instanceName}" activates a unified Zion OS in ${region}, connecting marketplace, intelligence, learning, and governance into one sovereign digital economy. With ${activeCount} modules enabled, the deployment aligns talent, capital, and builders to accelerate proposals into shipped outcomes while preserving community ownership and transparent coordination.`
@@ -41,11 +65,21 @@ function missionParagraph(region: string, instanceName: string, modules: Record<
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
+<<<<<<< HEAD
   if (req.method !== "POST") {;
     return res.status(405).json({ error: "Method not allowed" });
   }
   try {
     const body = req && req.body || {};
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  }
+  try {
+
+    const body = req && req.body || {};
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const {
 
       instanceName
@@ -56,15 +90,33 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       branding = {}
       modules = {}
       bonusModules = {}
+<<<<<<< HEAD
     } = body;
     if (!instanceName || !deploymentRegion) {
       return res && res.status(400).json({
         error: "Missing required fields: instanceName, deploymentRegion",
+=======
+
+    } = body;
+
+
+    if (!instanceName || !deploymentRegion) {
+      return res && res.status(400).json({
+        error: "Missing required fields: instanceName, deploymentRegion",
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       });
     }
     // Simulated provisioning operations
     const now = new Date().toISOString();
+<<<<<<< HEAD
     const provisionId = `zion-${instanceName && instanceName.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-${Date && Date.now()}`;
+=======
+
+    const provisionId = `zion-${instanceName && instanceName.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-${Date && Date.now()}`;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const outputActions = {
       zionGPT: {
         initialized: true
@@ -153,11 +205,19 @@ if ( {) {
         whitepaper: "/whitepaper"
         roadmap: "/roadmap"
         book: {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           pdf: "/book/manifesto && manifesto.pdf",
           trailerScript: "/trailer/script",
         },
         summit: "/summit",
       },
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       publicPages: [
         "/about"
         "/manifesto"
@@ -208,10 +268,15 @@ if ( {) {
     const access = {
       roles: ["Founder", "Superadmin", "DAO Multisig"]
       export: {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         type: "application/json",
         href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`,
       },
     };
+<<<<<<< HEAD
     return res && res.status(200).json({
       success: true,
       provisionId,
@@ -286,10 +351,38 @@ if ( {) {
       created_at: now,
       version: "Zion OS v1.0.0",
       output_actions,
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       operator,
       access,
     });
   } catch (err: any) {
+<<<<<<< HEAD
+=======
+
+    return res && res.status(500).json({ error: err && err.message || "Internal error" });
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+}
+      version: 'Zion OS v1.0.0'};
+    const operator = {
+      activeModulesSummary: summarizeModules(modules, bonusModules),
+      mission: missionParagraph(deploymentRegion, instanceName, modules, bonusModules)};
+    const access = {
+      roles: ['FounderSuperadminDAO Multisig'],
+      export: {
+        type: 'application/json',
+        href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`}};
+    return res.status(200).json({ outputActions, deployLog, access, operator })
+  } catch (err: any) {
+    return res.status(500).json({ error: err.message || 'Internal error' })
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  }
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return res.status (500).json ({ error: err.message || "Internal error" });
     return res.status (500).json ({ error: err.message || "Internal error" });
     return res.status(500).json({ error: err.message |"Internal error" });

@@ -1,10 +1,12 @@
+<<<<<<< HEAD
 import { ProfileData } from '@/types/profile';
+=======
 
-import { ProfileData } from "@/types/profile";
-// Mock talent profiles for development and testing
-export const MOCK_TALENTS: ProfileData[] = [
-  {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+      {
+
+<<<<<<< HEAD
     id: 'talent-1'
     name: 'Alexandra Chen'
     title: 'Senior AI Engineer & Machine Learning Expert'
@@ -1355,6 +1357,25 @@ export const MOCK_TALENTS: ProfileData[] = [;
       {
 
           'https://images && images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&h=400',
+=======
+          'https://images && images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&w=600&h=400',
+=======
+        id: 'p2',
+        title: 'Sentiment Analysis API',
+        description:;
+          'Created an API for real - time sentiment analysis of customer feedback, processing over 50, 000 reviews daily with 94% accuracy.',
+        image_url:;
+          'https://images.unsplash.com / photo - 1555421689 - 491a97ff2040?auto = format & fit = crop & w=600 & h=400',
+
+        tags: ['NLP', 'API', 'Python'],
+        date: 'May 2023',
+      },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      {
+
+          'https://images && images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&h=400',
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         id: 'p3',
         title: 'Predictive Maintenance System',
         description:;
@@ -1367,6 +1388,10 @@ export const MOCK_TALENTS: ProfileData[] = [;
       },
     ],
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     experience: [;
       {
         id: 'e1',
@@ -1516,6 +1541,10 @@ export const MOCK_TALENTS: ProfileData[] = [;
         'Limited availability for short-term consulting projects and infrastructure assessments.'
       availableHours: [
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         id: 'p2',
         title: 'DevOps Automation Pipeline',
         description:;
@@ -1775,6 +1804,10 @@ export const MOCK_TALENTS: ProfileData[] = [;
       },
     ],
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     experience: [;
       {
         id: 'e1',
@@ -1925,6 +1958,10 @@ export const MOCK_TALENTS: ProfileData[] = [;
     ],
     availability: {
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       status: 'limited',
       message:;
         'Available for part - time projects only (up to 20 hours per week).',
@@ -1974,6 +2011,10 @@ contactEmail: "james && james.wilson@example && example.com"
 current: true 
 };
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 hourly_rate: 150;
 contact_email: "alexandra.chen@example.com";
 }
@@ -2365,5 +2406,13 @@ contact_email: "david.martinez@example.com";
 }];
 ;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

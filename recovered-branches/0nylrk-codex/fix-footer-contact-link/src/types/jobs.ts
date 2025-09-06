@@ -17,6 +17,7 @@ export interface JobBudget {
 
 }
 export interface Job {
+<<<<<<< HEAD
 
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
 export type JobCategory =
@@ -29,6 +30,9 @@ export type JobCategory =
   | 'other';
 export interface JobBudget {
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export type JobCategory = 
   | 'development' 
@@ -40,6 +44,10 @@ export type JobCategory =
   | 'other';
 
 export interface JobBudget {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   min: number;
   max: number
   currency: string
@@ -48,9 +56,13 @@ export interface JobBudget {;
 
 export interface Job {;
 
+<<<<<<< HEAD
 export interface Job {
 
 export interface Job {;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
   client_id: string;
   title: string;
@@ -71,22 +83,37 @@ export interface JobFormData {
 
 export interface JobFormData {;
 
+<<<<<<< HEAD
   created_at: string
   updated_at: string
 }
 export interface JobFormData {
 
 export interface JobFormData {;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   title: string;
   description: string;
   category: JobCategory;
   skills: string;
+<<<<<<< HEAD
   budgetMin: number;
   budgetMax: number
   deadline: Date
 }
 // Add JobMatch interface to be shared across components
 export interface JobMatch {;
+=======
+
+  budget_min: number;
+  budget_max: number,
+  deadline: Date;
+}
+// Add JobMatch interface to be shared across components;
+
+export interface JobMatch {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
   job_id: string;
   talent_id: string;
@@ -109,6 +136,7 @@ export interface JobMatch {;
     skills: string[];
     location?: string;
 
+<<<<<<< HEAD
 
 
 export interface ResumeAttachment {;
@@ -121,18 +149,44 @@ export interface ResumeAttachment {;
 export interface ResumeAttachment {
 
 export interface ResumeAttachment {;
+=======
+    category?: string,
+    company_name?: string;
+
+  }
+}
+
+
+
+export interface ResumeAttachment {;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
   title: string;
   type: 'ai_resume' | 'custom_upload';
   file_url?: string;
   resume_id?: string;
+<<<<<<< HEAD
 ;
 
 export interface JobApplication {
+=======
+
+  summary?: string,
+  skills?: string[];
+}
+export type ApplicationStatus = 'new' | 'viewed' | 'shortlisted' | 'interview' | 'hired' | 'rejected';
+;
+
+export interface JobApplication {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 export interface JobApplication {;
 
+<<<<<<< HEAD
   summary?: string
   skills?: string[]
 }
@@ -140,6 +194,9 @@ export type ApplicationStatus = 'new' | 'viewed' | 'shortlisted' | 'interview' |
 export interface JobApplication {
 
 export interface JobApplication {;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
   job_id: string;
   talent_id: string;
@@ -156,16 +213,27 @@ export interface JobApplication {;
     full_name: string;
     professional_title: string;
     profile_picture_url?: string;
+<<<<<<< HEAD
     bio: string
     skills: string[]
   }
   resume?: ResumeAttachment;
   // New fields for resume scoring
+=======
+
+    bio: string,
+    skills: string[];
+
+  }
+  resume?: ResumeAttachment;
+  // New fields for resume scoring;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   match_score?: number;
   match_summary?: string;
   match_breakdown?: {
     skills_match?: {
       score: number;
+<<<<<<< HEAD
       matching: string[],
 
 
@@ -186,6 +254,14 @@ export interface JobApplication {;
 
   notes?: string,  // New field for client notes
 }
+=======
+
+      matching: string[],
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed',;
 export type JobCategory =;
   | 'development';
@@ -293,6 +369,7 @@ export interface JobApplication {;
       score: number,;
       matching: string[],;
 
+<<<<<<< HEAD
 
 
 }
@@ -313,3 +390,27 @@ export interface JobApplication {;
   notes?: string,  // New field for client notes;
 }
 ;
+=======
+      missing: string[];
+    }
+    experience_match?: {
+      score: number,
+      analysis: string;
+    }
+    education_match?: {
+      score: number,
+      analysis: string;
+    }
+  }
+  match_suggestion?: string;
+  scored_at?: string;
+  notes?: string,  // New field for client notes;
+
+
+
+
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

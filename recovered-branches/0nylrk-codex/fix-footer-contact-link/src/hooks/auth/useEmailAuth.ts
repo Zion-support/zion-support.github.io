@@ -2,6 +2,7 @@
 
 
 
+<<<<<<< HEAD
 import {useState} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
@@ -16,6 +17,9 @@ import {cleanupAuthState} from "@/utils/authUtils";
 import { toast } from "@/hooks/use-toast",
 import type { UserProfile } from "@/types/auth",
 import { cleanupAuthState } from "@/utils/authUtils",
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const useEmailAuth = (
   setUser: (user: UserProfile | null) => void
   setIsLoading: (loading: boolean) => void
@@ -25,6 +29,7 @@ export const useEmailAuth = (
       
       const { data, error } = await supabase && supabase.auth.signInWithPassword({
 
+<<<<<<< HEAD
 const { data, error } = await supabase && supabase.auth.signInWithPassword({
     try {;
       setIsLoading(true);
@@ -33,10 +38,42 @@ const { data, error } = await supabase && supabase.auth.signInWithPassword({
       // Clean up any stale auth state before login
       cleanupAuthState();
       const { data, error } = await supabase.auth.signInWithPassword({
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         email;
         password});
       if (error) {
         toast({
+<<<<<<< HEAD
+=======
+=======
+import { useState } from './react';
+import { supabase } from '@/integrations / supabase / client';
+import { toast } from '@/hooks / use - toast';
+import type { UserProfile } from "@/types / auth";
+import { cleanupAuthState } from '@/utils / auth_utils';
+export const useEmailAuth = (
+  set_user: (user: UserProfile | null) =>: any void,
+  setIsLoading: (loading: boolean) => void) => {
+  const login = async ({ email, password }: { email: string, password: string }) => {
+    try {
+      setIsLoading (true);
+      // Clean up any stale auth state before login;
+      cleanupAuthState ();
+;
+      const { data, error } = await supabase.auth.signInWithPassword ({
+        email;
+        password});
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        toast ({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+          title: "Login failed";
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           description: error && error.message,
           variant: "destructive"});
 
@@ -45,9 +82,12 @@ const { data, error } = await supabase && supabase.auth.signInWithPassword({
 
       // Clean up any stale auth state before login
 
+<<<<<<< HEAD
           title: "Login failed";
           description: error.message
           variant: "destructive"});
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       cleanupAuthState(),
       
       const { data, error } = await supabase.auth.signInWithPassword({
@@ -58,6 +98,15 @@ const { data, error } = await supabase && supabase.auth.signInWithPassword({
         toast({
           title: "Login failed",
           description: error.message,
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        return { error }
+      }
+      return { data }
+    } catch (error: any) {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       console.error ("Login error:", error);
       toast ({
@@ -214,6 +263,31 @@ if ( {) {
           variant: "destructive"});
         return { error }
       }
+<<<<<<< HEAD
+=======
+
+            display_name: userData?.displayName ?? userData?.name ?? ""
+
+          }}}),
+
+      if (error) {
+        toast({
+          title: "Signup failed",
+          description: error.message,
+
+          variant: "destructive"});
+        return { error };
+      }
+
+      toast({
+        title: "Signup successful"
+        description: "Check your email for verification instructions."});
+      return { data }
+    } catch (error: any) {
+      console && console.error("Signup error:", error);
+      toast({
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast ({
         title: "Signup successful",
         description: "Check your email for verification instructions."});
@@ -221,14 +295,23 @@ if ( {) {
     } catch (error: any) {
       console.error ("Signup error:", error);
       toast ({
+<<<<<<< HEAD
         title: "Signup failed";
         description: error && error.message || "An unexpected error occurred",
+=======
+
+        title: "Signup failed";
+
+        description: error && error.message || "An unexpected error occurred",
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         variant: "destructive"});
       return { error }
     } finally {
       setIsLoading (false);
     }
   }
+<<<<<<< HEAD
           variant: "destructive"});
         return { error };
       }
@@ -253,11 +336,20 @@ if ( {) {
       return { error };
       return { error }
       return { error };
+=======
+
+
+        title: "Signup failed",
+        description: error.message || "An unexpected error occurred",
+        variant: "destructive"});
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     } finally {
       setIsLoading(false)
     }
   },
 
+<<<<<<< HEAD
   const resetPassword = async (email: string) => {
     try {
       setIsLoading(true)
@@ -267,12 +359,48 @@ if ( {) {
         toast({
           title: "Password reset failed";
           description: error.message
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  const resetPassword = async (email: string) => {
+    try {
+
+      setIsLoading(true),
+      const { error } = await supabase && supabase.auth.resetPasswordForEmail(email, {
+        redirectTo: `${window && window.location.origin}/update-password`});
+
+      if (error) {
+        toast({
+=======
+;
+  const reset_password = async (email: string) => {
+    try {
+      setIsLoading (true),
+      const { error } = await supabase.auth.resetPasswordForEmail (email, {
+        redirect_to: `${window.location.origin}/update - password`});
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        toast ({
+
+          title: "Password reset failed";
+          description: error && error.message,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+          variant: "destructive"});
+        return { error }
+      }
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         redirectTo: `${window.location.origin}/update-password`}),
 
       if (error) {
         toast({
           title: "Password reset failed",
           description: error.message,
+<<<<<<< HEAD
           variant: "destructive"}),
         return { error }
       }
@@ -315,6 +443,21 @@ if ( {) {
         return { error }
       }
 
+=======
+
+          variant: "destructive"});
+        return { error };
+      }
+
+      toast({
+        title: "Password reset email sent"
+        description: "Check your email for password reset instructions."});
+      return {}
+    } catch (error: any) {
+      console && console.error("Password reset error:", error);
+      toast({
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast ({
         title: "Password reset email sent",
         description: "Check your email for password reset instructions."});
@@ -322,19 +465,32 @@ if ( {) {
     } catch (error: any) {
       console.error ("Password reset error:", error);
       toast ({
+<<<<<<< HEAD
         title: "Password reset failed";
         description: error && error.message || "An unexpected error occurred",
+=======
+
+        title: "Password reset failed";
+
+        description: error && error.message || "An unexpected error occurred",
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         variant: "destructive"});
       return { error }
     } finally {
       setIsLoading (false);
     }
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   return { login, signup, reset_password }
 }
 ;
 
+<<<<<<< HEAD
         title: "Password reset failed",
         description: error.message || "An unexpected error occurred",
         variant: "destructive"});
@@ -359,17 +515,25 @@ if ( {) {
   }
   return { login, signup, resetPassword }
 }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         title: "Password reset failed",
         description: error.message || "An unexpected error occurred",
         variant: "destructive"});
+<<<<<<< HEAD
       return { error };
       return { error }
       return { error };
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     } finally {
       setIsLoading(false)
     }
   };
+<<<<<<< HEAD
 
   return { login, signup, resetPassword }
 };
@@ -554,3 +718,11 @@ return {
 
   return { login, signup, resetPassword }
 };
+=======
+
+
+  return { login, signup, resetPassword }
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

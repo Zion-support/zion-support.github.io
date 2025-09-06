@@ -3,6 +3,7 @@
 
 
 
+<<<<<<< HEAD
 import {supabase} from "@/integrations/supabase/client";
 import {TalentProfile} from "@/types/talent";
 import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
@@ -19,14 +20,22 @@ interface Milestone {
 
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
 import { ContractFormValues } from "../components/ContractForm",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface Milestone {
   title: string,
   description: string,
   dueDate: string,
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   estimatedHours: number
 }
 export async function generateContract(
 
+<<<<<<< HEAD
   estimatedHours: number
 }
 export async function generateContract(
@@ -66,12 +75,51 @@ export async function generateContract(
       paymentTerms: values.paymentTerms;
       paymentAmount: values.paymentAmount;
       additionalClauses: additionalClauses
+=======
+
+  const additionalClauses = values && values.additionalClauses || [];
+  
+  // Prepare milestone data if we have AI-generated milestones
+  const milestoneData = generatedMilestones && generatedMilestones.length > 0 
+    ? generatedMilestones && generatedMilestones.map(m => ({
+        title: m && m.title;
+        description: m && m.description;
+        dueDate: m && m.dueDate,
+        estimatedHours: m && m.estimatedHours
+      }))
+    : [];
+  
+  const { data, error } = await supabase && supabase.functions.invoke("generate-contract", {
+
+    body: {
+      talentName: talent && talent.full_name;
+      clientName: clientName;
+
+      projectName: values && values.projectName;
+      scopeSummary: values && values.scopeSummary;
+      startDate: values && values.startDate.toISOString();
+      endDate: values && values.endDate?.toISOString();
+      paymentTerms: values && values.paymentTerms;
+      paymentAmount: values && values.paymentAmount;
+      additionalClauses: additionalClauses,
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       milestones: milestoneData}
   });
 
   if (error) {
     throw error
   }
+<<<<<<< HEAD
+=======
+
+  values: ContractFormValues,
+
+  // Prepare milestone data if we have AI-generated milestones
+  const milestoneData = generatedMilestones.length > 0
+    ? generatedMilestones.map(m => ({
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         title: m.title,
         description: m.description,
         dueDate: m.dueDate,
@@ -90,6 +138,7 @@ export async function generateContract(
       paymentTerms: values.paymentTerms,
       paymentAmount: values.paymentAmount,
       additionalClauses: additionalClauses,
+<<<<<<< HEAD
       milestones: milestoneData}
   });
   
@@ -137,6 +186,8 @@ export async function generateContract(;
   });
   if (error) {;
     throw error;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   const additionalClauses = values && values.additionalClauses || [];
   
@@ -229,6 +280,7 @@ if ( {) {
 
 
   }
+<<<<<<< HEAD
 }
   } else {
     throw new Error ("Failed to generate contract");
@@ -313,3 +365,6 @@ generatedMilestones: GeneratedMilestone[]) : Promise<string> {
   }
 }
 ;
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,4 +9,8 @@ const ComprehensiveServicesLanding2025 = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ComprehensiveServicesLanding2025;
+=======
+export default ComprehensiveServicesLanding2025;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

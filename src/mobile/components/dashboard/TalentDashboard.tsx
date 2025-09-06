@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -39,6 +40,8 @@ import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from 'lucide-react'
 import Link from "next/link",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function TalentDashboard() {
 
     <div className="space-y-6 px-4 pb-24">
@@ -51,9 +54,13 @@ export function TalentDashboard() {
             </Button>
           </Link>
         </div>
+<<<<<<< HEAD
         <div className='space-y-3'>
         
         <div className="space-y-3">
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Card>
         <div className='space-y-3'>
             <CardContent className="p-4">
@@ -79,9 +86,13 @@ export function TalentDashboard() {
               </div>
             </CardContent>
           </Card>
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
           
           
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           
 
           
@@ -104,12 +115,17 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <span className="text-xs text-muted-foreground mt-1">4 hours ago</span>
                 </div>
               </div>
+<<<<<<< HEAD
               <div className='flex gap-2 mt-3'>
                 <Button size='sm'>Apply Now</Button>
                 <Button size='sm' variant='outline'>
                   View Details
                 </Button>              </div>              <div className="flex gap-2 mt-3">
               <div className="flex gap-2 mt-3">
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className="flex gap-2 mt-3">
 
 
@@ -119,6 +135,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Card>
         </div>
       </section>
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
       <section>
         <Card>
@@ -144,6 +161,9 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Button variant='outline' className='w-full mt-4'>              View All Applications      <section>
       
       <section>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       
 
@@ -170,6 +190,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <div className="text-xs text-muted-foreground">Jobs Viewed</div>
               </div>
             </div>
+<<<<<<< HEAD
             <Button variant='outline' className='w-full mt-4'>              View All Applications      <section>
         <h2 className="text-lg font-medium mb-4">Application Tracker</h2>
         <Card>
@@ -192,6 +213,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <div className="text-xs text-muted-foreground">Jobs Viewed</div>
               </div>
             </div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -201,6 +224,10 @@ ursor/fix-website-loading-errors-and-merge-6662
           </CardContent>
         </Card>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     <div className='space-y-6 px-4 pb-24'>;
       <section>;
@@ -885,13 +912,24 @@ export function TalentDashboard() {;
           </CardContent>;
         </Card>;
       </section>;
+<<<<<<< HEAD
     </div>;
   );
 }
 ;
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+  );
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>);
 }
 
     </div>
+<<<<<<< HEAD
   )
+=======
+  )
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,4 +9,8 @@ const AIAutonomousBusinessPlatform2029 = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIAutonomousBusinessPlatform2029;
+=======
+export default AIAutonomousBusinessPlatform2029;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

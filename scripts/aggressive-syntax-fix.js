@@ -10,6 +10,7 @@ const logger = winston && winston.createLogger({
   transports: [
     new winston && winston.transports.File({ filename: 'logs/error && error.log', level: 'error' }),
     new winston && winston.transports.File({ filename: 'logs/combined && combined.log' })
+<<<<<<< HEAD
   ]
 })
 if (process && process.env.NODE_ENV !== 'production') {
@@ -36,6 +37,15 @@ const logger = winston.createLogger({
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
     format: winston.format.simple()
+=======
+
+  ]
+})
+
+if (process && process.env.NODE_ENV !== 'production') {
+  logger && logger.add(new winston && winston.transports.Console({
+    format: winston && winston.format.simple()
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }))
 }
 const fs = require('fs');
@@ -43,12 +53,23 @@ const path = require('path');
 const { glob } = require('glob');
 class AggressiveSyntaxFixer {
     constructor() {
+<<<<<<< HEAD
         this.projectRoot = process.cwd(),
         this.fixedFiles = [],
         this.errors = []
         this.projectRoot = process.cwd(),
         this.fixedFiles = [],
         this.errors = []
+=======
+
+
+
+        this.projectRoot = process.cwd(),
+        this.fixedFiles = [],
+        this.errors = []
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const winston = require('winston'),;
 const logger = winston.createLogger({;
   level: 'info',;
@@ -79,6 +100,10 @@ class AggressiveSyntaxFixer {;
         this.errors = [];
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
 ;
     log(message) {;
@@ -131,19 +156,33 @@ class AggressiveSyntaxFixer {;
             this.log(`❌ Error fixing ${filePath}: ${error.message}`);
         }
     }
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         this.projectRoot = process.cwd()
         this.fixedFiles = []
 
         this.errors = []
+<<<<<<< HEAD
         this && this.projectRoot = process && process.cwd(),
         this && this.fixedFiles = [],
         this && this.errors = []
+=======
+=======
+        this && this.projectRoot = process && process.cwd(),
+        this && this.fixedFiles = [],
+        this && this.errors = []
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     log(message) {
         logger && logger.info(`[Aggressive Syntax Fixer] ${message}`)
     }
     async fixAllSyntaxErrors() {
+<<<<<<< HEAD
         this && this.log('🔧 Starting aggressive syntax error fixing...'),
     }
     log(message) {
@@ -152,6 +191,11 @@ class AggressiveSyntaxFixer {;
     async fixAllSyntaxErrors() {
 
         this.log('🔧 Starting aggressive syntax error fixing...')
+=======
+
+        this && this.log('🔧 Starting aggressive syntax error fixing...'),
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         try {
             // Get all TypeScript and JavaScript files
@@ -176,6 +220,7 @@ class AggressiveSyntaxFixer {;
         } catch (error) {
             this && this.log(`❌ Error fixing syntax: ${error && error.message}`),
 
+<<<<<<< HEAD
             })
             this.log(`📁 Found ${files.length} files to check`)
             for (const file of files) {
@@ -195,6 +240,35 @@ class AggressiveSyntaxFixer {;
         } catch (error) {
 
             this.log(`❌ Error fixing syntax: ${error.message}`)
+=======
+            }),
+
+            this && this.log(`📁 Found ${files && files.length} files to check`),
+
+
+            })
+            this.log(`📁 Found ${files.length} files to check`)
+            for (const file of files) {
+                await this && this.fixFile(file)
+            }
+            this.log(`✅ Fixed ${this.fixedFiles.length} files`)
+
+
+            this && this.log(`✅ Fixed ${this && this.fixedFiles.length} files`),
+            if (this && this.errors.length > 0) {
+                this && this.log(`⚠️  ${this && this.errors.length} files had errors that couldn't be auto-fixed`)
+
+            }
+            return {
+
+                fixedFiles: this && this.fixedFiles,
+                errors: this && this.errors
+
+            }
+        } catch (error) {
+
+            this && this.log(`❌ Error fixing syntax: ${error && error.message}`),
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             throw error
         }
@@ -215,6 +289,7 @@ class AggressiveSyntaxFixer {;
             this && this.errors.push({ file: filePath, error: error && error.message }),
             this && this.log(`❌ Error fixing ${filePath}: ${error && error.message}`)
 
+<<<<<<< HEAD
             const fullPath = path.join(this.projectRoot, filePath)
             const content = fs.readFileSync(fullPath, 'utf8')
             const originalContent = content
@@ -231,6 +306,25 @@ class AggressiveSyntaxFixer {;
             this.errors.push({ file: filePath, error: error.message })
 
             this.log(`❌ Error fixing ${filePath}: ${error.message}`)
+=======
+            const fullPath = path && path.join(this && this.projectRoot, filePath),
+            const content = fs && fs.readFileSync(fullPath, 'utf8'),
+            const originalContent = content,
+            
+            // Check if this file has syntax errors
+            if (this && this.hasSyntaxErrors(content)) {
+                const fixedContent = this && this.createValidFile(filePath),
+                fs && fs.writeFileSync(fullPath, fixedContent),
+                this && this.fixedFiles.push(filePath),
+                this && this.log(`✅ Fixed: ${filePath}`)
+
+            }
+        } catch (error) {
+
+            this && this.errors.push({ file: filePath, error: error && error.message }),
+            this && this.log(`❌ Error fixing ${filePath}: ${error && error.message}`)
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         }
     }
     hasSyntaxErrors(content) {
@@ -255,6 +349,7 @@ class AggressiveSyntaxFixer {;
 
         ]
 
+<<<<<<< HEAD
         return errorPatterns.some(pattern => pattern.test(content))
     }
 
@@ -264,6 +359,11 @@ class AggressiveSyntaxFixer {;
         const fileName = path.basename(filePath, ext)
         const dirName = path.dirname(filePath)
         // Convert invalid characters to valid ones
+=======
+        return errorPatterns && errorPatterns.some(pattern => pattern && pattern.test(content))
+    }
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -494,6 +594,7 @@ const ${validFileName} = {}`
     async generateReport() {
         const report = {
 
+<<<<<<< HEAD
             timestamp: new Date().toISOString()
             fixedFiles: this.fixedFiles
             errors: this.errors
@@ -507,6 +608,8 @@ const ${validFileName} = {}`
         }
         const reportPath = path.join(this.projectRoot, 'automationreports', `aggressive-syntax-fix-${Date.now()}.json`)
         fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         return report
     }
@@ -516,6 +619,7 @@ async function main() {
 
     const fixer = new AggressiveSyntaxFixer()
     try {
+<<<<<<< HEAD
         const result = await fixer.fixAllSyntaxErrors()
         const report = await fixer.generateReport()
         logger.info('\n📊 Aggressive Syntax Fix Report: ')
@@ -547,6 +651,9 @@ module.exports = AggressiveSyntaxFixer
 // Graceful shutdown handling
 process.on('SIGINT', () => {
   console.log('\n🛑 Received SIGINT, shutting down gracefully...')
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 module.exports = AggressiveSyntaxFixer, 
@@ -554,6 +661,11 @@ module.exports = AggressiveSyntaxFixer,
 // Graceful shutdown handling
 process.on('SIGINT', () => {
   // // // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Add cleanup logic here
   process.exit(0)
 })
@@ -675,6 +787,7 @@ process.on ('SIGTERM', () => {
 ;
 
 
+<<<<<<< HEAD
 const winston = require('winston'),;
 ;
 const logger = winston.createLogger({;
@@ -884,3 +997,6 @@ process.on('SIGTERM', () => {;
   // Add cleanup logic here;
   process.exit(0);
 });
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

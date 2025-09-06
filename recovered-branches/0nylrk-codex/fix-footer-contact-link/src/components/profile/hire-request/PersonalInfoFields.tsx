@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   FormField,
 FormField,
   FormItem,
@@ -32,6 +36,7 @@ import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/comp
 import { Input } from "@/components/ui/input",;
 import { UseFormReturn } from "react-hook-form",;
 
+<<<<<<< HEAD
 
 import {
   FormField
@@ -45,6 +50,17 @@ import { Input } from "@/components/ui/input";
 import { UseFormReturn } from "react-hook-form";
 
 }
+=======
+import { FormValues } from "./useHireRequestForm";
+interface PersonalInfoFieldsProps {
+  form: UseFormReturn<FormValues>;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
   return (
     <>;
@@ -161,6 +177,7 @@ function PersonalInfoFields() {
 }
 ;
 
+<<<<<<< HEAD
   ),;}
  interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues> 
@@ -249,3 +266,6 @@ export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
   )
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

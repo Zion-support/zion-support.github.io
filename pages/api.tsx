@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import React from './react';
 import MainLayout from "../src / components / layout / MainLayout";
 import { motion  } from './framer-motion';
@@ -29,6 +30,21 @@ import {
   Cpu
   Cloud
   XCircle
+=======
+
+import React from "react";
+import MainLayout from "../src/components/layout/MainLayout";
+import { motion } from "framer-motion";
+=======
+
+
+import React from 'react';
+
+
+
+import {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Code,
   Check,
   Globe,
@@ -151,6 +167,7 @@ export default function APIPage() {
   -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \\;
   -H "Content - Type: application / json" \\;
   -d '{
+<<<<<<< HEAD
     "message": "Hello, how can you help me?"
     "model": "gpt-4"
     "temperature": 0.7
@@ -158,10 +175,27 @@ export default function APIPage() {
         }
       ]
     }
+=======
+<<<<<<< HEAD
+    "message": "Hello, how can you help me?",
+    "model": "gpt - 4",
+    "temperature": 0.7;
+  }'`,
+        },
+      ],
+    },
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }'`,
         },
       ],
     },;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   ];
 ;
   const response_examples = {
@@ -170,18 +204,31 @@ export default function APIPage() {
       data: {
         message: "Request successful"
         data: {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           id: "12345",
           name: "Example Response",
           created_at: "2024 - 01 - 01T00:00:00Z",
         },
       },
     },
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     error: {
       status: 400
       error: {
         code: "VALIDATION_ERROR"
         message: "Invalid request parameters"
         details: {
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -293,6 +340,11 @@ export default function APIPage() {;
       },;
     },;
   };
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <MainLayout
       title="API Documentation - Zion Tech Group"
@@ -300,6 +352,10 @@ export default function APIPage() {;
       keywords="API documentation, REST API, AI API, cloud API, developer resources">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         {/* Hero Section */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
             <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
@@ -307,12 +363,20 @@ export default function APIPage() {;
           </div>;
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               className="text-center">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
                 API{" "}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">;
                   Documentation;
                 </span>;
@@ -324,6 +388,11 @@ export default function APIPage() {;
             </motion && motion.div>;
           </div>;
         </section>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Quick Start */}
         <section className="py-20 bg-white">;
           <div className="container mx-auto px-4">;
@@ -331,6 +400,10 @@ export default function APIPage() {;
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
@@ -502,10 +575,18 @@ export default function APIPage() {;
                     Create powerful applications with our APIs;
                   </p>;
                 </motion.div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </div>;
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
@@ -620,10 +701,18 @@ export default function APIPage() {;
                     </pre>;
                   </div>;
                 </motion.div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </div>;
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Head from 'next/head';
 import Layout from '../components/Layout';
 export default function APIPage() {
@@ -643,13 +732,40 @@ export default function APIPage() {
         </section>
       </div>
     </Layout>
+<<<<<<< HEAD
+=======
+
+=======
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold">;
+                  View Documentation;
+                </a>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </MainLayout>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
   );
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - indigo - 600 to - purple - 600 text - white">;

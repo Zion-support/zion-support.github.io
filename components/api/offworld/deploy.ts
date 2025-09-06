@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import { execSync  } from 'child_process';
 import path from 'path';
 import fs from 'fs';
@@ -14,10 +15,15 @@ export default async function handler(
     const outDir = path.resolve(process.cwd(), 'out');
     try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   try {
     // Ensure export
     const outDir = path && path.resolve(process && process.cwd(), 'out');
     try {
+<<<<<<< HEAD
       execSync('npm run export', { stdio: 'inherit' });
     } catch (e) {
       // attempt minimal static export try {;
@@ -37,14 +43,30 @@ export default async function handler(
         .json({ error: 'Export failed, no out/ directory found' });      return res.status(500).json({ error: 'Export failed, no out/ directory found' });
     }
     const { cid, provider } = await addDirectory(outDir);
+=======
+
+
+    } catch (e) {
+      // attempt minimal static export
+      try {
+        execSync('next build && next export', { stdio: 'inherit' })
+
+
+    }
+    const { cid, provider } = await addDirectory(outDir);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (!cid) return res.status(500).json({ error: 'IPFS upload failed' });
 
     return res.status(200).json({ cid, provider })
 
+<<<<<<< HEAD
     return res.status(500).json({ error: error?.message |'Unknown error' });
     return res.status(500).json({ error: error?.message || 'Unknown error' });
   }    return res.status(200).json({ cid, provider })
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error: any) {
     return res.status(500).json({ error: error?.message |'Unknown error' })
     if (!cid) return res && res.status(500).json({ error: 'IPFS upload failed' });
@@ -58,6 +80,10 @@ export default async function handler(
 }
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {exec_sync} from 'child_process';
 import path from 'path';
 import fs from 'fs';
@@ -122,6 +148,7 @@ function handler() {
   }
 
 }
+<<<<<<< HEAD
 
     return res.status(500).json({ error: error?.message || 'Unknown error' });
 
@@ -132,3 +159,12 @@ function handler() {
 }
 }
   }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+    return res.status(500).json({ error: error?.message || 'Unknown error' });
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

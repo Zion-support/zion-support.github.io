@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Loader2 } from 'lucide-react'
 import { useState } from 'react';
 import { useState } from 'react'; import { useState } from 'react'
@@ -55,6 +56,8 @@ export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedPro
         onLoad={() => setLoaded(true)}
           <Image src={poster} alt={`${title} poster`} fill className="object-cover rounded" />
           <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <div className="absolute inset-0 flex items-center justify-center bg-black/30">
             <Loader2 className="h-8 w-8 animate-spin text-white" />
           </div>
@@ -62,6 +65,7 @@ export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedPro
       )}
       <iframe
         className={`absolute inset-0 w-full h-full ${loaded ? 'visible' : 'invisible'}`}
+<<<<<<< HEAD
         src={src}
         title={title}
         loading='lazy'
@@ -95,6 +99,16 @@ export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedPro
         loading="lazy"
         onLoad={() => setLoaded(true)}
         allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
+=======
+
+
+        onLoad={() => setLoaded(true)}
+
+
+
+
+        allowFullScreen
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       />
     </div>
   )
@@ -104,17 +118,25 @@ export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedPro
         loading="lazy";
         onLoad={() => setLoaded(true)}
 
+<<<<<<< HEAD
 }
 ;
         loading="lazy";
         onLoad={() => setLoaded(true)}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture";
         allowFullScreen;
       />;
     </div>;
   );
+<<<<<<< HEAD
 }
 ;
+=======
+
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   );
 }
@@ -164,4 +186,8 @@ function YoutubeEmbed() {
       />;
     </div>);
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import Link from "next/link",;
 export const metadata = {;
@@ -9,6 +13,10 @@ export default function EventsPage() {;
 
 
     <div className="min-h-screen">;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Link from './next / link';,
 export const metadata = {
   title: "Events - Zion Tech Group | Conferences, Webinars & Workshops",
@@ -64,15 +72,23 @@ export default function EventsPage() {;
                 <p className="text - gray - 300 text - lg mb - 6 leading - relaxed">;
                   Our flagship annual conference bringing together technology leaders, innovators,
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <p className="text-gray-300 text-lg mb-6 leading-relaxed">;
 
                   Our flagship annual conference bringing together technology leaders, innovators,;
 
+<<<<<<< HEAD
                 <p className="text - gray - 300 text - lg mb - 6 leading - relaxed">;
                   Our flagship annual conference bringing together technology leaders, innovators,
                 <p className="text-gray-300 text-lg mb-6 leading-relaxed">;
                   Our flagship annual conference bringing together technology leaders, innovators;
                   Our flagship annual conference bringing together technology leaders, innovators,;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   and visionaries to explore the future of AI, quantum computing, and enterprise;
                   technology solutions.;
                 </p>;
@@ -145,6 +161,7 @@ export default function EventsPage() {;
               <p className="text - gray - 400 mb - 4">;
                 Large - scale industry events featuring keynote speakers, panel discussions,
 
+<<<<<<< HEAD
 
                 Large-scale industry events featuring keynote speakers, panel discussions,;
 
@@ -155,6 +172,13 @@ export default function EventsPage() {;
               <p className="text-gray-400 mb-4">;
                 Large-scale industry events featuring keynote speakers, panel discussions;
                 Large-scale industry events featuring keynote speakers, panel discussions,;
+=======
+=======
+
+                Large-scale industry events featuring keynote speakers, panel discussions,;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 and networking opportunities;
               </p>;
               <Link href="/events / category / conferences" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
@@ -172,6 +196,7 @@ export default function EventsPage() {;
               <p className="text - gray - 400 mb - 4">;
                 Online educational sessions covering specific topics, technologies,
 
+<<<<<<< HEAD
 
                 Online educational sessions covering specific topics, technologies,;
 
@@ -182,6 +207,13 @@ export default function EventsPage() {;
               <p className="text-gray-400 mb-4">;
                 Online educational sessions covering specific topics, technologies;
                 Online educational sessions covering specific topics, technologies,;
+=======
+=======
+
+                Online educational sessions covering specific topics, technologies,;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 and industry trends;
               </p>;
               <Link href="/events / category / webinars" className="text - purple - 400 hover:text - purple - 300 text - sm font - medium">;
@@ -268,15 +300,23 @@ export default function EventsPage() {;
               <p className="text - gray - 400 mb - 4 leading - relaxed">;
                 Hands - on workshop covering the basics of quantum computing, qubits,
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <p className="text-gray-400 mb-4 leading-relaxed">;
 
                 Hands-on workshop covering the basics of quantum computing, qubits,;
 
+<<<<<<< HEAD
               <p className="text - gray - 400 mb - 4 leading - relaxed">;
                 Hands - on workshop covering the basics of quantum computing, qubits,
               <p className="text-gray-400 mb-4 leading-relaxed">;
                 Hands-on workshop covering the basics of quantum computing, qubits;
                 Hands-on workshop covering the basics of quantum computing, qubits,;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 and quantum algorithms for beginners and intermediate developers.;
               </p>;
               <div className="flex items - center text - sm text - gray - 400 mb - 4">;

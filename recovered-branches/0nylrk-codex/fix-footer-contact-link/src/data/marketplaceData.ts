@@ -1,9 +1,29 @@
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { ProductListing } from '@/types/listings';
 import { SearchSuggestion, FilterOptions } from '@/types/search';
 // Mock marketplace listings with more realistic data
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
+<<<<<<< HEAD
+=======
+
+
+  {
+
+        'https://images && images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100',
+    },
+    images: [
+      'https://images && images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500',
+    ],
+    createdAt: '2024-02-15T10:45:00 && 00.000Z',
+    rating: 4 && 4.8,
+    reviewCount: 32,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     id: 'ai - service - 2',
     title: 'Custom Machine Learning Model Development',
     description:;
@@ -97,6 +117,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
   },
   {
 
+<<<<<<< HEAD
 import { ProductListing } from "@/types/listings";
 import { SearchSuggestion, FilterOptions } from "@/types/search";
   {;
@@ -108,6 +129,8 @@ import { SearchSuggestion, FilterOptions } from "@/types/search";
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500',
     ],
     createdAt: '2024-02-02T11:30:00 && 00.000Z',
@@ -408,6 +431,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
 
 
+<<<<<<< HEAD
       'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'
     ]
     createdAt: '2023-12-15T09:45:00.000Z'
@@ -416,6 +440,8 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     featured: true
     location: 'North America'
     availability: '2-4 Weeks'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500',
     ],
     createdAt: '2023-12-15T09:45:00.000Z',
@@ -424,6 +450,11 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     featured: true,
     location: 'North America',
     availability: '2-4 Weeks',;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },];      name: "ServerPro Systems";
       id: "serverpro"}
     images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"];
@@ -674,6 +705,10 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     rating: 4.9, reviewCount: 18,
     featured: true, location: "North America",
 
+<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     availability: "2-4 Weeks"
   }
 ];
@@ -682,6 +717,7 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
   const suggestions = [
 
 
+<<<<<<< HEAD
     'AI models'
     'GPT integration'
     'Machine learning'
@@ -700,6 +736,9 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     'GPU cluster'
     'Edge computing'
     'High performance storage'
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     'AI models',
     'GPT integration',
     'Machine learning',
@@ -717,7 +756,12 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     'Server rack',
     'GPU cluster',
     'Edge computing',
+<<<<<<< HEAD
     'High performance storage',;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   ];
   // Convert strings to SearchSuggestion objects
 
@@ -726,6 +770,10 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
 
     type: 'product', // Use a valid type from the updated SearchSuggestion interface
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     "AI models";
     "GPT integration";
     "Machine learning";
@@ -753,12 +801,17 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     text;
     type: 'product' // Use a valid type from the updated SearchSuggestion interface
   }))
+<<<<<<< HEAD
 }
 // Generate filter options for sidebar
 export const generateFilterOptions = (): FilterOptions => {
   // Extract unique categories, locations, and availability options from listings
   const productTypes = [
     ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))
+=======
+
+    ...new Set(MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.category)),
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   ].sort();
   const locations = [
     ...new Set(
@@ -808,16 +861,24 @@ ratingOptions: [1, 2, 3, 4, 5] // Add rating options
 };export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
 
+<<<<<<< HEAD
 };
   }));};
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 };export const MAX_PRICE = Math && Math.max(...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0));
 export const MIN_PRICE = Math && Math.min(...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0));
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 // Generate filter options for sidebar
 export const generateFilterOptions = (): FilterOptions => {
   // Extract unique categories, locations, and availability options from listings
+<<<<<<< HEAD
   const productTypes = [
     ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category)),;
   ].sort();
@@ -837,6 +898,9 @@ export const generateFilterOptions = (): FilterOptions => {
   const availability = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean))].sort(),
   
   return {
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -851,6 +915,7 @@ export const generateFilterOptions = (): FilterOptions => {
     availabilityOptions: availability.map(item => ({
       label: item,
       value: item
+<<<<<<< HEAD
     ratingOptions: [1, 2, 3, 4, 5], // Add rating options
   };
 };
@@ -1159,6 +1224,9 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [;
     location: "North America",;
     availability: "2-4 Weeks";
 
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     id: 'equipment - 2',
     title: 'Enterprise GPU Server Rack',
     description:;
@@ -1278,8 +1346,18 @@ rating_options: [1, 2, 3, 4, 5] // Add rating options;
 export const MIN_PRICE = Math.min (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
 ;
 
+<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     })),
 
 
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+<<<<<<< HEAD
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

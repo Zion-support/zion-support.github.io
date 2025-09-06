@@ -9,4 +9,8 @@ const SpaceTech = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default SpaceTech;
+=======
+export default SpaceTech;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

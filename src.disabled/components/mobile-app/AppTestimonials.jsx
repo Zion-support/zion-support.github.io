@@ -13,6 +13,10 @@ export default function AppTestimonials({ }: AppTestimonialsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 :src.disabled/components/mobile-app/AppTestimonials.jsx
 }

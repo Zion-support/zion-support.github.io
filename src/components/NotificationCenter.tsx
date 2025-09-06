@@ -22,8 +22,13 @@ import { FilterType } from '@/components/notifications/NotificationFilter',
 export const NotificationCenter: React.FC = () => {
   const { 
     filteredNotifications,
+<<<<<<< HEAD
     unreadCount, 
 
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     unreadCount, 
     markAsRead, 
     markAllAsRead,
@@ -39,6 +44,7 @@ export const NotificationCenter: React.FC = () => {
   const [loadedOnce, setLoadedOnce] = useState(false),
   const enqueueSnackbar = useEnqueueSnackbar(),
 
+<<<<<<< HEAD
   const handleFilterChange = (newFilter: FilterType,) => {
     setFilter(newFilter as any)
   }
@@ -123,13 +129,21 @@ export const NotificationCenter: React.FC = () => {;
 
   return (
     <Popover open={open} onOpenChange={(v) => setOpen(v ?? false)}>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <PopoverTrigger asChild>
         <Button variant="ghost" size="icon" className="relative" aria-label="Open notifications">
           <Bell className="h-5 w-5 text-zion-slate-light" />
           {unreadCount > 0 && (
             <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">
+<<<<<<< HEAD
               {unreadCount > 9 ? '9+' : unreadCount}
             </span>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }, [open, loadedOnce, fetchNotifications]),;
   const handleMarkAllAsRead = async () => {;
     try {;
@@ -141,6 +155,7 @@ export const NotificationCenter: React.FC = () => {;
     }
   },;
   const handleFilterChange = (newFilter: FilterType) => {;
+<<<<<<< HEAD
           )}
         </Button>
       </PopoverTrigger>
@@ -180,6 +195,8 @@ export const NotificationCenter: React.FC = () => {;
       </PopoverTrigger>
       <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     setFilter(newFilter as any);
   };
 
@@ -203,6 +220,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
         <NotificationList
+<<<<<<< HEAD
 }
 
 }
@@ -226,12 +244,27 @@ ursor/fix-website-loading-errors-and-merge-6662
           onDismiss={dismissNotification}
           onRetry={fetchNotifications}
         />;
+=======
+          loading = {loading,}
+          error = {error,}
+          notifications = {filteredNotifications,}
+          onMarkAsRead = {markAsRead,}
+          onDismiss = {dismissNotification,}
+          onRetry = {fetchNotifications,}
+
+        />;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <NotificationFooter onClose={() => setOpen(false)} />;
       </PopoverContent>;
     </Popover>;
   );
+<<<<<<< HEAD
 };
         <NotificationHeader 
+=======
+},;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     <Popover open={open} onOpenChange={(v, ) => set_open (v ?? false)}>;
       <PopoverTrigger as_child>;
@@ -266,4 +299,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 },
 ;
 
+<<<<<<< HEAD
         <NotificationHeader
+=======
+        <NotificationHeader
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

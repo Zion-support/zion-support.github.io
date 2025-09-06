@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -25,6 +26,8 @@ interface Milestone {
 interface ProjectViewProps {
   project: {
     id: string;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 id: string;
     title: string;
     client: {
@@ -36,10 +39,13 @@ id: string;
     status: string;
     totalAmount: string;
     progress: number;
+<<<<<<< HEAD
     description: string
   }
   milestones: Milestone[]
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from 'react';
 import { Card, CardContent } from '@/components / ui / card';
@@ -72,6 +78,10 @@ import { Progress } from "@/components/ui/progress",
 import { SeverityIndicator } from "../common/SeverityIndicator",
 import { useRouter } from 'next/router',
 import { toast } from "sonner",
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface Milestone {
   id: string,
   title: string,
@@ -114,6 +124,34 @@ interface ProjectViewProps {;
     description: string;
   },;
   milestones: Milestone[];
+<<<<<<< HEAD
+=======
+
+    description: string;
+  };
+  milestones: Milestone[];
+
+export function MobileProjectView(): any ({ project, milestones }: ProjectViewProps) {;
+  const router = useRouter();
+
+  const startProjectCall = () => {;
+    const roomId = `project-${project && project.id}`;
+    toast && toast.success('Starting project call', {;
+      description: 'Initializing video connection...',;
+    });
+
+    router && router.push(`/call/${roomId}`);
+  };
+
+  const messageClient = () => {;
+    toast && toast.info('Opening message thread with client', {;
+      description: `Messaging ${project && project.client.name}...`,;
+    });
+    // Navigate to messaging with this client;
+  };
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {
@@ -135,6 +173,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
     // Navigate to messaging with this client
   },
   
+<<<<<<< HEAD
   
   return (
     <div className="space-y-6 px-4 pb-24">
@@ -157,6 +196,9 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
             <div className='space-y-1'>
               <div className='flex justify-between items-center text-sm'>
                 <span className="font-medium">{project.progress}%</span>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   return (
 
@@ -166,6 +208,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
               <div className="flex justify-between items-center text-sm">
 
 
+<<<<<<< HEAD
                 <span>Progress</span>
                 <span className='font-medium'>{project.progress}%</span>
               <Progress value={project.progress} className='h-2' />
@@ -189,23 +232,43 @@ ursor/fix-website-loading-errors-and-merge-6662
             
             <div className="space-y-1">
               <div className="flex justify-between items-center text-sm">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <span>Progress</span>
                 <span className="font-medium">{project.progress}%</span>
               </div>
               <Progress value={project.progress} className="h-2" />
             </div>
+<<<<<<< HEAD
             <div className='grid grid-cols-2 gap-3 text-sm'>
             
             <div className="grid grid-cols-2 gap-3 text-sm">
+=======
+
+
+            
+            <div className="grid grid-cols-2 gap-3 text-sm">
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div>
                 <p className="text-muted-foreground">Start Date</p>
                 <p className="font-medium">{project.startDate}</p>
               </div>
               <div>
+<<<<<<< HEAD
                 <p className='text-muted-foreground'>End Date</p>
                 <p className='font-medium'>{project.endDate |'Not set'}</p>
                 <p className="text-muted-foreground">End Date</p>
                 <p className="font-medium">{project.endDate || "Not set"}</p>
+=======
+
+
+                <p className="text-muted-foreground">End Date</p>
+                <p className="font-medium">{project.endDate || "Not set"}</p>
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </div>
               <div>
                 <p className="text-muted-foreground">Total Amount</p>
@@ -216,6 +279,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <p className="font-medium capitalize">{project.status}</p>
               </div>
             </div>
+<<<<<<< HEAD
+=======
+
+
+            
+
+
+            <div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <p className="text-sm text-muted-foreground mb-1">Description</p>
               <p className="text-sm">{project.description}</p>
             
@@ -284,8 +356,13 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Button
                 size='sm'
                 className='gap-1 flex-1 bg-zion-purple hover:bg-zion-purple-light'
+<<<<<<< HEAD
                 onClick={startProjectCall}              >
                 <Video className='h-4 w-4' /> Call
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             
             <div className="flex gap-2">
               <Button size="sm" variant="outline" className="gap-1 flex-1">
@@ -311,6 +388,12 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
         </CardContent>
       </Card>
+<<<<<<< HEAD
+=======
+
+
+      
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <section>
         <h2 className="text-lg font-medium mb-4">Milestones</h2>
         <div className="space-y-3">
@@ -387,6 +470,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     <div className='space - y-6 px - 4 pb - 24'>;
                     <h3 className="font-medium">{milestone.title}</h3>
                   </div>
+<<<<<<< HEAD
       
       <section>
         <h2 className="text-lg font-medium mb-4">Milestones</h2>
@@ -417,6 +501,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <div className='pl-7'>
                   <div className='flex justify-between text-sm'>
                     <span className='text-muted-foreground'>Due Date:</span>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <Badge 
                     variant={
                       milestone.paymentStatus === "paid" ? "default" : 
@@ -523,6 +610,10 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                     <h3 className="font-medium">{milestone.title}</h3>;
                   </div>;
                   <Badge;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     variant={;
                       milestone.paymentStatus === "paid" ? "default" :;
                       milestone.paymentStatus === "overdue" ? "destructive" : "outline";
@@ -535,6 +626,11 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                 <div className="pl-7">
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Due Date:</span>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <span>{milestone.dueDate}</span>
                   </div>
                   <div className="flex justify-between text-sm">
@@ -555,12 +651,17 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                 </div>
               </CardContent>
             </Card>
+<<<<<<< HEAD
           ))}
         </div>
       </section>
     </div>
   )
 }
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </Badge>;
       </section>
     </div>
@@ -598,9 +699,15 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 };
 }
+<<<<<<< HEAD
 }
 ursor/fix-website-loading-errors-and-merge-6662
 }
 ;
 
 ;
+=======
+
+
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

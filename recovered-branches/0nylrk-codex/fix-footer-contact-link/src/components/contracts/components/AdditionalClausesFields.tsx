@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 import { UseFormReturn } from "react-hook-form";
 
 
@@ -13,10 +14,29 @@ import {
   FormLabel
   FormControl
   FormDescription
+=======
+
+import { UseFormReturn } from "react-hook-form";
+
+import {;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormControl,;
+  FormDescription,;
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   FormField,
   FormItem,
   FormLabel,
   FormControl,
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 } from "@/components/ui/form";
 import { Checkbox } from "@/components/ui/checkbox";
 import { ContractFormValues } from "./ContractForm";
@@ -75,6 +95,7 @@ interface AdditionalClausesFieldsProps {;
 export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) {;
   return (;
     <FormField;
+<<<<<<< HEAD
       control={form.control}
       name="additionalClauses"
       render={() => (
@@ -93,6 +114,8 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">
                   <FormControl>
                     <Checkbox
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
       control={form.control}
@@ -149,6 +172,7 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
                           : field.on_change (
                               current_values.filter ((value) => value !== "nda"),
 
+<<<<<<< HEAD
                       checked={field.value?.includes("nda")}
                       onCheckedChange={(checked) => {
                         const currentValues = field.value |[];
@@ -156,12 +180,19 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
                           ? field.onChange([...currentValues, "nda"])
                           : field.onChange(
                               currentValues.filter((value) => value !== "nda")
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       onCheckedChange={(checked) => {;
                         const currentValues = field.value || [];
                         return checked
                           ? field.onChange([...currentValues, "nda"])
                           : field.onChange(
                               currentValues.filter((value) => value !== "nda"),
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       checked={field.value?.includes('nda')}
                       onCheckedChange={(checked) => {;
                         const currentValues = field.value || [],;
@@ -169,6 +200,7 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
                           ? field.onChange([...currentValues, 'nda']);
                           : field.onChange(;
                               currentValues.filter((value) => value !== 'nda');
+<<<<<<< HEAD
                             );
                       }}
                     />
@@ -183,6 +215,8 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
                   </div>
                 </FormItem>
               )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                             );
                       }}
@@ -375,6 +409,7 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
                                 (value) => value !== "termination",
                               ),
 
+<<<<<<< HEAD
             />
             <FormField
             />;
@@ -396,6 +431,9 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
                               )
                                 (value) => value !== "termination",
                               ),
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       checked={field.value?.includes('termination')}
                       onCheckedChange={(checked) => {;
                         const currentValues = field.value || [];
@@ -403,6 +441,7 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
                           ? field.onChange([...currentValues, 'termination']);
                           : field.onChange(;
                               currentValues.filter((value) => value !== 'termination');
+<<<<<<< HEAD
                             );
                       }}
                     />
@@ -428,6 +467,12 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
                   <FormControl>
                     <Checkbox
 
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                             );
                       }}
                     />;
@@ -503,6 +548,7 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
                                 (value) => value !== "revisions",
                               ),
 
+<<<<<<< HEAD
                       checked={field.value?.includes("revisions")}
                       onCheckedChange={(checked) => {
                         const currentValues = field.value |[];
@@ -515,6 +561,9 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
                               )
                                 (value) => value !== "revisions",
                               ),
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       checked={field.value?.includes('revisions')}
                       onCheckedChange={(checked) => {;
                         const currentValues = field.value || [];
@@ -522,6 +571,7 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
                           ? field.onChange([...currentValues, 'revisions']);
                           : field.onChange(;
                               currentValues.filter((value) => value !== 'revisions');
+<<<<<<< HEAD
                             );
                       }}
                     />
@@ -540,6 +590,8 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
           </div>
         </FormItem>
       )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                             );
                       }}
@@ -579,6 +631,7 @@ export function AdditionalClausesFields({ form } AdditionalClausesFieldsProps) {
                 </FormItem>;              )}
             />;
           </div>;
+<<<<<<< HEAD
         </FormItem>;
       )}
     />;
@@ -607,3 +660,9 @@ FormDescription interface AdditionalClausesFieldsProps {
     />;
   );
 }
+=======
+        </FormItem>)}
+    />);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

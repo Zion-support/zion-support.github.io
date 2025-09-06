@@ -9,4 +9,8 @@ const InstallPrompt.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default InstallPrompt.js;
+=======
+export default InstallPrompt.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

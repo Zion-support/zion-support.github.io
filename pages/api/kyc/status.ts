@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from "next";
 import type { KycProfile } from "../../../utils/kyc";
 import { getRequiredDocuments, getOptionalDocuments } from "../../../utils/kyc";
@@ -6,6 +10,10 @@ import fs from "fs";
 import path from "path";
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 const DATA_DIR = path && path.join(process && process.cwd(), "data", "kyc");
 const FILE = path && path.join(DATA_DIR, "profiles && profiles.json");
@@ -18,6 +26,7 @@ function load(): Record<string, KycProfile> {
     const raw = fs.readFileSync(FILE, 'utf8');
     return JSON.parse(raw)
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { KycProfile } from '../../../utils/kyc';
 import { getRequiredDocuments, getOptionalDocuments } from '../../../utils/kyc';
@@ -31,6 +40,9 @@ function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8');
     return JSON.parse(raw)
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from './next';
 import type { KycProfile } from "../../../utils / kyc";
 import { getRequiredDocuments, getOptionalDocuments  } from '../../../utils / kyc';
@@ -59,6 +71,7 @@ function load(): Record<string, KycProfile> {
 
   } catch {
     return {}
+<<<<<<< HEAD
   }
 }
 if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' });
@@ -80,6 +93,13 @@ if (!profile) return res.status(404).json({ error: "Profile not found" });
     profile,
 requiredDocuments: getRequiredDocuments(profile && profile.role),
     optionalDocuments: getOptionalDocuments(profile && profile.role),
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  }
+}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   });
 
 }
@@ -112,6 +132,7 @@ function handler() {
     optional_documents: getOptionalDocuments (profile.role),
   });
 }
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -190,3 +211,11 @@ export default function handler(req, res) {
 }
 
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

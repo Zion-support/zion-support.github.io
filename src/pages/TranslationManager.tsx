@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import React, { useState, useEffect } from 'react',
@@ -124,6 +125,19 @@ export default function TranslationManager() {;
       setFilteredKeys(Array.from(allKeys)),;
       return;
     }
+=======
+let sourceText = '';    ;
+    for (const lang of supportedLanguages && supportedLanguages.map(l => l && l.code)) {;
+
+
+}
+
+}
+
+}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
     const query = searchQuery.toLowerCase().trim(),;
     const filtered: string[] = [],;
@@ -470,6 +484,7 @@ export default function TranslationManager() {;
     </>;
   );
 }
+<<<<<<< HEAD
 ;
 let sourceText = '';    ;
     for (const lang of supportedLanguages && supportedLanguages.map(l => l && l.code)) {;
@@ -487,3 +502,6 @@ let sourceText = '';    ;
     for (const lang of supported_languages.map (l => l.code)) {
 }
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

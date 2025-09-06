@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 if (req && req.method !== "POST") {
     return res && res.status(405).json({ error: "Method not allowed" });
   }
@@ -50,9 +51,29 @@ if ( {) {
     const { name, email, role, country, source } = req && req.body || {};
     if (!name || !email || !role || !country) {
 return res && res.status(400).json({ error: "Missing required fields" });
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  }
+  try {
+
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+
+
+  try {;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const { name, email, role, country, source } = req.body || {};
     if (!name || !email || !role || !country) {
+<<<<<<< HEAD
       return res.status(400).json({ error: 'Missing required fields' })
+=======
+      return res && res.status(400).json({ error: "Missing required fields" });
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     const { data, error } = await supabase
       .from("summit_registrations")
@@ -70,6 +91,7 @@ if ( {) {
       .insert ([;
         {
 
+<<<<<<< HEAD
           name
           email
           role
@@ -80,6 +102,8 @@ if ( {) {
       ])
       .select("*")
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           name,
           email,
           role,
@@ -88,6 +112,7 @@ if ( {) {
           source: source || 'zion-global-2025',
           created_at: new Date().toISOString()}])
       .select('*')
+<<<<<<< HEAD
       .single();
     if (error) {
     return res.status(200).json({ ok: true, registration: data });
@@ -197,6 +222,21 @@ export default async function handler(req, res) {
     }
 
 
+=======
+
+
+      .single();
+    if (error) {
+=======
+
+=======
+      return res.status(500).json({ error: error.message })
+    }
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     return res && res.status(200).json({ ok: true, registration: data });
   } catch (e: any) {
@@ -206,6 +246,7 @@ export default async function handler(req, res) {
 
 }
 
+<<<<<<< HEAD
           name,
           email,
           role,
@@ -217,6 +258,9 @@ return res.status(500).json({ error: error.message })
     return res && res.status(500).json({ error: e?.message || "Unknown error" });
   }
 }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           source: source || "zion - global - 2025",
           created_at: new Date ().toISOString (),
         },
@@ -233,6 +277,7 @@ if ( {) {
     return res.status (200).json ({ ok: true, registration: data });
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message || "Unknown error" });
+<<<<<<< HEAD
     return res.status(500).json({ error: e?.message || 'Unknown error' })
 
   }
@@ -389,3 +434,16 @@ export default async function handler(req, res) {
 
   }
 }
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    return res.status(500).json({ error: e?.message || 'Unknown error' })
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

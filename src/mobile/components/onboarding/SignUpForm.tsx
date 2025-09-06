@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -10,10 +11,23 @@ import React from 'react';
 
 import { AlertCircle } from 'lucide-react'
 import { Alert, AlertDescription } from "@/components/ui/alert",
+=======
+import React from 'react';
+
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import { useAuth } from "@/context/auth/AuthProvider";
+import { AlertCircle } from 'lucide-react'import { useRouter } from 'next/router';
+import Link from 'next/link';
+import { useAuth } from "@/context/auth/AuthProvider";
+import { AlertCircle } from 'lucide-react';
+import { Alert, AlertDescription } from "@/components/ui/alert";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function SignUpForm() {
 
+<<<<<<< HEAD
   const router = useRouter()
   const { signUp, login, loginWithGoogle } = useAuth()
   const [formData, setFormData] = useState({
@@ -324,6 +338,28 @@ export function SignUpForm() {;
     const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8}$/,;
     if (signupMode && !formData.name.trim()) {;
       errors.name = 'Full name is required';
+=======
+
+;
+import { use_router } from 'next / router';
+import Link from 'next / link';
+import { use_auth  } from '@/context / auth / AuthProvider';
+import { AlertCircle } from 'lucide-react'import { use_router } from 'next / router';
+import { AlertCircle } from 'lucide-react';
+import { Alert, AlertDescription  } from '@/components / ui / alert';
+import { PasswordStrengthMeter  } from '@/components / PasswordStrengthMeter';
+import {logErrorToProduction} from '@/utils / production_logger';
+export /**
+ * SignUpForm - Function description
+ */
+function SignUpForm() {
+  const router = use_router ();
+  const { sign_up, login, loginWithGoogle } = use_auth ();
+  const [form_data, setFormData] = useState ({
+    email: "",
+    password: "",
+    name: ""}),
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     if (!formData.email.trim()) {
       errors.email = 'Email is required'
@@ -348,7 +384,10 @@ export function SignUpForm() {;
           name: formData.name})
         if (result?.error) {
           throw new Error(result.error as any), // Cast to any if type is AuthError
+<<<<<<< HEAD
         }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
     if (Object.keys(errors).length > 0) {;
       setFieldErrors(errors),;
@@ -370,6 +409,7 @@ export function SignUpForm() {;
         } else {
           // Only navigate if email verification is not required
           router.push("/mobile")
+<<<<<<< HEAD
         }
       } else {
         const { error } = await login(formData.email, formData.password)
@@ -377,6 +417,8 @@ export function SignUpForm() {;
           throw new Error(error)
         }
         router.push("/mobile")
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
         if (result?.emailVerificationRequired) {;
           setShowVerificationMessage(true);
@@ -393,12 +435,16 @@ export function SignUpForm() {;
         router.push("/mobile")
 ;
         router.push("/mobile");
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
     } catch (err: any) {
       logErrorToProduction('Signup/Login error:', { data: err })
       setError(err.message |'An unexpected error occurred. Please try again.')
+<<<<<<< HEAD
         router.push ("/mobile");
       }
     } catch (err: any) {
@@ -436,6 +482,11 @@ export function SignUpForm() {;
 
 
 
+=======
+    } finally {
+      setIsLoading(false)
+    }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   };
   const handleGoogleLogin = async () => {;
     try {;
@@ -443,6 +494,7 @@ export function SignUpForm() {;
     } catch (err: any) {;
       setError(err.message);
     }
+<<<<<<< HEAD
   
   },
   
@@ -452,6 +504,12 @@ export function SignUpForm() {;
         {signupMode ? "Create your account" : "Welcome back"}
       </h2>
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+  },
+  
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   return (
@@ -460,8 +518,11 @@ ursor/fix-website-loading-errors-and-merge-6662
       
 
 
+<<<<<<< HEAD
       
       
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="space-y-2">
           variant="outline"
           className="w-full py-6 relative"
@@ -475,12 +536,21 @@ ursor/fix-website-loading-errors-and-merge-6662
           </svg>
           Continue with Google
         </Button>
+<<<<<<< HEAD
         <Button
           variant="outline"
         <Button
           variant="outline"
         <Button 
           variant="outline" 
+=======
+
+
+        <Button 
+          variant="outline" 
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           className="w-full py-6 relative"
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
@@ -494,12 +564,16 @@ ursor/fix-website-loading-errors-and-merge-6662
         <span className="mx-2 text-xs text-muted-foreground">OR</span>
         <div className="flex-grow border-t border-border"></div>
       </div>
+<<<<<<< HEAD
       {error && (
         <Alert variant="destructive" className="mb-4">
           <AlertCircle className="h-4 w-4" />
           <AlertDescription>{error}</AlertDescription>
         </Alert>
       )}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </h2>;
 
       <div className="space-y-2">;
@@ -599,15 +673,25 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Input
               id="name"
               name="name"
+<<<<<<< HEAD
               value = {formData.name,}
               onChange = {handleInputChange,}
               required
               aria-invalid = {!!fieldErrors.name,}
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               value={formData.name}
               onChange={handleInputChange}
               required;
               aria-invalid={!!fieldErrors.name}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               placeholder="Enter your full name"
             />
             {fieldErrors.name && (
@@ -615,6 +699,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             )}
           </div>
         )}
+<<<<<<< HEAD
 
 
               placeholder="Enter your full name"
@@ -624,6 +709,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             )}
           </div>;
         )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -639,18 +726,26 @@ ursor/fix-website-loading-errors-and-merge-6662
           <Label htmlFor="email">Email address</Label>
         <div className="space-y-2">;
           <Label htmlFor="email">Email address</Label>;
+<<<<<<< HEAD
 
         <div className="space-y-2">
           <Label htmlFor="email">Email address</Label>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Input
             id="email"
             name="email"
             type="email"
+<<<<<<< HEAD
             value = {formData.email,}
             onChange = {handleInputChange,}
             required
             aria-invalid = {!!fieldErrors.email,}
 
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             value={formData.email}
             onChange={handleInputChange}
             required;
@@ -661,12 +756,17 @@ ursor/fix-website-loading-errors-and-merge-6662
           />;
           {fieldErrors && fieldErrors.email && (;
             <p className="text-red-500 text-sm">{fieldErrors && fieldErrors.email}</p>;
+<<<<<<< HEAD
+=======
+          )}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         </div>;
 
         <div className="space-y-2">;
           <Label htmlFor="password">Password</Label>;
 
+<<<<<<< HEAD
             value={formData.email}
             onChange={handleInputChange}
             required;
@@ -679,18 +779,26 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
         <div className="space-y-2">
           <Label htmlFor="password">Password</Label>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Input
             id="password"
             name="password"
             type="password"
+<<<<<<< HEAD
             value = {formData.password,}
             onChange = {handleInputChange,}
             required
             aria-invalid = {!!fieldErrors.password,}
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             value={formData.password}
             onChange={handleInputChange}
             required;
             aria-invalid={!!fieldErrors.password}
+<<<<<<< HEAD
             placeholder="Create a password"
           />
           <PasswordStrengthMeter password={formData.password} />
@@ -699,6 +807,9 @@ ursor/fix-website-loading-errors-and-merge-6662
           )}
         </div>
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             placeholder="Create a password"
           />;
@@ -710,12 +821,16 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>;
 
 
+<<<<<<< HEAD
         
         
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         
 
         <Button
+<<<<<<< HEAD
           className="w-full py-6"
           disabled={isLoading}
         >
@@ -731,6 +846,21 @@ ursor/fix-website-loading-errors-and-merge-6662
       </form>
 ursor/fix-website-loading-errors-and-merge-6662
       
+=======
+          type="submit"
+          className="w-full py-6"
+          disabled = {isLoading,}>;
+          {isLoading ? (;
+            <>;
+              <LoadingSpinner size="sm" className="mr-2" />;
+              Please wait...;
+            </>;
+          ) : (;
+            signupMode ? "Create Account" : "Sign In";
+          )}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       
 
 
@@ -839,6 +969,10 @@ ursor/fix-website-loading-errors-and-merge-6662
           href="/login";
           className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer";
         >;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           Sign In;
         </Link>;
       </p>;
@@ -880,4 +1014,8 @@ if ( {) {
 }</Button> </form> <Link href="/login" className="p - 0 h - auto text - zion - cyan hover: text - zion - cyan - light cursor - pointer" > Sign In </Link> </p> </div>);
 }"}
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

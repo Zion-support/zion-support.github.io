@@ -1,4 +1,14 @@
 
+<<<<<<< HEAD
+=======
+import { ProductListingCard } from '@/components / ProductListingCard';
+import { GradientHeading } from '@/components / GradientHeading';
+import { Button } from '@/components / ui / button';
+import { Link } from './react-router-dom';
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 interface FeaturedListingsSectionProps {
   show_title?: boolean;
@@ -11,6 +21,7 @@ function FeaturedListingsSection() {
     {
 
 
+<<<<<<< HEAD
 import {ProductListingCard} from "@/components/ProductListingCard";
 import {GradientHeading} from "@/components/GradientHeading";
 import {Button} from "@/components/ui/button";
@@ -39,11 +50,14 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       createdAt: "2023-11-15T14:48:00.000Z"
       rating: 4.8
       reviewCount: 124
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       id: "advanced-nlp-model",
       title: "Advanced NLP Model for Text Analysis",
       description: "State-of-the-art natural language processing with 98% accuracy",
       price: 4999,
       currency: "$",
+<<<<<<< HEAD
       category: "AI Models",;
       tags: ["AI", "NLP", "Machine Learning"];
       category: "AI Models",
@@ -52,12 +66,17 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       createdAt: "2023-11-15T14:48:00.000Z",
       rating: 4.8,
       reviewCount: 124,
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       author: {
         name: "TechAI Labs"
         id: "tech-ai-labs"
         avatarUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=64&h=64&fit=crop&auto=format"
       }
 
+<<<<<<< HEAD
     }
     {
       id: "image-generation-service"
@@ -71,6 +90,9 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       createdAt: "2023-10-20T11:15:00.000Z"
       rating: 4.7
       reviewCount: 89
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
     {
       id: "image-generation-service",
@@ -84,22 +106,35 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       createdAt: "2023-10-20T11:15:00.000Z",
       rating: 4.7,
       reviewCount: 89,
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       author: {
         name: "VisualAI"
         id: "visual-ai"
       }
 
+<<<<<<< HEAD
     },
 
 
     }
     },
+=======
+
+    },
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       id: "fullstack-ai-dev"
       title: "Full-Stack AI Development"
       description: "End-to-end development for AI-powered applications"
       price: null, // Custom pricing
 
+<<<<<<< HEAD
       currency: "$"
       category: "Services"
       tags: ["Development", "Full-stack", "AI"];
@@ -107,6 +142,9 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       createdAt: "2023-12-15T09:45:00.000Z"
       rating: 4.9
       reviewCount: 56
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       currency: "$",
       category: "Services",
       tags: ["Development", "Full-stack", "AI"],
@@ -114,14 +152,24 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       createdAt: "2023-12-15T09:45:00.000Z",
       rating: 4.9,
       reviewCount: 56,
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       author: {
         name: "DataMinds Consulting"
         id: "dataminds-consulting"
       }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {ProductListingCard} from "@/components/ProductListingCard";
 import {GradientHeading} from "@/components/GradientHeading";
 import {Button} from "@/components/ui/button";
 import {Link} from "react-router-dom";
+<<<<<<< HEAD
 
     }
     {
@@ -136,6 +184,10 @@ import {Link} from "react-router-dom";
       createdAt: "2024-01-05T11:15:00.000Z"
       rating: 4.6
       reviewCount: 72
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
     {
       id: "sentiment-analysis-api",
@@ -149,6 +201,10 @@ import {Link} from "react-router-dom";
       createdAt: "2024-01-05T11:15:00.000Z",
       rating: 4.6,
       reviewCount: 72,
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       author: {
         name: "SocialAI"
         id: "social-ai"
@@ -173,16 +229,29 @@ import {Link} from "react-router-dom";
             <ProductListingCard
               key={listing.id}
               listing={listing}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               view="grid"
 import { ProductListingCard } from "@/components/ProductListingCard",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
 import { Link } from "react-router-dom",;
+<<<<<<< HEAD
 interface FeaturedListingsSectionProps {;
   showTitle?: boolean;
 }
 ;
 export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSectionProps) {;
+=======
+
+interface FeaturedListingsSectionProps {;
+  showTitle?: boolean;
+}
+
+export function FeaturedListingsSection(): any ({ showTitle = true }: FeaturedListingsSectionProps) {;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const featuredListings = [;
     {;
       id: "advanced-nlp-model",;
@@ -191,17 +260,30 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       price: 4999,;
       currency: "$",;
       category: "AI Models",;
+<<<<<<< HEAD
       tags: ["AI", "NLP", "Machine Learning"],;
       images: ["https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&h=500"],;
       createdAt: "2023-11-15T14:48:00.000Z",;
       rating: 4.8,;
+=======
+      tags: ["AI", "NLP", "Machine Learning"];
+      images: ["https://images && images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&h=500"],;
+      createdAt: "2023-11-15T14:48:00 && 00.000Z",;
+      rating: 4 && 4.8,;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       reviewCount: 124,;
       author: {;
         name: "TechAI Labs",;
         id: "tech-ai-labs",;
+<<<<<<< HEAD
         avatarUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=64&h=64&fit=crop&auto=format";
       }
     },;
+=======
+        avatarUrl: "https://images && images.unsplash.com/photo-1531297484001-80022131f5a1?w=64&h=64&fit=crop&auto=format";
+      }
+    };
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {;
       id: "image-generation-service",;
       title: "AI Image Generation Service",;
@@ -209,16 +291,27 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       price: 2499,;
       currency: "$",;
       category: "Content Creation",;
+<<<<<<< HEAD
       tags: ["AI", "Images", "Generation"],;
       images: ["https://images.unsplash.com/photo-1579403124614-197f69d8187b?auto=format&fit=crop&w=800&h=500"],;
       createdAt: "2023-10-20T11:15:00.000Z",;
       rating: 4.7,;
+=======
+      tags: ["AI", "Images", "Generation"];
+      images: ["https://images && images.unsplash.com/photo-1579403124614-197f69d8187b?auto=format&fit=crop&w=800&h=500"],;
+      createdAt: "2023-10-20T11:15:00 && 00.000Z",;
+      rating: 4 && 4.7,;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       reviewCount: 89,;
       author: {;
         name: "VisualAI",;
         id: "visual-ai";
       }
+<<<<<<< HEAD
     },;
+=======
+    };
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {;
       id: "fullstack-ai-dev",;
       title: "Full-Stack AI Development",;
@@ -226,16 +319,27 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       price: null, // Custom pricing;
       currency: "$",;
       category: "Services",;
+<<<<<<< HEAD
       tags: ["Development", "Full-stack", "AI"],;
       images: ["https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&h=500"],;
       createdAt: "2023-12-15T09:45:00.000Z",;
       rating: 4.9,;
+=======
+      tags: ["Development", "Full-stack", "AI"];
+      images: ["https://images && images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&h=500"],;
+      createdAt: "2023-12-15T09:45:00 && 00.000Z",;
+      rating: 4 && 4.9,;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       reviewCount: 56,;
       author: {;
         name: "DataMinds Consulting",;
         id: "dataminds-consulting";
       }
+<<<<<<< HEAD
     },;
+=======
+    };
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {;
       id: "sentiment-analysis-api",;
       title: "Sentiment Analysis API",;
@@ -243,10 +347,102 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       price: 1299,;
       currency: "$",;
       category: "APIs",;
+<<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
           {featuredListings && featuredListings.map((listing) => (;
             <ProductListingCard
               key={listing && listing.id}
+=======
+      tags: ["API", "Sentiment", "Analytics"];
+      images: ["https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],;
+      createdAt: "2024-01-05T11:15:00 && 00.000Z",;
+      rating: 4 && 4.6,;
+      reviewCount: 72,;
+      author: {;
+        name: "SocialAI",;
+        id: "social-ai";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+      id: "advanced - nlp - model",
+      title: "Advanced NLP Model for Text Analysis",
+      description: "State - of - the - art natural language processing with 98% accuracy",
+      price: 4999,
+      currency: "$",
+      category: "AI Models",
+      tags: ["AI", "NLP", "Machine Learning"];
+      images: ["https://images.unsplash.com / photo - 1488590528505 - 98d2b5aba04b?auto = format & fit = crop & w=800 & h=500"],
+      created_at: "2023 - 11 - 15T14:48:00.000Z",
+      rating: 4.8,
+      review_count: 124,
+      author: {
+        name: "TechAI Labs",
+        id: "tech - ai - labs",
+        avatar_url: "https://images.unsplash.com / photo - 1531297484001 - 80022131f5a1?w = 64 & h=64 & fit = crop & auto = format";
+      }
+    }
+    {
+      id: "image - generation - service",
+      title: "AI Image Generation Service",
+      description: "Create stunning visuals with our advanced AI image generator",
+      price: 2499,
+      currency: "$",
+      category: "Content Creation",
+      tags: ["AI", "Images", "Generation"];
+      images: ["https://images.unsplash.com / photo - 1579403124614 - 197f69d8187b?auto = format & fit = crop & w=800 & h=500"],
+      created_at: "2023 - 10 - 20T11:15:00.000Z",
+      rating: 4.7,
+      review_count: 89,
+      author: {
+        name: "VisualAI",
+        id: "visual - ai";
+      }
+    }
+    {
+      id: "fullstack - ai - dev",
+      title: "Full - Stack AI Development",
+      description: "End - to - end development for AI - powered applications",
+      price: null, // Custom pricing;
+      currency: "$",
+      category: "Services",
+      tags: ["Development", "Full - stack", "AI"];
+      images: ["https://images.unsplash.com / photo - 1485827404703 - 89b55fcc595e?auto = format & fit = crop & w=800 & h=500"],
+      created_at: "2023 - 12 - 15T09:45:00.000Z",
+      rating: 4.9,
+      review_count: 56,
+      author: {
+        name: "DataMinds Consulting",
+        id: "dataminds - consulting";
+      }
+    }
+    {
+      id: "sentiment - analysis - api",
+      title: "Sentiment Analysis API",
+      description: "Real - time sentiment analysis for social media monitoring",
+      price: 1299,
+      currency: "$",
+      category: "APIs",
+      tags: ["API", "Sentiment", "Analytics"];
+      images: ["https://images.unsplash.com / photo - 1551288049 - bebda4e38f71?auto = format & fit = crop & w=800 & h=500"],
+      created_at: "2024 - 01 - 05T11:15:00.000Z",
+      rating: 4.6,
+      review_count: 72,
+      author: {
+        name: "SocialAI",
+        id: "social - ai";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      }
+    }];
+;
+  return (
+
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
+          {featuredListings && featuredListings.map((listing) => (;
+
+            <ProductListingCard
+              key={listing && listing.id}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <section id="featured" className="py - 12 px - 4 bg - zion - blue - dark">;
       <div className="container mx - auto">;
         {show_title && (
@@ -260,6 +456,7 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
           </div>)}
         <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6">;
           {featured_listings.map ((listing) => (
+<<<<<<< HEAD
 
 import { ProductListingCard } from "@/components/ProductListingCard",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -365,10 +562,19 @@ export function FeaturedListingsSection({ showTitle = true } FeaturedListingsSec
             </p>;
           </div>;
         )}
+=======
+            <ProductListingCard;
+              key={listing.id}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+              listing={listing}
+              view="grid";
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <ProductListingCard
               key={listing.id}
               listing={listing}
 
+<<<<<<< HEAD
               view="grid"
               onRequestQuote={() => {}}
 
@@ -398,6 +604,19 @@ export function FeaturedListingsSection({ showTitle = true } FeaturedListingsSec
 
 
         </div>;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              view="grid"
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              onRequestQuote={() => {}}
+
+
+
+
+=======
+        </div>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="mt-10 text-center">;
           <Button
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-8 py-6"
@@ -423,6 +642,10 @@ export function FeaturedListingsSection({ showTitle = true } FeaturedListingsSec
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-8 py-6";
             asChild;
           >;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Link to="/marketplace">View All Listings</Link>;
           </Button>;
         </div>;
@@ -431,6 +654,7 @@ export function FeaturedListingsSection({ showTitle = true } FeaturedListingsSec
 
 
 
+<<<<<<< HEAD
 }
     </section>);
 }
@@ -451,3 +675,12 @@ export function FeaturedListingsSection({ showTitle = true } FeaturedListingsSec
   );
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    </section>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

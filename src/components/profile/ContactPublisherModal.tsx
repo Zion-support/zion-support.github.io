@@ -1,6 +1,7 @@
 import React from 'react'
 import FocusLock from 'react-focus-lock'
 import {
+<<<<<<< HEAD
   Dialog
   DialogContent
   DialogHeader
@@ -8,10 +9,18 @@ import {
 import React from 'react'
 import FocusLock from 'react-focus-lock'
 import {
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Dialog,
   DialogContent,
   DialogHeader,;
   DialogTitle;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 } from '@/components/ui/dialog'; import { Button } from '@/components/ui/button'; import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
   Dialog
@@ -49,6 +58,7 @@ import api from '@/services/apiClient'
   publisherName: string
   publisherEmail?: string
   productId?: string
+<<<<<<< HEAD
 import React from 'react',;
 import FocusLock from 'react-focus-lock',;
 import {;
@@ -69,6 +79,8 @@ import {;
 import { useForm, type Resolver } from 'react-hook-form',;
 import { yupResolver } from '@hookform/resolvers/yup',;
 import * as yup from 'yup',;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import FocusLock from 'react - focus - lock';
 import {
@@ -168,12 +180,16 @@ if ( {) {
       setLoginOpen (true);
       return;
 
+<<<<<<< HEAD
       return;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     const values = form.getValues()
     setIsSubmitting(true)
     setError(null)
     try {
+<<<<<<< HEAD
       await api.post('/api/messages', {
         productId
         body: values.message
@@ -182,6 +198,18 @@ if ( {) {
       toast.success('Message sent')
       form.reset()
       onClose() } finally {      onClose()
+=======
+
+      await api.post ('/api / messages', {
+        product_id,
+        body: values.message,
+        from_user: user.id,
+      });
+      toast.success ('Message sent');
+      form.reset ();
+      on_close () } finally {      on_close ();
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     } finally {
       setIsSubmitting(false)
     }
@@ -305,6 +333,7 @@ import { LoginModal } from '@/components/auth/LoginModal';
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') {
+<<<<<<< HEAD
 
   return (
     <>
@@ -476,6 +505,8 @@ export function ContactPublisherModal({;
   },;
   const handleKeyDown = (e: React.KeyboardEvent) => {;
     if (e.key === 'Escape') {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       e.stopPropagation();
       onClose();
     }
@@ -485,15 +516,25 @@ export function ContactPublisherModal({;
     <>
     <Dialog open={isOpen} onOpenChange={onClose}>
       <FocusLock disabled={!isOpen} returnFocus>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <DialogContent
           className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md"
 
           onKeyDown={handleKeyDown}
           aria-modal="true"
+<<<<<<< HEAD
         <DialogContent
           className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md"
           onKeyDown={handleKeyDown}
           aria-modal="true"
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           aria-labelledby="contact-publisher-title"
         >
           <DialogHeader>
@@ -508,6 +549,7 @@ export function ContactPublisherModal({;
             <span className="block">Email:</span>
             <a href={`mailto:${publisherEmail}`} className="text-zion-cyan hover:underline truncate block">
               {publisherEmail}
+<<<<<<< HEAD
             </a>
           </div>
         )}
@@ -517,6 +559,10 @@ export function ContactPublisherModal({;
               control = {form.control,}
               name="subject"
               render={({ field }: { field: any },) => (                <FormItem>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </Link>
           </div>
         )}
@@ -527,6 +573,11 @@ export function ContactPublisherModal({;
               name="subject"
               render={({ field }: { field: any }) => (
                 <FormItem>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
                     <Input
@@ -538,6 +589,7 @@ export function ContactPublisherModal({;
                   <FormMessage className="text-red-500" />
                 </FormItem>
               )}
+<<<<<<< HEAD
             />
             <FormField
               control = {form.control,}
@@ -549,6 +601,20 @@ export function ContactPublisherModal({;
               name="message"
               render={({ field }: { field: any }) => (
                 <FormItem>
+=======
+
+
+
+            />;
+            <FormField
+              control = {form.control,}
+              name="message"
+
+              render={({ field }: { field: any }) => (
+                <FormItem>
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <FormLabel>Message</FormLabel>
                   <FormControl>
                     <Textarea
@@ -560,6 +626,7 @@ export function ContactPublisherModal({;
                   <FormMessage className="text-red-500" />
                 </FormItem>
               )}
+<<<<<<< HEAD
             />
             <Button
               onClick = {handleSend,}
@@ -578,6 +645,9 @@ export function ContactPublisherModal({;
   ) </>
   )
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               disabled = {!form && form.formState.isValid || isSubmitting,}>;
               <SendIcon className="mr-2" />;
               {isSubmitting ? 'Sending...' : 'Send Message'}
@@ -586,6 +656,7 @@ export function ContactPublisherModal({;
   ) </>;
   );
 };
+<<<<<<< HEAD
             />;
             <Button;
               onClick={handleSend}
@@ -594,6 +665,8 @@ export function ContactPublisherModal({;
             >
               <SendIcon className="mr-2" />
               {isSubmitting ? 'Sending...' : 'Send Message'}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />    <Dialog open={is_open} onOpenChange={on_close}>;
@@ -666,4 +739,8 @@ export function ContactPublisherModal({;
     <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
     </>) </>);
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

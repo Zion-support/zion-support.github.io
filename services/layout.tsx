@@ -30,6 +30,7 @@ export default /**
 function ServicesLayout() {
   return <div>{children}</div>;
 }
+<<<<<<< HEAD
 },;
 export default function ServicesLayout({
   children
@@ -40,3 +41,5 @@ export default function ServicesLayout({
 }) {
   return <div>{children}</div>;
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

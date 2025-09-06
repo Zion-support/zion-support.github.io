@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 if (req.method !== 'POST') return res.status(405).end();
   const { payload, message, signature } = req.body || {};
   if (!payload || !payload.address) return res.status(400).json({ error: 'Missing payload' });
@@ -27,11 +28,19 @@ function handler() {
   return res.status (200).json ({ ok: true });
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from 'next',;
 ;
 // In-memory demo store per process
 const store: Record<string, any> = (global as any).__ZION_DID_STORE__ || {},
 (global as any).__ZION_DID_STORE__ = store,
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 // In-memory demo store per process
 const store: Record<string, any> = (global as any).__ZION_DID_STORE__ |{}
@@ -45,6 +54,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
   if (req.method !== 'POST') return res.status(405).end();
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (req.method !== 'POST') return res.status(405).end(),
   const { payload, message, signature } = req.body || {},
   if (!payload || !payload.address) return res.status(400).json({ error: 'Missing payload' }),
@@ -53,6 +66,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res.status(200).json({ ok: true });
 };
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // In-memory demo store per process;
 const store: Record<string, any> = (global as any).ZION_DID_STORE || {};
 export default function handler(req: any, res: any) {
@@ -73,6 +90,10 @@ export default function handler(req, res) {
 }
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from 'next',
 ;
 // In - memory demo store per process;
@@ -88,6 +109,7 @@ function handler() {
   const { payload, message, signature } = req.body || {},
   if (return res.status (400).json ({ error: 'Missing payload' }), ) {
   $2
+<<<<<<< HEAD
   return res.status(200).json({ ok: true })
   if (req.method !== 'POST') return res.status(405).end(),
   const { payload, message, signature } = req.body || {},
@@ -118,12 +140,20 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -131,5 +161,10 @@ export default function handler(req, res) {
 
 }
 
+<<<<<<< HEAD
 }
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

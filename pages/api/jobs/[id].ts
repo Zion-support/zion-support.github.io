@@ -1,11 +1,19 @@
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile, writeJsonFile } from "../../../utils/db";
 import type { Job } from "../../../utils/types";
 import { rateLimit } from "../../../utils/rateLimit";
 import { getRequestUserEmail, isAdminEmail } from "../../../utils/auth";
+<<<<<<< HEAD
 const FILE = "jobs.json";
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 const FILE = "jobs && jobs.json";
@@ -22,6 +30,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const jobs = readJsonFile<Job[]>(FILE, []);
 
 
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -29,6 +38,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { id } = req && req.query;
   const jobs = readJsonFile<Job[]>(FILE, []);
   const idx = jobs && jobs.findIndex((j) => j && j.id === id);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (idx === -1) {
   }
 }
@@ -91,6 +102,7 @@ export default function handler(req, res) {
     res && res.status(404).json({ error: "Job not found" });
     return;
   }
+<<<<<<< HEAD
   if (req && req.method === "GET") {
     res && res.status(200).json({ job: jobs[idx] });
     return;
@@ -145,6 +157,28 @@ if ( {) {
       return;
     }
     const {
+=======
+
+
+  if (req && req.method === "GET") {
+    res && res.status(200).json({ job: jobs[idx] });
+    return;
+
+  }
+
+  if (req && req.method === "PATCH") {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    const userEmail = getRequestUserEmail(req);
+    const job = jobs[idx];
+    const isOwner = userEmail && userEmail === job && job.clientEmail;
+    if (!isOwner && !isAdminEmail(userEmail)) {
+
+
+      return;
+    }
+    const {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       title,
       description,
       category,
@@ -153,10 +187,16 @@ if ( {) {
       budgetMaxUsd,
       deliveryDeadlineIso,
       status,
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       res.status(403).json({ error: 'Forbidden' });
       return
     }
+
     const { title, description, category, requiredSkills, budgetMinUsd, budgetMaxUsd, deliveryDeadlineIso, status } = req.body || {};
+
     if (typeof title === 'string') job.title = title;
     if (typeof description === 'string') job.description = description;
     if (typeof category === 'string') job.category = category;
@@ -165,6 +205,7 @@ if ( {) {
     if (typeof budgetMaxUsd === 'number' || budgetMaxUsd === null) job.budgetMaxUsd = budgetMaxUsd ?? undefined;
     if (typeof deliveryDeadlineIso === 'string' || deliveryDeadlineIso === null) job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined;
     if (typeof status === 'string') job.status = status as Job['status'];
+<<<<<<< HEAD
 job.updatedAtIso = new Date().toISOString();
     jobs[idx] = job;
     writeJsonFile<Job[]>(FILE, jobs);
@@ -174,6 +215,9 @@ job.updatedAtIso = new Date().toISOString();
   res.setHeader('AllowGET, PATCH');
   res.status(405).end('Method Not Allowed')
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     } = req.body || {}
     // Check condition
 if (job.title = title) {
@@ -217,6 +261,7 @@ if (job.status = status as Job["status"]) {
     res.status (200).json ({ job });
     return;
   }
+<<<<<<< HEAD
   res.setHeader("Allow", "GET, PATCH");
   res.status(405).end("Method Not Allowed");
 }
@@ -319,6 +364,13 @@ export default function handler(req, res) {
     if (typeof budgetMaxUsd === 'number' || budgetMaxUsd === null) job.budgetMaxUsd = budgetMaxUsd ?? undefined;
     if (typeof deliveryDeadlineIso === 'string' || deliveryDeadlineIso === null) job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined;
     if (typeof status === 'string') job.status = status as Job['status'];
+=======
+  res.set_header ("Allow", "GET, PATCH");
+  res.status (405).end ("Method Not Allowed");
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     job.updatedAtIso = new Date().toISOString();
     jobs[idx] = job,;
     writeJsonFile<Job[]>(FILE, jobs),;
@@ -347,6 +399,11 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 }
   } catch (error) {
@@ -354,6 +411,7 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD
 }
 
   if (req.method === "PATCH") {
@@ -400,3 +458,7 @@ export default function handler(req, res) {
   res.status(405).end("Method Not Allowed");
 }
 }
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

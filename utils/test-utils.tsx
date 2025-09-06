@@ -1,10 +1,23 @@
 import React from 'react';
+<<<<<<< HEAD
 import { render, RenderOptions } from '@testing-library/react';
 import { ThemeProvider } from 'next-themes';
 const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
   return (
     <ThemeProvider attribute="class" defaultTheme="light">
       {children}
+=======
+
+import { render, RenderOptions } from '@testing - library / react';
+import { ThemeProvider } from 'next - themes';
+;
+const AllTheProviders = ({ children }: { children: React.ReactNode }) =>: any {
+
+  return (
+    <ThemeProvider attribute="class" defaultTheme="light">
+      {children}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </ThemeProvider>);
 }
 ;
@@ -45,6 +58,10 @@ export const mockNextRouter = () =>: any ({
 export const createMockProps = (overrides = {}) => ({
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </ThemeProvider>;
   );
 },;
@@ -72,6 +89,7 @@ export const mockNextRouter = () => ({;
   domainLocales: [],;
   isPreview: false;
 
+<<<<<<< HEAD
 });
 ;
 export const createMockProps = (overrides = {}) =>: any ({
@@ -142,7 +160,16 @@ export const mockNextRouter = () => ({;
   defaultLocale: 'en',;
   domainLocales: [],;
   isPreview: false;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 });
 export const createMockProps = (overrides = {}) => ({;
   ...overrides;
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 });

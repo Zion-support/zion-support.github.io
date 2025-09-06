@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import { useRouter } from 'next/router', // Changed from useNavigate
 import Link from 'next/link';
@@ -327,6 +328,8 @@ export default function TalentDirectory() {;
                             e.preventDefault(),;
                             setCurrentPage(Math.max(1, currentPage - 1));
                           }}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }}
                         />
                       </PaginationItem>
@@ -351,6 +354,7 @@ export default function TalentDirectory() {;
   );
 }
 
+<<<<<<< HEAD
           {/* Mobile filter sidebar */}
           {isMobileFilterOpen && (
             <div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex">
@@ -397,10 +401,16 @@ export default function TalentDirectory() {;
 }
   )
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </div>;
       </div>;
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 type ProposalListItem = {
   id: string
   title: string
@@ -10,6 +16,32 @@ type ProposalListItem = {
 import React, { useEffect, useState } from 'react',
 import EnhancedLayout from '../../components / layout / EnhancedLayout',
 
+<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+type ProposalListItem = {
+  id: string,
+  title: string,
+  target_institution: string,
+  regional_scope: string,
+  type: string,
+  status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted',
+
+
+},
+export default function InternationalProposalsPage() {
+  const [items, setItems] = useState<ProposalListItem[]>([]),
+  const [filter, setFilter] = useState('All'),
+
+  useEffect__(() => {
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    fetch('/api/proposals')
+      .then((r) => r.json())
+      .then((d) => setItems(d.items |[]))
+      .catch(() => setItems([]))
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   }, []),
   const filtered = items.filter((i) => (filter === 'All' ? true : i.regionalScope === filter))
@@ -66,7 +98,11 @@ import EnhancedLayout from '../../components / layout / EnhancedLayout',
 
 }
 
+<<<<<<< HEAD
 }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   created_at: string;
 },
 export default /**
@@ -143,6 +179,7 @@ type ProposalListItem = {
   status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted'
   createdAt: string
 }
+<<<<<<< HEAD
 
 
 export default function InternationalProposalsPage() {
@@ -223,3 +260,11 @@ export default function InternationalProposalsPage() {
   }
 }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

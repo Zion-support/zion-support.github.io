@@ -2,6 +2,10 @@
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {cn} from "@/lib/utils";
@@ -10,6 +14,14 @@ import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {Loader2} from "lucide-react";
 import {useNavigate} from "react-router-dom";
+<<<<<<< HEAD
+=======
+interface PaymentButtonProps {;
+  amount: number,;
+  serviceId: string,;
+  providerId: string,;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   buttonText?: string;
   className?: string;
   onPaymentInitiated?: () => void;
@@ -47,11 +59,14 @@ interface PaymentButtonProps {
   serviceId: string
   providerId: string
 
+<<<<<<< HEAD
   buttonText?: string;
   className?: string;
   onPaymentInitiated?: () => void;
 import { Loader2 } from "lucide-react",
 import { useNavigate } from "react-router-dom",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface PaymentButtonProps {
   amount: number,
   serviceId: string,
@@ -59,6 +74,7 @@ interface PaymentButtonProps {
   buttonText?: string,
   className?: string,
   onPaymentInitiated?: () => void,
+<<<<<<< HEAD
   redirectUrl?: string
 }
 
@@ -179,6 +195,14 @@ export function PaymentButton({;
         onPaymentInitiated();
 
 
+=======
+
+  redirectUrl?: string
+}
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
       
       // Call the create-checkout edge function
@@ -191,16 +215,25 @@ export function PaymentButton({;
           successUrl: redirectUrl || window.location.href,
           cancelUrl: window.location.href}}),
       
+<<<<<<< HEAD
       
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       if (error) {
         throw error
       }
       if (data?.url) {
         // Open Stripe checkout in a new tab
         window.open(data.url, '_blank')
+<<<<<<< HEAD
       });
       return;
     }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { cn } from '@/lib / utils';
@@ -290,6 +323,7 @@ if ( {) {
       if (onPaymentInitiated) {;
         onPaymentInitiated();
       }
+<<<<<<< HEAD
       } else {
         throw new Error("No checkout URL returned")
       }
@@ -300,11 +334,20 @@ if ( {) {
         description: "There was a problem initiating your payment. Please try again."
         variant: "destructive"})
     } finally {
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Reset button state after a short delay
       setTimeout(() => {
         setIsProcessing(false)
       }, 1500)
 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 
       // Call the create-checkout edge function;
@@ -316,15 +359,24 @@ if ( {) {
           userId: user?.id,;
           successUrl: redirectUrl || window && window.location.href,;
           cancelUrl: window && window.location.href}}),;
+<<<<<<< HEAD
       if (error) {;
         throw error;
       }
+=======
+
+      if (error) {;
+        throw error;
+      }
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       if (data?.url) {;
         // Open Stripe checkout in a new tab;
         window && window.open(data && data.url, '_blank');
       } else {;
         throw new Error("No checkout URL returned");
       }
+<<<<<<< HEAD
     } catch (error) {;
       console && console.error("Payment error:", error);
     }
@@ -359,6 +411,11 @@ if ( {) {
 ;
     } catch (error) {;
       console.error("Payment error:", error),;
+=======
+
+    } catch (error) {;
+      console && console.error("Payment error:", error);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast({;
         title: "Payment error",;
         description: "There was a problem initiating your payment. Please try again.",;
@@ -370,6 +427,7 @@ if ( {) {
       }, 1500);
     }
   };
+<<<<<<< HEAD
   return (;
     <Button;
       onClick={handlePaymentClick}
@@ -378,18 +436,30 @@ if ( {) {
         "relative min-w-[120px]",
 
 
+=======
+
+  return (;
+    <Button;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       onClick={handlePaymentClick}
       disabled={isProcessing}
       className={cn(
 
         "relative min-w-[120px]"
 
+<<<<<<< HEAD
   return (
     <Button
       onClick={handlePaymentClick}
       disabled={isProcessing}
       className={cn(
         "relative min-w-[120px]"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         className
       )}>;
       {isProcessing ? (;
@@ -400,6 +470,7 @@ if ( {) {
       ) : (;
         buttonText;
       )}
+<<<<<<< HEAD
         className
       )}
     >
@@ -422,6 +493,19 @@ if ( {) {
   );
     </Button>;
   );
+=======
+
+    </Button>;
+  );
+=======
+
+    </Button>;
+  );
+=======
+=======
+    </Button>;
+  );
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 }
@@ -460,6 +544,7 @@ interface PaymentButtonProps {;
   onPaymentInitiated?:() => void,;
   redirectUrl?:string;
 }
+<<<<<<< HEAD
 ;
 export function PaymentButton({;
   amount,;
@@ -614,3 +699,6 @@ return (<Button)
   );
 }
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

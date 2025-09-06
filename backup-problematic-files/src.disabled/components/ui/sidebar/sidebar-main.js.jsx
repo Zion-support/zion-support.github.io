@@ -9,4 +9,8 @@ const Sidebar-main.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Sidebar-main.js;
+=======
+export default Sidebar-main.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

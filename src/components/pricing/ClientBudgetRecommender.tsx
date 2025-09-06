@@ -22,6 +22,7 @@ if ( {) {
   return (
 
 
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { logErrorToProduction } from '@/utils/productionLogger'
@@ -197,6 +198,20 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
           suggestedMin: suggestion.minRate,
           suggestedMax: suggestion.maxRate,
       
+=======
+
+
+
+import { Sparkles } from 'lucide-react'
+interface ClientBudgetRecommenderProps {
+
+  jobTitle: string,
+  category: string,
+  timeline?: string,
+  scope?: string,
+  experienceLevel?: string,
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Track this suggestion application
       if (user && user.id) {
         trackPricingSuggestion({
@@ -204,6 +219,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
           suggestionType: "client",
           suggestedMin: suggestion.minRate,
           suggestedMax: suggestion.maxRate,
+<<<<<<< HEAD
           accepted: true,
         })
       }
@@ -216,18 +232,26 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
   }
   }
   },
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   return (
     <div className="space-y-4">
       <div>
         {!suggestion && !isLoading ? (
           <Button
+<<<<<<< HEAD
             type='button'
             variant='outline'
             onClick={generateSuggestion}
             disabled={!jobTitle |!category}
             className='w-full'          >
             <Sparkles className='h-4 w-4 mr-2' /> Get Budget Recommendation
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             type="button"
             variant="outline"
             onClick={generateSuggestion}
@@ -256,6 +280,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
             <Sparkles className='h - 4 w - 4 mr - 2' /> Get Budget Recommendation;
           </Button>) : (
           <PricingSuggestionBox;
+<<<<<<< HEAD
             type="button"
             variant="outline"
             onClick={generateSuggestion}
@@ -274,14 +299,39 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       </div>
     </div>
   )
+=======
+            suggestion={suggestion}
+            isLoading={isLoading}
+            onApplySuggestion={handleApplySuggestion}
+
+            rate_type='hourly'          />)}
+      </div>;
+    </div>);
+}
+// Check condition
+if (params.scope = scope) {
+  $2
+}
+// Check condition
+if (params.experience_level = experience_level) {
+  $2
+}
+//Track this suggestion application // Check condition
+if ( {) {
+  $2
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 if (scope) params.scope = scope
 if (experienceLevel) params.experienceLevel = experienceLevel
 //Track this suggestion application if (user && user.id) {
   trackPricingSuggestion ({
 }
+<<<<<<< HEAD
 }
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 },
@@ -290,14 +340,21 @@ if (experienceLevel) params.experienceLevel = experienceLevel
           />
         )}
 
+<<<<<<< HEAD
 },
             rateType="hourly"
           />
         )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </div>;
     </div>;
   );
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -309,4 +366,8 @@ return (<div className="space - y-4" > <div> {";
 }</div> </div>);
 }
 '"  );
+<<<<<<< HEAD
 },
+=======
+},
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

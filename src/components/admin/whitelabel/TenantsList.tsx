@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import {logErrorToProduction} from '@/utils/productionLogger';
@@ -265,9 +266,19 @@ export function TenantsList() {;
   );
 }
 ;
+=======
+.order('created_at', { ascending: false }),;
+
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
         .order ('created_at', { ascending: false }),
 }
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

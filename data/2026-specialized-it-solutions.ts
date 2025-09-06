@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface SpecializedITSolution2026 {;
 export interface SpecializedITSolution2026 {
 export interface SpecializedITSolution2026 {;
@@ -30,10 +31,13 @@ export interface SpecializedITSolution2026 {;
     mobile: string;
     email: string;
     address: string;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 };
 
+<<<<<<< HEAD
 export const specializedITSolutions2026: SpecializedITSolution2026[] = [
   // Cloud Infrastructure & DevOps
   {
@@ -664,6 +668,12 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) => {
   return specializedITSolutions2026.filter(
     solution => solution.category === category;
   );
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+export const specializedITSolutions2026: SpecializedITSolution2026[] = [
+  // Cloud Infrastructure & DevOps
+  {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 ];
@@ -672,6 +682,7 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) => {
 };
 
 
+<<<<<<< HEAD
 }
 export const getPopularSpecializedITSolutions2026 = () => {
 };
@@ -679,6 +690,8 @@ export const getPopularSpecializedITSolutions2026 = () => {
 export const getPopularSpecializedITSolutions2026 = () => {;
   return specializedITSolutions2026.filter(solution => solution.popular);
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const getSpecializedITSolutions2026ByPriceRange = (
   minPrice: number
   maxPrice: number
@@ -695,10 +708,16 @@ export const getSpecializedITSolutions2026ByPriceRange = (
   });
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export interface SpecializedITSolution2026 {;
 
 };
+<<<<<<< HEAD
 
 export interface SpecializedITSolution2026 {;
   id: string,;
@@ -1064,3 +1083,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPrice: number, maxP
     return price >= minPrice && price <= maxPrice;
   });
 };
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

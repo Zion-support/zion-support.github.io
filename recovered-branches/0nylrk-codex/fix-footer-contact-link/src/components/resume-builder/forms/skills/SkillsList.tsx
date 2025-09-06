@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+
+import { useState, useEffect  } from './react';
+import { Skill  } from '@/types / resume';
+import { SkillCategory  } from './SkillCategory';
+interface SkillsListProps {
+  skills: Skill[];
+  onDeleteSkill: (id: string, category: string) => Promise < void>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) =>: any {
   const [skillsByCategory, setSkillsByCategory] = useState<;
@@ -13,6 +24,10 @@ import { SkillCategory } from './SkillCategory';
 import {useState, useEffect} from 'react';
 import {Skill} from '@/types/resume';
 import {SkillCategory} from './SkillCategory';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface SkillsListProps {
   skills: Skill[];
   onDeleteSkill: (id: string, category: string) => Promise<void>
@@ -35,6 +50,12 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
     // Group skills by category
     const grouped = skills.reduce(
       (acc, skill) => {
+<<<<<<< HEAD
+=======
+        const category = skill.category |"Other";
+        if (!acc[category]) {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   useEffect (() => {
     // Group skills by category;
@@ -45,10 +66,15 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
 if ( {) {
   $2
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           acc[category] = [];
         }
         acc[category].push (skill);
         return acc;
+<<<<<<< HEAD
 const category = skill.category |"Other";
         if (!acc[category]) {
           acc[category] = [];
@@ -61,6 +87,8 @@ const category = skill.category |"Other";
     setSkillsByCategory(grouped);
   }, [skills]);
   if (Object.keys(skillsByCategory).length === 0) {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
     return null
@@ -101,6 +129,7 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
   return (
     <div className="space-y-6">
       <h3 className="text-md font-medium">Your Skills</h3>
+<<<<<<< HEAD
 return null;
   }
   }
@@ -124,6 +153,8 @@ return null;
     <div className="space-y-6">
       <h3 className="text-md font-medium">Your Skills</h3>
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="space-y-4">
         {Object.entries(skillsByCategory).map(([category, categorySkills]) => (
           <SkillCategory
@@ -252,6 +283,7 @@ if (.length === 0) {) {
     </div>);
 }
 ;
+<<<<<<< HEAD
   ),;
 },; setSkillsByCategory (grouped) 
 }, [skills]);
@@ -286,3 +318,6 @@ return (<div className="space-y-6" > <h3 className="text-md font-medium" >Your S
     </div>;
   );
 };
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

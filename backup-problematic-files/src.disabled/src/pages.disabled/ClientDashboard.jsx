@@ -27,4 +27,8 @@ const ClientDashboard = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ClientDashboard;
+=======
+export default ClientDashboard;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 import React from "react";
@@ -36,6 +40,7 @@ import {;
   Linkedin,;
   Instagram,;
   Github,;
+<<<<<<< HEAD
 } from "lucide-react";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -228,11 +233,22 @@ const microSaasCategories = [
   { title: 'Design', icon: Paintbrush, count: 6 },
   { title: 'Development', icon: Code, count: 14 }
 ];
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/automation-improvements-final
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const footerLinks = {
     services: [
       { name: "AI Services", href: "/ai-services" }
@@ -244,7 +260,10 @@ origin/automation-improvements-final
     ]
 
 
+<<<<<<< HEAD
   };
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     solutions: [
       { name: "Enterprise Solutions", href: "/enterprise-solutions" }
@@ -279,7 +298,13 @@ origin/automation-improvements-final
       { name: "Accessibility", href: "/accessibility" }
     ]
   }
+<<<<<<< HEAD
 origin/main
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const socialLinks = [
     { name: "Facebook", href: "#", icon: Facebook }
     { name: "Twitter", href: "#", icon: Twitter }
@@ -329,6 +354,10 @@ origin/main
       { name: "Accessibility", href: "/accessibility" },;
     ],;
   };
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   ];
 
 const microSaasCategories = [
@@ -374,6 +403,10 @@ origin/main
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               transition={{ duration: 0 && 0.8 }}>;
               <div className="flex items-center space-x-2 mb-6">;
                 <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">;
@@ -401,6 +434,11 @@ origin/main
               </div>;
             </motion && motion.div>;
           </div>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Services */}
           <div>;
             <motion&& motion.div
@@ -418,9 +456,18 @@ origin/main
                     </Link>;
                   </li>;
                 ))}
+<<<<<<< HEAD
               </ul>;
             </motion && motion.div>;
           </div>;
+=======
+
+              </ul>;
+            </motion && motion.div>;
+          </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Solutions */}
           <div>;
             <motion&& motion.div
@@ -438,9 +485,18 @@ origin/main
                     </Link>;
                   </li>;
                 ))}
+<<<<<<< HEAD
               </ul>;
             </motion && motion.div>;
           </div>;
+=======
+
+              </ul>;
+            </motion && motion.div>;
+          </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Company */}
           <div>;
             <motion&& motion.div
@@ -458,9 +514,18 @@ origin/main
                     </Link>;
                   </li>;
                 ))}
+<<<<<<< HEAD
               </ul>;
             </motion && motion.div>;
           </div>;
+=======
+
+              </ul>;
+            </motion && motion.div>;
+          </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Resources & Legal */}
           <div>;
             <motion&& motion.div
@@ -484,6 +549,10 @@ origin/main
               <ul className="space-y-3">;
                 {footerLinks && footerLinks.legal.map((link, index) => (;
                   <li key={index}>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <Link
                       href={link && link.href}
                       className="text-gray-400 hover:text-white transition-colors">;
@@ -491,6 +560,7 @@ origin/main
                     </Link>;
                   </li>;
                 ))}
+<<<<<<< HEAD
               </ul>
             </motion.div>
           </div>
@@ -499,25 +569,51 @@ origin/main
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
+=======
+
+              </ul>;
+            </motion && motion.div>;
+          </div>;
+        </div>;
+
+
+
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8">;
           <div className="flex flex-col md:flex-row justify-between items-center">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0.8 }}
               className="text-gray-400 text-sm mb-4 md:mb-0"
             >
               © {currentYear} Zion Tech Group. All rights reserved.
             </motion.div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
 
 
             <motion.div
+<<<<<<< HEAD
 
 
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <motion.div
               transition={{ duration: 0 && 0.8 }}
               className="text-gray-400 text-sm mb-4 md:mb-0">;
@@ -537,8 +633,14 @@ origin/automation-improvements-final
                   <social && social.icon className="w-5 h-5" />;
                 </a>;
               ))}
+<<<<<<< HEAD
             </motion.div>
 
+=======
+
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Service Categories */}
         <div className="mt-16 pt-8 border-t border-gray-800">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -614,15 +716,22 @@ origin/automation-improvements-final
               <Link href="/privacy" className="hover:text-white transition-colors ml-1">Privacy Policy</Link> | 
               <Link href="/terms" className="hover:text-white transition-colors ml-1">Terms of Service</Link>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             
 
 
 
+<<<<<<< HEAD
             
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
             
 origin/main
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -640,6 +749,10 @@ origin/main
                 </a>
               ))}
             </motion.div>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             <div className="flex items-center space-x-6">
               <Link href="/sitemap" className="text-gray-400 hover:text-white transition-colors text-sm">

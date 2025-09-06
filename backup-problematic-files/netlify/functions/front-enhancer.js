@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :netlify/functions/front-enhancer.js
 :backup-problematic-files/netlify/functions/front-enhancer.js
 const path = require('path'),;
@@ -30,6 +31,11 @@ exports.handler = async () => {;
 },;
 :backup-problematic-files/netlify/functions/front-enhancer.js
 :backup-problematic-files/netlify/functions/front-enhancer.js
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
@@ -65,6 +71,7 @@ exports.handler = async () => {
   );
   // Attempt to sync changes back to main (best-effort)
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+<<<<<<< HEAD
 :netlify/functions/front-enhancer.js
   return { statusCode: 200, body: logs.join('\n') }
 };function runNode(relPath, args = []) {
@@ -94,6 +101,9 @@ exports.handler = async () => {
   return { statusCode: 200, body: logs.join('\n') }
 }
 
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   return { statusCode: 200, body: logs.join('\n') };
 };function runNode(relPath, args = []) {
@@ -106,20 +116,9 @@ exports.config = {
   schedule: '*/20 * * * *', // every 20 minutes
 },
 
-exports.handler = async () => {
-  const logs = [],
-  function logStep(name, fn) {
-    logs.push(`\n=== ${name} ===`),
-    const { status, stdout, stderr } = fn(),
-    if (stdout) logs.push(stdout),
-    if (stderr) logs.push(stderr),
-    logs.push(`exit=${status}`),
-    return status
-  }
 
-  // Update the front page auto-generated section
-  logStep('front-index:advertise', () => runNode('automation/front-index-advertiser.cjs')),
 
+<<<<<<< HEAD
   // Attempt to sync changes back to main (best-effort)
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
 
@@ -131,3 +130,6 @@ exports.handler = async () => {
 main:netlify/functions/front-enhancer.js
 :backup-problematic-files/netlify/functions/front-enhancer.js
 :backup-problematic-files/netlify/functions/front-enhancer.js
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

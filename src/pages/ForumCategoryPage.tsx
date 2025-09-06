@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { logInfo } from '@/utils/productionLogger'
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react'
 import { logInfo } from '@/utils/productionLogger'
@@ -68,15 +69,22 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
     icon: "Code"
   },
   "feedback": {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 "feedback": {
     id: "feedback"
     name: "Feedback & Feature Requests"
     description: "Share your feedback and suggest new features."
     adminOnly: false
     icon: "FileText"
+<<<<<<< HEAD
   }
 ursor/fix-website-loading-errors-and-merge-6662
   }
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
 
 
@@ -96,6 +104,7 @@ const categories_info: Record < string, ForumCategoryInfo> = {
     admin_only: false,
     icon: "Briefcase";
   }
+<<<<<<< HEAD
 }
 const iconMap = {
   "Briefcase": Briefcase
@@ -108,6 +117,10 @@ function CategoryContent({
   categoryId
   category
   IconComponent
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 },
 
 const iconMap = {
@@ -129,6 +142,7 @@ function CategoryContent({
   IconComponent: React.ComponentType<any>
   user: any
 }) {
+<<<<<<< HEAD
   const [searchQuery, setSearchQuery] = useState("")
   const { featuredPosts, recentPosts } = useCommunity()
   // Filter posts by category from context data
@@ -139,16 +153,28 @@ function CategoryContent({
     // Remove duplicates by id
     index === self.findIndex(p => p.id === post.id)
   )
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [searchQuery, setSearchQuery] = useState(""),
   const { featuredPosts, recentPosts } = useCommunity(),
 
   // Filter posts by category from context data
   const categoryPosts = [
     ...featuredPosts.filter(post => post.categoryId === categoryId),
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     ...recentPosts.filter(post => post.categoryId === categoryId)
   ].filter((post, index, self) => 
     // Remove duplicates by id
     index === self.findIndex(p => p.id === post.id)
+<<<<<<< HEAD
   ].filter((post, index, self) => 
     // Remove duplicates by id
     index === self.findIndex(p => p.id === post.id)
@@ -158,6 +184,9 @@ function CategoryContent({
 
   )
   ),
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   // Apply search filter
     ? categoryPosts.filter(post =>
@@ -165,10 +194,15 @@ function CategoryContent({
         post.content.toLowerCase().includes(searchQuery.toLowerCase()) |
         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       )
+<<<<<<< HEAD
     : categoryPosts
   const canCreatePost = user && (!category.adminOnly |user.userType === 'admin' |user.role === 'admin')
   const { isFollowed, follow, unfollow } = useFollowedCategories()
   const { toast } = useToast()
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleFollow = () => {
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),
@@ -179,6 +213,12 @@ function CategoryContent({
   const { isFollowed, follow, unfollow } = useFollowedCategories(),
   const { toast } = useToast(),
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleFollow = () => {
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' })
@@ -290,13 +330,21 @@ function CategoryContent({;
     if (!user) {;
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),;
       return;
+<<<<<<< HEAD
       return;
+=======
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     if (isFollowed(categoryId)) {
       unfollow(categoryId)
     } else {
       follow(categoryId)
     }
+<<<<<<< HEAD
   )
 }
   }
@@ -387,6 +435,26 @@ function CategoryContent({;
         )}
       </div>;
     </div>;
+=======
+
+  };
+
+  logInfo('CategoryContent - categoryId:', { data: categoryId }),;
+  logInfo('CategoryContent - categoryPosts:', { data: categoryPosts }),;
+  logInfo('CategoryContent - filteredPosts:', { data: filteredPosts }),;
+  const category = categoryId ? categoriesInfo[categoryId] : null;
+  const IconComponent = category ? iconMap[category && category.icon as keyof typeof iconMap] : null;
+
+}
+  );
+
+}
+<<<<<<< HEAD
+
+
+  )
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -420,6 +488,10 @@ function CategoryContent() {
     // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast ({ title: 'Login required', description: 'Please sign in to follow this category' }),
       return;
     }
@@ -440,6 +512,7 @@ if ( {) {
   );
 }
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
   );
 }
@@ -505,3 +578,6 @@ export default function ForumCategoryPage() {;
 }
 ;
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

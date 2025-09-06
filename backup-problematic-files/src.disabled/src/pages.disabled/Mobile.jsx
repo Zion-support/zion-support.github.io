@@ -27,4 +27,8 @@ const Mobile = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Mobile;
+=======
+export default Mobile;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

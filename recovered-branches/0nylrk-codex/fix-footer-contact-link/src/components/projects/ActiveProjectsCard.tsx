@@ -8,6 +8,7 @@ import {Badge} from "@/components/ui/badge";
 import {useProjects} from "@/hooks/useProjects";
 import {Project} from "@/types/projects";
 export function ActiveProjectsCard() {;
+<<<<<<< HEAD
   const { projects, isLoading } = useProjects();
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
   const { projects, isLoading } = useProjects();
@@ -30,6 +31,16 @@ export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects(),
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
   
+=======
+
+  const { projects, isLoading } = useProjects();
+
+  const [activeProjects, setActiveProjects] = useState<Project[]>([]);
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   useEffect(() => {
     if (projects && !isLoading) {
       const active = projects.filter(p =>
@@ -39,14 +50,21 @@ export function ActiveProjectsCard() {
     }
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   }, [projects, isLoading]),
   
 
+<<<<<<< HEAD
   }, [projects, isLoading]);
 
   }, [projects, isLoading]),
   
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (isLoading) {
     return (
       <Card>
@@ -61,6 +79,10 @@ export function ActiveProjectsCard() {
           <div className="space-y-2">
             {[1, 2].map(idx => (
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useEffect, useState } from "react",;
 import { Link } from "react-router-dom",;
 import { BriefcaseIcon, Clock } from "lucide-react",;
@@ -72,18 +94,26 @@ import { Project } from "@/types/projects",;
 export function ActiveProjectsCard() {;
   const { projects, isLoading } = useProjects(),;
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   useEffect(() => {;
     if (projects && !isLoading) {;
       const active = projects && projects.filter(p => ;
         ['offer_acceptedin_progress'].includes(p && p.status);
+<<<<<<< HEAD
   useEffect(() => {;
     if (projects && !isLoading) {;
       const active = projects.filter(p =>;
         ['offer_acceptedin_progress'].includes(p.status);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       ).slice(0, 3), // Limit to 3 most recent projects;
       setActiveProjects(active);
     }
   }, [projects, isLoading]);
+<<<<<<< HEAD
   if (isLoading) {;
 
 import { useEffect, useState } from "react",;
@@ -111,6 +141,12 @@ export function ActiveProjectsCard() {;
   if (isLoading) {;
     return (;
     return (;
+=======
+
+  if (isLoading) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
@@ -123,6 +159,7 @@ export function ActiveProjectsCard() {;
           <div className="space-y-2">;
             {[1, 2].map(idx => (;
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>;
+<<<<<<< HEAD
             ))}
           </div>
         </CardContent>
@@ -187,6 +224,19 @@ export function ActiveProjectsCard() {;
           </Button>
         </CardFooter>
       )}
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            ))}
+          </div>;
+        </CardContent>;
+      </Card>;
+    );
+  }
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   
 
@@ -394,3 +444,9 @@ return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <Br
   );
 }
 ;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

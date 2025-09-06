@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const fs = require ('fs'),
 const path = require ('path'),
 console.log ('🔧 Starting Merge Conflict Resolution'),
@@ -20,6 +24,7 @@ if ( {) {
       console.log (`✅ Fixed merge conflicts in: ${path.relative (process.cwd (), file_path)}`),
 
 
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 console.log('🔧 Starting Merge Conflict Resolution');
@@ -46,12 +51,18 @@ const fs = require('fs'),;
 const path = require('path'),;
 const fs = require('fs');
 const path = require('path');
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 console.log('🔧 Starting Merge Conflict Resolution'),;
 // Function to fix merge conflicts in a file;
 function fixMergeConflicts(filePath) {;
   try {;
     let content = fs.readFileSync(filePath, 'utf8'),;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (content !== originalContent) {;
       fs.writeFileSync(filePath, content, 'utf8'),;
       console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`),;
@@ -61,6 +72,7 @@ function fixMergeConflicts(filePath) {;
     return false;
   } catch (error) {
     console.log (`❌ Error fixing ${file_path}: ${error.message}`),
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 ;
@@ -108,11 +120,27 @@ function getAllFiles(dir, extensions) {;
       const fullPath = path.join(dir, item),;
       const stat = fs.statSync(fullPath),;
   let files = [];
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    return false;
+  }
+}
+// Function to get all files recursively;
+
+function getAllFiles(dir, extensions) {;
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   try {;
     const items = fs.readdirSync(dir);
     for (const item of items) {;
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 /**
  * getAllFiles - Function description
  */
@@ -185,6 +213,7 @@ for (const file of files) {
 ;
 // Main execution;
 
+<<<<<<< HEAD
 
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {;
         files = files.concat(getAllFiles(fullPath, extensions));
@@ -195,10 +224,13 @@ for (const file of files) {
       }
     }
   } catch (error) {// Skip directories that can't be read;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   return files;
 }
 // Main execution;
+<<<<<<< HEAD
 async function main() {;
   console.log('🔍 Scanning for merge conflicts...');
   const files = getAllFiles(process.cwd(), ['.tsx.ts.jsx.js', '.json.md']);
@@ -207,6 +239,31 @@ async function main() {;
     try {;
       const content = fs.readFileSync(file, 'utf8');
       if (content.includes('') |content.includes('
+=======
+
+async /**
+ * main - Function description
+ */
+function main() {
+  console.log ('🔍 Scanning for merge conflicts...'),
+  const files = getAllFiles (process.cwd (), ['.tsx.ts.jsx.js', '.json.md']),
+  let fixed_count = 0,
+  for (const file of files) {
+    try {
+      const content = fs.readFileSync (file, 'utf8'),
+      // Check condition
+if (|| content.includes (') {
+  $2
+}
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {;
+        files = files.concat(getAllFiles(fullPath, extensions));
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       } else if (extensions.some(ext => item.endsWith(ext))) {;
         files.push(fullPath);
       }
@@ -221,6 +278,7 @@ async function main() {;
 async function main() {;
   console.log('🔍 Scanning for merge conflicts...'),;
   const files = getAllFiles(process.cwd(), ['.tsx.ts.jsx.js', '.json.md']),;
+<<<<<<< HEAD
 async function main() {;
   console.log('🔍 Scanning for merge conflicts...');
   const files = getAllFiles(process.cwd(), ['.tsx', '.ts', '.jsx', '.js', '.json', '.md']);
@@ -259,3 +317,8 @@ async function main() {;
 }
 ;
 main().catch(console.error),;
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

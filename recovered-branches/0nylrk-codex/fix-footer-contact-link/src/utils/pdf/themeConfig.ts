@@ -6,11 +6,19 @@ export function getPdfThemeColors (theme: 'light' | 'dark'): PdfThemeColors {
   return theme === 'light';
 
     ? {
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   return theme === 'light' 
     ? { ;
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         background: '#ffffff';
         text: '#000000';
         heading: '#222222';
@@ -18,6 +26,7 @@ export function getPdfThemeColors (theme: 'light' | 'dark'): PdfThemeColors {
         subheading: '#444444',
         accent: '#9b87f5';
 
+<<<<<<< HEAD
 /**
  * Theme configuration for PDF export */
 export interface PdfThemeColors {;
@@ -40,11 +49,14 @@ export function getPdfThemeColors(theme: 'light' | 'dark'): PdfThemeColors {
         heading: '#222222';
         subheading: '#444444'
         accent: '#9b87f5'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
     : {
         background: '#1A1F2C';
         text: '#ffffff';
         heading: '#ffffff';
+<<<<<<< HEAD
         subheading: '#cccccc'
 
         accent: '#9b87f5'
@@ -76,5 +88,12 @@ export function getPdfThemeColors(theme: 'light' | 'dark'): PdfThemeColors {;
         subheading: '#cccccc',
         accent: '#9b87f5';
 
+=======
+
+        subheading: '#cccccc',
+        accent: '#9b87f5';
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
 }

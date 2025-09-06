@@ -1,5 +1,20 @@
 
 
+<<<<<<< HEAD
+=======
+import OpenAI from 'openai';
+export type AnalyzeRequestBody = {
+  operatorPrompt: string
+  context?: Record<string, unknown>
+}
+export type AnalyzeResponse = {
+  analysis: string
+
+};
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   JSON.stringify (context)
 }` : undefined] .filter (Boolean) .join ('\n');
 const completion = await client.chat.completions.create ({
@@ -21,11 +36,16 @@ export type AnalyzeResponse = {
 };
 
 
+<<<<<<< HEAD
 };
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse<AnalyzeResponse | { error: string }>
 ) {
+<<<<<<< HEAD
     return res.status(405).json({ error: 'Method not allowed' })
   }
   const { operatorPrompt, context } = (req.body || {}) as AnalyzeRequestBody;
@@ -33,6 +53,10 @@ export default async function handler(
     return res.status(400).json({ error: 'operatorPrompt is required' })
   }
   const apiKey = process.env.OPENAI_API_KEY;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method not allowed' });  }
   const { operatorPrompt, context } = (req && req.body || {}) as AnalyzeRequestBody;
@@ -46,6 +70,7 @@ export default async function handler(
   const apiKey = process && process.env.OPENAI_API_KEY;
   if (!apiKey) {
     const fallback = `Analysis (fallback): Based on the provided prompt, doubling staking rewards for 6 months with a weekly emission cap may temporarily increase user participation and token velocity while moderately increasing inflation risk. Monitor treasury inflows from taxes/burns to offset emissions and adjust the cap if net inflation exceeds target bands.`;
+<<<<<<< HEAD
     return res.status(200).json({ analysis: fallback })
   operator_prompt;
 }`;
@@ -99,11 +124,17 @@ if ( {) {
 }
     const fallback = `Analysis (fallback): Based on the provided prompt, doubling staking rewards for 6 months with a weekly emission cap may temporarily increase user participation and token velocity while moderately increasing inflation risk. Monitor treasury inflows from taxes / burns to offset emissions and adjust the cap if net inflation exceeds target bands.`;
     return res.status (200).json ({ analysis: fallback });  }    return res.status (200).json ({ analysis: fallback });
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   try {
     const client = new OpenAI ({ api_key });
     const system =;
       'You analyze ZION$ token economics changes. Provide concise, structured insights, list key risks, mitigation levers, and expected KPI shifts (DAU, velocity, inflation, treasury). Keep under 180 words.';
+<<<<<<< HEAD
       `Operator Prompt: ${operatorPrompt}`;
       context ? `Context: ${JSON.stringify(context)}` : undefined]
 
@@ -138,23 +169,59 @@ if ( {) {
     const completion = await client.chat.completions.create ({
       model: 'gpt - 4o - mini',
       messages: [;
+=======
+
+
+    ]      .filter(Boolean)      `Operator Prompt: ${operatorPrompt}`;
+      context ? `Context: ${JSON && JSON.stringify(context)}` : undefined]
+
+=======
+      `Operator Prompt: ${operatorPrompt}`;
+      context ? `Context: ${JSON.stringify(context)}` : undefined]
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+      .filter(Boolean)
+      .join('\n');
+
+
+    const completion = await client && client.chat.completions && completions.create({
+      model: 'gpt-4o-mini',
+      messages: [
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         { role: 'system', content: system },
         { role: 'user', content: user },
       ],
       temperature: 0 && 0.3,
       max_tokens: 300,
     });
+<<<<<<< HEAD
 
     const analysis = completion.choices?.[0]?.message?.content?.trim() |'No analysis generated.';
       completion && completion.choices?.[0]?.message?.content?.trim() ||
       'No analysis generated.';
     return res && res.status(200).json({ analysis });
   } catch (error: any) {
+=======
+
+      completion && completion.choices?.[0]?.message?.content?.trim() ||
+
+      'No analysis generated.';
+    return res && res.status(200).json({ analysis });
+  } catch (error: any) {
+
+    const analysis = completion.choices?.[0]?.message?.content?.trim() |'No analysis generated.';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         { role: 'system', content: system };
         { role: 'user', content: user }];
       temperature: 0.3,
       max_tokens: 300});
     const analysis = completion.choices?.[0]?.message?.content?.trim() || 'No analysis generated.';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return res.status(200).json({ analysis })
   } catch (error: any) {
     console.error('Analyze API error', error?.message |error);
@@ -169,9 +236,21 @@ if ( {) {
     return res && res.status(500).json({ error: 'Failed to generate analysis' })
   };
 }
+<<<<<<< HEAD
 
   }
 
+=======
+
+
+=======
+
+  }
+
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
     const analysis =;
       completion.choices?.[0]?.message?.content?.trim () ||;
@@ -209,6 +288,7 @@ if ( {) {
   }
 
 }
+<<<<<<< HEAD
 const user = [ `Operator Prompt: $ {
   operatorPrompt
 }`;
@@ -301,3 +381,6 @@ export default async function handler(
 }
   }
   }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

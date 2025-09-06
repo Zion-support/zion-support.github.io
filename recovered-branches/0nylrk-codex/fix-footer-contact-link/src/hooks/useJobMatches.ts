@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
@@ -16,6 +17,9 @@ export function useJobMatches(jobId: string) {
   const [matches, setMatches] = useState<JobMatch[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   const [isProcessing, setIsProcessing] = useState(false),
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 export function useJobMatches(jobId: string) {
@@ -45,6 +49,7 @@ function useJobMatches() {
         .from("job_talent_matches")
         .select(`
 
+<<<<<<< HEAD
 
   const fetchMatches = async () => {
     setIsLoading(true),
@@ -63,6 +68,8 @@ function useJobMatches() {
             bio;
             years_experience;
             key_projects
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           *,
           talent_profile:talent_id(
             id,
@@ -74,22 +81,39 @@ function useJobMatches() {
             bio,
             years_experience,
             key_projects,
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             skills
           )
         `)
         .eq("job_id", jobId)
 
 
+<<<<<<< HEAD
         .order("match_score", { ascending: false });
       if (error) throw error;
       setMatches(data |[])
         .order("match_score", { ascending: false });
       if (error) throw error;
       setMatches(data |[])
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         .order("match_score", { ascending: false }),
 
       if (error) throw error,
       setMatches(data || [])
+<<<<<<< HEAD
+=======
+
+
+    } catch (error) {
+      console && console.error("Error fetching job matches:", error);
+      toast({
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             key_projects,
             skills);
         `);
@@ -123,6 +147,7 @@ if (throw error) {
         title: "Error",
         description: "Failed to load matched talents. Please try again later.",
 
+<<<<<<< HEAD
     } catch (error) {
       console.error("Error fetching job matches:", error),
       toast({
@@ -130,6 +155,8 @@ if (throw error) {
         description: "Failed to load matched talents. Please try again later."
         title: "Error",
         description: "Failed to load matched talents. Please try again later.",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         variant: "destructive"})
     } finally {
       setIsLoading(false)
@@ -138,13 +165,20 @@ if (throw error) {
   },
 
 
+<<<<<<< HEAD
   }
   },
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const triggerAIMatching = async () => {
     setIsProcessing(true),
     try {
       const response = await supabase.functions.invoke('job-talent-matcher', {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         body: { jobId }}),
 
       
@@ -196,14 +230,18 @@ if (throw error) {
     isLoading;
     isProcessing;
 
+<<<<<<< HEAD
     triggerAIMatching
   }
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         title: "Matching Failed",
         description: "Could not process talent matching. Please try again later.",
         variant: "destructive"})
     } finally {
       setIsProcessing(false)
+<<<<<<< HEAD
     }
   };
 
@@ -295,6 +333,8 @@ export function useJobMatches(jobId: string) {;
         variant: "destructive"})
     } finally {
       setIsProcessing(false)
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   }
 }
@@ -332,6 +372,7 @@ export function useJobMatches(jobId: string) {;
     triggerAIMatching;
 
   }
+<<<<<<< HEAD
 }
   }
 }
@@ -339,3 +380,6 @@ export function useJobMatches(jobId: string) {;
   }
 }
 ;
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 
 
 
+=======
+
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {GetStaticPaths, GetStaticProps} from 'next';
 import {useState} from 'react';
 
@@ -13,12 +20,21 @@ import type { HelpArticle } from '../../utils / support';
 export const getStaticPaths: GetStaticPaths = async () => {
   const articles = read_json < HelpArticle[]>('help / articles.json', []);
   return {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const getStaticPaths: GetStaticPaths = async () => {
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   return {
     paths: articles.map((a) => ({ params: { slug: a.slug } })),
     fallback: false}
 };
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const slug = ctx.params?.slug as string;
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
@@ -29,6 +45,10 @@ export default function HelpArticlePage({ article }: { article: HelpArticle }) {
   const [voted, setVoted] = useState<null | boolean>(null);
   async function vote(helpful: boolean) {
     await fetch('/api/support/feedback', {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const getStaticPaths: GetStaticPaths = async () => {;
   const articles = readJson<HelpArticle[]>('help/articles && articles.json', []);
   return {;
@@ -45,6 +65,7 @@ export const getStaticProps: GetStaticProps = async ctx => {;
   const articles = readJson<HelpArticle[]>('help/articles && articles.json', []);
   const article = articles && articles.find(a => a && a.slug === slug) || null;
   return { props: { article } };};
+<<<<<<< HEAD
 export default function HelpArticlePage(): any ({ article }: { article: HelpArticle }) {;
   const [voted, setVoted] = useState<null | boolean>(null);
   async function vote(): any (helpful: boolean) {;
@@ -75,6 +96,10 @@ export default function HelpArticlePage(): any ({ article }: { article: HelpArti
           <button
             onClick={() => vote(false)}
             disabled={voted !== null}
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className='enhanced-button enhanced-button-secondary';
     paths: articles.map (array => ({ params: { slug: a.slug } })),
     fallback: false,
@@ -125,16 +150,27 @@ function vote() {
             on_click={() => vote (false)}
             disabled={voted !== null}
             className='enhanced - button enhanced - button - secondary';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           >;
             No;
           </button>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ articleId: article.id, helpful })});
     setVoted(helpful)
   }
+<<<<<<< HEAD
 import { GetStaticPaths, GetStaticProps  } from 'next';
 import { useState  } from 'react';
 import { readJson  } from '../../utils/fsDb';
@@ -142,6 +178,63 @@ import {GetStaticPaths, GetStaticProps} from 'next';
 import {useState} from 'react';
 import {readJson} from '../../utils/fsDb';
 import type { HelpArticle } from '../../utils/support';
+=======
+=======
+export default function HelpArticlePage({ article }: { article: HelpArticle }) {;
+
+  const [voted, setVoted] = useState<null | boolean>(null);
+  async function vote(helpful: boolean) {
+    await fetch('/api/support/feedback', {
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ articleId: article.id, helpful })
+    });
+
+
+=======
+import { GetStaticPaths, GetStaticProps } from 'next';
+import { useState } from 'react';
+import { readJson } from '../../utils/fsDb';
+import type { HelpArticle } from '../../utils/support';
+export const getStaticPaths: GetStaticPaths = async () => {;
+  const articles = readJson<HelpArticle[]>('help/articles.json', []),;
+  return {;
+    paths: articles.map((a) => ({ params: { slug: a.slug } })),;
+    fallback: false  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+},;
+export const getStaticProps: GetStaticProps = async (ctx) => {;
+  const slug = ctx.params?.slug as string;
+  const articles = readJson<HelpArticle[]>('help/articles.json', []),;
+  const article = articles.find((a) => a.slug === slug) || null;
+  return { props: { article }   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+};
+export default function HelpArticlePage(req, res) {
+  try {
+  const [voted, setVoted] = useState<null | boolean>(null);
+  async function vote(helpful: boolean) {;
+    await fetch('/api/support/feedback', {;
+      method: 'POST',;
+      headers: { 'Content-Type': 'application/json' };
+      body: JSON.stringify({ articleId: article.id, helpful })});
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    setVoted(helpful);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export const getStaticPaths: GetStaticPaths = async () => {;
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
@@ -239,6 +332,7 @@ export default function HelpArticlePage(req, res) {
 
   )
 }
+<<<<<<< HEAD
     </article>);
 ;
 
@@ -258,3 +352,15 @@ export default function HelpArticlePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+    </article>);
+;
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

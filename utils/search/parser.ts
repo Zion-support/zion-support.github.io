@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Search parser utilities;
 export const parseSearchQuery = (query: string) =>: any {
   // Add search query parsing functionality here;
@@ -34,6 +38,7 @@ export const parseSearchQuery = (query: string) =>: any {
   }
   
   return filters;
+<<<<<<< HEAD
 // Search parser utilities
 export const parseSearchQuery = (query: string) => {
   // Add search query parsing functionality here
@@ -53,6 +58,11 @@ export const searchAll = (parsed: any, access: any) => {
     projects: []
   }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     keywords: [],
     skills: [],
@@ -68,9 +78,12 @@ export const searchAll = (parsed: any, access: any) => {
     talent: [],
     jobs: [],
     projects: [];
+<<<<<<< HEAD
 };
 
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   };
 };
@@ -79,7 +92,18 @@ export const suggestDidYouMean = (query: string) => {
   // Add did you mean functionality here;
   return null;
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 };
 
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

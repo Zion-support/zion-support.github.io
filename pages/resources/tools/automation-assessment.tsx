@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -6,14 +10,24 @@ export default function ToolPage() {
   const [currentQuestion, setCurrentQuestion] = useState(0),
   const [answers, setAnswers] = useState<{ [key: string]: number }>({}),
   const [showResults, setShowResults] = useState(false),
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 export default function ToolPage() {
+<<<<<<< HEAD
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [answers, setAnswers] = useState<{ [key: string]: number }>({})
   const [showResults, setShowResults] = useState(false)
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const questions = [
     {
       id: 'current-automation'
@@ -28,6 +42,7 @@ export default function ToolPage() {
       options: [
         'No expertise - team needs trainingBeginner - some basic knowledgeIntermediate - can implement basic solutionsAdvanced - can build complex systemsExpert - can innovate and lead'
       ]
+<<<<<<< HEAD
     };
     {
       id: 'data-quality'
@@ -46,6 +61,10 @@ export default function ToolPage() {
     {
       id: 'executive-support'
       question: 'How strong is executive support for automation?'
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       options: [
         'No support - resistance to changeWeak support - some interest but no actionModerate support - willing to try pilot projectsStrong support - actively championing automationFull support - automation is strategic priority'
       ]
@@ -54,10 +73,15 @@ export default function ToolPage() {
   const handleAnswer = (questionId: string, value: number) => {
     setAnswers(prev => ({ ...prev, [questionId]: value }))
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const nextQuestion = () => {
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1)
 
+<<<<<<< HEAD
 
 
 
@@ -74,6 +98,13 @@ export default function ToolPage() {
   const nextQuestion = () => {
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1)
+=======
+=======
+
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -120,13 +151,82 @@ function ToolPage() {
         'No support - resistance to change_weak support - some interest but no action_moderate support - willing to try pilot projects_strong support - actively championing automation_full support - automation is strategic priority';
       ];
 
+<<<<<<< HEAD
 
     }
+=======
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
+  const handleAnswer = (questionId: string, value: number) => {;
+    setAnswers(prev => ({ ...prev, [questionId]: value }));
+  },;
+  const calculateScore = () => {;
+    const totalScore = Object.values(answers).reduce((sum, score) => sum + score, 0),;
+    const maxScore = questions.length * 5;
+    const percentage = (totalScore / maxScore) * 100;
+    if (percentage >= 80) return { level: 'Advanced', color: 'text-green-400', description: 'Your organization is well-positioned for advanced automation initiatives.' },;
+    if (percentage >= 60) return { level: 'Intermediate', color: 'text-yellow-400', description: 'You have a solid foundation and can move forward with strategic automation.' },;
+    if (percentage >= 40) return { level: 'Beginner', color: 'text-orange-400', description: 'You have some groundwork to do before major automation projects.' },;
+    return { level: 'Foundation', color: 'text-red-400', description: 'Focus on building fundamentals before automation projects.'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  },;
+  const nextQuestion = () => {;
+    if (currentQuestion < questions.length - 1) {;
+      setCurrentQuestion(currentQuestion + 1);
+    } else {;
+      setShowResults(true);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  },
+  const calculate_score = () =>: any {
+    const total_score = Object.values (answers).reduce ((sum, score) => sum + score, 0),
+    const max_score = questions.length * 5,
+    const percentage = (total_score / max_score) * 100,
+    // Check condition
+if (return { level: 'Advanced', color: 'text - green - 400', description: 'Your organization is well - positioned for advanced automation initiatives.' }, ) {
+  $2
+}
+    // Check condition
+if (return { level: 'Intermediate', color: 'text - yellow - 400', description: 'You have a solid foundation and can move forward with strategic automation.' }, ) {
+  $2
+}
+    // Check condition
+if (return { level: 'Beginner', color: 'text - orange - 400', description: 'You have some groundwork to do before major automation projects.' }, ) {
+  $2
+}
+    return { level: 'Foundation', color: 'text - red - 400', description: 'Focus on building fundamentals before automation projects.' }
+  },
+  const next_question = () =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      setCurrentQuestion (current_question + 1);
+    } else {
+      setShowResults (true);
+    }
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     setCurrentQuestion(0);
     setAnswers({});
     setShowResults(false)
   };
 
+<<<<<<< HEAD
   },
 
   }
@@ -212,6 +312,14 @@ export default function ToolPage(req, res) {
     setShowResults(false)
   }
   },
+=======
+
+=======
+
+  },
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (showResults) {
     const result = calculateScore()
     return (
@@ -228,6 +336,7 @@ export default function ToolPage(req, res) {
                   ← Back to Resources
                 </Link>
               </nav>
+<<<<<<< HEAD
               <div className="text-center mb-12">
                 <h1 className="text-4xl font-bold text-white mb-4">Assessment Results</h1>
                 <p className="text-white/80 text-lg">Your automation readiness evaluation is complete</p>
@@ -264,6 +373,23 @@ export default function ToolPage(req, res) {
                   </button>
                   <Link
 
+=======
+
+
+              <div className="text-center mb-12">
+                <h1 className="text-4xl font-bold text-white mb-4">Assessment Results</h1>
+                <p className="text-white/80 text-lg">Your automation readiness evaluation is complete</p>
+              </div>
+              <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20 mb-8">
+                <h2 className={`text-3xl font-bold mb-4 ${result.color}`}>Level: {result.level}</h2>
+                <p className="text-white/90 text-lg mb-6">{result.description}</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                  {questions.map((q, index) => (
+                    <div key={q.id} className="bg-white/10 rounded-lg p-4 border border-white/20">
+                      <h3 className="font-semibold text-cyan-400 mb-2">{q.question}</h3>
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <p className="text-white/80 text-sm">Score: {answers[q.id] || 0}/5</p>
 
 
@@ -273,6 +399,7 @@ export default function ToolPage(req, res) {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
                       <p className="text-white/80 text-sm">Score: {answers[q.id] || 0}/5</p>
+<<<<<<< HEAD
               <div className=&quot;text-center mb-12&quot;>
                 <h1 className=&quot;text-4xl font-bold text-white mb-4&quot;>Assessment Results</h1>
                 <p className=&quot;text-white/80 text-lg&quot;>Your automation readiness evaluation is complete</p>
@@ -287,12 +414,26 @@ export default function ToolPage(req, res) {
                     <div key={q.id} className=&quot;bg-white/10 rounded-lg p-4 border border-white/20&quot;>
                       <h3 className=&quot;font-semibold text-cyan-400 mb-2&quot;>{q.question}</h3>
                       <p className=&quot;text-white/80 text-sm&quot;>Score: {answers[q.id] || 0}/5</p>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     </div>
                   ))}
                 </div>
 
+<<<<<<< HEAD
 
 
+=======
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
+                  <button 
+
+                    onClick={resetAssessment}
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
                   >
                     Retake Assessment
@@ -303,6 +444,7 @@ export default function ToolPage(req, res) {
 
                     href="/contact"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
+<<<<<<< HEAD
                 <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
                   <button 
                     onClick={resetAssessment}
@@ -318,6 +460,8 @@ export default function ToolPage(req, res) {
                   <Link
                     href="/contact"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   >
                     Get Personalized Recommendations
                   </Link>
@@ -332,6 +476,10 @@ export default function ToolPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 }
   const currentQ = questions[currentQuestion],
@@ -355,18 +503,38 @@ export default function ToolPage(req, res) {
                 ← Back to Resources
               </Link>
             </nav>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className="text-center mb-12">
               <h1 className="text-4xl font-bold text-white mb-4">Automation Readiness Assessment</h1>
               <p className="text-white/80 text-lg">Evaluate your organization's readiness for AI automation</p>
               <div className="mt-4 text-cyan-400">
+<<<<<<< HEAD
                 Question {currentQuestion + 1} of {questions.length}
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 Question {currentQuestion + 1} of {questions.length  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
               </div>
             </div>
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              </div>
+            </div>
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
               <h2 className="text-2xl font-bold mb-6 text-white">{currentQ.question}</h2>
               <div className="space-y-4 mb-8">
@@ -374,6 +542,7 @@ export default function ToolPage(req, res) {
                   <label key={index} className="flex items-center p-4 bg-white/10 rounded-lg border border-white/20 hover:border-cyan-400/50 transition-all duration-300 cursor-pointer">
                     <input
                       type="radio"
+<<<<<<< HEAD
 }
   const currentQ = questions[currentQuestion],
   return (
@@ -394,6 +563,8 @@ export default function ToolPage(req, res) {
               <h1 className="text-4xl font-bold text-white mb-4">Automation Readiness Assessment</h1>
               <p className="text-white/80 text-lg">Evaluate your organization's readiness for AI automation</p>
               <div className="mt-4 text-cyan-400">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                 Question {currentQuestion + 1} of {questions.length  } catch (error) {
     console.error("Error:", error);
@@ -536,6 +707,10 @@ export default function ToolPage(req, res) {
 }
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       className="mr-3 text-cyan-400 focus:ring-cyan-400"
                     />
                     <span className="text-white/90">{option}</span>
@@ -687,6 +862,7 @@ export default function ToolPage(req, res) {
   }
 }
               </div>
+<<<<<<< HEAD
               <div className="flex justify-between">
                 <button 
                   onClick={() => setCurrentQuestion(Math.max(0, currentQuestion - 1))}
@@ -704,10 +880,21 @@ export default function ToolPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+              <div className="flex justify-between">
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   className="px-6 py-3 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Previous
                 </button>
+<<<<<<< HEAD
 }
 
                 <button
@@ -726,6 +913,23 @@ export default function ToolPage(req, res) {
         </main>
       </div>
     </>
+=======
+
+=======
+}
+
+=======
+  },
+  const reset_assessment = () =>: any {
+    setCurrentQuestion (0),
+    set_answers ({}),
+    setShowResults (false);
+  },
+  // Check condition
+if ( {) {
+  $2
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const result = calculate_score (),
     return (
       <>;
@@ -860,8 +1064,11 @@ export default function ToolPage(req, res) {
           </div>;
         </main>;
       </div>;
+<<<<<<< HEAD
 }
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     </>;
   );
@@ -870,4 +1077,10 @@ export default function ToolPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 }
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

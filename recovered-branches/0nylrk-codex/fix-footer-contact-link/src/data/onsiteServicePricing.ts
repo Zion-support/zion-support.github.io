@@ -1,9 +1,21 @@
 
+<<<<<<< HEAD
 export interface CountryPricing {
-  country: string;
+=======
 
+export interface CountryPricing {
+
+=======
+  { country: "Zimbabwe", pricePerIncident: 60.50 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  country: string;
   pricePerIncident: number;
 
+<<<<<<< HEAD
 export const onsiteServicePricing: CountryPricing[] = [
   { country: 'Afghanistan', pricePerIncident: 131.04 }
   { country: 'Albania', pricePerIncident: 110.41 }
@@ -1414,3 +1426,6 @@ export interface CountryPricing {
   country: string;
   pricePerIncident: number;
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -2,12 +2,18 @@
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 #!/usr/bin/env node
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 #!/usr/bin/env node
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -27,9 +33,12 @@ const { execSync } = require('child_process');
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 console.log('🔧 Resolving merge conflicts...');
 function resolveMergeConflicts(filePath) {
   try {
@@ -110,6 +119,9 @@ console.log(`\n🎉 Merge conflict resolution complete!`);
 console.log(`✅ Resolved: ${resolvedCount} files`);
 console.log(`❌ Errors: ${errorCount} files`);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 });
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -157,6 +169,7 @@ function resolveConflicts(filePath) {
 // Resolve conflicts for each file
 conflictFiles.forEach(resolveConflicts);
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -164,6 +177,8 @@ conflictFiles.forEach(resolveConflicts);
 });
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 const { execSync } = require('child_process');
 const fs = require('fs');

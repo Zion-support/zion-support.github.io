@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 const CAPABILITIES = [;
   'Full‑stack Web',;
   'Mobile (iOS/Android)',;
@@ -12,6 +13,9 @@ const CAPABILITIES = [;
   'Full‑stack WebMobile (iOS/Android)AI/MLCloud & DevOpsData EngineeringBlockchainIoTSecurity';
 const CAPABILITIES = [
   'Full‑stack WebMobile (iOS/Android)AI/MLCloud & DevOpsData EngineeringBlockchainIoTSecurity'
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ];
 export default function CapabilitiesPage() {;
   return (
@@ -19,6 +23,7 @@ export default function CapabilitiesPage() {;
 
         ))}
 
+<<<<<<< HEAD
     <EnhancedLayout>
       <h1 className="text-2xl font-semibold">Capabilities</h1>
       <div className="mt-6 grid md:grid-cols-4 gap-4 text-sm">
@@ -27,10 +32,17 @@ export default function CapabilitiesPage() {;
 {c}
           </div>
         ))}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </div>;
     </EnhancedLayout>;
   );
 }
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 }
 import EnhancedLayout from '../components / layout / EnhancedLayout';
@@ -97,17 +109,35 @@ export default function CapabilitiesPage() {
         ))}
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  )
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </div>
 
   );
 }
 
+<<<<<<< HEAD
 );
 }
   );
 }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </EnhancedLayout>;
 );
 }
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

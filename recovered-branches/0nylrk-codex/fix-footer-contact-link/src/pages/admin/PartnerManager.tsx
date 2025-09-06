@@ -1,4 +1,31 @@
 
+<<<<<<< HEAD
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState, useEffect} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {useNavigate} from "react-router-dom";
@@ -13,6 +40,7 @@ import {Alert, AlertDescription, AlertTitle} from "@/components/ui/alert";
 import {toast} from "@/hooks/use-toast";
 import {Check, Flag, Search, Settings, X} from "lucide-react";
 import {supabase} from "@/integrations/supabase/client";
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { useNavigate } from "react-router-dom",
@@ -271,6 +299,8 @@ import {Alert, AlertDescription, AlertTitle} from "@/components/ui/alert";
 import {toast} from "@/hooks/use-toast";
 import {Check, Flag, Search, Settings, X} from "lucide-react";
 import {supabase} from "@/integrations/supabase/client";
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface PartnerProfile {;
   id: string,;
   user_id: string,;
@@ -279,6 +309,13 @@ interface PartnerProfile {;
   created_at: string,;
   niche: string,;
   audience_size: string,;
+<<<<<<< HEAD
+=======
+
+  social_media?: Record<string, string>;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState, useEffect } from './react';
 import { use_auth } from '@/hooks / use_auth';
 import { use_navigate } from './react-router-dom';
@@ -293,8 +330,15 @@ import { Alert, AlertDescription, AlertTitle } from '@/components / ui / alert';
 import { toast } from '@/hooks / use - toast';
 import { Check, Flag, Search, Settings, X } from './lucide-react';
 import { supabase } from '@/integrations / supabase / client';
+<<<<<<< HEAD
 
 
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface PartnerProfile {
   id: string,
   user_id: string,
@@ -304,6 +348,10 @@ interface PartnerProfile {
   niche: string,
   audience_size: string,
   social_media?: Record < string, string>;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   website?: string;
   bio?: string;
   payout_method?: string;
@@ -324,21 +372,37 @@ export default function PartnerManager() {;
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [commissionRate, setCommissionRate] = useState(25);
   const { user, isAuthenticated } = useAuth();
+<<<<<<< HEAD
 
 
 
+=======
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   useEffect(() => {;
     if (!isAuthenticated) {;
 
+<<<<<<< HEAD
 
 
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       navigate("/login");
       return;
     }
 
 
+<<<<<<< HEAD
     fetchPartners();
   }, [isAuthenticated, navigate]);
   const fetchPartners = async () => {;
@@ -459,6 +523,14 @@ export default function PartnerManager() {;
             fraud_flags: 1,;
             commission_rate: 20;
           }
+=======
+        setPartners(mockData);
+        filterPartners(mockData, activeTab, searchQuery);
+      } else {;
+        setPartners(data as PartnerProfile[]);
+        filterPartners(data as PartnerProfile[], activeTab, searchQuery);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default /**
  * PartnerManager - Function description
  */
@@ -621,9 +693,12 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
   }
   },
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {
     let filtered = partners
     // Filter by status
@@ -632,6 +707,7 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
     } catch (error) {;
       console && console.error("Error fetching partners:", error);
     }
@@ -649,6 +725,12 @@ if ( {) {
   }
     } catch (error) {;
       console.error("Error fetching partners:", error),;
+=======
+
+=======
+    } catch (error) {;
+      console && console.error("Error fetching partners:", error);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast({;
         title: "Error",;
         description: "Failed to load partner data",;
@@ -656,6 +738,7 @@ if ( {) {
     } finally {;
       setIsLoading(false);
     }
+<<<<<<< HEAD
   },;
   const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {;
     let filtered = partners,;
@@ -681,10 +764,37 @@ if ( {) {
         p.website?.toLowerCase().includes(lowerQuery);
       );
     }
+=======
+  };
+
+  const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {;
+    let filtered = partners,;
+
+    // Filter by status;
+    if (status !== "all") {;
+      filtered = filtered && filtered.filter(p => p && p.status === status);
+    }
+
+    // Filter by search query;
+    if (query) {;
+      const lowerQuery = query && query.toLowerCase();
+      filtered = filtered && filtered.filter(p => ;
+        p && p.name.toLowerCase().includes(lowerQuery) ||;
+        p && p.niche.toLowerCase().includes(lowerQuery) ||;
+        p && p.bio?.toLowerCase().includes(lowerQuery) ||;
+        p && p.website?.toLowerCase().includes(lowerQuery);
+      );
+    }
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     
     setFilteredPartners(filtered)
   },
 
+<<<<<<< HEAD
 
   },
 
@@ -721,6 +831,27 @@ if ( {) {
     setCommissionRate(partner.commission_rate |25)
     setIsSettingsOpen(true)
   }
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(e.target.value)
+    filterPartners(partners, activeTab, e.target.value)
+
+  },
+
+
+  const handleTabChange = (value: string) => {
+    setActiveTab(value)
+    filterPartners(partners, value, searchQuery)
+
+  },
+
+
+  const handleViewDetails = (partner: PartnerProfile) => {
+    setSelectedPartner(partner)
+    setIsDetailsOpen(true)
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
 
   const handleOpenSettings = (partner: PartnerProfile) => {
@@ -729,27 +860,46 @@ if ( {) {
     setIsSettingsOpen(true)
   },
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleUpdateStatus = async (partnerId: string, status: 'approved' | 'rejected') => {
     try {
       // In a real app, this would update the database
       setPartners(partners.map(p =>
         p.id === partnerId ? { ...p, status } : p
+<<<<<<< HEAD
       )),
       
 
       ));
       )),
       
+=======
+
+      )),
+      
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       filterPartners(
         partners.map(p => p.id === partnerId ? { ...p, status } : p),
         activeTab,
         searchQuery
+<<<<<<< HEAD
       ),
       
 
       );
       ),
       
+=======
+
+      ),
+      
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast({
         title: status === 'approved' ? "Partner Approved" : "Partner Rejected"
         description: `The partner has been ${status}.`
@@ -759,7 +909,11 @@ if ( {) {
         setIsDetailsOpen(false)
       }
     } catch (error) {
+<<<<<<< HEAD
       console.error("Error updating partner status:", error),
+=======
+      console.error("Error updating partner status:", error);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast({
         title: "Error"
         description: "Failed to update partner status"
@@ -767,22 +921,31 @@ if ( {) {
     }
 
 
+<<<<<<< HEAD
   }
   const handleSaveSettings = async () => {
     if (!selectedPartner) return;
   }
   const handleSaveSettings = async () => {
     if (!selectedPartner) return;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
 
   const handleSaveSettings = async () => {
     if (!selectedPartner) return,
     
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {
       // Update commission rate
       setPartners(partners.map(p =>
         p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p
 
+<<<<<<< HEAD
     setFilteredPartners(filtered);
   };
   const handleSearch = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
@@ -813,6 +976,9 @@ if ( {) {
         activeTab;
         searchQuery;
       );
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast({;
         title: status === 'approved' ? "Partner Approved" : "Partner Rejected",;
         description: `The partner has been ${status}.`,;
@@ -844,6 +1010,11 @@ if ( {) {
         activeTab;
         searchQuery
       );
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       )),
       
       filterPartners(
@@ -852,19 +1023,29 @@ if ( {) {
         searchQuery
       ),
       
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast({
         title: "Settings Updated"
         description: "Partner settings have been updated successfully."
         variant: "default"})
       setIsSettingsOpen(false)
     } catch (error) {
+<<<<<<< HEAD
       console.error("Error updating partner settings:", error),
+=======
+      console.error("Error updating partner settings:", error);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast({
         title: "Error"
         description: "Failed to update partner settings"
         variant: "destructive"})
 
 
+<<<<<<< HEAD
   };
 
     }
@@ -880,6 +1061,13 @@ if ( {) {
     }
   }
   };
+=======
+=======
+
+  };
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
     setFilteredPartners(filtered);
   },;
@@ -939,21 +1127,33 @@ if ( {) {
         activeTab,;
         searchQuery;
       ),;
+<<<<<<< HEAD
         activeTab;
         searchQuery;
       );
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast({;
         title: "Settings Updated",;
         description: "Partner settings have been updated successfully.",;
         variant: "default"}),;
+<<<<<<< HEAD
       setIsSettingsOpen(false);
     } catch (error) {;
       console.error("Error updating partner settings:", error),;
+=======
+
+      setIsSettingsOpen(false);
+    } catch (error) {;
+      console && console.error("Error updating partner settings:", error);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast({;
         title: "Error",;
         description: "Failed to update partner settings",;
         variant: "destructive"});
     }
+<<<<<<< HEAD
   },;
   const getAudienceSizeLabel = (size: string) => {;
     switch (size) {;
@@ -991,12 +1191,57 @@ if ( {) {
         return <Badge variant="outline" className="bg-yellow-900/30 text-yellow-500 border-yellow-600">Pending</Badge>;
       case 'approved':;
         return <Badge variant="outline" className="bg-green-900/30 text-green-500 border-green-600">Approved</Badge>;
+=======
+  };
+
+  const getAudienceSizeLabel = (size: string) => {;
+    switch (size) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      case 'under1k': return 'Under 1,000';
+      case '1k-10k': return '1,000 - 10,000';
+      case '10k-50k': return '10,000 - 50,000';
+      case '50k-100k': return '50,000 - 100,000';
+      case 'over100k': return 'Over 100,000';
+      default: return size;
+    }
+
+  },
+
+
+
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  const getStatusBadge = (status: string) => {
+    switch (status) {
+      case 'pending':
+=======
+  };
+
+  const getStatusBadge = (status: string) => {;
+    switch (status) {;
+      case 'pending':;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        return <Badge variant="outline" className="bg-yellow-900/30 text-yellow-500 border-yellow-600">Pending</Badge>;
+      case 'approved':;
+        return <Badge variant="outline" className="bg-green-900/30 text-green-500 border-green-600">Approved</Badge>;
+
+
+  },
+
+
+
+  const getFraudFlagBadge = (flags: number = 0) => {
+    if (flags === 0) return null
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       case 'rejected':;
         return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>,;
       default:;
         return <Badge variant="outline">{status}</Badge>;
     }
   };
+<<<<<<< HEAD
   const getFraudFlagBadge = (flags: number = 0) => {;
     if (flags === 0) return null,;
     return (
@@ -1312,6 +1557,18 @@ export default function PartnerManager() {;
                   Pending Applications
                 </CardTitle>
                 <div className="text-2xl font-bold text-white">
+=======
+
+  const getFraudFlagBadge = (flags: number = 0) => {;
+    if (flags === 0) return null,;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    return (
+
+      <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">
+        <Flag className="h-3 w-3" />
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },;
   const getStatusBadge = (status: string) => {;
     switch (status) {;
@@ -1354,6 +1611,12 @@ export default function PartnerManager() {;
                   Pending Applications;
                 </CardTitle>;
                 <div className="text-2xl font-bold text-white">;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   {partners.filter(p => p.status === 'pending').length}
                 </div>
               </CardHeader>
@@ -1371,6 +1634,7 @@ export default function PartnerManager() {;
                 <div className="text-2xl font-bold text-white">
                   {partners.filter(p => p.status === 'approved').length}
 
+<<<<<<< HEAD
                 </div>
               </CardHeader>
               <CardContent className="pt-0">
@@ -1386,6 +1650,9 @@ export default function PartnerManager() {;
                 </CardTitle>
                 <div className="text-2xl font-bold text-white">
                   {partners.reduce((total, p) => total + (p.fraud_flags |0), 0)}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </div>;
               </CardHeader>;
               <CardContent className="pt-0">;
@@ -1401,6 +1668,11 @@ export default function PartnerManager() {;
                 </CardTitle>;
                 <div className="text-2xl font-bold text-white">;
                   {partners.reduce((total, p) => total + (p.fraud_flags || 0), 0)}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </div>
               </CardHeader>
               <CardContent className="pt-0">
@@ -1421,6 +1693,7 @@ export default function PartnerManager() {;
           <div className="w-full md:w-80">
             <div className="relative">
               <Search className="absolute left-2 top-2.5 h-4 w-4 text-zion-slate-light" />
+<<<<<<< HEAD
               <Input
                 placeholder="Search partners..."
                 className="pl-8"
@@ -1450,6 +1723,9 @@ export default function PartnerManager() {;
       <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">;
         <Flag className="h-3 w-3" />;
         {flags}
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </Badge>;
     ),;
   },;
@@ -1554,6 +1830,15 @@ export default function PartnerManager() {;
               <PartnerTable 
                 partners={filteredPartners} 
                 isLoading={isLoading}
+<<<<<<< HEAD
+=======
+=======
+            <TabsContent value="pending" className="space - y-4">;
+              <PartnerTable;
+                partners={filtered_partners}
+                is_loading={is_loading}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 onViewDetails={handleViewDetails}
                 onUpdateStatus={handleUpdateStatus}
                 onOpenSettings={handleOpenSettings}
@@ -1573,6 +1858,7 @@ export default function PartnerManager() {;
               <PartnerTable;
                 partners={filtered_partners}
                 is_loading={is_loading}
+<<<<<<< HEAD
             ;
             <TabsContent value="approved" className="space-y-4">;
               <PartnerTable ;
@@ -1585,6 +1871,9 @@ export default function PartnerManager() {;
               <PartnerTable 
                 partners={filteredPartners} 
                 isLoading={isLoading}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 onViewDetails={handleViewDetails}
                 onUpdateStatus={handleUpdateStatus}
                 onOpenSettings={handleOpenSettings}
@@ -1604,6 +1893,7 @@ export default function PartnerManager() {;
               <PartnerTable;
                 partners={filtered_partners}
                 is_loading={is_loading}
+<<<<<<< HEAD
               />
             </TabsContent>
             <TabsContent value="rejected" className="space-y-4">
@@ -1612,6 +1902,10 @@ export default function PartnerManager() {;
               <PartnerTable 
                 partners={filteredPartners} 
                 isLoading={isLoading}
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 onViewDetails={handleViewDetails}
                 onUpdateStatus={handleUpdateStatus} 
                 onOpenSettings={handleOpenSettings}
@@ -1622,6 +1916,7 @@ export default function PartnerManager() {;
             <TabsContent value="all" className="space-y-4">
               <PartnerTable 
                 partners={filteredPartners} 
+<<<<<<< HEAD
             ;
             <TabsContent value="rejected" className="space-y-4">;
               <PartnerTable ;
@@ -1638,11 +1933,20 @@ export default function PartnerManager() {;
               <PartnerTable ;
                 partners={filteredPartners} ;                isLoading={isLoading}
                 isLoading={isLoading}
+=======
+
+                isLoading={isLoading}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 onViewDetails={handleViewDetails}
                 onUpdateStatus={handleUpdateStatus}
                 onOpenSettings={handleOpenSettings}
                 getStatusBadge={getStatusBadge}
                 getFraudFlagBadge={getFraudFlagBadge}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               />;
             </TabsContent>;
                 isLoading={isLoading}
@@ -1652,17 +1956,22 @@ export default function PartnerManager() {;
               <PartnerTable;
                 partners={filtered_partners}
                 is_loading={is_loading}
+<<<<<<< HEAD
               />
             </TabsContent>
             <TabsContent value="all" className="space-y-4">
               <PartnerTable
                 partners={filteredPartners}
                 isLoading={isLoading}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 onViewDetails={handleViewDetails}
                 onUpdateStatus={handleUpdateStatus}
                 onOpenSettings={handleOpenSettings}
                 getStatusBadge={getStatusBadge}
                 getFraudFlagBadge={getFraudFlagBadge}
+<<<<<<< HEAD
               />
             </TabsContent>
           </Tabs>
@@ -1722,6 +2031,8 @@ export default function PartnerManager() {;
                   </div>
                 </div>
               )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
               />;
@@ -1748,7 +2059,12 @@ export default function PartnerManager() {;
             </DialogDescription>;
           </DialogHeader>;
               
+<<<<<<< HEAD
               
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className="grid grid-cols-2 gap-2">
                 <div>
                   <p className="text-xs text-zion-slate-light">Payout Method</p>
@@ -1772,6 +2088,7 @@ export default function PartnerManager() {;
               )}
               {selectedPartner.status === 'pending' && (
                 <div className="flex justify-end gap-2 mt-4">
+<<<<<<< HEAD
                   <Button
                     variant="destructive"
                     onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
@@ -1856,10 +2173,90 @@ export default function PartnerManager() {;
                   <AlertTitle className="flex items-center gap-2">;
                     <Flag className="h-4 w-4" />;
                     Potential Fraud Detected ({selectedPartner.fraud_flags});
+=======
+
+
+              <div className="grid grid-cols-2 gap-2">;
+                <div>;
+                  <p className="text-xs text-zion-slate-light">Payout Method</p>;
+                  <p className="text-white capitalize">{selectedPartner && selectedPartner.payout_method || "Not specified"}</p>;
+                </div>;
+                <div>;
+                  <p className="text-xs text-zion-slate-light">Commission Rate</p>;
+                  <p className="text-white">{selectedPartner && selectedPartner.commission_rate || 25}%</p>;
+                </div>;
+              </div>;
+
+              {selectedPartner && selectedPartner.fraud_flags && selectedPartner && selectedPartner.fraud_flags > 0 && (;
+                <Alert className="bg-red-900/20 border-red-900/50 text-red-500">;
+                  <AlertTitle className="flex items-center gap-2">;
+                    <Flag className="h-4 w-4" />;
+                    Potential Fraud Detected ({selectedPartner && selectedPartner.fraud_flags});
+=======
+          {selected_partner && (
+            <div className="space - y-4">;
+              <div className="grid grid - cols - 2 gap - 2">;
+                <div>;
+                  <p className="text - xs text - zion - slate - light">Name</p>;
+                  <p className="font - medium text - white">{selected_partner.name}</p>;
+                </div>;
+                <div>;
+                  <p className="text - xs text - zion - slate - light">Status</p>;
+                  <div>{getStatusBadge (selected_partner.status)}</div>;
+                </div>;
+              </div>;
+              <div>;
+                <p className="text - xs text - zion - slate - light">Bio</p>;
+                <p className="text - white">{selected_partner.bio || "No bio provided"}</p>;
+              </div>;
+              <div className="grid grid - cols - 2 gap - 2">;
+                <div>;
+                  <p className="text - xs text - zion - slate - light">Niche</p>;
+                  <p className="text - white">{selected_partner.niche}</p>;
+                </div>;
+                <div>;
+                  <p className="text - xs text - zion - slate - light">Audience Size</p>;
+                  <p className="text - white">{getAudienceSizeLabel (selected_partner.audience_size)}</p>;
+                </div>;
+              </div>;
+              {selected_partner.website && (
+                <div>;
+                  <p className="text - xs text - zion - slate - light">Website</p>;
+                  <p className="text - zion - cyan">{selected_partner.website}</p>;
+                </div>)}
+              {selected_partner.social_media && Object.keys (selected_partner.social_media).length > 0 && (
+                <div>;
+                  <p className="text - xs text - zion - slate - light">Social Media</p>;
+                  <div className="grid grid - cols - 2 gap - 2">;
+                    {Object.entries (selected_partner.social_media).map (([platform, handle]) => (
+                      <p key={platform} className="text - white">;
+                        <span className="font - medium">{platform}: </span>;
+                        {handle}
+                      </p>))}
+                  </div>;
+                </div>)}
+              <div className="grid grid - cols - 2 gap - 2">;
+                <div>;
+                  <p className="text - xs text - zion - slate - light">Payout Method</p>;
+                  <p className="text - white capitalize">{selected_partner.payout_method || "Not specified"}</p>;
+                </div>;
+                <div>;
+                  <p className="text - xs text - zion - slate - light">Commission Rate</p>;
+                  <p className="text - white">{selected_partner.commission_rate || 25}%</p>;
+                </div>;
+              </div>;
+              {selected_partner.fraud_flags && selected_partner.fraud_flags > 0 && (
+                <Alert className="bg - red - 900 / 20 border - red - 900 / 50 text - red - 500">;
+                  <AlertTitle className="flex items - center gap - 2">;
+                    <Flag className="h - 4 w - 4" />;
+                    Potential Fraud Detected ({selected_partner.fraud_flags});
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </AlertTitle>;
                   <AlertDescription>;
                     This application has triggered our fraud detection system. Review carefully before approving.;
                   </AlertDescription>;
+<<<<<<< HEAD
                 </Alert>;
               )}
               ;
@@ -1880,6 +2277,38 @@ export default function PartnerManager() {;
                     onClick={() => handleUpdateStatus(selectedPartner.id, 'approved')}
                   >;
                     <Check className="h-4 w-4 mr-1" />;
+=======
+
+
+
+
+          )}
+
+        </DialogContent>;
+      </Dialog>;
+
+      {/* Partner Settings Dialog */}
+      <Dialog open={isSettingsOpen} onOpenChange={setIsSettingsOpen}>;
+        <DialogContent className="bg-zion-blue border-zion-blue-light">;
+          <DialogHeader>;
+            <DialogTitle>Partner Settings</DialogTitle>;
+=======
+                </Alert>)}
+              {selected_partner.status === 'pending' && (
+                <div className="flex justify - end gap - 2 mt - 4">;
+                  <Button;
+                    variant="destructive";
+                    on_click={() => handleUpdateStatus (selected_partner.id, 'rejected')}
+                  >;
+                    <X className="h - 4 w - 4 mr - 1" />;
+                    Reject;
+                  </Button>;
+                  <Button;
+                    className="bg - green - 600 hover:bg - green - 700";
+                    on_click={() => handleUpdateStatus (selected_partner.id, 'approved')}
+                  >;
+                    <Check className="h - 4 w - 4 mr - 1" />;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     Approve;
                   </Button>;
                 </div>)}
@@ -1891,10 +2320,15 @@ export default function PartnerManager() {;
         <DialogContent className="bg - zion - blue border - zion - blue - light">;
           <DialogHeader>;
             <DialogTitle > Partner Settings</DialogTitle>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <DialogDescription>;
               Configure commission rates and other settings;
             </DialogDescription>;
           </DialogHeader>;
+<<<<<<< HEAD
           ;
           {selectedPartner && (;
             <div className="space-y-4">;
@@ -1914,12 +2348,20 @@ export default function PartnerManager() {;
                   max="50";
                   value={commissionRate}
                   onChange={(e) => setCommissionRate(parseInt(e.target.value))}
+=======
+
+                  onChange={(e) => setCommissionRate(parseInt(e && e.target.value))}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 />;
                 <p className="text-xs text-zion-slate-light mt-1">;
                   Percentage of reward granted to this partner for successful referrals;
                 </p>;
               </div>;
+<<<<<<< HEAD
               ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <DialogFooter>;
                 <Button variant="outline" onClick={() => setIsSettingsOpen(false)}>;
                   Cancel;
@@ -1929,10 +2371,15 @@ export default function PartnerManager() {;
                 </Button>;
               </DialogFooter>;
             </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           )}
         </DialogContent>;
       </Dialog>;
     </div>;
+<<<<<<< HEAD
                 </div>;
               )}
             </div>;
@@ -2001,11 +2448,22 @@ function PartnerTable({
   partners
   isLoading
   onViewDetails
+=======
+  );
+}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 function PartnerTable({ 
   partners, 
   isLoading, 
   onViewDetails, 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onUpdateStatus;
   onOpenSettings;
   getStatusBadge;
@@ -2013,6 +2471,7 @@ function PartnerTable({
   getFraudFlagBadge
 }: PartnerTableProps) {
   if (isLoading) {
+<<<<<<< HEAD
     return (
       <div className="text-center py-8">
         <p className="text-zion-slate-light">Loading partner data...</p>
@@ -2024,6 +2483,9 @@ function PartnerTable({;
   isLoading,;
   onViewDetails,;
   onUpdateStatus,;
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 interface PartnerTableProps {;
   partners: PartnerProfile[],;
@@ -2044,7 +2506,12 @@ function PartnerTable(): any ({ ;
   getFraudFlagBadge;
 }: PartnerTableProps) {;
   if (isLoading) {;
+<<<<<<< HEAD
     return (;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="text-center py-8">;
         <p className="text-zion-slate-light">Loading partner data...</p>;
       </div>;
@@ -2052,17 +2519,32 @@ function PartnerTable(): any ({ ;
 
 
 
+<<<<<<< HEAD
   }
   if (partners.length === 0) {
 
   }
   if (partners && partners.length === 0) {;
+=======
+
+  }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  if (partners.length === 0) {
+=======
+
+  if (partners && partners.length === 0) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return (
       <div className="text-center py-8">;
         <p className="text-zion-slate-light">No partners found.</p>;
       </div>;
     );
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {selected_partner && (
             <div className="space - y-4">;
               <div>;
@@ -2129,6 +2611,10 @@ if ( {) {
         <p className="text - zion - slate - light">No partners found.</p>;
       </div>);
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <Table>;
       <TableHeader>;
@@ -2148,6 +2634,7 @@ if ( {) {
               <div className="flex items - center gap - 2">;
                 {partner.name}
                 {getFraudFlagBadge (partner.fraud_flags)}
+<<<<<<< HEAD
   ),;}
 ;
 interface PartnerTableProps {;
@@ -2204,10 +2691,26 @@ function PartnerTable({ ;
               <div className="flex items-center gap-2">;
                 {partner.name}
                 {getFraudFlagBadge(partner.fraud_flags)}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </div>;
             </TableCell>;
             <TableCell>{partner.niche}</TableCell>;
             <TableCell>;
+<<<<<<< HEAD
+=======
+              {partner.audience_size.replace ('k, 000').replace ('- - ').replace ('over_over ')}
+            </TableCell>;
+            <TableCell>{getStatusBadge (partner.status)}</TableCell>;
+            <TableCell>;
+              {new Date (partner.created_at).toLocaleDateString ()}
+            </TableCell>;
+            <TableCell className="text - right">;
+              <div className="flex justify - end gap - 2">;
+                {partner.status === 'pending' && (
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <Table>;
       <TableHeader>;
@@ -2245,6 +2748,7 @@ function PartnerTable({ ;
                       variant="ghost"
                       size="sm"
                       onClick={() => onUpdateStatus(partner && partner.id, 'rejected')}
+<<<<<<< HEAD
               {partner.audience_size.replace('k,000').replace('- - ').replace('overOver ')}
             </TableCell>;
             <TableCell>{getStatusBadge(partner.status)}</TableCell>;
@@ -2259,15 +2763,25 @@ function PartnerTable({ ;
                       variant="ghost";
                       size="sm";
                       onClick={() => onUpdateStatus(partner.id, 'rejected')}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       className="text-red-500 hover:text-red-600 hover:bg-red-900/20";
                     >;
                       <X className="h-4 w-4" />;
                       <span className="sr-only">Reject</span>;
                     </Button>;
+<<<<<<< HEAD
                     <Button ;
                       variant="ghost";
                       size="sm";
                       onClick={() => onUpdateStatus(partner.id, 'approved')}
+=======
+
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => onUpdateStatus(partner && partner.id, 'approved')}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       className="text-green-500 hover:text-green-600 hover:bg-green-900/20";
                     >;
                       <Check className="h-4 w-4" />;
@@ -2275,6 +2789,7 @@ function PartnerTable({ ;
                     </Button>;
                   </>;
                 )}
+<<<<<<< HEAD
                 ;
                 <Button ;
                   variant="ghost" ;
@@ -2350,12 +2865,21 @@ function PartnerTable({ ;
                   <Settings className="h-4 w-4" />
                   <span className="sr-only">Settings</span>
                 </Button>
+=======
+
+
+                <Button
+                  variant="ghost" 
+                  size="sm"
+                  onClick={() => onOpenSettings(partner)}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   className="text-zion-slate-light hover:text-white";
                 >;
                   <Settings className="h-4 w-4" />;
                   <span className="sr-only">Settings</span>;
                 </Button>;
 
+<<<<<<< HEAD
                 
 
                 <Button 
@@ -2375,6 +2899,18 @@ function PartnerTable({ ;
             </TableCell>
           </TableRow>
         ))}
+=======
+                <Button
+=======
+
+                
+=======
+
+                <Button 
+
+                  variant="outline" 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   size="sm"
                   onClick={() => onViewDetails(partner)}
                   <>;
@@ -2451,6 +2987,7 @@ commission rate?: number
 }
 ;
 
+<<<<<<< HEAD
 }, [isAuthenticated, navigate]);
 const {
   data, error 
@@ -2690,3 +3227,6 @@ return (<div className="container max-w-7xl py-10"> <div className="flex flex-co
 }</TableBody> </Table>) 
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

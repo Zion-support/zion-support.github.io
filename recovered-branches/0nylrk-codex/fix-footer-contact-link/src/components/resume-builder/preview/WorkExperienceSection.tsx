@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {WorkExperience} from '@/types / resume';
 import {format} from 'date - fns';
 
@@ -13,6 +17,7 @@ interface WorkExperienceSectionProps {
   const sortedWorkExperience = [...workExperience].sort((a, b) => {;
 
 
+<<<<<<< HEAD
 
 import { WorkExperience  } from '@/types/resume';
 import { format } from 'date-fns';
@@ -26,6 +31,8 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
 
   const sortedWorkExperience = [...workExperience].sort((a, b) => {
   const sortedWorkExperience = [...workExperience].sort((a, b) => {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (a.is_current && !b.is_current) return -1;
     if (!a.is_current && b.is_current) return 1;
     const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
@@ -38,11 +45,16 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
       return format(new Date(date), 'MMM yyyy')
 
 
+<<<<<<< HEAD
     }
     return format(date, 'MMM yyyy')
   }
   if (sortedWorkExperience.length === 0) return null;
 
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { WorkExperience } from '@/types/resume',;
 import { format } from 'date-fns',;
 interface WorkExperienceSectionProps {;
@@ -64,13 +76,22 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
       return format(new Date(date), 'MMM yyyy');
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     return format(date, 'MMM yyyy')
   },
 
   if (sortedWorkExperience.length === 0) return null,
   
+<<<<<<< HEAD
   
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="mb-6">
       <h2 className="text-lg font-semibold border-b mb-3">Professional Experience</h2>
@@ -87,6 +108,15 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
               <p className="text-sm">{work.company_name}</p>
               {work.location && (
                 <span className="text-sm">{work.location}</span>
+<<<<<<< HEAD
+=======
+=======
+import {WorkExperience} from '@/types/resume';
+import {format} from 'date-fns';
+interface WorkExperienceSectionProps {;
+  workExperience: WorkExperience[];
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import { WorkExperience } from '@/types/resume',;
 import { format } from 'date-fns',;
@@ -201,6 +231,7 @@ if (return null) {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
   ),;}
  if (sortedWorkExperience.length === 0) return null;
 ) 
@@ -218,3 +249,6 @@ if (return null) {
     </div>
   )
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

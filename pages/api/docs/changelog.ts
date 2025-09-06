@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "GET") {
@@ -57,11 +58,24 @@ const content = fs.existsSync(filePath) ? JSON.parse(fs.readFileSync(filePath, '
 if (req.method === 'POST') {
     try {
 
+=======
+
+
+  }
+
+  if (req.method === 'POST') {
+    try {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
       const payload = { content: body?.content || '' };
       fs.mkdirSync(path.dirname(filePath), { recursive: true });
       fs.writeFileSync(filePath, JSON.stringify(payload, null, 2));
       res.status(200).json({ ok: true })
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     } catch (e: any) {
       res
         .status(500)
@@ -79,9 +93,14 @@ if (req.method === 'POST') {
 
 
 
+<<<<<<< HEAD
 res && res.setHeader("Allow", "GET, POST");
   res && res.status(405).end("Method Not Allowed");
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default /**
  * handler - Function description
  */
@@ -122,5 +141,33 @@ if ( {) {
   res.status (405).end ("Method Not Allowed");
 }
 
+<<<<<<< HEAD
 
 
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  res.setHeader('AllowGET, POST');
+  res.status(405).end('Method Not Allowed');
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

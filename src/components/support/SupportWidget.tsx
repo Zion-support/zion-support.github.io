@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import { Button } from '@/components/ui/button'
@@ -8,6 +9,8 @@ import { useTheme } from "@/hooks/useTheme";
 export function SupportWidget() {
 
   const [isOpen, setIsOpen] = useState(false)
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const [isOpen, setIsOpen] = useState(false)
   const { theme } = useTheme()
   const router = useRouter()
@@ -41,6 +44,7 @@ const [isOpen, setIsOpen] = useState(false)
                 className={cn(
                   'font-semibold'
                   theme === 'dark' ? 'text-white' : 'text-gray-800'
+<<<<<<< HEAD
                 )}>;
                 Zion Support;
               </h3>;
@@ -142,6 +146,10 @@ function SupportWidget() {
     </>);
 }
 
+=======
+                )}
+              >
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React, { useState } from "react",
 import { useRouter } from "next/router",
@@ -201,6 +209,7 @@ export function SupportWidget() {;
               </h3>
             </div>
             <div className="flex items-center gap-2">
+<<<<<<< HEAD
               <Button
           <ChatBotPanel />
         </div>
@@ -242,3 +251,6 @@ export function SupportWidget() {;
 };
 }
 ;
+=======
+              <Button
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

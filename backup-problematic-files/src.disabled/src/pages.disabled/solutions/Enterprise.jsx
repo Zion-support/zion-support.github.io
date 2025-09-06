@@ -9,4 +9,8 @@ const Enterprise = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Enterprise;
+=======
+export default Enterprise;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

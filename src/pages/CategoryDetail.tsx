@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { GradientHeading } from "@/components/GradientHeading",
 import { ProductListingCard } from "@/components/ProductListingCard",
 import { useState, useEffect, useRef, Suspense } from "react",
@@ -50,6 +51,8 @@ import {NextSeo} from '@/components/NextSeo'
 import {Header} from "@/components/Header"
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton'
 import {logErrorToProduction} from '@/utils/productionLogger'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const AUTO_SERVICE_TITLES = [
   "AI-Powered Customer Support"
   "Cloud Infrastructure Management"
@@ -59,16 +62,43 @@ const AUTO_SERVICE_TITLES = [
   "Machine Learning Model Tuning"
   "IoT Device Integration Service"
   "Blockchain Data Solutions"
+<<<<<<< HEAD
 ]
 function generateInnovationListing(index: number): ProductListing {
   const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] |'AI Service'
   const price = Math.floor(Math.random() * 9500) + 500, // $500 - $10,000
   const rating = Math.floor(Math.random() * 2) + 4, // 4-5 stars
+=======
+
+import { use_router } from 'next / router';
+import Link from 'next / link';
+import { toast } from '@/hooks / use - toast';
+import {NextSeo} from '@/components / NextSeo';
+import { Header } from '@/components / Header';
+import ListingGridSkeleton from '@/components / skeletons / ListingGridSkeleton';
+import {logErrorToProduction} from '@/utils / production_logger';
+const AUTO_SERVICE_TITLES = [;
+  "AI - Powered Customer Support";
+  "Cloud Infrastructure Management";
+  "Predictive Analytics Consulting";
+  "Cybersecurity Automation Suite";
+  "Robotic Process Automation";
+  "Machine Learning Model Tuning";
+  "IoT Device Integration Service";
+  "Blockchain Data Solutions";
+];
+function generateInnovationListing (index: number): ProductListing {
+  const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] || 'AI Service';
+  const price = Math.floor (Math.random () * 9500) + 500, // $500 - $10, 000;
+  const rating = Math.floor (Math.random () * 2) + 4, // 4 - 5 stars;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const params = router.query as { slug?: string }
   const slug = slugProp ?? params.slug
       icon: <Briefcase className="w-6 h-6" />
     }
     'talents': {
+<<<<<<< HEAD
       title: "Talents"
       description: "Connect with AI experts, developers, and tech specialists"
       icon: <Brain className="w-6 h-6" />
@@ -204,10 +234,17 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
       description: "Rent or buy specialized hardware, servers, and devices",
       icon: <Code className="w-6 h-6" />
     },
+=======
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     'innovation': {
       title: "Innovation"
       description: "Discover cutting-edge solutions and tech breakthroughs"
       icon: <Bot className="w-6 h-6" />
+<<<<<<< HEAD
       title: "Innovation"
       description: "Discover cutting-edge solutions and tech breakthroughs"
       icon: <Bot className="w-6 h-6" />
@@ -215,29 +252,10 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
     }
     },
     },
-    'content-creation': {
-      title: "Content Creation"
-      description: "Generate high-quality content for your projects"
-      icon: <PenLine className="w-6 h-6" />
-    }
+=======
+
+
     },
-    'data-analysis': {
-      title: "Data Analysis"
-      description: "Extract insights from complex datasets"
-      icon: <BarChart className="w-6 h-6" />
-    }
-    },
-    'computer-vision': {
-      title: "Computer Vision"
-      description: "Image and video processing solutions"
-      icon: <Eye className="w-6 h-6" />
-    }
-    },
-    'virtual-assistants': {
-      title: "Virtual Assistants"
-      description: "Intelligent automation for your workflow"
-      icon: <Bot className="w-6 h-6" />
-    }
 
 
     'ai-models-apis': {
@@ -249,6 +267,69 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
     },
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    'content-creation': {
+      title: "Content Creation"
+      description: "Generate high-quality content for your projects"
+      icon: <PenLine className="w-6 h-6" />
+<<<<<<< HEAD
+    }
+    },
+=======
+
+
+    },
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    'data-analysis': {
+      title: "Data Analysis"
+      description: "Extract insights from complex datasets"
+      icon: <BarChart className="w-6 h-6" />
+<<<<<<< HEAD
+    }
+    },
+=======
+
+
+    },
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    'computer-vision': {
+      title: "Computer Vision"
+      description: "Image and video processing solutions"
+      icon: <Eye className="w-6 h-6" />
+<<<<<<< HEAD
+    }
+    },
+=======
+
+
+    },
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    'virtual-assistants': {
+      title: "Virtual Assistants"
+      description: "Intelligent automation for your workflow"
+      icon: <Bot className="w-6 h-6" />
+<<<<<<< HEAD
+    }
+
+
+    'ai-models-apis': {
+      title: "AI Models & APIs"
+      description: "Access cutting-edge AI models with easy integration"
+      icon: <Brain className="w-6 h-6" />
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+    },
+
+
+<<<<<<< HEAD
     'content-creation': {
       title: "Content Creation"
       description: "Generate high-quality content for your projects"
@@ -287,12 +368,18 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
 
     },
     },
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     'voice-speech': {
       title: "Voice & Speech"
       description: "Speech recognition and synthesis tools"
       icon: <Mic className="w-6 h-6" />
+<<<<<<< HEAD
     }
     },
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     },
 
@@ -301,6 +388,7 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
       description: "AI-powered coding assistance and automation",;
       icon: <Code className="w-6 h-6" />;
     };          icon: <Bot className="w-6 h-6" />},
+<<<<<<< HEAD
     'developer-tools': {
 
     },
@@ -325,6 +413,14 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
       title: "Developer Tools"
       description: "AI-powered coding assistance and automation"
       icon: <Code className="w-6 h-6" />
+=======
+    },
+
+    'developer-tools': {
+      title: "Developer Tools"
+      description: "AI-powered coding assistance and automation"
+      icon: <Code className="w-6 h-6" />
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -437,6 +533,114 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
 
 
 
+<<<<<<< HEAD
+=======
+        setCategory(currentCategory)
+        innovationCounterRef.current = 0
+    : 'Category | Zion Marketplace'
+  const seoDescription = null;
+    category.description || 'Explore listings in this category.'
+
+  useEffect(() => {
+    async function load() {
+      setIsLoading(true),
+      try {
+        // Find the category data based on slug
+        const currentCategory = categoryData[slug as keyof typeof categoryData] || {
+          title: slug
+            ?.split('-')
+            .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(' ') || 'Category',
+          description: 'Explore our collection in this category',
+          icon: <Bot className="w-6 h-6" />},
+
+        setCategory(currentCategory),
+        innovationCounterRef.current = 0,
+
+        // Filter listings by category
+        const categoryTitle = currentCategory.title,
+        const filteredListings = MARKETPLACE_LISTINGS.filter(
+          (listing) => listing.category.toLowerCase() === categoryTitle.toLowerCase()
+        ),
+
+        // If we don't have real listings for this category, generate placeholder listings
+        const listingsToShow =
+          filteredListings.length > 0
+            ? filteredListings
+            : Array(4)
+                .fill(null)
+                .map((_, index) => ({
+                  id: `${slug}-${index}`,
+                  title: `${currentCategory.title} Product ${index + 1}`,
+                  description: `A great ${currentCategory.title.toLowerCase()} solution for your needs.`,
+                  category: currentCategory.title,
+                  price: Math.floor(Math.random() * 500) + 50,
+                  currency: '$',
+                  tags: [`${slug}`, 'aitool'],
+                  author: {
+                    name: `Provider ${index + 1}`,
+                    id: `author-${index + 1}`,
+                    avatarUrl: undefined},
+                  images: [`/placeholder.svg`],
+                  createdAt: new Date().toISOString(),
+                  rating: Math.floor(Math.random() * 5) + 1,
+                  reviewCount: Math.floor(Math.random() * 100)})),
+
+        setListings(listingsToShow)
+      } catch (err) {
+        logErrorToProduction('Category load error:', { data: err }),
+        toast({ title: 'Error', description: 'Failed to load category' })
+      } finally {
+        setIsLoading(false)
+      }
+    }
+
+    load()
+  }, [slug]),
+
+  useEffect(() => {
+    if (slug !== 'innovation') return,
+
+    const interval = setInterval(() => {
+      innovationCounterRef.current += 1,
+      setListings((prev) => [
+        generateInnovationListing(innovationCounterRef.current),
+        ...prev])
+    }, 120000), // every 2 minutes
+
+    return () => clearInterval(interval)
+  }, [slug]),
+
+  // Handle requesting a quote
+  const handleRequestQuote = (listingId: string) => {
+    const listing = listings.find(item => item.id === listingId),
+    
+    if (listing) {
+      toast({
+        title: "Quote Requested",
+        description: `Your quote request for ${listing.title} has been sent.`
+      }),
+      
+      // Navigate to the quote request page with the listing information
+      const queryParams = new URLSearchParams({
+        serviceType: listing.category,
+        itemId: listing.id,
+        itemTitle: listing.title,
+        itemCategory: listing.category,
+        ...(listing.images?.[0] && { itemImage: listing.images[0] })
+      }),
+      
+      router.push(`/request-quote?${queryParams.toString()}`)
+    }
+  },
+
+  const seoTitle = category.title
+    ? `${category.title} | Zion Marketplace`
+    : 'Category | Zion Marketplace',
+  const seoDescription =
+    category.description || 'Explore listings in this category.',
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         setCategory(currentCategory)
         innovationCounterRef.current = 0
@@ -447,6 +651,7 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
     <>
       <NextSeo title={seoTitle} description={seoDescription} />
       <Header />
+<<<<<<< HEAD
       <Suspense fallback={<ListingGridSkeleton />}>
   return (
     <>
@@ -455,6 +660,13 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
 
       <Suspense fallback={<ListingGridSkeleton />}> 
       <Suspense fallback={<ListingGridSkeleton />}> 
+=======
+
+
+      <Suspense fallback={<ListingGridSkeleton />}> 
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="min-h-screen bg-zion-blue">
 
       <Suspense fallback={<ListingGridSkeleton />}> 
@@ -466,6 +678,7 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
               ← Back to Categories
             </Link>
           </div>
+<<<<<<< HEAD
           
           <div className="text-center mb-12">
             <div className="flex justify-center mb-6">
@@ -494,6 +707,12 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
             </div>
           )}
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+          
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           <div className="text-center mb-12">
             <div className="flex justify-center mb-6">
@@ -567,10 +786,13 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className="text - center mb - 12">;
             <div className="flex justify - center mb - 6">;
               <div className="text - zion - cyan p - 4 bg - zion - blue - dark rounded - full">;
+<<<<<<< HEAD
           
           <div className="text-center mb-12">
             <div className="flex justify-center mb-6">
               <div className="text-zion-cyan p-4 bg-zion-blue-dark rounded-full">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {category.icon}
               </div>
             </div>
@@ -579,6 +801,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </GradientHeading>
             <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
               {category.description}
+<<<<<<< HEAD
             </p>
           </div>
           {isLoading ? (
@@ -593,6 +816,36 @@ ursor/fix-website-loading-errors-and-merge-6662
                   detailBasePath="/marketplace/listing"
                 />
 
+=======
+
+
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import {toast} from "@/hooks/use-toast";
+import {NextSeo} from '@/components/NextSeo';
+import {Header} from "@/components/Header";
+import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton';
+import {logErrorToProduction} from '@/utils/productionLogger';
+const AUTO_SERVICE_TITLES = [;
+  "AI-Powered Customer Support";
+  "Cloud Infrastructure Management";
+  "Predictive Analytics Consulting";
+  "Cybersecurity Automation Suite";
+  "Robotic Process Automation";
+  "Machine Learning Model Tuning";
+  "IoT Device Integration Service";
+  "Blockchain Data Solutions";
+];
+
+function generateInnovationListing(): any (index: number): ProductListing {;
+  const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES && AUTO_SERVICE_TITLES.length] || 'AI Service';
+  const price = Math && Math.floor(Math && Math.random() * 9500) + 500, // $500 - $10,000;
+  const rating = Math && Math.floor(Math && Math.random() * 2) + 4, // 4-5 stars;
+  const params = router && router.query as { slug?: string };
+  const slug = slugProp ?? params && params.slug;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {listings.map((listing) => (
                 <ProductListingCard
                   key={listing.id}
@@ -793,6 +1046,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   onRequestQuote = {handleRequestQuote,}
                   detailBasePath="/marketplace/listing"
                 />;
+<<<<<<< HEAD
               ))}
             </div>
           )}
@@ -807,12 +1061,28 @@ ursor/fix-website-loading-errors-and-merge-6662
   )
 }
 
+=======
+
+
+
+              ))}
+            </div>
+          )}
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>;
         </div>;
       </Suspense>;
     </>;
   );
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             </p>;
           </div>;
@@ -837,4 +1107,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 
 
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

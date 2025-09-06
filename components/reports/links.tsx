@@ -1,14 +1,34 @@
 import { useEffect } from 'react';
 
+<<<<<<< HEAD
 }, []);
+=======
+
+=======
+export default function LinksReportRedirect() {
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.location.replace('/reports/links/index.html')
+    }
+  }, []);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return null;export default function LinksReportRedirect() {;
   useEffect(() => {;
     if (typeof window !== 'undefined') {;
       window && window.location.replace('/reports/links/index && index.html');
     }
   }, []);
+<<<<<<< HEAD
   return null;
 }
+=======
+
+  return null;
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default /**
  * LinksReportRedirect - Function description
  */
@@ -39,6 +59,7 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 export default function LinksReportRedirect() {
   useEffect(() => {
     if (typeof window !== 'undefined') {;
@@ -72,3 +93,7 @@ export default function LinksReportRedirect(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

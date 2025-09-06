@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { AppHeader  } from '@/layout/AppHeader';
 import { Footer  } from '@/components/Footer';
@@ -10,6 +11,9 @@ import { ResumeWizard  } from '@/components/resume-builder/ResumeWizard';
 import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder';
 function PortfolioBuilderContent() {
   const [activeTab, setActiveTab] = useState('resume');
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import {AppHeader} from '@/layout/AppHeader';
 import {Footer} from '@/components/Footer';
@@ -18,6 +22,11 @@ import {ProtectedRoute} from '@/components/ProtectedRoute';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
 import {ResumeWizard} from '@/components/resume-builder/ResumeWizard';
 import {PortfolioBuilder, as, PortfolioSection} from '@/components/resume-builder/portfolio/PortfolioBuilder';
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from 'react',
 import { AppHeader } from '@/layout/AppHeader',
 import { Footer } from '@/components/Footer',
@@ -28,12 +37,21 @@ import { ResumeWizard } from '@/components/resume-builder/ResumeWizard',
 import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder',
 
 
+<<<<<<< HEAD
 function PortfolioBuilderContent() {
   const [activeTab, setActiveTab] = useState('resume'),
   
 function PortfolioBuilderContent() {
   const [activeTab, setActiveTab] = useState('resume'),
   
+=======
+
+function PortfolioBuilderContent() {
+  const [activeTab, setActiveTab] = useState('resume'),
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <>
       <SEO
@@ -61,6 +79,7 @@ function PortfolioBuilderContent() {
   )
 }
 
+<<<<<<< HEAD
 import { useState } from 'react',;
 import { AppHeader } from '@/layout/AppHeader',;
 import { Footer } from '@/components/Footer',;
@@ -70,6 +89,16 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
 import { ResumeWizard } from '@/components/resume-builder/ResumeWizard',;
 import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder',;
 ;
+=======
+import {useState} from 'react';
+import {AppHeader} from '@/layout/AppHeader';
+import {Footer} from '@/components/Footer';
+import {SEO} from '@/components/SEO';
+import {ProtectedRoute} from '@/components/ProtectedRoute';
+import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
+import {ResumeWizard} from '@/components/resume-builder/ResumeWizard';
+import {PortfolioBuilder, as, PortfolioSection} from '@/components/resume-builder/portfolio/PortfolioBuilder';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 function PortfolioBuilderContent() {;
   const [activeTab, setActiveTab] = useState('resume'),;
   ;
@@ -110,6 +139,14 @@ export default function PortfolioBuilder() {;
     </ProtectedRoute>;
   );
 }
+<<<<<<< HEAD
+=======
+
+;
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import {AppHeader} from '@/layout / AppHeader';
 import {Footer} from '@/components / Footer';
@@ -158,6 +195,7 @@ function PortfolioBuilder() {
       <PortfolioBuilderContent />;
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
   ),;
 }
 export default function PortfolioBuilder() {
@@ -177,3 +215,6 @@ export default function PortfolioBuilder() {;
 }
 ;
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

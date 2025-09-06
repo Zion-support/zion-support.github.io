@@ -9,4 +9,8 @@ const MobileAppPage = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default MobileAppPage;
+=======
+export default MobileAppPage;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

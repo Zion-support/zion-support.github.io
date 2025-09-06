@@ -9,4 +9,8 @@ const FeatureHighlights = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default FeatureHighlights;
+=======
+export default FeatureHighlights;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

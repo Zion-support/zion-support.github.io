@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer';
 export interface CompanyUsageLimits {monthlyJobPosts: number;
   budgetCapUsd: number;
@@ -78,12 +79,26 @@ export interface CompanyActivityEvent {;
 ;
 export interface InvoiceRecord {;
   id: string;
+=======
+
+export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer';
+
+export interface CompanyUsageLimits {;
+  monthlyJobPosts: number;
+  budgetCapUsd: number;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   companyId: string;
   number: string;
   amountUsd: number;
   periodStartIso: string;
   periodEndIso: string;
   status: 'paid' | 'open' | 'void' | 'past_due';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer',
 export interface CompanyUsageLimits {
   monthlyJobPosts: number,
@@ -136,6 +151,7 @@ export interface CompanyRecord {
   members: CompanyMember[];
   activity: CompanyActivityEvent[];
   invoices: InvoiceRecord[];
+<<<<<<< HEAD
 }
 export interface CompanyRecord {id: string;
   name: string;
@@ -146,10 +162,13 @@ export interface CompanyRecord {id: string;
   members: CompanyMember[];
   activity: CompanyActivityEvent[];
   invoices: InvoiceRecord[];
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 ;
 export interface CompanyRecord {;
@@ -174,3 +193,9 @@ export interface CompanyRecord {;
   }
 }
 }
+=======
+
+
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

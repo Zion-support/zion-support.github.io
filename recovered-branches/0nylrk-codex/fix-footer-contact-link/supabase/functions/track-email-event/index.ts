@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 
@@ -8,12 +9,33 @@ import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+// Initialize Supabase client
+const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
+const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+const supabase = createClient(supabaseUrl, supabaseServiceKey);
+serve(async (req) => {
+  // Parse the URL to get the tracking parameters
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const url = new URL(req && req.url);
   const type = url && url.searchParams.get("type"), // "open" or "click"
   const campaignId = url && url.searchParams.get("cid");
@@ -22,6 +44,7 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
   const url = new URL(req.url),
   const type = url.searchParams.get("type"), // "open" or "click"
 
+<<<<<<< HEAD
 // Initialize Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
@@ -34,10 +57,17 @@ serve(async (req) => {
   const campaignId = url.searchParams.get("cid");
   const userId = url.searchParams.get("uid");
   const redirectUrl = url.searchParams.get("redirect");
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const campaignId = url.searchParams.get("cid"),
   const userId = url.searchParams.get("uid"),
   const redirectUrl = url.searchParams.get("redirect"),
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Validate required parameters
   if (!type |!campaignId |!userId) {
     return new Response("Missing required parameters", { status: 400 })
@@ -107,6 +137,7 @@ if ( {) {
             "Pragma": "no-cache",
 
 
+<<<<<<< HEAD
         .eq("user_id", userId);
         .eq("user_id", userId),
 
@@ -125,6 +156,8 @@ if ( {) {
             "Content-Type": "image/gif",
             "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate",
             "Pragma": "no-cache",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             "Expires": "0"}}
       )
     } else if (type === "click") {
@@ -132,13 +165,19 @@ if ( {) {
         .from("email_campaigns")
         .update({ clicked_at: new Date().toISOString() })
         .eq("id", campaignId)
+<<<<<<< HEAD
         .eq("user_id", userId);
       // Redirect to the specified URL or default to dashboard
       const destination = redirectUrl |`${supabaseUrl}/dashboard`;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         .eq("user_id", userId),
 
       // Redirect to the specified URL or default to dashboard
       const destination = redirectUrl || `${supabaseUrl}/dashboard`,
+<<<<<<< HEAD
       return new Response(null, {
         status: 302
         headers: {
@@ -152,6 +191,8 @@ if ( {) {
 
       // Redirect to the specified URL or default to dashboard
       const destination = redirectUrl || `${supabaseUrl}/dashboard`,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
       return new Response(null, {
@@ -182,18 +223,26 @@ if ( {) {
     console.error("Error tracking email event:", error),
     
 
+<<<<<<< HEAD
     console && console.error("Error tracking email event:", error);
     console.error("Error tracking email event:", error);
     console.error("Error tracking email event:", error),
     
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // If it was a click event, still try to redirect the user
     if (type === "click" && redirectUrl) {
       return new Response(null, {
         status: 302
+<<<<<<< HEAD
         headers: {
           Location: redirectUrl}})
     }
     return new Response("Error processing event", { status: 500 })
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return new Response ("Invalid event type", { status: 400 });
   } catch (error) {
     console.error ("Error tracking email event:", error);
@@ -213,6 +262,10 @@ if ( {) {
   }
 });
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
 // Initialize Supabase client;
@@ -284,6 +337,7 @@ serve(async (req) => {;
   }
 });
 ;
+<<<<<<< HEAD
     return new Response ("Error processing event", { status: 500 });
   }
 });
@@ -388,3 +442,6 @@ headers: {
 });
   }
 });
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

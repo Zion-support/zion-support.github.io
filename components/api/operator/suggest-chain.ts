@@ -1,9 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import { CHAINS } from '../../../utils/chains';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   const stake = Number(stakeUsd || 0);
 
+<<<<<<< HEAD
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });  const { region, stakeUsd } = req.body |{};export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST');
@@ -11,6 +15,9 @@ import { CHAINS } from '../../../utils/chains';
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { region, stakeUsd } = req.body |{}
   const stake = Number(stakeUsd |0);
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Simple heuristics
   // - Low stake: prefer low fees (Polygon, BNB, Avalanche)
   // - High stake: prefer high trust L2s (Arbitrum/Optimism) or Ethereum
@@ -18,6 +25,7 @@ import { CHAINS } from '../../../utils/chains';
   //   APAC -> BNB/Avalanche, NA/EU -> Arbitrum/Optimism/Ethereum
 
 
+<<<<<<< HEAD
 
 
   let candidates = ['polygon', 'bnb', 'avalanche'];
@@ -59,3 +67,12 @@ import { CHAINS } from '../../../utils/chains';
 }
 
 }
+=======
+=======
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -19,6 +19,14 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
+<<<<<<< HEAD
+=======
+
+} from 'lucide-react';
+import Button from '../components/ui/Button';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import {;
   revolutionaryMicroSaasServices,;
@@ -28,18 +36,32 @@ import {;
 
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond } from 'lucide-react';
 
+<<<<<<< HEAD
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond } from 'lucide-react';
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '../data/revolutionary-micro-saas-services';
+<<<<<<< HEAD
 import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';
 import { motion, AnimatePresence } from 'framer-motion';
 export default function ComprehensivePricingPage() {;
+=======
+
+
+
+
+export default function ComprehensivePricingPage() {;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [priceRange, setPriceRange] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('price');
+<<<<<<< HEAD
   const allServices = [...revolutionaryMicroSaasServices, ...enhancedMicroSaasServices];
   const priceRanges = [
     { value: 'All', label: 'All Prices' },
@@ -177,35 +199,78 @@ function ComprehensivePricingPage() {
   // Price range filter
   if (priceRange !== 'All') {
     const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
+=======
+
+
+
+    { value: 'popularity', label: 'Most Popular' },
+    { value: 'category', label: 'Category' },
+    { value: 'roi', label: 'Highest ROI' }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+  ];
+
+    filteredServices = filteredServices.filter(service => service.category === selectedCategory)
+
+  }
+  // Price range filter
+  if (priceRange !== 'All') {
+
+    const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     filteredServices = filteredServices.filter(service => {
       const price = parseFloat(service.price.replace('$', '').replace(, ''));
       return price >= min && (max === Infinity |price <= max)
     })
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   // Search filter
   if (searchQuery) {
     filteredServices = filteredServices.filter(service =>
+<<<<<<< HEAD
   }
 
   // Search filter
   if (searchQuery) {_filteredServices = filteredServices.filter(service =>
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.category.toLowerCase().includes(searchQuery.toLowerCase())
+<<<<<<< HEAD
 );
+=======
+    );
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   // Sort services
   filteredServices.sort((a, b) => {
     switch (sortBy) {
       case 'price':
+<<<<<<< HEAD
         return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
+=======
+
+        return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
       case 'category':
         return a.category.localeCompare(b.category);
       case 'roi':
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const allServices = [;
     ...revolutionaryMicroSaasServices,;
     ...enhancedMicroSaasServices,;
@@ -290,6 +355,17 @@ function ComprehensivePricingPage() {
 
 
 
+<<<<<<< HEAD
+=======
+
+  const contactInfo = {
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
+  }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         const aRoi = parseFloat(a.roi.match(/\d+/)?.[0] || '0');
         const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] || '0');
         return bRoi - aRoi;
@@ -370,6 +446,18 @@ if ( {) {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
+=======
+
+
+      metric: '2000%+',
+      label: 'Average ROI',
+      description: 'Proven business value',
+
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics'
       ];
       icon: <Star className="w-6 h-6" />,
@@ -377,11 +465,16 @@ if ( {) {
       popular: false
     };
     {
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     website: 'https://ziontechgroup.com',  }    website: 'https://ziontechgroup.com';
   }
 ;
   // Pricing tiers;
   const pricing_tiers = [;
+<<<<<<< HEAD
 
   // Sort services
   filteredServices.sort(_(a, _b) => {_switch (sortBy) {
@@ -410,12 +503,18 @@ if ( {) {
   // Pricing tiers
   const pricingTiers = [
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       name: 'Starter',
       price: '$49',
       period: '/month',
       description: 'Perfect for small businesses and startups',
+<<<<<<< HEAD
 features: [;
+=======
+      features: [;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         'Basic service access',
         'Email support',
         'Standard features',
@@ -430,6 +529,7 @@ features: [;
       icon: <Star className="w - 6 h - 6" />,
       color: 'from - blue - 500 to - cyan - 600',
       popular: false;
+<<<<<<< HEAD
     }
       name: 'Professional',
       price: '$199',
@@ -1266,6 +1366,8 @@ if ( {) {
       icon: <Star className="w - 6 h - 6" />,
       color: 'from - blue - 500 to - cyan - 600',
       popular: false;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
       name: 'Professional',
       price: '$199',
@@ -1339,6 +1441,7 @@ if ( {) {
       label: 'Average ROI',
       description: 'Proven business value',
 
+<<<<<<< HEAD
       metric: '2000%+'
       label: 'Average ROI'
       description: 'Proven business value'
@@ -1356,6 +1459,8 @@ if ( {) {
     },      icon: <TrendingUp className="w-6 h-6" />
     }
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   ];
   const containerVariants = {
     hidden: { opacity: 0 }
@@ -1367,7 +1472,14 @@ if ( {) {
     },  };        staggerChildren: 0.1
       }
     }
+<<<<<<< HEAD
   }
+=======
+
+  };
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const itemVariants = {
     hidden: { y: 20, opacity: 0 }
     visible: {
@@ -1592,6 +1704,7 @@ if ( {) {
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Comprehensive
 
+<<<<<<< HEAD
         duration: 0.5
       }
     }
@@ -1669,24 +1782,42 @@ if ( {) {
                 Transparent pricing for all our revolutionary micro SaaS
                 services. Choose the perfect plan for your business with
                 guaranteed ROI and enterprise-grade reliability.                  Comprehensive
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </span>
                 <br />
                 <span className="text-white">Pricing & Plans</span>
               </motion.h1>
               <motion.p
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
+<<<<<<< HEAD
 
 
+=======
+=======
+                transition={{ duration: 0.8 }}
+              >
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 Transparent pricing for all our revolutionary micro SaaS services. 
                 Choose the perfect plan for your business with guaranteed ROI and enterprise-grade reliability.
               </motion.p>
               
 
               {/* Market Stats */}
+<<<<<<< HEAD
 
 
               </motion && motion.div>;
@@ -1700,6 +1831,35 @@ if ( {) {
               {/* Market Stats */}
               <motion.div
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+=======
+              <motion.div
+                transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
+                Transparent pricing for all our revolutionary micro SaaS;
+                services. Choose the perfect plan for your business with;
+                guaranteed ROI and enterprise-grade reliability.                  Comprehensive;
+                </span>;
+                <br />;
+                <span className="text-white">Pricing & Plans</span>;
+              </motion && motion.h1>;
+              <motion&& motion.p 
+                className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
+                Transparent pricing for all our revolutionary micro SaaS;
+                services. Choose the perfect plan for your business with;
+                guaranteed ROI and enterprise-grade reliability.;
+              </motion && motion.p>;
+              {/* Market Stats */}
+              <motion&& motion.div
+                className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'                initial={{ opacity: 0, y: 20 }}              </motion && motion.p>;
+              {/* Market Stats */}
+              <motion&& motion.div 
+                className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -1717,14 +1877,24 @@ if ( {) {
                     <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.metric}</div>
                     <div className="text-gray-400 text-sm">{stat.label}</div>
                     <div className="text-gray-500 text-xs">{stat.description}</div>
+<<<<<<< HEAD
                 ))}
               </motion.div>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                   </div>
 
                 ))}
               </motion.div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {/* CTA Buttons */}
               <motion&& motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
@@ -1732,7 +1902,10 @@ if ( {) {
 
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>              <motion&& motion.div 
 
+<<<<<<< HEAD
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>              <motion&& motion.div 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
 
               >              <motion.div 
@@ -1775,6 +1948,10 @@ if ( {) {
                       .getElementById('services-pricing');
                       ?.scrollIntoView({ behavior: 'smooth' });
                   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
                 {marketStats.map((stat, index) => (
@@ -1793,7 +1970,11 @@ if ( {) {
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
                 <Button 
+<<<<<<< HEAD
 variant="primary" 
+=======
+                  variant="primary" 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   size="lg"
                   onClick={() => document.getElementById('pricing-tiers')?.scrollIntoView({ behavior: 'smooth' })}
                 >
@@ -1806,13 +1987,19 @@ variant="primary"
                   onClick={() => document.getElementById('services-pricing')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Browse All Services
+<<<<<<< HEAD
                   <Search className='ml-2 w-5 h-5' />                </Button>                  <Search className="ml-2 w-5 h-5" />
+=======
+                  <Search className="ml-2 w-5 h-5" />
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </Button>
               </motion.div>
             </div>
           </div>
         </section>
         {/* Contact Information Banner */}
+<<<<<<< HEAD
         <section className='py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-purple-400/20'>
           <div className='container mx-auto px-4'>
             <div className='flex flex-col md:flex-row justify-between items-center gap-4'>
@@ -1827,10 +2014,25 @@ variant="primary"
                 <span className='text-white'>{contactInfo.address}</span>
                 <Globe className='w-5 h-5 text-blue-400' />
                 <span className='text-white'>{contactInfo.website}</span>              </div>              <div className="flex items-center gap-4">
+=======
+
+        <section className="py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-purple-400/20">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+              <div className="flex items-center gap-4">
+                <Phone className="w-5 h-5 text-cyan-400" />
+                <span className="text-white">{contactInfo.mobile}</span>
+                <Mail className="w-5 h-5 text-purple-400" />
+                <span className="text-white">{contactInfo.email}</span>
+              </div>
+              <div className="flex items-center gap-4">
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <MapPin className="w-5 h-5 text-green-400" />
                 <span className="text-white">{contactInfo.address}</span>
                 <Globe className="w-5 h-5 text-blue-400" />
                 <span className="text-white">{contactInfo.website}</span>
+<<<<<<< HEAD
               </div>
             </div>
           </div>
@@ -1848,17 +2050,39 @@ variant="primary"
 
               initial={{ opacity: 0, y: 20 }}
 
+=======
+
+              </div>
+
+            </div>
+          </div>
+        </section>
+        {/* Pricing Tiers */}
+
+        <section id="pricing-tiers" className="py-20">
+
+          <div className="container mx-auto px-4">
+
+              initial={{ opacity: 0, y: 20 }}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             <motion.div 
               className="text-center mb-16"
 
+<<<<<<< HEAD
 
               initial={{ opacity: 0, y: 20 }}
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
+<<<<<<< HEAD
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>
                 <span className='bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>
                   Flexible Pricing
@@ -1872,10 +2096,69 @@ variant="primary"
               </p>
             </motion.div>
             <motion.div
+=======
+
+                >;
+                  Browse All Services;
+                  <Search className='ml-2 w-5 h-5' />                </Button>                  <Search className="ml-2 w-5 h-5" />;
+                </Button>;
+              </motion && motion.div>;
+            </div>;
+          </div>;
+        </section>;
+        {/* Contact Information Banner */}
+        <section className='py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-purple-400/20'>;
+          <div className='container mx-auto px-4'>;
+            <div className='flex flex-col md:flex-row justify-between items-center gap-4'>;
+              <div className='flex items-center gap-4'>;
+                <Phone className='w-5 h-5 text-cyan-400' />;
+                <span className='text-white'>{contactInfo && contactInfo.mobile}</span>;
+                <Mail className='w-5 h-5 text-purple-400' />;
+                <span className='text-white'>{contactInfo && contactInfo.email}</span>;
+              </div>;
+              <div className='flex items-center gap-4'>;
+                <MapPin className='w-5 h-5 text-green-400' />;
+                <span className='text-white'>{contactInfo && contactInfo.address}</span>;
+                <Globe className='w-5 h-5 text-blue-400' />;
+                <span className='text-white'>{contactInfo && contactInfo.website}</span>              </div>              <div className="flex items-center gap-4">;
+                <MapPin className="w-5 h-5 text-green-400" />;
+                <span className="text-white">{contactInfo && contactInfo.address}</span>;
+                <Globe className="w-5 h-5 text-blue-400" />;
+                <span className="text-white">{contactInfo && contactInfo.website}</span>;
+            </div>;
+          </div>;
+        </section>;
+        {/* Pricing Tiers */}
+        <section id='pricing-tiers' className='py-20'>;
+          <div className='container mx-auto px-4'>;
+            <motion&& motion.div
+              className='text-center mb-16'              initial={{ opacity: 0, y: 20 }}        <section id="pricing-tiers" className="py-20">;
+          <div className="container mx-auto px-4">;
+            <motion&& motion.div 
+              className="text-center mb-16"
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0 && 0.6 }}>;
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>;
+                <span className='bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>;
+                  Flexible Pricing;
+                </span>;
+                <br />;
+                <span className='text-white'>for Every Business</span>;
+              </h2>;
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+                Choose the perfect plan that scales with your business. All;
+                plans include our 21-day free trial and ROI guarantee.;
+              </p>;
+            </motion && motion.div>;
+            <motion&& motion.div
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto'
               variants={containerVariants}
               initial='hidden'
               whileInView='visible'              viewport={{ once: true }}                  Flexible Pricing
+<<<<<<< HEAD
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                   Flexible Pricing
@@ -1895,10 +2178,20 @@ variant="primary"
             <motion.div 
             <motion.div
             <motion.div 
+=======
+
+
+=======
+
+            <motion.div 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
+<<<<<<< HEAD
           <meta;
             name='description';
             content='Explore comprehensive pricing for all Zion Tech Group micro SaaS services. Transparent pricing, market analysis, ROI guarantees, and flexible plans for every business size.';
@@ -2190,6 +2483,13 @@ variant="primary"
                         </div>
                       ))}
                     </div>
+=======
+
+
+                      ))}
+                    </div>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     </div>;
                         {tier && tier.icon}
                       </div>;
@@ -2207,9 +2507,17 @@ variant="primary"
                       ))}
                     </div>;
                     <div className='text-center'>;
+<<<<<<< HEAD
                       <Button
                         variant={tier && tier.popular ? 'futuristic' : 'primary'}
                         size='md'
+=======
+
+                      <Button
+                        variant={tier && tier.popular ? 'futuristic' : 'primary'}
+                        size='md'
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         onClick={() =>;
                           window && window.open(;
                             'https://ziontechgroup && ziontechgroup.com/contact',;
@@ -2222,6 +2530,10 @@ variant="primary"
                         <ArrowRight className='ml-2 w-4 h-4' />                      </Button>                    <div className="text-center">;
                                              <Button
                          variant={tier && tier.popular ? 'futuristic' : 'primary'} 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                          size="md"
                          onClick={() => window && window.open('https://ziontechgroup && ziontechgroup.com/contact_blank')}
                          className="w-full";
@@ -2232,6 +2544,11 @@ variant="primary"
                   </UltraFuturisticCard>;
                 </motion && motion.div>;
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <div className="text-center">
                                              <Button 
                          variant={tier.popular ? 'futuristic' : 'primary'} 
@@ -2241,6 +2558,7 @@ variant="primary"
                        >
                         Get Started
                         <ArrowRight className="ml-2 w-4 h-4" />
+<<<<<<< HEAD
                     </div>
                   </UltraFuturisticCard>
                 </motion.div>
@@ -2256,12 +2574,49 @@ variant="primary"
             {/* Filters and Controls */}
             <motion.div
               className='mb-8'              initial={{ opacity: 0, y: 20 }}        <section id="services-pricing" className="py-20">
+=======
+                      </Button>
+                    </div>
+                  </UltraFuturisticCard>
+                </motion.div>
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+              ))}
+
+            </motion && motion.div>;
+          </div>;
+        </section>;
+
+
+        {/* Services Pricing Grid */}
+        <section id='services-pricing' className='py-20'>;
+          <div className='container mx-auto px-4'>;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {/* Services Pricing Grid */}
+        <section id="services-pricing" className="py-20">
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="container mx-auto px-4">
             {/* Filters and Controls */}
             <motion&& motion.div
               className='mb-8'              initial={{ opacity: 0, y: 20 }}        <section id="services-pricing" className="py-20">;
           <div className="container mx-auto px-4">;
             {/* Filters and Controls */}
+<<<<<<< HEAD
+=======
+
+            <motion&& motion.div 
+
+              className="mb-8"
+
+
+        {/* Services Pricing Grid */}
+        <section id='services-pricing' className='py-20'>
+          <div className='container mx-auto px-4'>
+            {/* Filters and Controls */}
+            <motion.div
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               className='mb-8'              initial={{ opacity: 0, y: 20 }}
 
@@ -2300,6 +2655,7 @@ variant="primary"
 
 
                   <select
+<<<<<<< HEAD
             <motion&& motion.div 
               className="mb-8"
                   </select>;
@@ -2355,10 +2711,33 @@ variant="primary"
                 <div className='flex items-center gap-4'>
                   <div className='relative'>
                     <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />
+=======
+                    value={sortBy}
+                    onChange={e => setSortBy(e && e.target.value)}
+                    className='px-4 py-2 bg-slate-800 border border-green-400/30 rounded-lg text-white focus:outline-none focus:border-green-400';
+                  >;
+                    {sortOptions && sortOptions.map(option => (;
+                      <option key={option && option.value} value={option && option.value}>;
+                        {option && option.label}
+                      </option>;
+                    ))}
+
+                  </select>;
+                </div>;
+
+                <div className='flex items-center gap-4'>;
+                  <div className='relative'>;
+                    <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <input
                       type='text'
                       placeholder='Search services...'
                       value={searchQuery}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       onChange={e => setSearchQuery(e && e.target.value)}
                       className='pl-10 pr-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 w-64';
                     />;
@@ -2369,6 +2748,10 @@ variant="primary"
                     >;
                       <Grid className='w-4 h-4' />                    </button>                  ;
                   <div className="flex border border-gray-600 rounded-lg overflow-hidden">;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <button
                       onClick={() => setViewMode('grid')}
                       className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
@@ -2378,6 +2761,7 @@ variant="primary"
                     <button
                       onClick={() => setViewMode('list')}
                       className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
+<<<<<<< HEAD
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -2444,10 +2828,25 @@ variant="primary"
             </motion.div>
 
 
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                    </button>;
+                  </div>;
+                </div>;
+              </div>;
+
+
+              className={viewMode === 'grid' 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               whileInView='visible'              viewport={{ once: true }}            <motion.div 
               className={viewMode === 'grid' 
 
+<<<<<<< HEAD
             </motion.div>;
             {/* Services Display */}
             <motion.div;
@@ -2472,6 +2871,9 @@ variant="primary"
               className={viewMode === 'grid'
               whileInView='visible'              viewport={{ once: true }}            <motion.div 
               className={viewMode === 'grid' 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
               }
@@ -2479,11 +2881,14 @@ variant="primary"
               initial="hidden"
 
 
+<<<<<<< HEAD
               whileInView="visible"
               whileInView='visible'              viewport={{ once: true }}
 
               viewport={{ once: true }}
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -2491,24 +2896,45 @@ variant="primary"
                   variants={itemVariants}
                   whileHover={{ y: -5 }}>;
                   <UltraFuturisticCard
+<<<<<<< HEAD
                     variant={service.variant as any || 'quantum-advanced'}
 
+=======
+
+                    variant={service.variant as any || 'quantum-advanced'}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                     variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
 
 
+<<<<<<< HEAD
                     variant={service.variant as any || 'quantum-advanced'}
                     variant={(service.variant as any) |'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any |'quantum-advanced'}
                     variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
 
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any || 'quantum-advanced'}
                     variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     size={viewMode === 'grid' ? 'large' : 'medium'}
                     className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}
                   >
                     {viewMode === 'grid' ? (
                       // Grid View
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               variants={container_variants}
               initial='hidden';
               whileInView='visible'              viewport={{ once: true }}            <motion.div;
@@ -2536,6 +2962,10 @@ variant="primary"
                       <div className='text - center'>;
                         <div className='text - 4xl mb - 4'>{service.icon}</div>;
                         <h3 className='text - xl font - bold text - white mb - 2'>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           {service.name}
                         </h3>;
                         <p className='text - gray - 300 mb - 4 text - sm'>;
@@ -2546,6 +2976,11 @@ variant="primary"
                         </div>;
                         <div className='text - sm text - gray - 400 mb - 4'>;
                           {service.period}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     variant={(service && service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service && service.variant as any || 'quantum-advanced'}
                     size={viewMode === 'grid' ? 'large' : 'medium'}
                     className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}>;
@@ -2574,6 +3009,7 @@ variant="primary"
                               <span className='text-gray-300'>{feature}</span>                            </div>;
 
                           ))}
+<<<<<<< HEAD
                       <div className="text-center">
                         <div className="text-4xl mb-4">{service.icon}</div>
                         <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
@@ -2932,6 +3368,9 @@ variant="primary"
                              </Button>;
                              <Button
                                variant="futuristic" 
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                                size="sm"
                                onClick={() => window && window.open('https: //ziontechgroup && ziontechgroup.com/contact_blank')}
                              >;
@@ -2944,12 +3383,20 @@ variant="primary"
                   </UltraFuturisticCard>;
                 </motion && motion.div>;
               ))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </motion && motion.div>;
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
                 className='text-center py-16'                initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0 && 0.6 }}>              <motion&& motion.div 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 className="text-center py-16"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -2968,6 +3415,7 @@ variant="primary"
                     setSelectedCategory('All');
                     setPriceRange('All');
                   }}
+<<<<<<< HEAD
                              <Button 
                                variant="futuristic" 
                                size="sm"
@@ -3018,17 +3466,28 @@ variant="primary"
                 </Button>              </motion.div>                <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>
                 <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters.</p>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 >;
                   Clear Filters;
                 </Button>              </motion && motion.div>                <div className="text-6xl mb-4">🔍</div>;
                 <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>;
                 <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters.</p>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                                  <Button
                    variant="primary"
                    onClick={() => {;
                      setSearchQuery('');
                      setSelectedCategory('All');
 
+<<<<<<< HEAD
                      setPriceRange('All')
                    }}
                  >
@@ -3045,10 +3504,28 @@ variant="primary"
           <div className="container mx-auto px-4 text-center">
             <motion.div
               className="max-w-4xl mx-auto"
+=======
+                     setPriceRange('All');
+
+                   }}
+
+
+            )}
+
+        <section className="py-20">
+
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              className="max-w-4xl mx-auto"
+
+              initial={{ opacity: 0, y: 20 }}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
+<<<<<<< HEAD
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Ready to Get Started?
               </h2>
@@ -3057,6 +3534,31 @@ variant="primary"
                 implementation options.
               </p>
               <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>
+=======
+
+          </div>;
+        </section>;
+        {/* Contact Section */}
+        <section className='py-20'>;
+          <div className='container mx-auto px-4 text-center'>;
+            <motion&& motion.div
+              className='max-w-4xl mx-auto'              initial={{ opacity: 0, y: 20 }}        <section className="py-20">;
+          <div className="container mx-auto px-4 text-center">;
+            <motion&& motion.div 
+              className="max-w-4xl mx-auto"
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0 && 0.8 }}>;
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+                Ready to Get Started?;
+              </h2>;
+              <p className='text-xl text-gray-300 mb-8'>;
+                Contact our sales team to discuss pricing, custom plans, and;
+                implementation options.;
+              </p>;
+              <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <Button
                   variant='primary'
                   size='lg'
@@ -3073,8 +3575,15 @@ variant="primary"
                   onClick={() =>;
                     window && window.open('https://ziontechgroup && ziontechgroup.com/contact', '_blank');
                   }
+<<<<<<< HEAD
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Get Started?
+=======
+
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Get Started?
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Contact our sales team to discuss pricing, custom plans, and implementation options.
@@ -3112,6 +3621,11 @@ variant="primary"
                   <MapPin className="w-8 h-8 text-green-400 mx-auto mb-2" />
                   <div className="text-white font-semibold">{contactInfo.address}</div>
                   <div className="text-gray-400 text-sm">Visit our office</div>
+<<<<<<< HEAD
+=======
+                </div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -3124,17 +3638,100 @@ variant="primary"
                 </div>
 
 
+<<<<<<< HEAD
                 </div>
 
                 </div>
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </div>
             </motion.div>
           </div>
         </section>
       </div>
     </UltraFuturisticBackground>
+<<<<<<< HEAD
                 >;
+=======
+
+                >;
+                  Schedule Demo;
+                  <Calendar className='ml-2 w-5 h-5' />;
+                </Button>;
+              </div>;
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>;
+                <div>;
+                  <Phone className='w-8 h-8 text-cyan-400 mx-auto mb-2' />;
+                  <div className='text-white font-semibold'>;
+                    {contactInfo && contactInfo.mobile}
+                  </div>;
+                  <div className='text-gray-400 text-sm'>Call us anytime</div>;
+                </div>;
+                <div>;
+                  <Mail className='w-8 h-8 text-purple-400 mx-auto mb-2' />;
+                  <div className='text-white font-semibold'>;
+                    {contactInfo && contactInfo.email}
+                  </div>;
+                  <div className='text-gray-400 text-sm'>Email us 24/7</div>;
+                </div>;
+                <div>;
+                  <MapPin className='w-8 h-8 text-green-400 mx-auto mb-2' />;
+                  <div className='text-white font-semibold'>;
+                    {contactInfo && contactInfo.address}
+                  </div>;
+                  <div className='text-gray-400 text-sm'>Visit our office</div>                </div>                Ready to Get Started?;
+              </h2>;
+              <p className="text-xl text-gray-300 mb-8">;
+                Contact our sales team to discuss pricing, custom plans, and implementation options.;
+              </p>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">;
+                <Button
+                  variant="primary" 
+                  size="lg"
+                  onClick={() => window && window.open('https://ziontechgroup && ziontechgroup.com/contact_blank')}
+                >;
+                  Contact Sales;
+                  <Mail className="ml-2 w-5 h-5" />;
+                </Button>;
+                <Button
+                  variant="futuristic" 
+                  size="lg"
+                  onClick={() => window && window.open('https://ziontechgroup && ziontechgroup.com/contact_blank')}
+                >;
+                  Schedule Demo;
+                  <Calendar className="ml-2 w-5 h-5" />;
+                </Button>;
+              </div>;
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">;
+                <div>;
+                  <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-2" />;
+                  <div className="text-white font-semibold">{contactInfo && contactInfo.mobile}</div>;
+                  <div className="text-gray-400 text-sm">Call us anytime</div>;
+                </div>;
+                <div>;
+                  <Mail className="w-8 h-8 text-purple-400 mx-auto mb-2" />;
+                  <div className="text-white font-semibold">{contactInfo && contactInfo.email}</div>;
+                  <div className="text-gray-400 text-sm">Email us 24/7</div>;
+                </div>;
+                <div>;
+                  <MapPin className="w-8 h-8 text-green-400 mx-auto mb-2" />;
+                  <div className="text-white font-semibold">{contactInfo && contactInfo.address}</div>;
+                  <div className="text-gray-400 text-sm">Visit our office</div>;
+                </div>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </UltraFuturisticBackground>;
+  );  );
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   )
 }
                           <div className='flex gap - 2'>;
@@ -3331,9 +3928,19 @@ variant="primary"
       </div>;
     </UltraFuturisticBackground>));
 }
+<<<<<<< HEAD
 
   );
 
 );  )
 }
   );
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  );
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

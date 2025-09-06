@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 // These would be replaced with actual screenshots
 
@@ -30,6 +31,8 @@ export const AppScreenshots: React.FC = () => {
 
   const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 if (scrollContainerRef.current) {
       const scrollAmount = 300
       scrollContainerRef.current.scrollBy({
@@ -98,6 +101,7 @@ export const AppScreenshots: React.FC = () => {;
 
             onClick={() => scroll("left")}
 
+<<<<<<< HEAD
         
         <div className="relative">
           <Button
@@ -105,16 +109,28 @@ export const AppScreenshots: React.FC = () => {;
             size="icon"
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white"
             onClick={() => scroll("left")}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             aria-label="Scroll left"
           >
             <ChevronLeft className="h-6 w-6" />
           </Button>
+<<<<<<< HEAD
+=======
+
+            aria-label="Scroll left";
+          >;
+            <ChevronLeft className="h-6 w-6" />;
+          </Button>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div
             ref = {scrollContainerRef,}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>;
             {mockScreenshots && mockScreenshots.map((screenshot,) => (;
               <div
+<<<<<<< HEAD
           <div
             ref = {scrollContainerRef,}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
@@ -123,6 +139,8 @@ export const AppScreenshots: React.FC = () => {;
             {mockScreenshots.map((screenshot,) => (
               <div
                 key = {screenshot.id,}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 key = {screenshot && screenshot.id,}
                 className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30">;
 
@@ -167,7 +185,13 @@ export const AppScreenshots: React.FC = () => {;
           <Button
             size="icon"
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white"
+<<<<<<< HEAD
             onClick={() => scroll("right")}
+=======
+
+            onClick={() => scroll("right")}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             aria-label="Scroll right"
           >
             <ChevronRight className="h-6 w-6" />
@@ -175,6 +199,7 @@ export const AppScreenshots: React.FC = () => {;
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   );
 };
 '"};
@@ -249,6 +274,9 @@ export const AppScreenshots: React.FC = () => {;
             size="icon";
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white";
             onClick={() => scroll("right")}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             aria-label="Scroll right";
           >;
             <ChevronRight className="h-6 w-6" />;
@@ -258,7 +286,13 @@ export const AppScreenshots: React.FC = () => {;
     </section>;
   );
 };
+<<<<<<< HEAD
   )
+=======
+'"},;
+
+};
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ;
 }
@@ -338,4 +372,8 @@ if ( {) {
 '"},
 }
 
+<<<<<<< HEAD
   )
+=======
+  )
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

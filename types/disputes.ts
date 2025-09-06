@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',
 
 
@@ -12,12 +13,22 @@ export type DisputeReason =
   | 'Other';
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',;
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved';
+=======
+
+export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',
+=======
+
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export type DisputeReason =;
   | 'Scope Disagreement';
   | 'Quality Issues';
   | 'Delivery Delay';
   | 'Payment Issue';
   | 'Communication Breakdown';
+<<<<<<< HEAD
   | 'Other',;
 export type DisputeAttachment = {;
   id: string,;
@@ -100,12 +111,18 @@ export type DisputeCase = {
   talentUserId: string;
   createdAt: string;
   updatedAt: string;
+=======
+
+  | 'Other',;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   role: 'admin' | 'client' | 'talent';
 
 };
 
 
+<<<<<<< HEAD
   status: DisputeStatus;
   reason: DisputeReason;
   reasonDetails?: string;
@@ -148,3 +165,5 @@ export type UserSummary = {
   role: 'admin' | 'client' | 'talent';
 }
 };
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

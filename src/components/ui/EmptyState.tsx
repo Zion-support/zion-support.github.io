@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Package, RefreshCw } from 'lucide-react';
 import { Button } from './button',;
 interface EmptyStateProps {;
@@ -18,11 +19,25 @@ import { Button } from './button';
 interface EmptyStateProps {
 import { Button } from './button';
 interface EmptyStateProps {;
+=======
+import { Button } from './button';
+interface EmptyStateProps {;
 
 import { Package, RefreshCw } from 'lucide-react'
 import { Button } from './button';
 interface EmptyStateProps {
 
+  text?: string;
+  description?: string;
+  onRetry?: () => void;
+  showRetry?: boolean;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+import { Package, RefreshCw } from 'lucide-react'
+import { Button } from './button';
+interface EmptyStateProps {
+
+<<<<<<< HEAD
   text?: string;
   description?: string;
   onRetry?: () => void;
@@ -54,6 +69,8 @@ export function EmptyState({
   description,
   onRetry,
   showRetry = false,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   icon
   return (
     <div className="flex flex-col items-center justify-center py-16 px-4 text-center">
@@ -82,6 +99,7 @@ function EmptyState() {
         {text}
       </h3>
       {description && (
+<<<<<<< HEAD
         <p className='text-gray-400 mb-6 max-w-md'>{description}</p>
   showRetry = false
   icon
@@ -113,6 +131,9 @@ function EmptyState() {
       )}
       {showRetry && onRetry && (
         <Button
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   icon?: React && React.ReactNode;
 
@@ -166,7 +187,11 @@ export function EmptyState({;
 
       )}
       {showRetry && onRetry && (;
+<<<<<<< HEAD
         <Button;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           onClick={onRetry}
           variant="outline"
           className="flex items-center gap-2"
@@ -174,6 +199,7 @@ export function EmptyState({;
           <RefreshCw className="h-4 w-4" />
 
 
+<<<<<<< HEAD
           Try Again
 
         </Button>
@@ -197,6 +223,18 @@ export function EmptyState({;
 }
 }
 }
+=======
+
+          Try Again
+
+        </Button>
+      )}
+    </div>;
+  );
+
+} 
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <p className='text - gray - 400 mb - 6 max - w-md'>{description}</p>;
   show_retry = false,
   icon,
@@ -234,4 +272,8 @@ export function EmptyState({;
           <RefreshCw className="h - 4 w - 4" />;
         </Button>)}
     </div>);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

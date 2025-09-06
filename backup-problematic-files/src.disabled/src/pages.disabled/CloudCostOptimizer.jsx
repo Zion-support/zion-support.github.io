@@ -9,4 +9,8 @@ const CloudCostOptimizer = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default CloudCostOptimizer;
+=======
+export default CloudCostOptimizer;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

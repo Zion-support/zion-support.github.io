@@ -1,21 +1,32 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import Head from 'next/head';
 
 
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import React from 'react';
 import Head from 'next/head';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
+<<<<<<< HEAD
   Search
   Filter
   TrendingUp
   DollarSign
   Users
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -51,6 +62,7 @@ import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import {
 
+<<<<<<< HEAD
   Star
   Check
   X
@@ -60,6 +72,9 @@ import {
   Brain
   Globe
   Rocket;} from 'lucide-react';import {
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Search,
   Filter,
   TrendingUp,
@@ -72,6 +87,19 @@ import {
   ExternalLink,
   Zap,
   Brain,
+<<<<<<< HEAD
+=======
+
+
+
+  Search;
+  Filter,
+  TrendingUp,
+  DollarSign,
+  Users,
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Globe,
   Rocket,;} from 'lucide-react';import { 
   Globe,;
@@ -92,7 +120,13 @@ import {
   Globe;
 
 
+<<<<<<< HEAD
   Rocket
+=======
+
+export default function ToolComparisonPage() {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export default function ToolComparisonPage() {;
 
@@ -113,6 +147,7 @@ function ToolComparisonPage() {
   const all_tools = [;
     // AI Tools;
     {
+<<<<<<< HEAD
       name: 'ChatGPT',
       category: 'AI Assistant',
       pricing: 'Free - $20 / month',
@@ -272,8 +307,24 @@ function ToolComparisonPage() {
       icon: <Brain className="w-6 h-6" />
       color: 'text-blue-400'
     }
+=======
+
+
+        'Specialized for marketing',
+        'Brand voice training',
+        'SEO optimization',
+        'Team features',
+      ],
+      cons: ['Expensive', 'Limited free trial', 'Can be repetitive'],
+      website: 'https://jasper.ai',
+      icon: <Brain className='w-6 h-6' />,
+      color: 'text-blue-400',
+    },    // SaaS Tools
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // SaaS Tools
     {
+<<<<<<< HEAD
       name: 'Zapier'
       category: 'Automation'
       pricing: 'Free - $19.99/month'
@@ -294,6 +345,8 @@ function ToolComparisonPage() {
     // SaaS Tools
 
     {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       name: 'Zapier',
       category: 'Automation',
       pricing: 'Free - $19.99/month',
@@ -404,6 +457,11 @@ function ToolComparisonPage() {
       rating: 4.8,
       users: '10M+',
       bestFor: 'Sales teams, consultants, remote teams',
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       pros: [
         'Easy to use'
         'Extensive integrations'
@@ -536,6 +594,10 @@ function ToolComparisonPage() {
         'Can be expensive'
       ]
       icon: <Globe className='w-6 h-6' />
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       name: 'ChatGPT',
       category: 'AI Assistant',
       pricing: 'Free - $20 / month',
@@ -758,6 +820,7 @@ function ToolComparisonPage() {
   });
 
 
+<<<<<<< HEAD
       color: 'text-blue-400'
     }
   ];
@@ -784,12 +847,29 @@ function ToolComparisonPage() {
                          tool.bestFor.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'All' |tool.category === selectedCategory;
     return matchesSearch && matchesCategory
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const sortedTools = [...filteredTools].sort((a, b) => {
     switch (sortBy) {
       case 'rating':
         return b.rating - a.rating;
       case 'users':
 
+<<<<<<< HEAD
+=======
+export default function ToolComparisonPage() {;
+  const [searchTerm, setSearchTerm] = React && React.useState('');
+  const [selectedCategory, setSelectedCategory] = React && React.useState('All');
+  const [sortBy, setSortBy] = React && React.useState('rating');
+        return parseInt(b.users.replace(/[^0-9]/g, '')) - parseInt(a.users.replace(/[^0-9]/g, ''));
+      case 'name':
+        return a.name.localeCompare(b.name);
+      default: return 0
+    }
+  });
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const allTools = [;
     // AI Tools;
     {;
@@ -1051,15 +1131,40 @@ function ToolComparisonPage() {
         return a && a.name.localeCompare(b && b.name);
       default: return 0;
   });
+<<<<<<< HEAD
+=======
+
+
+
+
+
+  const getPricingColor = (pricing: string) => {
+    if (pricing.includes('Free')) return 'text-green-400';
+    if (pricing.includes('$')) return 'text-blue-400';
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const getPricingColor = (pricing: string) => {;
     if (pricing && pricing.includes('Free')) return 'text-green-400';
     if (pricing && pricing.includes('$')) return 'text-blue-400';
     return 'text-gray-400';  };    return 'text-gray-400';
     return 'text-gray-400'
+<<<<<<< HEAD
   };
   return (
         />;
         <meta name='twitter:card' content='summary_large_image' />;
+=======
+
+  };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+  return (
+
+        />;
+        <meta name='twitter:card' content='summary_large_image' />;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>;
         <div className='absolute inset-0'>;
@@ -1067,7 +1172,13 @@ function ToolComparisonPage() {
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(34,197,94,0 && 0.08),transparent_50%)]' />;
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0 && 0.06),transparent_50%)]' />;
         </div>;
+<<<<<<< HEAD
         <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />;
+=======
+
+        <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
           <div className='mb-20 animate-fade-in'>;
             <div className='mb-8'>;
@@ -1076,6 +1187,10 @@ function ToolComparisonPage() {
                 Smart Tool Selection;
               </div>;
             </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight'>;
               Tool Comparison;
             </h1>;
@@ -1084,6 +1199,7 @@ function ToolComparisonPage() {
               informed decisions with our comprehensive analysis and expert;
               insights.;
             </p>;
+<<<<<<< HEAD
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>;
               <Button
                 href='#comparison'
@@ -1218,6 +1334,11 @@ function ToolComparisonPage() {
               insights.
             </p>
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
+=======
+
+            <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Button
                 href='#comparison'
                 size='lg'
@@ -1234,26 +1355,39 @@ function ToolComparisonPage() {
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'                style={{ animationDelay: '0.4s' }}                href="/contact"
                 variant="outline"
                 size="lg"
+<<<<<<< HEAD
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
+=======
+
+                style={{ animationDelay: '0.4s' }}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               >
                 Get Expert Advice
               </Button>
             </div>
           </div>
           {/* Stats */}
+<<<<<<< HEAD
           <div
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
             style={{ animationDelay: '0.6s' }}
           >
             <div className='text-center group'>
               <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300'>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {allTools.length}+
               </div>
               <div className='text-gray-400 text-sm'>Tools Analyzed</div>
@@ -1299,15 +1433,84 @@ function ToolComparisonPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5">;
+                Get Expert Advice;
+              </Button>;
+            </div>;
+          </div>;
+          {/* Stats */}
+          <div
+            className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
+            style={{ animationDelay: '0 && 0.6s' }}>;
+            <div className='text-center group'>;
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300'>;
+                {allTools && allTools.length}+;
+              </div>;
+              <div className='text-gray-400 text-sm'>Tools Analyzed</div>;
+            </div>;
+            <div className='text-center group'>;
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>;
+                9;
+              </div>;
+              <div className='text-gray-400 text-sm'>Categories</div>;
+            </div>;
+            <div className='text-center group'>;
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300'>;
+                4 && 4.7+;
+              </div>;
+              <div className='text-gray-400 text-sm'>Avg Rating</div>;
+            </div>;
+            <div className='text-center group'>;
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300'>;
+                250M+;
+              </div>;
+              <div className='text-gray-400 text-sm'>Total Users</div>            </div>                {allTools && allTools.length}+;
+              </div>;
+              <div className="text-gray-400 text-sm">Tools Analyzed</div>;
+            </div>;
+            <div className="text-center group">;
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300">;
+                9;
+              </div>;
+              <div className="text-gray-400 text-sm">Categories</div>;
+            </div>;
+            <div className="text-center group">;
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300">;
+                4 && 4.7+;
+              </div>;
+              <div className="text-gray-400 text-sm">Avg Rating</div>;
+            </div>;
+            <div className="text-center group">;
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300">;
+                250M+;
+              </div>;
+              <div className="text-gray-400 text-sm">Total Users</div>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+      {/* Filters and Search */}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                 onChange={e => setSearchTerm(e && e.target.value)}
                 className='w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'              />;
             </div>;
+<<<<<<< HEAD
             {/* Category Filter */}
             <div className='flex flex-wrap gap-2'>;
               {categories && categories.map(category => (                <button            {/* Search */}
             <div className="relative flex-1 max-w-md">;
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
+=======
+
+
+            {/* Category Filter */}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <section className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
@@ -1331,28 +1534,52 @@ function ToolComparisonPage() {
               {categories.map(category => (                <button            {/* Search */}
             <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <input
                 type="text"
                 placeholder="Search tools, categories, or use cases..."
                 value={searchTerm}
+<<<<<<< HEAD
                 onChange={(e) => setSearchTerm(e && e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent";
               />;
             </div>;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Category Filter */}
             <div className='flex flex-wrap gap-2'>;
               {categories && categories.map(category => (            <div className="flex flex-wrap gap-2">;
               {categories && categories.map((category) => (;
+<<<<<<< HEAD
             {/* Category Filter */}
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
                 <button
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {categories.map(category => (                <button
 
               />
             </div>
 
             {/* Category Filter */}
+<<<<<<< HEAD
+=======
+            <div className="flex flex-wrap gap-2">
+              {categories.map((category) => (
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                <button
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className='flex flex-wrap gap-2'>
 
               {categories.map(category => (                <button
@@ -1365,9 +1592,14 @@ function ToolComparisonPage() {
                 <button
 
 
+<<<<<<< HEAD
 
                 <button
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -1379,27 +1611,48 @@ function ToolComparisonPage() {
                   {category}
                 </button>;
               ))}
+<<<<<<< HEAD
             </div>;
+=======
+
+            </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Sort */}
             <div className='flex items-center space-x-2'>;
               <Filter className='w-5 h-5 text-gray-400' />;
             </div>
             {/* Sort */}
+<<<<<<< HEAD
             <div className='flex items-center space-x-2'>
               <Filter className='w-5 h-5 text-gray-400' />
 
             {/* Sort */}
             <div className="flex items-center space-x-2">
               <Filter className="w-5 h-5 text-gray-400" />
+=======
+            <div className="flex items-center space-x-2">
+              <Filter className="w-5 h-5 text-gray-400" />
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             {/* Sort */}
             <div className='flex items-center space-x-2'>
               <Filter className='w-5 h-5 text-gray-400' />
 
+<<<<<<< HEAD
             {/* Sort */}
             <div className='flex items-center space-x-2'>
               <Filter className='w-5 h-5 text-gray-400' />
 
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <select
                 value={sortBy}
                 onChange={e => setSortBy(e && e.target.value)}
@@ -1409,10 +1662,26 @@ function ToolComparisonPage() {
                 <option value='users'>Sort by Users</option>;
                 <option value='name'>Sort by Name</option>              </select>              <select
                 value={sortBy}
+<<<<<<< HEAD
+=======
+
+      <section id="comparison" className="py-24 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
+              Tool Comparison
+            </h2>
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              Compare features, pricing, and user ratings to find the perfect tools for your business needs.
+            </p>
+          </div>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
                 <tr className="border-b border-gray-800">
+<<<<<<< HEAD
                 onChange={(e) => setSortBy(e.target.value)}
                 className="bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
               >
@@ -1463,6 +1732,9 @@ function ToolComparisonPage() {
               </thead>
               <tbody>
                 {sortedTools.map((tool, index) => (                <tr className="border-b border-gray-800">
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <th className="text-left py-4 px-6 text-gray-300 font-medium">Tool</th>
                   <th className="text-left py-4 px-6 text-gray-300 font-medium">Category</th>
                   <th className="text-left py-4 px-6 text-gray-300 font-medium">Pricing</th>
@@ -1470,6 +1742,10 @@ function ToolComparisonPage() {
                   <th className="text-left py-4 px-6 text-gray-300 font-medium">Users</th>
                   <th className="text-left py-4 px-6 text-gray-300 font-medium">Best For</th>
                   <th className="text-left py-4 px-6 text-gray-300 font-medium">Actions</th>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 onChange={(e) => setSortBy(e && e.target.value)}
                 className="bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500";
               >;
@@ -1530,6 +1806,10 @@ function ToolComparisonPage() {
               </thead>;
               <tbody>;
                 {sortedTools && sortedTools.map((tool, index) => (;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <tr
                     key={index}
                     className='border-b border-gray-800/50 hover:bg-gray-900/50 transition-colors duration-200'>;
@@ -1592,6 +1872,11 @@ function ToolComparisonPage() {
                       </div>;
                     </td>;
                   </tr>;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </tr>
               </thead>
               <tbody>
@@ -1649,10 +1934,26 @@ function ToolComparisonPage() {
                       </div>
                     </td>
                   </tr>
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                ))}
+
+            <div className="text-center py-20">
+              <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-gray-400 mb-2">No tools found</h3>
+              <p className="text-gray-500">Try adjusting your search criteria or category filter.</p>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
             </div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           )}
         </div>
       </section>
@@ -1675,7 +1976,43 @@ function ToolComparisonPage() {
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {sortedTools.slice(0, 6).map((tool, index) => (
+<<<<<<< HEAD
                 ))}
+=======
+=======
+              </tbody>;
+            </table>;
+          </div>;
+          {sortedTools && sortedTools.length === 0 && (;
+            <div className='text-center py-20'>;
+              <Search className='w-16 h-16 text-gray-600 mx-auto mb-4' />;
+              <h3 className='text-xl font-semibold text-gray-400 mb-2'>;
+                No tools found;
+              </h3>;
+              <p className='text-gray-500'>;
+                Try adjusting your search criteria or category filter.;
+              </p>            </div>            <div className="text-center py-20">;
+              <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />;
+              <h3 className="text-xl font-semibold text-gray-400 mb-2">No tools found</h3>;
+              <p className="text-gray-500">Try adjusting your search criteria or category filter.</p>;
+          )}
+        </div>;
+      </section>;
+      {/* Detailed Comparison Cards */}
+      <section className='py-24 bg-gray-900'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
+          <div className='text-center mb-20'>;
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>;
+            </h2>;
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+              Deep dive into each tool's pros, cons, and use cases to make the;
+              best decision for your business.;
+            </p>;
+          </div>;
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
+            {sortedTools && sortedTools.slice(0, 6).map((tool, index) => (;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </tbody>
             </table>
           </div>
@@ -1722,6 +2059,10 @@ function ToolComparisonPage() {
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
                 <div className='flex items-start space-x-4 mb-4'>;
                   <div
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
@@ -1751,10 +2092,17 @@ function ToolComparisonPage() {
                       <span className="px-2 py-1 bg-gray-800 rounded-full">{tool.category}</span>
                       <div className="flex items-center space-x-1">
                         <Star className="w-4 h-4 text-yellow-400 fill-current" />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                        <span>{tool.rating}</span>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       </div>
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
                 <div className='mb-4'>
                   <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                     Best For:
@@ -1774,6 +2122,16 @@ function ToolComparisonPage() {
                           className='text-xs text-gray-400 flex items-start'
                         >
                           <span className='w-1 h-1 bg-green-400 rounded-full mr-2 mt-2 flex-shrink-0' />                          {pro}                </div>
+=======
+
+
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-gray-300 mb-2">Best For:</h4>
+                  <p className="text-sm text-gray-400">{tool.bestFor}</p>
+                </div>
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                   <div>
                     <h4 className="text-sm font-semibold text-green-400 mb-2 flex items-center">
@@ -1784,11 +2142,70 @@ function ToolComparisonPage() {
                       {tool.pros.slice(0, 3).map((pro, proIndex) => (
                         <li key={proIndex} className="text-xs text-gray-400 flex items-start">
                           <span className="w-1 h-1 bg-green-400 rounded-full mr-2 mt-2 flex-shrink-0" />
+<<<<<<< HEAD
+=======
+
+                    className={`w-12 h-12 rounded-xl bg-gray-800 flex items-center justify-center ${tool && tool.color}`}>;
+                    {tool && tool.icon}
+                  </div>;
+                  <div className='flex-1'>;
+                    <h3 className='text-xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300'>;
+                      {tool && tool.name}
+                    </h3>;
+                    <div className='flex items-center space-x-4 text-sm text-gray-400'>;
+                      <span className='px-2 py-1 bg-gray-800 rounded-full'>;
+                        {tool && tool.category}
+                      </span>;
+                      <div className='flex items-center space-x-1'>;
+                        <Star className='w-4 h-4 text-yellow-400 fill-current' />                        <span>{tool && tool.rating}</span>                    <div className="flex items-center space-x-4 text-sm text-gray-400">;
+                      <span className="px-2 py-1 bg-gray-800 rounded-full">{tool && tool.category}</span>;
+                      <div className="flex items-center space-x-1">;
+                        <Star className="w-4 h-4 text-yellow-400 fill-current" />;
+                      </div>;
+                    </div>;
+                  </div>;
+                </div>;
+                <div className='mb-4'>;
+                  <h4 className='text-sm font-semibold text-gray-300 mb-2'>;
+                    Best For:;
+                  </h4>;
+                  <p className='text-sm text-gray-400'>{tool && tool.bestFor}</p>;
+                </div>;
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-4'>;
+                  <div>;
+                    <h4 className='text-sm font-semibold text-green-400 mb-2 flex items-center'>;
+                      <Check className='w-4 h-4 mr-1' />;
+                      Pros;
+                    </h4>;
+                    <ul className='space-y-1'>;
+                      {tool && tool.pros.slice(0, 3).map((pro, proIndex) => (;
+                        <li
+                          key={proIndex}
+                          className='text-xs text-gray-400 flex items-start'>;
+                          <span className='w-1 h-1 bg-green-400 rounded-full mr-2 mt-2 flex-shrink-0' />                          {pro}                </div>;
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">;
+                  <div>;
+                    <h4 className="text-sm font-semibold text-green-400 mb-2 flex items-center">;
+                      <Check className="w-4 h-4 mr-1" />;
+                      Pros;
+                    </h4>;
+                    <ul className="space-y-1">;
+                      {tool && tool.pros.slice(0, 3).map((pro, proIndex) => (;
+                        <li key={proIndex} className="text-xs text-gray-400 flex items-start">;
+                          <span className="w-1 h-1 bg-green-400 rounded-full mr-2 mt-2 flex-shrink-0" />;
+
+                          {pro}
+                        </li>;
+                      ))}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     </ul>
                   </div>
                   <div>
                     <h4 className="text-sm font-semibold text-red-400 mb-2 flex items-center">
                       <X className="w-4 h-4 mr-1" />
+<<<<<<< HEAD
                           {pro}
                         </li>;
                       ))}
@@ -1797,6 +2214,8 @@ function ToolComparisonPage() {
                   <div>
                     <h4 className='text-sm font-semibold text-red-400 mb-2 flex items-center'>
                       <X className='w-4 h-4 mr-1' />
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       Cons
                     </h4>
                     <ul className='space-y-1'>
@@ -1811,6 +2230,11 @@ function ToolComparisonPage() {
                       {tool.cons.slice(0, 3).map((con, conIndex) => (
                         <li key={conIndex} className="text-xs text-gray-400 flex items-start">
                           <span className="w-1 h-1 bg-red-400 rounded-full mr-2 mt-2 flex-shrink-0" />
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           {con}
                         </li>;
                       ))}
@@ -1819,15 +2243,42 @@ function ToolComparisonPage() {
                   </div>;
                 </div>;
                 <div className='flex items-center justify-between'>;
+<<<<<<< HEAD
                     </ul>
                   </div>
                 </div>
 
                 <div className='flex items-center justify-between'>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <span
                     className={`text-sm font-medium ${getPricingColor(tool && tool.pricing)}`}>                    {tool && tool.pricing}
                   </span>;
                   <Button
+<<<<<<< HEAD
+=======
+                    href={tool && tool.website}                <div className="flex items-center justify-between">;
+                  <span className={`text-sm font-medium ${getPricingColor(tool && tool.pricing)}`}>;
+                    {tool && tool.pricing}
+                  </span>;
+                  <Button
+                    href={tool && tool.website}
+                    variant='outline'
+                    size='sm'
+                    className='group-hover:border-purple-500 group-hover:text-purple-400'>;
+                    Visit Website;
+                    <ExternalLink className='w-4 h-4 ml-2' />                  </Button>                    variant="outline";
+                    size="sm";
+                    className="group-hover:border-purple-500 group-hover:text-purple-400";
+                  >;
+                    Visit Website;
+                    <ExternalLink className="w-4 h-4 ml-2" />;
+                </div>;
+              </Card>;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                 <div className="flex items-center justify-between">
                   <span className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}>
@@ -1845,11 +2296,16 @@ function ToolComparisonPage() {
                     href={tool.website}
 
 
+<<<<<<< HEAD
                 <div className="flex items-center justify-between">
                     href={tool.website}                <div className="flex items-center justify-between">
                   <span className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}>
                     href={tool.website}
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     {tool.pricing}
                   </span>
                   <Button
@@ -1861,14 +2317,23 @@ function ToolComparisonPage() {
 
 
 
+<<<<<<< HEAD
                 </div>
               </Card>
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                </div>
+              </Card>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             ))}
 
           </div>;
         </div>;
       </section>;
 
+<<<<<<< HEAD
 
       {/* CTA Section */}
 
@@ -1897,6 +2362,13 @@ variant="outline"
       </section>
 
       {/* CTA Section */}
+=======
+
+      {/* CTA Section */}
+
+
+      {/* CTA Section */}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <section className='py-24 bg-gradient-to-r from-purple-600 to-purple-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
@@ -1905,29 +2377,45 @@ variant="outline"
 
             Need Help Choosing?
 
+<<<<<<< HEAD
 
             Need Help Choosing?
 
             Need Help Choosing?
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </h2>
           <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Our experts can analyze your business needs and recommend the
             perfect combination of tools to accelerate your growth.
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Button
               href='/contact'
               variant='secondary'
               size='lg'
+<<<<<<< HEAD
               className='bg-white text-purple-600 hover:bg-gray-100 shadow-2xl'
             >
               Get Expert Consultation
               <ArrowRight className='w-5 h-5 ml-2' />
             </Button>
+=======
+              className='bg-white text-purple-600 hover:bg-gray-100 shadow-2xl'>;
+              Get Expert Consultation;
+              <ArrowRight className='w-5 h-5 ml-2' />;
+            </Button>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Button
               href='/saas-marketplace'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
               className='border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl'            >              href="/saas-marketplace"
               variant="outline"
               size="lg"
@@ -1943,10 +2431,31 @@ variant="outline"
 }
   );
 }
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+              Explore All Tools;
+            </Button>;
+          </div>;
+        </div>;
+      </section>;
+
+
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </>);
 );
   );
 }
+<<<<<<< HEAD
 
   );
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

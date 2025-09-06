@@ -4,6 +4,7 @@
 import React from "react";
 import {
 
+<<<<<<< HEAD
 import React from "react";
 import {
   Dialog
@@ -11,11 +12,14 @@ import {
   DialogDescription
   DialogHeader
   DialogTitle
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
 DialogTitle,;
+<<<<<<< HEAD
 import React from "react";
 import {
 Dialog
@@ -25,6 +29,9 @@ Dialog
   DialogTitle
 
   DialogTitle,
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 } from "@/components/ui/dialog";
 import { ApplyForm } from "./ApplyForm";
@@ -45,6 +52,7 @@ export function ApplyToJobModal({
             Complete your application for this position
           </DialogDescription>
         </DialogHeader>
+<<<<<<< HEAD
         <ApplyForm
           job={job}
           onClose={onClose}
@@ -53,6 +61,8 @@ export function ApplyToJobModal({
       </DialogContent>
     </Dialog>
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from 'react',;
 import {;
@@ -110,6 +120,7 @@ export function ApplyToJobModal({ job, isOpen, onClose, onApplySuccess } ApplyTo
     </Dialog>;
   );
     </Dialog>);
+<<<<<<< HEAD
 }
     </Dialog>;
   ),;}
@@ -134,3 +145,7 @@ export function ApplyToJobModal({ job, isOpen, onClose, onApplySuccess } ApplyTo
 
   );
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 "use client",
 import { useEffect, useRef, useState  } from './react';,
 // Skip link component for keyboard navigation;
@@ -7,15 +11,25 @@ export /**
 function SkipLink() {
   return (
 
+<<<<<<< HEAD
 "use client";
 import { useEffect, useRef, useState } from "react";
 // Skip link component for keyboard navigation;
 export function SkipLink({ targetId, children }: { targetId: string, children: React.ReactNode }) {return (;
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 "use client",;
 import { useEffect, useRef, useState } from "react",;
 // Skip link component for keyboard navigation;
 export function SkipLink({ targetId, children }: { targetId: string, children: React.ReactNode }) {;
   return (;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <a;
       href={`#${target_id}`}
       className="sr - only focus:not - sr - only focus:absolute focus:top - 4 focus:left - 4 bg-[var (--accent)] text - white px - 4 py - 2 rounded z - 50";
@@ -23,12 +37,17 @@ export function SkipLink({ targetId, children }: { targetId: string, children: R
       {children}
     </a>);
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export /**
  * LiveRegion - Function description
  */
 function LiveRegion() {
   return (
 
+<<<<<<< HEAD
 
 // Live region for screen reader announcements;
 export function LiveRegion({message;
@@ -38,6 +57,10 @@ export function LiveRegion({message;
   role?: "status" | "alert" | "log";
   "aria-live"?: "polite" | "assertive" | "off";
 }) {return (;
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 // Live region for screen reader announcements;
 export function LiveRegion({;
@@ -50,6 +73,11 @@ export function LiveRegion({;
   "aria-live"?: "polite" | "assertive" | "off";
 }) {;
   return (;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div;
       role={role}
       aria - live={aria_live}
@@ -59,6 +87,10 @@ export function LiveRegion({;
       {message}
     </div>);
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ;
 // Focus trap for modals and dialogs;
@@ -178,7 +210,58 @@ export function ProgressIndicator({;
   return (;
     <div className="space-y-2">;
       <div className="flex justify-between text-sm">;
+<<<<<<< HEAD
 // Focus trap for modals and dialogs;
+=======
+=======
+export /**
+ * useFocusTrap - Function description
+ */
+function useFocusTrap() {
+  const container_ref = useRef < HTMLDivElement>(null),
+  useEffect (() => {
+    // Check condition
+if (return, ) {
+  $2
+}
+    const container = container_ref.current,
+    const focusable_elements = container.querySelectorAll (
+      'button, [href], input, select, textarea, [tabindex]:not ([tabindex="-1"])'),
+    const first_element = focusable_elements[0] as HTMLElement,
+    const last_element = focusable_elements[focusable_elements.length - 1] as HTMLElement,
+    const handleKeyDown = (e: KeyboardEvent) =>: any {
+      // Check condition
+if ( {) {
+  $2
+}
+        // Check condition
+if ( {) {
+  $2
+}
+          // Check condition
+if ( {) {
+  $2
+}
+            e.prevent_default (),
+            last_element.focus ();
+          }
+        } else {
+          // Check condition
+if ( {) {
+  $2
+}
+            e.prevent_default (),
+            first_element.focus ();
+          }
+        }
+      }
+    },
+    container.addEventListener ("keydown", handleKeyDown),
+    return () => container.removeEventListener ("keydown", handleKeyDown);
+  }, [enabled]),
+  return container_ref;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function useFocusTrap(enabled: boolean = true) {const containerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {;
     if (!enabled |!containerRef.current) return;
@@ -379,6 +462,10 @@ export function ProgressIndicator({;
       </div>;
     </div>);
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ;
 // Collapsible section component;
@@ -397,6 +484,19 @@ export function CollapsibleSection({;
 
   return (;
     <div className="border border-[var(--border)] rounded-lg">;
+<<<<<<< HEAD
+=======
+=======
+export /**
+ * CollapsibleSection - Function description
+ */
+function CollapsibleSection() {
+  const [is_expanded, setIsExpanded] = useState (default_expanded),
+  const content_ref = useRef < HTMLDivElement>(null),
+  return (
+    <div className="border border-[var (--border)] rounded - lg">;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function CollapsibleSection({title;
   children;
   defaultExpanded = false;
@@ -438,6 +538,7 @@ export function CollapsibleSection({;
         className={`overflow - hidden transition - all duration - 300 ${
           is_expanded ? "max - h-96 opacity - 100" : "max - h-0 opacity - 0";
 
+<<<<<<< HEAD
         className={`overflow-hidden transition-all duration-300 ${;
           isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0";
 
@@ -446,6 +547,14 @@ export function CollapsibleSection({;
         className={`overflow-hidden transition-all duration-300 ${isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0";
         className={`overflow-hidden transition-all duration-300 ${;
           isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0";
+=======
+=======
+
+        className={`overflow-hidden transition-all duration-300 ${;
+          isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0";
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         }`}
         aria - hidden={!is_expanded}
       >;
@@ -455,6 +564,10 @@ export function CollapsibleSection({;
       </div>;
     </div>);
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ;
 // Tooltip component with proper accessibility;
@@ -479,6 +592,27 @@ export function Tooltip({;
 
   return (;
     <div className="relative inline-block">;
+<<<<<<< HEAD
+=======
+=======
+export /**
+ * Tooltip - Function description
+ */
+function Tooltip() {
+  const [is_visible, setIsVisible] = useState (false),
+  const [tooltip_id] = useState (() => `tooltip-${Math.random ().to_string (36).substr (2, 9)}`),
+  const position_classes = {
+    top: "bottom - full left - 1/2 transform -translate - x-1 / 2 mb - 2",
+    bottom: "top - full left - 1/2 transform -translate - x-1 / 2 mt - 2",
+    left: "right - full top - 1/2 transform -translate - y-1 / 2 mr - 2";
+    right: "left - full top - 1/2 transform -translate - y-1 / 2 ml - 2";
+  }
+<<<<<<< HEAD
+  return (
+    <div className="relative inline - block">;
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 // Tooltip component with proper accessibility;
 export function Tooltip({;

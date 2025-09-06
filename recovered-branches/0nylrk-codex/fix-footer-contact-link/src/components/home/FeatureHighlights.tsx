@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 import React from "react";
 import {Card, CardContent} from "@/components/ui/card";
 import {Check} from "lucide-react";
@@ -9,17 +10,38 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Check } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card",
 import { Check } from "lucide-react",
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function FeatureHighlights() {
 
   const highlightsData = [
     {
+<<<<<<< HEAD
       title: "For Talent Seekers"
       title: "For Talent Seekers",
       features: [;
+=======
+
+import React from "react";
+import {Card, CardContent} from "@/components/ui/card";
+import {Check} from "lucide-react";
+export function FeatureHighlights() {;
+  const highlightsData = [;
+    {;
+      title: "For Talent Seekers",;
+      features: [;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         "AI-powered talent matching based on your specific project requirements";
         "Verified profiles with skills validation and credential checking";
         "Transparent pricing and no hidden fees";
         "Direct communication with potential candidates";
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         "Secure payment protection and dispute resolution",;
         "Post jobs and receive AI-matched applicants";
       ];
@@ -84,6 +106,7 @@ function FeatureHighlights() {
     {
       title: "For Talent & Service Providers"
       features: [
+<<<<<<< HEAD
         "Create a professional profile showcasing your skills and experience";
         "Get matched with relevant projects that fit your expertise";
         "Secure payment processing with on-time disbursements";
@@ -92,6 +115,9 @@ function FeatureHighlights() {
         "Professional development resources and community support"
       ]
     }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         "Create a professional profile showcasing your skills and experience",
         "Get matched with relevant projects that fit your expertise",
         "Secure payment processing with on-time disbursements",
@@ -100,6 +126,7 @@ function FeatureHighlights() {
         "Professional development resources and community support"
       ]
     },
+<<<<<<< HEAD
     {
       title: "For Enterprise Clients"
       features: [
@@ -108,11 +135,19 @@ function FeatureHighlights() {
         "Custom talent pools and preferred provider networks";
         "Advanced analytics and reporting capabilities";
         "API access for seamless integration with your HR systems"
+=======
+
+    {
+      title: "For Enterprise Clients"
+      features: [
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         "White-labeled talent portal with your company branding",
         "Dedicated account management and priority support",
         "Custom talent pools and preferred provider networks",
         "Advanced analytics and reporting capabilities",
         "API access for seamless integration with your HR systems",
+<<<<<<< HEAD
         "Customizable workflow and approval processes"
       ]
     }
@@ -143,6 +178,8 @@ function FeatureHighlights() {
         "Custom talent pools and preferred provider networks",
         "Advanced analytics and reporting capabilities",
         "API access for seamless integration with your HR systems",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
         "Customizable workflow and approval processes"
@@ -169,9 +206,14 @@ function FeatureHighlights() {
 ;
   return (
 
+<<<<<<< HEAD
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Check } from "lucide-react",;
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Check } from "lucide-react",;
@@ -222,6 +264,7 @@ export function FeatureHighlights() {;
     }
   ];
   return (;
+<<<<<<< HEAD
         "API access for seamless integration with your HR systems",;
         "Customizable workflow and approval processes";
       ];
@@ -229,6 +272,9 @@ export function FeatureHighlights() {;
   ],;
 ;
   return (;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <section className="py-16 bg-zion-blue">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-12">;
@@ -237,6 +283,7 @@ export function FeatureHighlights() {;
             Whatever your role in the tech ecosystem, Zion offers specialized features to help you succeed;
           </p>;
         </div>;
+<<<<<<< HEAD
                   ))}
         ;
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
@@ -249,6 +296,30 @@ export function FeatureHighlights() {;
                     <li key={idx} className="flex items-start">;
                       <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />;
                       <span className="text-zion-slate-light">{feature}</span>;
+=======
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
+          {highlightsData && highlightsData.map((category, index) => (;
+            <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">;
+              <CardContent className="p-6">;
+                <h3 className="text-xl font-bold text-white mb-4">{category && category.title}</h3>;
+                <ul className="space-y-3">;
+                  {category && category.features.map((feature, idx) => (;
+                    <li key={idx} className="flex items-start">;
+                      <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0 && 0.5 flex-shrink-0" />;
+                      <span className="text-zion-slate-light">{feature}</span>;
+                    </li>;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  ))}
+                </ul>;
+              </CardContent>;
+            </Card>;
+          ))}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </div>;
       </div>;
     </section>;
@@ -278,6 +349,7 @@ export function FeatureHighlights() {;
       </div>;
     </section>);
 }
+<<<<<<< HEAD
   ),;}
  export function FeatureHighlights () {
   const highlightsData = [ {
@@ -332,3 +404,6 @@ return (<section className="py-16 bg-zion-blue" > <div className="container mx-a
     </section>
   )
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

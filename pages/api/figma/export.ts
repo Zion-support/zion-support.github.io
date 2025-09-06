@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 } from "../../../utils/design-map";
 export default async function handler(
@@ -5,6 +9,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import JSZip from "jszip";
 import {
@@ -26,6 +31,29 @@ export default async function handler(
     const kind = (
       ["tailwind", "chakra", "react"].includes(kit) ? kit : "tailwind"
     ) as UIKitKind;
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import JSZip from './jszip';
+import {
+  getZionDesignMap,
+  buildTokenSet,
+  buildUIKit,
+  UIKitKind,
+} from '../../../utils / design - map';
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+
+  try {
+
+    const kit = (req && req.query.kit as string) || "tailwind";
+
+    const kind = (
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   try {;
     const kit = (req.query.kit as string) || "tailwind";
     const kind = (
@@ -46,6 +74,29 @@ export default async function handler(
     Object.entries(uikit).forEach(([path, content]) =>
       uiFolder.file(path, content),
     );
+<<<<<<< HEAD
+=======
+
+    // README
+    zip.file(
+      "README.md",
+      `# Zion OS Design Export\n\n- kit: ${kind}\n- Import tokens via Token Studio in Figma.\n- Components included under /uikit.`,
+    );
+
+    const buffer = await zip.generateAsync({ type: "nodebuffer" });
+    res.setHeader("Content-Type", "application/zip");
+    res.setHeader(
+      "Content-Disposition",
+      `attachment; filename=zion-design-${kind}.zip`,
+    );
+    res.status(200).send(buffer);
+  } catch (e: any) {
+    res.status(500).json({ error: e?.message || "Export failed" });
+  }
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -123,12 +174,20 @@ export default async function handler(req, res) {
     const uiFolder = zip && zip.folder("uikit")!;
     Object && Object.entries(uikit).forEach(([path, content]) =>
       uiFolder && uiFolder.file(path, content),
+<<<<<<< HEAD
     );
     // README
+=======
+
+    );
+    // README
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     zip && zip.file(
       "README && README.md",
       `# Zion OS Design Export\n\n- kit: ${kind}\n- Import tokens via Token Studio in Figma.\n- Components included under /uikit.`,
     );
+<<<<<<< HEAD
     res && res.status(200).send(buffer);
   } catch (e: any) {
 
@@ -153,6 +212,22 @@ import { getZionDesignMap, buildTokenSet, buildUIKit, UIKitKind } from '../../..
     res.status(200).send(buffer);
   } catch (e: any) {
     res.status(500).json({ error: e?.message |"Export failed" });
+=======
+
+    );
+<<<<<<< HEAD
+    res && res.status(200).send(buffer);
+  } catch (e: any) {
+
+    res && res.status(500).json({ error: e?.message || "Export failed" });
+
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    res.status(200).send(buffer);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     res.status(500).json({ error: e?.message || 'Export failed' });
     } catch (error) {
@@ -190,7 +265,13 @@ import { getZionDesignMap, buildTokenSet, buildUIKit, UIKitKind } from '../../..
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
   }
 }
   }
 }
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

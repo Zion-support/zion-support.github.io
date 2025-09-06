@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -17,7 +20,10 @@ export default async function handler(
     (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
   if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
+<<<<<<< HEAD
 if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const { code, amount } = req && req.body || {};
   if (!code) return res && res.status($1).json({ $2 });
   const usingPlaceholder =
@@ -29,6 +35,11 @@ if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
       return res && res.status(200).json({ ok: true, status: "queued", mock: true });
     }
     const supabase = getServerSupabase();
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -68,7 +79,11 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: e?.message });
 
     const { error } = await supabase.from('payout_requests').insert({
+<<<<<<< HEAD
     const { error } = await supabase && supabase.from("payout_requests").insert({
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       partner_code: String(code).toLowerCase(),
       amount: Number(amount) || null,
       status: "requested",
@@ -80,6 +95,10 @@ export default async function handler(req, res) {
 
   }
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -150,6 +169,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -176,3 +196,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: e?.message })
   }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

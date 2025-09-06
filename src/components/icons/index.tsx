@@ -908,7 +908,10 @@ export const ZapOff = LucideZapOff,
 export const Zap = LucideZap,
 export const ZoomIn = LucideZoomIn,
 export const ZoomOut = LucideZoomOut,
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 import React, { SVGProps } from 'react'
@@ -1511,19 +1514,30 @@ export const ZoomIn = LucideZoomIn
 export const ZoomOut = LucideZoomOut
 // Define the props for your Icon component
 export type IconProps = SVGProps<SVGSVGElement> & {
+<<<<<<< HEAD
   name: keyof typeof iconMap
   size?: number | string
   className?: string
 }
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   name: keyof typeof iconMap,
   size?: number | string,
   className?: string
 },
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Create a map of icon names to component references
 const iconMap = {
   home: LucideHome
   'bot-message-square': LucideBot, // Assuming Bot is used for bot-message-square
+<<<<<<< HEAD
   sparkles: LucideSparkles
   user: LucideUser
   briefcase: LucideBriefcase
@@ -1821,6 +1835,8 @@ const iconMap = {
 const iconMap = {
   home: LucideHome
   'bot-message-square': LucideBot, // Assuming Bot is used for bot-message-square
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   sparkles: LucideSparkles,
@@ -2113,11 +2129,15 @@ const iconMap = {
   'zap-off': LucideZapOff,
   zap: LucideZap,
   'zoom-in': LucideZoomIn,
+<<<<<<< HEAD
   'zoom-out': LucideZoomOut},
 
   'zoom-out': LucideZoomOut,
 }
   'zoom-out': LucideZoomOut},
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export const Icon: React.FC<IconProps> = ({
   name
@@ -2125,6 +2145,7 @@ export const Icon: React.FC<IconProps> = ({
   className
   ...props
 }) => {
+<<<<<<< HEAD
   const LucideIconComponent = iconMap[name]
   if (!LucideIconComponent) {
     logWarn(`Icon "${name}" not found.`)
@@ -2140,6 +2161,9 @@ export default Icon, // Default export the Icon component
 export const Icons = iconMap, // Export the map if you need to refer to available icons
 export default Icon, // Default export the Icon component
 export const Icons = iconMap, // Export the map if you need to refer to available icons
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   const LucideIconComponent = iconMap[name],
@@ -2767,6 +2791,10 @@ export type IconProps = SVGProps<SVGSVGElement> & {;
   size?: number | string;
   className?: string;
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Create a map of icon names to component references;
 const iconMap = {;
   home: LucideHome,;
@@ -3063,6 +3091,10 @@ const iconMap = {;
   'zoom-in': LucideZoomIn,;
   'zoom-out': LucideZoomOut,;
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const Icon: React.FC<IconProps> = ({;
   name,;
   size = 24, // Default size;
@@ -3073,6 +3105,7 @@ export const Icon: React.FC<IconProps> = ({;
   if (!LucideIconComponent) {;
     logWarn(`Icon "${name}" not found.`);
     return null;
+<<<<<<< HEAD
 ;
   // Render the dynamically selected Lucide icon component;
   return <LucideIconComponent size={size} className={className} {...props} />;
@@ -3092,6 +3125,16 @@ export default Icon, // Default export the Icon component;
 export const Icons = iconMap, // Export the map if you need to refer to available icons;
 export default Icon, // Default export the Icon component;
 export const Icons = iconMap, // Export the map if you need to refer to available icons;
+=======
+  }
+
+  // Render the dynamically selected Lucide icon component;
+  return <LucideIconComponent size={size} className={className} {...props} />;
+};
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 import React, { SVGProps } from 'react';
@@ -4656,4 +4699,8 @@ export const Icons = iconMap, // Export the map if you need to refer to availabl
 export default Icon, // Default export the Icon component;
 export const Icons = iconMap, // Export the map if you need to refer to available icons;
 export default Icon, // Default export the Icon component;
+<<<<<<< HEAD
 export const Icons = iconMap, // Export the map if you need to refer to available icons;
+=======
+export const Icons = iconMap, // Export the map if you need to refer to available icons;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -10,7 +10,11 @@ export default async function handler(
     return res.status(200).json(profile);
 
     const { address } = req && req.query as { address?: string };
+<<<<<<< HEAD
 const { address } = req && req.query as { address?: string };
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { buildIdentityProfile } from '@/utils/offworld/identity';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -20,7 +24,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const profile = await buildIdentityProfile(address);
     return res && res.status(200).json(profile);
   } catch (e: any) {
+<<<<<<< HEAD
     const { address } = req && req.query as { address?: string };
+=======
+
+    const { address } = req && req.query as { address?: string };
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const profile = await buildIdentityProfile(address);
     return res && res.status(200).json(profile);
   } catch (e: any) {
@@ -52,6 +62,7 @@ function handler() {
     return res.status (500).json ({ error: e.message });
   }
 }
+<<<<<<< HEAD
     return res.status(500).json({ error: e.message })
   };
 }
@@ -84,3 +95,10 @@ try {
   }
 
 }
+=======
+=======
+    return res.status(500).json({ error: e.message })
+  };
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

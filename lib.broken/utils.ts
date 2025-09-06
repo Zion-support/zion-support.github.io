@@ -1,8 +1,17 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function cn(...classes: Array<string | undefined | null | false>) {; return classes.filter(Boolean).join(' '),}
 export function cn(...classes: Array<string | undefined | null | false>) {; return classes.filter(Boolean).join(' '),}
 export function cn(...classes: Array<string | undefined | null | false>) {; return classes.filter(Boolean).join(' '),}
 export function cn(...classes: Array<string | undefined | null | false>) {; return classes.filter(Boolean).join(' '),}
+<<<<<<< HEAD
 export function cn(...classes: Array<string | undefined | null | false>) {; return classes.filter(Boolean).join(' '),}
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function cn(...classes: Array<string | undefined | null | false>) {, return classes && classes.filter(Boolean).join(' '),,}
 export function cn(..."classes": Array<string | undefined | null | false>) {;
   return classes && classes.filter(Boolean).join(' ')}

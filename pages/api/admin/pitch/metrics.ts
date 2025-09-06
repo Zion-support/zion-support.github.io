@@ -16,9 +16,12 @@ export default async function handler(
   const { allowed } = await ensureAdminFromApi(req);
   if (!allowed) return res.status(403).json({ error: 'Forbidden' });
   // TODO: Replace with real data sources (e.g., Supabase, GA4, internal DB)
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdminFromApi } from '../../../../utils/auth';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   const { allowed } = await ensureAdminFromApi(req);
   if (!allowed) return res.status(403).json({ error: 'Forbidden' });
@@ -41,11 +44,17 @@ function handler() {
     yoyGrowth: 1.85
     completedProjects: 3275
     globalReach: ["USEUAPACLATAM"]
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   try {
   const { allowed } = await ensureAdminFromApi(req);
   if (!allowed) return res && res.status(403).json({ error: "Forbidden" });
   // TODO: Replace with real data sources (e && e.g., Supabase, GA4, internal DB)
   const data = {
+<<<<<<< HEAD
     yoy_growth: 1.85,
     completed_projects: 3275,
     global_reach: ["USEUAPACLATAM"],
@@ -70,16 +79,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!allowed) return res && res.status(403).json({ error: "Forbidden" });
   // TODO: Replace with real data sources (e && e.g., Supabase, GA4, internal DB)
   const data = {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
     ],
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 
 
 
 
+<<<<<<< HEAD
 }
         name: "Global Retailer",
         summary: "AI catalog enrichment, 9% revenue lift in A / B",
@@ -100,3 +116,8 @@ res.status (200).json (data);
 }
 
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

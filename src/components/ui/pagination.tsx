@@ -17,10 +17,20 @@ const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
   />
 )
 
+<<<<<<< HEAD
+=======
+Pagination.displayName = "Pagination"
+
+const PaginationContent = React.forwardRef<
+  HTMLUListElement,
+  React.ComponentProps<"ul">
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >(({ className, ...props }, ref) => (
   <ul
     ref={ref}
 
+<<<<<<< HEAD
     {...props}
 />
 ))
@@ -31,6 +41,14 @@ const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
 
 import * as React from &quot;react&quot;
 import { ChevronLeft, ChevronRight, MoreHorizontal } from 'lucide-react';
+=======
+    className={cn("flex flex-row items-center gap-1", className)}
+
+
+    {...props}
+  />);
+Pagination.display_name = &quot;Pagination & quot;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 import { cn } from &quot;@/lib/utils&quot;
 import { ButtonProps, buttonVariants } from &quot;@/components/ui/button&quot;
@@ -113,6 +131,7 @@ interface PaginationButtonProps
   isActive?: boolean
 }
 const PaginationLink = ({
+<<<<<<< HEAD
   className
   isActive
   size = &quot;icon&quot;
@@ -125,11 +144,20 @@ ursor/fix-website-loading-errors-and-merge-6662
   isActive,
   size = &quot;icon&quot;
   size = "icon",
+=======
+
+
+  className,
+  isActive,
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   ...props
   <a
     aria-current={isActive ? "page" : undefined}
     className={cn(
       buttonVariants({
+<<<<<<< HEAD
         size})
         variant: isActive ? "outline" : "ghost",
         variant: isActive ? "outline&quot; : &quot;ghost&quot;
@@ -148,6 +176,8 @@ ursor/fix-website-loading-errors-and-merge-6662
     aria-current={isActive ? &quot;page" : undefined}
     className={cn(
       buttonVariants({
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -158,10 +188,19 @@ ursor/fix-website-loading-errors-and-merge-6662
     {...props}
   />
 )
+<<<<<<< HEAD
 PaginationLink.displayName = &quot;PaginationLink&quot;
 PaginationLink.displayName = &quot;PaginationLink&quot;
 PaginationLink.displayName = "PaginationLink"
 
+=======
+
+
+PaginationLink.displayName = "PaginationLink"
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProps>(
   ({ page, isActive, className, ...props }, ref) => (
     <button
@@ -170,11 +209,16 @@ const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProp
       aria-label={`Page ${page}`}
       aria-current={isActive ? 'page' : undefined}
       className={cn(;
+<<<<<<< HEAD
         buttonVariants({ variant: 'ghost', size: 'icon' });
         isActive && 'bg-green-600 text-white';
 ursor/fix-website-loading-errors-and-merge-6662
         buttonVariants({ variant: 'ghost', size: 'icon' });
         isActive && 'bg-green-600 text-white';
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         buttonVariants({ variant: 'ghost', size: 'icon' }),;
         isActive && 'bg-green-600 text-white',;
 
@@ -201,10 +245,19 @@ const PaginationPrevious = ({
     <span>Previous</span>
   </PaginationLink>
 )
+<<<<<<< HEAD
 PaginationPrevious.displayName = &quot;PaginationPrevious&quot;
 PaginationPrevious.displayName = &quot;PaginationPrevious&quot;
 PaginationPrevious.displayName = "PaginationPrevious"
 
+=======
+
+
+PaginationPrevious.displayName = "PaginationPrevious"
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const PaginationNext = ({
   className
   ...props
@@ -219,10 +272,19 @@ const PaginationNext = ({
     <ChevronRight className="h-4 w-4" />
   </PaginationLink>
 )
+<<<<<<< HEAD
 PaginationNext.displayName = &quot;PaginationNext&quot;
 PaginationNext.displayName = &quot;PaginationNext&quot;
 PaginationNext.displayName = "PaginationNext"
 
+=======
+
+
+PaginationNext.displayName = "PaginationNext"
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const PaginationEllipsis = ({
   className
   ...props
@@ -236,6 +298,7 @@ const PaginationEllipsis = ({
     <span className="sr-only">More pages</span>
   </span>
 )
+<<<<<<< HEAD
 PaginationEllipsis.displayName = &quot;PaginationEllipsis"
 export {
   Pagination
@@ -246,6 +309,9 @@ export {
   PaginationButton
   PaginationNext
   PaginationPrevious}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 />));
 PaginationContent.display_name = &quot;PaginationContent & quot;
 ;
@@ -344,10 +410,18 @@ PaginationEllipsis.display_name = &quot;PaginationEllipsis";
 
 PaginationEllipsis.displayName = "PaginationEllipsis"
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export {
   Pagination,
   PaginationContent,
   PaginationEllipsis,
   PaginationItem,
   PaginationLink,
+<<<<<<< HEAD
   PaginationButton,
+=======
+  PaginationButton,
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

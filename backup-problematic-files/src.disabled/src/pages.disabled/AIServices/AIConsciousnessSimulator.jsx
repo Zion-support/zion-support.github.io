@@ -9,4 +9,8 @@ const AIConsciousnessSimulator = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIConsciousnessSimulator;
+=======
+export default AIConsciousnessSimulator;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

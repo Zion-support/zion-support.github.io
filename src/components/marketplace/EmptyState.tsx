@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 import * as React from 'react'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import * as React from 'react';
 import {;
@@ -17,6 +20,7 @@ import { useTranslation } from 'react-i18next';
 export interface EmptyStateProps {;
 import * as React from 'react';
 import {
+<<<<<<< HEAD
   RefreshCw
   Wifi
   Server
@@ -107,6 +111,20 @@ export function EmptyState({
           variant='outline'
           className='flex items-center gap-2'        >
           <RefreshCw className='w-4 h-4' />
+=======
+  RefreshCw,
+  Wifi,
+  Server,
+  ShoppingCart,
+  Users,
+  Wrench,
+  Lightbulb,
+} from 'lucide-react';
+import { Button } from '@/components / ui / button';
+import Link from 'next / link';
+import { use_translation } from 'react - i18next';
+export interface EmptyStateProps {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   type:;
     | 'products';
     | 'categories';
@@ -130,6 +148,7 @@ export interface EmptyStateProps {;
   action?: {;
     label: string,;
 
+<<<<<<< HEAD
 onst defaultContent = {
   products: {
     icon: <ShoppingCart className="w-16 h-16 text-gray-400" />,
@@ -173,11 +192,20 @@ export interface EmptyStateProps {;
   description?: string,;
   action?: {;
     label: string,;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     onClick: () => void;
   },;
   icon?: React.ReactNode;
 }
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const defaultContent = {
   products: {
     icon: <ShoppingCart className="w-16 h-16 text-gray-400" />,
@@ -210,6 +238,7 @@ const defaultContent = {
   loading: {
     icon: <RefreshCw className="w-16 h-16 text-blue-400 animate-spin" />,
     title: 'Loading...',
+<<<<<<< HEAD
     description:
       "We're fetching the latest data for you. This should only take a moment.",
   },
@@ -291,6 +320,14 @@ export function EmptyState({
           {action.label}
         </Button>
       )}
+=======
+
+
+          {action.label}
+        </Button>
+      )}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       
 
       
@@ -299,6 +336,7 @@ export function EmptyState({
           <p>If this issue continues, please contact our support team.</p>
         </div>
       )}
+<<<<<<< HEAD
       
       {type === 'network' && (
         <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
@@ -334,6 +372,17 @@ export function ProductsEmptyState({
     ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!"
     : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!"
       />
+=======
+
+
+      
+
+
+      {type === 'network' && (
+        <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
+          <p>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   title?: string;
   description?: string;
   action?: {
@@ -493,6 +542,10 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
             {" "}
             <Link href="https://status.zion.ai" className="underline">
               {t('general.status_page')}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </Link>;
             .;
           </p>;
@@ -518,6 +571,7 @@ export function ProductsEmptyState({;
         onClick: onAddProduct,;
       }
     : onRetry;
+<<<<<<< HEAD
     ? { label: 'Try Again', onClick: onRetry }
     : undefined,
 
@@ -583,11 +637,29 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
   )
 }
 }
+=======
+      ? { label: 'Try Again', onClick: onRetry }
+
+      : undefined;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <EmptyState
       type="categories"
       action={onRetry ? { label: 'Refresh Categories', onClick: onRetry } : undefined}
     />;
+<<<<<<< HEAD
+=======
+  );
+}
+
+
+  const customDescription = isAuthenticated;
+    ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!";
+    : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
+
+      />;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 }
 
@@ -662,4 +734,8 @@ export function NetworkErrorState ({ on_retry }: { on_retry?: () => void }) {
 export function ServerErrorState ({ on_retry }: { on_retry?: () => void }) {
       />);
 }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

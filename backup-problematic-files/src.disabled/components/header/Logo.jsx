@@ -9,4 +9,8 @@ const Logo = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Logo;
+=======
+export default Logo;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

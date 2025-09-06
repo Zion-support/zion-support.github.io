@@ -4,6 +4,7 @@ import React from 'react';
 import React, { Suspense, lazy } from 'react';
 ;
 
+<<<<<<< HEAD
 import React from 'react'
 }
 import React, { Suspense, lazy } from 'react';
@@ -11,17 +12,30 @@ import React, { Suspense, lazy } from 'react';
 import React from 'react';
 };
 import React, { Suspense, lazy } from 'react';
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from 'react'
 }
 import React, { Suspense, lazy } from 'react';
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface LazyComponentProps {
   component: ComponentType < Record < string, unknown>>;
   fallback?: ReactNode;
   [key: string]: unknown
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -52,6 +66,10 @@ const LazyComponent: React.FC<LazyComponentProps> = ({ ;
   component: Component, ;
   fallback = <div className="animate-pulse bg-gray-200 h-32 rounded" />,;
   ...props ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <Suspense fallback={fallback}>;
       <Component {...props} />;
@@ -68,6 +86,7 @@ import React from 'react';
 
 
 
+<<<<<<< HEAD
 
 import React from 'react',;
 },
@@ -79,6 +98,9 @@ import React from 'react';
 
 
 
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const LazyComponent: React.FC < LazyComponentProps> = ({
   component: Component,
   fallback = <div className="animate - pulse bg - gray - 200 h - 32 rounded" />,
@@ -92,5 +114,14 @@ const LazyComponent: React.FC < LazyComponentProps> = ({
 export default LazyComponent;
 import React from 'react',
 },
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

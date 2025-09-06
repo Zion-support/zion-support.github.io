@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 
@@ -17,15 +18,36 @@ import {Skill} from '@/types/resume';
 import {Button} from '@/components/ui/button';
 import {Alert, AlertDescription} from '@/components/ui/alert';
 import {useResume} from '@/hooks/useResume';
+=======
+=======
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import {useState} from 'react';
+import {Skill} from '@/types / resume';
+import {Button} from '@/components / ui / button';
+import {Alert, AlertDescription} from '@/components / ui / alert';
+import {use_resume} from '@/hooks / use_resume';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {SkillsFormProps} from './types';
 import {SkillsList} from './SkillsList';
 import {AddSkillForm} from './AddSkillForm';
 import {BulkAddSkills} from './BulkAddSkills';
+<<<<<<< HEAD
 export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormProps) {;
+=======
+
+export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormProps) {;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const { addSkill, deleteSkill, fetchResume } = useResume();
 
   const [error, setError] = useState<string | null>(null);
   const [localSkills, setLocalSkills] = useState<Skill[]>(skills);
+<<<<<<< HEAD
   const handleAddSkill = async (data: Skill) => {
     try {
       setError(null)
@@ -46,19 +68,25 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
   const { addSkill, deleteSkill, fetchResume } = useResume(),;
   const [error, setError] = useState<string | null>(null),;
   const [localSkills, setLocalSkills] = useState<Skill[]>(skills),;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   const handleAddSkill = async (data: Skill) => {;
     try {;
       setError(null),;
 
+<<<<<<< HEAD
   const handleAddSkill = async (data: Skill) => {;
     try {;
       setError(null),;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const success = await addSkill(resumeId, data);
       if (success) {;
         // Refresh the skills list;
         await refreshSkills();
+<<<<<<< HEAD
   const handleAddSkill = async (data: Skill) => {;
     try {;
       setError(null),;
@@ -72,6 +100,8 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
       setError(err.message |'An error occurred')
       return false
     }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -82,9 +112,12 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 
 
 
+<<<<<<< HEAD
   }
   };
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleDeleteSkill = async (id: string, category: string = 'Other') => {
     if (confirm('Are you sure you want to delete this skill?')) {
       const success = await deleteSkill(id)
@@ -96,28 +129,47 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
   }
   const refreshSkills = async () => {
     try {
+<<<<<<< HEAD
       }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       return success;
     } catch (err: any) {;
       setError(err && err.message || 'An error occurred'),;
       return false;
     }
   };
+<<<<<<< HEAD
       const resumeData = await fetchResume(resumeId);
       if (resumeData && resumeData.skills) {
         setLocalSkills(resumeData.skills)
   },;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleDeleteSkill = async (id: string, category: string = 'Other') => {;
     if (confirm('Are you sure you want to delete this skill?')) {;
       const success = await deleteSkill(id),;
       if (success) {;
         // Update local state;
+<<<<<<< HEAD
         setLocalSkills(localSkills.filter(skill => skill.id !== id));
       }
     }
   },;
   const refreshSkills = async () => {;
     try {;
+=======
+        setLocalSkills(localSkills && localSkills.filter(skill => skill && skill.id !== id));
+      }
+    }
+  };
+
+  const refreshSkills = async () => {;
+    try {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const resumeData = await fetchResume(resumeId);
       if (resumeData && resumeData.skills) {;
         setLocalSkills(resumeData.skills);
@@ -134,9 +186,14 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 
   },
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   };
   },
 
+<<<<<<< HEAD
 
   return (
 
@@ -146,6 +203,13 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
     }
   }
   return (
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+  return (
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="space-y-6">;
       <div>;
         <h2 className="text-xl font-semibold mb-2">Skills</h2>;
@@ -153,13 +217,21 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
           Add your technical and professional skills.;
         </p>;
       </div>;
+<<<<<<< HEAD
       {/* Display skills by category */}
       <SkillsList skills={localSkills} onDeleteSkill={handleDeleteSkill} />;
+=======
+
+      {/* Display skills by category */}
+      <SkillsList skills={localSkills} onDeleteSkill={handleDeleteSkill} />;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="space-y-6">;
         <div className="bg-muted/40 p-6 rounded-lg">;
           <h3 className="text-md font-medium mb-4">Add Skills One by One</h3>;
           <AddSkillForm resumeId={resumeId} onAddSkill={handleAddSkill} />;
         </div>;
+<<<<<<< HEAD
         <BulkAddSkills resumeId={resumeId} onSuccess={refreshSkills} />;
       </div>;
       {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
@@ -200,6 +272,13 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
       </div>
     </div>
   )
+=======
+
+        <BulkAddSkills resumeId={resumeId} onSuccess={refreshSkills} />;
+      </div>;
+
+      {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       <div className="flex justify-between">;
         <Button variant="outline" onClick={onBack}>;
@@ -297,6 +376,7 @@ if ( {) {
       </div>;
     </div>);
 
+<<<<<<< HEAD
 import { useState } from 'react',;
 import { Skill } from '@/types/resume',;
 import { Button } from '@/components/ui/button',;
@@ -401,3 +481,7 @@ return (<div className="space-y-6" > <div> <h2 className="text-xl font-semibold 
 }
 }
 ;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import { createServerClient } from '../../../utils/supabase/server';
 
 export default async function handler(
@@ -99,6 +100,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const talentViewed = 12; // Placeholder
     const shortlisted = 5; // Placeholder
     const funnel = [
+=======
+
+
+    const talentViewed = 12; // Placeholder
+    const shortlisted = 5; // Placeholder
+    const funnel = [
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       { label: 'Post', value: jobsData && jobsData.length },
       {
         label: 'Invite',
@@ -196,19 +205,36 @@ function handler() {
       {
         label: 'Invite',
         value: Math.max (shortlisted, Math.floor (jobs_data.length * 0.8)),
+<<<<<<< HEAD
       },
       { label: 'Hire', value: filled && filled.length },
     ];
+=======
+
+      },
+      { label: 'Hire', value: filled && filled.length },
+    ];
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
     res.status (200).json ({
       jobs_posted,
       quotes_received,
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       timeToHireDays,
       talent_viewed,
       shortlisted,
       funnel,
     });
   } catch (e) {
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       ? filled.reduce((acc, j) => acc + ((new Date(j.hired_at).getTime() - new Date(j.posted_at).getTime()) / (1000 * 60 * 60 * 24)), 0) / filled.length
       : 0;
     const talentViewed = 12, // Placeholder
@@ -229,9 +255,48 @@ function handler() {
       jobsPosted: 3, quotesReceived: 2,
       timeToHireDays: 3.1, talentViewed: 12,
       shortlisted: 5,
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       funnel: [
         { label: 'Post', value: 3 }
         { label: 'Invite', value: 2 }
         { label: 'Hire', value: 2 }]})
   }
+<<<<<<< HEAD
 }
+=======
+
+}
+
+=======
+    res.status (200).json ({
+      jobs_posted: 3,
+      quotes_received: 2,
+      timeToHireDays: 3.1,
+      talent_viewed: 12,
+      shortlisted: 5,
+      funnel: [;
+        { label: 'Post', value: 3 },
+        { label: 'Invite', value: 2 },
+        { label: 'Hire', value: 2 },
+      ],
+    });
+  }      jobs_posted: 3;
+      quotes_received: 2;
+      timeToHireDays: 3.1;
+      talent_viewed: 12;
+      shortlisted: 5;
+      funnel: [;
+        { label: 'Post', value: 3 }
+        { label: 'Invite', value: 2 }
+        { label: 'Hire', value: 2 }]});
+
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

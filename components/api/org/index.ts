@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
   if (req.method !== 'GET') {
     return res.status(405).json({ error: 'Method not allowed' })
 
@@ -32,6 +33,31 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     teamOnly: req && req.query.teamOnly === 'true' ? true : undefined,  };
     return Array.isArray(v) ? v : v.split().map((s) => s.trim()).filter(Boolean)
   };
+=======
+
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+=======
+  if (req.method !== 'GET') {
+    return res.status(405).json({ error: 'Method not allowed' })
+
+  }
+=======
+
+  };
+  const data = readOrgData();
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  const data = readOrgData();
+  const parseArray = (v?: string | string[]) => {
+    if (!v) return undefined;
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const filters: OrgFilters = {
     view: (req && req.query.view as OrgFilters['view']) || 'all';
     roleTypes: parseArray(req && req.query.roleTypes) as RoleType[] | undefined;
@@ -51,6 +77,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {readOrgData, filterOrgData} from '../../../utils / org - data';
 import type { OrgFilters, RoleType } from '../../../types / org';
 ;
@@ -117,5 +147,12 @@ const filters: OrgFilters = {
   return res.status (200).json (filtered);  return res.status (200).json (filtered);
 
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

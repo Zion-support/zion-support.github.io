@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 
 import React from "react";
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
 import React from 'react'
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function EnterpriseTrustBadges() {
   return (
     <section className='py-10 px-4 md:px-6 border-t border-b border-border'>
@@ -31,6 +34,7 @@ export function EnterpriseTrustBadges() {
           <div className='flex items-center justify-center gap-2 p-4 rounded-lg border border-border'>
             <CheckCircle className='h-5 w-5 text-primary' />
             <span className='font-medium'>HIPAA Compliant</span>          </div>
+<<<<<<< HEAD
           <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">
             <CheckCircle className="h-5 w-5 text-primary" />
             <span className="font-medium">HIPAA Compliant</span>
@@ -48,6 +52,18 @@ import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
 
 
 
+=======
+
+
+
+
+import React from "react";
+import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function EnterpriseTrustBadges() {
   return (
     <section className="py-10 px-4 md: px-6 border-t border-b border-border">
@@ -75,11 +91,20 @@ export function EnterpriseTrustBadges() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </section>;
   );
 };
 }
     </section>
+=======
+
+
+
+    </section>
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react';
 export function EnterpriseTrustBadges() {;
@@ -115,6 +140,7 @@ export function EnterpriseTrustBadges() {;
             <span className="font-medium">HIPAA Compliant</span>;
 export function EnterpriseTrustBadges() {;
   return (
+<<<<<<< HEAD
     <section className="py-10 px-4 md: px-6 border-t border-b border-border">;
 
 import React from "react",;
@@ -130,6 +156,8 @@ import React from "react";
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react';
 export function EnterpriseTrustBadges() {;
   return (;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <section className="py-10 px-4 md: px-6 border-t border-b border-border">;
       <div className="container mx-auto max-w-6xl">;
         <div className="text-center mb-8">;
@@ -157,7 +185,11 @@ export function EnterpriseTrustBadges() {;
       </div>;
     </section>;
   );
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 }
 import React from 'react';
@@ -227,6 +259,7 @@ function EnterpriseTrustBadges() {
         </div>;
       </div>;
     </section>);
+<<<<<<< HEAD
 } import {;
   {;
   {;
@@ -236,3 +269,6 @@ function EnterpriseTrustBadges() {
 }
 ;
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

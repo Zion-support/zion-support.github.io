@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 export interface EmergingTechService2028 {
 
 export interface EmergingTechService2028 {
   id: string;
 export interface EmergingTechService2028 {  id: string;
+=======
+
+export interface EmergingTechService2028 {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   name: string;
   tagline: string;
   price: string;
@@ -14,10 +20,19 @@ export interface EmergingTechService2028 {  id: string;
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
     address: string;
   };
     address: string;
   };
+=======
+
+
+    address: string;
+  };
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export interface EmergingTechService2028 {;
   id: string,;
   name: string,;
@@ -31,6 +46,12 @@ export interface EmergingTechService2028 {;
   contactInfo: {;
     mobile: string,;
     email: string,;
+<<<<<<< HEAD
+=======
+    address: string;
+  }
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -40,6 +61,10 @@ export interface EmergingTechService2028 {;
 export const emergingTech2028Services: EmergingTechService2028[] = [
   {
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     address: string;
   }
 }
@@ -66,12 +91,22 @@ export const emergingTech2028Services: EmergingTechService2028[] = [;
     category: 'Emerging Tech Services 2028',
     real_implementation: true,
     contact_info: {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
 ];      mobile: "+1 302 464 0950";
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     id: "2028-emerging-tech-service",
     name: "2028 Emerging Tech Service Platform",
@@ -94,6 +129,10 @@ export const emergingTech2028Services: EmergingTechService2028[] = [;
     }
   }
 ];
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],

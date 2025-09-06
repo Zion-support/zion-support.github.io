@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import Link from "next/link",;
 export const metadata = {;
@@ -9,6 +13,10 @@ export default function QuantumServicesPage() {;
 
 
     <div className="min-h-screen">;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Link from './next / link';,
 export const metadata = {
   title: "Quantum Computing Services - Zion Tech Group | Advanced Quantum Solutions",
@@ -118,6 +126,7 @@ export default function QuantumServicesPage() {;
               <p className="text - gray - 400 mb - 4">;
                 Custom quantum algorithms designed for your specific business problems,
 
+<<<<<<< HEAD
 
                 Custom quantum algorithms designed for your specific business problems,;
 
@@ -128,6 +137,13 @@ export default function QuantumServicesPage() {;
               <p className="text-gray-400 mb-4">;
                 Custom quantum algorithms designed for your specific business problems;
                 Custom quantum algorithms designed for your specific business problems,;
+=======
+=======
+
+                Custom quantum algorithms designed for your specific business problems,;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 from optimization challenges to complex simulations.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;

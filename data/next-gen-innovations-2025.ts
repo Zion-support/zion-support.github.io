@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface NextGenInnovation2025 {;
 export interface NextGenInnovation2025 {
 export interface NextGenInnovation2025 {;
@@ -68,6 +69,10 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [;
     }
   }
 ]
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     id: "next-gen-ai-suite",
     name: "Next-Gen AI Suite",
     tagline: "Future-ready AI solutions",
@@ -84,6 +89,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [;
     category: "Next-Gen Innovations 2025",
     realImplementation: true,
     contactInfo: {
+<<<<<<< HEAD
 ],
 
 
@@ -104,3 +110,20 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [;
 ];
 ],
 ];
+=======
+
+
+
+      email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709";
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    }
+  }
+
+],
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

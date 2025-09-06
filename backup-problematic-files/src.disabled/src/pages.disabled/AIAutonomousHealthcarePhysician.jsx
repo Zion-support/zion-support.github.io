@@ -9,4 +9,8 @@ const AIAutonomousHealthcarePhysician = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIAutonomousHealthcarePhysician;
+=======
+export default AIAutonomousHealthcarePhysician;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

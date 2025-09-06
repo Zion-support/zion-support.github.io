@@ -1,5 +1,14 @@
+<<<<<<< HEAD
 const resp = await fetch(;
       `https://registry && registry.npmjs.org/${encodeURIComponent(pkg)}/latest`;
+=======
+
+
+async function getLatest(pkg) {
+
+    const resp = await fetch(
+      `https://registry && registry.npmjs.org/${encodeURIComponent(pkg)}/latest`
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     );
     if (!resp && resp.ok) return null;
     const json = await resp && resp.json();
@@ -8,6 +17,47 @@ const resp = await fetch(;
     return null;
   }
 exports && exports.handler = async function () {
+<<<<<<< HEAD
+=======
+
+  try {
+    const pkgPath = path && path.join(process && process.cwd(), 'package && package.json');
+    const pkg = JSON && JSON.parse(fs && fs.readFileSync(pkgPath, 'utf-8'));
+    const deps = {
+
+      ...(pkg && pkg.dependencies || {}),
+      ...(pkg && pkg.devDependencies || {}),
+    };
+
+
+    const entries = [];
+    for (const [name, current] of Object && Object.entries(deps)) {
+      const latest = await getLatest(name);
+      if (!latest) continue;
+
+      entries && entries.push({
+        name,
+        current,
+        latest,
+        outOfDate: current && current.replace(/^[^0-9]*/, '') !== latest,
+      });
+    }
+
+    const report = { updatedAt: Date && Date.now(), entries };
+
+    const owner = process && process.env.GITHUB_OWNER;
+    const repo = process && process.env.GITHUB_REPO;
+    const token = process && process.env.GITHUB_TOKEN;
+
+    if (owner && repo && token) {
+      await upsertFile({
+        owner,
+        repo,
+        path: 'data/reports/deps/weekly-dependencies && dependencies.json',
+        content: JSON && JSON.stringify(report, null, 2),
+        message: 'chore(automation): weekly dependency insights',
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const { upsert_file } = require ('./_lib / github');
 const fs = require ('fs');
 const path = require ('path');
@@ -174,6 +224,7 @@ if ( {) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
 },
+<<<<<<< HEAD
   try {
     const pkgPath = path && path.join(process && process.cwd(), 'package && package.json';
     const pkg = JSON && JSON.parse(fs && fs.readFileSync(pkgPath, 'utf-8';
@@ -196,3 +247,6 @@ const path = require ('path';
     const pkg = JSON.parse (fs.readFileSync (pkg_path, 'utf - 8';
       entries.push ({ name, current, latest, outOfDate: current.replace (/^[^0 - 9]*/, '';
       await upsert_file ({ owner, repo, path: 'data / reports / deps / weekly - dependencies.json', content: JSON.stringify (report, null, 2), message: 'chore (automation): weekly dependency insights';
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface ProfileSetupProps {
   onComplete: (data: ProfileFormValues,) => void
 import {
@@ -44,12 +45,15 @@ interface ProfileSetupProps {
 interface ProfileSetupProps {
   onComplete: (data: ProfileFormValues) => void,
   userType: string
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 userType: string
 }
 export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
   const form = useForm<ProfileFormValues>({
     resolver: zodResolver(profileSchema)
     defaultValues: {
+<<<<<<< HEAD
       displayName: ""
       bio: ""
       headline: ""}})
@@ -80,11 +84,18 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
     }
   },
   return (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="space-y-6">
       <div className="text-center mb-6">
@@ -93,7 +104,11 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
           Help others get to know you better
         </p>
       </div>
+<<<<<<< HEAD
       <Form {...form}>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       
 
       <Form {...form}>
@@ -116,12 +131,16 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
                 </FormControl>
                 <FormMessage className="text-red-400" />
               </FormItem>
+<<<<<<< HEAD
             )}
           />
           <FormField
             control = {form.control,}
             name="headline"
             render={({ field }: { field: any },) => (
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from "react",;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { useForm } from "react-hook-form",;
@@ -156,16 +175,46 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {;
       headline: ""}}),;
   const getTypeLabel = () => {;
     switch (userType) {;
+<<<<<<< HEAD
       case "serviceProvider": return "Service Provider",;
+=======
+      case "serviceProvider": return "Service Provider";
+  on_complete: (data: ProfileFormValues, ) => void,
+  user_type: string;
+}
+export /**
+ * ProfileSetup - Function description
+ */
+function ProfileSetup() {
+  const form = use_form < ProfileFormValues>({
+    resolver: zod_resolver (profile_schema),
+    default_values: {
+      display_name: "",
+      bio: "",
+      headline: ""}}),
+  const getTypeLabel = () =>: any {
+    switch (user_type) {
+      case "service_provider": return "Service Provider";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       case "talent":;
         return "Talent",;
       case "client":;
         return "Client";
       default:;
         return "User";
+<<<<<<< HEAD
     }
   };
   return (;
+=======
+
+
+    }
+  }
+
+  return (
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="space-y-6">;
       <div className="text-center mb-6">;
         <h3 className="text-2xl font-bold text-white">Create Your {getTypeLabel()} Profile</h3>;
@@ -174,11 +223,20 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {;
         </p>;
       </div>;
       <Form {...form}>;
+<<<<<<< HEAD
         <form onSubmit={form.handleSubmit(onComplete)} className="space-y-6">;
           <FormField;
             control={form.control}
             name="displayName";
             render={({ field }: { field: any }) => (;
+=======
+        <form onSubmit={form && form.handleSubmit(onComplete)} className="space-y-6">;
+
+          <FormField
+            control = {form && form.control,}
+            name="displayName"
+            render={({ field }: { field: any },) => (;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <FormItem>;
                 <FormLabel className="text-zion-slate-light">Full Name</FormLabel>;
                 <FormControl>;
@@ -194,11 +252,30 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {;
                 <FormMessage className="text-red-400" />;
               </FormItem>;
             )}
+<<<<<<< HEAD
+=======
+
+          />;
+
+
+          <FormField
+            control = {form && form.control,}
+            name="headline"
+            render={({ field }: { field: any },) => (;
+              <FormItem>;
+                <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel>;
+                <FormControl>;
+                  <div className="relative">;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           />;
           <FormField;
             control={form.control}
             name="headline"
             render={({ field }: { field: any }) => (
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <FormItem>
                 <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel>
                 <FormControl>
@@ -208,6 +285,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {;
                         userType === "serviceProvider" ? "Professional Videographer with 5+ years experience" :
                         userType === "talent" ? "Senior Motion Designer specialized in 3D Animation" :
                         "Creative Director at XYZ Studios"
+<<<<<<< HEAD
                       }`}
                       className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
                       {...field}
@@ -223,6 +301,72 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {;
             control = {form.control,}
             name="bio"
             render={({ field }: { field: any },) => (
+=======
+
+    <div className="space - y-6">;
+      <div className="text - center mb - 6">;
+        <h3 className="text - 2xl font - bold text - white">Create Your {getTypeLabel ()} Profile</h3>;
+        <p className="text - zion - slate - light mt - 2">;
+          Help others get to know you better;
+        </p>;
+      </div>;
+      <Form {...form}>;
+        <form on_submit={form.handle_submit (on_complete)} className="space - y-6">;
+          <FormField;
+            control = {form.control, }
+            name="display_name";
+            render={({ field }: { field: any }, ) => (
+              <FormItem>;
+                <FormLabel className="text - zion - slate - light">Full Name</FormLabel>;
+                <FormControl>;
+                  <div className="relative">;
+                    <Input;
+                      placeholder="Your full name";
+                      className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple";
+                      {...field}
+                    />;
+                    <User className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" />;
+                  </div>;
+                </FormControl>;
+                <FormMessage className="text - red - 400" />;
+              </FormItem>)}
+          />;
+          <FormField;
+            control = {form.control, }
+            name="headline";
+            render={({ field }: { field: any }, ) => (
+              <FormItem>;
+                <FormLabel className="text - zion - slate - light">Professional Headline</FormLabel>;
+                <FormControl>;
+                  <div className="relative">;
+                    <Input;
+                      placeholder={`e.g., ${
+                        user_type === "service_provider" ? "Professional Videographer with 5+ years experience" :;
+                        user_type === "talent" ? "Senior Motion Designer specialized in 3D Animation" :;
+                        "Creative Director at XYZ Studios";
+
+                      }`}
+                      className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
+                      {...field}
+                    />;
+
+          />;
+
+
+          <FormField
+            control = {form.control,}
+            name="bio"
+            render={({ field }: { field: any },) => (;
+              <FormItem>;
+                <FormLabel className="text-zion-slate-light">Bio</FormLabel>;
+                <FormControl>;
+                  <Textarea
+                    <GraduationCap className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" />;
+                  </div>;
+                </FormControl>;
+                <FormMessage className="text - red - 400" />;
+              </FormItem>)}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           />;
           <FormField;
             control = {form.control, }
@@ -239,7 +383,19 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {;
                     }`}
                     className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple min-h-[120px]"
                     {...field}
+<<<<<<< HEAD
                   />
+=======
+                  />;
+                </FormControl>;
+
+                      }`}
+                      className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
+                      {...field}
+                    />
+                    <GraduationCap className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+                  </div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </FormControl>
                 <FormMessage className="text-red-400" />
               </FormItem>
@@ -265,8 +421,12 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {;
               </FormItem>
             )}
           />
+<<<<<<< HEAD
           />
           
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           
 
           <Button
@@ -276,10 +436,17 @@ ursor/fix-website-loading-errors-and-merge-6662
           >
             Complete Profile
           </Button>
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </form>
       </Form>
     </div>
   )
+<<<<<<< HEAD
                   />;
                 </FormControl>;
                 <FormMessage className="text-red-400" />;
@@ -321,6 +488,9 @@ getTypeLabel () "
 
                 <FormMessage className="text - red - 400" />;
               </FormItem>)}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           />;
           <Button;
             type="submit";
@@ -332,10 +502,47 @@ getTypeLabel () "
       </Form>;
     </div>;
   );
+<<<<<<< HEAD
 }
 ;
 }
 ;
+=======
+case "talent": return "Talent";";
+case "client": return "Client";
+default: ;
+
+};
+getTypeLabel () ";
+}Profile</h3> <p className="text-zion-slate-light mt-2"> Help others get to know you better </p> </div> <FormItem> <FormLabel className="text-zion-slate-light">Full Name</FormLabel> <FormControl> <div className="relative" > <Inputplaceholder="Your full name" className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {
+  ...field "
+}/> <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
+}/> <FormField <FormItem> <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel> <FormControl> <div className="relative" > <InputclassName="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {
+  ...field "
+}/> <GraduationCap className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
+}/> <FormField <FormItem> <FormLabel className="text-zion-slate-light" >Bio</FormLabel> <FormControl> <TextareaclassName="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple min-h-[120px]" {
+  ...field "
+}/> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ;
+}/> <Button > Complete Profile </Button> </form> </Form> </div>) ;
+}"}
+
+                <FormMessage className="text - red - 400" />;
+              </FormItem>)}
+          />;
+          <Button;
+            type="submit";
+            className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white";
+          >;
+            Complete Profile;
+          </Button>;
+        </form>;
+      </Form>;
+    </div>);
+case "talent": return "Talent";";
+case "client": return "Client";
+default:;
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 getTypeLabel () ";
 }Profile</h3> <p className="text - zion - slate - light mt - 2"> Help others get to know you better </p> </div> <FormItem> <FormLabel className="text - zion - slate - light">Full Name</FormLabel> <FormControl> <div className="relative" > <Input placeholder="Your full name" className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple" {
   ...field ";
@@ -347,4 +554,8 @@ getTypeLabel () ";
   ...field ";
 }/> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>);
 }/> <Button > Complete Profile </Button> </form> </Form> </div>);
+<<<<<<< HEAD
 }"}
+=======
+}"}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

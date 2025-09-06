@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 :pages-disabled/quantum-metaverse.tsx
 
 :backup-problematic-files/temp_conflicts/pages/mdm-mobile-device-management.tsx
@@ -68,6 +69,11 @@ import {
   Shield
   Star
 :backup-problematic-files/temp_conflicts/pages/mdm-mobile-device-management.tsx
+=======
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react";
 import Head from "next/head";
 import {
@@ -84,8 +90,14 @@ import Button from "../components/ui/Button";
 import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-services";
 export default function QuantumInternetSecurityPage() {
   const service = enhancedRealMicroSaasServices.find((s) =>
+<<<<<<< HEAD
     s.link.endsWith("/quantum-internet-security-platform")
     s.link.endsWith("/quantum-internet-security-platform"),;
+=======
+
+    s.link.endsWith("/quantum-internet-security-platform"),;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
   if (!service) return null;
 
@@ -176,12 +188,22 @@ export default function QuantumInternetSecurityPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
+<<<<<<< HEAD
 }
 :pages-disabled/quantum-metaverse.tsx
 }
 main:pages-disabled/quantum-metaverse.tsx
 main:pages-disabled/quantum-metaverse.tsx
 :backup-problematic-files/temp_conflicts/pages/mdm-mobile-device-management.tsx
+=======
+
+
+=======
+=======
+>>>>>>> main:pages-disabled/quantum-metaverse.tsx
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_conflicts/pages/mdm-mobile-device-management.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 ;
 :backup-problematic-files/temp_conflicts/pages/mdm-mobile-device-management.tsx

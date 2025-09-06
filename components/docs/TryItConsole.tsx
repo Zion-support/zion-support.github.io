@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useMemo, useState } from 'react';
 interface TryItProps {
   method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
@@ -18,21 +19,61 @@ export default function TryItConsole({
   requiresAuth
 }: TryItProps) {
   const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'
+=======
+
+
+interface TryItProps {
+  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   method,
   path,
   requiresAuth,
 }: TryItProps) {;
   const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   path: string, // full URL or relative
   requiresAuth: boolean
 }
 export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
 
 
+<<<<<<< HEAD
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
 
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
+=======
+
+interface TryItProps {;
+  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
+  path: string; // full URL or relative;
+  requiresAuth: boolean;
+
+export default function TryItConsole(): any ({;
+  method,;
+  path,;
+  requiresAuth,;
+}: TryItProps) {;
+  const [baseUrl, setBaseUrl] = useState('https://api && api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',;
+  path: string, // full URL or relative;
+  requiresAuth: boolean;
+}
+
+export default function TryItConsole(): any ({ method, path, requiresAuth }: TryItProps) {;
+  const [baseUrl, setBaseUrl] = useState('https: //api && api.zion.os'),;
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+  const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [body, setBody] = useState('');
   const [response, setResponse] = useState<string>(''),
   const [loading, setLoading] = useState(false);
@@ -42,6 +83,7 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
   }, [baseUrl, path]);
 
 
+<<<<<<< HEAD
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
   const [body, setBody] = useState('');
   const [response, setResponse] = useState<string>(''),
@@ -50,6 +92,8 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
     if (path.startsWith('http')) return path;
     return baseUrl.replace(/\/$/, '') + path
   }, [baseUrl, path]);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   async function onSend() {;
     setLoading(true);
     setResponse('');
@@ -65,6 +109,7 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
           method === 'GET' || method === 'DELETE';
             ? undefined;
             : body || undefined,;
+<<<<<<< HEAD
       });
       const text = await res && res.text();
       setResponse(text);
@@ -178,10 +223,47 @@ if (headers['Authorization'] = `Bearer ${token}`) {
             className='w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary';
             value={token}
             on_change={e => set_token (e.target.value)}
+=======
+
+      });
+      const text = await res && res.text();
+      setResponse(text);
+
+    } catch (e: any) {;
+      setResponse(String(e?.message || e));
+    } finally {;
+
+      setLoading(false);    }
+  }
+  return (
+
+      const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
+      const res = await fetch(url, {
+
+        method;
+        headers;
+
+        body: method === 'GET' || method === 'DELETE' ? undefined : body || undefined}),;
+      const text = await res && res.text();
+      setResponse(text);
+    } catch (e: any) {;
+      setResponse(String(e?.message || e));
+    } finally {;
+      setLoading(false);
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    }
+  }
+  return (
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             placeholder='Optional';
           />;
         </div>;
         <div>;
+<<<<<<< HEAD
     <div className="space-y-2">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
         <div>
@@ -227,6 +309,13 @@ if (headers['Authorization'] = `Bearer ${token}`) {
       </div>
       {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
         <div>        <div>
+=======
+
+    <div className="space-y-2">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
+        <div>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <label className="block text-sm mb-1" htmlFor="input-Base URL">Base URL</label>
           <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={baseUrl} onChange={(e) => setBaseUrl(e.target.value)} />
         </div>
@@ -240,6 +329,11 @@ if (headers['Authorization'] = `Bearer ${token}`) {
         </div>
       </div>
       {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
+<<<<<<< HEAD
+=======
+        <div>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           />        </div>;
       </div>;
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (;
@@ -259,6 +353,10 @@ if (headers['Authorization'] = `Bearer ${token}`) {
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (;
         <div>;
           <label className='block text-sm mb-1'>Request Body (JSON)</label>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <textarea
             className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm'
             value={body}
@@ -278,6 +376,13 @@ if (headers['Authorization'] = `Bearer ${token}`) {
       <button
         onClick={onSend}
         className='px-3 py-2 rounded bg-high-contrast-accent text-black'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        disabled={loading}>;
+        {loading ? 'Sending…' : 'Send Request'}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </button>;
       <div>;
         <label className='block text-sm mb-1'>Response</label>;
@@ -287,6 +392,7 @@ if (headers['Authorization'] = `Bearer ${token}`) {
       </div>;
     </div>;
 
+<<<<<<< HEAD
   );
 }
           <label className="block text-sm mb-1" htmlFor="input-Request Body (JSON)">Request Body (JSON)</label>
@@ -301,6 +407,8 @@ if (headers['Authorization'] = `Bearer ${token}`) {
         <pre className="p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm max-h-80"><code>{response}</code></pre>
       </div>
     </div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 }
           <label className='block text - sm mb - 1'>Method</label>;
@@ -366,6 +474,11 @@ if (headers['Authorization'] = `Bearer ${token}`) {
   )
 
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className='space-y-2'>
 
 
@@ -377,6 +490,7 @@ if (headers['Authorization'] = `Bearer ${token}`) {
 
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
 
+<<<<<<< HEAD
         disabled={loading}
       >
         {loading ? 'Sending…' : 'Send Request'}
@@ -401,3 +515,6 @@ if (headers['Authorization'] = `Bearer ${token}`) {
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
         <div>
         <div>
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

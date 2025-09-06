@@ -1,5 +1,10 @@
 
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -15,6 +20,7 @@ const categories: GrantCategory[] = [
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
 export default function ApplyGrantPage() {;
 
+<<<<<<< HEAD
 import { useState  } from 'react';
 import {useState} from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -34,6 +40,9 @@ export default function ApplyGrantPage() {
   'Research Grants',
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
 export default function ApplyGrantPage() {;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const router = useRouter();
   const [program, setProgram] = useState<'grant' | 'incubator'>('grant');
   const [projectName, setProjectName] = useState('');
@@ -41,18 +50,94 @@ export default function ApplyGrantPage() {;
   const [proposalSummary, setProposalSummary] = useState('');
   const [timeline, setTimeline] = useState('');
   const [budgetAmount, setBudgetAmount] = useState<number>(0);
+<<<<<<< HEAD
   const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(
     'USDC'
   );  const [supportingLinks, setSupportingLinks] = useState<string>('');  const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC');
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [supportingLinks, setSupportingLinks] = useState<string>('');
   const [pitchDeckUrl, setPitchDeckUrl] = useState('');
   const [region, setRegion] = useState('');
   const [sector, setSector] = useState<string>('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
     } catch (e: any) {
       set_error (e.message);
     } finally {
+=======
+
+import {useState} from 'react';
+import EnhancedLayout from '../../components / layout / EnhancedLayout';
+import {use_router} from 'next / router';
+import type { GrantCategory } from '../../types / grants';
+;
+const categories: GrantCategory[] = [;
+  'Ecosystem Tools',
+  'Talent Development',
+  'Regional Expansion',
+  'Research Grants',
+];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
+export default /**
+ * ApplyGrantPage - Function description
+ */
+function ApplyGrantPage() {
+  const router = use_router ();
+  const [program, set_program] = useState<'grant' | 'incubator'>('grant');
+  const [project_name, setProjectName] = useState ('');
+  const [team_info, setTeamInfo] = useState ('');
+  const [proposal_summary, setProposalSummary] = useState ('');
+  const [timeline, set_timeline] = useState ('');
+  const [budget_amount, setBudgetAmount] = useState < number>(0);
+  const [budget_currency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(
+    'USDC');  const [supporting_links, setSupportingLinks] = useState < string>('');  const [budget_currency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC');
+  const [supporting_links, setSupportingLinks] = useState < string>('');
+  const [pitchDeckUrl, setPitchDeckUrl] = useState ('');
+  const [region, set_region] = useState ('');
+  const [sector, set_sector] = useState < string>('');
+  const [loading, set_loading] = useState (false);
+  const [error, set_error] = useState < string | null>(null);
+;
+  const save = async (submit: boolean) => {
+    try {
+      set_loading (true);
+      set_error (null),
+      const resp = await fetch ('/api / grants', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({
+          program,
+          project_name,
+          team_info,
+          proposal_summary,
+          timeline,
+          budget_amount: Number (budget_amount || 0),
+          budget_currency,
+          supporting_links: supporting_links;
+            .split ('\n');
+            .map (string => s.trim ());
+            .filter (Boolean),
+          pitchDeckUrl,
+          region,
+          sector: (sector as any) || undefined,
+          submit,
+        }),
+      });
+      const data = await resp.json ();
+      if (throw new Error (data?.error || 'Failed')) {
+  $2
+}
+      router.push (`/grants/${data.id}`);
+
+    } catch (e: any) {
+      set_error (e.message);
+    } finally {
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const save = async (submit: boolean) => {;
     try {;
       setLoading(true);
@@ -85,12 +170,17 @@ export default function ApplyGrantPage() {;
       setError(e && e.message);
     } finally {;
       setLoading(false);    }          budgetAmount: Number(budgetAmount || 0),;
+<<<<<<< HEAD
           program;
           projectName;
           teamInfo;
           proposalSummary;
           timeline;
           budgetAmount: Number(budgetAmount || 0),
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           budgetCurrency;
           supportingLinks: supportingLinks;
             .split('\n');
@@ -104,6 +194,10 @@ export default function ApplyGrantPage() {;
             .filter (Boolean);
           pitchDeckUrl;
           region;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           sector: (sector as any) || undefined,;
           submit})});
       const data = await resp && resp.json();
@@ -113,6 +207,7 @@ export default function ApplyGrantPage() {;
       setError(e && e.message);
     } finally {;
       setLoading(false);
+<<<<<<< HEAD
     }
   }
   return (
@@ -339,6 +434,11 @@ export default function ApplyGrantPage() {;
             onChange={e => setPitchDeckUrl(e.target.value)}
           />
         </label>
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
     }
 
@@ -349,8 +449,11 @@ export default function ApplyGrantPage() {;
   return (
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {error && <div className='text-sm text-red-600'>{error}</div>}
         <div className='flex gap-3'>
           <button
@@ -370,6 +473,7 @@ export default function ApplyGrantPage() {;
       </div>
     </EnhancedLayout>
   );
+<<<<<<< HEAD
   );
 }            </select>
           </label>
@@ -426,3 +530,43 @@ export default function ApplyGrantPage() {;
 );
 }
   );
+=======
+
+
+              <option value="USDC">USDC</option>;
+              <option value="ZION$">ZION$</option>;
+            </select>;
+          </label>;
+
+
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+          <label className="text - sm">Region;
+            <input className="mt - 1 w - full border rounded p - 2" value={region} on_change={(e) => set_region (e.target.value)} placeholder="e.g., LATAM, EU, Global" />;
+          </label>;
+        </div>;
+        <label className="text - sm">Supporting Links (one per line);
+          <textarea className="mt - 1 w - full border rounded p - 2" rows={3} value={supporting_links} on_change={(e) => setSupportingLinks (e.target.value)} />;
+        </label>;
+        <label className="text - sm">Pitch Deck URL;
+          <input className="mt - 1 w - full border rounded p - 2" value={pitchDeckUrl} on_change={(e) => setPitchDeckUrl (e.target.value)} />;
+        </label>;
+        {error && <div className="text - sm text - red - 600">{error}</div>}
+        <div className="flex gap - 3">;
+          <button disabled={loading} on_click={() => save (false)} className="px - 4 py - 2 border rounded disabled:opacity - 50">Save Draft</button>;
+          <button disabled={loading} on_click={() => save (true)} className="px - 4 py - 2 bg - blue - 600 text - white rounded disabled: opacity - 50">Submit for Review</button>;
+        </div>;
+      </div>;
+    </EnhancedLayout>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  );
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

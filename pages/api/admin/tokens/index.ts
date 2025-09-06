@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { getAllTransactions } from "../../../../utils/token/service",;
@@ -38,3 +39,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

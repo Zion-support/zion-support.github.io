@@ -1,14 +1,22 @@
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { NextApiRequest, NextApiResponse } from 'next',
 import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import formidable from 'formidable';
 import fs from 'fs';
 import path from 'path';
 
+<<<<<<< HEAD
 import {appendAuditLog, resolveDataPath} from '../../../../utils/api/storage';
 export const config = { api: { bodyParser: false } }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -37,6 +45,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     fs && fs.copyFileSync(file && file.filepath, targetPath);
     appendAuditLog({
     if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' });
+=======
+
+    );
+    fs && fs.copyFileSync(file && file.filepath, targetPath);
+    appendAuditLog({
+
+    if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' });
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     res.status(200).json({ ok: true })
       type: 'file_upload',
       section,
@@ -45,7 +63,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res && res.status(200).json({ ok: true });
   });    appendAuditLog({ type: 'file_upload', section, name: path && path.basename(targetPath) });
     res && res.status(200).json({ ok: true })
+<<<<<<< HEAD
   })
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  })
+
+}
+
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {appendAuditLog, resolveDataPath} from '../../../../utils / api / storage';
 ;
 export const config = { api: { body_parser: false } }
@@ -90,6 +121,13 @@ function handler() {
   });
 
 }
+<<<<<<< HEAD
 
 }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

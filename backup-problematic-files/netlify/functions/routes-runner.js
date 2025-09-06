@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :netlify/functions/routes-runner.js
 :backup-problematic-files/netlify/functions/routes-runner.js
 const path = require('path'),;
@@ -25,6 +26,11 @@ exports.handler = async () => {;
 },;
 :backup-problematic-files/netlify/functions/routes-runner.js
 :backup-problematic-files/netlify/functions/routes-runner.js
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
@@ -55,6 +61,7 @@ exports.handler = async () => {
     runNode('automation/routes-map-generator.cjs')
   );
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+<<<<<<< HEAD
 :netlify/functions/routes-runner.js
   return { statusCode: 200, body: logs.join('\n') }
 };function runNode(relPath, args = []) {
@@ -76,6 +83,8 @@ exports.handler = async () => {
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'))
   return { statusCode: 200, body: logs.join('\n') }
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   return { statusCode: 200, body: logs.join('\n') };
@@ -102,6 +111,7 @@ exports.handler = async () => {
   return { statusCode: 200, body: logs.join('\n') }
 },
 
+<<<<<<< HEAD
 
 main:netlify/functions/routes-runner.js
 :backup-problematic-files/netlify/functions/routes-runner.js
@@ -110,3 +120,10 @@ main:netlify/functions/routes-runner.js
 }
 main:netlify/functions/routes-runner.js
 :backup-problematic-files/netlify/functions/routes-runner.js
+=======
+=======
+
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/netlify/functions/routes-runner.js
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

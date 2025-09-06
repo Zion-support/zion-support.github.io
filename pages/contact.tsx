@@ -1,14 +1,33 @@
 
+<<<<<<< HEAD
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+<<<<<<< HEAD
 
 
 import React from "react";
@@ -113,6 +132,33 @@ origin/automation-improvements-final
 import Head from 'next/head';
 import { useState } from 'react';
 import { ContactInfo } from '../types';
+=======
+    
+    return this.props.children;
+  }
+}
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from "react";
+import Layout from "../components/Layout";
+=======
+import React from 'react';
+
+=======
+
+
+
+=======
+import Head from 'next/head';
+import { useState } from 'react';
+import { ContactInfo } from '../types';
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -172,6 +218,7 @@ export default function Contact() {
 }
   };
   return (
+<<<<<<< HEAD
     <Layout
       title="Contact Us - Zion Tech Group"
       description="Get in touch with Zion Tech Group for your technology needs. Contact us for AI services, IT solutions, and more."
@@ -183,6 +230,12 @@ export default function Contact() {
               Contact Us
             </h1>
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Get in touch with our team for your technology needs.
 import React from 'react';
@@ -233,9 +286,19 @@ export default function Contact() {
       </div>
     </>
   );
+<<<<<<< HEAD
 }
 }
 }
+=======
+
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Head from 'next/head';
 const ContactPage: React.FC = () => {
   return (
@@ -317,6 +380,10 @@ const ContactPage: React.FC = () => {
                   <ContactForm />
                 </div>
               </div>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 }
 
@@ -326,11 +393,14 @@ const ContactPage: React.FC = () => {
         </div>
       </div>
 
+<<<<<<< HEAD
             </div>
           </div>
         </div>
 </div>
     </>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       description="Get in touch with Zion Tech Group for your technology needs. Contact us for AI services, IT solutions, and more.">;
       <div className="min-h-screen bg-gray-50 py-20">;
         <div className="container mx-auto px-4">;
@@ -348,13 +418,26 @@ const ContactPage: React.FC = () => {
         </div>;
       </div>;
     </Layout>;
+<<<<<<< HEAD
+=======
+
+  );
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     </>
 
   );
 
 
+<<<<<<< HEAD
   );
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 import React from './react';
 import Layout from "../components / Layout";

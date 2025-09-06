@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Layout from '../../components/Layout';
 import { Shield, Users, FileText, Globe, Database } from 'lucide-react';
 import React from 'react';
@@ -80,6 +81,10 @@ import Layout from '../../components/Layout';
 import { Building2, Shield, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const features = [
   {
     icon: Building2,
@@ -102,6 +107,12 @@ const features = [
     description: 'Secure document storage and management systems'
   },
   {
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function GovernmentSolutions() {;
 
 
@@ -113,6 +124,7 @@ export default function GovernmentSolutions() {;
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
 
+<<<<<<< HEAD
     icon: CheckCircle,
     title: 'Workflow Automation',
     description: 'Automated government processes and approvals'
@@ -305,6 +317,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   
     >
       <div className="min-h-screen bg-white">
@@ -473,6 +487,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       <span className="text-gray-700">{benefit}</span>
                     </li>
                   ))}
+<<<<<<< HEAD
                 </ul>
               </div>
               <div className="bg-gradient-to-r from-gray-700 to-blue-800 p-8 rounded-xl text-white">
@@ -500,6 +515,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 </motion.div>
               ))}
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -590,6 +609,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
       </div>;
     </Layout>;
         {/* Benefits Section */}
@@ -628,6 +648,15 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>
           </div>
         </section>

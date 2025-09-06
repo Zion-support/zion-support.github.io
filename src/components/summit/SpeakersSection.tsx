@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 import Image from "next/image";
 import Image from "next/image";
 import Image from 'next/image'
 import { Twitter, Linkedin } from 'lucide-react'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface Speaker {
   name: string
   title: string
@@ -11,6 +14,25 @@ interface Speaker {
   linkedin?: string
 }
 interface Speaker {
+<<<<<<< HEAD
+=======
+  name: string,
+  title: string,
+  avatar: string,
+  twitter?: string
+import Image from "next/image",
+import { Twitter, Linkedin } from 'lucide-react'
+
+interface Speaker {
+  name: string,
+  title: string,
+  avatar: string,
+  twitter?: string,
+  linkedin?: string
+}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   name: string,
   title: string,
   avatar: string,
@@ -44,6 +66,7 @@ interface Speaker {
   linkedin?: string
 }
 const speakers: Speaker[] = [
+<<<<<<< HEAD
   {
 
     name: 'Alex Zion'
@@ -300,3 +323,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 ;
 ;
+=======
+  {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

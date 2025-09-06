@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 import { ServiceVariant } from '../types/service-variants';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   id: string;
@@ -34,6 +37,11 @@ import { ServiceVariant } from '../types/service-variants';
     address: string;
     website: string;
   }
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -44,6 +52,18 @@ import { ServiceVariant } from '../types/service-variants';
 export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] =;
   [;
     {
+<<<<<<< HEAD
+=======
+      id: 'ai - powered - supply - chain - optimization',
+      name: 'AI - Powered Supply Chain Optimization',
+      tagline: 'Intelligent supply chain planning and optimization',
+      price: '$1, 299',
+      period: '/month',
+      description:;
+        'Advanced AI - powered supply chain optimization platform that uses machine learning to optimize inventory, demand forecasting, and logistics operations.',
+      features: [;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         'Demand forecasting',
         'Inventory optimization',
         'Route optimization',
@@ -57,6 +77,11 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       ],
       popular: true,
       icon: '📦',
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       color: 'from - blue - 600 via - indigo - 600 to - purple - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / ai - powered - supply - chain - optimization',
@@ -83,6 +108,10 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       growth_rate: '28% annual growth',
       variant: 'logistics',
       contact_info: {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -97,6 +126,11 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       reviews: 98,
     },
     {
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       id: 'quantum - logistics - optimization - platform',
       name: 'Quantum Logistics Optimization Platform',
       tagline: 'Quantum computing for complex logistics problems',
@@ -105,6 +139,10 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       description:;
         'Revolutionary quantum logistics optimization platform that leverages quantum computing to solve complex routing, scheduling, and optimization problems.',
       features: [;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         'Quantum algorithms',
         'Route optimization',
         'Scheduling optimization',
@@ -118,6 +156,11 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       ],
       popular: false,
       icon: '⚛️',
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       color: 'from - purple - 600 via - violet - 600 to - indigo - 600',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / quantum - logistics - optimization - platform',
@@ -146,6 +189,10 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       growth_rate: '65% annual growth',
       variant: 'quantum - logistics',
       contact_info: {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -160,6 +207,10 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       reviews: 23,
     },
     {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         'Real-time tracking',
       id: 'iot - fleet - management - platform',
       name: 'IoT Fleet Management Platform',
@@ -170,6 +221,10 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
         'Advanced IoT - based fleet management platform that provides real - time monitoring, predictive maintenance, and optimization for vehicle fleets.',
       features: [;
         'Real - time tracking',
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         'Predictive maintenance',
         'Fuel monitoring',
         'Driver behavior analysis',
@@ -182,6 +237,11 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       ],
       popular: true,
       icon: '🚛',
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       color: 'from - green - 600 via - emerald - 600 to - teal - 600',
       text_color: 'text - green - 400',
       link: 'https://ziontechgroup.com / iot - fleet - management - platform',
@@ -210,6 +270,10 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       growth_rate: '32% annual growth',
       variant: 'iot - futuristic',
       contact_info: {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -224,6 +288,10 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       reviews: 145,
     },
     {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         'End-to-end traceability',
       id: 'blockchain - supply - chain - transparency',
       name: 'Blockchain Supply Chain Transparency Platform',
@@ -234,6 +302,10 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
         'Advanced blockchain - based supply chain transparency platform that provides end - to - end visibility, traceability, and compliance across global supply chains.',
       features: [;
         'End - to - end traceability',
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         'Smart contracts',
         'Compliance tracking',
         'Quality assurance',
@@ -246,6 +318,11 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       ],
       popular: false,
       icon: '⛓️',
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       color: 'from - indigo - 600 via - purple - 600 to - pink - 600',
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / blockchain - supply - chain - transparency',
@@ -274,6 +351,10 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       growth_rate: '45% annual growth',
       variant: 'blockchain - futuristic',
       contact_info: {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -288,6 +369,20 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       reviews: 56,
     },
     {
+<<<<<<< HEAD
+=======
+
+=======
+      id: 'ai - powered - warehouse - automation',
+      name: 'AI - Powered Warehouse Automation Platform',
+      tagline: 'Intelligent warehouse automation and optimization',
+      price: '$1, 099',
+      period: '/month',
+      description:;
+        'Advanced AI - powered warehouse automation platform that uses machine learning to optimize picking, packing, and warehouse operations.',
+      features: [;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         'Automated picking',
         'Smart routing',
         'Inventory optimization',
@@ -301,6 +396,11 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       ],
       popular: true,
       icon: '🏭',
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       color: 'from - orange - 600 via - amber - 600 to - yellow - 600',
       text_color: 'text - orange - 400',
       link: 'https://ziontechgroup.com / ai - powered - warehouse - automation',
@@ -329,6 +429,10 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       growth_rate: '38% annual growth',
       variant: 'ai - supply - chain - enterprise',
       contact_info: {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -339,6 +443,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
         'Production - ready AI warehouse platform with comprehensive automation and optimization capabilities.',
       launch_date: '2025 - 02 - 18',
 
+<<<<<<< HEAD
       id: 'ai-powered-supply-chain-optimization'
       name: 'AI-Powered Supply Chain Optimization'
       tagline: 'Intelligent supply chain planning and optimization'
@@ -659,6 +764,21 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
   ];    features: [
 
     },
+=======
+        'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',
+      launchDate: '2025-02-18',
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      customers: 178,
+      rating: 4 && 4.8,
+      reviews: 112,
+
+    },;
+
+
+  ];    features: [
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export interface AdvancedLogisticsSupplyChainSolution2025 {
   id: string, name: string,
   tagline: string, price: string,
@@ -691,6 +811,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     period: '/month',
     description: 'Advanced AI-powered supply chain optimization platform that uses machine learning to optimize inventory, demand forecasting, and logistics operations.',
     features: [
+<<<<<<< HEAD
       id: 'ai-powered-warehouse-automation'
       name: 'AI-Powered Warehouse Automation Platform'
       tagline: 'Intelligent warehouse automation and optimization'
@@ -754,12 +875,17 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       reviews: 112,
     },;
   ];    features: [
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration';
       'Custom algorithmsCompliance tools'
   ];    features: [;
       'Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_performance analytics_real - time monitoringAPI integration';
       'Custom algorithms_compliance tools';
     ];
+<<<<<<< HEAD
     popular: true, icon: '📦',
     color: 'from - blue - 600 via - indigo - 600 to - purple - 600', text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / ai - powered - supply - chain - optimization', market_position: 'Leading AI supply chain optimization platform with advanced analytics',
@@ -901,6 +1027,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       'Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_performance analytics_real - time monitoringAPI integration';
       'Custom algorithms_compliance tools';
     ];
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     popular: true, icon: '📦',
 
@@ -921,6 +1049,11 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     popular: true, icon: '🏭',
 
 ];
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   }
 ];

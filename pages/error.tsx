@@ -112,6 +112,7 @@ function ErrorPage() {
     </>);
 
 }
+<<<<<<< HEAD
 
 }
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -189,11 +190,26 @@ export default function ErrorPage() {
     </>
   )
 }
+=======
+=======
+
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 
 }
 }
+=======
+
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -49,10 +49,23 @@ export function reset_state (): void {
     logs: []
     overrides: []
   }
+<<<<<<< HEAD
 
+=======
+}
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     connections: [],
     logs: [],
     overrides: [];
   };
+<<<<<<< HEAD
 }
 }
+=======
+
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

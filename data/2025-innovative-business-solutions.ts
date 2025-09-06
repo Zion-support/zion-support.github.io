@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 import { ServiceVariant } from '../types/service-variants';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   id: string;
@@ -34,6 +37,7 @@ import { ServiceVariant } from '../types/service-variants';
     address: string;
     website: string;
   }
+<<<<<<< HEAD
     id: 'ai-business-intelligence-suite',
   real_implementation: boolean;
   implementation_details: string;
@@ -621,6 +625,12 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
   },
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
+=======
+
+  {
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export interface InnovativeBusinessSolution {
   id: string, name: string,
   tagline: string, price: string,
@@ -671,6 +681,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     variant: 'ai-business-intelligence',
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+<<<<<<< HEAD
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -678,6 +689,25 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
 ;
   }
 ];
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+
+      website: 'https://ziontechgroup.com';
+    }
+<<<<<<< HEAD
+    real_implementation: true,
+    implementation_details: 'Comprehensive AI - powered project management platform with intelligent planning, optimization, and seamless project tool integration.';
+    launch_date: '2025 - 05 - 01';
+    customers: 38;
+    rating: 4.7,
+    reviews: 26;
+
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
     realImplementation: true
     implementationDetails:

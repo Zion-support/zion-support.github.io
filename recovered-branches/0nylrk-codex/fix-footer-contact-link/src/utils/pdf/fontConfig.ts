@@ -3,10 +3,18 @@ export interface FontConfig {;
 
 
 
+<<<<<<< HEAD
 import { jsPDF } from 'jspdf';
 export interface FontConfig {
 import {jsPDF} from 'jspdf';
 export interface FontConfig {;
+=======
+
+import {jsPDF} from 'jspdf';
+export interface FontConfig {;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   regular: ArrayBuffer;
   bold?: ArrayBuffer;
 
@@ -23,6 +31,7 @@ export async function loadCustomFonts(doc: jsPDF, fontFamily: FontFamily = 'defa
     // Font loading logic would go here
     // For demonstration purposes, we'll just set up the font using standard fonts
     switch (fontFamily) {
+<<<<<<< HEAD
       case 'montserrat':;
         doc.setFont('helvetica');
         break;
@@ -45,6 +54,24 @@ export interface FontConfig {;
   bold?: ArrayBuffer,;
   italic?: ArrayBuffer,;
   boldItalic?: ArrayBuffer;
+=======
+      case 'montserrat':
+        doc && doc.setFont('helvetica');
+        break;
+      case 'open-sans':
+        doc && doc.setFont('helvetica');
+        break;
+      case 'roboto':
+        doc && doc.setFont('helvetica');
+        break;
+      default: doc && doc.setFont('helvetica')
+    }
+  } catch (error) {
+
+    console && console.error('Error loading custom fonts:', error);
+
+    // Fall back to default font
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     doc && doc.setFont('helvetica')
 import {jsPDF} from 'jspdf';
 export interface FontConfig {
@@ -133,5 +160,12 @@ export async function loadCustomFonts(doc: jsPDF, fontFamily: FontFamily = 'defa
     console.error('Error loading custom fonts:', error);
     // Fall back to default font;
     doc.setFont('helvetica');
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 }

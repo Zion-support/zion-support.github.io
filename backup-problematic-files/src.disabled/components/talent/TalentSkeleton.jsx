@@ -27,4 +27,8 @@ const TalentSkeleton = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default TalentSkeleton;
+=======
+export default TalentSkeleton;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

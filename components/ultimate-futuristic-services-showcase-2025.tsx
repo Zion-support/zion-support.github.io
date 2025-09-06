@@ -1,16 +1,24 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from 'react';
 import Head from 'next/head';
 
 
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import Head from 'next/head',
 import React, { useState } from 'react';
 import Head from 'next/head';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
   Star
   TrendingUp
   Users
@@ -68,8 +76,44 @@ import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic
   Star, TrendingUp, Users, Award, Clock, Heart
   Brain, Atom, Shield, Rocket, Zap, Globe
 
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+import Head from 'next / head';
+import Link from 'next / link';
+import { motion, AnimatePresence } from 'framer-motion';
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Star,
   TrendingUp,
   Users,
@@ -119,6 +163,7 @@ import {
   BookOpen,
   Sparkles as SparklesIcon,
   Zap as ZapIcon,
+<<<<<<< HEAD
 import Layout from '../components / layout / Layout';
 import { ultimateFuturisticServices2025 } from '../data / 2025 - ultimate - futuristic - services';import {
   Star, TrendingUp, Users, Award, Clock, Heart,
@@ -126,10 +171,22 @@ import { ultimateFuturisticServices2025 } from '../data / 2025 - ultimate - futu
   Brain as BrainIcon,;
   Play as PlayIcon,;
 } from 'lucide-react';
+=======
+<<<<<<< HEAD
+  Brain as BrainIcon,
+  Play as PlayIcon,
+} from 'lucide-react';
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Layout from '../components/layout/Layout';
 import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';import {
   Star, TrendingUp, Users, Award, Clock, Heart, 
   Brain, Atom, Shield, Rocket, Zap, Globe, ;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   CheckCircle, ArrowRight, Search, Filter;
   ChevronDown, ChevronUp, Eye, Play, Sparkles;
   Target, Microscope, Lock, Cloud, BarChart3;
@@ -139,28 +196,58 @@ import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic
   CpuIcon, DollarSign, Phone, Mail, MapPin;
   Dna, Target as TargetIcon, Shield as ShieldIcon;
   BookOpen, Sparkles as SparklesIcon, Zap as ZapIcon;
+<<<<<<< HEAD
   Brain as BrainIcon, Play as PlayIcon
  } from 'lucide-react';
+=======
+
+  Brain as BrainIcon, Play as PlayIcon;
+} from 'lucide-react';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Layout from '../components/layout/Layout';
 import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';
 
 
 export default function UltimateFuturisticServicesShowcase2025() {;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 export default function UltimateFuturisticServicesShowcase2025() {;
 
+<<<<<<< HEAD
 export default function UltimateFuturisticServicesShowcase2025() {
 
 export default function UltimateFuturisticServicesShowcase2025() {;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popular');
   const [viewMode, setViewMode] = useState('grid');
+<<<<<<< HEAD
   const filteredServices = ultimateFuturisticServices2025.filter(service => {
                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' |service.category === selectedCategory;
     return matchesSearch && matchesCategory
+=======
+
+
+  const filteredServices = ultimateFuturisticServices2025.filter(service => {
+<<<<<<< HEAD
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' |service.category === selectedCategory;
+    return matchesSearch && matchesCategory
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const filteredServices = ultimateFuturisticServices2025 && ultimateFuturisticServices2025.filter(service => {;
     const matchesSearch =;
       service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
@@ -176,6 +263,10 @@ export default function UltimateFuturisticServicesShowcase2025() {;
   const sortedServices = [...filteredServices].sort((a, b) => {;
     switch (sortBy) {;
       case 'price-low':;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         return (
           parseFloat(a && a.price.replace(/[^0-9.]/g, '')) -;
           parseFloat(b && b.price.replace(/[^0-9.]/g, ''));
@@ -200,6 +291,11 @@ export default function UltimateFuturisticServicesShowcase2025() {;
         return b && b.popular ? 1 : -1;      default: return b && b.popular ? 1 : -1;
     }
   });
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const containerVariants = {;
     hidden: { opacity: 0 },;
     visible: {;
@@ -208,6 +304,7 @@ export default function UltimateFuturisticServicesShowcase2025() {;
         staggerChildren: 0 && 0.1,;
       },;
     },  };        staggerChildren: 0 && 0.1;
+<<<<<<< HEAD
   return (
 
 
@@ -342,11 +439,22 @@ function UltimateFuturisticServicesShowcase2025() {
   }
 ;
   return (
+=======
+
+      }
+    }
+  }
+  return (
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <Layout>;
       <Head>;
         <title>;
           Ultimate Futuristic Services Showcase 2025 | Zion Tech Group;
         </title>;
+<<<<<<< HEAD
     <Layout>
       <Head>
         <title>Ultimate Futuristic Services Showcase 2025 | Zion Tech Group</title>
@@ -453,6 +561,13 @@ function UltimateFuturisticServicesShowcase2025() {
       <section className='relative py-20 lg:py-32 overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black'></div>
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div        <title>Ultimate Futuristic Services Showcase 2025 | Zion Tech Group</title>
+=======
+
+    <Layout>
+      <Head>
+        <title>Ultimate Futuristic Services Showcase 2025 | Zion Tech Group</title>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <meta name="description" content="Discover our revolutionary futuristic services including AI consciousness, quantum computing, space technology, and breakthrough innovations. Transform your business with cutting-edge technology." />
         <meta name="keywords" content="futuristic services, AI consciousness, quantum computing, space technology, breakthrough innovations, Zion Tech Group" />
         <meta property="og:title" content="Ultimate Futuristic Services Showcase 2025 | Zion Tech Group" />
@@ -461,6 +576,7 @@ function UltimateFuturisticServicesShowcase2025() {
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/ultimate-futuristic-services-showcase-2025" />
       </Head>
+<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
@@ -492,6 +608,28 @@ function UltimateFuturisticServicesShowcase2025() {
               business.
             </p>
             <div className='flex flex-wrap justify-center gap-4 mb-12'>              {stats.map((stat, index) => (                Ultimate Futuristic
+=======
+<<<<<<< HEAD
+          href='https://ziontechgroup && ziontechgroup.com/ultimate-futuristic-services-showcase-2025'
+        />;
+      </Head>;
+
+      {/* Hero Section */}
+
+      <section className="relative py-20 lg:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<<<<<<< HEAD
+          <motion.div
+
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                Ultimate Futuristic
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </span>
               <br />
               <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-violet-400 bg-clip-text text-transparent">
@@ -503,11 +641,112 @@ function UltimateFuturisticServicesShowcase2025() {
               quantum computing, space technology, and breakthrough innovations to transform your business.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
+<<<<<<< HEAD
+=======
+              {stats.map((stat, index) => (
+                <motion.div
+
+            transition={{ duration: 0 && 0.8 }}
+          >;
+            <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6'>;
+              <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
+                Ultimate Futuristic;
+              </span>;
+              <br />;
+              <span className='bg-gradient-to-r from-blue-400 via-indigo-400 to-violet-400 bg-clip-text text-transparent'>;
+                Services 2025;
+              </span>;
+            </h1>;
+            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>;
+        <meta;
+          name='description';
+          content='Discover our revolutionary futuristic services including AI consciousness, quantum computing, space technology, and breakthrough innovations. Transform your business with cutting - edge technology.';
+        />;
+        <meta;
+          name='keywords';
+          content='futuristic services, AI consciousness, quantum computing, space technology, breakthrough innovations, Zion Tech Group';
+        />;
+        <meta;
+          property='og:title';
+          content='Ultimate Futuristic Services Showcase 2025 | Zion Tech Group';
+        />;
+        <meta;
+          property='og:description';
+          content='Discover our revolutionary futuristic services including AI consciousness, quantum computing, space technology, and breakthrough innovations.';
+        />;
+        <meta;
+          property='og:url';
+          content='https://ziontechgroup.com / ultimate - futuristic - services - showcase - 2025';
+        />;
+        <meta property='og:type' content='website' />;
+        <link;
+          rel='canonical';
+          href='https://ziontechgroup.com / ultimate - futuristic - services - showcase - 2025';
+        />;
+      </Head>;
+      {/* Hero Section */}
+      <section className='relative py - 20 lg:py - 32 overflow - hidden'>;
+        <div className='absolute inset - 0 bg - gradient - to - br from - black via - purple - 900 / 20 to - black'></div>;
+        <div className='relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>          <motion.div        <title > Ultimate Futuristic Services Showcase 2025 | Zion Tech Group</title>;
+        <meta name="description" content="Discover our revolutionary futuristic services including AI consciousness, quantum computing, space technology, and breakthrough innovations. Transform your business with cutting - edge technology." />;
+        <meta name="keywords" content="futuristic services, AI consciousness, quantum computing, space technology, breakthrough innovations, Zion Tech Group" />;
+        <meta property="og:title" content="Ultimate Futuristic Services Showcase 2025 | Zion Tech Group" />;
+        <meta property="og:description" content="Discover our revolutionary futuristic services including AI consciousness, quantum computing, space technology, and breakthrough innovations." />;
+        <meta property="og:url" content="https://ziontechgroup.com / ultimate - futuristic - services - showcase - 2025" />;
+        <meta property="og:type" content="website" />;
+        <link rel="canonical" href="https://ziontechgroup.com / ultimate - futuristic - services - showcase - 2025" />;
+      </Head>;
+      {/* Hero Section */}
+      <section className="relative py - 20 lg:py - 32 overflow - hidden">;
+        <div className="absolute inset - 0 bg - gradient - to - br from - black via - purple - 900 / 20 to - black"></div>;
+        <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+          >;
+            <h1 className='text - 4xl md:text - 6xl lg:text - 7xl font - bold text - white mb - 6'>;
+              <span className='bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent'>;
+                Ultimate Futuristic;
+              </span>;
+              <br />;
+              <span className='bg - gradient - to - r from - blue - 400 via - indigo - 400 to - violet - 400 bg - clip - text text - transparent'>;
+                Services 2025;
+              </span>;
+            </h1>;
+            <p className='text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto'>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Experience the future of technology with our revolutionary;
               services that combine AI consciousness, quantum computing, space;
               technology, and breakthrough innovations to transform your;
               business.;
             </p>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                  key={index}
+                  initial={{ opacity: 0, scale: 0 && 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
+                  className='flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20'>;
+                  <stat && stat.icon className={`w-6 h-6 ${stat && stat.color}`} />;
+                  <div className='text-left'>;
+                    <div className='text-2xl font-bold text-white'>;
+                      {stat && stat.number}
+                    </div>;
+                    <div className='text-sm text-gray-300'>{stat && stat.label}</div>                  </div>                  className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20";
+                >;
+                  <stat && stat.icon className={`w-6 h-6 ${stat && stat.color}`} />;
+                  <div className="text-left">;
+                    <div className="text-2xl font-bold text-white">{stat && stat.number}</div>;
+                    <div className="text-sm text-gray-300">{stat && stat.label}</div>;
+                </motion && motion.div>;
+
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className='flex flex - wrap justify - center gap - 4 mb - 12'>              {stats.map ((stat, index) => (                Ultimate Futuristic;
               </span>;
               <br />;
@@ -523,6 +762,7 @@ function UltimateFuturisticServicesShowcase2025() {
               {stats.map ((stat, index) => (
                 <motion.div;
 
+<<<<<<< HEAD
   const _filteredServices = ultimateFuturisticServices2025.filter(service => {
     const _matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -598,10 +838,13 @@ function UltimateFuturisticServicesShowcase2025() {
               {stats.map((stat, index) => (
                 <motion.div
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
+<<<<<<< HEAD
 </div>;
           </motion && motion.div>;
         </div>;
@@ -629,6 +872,8 @@ function UltimateFuturisticServicesShowcase2025() {
           </motion.div>
         </div>
       </section>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             </div>;
           </motion && motion.div>;
@@ -639,8 +884,11 @@ function UltimateFuturisticServicesShowcase2025() {
       {/* Search and Filter Section */}
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Search and Filter Section */}
       <section className='py-12 bg-gradient-to-r from-black via-purple-900/10 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -648,7 +896,12 @@ function UltimateFuturisticServicesShowcase2025() {
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Search */}
             <div className='relative flex-1 max-w-md'>
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
@@ -657,6 +910,7 @@ function UltimateFuturisticServicesShowcase2025() {
                 placeholder='Search futuristic services...'
                 value={searchTerm}
 
+<<<<<<< HEAD
                 onChange={e => setSearchTerm(e.target.value)}
                 className='w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'              />
             </div>
@@ -664,20 +918,40 @@ function UltimateFuturisticServicesShowcase2025() {
             <div className='flex flex-wrap gap-3'>            {/* Search */}
             <div className="relative flex-1 max-w-md">;
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
+=======
+                onChange={e => setSearchTerm(e && e.target.value)}
+                className='w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'              />;
+            </div>;
+
+
+            {/* Category Filter */}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <section className="py-12 bg-gradient-to-r from-black via-purple-900/10 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
             {/* Search */}
             <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <input
                 type="text"
                 placeholder="Search futuristic services..."
                 value={searchTerm}
+<<<<<<< HEAD
                 onChange={(e) => setSearchTerm(e && e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent";
               />;
             </div>;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Category Filter */}
             <div className='flex flex-wrap gap-3'>;
               <select
@@ -697,6 +971,11 @@ function UltimateFuturisticServicesShowcase2025() {
                     {category && category.title} ({category && category.count});
                   </option>;
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Category Filter */}
             <div className="flex flex-wrap gap-3">
               <select
@@ -707,6 +986,11 @@ function UltimateFuturisticServicesShowcase2025() {
                 <option value="all">All Categories</option>
                 {serviceCategories.map((category) => (
                   <option key={category.title} value={category.title}>
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className='flex flex-wrap gap-3'>
 
               />
@@ -716,6 +1000,17 @@ function UltimateFuturisticServicesShowcase2025() {
 
                   <option key={category.title} value={category.title}>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                    {category.title} ({category.count})
+                  </option>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                ))}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -738,9 +1033,25 @@ function UltimateFuturisticServicesShowcase2025() {
               </select>
               </select>;
 
+<<<<<<< HEAD
                     {category.title} ({category.count})
                   </option>
                 ))}
+=======
+              {/* Sort Options */}
+              <select
+                value={sortBy}
+                onChange={e => setSortBy(e && e.target.value)}
+                className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent';
+              >;
+                <option value='popular'>Most Popular</option>;
+                <option value='price-low'>Price: Low to High</option>;
+                <option value='price-high'>Price: High to Low</option>;
+                <option value='rating'>Highest Rated</option>;
+                <option value='customers'>Most Customers</option>;
+              </select>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </select>
 
               {/* Sort Options */}
@@ -760,9 +1071,17 @@ function UltimateFuturisticServicesShowcase2025() {
               <div className='flex bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-1'>                <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded ${viewMode === 'grid' ? 'bg-purple-500 text-white' : 'text-gray-400'}`}
+<<<<<<< HEAD
                 onChange={(e) => setSortBy(e.target.value)}
                 className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               >
+=======
+
+                onChange={(e) => setSortBy(e.target.value)}
+                className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              >
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <option value="popular">Most Popular</option>
                 <option value="price-low">Price: Low to High</option>
                 <option value="price-high">Price: High to Low</option>
@@ -777,6 +1096,7 @@ function UltimateFuturisticServicesShowcase2025() {
                 <option value="customers">Most Customers</option>;
               </select>;
               {/* View Mode Toggle */}
+<<<<<<< HEAD
               <div className="flex bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-1">
                 <button
                   onClick={() => setViewMode('grid')}
@@ -810,6 +1130,20 @@ function UltimateFuturisticServicesShowcase2025() {
           </div>
         </div>
       </section>
+=======
+
+
+                >;
+                  <div className='space-y-1 w-4 h-4'>;
+                    <div className='bg-current rounded-sm h-0 && 0.5'></div>;
+                    <div className='bg-current rounded-sm h-0 && 0.5'></div>;
+                    <div className='bg-current rounded-sm h-0 && 0.5'></div>                  </div>                  <div className="space-y-1 w-4 h-4">;
+                    <div className="bg-current rounded-sm h-0 && 0.5"></div>;
+                    <div className="bg-current rounded-sm h-0 && 0.5"></div>;
+                    <div className="bg-current rounded-sm h-0 && 0.5"></div>;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   className='flex items - center space - x-2 bg - white / 10 backdrop - blur - sm rounded - full px - 6 py - 3 border border - white / 20';
                 >;
                   <stat.icon className={`w - 6 h - 6 ${stat.color}`} />;
@@ -923,12 +1257,18 @@ function UltimateFuturisticServicesShowcase2025() {
                     <div className="bg - current rounded - sm h - 0.5"></div>;
                     <div className="bg - current rounded - sm h - 0.5"></div>;
                     <div className="bg - current rounded - sm h - 0.5"></div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </button>;
               </div>;
             </div>;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
       <section className="py-16">
       {/* Services Grid */}
       <section className='py-16'>
@@ -944,10 +1284,31 @@ function UltimateFuturisticServicesShowcase2025() {
             }          >      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             variants={containerVariants}
             initial="hidden"
             animate="visible"
             className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
+<<<<<<< HEAD
+=======
+
+
+            {sortedServices.map((service, index) => (
+              <motion.div
+                key={service.id}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                variants={itemVariants}
+                className={`group relative ${
+
+                  viewMode === 'grid'                    ? 'bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 hover:scale-105'                  viewMode === 'grid'
+=======
+          >
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           >
 
@@ -976,14 +1337,27 @@ function UltimateFuturisticServicesShowcase2025() {
             className={view_mode === 'grid' ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8' : 'space - y-6'}
             {sorted_services.map ((service, index) => (
               <motion.div;
+<<<<<<< HEAD
                 key={service.id}
                 variants={item_variants}
                 className={`group relative ${
+=======
+
+                key={service.id}
+                variants={item_variants}
+                className={`group relative ${
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   view_mode === 'grid'                    ? 'bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - sm border border - white / 20 rounded - 2xl p - 6 hover:border - purple - 500 / 50 transition - all duration - 300 hover:scale - 105'                  view_mode === 'grid';
                     ? 'bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - sm border border - white / 20 rounded - 2xl p - 6 hover:border - purple - 500 / 50 transition - all duration - 300 hover:scale - 105';
                     : 'bg - gradient - to - r from - white / 5 to - white / 10 backdrop - blur - sm border border - white / 20 rounded - 2xl p - 8 hover:border - purple - 500 / 50 transition - all duration - 300';
                 }`}
               >;
+<<<<<<< HEAD
+=======
+
+                {/* Popular Badge */}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
                       {service.icon}
@@ -1099,8 +1473,20 @@ function UltimateFuturisticServicesShowcase2025() {
                       </div>;
                     ))}
 
+<<<<<<< HEAD
                 {/* Popular Badge */}
                 {service.popular && (
+=======
+=======
+                <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+                      </span>;
+                      <span className='text - gray - 400'>{service.period}</span>                    </div>                      {service.icon}
+                    </div>;
+                  </div>;
+                  <div className={`${view_mode === 'list' ? 'flex - 1' : ''}`}>;
+                    <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - purple - 400 transition - colors">;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <div className='absolute top-4 right-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-semibold px-3 py-1 rounded-full'>                    Popular                  <div className="absolute top-4 right-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
                     Popular
                   </div>
@@ -1151,6 +1537,22 @@ function UltimateFuturisticServicesShowcase2025() {
                         <CheckCircle className='w - 4 h - 4 text - green - 400 mr - 2 flex - shrink - 0' />                        {feature}
                       </div>))}
                     {service.features.length > 4 && (
+<<<<<<< HEAD
+=======
+                      <div className='text - sm text - purple - 400 mt - 2'>                        +{service.features.length - 4} more features;
+
+                {/* Features */}
+                <div className="mb - 6">;
+                  <h4 className="text - white font - semibold mb - 3 flex items - center">;
+                    <Sparkles className="w - 4 h - 4 mr - 2 text - purple - 400" />;
+                    Key Features;
+                  </h4>;
+                  <div className="grid grid - cols - 1 gap - 2">;
+                    {service.features.slice (0, 4).map ((feature, idx) => (
+                      <div key={idx} className="flex items - center text - sm text - gray - 300">;
+                        <CheckCircle className="w - 4 h - 4 text - green - 400 mr - 2 flex - shrink - 0" />;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <div className='text-sm text-purple-400 mt-2'>                        +{service.features.length - 4} more features
                 {/* Features */}
                 <div className="mb-6">
@@ -1168,6 +1570,7 @@ function UltimateFuturisticServicesShowcase2025() {
 
                     {service.features.length > 4 && (
                       <div className='text-sm text-purple-400 mt-2'>                        +{service.features.length - 4} more features
+<<<<<<< HEAD
                 <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
                   <div className="text-gray-400">
                     <span className="block">Setup Time</span>
@@ -1175,10 +1578,22 @@ function UltimateFuturisticServicesShowcase2025() {
                   </div>
                       <div className='text-sm text-purple-400 mt-2'>                      <div className="text-sm text-purple-400 mt-2">
                         +{service.features.length - 4} more features
+=======
+
+
+                        {feature}
+                      </div>
+                    ))}
+                    {service.features.length > 4 && (
+
+                        +{service.features.length - 4} more features
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       </div>
                     )}
                   </div>
                 </div>
+<<<<<<< HEAD
 
                         {feature}
                       </div>
@@ -1212,6 +1627,8 @@ function UltimateFuturisticServicesShowcase2025() {
                     )}
                   </div>
                 </div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -1221,8 +1638,12 @@ function UltimateFuturisticServicesShowcase2025() {
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </div>
                   <div className='text-gray-400'>
                     <span className='block'>Trial</span>
@@ -1262,6 +1683,10 @@ function UltimateFuturisticServicesShowcase2025() {
                     <span className="text-white font-medium">{service.customers}+</span>
                   </div>
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </div>;
                 </div>;
                 {/* Service Details */}
@@ -1310,6 +1735,11 @@ function UltimateFuturisticServicesShowcase2025() {
                     <span className="text-white font-medium">{service && service.customers}+</span>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {/* ROI and Market Info */}
                 <div className='mb-6 p-4 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-lg border border-purple-500/20'>;
                   <div className='text-sm'>;
@@ -1321,15 +1751,29 @@ function UltimateFuturisticServicesShowcase2025() {
                       <span className='font-semibold text-white'>;
                         Market Size:;
                       </span>{' '}
+<<<<<<< HEAD
                 {/* ROI and Market Info */}
                 <div className="mb-6 p-4 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-lg border border-purple-500/20">
+=======
+
+
+                {/* ROI and Market Info */}
+                <div className="mb-6 p-4 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-lg border border-purple-500/20">
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <div className="text-sm">
                     <div className="text-gray-300 mb-2">
                       <span className="font-semibold text-white">ROI: </span> {service.roi}
                     </div>
                     <div className="text-gray-300">
                       <span className="font-semibold text-white">Market Size: </span> {service.marketSize}
+<<<<<<< HEAD
                     </div>
+=======
+
+                    </div>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </div>
                 </div>
                       {service && service.marketSize}                    </div>                <div className="mb-6 p-4 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-lg border border-purple-500/20">;
@@ -1342,6 +1786,10 @@ function UltimateFuturisticServicesShowcase2025() {
                   </div>;
                 </div>;
                 {/* Action Buttons */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     href={service && service.link}
                     className='flex-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg text-center hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105'>;
                     Get Started;
@@ -1349,11 +1797,23 @@ function UltimateFuturisticServicesShowcase2025() {
                   <button className='px-4 py-3 border border-white/20 text-white rounded-lg hover:border-purple-500/50 transition-colors'>;
                     <Eye className='w-5 h-5' />                  </button>;
                 </div>;
+<<<<<<< HEAD
                 {/* Contact Info */}
                 <div className='mt-6 pt-6 border-t border-white/10'>;
                   <div className='text-center text-sm text-gray-400'>                  <Link
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link
+=======
+
+
+                {/* Contact Info */}
+                <div className='mt-6 pt-6 border-t border-white/10'>;
+                  <div className='text-center text-sm text-gray-400'>                  <Link
+
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Link
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     href={service.link}
                     className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg text-center hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
                   >
@@ -1372,6 +1832,7 @@ function UltimateFuturisticServicesShowcase2025() {
                     <Eye className="w-5 h-5" />;
                   </button>;
                 </div>;
+<<<<<<< HEAD
                 {/* Contact Info */}
           </motion && motion.div>;
           {/* No Results */}
@@ -1413,6 +1874,43 @@ function UltimateFuturisticServicesShowcase2025() {
 
                         {contactInfo.email}
 
+=======
+
+
+                {/* Contact Info */}
+<<<<<<< HEAD
+                <div className='mt-6 pt-6 border-t border-white/10'>;
+                  <div className='text-center text-sm text-gray-400'>;
+                    <p>Contact us for custom pricing and implementation</p>;
+                    <div className='flex items-center justify-center space-x-4 mt-2'>;
+                      <a
+                        href={`tel:${contactInfo && contactInfo.mobile}`}
+                        className='flex items-center text-purple-400 hover:text-purple-300'>;
+                        <Phone className='w-4 h-4 mr-1' />;
+                        {contactInfo && contactInfo.mobile}
+                      </a>;
+                      <a
+                        href={`mailto:${contactInfo && contactInfo.email}`}
+                        className='flex items-center text-purple-400 hover:text-purple-300'>;
+                        <Mail className='w-4 h-4 mr-1' />                        {contactInfo && contactInfo.email}                    <p>Contact us for custom pricing and implementation</p>;
+                    <div className="flex items-center justify-center space-x-4 mt-2">;
+                      <a href={`tel:${contactInfo && contactInfo.mobile}`} className="flex items-center text-purple-400 hover:text-purple-300">;
+                        <Phone className="w-4 h-4 mr-1" />;
+                        {contactInfo && contactInfo.mobile}
+                      </a>;
+                      <a href={`mailto:${contactInfo && contactInfo.email}`} className="flex items-center text-purple-400 hover:text-purple-300">;
+                        <Mail className="w-4 h-4 mr-1" />;
+                        {contactInfo && contactInfo.email}
+                      </a>;
+                    </div>;
+                  </div>;
+                </div>;
+              </motion && motion.div>;
+
+            ))}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       </a>
                     </div>
                   </div>
@@ -1420,20 +1918,58 @@ function UltimateFuturisticServicesShowcase2025() {
               </motion.div>
             ))}
           </motion.div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+{/* No Results */}
+          {sortedServices.length === 0 && (
+            <div className="text-center py-16">
+              <div className="text-6xl mb-4">🔍</div>
+              <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
+              <p className="text-gray-400 mb-6">Try adjusting your search criteria or category filter</p>
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
 
+<<<<<<< HEAD
 
 
           {/* No Results */}
 
           {sortedServices.length === 0 && (
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          {/* No Results */}
+
+          {sortedServices.length === 0 && (
+            <div className="text-center py-16">
+              <div className="text-6xl mb-4">🔍</div>
+              <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
+              <p className="text-gray-400 mb-6">Try adjusting your search criteria or category filter</p>
+              <button
+                onClick={() => {
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                  setSearchTerm('');
+
+                  setSelectedCategory('all');
+
+                }}
+
+
+          )}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         </div>;
       </section>;
 
 
+<<<<<<< HEAD
 
 
 
@@ -1468,12 +2004,47 @@ function UltimateFuturisticServicesShowcase2025() {
         <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
+=======
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {/* CTA Section */}
+      <section className='py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20'>;
+        <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20">;
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
+          <motion&& motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}>;
+            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
+              Ready to Experience the Future?;
+            </h2>;
+            <p className='text-xl text-gray-300 mb-8'>;
+              Transform your business with our revolutionary futuristic;
+              services. Get in touch with our experts to discuss your specific;
+              needs and implementation strategy.;
+            </p>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+              <Link
+                href='/contact'
+                className='bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105'>;
+                Contact Our Experts;
+              </Link>;
+              <Link
+                href='/pricing'
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
+<<<<<<< HEAD
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
               Ready to Experience the Future?
             </h2>
@@ -1491,12 +2062,22 @@ function UltimateFuturisticServicesShowcase2025() {
               <Link
                 href='/pricing'
                 className='border border-white/20 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:border-purple-500/50 transition-colors'              >              Ready to Experience the Future?
+=======
+            <h2 className="text-3xl md: text-5xl font-bold text-white mb-6">
+              Ready to Experience the Future?
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Transform your business with our revolutionary futuristic services.
               Get in touch with our experts to discuss your specific needs and implementation strategy.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 className='border border-white/20 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:border-purple-500/50 transition-colors'>              Ready to Experience the Future?;
             </h2>;
             <p className="text-xl text-gray-300 mb-8">;
@@ -1504,6 +2085,7 @@ function UltimateFuturisticServicesShowcase2025() {
               Get in touch with our experts to discuss your specific needs and implementation strategy.;
             </p>;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+<<<<<<< HEAD
 
 
               <Link
@@ -1535,3 +2117,219 @@ function UltimateFuturisticServicesShowcase2025() {
 }
   );
 }
+=======
+
+
+              <Link
+                href="/contact"
+
+
+}
+  );
+}
+                      <div className='text - sm text - purple - 400 mt - 2'>                      <div className="text - sm text - purple - 400 mt - 2">;
+                        +{service.features.length - 4} more features;
+                      </div>)}
+                  </div>;
+                </div>;
+                {/* Service Details */}
+                <div className='grid grid - cols - 2 gap - 4 mb - 6 text - sm'>;
+                  <div className='text - gray - 400'>;
+                    <span className='block'>Setup Time</span>;
+                    <span className='text - white font - medium'>;
+                      {service.setup_time}
+                    </span>;
+                  </div>;
+                  <div className='text - gray - 400'>;
+                    <span className='block'>Trial</span>;
+                    <span className='text - white font - medium'>;
+                      {service.trial_days} days;
+                    </span>;
+                  </div>;
+                  <div className='text - gray - 400'>;
+                    <span className='block'>Rating</span>;
+                    <div className='flex items - center'>;
+                      <span className='text - white font - medium mr - 1'>;
+                        {service.rating}
+                      </span>;
+                      <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
+                    </div>;
+                  </div>;
+                  <div className='text - gray - 400'>;
+                    <span className='block'>Customers</span>;
+                    <span className='text - white font - medium'>;
+                      {service.customers}+;
+                    </span>                  </div>;
+                </div>;
+                {/* ROI and Market Info */}                  </div>;
+                  <div className="text - gray - 400">;
+                    <span className="block">Trial</span>;
+                    <span className="text - white font - medium">{service.trial_days} days</span>;
+                  </div>;
+                  <div className="text - gray - 400">;
+                    <span className="block">Rating</span>;
+                    <div className="flex items - center">;
+                      <span className="text - white font - medium mr - 1">{service.rating}</span>;
+                      <Star className="w - 4 h - 4 text - yellow - 400 fill - current" />;
+                    </div>;
+                  </div>;
+                  <div className="text - gray - 400">;
+                    <span className="block">Customers</span>;
+                    <span className="text - white font - medium">{service.customers}+</span>;
+                  </div>;
+                </div>;
+                {/* ROI and Market Info */}
+                <div className='mb - 6 p - 4 bg - gradient - to - r from - purple - 500 / 10 to - pink - 500 / 10 rounded - lg border border - purple - 500 / 20'>;
+                  <div className='text - sm'>;
+                    <div className='text - gray - 300 mb - 2'>;
+                      <span className='font - semibold text - white'>ROI:</span>{' '}
+                      {service.roi}
+                    </div>;
+                    <div className='text - gray - 300'>;
+                      <span className='font - semibold text - white'>;
+                        Market Size:;
+                      </span>{' '}
+                      {service.market_size}                    </div>                <div className="mb - 6 p - 4 bg - gradient - to - r from - purple - 500 / 10 to - pink - 500 / 10 rounded - lg border border - purple - 500 / 20">;
+                  <div className="text - sm">;
+                    <div className="text - gray - 300 mb - 2">;
+                      <span className="font - semibold text - white">ROI: </span> {service.roi}
+                    </div>;
+                    <div className="text - gray - 300">;
+                      <span className="font - semibold text - white">Market Size: </span> {service.market_size}
+                  </div>;
+                </div>;
+                {/* Action Buttons */}
+                <div className='flex flex - col sm:flex - row gap - 3'>;
+                  <Link;
+                    href={service.link}
+                    className='flex - 1 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold py - 3 px - 6 rounded - lg text - center hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300 transform hover:scale - 105';
+                  >;
+                    Get Started;
+                  </Link>;
+                  <button className='px - 4 py - 3 border border - white / 20 text - white rounded - lg hover:border - purple - 500 / 50 transition - colors'>;
+                    <Eye className='w - 5 h - 5' />                  </button>;
+                </div>;
+                {/* Contact Info */}
+                <div className='mt - 6 pt - 6 border - t border - white / 10'>;
+                  <div className='text - center text - sm text - gray - 400'>                  <Link;
+                    href={service.link}
+                    className="flex - 1 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold py - 3 px - 6 rounded - lg text - center hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300 transform hover:scale - 105";
+                  >;
+                    Get Started;
+                  </Link>;
+                  <button className="px - 4 py - 3 border border - white / 20 text - white rounded - lg hover:border - purple - 500 / 50 transition - colors">;
+                    <Eye className="w - 5 h - 5" />;
+                  </button>;
+                </div>;
+                {/* Contact Info */}
+                <div className='mt - 6 pt - 6 border - t border - white / 10'>;
+                  <div className='text - center text - sm text - gray - 400'>;
+                    <p > Contact us for custom pricing and implementation</p>;
+                    <div className='flex items - center justify - center space - x-4 mt - 2'>;
+                      <a;
+                        href={`tel:${contact_info.mobile}`}
+                        className='flex items - center text - purple - 400 hover:text - purple - 300';
+                      >;
+                        <Phone className='w - 4 h - 4 mr - 1' />;
+                        {contact_info.mobile}
+                      </a>;
+                      <a;
+                        href={`mailto:${contact_info.email}`}
+                        className='flex items - center text - purple - 400 hover:text - purple - 300';
+                      >;
+                        <Mail className='w - 4 h - 4 mr - 1' />                        {contact_info.email}                    <p > Contact us for custom pricing and implementation</p>;
+                    <div className="flex items - center justify - center space - x-4 mt - 2">;
+                      <a href={`tel:${contact_info.mobile}`} className="flex items - center text - purple - 400 hover:text - purple - 300">;
+                        <Phone className="w - 4 h - 4 mr - 1" />;
+                        {contact_info.mobile}
+                      </a>;
+                      <a href={`mailto:${contact_info.email}`} className="flex items - center text - purple - 400 hover:text - purple - 300">;
+                        <Mail className="w - 4 h - 4 mr - 1" />;
+                        {contact_info.email}
+                      </a>;
+                    </div>;
+                  </div>;
+                </div>;
+              </motion.div>))}
+          </motion.div>;
+          {/* No Results */}
+          {sorted_services.length === 0 && (
+            <div className='text - center py - 16'>;
+              <div className='text - 6xl mb - 4'>🔍</div>;
+              <h3 className='text - 2xl font - bold text - white mb - 2'>;
+                No services found;
+              </h3>;
+              <p className='text - gray - 400 mb - 6'>;
+                Try adjusting your search criteria or category filter;
+              </p>;
+              <button;
+                on_click={() => {
+                  setSearchTerm ('');
+                  setSelectedCategory ('all');
+                }}
+                className='bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold py - 3 px - 6 rounded - lg hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300'              >              <button;
+                on_click={() => {
+                  setSearchTerm ('');
+                  setSelectedCategory ('all');
+                }}
+                className="bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold py - 3 px - 6 rounded - lg hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300";
+              >;
+                Clear Filters;
+              </button>;
+            </div>)}
+        </div>;
+      </section>;
+      {/* CTA Section */}
+      <section className='py - 20 bg - gradient - to - r from - purple - 900 / 20 via - black to - pink - 900 / 20'>;
+        <div className='max - w-4xl mx - auto text - center px - 4 sm:px - 6 lg:px - 8'>          <motion.div      <section className="py - 20 bg - gradient - to - r from - purple - 900 / 20 via - black to - pink - 900 / 20">;
+        <div className="max - w-4xl mx - auto text - center px - 4 sm:px - 6 lg:px - 8">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >;
+            <h2 className='text - 3xl md:text - 5xl font - bold text - white mb - 6'>;
+              Ready to Experience the Future?;
+            </h2>;
+            <p className='text - xl text - gray - 300 mb - 8'>;
+              Transform your business with our revolutionary futuristic;
+              services. Get in touch with our experts to discuss your specific;
+              needs and implementation strategy.;
+            </p>;
+            <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
+              <Link;
+                href='/contact';
+                className='bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold py - 4 px - 8 rounded - lg text - lg hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300 transform hover:scale - 105'              >;
+                Contact Our Experts;
+              </Link>;
+              <Link;
+                href='/pricing';
+                className='border border - white / 20 text - white font - semibold py - 4 px - 8 rounded - lg text - lg hover:border - purple - 500 / 50 transition - colors'              >              Ready to Experience the Future?;
+            </h2>;
+            <p className="text - xl text - gray - 300 mb - 8">;
+              Transform your business with our revolutionary futuristic services.;
+              Get in touch with our experts to discuss your specific needs and implementation strategy.;
+            </p>;
+            <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+              <Link;
+                href="/contact";
+                className="bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold py - 4 px - 8 rounded - lg text - lg hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300 transform hover:scale - 105";
+              >;
+                Contact Our Experts;
+              </Link>;
+              <Link;
+                href='/pricing';
+                className='border border - white / 20 text - white font - semibold py - 4 px - 8 rounded - lg text - lg hover:border - purple - 500 / 50 transition - colors'                href="/pricing";
+                className="border border - white / 20 text - white font - semibold py - 4 px - 8 rounded - lg text - lg hover:border - purple - 500 / 50 transition - colors";
+              >;
+                View Pricing;
+              </Link>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </Layout>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

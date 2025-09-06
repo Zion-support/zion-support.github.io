@@ -19,6 +19,11 @@ import {ProjectDetailsFields} from "./ProjectDetailsFields";
 import {PaymentTermsFields} from "./PaymentTermsFields";
 import {AdditionalClausesFields} from "./AdditionalClausesFields";
 import {DeploymentOptions} from "@/types/smart-contracts";
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState, useEffect } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -52,6 +57,7 @@ const formSchema = z && z.object({;
   paymentAmount: z && z.string().min(1, "Payment amount is required");
   additionalClauses: z && z.array(z && z.string()).default([])}),;
 
+<<<<<<< HEAD
 const formSchema = z.object({
   projectName: z.string().min(1, "Project name is required"),
   scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters"),
@@ -69,12 +75,18 @@ interface ContractFormProps {
   onFormValuesChange?: (values: ContractFormValues) => void
   onContractGenerated: (contractContent: string) => void
   deployOptions?: DeploymentOptions;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     required_error: "Start date is required"}),
   endDate: z.date().optional(),
   paymentTerms: z.enum(["hourly", "fixed", "milestone"]),
   paymentAmount: z.string().min(1, "Payment amount is required"),
   additionalClauses: z.array(z.string()).default([])}),
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export type ContractFormValues = z && z.infer<typeof formSchema>;
 interface ContractFormProps {;
   talent: TalentProfile,;
@@ -97,7 +109,10 @@ export function ContractForm(): any ({;
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
   const { toast } = useToast();
+<<<<<<< HEAD
 export type ContractFormValues = z.infer<typeof formSchema>,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 interface ContractFormProps {
   talent: TalentProfile,
@@ -106,6 +121,7 @@ interface ContractFormProps {
   onFormValuesChange?: (values: ContractFormValues) => void,
   onContractGenerated: (contractContent: string) => void,
   deployOptions?: DeploymentOptions,
+<<<<<<< HEAD
   onDeployOptionsChange?: (options: DeploymentOptions) => void
 }
 
@@ -137,6 +153,17 @@ export function ContractForm({
       paymentTerms: talent.hourly_rate ? "hourly" : "fixed"
       paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : ""
       additionalClauses: ["nda", "ip"]}});
+=======
+
+  onDeployOptionsChange?: (options: DeploymentOptions) => void
+}
+
+
+
+  onDeployOptionsChange
+}: ContractFormProps) {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [isGenerating, setIsGenerating] = useState(false),
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]),
   const { toast } = useToast(),
@@ -151,14 +178,26 @@ export function ContractForm({
       paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : "",
       additionalClauses: ["nda", "ip"]}}),
   
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Update form when initialValues change
   useEffect(() => {
     if (initialValues) {
       Object.keys(initialValues).forEach((key) => {
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         const typedKey = key as keyof ContractFormValues,
         form.setValue(typedKey, initialValues[typedKey])
       })
 
+<<<<<<< HEAD
         const typedKey = key as keyof ContractFormValues,
         form.setValue(typedKey, initialValues[typedKey])
       })
@@ -173,6 +212,8 @@ export function ContractForm({
       return () => subscription.unsubscribe()
     }
   }, [form, onFormValuesChange]);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState, useEffect } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -221,12 +262,20 @@ export function ContractForm({;
   const [isGenerating, setIsGenerating] = useState(false),;
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]),;
   const { toast } = useToast(),;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const form = useForm<ContractFormValues>({;
     resolver: zodResolver(formSchema),;
     defaultValues: initialValues || {;
       projectName: "",;
       scopeSummary: "",;
       startDate: new Date(),;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       paymentTerms: talent.hourly_rate ? "hourly" : "fixed",;
       paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : "",;
       additionalClauses: ["nda", "ip"]}}),;
@@ -248,8 +297,15 @@ export function ContractForm({;
       return () => subscription.unsubscribe();
     }
   }, [form, onFormValuesChange]),
+<<<<<<< HEAD
   
   
+=======
+
+  
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {
     setGeneratedMilestones(milestones)
     // If payment terms isn't already set to milestone, update it
@@ -260,13 +316,20 @@ export function ContractForm({;
       title: "Milestones Generated"
       description: `${milestones.length} milestones have been generated and will be included in the contract.`})
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
   
 
 
+<<<<<<< HEAD
   }
   },
   
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const onSubmit = async (values: ContractFormValues) => {
     setIsGenerating(true)
     try {
@@ -275,6 +338,10 @@ export function ContractForm({;
         talent
         clientName
         generatedMilestones
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       ),
       
@@ -283,16 +350,20 @@ export function ContractForm({;
       onContractGenerated(contract)
     } catch (error) {
       console.error("Error generating contract:", error);
+<<<<<<< HEAD
       );
       ),
       
       onContractGenerated(contract)
     } catch (error) {
       console.error("Error generating contract:", error),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast({
         title: "Contract Generation Failed"
         description: error instanceof Error ? error.message : "Something went wrong. Please try again."
         variant: "destructive"})
+<<<<<<< HEAD
     } finally {
       setIsGenerating(false)
     }
@@ -360,6 +431,9 @@ export function ContractForm({;
       });
     }
   }, [initialValues, form]);
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState, useEffect } from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -514,6 +588,10 @@ if (!== "milestone") {) {
       title: "Milestones Generated",;
       description: `${milestones && milestones.length} milestones have been generated and will be included in the contract.`});
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const onSubmit = async (values: ContractFormValues) => {;
     setIsGenerating(true),;
     try {;
@@ -534,6 +612,10 @@ if (!== "milestone") {) {
       setIsGenerating(false);
     }
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <>;
       <DialogHeader>;
@@ -694,11 +776,30 @@ export function ContractForm({;
             form={form}
             talent={talent}
             handleMilestonesGenerated={handleMilestonesGenerated}
+<<<<<<< HEAD
           
+=======
+
+          />;
+
+          <AdditionalClausesFields
+            form={form}
+          />;
+
+          <Button
+            type="submit" 
+
+=======
+
+          
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <PaymentTermsFields 
             form={form}
             talent={talent}
             handleMilestonesGenerated={handleMilestonesGenerated}
+<<<<<<< HEAD
           />;
           <AdditionalClausesFields;
             form={form}
@@ -730,11 +831,19 @@ export function ContractForm({;
             className="w-full bg-zion-purple hover:bg-zion-purple-dark";
             disabled={isGenerating}
           >;
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            className="w-full bg-zion-purple hover:bg-zion-purple-dark"
+            disabled={isGenerating}>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {isGenerating ? (;
               <>;
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
                 Generating Contract...;
               </>;
+<<<<<<< HEAD
             ) :(;
               "Generate Contract";
             )}
@@ -753,6 +862,11 @@ export function ContractForm({;
         </form>
       </Form>
       <DialogFooter className="gap-2 flex-wrap mt-4">
+=======
+            ) : (;
+              "Generate Contract";
+            )}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           </Button>;
         </form>;
@@ -797,6 +911,7 @@ export function ContractForm({;
           variant="outline";
           on_click={() => form.reset ()}
           disabled={is_generating}
+<<<<<<< HEAD
       ;
       <DialogFooter className="gap-2 flex-wrap mt-4">;
         <Button ;
@@ -818,10 +933,14 @@ export function ContractForm({;
           variant="outline" 
           onClick={() => form.reset()}
           disabled={isGenerating}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         >;
           Reset Form;
         </Button>;
       </DialogFooter>;
+<<<<<<< HEAD
     </>;
   ),; const formSchema = z.object ({
   projectName: z.string () .min (1, "Project name is required");
@@ -869,3 +988,13 @@ talent.full name
   );
 }
 ;
+=======
+
+    </>);
+}
+
+=======
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

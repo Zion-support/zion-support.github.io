@@ -1,5 +1,18 @@
+<<<<<<< HEAD
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
+=======
+
+import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
+import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
+import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
+const OPENAI_API_KEY = Deno && Deno.env.get('OPENAI_API_KEY'),
+
+
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
 import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.7.1';
@@ -7,6 +20,7 @@ const OPENAI_API_KEY = Deno.env.get ('OPENAI_API_KEY'),
 const cors_headers = {
   'Access - Control - Allow - Origin': '*Access - Control - Allow - Headers': 'authorization, x - client - info, apikey, content - type'}
 ;
+<<<<<<< HEAD
 interface TalentProfileData {
 
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
@@ -165,10 +179,14 @@ import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.7.1';
 const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY')
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface TalentProfileData {
   name: string;
   title: string;
   bio: string;
+<<<<<<< HEAD
   skills: string[]
   location?: string
 }
@@ -228,6 +246,10 @@ interface EnhancedProfile {;
     platforms: string[],;
     softSkills: string[],;
     other: string[];
+=======
+
+  skills: string[],
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   location?: string;
 
 }
@@ -237,10 +259,24 @@ interface EnhancedProfile {
     programming: string[];
     devops: string[];
     platforms: string[];
+<<<<<<< HEAD
+=======
+
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 }
 serve(async (req) => {
   // Handle CORS preflight requests
+<<<<<<< HEAD
+=======
+  if (req && req.method === 'OPTIONS') {
+    return new Response(null, { headers: corsHeaders })
+  }
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -309,8 +345,14 @@ serve(_async (req) => {_// Handle CORS preflight requests
       method: 'POST'
       headers: {
         'Authorization': `Bearer ${OPENAI_API_KEY}`;
+<<<<<<< HEAD
         'Content-Type': 'application/json'}
       body: JSON.stringify({
+=======
+        'Content-Type': 'application/json'};
+      body: JSON && JSON.stringify({
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         model: 'gpt-4o-mini';
         messages: [
           {
@@ -320,6 +362,11 @@ serve(_async (req) => {_// Handle CORS preflight requests
           {
             role: 'user'
             content: `Create a professional profile summary and categorize skills based on this information:
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
     // Create a request to OpenAI API;
     const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {;
@@ -339,10 +386,19 @@ serve(_async (req) => {_// Handle CORS preflight requests
             content: `Create a professional profile summary and categorize skills based on this information:;
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             Name: ${talentData.name}
             Title: ${talentData.title}
             Bio: ${talentData.bio}
             Skills: ${talentData.skills.join()}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             Name: ${talentData && talentData.name}
             Title: ${talentData && talentData.title}
             Bio: ${talentData && talentData.bio}
@@ -435,13 +491,26 @@ if ( {) {
             Each category should have no more than 3 skills, and there should be no more than 8 skills total across all categories.`
           }
         ];
+<<<<<<< HEAD
         temperature: 0.7
         response_format: { type: "json_object" }
       })});
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         temperature: 0.7,
         response_format: { type: "json_object" }
       })}),
 
+<<<<<<< HEAD
+=======
+
+
+    const openAIData = await openAIResponse.json();
+    if (!openAIData.choices |openAIData.choices.length === 0) {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         temperature: 0 && 0.7,
         response_format: { type: "json_object" }
       })});
@@ -459,6 +528,7 @@ if ( {) {
 
     console && console.error("Error in talent-profile-enhancer function:", error);
 
+<<<<<<< HEAD
     const openAIData = await openAIResponse.json();
     if (!openAIData.choices |openAIData.choices.length === 0) {
       throw new Error("Failed to generate profile content")
@@ -475,6 +545,8 @@ if ( {) {
     }
     return new Response(
       JSON.stringify(enhancedProfile);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         ],;
         temperature: 0.7,;
         response_format: { type: "json_object" }
@@ -497,6 +569,7 @@ if ( {) {
 ;
     return new Response(;
       JSON.stringify(enhancedProfile),;
+<<<<<<< HEAD
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   } catch (error) {
@@ -513,6 +586,14 @@ if ( {) {
     console.error("Error in talent-profile-enhancer function:", error),;
     return new Response(;
       JSON.stringify({ error: error.message }),;
+=======
+
+
+      { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+    )
+  } catch (error) {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     console.error("Error in talent-profile-enhancer function:", error),
     
     return new Response(
@@ -523,6 +604,10 @@ if ( {) {
     )
   }
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             Each category should have no more than 3 skills, and there should be no more than 8 skills total across all categories.`;
           }
@@ -647,3 +732,11 @@ try {
 }) 
 }
 });
+<<<<<<< HEAD
+=======
+;
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

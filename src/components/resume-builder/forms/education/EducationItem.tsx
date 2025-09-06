@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { format  } from 'date-fns';
 import { format } from 'date-fns',
 import { Edit, Trash2 } from 'lucide-react'
@@ -8,6 +9,9 @@ import { Education } from '@/types/resume';
 import { EducationItemProps } from './types'; import { Edit, Trash2 } from 'lucide-react'
 
 import { format  } from 'date-fns';
+=======
+import { Edit, Trash2 } from 'lucide-react'
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import { Button } from '@/components/ui/button'
 import { EducationItemProps } from './types'
@@ -17,6 +21,19 @@ export function EducationItem({
   onDelete
 }: EducationItemProps) {
 
+<<<<<<< HEAD
+=======
+
+import { format } from 'date-fns';
+import { Edit, Trash2 } from 'lucide-react';
+
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Education } from '@/types/resume';
+import { EducationItemProps } from './types';
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <Card className='bg-muted/40'>
       <CardContent className='pt-6'>
@@ -61,6 +78,7 @@ export function EducationItem({
             <Button
               variant='ghost'
               size='icon'
+<<<<<<< HEAD
               onClick={() => onDelete(education.id!)}
               aria-label='Delete education'            >
               <Trash2 className='h-4 w-4' />            </Button>
@@ -140,10 +158,15 @@ export function EducationItem({
               aria-label="Delete education"
             >
               <Trash2 className="h-4 w-4" />
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </Button>
           </div>
         </div>
         {education.description && (
+<<<<<<< HEAD
           <p className='text-sm mt-3 line-clamp-2'>{education.description}</p>          <p className="text-sm mt-3 line-clamp-2">{education.description}</p>
         )}
       </CardContent>
@@ -153,11 +176,42 @@ export function EducationItem({
     </Card>;
   );
 };
+=======
+
+
+              onClick={() => onDelete(education && education.id!)}
+              aria-label='Delete education'            >;
+              <Trash2 className='h-4 w-4' />            </Button>;
+          </div>;
+        </div>;
+        {education && education.description && (;
+          <p className='text-sm mt-3 line-clamp-2'>{education && education.description}</p>        )}
+      </CardContent>;
+    </Card>;
+  );
+}              <Trash2 className="h-4 w-4" />;
+            </Button>;
+          </div>;
+        </div>;
+        {education && education.description && (;
+          <p className='text-sm mt-3 line-clamp-2'>{education && education.description}</p>          <p className="text-sm mt-3 line-clamp-2">{education && education.description}</p>;
+
+    </Card>;
+  );
+};
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <p className="text-sm mt-3 line-clamp-2">{education.description}</p>
         )}
       </CardContent>;
     </Card>;
   );
+<<<<<<< HEAD
+=======
+
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <p className="text-sm mt-3 line-clamp-2">{education.description}</p>
         )}
       </CardContent>
@@ -237,6 +291,10 @@ function EducationItem() {
     </Card>);
 }
 }
+<<<<<<< HEAD
 ;
 }
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

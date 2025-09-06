@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import React from 'react'
 import { AlertTriangle, RefreshCw } from 'lucide-react'
@@ -89,12 +90,15 @@ export class EquipmentErrorBoundary extends React && React.Component<Props, Stat
   error?: Error;
 }
 import { AlertTriangle, RefreshCw } from 'lucide-react'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface Props {;
   children: React && React.ReactNode;
 }
+<<<<<<< HEAD
 interface State {;
   hasError: boolean,;
   error?: Error;
@@ -130,10 +134,14 @@ interface Props {;
   children: React.ReactNode;
 }
 ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface State {;
   hasError: boolean,;
   error?: Error;
 }
+<<<<<<< HEAD
 ;
 export class EquipmentErrorBoundary extends React.Component<Props State> {;
   constructor(props: Props) {;
@@ -147,11 +155,28 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {;
 ;
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {;
     logErrorToProduction('Equipment page error:', error, { componentStack: errorInfo.componentStack });
+=======
+
+export class EquipmentErrorBoundary extends React && React.Component<Props, State> {;
+  constructor(props: Props) {;
+    super(props);
+
+
+  }
+
+  static getDerivedStateFromError(error: Error): State {;
+    return { hasError: true, error }
+  }
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 
   render() {;
     if (this && this.state.hasError) {;
       return (
+<<<<<<< HEAD
         <div className='container py-8'>
           <Card className='border-red-200 bg-red-50'>
             <CardContent className='p-8 text-center'>
@@ -239,6 +264,10 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {;
                   <RefreshCw className="h-4 w-4 mr-2" />
                   Try Again
                 </Button>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <Button onClick={() => window.location.reload()} variant="default">
                   Refresh Page
                 </Button>
@@ -247,12 +276,28 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {;
           </Card>
         </div>
       )
+<<<<<<< HEAD
     }
     return this.props.children
   }      )
     }
     return this.props.children
   }
+=======
+
+
+
+    return this.props.children
+  }      )
+    }
+
+    return this.props.children;
+  };
+} ;
+
+
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   onClick={() => window && window.location.reload()}
                   variant='default';
                 >                  Refresh Page;
@@ -401,5 +446,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
     return this.props.children;
   }
+<<<<<<< HEAD
 } ;
 } ;
+=======
+
+} ;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

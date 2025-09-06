@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from 'react'
 import {
@@ -24,6 +25,8 @@ import { cn } from '@/lib/utils'
 
 import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react'
 import { Button } from '@/components/ui/button';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState, useEffect } from 'react';
 import {;
   FormField,;
@@ -45,11 +48,15 @@ import { cn } from '@/lib/utils';
 import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 interface ValidationRule {;
+<<<<<<< HEAD
 interface ValidationRule {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   required?: boolean;
   minLength?: number;
   maxLength?: number;
   pattern?: RegExp;
+<<<<<<< HEAD
   custom?: (value: any) => string | null
 interface ValidatedFormFieldProps {
   name: string;
@@ -63,6 +70,10 @@ interface ValidatedFormFieldProps {
   className?: string;
   disabled?: boolean;
   showValidIcon?: boolean;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   name: string
   label: string
   type?:
@@ -83,6 +94,11 @@ interface ValidatedFormFieldProps {
   className?: string
   disabled?: boolean
   showValidIcon?: boolean
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   debounceMs?: number
 export function ValidatedFormField({
 
@@ -113,7 +129,11 @@ export function ValidatedFormField({
   useEffect((,) => {
     if (!fieldValue |!isTouched) {
       setValidationState('idle')
+<<<<<<< HEAD
       return;
+=======
+      return
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     if (debounceTimer) {
       clearTimeout(debounceTimer)
@@ -325,9 +345,13 @@ interface ValidationRule {;
   minLength?: number,;
   maxLength?: number,;
   pattern?: RegExp,;
+<<<<<<< HEAD
   const render_field = () =>: any {
     const base_classes = cn (getFieldClasses (), class_name);
     switch (type) {
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   custom?: (value: any) => string | null;
 interface ValidatedFormFieldProps {;
   name: string;
@@ -352,6 +376,7 @@ interface ValidatedFormFieldProps {;
   showValidIcon?: boolean;
   debounceMs?: number;
 export function ValidatedFormField(): any ({;
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',;
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form',;
 import { Input } from '@/components/ui/input',;
@@ -405,6 +430,8 @@ interface ValidatedFormFieldProps {;
 }
 ;
 export function ValidatedFormField({;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   name,;
   label,;
   type = 'text',;
@@ -416,6 +443,7 @@ export function ValidatedFormField({;
   className,;
   disabled = false,;
   showValidIcon = true,;
+<<<<<<< HEAD
   debounceMs = 300}: ValidatedFormFieldProps) {;
   const [showPassword, setShowPassword] = useState(false),;
   const [validationState, setValidationState] = useState<'idle' | 'validating' | 'valid' | 'invalid'>('idle'),;
@@ -571,6 +599,88 @@ export function ValidatedFormField({;
               disabled = {disabled,}
               className = {baseClasses,}
               rows = {4,}
+=======
+  debounceMs = 300,;
+}: ValidatedFormFieldProps) {;
+  const [showPassword, setShowPassword] = useState(false);
+  const [validationState, setValidationState] = useState<;
+    'idle' | 'validating' | 'valid' | 'invalid';
+  >('idle');
+  const [debounceTimer, setDebounceTimer] = useState<NodeJS && NodeJS.Timeout | null>(;
+    null;
+  );
+
+  const fieldValue = form && form.watch(name);
+  const fieldError = form && form.formState.errors[name];
+  const isTouched = form && form.formState.touchedFields[name];
+
+  // Debounced validation;
+  useEffect((,) => {;
+    if (!fieldValue || !isTouched) {;
+      setValidationState('idle');
+      return;
+    }
+
+    if (debounceTimer) {;
+      clearTimeout(debounceTimer);
+    }
+
+    setValidationState('validating');
+
+    const timer = setTimeout(() => {;
+      const error = validateField(fieldValue);
+      setValidationState(error ? 'invalid' : 'valid');
+    }, debounceMs);
+    setDebounceTimer(timer);
+
+    return () => {;
+      if (timer) clearTimeout(timer);
+    };
+  }, [fieldValue, isTouched, debounceMs]);
+
+  const validateField = (value: any): string | null => {;
+    if (;
+      validation && validation.required &&;
+      (!value || (typeof value === 'string' && value && value.trim() === ''));
+    ) {;
+      return `${label} is required`;
+    }
+
+    if (typeof value === 'string') {;
+      if (validation && validation.minLength && value && value.length < validation && validation.minLength) {;
+        return `${label} must be at least ${validation && validation.minLength} characters`;
+      }
+
+      if (validation && validation.maxLength && value && value.length > validation && validation.maxLength) {;
+        return `${label} must not exceed ${validation && validation.maxLength} characters`;
+      }
+
+      if (validation && validation.pattern && !validation && validation.pattern.test(value)) {;
+        return `${label} format is invalid`;
+      }
+    }
+
+    if (validation && validation.custom) {;
+      return validation && validation.custom(value);
+    }
+
+
+    return null
+  },
+
+
+
+
+  const getValidationIcon = () => {
+
+
+    switch (type) {
+      case 'textarea':
+        return (
+          <div className='relative'>;
+            <Textarea
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               disabled={disabled}
               className={baseClasses}
@@ -578,15 +688,23 @@ export function ValidatedFormField({;
 
 
               {...form.register(name)}
+<<<<<<< HEAD
             <div className='absolute top-2 right-2'>{getValidationIcon()}</div>
           </div>
         )
       case 'select':
+=======
+            />
+            <div className='absolute top-2 right-2'>{getValidationIcon()}</div>
+          </div>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {...form && form.register(name)}
             />;
             <div className='absolute top-2 right-2'>{getValidationIcon()}</div>;
           </div>;
         );
+<<<<<<< HEAD
     switch (type) {
       case 'textarea':
         return (
@@ -619,12 +737,18 @@ export function ValidatedFormField({;
         ),
 
       case 'select':
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         ),
 
 
       case 'select':;
         return (
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="relative">
             <Select onValueChange={(value) => form.setValue(name, value)} disabled={disabled}>
               <SelectTrigger className={baseClasses}>
@@ -633,6 +757,7 @@ export function ValidatedFormField({;
               <SelectContent>
                 {options.map((option) => (
                   <SelectItem key={option.value} value={option.value}>
+<<<<<<< HEAD
                     {option.label}
                   </SelectItem>
                 ))}
@@ -769,6 +894,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <SelectItem key={option.value} value={option.value}>;                    {option.label}
                   </SelectItem>;
                 ))}
+=======
+
+
+                    {option.label}
+                  </SelectItem>
+                ))}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         ),
 
@@ -777,6 +910,14 @@ ursor/fix-website-loading-errors-and-merge-6662
       case 'checkbox':
               </SelectContent>;
             </Select>;
+<<<<<<< HEAD
+=======
+            <div className='absolute top-2 right-8'>{getValidationIcon()}</div>;
+          </div>;
+        );
+
+      case 'checkbox':;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         return (
           <div className='flex items-center space-x-2'>;
             <Checkbox
@@ -787,6 +928,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             />;
             <label
               htmlFor={name}
+<<<<<<< HEAD
         )
         ),
 
@@ -827,6 +969,14 @@ ursor/fix-website-loading-errors-and-merge-6662
               disabled = {disabled,}
               className = {cn(baseClasses, 'pr-20'),}
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            >
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {label}
             </label>;
             {getValidationIcon()}
@@ -843,17 +993,26 @@ ursor/fix-website-loading-errors-and-merge-6662
               type={showPassword ? 'text' : 'password'}
               disabled={disabled}
               className={cn(baseClasses, 'pr-20')}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {...form.register(name)}
             />
             <div className="absolute inset-y-0 right-0 flex items-center gap-1 pr-3">
               {getValidationIcon()}
               <Button
+<<<<<<< HEAD
                 type='button'
                 variant='ghost'
                 size='sm'
                 className='h-7 w-7 p-0'
                 onClick={() => setShowPassword(!showPassword)}
                 aria-label={showPassword ? 'Hide password' : 'Show password'}              >
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 type="button"
                 variant="ghost"
                 size="sm"
@@ -867,6 +1026,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 ) : (
                   <Eye className="h-4 w-4" />
                 )}
+<<<<<<< HEAD
               </Button>
             </div>
           </div>
@@ -952,6 +1112,12 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className='space-y-1'>
                 {fieldError && (
                   <FormMessage className='text-sm text-red-500'>
+=======
+
+
+        ),
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
       default:
@@ -973,12 +1139,23 @@ ursor/fix-website-loading-errors-and-merge-6662
             />
             <div className="absolute inset-y-0 right-0 flex items-center pr-3">
               {getValidationIcon()}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>;
           </div>;
         );
     }
+<<<<<<< HEAD
   },;
   if (type === 'checkbox') {;
+=======
+  };
+
+  if (type === 'checkbox') {;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return (;
       <FormField;
         control={form.control}
@@ -992,6 +1169,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="space-y-1">
                 {fieldError && (
                   <FormMessage className="text-sm text-red-500">
+<<<<<<< HEAD
         render={() => (;
           <FormItem className='flex flex-row items-start space-x-3 space-y-0'>;
             <FormControl>{renderField()}</FormControl>            {(fieldError || description) && (;
@@ -1000,6 +1178,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <FormMessage className='text-sm text-red-500'>;
                     {fieldError && fieldError.message}
                   </FormMessage>;
+=======
+
+
+                    {fieldError.message}
+                  </FormMessage>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 )}
                 {description && !fieldError && (
 
@@ -1154,6 +1338,7 @@ if ( {) {
         <FormItem>;
           <FormLabel className='text-sm font-medium'>;
             {label}
+<<<<<<< HEAD
             {validation && validation.required && (;
               <span className='text-red-500 ml-1'>*</span>;
             )}          </FormLabel>;
@@ -1175,6 +1360,27 @@ if ( {) {
   }}
     }
   }}
+=======
+
+            {validation.required && <span className="text-red-500 ml-1">*</span>}
+          </FormLabel>
+          <FormControl>
+            {renderField()}
+          </FormControl>
+          {(fieldError || description) && (
+            <div className="space-y-1">
+              {fieldError && (
+                <FormMessage className="text-sm text-red-500 flex items-center gap-1">
+                  <AlertCircle className="h-3 w-3" />
+
+
+                  {fieldError.message}
+                </FormMessage>
+              )}
+              {description && !fieldError && (
+
+                <p className="text-sm text-muted-foreground">{description}</p>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               )}
             </div>;
@@ -1255,6 +1461,10 @@ export const validationPatterns = {;
   strongPassword:;
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/,;
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Pre-configured validation rules;
 export const commonValidations = {;
   required: { required: true },;
@@ -1285,6 +1495,7 @@ export const commonValidations = {;
         return 'Please enter a valid phone number';
       }
       return null;
+<<<<<<< HEAD
     },;
   },;
 };
@@ -1467,3 +1678,11 @@ export const commonValidations = {;
   }},
     }
   }};
+=======
+
+
+
+  }},
+    }
+  }};
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

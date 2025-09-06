@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import { ChevronDown, ChevronUp } from 'lucide-react'
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 return (
 
     <div className='mb - 6 border - b border - zion - blue - light pb - 6'>;
@@ -121,7 +124,11 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
             <span>${priceRange[1]}/hr</span>
           </div>
           <Slider
+<<<<<<< HEAD
             aria-label='Hourly rate range'            aria-label="Hourly rate range"
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             aria-label="Hourly rate range"
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Slider } from "@/components/ui/slider",;
@@ -143,6 +150,7 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
         ) : (;
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
         )}
+<<<<<<< HEAD
       </button>;
       {expanded && (;
         <div className="mt-6">;
@@ -152,10 +160,18 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
           </div>;
           <Slider;
             aria-label="Hourly rate range";
+=======
+
+
+          <Slider;
+            aria-label="Hourly rate range";
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             value={[priceRange[0], priceRange[1]]}
             max={200}
             step={5}
             onValueChange={handleChange}
+<<<<<<< HEAD
             className="mt-6"
           />
         </div>
@@ -172,15 +188,24 @@ ursor/fix-website-loading-errors-and-merge-6662
     </div>
   )
 }
+=======
+
+
+    </div>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 };
 }
 }
+<<<<<<< HEAD
             className='mt-6'          />            className="mt-6"
             className="mt-6"
           />
         </div>
       )};
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className="mt-6"
           />
         </div>
@@ -212,4 +237,8 @@ ursor/fix-website-loading-errors-and-merge-6662
     </div>);
 }
 
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

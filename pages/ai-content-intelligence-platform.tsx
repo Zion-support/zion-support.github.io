@@ -19,6 +19,59 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+<<<<<<< HEAD
+=======
+
+import Layout from '../components/layout/Layout';
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
+
+
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com',}
+const features = [
+  {
+
+    title: 'Real-time Content Analytics',
+    description: 'Monitor content performance across all channels with live dashboards and insights',
+    icon: BarChart3,
+    color: 'from-blue-500 to-cyan-500'
+  };
+  {
+    title: 'AI-Powered Optimization',
+    description: 'Get intelligent suggestions for content improvement based on performance data',
+    icon: Brain,
+    color: 'from-purple-500 to-pink-500'
+  };
+  {
+    title: 'Predictive Performance Modeling',
+    description: 'Forecast content success before publishing using advanced AI algorithms',
+    icon: TrendingUp,
+    color: 'from-green-500 to-emerald-500'
+  };
+  {
+    title: 'Multi-Channel Strategy',
+    description: 'Optimize content across all digital platforms simultaneously',
+    icon: Globe,
+    color: 'from-orange-500 to-red-500'
+  };
+  {
+    title: 'Competitor Analysis',
+    description: 'Track competitor content performance and identify opportunities',
+    icon: Target,
+    color: 'from-indigo-500 to-blue-500'
+  };
+  {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Head from 'next / head';
 import Link from 'next / link';
 import {motion} from 'framer-motion';
@@ -64,9 +117,17 @@ const features = [;
     icon: Target,
     color: 'from - indigo - 500 to - blue - 500',
   },  {
+<<<<<<< HEAD
     title: 'SEO Content Intelligence',
     description: 'AI - powered SEO optimization and keyword gap identification',
     icon: Zap,
+=======
+
+    title: 'SEO Content Intelligence',
+    description: 'AI - powered SEO optimization and keyword gap identification',
+    icon: Zap,
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     color: 'from - yellow - 500 to - orange - 500',
   }, ];
 ;
@@ -86,6 +147,7 @@ const pricing_plans = [;
     ],
     popular: false,
     color: 'from - gray - 500 to - gray - 600',
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
@@ -157,6 +219,9 @@ const pricingPlans = [
     ]
     popular: false
     color: 'from-gray-500 to-gray-600'
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },  {
     name: 'Professional'
     price: '$5,000'
@@ -197,6 +262,21 @@ const useCases = [
     description:
       'Optimize your content strategy based on real-time performance data and AI insights'
     icon: Target
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      'Real-time content analyticsAI optimization suggestionsBasic performance trackingSEO content insightsEmail supportUp to 100 content pieces/month'
+    ];
+    popular: false,
+    color: 'from-gray-500 to-gray-600'
+  };
+  {
+    name: 'Professional',
+    price: '$5, 000',
+    period: '/month',
+    description: 'Ideal for growing businesses and marketing teams',
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     features: [;
       'Everything in Starter',
       'Predictive performance modeling',
@@ -209,15 +289,27 @@ const useCases = [
     popular: true,
     color: 'from - blue - 500 to - purple - 600',
   },  {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     name: 'Enterprise',
     price: '$10, 000',
     period: '/month',
     description: 'For large organizations with complex content needs',
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',};
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const features = [;
   {;
     title: 'Real-time Content Analytics',;
@@ -257,6 +349,7 @@ const features = [;
     icon: Zap,;
     color: 'from-yellow-500 to-orange-500',;
   },];
+<<<<<<< HEAD
 const pricingPlans = [;
   {;
     name: 'Starter',;
@@ -494,32 +587,81 @@ const features = [;
 const pricingPlans = [;
   {;
     name: 'Starter';
+=======
+
+const pricingPlans = [;
+  {;
+    name: 'Starter',;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     price: '$2,500',;
     period: '/month',;
     description: 'Perfect for small businesses and content creators',;
     features: [;
+<<<<<<< HEAD
       'Real-time content analyticsAI optimization suggestionsBasic performance trackingSEO content insightsEmail supportUp to 100 content pieces/month';
     ],;
     popular: false,;
     color: 'from-gray-500 to-gray-600';
   },;
   {;
+=======
+      'Real-time content analytics',;
+      'AI optimization suggestions',;
+      'Basic performance tracking',;
+      'SEO content insights',;
+      'Email support',;
+      'Up to 100 content pieces/month',;
+    ],;
+    popular: false,;
+    color: 'from-gray-500 to-gray-600',;
+  },  {;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     name: 'Professional',;
     price: '$5,000',;
     period: '/month',;
     description: 'Ideal for growing businesses and marketing teams',;
     features: [;
+<<<<<<< HEAD
       'Everything in StarterPredictive performance modelingAdvanced competitor analysisMulti-channel optimizationPriority supportUp to 500 content pieces/monthCustom integrations';
     ],;
     popular: true,;
     color: 'from-blue-500 to-purple-600';
   },;
   {;
+=======
+      'Everything in Starter',;
+      'Predictive performance modeling',;
+      'Advanced competitor analysis',;
+      'Multi-channel optimization',;
+      'Priority support',;
+      'Up to 500 content pieces/month',;
+      'Custom integrations',;
+    ],;
+    popular: true,;
+    color: 'from-blue-500 to-purple-600',;
+  },  {;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     name: 'Enterprise',;
     price: '$10,000',;
     period: '/month',;
     description: 'For large organizations with complex content needs',;
     features: [;
+<<<<<<< HEAD
+=======
+      'Everything in Professional',;
+      'Custom AI models',;
+      'Advanced analytics',;
+      'Dedicated account manager',;
+      '24/7 phone support',;
+      'Unlimited content pieces',;
+      'White-label solutions',;
+      'API access',;
+    ],;
+    popular: false,;
+    color: 'from-purple-500 to-pink-600',;
+  },];
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const useCases = [;
   {;
     title: 'Content Marketing Optimization',;
@@ -549,6 +691,11 @@ const useCases = [;
     icon: ShoppingCart,;
     color: 'from-orange-500 to-red-500',;
   },;
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from 'react';
 import Head from 'next/head';
@@ -559,10 +706,13 @@ const integrations = [
   'WordPressShopifyHubSpotMailchimpGoogle AnalyticsFacebook AdsGoogle AdsLinkedIn', 'TwitterInstagramYouTubeTikTokSlackZapierAPI Access'
 ];
 
+<<<<<<< HEAD
     color: 'from-orange-500 to-red-500',;
   },;
   'WordPressShopifyHubSpotMailchimpGoogle AnalyticsFacebook AdsGoogle AdsLinkedIn', 'TwitterInstagramYouTubeTikTokSlackZapierAPI Access'
 ];
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const integrations = [;
   'WordPress',;
   'Shopify',;
@@ -578,9 +728,18 @@ const integrations = [;
   'TikTok',;
   'Slack',;
   'Zapier',;
+<<<<<<< HEAD
   'API Access',];
 export default function AIContentIntelligencePlatform() {;
   return (
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  'API Access',];
+
+export default function AIContentIntelligencePlatform() {;
+  return (
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           href='https://ziontechgroup && ziontechgroup.com/ai-content-intelligence-platform'
         />;
       </Head>;
@@ -591,6 +750,7 @@ export default function AIContentIntelligencePlatform() {;
             Create, optimize, and manage content intelligently with our AI-powered content platform.;
           </p>;
         </div>;
+<<<<<<< HEAD
       'Everything in ProfessionalCustom AI modelsAdvanced analyticsDedicated account manager24/7 phone supportUnlimited content piecesWhite-label solutionsAPI access';
     ],;
     popular: false,;
@@ -636,6 +796,9 @@ const integrations = [
 ],
 export default function AIContentIntelligencePlatform() {
   return (
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <Layout>
       <Head>
         <title>AI Content Intelligence Platform | Zion Tech Group</title>
@@ -647,6 +810,7 @@ export default function AIContentIntelligencePlatform() {
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/ai-content-intelligence-platform" />
       </Head>
+<<<<<<< HEAD
       {/* Hero Section */}
 
 
@@ -690,6 +854,12 @@ export default function AIContentIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+      {/* Hero Section */}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             >
               <div className="flex items-center space-x-2 mb-6">
                 <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
@@ -750,24 +920,67 @@ export default function AIContentIntelligencePlatform() {
                   <div className="flex items-center text-green-400">
                     <CheckCircle className="w-5 h-5 mr-3" />
                     <span>Real-time performance insights</span>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </div>
                 </div>
               </div>
             </motion.div>
           </div>
         </div>
+<<<<<<< HEAD
 
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
 
 
       </section>
 
+=======
+
+
+              transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+              className='relative'>;
+              <div className='bg-gradient-to-br from-purple-500/20 to-blue-500/20 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-8'>;
+                <div className='text-6xl mb-4'>🧠</div>;
+                <h3 className='text-2xl font-bold text-white mb-4'>;
+                  Key Benefits;
+                </h3>;
+                <div className='space-y-3'>;
+                  <div className='flex items-center text-green-400'>;
+                    <CheckCircle className='w-5 h-5 mr-3' />;
+                    <span>300%+ ROI improvement</span>;
+                  </div>;
+                  <div className='flex items-center text-green-400'>;
+                    <CheckCircle className='w-5 h-5 mr-3' />;
+                    <span>80% faster content optimization</span>;
+                  </div>;
+                  <div className='flex items-center text-green-400'>;
+                    <CheckCircle className='w-5 h-5 mr-3' />                    <span>Real-time performance insights</span>;
+                  </div>;
+                </div>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </div>;
+
+=======
+=======
+
+
+      </section>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Features Section */}
 
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
+<<<<<<< HEAD
       </section>
       {/* Features Section */}
       <section className="py-20">
@@ -776,10 +989,13 @@ export default function AIContentIntelligencePlatform() {
       {/* Features Section */}
       <section className='py-20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             className='text-center mb-16'
       </section>
       {/* Features Section */  } catch (error) {
@@ -811,6 +1027,10 @@ export default function AIContentIntelligencePlatform() {
   }
 }
             className="text-center mb-16"
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Powerful Features for Content Success
@@ -823,6 +1043,7 @@ export default function AIContentIntelligencePlatform() {
             {features.map((feature, index) => (
               <motion.div
 
+<<<<<<< HEAD
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -855,6 +1076,9 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
   }
 }
                 className="group relative"
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               >
                 <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300">
                   <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -864,6 +1088,11 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                   <p className="text-gray-400">{feature.description}</p>
                 </div>
               </motion.div>
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             ))  } catch (error) {
     console.error("Error:", error);
@@ -871,22 +1100,39 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
   }
 }
 
+<<<<<<< HEAD
             ))}
 
+=======
+          </div>;
+        </div>;
+      </section>;
+      {/* Use Cases Section */}
+      <section className='py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Use Cases Section */}
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+<<<<<<< HEAD
           </div>
         </div>
       </section>
       {/* Use Cases Section */}
       <section className='py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             className='text-center mb-16'
             ))  } catch (error) {
     console.error("Error:", error);
@@ -925,6 +1171,10 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
   }
 }
             className="text-center mb-16"
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Perfect For Every Content Need
@@ -937,6 +1187,7 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
             {useCases.map((useCase, index) => (
               <motion.div
 
+<<<<<<< HEAD
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -969,6 +1220,9 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
   }
 }
                 className="group"
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               >
                 <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300">
                   <div className={`w-16 h-16 bg-gradient-to-r ${useCase.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -978,6 +1232,11 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
                   <p className="text-gray-400 text-lg">{useCase.description}</p>
                 </div>
               </motion.div>
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             ))  } catch (error) {
     console.error("Error:", error);
@@ -985,22 +1244,39 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
   }
 }
 
+<<<<<<< HEAD
             ))}
 
+=======
+          </div>;
+        </div>;
+      </section>;
+      {/* Pricing Section */}
+      <section className='py-20'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Pricing Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+<<<<<<< HEAD
           </div>
         </div>
       </section>
       {/* Pricing Section */}
       <section className='py-20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             className='text-center mb-16'
             ))  } catch (error) {
     console.error("Error:", error);
@@ -1039,6 +1315,10 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
   }
 }
             className="text-center mb-16"
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Flexible Pricing Plans
@@ -1051,6 +1331,7 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
             {pricingPlans.map((plan, index) => (
               <motion.div
 
+<<<<<<< HEAD
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1087,6 +1368,9 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -1109,6 +1393,7 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
 
+<<<<<<< HEAD
                       <li
                         key={featureIndex}
                         className='flex items-center text-gray-300'
@@ -1116,6 +1401,9 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
                         <Check className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                        {feature}
                       </li>
                     ))}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         {feature  } catch (error) {
@@ -1129,6 +1417,18 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+                  </ul>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  <Link
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </ul>
                   <Link
                     href="/contact"
@@ -1143,6 +1443,10 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
                   </Link>
                 </div>
               </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             ))}
 
 
@@ -1153,14 +1457,27 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
 }
 
           </div>;
+<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+=======
+        </div>;
+      </section>;
+      {/* Integrations Section */}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
             className="text-center mb-16"
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Seamless Integrations
@@ -1172,6 +1489,10 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {integrations.map((integration, index) => (
               <motion.div
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     features: [;
       'Everything in Professional',
       'Custom AI models',
@@ -1504,11 +1825,17 @@ function AIContentIntelligencePlatform() {
           </motion.div>;
           <div className='grid grid - cols - 2 md:grid - cols - 5 gap - 6'>            {integrations.map ((integration, index) => (
               <motion.div;
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 key={index}
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
                 className="bg-white/10 backdrop-blur-sm border border-gray-600 rounded-lg p-4 text-center hover:bg-white/20 transition-colors duration-300"
               >
                 <span className="text-white font-medium">{integration}</span>
@@ -1517,6 +1844,18 @@ function AIContentIntelligencePlatform() {
           </div>;
         </div>;
       </section>;
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            ))}
+
+          </div>;
+        </div>;
+      </section>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Contact Section */}
       <section className='py-20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion&& motion.div
@@ -1570,6 +1909,7 @@ function AIContentIntelligencePlatform() {
               </Link>;
               <Link
                 href='/2025-innovative-new-services-showcase'
+<<<<<<< HEAD
       {/* Contact Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -1584,6 +1924,13 @@ function AIContentIntelligencePlatform() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+=======
+
+
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className='text-center mb-16'
             ))  } catch (error) {
     console.error("Error:", error);
@@ -1765,14 +2112,45 @@ function AIContentIntelligencePlatform() {
                 href="/2025-innovative-new-services-showcase"
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200"
               >
+<<<<<<< HEAD
+=======
+                Start Your Free Trial
+                <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
+              </Link>
+              <Link
+                href=&quot;/2025-innovative-new-services-showcase&quot;
+                className=&quot;inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200&quot;
+
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+              >
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 View All Services
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 
                 className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200'>;
+=======
+
+
+                className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200'>;
+                View All Services;
+              </Link>;
+            </div>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+    </Layout>;
+  );
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   )
 }
                 className='bg - white / 10 backdrop - blur - sm border border - gray - 600 rounded - lg p - 4 text - center hover:bg - white / 20 transition - colors duration - 300';
@@ -1901,6 +2279,7 @@ function AIContentIntelligencePlatform() {
       </section>;
     </Layout>);
 ;
+<<<<<<< HEAD
 
 
     </Layout>);
@@ -1912,3 +2291,12 @@ function AIContentIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

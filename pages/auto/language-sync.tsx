@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 const LanguageSync: NextPage = () => {
   return (
@@ -23,13 +27,24 @@ const LanguageSync: NextPage = () => {
   )
 
 
+<<<<<<< HEAD
 },
 export default LanguageSync,
 
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+},
+export default LanguageSync,
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 },
 
 export default LanguageSync,
 
+<<<<<<< HEAD
 }
 export default LanguageSync;
 import type { NextPage } from 'next',
@@ -62,3 +77,7 @@ export default LanguageSync,
 
 export default LanguageSync,;
 export default LanguageSync,
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

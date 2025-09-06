@@ -9,6 +9,7 @@
 
       if (!isAuthenticated || !userDetails && userDetails.id) {
 
+<<<<<<< HEAD
 if (!isAuthenticated || !userDetails && userDetails.id) {
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
@@ -48,6 +49,8 @@ export function useSavedTalents() {
 
     const fetchSavedTalents = async () => {
       if (!isAuthenticated |!userDetails.id) {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         setIsLoading(false);
         return
       }
@@ -57,11 +60,19 @@ export function useSavedTalents() {
         const { data: savedData, error: savedError } = await supabase
           .from('saved_talents')
           .select('talent_id')
+<<<<<<< HEAD
           .eq('user_id', userDetails && userDetails.id);
+=======
+
+          .eq('user_id', userDetails && userDetails.id);
+          
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         if (savedError) throw savedError;
         if (savedData) {
           const talentIds = savedData && savedData.map(item => item && item.talent_id);
           setSavedTalentIds(talentIds);
+<<<<<<< HEAD
           if (talentIds && talentIds.length > 0) {
           .eq('user_id', userDetails.id);
         if (savedError) throw savedError;
@@ -69,6 +80,12 @@ export function useSavedTalents() {
           const talentIds = savedData.map(item => item.talent_id);
           setSavedTalentIds(talentIds);
           if (talentIds.length > 0) {
+=======
+
+          
+          if (talentIds && talentIds.length > 0) {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             // Fetch full talent profiles for saved talents
             const { data: talentData, error: talentError } = await supabase
               .from('talent_profiles')
@@ -76,6 +93,7 @@ export function useSavedTalents() {
               .in('id', talentIds);
             if (talentError) throw talentError;
             setSavedTalents(talentData |[])
+<<<<<<< HEAD
           } else {
             setSavedTalents([])
       if (!isAuthenticated || !userDetails.id) {
@@ -120,6 +138,58 @@ export function useSavedTalents() {;
             setSavedTalents(talentData || []);
           } else {;
             setSavedTalents([]);
+=======
+=======
+import { useState, useEffect } from './react';
+import { supabase } from '@/integrations / supabase / client';
+import { TalentProfile } from '@/types / talent';
+import { toast } from '@/hooks / use - toast';
+import { useAuthStatus } from '@/hooks / talent';
+export /**
+ * useSavedTalents - Function description
+ */
+function useSavedTalents() {
+  const { is_authenticated, user_details } = useAuthStatus ();
+  const [saved_talents, setSavedTalents] = useState < TalentProfile[]>([]);
+  const [savedTalentIds, setSavedTalentIds] = useState < string[]>([]);
+  const [is_loading, setIsLoading] = useState (true);
+;
+  // Fetch saved talents;
+  useEffect (() => {
+    const fetchSavedTalents = async () => {
+      // Check condition
+if ( {) {
+  $2
+}
+        setIsLoading (false);
+        return;
+      }
+      setIsLoading (true);
+;
+      try {
+        // Get saved talent IDs;
+        const { data: saved_data, error: saved_error } = await supabase;
+          .from ('saved_talents');
+          .select ('talent_id');
+          .eq ('user_id', user_details.id);
+;
+        // Check condition
+if (throw saved_error) {
+  $2
+}
+        // Check condition
+if ( {) {
+  $2
+}
+          const talent_ids = saved_data.map (item => item.talent_id);
+          setSavedTalentIds (talent_ids);
+;
+          // Check condition
+if ( {) {
+  $2
+}
+            // Fetch full talent profiles for saved talents;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             const { data: talent_data, error: talent_error } = await supabase;
               .from ('talent_profiles');
               .select ('*');
@@ -228,6 +298,7 @@ export function useSavedTalents() {;
       } catch (error) {
         console.error('Error fetching saved talents:', error),
         toast({
+<<<<<<< HEAD
           title: "Error loading favorites",
           description: "There was a problem loading your saved talents.",
 
@@ -235,23 +306,41 @@ export function useSavedTalents() {;
           description: "There was a problem loading your saved talents."
           title: "Error loading favorites",
           description: "There was a problem loading your saved talents.",
+=======
+
+          title: "Error loading favorites",
+          description: "There was a problem loading your saved talents.",
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           variant: "destructive"
         })
       } finally {
         setIsLoading(false)
       }
 
+<<<<<<< HEAD
     }
     fetchSavedTalents()
   }, [isAuthenticated, userDetails.id]);
     }
     fetchSavedTalents()
   }, [isAuthenticated, userDetails.id]);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
     
     fetchSavedTalents()
   }, [isAuthenticated, userDetails.id]),
 
+<<<<<<< HEAD
+=======
+
+
+  // Toggle save talent
+  const toggleSaveTalent = async (talent: TalentProfile) => {
+    if (!isAuthenticated |!userDetails.id |!talent.id) {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }, [isAuthenticated, userDetails && userDetails.id]);
   // Toggle save talent
   const toggleSaveTalent = async (talent: TalentProfile) => {
@@ -289,6 +378,7 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
     const isSaved = savedTalentIds && savedTalentIds.includes(talent && talent.id);
   // Toggle save talent
   const toggleSaveTalent = async (talent: TalentProfile) => {
@@ -306,17 +396,25 @@ if ( {) {
     
     const isSaved = savedTalentIds.includes(talent.id),
     
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {
       if (isSaved) {
         // Remove from saved_talents
         const { error } = await supabase
           .from('saved_talents')
           .delete()
+<<<<<<< HEAD
           .eq('user_id', userDetails.id)
           .eq('talent_id', talent.id);
         if (error) throw error;
         setSavedTalents(prev => prev.filter(t => t.id !== talent.id));
         setSavedTalentIds(prev => prev.filter(id => id !== talent.id));
+=======
+
+          .eq('user_id', userDetails.id)
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           .eq('talent_id', talent.id),
           
         if (error) throw error,
@@ -324,6 +422,15 @@ if ( {) {
         setSavedTalents(prev => prev.filter(t => t.id !== talent.id)),
         setSavedTalentIds(prev => prev.filter(id => id !== talent.id)),
         
+<<<<<<< HEAD
+=======
+
+
+        toast({
+          title: "Removed from favorites"
+          description: `${talent.full_name} has been removed from your favorites`})
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           .eq('user_id', userDetails && userDetails.id)
           .eq('talent_id', talent && talent.id);
         if (error) throw error;
@@ -332,14 +439,22 @@ if ( {) {
         toast({
           title: "Removed from favorites",
           description: `${talent && talent.full_name} has been removed from your favorites`})
+<<<<<<< HEAD
         toast({
           title: "Removed from favorites"
           description: `${talent.full_name} has been removed from your favorites`})
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       } else {
         // Add to saved_talents
         const { error } = await supabase
           .from('saved_talents')
           .insert({
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             user_id: userDetails && userDetails.id,
             talent_id: talent && talent.id});
           
@@ -348,11 +463,14 @@ if ( {) {
         setSavedTalents(prev => [...prev, talent]);
 
 
+<<<<<<< HEAD
             user_id: userDetails.id
             talent_id: talent.id});
         if (error) throw error;
         setSavedTalents(prev => [...prev, talent]);
         setSavedTalentIds(prev => [...prev, talent.id]);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             user_id: userDetails.id,
             talent_id: talent.id}),
           
@@ -361,6 +479,7 @@ if ( {) {
         setSavedTalents(prev => [...prev, talent]),
         setSavedTalentIds(prev => [...prev, talent.id]),
         
+<<<<<<< HEAD
             user_id: userDetails && userDetails.id,
             talent_id: talent && talent.id});
         if (error) throw error;
@@ -369,11 +488,26 @@ if ( {) {
         toast({
           title: "Added to favorites",
           description: `${talent && talent.full_name} has been added to your favorites`})
+=======
+
+
+        toast({
+          title: "Added to favorites"
+          description: `${talent.full_name} has been added to your favorites`})
+=======
+        setSavedTalentIds(prev => [...prev, talent && talent.id]);
+        
+        toast({
+          title: "Added to favorites",
+          description: `${talent && talent.full_name} has been added to your favorites`})
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
     } catch (error) {
       console && console.error('Error toggling saved talent:', error);
       toast({
 
+<<<<<<< HEAD
         toast({
           title: "Added to favorites"
           description: `${talent.full_name} has been added to your favorites`})
@@ -389,14 +523,19 @@ if ( {) {
   }
   // Check if talent is saved
   const isTalentSaved = (talentId: string) => {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return savedTalentIds && savedTalentIds.includes(talentId)
   };
 
 
+<<<<<<< HEAD
     return savedTalentIds && savedTalentIds.includes(talentId)
   };
     return savedTalentIds.includes(talentId)
   }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return {
     savedTalents;
     savedTalentIds;
@@ -404,6 +543,7 @@ if ( {) {
     toggleSaveTalent;
 
     isTalentSaved
+<<<<<<< HEAD
         title: "Error",
         description: "There was a problem updating your favorites. Please try again.",
         variant: "destructive"
@@ -432,6 +572,10 @@ if ( {) {
       return;
     }
   }
+=======
+  }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const is_saved = savedTalentIds.includes (talent.id);
 ;
     try {
@@ -499,6 +643,7 @@ if (throw error) {
 
 
   }
+<<<<<<< HEAD
 }
     ;
     const isSaved = savedTalentIds.includes(talent.id),;
@@ -554,3 +699,7 @@ if (throw error) {
     isTalentSaved;
   }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

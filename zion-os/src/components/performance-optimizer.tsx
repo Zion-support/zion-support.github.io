@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 "use client",
 import { Suspense, lazy, Component, ReactNode  } from './react';,
 import { useState, useEffect  } from './react';,
@@ -5,6 +9,7 @@ import { useState, useEffect  } from './react';,
 const LazyComponent = ({ component: Component, fallback, ...props }: {
   component: React.ComponentType < any>,
   fallback: ReactNode,
+<<<<<<< HEAD
 "use client";
 import { Suspense, lazy, Component, ReactNode } from "react";
 import { useState, useEffect } from "react";
@@ -15,6 +20,10 @@ const LazyComponent = ({ component: Component, fallback, ...props }: {component:
 import { Suspense, lazy, Component, ReactNode } from "react",;
 import { useState, useEffect } from "react",;
 // Lazy load components for better performance;
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 "use client",;
 import { Suspense, lazy, Component, ReactNode } from "react",;
@@ -24,13 +33,23 @@ const LazyComponent = ({ component: Component, fallback, ...props }: {;
   component: React.ComponentType<any>,;
   fallback: ReactNode,;
 
+<<<<<<< HEAD
 const LazyComponent = ({ component: Component, fallback, ...props }: {;
   component: React.ComponentType<any>,;
   fallback: ReactNode,;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   [key: string]: any;
 }) =>: any (
   <Suspense fallback={fallback}>;
     <Component {...props} />;
+<<<<<<< HEAD
+=======
+
+  </Suspense>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ),;
 // Error boundary for better error handling;
 interface ErrorBoundaryState {;
@@ -64,6 +83,12 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps ErrorBoundarySta
 
         <div className="p-6 text-center">;
           <div className="text-[var(--error)] text-lg mb-2">Something went wrong</div>;
+<<<<<<< HEAD
+=======
+=======
+  </Suspense>),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   </Suspense>;
 );
 // Error boundary for better error handling;
@@ -127,6 +152,10 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps ErrorBoundarySta
           </button>;
         </div>);
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ;
     return this.props.children;
@@ -134,6 +163,25 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps ErrorBoundarySta
 }
 ;
 // Loading spinner component;
+<<<<<<< HEAD
+=======
+export function LoadingSpinner({ size = "md", className = "" }: {;
+  size?: "sm" | "md" | "lg",;
+  className?: string;
+}) {;
+  const sizeClasses = {;
+    sm: "w-4 h-4",;
+    md: "w-6 h-6",;
+    lg: "w-8 h-8";
+  },;
+
+
+  return (;
+    <div className={`animate-spin rounded-full border-2 border-[var(--border)] border-t-[var(--accent)] ${sizeClasses[size]} ${className}`} />;
+  );
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ;
 // Skeleton loading component;
@@ -146,6 +194,22 @@ export function Skeleton({ className = "", lines = 1 }: {;
 
     <div className={`animate-pulse ${className}`}>;
       {Array.from({ length: lines }).map((_, i) => (;
+<<<<<<< HEAD
+=======
+=======
+export /**
+ * LoadingSpinner - Function description
+ */
+function LoadingSpinner() {
+  const size_classes = {
+    sm: "w - 4 h - 4",
+    md: "w - 6 h - 6",
+    lg: "w - 8 h - 8";
+  },
+  return (
+    <div className={`animate - spin rounded - full border - 2 border-[var (--border)] border - t-[var (--accent)] ${size_classes[size]} ${class_name}`} />);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function LoadingSpinner({ size = "md", className = "" }: {size?: "sm" | "md" | "lg";
   className?: string;
 }) {const sizeClasses = {;
@@ -192,6 +256,7 @@ export function Skeleton({ className = "", lines = 1 }: {;
         />))}
     </div>);
 }
+<<<<<<< HEAD
 // Performance monitoring hook;
 
 export function usePerformanceMonitor(componentName: string) {const startTime = window.window.window.performance.now();
@@ -199,6 +264,21 @@ export function usePerformanceMonitor(componentName: string) {const startTime = 
     endMeasure: () => {;
       const endTime = window.window.window.performance.now();
       const duration = endTime - startTime;
+=======
+
+export /**
+ * usePerformanceMonitor - Function description
+ */
+function usePerformanceMonitor() {
+  const start_time = window.window.window.performance.now (),
+  return {
+    end_measure: () => {
+      const end_time = window.window.window.performance.now (),
+      const duration = end_time - start_time,
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 // Performance monitoring hook;
 export function usePerformanceMonitor(componentName: string) {;
@@ -207,6 +287,11 @@ export function usePerformanceMonitor(componentName: string) {;
     endMeasure: () => {;
       const endTime = window.window.window.performance.now(),;
       const duration = endTime - startTime,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Log performance metrics in development;
       // Check condition
 if ( {) {
@@ -214,6 +299,10 @@ if ( {) {
 }
         // // // console.log (`${component_name} render time: ${duration.to_fixed (2)}ms`);
       }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ;
       // Send to analytics in production;
@@ -222,6 +311,17 @@ if ( {) {
 
 
         console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);
+<<<<<<< HEAD
+=======
+=======
+      // Check condition
+if ( {) {
+  $2
+}
+        // Could send to analytics service here;
+        console.warn (`${component_name} took ${duration.to_fixed (2)}ms to render`);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       if (process.env.NODE_ENV === "production" && duration > 100) {// Could send to analytics service here;
 ;
       // Send to analytics in production;
@@ -232,6 +332,29 @@ if ( {) {
     }
   }
 }
+<<<<<<< HEAD
+=======
+
+export /**
+ * useIntersectionObserver - Function description
+ */
+function useIntersectionObserver() {
+  const [is_intersecting, setIsIntersecting] = useState (false),
+  useEffect (() => {
+    const element = ref.current,
+    // Check condition
+if (return, ) {
+  $2
+}
+    const observer = new IntersectionObserver (([entry]) => {
+      setIsIntersecting (entry.is_intersecting);
+    }, options),
+    observer.observe (element),
+    return () => observer.disconnect ();
+  }, [ref, options]),
+  return is_intersecting;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ;
 // Intersection observer hook for lazy loading;
@@ -253,6 +376,7 @@ export function useIntersectionObserver(;
 
 }
 // Debounced search hook for better performance;
+<<<<<<< HEAD
 export function useDebounce<T>(value: T, delay: number): T {const [debouncedValue, setDebouncedValue] = useState<T>(value);
   useEffect(() => {;
     const handler = setTimeout(() => {;
@@ -279,6 +403,9 @@ export function useIntersectionObserver(;
 }
 ;
 // Debounced search hook for better performance;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function useDebounce<T>(value: T, delay: number): T {;
   const [debouncedValue, setDebouncedValue] = useState<T>(value),;
   useEffect(() => {;
@@ -287,15 +414,27 @@ export function useDebounce<T>(value: T, delay: number): T {;
     }, delay),;
     return () => {;
       clearTimeout(handler);
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   }, [value, delay]);
   return debounced_value;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 export { LazyComponent };
 
 
+<<<<<<< HEAD
 export { LazyComponent }
 ;
 export { LazyComponent };
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

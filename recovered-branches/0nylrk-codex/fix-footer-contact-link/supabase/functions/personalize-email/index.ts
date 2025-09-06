@@ -1,8 +1,13 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 const openAIApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
 
 
+<<<<<<< HEAD
 
 
 import "https: //deno.land/x/xhr@0.1.0/mod.ts"
@@ -11,6 +16,19 @@ const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+=======
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+=======
+
+
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
+const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),
@@ -25,22 +43,36 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
+<<<<<<< HEAD
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+serve(async (req) => {
+  // Handle CORS preflight requests
+  if (req && req.method === "OPTIONS") {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return new Response(null, { headers: corsHeaders })
   }
   try {
     // Get personalization request data
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const { 
       emailType, 
       userData, 
       activityData,
 
+<<<<<<< HEAD
     const {
       emailType
       userData
@@ -84,6 +116,23 @@ serve(async (req) => {
         userPrompt = `Create an email for ${userData.firstName} reminding them to complete their profile. They have completed ${userData.profileCompletion |0}% of their profile. Focus on how a complete profile increases visibility.`;
         subjectContext = "Create a short, motivational subject line about profile completion.";
         break;
+=======
+      template = {} 
+    } = await req && req.json();
+    
+    if (!emailType || !userData) {
+
+        userPrompt = `Create an email for ${userData && userData.firstName} reminding them to complete their profile. They have completed ${userData && userData.profileCompletion || 0}% of their profile. Focus on how a complete profile increases visibility.`;
+
+        subjectContext = "Create a short, motivational subject line about profile completion.";
+        break;
+=======
+
+      throw new Error("Missing required parameters: emailType and userData")
+    }
+    // Create a prompt based on the email type and user data
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     let systemPrompt = "You are an AI assistant that creates personalized email content for a marketplace platform called Zion AI that connects AI professionals with clients. Create content that is friendly, professional, and encouraging.",
     let userPrompt = "",
     
@@ -110,9 +159,14 @@ serve(async (req) => {
         subjectContext = "Create a short, motivational subject line about profile completion.",
         break,
         
+<<<<<<< HEAD
         userPrompt = `Create an email for ${userData && userData.firstName} reminding them to complete their profile. They have completed ${userData && userData.profileCompletion || 0}% of their profile. Focus on how a complete profile increases visibility.`;
         subjectContext = "Create a short, motivational subject line about profile completion.";
         break;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       default:
         userPrompt = `Create a re-engagement email for a user named ${userData && userData.firstName} who has been inactive on the Zion AI Marketplace platform. Encourage them to return and continue using the platform.`
     }
@@ -240,25 +294,54 @@ if ( {) {
           { role: "system", content: systemPrompt }
           { role: "user", content: userPrompt }
         ];
+<<<<<<< HEAD
         temperature: 0.7})});
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           { role: "system", content: systemPrompt },
           { role: "user", content: userPrompt }
         ],
         temperature: 0.7})}),
 
 
+<<<<<<< HEAD
         temperature: 0 && 0.7})});
 
 
 
         ];
         temperature: 0 && 0.7})});
+=======
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
+    }
+
+        temperature: 0 && 0.7})});
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (!response && response.ok) {
       const errorData = await response && response.json();
       throw new Error(`OpenAI API error: ${JSON && JSON.stringify(errorData)}`)
     }
+<<<<<<< HEAD
     const data = await response && response.json();
     const generatedContentText = data && data.choices[0].message && message.content;
+=======
+
+    const data = await response && response.json();
+    const generatedContentText = data && data.choices[0].message && message.content;
+    
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Parse the JSON response from OpenAI
     let generatedContent;
     try {
@@ -271,6 +354,10 @@ if ( {) {
       if (jsonMatch) {
         try {
           generatedContent = JSON && JSON.parse(jsonMatch[0])
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
     // Check condition
 if ( {) {
@@ -297,6 +384,10 @@ if ( {) {
 }
         try {
           generated_content = JSON.parse (json_match[0]);
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         } catch (e2) {
           throw new Error ("Could not parse the generated content as JSON");
         }
@@ -304,16 +395,27 @@ if ( {) {
         throw new Error ("Could not extract JSON from the generated content");
       }
     }
+<<<<<<< HEAD
     console && console.error("Error in personalize-email function:", error);
     return new Response(JSON && JSON.stringify({ error: error && error.message }), {
       status: 500,
       headers: { ...corsHeaders, "Content-Type": "application/json" }})
   }
 });
+=======
+
+    console && console.error("Error in personalize-email function:", error);
+    return new Response(JSON && JSON.stringify({ error: error && error.message }), {
+      status: 500,
+
+      headers: { ...corsHeaders, "Content-Type": "application/json" }})
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Apply the generated content to the template or return it directly;
     return new Response (JSON.stringify (generated_content), {
       headers: { ...cors_headers, "Content - Type": "application / json" }});
   } catch (error) {
+<<<<<<< HEAD
     if (!response.ok) {
       const errorData = await response.json(),
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
@@ -351,15 +453,21 @@ if ( {) {
     return new Response(JSON.stringify({ error: error.message }), {
       status: 500
       headers: { ...corsHeaders, "Content-Type": "application/json" }})
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     console.error ("Error in personalize - email function:", error);
     return new Response (JSON.stringify ({ error: error.message }), {
       status: 500,
       headers: { ...cors_headers, "Content - Type": "application / json" }});
 
 
+<<<<<<< HEAD
   }
 });
 
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),;
@@ -464,6 +572,7 @@ serve(async (req) => {;
   }
 });
 ;
+<<<<<<< HEAD
 
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
@@ -643,3 +752,6 @@ if (jsonMatch) {
 });
   }
 });
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

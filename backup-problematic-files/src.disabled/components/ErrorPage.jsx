@@ -9,4 +9,8 @@ const ErrorPage = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ErrorPage;
+=======
+export default ErrorPage;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

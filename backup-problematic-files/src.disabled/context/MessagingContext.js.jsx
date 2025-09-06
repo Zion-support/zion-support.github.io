@@ -9,4 +9,8 @@ const MessagingContext.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default MessagingContext.js;
+=======
+export default MessagingContext.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,11 +1,23 @@
+<<<<<<< HEAD
 // Define HTML element types;
 interface HTMLElement {;
+=======
+
+
+// Define HTML element types;
+interface HTMLElement {;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   className: string;
   id: string;
   innerHTML: string;
   textContent: string | null;
   style: { [key: string]: string }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from './react';
 import { cva, type VariantProps  } from './class - variance - authority';
 import { cn  } from '../../lib / utils';
@@ -18,9 +30,18 @@ interface HTMLElement {
   text_content: string | null;
   style: { [key: string]: string }
 }
+<<<<<<< HEAD
 interface HTMLDivElement extends HTMLElement {
   tag_name: 'DIV';
 }
+=======
+
+interface HTMLDivElement extends HTMLElement {
+  tag_name: 'DIV';
+}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface HTMLDivElement extends HTMLElement {;
   tagName: 'DIV';
 }
@@ -47,6 +68,10 @@ export interface BadgeProps;
   extends React && React.HTMLAttributes<HTMLDivElement>,;
     VariantProps<typeof badgeVariants> {}
 function Badge(): any ({ className, variant, ...props }: BadgeProps) {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className={cn(badgeVariants({ variant }), className)} {...props} />;
   );

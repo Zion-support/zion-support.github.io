@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Badge} from "@/components/ui/badge";
@@ -17,6 +18,12 @@ import { ActionButtons } from "./ActionButtons";
 import { EmptyFraudState } from "./EmptyFraudState";
 import { ActionButtons } from "./ActionButtons",
 import { EmptyFraudState } from "./EmptyFraudState",
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface FraudFlagsTableProps {
 
   flags: FraudFlag[]
@@ -31,6 +38,7 @@ interface FraudFlagsTableProps {
 
 
 
+<<<<<<< HEAD
 export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
   flags;
   isLoading;
@@ -46,6 +54,8 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
   isLoading,
   hasFilters,
   resetFilters,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onAction
 }) => {
   if (isLoading) {
@@ -56,6 +66,18 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
       </div>
     )
 
+<<<<<<< HEAD
+=======
+import React from "react";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Badge} from "@/components/ui/badge";
+import {FraudFlag} from "@/types/fraud";
+import {SeverityDisplay} from "./SeverityDisplay";
+import {ActionButtons} from "./ActionButtons";
+import {EmptyFraudState} from "./EmptyFraudState";
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",;
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
 import { Badge } from "@/components/ui/badge",;
@@ -63,6 +85,10 @@ import { FraudFlag } from "@/types/fraud",;
 import { SeverityDisplay } from "./SeverityDisplay",;
 import { ActionButtons } from "./ActionButtons",;
 import { EmptyFraudState } from "./EmptyFraudState",;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface FraudFlagsTableProps {;
   flags: FraudFlag[],;
   isLoading: boolean,;
@@ -71,6 +97,7 @@ interface FraudFlagsTableProps {;
   onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void;
 }
 
+<<<<<<< HEAD
 import React from "react",;
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
 import { Badge } from "@/components/ui/badge",;
@@ -91,10 +118,17 @@ export const FraudFlagsTable:React.FC<FraudFlagsTableProps> = ({;
   flags,;
   isLoading,;
   hasFilters,;
+=======
+export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
+  flags;
+  isLoading;
+  hasFilters;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   resetFilters,;
   onAction;
 }) => {;
   if (isLoading) {;
+<<<<<<< HEAD
 ;
 export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
   flags,;
@@ -105,14 +139,24 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
 }) => {;
   if (isLoading) {;
     return (;
+=======
+    return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="flex justify-center items-center h-64">;
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>;
       </div>;
     );
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   if (flags.length === 0) {
     return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />
   }
+<<<<<<< HEAD
 
 
   return (
@@ -147,6 +191,8 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
             </TableCell>
             <TableCell className="max-w-xs truncate">{flag.reason}</TableCell>
             <TableCell className="max-w-xs truncate">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   return (
@@ -245,13 +291,24 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
     </Table>;
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </TableBody>;
     </Table>;
   );
 
 
 
+<<<<<<< HEAD
 };
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from './react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
 import { Badge } from '@/components / ui / badge';
@@ -351,6 +408,7 @@ if ( {) {
     </Table>);
 }
 ;
+<<<<<<< HEAD
   ),;
 },; interface FraudFlagsTableProps {
   flags: FraudFlag[];
@@ -423,3 +481,6 @@ onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') 
     </Table>;
   );
 };
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

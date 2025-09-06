@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState, useEffect} from "react";
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
@@ -7,6 +11,11 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {ReviewForm} from "./ReviewForm";
 import {useReviews} from "@/hooks/useReviews";
 import { useState, useEffect } from "react",
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {
   Dialog;
   DialogContent;
@@ -16,6 +25,7 @@ import {
   DialogTrigger} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+<<<<<<< HEAD
 import { ReviewForm } from "./ReviewForm";
 import { useReviews } from "@/hooks/useReviews";
 interface LeaveReviewModalProps {
@@ -100,6 +110,15 @@ import { Button } from "@/components/ui/button",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 import { ReviewForm } from "./ReviewForm",;
 import { useReviews } from "@/hooks/useReviews",;
+=======
+
+import {useState, useEffect} from "react";
+import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
+import {Button} from "@/components/ui/button";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {ReviewForm} from "./ReviewForm";
+import {useReviews} from "@/hooks/useReviews";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface LeaveReviewModalProps {;
   projectId: string,;
   revieweeId: string,;
@@ -107,6 +126,12 @@ interface LeaveReviewModalProps {;
   isOpen: boolean,;
   onClose: () => void;
 }
+<<<<<<< HEAD
+=======
+
+export function LeaveReviewModal(): any ({;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   projectId;
   revieweeId;
   revieweeName;
@@ -114,6 +139,7 @@ interface LeaveReviewModalProps {;
   onClose}: LeaveReviewModalProps) {;
   const { userReview, submitReview, updateReview, isSubmitting } = useReviews(projectId);
   const [open, setOpen] = useState(isOpen);
+<<<<<<< HEAD
   useEffect(() => {;
     setOpen(isOpen);
   }, [isOpen]);
@@ -151,11 +177,20 @@ export function LeaveReviewModal({;
   useEffect(() => {;
     setOpen(isOpen);
   }, [isOpen]),;
+=======
+
+
+  useEffect(() => {;
+    setOpen(isOpen);
+  }, [isOpen]);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleOpenChange = (open: boolean) => {;
     setOpen(open),;
     if (!open) {;
       onClose();
     }
+<<<<<<< HEAD
       const { project_id, reviewee_id, ...updates } = formValues;
       const success = await updateReview(userReview && userReview.id, updates);
   },;
@@ -164,6 +199,16 @@ export function LeaveReviewModal({;
       // Update existing review;
       const { project_id, reviewee_id, ...updates } = formValues,;
       const success = await updateReview(userReview.id, updates),;
+=======
+  };
+
+  const handleSubmit = async (formValues: any) => {;
+    if (userReview) {;
+      // Update existing review;
+
+      const { project_id, reviewee_id, ...updates } = formValues;
+      const success = await updateReview(userReview && userReview.id, updates);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       if (success) {;
         handleOpenChange(false);
       }
@@ -173,6 +218,10 @@ export function LeaveReviewModal({;
       const success = await submitReview(formValues);
       if (success) {;
         handleOpenChange(false);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import { ReviewForm } from "./ReviewForm",
 import { useReviews } from "@/hooks/useReviews",
@@ -193,14 +242,18 @@ interface LeaveReviewModalProps {
 
 
 
+<<<<<<< HEAD
       }
       return success
     }
   }
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
   };
   },
+<<<<<<< HEAD
   };
   return (
   },;
@@ -225,10 +278,19 @@ interface LeaveReviewModalProps {
   },;
   ;
   return (;
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <Dialog open={open} onOpenChange={handleOpenChange}>;
       <DialogContent className="max-w-md">;
         <DialogHeader>;
           <DialogTitle>;
+<<<<<<< HEAD
             {userReview ? "Edit Your Review" :`Rate Your Experience with ${revieweeName}`}
           </DialogTitle>;
           <DialogDescription>;
@@ -370,6 +432,17 @@ return (</DialogTitle> <DialogDescription> Your feedback helps build a trustwort
             Your feedback helps build a trustworthy community. It will be visible after moderation.
           </DialogDescription>
         </DialogHeader>
+=======
+            {userReview ? "Edit Your Review" : `Rate Your Experience with ${revieweeName}`}
+
+          </DialogTitle>;
+          <DialogDescription>;
+            Your feedback helps build a trustworthy community. It will be visible after moderation.;
+          </DialogDescription>;
+        </DialogHeader>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <ReviewForm
           projectId={projectId}
           revieweeId={revieweeId}
@@ -377,14 +450,46 @@ return (</DialogTitle> <DialogDescription> Your feedback helps build a trustwort
           onSubmit={handleSubmit}
           defaultValues={userReview |undefined}
           isSubmitting={isSubmitting}
+<<<<<<< HEAD
         />
       </DialogContent>
     </Dialog>
   )
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         />;
       </DialogContent>;
     </Dialog>;
   );
 }
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import { useState, useEffect } from './react';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components / ui / dialog';
+import { Button } from '@/components / ui / button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+import { ReviewForm } from './ReviewForm';
+import { use_reviews } from '@/hooks / use_reviews';
+interface LeaveReviewModalProps {
+  project_id: string,
+  reviewee_id: string,
+  reviewee_name: string,
+  is_open: boolean,
+  on_close: () => void;
+}
+export /**
+ * LeaveReviewModal - Function description
+ */
+function LeaveReviewModal() {
+  const { user_review, submit_review, update_review, is_submitting } = use_reviews (project_id);
+  const [open, set_open] = useState (is_open);
+;
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

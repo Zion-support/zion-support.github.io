@@ -534,4 +534,8 @@ export default function FinancePage() {
   );
 };
 
+<<<<<<< HEAD
 export default Finance;
+=======
+export default Finance;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

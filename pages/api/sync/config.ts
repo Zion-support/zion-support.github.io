@@ -41,6 +41,15 @@ import { readState, writeState } from "../../../utils/sync/storage",
 import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types",
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const state = readState(),
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  if (req.method === "GET") {
+    return res.status(200).json({ config: state.config })
+  }
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
   } catch (error) {
     console.error("Error:", error);
@@ -65,6 +74,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
     writeState(state),
+<<<<<<< HEAD
 
     }
     if (Array.isArray(peers)) {
@@ -75,6 +85,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (scope) state.config.scope = scope
     if (instanceId && typeof instanceId === "string") state.config.instanceId = instanceId
     writeState(state)
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return res.status(200).json({ config: state.config })
     } catch (error) {
     console.error("Error:", error);
@@ -89,8 +102,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 };
 
 }
+<<<<<<< HEAD
   return res.status(405).json({ error: "Method not allowed" })
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from './next';,
 import { read_state, write_state  } from '../../../utils / sync / storage';,
 import { InstanceConfig, Peer, SyncScope  } from '../../../utils / sync / types';,
@@ -148,6 +166,7 @@ if (state.config.instance_id = instance_id, ) {
 }
 ;
 
+<<<<<<< HEAD
 export default function handler(_req: NextApiRequest, _res: NextApiResponse) {_const _state = readState();
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -315,6 +334,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 ;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return res.status(405).json({ error: "Method not allowed" });
   } catch (error) {
     console.error("Error:", error);
@@ -328,8 +349,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 
 
 }
 }
+=======
+
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

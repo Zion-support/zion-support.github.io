@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile",
 import { Briefcase } from "lucide-react",
 
@@ -17,6 +18,22 @@ import { Briefcase } from "lucide-react";
 import { ProfileExperience, as, ProfileExperienceType } from "@/types/profile";
 import { Briefcase } from "lucide-react";
 
+=======
+
+
+import { ProfileExperience as ProfileExperienceType } from "@/types/profile",
+import { Briefcase } from "lucide-react",
+
+=======
+import {ProfileExperience, as, ProfileExperienceType} from "@/types/profile";
+import {Briefcase} from "lucide-react";
+=======
+import { ProfileExperience as ProfileExperienceType } from "@/types/profile",
+import { Briefcase } from "lucide-react",
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface ProfileExperienceProps {
   experience: ProfileExperienceType[];
 }
@@ -24,7 +41,10 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
       <h3 className="text-xl font-bold text-white mb-4">Experience</h3>
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="space-y-6">
         {experience.map((exp) => (
           <div key={exp.id} className="flex">
@@ -33,7 +53,10 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
                 <Briefcase className="h-5 w-5 text-zion-purple" />
               </div>
             </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div>
               <h4 className="text-white font-medium">{exp.role}</h4>
               <div className="text-zion-cyan mb-1">{exp.company}</div>
@@ -43,11 +66,20 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
               <p className="text-zion-slate">{exp.description}</p>
             </div>
           </div>
+<<<<<<< HEAD
         ))}
       </div>
     </div>
   );
 }
+=======
+
+import {ProfileExperience, as, ProfileExperienceType} from "@/types/profile";
+import {Briefcase} from "lucide-react";
+interface ProfileExperienceProps {;
+  experience: ProfileExperienceType[];
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile",;
 import { Briefcase } from "lucide-react";
@@ -131,6 +163,7 @@ export function ProfileExperience({ experience } ProfileExperienceProps) {;
 }className=" flex"> <div className=" mr-4"> <div className=" h-10 w-10 rounded-full bg-zion-purple/20 flex items-center justify-center"> <Briefcase className=" h-5 w-5 text-zion-purple" /> </div> </div> <div> </div> </div>) ) 
 }</div> </div>) 
 }
+<<<<<<< HEAD
   );
 }
 ;
@@ -141,3 +174,6 @@ export function ProfileExperience({ experience } ProfileExperienceProps) {;
   )
 }
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

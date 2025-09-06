@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <nav className="mb-8">
             <Link href="/" className="text-white/60 hover:text-white transition-colors">
               Home
@@ -30,6 +35,77 @@
             </p>
           </header>
 
+<<<<<<< HEAD
+=======
+=======
+import React from 'react',
+import Head from 'next / head',
+import Link from 'next / link',
+export default /**
+ * CaseStudyPage - Function description
+ */
+function CaseStudyPage() {
+  return (
+    <>;
+      <Head>;
+        <title > Data Analytics Transformation - Case Study | Zion Tech Group</title>;
+        <meta name="description" content="Discover how a Healthcare Provider achieved 30% improvement in patient outcomes with comprehensive data analytics platform. Read our detailed case study." />;
+        <meta name="keywords" content="data analytics, healthcare analytics, predictive modeling, big data, machine learning" />;
+      </Head>;
+      <div className="min - h-screen bg - gradient - to - br from - gray - 900 via - blue - 900 to - gray - 900">;
+        <main className="container mx - auto px - 6 py - 12">;
+          {/* Breadcrumb */}
+          <nav className="mb - 8">;
+            <Link href="/" className="text - white / 60 hover:text - white transition - colors">;
+              Home;
+            </Link>;
+            <span className="text - white / 60 mx - 2">→</span>;
+            <Link href="/case - studies" className="text - white / 60 hover:text - white transition - colors">;
+              Case Studies;
+            </Link>;
+            <span className="text - white / 60 mx - 2">→</span>;
+            <span className="text - white">Data Analytics Transformation</span>;
+          </nav>;
+          {/* Header */}
+          <header className="text - center mb - 16">;
+            <div className="inline - block px - 4 py - 2 bg - purple - 400 / 20 text - purple - 400 text - sm rounded - full border border - purple - 400 / 30 mb - 6">;
+              Healthcare Industry;
+            </div>;
+            <h1 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
+              Data Analytics Transformation;
+            </h1>;
+            <p className="text - xl text - white / 80 max - w-3xl mx - auto">;
+              How a Healthcare Provider achieved 30% improvement in patient outcomes with comprehensive data analytics platform;
+            </p>;
+          </header>;
+
+          {/* Case Study Content */}
+          <div className="max - w-4xl mx - auto">;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            {/* Company Overview */}
+
+
+          {/* Case Study Content */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <div className="max-w-4xl mx-auto">
+            {/* Company Overview */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold text-white mb-6">Company Overview</h2>
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
+                <h3 className="text-2xl font-semibold text-purple-400 mb-4">Healthcare Provider</h3>
+                <p className="text-white/90 text-lg mb-4">
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                   A large healthcare network serving multiple communities with hospitals,
 
@@ -556,10 +632,14 @@ export default function CaseStudyPage(req, res) {
 
 }
 
+<<<<<<< HEAD
           {/* Case Study Content */}
           <div className="max - w-4xl mx - auto">;
             {/* Company Overview */}
 }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <section className="mb - 16">;
               <h2 className="text - 3xl font - bold text - white mb - 6">Company Overview</h2>;
               <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 8 border border - white / 20">;
@@ -861,6 +941,7 @@ export default function CaseStudyPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
           <nav className="mb-8">
             <Link href="/" className="text-white/60 hover:text-white transition-colors">
               Home
@@ -1480,3 +1561,8 @@ export default function CaseStudyPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

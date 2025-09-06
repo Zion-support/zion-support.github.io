@@ -9,4 +9,8 @@ const AIAnalyticsDashboard = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIAnalyticsDashboard;
+=======
+export default AIAnalyticsDashboard;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

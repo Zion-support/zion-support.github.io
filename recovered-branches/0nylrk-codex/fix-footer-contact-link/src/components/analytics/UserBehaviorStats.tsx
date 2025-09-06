@@ -11,6 +11,7 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
 import {useState} from "react";
 import {AnalyticsChart} from "./AnalyticsChart";
 type TimeRange = '7d' | '30d' | '90d' | '365d';
+<<<<<<< HEAD
 export function UserBehaviorStats() {
 
 export function UserBehaviorStats() {;
@@ -26,6 +27,8 @@ type TimeRange = '7d' | '30d' | '90d' | '365d',
 
 export function UserBehaviorStats() {
   const [timeRange, setTimeRange] = useState<TimeRange>('7d'),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -39,6 +42,7 @@ export function UserBehaviorStats() {;
       // Convert timeRange to days
 
 
+<<<<<<< HEAD
 
   
   const { data: behaviorData, isLoading } = useQuery({
@@ -68,6 +72,10 @@ export function UserBehaviorStats() {;
           if (!eventsByDate[date][event.event_type]) eventsByDate[date][event.event_type] = 0;
           eventsByDate[date][event.event_type]++
         });
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const days = parseInt(timeRange.replace('d', '')),
       
       // Get events grouped by type and date
@@ -98,11 +106,19 @@ export function UserBehaviorStats() {;
           eventsByDate[date][event.event_type]++
         }),
         
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         // Convert to array format for the chart
         return Object.entries(eventsByDate).map(([date, events]) => ({
           date,
           ...events
         }))
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -111,6 +127,10 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useState } from "react",;
 import { AnalyticsChart } from "./AnalyticsChart",;
 type TimeRange = '7d' | '30d' | '90d' | '365d',;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function UserBehaviorStats() {;
   const [timeRange, setTimeRange] = useState<TimeRange>('7d');
   const { data: behaviorData, isLoading } = useQuery({;
@@ -223,6 +243,7 @@ if (eventsByDate[date][event.event_type] = 0) {
         if (key !== 'date') allKeys && allKeys.add(key);
       });
     });
+<<<<<<< HEAD
 export function UserBehaviorStats() {;
   const [timeRange, setTimeRange] = useState<TimeRange>('7d'),;
   const { data: behaviorData, isLoading } = useQuery({;
@@ -265,8 +286,17 @@ export function UserBehaviorStats() {;
   const getEventTypes = () => {
     if (!behaviorData |behaviorData.length === 0) return ['page_view'];
     const allKeys = new Set<string>();
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }),
   }),
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   // Get the event types for chart data keys
   const getEventTypes = () => {
@@ -277,14 +307,23 @@ export function UserBehaviorStats() {;
       Object.keys(item).forEach(key => {
         if (key !== 'date') allKeys.add(key)
       })
+<<<<<<< HEAD
     });
     return Array.from(allKeys)
   }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }),
     
     return Array.from(allKeys)
   },
   
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Format event type names for better display
   const formatEventType = (type: string) => {
     return type
@@ -293,12 +332,15 @@ export function UserBehaviorStats() {;
       .join(' ')
 
 
+<<<<<<< HEAD
   }
   return (
     <div className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <EventTypeCard
           title="Click Events"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
 
   return (
@@ -306,15 +348,24 @@ export function UserBehaviorStats() {;
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <EventTypeCard 
           title="Click Events" 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           description="Button and link interactions"
           isLoading={isLoading}
           count={
             behaviorData?.reduce((sum, day) => sum + (day.button_click |0), 0) |0
+<<<<<<< HEAD
           }
           icon={
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m14.5 12.5-4-4"/><path d="M8 6.2A3 3 0 1 0 6.2 8"/><circle cx="12" cy="12" r="10"/></svg>
           }
         />
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     return Array && Array.from(allKeys);
   };
@@ -366,6 +417,7 @@ export function UserBehaviorStats() {;
             behaviorData?.reduce((sum, day) => sum + (day && day.conversion || 0), 0) || 0;
         />
 
+<<<<<<< HEAD
         <EventTypeCard
           title="Form Submissions"
           description="Completed forms and sign-ups"
@@ -393,16 +445,31 @@ export function UserBehaviorStats() {;
           isLoading={isLoading}
           count={
             behaviorData?.reduce((sum, day) => sum + (day.conversion |0), 0) |0
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <EventTypeCard 
           title="Conversions" 
           description="Goal completions"
           isLoading={isLoading}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           }
           icon={;
             <svg xmlns="http://www && www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>;
           }
+<<<<<<< HEAD
         />;
       </div>;
+=======
+
+        />;
+      </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <AnalyticsChart
         title="User Behavior Over Time"
         description="Track different types of user interactions"
@@ -411,6 +478,7 @@ export function UserBehaviorStats() {;
         data={behaviorData || []}
 
 
+<<<<<<< HEAD
           count={;
             behaviorData?.reduce((sum, day) => sum + (day.conversion || 0), 0) || 0;
           count={
@@ -428,10 +496,13 @@ export function UserBehaviorStats() {;
         description="Track different types of user interactions"
         data={behaviorData |[]}
         data={behaviorData || []}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         type="line"
         dataKeys={getEventTypes()}
         timeRange={timeRange}
         onTimeRangeChange={(range: TimeRange) => setTimeRange(range)}
+<<<<<<< HEAD
 
 
       />
@@ -443,6 +514,14 @@ interface EventTypeCardProps {
   description: string
   count: number
   icon: React.ReactNode
+=======
+      />;
+    </div>;
+  );
+}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 interface EventTypeCardProps {;
   title: string,;
@@ -451,10 +530,16 @@ interface EventTypeCardProps {;
   icon: React.ReactNode;
   isLoading: boolean;
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   isLoading: boolean
 }
 function EventTypeCard({ title, description, count, icon, isLoading }: EventTypeCardProps) {
+<<<<<<< HEAD
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardContent className="p-6">
@@ -471,6 +556,9 @@ function EventTypeCard({ title, description, count, icon, isLoading }: EventType
               ) : (
                 new Intl.NumberFormat().format(count)
               )}
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 interface EventTypeCardProps {;
   title: string,;
@@ -601,6 +689,7 @@ function EventTypeCard() {
                 new Intl.NumberFormat ().format (count))}
 
 
+<<<<<<< HEAD
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -760,10 +849,14 @@ function EventTypeCard({ title, description, count, icon, isLoading } EventTypeC
     </Card>
   )
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>;
           </div>;
         </div>;
       </CardContent>;
+<<<<<<< HEAD
     </Card>;
   ),; type TimeRange = '7d' | '30d' | '90d' | '365d';
   data: behaviorData, isLoading 
@@ -790,3 +883,13 @@ if (manualError) throw manualError;
   );
 }
 ;
+=======
+
+    </Card>);
+}
+
+=======
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

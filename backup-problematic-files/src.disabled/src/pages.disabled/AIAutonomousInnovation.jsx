@@ -9,4 +9,8 @@ const AIAutonomousInnovation = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIAutonomousInnovation;
+=======
+export default AIAutonomousInnovation;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

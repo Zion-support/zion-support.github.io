@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 export default function NeoFuturisticFooter() {
 
@@ -13,6 +14,33 @@ const contactInfo = {
 export default function NeoFuturisticFooter() {
   return (  website: 'https://ziontechgroup.com'
 }
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+import { motion } from 'framer-motion';
+
+
+export default function NeoFuturisticFooter() {
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {;
   Phone,;
   Mail,;
@@ -34,6 +62,7 @@ export default function NeoFuturisticFooter() {;
 
 export default function NeoFuturisticFooter() {;
   return (
+<<<<<<< HEAD
     <footer className='relative mt-20 border-t border-slate-800/60 bg-black/60 backdrop-blur-xl overflow-hidden'>;
       <div className='absolute inset-0 pointer-events-none'>;
         <div className='absolute -inset-x-10 -top-32 h-64 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 blur-3xl' />;
@@ -66,6 +95,16 @@ import {
   MapPin,
   Globe,
   Github,
+=======
+
+
+              Productized AI, IT and micro SaaS solutions with transparent;
+              pricing and fast onboarding. Built for outcomes, delivered with;
+              reliability.;
+            </p>;
+          </div>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 className='hover:underline'>;
                 {contactInfo && contactInfo.address}
               </a>;
@@ -79,6 +118,10 @@ import {
           </div>;
           <div className='space-y-2 text-sm'>;
             <div className='font-semibold text-slate-100 mb-2'>Resources</div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <a
               className='flex items-center gap-2 text-slate-300 hover:text-cyan-300'
               href='/market-pricing'>;
@@ -103,6 +146,10 @@ import {
               </a>;
               <a
                 aria-label='LinkedIn'
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <footer className="relative mt-20 border-t border-slate-800/60 bg-black/60 backdrop-blur-xl overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -inset-x-10 -top-32 h-64 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 blur-3xl" />
@@ -117,6 +164,10 @@ import {
             <p className="text-slate-400 text-sm leading-relaxed">
               Productized AI, IT and micro SaaS solutions with transparent pricing and fast onboarding. Built for outcomes, delivered with reliability.
             </p>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>
         </div>
           <div className="space-y-2 text-sm">
@@ -127,6 +178,7 @@ import {
             <div className="flex items-center gap-3 pt-2">
               <a aria-label="GitHub" href="https://github.com/Zion-Holdings" className="text-slate-400 hover:text-white"><Github className="w-5 h-5" /></a>
               <a aria-label="LinkedIn" href="https://www.linkedin.com/company/zion-tech-group/" className="text-slate-400 hover:text-white"><Linkedin className="w-5 h-5" /></a>
+<<<<<<< HEAD
             </div>
           </div>
         </div>
@@ -161,17 +213,31 @@ import {
             <div className=&quot;flex items-center gap-3 pt-2&quot;>
               <a aria-label=&quot;GitHub&quot; href=&quot;https://github.com/Zion-Holdings&quot; className=&quot;text-slate-400 hover:text-white&quot;><Github className=&quot;w-5 h-5&quot; /></a>
               <a aria-label=&quot;LinkedIn&quot; href=&quot;https://www.linkedin.com/company/zion-tech-group/&quot; className=&quot;text-slate-400 hover:text-white&quot;><Linkedin className=&quot;w-5 h-5&quot; /></a>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>
           </div>
         </div>
 
         <div className="mt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-t border-slate-800/60 pt-6">
+<<<<<<< HEAD
           <div className="text-xs text-slate-500">© {_new Date().getFullYear()} Zion Tech Group. All rights reserved.</div>
 
           <div className="text-xs text-slate-500 flex gap-4">
             <a href="/privacy" className="hover: text-slate-300">Privacy</a>
             <a href="/terms" className="hover:text-slate-300">Terms</a>
           </div>
+=======
+
+          <div className="text-xs text-slate-500">© {new Date().getFullYear()} Zion Tech Group. All rights reserved.</div>
+          <div className="text-xs text-slate-500 flex gap-4">
+            <a href="/privacy" className="hover: text-slate-300">Privacy</a>
+            <a href="/terms" className="hover:text-slate-300">Terms</a>
+
+          </div>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </div>
       </div>
     </footer>
@@ -193,6 +259,15 @@ import {
               <a aria-label="LinkedIn" href="https://www && www.linkedin.com/company/zion-tech-group/" className="text-slate-400 hover:text-white"><Linkedin className="w-5 h-5" /></a>;
           </div>;
         </div>;
+<<<<<<< HEAD
+=======
+
+
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className='space - y-2 text - sm'>;
             <div className='font - semibold text - slate - 100 mb - 2'>Contact</div>;
             <div className='flex items - center gap - 2 text - cyan - 300'>;
@@ -298,6 +373,7 @@ import {
     </footer>);
 }
 ;
+<<<<<<< HEAD
 
 
   Linkedin,;
@@ -454,3 +530,11 @@ export default function NeoFuturisticFooter() {
 
 export default function NeoFuturisticFooter() {
   return (
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

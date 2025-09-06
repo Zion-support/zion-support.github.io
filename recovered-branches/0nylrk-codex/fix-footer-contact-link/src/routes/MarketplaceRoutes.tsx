@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {Route, Routes} from "react-router-dom";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import Marketplace from "@/pages/Marketplace";
@@ -164,6 +165,8 @@ import ITOnsiteServicesPage from "@/pages/ITOnsiteServicesPage",;
 import SearchPage from "@/pages/SearchPage",;
 import ProjectRoom from "@/pages/ProjectRoom",;
 import VideoCall from "@/pages/VideoCall",;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -173,16 +176,20 @@ const MarketplaceRoutes = () => {;
     <Routes>;
       {/* Marketplace Routes */}
 
+<<<<<<< HEAD
 const MarketplaceRoutes = () => {;
   return (;
     <Routes>;
       {/* Marketplace Routes */}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <Route path="/marketplace" element={<Marketplace />} />;
       <Route path="/categories" element={<Categories />} />;
       <Route path="/category/:slug" element={<CategoryDetail />} />;
       <Route path="/featured" element={<Featured />} />;
       <Route path="/marketplace/listing/:id" element={<ListingDetail />} />;
       <Route path="/listing/:id" element={<ListingDetail />} />;
+<<<<<<< HEAD
       ;
       {/* Equipment Routes */}
       <Route path="/equipment" element={<EquipmentPage />} />;
@@ -199,12 +206,26 @@ const MarketplaceRoutes = () => {;
       <Route;
         path="/post-job";
         element={;
+=======
+
+      {/* Equipment Routes */}
+      <Route path="/equipment" element={<EquipmentPage />} />;
+      <Route path="/equipment/:id" element={<EquipmentDetail />} />;
+
+
+      {/* Job Routes */}
+      <Route
+        path="/post-job"
+        element={
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <ProtectedRoute>;
             <PostJob />;
           </ProtectedRoute>;
         } ;
       />;
       <Route path="/jobs/:id" element={<JobDetails />} />;
+<<<<<<< HEAD
       {/* AI Matcher Routes */}
       <Route path="/ai-matcher" element={<AIMatcher />} />;
       <Route path="/match" element={<AIMatcher />} />;
@@ -221,17 +242,33 @@ const MarketplaceRoutes = () => {;
       <Route;
         path="/publish";
         element={;
+=======
+
+      {/* AI Matcher Routes */}
+      <Route path="/ai-matcher" element={<AIMatcher />} />;
+      <Route path="/match" element={<AIMatcher />} />;
+
+      {/* Creator Routes */}
+      <Route
+        path="/publish" 
+        element={
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <ProtectedRoute>;
             <PublishProduct />;
           </ProtectedRoute>;
         } ;
       />;
+<<<<<<< HEAD
       ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Service Routes */}
       <Route path="/services" element={<ServicesPage />} />;
       <Route path="/it-onsite-services" element={<ITOnsiteServicesPage />} />;
       <Route path="/request-quote" element={<RequestQuote />} />;
       <Route path="/service-description-generator" element={<ServiceDescriptionGenerator />} />;
+<<<<<<< HEAD
       ;
       {/* Search Route */}
       <Route path="/search" element={<SearchPage />} />;
@@ -246,11 +283,22 @@ const MarketplaceRoutes = () => {;
       <Route;
         path="/project/:projectId";
         element={;
+=======
+
+      {/* Search Route */}
+      <Route path="/search" element={<SearchPage />} />;
+
+      {/* Project Room Routes */}
+      <Route
+        path="/project/:projectId" 
+        element={
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <ProtectedRoute>;
             <ProjectRoom />;
           </ProtectedRoute>;
         } ;
       />;
+<<<<<<< HEAD
       ;
       {/* Video Call Routes */}
       <Route ;
@@ -260,12 +308,23 @@ const MarketplaceRoutes = () => {;
       <Route;
         path="/call/:roomId";
         element={;
+=======
+
+      {/* Video Call Routes */}
+      <Route
+        path="/call/:roomId" 
+        element={
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <ProtectedRoute>;
             <VideoCall />;
           </ProtectedRoute>;
         } ;
       />;
     </Routes>;
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 };
 
 },
@@ -357,6 +416,7 @@ const MarketplaceRoutes = () =>: any {
 ;
 export default MarketplaceRoutes;
 ;
+<<<<<<< HEAD
   ),;
 },;
 ;
@@ -398,3 +458,6 @@ export default MarketplaceRoutes;
   );
 },;
 export default MarketplaceRoutes;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

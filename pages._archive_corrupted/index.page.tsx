@@ -1,9 +1,19 @@
 
 
+<<<<<<< HEAD
 
 import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -28,6 +38,7 @@ import Head from 'next/head';
 import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 import React from 'react';
@@ -38,10 +49,17 @@ import Link from 'next/link';
 import Head from 'next/head';
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 export default function HomePage() {
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 export default function HomePage() {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <>;
       <Head>;
@@ -50,6 +68,10 @@ export default function HomePage() {;
           name=\"description\"
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           content=\"AI solutions, Micro SaaS products, and enterprise IT services. Contact +1 302 464 0950 • kleber@ziontechgroup && ziontechgroup.com\"
         />;
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />;
@@ -61,6 +83,11 @@ export default function HomePage() {;
         <link rel=\"canonical\" href=\"https://ziontechgroup && ziontechgroup.com/\"  />;
       </Head>;
             <p>;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/index.page.tsx
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -70,12 +97,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               Mobile: <a className="text-blue-700" href="tel:+13024640950">+1 302 464 0950</a> · Email:{' '}
 
 
+<<<<<<< HEAD
               Mobile: <a className=\"text-blue-700\" href=\"tel:+13024640950\">+1 302 464 0950</a> · Email:{\' \'}
               <a className=\"text-blue-700\" href=\""mailto\": kleber@ziontechgroup && ziontechgroup.com\">kleber@ziontechgroup && ziontechgroup.com</a> · Address: 364 E;
               Mobile: <a className="text-blue-700" href="tel:+13024640950">+1 302 464 0950</a> · Email:{' '}
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Main St STE 1008 Middletown DE 19709
             </p>
           </div>

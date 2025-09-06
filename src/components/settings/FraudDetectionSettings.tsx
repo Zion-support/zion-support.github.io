@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
 import { Switch  } from '@/components/ui/switch';
@@ -74,6 +75,8 @@ export function FraudDetectionSettings() {
   },
 
   return (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 return (
     <Card className="mb-8">
       <CardHeader className="space-y-1">
@@ -329,4 +332,8 @@ export function FraudDetectionSettings() {;
     </Card>;
   );
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

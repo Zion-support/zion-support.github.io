@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from 'react';
 
@@ -86,6 +90,7 @@ import Head from 'next/head';
 import React from 'react';
 import Head from 'next / head';
 import {
+<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
 import Head from 'next/head';
@@ -99,17 +104,72 @@ import {
   Mail
   MapPin
   ExternalLink;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Check,
   Shield,
   ShieldAlert,
   Lock,
   Phone,
   Mail,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  MapPin,
+  ExternalLink,
+} from 'lucide-react';
+import Card from '../components / ui / Card';
+import Button from '../components / ui / Button';
+export default /**
+ * AIGuardrailsPage - Function description
+ */
+function AIGuardrailsPage() {
+  const contact_info = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',
+  }
+;
+  const features = [;
+    'Prompt / output policy engine with allow / deny lists',
+    'Jailbreak and prompt injection detection',
+    'PII / PHI detection and redaction',
+    'Toxicity, bias and safety classifiers',
+    'Human handoff flows and escalation policies',
+    'Audit logs, alerting and exportable evidence',
+  ];
+;
+  return (
+    <UltraAdvancedFuturisticBackground>;
+      <Head>;
+        <title > AI Guardrails Suite | Zion Tech Group</title>;
+        <meta;
+          name='description';
+          content='Production - grade safety and governance for AI apps: policy enforcement, jailbreak detection, PII / PHI controls and audit logs with SDKs and proxies.';
+        />;
+        <link rel='canonical' href='https://ziontechgroup.com / ai - guardrails' />;
+      </Head>;
+      <section className='min - h-screen pt - 28 pb - 20 px - 4'>;
+        <div className='max - w-6xl mx - auto'>;
+          <div className='text - center mb - 12'>;
+            <h1 className='text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - rose - 400 via - red - 500 to - orange - 500 bg - clip - text text - transparent'>;
+              AI Guardrails Suite;
+            </h1>;
+            <p className='mt - 4 text - xl text - gray - 300'>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Safety and governance for LLM apps with minimal integration and;
               strong guarantees.;
             </p>;
           </div>;
+<<<<<<< HEAD
                     className='w-full bg-gradient-to-r from-rose-500 to-orange-600 text-white'>;
+=======
+
+                    className='w-full bg-gradient-to-r from-rose-500 to-orange-600 text-white'>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 6 mb - 10'>;
             <Card className='lg:col - span - 2 bg - black / 30 border border - rose - 500 / 30'>;
               <div className='p - 6'>;
@@ -142,12 +202,20 @@ import {
                     href='/contact';
                     className='w - full bg - gradient - to - r from - rose - 500 to - orange - 600 text - white';
                   >;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     Request Demo;
                   </Button>;
                 </div>;
               </div>;
             </Card>;
           </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 12'>;
             <Card className='p - 6 bg - black / 30 border border - purple - 500 / 30'>;
               <h3 className='text - lg font - semibold mb - 2'>SDKs & Proxies</h3>;
@@ -166,11 +234,16 @@ import {
             <Card className='p - 6 bg - black / 30 border border - cyan - 500 / 30'>;
               <h3 className='text - lg font - semibold mb - 2'>Integrations</h3>;
               <p className='text - gray - 300 text - sm'>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 Slack, PagerDuty, Datadog and SIEM integrations for alerting and;
                 incident response.;
               </p>;
             </Card>;
           </div>;
+<<<<<<< HEAD
 import { Check, Shield, ShieldAlert, Lock, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Card from '../components/ui/Card';
@@ -477,12 +550,25 @@ export default function AIGuardrailsPage() {
               </p>;
             </Card>;
           </div>;
+=======
+
+
+              </Button>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 	);
 }
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </UltraAdvancedFuturisticBackground>);					<div className="bg - black / 20 border border - rose - 500 / 30 rounded - 2xl p - 6">;
       <h3 className="text - xl font - semibold text - white mb - 4 text - center">Contact</h3>;
       <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 text - sm">;
@@ -498,8 +584,12 @@ export default function AIGuardrailsPage() {
   </section>;
   </UltraAdvancedFuturisticBackground>);
 }
+<<<<<<< HEAD
 );
 	);
 }
 	);
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

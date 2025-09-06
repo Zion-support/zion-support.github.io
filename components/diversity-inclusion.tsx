@@ -1,11 +1,16 @@
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from "react";
 import Head from "next/head";
 
 
 export default function DiversityInclusionPage() {
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -27,6 +32,9 @@ class ErrorBoundary extends React.Component {
 import React from "react";
 import Head from "next/head";
 export default function DiversityInclusionPage() {;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
       <Head>;
@@ -87,6 +95,10 @@ export default function DiversityInclusionPage() {;
   );
 
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
@@ -170,6 +182,7 @@ function DiversityInclusionPage() {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 
 }
 
@@ -248,3 +261,11 @@ export default function DiversityInclusionPage() {
   );
 }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

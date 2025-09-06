@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import Head from 'next / head';
 import UltraFuturisticBackground from '../../components / ui / UltraFuturisticBackground';
 import Button from '../../components / ui / Button';
@@ -40,6 +41,29 @@ function extractServiceSlugFromLink (link: string): string | null {
   $2
 }
       return path.substring ('services/'.length);
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     return null;
   } catch {;
@@ -81,12 +105,20 @@ export async function getStaticProps(): any ({ params }: { params: { slug: strin
     props: { service },;
   };
 export default function ServiceDetailPage(): any ({ service }: { service: Service }) {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>;
       <Head>;
         <title>{service && service.name} | Zion Tech Group</title>;
         <meta
           name='description'
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export async /**
  * getStaticPaths - Function description
  */
@@ -192,9 +224,17 @@ function ServiceDetailPage() {
             <Card className='p - 6 bg - black / 40 border border - gray - 700 / 50'>;
               <div className='text - sm text - gray - 400 mb - 1'>Pricing</div>;
               <div className='text - 3xl font - bold text - white'>;
+<<<<<<< HEAD
                 {service.price}
                 <span className='text - base font - medium text - gray - 400'>;
                   {service.period}
+=======
+
+                {service.price}
+                <span className='text - base font - medium text - gray - 400'>;
+                  {service.period}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           content={service && service.tagline || service && service.description}
         />;
         <link rel='canonical' href={service && service.link} />;
@@ -246,6 +286,10 @@ function ServiceDetailPage() {
                 {service && service.setupTime || 'Fast'}
               </div>;
               <div className='mt-6 flex gap-3'>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <Button
                   href='/contact'
                   className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white'>;
@@ -254,6 +298,10 @@ function ServiceDetailPage() {
                 <Button
                   href={service && service.link}
                   variant='outline'
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   className='flex-1 border border-gray-600 text-gray-200'>;
                   <ExternalLink className='w-4 h-4 mr-2' /> Learn More;
                 </Button>;
@@ -264,6 +312,10 @@ function ServiceDetailPage() {
               <div className='space-y-3 text-sm'>;
                 <div className='flex items-center gap-2 text-cyan-400'>;
                   <Phone className='w-4 h-4' />;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <a
                     href={`tel:${contactInfo && contactInfo.mobile.replace(/[^+\\d]/g, '')}`}
                     className='hover:underline'>;
@@ -339,6 +391,10 @@ function ServiceDetailPage() {
                     className='text - xs hover:underline';
                   >;
                     {contact_info.address}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </a>;
                 </div>;
               </div>;
@@ -346,6 +402,7 @@ function ServiceDetailPage() {
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground',
@@ -540,6 +597,11 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
       </div>
     </UltraFuturisticBackground>;
   );
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
@@ -734,6 +796,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 	)
     </UltraFuturisticBackground>);
 ;
+<<<<<<< HEAD
 
 
     </UltraFuturisticBackground>);
@@ -743,3 +806,11 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

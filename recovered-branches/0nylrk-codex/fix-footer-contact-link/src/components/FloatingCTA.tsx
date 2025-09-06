@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -10,6 +14,7 @@ export function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false);
   const [isClosed, setIsClosed] = useState(false);
 
+<<<<<<< HEAD
 
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
@@ -21,6 +26,8 @@ export function FloatingCTA() {;
 export function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false);
   const [isClosed, setIsClosed] = useState(false);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
@@ -31,14 +38,44 @@ export function FloatingCTA() {
   const [isClosed, setIsClosed] = useState(false),
 
 
+<<<<<<< HEAD
   useEffect(() => {;
 
     };
+=======
+  useEffect(() => {
+
+    const handleScroll = () => {
+
+      const scrollPosition = window.scrollY,
+      const threshold = 600, // Show CTA after scrolling 600px
+
+
+
+      if (scrollPosition > threshold && !isClosed) {
+=======
+
+  useEffect(() => {;
+    const handleScroll = () => {;
+      const scrollPosition = window && window.scrollY;
+      const threshold = 600; // Show CTA after scrolling 600px;
+
+      if (scrollPosition > threshold && !isClosed) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        setIsVisible(true);
+      } else {;
+        setIsVisible(false);
+      }
+
+    };
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     window && window.addEventListener("scroll", handleScroll);
     return () => {;
       window && window.removeEventListener("scroll", handleScroll);
     };
   }, [isClosed]);
+<<<<<<< HEAD
   const handleClose = () => {;
   useEffect(() => {
 
@@ -60,11 +97,22 @@ export function FloatingCTA() {
     }
   }, [isClosed]);
   const handleClose = () => {
+=======
+
+  const handleClose = () => {;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     setIsClosed(true);
     setIsVisible(false);
   }
   if (!isVisible) return null;
 
+<<<<<<< HEAD
+=======
+  return (
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
 
     window.addEventListener("scroll", handleScroll),
@@ -79,6 +127,10 @@ export function FloatingCTA() {
   },
 
   if (!isVisible) return null,
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   return (
     <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">
@@ -106,9 +158,13 @@ export function FloatingCTA() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
   );
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   )
 import { Button } from "@/components/ui/button",;
 import { Link } from "react-router-dom",;
@@ -143,6 +199,7 @@ export function FloatingCTA() {;
   };
   if (!isVisible) return null;
   return (;
+<<<<<<< HEAD
 ;
       if (scrollPosition > threshold && !isClosed) {;
         setIsVisible(true),;
@@ -165,10 +222,14 @@ export function FloatingCTA() {;
   if (!isVisible) return null,;
 ;
   return (;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">;
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between">;
         <div className="mr-4">;
           <p className="text-white font-medium">Ready to explore Zion?</p>;
+<<<<<<< HEAD
           <p className="text-zion-slate-light text-sm">Register today to access all features!</p>;
         </div>;
         <div className="flex items-center gap-2">;
@@ -191,11 +252,34 @@ export function FloatingCTA() {;
             className="text-zion-slate hover: text-white p-1";
             aria-label="Close";
           >;
+=======
+          <p className="text-zion-slate-light text-sm">;
+            Register today to access all features!;
+          </p>;
+        </div>;
+        <div className="flex items-center gap-2">;
+          <Button
+            variant="default"
+            size="sm"
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap"
+            asChild>;
+            <Link to="/signup">Register Now</Link>;
+          </Button>;
+          <button
+            onClick={handleClose}
+            className="text-zion-slate hover: text-white p-1"
+            aria-label="Close">;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <X className="w-5 h-5" />;
           </button>;
         </div>;
       </div>;
     </div>;
+<<<<<<< HEAD
+=======
+  );
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Button  } from '@/components / ui / button';
 import { Link  } from './react-router-dom';
 import { useState, useEffect  } from './react';
@@ -267,6 +351,7 @@ if (return null) {
 }
 ;
 
+<<<<<<< HEAD
   ); export function FloatingCTA () {
   const [isVisible, setIsVisible] = useState (false);
 const [isClosed, setIsClosed] = useState (false);
@@ -285,3 +370,7 @@ return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50
   );
 }
 ;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

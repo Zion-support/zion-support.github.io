@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :utils/sync/merkle.ts
 // Merkle tree utilities
 export const merkle = {
@@ -5,11 +6,19 @@ export const merkle = {
   createTree: (leaves: string[]) => null
   getProof: (tree: any, leaf: string) => []
   verifyProof: (proof: any[], leaf: string, root: string) => false
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   createTree: (leaves: string[]) => null,
   getProof: (tree: any, leaf: string) => [],
   verifyProof: (proof: any[], leaf: string, root: string) => false;
 };
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import crypto from 'crypto';
 
 export interface MerkleNode {
@@ -128,6 +137,7 @@ export class MerkleTree {
   }
 }
 
+<<<<<<< HEAD
 :backup-problematic-files/utils/sync/merkle.ts
 import crypto from "crypto",;
 import { ProposalVoteEntry } from "./types",;
@@ -291,6 +301,8 @@ export class MerkleTree {
   }
 }
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function createMerkleTree(data: any[]): MerkleTree {
   return new MerkleTree(data);
 }
@@ -298,8 +310,16 @@ export function createMerkleTree(data: any[]): MerkleTree {
 export function verifyMerkleProof(leafData: any, proof: string[], rootHash: string): boolean {
   const tree = new MerkleTree([leafData]);
   return tree.verifyProof(leafData, proof, rootHash);
+<<<<<<< HEAD
 main:utils/sync/merkle.ts
 :backup-problematic-files/utils/sync/merkle.ts
 }
 }
 :backup-problematic-files/utils/sync/merkle.ts
+=======
+
+
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

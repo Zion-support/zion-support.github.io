@@ -532,4 +532,8 @@ export default function EducationPage() {
   );
 };
 
+<<<<<<< HEAD
 export default Education;
+=======
+export default Education;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

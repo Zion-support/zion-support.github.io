@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import { render, screen } from '@testing - library / react';
 import { MemoryRouter } from 'react-router-dom';
@@ -9,6 +13,10 @@ describe ('EquipmentPage', () => {
         <EquipmentPage />;
       </MemoryRouter>);
     expect (screen.getByText ('Equipment')).toBeInTheDocument ();
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   });
   const [selectedService, setSelectedService] = useState('');
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -78,8 +86,16 @@ describe ('EquipmentPage', () => {
             <p className="text-gray-600 mb-8">
               Fill out the form below and we'll get back to you within 24 hours to discuss your project requirements.
             </p>
+<<<<<<< HEAD
             
             
+=======
+
+
+            
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -113,8 +129,16 @@ describe ('EquipmentPage', () => {
                   />
                 </div>
               </div>
+<<<<<<< HEAD
               
               
+=======
+
+
+              
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
@@ -199,8 +223,16 @@ describe ('EquipmentPage', () => {
                   ))}
                 </select>
               </div>
+<<<<<<< HEAD
               
               
+=======
+
+
+              
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
@@ -318,6 +350,7 @@ describe ('EquipmentPage', () => {
               </div>
             </div>
             {/* Business Hours */}
+<<<<<<< HEAD
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Business Hours</h3>
               <div className="space-y-3">
@@ -340,6 +373,10 @@ describe ('EquipmentPage', () => {
                 </div>
               </div>
             </div>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className="bg-white rounded-xl shadow-lg p-8">;
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Business Hours</h3>;
               <div className="space-y-3">;
@@ -362,6 +399,11 @@ describe ('EquipmentPage', () => {
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Quick Actions */}
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Quick Actions</h3>
@@ -421,7 +463,16 @@ describe ('EquipmentPage', () => {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
   );
 };
+=======
+
+
+  );
+};
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

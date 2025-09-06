@@ -27,4 +27,8 @@ const ProjectManagementDashboard = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ProjectManagementDashboard;
+=======
+export default ProjectManagementDashboard;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

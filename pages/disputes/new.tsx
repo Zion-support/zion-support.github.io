@@ -18,14 +18,21 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 import { useRouter  } from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react',
+=======
+import {useRouter} from 'next/router';
+import React, { useEffect, useMemo, useState } from 'react';
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 
 
 
 import {useCurrentUser} from '../../utils/auth';
 
+<<<<<<< HEAD
 const REASONS = [
   'Scope Disagreement'
   'Quality Issues'
@@ -45,20 +52,67 @@ export default function NewDisputePage() {
     clientId
   } = router.query as Record<string, string>;  const user = useCurrentUser();
   const [projectId, setProjectId] = useState(qProjectId |'');
+=======
+
+const REASONS = [;
+  'Scope Disagreement',;
+  'Quality Issues',;
+  'Delivery Delay',;
+  'Payment Issue',;
+  'Communication Breakdown',;
+  'Other',;
+
+] as const;
+type ReasonType = (typeof REASONS)[number];
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useRouter} from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import {useCurrentUser} from '../../utils/auth';
 
+<<<<<<< HEAD
 export default function NewDisputePage() {;
   const router = useRouter();
+=======
+const REASONS = [
+  'Scope Disagreement',
+  'Quality Issues',
+  'Delivery Delay',
+  'Payment Issue',
+  'Communication Breakdown',
+  'Other',
+] as const;
+
+type ReasonType = (typeof REASONS)[number];
+
+export default function NewDisputePage() {;
+
+
+=======
+import { useRouter } from 'next/router';
+import React, { useEffect, useMemo, useState } from 'react';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import { useCurrentUser } from '../../utils/auth';
+const REASONS = [
+  'Scope DisagreementQuality IssuesDelivery DelayPayment IssueCommunication BreakdownOther'] as const;
+export default function NewDisputePage() {;
+  const router = useRouter();
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const { projectId: qProjectId, entityType, entityId, talentId, clientId } = router.query as Record<string, string>;
   const user = useCurrentUser();
 
 
+<<<<<<< HEAD
   const [projectId, setProjectId] = useState(qProjectId || '');
   const { projectId: qProjectId, entityType, entityId, talentId, clientId } = router.query as Record<string, string>;
   const user = useCurrentUser();
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [projectId, setProjectId] = useState(qProjectId || '');
   const [reason, setReason] = useState<ReasonType>('Scope Disagreement');
   const [reasonDetails, setReasonDetails] = useState('');
@@ -111,6 +165,13 @@ export default function NewDisputePage() {;
     } finally {;
 
       setSubmitting(false);    }
+<<<<<<< HEAD
+=======
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [talentUserId, setTalentUserId] = useState(talentId || '');
   const [clientUserId, setClientUserId] = useState(clientId || (user.role === 'client' ? user.id : ''));
   const [submitting, setSubmitting] = useState(false);
@@ -136,9 +197,61 @@ const REASONS = [
   'Communication Breakdown',
   'Other',
 ] as const;
+<<<<<<< HEAD
     try {
       const res = await fetch ('/api / disputes', {
         method: 'POST',
+=======
+<<<<<<< HEAD
+;
+type ReasonType = (typeof REASONS)[number];
+;
+export default /**
+ * NewDisputePage - Function description
+ */
+function NewDisputePage() {
+  const router = use_router ();
+  const {
+    project_id: qProjectId,
+    entity_type,
+    entity_id,
+    talent_id,
+    client_id,
+  } = router.query as Record < string, string>;  const user = useCurrentUser ();
+;
+  const [project_id, setProjectId] = useState (qProjectId || '');
+  const [reason, set_reason] = useState < ReasonType>('Scope Disagreement');
+  const [reason_details, setReasonDetails] = useState ('');
+  const [description, set_description] = useState ('');
+  const [files, set_files] = useState < File[]>([]);
+  const [talentUserId, setTalentUserId] = useState (talent_id || '');
+  const [clientUserId, setClientUserId] = useState (
+    client_id || (user.role === 'client' ? user.id : ''));
+  const [submitting, set_submitting] = useState (false);
+;
+  useEffect (() => {
+    if (setProjectId (qProjectId)) {
+  $2
+}  }, [qProjectId]);
+;
+  async /**
+ * handle_submit - Function description
+ */
+function handle_submit() {
+    e.prevent_default ();
+    if (
+      return alert ('Please fill required fields')) {
+  $2
+}    set_submitting (true);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    try {
+      const res = await fetch ('/api / disputes', {
+        method: 'POST',
+
+
+  return (
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         headers: { 'Content - Type': 'application / json' },
         body: JSON.stringify ({
           project_id,
@@ -212,15 +325,27 @@ if ( {) {
                 on_change={e => setTalentUserId (e.target.value)}
                 required;
                 className='mt - 1 w - full border rounded px - 3 py - 2 bg - white dark:bg - black';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               />;
             </div>;
           </div>;
           <div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               onChange={e => setFiles(Array && Array.from(e && e.target.files || []))}
               className='mt-1';
             />;
           </div>;
           <div className='pt-2'>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <button
               disabled={submitting}
               className='px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50'>;
@@ -275,6 +400,7 @@ if ( {) {
         </form>;
       </div>;
 
+<<<<<<< HEAD
 type ReasonType = (typeof REASONS)[number];
 
 export default function NewDisputePage() {;
@@ -482,12 +608,20 @@ function toBase64(file: File): Promise<string> {;
     const reader = new FileReader();
     reader.onload = () => resolve(String(reader.result));
     reader.onerror = reject;
+=======
+
+    reader.onload = () => resolve(String(reader.result));
+    reader.onerror = reject;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 function toBase64(): any (file: File): Promise<string> {;
   return new Promise((resolve, reject) => {;
     const reader = new FileReader();
     reader && reader.onload = () => resolve(String(reader && reader.result));
     reader && reader.onerror = reject;
     reader && reader.readAsDataURL(file);
+<<<<<<< HEAD
   });
 }
 }
@@ -495,9 +629,43 @@ function toBase64(): any (file: File): Promise<string> {;
 
 }
 }
+=======
+
+
+  });
+
+
+    reader.readAsDataURL(file)
+  })
+}
+
+=======
+    </EnhancedLayout>);
+function toBase64 (file: File): Promise < string> {
+  return new Promise ((resolve, reject) => {
+const reader = new FileReader ();
+    reader.onload = () => resolve (String (reader.result));
+    reader.onerror = reject;
+    reader.readAsDataURL (file);
+  });
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+}
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

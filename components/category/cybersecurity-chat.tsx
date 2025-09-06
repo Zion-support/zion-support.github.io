@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -10,10 +14,18 @@ const CybersecurityChat: NextPage = () => {;
         <meta name="description" content="CybersecurityChat blog post" />{" "}
 
 
+<<<<<<< HEAD
+=======
+const CybersecurityChat: NextPage = () => {
+  return (
+    <div>
+      <Head>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       </Head>;
 
 
+<<<<<<< HEAD
         <meta name="description" content="CybersecurityChat blog post" />
       </Head>
       <main>
@@ -23,6 +35,8 @@ const CybersecurityChat: NextPage = () => {;
       </main>
     </div>
       </Head>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <main>;
         <h1>CybersecurityChat</h1>;
         <p>Blog content coming soon...</p>;
@@ -32,9 +46,20 @@ const CybersecurityChat: NextPage = () => {;
   );
 }
 export default CybersecurityChat;
+<<<<<<< HEAD
 
         <title>CybersecurityChat - Zion Tech Solutions</title>
 
+=======
+
+
+=======
+
+        <title>CybersecurityChat - Zion Tech Solutions</title>
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -55,6 +80,7 @@ const CybersecurityChat: NextPage = () => {
 ;
 export default CybersecurityChat;
 ;
+<<<<<<< HEAD
     <div>
       <Head>
         <title>CybersecurityChat - Zion Tech Solutions</title>
@@ -99,3 +125,6 @@ export default CybersecurityChat;
 
         <title>CybersecurityChat - Zion Tech Solutions</title>
         <title>CybersecurityChat - Zion Tech Solutions</title>
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

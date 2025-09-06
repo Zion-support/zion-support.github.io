@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-8f7d
 import React from 'react'';
 import { Outlet } from 'react-router-dom'';
 import { Footer } from '@/components/Footer';
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react'';
 import { Outlet } from 'react-router-dom'';
 import { Footer } from '@/components/Footer';
@@ -20,6 +23,7 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
 			<main className="flex-grow">
 				{children ?? <Outlet />}
 			</main>
+<<<<<<< HEAD
 			{!hideFooter && <Footer />}
 ursor/integrate-build-improve-and-re-verify-8f7d
 import React from 'react'
@@ -50,6 +54,14 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 		</div>
 	)
 }
+=======
+			{!hideFooter && <Footer />}
+
+
+		</div>
+	)
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react";
 
 import React from "react";
@@ -66,6 +78,7 @@ export function AppLayout({ children }: AppLayoutProps) {
     </div>
   );
 }
+<<<<<<< HEAD
 		</div>;
 	);
 }'"
@@ -80,3 +93,10 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 		</div>;
 	);
 }'"
+=======
+
+
+		</div>;
+	);
+}'"
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
@@ -16,6 +17,8 @@ import { TalentProfile } from "@/types/talent",
 import Image from 'next/image', // Import next/image
 import React, { useState } from 'react', // Import React and useState
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export interface TalentCardProps {
   talent: TalentProfile
   onViewProfile: (id: string) => void
@@ -24,6 +27,7 @@ export interface TalentCardProps {
   onToggleSave: (id: string, isSaved: boolean) => void
   isAuthenticated: boolean
 export interface TalentCardProps {
+<<<<<<< HEAD
 xport interface TalentCardProps {
   talent: TalentProfile
   onViewProfile: (id: string) => void
@@ -53,6 +57,11 @@ export function TalentCard({
   const handleViewProfile = () => {
     if (onViewProfile) {
       onViewProfile(talent.id) }      onViewProfile(talent.id)
+=======
+
+      onViewProfile(talent.id)
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   }
   const handleRequestHire = (e: React.MouseEvent) => {
@@ -71,6 +80,7 @@ export function TalentCard({
     if (onToggleSave) {
       onToggleSave(talent.id, !isSaved)
     if (onToggleSave) {
+<<<<<<< HEAD
     }
   }
   const skills = talent.skills?.slice(0, 5) |[]
@@ -109,6 +119,12 @@ export function TalentCard({
                 <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  src={talent.profile_picture_url} 
 import { Button } from "@/components/ui/button",;
 import { Card } from "@/components/ui/card",;
+=======
+
+
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
 import Link from "next/link",;
 import { TalentProfile } from "@/types/talent",;
@@ -134,7 +150,12 @@ export function TalentCard({;
   const [avatarError, setAvatarError] = useState(false),;
   const handleViewProfile = () => {;
     if (onViewProfile) {;
+<<<<<<< HEAD
       onViewProfile(talent.id);
+=======
+      onViewProfile(talent && talent.id);    }      onViewProfile(talent && talent.id);
+      onToggleSave(talent.id, !isSaved)
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   },;
   const handleRequestHire = (e: React.MouseEvent) => {;
@@ -163,6 +184,7 @@ export function TalentCard({;
             <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light relative"> {/* Added relative for Image */}
               {talent.profile_picture_url && !avatarError ? (
                 <Image
+<<<<<<< HEAD
                   src={talent.profile_picture_url} 
                   alt={talent.full_name || 'Talent Avatar'}
                   fill={true}
@@ -217,6 +239,24 @@ export function TalentCard({;
                 size="sm"
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
                 onClick = {handleToggleSave,}
+=======
+                  src={talent && talent.profile_picture_url}
+                  alt={talent && talent.full_name || 'Talent Avatar'}
+                  fill={true}                  style={{ objectFit: 'cover' }}
+                  className='rounded-full' // Make sure image itself is rounded if fill is used in a rounded container                  onError={() => setAvatarError(true)}
+                  priority={false}
+                />;
+              ) : (;
+                <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  {talentNameInitial}
+                  className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container;
+                  onError={() => setAvatarError(true)}
+
+                  priority={false}                />;
+              ) : (;
+                <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  src={talent && talent.profile_picture_url} ;
+                  alt={talent && talent.full_name || 'Talent Avatar'}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import Link from 'next/link';
 import { TalentProfile } from '@/types/talent';
@@ -256,6 +296,7 @@ export interface TalentCardProps {
                   onError={() => setAvatarError(true)}
                   priority={false}
 
+<<<<<<< HEAD
               >
                 />;
               ) : (;
@@ -279,11 +320,14 @@ export interface TalentCardProps {
                 size="sm"
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
                 onClick={handleToggleSave}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               >
                 <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />
                 <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>
               </Button>
             </div>
+<<<<<<< HEAD
             <p className='text-zion-cyan font-medium'>
               {talent.professional_title}
             </p>
@@ -296,11 +340,17 @@ export interface TalentCardProps {
               {talent.availability_type && (
                 <div className='flex items-center text-zion-slate-light'>
                   <Clock className='h-4 w-4 mr-1' />                  <span>{talent.availability_type}</span>                <div className="flex items-center text-zion-slate-light">
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <p className="text-zion-cyan font-medium">{talent.professional_title}</p>
             
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
               {talent.location && (
                 <div className="flex items-center text-zion-slate-light">
+<<<<<<< HEAD
               {talent.availability_type && (
                 <div className='flex items-center text-zion-slate-light'>
                   <Clock className='h-4 w-4 mr-1' />                <div className="flex items-center text-zion-slate-light">
@@ -347,6 +397,8 @@ export interface TalentCardProps {
           </div>
           <div className='flex items-center gap-2'>
             {isAuthenticated && (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -402,6 +454,7 @@ export interface TalentCardProps {
               )}
 
 
+<<<<<<< HEAD
         <div className='mt-5 flex items-center justify-between'>
           <div>
             {talent.hourly_rate ? (
@@ -415,10 +468,43 @@ export interface TalentCardProps {
           </div>
           <div className='flex items-center gap-2'>
             {isAuthenticated && (
+=======
+              {talent.availability_type && (;
+                <div className="flex items-center text-zion-slate-light">;
+                  <Clock className="h-4 w-4 mr-1" />;
+                  <span>{talent.availability_type}</span>;
+                </div>;
+              )}
+            </div>;
+          </div>;
+        </div>;
+        {skills.length > 0 && (;
+          <div className="mt-4">;
+            <div className="flex flex-wrap gap-2">;
+              {skills.map((skill, index) => (;
+                <span;
+                  key={index}
+                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light";
+                >;
+                  {skill}
+                </span>;
+              ))}
+              {(talent.skills?.length || 0) > 5 && (;
+                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;
+                  +{(talent.skills?.length || 0) - 5} more;
+                </span>;
+              )}
+            </div>
+          </div>
+        )}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Button
                 size='sm'
                 variant='secondary'
                 onClick={handleRequestHire}
+<<<<<<< HEAD
                 className='bg-zion-purple hover:bg-zion-purple-light text-white'              >                className="bg-zion-purple hover:bg-zion-purple-light text-white"
               size="sm"
               variant="ghost"
@@ -427,6 +513,11 @@ export interface TalentCardProps {
             >;
               View <ArrowRight className="ml-1 h-4 w-4" />;
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+                className='bg-zion-purple hover:bg-zion-purple-light text-white'>                className="bg-zion-purple hover:bg-zion-purple-light text-white";
+;
+        <div className="mt-5 flex items-center justify-between">;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div>;
             {talent && talent.hourly_rate ? (;
               <div className="text-white font-bold">;
@@ -452,6 +543,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 className='bg - zion - purple hover:bg - zion - purple - light text - white'              >                className="bg - zion - purple hover:bg - zion - purple - light text - white";
           <div>;
 
+<<<<<<< HEAD
           <div>
             {talent.hourly_rate ? (
               <div className="text-white font-bold">
@@ -530,6 +622,11 @@ ursor/fix-website-loading-errors-and-merge-6662
             {talent.hourly_rate ? (
               <div className="text - white font - bold">;
                 ${talent.hourly_rate}
+=======
+            {talent.hourly_rate ? (
+              <div className="text-white font-bold">
+                ${talent.hourly_rate}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           </div>;
 
@@ -548,8 +645,14 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </Card>;
   );
 }
 ;
 ;
+=======
+
+
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

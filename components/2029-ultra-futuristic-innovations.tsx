@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import Head from 'next / head';
 import { motion } from 'framer-motion';
 import {;
@@ -20,10 +21,34 @@ import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticN
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 import React from 'react',
 import React from 'react';
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Head from 'next/head';
 
 import { motion } from 'framer-motion';
 
+<<<<<<< HEAD
 import {
   Rocket
   Brain
@@ -36,6 +61,11 @@ import {
   TrendingUp
   Eye
   Timer;
+=======
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Rocket,
   Brain,
   Atom,
@@ -47,9 +77,20 @@ import {
   TrendingUp,
   Eye,;
   Timer,;
+<<<<<<< HEAD
 import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, Star, TrendingUp, Eye, Timer } from 'lucide-react';
 
 } from 'lucide-react';import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, Star, TrendingUp, Eye, Timer } from 'lucide-react';
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+} from 'lucide-react';import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, Star, TrendingUp, Eye, Timer } from 'lucide-react';
+
+=======
+import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, Star, TrendingUp, Eye, Timer } from 'lucide-react';
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
@@ -57,6 +98,7 @@ import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFoote
 import UltraFuturistic2029ServiceShowcase from '../components/sections/UltraFuturistic2029ServiceShowcase';
 import { cuttingEdge2029Services  } from '../data/2029-cutting-edge-innovations';
 import { ultimateMicroSaasServices } from '../data/ultimate-micro-saas-services';
+<<<<<<< HEAD
 export default function UltraFuturistic2029InnovationsPage() {
 
 
@@ -71,11 +113,20 @@ export default function UltraFuturistic2029InnovationsPage() {
     website: 'https://ziontechgroup.com',;
   };
 
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const all2029Services = [
     ...cuttingEdgeInnovations2029
     ...spaceColonization2029Services
   ];    website: 'https://ziontechgroup.com'
   }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function UltraFuturistic2029InnovationsPage() {;
   const contactInfo = {;
     mobile: '+1 302 464 0950',;
@@ -83,6 +134,7 @@ export default function UltraFuturistic2029InnovationsPage() {;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup && ziontechgroup.com',;
   };
+<<<<<<< HEAD
   const all2029Services = [...cuttingEdgeInnovations2029, ...spaceColonization2029Services];
   return (
     <>
@@ -115,12 +167,29 @@ export default function UltraFuturistic2029InnovationsPage() {;
         />      </Head>
       {/* Background */}
       <UltraFuturisticBackground2029 />        <meta name="description" content="Experience the future of technology with our revolutionary 2029 innovations including AI consciousness simulation, quantum brain-computer interfaces, Mars colonization automation, and space mining platforms." />
+=======
+
+
+  const all2029Services = [...cuttingEdgeInnovations2029, ...spaceColonization2029Services];
+
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  const all2029Services = [...cuttingEdgeInnovations2029, ...spaceColonization2029Services];
+  return (
+
+    <>
+      <Head>
+        <title>2029 Ultra-Futuristic Innovations | Zion Tech Group</title>
+        <meta name="description" content="Experience the future of technology with our revolutionary 2029 innovations including AI consciousness simulation, quantum brain-computer interfaces, Mars colonization automation, and space mining platforms." />
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <meta name="keywords" content="2029 innovations, AI consciousness, quantum computing, space colonization, Mars automation, space mining, futuristic technology, Zion Tech Group" />
         <meta property="og:title" content="2029 Ultra-Futuristic Innovations | Zion Tech Group" />
         <meta property="og:description" content="Experience the future of technology with our revolutionary 2029 innovations." />
         <meta property="og:url" content="https://ziontechgroup.com/2029-ultra-futuristic-innovations" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/2029-ultra-futuristic-innovations" />
+<<<<<<< HEAD
       
 
 
@@ -438,6 +507,57 @@ export default function UltraFuturistic2029InnovationsPage() {;
               </div>
             </motion.div>
           </div>
+=======
+
+      </Head>
+
+      {/* Background */}
+      <UltraFuturisticBackground2029 />
+      
+
+      {/* Navigation */}
+      <UltraFuturisticNavigation2029 />
+          href='https://ziontechgroup && ziontechgroup.com/2029-ultra-futuristic-innovations'
+        />      </Head>;
+      {/* Background */}
+      <UltraFuturisticBackground2029 />        <meta name="description" content="Experience the future of technology with our revolutionary 2029 innovations including AI consciousness simulation, quantum brain-computer interfaces, Mars colonization automation, and space mining platforms." />;
+        <meta name="keywords" content="2029 innovations, AI consciousness, quantum computing, space colonization, Mars automation, space mining, futuristic technology, Zion Tech Group" />;
+        <meta property="og:title" content="2029 Ultra-Futuristic Innovations | Zion Tech Group" />;
+        <meta property="og:description" content="Experience the future of technology with our revolutionary 2029 innovations." />;
+        <meta property="og:url" content="https://ziontechgroup && ziontechgroup.com/2029-ultra-futuristic-innovations" />;
+        <meta property="og:type" content="website" />;
+        <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/2029-ultra-futuristic-innovations" />;
+      {/* Background */}
+      <UltraFuturisticBackground2029 />;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+      {/* Navigation */}
+      <UltraFuturisticNavigation2029 />;
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {/* Hero Section */}
+
+
+      {/* Contact CTA */}
+      <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>;
+        <div className='max-w-4xl mx-auto text-center'>;
+          <motion&& motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            className='bg-gradient-to-r from-purple-900/30 to-pink-900/30 border border-purple-500/30 rounded-3xl p-12 backdrop-blur-sm'>;
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+              Ready to Experience 2029?;
+            </h2>;
+            <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   all2029Services.reduce ((sum, s) => sum + s.rating, 0) /;
                   all2029Services.length).to_fixed (1),
                 icon: TrendingUp,
@@ -477,10 +597,16 @@ export default function UltraFuturistic2029InnovationsPage() {;
               Ready to Experience 2029?;
             </h2>;
             <p className='text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto'>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Join the future of technology with our revolutionary 2029;
               innovations. Contact us today to discover how we can transform;
               your business.;
             </p>;
+<<<<<<< HEAD
                 href={`tel:${contactInfo && contactInfo.mobile}`}
                 className='px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold'>;
                 Call Now;
@@ -660,6 +786,10 @@ export default function UltraFuturistic2029InnovationsPage() {;
         <UltraFuturisticFooter2029 />
     </>
   )
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 <div className='flex flex - col sm:flex - row items - center justify - center gap - 4'>;
               <a;
@@ -875,14 +1005,31 @@ export default function UltraFuturistic2029InnovationsPage() {;
   duration: 0.8;
 }className="bg - gradient - to - r from - purple - 900 / 30 to - pink - 900 / 30 border border - purple - 500 / 30 rounded - 3xl p - 12 backdrop - blur - sm" > <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6"> Ready to Experience 2029? </h2> <p className="text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto"> Join the future of technology with our revolutionary 2029 innovations. Contact us today to discover how we can transform your business. </p> <div className="flex flex - col sm:flex - row items - center justify - center gap - 4"> <a href="/contact" className="px - 8 py - 4 bg - gradient - to - r from - purple - 600 to - pink - 600 text - white rounded - xl hover:from - purple - 700 hover:to - pink - 700 transition - all duration - 200 text - lg font - semibold shadow - lg hover:shadow - purple - 500 / 25" > Get Started Today </a> <a href= {
   `tel:$ {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  contact_info.mobile;
+}`;
+}className="px - 8 py - 4 bg - gray - 900 / 50 text - white rounded - xl hover:bg - purple - 900 / 30 border border - gray - 700 hover:border - purple - 500 / 50 transition - all duration - 200 text - lg font - semibold" > Call Now </a> </div> </motion.div> </div> </section> {
+  /* Footer */;
+}<UltraFuturisticFooter2029 /> </>)   );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   /* Footer */ 
 }<UltraFuturisticFooter2029 /> </>)
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   /* Footer */ 
 
 }<UltraFuturisticFooter2029 /> </>)
 
+<<<<<<< HEAD
   contactInfo.mobile
 }`
 }className="px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold" > Call Now </a> </div> </motion.div> </div> </section> {
@@ -920,3 +1067,7 @@ export default function UltraFuturistic2029InnovationsPage() {;
 }
 }
 }<UltraFuturisticFooter2029 /> </>)
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

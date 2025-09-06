@@ -27,4 +27,8 @@ const DisputeDashboard = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default DisputeDashboard;
+=======
+export default DisputeDashboard;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

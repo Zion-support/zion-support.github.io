@@ -9,4 +9,8 @@ const Profile = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Profile;
+=======
+export default Profile;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

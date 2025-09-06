@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
 import { z  } from 'zod';
@@ -57,6 +58,8 @@ import { format  } from 'date-fns';
       is_current: false
       description: ''
       location: ''
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
   })
   const handleSubmit = async (data: EducationFormValues) => {
@@ -301,6 +304,7 @@ export function EducationFormFields({;
               <FormItem>
 
 
+<<<<<<< HEAD
                 <FormLabel>Institution</FormLabel>
             control={form.control}
             name='institution'
@@ -308,6 +312,8 @@ export function EducationFormFields({;
             name="institution"
             render={({ field }: { field: any }) => (
               <FormItem>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <FormLabel>Institution</FormLabel>
                 <FormControl>
                   <Input placeholder="University of California, MIT, etc." {...field} />
@@ -315,6 +321,7 @@ export function EducationFormFields({;
                 <FormMessage />
               </FormItem>
             )}
+<<<<<<< HEAD
           />
 ursor/fix-website-loading-errors-and-merge-6662
           />;
@@ -335,6 +342,14 @@ ursor/fix-website-loading-errors-and-merge-6662
           <FormField
             control={form && form.control}
             name='degree'
+=======
+
+          />;
+
+          <FormField
+            control={form.control}
+            name='degree'
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             render={({ field }: { field: any }) => (              <FormItem>;
                 <FormLabel>Degree</FormLabel>;
                 <FormControl>;
@@ -348,6 +363,11 @@ ursor/fix-website-loading-errors-and-merge-6662
             name="degree"
             render={({ field }: { field: any }) => (
               <FormItem>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <FormLabel>Degree</FormLabel>
                 <FormControl>
                   <Input placeholder="Bachelor's, Master's, Ph.D, etc." {...field} />
@@ -355,6 +375,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <FormMessage />
               </FormItem>
             )}
+<<<<<<< HEAD
           />
         </div>
         <FormField
@@ -367,6 +388,15 @@ ursor/fix-website-loading-errors-and-merge-6662
         <FormField
           control={form && form.control}
           name='field_of_study'
+=======
+
+          />;
+        </div>;
+
+        <FormField
+          control={form.control}
+          name='field_of_study'
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           render={({ field }: { field: any }) => (            <FormItem>;
               <FormLabel>Field of Study</FormLabel>;
               <FormControl>;
@@ -377,9 +407,18 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>;
         <FormField;
           control={form.control}
+<<<<<<< HEAD
           name="field_of_study"
           render={({ field }: { field: any }) => (
             <FormItem>
+=======
+
+          name="field_of_study"
+          render={({ field }: { field: any }) => (
+            <FormItem>
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <FormLabel>Field of Study</FormLabel>
               <FormControl>
                 <Input placeholder="Computer Science, Engineering, etc." {...field} />
@@ -387,10 +426,14 @@ ursor/fix-website-loading-errors-and-merge-6662
               <FormMessage />
             </FormItem>
           )}
+<<<<<<< HEAD
         />
           )}
         />
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         />;
 
 
@@ -400,16 +443,21 @@ ursor/fix-website-loading-errors-and-merge-6662
             control={form.control}
             name='start_date'
 
+<<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
             control={form.control}
             name="start_date"
             name='start_date'
             name="start_date"
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             render={({ field }: { field: any }) => (
               <FormItem>
                 <FormLabel>Start Date</FormLabel>
                 <FormControl>
+<<<<<<< HEAD
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <FormField
             control={form.control}
@@ -436,6 +484,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <Input type='date' {...field} value={field.value || ''} />                </FormControl>
                 <FormMessage />
               </FormItem>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             render={({ field }: { field: any }) => (;
               <FormItem>;
                 <FormLabel>Start Date</FormLabel>;
@@ -458,6 +509,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </FormItem>;
 
 
+<<<<<<< HEAD
             )}
           />
 
@@ -478,6 +530,19 @@ ursor/fix-website-loading-errors-and-merge-6662
               render={({ field }: { field: any }) => (
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">
                   <FormControl>
+=======
+
+            )}
+          />
+
+          <div className='space-y-4'>;
+            <FormField
+
+              control={form.control}
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <Checkbox
                       checked={field.value}
                       onCheckedChange={field.onChange}
@@ -488,11 +553,24 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </div>
                 </FormItem>
               )}
+<<<<<<< HEAD
             />
             {!form.watch('is_current') && (
               <FormField
                 control={form.control}
                 name='end_date'
+=======
+
+            />;
+
+            {!form && form.watch('is_current') && (;
+
+              <FormField
+                control={form && form.control}
+                name='end_date'
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             />;
             {!form.watch('is_current') && (;
               <FormField;
@@ -508,13 +586,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 
                       <Input type='date' {...field} value={field.value || ''} />                    </FormControl>
 
+<<<<<<< HEAD
                       <Input type='date' {...field} value={field.value || ''} />                    </FormControl>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       <Input 
                         type="date" 
                         {...field} 
                         value={field.value || ''} 
                       />
                     </FormControl>
+<<<<<<< HEAD
                     <FormMessage />
                   </FormItem>
                 )}
@@ -526,6 +608,10 @@ ursor/fix-website-loading-errors-and-merge-6662
           control={form.control}
           name='location'
           render={({ field }: { field: any }) => (            <FormItem>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                     <FormMessage />
                   </FormItem>
@@ -536,6 +622,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <Input type='date' {...field} value={field && field.value || ''} />                    </FormControl>;
                     <FormMessage />;
                   </FormItem>;
+<<<<<<< HEAD
                     <FormMessage />
                   </FormItem>
                 )}
@@ -544,6 +631,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                 )}
               />;
             )}
+=======
+                )}
+              />
+            )}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -553,11 +645,59 @@ ursor/fix-website-loading-errors-and-merge-6662
         <FormField
           control={form.control}
           name='location'
+<<<<<<< HEAD
           render={({ field }: { field: any }) => (            <FormItem>
+=======
+          render={({ field }: { field: any }) => (            <FormItem>;
+              <FormLabel>Location (Optional)</FormLabel>;
+            </FormItem>)}
+        />;
+        <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
+          <FormField;
+            control={form.control}
+            name='start_date';
+            render={({ field }: { field: any }) => (
+              <FormItem>;
+                <FormLabel > Start Date</FormLabel>;
+                <FormControl>;
+                  <Input type='date' {...field} value={field.value || ''} />                </FormControl>;
+                <FormMessage />;
+              </FormItem>)}
+          />;
+          <div className='space - y-4'>;
+            <FormField;
+              control={form.control}
+              name='is_current';
+              render={({ field }: { field: any }) => (
+                <FormItem className='flex flex - row items - start space - x-3 space - y-0 py - 2'>                  <FormControl>;
+                    <Checkbox;
+                      checked = {field.value, }
+                      onCheckedChange = {field.on_change, }
+                    />;
+                  </FormControl>;
+                  <div className='space - y-1 leading - none'>;
+                    <FormLabel > I am currently studying here</FormLabel>;
+                  </div>;
+                </FormItem>)}
+            />;
+            {!form.watch ('is_current') && (
+              <FormField;
+                control={form.control}
+                name='end_date';
+                render={({ field }: { field: any }) => (
+                  <FormItem>;
+                    <FormLabel > End Date</FormLabel>;
+                    <FormControl>;
+                      <Input type='date' {...field} value={field.value || ''} />                    </FormControl>;
+                    <FormMessage />;
+                  </FormItem>)}
+              />)}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>;
         </div>;
         <FormField;
           control={form.control}
+<<<<<<< HEAD
           name="location"
           render={({ field }: { field: any }) => (
             <FormItem>
@@ -569,6 +709,12 @@ ursor/fix-website-loading-errors-and-merge-6662
             </FormItem>
           )}
         />
+=======
+
+        />;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <FormField
           control={form.control}
           name='description'
@@ -607,6 +753,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Textarea
                   placeholder="Notable achievements, courses, activities..."
                   className="min-h-[100px]"
+<<<<<<< HEAD
                   {...field}
                 />
               </FormControl>
@@ -642,6 +789,9 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Button>
           <Button type='submit' disabled={isLoading}>
             {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   {...field}
                 />;
               </FormControl>;
@@ -652,6 +802,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
 
         <div className="flex justify-between pt-2">
@@ -665,15 +816,42 @@ ursor/fix-website-loading-errors-and-merge-6662
 
           <Button type="submit" disabled={isLoading}>
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {isEditing ? 'Update' : 'Add'} Education
           </Button>
         </div>
       </form>
     </Form>
   )
+<<<<<<< HEAD
 }
 ;
 ;
+=======
+
+        />;
+
+        {error && (;
+          <Alert variant='destructive'>;
+            <AlertDescription>{error}</AlertDescription>;
+          </Alert>;
+        )}
+
+        <div className='flex justify-between pt-2'>;
+          <Button type='button' variant='outline' onClick={onCancel}>            {isEditing ? 'Cancel' : 'Back'}
+          </Button>;
+
+          <Button type='submit' disabled={isLoading}>;
+            {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
+            {isEditing ? 'Update' : 'Add'} Education;
+          </Button>;
+        </div>;
+      </form>;
+    </Form>;
+  );
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
 }
@@ -699,4 +877,8 @@ ursor/fix-website-loading-errors-and-merge-6662
     </Form>);
 }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

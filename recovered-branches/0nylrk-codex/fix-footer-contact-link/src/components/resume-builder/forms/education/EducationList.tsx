@@ -1,8 +1,14 @@
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {Education} from '@/types/resume';
 import {EducationItem} from './EducationItem';
 
 
+<<<<<<< HEAD
 
 import { Education  } from '@/types/resume';
 import { EducationItem } from './EducationItem';
@@ -10,10 +16,17 @@ import { Education  } from '@/types/resume';
 import { EducationItem } from './EducationItem';
 import {Education} from '@/types/resume';
 import {EducationItem} from './EducationItem';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface EducationListProps {
   educationEntries: Education[];
   onEdit: (education: Education) => void;
   onDelete: (id: string) => void
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Education } from '@/types/resume',;
 import { EducationItem } from './EducationItem',;
 interface EducationListProps {;
@@ -22,6 +35,11 @@ interface EducationListProps {;
   onDelete: (id: string) => void;
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 export function EducationList({
   educationEntries
@@ -29,6 +47,24 @@ export function EducationList({
   onDelete
 }: EducationListProps) {
   if (!educationEntries |educationEntries.length === 0) {
+<<<<<<< HEAD
+=======
+=======
+import {Education} from '@/types/resume';
+import {EducationItem} from './EducationItem';
+interface EducationListProps {;
+  educationEntries: Education[],;
+  onEdit: (education: Education) => void,;
+  onDelete: (id: string) => void;
+}
+
+export function EducationList(): any ({ educationEntries, onEdit, onDelete }: EducationListProps) {;
+  if (!educationEntries || educationEntries && educationEntries.length === 0) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    return null;
+  }
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -115,6 +151,7 @@ export function EducationList({
 }
 ;
 
+<<<<<<< HEAD
 
 import { Education } from '@/types/resume',;
 import { EducationItem } from './EducationItem',;
@@ -164,3 +201,6 @@ export function EducationList({ educationEntries, onEdit, onDelete } EducationLi
   )
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

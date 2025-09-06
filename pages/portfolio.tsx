@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import Head from 'next / head';
 
@@ -18,6 +22,7 @@ import {
   Clock,
   TrendingUp,
 
+<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
 import Head from 'next/head';
@@ -36,12 +41,15 @@ import {
   Users
   Clock
   TrendingUp;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 export default function PortfolioPage() {
   const projects = [
     {
+<<<<<<< HEAD
       title: 'AI-Powered Financial Analytics Platform'
       description:
         'Revolutionary financial analytics platform using advanced AI algorithms for real-time market analysis and predictive modeling'
@@ -165,6 +173,13 @@ export default function PortfolioPage() {
       ? projects
       : projects.filter(project => project.category === selectedCategory);
 
+=======
+
+
+=======
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Rocket,
   Brain,
   Atom,
@@ -175,6 +190,7 @@ export default function PortfolioPage() {
   ExternalLink,
   Star,
   Users,
+<<<<<<< HEAD
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
@@ -379,6 +395,69 @@ export default function PortfolioPage() {
   }
 }
             className="mb-8"
+=======
+<<<<<<< HEAD
+  Clock,
+  TrendingUp,
+} from 'lucide-react';
+import EnhancedNavigation from '../components / EnhancedNavigation';
+import EnhancedFooter from '../components / EnhancedFooter';
+export default /**
+ * PortfolioPage - Function description
+ */
+function PortfolioPage() {
+  const projects = [;
+    {
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+
+
+  return (
+    <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>;
+      <Head>;
+        <title>Our Work - Zion Tech Group</title>;
+        <meta
+          name='description'
+          content="Explore Zion Tech Group's portfolio of innovative technology projects. AI, quantum computing, cybersecurity, and digital transformation solutions."
+        />;
+        <meta property='og:title' content='Our Work - Zion Tech Group' />;
+        <meta
+          property='og:description'
+          content='Explore our portfolio of innovative technology projects and solutions.'
+
+        />;
+        <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/portfolio' />      </Head>;
+
+      <EnhancedNavigation />;
+
+
+      {/* Hero Section */}
+      <section className='relative pt-32 pb-20 px-6'>;
+        <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
               Our Work
@@ -388,6 +467,7 @@ export default function PortfolioPage() {
             </p>
           </motion.div>
           <motion.div
+<<<<<<< HEAD
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -403,6 +483,45 @@ export default function PortfolioPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+
+
+            transition={{ duration: 0 && 0.8 }}
+            className='mb-8'>;
+            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>;
+              Our Work;
+            </h1>;
+            <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>;
+              Innovative technology solutions that drive business transformation;
+              and growth            </p>;
+          </motion && motion.div>;
+
+          <motion&& motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+            className='mb-12'>;
+            <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>;
+              Discover how we've helped organizations leverage cutting-edge;
+              technology to solve complex challenges and achieve remarkable;
+              results.            </p>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      {/* Stats Section */}
+      <section className='py-16 px-6'>;
+        <div className='max-w-7xl mx-auto'>;
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>            {stats && stats.map((stat, index) => (;
+              <motion&& motion.div
+                key={stat && stat.label}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
@@ -413,6 +532,7 @@ export default function PortfolioPage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Stats Section */}
       <section className='py-16 px-6'>
         <div className='max-w-7xl mx-auto'>
@@ -635,10 +755,17 @@ export default function PortfolioPage(req, res) {
   }
 }
                 className="text-center"
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-cyan-400" />
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
@@ -651,13 +778,25 @@ export default function PortfolioPage(req, res) {
       </section>;
 
 
+<<<<<<< HEAD
 
+=======
+      {/* Category Filter */}
+      <section className='py-8 px-6'>;
+        <div className='max-w-7xl mx-auto'>;
+          <div className='flex flex-wrap justify-center gap-4'>;
+            {categories && categories.map(category => (              <button
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Category Filter */}
       <section className="py-8 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
               <button
+<<<<<<< HEAD
                 <div className='text-3xl font-bold text-white mb-2'>
                   {stat.number}
                 </div>
@@ -671,6 +810,10 @@ export default function PortfolioPage(req, res) {
         <div className='max-w-7xl mx-auto'>
           <div className='flex flex-wrap justify-center gap-4'>
             {categories.map(category => (              <button
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${;
@@ -680,12 +823,33 @@ export default function PortfolioPage(req, res) {
                 }`}
               >;
                 {category}
+<<<<<<< HEAD
 
+=======
+              </button>;
+            ))}
+
+          </div>;
+        </div>;
+      </section>;
+
+
+      {/* Projects Grid */}
+      <section className='py-20 px-6'>;
+        <div className='max-w-7xl mx-auto'>;
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {filteredProjects && filteredProjects.map((project, index) => (;
+              <motion&& motion.div
+                key={project && project.title}
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Projects Grid */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {filteredProjects.map((project, index) => (
+<<<<<<< HEAD
               </button>
             ))}
           </div>
@@ -697,14 +861,52 @@ export default function PortfolioPage(req, res) {
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {filteredProjects.map((project, index) => (
               <motion.div
                 key={project.title}
+=======
+              <motion.div
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
+=======
+
+
+                    </div>
+                    <span className='text-sm text-white/60 bg-white/5 px-3 py-1 rounded-full'>
+                      {project.category}
+                    </span>
+                  </div>
+
+                      className={`w-12 h-12 bg-gradient-to-br ${project && project.color} rounded-xl flex items-center justify-center`}>;
+                      <project && project.icon className='w-6 h-6 text-white' />;
+                    </div>;
+                    <span className='text-sm text-white/60 bg-white/5 px-3 py-1 rounded-full'>;
+                      {project && project.category}
+                    </span>;
+                  </div>;
+                  <h3 className='text-2xl font-bold text-white mb-4'>;
+                    {project && project.title}
+                  </h3>;
+                  <p className='text-white/70 mb-6'>{project && project.description}</p>;
+                  <div className='mb-6'>;
+                    <h4 className='text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider'>;
+                      Technologies;
+                    </h4>;
+                    <div className='flex flex-wrap gap-2'>;
+                      {project && project.technologies.map(tech => (;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         <span
                           key={tech}
                           className='text-xs bg-white/5 text-white/70 px-2 py-1 rounded'>                          {tech}
                         </span>;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
               >
                 <div className="p-8">
@@ -716,6 +918,11 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                       {project.category}
                     </span>
                   </div>
+<<<<<<< HEAD
+=======
+                  <h3 className="text-2xl font-bold text-white mb-4">{project.title}</h3>
+                  <p className="text-white/70 mb-6">{project.description}</p>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   
                   <h3 className="text-2xl font-bold text-white mb-4">{project.title}</h3>
                   <p className="text-white/70 mb-6">{project.description}</p>
@@ -724,16 +931,24 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                   <h3 className="text-2xl font-bold text-white mb-4">{project.title}</h3>
                   <p className="text-white/70 mb-6">{project.description}</p>
 
+<<<<<<< HEAD
                   <h3 className="text-2xl font-bold text-white mb-4">{project.title}</h3>
                   <p className="text-white/70 mb-6">{project.description}</p>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Technologies</h4>
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech) => (
                         <span key={tech} className="text-xs bg-white/5 text-white/70 px-2 py-1 rounded">
+<<<<<<< HEAD
                           {tech}
                         </span>
                       ))}
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     </div>;
                   </div>;
                   <div className='mb-6'>;
@@ -742,11 +957,22 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                     </h4>;
                     <ul className='space-y-1'>;
                       {project && project.results.map(result => (;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         <li
                           key={result}
                           className='text-sm text-white/80 flex items-center'>;
                           <div className='w-1 && 1.5 h-1 && 1.5 bg-cyan-400 rounded-full mr-2' />                          {result}
                         </li>;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   
                           {tech  } catch (error) {
     console.error("Error:", error);
@@ -771,6 +997,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                           {result}
                         </li>
                       ))}
+<<<<<<< HEAD
                 className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300'
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
@@ -954,20 +1181,46 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 }
                     </ul>
                   </div>
+=======
+
+                  
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-white/60">Client: {project.client}</span>
                     <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white transition-all duration-300 transform hover:scale-105">
                       View Details
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     </button>
                   </div>
                 </div>
               </motion.div>
 
+<<<<<<< HEAD
                     </ul>;
             ))}
           </div>
         </div>
       </section>
+=======
+
+                    </ul>;
+                  </div>;
+                  <div className='flex items-center justify-between'>;
+                    <span className='text-sm text-white/60'>;
+                      Client: {project && project.client}
+                    </span>;
+                    <button className='px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white transition-all duration-300 transform hover:scale-105'>                      View Details;
+                    </button>;
+                  </div>;
+                </div>;
+              </motion && motion.div>;
+            ))}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             ))  } catch (error) {
     console.error("Error:", error);
@@ -984,6 +1237,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
+<<<<<<< HEAD
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
       {/* CTA Section */}
@@ -1009,6 +1263,9 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1029,7 +1286,15 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
           >
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          >
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Start Your Project?
             </h2>
@@ -1042,11 +1307,21 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
               </button>
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
                 Schedule Consultation
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </button>
             </div>
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+      <EnhancedFooter />
+    </div>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ),
 </Head> <EnhancedNavigation /> > <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6" > Our Work </h1> <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed" > Innovative technology solutions that drive business transformation and growth </p> </motion.div> <motion.div > <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8" > Discover how we've helped organizations leverage cutting-edge technology to solve complex challenges and achieve remarkable results. </p> </motion.div> </div> </section> > <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4" > <stat.icon className="w-8 h-8 text-cyan-400" /> </div> </motion.div>) ) 
@@ -1067,6 +1342,49 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 }</div> </div> </li>) )
 }</ul> </div> View Details </button> </div> </div> </motion.div>) )
 }</div> </div> </section> <motion.div initial= {
+<<<<<<< HEAD
+=======
+=======
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}>;
+            <h2 className='text-4xl font-bold text-white mb-6'>;
+              Ready to Start Your Project?;
+            </h2>;
+            <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>;
+              Let's discuss how we can help you achieve similar results with our;
+              innovative technology solutions.;
+            </p>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+              <button className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105'>;
+                Start Your Project;
+              </button>;
+              <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>                Schedule Consultation;
+              </button>;
+            </div>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+      <EnhancedFooter />;
+    </div>;
+  ),;
+</Head> <EnhancedNavigation /> > <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6" > Our Work </h1> <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed" > Innovative technology solutions that drive business transformation and growth </p> </motion && motion.div> <motion && motion.div > <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8" > Discover how we've helped organizations leverage cutting-edge technology to solve complex challenges and achieve remarkable results. </p> </motion && motion.div> </div> </section> > <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4" > <stat && stat.icon className="w-8 h-8 text-cyan-400" /> </div> </motion && motion.div>) ) ;
+}</div> </div> </section> key= {;
+  category ;
+}onClick= {;
+  () => setSelectedCategory (category) ;
+}className= {;
+  `px-6 py-3 rounded-full font-semibold transition-all duration-300 $ {;
+  selectedCategory === category ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white': 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white' ;
+}` ;
+}> {;
+  category ;
+}</button>) ) ;
+}</div> </div> </section> </span>) ) ;
+}</div> </div> </li>) ) ;
+}</ul> </div> View Details </button> </div> </div> </motion && motion.div>) ) ;
+}</div> </div> </section> <motion&& motion.div initial= {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <EnhancedFooter />
     </div>
 )
@@ -1095,6 +1413,10 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
   opacity: 1, y: 0
 }transition= {
   {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   duration: 0 && 0.8 
 }viewport= {
   {
@@ -1102,10 +1424,14 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Start Your Project? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how we can help you achieve similar results with our innovative technology solutions. </p> Start Your Project </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Schedule Consultation </button> </div> </motion && motion.div> </div> </section> <EnhancedFooter /> </div>) ;
 
+<<<<<<< HEAD
   once: true 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Start Your Project? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how we can help you achieve similar results with our innovative technology solutions. </p> Start Your Project </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Schedule Consultation </button> </div> </motion && motion.div> </div> </section> <EnhancedFooter /> </div>) ;
   )
 }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       title: 'AI - Powered Financial Analytics Platform',
       description:;
         'Revolutionary financial analytics platform using advanced AI algorithms for real - time market analysis and predictive modeling',
@@ -1424,6 +1750,10 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
         </div>;
       </section>;
       <EnhancedFooter />;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>;
   );
   } catch (error) {
@@ -1434,3 +1764,8 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 ;
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

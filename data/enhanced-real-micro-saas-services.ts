@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 tagline: string;
 price: string;
 period: string;
@@ -23,6 +27,7 @@ category: 'AI & Machine Learning';
 'Cloud Computing';
 'Data Analytics' ];
 
+<<<<<<< HEAD
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
 name: string;
@@ -2408,10 +2413,15 @@ export const serviceCategories = [
   'Robotics & AutomationAgriculture & Food Tech'
 ];
 
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Combined all services
 export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
 
 
+<<<<<<< HEAD
 export const getServicesByCategory = (category: string) => {
   if (category === 'All') return allEnhancedRealMicroSaasServices;
   return allEnhancedRealMicroSaasServices.filter(service => service.category === category)
@@ -2496,3 +2506,7 @@ export const serviceCategories = [
 
 // Combined all services
 export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

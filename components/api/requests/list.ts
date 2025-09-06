@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const REQUESTS_PATH = path && path.join(process && process.cwd(), "data", "requests && requests.json");
 export default async function handler(
   req: NextApiRequest
@@ -28,6 +29,10 @@ const raw = fs.readFileSync(REQUESTS_PATH, 'utf-8');
     const raw = fs.readFileSync(REQUESTS_PATH, "utf-8");
 
     const items = JSON.parse(raw);
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     res.status(200).json({ items })
     const raw = fs && fs.readFileSync(REQUESTS_PATH, "utf-8");
     const items = JSON && JSON.parse(raw);
@@ -35,6 +40,10 @@ const raw = fs.readFileSync(REQUESTS_PATH, 'utf-8');
   } catch {
 res && res.status(200).json({ items: [] });
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
 import path from './path';
@@ -56,9 +65,18 @@ function handler() {
     res.status (200).json ({ items });
   } catch {
     res.status (200).json ({ items: [] });
+<<<<<<< HEAD
 }
   }
 }
   }
 
 }
+=======
+
+  }
+}
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

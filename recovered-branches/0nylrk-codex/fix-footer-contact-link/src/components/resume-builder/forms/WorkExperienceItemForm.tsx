@@ -1,7 +1,13 @@
 
+<<<<<<< HEAD
 
 
 import { useState  } from 'react';
+=======
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
@@ -19,10 +25,18 @@ import {format} from "date-fns";
 import {CalendarIcon, Loader2} from "lucide-react";
 import {AIEnhancementButton} from "@/components/ai-enhancement/AIEnhancementButton";
 import {AIEnhancementDialog} from "@/components/ai-enhancement/AIEnhancementDialog";
+<<<<<<< HEAD
 import { useState } from 'react',
 
 import { useState } from 'react',
 import { useState } from 'react',
+=======
+
+
+=======
+import { useState } from 'react',
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { zodResolver } from "@hookform/resolvers/zod",
 import { useForm } from "react-hook-form",
 import { z } from "zod",
@@ -37,6 +51,7 @@ import { cn } from "@/lib/utils",
 import { Switch } from "@/components/ui/switch",
 import { format } from "date-fns",
 import { CalendarIcon, Loader2 } from "lucide-react",
+<<<<<<< HEAD
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",
 
@@ -44,6 +59,13 @@ import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementBu
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog";
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",
+=======
+
+import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",
+import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Define form schema
 
 const formSchema = z.object({
@@ -51,6 +73,7 @@ const formSchema = z.object({
   role_title: z.string().min(1, "Role title is required"),
   start_date: z.date({
 
+<<<<<<< HEAD
     required_error: "Start date is required"})
   end_date: z.date().optional()
   is_current: z.boolean().default(false)
@@ -60,6 +83,8 @@ type FormValues = z.infer<typeof formSchema>;
 interface WorkExperienceItemFormProps {
   initialData?: WorkExperience;
   onSubmit: (data: WorkExperience) => Promise<void>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     required_error: "Start date is required"}),
   end_date: z.date().optional(),
   is_current: z.boolean().default(false),
@@ -71,6 +96,7 @@ type FormValues = z.infer<typeof formSchema>,
 interface WorkExperienceItemFormProps {
   initialData?: WorkExperience,
   onSubmit: (data: WorkExperience) => Promise<void>,
+<<<<<<< HEAD
   onCancel: () => void
 }
 
@@ -84,12 +110,27 @@ export function WorkExperienceItemForm({
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false);
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false),
 
+=======
+
+  onCancel: () => void
+}
+
+
+
+  onCancel}: WorkExperienceItemFormProps) {
+
+  const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false),
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Set up form
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema)
     defaultValues: {
 
 
+<<<<<<< HEAD
       company_name: initialData?.company_name |""
       role_title: initialData?.role_title |""
       start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date()
@@ -101,6 +142,8 @@ export function WorkExperienceItemForm({
   const watchIsCurrent = form.watch("is_current");
   const watchRoleTitle = form.watch("role_title");
   const watchCompanyName = form.watch("company_name");
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       company_name: initialData?.company_name || "",
       role_title: initialData?.role_title || "",
       start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),
@@ -114,6 +157,11 @@ export function WorkExperienceItemForm({
   const watchRoleTitle = form.watch("role_title"),
   const watchCompanyName = form.watch("company_name"),
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleFormSubmit = async (values: FormValues) => {
     // Create a properly typed WorkExperience object with all required fields
     const workExperience: WorkExperience = {
@@ -127,6 +175,7 @@ export function WorkExperienceItemForm({
       location: values.location,          // Optional
 
 
+<<<<<<< HEAD
 
     }
     await onSubmit(workExperience)
@@ -134,17 +183,32 @@ export function WorkExperienceItemForm({
     }
     await onSubmit(workExperience)
   }
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
     
     await onSubmit(workExperience)
   },
 
+<<<<<<< HEAD
   const handleAIEnhancement = (content: string) => {
     form.setValue("description", content, { shouldDirty: true })
     setIsEnhancementDialogOpen(false)
   }
   },
 
+=======
+
+  const handleAIEnhancement = (content: string) => {
+    form.setValue("description", content, { shouldDirty: true })
+    setIsEnhancementDialogOpen(false)
+
+  },
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <>
       <Form {...form}>
@@ -161,6 +225,10 @@ export function WorkExperienceItemForm({
                   </FormControl>
                   <FormMessage />
                 </FormItem>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from 'react',;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { useForm } from "react-hook-form",;
@@ -200,6 +268,7 @@ export function WorkExperienceItemForm({;
   onSubmit,;
   onCancel}: WorkExperienceItemFormProps) {;
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false),;
+<<<<<<< HEAD
 // Define form schema;
 const formSchema = z && z.object({;
   company_name: z && z.string().min(1, "Company name is required");
@@ -221,12 +290,16 @@ export function WorkExperienceItemForm(): any ({;
   onSubmit;
   onCancel}: WorkExperienceItemFormProps) {;
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false);
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Set up form;
   const form = useForm<FormValues>({;
     resolver: zodResolver(formSchema),;
     defaultValues: {;
       company_name: initialData?.company_name || "",;
       role_title: initialData?.role_title || "",;
+<<<<<<< HEAD
 
 import { useState } from 'react',;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -292,10 +365,24 @@ export function WorkExperienceItemForm({;
   const watchIsCurrent = form.watch("is_current"),;
   const watchRoleTitle = form.watch("role_title"),;
   const watchCompanyName = form.watch("company_name"),;
+=======
+      start_date: initialData?.start_date ? new Date(initialData && initialData.start_date) : new Date(),;
+      end_date: initialData?.end_date ? new Date(initialData && initialData.end_date) : undefined,;
+      is_current: initialData?.is_current || false,;
+      description: initialData?.description || "",;
+      location: initialData?.location || ""}}),;
+
+  const { isSubmitting } = form && form.formState;
+  const watchIsCurrent = form && form.watch("is_current");
+  const watchRoleTitle = form && form.watch("role_title");
+  const watchCompanyName = form && form.watch("company_name");
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleFormSubmit = async (values: FormValues) => {;
     // Create a properly typed WorkExperience object with all required fields;
     const workExperience: WorkExperience = {;
       id: initialData?.id,;
+<<<<<<< HEAD
       company_name: values.company_name,  // Required;
       role_title: values.role_title,      // Required;
       start_date: values.start_date,      // Required;
@@ -304,6 +391,17 @@ export function WorkExperienceItemForm({;
       description: values.description,    // Optional;
       location: values.location,          // Optional;
     },;
+=======
+      company_name: values && values.company_name,  // Required;
+      role_title: values && values.role_title,      // Required;
+      start_date: values && values.start_date,      // Required;
+      end_date: values && values.end_date,          // Optional;
+      is_current: values && values.is_current,      // Required;
+      description: values && values.description,    // Optional;
+      location: values && values.location,          // Optional;
+    };
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     await onSubmit(workExperience);
   },;
   const handleAIEnhancement = (content: string) => {;
@@ -450,6 +548,10 @@ function WorkExperienceItemForm() {
                   </FormControl>;
                   <FormMessage />;
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               control={form.control}
               name="role_title";
               render={({ field }) => (
@@ -467,6 +569,7 @@ function WorkExperienceItemForm() {
               control={form.control}
               name="location";
               render={({ field }) => (
+<<<<<<< HEAD
                     <Input placeholder="e.g. Acme Corporation" {...field} />;
                   </FormControl>;
                   <FormMessage />;
@@ -500,6 +603,8 @@ function WorkExperienceItemForm() {
                   <FormMessage />
                 </FormItem>
               )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <FormItem>;
                   <FormLabel > Location</FormLabel>;
                   <FormControl>;
@@ -509,6 +614,10 @@ function WorkExperienceItemForm() {
                 </FormItem>)}
             />;
             <FormField;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               control={form.control}
               name="is_current";
               render={({ field }) => (
@@ -517,7 +626,14 @@ function WorkExperienceItemForm() {
                   <div className="flex items - center gap - 2 h - 10">;
                     <Switch;
                       checked={field.value}
+<<<<<<< HEAD
             />;
+=======
+
+            />;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <FormField
               control={form && form.control}
               name="is_current"
@@ -531,10 +647,15 @@ function WorkExperienceItemForm() {
                       id="current-position"
                     />;
                     <label htmlFor="current-position" className="text-sm text-muted-foreground">;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       onCheckedChange={field.on_change}
                       id="current - position";
                     />;
                     <label html_for="current - position" className="text - sm text - muted - foreground">;
+<<<<<<< HEAD
                     <Input placeholder="e.g. New York, NY (Remote)" {...field} />;
                   </FormControl>;
                   <FormMessage />;
@@ -554,10 +675,14 @@ function WorkExperienceItemForm() {
                       id="current-position";
                     />;
                     <label htmlFor="current-position" className="text-sm text-muted-foreground">;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       I currently work here;
                     </label>;
                   </div>;
                   <FormMessage />;
+<<<<<<< HEAD
                 </FormItem>;
               )}
             />;
@@ -598,10 +723,50 @@ function WorkExperienceItemForm() {
                         captionLayout="dropdown-buttons";
                         fromYear={1990}
                         toYear={new Date().getFullYear()}
+=======
+
+                </FormItem>)}
+            />;
+          </div>;
+          <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+            <FormField;
+              control={form.control}
+              name="start_date";
+              render={({ field }) => (
+                <FormItem className="flex flex - col">;
+                  <FormLabel > Start Date</FormLabel>;
+                  <Popover>;
+                    <PopoverTrigger as_child>;
+                      <FormControl>;
+                        <Button;
+                          variant={"outline"}
+                          className={cn (
+                            "w - full pl - 3 text - left font - normal";
+                            !field.value && "text - muted - foreground")}
+                        >;
+                          {field.value ? (
+                            format (field.value, "MMM yyyy")) : (
+                            <span > Select date</span>)}
+                          <CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" />;
+                        </Button>;
+                      </FormControl>;
+                    </PopoverTrigger>;
+                    <PopoverContent className="w - auto p - 0" align="start">;
+                      <Calendar;
+                        mode="single";
+                        selected={field.value}
+                        on_select={field.on_change}
+                        initial_focus;
+                        caption_layout="dropdown - buttons";
+                        from_year={1990}
+                        to_year={new Date ().getFullYear ()}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       />;
                     </PopoverContent>;
                   </Popover>;
                   <FormMessage />;
+<<<<<<< HEAD
               <FormField
                 control={form && form.control}
                 name="end_date"
@@ -613,12 +778,23 @@ function WorkExperienceItemForm() {
               <FormField;
                 control={form.control}
                 name="end_date";
+=======
+
+            />;
+
+            {!watchIsCurrent && (;
+
+              <FormField
+                control={form && form.control}
+                name="end_date"
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 render={({ field }) => (;
                   <FormItem className="flex flex-col">;
                     <FormLabel>End Date</FormLabel>;
                     <Popover>;
                       <PopoverTrigger asChild>;
                         <FormControl>;
+<<<<<<< HEAD
                           <Button;
                             variant={"outline"}
                             className={cn(;
@@ -629,6 +805,17 @@ function WorkExperienceItemForm() {
                             {field.value ? (;
                               format(field.value, "MMM yyyy");
                             ) :(;
+=======
+                          <Button
+                            variant={"outline"}
+                            className={cn(
+                              "w-full pl-3 text-left font-normal"
+                              !field && field.value && "text-muted-foreground"
+                            )}>;
+                            {field && field.value ? (;
+                              format(field && field.value, "MMM yyyy");
+                            ) : (;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                               <span>Select date</span>;
                             )}
                             <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
@@ -636,6 +823,7 @@ function WorkExperienceItemForm() {
                         </FormControl>;
                       </PopoverTrigger>;
                       <PopoverContent className="w-auto p-0" align="start">;
+<<<<<<< HEAD
                           selected={field && field.value || undefined}
                           onSelect={field && field.onChange}
             />
@@ -735,11 +923,20 @@ function WorkExperienceItemForm() {
                           mode="single"
                           selected={field.value |undefined}
                           onSelect={field.onChange}
+=======
+                        <Calendar
+                          mode="single"
+
+                          selected={field && field.value || undefined}
+                          onSelect={field && field.onChange}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           initialFocus
                           captionLayout="dropdown-buttons"
                           fromYear={1990}
                           toYear={new Date().getFullYear()}
                           disabled={(date) => date > new Date()}
+<<<<<<< HEAD
                         <Calendar;
                           mode="single";
                           selected={field.value || undefined}
@@ -749,10 +946,50 @@ function WorkExperienceItemForm() {
                           fromYear={1990}
                           toYear={new Date().getFullYear()}
                           disabled={(date) => date > new Date()}
+=======
+=======
+                </FormItem>)}
+            />;
+            {!watchIsCurrent && (
+              <FormField;
+                control={form.control}
+                name="end_date";
+                render={({ field }) => (
+                  <FormItem className="flex flex - col">;
+                    <FormLabel > End Date</FormLabel>;
+                    <Popover>;
+                      <PopoverTrigger as_child>;
+                        <FormControl>;
+                          <Button;
+                            variant={"outline"}
+                            className={cn (
+                              "w - full pl - 3 text - left font - normal";
+                              !field.value && "text - muted - foreground")}
+                          >;
+                            {field.value ? (
+                              format (field.value, "MMM yyyy")) : (
+                              <span > Select date</span>)}
+                            <CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" />;
+                          </Button>;
+                        </FormControl>;
+                      </PopoverTrigger>;
+                      <PopoverContent className="w - auto p - 0" align="start">;
+                        <Calendar;
+                          mode="single";
+                          selected={field.value || undefined}
+                          on_select={field.on_change}
+                          initial_focus;
+                          caption_layout="dropdown - buttons";
+                          from_year={1990}
+                          to_year={new Date ().getFullYear ()}
+                          disabled={(date) => date > new Date ()}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         />;
                       </PopoverContent>;
                     </Popover>;
                     <FormMessage />;
+<<<<<<< HEAD
                   </FormItem>;                )}
               />;
             )}
@@ -761,18 +998,37 @@ function WorkExperienceItemForm() {
           <FormField;
             control={form.control}
             name="description";
+=======
+
+          </div>;
+
+
+          <FormField
+            control={form && form.control}
+            name="description"
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             render={({ field }) => (;
               <FormItem>;
                 <div className="flex justify-between items-center">;
                   <FormLabel>Description</FormLabel>;
                   <div className="flex gap-2">;
+<<<<<<< HEAD
                         enhancementType: "work-description",
                         content: field && field.value || "",
+=======
+                    <AIEnhancementButton
+                      options={{
+
+                        enhancementType: "work-description",
+                        content: field && field.value || "",
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         context: `${watchRoleTitle} at ${watchCompanyName}`
                       }}
                       onEnhanced={(content) => form && form.setValue("description", content, { shouldDirty: true })}
                       buttonText="Enhance with AI";
                     />;
+<<<<<<< HEAD
                         />
                       </PopoverContent>
                     </Popover>
@@ -799,11 +1055,14 @@ function WorkExperienceItemForm() {
                       onEnhanced={(content) => form.setValue("description", content, { shouldDirty: true })}
                       buttonText="Enhance with AI"
                     />
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <Button
                       type="button"
                       variant="outline"
                       size="sm"
                       onClick={() => setIsEnhancementDialogOpen(true)}
+<<<<<<< HEAD
                       className="text-xs"
                     >
                       AI Writer
@@ -852,6 +1111,8 @@ function WorkExperienceItemForm() {
       />
     </>
   )
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       className="text-xs";
                   </FormItem>)}
               />)}
@@ -945,6 +1206,7 @@ function WorkExperienceItemForm() {
 }
 ;
 
+<<<<<<< HEAD
 ;
       <AIEnhancementDialog;
         title="Enhance Work Experience Description";
@@ -989,3 +1251,6 @@ setIsEnhancementDialogOpen (false);
 }
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

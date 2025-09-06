@@ -1,6 +1,10 @@
 "use client;""";";",
 "use client;"";";";,
+<<<<<<< HEAD
 :src.disabled/components/ThemeProvider.jsx
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 "use client"
 "use client"
 ursor/add-new-services-and-deploy-updates-0462

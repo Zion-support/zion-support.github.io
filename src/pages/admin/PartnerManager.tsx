@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useRouter } from 'next/router'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -31,6 +32,8 @@ interface PartnerProfile {
 
 
   onViewDetails, }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 onViewDetails, }
 
   )
@@ -69,6 +72,7 @@ interface PartnerProfile {
   created_at: string,
   niche: string,
   audience_size: string,
+<<<<<<< HEAD
   social_media?: Record<string, string>
   website?: string
   bio?: string
@@ -316,6 +320,37 @@ export default function PartnerManager() {;
         variant: "destructive"})
     } finally {
       setIsLoading(false)
+=======
+  social_media?: Record < string, string>;
+  website?: string;
+  bio?: string;
+  payout_method?: string;
+  fraud_flags?: number;
+  commission_rate?: number;
+}
+export default /**
+ * PartnerManager - Function description
+ */
+function PartnerManager() {
+  const [partners, set_partners] = useState < PartnerProfile[]>([]);
+  const [filtered_partners, setFilteredPartners] = useState < PartnerProfile[]>([]);
+  const [is_loading, setIsLoading] = useState (true);
+  const [search_query, setSearchQuery] = useState ("");
+  const [active_tab, setActiveTab] = useState ("pending");
+  const [selected_partner, setSelectedPartner] = useState < PartnerProfile | null>(null);
+  const [isDetailsOpen, setIsDetailsOpen] = useState (false);
+  const [isSettingsOpen, setIsSettingsOpen] = useState (false);
+  const [commission_rate, setCommissionRate] = useState (25);
+  const { user, is_authenticated } = use_auth ();
+  const router = use_router ();
+  useEffect ((, ) => {
+    // Check condition
+if ( {) {
+  $2
+}
+      router.push ('/auth / login?return_to=' + encodeURIComponent ('/admin / partners'));
+      return;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   },
 
@@ -853,6 +888,11 @@ export default function PartnerManager() {;
     </div>;
   );
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 interface PartnerTableProps {;
   partners: PartnerProfile[],;
@@ -973,4 +1013,8 @@ function PartnerTable({;
     </Table>;
   );
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

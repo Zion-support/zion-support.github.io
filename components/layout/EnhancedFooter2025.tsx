@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import Link from 'next / link';
 
@@ -33,6 +37,15 @@ import {
   Youtube,;
   Instagram,;} from 'lucide-react';import { ;
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  Phone, Mail, MapPin, Star, ArrowRight;
+  Brain, Atom, Shield, Rocket, Target, Microscope;
+  Zap, Globe, Database, Lock, Cloud, BarChart3;
+  Twitter, Linkedin, Github, Youtube, Instagram
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 } from 'lucide-react';
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -40,11 +53,21 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const serviceCategories = [
   {
     title: 'AI & Consciousness'
     icon: Brain
     services: [
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -164,6 +187,7 @@ const serviceCategories = [;
       { name: 'Edge Computing Orchestrator', href: '/edge-computing-orchestrator' },;
       { name: 'Zero Trust Security Platform', href: '/zero-trust-security-platform' },;
       { name: 'Blockchain Enterprise Platform', href: '/blockchain-enterprise-platform' },;
+<<<<<<< HEAD
       { name: 'AI-Powered DevOps', href: '/ai-powered-devops' }
     ];
   };
@@ -213,6 +237,9 @@ const companyLinks = [;
       { name: 'Edge Computing Orchestrator', href: '/edge-computing-orchestrator' },
       { name: 'Zero Trust Security Platform', href: '/zero-trust-security-platform' },
       { name: 'Blockchain Enterprise Platform', href: '/blockchain-enterprise-platform' },
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       { name: 'AI-Powered DevOps', href: '/ai-powered-devops' }
     ]
   };
@@ -282,13 +309,20 @@ const company_links = [;
   { name: 'News', href: '/news' },
   { name: 'Case Studies', href: '/case - studies' },
   { name: 'Blog', href: '/blog' },
+<<<<<<< HEAD
   { name: 'Resources', href: '/resources' }, ];  { name: 'Resources', href: '/resources' }
+=======
+
+  { name: 'Resources', href: '/resources' }, ];  { name: 'Resources', href: '/resources' }
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ];
 ;
 const legal_links = [;
   { name: 'Privacy Policy', href: '/privacy' },
   { name: 'Terms of Service', href: '/terms' },
   { name: 'Cookie Policy', href: '/cookies' },
+<<<<<<< HEAD
       <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5'></div>;
       <div className='relative z-10'>;
         {/* Main Footer Content */}
@@ -365,11 +399,16 @@ const EnhancedFooter2025: React.FC = () => {
                   <span className='text-sm'>{contactInfo && contactInfo.address}</span>                </div>      {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>;
       <div className="relative z-10">;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">;
             {/* Company Info */}
 
+<<<<<<< HEAD
 
 
 
@@ -408,6 +447,34 @@ const EnhancedFooter2025: React.FC = () => {
                 </div>;
               </div>;
             </div>;
+=======
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3 text-gray-300">
+                  <Phone className="w-4 h-4 text-cyan-400" />
+                  <a href={`tel:${contactInfo.mobile}`} className="hover:text-cyan-400 transition-colors">
+                    {contactInfo.mobile}
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3 text-gray-300">
+                  <Mail className="w-4 h-4 text-purple-400" />
+                  <a href={`mailto:${contactInfo.email}`} className="hover:text-purple-400 transition-colors">
+                    {contactInfo.email}
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3 text-gray-300">
+                  <MapPin className="w-4 h-4 text-pink-400" />
+                  <span className="text-sm">{contactInfo.address}</span>
+                </div>
+              </div>
+            </div>
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Service Categories */}
             {serviceCategories && serviceCategories.map((category, index) => (;
               <motion&& motion.div
@@ -436,8 +503,11 @@ const EnhancedFooter2025: React.FC = () => {
                 className="space-y-4"
               >
 
+<<<<<<< HEAD
                 className="space-y-4"
               >
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
                     <category.icon className="w-4 h-4 text-white" />
@@ -446,6 +516,11 @@ const EnhancedFooter2025: React.FC = () => {
                 </div>
                 <div className="space-y-2">
                   {category.services.map((service) => (
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 className='space-y-4'>;
                 <div className='flex items-center space-x-3'>;
                   <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>;
@@ -458,6 +533,12 @@ const EnhancedFooter2025: React.FC = () => {
                 <div className='space-y-2'>;
                   {category && category.services.map(service => (;
                     <Link
+<<<<<<< HEAD
+=======
+
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {/* Contact Info */}
               <div className='space - y-3'>;
                 <div className='flex items - center space - x-3 text - gray - 300'>;
@@ -555,10 +636,18 @@ const EnhancedFooter2025: React.FC = () => {
                 <div className="space - y-2">;
                   {category.services.map ((service) => (
                     <Link;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       key={service.name}
                       href={service.href}
                       className="block text - gray - 400 hover:text - cyan - 400 transition - colors duration - 200 text - sm";
                     >;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                       className='block text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm'                    >
 
@@ -581,9 +670,13 @@ const EnhancedFooter2025: React.FC = () => {
                 {companyLinks && companyLinks.map(link => (;
                   <Link
 
+<<<<<<< HEAD
                       {service.name}
           </div>;
           {/* Additional Links */}
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50">
             {/* Company Links */}
             <div>
@@ -611,10 +704,18 @@ const EnhancedFooter2025: React.FC = () => {
               <div className="space - y-2">;
                 {company_links.map ((link) => (
                   <Link;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     key={link.name}
                     href={link.href}
                     className="block text - gray - 400 hover:text - white transition - colors duration - 200 text - sm";
                   >;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     key={link.name}
                     href={link.href}
 
@@ -636,6 +737,7 @@ const EnhancedFooter2025: React.FC = () => {
                     key={link && link.name}
                     href={link && link.href}
                     className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+<<<<<<< HEAD
 
 
                     {link.name}
@@ -667,6 +769,8 @@ const EnhancedFooter2025: React.FC = () => {
               <div className="flex space-x-4">
                 {socialLinks.map((social) => (
                   <a
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
               </div>;
@@ -692,7 +796,11 @@ const EnhancedFooter2025: React.FC = () => {
 
                 ))}
 
+<<<<<<< HEAD
                 ))}
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </Link>))}
               </div>;
             </div>;
@@ -730,6 +838,10 @@ const EnhancedFooter2025: React.FC = () => {
                   >;
                     <social.icon className='w - 5 h - 5' />                  </a>                    <social.icon className="w - 5 h - 5" />;
                   </a>))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </div>;
             </div>;
           </div>;
@@ -737,15 +849,31 @@ const EnhancedFooter2025: React.FC = () => {
 
 
 
+<<<<<<< HEAD
         <div className="border-t border-gray-800/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="text-center">
               <motion.h3
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        {/* Newsletter Section */}
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6 }}
                 viewport={{ once: true }}
 
+<<<<<<< HEAD
                 className="text-2xl md:text-3xl font-bold text-white mb-4"
 
 const _serviceCategories = [
@@ -1220,21 +1348,31 @@ const EnhancedFooter2025: React.FC = () => {
                 viewport={{ once: true }}
                 className='text-2xl md:text-3xl font-bold text-white mb-4'              >                className="text-2xl md:text-3xl font-bold text-white mb-4"
                 className='text-2xl md:text-3xl font-bold text-white mb-4'              >
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               >
                 Stay Ahead of the Future
               </motion.h3>
               <motion.p
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
                 viewport={{ once: true }}
 
 
+<<<<<<< HEAD
                 className="text-gray-400 mb-6 max-w-2xl mx-auto"
               >
                 className='text-gray-400 mb-6 max-w-2xl mx-auto'
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               >
                 Get the latest insights on AI, quantum computing, and emerging
                 technologies delivered to your inbox.
@@ -1242,6 +1380,11 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
                 Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.
               </motion.p>
               <motion.div
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 className='text-gray-400 mb-6 max-w-2xl mx-auto'>;
                 Get the latest insights on AI, quantum computing, and emerging;
                 technologies delivered to your inbox.;
@@ -1249,6 +1392,12 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
                 Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.;
               </motion && motion.p>;
               <motion&& motion.div
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
@@ -1266,12 +1415,17 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
                 className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"
               >
 
+<<<<<<< HEAD
                 className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"
               >
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <input
                   type="email"
                   placeholder="Enter your email"
                   className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+<<<<<<< HEAD
         <div className="border-t border-gray-800/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
@@ -1335,6 +1489,26 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
   )
 };
 export default EnhancedFooter2025;
+=======
+
+
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+
+=======
+  )
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+};
+export default EnhancedFooter2025;
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </footer>);
 }
 ;
@@ -1343,10 +1517,16 @@ export default EnhancedFooter2025);
 ;
 export default EnhancedFooter2025;
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 };
 
 
+<<<<<<< HEAD
   );
 }
 };
@@ -1359,3 +1539,7 @@ export default EnhancedFooter2025;
 
 }
 export default EnhancedFooter2025;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

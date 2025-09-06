@@ -1,6 +1,7 @@
 
 import {useEffect, useRef, useState} from 'react';
 
+<<<<<<< HEAD
 
 
 :hooks/useIntersectionObserver.ts
@@ -12,10 +13,20 @@ import {useEffect, useRef, useState} from 'react';
 main:hooks/useIntersectionObserver.ts
 :backup-problematic-files/hooks/useIntersectionObserver.ts
 :backup-problematic-files/hooks/useIntersectionObserver.ts
+=======
+=======
+
+import {useEffect, useRef, useState} from 'react';
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface UseIntersectionObserverProps {
   threshold?: number;
   root?: Element | null;
   rootMargin?: string;
+<<<<<<< HEAD
 :backup-problematic-files/hooks/useIntersectionObserver.ts
   freezeOnceVisible?: boolean;
 }
@@ -77,10 +88,17 @@ main:hooks/useIntersectionObserver.ts
       currentObserver.disconnect()
     }
 main:hooks/useIntersectionObserver.ts
+=======
+
+  freezeOnceVisible?: boolean
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }, [node, threshold, root, rootMargin, frozen]);
   const prevNode = useRef<Element | null>(null);
   useEffect(() => {
     if (prevNode.current) {
+<<<<<<< HEAD
 :backup-problematic-files/hooks/useIntersectionObserver.ts
       observer.current?.unobserve(prevNode.current);
     }
@@ -95,6 +113,13 @@ main:hooks/useIntersectionObserver.ts
 }
   return [setNode, entry] as const
 };
+=======
+
+  return [setNode, entry] as const
+};
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return [setNode, entry] as const;
 }
 import { useEffect, useRef, useState } from 'react',;
@@ -149,6 +174,13 @@ export function useIntersectionObserver({;
   }, [node]);
   return [setNode, entry] as const
 }
+<<<<<<< HEAD
 main:hooks/useIntersectionObserver.ts
 :backup-problematic-files/hooks/useIntersectionObserver.ts
 :backup-problematic-files/hooks/useIntersectionObserver.ts
+=======
+>>>>>>> main:hooks/useIntersectionObserver.ts
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src.broken/components/profile/HireNowCTA.js
 ursor/fix-syntax-push-and-merge-to-main-40de
 :src/components/profile/HireNowCTA.jsx
 import React, {useState} from 'react';
@@ -90,6 +91,10 @@ export function HireNowCTA("props": "any) {;
 export default HireNowCTA;
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/src.broken/components/profile/HireNowCTA.js
 import React, { useState } from 'react';
 import { Button } from '../ui/Button';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/Card';
@@ -103,6 +108,7 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
         budget: '',
         startDate: '',
         message: ''
+<<<<<<< HEAD:src.broken/components/profile/HireNowCTA.js
 ursor/fix-syntax-push-and-merge-to-main-40de
 :src/components/profile/HireNowCTA.jsx
     }
@@ -112,6 +118,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     const handleSubmit = (e) => {
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/src.broken/components/profile/HireNowCTA.js
         e.preventDefault();
         if (onHire) {
             onHire(formData);
@@ -121,6 +131,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             projectDescription: '',
             budget: '',
             startDate: '',
+<<<<<<< HEAD:src.broken/components/profile/HireNowCTA.js
 ursor/fix-syntax-push-and-merge-to-main-40de
 :src/components/profile/HireNowCTA.jsx
             message: ''}
@@ -132,6 +143,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     };
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/src.broken/components/profile/HireNowCTA.js
     const handleChange = (e) => {
         setFormData(prev => ({
             ...prev,
@@ -195,8 +210,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           </form>)}
       </CardContent>
     </Card>);
+<<<<<<< HEAD:src.broken/components/profile/HireNowCTA.js
 }
 }
 }
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/src.broken/components/profile/HireNowCTA.js

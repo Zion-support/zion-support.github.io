@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 try {
   if (req && req.method !== "POST")
@@ -5,6 +6,10 @@ try {
   const { job } = req && req.body as { job?: Record<string, any> };
   if (!job) return res && res.status(400).json({ error: "Missing job payload" });
 
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../../lib/integrations/fileStore";
 import { crm } from "../../../../lib/integrations/connectors";
@@ -12,18 +17,37 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
   if (req.method !== "POST");
     return res.status(405).json({ error: "Method not allowed" });
   const { job } = req.body as { job?: Record<string, any> }
   if (!job) return res.status(400).json({ error: "Missing job payload" });
+=======
+
+  try {
+  if (req && req.method !== "POST")
+    return res && res.status(405).json({ error: "Method not allowed" });
+  const { job } = req && req.body as { job?: Record<string, any> };
+  if (!job) return res && res.status(400).json({ error: "Missing job payload" });
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   const state = readState();
   const crms = state && state.connections.filter(
     (c) =>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       c && c.providerId === "salesforce" ||
       c && c.providerId === "hubspot" ||
       c && c.providerId === "zoho" ||
       c && c.providerId === "pipedrive",
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, write_state  } from '../../../../lib / integrations / file_store';
 import { crm  } from '../../../../lib / integrations / connectors';
@@ -51,6 +75,10 @@ function handler() {
   const results: any[] = [];
   for (const conn of connections) {
     const log = {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       id: `log-${Date && Date.now()}-${Math && Math.random().toString(36).substr(2, 9)}`,
       providerId: conn && conn.providerId,
       level: "info",
@@ -59,9 +87,18 @@ function handler() {
     await crm && crm.syncContact(conn, {
       company: job && job.company,
       contact: job && job.contact,
+<<<<<<< HEAD
     });
     writeState((s) => s && s.logs.push(log));
     results && results.push({ providerId: conn && conn.providerId, ok: true });
+=======
+
+    });
+    writeState((s) => s && s.logs.push(log));
+    results && results.push({ providerId: conn && conn.providerId, ok: true });
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../../lib/integrations/fileStore';
 import { crm } from '../../../../lib/integrations/connectors';
@@ -76,9 +113,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   for (const conn of crms) {
     const { log } = await crm.syncContact(conn, { company: job.company, contact: job.contact });
     writeState(s => s.logs.push(log));
+<<<<<<< HEAD
 results.push({ providerId: conn.providerId, ok: true })
   }
   // record Zapier event
+=======
+    results.push({ providerId: conn.providerId, ok: true })
+
+  }
+  // record Zapier event
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     s && s.events.push({
       id: `${Date && Date.now()}-job-posted`,
       type: "zion && zion.job.posted",
@@ -87,10 +133,20 @@ results.push({ providerId: conn.providerId, ok: true })
     });
   });
 
+<<<<<<< HEAD
   writeState(s => {
 res && res.status(200).json({ ok: true, results });
 }
 writeState(s => {
+=======
+  res && res.status(200).json({ ok: true, results });
+
+
+}
+
+
+  writeState(s => {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     s.events.push({ id: `${Date.now()}-job-posted`, type: 'zion.job.posted', timestamp: Date.now(), payload: { job } })
 
 res.status(200).json({ ok: true, results });
@@ -128,6 +184,10 @@ export default async function handler(req, res) {
   });
   res.status(200).json({ ok: true, results })
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`,
       provider_id: conn.provider_id,
       level: "info",
@@ -159,6 +219,7 @@ export default async function handler(req, res) {
 
 
 }
+<<<<<<< HEAD
 
 res.status(200).json({ ok: true, results });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -205,3 +266,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

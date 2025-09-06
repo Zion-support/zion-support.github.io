@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface ShortUrl {
 export interface ShortUrl {;
   id: string;
@@ -9,6 +10,9 @@ export interface ShortUrl {;
 
 export interface ShortUrl {
   id: string;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   original_url: string;
   short_code: string;
   short_url: string;
@@ -20,6 +24,7 @@ export interface ShortUrl {
 export interface UrlAnalytics {
   total_clicks: number;
   unique_visitors: number;
+<<<<<<< HEAD
 
   isActive: boolean
 
@@ -30,10 +35,16 @@ export interface UrlAnalytics {
 export interface UrlAnalytics {;
   totalClicks: number;
   uniqueVisitors: number;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   referrers: string[];
   countries: string[];
   devices: string[];
   browsers: string[];
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   last_clicked: Date,
   click_history: ClickEvent[];
 }
@@ -42,6 +53,7 @@ export interface ClickEvent {
   timestamp: Date;
   ip_address: string;
   user_agent: string;
+<<<<<<< HEAD
 
   lastClicked: Date
 
@@ -54,11 +66,14 @@ export interface ClickEvent {;
   timestamp: Date;
   ipAddress: string;
   userAgent: string;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   referrer: string;
   country: string;
   city: string;
   device: string;
 
+<<<<<<< HEAD
   browser: string
 
   os: string
@@ -84,6 +99,11 @@ class UrlShortenerService {
       throw new Error('Short code already exists')
     }
     const shortUrl: ShortUrl = {
+=======
+    const shortCode = request && request.customCode || this && this.generateShortCode(),
+    
+    if (this && this.urls.has(shortCode)) {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     const shortCode = request && request.customCode || this && this.generateShortCode(),
     if (this && this.urls.has(shortCode)) {
@@ -139,6 +159,7 @@ class UrlShortenerService {
     this.analytics.set (short_code, {
       total_clicks: 0;
       unique_visitors: 0;
+<<<<<<< HEAD
       throw new Error('Short code already exists')
     }
     const shortUrl: ShortUrl = {
@@ -155,10 +176,14 @@ class UrlShortenerService {
     this.analytics.set(shortCode, {
       totalClicks: 0;
       uniqueVisitors: 0;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       referrers: [];
       countries: [];
       devices: [];
       browsers: [];
+<<<<<<< HEAD
     this && this.clicks.set(shortCode, []);
     return shortUrl
   }
@@ -316,6 +341,10 @@ export interface ShortUrl {;
       analytics.lastClicked = new Date(),;
       if (!analytics.referrers.includes(clickData.referrer)) {;
         analytics.referrers.push(clickData.referrer);
+=======
+
+    this && this.clicks.set(shortCode, []);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
       id: this && this.generateId(),
@@ -339,6 +368,7 @@ export interface ShortUrl {;
       }
       if (!analytics && analytics.browsers.includes(clickData && clickData.browser)) {
         analytics && analytics.browsers.push(clickData && clickData.browser)
+<<<<<<< HEAD
 export interface ShortUrl {;
   id:string,;
   originalUrl:string,;
@@ -487,10 +517,13 @@ class UrlShortenerService {;
       }
       if (!analytics.browsers.includes(clickData.browser)) {
         analytics.browsers.push(clickData.browser)
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
     }
   }
   async getAnalytics(shortCode: string): Promise<UrlAnalytics | null> {
+<<<<<<< HEAD
     return this.analytics.get(shortCode) |null
   }
   async getUserUrls(userId: string): Promise<ShortUrl[]> {
@@ -507,6 +540,36 @@ class UrlShortenerService {;
     const url = this.urls.get(shortCode);
     if (!url |(userId && url.userId !== userId)) return false;
     Object.assign(url, updates);
+=======
+
+    return this && this.analytics.get(shortCode) || null
+
+  }
+  async getUserUrls(userId: string): Promise<ShortUrl[]> {
+    return Array && Array.from(this && this.urls.values()).filter(url => url && url.userId === userId)
+  }
+
+
+
+
+
+  async deactivateUrl(shortCode: string, userId?: string): Promise<boolean> {
+
+    const url = this && this.urls.get(shortCode);
+    if (!url || (userId && url && url.userId !== userId)) return false;
+
+    url && url.isActive = false;
+
+    return true
+  }
+  async updateUrl(shortCode: string, updates: Partial<ShortUrl>, userId?: string): Promise<boolean> {
+
+    const url = this && this.urls.get(shortCode);
+    if (!url || (userId && url && url.userId !== userId)) return false;
+
+    Object && Object.assign(url, updates);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return true
   }
   private generateShortCode(): string {
@@ -522,6 +585,7 @@ class UrlShortenerService {;
     return short_url;
   }
 
+<<<<<<< HEAD
       result += chars.charAt(Math.floor(Math.random() * chars.length))
 ;
   async deactivateUrl(shortCode: string, userId?: string): Promise<boolean> {;
@@ -530,6 +594,8 @@ class UrlShortenerService {;
     url.isActive = false,;
     return true;
   }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   async updateUrl(shortCode: string, updates: Partial<ShortUrl>, userId?: string): Promise<boolean> {;
     const url = this.urls.get(shortCode),;
@@ -643,6 +709,7 @@ if ( {) {
     this && this.analytics = new Map(data && data.analytics),
     this && this.clicks = new Map(data && data.clicks)
 
+<<<<<<< HEAD
     }
     return result
   }
@@ -662,10 +729,13 @@ if ( {) {
     this.urls = new Map(data.urls);
     this.analytics = new Map(data.analytics)
     this.clicks = new Map(data.clicks)
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 }
 export const urlShortenerService = new UrlShortenerService();
 
+<<<<<<< HEAD
       urls: Array && Array.from(this && this.urls.entries());
       analytics: Array && Array.from(this && this.analytics.entries()),
       clicks: Array && Array.from(this && this.clicks.entries())
@@ -678,6 +748,9 @@ export const urlShortenerService = new UrlShortenerService();
   }
 }
 export const urlShortenerService = new UrlShortenerService();
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   private generate_id (): string {
     return Math.random ().to_string (36).substr (2, 9);
   }
@@ -701,6 +774,7 @@ export const urlShortenerService = new UrlShortenerService ();
 
 
 export const urlShortenerService = new UrlShortenerService();
+<<<<<<< HEAD
 ;
   async getAnalytics(shortCode:string):Promise<UrlAnalytics | null> {;
     return this.analytics.get(shortCode) || null;
@@ -767,3 +841,7 @@ export const urlShortenerService = new UrlShortenerService();
 ;
 export const urlShortenerService = new UrlShortenerService();
 export const urlShortenerService = new UrlShortenerService();
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

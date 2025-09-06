@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Chart components (heavy - only load when needed)
 // TODO: Uncomment when Chart component is available
 // export const DynamicChart = dynamic(
@@ -10,6 +11,8 @@ export const DynamicPieChart = dynamic(
   () => import('recharts').then(mod => ({ default: mod.PieChart }))
   {    loading: LoadingSkeleton
     ssr: false
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
   () => import('recharts').then(mod => ({ default: mod && mod.BarChart })),
@@ -20,6 +23,7 @@ export const DynamicBarChart = dynamic (
   {    loading: LoadingSkeleton,
     ssr: false,
   }
+<<<<<<< HEAD
 )
 export const DynamicBarChart = dynamic(
   () => import('recharts').then(mod => ({ default: mod.BarChart }))
@@ -60,12 +64,51 @@ export const DynamicVirtualList = dynamic(
   }
 )
 // Usage examples:
+=======
+
+  () => import('react-window').then(mod => ({ default: mod && mod.FixedSizeList })),
+);
+// TODO: Uncomment when these components are available;
+// export const DynamicPDFGenerator = dynamic (
+//   () => import ('../components / pdf / PDFGenerator'),
+//   {//     loading: LoadingSpinner,
+//     ssr: false;
+//   }
+// );
+// export const DynamicVideoPlayer = dynamic (
+//   () => import ('../components / video / VideoPlayer'),
+//   {//     loading: LoadingSkeleton,
+//     ssr: false;
+//   }
+// );
+// export const DynamicModelViewer = dynamic (
+//   () => import ('../components / ar / ModelViewer'),
+//   {//     loading: LoadingSpinner,
+//     ssr: false;
+//   }
+// );
+// export const DynamicRichEditor = dynamic (
+//   () => import ('../components / editor / RichTextEditor'),
+//   {//     loading: LoadingSpinner,
+//     ssr: false;
+//   }
+// );
+// Virtual list for large datasets;
+export const DynamicVirtualList = dynamic (
+  () => import ('react - window').then (mod => ({ default: mod.FixedSizeList })),
+
+  {    loading: LoadingSkeleton,
+    ssr: false,
+  }
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Replace: import Chart from '../components/charts/Chart';// With: import { DynamicChart as Chart } from '@/utils/dynamicComponents'
 // With: import { DynamicChart as Chart } from '@/utils/dynamicComponents'
 // Usage examples: // Replace: import Chart from '../components/charts/Chart'
 // With: import { DynamicChart as Chart } from '@/utils/dynamicComponents'
 
 
+<<<<<<< HEAD
 import dynamic from 'next/dynamic',
 const LoadingSpinner = () => React.createElement('div',
   { className: "flex items-center justify-center p-8" },
@@ -82,6 +125,9 @@ const LoadingSkeleton = () => React.createElement('div',
 // TODO: Uncomment when Chart component is available
 // export const DynamicChart = dynamic(
 //   () => import('../components/charts/Chart'),
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 );
 // Usage examples:;
 // Replace: import Chart from '../components / charts / Chart';// With: import { DynamicChart as Chart } from '@/utils / dynamic_components';
@@ -95,13 +141,21 @@ import dynamic from 'next/dynamic',
 const LoadingSpinner = () => React.createElement('div',
   { className: "flex items-center justify-center p-8" },
   React.createElement('div', { className: "animate-spin rounded-full h-8 w-8 border-b-2 border-primary" })
+<<<<<<< HEAD
 ),
 
 const LoadingSkeleton = () => React.createElement('div',
+=======
+)
+
+const LoadingSkeleton = () => React.createElement(
+  'div',
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   { className: "animate-pulse space-y-4" },
   React.createElement('div', { className: "h-4 bg-gray-200 rounded w-3/4" }),
   React.createElement('div', { className: "h-4 bg-gray-200 rounded w-1/2" }),
   React.createElement('div', { className: "h-32 bg-gray-200 rounded" })
+<<<<<<< HEAD
 ),
 
 //   {//     loading: LoadingSkeleton,
@@ -235,6 +289,10 @@ export const DynamicVirtualList = dynamic(;
   }
 ),;
 // With: import { DynamicChart as Chart } from '@/utils/dynamicComponents';
+=======
+)
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 // Chart components (heavy - only load when needed)
@@ -245,7 +303,11 @@ export const DynamicVirtualList = dynamic(;
 
 // Usage examples: // Replace: import Chart from '../components/charts/Chart';
 
+<<<<<<< HEAD
 // Usage examples: // Replace: import Chart from '../components/charts/Chart';
 // With: import { DynamicChart as Chart } from '@/utils/dynamicComponents';
 // With: import { DynamicChart as Chart } from '@/utils/dynamicComponents';
 // With: import { DynamicChart as Chart } from '@/utils/dynamicComponents';
+=======
+// With: import { DynamicChart as Chart } from '@/utils/dynamicComponents';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

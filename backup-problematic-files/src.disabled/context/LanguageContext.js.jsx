@@ -9,4 +9,8 @@ const LanguageContext.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default LanguageContext.js;
+=======
+export default LanguageContext.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

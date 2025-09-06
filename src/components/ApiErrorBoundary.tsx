@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component, ReactNode } from 'react';
 import { QueryClient  } from '@tanstack/react-query';
 import * as Sentry from '@sentry/nextjs';
@@ -54,6 +55,8 @@ export class ApiErrorBoundary extends Component<
     return {
       hasError: true
       error
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
       return (
 
@@ -72,6 +75,7 @@ export class ApiErrorBoundary extends Component<
       this.set_state ({ is_retrying: false });
     }
   }
+<<<<<<< HEAD
   componentDidCatch(error: Error, errorInfo: any) {
     // Log to Sentry
     Sentry.withScope(scope => {
@@ -274,6 +278,35 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
       }
 
       return (
+=======
+  render () {
+    // Check condition
+if ( {) {
+  $2
+}
+      // Check if it's a network - related error;
+      const isNetworkError =;
+        this.state.error?.message?.includes ('fetch') ||;
+        this.state.error?.message?.includes ('network') ||;
+        this.state.error?.message?.includes ('timeout') ||;
+        !this.state.is_online;
+      // Use custom fallback if provided;
+      // Check condition
+if ( {) {
+  $2
+}
+        return this.props.fallback;
+      }
+      return (
+        <div className='flex min - h-screen items - center justify - center p - 4'>;
+          <div className='w - full max - w-md space - y-4'>;
+            <Alert variant='destructive'>;
+              <div className='flex items - center gap - 2'>;
+                {isNetworkError ? (
+                  <WifiOff className='h - 4 w - 4' />) : (
+                  <RefreshCw className='h - 4 w - 4' />)}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <AlertTitle>;
                   {isNetworkError;
                     ? 'Connection Problem';
@@ -290,16 +323,25 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 {isNetworkError ? (
                   <WifiOff className="h-4 w-4" />
                 ) : (
+<<<<<<< HEAD
                   <RefreshCw className='h-4 w-4' />
                 )}
                 <AlertTitle>
                   {isNetworkError
                     ? 'Connection Problem'
                     : 'Something went wrong'}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <RefreshCw className="h-4 w-4" />
                 )}
                 <AlertTitle>;
                   {isNetworkError ? 'Connection Problem' : 'Something went wrong'}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </AlertTitle>
               </div>
               <AlertDescription className="mt-2">
@@ -314,22 +356,34 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 )}
               </AlertDescription>
             </Alert>
+<<<<<<< HEAD
             <div className='flex flex-col gap-2'>
               <Button
                 onClick={this.handleRetry}
                 disabled={this.state.isRetrying}
                 className='w-full'              >
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             <div className='flex flex-col gap-2'>;
               <Button
 
+<<<<<<< HEAD
 
             <div className="flex flex-col gap-2">
               <Button
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 onClick={this.handleRetry}
                 disabled={this.state.isRetrying}
                 className="w-full"
               >
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {this.state.isRetrying ? (
                   <>
                     <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
@@ -341,7 +395,10 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                     Try Again
                   </>
                 )}
+<<<<<<< HEAD
                 )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
                 variant="outline"
@@ -446,6 +503,7 @@ export const useApiErrorHandler = () =>: any {
                 </pre>;
               </details>;
             )}
+<<<<<<< HEAD
                 variant='outline'
                 onClick={() => window.location.reload()}
                 className='w-full'              >
@@ -463,18 +521,28 @@ export const useApiErrorHandler = () =>: any {
               </div>
             )}
             {process.env.NODE_ENV === 'development' && this.state.error && (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <details className="mt-4 rounded border p-2 text-xs">
                 <summary className="cursor-pointer font-medium">
                   Debug Info (Development Only)
                 </summary>
+<<<<<<< HEAD
                 <pre className='mt-2 whitespace-pre-wrap break-all'>
                 <pre className='mt-2 whitespace-pre-wrap break-all'>
                 <pre className="mt-2 whitespace-pre-wrap break-all">
+=======
+
+                <pre className="mt-2 whitespace-pre-wrap break-all">
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>
               </details>
             )}
+<<<<<<< HEAD
 }, ;
   return { handleApiError };
 
@@ -503,10 +571,17 @@ export const useApiErrorHandler = () => {
 
 }, ;
   return { handleApiError };
+=======
+
+}, ;
+  return { handleApiError };
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>;
         </div>;
       );
     }
+<<<<<<< HEAD
 ;
     return this.props.children;
   }
@@ -524,6 +599,8 @@ export const useApiErrorHandler = () => {;
   return { handleApiError }
 };
 };
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 };
 };
@@ -537,4 +614,8 @@ export const useApiErrorHandler = () => {;
 },
 
 
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

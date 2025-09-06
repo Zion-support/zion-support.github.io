@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { NextApiRequest, NextApiResponse } from "next";
 import OpenAI from "openai";
@@ -24,12 +25,15 @@ export default async function handler(
     ? matchIntent(lastUser.content, articles)
     : { intentMatched: false, matchedArticleIds: [] }
   const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 import { readJson } from '../../../utils/fsDb';
 import { HelpArticle, matchIntent } from '../../../utils/support';
 import { logSupportEventToOperator } from '../../../utils/operator';
 const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marketplace. Provide clear, short answers and direct users to relevant help links.`;
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -52,6 +56,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const intent = lastUser ? matchIntent(lastUser.content, articles) : { intentMatched: false, matchedArticleIds: [] };
   const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
   // Build context with top matched articles as brief references
+=======
+
+  // Build context with top matched articles as brief references
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
   const { sessionId, messages } = req && req.body as { sessionId?: string; messages: Array<{ role: 'user' | 'assistant' | 'system'; content: string }> };
@@ -79,21 +89,43 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         intentMatched: intent && intent.intentMatched,
         matchedArticleIds: intent && intent.matchedArticleIds,
         links: matchedArticles && matchedArticles.map((a) => ({ title: a && a.title, href: `/help/${a && a.slug}` }))}})
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const matchedArticles = articles.filter((a) => intent.matchedArticleIds.includes(a.id));
   const context = matchedArticles
     .map((a) => `- ${a.title}: /help/${a.slug}`)
     .join('\n');
+<<<<<<< HEAD
   const sysMessage = { role: 'system' as const, content: SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : '') };
+=======
+
+  const sysMessage = { role: 'system' as const, content: SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : '') };
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   try {
     const completion = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
+      model: 'gpt-4o-mini',
       messages: [sysMessage, ...messages],
+<<<<<<< HEAD
 temperature: 0.2
     });
     const assistantMessage = completion.choices?.[0]?.message?.content ?? 'Let me know how I can help.';
     await logSupportEventToOperator({ type: 'chat_completion', sessionId: sessionId ?? 'unknown', payload: { intent } });
+=======
+      temperature: 0.2
+    });
+
+    const assistantMessage = completion.choices?.[0]?.message?.content ?? 'Let me know how I can help.';
+
+    await logSupportEventToOperator({ type: 'chat_completion', sessionId: sessionId ?? 'unknown', payload: { intent } });
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return res.status(200).json({
       assistantMessage,
+=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import OpenAI from './openai';
 import { read_json  } from '../../../utils / fs_db';
@@ -125,7 +157,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
   }
-if ()) {
+  if ()) {
   $2
 }
     return res.status (400).json ({ error: "messages required" });
@@ -141,24 +173,6 @@ if ()) {
   // Build context with top matched articles as brief references;
   const matched_articles = articles.filter ((a) =>;
     intent.matchedArticleIds.includes (a.id),
-import OpenAI from 'openai';
-import { readJson } from '../../../utils/fsDb';
-import { HelpArticle, matchIntent } from '../../../utils/support';
-import { logSupportEventToOperator } from '../../../utils/operator';
-const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marketplace. Provide clear, short answers and direct users to relevant help links.`;
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { sessionId, messages } = req.body as { sessionId?: string, messages: Array<{ role: 'user' | 'assistant' | 'system', content: string }> };
-  if (!messages || !Array.isArray(messages)) return res.status(400).json({ error: 'Invalid messages' });
-  const articles = readJson<HelpArticle[]>('help/articles.json', []);
-  const lastUser = [...messages].reverse().find((m) => m.role === 'user');
-  const intent = lastUser ? matchIntent(lastUser.content, articles) : { intentMatched: false, matchedArticleIds: [] },
-  const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
-
-  // Build context with top matched articles as brief references
-  const matchedArticles = articles.filter((a) =>
-    intent.matchedArticleIds.includes(a.id)
-
   );
   const context = matched_articles;
     .map ((a) => `- ${a.title}: /help/${a.slug}`);
@@ -189,14 +203,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 ;
     return res.status (200).json ({
       assistant_message,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       meta: {
         intent_matched: intent.intent_matched,
         matchedArticleIds: intent.matchedArticleIds,
+<<<<<<< HEAD
 links: matched_articles.map ((a) => ({
+=======
+
+        links: matched_articles.map ((a) => ({
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           title: a.title,
           href: `/help/${a.slug}`,
         })),
       },
+<<<<<<< HEAD
     });
   } catch (e: any) {
 }
@@ -212,3 +233,13 @@ links: matched_articles.map ((a) => ({
 
   }
 }
+=======
+
+    });
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  } catch (e: any) {
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

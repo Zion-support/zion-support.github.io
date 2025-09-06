@@ -3,12 +3,19 @@ import {SidebarProvider, SidebarTrigger} from "@/components/ui/sidebar";
 import {AppSidebar} from "@/components/creator/CreatorSidebar";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
+<<<<<<< HEAD
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",
 import { AppSidebar } from "@/components/creator/CreatorSidebar",
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
+=======
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function CreatorDashboard() {
   return (
     <SidebarProvider>
@@ -50,6 +57,7 @@ export default function CreatorDashboard() {
                 Create new content, monitor your analytics, or manage your account using the sidebar menu.
               </p>
 
+<<<<<<< HEAD
               {/* Placeholder for more creator-specific content */}
             </div>
           </main>
@@ -60,10 +68,15 @@ export default function CreatorDashboard() {
     </SidebarProvider>
   )
 }
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",;
 import { AppSidebar } from "@/components/creator/CreatorSidebar",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer";
+<<<<<<< HEAD
 
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",;
 import { AppSidebar } from "@/components/creator/CreatorSidebar",;
@@ -74,6 +87,12 @@ export default function CreatorDashboard() {;
   return (;
 export default function CreatorDashboard() {;
   return (;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default function CreatorDashboard() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <SidebarProvider>;
       <div className="min-h-screen flex w-full bg-zion-blue">;
         <AppSidebar />;
@@ -82,6 +101,11 @@ export default function CreatorDashboard() {;
           <main className="flex-1 p-6 md:p-10 bg-zion-blue">;
             <h1 className="text-2xl font-bold text-white mb-8">Creator Dashboard</h1>;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { SidebarProvider, SidebarTrigger } from '@/components / ui / sidebar';
 import { AppSidebar } from '@/components / creator / CreatorSidebar';
 import { Header } from '@/components / Header';
@@ -138,6 +162,7 @@ function CreatorDashboard() {
       <SidebarTrigger />;
     </SidebarProvider>);
 }
+<<<<<<< HEAD
     </SidebarProvider>;
   ),;}
  export default function CreatorDashboard () {
@@ -151,3 +176,6 @@ function CreatorDashboard() {
 ;
 }
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

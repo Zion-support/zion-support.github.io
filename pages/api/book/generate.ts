@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const { meta, chapters } = req.body as { meta: any, chapters: { title: string, content?: string }[] };
   const apiKey = process.env.OPENAI_API_KEY;
 import type { NextApiRequest, NextApiResponse } from 'next',;
@@ -12,6 +13,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') {
 
   }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
     const completion = await client.chat.completions.create({
@@ -23,6 +26,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   res.status(200).json({ chapters: drafted })
 
+<<<<<<< HEAD
 }
 
   const { meta, chapters } = req.body as { meta: any, chapters: { title: string, content?: string }[] }
@@ -52,6 +56,31 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     drafted.push({ title: ch.title, content: text })
   }
   res.status(200).json({ chapters: drafted })
+=======
+=======
+}
+
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',
+import OpenAI from 'openai',
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    res.status (405).json ({ error: 'Method not allowed' }),
+    return;
+  }
+  const { meta, chapters } = req.body as { meta: any, chapters: { title: string, content?: string }[] },
+  const api_key = process.env.OPENAI_API_KEY,
+  // Check condition
+if ( {) {
+  $2
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   }
@@ -79,6 +108,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   res.status (200).json ({ chapters: drafted });
 }
+<<<<<<< HEAD
 export default async function handler(req, res) {
   try {
   if (req.method !== '$1') {
@@ -123,6 +153,9 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   res.status(200).json({ chapters: drafted });
   } catch (error) {
@@ -131,8 +164,12 @@ export default async function handler(req, res) {
   }
 
 
+<<<<<<< HEAD
 }
 
   res.status(200).json({ chapters: drafted });
 };
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

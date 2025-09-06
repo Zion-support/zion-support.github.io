@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+import React from 'react';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from "react";
 import {toast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
@@ -6,6 +11,7 @@ import {AIMatchingResults} from "@/components/AIMatchingResults";
 import {findMatches, MatchResult} from "@/lib/ai-matchmaking";
 import {Textarea} from "@/components/ui/textarea";
 import {Sparkles, Search} from "lucide-react";
+<<<<<<< HEAD
 import { useState } from "react",
 import { toast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -20,10 +26,28 @@ interface AIMatchmakerProps {
   onMatchSelect?: (match: any) => void
 import { Textarea } from "@/components/ui/textarea",
 import { Sparkles, Search } from "lucide-react",
+=======
+
+interface AIMatchmakerProps {;
+  serviceType?: string;
+  onMatchSelect?: (match: any) => void,;
+  className?: string;
+}
+
+export function AIMatchmaker(): any ({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {;
+
+  const [query, setQuery] = useState("");
+  const [isMatchmaking, setIsMatchmaking] = useState(false);
+  const [matches, setMatches] = useState([] as MatchResult[]);
+  const [hasSearched, setHasSearched] = useState(false);
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 interface AIMatchmakerProps {
   serviceType?: string,
   onMatchSelect?: (match: any) => void,
+<<<<<<< HEAD
   className?: string
 }
 
@@ -44,6 +68,15 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
   const [matches, setMatches] = useState([] as MatchResult[]),
   const [hasSearched, setHasSearched] = useState(false),
 
+=======
+
+  className?: string
+}
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleSearch = async () => {
     if (!query.trim()) {
       toast({
@@ -51,6 +84,11 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         description: "Tell us what you're looking for so we can find matches."
         variant: "destructive"})
       return
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
 
 
@@ -85,30 +123,51 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
     try {
       // // // console.log("Starting AI matching with query:", query, "and service type:", serviceType),
       
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Get AI matches
       const results = await findMatches(
         query,
         serviceType,
         3
+<<<<<<< HEAD
       );
       console.log("AI matching results:", results);
       setMatches(results);
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       ),
       
       // // // console.log("AI matching results:", results),
       setMatches(results),
       
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast({
         title: "Matches Found"
         description: `Found ${results.length} matches based on your description.`})
     } catch (error) {
+<<<<<<< HEAD
       console.error("Error during AI matching:", error),
+=======
+      console.error("Error during AI matching:", error);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast({
         title: "Matching Error"
         description: "We couldn't find matches for your request. Please try again."
         variant: "destructive"})
       // Set empty matches to show no results found UI
       setMatches([])
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from './react';
 import { toast } from '@/hooks / use - toast';
 import { Button } from '@/components / ui / button';
@@ -173,6 +232,7 @@ function AIMatchmaker() {
 
   };
 
+<<<<<<< HEAD
     } finally {
       setIsMatchmaking(false)
     }
@@ -190,6 +250,9 @@ function AIMatchmaker() {
   const matchItems = matches.map(match => match.item);
 
   };
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from "react",;
 import { toast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -256,10 +319,19 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
   },
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   
   // Extract just the items from each MatchResult
   const matchItems = matches.map(match => match.item),
   
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <Card className={`border border-zion-blue-light bg-zion-blue-dark ${className |""}`}>
       <CardHeader className="pb-2">
@@ -274,6 +346,10 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       <CardContent>
         <div className="space-y-4">
           <div className="space-y-2">
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   }
       console && console.log("AI matching results:", results);
@@ -453,6 +529,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className } AIMa
             <AIMatchingResults
           ;
           {hasSearched && (;
+<<<<<<< HEAD
             <AIMatchingResults ;
             <Textarea
               placeholder="Describe what you need... (e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3-month project')"
@@ -476,12 +553,16 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className } AIMa
             </Button>
           </div>
           {hasSearched && (
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <AIMatchingResults
               matches={matchItems}
               onSelectMatch={handleItemSelect}
               isLoading={isMatchmaking}
               serviceType={serviceType}
               projectDescription={query}
+<<<<<<< HEAD
   ),; interface AIMatchmakerProps {
   serviceType?: string;
 onMatchSelect?: (match: any) => void;
@@ -532,4 +613,46 @@ if (onMatchSelect) {
       </CardContent>
     </Card>
   )
+=======
+            />;
+          )}
+        </div>;
+      </CardContent>;
+    </Card>;
+  );
+=======
+        <div className="space - y-4">;
+          <div className="space - y-2">;
+            <Textarea;
+              placeholder="Describe what you need... (e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3 - month project')";
+              value={query}
+              on_change={(e: React.ChangeEvent < HTMLTextAreaElement>) => set_query (e.target.value)}
+              className="min - h-24 bg - zion - blue border border - zion - blue - light focus:border - zion - purple text - white";
+            />;
+            <Button;
+              on_click={handle_search}
+              disabled={is_matchmaking}
+              className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white";
+            >;
+              {is_matchmaking ? (
+                <>Analyzing your needs...</>) : (
+                <>;
+                  <Search className="h - 4 w - 4 mr - 2" />;
+                  Find Matches;
+                </>)}
+            </Button>;
+          </div>;
+          {has_searched && (
+            <AIMatchingResults;
+              matches={match_items}
+              onSelectMatch={handleItemSelect}
+              is_loading={is_matchmaking}
+              service_type={service_type}
+              project_description={query}
+            />)}
+        </div>;
+      </CardContent>;
+    </Card>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }

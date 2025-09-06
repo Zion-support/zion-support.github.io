@@ -1,7 +1,11 @@
 
 
+<<<<<<< HEAD
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from "react";
 import {useForm} from "react-hook-form";
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
@@ -10,6 +14,7 @@ import {Input} from "@/components/ui/input";
 import {Button} from "@/components/ui/button";
 import {Textarea} from "@/components/ui/textarea";
 import {ForumCategory} from "@/types/community";
+<<<<<<< HEAD
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 
@@ -17,6 +22,14 @@ import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { useState } from "react",
 import { useForm } from "react-hook-form",
+=======
+
+=======
+import { useState } from "react",
+import { useForm } from "react-hook-form",
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { 
   Card;
   CardContent;
@@ -35,6 +48,7 @@ import {
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
 
+<<<<<<< HEAD
 import { Textarea } from "@/components/ui/textarea",
 import { ForumCategory } from "@/types/community",
 
@@ -43,11 +57,18 @@ import { ForumCategory } from "@/types/community";
 import { Textarea } from "@/components/ui/textarea",
 import { ForumCategory } from "@/types/community",
 interface PostFormValues {
+=======
+
+import { Textarea } from "@/components/ui/textarea",
+import { ForumCategory } from "@/types/community",
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface PostFormValues {
   title: string,
   content: string,
   categoryId: ForumCategory,
   tags: string
+<<<<<<< HEAD
 }
 
   title: string
@@ -57,6 +78,9 @@ interface PostFormValues {
   tags: string
 }
 interface PostFormProps {
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   initialValues?: Partial<PostFormValues>;
   onSubmit: (values: PostFormValues) => void,
   isEditing?: boolean
@@ -65,6 +89,11 @@ interface PostFormProps {
 export const PostForm = ({;
   initialValues;
   onSubmit;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import {;
@@ -99,6 +128,10 @@ interface PostFormProps {;
   isEditing?: boolean;
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   initialValues?: Partial<PostFormValues>;
   onSubmit: (values: PostFormValues) => void
@@ -107,12 +140,52 @@ interface PostFormProps {;
 export const PostForm = ({
   initialValues;
   onSubmit;
+<<<<<<< HEAD
   initialValues,
   onSubmit,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   isEditing = false
 }: PostFormProps) => {
   const form = useForm<PostFormValues>({
     defaultValues: {
+<<<<<<< HEAD
+=======
+
+import {useState} from "react";
+import {useForm} from "react-hook-form";
+import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+import {Input} from "@/components/ui/input";
+import {Button} from "@/components/ui/button";
+import {Textarea} from "@/components/ui/textarea";
+import {ForumCategory} from "@/types/community";
+interface PostFormValues {;
+  title: string,;
+  content: string,;
+  categoryId: ForumCategory,;
+  tags: string;
+}
+
+interface PostFormProps {;
+  initialValues?: Partial<PostFormValues>;
+  onSubmit: (values: PostFormValues) => void,;
+  isEditing?: boolean;
+}
+
+export const PostForm = ({;
+  initialValues;
+  onSubmit;
+  isEditing = false;
+}: PostFormProps) => {;
+  const form = useForm<PostFormValues>({;
+    defaultValues: {;
+      title: initialValues?.title || "",;
+      content: initialValues?.content || "",;
+      categoryId: initialValues?.categoryId || "project-help",;
+      tags: initialValues?.tags || "";
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -158,6 +231,7 @@ export const PostForm = ({
     try {
       await on_submit (values);
     } finally {
+<<<<<<< HEAD
       title: initialValues?.title |""
       content: initialValues?.content |""
       categoryId: initialValues?.categoryId |"project-help"
@@ -181,17 +255,33 @@ export const PostForm = ({
   };
   }),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleSubmit = async (values: PostFormValues) => {;
     setIsSubmitting(true),;
     try {;
       await onSubmit(values);
     } finally {;
       setIsSubmitting(false);
+<<<<<<< HEAD
     }
   }
 
 
 
+=======
+
+    }
+  }
+=======
+
+
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <Card>;
       <CardHeader>;
@@ -206,6 +296,10 @@ export const PostForm = ({
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Title</FormLabel>;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       setIsSubmitting (false);
     }
   }
@@ -224,14 +318,29 @@ export const PostForm = ({
               render={({ field }) => (
                 <FormItem>;
                   <FormLabel > Title</FormLabel>;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <FormControl>;
                     <Input placeholder="Enter post title..." {...field} />;
                   </FormControl>;
                   <FormMessage />;
+<<<<<<< HEAD
             />;
             <FormField
               control={form && form.control}
               name="content"
+=======
+
+            />;
+
+
+            <FormField
+              control={form && form.control}
+              name="content"
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Content</FormLabel>;
@@ -246,6 +355,11 @@ export const PostForm = ({
                 </FormItem>;
               )}
             />;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <FormField
               control={form && form.control}
               name="categoryId"
@@ -265,10 +379,21 @@ export const PostForm = ({
                   <FormMessage />;
                 </FormItem>;
               )}
+<<<<<<< HEAD
             />;
             <FormField
               control={form && form.control}
               name="tags"
+=======
+
+            />;
+
+
+            <FormField
+              control={form && form.control}
+              name="tags"
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Tags (comma-separated)</FormLabel>;
@@ -282,6 +407,7 @@ export const PostForm = ({
                 </FormItem>;
               )}
             />;
+<<<<<<< HEAD
             <Button type="submit" disabled={isSubmitting}>;
               {isSubmitting ? "Submitting..." : isEditing ? "Update Post" : "Create Post"}
     }
@@ -370,6 +496,12 @@ export const PostForm = ({
       </CardContent>
     </Card>
   )
+=======
+
+            <Button type="submit" disabled={isSubmitting}>;
+              {isSubmitting ? "Submitting..." : isEditing ? "Update Post" : "Create Post"}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </FormItem>)}
             />;
             <FormField;
@@ -438,6 +570,7 @@ export default PostForm;
 },
 
 
+<<<<<<< HEAD
 
 import { useState } from "react",;
 import { useForm } from "react-hook-form",;
@@ -624,3 +757,6 @@ export default PostForm;
 export default PostForm,
 export default PostForm;
 export default PostForm,
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

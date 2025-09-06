@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }
 }
 ;
@@ -170,6 +171,9 @@ export default function ContentGenerator() {;
       </>
     )
   }
+=======
+import React from 'react';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   return (
     <>
@@ -203,6 +207,7 @@ export default function ContentGenerator() {;
                     </Select>
                   </div>
 
+<<<<<<< HEAD
                   <div className="space-y-2">
                     <Label htmlFor="topic" className="text-white">Main Topic / User Prompt</Label>
                     <Input
@@ -481,3 +486,6 @@ const ContentGenerator = () => {
 };
 
 export default ContentGenerator;
+=======
+export default ContentGenerator;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

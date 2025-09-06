@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {useAuthStatus} from "./talent/useAuthStatus";
 import {useTalentData} from "./talent/useTalentData";
 import {useFilterTalents} from "./talent/useFilterTalents";
@@ -40,6 +41,8 @@ export function useTalentDirectory() {
     talents, 
     isLoading 
   } = useTalentData(),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useAuthStatus } from './talent / useAuthStatus';
 import { useTalentData } from './talent / useTalentData';
 import { useFilterTalents } from './talent / useFilterTalents';
@@ -156,9 +159,12 @@ function useTalentDirectory() {
   } = useFilterTalents(talents),
 
 
+<<<<<<< HEAD
   } = useFilterTalents(talents);
   } = useFilterTalents(talents),
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Manage UI state
   const {
     isMobileFilterOpen,
@@ -170,6 +176,7 @@ function useTalentDirectory() {
     expandedSections,
     toggleSection
 
+<<<<<<< HEAD
   } = useUIState();
   return {
     // Talents and loading state
@@ -200,6 +207,8 @@ function useTalentDirectory() {
     isAuthenticated;
     userDetails;
     savedTalents;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } = useUIState(),
 
   return {
@@ -235,6 +244,7 @@ function useTalentDirectory() {
     userDetails,
     savedTalents,
     
+<<<<<<< HEAD
     expanded_sections;
 
 
@@ -247,6 +257,23 @@ function useTalentDirectory() {
     handleToggleSave
   }
 }
+=======
+
+
+    // Actions
+    toggleSkill;
+    toggleAvailability;
+    toggleRegion;
+    clearFilters;
+    toggleSection;
+    handleToggleSave
+
+    expanded_sections;
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useAuthStatus } from "./talent/useAuthStatus",;
 import { useTalentData } from "./talent/useTalentData",;
 import { useFilterTalents } from "./talent/useFilterTalents",;
@@ -330,6 +357,10 @@ export function useTalentDirectory() {;
     clearFilters;
     toggleSection;
     handleToggleSave;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   }
@@ -348,6 +379,7 @@ export function useTalentDirectory() {;
     toggle_section;
     handleToggleSave;
   }
+<<<<<<< HEAD
 }
   }
 }
@@ -355,3 +387,6 @@ export function useTalentDirectory() {;
   }
 }
 ;
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

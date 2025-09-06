@@ -1,8 +1,13 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {useOnboardingStatus} from "@/hooks/useOnboardingStatus";
 import {UserCheck, Star, CalendarCheck, BriefcaseIcon} from "lucide-react";
 import {OnboardingTracker, OnboardingStep} from "./OnboardingTracker";
+<<<<<<< HEAD
 export function TalentOnboardingSteps() {;
   const { user } = useAuth();
   const onboardingStatus = useOnboardingStatus();
@@ -12,16 +17,27 @@ import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",
 import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from "lucide-react";
 import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
 export function TalentOnboardingSteps() {
+=======
+
+export function TalentOnboardingSteps() {;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const { user } = useAuth();
 
   const onboardingStatus = useOnboardingStatus();
 import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from "lucide-react",
 import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker",
 
+<<<<<<< HEAD
 export function TalentOnboardingSteps() {
   const { user } = useAuth(),
   const onboardingStatus = useOnboardingStatus(),
   
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const steps: OnboardingStep[] = [
     {
       id: "profile"
@@ -45,6 +61,7 @@ export function TalentOnboardingSteps() {
       action: "Set"
     }
     {
+<<<<<<< HEAD
 id: "match"
       id: "match"
       label: "Receive your first job match"
@@ -69,34 +86,50 @@ export function TalentOnboardingSteps() {;
   const { user } = useAuth(),;
   const onboardingStatus = useOnboardingStatus(),;
 
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const steps: OnboardingStep[] = [;
     {;
       id: "profile",;
       label: "Complete your profile",;
       completed: onboardingStatus && onboardingStatus.profileCompleted,;
+<<<<<<< HEAD
       completed: onboardingStatus.profileCompleted,;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       link: "/profile",;
       action: "Update"},;
     {;
       id: "skills",;
       label: "Add your top skills",;
       completed: onboardingStatus && onboardingStatus.skillsAdded,;
+<<<<<<< HEAD
       completed: onboardingStatus.skillsAdded,;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       link: "/profile/skills",;
       action: "Add Skills"},;
     {;
       id: "availability",;
       label: "Set your availability",;
       completed: onboardingStatus && onboardingStatus.availabilitySet,;
+<<<<<<< HEAD
       completed: onboardingStatus.availabilitySet,;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       link: "/profile/availability",;
       action: "Set"},;
     {;
       id: "match",;
       label: "Receive your first job match",;
+<<<<<<< HEAD
       completed: onboardingStatus.matchReceived,;
       link: "/talent-dashboard";
       action: "View Matches"}];
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       completed: onboardingStatus && onboardingStatus.matchReceived,;
       link: "/talent-dashboard",;
       action: "View Matches"}],;
@@ -159,6 +192,7 @@ function TalentOnboardingSteps() {
 ;
   return <OnboardingTracker steps={steps} />;
 }
+<<<<<<< HEAD
 
 import React from "react",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -240,3 +274,6 @@ return <OnboardingTracker steps= {
   return <OnboardingTracker steps={steps} />;
 }
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

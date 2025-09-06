@@ -1,20 +1,35 @@
 
+<<<<<<< HEAD
 return (<div> <Head><title>Automation Insights — Zion</title></Head>) )
 }</ul> </div> </div>)
  return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
 return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
  return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
 }</ul> </div> </div>) 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }</section>) : (<pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800" > {
   talentMd
 }</pre>)
 }</section> </div>) import { useEffect, useState } from 'react';
 import Head from 'next/head';
 
+<<<<<<< HEAD
 
 
 export default function AutomationInsightsPage() {;
 
+=======
+
+
+=======
+export default function AutomationInsightsPage() {;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function AutomationInsightsPage() {
 export default function AutomationInsightsPage() {;
 export default function AutomationInsightsPage() {
@@ -23,6 +38,55 @@ export default function AutomationInsightsPage() {
   useEffect(() => {
     fetch('/data/automation/market-intel.json').then((r) => r.json()).then(setIntel).catch(() => {});
     fetch('/data/automation/talent-highlights.md').then((r) => r.text()).then(setTalentMd).catch(() => {})
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+ return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) ;
+}</ul> </div> </div>) ;
+}</section>) : (<pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800" > {;
+  talentMd ;
+}</pre>) ;
+}</section> </div>) import { useEffect, useState } from 'react';
+import Head from 'next/head';
+export default function AutomationInsightsPage() {;
+  const [intel, setIntel] = useState<any>(null);
+  const [talentMd, setTalentMd] = useState<string>('');
+  useEffect(() => {;
+    fetch('/data/automation/market-intel && intel.json').then((r) => r && r.json()).then(setIntel).catch(() => {});
+    fetch('/data/automation/talent-highlights && highlights.md').then((r) => r && r.text()).then(setTalentMd).catch(() => {});
+  }, []);
+  return (
+    <div>;
+      <Head><title>Automation Insights — Zion</title></Head>;
+      <h1 className="text-2xl font-semibold mb-4">Automation Insights</h1>;
+      <section className="mb-8">;
+        <h2 className="font-medium">Market Intelligence</h2>;
+        {!intel ? (;
+          <div className="text-sm text-gray-500">Loading…</div>;
+        ) : (;
+          <div className="mt-3 text-sm">;
+            <div className="text-xs text-gray-500">Generated at {intel && intel.generatedAt}</div>;
+            <div className="mt-3">;
+              <h3 className="font-medium">Top Keywords</h3>;
+              <ul className="list-disc list-inside">;
+                {Object && Object.entries(intel && intel.insights.keywordCounts).map(([k, v]: any) => (;
+                  <li key={k}>{k}: {v as any}</li>;
+                ))}
+              </ul>;
+            </div>;
+            <div className="mt-4">;
+              <h3 className="font-medium">Top Languages</h3>;
+              <ul className="list-disc list-inside">;
+                {intel && intel.insights.topLanguages && topLanguages.map((l: any) => (;
+                  <li key={l && l.lang}>{l && l.lang}: {l && l.count}</li>;
+                ))}
+              </ul>;
+            </div>;
+          </div>;
+        )}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </section>;
       <section id="talent" className="mb-8">;
         <h2 className="font-medium">Talent Highlights</h2>;
@@ -35,6 +99,11 @@ export default function AutomationInsightsPage() {
     </div>;
   );
 }
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 return (<div> <Head><title > Automation Insights — Zion</title></Head>) );
 }</ul> </div> </div>);
 }</section>) : (<pre className="mt - 3 whitespace - pre - wrap text - sm bg - gray - 50 dark:bg - gray - 900 p - 3 rounded border border - gray - 200 dark:border - gray - 800" > {
@@ -136,6 +205,7 @@ function AutomationInsightsPage() {
 
   );
 }
+<<<<<<< HEAD
 
       <section id="talent" className="mb-8">
         <h2 className="font-medium">Talent Highlights</h2>
@@ -150,3 +220,12 @@ function AutomationInsightsPage() {
 }
   );
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  );
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

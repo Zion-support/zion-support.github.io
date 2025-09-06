@@ -36,10 +36,14 @@ export interface EscrowContractDetails {
 
 export interface EscrowContractDetails {;
 
+<<<<<<< HEAD
 }
 export interface EscrowContractDetails {
 
 export interface EscrowContractDetails {;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   client: string;
   talent: string;
   amount: number;
@@ -51,17 +55,21 @@ export interface EscrowContractDetails {;
 export interface DeploymentOptions {;
 
 
+<<<<<<< HEAD
   completionDeadline: string
   arbitrator?: string
 }
 export interface DeploymentOptions {
 
 export interface DeploymentOptions {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   network: BlockchainNetwork;
   walletAddress?: string;
   useEscrow: boolean
 
   deployToChain: boolean
+<<<<<<< HEAD
 }
 ;
 export type BlockchainNetwork = 'ethereum' | 'polygon' | 'none',;
@@ -85,6 +93,9 @@ export interface EscrowContractDetails {;
   currency: string,;
   deliverables: string,;
   completionDeadline: string,;
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   completion_deadline: string,
   arbitrator?: string;
 }
@@ -99,6 +110,7 @@ export interface DeploymentOptions {
 
 
 
+<<<<<<< HEAD
   arbitrator?: string;
 }
 ;
@@ -109,3 +121,6 @@ export interface DeploymentOptions {;
   deployToChain: boolean;
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

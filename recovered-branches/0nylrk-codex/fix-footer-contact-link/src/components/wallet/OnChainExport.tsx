@@ -7,6 +7,7 @@ import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/compon
 import {useToast} from "@/hooks/use-toast";
 import {useAuth} from "@/hooks/useAuth";
 export function OnChainExport() {;
+<<<<<<< HEAD
   const [isConnected, setIsConnected] = useState(false);
   const [isExporting, setIsExporting] = useState(false);
   const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle');
@@ -24,11 +25,19 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 export function OnChainExport() {
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [isConnected, setIsConnected] = useState(false);
   const [isExporting, setIsExporting] = useState(false);
   const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle'),
   const { toast } = useToast();
   const { user } = useAuth();
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from './react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -99,22 +108,34 @@ export function OnChainExport() {
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
       const address = accounts[0],
       
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Sign message to verify ownership
       const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`
       await ethereum.request({
         method: 'personal_sign'
         params: [address, message]
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }),
       
       setIsConnected(true),
 
 
+<<<<<<< HEAD
       });
       setIsConnected(true);
       }),
       
       setIsConnected(true),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast({
         title: "Wallet connected"
         description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`})
@@ -126,6 +147,7 @@ export function OnChainExport() {
       })
     }
 
+<<<<<<< HEAD
   }
   const handleExportTokens = async () => {
     setIsExporting(true);
@@ -134,6 +156,9 @@ export function OnChainExport() {
       // Simulate token export
       await new Promise(resolve => setTimeout(resolve, 2000));
       setExportStatus('success');
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
   
   const handleExportTokens = async () => {
@@ -145,6 +170,11 @@ export function OnChainExport() {
       await new Promise(resolve => setTimeout(resolve, 2000)),
       
       setExportStatus('success'),
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       toast({
         title: "Tokens exported"
         description: "Your ZION$ tokens have been exported to your wallet"})
@@ -362,6 +392,7 @@ export function OnChainExport() {;
     }
   }
 
+<<<<<<< HEAD
   },
   
   return (
@@ -405,6 +436,9 @@ export function OnChainExport() {;
                 onClick={handleExportTokens}
                 disabled={isExporting}
               >
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {isExporting ? "Processing..." : "Export Tokens"}
                 {!isExporting && <ArrowUpRight className="ml-2 h-4 w-4" />}
               </Button>
@@ -419,6 +453,7 @@ export function OnChainExport() {;
               Connect Wallet
             </Button>
           </div>
+<<<<<<< HEAD
 };
 ;
 
@@ -429,6 +464,13 @@ export function OnChainExport() {;
 }
 };
 ;
+=======
+
+};
+;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -510,6 +552,10 @@ export function OnChainExport() {;
           ) : (;
             <Wallet className="h-5 w-5" />;
           )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           On-chain Export;
           <TooltipProvider>;
             <Tooltip>;
@@ -518,11 +564,33 @@ export function OnChainExport() {;
               </TooltipTrigger>;
               <TooltipContent>;
                 <p className="max-w-xs">Export your ZION$ tokens to an external blockchain wallet</p>;
+<<<<<<< HEAD
+=======
+=======
+;
+  return (
+    <Card>;
+      <CardHeader>;
+        <CardTitle className="flex items - center gap - 2">;
+          {is_connected ? (
+            <Wallet className="h - 5 w - 5 text - primary" />) : (
+            <Wallet className="h - 5 w - 5" />)}
+          On - chain Export;
+          <TooltipProvider>;
+            <Tooltip>;
+              <TooltipTrigger as_child>;
+                <Info className="h - 4 w - 4 text - muted - foreground cursor - help" />;
+              </TooltipTrigger>;
+              <TooltipContent>;
+                <p className="max - w-xs">Export your ZION$ tokens to an external blockchain wallet</p>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </TooltipContent>;
             </Tooltip>;
           </TooltipProvider>;
         </CardTitle>;
 
+<<<<<<< HEAD
 ;
 
 
@@ -594,8 +662,20 @@ export function OnChainExport() {;
             </Button>;
           </div>;
         )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </CardContent>;
     </Card>;
   );
 }
+<<<<<<< HEAD
 ;
+=======
+
+=======
+;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

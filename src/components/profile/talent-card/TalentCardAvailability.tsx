@@ -25,6 +25,7 @@ import { Clock } from 'lucide-react'
 interface TalentCardAvailabilityProps {
   availabilityType: string
 
+<<<<<<< HEAD
   }; return 'bg-gray-500/20 text-gray-400'
 import React from 'react'
 
@@ -58,10 +59,16 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
       default:
         return 'bg-gray-500/20 text-gray-400'
     }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         return 'bg-blue-500/20 text-blue-400',;
       default:;
         return 'bg-gray-500/20 text-gray-400';
     };
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }; return 'bg-gray-500/20 text-gray-400'
     }
   }
@@ -84,10 +91,13 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
   // Format availability label
   const getAvailabilityLabel = (status: string) => {
 
+<<<<<<< HEAD
   }; return 'bg-gray-500/20 text-gray-400'
     }
   }
   const getAvailabilityLabel = (status: string,) => {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     switch (status) {
       case 'full-time':
         return 'Full-time'
@@ -97,6 +107,7 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
         return 'Project'
       default:
         return status
+<<<<<<< HEAD
   }
     >
       <Clock className='h-3 w-3' />
@@ -105,11 +116,17 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
     </div>
   )
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 
 import React from "react",;
 
+<<<<<<< HEAD
 import React from "react",;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Clock } from 'lucide-react';
 interface TalentCardAvailabilityProps {;
   availabilityType: string;
@@ -128,14 +145,22 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
       default:;
         return 'bg-gray-500/20 text-gray-400';
     }
+<<<<<<< HEAD
+=======
+  };        return 'bg-gray-500/20 text-gray-400';
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     }
   };
 
   const getAvailabilityLabel = (status: string,) => {;
+<<<<<<< HEAD
   },;
   // Format availability label;
   const getAvailabilityLabel = (status: string) => {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     switch (status) {;
       case 'full-time':;
         return 'Full-time',;
@@ -148,6 +173,10 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
     }
   },
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   const getAvailabilityLabel = (status: string, ) =>: any {
     switch (status) {
@@ -184,4 +213,8 @@ ursor/fix-website-loading-errors-and-merge-6662
     </div>
   )
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

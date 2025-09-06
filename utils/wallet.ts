@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+
+  if (typeof window === 'undefined' || !window && window.ethereum) {
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   if (typeof window === 'undefined' || !window.ethereum) {;
 
@@ -17,6 +24,7 @@ if ( {) {
     const accounts = await window.ethereum.request ({
 
       method: 'eth_requestAccounts',
+<<<<<<< HEAD
 export async function connectMetaMask(): Promise<string[]> {
   if (typeof window === 'undefined' |!window.ethereum) {
   if (typeof window === 'undefined' || !window.ethereum) {;
@@ -25,13 +33,23 @@ export async function connectMetaMask(): Promise<string[]> {
   try {
     const accounts = await window.ethereum.request({
       method: 'eth_requestAccounts'
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     });
     return accounts;
   } catch (error) {
     throw new Error('Failed to connect to MetaMask');
   }
 }
+<<<<<<< HEAD
 export async function getAccounts(): Promise<string[]> {
+=======
+
+  if (typeof window === 'undefined' || !window && window.ethereum) {
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   if (typeof window === 'undefined' || !window.ethereum) {;
 
@@ -51,6 +69,7 @@ if ( {) {
     const accounts = await window.ethereum.request ({
 
       method: 'eth_accounts',
+<<<<<<< HEAD
   if (typeof window === 'undefined' |!window.ethereum) {
   if (typeof window === 'undefined' || !window.ethereum) {;
     return [];
@@ -58,13 +77,19 @@ if ( {) {
   try {
     const accounts = await window.ethereum.request({
       method: 'eth_accounts'
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     });
     return accounts;
   } catch (error) {
     return [];
   }
 }
+<<<<<<< HEAD
 export async function getBalance(address: string): Promise<string> {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   if (typeof window === 'undefined' || !window.ethereum) {;
@@ -86,6 +111,7 @@ if ( {) {
 
       method: 'eth_getBalance',
       params: [address, 'latest'],
+<<<<<<< HEAD
 export async function getBalance(address: string): Promise<string> {
   if (typeof window === 'undefined' |!window.ethereum) {
   if (typeof window === 'undefined' || !window.ethereum) {;
@@ -95,13 +121,23 @@ export async function getBalance(address: string): Promise<string> {
     const balance = await window.ethereum.request({
       method: 'eth_getBalance'
       params: [address, 'latest']
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     });
     return balance;
   } catch (error) {
     throw new Error('Failed to get balance');
   }
 }
+<<<<<<< HEAD
 export async function signMessage(message: string, address: string): Promise<string> {
+=======
+
+  if (typeof window === 'undefined' || !window && window.ethereum) {
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   if (typeof window === 'undefined' || !window.ethereum) {;
 
@@ -122,6 +158,7 @@ if ( {) {
 
       method: 'personal_sign',
       params: [message, address],
+<<<<<<< HEAD
   if (typeof window === 'undefined' |!window.ethereum) {
   if (typeof window === 'undefined' || !window.ethereum) {;
     throw new Error('MetaMask is not installed');
@@ -130,19 +167,31 @@ if ( {) {
     const signature = await window.ethereum.request({
       method: 'personal_sign'
       params: [message, address]
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     });
     return signature;
   } catch (error) {
     throw new Error('Failed to sign message');
   }
 }
+<<<<<<< HEAD
 // Extend Window interface for TypeScript
+=======
+
+// Extend Window interface for TypeScript;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 declare global {
   interface Window {
     ethereum?: {
       request: (args: { method: string; params?: any[] }) => Promise<any>;
       on: (event: string, callback: (accounts: string[]) => void) => void;
+<<<<<<< HEAD
       removeListener: (event: string, callback: (accounts: string[]) => void) => void;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       remove_listener: (event: string, callback: (accounts: string[]) => void) => void;
 
@@ -151,11 +200,21 @@ declare global {
 
 
 
+<<<<<<< HEAD
     }
 
     };
 
   }
 }
+=======
+=======
+    };
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 }

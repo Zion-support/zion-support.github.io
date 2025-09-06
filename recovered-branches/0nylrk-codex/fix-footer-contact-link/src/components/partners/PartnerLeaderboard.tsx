@@ -1,5 +1,6 @@
 interface LeaderboardEntry {
 
+<<<<<<< HEAD
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Badge} from "@/components/ui/badge";
@@ -8,17 +9,29 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Badge } from "@/components/ui/badge";
 import { Crown, Medal, Trophy } from "lucide-react";
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
+import { Badge } from '@/components / ui / badge';
+import { Crown, Medal, Trophy } from './lucide-react';
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface LeaderboardEntry {
 
   id: string
   rank: number
   name: string
   avatar?: string;
+<<<<<<< HEAD
   referrals: number
   earnings: number
 
 import { Badge } from "@/components/ui/badge",
 import { Crown, Medal, Trophy } from "lucide-react",
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 interface LeaderboardEntry {
   id: string,
@@ -27,6 +40,11 @@ interface LeaderboardEntry {
   avatar?: string,
   referrals: number,
   earnings: number,
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   badges: string[]
 }
 export function PartnerLeaderboard() {
@@ -39,10 +57,15 @@ export function PartnerLeaderboard() {
       name: "AI Tech Guru"
       avatar: "", // URL would be here
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       referrals: 178,
       earnings: 4500,
 
 
+<<<<<<< HEAD
       referrals: 178
       earnings: 4500
 
@@ -53,6 +76,9 @@ export function PartnerLeaderboard() {
       badges: ["gold", "trending"]
     }
     },
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
 
       id: "2"
@@ -64,11 +90,18 @@ export function PartnerLeaderboard() {
 
       badges: ["silver"]
 
+<<<<<<< HEAD
     },
 
 
     }
     },
+=======
+
+    },
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
 
       id: "3"
@@ -80,11 +113,18 @@ export function PartnerLeaderboard() {
 
       badges: ["bronze"]
 
+<<<<<<< HEAD
     },
 
 
     }
     },
+=======
+
+    },
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
 
       id: "4"
@@ -98,6 +138,7 @@ export function PartnerLeaderboard() {
 
 
 
+<<<<<<< HEAD
     }
     {
 
@@ -158,21 +199,36 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { Badge } from "@/components/ui/badge",;
 import { Crown, Medal, Trophy } from "lucide-react",;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Badge} from "@/components/ui/badge";
 import {Crown, Medal, Trophy} from "lucide-react";
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface LeaderboardEntry {;
   id: string,;
   rank: number,;
   name: string,;
+<<<<<<< HEAD
   avatar?: string,;
+=======
+  avatar?: string;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   referrals: number,;
   earnings: number,;
   badges: string[];
 }
+<<<<<<< HEAD
 ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function PartnerLeaderboard() {;
   // Placeholder data - would come from API in real implementation;
   const leaderboard: LeaderboardEntry[] = [;
@@ -184,7 +240,11 @@ export function PartnerLeaderboard() {;
       referrals: 178,;
       earnings: 4500,;
       badges: ["gold", "trending"];
+<<<<<<< HEAD
     },;
+=======
+    };
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {;
       id: "2",;
       rank: 2,;
@@ -193,7 +253,11 @@ export function PartnerLeaderboard() {;
       referrals: 145,;
       earnings: 3625,;
       badges: ["silver"];
+<<<<<<< HEAD
     },;
+=======
+    };
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {;
       id: "3",;
       rank: 3,;
@@ -202,7 +266,11 @@ export function PartnerLeaderboard() {;
       referrals: 124,;
       earnings: 3100,;
       badges: ["bronze"];
+<<<<<<< HEAD
     },;
+=======
+    };
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {;
       id: "4",;
       rank: 4,;
@@ -211,7 +279,11 @@ export function PartnerLeaderboard() {;
       referrals: 98,;
       earnings: 2450,;
       badges: [];
+<<<<<<< HEAD
     },;
+=======
+    };
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {;
       id: "5",;
       rank: 5,;
@@ -221,11 +293,20 @@ export function PartnerLeaderboard() {;
       earnings: 2175,;
       badges: ["newcomer"];
     }
+<<<<<<< HEAD
   ],;
+=======
+  ];
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Function to render rank badge;
   const renderRankBadge = (rank: number) => {;
     switch(rank) {;
       case 1:;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         return <Trophy className="h-5 w-5 text-yellow-500" />;
       case 2:;
         return <Medal className="h-5 w-5 text-gray-400" />;
@@ -341,6 +422,11 @@ function PartnerLeaderboard() {
                     entry.rank <= 3 ? 'bg-zion-blue-light/20' : 'bg-zion-blue/10';
           <div className="space - y-4">;
             {leaderboard.length > 0 ? (
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   }`}
                 >
                   <div className="flex items-center gap-3">
@@ -368,6 +454,10 @@ function PartnerLeaderboard() {
                         <Badge variant="outline" className="bg-yellow-500/20 border-yellow-500 text-yellow-400">
                           Elite
                         </Badge>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       case 3:;
         return <Medal className="h-5 w-5 text-amber-700" />,;
       default:;
@@ -502,12 +592,22 @@ export function PartnerLeaderboard() {;
                           Elite;
                         </Badge>;
                       )}
+<<<<<<< HEAD
+=======
+                      {entry && entry.badges.includes("trending") && (;
+                        <Badge variant="outline" className="bg-blue-500/20 border-blue-500 text-blue-400">;
+                          Trending;
+                        </Badge>;
+                      )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       )}
                       {entry.badges.includes("trending") && (
                         <Badge variant="outline" className="bg-blue-500/20 border-blue-500 text-blue-400">
                           Trending
                         </Badge>
                       )}
+<<<<<<< HEAD
                     </div>
                   </div>
                 </div>
@@ -520,6 +620,10 @@ export function PartnerLeaderboard() {;
                   Start referring to earn your spot on the leaderboard
                 </p>
               </div>
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     </div>;
                   </div>;
                 </div>;
@@ -532,6 +636,7 @@ export function PartnerLeaderboard() {;
                   Start referring to earn your spot on the leaderboard;
                 </p>;
               </div>;
+<<<<<<< HEAD
             )}
           </div>
         </CardContent>
@@ -605,6 +710,12 @@ export function PartnerLeaderboard() {;
                   Start referring to earn your spot on the leaderboard;
                 </p>;
               </div>;
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             )}
           </div>;
         </CardContent>;
@@ -686,6 +797,7 @@ default: return <span className="text-sm font-semibold"> {
 }
 ;
 
+<<<<<<< HEAD
 };
 return (<div className="space-y-6"> <Card className="bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle className="flex items-center gap-2"> <Crown className="h-5 w-5 text-yellow-500" /> Top Partners </CardTitle> <CardDescription>This month's top-performing partners</CardDescription> </CardHeader> <CardContent> <div className="space-y-4"> {
   leaderboard.length > 0 ? (leaderboard.map (entry => (<div key= {
@@ -713,3 +825,6 @@ return (<div className="space-y-6"> <Card className="bg-zion-blue-dark border-zi
 }
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

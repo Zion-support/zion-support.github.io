@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
@@ -33,9 +34,12 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import { ensureAdminFromApi } from '../../../../utils/auth';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 type EventRow = {
 
+<<<<<<< HEAD
     }
     return rows;
 
@@ -72,12 +76,23 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
       }
     }
     return rows;
+=======
+      } catch {}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+    }
+    return rows;
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch {
     return [];
   }
 }
 
 
+<<<<<<< HEAD
 function featureFromPath(page?: string): string {
 if (!page) return 'other'
   const p = page.toLowerCase()
@@ -107,17 +122,44 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const day = r.at.slice(0, 10);
     byDay[day] = (byDay[day] || 0) + 1;
   }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const pagesMostUsed = Object.entries(byFeature)
     .map(([label, value]) => ({ label, value }))
 .sort((a, b) => b.value - a.value)
   const events = Object.entries(byEvent)
     .map(([label, value]) => ({ label, value }))
+<<<<<<< HEAD
+=======
+
+    .sort((a, b) => b.value - a.value);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
     .sort((a, b) => b.value - a.value),
 
 
+<<<<<<< HEAD
 }
+=======
+  const days = Object.keys(byDay).sort();
+  const line = days.map((d) => ({ date: d, value: byDay[d] }));
+  const funnelStages = [
+    'Visit',
+    'AI Prompt Used',
+    'Post Created',
+    'Message Sent',
+  ];
+  const funnel = funnelStages.map((stage) => ({ 
+    label: stage, 
+    value: byEvent[stage] || 0 
+  }));
+  res.status(200).json({ pagesMostUsed, events, line, funnel });
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 function featureFromPath (page?: string): string {
 // Check condition
 if (return 'other', ) {
@@ -168,6 +210,7 @@ function handler() {
   res.status (200).json ({ pagesMostUsed, events, line, funnel });
 }
 ;
+<<<<<<< HEAD
 };
 
     .sort((a, b) => b.value - a.value)
@@ -188,6 +231,14 @@ function handler() {
 ;
   res.status(200).json({ pagesMostUsed, events, line, funnel });
 };
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+};
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     await ensureAdminFromApi(req);
@@ -207,3 +258,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

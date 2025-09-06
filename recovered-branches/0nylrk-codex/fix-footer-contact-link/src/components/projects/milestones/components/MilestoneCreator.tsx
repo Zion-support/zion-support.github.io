@@ -10,6 +10,7 @@ export function MilestoneCreator({;
 
 export function MilestoneCreator(): any ({;
 
+<<<<<<< HEAD
 import React from 'react';
 import { AddMilestoneForm } from '../AddMilestoneForm';
 interface MilestoneCreatorProps {
@@ -17,28 +18,61 @@ interface MilestoneCreatorProps {
   onSubmit: (data: any) => Promise<void>
   isSubmitting: boolean
   onCancel: () => void
+=======
+import {AddMilestoneForm} from '../AddMilestoneForm';
+interface MilestoneCreatorProps {;
+  onSubmit: (data: any) => Promise<void>,;
+  isSubmitting: boolean,;
+  onCancel: () => void,;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   projectScope?: string;
   projectStartDate?: string;
   projectEndDate?: string | null;
+<<<<<<< HEAD
   projectType?: string
 }
 export function MilestoneCreator({
 
 export function MilestoneCreator({;
+=======
+  projectType?: string;
+}
+
+
+export function MilestoneCreator(): any ({;
+
+=======
+
+
+
+export function MilestoneCreator({;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onSubmit;
   isSubmitting;
   onCancel;
   projectScope;
   projectStartDate;
   projectEndDate;
+<<<<<<< HEAD
     <AddMilestoneForm 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   projectType
 }: MilestoneCreatorProps) {
   return (
+<<<<<<< HEAD
     <AddMilestoneForm
     <AddMilestoneForm 
+=======
+
+    <AddMilestoneForm 
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react',;
 import { AddMilestoneForm } from '../AddMilestoneForm',;
 interface MilestoneCreatorProps {;
@@ -91,6 +125,13 @@ export function MilestoneCreator({;
     <AddMilestoneForm ;
   return (;
     <AddMilestoneForm;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       onSubmit={onSubmit}
       isSubmitting={isSubmitting}
       onCancel={onCancel}
@@ -98,6 +139,10 @@ export function MilestoneCreator({;
       projectStartDate={projectStartDate}
       projectEndDate={projectEndDate}
       projectType={projectType}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     />;
   on_submit: (data: any) => Promise < void>,
   is_submitting: boolean,
@@ -122,6 +167,7 @@ function MilestoneCreator() {
       project_type={project_type}
     />);
 }
+<<<<<<< HEAD
   ),;}
  export function MilestoneCreator ({
   onSubmit, isSubmitting, onCancel, projectScope, projectStartDate, projectEndDate, projectType 
@@ -145,3 +191,6 @@ function MilestoneCreator() {
     />
   )
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

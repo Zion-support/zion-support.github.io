@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {logErrorToProduction} from '@/utils/productionLogger';
 import React from "react",
 import { useForm, ControllerRenderProps } from "react-hook-form",
@@ -335,6 +336,8 @@ if ( {) {
     try {
       // Create the product listing
       const productData = {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 try {
       // Create the product listing;
       const product_data = {
@@ -598,6 +601,7 @@ import {;
   FormField,;
   FormItem,;
   FormLabel,;
+<<<<<<< HEAD
   FormMessage} from "@/components/ui/form",;
 import { Input } from "@/components/ui/input",;
 import { Button } from "@/components/ui/button",;
@@ -628,10 +632,57 @@ export function ProductSubmissionForm() {;
   const [isSubmitting, setIsSubmitting] = React.useState(false),;
   const [imagePreview, setImagePreview] = React.useState(null as string | null),;
   const [activeTab, setActiveTab] = React.useState("manual"),;
+=======
+  FormMessage,;
+} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { Textarea } from '@/components/ui/textarea';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+import { AIListingGenerator } from '@/components/listing/AIListingGenerator';
+import { Sparkles } from 'lucide-react';
+// Define the form schema with zod;
+const productSchema = z && z.object({;
+  title: z && z.string().min(3, 'Title must be at least 3 characters'),;
+  description: z && z.string().min(10, 'Description must be at least 10 characters'),;
+  price: z;
+    .string();
+    .refine(val => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {;
+      message: 'Price must be a valid number',;
+    }),;
+  category: z && z.string().min(1, 'Please select a category'),;
+  image:;
+    typeof window === 'undefined';
+      ? z && z.any().optional();
+      : z && z.instanceof(File).optional(),;
+  video:;
+    typeof window === 'undefined';
+      ? z && z.any().optional();
+      : z && z.instanceof(File).optional(),;
+  model:;
+    typeof window === 'undefined';
+      ? z && z.any().optional();
+      : z && z.instanceof(File).optional(),;
+  tags: z && z.string().optional(),;
+});
+// Type for our form values;
+type ProductFormValues = z && z.infer<typeof productSchema>;
+
+export function ProductSubmissionForm() {;
+  const { user } = useAuth();
+  const { toast } = useToast();
+  const router = useRouter();
+  const [isSubmitting, setIsSubmitting] = React && React.useState(false);
+  const [imagePreview, setImagePreview] = React && React.useState(null as string | null);
+  const [activeTab, setActiveTab] = React && React.useState('manual');
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Initialize the form;
   const form = useForm<ProductFormValues>({;
     resolver: zodResolver(productSchema),;
     defaultValues: {;
+<<<<<<< HEAD
       title: "",;
       description: "",;
       price: "",;
@@ -697,10 +748,91 @@ export function ProductSubmissionForm() {;
           name: user.displayName || "Anonymous Creator",;
           id: user.id},;
         createdAt: new Date().toISOString()},;
+=======
+      title: '',;
+      description: '',;
+      price: '',;
+      category: '',;
+      video: undefined,;
+      model: undefined,;
+      tags: '',;
+    },;
+  });
+
+  // Handle image upload preview;
+  const handleImageChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
+    const file = e && e.target.files?.[0];    if (file) {;
+      form && form.setValue('image', file);
+      const reader = new FileReader();
+      reader && reader.onloadend = () => {;
+        setImagePreview(reader && reader.result as string);
+      };
+      reader && reader.readAsDataURL(file);
+    }
+  };
+
+  const handleVideoChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
+    const file = e && e.target.files?.[0];    if (file) {;
+      form && form.setValue('video', file);
+    }
+  };
+
+  const handleModelChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
+    const file = e && e.target.files?.[0];    if (file) {;
+      form && form.setValue('model', file);
+    }
+  };
+
+  // Apply AI-generated content to the form;
+  const handleApplyGenerated = (content: any) => {;
+    form && form.setValue('description', content && content.description);
+    form && form.setValue('tags', content && content.tags.join(', '));
+    // Set a default price as the middle of the suggested range;
+    const averagePrice = (;
+      (content && content.suggestedPrice.min + content && content.suggestedPrice.max) /;
+      2;
+    ).toFixed(2);
+    form && form.setValue('price', averagePrice);
+
+    // Switch to the manual tab to show applied content;
+    setActiveTab('manual');
+  };
+
+  // Handle form submission;
+  const onSubmit = async (values: ProductFormValues,) => {;
+    if (!user) {;
+      toast({;
+        title: 'Authentication Required',;
+        description: 'You must be logged in to publish products',;
+        variant: 'destructive',;
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {;
+      // Create the product listing;
+      const productData = {;
+        title: values && values.title,;
+        description: values && values.description,;
+        price: parseFloat(values && values.price),;
+        category: values && values.category,;
+        currency: 'USD', // Default currency;
+        tags: values && values.tags ? values && values.tags.split(',').map(tag => tag && tag.trim()) : [],;
+        author: {;
+          name: user && user.displayName || 'Anonymous Creator',;
+          id: user && user.id,;
+        },;
+        createdAt: new Date().toISOString(),;
+      };
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const { data: productRecord, error: productError } = await supabase;
         .from('product_listings');
         .insert([productData]);
         .select('id');
+<<<<<<< HEAD
         .single(),;
       if (productError) {;
         throw new Error(productError.message);
@@ -722,10 +854,38 @@ export function ProductSubmissionForm() {;
           .from('products');
           .getPublicUrl(imagePath),;
         imagePublicUrl = publicUrlData.publicUrl,;
+=======
+        .single();
+
+      if (productError) {;
+        throw new Error(productError && productError.message);
+      }
+
+      let imagePublicUrl: string | undefined;
+
+      // If we have an image, upload it;
+      if (values && values.image) {;
+        const imagePath = `product_images/${productRecord && productRecord.id}/${values && values.image.name}`;
+        const { error: uploadError } = await supabase && supabase.storage;
+          .from('products');
+          .upload(imagePath, values && values.image);
+
+        if (uploadError) {;
+          throw new Error(uploadError && uploadError.message);
+        }
+
+        // Get the public URL for the image;
+        const { data: publicUrlData } = supabase && supabase.storage;
+          .from('products');
+          .getPublicUrl(imagePath);
+        imagePublicUrl = publicUrlData && publicUrlData.publicUrl;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         // Update the product with the image URL;
         const { error: updateError } = await supabase;
           .from('product_listings');
           .update({;
+<<<<<<< HEAD
             images: [imagePublicUrl];
           });
           .eq('id', productRecord.id),;
@@ -787,24 +947,110 @@ export function ProductSubmissionForm() {;
             description: values.description,;
             images: imagePublicUrl ? [imagePublicUrl] : [],;
             sellerId: user.id}
+=======
+            images: [imagePublicUrl],;
+          });
+          .eq('id', productRecord && productRecord.id);
+
+        if (updateError) {;
+          throw new Error(updateError && updateError.message);
+        }
+      }
+
+      // Upload video if provided;
+      if (values && values.video) {;
+        const videoPath = `product_videos/${productRecord && productRecord.id}/${values && values.video.name}`;
+        const { error: uploadError } = await supabase && supabase.storage;
+          .from('products');
+          .upload(videoPath, values && values.video);
+
+        if (uploadError) {;
+          throw new Error(uploadError && uploadError.message);
+        }
+
+        const { data: publicUrlData } = supabase && supabase.storage;
+          .from('products');
+          .getPublicUrl(videoPath);
+
+        const { error: updateError } = await supabase;
+          .from('product_listings');
+          .update({ video_url: publicUrlData && publicUrlData.publicUrl });
+          .eq('id', productRecord && productRecord.id);
+
+        if (updateError) {;
+          throw new Error(updateError && updateError.message);
+        }
+      }
+
+      // Upload model if provided;
+      if (values && values.model) {;
+        const modelPath = `product_models/${productRecord && productRecord.id}/${values && values.model.name}`;
+        const { error: uploadError } = await supabase && supabase.storage;
+          .from('products');
+          .upload(modelPath, values && values.model);
+
+        if (uploadError) {;
+          throw new Error(uploadError && uploadError.message);
+        }
+
+        const { data: publicUrlData } = supabase && supabase.storage;
+          .from('products');
+          .getPublicUrl(modelPath);
+
+        const { error: updateError } = await supabase;
+          .from('product_listings');
+          .update({ model_url: publicUrlData && publicUrlData.publicUrl });
+          .eq('id', productRecord && productRecord.id);
+
+        if (updateError) {;
+          throw new Error(updateError && updateError.message);
+        }
+      }
+
+      // Send listing to moderation service;
+      try {;
+        await supabase && supabase.functions.invoke('moderate-listing', {;
+          body: {;
+            listingId: productRecord && productRecord.id,;
+            listingType: 'product',;
+            description: values && values.description,;
+            images: imagePublicUrl ? [imagePublicUrl] : [],;
+            sellerId: user && user.id,;
+          },;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         });
       } catch (err) {;
         logErrorToProduction('Error invoking moderation:', { data: err });
       }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       
       // Show success message
       toast({
         title: "Product Published!",
         description: "Your product has been successfully published on Zion."}),
       
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Redirect to product page
       router.push(`/marketplace/listing/${productRecord.id}`)
     } catch (error) {
       toast({
+<<<<<<< HEAD
         title: 'Publication Failed',
 
         title: 'Publication Failed'
         title: 'Publication Failed',
+=======
+
+        title: 'Publication Failed',
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         description:
           error instanceof Error ? error.message : 'An unknown error occurred'
         variant: 'destructive'
@@ -839,6 +1085,7 @@ export function ProductSubmissionForm() {;
     }
   },
 
+<<<<<<< HEAD
   return (
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
       <TabsList className="grid grid-cols-2 mb-6">
@@ -852,6 +1099,8 @@ export function ProductSubmissionForm() {;
       </TabsList>
       <TabsContent value='manual'>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   return (
@@ -930,6 +1179,7 @@ export function ProductSubmissionForm() {;
               render={({
                 field
               }: {
+<<<<<<< HEAD
                 field: ControllerRenderProps<ProductFormValues, 'title'>
               }) => {
                 const { onChange, onBlur, value, ref } = field; return (
@@ -944,10 +1194,16 @@ export function ProductSubmissionForm() {;
                     <FormLabel>Product Title</FormLabel>;
                     <FormControl>;
                       <Input
+=======
+
+              control={form.control}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               name="title"
               render={({ field }: { field: ControllerRenderProps<ProductFormValues "title"> }) => {
                 const { onChange, onBlur, value, ref } = field,
                 return (
+<<<<<<< HEAD
                         placeholder='Enter product title'
                         onChange={onChange}
                         onBlur={onBlur}
@@ -975,6 +1231,8 @@ export function ProductSubmissionForm() {;
                     <Textarea
                       placeholder='Describe your product in detail...'
                       className='min-h-32'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
                   <FormItem>
@@ -1293,12 +1551,17 @@ export function ProductSubmissionForm() {;
                         value={value}
                         ref={ref}
                       />;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     </FormControl>;
                     <FormDescription>;
                       Create a compelling title that describes your product;
                     </FormDescription>;
                     <FormMessage />;
                   </FormItem>;
+<<<<<<< HEAD
             <FormField
               control={form && form.control}
               name='description'
@@ -1308,6 +1571,15 @@ export function ProductSubmissionForm() {;
                 );
               }}
             />;
+=======
+                );
+              }}
+            />;
+
+                field: ControllerRenderProps < ProductFormValues, 'title'>;
+              }) => {
+                const { on_change, on_blur, value, ref } = field; return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <FormField;
               control={form.control}
               name="description"
@@ -1326,6 +1598,11 @@ export function ProductSubmissionForm() {;
                     <Textarea;
                       placeholder="Describe your product in detail...";
                       className="min-h-32";
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       {...field}
                     />
                   </FormControl>
@@ -1336,6 +1613,7 @@ export function ProductSubmissionForm() {;
                 </FormItem>
               )}
             />
+<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
               <FormField
                 control={form.control}
@@ -1345,10 +1623,14 @@ export function ProductSubmissionForm() {;
                 }: {
                   field: ControllerRenderProps<ProductFormValues, 'price'>
                 }) => (                  <FormItem>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <FormField
                 control={form.control}
+<<<<<<< HEAD
                 name="price"
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues "price"> }) => (
                   <FormItem>
@@ -1361,6 +1643,9 @@ export function ProductSubmissionForm() {;
                 name="price"
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues "price"> }) => (
                   <FormItem>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <FormLabel>Price (USD)</FormLabel>
                     <FormControl>
                       <Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />
@@ -1370,9 +1655,16 @@ export function ProductSubmissionForm() {;
                     </FormDescription>
                     <FormMessage />
                   </FormItem>
+<<<<<<< HEAD
                 )}
               />
               <FormField
+=======
+
+            />;
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+              <FormField;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 control={form.control}
                 name="price";
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues "price"> }) => (;
@@ -1480,9 +1772,12 @@ export function ProductSubmissionForm() {;
               />;
                   field: ControllerRenderProps<ProductFormValues, 'category'>;
                 }) => (                  <FormItem>;
+<<<<<<< HEAD
                   </FormItem>;
                 )}
                     <FormMessage />;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </FormItem>;
                 )}
               />;
@@ -1491,6 +1786,11 @@ export function ProductSubmissionForm() {;
                 name="category"
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues "category"> }) => (
                   <FormItem>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <FormLabel>Category</FormLabel>
                     <FormControl>
                       <select
@@ -1508,6 +1808,7 @@ export function ProductSubmissionForm() {;
                     </FormControl>
                     <FormMessage />
                   </FormItem>
+<<<<<<< HEAD
                 )}
               />
             </div>
@@ -1519,6 +1820,9 @@ export function ProductSubmissionForm() {;
               }: {
                 field: ControllerRenderProps<ProductFormValues, 'tags'>
               }) => (                <FormItem>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 name="category";
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues "category"> }) => (;
                   <FormItem>;
@@ -1551,6 +1855,7 @@ export function ProductSubmissionForm() {;
               control={form && form.control}
               name='tags'
                   </FormItem>)}
+<<<<<<< HEAD
                 name="category";
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues "category"> }) => (;
                   <FormItem>;
@@ -1565,17 +1870,31 @@ export function ProductSubmissionForm() {;
                     <FormMessage />
                   </FormItem>
                 )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               />;
             </div>;
             <FormField;
               control={form.control}
+<<<<<<< HEAD
                   <FormLabel>Tags</FormLabel>
+=======
+
+              name="tags"
+              render={({ field }: { field: ControllerRenderProps<ProductFormValues "tags"> }) => (
+                <FormItem>
+
+
+                  <FormLabel>Tags</FormLabel>
+                  <FormControl>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <Input
                       placeholder='Enter tags separated by commas'
                       {...field}
                     />
                   </FormControl>
                   <FormDescription>
+<<<<<<< HEAD
               name="tags"
               render={({ field }: { field: ControllerRenderProps<ProductFormValues "tags"> }) => (
                 <FormItem>
@@ -1608,6 +1927,9 @@ export function ProductSubmissionForm() {;
               render={({
                 field
               }: {
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 field: ControllerRenderProps<ProductFormValues, 'tags'>;
               }) => (                <FormItem>;
                   <FormLabel>Tags</FormLabel>;
@@ -1620,6 +1942,7 @@ export function ProductSubmissionForm() {;
                   <FormDescription>;
                     Add relevant tags to help users find your product (e && e.g., ai,;
                     productivity, design);
+<<<<<<< HEAD
 ;
               <FormField;
                 control={form.control}
@@ -1661,11 +1984,14 @@ export function ProductSubmissionForm() {;
                   </FormControl>;
                   <FormDescription>;
                     Add relevant tags to help users find your product (e.g., ai, productivity, design);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </FormDescription>;
                   <FormMessage />;
                 </FormItem>;
               )}
             />;
+<<<<<<< HEAD
             <FormField;
               control={form.control}
               name="image"
@@ -1680,6 +2006,13 @@ export function ProductSubmissionForm() {;
             <FormField;
               control={form.control}
               name="image";
+=======
+
+
+            <FormField
+              control={form && form.control}
+              name='image'
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               render={() => (;
                 <FormItem>;
                   <FormLabel>Product Image</FormLabel>;
@@ -1688,7 +2021,22 @@ export function ProductSubmissionForm() {;
                       type='file'
                       accept='image/*'
                       onChange={handleImageChange}
+<<<<<<< HEAD
                       className='cursor-pointer'                    />
+=======
+
+
+                    Add relevant tags to help users find your product (e.g., ai, productivity, design)
+                  </FormDescription>
+                  <FormMessage />
+                </FormItem>
+
+              render={() => (
+                <FormItem>
+                  <FormLabel>Product Image</FormLabel>
+                  <FormControl>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <Input 
                       type="file" 
                       accept="image/*" 
@@ -1699,6 +2047,7 @@ export function ProductSubmissionForm() {;
 
                   </FormControl>
                   <FormDescription>
+<<<<<<< HEAD
                     Upload a high-quality image of your product (recommended size: 1200x800px)
                   </FormDescription>
                   <FormMessage />
@@ -1714,6 +2063,16 @@ ursor/fix-website-loading-errors-and-merge-6662
                   {imagePreview && (
                     <div className='mt-2 w-full max-w-md border rounded overflow-hidden'>
                       <AspectRatio ratio={3 / 2}>
+=======
+                    Upload a high-quality image of your product (recommended
+                    size: 1200x800px)
+                  </FormDescription>
+                  <FormMessage />
+
+
+                  
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                   {imagePreview && (
                     <div className='mt-2 w-full max-w-md border rounded overflow-hidden'>
@@ -1738,6 +2097,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
                           height={400} // Example height, adjust as needed
                           className='w-full h-full object-cover'
+<<<<<<< HEAD
+=======
+                          priority={false} // Preview images are not LCP
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           // `sizes` might not be strictly necessary for a preview of this nature
                           // but can be added if responsive behavior is critical here.
                           // For local object URLs, optimization via loader won't occur.
@@ -1979,6 +2342,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                 disabled={isSubmitting}
                 className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'              >
                 {isSubmitting ? 'Publishing...' : 'Publish Product'}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             />;
             <FormField;
               control={form.control}
@@ -2016,6 +2384,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </FormItem>
               )}
             />
+<<<<<<< HEAD
 
             <div className="flex justify-end">
               <Button 
@@ -2029,11 +2398,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+=======
+
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </Button>
             </div>
           </form>
         </Form>
       </TabsContent>
+<<<<<<< HEAD
 }
       
       <TabsContent value='ai'>
@@ -2135,6 +2512,9 @@ const {
           initialValues={{
             title: form.getValues("title"),
             category: form.getValues("category")
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </FormItem>)}
             />;
             <div className='flex justify - end'>;
@@ -2346,6 +2726,7 @@ if (file) {;
 }/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ";
 }/> <div className="flex justify - end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>);
 }'"  );
+<<<<<<< HEAD
 };
 //Apply AI-generated content to the form const handleApplyGenerated = (content: any) => {;
   if (!user) {;
@@ -2424,3 +2805,6 @@ return (<Tabs value= {;
   );
 }
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

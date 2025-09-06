@@ -89,6 +89,7 @@ import { Separator } from '@/components / ui / separator';
 import { EnhancedSearchInput } from './EnhancedSearchInput';
 import { generateSearchSuggestions } from '@/data / marketplace_data';
 import { logErrorToProduction, log_info } from '@/utils / production_logger';
+<<<<<<< HEAD
 interface SearchResult {
 
 import React, { useState, useEffect, useMemo } from 'react'
@@ -125,6 +126,8 @@ import { EnhancedSearchInput } from './EnhancedSearchInput'
 import { generateSearchSuggestions } from '@/data/marketplaceData'
 import { logErrorToProduction, logInfo } from '@/utils/productionLogger'
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface SearchResult {
   id: string;
   title: string;
@@ -137,20 +140,37 @@ interface SearchResult {
   currency?: string;
   rating?: number;
   tags?: string[];
+<<<<<<< HEAD
   date?: string
 interface SearchFilters {
+=======
+
+  date?: string;
+
+interface SearchFilters {;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   types: string[];
   category: string;
   minPrice: number;
   maxPrice: number;
   minRating: number;
+<<<<<<< HEAD
   sort: string
 interface SearchResponse {
+=======
+
+  sort: string;
+
+interface SearchResponse {;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   results: SearchResult[];
   totalCount: number;
   page: number;
   limit: number;
   query: string;
+<<<<<<< HEAD
   hasMore: boolean
 // Highlight search terms in text
 
@@ -212,6 +232,9 @@ interface SearchResponse {;
   page: number,;
   limit: number,;
   query: string,;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   hasMore: boolean;
 }
 ;
@@ -225,21 +248,36 @@ const HighlightText: React.FC<{ text: string, searchTerm: string, className?: st
     return <span className={className}>{text}</span>;
   }
 
+<<<<<<< HEAD
   const parts = text.split(new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi')),
   
   return (
+=======
+  const parts = text && text.split(;
+    new RegExp(`(${searchTerm && searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+  );
+
+
+  return (
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <span className={className}>
       {parts.map((part, index) => 
         part.toLowerCase() === searchTerm.toLowerCase() ? (
           <mark key={index} className="bg-yellow-200 text-black px-1 rounded">
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {part}
           </mark>
         ) : (
           part
         )
       )}
+<<<<<<< HEAD
         </div>
       )}
       <div className='flex-1'>
@@ -253,6 +291,32 @@ ursor/fix-website-loading-errors-and-merge-6662
       )}
     </span>
   )
+=======
+
+  date?: string;
+interface SearchFilters {
+  types: string[];
+  category: string;
+  min_price: number;
+  max_price: number;
+  min_rating: number;
+  sort: string;
+interface SearchResponse {
+  results: SearchResult[];
+  total_count: number;
+  page: number;
+  limit: number;
+  query: string;
+  has_more: boolean;
+// Highlight search terms in text;
+const HighlightText: React.FC<{
+  text: string;
+  search_term: string;
+  class_name?: string;
+}> = ({ text, search_term, class_name = '' }) => {  if () {) {
+  $2
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 // Search Result Card Component
 const SearchResultCard: React.FC<{
@@ -266,10 +330,37 @@ const SearchResultCard: React.FC<{
       router.push(result.url)
     }
   }
+<<<<<<< HEAD
   const cardClass = null;
     viewMode === 'grid'
       ? 'bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer'
       : 'bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer flex gap-4'
+=======
+
+    </span>;
+  );
+};
+
+// Search Result Card Component;
+const SearchResultCard: React.FC<{;
+  result: SearchResult;
+  searchTerm: string;
+  viewMode: 'grid' | 'list';
+}> = ({ result, searchTerm, viewMode }) => {;
+  const router = useRouter();
+  const handleClick = () => {;
+    if (result && result.url) {;
+      router && router.push(result && result.url);
+    }
+  };
+
+  const cardClass =;
+    viewMode === 'grid';
+      ? 'bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer';
+      : 'bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer flex gap-4';
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div onClick={handleClick} className={cardClass}>
       {result.image && (
@@ -281,6 +372,15 @@ const SearchResultCard: React.FC<{
               viewMode === 'grid'
                 ? 'w-full h-48 object-cover rounded'
                 : 'w-20 h-20 object-cover rounded'
+<<<<<<< HEAD
+=======
+            }          />;
+        </div>;
+      )}
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </span>;
   );
 },;
@@ -310,11 +410,21 @@ const SearchResultCard: React.FC<{;
             alt={result.title}
             className={viewMode === 'grid' ? "w-full h-48 object-cover rounded" : "w-20 h-20 object-cover rounded"}
           />
+<<<<<<< HEAD
+=======
+
+
+
+        </div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       )}
       
       <div className="flex-1">
         <div className="flex items-start justify-between mb-2">
+<<<<<<< HEAD
             <h3 className="font-semibold text-lg mb-1">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div>
             <h3 className='font-semibold text-lg mb-1'>
             </h3>
@@ -382,6 +492,7 @@ const SearchResultCard: React.FC<{;
             </div>
           )}
         </div>
+<<<<<<< HEAD
             }          />
         </div>
       )}
@@ -445,6 +556,9 @@ const SearchResultCard: React.FC<{;
           <div className='flex gap-2 flex-wrap'>
             {result.category && (
               <Badge variant='outline' className='text-xs'>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         <p className="text-muted-foreground mb-3 line-clamp-2">
           <HighlightText text={result.description} searchTerm={searchTerm} />
@@ -467,6 +581,10 @@ const SearchResultCard: React.FC<{;
             alt={result.title}
             className={viewMode === 'grid' ? "w-full h-48 object-cover rounded" : "w-20 h-20 object-cover rounded"}
           />;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </div>;
         <p className='text - muted - foreground mb - 3 line - clamp - 2'>;
           <HighlightText text={result.description} search_term={search_term} />;
@@ -480,10 +598,35 @@ const SearchResultCard: React.FC<{;
 
                 {result.category}
 
+<<<<<<< HEAD
+=======
+        </div>;
+      )}
+;
+      <div className="flex-1">;
+        <div className="flex items-start justify-between mb-2">;
+          <div>;
+            <h3 className="font-semibold text-lg mb-1">;
+              <HighlightText text={result.title} searchTerm={searchTerm} />;
+            </h3>;
+            <Badge variant="secondary" className="text-xs">;
+              {result.type}
+            </Badge>;
+          </div>;
+          {result.price && (;
+            <div className="text-right">;
+              <span className="font-bold text-primary">;
+                {result.currency === 'USD' ? '$' : ''}{result.price}
+              </span>;
+              {result.type === 'talent' && <span className="text-sm text-muted-foreground">/hr</span>}
+            </div>;
+          )}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </div>;
         <p className="text-muted-foreground mb-3 line-clamp-2">;
           <HighlightText text={result.description} searchTerm={searchTerm} />;
         </p>;
+<<<<<<< HEAD
         </div>
       </div>
     </div>
@@ -532,6 +675,16 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Badge variant="outline" className="text-xs">;
                 {result.category}
               </Badge>
+=======
+
+        <div className='flex items-center justify-between'>;
+          <div className='flex gap-2 flex-wrap'>;
+            {result && result.category && (;
+              <Badge variant='outline' className='text-xs'>;
+                {result && result.category}
+              </Badge>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             )}
             {result.tags?.slice(0, 3).map((tag, index) => (
               <Badge key={index} variant='outline' className='text-xs'>                <HighlightText text={tag} searchTerm={searchTerm} />
@@ -586,6 +739,11 @@ const FilterSidebar: React.FC<{;
   },
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
 
                 id={option.id}
@@ -596,6 +754,7 @@ const FilterSidebar: React.FC<{;
               <label htmlFor={option.id} className="text-sm">
 
 
+<<<<<<< HEAD
                 {option.label}
             </div>
   return (
@@ -615,10 +774,13 @@ const FilterSidebar: React.FC<{;
                 onCheckedChange={(checked) => handleTypeChange(option.id, !!checked)}
               />
               <label htmlFor={option.id} className="text-sm">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {option.label}
               </label>
             </div>
           ))}
+<<<<<<< HEAD
         </div>
       </div>
       <Separator />
@@ -631,6 +793,9 @@ const FilterSidebar: React.FC<{;
               ...filters
               category: value === 'all' ? '' : value
             })
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </div>;
       </div>;
 
@@ -675,14 +840,29 @@ const FilterSidebar: React.FC<{;
               category: value === 'all' ? '' : value,
             });
           }
+<<<<<<< HEAD
         >          <SelectTrigger>
             <SelectValue placeholder='All Categories' />
+=======
+        >          <SelectTrigger>;
+            <SelectValue placeholder='All Categories' />;
+          </SelectTrigger>;
+          <SelectContent>;
+            <SelectItem value='all'>All Categories</SelectItem>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <h3 className="font-semibold mb-3">Category</h3>
         <Select value={filters.category} onValueChange={(value) => 
           onFiltersChange({ ...filters, category: value === 'all' ? '' : value })
         }>
           <SelectTrigger>
             <SelectValue placeholder="All Categories" />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="all">All Categories</SelectItem>
@@ -691,6 +871,7 @@ const FilterSidebar: React.FC<{;
                 {category}
               </SelectItem>
             ))}
+<<<<<<< HEAD
           </SelectContent>
         </Select>
       </div>
@@ -700,15 +881,48 @@ const FilterSidebar: React.FC<{;
         <div className="px-2">
           <Slider
             value={[filters.minPrice, filters.maxPrice]}
+=======
+
+          </SelectContent>;
+        </Select>;
+      </div>;
+
+      <Separator />;
+
+      <div>;
+        <h3 className='font-semibold mb-3'>Price Range</h3>;
+        <div className='px-2'>;
+
+          <Slider
+            value={[filters && filters.minPrice, filters && filters.maxPrice]}
+            {available_categories.map (category => (
+              <SelectItem key={category} value={category}>;
+                {category}
+              </SelectItem>))}
+          </SelectContent>;
+        </Select>;
+      </div>;
+      <Separator />;
+      <div>;
+        <h3 className='font - semibold mb - 3'>Price Range</h3>;
+        <div className='px - 2'>;
+          <Slider;
+            value={[filters.min_price, filters.max_price]}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             onValueChange={handlePriceChange}
             min={0}
             max={10000}
             step={50}
+<<<<<<< HEAD
             className='mb-2'          />
           <div className='flex justify-between text-sm text-muted-foreground'>
 ursor/fix-website-loading-errors-and-merge-6662
             className='mb-2'          />
           <div className='flex justify-between text-sm text-muted-foreground'>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className="mb-2"
           />
           <div className="flex justify-between text-sm text-muted-foreground">
@@ -720,12 +934,30 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
       <Separator />
       <div>
+<<<<<<< HEAD
         <h3 className='font-semibold mb-3'>Minimum Rating</h3>
+=======
+
+            className='mb-2'          />;
+          <div className='flex justify-between text-sm text-muted-foreground'>;
+            <span>${filters && filters.minPrice}</span>;
+            <span>${filters && filters.maxPrice}</span>;
+          </div>;
+        </div>;
+      </div>;
+
+      <Separator />;
+
+      <div>;
+        <h3 className='font-semibold mb-3'>Minimum Rating</h3>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <Select
           value={filters && filters.minRating.toString()}
           onValueChange={value =>;
             onFiltersChange({ ...filters, minRating: parseFloat(value) });
           }
+<<<<<<< HEAD
         >          <SelectTrigger>
 ursor/fix-website-loading-errors-and-merge-6662
         <h3 className='font-semibold mb-3'>Minimum Rating</h3>
@@ -735,6 +967,10 @@ ursor/fix-website-loading-errors-and-merge-6662
             onFiltersChange({ ...filters, minRating: parseFloat(value) })
           }
         >          <SelectTrigger>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <h3 className="font-semibold mb-3">Minimum Rating</h3>
         <Select value={filters.minRating.toString()} onValueChange={(value) => 
           onFiltersChange({ ...filters, minRating: parseFloat(value) })
@@ -755,6 +991,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
 // No Results Component;
 }
@@ -788,6 +1025,44 @@ const NoResultsState: React.FC<{
           <p>Tips for better results:</p>
           <ul className='mt-2 space-y-1'>
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+            className='mb - 2'          />;
+          <div className='flex justify - between text - sm text - muted - foreground'>;
+            <span>${filters.min_price}</span>;
+            <span>${filters.max_price}</span>;
+          </div>;
+        </div>;
+      </div>;
+      <Separator />;
+      <div>;
+        <h3 className='font - semibold mb - 3'>Minimum Rating</h3>;
+        <Select;
+          value={filters.min_rating.to_string ()}
+          onValueChange={value =>;
+            onFiltersChange ({ ...filters, min_rating: parse_float (value) });
+          }
+        >          <SelectTrigger>;
+            <SelectValue />;
+          </SelectTrigger>;
+          <SelectContent>;
+            <SelectItem value='0'>Any Rating</SelectItem>;
+            <SelectItem value='1'>1+ Stars</SelectItem>;
+            <SelectItem value='2'>2+ Stars</SelectItem>;
+            <SelectItem value='3'>3+ Stars</SelectItem>;
+            <SelectItem value='4'>4+ Stars</SelectItem>;
+            <SelectItem value='4.5'>4.5+ Stars</SelectItem>;
+          </SelectContent>;
+        </Select>;
+      </div>;
+    </div>);
+
+}
+// No Results Component;
+const NoResultsState: React.FC<{
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 },
 
 // No Results Component
@@ -815,6 +1090,7 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
           We couldn't find anything matching "{searchTerm}". Try adjusting your search or filters.
         </p>
       </div>
+<<<<<<< HEAD
       <div className='max-w-md mx-auto space-y-4'>
         <div>
           <h3 className='font-semibold mb-3'>Search Suggestions:</h3>
@@ -826,6 +1102,11 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
                 size='sm'
                 onClick={() => onNewSearch(suggestion)}              >
 
+=======
+
+        >          <SelectTrigger>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       <div className="max-w-md mx-auto space-y-4">
         <div>
@@ -851,6 +1132,10 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
           onFiltersChange({ ...filters, minRating: parseFloat(value) });
         }>;
           <SelectTrigger>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <SelectValue />;
           </SelectTrigger>;
           <SelectContent>;
@@ -895,10 +1180,15 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
             {suggestions && suggestions.map((suggestion, index) => (;
               <Button
                 key={index}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 variant="outline";
                 size="sm";
                 onClick={() => onNewSearch(suggestion)}
               >;
+<<<<<<< HEAD
                 {suggestion}
               </Button>;
             ))}
@@ -909,12 +1199,22 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
         </div>
 
 
+=======
+
+
+                {suggestion}
+              </Button>;
+            ))}
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         <div className="text-sm text-muted-foreground">
           <p>Tips for better results: </p>
           <ul className="mt-2 space-y-1">
 
 
+<<<<<<< HEAD
         <div className='text-sm text-muted-foreground'>
           <p>Tips for better results:</p>
           <ul className='mt-2 space-y-1'>
@@ -922,6 +1222,8 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
         <div className="text-sm text-muted-foreground">
           <p>Tips for better results: </p>
           <ul className="mt-2 space-y-1">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <li>• Try different keywords</li>
             <li>• Use fewer filters</li>
             <li>• Search for broader terms</li>
@@ -930,6 +1232,7 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
 // Main Search Results Page Component
 export const AdvancedSearchResults: React.FC = () => {
@@ -958,6 +1261,61 @@ export const AdvancedSearchResults: React.FC = () => {
     })
     return Array.from(categories).sort()
   }, [results])
+=======
+
+  search_term: string;
+  onNewSearch: (term: string) => void;
+}> = ({ search_term, onNewSearch }) => {  const suggestions = [;
+    'AI & Machine Learning',
+    'Web Development',
+    'Mobile App Development',
+    'Data Analysis',
+    'UI / UX Design',
+    'Blockchain Development',
+  ];
+  return (
+    <div className='text - center py - 12'>;
+      <div className='mb - 6'>;
+        <Search className='mx - auto h - 16 w - 16 text - muted - foreground mb - 4' />;
+        <h2 className='text - 2xl font - semibold mb - 2'>No results found</h2>;
+        <p className='text - muted - foreground mb - 6'>;
+          We couldn't find anything matching "{search_term}". Try adjusting your;
+          search or filters.;
+        </p>;
+      </div>;
+      <div className='max - w-md mx - auto space - y-4'>;
+        <div>;
+          <h3 className='font - semibold mb - 3'>Search Suggestions:</h3>;
+          <div className='flex flex - wrap gap - 2 justify - center'>;
+            {suggestions.map ((suggestion, index) => (
+              <Button;
+                key={index}
+                variant='outline';
+                size='sm';
+                on_click={() => onNewSearch (suggestion)}              >;
+                {suggestion}
+              </Button>))}
+          </div>;
+        </div>;
+        <div className='text - sm text - muted - foreground'>;
+          <p > Tips for better results:</p>;
+          <ul className='mt - 2 space - y-1'>;
+            <li>• Try different keywords</li>;
+            <li>• Check your spelling</li>;
+            <li>• Use fewer filters</li>;
+            <li>• Search for broader terms</li>;
+          </ul>;
+        </div>;
+      </div>;
+    </div>);
+
+}
+// Main Search Results Page Component;
+export const AdvancedSearchResults: React.FC = () => {
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 },
 
 // Main Search Results Page Component
@@ -971,7 +1329,10 @@ export const AdvancedSearchResults: React.FC = () => {
   const [hasMore, setHasMore] = useState(false),
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [showFilters, setShowFilters] = useState(false),
+<<<<<<< HEAD
   
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   
   const [filters, setFilters] = useState<SearchFilters>({
     types: [],
@@ -979,6 +1340,7 @@ export const AdvancedSearchResults: React.FC = () => {
     minPrice: 0,
     maxPrice: 10000,
     minRating: 0,
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
     sort: 'relevance',
   });
@@ -992,10 +1354,14 @@ ursor/fix-website-loading-errors-and-merge-6662
   }, [results])
     sort: 'relevance'
   }),
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   // Sync search term with URL
   useEffect(() => {
     if (router.isReady && router.query.q) {
+<<<<<<< HEAD
   useEffect(() => {
     if (router.isReady && router.query.q) {
   // Sync search term with URL
@@ -1025,6 +1391,71 @@ ursor/fix-website-loading-errors-and-merge-6662
       })
       if (searchFilters.types.length > 0) {
         params.append('type', searchFilters.types.join(','))
+=======
+
+  const router = use_router ();
+  const [search_term, setSearchTerm] = useState ('');
+  const [results, set_results] = useState < SearchResult[]>([]);
+  const [loading, set_loading] = useState (false);
+  const [total_count, setTotalCount] = useState (0);
+  const [current_page, setCurrentPage] = useState (1);
+  const [has_more, setHasMore] = useState (false);
+  const [view_mode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [show_filters, setShowFilters] = useState (false);
+  const [filters, set_filters] = useState < SearchFilters>({
+    types: [],
+    category: '',
+    min_price: 0,
+    max_price: 10000,
+    min_rating: 0,
+    sort: 'relevance',
+  });
+  const suggestions = generateSearchSuggestions ();
+  // Extract available categories from results for filter;
+  const available_categories = useMemo (() => {
+    const categories = new Set < string>();    results.for_each (result => {
+      if (categories.add (result.category)) {
+  $2
+}
+    });
+    return Array.from (categories).sort ();
+  }, [results]);
+  // Sync search term with URL;
+  useEffect ((, ) => {
+    // Check condition
+if ( {) {
+  $2
+}
+      const url_term = router.query.q as string;
+      setSearchTerm (url_term);
+    }
+  }, [router.is_ready, router.query.q]);
+  // Search function;
+  const perform_search = async (
+    term: string,
+    page: number = 1,
+    new_filters?: SearchFilters) => {    if () {) {
+  $2
+}
+      set_results ([]);
+      setTotalCount (0);
+      return;
+    }
+    set_loading (true);
+    try {
+      const search_filters = new_filters || filters;
+      const params = new URLSearchParams ({
+        query: term,
+        page: page.to_string (),
+        limit: '20',
+      });
+      // Check condition
+if ( {) {
+  $2
+}
+        params.append ('type', search_filters.types.join (', '));
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
       if (searchFilters.category) {
         params.append('category', searchFilters.category)
@@ -1041,6 +1472,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       if (searchFilters.sort !== 'relevance') {
         params.append('sort', searchFilters.sort)
       }
+<<<<<<< HEAD
       const response = await fetch(`/api/search?${params}`)
       const data: SearchResponse = await response.json()
       if (page === 1) {
@@ -1056,6 +1488,30 @@ ursor/fix-website-loading-errors-and-merge-6662
         resultCount: data.results.length
         totalCount: data.totalCount
       })
+=======
+
+      const response = await fetch (`/api / search?${params}`);
+      const data: SearchResponse = await response.json ();
+      // Check condition
+if ( {) {
+  $2
+}
+        set_results (data.results);
+
+      } else {
+        setResults(prev => [...prev, ...data.results])
+      }
+
+      setTotalCount (data.total_count);
+      setCurrentPage (data.page);
+      setHasMore (data.has_more);
+      log_info ('Search completed', {
+        term,
+        result_count: data.results.length,
+        total_count: data.total_count,
+      });
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     } catch (error) {
       logErrorToProduction('Search failed', { data: error })
       setResults([])
@@ -1070,6 +1526,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       performSearch(searchTerm, 1, filters)
       setCurrentPage(1)
     }
+<<<<<<< HEAD
   }, [searchTerm, filters])
   // Handle search input
   const handleSearch = (term: string) => {
@@ -1077,6 +1534,17 @@ ursor/fix-website-loading-errors-and-merge-6662
     router.push(`/search?q=${encodeURIComponent(term)}`, undefined, {
       shallow: true
     })
+=======
+
+  }, [search_term, filters]);
+  // Handle search input;
+  const handle_search = (term: string) =>: any {
+    setSearchTerm (term);
+    router.push (`/search?q=${encodeURIComponent (term)}`, undefined, {
+      shallow: true,
+    });
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   // Handle filter changes
   const handleFiltersChange = (newFilters: SearchFilters) => {
@@ -1088,18 +1556,29 @@ ursor/fix-website-loading-errors-and-merge-6662
       performSearch(searchTerm, currentPage + 1)
     }
   }
+<<<<<<< HEAD
   // Active filters count
   const activeFiltersCount =
     filters.types.length +
     (filters.category ? 1 : 0) +
     (filters.minPrice > 0 |filters.maxPrice < 10000 ? 1 : 0) +
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const activeFiltersCount = null;
     filters.types.length +
     (filters.category ? 1 : 0) +
     (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) +
+<<<<<<< HEAD
     (filters.minRating > 0 ? 1 : 0)
       const urlTerm = router.query.q as string,
       setSearchTerm(urlTerm)
+=======
+
+
+    (filters.minRating > 0 ? 1 : 0)
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>;
         </div>;
         <div className="text-sm text-muted-foreground">;
@@ -1238,17 +1717,23 @@ export const AdvancedSearchResults: React.FC = () => {;
     (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) +
     (filters.minRating > 0 ? 1 : 0),
 
+<<<<<<< HEAD
     <div className="container mx-auto px-4 py-6">
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
 
+<<<<<<< HEAD
   return (
     <div className='container mx-auto px-4 py-6'>;
       <div className='mb-6'>;
         <div className='flex gap-4 mb-4'>;
           <div className='flex-1'>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="container mx-auto px-4 py-6">
       {/* Search Header */}
@@ -1260,12 +1745,21 @@ ursor/fix-website-loading-errors-and-merge-6662
               onChange={setSearchTerm}
               onSelectSuggestion={suggestion => handleSearch(suggestion.text)}
               searchSuggestions={suggestions}
+<<<<<<< HEAD
               placeholder='Search products, talent, services, and more...'            />
           <Button onClick={() => handleSearch(searchTerm)} disabled={!searchTerm.trim()}>
             <Search className="h-4 w-4" />
               placeholder='Search products, talent, services, and more...'            />
               placeholder="Search products, talent, services, and more..."
             />
+=======
+
+
+              placeholder="Search products, talent, services, and more..."
+            />
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>
           <Button onClick={() => handleSearch(searchTerm)} disabled={!searchTerm.trim()}>
             <Search className="h-4 w-4" />
@@ -1279,13 +1773,41 @@ ursor/fix-website-loading-errors-and-merge-6662
                 {loading ? 'Searching...' : `${totalCount} results for "${searchTerm}"`}
               </p>
             </div>
+<<<<<<< HEAD
             <div className='flex items-center gap-2'>
+=======
+
+            disabled={!searchTerm && searchTerm.trim()}
+          >;
+            <Search className='h-4 w-4' />;
+          </Button>;
+        </div>;
+
+        {searchTerm && (;
+          <div className='flex items-center justify-between'>;
+            <div>;
+              <h1 className='text-2xl font-bold'>Search Results</h1>;
+              <p className='text-muted-foreground'>;
+                {loading;
+                  ? 'Searching...';
+                  : `${totalCount} results for "${searchTerm}"`}
+              </p>;
+            </div>;
+
+            <div className='flex items-center gap-2'>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {/* Sort Options */}
               <Select
                 value={filters.sort}
                 onValueChange={value => setFilters({ ...filters, sort: value })}
+<<<<<<< HEAD
               >
                 <SelectTrigger className='w-40'>                  <SelectValue />
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             <div className="flex items-center gap-2">
               {/* Sort Options */}
@@ -1365,6 +1887,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <GridIcon className="h-4 w-4" />
                 </Button>
                 <Button
+<<<<<<< HEAD
                   variant={viewMode === 'grid' ? 'default' : 'ghost'}
                   size='sm'
                   onClick={() => setViewMode('grid')}                >
@@ -1377,6 +1900,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <List className='h-4 w-4' />
 ursor/fix-website-loading-errors-and-merge-6662
                 </Button>
+=======
+                  variant={viewMode === 'list' ? 'default' : 'ghost'}
+                  size="sm"
+                  onClick={() => setViewMode('list')}
+                >
+                  <List className="h-4 w-4" />
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                 </Button>
               </div>
@@ -1423,6 +1954,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       onFiltersChange = {handleFiltersChange, }
                       available_categories = {available_categories, }
 
+<<<<<<< HEAD
                   size='sm'
                   onClick={() => setViewMode('grid')}                >
                   <GridIcon className='h-4 w-4' />
@@ -1446,6 +1978,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </Button>
               </div>
               {/* Mobile Filter Toggle */}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Sheet open={showFilters} onOpenChange={setShowFilters}>
                 <SheetTrigger asChild>
                   <Button variant="outline" className="lg:hidden">
@@ -1459,6 +1993,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </SheetHeader>
                   <div className="mt-6">
                     <FilterSidebar
+<<<<<<< HEAD
                       filters = {filters,}
                       onFiltersChange = {handleFiltersChange,}
                       availableCategories = {availableCategories,}
@@ -1468,6 +2003,9 @@ ursor/fix-website-loading-errors-and-merge-6662
               </Sheet>
             </div>
           </div>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       filters={filters}
                       onFiltersChange={handleFiltersChange}
                       availableCategories={availableCategories}
@@ -1476,6 +2014,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </SheetContent>;
               </Sheet>;
             </div>;
+<<<<<<< HEAD
+=======
+
+          </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         )}
 
       </div>;
@@ -1483,6 +2028,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       {searchTerm && (;
         <div className='flex gap-6'>;
 
+<<<<<<< HEAD
           <div className='hidden lg:block w-64 flex-shrink-0'>;
             <div className='bg-card border rounded-lg p-4 sticky top-4'>;
               <div className='flex items-center justify-between mb-4'>;
@@ -1494,6 +2040,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
       {searchTerm && (
         <div className="flex gap-6">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Desktop Filters Sidebar */}
           <div className="hidden lg:block w-64 flex-shrink-0">
             <div className="bg-card border rounded-lg p-4 sticky top-4">
@@ -1501,6 +2049,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <h2 className="font-semibold">Filters</h2>
                 {activeFiltersCount > 0 && (
                   <Button
+<<<<<<< HEAD
                     variant='ghost'
                     size='sm'
                     onClick={() =>
@@ -1515,14 +2064,33 @@ ursor/fix-website-loading-errors-and-merge-6662
                     }                  >
                     Clear All
                   </Button>
+=======
+
+                    onClick={() =>;
+                      setFilters({;
+                        types: [],;
+                        category: '',;
+                        minPrice: 0,;
+                        maxPrice: 10000,;
+                        minRating: 0,;
+                        sort: 'relevance',;
+                      });
+                    }                  >;
+                    Clear All;
+                  </Button>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 )}
               </div>
               <FilterSidebar
                 filters = {filters,}
                 onFiltersChange = {handleFiltersChange,}
                 availableCategories = {availableCategories,}
+<<<<<<< HEAD
           {/* Main Content */}
           <div className='flex-1'>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
                     variant="ghost"
@@ -1544,6 +2112,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 filters={filters}
                 onFiltersChange={handleFiltersChange}
                 availableCategories={availableCategories}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               />;
             </div>;
           </div>;
@@ -1554,6 +2126,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
                 {/* Load More Button */}
+<<<<<<< HEAD
                 {hasMore && (;
                   <div className='text-center'>;
                     <Button
@@ -1611,11 +2184,52 @@ ursor/fix-website-loading-errors-and-merge-6662
                       searchTerm={searchTerm}
                       viewMode={viewMode}
                     />;
+=======
+                {hasMore && (
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <div className='text-center'>
                     <Button
                       onClick={loadMore}
                       disabled={loading}
+<<<<<<< HEAD
                       variant='outline'                    >
+=======
+                      variant='outline'>;
+                      {loading ? (;
+                        <>;
+                          <Loader2 className='h-4 w-4 mr-2 animate-spin' />;
+                          Loading...;
+                        </>;
+                      ) : (;
+                        'Load More Results';
+          <div className="flex-1">
+
+            {loading && results.length === 0 ? (
+              <div className="flex justify-center py-12">
+                <Loader2 className="h-8 w-8 animate-spin" />
+              </div>
+            ) : results.length === 0 && searchTerm ? (
+
+              <NoResultsState 
+                searchTerm={searchTerm} 
+                onNewSearch={handleSearch}
+              />;
+            ) : (;
+              <>;
+                {/* Results Grid/List */}
+                <div className={viewMode === 'grid' 
+                  ? "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mb-6"
+                  : "space-y-4 mb-6"
+                }>
+                  {results.map((result) => (
+                    <SearchResultCard
+                      key={`${result.type}-${result.id}`}
+                      result={result}
+                      searchTerm={searchTerm}
+                      viewMode={viewMode}
+                    />;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                   ))}
                 </div>
@@ -1628,6 +2242,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                       disabled={loading}
                       variant="outline"
                     >
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       {loading ? (
                         <>
                           <Loader2 className="h-4 w-4 mr-2 animate-spin" />
@@ -1644,6 +2262,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
         </div>
       )}
+<<<<<<< HEAD
 setCurrentPage (data.page)
 setHasMore (data.hasMore)
 //Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.minPrice > 0 |filters.maxPrice < 10000 ? 1 : 0) + (filters.minRating > 0 ? 1 : 0);"
@@ -1662,6 +2281,15 @@ setHasMore (data.hasMore)
 setCurrentPage (data.page);
 setHasMore (data.hasMore);
 //Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) + (filters.minRating > 0 ? 1 : 0);"
+=======
+
+
+setCurrentPage (data.page);
+setHasMore (data.hasMore);
+//Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) + (filters.minRating > 0 ? 1 : 0);"
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }> <SelectTrigger className="w-40" > <SelectValue /> </SelectTrigger> <SelectContent> <SelectItem value="relevance" >Relevance</SelectItem> <SelectItem value="price asc" >Price: Low to High</SelectItem> <SelectItem value="price desc" >Price: High to Low</SelectItem> <SelectItem value="rating" >Highest Rated</SelectItem> </SelectContent> </Select> > <GridIcon className="h-4 w-4" /> </Button> <Button > <List className="h-4 w-4" /> </Button> </div> {
   /* Mobile Filter Toggle */
 }<Sheet open= {
@@ -1712,11 +2340,15 @@ setHasMore (data.hasMore);
 }
 export default AdvancedSearchResults
 '"
+<<<<<<< HEAD
 export default AdvancedSearchResults
 export default AdvancedSearchResults
 
 export default AdvancedSearchResults
 export default AdvancedSearchResults
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export default AdvancedSearchResults, ;
 export default AdvancedSearchResults;
@@ -1726,6 +2358,10 @@ export default AdvancedSearchResults;
   );
 };
 export default AdvancedSearchResults;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           </div>)}
       </div>;
@@ -1865,4 +2501,8 @@ setHasMore (data.has_more);
 export default AdvancedSearchResults;
 '";
 export default AdvancedSearchResults,
+<<<<<<< HEAD
 export default AdvancedSearchResults,
+=======
+export default AdvancedSearchResults,
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

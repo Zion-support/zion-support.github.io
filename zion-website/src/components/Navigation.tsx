@@ -33,6 +33,11 @@ export default /**
  */
 function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState (false);
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ;
   return (;
@@ -45,6 +50,11 @@ function Navigation() {
 
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <header className=&quot;fixed inset - x-0 top - 0 z - 50 bg - black / 80 backdrop - blur - md border - b border - white / 10 & quot;>;
       <nav className=&quot;flex items - center justify - between p - 6 lg:px - 8&quot; aria - label=&quot;Global & quot;>;

@@ -1,8 +1,14 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {ReactNode} from 'react';
 
 
 // Extend FeatureCardProps to include key for mapping
 declare module '@/components/FeatureCard' {
+<<<<<<< HEAD
     class_name?: string,
     key?: number | string;
   }
@@ -16,10 +22,19 @@ import {ReactNode} from 'react';
 // Extend FeatureCardProps to include key for mapping
 declare module '@/components/FeatureCard' {
   export interface FeatureCardProps {;
+=======
+=======
+import {ReactNode} from 'react';
+// Extend FeatureCardProps to include key for mapping;
+declare module '@/components / FeatureCard' {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  export interface FeatureCardProps {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     title: string;
     description: string;
     icon: ReactNode;
 
+<<<<<<< HEAD
     className?: string
 
     key?: number | string
@@ -28,12 +43,23 @@ declare module '@/components/FeatureCard' {
 // Extend ListingScoreCardProps to include key for mapping
 declare module '@/components/ListingScoreCard' {
   export interface ListingScoreCardProps {;
+=======
+    class_name?: string,
+    key?: number | string;
+  }
+}
+// Extend ListingScoreCardProps to include key for mapping;
+declare module '@/components / ListingScoreCard' {
+
+  export interface ListingScoreCardProps {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     title: string;
     description: string;
     category: string;
     image?: string;
     tags?: string[];
     author?: string;
+<<<<<<< HEAD
     authorImage?: string;
     aiScore?: number;
     rating?: number;
@@ -157,3 +183,34 @@ declare module '@/components/ProductListingCard' {;
     key?: string | number;
   }
 }
+=======
+    author_image?: string;
+    ai_score?: number;
+    rating?: number;
+
+    review_count?: number;
+    key?: string | number,
+    variant?: string;
+  }
+}
+// Extend ChatMessageProps to include key for mapping;
+declare module '@/components / ChatAssistant / ChatMessage' {
+  export interface ChatMessageProps {
+    role: 'user' | 'assistant';
+    message: string;
+    timestamp?: Date,
+    key?: string | number;
+  }
+}
+// Extend ProductListingCardProps to include key for mapping;
+declare module '@/components / ProductListingCard' {
+  export interface ProductListingCardProps {
+    listing: any;
+    view: any;
+    onRequestQuote: (listing_id: string) => void,
+    key?: string | number;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

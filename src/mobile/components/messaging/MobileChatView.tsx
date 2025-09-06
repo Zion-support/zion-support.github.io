@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
@@ -16,15 +17,26 @@ import { toast } from 'sonner'
 
 interface Message {
   id: string;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 id: string;
   content: string;
   timestamp: string;
   isMe: boolean;
   sender?: string;
   avatar?: string;
+<<<<<<< HEAD
   status?: 'sent' | 'delivered' | 'read'
 interface MobileChatViewProps {
   contact: {
+=======
+
+  status?: 'sent' | 'delivered' | 'read';
+
+interface MobileChatViewProps {;
+  contact: {;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     id: string;
     name: string;
     avatar?: string;
@@ -34,6 +46,7 @@ interface MobileChatViewProps {
   onBack: () => void;
   onSendMessage: (content: string) => void
 
+<<<<<<< HEAD
 export function MobileChatView({
   contact
   messages
@@ -57,6 +70,59 @@ import { cn } from "@/lib/utils",
 import { useRouter } from 'next/router',
 import { toast } from "sonner",
 interface Message {
+=======
+
+import React, { useState } from 'react';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
+import { Button } from '@/components / ui / button';
+import { Input } from '@/components / ui / input';
+import {
+  Send,
+  PaperclipIcon,
+  ChevronLeft,
+  MoreVertical,
+  Video,
+  Phone,
+} from 'lucide-react';
+import { cn } from '@/lib / utils';
+import { use_router } from 'next / router';
+import { toast } from 'sonner';
+interface Message {
+  id: string;
+  content: string;
+  timestamp: string;
+  is_me: boolean;
+  sender?: string;
+  avatar?: string;
+  status?: 'sent' | 'delivered' | 'read';
+interface MobileChatViewProps {
+  contact: {
+    id: string;
+    name: string;
+    avatar?: string;
+    status?: string;
+  }
+  messages: Message[];
+  on_back: () => void;
+  onSendMessage: (content: string) => void;
+export /**
+ * MobileChatView - Function description
+ */
+function MobileChatView() {
+  const [new_message, setNewMessage] = useState ('');
+  const router = use_router ();
+  const handle_send = () =>: any {
+    // Check condition
+if (!== '') {) {
+  $2
+}
+      onSendMessage (new_message);
+      setNewMessage ('');
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     }
   }
@@ -94,6 +160,7 @@ export function MobileChatView(): any ({;
   const [newMessage, setNewMessage] = useState('');
   const router = useRouter();
   const handleSend = () => {;
+<<<<<<< HEAD
     if (newMessage.trim() !== "") {;
       onSendMessage(newMessage),;
       setNewMessage("");
@@ -102,6 +169,20 @@ export function MobileChatView(): any ({;
       e.preventDefault()
       handleSend()
     }
+=======
+    if (newMessage && newMessage.trim() !== '') {;
+      onSendMessage(newMessage);
+      setNewMessage('');
+    }
+  };
+
+  const handleKeyDown = (e: React && React.KeyboardEvent<HTMLInputElement>) => {    if (e && e.key === 'Enter' && !e && e.shiftKey) {;
+      e && e.preventDefault();
+      handleSend();
+    }
+  };
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const startVideoCall = () => {;
     const roomId = `mobile-${contact && contact.id}`;
     toast && toast.success('Starting video call', {;
@@ -123,6 +204,7 @@ export function MobileChatView(): any ({;
   };
 
   return (
+<<<<<<< HEAD
   }
   const startVideoCall = () => {
     const roomId = `mobile-${contact.id}`
@@ -216,6 +298,10 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
     // Navigate to video call page with audio-only flag
     router.push(`/call/${roomId}?audioOnly=true`)
   }
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
   
   const startVideoCall = () => {
@@ -238,11 +324,17 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
     router.push(`/call/${roomId}?audioOnly=true`)
   },
   
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="flex flex-col h-full pb-safe">
       <header className="sticky top-0 z-10 bg-background border-b border-border">
         <div className="flex items-center h-14 px-4">
           <Button
+<<<<<<< HEAD
             variant='ghost'
             size='icon'
             onClick={onBack}
@@ -250,6 +342,9 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
             <ChevronLeft className='h-5 w-5' />
           </Button>
           <div className='flex items-center flex-1 gap-3 mx-2'>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             variant="ghost"
             size="icon"
             onClick={onBack}
@@ -265,6 +360,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
               <AvatarFallback>{contact.name.charAt(0).toUpperCase()}</AvatarFallback>
             </Avatar>
             <div>
+<<<<<<< HEAD
               <h3 className='font-medium'>{contact.name}</h3>
               <p className='text-xs text-muted-foreground'>
                 {contact.status |'Online'}
@@ -272,28 +368,67 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
             </div>
           </div>
           <div className='flex'>
+=======
+
+            aria-label='Go back'>;
+            <ChevronLeft className='h-5 w-5' />;
+          </Button>;
+
+          <div className='flex items-center flex-1 gap-3 mx-2'>;
+            <Avatar>;
+              <AvatarImage src={contact && contact.avatar} alt={contact && contact.name} />;
+              <AvatarFallback>;
+                {contact && contact.name.charAt(0).toUpperCase()}
+              </AvatarFallback>;
+            </Avatar>;
+            <div>;
+              <h3 className='font-medium'>{contact && contact.name}</h3>;
+              <p className='text-xs text-muted-foreground'>;
+                {contact && contact.status || 'Online'}
+              </p>;
+            </div>;
+          </div>;
+
+          <div className='flex'>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Button
               variant='ghost'
               size='icon'
               onClick={startAudioCall}
+<<<<<<< HEAD
               aria-label='Start audio call'            >
               <Phone className='h-5 w-5' />
             </Button>
+=======
+
+              aria-label='Start audio call'>;
+              <Phone className='h-5 w-5' />;
+            </Button>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Button
               variant='ghost'
               size='icon'
               onClick={startVideoCall}
+<<<<<<< HEAD
               aria-label='Start video call'            >
               <Video className='h-5 w-5' />
             </Button>
             <Button variant='ghost' size='icon' aria-label='More options'>
               <MoreVertical className='h-5 w-5' />
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <h3 className="font-medium">{contact.name}</h3>
               <p className="text-xs text-muted-foreground">
                 {contact.status || "Online"}
               </p>
             </div>
           </div>
+<<<<<<< HEAD
           <div className='flex'>
             <Button
               variant='ghost'
@@ -333,6 +468,10 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
             
             <Button variant="ghost" size="icon" aria-label="More options">
               <MoreVertical className="h-5 w-5" />
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </Button>
             
             <Button
@@ -349,6 +488,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
           </div>
         </div>
       </header>
+<<<<<<< HEAD
       <div className='flex-1 overflow-y-auto p-4 space-y-4'>
         {messages.map(message => (
           <div
@@ -358,6 +498,9 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
               message.isMe ? 'justify-end' : 'justify-start'
             )}
           >
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               aria-label='Start video call'>;
               <Video className='h-5 w-5' />;
             </Button>;
@@ -416,14 +559,21 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
             )}>;
             <div
               className={cn(
+<<<<<<< HEAD
                 'max-w-[80%] rounded-2xl px-4 py-2'
                 message.isMe
+=======
+                'max-w-[80%] rounded-2xl px-4 py-2',
+                message && message.isMe
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   ? 'bg-primary text-primary-foreground rounded-tr-none'
                   : 'bg-muted rounded-tl-none'
               )}            >
               <p>{message.content}</p>
               <div
                 className={cn(
+<<<<<<< HEAD
                   'text-xs mt-1 flex justify-end'
                   message.isMe
                     ? 'text-primary-foreground/80'
@@ -436,6 +586,19 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
                 {message.timestamp}
                 {message.isMe && message.status && (
                   <span className='ml-1'>
+=======
+
+                  'text-xs mt-1 flex justify-end',
+                  message && message.isMe
+
+                    ? 'text-primary-foreground/80'
+                    : 'text-muted-foreground'
+                )}
+
+      <div className='flex - 1 overflow - y-auto p - 4 space - y-4'>;
+        {messages.map (message => (
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
         {messages.map((message) => (
@@ -525,6 +688,10 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
       </header>;
       <div className="flex-1 overflow-y-auto p-4 space-y-4">;
         {messages.map((message) => (;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div;
             key={message.id} ;
             className={cn(;
@@ -570,6 +737,10 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
           </Button>
           <Input
             value={newMessage}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             onChange={e => setNewMessage(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder='Type a message...'
@@ -581,6 +752,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
             className={!newMessage.trim() ? 'opacity-50' : ''}
             aria-label='Send message'          >
             <Send className='h-5 w-5' />
+<<<<<<< HEAD
           </Button>
           <Input
             value={newMessage}
@@ -641,6 +813,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             className={!newMessage.trim() ? 'opacity-50' : ''}
             aria-label='Send message'          >
             <Send className='h-5 w-5' />
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       
       <div className="sticky bottom-0 bg-background border-t border-border p-2">
         <div className="flex items-center gap-2">
@@ -692,14 +866,46 @@ ursor/fix-website-loading-errors-and-merge-6662
             aria-label="Send message"
           >
             <Send className="h-5 w-5" />
+<<<<<<< HEAD
+=======
+          </Button>
+        </div>
+
+      </div>;
+
+      <div className='sticky bottom-0 bg-background border-t border-border p-2'>;
+        <div className='flex items-center gap-2'>;
+          <Button variant='ghost' size='icon' aria-label='Attach file'>;
+            <PaperclipIcon className='h-5 w-5' />;
+          </Button>;
+
+          <Input
+            value={newMessage}
+
+
+            onChange={(e) => setNewMessage(e.target.value)}
+
+            onKeyDown={handleKeyDown}
+
+            className={!newMessage.trim() ? "opacity-50" : ""}
+            aria-label="Send message"
+          >
+            <Send className="h-5 w-5" />
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </Button>
         </div>
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
 }
 ;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 }
 }
@@ -734,4 +940,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

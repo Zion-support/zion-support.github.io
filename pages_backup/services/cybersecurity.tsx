@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
@@ -289,6 +290,15 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 export default function CybersecurityPage() {
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+  }
+];
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const benefits = [
   'Protection against cyber threats and attacks',
   'Compliance with industry regulations',
@@ -298,6 +308,13 @@ const benefits = [
   'Peace of mind with 24/7 monitoring'
 ];
 export default function CybersecurityServices() {
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function CybersecurityPage() {;
 const benefits = [;
   'Protection against cyber threats and attacks',;
@@ -309,8 +326,12 @@ const benefits = [;
 ];
 export default function CybersecurityServices() {;
 
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <Layout
       title="Cybersecurity Services - Zion Tech Group"
@@ -319,6 +340,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   {
     icon: Eye,
     title: 'Threat Monitoring',
@@ -379,6 +404,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </div>
           </div>
         </section>
+<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -397,6 +423,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-red-600" />
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         {/* Services Grid */}
         <section className="py-16 px-4">
@@ -407,6 +437,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
                 >
@@ -415,6 +446,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -522,6 +561,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         </section>
 
 
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
@@ -554,3 +594,73 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
   );
+=======
+
+        {/* Benefits Section */}
+        <section className="py-20">;
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">;
+              <div>;
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
+                  Why Choose Our Cybersecurity Services?;
+                </h2>;
+                <p className="text-xl text-gray-600 mb-8">;
+                  Our cybersecurity experts provide comprehensive protection against;
+                  evolving threats while ensuring compliance with industry regulations.;
+                </p>;
+                <ul className="space-y-4">;
+                  {benefits && benefits.map((benefit, index) => (;
+                    <li key={index} className="flex items-start">;
+                      <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />;
+                      <span className="text-gray-700">{benefit}</span>;
+                    </li>;
+                  ))}
+                </ul>;
+              </div>;
+              <div className="bg-gradient-to-r from-red-600 to-orange-700 p-8 rounded-xl text-white">;
+                <h3 className="text-2xl font-bold mb-6">Ready to Secure Your Business?</h3>;
+                <p className="text-lg mb-6">;
+                  Let our cybersecurity experts help you implement comprehensive;
+                  security solutions that protect your business and data.;
+                </p>;
+                <button className="bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">;
+                  Schedule Security Audit;
+                  <ArrowRight className="w-5 h-5 ml-2" />;
+                </button>;
+              </div>;
+            </div>;
+          </div>;
+        </section>;
+        {/* CTA Section */}
+        <section className="py-20 bg-gray-900 text-white">;
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">;
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">;
+              Ready to Protect Your Business?;
+            </h2>;
+            <p className="text-xl mb-8 max-w-3xl mx-auto">;
+              Contact our cybersecurity team to discuss your security requirements;
+              and discover how we can help protect your business from threats.;
+            </p>;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+              <button className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors">;
+                Contact Security Team;
+              </button>;
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors">;
+                Download Security Guide;
+              </button>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>;
+    </Layout>;
+    </>;
+    </Layout>;
+    </>;
+    </Layout>;
+  );
+    </>;
+  ),;
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { AccessLevel } from '../../utils/search/filter';
 import { parseQueryToFilters } from '../../utils/search/parser';
@@ -60,12 +61,16 @@ function handler() {
     const didYouMean = results.all.length === 0 ? suggestDidYouMean (q) : null;
 ;
     res.status (200).json ({
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       ok: true,
       query: q,
       parsed,
       keywords,
       didYouMean,
       counts: {
+<<<<<<< HEAD
     res.status(500).json({ ok: false, error: e?.message || 'Search failed' })
   }
 }
@@ -166,6 +171,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+
+
+      },
+      results
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+    });
+
+  } catch (e: any) {
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 }
   } catch (error) {
@@ -181,3 +198,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+    const q = (req.query.q as string) || '';
+    const access = ((req.headers['x-access-level'] as string) || 'public') as AccessLevel;
+    const parsed = await parseQueryToFilters(q);
+    const results = searchAll(parsed, access);
+
+
+  }
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

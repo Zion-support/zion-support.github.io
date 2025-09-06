@@ -576,4 +576,8 @@ export default function ManufacturingPage() {
   );
 };
 
+<<<<<<< HEAD
 export default Manufacturing;
+=======
+export default Manufacturing;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

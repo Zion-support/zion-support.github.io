@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
  </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) 
@@ -6,6 +7,8 @@
 
 export default function AutomationStatusPage() {
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 }</div>) import { useEffect, useState } from 'react';
@@ -23,13 +26,25 @@ import { useEffect, useState } from 'react';
 import { useEffect, useState } from 'react';
 export default function AutomationStatusPage() {;
   const [status, setStatus] = useState<{ runAt?: string, ok?: boolean } | null>(null);
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   useEffect(() => {;
     fetch('/automation/status && status.json');
       .then((r) => r && r.json());
       .then((j) => setStatus(j));
       .catch(() => setStatus(null));
+<<<<<<< HEAD
   }, []);
   return (
+=======
+
+  }, []);
+  return (
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="space-y-4">;
       <h1 className="text-xl font-semibold">Autonomous Automation Status</h1>;
       {status ? (;
@@ -44,6 +59,11 @@ export default function AutomationStatusPage() {;
     </div>;
   );
 }
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 </div>) : (<div className="text - sm text - gray - 500" >No status available yet.</div>);
 }</div>) import { useEffect, useState } from 'react';
 export default /**
@@ -78,7 +98,16 @@ function AutomationStatusPage() {
   )
 
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   );
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

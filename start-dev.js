@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 const { spawn } = require ('child_process'),
 console.log ('🚀 Starting development server...'),
 
+=======
+
+const { spawn } = require ('child_process'),
+console.log ('🚀 Starting development server...'),
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 console.log('🚀 Starting development server...'),;
 
@@ -16,6 +25,7 @@ dev_process.on ('close', (code) => {
   console.log (`Development server exited with code ${code}`);
 }),
 // Handle process termination;
+<<<<<<< HEAD
 const { spawn } = require('child_process');
 console.log('🚀 Starting development server...');
 // Start the development server;
@@ -60,6 +70,8 @@ process.on('SIGTERM', () => {;
   devProcess.kill('SIGTERM'),;
   process.exit(0);
 }),;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 process.on ('SIGINT', () => {
   console.log ('Stopping development server...'),
   dev_process.kill ('SIGINT'),
@@ -70,6 +82,7 @@ process.on ('SIGTERM', () => {
   dev_process.kill ('SIGTERM'),
   process.exit (0);
 }),
+<<<<<<< HEAD
 const { spawn } = require('child_process');
 ;
 console.log('🚀 Starting development server...');
@@ -100,3 +113,6 @@ process.on('SIGTERM', () => {;
   devProcess.kill('SIGTERM');
   process.exit(0);
 });
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

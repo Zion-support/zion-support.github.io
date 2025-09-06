@@ -1,19 +1,31 @@
 
 
 
+<<<<<<< HEAD
 import { createContext, useContext, useEffect, useState } from &quot;react&quot;
 type Theme = &quot;dark&quot; | &quot;light&quot; | &quot;system&quot;
 import { createContext, useContext, useEffect, useState } from &quot;react&quot;
 type Theme = &quot;dark&quot; | &quot;light&quot; | &quot;system&quot;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { createContext, useContext, useEffect, useState } from "react"
 
 type Theme = "dark" | "light" | "system"
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 type ThemeProviderProps = {
   children: React.ReactNode
   defaultTheme?: Theme
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 type ThemeProviderState = {;
   theme: Theme;
@@ -31,6 +43,7 @@ export function ThemeProvider({
   children,;
   defaultTheme = &quot;system&quot;}: ThemeProviderProps) {
 
+<<<<<<< HEAD
   children,
   defaultTheme = "system"}: ThemeProviderProps) {
 
@@ -57,18 +70,28 @@ export function ThemeProvider({
   defaultTheme = &quot;system&quot;}: ThemeProviderProps) {
   children,
   defaultTheme = "system"}: ThemeProviderProps) {
+=======
+=======
+  children,
+  defaultTheme = "system"}: ThemeProviderProps) {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [theme, setTheme] = useState<Theme>(
     () => (localStorage.getItem("theme") as Theme) || defaultTheme
 
   )
   useEffect(() => {
     const root = window.document.documentElement
+<<<<<<< HEAD
     root.classList.remove(&quot;light&quot;, &quot;dark&quot;)
     if (theme === &quot;system&quot;) {
       const systemTheme = window.matchMedia(&quot;(prefers-color-scheme: dark)&quot;)
         .matches
         ? &quot;dark&quot;
         : &quot;light&quot;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     root.classList.remove("light", "dark")
 
     if (theme === "system") {
@@ -77,6 +100,11 @@ export function ThemeProvider({
         ? "dark"
         : "light"
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       root.classList.add(systemTheme)
       return
     }
@@ -85,6 +113,13 @@ export function ThemeProvider({
   const value = {
     theme
     setTheme: (theme: Theme) => {
+<<<<<<< HEAD
+=======
+      localStorage.setItem(&quot;theme&quot;, theme)
+      setTheme(theme)
+    }}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 ;
 
@@ -249,6 +284,11 @@ export const useTheme = () => {
 }
     throw new Error("useTheme must be used within a ThemeProvider")
 
+<<<<<<< HEAD
   return context
 }
 ;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {useState, useMemo} from "react";
 import {ProductListing} from "@/types/listings";
 import {SearchSuggestion, FilterOptions} from "@/types/search";
@@ -48,6 +49,8 @@ export function useMarketplaceSearch() {
   const filterOptions: FilterOptions = useMemo(
     () => generateFilterOptions(),
     []),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -57,6 +60,7 @@ export function useMarketplaceSearch() {
       // Search query filter
 
 
+<<<<<<< HEAD
   
   // Filter listings based on current search query and filters
   const filteredListings = useMemo(() => {
@@ -75,6 +79,8 @@ export function useMarketplaceSearch() {
       // Availability filter
       const matchesAvailability = selectedAvailability.length === 0 |
         (listing.availability && selectedAvailability.includes(listing.availability));
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const matchesSearch = !searchQuery || 
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -92,6 +98,11 @@ export function useMarketplaceSearch() {
       const matchesAvailability = selectedAvailability.length === 0 || 
         (listing.availability && selectedAvailability.includes(listing.availability)),
       
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Rating filter
       const matchesRating = selectedRating === null |
         (listing.rating !== undefined && listing.rating >= selectedRating)
@@ -99,6 +110,10 @@ export function useMarketplaceSearch() {
         matchesProductType &&
         matchesLocation &&
         matchesAvailability &&
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const matchesSearch = !searchQuery || 
 const matchesSearch = !searchQuery || 
         listing && listing.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||
@@ -128,17 +143,24 @@ const matchesSearch = !searchQuery ||
   
 
 
+<<<<<<< HEAD
         matchesRating
     })
   }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]);
   }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]),
   
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Handle filter changes
   const handleFilterChange = (filterType: string, value: string) => {
     switch (filterType) {
       case 'productTypes':
         setSelectedProductTypes((prev: string[]) =>
+<<<<<<< HEAD
           prev && prev.includes(value) ? prev && prev.filter(a => a !== value) : [...prev, value]
+=======
+          prev && prev.includes(value) ? prev && prev.filter(t => t !== value) : [...prev, value]
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         );
 import { useState, useMemo } from './react';
 import { ProductListing } from '@/types / listings';
@@ -237,6 +259,7 @@ function useMarketplaceSearch() {
     filtered_listings;
     handleFilterChange;
     clearAllFilters;
+<<<<<<< HEAD
           prev.includes(value) ? prev.filter(t => t !== value) : [...prev, value]
         ),
         break,
@@ -247,17 +270,30 @@ function useMarketplaceSearch() {
         break,
       case 'availability':
         setSelectedAvailability((prev: string[]) =>
+=======
+
+    filter_options;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           prev.includes(value) ? prev.filter(a => a !== value) : [...prev, value]
         ),
         break,
       default: break
     }
+<<<<<<< HEAD
   },
   
 
   }
   },
   
+=======
+
+  },
+  
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Clear all filters
   const clearAllFilters = () => {
     setSearchQuery(""),
@@ -265,6 +301,7 @@ function useMarketplaceSearch() {
     setSelectedLocations([]),
     setSelectedAvailability([]),
     setSelectedRating(null)
+<<<<<<< HEAD
   }
   return {
     searchQuery;
@@ -282,6 +319,9 @@ function useMarketplaceSearch() {
     filterOptions
   }
 }
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
   
   return {
@@ -297,6 +337,7 @@ function useMarketplaceSearch() {
     handleFilterChange,
     clearAllFilters,
     filterOptions
+<<<<<<< HEAD
 import { useState, useMemo } from "react",;
 import { ProductListing } from "@/types/listings",;
 import { SearchSuggestion, FilterOptions } from "@/types/search",;
@@ -539,3 +580,9 @@ filterOptions
   }
 }
 ;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

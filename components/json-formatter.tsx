@@ -1,11 +1,47 @@
 
+<<<<<<< HEAD
 
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import {
+<<<<<<< HEAD
 import {
 
+=======
+=======
+import {
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Code,
   Copy,
   RefreshCw,
@@ -23,11 +59,16 @@ import {
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
 import { Star } from 'lucide-react';
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Star } from 'lucide-react';
 export default function JSONFormatterPage() {
 
+<<<<<<< HEAD
   const [inputJson, setInputJson] = useState('');
   const [formattedJson, setFormattedJson] = useState('');
   const [isValid, setIsValid] = useState(true);
@@ -64,6 +105,9 @@ import {
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Star } from 'lucide-react';
 export default function JSONFormatterPage() {;
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [inputJson, setInputJson] = useState('');
   const [formattedJson, setFormattedJson] = useState('');
   const [isValid, setIsValid] = useState(true);
@@ -77,6 +121,7 @@ export default function JSONFormatterPage() {;
       setFormattedJson('');
       setIsValid(true);
       setErrorMessage('');
+<<<<<<< HEAD
       return;    }
     try {
       const parsed = JSON.parse(inputJson);
@@ -95,11 +140,23 @@ export default function JSONFormatterPage() {;
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');
       setFormattedJson('');    }        ? JSON.stringify(parsed)
         : JSON.stringify(parsed, null, indentSize);
+=======
+
+
+      setErrorMessage(error instanceof Error ? error && error.message : 'Invalid JSON');
+      setFormattedJson('');    }        ? JSON && JSON.stringify(parsed);
+        : JSON && JSON.stringify(parsed, null, indentSize);
+
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       setFormattedJson(formatted);
       setIsValid(true);
       setErrorMessage('')
     } catch (error) {
       setIsValid(false);
+<<<<<<< HEAD
   };
 
   const minifyJSON = () => {;
@@ -161,11 +218,20 @@ export default function JSONFormatterPage() {;
   }
   const minifyJSON = () => {
     if (!inputJson.trim()) return;
+=======
+
+
+    }
+
+    
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {
       const parsed = JSON.parse(inputJson);
       const minified = JSON.stringify(parsed);
       setFormattedJson(minified);
       setIsValid(true);
+<<<<<<< HEAD
       setErrorMessage('');
     } catch (error) {
       setIsValid(false);
@@ -291,6 +357,55 @@ export default function JSONFormatterPage() {;
             Format, validate, and beautify JSON with our professional tools.
             Minify, prettify, and analyze JSON data with advanced features and
             real-time validation.          </p>      </Head>
+=======
+
+      setErrorMessage('')
+    } catch (error) {
+
+      setIsValid(false);
+
+      setErrorMessage(error instanceof Error ? error && error.message : 'Invalid JSON');
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  };
+
+
+
+    try {;
+      JSON && JSON.parse(inputJson);
+
+      setIsValid(true);
+      setErrorMessage('');
+    } catch (error) {;
+      setIsValid(false);
+      setErrorMessage(error instanceof Error ? error && error.message : 'Invalid JSON');    }      setErrorMessage('');
+    } catch (error) {;
+      setIsValid(false);
+
+
+      setErrorMessage(error instanceof Error ? error && error.message : 'Invalid JSON');
+  };
+
+  const clearAll = () => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    setInputJson('');
+    setFormattedJson('');
+    setIsValid(true);
+
+
+
+  return (
+
+    <>
+      <Head>
+        <title>JSON Formatter - Zion Tech Group</title>
+        <meta name="description" content="Format, validate, and beautify JSON with our professional JSON formatter. Minify, prettify, and analyze JSON data with ease." />
+        <meta property="og:title" content="JSON Formatter - Zion Tech Group" />
+        <meta property="og:description" content="Professional JSON formatting and validation service." />
+      </Head>
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-teal-900 via-cyan-900 to-blue-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -310,6 +425,7 @@ export default function JSONFormatterPage() {;
         </div>
       </section>
       {/* JSON Formatter Tool */}
+<<<<<<< HEAD
       <section className='py-20 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
@@ -321,6 +437,11 @@ export default function JSONFormatterPage() {;
               and real-time validation.            </p>
           </div>
           {/* Settings Bar */}      <section className="py-20 bg-gray-900">
+=======
+
+      <section className="py-20 bg-gray-900">
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
@@ -328,6 +449,10 @@ export default function JSONFormatterPage() {;
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Our advanced JSON formatter provides multiple formatting options and real-time validation.
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         />;
       </Head>;
       {/* Hero Section */}
@@ -384,6 +509,11 @@ export default function JSONFormatterPage() {;
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">;
               Our advanced JSON formatter provides multiple formatting options and real-time validation.;
           </div>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Settings Bar */}
           <Card className='p-6 bg-gray-800 border border-gray-700 mb-8'>;
             <div className='flex flex-wrap items-center justify-between gap-4'>;
@@ -408,12 +538,22 @@ export default function JSONFormatterPage() {;
                   <label className="text-sm text-gray-300" htmlFor="input-Indent:">Indent:</label>;
                   <select
                     value={indentSize}
+<<<<<<< HEAD
                   >
+=======
+
+                  >
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <option value={2}>2 spaces</option>
                     <option value={4}>4 spaces</option>
                     <option value={8}>8 spaces</option>
                   </select>
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     onChange={(e) => setIndentSize(Number(e && e.target.value))}
                     className="px-3 py-2 bg-gray-700 border border-gray-600 rounded text-white text-sm focus:outline-none focus:ring-2 focus:ring-teal-500";
       JSON.parse (input_json);
@@ -586,16 +726,28 @@ export default function JSONFormatterPage() {;
                     value={indent_size}
                     on_change={(e) => setIndentSize (Number (e.target.value))}
                     className="px - 3 py - 2 bg - gray - 700 border border - gray - 600 rounded text - white text - sm focus:outline - none focus:ring - 2 focus:ring - teal - 500";
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <option value={2}>2 spaces</option>;
                     <option value={4}>4 spaces</option>;
                     <option value={8}>8 spaces</option>;
                   </select>;
                 </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     className='text-sm text-gray-300'>;
                     Compact mode;
                   </label>;
                 </div>;
                 <div className='flex items-center space-x-2'>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <input
                     type='checkbox'
                     id='showLineNumbers'
@@ -605,6 +757,10 @@ export default function JSONFormatterPage() {;
                   />;
                   <label
                     htmlFor='showLineNumbers'
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     className='text-sm text-gray-300'>;
                 <div className='flex items - center space - x-2'>;
                   <input;
@@ -633,10 +789,19 @@ export default function JSONFormatterPage() {;
                     html_for='showLineNumbers';
                     className='text - sm text - gray - 300';
                   >;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     Line numbers;
                   </label>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 
                 <div className="flex items-center space-x-2">
                   <input
@@ -645,21 +810,32 @@ export default function JSONFormatterPage() {;
                     id="compactMode"
                     checked={compactMode}
 
+<<<<<<< HEAD
                 <div className="flex items-center space-x-2">
                   <input
                     type="checkbox"
                     id="compactMode"
                     checked={compactMode}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     onChange={(e) => setCompactMode(e && e.target.checked)}
                     className="w-4 h-4 text-teal-600 bg-gray-700 border-gray-600 rounded focus:ring-teal-500";
                   />;
                   <label htmlFor="compactMode" className="text-sm text-gray-300" htmlFor="input-Compact mode">Compact mode</label>;
                 </div>;
                 <div className="flex items-center space-x-2">;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <input
                     type="checkbox"
                     id="showLineNumbers"
                     checked={showLineNumbers}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     onChange={(e) => setShowLineNumbers(e && e.target.checked)}
                     className="w-4 h-4 text-teal-600 bg-gray-700 border-gray-600 rounded focus:ring-teal-500";
                   />;
@@ -667,10 +843,15 @@ export default function JSONFormatterPage() {;
                 </div>;
               </div>;
               <div className="flex items-center space-x-3">;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <Button
                   onClick={loadSampleJSON}
                   variant="outline"
                   size="sm"
+<<<<<<< HEAD
                   className="border-gray-600 text-gray-300 hover:bg-gray-700"
                 >
                   <Upload className="w-4 h-4 mr-2" />
@@ -727,6 +908,13 @@ export default function JSONFormatterPage() {;
                 <div className="relative">
                   {showLineNumbers && (
                     <div className="absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden">
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                    </div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <div className='absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden'>                      {getLineNumbers(inputJson)}
 
                       {getLineNumbers(inputJson)}
@@ -747,19 +935,37 @@ export default function JSONFormatterPage() {;
                   )}
                   <textarea
                     value={inputJson}
+<<<<<<< HEAD
                     onChange={(e) => setInputJson(e.target.value)}
                     placeholder="Paste your JSON data here..."
 
                     onChange={e => setInputJson(e.target.value)}
                     placeholder='Paste your JSON data here...'                    rows={15}                    onChange={(e) => setInputJson(e.target.value)}
                     placeholder="Paste your JSON data here..."
+=======
+
+=======
+                    onChange={(e) => setInputJson(e.target.value)}
+                    placeholder="Paste your JSON data here..."
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     rows={15}
                     className={`w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500 font-mono text-sm resize-none ${;
                       showLineNumbers ? 'pl-16' : '';
                     }`}
+<<<<<<< HEAD
                   />
                 </div>
                 {!isValid && errorMessage && (
+=======
+
+                  />;
+                </div>;
+
+                {!isValid && errorMessage && (;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <div className='p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300'>                    <strong>Error:</strong> {errorMessage}
                   </div>;
                 )}
@@ -774,11 +980,14 @@ export default function JSONFormatterPage() {;
 
                 <div className='flex space-x-3'>;
 
+<<<<<<< HEAD
                 <div className='flex space-x-3'>                  <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">;
                     <strong>Error:</strong> {errorMessage}
                   </div>;
                 )}
                 <div className='flex space-x-3'>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <Button
                     onClick={formatJSON}
                     disabled={!inputJson && inputJson.trim()}
@@ -803,6 +1012,7 @@ export default function JSONFormatterPage() {;
                     onClick={validateJSON}
                     disabled={!inputJson && inputJson.trim()}
                     variant='outline'
+<<<<<<< HEAD
                   <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
                 <div className='flex space-x-3'>                  <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
 
@@ -842,6 +1052,10 @@ export default function JSONFormatterPage() {;
                     disabled={!inputJson.trim()}
                     variant='outline'
                     className='border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50'                  >                    variant="outline"
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     className="border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50"
                   >
                     Validate
@@ -849,12 +1063,72 @@ export default function JSONFormatterPage() {;
                 </div>
               </div>
             </Card>
+<<<<<<< HEAD
+=======
+
+                    className='border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50'>                    variant="outline";
+                    className="border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50";
+                    <div className="absolute left - 0 top - 0 bottom - 0 w - 12 bg - gray - 700 border - r border - gray - 600 text - xs text - gray - 400 p - 2 font - mono overflow - hidden">;
+                    </div>)}
+                  <textarea;
+                    value={input_json}
+                    on_change={e => setInputJson (e.target.value)}
+                    placeholder='Paste your JSON data here...'                    rows={15}                    on_change={(e) => setInputJson (e.target.value)}
+                    placeholder="Paste your JSON data here...";
+                    rows={15}
+                    className={`w - full p - 4 bg - gray - 700 border border - gray - 600 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - teal - 500 font - mono text - sm resize - none ${
+                      showLineNumbers ? 'pl - 16' : '';
+                    }`}
+                  />;
+                </div>;
+                {!is_valid && error_message && (
+                  <div className='p - 3 bg - red - 500 / 20 border border - red - 500 / 30 rounded text - sm text - red - 300'>                    <strong > Error:</strong> {error_message}
+                  </div>)}
+                <div className='flex space - x-3'>                  <div className="p - 3 bg - red - 500 / 20 border border - red - 500 / 30 rounded text - sm text - red - 300">;
+                    <strong > Error:</strong> {error_message}
+                  </div>)}
+                <div className='flex space - x-3'>;
+                  <Button;
+                    on_click={formatJSON}
+                    disabled={!input_json.trim ()}
+                    className='flex - 1 bg - gradient - to - r from - teal - 600 to - cyan - 600 hover:from - teal - 700 hover:to - cyan - 700 text - white py - 3 text - lg font - semibold disabled:opacity - 50 disabled:cursor - not - allowed';
+                  >;
+                    <Code className='w - 5 h - 5 mr - 2' />                    Format JSON                  <Button;
+                    on_click={formatJSON}
+                    disabled={!input_json.trim ()}
+                    className="flex - 1 bg - gradient - to - r from - teal - 600 to - cyan - 600 hover:from - teal - 700 hover:to - cyan - 700 text - white py - 3 text - lg font - semibold disabled:opacity - 50 disabled:cursor - not - allowed";
+                  >;
+                    <Code className="w - 5 h - 5 mr - 2" />;
+                    Format JSON;
+                  </Button>;
+                  <Button;
+                    on_click={minifyJSON}
+                    disabled={!input_json.trim ()}
+                    variant='outline';
+                    className='border - gray - 600 text - gray - 300 hover:bg - gray - 700 disabled:opacity - 50'                  >                    variant="outline";
+                    className="border - gray - 600 text - gray - 300 hover:bg - gray - 700 disabled:opacity - 50";
+                  >;
+                    Minify;
+                  </Button>;
+                  <Button;
+                    on_click={validateJSON}
+                    disabled={!input_json.trim ()}
+                    variant='outline';
+                    className='border - gray - 600 text - gray - 300 hover:bg - gray - 700 disabled:opacity - 50'                  >                    variant="outline";
+                    className="border - gray - 600 text - gray - 300 hover:bg - gray - 700 disabled:opacity - 50";
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   >;
                     Validate;
                   </Button>;
                 </div>;
               </div>;
             </Card>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             {/* Output Section */}
             {/* Output Section */}
@@ -866,6 +1140,11 @@ export default function JSONFormatterPage() {;
                 </h3>
                 {formattedJson && (
                   <div className="flex items-center space-x-2">
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <Button
                       onClick={() => copyToClipboard(formattedJson)}
                       variant='outline';
@@ -875,6 +1154,7 @@ export default function JSONFormatterPage() {;
                       <Copy className='w-4 h-4 mr-2' />;
                       Copy;
                     </Button>;
+<<<<<<< HEAD
             {/* Output Section */}
             <Card className='p-8 bg-gray-800 border border-gray-700'>
               <div className='flex items-center justify-between mb-6'>
@@ -1019,12 +1299,19 @@ export default function JSONFormatterPage() {;
 
                   </div>
 
+=======
+                    <Button
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 )}
               </div>
             </Card>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
 
       {/* Features */}
@@ -1032,6 +1319,8 @@ export default function JSONFormatterPage() {;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -1043,10 +1332,14 @@ export default function JSONFormatterPage() {;
               Professional JSON Formatting Features
 
 
+<<<<<<< HEAD
 
               Professional JSON Formatting Features
 
               Professional JSON Formatting Features
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Everything you need to work with JSON data efficiently and
@@ -1116,10 +1409,17 @@ export default function JSONFormatterPage() {;
               <h3 className="text-xl font-bold text-white mb-4">Customizable</h3>
               <p className="text-gray-400">
                 Adjust indentation size, toggle compact mode, and customize display options.
+<<<<<<< HEAD
+=======
+
+              </p>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </Card>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
             </h2>
       {/* Use Cases */}
       <section className='py-20 bg-gray-900'>
@@ -1142,6 +1442,16 @@ export default function JSONFormatterPage() {;
                 files with professional formatting.
               </p>
               <ul className='space-y-2 text-gray-300'>                <li>• API development and testing</li>              Perfect For Every JSON Need
+=======
+      {/* Use Cases */}
+
+      <section className="py-20 bg-gray-900">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+              Perfect For Every JSON Need
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               From development to data analysis, our JSON formatter serves all your formatting needs.
@@ -1160,6 +1470,7 @@ export default function JSONFormatterPage() {;
                 <li>• Debug and troubleshooting</li>
               </ul>
             </Card>
+<<<<<<< HEAD
             <Card className='p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>📊</div>
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -1170,16 +1481,29 @@ export default function JSONFormatterPage() {;
                 visualization projects.
               </p>
               <ul className='space-y-2 text-gray-300'>                <li>• Data cleaning and preparation</li>            <Card className="p-8 bg-gray-700 border border-gray-600">
+=======
+
+
+            <Card className="p-8 bg-gray-700 border border-gray-600">
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className="text-4xl mb-4">📊</div>
               <h3 className="text-2xl font-bold text-white mb-4">Data Analysts</h3>
               <p className="text-gray-400 mb-6">
                 Clean and format JSON datasets for analysis, reporting, and data visualization projects.
               </p>
               <ul className="space-y-2 text-gray-300">
+<<<<<<< HEAD
+=======
+
+                <li>• Data cleaning and preparation</li>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <li>• Report generation</li>
                 <li>• Data validation</li>
               </ul>
             </Card>
+<<<<<<< HEAD
             <Card className='p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>🔧</div>
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -1190,16 +1514,29 @@ export default function JSONFormatterPage() {;
                 format infrastructure as code.
               </p>
               <ul className='space-y-2 text-gray-300'>                <li>• Configuration management</li>            <Card className="p-8 bg-gray-700 border border-gray-600">
+=======
+
+
+            <Card className="p-8 bg-gray-700 border border-gray-600">
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className="text-4xl mb-4">🔧</div>
               <h3 className="text-2xl font-bold text-white mb-4">DevOps Engineers</h3>
               <p className="text-gray-400 mb-6">
                 Manage configuration files, validate deployment manifests, and format infrastructure as code.
               </p>
               <ul className="space-y-2 text-gray-300">
+<<<<<<< HEAD
+=======
+
+                <li>• Configuration management</li>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <li>• Infrastructure validation</li>
                 <li>• Deployment automation</li>
               </ul>
             </Card>
+<<<<<<< HEAD
             <Card className='p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>📝</div>
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -1210,12 +1547,24 @@ export default function JSONFormatterPage() {;
                 specifications.
               </p>
               <ul className='space-y-2 text-gray-300'>                <li>• Documentation examples</li>            <Card className="p-8 bg-gray-700 border border-gray-600">
+=======
+
+
+            <Card className="p-8 bg-gray-700 border border-gray-600">
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className="text-4xl mb-4">📝</div>
               <h3 className="text-2xl font-bold text-white mb-4">Technical Writers</h3>
               <p className="text-gray-400 mb-6">
                 Format JSON examples for documentation, tutorials, and technical specifications.
               </p>
               <ul className="space-y-2 text-gray-300">
+<<<<<<< HEAD
+=======
+
+                <li>• Documentation examples</li>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <li>• API documentation</li>
                 <li>• Technical specifications</li>
               </ul>
@@ -1223,9 +1572,16 @@ export default function JSONFormatterPage() {;
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                 {formattedJson && (;
+<<<<<<< HEAD
 {formattedJson && (;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <div className='text-sm text-gray-400'>;
                     <p>• Characters: {formattedJson && formattedJson.length}</p>;
                     <p>• Lines: {formattedJson && formattedJson.split('\n').length}</p>;
@@ -1507,6 +1863,10 @@ export default function JSONFormatterPage() {;
               your formatting needs.;
             </p>;
           </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 8'>;
             <Card className='p - 8 bg - gray - 700 border border - gray - 600'>;
               <div className='text - 4xl mb - 4'>👨‍💻</div>;
@@ -1529,11 +1889,19 @@ export default function JSONFormatterPage() {;
                 Format API responses, debug JSON data, and prepare configuration files with professional formatting.;
               </p>;
               <ul className="space - y-2 text - gray - 300">;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <li>• API development and testing</li>;
                 <li>• Configuration file management</li>;
                 <li>• Debug and troubleshooting</li>;
               </ul>;
             </Card>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Card className='p - 8 bg - gray - 700 border border - gray - 600'>;
               <div className='text - 4xl mb - 4'>📊</div>;
               <h3 className='text - 2xl font - bold text - white mb - 4'>;
@@ -1550,10 +1918,18 @@ export default function JSONFormatterPage() {;
                 Clean and format JSON datasets for analysis, reporting, and data visualization projects.;
               </p>;
               <ul className="space - y-2 text - gray - 300">;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <li>• Report generation</li>;
                 <li>• Data validation</li>;
               </ul>;
             </Card>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Card className='p - 8 bg - gray - 700 border border - gray - 600'>;
               <div className='text - 4xl mb - 4'>🔧</div>;
               <h3 className='text - 2xl font - bold text - white mb - 4'>;
@@ -1570,10 +1946,18 @@ export default function JSONFormatterPage() {;
                 Manage configuration files, validate deployment manifests, and format infrastructure as code.;
               </p>;
               <ul className="space - y-2 text - gray - 300">;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <li>• Infrastructure validation</li>;
                 <li>• Deployment automation</li>;
               </ul>;
             </Card>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Card className='p - 8 bg - gray - 700 border border - gray - 600'>;
               <div className='text - 4xl mb - 4'>📝</div>;
               <h3 className='text - 2xl font - bold text - white mb - 4'>;
@@ -1590,6 +1974,10 @@ export default function JSONFormatterPage() {;
                 Format JSON examples for documentation, tutorials, and technical specifications.;
               </p>;
               <ul className="space - y-2 text - gray - 300">;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <li>• API documentation</li>;
                 <li>• Technical specifications</li>;
               </ul>;
@@ -1597,6 +1985,7 @@ export default function JSONFormatterPage() {;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-teal-600 to-cyan-600">
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
@@ -1666,3 +2055,23 @@ export default function JSONFormatterPage() {;
 }
   );
 }
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+              View Pricing;
+            </Button>;
+          </div>;
+        </div>;
+      </section>;
+
+
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

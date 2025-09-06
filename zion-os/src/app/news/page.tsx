@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Link from "next/link",;
 export const metadata = {;
   title: "News & Insights - Zion Tech Group | Latest Technology Updates",;
@@ -7,6 +11,10 @@ export default function NewsPage() {;
   return (;
 
     <div className="min-h-screen">;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Link from './next / link';,
 export const metadata = {
   title: "News & Insights - Zion Tech Group | Latest Technology Updates",

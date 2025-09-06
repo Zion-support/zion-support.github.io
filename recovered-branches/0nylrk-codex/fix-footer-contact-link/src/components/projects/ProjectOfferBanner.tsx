@@ -7,6 +7,7 @@ import {Card, CardContent} from "@/components/ui/card";
 import {useProjects} from "@/hooks/useProjects";
 import {Project} from "@/types/projects";
 export function ProjectOfferBanner() {;
+<<<<<<< HEAD
   const navigate = useNavigate();
   const { projects, isLoading } = useProjects();
   const [pendingOffers, setPendingOffers] = useState<Project[]>([]);
@@ -21,11 +22,14 @@ import { Card, CardContent } from "@/components/ui/card",
 import { useProjects } from "@/hooks/useProjects";
 import { Project } from "@/types/projects";
 export function ProjectOfferBanner() {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   const navigate = useNavigate();
   const { projects, isLoading } = useProjects();
   const [pendingOffers, setPendingOffers] = useState<Project[]>([]);
   const [dismissed, setDismissed] = useState<Set<string>>(new Set());
+<<<<<<< HEAD
 import { useProjects } from "@/hooks/useProjects",
 import { Project } from "@/types/projects",
 export function ProjectOfferBanner() {
@@ -55,6 +59,20 @@ export function ProjectOfferBanner() {
 
     return null
   }
+=======
+
+
+
+
+  useEffect(() => {
+    if (projects && !isLoading) {
+      const offers = projects.filter(p => p.status === 'offer_sent');
+      setPendingOffers(offers)
+
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useEffect, useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { Bell, Calendar, X } from "lucide-react",;
@@ -86,14 +104,23 @@ export function ProjectOfferBanner() {;
   };
   if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {;
     return null;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   }
   
+<<<<<<< HEAD
   }
   
   }
   
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="mb-6 space-y-3">
       {pendingOffers
@@ -122,6 +149,7 @@ export function ProjectOfferBanner() {;
                 </Button>
                 <Button
                   size="sm"
+<<<<<<< HEAD
                   variant="ghost"
                   onClick={(e) => handleDismiss(offer.id, e)}
                 >
@@ -131,6 +159,9 @@ export function ProjectOfferBanner() {;
             </CardContent>
           </Card>
         ))}
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   useEffect(() => {;
     if (projects && !isLoading) {;
@@ -344,3 +375,9 @@ if (isLoading || pendingOffers.length === 0 || pendingOffers.every (p => dismiss
   );
 }
 ;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

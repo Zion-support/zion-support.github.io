@@ -30,6 +30,7 @@ import { CalendarIcon, Loader2 } from 'lucide-react'import { format } from 'date
 import { Button } from '@/components / ui / button';
 import { Calendar } from '@/components / ui / calendar';
 import {
+<<<<<<< HEAD
   Form
   FormControl
   FormField
@@ -104,6 +105,68 @@ import { CalendarIcon, Loader2 } from 'lucide-react';
 import { format } from 'date-fns',;
 import { Button } from '@/components/ui/button',;
 import { Calendar } from '@/components/ui/calendar',;
+=======
+  Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormMessage} from '@/components / ui / form';
+import { Input } from '@/components / ui / input';
+import { Textarea } from '@/components / ui / textarea';
+  Popover;
+  PopoverContent;
+  PopoverTrigger} from '@/components / ui / popover'; import { AIMilestoneGenerator } from './AIMilestoneGenerator';
+import { GeneratedMilestone } from '@/hooks / useMilestoneGenerator';
+const form_schema = z.object ({
+  title: z.string ().min (1, 'Title is required');
+  description: z.string ().optional (),
+  due_date: z.date ().optional (),
+  amount: z.coerce.number ().min (0, 'Amount must be greater than or equal to 0')});
+type MilestoneFormValues = z.infer < typeof form_schema>;
+interface AddMilestoneFormProps {
+  on_submit: (data: MilestoneFormValues, ) => void,
+  is_submitting: boolean,
+  on_cancel?: () => void;
+  project_scope?: string;
+  projectStartDate?: string;
+  projectEndDate?: string;
+  project_type?: string;
+}
+export /**
+ * AddMilestoneForm - Function description
+ */
+function AddMilestoneForm() {
+  const form = use_form < MilestoneFormValues>({
+    resolver: zod_resolver (form_schema),
+    default_values: {
+      title: '',
+      description: '',
+      amount: 0}}),
+  const handle_submit = (values: MilestoneFormValues) =>: any {
+    on_submit (values);    form.reset ();
+  }
+  const handleAddMilestones = (milestones: GeneratedMilestone[], ) =>: any {
+    // If there's only one milestone, submit it directly;
+    // Check condition
+if ( {) {
+  $2
+}
+      const milestone = milestones[0];
+      // Check condition
+if ( {) {
+  $2
+}
+        on_submit ({
+          title: milestone.title,
+          description: milestone.description,
+          due_date: milestone.due_date ? new Date (milestone.due_date) : undefined,
+          amount: milestone.estimated_hours * 10, // Convert hours to a default payment amount;
+        });
+        return;
+      }
+    }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // If there are multiple milestones, submit them one by one;
     milestones.for_each (milestone => {
       on_submit ({
@@ -192,6 +255,7 @@ export function AddMilestoneForm({;
           due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,;
           amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount;
         }),;
+<<<<<<< HEAD
       }
     }
 
@@ -284,6 +348,8 @@ export function AddMilestoneForm({;
           due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,;
           amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount;
         }),;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         return;
       }
     }
@@ -297,6 +363,7 @@ export function AddMilestoneForm({;
         amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
       })
     })
+<<<<<<< HEAD
   }
   const handleAddMilestone = (milestone: GeneratedMilestone,) => {
   },
@@ -310,6 +377,10 @@ export function AddMilestoneForm({;
     })
   }
   },
+=======
+  },
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleAddMilestone = (milestone: GeneratedMilestone,) => {;
     onSubmit({;
       title: milestone && milestone.title,;
@@ -323,6 +394,7 @@ export function AddMilestoneForm({;
       )}
     <div className="space-y-6">
       {/* AI Milestone Generator */}
+<<<<<<< HEAD
       {projectScope && projectStartDate && (
         <AIMilestoneGenerator
           scope = {projectScope,}
@@ -333,11 +405,18 @@ export function AddMilestoneForm({;
           onAddMilestone = {handleAddMilestone,}
         />
       )}
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
 
   return (
     <div className="space-y-6">
       {/* AI Milestone Generator */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {projectScope && projectStartDate && (;
         <AIMilestoneGenerator;
           scope={projectScope}
@@ -347,6 +426,7 @@ export function AddMilestoneForm({;
           onAddMilestones={handleAddMilestones}
           onAddMilestone={handleAddMilestone}
         />;
+<<<<<<< HEAD
       )}
 
       )}
@@ -355,6 +435,10 @@ export function AddMilestoneForm({;
         <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
           <FormField
             control={form.control}
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
 ursor/fix-website-loading-errors-and-merge-6662
@@ -364,7 +448,12 @@ ursor/fix-website-loading-errors-and-merge-6662
       <Form {...form}>;
         <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-4">;
 
+<<<<<<< HEAD
             control = {form && form.control,}
+=======
+          <FormField
+            control={form.control}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             name="title"
             render={({ field }: { field: any },) => (;
               <FormItem>;
@@ -402,9 +491,15 @@ ursor/fix-website-loading-errors-and-merge-6662
             name="description"
 
             render={({ field }: { field: any }) => (
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <FormItem>
                 <FormLabel>Title</FormLabel>
                 <FormControl>
+<<<<<<< HEAD
                   <Input placeholder="Milestone title" {...field} />
                 </FormControl>
                 <FormMessage />
@@ -417,6 +512,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             render={({ field }: { field: any },) => (
                 <FormLabel>Description (optional)</FormLabel>
                 <FormControl>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <Textarea
                     placeholder="Describe what needs to be delivered"
                     className="min-h-[100px]"
@@ -441,6 +538,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
 
+<<<<<<< HEAD
           />
           <FormField
             control = {form.control,}
@@ -465,6 +563,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             )}
           />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <FormField
               control={form.control}
               name="due_date"
@@ -492,6 +592,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <PopoverContent className="w-auto p-0" align="start">
                       <Calendar
                         mode="single"
+<<<<<<< HEAD
                         selected = {field.value,}
                         onSelect = {field.onChange,}
                         disabled = {(date,) => date < new Date(),}
@@ -503,6 +604,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </FormItem>
               )}
             />
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                         selected={field.value}
                         onSelect={field.onChange}
@@ -631,6 +735,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Button
                 type="button"
                 variant="outline"
+<<<<<<< HEAD
                 onClick = {onCancel,}
                 disabled = {isSubmitting,}
               >
@@ -641,11 +746,20 @@ ursor/fix-website-loading-errors-and-merge-6662
               >
                 Cancel
               </Button>
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 onClick={onCancel}
                 disabled={isSubmitting}
               >;
                 Cancel;
               </Button>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             )}
             <Button type="submit" disabled={isSubmitting}>
               {isSubmitting ? (
@@ -706,6 +820,49 @@ ursor/fix-website-loading-errors-and-merge-6662
       </Form>;
     </div>;
   );
+<<<<<<< HEAD
+=======
+
+                </FormItem>)}
+            />;
+          </div>;
+          <div className="flex justify - end space - x-2 pt - 4">;
+            {on_cancel && (
+              <Button;
+                type="button";
+                variant="outline";
+                on_click = {on_cancel, }
+                disabled = {is_submitting, }
+              >;
+                Cancel;
+              </Button>)}
+            <Button type="submit" disabled={is_submitting}>;
+              {is_submitting ? (
+                <>;
+                  <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
+                  Saving...;
+                </>) : (
+                "Add Milestone")}
+            </Button>;
+          </div>;
+        </form>;
+      </Form>;
+    </div>);
+}//If there are multiple milestones, submit them one by one <AIMilestoneGenerator scope= {
+  project_scope;
+}start_date= {
+  projectStartDate;
+}end_date= {
+  projectEndDate;
+}project_type= {
+  project_type;
+
+}onAddMilestones= {
+  handleAddMilestones;
+}onAddMilestone= {
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   handleAddMilestone;
 }/>);
 }</FormControl> <FormMessage /> </FormItem>);
@@ -722,6 +879,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 }</Button> </div> </form> </Form> </div>);
 }'"}
 }
+<<<<<<< HEAD
 ;
 }
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

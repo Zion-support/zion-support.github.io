@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useRouter } from 'next/router'
 interface TalentCardFooterProps {
   profile: TalentProfile,
@@ -127,6 +128,12 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
     }
   }
   },
+=======
+}
+
+  },
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   return (
     <>
@@ -144,6 +151,7 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
               <span className="text-zion-slate-light">{profile.years_experience} years exp.</span>
             </div>
           )}
+<<<<<<< HEAD
         </div>
         </div>
         <div className="flex gap-2">
@@ -162,10 +170,24 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
             onClick={handleRequestHire}
             onClick = {handleRequestHire,}
             onClick={handleRequestHire}
+=======
+
+
+
+        {/* Action Buttons */}
+        <div className="flex gap-2">
+
+          <Button 
+            variant="default" 
+            size="sm" 
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             Hire
           </Button>
+<<<<<<< HEAD
           <Button
             variant="outline"
             size="sm"
@@ -174,30 +196,76 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
             size="sm" 
             onClick = {handleViewProfile,}
           
+=======
+
+
+          <Button 
+            variant="outline" 
+            size="sm" 
+
+            onClick = {handleViewProfile,}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           
           <Button 
             variant="outline" 
             size="sm" 
             onClick={handleViewProfile}
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 
 
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
             View
             <ExternalLink className="h-3 w-3 ml-1" />
           </Button>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+
+        </div>;
+
+        {/* Action Buttons */}
+        <div className="flex gap-2">;
+          <Button
+            variant="default" 
+            size="sm" 
+            onClick = {handleRequestHire,}
+            className="bg-zion-purple hover:bg-zion-purple-dark text-white">;
+            Hire;
+          </Button>;
+
+          <Button
+            variant="outline" 
+            size="sm" 
+            onClick = {handleViewProfile,}
+            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">;
+            View;
+            <ExternalLink className="h-3 w-3 ml-1" />;
+          </Button>;
+        </div>;
+      </div>;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Hire Request Modal */}
       <HireRequestModal
         talent = {profile,}
         isOpen = {isHireModalOpen,}
         onClose = {() => setIsHireModalOpen(false),}
         userDetails = {userProfile,}
+<<<<<<< HEAD
     </>;
   );
 };
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
       
@@ -207,12 +275,19 @@ ursor/fix-website-loading-errors-and-merge-6662
         isOpen={isHireModalOpen}
         onClose={() => setIsHireModalOpen(false)}
         userDetails={userProfile}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       />;
     </>;
   );
 };
 }
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -316,4 +391,8 @@ if ( {) {
       />;
     </>);
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

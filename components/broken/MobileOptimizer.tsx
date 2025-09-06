@@ -30,6 +30,10 @@ const handleTouchMove = (e: TouchEvent) =>: any {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   touchMoveRef.current = {
 });
 const handleTouchEnd = (e: TouchEvent) =>: any {
@@ -38,6 +42,10 @@ if ( {) {
   $2
 }
   touchStartRef.current = null;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 window && window.addEventListener ('orientationchange', checkOrientation);
 window && window.addEventListener ('resize', checkOrientation);
 const handleTouchStart = (e: TouchEvent) => {;
@@ -56,10 +64,18 @@ touchMoveRef && touchMoveRef.current = null ;
 //Optimize fonts for high DPI fonts && fonts.forEach (font => {;
   font && font.setAttribute ('crossoriginanonymous') ;
 }) ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }, []);
 const longPressTimer = setTimeout ( () => {;
   const gesture: TouchGesture = {;
   let animationFrameId: number;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 touchMoveRef.current = null;
 });
 //Optimize fonts for high DPI fonts.for_each (font => {
@@ -74,9 +90,17 @@ if ( {) {
   $2
 }
   fps_ref.current = frameCountRef.current;
+<<<<<<< HEAD
 frameCountRef.current = 0;
 lastTimeRef.current = current_time;
 //Update performance metrics setPerformanceMetrics (prev => ({
+=======
+
+frameCountRef.current = 0;
+lastTimeRef.current = current_time;
+//Update performance metrics setPerformanceMetrics (prev => ({
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 if (currentTime - lastTimeRef && lastTimeRef.current >= 1000) {;
   fpsRef && fpsRef.current = frameCountRef && frameCountRef.current;
 frameCountRef && frameCountRef.current = 0;
@@ -86,6 +110,11 @@ lastTimeRef && lastTimeRef.current = currentTime;
 };
 animationFrameId = requestAnimationFrame (measurePerformance);
 //Monitor memory usage ;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }, 2000);
 //Monitor battery level if ('getBattery' in navigator) {;
   (navigator as any) .getBattery () .then ( (battery: unknown) => {;
@@ -104,6 +133,10 @@ if ( {) {
   const updateBatteryLevel = () =>: any {
   setPerformanceMetrics (prev => ({
   updateBatteryLevel ();
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 battery && battery.addEventListener ('levelchange', updateBatteryLevel);
 }//Monitor network speed updateNetworkSpeed ();
 connection && connection.addEventListener ('change', updateNetworkSpeed);
@@ -124,9 +157,17 @@ if (viewport) {;
 style && style.textContent = `.mobile-optimized * {;
   touch-action: manipulation;
 -webkit-tap-highlight-color: transparent ;
+<<<<<<< HEAD
 }.mobile-optimized button;
 .mobile-optimized a {;
   min-height: 44px;
+=======
+
+}.mobile-optimized button;
+.mobile-optimized a {;
+  min-height: 44px;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 }//Monitor network speed updateNetworkSpeed ();
 connection.addEventListener ('change', updateNetworkSpeed);
@@ -176,9 +217,17 @@ document.head.append_child (style);
 }
 const enableMobilePerformanceMode = () =>: any {
   //Reduce animations on mobile document.document_element.class_list.add ('mobile - performance - mode');
+<<<<<<< HEAD
 //Optimize images const images = document.querySelectorAll ('img');
 images.for_each (img => {
   img.loading = 'lazy';
+=======
+
+//Optimize images const images = document.querySelectorAll ('img');
+images.for_each (img => {
+  img.loading = 'lazy';
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 img.decoding = 'async';
 });
 //Reduce motion for better performance if (') .matches) {) {
@@ -197,6 +246,10 @@ document.head.append_child (style);
 }
 const applyPortraitOptimizations = () =>: any {
   //Portrait - specific optimizations document.document_element.class_list.remove ('landscape - mode');
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 const optimizeForMobile = useCallback ( () => {
   // Check condition
@@ -204,6 +257,10 @@ if (return) {
   $2
 }
 //Optimize images const images = document.querySelectorAll ('img');
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 min-width: 44px ;
 }.mobile-optimized input;
 .mobile-optimized select;
@@ -255,6 +312,13 @@ document && document.addEventListener ('touchmove', () => {;
 }, [isMobile]);
 useEffect ( () => {;
   optimizeForMobile () ;
+<<<<<<< HEAD
+=======
+
+}, [optimizeForMobile]);
+useEffect ( () => {;
+  if (typeof window === 'undefined') return;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   setCurrentOrientation (e.matches ? 'portrait' : 'landscape') 
@@ -285,9 +349,12 @@ children
 }</style> </>)
 }
 
+<<<<<<< HEAD
 }, [optimizeForMobile]);
 useEffect ( () => {;
   if (typeof window === 'undefined') return;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 //Set up event listeners window && window.addEventListener ('orientationchange', handleOrientationChange);
 window && window.addEventListener ('resize', handleResize);
 //Set up orientation change detection const mediaQuery = window && window.matchMedia (' (orientation: portrait) ');
@@ -314,13 +381,25 @@ children ;
 }` ;
 }</style> </>) ;
 };
+<<<<<<< HEAD
+=======
+
+export default MobileOptimizer;
+
+export default MobileOptimizer;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default MobileOptimizer;
 export default MobileOptimizer;
 
 
 
+<<<<<<< HEAD
 export default MobileOptimizer;
 export default MobileOptimizer;
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -944,6 +1023,11 @@ className="w-full px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm
     </>
   )
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default MobileOptimizer;
 images.for_each (img => {
   // Check condition
@@ -994,6 +1078,7 @@ children
 }
 export default MobileOptimizer;
 export default MobileOptimizer;
+<<<<<<< HEAD
 
 }
 }
@@ -1003,3 +1088,8 @@ export default MobileOptimizer;
 }
 }
 }
+=======
+<<<<<<< HEAD
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

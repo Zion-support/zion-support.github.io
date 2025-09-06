@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Header } from '@/components/Header';
 import { TrustedBySection } from '@/components/TrustedBySection';
 import { TestimonialCarousel } from '@/components/TestimonialCarousel';
@@ -40,6 +41,8 @@ import {
 export default function LandingPage() {;
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 BarChart3,;
   Smartphone,;
 } from 'lucide-react';
@@ -563,6 +566,7 @@ export default function LandingPage() { const { t  } = useTranslation(),
       <FloatingCTA />;
     </div>);
 }
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -665,3 +669,6 @@ const LandingPage: React.FC = () => {
 
 export default LandingPage;
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -7,10 +8,29 @@ export type FilterType =
   | "onboarding"
   | "messages"
   | "system";
+=======
+
+import React from './react';
+import { Tabs, TabsList, TabsTrigger  } from '@/components / ui / tabs';
+;
+export type FilterType =;
+  | "all";
+  | "unread";
+  | "onboarding";
+  | "messages";
+  | "system";
+;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface NotificationFilterProps {
   filter: FilterType;
   onFilterChange: (filter: FilterType) => void;
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 import {Tabs, TabsList, TabsTrigger} from '@/components/ui/tabs';
 
@@ -33,6 +53,7 @@ interface NotificationFilterProps {;
 
 export const NotificationFilter: React.FC<NotificationFilterProps> = ({
   filter
+<<<<<<< HEAD
 
 interface NotificationFilterProps {
   filter: FilterType;
@@ -42,6 +63,8 @@ interface NotificationFilterProps {
 
 export const NotificationFilter: React.FC<NotificationFilterProps> = ({
 filter
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onFilterChange
 }) => {
   return (
@@ -69,6 +92,7 @@ filter
         </TabsList>
       </Tabs>
     </div>
+<<<<<<< HEAD
 );
 
 }
@@ -77,6 +101,8 @@ filter
   )
 },
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from 'react';
 import {Tabs, TabsList, TabsTrigger} from '@/components/ui/tabs';
@@ -123,10 +149,19 @@ export const NotificationFilter:React.FC<NotificationFilterProps> = ({;
         </TabsList>;
       </Tabs>;
     </div>;
+<<<<<<< HEAD
+=======
+  );
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   )
 },
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 };
 export const NotificationFilter: React.FC < NotificationFilterProps> = ({
@@ -160,6 +195,7 @@ export const NotificationFilter: React.FC < NotificationFilterProps> = ({
     </div>);
 }
 ;
+<<<<<<< HEAD
   ),;
 },; export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system';
 <Tabs defaultValue= {
@@ -176,3 +212,6 @@ export const NotificationFilter: React.FC < NotificationFilterProps> = ({
 };
   )
 },
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

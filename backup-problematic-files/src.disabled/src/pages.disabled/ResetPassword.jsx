@@ -27,4 +27,8 @@ const ResetPassword = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ResetPassword;
+=======
+export default ResetPassword;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

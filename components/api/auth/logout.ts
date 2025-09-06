@@ -20,10 +20,20 @@ const cookie = clearSessionCookie();
 
 }
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const cookie = clearSessionCookie();
   res.setHeader('Set-Cookie', cookie);
   res.status(200).json({ ok: true })
 }
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { clearSessionCookie } from '../../../utils / auth - utils';
 ;
 export default /**
@@ -41,6 +51,7 @@ function handler() {
   res.status (200).json ({ ok: true });
 
 }
+<<<<<<< HEAD
 
 
 import { clearSessionCookie } from '../../../utils/auth-utils';
@@ -58,3 +69,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 }
 
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

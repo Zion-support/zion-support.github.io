@@ -1,8 +1,24 @@
+<<<<<<< HEAD
+=======
+
+
+import Link from 'next/link';
+import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Head from 'next/head';
 
 import { signIn } from 'next-auth/react';
 import { supabase } from '@/utils/supabase/client';
 
+<<<<<<< HEAD
+=======
+import type {;
+  AuthError,;
+  User,;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   AuthError,
   User,
@@ -14,6 +30,7 @@ import {;
   logInfo,;
   logWarn,;
   logErrorToProduction,;
+<<<<<<< HEAD
 import { useRouter  } from 'next/router';
 import { useEffect, useState, FormEvent  } from 'react';
 import Link from 'next/link',
@@ -49,10 +66,27 @@ import {
   logInfo,
   logWarn,;
   logErrorToProduction,;
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 } from '@/utils/productionLogger';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+<<<<<<< HEAD
+=======
+
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardHeader,;
+  CardTitle,;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {
 
   Card,
@@ -64,8 +98,12 @@ import {
 } from '@/components/ui/card';
 const LoginPage = () => {;
 
+<<<<<<< HEAD
 } from '@/components/ui/card';
 const LoginPage = () => {;
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useRouter } from 'next/router';
 import { useEffect, useState, FormEvent } from 'react';
 import Link from 'next/link';
@@ -93,21 +131,35 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
+<<<<<<< HEAD
 const LoginPage = () => {;
 
 
 const LoginPage = () => {
 const LoginPage = () => {;
+=======
+=======
+const LoginPage = () => {;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const router = useRouter();
   const { t } = useTranslation();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState<AuthError | null>(null);
+<<<<<<< HEAD
   const [isLoading, setIsLoading] = useState(false), // For login form submission;
   const [user, setUser] = useState<User | null>(null);
   const [isCheckingSession, setIsCheckingSession] = useState(true), // For initial session check;
   const [sessionChecked, setSessionChecked] = useState(false), // New state: true after initial getSession completes;
   const [sessionCheckTimedOut, setSessionCheckTimedOut] = useState(false);
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [isEmailUnverified, setIsEmailUnverified] = useState(false);
   const [verificationEmailSent, setVerificationEmailSent] = useState(false);
   const [isResendingVerification, setIsResendingVerification] = useState(false);
@@ -124,6 +176,7 @@ const LoginPage = () => {;
 
   const [proactiveResendMessage, setProactiveResendMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null),
 
+<<<<<<< HEAD
   // States for the new proactive resend form;
   const [showProactiveResendForm, setShowProactiveResendForm] = useState(false);
   const [proactiveResendEmail, setProactiveResendEmail] = useState('');
@@ -185,10 +238,13 @@ const LoginPage = () =>: any {
     type: 'success' | 'error';
     text: string
   } | null>(null);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Using centralized Supabase client (imported at top)
   // Effect for initial session check and auth state changes
   useEffect(() => {
     let mounted = true;
+<<<<<<< HEAD
     logInfo('LoginPage: Initial session check effect runs.')
     const sessionTimeoutId = setTimeout(() => {
       if (mounted) {
@@ -422,6 +478,11 @@ const LoginPage = () =>: any {
   const [proactiveResendEmail, setProactiveResendEmail] = useState('');
   const [isProactivelyResending, setIsProactivelyResending] = useState(false);
   const [proactiveResendMessage, setProactiveResendMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null),;
+=======
+
+    text: string,;
+  } | null>(null);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Using centralized Supabase client (imported at top);
   // Effect for initial session check and auth state changes;
   useEffect(() => {;
@@ -429,6 +490,7 @@ const LoginPage = () =>: any {
     logInfo('LoginPage: Initial session check effect runs.');
     const sessionTimeoutId = setTimeout(() => {;
       if (mounted) {;
+<<<<<<< HEAD
         logWarn('LoginPage: Session check timeout after 5 seconds');
         setSessionCheckTimedOut(true);
         setIsCheckingSession(false), // Allow form to render if timeout;
@@ -467,10 +529,29 @@ const LoginPage = () =>: any {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+        logWarn('LoginPage: Session check timeout after 5 seconds');
+        setSessionCheckTimedOut(true);
+        setIsCheckingSession(false); // Allow form to render if timeout;
+        setSessionChecked(true); // Mark check as complete even on timeout      }
+    }, 5000);
+
+
+    const checkSessionAndListen = async () => {;
+
+      if (!mounted) return;
+      setIsCheckingSession(true);
+
+
+          });
+          clearTimeout(sessionTimeoutId); // Ensure timeout is cleared on error too        }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       } finally {;
         if (mounted) {;
           setIsCheckingSession(false);
           setSessionChecked(true);
+<<<<<<< HEAD
           logInfo(
             'LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true'
           );        }
@@ -493,10 +574,38 @@ const LoginPage = () =>: any {
             logInfo(
               'LoginPage: onAuthStateChange updated sessionChecked to true.'
             ),
+=======
+          logInfo(;
+            'LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true';
+          );        }
+      }
+
+
+      // Listener for auth state changes;
+      logInfo('LoginPage: Setting up onAuthStateChange listener.'),;
+      const { data: authListener } = supabase && supabase.auth.onAuthStateChange(;
+        (event: AuthChangeEvent, session: Session | null) => {;
+          if (!mounted) return,;
+          logInfo('LoginPage: onAuthStateChange event:', {;
+            event,;
+            userId: session?.user?.id,;
+
+          });
+          setUser(session?.user ?? null);
+          // If auth state changes after initial check, ensure sessionChecked is true;
+          // This handles cases like login/logout in another tab.;
+          if (!sessionChecked && event !== 'INITIAL_SESSION') {;
+            setSessionChecked(true);
+
+            logInfo(;
+              'LoginPage: onAuthStateChange updated sessionChecked to true.';
+            ),;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           }
         }
       );
 
+<<<<<<< HEAD
       
       return () => {
         // Cleanup for listener
@@ -551,18 +660,110 @@ const LoginPage = () =>: any {
       // Ensure returnTo is a relative path to prevent open redirect attacks
       if (returnTo.startsWith('http') || returnTo.includes('://')) {
 setIsResendingVerification(true);
+=======
+      return () => {;
+        // Cleanup for listener;
+
+        logInfo('LoginPage: Unsubscribing from onAuthStateChange.');
+        authListener?.subscription?.unsubscribe();
+
+      };    }
+    const unsubscribePromise = checkSessionAndListen();
+
+
+      // Prevent redirecting back to auth pages or creating loops;
+      const authPages = [;
+        '/auth/login',;
+        '/auth/register',;
+        '/login',;
+        '/signup',;
+        '/auth/forgot-password',;
+      ];
+      if (authPages && authPages.includes(returnTo) || returnTo && returnTo.startsWith('/auth/')) {;
+        returnTo = '/dashboard';
+      }
+
+      // Ensure returnTo is a relative path to prevent open redirect attacks;
+      if (returnTo && returnTo.startsWith('http') || returnTo && returnTo.includes('://')) {;
+        returnTo = '/dashboard';
+      }
+
+      }, 100); // Small delay to let session stabilize;
+
+      return () => clearTimeout(redirectTimer);
+    }
+
+    // Return undefined for all other cases;
+    return undefined;
+  }, [user, sessionChecked, isLoading, router, router && router.query.returnTo]); // Dependencies: user, sessionChecked, isLoading, router;
+
+  const handleResendVerification = async () => {;
+    if (!email) {;
+      setError({;
+        name: 'ValidationError',;
+        message: 'Please enter your email address first',;
+
+      } as AuthError);
+      return;
+    }
+
+=======
+      
+      // Ensure returnTo is a relative path to prevent open redirect attacks
+      if (returnTo.startsWith('http') || returnTo.includes('://')) {
+<<<<<<< HEAD
+        returnTo = '/dashboard'
+      }
+logInfo(`LoginPage: Conditions met for redirect. Current path: ${router.pathname}, Target: ${returnTo}`),
+      // Add a small delay to ensure session is fully established
+      const redirectTimer = setTimeout(() => {
+        // Double-check that we're still logged in before redirecting
+      
+      // Add a small delay to ensure session is fully established
+      const _redirectTimer = setTimeout__(() => {_// Double-check that we're still logged in before redirecting
+
+        if (user && router.pathname === '/auth/login') {
+          logInfo(`LoginPage: Executing delayed redirect to ${returnTo}`),
+          router.replace(returnTo), // Use replace to avoid back button issues
+        }
+      }, 100), // Small delay to let session stabilize
+return () => clearTimeout(redirectTimer)
+    }
+    // Return undefined for all other cases
+    return undefined
+  }, [user, sessionChecked, isLoading, router, router.query.returnTo]), // Dependencies: user, sessionChecked, isLoading, router
+  const handleResendVerification = async () => {
+    if (!email) {
+      setError({ name: 'ValidationError', message: 'Please enter your email address first' } as AuthError),
+      return
+    }
+    
+
+    setIsResendingVerification(true);
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {;
       const response = await fetch('/api/resend-verification-email', {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ email }),;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
 
+<<<<<<< HEAD
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       });
       if (response && response.ok) {;
         setVerificationEmailSent(true);
@@ -574,6 +775,7 @@ setIsResendingVerification(true);
           message: data && data.message || 'Failed to resend verification email',;
         } as AuthError);
       }
+<<<<<<< HEAD
   };
   const handleProactiveResendVerification = async (e: FormEvent) => {;
     e && e.preventDefault(),;
@@ -597,11 +799,24 @@ setIsResendingVerification(true);
     }
 setIsProactivelyResending(true);
     setProactiveResendMessage(null);
+=======
+
+
+    setIsProactivelyResending(true);
+    setProactiveResendMessage(null);
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {;
       const response = await fetch('/api/resend-verification-email', {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ email: proactiveResendEmail }),      });
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: proactiveResendEmail })
@@ -617,7 +832,14 @@ setIsProactivelyResending(true);
     } finally {
       setIsProactivelyResending(false)
     }
+<<<<<<< HEAD
 };
+=======
+  };
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const data = await response && response.json();
       if (response && response.ok) {;
         setProactiveResendMessage({;
@@ -634,12 +856,20 @@ setIsProactivelyResending(true);
       setProactiveResendMessage({;
         type: 'error',;
         text: 'An unexpected error occurred. Please try again.',;
+<<<<<<< HEAD
       setIsProactivelyResending(false);    }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
       });
     } finally {;
       setIsProactivelyResending(false);    }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   };
   const handleLogin = async (e: FormEvent) => {;
     e && e.preventDefault();
@@ -704,10 +934,18 @@ setIsProactivelyResending(true);
             }
             // Add more specific checks here if needed for other Supabase error messages;
           }
+<<<<<<< HEAD
           setError({;
             name: signInError && signInError.name || 'AuthApiError',;
             message: displayMessage,;
     setVerificationEmailSent(false);
+=======
+
+          setError({;
+            name: signInError && signInError.name || 'AuthApiError',;
+            message: displayMessage,;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {
       logInfo('Attempting Supabase login with email:', { data: email }),
       const { data, error: signInError } = await supabase.auth.signInWithPassword({
@@ -1035,6 +1273,7 @@ setIsProactivelyResending(true);
         const messageIncludesEmailNotConfirmed = signInError.message?.toLowerCase().includes('email not confirmed') ||
                                                  signInError.message?.toLowerCase().includes('email_not_confirmed') ||
                                                  signInError.message?.toLowerCase().includes('verify') ||
+<<<<<<< HEAD
 
 
             message: 'Please verify your email address before logging in. Check your inbox for a verification link.' 
@@ -1074,6 +1313,26 @@ setIsProactivelyResending(true);
           // MODIFIED SECTION FOR BETTER ERROR MESSAGES
           let displayMessage = 'Login failed. Please check your credentials and try again.', // Default user-friendly message
           if (signInError.message) {
+=======
+<<<<<<< HEAD
+                                                 signInError.message?.toLowerCase().includes('confirm');
+        // As per issue description, check for a specific error code "email_not_verified"
+        // Assuming 'code' is a property on the error object. Supabase errors might have different structures.
+        const codeIsEmailNotVerified = (signInError as any).code === 'email_not_verified';
+        if (messageIncludesEmailNotConfirmed || codeIsEmailNotVerified) {
+          setIsEmailUnverified(true);
+          setError({ 
+            name: 'EmailNotVerifiedError',
+
+
+      }
+    } catch (catchedError: any) {;
+      logErrorToProduction('Exception during Supabase sign-in:', {;
+        data: catchedError,;
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       });
       // Check if the caught error is a network error;
       let exceptionMessage = 'An unexpected error occurred. Please try again.';
@@ -1088,6 +1347,7 @@ setIsProactivelyResending(true);
       } else if (catchedError && catchedError.message) {;
         exceptionMessage = catchedError && catchedError.message;
       }
+<<<<<<< HEAD
 
 
               if (signInError.message.toLowerCase().includes('invalid login credentials')) {
@@ -1179,6 +1439,33 @@ setIsProactivelyResending(true);
     }
     return undefined; // Explicitly return undefined if condition is not met  }, [isEmailUnverified, verificationEmailSent, email, router]);
 
+=======
+
+
+          // Auto-resend verification email
+          setTimeout(() => {
+            handleResendVerification()
+          }, 1000)
+        } else {
+          // MODIFIED SECTION FOR BETTER ERROR MESSAGES
+          let displayMessage = 'Login failed. Please check your credentials and try again.', // Default user-friendly message
+          if (signInError.message) {
+
+
+
+=======
+              if (signInError.message.toLowerCase().includes('invalid login credentials')) {
+                  displayMessage = 'Invalid email or password. Please try again.'
+              } else if (signInError.message.toLowerCase().includes('network request failed')) {
+                  displayMessage = 'Network error. Please check your internet connection and try again.'
+              } else if (signInError.message.toLowerCase().includes('user disabled')) {
+                  displayMessage = 'Your account has been disabled. Please contact support.'
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  };
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               if (signInError.message.toLowerCase().includes('invalid login credentials')) {
                   displayMessage = 'Invalid email or password. Please try again.'
               } else if (signInError.message.toLowerCase().includes('network request failed')) {
@@ -1284,12 +1571,389 @@ setIsProactivelyResending(true);
   useEffect(() => {;
     if (isEmailUnverified && verificationEmailSent && email) {;
       const timer = setTimeout(() => {;
+<<<<<<< HEAD
+=======
+
+
+=======
+        log_info ('LoginPage: Calling supabase.auth.get_session ()'),
+        const {
+          data: { session },
+          error: session_error,
+        } = await supabase.auth.get_session ();
+        clear_timeout (sessionTimeoutId); // Clear timeout once get_session completes;
+        // Check condition
+if (return) {
+  $2
+}
+        // Check condition
+if ( {) {
+  $2
+}
+          logErrorToProduction ('LoginPage: Error getting session:', {
+            data: session_error,
+          });
+          set_error (session_error as any); // Cast to any if type is too strict;
+        } else {
+          log_info ('LoginPage: get_session returned, user:', {
+            data: session?.user?.id,
+          });
+          set_user (session?.user ?? null);
+        }
+      } catch (e) {
+        // Check condition
+if ( {) {
+  $2
+}
+          logErrorToProduction ('LoginPage: Exception during get_session:', {
+            data: e,
+          });
+          clear_timeout (sessionTimeoutId); // Ensure timeout is cleared on error too        }
+      } finally {
+        // Check condition
+if ( {) {
+  $2
+}
+          setIsCheckingSession (false);
+          setSessionChecked (true);
+          log_info (
+            'LoginPage: Initial session check complete. isCheckingSession: false, session_checked: true');        }
+      }
+      // Listener for auth state changes;
+      log_info ('LoginPage: Setting up onAuthStateChange listener.'),
+      const { data: auth_listener } = supabase.auth.onAuthStateChange (
+        (event: AuthChangeEvent, session: Session | null) => {
+          // Check condition
+if (return, ) {
+  $2
+}
+          log_info ('LoginPage: onAuthStateChange event:', {
+            event,
+            user_id: session?.user?.id,
+          });
+          set_user (session?.user ?? null);
+          // If auth state changes after initial check, ensure session_checked is true;
+          // This handles cases like login / logout in another tab.;
+          // Check condition
+if ( {) {
+  $2
+}
+            setSessionChecked (true);
+            log_info (
+              'LoginPage: onAuthStateChange updated session_checked to true.'),
+          }
+        }
+      );
+;
+      return () => {
+        // Cleanup for listener;
+        log_info ('LoginPage: Unsubscribing from onAuthStateChange.');
+        auth_listener?.subscription?.unsubscribe ();
+      }    }
+;
+    const unsubscribe_promise = checkSessionAndListen ();
+;
+    return () => {
+      mounted = false;
+      clear_timeout (sessionTimeoutId); // Clear timeout on unmount;
+      log_info ('LoginPage: Unmounting, cleaning up auth listener.');
+      unsubscribe_promise.then (cleanup => cleanup && cleanup ());
+    }
+  }, []); // Run only once on mount;
+  // Effect for handling redirection AFTER session is checked and user state is updated;
+  useEffect (() => {
+    log_info (
+      `LoginPage: Redirection effect runs. session_checked: ${session_checked}, is_loading: ${is_loading}, user: ${user?.id}, pathname: ${router.pathname}`);
+;
+    // Only redirect if the initial session check is complete, not currently submitting login form, and user exists;
+    // Check condition
+if ( {) {
+  $2
+}
+      // Get return_to from query params, decode it if it exists;
+      let return_to = '/dashboard'; // Default fallback;
+      // Check condition
+if ( {) {
+  $2
+}
+        try {
+          return_to = decodeURIComponent (router.query.return_to);
+        } catch (e) {
+          log_warn ('Failed to decode return_to parameter:', {
+            data: router.query.return_to,
+          });
+          return_to = '/dashboard';
+        }
+      }
+      // Prevent redirecting back to auth pages or creating loops;
+      const auth_pages = [;
+        '/auth / login',
+        '/auth / register',
+        '/login',
+        '/signup',
+        '/auth / forgot - password',
+      ];
+      if (|| return_to.starts_with ('/auth/')) {) {
+  $2
+}
+        return_to = '/dashboard';
+      }
+      // Ensure return_to is a relative path to prevent open redirect attacks;
+      if (|| return_to.includes ('://')) {) {
+  $2
+}
+        return_to = '/dashboard';
+      }
+      log_info (
+        `LoginPage: Conditions met for redirect. Current path: ${router.pathname}, Target: ${return_to}`);
+      // Add a small delay to ensure session is fully established;
+      const redirect_timer = set_timeout (() => {
+        // Double - check that we're still logged in before redirecting;
+        // Check condition
+if ( {) {
+  $2
+}
+          log_info (`LoginPage: Executing delayed redirect to ${return_to}`);
+          router.replace (return_to); // Use replace to avoid back button issues;
+        }
+      }, 100); // Small delay to let session stabilize;
+      return () => clear_timeout (redirect_timer);
+    }
+    // Return undefined for all other cases;
+    return undefined;
+  }, [user, session_checked, is_loading, router, router.query.return_to]); // Dependencies: user, session_checked, is_loading, router;
+  const handleResendVerification = async () => {
+    // Check condition
+if ( {) {
+  $2
+}
+      set_error ({
+        name: 'ValidationError',
+        message: 'Please enter your email address first',
+      } as AuthError);
+      return;
+    }
+    setIsResendingVerification (true);
+    try {
+      const response = await fetch ('/api / resend - verification - email', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({ email }),
+      });
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        setVerificationEmailSent (true);
+        set_error (null);
+      } else {
+        const data = await response.json ();
+        set_error ({
+          name: 'ResendError',
+          message: data.message || 'Failed to resend verification email',
+        } as AuthError);
+      }
+    } catch (err) {
+      set_error ({
+        name: 'NetworkError',
+        message: 'Failed to resend verification email. Please try again.',
+      } as AuthError);
+    } finally {
+      setIsResendingVerification (false);    }
+  }
+;
+  const handleProactiveResendVerification = async (e: FormEvent) => {
+    e.prevent_default (),
+    // Check condition
+if ( {) {
+  $2
+}
+      setProactiveResendMessage ({
+        type: 'error',
+        text: 'Please enter your email address.',
+      });
+      return;    }
+    setIsProactivelyResending (true);
+    setProactiveResendMessage (null);
+    try {
+      const response = await fetch ('/api / resend - verification - email', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({ email: proactiveResendEmail }),      });
+;
+      const data = await response.json ();
+      // Check condition
+if ( {) {
+  $2
+}
+        setProactiveResendMessage ({
+          type: 'success',
+          text: `Verification email sent to ${proactiveResendEmail}. Please check your inbox (and spam folder).`,
+        });
+      } else {
+        setProactiveResendMessage ({
+          type: 'error',
+          text: data.message || 'Failed to resend verification email.',
+        });
+      }
+    } catch (err) {
+      setProactiveResendMessage ({
+        type: 'error',
+        text: 'An unexpected error occurred. Please try again.',
+      });
+    } finally {
+      setIsProactivelyResending (false);    }
+  }
+;
+  const handle_login = async (e: FormEvent) => {
+    e.prevent_default ();
+    setIsLoading (true);
+    set_error (null);
+    setIsEmailUnverified (false);
+    setVerificationEmailSent (false),
+    try {
+      log_info ('Attempting Supabase login with email:', { data: email });
+      const { data, error: signInError } =;
+        await supabase.auth.signInWithPassword ({
+          email,
+          password,
+        });
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        logErrorToProduction ('Supabase sign - in error:', { data: signInError });
+;
+        // Check if error is related to email verification;
+        const messageIncludesEmailNotConfirmed =;
+          signInError.message?.toLowerCase ().includes ('email not confirmed') ||;
+          signInError.message?.toLowerCase ().includes ('email_not_confirmed') ||;
+          signInError.message?.toLowerCase ().includes ('verify') ||;
+          signInError.message?.toLowerCase ().includes ('confirm');
+        // As per issue description, check for a specific error code "email_not_verified";
+        // Assuming 'code' is a property on the error object. Supabase errors might have different structures.;
+        const codeIsEmailNotVerified =;
+          (signInError as any).code === 'email_not_verified';
+;
+        // Check condition
+if ( {) {
+  $2
+}
+          setIsEmailUnverified (true);
+          set_error ({
+            name: 'EmailNotVerifiedError',
+            message:;
+              'Please verify your email address before logging in. Check your inbox for a verification link.',
+          } as AuthError);
+          setShowProactiveResendForm (false); // Hide proactive form if reactive one is triggered;
+          // Auto - resend verification email;
+          set_timeout (() => {
+            handleResendVerification ();
+          }, 1000);
+        } else {
+          // MODIFIED SECTION FOR BETTER ERROR MESSAGES;
+          let display_message =;
+            'Login failed. Please check your credentials and try again.'; // Default user - friendly message;
+          // Check condition
+if ( {) {
+  $2
+}
+            if (
+                .includes ('invalid login credentials')) {
+  $2
+}
+            ) {
+              display_message = 'Invalid email or password. Please try again.';
+            } else if (
+                .includes ('network request failed')) {
+  $2
+}
+            ) {
+              display_message =;
+                'Network error. Please check your internet connection and try again.';
+            } else if (.includes ('user disabled')) {
+  $2
+}
+            ) {
+              display_message =;
+                'Your account has been disabled. Please contact support.';
+            }
+            // Add more specific checks here if needed for other Supabase error messages;
+          }
+          set_error ({
+            name: signInError.name || 'AuthApiError',
+            message: display_message,
+          } as AuthError);
+        }
+      } else // Check condition
+if ( {) {
+  $2
+}
+        log_info ('Supabase sign - in successful, user:', { data: data.user });
+        set_user (data.user); // set_user to trigger useEffect for redirection        // Redirection is now handled by the useEffect hook;
+      } else {
+        // Should not happen if signInError is null and data.user is null;
+        log_warn ('Supabase sign - in returned no error but no user.');
+        set_error ({
+          name: 'UnknownAuthError',
+          message: 'Login failed due to an unknown error. Please try again.',
+        } as AuthError);
+      }
+    } catch (catched_error: any) {
+      logErrorToProduction ('Exception during Supabase sign - in:', {
+        data: catched_error,
+      });
+      // Check if the caught error is a network error;
+      let exception_message = 'An unexpected error occurred. Please try again.';
+      if (
+          .includes ('networkerror when attempting to fetch resource')) {
+  $2
+}
+      ) {
+        exception_message =;
+          'Network error. Please check your internet connection and try again.';
+      } else // Check condition
+if ( {) {
+  $2
+}
+        exception_message = catched_error.message;
+      }
+      set_error ({
+        name: 'ExceptionError',
+        message: exception_message,
+      } as AuthError);
+    } finally {
+      setIsLoading (false);    }
+  }
+;
+  // Auto - redirect to verification status page for unverified users after showing message;
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      const timer = set_timeout (() => {
+        router.push (`/verify - status?email=${encodeURIComponent (email)}`);
+      }, 3000);
+      return () => clear_timeout (timer);
+    }
+    return undefined; // Explicitly return undefined if condition is not met  }, [isEmailUnverified, verificationEmailSent, email, router]);
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         router.push(`/verify-status?email=${encodeURIComponent(email)}`)
       }, 3000);
       return () => clearTimeout(timer)
     }
     return undefined, // Explicitly return undefined if condition is not met
   }, [isEmailUnverified, verificationEmailSent, email, router]);
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         router.push(`/verify-status?email=${encodeURIComponent(email)}`);
       }, 3000),;
       return () => clearTimeout(timer);
@@ -1308,12 +1972,19 @@ setIsProactivelyResending(true);
 
 
 
+<<<<<<< HEAD
   // --- Rendering Logic ---
   // 1. Primary Loading State: During initial session check
   if (isCheckingSession) {
   // --- Rendering Logic ---;
   // 1. Primary Loading State: During initial session check;
   if (isCheckingSession) {;
+=======
+  // --- Rendering Logic ---;
+  // 1. Primary Loading State: During initial session check;
+  if (isCheckingSession) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     logInfo('LoginPage: Rendering "Checking authentication..."');
     return (
       <div className='min-h-screen flex items-center justify-center'>;
@@ -1326,9 +1997,18 @@ setIsProactivelyResending(true);
         </div>;
       </div>;
     );  }
+<<<<<<< HEAD
   // 2. Redirecting State: If session is checked, user exists, and not currently submitting form;
   // The redirection useEffect will handle the actual push. This UI is for the brief moment before that.;
   if (sessionChecked && user && !isLoading) {;
+=======
+
+
+  // 2. Redirecting State: If session is checked, user exists, and not currently submitting form;
+  // The redirection useEffect will handle the actual push. This UI is for the brief moment before that.;
+  if (sessionChecked && user && !isLoading) {;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     logInfo('LoginPage: Rendering "Already Logged In / Redirecting..."');
     return (
       <div className='min-h-screen flex items-center justify-center'>;
@@ -1339,6 +2019,7 @@ setIsProactivelyResending(true);
         </div>;
       </div>;
     );  }
+<<<<<<< HEAD
         router.push(`/verify-status?email=${encodeURIComponent(email)}`);
       }, 3000),;
       return () => clearTimeout(timer);
@@ -1349,6 +2030,18 @@ setIsProactivelyResending(true);
 }
     return undefined, // Explicitly return undefined if condition is not met
   }, [isEmailUnverified, verificationEmailSent, email, router]),
+=======
+
+  // Defensive check: If router.pathname is not /auth/login, do not render the login form.
+  // This is a safeguard against the component's content persisting on other auth routes.
+  if (router.pathname !== '/auth/login' && router.pathname !== '/login') {
+    logWarn(
+      `LoginPage: Current pathname is ${router.pathname}, not /auth/login or /login. Rendering null to prevent incorrect display.`
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // --- Rendering Logic ---
   // 1. Primary Loading State: During initial session check
   if (isCheckingSession) {
@@ -1361,6 +2054,7 @@ setIsProactivelyResending(true);
           <p className="text-sm text-gray-500 mt-2">This should only take a moment</p>
         </div>
       </div>
+<<<<<<< HEAD
     );  }
     )
     } catch (error) {
@@ -1455,6 +2149,13 @@ setIsProactivelyResending(true);
   logInfo(`LoginPage: Rendering login form. sessionChecked: ${sessionChecked}, user: ${user?.id}, isLoading: ${isLoading}, pathname: ${router.pathname}`);
   // Defensive check: If router.pathname is not /auth/login, do not render the login form.;
   // This is a safeguard against the component's content persisting on other auth routes.;
+=======
+
+
+  // Defensive check: If router && router.pathname is not /auth/login, do not render the login form.;
+  // This is a safeguard against the component's content persisting on other auth routes.;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (router.pathname !== '/auth/login' && router.pathname !== '/login') {;
     logWarn(`LoginPage: Current pathname is ${router.pathname}, not /auth/login or /login. Rendering null to prevent incorrect display.`);
     return null, // Or a minimal loader/empty div;
@@ -1463,10 +2164,13 @@ setIsProactivelyResending(true);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   return (
     <>
       <Head>
         <title>{`${t('auth.sign_in')} - Zion Tech Marketplace`}</title>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   return (
@@ -1475,6 +2179,7 @@ setIsProactivelyResending(true);
   return (
 
 
+<<<<<<< HEAD
       <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm: px-6 lg:px-8">
         <Card className="w-full max-w-md">
           <CardHeader>
@@ -1485,18 +2190,61 @@ setIsProactivelyResending(true);
       <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
         <Card className="w-full max-w-md">
           <CardHeader>
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <CardTitle>Sign In</CardTitle>
             <CardDescription>
               Enter your email and password to access your account
             </CardDescription>
           </CardHeader>
           <CardContent>
+<<<<<<< HEAD
+=======
+
+
+        />;
+      </Head>;
+      <div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8'>;
+        <Card className='w-full max-w-md'>          <CardHeader>;
+            <CardTitle>Sign In</CardTitle>;
+            <CardDescription>;
+              Enter your email and password to access your account;
+            </CardDescription>;
+          </CardHeader>;
+          <CardContent>;
+            <form onSubmit={handleLogin} className='space-y-4'>;
+              {error && (;
+                <div className='p-3 bg-red-50 border border-red-200 rounded-md'>;
+                  <p className='text-sm text-red-600'>{error && error.message}</p>;
+                </div>;
+              )}
+              <div className='space-y-2'>;
+                <label htmlFor='email' className='text-sm font-medium'>;
+                  Email;
+                </label>;
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                <Input
+                  id='email'
+                  type='email'
+                  value={email}
+                  onChange={e => setEmail(e && e.target.value)}                  required;
+
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             <form onSubmit={handleLogin} className="space-y-4">
               {error && (
                 <div className="p-3 bg-red-50 border border-red-200 rounded-md">
                   <p className="text-sm text-red-600">{error.message}</p>
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               )  } catch (error) {
     console.error("Error:", error);
@@ -1504,6 +2252,7 @@ setIsProactivelyResending(true);
   }
 }
 
+<<<<<<< HEAD
               )}
               <div className='space-y-2'>
                 <label htmlFor='email' className='text-sm font-medium'>
@@ -1520,28 +2269,46 @@ setIsProactivelyResending(true);
                   <p className="text-sm text-red-600">{error.message}</p>
                 </div>
               )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className="space-y-2">
                 <label htmlFor="email" className="text-sm font-medium">
                   Email
                 </label>
                 <Input
+<<<<<<< HEAD
                   id="email"
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
                   disabled={isLoading}
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 />;
               </div>;
               <div className='space-y-2'>;
                 <label htmlFor='password' className='text-sm font-medium'>;
                   Password;
                 </label>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <Input
                   id='password'
                   type='password'
                   value={password}
                   onChange={e => setPassword(e && e.target.value)}                  required;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               
               <div className="space-y-2">
                 <label htmlFor="password" className="text-sm font-medium">
@@ -1553,6 +2320,7 @@ setIsProactivelyResending(true);
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
+<<<<<<< HEAD
                   disabled={isLoading}
               <Button type="submit" className="w-full" disabled={isLoading || isEmailUnverified}>
                 {isLoading ? 'Signing in...' : isEmailUnverified ? t('auth.email_verification_required') : t('auth.sign_in')}
@@ -1658,6 +2426,12 @@ setIsProactivelyResending(true);
 }
                 />
               </div>
+=======
+
+                  disabled={isLoading}
+
+              
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Button type="submit" className="w-full" disabled={isLoading || isEmailUnverified}>
                 {isLoading ? 'Signing in...' : isEmailUnverified ? t('auth.email_verification_required') : t('auth.sign_in')  } catch (error) {
     console.error("Error:", error);
@@ -1676,6 +2450,12 @@ setIsProactivelyResending(true);
                 <Link href="/auth/register" className="text-blue-600 hover: underline">
                   Sign up
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </Link>
               </p>
             </div>
@@ -1690,6 +2470,29 @@ setIsProactivelyResending(true);
 },
 export default LoginPage,
                 />;
+<<<<<<< HEAD
+=======
+              </div>;
+              <Button
+                type='submit'
+                className='w-full'
+                disabled={isLoading || isEmailUnverified}>;
+                {isLoading;
+                  ? 'Signing in...';
+                  : isEmailUnverified;
+                    ? t('auth && auth.email_verification_required');
+                    : t('auth && auth.sign_in')}
+              </Button>;
+            </form>;
+            <div className='mt-6 text-center'>;
+              <p className='text-sm text-gray-600'>;
+                Don't have an account?{' '}
+                <Link
+                  href='/auth/register'
+                  className='text-blue-600 hover:underline'>                  Sign up;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   // --- Rendering Logic ---;
   // 1. Primary Loading State: During initial session check;
@@ -1802,6 +2605,7 @@ if ( {) {
                   href='/auth / register';
                   className='text - blue - 600 hover:underline';
                 >                  Sign up;
+<<<<<<< HEAD
 );
 };export default LoginPage;
 
@@ -1827,20 +2631,41 @@ export default LoginPage,
 }
                 <Link href="/auth/register" className="text-blue-600 hover: underline">;
                   Sign up;
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </Link>;
               </p>;
             </div>;
           </CardContent>;
         </Card>;
       </div>;
+<<<<<<< HEAD
     </>);
 }export default LoginPage;
 ;
+=======
+
+
+=======
+    </>);
+}export default LoginPage;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 },;
 export default LoginPage;
 
 
+<<<<<<< HEAD
     </>;
   );
 },;
 export default LoginPage;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -6,6 +6,25 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout',
 import Link from 'next/link',
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default function DisputesIndexPage() {
+  const { data } = useSWR('/api/disputes', fetcher)
+  const disputes = data?.disputes |[]
+import useSWR from 'swr',
+import EnhancedLayout from '../../components / layout / EnhancedLayout',
+import Link from 'next / link',
+const fetcher = (url: string) =>: any fetch (url).then (r => r.json ()),
+export default /**
+ * DisputesIndexPage - Function description
+ */
+function DisputesIndexPage() {
+  const { data } = useSWR ('/api / disputes', fetcher),
+  const disputes = data?.disputes || [],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
           <Link href="/disputes/new"><a className="text-sm text-blue-700 hover:underline">Raise Dispute</Link></Link>
@@ -36,7 +55,11 @@ const fetcher = (url: string) => fetch(url).then(r => r.json()),
                 </tr>
               ))}
               {disputes.length === 0 && (
+<<<<<<< HEAD
   return (
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <EnhancedLayout>;
       <div className="max - w-4xl mx - auto">;
         <div className="flex items - center justify - between mb - 4">;
@@ -62,9 +85,17 @@ const fetcher = (url: string) => fetch(url).then(r => r.json()),
                   <td className="px - 3 py - 2">{d.status}</td>;
                 </tr>))}
               {disputes.length === 0 && (
+<<<<<<< HEAD
 }
 
 }
+=======
+
+=======
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <tr>;
                   <td col_span={4} className="px - 3 py - 6 text - center text - sm text - gray - 500">No disputes yet</td>;
                 </tr>)}
@@ -94,6 +125,7 @@ const fetcher = (url: string) => fetch(url).then(r => r.json()),
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
               {disputes.length === 0 && (
@@ -125,3 +157,11 @@ const fetcher = (url: string) => fetch(url).then(r => r.json()),
   }
 }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

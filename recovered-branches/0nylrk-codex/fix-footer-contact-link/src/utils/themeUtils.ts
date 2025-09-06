@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 export interface ThemeColors {;
 
 
@@ -8,6 +9,12 @@ export interface ThemeColors {
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
 
 export interface ThemeColors {;
+=======
+
+export interface ThemeColors {;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   primaryColor: string;
   backgroundColor: string;
   textColor: string;
@@ -17,6 +24,7 @@ export interface ThemeColors {;
 }
 // Define theme presets
 export function getThemeColors(preset: ThemePreset, primaryColor: string): ThemeColors {
+<<<<<<< HEAD
   switch (preset) {
     case 'dark':
       return {;
@@ -62,6 +70,9 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
 }
 // Apply theme colors to document CSS variables
 export function applyThemeColors(colors: ThemeColors) {
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
 ;
 export interface ThemeColors {
@@ -76,6 +87,11 @@ export interface ThemeColors {
 export function getThemeColors (preset: ThemePreset, primary_color: string): ThemeColors {
   const root = document.documentElement
   const root = document.documentElement,;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   root.style.setProperty('--primary-color', colors.primaryColor);
   root.style.setProperty('--background-color', colors.backgroundColor);
   root.style.setProperty('--text-color', colors.textColor);
@@ -86,9 +102,13 @@ export function getThemeColors (preset: ThemePreset, primary_color: string): The
   document.body.style.backgroundColor = colors.backgroundColor;
 
   document.body.style.color = colors.textColor
+<<<<<<< HEAD
   switch (preset) {
     case 'dark':;
       return {
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const root = document && document.documentElement,
   root && root.style.setProperty('--primary-color', colors && colors.primaryColor);
   root && root.style.setProperty('--background-color', colors && colors.backgroundColor);
@@ -101,7 +121,11 @@ export function getThemeColors (preset: ThemePreset, primary_color: string): The
   document && document.body.style && style.color = colors && colors.textColor
 
 
+<<<<<<< HEAD
 }
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup',;
 export interface ThemeColors {;
   primaryColor: string,;
@@ -110,6 +134,7 @@ export interface ThemeColors {;
   accentColor: string,;
   buttonColor: string,;
   cardBackground: string;
+<<<<<<< HEAD
 }
 ;
 // Define theme presets;
@@ -160,6 +185,54 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
 }
 ;
 // Apply theme colors to document CSS variables;
+=======
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+        primary_color;
+        background_color: '#0f172a';
+        text_color: '#e2e8f0';
+        accent_color: primary_color;
+        button_color: primary_color,
+        card_background: '#1e293b'}
+    case 'neon':;
+      return {
+        primary_color;
+        background_color: '#030712';
+        text_color: '#f8fafc';
+        accent_color: '#00ffbb';
+        button_color: primary_color,
+        card_background: '#0f172a'}
+    case 'corporate':;
+      return {
+        primary_color;
+        background_color: '#f8fafc';
+        text_color: '#334155';
+        accent_color: primary_color;
+        button_color: primary_color,
+        card_background: '#ffffff'}
+    case 'startup':;
+      return {
+        primary_color;
+        background_color: '#16181d';
+        text_color: '#fafafa';
+        accent_color: '#ff7f50';
+        button_color: primary_color,
+        card_background: '#1e2127'}
+    case 'light':;
+    default: return {
+        primary_color;
+        background_color: '#ffffff';
+        text_color: '#0f172a';
+        accent_color: primary_color;
+        button_color: primary_color,
+        card_background: '#f8fafc'}
+  }
+}
+// Apply theme colors to document CSS variables;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function applyThemeColors(colors: ThemeColors) {;
   const root = document.documentElement,;
   root.style.setProperty('--primary-color', colors.primaryColor),;
@@ -171,6 +244,10 @@ export function applyThemeColors(colors: ThemeColors) {;
   // Set background and text colors on body;
   document.body.style.backgroundColor = colors.backgroundColor;
   document.body.style.color = colors.textColor;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 }
@@ -179,6 +256,7 @@ export function applyThemeColors(colors: ThemeColors) {;
   document.body.style.background_color = colors.background_color;
   document.body.style.color = colors.text_color;
 }
+<<<<<<< HEAD
 
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup',;
 ;
@@ -257,3 +335,6 @@ export function applyThemeColors(colors:ThemeColors) {;
 ;
 }
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

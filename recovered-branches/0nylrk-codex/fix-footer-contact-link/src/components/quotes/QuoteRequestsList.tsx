@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 import React from "react";
@@ -11,6 +12,11 @@ import { EmptyStateCard } from "./EmptyStateCard";
 import type { QuoteRequest } from "@/types/quotes";
 import { EmptyStateCard } from "./EmptyStateCard",
 import type { QuoteRequest } from "@/types/quotes",
+=======
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 type QuoteRequestsListProps = {
   quotes: QuoteRequest[],
   isLoading: boolean,
@@ -23,6 +29,7 @@ type QuoteRequestsListProps = {
 
 
 
+<<<<<<< HEAD
 type QuoteRequestsListProps = {
   quotes: QuoteRequest[]
   isLoading: boolean
@@ -47,6 +54,8 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
   isArchived,
   onViewDetails,
   onMarkAsResponded,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onToggleArchive
 }) => {
   if (isLoading) {
@@ -55,10 +64,18 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
         <p className="text-zion-slate-light">Loading {isArchived ? 'archived' : 'your'} hire requests...</p>
       </div>
     )
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",;
 import { QuoteRequestCard } from "./QuoteRequestCard",;
 import { EmptyStateCard } from "./EmptyStateCard",;
 import type { QuoteRequest } from "@/types/quotes",;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 type QuoteRequestsListProps = {;
   quotes: QuoteRequest[],;
   isLoading: boolean,;
@@ -66,6 +83,7 @@ type QuoteRequestsListProps = {;
   onViewDetails: (quote: QuoteRequest) => void,;
   onMarkAsResponded: (id: string) => void,;
   onToggleArchive: (id: string, isArchived: boolean) => void;
+<<<<<<< HEAD
 
 import React from "react",;
 import { QuoteRequestCard } from "./QuoteRequestCard",;
@@ -93,10 +111,44 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
 }) => {;
   if (isLoading) {;
     return (;
+=======
+};
+
+export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import React from './react';
+import { QuoteRequestCard } from './QuoteRequestCard';
+import { EmptyStateCard } from './EmptyStateCard';
+import type { QuoteRequest } from "@/types / quotes";
+type QuoteRequestsListProps = {
+  quotes: QuoteRequest[],
+  is_loading: boolean,
+  is_archived: boolean,
+  onViewDetails: (quote: QuoteRequest) => void,
+  onMarkAsResponded: (id: string) => void,
+  onToggleArchive: (id: string, is_archived: boolean) => void;
+}
+;
+export const QuoteRequestsList: React.FC < QuoteRequestsListProps> = ({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  quotes;
+  is_loading;
+  is_archived;
+  onViewDetails;
+
+  onMarkAsResponded,;
+  onToggleArchive;
+}) => {;
+  if (isLoading) {;
+
+    return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="text-center py-20">;
         <p className="text-zion-slate-light">Loading {isArchived ? 'archived' : 'your'} hire requests...</p>;
       </div>;
     );
+<<<<<<< HEAD
   }
   if (quotes.length === 0) {
     return <EmptyStateCard type={isArchived ? 'archived' : 'active'} />
@@ -113,6 +165,8 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
           onToggleArchive={onToggleArchive}
         />
       ))}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   
@@ -167,12 +221,20 @@ if ( {) {
     </div>;
   );
 
+<<<<<<< HEAD
+=======
+=======
+=======
+    </div>;
+  );
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 };
         />))}
     </div>);
 }
 ;
+<<<<<<< HEAD
           onMarkAsResponded={!isArchived ? onMarkAsResponded :undefined}
           onToggleArchive={onToggleArchive}
         />;
@@ -215,3 +277,6 @@ quotes, isLoading, isArchived, onViewDetails, onMarkAsResponded, onToggleArchive
     </div>;
   );
 };
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

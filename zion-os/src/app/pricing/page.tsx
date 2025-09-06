@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 "use client",;
 import { useState } from "react",;
 interface PricingTier {;
@@ -251,6 +255,10 @@ export default function PricingPage() {;
       <div className="text-center space-y-4">;
         <h1 className="text-4xl font-bold">Pricing & Plans</h1>;
         <p className="text-xl opacity-80 max-w-3xl mx-auto">;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 "use client",
 import { useState  } from './react';,
 interface PricingTier {
@@ -934,12 +942,16 @@ export default function PricingPage() {;
                 selected_category === category;
                   ? 'bg - blue - 600 text - white';
                   : 'text - gray - 300 hover:text - white hover:bg - zinc - 700';
+<<<<<<< HEAD
               onClick={() => setSelectedCategory(category)}
               className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${selectedCategory === category;
               className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${;
                 selectedCategory === category;
                   ? 'bg-blue-600 text-white';
                   : 'text-gray-300 hover:text-white hover:bg-zinc-700';
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               }`}
             >;
               {category}
@@ -987,12 +999,16 @@ export default function PricingPage() {;
                     tier.popular;
                       ? 'border - blue - 500 bg - blue - 500 / 10';
                       : 'border - white / 10';
+<<<<<<< HEAD
                   key={tierIndex}
                   className={`relative border rounded-lg p-6 ${tier.popular;
                   className={`relative border rounded-lg p-6 ${;
                     tier.popular;
                       ? 'border-blue-500 bg-blue-500/10';
                       : 'border-white/10';
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   }`}
                 >;
                   {tier.popular && (
@@ -1005,6 +1021,7 @@ export default function PricingPage() {;
                   <div className="text - center space - y-4">;
                     <h3 className="text - xl font - semibold">{tier.name}</h3>;
 
+<<<<<<< HEAD
                     </div>)}
                   <div className="text - center space - y-4">;
                     <h3 className="text - xl font - semibold">{tier.name}</h3>;
@@ -1013,6 +1030,8 @@ export default function PricingPage() {;
 ;
                   <div className="text-center space-y-4">;
                     <h3 className="text-xl font-semibold">{tier.name}</h3>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <div>;
                       <span className="text - 3xl font - bold">{tier.price}</span>;
                       <span className="text - lg opacity - 80">{tier.period}</span>;
@@ -1034,12 +1053,16 @@ export default function PricingPage() {;
                         tier.popular;
                           ? 'bg - blue - 600 hover:bg - blue - 700 text - white';
                           : 'bg - zinc - 700 hover:bg - zinc - 600 text - white';
+<<<<<<< HEAD
                       href={tier.ctaLink}
                       className={`block w-full text-center py-3 px-4 rounded-lg font-medium transition-colors ${tier.popular;
                       className={`block w-full text-center py-3 px-4 rounded-lg font-medium transition-colors ${;
                         tier.popular;
                           ? 'bg-blue-600 hover:bg-blue-700 text-white';
                           : 'bg-zinc-700 hover:bg-zinc-600 text-white';
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       }`}
                     >;
                       {tier.cta}

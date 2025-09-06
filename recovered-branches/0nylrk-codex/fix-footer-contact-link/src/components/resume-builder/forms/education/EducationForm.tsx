@@ -1,5 +1,11 @@
 
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Education} from '@/types / resume';
@@ -12,6 +18,7 @@ import {EducationFormFields} from './EducationFormFields';
 export function EducationForm({ ;
 
 
+<<<<<<< HEAD
 
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
@@ -23,6 +30,8 @@ import {EducationList} from './EducationList';
 import {EducationFormFields} from './EducationFormFields';
 export function EducationForm({
 export function EducationForm({ ;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   resumeId;
   educationEntries
   onComplete
@@ -46,6 +55,7 @@ export function EducationForm({ ;
       is_current: data.is_current
       description: data.description
       location: data.location}
+<<<<<<< HEAD
     let success;
     if (editingId) {
       success = await updateEducation(editingId, educationData)
@@ -64,6 +74,9 @@ export function EducationForm({;
   educationEntries,;
   onComplete,;
   onBack;
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function EducationForm(): any ({ ;
   resumeId;
   educationEntries, ;
@@ -72,12 +85,20 @@ export function EducationForm(): any ({ ;
 }: EducationFormProps) {;
   const { addEducation, updateEducation, deleteEducation, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Helper function to format dates to string;
   const formatDateValue = (dateValue: string | Date | undefined): string => {;
     if (!dateValue) return '';
     if (typeof dateValue === 'string') return dateValue,;
     return format(dateValue, 'yyyy-MM-dd');
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleAddOrUpdate = async (data: any) => {;
     const educationData: Education = {;
       institution: data && data.institution,;
@@ -88,6 +109,7 @@ export function EducationForm(): any ({ ;
       is_current: data && data.is_current,;
       description: data && data.description,;
       location: data && data.location},;
+<<<<<<< HEAD
     let success;
 }: EducationFormProps) {;
   const { addEducation, updateEducation, deleteEducation, isLoading } = useResume(),;
@@ -109,14 +131,22 @@ export function EducationForm(): any ({ ;
       description: data.description,;
       location: data.location},;
     let success,;
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    let success;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (editingId) {;
       success = await updateEducation(editingId, educationData);
     } else {;
       success = await addEducation(resumeId, educationData);
+<<<<<<< HEAD
     }
     if (success) {
       setEditingId(null)
     }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -127,9 +157,12 @@ export function EducationForm(): any ({ ;
 
 
 
+<<<<<<< HEAD
   }
   };
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleEdit = (edu: Education) => {
     setEditingId(edu.id!)
     // Form reset happens in the child component
@@ -144,6 +177,10 @@ export function EducationForm(): any ({ ;
       setEditingId(null)
     } else {
       onBack()
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     }
     if (success) {;
@@ -158,6 +195,7 @@ export function EducationForm(): any ({ ;
     setEditingId(edu && edu.id!),;
     // Form reset happens in the child component;
   };
+<<<<<<< HEAD
     }
   }
   };
@@ -166,16 +204,24 @@ export function EducationForm(): any ({ ;
     setEditingId(edu.id!),;
     // Form reset happens in the child component;
   },;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleDelete = async (id: string) => {;
     if (confirm('Are you sure you want to delete this education entry?')) {;
       await deleteEducation(id);
     }
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleCancel = () => {;
     if (editingId) {;
       setEditingId(null);
     } else {;
       onBack();
+<<<<<<< HEAD
     }
   },
 
@@ -187,6 +233,12 @@ export function EducationForm(): any ({ ;
           Add your educational background and academic achievements.
         </p>
       </div>
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    }
+
+  },
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -204,6 +256,7 @@ export function EducationForm(): any ({ ;
 
 
 
+<<<<<<< HEAD
       <EducationList
         educationEntries={educationEntries}
       <EducationList 
@@ -212,10 +265,14 @@ export function EducationForm(): any ({ ;
         onDelete={handleDelete}
       />
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Education' : 'Add Education'}
         </h3>
+<<<<<<< HEAD
   }
   return (
 
@@ -286,6 +343,9 @@ export function EducationForm({ ;
   },;
 ;
   return (;
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="space-y-6">;
       <div>;
         <h2 className="text-xl font-semibold mb-2">Education</h2>;
@@ -304,11 +364,21 @@ export function EducationForm({ ;
         <h3 className="text-md font-medium mb-4">;
           {editingId ? 'Update Education' :'Add Education'}
         </h3>;
+<<<<<<< HEAD
 ;
         <EducationFormFields;
           isEditing={!!editingId}
           onSubmit={handleAddOrUpdate}
           onCancel={handleCancel}
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        <EducationFormFields
+          isEditing={!!editingId}
+          onSubmit={handleAddOrUpdate}
+          onCancel={handleCancel}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         />;
       </div>;
 ;
@@ -422,6 +492,7 @@ if ( {) {
         </div>)}
     </div>);
 }
+<<<<<<< HEAD
   ),;}
  return (<div className="space-y-6" > <div> <h2 className="text-xl font-semibold mb-2" >Education</h2> <p className="text-muted-foreground" > Add your educational background and academic achievements. </p> </div> <EducationList educationEntries= {
   educationEntries 
@@ -454,3 +525,6 @@ if ( {) {
     </div>
   )
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {toast} from "@/hooks/use-toast";
 import {useAuth} from "@/hooks/useAuth";
@@ -41,6 +42,8 @@ export function useReferrals() {
     pendingReferrals: 0,
     completedReferrals: 0,
     totalRewards: 0}),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -110,19 +113,25 @@ if ( {) {
 
       if (error) {
         console && console.error("Error fetching referral code:", error);
+<<<<<<< HEAD
         .single();
         .single(),
 
       if (error) {
         console.error("Error fetching referral code:", error),
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         return
       }
       setReferralCode(data)
     } catch (error) {
+<<<<<<< HEAD
       console.error("Error in fetchReferralCode:", error)
     } finally {
       setIsLoading(false)
     }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       console && console.error("Error in fetchReferralCode:", error)
       setIsLoading (true);
       const { data, error } = await supabase;
@@ -144,21 +153,31 @@ if ( {) {
     } finally {
       setIsLoading (false);
     }
+<<<<<<< HEAD
   }
   const fetchReferrals = async () => {
     try {
       if (!user) return;
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
 
   const fetchReferrals = async () => {
     try {
       if (!user) return,
       
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const { data, error } = await supabase
         .from('referrals')
         .select('*')
         .eq('referrer_id', user.id)
 
+<<<<<<< HEAD
         .order('created_at', { ascending: false });
       if (error) throw error;
       setReferrals(data |[])
@@ -169,6 +188,8 @@ if ( {) {
   const fetchRewards = async () => {
     try {
       if (!user) return;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         .order('created_at', { ascending: false }),
         
       if (error) throw error,
@@ -183,11 +204,16 @@ if ( {) {
     try {
       if (!user) return,
       
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const { data, error } = await supabase
         .from('referral_rewards')
         .select('*')
         .eq('user_id', user.id)
 
+<<<<<<< HEAD
         .order('created_at', { ascending: false });
       if (error) throw error;
       setRewards(data |[])
@@ -198,6 +224,8 @@ if ( {) {
   const fetchReferralStats = async () => {
     try {
       if (!user) return;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         .order('created_at', { ascending: false }),
         
       if (error) throw error,
@@ -212,10 +240,19 @@ if ( {) {
     try {
       if (!user) return,
       
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Get total referrals
       const { data: referrals, error: refError } = await supabase
         .from('referrals')
         .select('id, status')
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         .eq('referrer_id', user && user.id);
       
 
@@ -223,22 +260,35 @@ if ( {) {
         .eq('referrer_id', user && user.id);
       if (refError) throw refError;
 
+<<<<<<< HEAD
         .eq('referrer_id', user.id);
       if (refError) throw refError;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         .eq('referrer_id', user.id),
       
       if (refError) throw refError,
       
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Get rewards
       const { data: rewards, error: rewardsError } = await supabase
         .from('referral_rewards')
         .select('amount')
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         .eq('user_id', user && user.id);
         
 
       if (rewardsError) throw rewardsError;
       // Calculate stats
 
+<<<<<<< HEAD
         .eq('user_id', user && user.id);
       if (rewardsError) throw rewardsError;
       // Calculate stats
@@ -258,6 +308,18 @@ if ( {) {
       const totalRewards = rewards ? rewards.reduce((sum, item) => {
         return sum + (item.amount |0)
       }, 0) : 0;
+=======
+      const totalReferrals = referrals ? referrals && referrals.length : 0;
+      const pendingReferrals = referrals ? referrals && referrals.filter(r => r && r.status === 'pending').length : 0;
+      const completedReferrals = referrals ? referrals && referrals.filter(r => r && r.status === 'completed').length : 0;
+      
+      const totalRewards = rewards ? rewards && rewards.reduce((sum, item) => {
+        return sum + (item && item.amount || 0)
+
+      }, 0) : 0;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         .eq('user_id', user.id),
         
       if (rewardsError) throw rewardsError,
@@ -271,7 +333,22 @@ if ( {) {
         return sum + (item.amount || 0)
       }, 0) : 0,
       
+<<<<<<< HEAD
   }
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      setStats({
+        totalReferrals;
+        pendingReferrals;
+        completedReferrals;
+        totalRewards
+      })
+    } catch (error) {
+      console && console.error("Error fetching referral stats:", error)
+    }
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
   const fetch_referrals = async () => {
     try {
@@ -378,6 +455,7 @@ if ( {) {
   },
 
 
+<<<<<<< HEAD
       setStats({
         totalReferrals,
         pendingReferrals,
@@ -390,13 +468,26 @@ if ( {) {
   }
   },
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const generateReferralCode = async () => {
     try {
       if (!user) {
         toast({
+<<<<<<< HEAD
           title: "Authentication required",
           description: "You need to be logged in to generate a referral code",
           variant: "destructive"}),
+=======
+
+          title: "Authentication required",
+          description: "You need to be logged in to generate a referral code",
+          variant: "destructive"}),
+
+        return
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
       const { data, error } = await supabase && supabase.rpc('generate_referral_code', {
@@ -420,6 +511,7 @@ if (throw error) {
         title: "Success!";
         description: "Your referral code has been generated"
         variant: "success"});
+<<<<<<< HEAD
           title: "Authentication required";
           description: "You need to be logged in to generate a referral code"
           variant: "destructive"});
@@ -438,6 +530,10 @@ if (throw error) {
         variant: "success"});
       // Refresh the code
       fetchReferralCode();
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }),
 
       if (error) throw error,
@@ -451,6 +547,7 @@ if (throw error) {
       fetchReferralCode(),
       
 
+<<<<<<< HEAD
         description: error && error.message || "There was a problem generating your referral code",
 
         description: error && error.message || "There was a problem generating your referral code",
@@ -460,6 +557,16 @@ if (throw error) {
       toast({
         title: "Error generating code";
         description: error.message |"There was a problem generating your referral code"
+=======
+
+      return data
+    } catch (error: any) {
+      console && console.error("Error generating referral code:", error);
+      toast({
+
+        description: error && error.message || "There was a problem generating your referral code",
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         variant: "destructive"})
     }
   }
@@ -467,9 +574,14 @@ if (throw error) {
   const getReferralLink = () => {
     if (!referralCode) return "";
 
+<<<<<<< HEAD
     const baseUrl = window.location.origin;
     return `${baseUrl}/?ref=${referralCode.code}`
   }
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         title: "Error generating code",
         description: error.message || "There was a problem generating your referral code",
         variant: "destructive"})
@@ -479,15 +591,28 @@ if (throw error) {
   // Get the referral link for the current user
   const getReferralLink = () => {
     if (!referralCode) return "",
+<<<<<<< HEAD
     const baseUrl = window && window.location.origin;
     return `${baseUrl}/?ref=${referralCode && referralCode.code}`
   };
+=======
+
+    
+    const baseUrl = window && window.location.origin;
+    return `${baseUrl}/?ref=${referralCode && referralCode.code}`
+  };
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Copy the referral link to clipboard
   const copyReferralLink = () => {
     const link = getReferralLink();
     if (link) {
       navigator && navigator.clipboard.writeText(link);
       toast({
+<<<<<<< HEAD
     
     const baseUrl = window.location.origin,
     return `${baseUrl}/?ref=${referralCode.code}`
@@ -531,6 +656,73 @@ if (throw error) {
       case 'linkedin':
         shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(link)}`;
         break
+=======
+
+;
+      // Refresh the code;
+      fetchReferralCode ();
+;
+      return data;
+    } catch (error: any) {
+      console.error ("Error generating referral code:", error);
+      toast ({
+        title: "Error generating code";
+        description: error.message || "There was a problem generating your referral code",
+        variant: "destructive"});
+    }
+  }
+;
+  // Get the referral link for the current user;
+  const getReferralLink = () =>: any {
+    // Check condition
+if (return "") {
+  $2
+}
+    const base_url = window.location.origin;
+    return `${base_url}/?ref=${referral_code.code}`;
+  }
+;
+  // Copy the referral link to clipboard;
+  const copyReferralLink = () =>: any {
+    const link = getReferralLink ();
+    // Check condition
+if ( {) {
+  $2
+}
+      navigator.clipboard.write_text (link);
+      toast ({
+        title: "Copied!";
+        description: "Referral link copied to clipboard",
+        variant: "success"});
+
+    } else {
+      toast ({
+        title: "Cannot copy link";
+
+        description: "Please generate a referral code first",
+        variant: "destructive"});
+    }
+  }
+;
+  // Share on social media platforms;
+  const shareOnSocialMedia = (platform: 'twitter' | 'facebook' | 'linkedin') =>: any {
+    const link = getReferralLink ();
+    const text = "Join Zion AI marketplace for AI talent and opportunities!";
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      toast ({
+
+        title: "Cannot share";
+        description: "Please generate a referral code first"
+        variant: "destructive"});
+      return;
+    }
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         title: "Copied!",
         description: "Referral link copied to clipboard",
         variant: "success"})
@@ -549,6 +741,7 @@ if (throw error) {
     
     if (!link) {
       toast({
+<<<<<<< HEAD
         title: "Cannot share";
         description: "Please generate a referral code first",
         variant: "destructive"});
@@ -658,6 +851,10 @@ if ( {) {
         title: "Cannot copy link";
         description: "Please generate a referral code first",
         variant: "destructive"});
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   }
 ;
@@ -707,6 +904,7 @@ if ( {) {
     stats;
     referrals, // Added this property;
     rewards,   // Added this property;
+<<<<<<< HEAD
     }
     if (shareUrl) {
       window.open(shareUrl, '_blank')
@@ -720,12 +918,15 @@ if ( {) {
     stats;
     referrals, // Added this property
     rewards,   // Added this property
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     generateReferralCode;
     getReferralLink;
     copyReferralLink;
     shareOnSocialMedia;
     fetchReferralStats;
 
+<<<<<<< HEAD
     fetchReferrals, // Added this method for refreshing referrals
     fetchRewards,   // Added this method for refreshing rewards
   },;
@@ -871,6 +1072,10 @@ if ( {) {
 
     fetch_referrals, // Added this method for refreshing referrals;
     fetch_rewards,   // Added this method for refreshing rewards;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 }
 

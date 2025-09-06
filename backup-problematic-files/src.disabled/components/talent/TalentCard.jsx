@@ -9,4 +9,8 @@ const TalentCard = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default TalentCard;
+=======
+export default TalentCard;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

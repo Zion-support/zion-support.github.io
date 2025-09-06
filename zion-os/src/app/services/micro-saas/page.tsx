@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 "use client",;
 import { useState } from "react",;
 interface MicroSAASService {;
@@ -297,6 +301,10 @@ export default function MicroSAASPage() {;
   return (;
 
     <div className="space-y-8">;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 "use client",
 import { useState  } from './react';,
 interface MicroSAASService {

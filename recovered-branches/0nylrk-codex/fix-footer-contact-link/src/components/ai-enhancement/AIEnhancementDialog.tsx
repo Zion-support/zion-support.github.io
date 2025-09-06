@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 import React from 'react';
 import { Dialog;
   DialogContent;
@@ -9,6 +10,8 @@ import { Dialog;
 import { AIEnhancementPanel  } from './AIEnhancementPanel';
 import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
 interface AIEnhancementDialogProps {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   title: string,
   isOpen: boolean,
   onClose: () => void,
@@ -23,6 +26,11 @@ export function AIEnhancementDialog({;
   onClose;
   onApply;
   defaultOptions;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react',;
 import {;
   Dialog,;
@@ -40,6 +48,10 @@ interface AIEnhancementDialogProps {;
   initialContent?: string;
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   title: string
   isOpen: boolean
@@ -50,6 +62,7 @@ interface AIEnhancementDialogProps {;
   initialContent?: string
 }
 export function AIEnhancementDialog({
+<<<<<<< HEAD
   title,
   isOpen,
   onClose,
@@ -61,6 +74,29 @@ export function AIEnhancementDialog({
   const handleApply = (content: string) => {
     onApply(content)
     onClose()
+=======
+=======
+import {Dialog, DialogContent, DialogHeader, DialogTitle} from '@/components/ui/dialog';
+import {AIEnhancementPanel} from './AIEnhancementPanel';
+import {AIEnhancementOptions} from '@/hooks/useAIContentEnhancer';
+interface AIEnhancementDialogProps {;
+  title: string,;
+  isOpen: boolean,;
+  onClose: () => void,;
+  onApply: (content: string) => void,;
+  defaultOptions: AIEnhancementOptions,;
+  initialContent?: string;
+}
+
+export function AIEnhancementDialog(): any ({;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  title;
+  isOpen;
+  onClose;
+  onApply;
+  defaultOptions;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   initialContent;
 }: AIEnhancementDialogProps) {;
   const handleApply = (content: string) => {;
@@ -110,6 +146,7 @@ export function AIEnhancementDialog({;
         <DialogHeader>;
           <DialogTitle>{title}</DialogTitle>;
         </DialogHeader>;
+<<<<<<< HEAD
         <AIEnhancementPanel;
   }
   },
@@ -120,11 +157,17 @@ export function AIEnhancementDialog({;
         <DialogHeader>
           <DialogTitle>{title}</DialogTitle>
         </DialogHeader>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <AIEnhancementPanel
           title={title}
           defaultOptions={defaultOptions}
           onApply={handleApply}
           initialContent={initialContent}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         />;
       </DialogContent>;
     </Dialog>;
@@ -163,6 +206,7 @@ function AIEnhancementDialog() {
       </DialogContent>;
     </Dialog>);
 }
+<<<<<<< HEAD
   ),;}
  <DialogHeader> <DialogTitle> {
   title 
@@ -181,3 +225,6 @@ function AIEnhancementDialog() {
     </Dialog>
   )
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

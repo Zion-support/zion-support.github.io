@@ -1,5 +1,17 @@
 
 
+<<<<<<< HEAD
+=======
+import React from 'react';
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -7,6 +19,7 @@ import { Settings, Brain, Shield, BarChart3, CheckCircle, ArrowRight, Cpu, Wrenc
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { Settings, 
   Brain, 
   Shield, 
@@ -43,6 +56,25 @@ import {
   Wrench,
   Activity,
   Database,
+=======
+
+import { Settings, ;
+  Brain, ;
+  Shield, ;
+  BarChart3, ;
+import {;
+  Settings,;
+  Brain,;
+  Shield,;
+  BarChart3,;
+  CheckCircle,;
+  ArrowRight,;
+  Cpu,;
+  Wrench,;
+  Activity,;
+  Database,;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   FileText,;
   Users;
 } from 'lucide-react';
@@ -51,11 +83,16 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import Layout from '../../components/Layout';';
 const services = [;
   {}
+<<<<<<< HEAD
     title: 'Smart Factory Solutions,',
     description: 'IoT-enabled manufacturing systems for intelligent production management.,',
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -70,6 +107,7 @@ const services = [
     ];
   },
   {}
+<<<<<<< HEAD
     title: 'Predictive Maintenance AI,',
     description: 'AI-powered systems to predict and prevent equipment failures.,',
     icon: Brain,
@@ -77,10 +115,22 @@ const services = [
       'Equipment health monitoring,',
       'Failure prediction algorithms',',
       'Maintenance scheduling',',
+=======
+
+    title: 'Predictive Maintenance AI,',;
+    description: 'AI-powered systems to predict and prevent equipment failures.,',;
+    icon: Brain,;
+    features: [,;
+      'Equipment health monitoring,',;
+      'Failure prediction algorithms',',;
+      'Maintenance scheduling',',;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Cost optimization'';
     ];
   },
   {}
+<<<<<<< HEAD
     title: 'IoT Sensor Networks,',
     description: 'Connected sensor systems for comprehensive factory monitoring.,',
     icon: Cpu,
@@ -88,10 +138,22 @@ const services = [
       'Environmental monitoring,',
       'Equipment status tracking',',
       'Data collection systems',',
+=======
+
+    title: 'IoT Sensor Networks,',;
+    description: 'Connected sensor systems for comprehensive factory monitoring.,',;
+    icon: Cpu,;
+    features: [,;
+      'Environmental monitoring,',;
+      'Equipment status tracking',',;
+      'Data collection systems',',;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Real-time alerts'';
     ];
   },
   {}
+<<<<<<< HEAD
     title: 'Quality Control Systems,',
     description: 'Automated quality assurance using computer vision and AI.,',
     icon: Shield,
@@ -99,10 +161,22 @@ const services = [
       'Visual inspection systems,',
       'Defect detection algorithms',',
       'Quality metrics tracking',',
+=======
+
+    title: 'Quality Control Systems,',;
+    description: 'Automated quality assurance using computer vision and AI.,',;
+    icon: Shield,;
+    features: [,;
+      'Visual inspection systems,',;
+      'Defect detection algorithms',',;
+      'Quality metrics tracking',',;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Automated reporting'';
     ];
   },
   {}
+<<<<<<< HEAD
     title: 'Supply Chain Optimization,',
     description: 'AI-driven supply chain management for improved efficiency.,',
     icon: BarChart3,
@@ -110,10 +184,22 @@ const services = [
       'Demand forecasting,',
       'Inventory optimization',',
       'Supplier management',',
+=======
+
+    title: 'Supply Chain Optimization,',;
+    description: 'AI-driven supply chain management for improved efficiency.,',;
+    icon: BarChart3,;
+    features: [,;
+      'Demand forecasting,',;
+      'Inventory optimization',',;
+      'Supplier management',',;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Logistics coordination'';
     ];
   },
   {}
+<<<<<<< HEAD
     title: 'Digital Twin Technology,',
     description: 'Virtual replicas of physical manufacturing systems for simulation.,',
     icon: Database,
@@ -121,6 +207,17 @@ const services = [
       '3D factory modeling,',
       'Process simulation',',
       'Performance optimization',',
+=======
+
+    title: 'Digital Twin Technology,',;
+    description: 'Virtual replicas of physical manufacturing systems for simulation.,',;
+    icon: Database,;
+    features: [,;
+      '3D factory modeling,',;
+      'Process simulation',',;
+      'Performance optimization',',;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Scenario planning'';
     ];
   }
@@ -134,9 +231,19 @@ const benefits = [;
     icon: Activity;
 
 
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ];
 const benefits = [
   {
@@ -145,6 +252,7 @@ const benefits = [
     icon: Activity
   },
   {}
+<<<<<<< HEAD
     title: 'Reduced Downtime,',
     description: 'Predictive maintenance prevents unexpected equipment failures.,',
     icon: Wrench;
@@ -158,6 +266,23 @@ const benefits = [
     title: 'Cost Savings,',
     description: 'Optimized operations and reduced waste lower manufacturing costs.,',
     icon: BarChart3;
+=======
+
+    title: 'Reduced Downtime,',;
+    description: 'Predictive maintenance prevents unexpected equipment failures.,',;
+    icon: Wrench,;
+  },;
+  {}
+    title: 'Better Quality,',;
+    description: 'Automated quality control ensures consistent product quality.,',;
+    icon: Shield,;
+  },;
+  {}
+    title: 'Cost Savings,',;
+    description: 'Optimized operations and reduced waste lower manufacturing costs.,',;
+    icon: BarChart3,;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -186,8 +311,14 @@ export default function ManufacturingPage() {
             >;
               <div className="flex items-center justify-center mb-6">";
                 <Settings className="w-12 h-12 text-blue-400 mr-4" />";
+<<<<<<< HEAD
                 <h1 className="text-5xl md:text-6xl font-bold">";
                   Manufacturing;
+=======
+
+                <h1 className="text-5xl md: text-6xl font-bold">", Manufacturing,;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">";
                     Technology Solutions;
                   </span>;
@@ -197,12 +328,21 @@ export default function ManufacturingPage() {
                 Revolutionize manufacturing with Industry 4.0 technologies including smart factories, 
                 IoT networks, predictive maintenance, and digital twin solutions.,
               </p>;
+<<<<<<< HEAD
               <div className="flex flex-col sm:flex-row gap-4 justify-center">";
                 <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
                   Get Manufacturing Consultation;
                 </Link>;
                 <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">";
                   View Manufacturing Case Studies;
+=======
+
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",;
+                  Get Manufacturing Consultation;
+                </Link>;
+                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-blue-600 transition-all duration-300 font-semibold">", View Manufacturing Case Studies,;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </Link>;
               </div>;
             </motion.div>;
@@ -212,10 +352,22 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ];
+<<<<<<< HEAD
 export default function ManufacturingPage() {
   
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+=======
+
+export default function ManufacturingPage() {;
+  return (
+    <Layout
+      title="Manufacturing Technology Solutions - Zion Tech Group"
+      description="Transform manufacturing with smart factory solutions, IoT networks, predictive maintenance, and digital twin technology."
+      keywords="manufacturing technology, smart factory, IoT manufacturing, predictive maintenance, digital twin, Industry 4 && 4.0">;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-cyan-900 to-teal-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
@@ -227,6 +379,7 @@ export default function ManufacturingPage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >
@@ -279,6 +432,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -442,9 +599,19 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     </Layout>;
 
 
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Manufacturing?

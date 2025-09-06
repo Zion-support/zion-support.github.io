@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }; ]; const socialLinks = ['] { name: 'LinkedIn', href: 'https: //linkedin.com/company/zion-tech-group', icon: 'LinkedIn' },'' { name: 'Twitter', href: 'https: //twitter.com/ziontechgroup', icon: 'Twitter' },'' { name: 'GitHub', href: 'https: //github.com/zion-tech-group', icon: 'GitHub' }']; ]; return (') <footer className = "bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">"
 </footer>" <div className = "absolute inset-0 opacity-30">"
 </div>" <div className = "absolute inset-0 bg-gradient-to-br from-slate-800/20 to-slate-900/20"></div>"" <div className = "absolute top-20 left-10 w-4 h-4 bg-cyan-400 rounded-full opacity-60 animate-pulse"></div>"" <div className = "absolute top-40 right-20 w-3 h-3 bg-blue-400 rounded-full opacity-60 animate-pulse"></div>"" <div className = "absolute bottom-40 left-20 w-2 h-2 bg-purple-400 rounded-full opacity-60 animate-pulse"></div>" </div>
@@ -163,6 +164,8 @@
         </div>
       </div>
     </footer>"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 </ArrowRight>;
                       </Link>;
                     </li>;
@@ -214,11 +217,19 @@ export default function FuturisticFooter() {
   );
 }
   ],
+<<<<<<< HEAD
 
   const socialLinks = ['],
     { nam: e: 'LinkedIn', hre: f: 'http: s://linkedin.com/company/zion-tech-group', ico: n: 'LinkedIn' },'',
     { nam: e: 'Twitter', hre: f: 'http: s://twitter.com/ziontechgroup', ico: n: 'Twitter' },'',
     { nam: e: 'GitHub', hre: f: 'http: s://github.com/zion-tech-group', ico: n: 'GitHub' }']
+=======
+,
+  const socialLinks = ['],
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: 'LinkedIn' },'',
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'Twitter' },'',
+    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: 'GitHub' }'],
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   ],
 ,
   return ('),
@@ -237,6 +248,7 @@ export default function FuturisticFooter() {
         <div className="container mx-auto px-4 py-16">",
 </div>,
           <motion.div,",
+<<<<<<< HEAD
             className="grid grid-cols-2: md: grid-cols-4 gap-8 mb-16"",
 
             initial={{ opacit: y: 0, y: 20 }},
@@ -244,17 +256,31 @@ export default function FuturisticFooter() {
             viewport={{ onc: e: true }},
             transition={{ duratio: n: 0.6, staggerChildre: n: 0.1 }},
 
+=======
+            className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"",
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }};
+            viewport={{ once: true }};
+            transition={{ duration: 0.6, staggerChildren: 0.1 }};
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           >,
 </motion>,
               <motion.div,
                 key={stat.label}",
                 className="text-center"",
+<<<<<<< HEAD
 
                 initial={{ opacit: y: 0, y: 20 }},
                 whileInView={{ opacit: y: 1, y: 0 }},
                 viewport={{ onc: e: true }},
                 transition={{ duratio: n: 0.6, dela: y: index * 0.1 }},
 
+=======
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }};
+                viewport={{ once: true }};
+                transition={{ duration: 0.6, delay: index * 0.1 }};
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               >,
 </motion>",
                 <div className="flex justify-center mb-3">",
@@ -265,6 +291,7 @@ export default function FuturisticFooter() {
 </stat>,
                   </div>,
           {/* Main Footer Content */}",
+<<<<<<< HEAD
           <div className="grid grid-cols-1: md: grid-cols-2: lg:grid-cols-3: xl:grid-cols-6 gap-8 mb-12">",
 </div>",
             <div className="l: g: col-span-2">",
@@ -273,6 +300,16 @@ export default function FuturisticFooter() {
                 initial={{ opacit: y: 0, y: 20 }},
                 whileInView={{ opacit: y: 1, y: 0 }},
                 transition={{ duratio: n: 0.6 }}",
+=======
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8 mb-12">",
+</div>",
+            <div className="lg: col-span-2">",
+</div>,
+              <motion.div,
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }};
+                transition={{ duration: 0.6 }}",
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 className="flex items-center space-x-3 mb-6"",
               >,
 </motion>",
@@ -302,7 +339,11 @@ export default function FuturisticFooter() {
 </div>",
                   <Phone className="w-4 h-4 text-cyan-400" />",
 </Phone>",
+<<<<<<< HEAD
                   <a href="te: l: +13024640950" className="hove: r:text-cyan-400 transition-colors">",
+=======
+                  <a href="tel: +13024640950" className="hover:text-cyan-400 transition-colors">",
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 </a>,
                   </a>,
                 </div>",
@@ -310,7 +351,11 @@ export default function FuturisticFooter() {
 </div>",
                   <Mail className="w-4 h-4 text-cyan-400" />",
 </Mail>",
+<<<<<<< HEAD
                   <a href="mailt: o: kleber@ziontechgroup.com" className="hove: r:text-cyan-400 transition-colors">",
+=======
+                  <a href="mailto: kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">",
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 </a>,
                   </a>,
                 </div>",
@@ -334,11 +379,19 @@ export default function FuturisticFooter() {
 </li>,
                       <Link,
                         href={link.href}",
+<<<<<<< HEAD
                         className="flex items-center text-slate-400: hover: text-cyan-400 transition-colors duration-200 group"",
                       >,
 </Link>",
                         <div className="w-1 h-1 bg-slate-600 rounded-full mr-3 group-hove: r: bg-cyan-400 transition-colors duration-200"></div>"",
                         <ArrowRight className="w-3 h-3 ml-2 opacity-0 group-hove: r: opacity-100 group-hove: r:translate-x-1 transition-all duration-200" />",
+=======
+                        className="flex items-center text-slate-400 hover: text-cyan-400 transition-colors duration-200 group"",
+                      >,
+</Link>",
+                        <div className="w-1 h-1 bg-slate-600 rounded-full mr-3 group-hover: bg-cyan-400 transition-colors duration-200"></div>"",
+                        <ArrowRight className="w-3 h-3 ml-2 opacity-0 group-hover: opacity-100 group-hover:translate-x-1 transition-all duration-200" />",
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 </ArrowRight>,
                       </Link>,
                     </li>,
@@ -347,7 +400,11 @@ export default function FuturisticFooter() {
           </div>",
           <div className="pt-8 border-t border-slate-800/50">",
 </div>",
+<<<<<<< HEAD
             <div className="flex flex-col: md: flex-row justify-between items-center space-y-4: md:space-y-0">",
+=======
+            <div className="flex flex-col md: flex-row justify-between items-center space-y-4 md:space-y-0">",
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 </div>",
               <div className="text-slate-400 text-sm">",
 </div>,
@@ -376,7 +433,13 @@ export default function FuturisticFooter() {
       </div>,
     </footer>",
 
+<<<<<<< HEAD
 
+=======
+    </footer>";
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   ],;
 ,;
   const socialLinks = ['],;
@@ -534,4 +597,8 @@ export default function FuturisticFooter() {
           </div>,;
         </div>,;
       </div>,;
+<<<<<<< HEAD
     </footer>",;
+=======
+    </footer>",;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

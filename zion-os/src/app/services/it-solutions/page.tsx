@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 "use client",;
 import { useState } from "react",;
 interface ITService {;
@@ -291,6 +295,10 @@ export default function ITSolutionsPage() {;
   return (;
 
     <div className="space-y-8">;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 "use client",
 import { useState  } from './react';,
 interface ITService {

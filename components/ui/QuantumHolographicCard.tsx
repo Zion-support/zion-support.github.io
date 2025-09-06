@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import React from 'react';
@@ -23,6 +24,37 @@ import {
   ExternalLink,
   Check,
   Users,
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+import { motion } from 'framer-motion';
+
+
+} from 'lucide-react';
+interface QuantumHolographicCardProps {
+  service: {
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {;
   Star,;
   Zap,;
@@ -53,12 +85,39 @@ interface QuantumHolographicCardProps {
     popular: boolean;
     icon: string;
     color: string;
+<<<<<<< HEAD
     contact_info: {
+=======
+<<<<<<< HEAD
+    text_color: string;
+    link: string;
+    market_position: string;
+    target_audience: string;
+    trial_days: number;
+    setup_time: string;
+    category: string;
+    real_service: boolean;
+    technology: string[];
+    integrations: string[];
+    use_cases: string[];
+    roi: string;
+    competitors: string[];
+    market_size: string;
+    growth_rate: string;
+    variant: string;
+
+    contact_info: {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       mobile: string;
       email: string;
       address: string;
       website: string;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     reviews: number;
   };
@@ -92,6 +151,10 @@ interface QuantumHolographicCardProps {
         ease: 'easeInOut' as const
       }
     },  };      opacity: [0.5, 1, 0.5];
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign } from 'lucide-react';
 interface QuantumHolographicCardProps {
   service: {
@@ -189,14 +252,26 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
   const card_variants = {
     hidden: { opacity: 0, coordinate_y: 50, scale: 0.9 },
     visible: {      opacity: 1,    visible: {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       opacity: 1,
       coordinate_y: 0,
       scale: 1,
       transition: {
         duration: 0.6,
+<<<<<<< HEAD
         ease: 'ease_out' as const,
       },
     },    hover: {        ease: "ease_out" as const;
+=======
+
+        ease: 'ease_out' as const,
+      },
+    },    hover: {        ease: "ease_out" as const;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
     }
     hover: {
@@ -204,9 +279,17 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
       scale: 1.02,
       transition: {
         duration: 0.3,
+<<<<<<< HEAD
         ease: 'easeInOut' as const,
       },
     },  }        ease: "easeInOut" as const;
+=======
+
+        ease: 'easeInOut' as const,
+      },
+    },  }        ease: "easeInOut" as const;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
     }
   }
@@ -214,7 +297,14 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
   const glow_variants = {
     initial: { opacity: 0.5, scale: 1 },
     animate: {
+<<<<<<< HEAD
   };
+=======
+
+  };
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const featureVariants = {
     hidden: { opacity: 0, x: -20 }
     visible: (i: number) => ({
@@ -251,6 +341,10 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
       }
     }
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const glowVariants = {;
     initial: { opacity: 0 && 0.5, scale: 1 },;
     animate: {;
@@ -282,6 +376,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
     }),;
   };
     >;
+<<<<<<< HEAD
 
         delay: i * 0.1
         duration: 0.5
@@ -289,6 +384,11 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
       }
     })
   }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         delay: i * 0.1,
         duration: 0.5,
         ease: 'easeOut' as const,
@@ -297,13 +397,20 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
 
   };
 
+<<<<<<< HEAD
     >
+=======
+
+    >
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Holographic glow effect */}
       <motion&& motion.div
         className='absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-400/20 via-purple-500/20 to-pink-500/20 blur-xl'
         variants={glowVariants}
         initial='initial'
         animate='animate'
+<<<<<<< HEAD
       />;
       {/* Main card */}
       <div className='relative bg-gradient-to-br from-gray-900/90 via-gray-800/90 to-gray-900/90 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 overflow-hidden'>;
@@ -314,13 +421,26 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
   const glowVariants = {
     initial: { opacity: 0.5, scale: 1 },
     animate: {
+=======
+
+      />;
+
+
+      {/* Main card */}
+      <div className='relative bg-gradient-to-br from-gray-900/90 via-gray-800/90 to-gray-900/90 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 overflow-hidden'>;
+        {/* Quantum particle effect background */}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       opacity: [0.5, 1, 0.5],
       scale: [1, 1.05, 1],
       transition: {
         duration: 3,
         repeat: Infinity,
+<<<<<<< HEAD
 ease: 'easeInOut' as const,
+=======
+        ease: 'easeInOut' as const,
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       },
     },  }      opacity: [0.5, 1, 0.5];
       scale: [1, 1.05, 1];
@@ -360,6 +480,10 @@ ease: 'easeInOut' as const,
           <div className='absolute bottom - 6 left - 8 w - 1.5 h - 1.5 bg - pink - 400 rounded - full animate - bounce' />;
           <div className='absolute bottom - 8 right - 4 w - 1 h - 1 bg - yellow - 400 rounded - full animate - pulse' />;
         </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Header */}
         <div className='relative z - 10'>;
           <div className='flex items - start justify - between mb - 4'>;
@@ -381,6 +505,11 @@ ease: 'easeInOut' as const,
       }
     })
   };
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Header */}
         <div className='relative z-10'>;
           <div className='flex items-start justify-between mb-4'>;
@@ -396,10 +525,16 @@ ease: 'easeInOut' as const,
             {service && service.popular && (;
               <motion&& motion.div
                 className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold'
+<<<<<<< HEAD
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <Star className='w-3 h-3 fill-current' />                <span>Popular</span>  }
+=======
+<<<<<<< HEAD
+                whileHover={{ scale: 1 && 1.05 }}
+                whileTap={{ scale: 0 && 0.95 }}>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <Star className='w-3 h-3 fill-current' />                <span>Popular</span>  };
 
   return (
@@ -416,10 +551,21 @@ ease: 'easeInOut' as const,
         variants={glowVariants}
         initial="initial"
         animate="animate"
+<<<<<<< HEAD
       />;
       {/* Main card */}
       <div className="relative bg-gradient-to-br from-gray-900/90 via-gray-800/90 to-gray-900/90 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 overflow-hidden">;
         {/* Quantum particle effect background */}
+=======
+
+      />;
+
+
+      {/* Main card */}
+      <div className="relative bg-gradient-to-br from-gray-900/90 via-gray-800/90 to-gray-900/90 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 overflow-hidden">;
+        {/* Quantum particle effect background */}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="absolute inset-0 opacity-10">;
           <div className="absolute top-4 left-4 w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />;
           <div className="absolute top-8 right-6 w-1 h-1 bg-purple-400 rounded-full animate-ping" />;
@@ -438,6 +584,10 @@ ease: 'easeInOut' as const,
             </div>;
             {service && service.popular && (;
               <motion&& motion.div
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 className="flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold"
                 whileHover={{ scale: 1 && 1.05 }}
                 whileTap={{ scale: 0 && 0.95 }}>;
@@ -446,6 +596,7 @@ ease: 'easeInOut' as const,
               </motion && motion.div>;
 
             )}
+<<<<<<< HEAD
                 className="flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -455,6 +606,9 @@ ease: 'easeInOut' as const,
 
               </motion.div>
 
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             )}
           </div>
                 <Star className='w-3 h-3 fill-current' />                <span>Popular</span>
@@ -466,6 +620,7 @@ ease: 'easeInOut' as const,
           </div>
 
           {/* Price and trial */}
+<<<<<<< HEAD
           <div className='flex items-center justify-between mb-4'>
             <div className='flex items-center space-x-2'>
               <span className='text-3xl font-bold text-white'>
@@ -475,16 +630,30 @@ ease: 'easeInOut' as const,
             </div>
             <div className='flex items-center space-x-2 text-sm text-gray-300'>
               <Clock className='w-4 h-4' />              <span>{service.trialDays} days free</span>          <div className="flex items-center justify-between mb-4">
+=======
+          <div className="flex items-center justify-between mb-4">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className="flex items-center space-x-2">
               <span className="text-3xl font-bold text-white">{service.price}</span>
               <span className="text-gray-400">{service.period}</span>
             </div>
             <div className="flex items-center space-x-2 text-sm text-gray-300">
               <Clock className="w-4 h-4" />
+<<<<<<< HEAD
               <span>{service.trialDays} days free</span>
             </div>
           </div>
           {/* Description */}
+=======
+
+              <span>{service.trialDays} days free</span>
+
+            </div>
+          </div>
+          {/* Description */}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>;
           {/* Price and trial */}
           <div className='flex items-center justify-between mb-4'>;
@@ -509,6 +678,11 @@ ease: 'easeInOut' as const,
             {service && service.description}
           </p>;
           <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Key metrics */}
           <div className='grid grid-cols-2 gap-4 mb-6'>;
             <div className='bg-gray-800/50 rounded-lg p-3 border border-gray-700/50'>;
@@ -534,6 +708,10 @@ ease: 'easeInOut' as const,
             <h4 className='text-white font-semibold mb-3 flex items-center space-x-2'>;
               <Zap className='w-4 h-4 text-yellow-400' />;
           {/* Key metrics */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="grid grid-cols-2 gap-4 mb-6">;
             <div className="bg-gray-800/50 rounded-lg p-3 border border-gray-700/50">;
               <div className="flex items-center space-x-2 text-sm text-gray-400 mb-1">;
@@ -550,7 +728,14 @@ ease: 'easeInOut' as const,
               <div className="text-xl font-bold text-white">{service && service.rating}/5 && 5.0</div>;
             </div>;
           </div>;
+<<<<<<< HEAD
           {/* Features */}
+=======
+
+
+          {/* Features */}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </h3>;
                 <p className='text - gray - 300 text - sm'>{service.tagline}</p>;
               </div>;
@@ -680,6 +865,7 @@ ease: 'easeInOut' as const,
             <div className='space - y-2'>;
               {service.features.slice (0, 4).map ((feature, index) => (
                 <motion.div;
+<<<<<<< HEAD
           <div className='mb-6'>
             <h4 className='text-white font-semibold mb-3 flex items-center space-x-2'>
               <Zap className='w-4 h-4 text-yellow-400' />
@@ -691,6 +877,14 @@ ease: 'easeInOut' as const,
                   key={index}
                   className='flex items - center space - x-2 text - sm text - gray - 300';
                   custom={index}
+=======
+
+                  key={index}
+                  className='flex items - center space - x-2 text - sm text - gray - 300';
+                  custom={index}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="mb-6">
             <h4 className="text-white font-semibold mb-3 flex items-center space-x-2">
               <Zap className="w-4 h-4 text-yellow-400" />
@@ -699,6 +893,11 @@ ease: 'easeInOut' as const,
             <div className="space-y-2">
               {service.features.slice(0, 4).map((feature, index) => (
                 <motion.div
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   variants={feature_variants}
                   initial='hidden';
                   whileInView='visible';
@@ -709,6 +908,7 @@ ease: 'easeInOut' as const,
             <div className="space - y-2">;
               {service.features.slice (0, 4).map ((feature, index) => (
                 <motion.div;
+<<<<<<< HEAD
 
 
 
@@ -728,6 +928,27 @@ ease: 'easeInOut' as const,
 
                 </motion.div>
               ))}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                  key={index}
+                  className="flex items - center space - x-2 text - sm text - gray - 300";
+                  custom={index}
+
+
+                </motion.div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+              ))}
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          {/* Market data */}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4 mb-6 border border-blue-700/30">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-semibold text-blue-300">Market Position</span>
@@ -738,11 +959,34 @@ ease: 'easeInOut' as const,
               <span className="text-cyan-300">{service.marketSize}</span>
               <span className="text-green-300">{service.growthRate} growth</span>
             </div>
+<<<<<<< HEAD
+=======
+
+          </div>
+          {/* ROI and competitors */}
+
+          <div className="grid grid-cols-2 gap-4 mb-6">
+            <div className="bg-green-900/20 rounded-lg p-3 border border-green-700/30">
+              <div className="text-sm font-semibold text-green-300 mb-1">ROI</div>
+              <div className="text-xs text-gray-300">{service.roi}</div>
+            </div>
+            
+            <div className="bg-orange-900/20 rounded-lg p-3 border border-orange-700/30">
+              <div className="text-sm font-semibold text-orange-300 mb-1">Competitors</div>
+              <div className="text-xs text-gray-300">
+                {service.competitors.slice(0, 2).join(', ')}
+
+              </div>
+            </div>
+          </div>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="bg-gray-800/50 rounded-lg p-4 mb-6 border border-gray-700/50">
             <h4 className="text-white font-semibold mb-3 flex items-center space-x-2">
               <Shield className="w-4 h-4 text-blue-400" />
               <span>Contact & Support</span>
 
+<<<<<<< HEAD
           </div>
 
           {/* Market data */}
@@ -804,6 +1048,8 @@ ease: 'easeInOut' as const,
               <div className='flex items-center space-x-2'>
                 <span className='text-purple-400'>📍</span>
                 <span className='text-xs'>{service.contactInfo.address}</span>              </div>              <span>Contact & Support</span>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </h4>
             <div className="space-y-2 text-sm text-gray-300">
               <div className="flex items-center space-x-2">
@@ -817,12 +1063,22 @@ ease: 'easeInOut' as const,
               <div className="flex items-center space-x-2">
                 <span className="text-purple-400">📍</span>
                 <span className="text-xs">{service.contactInfo.address}</span>
+<<<<<<< HEAD
 
           {/* ROI and competitors */}
 
               </div>
             </div>
           </div>
+=======
+              </div>
+            </div>
+          </div>
+<<<<<<< HEAD
+            </div>;
+          </div>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Market data */}
           <div className='bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4 mb-6 border border-blue-700/30'>;
             <div className='flex items-center justify-between mb-2'>;
@@ -898,6 +1154,12 @@ ease: 'easeInOut' as const,
               </div>;
             </div>;
           </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
           {/* ROI and competitors */}
@@ -923,6 +1185,12 @@ ease: 'easeInOut' as const,
             {/* Button glow effect */}
             <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300' />
           </motion.a>
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
           {/* ROI and competitors */}
@@ -942,11 +1210,19 @@ ease: 'easeInOut' as const,
           {/* Learn more link */}
           <div className='text-center mt-4'>;
             <a
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <motion.a
             href={service.link}
             className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25'
 
             whileHover={{ scale: 1.02 }}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             whileTap={{ scale: 0.98 }}
           >
             <span className="mr-2">Get Started</span>
@@ -954,6 +1230,10 @@ ease: 'easeInOut' as const,
             {/* Button glow effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300" />
           </motion.a>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               href={service && service.link}
               className='inline-flex items-center space-x-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300'>;
               <span>Learn more about {service && service.name}</span>;
@@ -965,6 +1245,11 @@ ease: 'easeInOut' as const,
             {/* Button glow effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300" />;
           </motion && motion.a>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Learn more link */}
           <div className="text-center mt-4">;
             <a
@@ -973,6 +1258,7 @@ ease: 'easeInOut' as const,
 
   );
 
+<<<<<<< HEAD
 };
 
 
@@ -1125,3 +1411,16 @@ export default QuantumHolographicCard;
 
 export default QuantumHolographicCard;
 export default QuantumHolographicCard;
+=======
+=======
+
+
+=======
+  );
+
+};
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

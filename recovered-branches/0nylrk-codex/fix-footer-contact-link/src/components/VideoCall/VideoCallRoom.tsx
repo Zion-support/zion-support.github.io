@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+
+import React from 'react';
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+interface VideoCallRoomProps {;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   room?: string;
   token?: string;
   serverUrl?: string;
@@ -5,6 +14,7 @@
   className?: string;
 
 
+<<<<<<< HEAD
 
 import React from 'react';
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
@@ -14,12 +24,16 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface VideoCallRoomProps {
   room?: string,
   token?: string,
   serverUrl?: string,
   onDisconnect?: () => void,
   className?: string
+<<<<<<< HEAD
 }
 export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {
   return (
@@ -41,6 +55,18 @@ export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className 
 
 
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+
+
+export function VideoCallRoom(): any ({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {;
+  return (
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react',;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -54,8 +80,12 @@ interface VideoCallRoomProps {;
 ;
 export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {;
   return (;
+<<<<<<< HEAD
 export function VideoCallRoom(): any ({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {;
   return (
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <Card className={className || "w-full max-w-3xl mx-auto"}>;
       <CardHeader>;
         <CardTitle>Video Call</CardTitle>;
@@ -106,6 +136,7 @@ function VideoCallRoom() {
 
 ;
 
+<<<<<<< HEAD
 
 import React from 'react',;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -152,3 +183,6 @@ className?: string
 }
 ;
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

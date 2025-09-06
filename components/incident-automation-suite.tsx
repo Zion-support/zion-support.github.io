@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
 
 
@@ -14,18 +15,41 @@ return (<UltraAdvancedFuturisticBackground> <Head> <title> {
 }- Zion Tech Group</title>) ) 
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
 
+=======
+
+
+  service.name 
+}- Zion Tech Group</title>) ) 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}</ul> </div> <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
+
+
+=======
+import React from 'react';
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Head from 'next/head';
 import { Activity, Phone, Mail, MapPin, Check, ArrowRight  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
 
 
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/incident-automation-suite'));
+<<<<<<< HEAD
 import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
 export default function IncidentAutomationSuitePage() {;
   const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s => s && s.link.endsWith('/incident-automation-suite'));
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
 export default function IncidentAutomationSuitePage() {;
   const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s => s && s.link.endsWith('/incident-automation-suite'));
@@ -123,10 +147,17 @@ if (return null) {
       </div>;
 
 
+<<<<<<< HEAD
+=======
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </UltraAdvancedFuturisticBackground>);
 }
 ;
 
+<<<<<<< HEAD
 
 }
     </UltraAdvancedFuturisticBackground>);
@@ -187,3 +218,9 @@ export default function IncidentAutomationSuitePage() {
 }
 
 ;
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

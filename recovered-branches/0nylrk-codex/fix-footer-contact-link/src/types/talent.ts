@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 export interface TalentProfile {
 export interface TalentProfile {;
   id: string;
@@ -91,6 +92,8 @@ export interface TalentProfile {;
   is_verified?: boolean,;
   key_projects?: {;
     title: string,;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     title: string,
     description: string;
   }[];
@@ -115,6 +118,7 @@ export interface HireRequest {
 
     max: number,
     currency: string;
+<<<<<<< HEAD
     description: string;
   }[];
 }
@@ -146,6 +150,8 @@ export interface HireRequest {;
   },;
   status: 'pending' | 'accepted' | 'rejected' | 'completed';
   createdAt: string;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   timeline: {
     start_date: string;
@@ -160,6 +166,7 @@ export interface TalentProfile {;
 
 }
 ;
+<<<<<<< HEAD
 }
 
 export interface TalentProfile {;
@@ -218,3 +225,7 @@ export interface HireRequest {;
 ;
 }
 ;
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

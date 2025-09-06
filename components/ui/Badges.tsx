@@ -1,9 +1,27 @@
 import React from 'react';
 
+<<<<<<< HEAD
+=======
+
+  quote: string;
+  author: string;
+}) {;
+  return (
+    <figure className='border rounded-md p-3 text-sm'>;
+      <blockquote className='italic opacity-90'>“{quote}”</blockquote>;
+      <figcaption className='mt-2 font-medium opacity-80'>;
+        — {author}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function TrustBadge({ type }: { type: 'Verified' | 'Pro' | 'Top Rated' }) {
   const colorMap = {
     Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200',
     Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200Top Rated': 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200'} as const,
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 export /**
  * TrustBadge - Function description
@@ -39,6 +57,10 @@ function MicroTestimonial() {
       <span className="leading - none">{type}</span>;
     </span>);
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </figcaption>;
     </figure>;
   );  const colorMap = {;
@@ -50,6 +72,11 @@ function MicroTestimonial() {
     </span>;
   );
 }
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export /**
  * MicroTestimonial - Function description
  */
@@ -62,15 +89,25 @@ function MicroTestimonial() {
     </span>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   );
 }
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     </figure>
   );
 }
 
+<<<<<<< HEAD
 
 export function MicroTestimonial({ quote, author }: { quote: string, author: string }) {
   return (
@@ -150,3 +187,7 @@ export function MicroTestimonial({ quote, author }: { quote: string, author: str
     </figure>
   );
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

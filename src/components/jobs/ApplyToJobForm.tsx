@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { useState } from "react";
 import { useRouter  } from 'next/router';
@@ -19,6 +20,8 @@ import { Job } from "@/types/jobs"
 import { toast } from "sonner"
 import { useState } from "react",
 import { useRouter } from 'next/router',
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { useResume } from "@/hooks/useResume",
 import { useAuth } from "@/hooks/useAuth",
@@ -29,12 +32,17 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Alert, AlertDescription } from "@/components/ui/alert",
 import { AlertCircle, FileText, Loader2 } from 'lucide-react'
 import { formatDistanceToNow } from "date-fns",
+<<<<<<< HEAD
 import { Job } from "@/types/jobs";
 import { toast } from "sonner";
 ursor/fix-website-loading-errors-and-merge-6662
 interface ApplyToJobFormProps {
 import { Job } from "@/types/jobs";
 import { toast } from "sonner";
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Job } from "@/types/jobs",
 import { toast } from "sonner",
 
@@ -47,6 +55,12 @@ interface ApplyToJobFormProps {
 }
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const { user } = useAuth()
   const { applyToJob } = useJobApplications()
   const { resumes, isLoading: isResumesLoading } = useResume()
@@ -61,12 +75,17 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
     if (!user) {
       toast.error("You must be logged in to apply")
       router.push(`/login?returnTo=${encodeURIComponent(`/jobs/${job.id}`)}`)
+<<<<<<< HEAD
       return
     }
     if (!coverLetter.trim()) {
       setError("Please provide a cover letter")
       return
     }
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       return;
     }
     
@@ -75,12 +94,18 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       return;
     }
     
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     setIsSubmitting(true)
     setError(null)
     try {
       const success = await applyToJob(
         job.id
         coverLetter
+<<<<<<< HEAD
         selectedResumeId |undefined
         resumeFile |undefined
       )
@@ -88,6 +113,10 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
         toast.success("Your application has been submitted!")
         selectedResumeId |undefined
         resumeFile |undefined
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         selectedResumeId || undefined
         resumeFile || undefined
       )
@@ -131,10 +160,16 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       
       if (success) {
         toast.success("Your application has been submitted!"),
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
         if (onSuccess) {
 
 
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         if (onSuccess) {
           onSuccess()
         }
@@ -460,6 +495,10 @@ ursor/fix-website-loading-errors-and-merge-6662
               <span>Loading your resumes...</span>
             </div>
           ) : resumes && resumes.length > 0 ? (
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Select
               value={selectedResumeId}
               onValueChange={setSelectedResumeId}
@@ -476,6 +515,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                         {resume.basic_info.title |"Untitled Resume"}
                       </SelectItem>
                     )
+<<<<<<< HEAD
                   return null
 ursor/fix-website-loading-errors-and-merge-6662
                   }
@@ -485,6 +525,9 @@ ursor/fix-website-loading-errors-and-merge-6662
             onChange = {(e,) => setCoverLetter(e && e.target.value),}
             rows = {6,}
       ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from "react",;
 import { useRouter } from 'next/router',;
 import { useJobApplications } from "@/hooks/useJobApplications",;
@@ -572,6 +615,10 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
             value={coverLetter}
             onChange={(e) => setCoverLetter(e.target.value)}
             rows={6}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             placeholder="Introduce yourself and explain why you are a good fit for this job...";
             className="mt-1";
           />;
@@ -579,7 +626,11 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
             Provide a brief introduction and highlight your relevant skills and experience.;
           </p>;
         </div>;
+<<<<<<< HEAD
         ;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div>;
           <Label htmlFor="resume">Select Resume (Optional)</Label>;
           {isResumesLoading ? (;
@@ -589,16 +640,63 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
             </div>;
           ) :resumes && resumes.length > 0 ? (;
           ) : resumes && resumes.length > 0 ? (;
+<<<<<<< HEAD
             <Select;
               value={selectedResumeId}
               onValueChange={setSelectedResumeId}
             >;
               <SelectTrigger className="mt-1">;
+=======
+            <Select
+              value = {selectedResumeId,}
+              onValueChange = {setSelectedResumeId,}>;
+              <SelectTrigger className="mt-1">;
+    <form on_submit={handle_submit} className="space - y-6">;
+      <div>;
+        <h3 className="text - lg font - medium mb - 1">Apply to: {job.title}</h3>;
+        <p className="text - sm text - muted - foreground mb - 4">;
+          Posted {formatDistanceToNow (new Date (job.created_at), { add_suffix: true })}
+        </p>;
+      </div>;
+      {error && (
+        <Alert variant="destructive">;
+          <AlertCircle className="h - 4 w - 4" />;
+          <AlertDescription>{error}</AlertDescription>;
+        </Alert>)}
+      <div className="space - y-4">;
+        <div>;
+          <Label html_for="cover_letter">Cover Letter</Label>;
+          <Textarea;
+            id="cover_letter";
+            value = {cover_letter, }
+            on_change = {(e, ) => setCoverLetter (e.target.value), }
+            rows = {6, }
+            placeholder="Introduce yourself and explain why you are a good fit for this job...";
+            className="mt - 1";
+          />;
+          <p className="text - xs text - muted - foreground mt - 1">;
+            Provide a brief introduction and highlight your relevant skills and experience.;
+          </p>;
+        </div>;
+        <div>;
+          <Label html_for="resume">Select Resume (Optional)</Label>;
+          {isResumesLoading ? (
+            <div className="flex items - center gap - 2 mt - 2">;
+              <Loader2 className="h - 4 w - 4 animate - spin" />;
+              <span > Loading your resumes...</span>;
+            </div>) : resumes && resumes.length > 0 ? (
+            <Select;
+              value = {selectedResumeId, }
+              onValueChange = {setSelectedResumeId, }
+            >;
+              <SelectTrigger className="mt - 1">;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <SelectValue placeholder="Select a resume" />;
               </SelectTrigger>;
               <SelectContent>;
                 <SelectItem value="">No resume</SelectItem>;
 
+<<<<<<< HEAD
                   }
                   return null;
                 })}
@@ -618,11 +716,37 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
                 size="sm" ;
                 type="button";
                 onClick={() => router.push("/dashboard/talent/portfolio")}
+=======
+                      <SelectItem key={resume && resume.id} value={resume && resume.id}>;
+                        {resume && resume.basic_info.title || "Untitled Resume"}
+                      </SelectItem>;
+                    );
+
+                  }
+                  return null;
+                })}
+
+              </SelectContent>;
+            </Select>;
+          ) : (;
+            <div className="flex items-center justify-between mt-2 p-3 border rounded-md">;
+              <div className="flex items-center gap-2">;
+                <FileText className="h-5 w-5 text-muted-foreground" />;
+                <span>No resumes found</span>;
+              </div>;
+              <Button
+                variant="outline" 
+                size="sm" 
+
+                type="button"
+                onClick = {(,) => router && router.push("/dashboard/talent/portfolio"),}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               >;
                 Create Resume;
               </Button>;
             </div>;
           )}
+<<<<<<< HEAD
         </div>;
                     );
                   }
@@ -649,12 +773,24 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
         </div>
         <div>
           <Label htmlFor="cvUpload">Or Upload CV (PDF)</Label>
+=======
+
+        </div>;
+
+        <div>;
+          <Label htmlFor="cvUpload">Or Upload CV (PDF)</Label>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <input
             id="cvUpload"
             type="file"
             accept=".pdf"
             className="mt-1"
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             onChange={(e) => setResumeFile(e.target.files?.[0] || null)}
           />
         </div>
@@ -759,6 +895,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           ) :(;
             "Submit Application";
           )}
+<<<<<<< HEAD
         </Button>;
       </div>;
     </form>;
@@ -809,6 +946,21 @@ handleSubmit ;
 }</SelectContent> </Select> > Create Resume </Button> </div>) ";
 }</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application") ;
 }</Button> </div> </form>) ;
+=======
+
+
+}</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application") ;
+}</Button> </div> </form>) ;
+}"};
+
+
+        </Button>;
+      </div>;
+    </form>;
+  );
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                 {resumes.map ((resume, ) => {
                   // Check condition
@@ -936,4 +1088,8 @@ handleSubmit
 }
 ;
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

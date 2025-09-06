@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {useState} from "react";
 import {QuoteFormData, ListingItem, ServiceType} from "@/types/quotes";
 import {Input} from "@/components/ui/input";
@@ -35,12 +36,23 @@ interface ServiceTypeStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void;
 
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+interface ServiceTypeStepProps {
+  formData: QuoteFormData;
+  updateFormData: (data: Partial<QuoteFormData>) => void
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 // Sample data - would come from an API in a real application
 const SAMPLE_LISTINGS: ListingItem[] = [
 
 
 
+<<<<<<< HEAD
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {;
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -98,21 +110,55 @@ export function ServiceTypeStep({
   const handleTypeSelect = (type: ServiceType) => {
     updateFormData({ serviceType: type });
   }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {;
   const [searchQuery, setSearchQuery] = useState("");
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState(""),
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   
   const handleTypeSelect = (type: ServiceType) => {
     updateFormData({ serviceType: type })
   },
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleItemSelect = (item: ListingItem) => {
     updateFormData({
       specificItem: item
       serviceCategory: item.category
       serviceType: item.category.toLowerCase() as ServiceType
 
+<<<<<<< HEAD
+=======
+import { useState  } from './react';
+import { QuoteFormData, ListingItem, ServiceType  } from '@/types / quotes';
+import { Input  } from '@/components / ui / input';
+import { Card  } from '@/components / ui / card';
+import { Search  } from './lucide-react';
+import { ListingScoreCard  } from '@/components / ListingScoreCard';
+interface ServiceTypeStepProps {
+  form_data: QuoteFormData;
+  updateFormData: (data: Partial < QuoteFormData>) => void;
+}
+// Sample data - would come from an API in a real application;
+const SAMPLE_LISTINGS: ListingItem[] = [;
+  {
+    id: "service - 1",
+    title: "AI Development",
+    category: "Services",
+    image:;
+      "https://images.unsplash.com / photo - 1516192518150 - 0d8fee5425e3?w = 800 & auto = format",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     })
 
@@ -316,9 +362,12 @@ export function ServiceTypeStep({
           <Card 
 
 
+<<<<<<< HEAD
 <Card
           <Card
           <Card 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "talent"
                 ? "bg-zion-purple/20 border-zion-purple"
@@ -331,13 +380,20 @@ export function ServiceTypeStep({
               AI specialists, developers, consultants
             </p>
           </Card>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
           <Card 
 
 
+<<<<<<< HEAD
 <Card
           <Card
           <Card 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "equipment"
                 ? "bg-zion-purple/20 border-zion-purple"
@@ -352,6 +408,12 @@ export function ServiceTypeStep({
           </Card>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+      {formData.serviceType && (
+        <div className="space-y-4">
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from "react";
 import {QuoteFormData, ListingItem, ServiceType} from "@/types/quotes";
 import {Input} from "@/components/ui/input";
@@ -361,15 +423,19 @@ import {ListingScoreCard} from "@/components/ListingScoreCard";
 
           <h3 className="text-xl font-semibold text-white">Select a specific {formData.serviceType}</h3>
 
+<<<<<<< HEAD
 {formData.serviceType && (
         <div className="space-y-4">
 <h3 className="text-xl font-semibold text-white">
             Select a specific {formData.serviceType}
           </h3>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
             <Input
 
+<<<<<<< HEAD
           <h3 className="text-xl font-semibold text-white">
             Select a specific {formData.serviceType}
           </h3>
@@ -377,6 +443,8 @@ import {ListingScoreCard} from "@/components/ListingScoreCard";
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
             <Input
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from "react",;
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",;
 import { Input } from "@/components/ui/input",;
@@ -627,6 +695,7 @@ export function ServiceTypeStep({ formData, updateFormData } ServiceTypeStepProp
           </div>;
         </div>)}
     </div>);
+<<<<<<< HEAD
       ;
       {formData.serviceType && (;
         <div className="space-y-4">;
@@ -677,3 +746,7 @@ export function ServiceTypeStep({ formData, updateFormData } ServiceTypeStepProp
     </div>
   );
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

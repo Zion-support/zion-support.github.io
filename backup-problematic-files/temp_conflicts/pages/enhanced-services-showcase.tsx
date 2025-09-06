@@ -607,6 +607,7 @@ const Button = ({ ;
     <button onClick={onClick} className={classes}>;
       {children}
     </button>;
+<<<<<<< HEAD
 :temp_conflicts/pages/enhanced-services-showcase.tsx
   );
 };
@@ -616,3 +617,9 @@ const Button = ({ ;
   ),;
 },
 :backup-problematic-files/temp_conflicts/pages/enhanced-services-showcase.tsx
+=======
+
+  ),;
+},
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

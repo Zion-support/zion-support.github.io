@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 
 			pricePerMonthUSD={4999  } catch (error) {
@@ -74,11 +75,24 @@ export default function AIConsciousnessEvolution2025() {
 				"Partnered research roadmap and governance"
 			]}
 			industries={["R&D", "Healthcare", "Education", "Assistive Tech"]}
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 			pricePerMonthUSD={4999  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 			implementationWeeks="Implementation: 6–12 weeks"
 			roiNote="Strategic R&D with demonstrable prototypes and IP"
 			features={[
@@ -88,6 +102,7 @@ export default function AIConsciousnessEvolution2025() {
 				"Evaluation harness for subjective tasks",
 				"Multi-modal context fusion (text, voice, UI)",
 				"Partnered research roadmap and governance"
+<<<<<<< HEAD
 			]}
 			industries={["R&D", "Healthcare", "Education", "Assistive Tech"]}
 			canonical="https: //ziontechgroup.com/ai-consciousness-evolution-2025"
@@ -115,3 +130,8 @@ export default function AIConsciousnessEvolution2025() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -3,14 +3,26 @@ import React from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
 import {MobileResumeBuilder, as, ResumeBuilderComponent} from "../components/resume/MobileResumeBuilder";
+<<<<<<< HEAD
 
 
 export function MobileResumeBuilder() {
+=======
+export function MobileResumeBuilder() {;
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function MobileResumeBuilder() {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="min-h-screen">;
       <MobileHeader
         title="Resume Builder"
         showBack
+<<<<<<< HEAD
 import React from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation";
@@ -34,6 +46,13 @@ export function MobileResumeBuilder() {
 
 
 }
+=======
+
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
@@ -44,10 +63,20 @@ export function MobileResumeBuilder() {;
       <MobileHeader;
         title="Resume Builder";
         showBack;
+<<<<<<< HEAD
       />;
       <main className="py-4">;
         <ResumeBuilderComponent />;
       </main>;
+=======
+
+      />;
+
+      <main className="py-4">;
+        <ResumeBuilderComponent />;
+      </main>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <BottomNavigation />;
     </div>;
   );
@@ -76,6 +105,7 @@ function MobileResumeBuilder() {
 ;
 
 
+<<<<<<< HEAD
 
 import React from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
@@ -103,3 +133,6 @@ export function MobileResumeBuilder() {;
 ;
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

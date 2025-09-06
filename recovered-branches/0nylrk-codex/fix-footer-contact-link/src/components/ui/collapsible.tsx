@@ -17,6 +17,7 @@ const CollapsibleContent = CollapsiblePrimitive.CollapsibleContent
 
 ;
 
+<<<<<<< HEAD
 import * as CollapsiblePrimitive from &quot;@radix-ui/react-collapsible&quot;
 import * as CollapsiblePrimitive from "@radix-ui/react-collapsible"
 
@@ -27,7 +28,15 @@ export { Collapsible, CollapsibleTrigger, CollapsibleContent }
 
 export { Collapsible, CollapsibleTrigger, CollapsibleContent }
 ;
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export { Collapsible, CollapsibleTrigger, CollapsibleContent };
 
 export { Collapsible, CollapsibleTrigger, CollapsibleContent }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

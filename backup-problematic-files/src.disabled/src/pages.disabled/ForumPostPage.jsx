@@ -27,4 +27,8 @@ const ForumPostPage = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ForumPostPage;
+=======
+export default ForumPostPage;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

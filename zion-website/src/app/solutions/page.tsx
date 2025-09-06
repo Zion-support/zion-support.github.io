@@ -1,4 +1,8 @@
 import {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   LightBulbIcon,
   CpuChipIcon,
   RocketLaunchIcon,
@@ -63,6 +67,10 @@ const industry_applications = [;
     icon: GlobeAltIcon,
     use_cases: ['Customer AnalyticsInventory ManagementPersonalized MarketingDemand Forecasting']}];
 const implementation_steps = [;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   {
     step: '01'
     title: 'Discovery & Assessment'
@@ -93,6 +101,10 @@ export default /**
  * SolutionsPage - Function description
  */
 function SolutionsPage() {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className=&quot;bg - black & quot;>;
 
@@ -115,6 +127,10 @@ function SolutionsPage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <span className=&quot;bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent & quot;>;
                 Every Industry;
               </span>;
@@ -156,6 +172,7 @@ function SolutionsPage() {
                 <a;
                   href={solution.href}
 
+<<<<<<< HEAD
                   className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200"
 
 
@@ -227,11 +244,21 @@ const Page: React.FC<PageProps> = ({ className }) => {
                   href={solution.href}
 className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200&quot;
                   className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200"
+=======
+
+                  className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200"
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 >
                   Learn more <span aria-hidden="true">→</span>
                 </Link>
               </div>
             ))}
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>;
         </div>;
       </div>;
@@ -258,6 +285,10 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
               <div key={industry.name} className=&quot;flex flex-col group&quot;>
                 <dt className=&quot;flex items-center gap-x-3 text-base font-semibold leading-7 text-white&quot;>
                   <industry.icon className=&quot;h-5 w-5 flex-none text-blue-400&quot; aria-hidden=&quot;true&quot; />
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
           <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Industries</h2>;
@@ -361,6 +392,10 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
                 </div>
               </div>
             ))}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
           <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Implementation</h2>;
@@ -457,6 +492,10 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl text - center & quot;>;
           <h2 className=&quot;text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;

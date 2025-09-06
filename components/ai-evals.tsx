@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React from 'react';
 
@@ -86,6 +90,7 @@ import Head from 'next/head';
 import React from 'react';
 import Head from 'next / head';
 import {
+<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
 import Head from 'next/head';
@@ -99,17 +104,72 @@ import {
   Mail
   MapPin
   ExternalLink;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Check,
   ShieldCheck,
   TrendingUp,
   Clock,
   Phone,
   Mail,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  MapPin,
+  ExternalLink,
+} from 'lucide-react';
+import Card from '../components / ui / Card';
+import Button from '../components / ui / Button';
+export default /**
+ * AIEvalsPage - Function description
+ */
+function AIEvalsPage() {
+  const contact_info = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',
+  }
+;
+  const features = [;
+    'Golden datasets and synthetic evals',
+    'Hallucination and grounding score',
+    'Toxicity, bias and safety metrics',
+    'LLM version comparison reports',
+    'CI quality gates and webhooks',
+    'Latency and cost KPIs with budgets',
+  ];
+;
+  return (
+    <QuantumHolographicMatrixBackground>;
+      <Head>;
+        <title > AI Evals & Observability | Zion Tech Group</title>;
+        <meta;
+          name='description';
+          content='Ship reliable AI with continuous evaluation, red‑teaming, regression tests and live observability. Guardrails, datasets, dashboards and CI gates included.';
+        />;
+        <link rel='canonical' href='https://ziontechgroup.com / ai - evals' />;
+      </Head>;
+      <section className='min - h-screen pt - 28 pb - 20 px - 4'>;
+        <div className='max - w-6xl mx - auto'>;
+          <div className='text - center mb - 12'>;
+            <h1 className='text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent'>;
+              AI Evals & Observability;
+            </h1>;
+            <p className='mt - 4 text - xl text - gray - 300'>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Continuous evaluation, drift detection, and quality gates to ship;
               safe, trustworthy AI.;
             </p>;
           </div>;
+<<<<<<< HEAD
                     className='w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white'>;
+=======
+
+                    className='w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white'>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 6 mb - 10'>;
             <Card className='lg:col - span - 2 bg - black / 30 border border - cyan - 500 / 30'>;
               <div className='p - 6'>;
@@ -145,12 +205,20 @@ import {
                     href='/contact';
                     className='w - full bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white';
                   >;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     Request Demo;
                   </Button>;
                 </div>;
               </div>;
             </Card>;
           </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 12'>;
             <Card className='p - 6 bg - black / 30 border border - purple - 500 / 30'>;
               <h3 className='text - lg font - semibold mb - 2'>;
@@ -171,11 +239,16 @@ import {
             <Card className='p - 6 bg - black / 30 border border - cyan - 500 / 30'>;
               <h3 className='text - lg font - semibold mb - 2'>Integrations</h3>;
               <p className='text - gray - 300 text - sm'>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 GitHub Actions, CircleCI, Datadog, Slack and PagerDuty. SDKs for;
                 Node and Python.;
               </p>;
             </Card>;
           </div>;
+<<<<<<< HEAD
 import { Check, ShieldCheck, TrendingUp, Clock, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';
 import Card from '../components/ui/Card';
@@ -493,12 +566,25 @@ export default function AIEvalsPage() {
               </p>;
             </Card>;
           </div>;
+=======
+
+
+              </Button>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 	);
 }
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </QuantumHolographicMatrixBackground>);					<div className="bg - black / 20 border border - cyan - 500 / 30 rounded - 2xl p - 6">;
       <h3 className="text - xl font - semibold text - white mb - 4 text - center">Contact</h3>;
       <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 text - sm">;
@@ -514,8 +600,12 @@ export default function AIEvalsPage() {
   </section>;
   </QuantumHolographicMatrixBackground>);
 }
+<<<<<<< HEAD
 );
 	);
 }
 	);
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

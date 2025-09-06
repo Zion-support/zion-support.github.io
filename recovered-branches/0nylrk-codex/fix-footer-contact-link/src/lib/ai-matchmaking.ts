@@ -8,10 +8,14 @@ export interface MatchResultItem {
 
 export interface MatchResultItem {;
 
+<<<<<<< HEAD
 // AI Matchmaking utility functions
 export interface MatchResultItem {
 
 export interface MatchResultItem {;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
   title: string;
   description: string;
@@ -62,6 +66,7 @@ const sample_data: MatchResultItem[] = [;
     description: "High - performance GPU server for AI model training and inference";
     category: "Equipment - Hardware";
 
+<<<<<<< HEAD
   skills?: string[]
 
   image?: string
@@ -80,20 +85,55 @@ export interface MatchResult {;
 const sampleData: MatchResultItem[] = [
   {
     id: "talent-1";
+=======
+  skills?: string[],
+  image?: string;
+
+}
+export interface MatchResult {
+=======
+}
+
+
+export interface MatchResult {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  item: MatchResultItem;
+  score: number;
+
+  matched_skills: string[],
+  reason: string;
+}
+// Sample data for testing when API is not available;
+const sample_data: MatchResultItem[] = [;
+
+  {
+    id: "talent - 1";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     title: "Senior AI Engineer";
     description: "Experienced AI engineer with expertise in machine learning and computer vision";
     category: "Talent - Engineering";
 
+<<<<<<< HEAD
     price: 120
 
     skills: ["Machine Learning", "Computer Vision", "TensorFlow", "Python"]
   }
   {
     id: "service-1";
+=======
+    price: 120,
+    skills: ["Machine Learning", "Computer Vision", "TensorFlow", "Python"];
+
+  }
+  {
+    id: "service - 1";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     title: "AI Model Training";
     description: "Custom AI model training service with data preparation and deployment";
     category: "Services - AI Development";
 
+<<<<<<< HEAD
     price: 5000
 
     skills: ["Machine Learning", "Model Training", "AI Deployment"]
@@ -114,6 +154,22 @@ export async function findMatches(
   query: string;
 
   type: string = ""
+=======
+    price: 5000,
+    skills: ["Machine Learning", "Model Training", "AI Deployment"];
+
+  }
+  {
+    id: "equipment - 1";
+    title: "NVIDIA A100 GPU Server";
+    description: "High - performance GPU server for AI model training and inference";
+    category: "Equipment - Hardware";
+
+
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // AI Matchmaking utility functions;
 export interface MatchResultItem {;
   id: string,;
@@ -132,6 +188,12 @@ export interface MatchResult {;
   reason: string;
 }
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Sample data for testing when API is not available
 const sampleData: MatchResultItem[] = [
   {
@@ -161,21 +223,34 @@ const sampleData: MatchResultItem[] = [
 ],
 
 // Function to find matches based on query and type
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export async function findMatches(
   query: string,
 
   type: string = "",
+<<<<<<< HEAD
 export async function findMatches(;
   query: string;
 export async function findMatches(
   query: string,
   type: string = "",
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   limit: number = 5
 ): Promise<MatchResult[]> {
   try {
     // In production, we would call an API endpoint here
     // For now, we'll simulate a response with sample data
     // Simulate API call delay
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     await new Promise(resolve => setTimeout(resolve, 1000)),
     
@@ -215,7 +290,30 @@ export async function findMatches(
 
     return []
   }
+<<<<<<< HEAD
 }
+=======
+];
+;
+// Function to find matches based on query and type;
+export async function find_matches (
+  query: string;
+  type: string = "",
+  limit: number = 5): Promise < MatchResult[]> {
+  try {
+    // In production, we would call an API endpoint here;
+    // For now, we'll simulate a response with sample data;
+    // Simulate API call delay;
+    await new Promise (resolve => set_timeout (resolve, 1000));
+;
+    // Filter by type if provided;
+    let filtered_items = sample_data;
+    // Check condition
+if ( {) {
+  $2
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       matchedSkills: item.skills?.slice(0, 2) || [],
       reason: `This ${item.category.split(' - ')[0].toLowerCase()} matches your needs based on the provided description.`
     })),
@@ -225,6 +323,7 @@ export async function findMatches(
   } catch (error) {
     console.error("Error in matchmaking:", error),
     return []
+<<<<<<< HEAD
 ;
 // Sample data for testing when API is not available;
 const sampleData: MatchResultItem[] = [;
@@ -332,6 +431,8 @@ if ( {) {
   } catch (error) {
     console.error("Error in matchmaking:", error),
     return []
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   }
 }
@@ -438,8 +539,12 @@ export async function findMatches(;
 }
 }
   }
+<<<<<<< HEAD
 }
 ;
   }
 }
 ;
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

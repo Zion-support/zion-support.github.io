@@ -1,6 +1,10 @@
 
+<<<<<<< HEAD
 export interface ModerationFlag {
 export interface ModerationFlag {;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
   contentId: string;
   contentType: string;
@@ -38,6 +42,7 @@ export async function create_flag (data: Partial < ModerationFlag>): Promise < M
 
 }
 
+<<<<<<< HEAD
 // Mock data storage - replace with actual database
 let flags: ModerationFlag[] = [];
 export async function getFlagById(id: string): Promise<ModerationFlag | null> {
@@ -73,14 +78,49 @@ export async function updateFlagStatus(
   flag.status = status;
   flag.adminNotes = adminNotes |flag.adminNotes;
   flag.updatedAt = new Date().toISOString();
+=======
+;
+export async function getFlagById (id: string): Promise < ModerationFlag | null> {
+  return flags.find (flag => flag.id === id) || null;
+}
+export async function readAllFlags (): Promise < ModerationFlag[]> {
+  return [...flags];
+
+}
+export async function create_flag (data: Partial < ModerationFlag>): Promise < ModerationFlag> {
+  const flag: ModerationFlag = {
+
+  flag && flag.status = status;
+  flag && flag.adminNotes = adminNotes || flag && flag.adminNotes;
+  flag && flag.updatedAt = new Date().toISOString();
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   await upsertFlag(flag);
   return flag;
 
 }
 
+<<<<<<< HEAD
 
 
 
+=======
+=======
+// Moderation database utilities
+export interface ModerationFlag {
+  id: string, type: 'spam' | 'inappropriate' | 'harassment' | 'other',
+  content: string, reporterId: string,
+  reportedUserId?: string;
+  status: 'pending' | 'reviewed' | 'resolved' | 'dismissed', createdAt: Date,
+  updatedAt: Date, moderatorId?: string,
+  notes?: string;
+}
+=======
+
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 // Mock data storage - replace with actual database
 let flags: ModerationFlag[] = [];
@@ -150,3 +190,8 @@ if (return undefined) {
   return flag;
 
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -305,9 +305,10 @@ import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-slate-900 text-gray-300">
-      <div className="container mx-auto px-4 py-12">
+    <footer className="bg-gray-900 text-white py-8">
+      <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+<<<<<<< HEAD
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
@@ -337,10 +338,17 @@ const Footer: React.FC = () => {
                 </svg>
               </a>
             </div>
-          </div>
-
-          {/* Quick Links */}
+=======
           <div>
+            <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
+            <p className="text-gray-300">
+              Leading technology solutions provider for modern businesses.
+            </p>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          </div>
+          
+          <div>
+<<<<<<< HEAD
             <h3 className="text-white font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
           <div className="space-y-4">
@@ -404,29 +412,39 @@ const Footer: React.FC = () => {
               <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">About</Link></li>
               <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">Services</Link></li>
               <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h4 className="text-white font-semibold mb-4">Services</h4>
+=======
+            <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              <li><span className="text-gray-400">AI Solutions</span></li>
-              <li><span className="text-gray-400">Cybersecurity</span></li>
-              <li><span className="text-gray-400">Cloud Infrastructure</span></li>
-              <li><span className="text-gray-400">Digital Transformation</span></li>
+              <li><Link to="/services" className="text-gray-300 hover:text-white transition-colors">AI Services</Link></li>
+              <li><Link to="/services" className="text-gray-300 hover:text-white transition-colors">IT Solutions</Link></li>
+              <li><Link to="/services" className="text-gray-300 hover:text-white transition-colors">Cloud Services</Link></li>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </ul>
           </div>
-
-          {/* Contact */}
+          
           <div>
-            <h4 className="text-white font-semibold mb-4">Contact</h4>
-            <div className="space-y-2">
-              <p className="text-gray-400 text-sm">Email: info@ziontechgroup.com</p>
-              <p className="text-gray-400 text-sm">Phone: +1-302-464-0950</p>
+<<<<<<< HEAD
+            <h4 className="text-white font-semibold mb-4">Services</h4>
+=======
+            <h3 className="text-lg font-semibold mb-4">Company</h3>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+            <ul className="space-y-2">
+              <li><Link to="/about" className="text-gray-300 hover:text-white transition-colors">About</Link></li>
+              <li><Link to="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>
+              <li><Link to="/pricing" className="text-gray-300 hover:text-white transition-colors">Pricing</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Contact</h3>
+            <div className="space-y-2 text-gray-300">
+              <p>Email: info@ziontechgroup.com</p>
+              <p>Phone: +1 (555) 123-4567</p>
+              <p>Address: 123 Tech Street, Innovation City</p>
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 
 import React from 'react';
 
@@ -441,6 +459,11 @@ export default function Footer() {
           <p className="text-gray-400 text-sm">
             © 2024 Zion Tech Group. All rights reserved.
           </p>
+=======
+        
+        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+          <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </div>
           </p>
         </div>
@@ -449,4 +472,8 @@ export default function Footer() {
   );
 };
 
+<<<<<<< HEAD
 export default Footer;
+=======
+export default Footer;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

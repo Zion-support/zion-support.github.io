@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 import React from "react";
 import {QrCode} from "lucide-react";
 import {AppStoreButtons} from "./AppStoreButtons";
@@ -10,11 +11,18 @@ import { AppStoreButtons } from "./AppStoreButtons";
 
 import { QrCode } from "lucide-react",
 import { AppStoreButtons } from "./AppStoreButtons",
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const QrCodeDownload: React.FC = () => {
   // App store links - these would come from environment variables in production
   const appStoreUrl = "#"; // Replace with actual App Store URL
   const googlePlayUrl = "#"; // Replace with actual Google Play URL
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">
       <div className="container mx-auto px-4">
@@ -30,17 +38,24 @@ export const QrCodeDownload: React.FC = () => {
                 instantly, or use the buttons below to get it from your app
                 store of choice.
               </p>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               <AppStoreButtons 
                 className="mb-8" 
 
 
+<<<<<<< HEAD
 <AppStoreButtons
                 className="mb-8"
               <AppStoreButtons
                 className="mb-8"
               <AppStoreButtons 
                 className="mb-8" 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
               />
@@ -49,7 +64,10 @@ export const QrCodeDownload: React.FC = () => {
                 <span>Compatible with iOS 14+ and Android 8.0+</span>
               </div>
             </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <div className="flex-shrink-0">
               <div className="bg-white p-6 rounded-xl shadow-lg">
                 <div className="w-48 h-48 flex items-center justify-center bg-white rounded-lg">
@@ -66,10 +84,17 @@ export const QrCodeDownload: React.FC = () => {
       </div>
     </section>
 
+<<<<<<< HEAD
 };
 
   );
 }
+=======
+import React from "react";
+import {QrCode} from "lucide-react";
+import {AppStoreButtons} from "./AppStoreButtons";
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 };
   )
@@ -148,3 +173,8 @@ export default QrCodeDownload;
 }
 };
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

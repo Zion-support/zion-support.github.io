@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 import {
 
 
@@ -25,6 +26,20 @@ import {
   SidebarMenuButton
   SidebarGroupLabel
   SidebarGroupContent
+=======
+
+import {
+
+import {;
+  Bell,;
+  FileText,;
+  Home,;
+  Mail,;
+  Search,;
+  Settings,;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Bell,
   FileText,
   Home,
@@ -32,7 +47,12 @@ import {
   Search,
   Settings,
 
+<<<<<<< HEAD
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react",;
+=======
+  Users,;
+} from "lucide-react";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {;
   Sidebar,;
   SidebarContent,;
@@ -41,6 +61,7 @@ import {;
   SidebarMenuItem,;
   SidebarMenuButton,;
   SidebarGroupLabel,;
+<<<<<<< HEAD
 } from "@/components/ui/sidebar";
 export function AppSidebar() {;
   return (
@@ -94,6 +115,22 @@ import {
 
         
         
+=======
+  SidebarGroupContent,;
+
+
+
+} from "@/components/ui/sidebar";
+
+export function AppSidebar() {;
+  return (
+
+
+        
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <SidebarGroup>
           <SidebarGroupLabel>Content</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -103,7 +140,11 @@ import {
                   <a href="/publish">
                     <FileText size={16} />
                     <span>My Content</span>
+<<<<<<< HEAD
                   </Link>
+=======
+                  </a>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
@@ -111,18 +152,30 @@ import {
                   <a href="/analytics">
                     <Search size={16} />
                     <span>Analytics</span>
+<<<<<<< HEAD
                   </Link>
+=======
+                  </a>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         
 
 
+<<<<<<< HEAD
         
         
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <SidebarGroup>
           <SidebarGroupLabel>Settings</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -132,7 +185,11 @@ import {
                   <a href="/profile">
                     <Users size={16} />
                     <span>Profile</span>
+<<<<<<< HEAD
                   </Link>
+=======
+                  </a>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
@@ -140,13 +197,18 @@ import {
                   <a href="/settings">
                     <Settings size={16} />
                     <span>Settings</span>
+<<<<<<< HEAD
                   </Link>
+=======
+                  </a>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
+<<<<<<< HEAD
     </Sidebar>
   );
 }
@@ -167,6 +229,9 @@ export function AppSidebar() {;
 ;
 export function AppSidebar() {;
   return (;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <Sidebar>;
       <SidebarContent>;
         <SidebarGroup>;
@@ -178,28 +243,87 @@ export function AppSidebar() {;
                   <a href="/creator-dashboard">;
                     <Home size={16} />;
                     <span>Home</span>;
+<<<<<<< HEAD
+=======
+=======
+  Bell,
+  FileText,
+  Home,
+  Mail,
+  Search,
+  Settings,
+  Users,
+} from './lucide-react';
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarGroup,
+  SidebarMenu,
+  SidebarMenuItem,
+  SidebarMenuButton,
+  SidebarGroupLabel,
+  SidebarGroupContent,
+} from '@/components / ui / sidebar';
+;
+export /**
+ * AppSidebar - Function description
+ */
+function AppSidebar() {
+  return (
+    <Sidebar>;
+      <SidebarContent>;
+        <SidebarGroup>;
+          <SidebarGroupLabel > Dashboard</SidebarGroupLabel>;
+          <SidebarGroupContent>;
+            <SidebarMenu>;
+              <SidebarMenuItem>;
+                <SidebarMenuButton as_child>;
+                  <a href="/creator - dashboard">;
+                    <Home size={16} />;
+                    <span > Home</span>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
               <SidebarMenuItem>;
+<<<<<<< HEAD
                 <SidebarMenuButton asChild>;
                   <a href="/messaging">;
                     <Mail size={16} />;
                     <span>Messages</span>;
+=======
+
+                <SidebarMenuButton as_child>;
+                  <a href="/messaging">;
+                    <Mail size={16} />;
+                    <span > Messages</span>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
               <SidebarMenuItem>;
+<<<<<<< HEAD
                 <SidebarMenuButton asChild>;
                   <a href="/notifications">;
                     <Bell size={16} />;
                     <span>Notifications</span>;
+=======
+
+                <SidebarMenuButton as_child>;
+                  <a href="/notifications">;
+                    <Bell size={16} />;
+                    <span > Notifications</span>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
             </SidebarMenu>;
           </SidebarGroupContent>;
         </SidebarGroup>;
+<<<<<<< HEAD
         ;
         <SidebarGroup>;
           <SidebarGroupLabel>Content</SidebarGroupLabel>;
@@ -210,20 +334,43 @@ export function AppSidebar() {;
                   <a href="/publish">;
                     <FileText size={16} />;
                     <span>My Content</span>;
+=======
+
+        <SidebarGroup>;
+          <SidebarGroupLabel > Content</SidebarGroupLabel>;
+          <SidebarGroupContent>;
+            <SidebarMenu>;
+              <SidebarMenuItem>;
+                <SidebarMenuButton as_child>;
+                  <a href="/publish">;
+                    <FileText size={16} />;
+                    <span > My Content</span>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
               <SidebarMenuItem>;
+<<<<<<< HEAD
                 <SidebarMenuButton asChild>;
                   <a href="/analytics">;
                     <Search size={16} />;
                     <span>Analytics</span>;
+=======
+
+                <SidebarMenuButton as_child>;
+                  <a href="/analytics">;
+                    <Search size={16} />;
+                    <span > Analytics</span>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
             </SidebarMenu>;
           </SidebarGroupContent>;
         </SidebarGroup>;
+<<<<<<< HEAD
         ;
         <SidebarGroup>;
           <SidebarGroupLabel>Settings</SidebarGroupLabel>;
@@ -234,14 +381,36 @@ export function AppSidebar() {;
                   <a href="/profile">;
                     <Users size={16} />;
                     <span>Profile</span>;
+=======
+
+        <SidebarGroup>;
+          <SidebarGroupLabel > Settings</SidebarGroupLabel>;
+          <SidebarGroupContent>;
+            <SidebarMenu>;
+              <SidebarMenuItem>;
+                <SidebarMenuButton as_child>;
+                  <a href="/profile">;
+                    <Users size={16} />;
+                    <span > Profile</span>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
               <SidebarMenuItem>;
+<<<<<<< HEAD
                 <SidebarMenuButton asChild>;
                   <a href="/settings">;
                     <Settings size={16} />;
                     <span>Settings</span>;
+=======
+
+                <SidebarMenuButton as_child>;
+                  <a href="/settings">;
+                    <Settings size={16} />;
+                    <span > Settings</span>;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
@@ -249,6 +418,10 @@ export function AppSidebar() {;
           </SidebarGroupContent>;
         </SidebarGroup>;
       </SidebarContent>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     </Sidebar>
 
@@ -256,6 +429,7 @@ export function AppSidebar() {;
     </Sidebar>;
   );
     </Sidebar>);
+<<<<<<< HEAD
 }
     </Sidebar>);
 }
@@ -277,3 +451,7 @@ return (<Sidebar> <SidebarContent> <SidebarGroup> <SidebarGroupLabel>Dashboard</
   );
 }
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

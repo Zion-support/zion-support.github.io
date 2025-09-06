@@ -1,12 +1,15 @@
 
 
 
+<<<<<<< HEAD
 import React from 'react';
 import { FileText  } from 'lucide-react';
 import { ResumeOption  } from '../resume-selector/types';
 import { ResumePreviewCard  } from './ResumePreviewCard';
 import { Resume } from '@/types/resume';
 interface SelectResumeSectionProps {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   resumeOptions: ResumeOption[],
   selectedResume: ResumeOption | null,
   handleResumeSelect: (resumeId: string) => void,
@@ -19,6 +22,11 @@ export function SelectResumeSection({;
   selectedResume;
   handleResumeSelect;
   handleDownloadResume;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react',;
 import { FileText } from 'lucide-react',;
 import { ResumeOption } from '../resume-selector/types',;
@@ -32,6 +40,10 @@ interface SelectResumeSectionProps {;
   isLoading: boolean;
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   resumeOptions: ResumeOption[]
   selectedResume: ResumeOption | null
@@ -41,6 +53,7 @@ interface SelectResumeSectionProps {;
   isLoading: boolean
 }
 export function SelectResumeSection({
+<<<<<<< HEAD
   resumeOptions,
   selectedResume,
   handleResumeSelect,
@@ -59,6 +72,9 @@ export function SelectResumeSection({
               className={`w-full text-left p-3 rounded-md transition ${
                 selectedResume?.id === option.id
                   ? 'bg-zion-purple/20 border border-zion-purple'
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {FileText} from 'lucide-react';
 import {ResumeOption} from '../resume - selector / types';
 import {ResumePreviewCard} from './ResumePreviewCard';
@@ -190,3 +206,7 @@ export function SelectResumeSection({;
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

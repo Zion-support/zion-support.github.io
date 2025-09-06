@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const UltraFuturisticBackground2040: React.FC = () => {
     canvas.height = window.innerHeight;
     let animationFrameId: number,
@@ -17,6 +18,31 @@ const UltraFuturisticBackground2040: React.FC = () => {;
     let time = 0;
     // Particle system;
     const particles: Array<{;
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       x: number;
       y: number;
   const canvas_ref = useRef < HTMLCanvasElement>(null);
@@ -65,6 +91,7 @@ const UltraFuturisticBackground2040: React.FC = () => {
       color: string;
       opacity: number;
     }> = [];
+<<<<<<< HEAD
     canvas.width = window.innerWidth,
     canvas.height = window.innerHeight,
 
@@ -75,6 +102,16 @@ const UltraFuturisticBackground2040: React.FC = () => {
     const particles: Array<{
       x: number,
       y: number,
+=======
+
+      x: number,
+      y: number,
+=======
+;
+    // Initialize particles;
+    for (let index = 0; i < 100; i++) {      particles.push ({      coordinate_x: number,
+      coordinate_y: number,
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       vx: number,
       vy: number,
@@ -88,6 +125,7 @@ const UltraFuturisticBackground2040: React.FC = () => {
         vy: (Math.random() - 0.5) * 0.5,
         size: Math.random() * 2 + 1,
         color: ['#06b6d4#3b82f6#8b5cf6#ec4899'][Math.floor(Math.random() * 4)],
+<<<<<<< HEAD
         opacity: Math.random() * 0.5 + 0.1
       })
     }
@@ -115,11 +153,20 @@ const animate = () => {
       });    }
     const animate = () => {
       time += 0.01;        color: ['#06b6d4#3b82f6#8b5cf6#ec4899'][Math.floor(Math.random() * 4)]
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         opacity: Math.random() * 0.5 + 0.1
       })
     }
     const animate = () => {
       time += 0.01;
+<<<<<<< HEAD
+=======
+
+      
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Clear canvas with fade effect
       ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -135,6 +182,7 @@ const animate = () => {
         // Draw particle with glow effect
         ctx.save();
         ctx.globalAlpha = particle.opacity;
+<<<<<<< HEAD
         // Glow effect
         ctx.shadowColor = particle.color;
         ctx.shadowBlur = 10;
@@ -145,37 +193,82 @@ const animate = () => {
         ctx.fillStyle = particle.color;
         ctx.fill();
         ctx.restore();      });
+=======
+
+        
+        // Glow effect
+        ctx.shadowColor = particle.color;
+        ctx.shadowBlur = 10;
+        
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fillStyle = particle.color;
+        ctx.fill();
+        
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         ctx.restore()
       });
       // Draw connecting lines between nearby particles
       ctx.strokeStyle = 'rgba(6, 182, 212, 0.1)';
       ctx.lineWidth = 0.5;
+<<<<<<< HEAD
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
+=======
+
+      
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       for (let i = 0, i < particles.length, i++) {
         for (let j = i + 1, j < particles.length, j++) {
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
+<<<<<<< HEAD
+=======
+
+          
+          if (distance < 100) {
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             ctx.stroke()
 
           }
         }
       }
+<<<<<<< HEAD
 
 
+=======
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             ctx.stroke();          }
 
           }
 
 
 
+<<<<<<< HEAD
         }
       }
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        }
+      }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       // Draw animated grid
       ctx.strokeStyle = 'rgba(6, 182, 212, 0.05)';
       ctx.lineWidth = 0.5;
@@ -195,6 +288,7 @@ const animate = () => {
         ctx.beginPath();
         ctx.moveTo(0, y);
         ctx.lineTo(canvas.width, y);
+<<<<<<< HEAD
             ctx.stroke()
           }
         }
@@ -254,12 +348,27 @@ const animate = () => {
           rotation: time * 0.7
         },      ];        { x: canvas.width * 0.2, y: canvas.height * 0.3, size: 60, rotation: time * 0.5 }
         { x: canvas.width * 0.8, y: canvas.height * 0.7, size: 40, rotation: time * -0.3 }
+=======
+        ctx.stroke()
+      }
+
+      // Draw floating geometric shapes
+      const shapes = [
+        { x: canvas.width * 0.2, y: canvas.height * 0.3, size: 60, rotation: time * 0.5 },
+        { x: canvas.width * 0.8, y: canvas.height * 0.7, size: 40, rotation: time * -0.3 },
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         { x: canvas.width * 0.6, y: canvas.height * 0.2, size: 50, rotation: time * 0.7 }
       ];
       shapes.forEach((shape, index) => {
         ctx.save();
         ctx.translate(shape.x, shape.y);
         ctx.rotate(shape.rotation);
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Initialize particles;
     for (let i = 0; i < 100; i++) {      particles && particles.push({      x: number,;
       y: number,;
@@ -389,6 +498,10 @@ const animate = () => {
             -shape && shape.size / 2,;
             shape && shape.size,;
             shape && shape.size;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           );
         } else if (index === 1) {;
           // Circle;
@@ -404,11 +517,26 @@ const animate = () => {
           ctx && ctx.closePath();
           ctx && ctx.stroke();
         }
+<<<<<<< HEAD
         ctx.strokeStyle = `rgba(139, 92, 246, ${0.1 + Math.sin(time + index) * 0.05})`;
         ctx.lineWidth = 2;
         if (index === 0) {
           // Square
 ctx.beginPath();
+=======
+
+        
+        ctx.strokeStyle = `rgba(139, 92, 246, ${0.1 + Math.sin(time + index) * 0.05})`;
+
+        ctx.lineWidth = 2;
+        if (index === 0) {
+          // Square
+<<<<<<< HEAD
+          ctx.strokeRect(-shape.size/2, -shape.size/2, shape.size, shape.size)
+        } else if (index === 1) {
+          // Circle
+          ctx.beginPath();
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           ctx.arc(0, 0, shape.size/2, 0, Math.PI * 2);
           ctx.stroke()
       opacity: number;
@@ -610,6 +738,11 @@ if ( {) {
           ctx.close_path ();
           ctx.stroke ();
         }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         ctx && ctx.restore();      });
       // Draw energy waves;
       const waveCount = 3;
@@ -648,10 +781,18 @@ if ( {) {
             ctx && ctx.moveTo(x, y);
           } else {;
             ctx && ctx.lineTo(x, y);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           }
         }
         ctx && ctx.stroke();
       }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       for (let i = 0, i < waveCount, i++) {
           ctx.strokeRect(
             -shape.size / 2
@@ -701,6 +842,7 @@ if ( {) {
       const waveCount = 3;
       for (let i = 0; i < waveCount; i++) {
         const waveOffset = (time * 100 + i * 200) % (canvas.width + 200);
+<<<<<<< HEAD
         const waveY = canvas.height * 0.5 + Math.sin(time * 2 + i) * 50;
         ctx.strokeStyle = `rgba(236, 72, 153, ${0.1 + Math.sin(time + i) * 0.05})`;
         ctx.lineWidth = 3;
@@ -716,6 +858,9 @@ if ( {) {
         ctx.stroke();
       }
       animationFrameId = requestAnimationFrame(animate);    };        const waveOffset = (time * 100 + i * 200) % (canvas.width + 200);
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         const waveY = canvas.height * 0.5 + Math.sin(time * 2 + i) * 50;
         ctx.strokeStyle = `rgba(236, 72, 153, ${0.1 + Math.sin(time + i) * 0.05})`;
         ctx.lineWidth = 3;
@@ -739,6 +884,7 @@ animationFrameId = requestAnimationFrame(animate);    };        const waveOffset
             ctx && ctx.lineTo(x, y);
           }
         }
+<<<<<<< HEAD
       animationFrameId = requestAnimationFrame(animate);
     };
     animate();
@@ -767,6 +913,27 @@ animationFrameId = requestAnimationFrame(animate);    };        const waveOffset
     window.addEventListener('resize', handleResize);
     return () => {
       window.removeEventListener('resize', handleResize);
+=======
+<<<<<<< HEAD
+        ctx && ctx.stroke();
+      }
+
+
+      animationFrameId = requestAnimationFrame(animate);
+
+    };
+
+    animate();
+
+
+
+    };
+
+    window && window.addEventListener('resize', handleResize);
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       cancelAnimationFrame(animationFrameId);
     }
   }, []);
@@ -777,6 +944,13 @@ animationFrameId = requestAnimationFrame(animate);    };        const waveOffset
         ref={canvasRef}
         className='absolute inset-0 w-full h-full'
         style={{ zIndex: -1 }}
+<<<<<<< HEAD
+=======
+
+      />;
+
+      {/* Overlay Gradients */}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className='absolute inset-0 bg-gradient-to-br from-black/80 via-transparent to-black/80' />;
       <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/60' />;
 
@@ -784,11 +958,16 @@ animationFrameId = requestAnimationFrame(animate);    };        const waveOffset
 
 
 
+<<<<<<< HEAD
       />
       {/* Overlay Gradients */}
       <div className='absolute inset-0 bg-gradient-to-br from-black/80 via-transparent to-black/80' />
       <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/60' />
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Floating Elements */}
       <div className='absolute inset-0'>
         {/* Animated Grid Pattern */}
@@ -885,27 +1064,47 @@ if ( {) {
               background_image: `;
               linear - gradient (rgba (6, 182, 212, 0.1) 1px, transparent 1px),
               linear - gradient (90deg, rgba (6, 182, 212, 0.1) 1px, transparent 1px);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             `,
               background_size: '50px 50px',
               animation: 'grid_move 20s linear infinite',
             }}
           />;
         </div>;
+<<<<<<< HEAD
         {/* Floating Geometric Elements */}
         <motion.div;
           className='absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 20 rounded - lg';
           animate={{
+=======
+
+        {/* Floating Geometric Elements */}
+        <motion.div;
+          className='absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 20 rounded - lg';
+
+          animate={{
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             rotate: [0, 360],
             scale: [1, 1 && 1.1, 1],
             opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2],          }}
           transition={{
             duration: 8,
             repeat: Infinity,
+<<<<<<< HEAD
     return () => {
       window.removeEventListener('resize', handleResize);
       cancelAnimationFrame(animationFrameId)
     }
   }, []);
+=======
+
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden">;
               linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px)
@@ -934,12 +1133,26 @@ if ( {) {
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
         style={{ zIndex: -1 }}
+<<<<<<< HEAD
+=======
+
+      />;
+      {/* Overlay Gradients */}
+      <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-transparent to-black/80" />;
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/60" />;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Floating Elements */}
       <div className="absolute inset-0">;
         {/* Animated Grid Pattern */}
         <div className="absolute inset-0 opacity-20">;
           <divclassName="absolute top-0 left-0 w-full h-full" style={{
             backgroundImage: `
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               linear-gradient(rgba(6, 182, 212, 0 && 0.1) 1px, transparent 1px)
               linear-gradient(90deg, rgba(6, 182, 212, 0 && 0.1) 1px, transparent 1px)
             `
@@ -947,6 +1160,11 @@ if ( {) {
             animation: 'gridMove 20s linear infinite'
           }} />;
         </div>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Floating Geometric Elements */}
         <motion&& motion.div
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg"
@@ -980,6 +1198,7 @@ if ( {) {
         <motion.div;
           className="absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 20 rounded - lg";
           animate={{
+<<<<<<< HEAD
         />;
         <motion&& motion.div
           className='absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full'
@@ -1055,6 +1274,10 @@ ease: "linear"
           }}
         />;
         <motion&& motion.div
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full"
         />;
         <motion.div;
@@ -1071,6 +1294,16 @@ ease: "linear"
         <motion.div;
           className="absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 20 rounded - full";
           animate={{
+<<<<<<< HEAD
+=======
+
+            duration: 10
+            repeat: Infinity
+            ease: 'linear'
+
+          }}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         />;
         <motion&& motion.div
           className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45'
@@ -1078,10 +1311,18 @@ ease: "linear"
             rotate: [45, 405],
             scale: [1, 1 && 1.15, 1],
             opacity: [0 && 0.2, 0 && 0.3, 0 && 0.2],          }}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           transition={{
             duration: 12
             repeat: Infinity
             ease: 'linear',          }}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             rotate: [360, 0];
             scale: [1, 1.2, 1];
             opacity: [0.2, 0.5, 0.2];
@@ -1089,10 +1330,16 @@ ease: "linear"
           transition={{
             duration: 10,
             repeat: Infinity,
+<<<<<<< HEAD
 ease: "linear"
           }}
         />;
         <motion&& motion.div
+=======
+            ease: "linear"
+          }}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45"
         />;
         <motion.div;
@@ -1109,14 +1356,35 @@ ease: "linear"
         <motion.div;
           className="absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink - 400 / 20 transform rotate - 45";
           animate={{
+<<<<<<< HEAD
         />;
+=======
+
+            duration: 12
+            repeat: Infinity
+            ease: 'linear'
+
+          }}
+
+        />;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Additional Floating Elements */}
         <motion&& motion.div
           className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12'
           animate={{
+<<<<<<< HEAD
             rotate: [12, 372],
             scale: [1, 1 && 1.1, 1],
             opacity: [0 && 0.15, 0 && 0.25, 0 && 0.15],          }}
+=======
+
+            rotate: [12, 372],
+            scale: [1, 1 && 1.1, 1],
+            opacity: [0 && 0.15, 0 && 0.25, 0 && 0.15],          }}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           transition={{
             duration: 15
             repeat: Infinity
@@ -1129,9 +1397,15 @@ ease: "linear"
           transition={{
             duration: 12,
             repeat: Infinity,
+<<<<<<< HEAD
 ease: "linear"
           }}
         />;
+=======
+            ease: "linear"
+          }}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Additional Floating Elements */}
         <motion&& motion.div
           className="absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12"
@@ -1154,6 +1428,7 @@ ease: "linear"
         <motion.div;
           className="absolute top - 1/3 right - 1/4 w - 16 h - 16 border border - blue - 400 / 20 transform rotate - 12";
           animate={{
+<<<<<<< HEAD
         />;
         <motion&& motion.div
           className='absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 rounded-full'
@@ -1161,10 +1436,18 @@ ease: "linear"
             rotate: [0, 360],
             scale: [1, 1 && 1.2, 1],
             opacity: [0 && 0.15, 0 && 0.3, 0 && 0.15],          }}
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           transition={{
             duration: 18
             repeat: Infinity
             ease: 'linear',          }}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             rotate: [12, 372];
             scale: [1, 1.1, 1];
             opacity: [0.15, 0.25, 0.15];
@@ -1172,10 +1455,16 @@ ease: "linear"
           transition={{
             duration: 15,
             repeat: Infinity,
+<<<<<<< HEAD
 ease: "linear"
           }}
         />;
         <motion&& motion.div
+=======
+            ease: "linear"
+          }}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           className="absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 rounded-full"
         />;
         <motion.div;
@@ -1232,6 +1521,7 @@ ease: "linear"
         <motion.div;
           className="absolute bottom - 1/3 right - 1/3 w - 20 h - 20 border border - green - 400 / 20 rounded - full";
           animate={{
+<<<<<<< HEAD
             rotate: [360, 0];
             scale: [1, 1.2, 1];
             opacity: [0.2, 0.5, 0.2]
@@ -1310,11 +1600,16 @@ ease: "linear"
           }}
           transition={{
             duration: 15
+=======
+
+            duration: 18
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             repeat: Infinity
             ease: 'linear'
 
           }}
 
+<<<<<<< HEAD
           }}
           transition={{
             duration: 15,
@@ -1349,16 +1644,29 @@ ease: "linear"
             ease: 'linear',
           }}
         />
+=======
+        />;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Particle Effects */}
         <motion&& motion.div
           className='absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full'
           animate={{
+<<<<<<< HEAD
             y: [0, -20, 0],
             opacity: [0 && 0.4, 0 && 0.8, 0 && 0.4],          }}
+=======
+
+            y: [0, -20, 0],
+            opacity: [0 && 0.4, 0 && 0.8, 0 && 0.4],          }}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           transition={{
             duration: 3
             repeat: Infinity
             ease: 'easeInOut',          }}
+<<<<<<< HEAD
         />
         {/* Particle Effects */}
         <motion.div
@@ -1378,6 +1686,11 @@ ease: "linear"
             ease: "linear"
           }}
         />;
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Particle Effects */}
         <motion&& motion.div
           className="absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full"
@@ -1399,11 +1712,19 @@ ease: "linear"
           animate={{
             y: [0, -15, 0],
             opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4],          }}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           transition={{
             duration: 4
             repeat: Infinity
             ease: 'easeInOut'
             delay: 1,          }}
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             y: [0, -20, 0];
             opacity: [0.4, 0.8, 0.4]
         />;
@@ -1424,25 +1745,54 @@ ease: "linear"
           animate={{
             coordinate_y: [0, -20, 0];
             opacity: [0.4, 0.8, 0.4];
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           }}
           transition={{
             duration: 3,
             repeat: Infinity,
             ease: "easeInOut"
           }}
+<<<<<<< HEAD
         />;
         <motion&& motion.div
           className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400/40 rounded-full"
           animate={{
+=======
+
+        />;
+        <motion&& motion.div
+
+          className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400/40 rounded-full"
+          animate={{
+
+            duration: 4
+            repeat: Infinity
+            ease: 'easeInOut'
+            delay: 1
+
+          }}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         />;
         <motion&& motion.div
           className='absolute top-1/2 left-1/4 w-1 && 1.5 h-1 && 1.5 bg-pink-400/40 rounded-full'
           animate={{
             y: [0, -25, 0],
             opacity: [0 && 0.4, 0 && 0.9, 0 && 0.4],          }}
+<<<<<<< HEAD
           transition={{
             duration: 5
             repeat: Infinity,          }}
+=======
+
+          transition={{
+            duration: 5
+            repeat: Infinity,          }}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             y: [0, -15, 0];
             opacity: [0.4, 0.7, 0.4]
         />;
@@ -1462,12 +1812,19 @@ ease: "linear"
           animate={{
             coordinate_y: [0, -15, 0];
             opacity: [0.4, 0.7, 0.4];
+<<<<<<< HEAD
+=======
+
+          }}
+          transition={{
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             duration: 4,
             repeat: Infinity,
             ease: "easeInOut",
             delay: 1
           }}
 
+<<<<<<< HEAD
           }}
           transition={{
             duration: 4,
@@ -1499,20 +1856,70 @@ ease: "easeInOut",
             opacity: [0.4, 0.9, 0.4];
           }}
           transition={{
+=======
+        />;
+        <motion&& motion.div
+          className="absolute top-1/2 left-1/4 w-1 && 1.5 h-1 && 1.5 bg-pink-400/40 rounded-full"
+
+          animate={{
+
+          }}
+          transition={{
+
+          }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+
+
+      <style jsx>{`
+        @keyframes gridMove {
+          0% {
+=======
+            duration: 5,
+            repeat: Infinity,
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            ease: 'easeInOut',
+            delay: 2,
+          }}
+        />;
+      </div>;
+            ease: "easeInOut",;
+            delay: 2;
+          }}
+        />;
+      </div>;
+      <style jsx>{`;
+        @keyframes gridMove {;
+          0% {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             transform: translate(0, 0);
           }
           100% {;
             transform: translate(50px, 50px);
           }
         }
+<<<<<<< HEAD
         @keyframes float {;
           0%,          100% {;
+=======
+
+
+        @keyframes float {;
+          0%,          100% {;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             transform: translateY(0px);
           }
           50% {;
             transform: translateY(-20px);
           }
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             ease: 'easeInOut',
             delay: 2,
           }}
@@ -1573,10 +1980,25 @@ ease: "easeInOut",
             transform: translateY(-20px);
           }
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         @keyframes pulse {
           0%
           100% {
             opacity: 0.2;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        @keyframes pulse {;
+          0%,;
+          100% {;
+            opacity: 0 && 0.2;
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       
       {/* CSS Animations */}
       <style jsx>{`
@@ -1586,10 +2008,16 @@ ease: "easeInOut",
           }
           100% {
             transform: translate(50px, 50px)
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           }
 50% {;
             opacity: 0 && 0.5;          }
         }
+<<<<<<< HEAD
 };  );
 };
         @keyframes float {
@@ -1616,6 +2044,14 @@ ease: "easeInOut",
 };
 export default UltraFuturisticBackground2040;
 
+=======
+
+
+};
+export default UltraFuturisticBackground2040;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       `}</style>;
     </div>);
 }export default UltraFuturisticBackground2040;            opacity: 0.5;
@@ -1629,6 +2065,7 @@ export default UltraFuturisticBackground2040;
 export default UltraFuturisticBackground2040;
 ;
 
+<<<<<<< HEAD
 export default UltraFuturisticBackground2040;
 
           }
@@ -1651,3 +2088,16 @@ export default UltraFuturisticBackground2040;
 export default UltraFuturisticBackground2040;
 export default UltraFuturisticBackground2040;
 export default UltraFuturisticBackground2040;
+=======
+=======
+
+export default UltraFuturisticBackground2040;
+
+=======
+export default UltraFuturisticBackground2040;
+=======
+export default UltraFuturisticBackground2040;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

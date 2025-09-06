@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 export interface Branding {;
 
@@ -23,6 +24,12 @@ export interface Branding {;
   primaryColor?: string;
   secondaryColor?: string;
   subdomain?: string;
+=======
+=======
+
+export interface Branding {;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   logoUrl?: string,;
   primaryColor?: string,;
   secondaryColor?: string,;
@@ -31,10 +38,19 @@ export interface Branding {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 ;
 export interface DeployModules {;
   marketplace: boolean;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   gpt: boolean;
   academy: boolean;
   token: boolean;
@@ -48,6 +64,11 @@ export interface DeployModules {;
   // Bonus;
 
 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   globalMap?: boolean,;
   franchiseOnboarding?: boolean,;
   referralAmbassadors?: boolean,;
@@ -59,12 +80,15 @@ export interface DeployModules {;
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD
   globalMap?: boolean;
   franchiseOnboarding?: boolean;
   referralAmbassadors?: boolean;
   grantPortal?: boolean;
   trailer?: boolean;
   bookStore?: boolean;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 ;
 export interface DeployInput {;
@@ -75,6 +99,7 @@ export interface DeployInput {;
 
 
 }
+<<<<<<< HEAD
 export interface DeployResult {success: boolean;
   globalMap?: boolean,;
   franchiseOnboarding?: boolean,;
@@ -143,12 +168,23 @@ export interface GeneratedAsset {;
 ;
 export interface DeployResult {;
   success: boolean;
+=======
+;
+export interface DeployResult {;
+  success: boolean;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   instanceSlug: string;
   configPath: string;
   assets: GeneratedAsset[];
   logs: DeployLogEntry[];
   summary: string;
   version: string;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export type GovernanceMode = "Admin" | "DAO" | "Hybrid",
 export interface Branding {
   logo_url?: string,
@@ -230,6 +266,7 @@ export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | 
 
 }
 
+<<<<<<< HEAD
 }
 ;
 export interface AccessControlConfig {;
@@ -241,3 +278,5 @@ export interface AccessControlConfig {;
   }
 }
 }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

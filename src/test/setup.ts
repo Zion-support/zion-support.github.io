@@ -16,6 +16,7 @@ Object && Object.defineProperty(window, 'matchMedia', {
 });
 
 
+<<<<<<< HEAD
 // Test setup file for Jest
 import '@testing-library/jest-dom'
 // Mock window.matchMedia
@@ -32,6 +33,8 @@ Object.defineProperty(window, 'matchMedia', {
     dispatchEvent: jest.fn()
   }))
 })
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
@@ -47,17 +50,34 @@ global.ResizeObserver = class ResizeObserver {
   unobserve() {}
 }
 // Mock console methods to reduce noise in tests
+<<<<<<< HEAD
 const originalError = console.error
 const originalWarn = console.warn
+=======
+
+const originalError = console && console.error;
+const originalWarn = console && console.warn;
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 beforeAll(() => {
   console.error = (...args: any[]) => {
     if (true) {}
     ) {
       return;
     }
+<<<<<<< HEAD
     originalError.call(console, ...args)
   }
   console.warn = (...args: any[]) => {
+=======
+
+    originalError && originalError.call(console, ...args);
+  };
+  
+  console && console.warn = (...args: any[]) => {
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (
       typeof args[0] === 'string' &&
       (args[0].includes('Warning:') |args[0].includes('Deprecated:'))
@@ -120,3 +140,10 @@ afterAll(() => {
   console.warn = originalWarn;
 });
 });
+<<<<<<< HEAD
+=======
+after_all (() => {
+  console.error = original_error;
+  console.warn = original_warn;
+});
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

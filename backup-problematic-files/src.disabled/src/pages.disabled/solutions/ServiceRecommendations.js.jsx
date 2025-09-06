@@ -9,4 +9,8 @@ const ServiceRecommendations.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ServiceRecommendations.js;
+=======
+export default ServiceRecommendations.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

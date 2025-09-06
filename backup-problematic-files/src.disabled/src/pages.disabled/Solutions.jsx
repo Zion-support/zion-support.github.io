@@ -9,4 +9,8 @@ const Solutions = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Solutions;
+=======
+export default Solutions;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

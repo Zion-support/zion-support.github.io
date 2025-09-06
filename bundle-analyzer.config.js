@@ -4,15 +4,22 @@ module.exports = {; "webpack": (config { isServer }) = > {; if ( {; config.plugi
 ;
 
 
+<<<<<<< HEAD
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 module.exports = {"webpack": (config { isServer }) = > {if ( {; config.plugins.push() {; {; config.plugins.push(}; new BundleAnalyzerPlugin({"analyzerMode": 'static'; openAnalyzer: false
     reportFilename: 'bundle-analysis.htm,l'}); )}; return config}}
 module.exports = {; "webpack": (config { isServer }) = > {; if ( {; config.plugins.push() {; {; config.plugins.push(}; new BundleAnalyzerPlugin({; "analyzerMode": 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}); )}; return config}};
 ;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 module.exports = {"webpack": (config { isServer }) => {if ( {;
       config.plugins.push() {;
      {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 module && module.exports = {; "webpack": (config { isServer }) = > {; if ( {; config && config.plugins.push() {; {; config && config.plugins.push(}; new BundleAnalyzerPlugin({; "analyzerMode": 'static'; openAnalyzer: false,
     reportFilename: 'bundle-analysis && analysis.htm,l'}); )}; return config}};
 
@@ -44,6 +51,7 @@ module && module.exports = {
           openAnalyzer: false,
           reportFilename: 'bundle-analysis && analysis.html'
 
+<<<<<<< HEAD
       config.plugins.push(}
         new BundleAnalyzerPlugin({"analyzerMode": 'static';
           openAnalyzer: false
@@ -59,11 +67,14 @@ module && module.exports = {
           "analyzerMode": 'static',
           openAnalyzer: false,
           reportFilename: 'bundle-analysis.html'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         })
       );
     }
     return config;
   }
+<<<<<<< HEAD
 };
 /* eslint-env node */
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
@@ -87,6 +98,8 @@ module.exports = {
     }
     return config;
   }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -97,6 +110,7 @@ module.exports = {
 
 }
 
+<<<<<<< HEAD
 };
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}); )} return config} };
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}); )} return config} };
@@ -108,12 +122,25 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 }
 }
+=======
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/automation-improvements-final
+=======
+}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 };
 
 
 }
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 ;
@@ -136,6 +163,7 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 origin/main
 origin/automation-improvements-final
 }
@@ -158,3 +186,6 @@ module.exports = {,;
       )},;
     return config}
 },;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

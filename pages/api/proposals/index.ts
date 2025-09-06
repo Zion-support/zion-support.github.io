@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -13,6 +14,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
 const FILE_PATH = path.join(process.cwd(), 'dataproposalsindex.json');
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -28,6 +32,7 @@ async function ensureStore() {
   }
 }
 
+<<<<<<< HEAD
     const raw = await fs.readFile(FILE_PATH, 'utf8');
     if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
   } catch {
@@ -69,6 +74,8 @@ export default async function handler(
   if (req.method === "POST") {
     const body = req.body |{}
     const data = await fs.readJson(FILE_PATH);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (req && req.method === "POST") {
     const body = req && req.body || {};
     const data = await fs && fs.readJson(FILE_PATH);
@@ -109,6 +116,7 @@ async function ensureStore() {
   res && res.status(405).json({ error: "Method not allowed" });
 
   res && res.status(405).json({ error: "Method not allowed" });
+<<<<<<< HEAD
 }
     const raw = await fs.readFile(FILE_PATH, 'utf8');
     if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 })
@@ -135,7 +143,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(201).json(item)
   }
   res.status(405).json({ error: 'Method not allowed' })
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs - extra';
 import path from './path';
@@ -150,17 +163,6 @@ function ensure_store() {
     if (await fs.write_json (FILE_PATH, { items: [] }, { spaces: 2 })) {
   $2
 }
-import type { NextApiRequest, NextApiResponse } from "next";
-import fs from "fs-extra";
-import path from "path";
-const FILE_PATH = path.join(process.cwd(), "dataproposalsindex.json");
-async function ensureStore() {
-  await fs.ensureFile(FILE_PATH);
-  try {
-    const raw = await fs.readFile(FILE_PATH, "utf8");
-
-    if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
-
   } catch {
     await fs.write_json (FILE_PATH, { items: [] }, { spaces: 2 });
   }
@@ -176,11 +178,6 @@ if ( {) {
 }
     const data = await fs.read_json (FILE_PATH);
     return res.status (200).json (data);
-  await ensureStore();
-  if (req.method === "GET") {
-    const data = await fs.readJson(FILE_PATH);
-    return res.status(200).json(data);
-
   }
   // Check condition
 if ( {) {
@@ -202,6 +199,7 @@ if ( {) {
     return res.status (201).json (item);
   }
   res.status (405).json ({ error: "Method not allowed" });
+<<<<<<< HEAD
 }
 
 res.status (405).json ({ error: "Method not allowed" });
@@ -231,11 +229,18 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   if (req.method === 'GET') {
     const body = req.body || {};
     const data = await fs.readJson(FILE_PATH);
@@ -264,6 +269,8 @@ export default async function handler(req, res) {
   }
 }
   res.status(405).json({ error: 'Method not allowed' });
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -277,3 +284,8 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,11 +1,18 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
+=======
+
+import React from 'react';
+import Head from 'next / head';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {
   RefreshCw,
   Zap,
   Bot,
   Workflow,
   ArrowRight,
+<<<<<<< HEAD
   Check,;
   BarChart3,;
 } from 'lucide-react';
@@ -18,6 +25,8 @@ import {
   Bot,
   Workflow,
   ArrowRight,
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Check,
   BarChart3,
 
@@ -40,6 +49,7 @@ export default function AutomationPage() {
       icon: <Workflow className="w-8 h-8 text-white" />,
       title: 'Workflow Automation',
 
+<<<<<<< HEAD
 import Head from 'next/head';
 
 import {
@@ -56,6 +66,8 @@ export default function AutomationPage() {
     {
       icon: <Workflow className='w-8 h-8 text-white' />
       title: 'Workflow Automation'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       description: 'Create complex workflows with drag-and-drop interface'
     }
     {
@@ -75,6 +87,64 @@ export default function AutomationPage() {
     }
   ];
   const benefits = [
+<<<<<<< HEAD
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Head from 'next/head';
+import {;
+  RefreshCw,;
+  Zap,;
+  Bot,;
+  Workflow,;
+  ArrowRight,;
+  Check,;
+  BarChart3,;
+} from 'lucide-react';
+export default function AutomationPage() {;
+  const features = [;
+    {;
+      icon: <Workflow className='w-8 h-8 text-white' />,;
+      title: 'Workflow Automation',;
+      description: 'Create complex workflows with drag-and-drop interface',;
+    },;
+    {;
+      icon: <Bot className='w-8 h-8 text-white' />,;
+      title: 'AI-Powered Bots',;
+      description: 'Intelligent automation agents that learn and adapt',;
+    },;
+    {;
+      icon: <BarChart3 className='w-8 h-8 text-white' />,;
+      title: 'Process Analytics',;
+      description: 'Real-time insights into your automation performance',;
+    },;
+    {;
+      icon: <Zap className='w-8 h-8 text-white' />,;
+      title: 'Smart Triggers',;
+      description: 'Automated responses based on events and conditions',;
+    },;
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 export default function AutomationPage() {
@@ -108,7 +178,10 @@ export default function AutomationPage() {
 
   const benefits = [
 
+<<<<<<< HEAD
     'Reduce manual tasks by 80%Improve process accuracyScale operations efficiently24/7 automated operationsReal-time monitoringCustom integration support'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     'Reduce manual tasks by 80%Improve process accuracyScale operations efficiently24/7 automated operationsReal-time monitoringCustom integration support'
   ];
   const benefits = [;
@@ -146,6 +219,7 @@ export default function AutomationPage() {
     'Real - time monitoring',
     'Custom integration support',  ];
 ;
+<<<<<<< HEAD
 
     <>
       <Head>
@@ -224,11 +298,18 @@ export default function AutomationPage() {
     'Reduce manual tasks by 80%Improve process accuracyScale operations efficiently24/7 automated operationsReal-time monitoringCustom integration support'
   ],
   return (
+=======
+  return (
+
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <>
       <Head>
         <title>Automation Hub - Zion Tech Group</title>
         <meta name="description" content="AI-powered workflow automation platform that streamlines your business processes and increases efficiency." />
       </Head>
+<<<<<<< HEAD
       <div className='min-h-screen bg-black'>
         {/* Hero Section */}
         <section className='pt-32 pb-20 relative overflow-hidden'>
@@ -244,6 +325,9 @@ export default function AutomationPage() {
               </div>
             </div>
             <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight'>
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="min-h-screen bg-black">
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -263,6 +347,13 @@ export default function AutomationPage() {
               </div>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Automation Hub
             </h1>
             <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
@@ -272,17 +363,34 @@ export default function AutomationPage() {
 
 
 
+<<<<<<< HEAD
             <div className='flex flex-col sm:flex-row gap-6 justify-center'>
               <a href='/contact' className='shadow-2xl shadow-blue-500/25'>
                 Start Automating
                 <ArrowRight className='w-5 h-5 ml-2' />
               </a>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <a
                 href="/contact" className="shadow-2xl shadow-blue-500/25">
                 Start Automating
                 <ArrowRight className="w-5 h-5 ml-2" />
+<<<<<<< HEAD
         {/* Features Section */}
+=======
+<<<<<<< HEAD
+              </a>
+              <a
+                href="/contact" className="border-white/20 hover:border-white/40">
+                View Demo
+              </a>
+            </div>
+          </div>
+        </section>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         />;
       </Head>;
       <div className='min-h-screen bg-black'>;
@@ -330,6 +438,10 @@ export default function AutomationPage() {
             </div>;
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
               {features && features.map((feature, index) => (;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div
                   key={index}
                   className='p-8 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
@@ -343,6 +455,7 @@ export default function AutomationPage() {
                   </p>;
                 </div>;
 
+<<<<<<< HEAD
 
               </Link>
               <a
@@ -357,15 +470,31 @@ export default function AutomationPage() {
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+=======
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Features Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <section className="py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 Automation Features
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -376,12 +505,27 @@ export default function AutomationPage() {
 
 
 
+<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {features.map((feature, index) => (
                 <div
                   key={index} className="p-8 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300">
                   <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">
+                    {feature.title}
+                  </h3>
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                   <p className="text-gray-400 leading-relaxed">
                     {feature.description  } catch (error) {
@@ -398,12 +542,15 @@ export default function AutomationPage() {
 }
 
             </div>;
+<<<<<<< HEAD
                   <p className="text-gray-400 leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
               ))}
 </div>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>;
         </section>;
         {/* Benefits Section */}
@@ -425,6 +572,7 @@ export default function AutomationPage() {
         <section className="py-24 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<<<<<<< HEAD
                     {feature.icon  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -473,6 +621,12 @@ export default function AutomationPage() {
         <section className="py-24 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div>
                 <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
                   Transform Your Business with Automation
@@ -485,6 +639,7 @@ export default function AutomationPage() {
                       </div>
                       <span className="text-gray-300 text-lg">{benefit}</span>
                     </div>
+<<<<<<< HEAD
                   ))}
                   ))  } catch (error) {
     console.error("Error:", error);
@@ -503,11 +658,27 @@ export default function AutomationPage() {
                   <div className='text-center'>
                     <RefreshCw className='w-24 h-24 mx-auto mb-6 text-blue-400' />
                     <h3 className='text-2xl font-bold text-white mb-4'>
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+                  ))}
+
+              
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className="relative">
                 <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl p-8 border border-blue-500/20">
                   <div className="text-center">
                     <RefreshCw className="w-24 h-24 mx-auto mb-6 text-blue-400" />
                     <h3 className="text-2xl font-bold text-white mb-4">
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       Smart Workflows
                     </h3>
                     <p className="text-gray-300 mb-6">
@@ -516,6 +687,10 @@ export default function AutomationPage() {
                     <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-400 text-sm">
                       <Zap className="w-4 h-4 mr-2" />
                       AI-powered optimization
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     </div>
                   </div>
                 </div>
@@ -523,6 +698,11 @@ export default function AutomationPage() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         {/* CTA Section */}
         <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700'>
@@ -581,7 +761,10 @@ export default function AutomationPage() {
   }
 }
                 </div>;
+<<<<<<< HEAD
 </div>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </div>;
               <div className='relative'>;
                 <div className='bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl p-8 border border-blue-500/20'>;
@@ -704,10 +887,16 @@ export default function AutomationPage() {
           </div>;
         </section>;
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* CTA Section */}
         <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700">
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+<<<<<<< HEAD
         {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -716,12 +905,15 @@ export default function AutomationPage() {
         <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700">
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Ready to Automate Your Workflows?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Start automating your business processes today
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
               <a
                 href="/contact" className="border-white text-white hover:bg-white hover:text-blue-600">
                 Schedule Demo
@@ -805,18 +997,48 @@ export default function AutomationPage() {
               <a;
                 href="/contact" className="border-white text-white hover:bg-white hover:text-blue-600">;
                 Schedule Demo;
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+              <a
+<<<<<<< HEAD
+                href='/contact'
+                className='bg-white text-blue-600 hover:bg-gray-100'>;
+                Start Free Trial;
+              </a>;
+              <a
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </a>;
             </div>;
           </div>;
         </section>;
       </div>;
+<<<<<<< HEAD
     </>);
 ;
     </>;
   );
+=======
+
+
+=======
+    </>);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

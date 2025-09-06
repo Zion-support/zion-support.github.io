@@ -1,7 +1,13 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react',
 
 
 export function ProfileLoadingState() {
+<<<<<<< HEAD
   return (
 import React from 'react';
 
@@ -16,6 +22,10 @@ export function ProfileLoadingState() {
         Loading profile...
       </div>
     </div>
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     <div className="min-h-screen bg-zion-blue flex justify-center items-center p-4">;
 import React from './react';
@@ -35,6 +45,7 @@ function ProfileLoadingState() {
 }
 ;
 
+<<<<<<< HEAD
 
 import React from 'react',;
 ;
@@ -55,3 +66,6 @@ export function ProfileLoadingState() {;
   )
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
