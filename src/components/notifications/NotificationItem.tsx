@@ -5,7 +5,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui/tooltip';
-import { useRouter } from 'next/router';
+import { useNavigate } from 'react-router-dom';
 import { Notification, NotificationType } from '@/context/notifications';
 import { Check, Trash2, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -43,7 +43,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
   onMarkAsRead,
   onDismiss,
 }) => {
-  const router = useRouter();
+  const navigate = useNavigate();
 
   const handleMarkAsRead = async () => {
     if (!notification.read) {
@@ -57,7 +57,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
 
   const handleClick = () => {
     if (notification.actionUrl) {
-      router.push(notification.actionUrl);
+      navigate(notification.actionUrl);
     }
     handleMarkAsRead();
   };
