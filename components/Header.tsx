@@ -1,73 +1,102 @@
-'use client';
-
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Brain, Network, Cloud, Shield, Code, Zap, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
-import { useRouter } from 'next/router';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Phone, 
+  Mail, 
+  Facebook, 
+  Twitter, 
+  Linkedin, 
+  Instagram, 
+  ChevronDown, 
+  Menu, 
+  X,
+  Brain,
+  TrendingUp,
+  FileText,
+  Database,
+  Shield,
+  Zap,
+  Cog,
+  Code
+} from 'lucide-react';
 
-const servicesDropdown = [
-  {
-    icon: Brain,
-    title: 'AI & Machine Learning',
-    description: 'Intelligent solutions for business automation',
-    href: '/ai-services',
-  },
-  {
-    icon: Shield,
-    title: 'Cybersecurity',
-    description: 'Advanced security and threat protection',
-    href: '/it-services',
-  },
-  {
-    icon: Cloud,
-    title: 'Cloud Infrastructure',
-    description: 'Scalable cloud solutions and migration',
-    href: '/it-services',
-  },
-  {
-    icon: Code,
-    title: 'Custom Software Development',
-    description: 'Tailored applications to meet your specific business needs',
-    href: '/services',
-  },
-  {
-    icon: Network,
-    title: 'System Integration',
-    description: 'Seamless integration of existing systems',
-    href: '/services',
-  },
-];
+interface HeaderProps {
+  className?: string;
+}
 
-const Header = () => {
+const Header: React.FC<HeaderProps> = ({ className = '' }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const router = useRouter();
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
-    };
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const servicesDropdown = [
+    {
+      title: 'AI Services',
+      href: '/ai-services',
+      description: 'Advanced AI solutions',
+      icon: Brain
+    },
+    {
+      title: 'IT Solutions',
+      href: '/it-solutions',
+      description: 'Complete IT infrastructure',
+      icon: Database
+    },
+    {
+      title: 'Micro SaaS',
+      href: '/micro-saas',
+      description: 'Custom SaaS applications',
+      icon: Zap
+    },
+    {
+      title: 'Web Development',
+      href: '/web-development',
+      description: 'Modern web applications',
+      icon: Code
+    }
+  ];
 
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-    setIsServicesOpen(false);
-  };
+  const solutionsDropdown = [
+    {
+      title: 'Cloud Migration',
+      href: '/cloud-migration',
+      description: 'Seamless cloud transitions',
+      icon: Database
+    },
+    {
+      title: 'Cybersecurity',
+      href: '/cybersecurity',
+      description: 'Protect your digital assets',
+      icon: Shield
+    },
+    {
+      title: 'Analytics',
+      href: '/analytics',
+      description: 'Data-driven insights',
+      icon: TrendingUp
+    }
+  ];
 
-  const handleServiceClick = (href: string) => {
-    router.push(href);
-    closeMenu();
-  };
+  const industriesDropdown = [
+    { name: 'Healthcare', href: '/healthcare', icon: Shield },
+    { name: 'Finance', href: '/finance', icon: TrendingUp },
+    { name: 'Education', href: '/education', icon: FileText },
+    { name: 'Manufacturing', href: '/manufacturing', icon: Cog }
+  ];
+
+  const navigation = [
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Services', href: '/services' },
+    { name: 'Contact', href: '/contact' }
+  ];
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled ? 'bg-white shadow-lg' : 'bg-transparent'
-    }`}>
+    <header className={`bg-white shadow-lg ${className}`}>
       {/* Top Bar */}
       <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4">
@@ -120,34 +149,66 @@ const Header = () => {
               >
                 Services <ChevronDown className="w-4 h-4 ml-1" />
               </button>
-
               <AnimatePresence>
                 {isServicesOpen && (
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
-                    className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4 z-50"
+                    className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border z-50"
                     onMouseEnter={() => setIsServicesOpen(true)}
                     onMouseLeave={() => setIsServicesOpen(false)}
                   >
-                    <div className="grid grid-cols-1 gap-2">
-                      {servicesDropdown.map((service, index) => (
-                        <button
-                          key={index}
-                          onClick={() => handleServiceClick(service.href)}
-                          className="flex items-start p-4 hover:bg-gray-50 transition-colors text-left"
-                        >
-                          <service.icon className="h-5 w-5 mr-3 text-blue-600 mt-0.5" />
-                          <div>
-                            <h3 className="font-semibold text-gray-900 mb-1">
-                              {service.title}
-                            </h3>
-                            <p className="text-gray-600 text-sm">
-                              {service.description}
-                            </p>
+                    <div className="p-6">
+                      <div className="grid grid-cols-2 gap-4">
+                        {servicesDropdown.map((service) => (
+                          <Link key={service.title} href={service.href} className="group">
+                            <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                              <service.icon className="w-6 h-6 text-blue-600 mt-1" />
+                              <div>
+                                <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">{service.title}</h3>
+                                <p className="text-sm text-gray-600">{service.description}</p>
+                              </div>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* Solutions Dropdown */}
+            <div className="relative group">
+              <button
+                className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                onMouseEnter={() => setIsSolutionsOpen(true)}
+                onMouseLeave={() => setIsSolutionsOpen(false)}
+              >
+                Solutions <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              <AnimatePresence>
+                {isSolutionsOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border z-50"
+                    onMouseEnter={() => setIsSolutionsOpen(true)}
+                    onMouseLeave={() => setIsSolutionsOpen(false)}
+                  >
+                    <div className="p-6">
+                      {solutionsDropdown.map((solution) => (
+                        <Link key={solution.title} href={solution.href} className="group block mb-4 last:mb-0">
+                          <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                            <solution.icon className="w-6 h-6 text-blue-600 mt-1" />
+                            <div>
+                              <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">{solution.title}</h3>
+                              <p className="text-sm text-gray-600">{solution.description}</p>
+                            </div>
                           </div>
-                        </button>
+                        </Link>
                       ))}
                     </div>
                   </motion.div>
@@ -155,35 +216,57 @@ const Header = () => {
               </AnimatePresence>
             </div>
 
-            <Link href="/about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-              About
-            </Link>
-            <Link href="/solutions" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-              Solutions
-            </Link>
-            <Link href="/research" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-              Research
-            </Link>
-            <Link href="/contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-              Contact
-            </Link>
-            <Link 
-              href="/contact" 
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200"
-            >
-              Get Started
-            </Link>
+            {/* Industries Dropdown */}
+            <div className="relative group">
+              <button
+                className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                onMouseEnter={() => setIsIndustriesOpen(true)}
+                onMouseLeave={() => setIsIndustriesOpen(false)}
+              >
+                Industries <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              <AnimatePresence>
+                {isIndustriesOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border z-50"
+                    onMouseEnter={() => setIsIndustriesOpen(true)}
+                    onMouseLeave={() => setIsIndustriesOpen(false)}
+                  >
+                    <div className="p-4">
+                      {industriesDropdown.map((industry) => (
+                        <Link key={industry.name} href={industry.href} className="group flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 transition-colors">
+                          <industry.icon className="w-5 h-5 text-blue-600" />
+                          <span className="text-gray-700 group-hover:text-blue-600">{industry.name}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* Regular Navigation Links */}
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              >
+                {item.name}
+              </Link>
+            ))}
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-blue-600 transition-colors"
-            >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
+          <button
+            className="lg:hidden p-2"
+            onClick={toggleMenu}
+          >
+            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
         </div>
 
         {/* Mobile Menu */}
@@ -193,41 +276,24 @@ const Header = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden bg-white border-t border-gray-200"
+              className="lg:hidden"
             >
-              <div className="py-4 space-y-2">
-                <Link
-                  href="/about"
-                  onClick={closeMenu}
-                  className="block px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors"
-                >
-                  About
-                </Link>
-                <Link
-                  href="/solutions"
-                  onClick={closeMenu}
-                  className="block px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors"
-                >
-                  Solutions
-                </Link>
-                <Link
-                  href="/research"
-                  onClick={closeMenu}
-                  className="block px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors"
-                >
-                  Research
-                </Link>
+              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
+                {navigation.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+                
                 <Link
                   href="/contact"
-                  onClick={closeMenu}
-                  className="block px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors"
-                >
-                  Contact
-                </Link>
-                <Link
-                  href="/contact"
-                  onClick={closeMenu}
-                  className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200 mx-4"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200"
                 >
                   Get Started
                 </Link>
