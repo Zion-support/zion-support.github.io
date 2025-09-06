@@ -30,6 +30,12 @@ files.for_each ((file) => {
         return match.replace (",", ";");
 
 
+<<<<<<< HEAD
+=======
+    content = content.replace(;
+      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     content = content.replace(;
       /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
 

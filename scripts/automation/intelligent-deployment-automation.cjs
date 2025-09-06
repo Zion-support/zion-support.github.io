@@ -111,11 +111,4 @@ const http = require('http')
       this.log(' Intelligent Deployment Automation is ready')
       process.on('SIGINT')
         this.log('� Shutting down Deployment Automation...')
-<<<<<<< HEAD
-<<<<<<< HEAD
-      this.log(` Fatal error: ${error.message}`, 'ERROR'`)
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-      this.log(` Fatal error: ${error.message}`, 'ERROR'`)
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+

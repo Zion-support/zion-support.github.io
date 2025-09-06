@@ -1,13 +1,25 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
+<<<<<<< HEAD
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
     './src/**/*.{js,ts,jsx,tsx}'
+=======
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   ],
   theme: {
     extend: {
       colors: {
+<<<<<<< HEAD
+=======
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         primary: {
           50: '#eff6ff',
           500: '#3b82f6',
@@ -136,4 +148,8 @@ module.exports = {
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
   ],
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

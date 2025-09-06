@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,6 +26,10 @@
 =======
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -385,6 +390,7 @@ if ( {})
       process.exit(1)})};
 module.exports = DependencyManager;
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = DependencyManager;
 module.exports = DependencyManager;
 module.exports = DependencyManager;
@@ -419,3 +425,9 @@ module.exports = DependencyManager;
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+module.exports = DependencyManager;
+module.exports = DependencyManager;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

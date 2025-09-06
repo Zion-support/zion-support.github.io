@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 }},
 =======
 <<<<<<< HEAD
@@ -18,6 +19,11 @@
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+}},
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -32,12 +38,7 @@ const securityChecks = [{
       }
     },
   },
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
     }},
   {
     "name": 'Environment Variables Check',
@@ -53,6 +54,7 @@ const securityChecks = [{
         }
       });
 
+<<<<<<< HEAD
       
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -84,6 +86,8 @@ const securityChecks = [{
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     }},
   {
     "name": 'API Security Check',
@@ -101,6 +105,7 @@ const securityChecks = [{
           if (
             content.includes('process.env') &&
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -127,12 +132,16 @@ const securityChecks = [{
 =======
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
             !content.includes('// "Security": ')
           ) {
             securityIssues++;
           }
         });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -150,17 +159,17 @@ const securityChecks = [{
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         console.log(
           `Found ${apiFiles.length} API files, ${securityIssues} potential security issues`
         );
       }
     },
   },
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
+<<<<<<< HEAD
         
 <<<<<<< HEAD
 =======
@@ -177,6 +186,8 @@ const securityChecks = [{
         
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       }
     }},
   {
@@ -200,6 +211,7 @@ const securityChecks = [{
           }
         });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -217,15 +229,15 @@ const securityChecks = [{
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         console.log(`Found CSP in ${cspFound}/${pages.length} pages`);
       }
     },
   },
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
+<<<<<<< HEAD
         
 <<<<<<< HEAD
 =======
@@ -242,6 +254,8 @@ const securityChecks = [{
         
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       }
     }},
   {
@@ -260,6 +274,7 @@ const securityChecks = [{
         
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -289,6 +304,9 @@ const securityChecks = [{
 =======
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     }},
 ];
 
@@ -307,14 +325,12 @@ for (const check of securityChecks) {
   }
 }
 
-
-
-
 // Generate security report
 const report = {
   "timestamp": new Date().toISOString(),
   "checks": securityChecks.map(check => ({
     name: check.name,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -329,6 +345,9 @@ const report = {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     status: 'completed',
   })),
   summary: {
@@ -337,6 +356,7 @@ const report = {
     failed: totalCount - successCount,
   },
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -355,13 +375,16 @@ const report = {
 =======
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     "status": 'completed'})),
   "summary": {
     total: totalCount,
     "successful": successCount,
     "failed": totalCount - successCount}};
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 
@@ -398,6 +421,8 @@ const report = {
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 const reportsDir = path.join(process.cwd(), 'automation-reports');
 if (!fs.existsSync(reportsDir)) {
   fs.mkdirSync(reportsDir, { "recursive": true });
@@ -406,6 +431,7 @@ if (!fs.existsSync(reportsDir)) {
 const reportFile = path.join(reportsDir, `security-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -442,6 +468,8 @@ fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -455,6 +483,7 @@ console.log('� Security Audit Starting...\n')
     "name"
     "name"
     "status"
+<<<<<<< HEAD
 <<<<<<< HEAD
     "status"
     "status"
@@ -490,3 +519,9 @@ console.log('� Security Audit Starting...\n')
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+    "status"
+    "status"
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

@@ -33,6 +33,7 @@ class ComprehensiveAutomationRunner {
       this.results.push({ script: scriptName, success: false, error: error.message });
       return { success: false, error: error.message };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -41,6 +42,9 @@ class ComprehensiveAutomationRunner {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 console.log('🚀 Starting Comprehensive Automation Runner...');
 
 class ComprehensiveAutomationRunner {
@@ -72,8 +76,8 @@ class ComprehensiveAutomationRunner {
     } catch (error) {
       this.log(`❌ ${scriptName} failed: ${error.message}`);
       return { success: false, script: scriptName, error: error.message };
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -86,10 +90,13 @@ class ComprehensiveAutomationRunner {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     }
   }
 
   async runAllAutomations() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -173,6 +180,9 @@ runner.run().catch(console.error);
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     const automations = [
       { name: 'Master Orchestrator', path: 'automation/master-orchestrator.cjs' },
       { name: 'Comprehensive App Improvement Suite', path: 'automation/comprehensive-app-improvement-suite.cjs' },
@@ -219,8 +229,8 @@ runner.run().catch(console.error);
 // Run all automations
 const runner = new ComprehensiveAutomationRunner();
 runner.runAllAutomations().catch(console.error);
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -239,6 +249,8 @@ runner.runAllAutomations().catch(console.error);
     this.log('📋 Running all automation scripts...');
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     const scripts = [
       { path: 'automation/master-orchestrator.cjs', name: 'Master Orchestrator' },
       { path: 'automation/comprehensive-app-improvement-suite.cjs', name: 'Comprehensive App Improvement Suite' },
@@ -287,9 +299,13 @@ if (require.main === module) {
 
 module.exports = ComprehensiveAutomationRunner;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> main
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

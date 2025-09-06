@@ -69,6 +69,13 @@ function restorePage(pagePath) {;
 
       if (parts.length > 1) {
         // Take the content after the conflict resolution
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       }
     }
     // Clean up the content
@@ -104,7 +111,6 @@ if ( {) {
   $2
 }
         // Take the content after the conflict resolution;
-        backup_content = parts[1].split ('>>>>>>>')[0];
       }
     }
     // Clean up the content;
@@ -176,7 +182,17 @@ function restoreAllCorruptedPages() {
         console.log(`\n🔍 Checking: ${fullPath}`),
 
 
+<<<<<<< HEAD
 
+=======
+      } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {
+        results.total++,
+        
+        console.log(`\n🔍 Checking: ${fullPath}`),
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 ;
 // Function to scan and restore all corrupted pages;
 function restoreAllCorruptedPages() {;
@@ -198,8 +214,11 @@ function restoreAllCorruptedPages() {;
       } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {
         results.total++,
         // // // console.log(`\n🔍 Checking: ${fullPath}`),
+<<<<<<< HEAD
         const result = restorePage(fullPath),
         const result = restorePage(fullPath),
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
 
@@ -234,6 +253,11 @@ function restoreAllCorruptedPages() {;
           // // // console.log(`   Reason: ${result.reason}`);
 
           results.failed++,
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
           results.failed++,
 
 
@@ -269,6 +293,7 @@ function restoreAllCorruptedPages() {;
   // // // console.log('🚀 Starting page restoration process...'),
   scanDirectory(pagesDir),
   // Generate summary
+<<<<<<< HEAD
   return results
   // // // console.log('🚀 Starting page restoration process...'),
   scanDirectory(pagesDir),
@@ -280,11 +305,28 @@ function restoreAllCorruptedPages() {;
   // Generate summary
   scanDirectory(pagesDir),
   // Generate summary
+=======
+  
+  console.log('🚀 Starting page restoration process...'),
+  // // // console.log('🚀 Starting page restoration process...'),
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
   scanDirectory(pagesDir),
   // Generate summary
 
 
+<<<<<<< HEAD
+=======
+  scanDirectory(pagesDir),
+  // Generate summary
+  scanDirectory(pagesDir),
+  // Generate summary
+
+  scanDirectory(pagesDir),
+  // Generate summary
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   // // // console.log('\n📊 Restoration Summary: '),
   // // // console.log(`   Total pages: ${results.total}`),
   // // // console.log(`   Restored: ${results.restored}`),
@@ -296,7 +338,28 @@ function restoreAllCorruptedPages() {;
   console.log(`\n Detailed report saved to: ${reportPath}`)
 
   return results
+<<<<<<< HEAD
 
+=======
+;
+  // // // console.log('🚀 Starting page restoration process...'),;
+  scanDirectory(pagesDir),;
+  // Generate summary;
+  // // // console.log('\n📊 Restoration Summary: '),;
+  // // // console.log(`   Total pages: ${results.total}`),;
+  // // // console.log(`   Restored: ${results.restored}`),;
+  // // // console.log(`   Failed: ${results.failed}`),;
+  // // // console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`),;
+  // Save detailed report;
+  const reportPath = path.join(process.cwd(), 'page-restoration-report.json'),;
+  fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)),;
+  // // // console.log(`\n📄 Detailed report saved to: ${reportPath}`),;
+  return results;
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
 // Run the restoration if this script is executed directly
 if ({
@@ -380,11 +443,18 @@ if ( {) {
 }
   restoreAllCorruptedPages ();
 }
+<<<<<<< HEAD
 }
 
 }
 
 
+=======
+
+}
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 ;
 module.exports = {;
   restorePage,;
@@ -399,6 +469,12 @@ module.exports = {
   restore_page,
   restoreAllCorruptedPages,
   findBestBackup;
+<<<<<<< HEAD
+=======
+
+
+};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
 main

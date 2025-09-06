@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,6 +26,10 @@ const fs = require("fs");"const path = require("path");"const { exec } = require
 =======
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
@@ -40,6 +45,7 @@ class LintFixer {}
   log(message) {}
     const timestamp = new Date().toISOString();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -69,6 +75,9 @@ class LintFixer {}
 =======
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     const logMessage = `[${timestamp}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -263,6 +272,7 @@ if (require.main === module) {}
 };
 module.exports = LintFixer;
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = LintFixer;
 module.exports = LintFixer;
 module.exports = LintFixer;
@@ -297,3 +307,9 @@ module.exports = LintFixer;
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+module.exports = LintFixer;
+module.exports = LintFixer;
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

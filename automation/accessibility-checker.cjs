@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,10 +10,15 @@
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 class AccessibilityChecker {
@@ -137,15 +143,11 @@ if (require.main === module) {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-#!/usr/bin/env node
 =======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+#!/usr/bin/env node
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 class AccessibilityChecker {
@@ -457,6 +459,8 @@ if (!fs.existsSync(reportsDir)) {
 =======
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -575,6 +579,7 @@ if (require.main === module) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -648,6 +653,8 @@ fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -658,17 +665,7 @@ console.log('♿ Accessibility Checker Starting...\n')
     "name"
     "name"
     "status"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-module.exports = AccessibilityChecker;
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
 module.exports = AccessibilityChecker;
     "status"
 module.exports = AccessibilityChecker;
@@ -690,6 +687,7 @@ module.exports = AccessibilityChecker;
     "status"
 module.exports = AccessibilityChecker;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -709,3 +707,6 @@ module.exports = AccessibilityChecker;
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

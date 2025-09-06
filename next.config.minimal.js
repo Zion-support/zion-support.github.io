@@ -1,3 +1,32 @@
+<<<<<<< HEAD
+=======
+const nextConfig = {
+  reactStrictMode: true,
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  
+  // Minimal webpack config
+  webpack: (config, { dev, isServer }) => {
+    if (dev) {
+      config.watchOptions = {
+        ignored: [
+          '**/node_modules/**',
+          '**/backup*/**',
+          '**/disabled*/**',
+          '**/temp*/**',
+          '**/*.backup*',
+          '**/*.disabled*',
+          '**/pages_backup*/**',
+          '**/src_backup*/**',
+          '**/components.disabled*/**',
+          '**/pages.disabled*/**',
+          '**/src.disabled*/**'
+        ]
+      };
+    }
+    return config;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 /** @type {import ('next').NextConfig} */;
 const next_config = {
@@ -20,9 +49,12 @@ module.exports = next_config;
   distDir: '.next',
 };
 
+<<<<<<< HEAD
 module.exports = nextConfig;
 module.exports = nextConfig;
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   pageExtensions: ["tsx", "ts", "jsx", "js"],
   images: {
     domains: ["localhost", "ziontechgroup.com"],
@@ -51,6 +83,35 @@ module.exports = nextConfig;};
 export default nextConfig;
 const nextConfig = {,
   reactStrictMode: true,
+<<<<<<< HEAD
+=======
+const nextConfig = {
+  reactStrictMode: true,
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  
+  // Minimal webpack config
+  webpack: (config, { dev, isServer }) => {
+    if (dev) {
+      config.watchOptions = {
+        ignored: [
+          '**/node_modules/**',
+          '**/backup*/**',
+          '**/disabled*/**',
+          '**/temp*/**',
+          '**/*.backup*',
+          '**/*.disabled*',
+          '**/pages_backup*/**',
+          '**/src_backup*/**',
+          '**/components.disabled*/**',
+          '**/pages.disabled*/**',
+          '**/src.disabled*/**'
+        ]
+      };
+    }
+    return config;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   compress: true,
   poweredByHeader: false,
   eslint: { ignoreDuringBuilds: true },

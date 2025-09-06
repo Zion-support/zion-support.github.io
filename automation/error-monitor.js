@@ -36,10 +36,17 @@ class ErrorMonitor {
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
     }
+<<<<<<< HEAD
 =
 
 
 
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     // Initial health check
     await this.performHealthCheck();
     // Start continuous monitoring
@@ -78,7 +85,10 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
         timestamp: new Date().toISOString()
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 =
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         timestamp: new Date().toISOString()
         timestamp: new Date().toISOString(),
       });
@@ -197,7 +207,11 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       }
     }
 
+<<<<<<< HEAD
 =
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
             timestamp: new Date().toISOString(),
           });
         }
@@ -220,6 +234,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
           line: parseInt(match[2]),
           column: parseInt(match[3]),
           message: match[4].trim(),
+<<<<<<< HEAD
 >          timestamp: new Date().toISOString()
         });
       }
@@ -227,6 +242,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <
 
 
+=======
+          timestamp: new Date().toISOString()
+        });
+      }
+    }
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     );
       }
     }
@@ -234,10 +258,17 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         });
       }
     }
+<<<<<<< HEAD
 =
 
 
 
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     return errors;
   }
   updateHealthStatus() {
@@ -258,6 +289,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     console.log(`📊 Health Status: ${status.toUpperCase()}`);
     console.log(`📈 Total Errors: ${totalErrors}`);
     console.log(`⚠️  Total Warnings: ${totalWarnings}`);
+<<<<<<< HEAD
 >    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
     console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
     console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
@@ -272,6 +304,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =
 >    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+=======
+    console.log(`📊 Health Status: ${status.toUpperCase()}`);
+    console.log(`📈 Total Errors: ${totalErrors}`);
+    console.log(`⚠️  Total Warnings: ${totalWarnings}`);
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
     console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
@@ -283,6 +321,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
     console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+=======
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     console.log(
       `🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`
     );
@@ -300,7 +344,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       const automation = new ErrorFixerAutomation();
       await automation.run();
       console.log('✅ Error fixer completed');
+<<<<<<< HEAD
 =
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       console.log('✅ Error fixer completed');
 
 
@@ -317,7 +364,10 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
         timestamp: new Date().toISOString()
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 =
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         timestamp: new Date().toISOString()
         timestamp: new Date().toISOString(),
       });
@@ -344,10 +394,17 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     if (!fs.existsSync(reportDir)) {
       fs.mkdirSync(reportDir, { recursive: true });
     }
+<<<<<<< HEAD
 =
 
 
 
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     // Add duration to report
     this.monitoringReport.duration = Date.now() - this.startTime;
     fs.writeFileSync(
@@ -387,9 +444,18 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     process.exit(0);
   }
 }
+<<<<<<< HEAD
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 // Run the monitor
 if (require.main === module) {
   const monitor = new ErrorMonitor();
   monitor.start().catch(console.error);
 }
 module.exports = ErrorMonitor;
+<<<<<<< HEAD
+=======
+}
+module.exports = ErrorMonitor;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452

@@ -13,7 +13,11 @@ function fixMergeConflicts(filePath) {
     const originalContent = content;
     
     // Remove merge conflict markers and keep HEAD version
+<<<<<<< HEAD
     content = content.replace(/    content = content.replace(/    
+=======
+    
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`);
@@ -50,6 +54,12 @@ function getAllFiles() {
   $2
 }
         files.push (full_path);
+<<<<<<< HEAD
+=======
+const { execSync } = require('child_process'),;
+const fs = require('fs'),;
+const path = require('path'),;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 console.log('🚀 Starting comprehensive merge conflict resolution and PR merging...'),;
 // Function to fix merge conflicts in a file;
 function fixMergeConflicts(filePath) {;
@@ -57,9 +67,19 @@ function fixMergeConflicts(filePath) {;
     let content = fs.readFileSync(filePath, 'utf8'),;
     const originalContent = content;
     // Remove merge conflict markers and keep HEAD version;
+<<<<<<< HEAD
     const originalContent = content;
     // Remove merge conflict markers and keep HEAD version;
     content = content.replace(/    content = content.replace(/    if (content !== originalContent) {;
+=======
+    const originalContent = content,;
+    // Remove merge conflict markers and keep HEAD version;
+    content = content.replace(/[\s\S]*?
+    content = content.replace(/
+    const originalContent = content;
+    // Remove merge conflict markers and keep HEAD version;
+    if (content !== originalContent) {;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       fs.writeFileSync(filePath, content, 'utf8'),;
       console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`),;
       return true;
@@ -73,6 +93,15 @@ function fixMergeConflicts(filePath) {;
 ;
 // Function to get all files recursively;
 function getAllFiles(dir, extensions) {;
+<<<<<<< HEAD
+=======
+  let files = [],;
+  try {;
+    const items = fs.readdirSync(dir),;
+    for (const item of items) {;
+      const fullPath = path.join(dir, item),;
+      const stat = fs.statSync(fullPath),;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 // Function to get all files recursively
 function getAllFiles(dir, extensions) {
   let files = [];
@@ -189,6 +218,7 @@ async function main() {
       try {;
         const content = fs.readFileSync(file, 'utf8'),;
           if (fixMergeConflicts(file)) {;
+<<<<<<< HEAD
             fixedCount++;
           }
         }
@@ -243,6 +273,9 @@ async function main() {
 }
 ;
 main().catch(console.error),;
+=======
+          if (fixMergeConflicts(file)) {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
             fixedCount++;
           }
         }

@@ -1,38 +1,45 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ErrorBoundary from './components/ErrorBoundary';
+import Button from './components/Button';
+import Card from './components/Card';
+import ServiceCard from './components/ServiceCard';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ErrorBoundary from './components/ErrorBoundary';
+import ToastContainer from './components/ToastContainer';
 import { ThemeProvider } from './components/ThemeProvider';
 import ScrollToTop from './components/ScrollToTop';
-import { BackToTopButton } from './components/BackToTopButton';
-// Pages are handled by Next.js in the app directory
+import BackToTop from './components/BackToTop';
+import SEO from './components/SEO';
+import Analytics from './components/Analytics';
+import About from './pages/About';
+import Services from './pages/Services';
+import Contact from './pages/Contact';
+import Home from './pages/Home';
+import Pricing from './pages/Pricing';
 
 function App() {
   return (
     <ThemeProvider>
       <ErrorBoundary>
         <Router>
+          <SEO />
+          <Analytics />
           <ScrollToTop />
           <div className="min-h-screen flex flex-col">
             <Header />
             <main className="flex-1">
-              <div className="min-h-screen flex items-center justify-center">
-                <div className="text-center">
-                  <h1 className="text-4xl font-bold text-gray-900 mb-4">
-                    Zion Tech Group
-                  </h1>
-                  <p className="text-xl text-gray-600 mb-8">
-                    AI, Micro SaaS, and IT Services
-                  </p>
-                  <p className="text-gray-500">
-                    This is a Vite-based React application. The main pages are handled by Next.js in the app directory.
-                  </p>
-                </div>
-              </div>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/pricing" element={<Pricing />} />
+              </Routes>
             </main>
             <Footer />
-            <BackToTopButton />
+            <ToastContainer />
+            <BackToTop />
           </div>
         </Router>
       </ErrorBoundary>

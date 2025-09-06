@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import AIChatbot from '
 describe('AIChatbot'
   it('renders without crashing'

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 #!/usr/bin/env node
@@ -10,12 +11,11 @@
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+
 
 <<<<<<< HEAD
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-
 console.log('🔧 Resolving merge conflicts...');
 
 <<<<<<< HEAD
@@ -304,6 +304,8 @@ console.log('\n🎯 Merge conflict resolution complete!');
 const fs = require('fs');
 const path = require('path');
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 const { execSync } = require('child_process');
 
 console.log('Resolving merge conflicts...');
@@ -376,25 +378,3 @@ contentConflicts.forEach(file => {
   }
 });
 
-<<<<<<< HEAD
-console.log('\nMerge conflict resolution completed!');
-console.log('Run "git status" to check remaining conflicts.');
-=======
-if (resolveMergeConflicts()) {
-    console.log('Ready to commit merge resolution');
-} else {
-}
-  console.log(`⚠️  ${remainingConflicts.length} files still have conflicts`);
-}
-console.log('\n🎉 Merge conflict resolution completed!');
-
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
