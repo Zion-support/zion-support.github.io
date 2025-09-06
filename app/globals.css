@@ -1,8 +1,5 @@
 @tailwind base;
 @tailwind components;
-<<<<<<< HEAD
-@tailwind utilities;
-=======
 @tailwind utilities;
 
 @layer base {
@@ -37,4 +34,3 @@
     @apply outline-none ring-2 ring-blue-500 ring-offset-2;
   }
 }
->>>>>>> b5606b5ed4a293e410649915eb139bcf35adbc01
