@@ -1,31 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+
 import React from 'react';
 import Card from '../components/Card';
 
 const About: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div>
-      <h1>About</h1>
-      <p>This page is under construction.</p>
-    </div>
-  );
-};
 
-export default About;
-=======
-=======
-    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Card from '../components/Card';
@@ -95,133 +74,14 @@ const About: React.FC = () => {
     >
       <div className="container mx-auto px-4 py-16">
         <motion.div className="text-center mb-16" variants={itemVariants}>
->>>>>>> main
+
           <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             About Zion Tech Group
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
-            We are a leading technology company specializing in AI solutions, cybersecurity, 
-            and cloud infrastructure. Our mission is to transform businesses through 
-            innovative technology solutions.
-          </p>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <Card
-            title="Our Mission"
-            description="To empower businesses with cutting-edge AI and technology solutions that drive innovation, efficiency, and growth in the digital age."
-          />
-          <Card
-            title="Our Vision"
-            description="To be the global leader in AI-powered technology solutions, transforming industries and creating a smarter, more connected world."
-          />
-          <Card
-            title="Our Values"
-            description="We maintain the highest standards in everything we do, from our code quality to our customer service and support."
-          />
-        </div>
-      </div>
-    </div>
-=======
-            We are a leading technology company specializing in AI solutions, cybersecurity,
-            and cloud infrastructure. Our mission is to transform businesses through
-            innovative technology solutions.
-          </p>
-        </motion.div>
-
-        {/* Tab Navigation */}
-        <motion.div className="flex flex-wrap justify-center mb-12" variants={itemVariants}>
-          {[
-            { id: 'mission', label: 'Our Mission' },
-            { id: 'team', label: 'Our Team' },
-            { id: 'values', label: 'Our Values' },
-          ].map(tab => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`px-6 py-3 mx-2 mb-2 rounded-lg transition-all duration-300 ${
-                activeTab === tab.id
-                  ? 'bg-cyan-600 text-white'
-                  : 'bg-slate-700 text-gray-300 hover:bg-slate-600'
-              }`}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </motion.div>
-
-        {/* Tab Content */}
-        <motion.div className="max-w-6xl mx-auto" variants={itemVariants}>
-          {activeTab === 'mission' && (
-            <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-8" variants={itemVariants}>
-              <Card
-                title="Our Mission"
-                description="To empower businesses with cutting-edge AI and technology solutions that drive innovation, efficiency, and growth in the digital age."
-                icon="🎯"
-              />
-              <Card
-                title="Our Vision"
-                description="To be the global leader in AI-powered technology solutions, transforming industries and creating a smarter, more connected world."
-                icon="🚀"
-              />
-            </motion.div>
-          )}
-
-          {activeTab === 'team' && (
-            <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" variants={itemVariants}>
-              {teamMembers.map((member, index) => (
-                <Card
-                  key={index}
-                  title={member.name}
-                  description={member.description}
-                  icon={member.image}
-                  className="text-center"
-                >
-                  <div className="mt-4">
-                    <p className="text-cyan-400 font-semibold">{member.role}</p>
-                    <p className="text-sm text-gray-400">{member.expertise}</p>
-                  </div>
-                </Card>
-              ))}
-            </motion.div>
-          )}
-
-          {activeTab === 'values' && (
-            <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-8" variants={itemVariants}>
-              <Card
-                title="Innovation"
-                description="We constantly push the boundaries of what's possible with technology, always seeking new and better ways to solve complex problems."
-                icon="💡"
-              />
-              <Card
-                title="Excellence"
-                description="We maintain the highest standards in everything we do, from our code quality to our customer service and support."
-                icon="⭐"
-              />
-              <Card
-                title="Integrity"
-                description="We conduct business with honesty, transparency, and ethical practices, building trust with our clients and partners."
-                icon="🤝"
-              />
-            </motion.div>
-          )}
-        </motion.div>
-      </div>
-    </motion.div>
-<<<<<<< HEAD
   );
 };
 
 export default About;
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  );
-};
 
-export default About;
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1

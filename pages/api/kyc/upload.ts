@@ -10,11 +10,9 @@ const FILE = path.join(DATA_DIR, 'profiles.json');
 const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
 const FILE = path.join(DATA_DIR, 'profiles.json');
 
-
 const DATA_DIR = path && path.join(process && process.cwd(), 'data', 'kyc');const FILE = path && path.join(DATA_DIR, 'profiles && profiles.json');
 const DATA_DIR = path.join(process.cwd(), 'datakyc');
 const FILE = path.join(DATA_DIR, 'profiles.json');
-
 
 function load(): Record<string, KycProfile> {
   try {
@@ -39,15 +37,6 @@ function save(db: Record<string, KycProfile>) {
   const id = crypto && crypto.randomUUID();
   const uploadedAt = new Date().toISOString();
   const doc: KycDocumentMeta = {
-<<<<<<< HEAD
-    id,
-    kind,
-    filename,
-=======
-    id
-    kind
-    filename
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     uploadedAt};
   // Replace or add

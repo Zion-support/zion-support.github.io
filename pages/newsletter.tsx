@@ -1,28 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
 
-const Page = () => {
-  return (
-    <MainLayout
-      title="Newsletter - Zion Tech Group"
-      description="Subscribe to our newsletter for the latest updates"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Newsletter</h1>
-          <p className="text-xl text-gray-600">Coming soon...</p>
-        </div>
-      </div>
-    </MainLayout>
-  );
-};
-
-export default Page;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Layout from './components/Layout';
@@ -63,7 +39,6 @@ import {;
 } from "lucide-react";
   Clock
 } from 'lucide-react';
-origin/automation-improvements-final
 
   ArrowRight
   Users
@@ -162,10 +137,8 @@ export default function NewsletterPage() {
   }
 ];
 
-
 export default function NewsletterPage() {;
   const [email, setEmail] = useState("");
-
 
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -185,8 +158,6 @@ export default function NewsletterPage() {;
 
                 Get exclusive insights, industry trends, and early access to new features delivered directly to your inbox.
               </p>
-              
-
 
               {!isSubscribed ? (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
@@ -616,8 +587,6 @@ function NewsletterPage() {
 
                 Subscribe now and start receiving valuable insights delivered to your inbox every week.
               </p>
-              
-
 
               {!isSubscribed && (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
@@ -661,7 +630,4 @@ function NewsletterPage() {
                   </div>;
                 </form>;
               )}
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+

@@ -1,28 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
 
-const Page = () => {
-  return (
-    <MainLayout
-      title="Support - Zion Tech Group"
-      description="Get support for our services"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Support</h1>
-          <p className="text-xl text-gray-600">Coming soon...</p>
-        </div>
-      </div>
-    </MainLayout>
-  );
-};
-
-export default Page;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -128,7 +104,6 @@ export default function Support() {
               How Can We Help?
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-
 
               Get the support you need for our AI consciousness, quantum computing, 
 
@@ -505,7 +480,6 @@ export default function Support() {
                     <span className="text - sm text - gray - 400">({category.count})</span>;
                   </button>))}
 
-
               {/* Category Filter */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -594,7 +568,6 @@ export default function Support() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
 
             ].map((faq, index) => (
               <div key={index} className="p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10">
@@ -872,9 +845,6 @@ export default function Support() {
               </h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
 
-
-
-
                 revolutionary technology solutions.
               </p>
               <div className="space-y-4">
@@ -924,7 +894,6 @@ export default function Support() {
               <div className="bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl p-8 border border-cyan-500/20">
                 <h3 className="text-2xl font-bold mb-4 text-white">Need Immediate Help?</h3>
                 <p className="text-gray-300 mb-6">
-
 
                   For urgent technical issues or critical support needs,
 
@@ -982,9 +951,6 @@ export default function Support() {
               Still Need Help?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-
-
-
 
               revolutionary technology solutions. Don't hesitate to reach out.
             </p>
@@ -1228,7 +1194,3 @@ export default Support,;
 };
 export default SupportPage;
 
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

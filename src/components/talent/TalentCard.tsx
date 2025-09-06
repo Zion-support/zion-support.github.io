@@ -4,8 +4,6 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card",
 import { MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
 import { FavoriteButton } from "@/components/FavoriteButton",
 
-
-
 export const TalentCard = React && React.memo(TalentCardComponent);
 TalentCard && TalentCard.displayName = 'TalentCard';import React from 'react';
 import { useRouter } from 'next/router';
@@ -19,12 +17,10 @@ import { RatingStars  } from '@/components/RatingStars';
 import { useAuth  } from '@/context/auth/AuthProvider';
 import { useCart } from '@/context/CartContext';
 
-
 import { TalentProfile } from "@/types/talent",
 import { RatingStars } from '@/components/RatingStars',
 import { useAuth } from '@/context/auth/AuthProvider',
 import { useCart } from '@/context/CartContext',
-
 
 export interface TalentCardProps {
 
@@ -32,7 +28,6 @@ export interface TalentCardProps {
   onViewProfile: (id: string,) => void
   onRequestHire: (talent: TalentProfile,) => void
   isAuthenticated: boolean
-
 
 import React from 'react',;
 import { useRouter } from 'next/router',;
@@ -51,7 +46,6 @@ export interface TalentCardProps {;
   onRequestHire: (talent: TalentProfile) => void,;
   isAuthenticated: boolean;
 
-
 }
 const TalentCardComponent = ({
   talent
@@ -68,9 +62,6 @@ const TalentCardComponent = ({
       onViewProfile(talent.id)
     }
 
-
-
-
   const handleRequestHire = (e: React.MouseEvent,) => {
     e.preventDefault()
     e.stopPropagation()
@@ -78,11 +69,7 @@ const TalentCardComponent = ({
       onRequestHire(talent)
     }
 
-
   },
-
-
-
 
   // Extract skills - limit to 5 for display
   const skills = talent.skills?.slice(0, 5) |[]
@@ -110,16 +97,7 @@ const TalentCardComponent = ({;
       onViewProfile(talent && talent.id);
     }
   },;
-<<<<<<< HEAD
 
-  const handleRequestHire = (e: React && React.MouseEvent,) => {;
-    e && e.preventDefault(),;
-    e && e.stopPropagation(),;
-=======
-  const handleRequestHire = (e: React.MouseEvent) => {;
-    e.preventDefault(),;
-    e.stopPropagation(),;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     if (onRequestHire) {;
       onRequestHire(talent);
     }
@@ -137,37 +115,23 @@ const TalentCardComponent = ({;
     <Card
       className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple"
 
-
       onClick={handleViewProfile}
       tabIndex={0}
-
 
     >
       <div className="p-6">
         <div className="flex items-start">
           {/* Avatar */}
-<<<<<<< HEAD
-          <div className="relative mr-4">;
-            <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">;
-              {talent && talent.profile_picture_url ? (;
-=======
-          <div className="relative mr-4">
-            <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">
-              {talent.profile_picture_url ? (
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-                <img
 
+                <img
 
                   src={talent.profile_picture_url}
                   alt={talent.full_name}
 
-
                   className="w-full h-full object-cover"
                   loading="lazy"
 
-
                   {talent.full_name?.charAt(0) || "T"}
-
 
                 </div>
                 />;
@@ -193,46 +157,11 @@ const TalentCardComponent = ({;
             </div>;
             <p className="text-white font-medium">{talent && talent.professional_title}</p>;
 
-
-
-            
-
             {/* Location & Availability */}
-<<<<<<< HEAD
-            <div className="mt-2 flex flex-wrap gap-3 text-sm">;
-              {talent && talent.location && (;
-                <div className="flex items-center text-zion-slate-light">;
-                  <MapPin className="h-4 w-4 mr-1" />;
-                  <span>{talent && talent.location}</span>;
-                </div>;
-              )}
-              {talent && talent.availability_type && (;
-                <div className="flex items-center text-zion-slate-light">;
-                  <Clock className="h-4 w-4 mr-1" />;
-                  <span>{talent && talent.availability_type}</span>;
-                </div>;
-              )}
-=======
-            <div className="mt-2 flex flex-wrap gap-3 text-sm">
-              {talent.location && (
-                <div className="flex items-center text-zion-slate-light">
-                  <MapPin className="h-4 w-4 mr-1" />
-                  <span>{talent.location}</span>
-                </div>
-              )}
-              {talent.availability_type && (
-                <div className="flex items-center text-zion-slate-light">
-                  <Clock className="h-4 w-4 mr-1" />
-                  <span>{talent.availability_type}</span>
-                </div>
-              )}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-
 
             </div>;
           </div>;
         </div>;
-
 
         {/* Skills */}
         {skills.length > 0 && (
@@ -268,16 +197,8 @@ const TalentCardComponent = ({;
                 </span>;
 
               )}
-<<<<<<< HEAD
-            </div>;
-          </div>;
-=======
-            </div>
-          </div>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
         )}
-
-
 
         {/* Hourly Rate & Actions */}
         <div className="mt-5 flex items-center justify-between">;
@@ -291,10 +212,6 @@ const TalentCardComponent = ({;
               <div className="text-zion-slate-light">Rate not specified</div>;
             )}
 
-
-          
-
-
           <div className="flex items-center gap-2">
             {isAuthenticated && (
           </div>;
@@ -305,9 +222,7 @@ const TalentCardComponent = ({;
                 size="sm"
                 variant="secondary"
 
-
                 onClick={handleRequestHire}
-
 
                 className="bg-zion-purple hover:bg-zion-purple-light text-white"
               >
@@ -318,10 +233,8 @@ const TalentCardComponent = ({;
               size="sm"
               variant="ghost"
 
-
               onClick={(e) => {
               onClick={(e) => {
-
 
                 e.stopPropagation(),
                 handleViewProfile()
@@ -492,7 +405,6 @@ if ( {) {
           </div>;
         </div>;
       </div>;
-
 
     </Card>);
 },

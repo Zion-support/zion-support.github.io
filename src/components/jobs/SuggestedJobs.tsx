@@ -32,15 +32,10 @@ function SuggestedJobs() {
   const { user } = useAuth(),
   const currentTalentId = talentId || user?.id,
 
-
   const { 
     isLoading,
     updateJobMatchStatus, 
     categorizedMatches: { 
-
-
-
-
 
   if (isLoading) {
   // Check condition
@@ -48,7 +43,6 @@ if ( {) {
   $2
 }
     return (
-
 
     updateJobMatchStatus, ;
 import { useAuth } from "@/hooks/useAuth";
@@ -60,7 +54,6 @@ import { NoJobsCard } from "./NoJobsCard";
         <Loader2 className="w-6 h-6 animate-spin text-primary" />
       </div>
     )
-
 
 import { useAuth } from "@/hooks/useAuth",;
 import { Loader2 } from 'lucide-react';
@@ -103,9 +96,6 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
   if (newMatches && newMatches.length === 0 && viewedMatches && viewedMatches.length === 0 && appliedMatches && appliedMatches.length === 0) {;
     return <NoJobsCard />;
 
-
-
-
   }
 
   return (
@@ -131,8 +121,6 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
                 onDecline = {handleDecline,}
               />;
 
-
-          
           <div className="grid gap-4 md:grid-cols-2">
             {newMatches.map(match => (
               <JobMatchesCard 
@@ -145,25 +133,13 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
           </div>;
         </div>;
       )}
-<<<<<<< HEAD
-      
-;
-=======
 
-
-;
-
-      
-;
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Previously Viewed Section */}
       {viewedMatches.length > 0 && (
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-medium">Previously Viewed</h3>
           </div>
-
 
       {/* Previously Viewed Section */}
       {viewedMatches && viewedMatches.length > 0 && (;
@@ -182,8 +158,6 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
                 onDecline = {handleDecline,}
               />;
 
-
-          
           <div className="grid gap-4 md:grid-cols-2">
             {viewedMatches.map(match => (
               <JobMatchesCard 
@@ -196,18 +170,7 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
           </div>;
         </div>;
       )}
-<<<<<<< HEAD
-      
-;
-=======
 
-
-;
-
-      
-;
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Applied Jobs Section */}
       {appliedMatches.length > 0 && (
         <div className="space-y-4">
@@ -215,34 +178,15 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
             <h3 className="text-lg font-medium">Applied Jobs</h3>
           </div>
 
-
               <JobMatchesCard 
 
-
                 key = {match.id,}
-<<<<<<< HEAD
-=======
 
-      {/* Applied Jobs Section */}
-      {appliedMatches && appliedMatches.length > 0 && (;
-        <div className="space-y-4">;
-          <div className="flex items-center justify-between">;
-            <h3 className="text-lg font-medium">Applied Jobs</h3>;
-          </div>;
-
-          <div className="grid gap-4 md:grid-cols-2">;
-            {appliedMatches && appliedMatches.map(match => (;
-              <JobMatchesCard
-                key = {match && match.id,}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 match = {match,}
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
                 showApplied = {true,}
               />;
-
-
-
 
             ))}
           </div>;
@@ -251,8 +195,6 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
 
     </div>;
   );
-
-
 
   // Check condition
 if ( {) {
@@ -374,7 +316,4 @@ if ( {) {
 }</div>);
 }'"}
 }
-<<<<<<< HEAD
-=======
-;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+

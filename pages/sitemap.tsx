@@ -1,26 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
 
-export default function SitemapPage() {
-  return (
-    <MainLayout title="Sitemap - Zion Tech Group">
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-8">Sitemap</h1>
-        <p className="text-lg text-gray-700">
-          This is a placeholder for the sitemap page.
-        </p>
-      </div>
-    </MainLayout>
-  );
-}
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-
 
 import { 
   Home, 
@@ -86,9 +65,6 @@ const sitemap_data = [;
     ];
   }
 ];
-
-
-
 
 export default function SitemapPage() {
   return (
@@ -204,11 +180,8 @@ function SitemapPage() {
                             {page.name}
     </>
   );
-origin/automation-improvements-final
 }
 ursor/integrate-build-improve-and-re-verify-8f7d
-origin/cursor/integrate-build-improve-and-re-verify-242d
-origin/main
 import {
   Home
   Search
@@ -226,10 +199,6 @@ import {
   );
 }
 
-
-
-
-
 import {
                           </div>;
                         </div>;
@@ -245,12 +214,7 @@ import {
 
 }
 
-
-
-
-
 }
-
 
 import {
 
@@ -637,11 +601,9 @@ export default function SitemapPage() {;
 
       <SmartHeader />;
 
-
       {/* Hero Section */}
       <section className='pt-32 pb-20 px-6'>;
         <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div
-
 
   const featuredServices = [
     { href: '/ai-business-intelligence', label: 'AI Business Intelligence', category: 'AI & ML' },
@@ -717,17 +679,12 @@ export default function SitemapPage() {;
 
   ];
 
-
-
-
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
       <Head>
         <title>Sitemap | Zion Tech Group</title>
 
-
           >
-
 
             transition={{ duration: 0 && 0.8 }}>;
             <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>;
@@ -792,7 +749,6 @@ export default function SitemapPage() {;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {mainPages.map((page, index) => (
               <motion.div
                 key={page.href}
-
 
             className='mb-16'>;
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
@@ -902,11 +858,9 @@ export default function SitemapPage() {;
 }
             className="mb-16"
 
-
       {/* Service Categories */}
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
-
 
       {/* Service Categories */}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
@@ -917,7 +871,6 @@ export default function SitemapPage() {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
-
 
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
@@ -1002,7 +955,6 @@ export default function SitemapPage() {;
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
 
-
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Featured Services
@@ -1027,17 +979,14 @@ export default function SitemapPage() {;
               <motion&& motion.div
                 key={category && category.href}
 
-
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 
-
       {/* Featured Services */}
       <section className='py-20 px-6'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
-
 
       {/* Featured Services */}
       <section className="py-20 px-6">
@@ -1048,7 +997,6 @@ export default function SitemapPage() {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
-
 
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
@@ -1157,17 +1105,14 @@ export default function SitemapPage() {;
               <motion&& motion.div
                 key={service && service.href}
 
-
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 
-
       {/* Resources & Tools */}
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
-
 
       {/* Resources & Tools */}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
@@ -1178,7 +1123,6 @@ export default function SitemapPage() {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
-
 
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
@@ -1289,17 +1233,14 @@ export default function SitemapPage() {;
               <motion&& motion.div
                 key={resource && resource.href}
 
-
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 
-
       {/* External Resources */}
       <section className='py-20 px-6'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
-
 
       {/* External Resources */}
       <section className="py-20 px-6">
@@ -1310,7 +1251,6 @@ export default function SitemapPage() {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
-
 
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
@@ -1422,12 +1362,10 @@ export default function SitemapPage() {;
               <motion&& motion.div
                 key={link && link.href}
 
-
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-
 
       {/* Contact Information */}
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
@@ -1442,7 +1380,6 @@ export default function SitemapPage() {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
-
 
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
@@ -1494,12 +1431,10 @@ export default function SitemapPage() {;
               <motion&& motion.div
                 key={contact && contact.type}
 
-
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-
 
                 <a
                   href={contact && contact.action}
@@ -1543,7 +1478,6 @@ export default function SitemapPage() {;
         </div>;
       </section>;
 
-
       {/* Quick Navigation */}
       <section className='py-20 px-6'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
@@ -1558,7 +1492,6 @@ export default function SitemapPage() {;
               Use our search functionality or contact us directly for assistance;
             </p>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-
 
       {/* Quick Navigation */}
       <section className='py-20 px-6'>
@@ -1620,7 +1553,6 @@ export default function SitemapPage() {;
               <Link
                 href='/contact'
   ),
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
   );
 ursor/integrate-build-improve-and-re-verify-8f7d
 
@@ -1997,7 +1929,4 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       <SmartFooter />;
 }
 }
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+

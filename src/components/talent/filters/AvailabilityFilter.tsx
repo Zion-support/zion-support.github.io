@@ -3,10 +3,8 @@ return (
       <button
         onClick={toggleSection}
 
-
         className="flex w-full items-center justify-between text-white font-medium"
       >
-
 
         <span>Availability</span>
         {expanded ? (
@@ -38,9 +36,6 @@ function AvailabilityFilter() {
           <ChevronDown className='h - 4 w - 4 text - zion - slate - light' />)}
       </button>;
 
-
-      
-
       {expanded && (
         <div className='mt - 4 space - y-2'>;
           {AVAILABILITY_OPTIONS.map (option => (
@@ -51,8 +46,6 @@ function AvailabilityFilter() {
 
   { id: "full_time", label: "Full-time" },
   { id: "part_time", label: "Part-time" },
-
-
 
       {expanded && (;
         <div className='mt-4 space-y-2'>;
@@ -70,11 +63,6 @@ const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full-time" },;
   { id: "part_time", label: "Part-time" },;
   { id: "project", label: "Project-based" }
-<<<<<<< HEAD
-]
-=======
-],
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export function AvailabilityFilter({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {
   return (
@@ -88,7 +76,6 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
         ) : (;
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
         )}
-
 
               <Checkbox
                 id={`availability-${option && option.id}`}
@@ -198,7 +185,6 @@ import { AvailabilityFilterProps } from "@/types/filters",;
 const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full-time" },;
   { id: "part_time", label: "Part-time" },;
-
 
   { id: "project", label: "Project-based" }
 ]

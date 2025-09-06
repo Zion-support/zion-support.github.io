@@ -44,7 +44,6 @@ export function MilestoneCard({
     switch (status) {
       case 'completed':
 
-
 import React from 'react';
 
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -52,15 +51,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { format } from 'date-fns';
 import { Check, ArrowDown, X } from 'lucide-react';
-<<<<<<< HEAD
-import { useDisputeCheck } from '@/hooks/useDisputeCheck';
-import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge';
-import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
-=======
-import { useDisputeCheck } from '@/hooks/useDisputeCheck',;
-import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge',;
-import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 interface MilestoneCardProps {;
   id: string,;
   projectId: string,;
@@ -69,19 +60,7 @@ interface MilestoneCardProps {;
   amount: number,;
   status: string,;
   dueDate?: string,;
-<<<<<<< HEAD
-  onApprove?: (id: string,) => Promise<void>,;
-  onReject?: (id: string,) => Promise<void>;
-}
 
-export function MilestoneCard(): any ({;
-=======
-  onApprove?: (id: string) => Promise<void>,;
-  onReject?: (id: string) => Promise<void>;
-}
-;
-export function MilestoneCard({;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id,;
   projectId,;
   title,;
@@ -90,28 +69,17 @@ export function MilestoneCard({;
   status,;
   dueDate,;
   onApprove,;
-<<<<<<< HEAD
-  onReject,;
-=======
-  onReject;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 }: MilestoneCardProps) {;
   const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id);
 
-
-
         return 'bg-green-500';
       case 'in_progress':;
-<<<<<<< HEAD
-        return 'bg-blue-500';
-=======
-        return 'bg-blue-500',;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
       case 'pending':;
         return 'bg-yellow-500';
       case 'rejected':;
         return 'bg-red-500';
-
 
 import React from 'react';
 import {
@@ -161,8 +129,6 @@ interface MilestoneCardProps {
   amount: number,
   status: string,
 
-
-
   return (
     <Card>;
       <CardHeader className="pb-2">;
@@ -173,7 +139,6 @@ interface MilestoneCardProps {
               <p className="text-sm text-muted-foreground">;
   dueDate?: string,
 
-
   return (
     <Card>
       <CardHeader className="pb-2">
@@ -181,7 +146,6 @@ interface MilestoneCardProps {
           <div>
             <CardTitle className="text-xl">{title}</CardTitle>
             {dueDate && (
-
 
               <p className="text-sm text-muted-foreground">
                 Due: {format(new Date(dueDate), 'MMM d, yyyy')}
@@ -207,16 +171,12 @@ interface MilestoneCardProps {
 
           </div>
 
-
           <div className="flex gap-2">
             <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>
               {status.replace('_ ')}
             </Badge>
 
-            
             {isUnderDispute && disputeStatus && (
-
-
 
               <DisputeStatusBadge status={disputeStatus} />
             )}
@@ -224,15 +184,12 @@ interface MilestoneCardProps {
         </div>
       </CardHeader>
 
-
-      
       <CardContent className="pb-2">
         {description && (
           <p className="text-muted-foreground">{description}</p>
         )}
         <div className="mt-4">
           <p className="text-xl font-bold">${amount.toFixed(2)}</p>
-
 
         </div>
       </CardContent>
@@ -265,7 +222,6 @@ interface MilestoneCardProps {
         <div>;
           {status !== 'completed' && status !== 'rejected' && (;
 
-
             <RaiseDisputeButton
               projectId={projectId}
               milestoneId={id}
@@ -282,84 +238,26 @@ interface MilestoneCardProps {
           )}
         </div>
 
-
           {status === 'pending' && onReject && !isUnderDispute && (
             <Button variant='outline' size='sm' onClick={() => onReject(id)}>
               <X className='h-4 w-4 mr-1' /> Reject            </Button>
 
-        
         <div className="flex gap-2">
           {status === 'pending' && onReject && !isUnderDispute && (
             <Button variant="outline" size="sm" onClick={() => onReject(id)}>
               <X className="h-4 w-4 mr-1" /> Reject
             </Button>
 
-
-
           )}
           
           {status === 'pending' && onApprove && !isUnderDispute && (
-
-
-
 
           )}
           
           {isUnderDispute && (
 
         </div>;
-<<<<<<< HEAD
 
-        <div className='flex gap-2'>;
-          {status === 'pending' && onReject && !isUnderDispute && (;
-            <Button variant='outline' size='sm' onClick={() => onReject(id)}>;
-              <X className='h-4 w-4 mr-1' /> Reject            </Button>;
-          )}
-
-          {status === 'pending' && onApprove && !isUnderDispute && (;
-            <Button variant='default' size='sm' onClick={() => onApprove(id)}>;
-              <Check className='h-4 w-4 mr-1' /> Approve            </Button>;
-          )}
-
-          {isUnderDispute && (;
-            <Button variant='outline' size='sm' disabled>              Actions frozen due to dispute            <Button variant="outline" size="sm" disabled>;
-=======
-      </CardHeader>;
-      <CardContent className="pb-2">;
-        {description && (;
-          <p className="text-muted-foreground">{description}</p>;
-        )}
-        <div className="mt-4">;
-          <p className="text-xl font-bold">${amount.toFixed(2)}</p>;
-        </div>;
-      </CardContent>;
-      <CardFooter className="pt-2 flex justify-between">;
-        <div>;
-          {status !== 'completed' && status !== 'rejected' && (;
-            <RaiseDisputeButton;
-              projectId={projectId} ;
-              milestoneId={id} ;
-              variant="ghost";
-              size="sm";
-            />;
-          )}
-        </div>;
-        <div className="flex gap-2">;
-          {status === 'pending' && onReject && !isUnderDispute && (;
-            <Button variant="outline" size="sm" onClick={() => onReject(id)}>;
-              <X className="h-4 w-4 mr-1" /> Reject;
-            </Button>;
-          )}
-;
-          {status === 'pending' && onApprove && !isUnderDispute && (;
-            <Button variant="default" size="sm" onClick={() => onApprove(id)}>;
-              <Check className="h-4 w-4 mr-1" /> Approve;
-            </Button>;
-          )}
-;
-          {isUnderDispute && (;
-            <Button variant="outline" size="sm" disabled>;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               Actions frozen due to dispute;
             </Button>;
           )}

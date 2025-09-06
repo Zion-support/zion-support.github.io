@@ -5,12 +5,8 @@ interface AIMilestoneGeneratorProps {;
   projectType: string;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void;
 
-
-
-
     if (!scope || !startDate || !projectType) {
       return;
-
 
     }
     const input: MilestoneInput = {
@@ -103,8 +99,6 @@ if ( {) {
     }
   }
 
-
-
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -125,113 +119,23 @@ interface AIMilestoneGeneratorProps {;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void,;
 
   onAddMilestone: (milestone: GeneratedMilestone) => void;
-<<<<<<< HEAD
-export function AIMilestoneGenerator(): any ({;
-=======
-}
-;
-export function AIMilestoneGenerator({;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   scope,;
   startDate,;
   endDate,;
   projectType,;
   onAddMilestones,;
-<<<<<<< HEAD
-  onAddMilestone,;
-}: AIMilestoneGeneratorProps) {;
-  const {;
-    generateMilestones,;
-    generatedMilestones,;
-    isGenerating,;
-    clearGeneratedMilestones,;
-  } = useMilestoneGenerator();
-  const [selectedMilestones, setSelectedMilestones] = useState<;
-    Record<string, boolean>;
-  >({});
 
-=======
-  onAddMilestone;
-}: AIMilestoneGeneratorProps) {;
-  const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator(),;
-  const [selectedMilestones, setSelectedMilestones] = useState<Record<string boolean>>({}),;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleGenerateMilestones = async () => {;
     if (!scope || !startDate || !projectType) {;
       return;
     }
-<<<<<<< HEAD
 
-=======
-;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const input: MilestoneInput = {;
       scope,;
       startDate,;
       endDate,;
-<<<<<<< HEAD
-      projectType,;
-    };
 
-    await generateMilestones(input);
-    // Initially select all milestones;
-    const initialSelection: Record<number, boolean> = {};
-    generatedMilestones && generatedMilestones.forEach((_, index: number) => {;
-      initialSelection[index] = true;
-    });
-    setSelectedMilestones(initialSelection);
-  };
-
-  const handleAddToProject = () => {;
-    const selectedMilestonesList = generatedMilestones && generatedMilestones.filter(;
-      (_, index) => selectedMilestones[index];
-    );
-
-    onAddMilestones(selectedMilestonesList);
-    clearGeneratedMilestones();
-    setSelectedMilestones({});
-  };
-  const toggleMilestoneSelection = (index: number,) => {;
-    setSelectedMilestones(prev => ({;
-      ...prev,;
-      [index]: !prev[index],;
-    }));
-  };
-
-  const handleAddSingleMilestone = (milestone: GeneratedMilestone) => {;
-    onAddMilestone(milestone);
-  };
-  const formatDate = (dateString: string,) => {;
-=======
-      projectType;
-    },;
-    await generateMilestones(input),;
-    // Initially select all milestones;
-    const initialSelection: Record<number boolean> = {},;
-    generatedMilestones.forEach((_, index: number) => {;
-      initialSelection[index] = true;
-    }),;
-    setSelectedMilestones(initialSelection);
-  },;
-  const handleAddToProject = () => {;
-    const selectedMilestonesList = generatedMilestones.filter((_, index) =>;
-      selectedMilestones[index];
-    ),;
-    onAddMilestones(selectedMilestonesList),;
-    clearGeneratedMilestones(),;
-    setSelectedMilestones({});
-  },;
-  const toggleMilestoneSelection = (index: number) => {;
-    setSelectedMilestones(prev => ({;
-      ...prev,;
-      [index]: !prev[index];
-    }));
-  },;
-  const handleAddSingleMilestone = (milestone: GeneratedMilestone) => {;
-    onAddMilestone(milestone);
-  },;
-  const formatDate = (dateString: string) => {;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     try {;
       return format(parseISO(dateString), 'MMM dd, yyyy');
     } catch (error) {;
@@ -240,27 +144,9 @@ export function AIMilestoneGenerator({;
 
   },
 
-
-
-
   return (
-<<<<<<< HEAD
-    <div className='space-y-4'>;
-      <div className='flex items-center justify-between'>;
-        <h3 className='text-lg font-medium flex items-center'>;
-          <Sparkles className='w-5 h-5 mr-2 text-primary' />;
-          AI Milestone Generator;
-        </h3>;
-=======
-    <div className="space-y-4">
-      <div className="flex items-center justify-between">
-        <h3 className="text-lg font-medium flex items-center">
-          <Sparkles className="w-5 h-5 mr-2 text-primary" />
-          AI Milestone Generator
-        </h3>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-        <Button
 
+        <Button
 
           disabled={isGenerating || !scope || !startDate || !projectType}        >
 
@@ -268,8 +154,6 @@ export function AIMilestoneGenerator({;
           onClick={handleGenerateMilestones}
           disabled={isGenerating || !scope || !startDate || !projectType}
         >
-
-
 
           {isGenerating ? (
             <>
@@ -412,7 +296,6 @@ export function AIMilestoneGenerator({;
                       </AccordionTrigger>;
                     </div>;
 
-
               <Button 
                 onClick={handleAddToProject}
                 disabled={!Object.values(selectedMilestones).some(Boolean)}
@@ -439,14 +322,12 @@ export function AIMilestoneGenerator({;
                           <Badge variant="secondary" className="ml-2 flex items-center">
                             <Sparkles className="w-3 h-3 mr-1" />
 
-
                             AI Suggested
                           </Badge>
                         </div>
                       </AccordionTrigger>
                     </div>
                     <Button
-
 
                       variant="ghost"
                       size="sm"
@@ -455,7 +336,6 @@ export function AIMilestoneGenerator({;
                         handleAddSingleMilestone(milestone)
                       }}
                       className="mr-2"
-
 
                       variant="ghost"
                       size="sm"

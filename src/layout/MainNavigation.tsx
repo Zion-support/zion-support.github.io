@@ -122,209 +122,34 @@ interface MainNavigationProps {;
   unreadCount?: number,;
   className?: string;
 }
-<<<<<<< HEAD
 
-interface MainNavigationProps {;
-  isAdmin?: boolean;
-  unreadCount?: number;
-  className?: string;
-
-export function MainNavigation(): any ({;
-  isAdmin = false,;
-  unreadCount = 0,;
-  className,;
-}: MainNavigationProps) {;
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Add state;
-  const { user } = useAuth();
-  const isAuthenticated = !!user;
-  const [loginOpen, setLoginOpen] = useState(false);
-  const { count } = useFavorites();
-  const { items } = useCart();
-  const cartCount = items && items.length;
-  const router = useRouter(); // Changed from useLocation;
-  const { t } = useTranslation();
-
-  const handleCartClick = (e: React && React.MouseEvent,) => {;
-    if (!isAuthenticated) {;
-      e && e.preventDefault();
-      setLoginOpen(true);
-      return;
-    }
-    setIsMobileMenuOpen(false);
-  };
-
-=======
-;
-export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {;
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false), // Add state;
-  const { user } = useAuth(),;
-  const isAuthenticated = !!user,;
-  const [loginOpen, setLoginOpen] = useState(false),;
-  const { count } = useFavorites(),;
-  const { items } = useCart(),;
-  const cartCount = items.length,;
-  const router = useRouter(), // Changed from useLocation;
-  const { t } = useTranslation(),;
-  const handleCartClick = (e: React.MouseEvent) => {;
-    if (!isAuthenticated) {;
-      e.preventDefault(),;
-      setLoginOpen(true),;
-      return;
-    }
-    setIsMobileMenuOpen(false);
-  },;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const baseLinks = [;
     {;
       key: 'home',;
       href: '/',;
-<<<<<<< HEAD
-      matches: (path: string) => path === '/',    },;
-    {;
-      key: 'marketplace',;
-      href: '/marketplace',;
-      matches: (path: string) => path && path.startsWith('/marketplace'),    },;
-    {;
-      key: 'categories',;
-      href: '/categories',;
-      matches: (path: string) => path && path.startsWith('/categories'),    },;
-    {;
-      key: 'talent',;
-      href: '/talent',;
-      matches: (path: string) =>;
-        path && path.startsWith('/talent') && !path && path.includes('/talent-dashboard'),    },;
-    {;
-      key: 'equipment',;
-      href: '/equipment',;
-      matches: (path: string) => path && path.startsWith('/equipment'),    },;
-    {;
-      key: 'community',;
-      href: '/community',;
-      matches: (path: string) =>;
-        path && path.startsWith('/community') || path && path.startsWith('/forum'),;
-    },;
-  ];
 
-  const links = baseLinks && baseLinks.map(link => ({;
-    ...link,;
-    name: t(`nav.${link && link.key}`),;
-  }));
-  // Add authenticated-only links;
-  if (isAuthenticated) {;
-    links && links.push({;
-      key: 'dashboard',;
-      name: t('nav && nav.dashboard'),;
-      href: '/dashboard',;
-      matches: (path: string) =>;
-        path === '/dashboard' ||;
-        path === '/client-dashboard' ||;
-        path === '/talent-dashboard',;
-    });  }
-
-  // Add admin-only links;
-  if (isAdmin) {;
-    links && links.push({;
-      key: 'analytics',;
-      name: t('nav && nav.analytics'),;
-=======
-      matches: (path: string) => path === '/';
-    },;
-    {;
-      key: 'marketplace',;
-      href: '/marketplace',;
-      matches: (path: string) => path.startsWith('/marketplace');
-    },;
-    {;
-      key: 'categories',;
-      href: '/categories',;
-      matches: (path: string) => path.startsWith('/categories');
-    },;
-    {;
-      key: 'talent',;
-      href: '/talent',;
-      matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard');
-    },;
-    {;
-      key: 'equipment',;
-      href: '/equipment',;
-      matches: (path: string) => path.startsWith('/equipment');
-    },;
-    {;
-      key: 'community',;
-      href: '/community',;
-      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum');
-    }
-  ],;
-  const links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) })),;
-  // Add authenticated-only links;
-  if (isAuthenticated) {;
-    links.push({;
-      key: 'dashboard',;
-      name: t('nav.dashboard'),;
-      href: '/dashboard',;
-      matches: (path: string) => path === '/dashboard' || path === '/client-dashboard' || path === '/talent-dashboard';
-    });
-  }
-;
-  // Add admin-only links;
-  if (isAdmin) {;
-    links.push({;
-      key: 'analytics',;
-      name: t('nav.analytics'),;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       href: '/analytics',;
       matches: (path: string) => path && path.startsWith('/analytics'),;
     });  }
 
-
   return (
-<<<<<<< HEAD
-    <>;
-      <button
-        className='navbar-toggler md:hidden ml-auto mr-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary' // Added ml-auto and mr-4 for positioning
-        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        aria-expanded={isMobileMenuOpen}
-        aria-controls='main-navbar-collapse';
-        aria-label='Toggle navigation'      >;
-        <span className='navbar-toggler-icon'></span>;
-      </button>;
-=======
-    <>
-      <button
-        className="navbar-toggler md:hidden ml-auto mr-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" // Added ml-auto and mr-4 for positioning
-        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        aria-expanded={isMobileMenuOpen}
-        aria-controls="main-navbar-collapse"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
       <nav
         className={cn('navbar', className)}
         role='navigation'
         aria-label='Main navigation'>;
 
-
         <div
-<<<<<<< HEAD
-          id='main-navbar-collapse'
-=======
-          id="main-navbar-collapse"
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
           className={cn(
-
-
 
                   href={link.href}
                   aria-label={link.name}
 
                   onClick={() => setIsMobileMenuOpen(false)}
 
-
                     'nav-link',
                     'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
-
 
                     link.matches(router.pathname)
                       ? 'bg-zion-purple/20 text-zion-cyan'
@@ -338,8 +163,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                       : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
                   )}
                 >;
-
-
 
                   {link.name}
                 </Link>
@@ -418,24 +241,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 </Link>;
               </li>;
             )}
-<<<<<<< HEAD
-            {/* Cart icon with badge */}
-            <li className='nav-item'>;
-              <HoverCard openDelay={100}>;
-                <HoverCardTrigger asChild>;
-                  <Link
-                    href='/cart'
-                    aria-label={t('nav && nav.cart')}
-=======
-;
-            {/* Cart icon with badge */}
-            <li className="nav-item">
-              <HoverCard openDelay={100}>
-                <HoverCardTrigger asChild>
-                  <Link
-                    href="/cart"
-                    aria-label={t('nav.cart')}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                     onClick={handleCartClick}
                     className={cn(
 
@@ -455,37 +261,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       href: '/marketplace',
       matches: (path: string) => path.starts_with ('/marketplace'),    },
     {
-<<<<<<< HEAD
-      key: 'categories',
-      href: '/categories',
-      matches: (path: string) => path.starts_with ('/categories'),    },
-    {
-      key: 'talent',
-      href: '/talent',
-      matches: (path: string) =>;
-        path.starts_with ('/talent') && !path.includes ('/talent - dashboard'),    },
-    {
-      key: 'equipment',
-      href: '/equipment',
-      matches: (path: string) => path.starts_with ('/equipment'),    },
-    {
-      key: 'community',
-      href: '/community',
-      matches: (path: string) =>;
-        path.starts_with ('/community') || path.starts_with ('/forum'),
-    },
-  ];
-  const links = base_links.map (link => ({
-    ...link,
-    name: t (`nav.${link.key}`),
-  }));
-  // Add authenticated - only links;
-  // Check condition
-if ( {) {
-  $2
-=======
-      matches: (path: string)  => path.startsWith('/contact')
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 }
     links.push ({
       key: 'dashboard',
@@ -827,7 +603,6 @@ export default function Page() {; []);
                     : 'text-zion-slate-light hover:text-white hover:bg-white/10'`
 }`}
 
-
                 {link && link.name}
               </Link>;
 
@@ -898,7 +673,6 @@ export default function Page() {; []);
                               ? 'bg - zion - cyan text - white'';
                               : 'text - zion - slate - light hover:text - white hover:bg - white / 10'`;
 }`}
-
 
 ;
             {/* Wishlist link */}
@@ -985,7 +759,6 @@ export default function Page() {; []);
                         ? 'bg-zion-purple/20 text-zion-cyan';
                         : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan';
                     )}
-
 
                   >
                     <ShoppingCart className="w-4 h-4 mr-1" />
@@ -1100,8 +873,6 @@ export default function Page() {; []);
                         {cartCount}
                       </span>;
 
-
-
                     )}
                   </Link>
                 </HoverCardTrigger>
@@ -1118,7 +889,6 @@ export default function Page() {; []);
       </nav>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
-
 
                         {link && link.name}
                       </Link>;
@@ -1153,8 +923,6 @@ export default function Page() {; []);
           </div>;
         </div>;
       </nav>;
-
-
 
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
     </>));

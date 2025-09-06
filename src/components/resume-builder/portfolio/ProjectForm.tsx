@@ -22,7 +22,6 @@ if ( {) {
       logErrorToProduction('Error saving project:', { data: error })
     } finally {
 
-
 import React from 'react';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -35,7 +34,6 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {;
       setIsLoading(false)
     }
   }
-
 
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
@@ -51,153 +49,13 @@ import {;
   FormField,;
   FormItem,;
   FormLabel,;
-<<<<<<< HEAD
-  FormMessage,;
-} from '@/components/ui/form';import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react';
-import { PortfolioProject } from '@/types/resume';
-import { usePortfolio } from '@/hooks/usePortfolio';
-import { useAuth } from '@/hooks/useAuth';
-// Define schema for form validation;
-const projectSchema = z && z.object({;
-  title: z && z.string().min(1, 'Project title is required'),;
-  description: z && z.string().optional(),;
-  technologies: z && z.string().optional(),;
-  image_url: z && z.string().optional(),;
-  github_url: z;
-    .union([z && z.string().url('Please enter a valid URL'), z && z.literal('')]);
-    .optional(),;
-  demo_url: z;
-    .union([z && z.string().url('Please enter a valid URL'), z && z.literal('')]);
-    .optional(),;
-  pdf_url: z && z.string().optional(),;
-});
 
-type ProjectFormValues = z && z.infer<typeof projectSchema>;
-
-interface ProjectFormProps {;
-  project?: PortfolioProject;
-  onSuccess: () => void;
-  onCancel: () => void;
-
-export function ProjectForm(): any ({;
-  project,;
-  onSuccess,;
-  onCancel,;
-}: ProjectFormProps) {;
-  const { user } = useAuth();
-  const { addProject, updateProject } = usePortfolio();
-  const [isLoading, setIsLoading] = useState(false);
-  const isEditing = !!project;
-
-=======
-  FormMessage} from '@/components/ui/form',;
-import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react';
-import { PortfolioProject } from '@/types/resume',;
-import { usePortfolio } from '@/hooks/usePortfolio',;
-import { useAuth } from '@/hooks/useAuth',;
-// Define schema for form validation;
-const projectSchema = z.object({;
-  title: z.string().min(1, 'Project title is required'),;
-  description: z.string().optional(),;
-  technologies: z.string().optional(),;
-  image_url: z.string().optional(),;
-  github_url: z;
-    .union([z.string().url('Please enter a valid URL'), z.literal('')]);
-    .optional(),;
-  demo_url: z;
-    .union([z.string().url('Please enter a valid URL'), z.literal('')]);
-    .optional(),;
-  pdf_url: z.string().optional()}),;
-type ProjectFormValues = z.infer<typeof projectSchema>,;
-interface ProjectFormProps {;
-  project?: PortfolioProject,;
-  onSuccess: () => void,;
-  onCancel: () => void;
-}
-;
-export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {;
-  const { user } = useAuth(),;
-  const { addProject, updateProject } = usePortfolio(),;
-  const [isLoading, setIsLoading] = useState(false),;
-  const isEditing = !!project,;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const form = useForm<ProjectFormValues>({;
     resolver: zodResolver(projectSchema),;
     defaultValues: {;
       title: project?.title || '',;
       description: project?.description || '',;
-<<<<<<< HEAD
-      technologies: project?.technologies;
-        ? project && project.technologies.join(', ');
-        : '',;
-      image_url: project?.image_url || '',;
-      github_url: project?.github_url || '',;
-      demo_url: project?.demo_url || '',;
-      pdf_url: project?.pdf_url || '',;
-    },;
-  });
 
-  const onSubmit = async (data: ProjectFormValues) => {;
-    if (!user) return;
-
-    setIsLoading(true);
-    try {;
-      const projectData: PortfolioProject = {;
-        title: data && data.title,;
-        description: data && data.description,;
-        technologies: data && data.technologies;
-          ? data && data.technologies.split(',').map(tech => tech && tech.trim());
-          : [],;
-        image_url: data && data.image_url,;
-        github_url: data && data.github_url || undefined,;
-        demo_url: data && data.demo_url || undefined,;
-        pdf_url: data && data.pdf_url,;
-      };
-
-      let success = false;
-
-      if (isEditing && project?.id) {;
-        success = await updateProject(project && project.id, projectData);
-      } else {;
-        const projectId = await addProject(projectData);
-        success = !!projectId;
-      }
-
-      if (success) {;
-        onSuccess();
-        form && form.reset();
-=======
-      technologies: project?.technologies ? project.technologies.join() : '',;
-      image_url: project?.image_url || '',;
-      github_url: project?.github_url || '',;
-      demo_url: project?.demo_url || '',;
-      pdf_url: project?.pdf_url || ''}
-  }),;
-  const onSubmit = async (data: ProjectFormValues) => {;
-    if (!user) return,;
-    setIsLoading(true),;
-    try {;
-      const projectData: PortfolioProject = {;
-        title: data.title,;
-        description: data.description,;
-        technologies: data.technologies ?;
-          data.technologies.split().map(tech => tech.trim()) : [],;
-        image_url: data.image_url,;
-        github_url: data.github_url || undefined,;
-        demo_url: data.demo_url || undefined,;
-        pdf_url: data.pdf_url},;
-      let success = false,;
-      if (isEditing && project?.id) {;
-        success = await updateProject(project.id, projectData);
-      } else {;
-        const projectId = await addProject(projectData),;
-        success = !!projectId;
-      }
-;
-      if (success) {;
-        onSuccess();
-        form.reset();
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     } catch (error) {;
       logErrorToProduction('Error saving project:', { data: error });
@@ -206,29 +64,15 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
     }
 
   },
-  
-
-
 
   return (
-<<<<<<< HEAD
-    <Form {...form}>;
-      <form onSubmit={form && form.handleSubmit(onSubmit)} className='space-y-4'>;
-=======
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
         <FormField
 
         />;
 
-
         <FormField
-<<<<<<< HEAD
-          control={form && form.control}
-=======
-          control={form.control}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
           name='description'
           render={({ field }: { field: any }) => (            <FormItem>
               <FormLabel>Project Description</FormLabel>
@@ -272,13 +116,8 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 
         />;
 
-
         <FormField
-<<<<<<< HEAD
-          control={form && form.control}
-=======
-          control={form.control}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
           name='technologies'
           render={({ field }: { field: any }) => (;
             <FormItem>;
@@ -395,7 +234,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 
           />;
 
-
           <FormField
             control={form && form.control}
             name='demo_url'
@@ -413,8 +251,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
                 <FormMessage />;
               </FormItem>;
             )}
-
-
 
                   GitHub URL
                 </FormLabel>
@@ -434,7 +270,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
                 <FormLabel className="flex items-center gap-2">
                   <Link className="h-4 w-4" />
 
-
                   Demo URL
                 </FormLabel>
                 <FormControl>
@@ -448,11 +283,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         </div>;
 
         <FormField
-<<<<<<< HEAD
-          control={form && form.control}
-=======
-          control={form.control}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
           name='image_url'
           render={({ field }: { field: any }) => (            <FormItem>;
               <FormLabel className='flex items-center gap-2'>;
@@ -473,7 +304,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
             <FormItem>
               <FormLabel className="flex items-center gap-2">
                 <FileImage className="h-4 w-4" />
-
 
                 Screenshot URL
               </FormLabel>
@@ -498,8 +328,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
           </Button>
         </div>
       </form>
-
-
 
     </Form>
   )
@@ -527,7 +355,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 }
 
 }
-
 
             </FormItem>)}
         />;

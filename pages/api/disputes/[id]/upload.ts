@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
@@ -16,7 +11,6 @@ import {
   upsertDispute,;
 } from "../../../../utils/fsdb";
 import {
-
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
@@ -44,61 +38,13 @@ export default async function handler(
 
     return res && res.status(400).json({ error: "Invalid id" });
 
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const user = parseUserFromRequest(req);
 
   if (req && req.method === "POST") {
     const dispute = await getDisputeById(id);
-<<<<<<< HEAD
-      { recursive: true },
-=======
-import type { NextApiRequest, NextApiResponse } from './next';
-import path from './path';
-import {
-  ensureDisputeUploadDir
-  getDisputeById
-  upsert_dispute
-} from '../../../../utils / fsdb';
-import {
-  parseUserFromRequest
-  ensureInvolvedOrAdmin
-} from '../../../../utils / auth';
-export const config = {
-  api: { body_parser: { size_limit: "20mb" } }
-}
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  const { id } = req.query;
-  if (
-    return res.status (400).json ({ error: "Invalid id" })) {
-  $2
-}
-  const user = parseUserFromRequest (req);
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    const dispute = await getDisputeById (id);
-    if (return res.status (404).json ({ error: "Dispute not found" })) {
-  $2
-}
-    try {
-      ensureInvolvedOrAdmin (user, dispute.clientUserId, dispute.talentUserId);
-    } catch (e: any) {
-      return res.status (e.status_code || 403).json ({ error: "Forbidden" });
-    }
-    const { files } =;
-      req.body ||;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
       { recursive: true }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
       (err: any) => {
         if (return reject (err)) {
   $2
@@ -109,30 +55,7 @@ if ( {) {
       }
     );
   });
-<<<<<<< HEAD
-=======
-=======
-}
 
-=======
-}
-
-
-}
-
-    fs.mkdir(require('path').dirname(filePath), { recursive: true }, (err: any) => {
-      if (err) return reject(err);
-      fs.writeFile(filePath, data, (err2: any) => (err2 ? reject(err2) : resolve()))
-    })
-  })
-}
-}
-
-}
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['POST']);
@@ -158,14 +81,8 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
-
-}
-=======
-
-
 }
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -257,10 +174,4 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+

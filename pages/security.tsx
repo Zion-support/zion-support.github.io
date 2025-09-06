@@ -1,30 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
-
-const Page = () => {
-  return (
-    <MainLayout
-      title="Security - Zion Tech Group"
-      description="Security solutions from Zion Tech Group"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Security</h1>
-          <p className="text-xl text-gray-600">Coming soon...</p>
-        </div>
-      </div>
-    </MainLayout>
-  );
-};
-
-export default Page;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-origin/automation-improvements-final
-
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -37,7 +10,6 @@ const securityStats = [
   { number: '100%', label: 'Data Encryption' }
 ];
 export default function SecurityPage() {
-
 
   return (
     <Layout
@@ -58,7 +30,6 @@ export default function SecurityPage() {
       keywords="security, data protection, encryption, compliance, cybersecurity">;
       <div className="min-h-screen bg-gray-50">;
         {/* Hero Section */}
-
 
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
@@ -264,7 +235,6 @@ export default function Security(req, res) {
           </div>;
         </section>;
 
-
         {/* Security Features */}
         <section className="py-16">;
           <div className="container mx-auto px-4">;
@@ -452,7 +422,6 @@ function SecurityPage() {
           </div>;
         </section>;
 
-
         {/* Compliance Section */}
         <section className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
@@ -575,7 +544,6 @@ function SecurityPage() {
             </div>;
           </div>;
         </section>;
-
 
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -1054,11 +1022,8 @@ export default function Security() {
                 </div>
                   </div>
                 </div>
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 </Link>
-origin/main
-origin/automation-improvements-final
 </Link>
                   </div>
                 </div>
@@ -1078,7 +1043,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
         <EnhancedFooter />
       </div>
 
-
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
                   View Compliance Details;
                 </Link>;
@@ -1089,12 +1053,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       </div>;
     </Layout>;
 
-
-
     </>
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
   );
   } catch (error) {
     console.error("Error:", error);
@@ -1104,15 +1064,9 @@ origin/automation-improvements-final
   )
 }
 ursor/integrate-build-improve-and-re-verify-b76c
-origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-origin/cursor/integrate-build-improve-and-re-verify-242d
 )
 }
-origin/main
   )
 }
 ursor/fix-lint-push-and-merge-to-main-ae4e
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+

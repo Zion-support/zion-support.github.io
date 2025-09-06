@@ -1,16 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import fs from 'fs',;
-import path from 'path',;
-const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
 
-
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs',;
-import path from 'path',;
-const usersPath = path.join(process.cwd(), 'datalearnusers.json')
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
@@ -27,17 +15,7 @@ import fs from 'fs';
 import path from 'path';
 const usersPath = path.join(process.cwd(), 'datalearnusers.json'),;
 export default function handler(req, res) {
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',
-import fs from 'fs',
-import path from 'path',
-const users_path = path.join (process.cwd (), 'datalearnusers.json'),
-=======
-import type { NextApiRequest, NextApiResponse } from 'next'
-import fs from 'fs'
-import path from 'path'
-const users_path = path.join (process.cwd (), 'datalearnusers.json')
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 export default /**
  * handler - Function description
  */
@@ -53,11 +31,4 @@ function handler() {
     const top = entries.sort ((array: any, boolean: any) => b.points - a.points).slice (0, 20)
     res.status (200).json ({ leaderboard: top });
   } catch (e: any) {
-<<<<<<< HEAD
 
-
-=======
-    res.status (500).json ({ error: e?.message ?? 'Failed to load leaderboard' });
-  }
-};
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

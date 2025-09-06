@@ -6,32 +6,13 @@ function toOpenApi() {
   v1.sections.forEach((section) => {
     section.endpoints.forEach((ep: EndpointSpec) => {
 
-
               }
             : undefined
           responses: {
             "200": {
               description: "OK"
               content: {
-<<<<<<< HEAD
-                },
-              },
-            },
-          },
-          security:;
-            ep.auth && ep.auth.length > 0 && !ep.auth.includes ("none");
-              ? [{ bearer_auth: [] }];
-              : [],
-=======
-                }
-              }
-            }
-          }
-          security:;
-            ep.auth && ep.auth.length > 0 && !ep.auth.includes ("none");
-              ? [{ bearer_auth: [] }];
-              : []
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   });
 
 ;
@@ -82,5 +63,4 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
 

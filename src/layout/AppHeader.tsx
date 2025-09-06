@@ -49,7 +49,6 @@ import React from 'react';
           "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",
           { "bg-red-500": mobileMenuOpen }
 
-
         )}
       >
         <div className="container flex h-16 items-center px-4 sm:px-6">
@@ -66,17 +65,14 @@ import React from 'react';
             </nav>;
           </div>;
 
-
           {/* Mobile menu button */}
           <div className="md:hidden ml-auto mr-4">
             <button
-
 
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               aria-expanded={mobileMenuOpen}
               aria-label={t('general.toggle_mobile_menu')}
-
 
             >
               <span className="sr-only">{t('general.open_main_menu')}</span>
@@ -97,13 +93,9 @@ import React from 'react';
                 href="/auth/login"
                 className="text-sm font-medium text-foreground/70 hover:text-foreground"
 
-
-
                 aria-label={t('auth.login')}
                 data-testid="login-link"
                 onClick={(e) => {
-
-
 
                   e.preventDefault(),
                   // For the main login link, we might not have a specific returnTo beyond current page,
@@ -127,9 +119,7 @@ import React from 'react';
                 href="/signup"
                 className="ml-2 text-sm font-medium text-foreground/70 hover:text-foreground"
 
-
                 aria-label={t('auth.signup')}
-
 
                 data-testid="signup-nav-link"
               >
@@ -917,7 +907,6 @@ import React from 'react';
             </Link>;
           </div>;
 
-
           {/* Desktop Navigation */}
           <nav className="hidden md:flex ml - 8 space - x-8">;
             {navigation.map ((item) => (
@@ -1215,19 +1204,7 @@ import React from 'react';
               </div>;
 
               {/* Mobile Services */}
-<<<<<<< HEAD
-              <div className="space-y-2">;
-                <div className="px-3 py-2 text-sm font-semibold text-zion-cyan uppercase tracking-wider">;
-                  Services;
-                </div>;
-                {services && services.map((service) => (;
-=======
-              <div className="space-y-2">
-                <div className="px-3 py-2 text-sm font-semibold text-zion-cyan uppercase tracking-wider">
-                  Services
-                </div>
-                {services.map((service) => (
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                   <Link
                     key={service.name}
                     to={service.href}
@@ -1449,9 +1426,6 @@ import React from 'react';
       </AnimatePresence>;
     </header>  );
 }
-
-
-
 
       )}
       {/* Mobile Bottom Navigation */}

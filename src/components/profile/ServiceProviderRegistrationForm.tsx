@@ -174,14 +174,10 @@ if ( {) {
       const { data: userData } = await supabase.auth.getUser(),
       const userEmail = (userData as any).user?.email,
 
-
-
-
       // Create the service profile
       const { data: profileData, error } = await supabase
         .from('profiles')
         .update({
-
 
           display_name: values.name,
           bio: finalSummary,
@@ -193,7 +189,6 @@ if ( {) {
         })
         .eq('id', user.id)
 
-
       // Store service-specific data in service_profiles table
       // (This assumes you have a service_profiles table in your database)
       /*
@@ -201,13 +196,11 @@ if ( {) {
         .from('service_profiles')
         .insert({
 
-
           user_id: user.id,
           services: finalServices,
           hourly_rate: Number(values.hourlyRate),
           availability_status: values.availability,
           location: values.location,
-
 
       */
       // Send notification email if available
@@ -268,10 +261,8 @@ if ( {) {
           await supabase.functions.invoke('send-email', {
             body: {
 
-
               to: userEmail,
               subject: "Your Zion Service Profile Is Ready",
-
 
               html: `
               <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -683,11 +674,6 @@ export function ServiceProviderRegistrationForm() {;
     }
   },
 
-
-
-
-
-
   return (
 
     <div className='max-w-4xl mx-auto p-4 md:p-6'>;
@@ -706,7 +692,6 @@ export function ServiceProviderRegistrationForm() {;
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Full Name</FormLabel>
 
-
                           <FormControl>
                             <div className="relative">
                               <UserRound className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
@@ -722,7 +707,6 @@ export function ServiceProviderRegistrationForm() {;
                       )}
                     />
                   </div>
-
 
                   <div className="col-span-1">
                     <FormField
@@ -748,7 +732,6 @@ export function ServiceProviderRegistrationForm() {;
                     />
                   </div>
 
-
                   <div className="col-span-1">
                     <FormField
                       control={form.control}
@@ -772,7 +755,6 @@ export function ServiceProviderRegistrationForm() {;
                       )}
                     />
                   </div>
-
 
                   <div className="col-span-1">
                     <FormField
@@ -829,19 +811,7 @@ export function ServiceProviderRegistrationForm() {;
           <form onSubmit={form && form.handleSubmit(onSubmit)}>;
             <CardContent className='space-y-8'>;
               {/* Basic Information */}
-<<<<<<< HEAD
-              <div className='space-y-4'>;
-                <h3 className='text-lg font-medium text-white'>;
-                  Basic Information;
-                </h3>;
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>;
-                  <div className='col-span-1'>;
-=======
-              <div className="space-y-4">
-                <h3 className="text-lg font-medium text-white">Basic Information</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="col-span-1">
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                     <FormField
                       control={form.control}
                 />;
@@ -880,7 +850,6 @@ export function ServiceProviderRegistrationForm() {;
                     </Button>;
                   </div>;
 
-
                         </FormLabel>
                         <FormDescription className="text-zion-slate-light">
                           Let AI help optimize your service description for better visibility and client engagement
@@ -900,7 +869,6 @@ export function ServiceProviderRegistrationForm() {;
                   )}
                 />
 
-
                     </Button>
                   </div>
                 )}
@@ -914,7 +882,6 @@ export function ServiceProviderRegistrationForm() {;
                       </h4>;
                       <Button
 
-
                         type="button"
                         size="sm"
                         className="bg-zion-purple hover:bg-zion-purple-dark text-white"
@@ -925,7 +892,6 @@ export function ServiceProviderRegistrationForm() {;
                     </div>
                     
                     <div className="space-y-4">
-
 
                       <div>
                         <h5 className='text-zion-slate-light text-sm mb-1'>
@@ -972,7 +938,6 @@ export function ServiceProviderRegistrationForm() {;
                             </div>                          </div>
                         )}
 
-                      
                       {generatedContent.services && generatedContent.services.length > 0 && (
                         <div>
                           <h5 className="text-zion-slate-light text-sm mb-1">Suggested Services</h5>
@@ -996,10 +961,7 @@ export function ServiceProviderRegistrationForm() {;
 
               <Separator className='bg-zion-blue-light/50' />;
 
-
-
               <Separator className="bg-zion-blue-light/50" />
-
 
               {/* Services and Availability */}
               <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
@@ -1018,21 +980,12 @@ export function ServiceProviderRegistrationForm() {;
                         <FormLabel className="text-zion-slate-light">Services</FormLabel>
                         <div className="flex gap-2">
 
-
                           <FormControl>
                             <Input
                               className='flex-1 bg-zion-blue border-zion-blue-light text-white'
                               placeholder='Add a service...'
                               {...field}
-<<<<<<< HEAD
-                              onKeyDown = {handleServiceKeyPress,}
-                            />;
-                          </FormControl>;
-=======
-                              onKeyDown={handleServiceKeyPress}
-                            />
-                          </FormControl>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                           <Button
 
                   />;
@@ -1061,7 +1014,6 @@ export function ServiceProviderRegistrationForm() {;
 
                   </div>;
                 </div>;
-
 
                 {/* Pricing and Availability Section */}
                 <div className='space-y-4'>
@@ -1213,7 +1165,6 @@ export function ServiceProviderRegistrationForm() {;
                     )}
                   />
 
-
                         </button>
                       </Badge>
                     ))}
@@ -1236,7 +1187,6 @@ export function ServiceProviderRegistrationForm() {;
                       <FormItem>
                         <FormLabel className="text-zion-slate-light">Starting Rate (USD)</FormLabel>
 
-
                         <FormControl>
                           <div className="relative">
                             <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span>
@@ -1255,7 +1205,6 @@ export function ServiceProviderRegistrationForm() {;
                         </FormControl>;
 
                   />;
-
 
                   <FormField
                     control={form.control}
@@ -1372,7 +1321,6 @@ export function ServiceProviderRegistrationForm() {;
                               <label htmlFor="unavailable" className="text-white flex items-center gap-2">
                                 <div className="h-2 w-2 rounded-full bg-red-500"></div>
 
-
                                 Currently Unavailable
                               </label>
                             </div>
@@ -1390,11 +1338,8 @@ export function ServiceProviderRegistrationForm() {;
               </div>;
             </CardContent>;
 
-
-
             <CardFooter className="border-t border-zion-blue-light pt-6">
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between">
-
 
                 <Button
                   type="button"
@@ -1449,22 +1394,7 @@ export function ServiceProviderRegistrationForm() {;
   setServiceTags (service_tags.filter ( (s) => s !== service) );
 
 }
-<<<<<<< HEAD
-//Handle key press in services input (add on enter) const handleServiceKeyPress = (e: React.KeyboardEvent) =>: any {
-}
-//Handle avatar upload const handleAvatarUpload = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
-  const file = e.target.files?.[0];
-// Check condition
-if ( {) {
-  $2
-}
-  const reader = new FileReader ();
-=======
-//Handle avatar upload const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-  const file = e.target.files?.[0]
-if (file) {
-  const reader = new FileReader ()
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 reader.onloadend = () => {
 
   setUploadedAvatar (reader.result as string);
@@ -1504,11 +1434,7 @@ if (newServices.length > 0) {
   if (serviceTags.length === 0) {
   toast ({
   return;
-<<<<<<< HEAD
-}setIsSubmitting (true);
-=======
-}setIsSubmitting (true)
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 try {
   //For actual implementation with Supabase if (!user?.id) {
 }//Enhance profile if not already done let finalSummary = values.bio
@@ -1519,11 +1445,9 @@ try {
 }= await supabase.functions.invoke ('service-profile-enhancer', {
   body: {
 
-
   new Date () .getFullYear () 
 }Zion Marketplace</p>
 }//Continue with submission even if email fails 
-
 
 }//Redirect to service provider dashboard or profile page setTimeout ( () => {'
   router.push ('/service-dashboard')
@@ -1571,8 +1495,6 @@ max-w-4xl mx-auto p-4 md:p-6"> <Card className=" bg-zion-blue-dark border-zion-b
 }/> <FormField <FormControl> <div className=" space-y-2"> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" available"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-green-500"></div> Available for Work </label> </div> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" limited"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-yellow-500"></div> Limited Availability </label> </div> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" unavailable"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-red-500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>) "
 }/> </div> </div> </CardContent> <CardFooter className=" border-t border-zion-blue-light pt-6"> <div className=" flex flex-col sm:flex-row gap-4 w-full sm:justify-between"> <Button type=" button"variant=" outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>)
 }'"}
-
-
 
   provider_data: {
   name: values.name, title: values.title, bio: values.bio,  services: service_tags, location: values.location;

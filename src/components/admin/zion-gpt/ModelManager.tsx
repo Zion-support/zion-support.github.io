@@ -1,32 +1,9 @@
-<<<<<<< HEAD
-=======
-// If activating, deactivate all other models with the same purpose;
-      // Check condition
-if ( {) {
-  $2
-}
-        await supabase;
-
-          .from('model_versions');
-          .update({ active: false });
-          .eq('purpose', purpose);
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
       }
 
       // Update this model;
-<<<<<<< HEAD
-import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react'
-import { supabase  } from '@/integrations/supabase/client';
-import { ModelConfig  } from '@/utils/zion-gpt';
-import {logErrorToProduction} from '@/utils/productionLogger';
-interface ModelVersionData extends ModelConfig {
-  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
-  errorMessage?: string
-}
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
       await supabase;
         .from ('model_versions');
         .update ({ active: !current_active });
@@ -34,29 +11,7 @@ interface ModelVersionData extends ModelConfig {
       // Refresh the model list;
       fetch_models ();
 
-<<<<<<< HEAD
-      }
-      // Update this model
-      await supabase
-        .from('model_versions')
-        .update({ active: !currentActive })
-        .eq('id', modelId)
-      // Refresh the model list
-      fetchModels()
-    } catch (error) {
-      logErrorToProduction('Error toggling model active state:', { data: error })
-    }
-
-=======
-    } catch (error) {
-      logErrorToProduction ('Error toggling model active state:', { data: error });
-    }
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         .order('createdAt', { ascending: false }),;
-
-
 
   const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string,) => {;
     try {;
@@ -81,12 +36,6 @@ interface ModelVersionData extends ModelConfig {
     }
   },;
 
-<<<<<<< HEAD
-=======
-  },
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <Card className="w-full">;
       <CardHeader className="flex flex-row items-center justify-between">;
@@ -152,35 +101,14 @@ interface ModelVersionData extends ModelConfig {
                           <Loader2 className="h-4 w-4 animate-spin" />;
                         ) : (;
                           <RefreshCw className="h-4 w-4" />;
-<<<<<<< HEAD
-=======
 
-                    {model.trainingStatus === 'queued' || model.trainingStatus === 'running' ? (
-                      <Button
-                        variant="ghost"
-                        size="sm"
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       >
                         {activeJobs[model.id] ? (
                           <Loader2 className="h-4 w-4 animate-spin" />
                         ) : (
                           <RefreshCw className="h-4 w-4" />
                         )}
-<<<<<<< HEAD
-=======
-                        <span className="ml-1">Check</span>;
-                      </Button>;
-                    ) : model && model.trainingStatus === 'succeeded' ? (;
-                      <Button
 
-
-                        variant={model.active ? "outline" : "default"}
-                        size="sm"
-                        onClick={() => toggleModelActive(model.id, model.active, model.purpose)}
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       >
                         {model.active ? (
                           <>
@@ -191,13 +119,7 @@ interface ModelVersionData extends ModelConfig {
                             <Play className="h-4 w-4 mr-1" /> Activate
                           </>
                         )}
-<<<<<<< HEAD
-                      </Button>
-                    ) : (
-=======
-                      </Button>;
-                    ) : (;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                       <Button
                         variant="ghost"
                         size="sm"
@@ -219,12 +141,6 @@ interface ModelVersionData extends ModelConfig {
                         <AlertCircle className="h-4 w-4 mr-1" /> Error
                       </Button>
                     )}
-<<<<<<< HEAD
-=======
-
-                  </TableCell>;
-                </TableRow>;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
               ))}
             </TableBody>;
@@ -234,7 +150,6 @@ interface ModelVersionData extends ModelConfig {
     </Card>;
   );
 }
-
 
 }
 
@@ -326,7 +241,4 @@ interface ModelVersionData extends ModelConfig {
       </CardContent>;
     </Card>);
 }
-<<<<<<< HEAD
-=======
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+

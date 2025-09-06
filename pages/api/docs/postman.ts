@@ -16,21 +16,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           method: ep && ep.method
           header: [
             {
-<<<<<<< HEAD
-            : undefined,
-        },
-      })),
-    ),
-      schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json'
-    },
-=======
-            : undefined
-        }
-      }))
-    )
-      schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json'
-    }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     item: [
       {
         name: 'Health Check'
@@ -127,17 +113,7 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-            raw: `{{base_url}}${ep.path}`,
-            host: ["{{base_url}}"],
-            path: ep.path.replace (/^\//, "").split ("/"),
-          },
-=======
-            raw: `{{base_url}}${ep.path}`
-            host: ["{{base_url}}"]
-            path: ep.path.replace (/^\//, "").split ("/")
-          }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
           body: ep.requestBodySchema;
             ? { mode: "raw", raw: JSON.stringify ({}, null, 2) }
             : undefined

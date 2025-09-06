@@ -8,7 +8,6 @@ import { Badge } from '@/components / ui / badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
 interface RewardsCardProps {
 
-
 import {;
   Card,;
   CardContent,;
@@ -30,17 +29,12 @@ import { formatDate } from "@/utils/referralUtils"
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 
-
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ReferralReward } from "@/types/referrals";
 import { formatDate } from "@/utils/referralUtils";
 import { BadgeDollarSign, Badge } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-
-
-
 
 interface RewardsCardProps {
 
@@ -49,7 +43,6 @@ interface RewardsCardProps {
   isLoading: boolean
 }
 
-
     return (
 
           <CardTitle className="flex items-center gap-2">
@@ -57,7 +50,6 @@ interface RewardsCardProps {
 
           <CardTitle className="flex items-center gap-2">
             <BadgeDollarSign className="h-5 w-5" />
-
 
             Your Rewards
           </CardTitle>
@@ -70,9 +62,6 @@ interface RewardsCardProps {
         </CardContent>
       </Card>
 
-
-
-
     )
   }
   if (rewards.length === 0) {
@@ -80,10 +69,8 @@ interface RewardsCardProps {
       <Card>
         <CardHeader>
 
-
           <CardTitle className="flex items-center gap-2">
             <BadgeDollarSign className="h-5 w-5" />
-
 
             Your Rewards
           </CardTitle>
@@ -102,7 +89,6 @@ interface RewardsCardProps {
         </CardHeader>
         <CardContent>
 
-
           <div className="flex flex-col items-center justify-center p-4 text-center">
             <p className="text-muted-foreground">No rewards yet</p>
             <p className="text-sm text-muted-foreground mt-1">
@@ -112,9 +98,7 @@ interface RewardsCardProps {
         </CardContent>
       </Card>
 
-
     )
-
 
   }
   return (
@@ -212,34 +196,7 @@ if ( {) {
     )
 
   }
-<<<<<<< HEAD
 
-  if (rewards && rewards.length === 0) {;
-    return (
-      <Card>;
-        <CardHeader>;
-          <CardTitle className='flex items-center gap-2'>;
-            <BadgeDollarSign className='h-5 w-5' />;
-            Your Rewards;
-          </CardTitle>;
-          <CardDescription>;
-            Rewards earned from successful referrals;
-          </CardDescription>;
-        </CardHeader>;
-        <CardContent>;
-          <div className='flex flex-col items-center justify-center p-4 text-center'>;
-            <p className='text-muted-foreground'>No rewards yet</p>;
-            <p className='text-sm text-muted-foreground mt-1'>              Refer users to earn rewards once they complete onboarding            Your Rewards;
-=======
-;
-  if (rewards.length === 0) {;
-    return (;
-      <Card>;
-        <CardHeader>;
-          <CardTitle className="flex items-center gap-2">;
-            <BadgeDollarSign className="h-5 w-5" />;
-            Your Rewards;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </CardTitle>;
           <CardDescription>Rewards earned from successful referrals</CardDescription>;
         </CardHeader>;
@@ -351,15 +308,7 @@ if ( {) {
                 </div>
                 <p className="text-xs text-muted-foreground mt-1">
                   Earned on {formatDate(reward.created_at)}
-<<<<<<< HEAD
-                </p>
-                {reward.expires_at && (
-                  <p className="text-xs text-muted-foreground">
-=======
-                </p>;
-                {reward.expires_at && (;
-                  <p className="text-xs text-muted-foreground">;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                     Expires on {formatDate(reward.expires_at)}
                   </p>
 

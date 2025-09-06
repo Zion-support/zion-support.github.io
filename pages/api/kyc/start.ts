@@ -1,8 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-
 import {getRequiredDocuments, getOptionalDocuments} from '../../../utils/kyc';
-
 
 import type { KycProfile, KycRole } from '../../../utils/kyc';
 import fs from 'fs';
@@ -37,17 +35,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     businessName
     businessRegistrationNumber
   } = req.body as {
-<<<<<<< HEAD
-    role,
-    fullLegalName,
-    business_name,
-    businessRegistrationNumber,
-=======
-    role
-    fullLegalName
-    business_name
-    businessRegistrationNumber
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     userId?: string;
   } = req.body as {
     user_id?: string;
@@ -107,7 +95,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
 
 }
   const db = load ();

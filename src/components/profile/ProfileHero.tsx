@@ -5,7 +5,6 @@ avatarUrl?: string;
   reviewCount?: number;
   aiScore?: number;
 
-
   return (
     <div className='w-full overflow-hidden'>;
       <div className='relative'>;
@@ -72,7 +71,6 @@ export function ProfileHero({
   reviewCount;
   aiScore;
 
-
 export function ProfileHero({
 
   name,
@@ -83,7 +81,6 @@ export function ProfileHero({
   rating,
   reviewCount,
   aiScore,
-
 
   profileType
 }: ProfileHeroProps) {
@@ -96,8 +93,6 @@ export function ProfileHero({
               src={coverImageUrl}
               alt={`${name} cover`}
 
-
-
               className="w-full h-full object-cover"
               loading="lazy"
             />
@@ -106,8 +101,6 @@ export function ProfileHero({
           )}
 
         </AspectRatio>
-        
-
 
         <div className="container px-4 md:px-6">
           <div className="flex flex-col md:flex-row md:items-end -mt-16 md:-mt-20 relative z-10 mb-6 md:mb-10">
@@ -116,7 +109,6 @@ export function ProfileHero({
                 <AvatarImage src={avatarUrl} alt={name} />
               ) : (
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">
-
 
         </AspectRatio>;
 
@@ -136,7 +128,6 @@ export function ProfileHero({
               <div className='flex flex-wrap items-center gap-2 mb-1'>;
                 <h1 className='text-2xl md:text-3xl font-bold text-white'>;
 
-
                   {name}
                 </h1>
                 <Badge
@@ -149,16 +140,7 @@ export function ProfileHero({
 
                   variant="outline" 
                   className={cn(
-<<<<<<< HEAD
-                    "ml-2 border-zion-purple/50 text-zion-cyan"
-                    profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
-                  )}
-=======
-                    "ml-2 border-zion-purple/50 text-zion-cyan",
-                    profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
-                  )}
-                >;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                   {profileType === 'service' ? 'Service Provider' : 'Talent'}
 
                 </Badge>
@@ -168,12 +150,9 @@ export function ProfileHero({
               
               <div className="flex flex-wrap items-center gap-3 mt-2">
 
-
                 {location && (
                   <span className="text-sm text-zion-slate-light">{location}</span>
                 )}
-
-
 
                 {rating && (
                   <div className='flex items-center gap-1'>
@@ -200,8 +179,6 @@ export function ProfileHero({
                   </div>
                 )}
 
-
-
                 {aiScore && (;
                   <div className='px-2 py-0 && 0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan'>                    AI Match: {aiScore}%                {location && (;
                   <span className="text-sm text-zion-slate-light">{location}</span>;
@@ -216,6 +193,5 @@ export function ProfileHero({
                     )}
                   </div>
                 )}
-
 
 ;

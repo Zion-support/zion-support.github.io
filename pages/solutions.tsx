@@ -1,136 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import Layout from '../components/Layout';
-import { 
-  Shield, 
-  Cloud, 
-  Zap, 
-  Users, 
-  Brain, 
-  Network, 
-  TrendingUp, 
-  Clock, 
-  CheckCircle, 
-  ArrowRight 
-} from 'lucide-react';
 
-<<<<<<< HEAD
-=======
-const solutions = [
-  {
-    title: 'Enterprise Solutions',
-    icon: Shield,
-    description: 'Comprehensive enterprise-grade solutions for large organizations',
-    features: ['Scalable Architecture', 'Enterprise Security', '24/7 Support', 'Custom Integration']
-  },
-  {
-    title: 'Cloud Solutions',
-    icon: Cloud,
-    description: 'Modern cloud infrastructure and migration services',
-    features: ['Cloud Migration', 'Infrastructure as Code', 'Auto-scaling', 'Cost Optimization']
-  },
-  {
-    title: 'AI Solutions',
-    icon: Brain,
-    description: 'Artificial intelligence and machine learning solutions',
-    features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
-  }
-];
-
-export default function SolutionsPage() {
-  return (
-    <Layout
-      title="Solutions - Zion Tech Group"
-      description="Comprehensive technology solutions for businesses of all sizes"
-      keywords="solutions, enterprise, cloud, AI, technology solutions"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Technology{' '}
-                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Solutions
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto">
-                Comprehensive technology solutions designed to meet your business needs and drive growth.
-              </p>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Solutions Grid */}
-        <section className="py-16">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {solutions.map((solution, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
-                >
-                  <div className="flex items-center mb-4">
-                    <div className="bg-blue-100 p-3 rounded-lg mr-4">
-                      <solution.icon className="w-6 h-6 text-blue-600" />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900">{solution.title}</h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">{solution.description}</p>
-                  <ul className="space-y-2">
-                    {solution.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                        <span className="text-sm text-gray-600">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Let's discuss how our solutions can help you achieve your technology goals.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
-                >
-                  Get Started
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </a>
-                <a
-                  href="/services"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-                >
-                  View All Services
-=======
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
@@ -181,7 +49,6 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
 } from 'lucide-react',;
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
 import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services',;
-
 
       id: 'healthcare',
       name: 'Healthcare Solutions',
@@ -366,12 +233,8 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
                 <a
                   href="/contact"
 
-
-
                 <a
                   href="/contact"
-
-
 
                   className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
@@ -571,67 +434,17 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
                 <a
                   href="/contact"
 
-
-
                 <a
                   href="/contact"
-
-
 
                   className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Consultation
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+
                 </a>
               </div>
             </motion.div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-    </Layout>
-  );
-}
-=======
-    </UltraAdvancedFuturisticBackground>
-  )
 
-export default Solutions,;
-;
-export default Solutions,
-            >;
-              <h2 className="text - 4xl md: text - 5xl font - bold mb - 6 bg - gradient - to - r from - orange - 400 to - red - 500 bg - clip - text text - transparent">;
-                Ready for Industry Transformation?;
-              </h2>;
-              <p className="text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto">;
-                Partner with us to build industry - specific solutions that drive your business forward;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <a;
-                  href="/contact";
-                  className="px - 8 py - 4 bg - gradient - to - r from - orange - 500 to - red - 600 text - white font - semibold rounded - lg hover:from - orange - 600 hover:to - red - 700 transition - all duration - 300 transform hover:scale - 105";
-                >;
-                  Start Your Transformation;
-                </a>;
-                <a;
-                  href="/contact";
-                  className="px - 8 py - 4 border - 2 border - orange - 400 text - orange - 400 font - semibold rounded - lg hover:bg - orange - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105";
-                >;
-                  Schedule Consultation;
-                </a>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </UltraAdvancedFuturisticBackground>);
-},
-export default Solutions,
-;
-
-},
-
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

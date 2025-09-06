@@ -33,7 +33,4 @@ function InterviewCard() {
         return <Badge>{interview.status}</Badge>;
 }
   );
-<<<<<<< HEAD
-=======
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+

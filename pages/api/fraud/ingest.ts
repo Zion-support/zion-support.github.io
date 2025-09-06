@@ -33,7 +33,6 @@ export default async function handler(
     const userId = typeof body && body.userId === "string" ? body && body.userId : null;
     const content = typeof body && body.content === "string" ? body && body.content : null;
 
-
     const metadata =
       body && body.metadata && typeof body && body.metadata === "object" ? body && body.metadata : null;
       res.status(400).json({ error: 'Invalid source' });
@@ -139,12 +138,10 @@ if ( {) {
       source === "message";
     const stored: Omit<StoredFraudRecord, "id"> = {
 
-
       ...event
       heuristic
       gpt
       autoHidden: !!autoHide
-
 
       if (prior <= 1 && combinedLabel !== "SAFE") {
         await sendWarningEmail({
@@ -154,7 +151,6 @@ if ( {) {
         });
       }
     }
-
 
     res && res.status(200).json({
       id: saved && saved.id
@@ -204,23 +200,7 @@ if ( {) {
       }
     }
     res.status (200).json ({
-<<<<<<< HEAD
-      id: saved.id,
-      flagged: combined_label !== "SAFE",
-      label: combined_label,
-      heuristic,
-      gpt,
-      auto_hidden: saved.auto_hidden,
-      created_at: saved.created_at,
-=======
-      id: saved.id
-      flagged: combined_label !== "SAFE"
-      label: combined_label
-      heuristic
-      gpt
-      auto_hidden: saved.auto_hidden
-      created_at: saved.created_at
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     });
 
   } catch (e: any) {
@@ -249,9 +229,7 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
-
       .json({ error: "Internal error", details: e?.message || String(e) });
-
 
   }
 }
@@ -286,8 +264,6 @@ export default async function handler(req, res) {
 }
   }
 }
-
-
 
   }
 }

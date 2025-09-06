@@ -8,7 +8,6 @@ import { Badge } from "@/components/ui/badge",
 import { Loader2, Edit, X, Eye } from 'lucide-react'
 import { format } from "date-fns",
 
-
 import Link from "next/link",
 import {logErrorToProduction} from '@/utils/productionLogger',
 interface JobsListProps {
@@ -25,11 +24,6 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
     const fetchJobs = async () => {
       if (!user) return,
 
-
-<<<<<<< HEAD
-=======
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       try {
         let query = supabase
           .from("jobs")
@@ -116,7 +110,6 @@ if ( {) {
       </div>);
   }
 
-
           .order("created_at", { ascending: false }),
 
   if (isLoading) {
@@ -143,8 +136,6 @@ if ( {) {
       </div>
     )
   }
-
-
 
       case "closed":
         return "bg-gray-100 text-gray-800"
@@ -190,8 +181,6 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
   },
 
   },
-
-
 
   return (
     <div className="grid gap-6 md:grid-cols-2">
@@ -307,8 +296,6 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
             <div className="flex flex-wrap gap-1 mt-2">;
               {job && job.skills.slice(0, 3).map((skill, index,) => (;
                 <Badge key={index} variant="outline" className="text-xs">;
-
-
 
                   {skill}
                 </Badge>;
@@ -451,7 +438,4 @@ return (<div className="grid gap - 6 md:grid - cols - 2" > {
                 <X className="h-4 w-4" />
               </Button>
             </div>
-<<<<<<< HEAD
-=======
-          </CardFooter>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+

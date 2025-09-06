@@ -1,21 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-<<<<<<< HEAD
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-import { motion } from 'framer-motion';
-import { Home, ArrowLeft, Search } from 'lucide-react';
 
-const NotFound: React.FC = () => {
-=======
-import React from "react";
-import { Link } from "react-router-dom";
-const NotFound = () => {
->>>>>>> main
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
       <div className="max-w-2xl mx-auto text-center">
@@ -104,15 +88,7 @@ const NotFound = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-export default NotFound;
-=======
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 export default NotFound;
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -139,39 +115,4 @@ class ErrorBoundary extends React.Component {
 import React from 'react'; import { Link } from 'react-router-dom'; const NotFound = () => { return ( <div className="min-h-screen bg-gray-50 flex items-center justify-center"> <div className="max-w-md w-full text-center"> <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1> <h2 className="text-2xl font-semibold text-gray-700 mb-4">Page Not Found</h2> <p className="text-gray-600 mb-8"> The page you're looking for doesn't exist or has been moved. </p> <Link to="/" className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" > Go Home </Link> </div> </div> )}; export default NotFound;
 
 import React from 'react'; import { Link } from 'react-router-dom'; const NotFound = () =>: any { return ( <div className="min - h-screen bg - gray - 50 flex items - center justify - center"> <div className="max - w-md w - full text - center"> <h1 className="text - 6xl font - bold text - gray - 900 mb - 4">404</h1> <h2 className="text - 2xl font - semibold text - gray - 700 mb - 4">Page Not Found</h2> <p className="text - gray - 600 mb - 8"> The page you're looking for doesn't exist or has been moved. </p> <Link to="/" className="inline - flex items - center px - 6 py - 3 border border - transparent text - base font - medium rounded - md text - white bg - blue - 600 hover:bg - blue - 700 focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - blue - 500" > Go Home </Link> </div> </div> )} export default NotFound;
-=======
-<<<<<<< HEAD
-import React from "react";
-import { Link } from "react-router-dom";
-const NotFound = () => {
-  return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-      {" "}
-      <div className="max-w-md w-full text-center">
-        {" "}
-        <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>{" "}
-        <h2 className="text-2xl font-semibold text-gray-700 mb-4">
-          Page Not Found
-        </h2>{" "}
-        <p className="text-gray-600 mb-8">
-          {" "}
-          The page you're looking for doesn't exist or has been moved.{" "}
-        </p>{" "}
-        <Link
-          to="/"
-          className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-        >
-          {" "}
-          Go Home{" "}
-        </Link>{" "}
-      </div>{" "}
-    </div>
-  );
-};
-export default NotFound;
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
-export default NotFound;
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+

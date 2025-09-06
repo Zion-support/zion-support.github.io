@@ -28,7 +28,6 @@ interface PricingSuggestionBoxProps {
   rateType: "hourly" | "fixed"
 }
 
-
       <Card className='border border-dashed border-muted'>
         <CardContent className='flex items-center justify-center p-6'>
           <div className='text-center'>
@@ -56,8 +55,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   rateType}) => {
   if (isLoading) {
 
-
-
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
 
   suggestion,
@@ -73,8 +70,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
 
               Generating optimal pricing suggestion...
 
-
-
             </p>
           </div>
         </CardContent>
@@ -87,7 +82,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
     return null
   }
   const confidenceColor = {
-
 
     )
 import React from "react",;
@@ -135,8 +129,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
     Low: "bg-red-100 text-red-800"}[suggestion.confidence],
   return (
     <Card className="border-2 border-dashed border-muted-foreground/20">
-
-
 
       <CardContent className="p-5 space-y-4">
         <div className="flex items-center justify-between">
@@ -220,20 +212,13 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
           </Badge>
         </div>
 
-
         <div className="bg-muted/50 rounded-md p-3 text-center">
           <span className="text-2xl font-bold">
             ${suggestion.minRate.toFixed(0)} - ${suggestion.maxRate.toFixed(0)}
           </span>
 
-
-
           <span className="text-sm text-muted-foreground ml-1">
             {rateType === "hourly" ? "/hour" : " total"}
-
-
-
-
 
         <div className="flex items-start space-x-2 text-sm text-muted-foreground">
           <Info className="h-4 w-4 flex-shrink-0 mt-1" />
@@ -259,10 +244,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
 
                   onClick={onApplySuggestion}
 
-
-
         <div className="flex items-center justify-between">
-
 
               </TooltipTrigger>
               <TooltipContent>
@@ -272,18 +254,13 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
           </TooltipProvider>
         </div>
 
-
-        
         <p className="text-xs text-center text-muted-foreground pt-2">
           Based on market data & trends. You can adjust as needed.
-
 
         </p>
       </CardContent>
     </Card>
   )
-
-        
 
         <p className="text-xs text-center text-muted-foreground pt-2">
           Based on market data & trends. You can adjust as needed.
@@ -291,7 +268,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
       </CardContent>
     </Card>
   )
-
 
   );
 };
@@ -344,17 +320,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
             </Tooltip>;
           </TooltipProvider>;
         </div>;
-<<<<<<< HEAD
 
-        <p className='text-xs text-center text-muted-foreground pt-2'>          Based on market data & trends. You can adjust as needed.;
-        </p>;
-      </CardContent>;
-    </Card>;
-  );
-};
-"        ;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <p className="text-xs text-center text-muted-foreground pt-2">;
           Based on market data & trends. You can adjust as needed.;
         </p>;
@@ -362,8 +328,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
     </Card>;
   );
 };
-
-
 
 };
 

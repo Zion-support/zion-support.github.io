@@ -1,17 +1,7 @@
 
   try {
     const {
-<<<<<<< HEAD
-      target_institution,
-      type,
-      regional_scope,
-      budgetOrResolution,
-=======
-      target_institution
-      type
-      regional_scope
-      budgetOrResolution
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
       language = 'en'
     } = req.body || {};
 
@@ -22,26 +12,6 @@
     const completion = await openai.chat.completions.create({
       model: process.env.OPENAI_MODEL || 'gpt-4o-mini'
       messages: [
-<<<<<<< HEAD
-      ],
-      temperature: 0.3
-    });
-      title,
-      target_institution,
-      type,
-      regional_scope,
-      budgetOrResolution,
-=======
-      ]
-      temperature: 0.3
-    });
-      title
-      target_institution
-      type
-      regional_scope
-      budgetOrResolution
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-
 
     return res.status(200).json({ meta, markdown: contentMarkdown })
   } catch (error: any) {
@@ -51,15 +21,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   }
 }
-<<<<<<< HEAD
-      supporting_multiverses,
-      content_markdown,
-      language,
-=======
-      supporting_multiverses
-      content_markdown
-      language
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     });
 ;
     return res.status (200).json ({ meta, markdown: content_markdown });

@@ -26,10 +26,6 @@ interface ActiveFiltersProps {
   clearFilters: () => void
 }
 
-
-
-
-
   const hasActiveFilters = null;
     selectedSkills.length > 0 ||
     selectedAvailability.length > 0 ||
@@ -38,7 +34,6 @@ interface ActiveFiltersProps {
     experienceRange[0] !== 0 ||
     experienceRange[1] !== 15 ||
     priceRange[0] !== 50 ||
-
 
     selectedRegions.length > 0 ||
     experienceRange[0] !== 0 ||
@@ -70,48 +65,7 @@ import { Button } from "@/components/ui/button",;
 import { X } from 'lucide-react';
 
 interface ActiveFiltersProps {;
-<<<<<<< HEAD
-  selectedSkills: string[];
-  toggleSkill: (skill: string) => void;
-  selectedAvailability: string[];
-  toggleAvailability: (status: string) => void;
-  selectedRegions: string[];
-  toggleRegion: (region: string) => void;
-  priceRange: [number, number];
-  setPriceRange: (range: [number, number]) => void;
-  experienceRange: [number, number];
-  setExperienceRange: (range: [number, number]) => void;
-  clearFilters: () => void;interface ActiveFiltersProps {;
-  selectedSkills: string[],;
-  toggleSkill: (skill: string,) => void,;
-  selectedAvailability: string[],;
-  toggleAvailability: (status: string,) => void,;
-  selectedRegions: string[],;
-  toggleRegion: (region: string,) => void,;
-  priceRange: [number, number],;
-  setPriceRange: (range: [number, number],) => void,;
-  experienceRange: [number, number],;
-  setExperienceRange: (range: [number, number],) => void,;
-  clearFilters: () => void;
-}
 
-export function ActiveFilters(): any ({;
-=======
-  selectedSkills: string[],;
-  toggleSkill: (skill: string) => void,;
-  selectedAvailability: string[],;
-  toggleAvailability: (status: string) => void,;
-  selectedRegions: string[],;
-  toggleRegion: (region: string) => void,;
-  priceRange: [number, number],;
-  setPriceRange: (range: [number, number]) => void,;
-  experienceRange: [number, number],;
-  setExperienceRange: (range: [number, number]) => void,;
-  clearFilters: () => void;
-}
-;
-export function ActiveFilters({;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   selectedSkills,;
   toggleSkill,;
   selectedAvailability,;
@@ -122,31 +76,12 @@ export function ActiveFilters({;
   setPriceRange,;
   experienceRange,;
   setExperienceRange,;
-<<<<<<< HEAD
-  clearFilters,;
-}: ActiveFiltersProps) {;
-  // Check if any filters are active;
-  const hasActiveFilters =;
-    selectedSkills && selectedSkills.length > 0 ||;
-    selectedAvailability && selectedAvailability.length > 0 ||;
-    selectedRegions && selectedRegions.length > 0 ||;
-=======
-  clearFilters;
-}: ActiveFiltersProps) {;
-  // Check if any filters are active;
-  const hasActiveFilters =;
-    selectedSkills.length > 0 ||;
-    selectedAvailability.length > 0 ||;
-    selectedRegions.length > 0 ||;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     experienceRange[0] !== 0 ||;
     experienceRange[1] !== 15 ||;
     priceRange[0] !== 50 ||;
     priceRange[1] !== 200;
-<<<<<<< HEAD
 
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   if (!hasActiveFilters) return null;
 
   return (
@@ -156,64 +91,22 @@ export function ActiveFilters({;
       {selectedSkills && selectedSkills.map(skill => (;
         <ClickableBadge
           key={skill}
-<<<<<<< HEAD
-          className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
-          onClick={() => toggleSkill(skill)}        >;
-          {skill}
-          <X className='h-3 w-3' />;
-        </ClickableBadge>;
-=======
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
-          onClick={() => toggleSkill(skill)}
-        >;
-          {skill}
-          <X className="h-3 w-3" />
-        </ClickableBadge>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-      ))}
 
+      ))}
 
       {selectedAvailability && selectedAvailability.map(status => (;
 
         <ClickableBadge
           key={status}
-<<<<<<< HEAD
-          className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
-          onClick={() => toggleAvailability(status)}        >;
-          {status === 'full-time';
-            ? 'Full-time';
-            : status === 'part-time';
-              ? 'Part-time';
-              : 'Project-based'}
-          <X className='h-3 w-3' />;
-        </ClickableBadge>;
-=======
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
-          onClick={() => toggleAvailability(status)}
-        >;
-          {status === 'full-time' ? 'Full-time' :;
-           status === 'part-time' ? 'Part-time' :;
-           'Project-based'}
-          <X className="h-3 w-3" />
-        </ClickableBadge>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-      ))}
 
+      ))}
 
       {selectedRegions && selectedRegions.map(region => (;
 
         <ClickableBadge
           key={region}
-<<<<<<< HEAD
-          className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
-          onClick={() => toggleRegion(region)}        >;
-=======
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
-          onClick={() => toggleRegion(region)}
-        >;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-          {region}
 
+          {region}
 
       {(priceRange[0] !== 50 || priceRange[1] !== 200) && (;
 
@@ -228,7 +121,6 @@ export function ActiveFilters({;
           <X className="h-3 w-3" />
         </ClickableBadge>
       )}
-
 
       {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (;
 
@@ -245,19 +137,16 @@ export function ActiveFilters({;
       )}
           <X className="h-3 w-3" />
 
-
         </ClickableBadge>
       ))}
       
       {(priceRange[0] !== 50 || priceRange[1] !== 200) && (
-
 
           ${priceRange[0]}-${priceRange[1]}/hr
           <X className="h-3 w-3" />
         </ClickableBadge>
       )}
 
-      
       {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (
 
           {experienceRange[0]}-{experienceRange[1]} years
@@ -265,13 +154,10 @@ export function ActiveFilters({;
         </ClickableBadge>
       )}
 
-
-
       <Button
         variant='ghost'
         size='sm'
         onClick={clearFilters}
-
 
         Clear All
       </Button>
@@ -280,7 +166,6 @@ export function ActiveFilters({;
 };
 }
 
-      
       <Button 
         variant="ghost" 
         size="sm" 
@@ -288,15 +173,12 @@ export function ActiveFilters({;
         className="h-7 text-xs text-zion-purple hover: text-zion-purple-light hover:bg-transparent"
       >
 
-
-
         Clear All
       </Button>
     </div>
   )
 
         className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent'>;
-
 
           <X className="h-3 w-3" />;
         </ClickableBadge>;
@@ -333,14 +215,8 @@ export function ActiveFilters({;
       </Button>;
     </div>;
   );
-<<<<<<< HEAD
 
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
-
-
-
 
 import React from 'react';
 import { ClickableBadge } from '@/components / ui / clickable - badge';

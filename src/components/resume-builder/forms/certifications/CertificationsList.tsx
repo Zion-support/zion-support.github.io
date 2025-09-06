@@ -46,7 +46,6 @@ interface CertificationsListProps {
   }
   return (
 
-
                 <Button
                   variant='ghost'
                   size='icon'
@@ -76,13 +75,7 @@ interface CertificationsListProps {
                 >
 
                   View credential
-<<<<<<< HEAD
-                </a>;
-              </p>;
-=======
-                </Link>
-              </p>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
             )}
           </CardContent>;
         </Card>;

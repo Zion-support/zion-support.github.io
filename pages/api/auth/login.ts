@@ -1,16 +1,7 @@
-<<<<<<< HEAD
 
-import { ensureDemoUsers, generateUser, setUserCookie, upsertUser } from '../../../utils/auth';
-import { UserRole } from '../../../utils/messaging/types';
-=======
-<<<<<<< HEAD
-import { NextApiRequest, NextApiResponse } from 'next',;
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> main
 import { ensureDemoUsers, generateUser, setUserCookie, upsertUser } from '../../../utils/auth',;
 import { UserRole } from '../../../utils/messaging/types',;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
   const { name, role } = req.body as { name: string, role: UserRole }
@@ -20,11 +11,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   upsertUser(user)
   setUserCookie(res, user)
   res.status(200).json({ user })
-<<<<<<< HEAD
-}
 
-
-
-=======
-};
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

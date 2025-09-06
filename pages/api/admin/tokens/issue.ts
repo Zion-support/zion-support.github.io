@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 
-=======
-import type { NextApiRequest, NextApiResponse } from "next",;
-import { issueTokens } from "../../../../utils/token/service",;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
   const { userId, amount, reason } = req.body || {}
@@ -11,11 +6,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const tx = issueTokens(userId, Math.floor(amount), reason || "admin_issue")
     return res.status(200).json({ tx })
-<<<<<<< HEAD
-;
-=======
-  } catch (err: any) {
-    return res.status(400).json({ error: err.message })
-  }
-};
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+

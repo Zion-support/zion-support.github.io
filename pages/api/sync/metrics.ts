@@ -1,41 +1,5 @@
-<<<<<<< HEAD
-=======
-import type { NextApiRequest, NextApiResponse } from "next",;
-import { readState, filterEventsByScope } from "../../../utils/sync/storage",;
-;
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
-  const state = readState()
-  const events = filterEventsByScope(state.events, state.config.scope)
-
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({
-    treasuryTotals: {}
-    topContributors: []
-    totalVoteCount: 0
-    lastSyncedAt: Date.now()
-  });
-import type { NextApiRequest, NextApiResponse } from "next"
-import { readState, filterEventsByScope } from "../../../utils/sync/storage"
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" })
-  const state = readState()
-  const events = filterEventsByScope(state.events, state.config.scope)
-
-
-  const totalsByToken: Record<string, number> = {}
-  const contributionsBySubject: Record<string, number> = {}
-  let globalVotes = 0
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
 import type { NextApiRequest, NextApiResponse } from "next",;
@@ -52,19 +16,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const state = readState()
   const events = filterEventsByScope(state.events, state.config.scope)
 
-
-
-
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, filterEventsByScope } from "../../../utils/sync/storage",;
 ;
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-
   const state = readState()
   const events = filterEventsByScope(state.events, state.config.scope)
-
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -77,23 +36,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from "next"
 import { readState, filterEventsByScope } from "../../../utils/sync/storage"
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" }),
-  const state = readState(),
-  const events = filterEventsByScope(state.events, state.config.scope),
-  const totalsByToken: Record<string, number> = {},
-  const contributionsBySubject: Record<string, number> = {},
-  let globalVotes = 0,
-=======
-  if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" })
-  const state = readState()
-  const events = filterEventsByScope(state.events, state.config.scope)
-  const totalsByToken: Record<string, number> = {}
-  const contributionsBySubject: Record<string, number> = {}
-  let globalVotes = 0
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   for (const e of events) {
     if (e.type === "token_transfer") {
       const p = e.payload as any
@@ -191,28 +134,6 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
-}
-}
-}
-}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-
 
       const p = e.payload as any
 
-<<<<<<< HEAD
-=======
-  const topContributors = Object.entries(contributionsBySubject)
-    .map(([subjectId, score]) => ({ subjectId, score }))
-    .sort((a, b) => b.score - a.score)
-    .slice(0, 10)
-
-  return res.status(200).json({
-    treasuryTotals: totalsByToken
-    topContributors
-    totalVoteCount: globalVotes
-    lastSyncedAt: state.lastSyncedAt})
-};
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

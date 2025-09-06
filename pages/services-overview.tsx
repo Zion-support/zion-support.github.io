@@ -1,28 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
 
-const Page = () => {
-  return (
-    <MainLayout
-      title="Services Overview - Zion Tech Group"
-      description="Overview of our services"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Services Overview</h1>
-          <p className="text-xl text-gray-600">Coming soon...</p>
-        </div>
-      </div>
-    </MainLayout>
-  );
-};
-
-export default Page;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Brain,
   Network,
   Cloud,
@@ -340,10 +316,6 @@ const serviceCategories = [;
   },;
 ];
 
-          
-
-
-
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -485,16 +457,11 @@ function ServicesOverviewPage() {
                   <div className={`h-32 bg-gradient-to-r ${category.color} flex items-center justify-center`}>
                     <category.icon className="w-16 h-16 text-white" />
                   </div>
-                  
-
 
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                       {category.title}
                     </h3>
-
-
-
 
                     <p className="text-gray-600 mb-4 leading-relaxed">
                       {category.description}
@@ -528,9 +495,6 @@ function ServicesOverviewPage() {
                 all your business needs.;
               </p>;
             </motion && motion.div>;
-
-                    
-
 
                     <Link
                       href={category && category.link}
@@ -733,4 +697,4 @@ function ServicesOverviewPage() {
       </div>;
     </Layout>);
 }
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+

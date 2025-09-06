@@ -1,6 +1,5 @@
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
 import { AdminActionType } from "../../../../utils/fraud/types";
@@ -13,53 +12,7 @@ export default async function handler(
     return res && res.status(405).json({ error: "Method not allowed" });
 
   }
-<<<<<<< HEAD
-=======
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getFraudStore } from '../../../../utils/fraud/store';
-import { AdminActionType } from '../../../../utils/fraud/types';
-function ensureAdmin(req: NextApiRequest): boolean {
-  const token = req.headers['x-admin-token'];
-  if (!process.env.ADMIN_TOKEN) return true; // allow if not configured
-  return token === process.env.ADMIN_TOKEN;
-}
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' });
-    return
-  }
-  if (!ensureAdmin(req)) {
-    res.status(401).json({ error: 'Unauthorized' });
-    return
-  }
-  const { fraudId, action, reason, adminId } = req.body || {};
-  if (!fraudId || !action) {
-    res.status(400).json({ error: 'Missing fraudId or action' });
-    return
-  }
-  const { fraudId, action, reason, adminId } = req && req.body || {};
-  if (!fraudId || !action) {
-    return res && res.status(400).json({ error: "Missing fraudId or action" });
 
-import type { NextApiRequest, NextApiResponse } from "next";
-import { getFraudStore } from "../../../../utils/fraud/store";
-import { AdminActionType } from "../../../../utils/fraud/types";
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  if (req.method !== "POST") {;
-    return res.status(405).json({ error: "Method not allowed" });
-  }
-  const { fraudId, action, reason, adminId } = req.body |{}
-  if (!fraudId |!action) {
-    return res.status(400).json({ error: "Missing fraudId or action" });
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   const store = getFraudStore();
   const fraud = store && store.getById(fraudId);
@@ -75,7 +28,6 @@ export default async function handler(
     adminId
     timestamp: new Date().toISOString()
   };
-
 
 }
 
@@ -103,19 +55,6 @@ function ensureAdmin(req: NextApiRequest): boolean {;
   }
 }
 
-
-
-<<<<<<< HEAD
-=======
-=======
-=======
-  store.addAdminAction(adminAction);
-
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getFraudStore  } from '../../../../utils / fraud / store';
 import { AdminActionType  } from '../../../../utils / fraud / types';
@@ -159,8 +98,6 @@ if ( {) {
   return res.status (200).json ({ success: true, action: admin_action });
 }
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -185,10 +122,4 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+

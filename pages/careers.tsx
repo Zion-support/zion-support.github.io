@@ -1,29 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import MainLayout from '../components/layout/MainLayout';
 
-const Page = () => {
-  return (
-    <MainLayout
-      title="Careers - Zion Tech Group"
-      description="Join our team and help shape the future of technology"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Careers</h1>
-          <p className="text-xl text-gray-600">Join our innovative team! Check back soon for exciting career opportunities.</p>
-        </div>
-      </div>
-    </MainLayout>
-  );
-};
-
-export default Page;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Users,
   MapPin,
   Clock,
@@ -539,13 +514,8 @@ function CareersPage() {
     </MainLayout>
     </Layout>
     </MainLayout>;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
     </MainLayout>;
   );
 }
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+

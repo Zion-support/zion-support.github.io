@@ -1,22 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
 
-export default function HelpPage() {
-  return (
-    <MainLayout title="Help & Support">
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-8">Help & Support</h1>
-        <p className="text-lg text-gray-700">
-          This is a placeholder for the help page.
-        </p>
-      </div>
-    </MainLayout>
-  );
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -37,7 +19,6 @@ import { motion, AnimatePresence } from 'framer-motion';
   ExternalLink
   ChevronDown
   Cloud
-
 
 import {
 
@@ -100,15 +81,12 @@ export default function HelpPage() {
 
 ];
 
-
-
     color: 'blue',
     articles: helpArticles
   }
 ];
 
 export default function HelpPage() {;
-
 
 import {;
   Search,;
@@ -318,5 +296,5 @@ function HelpPage() {
         </section>;
       </div>;
     </>);
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+
 }

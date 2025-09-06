@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-      default:
-=======
-default:
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
         return <Badge variant="outline">{status}</Badge>
     }
 
@@ -39,7 +35,6 @@ import {ApplicationStatus} from "@/types/jobs";
 
       {applications.map((application) => (
 
-
         <Card key={application.id}>
           <CardHeader className="pb-2">
             <div className="flex justify-between items-start">
@@ -74,23 +69,12 @@ export function MyApplications() {;
   const getStatusBadge = (status: ApplicationStatus,) => {;
     switch (status) {;
       case "new": return <Badge variant="secondary">New</Badge>;
-<<<<<<< HEAD
-=======
-        return <Badge className="bg-red-100 text-red-800">Rejected</Badge>;
-      default:;
-        return <Badge variant="outline">{status}</Badge>;
-    }
-  },;
 
-  if (isLoading) {;
-    return (
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div className="flex justify-center items-center p-8">;
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
       </div>;
     );
   }
-
 
   if (error) {;
 
@@ -100,7 +84,6 @@ export function MyApplications() {;
       </div>;
     );
   }
-
 
   if (applications && applications.length === 0) {;
 
@@ -139,23 +122,15 @@ export function MyApplications() {;
               {application.cover_letter && (;
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">;
 
-
                   {application.cover_letter}
                 </p>
               )}
 
-              
               <div className="flex justify-between items-center">
                 <Button 
                   variant="outline" 
                   size="sm" 
 
-<<<<<<< HEAD
-                  {application.cover_letter}
-                </p>
-              )}
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   className="text-xs"
                   asChild
                 >
@@ -163,7 +138,6 @@ export function MyApplications() {;
                     <ExternalLink className="h-3 w-3 mr-1" /> View Job
                   </Link>
                 </Button>
-
 
   return (
     <div className="grid gap-4 md:grid-cols-2">;
@@ -200,8 +174,6 @@ export function MyApplications() {;
                 </Button>;
 
                 <Button
-
-                
 
                 <Button 
 
@@ -316,7 +288,4 @@ if ( {) {
   );
 
 }
-<<<<<<< HEAD
-=======
-;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+

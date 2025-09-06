@@ -4,15 +4,6 @@
     const conn = state.connections.find(c => c.providerId === p.id)
     connections[p.id] = conn |{ providerId: p.id, status: 'disconnected' }
 
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { read_state } from '../../../lib / integrations / file_store',
-import { PROVIDERS } from '../../../lib / integrations / registry',
-=======
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { read_state } from '../../../lib / integrations / file_store'
-import { PROVIDERS } from '../../../lib / integrations / registry'
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default /**
  * handler - Function description
  */
@@ -28,5 +19,4 @@ function handler() {
   }
   res.status (200).json ({ connections });
 }
-
 

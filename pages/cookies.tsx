@@ -1,25 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import MainLayout from '../components/layout/MainLayout';
 
-export default function CookiesPage() {
-  return (
-    <MainLayout
-      title="Cookie Policy - Zion Tech Group"
-      description="Cookie policy for Zion Tech Group website"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Cookie Policy</h1>
-          <p className="text-xl text-gray-600">This is a placeholder for the cookie policy.</p>
-        </div>
-      </div>
-    </MainLayout>
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from 'react';
 import MainLayout from '../src / components / layout / MainLayout';
 import { motion } from 'framer-motion';
@@ -276,8 +255,6 @@ export default function CookiePolicyPage() {;
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
-
-origin/automation-improvements-final
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 6">;
                 Questions About Our Cookie Policy?;
@@ -311,7 +288,6 @@ origin/automation-improvements-final
         </section>;
       </div>;
 
-
 export default function CookiesPage() {
   return (
     <UltraAdvancedFuturisticBackground>;
@@ -334,16 +310,12 @@ export default function CookiesPage() {
           </ul>
       </Layout>
     </>
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+
   );
       </Layout>
     </>;
   );
-
-
 
   );
  <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
