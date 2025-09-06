@@ -15,8 +15,8 @@ module.exports = {
           600: '#2563eb',
           700: '#1d4ed8',
           800: '#1e40af',
-          950: '#172554',
-          900: '#1e3a8a'
+          900: '#1e3a8a',
+          950: '#172554'
         },
         gray: {
           50: '#f9fafb',
@@ -29,12 +29,6 @@ module.exports = {
           700: '#374151',
           800: '#1f2937',
           900: '#111827',
-          950: '#030712',
-        },
-          950: '#030712'
-        }
-          950: '#030712'
-        }
           950: '#030712'
         }
       },
@@ -88,9 +82,6 @@ module.exports = {
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
-}
-};
-};
     require('@tailwindcss/aspect-ratio')
   ]
 };

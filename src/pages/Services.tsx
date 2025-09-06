@@ -1,39 +1,12 @@
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
 import React from 'react';
-import ServiceCard from '../components/ServiceCard';
-import Card from '../components/Card';
-
-const Services: React.FC = () => {
-import React from 'react';
-import ServiceCard from '../components/ServiceCard';
-import Card from '../components/Card';
 
 const Services: React.FC = () => {
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
+    <div className="min-h-screen bg-white">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-extrabold mb-6 animate-fade-in">
-            Our Services
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-slide-up">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Our Services</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Comprehensive technology solutions designed to transform your business
             and drive innovation across all sectors.
           </p>
@@ -41,217 +14,118 @@ const Services: React.FC = () => {
 
         {/* Main Services */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <ServiceCard
-            title="AI & Machine Learning"
-            description="Transform your business with cutting-edge AI solutions including machine learning, natural language processing, and computer vision."
-            icon="🤖"
-            features={["Machine Learning Models", "Natural Language Processing", "Computer Vision", "Predictive Analytics"]}
-          />
-          <ServiceCard
-            title="Cybersecurity"
-            description="Protect your digital assets with advanced security solutions, threat detection, and compliance management."
-            icon="🔒"
-            features={["Threat Detection", "Security Audits", "Compliance Management", "Incident Response"]}
-          />
-          <ServiceCard
-            title="Cloud Infrastructure"
-            description="Scale your operations with robust cloud solutions, migration services, and infrastructure optimization."
-            icon="☁️"
-            features={["Cloud Migration", "Infrastructure Optimization", "Auto-scaling", "Cost Management"]}
-          />
-          <ServiceCard
-            title="Digital Transformation"
-            description="Modernize your business processes with comprehensive digital transformation strategies and implementation."
-            icon="🚀"
-            features={["Process Automation", "Digital Strategy", "Change Management", "Technology Integration"]}
-          />
-          <ServiceCard
-            title="Data Analytics"
-            description="Unlock insights from your data with advanced analytics, business intelligence, and reporting solutions."
-            icon="📊"
-            features={["Business Intelligence", "Data Visualization", "Real-time Analytics", "Custom Dashboards"]}
-          />
-          <ServiceCard
-            title="IoT Solutions"
-            description="Connect and manage your devices with Internet of Things solutions for smart operations and monitoring."
-            icon="🌐"
-            features={["Device Management", "Real-time Monitoring", "Data Collection", "Smart Automation"]}
-          />
-        </div>
+          <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-200">
+            <div className="text-4xl mb-4">🤖</div>
+            <h3 className="text-2xl font-semibold mb-4">AI & Machine Learning</h3>
+            <p className="text-gray-600 mb-4">
+              Transform your business with cutting-edge AI solutions including machine learning, 
+              natural language processing, and computer vision.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Machine Learning Models</li>
+              <li>• Natural Language Processing</li>
+              <li>• Computer Vision</li>
+              <li>• Predictive Analytics</li>
+            </ul>
+          </div>
 
-        {/* Service Categories */}
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold text-center mb-12">Service Categories</h2>
-      </div>
+          <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-200">
+            <div className="text-4xl mb-4">🔒</div>
+            <h3 className="text-2xl font-semibold mb-4">Cybersecurity</h3>
+            <p className="text-gray-600 mb-4">
+              Protect your digital assets with advanced security solutions, threat detection, 
+              and compliance management.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Threat Detection</li>
+              <li>• Security Audits</li>
+              <li>• Compliance Management</li>
+              <li>• Incident Response</li>
+            </ul>
+          </div>
 
-      {/* Services Grid */}
-      <div className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Main Services */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <ServiceCard
-            title="AI & Machine Learning"
-            description="Transform your business with cutting-edge AI solutions including machine learning, natural language processing, and computer vision."
-            icon="🤖"
-          />
-          <ServiceCard
-            title="Cybersecurity"
-            description="Protect your digital assets with advanced security solutions, threat detection, and compliance management."
-            icon="🔒"
-          />
-          <ServiceCard
-            title="Cloud Infrastructure"
-            description="Scale your operations with robust cloud solutions, migration services, and infrastructure optimization."
-            icon="☁️"
-          />
-          <ServiceCard
-            title="Digital Transformation"
-            description="Modernize your business processes with comprehensive digital transformation strategies and implementation."
-            icon="🚀"
-          />
-          <ServiceCard
-            title="Data Analytics"
-            description="Unlock insights from your data with advanced analytics, business intelligence, and reporting solutions."
-            icon="📊"
-          />
-          <ServiceCard
-            title="IoT Solutions"
-            description="Connect and manage your devices with Internet of Things solutions for smart operations and monitoring."
-            icon="🌐"
-          />
-        </div>
+          <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-200">
+            <div className="text-4xl mb-4">☁️</div>
+            <h3 className="text-2xl font-semibold mb-4">Cloud Infrastructure</h3>
+            <p className="text-gray-600 mb-4">
+              Scale your operations with robust cloud solutions, migration services, 
+              and infrastructure optimization.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Cloud Migration</li>
+              <li>• Infrastructure Optimization</li>
+              <li>• Auto-scaling</li>
+              <li>• Cost Management</li>
+            </ul>
+          </div>
 
-        {/* Service Categories */}
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold text-center mb-12">Service Categories</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card
-              title="Consulting Services"
-              description="Strategic technology consulting to help you make informed decisions about your digital future."
-            />
-            <Card
-              title="Implementation"
-              description="End-to-end implementation of technology solutions tailored to your specific business needs."
-            />
-            <Card
-              title="Support & Maintenance"
-              description="Ongoing support and maintenance to ensure your systems run smoothly and efficiently."
-            />
-            <Card
-              title="Training & Education"
-              description="Comprehensive training programs to help your team master new technologies and processes."
-            />
-            <Card
-              title="Custom Development"
-              description="Bespoke software development solutions designed specifically for your unique requirements."
-            />
-            <Card
-              title="Integration Services"
-              description="Seamless integration of new technologies with your existing systems and workflows."
-            />
+          <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-200">
+            <div className="text-4xl mb-4">🚀</div>
+            <h3 className="text-2xl font-semibold mb-4">Digital Transformation</h3>
+            <p className="text-gray-600 mb-4">
+              Modernize your business processes with comprehensive digital transformation 
+              strategies and implementation.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Process Automation</li>
+              <li>• Digital Strategy</li>
+              <li>• Change Management</li>
+              <li>• Technology Integration</li>
+            </ul>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-200">
+            <div className="text-4xl mb-4">📊</div>
+            <h3 className="text-2xl font-semibold mb-4">Data Analytics</h3>
+            <p className="text-gray-600 mb-4">
+              Unlock insights from your data with advanced analytics, business intelligence, 
+              and reporting solutions.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Business Intelligence</li>
+              <li>• Data Visualization</li>
+              <li>• Real-time Analytics</li>
+              <li>• Custom Dashboards</li>
+            </ul>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-200">
+            <div className="text-4xl mb-4">🌐</div>
+            <h3 className="text-2xl font-semibold mb-4">IoT Solutions</h3>
+            <p className="text-gray-600 mb-4">
+              Connect and manage your devices with Internet of Things solutions for 
+              smart operations and monitoring.
+            </p>
+            <ul className="text-sm text-gray-500 space-y-1">
+              <li>• Device Management</li>
+              <li>• Real-time Monitoring</li>
+              <li>• Data Collection</li>
+              <li>• Smart Automation</li>
+            </ul>
           </div>
         </div>
 
-        {/* Industry Solutions */}
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-12">Industry Solutions</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🏥</span>
-              </div>
-              <h3 className="text-lg font-semibold">Healthcare</h3>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🏦</span>
-              </div>
-              <h3 className="text-lg font-semibold">Finance</h3>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🏭</span>
-              </div>
-              <h3 className="text-lg font-semibold">Manufacturing</h3>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🛒</span>
-              </div>
-              <h3 className="text-lg font-semibold">Retail</h3>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🎓</span>
-              </div>
-              <h3 className="text-lg font-semibold">Education</h3>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🏛️</span>
-              </div>
-              <h3 className="text-lg font-semibold">Government</h3>
-            </div>
-            <Link 
-              to="/contact" 
-              className="bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-2xl"
+        {/* CTA Section */}
+        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-8 text-center text-white">
+          <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+          <p className="text-xl mb-6">Let's discuss how our services can help transform your business.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="/contact" 
+              className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
             >
-              Get a Quote
-            </Link>
-            <Link 
-              to="/pricing" 
-              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold text-lg"
+              Get Free Consultation
+            </a>
+            <a 
+              href="/pricing" 
+              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
             >
               View Pricing
-            </Link>
-
-        {/* CTA Section */}
-        <div className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-            <p className="text-xl text-blue-100 mb-8">Let's discuss how our services can help transform your business.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
-                className="bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-2xl"
-              >
-                Get Free Consultation
-              </Link>
-              <Link 
-                to="/pricing" 
-                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold text-lg"
-              >
-                View Pricing
-              </Link>
-            </div>
+            </a>
           </div>
         </div>
       </div>
     </div>
-const Services: React.FC = () => {;
-  return (
-    <div className="min-h-screen bg-gray-50">;
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">Our Services</h1>;
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-          <div className="bg-white p-6 rounded-lg shadow">;
-            <h3 className="text-xl font-semibold mb-4">AI Services</h3>;
-            <p className="text-gray-600">Cutting-edge AI solutions for your business.</p>;
-          </div>;
-          <div className="bg-white p-6 rounded-lg shadow">;
-            <h3 className="text-xl font-semibold mb-4">IT Services</h3>;
-            <p className="text-gray-600">Comprehensive IT solutions and support.</p>;
-          </div>;
-          <div className="bg-white p-6 rounded-lg shadow">;
-            <h3 className="text-xl font-semibold mb-4">Cloud Solutions</h3>;
-            <p className="text-gray-600">Scalable cloud infrastructure and services.</p>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
-  );
-};
-
   );
 };
 
