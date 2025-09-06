@@ -78,7 +78,7 @@ class DocsGenerator {
   }
 
   async generateBasicReadme() {
-    const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+    const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8'));
     const projectName = packageJson.name || 'Project';
     const description = packageJson.description || 'A Next.js application';
     const version = packageJson.version || '1.0.0';
@@ -149,7 +149,7 @@ This project is licensed under the MIT License.
 
   async updateExistingReadme(content) {
     // Add or update sections as needed
-    const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+    const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8'));
     
     // Update version if it exists
     const versionRegex = /## Version\n.*/;
@@ -251,7 +251,7 @@ This project is licensed under the MIT License.
         // Extract HTTP methods
         const methods = this.extractHttpMethods(content);
         if (methods.length > 0) {
-          docs += `**Methods:** ${methods.join(', ')}\n\n`;
+          docs += `**Methods:** ${methods.join()}\n\n`;
         }
         
         // Extract comments as description

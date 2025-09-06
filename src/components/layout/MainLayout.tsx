@@ -1,22 +1,22 @@
 import React, { useState } from 'react',
-import Head from 'next/head',
-import Header from './Header',
-import Footer from './Footer',
-import Sidebar from './Sidebar',
-,
-interface LayoutProps {,
-  children: React.ReactNode,
-  title?: string,
+import Head from 'next/head';
+import Header from './Header';
+import Footer from './Footer';
+import Sidebar from './Sidebar';
+;
+interface LayoutProps {;
+  children: React.ReactNode;
+  title?: string;
   description?: string,
   keywords?: string,
-  showSidebar?: boolean,
-,};
+  showSidebar?: boolean
+};
 export default function MainLayout({,
-  children,;
-  title = "Zion Tech Group - Leading AI & Technology Solutions",;
-  description = "Transform your business with cutting-edge AI solutions, cloud services, and technology consulting.",;
-  keywords = "AI solutions, cloud services, technology consulting, digital transformation",;
-  showSidebar = false,
+  children,
+  title = "Zion Tech Group - Leading AI & Technology Solutions",
+  description = "Transform your business with cutting-edge AI solutions, cloud services, and technology consulting.",
+  keywords = "AI solutions, cloud services, technology consulting, digital transformation",
+  showSidebar = false
 }: LayoutProps) {,
   const [sidebarOpen, setSidebarOpen] = useState(false),
 ,
@@ -30,13 +30,13 @@ export default function MainLayout({,
         <link rel="icon" href="/favicon.ico" />,
         <meta name="robots" content="index, follow" />,
         <meta name="author" content="Zion Tech Group" />,
-        <meta property="og: title" content={title,} />,
-        <meta property="og: description" content={description,} />,
+        <meta property="og: title" content={title} />,
+        <meta property="og: description" content={description} />,
         <meta property="og: type" content="website" />,
         <meta property="og:url" content="https://ziontechgroup.com" />,
         <meta name="twitter:card" content="summary_large_image" />,
-        <meta name="twitter:title" content={title,} />,
-        <meta name="twitter: description" content={description,} />,
+        <meta name="twitter:title" content={title} />,
+        <meta name="twitter: description" content={description} />,
       </Head>,
       <div className="min-h-screen flex flex-col">,
         <Header />,
@@ -57,5 +57,5 @@ export default function MainLayout({,
         <Footer />,
       </div>,
     </>,
-  ),
+  )
 };

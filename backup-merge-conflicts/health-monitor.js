@@ -124,7 +124,7 @@ class HealthMonitor {
       
       // Check load average
       const loadAvg = os.loadavg();
-      this.log(`Load average: ${loadAvg.map(load => load.toFixed(2)).join(', ')}`);
+      this.log(`Load average: ${loadAvg.map(load => load.toFixed(2)).join()}`);
       
       // Check if load is too high
       const cpuCount = os.cpus().length;
@@ -143,7 +143,7 @@ class HealthMonitor {
   async checkApplicationHealth() {
     try {
       // Check if the application is responding
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8'));
       const isNextJS = packageJson.dependencies?.next || packageJson.devDependencies?.next;
       
       if (isNextJS) {

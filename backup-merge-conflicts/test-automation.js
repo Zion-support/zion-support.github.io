@@ -32,7 +32,7 @@ class TestAutomation {
       this.log('Starting test automation...');
       
       // Check if package.json has test scripts
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8'));
       const testScripts = Object.keys(packageJson.scripts).filter(script => 
         script.includes('test') || script.includes('spec')
       );
@@ -93,9 +93,7 @@ class TestAutomation {
     try {
       // Check if coverage report exists
       const coverageFiles = [
-        'coverage/lcov.info',
-        'coverage/coverage.json',
-        'coverage/coverage-summary.json'
+        'coverage/lcov.infocoverage/coverage.jsoncoverage/coverage-summary.json'
       ];
 
       let coverageFile = null;

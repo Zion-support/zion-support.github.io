@@ -16,32 +16,32 @@ function fixMergeConflicts(filePath) {,
       if (line.startsWith('<<<<<<<')) {,
         inConflict = true,
         foundEquals = false,
-        continue,
+        continue
       };
         foundEquals = true,
-        continue,
+        continue
       };
         inConflict = false,
         foundEquals = false,
-        continue,
+        continue
       };
       if (inConflict && foundEquals) {,
-        fixedLines.push(line),
+        fixedLines.push(line)
       } else if (!inConflict) {,
-        fixedLines.push(line),
+        fixedLines.push(line)
       };
     };
     const fixedContent = fixedLines.join('\n'),
 ,
     if (fixedContent !== content) {,
       fs.writeFileSync(filePath, fixedContent, 'utf8'),
-      console.log(`Fixed merge conflicts in: ${filePath,}`),
-      return true,
+      console.log(`Fixed merge conflicts in: ${filePath}`),
+      return true
     };
-    return false,
+    return false
   } catch (error) {,
     console.error(`Error processing ${filePath}:`, error.message),
-    return false,
+    return false
   };
   traverse(dir),
   return files};
@@ -55,7 +55,7 @@ console.log('Merge conflict resolution complete!'),
 };
 // Main execution,
 console.log('Finding files with merge conflict markers...'),
-const filesWithConflicts = findFilesWithMergeConflicts('.'),
+const filesWithConflicts = findFilesWithMergeConflicts('.')
 };
 function findFilesWithConflicts(dir) {,
   const files = [],
@@ -69,23 +69,23 @@ function findFilesWithConflicts(dir) {,
 ,
       if (stat.isDirectory()) {,
         // Skip node_modules and other directories we don't want to process,
-        if (!['node_modules', '.git', '.next', 'out', 'dist', 'build', 'coverage'].includes(item)) {,
-          traverse(fullPath),
+        if (!['node_modules.git.nextoutdistbuildcoverage'].includes(item)) {,
+          traverse(fullPath)
         };
       } else if (stat.isFile()) {,
         // Check if file has merge conflict markers,
         try {,
           const content = fs.readFileSync(fullPath, 'utf8'),
-            files.push(fullPath),
+            files.push(fullPath)
           };
         } catch (error) {,
-          // Skip files that can't be read,
+          // Skip files that can't be read
         };
       };
     };
   };
   traverse(dir),
-  return files,
+  return files
 };
 // Find and fix all files with merge conflicts,
 const filesWithConflicts = findFilesWithConflicts('/workspace'),
@@ -94,7 +94,7 @@ console.log(`Found ${filesWithConflicts.length} files with merge conflicts`),
 let fixedCount = 0,
 for (const file of filesWithConflicts) {,
   if (fixMergeConflicts(file)) {,
-    fixedCount++,
+    fixedCount++
   };
 };
 console.log('\nMerge conflict fixing complete!'),

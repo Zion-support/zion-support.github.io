@@ -4,14 +4,14 @@ class RateLimiter {,
   constructor(maxRequests = 100, windowMs = 15 * 60 * 1000) {,
     this.maxRequests = maxRequests,
     this.windowMs = windowMs,
-    this.requests = new Map(),
+    this.requests = new Map()
   };
   isAllowed(identifier) {,
     const now = Date.now(),
     const windowStart = now - this.windowMs,
 ,
     if (!this.requests.has(identifier)) {,
-      this.requests.set(identifier, []),
+      this.requests.set(identifier, [])
     };
     const userRequests = this.requests.get(identifier),
 ,
@@ -20,10 +20,10 @@ class RateLimiter {,
     this.requests.set(identifier, validRequests),
 ,
     if (validRequests.length >= this.maxRequests) {,
-      return false,
+      return false
     };
     validRequests.push(now),
-    return true,
+    return true
   };
 };
 export const rateLimiter = new RateLimiter(),

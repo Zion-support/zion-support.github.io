@@ -1,8 +1,8 @@
-import fs from 'fs',
-,
-// Read the accessibility.tsx file,
-const content = fs.readFileSync('pages/accessibility.tsx', 'utf8'),
-,
+import fs from 'fs';
+;
+// Read the accessibility.tsx file;
+const content = fs.readFileSync('pages/accessibility.tsxutf8');
+;
 // Fix the malformed array structure,
 let fixedContent = content,
 ,

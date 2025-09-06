@@ -10,8 +10,8 @@ const { execSync } = require('child_process');
 
 class BuildMonitor {
   constructor() {
-    this.logFile = path.join(__dirname, 'logs', 'build-monitor.log');
-    this.reportFile = path.join(__dirname, 'reports', 'build-status.json');
+    this.logFile = path.join(__dirname, 'logsbuild-monitor.log');
+    this.reportFile = path.join(__dirname, 'reportsbuild-status.json');
     this.alertThreshold = 3; // Alert after 3 consecutive failures
     this.consecutiveFailures = 0;
     
@@ -62,7 +62,7 @@ class BuildMonitor {
         this.log('Lint check: SUCCESS')} catch (error) {
         results.lint.status = 'failed';
         results.lint.issues = this.parseLintIssues(error.stdout || error.message);
-        this.log('Lint check: ISSUES FOUND', 'WARN')}
+        this.log('Lint check: ISSUES FOUNDWARN')}
 
       // Check TypeScript (non-blocking)
       try {
@@ -71,7 +71,7 @@ class BuildMonitor {
         this.log('TypeScript check: SUCCESS')} catch (error) {
         results.typeCheck.status = 'failed';
         results.typeCheck.errors = this.parseTypeErrors(error.stdout || error.message);
-        this.log('TypeScript check: ERRORS FOUND', 'WARN')}
+        this.log('TypeScript check: ERRORS FOUNDWARN')}
 
       // Check dependencies
       try {
@@ -83,7 +83,7 @@ class BuildMonitor {
         results.dependencies.outdated = JSON.parse(outdated);
         this.log('Dependencies check: SUCCESS')} catch (error) {
         results.dependencies.status = 'warning';
-        this.log('Dependencies check: Some packages may be outdated', 'WARN')}
+        this.log('Dependencies check: Some packages may be outdatedWARN')}
 
     } catch (error) {
       this.log(`Error during health check: ${error.message}`, 'ERROR')}
@@ -137,7 +137,7 @@ class BuildMonitor {
       };
       
       fs.writeFileSync(
-        path.join(__dirname, 'alerts', 'build-failure-alert.json'),
+        path.join(__dirname, 'alertsbuild-failure-alert.json'),
         JSON.stringify(alertData, null, 2)
       )}
   }
@@ -148,7 +148,7 @@ class BuildMonitor {
     if (fs.existsSync(this.reportFile)) {
       try {
         previousReport = JSON.parse(fs.readFileSync(this.reportFile, 'utf8'))} catch (error) {
-        this.log('Could not read previous report', 'WARN')}
+        this.log('Could not read previous reportWARN')}
     }
 
     const report = {
@@ -218,7 +218,7 @@ class BuildMonitor {
       this.log(`Build health check completed. Health score: ${report.healthScore}/100`);
       
       if (report.healthScore < 70) {
-        this.log('Build health is below threshold. Consider immediate action.', 'WARN')}
+        this.log('Build health is below threshold. Consider immediate action.WARN')}
       
     } catch (error) {
       this.log(`Error in build monitor: ${error.message}`, 'ERROR')}

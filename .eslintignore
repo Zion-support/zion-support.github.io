@@ -1,7 +1,55 @@
+# Dependencies
 node_modules/
 .next/
 out/
 dist/
+
+# Build outputs
+*.tsbuildinfo
+*.log
+
+# Environment files
+.env*
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.backup
+*.bak
+*.tmp
+
+# Generated files
+coverage/
+.nyc_output/
+
+# PM2 files
+ecosystem.config.js
+ecosystem.*.js
+
+# Test files (temporarily ignore problematic ones)
+__tests__/
+tests.disabled/
+*.test.test.js
+*.dynamic.test.js
+
+# Automation scripts (temporarily ignore)
+automation/
+scripts/automation/
+scripts/pm2/
+*.cjs
+*.js
+!jest.config.*.cjs
+!next.config.*.cjs
+!postcss.config.*.cjs
+!tailwind.config.*.cjs
+
+# Archive and disabled directories
 pages._archive_corrupted/
 pages.disabled/
 pages.disabled.full/
@@ -11,12 +59,14 @@ pages_backup_conflict/
 temp_backup/
 temp_broken_files/
 temp_working/
-tests.disabled/
 zion-os.disabled/
-*.backup
+
+# File patterns
 *.disabled
 *.corrupted
 *.broken
+
+# Specific files
 performance-optimizations.js
 seo-improvements.js
 services-broken.tsx

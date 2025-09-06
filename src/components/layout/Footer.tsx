@@ -1,11 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
 import {
-  Phone,
-  Mail,
-  MapPin,
-  Brain,
-  Cloud,
+  Phone;
+  Mail;
+  MapPin;
+  Brain;
+  Cloud;
   Shield,
   Code,
   Database,
@@ -24,7 +24,7 @@ import {
   Clock,
   CheckCircle,
   Settings,
-  Zap,
+  Zap
 } from 'lucide-react';
 
 interface FooterProps {
@@ -42,7 +42,7 @@ export default function Footer({ className = '' }: FooterProps) {
     { name: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud },
     { name: 'Custom Development', href: '/custom-development', icon: Settings },
     { name: 'Database Solutions', href: '/database-solutions', icon: Database },
-    { name: 'Digital Transformation', href: '/digital-transformation', icon: Zap },
+    { name: 'Digital Transformation', href: '/digital-transformation', icon: Zap }
   ];
 
   const solutions = [
@@ -53,7 +53,7 @@ export default function Footer({ className = '' }: FooterProps) {
     { name: 'Digital Transformation', href: '/digital-transformation' },
     { name: 'Technology Consulting', href: '/consulting' },
     { name: 'Cloud Migration', href: '/cloud-migration' },
-    { name: 'AI Implementation', href: '/ai-implementation' },
+    { name: 'AI Implementation', href: '/ai-implementation' }
   ];
 
   const company = [
@@ -64,7 +64,7 @@ export default function Footer({ className = '' }: FooterProps) {
     { name: 'News & Updates', href: '/news' },
     { name: 'Partners', href: '/partners' },
     { name: 'Pricing', href: '/pricing' },
-    { name: 'Contact Us', href: '/contact' },
+    { name: 'Contact Us', href: '/contact' }
   ];
 
   const resources = [
@@ -75,7 +75,7 @@ export default function Footer({ className = '' }: FooterProps) {
     { name: 'White Papers', href: '/white-papers' },
     { name: 'Webinars', href: '/webinars' },
     { name: 'FAQ', href: '/faq' },
-    { name: 'Support', href: '/support' },
+    { name: 'Support', href: '/support' }
   ];
 
   const legal = [
@@ -86,7 +86,7 @@ export default function Footer({ className = '' }: FooterProps) {
     { name: 'Compliance', href: '/compliance' },
     { name: 'Accessibility', href: '/accessibility' },
     { name: 'GDPR', href: '/gdpr' },
-    { name: 'SLA', href: '/sla' },
+    { name: 'SLA', href: '/sla' }
   ];
 
   const socialLinks = [
@@ -95,14 +95,14 @@ export default function Footer({ className = '' }: FooterProps) {
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
     { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
     { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
-    { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },
+    { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube }
   ];
 
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown DE 19709',
-    hours: 'Mon-Fri: 9AM-6PM EST',
+    hours: 'Mon-Fri: 9AM-6PM EST'
   };
 
   return (
