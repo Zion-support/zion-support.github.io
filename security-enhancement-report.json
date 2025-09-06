@@ -1,34 +1,13 @@
 {
-  "timestamp": "2025-09-06T10:56:54.290Z",
-  "totalDuration": 6908,
-  "securityScore": 100,
-  "checks": [
-    {
-      "type": "security-headers",
-      "status": "configured",
-      "recommendations": [
-        "Implement CSP in your server configuration",
-        "Consider using a security middleware",
-        "Regularly review and update security policies"
-      ]
-    },
-    {
-      "type": "environment-security",
-      "status": "configured",
-      "recommendations": [
-        "Review and implement the security checklist",
-        "Set up proper environment variable management",
-        "Implement secret rotation policies"
-      ]
-    },
-    {
-      "type": "rate-limiting",
-      "status": "configured",
-      "recommendations": [
-        "Apply rate limiting to all API endpoints",
-        "Monitor rate limiting metrics",
-        "Adjust limits based on usage patterns"
-      ]
-    }
-  ]
+  "timestamp": "2025-09-05T14:42:02.031Z",
+  "securityImprovements": [
+    "Security headers",
+    "Input validation",
+    "Rate limiting",
+    "CSRF protection",
+    "Security middleware",
+    "Environment security"
+  ],
+  "errors": [],
+  "success": true
 }

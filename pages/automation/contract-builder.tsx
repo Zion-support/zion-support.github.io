@@ -1,6 +1,15 @@
+<<<<<<< HEAD
+import React, { useEffect, useMemo, useState } from 'react',;
+import DatePicker from 'react-datepicker',;
+import { useRouter } from 'next/router',;
+type PaymentType = 'hourly' | 'fixed',
+
+
+=======
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { useRouter } from 'next/router';
@@ -41,7 +50,14 @@ export default function ContractBuilderPage() {
       !!endDate &&
       (paymentType === 'hourly' ? hourlyRate > 0 : fixedAmount > 0)
     )
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}, [talentName, projectName, scopeSummary, startDate, endDate, paymentType, hourlyRate, fixedAmount])
+=======
   }, [talentName, projectName, scopeSummary, startDate, endDate, paymentType, hourlyRate, fixedAmount])
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   async function submitForm(event: React.FormEvent) {
     event.preventDefault()
     if (!canSubmit) return
@@ -87,7 +103,9 @@ export default function ContractBuilderPage() {
       setContract(data.contract)
     } catch (e: any) {
       setError(e?.message |'Failed to generate contract')
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
 import React, { useEffect, useMemo, useState } from 'react',
 import DatePicker from 'react - datepicker',
 import { use_router } from 'next / router',
@@ -192,19 +210,25 @@ if ( {) {
       set_contract (data.contract);
     } catch (e: any) {
       set_error (e?.message || 'Failed to generate contract');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     } finally {
       set_loading (false);
     }
   }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     setLoading(true),
     setError(null),
     setContract(''),
 
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { useRouter } from 'next/router';
@@ -253,9 +277,6 @@ export default function ContractBuilderPage(req, res) {
     setLoading(true);
     setError(null);
     setContract('');
-
-
-
     try {
       const body = {;
         talentName;
@@ -274,6 +295,8 @@ export default function ContractBuilderPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+=======
 }
             : {;
                 type: 'fixed',;
@@ -342,6 +365,7 @@ export default function ContractBuilderPage(req, res) {
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <div className="max-w-5xl mx-auto">
       <h1 className="text-3xl font-bold mb-6">Contract Builder</h1>
@@ -432,6 +456,23 @@ export default function ContractBuilderPage(req, res) {
           <input type="number" className="w-full input input-bordered" value={revisionRounds} onChange={(e) => setRevisionRounds(Number(e.target.value))} />
         </div>
         <div className="md:col-span-2 flex items-center gap-3">
+          <button type="submit" className="btn btn-primary" disabled={!canSubmit |loading}>
+          <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>
+            {loading ? 'Generating…' : 'Generate contract'}
+          </button>
+          {error && <span className="text-red-600 text-sm">{error}</span>}
+          <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>
+            {loading ? 'Generating…' : 'Generate contract'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </button>
+          {error && <span className="text-red-600 text-sm">{error}</span>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 
           <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>
@@ -439,7 +480,10 @@ export default function ContractBuilderPage(req, res) {
 
         </div>
       </form>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   /**
  * copyToClipboard - Function description
  */
@@ -560,20 +604,25 @@ if (return, ) {
           {error && <span className="text - red - 600 text - sm">{error}</span>}
         </div>;
       </form>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {contract && (
+<<<<<<< HEAD
+=======
 
 =======
 }
 
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           </article>;
         </div>)}
     </div>);
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <div className="mt-8">
           <div className="flex items-center justify-between mb-3">
             <h2 className="text-2xl font-semibold">Generated Contract</h2>
@@ -587,7 +636,10 @@ if (return, ) {
   );
 };
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             {contract  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -606,8 +658,11 @@ if (return, ) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+=======
 
 }
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

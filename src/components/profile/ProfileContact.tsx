@@ -1,6 +1,4 @@
-
-
-  email?: string;
+email?: string;
   profileName: string;
   profileType: 'service' | 'talent'
 
@@ -11,7 +9,6 @@ import { Textarea } from '@/components / ui / textarea';
 import { Mail, Send } from 'lucide-react';
 import { useState } from 'react';
 import { toast } from '@/hooks / use - toast';
-=======
 
 
 import { Button } from "@/components/ui/button",
@@ -44,8 +41,39 @@ function ProfileContact() {
         description: `Your message has been sent to ${profile_name}.`,
       });
     }, 1000);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
+
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Mail, Send } from 'lucide-react'
+import { useState } from "react",
+import { toast } from "@/hooks/use-toast",
+interface ProfileContactProps {
+  email?: string,
+  profileName: string,
+  profileType: 'service' | 'talent'
+}
+
+export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
+  const [message, setMessage] = useState(""),
+  const [subject, setSubject] = useState(""),
+  const [isSending, setIsSending] = useState(false),
+  
+  const handleSendMessage = (e: React.FormEvent) => {
+    e.preventDefault(),
+    setIsSending(true),
+    
+    // Here would be the actual API call to send the message
+    setTimeout(() => {
+      setIsSending(false),
+      setMessage(""),
+      setSubject(""),
+      toast({
+        title: "Message Sent",
+        description: `Your message has been sent to ${profileName}.`})
+    }, 1000)
+  },
 
 
 export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
@@ -72,7 +100,6 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <div className='bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 8'>;
@@ -81,12 +108,9 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
         Contact;
       </h3>;
 
-=======
 
       
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {email && (
         <div className='mb - 4 text - zion - slate - light'>;
           <span className='block'>Email: </span>;
@@ -101,7 +125,6 @@ export function ProfileContact(): any ({;
   const [message, setMessage] = useState('');
   const [subject, setSubject] = useState('');
   const [isSending, setIsSending] = useState(false);
-=======
 
 
   const handleSendMessage = (e: React && React.FormEvent) => {;
@@ -135,16 +158,12 @@ export function ProfileContact(): any ({;
           <span className="block">Email: </span>;
           <a
             href={`mailto:${email}`} 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             className="text-zion-cyan hover:underline truncate block"
 
 
-=======
 
           >
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {email}
           </a>;
         </div>;
@@ -160,7 +179,6 @@ export function ProfileContact(): any ({;
         <div className="space-y-4">;
           <div>;
             <Input
-=======
 
       
 
@@ -170,8 +188,6 @@ export function ProfileContact(): any ({;
             <Input
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               placeholder="Subject"
               value={subject}
               onChange={(e) => setSubject(e && e.target.value)}
@@ -186,7 +202,6 @@ export function ProfileContact(): any ({;
 
 
             type="submit" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
 
             disabled={isSending}
@@ -194,7 +209,6 @@ export function ProfileContact(): any ({;
 
 
             <Send className="mr-2 h-4 w-4" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {isSending ? "Sending..." : "Send Message"}
 
 
@@ -205,10 +219,7 @@ export function ProfileContact(): any ({;
   );
 
 
-=======
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
               on_change={e => set_message (e.target.value)}
               className='bg - zion - blue border - zion - blue - light text - white min - h-[120px]';
               required;
@@ -239,11 +250,5 @@ export function ProfileContact(): any ({;
 }` ";
 }className="text - zion - cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

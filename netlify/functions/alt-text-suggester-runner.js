@@ -1,7 +1,12 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 
 function runNode(relPath, args = []) {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const path = require ('path');
 const { spawn_sync } = require ('child_process');
 ;
@@ -12,23 +17,32 @@ function run_node() {
   const abs = path.resolve (__dirname, '..', '..', rel_path);
   return spawn_sync ('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
 ;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 exports.config = {
   schedule: '*/15 * * * *'
 }
-=======
   const abs = path && path.resolve(__dirname, '..', '..', relPath);
   return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
 
 exports && exports.config = {
   schedule: '*/15 * * * *',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const abs = path.resolve(__dirname, '....', relPath),
+  return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
+=======
 
   const abs = path.resolve(__dirname, '....', relPath),
   return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
-
-=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     if (res && res.stdout) logs && logs.push(res && res.stdout);
     if (res && res.stderr) logs && logs.push(res && res.stderr);
     logs && logs.push(`exit=${res && res.status || 0}`);
@@ -42,9 +56,15 @@ exports && exports.config = {
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
   return { statusCode: 200, body: logs && logs.join('\n') }
 },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 ;
 exports.handler = async () => {
@@ -70,5 +90,3 @@ function step() {
 }  step ('alt - text:suggest', () => run_node ('automation / alt - text - suggester.cjs')),
   step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, body: logs.join ('\n') }
-},
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

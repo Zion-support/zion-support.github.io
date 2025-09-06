@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { GradientHeading } from '@/components/GradientHeading';
@@ -187,12 +185,10 @@ if ( {) {
       return;
     }
     setIsSubmitting (true);
-=======
     setIsSubmitting(true),
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     try {
       const res = await axios.post ('/api / onsite - request', {
         name,
@@ -216,7 +212,6 @@ if ( {) {
 
     } finally {
       setIsSubmitting (false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   }
 
@@ -241,7 +236,6 @@ if ( {) {
           <div className="flex flex-col md:flex-row items-center gap-4">
             <Image
 
-=======
               src="/logos/zion-logo.png"
               alt="Zion logo"
               width={200}
@@ -255,8 +249,6 @@ if ( {) {
                 className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
                 required
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               />
               <p className='text-xs text-zion-slate-light'>
                 {t(
@@ -288,7 +280,6 @@ if ( {) {
                 {t(
                   'onsite_form.email_helper'
                   "We'll confirm your request here."
-=======
                 onChange={e => setEmail(e && e.target.value)}
                 className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'                required;
               />;
@@ -296,7 +287,6 @@ if ( {) {
                 {t(;
                   'onsite_form && onsite_form.email_helper',;
                   "We'll confirm your request here.";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 )}
               </p>;
               <Input
@@ -513,13 +503,11 @@ py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020
 }Request Service </Button> </form> </div>
 }'"
 
-=======
 }
 }
 
 ;
 
-=======
 import React, { useState } from "react",;
 import Image from "next/image",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -703,14 +691,11 @@ py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020
   isSubmitting && (<Loader2 className="mr-2 h-4 w-4 animate-spin" /> ;
 }Request Service </Button> </form> </div> ;
 }'";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 }
 
-=======
 
 
-=======
   setIsSubmitting (false);
 }";
 py - 16 md:py - 24 border - b border - zion - purple / 20 bg-[radial - gradient (#0f172a, #020617) ]" > <div className="container mx - auto px - 4 grid grid - cols - 1 md:grid - cols - 2 gap - 12 items - center" > <div className="md:h - full md:flex md:flex - col md:items - center md:justify - center" > <GradientHeading className="mb - 6 text - 4xl md:text - 5xl text - center" > 24x7 Global IT Onsite Services </GradientHeading> <p className="text - lg text - zion - slate - light mb - 8 max - w-md text - center" > Worldwide coverage and rapid dispatch of certified technicians. </p> </div> <div className="bg - zion - blue - light p - 6 rounded - lg shadow - lg w - full max - w-md md:ml - auto" > <div className="flex flex - col md:flex - row items - center gap - 4" > <Image <Input type="email" value= {
@@ -743,11 +728,4 @@ py - 16 md:py - 24 border - b border - zion - purple / 20 bg-[radial - gradient 
 }'";
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

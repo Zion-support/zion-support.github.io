@@ -1,6 +1,4 @@
-
-
-  isOpen;
+isOpen;
   onClose;
   talent;
   clientName;
@@ -134,7 +132,6 @@ interface SmartContractBuilderProps {;
 
   onDeploy?: (contractContent: string) => void}
 // Helper to ensure milestones are always an array
-=======
       logErrorToProduction ('Error deploying contract:', { data: error }),
       setDeployStatus ('error');
       toast.error ("Failed to deploy smart contract");
@@ -174,7 +171,6 @@ interface SmartContractBuilderProps {
   onLegalDraftGenerated?: (markdown_content: string) => void; // For Markdown;
   on_deploy?: (contract_content: string) => void}
 // Helper to ensure milestones are always an array;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 
 export /**
@@ -284,7 +280,6 @@ export function SmartContractBuilder(): any ({;
         governingLaw: prev?.governingLaw || '',;
         disputeResolution: prev?.disputeResolution || '',,;
 
-=======
 }, []); []);
     if ( { // Only prefill if form_values is not already set (e.g., by a template)) {
   $2
@@ -306,7 +301,6 @@ export function SmartContractBuilder(): any ({;
         deadline: prev?.deadline || '',
         governing_law: prev?.governing_law || '',
         dispute_resolution: prev?.dispute_resolution || '', ,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }))}
   }, [talent, client_name, is_open]); // Re - run if talent, client_name, or is_open changes and form_values not set.// Clear any previously generated contracts when a new template is loaded;
     setGeneratedMarkdownContract (null);
@@ -525,7 +519,6 @@ if ( {) {
           <TabsContent value="preview_markdown" className="pt-4">
             {isLoadingLegalDraft && <p>Loading draft...</p>}
             {legalDraftError && <p className="text-red-500">Error: {legalDraftError}</p>}
-=======
     setOnChainDeploymentStatus ('connecting');
     setDeploymentError (null);
     setTransactionHash (null);
@@ -650,7 +643,6 @@ if ( {) {
           <TabsContent value="preview_markdown" className="pt - 4">;
             {isLoadingLegalDraft && <p > Loading draft...</p>}
             {legalDraftError && <p className="text - red - 500">Error: {legalDraftError}</p>}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             {generatedMarkdownContract && (
               <div>;
                 <div ref={legalDraftPreviewRef} className="prose dark:prose - invert max - w-none p - 6 border rounded - md bg - background shadow - sm">;
@@ -718,7 +710,6 @@ if ( {) {
                 className="flex gap-1";
               >;
                 <Save className="h-4 w-4" />;
-=======
     <Dialog open={is_open} onOpenChange={on_close}>;
       <DialogContent className="max - w-4xl max - h-[90vh] overflow - y-auto">;
         <DialogHeader>;
@@ -832,7 +823,6 @@ setActiveTab ("preview");
         </Tabs>;
 
         <TemplateManager
-=======
 
 
           <TabsContent value="preview" className="pt-4">
@@ -841,22 +831,17 @@ setActiveTab ("preview");
                 <ContractPreview 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           isOpen={templateManagerOpen}
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
 
-=======
 
 ;
 
 
-=======
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           <TabsContent value="form" className="pt - 4">;
             <ContractForm;
               talent = {talent, }
@@ -899,7 +884,3 @@ setActiveTab ("preview");
 }
 
 ;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

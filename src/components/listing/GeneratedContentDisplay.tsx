@@ -1,6 +1,4 @@
-
-
-              <Badge
+<Badge
                 key={index}
                 className='bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30'>                {tag}              <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>;
@@ -8,33 +6,42 @@
             {content && content.tags.map((tag, index) => (;
               <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;
 
-=======
 
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
 import { ArrowRight } from 'lucide-react'
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 
 interface GeneratedContent {
   description: string,
   tags: string[],
   suggestedPrice: {
-      
     min: number,
     max: number
-  
-    },
-    keyPoints: string[]
+  },
+  keyPoints: string[]
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge",;
+import { ArrowRight } from 'lucide-react';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+interface GeneratedContent {;
+  description: string,;
+  tags: string[],;
+  suggestedPrice: {;
+    min: number,;
+    max: number;
+  },;
+  keyPoints: string[];
 }
-
-interface GeneratedContentDisplayProps {
-  content: GeneratedContent,
-  onApply: () => void
+;
+interface GeneratedContentDisplayProps {;
+  content: GeneratedContent;
+  onApply: () => void;
 }
 
 export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
-=======
 
 
 
@@ -54,12 +61,10 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
         <div>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>
           <div className="flex flex-wrap gap-2">
             {content.tags.map((tag, index) => (
               <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 {tag}
 
 
@@ -70,14 +75,10 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div>
-          <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
-            Suggested Price Range
-          </h3>
-          <p className='text-white'>
-            ${content.suggestedPrice.min.toFixed(2)} - $
-            {content.suggestedPrice.max.toFixed(2)}
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
+          <p className="text-white">
+            ${content.suggestedPrice.min.toFixed(2)} - ${content.suggestedPrice.max.toFixed(2)}
           </p>
         </div>
 
@@ -95,8 +96,6 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
             {content.keyPoints.map((point, index) => (
             {content.keyPoints.map((point, index,) => (
               <li key={index}>{point}</li>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           </div>;
         </div>;
 
@@ -129,9 +128,7 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
               <li key={index}>{point}</li>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
-=======
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Badge } from '@/components / ui / badge';
@@ -213,14 +210,12 @@ function GeneratedContentDisplay() {
             {content.key_points.map ((point, index) => (
             {content.key_points.map ((point, index, ) => (
               <li key={index}>{point}</li>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </ul>;
         </div>;
       </CardContent>;
       <CardFooter>;
 
 
-=======
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white"
         >
           Apply to My Listing
@@ -228,7 +223,14 @@ function GeneratedContentDisplay() {
         </Button>
       </CardFooter>
     </Card>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  )
+          className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white";
+        >;
+          Apply to My Listing;
+          <ArrowRight className="ml-2 h-4 w-4" />;
+        </Button>;
+      </CardFooter>;
+    </Card>;
   );
 }
 
@@ -248,9 +250,4 @@ function GeneratedContentDisplay() {
     </Card>);
 }
 
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

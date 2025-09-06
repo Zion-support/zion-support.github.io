@@ -1,6 +1,3 @@
-
-
-
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { useAuth } from '@/hooks/useAuth'
@@ -61,7 +58,7 @@ interface WizardStep {
     url: string;
 
   }
-  skip_text?: string;
+  skipText?: string
 interface OnboardingWizardProps {
 
     url: string;
@@ -79,11 +76,9 @@ interface OnboardingWizardProps {;
 export function OnboardingWizard(): any ({;
   type,;
   onComplete,;
-=======
 
 
 
-=======
   type,
   onComplete,
 
@@ -91,8 +86,8 @@ export function OnboardingWizard(): any ({;
   className,;
 }: OnboardingWizardProps) {;
   const [currentStep, setCurrentStep] = useState(0);
-  const router = useRouter(); // Changed from useNavigate to useRouter;
-  const { user } = useAuth();
+  const router = useRouter(); // Changed from useNavigate to useRouter
+  const { user } = useAuth()
 
 
           </div>;
@@ -101,7 +96,6 @@ export function OnboardingWizard(): any ({;
         <div className='flex flex-col items-center text-center p-4'>;
           <div className='bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4'>;
 
-=======
 
 import { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router',;
@@ -135,7 +129,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Define steps based on user type
   const clientSteps: WizardStep[] = [
     {
@@ -216,7 +209,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
 
           <div className="flex items-center justify-center flex-1">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {steps.map((_, index) => (
               <div
                 key={index}
@@ -237,8 +229,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         <div className="flex flex-col items-center text-center p-4">
           <div className="bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {steps[currentStep]?.icon}
           </div>;
           <h3 className='text-xl font-bold text-white mb-2'>;
@@ -262,7 +252,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
             variant='ghost'
             className='text-zion-slate-light hover:text-white'
             onClick={handleSkip}>;
-=======
 
           className="w-full bg-zion-purple hover:bg-zion-purple-light"
           onClick={handleAction}
@@ -277,10 +266,8 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
             onClick={handleSkip}
           >;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {steps[currentStep]?.skipText}
-          </Button>;
+          </Button>
         )}
 
 
@@ -288,18 +275,13 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
 }
 
 
-=======
       </CardFooter>;
     </Card>;
   );
-
 }
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   type: 'client' | 'talent';
   on_complete: () => void;
   on_skip: () => void;
@@ -467,11 +449,4 @@ if ( {) {
       </CardFooter>;
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

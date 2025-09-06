@@ -1,5 +1,249 @@
+<<<<<<< HEAD
+=======
 
 
+"use client",;
+import { useState } from "react",;
+import {;
+  Rocket,;
+  CheckCircle,;
+  AlertCircle,;
+  Clock,;
+  Activity,;
+  Play,;
+  Eye,;
+  Settings,;
+  X,;
+  ArrowRight,;
+  Globe,;
+  Shield,;
+  Building2,;
+  Users,;
+  Zap;
+} from "lucide-react",;
+interface DeploymentUpdate {;
+  id: string,;
+  type: 'deployment_started' | 'deployment_completed' | 'deployment_failed' | 'instance_ready' | 'update_available',;
+  title: string,;
+  message: string,;
+  timestamp: string,;
+  instanceName?: string,;
+  vertical?: string,;
+  governanceType?: string,;
+  domain?: string,;
+  progress?: number,;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  actions?: {;
+    label: string;
+    action: 'deploy' | 'view' | 'retry' | 'configure' | 'dismiss';
+    href?: string;
+  }[];
+}
+interface DeploymentNotificationProps {updates: DeploymentUpdate[];
+  onDismiss?: (id: string) => void;
+  onAction?: (id: string, action: string) => void;
+}
+export default function DeploymentNotification({updates;
+  onDismiss;
+  onAction;
+}: DeploymentNotificationProps) {const [expanded, setExpanded] = useState<string | null>(null);
+  const getUpdateIcon = (type: string) => {;
+    switch (type) {;
+      case 'deployment_started': return <Activity className="w-5 h-5 text-blue-400" />;
+      case 'deployment_completed': return <CheckCircle className="w-5 h-5 text-green-400" />;
+      case 'deployment_failed': return <AlertCircle className="w-5 h-5 text-red-400" />;
+      case 'instance_ready': return <Rocket className="w-5 h-5 text-purple-400" />;
+      case 'update_available': return <Clock className="w-5 h-5 text-yellow-400" />;
+      default: return <Rocket className="w-5 h-5 text-gray-400" />;
+    }
+  }
+  const getUpdateColor = (type: string) => {switch (type) {;
+      case 'deployment_started': return 'border-blue-500/30 bg-blue-500/10';
+      case 'deployment_completed': return 'border-green-500/30 bg-green-500/10';
+      case 'deployment_failed': return 'border-red-500/30 bg-red-500/10';
+      case 'instance_ready': return 'border-purple-500/30 bg-purple-500/10';
+      case 'update_available': return 'border-yellow-500/30 bg-yellow-500/10';
+      default: return 'border-white/20 bg-white/5';
+    }
+  }
+  const getVerticalIcon = (vertical: string) => {switch (vertical) {;
+      case "HEALTH": return <Shield className="w-4 h-4 text-blue-400" />;
+      case "EDUCATION": return <Building2 className="w-4 h-4 text-green-400" />;
+      case "LAW": return <Shield className="w-4 h-4 text-purple-400" />;
+      case "GOV": return <Users className="w-4 h-4 text-red-400" />;
+      default: return <Globe className="w-4 h-4 text-gray-400" />;
+    }
+  }
+  const getGovernanceIcon = (type: string) => {switch (type) {;
+      case "ADMIN": return <Users className="w-4 h-4 text-yellow-400" />;
+      case "DAO_LITE": return <Users className="w-4 h-4 text-blue-400" />;
+      case "DAO_FULL": return <Zap className="w-4 h-4 text-purple-400" />;
+      default: return <Users className="w-4 h-4 text-gray-400" />;
+    }
+  }
+  const formatTimestamp = (timestamp: string) => {const date = new Date(timestamp);
+    const now = new Date();
+    const diffInMinutes = Math.floor((now.getTime() - date.getTime()) / (1000 * 60));
+    if (diffInMinutes < 1) return 'Just now';
+    if (diffInMinutes < 60) return `${diffInMinutes}m ago`;
+    if (diffInMinutes < 1440) return `${Math.floor(diffInMinutes / 60)}h ago`;
+    return date.toLocaleDateString();
+  }
+  const handleAction = (updateId: string, action: string) => {if (onAction) {;
+      onAction(updateId, action);
+    }
+<<<<<<< HEAD
+=======
+  },;
+  if (updates.length === 0) return null,;
+
+
+  return (;
+    <div className="fixed top-4 right-4 z-50 space-y-3 max-w-md">;
+      {updates.map((update) => (;
+=======
+"use client",
+import { useState  } from './react';,
+import {
+  Rocket,
+  CheckCircle,
+  AlertCircle,
+  Clock,
+  Activity,
+  Play,
+  Eye,
+  Settings,
+  X,
+  ArrowRight,
+  Globe,
+  Shield,
+  Building2,
+  Users,
+=======
+<<<<<<< HEAD
+"use client";
+import { useState } from "react";
+import {Rocket;
+  CheckCircle;
+  AlertCircle;
+  Clock;
+  Activity;
+  Play;
+  Eye;
+  Settings;
+  X;
+  ArrowRight;
+  Globe;
+  Shield;
+  Building2;
+  Users;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  Zap;
+} from './lucide-react';,
+interface DeploymentUpdate {
+  id: string,
+  type: 'deployment_started' | 'deployment_completed' | 'deployment_failed' | 'instance_ready' | 'update_available',
+  title: string,
+  message: string,
+  timestamp: string,
+  instance_name?: string,
+  vertical?: string,
+  governance_type?: string,
+  domain?: string,
+  progress?: number,
+  actions?: {
+    label: string,
+    action: 'deploy' | 'view' | 'retry' | 'configure' | 'dismiss',
+    href?: string;
+  }[];
+}
+interface DeploymentNotificationProps {
+  updates: DeploymentUpdate[],
+  on_dismiss?: (id: string) => void,
+  on_action?: (id: string, action: string) => void;
+}
+export default /**
+ * DeploymentNotification - Function description
+ */
+function DeploymentNotification() {
+  const [expanded, set_expanded] = useState < string | null>(null),
+  const getUpdateIcon = (type: string) =>: any {
+    switch (type) {
+      case 'deployment_started': return <Activity className="w - 5 h - 5 text - blue - 400" />,
+      case 'deployment_completed': return <CheckCircle className="w - 5 h - 5 text - green - 400" />,
+      case 'deployment_failed': return <AlertCircle className="w - 5 h - 5 text - red - 400" />,
+      case 'instance_ready': return <Rocket className="w - 5 h - 5 text - purple - 400" />,
+      case 'update_available': return <Clock className="w - 5 h - 5 text - yellow - 400" />,
+      default: return <Rocket className="w - 5 h - 5 text - gray - 400" />;
+    }
+  },
+  const getUpdateColor = (type: string) =>: any {
+    switch (type) {
+      case 'deployment_started': return 'border - blue - 500 / 30 bg - blue - 500 / 10',
+      case 'deployment_completed': return 'border - green - 500 / 30 bg - green - 500 / 10',
+      case 'deployment_failed': return 'border - red - 500 / 30 bg - red - 500 / 10',
+      case 'instance_ready': return 'border - purple - 500 / 30 bg - purple - 500 / 10',
+      case 'update_available': return 'border - yellow - 500 / 30 bg - yellow - 500 / 10',
+      default: return 'border - white / 20 bg - white / 5';
+    }
+  },
+  const getVerticalIcon = (vertical: string) =>: any {
+    switch (vertical) {
+      case "HEALTH": return <Shield className="w - 4 h - 4 text - blue - 400" />,
+      case "EDUCATION": return <Building2 className="w - 4 h - 4 text - green - 400" />,
+      case "LAW": return <Shield className="w - 4 h - 4 text - purple - 400" />,
+      case "GOV": return <Users className="w - 4 h - 4 text - red - 400" />,
+      default: return <Globe className="w - 4 h - 4 text - gray - 400" />;
+    }
+  },
+  const getGovernanceIcon = (type: string) =>: any {
+    switch (type) {
+      case "ADMIN": return <Users className="w - 4 h - 4 text - yellow - 400" />,
+      case "DAO_LITE": return <Users className="w - 4 h - 4 text - blue - 400" />,
+      case "DAO_FULL": return <Zap className="w - 4 h - 4 text - purple - 400" />,
+      default: return <Users className="w - 4 h - 4 text - gray - 400" />;
+    }
+  },
+  const format_timestamp = (timestamp: string) =>: any {
+    const date = new Date (timestamp),
+    const now = new Date (),
+    const diffInMinutes = Math.floor ((now.get_time () - date.get_time ()) / (1000 * 60)),
+    // Check condition
+if (return 'Just now', ) {
+  $2
+}
+    // Check condition
+if (return `${diffInMinutes}m ago`, ) {
+  $2
+}
+    if (return `${Math.floor (diffInMinutes / 60)}h ago`, ) {
+  $2
+}
+    return date.toLocaleDateString ();
+  },
+  const handle_action = (update_id: string, action: string) =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      on_action (update_id, action);
+    }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  },
+  // Check condition
+if (return null, ) {
+  $2
+}
+  return (
+    <div className="fixed top - 4 right - 4 z - 50 space - y-3 max - w-md">;
+      {updates.map ((update) => (
+=======
+  }
+  if (updates.length === 0) return null;
+=======
 "use client",;
 import { useState } from "react",;
 import {;
@@ -101,128 +345,12 @@ export default function DeploymentNotification({;
     }
   },;
   if (updates.length === 0) return null,;
-
-
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (;
     <div className="fixed top-4 right-4 z-50 space-y-3 max-w-md">;
       {updates.map((update) => (;
-=======
-"use client",
-import { useState  } from './react';,
-import {
-  Rocket,
-  CheckCircle,
-  AlertCircle,
-  Clock,
-  Activity,
-  Play,
-  Eye,
-  Settings,
-  X,
-  ArrowRight,
-  Globe,
-  Shield,
-  Building2,
-  Users,
-  Zap;
-} from './lucide-react';,
-interface DeploymentUpdate {
-  id: string,
-  type: 'deployment_started' | 'deployment_completed' | 'deployment_failed' | 'instance_ready' | 'update_available',
-  title: string,
-  message: string,
-  timestamp: string,
-  instance_name?: string,
-  vertical?: string,
-  governance_type?: string,
-  domain?: string,
-  progress?: number,
-  actions?: {
-    label: string,
-    action: 'deploy' | 'view' | 'retry' | 'configure' | 'dismiss',
-    href?: string;
-  }[];
-}
-interface DeploymentNotificationProps {
-  updates: DeploymentUpdate[],
-  on_dismiss?: (id: string) => void,
-  on_action?: (id: string, action: string) => void;
-}
-export default /**
- * DeploymentNotification - Function description
- */
-function DeploymentNotification() {
-  const [expanded, set_expanded] = useState < string | null>(null),
-  const getUpdateIcon = (type: string) =>: any {
-    switch (type) {
-      case 'deployment_started': return <Activity className="w - 5 h - 5 text - blue - 400" />,
-      case 'deployment_completed': return <CheckCircle className="w - 5 h - 5 text - green - 400" />,
-      case 'deployment_failed': return <AlertCircle className="w - 5 h - 5 text - red - 400" />,
-      case 'instance_ready': return <Rocket className="w - 5 h - 5 text - purple - 400" />,
-      case 'update_available': return <Clock className="w - 5 h - 5 text - yellow - 400" />,
-      default: return <Rocket className="w - 5 h - 5 text - gray - 400" />;
-    }
-  },
-  const getUpdateColor = (type: string) =>: any {
-    switch (type) {
-      case 'deployment_started': return 'border - blue - 500 / 30 bg - blue - 500 / 10',
-      case 'deployment_completed': return 'border - green - 500 / 30 bg - green - 500 / 10',
-      case 'deployment_failed': return 'border - red - 500 / 30 bg - red - 500 / 10',
-      case 'instance_ready': return 'border - purple - 500 / 30 bg - purple - 500 / 10',
-      case 'update_available': return 'border - yellow - 500 / 30 bg - yellow - 500 / 10',
-      default: return 'border - white / 20 bg - white / 5';
-    }
-  },
-  const getVerticalIcon = (vertical: string) =>: any {
-    switch (vertical) {
-      case "HEALTH": return <Shield className="w - 4 h - 4 text - blue - 400" />,
-      case "EDUCATION": return <Building2 className="w - 4 h - 4 text - green - 400" />,
-      case "LAW": return <Shield className="w - 4 h - 4 text - purple - 400" />,
-      case "GOV": return <Users className="w - 4 h - 4 text - red - 400" />,
-      default: return <Globe className="w - 4 h - 4 text - gray - 400" />;
-    }
-  },
-  const getGovernanceIcon = (type: string) =>: any {
-    switch (type) {
-      case "ADMIN": return <Users className="w - 4 h - 4 text - yellow - 400" />,
-      case "DAO_LITE": return <Users className="w - 4 h - 4 text - blue - 400" />,
-      case "DAO_FULL": return <Zap className="w - 4 h - 4 text - purple - 400" />,
-      default: return <Users className="w - 4 h - 4 text - gray - 400" />;
-    }
-  },
-  const format_timestamp = (timestamp: string) =>: any {
-    const date = new Date (timestamp),
-    const now = new Date (),
-    const diffInMinutes = Math.floor ((now.get_time () - date.get_time ()) / (1000 * 60)),
-    // Check condition
-if (return 'Just now', ) {
-  $2
-}
-    // Check condition
-if (return `${diffInMinutes}m ago`, ) {
-  $2
-}
-    if (return `${Math.floor (diffInMinutes / 60)}h ago`, ) {
-  $2
-}
-    return date.toLocaleDateString ();
-  },
-  const handle_action = (update_id: string, action: string) =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      on_action (update_id, action);
-    }
-  },
-  // Check condition
-if (return null, ) {
-  $2
-}
-  return (
-    <div className="fixed top - 4 right - 4 z - 50 space - y-3 max - w-md">;
-      {updates.map ((update) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <div;
           key={update.id}
           className={`group relative backdrop - blur - sm rounded - xl border p - 4 transition - all duration - 300 hover:shadow - lg ${getUpdateColor (update.type)}`}
@@ -248,6 +376,8 @@ if (return null, ) {
             </button>;
           </div>;
           {/* Instance Details (if available) */}
+<<<<<<< HEAD
+=======
 
           {update.instance_name && (
             <div className="mb - 3 p - 3 bg - white / 10 rounded - lg border border - white / 20">;
@@ -260,6 +390,7 @@ if (return null, ) {
                   {getVerticalIcon(update.vertical || 'GENERAL')}
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 </div>;
                 <span className="font - medium text - white text - sm">;
                   {update.instance_name}
@@ -279,6 +410,8 @@ if (return null, ) {
                     {update.domain}
                   </span>)}
               </div>;
+<<<<<<< HEAD
+=======
 
             </div>)}
 
@@ -287,6 +420,7 @@ if (return null, ) {
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           {/* Progress Bar (for deployment updates) */}
           {update.progress !== undefined && (
             <div className="mb - 3 space - y-2">;
@@ -300,6 +434,8 @@ if (return null, ) {
                   style={{ width: `${update.progress}%` }}
                 ></div>;
               </div>;
+<<<<<<< HEAD
+=======
 
             </div>)}
 
@@ -308,12 +444,15 @@ if (return null, ) {
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           {/* Action Buttons */}
           {update.actions && update.actions.length > 0 && (
             <div className="flex gap - 2 pt - 2 border - t border - white / 20">;
               {update.actions.map ((action, index) => (
                 <button;
                   key={index}
+<<<<<<< HEAD
+=======
 
                   onClick={() => handleAction(update.id, action.action)}
 
@@ -327,7 +466,17 @@ if (return null, ) {
                   className={`flex - 1 flex items - center justify - center gap - 2 px - 3 py - 2 text - xs font - medium rounded - lg transition - all duration - 200 ${
                     action.action === 'deploy' || action.action === 'retry';
                       ? 'bg - blue - 600 hover:bg - blue - 700 text - white';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+                  onClick={() => handleAction(update.id, action.action)}
+<<<<<<< HEAD
+                  className={`flex-1 flex items-center justify-center gap-2 px-3 py-2 text-xs font-medium rounded-lg transition-all duration-200 ${action.action === 'deploy' |action.action === 'retry';
+=======
+                  className={`flex-1 flex items-center justify-center gap-2 px-3 py-2 text-xs font-medium rounded-lg transition-all duration-200 ${;
+                    action.action === 'deploy' || action.action === 'retry';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+                      ? 'bg-blue-600 hover:bg-blue-700 text-white';
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       : action.action === 'view';
                       ? 'bg - green - 600 hover:bg - green - 700 text - white';
                       : 'bg - white / 20 hover:bg - white / 30 text - white / 80';
@@ -338,6 +487,8 @@ if (return null, ) {
                   {action.action === 'retry' && <Rocket className="w - 3 h - 3" />}
                   {action.action === 'configure' && <Settings className="w - 3 h - 3" />}
                   <span>{action.label}</span>;
+<<<<<<< HEAD
+=======
 
                 </button>))}
             </div>)}
@@ -347,6 +498,7 @@ if (return null, ) {
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           {/* Timestamp */}
           <div className="absolute bottom - 2 right - 4 text - xs text - white / 60">;
             {format_timestamp (update.timestamp)}
@@ -354,6 +506,8 @@ if (return null, ) {
         </div>))}
     </div>);
 }
+<<<<<<< HEAD
+=======
 
 export /**
  * DeploymentNotificationExample - Function description
@@ -421,6 +575,7 @@ export function DeploymentNotificationExample() {;
 
   return (;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <DeploymentNotification;
       updates={updates}
       on_dismiss={handle_dismiss}

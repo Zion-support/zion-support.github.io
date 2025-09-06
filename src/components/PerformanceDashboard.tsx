@@ -1,8 +1,3 @@
-
-=======
-
-
-
 import React, { useState } from 'react'
 import {
   Card
@@ -27,7 +22,6 @@ interface PerformanceMetrics {
   loadTime: number;
   healthStatus: 'healthy' | 'warning' | 'error'
 interface Improvement {
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -76,7 +70,6 @@ interface PerformanceMetrics {;
   healthStatus: 'healthy' | 'warning' | 'error';
 
 interface Improvement {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   id: string;
   title: string;
   description: string;
@@ -223,14 +216,12 @@ const PerformanceDashboard: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Card>
           <CardHeader className='pb-2'>
             <CardTitle className='text-sm font-medium text-gray-600'>
@@ -247,7 +238,6 @@ const PerformanceDashboard: React.FC = () => {
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Card>
           <CardHeader className='pb-2'>
             <CardTitle className='text-sm font-medium text-gray-600'>
@@ -264,7 +254,6 @@ const PerformanceDashboard: React.FC = () => {
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Card>
           <CardHeader className='pb-2'>
             <CardTitle className='text-sm font-medium text-gray-600'>
@@ -357,7 +346,6 @@ const PerformanceDashboard: React.FC = () => {;
         return <TrendingUp className='h-4 w-4 text-blue-500' />;
       default:;
         return <AlertCircle className='h-4 w-4 text-gray-500' />;
-=======
       {/* Completed Improvements */}
       <Card>
         <CardHeader>
@@ -401,7 +389,6 @@ const PerformanceDashboard: React.FC = () => {;
       case 'ux': return <Search className="h-4 w-4" />,;
       case 'build': return <TrendingUp className="h-4 w-4" />,;
       default: return <CheckCircle className="h-4 w-4" />;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   };
 
@@ -453,7 +440,6 @@ const PerformanceDashboard: React.FC = () => {;
         <Card>;
           <CardHeader className='pb-2'>;
             <CardTitle className='text-sm font-medium text-gray-600'>;
-=======
     <div className='space - y-6 p - 6'>;
       <div className='flex items - center justify - between'>;
         <h1 className='text - 3xl font - bold text - gray - 900'>;
@@ -468,7 +454,6 @@ const PerformanceDashboard: React.FC = () => {;
         <Card>;
           <CardHeader className='pb - 2'>;
             <CardTitle className='text - sm font - medium text - gray - 600'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Build Size;
             </CardTitle>;
           </CardHeader>;
@@ -574,7 +559,6 @@ const PerformanceDashboard: React.FC = () => {;
                   </p>
                 </div>
               </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
 
           </div>;
@@ -594,7 +578,6 @@ const PerformanceDashboard: React.FC = () => {;
         </Button>
         <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">
           <TrendingUp className="h-4 w-4 mr-2" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           Bundle Analysis
         </Button>
       </div>
@@ -604,14 +587,12 @@ const PerformanceDashboard: React.FC = () => {;
           variant='outline';
         >;
           <TrendingUp className='h-4 w-4 mr-2' />;
-=======
 
 export default PerformanceDashboard;
 export default PerformanceDashboard, ;
 export default PerformanceDashboard;
 }
 
-=======
 },
 
 export default PerformanceDashboard, 
@@ -633,10 +614,7 @@ export default PerformanceDashboard,
 export default PerformanceDashboard;
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           <div className='space - y-4'>;
             {completed_improvements.map (improvement => (
               <div;
@@ -689,10 +667,3 @@ export default PerformanceDashboard;
 export default PerformanceDashboard;
 export default PerformanceDashboard,
 export default PerformanceDashboard,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,4 +1,3 @@
-
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -7,7 +6,7 @@ interface GeneratedContent {
     max: number;
 
   }
-  key_points: string[];
+  keyPoints: string[]
 }
 interface AIListingGeneratorProps {
 
@@ -29,7 +28,7 @@ interface AIListingGeneratorProps {;
     title?: string;
     category?: string;
     keyFeatures?: string;
-    targetAudience?: string;
+    targetAudience?: string
   }
 }
 
@@ -61,22 +60,18 @@ function AIListingGenerator() {
     target_audience: string;
 
   }) => {
-    setIsLoading (true);
+    setIsLoading(true)
     try {
-      const { data, error } = await supabase.functions.invoke ('ai - listing - generator', {
-        body: { title, category, key_features, target_audience }
-      });
-      // Check condition
-if ( {) {
-  $2
-}
-        throw new Error (error.message);
+      const { data, error } = await supabase.functions.invoke('ai-listing-generator', {
+        body: { title, category, keyFeatures, targetAudience }
+      })
+      if (error) {
+        throw new Error(error.message)
       }
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       toast({
         title: "Content Generated"
         description: "AI has created optimized listing content for you."
@@ -88,7 +83,6 @@ if ( {) {
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again."
         variant: "destructive"
       })
-=======
       // Check condition
 if (.error) {) {
   $2
@@ -107,9 +101,8 @@ if (.error) {) {
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
         variant: "destructive";
       });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
-      setIsLoading (false);
+      setIsLoading(false)
     }
 
 
@@ -120,7 +113,6 @@ if (.error) {) {
       onApplyGenerated(generatedContent),
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       toast({
         title: "Content Applied"
         description: "The generated content has been applied to your listing."
@@ -181,7 +173,6 @@ export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {
         description: "The generated content has been applied to your listing.";
       });
 
-=======
   const handle_apply = () =>: any {
     // Check condition
 if ( {) {
@@ -192,11 +183,9 @@ if ( {) {
         title: "Content Applied",
         description: "The generated content has been applied to your listing.";
       });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
-  }
+  },
 
-=======
     }
 
   },
@@ -204,8 +193,6 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <div className="space-y-6">;
@@ -276,7 +263,7 @@ key_features: string;
 target_audience: string;
 
 }) => {
-  setIsLoading (true);
+  setIsLoading (true)
 try {
   const {
 
@@ -298,7 +285,7 @@ if (.error) {) {
 }setGeneratedContent ( (data as any) ?.generated || null);
 
 toast ({
-}catch (error) {';
+}catch (error) {'
   logErrorToProduction ('Error generating content:', {
 
           />;
@@ -380,13 +367,11 @@ return (<div className="space-y-6" > <Card className="border border-zion-blue-li
 }</div>) ;
 }'";
 
-=======
   data: error;
 });
 toast ({
 }finally {
   setIsLoading (false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 
 const handle_apply = () =>: any {
@@ -399,6 +384,7 @@ toast ({
 }
 
 }'";
+};
 }
 
 }
@@ -406,12 +392,7 @@ toast ({
 }
 }
 
-=======
     </div>;
   );
 }
 ;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

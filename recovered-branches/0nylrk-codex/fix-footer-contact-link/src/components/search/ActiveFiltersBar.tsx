@@ -1,8 +1,25 @@
+<<<<<<< HEAD
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import React from "react";
+import {ClickableBadge} from "@/components/ui/clickable-badge";
+import {X} from "lucide-react";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import React from "react",
+import { ClickableBadge } from "@/components/ui/clickable-badge";
+import { X } from "lucide-react";
+import { ClickableBadge } from "@/components/ui/clickable-badge",
+import { X } from "lucide-react",
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ActiveFiltersBarProps {
 
   selectedProductTypes: string[]
@@ -15,6 +32,172 @@ interface ActiveFiltersBarProps {
 
   onClearSearch: () => void
 }
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from "react";
+import {ClickableBadge} from "@/components/ui/clickable-badge";
+import {X} from "lucide-react";
+interface ActiveFiltersBarProps {;
+  selectedProductTypes: string[],;
+  selectedLocations: string[],;
+  selectedAvailability: string[],;
+  selectedRating: number | null,;
+  searchQuery: string,;
+  onRemoveFilter: (filterType: string, value: string) => void,;
+  onRemoveRating: () => void,;
+  onClearSearch: () => void;
+}
+
+export function ActiveFiltersBar(): any ({;
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export function ActiveFiltersBar({;
+  selectedProductTypes;
+  selectedLocations;
+  selectedAvailability;
+  selectedRating;
+  searchQuery;
+  onRemoveFilter;
+  onRemoveRating;
+export function ActiveFiltersBar({
+  selectedProductTypes,
+  selectedLocations,
+  selectedAvailability,
+  selectedRating,
+  searchQuery,
+  onRemoveFilter,
+  onRemoveRating,
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  selectedProductTypes;
+  selectedLocations;
+  selectedAvailability;
+  selectedRating;
+  searchQuery;
+  onRemoveFilter;
+  onRemoveRating;
+<<<<<<< HEAD
+
+
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  onClearSearch
+}: ActiveFiltersBarProps) {
+
+  const hasActiveFilters =
+    selectedProductTypes.length > 0 |
+    selectedLocations.length > 0 |
+    selectedAvailability.length > 0 |
+    selectedRating !== null |
+    !!searchQuery;
+  if (!hasActiveFilters) return null;
+
+  const hasActiveFilters = 
+    selectedProductTypes.length > 0 || 
+    selectedLocations.length > 0 || 
+    selectedAvailability.length > 0 || 
+    selectedRating !== null ||
+    !!searchQuery,
+    
+  if (!hasActiveFilters) return null,
+  
+  return (
+    <div className="flex flex-wrap gap-2 items-center mb-4">
+      <span className="text-sm text-zion-slate-light">Active filters:</span>
+      {searchQuery && (
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  onClearSearch;
+}: ActiveFiltersBarProps) {;
+  const hasActiveFilters = ;
+    selectedProductTypes && selectedProductTypes.length > 0 || ;
+    selectedLocations && selectedLocations.length > 0 || ;
+    selectedAvailability && selectedAvailability.length > 0 || ;
+    selectedRating !== null ||;
+    !!searchQuery;
+
+  if (!hasActiveFilters) return null;
+
+  return (
+    <div className="flex flex-wrap gap-2 items-center mb-4">;
+      <span className="text-sm text-zion-slate-light">Active filters:</span>;
+<<<<<<< HEAD
+
+      {searchQuery && (;
+
+=======
+      {searchQuery && (;
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+        <ClickableBadge
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+          onClick={onClearSearch}>;
+
+        <ClickableBadge 
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+
+          onClick={onClearSearch}
+        >
+          Search: {searchQuery}
+          <X className="h-3 w-3" />;
+        </ClickableBadge>;
+      )}
+<<<<<<< HEAD
+
+
+      {selectedProductTypes && selectedProductTypes.map(type => (;
+
+=======
+      {selectedProductTypes && selectedProductTypes.map(type => (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+        <ClickableBadge
+          key={`type-${type}`}
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+          onClick={() => onRemoveFilter('productTypes', type)}
+<<<<<<< HEAD
+        >;
+          {type}
+          <X className="h-3 w-3" />;
+        </ClickableBadge>;
+      ))}
+
+
+      {selectedLocations && selectedLocations.map(location => (;
+
+=======
+
+import React from "react",;
+import { ClickableBadge } from "@/components/ui/clickable-badge",;
+import { X } from "lucide-react",;
+;
+interface ActiveFiltersBarProps {;
+  selectedProductTypes:string[],;
+  selectedLocations:string[],;
+  selectedAvailability:string[],;
+  selectedRating:number | null,;
+  searchQuery:string,;
+  onRemoveFilter:(filterType:string, value:string) => void,;
+  onRemoveRating:() => void,;
+  onClearSearch:() => void;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+        <ClickableBadge
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+        <ClickableBadge 
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+import React from "react",;
+import { ClickableBadge } from "@/components/ui/clickable-badge",;
+import { X } from "lucide-react",;
 
 import React from "react";
 import {ClickableBadge} from "@/components/ui/clickable-badge";
@@ -70,34 +253,28 @@ export function ActiveFiltersBar(): any ({;
     selectedAvailability && selectedAvailability.length > 0 || ;
     selectedRating !== null ||;
     !!searchQuery;
-
   if (!hasActiveFilters) return null;
-
   return (
     <div className="flex flex-wrap gap-2 items-center mb-4">;
       <span className="text-sm text-zion-slate-light">Active filters:</span>;
-
       {searchQuery && (;
 
         <ClickableBadge
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={onClearSearch}>;
-=======
 
         <ClickableBadge 
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
 
           onClick={onClearSearch}
         >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        <ClickableBadge
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+          onClick={onClearSearch}>;
           Search: {searchQuery}
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       )}
-
-
-      {selectedProductTypes && selectedProductTypes.map(type => (;
-
         <ClickableBadge
           key={`type-${type}`}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
@@ -107,32 +284,69 @@ export function ActiveFiltersBar(): any ({;
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
-
-
-      {selectedLocations && selectedLocations.map(location => (;
-
+<<<<<<< HEAD
+      {selectedLocations.map(location => (
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <ClickableBadge
           key={`location-${location}`}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => onRemoveFilter('locations', location)}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      ;
+      {selectedLocations.map(location => (;
+        <ClickableBadge ;
+          key={`location-${location}`}
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";          onClick={() => onRemoveFilter('locations', location)}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         >;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {location}
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
       {selectedAvailability && selectedAvailability.map(availability => (;
 
+=======
+        >
+          {location}
+          <X className="h-3 w-3" />
+        </ClickableBadge>
+      ))}
+      {selectedAvailability.map(availability => (
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <ClickableBadge
           key={`availability-${availability}`}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => onRemoveFilter('availability', availability)}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      ;
+      {selectedAvailability.map(availability => (;
+        <ClickableBadge ;
+          key={`availability-${availability}`}
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";          onClick={() => onRemoveFilter('availability', availability)}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         >;
           {availability}
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
       {selectedRating !== null && (;
@@ -140,16 +354,33 @@ export function ActiveFiltersBar(): any ({;
         <ClickableBadge
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={onRemoveRating}>;
+=======
+      ;
+      {selectedRating !== null && (;
+        <ClickableBadge ;
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
+          onClick={onRemoveRating}
+        >;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {selectedRating}+ Stars;
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       )}
+<<<<<<< HEAD
+<<<<<<< HEAD
 
     </div>;
   );
 }
 
 =======
+=======
+    </div>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import { ClickableBadge } from '@/components / ui / clickable - badge';
 import { X } from './lucide-react';
@@ -226,4 +457,69 @@ if (return null) {
         </ClickableBadge>)}
     </div>);
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  ),;}
+ interface ActiveFiltersBarProps {
+  selectedProductTypes: string[];
+selectedLocations: string[];
+selectedAvailability: string[];
+selectedRating: number | null;
+searchQuery: string;
+onRemoveFilter: (filterType: string, value: string) => void;
+onRemoveRating: () => void;
+onClearSearch: () => void 
+}selectedProductTypes, selectedLocations, selectedAvailability, selectedRating, searchQuery, onRemoveFilter, onRemoveRating, onClearSearch 
+}: ActiveFiltersBarProps) {
+  const hasActiveFilters = selectedProductTypes.length > 0 || selectedLocations.length > 0 || selectedAvailability.length > 0 || selectedRating !== null || !!searchQuery;
+if (!hasActiveFilters) return null;
+return (<div className="flex flex-wrap gap-2 items-center mb-4" > <span className="text-sm text-zion-slate-light" >Active filters:</span> {
+  searchQuery && (<ClickableBadge className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2" onClick= {
+  onClearSearch 
+}> </ClickableBadge>) 
+}{
+  selectedProductTypes.map (type => (<ClickableBadge key= {
+  `type-$ {
+  type 
+}` 
+}</ClickableBadge>) ) 
+}{
+  selectedLocations.map (location => (<ClickableBadge key= {
+  `location-$ {
+  location 
+}` 
+}</ClickableBadge>) ) 
+}{
+  selectedAvailability.map (availability => (<ClickableBadge key= {
+  `availability-$ {
+  availability 
+}` 
+}</ClickableBadge>) ) 
+}{
+  selectedRating !== null && (<ClickableBadge className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2" onClick= {
+  onRemoveRating 
+}> </ClickableBadge>) 
+}</div>) 
+}
+        >
+          {availability}
+          <X className="h-3 w-3" />
+        </ClickableBadge>
+      ))}
+      {selectedRating !== null && (
+        <ClickableBadge
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+          onClick={onRemoveRating}
+        >
+          {selectedRating}+ Stars
+          <X className="h-3 w-3" />
+        </ClickableBadge>
+      )}
+    </div>
+  )
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

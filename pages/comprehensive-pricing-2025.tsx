@@ -4,8 +4,11 @@
 } from 'lucide-react'
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
+<<<<<<< HEAD
+=======
 =======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import { motion, AnimatePresence } from 'framer-motion',;
@@ -15,18 +18,21 @@ import {
 } from 'lucide-react',;
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion',;
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025',;
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function ComprehensivePricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly')
   const [expandedService, setExpandedService] = useState<string | null>(null)
   // Combine all services
+<<<<<<< HEAD
+=======
 
   const allServices = [...comprehensiveMicroSaasServices, ...specializedEmergingTechServices];
-
   const categories = [
-=======
 import React, { useState } from 'react',
 import Head from 'next / head',
 import { motion, AnimatePresence } from 'framer-motion',
@@ -57,7 +63,7 @@ function ComprehensivePricingPage() {
     { id: 'Quantum Computing', name: 'Quantum', icon: '⚛️' },
     { id: 'Space Technology', name: 'Space Tech', icon: '🚀' },
     { id: 'Autonomous Systems', name: 'Autonomous', icon: '🤖' },
-    { id: 'AR / VR & Metaverse', name: 'AR / VR', icon: '🥽' },
+{ id: 'AR / VR & Metaverse', name: 'AR / VR', icon: '🥽' },
     { id: '5G / 6G Networks', name: '5G / 6G', icon: '📡' },
     { id: 'Biotechnology AI', name: 'Biotech', icon: '🧬' },
     { id: 'Renewable Energy', name: 'Energy', icon: '⚡' },
@@ -65,6 +71,7 @@ function ComprehensivePricingPage() {
 
 
     { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠' }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   ]
   const filteredServices = selectedCategory === 'all'
     ? allServices
@@ -73,6 +80,8 @@ function ComprehensivePricingPage() {
     const categoryData = categories.find(cat => cat.id === category)
     return categoryData?.icon |'🚀'
   }
+<<<<<<< HEAD
+=======
   const calculateYearlyPrice = (monthlyPrice: string) => {
     const price = parseFloat(monthlyPrice.replace('$', '').replace(, ''))
     return `$${(price * 12 * 0.8).toFixed(0)}`, // 20% discount for yearly
@@ -86,6 +95,7 @@ function ComprehensivePricingPage() {
 
 
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -124,9 +134,12 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   ],
   const filteredServices = selectedCategory === 'all'
     ? allServices
@@ -134,6 +147,9 @@ export default function ComprehensivePricingPage(req, res) {
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat => cat.id === category),
     return categoryData?.icon || '🚀'
+<<<<<<< HEAD
+  },
+=======
   },
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const calculateYearlyPrice = (monthlyPrice: string) => {
@@ -145,7 +161,15 @@ export default function ComprehensivePricingPage(req, res) {
     setExpandedService(expandedService === serviceId ? null : serviceId)
   },
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+  },
+  const toggleServiceExpansion = (serviceId: string) => {
+    setExpandedService(expandedService === serviceId ? null : serviceId)
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <>
       <Head>
@@ -155,13 +179,44 @@ export default function ComprehensivePricingPage(req, res) {
         <link rel="canonical" href="https://ziontechgroup.com/comprehensive-pricing-2025" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Header */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+        <section className="py-20 px-6">
+          <div className="max-w-7xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            >
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+                Comprehensive Pricing 2025
+              </h1>
+              <p className="text-xl text-white/70 max-w-3xl mx-auto mb-8">
+                Revolutionary micro SAAS services that transform businesses with cutting-edge AI, quantum computing, and emerging technologies
+              </p>
+              {/* Billing Toggle */}
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -199,7 +254,6 @@ export default function ComprehensivePricingPage(req, res) {
         <link rel="canonical" href="https://ziontechgroup.com / comprehensive - pricing - 2025" />;
       </Head>;
       <div className="min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Header */}
         <section className="py - 20 px - 6">;
           <div className="max - w-7xl mx - auto text - center">;
@@ -209,11 +263,42 @@ export default function ComprehensivePricingPage(req, res) {
               transition={{ duration: 0.8 }}
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               {/* Billing Toggle */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+              <div className="flex items-center justify-center gap-4 mb-12">
+                <span className="text-white/60">Monthly</span>
+                <button
+                  onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className={`relative w-16 h-8 rounded-full transition-all duration-300 ${;
+                    billingCycle === 'yearly' ? 'bg-blue-600' : 'bg-white/20';
+                  }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                >
+                  <div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-all duration-300 ${
+                    billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1'
+                  }`} />
+                </button>
+                <span className="text-white/60">Yearly</span>
+                {billingCycle === 'yearly' && (
+                  <span className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-medium">
+                    Save 20%
+                  </span>
+                )}
+              </div>
+              {/* Stats */}
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -233,7 +318,6 @@ export default function ComprehensivePricingPage(req, res) {
               <p className="text - xl text - white / 70 max - w-3xl mx - auto mb - 8">;
                 Revolutionary micro SAAS services that transform businesses with cutting - edge AI, quantum computing, and emerging technologies;
               </p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               {/* Billing Toggle */}
               <div className="flex items - center justify - center gap - 4 mb - 12">;
                 <span className="text - white / 60">Monthly</span>;
@@ -244,20 +328,27 @@ export default function ComprehensivePricingPage(req, res) {
                   }`}
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
               </div>;
               {/* Stats */  } catch (error) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
                   <div className="text-3xl font-bold text-blue-400">{allServices.length}+</div>
@@ -279,6 +370,15 @@ export default function ComprehensivePricingPage(req, res) {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+        {/* Category Filter */}
+        <section className="px-6 mb-16">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+=======
 
                 >;
                   <div className={`absolute top - 1 w - 6 h - 6 bg - white rounded - full transition - all duration - 300 ${
@@ -317,6 +417,7 @@ export default function ComprehensivePricingPage(req, res) {
         {/* Category Filter */}
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Category Filter */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -340,13 +441,18 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               className="flex flex-wrap justify-center gap-3"
             >
               {categories.map((category) => (
                 <button
+<<<<<<< HEAD
+=======
 
         <section className="px - 6 mb - 16">;
           <div className="max - w-7xl mx - auto">;
@@ -359,6 +465,7 @@ export default function ComprehensivePricingPage(req, res) {
               {categories.map ((category) => (
                 <button;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   key={category.id}
                   on_click={() => setSelectedCategory (category.id)}
                   className={`px - 6 py - 3 rounded - full font - medium transition - all duration - 300 flex items - center gap - 2 ${
@@ -370,6 +477,8 @@ export default function ComprehensivePricingPage(req, res) {
                   <span>{category.icon}</span>;
                   {category.name}
 
+<<<<<<< HEAD
+=======
                 </button>))}
             </motion.div>;
           </div>;
@@ -421,12 +530,15 @@ export default function ComprehensivePricingPage(req, res) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <section className="px-6 pb-20">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
               <AnimatePresence mode="wait">
                 {filteredServices.map((service, index) => (
                   <motion.div
+<<<<<<< HEAD
+=======
 
         <section className="px - 6 pb - 20">;
           <div className="max - w-7xl mx - auto">;
@@ -435,11 +547,14 @@ export default function ComprehensivePricingPage(req, res) {
                 {filtered_services.map ((service, index) => (
                   <motion.div;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     key={service.id}
                     initial={{ opacity: 0, coordinate_y: 30 }}
                     animate={{ opacity: 1, coordinate_y: 0 }}
                     exit={{ opacity: 0, coordinate_y: -30 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD
+=======
 
 
                     key={service.id  } catch (error) {
@@ -470,10 +585,13 @@ export default function ComprehensivePricingPage(req, res) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300"
                   >
                     {/* Popular Badge */}
                     {service.popular && (
+<<<<<<< HEAD
+=======
 =======
                     className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300";
                   >;
@@ -481,6 +599,7 @@ export default function ComprehensivePricingPage(req, res) {
                     {service.popular && (
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -492,22 +611,31 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     <div className="p-6">
                       <div className="flex items-start justify-between mb-4">
                         <div className="text-4xl">{service.icon}</div>
                         <div className="text-right">
                           <div className="text-3xl font-bold text-white">
+<<<<<<< HEAD
+                            {billingCycle === 'yearly' ? '/year' : service.period  } catch (error) {
+=======
 
 
                             {billingCycle === 'yearly' ? calculateYearlyPrice(service.price) : service.price  } catch (error) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                           </div>
+<<<<<<< HEAD
+=======
                           <div className="text-white/60">
                             {billingCycle === 'yearly' ? '/year' : service.period  } catch (error) {
     console.error("Error:", error);
@@ -518,10 +646,13 @@ export default function ComprehensivePricingPage(req, res) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           </div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         </div>
                       </div>
 
 
+<<<<<<< HEAD
+=======
                       <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                       <p className="text-white/70 text-sm mb-4">{service.tagline}</p>
 
@@ -534,12 +665,15 @@ export default function ComprehensivePricingPage(req, res) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       <div className="space-y-2 mb-6">
                         {service.features.slice(0, 4).map((feature, idx) => (
                           <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
                             <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
                             <span className="line-clamp-2">{feature}</span>
                           </div>
+<<<<<<< HEAD
+=======
 
 
                         ))  } catch (error) {
@@ -556,6 +690,7 @@ export default function ComprehensivePricingPage(req, res) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       <div className="grid grid-cols-3 gap-4 mb-6 text-center">
                         <div>
                           <div className="text-lg font-bold text-blue-400">{service.rating}</div>
@@ -570,6 +705,8 @@ export default function ComprehensivePricingPage(req, res) {
                           <div className="text-xs text-white/60">Trial</div>
                         </div>
                       </div>
+<<<<<<< HEAD
+=======
 
                       <div className="absolute top - 4 right - 4 bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full flex items - center gap - 1 z - 10">;
                         <Star className="w - 3 h - 3" />;
@@ -622,6 +759,7 @@ export default function ComprehensivePricingPage(req, res) {
   }
 }
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       <button;
                         on_click={() => toggleServiceExpansion (service.id)}
                         className="w - full bg - white / 10 text - white py - 3 px - 4 rounded - xl font - medium hover:bg - white / 20 transition - all duration - 300 flex items - center justify - center gap - 2 mb - 4";
@@ -631,18 +769,22 @@ export default function ComprehensivePricingPage(req, res) {
                           expanded_service === service.id ? 'rotate - 180' : '';
                         }`} />;
                       </button>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {/* CTA Button */}
                       <a;
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-4 rounded-xl font-medium text-center block hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
                       >
                         Get Started
                         <ExternalLink className="w-4 h-4" />
+<<<<<<< HEAD
+=======
 
                         target="_blank";
                         rel="noopener noreferrer";
@@ -653,6 +795,7 @@ export default function ComprehensivePricingPage(req, res) {
                       </a>;
                     </div>;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     {/* Expanded Details */}
                     <AnimatePresence>;
                       {expanded_service === service.id && (
@@ -662,16 +805,22 @@ export default function ComprehensivePricingPage(req, res) {
                           exit={{ height: 0, opacity: 0 }}
                           transition={{ duration: 0.3 }}
 
+<<<<<<< HEAD
+=======
                           className="overflow - hidden border - t border - white / 10";
                         >;
                           <div className="p - 6 bg - white / 5">;
                             {/* Market Position */}
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                             <div className="mb-6">
                               <h4 className="text-lg font-semibold text-white mb-2">Market Position</h4>
                               <p className="text-white/70 text-sm">{service.marketPosition}</p>
                             </div>
+<<<<<<< HEAD
+                            {/* Technology Stack */}
+=======
 
                             <div className="mb - 6">;
                               <h4 className="text - lg font - semibold text - white mb - 2">Market Position</h4>;
@@ -681,19 +830,31 @@ export default function ComprehensivePricingPage(req, res) {
                             {/* Technology Stack */}
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                             {/* Technology Stack */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                             <div className="mb-6">
                               <h4 className="text-lg font-semibold text-white mb-2">Technology Stack</h4>
                               <div className="flex flex-wrap gap-2">
                                 {service.technology.map((tech, idx) => (
                                   <span key={idx} className="bg-white/10 text-white/70 px-3 py-1 rounded-full text-xs">
+<<<<<<< HEAD
+                                    {tech}
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
+                            {/* Use Cases */}
+=======
 
                             <div className="mb - 6">;
                               <h4 className="text - lg font - semibold text - white mb - 2">Technology Stack</h4>;
@@ -704,6 +865,7 @@ export default function ComprehensivePricingPage(req, res) {
                                     {tech}
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                                     {tech  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -722,17 +884,23 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                             <div className="mb-6">
                               <h4 className="text-lg font-semibold text-white mb-2">Use Cases</h4>
                               <div className="space-y-1">
                                 {service.useCases.map((useCase, idx) => (
                                   <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
                                     <Target className="w-3 h-3 text-blue-400" />
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                                     {useCase  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -751,9 +919,12 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                             <div className="mb-6">
                               <h4 className="text-lg font-semibold text-white mb-2">ROI & Benefits</h4>
                               <p className="text-white/70 text-sm mb-3">{service.roi}</p>
@@ -761,6 +932,9 @@ export default function ComprehensivePricingPage(req, res) {
                                 {service.benefits.map((benefit, idx) => (
                                   <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
                                     <TrendingUp className="w-3 h-3 text-green-400" />
+<<<<<<< HEAD
+                                    {benefit}
+=======
 
 =======
                                   </span>))}
@@ -790,6 +964,7 @@ export default function ComprehensivePricingPage(req, res) {
                                     {benefit}
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                                     {benefit  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -808,9 +983,12 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                             <div className="bg-white/5 rounded-xl p-4">
                               <h4 className="text-lg font-semibold text-white mb-3">Contact Information</h4>
                               <div className="space-y-2 text-sm text-white/60">
@@ -822,6 +1000,8 @@ export default function ComprehensivePricingPage(req, res) {
                             </div>
                           </div>
                         </motion.div>
+<<<<<<< HEAD
+=======
 
 =======
                                   </div>))}
@@ -862,6 +1042,7 @@ export default function ComprehensivePricingPage(req, res) {
         <section className="px-6 pb-20">
           <div className="max-w-4xl mx-auto">
             <motion.div
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -882,9 +1063,12 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               className="text-center"
             >
               <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30">
@@ -901,12 +1085,15 @@ export default function ComprehensivePricingPage(req, res) {
                   >
                     Contact Sales Team
                     <ArrowRight className="w-5 h-5" />
+<<<<<<< HEAD
+=======
 
 
                   </Link>
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   <a
                     href="tel:+13024640950"
                     className="bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
@@ -921,10 +1108,15 @@ export default function ComprehensivePricingPage(req, res) {
       </div>
     </>
 
+<<<<<<< HEAD
+}
+
+=======
 =======
 }
 
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               className="text - center";
             >;
               <div className="bg - gradient - to - r from - blue - 600 / 20 to - cyan - 600 / 20 rounded - 3xl p - 12 border border - blue - 500 / 30">;
@@ -954,7 +1146,36 @@ export default function ComprehensivePricingPage(req, res) {
           </div>;
         </section>;
       </div>;
+<<<<<<< HEAD
+
+
+=======
     </>);
+                  <a
+                    href=&quot;mailto:kleber@ziontechgroup.com&quot;
+                    className=&quot;bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2&quot;
+                  >
+                    Contact Sales Team
+                    <ArrowRight className=&quot;w-5 h-5&quot; />
+                  </Link>
+                  <a
+                    href=&quot;tel:+13024640950&quot;
+                    className=&quot;bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2&quot;
+                  >
+                    Call +1 302 464 0950
+                  </Link>
+=======
+                          className="overflow-hidden border-t border-white/10"
+                        >
+                          <div className="p-6 bg-white/5">
+                            {/* Market Position */}
+=======
+                      </Link>
+                    </div>
+                    {/* Expanded Details */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -962,3 +1183,4 @@ export default function ComprehensivePricingPage(req, res) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

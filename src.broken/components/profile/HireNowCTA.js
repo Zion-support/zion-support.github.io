@@ -1,11 +1,9 @@
-
-
+<<<<<<< HEAD
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 import React, { useState } from 'react';
-import { Button } from '../ui/Button';
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/Card';
-import { Input } from '../ui/Input';
-import { Textarea } from '../ui/Textarea';
-import { DollarSign, MessageSquare } from 'lucide-react';
 export function HireNowCTA({ talentName, hourlyRate, onHire }) {
     const [isFormOpen, setIsFormOpen] = useState(false);
     const [formData, setFormData] = useState({
@@ -13,8 +11,11 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
         budget: '',
         startDate: '',
         message: ''
-
-
+<<<<<<< HEAD
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
         e.preventDefault();
         if (onHire) {
             onHire(formData);
@@ -24,8 +25,11 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
             projectDescription: '',
             budget: '',
             startDate: '',
-
-
+<<<<<<< HEAD
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
     const handleChange = (e) => {
         setFormData(prev => ({
             ...prev,
@@ -58,6 +62,7 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
               </label>
               <Textarea id="projectDescription" name="projectDescription" value={formData.projectDescription} onChange={handleChange} placeholder="Describe your project requirements..." className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan" required/>
             </div>
+
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <label htmlFor="budget" className="block text-sm font-medium text-white mb-2">
@@ -65,6 +70,7 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
                 </label>
                 <Input id="budget" name="budget" value={formData.budget} onChange={handleChange} placeholder="e.g., $1000-5000" className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan" required/>
               </div>
+
               <div>
                 <label htmlFor="startDate" className="block text-sm font-medium text-white mb-2">
                   Start Date
@@ -72,12 +78,14 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
                 <Input id="startDate" name="startDate" type="date" value={formData.startDate} onChange={handleChange} className="bg-zion-blue border-zion-blue-light text-white focus:border-zion-cyan" required/>
               </div>
             </div>
+
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
                 Additional Message
               </label>
               <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Any additional details or questions..." className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan" rows={3}/>
             </div>
+
             <div className="flex gap-3">
               <Button type="submit" className="flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
                 Send Message
@@ -89,5 +97,10 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
           </form>)}
       </CardContent>
     </Card>);
-
-
+<<<<<<< HEAD
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+}
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+}
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68

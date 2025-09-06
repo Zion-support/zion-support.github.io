@@ -1,46 +1,105 @@
-
-
-import {Education} from '@/types/resume';
-export interface EducationFormProps {;
-
-
+import { Education } from "@/types/resume";
+export interface EducationFormProps {
   resumeId: string;
   educationEntries: Education[];
   onComplete: () => void;
-  onBack: () => void
+  onBack: () => void;
 }
+=======
+=======
+import { Education } from "@/types/resume";
+export interface EducationFormProps {
+>>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  resumeId: string;
+  educationEntries: Education[];
+  onComplete: () => void;
+  onBack: () => void;
+}
+<<<<<<< HEAD
+export interface EducationItemProps {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
 export interface EducationItemProps {;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   education: Education;
   onEdit: (education: Education) => void;
-  onDelete: (id: string) => void
+  onDelete: (id: string) => void;
 }
+<<<<<<< HEAD
+=======
+  education: Education;
+  onEdit: (education: Education) => void;
+  onDelete: (id: string) => void;
+}
+export interface EducationFormFieldsProps {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
 export interface EducationFormFieldsProps {;
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+import { Education } from '@/types/resume';
+export interface EducationFormProps {
+  resumeId: string;
+  educationEntries: Education[];
+  onComplete: () => void;
+onBack: () => void
+}
+export interface EducationItemProps {
+  education: Education;
+  onEdit: (education: Education) => void;
+onDelete: (id: string) => void
+}
+export interface EducationFormFieldsProps {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   isEditing: boolean;
   onSubmit: (data: any) => Promise<void>;
-
   onCancel: () => void;
 }
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Education  } from '@/types / resume';
 export interface EducationFormProps {
   resume_id: string;
   education_entries: Education[];
   on_complete: () => void;
   on_back: () => void;
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Education } from '@/types/resume',;
 export interface EducationFormProps {;
   resumeId: string,;
@@ -48,6 +107,8 @@ export interface EducationFormProps {;
   onComplete: () => void,;
   onBack: () => void;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
 export interface EducationItemProps {
   education: Education;
@@ -60,8 +121,30 @@ export interface EducationFormFieldsProps {
   on_cancel: () => void;
 }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+}
+;
+export interface EducationItemProps {;
+  education: Education,;
+  onEdit: (education: Education) => void,;
+  onDelete: (id: string) => void;
+}
+;
+export interface EducationFormFieldsProps {;
+  isEditing: boolean;
+  onSubmit: (data: any) => Promise<void>;
+  onCancel: () => void;
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,9 @@
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import React, { Component, ReactNode } from 'react';
 
+interface Props {
+  children: ReactNode;
+}
 
 interface Props {
   children: ReactNode;
@@ -13,6 +18,13 @@ class ErrorBoundary extends Component<Props, State> {
     super(props);
     this.state = { hasError: false };
   }
+    console.error('ErrorBoundary caught an error: ', error, errorInfo);
+    this.setState({
+      error,
+      errorInfo
+    });
+  }
+
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
@@ -67,7 +79,6 @@ class ErrorBoundary extends Component<Props, State> {
     }
 
 export default ErrorBoundary
-=======
     return { hasError: true, error };
   };
 ,
@@ -131,10 +142,7 @@ export default ErrorBoundary
 ,
 export { ErrorBoundary };
 
-=======
     return this.props.children;
   }
 }
 export default ErrorBoundary;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -1,13 +1,21 @@
 
-
-
-
 export const innovativeMicroSaasSolutions2025 = [
   {
 
 
     pricing: {
       starter: {
+<<<<<<< HEAD
+        price: 49
+        period: 'month'
+        features: [
+          'Up to 1,000 feedback items/month'
+          'Basic sentiment analysis'
+          'Email support'
+          'Standard reports'
+        ]
+      }
+=======
 
 =======
         price: 49,
@@ -19,77 +27,28 @@ export const innovativeMicroSaasSolutions2025 = [
           'Standard reports',
         ],
       },
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       professional: {
-        price: 149,
-        period: 'month',
-        features: [;
-          'Up to 10, 000 feedback items / month',
-          'Advanced AI analysis',
-          'Priority support',
-          'Custom dashboards',
-        ],
-      },
+        price: 149
+        period: 'month'
+        features: [
+          'Up to 10,000 feedback items/month'
+          'Advanced AI analysis'
+          'Priority support'
+          'Custom dashboards'
+        ]
+      }
       enterprise: {
-        price: 399,
-        period: 'month',
-        features: [;
-          'Unlimited feedback items',
-          'Custom AI training',
-          'Dedicated support',
-          'White - label solution',
-        ],
-      },
-    },
-    category: 'Customer Experience',
-    tags: [;
-
       'AI',
       'Customer Feedback',
       'Sentiment Analysis',
       'Customer Experience',
       'Business Intelligence',
     ],
-
-    website: 'https://ziontechgroup.com / ai - powered - customer - feedback - analyzer',
-
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-
-      'AI-powered demand forecasting with 92 && 92.4% accuracy',
-      'Real-time inventory tracking and monitoring',
-=======
-    market_size: '$8.9B',
-    target_audience:;
-      'E - commerce companies, SaaS businesses, retail companies, service providers, marketing agencies',
-    competitive_advantage:;
-      'AI - powered sentiment analysis, multi - channel feedback collection, and actionable insight generation',
-    use_cases: [;
-      'Customer satisfaction monitoring',
-      'Product improvement insights',
-      'Service quality assessment',
-      'Competitive analysis',
-      'Customer experience optimization',
-    ],
-    integrations: [;
-      'CRM systems',
-      'Support platforms',
-      'Social media',
-      'Survey tools',
-      'Analytics platforms',
-    ],
-    compliance: ['GDPR', 'CCPA', 'SOC2', 'Data privacy regulations'],
-  },
-  {
-    id: 'intelligent - inventory - optimization',
-    name: 'Intelligent Inventory Optimization',
-    description:;
-      'Smart inventory management platform that uses AI and machine learning to predict demand, optimize stock levels, and reduce inventory costs while maintaining customer satisfaction.',
-    features: [;
-      'AI - powered demand forecasting with 92.4% accuracy',
-      'Real - time inventory tracking and monitoring',
-
       'Automated reorder point calculations',
       'Seasonal trend analysis and prediction',
       'Multi - location inventory management',
@@ -99,9 +58,10 @@ export const innovativeMicroSaasSolutions2025 = [
       'Mobile app for on - the - go management',
       'Advanced reporting and analytics',
     ],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     pricing: {
       starter: {
+<<<<<<< HEAD
+=======
 
 =======
         price: 79,
@@ -153,7 +113,6 @@ export const innovativeMicroSaasSolutions2025 = [
 
       'AI-powered receipt scanning and data extraction',
       'Automated expense categorization with 96 && 96.2% accuracy',
-=======
     market_size: '$12.3B',
     target_audience:;
       'Retail companies, e - commerce businesses, manufacturers, distributors, logistics companies',
@@ -193,7 +152,6 @@ export const innovativeMicroSaasSolutions2025 = [
       'Advanced analytics and reporting',
       'Custom policy and rule configuration',
     ],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     pricing: {
       starter: {
 
@@ -340,7 +298,6 @@ export const innovativeMicroSaasSolutions2025 = [
 
       'AI-powered personalization and segmentation',
       'Optimal send time prediction with 94 && 94.7% accuracy',
-=======
     market_size: '$15.8B',
     target_audience:;
       'Marketing agencies, social media managers, businesses, influencers, content creators',
@@ -384,7 +341,6 @@ export const innovativeMicroSaasSolutions2025 = [
       'Advanced reporting and analytics',
       'Custom automation workflows',
     ],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     pricing: {
       starter: {
 
@@ -439,6 +395,7 @@ export const innovativeMicroSaasSolutions2025 = [
     id: 'ai-powered-customer-feedback-analyzer', name: 'AI-Powered Customer Feedback Analyzer',
     description: 'Intelligent platform that automatically analyzes customer feedback from multiple channels, providing actionable insights and sentiment analysis to improve customer experience.',
     features: [
+<<<<<<< HEAD
       'Multi-channel feedback collection (email, social media, surveys, reviews)AI-powered sentiment analysis with 95.8% accuracyReal-time feedback processing and alertsAutomated insight generation and recommendationsCustomer satisfaction trend analysisCompetitor feedback monitoringCustom dashboard and reportingIntegration with CRM and support systems';
       'Multi-language supportAPI access for custom integrations'
 
@@ -459,21 +416,226 @@ export const innovativeMicroSaasSolutions2025 = [
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'CRM systems',
       'E - commerce platforms',
+=======
+      'AI-powered demand forecasting with 92.4% accuracy'
+      'Real-time inventory tracking and monitoring'
+      'Automated reorder point calculations'
+      'Seasonal trend analysis and prediction'
+      'Multi-location inventory management'
+      'Supplier performance analytics'
+      'Cost optimization recommendations'
+      'Integration with ERP and e-commerce systems'
+      'Mobile app for on-the-go management'
+      'Advanced reporting and analytics'
+    ]
+    pricing: {
+      starter: {
+        price: 79
+        period: 'month'
+        features: [
+          'Up to 1,000 SKUs'
+          'Basic forecasting'
+          'Email support'
+          'Standard reports'
+        ]
+      }
+      professional: {
+        price: 199
+        period: 'month'
+        features: [
+          'Up to 10,000 SKUs'
+          'Advanced AI forecasting'
+          'Priority support'
+          'Custom analytics'
+        ]
+      }
+      enterprise: {
+        price: 499
+        period: 'month'
+        features: [
+          'Unlimited SKUs'
+          'Custom AI training'
+          'Dedicated support'
+          'White-label solution'
+        ]
+      }
+    }
+    category: 'Supply Chain'
+    tags: [
+      'Inventory Management'
+      'AI'
+      'Demand Forecasting'
+      'Supply Chain'
+      'Cost Optimization'
+    ]
+    website: 'https://ziontechgroup.com/intelligent-inventory-optimization'
+    contact: {
+      phone: '+1 302 464 0950'
+      email: 'kleber@ziontechgroup.com'
+    }
+    marketSize: '$12.3B'
+    targetAudience:
+      'Retail companies, e-commerce businesses, manufacturers, distributors, logistics companies'
+    competitiveAdvantage:
+      'AI-powered demand forecasting, comprehensive inventory optimization, and cost reduction capabilities'
+    useCases: [
+      'Retail inventory management'
+      'E-commerce stock optimization'
+      'Manufacturing inventory control'
+      'Distribution center optimization'
+      'Multi-location inventory coordination'
+    ]
+    integrations: [
+      'ERP systems'
+      'E-commerce platforms'
+      'Accounting software'
+      'Shipping platforms'
+      'Supplier systems'
+    ]
+    compliance: ['SOC2', 'ISO 27001', 'Industry-specific regulations']
+  }
+  {
+    id: 'smart-expense-management-automation'
+    name: 'Smart Expense Management Automation'
+    description:
+      'Intelligent expense management platform that automates expense tracking, approval workflows, and financial reporting using AI and machine learning.'
+    features: [
+    pricing: {
+      starter: {
+      'Expense Management',
+      'AI Automation',
+      'Financial Reporting',
+      'Workflow Automation',
+      'Compliance',
+    ],
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    targetAudience:
+      'Small to medium businesses, enterprise companies, accounting firms, financial departments'
+    competitiveAdvantage:
+      'AI-powered automation, comprehensive expense management, and policy compliance enforcement'
+    useCases: [
+      'Employee expense tracking'
+      'Business travel expense management'
+      'Policy compliance monitoring'
+      'Financial reporting automation'
+      'Cost control and optimization'
+    ]
+    integrations: [
+      'Accounting software'
+      'ERP systems'
+      'Banking platforms'
+      'Travel booking systems'
+      'HR platforms'
+    ]
+    compliance: [
+      'SOC2'
+      'ISO 27001'
+      'Financial regulations'
+      'Tax compliance'
+    ]
+  }
+  {
+    id: 'ai-powered-social-media-scheduler'
+    name: 'AI-Powered Social Media Scheduler'
+    description:
+      'Intelligent social media management platform that uses AI to optimize posting times, generate engaging content, and maximize engagement across multiple platforms.'
+    features: [
+      'AI-powered optimal posting time prediction'
+      'Automated content generation and curation'
+      'Multi-platform social media management'
+      'Engagement analytics and optimization'
+      'Hashtag research and optimization'
+      'Content calendar and scheduling'
+      'Team collaboration and approval workflows'
+      'Performance tracking and reporting'
+      'Integration with design and content tools'
+    pricing: {
+      starter: {
+      'Email Marketing',
+      'AI',
+      'Marketing Automation',
+      'Personalization',
+      'Conversion Optimization',
+    ],
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    targetAudience:
+      'E-commerce businesses, marketing agencies, SaaS companies, retail companies, service providers'
+    competitiveAdvantage:
+      'AI-powered personalization, optimal send time prediction, and comprehensive automation capabilities'
+    useCases: [
+      'Email campaign automation'
+      'Customer segmentation and personalization'
+      'Conversion rate optimization'
+      'Subscriber engagement improvement'
+      'Marketing ROI optimization'
+    ]
+    integrations: [
+<<<<<<< HEAD
+      'CRM systems'
+      'E-commerce platforms'
+      'Analytics tools'
+      'Social media platforms'
+      'Marketing tools'
+    ]
+    compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations']
+  }
+<<<<<<< HEAD
+];      'Email campaign automationCustomer segmentation and personalizationConversion rate optimizationSubscriber engagement improvementMarketing ROI optimization'
+    id: 'ai-powered-customer-feedback-analyzer', name: 'AI-Powered Customer Feedback Analyzer',
+    description: 'Intelligent platform that automatically analyzes customer feedback from multiple channels, providing actionable insights and sentiment analysis to improve customer experience.',
+    features: [
+      'Multi-channel feedback collection (email, social media, surveys, reviews)AI-powered sentiment analysis with 95.8% accuracyReal-time feedback processing and alertsAutomated insight generation and recommendationsCustomer satisfaction trend analysisCompetitor feedback monitoringCustom dashboard and reportingIntegration with CRM and support systems';
+      'Multi-language supportAPI access for custom integrations'
+    market_size: '$22.1B',
+    target_audience:;
+      'E - commerce businesses, marketing agencies, SaaS companies, retail companies, service providers',
+    competitive_advantage:;
+      'AI - powered personalization, optimal send time prediction, and comprehensive automation capabilities',
+    use_cases: [;
+      'Email campaign automation',
+      'Customer segmentation and personalization',
+      'Conversion rate optimization',
+      'Subscriber engagement improvement',
+      'Marketing ROI optimization',
+    ],
+    integrations: [;
+      'CRM systems',
+      'E - commerce platforms',
+=======
+=======
+      'CRM systems',
+      'E-commerce platforms',
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Analytics tools',
       'Social media platforms',
       'Marketing tools',
     ],
+<<<<<<< HEAD
+=======
 
 ];      'Email campaign automation_customer segmentation and personalization_conversion rate optimization_subscriber engagement improvement_marketing ROI optimization';
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     ];
     integrations: ['CRM systems_e - commerce platforms_analytics tools_social media platforms_marketing tools'];
     compliance: ['CAN - SPAMGDPRCCPAEmail marketing regulations'];
   }
 ];
+<<<<<<< HEAD
+    compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations'],
+  },;
+=======
 
 
 =======
@@ -483,13 +645,17 @@ export const innovativeMicroSaasSolutions2025 = [
     compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations'],
   },;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ];      'Email campaign automationCustomer segmentation and personalizationConversion rate optimizationSubscriber engagement improvementMarketing ROI optimization'
     ];
     integrations: ['CRM systemsE-commerce platformsAnalytics toolsSocial media platformsMarketing tools'];
     compliance: ['CAN-SPAMGDPRCCPAEmail marketing regulations']
+<<<<<<< HEAD
+=======
 
 
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export const innovativeMicroSaasSolutions2025 = [;
   {;
     id: 'ai-powered-customer-feedback-analyzer',;
@@ -695,6 +861,10 @@ export const innovativeMicroSaasSolutions2025 = [;
     ],;
     integrations: ['CRM systemsE-commerce platformsAnalytics toolsSocial media platformsMarketing tools'],;
     compliance: ['CAN-SPAMGDPRCCPAEmail marketing regulations'];
+<<<<<<< HEAD
+  }
+];
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -702,3 +872,4 @@ export const innovativeMicroSaasSolutions2025 = [;
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

@@ -1,7 +1,3 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
 import { FileText } from 'lucide-react'
 const faqs = [
   {
@@ -46,8 +42,6 @@ const faqs = [
   }
 ]
 export function FaqSection() {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { GradientHeading } from './GradientHeading';
   Accordion,;
   AccordionContent,;
@@ -99,14 +93,12 @@ const faqs = [;
 ];
 
 export function FaqSection() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <section className='py-20 bg-zion-blue' id='faq'>;
       <div className='container mx-auto px-4 sm:px-6 lg:px-8'>;
         <div className='text-center mb-12'>;
           <GradientHeading>Frequently Asked Questions</GradientHeading>;
           <p className='mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto'>;
-=======
 import { GradientHeading } from './GradientHeading';
   Accordion,
   AccordionContent,
@@ -166,7 +158,6 @@ function FaqSection() {
         <div className='text - center mb - 12'>;
           <GradientHeading > Frequently Asked Questions</GradientHeading>;
           <p className='mt - 4 text - zion - slate - light text - xl max - w-2xl mx - auto'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Find answers to common questions about AI product listings, IT;
             equipment rentals, and datacenter maintenance services;
           </p>;
@@ -175,7 +166,6 @@ function FaqSection() {
 
 import { GradientHeading } from "./GradientHeading";
 
-=======
         <div className='max - w-3xl mx - auto bg - zion - blue - light rounded - lg border border - zion - purple / 20 p - 6'>;
           <div className='flex items - center mb - 6'>;
             <FileText className='h - 6 w - 6 text - zion - cyan mr - 2' />;
@@ -192,7 +182,6 @@ import { GradientHeading } from "./GradientHeading";
                 </AccordionTrigger>;
                 <AccordionContent className='text - zion - slate - light'>                  {faq.answer}
                 <AccordionContent className="text - zion - slate - light">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import {
   Accordion;
   AccordionContent;
@@ -262,7 +251,6 @@ const faqs = [;
 
 
 export function FaqSection() {;
-=======
 
 
 const faqs = [
@@ -272,14 +260,12 @@ const faqs = [
 
 
 export function FaqSection() {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="max-w-3xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-6">
           <div className="flex items-center mb-6">
             <FileText className="h-6 w-6 text-zion-cyan mr-2" />
@@ -290,12 +276,10 @@ export function FaqSection() {
           
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">
                 <AccordionTrigger className="text-white hover:text-zion-cyan">
-=======
     question: "How do I publish my AI product or service?",
     answer:;
       "Create an account, choose 'Post Your Product / Service for Free, ' fill in the details, and submit for review. Listings go live within 24 hours if they pass our quality check."}
@@ -349,10 +333,8 @@ function FaqSection() {
             {faqs.map ((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border - zion - purple / 10">;
                 <AccordionTrigger className="text - white hover:text - zion - cyan">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   {faq.question}
 
-=======
                 </AccordionTrigger>
                 <AccordionContent className="text-zion-slate-light">
 
@@ -422,7 +404,6 @@ export function FaqSection() {;
   );
 }
 
-=======
                 </AccordionContent>;
               </AccordionItem>))}
           </Accordion>;
@@ -430,8 +411,3 @@ export function FaqSection() {;
       </div>;
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

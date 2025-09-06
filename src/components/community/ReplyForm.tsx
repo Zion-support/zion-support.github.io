@@ -1,16 +1,11 @@
-
-
-
 interface ReplyFormProps {;
   onSubmit: (content: string) => Promise<void>;
 
 
-=======
 import { useState } from 'react'
 import { useForm, ControllerRenderProps } from 'react-hook-form'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
-=======
 
 
 import {
@@ -23,7 +18,6 @@ import {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>;
   parentId?: string
@@ -33,13 +27,11 @@ interface ReplyFormProps {
   });
   const handleSubmit = async (values: ReplyFormValues) => {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     setIsSubmitting(true);    try {
       await onSubmit(values.content)
       form.reset()
     } finally {
       setIsSubmitting(false)
-=======
   parentId?: string;
 interface ReplyFormValues {;
   content: string;
@@ -108,7 +100,6 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
 
                 field: ControllerRenderProps<ReplyFormValues, 'content'>;
               }) => (                <FormItem>;
-=======
     }
   },
 
@@ -140,7 +131,6 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
               name="content";
               render={({ field }: { field: ControllerRenderProps<ReplyFormValues "content"> }) => (;
                 <FormItem>;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <FormControl>;
                     <Textarea className='min-h-[100px] resize-y' {...field} />;
                   </FormControl>;
@@ -149,7 +139,6 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               )}
             />;
             <div className='mt-4 flex justify-end'>;
@@ -165,7 +154,6 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
   );
 };
 
-=======
                 field: ControllerRenderProps < ReplyFormValues, 'content'>;
               }) => (                <FormItem>;
                   <FormControl>;
@@ -185,10 +173,3 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
     </Card>);
 }
 export default ReplyForm;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

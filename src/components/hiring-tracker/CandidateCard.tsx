@@ -1,6 +1,4 @@
-
-
-  const handleSaveNotes = () => {
+const handleSaveNotes = () => {
     // Here you would save the notes to the database
     // For now, we'll just show a toast
     toast({
@@ -23,7 +21,6 @@
 
 
 import { useState } from 'react';
-=======
 
   const candidateName = application.talent_profile?.full_name || 'Candidate'
   return (
@@ -34,7 +31,6 @@ import { useState } from 'react';
             className='mb-2 p-0 shadow-sm border'
             ref={provided.innerRef}            {...provided.draggableProps}
 
-=======
       title: "Notes saved",
       description: "Your notes have been saved"
     }),
@@ -48,7 +44,6 @@ import { useState } from 'react';
       description: "Offer has been sent to the talent."
     })
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   const candidateName = application.talent_profile?.full_name || "Candidate",
   
@@ -60,7 +55,6 @@ import { useState } from 'react';
           <Card 
             className="mb-2 p-0 shadow-sm border"
 import { useState } from "react",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Local stub is used in place of the @hello-pangea/dnd package which isn't;
 // available in this environment.;
 import { Draggable } from '@/lib/dnd-stub';
@@ -135,7 +129,6 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
   };
 
   const candidateName = application && application.talent_profile?.full_name || 'Candidate';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <>;
@@ -181,8 +174,6 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                 </div>
                 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant='ghost' className='h-8 w-8 p-0'>
@@ -191,7 +182,6 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align='end'>
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>
-=======
                   </AvatarPrimitive>;
                   <div>;
                     <h4 className='font-medium text-sm'>{candidateName}</h4>;
@@ -210,7 +200,6 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                   </DropdownMenuTrigger>;
                   <DropdownMenuContent align='end'>;
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       {showNotes ? 'Hide notes' : 'Add notes'}
                     </DropdownMenuItem>;
                     <DropdownMenuItem onClick={() => setShowHireModal(true)}>;
@@ -237,7 +226,6 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                       </DropdownMenuItem>;
                     )}
 
-=======
 
 
                   </DropdownMenuContent>;
@@ -261,7 +249,6 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                 )}
               </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Match Score */}
               {application && application.match_score !== null &&;
                 application && application.match_score !== undefined && (;
@@ -295,7 +282,6 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                 >
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <Link href={`/messages?talentId=${application.talent_id}`}>
                     <MessageSquare className='h-3 w-3 mr-1' /> Message
                   </Link>
@@ -311,9 +297,7 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                 >
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {application.resume?.file_url ? (
-=======
               <div className='flex justify-between mt-2 gap-1'>;
                 <Button variant='outline' size='sm' className='flex-1' asChild>;
                   <Link href={`/messages?talentId=${application && application.talent_id}`}>;
@@ -323,7 +307,6 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
 
                 <Button variant='outline' size='sm' className='flex-1' asChild>;
                   {application && application.resume?.file_url ? (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <a
                       href={application && application.resume.file_url}
                       target='_blank'
@@ -345,7 +328,6 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                   className='flex-1'
                   onClick={() => setShowHireModal(true)}                >;
                   <BriefcaseIcon className='h-3 w-3 mr-1' /> Hire;
-=======
                 </Button>
 
   handleHireConfirmed 
@@ -353,7 +335,6 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
 }'"};
 ;
 
-=======
                 
                 <Button 
                   variant="default" 
@@ -362,7 +343,6 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                   onClick={() => setShowHireModal(true)}
                 >;
                   <BriefcaseIcon className="h-3 w-3 mr-1" /> Hire;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </Button>;
               </div>;
             </CardContent>;
@@ -729,7 +709,6 @@ function CandidateCard() {
 }/> </>) ;
 }'"}
 
-=======
   add_suffix: true;
 });
 }</div> {";
@@ -761,9 +740,6 @@ function CandidateCard() {
   handleHireConfirmed;
 }/> </>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
       </Draggable>;
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal;
@@ -776,7 +752,3 @@ function CandidateCard() {
   );
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

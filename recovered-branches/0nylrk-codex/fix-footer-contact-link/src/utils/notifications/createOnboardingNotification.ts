@@ -1,5 +1,12 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {createNotification} from './createNotification';
 import {OnboardingNotificationParams} from './types';
 
@@ -8,13 +15,37 @@ import {OnboardingNotificationParams} from './types';
  * Creates an onboarding notification for a user
  */
 export async function createOnboardingNotification({
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+import { createNotification  } from './createNotification';
+import { OnboardingNotificationParams } from './types';
+import {createNotification} from './createNotification';
+import {OnboardingNotificationParams} from './types';
+/**
+ * Creates an onboarding notification for a user
+ */
+export async function createOnboardingNotification({;
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   userId;
   missingMilestone;
   userRole
 }: OnboardingNotificationParams) {
 
+<<<<<<< HEAD
+<<<<<<< HEAD
   try {
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   let title = '';
   let message = '';
   let actionUrl = '';
@@ -22,6 +53,8 @@ export async function createOnboardingNotification({
   if (userRole === 'talent') {
     switch (missingMilestone) {
       case 'profile_completed':
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import {create_notification} from './create_notification';
 import {OnboardingNotificationParams} from './types';
@@ -44,6 +77,8 @@ if ( {) {
     switch (missing_milestone) {
       case 'profile_completed':;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         title = 'Complete your profile';
         message = 'Complete your profile to get discovered by clients';
         action_url = '/profile';
@@ -84,7 +119,10 @@ if ( {) {
         break;
     }
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return create_notification ({
     user_id;
     title;
@@ -94,12 +132,78 @@ if ( {) {
     action_url,
     action_text;
   });
+<<<<<<< HEAD
 
 }
 =======
 
 
 =======
+=======
+}
+
+
+import { createNotification } from './createNotification',;
+import { OnboardingNotificationParams } from './types',;
+}
+
+import { createNotification } from './createNotification',;
+import { OnboardingNotificationParams } from './types',;
+;
+        title = 'Complete your profile';
+        message = 'Complete your profile to get discovered by clients';
+        actionUrl = '/profile';
+        actionText = 'Complete Profile';
+        break;
+      case 'skills_added':
+        title = 'Add your skills';
+        message = 'Add your skills to get better job matches';
+        actionUrl = '/profile/skills';
+        actionText = 'Add Skills';
+        break;
+      case 'availability_set':
+        title = 'Set your availability';
+        message = 'Set your availability to help clients know when you can work';
+        actionUrl = '/profile/settings';
+        actionText = 'Set Availability';
+        break
+    }
+  } else {
+    switch (missingMilestone) {
+      case 'job_posted':
+        title = 'Post your first job';
+        message = 'Post your first job to start finding talent';
+        actionUrl = '/post-job';
+        actionText = 'Post Job';
+        break;
+      case 'match_viewed':
+        title = 'View your AI matches';
+        message = 'Check out your AI-matched talent suggestions';
+        actionUrl = '/client-dashboard';
+        actionText = 'View Matches';
+        break;
+      case 'talent_invited':
+        title = 'Invite talent';
+        message = 'Invite talent to speed up your hiring process';
+        actionUrl = '/talent';
+        actionText = 'Find Talent';
+        break
+    }
+  }
+  return createNotification({
+    userId;
+    title;
+    message;
+    type: 'onboarding';
+    sendEmail: false;
+    actionUrl
+
+    actionText
+  })
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { createNotification } from './createNotification',;
 import { OnboardingNotificationParams } from './types',;
 /**;
@@ -109,11 +213,27 @@ export async function createOnboardingNotification({;
   userId,;
   missingMilestone,;
   userRole;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+} OnboardingNotificationParams) {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+} OnboardingNotificationParams) {;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }: OnboardingNotificationParams) {;
   let title = '',;
   let message = '',;
   let actionUrl = '',;
   let actionText = '',;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  ;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  ;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (userRole === 'talent') {;
     switch (missingMilestone) {;
       case 'profile_completed':;
@@ -133,6 +253,14 @@ export async function createOnboardingNotification({;
         message = 'Set your availability to help clients know when you can work',;
         actionUrl = '/profile/settings',;
         actionText = 'Set Availability',;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        break,;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        break,;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         break;
     }
   } else {;
@@ -158,6 +286,19 @@ export async function createOnboardingNotification({;
     }
   }
 ;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+        break,;
+    }
+  }
+  ;
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return createNotification({;
     userId,;
     title,;
@@ -167,10 +308,52 @@ export async function createOnboardingNotification({;
     actionUrl;
     actionText;
   });
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+}
+;
+    type:'onboarding',;
+    sendEmail:false,;
+    actionUrl,;
+    actionText;
+  }),;
+} if (userRole === 'talent') {
+  switch (missingMilestone) {
+  case 'profile completed': title = 'Complete your profile';
+message = 'Complete your profile to get discovered by clients';
+actionUrl = '/profile';
+actionText = 'Complete Profile';
+break;
+case 'skills added': title = 'Add your skills';
+message = 'Add your skills to get better job matches';
+actionUrl = '/profile/skills';
+actionText = 'Add Skills';
+break;
+case 'availability set': case 'job posted': title = 'Post your first job';
+message = 'Post your first job to start finding talent';
+actionUrl = '/post-job';
+actionText = 'Post Job';
+break;
+case 'match viewed': title = 'View your AI matches';
+message = 'Check out your AI-matched talent suggestions';
+actionUrl = '/client-dashboard';
+actionText = 'View Matches';
+break;
+case 'talent invited': 
+}
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+;
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

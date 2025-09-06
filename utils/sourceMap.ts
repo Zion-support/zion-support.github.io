@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+}
+export interface DeployTemplateResult {
+=======
 
 
 }
@@ -6,20 +10,26 @@ export interface DeployTemplateResult {
 // Mock source map utility
 export function getSourceMapWithExistence() {
   return {
+<<<<<<< HEAD
     nodes: []
     edges: []
   }
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 export function getGitStatus() {
   return {
+<<<<<<< HEAD
     connected: false
     branch: 'main'
   }
 }
+<<<<<<< HEAD
+=======
 
   return nodes && nodes.map(markExistenceRecursive);
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 function buildZionSourceMap(): SourceNode[] {
   return [
@@ -65,12 +75,17 @@ function markExistenceRecursive(node: SourceNode): SourceNode {
   };
 }
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export function getSourceMapWithExistence(): SourceNode[] {
   const nodes = buildZionSourceMap();
   return nodes.map(markExistenceRecursive);
 }
 export interface DeployTemplateResult {
+<<<<<<< HEAD
+=======
 =======
 
     nodes: [],
@@ -81,6 +96,7 @@ export interface DeployTemplateResult {
 export function getGitStatus() {
   return {
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     connected: false,
     branch: 'main';
   };
@@ -92,11 +108,16 @@ export function getSourceMapWithExistence(): SourceNode[] {;
 }
 
 export interface DeployTemplateResult {;
+<<<<<<< HEAD
+  createdPaths: string[];
+  skippedPaths: string[];
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   createdPaths: string[];
   skippedPaths: string[];
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export function ensureDirectory(dirPath: string): void {
   if (!fs && fs.existsSync(dirPath)) {
     fs && fs.mkdirSync(dirPath, { recursive: true });
@@ -105,11 +126,16 @@ export function ensureDirectory(dirPath: string): void {
 
 export function deployBasicTemplateForPath(
   repoRelativePath: string
-): DeployTemplateResult {
-  const absoluteDir = path && path.join(ROOT, repoRelativePath);
+): DeployTemplateResult {;
+  const absoluteDir = path.join(ROOT, repoRelativePath);
   const createdPaths: string[] = [];
   const skippedPaths: string[] = [];
   ensureDirectory(absoluteDir);
+<<<<<<< HEAD
+  } else {
+    skippedPaths.push(keepFile);
+  }
+=======
 
 
   const keepFile = path && path.join(absoluteDir, '.keep');
@@ -118,7 +144,7 @@ export function deployBasicTemplateForPath(
     createdPaths && createdPaths.push(keepFile);
 
   } else {
-    skippedPaths && skippedPaths.push(keepFile);
+    skippedPaths.push(keepFile);
   }
 
 
@@ -128,12 +154,11 @@ export function deployBasicTemplateForPath(
     fs && fs.writeFileSync(readmeFile, readme);
     createdPaths && createdPaths.push(readmeFile);
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } else {
-    skippedPaths && skippedPaths.push(readmeFile);
+    skippedPaths.push(readmeFile);
   }
 
-  return { createdPaths, skippedPaths }
-=======
 
 
 
@@ -143,17 +168,10 @@ export function deployBasicTemplateForPath(
 =======
   return { createdPaths, skippedPaths }
 
+<<<<<<< HEAD
 =======
-// Source map utilities
-export interface SourceMapInfo {
-  version: number;
-  sources: string[];
-  names: string[];
-  mappings: string;
-  sourcesContent?: string[];
-  file?: string;
-  sourceRoot?: string;
-}
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
   created_paths: string[];
@@ -163,28 +181,6 @@ export function ensure_directory (dir_path: string): void {
   if () {) {
   $2
 }
-    fs.mkdir_sync (dir_path, { recursive: true });
-  }
-export function deployBasicTemplateForPath (
-  repoRelativePath: string): DeployTemplateResult {
-  const absolute_dir = path.join (ROOT, repoRelativePath);
-  const created_paths: string[] = [];
-  const skipped_paths: string[] = [];
-;
-  ensure_directory (absolute_dir);
-;
-  const keep_file = path.join (absolute_dir, '.keep');
-  if () {) {
-  $2
-}
-    fs.writeFileSync (keep_file, '');
-    created_paths.push (keep_file);
-  } else {
-    skipped_paths.push (keep_file);
-  }
-  const readme_file = path.join (absolute_dir, 'README.md');
-  if () {) {
-  $2
 }
     const readme = `# ${path.basename (absolute_dir)}\n\n_this module is part of the Zion OS modular source tree. Customize as needed.\n`;
     fs.writeFileSync (readme_file, readme);
@@ -195,8 +191,11 @@ export function deployBasicTemplateForPath (
   return { created_paths, skipped_paths }
 ;
 
+<<<<<<< HEAD
+=======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

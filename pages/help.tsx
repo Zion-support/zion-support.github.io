@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
 class ErrorBoundary extends React.Component {
@@ -5,35 +8,39 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
+=======
 
 import {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   Search
   HelpCircle
   BookOpen
@@ -46,7 +53,10 @@ import {
   ExternalLink
   ChevronDown
   Cloud
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 import {
@@ -63,9 +73,13 @@ import {
   ExternalLink,
   ChevronDown,
   Cloud,;
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 } from "lucide-react";
+
 const helpArticles = [
   {
     id: "overview"
@@ -82,6 +96,8 @@ const helpArticles = [
     color: "green"
     articles: [
       {
+<<<<<<< HEAD
+=======
         title: "AI Implementation Guide"
         description: "How to implement AI solutions in your business"
         readTime: "10 min read"
@@ -120,6 +136,19 @@ const help_articles = [;
     description: "Overview of all available services and solutions",
     read_time: "7 min read",
     type: "Overview",
+=======
+      {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        title: "AI Best Practices",
+        description: "Tips and best practices for AI development",
+        readTime: "6 min read",
+        type: "Best Practice",
+      },
+    ],
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   },
   {
     id: "ai - services",
@@ -143,6 +172,7 @@ const help_articles = [;
 
       {
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         title: 'AI Best Practices',
         description: 'Tips and best practices for AI development',
         readTime: '6 min read',
@@ -151,6 +181,8 @@ const help_articles = [;
     ]
   },
   {
+<<<<<<< HEAD
+=======
     id: 'cloud-services',
     title: 'Cloud Services',
     description: 'Cloud infrastructure and deployment solutions.',
@@ -181,6 +213,7 @@ const help_articles = [;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     articles: [
       {
         title: "Cloud Migration Guide"
@@ -188,9 +221,12 @@ const help_articles = [;
         readTime: "12 min read"
         type: "Guide"
       }
+<<<<<<< HEAD
+=======
 
     articles: [;
       {
+<<<<<<< HEAD
         title: "Cloud Migration Guide",
         description: "Step - by - step guide to migrating to the cloud",
         read_time: "12 min read",
@@ -213,6 +249,7 @@ const help_articles = [;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         title: "Cloud Security"
         description: "Best practices for securing your cloud infrastructure"
         readTime: "9 min read"
@@ -220,8 +257,12 @@ const help_articles = [;
       }
     ]
   }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 ];
+<<<<<<< HEAD
+];
+export default function HelpPage() {
+  const [searchTerm, setSearchTerm] = useState("");
+=======
 
 ;
 const help_categories = [;
@@ -237,16 +278,22 @@ const help_categories = [;
     color: "blue"
     articles: helpArticles
   }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 ];
 
-=======
 
 
     color: 'blue',
     articles: helpArticles
   }
 ];
+<<<<<<< HEAD
+
+export default function HelpPage() {;
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 import {;
   Search,;
@@ -333,7 +380,13 @@ const helpCategories = [;
 
 export default function HelpPage() {;
   const [searchTerm, setSearchTerm] = useState("");
-  const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
+<<<<<<< HEAD
+
+=======
+=======
+<<<<<<< HEAD
+export default function HelpPage() {
+=======
 
   const toggleCategory = (index: number) => {;
 
@@ -347,8 +400,8 @@ export default function HelpPage() {;
 
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
   const filteredCategories = helpCategories
     .map((category) => ({
       ...category
@@ -360,6 +413,8 @@ export default function HelpPage() {;
     }))
     .filter((category) => category.articles.length > 0);
 
+<<<<<<< HEAD
+=======
   const filteredCategories = helpCategories.map(category => ({
     ...category,
     articles: category.articles.filter(article =>
@@ -379,7 +434,8 @@ export default function HelpPage() {;
       ),;
     }));
     .filter((category) => category && category.articles.length > 0);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/automation-improvements-final
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
@@ -388,6 +444,7 @@ export default function HelpPage() {;
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <>;
       <Head>;
@@ -399,12 +456,14 @@ export default function HelpPage() {;
         <meta
           name="keywords"
           content="help, support, documentation, FAQ, tutorials, guides"
+<<<<<<< HEAD
+=======
 
         />;
       </Head>;
-
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Hero Section */}
         <section className="relative py-20 px-4">;
           <div className="max-w-7xl mx-auto">;
@@ -436,7 +495,6 @@ export default function HelpPage() {;
       </div>;
     </>;
   );
-=======
 ;
 export default /**
  * HelpPage - Function description
@@ -505,5 +563,20 @@ function HelpPage() {
         </section>;
       </div>;
     </>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+import React from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+
+export default function HelpPage() {
+  return (
+    <MainLayout title="Help & Support">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-8">Help & Support</h1>
+        <p className="text-lg text-gray-700">
+          This is a placeholder for the help page.
+        </p>
+      </div>
+    </MainLayout>
+  );
+>>>>>>> main
 }

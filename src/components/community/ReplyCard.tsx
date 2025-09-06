@@ -1,6 +1,4 @@
-
-
-      className
+className
     )}>;
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">;
         <Avatar className="h-8 w-8">;
@@ -19,7 +17,6 @@
 
                 {reply.authorRole}
               </Badge>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             )}
             {reply && reply.isAnswer && (;
               <Badge className="ml-2 bg-green-500 text-white">;
@@ -35,7 +32,6 @@
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <CardFooter className="flex justify-between">
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="sm" className="px-2">
@@ -87,10 +83,8 @@
 
 
 
-=======
 
       </CardFooter>;
-=======
       </CardFooter>
 
     </Card>;
@@ -98,12 +92,9 @@
 };
 
 
-=======
 
       "transition-shadow";
       reply.isAnswer && "border-green-500/50 bg-green-50 dark: bg-green-950/20",
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import { formatDistanceToNow  } from './date - fns';
 import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react'import { Card, CardContent, CardFooter, CardHeader  } from '@/components / ui / card';
 import { Avatar, AvatarFallback, AvatarImage  } from '@/components / ui / avatar';
@@ -177,7 +168,3 @@ export const ReplyCard = ({
     </Card>);
 }
 export default ReplyCard;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

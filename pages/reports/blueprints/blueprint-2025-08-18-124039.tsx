@@ -1,4 +1,71 @@
 import React from 'react';
+<<<<<<< HEAD
+
+
+
+const Blueprint20250818124039: React.FC = () => {
+  const blueprintDetails = {
+    id: 'blueprint-2025-08-18-124039'
+    name: 'Quantum Integration Blueprint'
+    description: 'Quantum computing integration framework for optimization problems'
+    category: 'Research & Development'
+    status: 'research'
+    complexity: 'critical'
+    lastUpdated: '2025-08-18 12:40:39'
+    version: '0.9.0'
+  }
+  const quantumComponents = [
+    {
+      name: 'Quantum Simulator'
+      description: 'Classical simulation of quantum algorithms'
+      status: 'active'
+      health: 'excellent'
+    }
+    {
+      name: 'Quantum Algorithm Library'
+      description: 'Collection of quantum algorithms and implementations'
+      status: 'active'
+      health: 'excellent'
+    }
+    {
+      name: 'Hybrid Classical-Quantum Interface'
+      description: 'Bridge between classical and quantum computing'
+      status: 'development'
+      health: 'good'
+    }
+    {
+      name: 'Quantum Error Correction'
+      description: 'Error detection and correction mechanisms'
+      status: 'research'
+      health: 'warning'
+    }
+  ];
+  const features = [
+    {
+      feature: 'Quantum Algorithm Optimization'
+      description: 'Optimization algorithms using quantum principles'
+      benefit: 'Exponential speedup for certain problems'
+      status: 'implemented'
+    }
+    {
+      feature: 'Quantum Machine Learning'
+      description: 'ML algorithms enhanced with quantum computing'
+      benefit: 'Improved pattern recognition and learning'
+      status: 'development'
+    }
+    {
+      feature: 'Quantum Cryptography'
+      description: 'Post-quantum cryptographic protocols'
+      benefit: 'Future-proof security standards'
+      status: 'research'
+    }
+    {
+      feature: 'Quantum Simulation'
+      description: 'Simulation of quantum systems and materials'
+      benefit: 'Advanced scientific research capabilities'
+      status: 'development'
+    }
+=======
 
 import Head from 'next / head';
 import Link from 'next / link';
@@ -12,6 +79,7 @@ const Blueprint20250818124039: React.FC = () => {
 const Blueprint20250818124039: React.FC = () => {
   const blueprintDetails = {
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     id: 'blueprint-2025-08-18-124039',
 
     name: 'Quantum Integration Blueprint',
@@ -30,12 +98,24 @@ const Blueprint20250818124039: React.FC = () => {
       name: 'Quantum Simulator',
       description: 'Classical simulation of quantum algorithms',
       status: 'active',
+<<<<<<< HEAD
       health: 'excellent';
+=======
+<<<<<<< HEAD
+      health: 'excellent';
+=======
+      health: 'excellent'
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     },
     {
       name: 'Quantum Algorithm Library',
       description: 'Collection of quantum algorithms and implementations',
       status: 'active',
+<<<<<<< HEAD
+      health: 'excellent';
+=======
+<<<<<<< HEAD
       health: 'excellent';
     },
     {
@@ -43,27 +123,66 @@ const Blueprint20250818124039: React.FC = () => {
       description: 'Bridge between classical and quantum computing',
       status: 'development',
       health: 'good';
+=======
+      health: 'excellent'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    },
+    {
+      name: 'Hybrid Classical - Quantum Interface',
+      description: 'Bridge between classical and quantum computing',
+      status: 'development',
+<<<<<<< HEAD
+      health: 'good';
+=======
+      health: 'good'
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     },
     {
       name: 'Quantum Error Correction',
       description: 'Error detection and correction mechanisms',
       status: 'research',
+<<<<<<< HEAD
+    }
+  ];
+
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ];
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
       health: 'warning'
 
 
   const features = [
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     {
       feature: 'Quantum Algorithm Optimization',
       description: 'Optimization algorithms using quantum principles',
       benefit: 'Exponential speedup for certain problems',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
       status: 'implemented';
+=======
+      status: 'implemented'
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     },
     {
       feature: 'Quantum Machine Learning',
       description: 'ML algorithms enhanced with quantum computing',
       benefit: 'Improved pattern recognition and learning',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
       status: 'development';
     },
     {
@@ -71,13 +190,32 @@ const Blueprint20250818124039: React.FC = () => {
       description: 'Post - quantum cryptographic protocols',
       benefit: 'Future - proof security standards',
       status: 'research';
+=======
+      status: 'development'
+    },
+    {
+      feature: 'Quantum Cryptography',
+      description: 'Post-quantum cryptographic protocols',
+      benefit: 'Future-proof security standards',
+      status: 'research'
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     },
     {
       feature: 'Quantum Simulation',
       description: 'Simulation of quantum systems and materials',
       benefit: 'Advanced scientific research capabilities',
 
+<<<<<<< HEAD
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ];
+=======
       status: 'development'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
   ];
@@ -92,25 +230,31 @@ const Blueprint20250818124039: React.FC = () => {
       case 'research': return 'text-purple-400';
       default: return 'text-gray-400';
 
+<<<<<<< HEAD
+=======
   };
 
 
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   };
+<<<<<<< HEAD
+  const getHealthColor = (health: string) => {
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const getHealthColor = (health: string) => {
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
   const getHealthColor = (health: string) =>: any {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     switch (health) {
 
       case 'excellent': return 'bg-green-500/20 text-green-400';
@@ -141,6 +285,8 @@ const Blueprint20250818124039: React.FC = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div className="container mx-auto px-4 py-8">
+<<<<<<< HEAD
+=======
 
 
         {/* Header */  } catch (error) {
@@ -151,11 +297,19 @@ const Blueprint20250818124039: React.FC = () => {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <div className="mb-8">
           <Link href="/reports/blueprints" className="text-cyan-400 hover:text-cyan-300 transition-colors">
             ← Back to Blueprints
           </Link>
           <h1 className="text-4xl font-bold mt-4 mb-2 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+<<<<<<< HEAD
+          </h1>
+          <p className="text-gray-300 text-lg">
+            {blueprintDetails.description}
+          </p>
+        </div>
+=======
 
 
             {blueprintDetails.name  } catch (error) {
@@ -180,6 +334,7 @@ const Blueprint20250818124039: React.FC = () => {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-indigo-400">Status</h3>
@@ -202,6 +357,8 @@ const Blueprint20250818124039: React.FC = () => {
             <p className="text-gray-300 text-sm mt-2">Recently updated</p>
           </div>
         </div>
+<<<<<<< HEAD
+=======
 
 ;
   return (
@@ -290,6 +447,7 @@ const Blueprint20250818124039: React.FC = () => {
 }
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Quantum Computing Components</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -298,20 +456,29 @@ const Blueprint20250818124039: React.FC = () => {
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-lg font-semibold text-white">{component.name}</h3>
                   <span className={`px-2 py-1 text-xs rounded-full ${getHealthColor(component.health)}`}>
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     {component.health  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-4">{component.description}</p>
                 <div className="flex justify-between items-center">
                   <span className={`text-xs ${getStatusColor(component.status)}`}>
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     ● {component.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -332,8 +499,11 @@ const Blueprint20250818124039: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Key Features</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -342,20 +512,28 @@ const Blueprint20250818124039: React.FC = () => {
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-lg font-semibold text-white">{feature.feature}</h3>
                   <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(feature.status)}`}>
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     {feature.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-2">{feature.description}</p>
                 <p className="text-indigo-400 text-sm font-medium">Benefit: {feature.benefit}</p>
               </div>
+<<<<<<< HEAD
+=======
 
 
             ))  } catch (error) {
@@ -373,6 +551,7 @@ const Blueprint20250818124039: React.FC = () => {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Quantum Architecture</h2>
           <div className="bg-white/10 rounded-xl p-8 border border-white/20">
@@ -380,6 +559,13 @@ const Blueprint20250818124039: React.FC = () => {
               <div className="text-6xl font-bold text-indigo-400 mb-4">⚛️</div>
               <h3 className="text-xl font-semibold mb-2 text-white">Quantum Computing Integration</h3>
               <p className="text-gray-300 mb-6">
+<<<<<<< HEAD
+                Our quantum integration framework bridges the gap between classical and quantum 
+                computing, enabling researchers and developers to leverage quantum algorithms 
+                Our quantum integration framework bridges the gap between classical and quantum
+                computing, enabling researchers and developers to leverage quantum algorithms
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
@@ -407,6 +593,8 @@ const Blueprint20250818124039: React.FC = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+=======
 
 
         {/* Technology Stack */  } catch (error) {
@@ -417,6 +605,7 @@ const Blueprint20250818124039: React.FC = () => {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Technology Stack</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -444,6 +633,8 @@ const Blueprint20250818124039: React.FC = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+=======
 
 
         {/* Research Areas */  } catch (error) {
@@ -454,6 +645,7 @@ const Blueprint20250818124039: React.FC = () => {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Research Areas</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -491,12 +683,17 @@ const Blueprint20250818124039: React.FC = () => {
         <div className="flex flex-wrap gap-4 justify-center">
           <Link 
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
         <div className="flex flex-wrap gap-4 justify-center">
           <Link
@@ -504,6 +701,7 @@ const Blueprint20250818124039: React.FC = () => {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             href="/reports/blueprints"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-indigo-400/50"
           >
@@ -531,6 +729,13 @@ const Blueprint20250818124039: React.FC = () => {
       </div>
     </div>
   );
+<<<<<<< HEAD
+;
+
+
+};
+
+=======
 
                   </span>;
                 </div>;
@@ -664,4 +869,5 @@ const Blueprint20250818124039: React.FC = () => {
 };
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default Blueprint20250818124039;

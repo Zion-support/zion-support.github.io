@@ -1,19 +1,19 @@
-
-
 export function MobileConversationList({
 
   conversations,
   activeConversation,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   onSelectConversation
 }: MobileConversationListProps) {
   return (
-    <div className='space-y-4'>
-      <div className='px-4 mb-2'>
-        <div className='relative'>
-          <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground' />
-          <Input placeholder='Search messages...' className='pl-9' />
+    <div className="space-y-4">
+      <div className="px-4 mb-2">
+        <div className="relative">
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+          <Input
+            placeholder="Search messages..."
+            className="pl-9"
+          />
         </div>
       </div>
 
@@ -63,7 +63,6 @@ export function MobileConversationList(): any ({;
             Interviews;
           </Badge>;
           <Badge variant='outline' className='rounded-full px-3'>;
-=======
 import React from 'react';
 import { Card } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
@@ -107,7 +106,6 @@ function MobileConversationList() {
             Interviews;
           </Badge>;
           <Badge variant='outline' className='rounded - full px - 3'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Projects;
           </Badge>;
         </div>;
@@ -117,9 +115,9 @@ function MobileConversationList() {
               activeConversation === conversation && conversation.id && 'bg-primary/5'
 
             )}
-            onClick={() => onSelectConversation(conversation && conversation.id)}          >;
-            <div className='flex items-center gap-3 py-3 cursor-pointer'>;
-              <Avatar>;
+            onClick={() => onSelectConversation(conversation.id)}          >
+            <div className='flex items-center gap-3 py-3 cursor-pointer'>
+              <Avatar>
                 <AvatarImage
 
 
@@ -162,7 +160,6 @@ function MobileConversationList() {
                     </Badge>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   )}
                 </div>;
               </div>;
@@ -170,8 +167,6 @@ function MobileConversationList() {
             <div className='border-t border-border ml-12'></div>          </div>            <div className="border-t border-border ml-12"></div>;
           </div>;
 
-=======
-=======
 
 
               
@@ -191,9 +186,7 @@ function MobileConversationList() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </p>
-                  
                   {conversation.unreadCount > 0 && (
 
 
@@ -202,7 +195,6 @@ function MobileConversationList() {
                     </Badge>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   )}
                 </div>
               </div>
@@ -212,8 +204,6 @@ function MobileConversationList() {
 
             <div className="border-t border-border ml-12"></div>
           </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         ))}
 
       </div>;
@@ -221,7 +211,6 @@ function MobileConversationList() {
   );
 }
 
-=======
       <div className='space - y-2 pb - 24'>;
         {conversations.map (conversation => (
           <div;
@@ -267,9 +256,4 @@ function MobileConversationList() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

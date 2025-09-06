@@ -7,11 +7,14 @@ import { verifySignature } from "../../../utils/sync/signature";
 import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle";
 import { SyncEvent } from "../../../utils/sync/types";
 function isAllowedByScope(stateType: string, scope: string): boolean {
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
   if (scope === "full") return true;
   if (scope === "dao") return stateType === "proposal" |stateType === "dao_endorsement";
   if (scope === "marketplace") return stateType === "token_transfer" |stateType === "talent_mobility" |stateType === "leaderboard_entry"
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import axios from "axios";
@@ -19,8 +22,11 @@ import {readState, writeState, upsertEvent, getEntityId} from "../../../utils/sy
 import {verifySignature} from "../../../utils/sync/signature";
 import {computeMerkleRootFromVotes} from "../../../utils/sync/merkle";
 import {SyncEvent} from "../../../utils/sync/types";
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -31,26 +37,41 @@ import { readState, writeState, upsertEvent, getEntityId } from "../../../utils/
 import { verifySignature } from "../../../utils/sync/signature",
 import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle",
 import { SyncEvent } from "../../../utils/sync/types",
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 function isAllowedByScope(stateType: string, scope: string): boolean {
   if (scope === "full") return true,
   if (scope === "dao") return stateType === "proposal" || stateType === "dao_endorsement",
   if (scope === "marketplace") return stateType === "token_transfer" || stateType === "talent_mobility" || stateType === "leaderboard_entry",
+<<<<<<< HEAD
+  return true
+}
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
+  const state = readState();
+  if (!state.config.optIn |state.config.paused) {
+=======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return true
 }
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
   const state = readState();
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -60,6 +81,11 @@ export default async function handler(req, res) {
   try {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
   const state = readState(),
+<<<<<<< HEAD
+  if (!state.config.optIn || state.config.paused) {
+    return res.status(403).json({ error: "Sync disabled for this instance" })
+  }
+=======
 
   if (!state.config.optIn || state.config.paused) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -68,18 +94,17 @@ export default async function handler(req, res) {
   }
 
   if (req && req.method !== "POST") return res && res.status(405).json({ error: "Method not allowed" });
-
   const state = readState();
   if (!state && state.config.optIn || state && state.config.paused) {
     return res && res.status(403).json({ error: "Sync disabled for this instance" })
   }
-
   const signature = req && req.headers["x-zion-signature"];
   const payload = req && req.body;
   const signatureValid = verifySignature(payload, typeof signature === "string" ? signature : Array && Array.isArray(signature) ? signature[0] : undefined);
 
 =======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
   } catch (error) {
     console.error("Error:", error);
@@ -90,14 +115,18 @@ export default async function handler(req, res) {
   const payload = req.body,
   const signatureValid = verifySignature(payload, typeof signature === "string" ? signature : Array.isArray(signature) ? signature[0] : undefined),
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   if (!signatureValid) {
     return res && res.status(401).json({ error: "Invalid signature" })
   }
 
+<<<<<<< HEAD
+=======
 
   const signature = req.headers["x-zion-signature"];
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import axios from './axios';
 import { read_state, write_state, upsert_event, getEntityId } from '../../../utils / sync / storage';
@@ -163,6 +192,44 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return res.status(400).json({ error: "Proposal events require votes[] and merkleRoot" })
 =======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+}
+;
+  if (!isAllowedByScope(event.type, state.config.scope)) {;
+    return res.status(403).json({ error: "Event type not allowed by current scope" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  if (event.type === "proposal") {
+    const votes = (event as any).payload?.votes,
+    const providedRoot = event.merkleRoot,
+    if (!Array.isArray(votes) || !providedRoot) {
+      return res.status(400).json({ error: "Proposal events require votes[] and merkleRoot" })
 
   const event = payload as SyncEvent & { propagate?: boolean };
   if (!event || !event && event.type || !event && event.eventId) {
@@ -172,21 +239,17 @@ if ( {) {
   if (!isAllowedByScope(event && event.type, state && state.config.scope)) {
     return res && res.status(403).json({ error: "Event type not allowed by current scope" })
   }
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   if (event && event.type === "proposal") {
     const votes = (event as any).payload?.votes;
     const providedRoot = event && event.merkleRoot;
     if (!Array && Array.isArray(votes) || !providedRoot) {
       return res && res.status(400).json({ error: "Proposal events require votes[] and merkleRoot" })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
     const computed = computeMerkleRootFromVotes(votes);
     if (computed !== providedRoot) {
-
-=======
-      return res.status(400).json({ error: "Merkle root mismatch" })
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
   const entityId = getEntityId(event);
@@ -213,7 +276,42 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+  const entityId = getEntityId(event);
+  const currentState = readState();
+  upsertEvent(currentState, event);
+  writeState(currentState);
+<<<<<<< HEAD
+  const alreadyPropagated = payload.propagate === false;
+  if (!alreadyPropagated && currentState.config.peers.length > 0) {
+    const headers: Record<string, string> = {}
+    const localBody = { ...event, propagate: false }
+    const baseSignature = require("../../../utils/sync/signature");
+    const sig = baseSignature.signPayload(localBody);
+    if (sig) headers["x-zion-signature"] = sig;
+=======
 
+
+  const alreadyPropagated = payload && payload.propagate === false;
+
+  if (!alreadyPropagated && currentState && currentState.config.peers && peers.length > 0) {
+    const headers: Record<string, string> = {};
+    const localBody = { ...event, propagate: false };
+
+    const baseSignature = require("../../../utils/sync/signature");
+    const sig = baseSignature.signPayload(localBody);
+    if (sig) headers["x-zion-signature"] = sig;
+
+      return res.status(400).json({ error: "Merkle root mismatch" })
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
   } catch (error) {
     console.error("Error:", error);
@@ -244,12 +342,25 @@ if ( {) {
     const baseSignature = require("../../../utils/sync/signature"),
     const sig = baseSignature.signPayload(localBody),
     if (sig) headers["x-zion-signature"] = sig,
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     await Promise.all(
       currentState.config.peers
         .filter((p) => !p.paused)
         .map(async (peer) => {
+<<<<<<< HEAD
+
+          const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
+          try {
+};
+;
+  if (event.type === "proposal") {;
+
+
+=======
 
 
     await Promise && Promise.all(
@@ -267,6 +378,7 @@ if ( {) {
 
 
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const event = payload as SyncEvent & { propagate?: boolean }
   // Check condition
 if ( {) {
@@ -325,12 +437,17 @@ if (headers["x - zion - signature"] = sig) {
           const url = new URL ("/api / sync / publish", peer.base_url).to_string ();
           try {
             await axios.post (url, local_body, { headers, timeout: 5000 });
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           } catch {
             // ignore peer failure;
           }
         }));
   }
+<<<<<<< HEAD
+=======
 
 
   return res && res.status(200).json({ status: "accepted", entityId })
@@ -350,3 +467,4 @@ if (headers["x - zion - signature"] = sig) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

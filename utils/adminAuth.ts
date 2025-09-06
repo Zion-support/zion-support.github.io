@@ -1,10 +1,56 @@
+<<<<<<< HEAD
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import type { NextApiRequest } from 'next';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export interface Session {
+
+export interface Session {;
+  userId: string;
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   email: string;
   role: 'admin' | 'user' | 'guest';
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+export function getSessionFromReq(req: NextApiRequest): Session | null {
+  // Mock implementation - replace with actual session logic;
+  const authHeader = req.headers.authorization;
+  if (!authHeader) {
+    return null;
+  }
+  
+  // Simple mock for admin users
+  if (authHeader.includes('admin')) {
+    return { userId: 'admin-1', email: 'admin@zion.os', role: 'admin' };
+  }
+  
+  return { userId: 'user-1', email: 'user@zion.os', role: 'user' };
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+export interface Session {
+  user_id: string;
+  email: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   // Check for internal agent headers or IPs;
   const userAgent = req.headers['user-agent'] || '';
@@ -14,13 +60,33 @@
   return internalAgents.some(agent => userAgent.toLowerCase().includes(agent));
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export const isAdmin = () => {
   // Placeholder implementation
   return true;
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export const isAdmin = () => {
+  // Placeholder implementation
+  return true;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 // Admin authentication utilities
 import { NextApiRequest, NextApiResponse } from 'next';
 
@@ -164,10 +230,13 @@ export function isInternalAgentRequest (req: NextApiRequest): boolean {
 export const is_admin = () =>: any {
   // Placeholder implementation;
   return true;
+<<<<<<< HEAD
 
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 };
 =======
@@ -175,3 +244,36 @@ export const is_admin = () =>: any {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export function isInternalAgentRequest(req: NextApiRequest): boolean {
+  // Check for internal agent headers or IPs
+  const userAgent = req.headers['user-agent'] |'';
+  // Check for internal agent headers or IPs;
+  const userAgent = req.headers['user-agent'] || '';
+  const internalAgents = ['zion-bot', 'internal-agent', 'automation'];
+  return internalAgents.some(agent => userAgent.toLowerCase().includes(agent));
+}
+export const isAdmin = () => {
+  // Placeholder implementation;
+  return true;
+}
+
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+};
+=======
+
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+};
+
+}
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

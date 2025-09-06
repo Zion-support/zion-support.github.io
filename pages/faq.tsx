@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
 class ErrorBoundary extends React.Component {
@@ -5,20 +8,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -29,6 +28,7 @@ import Link from "next/link";
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function FAQ() {
   const contact = {
     phone: "+1 302 464 0950"
@@ -87,8 +87,11 @@ export default function FAQ() {
       answer:
         "Yes, we work with businesses of all sizes, from startups to enterprises. Our micro SaaS products are particularly well-suited for small and medium businesses looking for cost-effective solutions."
     }
+<<<<<<< HEAD
+=======
 =======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import Head from 'next/head'
 import Link from 'next/link'
 export default function FAQ() {
@@ -150,6 +153,8 @@ export default function FAQ() {
   }
 }
   ]
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -167,7 +172,6 @@ export default function FAQ() {
         />;
         <link rel="canonical" href={`${contact && contact.site}/faq`} />;
       </Head>;
-
       <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">;
         {/* Hero Section */}
         <section className="py-20 px-4 text-center">;
@@ -203,13 +207,12 @@ export default function FAQ() {
               ))}
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               Find answers to the most common questions about our services, pricing,
               implementation, and support. Can't find what you're looking for? Contact us directly.
             </p>
           </div>
         </section>
-
-
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
             <div className="space-y-8">
@@ -226,15 +229,21 @@ export default function FAQ() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Contact CTA */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <section className="py-16 px-4 bg-slate-900/40">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
@@ -246,11 +255,12 @@ export default function FAQ() {
               business.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+<<<<<<< HEAD
+=======
 =======
             </div>;
           </div>;
         </section>;
-
         {/* Contact CTA */}
         <section className="py-16 px-4 bg-slate-900/40">;
           <div className="max-w-4xl mx-auto text-center">;
@@ -258,7 +268,6 @@ export default function FAQ() {
               Still Have Questions?;
             </h2>;
             <p className="text-lg text-slate-300 mb-8">;
-=======
 import Head from './next / head';
 import Link from './next / link';
 ;
@@ -380,7 +389,6 @@ function FAQ() {
               Still Have Questions?;
             </h2>;
             <p className="text - lg text - slate - 300 mb - 8">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Our team is here to help. Contact us for personalized answers to;
               your specific questions and to discuss how we can help your;
               business.;
@@ -390,12 +398,12 @@ function FAQ() {
 
 
 =======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/Layout';
-
 export default function FAQPage() {
-  
     >
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
@@ -419,10 +427,12 @@ export default function FAQPage() {
 
   );
 }
+<<<<<<< HEAD
+}
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
                 className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">;
-=======
             <div className="flex flex - col sm:flex - row items - center justify - center gap - 4">;
               <a;
                 href={`tel:${contact.phone.replace (/[^\d+]/g, "")}`}
@@ -440,7 +450,6 @@ export default function FAQPage() {
                 href="/contact";
                 className="px - 8 py - 3 bg - slate - 800 hover:bg - slate - 700 border border - white / 10 rounded - lg font - semibold transition - colors";
               >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Contact Form;
               </Link>;
             </div>;
@@ -451,3 +460,26 @@ export default function FAQPage() {
     </>);
 
 }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+import React from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+
+const Page = () => {
+  return (
+    <MainLayout
+      title="FAQ - Zion Tech Group"
+      description="Frequently asked questions about Zion Tech Group services"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">FAQ</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
+
+export default Page;
+>>>>>>> main

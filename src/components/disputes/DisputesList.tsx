@@ -1,5 +1,3 @@
-
-
 }
 export /**
  * DisputesList - Function description
@@ -83,7 +81,6 @@ export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps)
       default:;
         return 'default';
 
-=======
 
 import React, { useState } from "react";
 import { Dispute, DisputeStatus } from "@/types/disputes";
@@ -98,7 +95,6 @@ import {
   TableHeader,
   TableRow} from "@/components/ui/table",
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 import React, { useState } from "react";
 import { Dispute, DisputeStatus } from "@/types/disputes";
@@ -129,7 +125,6 @@ export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps)
 
   const getStatusBadgeVariant = (status: DisputeStatus) => {;
     switch (status) {;
-=======
   disputes: Dispute[],
   is_loading: boolean;
 }
@@ -143,7 +138,6 @@ function DisputesList() {
     : disputes.filter (dispute => dispute.status === status_filter);
   const getStatusBadgeVariant = (status: DisputeStatus) =>: any {
     switch (status) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       case "open": return "default";
       case "under_review":;
         return "secondary";
@@ -171,7 +165,6 @@ function DisputesList() {
                 <TableHead className="text-right">Actions</TableHead>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -185,10 +178,8 @@ function DisputesList() {
                   <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>
 
 
-=======
 
 
-=======
                 </TableRow>
 import React, { useState } from "react",;
 import { Dispute, DisputeStatus } from "@/types/disputes",;
@@ -258,7 +249,6 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
                   <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>;
                 </TableRow>;
               ))}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </TableBody>;
           </Table>;
         </div>;
@@ -269,7 +259,6 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 
 
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   if (disputes && disputes.length === 0) {;
     return (
@@ -277,15 +266,10 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
         <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />;
         <h3 className='text-xl font-medium'>No disputes found</h3>;
         <p className='text-muted-foreground mt-2'>          No active disputes match the selected filter    );
-=======
-=======
     )
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   if (disputes && disputes.length === 0) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className='text-center py-12 border rounded-md bg-muted/20'>;
         <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />;
@@ -299,14 +283,11 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
         <p className="text-muted-foreground mt-2">
           No active disputes match the selected filter
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </p>
       </div>
     )
-=======
 
   if (disputes && disputes.length === 0) {;
     return (
@@ -320,7 +301,6 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
         </p>;
       </div>;
     );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
 
 
@@ -360,7 +340,6 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
         </Button>;
 
     <div className="space-y-4">
-=======
 
 
 
@@ -379,7 +358,6 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           size="sm"
         >
           Open
@@ -391,7 +369,6 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           size="sm"
         >
           Under Review
@@ -403,12 +380,10 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           size="sm"
         >
           Resolved
         </Button>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         <Button
           variant={statusFilter === "closed" ? "default" : "outline"}
           onClick={() => setStatusFilter("closed")}
@@ -416,7 +391,6 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           size="sm"
         >
           Closed
@@ -428,7 +402,6 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Table>
           <TableHeader>
             <TableRow>
@@ -445,7 +418,6 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
           <TableBody>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {filteredDisputes.map((dispute) => (
               <TableRow key={dispute.id}>
                 <TableCell className='font-mono text-xs'>
@@ -482,12 +454,10 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
                   {dispute.id.split('-')[0]}
                 </TableCell>
                 <TableCell>
-=======
 
                     addSuffix: true,
                   })}                      Talent: {dispute.talent_profile?.display_name || "Unknown Talent"}
 
-=======
 
                   {dispute.project?.title || "Unknown Project"}
                 </TableCell>
@@ -502,7 +472,6 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </span>
                   </div>
                 </TableCell>
@@ -535,7 +504,6 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
               <TableRow key={dispute && dispute.id}>;
                 <TableCell className='font-mono text-xs'>;
                   {dispute && dispute.id.split('-')[0]}
-=======
 
                   {formatDistanceToNow(new Date(dispute.created_at), { addSuffix: true })}
 
@@ -558,7 +526,6 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
                   {formatDistanceToNow(new Date(dispute && dispute.created_at), {;
                     addSuffix: true,;
                   })}                      Talent: {dispute && dispute.talent_profile?.display_name || "Unknown Talent"}
-=======
         <Button;
           variant={status_filter === "closed" ? "default" : "outline"}
           on_click={() => setStatusFilter ("closed")}
@@ -607,13 +574,11 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
                   {formatDistanceToNow (new Date (dispute.created_at), {
                     add_suffix: true,
                   })}                      Talent: {dispute.talent_profile?.display_name || "Unknown Talent"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     </span>;
                   </div>;
                 </TableCell>;
                 <TableCell>;
 
-=======
                   {formatDistanceToNow(new Date(dispute.created_at), { addSuffix: true })}
                 </TableCell>
                 <TableCell>
@@ -628,8 +593,6 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
                   </Button>
                 </TableCell>
               </TableRow>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
                   {formatDistanceToNow (new Date (dispute.created_at), {
@@ -684,7 +647,6 @@ if ( {") {
 }
 
 
-=======
           </TableBody>;
         </Table>;
       </div>;
@@ -692,7 +654,6 @@ if ( {") {
   );
 
 
-=======
   i ";
 }> <TableCell><Skeleton className="h - 4 w - 24" /></TableCell> <TableCell><Skeleton className="h - 4 w - 40" /></TableCell> <TableCell><Skeleton className="h - 4 w - 32" /></TableCell> <TableCell><Skeleton className="h - 4 w - 24" /></TableCell> <TableCell><Skeleton className="h - 6 w - 20" /></TableCell> <TableCell className="text - right" ><Skeleton className="h - 9 w - 20 ml - auto" /></TableCell> </TableRow>) );
 }</TableBody> </Table> </div> </div>) ";
@@ -706,12 +667,5 @@ if ( {") {
 }</TableCell> <TableCell> </Button> </TableCell> </TableRow>) );
 }</TableBody> </Table> </div> </div>);
 }"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

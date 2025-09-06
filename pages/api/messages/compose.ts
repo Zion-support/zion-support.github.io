@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+  const user = requireUser(req, res);
+  if (!user) return;
+  if (req.method !== "POST")
+    return res.status(405).json({ error: "Method not allowed" });
+=======
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -24,6 +30,7 @@ if (return) {
     return res.status (405).json ({ error: "Method not allowed" })) {
   $2
 }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const {
     recipient_id,
 
@@ -49,6 +56,8 @@ if (return) {
     attachmentBase64
     attachmentName
     context
+<<<<<<< HEAD
+=======
 =======
 =======
 import { NextApiRequest, NextApiResponse } from 'next';
@@ -85,17 +94,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     recipient_id,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     body,
     link_url,
     attachmentBase64,
 
 
     context,
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   });
 
 }
 
+<<<<<<< HEAD
+=======
 =======
     context});
 
@@ -109,6 +124,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { recipientId, body, linkUrl, attachmentBase64, attachmentName, context } = req.body as {
     recipientId: string,
@@ -125,11 +141,29 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     body,
     linkUrl,
     attachmentBase64,
+<<<<<<< HEAD
+    context});
+  res.status(200).json({ conversation, message });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+=======
     attachmentName,
-    context
+    context,
   });
   res.status(200).json({ conversation, message })
 }
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

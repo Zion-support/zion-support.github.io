@@ -1,6 +1,4 @@
-
-
-  return (
+return (
     <>;
       <TooltipProvider>;
         <Tooltip>;
@@ -42,10 +40,7 @@ className: {`w-4 h-4 transition-all duration-300 ${
     </button>;) }
 '`
 }
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           <TooltipTrigger as_child>;
             <button;
               class_name = {cn (
@@ -94,8 +89,6 @@ class_name: {`w - 4 h - 4 transition - all duration - 300 ${
 }
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
   return (
@@ -104,6 +97,3 @@ class_name: {`w - 4 h - 4 transition - all duration - 300 ${
         <Tooltip>
           <TooltipTrigger asChild>
             <button
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

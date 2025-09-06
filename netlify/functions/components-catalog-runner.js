@@ -1,7 +1,12 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 
 function runNode(relPath, args = []) {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const path = require ('path');
 const { spawn_sync } = require ('child_process');
 ;
@@ -12,46 +17,70 @@ function run_node() {
   const abs = path.resolve (__dirname, '..', '..', rel_path);
   return spawn_sync ('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
 ;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 exports.config = {
   schedule: '*/30 * * * *'
 }
-=======
   const abs = path && path.resolve(__dirname, '..', '..', relPath);
   return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
 
 exports && exports.config = {
   schedule: '*/30 * * * *',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (res && res.stdout) logs && logs.push(res && res.stdout);
     if (res && res.stderr) logs && logs.push(res && res.stderr);
     logs && logs.push(`exit=${res && res.status || 0}`);
     return res && res.status || 0;
   }
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     logs.push(`exit=${res.status |0}`);
     return res.status |0;
   }
   step('components:catalog', () =>
     runNode('automation/components-catalog && catalog.cjs')
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const abs = path.resolve(__dirname, '....', relPath),
+  return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
+=======
 
   const abs = path.resolve(__dirname, '....', relPath),
   return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
-
-=======
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
   return { statusCode: 200, body: logs && logs.join('\n') };
 };  step('components:catalog', () => runNode('automation/components-catalog && catalog.cjs')),
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
   return { statusCode: 200, body: logs && logs.join('\n') }
 },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 ;
 exports.handler = async () => {
@@ -78,5 +107,3 @@ function step() {
 }  step ('components:catalog', () => run_node ('automation / components - catalog.cjs')),
   step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, body: logs.join ('\n') }
-},
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

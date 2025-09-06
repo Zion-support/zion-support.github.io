@@ -1,4 +1,8 @@
+<<<<<<< HEAD:src.broken/pages/Blog.js
 :src.broken/pages/Blog.js
+=======
+<<<<<<< HEAD:src.broken/pages/Blog.js
+>>>>>>> main:corrupted_backup/Blog.js
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { GradientHeading } from "@/components/GradientHeading";
@@ -79,7 +83,7 @@ export default function Blog() {
                     <div>
                       <p className="text-white font-medium">{featuredPosts[0].author.name}</p>
                       <p className="text-sm text-zion-slate-light">
-                        {featuredPosts[0].publishedDate} • {featuredPosts[0].readTime}
+                        {featuredPosts[0].publishedDate}  {featuredPosts[0].readTime}
                       </p>
                     </div>
                   </div>
@@ -112,7 +116,13 @@ export default function Blog() {
               </Select>
             </div>
           </div>
+<<<<<<< HEAD:src.broken/pages/Blog.js
 import React from 'react';
+=======
+=======
+import React from 'react';
+>>>>>>> origin/chore/fix-build-nav-links:src/pages/Blog.js
+>>>>>>> main:corrupted_backup/Blog.js
 
 export default function Blog() {
     return (
@@ -154,7 +164,17 @@ export default function Blog() {
                 </div>
             </div>
         </div>
+<<<<<<< HEAD:src.broken/pages/Blog.js
 :src.broken/pages/Blog.js
       </div>
     </>);
     );
+=======
+<<<<<<< HEAD:src.broken/pages/Blog.js
+      </div>
+    </>);
+=======
+    );
+>>>>>>> origin/chore/fix-build-nav-links:src/pages/Blog.js
+}
+>>>>>>> main:corrupted_backup/Blog.js

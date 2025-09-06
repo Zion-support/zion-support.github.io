@@ -1,13 +1,10 @@
-
-
-  }
+}
   const handleViewOffer = (project_id: string, ) =>: any {
     router.push (`/project/${project_id}`);
   }
 
 
 
-=======
 import { useEffect, useState } from "react",
 import { useRouter } from 'next/router',
 import { Bell, Calendar, X } from 'lucide-react'
@@ -61,8 +58,6 @@ export function ProjectOfferBanner() {;
 
   }
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="mb-6 space-y-3">
       {pendingOffers
@@ -75,7 +70,7 @@ export function ProjectOfferBanner() {;
 
 
             className="border-2 border-primary bg-primary/5"
-            onClick = {(,) => handleViewOffer(offer.id),}
+            onClick={() => handleViewOffer(offer.id)}
           >
             <CardContent className="p-4 flex items-center justify-between">
               <div className="flex items-center gap-2">
@@ -94,15 +89,12 @@ export function ProjectOfferBanner() {;
               
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div className="flex items-center gap-2">
                 <Button size="sm" className="whitespace-nowrap">
                   View Offer
                 </Button>
                 <Button
                   size="sm"
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
 
 import { useEffect, useState } from "react";
@@ -169,15 +161,14 @@ export function ProjectOfferBanner() {;
                 </Button>;
                 <Button
                   size="sm" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   variant="ghost"
-                  onClick = {(e,) => handleDismiss(offer && offer.id, e),}
-                >;
-                  <X className="h-4 w-4" />;
-                </Button>;
-              </div>;
-            </CardContent>;
-          </Card>;
+                  onClick={(e) => handleDismiss(offer.id, e)}
+                >
+                  <X className="h-4 w-4" />
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
         ))}
 
   if ()) {) {
@@ -260,7 +251,6 @@ if (isLoading || pendingOffers && pendingOffers.length === 0 || pendingOffers &&
 }</div>) ;
 }'"}
 
-=======
   project_id;
 }`);
 }
@@ -273,14 +263,8 @@ if () ) {) {
 }> <CardContent className="p - 4 flex items - center justify - between" > <div className="flex items - center gap - 2" > <div className="bg - primary / 10 rounded - full p - 2" > <Bell className="h - 4 w - 4 text - primary" /> </div> <div> </p> </div> </div> <div className="flex items - center gap - 2" > <Button size="sm" className="whitespace - nowrap" > View Offer </Button> <Button > <X className="h - 4 w - 4" /> </Button> </div> </CardContent> </Card>) );
 }</div>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
     </div>;
   );
 }
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

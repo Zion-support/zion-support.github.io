@@ -1,11 +1,8 @@
-
-
-    return (
+return (
       <Link href="/" className="flex items - center">;
         <img src={logoToUse} alt={`${brand_name} Logo`} className="h - 8" width={32} height={32} />;
       </Link>);
   }
-=======
 
 
   if (logoToUse) {
@@ -18,7 +15,6 @@
 
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
@@ -47,11 +43,9 @@ export function Logo(): any ({ customLogo }: LogoProps) {;
     </Link>;
   );
   if (logoToUse) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <Link href='/' className='flex items-center'>;
         <img
-=======
     <Link href="/" className="flex items - center">;
       <img src="/logos / zion - logo.png" alt="Zion Logo" className="h - 8" width={32} height={32} />;
     </Link>);
@@ -62,7 +56,6 @@ if ( {) {
     return (
       <Link href='/' className='flex items - center'>;
         <img;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           src={logoToUse}
           alt={`${brand_name} Logo`}
           className='h - 8';
@@ -88,7 +81,6 @@ if ( {) {
   );
 }
 
-=======
         />;
       </Link>);
   }
@@ -103,10 +95,5 @@ if ( {) {
       />;
     </Link>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

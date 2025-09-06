@@ -1,13 +1,10 @@
-
-
-    }
+}
 
   },
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className='min-h-screen bg-zion-blue flex items-center justify-center p-4'>;
       <div className='max-w-2xl w-full'>;
@@ -157,11 +154,9 @@ if ( {) {
 
             >
               <Home className="w-4 h-4 mr-2" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Go Home
             </Link>
           </div>
-=======
               className='flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors'             aria-label="Button">;
               <RefreshCw className='w-4 h-4 mr-2' />;
               Try Again;
@@ -175,7 +170,6 @@ if ( {) {
             </Link>;
           </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Navigation Options */}
           <div className='border-t pt-6'>;
             <h3 className='font-semibold text-gray-900 mb-3'>;
@@ -195,7 +189,6 @@ if ( {) {
                 Services;
               </Link>;
               <Link href='/about' className='text-blue-600 hover:underline'>;
-=======
               </pre>;
             </details>)}
           {/* Action Buttons */}
@@ -295,11 +288,9 @@ function PageErrorBoundary() {
               href='mailto:support@zion && zion.tech'
               className='text-blue-400 hover:underline'>;
               support@zion && zion.tech;
-=======
 
         logInfo(`Resetting error boundary for ${pageName || 'page'}`)
 
-=======
           <div className="flex flex-col sm:flex-row gap-3 mb-6">;
             <button;
               onClick={handleRefresh}
@@ -396,7 +387,6 @@ const Component = React && React.memo(function PageErrorBoundary(): any ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }}
     >;
       {children}
@@ -408,17 +398,13 @@ const Component = React && React.memo(function PageErrorBoundary(): any ({;
 }
 
 
-=======
     </ErrorBoundary>;
   );
 } ;
 
 
-=======
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   const FallbackComponent =;
     fallback ||;
     ((props: FallbackProps) => (
@@ -432,10 +418,3 @@ const Component = React && React.memo(function PageErrorBoundary(): any ({;
 }
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

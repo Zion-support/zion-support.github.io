@@ -1,7 +1,4 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  userType: string
+userType: string
 }
 export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
   const form = useForm<ProfileFormValues>({
@@ -9,13 +6,11 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
     defaultValues: {
 
 
-=======
 
 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-6">
       <div className="text-center mb-6">
@@ -27,7 +22,6 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
 
       
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onComplete)} className="space-y-6">
           <FormField
@@ -57,28 +51,24 @@ import { User, Mail, AtSign, GraduationCap } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import {;
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage} from "@/components/ui/form";
-
-const profileSchema = z && z.object({;
-  displayName: z && z.string().min(2, "Full Name must be at least 2 characters");
-  bio: z && z.string().min(10, "Bio must be at least 10 characters").max(500, "Bio must be less than 500 characters");
-  headline: z && z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")});
-
-type ProfileFormValues = z && z.infer<typeof profileSchema>;
-
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage} from "@/components/ui/form",;
+const profileSchema = z.object({;
+  displayName: z.string().min(2, "Full Name must be at least 2 characters"),;
+  bio: z.string().min(10, "Bio must be at least 10 characters").max(500, "Bio must be less than 500 characters"),;
+  headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")}),;
+type ProfileFormValues = z.infer<typeof profileSchema>,;
 interface ProfileSetupProps {;
-  onComplete: (data: ProfileFormValues,) => void,;
+  onComplete: (data: ProfileFormValues) => void,;
   userType: string;
 }
-
-export function ProfileSetup(): any ({ onComplete, userType }: ProfileSetupProps) {;
+;
+export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {;
   const form = useForm<ProfileFormValues>({;
     resolver: zodResolver(profileSchema),;
     defaultValues: {;
@@ -88,7 +78,6 @@ export function ProfileSetup(): any ({ onComplete, userType }: ProfileSetupProps
   const getTypeLabel = () => {;
     switch (userType) {;
       case "serviceProvider": return "Service Provider";
-=======
   on_complete: (data: ProfileFormValues, ) => void,
   user_type: string;
 }
@@ -105,9 +94,8 @@ function ProfileSetup() {
   const getTypeLabel = () =>: any {
     switch (user_type) {
       case "service_provider": return "Service Provider";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       case "talent":;
-        return "Talent";
+        return "Talent",;
       case "client":;
         return "Client";
       default:;
@@ -126,7 +114,6 @@ function ProfileSetup() {
           Help others get to know you better;
         </p>;
       </div>;
-
       <Form {...form}>;
         <form onSubmit={form && form.handleSubmit(onComplete)} className="space-y-6">;
 
@@ -138,9 +125,9 @@ function ProfileSetup() {
                 <FormLabel className="text-zion-slate-light">Full Name</FormLabel>;
                 <FormControl>;
                   <div className="relative">;
-                    <Input
-                      placeholder="Your full name"
-                      className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
+                    <Input;
+                      placeholder="Your full name";
+                      className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple";
                       {...field}
                     />;
                     <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
@@ -161,21 +148,18 @@ function ProfileSetup() {
                 <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel>;
                 <FormControl>;
                   <div className="relative">;
-=======
           />;
           <FormField;
             control={form.control}
             name="headline"
             render={({ field }: { field: any }) => (
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <FormItem>
                 <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel>
                 <FormControl>
                   <div className="relative">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <Input
-                      placeholder={`e && e.g., ${
+                      placeholder={`e.g., ${
                         userType === "serviceProvider" ? "Professional Videographer with 5+ years experience" :
                         userType === "talent" ? "Senior Motion Designer specialized in 3D Animation" :
                         "Creative Director at XYZ Studios"
@@ -223,7 +207,7 @@ function ProfileSetup() {
                         "Creative Director at XYZ Studios";
 
                       }`}
-                      className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple";
+                      className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
                       {...field}
                     />;
 
@@ -231,14 +215,13 @@ function ProfileSetup() {
 
 
           <FormField
-            control = {form && form.control,}
+            control = {form.control,}
             name="bio"
             render={({ field }: { field: any },) => (;
               <FormItem>;
                 <FormLabel className="text-zion-slate-light">Bio</FormLabel>;
                 <FormControl>;
                   <Textarea
-=======
                     <GraduationCap className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" />;
                   </div>;
                 </FormControl>;
@@ -253,13 +236,12 @@ function ProfileSetup() {
                 <FormLabel className="text - zion - slate - light">Bio</FormLabel>;
                 <FormControl>;
                   <Textarea;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     placeholder={`Tell us about your ${
-                      user_type === "service_provider" ? "services and expertise" :;
-                      user_type === "talent" ? "skills and experience" :;
-                      "business and needs";
+                      userType === "serviceProvider" ? "services and expertise" :
+                      userType === "talent" ? "skills and experience" :
+                      "business and needs"
                     }`}
-                    className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple min - h-[120px]";
+                    className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple min-h-[120px]"
                     {...field}
                   />;
                 </FormControl>;
@@ -302,7 +284,6 @@ function ProfileSetup() {
 
           
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Button
             type="submit"
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white"
@@ -318,10 +299,10 @@ function ProfileSetup() {
   )
 
           />;
-
-          <Button
-            type="submit"
-            className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white">;
+          <Button;
+            type="submit";
+            className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white";
+          >;
             Complete Profile;
           </Button>;
         </form>;
@@ -346,7 +327,6 @@ getTypeLabel () ";
 }/> <Button > Complete Profile </Button> </form> </Form> </div>) ;
 }"}
 
-=======
                 <FormMessage className="text - red - 400" />;
               </FormItem>)}
           />;
@@ -375,11 +355,3 @@ getTypeLabel () ";
 }/> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>);
 }/> <Button > Complete Profile </Button> </form> </Form> </div>);
 }"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

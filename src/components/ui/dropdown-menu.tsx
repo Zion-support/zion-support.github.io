@@ -1,5 +1,3 @@
-
-
 import * as React from "react"
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu"
 import { Check, ChevronRight, Circle } from 'lucide-react'
@@ -15,7 +13,6 @@ const DropdownMenuSubTrigger = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.SubTrigger>
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.SubTrigger> & {
     inset?: boolean
-=======
 import * as React from &quot;react & quot;
 import * as DropdownMenuPrimitive from &quot;@radix - ui / react - dropdown - menu & quot;
 import { Check, ChevronRight, Circle } from 'lucide-react';
@@ -31,9 +28,8 @@ const DropdownMenuSubTrigger = React.forward_ref<;
   React.ElementRef < typeof DropdownMenuPrimitive.SubTrigger>,
   React.ComponentPropsWithoutRef < typeof DropdownMenuPrimitive.SubTrigger> & {
     inset?: boolean;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
->(({ class_name, inset, children, ...props }, ref) => (
+>(({ className, inset, children, ...props }, ref) => (;
   <DropdownMenuPrimitive.SubTrigger;
     ref={ref}
 
@@ -43,7 +39,6 @@ const DropdownMenuSubTrigger = React.forward_ref<;
       inset && "pl-8",
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       className
     )}
     {...props}
@@ -54,7 +49,6 @@ const DropdownMenuSubTrigger = React.forward_ref<;
     <ChevronRight className="ml-auto h-4 w-4" />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   </DropdownMenuPrimitive.SubTrigger>
 ))
 DropdownMenuSubTrigger.displayName =
@@ -71,7 +65,6 @@ const DropdownMenuSubContent = React.forwardRef<
       "z-50 min-w-[8rem] overflow-hidden rounded-md border border-border bg-popover p-1 text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       className
     )}
     {...props}
@@ -85,7 +78,6 @@ const DropdownMenuContent = React.forwardRef<;
   React.ElementRef<typeof DropdownMenuPrimitive.Content>,;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Content>;
 >(({ className, sideOffset = 4, ...props }, ref) => (;
   <DropdownMenuPrimitive.Portal>;
@@ -98,7 +90,6 @@ const DropdownMenuContent = React.forwardRef<;
         "z-50 min-w-[8rem] overflow-hidden rounded-md border border-border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         className
       )}
       {...props}
@@ -150,18 +141,14 @@ DropdownMenuContent.display_name = DropdownMenuPrimitive.Content.display_name;
 const DropdownMenuItem = React.forward_ref<;
   React.ElementRef < typeof DropdownMenuPrimitive.Item>,
   React.ComponentPropsWithoutRef < typeof DropdownMenuPrimitive.Item> & {
-=======
 
 
-=======
   React.ElementRef<typeof DropdownMenuPrimitive.Item>,;
 
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Item> & {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     inset?: boolean;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
->(({ class_name, inset, ...props }, ref) => (
+>(({ className, inset, ...props }, ref) => (;
   <DropdownMenuPrimitive.Item;
     ref={ref}
 
@@ -171,7 +158,6 @@ const DropdownMenuItem = React.forward_ref<;
       inset && "pl-8",
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       className
     )}
     {...props}
@@ -184,7 +170,6 @@ const DropdownMenuCheckboxItem = React.forwardRef<;
   React.ElementRef<typeof DropdownMenuPrimitive.CheckboxItem>,;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.CheckboxItem>;
 >(({ className, children, checked, ...props }, ref) => (;
   <DropdownMenuPrimitive.CheckboxItem;
@@ -195,10 +180,8 @@ const DropdownMenuCheckboxItem = React.forwardRef<;
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       className
     )}
-=======
 className={cn (
       &quot;relative flex cursor - default select - none items - center rounded - sm px - 2 py - 1.5 text - sm outline - none transition - colors focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
       inset && &quot;pl - 8&quot;,
@@ -215,22 +198,20 @@ const DropdownMenuCheckboxItem = React.forward_ref<;
 className={cn (
       &quot;relative flex cursor - default select - none items - center rounded - sm py - 1.5 pl - 8 pr - 2 text - sm outline - none transition - colors focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
       class_name)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     checked={checked}
     {...props}
-  >;
-    <span className=&quot;absolute left - 2 flex h - 3.5 w - 3.5 items - center justify - center & quot;>;
-      <DropdownMenuPrimitive.ItemIndicator>;
-        <Check className=&quot;h - 4 w - 4&quot; />;
-      </DropdownMenuPrimitive.ItemIndicator>;
-    </span>;
+  >
+    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
+      <DropdownMenuPrimitive.ItemIndicator>
+        <Check className="h-4 w-4" />
+      </DropdownMenuPrimitive.ItemIndicator>
+    </span>
     {children}
 
 
   React.ElementRef<typeof DropdownMenuPrimitive.RadioItem>,;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.RadioItem>;
 >(({ className, children, ...props }, ref) => (;
   <DropdownMenuPrimitive.RadioItem;
@@ -241,10 +222,8 @@ className={cn (
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       className
     )}
-=======
   </DropdownMenuPrimitive.CheckboxItem>));
 DropdownMenuCheckboxItem.display_name =;
   DropdownMenuPrimitive.CheckboxItem.display_name;
@@ -257,14 +236,13 @@ const DropdownMenuRadioItem = React.forward_ref<;
 className={cn (
       &quot;relative flex cursor - default select - none items - center rounded - sm py - 1.5 pl - 8 pr - 2 text - sm outline - none transition - colors focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
       class_name)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {...props}
-  >;
-    <span className=&quot;absolute left - 2 flex h - 3.5 w - 3.5 items - center justify - center & quot;>;
-      <DropdownMenuPrimitive.ItemIndicator>;
-        <Circle className=&quot;h - 2 w - 2 fill - current & quot; />;
-      </DropdownMenuPrimitive.ItemIndicator>;
-    </span>;
+  >
+    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
+      <DropdownMenuPrimitive.ItemIndicator>
+        <Circle className="h-2 w-2 fill-current" />
+      </DropdownMenuPrimitive.ItemIndicator>
+    </span>
     {children}
 
   </DropdownMenuPrimitive.RadioItem>));
@@ -272,18 +250,14 @@ DropdownMenuRadioItem.display_name = DropdownMenuPrimitive.RadioItem.display_nam
 const DropdownMenuLabel = React.forward_ref<;
   React.ElementRef < typeof DropdownMenuPrimitive.Label>,
   React.ComponentPropsWithoutRef < typeof DropdownMenuPrimitive.Label> & {
-=======
 
 
-=======
   React.ElementRef<typeof DropdownMenuPrimitive.Label>,;
 
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Label> & {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     inset?: boolean;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
->(({ class_name, inset, ...props }, ref) => (
+>(({ className, inset, ...props }, ref) => (;
   <DropdownMenuPrimitive.Label;
     ref={ref}
 
@@ -293,7 +267,6 @@ const DropdownMenuLabel = React.forward_ref<;
       inset && "pl-8",
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       className
     )}
     {...props}
@@ -306,10 +279,8 @@ const DropdownMenuSeparator = React.forwardRef<;
   React.ElementRef<typeof DropdownMenuPrimitive.Separator>,;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator>;
 >(({ className, ...props }, ref) => (;
-=======
 className={cn (
       &quot;px - 2 py - 1.5 text - sm font - semibold & quot;,
       inset && &quot;pl - 8&quot;,
@@ -321,7 +292,6 @@ const DropdownMenuSeparator = React.forward_ref<;
   React.ElementRef < typeof DropdownMenuPrimitive.Separator>,
   React.ComponentPropsWithoutRef < typeof DropdownMenuPrimitive.Separator>;
 >(({ class_name, ...props }, ref) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   <DropdownMenuPrimitive.Separator;
     ref={ref}
 
@@ -341,20 +311,18 @@ const DropdownMenuShortcut = ({
   return (
     <span;
       className={cn (&quot;ml - auto text - xs tracking - widest opacity - 60 & quot;, class_name)}
-=======
   return (
     <span
 
       className={cn("ml-auto text-xs tracking-widest opacity-60", className)}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {...props}
-    />);
+    />;
+  );
 }
 
 DropdownMenuShortcut.display_name = &quot;DropdownMenuShortcut & quot;
 ;
-=======
 
 DropdownMenuShortcut.displayName = "DropdownMenuShortcut"
 
@@ -373,7 +341,3 @@ export {
   DropdownMenuPortal,
   DropdownMenuSub,
   DropdownMenuSubContent,
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

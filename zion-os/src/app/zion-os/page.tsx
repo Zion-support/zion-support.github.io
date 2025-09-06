@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 
 import Link from "next/link",;
@@ -22,7 +24,25 @@ export default /**
 function ZionOSPage() {
   return (
     <div className="min - h-screen">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+<<<<<<< HEAD
+import Link from "next/link";
+export const metadata = {title: "Zion OS - Sovereign AI-Powered Digital Economies Platform | Zion Tech Group";
+  description: "Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.";
+  keywords: "Zion OS, digital economy, blockchain, governance, marketplace, deployment, sovereign, AI-powered, Zion Tech Group"}
+export default function ZionOSPage() {return (;
+=======
+import Link from "next/link",;
+export const metadata = {;
+  title: "Zion OS - Sovereign AI-Powered Digital Economies Platform | Zion Tech Group",;
+  description: "Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.",;
+  keywords: "Zion OS, digital economy, blockchain, governance, marketplace, deployment, sovereign, AI-powered, Zion Tech Group"},;
+export default function ZionOSPage() {;
+  return (;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    <div className="min-h-screen">;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;
@@ -55,6 +75,8 @@ function ZionOSPage() {
               <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
                 The Future of Digital Economies;
               </h2>;
+<<<<<<< HEAD
+=======
 
               <p className="text - lg text - gray - 300 mb - 6 leading - relaxed">;
                 Zion OS is a revolutionary platform that enables anyone to create, deploy,
@@ -65,10 +87,13 @@ function ZionOSPage() {
                 Zion OS is a revolutionary platform that enables anyone to create, deploy,;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 and manage sovereign digital economies powered by artificial intelligence.;
                 Our unified deployment protocol makes it possible to launch complex;
                 economic systems in minutes, not months.;
               </p>;
+<<<<<<< HEAD
+=======
 
               <p className="text - lg text - gray - 300 leading - relaxed">;
                 Whether you're building a decentralized marketplace, launching a DAO,
@@ -79,6 +104,7 @@ function ZionOSPage() {
                 Whether you're building a decentralized marketplace, launching a DAO,;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 or creating a new token ecosystem, Zion OS provides all the tools you need;
                 to succeed in the digital economy revolution.;
               </p>;
@@ -212,6 +238,8 @@ function ZionOSPage() {
               <div className="w - 16 h - 16 bg - blue - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4">;
                 <span className="text - 2xl font - bold text - blue - 400">1</span>;
               </div>;
+<<<<<<< HEAD
+=======
 
               <h3 className="text - xl font - semibold mb - 3">Configure</h3>;
               <p className="text - gray - 400">;
@@ -222,6 +250,7 @@ function ZionOSPage() {
                 Use our intuitive launch wizard to configure your economy's parameters,;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 including governance rules, token economics, and marketplace settings.;
               </p>;
             </div>;
@@ -229,6 +258,8 @@ function ZionOSPage() {
               <div className="w - 16 h - 16 bg - purple - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4">;
                 <span className="text - 2xl font - bold text - purple - 400">2</span>;
               </div>;
+<<<<<<< HEAD
+=======
 
               <h3 className="text - xl font - semibold mb - 3">Deploy</h3>;
               <p className="text - gray - 400">;
@@ -239,6 +270,7 @@ function ZionOSPage() {
                 Click deploy and watch as Zion OS automatically creates your infrastructure,;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 smart contracts, and governance systems in minutes.;
               </p>;
             </div>;
@@ -246,6 +278,8 @@ function ZionOSPage() {
               <div className="w - 16 h - 16 bg - green - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4">;
                 <span className="text - 2xl font - bold text - green - 400">3</span>;
               </div>;
+<<<<<<< HEAD
+=======
 
               <h3 className="text - xl font - semibold mb - 3">Launch</h3>;
               <p className="text - gray - 400">;
@@ -256,6 +290,7 @@ function ZionOSPage() {
                 Your economy is ready to go! Start inviting users, launching projects,;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 and building your digital community.;
               </p>;
             </div>;

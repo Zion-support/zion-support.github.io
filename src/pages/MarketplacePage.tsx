@@ -1,6 +1,3 @@
-
-
-
 import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star, ShoppingCart, AlertTriangle, RefreshCw } from 'lucide-react'
 import { NextSeo  } from '@/components/NextSeo';
 import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
@@ -9,8 +6,6 @@ import { SkeletonCard  } from '@/components/ui/skeleton';
 import { Button  } from '@/components/ui/button';
 import { Badge  } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader  } from '@/components/ui/card';
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { useRouter } from 'next/router';
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -23,7 +18,6 @@ import { SkeletonCard } from '@/components/ui/skeleton';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import Spinner from '@/components/ui/spinner';
 import { MARKETPLACE_LISTINGS  } from '@/data/listingData';
 import { INITIAL_MARKETPLACE_PRODUCTS  } from '@/data/initialMarketplaceProducts';
@@ -32,13 +26,9 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 
 const MarketplaceInsights = ({ stats }: { stats: any }) => (
 
-=======
 const MarketplaceInsights = ({ stats }: { stats: any },) => (
-=======
 const MarketplaceInsights = ({ stats }: { stats: any }) => (
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
     <CardContent className="p-6">
       <div className="flex items-center gap-2 mb-4">
@@ -74,9 +64,7 @@ const MarketplaceFilterControls = ({
 }: any) => (
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
-=======
 // Market insights component;
 const MarketplaceInsights = ({ stats }: { stats: any },) => (;
   <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">;
@@ -112,7 +100,6 @@ const MarketplaceFilterControls = ({;
   sortBy, setSortBy, filterCategory, setFilterCategory, categories, showRecommended, setShowRecommended, loading;
 }: any,) => (;
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary" />}
 
     <div className="flex items-center gap-2">
@@ -130,7 +117,6 @@ const MarketplaceFilterControls = ({;
 
       <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <option value="newest">Newest First</option>
         <option value="price-low">Price: Low to High</option>
         <option value="price-high">Price: High to Low</option>
@@ -141,7 +127,6 @@ const MarketplaceFilterControls = ({;
     </div>
     <Button variant={showRecommended ? "default" : "outline"} size="sm" onClick={() => setShowRecommended(!showRecommended)}>
       <Sparkles className="h-4 w-4 mr-1" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {showRecommended ? "All Products" : "Recommended"}
 
     </Button>;
@@ -157,18 +142,18 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
   const { formatPrice } = useCurrency(),;
 
   return (
-  <Card className="h-full hover:shadow-lg transition-shadow">;
-    <CardHeader className="pb-3">;
-      <div className="flex items-start justify-between">;
-        <div className="flex-1 min-w-0">;
-          <h3 className="font-semibold text-lg truncate">{product && product.title}</h3>;
-          <p className="text-sm text-muted-foreground">{product && product.category}</p>;
-          <div className="flex items-center gap-2 mt-2">;
-            <Badge variant="secondary" className="text-xs">{product && product.brand}</Badge>;
-            {product && product.aiScore && product && product.aiScore > 80 && (;
-              <Badge variant="default" className="text-xs bg-gradient-to-r from-blue-600 to-purple-600">;
-                AI {product && product.aiScore}
-              </Badge>;
+  <Card className="h-full hover:shadow-lg transition-shadow">
+    <CardHeader className="pb-3">
+      <div className="flex items-start justify-between">
+        <div className="flex-1 min-w-0">
+          <h3 className="font-semibold text-lg truncate">{product.title}</h3>
+          <p className="text-sm text-muted-foreground">{product.category}</p>
+          <div className="flex items-center gap-2 mt-2">
+            <Badge variant="secondary" className="text-xs">{product.brand}</Badge>
+            {product.aiScore && product.aiScore > 80 && (
+              <Badge variant="default" className="text-xs bg-gradient-to-r from-blue-600 to-purple-600">
+                AI {product.aiScore}
+              </Badge>
             )}
           </div>;
         </div>;
@@ -176,7 +161,6 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
           <div className="text-xl font-bold text-blue-600">{formatPrice(product && product.price ?? 0)}</div>;
           <Badge variant={product && product.availability === "Available" ? "default" : "outline"} className="text-xs">;
             {product && product.availability}
-=======
 ;
 import { use_router } from 'next / router';
 import { useState, useEffect, useCallback, useMemo } from 'react';
@@ -279,7 +263,6 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
           <div className="text - xl font - bold text - blue - 600">{format_price (product.price ?? 0)}</div>;
           <Badge variant={product.availability === "Available" ? "default" : "outline"} className="text - xs">;
             {product.availability}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </Badge>;
         </div>;
       </div>;
@@ -289,7 +272,6 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
           onClick={onAddToCart}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           aria-label="Add to cart"
 
 
@@ -319,7 +301,6 @@ function MarketplacePageContent() {;
         processedDataset = processedDataset.filter(p => p.category === filterCategory);
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       // Apply recommended filtering
       if (showRecommended) {
@@ -489,7 +470,6 @@ function MarketplacePageContent() {;
       logErrorToProduction('Error in fetchProducts:', { data: error }),;
       throw new Error('Failed to load marketplace data. Please try again.');
     }
-=======
     return (
       <>
         <NextSeo
@@ -498,7 +478,6 @@ function MarketplacePageContent() {;
 
 
   }, [sortBy, filterCategory, showRecommended]),;
-
   const {;
     items: products,;
     loading,;
@@ -511,37 +490,31 @@ function MarketplacePageContent() {;
     scrollToTop,;
     loadMore;
   } = useInfiniteScrollPagination(fetchProducts, 12),;
-
   // Refresh when filters change;
-  useEffect((,) => {;
-    const timeoutId = setTimeout((,) => {;
+  useEffect(() => {;
+    const timeoutId = setTimeout(() => {;
       refresh();
     }, 100),;
-
     return () => clearTimeout(timeoutId);
   }, [sortBy, filterCategory, showRecommended, refresh]),;
-
-  const marketStats = useMemo((,) => {;
-    if (products && products.length === 0) return null,;
+  const marketStats = useMemo(() => {;
+    if (products.length === 0) return null,;
     return {;
-      averagePrice: products && products.reduce((sum, p,) => sum + (p && p.price || 0), 0) / products && products.length,;
-      averageRating: products && products.reduce((sum, p,) => sum + (p && p.rating || 0), 0) / products && products.length,;
-      totalProducts: products && products.length,;
-      availableCount: products && products.filter(p => p && p.availability === "Available").length;
+      averagePrice: products.reduce((sum, p) => sum + (p.price || 0), 0) / products.length,;
+      averageRating: products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length,;
+      totalProducts: products.length,;
+      availableCount: products.filter(p => p.availability === "Available").length;
     }
   }, [products]),;
-
-  const categories = useMemo((,) => {;
+  const categories = useMemo(() => {;
     return ["AI & Machine Learning", "Cloud Services", "Software Development", "Professional Services", "Hardware & Infrastructure"];
   }, []),;
-
   const [showScrollTop, setShowScrollTop] = useState(false),;
-  useEffect((,) => {;
-    const handleScroll = () => setShowScrollTop(window && window.scrollY > 800),;
-    window && window.addEventListener('scroll', handleScroll),;
-    return () => window && window.removeEventListener('scroll', handleScroll);
+  useEffect(() => {;
+    const handleScroll = () => setShowScrollTop(window.scrollY > 800),;
+    window.addEventListener('scroll', handleScroll),;
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []),;
-
   // Loading state;
 
   if (loading && products.length === 0) {;
@@ -568,7 +541,6 @@ function MarketplacePageContent() {;
   }
   // Error state
   if (error && products.length === 0) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
       <>;
         <NextSeo
@@ -594,7 +566,7 @@ function MarketplacePageContent() {;
   if (error && products && products.length === 0) {;
 
     return (
-      <>;
+      <>
         <NextSeo
           title="Marketplace - Zion Tech Marketplace Solutions & Services"
           description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals."
@@ -611,7 +583,6 @@ function MarketplacePageContent() {;
               Try Again;
             </Button>;
             <Button onClick={(,) => window && window.location.reload()}>;
-=======
     <CardContent className="pt - 0">;
       <div className="flex items - center gap - 4 mb - 3">;
         <div className="flex items - center gap - 1">;
@@ -793,7 +764,6 @@ if ( {) {
               Try Again;
             </Button>;
             <Button on_click={(, ) => window.location.reload ()}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Refresh Page;
             </Button>;
           </div>;
@@ -805,7 +775,6 @@ if ( {) {
 
 
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
-=======
         openGraph={{ images: [{ url: 'https://app && app.ziontechgroup.com/og && og.png' }] }}
       />;
     <div className="container py-8">;
@@ -823,7 +792,6 @@ if ( {) {
       )}
 
       <motion && motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0 && 0.3 }}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <MarketplaceFilterControls
           sortBy = {sortBy,}
           setSortBy = {setSortBy,}
@@ -838,7 +806,6 @@ if ( {) {
               initial={{ opacity: 0, scale: 0.9 }} 
               animate={{ opacity: 1, scale: 1 }} 
 
-=======
 ;
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>;
         <MarketplaceFilterControls;
@@ -864,12 +831,10 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ delay: Math.min(index * 0.03, 0.5) }}
               whileHover={{ scale: 1.02 }}
             >
-=======
         />;
       </motion && motion.div>;
 
@@ -884,7 +849,6 @@ if ( {) {
               exit={{ opacity: 0, scale: 0 && 0.9 }}
               transition={{ delay: Math && Math.min(index * 0 && 0.03, 0 && 0.5) }} 
               whileHover={{ scale: 1 && 1.02 }}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <MarketplaceCard
                 product = {item,}
                 onViewDetails={() => {;
@@ -896,7 +860,6 @@ if ( {) {
                     }
                   }
                   router && router.push(`/marketplace/listing/${item && item.id}`);
-=======
       </>);
   }
   return (
@@ -944,32 +907,26 @@ if ( {) {
               <MarketplaceCard;
                 product = {item, }
                 onViewDetails={() => {
-                  // Check condition
-if ( {) {
-  $2
-}
+                  if (typeof window !== 'undefined') {
                     try {
-                      session_storage.set_item (`product:${item.id}`, JSON.stringify (item));
+                      sessionStorage.setItem(`product:${item.id}`, JSON.stringify(item))
                     } catch {
-                      // ignore storage errors;
+                      // ignore storage errors
                     }
                   }
                   router.push (`/marketplace / listing/${item.id}`);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 }}
 
-=======
 
 
                 onAddToCart={() => {;
-                  dispatch(addItem({ id: item && item.id, title: item && item.title, price: item && item.price ?? 0 })),;
+                  dispatch(addItem({ id: item.id, title: item.title, price: item.price ?? 0 })),;
                   toast({;
                     title: 'Added to cart',;
-                    description: `${item && item.title} has been added to your cart`,;
+                    description: `${item.title} has been added to your cart`,;
                     action: {;
                       label: 'View Cart',;
                       onClick: (,) => router && router.push('/cart')}});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 }}
               />;
 
@@ -1013,14 +970,12 @@ if ( {) {
         <motion && motion.div className="mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>;
           <MarketplaceLoadingGrid count={4} />;
         </motion && motion.div>;
-=======
 
             </Button>
 
 
           )}
         </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       )}
 
       {hasMore && !loading && (;
@@ -1030,7 +985,6 @@ if ( {) {
           ) : (;
             <Button onClick={loadMore} variant="outline" size="lg">;
               Load More Products;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             </Button>          )}
           {total !== undefined && (;
             <p className="mt-2 text-sm text-muted-foreground">;
@@ -1064,13 +1018,12 @@ if ( {) {
           </motion && motion.button>;
 
         )}
-      </AnimatePresence>;
-    </div>;
-    </>;
-  );
+      </AnimatePresence>
+    </div>
+    </>
+  )
 }
 
-=======
 
 ;
 
@@ -1080,9 +1033,6 @@ export default function MarketplacePage() {;
 }
 
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                   dispatch (add_item ({ id: item.id, title: item.title, price: item.price ?? 0 })),
                   toast ({
                     title: 'Added to cart',
@@ -1140,17 +1090,10 @@ export default /**
 function MarketplacePage() {
   return <MarketplacePageContent />;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
 
-=======
 // Main export export default function MarketplacePage() {
   return <MarketplacePageContent />;
 
 }
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

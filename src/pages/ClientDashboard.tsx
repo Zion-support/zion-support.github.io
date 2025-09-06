@@ -1,5 +1,3 @@
-
-
 function ClientDashboardContent() {;
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
@@ -12,26 +10,53 @@ function ClientDashboardContent() {;
     onboardingStatus && onboardingStatus.inviteSent &&;
     onboardingStatus && onboardingStatus.responseReceived;
 
+import { useState, useEffect } from "react",;
+import { JobsList } from "@/components/jobs/JobsList",;
+import { Button } from "@/components/ui/button",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import Link from "next/link",;
+import { JobStatus } from "@/types/jobs",;
+import { SEO } from "@/components/SEO",;
+import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, Kanban, Video } from 'lucide-react';
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+import { SuggestedTalents } from "@/components/jobs/SuggestedTalents",;
+import { useJobs } from "@/hooks/useJobs",;
+import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSteps",;
+import { AdvancedOnboardingSteps } from "@/components/onboarding/AdvancedOnboardingSteps",;
+import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",;
+import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard",;
+import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",;
+import { useIsMobile } from "@/hooks/use-mobile",;
+function ClientDashboardContent() {;
+  const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),;
+  const { jobs, isLoading } = useJobs(),;
+  const [selectedJobId, setSelectedJobId] = useState<string | null>(null),;
+  const [selectedJobTitle, setSelectedJobTitle] = useState<string>(""),;
+  const isMobile = useIsMobile(),;
+  const onboardingStatus = useOnboardingStatus(),;
+  const showAdvanced =;
+    onboardingStatus.jobPosted &&;
+    onboardingStatus.inviteSent &&;
+    onboardingStatus.responseReceived,;
   // Set the first job as selected when jobs are loaded (if any);
-  useEffect((,) => {;
-    if (jobs && jobs.length > 0 && !selectedJobId) {;
-      const firstJob = jobs[0];
+  useEffect(() => {;
+    if (jobs.length > 0 && !selectedJobId) {;
+      const firstJob = jobs[0],;
       if (firstJob) {;
-        setSelectedJobId(firstJob && firstJob.id);
-        setSelectedJobTitle(firstJob && firstJob.title);
+        setSelectedJobId(firstJob.id),;
+        setSelectedJobTitle(firstJob.title);
       }
     }
-  }, [jobs, selectedJobId]);
-
+  }, [jobs, selectedJobId]),;
   const handleJobSelect = (jobId: string, jobTitle: string) => {;
-    setSelectedJobId(jobId);    setSelectedJobTitle(jobTitle);
+    setSelectedJobId(jobId),;
+    setSelectedJobTitle(jobTitle);
   };
-
-  return (
+  return (;
     <>;
-      <SEO
-        title="Client Dashboard | Zion AI Marketplace" 
-        description="Manage your jobs and talent requests in the Zion AI Marketplace." 
+      <SEO;
+        title="Client Dashboard | Zion AI Marketplace";
+        description="Manage your jobs and talent requests in the Zion AI Marketplace.";
       />;
       <main className="container mx-auto px-4 py-8">;
         <div className={`flex flex-col ${!isMobile ? 'md:flex-row md:justify-between md:items-center' : ''} mb-8 gap-4`}>;
@@ -48,7 +73,6 @@ function ClientDashboardContent() {;
             <Button asChild className={isMobile ? 'w-full justify-center' : ''}>;
               <Link href="/post-job">;
                 <PlusCircle className="h-4 w-4 mr-2" /> Post New Job;
-=======
     onboarding_status.response_received;
 /**
  * ClientDashboardContent - Function description
@@ -104,7 +128,6 @@ if ( {) {
             <Button as_child className={is_mobile ? 'w - full justify - center' : ''}>;
               <Link href="/post - job">;
                 <PlusCircle className="h - 4 w - 4 mr - 2" /> Post New Job;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </Link>;
             </Button>;
           </div>;
@@ -112,21 +135,19 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* New Onboarding Steps */}
-        <div className="mb-8">;
-          <ClientOnboardingSteps />;
-          {showAdvanced && (;
-            <div className="mt-6">;
-              <AdvancedOnboardingSteps />;
-            </div>;
+        <div className="mb-8">
+          <ClientOnboardingSteps />
+          {showAdvanced && (
+            <div className="mt-6">
+              <AdvancedOnboardingSteps />
+            </div>
           )}
 
 
               
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <TabsContent value="all" className="mt-0">
                 <JobsList onSelectJob={handleJobSelect} />
               </TabsContent>
@@ -194,18 +215,21 @@ if ( {) {
                 </h2>;
 
                 {selectedJobId ? (
-                  <SuggestedTalents job_id={selectedJobId} />) : (
-                  <div className="bg - muted / 30 border rounded - lg p - 6 text - center">;
-                    <p className="text - muted - foreground">;
-                      Select a job to see AI - matched talent suggestions;
-                    </p>;
-                  </div>)}
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </main>;
-    </>);
+                  <SuggestedTalents jobId={selectedJobId} />
+                ) : (
+                  <div className="bg-muted/30 border rounded-lg p-6 text-center">
+                    <p className="text-muted-foreground">
+                      Select a job to see AI-matched talent suggestions
+                    </p>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </>
+  )
 }
 
         </div>;
@@ -241,29 +265,24 @@ if ( {) {
 
           <div>;
             <div className="sticky top-4 space-y-6">;
-=======
 
   return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"};
 ;
 
-=======
           
           <div>
             <div className="sticky top-4 space-y-6">
 
               {/* Active Projects Card */}
               <ActiveProjectsCard />;
-
               {/* Upcoming Interviews Card */}
               <UpcomingInterviewsCard />;
-
               {/* AI Talent Suggestions */}
               <div>;
                 <h2 className="text-xl font-semibold mb-4 flex items-center">;
                   <BriefcaseIcon className="mr-2 h-5 w-5 text-primary" />;
                   AI Talent Suggestions;
                 </h2>;
-
                 {selectedJobId ? (;
                   <SuggestedTalents jobId={selectedJobId} />;
                 ) : (;
@@ -281,19 +300,16 @@ if ( {) {
     </>;
   );
 }
-
+;
 export default function ClientDashboard() {;
-  return (
+  return (;
     <ProtectedRoute>;
       <ClientDashboardContent />;
     </ProtectedRoute>;
   );
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export default /**
  * ClientDashboard - Function description
  */
@@ -339,12 +355,5 @@ return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Mana
  */
 function ClientDashboard() {
   return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

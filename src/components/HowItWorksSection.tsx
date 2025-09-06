@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import { GradientHeading } from "./GradientHeading";
 
@@ -95,7 +93,6 @@ const stats = [ "
   hidden: { opacity: 0
   scale: 0.8
 }
-=======
 import React from 'react';
 import { GradientHeading } from './GradientHeading';
 import { Check, Handshake, Search, Send } from 'lucide-react';
@@ -192,7 +189,6 @@ const stats = [ ";
   hidden: { opacity: 0,
   scale: 0.8;
 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     visible: {
       opacity: 1,      scale: 1
       transition: {
@@ -200,7 +196,6 @@ const stats = [ ";
 
 const getSteps = (t: any,) => [
 
-=======
 
 import React from 'react',
 import { GradientHeading } from "./GradientHeading",
@@ -216,7 +211,6 @@ interface HowItWorksSectionProps {
 const getSteps = (t: any) => [
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   {
 
     title: t('how_it_works.post'),
@@ -234,7 +228,6 @@ const getSteps = (t: any) => [
     title: t('how_it_works.done'),
     description: t('how_it_works.done_desc'),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <section className={cn('py-20 bg-zion-blue', className)} style={style}>
       <div className='container mx-auto px-4'>
@@ -250,11 +243,9 @@ const getSteps = (t: any) => [
         <div className="text-center mb-16">
           <GradientHeading>{t('home.how_it_works_title')}</GradientHeading>
 
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
             {t('home.how_it_works_subtitle')}
           </p>
@@ -516,7 +507,6 @@ function HowItWorksSection() {
                         {step && step.description}
                       </p>                    </div>                    </div>;
 
-=======
 
         <div className="relative">
           {/* Timeline line */}
@@ -536,8 +526,6 @@ function HowItWorksSection() {
                       <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
                       <p className="text-zion-slate-light">{step.description}</p>
                     </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ) : null}
                 </div>;
                       <h3 className="text-2xl font-bold text-white mb-3">{step && step.title}</h3>;
@@ -556,7 +544,7 @@ function HowItWorksSection() {
       </div>;
     </section>;
   );
-});
+};
 
 export default Component;
 
@@ -567,7 +555,6 @@ export default Component;
   );
 }
 
-=======
                       </p>                    </div>                    </div>) : null}
                 </div>;
                       <h3 className="text - 2xl font - bold text - white mb - 3">{step.title}</h3>;
@@ -592,10 +579,4 @@ export default Component;
 }
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,9 +1,3 @@
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ClickableBadge({
 
 
@@ -12,7 +6,6 @@ export function ClickableBadge({
         </button>
 
 
-=======
 import React from "react",;
 import { X } from 'lucide-react';
 import { cn } from "@/lib/utils",;
@@ -27,16 +20,15 @@ export function ClickableBadge({;
   className,;
   variant = "default",;
   onRemove,;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   ...props;
 }: ClickableBadgeProps) {;
-  return (
-    <div
-      className={cn(
-        badgeVariants({ variant })
-        "group flex items-center gap-1"
-        onRemove && "pl-2 && 2.5 pr-1 && 1.5 py-1"
-        className
+  return (;
+    <div;
+      className={cn(;
+        badgeVariants({ variant }),;
+        "group flex items-center gap-1",;
+        onRemove && "pl-2.5 pr-1.5 py-1";
+        className;
       )}
 
     </div>
@@ -56,7 +48,6 @@ export function ClickableBadge({;
       )}
 
 
-=======
 import React from 'react';
 import { X } from 'lucide-react';
 import { cn } from '@/lib / utils';
@@ -118,9 +109,4 @@ function ClickableBadge() {
         </button>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

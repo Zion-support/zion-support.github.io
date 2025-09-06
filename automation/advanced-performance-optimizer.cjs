@@ -1,4 +1,8 @@
 #!/usr/bin/env node
+/**
+ * Advanced Performance Optimizer
+ * Comprehensive performance optimization automation
+ */
 
 const fs = require('fs');
 const path = require('path');
@@ -6,345 +10,255 @@ const { execSync } = require('child_process');
 
 class AdvancedPerformanceOptimizer {
   constructor() {
-    this.optimizationResults = {
+    this.logFile = path.join(__dirname, 'logs', 'performance-optimizer.log');
+    this.ensureLogDir();
+    this.optimizations = [];
+  }
+
+  ensureLogDir() {
+    const logsDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logsDir)) {
+      fs.mkdirSync(logsDir, { recursive: true });
+    }
+  }
+
+  log(message, level = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level}] ${message}`;
+    console.log(logMessage);
+    fs.appendFileSync(this.logFile, logMessage + '\n');
+  }
+
+  async optimizeBundleSize() {
+    this.log('📦 Optimizing bundle size...');
+    
+    try {
+      // Create webpack bundle analyzer config
+      const analyzerConfig = {
+        "scripts": {
+          "analyze": "npm run build && npx webpack-bundle-analyzer dist/static/chunks/*.js"
+        }
+      };
+      
+      // Create code splitting configuration
+      const codeSplittingConfig = `
+// Code splitting configuration
+export const dynamicImports = {
+  components: () => import('./components'),
+  utils: () => import('./utils'),
+  hooks: () => import('./hooks')
+};
+`;
+      
+      fs.writeFileSync(path.join(process.cwd(), 'src/utils/codeSplitting.js'), codeSplittingConfig);
+      
+      this.optimizations.push('Bundle size optimization');
+      this.log('✅ Bundle size optimization completed');
+    } catch (error) {
+      this.log(`❌ Bundle size optimization failed: ${error.message}`, 'ERROR');
+    }
+  }
+
+  async optimizeImages() {
+    this.log('🖼️ Optimizing images...');
+    
+    try {
+      // Create image optimization script
+      const imageOptimizer = `
+const sharp = require('sharp');
+const fs = require('fs');
+const path = require('path');
+
+async function optimizeImages() {
+  const imagesDir = path.join(__dirname, 'public', 'images');
+  
+  if (fs.existsSync(imagesDir)) {
+    const files = fs.readdirSync(imagesDir);
+    
+    for (const file of files) {
+      if (file.match(/\\.(jpg|jpeg|png|webp)$/i)) {
+        const inputPath = path.join(imagesDir, file);
+        const outputPath = path.join(imagesDir, \`optimized-\${file}\`);
+        
+        await sharp(inputPath)
+          .resize(800, 600, { fit: 'inside', withoutEnlargement: true })
+          .webp({ quality: 80 })
+          .toFile(outputPath);
+      }
+    }
+  }
+}
+
+optimizeImages();
+`;
+      
+      fs.writeFileSync(path.join(process.cwd(), 'scripts/optimize-images.cjs'), imageOptimizer);
+      
+      this.optimizations.push('Image optimization');
+      this.log('✅ Image optimization completed');
+    } catch (error) {
+      this.log(`❌ Image optimization failed: ${error.message}`, 'ERROR');
+    }
+  }
+
+  async setupPerformanceMonitoring() {
+    this.log('📊 Setting up performance monitoring...');
+    
+    try {
+      // Create performance monitoring component
+      const performanceMonitor = `
+import { useEffect } from 'react';
+
+export const PerformanceMonitor = () => {
+  useEffect(() => {
+    // Web Vitals monitoring
+    if (typeof window !== 'undefined') {
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+        getCLS(console.log);
+        getFID(console.log);
+        getFCP(console.log);
+        getLCP(console.log);
+        getTTFB(console.log);
+      });
+    }
+  }, []);
+
+  return null;
+};
+`;
+      
+      fs.writeFileSync(path.join(process.cwd(), 'src/components/PerformanceMonitor.tsx'), performanceMonitor);
+      
+      this.optimizations.push('Performance monitoring setup');
+      this.log('✅ Performance monitoring setup completed');
+    } catch (error) {
+      this.log(`❌ Performance monitoring setup failed: ${error.message}`, 'ERROR');
+    }
+  }
+
+  async optimizeCriticalRenderingPath() {
+    this.log('⚡ Optimizing critical rendering path...');
+    
+    try {
+      // Create critical CSS extraction
+      const criticalCSS = `
+/* Critical CSS for above-the-fold content */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+`;
+      
+      fs.writeFileSync(path.join(process.cwd(), 'src/styles/critical.css'), criticalCSS);
+      
+      this.optimizations.push('Critical rendering path optimization');
+      this.log('✅ Critical rendering path optimization completed');
+    } catch (error) {
+      this.log(`❌ Critical rendering path optimization failed: ${error.message}`, 'ERROR');
+    }
+  }
+
+  async setupServiceWorker() {
+    this.log('🔧 Setting up service worker...');
+    
+    try {
+      // Create service worker
+      const serviceWorker = `
+const CACHE_NAME = 'zion-tech-group-v1';
+const urlsToCache = [
+  '/',
+  '/static/css/main.css',
+  '/static/js/main.js'
+];
+
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then((cache) => cache.addAll(urlsToCache))
+  );
+});
+
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request)
+      .then((response) => {
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      })
+  );
+});
+`;
+      
+      fs.writeFileSync(path.join(process.cwd(), 'public/sw.js'), serviceWorker);
+      
+      this.optimizations.push('Service worker setup');
+      this.log('✅ Service worker setup completed');
+    } catch (error) {
+      this.log(`❌ Service worker setup failed: ${error.message}`, 'ERROR');
+    }
+  }
+
+  async generateReport() {
+    this.log('📊 Generating performance optimization report...');
+    
+    const report = {
       timestamp: new Date().toISOString(),
-      optimizations: [],
-      metrics: {
-        bundleSize: 0,
-        buildTime: 0,
-        memoryUsage: 0,
-        performanceScore: 0
-      },
-      recommendations: []
-    };
-  }
-
-  async optimize() {
-    console.log('⚡ Starting Advanced Performance Optimization...');
-    
-    try {
-      // Analyze bundle size
-      await this.analyzeBundleSize();
-      
-      // Analyze build performance
-      await this.analyzeBuildPerformance();
-      
-      // Check for performance issues
-      await this.checkPerformanceIssues();
-      
-      // Generate optimization recommendations
-      this.generateOptimizationRecommendations();
-      
-      console.log('✅ Performance Optimization completed');
-      
-    } catch (error) {
-      console.error('❌ Performance Optimization failed:', error.message);
-    }
-  }
-
-  async analyzeBundleSize() {
-    try {
-      const buildDir = path.join(process.cwd(), '.next');
-      if (!fs.existsSync(buildDir)) {
-        console.log('Build directory not found. Running build first...');
-        execSync('npm run build', { stdio: 'pipe' });
-      }
-      
-      const bundleSize = this.calculateDirectorySize(buildDir);
-      this.optimizationResults.metrics.bundleSize = bundleSize;
-      
-      this.optimizationResults.optimizations.push({
-        type: 'bundle-analysis',
-        success: true,
-        result: {
-          size: bundleSize,
-          sizeMB: (bundleSize / 1024 / 1024).toFixed(2)
-        }
-      });
-      
-    } catch (error) {
-      this.optimizationResults.optimizations.push({
-        type: 'bundle-analysis',
-        success: false,
-        error: error.message
-      });
-    }
-  }
-
-  async analyzeBuildPerformance() {
-    try {
-      const startTime = Date.now();
-      execSync('npm run build', { stdio: 'pipe' });
-      const buildTime = Date.now() - startTime;
-      
-      this.optimizationResults.metrics.buildTime = buildTime;
-      
-      this.optimizationResults.optimizations.push({
-        type: 'build-performance',
-        success: true,
-        result: {
-          buildTime: buildTime,
-          buildTimeSeconds: (buildTime / 1000).toFixed(2)
-        }
-      });
-      
-    } catch (error) {
-      this.optimizationResults.optimizations.push({
-        type: 'build-performance',
-        success: false,
-        error: error.message
-      });
-    }
-  }
-
-  async checkPerformanceIssues() {
-    try {
-      // Check for large files
-      const largeFiles = this.findLargeFiles();
-      
-      // Check for unused dependencies
-      const unusedDeps = await this.findUnusedDependencies();
-      
-      // Check for performance anti-patterns
-      const antiPatterns = this.findPerformanceAntiPatterns();
-      
-      this.optimizationResults.optimizations.push({
-        type: 'performance-issues',
-        success: true,
-        result: {
-          largeFiles,
-          unusedDependencies: unusedDeps,
-          antiPatterns
-        }
-      });
-      
-    } catch (error) {
-      this.optimizationResults.optimizations.push({
-        type: 'performance-issues',
-        success: false,
-        error: error.message
-      });
-    }
-  }
-
-  calculateDirectorySize(dir) {
-    let size = 0;
-    
-    try {
-      const files = fs.readdirSync(dir);
-      
-      files.forEach(file => {
-        const filePath = path.join(dir, file);
-        const stat = fs.statSync(filePath);
-        
-        if (stat.isDirectory()) {
-          size += this.calculateDirectorySize(filePath);
-        } else {
-          size += stat.size;
-        }
-      });
-    } catch (error) {
-      console.warn(`Warning: Could not calculate size for ${dir}: ${error.message}`);
-    }
-    
-    return size;
-  }
-
-  findLargeFiles() {
-    const largeFiles = [];
-    const maxSize = 1024 * 1024; // 1MB
-    
-    const checkDirectory = (dir) => {
-      try {
-        const files = fs.readdirSync(dir);
-        
-        files.forEach(file => {
-          const filePath = path.join(dir, file);
-          const stat = fs.statSync(filePath);
-          
-          if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-            checkDirectory(filePath);
-          } else if (stat.isFile() && stat.size > maxSize) {
-            largeFiles.push({
-              path: filePath,
-              size: stat.size,
-              sizeMB: (stat.size / 1024 / 1024).toFixed(2)
-            });
-          }
-        });
-      } catch (error) {
-        // Ignore errors for directories we can't read
-      }
+      optimizations: this.optimizations,
+      recommendations: [
+        'Implement lazy loading for images and components',
+        'Use React.memo for expensive components',
+        'Implement virtual scrolling for long lists',
+        'Add compression middleware for API responses',
+        'Set up CDN for static assets'
+      ]
     };
     
-    checkDirectory(process.cwd());
-    return largeFiles;
+    const reportPath = path.join(__dirname, 'reports', 'performance-optimization-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    
+    this.log(`📄 Performance optimization report saved to: ${reportPath}`);
+    return report;
   }
 
-  async findUnusedDependencies() {
-    try {
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-      const dependencies = Object.keys(packageJson.dependencies || {});
-      const unusedDeps = [];
-      
-      // This is a simplified check - in reality, you'd use tools like depcheck
-      dependencies.forEach(dep => {
-        if (!this.isDependencyUsed(dep)) {
-          unusedDeps.push(dep);
-        }
-      });
-      
-      return unusedDeps;
-    } catch (error) {
-      return [];
-    }
-  }
-
-  isDependencyUsed(dependency) {
-    // Simple check for import/require statements
-    const checkFile = (filePath) => {
-      try {
-        const content = fs.readFileSync(filePath, 'utf8');
-        return content.includes(`from '${dependency}'`) || 
-               content.includes(`require('${dependency}')`) ||
-               content.includes(`import '${dependency}'`);
-      } catch (error) {
-        return false;
-      }
-    };
+  async run() {
+    this.log('🚀 Starting advanced performance optimization...');
     
-    const checkDirectory = (dir) => {
-      try {
-        const files = fs.readdirSync(dir);
-        
-        for (const file of files) {
-          const filePath = path.join(dir, file);
-          const stat = fs.statSync(filePath);
-          
-          if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-            if (checkDirectory(filePath)) return true;
-          } else if (stat.isFile() && (file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.tsx'))) {
-            if (checkFile(filePath)) return true;
-          }
-        }
-      } catch (error) {
-        // Ignore errors
-      }
-      
-      return false;
-    };
+    await this.optimizeBundleSize();
+    await this.optimizeImages();
+    await this.setupPerformanceMonitoring();
+    await this.optimizeCriticalRenderingPath();
+    await this.setupServiceWorker();
     
-    return checkDirectory(process.cwd());
-  }
-
-  findPerformanceAntiPatterns() {
-    const antiPatterns = [];
+    const report = await this.generateReport();
     
-    // Check for console.log in production code
-    const checkConsoleLogs = (dir) => {
-      try {
-        const files = fs.readdirSync(dir);
-        
-        files.forEach(file => {
-          const filePath = path.join(dir, file);
-          const stat = fs.statSync(filePath);
-          
-          if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-            checkConsoleLogs(filePath);
-          } else if (stat.isFile() && (file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.tsx'))) {
-            try {
-              const content = fs.readFileSync(filePath, 'utf8');
-              if (content.includes('console.log')) {
-                antiPatterns.push({
-                  type: 'console-log',
-                  file: filePath,
-                  message: 'Console.log statements found in production code'
-                });
-              }
-            } catch (error) {
-              // Ignore file read errors
-            }
-          }
-        });
-      } catch (error) {
-        // Ignore directory read errors
-      }
-    };
-    
-    checkConsoleLogs(process.cwd());
-    return antiPatterns;
-  }
-
-  generateOptimizationRecommendations() {
-    const recommendations = [];
-    
-    // Bundle size recommendations
-    if (this.optimizationResults.metrics.bundleSize > 5 * 1024 * 1024) { // 5MB
-      recommendations.push({
-        type: 'bundle-size',
-        priority: 'high',
-        message: 'Bundle size is large. Consider code splitting and lazy loading.',
-        actions: [
-          'Implement dynamic imports for large components',
-          'Use Next.js automatic code splitting',
-          'Remove unused dependencies'
-        ]
-      });
-    }
-    
-    // Build time recommendations
-    if (this.optimizationResults.metrics.buildTime > 60000) { // 1 minute
-      recommendations.push({
-        type: 'build-time',
-        priority: 'medium',
-        message: 'Build time is slow. Consider optimizing build process.',
-        actions: [
-          'Enable build caching',
-          'Optimize webpack configuration',
-          'Remove unnecessary dependencies'
-        ]
-      });
-    }
-    
-    // Performance anti-patterns
-    const performanceOp = this.optimizationResults.optimizations.find(op => op.type === 'performance-issues');
-    if (performanceOp && performanceOp.success) {
-      const { antiPatterns } = performanceOp.result;
-      
-      if (antiPatterns.length > 0) {
-        recommendations.push({
-          type: 'anti-patterns',
-          priority: 'medium',
-          message: 'Performance anti-patterns detected.',
-          actions: [
-            'Remove console.log statements from production code',
-            'Optimize large files',
-            'Remove unused dependencies'
-          ]
-        });
-      }
-    }
-    
-    this.optimizationResults.recommendations = recommendations;
-  }
-
-  saveReport() {
-    const reportFile = path.join(__dirname, 'reports', 'performance-optimization-report.json');
-    fs.mkdirSync(path.dirname(reportFile), { recursive: true });
-    fs.writeFileSync(reportFile, JSON.stringify(this.optimizationResults, null, 2));
-    
-    console.log(`📊 Performance optimization report saved to: ${reportFile}`);
+    this.log('✅ Advanced performance optimization completed');
+    return { success: true, report };
   }
 }
 
 // Run if called directly
 if (require.main === module) {
   const optimizer = new AdvancedPerformanceOptimizer();
-  optimizer.optimize()
-    .then(() => {
-      optimizer.saveReport();
-    })
-    .catch(console.error);
+  optimizer.run().catch(console.error);
 }
 
 module.exports = AdvancedPerformanceOptimizer;

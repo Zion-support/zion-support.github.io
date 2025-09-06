@@ -1154,25 +1154,14 @@ h3 {
   .futuristic-bg,
   .quantum-neural-bg,
   .particles-bg {
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2663
+
     background: none !important;
   }
   
-<<<<<<< HEAD
-  .cyber-grid {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+.cyber-grid {
+
     background-size: 15px 15px;
-=======
-  .futuristic-card {
-    box-shadow: none !important;
-    border: 1px solid #000 !important;
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2663
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+
   }
   .matrix-rain {    background: none !important;
 >>>>>>> main
@@ -1224,7 +1213,7 @@ h3 {
   .futuristic-bg,
   .quantum-neural-bg,
   .particles-bg {
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2663
+
     background: none !important;
   }
   
@@ -1233,10 +1222,22 @@ h3 {
 <<<<<<< HEAD
     background-size: 15px 15px;
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+    background-size: 15px 15px;
+=======
+=======
+  .cyber-grid {
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    background-size: 15px 15px;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   .futuristic-card {
     box-shadow: none !important;
     border: 1px solid #000 !important;
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2663
+
   }
 =======
     background-size: 15px 15px;  }

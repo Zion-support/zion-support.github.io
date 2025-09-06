@@ -1,6 +1,4 @@
-
-
-  name: string;
+name: string;
   role?: string;
   text: string;
   avatar?: string
@@ -16,7 +14,6 @@ interface ServiceLandingTemplateProps {;
   benefits: Benefit[];
   testimonials: Testimonial[];
   ctaText: string;
-=======
 import React from "react";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
@@ -26,13 +23,11 @@ export interface Benefit {
   title: string,
   description: string,
   icon?: React.ReactNode
-=======
 import React from 'react';
 export interface Benefit {
   title: string;
   description: string;
   icon?: React.ReactNode;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 export interface Testimonial {
 
@@ -49,12 +44,20 @@ interface ServiceLandingTemplateProps {
   description: string;
   benefits: Benefit[];
   features?: string[];
-  stats?: Array<{ label: string; value: string }>;
-  cta_text: string;
-  cta_link: string;
+  stats?: Array<{ label: string; value: string }>
+  ctaText: string
+  ctaLink: string
+import React from "react",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardFooter } from "@/components/ui/card",;
+import Image from "next/image",;
+export interface Benefit {;
+  title: string,;
+  description: string,;
+  icon?: React.ReactNode;
 }
 export const ServiceLandingTemplate: React.FC < ServiceLandingTemplateProps> = ({
-=======
 
 
 export interface Benefit {
@@ -86,9 +89,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
 
   return (
 
-=======
           </p>
-=======
   testimonials,
   ctaText,
 
@@ -124,7 +125,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {description}
 
     <div className="min - h-screen bg - white">;
@@ -142,7 +142,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
           </p>;
         </div>;
       </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {benefits.length > 0 && (
         <section className="py - 16 px - 4">;
           <div className="max - w-7xl mx - auto">;
@@ -153,31 +152,13 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
               {benefits.map ((benefit, index) => (
                 <div key={index} className="bg - white p - 6 rounded - lg shadow - lg">;
                   {benefit.icon && (
-                    <div className="mb - 4 text - blue - 600">;
-                      {benefit.icon}
-
-          </p>;
-        </div>;
-      </section>;
-
-      {benefits && benefits.length > 0 && (;
-        <section className="py-16 px-4">;
-          <div className="max-w-7xl mx-auto">;
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">;
-              Benefits;
-            </h2>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {benefits && benefits.map((benefit, index) => (;
-                <div key={index} className="bg-white p-6 rounded-lg shadow-lg">;
-                  {benefit && benefit.icon && (;
-                    <div className="mb-4 text-blue-600">;
-                      {benefit && benefit.icon}
-                    </div>;
-
+                    <div className="mb-4 text-blue-600">{benefit.icon}</div>
                   )}
-                  <h3 className="text-xl font-semibold mb-3">{benefit && benefit.title}</h3>;
-                  <p className="text-gray-600">{benefit && benefit.description}</p>;
-                </div>;
+                  <h3 className="text-xl font-semibold mb-3">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-gray-600">{benefit.description}</p>
+                </div>
               ))}
             </div>;
           </div>;
@@ -276,7 +257,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
     </div>;
   );
 
-=======
 
       <section className="py-16 bg-zion-blue-light">
         <div className="container mx-auto px-4">
@@ -379,10 +359,4 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
     </div>);
 }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 },
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

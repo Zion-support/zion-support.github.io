@@ -1,5 +1,15 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-
+<<<<<<< HEAD
+=======
+import React from "react"; ); export default function Authslice() {}; return null} }
+const React from "react"; ); export default function Authslice() { return; }; return null} }""
+import _React from "react"; ); export default function Authslice() {}; return null} }
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
   );
 export default function Authslice() {};
@@ -7,11 +17,9 @@ export default function Authslice() {};
 }
 import React from "react"; ); export default function Authslice() {}; return null} }
 const React from "react"; ); export default function Authslice() { return; }; return null} }""
-
-import _React from "react"; ); export default function Authslice() {}; return null} }
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from "react"; ); export default function Authslice() {}; return null} }
+const React from "react"; ); export default function Authslice() { return; }; return null} }""
+import _React from "react"; ); export default function Authslice() {}; return null} }
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> main

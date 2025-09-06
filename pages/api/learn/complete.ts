@@ -1,5 +1,8 @@
-
-
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import fs from 'fs',;
+import path from 'path',;
+const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
+const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),
 
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
@@ -11,12 +14,17 @@ function writeJson(p: string, data: any) {
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-res.setHeader('AllowPOST')
+    res.setHeader('AllowPOST'),
     return res.status(405).end('Method Not Allowed')
   }
   const { userId = 'demo-user', courseId, enableBoost } = req.body |{}
   if (!courseId) return res.status(400).json({ error: 'courseId required' })
   try {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
     const users = readJson(usersPath);
     const courses = readJson(coursesPath);
@@ -36,6 +44,12 @@ res.setHeader('AllowPOST')
 
     return res.status(200).json({ ok: true, user })
 =======
+<<<<<<< HEAD
+=======
+    return res.status(200).json({ ok: true, user })
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
 import path from 'path',
@@ -65,51 +79,4 @@ if ( {) {
 res.set_header ('AllowPOST'),
     return res.status (405).end ('Method Not Allowed');
   }
-  const { user_id = 'demo - user', course_id, enable_boost } = req.body || {},
-  if (return res.status (400).json ({ error: 'course_id required' }), ) {
-  $2
-}
-  try {
-    const users = read_json (users_path),
-    const courses = read_json (courses_path),
-    const course = courses.find ((c: any) => c.id === course_id),
-    if (return res.status (404).json ({ error: 'Course not found' }), ) {
-  $2
-}
-    const user = users[user_id] || { user_id, name: user_id, slug: user_id, certifications: [], badges: [], boostInSearch: false, progress: {} },
-    if () user.certifications.push (course_id), ) {
-  $2
-}
-    if () user.badges.push (course.certification_badge), ) {
-  $2
-}
-    // Check condition
-if (user.boostInSearch = enable_boost, ) {
-  $2
-}
-    // Mark progress complete;
-    user.progress[course_id] = { completed: true, percent: 100, completed_lessons: (course.lessons || []).map ((l: any) => l.id) },
-    users[user_id] = user,
-    write_json (users_path, users),
-    return res.status (200).json ({ ok: true, user });
-
-  } catch (e: any) {
-    return res.status (500).json ({ error: e?.message ?? 'Failed to complete course' });
-  }
-
-}
-
-=======
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
-  }
-
-}
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+};

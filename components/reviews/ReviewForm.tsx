@@ -1,11 +1,17 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   categories?: {
     communication?: number;
     qualityOfWork?: number;
     timeliness?: number;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -32,8 +38,6 @@ class ErrorBoundary extends React.Component {
  </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {;
   submitting ? 'Submitting...' : 'Submit Review' ;
 }</button> </form>) ;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 };
 
 type Props = {;
@@ -58,7 +62,6 @@ type Props = {;
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;
 
 const ReviewForm: React.FC<Props> = ({ initial }) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [rating, setRating] = useState(0);
   const [text, setText] = useState('');
   const [anonymous, setAnonymous] = useState(false);
@@ -68,6 +71,7 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
   const [wouldWorkWithAgain, setWouldWorkWithAgain] = useState<boolean>(false);
   const [submitting, setSubmitting] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
+<<<<<<< HEAD
 
     wouldWorkWithAgain?: boolean;
   }
@@ -106,6 +110,8 @@ function handle_submit() {
           text,
           anonymous,
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           categories: {
             communication
             qualityOfWork
@@ -114,6 +120,7 @@ function handle_submit() {
           }
         })
       });
+<<<<<<< HEAD
 
 
   async function handleSubmit(): any (e: React && React.FormEvent) {;
@@ -142,6 +149,8 @@ function handle_submit() {
       const data = await res && res.json();
       if (!res && res.ok) throw new Error(data && data.error || 'Failed to submit');
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setMessage('Review submitted! Pending admin approval.');
     } catch (err: any) {;
       setMessage(err && err.message);
@@ -149,6 +158,7 @@ function handle_submit() {
       setSubmitting(false);    }
   }
   return (
+<<<<<<< HEAD
 
     <form onSubmit={handleSubmit} className='space-y-6'>;
       <div>;
@@ -159,6 +169,8 @@ function handle_submit() {
         <label className='block text-sm font-medium mb-2'>Your Review</label>          categories: {;
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const data = await res.json ();
       if (throw new Error (data.error || 'Failed to submit')) {
   $2
@@ -176,12 +188,16 @@ function handle_submit() {
       </div>;
       <div>;
         <label className='block text - sm font - medium mb - 2'>Your Review</label>          categories: {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             communication;
             qualityOfWork;
             timeliness;
             wouldWorkWithAgain}})});
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -190,6 +206,26 @@ function handle_submit() {
   return (
 
 
+=======
+    }
+  }
+  return (
+      <div>
+        <label className="block text-sm font-medium mb-2" htmlFor="input-Overall Rating">Overall Rating</label>
+        <StarRating value={rating} onChange={setRating} />
+      </div>
+      <div>
+    <form onSubmit={handleSubmit} className='space-y-6'>;
+      <div>;
+        <label className='block text-sm font-medium mb-2'>Overall Rating</label>    <form onSubmit={handleSubmit} className="space-y-6">;
+      <div>;
+        <label className="block text-sm font-medium mb-2" htmlFor="input-Overall Rating">Overall Rating</label>;
+        <StarRating value={rating} onChange={setRating} />;
+      </div>;
+
+      <div>;
+        <label className='block text-sm font-medium mb-2'>Your Review</label>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <textarea
           className='w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500'
           rows={5}
@@ -197,21 +233,28 @@ function handle_submit() {
           onChange={e => setText(e && e.target.value)}          required;
         />;
       </div>;
+<<<<<<< HEAD
 
 =======
         <label className="block text-sm font-medium mb-2" htmlFor="input-Your Review">Your Review</label>
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <textarea
           className="w-full rounded-md border border-gray-300 p-3 focus: outline-none focus:ring-2 focus:ring-blue-500"
           rows={5}
           value={text}
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <input
           id='anonymous'
           type='checkbox'
           checked={anonymous}
+<<<<<<< HEAD
 
           onChange={e => setAnonymous(e && e.target.checked)}
         />;
@@ -226,6 +269,8 @@ function handle_submit() {
               value={communication |0}
               onChange={v => setCommunication(v)}
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       set_submitting (false);
     }
   }
@@ -269,11 +314,11 @@ function handle_submit() {
             <StarRating;
               value={communication || 0}
               on_change={v => set_communication (v)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             />;
           </div>;
           <span className='pill'>Optional</span>;
         </div>;
+<<<<<<< HEAD
 
         <div className='enhanced - card'>;
           <div className='flex items - center justify - between mb - 2'>;
@@ -282,10 +327,13 @@ function handle_submit() {
               value={qualityOfWork || 0}
               on_change={v => setQualityOfWork (v)}
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             />;
           </div>;
           <span className='pill'>Optional</span>;
         </div>;
+<<<<<<< HEAD
 
         <div className='enhanced - card'>;
           <div className='flex items - center justify - between mb - 2'>;
@@ -294,10 +342,13 @@ function handle_submit() {
               value={timeliness || 0}
               on_change={v => set_timeliness (v)}
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             />;
           </div>;
           <span className='pill'>Optional</span>;
         </div>;
+<<<<<<< HEAD
 
               onChange={e => setWouldWorkWithAgain(e && e.target.checked)}
 =======
@@ -309,10 +360,13 @@ function handle_submit() {
               checked={wouldWorkWithAgain}
               on_change={e => setWouldWorkWithAgain (e.target.checked)}
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             />;
           </div>;
           <span className='pill'>Optional</span>        </div>;
       </div>;
+<<<<<<< HEAD
 
       </button>;
 
@@ -330,6 +384,17 @@ export default ReviewForm;    </form>;
       >;
         {submitting ? 'Submitting...' : 'Submit Review'}
 
+=======
+      <button
+        type="submit"
+        className="enhanced-button enhanced-button-primary"
+        disabled={submitting}
+      >;
+        {submitting ? 'Submitting...' : 'Submit Review'}
+};
+
+export default ReviewForm;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </button>;
       {message && <p className='text - sm'>{message}</p>}
     </form>);
@@ -340,4 +405,7 @@ export default ReviewForm;    </form>);
 ;
 export default ReviewForm;
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

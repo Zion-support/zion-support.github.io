@@ -41,7 +41,15 @@
   --quantum-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
   --holographic-shadow: 0 0 50px rgba(139, 92, 246, 0.4);
   --neural-glow: 0 0 35px rgba(16, 185, 129, 0.6);
-=======
+}
+  --quantum-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
+  --holographic-shadow: 0 0 50px rgba(139, 92, 246, 0.4);
+  --neural-glow: 0 0 35px rgba(16, 185, 129, 0.6);}
+
+  --quantum-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
+  --holographic-shadow: 0 0 50px rgba(139, 92, 246, 0.4);
+  --neural-glow: 0 0 35px rgba(16, 185, 129, 0.6);
+
   --neural-pulse: 0 0 40px rgba(16, 185, 129, 0.4);
   --quantum-entanglement: 0 0 50px rgba(139, 92, 246, 0.3);
   --quantum-ripple: 0 0 60px rgba(0, 255, 255, 0.2);
@@ -1898,6 +1906,16 @@ body::after {
 <<<<<<< HEAD
 }
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+}
+}
+
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   .particle-quantum,
   .particle-holographic,
   .loading-quantum {

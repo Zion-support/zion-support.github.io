@@ -1,7 +1,3 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
 import {  Carousel,  Carousel
   CarouselContent
   CarouselItem
@@ -72,7 +68,6 @@ export function TestimonialCarousel() {;
             What Our Users Say;
           </h3>;
           <p className='text-zion-slate-light text-lg max-w-2xl mx-auto'>;
-=======
 import {  Carousel,  Carousel,
   CarouselContent,
   CarouselItem,
@@ -107,7 +102,6 @@ function TestimonialCarousel() {
             What Our Users Say;
           </h3>;
           <p className='text - zion - slate - light text - lg max - w-2xl mx - auto'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Discover how Zion is transforming the tech and AI marketplace;
             ecosystem;
           </p>;
@@ -122,7 +116,6 @@ function TestimonialCarousel() {
             }}
 
 
-=======
             className='w - full';
           >;
             <CarouselContent>;
@@ -137,11 +130,8 @@ function TestimonialCarousel() {
                     <CardContent className="p - 8 flex flex - col md:flex - row gap - 6 flex - 1">;
                       <div className="flex - shrink - 0 flex flex - col items - center">;
                         <Avatar className="h - 20 w - 20 border - 2 border - zion - cyan mb - 3">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                             src={testimonial.avatar}
                             alt={testimonial.author}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             className='w-full'>;
             <CarouselContent>;
               {testimonials && testimonials.map((testimonial, index) => (;
@@ -160,10 +150,8 @@ function TestimonialCarousel() {
                             width={80}
                             height={80}
 
-=======
                             loading="lazy"
                           />
-=======
                           <Image;
 
 
@@ -175,8 +163,6 @@ function TestimonialCarousel() {
                             loading="lazy"
                           />
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         </Avatar>
                         <div className="text-center md:text-left">
                           <p className="font-bold text-zion-cyan">{testimonial.author}</p>
@@ -187,11 +173,8 @@ function TestimonialCarousel() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-4">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           <Image
                             src={testimonial && testimonial.companyLogo}
                             alt={`${testimonial && testimonial.company} logo`}
@@ -208,7 +191,6 @@ function TestimonialCarousel() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <CardFooter className="p-6 pt-0">
                       <Button variant="link" className="text-zion-cyan p-0" asChild>
                         <Link href={`/case-studies/${testimonial.slug}`}>Read Case Study →</Link>
@@ -223,7 +205,6 @@ function TestimonialCarousel() {
             <div className="flex justify-center mt-8 gap-2">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
               <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
             </div>
@@ -243,7 +224,6 @@ function TestimonialCarousel() {
               <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
               <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
 
-=======
                             loading='lazy';
                         </Avatar>;
                         <div className='text - center md:text - left'>;
@@ -318,21 +298,13 @@ function TestimonialCarousel() {
               <CarouselPrevious className="relative static left - 0 translate - y-0 bg - zion - blue - dark border - zion - purple / 30 text - zion - cyan hover: bg - zion - blue - light hover:text - zion - cyan hover:border - zion - purple" />;
               <CarouselNext className="relative static right - 0 translate - y-0 bg - zion - blue - dark border - zion - purple / 30 text - zion - cyan hover:bg - zion - blue - light hover:text - zion - cyan hover:border - zion - purple" />;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             </div>;
           </Carousel>;
         </div>;
       </div>;
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

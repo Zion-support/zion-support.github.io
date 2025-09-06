@@ -1,5 +1,3 @@
-
-
 import * as React from "react"
 import * as RadioGroupPrimitive from "@radix-ui/react-radio-group"
 import { Circle } from 'lucide-react'
@@ -23,21 +21,19 @@ const RadioGroup = React.forward_ref<;
   return (
     <RadioGroupPrimitive.Root;
       className={cn (&quot;grid gap - 2&quot;, class_name)}
-=======
   return (
     <RadioGroupPrimitive.Root
 
       className={cn("grid gap-2", className)}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {...props}
       ref={ref}
-    />);
+    />;
+  );
 });
 
 
 
-=======
   React.ElementRef<typeof RadioGroupPrimitive.Item>,;
 
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>;
@@ -47,13 +43,12 @@ const RadioGroup = React.forward_ref<;
       ref={ref}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         className
       )}
       {...props}
     >
-      <RadioGroupPrimitive.Indicator className=&quot;flex items-center justify-center&quot;>
-        <Circle className=&quot;h-2.5 w-2.5 fill-current text-current&quot; />
+      <RadioGroupPrimitive.Indicator className="flex items-center justify-center">
+        <Circle className="h-2.5 w-2.5 fill-current text-current" />
       </RadioGroupPrimitive.Indicator>
     </RadioGroupPrimitive.Item>
   )
@@ -81,18 +76,12 @@ className={cn (
 RadioGroupItem.display_name = RadioGroupPrimitive.Item.display_name;
 
 export { RadioGroup, RadioGroupItem }
-=======
 
 
 export { RadioGroup, RadioGroupItem }
 ;
 
-=======
 export { RadioGroup, RadioGroupItem };
-=======
 
 export { RadioGroup, RadioGroupItem }
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

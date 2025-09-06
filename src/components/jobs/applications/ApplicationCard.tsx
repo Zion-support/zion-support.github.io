@@ -1,6 +1,4 @@
-
-
-  application: JobApplication
+application: JobApplication
 }
 
 import { useState } from 'react';
@@ -58,7 +56,7 @@ function ApplicationCard() {
     toast.info ("Resume download functionality will be implemented soon");
 
   }
-  const renderActionButtons = () =>: any {
+  const renderActionButtons = () => {
     switch (application.status) {
       case 'shortlisted':;
         return (
@@ -77,11 +75,12 @@ function ApplicationCard() {
       case 'rejected':;
 
         return (
-          <Button variant='outline' size='sm'>;
-            <HelpCircle className='h - 4 w - 4 mr - 1' /> View Feedback;
-          </Button>);
-      default:;
-        return null;
+          <Button variant='outline' size='sm'>
+            <HelpCircle className='h-4 w-4 mr-1' /> View Feedback
+          </Button>
+        )
+      default:
+        return null
     }
   }
 
@@ -95,30 +94,29 @@ function ApplicationCard() {
           <Button variant="default" size="sm">
             <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview
           </Button>
-        );
+        ),
       case "interview":
         return (
           <Button variant="default" size="sm">
             <Calendar className="h-4 w-4 mr-1" /> View Interview Details
           </Button>
-        );
+        ),
       case "hired":
         return (
           <Button variant="secondary" size="sm" className="bg-green-100 text-green-800 hover: bg-green-200 hover:text-green-900">
             <FileText className="h-4 w-4 mr-1" /> View Offer
           </Button>
-        );
+        ),
       case "rejected":
         return (
           <Button variant="outline" size="sm">
             <HelpCircle className="h-4 w-4 mr-1" /> View Feedback
           </Button>
-        );
+        ),
       default:
         return null
     }
-  };
-
+  },
 
   return (
     <Card className="overflow-hidden">
@@ -127,11 +125,9 @@ function ApplicationCard() {
           <div>
             <CardTitle>{application.job?.title || "Unknown Job"}</CardTitle>
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false),
 
@@ -139,7 +135,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
     // This would typically download the resume file
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div className="text-sm text-muted-foreground mt-1">
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
             </div>
@@ -168,15 +163,12 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
       <CardContent className='pb - 3'>;
         <ApplicationProgress status={application.status} className='my - 4' />;
 
-=======
 
       
       <CardContent className="pb-3">
         <ApplicationProgress status={application.status} className="my-4" />
         
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {expanded && (
           <div className='mt - 4 space - y-3'>;
             {application.cover_letter && (
@@ -315,14 +307,14 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
                       {application && application.resume.title || 'Resume'}
                     </span>;
                   </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <Button
                     variant='ghost'
                     size='sm'
-                    onClick={handleDownloadResume}>;
-                    <Download className='h-3 w-3 mr-1' /> Download                  </Button>;
-                </div>;
-              </div>;
+                    onClick={handleDownloadResume}
+                  >
+                    <Download className='h-3 w-3 mr-1' /> Download                  </Button>
+                </div>
+              </div>
             )}
 
       
@@ -330,7 +322,6 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
         <ApplicationProgress status={application.status} className="my-4" />
         
 
-=======
                 </p>;
               </div>)}
             {application.resume && (
@@ -350,9 +341,8 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
                     <Download className='h - 3 w - 3 mr - 1' /> Download                  </Button>;
                 </div>;
               </div>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {expanded && (
-          <div className="mt - 4 space - y-3">;
+          <div className="mt-4 space-y-3">
             {application.cover_letter && (
 
 
@@ -382,11 +372,9 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
                 </div>;
               </div>)}
 
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {application.match_score && (
               <div>;
                 <h4 className='text - sm font - medium mb - 1'>Match Score</h4>;
@@ -406,7 +394,6 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <h4 className="text-sm font-medium mb-1">Match Score</h4>
                 <div className="flex items-center">
                   <div className="h-6 w-6 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center text-xs font-medium">
@@ -416,7 +403,6 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
                 </div>
               </div>
 
-=======
 
 import { useState } from "react",;
 import { formatDistanceToNow } from "date-fns",;
@@ -485,32 +471,22 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
 
         {expanded && (;
           <div className="mt-4 space-y-3">;
-            {application && application.cover_letter && (;
+            {application.cover_letter && (;
               <div>;
                 <h4 className="text-sm font-medium mb-1">Your Cover Letter</h4>;
-                <p className="text-sm text-muted-foreground">{application && application.cover_letter}</p>;
+                <p className="text-sm text-muted-foreground">{application.cover_letter}</p>;
               </div>;
             )}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             )}
-
-            {application && application.match_score && (;
-              <div>;
-                <h4 className='text-sm font-medium mb-1'>Match Score</h4>;
-                <div className='flex items-center'>;
-                  <div className='h-6 w-6 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center text-xs font-medium'>;
-                    {application && application.match_score}%;
-                  </div>;
-                  <span className='ml-2 text-xs text-muted-foreground'>;
-                    Relevance to job requirements;
-                  </span>                </div>            {application && application.match_score && (;
+;
+            {application.match_score && (;
               <div>;
                 <h4 className="text-sm font-medium mb-1">Match Score</h4>;
                 <div className="flex items-center">;
                   <div className="h-6 w-6 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center text-xs font-medium">;
-                    {application && application.match_score}%;
+                    {application.match_score}%;
                   </div>;
                   <span className="ml-2 text-xs text-muted-foreground">Relevance to job requirements</span>;
                 </div>;
@@ -532,7 +508,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
 
           </div>
         )}
-=======
 
       </CardContent>
       
@@ -548,7 +523,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
             {renderActionButtons()}
             <Button 
               variant="outline" 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               size="sm"
               asChild
             >
@@ -557,7 +531,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <ExternalLink className="h-4 w-4 mr-1" /> View Job
               </Link>
             </Button>
@@ -565,19 +538,14 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
         </div>
 
         
-=======
 
         
-=======
             <MessageSquare className='h-4 w-4 mr-1' /> Message Client        
-=======
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Button 
           variant="secondary" 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           size="sm"
           className="w-full"
           asChild
@@ -589,7 +557,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
           </Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </Button>
       </CardFooter>
     </Card>
@@ -613,13 +580,11 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
               asChild>;
               <Link href={`/jobs/${application && application.job_id}`}>;
                 <ExternalLink className="h-4 w-4 mr-1" /> View Job;
-=======
 
 }
 ;
 
 
-=======
               <div>;
                 <h4 className="text - sm font - medium mb - 1">Match Score</h4>;
                 <div className="flex items - center">;
@@ -660,7 +625,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
             >;
               <Link href={`/jobs/${application.job_id}`}>;
                 <ExternalLink className="h - 4 w - 4 mr - 1" /> View Job;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </Link>;
             </Button>;
           </div>;
@@ -668,16 +632,12 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
 
 }
 
-=======
           </Link>
         </Button>
       </CardFooter>
     </Card>
   );
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         <Button variant='secondary' size='sm' className='w - full' as_child>;
           <Link href={`/messages?job_id=${application.job_id}`}>;
             <MessageSquare className='h - 4 w - 4 mr - 1' /> Message Client;
@@ -707,4 +667,3 @@ default: return (<Card className="overflow - hidden" > <CardHeader className="pb
 }</CardContent> <Button variant="outline" size="sm" as_child > </Link> </Button> </div> </div> <Button variant="secondary" size="sm" className="w - full" as_child > </Link> </Button> </CardFooter> </Card>);
 }";
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

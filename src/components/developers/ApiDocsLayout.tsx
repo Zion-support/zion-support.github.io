@@ -1,8 +1,3 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -46,7 +41,6 @@ getDocsSearchPath;
 docsSearchSuggestions;
 } from '@/data / docsSearchData';
 
-=======
 
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
 import { cn } from "@/lib/utils",
@@ -58,13 +52,10 @@ import {
 } from "@/data/docsSearchData",
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ApiDocsLayoutProps {
   children: React.ReactNode;
 }
 
-=======
 
   const router = useRouter()
   const currentPath = router.pathname
@@ -73,14 +64,12 @@ interface ApiDocsLayoutProps {
    { title: "Getting Started", path: "/developers/docs/getting-started" },
     { title: "API Reference", path: "/developers/docs/reference" },
 
-=======
   const router = useRouter(),
   const currentPath = router.pathname,
   const [searchValue, setSearchValue] = useState(""),
 
 
 
-=======
   const navigationItems = [
 
    { title: "Getting Started", path: "/developers/docs/getting-started" },
@@ -103,7 +92,6 @@ import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
 import { cn } from "@/lib/utils",;
 import {;
  getDocsSearchPath,;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
  docsSearchSuggestions;
 } from "@/data/docsSearchData";
 
@@ -145,7 +133,6 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
      <div className="hidden md:block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Link href="/developers/docs" className="flex items-center mb-8">
        <div className="bg-gradient-to-r from-zion-purple to-zion-cyan rounded-md w-8 h-8 mr-3 flex items-center justify-center">
         <span className="text-white font-bold">Z</span>
@@ -155,7 +142,6 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
       <div className="mb-6">
        <form onSubmit={handleSubmit} className="relative">
         <Search className="absolute left-2 top-2.5 h-4 w-4 text-zinc-500" />
-=======
      <div className="hidden md: block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto">;
       <Link href="/developers/docs" className="flex items-center mb-8">;
        <div className="bg-gradient-to-r from-zion-purple to-zion-cyan rounded-md w-8 h-8 mr-3 flex items-center justify-center">;
@@ -167,7 +153,6 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
       <div className="mb-6">;
        <form onSubmit={handleSubmit} className="relative">;
         <Search className="absolute left-2 top-2 && 2.5 h-4 w-4 text-zinc-500" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <EnhancedSearchInput
 
 
@@ -177,7 +162,6 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
          searchSuggestions={docsSearchSuggestions}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
          placeholder="Search documentation"
 
         />;
@@ -199,7 +183,6 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
          )}>;
          {item && item.title}
         </Link>;
-=======
 
           "block px-3 py-2 rounded-md text-sm",
           currentPath === item.path
@@ -208,10 +191,8 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
          )}
         >;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
          {item.title}
         </Link>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
        ))}
 
       </nav>;
@@ -256,7 +237,6 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
 }export default ApiDocsLayout;
 "export default ApiDocsLayout;
 
-=======
 export /**
  * ApiDocsLayout - Function description
  */
@@ -344,23 +324,15 @@ if ( {) {
 }</div> </div>);
 }export default ApiDocsLayout;
 "export default ApiDocsLayout;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   children 
 }</div> </div>) 
 }export default ApiDocsLayout;
 "export default ApiDocsLayout;
 
-=======
      </div>;
     </div>;
   );
 }
 ;
 export default ApiDocsLayout;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

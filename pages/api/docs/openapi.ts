@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from "next";
+import v1 from "../../../data/api-docs/v1";
+import { EndpointSpec } from "../../../data/api-docs/types";
+function toOpenApi() {
+  const paths: Record<string, any> = {}
+  v1.sections.forEach((section) => {
+    section.endpoints.forEach((ep: EndpointSpec) => {
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
               }
@@ -6,21 +16,29 @@
             "200": {
               description: "OK"
               content: {
+<<<<<<< HEAD
+=======
 
                   schema: ep && ep.responseBodySchema || { type: "object" },
 =======
                 "application / json": {
                   schema: ep.responseBodySchema || { type: "object" },
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 },
               },
             },
           },
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           security:;
             ep.auth && ep.auth.length > 0 && !ep.auth.includes ("none");
               ? [{ bearer_auth: [] }];
               : [],
+<<<<<<< HEAD
+=======
 
         }));
     });
@@ -47,6 +65,7 @@ function toOpenApi() {
     })
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   });
 
 ;
@@ -74,9 +93,36 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {;
+res.setHeader("Content-Type", "application/json");
+=======
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+  res.setHeader("Content-Type", "application/json");
+>>>>>>> main
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  res.status(200).json(toOpenApi());
+}
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const openapi = {
+    openapi: '3.0.3',
+    info: {
+      title: 'Zion Tech Group API',
+      version: '1.0.0',
+      description: 'API documentation for Zion Tech Group services'
+    },
+}
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+
+}
   res.setHeader('Content-Typeapplication/json');
   res.status(200).json(toOpenApi())
+<<<<<<< HEAD
+=======
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -85,6 +131,7 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
       },
     },
   }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 export default /**
  * handler - Function description
@@ -93,8 +140,13 @@ function handler() {
   res.set_header ("Content - Type", "application / json");
   res.status (200).json (toOpenApi ());
 }
+<<<<<<< HEAD
+
+
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

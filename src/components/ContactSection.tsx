@@ -1,16 +1,10 @@
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    fetch("/api/contact", {
+fetch("/api/contact", {
       method: "POST"
       headers: { "Content-Type": "application/json" }
       body: JSON.stringify(formData)})
       .then(async (res) => {
 
           const data = await res.json().catch(() => ({}));          throw new Error(data.error || "Failed to send message")
-=======
         setIsSubmitting(false),
         if (!res.ok) {
           const data = await res.json().catch(() => ({})),
@@ -29,8 +23,6 @@
         toast({
           title: "Message Sent",
           description: "We've received your message and will get back to you soon."}),
-=======
-=======
 
         setSubmitted(true),
         setTimeout(() => setSubmitted(false), 2000),
@@ -41,7 +33,6 @@
         toast({
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           title: "Submission Error",
           description: err.message,
           variant: "destructive"})
@@ -51,90 +42,94 @@
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
-    <section className="py-20 bg-zion-blue" id="contact">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <GradientHeading>Get In Touch</GradientHeading>
-            <p className="mt-4 text-zion-slate-light text-xl mb-8">
-              We have the equipment, the parts, and the maintenance services ready for you — right now. Contact us today.
-            </p>
-            <div className="flex items-center mb-6">
-              <div className="mr-4 p-2 bg-zion-purple/20 rounded-full text-zion-cyan">
-                <Mail className="h-6 w-6" />
-              </div>
-              <div>
-                <p className="text-white font-semibold">Email Us</p>
-                <a href="mailto:commercial@ziontechgroup.com" className="text-zion-cyan hover:text-zion-purple transition-colors">
-                  commercial@ziontechgroup.com
-                </Link>
+    <section className="py-16 px-4 bg-white">
+      <div className="container mx-auto max-w-6xl">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Ready to transform your business with cutting-edge technology? 
+            Let's discuss how we can help you achieve your goals.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Contact Information */}
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <Mail className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Email</h4>
+                    <p className="text-gray-600">contact@ziontechgroup.com</p>
+                    <p className="text-gray-600">support@ziontechgroup.com</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                    <Phone className="w-6 h-6 text-green-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Phone</h4>
+                    <p className="text-gray-600">+1 (555) 123-4567</p>
+                    <p className="text-gray-600">+1 (555) 987-6543</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                    <MapPin className="w-6 h-6 text-purple-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Office</h4>
+                    <p className="text-gray-600">
+                      123 Tech Street<br />
+                      Innovation District<br />
+                      San Francisco, CA 94105
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
-              Request Commercial Proposal
-            </Button>
+
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h4 className="font-semibold text-gray-900 mb-3">Business Hours</h4>
+              <div className="space-y-2 text-gray-600">
+                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                <p>Saturday: 10:00 AM - 4:00 PM</p>
+                <p>Sunday: Closed</p>
+              </div>
+            </div>
           </div>
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg filter blur-3xl opacity-30"></div>
-            <div className="relative bg-zion-blue-light border border-zion-purple/20 rounded-lg p-8">
-              <h3 className="text-xl font-bold mb-6 text-white">Send Us a Message</h3>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-zion-slate-light mb-1">
-                      Name
-                    </label>
-                    <Input
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.name ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
-                      required
-                    />
-                    {errors.name && (
-                      <p className="mt-1 text-sm text-red-500">{errors.name}</p>
-                    )}
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1">
-                      Email
-                    </label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.email ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
-                      required
-                    />
-                    {errors.email && (
-                      <p className="mt-1 text-sm text-red-500">{errors.email}</p>
-                    )}
-                  </div>
-                </div>
+
+          {/* Contact Form */}
+          <div>
+            <h3 className="text-2xl font-semibold mb-6">Send us a Message</h3>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-zion-slate-light mb-1">
-                    Subject
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    Full Name *
                   </label>
-                  <Input
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.subject ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
                     required
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Your full name"
                   />
-                  {errors.subject && (
-                    <p className="mt-1 text-sm text-red-500">{errors.subject}</p>
-                  )}
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1">
-                    Message
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    Email Address *
                   </label>
                   <Textarea
                     id="message"
@@ -148,7 +143,6 @@ import { Textarea } from "@/components/ui/textarea",;
 import { toast } from "@/components/ui/use-toast",;
 import z from "zod",;
 import { Mail } from 'lucide-react';
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function ContactSection() {;
   const [formData, setFormData] = useState({;
     name: "",;
@@ -158,7 +152,6 @@ export function ContactSection() {;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState<{;
-=======
 ;
 export /**
  * ContactSection - Function description
@@ -172,7 +165,6 @@ function ContactSection() {
   const [is_submitting, setIsSubmitting] = useState (false);
   const [submitted, set_submitted] = useState (false);
   const [errors, set_errors] = useState<{
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     name?: string;
     email?: string;
     subject?: string;
@@ -412,17 +404,27 @@ if ( {) {
                     type="submit"
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
 
-                    disabled={isSubmitting}
-                  >;
+              <div>
+                <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                  Company
+                </label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  value={formData.company}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Your company name"
+                />
+              </div>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
                   {submitted && (
                     <p className="text-green-500 text-center mt-2">Thank you! We'll be in touch.</p>
                   )}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>;
               </form>;
             </div>;
@@ -431,11 +433,8 @@ if ( {) {
       </div>;
 
 
-=======
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </section>);
 }set_errors (field_errors);
 toast ({
@@ -458,11 +457,5 @@ description: err.message;
 }</Button>);
 }</div> </form> </div> </div> </div> </div> </section>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

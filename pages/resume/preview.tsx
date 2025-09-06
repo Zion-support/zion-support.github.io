@@ -1,3 +1,32 @@
+<<<<<<< HEAD
+}</div> </div> <PdfExportButton targetRef= {
+  targetRef
+}fileName= {
+  `resume-$ {
+  activeData.name.replace (/\s+/g, '-') .toLowerCase ()
+}.pdf`
+}/> </div> </div>)
+}if (!user) {
+  return {
+  redirect: {
+}//Placeholder: fetch resume data for the logged-in user and versions if any const initialData: ResumeData = {
+  name: 'Your Name', contact: {
+  email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country', website: 'https://example.com'
+}
+export default function ResumePreviewPage({
+
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const [selectedVersionId, setSelectedVersionId] = useState<string>(
+    versions[0]?.id |'current'
+  );  const targetRef = useRef<HTMLDivElement>(null);
+
+import { GetServerSideProps } from 'next',
+import React, { useMemo, useRef, useState } from 'react',
+import PdfExportButton from '../../components/ui/PdfExportButton',
+import ResumePreview, { ResumeData } from '../../components/ui/ResumePreview',
+import { createServerClient } from '../../utils/supabase/server',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
   }, [selectedVersionId, initialData, versions]);
@@ -13,17 +42,19 @@
 
 
 
-=======
+<<<<<<< HEAD
             onChange={e => setTheme(e && e.target.value as 'light' | 'dark')}
             className='border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black';
           >;
             <option value='light'>Light</option>;
             <option value='dark'>Dark</option>          </select>;
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
           {versions && versions.length > 0 && (;
             <>;
               <label className='text-sm ml-4'>Version</label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <select
                 value={selectedVersionId}
                 onChange={e => setSelectedVersionId(e && e.target.value)}
@@ -37,32 +68,42 @@
               </select>;
             </>;
 
+<<<<<<< HEAD
+
 =======
-import { GetServerSideProps } from 'next';
-import React, { useMemo, useRef, useState } from 'react';
-import PdfExportButton from '../../components/ui/PdfExportButton';
-import ResumePreview, { ResumeData } from '../../components/ui/ResumePreview';
-import { createServerClient } from '../../utils/supabase/server';
+=======
+import { GetServerSideProps } from 'next',
+import React, { useMemo, useRef, useState } from 'react',
+import PdfExportButton from '../../components/ui/PdfExportButton',
+import ResumePreview, { ResumeData } from '../../components/ui/ResumePreview',
+import { createServerClient } from '../../utils/supabase/server',
 export type ResumePreviewPageProps = {
   initialData: ResumeData,
   versions?: Array<{ id: string, label: string, data: ResumeData }>
-};
-
+},
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function ResumePreviewPage({ initialData, versions = [] }: ResumePreviewPageProps) {
 
   const activeData = useMemo(() => {
     if (selectedVersionId === 'current') return initialData;
     const found = versions.find(v => v.id === selectedVersionId);
     return found?.data || initialData
-  }, [selectedVersionId, initialData, versions]);
-
+  }, [selectedVersionId, initialData, versions]),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <div className="relative">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-3">
           <label className="text-sm">Theme</label>
           <select
-            value={theme}
+<<<<<<< HEAD
+
+
+
+=======
+<<<<<<< HEAD
+value={theme}
             onChange={(e) => setTheme(e.target.value as 'light' | 'dark')}
             className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
           >
@@ -76,16 +117,43 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           {versions.length > 0 && (
             <>
               <label className="text-sm ml-4">Version</label>
               <select
+<<<<<<< HEAD
+        </div>
+      </div>
+      <PdfExportButton
+        targetRef={targetRef}
+        fileName={`resume-${activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`}
+      />
+      <div className='mx-auto'>
+=======
+<<<<<<< HEAD
                 value={selectedVersionId}
                 onChange={(e) => setSelectedVersionId(e.target.value)}
                 className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
               >
                 <option value="current">Current</option>
+          >
+            <option value=&quot;light&quot;>Light</option>
+            <option value=&quot;dark&quot;>Dark</option>
+          </select>
+
+          {versions.length > 0 && (
+            <>
+              <label className=&quot;text-sm ml-4&quot;>Version</label>
+              <select
+                value={selectedVersionId}
+                onChange={(e) => setSelectedVersionId(e.target.value)}
+                className=&quot;border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black&quot;
+              >
+                <option value=&quot;current&quot;>Current</option>
+
                 {versions.map(v => (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
       <PdfExportButton targetRef={targetRef} fileName={`resume-${activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`} />
@@ -126,20 +194,21 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
         end: 'Present'
         location: 'Remote'
         bullets: [
+<<<<<<< HEAD
+=======
 
         </div>;
       </div>;
-
       <PdfExportButton
         targetRef={targetRef}
         fileName={`resume-${activeData && activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`}
       />;
-
       <div className='mx-auto'>;
         <ResumePreview ref={targetRef} data={activeData} theme={theme} />;
       </div>;
     </div>;
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
                   <option value={v.id} key={v.id}>{v.label}</option>
                 ))  } catch (error) {
@@ -154,8 +223,11 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 =======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         </div>
       </div>
       <PdfExportButton
@@ -166,12 +238,12 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
         <ResumePreview ref={targetRef} data={activeData} theme={theme} />
       </div>
     </div>
-
-
   );
 
 export const getServerSideProps: GetServerSideProps = async ctx => {;
   // Simple auth guard for talent users; adjust with real roles when available  const supabase = createServerClient();
+<<<<<<< HEAD
+=======
   const user = await (supabase as any).auth && auth.getUser?.();
 
 
@@ -268,6 +340,7 @@ return { props: { initialData, versions } };
       </div>
     </div>
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   )
   } catch (error) {
     console.error("Error:", error);
@@ -344,12 +417,10 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
       },;
     ],;
   };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const versions = [] as Array<{ id: string; label: string, data: ResumeData }>;
 return { props: { initialData, versions } }
 }
-
+<<<<<<< HEAD
 =======
           'Built multi-agent automation systems improving throughput by 40%.Designed AI-driven dashboards and PDF export workflows.']}];
     education: [
@@ -361,9 +432,8 @@ return { props: { initialData, versions } }
   const versions = [] as Array<{ id: string, label: string, data: ResumeData }>,
   return { props: { initialData, versions } }
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 > <option value="light" >Light</option> <option value="dark" >Dark</option> </select>) );
 }</select> </>);
 }</div> </div> <PdfExportButton target_ref= {
@@ -439,6 +509,44 @@ if (return initial_data) {
       </div>;
     </div>);
 ;
+<<<<<<< HEAD
+=======
+=======
+                value={selectedVersionId  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                onChange={(e) => setSelectedVersionId(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
+              >
+                <option value="current">Current</option>
+                {versions.map(v => (
+<<<<<<< HEAD
+                  <option value={v.id} key={v.id}>
+                    {v.label}
+                  </option>                ))}
+              </select>
+            </>
+          )}
+<<<<<<< HEAD
+        </div>
+      </div>
+      <PdfExportButton
+        targetRef={targetRef}
+        fileName={`resume-${activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`}
+      />
+      <div className='mx-auto'>
+        <ResumePreview ref={targetRef} data={activeData} theme={theme} />
+      </div>
+    </div>
+  );
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export const getServerSideProps: GetServerSideProps = async ctx => {
   // Simple auth guard for talent users; adjust with real roles when available  const supabase = createServerClient ();
   const user = await (supabase as any).auth.get_user?.();
@@ -493,7 +601,6 @@ if ( {) {
       },
     ],
     certifications: [;
-      'AWS Certified Solutions Architect – Associate',
       'TensorFlow Developer Certificate',
     ],
     portfolio: [;
@@ -513,7 +620,13 @@ if ( {) {
   const versions = [] as Array<{ id: string; label: string, data: ResumeData }>;
 ;
 return { props: { initial_data, versions } }
+<<<<<<< HEAD
+};
+
+
+=======
 }
+<<<<<<< HEAD
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -522,3 +635,4 @@ return { props: { initial_data, versions } }
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

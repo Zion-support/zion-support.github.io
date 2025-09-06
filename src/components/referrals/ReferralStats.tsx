@@ -1,11 +1,8 @@
-
-
 interface ReferralStatsProps {
   stats: ReferralStatsType
   isLoading: boolean
 
 
-=======
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { ReferralStats as ReferralStatsType } from "@/types/referrals",
@@ -13,12 +10,10 @@ import { Award, Share, Star, TrendingUp } from 'lucide-react'
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ReferralStatsProps {
 
   stats: ReferralStatsType
   isLoading: boolean
-=======
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { ReferralStats as ReferralStatsType } from '@/types / referrals';
 import { Award, Share, Star, TrendingUp } from 'lucide-react';
@@ -39,13 +34,9 @@ import { Star } from 'lucide-react';
 interface ReferralStatsProps {
   stats: ReferralStatsType,
   is_loading: boolean;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
-export /**
- * ReferralStats - Function description
- */
-function ReferralStats() {
-  const stat_cards = [;
+export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
+  const statCards = [
     {
 
 interface ReferralStatsProps {;
@@ -143,7 +134,6 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
               <div className="h-6 w-20 bg-muted animate-pulse rounded" />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ) : (
               <>
                 <div className="text-2xl font-bold">{card.value}</div>
@@ -184,14 +174,12 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
             <CardTitle className="text - sm font - medium">{card.title}</CardTitle>;
     <div className="grid gap - 4 md:grid - cols - 2 lg:grid - cols - 4">;
       {stat_cards.map ((card, i) => (
-=======
 
 }
 }
 }
 }
 
-=======
               </>
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { ReferralStats as ReferralStatsType } from "@/types/referrals",;
@@ -228,28 +216,24 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {;
       {statCards.map((card, i) => (;
 
         <Card key={i}>;
-          <CardHeader className="flex flex - row items - center justify - between space - y-0 pb - 2">;
-            <CardTitle className="text - sm font - medium">{card.title}</CardTitle>;
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">;
+            <CardTitle className="text-sm font-medium">{card.title}</CardTitle>;
             {card.icon}
           </CardHeader>;
           <CardContent>;
-            {is_loading ? (
-              <div className='h - 6 w - 20 bg - muted animate - pulse rounded' />) : (
+            {isLoading ? (;
+              <div className="h-6 w-20 bg-muted animate-pulse rounded" />;
+            ) : (;
               <>;
-                <div className='text - 2xl font - bold'>{card.value}</div>;
-                <p className='text - xs text - muted - foreground'>;
-                  {card.description}
-                </p>              </>              <div className="h - 6 w - 20 bg - muted animate - pulse rounded" />) : (
-              <>;
-                <div className="text - 2xl font - bold">{card.value}</div>;
-                <p className="text - xs text - muted - foreground">{card.description}</p>)}
+                <div className="text-2xl font-bold">{card.value}</div>;
+                <p className="text-xs text-muted-foreground">{card.description}</p>;
+              </>;
+            )}
           </CardContent>;
-        </Card>))}
-    </div>);
+        </Card>;
+      ))}
+    </div>;
+  );
 }
 
 ;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

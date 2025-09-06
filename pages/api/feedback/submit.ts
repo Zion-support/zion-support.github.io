@@ -15,6 +15,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     return res.status(400).json({ error: "Missing responseId or rating" });
   }
   const entry = {
+<<<<<<< HEAD
+=======
 
 
   if (req && req.method !== "POST") return res && res.status(405).end();
@@ -26,6 +28,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     id: responseId,
     rating,
     comment: String(comment || "").slice(0, 2000),
@@ -36,14 +39,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   };
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const rows = readAll();
   rows && rows.push(entry);
   writeAll(rows);
   return res && res.status(200).json({ ok: true });
-
 }
-
+<<<<<<< HEAD
 =======
   if (req.method !== 'POST') return res.status(405).end();
   const { responseId, rating, comment, pagePath, aiModel } = req.body || {};
@@ -64,6 +69,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
 import path from './path';
@@ -80,9 +86,12 @@ function handler() {
   $2
 }
     return res.status (400).json ({ error: "Missing response_id or rating" });
+<<<<<<< HEAD
+=======
 =======
 
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Feedback submitted' });
@@ -169,9 +178,12 @@ export default function handler(req, res) {
     aiModel: String(aiModel || '');
     userAgent: req.headers['user-agent'] || '',;
     ts: Date.now()},;
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const rows = readAll();
   rows.push(entry);
   writeAll(rows);
@@ -205,4 +217,7 @@ export default function handler(req, res) {
 
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

@@ -1,10 +1,12 @@
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
   name: string;
   tagline: string;
   price: string;
-  period: string;
   description: string;
   features: string[];
   category: string;
@@ -20,6 +22,8 @@
     address: string;
     website?: string;
   }
+<<<<<<< HEAD
+=======
 
 =======
 ;
@@ -45,27 +49,31 @@ export const marketValidatedServices: MarketValidatedService[] = [;
       'Deploy a secure, branded AI assistant that answers from your docs with citations, observes costs and latency, and hands off to humans when needed.',
     features: [;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'RAG over your docs with hybrid search',
       'Guardrails: PII / PHI redaction, jailbreak detection',
       'Human handoff + conversation analytics',
       'Slack / Teams / Widget channels',
     ],
     category: 'AI & Assistants',
+<<<<<<< HEAD
+=======
 
     link: 'https://ziontechgroup.com / ai - assistant',
     variant: 'ai - futuristic',
     rating: 4.8,
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 1200,
     trial_days: 14,
     setup_time: '30 minutes',
     contact_info,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
+=======
 
       'Eval datasets/versioning',
-=======
     id: 'ai - evals - observability',
     name: 'AI Evals & Observability',
     tagline:;
@@ -77,26 +85,30 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     features: [;
       'Eval datasets / versioning',
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Policy and toxicity checks',
       'Latency and cost KPIs',
       'Prompt / version diff and alerts',
     ],
     category: 'AI & MLOps',
+<<<<<<< HEAD
+=======
 
     link: 'https://ziontechgroup.com / ai - evals',
     variant: 'quantum - holographic',
     rating: 4.7,
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 600,
     trial_days: 14,
     setup_time: '1 hour',
     contact_info,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
+=======
 
       'Hybrid vector+BM25 + reranker',
-=======
     id: 'agentic - rag - platform',
     name: 'Agentic RAG Platform',
     tagline: 'Production RAG with hybrid search, chunking, tools, and evals',
@@ -107,24 +119,29 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     features: [;
       'Hybrid vector + BM25 + reranker',
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Chunking strategies + citations',
       'Toolformer - style agents',
       'Eval suite and drift monitoring',
     ],
     category: 'AI & Search',
+<<<<<<< HEAD
+=======
 
     link: 'https://ziontechgroup.com / agentic - rag',
     variant: 'quantum - matrix',
     rating: 4.7,
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 900,
     trial_days: 14,
     setup_time: '2 hours',
     contact_info,
   },
+<<<<<<< HEAD
+=======
 
       'Auth/Z misconfig checks',
-=======
   // Security and APIs;
   {
     id: 'api - security - scanner',
@@ -137,14 +154,18 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     features: [;
       'Auth / Z misconfig checks',
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'OWASP Top 10 tests',
       'CI gate',
       'Fix guidance',
     ],
     category: 'Enterprise IT - Security',
+<<<<<<< HEAD
+=======
 
     link: 'https://ziontechgroup.com / api - security - scanner',
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     variant: 'cyberpunk',
     rating: 4 && 4.6,
     customers: 750,
@@ -152,11 +173,11 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     setup_time: '20 minutes',
     contact_info,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
+=======
 
       'OTel traces/metrics/logs',
-=======
     id: 'api - observability',
     name: 'API Observability & SLA Guard',
     tagline: 'OTel tracing, SLOs, and error budgets for services',
@@ -167,14 +188,18 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     features: [;
       'OTel traces / metrics / logs',
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'SLOs & error budgets',
       'Alerting',
       'Dashboards',
     ],
     category: 'Enterprise IT - Observability',
+<<<<<<< HEAD
+=======
 
     link: 'https://ziontechgroup.com / api - observability',
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     variant: 'holographic',
     rating: 4 && 4.6,
     customers: 640,
@@ -182,6 +207,8 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     setup_time: '40 minutes',
     contact_info,
   },
+<<<<<<< HEAD
+=======
 
 =======
   // Cloud and Infra;
@@ -195,15 +222,19 @@ export const marketValidatedServices: MarketValidatedService[] = [;
       'Continuously optimize cloud spend with instance rightsizing, lifecycle policies, anomaly alerts, and container scheduling insights.',
     features: [;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Auto rightsizing',
       'Idle cleanup',
       'Spot orchestration',
       'Anomaly detection',
     ],
     category: 'Enterprise IT - FinOps',
+<<<<<<< HEAD
+=======
 
     link: 'https://ziontechgroup.com / cloud - cost - optimizer',
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     variant: 'quantum',
     rating: 4 && 4.6,
     customers: 820,
@@ -211,8 +242,9 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     setup_time: '1 hour',
     contact_info,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
+=======
 
 =======
     id: 'database - performance - monitor',
@@ -224,24 +256,29 @@ export const marketValidatedServices: MarketValidatedService[] = [;
       'Postgres / MySQL performance insights with slow query ranking, AI tuning suggestions, pool sizing, and SLO dashboards.',
     features: [;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Slow query ranking',
       'AI index advice',
       'Pool tuning',
       'SLA / SLO dashboards',
     ],
     category: 'Enterprise IT - Data',
+<<<<<<< HEAD
+=======
 
     link: 'https://ziontechgroup.com / database - performance - monitor',
     variant: 'neural - quantum',
     rating: 4.7,
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 560,
     trial_days: 14,
     setup_time: '45 minutes',
     contact_info,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
+=======
 
 =======
     id: 'managed - postgres - ha',
@@ -282,24 +319,29 @@ export const marketValidatedServices: MarketValidatedService[] = [;
       'Track uptime, latency, and error budgets with synthetic monitors, alerting, and incident automation.',
     features: [;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Global synthetic checks',
       'Error budgets & burn rates',
       'On - call & escalations',
       'Incident runbooks',
     ],
     category: 'Enterprise IT - SRE',
+<<<<<<< HEAD
+=======
 
     link: 'https://ziontechgroup.com / uptime - slo - monitor',
     variant: 'quantum - cyberpunk',
     rating: 4.5,
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 1100,
     trial_days: 14,
     setup_time: '25 minutes',
     contact_info,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
+=======
 
 =======
     id: 'tls - certificate - monitor',
@@ -311,15 +353,19 @@ export const marketValidatedServices: MarketValidatedService[] = [;
       'Monitor certificates across domains and environments, get renewal reminders and failure alerts.',
     features: [;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Expiry alerts',
       'Issuer checks',
       'Auto - renew validation',
       'Inventory export',
     ],
     category: 'Enterprise IT - Security',
+<<<<<<< HEAD
+=======
 
     link: 'https://ziontechgroup.com / tls - certificate - monitor',
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     variant: 'default',
     rating: 4 && 4.5,
     customers: 2200,
@@ -327,8 +373,9 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     setup_time: '10 minutes',
     contact_info,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
+=======
 
 =======
     id: 'domain - dns - monitor',
@@ -340,15 +387,19 @@ export const marketValidatedServices: MarketValidatedService[] = [;
       'Monitor DNS records and domain settings for unexpected changes and misconfigurations with alerts.',
     features: [;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Change detection',
       'Misconfig alerts',
       'TTL insights',
       'Export & audit',
     ],
     category: 'Enterprise IT - Networking',
+<<<<<<< HEAD
+=======
 
     link: 'https://ziontechgroup.com / domain - dns - monitor',
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     variant: 'default',
     rating: 4 && 4.4,
     customers: 980,
@@ -356,10 +407,11 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     setup_time: '15 minutes',
     contact_info,
   },
+<<<<<<< HEAD
+=======
 
       'HTML/Markdown to PDF',
       'Headers/footers',
-=======
   // Dev & Productivity;
   {
     id: 'pdf - render - api',
@@ -373,22 +425,27 @@ export const marketValidatedServices: MarketValidatedService[] = [;
       'HTML / Markdown to PDF',
       'Headers / footers',
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Watermarks',
       'Async webhooks',
     ],
     category: 'Micro SaaS',
+<<<<<<< HEAD
+=======
 
     link: 'https://ziontechgroup.com / pdf - render - api',
     variant: 'holographic - matrix',
     rating: 4.6,
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 1300,
     trial_days: 7,
     setup_time: '10 minutes',
     contact_info,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
+=======
 
 =======
     id: 'browser - performance - monitor',
@@ -400,24 +457,29 @@ export const marketValidatedServices: MarketValidatedService[] = [;
       'Collect real - user metrics, analyze CWV, and improve UX with actionable waterfalls and alerting.',
     features: [;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'RUM collection',
       'CWV dashboards',
       'Waterfall analysis',
       'Alerts & webhooks',
     ],
     category: 'Micro SaaS',
+<<<<<<< HEAD
+=======
 
     link: 'https://ziontechgroup.com / browser - performance - monitor',
     variant: 'quantum - holographic',
     rating: 4.5,
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 760,
     trial_days: 14,
     setup_time: '20 minutes',
     contact_info,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
+=======
 
 =======
     id: 'feature - flags - edge',
@@ -429,24 +491,29 @@ export const marketValidatedServices: MarketValidatedService[] = [;
       'Ship features safely with edge - evaluated flags, user targeting, and experimentation without latency.',
     features: [;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Edge evaluation',
       'Targeting & segments',
       'Experiments',
       'SDKs & audit',
     ],
     category: 'Micro SaaS',
+<<<<<<< HEAD
+=======
 
     link: 'https://ziontechgroup.com / feature - flags - edge',
     variant: 'quantum - holographic',
     rating: 4.5,
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 430,
     trial_days: 14,
     setup_time: '30 minutes',
     contact_info,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
+=======
 
 =======
     id: 'serverless - cron - manager',
@@ -487,24 +554,29 @@ export const marketValidatedServices: MarketValidatedService[] = [;
       'Automate evidence collection and control mapping with integrations to cloud, code, and ticketing systems.',
     features: [;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Control mapping',
       'Evidence collection',
       'Change tracking',
       'Export & auditor access',
     ],
     category: 'Enterprise IT - Compliance',
+<<<<<<< HEAD
+=======
 
     link: 'https://ziontechgroup.com / soc2 - evidence - automation',
     variant: 'holographic - neural',
     rating: 4.6,
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 310,
     trial_days: 7,
     setup_time: '1 day',
     contact_info,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
+=======
 
 =======
     id: 'vendor - risk - automation',
@@ -545,24 +617,46 @@ export const marketValidatedServices: MarketValidatedService[] = [;
       'Never lose a webhook again. Capture payloads, inspect headers, and replay with backoff and signatures.',
     features: [;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Capture & inspect',
       'Replay with backoff',
       'Signature verification',
       'Forwarding rules',
     ],
     category: 'Micro SaaS',
+<<<<<<< HEAD
+=======
 
     link: 'https://ziontechgroup.com / webhook - relay - replay',
     variant: 'cyberpunk - holographic',
     rating: 4.5,
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 1650,
     trial_days: 14,
     setup_time: '10 minutes',
     contact_info,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
+      'Managed vector DB'
+      'Ingestion pipelines'
+      'Metadata filters'
+      'Access controls'
+    ]
+    category: 'AI & Search'
+    link: 'https://ziontechgroup.com/vector-search-starter'
+    variant: 'quantum'
+    rating: 4.6
+    customers: 410
+    trialDays: 14
+    setupTime: '2 hours'
+    contactInfo
+  }
+];import { ServiceVariant  } from "../types/service-variants";
+
+export interface MarketValidatedService {
+=======
 
 =======
     id: 'audit - log - vault',
@@ -618,6 +712,7 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 =======
   // Search and Knowledge;
   {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     id: 'vector - search - starter',
     name: 'Vector Search Starter',
     tagline: 'Deploy a production - grade vector database and APIs',
@@ -627,20 +722,42 @@ export const marketValidatedServices: MarketValidatedService[] = [;
       'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.',
     features: [;
 
+<<<<<<< HEAD
+
+      'WORM retention',
+      'Export APIs',
+      'Fine - grained access',
+      'Tamper evidence',
+    ],
+    category: 'Enterprise IT - Security',
+    customers: 420,
+    trial_days: 14,
+    setup_time: '30 minutes',
+    contact_info,
+  },
+    customers: 380,
+    trial_days: 7,
+    setup_time: '1 hour',
+    contact_info,
+  },
+=======
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Managed vector DB',
       'Ingestion pipelines',
       'Metadata filters',
       'Access controls',
     ],
     category: 'AI & Search',
+<<<<<<< HEAD
+=======
 
     link: 'https://ziontechgroup.com / vector - search - starter',
 
     variant: 'quantum',
-    rating: 4 && 4.6,
+    rating: 4.6,
     customers: 410,
     trial_days: 14,
     setup_time: '2 hours',
@@ -656,6 +773,7 @@ export interface MarketValidatedService {
 export interface MarketValidatedService {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 	id: string;
 	name: string;
 	tagline: string;
@@ -669,13 +787,18 @@ export interface MarketValidatedService {;
 	rating?: number;
 	customers?: number;
 	trialDays?: number;
+<<<<<<< HEAD
+}}
+=======
 	setupTime?: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
   mobile: "+1 302 464 0950",
 	email: "kleber@ziontechgroup && ziontechgroup.com",
 	address: "364 E Main St STE 1008 Middletown DE 19709";
-
   website: "https://ziontechgroup && ziontechgroup.com";,
 =======
 	contactInfo: {
@@ -1435,7 +1558,6 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 },
 ];,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }}
 
   // Search and Knowledge;
@@ -1468,3 +1590,4 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

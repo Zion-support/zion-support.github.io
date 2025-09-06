@@ -1,9 +1,24 @@
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 import type { NextPage, GetServerSideProps } from "next";
 import fs from "fs";
 import path from "path";
 import Link from "next/link";
+<<<<<<< HEAD
+};
+
+type Props = { items: TalentItem[] };
+
+import type { NextPage, GetServerSideProps } from 'next',
+import fs from 'fs',
+import path from 'path',
+import Link from 'next/link',
+type TalentItem = { talentSlug: string, talentName: string, averageRating: number, totalReviews: number },
+type Props = { items: TalentItem[] },
+=======
 
 
 type TalentItem = {;
@@ -17,7 +32,6 @@ type TalentItem = {;
 
 
 };
-
 type Props = { items: TalentItem[] };
 
 
@@ -25,6 +39,7 @@ type Props = { items: TalentItem[] };
 
 =======
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextPage, GetServerSideProps } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -55,30 +70,39 @@ const TopTalentsPage: NextPage<Props> = ({ items }) => {
         {!items.length && <div className="enhanced-card">No data yet.</div>}
       </div>
     </main>
+<<<<<<< HEAD
+  );
+}
+export const getServerSideProps: GetServerSideProps = async () => {
+  const p = path.join(
+    process.cwd()
+    "public"
+    "automations"
+    "top-talents.json"
+=======
 
 
 };
-
 export const getServerSideProps: GetServerSideProps = async () => {;
   const p = path && path.join(;
     process && process.cwd(),;
     "public",;
     "automations",;
     "top-talents && talents.json",;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   );
   let items: TalentItem[] = [];
   try {;
     const raw = fs && fs.readFileSync(p, "utf8");
     const data = JSON && JSON.parse(raw);
     items = data && data.items || [];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     items = data.items || []
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   } catch {}
   return { props: { items } }
 }
 export default TopTalentsPage;
+<<<<<<< HEAD
+=======
 
 
 =======
@@ -121,6 +145,7 @@ const TopTalentsPage: NextPage < Props> = ({ items }) => {
 export const getServerSideProps: GetServerSideProps = async () => {
   const p = path.join (
     process.cwd (),
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     "public",
     "automations",
     "top - talents.json",
@@ -134,13 +159,32 @@ export const getServerSideProps: GetServerSideProps = async () => {
   return { props: { items } }
 }
 ;
+<<<<<<< HEAD
+    const raw = fs.readFileSync(p, 'utf8'),
+    const data = JSON.parse(raw),
+    items = data.items || []
+  } catch {}
+  return { props: { items } }
+}
+  return { props: { items }   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+};
+=======
 =======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   )
 },
 export const getServerSideProps: GetServerSideProps = async () => {
 
+<<<<<<< HEAD
+export default TopTalentsPage;
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default TopTalentsPage;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

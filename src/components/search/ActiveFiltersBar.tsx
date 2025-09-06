@@ -1,12 +1,7 @@
-
-
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
-=======
 import { X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -18,7 +13,6 @@ interface SearchFilters {
   minRating: number,
   sort: string
 
-=======
 import React from 'react',;
 import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
@@ -71,7 +65,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
       label: 'Category',;
       value: filters.category;
     });
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   
   static getDerivedStateFromError(error) {
@@ -90,7 +83,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 import { X } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
@@ -203,7 +195,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
         <Badge 
           key = {filter.key,}
 
-=======
       
       {activeFilters.map(filter => (
         <Badge 
@@ -212,14 +203,11 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
 
 
           variant="secondary" 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           className="flex items-center gap-1 pl-2 pr-1"
         >
           <span className="text-xs">
             {filter.label}: {filter.value}
           </span>
-=======
     <div className={`flex items-center gap-2 flex-wrap ${className}`}>;
       <span className="text-sm font-medium text-muted-foreground">Active filters:</span>;
 
@@ -231,7 +219,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
           <span className="text-xs">;
             {filter && filter.label}: {filter && filter.value}
           </span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <Button
             variant="ghost"
             size="sm"
@@ -246,7 +233,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
             <X className="h-3 w-3" />
           </Button>
         </Badge>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       ))}
       <Button
         variant="ghost"
@@ -256,7 +242,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
         onClick={onClearAll}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         className="text-xs h-6 px-2"
       >
         Clear all
@@ -420,10 +405,10 @@ if ( {) {
         Clear all;
       </Button>;
     </div>);
-=======
 
 
 },
+
 export default ActiveFiltersBar,
 
         className="text-xs h-6 px-2">;
@@ -449,27 +434,3 @@ interface ActiveFiltersBarProps extends React && React.PropsWithChildren<{}> {;
         className="text-sm text-zion-slate-light hover: text-zion-cyan transition-colors underline"
       >
         Clear all
-      </button>
-    </div>
-  )}
-'"
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-  filters: Filter[];
-  onRemoveFilter: key: string void;
-  onClearAll: : unknown void}
-        className="text - sm text - zion - slate - light hover: text - zion - cyan transition - colors underline";
-      >;
-        Clear all;
-      </button>;
-    </div>)}
-'";
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

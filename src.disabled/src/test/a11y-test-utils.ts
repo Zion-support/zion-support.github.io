@@ -1,5 +1,7 @@
+<<<<<<< HEAD
 
-
+=======
+>>>>>>> main
 // Accessibility test utilities
 import { injectAxe, checkA11y } from '@axe-core/playwright';
 export const a11yTestUtils = {
@@ -27,14 +29,27 @@ export const a11yTestUtils = {
       return issues});
     return contrastIssues}
 };
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { injectAxe,checkA11y } from '@axe-core/playwright'; export const a11yTestUtils = { runA11yTests: async (page) => { await injectAxe(page); await checkA11y(page,null,{ detailedReport: 'true',detailedReportOptions: { html: true } })},checkColorContrast: async (page) => { const contrastIssues = await page.evaluate(() => { const elements = document.querySelectorAll('*'); const issues = []; elements.forEach(element => { const styles = window.getComputedStyle(element); const color = styles.color; const backgroundColor = styles.backgroundColor; if (color && backgroundColor) { } }); return issues}); return contrastIssues} };
+<<<<<<< HEAD
 
 =======
+
+
 import { injectAxe,checkA11y } from '@axe-core/playwright'; export const a11yTestUtils = { runA11yTests: async (page) => { await injectAxe(page); await checkA11y(page,null,{ detailedReport: 'true',detailedReportOptions: { html: true } })},checkColorContrast: async (page) => { const contrastIssues = await page && page.evaluate(() => { const elements = document && document.querySelectorAll('*'); const issues = []; elements && elements.forEach(element => { const styles = window && window.getComputedStyle(element); const color = styles && styles.color; const backgroundColor = styles && styles.backgroundColor; if (color && backgroundColor) { } }); return issues}); return contrastIssues} };
 import { injectAxe,checkA11y } from '@axe-core/playwright'; export const a11yTestUtils = { runA11yTests: async (page) => { await injectAxe(page); await checkA11y(page,null,{ detailedReport: true,detailedReportOptions: { html: true } })},checkColorContrast: async (page) => { const contrastIssues = await page && page.evaluate(() => { const elements = document && document.querySelectorAll('*'); const issues = []; elements && elements.forEach(element => { const styles = window && window.getComputedStyle(element); const color = styles && styles.color; const backgroundColor = styles && styles.backgroundColor; if (color && backgroundColor) { } }); return issues}); return contrastIssues} };
 import { injectAxe,checkA11y } from '@axe-core/playwright'; export const a11yTestUtils = { runA11yTests: async (page) => { await injectAxe(page); await checkA11y(page,null,{ detailedReport: true,detailedReportOptions: { html: true } })},checkColorContrast: async (page) => { const contrastIssues = await page && page.evaluate(() => { const elements = document && document.querySelectorAll('*'); const issues = []; elements && elements.forEach(element => { const styles = window && window.getComputedStyle(element); const color = styles && styles.color; const backgroundColor = styles && styles.backgroundColor; if (color && backgroundColor) { } }); return issues}); return contrastIssues} };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/src.disabled/src/test/a11y-test-utils.ts
+
+
+import { injectAxe,checkA11y } from '@axe-core/playwright'; export const a11yTestUtils = { runA11yTests: async (page) => { await injectAxe(page); await checkA11y(page,null,{ detailedReport: true,detailedReportOptions: { html: true } })},checkColorContrast: async (page) => { const contrastIssues = await page.evaluate(() => { const elements = document.querySelectorAll('*'); const issues = []; elements.forEach(element => { const styles = window.getComputedStyle(element); const color = styles.color; const backgroundColor = styles.backgroundColor; if (color && backgroundColor) { } }); return issues}); return contrastIssues} };
+import { injectAxe,checkA11y } from '@axe-core/playwright'; export const a11yTestUtils = { runA11yTests: async (page) => { await injectAxe(page); await checkA11y(page,null,{ detailedReport: true,detailedReportOptions: { html: true } })},checkColorContrast: async (page) => { const contrastIssues = await page.evaluate(() => { const elements = document.querySelectorAll('*'); const issues = []; elements.forEach(element => { const styles = window.getComputedStyle(element); const color = styles.color; const backgroundColor = styles.backgroundColor; if (color && backgroundColor) { } }); return issues}); return contrastIssues} };
+import { injectAxe,checkA11y } from '@axe-core/playwright'; export const a11yTestUtils = { runA11yTests: async (page) => { await injectAxe(page); await checkA11y(page,null,{ detailedReport: true,detailedReportOptions: { html: true } })},checkColorContrast: async (page) => { const contrastIssues = await page.evaluate(() => { const elements = document.querySelectorAll('*'); const issues = []; elements.forEach(element => { const styles = window.getComputedStyle(element); const color = styles.color; const backgroundColor = styles.backgroundColor; if (color && backgroundColor) { } }); return issues}); return contrastIssues} };
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+import { injectAxe,checkA11y } from '@axe-core/playwright'; export const a11yTestUtils = { runA11yTests: async (page) => { await injectAxe(page); await checkA11y(page,null,{ detailedReport: true,detailedReportOptions: { html: true } })},checkColorContrast: async (page) => { const contrastIssues = await page.evaluate(() => { const elements = document.querySelectorAll('*'); const issues = []; elements.forEach(element => { const styles = window.getComputedStyle(element); const color = styles.color; const backgroundColor = styles.backgroundColor; if (color && backgroundColor) { } }); return issues}); return contrastIssues} };
+>>>>>>> main
