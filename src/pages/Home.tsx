@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { Header } from '../components/Header';
 import Footer from '../components/Footer';
 import { GradientHeading } from '../components/GradientHeading';
@@ -97,12 +98,28 @@ const Home: React.FC = () => {
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4">
           <div className="container mx-auto text-center">
-            <GradientHeading text="Welcome to Zion Tech Group" />
-            <p className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <GradientHeading text="Welcome to Zion Tech Group" />
+            </motion.div>
+            <motion.p 
+              className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
               Leading provider of AI-powered technology solutions and enterprise services. 
               Transform your business with cutting-edge technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+            </motion.p>
+            <motion.div 
+              className="flex flex-col sm:flex-row gap-4 justify-center mt-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
               <Button size="lg" asChild>
                 <Link to="/contact">
                   Get Started
@@ -112,23 +129,36 @@ const Home: React.FC = () => {
               <Button size="lg" variant="outline" asChild>
                 <Link to="/about">Learn More</Link>
               </Button>
-            </div>
+            </motion.div>
           </div>
         </section>
 
         {/* Stats Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <motion.div 
+              className="grid grid-cols-2 md:grid-cols-4 gap-8"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
               {stats.map((stat, index) => (
-                <div key={index} className="text-center">
+                <motion.div 
+                  key={index} 
+                  className="text-center"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
                   <div className="text-4xl font-bold text-blue-600 mb-2">
                     {stat.number}
                   </div>
                   <div className="text-gray-600">{stat.label}</div>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </section>
 
