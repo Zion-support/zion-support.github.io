@@ -1,13 +1,13 @@
 
 import React from 'react';
 
-
-
-
-=======
+const About = () => {
+  return (
+    <div>
+      <h1>About Us</h1>
+      <p>Welcome to our about page.</p>
+    </div>
   );
 };
 
 export default About;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
