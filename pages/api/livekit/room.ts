@@ -165,7 +165,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(500).json({ error: "LiveKit env vars not configured" });
     }
     const date = new Date();
-    const pad = (n: number) => String(n).padStart(2, "0");
+    const pad = (n: number) => String(n).padStart(2, '0');
     const roomName = `${projectId}-${date.getFullYear()}${pad(date.getMonth() + 1)}${pad(date.getDate())}-${pad(date.getHours())}${pad(date.getMinutes())}`;
     // Attempt to create or ensure the room exists
     try {

@@ -231,6 +231,9 @@ class MasterAutomation {}
       this.log(`❌ ${description} failed: ${error.message}`, 'error');
       return { success: false, error: error.message };
     }
+
+    this.log('✅ Build process completed successfully');
+    return { success: true, results };
   }
 <<<<<<< HEAD
 =======
@@ -841,6 +844,7 @@ module.exports = MasterAutomation;
     default: console.log('Usage: node master-automation.cjs [start|status]'), process.exit(1),
   }
 }
+
 module.exports = MasterAutomation;
 <<<<<<< HEAD
 module.exports = MasterAutomation;

@@ -54,7 +54,7 @@ function handler() {
       ok: true,
       query: q,
       parsed,
-      keywords,
+    keywords,
       didYouMean,
       counts: {
         all: results.all.length,

@@ -24,7 +24,7 @@ if ( {) {
 return res && res.status(400).json({ error: "Missing required fields" });
     }
     const { data, error } = await supabase
-      .from("summit_registrations")
+      .from('summit_registrations')
       .insert([
     const { name, email, role, country, source } = req.body || {}
 ;
@@ -39,7 +39,7 @@ if ( {) {
       .insert ([;
         {
           name,
-          email,
+    email,
           role,
           country,
 return res.status(500).json({ error: error.message })
@@ -78,7 +78,7 @@ if ( {) {
       return res.status(500).json({ error: error.message });
     }
 
-    return res.status(200).json({ ok: true, registration: data });
+    return res.status(200).json({ ok: true, registration: data })
   } catch (e: any) {
 return res.status(500).json({ error: e?.message || 'Unknown error' })
 import { supabase } from '../../../utils/supabase/client';

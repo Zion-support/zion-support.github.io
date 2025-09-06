@@ -142,11 +142,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function sanitizeCode(input: string): string {
-  return input
-    .toLowerCase()
-    .replace(/[^a-z0-9-]/g, "-")
-    .replace(/-+/g, "-")
-    .replace(/^-|-$/g, "");
+  return input.toLowerCase().replace(/[^a-z0-9-]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '')
 }
 
 export default async function handler(
@@ -170,15 +166,13 @@ export default async function handler(
       "placeholder-key";
   try {
     if (usingPlaceholder) {
-      return res
-        .status(200)
-        .json({ ok: true, code, status: "pending", mock: true });
+      return res.status(200).json({ ok: true, code, status: 'pending', mock: true })
     }
     const supabase = getServerSupabase();
     const { data: existing, error: existingErr } = await supabase
-      .from("partners")
-      .select("code")
-      .eq("code", code)
+      .from('partners')
+      .select('code')
+      .eq('code', code)
       .maybeSingle();
     if (existingErr) return res.status($1).json({ $2 });
     if (existing) return res.status($1).json({ $2 });

@@ -190,9 +190,9 @@ title
     });
 let faq: Array<{ q: string, a: string }> = [];
     try {
-      faq = JSON.parse(faqResp.choices?.[0]?.message?.content || "[]");
+      faq = JSON.parse(faqResp.choices?.[0]?.message?.content || '[]')
     } catch {
-      faq = [];
+      faq = []
     }
 const h1 = prompt;
     const slug = String(prompt).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');

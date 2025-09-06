@@ -584,21 +584,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         const offers = listOffers({ talentSlug: user.talentSlug });
         return res.json({ ok: true, offers });
       }
-      return bad(res, "Unknown role", 403);
+      return bad(res, "Unknown role", 403)
     }
 
     if (req.method === "POST") {
       // Create an offer (client sends an offer to confirm)
       const client = assertClient(req);
-      const {
-        talentSlug,
-        startDateIso,
-        scopeSummary,
-        paymentTerms,
-        agreementUrl,
-      } = req.body || {};
+      const { talentSlug, startDateIso, scopeSummary, paymentTerms, agreementUrl } = req.body || {};
       if (!talentSlug || !startDateIso || !scopeSummary || !paymentTerms) {
-        return bad(res, "Missing required fields");
+        return bad(res, "Missing required fields")
       }
 
 =======

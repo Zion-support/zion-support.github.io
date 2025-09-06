@@ -73,7 +73,7 @@ if ( {) {
     const data = await fs.read_json (FILE_PATH);
     return res.status (200).json (data);
   await ensure();
-  if (req.method === "GET") {
+  if (req.method === 'GET') {
     const data = await fs.readJson(FILE_PATH);
     return res.status(200).json(data);
 

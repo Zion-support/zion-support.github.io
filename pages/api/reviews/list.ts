@@ -42,8 +42,8 @@ const { targetType, targetId } = req.query as {
       return res.status(400).json({ error: "Missing targetType or targetId" });
 
     }
-    if (targetType !== "talent" && targetType !== "client") {
-      return res.status(400).json({ error: "Invalid targetType" });
+    if (targetType !== 'talent' && targetType !== 'client') {
+      return res.status(400).json({ error: 'Invalid targetType' })
     }
 const all = await readReviews();
     // Include reviews where both sides have submitted and both are approved and not removed
@@ -168,11 +168,11 @@ if (author_name = "Anonymous") {
       )
       .map((r) => {
         let authorName = r.fromId;
-        if (r.fromRole === "talent") {
+        if (r.fromRole === 'talent') {
           const t = TALENT_PROFILES.find((tp) => tp.slug === r.fromId);
-          authorName = t ? t.name : r.fromId;
+          authorName = t ? t.name : r.fromId
         }
-        if (r.anonymous) authorName = "Anonymous";
+        if (r.anonymous) authorName = 'Anonymous';
         return {
 ...r
           authorName
@@ -252,7 +252,7 @@ author_name,
 
     const summary: ReviewsSummary = {
       averageRating,
-      totalReviews,
+    totalReviews,
       totalCompletedProjects,
 mostRecent: publicReviews.slice(0, 5)},
 

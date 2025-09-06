@@ -414,7 +414,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!project) return bad(res, "Not found", 404);
     if (!canAccess(user, project)) return bad(res, "Forbidden", 403);
     if (req.method === "GET") {
-      return res.json({ ok: true, project });
+      return res.json({ ok: true, project })
     }
     if (req.method === "PATCH") {
       const { action } = req.body as { action: string }
@@ -568,7 +568,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         project.documents.push(doc);
         saveProject(project);
-        return res.json({ ok: true, project });
+        return res.json({ ok: true, project })
       }
       if (action === "update_timeline") {
         const { timeline } = req.body as { timeline: Project["timeline"] }
@@ -576,7 +576,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           ? timeline
           : project.timeline;
         saveProject(project);
-        return res.json({ ok: true, project });
+        return res.json({ ok: true, project })
       }
       if (action === "mark_completed") {
         project.status = "COMPLETED";

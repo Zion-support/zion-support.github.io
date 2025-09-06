@@ -141,10 +141,10 @@ if ( {) {
 const toRole = counterpartRole(fromRole);
     };
     if (!projectId || !fromRole || !fromId) {
-      return res.status(400).json({ error: "Missing required fields" });
+      return res.status(400).json({ error: 'Missing required fields' })
     }
     if (!rating || rating < 1 || rating > 5) {
-      return res.status(400).json({ error: "Rating must be between 1 and 5" });
+      return res.status(400).json({ error: 'Rating must be between 1 and 5' })
     }
     if (!text || String(text).trim().length === 0) {
 return res.status(400).json({ error: 'Review text is required' })
@@ -152,7 +152,7 @@ return res.status(400).json({ error: 'Review text is required' })
     }
     const project = await findProjectById(projectId);
     if (!project) {
-      return res.status(404).json({ error: "Project not found" });
+      return res.status(404).json({ error: 'Project not found' })
     }
 if (project.status !== "Completed") {
       return res.status(400).json({
@@ -164,9 +164,7 @@ if (project.status !== "Completed") {
     const toId = toRole === 'talent' ? project.talentSlug : project.clientId;
     const expectedFromId = fromRole === 'client' ? project.clientId : project.talentSlug;
     if (expectedFromId !== fromId) {
-      return res
-        .status(403)
-        .json({ error: "Invalid reviewer for this project" });
+      return res.status(403).json({ error: 'Invalid reviewer for this project' })
     }
     const existing = await hasExistingReview(projectId, fromRole, fromId);
     if (existing) {
@@ -203,9 +201,9 @@ if ( {) {
 }
       id: uuidv4(),
       projectId,
-      fromRole,
+    fromRole,
       fromId,
-      toRole,
+    toRole,
       toId,
 const now = new Date ().toISOString ();
     const review: Review = {

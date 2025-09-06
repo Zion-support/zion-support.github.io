@@ -22,7 +22,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
 
 function writeUsers(data: any) {
-  fs.writeFileSync(usersPath, JSON.stringify(data, null, 2));
+  fs.writeFileSync(usersPath, JSON.stringify(data, null, 2))
+}
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
 <<<<<<< HEAD

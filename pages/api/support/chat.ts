@@ -10,8 +10,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!messages || !Array.isArray(messages)) return res.status(400).json({ error: 'messages required' });
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   const lastUser = [...messages].reverse().find((m) => m.role === 'user');
-  const intent = lastUser ? matchIntent(lastUser.content, articles) : { intentMatched: false, matchedArticleIds: [] };
-  const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+  const intent = lastUser ? matchIntent(lastUser.content, articles) : { intentMatched: false, matchedArticleIds: [] },
+  const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
   // Build context with top matched articles as brief references
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
