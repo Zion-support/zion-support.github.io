@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -14,8 +14,8 @@ import {
   Award
 } from 'lucide-react';
 
-const Home: React.FC = () => {
-  const services = [
+const Home: React.FC = memo(() => {
+  const services = useMemo(() => [
     {
       icon: Brain,
       title: "AI Services",
@@ -37,9 +37,9 @@ const Home: React.FC = () => {
       features: ["Scalable Architecture", "High Availability", "Cost Optimization"],
       color: "from-blue-500 to-cyan-500"
     }
-  ];
+  ], []);
 
-  const features = [
+  const features = useMemo(() => [
     {
       icon: Zap,
       title: "Innovation",
@@ -70,7 +70,7 @@ const Home: React.FC = () => {
       title: "Support",
       description: "24/7 dedicated customer assistance."
     }
-  ];
+  ], []);
 
   return (
     <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -201,6 +201,8 @@ const Home: React.FC = () => {
       </div>
     </div>
   );
-};
+});
+
+Home.displayName = 'Home';
 
 export default Home;

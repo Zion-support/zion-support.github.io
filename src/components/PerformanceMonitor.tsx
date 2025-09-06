@@ -1,61 +1,98 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
 interface PerformanceMetrics {
   loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  isSlow: boolean;
+  domContentLoaded: number;
+  firstContentfulPaint?: number;
+  largestContentfulPaint?: number;
+  firstInputDelay?: number;
+  cumulativeLayoutShift?: number;
 }
 
 const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    isSlow: false
-  });
-
   useEffect(() => {
-    const measurePerformance = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
-      
-      const memory = (performance as any).memory;
-      const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0; // MB
-      
-      const isSlow = loadTime > 3000 || memoryUsage > 50; // 3s or 50MB threshold
-      
-      setMetrics({
-        loadTime: Math.round(loadTime),
-        renderTime: Math.round(performance.now()),
-        memoryUsage: Math.round(memoryUsage * 100) / 100,
-        isSlow
-      });
+    if (process.env.NODE_ENV !== 'development') return;
+
+    const metrics: PerformanceMetrics = {
+      loadTime: 0,
+      domContentLoaded: 0
     };
 
-    // Measure performance after component mounts
-    const timer = setTimeout(measurePerformance, 1000);
-    
-    return () => clearTimeout(timer);
+    // Basic performance metrics
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        if (entry.entryType === 'navigation') {
+          const navEntry = entry as PerformanceNavigationTiming;
+          metrics.loadTime = navEntry.loadEventEnd - navEntry.loadEventStart;
+          metrics.domContentLoaded = navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart;
+        }
+        
+        if (entry.entryType === 'paint') {
+          const paintEntry = entry as PerformancePaintTiming;
+          if (paintEntry.name === 'first-contentful-paint') {
+            metrics.firstContentfulPaint = paintEntry.startTime;
+          }
+        }
+        
+        if (entry.entryType === 'largest-contentful-paint') {
+          const lcpEntry = entry as PerformanceEntry;
+          metrics.largestContentfulPaint = lcpEntry.startTime;
+        }
+        
+        if (entry.entryType === 'first-input') {
+          const fidEntry = entry as PerformanceEventTiming;
+          metrics.firstInputDelay = fidEntry.processingStart - fidEntry.startTime;
+        }
+        
+        if (entry.entryType === 'layout-shift') {
+          const clsEntry = entry as PerformanceEntry & { value: number };
+          metrics.cumulativeLayoutShift = (metrics.cumulativeLayoutShift || 0) + clsEntry.value;
+        }
+      }
+    });
+
+    // Observe different types of performance entries
+    try {
+      observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
+    } catch (e) {
+      console.warn('Performance Observer not supported:', e);
+    }
+
+    // Log metrics after page load
+    const logMetrics = () => {
+      console.group('🚀 Performance Metrics');
+      console.log('Load Time:', `${metrics.loadTime.toFixed(2)}ms`);
+      console.log('DOM Content Loaded:', `${metrics.domContentLoaded.toFixed(2)}ms`);
+      
+      if (metrics.firstContentfulPaint) {
+        console.log('First Contentful Paint:', `${metrics.firstContentfulPaint.toFixed(2)}ms`);
+      }
+      
+      if (metrics.largestContentfulPaint) {
+        console.log('Largest Contentful Paint:', `${metrics.largestContentfulPaint.toFixed(2)}ms`);
+      }
+      
+      if (metrics.firstInputDelay) {
+        console.log('First Input Delay:', `${metrics.firstInputDelay.toFixed(2)}ms`);
+      }
+      
+      if (metrics.cumulativeLayoutShift) {
+        console.log('Cumulative Layout Shift:', metrics.cumulativeLayoutShift.toFixed(4));
+      }
+      
+      console.groupEnd();
+    };
+
+    // Log metrics after a delay to ensure all metrics are collected
+    const timeoutId = setTimeout(logMetrics, 2000);
+
+    return () => {
+      clearTimeout(timeoutId);
+      observer.disconnect();
+    };
   }, []);
 
-  // Only show in development or if performance is poor
-  if (process.env.NODE_ENV !== 'development' && !metrics.isSlow) {
-    return null;
-  }
-
-  return (
-    <div className={`fixed top-4 right-4 z-50 p-3 rounded-lg text-xs font-mono ${
-      metrics.isSlow 
-        ? 'bg-red-100 text-red-800 border border-red-300' 
-        : 'bg-green-100 text-green-800 border border-green-300'
-    }`}>
-      <div className="font-semibold mb-1">Performance</div>
-      <div>Load: {metrics.loadTime}ms</div>
-      <div>Memory: {metrics.memoryUsage}MB</div>
-      {metrics.isSlow && <div className="text-red-600 font-semibold">⚠️ Slow</div>}
-    </div>
-  );
+  return null;
 };
 
 export default PerformanceMonitor;
