@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-class ComprehensiveSyntaxFixer {
+class SrcSyntaxFixer {
   constructor() {
     this.projectRoot = process.cwd();
     this.fixedFiles = [];
@@ -24,11 +24,11 @@ class ComprehensiveSyntaxFixer {
     console.log(`${prefix} [${timestamp}] ${message}`);
   }
 
-  async findFilesWithErrors() {
-    this.log('🔍 Finding files with syntax errors...', 'PROGRESS');
+  async findSrcFilesWithErrors() {
+    this.log('🔍 Finding src files with syntax errors...', 'PROGRESS');
     
     try {
-      const result = execSync('npx eslint . --max-warnings 0 --format json', {
+      const result = execSync('npx eslint src --max-warnings 0 --format json', {
         cwd: this.projectRoot,
         encoding: 'utf8',
         stdio: 'pipe'
@@ -172,6 +172,56 @@ class ComprehensiveSyntaxFixer {
         return match;
       });
 
+      // 11. Fix missing closing braces
+      const missingBracesRegex = /\{([^}]*)$/g;
+      content = content.replace(missingBracesRegex, (match, content) => {
+        if (!content.includes('}')) {
+          fixed = true;
+          return match + '}';
+        }
+        return match;
+      });
+
+      // 12. Fix missing closing brackets
+      const missingBracketsRegex = /\[([^\]]*)$/g;
+      content = content.replace(missingBracketsRegex, (match, content) => {
+        if (!content.includes(']')) {
+          fixed = true;
+          return match + ']';
+        }
+        return match;
+      });
+
+      // 13. Fix missing closing parentheses
+      const missingParenthesesRegex = /\(([^)]*)$/g;
+      content = content.replace(missingParenthesesRegex, (match, content) => {
+        if (!content.includes(')')) {
+          fixed = true;
+          return match + ')';
+        }
+        return match;
+      });
+
+      // 14. Fix missing closing angle brackets in JSX
+      const missingAngleBracketsRegex = /<([^>]*)$/g;
+      content = content.replace(missingAngleBracketsRegex, (match, content) => {
+        if (!content.includes('>')) {
+          fixed = true;
+          return match + '>';
+        }
+        return match;
+      });
+
+      // 15. Fix missing closing quotes in JSX attributes
+      const missingQuotesRegex = /=\s*([^"'\s>]+)(?=\s*[>\/])/g;
+      content = content.replace(missingQuotesRegex, (match, value) => {
+        if (!value.includes('"') && !value.includes("'")) {
+          fixed = true;
+          return `="${value}"`;
+        }
+        return match;
+      });
+
       if (fixed && content !== originalContent) {
         fs.writeFileSync(fullPath, content, 'utf8');
         this.fixedFiles.push(filePath);
@@ -187,10 +237,10 @@ class ComprehensiveSyntaxFixer {
     }
   }
 
-  async fixAllFiles() {
-    this.log('🚀 Starting comprehensive syntax fixing...', 'PROGRESS');
+  async fixAllSrcFiles() {
+    this.log('🚀 Starting src directory syntax fixing...', 'PROGRESS');
     
-    const filesWithErrors = await this.findFilesWithErrors();
+    const filesWithErrors = await this.findSrcFilesWithErrors();
     this.log(`Found ${filesWithErrors.length} files with errors`, 'INFO');
 
     let fixedCount = 0;
@@ -209,7 +259,7 @@ class ComprehensiveSyntaxFixer {
     this.log('🔍 Running linting after fixes...', 'PROGRESS');
     
     try {
-      const result = execSync('npx eslint . --max-warnings 1000 --fix', {
+      const result = execSync('npx eslint src --max-warnings 1000 --fix', {
         cwd: this.projectRoot,
         encoding: 'utf8',
         stdio: 'pipe'
@@ -270,10 +320,10 @@ class ComprehensiveSyntaxFixer {
       }
     };
 
-    const reportPath = path.join(this.projectRoot, 'syntax-fix-report.json');
+    const reportPath = path.join(this.projectRoot, 'src-syntax-fix-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
-    this.log('📊 Syntax Fix Report Generated', 'SUCCESS');
+    this.log('📊 Src Syntax Fix Report Generated', 'SUCCESS');
     this.log(`✅ Files Fixed: ${report.summary.totalFixed}`);
     this.log(`❌ Errors: ${report.summary.totalErrors}`);
     this.log(`📈 Success Rate: ${Math.round(report.summary.successRate)}%`);
@@ -281,11 +331,11 @@ class ComprehensiveSyntaxFixer {
   }
 
   async run() {
-    this.log('🚀 Starting Comprehensive Syntax Fixer');
+    this.log('🚀 Starting Src Syntax Fixer');
     this.log('='.repeat(60));
 
     try {
-      const fixResults = await this.fixAllFiles();
+      const fixResults = await this.fixAllSrcFiles();
       await this.runLinting();
       await this.runTypeCheck();
       await this.runBuild();
@@ -297,10 +347,10 @@ class ComprehensiveSyntaxFixer {
   }
 }
 
-// Run the syntax fixer
+// Run the src syntax fixer
 if (require.main === module) {
-  const fixer = new ComprehensiveSyntaxFixer();
+  const fixer = new SrcSyntaxFixer();
   fixer.run().catch(console.error);
 }
 
-module.exports = ComprehensiveSyntaxFixer;
+module.exports = SrcSyntaxFixer;
