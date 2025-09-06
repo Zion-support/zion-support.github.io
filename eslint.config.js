@@ -52,6 +52,7 @@ export default [
         HTMLParagraphElement: 'readonly',
         HTMLHeadingElement: 'readonly',
         HTMLAnchorElement: 'readonly',
+        HTMLElement: 'readonly',
         MessageEvent: 'readonly',
         RequestInit: 'readonly',
         AbortController: 'readonly',
@@ -122,7 +123,17 @@ export default [
         expect: 'readonly',
         vi: 'readonly',
         Deno: 'readonly',
-        React: 'readonly'
+        React: 'readonly',
+        HTMLElement: 'readonly',
+        HTMLDivElement: 'readonly',
+        HTMLParagraphElement: 'readonly',
+        HTMLHeadingElement: 'readonly',
+        HTMLAnchorElement: 'readonly',
+        MessageEvent: 'readonly',
+        RequestInit: 'readonly',
+        AbortController: 'readonly',
+        Performance: 'readonly',
+        PerformanceNavigationTiming: 'readonly'
       }
     },
     plugins: {
