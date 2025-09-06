@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-191f
     "target": "ES2020",
     "lib": [
       "dom",
@@ -13,10 +16,13 @@
       "es2021",
       "es2022"
     ],
+<<<<<<< HEAD
 =======
     "target": "es5",
     "lib": ["dom", "dom.iterable", "es6"],
 >>>>>>> main
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-191f
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -27,12 +33,17 @@
 =======
     "esModuleInterop": true,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "module": "ESNext",
     "moduleResolution": "node",
 =======
     "module": "esnext",
     "moduleResolution": "bundler",
 >>>>>>> main
+=======
+    "module": "esnext",
+    "moduleResolution": "bundler",
+>>>>>>> cursor/fix-website-loading-errors-and-merge-191f
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",

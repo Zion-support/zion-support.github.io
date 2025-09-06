@@ -2,6 +2,7 @@
   "name": "ziontechgroup-site",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
 <<<<<<< HEAD
     "dev": "vite",
@@ -9,13 +10,13 @@
 =======
     "dev": "next dev",
     "build": "next build",
+    "start": "next start",
     "build:netlify": "node scripts/build-with-error-handling.js",
 >>>>>>> main
     "prebuild": "echo \"Starting build...\"",
     "export": "vite build",
-    "start": "vite preview --port 4173",
     "postbuild": "echo \"Build completed\"",
-    "lint": "eslint .",
+    "lint": "next lint",
     "lint:fix": "eslint . --fix",
     "lint:check": "eslint . --max-warnings 0",
     "type-check": "tsc --noEmit",
@@ -284,8 +285,12 @@
     "@modelcontextprotocol/server-filesystem": "^2025.7.29",
     "@modelcontextprotocol/server-memory": "^2025.8.4",
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
+<<<<<<< HEAD
     "@next/swc-linux-x64-gnu": "^15.5.2",
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    "@next/swc-linux-x64-gnu": "^14.2.32",
+>>>>>>> cursor/fix-website-loading-errors-and-merge-191f
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
     "@radix-ui/react-avatar": "^1.0.4",
@@ -308,6 +313,7 @@
     "@radix-ui/react-toggle": "^1.0.3",
     "@radix-ui/react-tooltip": "^1.0.7",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "@reduxjs/toolkit": "^2.9.0",
     "@sendgrid/mail": "^8.1.5",
     "@stripe/stripe-js": "^7.9.0",
@@ -321,6 +327,10 @@
     "@sendgrid/mail": "^8.1.5",
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    "@reduxjs/toolkit": "^2.9.0",
+    "@stripe/stripe-js": "^7.9.0",
+>>>>>>> cursor/fix-website-loading-errors-and-merge-191f
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.57.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
@@ -328,6 +338,7 @@
     "@tailwindcss/postcss": "^4.1.12",
     "@tailwindcss/typography": "^0.5.16",
     "@tanstack/react-query": "^5.85.5",
+    "@types/mongodb": "^4.0.6",
     "@types/react-datepicker": "^6.2.0",
     "autoprefixer": "^10.4.21",
     "aws-sdk": "^2.1692.0",
@@ -357,7 +368,7 @@
     "jszip": "^3.10.1",
     "lucide-react": "^0.536.0",
     "mongodb": "^6.19.0",
-    "next": "^15.5.2",
+    "next": "^14.2.5",
     "node-cron": "^4.2.1",
     "openai": "^5.11.0",
     "path": "^0.12.7",
@@ -385,9 +396,6 @@
     "@esbuild/linux-x64": "^0.25.9"
   },
   "devDependencies": {
-    "@axe-core/cli": "^4.10.2",
-    "@axe-core/react": "^4.10.2",
-    "@babel/plugin-transform-class-properties": "^7.27.1",
     "@babel/preset-env": "^7.28.3",
     "@babel/preset-react": "^7.27.1",
     "@babel/preset-typescript": "^7.27.1",
@@ -406,6 +414,12 @@
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
     "@types/jest": "^29.5.8",
+    "@types/next": "^8.0.7",
+    "@types/node": "^18.0.0",
+    "@types/node-cron": "^3.0.11",
+    "@types/react": "^18.3.24",
+    "@types/react-dom": "^18.3.7",
+    "@types/react-router-dom": "^5.3.3",
     "@typescript-eslint/eslint-plugin": "^8.42.0",
     "@typescript-eslint/parser": "^8.42.0",
     "@vitejs/plugin-react": "^5.0.2",
@@ -435,7 +449,10 @@
 =======
     "vite": "^7.1.4",
     "web-vitals": "^5.1.0"
+<<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-191f
   },
   "engines": {
     "node": ">=18.0.0",

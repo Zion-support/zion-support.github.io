@@ -10,6 +10,7 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
 <<<<<<< HEAD
+<<<<<<< HEAD
     './src/**/*.{js,ts,jsx,tsx,mdx}',
 =======
 <<<<<<< HEAD
@@ -18,15 +19,12 @@ module.exports = {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-191f
   ],
   theme: {
     extend: {
       colors: {
-<<<<<<< HEAD
-=======
-        background: 'var(--background)',
-        foreground: 'var(--foreground)',
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
         primary: {
           50: '#eff6ff',
 <<<<<<< HEAD
@@ -68,6 +66,7 @@ module.exports = {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.5s ease-out',
 <<<<<<< HEAD
+<<<<<<< HEAD
       },
     },
   },
@@ -97,6 +96,8 @@ module.exports = {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-191f
       },
       keyframes: {
         fadeIn: {
@@ -105,6 +106,7 @@ module.exports = {
         },
         slideUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
+<<<<<<< HEAD
           '100%': { transform: 'translateY(0px)', opacity: '1' }
         },
         scaleIn: {
@@ -187,6 +189,11 @@ module.exports = {
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+      },
+>>>>>>> cursor/fix-website-loading-errors-and-merge-191f
     },
 >>>>>>> main
   },
@@ -200,10 +207,10 @@ module.exports = {
 =======
     require('@tailwindcss/aspect-ratio'),
   ],
-<<<<<<< HEAD
-}
-=======
 };
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-191f

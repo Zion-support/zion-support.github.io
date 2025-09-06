@@ -206,6 +206,21 @@ import ServicesPage from './src/pages/Services';
 import PricingPage from './src/pages/Pricing';
 
 export default function App() {
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+
+<<<<<<< HEAD
+export default function App(): React.JSX.Element {
+=======
+<<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+
+export default function App(): React.JSX.Element {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-191f
   return (
     <ErrorBoundary>
       <Router>
