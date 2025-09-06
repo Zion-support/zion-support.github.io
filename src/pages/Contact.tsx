@@ -101,7 +101,7 @@ const Contact: React.FC = () => {
                   placeholder="Tell us about your project or requirements..."
                 />
               </div>
-              <Button type="submit" variant="primary" size="large" className="w-full">
+              <Button variant="primary" size="lg" className="w-full">
                 Send Message
               </Button>
             </form>

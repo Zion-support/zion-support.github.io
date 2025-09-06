@@ -23,31 +23,37 @@ const Services: React.FC = () => {
             title="AI & Machine Learning"
             description="Transform your business with cutting-edge AI solutions including machine learning, natural language processing, and computer vision."
             icon="🤖"
+            features={["Machine Learning Models", "Natural Language Processing", "Computer Vision", "Predictive Analytics"]}
           />
           <ServiceCard
             title="Cybersecurity"
             description="Protect your digital assets with advanced security solutions, threat detection, and compliance management."
             icon="🔒"
+            features={["Threat Detection", "Security Audits", "Compliance Management", "Incident Response"]}
           />
           <ServiceCard
             title="Cloud Infrastructure"
             description="Scale your operations with robust cloud solutions, migration services, and infrastructure optimization."
             icon="☁️"
+            features={["Cloud Migration", "Infrastructure Optimization", "Auto-scaling", "Cost Management"]}
           />
           <ServiceCard
             title="Digital Transformation"
             description="Modernize your business processes with comprehensive digital transformation strategies and implementation."
             icon="🚀"
+            features={["Process Automation", "Digital Strategy", "Change Management", "Technology Integration"]}
           />
           <ServiceCard
             title="Data Analytics"
             description="Unlock insights from your data with advanced analytics, business intelligence, and reporting solutions."
             icon="📊"
+            features={["Business Intelligence", "Data Visualization", "Real-time Analytics", "Custom Dashboards"]}
           />
           <ServiceCard
             title="IoT Solutions"
             description="Connect and manage your devices with Internet of Things solutions for smart operations and monitoring."
             icon="🌐"
+            features={["Device Management", "Real-time Monitoring", "Data Collection", "Smart Automation"]}
           />
         </div>
 
