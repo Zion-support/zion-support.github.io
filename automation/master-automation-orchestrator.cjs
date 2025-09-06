@@ -218,6 +218,8 @@ class MasterAutomationOrchestrator {
       this.log(`💥 Fatal error in "orchestrator": ${error.message}`, 'ERROR');
       await this.generateFinalReport();
       process.exit(1);
+    }
+  }
 const { execSync } = require('child_process');
 
 console.log('🚀 Starting Master Automation Orchestrator');
@@ -304,6 +306,9 @@ async function runAllAutomations() {
   }
 
   return { results, successCount, failureCount };
+    }
+  }
+}
 }
 
 // Generate comprehensive report
@@ -351,6 +356,8 @@ async function main() {
     const report = generateReport(results);
 
     console.log('\n📊 AUTOMATION SUMMARY');
+    console.log('======');
+    console.log('====================');
     console.log('====================');
     console.log(`Total Tasks: ${report.summary.totalTasks}`);
     console.log(`Successful: ${report.summary.successful}`);
@@ -385,6 +392,7 @@ async function main() {
     process.exit(1);
   }
 }
+main();
 // Run the orchestrator
 const orchestrator = new MasterAutomationOrchestrator();
 orchestrator.run().catch(console.error);
@@ -408,5 +416,7 @@ const { execSync, spawn } = require('child_process')
     this.log(`Overall "Success"`)
     this.log('\n� Phase "Results")
         this.log(`    "Errors"`)
+
+main();
 
 main();

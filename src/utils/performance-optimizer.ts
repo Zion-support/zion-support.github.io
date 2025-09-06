@@ -1,16 +1,33 @@
-// Performance optimization utilities
-export const optimizeImages = () => {
-  const images = document.querySelectorAll('img');
-  images.forEach(img => {
-    if (!img.loading) {
-      img.loading = 'lazy'
-    }
-    if (!img.decoding) {
-      img.decoding = 'async'
-    }
 };
 
-=======
+export const optimizeBundleSize = () => {
+  // Dynamic imports for non-critical components
+  });
+}
+export const optimizeBundleSize = () =>: any {
+  // Dynamic imports for non - critical components;
+  const load_component = component_name => {    return import (`./components/${component_name}`);
+
+  }
+  return { load_component }
+}
+
+  const loadComponent = componentName => {    return import(`./components/${componentName}`);
+
+export const lazyLoadComponents = () => {
+  console.log('Lazy loading components...');
+};
+
+
+    link.href = resource, link.as = resource.endsWith('.css') ? 'style' : 'font';
+;
+  });
+};
+
+export const lazyLoadComponents = () => {
+  console.log('Lazy loading components...')
+}
+
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components
   const loadComponent = componentName => {
@@ -20,6 +37,5 @@ export const optimizeBundleSize = () => {
   return { loadComponent };
 };
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    link.rel = 'preload';
+    link.href = resource, link.as = resource.ends_with ('.css') ? 'style' : 'font';

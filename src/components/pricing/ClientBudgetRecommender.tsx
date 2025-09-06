@@ -1,17 +1,3 @@
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import {logErrorToProduction} from '@/utils/productionLogger',
-import { 
-  getClientBudgetSuggestion,
-  PricingSuggestion,
-  ClientBudgetParams,
-  trackPricingSuggestion
-} from "@/services/pricingSuggestionService",
-import { PricingSuggestionBox } from "./PricingSuggestionBox",
-import { useAuth } from "@/hooks/useAuth",
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Sparkles } from 'lucide-react'
 interface ClientBudgetRecommenderProps {
   onSuggestionApplied: (minValue: number, maxValue: number,) => void
@@ -52,6 +38,11 @@ export const ClientBudgetRecommender: React.FC<
   const handleApplySuggestion = () => {
     if (suggestion) {
       onSuggestionApplied(suggestion.minRate, suggestion.maxRate)
+  jobTitle: string,
+  category: string,
+  timeline?: string,
+  scope?: string,
+  experienceLevel?: string,
   onSuggestionApplied: (minValue: number, maxValue: number) => void
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -110,7 +101,6 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
     if (suggestion) {
       onSuggestionApplied(suggestion.minRate, suggestion.maxRate),
       
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       // Track this suggestion application
       if (user && user.id) {
         trackPricingSuggestion({
@@ -118,29 +108,42 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
           suggestionType: "client",
           suggestedMin: suggestion.minRate,
           suggestedMax: suggestion.maxRate,
-=======
           accepted: true
         })
       }
     }
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          accepted: true
+        })
+      }
+    }
+
+
+
   return (
     <div className="space-y-4">
       <div>
         {!suggestion && !isLoading ? (
           <Button
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            disabled={!jobTitle || !category}
+            className="w-full"
+          >
+            <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation
+
           </Button>
         ) : (
           <PricingSuggestionBox
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
-=======
+}
+if (scope) params.scope = scope
+if (experienceLevel) params.experienceLevel = experienceLevel
+//Track this suggestion application if (user && user.id) {
+  trackPricingSuggestion ({
+}
+
+
+},
             rateType="hourly"
           />
         )}
@@ -148,6 +151,15 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
     </div>;
   );
 };
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
+
+
+return (<div className="space - y-4" > <div> {";
+  !suggestion && !is_loading ? (<Button type="button" variant="outline" on_click={
+  generate_suggestion ";
+}> <Sparkles className="h - 4 w - 4 mr - 2" /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox />);
+}</div> </div>);
+}
+'"  );

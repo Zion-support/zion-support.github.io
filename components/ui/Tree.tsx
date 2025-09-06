@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,15 +23,17 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 
 export interface TreeNode {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   name: string;
   path: string;
 
   type: 'folder' | 'file';
   exists?: boolean;
   children?: TreeNode[];
+function NodeItem({
+  node
+  depth
+  onDeploy
 }: {
-=======
 
 interface TreeProps {;
   nodes: TreeNode[];
@@ -43,15 +44,12 @@ function NodeItem(): any ({;
   depth,;
   onDeploy,;
 }: {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   node: TreeNode;
   depth: number;
-export interface TreeNode {
   name: string
   path: string
   type: "folder" | "file"
 
-=======
 
   const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
   const toggle = () => setOpen(v => !v);
@@ -62,7 +60,14 @@ export interface TreeNode {;
   name: string,;
   path: string,;
   type: "folder" | "file",;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  name: string
+  path: string
+  type: "folder" | "file"
+
+
+  name: string,
+  path: string,
+  type: "folder" | "file",;
   exists?: boolean;
   children?: TreeNode[];
 }
@@ -74,28 +79,6 @@ export interface TreeNode {;
         // Expect an admin token in local storage, fall back to prompt
         "x-admin-token": localStorage.getItem("ADMIN_TOKEN") |""} as any;
       body: JSON.stringify({ path: node.path })})
-  };
-
-  const clonePath = async () => {;
-    const url = `${window && window.location.origin}/api/dev/source-map`;
-    await fetch(url, {;
-      method: 'POST',;
-      headers: {;
-        'Content-Type': 'application/json',;
-        // Expect an admin token in local storage, fall back to prompt;
-        'x-admin-token': localStorage && localStorage.getItem('ADMIN_TOKEN') || '',;
-      } as any,;
-      body: JSON && JSON.stringify({ path: node && node.path }),;
-    });  };      headers: {;
-        "Content-Type": "application/json";
-        // Expect an admin token in local storage, fall back to prompt;
-        "x-admin-token": localStorage && localStorage.getItem("ADMIN_TOKEN") || ""} as any;
-      body: JSON && JSON.stringify({ path: node && node.path })});
-  };
-
-  const deploy = () => onDeploy && onDeploy(node && node.path);
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className='ml-2'>;
       <div className='flex items-center gap-2 py-1'>;
@@ -127,7 +110,6 @@ export interface TreeNode {;
             className='px-2 py-0 && 0.5 text-xs bg-emerald-100 rounded'
             onClick={deploy}
             title='Auto-deploy'>;
-=======
   on_deploy?: (path: string) => void;
 }) {
   const [open, set_open] = useState < boolean>(false);
@@ -210,7 +192,6 @@ function NodeItem ({ node, depth, on_deploy }: { node: TreeNode, depth: number, 
             on_click={deploy}
             title='Auto - deploy';
           >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Deploy;
           </button>;
         </div>;
@@ -219,16 +200,13 @@ function NodeItem ({ node, depth, on_deploy }: { node: TreeNode, depth: number, 
               depth={depth + 1}
               on_deploy={on_deploy}
             />          ))}
-            {open ? "▾" : "▸"}
-          </button>) : (
-          <span className="inline - block w - 4" />)}
-        <span className={`font - mono text - sm ${node.exists ? "text - green - 600" : "text - gray - 500"}`}>;
-          {node.path}
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+          ))}
+        </div>
+      )}
+    </div>
 
 export function Tree(): any ({ nodes, onDeploy }: TreeProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
   return (
     <div className="w-full">;
@@ -236,7 +214,6 @@ export function Tree(): any ({ nodes, onDeploy }: TreeProps) {;
       ))}
     </div>;
   );
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default Tree;
 }node= {
   child
@@ -248,11 +225,18 @@ export default Tree;
 }depth= {
   0
 }onDeploy= {
+  onDeploy 
+}/>) ) ;
+}</div>) ;
+
+export default Tree;
+
+    <div className="w-full">
+      {nodes.map((n) => (
+
 }export default Tree;}
 
 export default Tree;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   child.path;
 }node= {
   child;
@@ -281,4 +265,3 @@ function Tree() {
 }export default Tree;}
 export default Tree;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

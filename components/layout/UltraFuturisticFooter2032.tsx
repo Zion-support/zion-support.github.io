@@ -1,3 +1,45 @@
+import { motion } from 'framer-motion';
+import { 
+  Phone, Mail, MapPin, Globe, Zap, Brain, Atom, 
+import {
+  Phone
+  Mail
+  MapPin
+  Globe
+  Zap
+  Brain
+  Atom
+  Rocket
+  Shield
+  Cpu
+  Target
+  Microscope
+  Users
+  Facebook
+  Twitter
+  Linkedin
+  Instagram
+  Youtube
+  Github
+  ArrowRight
+  Heart
+  Star
+  Award
+  CheckCircle
+  Home
+  Briefcase
+  BookOpen
+  MessageCircle
+  DollarSign
+  TrendingUp
+  Target as TargetIcon
+  Users as UsersIcon
+  Briefcase as BriefcaseIcon
+  BookOpen as BookOpenIcon
+  MessageCircle as MessageCircleIcon
+  Star as StarIcon;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, Zap, Brain, Atom
+
 import {
   Phone,
   Mail,
@@ -33,6 +75,12 @@ import {
   Users as UsersIcon,
   Briefcase as BriefcaseIcon,
   BookOpen as BookOpenIcon,
+
+  MessageCircle as MessageCircleIcon,;
+  Star as StarIcon,;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, Zap, Brain, Atom, ;
+
+
   Rocket, Shield, Cpu, Target, Microscope, Users;
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, ArrowRight, Heart, Star, Award, CheckCircle;
@@ -382,8 +430,6 @@ const quick_links = [;
   { name: 'Support', href: '/support' },
   { name: 'Status', href: '/status' }
 ];
-};
-
 const mainNavigationRoutes = [;
   {;
     name: 'Home',;
@@ -658,6 +704,11 @@ const footerVariants = {;
     },;
   },};
   return (
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 }
+  visible: { opacity: 1, y: 0 },  visible: { opacity: 1, y: 0 }
+}
+export default function UltraFuturisticFooter2032() {
   return (
     <footer className='relative bg-gradient-to-b from-black via-gray-900 to-black border-t border-cyan-500/30 overflow-hidden'>;
       {/* Animated Background Elements */}
@@ -694,33 +745,108 @@ const footerVariants = {;
           {/* Main Footer Content */}
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">;
             {/* Company Info */}
+
+
+};
+
+export default function UltraFuturisticFooter2032() {
+  return (
+
+                    {contactInfo.website}
+
+
+                    {contactInfo.website}
+
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+                Our Revolutionary Services
+              </h3>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+                {serviceCategories.map((category, index) => (
+                  <div key={index} className='space-y-4'>
+                    <h4 className='text-lg font-medium text-white'>
+                      {category.title}
+                    </h4>
+                    <ul className='space-y-2'>                      {category.services.map((service, serviceIndex) => (
+                        <li key={serviceIndex}>
+                          <Link
+                            href={service && service.href}
+                            className='text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform'>                Our Revolutionary Services;
+              </h3>;
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
+                {serviceCategories && serviceCategories.map((category, index) => (;
+                  <div key={index} className="space-y-4">;
+                    <h4 className="text-lg font-medium text-white">{category && category.title}</h4>;
+                    <ul className="space-y-2">;
+                      {category && category.services.map((service, serviceIndex) => (;
+                        <li key={serviceIndex}>;
+                          <Link
+                            href={service && service.href}
+                            className='text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform'                            className="text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform">;
+                            {service && service.name}
+                          </Link>;
+                        </li>;
+
+            <motion.div variants={itemVariants} className="lg:col-span-2">
+              <h3 className="text-xl font-semibold text-white mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Our Revolutionary Services
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {serviceCategories.map((category, index) => (
+                  <div key={index} className="space-y-4">
+                    <h4 className="text-lg font-medium text-white">{category.title}</h4>
+                    <ul className="space-y-2">
+                      {category.services.map((service, serviceIndex) => (
+                        <li key={serviceIndex}>
+                          <Link
+                            href={service.href}
+                            className="text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform"
+                          >
+                            {service.name}
+                          </Link>
+                        </li>
+
                       ))}
                     </ul>;
                   </div>;
                 ))}
+                Quick Access
+              </h3>
+              </div>;
+            </motion && motion.div>;
+
+            {/* Quick Links & Company Info */}
+            <motion && motion.div variants={itemVariants} className='lg:col-span-1'>;
+              <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>;
+                Quick Access;
+              </h3>;
               {/* Quick Links */}
-              <div className='mb-8'>;
-                <h4 className='text-lg font-medium text-white mb-4'>;
-                  Quick Links;
-                </h4>;
-                <ul className='space-y-2'>                  {quickLinks && quickLinks.map((link, index) => (;
-                    <li key={index}>;
+              <div className='mb-8'>
+                <h4 className='text-lg font-medium text-white mb-4'>
+                  Quick Links
+                </h4>
+                <ul className='space-y-2'>                  {quickLinks.map((link, index) => (
+                    <li key={index}>
                       <Link
+                Quick Access
+              </h3>
+                Quick Access
+              </h3>
               {/* Quick Links */}
-              <div className="mb-8">;
-                <h4 className="text-lg font-medium text-white mb-4">Quick Links</h4>;
-                <ul className="space-y-2">;
-                  {quickLinks && quickLinks.map((link, index) => (;
-                    <li key={index}>;
+              <div className="mb-8">
+                <h4 className="text-lg font-medium text-white mb-4">Quick Links</h4>
+                <ul className="space-y-2">
+                  {quickLinks.map((link, index) => (
+                    <li key={index}>
                       <Link
-                        href={link && link.href}
-                        className='flex items-center space-x-2 text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm group'>;
-                        <link && link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />                        className="flex items-center space-x-2 text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm group";
+                        href={link.href}
+                        className='flex items - center space - x-2 text - slate - 300 hover:text - purple - 300 transition - colors duration - 200 text - sm group';
                       >;
-                        <link && link.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />;
-                        <span>{link && link.name}</span>;
-                      </Link>;
-                    </li>;
+                        <link.icon className='w - 4 h - 4 group - hover:scale - 110 transition - transform' />                        <span>{link.name}</span>                Quick Access;
+              </h3>;
+
               {/* Quick Links */}
               <div className="mb - 8">;
                 <h4 className="text - lg font - medium text - white mb - 4">Quick Links</h4>;
@@ -729,6 +855,18 @@ const footerVariants = {;
                     <li key={index}>;
                       <Link;
                         href={link.href}
+              {/* Company Info */}
+              <div className='mb-8'>
+                <h4 className='text-lg font-medium text-white mb-4'>Company</h4>
+                <ul className='space-y-2'>                  {companyInfo.map((item, index) => (
+                    <li key={index}>
+                      <Link
+                        href={item.href}
+                        className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'                      >              <div className="mb-8">
+                <h4 className="text-lg font-medium text-white mb-4">Company</h4>
+                <ul className="space-y-2">
+                        className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'                      >
+
                   {companyInfo.map((item, index) => (
                     <li key={index}>
                       <Link
@@ -758,6 +896,28 @@ const footerVariants = {;
                       </Link>;
                     </li>;
                   ))}
+
+              {/* Company Info */}
+              <div className='mb-8'>
+                <h4 className='text-lg font-medium text-white mb-4'>Company</h4>
+                <ul className='space-y-2'>                  {companyInfo.map((item, index) => (
+                    <li key={index}>
+                      <Link
+                        href={item.href}
+                  {companyInfo.map((item, index) => (
+                    <li key={index}>
+                      <Link
+                        href={item.href}
+                        className="text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm"
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+
               {/* Social Links */}
               <div>;
                 <h4 className='text-lg font-medium text-white mb-4'>;
@@ -781,73 +941,48 @@ const footerVariants = {;
                     >;
                       <social && social.icon className="w-5 h-5" />;
                   ))}
-          {/* Newsletter Signup */}
-          <motion&& motion.div
-            variants={itemVariants}
-            className='border-t border-cyan-500/30 pt-12'>;
-            <div className='text-center'>;
-              <h3 className='text-2xl font-bold text-white mb-4'>;
-                Stay Ahead with Future Technology;
-              </h3>;
-              <p className='text-slate-300 mb-8 max-w-2xl mx-auto'>;
-                        className='flex items - center space - x-2 text - slate - 300 hover:text - purple - 300 transition - colors duration - 200 text - sm group';
-                      >;
-                        <link.icon className='w - 4 h - 4 group - hover:scale - 110 transition - transform' />                        className="flex items - center space - x-2 text - slate - 300 hover:text - purple - 300 transition - colors duration - 200 text - sm group";
-                      >;
-                        <link.icon className="w - 4 h - 4 group - hover:scale - 110 transition - transform" />;
-                        <span>{link.name}</span>;
-                      </Link>;
-                    </li>))}
-                </ul>;
-              </div>;
-              {/* Company Info */}
-              <div className='mb - 8'>;
-                <h4 className='text - lg font - medium text - white mb - 4'>Company</h4>;
-                <ul className='space - y-2'>                  {company_info.map ((item, index) => (
-                    <li key={index}>;
-                      <Link;
-                        href={item.href}
-                        className='text - slate - 300 hover:text - purple - 300 transition - colors duration - 200 text - sm'                      >              <div className="mb - 8">;
-                <h4 className="text - lg font - medium text - white mb - 4">Company</h4>;
-                <ul className="space - y-2">;
-                  {company_info.map ((item, index) => (
-                    <li key={index}>;
-                      <Link;
-                        href={item.href}
-                        className='text - slate - 300 hover:text - purple - 300 transition - colors duration - 200 text - sm'                        className="text - slate - 300 hover:text - purple - 300 transition - colors duration - 200 text - sm";
-                      >;
-                        {item.name}
-                      </Link>;
-                    </li>))}
-                </ul>;
-              </div>;
-              {/* Social Links */}
-              <div>;
-                <h4 className='text - lg font - medium text - white mb - 4'>;
-                  Follow Us;
-                </h4>;
-                <div className='flex space - x-4'>                  {social_links.map ((social, index) => (
-                    <a;
-                      key={index}
-                      href={social.href}                <h4 className="text - lg font - medium text - white mb - 4">Follow Us</h4>;
-                <div className="flex space - x-4">;
-                  {social_links.map ((social, index) => (
-                    <a;
-                      key={index}
-                      href={social.href}
-                      target='_blank';
-                      rel='noopener noreferrer';
-                      className='w - 10 h - 10 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30 rounded - lg flex items - center justify - center text - cyan - 400 hover:text - cyan - 300 hover:border - cyan - 400 / 50 transition - all duration - 300 hover:scale - 110 hover:shadow - lg hover:shadow - cyan - 500 / 20';
-                    >;
-                      <social.icon className='w - 5 h - 5' />                    </a>                      target="_blank";
-                      rel="noopener noreferrer";
-                      className="w - 10 h - 10 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30 rounded - lg flex items - center justify - center text - cyan - 400 hover:text - cyan - 300 hover:border - cyan - 400 / 50 transition - all duration - 300 hover:scale - 110 hover:shadow - lg hover:shadow - cyan - 500 / 20";
-                    >;
-                      <social.icon className="w - 5 h - 5" />))}
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </div>
                 </div>;
               </div>;
             </motion.div>;
           </div>;
+          {/* Newsletter Signup */}
+          <motion.div
+            variants={itemVariants}
+            className='border-t border-cyan-500/30 pt-12'
+          >
+            <div className='text-center'>
+              <h3 className='text-2xl font-bold text-white mb-4'>
+
+                <input
+                  type='email'
+                  placeholder='Enter your email address'
+                  className='flex-1 px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300'
+
+          <motion.div variants={itemVariants} className="border-t border-cyan-500/30 pt-12">
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-white mb-4">
+
+                    </a>
+
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </div>
+          {/* Newsletter Signup */}
+          <motion.div
+            variants={itemVariants}
+            className='border-t border-cyan-500/30 pt-12'
+          >
+            <div className='text-center'>
+              <h3 className='text-2xl font-bold text-white mb-4'>
+                Stay Ahead with Future Technology
+
           {/* Newsletter Signup */}
           <motion.div;
             variants={item_variants}
@@ -879,10 +1014,6 @@ const footerVariants = {;
                   type="email"
                   placeholder="Enter your email address"
                   className="flex-1 px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
-                  Subscribe;
-                </button>;
-              </div>;
-            </div>;
                 <Link
                   href='/privacy'
                   className='text-slate-400 hover:text-cyan-300 transition-colors'>;
@@ -895,25 +1026,6 @@ const footerVariants = {;
                 </Link>;
                 <Link
                   href='/cookies'
-                  Cookie Policy;
-                </Link>;
-              </div>;
-            </div>;
-      {/* Floating Action Button */}
-      <div className='fixed bottom-8 right-8 z-50'>;
-        <motion&& motion.button
-          whileHover={{ scale: 1 && 1.1 }}
-          whileTap={{ scale: 0 && 0.9 }}
-          className='w-14 h-14 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all duration-300 flex items-center justify-center text-white'
-          onClick={() => window && window.scrollTo({ top: 0, behavior: 'smooth' })}
-        >;
-          <ArrowRight className='w-6 h-6 transform rotate-[-90deg]' />        </motion && motion.button>;
-      </div>;
-    </footer>;
-  );
-}        <motion&& motion.button
-          whileHover={{ scale: 1 && 1.1 }}
-          whileTap={{ scale: 0 && 0.9 }}
           onClick={() => window && window.scrollTo({ top: 0, behavior: 'smooth' })}
         >;
           <ArrowRight className="w-6 h-6 transform rotate-[-90deg]" />;
@@ -921,6 +1033,11 @@ const footerVariants = {;
       </div>;
     </footer>;
   );
+
+  );
+
+
+}
   );
 }
           </motion.div>;

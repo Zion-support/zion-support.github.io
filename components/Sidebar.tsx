@@ -12,16 +12,39 @@ class ErrorBoundary extends React.Component {
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
 import React, { useState } from 'react';
 import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  X, 
+  Building2, 
+  Code, 
+  Smartphone, 
+  Cloud, 
+  Shield, 
+  Zap,
+  ShoppingCart,
+  Heart,
+  GraduationCap,
+  Factory,
+  Truck,
+  CreditCard,
+  Phone,
+  Mail,
+  ExternalLink;
+} from 'lucide-react';
+interface SidebarProps {
+  isOpen: boolean, onClose: () => void
+}
         : [...prev, title];
     );
 
@@ -36,8 +59,6 @@ import { motion, AnimatePresence } from 'framer-motion';
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black bg-opacity-50 z-40"
-            onClick={onClose}
             initial={{ x: -300 }}
             animate={{ x: 0 }}
             exit={{ x: -300 }}
@@ -53,7 +74,6 @@ import { motion, AnimatePresence } from 'framer-motion';
                 </div>;
                 <button
                   onClick={onClose}
-                  className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
               {/* Navigation */}
               <nav className="space-y-4">;
                 {Object && Object.entries(navigation).map(([title, links]) => (;
@@ -85,38 +105,6 @@ import { motion, AnimatePresence } from 'framer-motion';
                   <Link
                     href="/contact"
                     className="inline-flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-                    onClick={onClose}>;
-                    <span>Get Started</span>;
-                    <ExternalLink className="w-4 h-4" />;
-                  </Link>;
-              </div>;
-            </div>;
-          </motion && motion.div>;
-        </>;
-      )}
-    </AnimatePresence>;
-  );
-import {
-  X,
-  Building2,
-  Code,
-  Smartphone,
-  Cloud,
-  Shield,
-  Zap,
-  ShoppingCart,
-  Heart,
-  GraduationCap,
-  Factory,
-  Truck,
-  CreditCard,
-  Phone,
-  Mail,
-  ExternalLink;
-} from 'lucide-react';
-;
-interface SidebarProps {
-  is_open: boolean, on_close: () => void,
 }
 const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
   const [open_dropdowns, setOpenDropdowns] = useState < string[]>([]);

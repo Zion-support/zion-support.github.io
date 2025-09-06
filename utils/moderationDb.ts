@@ -1,4 +1,8 @@
 export interface ModerationFlag {
+export interface ModerationFlag {;
+
+
+export interface ModerationFlag {
   id: string;
   contentId: string;
   contentType: string;
@@ -8,7 +12,6 @@ export interface ModerationFlag {
   createdAt: string;
   updatedAt: string;
   adminNotes?: string;
-=======
 export interface ModerationFlag {
   id: string;
   content_id: string;
@@ -18,16 +21,32 @@ export interface ModerationFlag {
   status: 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
   created_at: string;
   admin_notes?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 // Mock data storage - replace with actual database;
 let flags: ModerationFlag[] = [];
 }
 export async function create_flag (data: Partial < ModerationFlag>): Promise < ModerationFlag> {
   const flag: ModerationFlag = {
-  await upsertFlag(flag);
-  return flag;
-=======
+
+
+
+
+// Mock data storage - replace with actual database
+let flags: ModerationFlag[] = [];
+
+export async function getFlagById(id: string): Promise<ModerationFlag | null> {;
+  return flags.find(flag => flag.id === id) || null;
+}
+
+export async function readAllFlags(): Promise<ModerationFlag[]> {;
+  return [...flags];
+}
+
+export async function createFlag(data: Partial<ModerationFlag>): Promise<ModerationFlag> {
+  const flag: ModerationFlag = {
+    id: `flag_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    contentId: data.contentId || '',
+    contentType: data.contentType || 'post',
     id: `flag_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
     content_id: data.content_id || '',
     content_type: data.content_type || 'post',
@@ -56,5 +75,3 @@ if (return undefined) {
   await upsert_flag (flag);
   return flag;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

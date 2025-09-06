@@ -1,34 +1,63 @@
-=======
-
-import { Facebook, Twitter, Loader2 } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { Web3Login } from "./Web3Login",
-import { useState } from "react",
-import { openAuthPopup } from "@/api/authSocial",
-export function SocialLogin() {
-  const [isLoading, setIsLoading] = useState(false),
-
-  const handleGoogle = () => {
-    setIsLoading(true),
-    window.location.href = '/auth/google'
-  },
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="mt-6">
       <div className="relative">
         <div className="absolute inset-0 flex items-center">
           <div className="w-full border-t border-zion-blue-light" />
         </div>
-        <div className="relative flex justify-center text-sm">
-          <span className="px-2 bg-zion-blue-dark text-zion-slate-light">Or continue with</span>
+        <div className='relative flex justify-center text-sm'>
+          <span className='px-2 bg-zion-blue-dark text-zion-slate-light'>
+            Or continue with
+          </span>
         </div>
       </div>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Facebook, Twitter, Loader2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Web3Login } from './Web3Login';
+import { useState } from 'react';
+import { openAuthPopup } from '@/api/authSocial';
+export function SocialLogin() {;
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleGoogle = () => {;
+    setIsLoading(true);
+    window && window.location.href = '/auth/google';
+  };
+
+  return (
+    <div className='mt-6'>;
+      <div className='relative'>;
+        <div className='absolute inset-0 flex items-center'>;
+          <div className='w-full border-t border-zion-blue-light' />;
+        </div>;
+        <div className='relative flex justify-center text-sm'>;
+          <span className='px-2 bg-zion-blue-dark text-zion-slate-light'>;
+import { Facebook, Twitter, Loader2 } from 'lucide-react';
+import { Button } from '@/components / ui / button';
+import { Web3Login } from './Web3Login';
+import { useState } from 'react';
+import { openAuthPopup } from '@/api / auth_social';
+export /**
+ * SocialLogin - Function description
+ */
+function SocialLogin() {
+  const [is_loading, setIsLoading] = useState (false);
+  const handle_google = () =>: any {
+    setIsLoading (true);
+    window.location.href = '/auth / google';
+  }
+  return (
+    <div className='mt - 6'>;
+      <div className='relative'>;
+        <div className='absolute inset - 0 flex items - center'>;
+          <div className='w - full border - t border - zion - blue - light' />;
+        </div>;
+        <div className='relative flex justify - center text - sm'>;
+          <span className='px - 2 bg - zion - blue - dark text - zion - slate - light'>;
+            Or continue with;
+          </span>;
+        </div>;
+      </div>;
+
           {isLoading ? (
             <Loader2 className="h-5 w-5 animate-spin" />
           ) : (
@@ -40,33 +69,38 @@ export function SocialLogin() {
             </svg>
           )}
         </Button>
-        <Button
-=======
-          type="button"
-          variant="outline"
-          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
-          onClick={() => openAuthPopup('facebook')}
-          disabled={isLoading}
-        >
-          <span className="sr-only">Sign in with Facebook</span>
-          <Facebook className="h-5 w-5" />
+        <Web3Login />
+      </div>
+    </div>;
+  );
+};
+
         </Button>
         <Button
           type="button"
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+          onClick={() => openAuthPopup('facebook')}
+          disabled={isLoading}        >;
+          <span className='sr-only'>Sign in with Facebook</span>;
+          <Facebook className='h-5 w-5' />;
+        </Button>;
+        <Button
+          type='button'
+          variant='outline'
+          className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
           onClick={() => openAuthPopup('twitter')}
-          disabled={isLoading}
-        >
-          <span className="sr-only">Sign in with Twitter</span>
-          <Twitter className="h-5 w-5" />
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </Button>
         <Web3Login />
       </div>
     </div>
   )
+
+          disabled={isLoading}        >;
+          <span className='sr-only'>Sign in with Twitter</span>;
+          <Twitter className='h-5 w-5' />;
+
+
 import { Facebook, Twitter, Loader2 } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
 import { Web3Login } from "./Web3Login",;
@@ -132,8 +166,3 @@ export function SocialLogin() {;
       </div>;
     </div>;
   );
-}
-;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

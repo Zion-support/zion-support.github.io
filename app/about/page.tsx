@@ -4,77 +4,14 @@ export const metadata = {;
   description:;
     "Learn about Zion Tech Group's mission to deliver enterprise-grade AI,micro SaaS,and IT solutions that drive real business results.",;
 
-=======
   description:
 
     "Learn about Zion Tech Group's mission to deliver enterprise-grade AI,micro SaaS,and IT solutions that drive real business results.",;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
-export default function AboutPage() {;
+
+export default function AboutPage() {
   return (
-    <div className="animate-fade-in">;
-      {" "}
-      <div className="max-w-4xl mx-auto">;
-        {" "}
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">;
-          About Zion Tech Group;
-        </h1>{" "}
-        <div className="prose prose-lg max-w-none">;
-          {" "}
-          <p className="text-xl text-gray-600 mb-8 leading-relaxed">;
-            {" "}
-            We are a technology consulting firm specializing in AI,micro SaaS;
-            development,and enterprise IT solutions. Our mission is to help;
-            businesses leverage cutting-edge technology to drive growth and;
-            efficiency.{" "}
-          </p>{" "}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">;
-            {" "}
-            <div>;
-              {" "}
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">;
-                Our Mission;
-              </h2>{" "}
-              <p className="text-gray-600 leading-relaxed">;
-                {" "}
-                To democratize access to enterprise-grade technology;
-                solutions,making AI,cloud infrastructure,and software;
-  description:;
-    "Learn about Zion Tech Group's mission to deliver enterprise - grade AI, micro SaaS, and IT solutions that drive real business results.",
-}
-export default /**
- * AboutPage - Function description
- */
-function AboutPage() {
-  return (
-    <div className="animate - fade - in">;
-      {" "}
-      <div className="max - w-4xl mx - auto">;
-        {" "}
-        <h1 className="text - 4xl font - bold text - gray - 900 mb - 8">;
-          About Zion Tech Group;
-        </h1>{" "}
-        <div className="prose prose - lg max - w-none">;
-          {" "}
-          <p className="text - xl text - gray - 600 mb - 8 leading - relaxed">;
-            {" "}
-            We are a technology consulting firm specializing in AI, micro SaaS;
-            development, and enterprise IT solutions. Our mission is to help;
-            businesses leverage cutting - edge technology to drive growth and;
-            efficiency.{" "}
-          </p>{" "}
-          <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8 mb - 12">;
-            {" "}
-            <div>;
-              {" "}
-              <h2 className="text - 2xl font - bold text - gray - 900 mb - 4">;
-                Our Mission;
-              </h2>{" "}
-              <p className="text - gray - 600 leading - relaxed">;
-                {" "}
-                To democratize access to enterprise - grade technology;
-                solutions, making AI, cloud infrastructure, and software;
                 development accessible to businesses of all sizes.{" "}
               </p>{" "}
             </div>{" "}

@@ -1,12 +1,3 @@
-=======
-import { useState } from "react";
-interface TemplateListProps {
-  templates: ContractTemplate[],
-  isLoading: boolean,
-  onSelect: (template: ContractTemplate,) => void,
-  onEdit: (template: ContractTemplate,) => void
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 import { ContractTemplate } from "@/types/contracts",
 import { Button } from "@/components/ui/button",
@@ -15,7 +6,9 @@ import { useContractTemplates } from "@/hooks/useContractTemplates",
 import { Card, CardContent } from "@/components/ui/card",
 import { Separator } from "@/components/ui/separator",
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useAuth } from "@/hooks/useAuth",
+
+
 // useRouter replaces the old useLocation hook from react-router
 
   AlertDialog
@@ -26,6 +19,48 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
   AlertDialogFooter
   AlertDialogHeader
   AlertDialogTitle} from "@/components/ui/alert-dialog"
+import { ContractTemplate } from "@/types/contracts"
+import { Button } from "@/components/ui/button"
+import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react'
+import { useContractTemplates } from "@/hooks/useContractTemplates"
+import { Card, CardContent } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
+import { useAuth } from "@/hooks/useAuth"
+// useRouter replaces the old useLocation hook from react-router
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle} from "@/components/ui/alert-dialog",
+import {
+  AlertDialog;
+  AlertDialogAction;
+  AlertDialogCancel;
+  AlertDialogContent;
+  AlertDialogDescription;
+  AlertDialogFooter;
+  AlertDialogHeader;
+  AlertDialogTitle } from '@/components / ui / alert - dialog';
+import { ContractTemplate  } from '@/types / contracts';
+import { Button  } from '@/components / ui / button';
+import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react';
+import { useContractTemplates  } from '@/hooks / useContractTemplates';
+import { Card, CardContent  } from '@/components / ui / card';
+import { Separator  } from '@/components / ui / separator';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger  } from '@/components / ui / tooltip';
+import { use_auth  } from '@/hooks / use_auth';
+// use_router replaces the old use_location hook from react - router;
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
 import { useState } from "react"
 interface TemplateListProps {
   templates: ContractTemplate[]
@@ -62,7 +97,6 @@ export function TemplateList({
     }
     await setDefaultTemplate.mutateAsync(templateId)
   }
-=======
 import { useState } from "react",
 interface TemplateListProps {
   templates: ContractTemplate[],
@@ -121,11 +155,11 @@ export function TemplateList({;
       router.push(`/auth/login?returnTo=${encodeURIComponent(currentPath)}`);
       return;
     }
+  if (isLoading) {;
+
     await setDefaultTemplate.mutateAsync(templateId)
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (isLoading) {
     return (
       <div className="flex justify-center items-center py-8">
@@ -158,9 +192,8 @@ export function TemplateList({;
                   Last updated: {new Date(template.updated_at).toLocaleDateString()}
                 </p>
               </div>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
               <div className="flex items-center gap-2">
                 <Button
                   variant="ghost"
@@ -198,6 +231,12 @@ export function TemplateList({;
                 <Button
                   variant="ghost"
                   size="icon"
+
+
+
+            
+            <Separator className="my-3" />
+            
                   onClick={() => handleDeleteClick(template.id)}
                   aria-label="Delete template"
                 >
@@ -205,15 +244,12 @@ export function TemplateList({;
                 </Button>
               </div>
             </div>
-=======
             
             <Separator className="my-3" />
             
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <Button 
               onClick={() => onSelect(template)} 
               variant="outline" 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               className="w-full"
             >
               Use This Template
@@ -268,7 +304,25 @@ router.push (`/auth/login?returnTo=$ {
 }onOpenChange= {
   () => setTemplateToDelete (null) "
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction className="bg-destructive text-destructive-foreground hover:bg-destructive/90" onClick={
-=======
+
+                  onClick = {() => handleDeleteClick(template && template.id),}
+                  aria-label="Delete template";
+                >;
+                  <Trash className="h-4 w-4 text-destructive" />;
+                </Button>;
+              </div>;
+            </div>;
+
+            <Separator className="my-3" />;
+
+            <Button
+              onClick = {() => onSelect(template),}
+              variant="outline" ;
+              className="w-full";
+            >;
+              Use This Template;
+            </Button>;
+          </CardContent>;
 ;
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>;
         <AlertDialogContent>;
@@ -293,6 +347,3 @@ router.push (`/auth/login?returnTo=$ {
   );
 }
 ;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

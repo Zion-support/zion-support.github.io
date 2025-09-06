@@ -1,14 +1,3 @@
-interface SmartContractBuilderProps {
-
-  isOpen: boolean
-  onClose: () => void
-  talent: TalentProfile
-  clientName: string
-  onContractGenerated?: (contractContent: string,) => void
-
-}
-export function SmartContractBuilder({
-  isOpen;
   onClose;
   talent;
   clientName;
@@ -32,8 +21,6 @@ export function SmartContractBuilder({
     setFormValues(templateData)
   }
   // Convert ContractFormValues to contract content string
-  const handleDeployContract = async () => {
-    if (!generatedContract) return;
     try {
       setDeployStatus('deploying')
       const contractInfo = await deploySmartContract(generatedContract, deployOptions)
@@ -46,46 +33,6 @@ export function SmartContractBuilder({
         toast.error("Failed to deploy smart contract")
       }
     } catch (error) {
-      logErrorToProduction('Error deploying contract:', { data: error })
-      setDeployStatus('error')
-      toast.error("Failed to deploy smart contract")
-    }
-  }
-// Placeholder ABIs - these should be generated from compiled contracts
-const SIMPLE_AGREEMENT_ABI: ethers.InterfaceAbi = ["constructor(address client, address talent, string projectDetailsIPFSHash)"
-  "function client() view returns(address)"
-  "function talent() view returns(address)"
-  "function projectDetailsIPFSHash() view returns(string)"
-]
-const ESCROW_AGREEMENT_ABI: ethers.InterfaceAbi = [// From Ownable
-  "constructor(address initialOwner)"
-  "function owner() view returns(address)"
-  "event OwnershipTransferred(address indexed previousOwner, address indexed newOwner)"
-  "function renounceOwnership()"
-  "function transferOwnership(address newOwner)"
-  // From Escrow
-  "event Deposited(address indexed payee, uint256 weiAmount)"
-  "event Withdrawn(address indexed payee, uint256 weiAmount)"
-  // EscrowAgreement specific(based on previous subtask's template)
-  "constructor(address _talent, address _client, string memory _projectDetailsIPFSHash)", // Note: Ownable takes _client
-  "function talent() view returns(address)"
-  "function projectDetailsIPFSHash() view returns(string)"
-  "function currentState() view returns(uint8)", // Enum EscrowState
-  "function depositFunds() payable"
-  "function releaseFunds()"
-  "function markAsDelivered()"
-  "function raiseDispute()"
-]
-interface SmartContractBuilderProps {
-  isOpen: boolean
-  onClose: () => void;
-  talent: TalentProfile;
-  clientName: string; // Assuming clientName is passed as a prop
-  onContractGenerated?: (contractContent: string) => void; // For Solidity
-  onLegalDraftGenerated?: (markdownContent: string) => void; // For Markdown
-  onDeploy?: (contractContent: string) => void}
-// Helper to ensure milestones are always an array
-}
   return []}
 export function SmartContractBuilder({
   isOpen
@@ -154,37 +101,21 @@ export function SmartContractBuilder({
     setActiveTab("form")}
   // For generating Solidity(existing logic, adapted)
       return}
-    try {
-      // Assuming generateSolidityContract now primarily uses formValues
-      // and talent/clientName are for context or specific template variables.setGeneratedSolidityContract(solidityCode)
-      if(onContractGenerated) { // Existing prop for Solidity
-        onContractGenerated(solidityCode)}
-      // Potentially switch to a Solidity preview tab if that's different
-      // For now, let's assume the main "Preview" tab can show Solidity if deployOptions.deployToChain is true
-      // Or if there's a specific action for "Preview Solidity"
-      toast.success("Solidity code generated (simulated).")
-      // setActiveTab("preview"); // Or a specific solidity preview tab
-} catch(error) {
-      console.error("Error generating Solidity contract:", error)
-      toast.error("Failed to generate Solidity contract.")}
-  }
-  // New function for generating Markdown legal draft
-      return}
-    setIsLoadingLegalDraft(true)
-    setLegalDraftError(null)
-    setGeneratedMarkdownContract(null)
-    try {
-      const { data, error } = await supabase.functions.invoke('generate-contract', {
-        body: payload,
-})
-      if(error) {
         throw error}
       if(data && data.markdownContent) { // Assuming your Supabase func returns { markdownContent: "..." }
         setGeneratedMarkdownContract(data.markdownContent)
         if(onLegalDraftGenerated) {
           onLegalDraftGenerated(data.markdownContent)}
-        setActiveTab("preview_markdown"); // Switch to a new tab for Markdown preview
-        toast.success("Legal draft generated successfully!")} else {
+  }
+      toast.info ("Generating PDF...");
+      html2pdf ().from (element).set (opt).save ();
+        .then (() => toast.success ("PDF downloaded successfully!"));
+        .catch ((err) => {
+          toast.error ("PDF generation failed.");
+          console.error ("Error generating PDF:", err)})} else {
+      toast.warn ("No draft content available to download or form values missing.")}
+  }
+      return}
         throw new Error("No content received from draft generator.")}
     } catch(err: any) {
       console.error("Error generating legal draft:", err)
@@ -267,42 +198,24 @@ export function SmartContractBuilder({
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle>Smart Contract Builder</DialogTitle>
-          <DialogDescription>
-            Create, customize, and deploy your smart contract or generate a legal draft.</DialogDescription>
         </DialogHeader>
         <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">
-          <div className="flex justify-between items-center mb-4">
-            <TabsList className="grid grid-cols-3"> {/* Added new tab */}
-              <TabsTrigger value="form">1.Details</TabsTrigger>
-              <TabsTrigger value="preview_markdown" disabled={!generatedMarkdownContract}>2.Legal Draft</TabsTrigger>
-              <TabsTrigger value="preview_solidity" disabled={!enableOnChainAgreement && !generatedSolidityContract}>3.On-Chain Contract</TabsTrigger>
+          <div className="flex justify-between items-center">
+            <TabsList className="grid grid-cols-2">
+              <TabsTrigger value="form">Contract Details</TabsTrigger>
+              <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
             </TabsList>
             {/* This button seems out of place if it's just for templates, maybe move into "form" tab? */}
             {/* <Button
               variant="outline"
               size="sm"
               onClick={() => setTemplateManagerOpen(true)}
-              className="flex gap-1">
-              <Save className="h-4 w-4"  />
-              Templates
-            </Button>
-          </div>
-          <TabsContent value="form" className="pt-4 space-y-6">
-            <ContractForm talent={talent}
               clientName={clientName}
               initialValues={formValues} // Pass the potentially prefilled/template-loaded values
               onFormValuesChange={setFormValues} // Keep SmartContractBuilder's state in sync
               onContractGenerated={handleFormSubmitFromContractForm} // This will now trigger Solidity generation
               deployOptions={deployOptions}
               onDeployOptionsChange={setDeployOptions}
-             />
-            <div className="flex justify-end pt-4">
-              <Button
-                onClick={handleGenerateLegalDraft}
-                disabled={isLoadingLegalDraft |!formValues}
-                size="lg"
-                className="flex items-center gap-2 bg-green-600 hover:bg-green-700">
-                <FileText className="h-5 w-5"  />
                 {isLoadingLegalDraft ? "Generating Draft..." : "Generate Legal Draft(GPT)"}
               </Button>
             </div>
@@ -310,33 +223,6 @@ export function SmartContractBuilder({
           <TabsContent value="preview_markdown" className="pt-4">
             {isLoadingLegalDraft && <p>Loading draft...</p>}
             {legalDraftError && <p className="text-red-500">Error: {legalDraftError}</p>}
-            {generatedMarkdownContract && (
-              <div>
-                <div ref={legalDraftPreviewRef} className="prose dark:prose-invert max-w-none p-6 border rounded-md bg-background shadow-sm">
-                  {/* Content to be PDF'd is wrapped by the ref div */}
-                  <ReactMarkdown>{generatedMarkdownContract}</ReactMarkdown>
-                </div>
-                <div className="mt-4 flex justify-end">
-                  <Button onClick={handleDownloadPdf} variant="outline" className="flex items-center gap-2">
-                    <Download className="h-4 w-4"  />
-                    Download as PDF
-                  </Button>
-                </div>
-              </div>
-            )}
-            {!generatedMarkdownContract && !isLoadingLegalDraft && <p>Generate a legal draft to preview and download.</p>}
-          </TabsContent>
-  // Modified to match the expected interface
-  const handleFormSubmit = (contract: string,) => {
-    // This should be a function that takes a string (contract content)
-    // Since we need to adapt the interface, we'll implement the simplest solution that works
-    if (onContractGenerated) {
-      onContractGenerated(contract)
-    }
-    setGeneratedContract(contract)
-    setActiveTab("preview")
-  }
-
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
@@ -407,7 +293,29 @@ import {logErrorToProduction} from '@/utils/productionLogger',
             />
           </TabsContent>
           
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+                  generatedContract = {generatedContract,}
+                  talent = {talent,}
+                  onClose = {onClose,}
+                  deploymentInfo = {deploymentInfo,}
+                      onClick = {handleDeployContract,}
+                      disabled = {deployStatus === 'deploying',}
+                      className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">;
+                      {deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}
+                    </Button>;
+                  </div>                )}
+              </div>;
+            )}
+        <TemplateManager
+          isOpen = {templateManagerOpen,}
+          onClose = {() => setTemplateManagerOpen(false),}
+          onSelectTemplate = {handleLoadTemplate,}
+          currentValues = {formValues,}
+          </TabsContent>;
+        </Tabs>;
+
+        <TemplateManager
+
+
           <TabsContent value="preview" className="pt-4">
             {generatedContract && (
               <div>
@@ -430,20 +338,16 @@ import {logErrorToProduction} from '@/utils/productionLogger',
           </TabsContent>;
         </Tabs>;
         <TemplateManager;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           isOpen={templateManagerOpen}
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
-=======
+
+
+;
         />;
       </DialogContent>;
     </Dialog>;
   );
 }
 ;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

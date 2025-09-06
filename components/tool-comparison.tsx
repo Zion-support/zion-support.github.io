@@ -1,8 +1,7 @@
-  Search;
-  Filter, ;
-  TrendingUp, ;
-  DollarSign, ;
-  Users, ;
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+
+import {
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
@@ -19,6 +18,16 @@ import {
   ExternalLink,
   Zap,
   Brain,
+  Globe,;
+  Rocket,;} from 'lucide-react';import { ;
+  Search;
+  Filter
+  TrendingUp
+  DollarSign
+  Users
+
+
+
   Search;
   Filter,
   TrendingUp,
@@ -32,6 +41,8 @@ import {
   Zap;
   Brain;
   Globe;
+
+export default function ToolComparisonPage() {;
 
 export default function ToolComparisonPage() {
   const [searchTerm, setSearchTerm] = React.useState('');
@@ -52,6 +63,138 @@ function ToolComparisonPage() {
   const all_tools = [;
     // AI Tools;
     {
+      pros: [
+        'Easy to use'
+        'Extensive integrations'
+        'Reliable'
+        'Great support'
+      ]
+      cons: ['Can get expensive', 'Limited customization']
+      website: 'https://zapier.com'
+      icon: <Zap className='w-6 h-6' />
+      color: 'text-orange-400'
+    },    {      pros: ['Easy to useExtensive integrationsReliableGreat support']
+      cons: ['Can get expensiveLimited customization']
+      website: 'https://zapier.com'
+      icon: <Zap className="w-6 h-6" />
+      color: 'text-orange-400'
+    }
+      name: 'Notion'
+      category: 'Productivity'
+      pricing: 'Free - $8/month'
+      rating: 4.7
+      users: '20M+'
+      bestFor: 'Teams that need flexible workspace'
+      pros: [
+        'Highly flexible'
+        'Beautiful interface'
+        'Great templates'
+        'Free tier'
+      ]
+      cons: ['Learning curve', 'Limited offline access', 'Can be overwhelming']
+      website: 'https://notion.so'
+      icon: <Globe className='w-6 h-6' />
+      color: 'text-gray-400'
+    },    {      pros: ['Highly flexibleBeautiful interfaceGreat templatesFree tier']
+      cons: ['Learning curveLimited offline accessCan be overwhelming']
+      website: 'https://notion.so'
+      icon: <Globe className="w-6 h-6" />
+      color: 'text-gray-400'
+    }
+      name: 'Stripe'
+      category: 'Payments'
+      pricing: '2.9% + 30¢ per transaction'
+      rating: 4.9
+      users: '1M+'
+      bestFor: 'Online businesses, SaaS companies, e-commerce'
+      pros: [
+        'Developer-friendly'
+        'Global reach'
+        'Excellent docs'
+        'Reliable'
+      ]
+      cons: [
+        'Higher fees than some alternatives'
+        'Complex for beginners'
+        'Strict requirements'
+      ]
+      website: 'https://stripe.com'
+      icon: <DollarSign className='w-6 h-6' />
+      color: 'text-blue-400'
+    },    // Startup Tools      bestFor: 'Online businesses, SaaS companies, e-commerce';
+      pros: ['Developer-friendlyGlobal reachExcellent docsReliable']
+      cons: ['Higher fees than some alternativesComplex for beginnersStrict requirements']
+      website: 'https://stripe.com'
+      icon: <DollarSign className="w-6 h-6" />
+      color: 'text-blue-400'
+    }
+    // Startup Tools
+    {
+      name: 'HubSpot'
+      category: 'Marketing & Sales'
+      pricing: 'Free - $45/month'
+      rating: 4.7
+      users: '135K+'
+      bestFor: 'B2B startups, SaaS companies, marketing teams'
+      pros: [
+        'Free tier'
+        'All-in-one solution'
+        'Great for beginners'
+        'Excellent support'
+      ]
+      cons: [
+        'Can get expensive'
+        'Complex for small teams'
+        'Limited customization'
+      ]
+      website: 'https://hubspot.com'
+      icon: <TrendingUp className='w-6 h-6' />
+      color: 'text-orange-400'
+    },    {      bestFor: 'B2B startups, SaaS companies, marketing teams';
+      pros: ['Free tierAll-in-one solutionGreat for beginnersExcellent support']
+      cons: ['Can get expensiveComplex for small teamsLimited customization']
+      website: 'https://hubspot.com'
+      icon: <TrendingUp className="w-6 h-6" />
+      color: 'text-orange-400'
+    }
+    {
+      name: 'Mailchimp'
+      category: 'Email Marketing'
+      pricing: 'Free - $59/month'
+      rating: 4.5
+      users: '12M+'
+      bestFor: 'E-commerce, content creators, small businesses'
+      pros: ['Free tier', 'Easy to use', 'Good templates', 'Affordable']
+      cons: ['Limited free features', 'Basic automation', 'Can be expensive']
+      website: 'https://mailchimp.com'
+      icon: <Users className='w-6 h-6' />
+      color: 'text-yellow-400'
+    },    {      bestFor: 'E-commerce, content creators, small businesses';
+      pros: ['Free tierEasy to useGood templatesAffordable']
+      cons: ['Limited free featuresBasic automationCan be expensive']
+      website: 'https://mailchimp.com'
+      icon: <Users className="w-6 h-6" />
+      color: 'text-yellow-400'
+    }
+    {
+      name: 'Calendly'
+      category: 'Productivity'
+      pricing: 'Free - $12/month'
+      rating: 4.8
+      users: '10M+'
+      bestFor: 'Sales teams, consultants, remote teams'
+      pros: [
+        'Free tier'
+        'Easy integration'
+        'Professional appearance'
+        'Time-saving'
+      ]
+      cons: [
+        'Limited free features'
+        'Basic customization'
+        'Can be expensive'
+      ]
+      icon: <Globe className='w-6 h-6' />
       website: 'https://chat.openai.com',
       icon: <Brain className="w - 6 h - 6" />,
       color: 'text - green - 400';
@@ -88,11 +231,6 @@ function ToolComparisonPage() {
       pricing: 'Free - $8 / month',
       rating: 4.7,
       users: '20M+',
-      name: 'Stripe',
-      category: 'Payments',
-      pricing: '2.9% + 30¢ per transaction',
-      rating: 4.9,
-      users: '1M+',
       website: 'https://stripe.com',
       icon: <DollarSign className="w - 6 h - 6" />,
       color: 'text - blue - 400';
@@ -392,7 +530,6 @@ function ToolComparisonPage() {
       default: return 0;
   });
 
-  return (
               <Button
                 href='#comparison'
                 size='lg'
@@ -401,14 +538,13 @@ function ToolComparisonPage() {
                 href='/contact'
                 variant='outline'
                 size='lg'
-                variant="outline"
-                size="lg"
               >
                 Get Expert Advice
               </Button>
             </div>
           </div>
           {/* Stats */}
+                {allTools.length}+
               </div>
               <div className="text-gray-400 text-sm">Tools Analyzed</div>
             </div>
@@ -433,67 +569,6 @@ function ToolComparisonPage() {
           </div>
         </div>
       </section>
-                Get Expert Advice;
-              </Button>;
-            </div>;
-          </div>;
-          {/* Stats */}
-          <div
-            className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
-            style={{ animationDelay: '0 && 0.6s' }}>;
-            <div className='text-center group'>;
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300'>;
-                {allTools && allTools.length}+;
-              </div>;
-              <div className='text-gray-400 text-sm'>Tools Analyzed</div>;
-            </div>;
-            <div className='text-center group'>;
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>;
-                9;
-              </div>;
-              <div className='text-gray-400 text-sm'>Categories</div>;
-            </div>;
-            <div className='text-center group'>;
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300'>;
-                4 && 4.7+;
-              </div>;
-              <div className='text-gray-400 text-sm'>Avg Rating</div>;
-            </div>;
-            <div className='text-center group'>;
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300'>;
-                250M+;
-              </div>;
-              <div className='text-gray-400 text-sm'>Total Users</div>            </div>                {allTools && allTools.length}+;
-              </div>;
-              <div className="text-gray-400 text-sm">Tools Analyzed</div>;
-            </div>;
-            <div className="text-center group">;
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300">;
-                9;
-              </div>;
-              <div className="text-gray-400 text-sm">Categories</div>;
-            </div>;
-            <div className="text-center group">;
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300">;
-                4 && 4.7+;
-              </div>;
-              <div className="text-gray-400 text-sm">Avg Rating</div>;
-            </div>;
-            <div className="text-center group">;
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300">;
-                250M+;
-              </div>;
-              <div className="text-gray-400 text-sm">Total Users</div>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-      {/* Filters and Search */}
-            {/* Category Filter */}
-            <div className='flex flex-wrap gap-2'>;
-              {categories && categories.map(category => (                <button            {/* Search */}
-            <div className="relative flex-1 max-w-md">;
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
               <input
                 type="text"
                 placeholder="Search tools, categories, or use cases..."
@@ -503,6 +578,15 @@ function ToolComparisonPage() {
               {categories && categories.map(category => (            <div className="flex flex-wrap gap-2">;
               {categories && categories.map((category) => (;
                 <button
+              {categories.map(category => (                <button
+
+              />
+            </div>
+
+            {/* Category Filter */}
+
+                <button
+
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -514,6 +598,16 @@ function ToolComparisonPage() {
                   {category}
                 </button>;
               ))}
+            {/* Sort */}
+            <div className='flex items-center space-x-2'>;
+              <Filter className='w-5 h-5 text-gray-400' />;
+            </div>
+
+
+            {/* Sort */}
+            <div className='flex items-center space-x-2'>
+              <Filter className='w-5 h-5 text-gray-400' />
+
               <select
                 value={sortBy}
                 onChange={e => setSortBy(e && e.target.value)}
@@ -596,6 +690,87 @@ function ToolComparisonPage() {
           )}
         </div>
       </section>
+
+      {/* Detailed Comparison Cards */}
+      <section className='py-24 bg-gray-900'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-20'>
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
+
+              Detailed Analysis
+            </h2>
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Deep dive into each tool's pros, cons, and use cases to make the
+              best decision for your business.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+            {sortedTools.slice(0, 6).map((tool, index) => (
+              </tbody>;
+            </table>;
+          </div>;
+
+          {sortedTools && sortedTools.length === 0 && (;
+            <div className='text-center py-20'>;
+              <Search className='w-16 h-16 text-gray-600 mx-auto mb-4' />;
+              <h3 className='text-xl font-semibold text-gray-400 mb-2'>;
+                No tools found;
+              </h3>;
+              <p className='text-gray-500'>;
+                Try adjusting your search criteria or category filter.;
+              </p>            </div>            <div className="text-center py-20">;
+              <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />;
+              <h3 className="text-xl font-semibold text-gray-400 mb-2">No tools found</h3>;
+              <p className="text-gray-500">Try adjusting your search criteria or category filter.</p>;
+          )}
+        </div>;
+      </section>;
+
+      {/* Detailed Comparison Cards */}
+      <section className='py-24 bg-gray-900'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
+          <div className='text-center mb-20'>;
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>;
+            </h2>;
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+              Deep dive into each tool's pros, cons, and use cases to make the;
+              best decision for your business.;
+            </p>;
+          </div>;
+
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
+            {sortedTools && sortedTools.slice(0, 6).map((tool, index) => (;
+              </tbody>
+            </table>
+          </div>
+          {sortedTools.length === 0 && (
+            <div className='text-center py-20'>
+              <Search className='w-16 h-16 text-gray-600 mx-auto mb-4' />
+              <h3 className='text-xl font-semibold text-gray-400 mb-2'>
+                No tools found
+              </h3>
+              <p className='text-gray-500'>
+                Try adjusting your search criteria or category filter.
+              </p>            </div>            <div className="text-center py-20">
+              <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-gray-400 mb-2">No tools found</h3>
+              <p className="text-gray-500">Try adjusting your search criteria or category filter.</p>
+      {/* Detailed Comparison Cards */}
+      <section className='py-24 bg-gray-900'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-20'>
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
+            </h2>
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Deep dive into each tool's pros, cons, and use cases to make the
+              best decision for your business.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+            {sortedTools.slice(0, 6).map((tool, index) => (
+          )}
+        </div>
+      </section>
       {/* Detailed Comparison Cards */}
               <Card
                 key={index}
@@ -603,66 +778,51 @@ function ToolComparisonPage() {
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
                 <div className='flex items-start space-x-4 mb-4'>;
                   <div
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                  <div>
-                    <h4 className="text-sm font-semibold text-green-400 mb-2 flex items-center">
-                      <Check className="w-4 h-4 mr-1" />
-                      Pros
-                    </h4>
-                    <ul className="space-y-1">
-                      {tool.pros.slice(0, 3).map((pro, proIndex) => (
-                        <li key={proIndex} className="text-xs text-gray-400 flex items-start">
-                          <span className="w-1 h-1 bg-green-400 rounded-full mr-2 mt-2 flex-shrink-0" />
-                          {pro}
-                        </li>;
-                      ))}
-                    </ul>;
-                  </div>;
-                  <div>;
-                    <h4 className='text-sm font-semibold text-red-400 mb-2 flex items-center'>;
-                      <X className='w-4 h-4 mr-1' />;
-                      Cons;
-                    </h4>;
-                    <ul className='space-y-1'>;
-                      {tool && tool.cons.slice(0, 3).map((con, conIndex) => (;
-                        <li
-                          key={conIndex}
-                          className='text-xs text-gray-400 flex items-start'>;
-                          <span className='w-1 h-1 bg-red-400 rounded-full mr-2 mt-2 flex-shrink-0' />                          {con}                      Cons;
-                    </h4>;
-                    <ul className="space-y-1">;
-                      {tool && tool.cons.slice(0, 3).map((con, conIndex) => (;
-                        <li key={conIndex} className="text-xs text-gray-400 flex items-start">;
-                          <span className="w-1 h-1 bg-red-400 rounded-full mr-2 mt-2 flex-shrink-0" />;
-                          {con}
-                        </li>;
-                      ))}
                   <span
                     className={`text-sm font-medium ${getPricingColor(tool && tool.pricing)}`}>                    {tool && tool.pricing}
                   </span>;
                   <Button
-                    href={tool && tool.website}                <div className="flex items-center justify-between">;
-                  <span className={`text-sm font-medium ${getPricingColor(tool && tool.pricing)}`}>;
-                    {tool && tool.pricing}
-                  </span>;
+                <div className="flex items-center justify-between">
+                  <span className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}>
+
+
+
+
+                <div className='flex items-center justify-between'>
+                  <span
+                    className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}
+                  >                    {tool.pricing}
+                  </span>
                   <Button
-                    href={tool && tool.website}
-                    variant='outline'
-                    size='sm'
-                    className='group-hover:border-purple-500 group-hover:text-purple-400'>;
-                    Visit Website;
-                    <ExternalLink className='w-4 h-4 ml-2' />                  </Button>                    variant="outline";
-                    size="sm";
-                    className="group-hover:border-purple-500 group-hover:text-purple-400";
-                  >;
-                    Visit Website;
-                    <ExternalLink className="w-4 h-4 ml-2" />;
-                </div>;
-              </Card>;
+                    {tool.pricing}
+                  </span>
+                  <Button
+                    href={tool.website}
+
+
+                </div>
+              </Card>
+            ))}
+
+          </div>;
+        </div>;
+      </section>;
+
+
+      {/* CTA Section */}
+
+
+      {/* CTA Section */}
+      <section className='py-24 bg-gradient-to-r from-purple-600 to-purple-700 relative overflow-hidden'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
+          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
+          </h2>
+          <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
+            Our experts can analyze your business needs and recommend the
+            perfect combination of tools to accelerate your growth.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>
             ))}
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-purple-600 to-purple-700 relative overflow-hidden'>;
@@ -679,10 +839,6 @@ function ToolComparisonPage() {
               href='/contact'
               variant='secondary'
               size='lg'
-              className='bg-white text-purple-600 hover:bg-gray-100 shadow-2xl'>;
-              Get Expert Consultation;
-              <ArrowRight className='w-5 h-5 ml-2' />;
-            </Button>;
             <Button
               href='/saas-marketplace'
               variant='outline'
@@ -695,4 +851,20 @@ function ToolComparisonPage() {
   );
 }
     </>);
+}
+              className='border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl'            >              href="/saas-marketplace"
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl"
+              Explore All Tools
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
+}
+
+  );
+}
+}
 }

@@ -1,48 +1,3 @@
-import React from 'react'
-import { cn } from '@/lib/utils'
-import { Badge } from '@/components/ui/badge';
-import Link from 'next/link';
-import Image from 'next/image';interface ListingCardProps {
-  id?: string,
-  title: string,
-  description: string,
-  images?: string[],
-  category: string,
-  tags?: string[],
-  author?: { name: string, id?: string, avatarUrl?: string, email?: string },
-  className?: string,
-  profileType?: 'service' | 'talent'
-}
-interface ListingCardProps {
-  id?: string
-  title: string
-  description: string
-  images?: string[]
-  category: string
-  tags?: string[]
-  author?: { name: string; id?: string; avatarUrl?: string; email?: string }
-  className?: string
-  profileType?: 'service' | 'talent'
-export function ListingCard({
-  id
-  title
-  description
-  images
-  category
-  tags
-  author
-  className
-  profileType = 'service'
-}: ListingCardProps) {
-  // Generate a profile ID based on the listing data
-  // In a real app, this would be a proper ID from the database
-import React from "react",;
-import { cn } from "@/lib/utils",;
-import { Badge } from "@/components/ui/badge",;
-import Link from "next/link",;
-import Image from "next/image",;
-interface ListingCardProps {;
-  id?: string,;
   title: string,;
   description: string,;
   images?: string[],;
@@ -52,8 +7,6 @@ interface ListingCardProps {;
   className?: string,;
   profileType?: 'service' | 'talent';
 }
-;
-export function ListingCard({;
   id,;
   title,;
   description,;
@@ -62,31 +15,13 @@ export function ListingCard({;
   tags,;
   author,;
   className,;
-  profileType = 'service';
-}: ListingCardProps) {;
-  // Generate a profile ID based on the listing data;
-  // In a real app, this would be a proper ID from the database;
-  const profileId = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
-  return (;
-    <Link;
-      href={`/profile/${profileId}`}
-      tabIndex={0}
-      className={cn(
-        "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover:border-zion-purple/50 transition-all duration-300 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple",
-        className
-      )}
-    >
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {images && images.length > 0 && images[0] && (
         <div className="h-48 w-full overflow-hidden relative">
           <Image
             src={images[0]}
             alt={title}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
         </div>
       )}
       <div className="flex flex-col p-4 flex-grow">
@@ -95,25 +30,20 @@ export function ListingCard({;
             {category}
           </Badge>
         </div>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
           <div className="flex flex-wrap gap-2 mb-4">
             {tags.map((tag, i) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
                 {tag}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
             ))}
           </div>
         )}
-=======
 
-=======
         
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {author && (
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
             {author.avatarUrl ? (
@@ -121,7 +51,9 @@ export function ListingCard({;
             ) : (
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
             )}
-=======
+
+
+
             <span className="text-sm text-zion-slate-light">{author.name}</span>
           </div>
         )}
@@ -129,7 +61,3 @@ export function ListingCard({;
     </Link>;
   );
 }
-;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

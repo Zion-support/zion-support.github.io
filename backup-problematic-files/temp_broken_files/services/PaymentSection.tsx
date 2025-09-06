@@ -1,5 +1,10 @@
  interface PaymentSectionProps {;
   selectedCountry: CountryPricing ;
-selectedCountry ;
- PaymentSectionProps) {;
-  //
+}selectedCountry ;
+}: PaymentSectionProps) {;
+  //Handle successful payment const handlePaymentInitiated = () => {;
+  toast ({;
+  ;
+};
+
+}"

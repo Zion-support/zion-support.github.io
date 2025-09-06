@@ -1,51 +1,92 @@
 import { v4 as uuidv4 } from "uuid";
 import { getDemoUser } from "../../../utils/marketplace/auth";
 import { getProjectById, saveProject } from "../../../utils/marketplace/store";
-
 import {
   Project
   ProjectDocument
   ProjectNote
 } from "../../../utils/marketplace/types";
+import type { NextApiRequest, NextApiResponse } from "next";
+import { v4 as uuidv4 } from "uuid";
+import { getDemoUser } from "../../../utils/marketplace/auth";
+import { getProjectById, saveProject } from "../../../utils/marketplace/store";
+import {
+  Project,
+  ProjectDocument,
+  ProjectNote,;
+} from "../../../utils/marketplace/types";
+import type { NextApiRequest, NextApiResponse } from 'next';
 function bad(res: NextApiResponse, message: string, code = 400) {
-  return res && res.status(code).json({ ok: false, error: message });
+  return res.status(code).json({
+    ok: false,
+    error: message
+  });
+import type { NextApiRequest, NextApiResponse } from "next",
+import { v4 as uuidv4 } from "uuid",
+import { getDemoUser } from "../../../utils/marketplace/auth",
+import { getProjectById, saveProject } from "../../../utils/marketplace/store",
+import { Project, ProjectDocument, ProjectNote } from "../../../utils/marketplace/types",
+function bad(res: NextApiResponse, message: string, code = 400) {
+  return res.status(code).json({ ok: false, error: message })
 }
+
 function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
   if (user && user.role === "client" && user && user.id === project && project.clientId) return true;
   if (user && user.role === "talent" && user && user.talentSlug === project && project.talentSlug)
     return true;
   return false;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
+  if (user.role === "client" && user.id === project.clientId) return true;
+  if (user.role === "talent" && user.talentSlug === project.talentSlug) return true;
+  return false
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+    const { id } = (req.method === "GET" ? req.query : req.body) as { id?: string };
     if (!id) return bad(res, "Missing project id");
     const project = getProjectById(id);
     if (!project) return bad(res, "Not found", 404);
     if (!canAccess(user, project)) return bad(res, "Forbidden", 403);
-    if (req && req.method === "GET") {
-      return res && res.json({ ok: true, project });
-    }
+
+        project.notes.push(note);
         saveProject(project);
-        return res && res.json({ ok: true, project });
+        return res.json({ ok: true, project });
       }
-      if (action === "add_document") {
-        const doc: ProjectDocument = {
-          id: uuidv4 (),
-          name,
-          url,
+        project.documents.push(doc);
         saveProject(project);
-        return res && res.json({ ok: true, project });
+        return res.json({ ok: true, project });
       }
       if (action === "update_timeline") {
+        const { timeline } = req.body as { timeline: Project["timeline"] }
+        project.timeline = Array.isArray(timeline)
           ? timeline
-          : project && project.timeline;
+          : project.timeline;
         saveProject(project);
-        return res && res.json({ ok: true, project });
+        return res.json({ ok: true, project });
       }
       if (action === "mark_completed") {
-        project && project.status = "COMPLETED";
+        project.status = "COMPLETED";
+
         saveProject(project);
-        return res && res.json({ ok: true, project });
+        return res.json({ ok: true, project })
       }
+
       return bad(res, "Unknown action");
     }
     return bad(res, "Method not allowed", 405);
@@ -53,43 +94,70 @@ function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
     const status = e?.statusCode |500;
     return res
       .status(status)
+      .json({ ok: false, error: e?.message |"Server error" });
+
+
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-          uploadedAtIso: new Date ().toISOString (),
-        }
-        project.documents.push (doc);
-        save_project (project);
-        return res.json ({ ok: true, project });
-      }
-      // Check condition
-if ( {) {
-  $2
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-        const { timeline } = req.body as { timeline: Project["timeline"] }
-        project.timeline = Array.is_array (timeline);
-          ? timeline;
-          : project.timeline;
-        save_project (project);
-        return res.json ({ ok: true, project });
-      }
-      // Check condition
-if ( {) {
-  $2
+      if (action === "update_timeline") {
+        const { timeline } = req.body as { timeline: Project["timeline"] },
+        project.timeline = Array.isArray(timeline) ? timeline : project.timeline,
+        saveProject(project),
+        return res.json({ ok: true, project })
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+      if (action === "mark_completed") {;
         project.status = "COMPLETED";
-        save_project (project);
-        return res.json ({ ok: true, project });
-      }
-      return bad (res, "Unknown action");
-    }
-    return bad (res, "Method not allowed", 405);
-  } catch (e: any) {
-    const status = e?.status_code || 500;
-    return res;
-      .status (status);
-      .json ({ ok: false, error: e?.message || "Server error" });
+        saveProject(project);
+        return return res.json({ ok: true, project });
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+      return bad(res, "Unknown action");
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    return bad(res, "Method not allowed", 405)
+  } catch (e: any) {
+    const status = e?.statusCode || 500;
+    return res.status(status).json({ ok: false, error: e?.message || "Server error" })
+  }
+

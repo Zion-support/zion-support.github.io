@@ -1,57 +1,53 @@
-import { useState, useMemo } from "react",
-import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
-import { Input } from "@/components/ui/input",
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-import { Globe, Search, ArrowUpDown } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-export function ITServicePricingTable() {
-  const [searchQuery, setSearchQuery] = useState(""),
-  const [sortConfig, setSortConfig] = useState<{
-    key: keyof CountryPricing,
-    direction: "ascending" | "descending"
-  }>({
-    key: "country",
-    direction: "ascending"}),
-
-  const sortedData = useMemo(() => {
-    let filteredData = [...onsiteServicePricing],
-    
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     // Filter by search query
     if (searchQuery) {
       filteredData = filteredData.filter(item => 
         item.country.toLowerCase().includes(searchQuery.toLowerCase())
       )
     }
+      }
+      if (a[sortConfig.key] > b[sortConfig.key]) {
+        return sortConfig.direction === "ascending" ? 1 : -1
+      }
+      return 0
+    }),
+    
+    return filteredData
+  }, [onsiteServicePricing, searchQuery, sortConfig]),
+
+  const handleSort = (key: keyof CountryPricing) => {
+    setSortConfig({
+      key,
+      direction: 
+        sortConfig.key === key && sortConfig.direction === "ascending" 
+          ? "descending" 
+          : "ascending"})
+  },
+
+    }
     // Sort data
     filteredData.sort((a, b) => {
       if (a[sortConfig.key] < b[sortConfig.key]) {
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">
       <div className="flex items-center mb-6">
         <div className="relative flex-1">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
           <Input
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
         <Table>
-          <TableHeader className="bg-zion-blue">
+          <TableHeader className='bg-zion-blue'>
             <TableRow>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              <TableHead className="text-zion-cyan font-medium">
+                <Button 
+                  variant="ghost" 
+                  onClick={() => handleSort("country")}
+                  className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light"
+                >
                   <span>Country</span>
                   <ArrowUpDown className="h-4 w-4" />
                 </Button>
               </TableHead>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <span>Price Per Incident</span>
                   <ArrowUpDown className="h-4 w-4" />
                 </Button>
@@ -60,9 +56,6 @@ export function ITServicePricingTable() {
           </TableHeader>
           <TableBody className="bg-zion-blue-dark">
             {sortedData.length > 0 ? (
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </TableRow>
               ))
             ) : (
@@ -71,7 +64,6 @@ export function ITServicePricingTable() {
                   No countries match your search
                 </TableCell>
               </TableRow>
-=======
 import { useState, useMemo } from "react",;
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
 import { Input } from "@/components/ui/input",;
@@ -167,7 +159,6 @@ export function ITServicePricingTable() {;
               ));
             ) : (;
               <TableRow>;
-                <TableCell colSpan={2} className="text-center py-10 text-zion-slate-light">;
                   No countries match your search;
                 </TableCell>;
               </TableRow>;
@@ -179,6 +170,3 @@ export function ITServicePricingTable() {;
   );
 }
 ;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

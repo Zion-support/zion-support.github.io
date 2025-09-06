@@ -1,3 +1,54 @@
+import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
+import { useAuth } from '@/hooks/useAuth'
+import { Button } from '@/components/ui/button'
+import {
+  Card
+  CardContent
+  CardFooter
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
+  Rocket
+  FileText
+  Users
+  Calendar
+  Eye
+  MessageSquare
+} from 'lucide-react'
+import { cn } from '@/lib/utils'
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+
+import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react'
+import { cn } from '@/lib/utils';
+  type: 'client' | 'talent';
+  onComplete: () => void;
+  onSkip: () => void;
+  className?: string
+
+
+export function OnboardingWizard(): any ({;
+  type,;
+  onComplete,;
+
+
+
+  type,
+  onComplete,
+
+  onSkip,;
+  className,;
+}: OnboardingWizardProps) {;
+  const [currentStep, setCurrentStep] = useState(0);
+
+
+          </div>;
+        </div>;
+
+        <div className='flex flex-col items-center text-center p-4'>;
+          <div className='bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4'>;
+
+
 import { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -28,7 +79,8 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   const router = useRouter(), // Changed from useNavigate to useRouter
   const { user } = useAuth(),
   
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
   // Define steps based on user type
   const clientSteps: WizardStep[] = [
     {
@@ -61,8 +113,15 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       }
     }
   ],
+        text: "Browse Talent",
+        url: "/talent"
+      }
+    }
+  ],
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
   const talentSteps: WizardStep[] = [
     {
       title: "Complete your profile",
@@ -130,29 +189,22 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   
   return (
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <CardHeader>
-        <CardTitle className="text-center text-white">
-          {type === 'client' ? 
-            "Ready to find top IT talent?" : 
-            "Let's build your professional profile"}
-        </CardTitle>
-      </CardHeader>
-      <CardContent>
-        <div className="flex items-center mb-6">
+        <CardTitle className='text-center text-white'>
+          {type === 'client'
+            ? 'Ready to find top IT talent?'
+            : "Let's build your professional profile"}
+        </CardTitle>;
+      </CardHeader>;
+      <CardContent>;
+        <div className='flex items-center mb-6'>;
           {/* Step dots */}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
             {steps.map((_, index) => (
               <div
                 key={index}
                 className={cn(
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
             {steps[currentStep]?.icon}
           </div>
           <h3 className="text-xl font-bold text-white mb-2">{steps[currentStep]?.title}</h3>
@@ -161,18 +213,18 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       </CardContent>
       <CardFooter className="flex flex-col space-y-2">
         <Button
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          <Button
+            variant='ghost'
+            className='text-zion-slate-light hover:text-white'
+            onClick={handleSkip}>;
+;
+}
+
+
             {steps[currentStep]?.skipText}
           </Button>
         )}
-=======
       </CardFooter>;
     </Card>;
   );
 }
-;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

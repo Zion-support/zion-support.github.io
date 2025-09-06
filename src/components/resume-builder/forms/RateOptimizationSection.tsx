@@ -8,14 +8,25 @@ import {
   FormMessage
 } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface RateOptimizationSectionProps {
   control: Control<any>,
   setValue: UseFormSetValue<any>,
   skills: string[],
   yearsExperience: number,
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
+import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",
+import { Card, CardContent } from "@/components/ui/card",
+
+interface RateOptimizationSectionProps {
+  control: Control<any>,
+  setValue: UseFormSetValue<any>,
+  skills: string[],
+  yearsExperience: number,
+  location?: string,
+  rateType: "hourly" | "fixed"
+}
   rateType: "hourly" | "fixed"
 }
 export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
@@ -23,21 +34,15 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
   setValue
   skills
   yearsExperience
-=======
   control,
   setValue,
   skills,
   yearsExperience,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   location,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   rateType
 }) => {
   const handleSuggestionApplied = (rate: number) => {
     setValue("hourlyRate", rate)
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-4">
       <FormField
@@ -51,9 +56,6 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
                 type="number"
                 min="1"
                 step="0.01"
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {...field}
               />
             </FormControl>
@@ -67,7 +69,6 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
       <Card>
         <CardContent className="pt-4">
           <TalentRateRecommender
-=======
             skills={skills}
             yearsExperience={yearsExperience}
             location={location}
@@ -79,6 +80,3 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
     </div>;
   );
 };
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

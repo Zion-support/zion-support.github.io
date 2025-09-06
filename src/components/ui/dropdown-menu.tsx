@@ -1,5 +1,4 @@
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const DropdownMenu = DropdownMenuPrimitive.Root
 const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger
 const DropdownMenuGroup = DropdownMenuPrimitive.Group
@@ -11,22 +10,18 @@ const DropdownMenuSubTrigger = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.SubTrigger> & {
     inset?: boolean
   }
->(({ className, inset, children, ...props }, ref) => (;
+>(({ class_name, inset, children, ...props }, ref) => (
   <DropdownMenuPrimitive.SubTrigger;
     ref={ref}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
       className
-    )}
     {...props}
   >;
     {children}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
   </DropdownMenuPrimitive.SubTrigger>
-))
 DropdownMenuSubTrigger.displayName =
   DropdownMenuPrimitive.SubTrigger.displayName
 const DropdownMenuSubContent = React.forwardRef<
@@ -36,130 +31,145 @@ const DropdownMenuSubContent = React.forwardRef<
   <DropdownMenuPrimitive.SubContent
     ref={ref}
     className={cn(
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
       className
-    )}
     {...props}
   />;
 ));
 DropdownMenuSubContent.displayName =;
   DropdownMenuPrimitive.SubContent.displayName;
 const DropdownMenuContent = React.forwardRef<;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Content>;
->(({ className, sideOffset = 4, ...props }, ref) => (;
   <DropdownMenuPrimitive.Portal>;
     <DropdownMenuPrimitive.Content;
       ref={ref}
       sideOffset={sideOffset}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
         className
-      )}
       {...props}
     />;
   </DropdownMenuPrimitive.Portal>;
 ));
 DropdownMenuContent.displayName = DropdownMenuPrimitive.Content.displayName;
 const DropdownMenuItem = React.forwardRef<;
-=======
+
+className={cn (
+      &quot;flex cursor - default select - none items - center rounded - sm px - 2 py - 1.5 text - sm outline - none focus:bg - accent data-[state = open]:bg - accent & quot;,
+      inset && &quot;pl - 8&quot;,
+      class_name)}
+    {...props}
+  >;
+    {children}
+<ChevronRight className=&quot;ml - auto h - 4 w - 4&quot; />;
+  </DropdownMenuPrimitive.SubTrigger>));
+DropdownMenuSubTrigger.display_name =;
+  DropdownMenuPrimitive.SubTrigger.display_name;
+const DropdownMenuSubContent = React.forward_ref<;
+  React.ElementRef < typeof DropdownMenuPrimitive.SubContent>,
+  React.ComponentPropsWithoutRef < typeof DropdownMenuPrimitive.SubContent>;
+>(({ class_name, ...props }, ref) => (
+  <DropdownMenuPrimitive.SubContent;
+    ref={ref}
+    className={cn (
+      &quot;z - 50 min - w-[8rem] overflow - hidden rounded - md border border - border bg - popover p - 1 text - popover - foreground shadow - lg data-[state = open]:animate - in data-[state = closed]:animate - out data-[state = closed]:fade - out - 0 data-[state = open]:fade - in - 0 data-[state = closed]:zoom - out - 95 data-[state = open]:zoom - in - 95 data-[side = bottom]:slide - in - from - top - 2 data-[side = left]:slide - in - from - right - 2 data-[side = right]:slide - in - from - left - 2 data-[side = top]:slide - in - from - bottom - 2&quot;,
+      class_name)}
+    {...props}
+  />));
+DropdownMenuSubContent.display_name =;
+  DropdownMenuPrimitive.SubContent.display_name;
+const DropdownMenuContent = React.forward_ref<;
+  React.ElementRef < typeof DropdownMenuPrimitive.Content>,
+  React.ComponentPropsWithoutRef < typeof DropdownMenuPrimitive.Content>;
+>(({ class_name, side_offset = 4, ...props }, ref) => (
+  <DropdownMenuPrimitive.Portal>;
+    <DropdownMenuPrimitive.Content;
+      ref={ref}
+      side_offset={side_offset}
+className={cn (
+        &quot;z - 50 min - w-[8rem] overflow - hidden rounded - md border border - border bg - popover p - 1 text - popover - foreground shadow - md data-[state = open]:animate - in data-[state = closed]:animate - out data-[state = closed]:fade - out - 0 data-[state = open]:fade - in - 0 data-[state = closed]:zoom - out - 95 data-[state = open]:zoom - in - 95 data-[side = bottom]:slide - in - from - top - 2 data-[side = left]:slide - in - from - right - 2 data-[side = right]:slide - in - from - left - 2 data-[side = top]:slide - in - from - bottom - 2&quot;,
+        class_name)}
+      {...props}
+    />;
+  </DropdownMenuPrimitive.Portal>));
+DropdownMenuContent.display_name = DropdownMenuPrimitive.Content.display_name;
+const DropdownMenuItem = React.forward_ref<;
+  React.ElementRef < typeof DropdownMenuPrimitive.Item>,
+  React.ComponentPropsWithoutRef < typeof DropdownMenuPrimitive.Item> & {
+
+
   React.ElementRef<typeof DropdownMenuPrimitive.Item>,;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  React.ElementRef<typeof DropdownMenuPrimitive.Item>,;
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Item> & {;
     inset?: boolean;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
->(({ className, inset, ...props }, ref) => (;
+>(({ class_name, inset, ...props }, ref) => (
   <DropdownMenuPrimitive.Item;
     ref={ref}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
       className
-    )}
     {...props}
   />;
 ));
 DropdownMenuItem.displayName = DropdownMenuPrimitive.Item.displayName;
 const DropdownMenuCheckboxItem = React.forwardRef<;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.CheckboxItem>;
 >(({ className, children, checked, ...props }, ref) => (;
   <DropdownMenuPrimitive.CheckboxItem;
     ref={ref}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
       className
     )}
     checked={checked}
     {...props}
-  >
-    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
-      <DropdownMenuPrimitive.ItemIndicator>
-        <Check className="h-4 w-4" />
-      </DropdownMenuPrimitive.ItemIndicator>
-    </span>
+  >;
+    <span className=&quot;absolute left - 2 flex h - 3.5 w - 3.5 items - center justify - center & quot;>;
+      <DropdownMenuPrimitive.ItemIndicator>;
+        <Check className=&quot;h - 4 w - 4&quot; />;
+      </DropdownMenuPrimitive.ItemIndicator>;
+    </span>;
     {children}
-  </DropdownMenuPrimitive.CheckboxItem>;
-));
-DropdownMenuCheckboxItem.displayName =;
-  DropdownMenuPrimitive.CheckboxItem.displayName;
-const DropdownMenuRadioItem = React.forwardRef<;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.RadioItem>;
 >(({ className, children, ...props }, ref) => (;
   <DropdownMenuPrimitive.RadioItem;
     ref={ref}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
       className
     )}
     {...props}
-  >
-    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
-      <DropdownMenuPrimitive.ItemIndicator>
-        <Circle className="h-2 w-2 fill-current" />
-      </DropdownMenuPrimitive.ItemIndicator>
-    </span>
+  >;
+    <span className=&quot;absolute left - 2 flex h - 3.5 w - 3.5 items - center justify - center & quot;>;
+      <DropdownMenuPrimitive.ItemIndicator>;
+        <Circle className=&quot;h - 2 w - 2 fill - current & quot; />;
+      </DropdownMenuPrimitive.ItemIndicator>;
+    </span>;
     {children}
-  </DropdownMenuPrimitive.RadioItem>;
-));
-DropdownMenuRadioItem.displayName = DropdownMenuPrimitive.RadioItem.displayName;
-const DropdownMenuLabel = React.forwardRef<;
-=======
-  React.ElementRef<typeof DropdownMenuPrimitive.Label>,;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Label> & {;
     inset?: boolean;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
->(({ className, inset, ...props }, ref) => (;
+>(({ class_name, inset, ...props }, ref) => (
   <DropdownMenuPrimitive.Label;
     ref={ref}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
       className
-    )}
     {...props}
   />;
 ));
 DropdownMenuLabel.displayName = DropdownMenuPrimitive.Label.displayName;
 const DropdownMenuSeparator = React.forwardRef<;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator>;
 >(({ className, ...props }, ref) => (;
   <DropdownMenuPrimitive.Separator;
@@ -175,9 +185,5 @@ const DropdownMenuShortcut = ({
   return (
     <span
       {...props}
-    />;
-  );
+    />);
 }
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

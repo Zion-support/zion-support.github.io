@@ -1,3 +1,25 @@
+import Head from 'next/head';
+import Link from 'next/link';
+export default function AISolutionsPage() {
+
+  const aiSolutions = [
+    {
+        'Predictive Analytics'
+        'Pattern Recognition'
+        'Anomaly Detection'
+        'Recommendation Systems'
+      ],      icon: '🧠'
+      category: 'Core AI'
+      complexity: 'Advanced'
+    }
+        'Predictive Analytics',
+        'Pattern Recognition',
+        'Anomaly Detection',
+        'Recommendation Systems',
+      ],      icon: '🧠',
+      category: 'Core AI',
+      complexity: 'Advanced';
+    };
     {
       id: 'natural-language-processing'
       title: 'Natural Language Processing'
@@ -33,14 +55,6 @@
       icon: '📊'
       category: 'Analytics'
       complexity: 'Intermediate'
-    {
-      id: 'ai - automation',
-      title: 'AI - Powered Automation',
-      description: 'Intelligent automation that learns and improves over time.',
-      icon: '⚡',
-      category: 'Automation',
-      complexity: 'Intermediate';
-    }
   const technologies = [
     'TensorFlow'
     'PyTorch'
@@ -180,6 +194,9 @@
           </section>
           <section className="mx-auto max-w-7xl">
             {/* AI Solutions Grid */}
+                          {feature}
+                        </li>
+                      ))}
             <div className="mb-16">;
               <h2 className="text-3xl font-bold mb-8 text-center text-cyan-400">Our AI Solutions</h2>;
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
@@ -195,7 +212,18 @@
                     <ul className="space-y-1 mb-4">;
                       {solution && solution.features.map((feature, featureIndex) => (;
                         <li key={featureIndex} className="text-sm text-white/60 flex items-center">;
-                          <span className="text-cyan-400 mr-2">•</span>;
+                    </ul>
+
+                    <Link
+                      href={`/services#${solution.id}`}
+                      className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
+                    >
+                      Learn More <span className='ml-1'>→</span>                    </Link>                      href={`/services#${solution.id}`}
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                    >
+                      Learn More <span className="ml-1">→</span>
+                    </Link>
+
                           {feature}
                         </li>;
                       ))}
@@ -225,8 +253,21 @@
                     <ul className="space - y-1 mb - 4">;
                       {solution.features.map ((feature, feature_index) => (
                         <li key={feature_index} className="text - sm text - white / 60 flex items - center">;
-                          <span className="text - cyan - 400 mr - 2">•</span>;
-                          {feature}
+
+                  </div>
+                ))}
+
+              </div>;
+            </div>;
+
+            {/* Industry Use Cases */}
+            <div className='mb-16'>
+              <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
+                Industry Applications
+              </h2>
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+
+                {useCases.map((useCase, index) => (
                 ))}
             {/* Industry Use Cases */}
             <div className='mb-16'>;
@@ -259,6 +300,33 @@
                     </ul>;
                   </div>;
                 ))}
+            {/* Technologies */}
+            <div className='mb-16'>
+              <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
+                Technologies We Use
+              </h2>
+              <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>
+                <div className='flex flex-wrap justify-center gap-4'>
+
+                  {technologies.map((tech, index) => (
+                    <span
+                      key={index}
+                      className='px-4 py-2 bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 text-white rounded-lg border border-white/20'                    >
+
+                    >
+
+                      {tech}
+                    </span>;
+                  ))}
+                </div>
+              </div>
+            </div>
+
+                </div>;
+              </div>;
+            </div>;
+
+
                       {tech}
                     </span>;
                   ))}
@@ -299,21 +367,10 @@
                   <Link
                     href="/case-studies#ai-automation-manufacturing"
                     className="text-fuchsia-400 hover:text-fuchsia-300 transition-colors"
-                  <h3 className="text-xl font-bold mb-3 text-fuchsia-400">Content Generation Scale</h3>
-                  <p className="text-white/70 mb-4">
-                    Built autonomous content generation systems that increased output by 10x while maintaining quality standards.
-                  </p>
-                    className='text-cyan-400 hover:text-cyan-300 transition-colors'>                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">;
-                  <h3 className="text-xl font-bold mb-3 text-fuchsia-400">Content Generation Scale</h3>;
-                  <p className="text-white/70 mb-4">;
-                    Built autonomous content generation systems that increased output by 10x while maintaining quality standards.;
-                  </p>;
-                    Read Case Study →
                   </Link>;
                 </div>;
               </div>;
             </div>;
-                <Link
                   href="/contact"
                   className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
                 >
@@ -321,6 +378,7 @@
                 </Link>
                 <Link
                   href="/automation-insights"
+
                   Explore Insights;
                 </Link>;
               </div>;
@@ -328,7 +386,13 @@
           </section>;
         </main>;
       </div>;
+
+
+}
   );
+}
+}
+
 }
     </>);
 }

@@ -1,6 +1,21 @@
-export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
+
+
+
+export interface ModerationAction {;
+
+
+  id: string;
+  flagId: string;
+  action: ModerationStatus;
+  adminNotes?: string;
+  adminId: string;
+  reason?: string;
+  createdAt: string;
+}
 }
 export interface ModerationFlag {
+
+export interface ModerationFlag {;
   id: string;
   type: 'spam' | 'inappropriate' | 'harassment' | 'other';
   content: string;
@@ -9,9 +24,7 @@ export interface ModerationFlag {
   target_type: 'post' | 'comment' | 'user';
   status: ModerationStatus;
 }
-=======
   created_at: string;
   updated_at: string;
   admin_notes?: string,
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

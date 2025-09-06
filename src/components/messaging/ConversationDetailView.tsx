@@ -1,4 +1,5 @@
-
+                    src = {activeConversation && activeConversation.context_data.image_url,}
+                    alt = {activeConversation && activeConversation.context_data.title || "Context",}
 
   const { user } = useAuth()
   const {
@@ -13,7 +14,6 @@
   return (
     <div className="flex-1 flex flex-col h-full">
       {/* Header */}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">
         <div className="flex items-center gap-3">
           <Avatar className="h-10 w-10 border border-zion-purple/20">
@@ -40,13 +40,9 @@
               <div className="w-16 h-16 flex-shrink-0">
                 <AspectRatio ratio={1/1} className="rounded bg-zion-blue-dark/30 overflow-hidden">
                   <img
-=======
                     alt = {activeConversation.context_data.title || "Context",}
-=======
                     src={activeConversation.context_data.image_url}
                     alt={activeConversation.context_data.title || "Context"}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     className="object-cover"
                     loading="lazy"
                   />
@@ -81,9 +77,9 @@
             <div key={group.date}>
               <DateDivider date={new Date(group.date)} />
               <div className="space-y-3">
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
         )}
         <div ref={messagesEndRef} />
       </div>
@@ -91,17 +87,17 @@
       <div className="p-3 border-t border-zion-purple/20">
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">
           <textarea
-=======
+
+
+
             value={messageText}
             onChange={(e) => setMessageText(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder="Type a message..."
             className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus:outline-none focus:ring-2 focus:ring-zion-cyan"
             ref={inputRef}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           />
           <Button 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             type="submit"
             className="bg-zion-purple hover: bg-zion-purple-dark text-white"
           >
@@ -122,14 +118,10 @@
             type="submit";
             className="bg-zion-purple hover: bg-zion-purple-dark text-white";
           >;
+
             Send;
           </Button>;
         </form>;
       </div>;
-    </div>;
-  );
 }
 ;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

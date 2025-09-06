@@ -1,3 +1,6 @@
+}
+}
+}
 export const withPerformanceOptimization = <P extends object>(; Component: React.ComponentType<P>, options: {, memo?: boolean; memoDeps?: (props: P) = > any[]; displayName?: string} = {}
 ) = > {const { memo: useMemo = true, memoDeps, displayName } = options; let OptimizedComponent = Component; if (useMemo) {OptimizedComponent = memo(Component, (prevProps, nextProps) = > {if (memoDeps) {; const prevDeps = memoDeps(prevProps); const nextDeps = memoDeps(nextProps); return prevDeps.every((dep, index) = > dep = = = nextDeps[index])}; return false, // Always re-render if no custom comparison})}; if (displayName) {OptimizedComponent.displayName = displayName}; return OptimizedComponent}
 // Hook for expensive calculations
@@ -12,7 +15,7 @@ export const useDebouncedSearch = (value: string, delay: number = 300) = > {cons
 export const usePerformanceMetrics = () = > {const [metrics, setMetrics] = React.useState({renderCount: 0, lastRenderTime: 0, averageRenderTime: 0}); const recordRender = useCallback((renderTime: number) = > {, setMetrics(prev = > ({, renderCount: prev.renderCount + 1, lastRenderTime: renderTime, averageRenderTime: (prev.averageRenderTime * prev.renderCount + renderTime) / (prev.renderCount + 1)}))}, []); return { metrics, recordRender }} }
 }
 }
-=======
+
 import React from 'react';
 
 export default function PerformanceOptimized() {
@@ -170,7 +173,6 @@ export const: OptimizedImage: React.FC<{,;
         </div>)},;
     </div>,;
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
 }
 }
@@ -182,24 +184,8 @@ export const useDebouncedSearch = (value: string, delay: number = 300) => {
       setDebouncedValue(value)
     }, delay)
     return () => {
-      clearTimeout(handler)
+      clear_timeout (handler);
 }
-  }, [value, delay])
-  return debouncedValue
+  }, [value, delay]);
+  return debounced_value;
 }
-// Performance metrics collection
-export const usePerformanceMetrics = () => {
-  const [metrics, setMetrics] = React.useState({
-    renderCount: 0, lastRenderTime: 0
-    averageRenderTime: 0
-  })
-  const recordRender = useCallback((renderTime: number) => {, setMetrics(prev => ({
-      renderCount: prev.renderCount + 1, lastRenderTime: renderTime
-      averageRenderTime: (prev.averageRenderTime * prev.renderCount + renderTime) / (prev.renderCount + 1)
-    }))
-  }, []); return { metrics, recordRender }
-}
-  return { metrics, recordRender }
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,7 +1,63 @@
 import { ImageIcon } from 'lucide-react'
 interface SafeImageProps {;
+import { ImageIcon } from 'lucide-react'
+interface SafeImageProps {;
   src: string;
   alt: string;  width?: number;interface SafeImageProps {
+
+
+    }
+  }
+
+  // If we have an error and no fallback, show a placeholder
+  if (hasError && (!fallbackSrc |currentSrc === fallbackSrc)) {
+        return (
+      <div
+        className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
+        style={{ width, height }}
+        role="img"
+        aria-label = {alt,}
+      >
+        <ImageIcon className='w-6 h-6' />      </div>
+    )
+  }
+'use client',;
+import Image from 'next/image',;
+import { useState } from 'react',;
+import { ImageIcon } from 'lucide-react';
+
+interface SafeImageProps {;
+  src: string;
+  alt: string;  width?: number;interface SafeImageProps {;
+  src: string,;
+  alt: string,;
+import { ImageIcon } from 'lucide-react';
+
+interface SafeImageProps {;
+  src: string,;
+  alt: string,;
+
+import { ImageIcon } from 'lucide-react'
+
+interface SafeImageProps {
+  src: string,
+  alt: string,
+
+  width?: number;
+  height?: number;
+  className?: string;
+  fallbackSrc?: string;
+  priority?: boolean;
+  sizes?: string;
+
+
+    }
+  }
+
+
+  // If we have an error and no fallback, show a placeholder;
+  if (hasError && (!fallbackSrc || currentSrc === fallbackSrc)) {;
+
   src: string
   alt: string
 interface SafeImageProps {
@@ -38,8 +94,6 @@ export function SafeImage({
       setHasError(true)
     } else if (!hasError) {
       setHasError(true)
-    }
-  }
 
   // If we have an error and no fallback, show a placeholder
   if (hasError && (!fallbackSrc |currentSrc === fallbackSrc)) {
@@ -54,64 +108,20 @@ export function SafeImage({
     )
   }
   );        aria-label={alt}
-=======
 'use client',;
 import Image from 'next/image',;
 import { useState } from 'react',;
 import { ImageIcon } from 'lucide-react';
-interface SafeImageProps {;
-  src: string,;
-  alt: string,;
-  width?: number,;
-  height?: number,;
-  className?: string,;
-  fallbackSrc?: string,;
-  priority?: boolean,;
-  sizes?: string,;
-  quality?: number;
-}
-;
-export function SafeImage({;
-  src,;
-  alt,;
-  width,;
-  height,;
-  className = '',;
-  fallbackSrc,;
-  priority = false,;
-  sizes,;
-  quality = 75}: SafeImageProps) {;
-  const [hasError, setHasError] = useState(false),;
-  const [currentSrc, setCurrentSrc] = useState(src),;
-  const handleError = () => {;
-    if (!hasError && fallbackSrc && currentSrc !== fallbackSrc) {;
-      setCurrentSrc(fallbackSrc),;
-      setHasError(true);
-    } else if (!hasError && src.startsWith('/')) {;
-      // Try serving the image directly through our custom API route;
-      const fallbackUrl = `/api/image${src}`,;
-      setCurrentSrc(fallbackUrl);
-      setHasError(true);
-    } else if (!hasError) {;
-      setHasError(true);
-    }
-  };
-  // If we have an error and no fallback, show a placeholder;
-  if (hasError && (!fallbackSrc || currentSrc === fallbackSrc)) {;
-    return (;
-      <div;
         className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
         style={{ width, height }}
         role="img"
         aria-label={alt}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       >
-        <ImageIcon className="w-6 h-6" />
       </div>
     )
   }
+
     />
   ); return (
     <Image
@@ -124,12 +134,9 @@ export function SafeImage({;
       priority = {priority,}
       // Add unoptimized as fallback for problematic images
       unoptimized = {hasError,}
-    />
-  )
 }
-=======
-;
-  return (;
+    />;
+  );
     <Image;
       src={currentSrc}
       alt={alt}
@@ -143,6 +150,3 @@ export function SafeImage({;
     />;
   );
 } ;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

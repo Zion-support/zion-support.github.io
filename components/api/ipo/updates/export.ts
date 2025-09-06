@@ -1,3 +1,14 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJsonFile  } from '../../../../utils/api/storage';
+import { requireSuperadminApi } from '../../../../utils/api/auth';
+import PDFDocument from 'pdfkit';
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJsonFile  } from '../../../../utils/api/storage';
+import { requireSuperadminApi } from '../../../../utils/api/auth';
+import PDFDocument from 'pdfkit';
+
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
   doc.pipe(res);
@@ -8,16 +19,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   doc.fillColor("black").fontSize(14).text("Summary");
   doc.fontSize(12).text(u.summary |"");
   doc.moveDown();
-}
 
-=======
   doc.fontSize(14).text('KPIs');
   doc.fontSize(12).text(u.kpis || '');
   doc.end()
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { readJsonFile  } from '../../../../utils / api / storage';
 import { requireSuperadminApi  } from '../../../../utils / api / auth';
@@ -59,4 +65,8 @@ function handler() {
   doc.end ();
   doc.end ();
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+  doc.fontSize(14).text('KPIs');
+  doc.fontSize(12).text(u.kpis || '');
+  doc.end();
+  doc.end();

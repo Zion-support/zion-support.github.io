@@ -1,16 +1,21 @@
-
-export function OnChainExport() {
-
+import {
+  Tooltip;
+  TooltipContent;
+  TooltipProvider;
   const [isConnected, setIsConnected] = useState(false)
   const [isExporting, setIsExporting] = useState(false)
   const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle')
   const { toast } = useToast()
   const { user } = useAuth()
+      // Check if wallet is available;
+      const ethereum = (window as any).ethereum;
+      // Check condition
+if ( {) {
+  $2
   const handleConnectWallet = async () => {
     try {
       // Check if wallet is available
       const ethereum = (window as any).ethereum
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react'
@@ -32,16 +37,12 @@ export function OnChainExport() {
     try {
       // Check if wallet is available
       const ethereum = (window as any).ethereum,
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       if (!ethereum) {
         toast({
           title: "Wallet not detected"
           description: "Please install MetaMask or another Ethereum wallet to use this feature"
           variant: "destructive"
 }
-=======
         }),
         return
       }
@@ -282,6 +283,3 @@ export function OnChainExport() {;
   );
 }
 ;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

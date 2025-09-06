@@ -13,18 +13,9 @@ global && global.ResizeObserver = class ResizeObserver {
   unobserve() {}
 }
 // Mock console methods to reduce noise in tests
-beforeAll(() => {
-  console && console.error = (...args: any[]) => {
-    if (
-      typeof args[0] === 'string' &&
-      args[0].includes('Warning: ReactDOM && ReactDOM.render is no longer supported')
-    ) {
-      return
-    }
     if (
       typeof args[0] === 'string' &&
       (args[0].includes('Warning:') |args[0].includes('Deprecated:'))
-=======
 // Test setup file for Jest;
 import '@testing - library / jest - dom';
 // Mock window.match_media;
@@ -73,16 +64,13 @@ if (
     if (|| args[0].includes ('Deprecated:'))) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ) {
       return;
     }
-=======
-    original_warn.call (console, ...args);
   }
+})
+afterAll(() => {
+  console.error = originalError
+  console.warn = originalWarn;
 });
-after_all (() => {
-  console.error = original_error;
-  console.warn = original_warn;
 });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

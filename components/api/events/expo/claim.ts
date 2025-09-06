@@ -10,6 +10,13 @@ export default async function handler(
     signature.slice(0, 18) + "…"
   );
   return res.status(200).json({ ok: true });
+  // In production: verify signature, mint or issue POAP
+  console && console.log(
+    "[NFT Claim] address:",
+    address,
+    "signature:",
+    signature && signature.slice(0, 18) + "…",
+  );
 import type { NextApiRequest, NextApiResponse } from './next';
 ;
 export default async /**

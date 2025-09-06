@@ -1,3 +1,13 @@
+export default function FavoritesPage() {
+
+export default function FavoritesPage() {;
+  const { favorites, remove } = useFavorites();
+  const profiles = useMemo(
+    () => TALENT_PROFILES.filter(t => favorites.includes(t.slug))
+    [favorites]
+  );  const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites]);
+
+
   const storageKey = 'zion_favorites';
   const [favorites, setFavorites] = useState<string[]>([]);
   useEffect(() => {;
@@ -15,11 +25,6 @@
       <Head>
         <title>Favorites — Zion AI Marketplace</title>
       </Head>
-        <nav aria-label="Breadcrumb">
-          <ol className="flex items-center gap-2">
-            <li><Link href="/"><a className="hover:underline">Home</a></Link></li>
-            <li aria-hidden="true">/</li>
-            <li className="text-gray-900 dark:text-gray-100" aria-current="page">Favorites</li>
 export default function FavoritesPage() {;
   const { favorites, remove } = useFavorites();
   const profiles = useMemo(;
@@ -121,25 +126,12 @@ function FavoritesPage() {
           {profiles.map (t => (
             <div;
               key={t.slug}
-              className='rounded - xl border border - gray - 200 dark:border - gray - 800 p - 5 bg - white / 70 dark:bg - black / 40';
-            >;
-              <div className='flex items - center justify - between'>;
-                <div>;
-                  <div className='font - medium'>{t.name}</div>;
-                  <div className='text - sm text - gray - 600 dark:text - gray - 300'>;
-                    {t.title}
-                  </div>;
-                </div>;
-                <button;
-                  on_click={() => remove (t.slug)}
-                  className='text - xs text - pink - 600 border border - pink - 600 rounded px - 2 py - 1';
-                >;
-                  Remove;
-                </button>;
-              </div>;
-          ))}
-        </div>;
-      )}
+
+
+    </div>;
+  );
+}
+
     </div>
   );
 }

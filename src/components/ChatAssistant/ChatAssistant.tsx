@@ -1,25 +1,3 @@
-=======
-import React, {;
-  useState,;
-  useEffect,;
-  useRef,;
-  ReactNode,;
-  useContext} from 'react',;
-import { AuthContext } from '../../context/auth/AuthContext',;
-import { useDebounce } from '../../hooks/useDebounce',;
-import { useLocalStorage } from '../../hooks/useLocalStorage',;
-import { ChatMessage } from './ChatMessage',;
-import { ChatInput } from './ChatInput',;
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',;
-import { Button } from '@/components/ui/button',;
-import { X } from 'lucide-react';
-export interface Message {;
-  id: string,;
-  role: 'user' | 'assistant',;
-  message: string,;
-  timestamp: Date,;
-  read?: boolean;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
 export interface ChatAssistantProps {;
@@ -167,7 +145,6 @@ export function ChatAssistant({;
     document.addEventListener('keydown', handleKeyDown),
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [isOpen, onClose]),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   useState
   useEffect
@@ -340,9 +317,6 @@ export function ChatAssistant({
       className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
       role="dialog"
       aria-modal="true"
-      aria-labelledby="chat-assistant-title"
-    >
-      <div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">
         {/* Header */}
         <div className="bg-zion-blue-dark p-3 flex items-center justify-between border-b border-zion-purple/20">
           <div className="flex items-center space-x-3">
@@ -365,9 +339,8 @@ export function ChatAssistant({
             variant="ghost"
             size="icon"
             className="text-white hover:bg-zion-purple/10 rounded-full"
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
             aria-label="Close chat"
           >
             <X className="h-5 w-5" />
@@ -382,16 +355,8 @@ export function ChatAssistant({
         {/* Messages */}
         <div
           className="flex-1 overflow-y-auto p-4 space-y-4"
-          aria-live="polite"
-        >
-          {currentMessages.length === 0 ? (
-            <div className="text-center text-zion-slate py-8 space-y-4">
-              <p>Start a conversation with {recipient.name}</p>
-              {starterQuestions.length > 0 && (
-                <div className="flex flex-wrap justify-center gap-2">
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
                       {q}
                     </Button>
                   ))}
@@ -403,21 +368,10 @@ export function ChatAssistant({
               <ChatMessage key={msg.id} role={msg.role} message={msg.message} />
             ))
           )}
-          <div ref={messagesEndRef} />
-        </div>
-        {/* Input */}
-        <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
-          <ChatInput onSend={handleSendMessage} />
-        </div>
-      </div>
-      {showGuestModal && guestMessage && (
         <div
           className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4"
           role="dialog"
           aria-modal="true"
-          aria-labelledby="confirm-message-title"
-        >
-          <div className="bg-zion-blue-darker p-6 rounded-lg shadow-xl w-full max-w-md">
             <h3
               id="confirm-message-title"
               className="text-lg font-semibold text-white mb-4"
@@ -430,17 +384,12 @@ export function ChatAssistant({
             <div className="flex justify-end space-x-3">
               <Button
                 variant="outline"
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="text-white border-zion-purple hover:bg-zion-purple/10"
               >
                 Cancel
               </Button>
               <Button
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
               >
                 Send
@@ -449,9 +398,9 @@ export function ChatAssistant({
           </div>
         </div>
       )}
-    </div>
+    </div>;
   );
-=======
+}
+
+}
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

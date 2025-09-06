@@ -1,10 +1,8 @@
-=======
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, MapPin, Package, AlertTriangle, RefreshCw } from 'lucide-react'
-import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
 import { generateDatacenterEquipment, getEquipmentMarketStats, getRecommendedEquipment  } from '@/utils/equipmentAutoFeedAlgorithm';
 import { ProductListing  } from '@/types/listings';
 import { SkeletonCard  } from '@/components/ui/skeleton';
@@ -18,7 +16,14 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 // Enhanced initial equipment with more variety
 const INITIAL_EQUIPMENT: ProductListing[] = [
   {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    description: "High-performance AI training server with 8x A100 GPUs, designed for demanding machine learning workloads.",
+    category: "AI Hardware";
+    price: 85000;
+    currency: "$";
+    brand: "NVIDIA";
+    specifications: ["8x A100 GPUs", "2TB HBM2e", "NVLink"],
+    tags: ["AI", "Machine Learning", "GPU"],
+    author: { name: "NVIDIA", id: "nvidia" },
 
 // Equipment card
 const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing, onViewDetails: () => void }) => {
@@ -63,110 +68,7 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
   )
 },
 
-// Loading grid
-const EquipmentLoadingGrid = ({ count = 8 }: { count?: number }) => (
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-    {Array.from({ length: count }).map((_, i) => <SkeletonCard key={i} />)}
-  </div>
-),
 
-// Error fallback component
-function EquipmentErrorFallback({ error, resetErrorBoundary }: { error: Error, resetErrorBoundary: () => void }) {
-  return (
-    <div className="container py-8">
-      <Card className="border-red-200 bg-red-50">
-        <CardContent className="p-8 text-center">
-          <AlertTriangle className="mx-auto mb-4 h-12 w-12 text-red-600" />
-          <h2 className="text-2xl font-bold text-red-900 mb-2">Something went wrong</h2>
-          <p className="text-red-700 mb-4">
-            We're having trouble loading the equipment listings. This might be a temporary issue.
-          </p>
-          <div className="flex gap-2 justify-center">
-            <Button onClick={resetErrorBoundary} variant="outline">
-              <RefreshCw className="h-4 w-4 mr-2" />
-              Try Again
-            </Button>
-            <Button onClick={() => window.location.reload()} variant="default">
-              Refresh Page
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
-    </div>
-  )
-}
-;
-// Main component;
-function EquipmentPageContent() {;
-  const router = useRouter(),;
-  const [sortBy, setSortBy] = useState('newest'),;
-  const [filterCategory, setFilterCategory] = useState(''),;
-  const [showRecommended, setShowRecommended] = useState(false),;
-  // Generate a consistent seed based on current filters for deterministic data;
-  const dataSeed = useMemo(() => {;
-    return `equipment-${filterCategory}-${showRecommended}`;
-  }, [filterCategory, showRecommended]),;
-  const fetchEquipment = useCallback(async (page: number, limit: number) => {;
-    // Simulate realistic API delay;
-    await new Promise(resolve => setTimeout(resolve, 300)),;
-    try {;
-      // Generate consistent virtual dataset using the seed;
-      const VIRTUAL_DATASET_SIZE = 150,;
-      const baseVirtualEquipment = generateDatacenterEquipment(;
-        VIRTUAL_DATASET_SIZE,;
-        INITIAL_EQUIPMENT.length,;
-        dataSeed;
-      ),;
-      let fullVirtualDataset: ProductListing[] = [;
-        ...INITIAL_EQUIPMENT,;
-        ...baseVirtualEquipment;
-      ],;
-      // Deduplicate by ID in case of overlaps;
-      const dedupMap = new Map<string ProductListing>(),;
-      for (const item of fullVirtualDataset) {;
-        if (!dedupMap.has(item.id)) {;
-          dedupMap.set(item.id, item);
-        }
-      }
-      fullVirtualDataset = Array.from(dedupMap.values()),;
-      // Apply category filtering;
-      let processedDataset = fullVirtualDataset,;
-      if (filterCategory) {;
-        processedDataset = processedDataset.filter(e => e.category === filterCategory);
-      }
-;
-      // Apply recommended filtering;
-      if (showRecommended) {;
-        processedDataset = getRecommendedEquipment(processedDataset);
-      }
-;
-      // Sort the processed dataset;
-      processedDataset.sort((a, b) => {;
-        switch (sortBy) {;
-          case 'price-low':;
-            return (a.price || 0) - (b.price || 0),;
-          case 'price-high':;
-            return (b.price || 0) - (a.price || 0),;
-          case 'rating':;
-            return (b.rating || 0) - (a.rating || 0),;
-          default: // 'newest';
-            return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime();
-        }
-      }),;
-      // Slice for pagination;
-      const startIndex = (page - 1) * limit,;
-      const endIndex = startIndex + limit,;
-      const items = processedDataset.slice(startIndex, endIndex),;
-      return {;
-        items,;
-        hasMore: endIndex < processedDataset.length,;
-        total: processedDataset.length;
-      }
-    } catch (error) {;
-      logErrorToProduction('Error in fetchEquipment:', { data: error }),;
-      throw new Error('Failed to load equipment data. Please try again.');
-    }
-  }, [sortBy, filterCategory, showRecommended, dataSeed]),
 
   const {
     items: equipment,
@@ -207,7 +109,6 @@ function EquipmentPageContent() {;
     return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Loading state
   if (loading && equipment.length === 0) {
     return (
@@ -223,6 +124,3 @@ function EquipmentPageContent() {;
     )
   }
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

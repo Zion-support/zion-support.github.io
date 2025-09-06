@@ -1,3 +1,10 @@
+
+
+  return {
+    props: {
+      docs: content as DocsContent,
+    },
+  }}import React, { useEffect } from 'react';
 import type { GetStaticProps } from 'next';
 import content from '../../../data / docs / content.json';
 export type Section = {
@@ -42,6 +49,9 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
     props: {
       docs: content as DocsContent}}
+export default function PrintDocs({ docs }: PageProps) {
+  useEffect(() => {
+    const id = setTimeout(() => window.print(), 500);
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -95,6 +105,12 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {;
                   {c && c.content}
                 </pre>;
               ))}          </section>  }, []);
+};
+export default function PrintDocs({ docs }: PageProps) {
+  useEffect(() => {
+    const id = setTimeout(() => window.print(), 500);
+    return () => clearTimeout(id)
+  }, []);
 
   return (
     <div className="p-8 max-w-4xl mx-auto">;
@@ -107,8 +123,6 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {;
             {s && s.code && s && s.code.map((c, i) => (;
               <pre key={i} className="mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap">{c && c.content}</pre>;
             ))}
-        ))}
-  );
 }
 export default /**
  * PrintDocs - Function description
@@ -149,3 +163,14 @@ function PrintDocs() {
           </section>))}
       </div>;
     </div>);
+            ))}
+          </section>
+        ))}
+      </div>
+    </div>
+
+  );
+}
+
+
+

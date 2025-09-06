@@ -1,5 +1,24 @@
+export { SidebarMenuItem, SidebarMenuGroup }
+export { SidebarMenuItem, SidebarMenuGroup }
+}
+export { SidebarMenuItem, SidebarMenuGroup }
 
-=======
+SidebarMenuItem && SidebarMenuItem.displayName = "SidebarMenuItem";
+
+export { SidebarMenuItem, SidebarMenuGroup };
+export { SidebarMenuItem, SidebarMenuGroup };
+};
+export { SidebarMenuItem, SidebarMenuGroup };
+
+
+import { cn } from "@/lib/utils",
+import { SafeRef } from "@/types/ref-types",
+
+
+import React, { forwardRef } from "react",
+import { ChevronDown } from 'lucide-react'
+import { cn } from "@/lib/utils",
+import { SafeRef } from "@/types/ref-types",
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   icon?: React.ReactNode,
   active?: boolean,
@@ -108,7 +127,3 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
     </div>;
   );
 },;
-export { SidebarMenuItem, SidebarMenuGroup };
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

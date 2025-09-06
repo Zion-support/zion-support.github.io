@@ -38,7 +38,6 @@
     };
   } catch {
     return base;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
 
   const words = query && query.toLowerCase().split(/\s+/);
@@ -70,27 +69,30 @@
   }
   
   return filters;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     keywords: [],
     skills: [],
     location: null,
     type: null;
-  }
-}
-;
-export const search_all = (parsed: any, access: any) =>: any {
-  // Add search functionality here;
   return {
     all: [],
     talent: [],
     jobs: [],
     projects: [];
+
+  };
+};
+
+export const suggestDidYouMean = (query: string) => {
+  // Add did you mean functionality here;
+  return null;
+
+};
+
+}
   }
 }
 ;
 export const suggestDidYouMean = (query: string) =>: any {
   // Add did you mean functionality here;
   return null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

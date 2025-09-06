@@ -1,3 +1,4 @@
+
 export type ResumeData = {;
 import React, { forward_ref } from 'react';
 export type ResumeData = {
@@ -34,21 +35,29 @@ export type ResumeData = {
     start?: string;
     end?: string;
     location?: string;
-    bullets?: string[];
-  }>;
+};
+
+    {children}
+
+export type ResumePreviewProps = {;
+  data: ResumeData;
+  theme?: 'light' | 'dark';
+  maxPortfolioItems?: number;
+}
+const SectionTitle: React.FC<{ children: React.ReactNode }> = ({
+  children
+}) => (
+  <h2 className='text-lg font-semibold tracking-wide text-gray-800 dark:text-gray-100 border-b border-gray-200 dark:border-gray-700 pb-1'>    {children}  }>;
+  education?: Array<{
+    institution: string
+};
+
+export type ResumePreviewProps = {;
+  data: ResumeData;
+  theme?: 'light' | 'dark';
+  maxPortfolioItems?: number;
   education?: Array<{;
     institution: string;
-    degree?: string;
-    start?: string;
-    end?: string;
-  }>;
-  certifications?: string[];
-  portfolio?: Array<{;
-    title: string;
-    description?: string;
-    link?: string;
-    technologies?: string[];
-  }>;
     degree?: string;
     start?: string;
     end?: string;
@@ -65,6 +74,16 @@ export type ResumeData = {
     title: string,
     description?: string;
     link?: string;
+
+
+  data: ResumeData,;
+
+
+  theme?: 'light' | 'dark';
+  maxPortfolioItems?: number
+}
+const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <h2 className="text-lg font-semibold tracking-wide text-gray-800 dark:text-gray-100 border-b border-gray-200 dark:border-gray-700 pb-1">
 };
 
     technologies?: string[];
@@ -78,10 +97,11 @@ export type ResumePreviewProps = {
 }
 ;
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-    {children}
-  </h2>;
-);
+    );
 
+      >
+        <div className='p-8'>
+    const portfolioItems = (data.portfolio || []).slice(0, Math.max(0, maxPortfolioItems));
 export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(;
   ({ data, theme = 'light', maxPortfolioItems = 3 }, ref) => {;
     const portfolioItems = (data && data.portfolio || []).slice(;
@@ -121,44 +141,6 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
     return (
       <div;
         ref={ref}
-          <header className="mb-6">;
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">{data && data.name}</h1>;
-            <div className="mt-2 text-sm text-gray-600 dark:text-gray-300 space-x-3 flex flex-wrap">;
-              {data && data.contact?.email && <span>{data && data.contact.email}</span>}
-              {data && data.contact?.phone && <span>{data && data.contact.phone}</span>}
-              {data && data.contact?.location && <span>{data && data.contact.location}</span>}
-              {data && data.contact?.website && (;
-                <a
-                  className='underline'
-                  href={data && data.contact.website}
-                  target='_blank'
-                  rel='noreferrer'>                  {data && data.contact.website}
-                </a>;
-              )}
-              {data && data.contact?.linkedin && (                <a className="underline" href={data && data.contact.website} target="_blank" rel="noreferrer">;
-                  {data && data.contact.website}
-                </a>;
-              )}
-              {data && data.contact?.linkedin && (;
-                <a
-                  className='underline'
-                  href={data && data.contact.linkedin}
-                  target='_blank'
-                  rel='noreferrer'>                  LinkedIn;
-                </a>;
-              )}
-              {data && data.contact?.github && (                <a className="underline" href={data && data.contact.linkedin} target="_blank" rel="noreferrer">;
-                  LinkedIn;
-                </a>;
-              )}
-              {data && data.contact?.github && (;
-                <a
-                  className='underline'
-                  href={data && data.contact.github}
-                  target='_blank'
-                  rel='noreferrer'>                  GitHub                <a className="underline" href={data && data.contact.github} target="_blank" rel="noreferrer">;
-                  GitHub;
-                </a>;
               {data.contact?.email && <span>{data.contact.email}</span>}
               {data.contact?.phone && <span>{data.contact.phone}</span>}
               {data.contact?.location && <span>{data.contact.location}</span>}
@@ -166,7 +148,47 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                   {data.contact.website}
                 </a>)}
               {data.contact?.linkedin && (
+                <a
+                  className='underline'
+                  href={data.contact.linkedin}
+                  target='_blank'
+                  rel='noreferrer'
+                >                  LinkedIn
+                </a>
               )}
+              {data.contact?.github && (                <a className="underline" href={data.contact.linkedin} target="_blank" rel="noreferrer">
+                  LinkedIn
+                </a>
+              )}
+              {data.contact?.github && (
+                <a
+                  className='underline'
+                  href={data.contact.github}
+                  target='_blank'
+                  rel='noreferrer'
+                >                  GitHub                <a className="underline" href={data.contact.github} target="_blank" rel="noreferrer">
+                  GitHub
+                </a>
+              )}
+            </div>
+          </header>
+
+            </div>;
+          </header>;
+
+
+
+
+          {/* Summary */}
+
+          {data.summary && (
+            <section className="mb-5">
+              <SectionTitle>Professional Summary</SectionTitle>
+              <p className="mt-2 text-sm leading-relaxed text-gray-800 dark:text-gray-200">{data.summary}</p>
+            </section>
+          )}
+          {/* Skills & Technologies */}
+          {(data.skills?.length |data.technologies?.length) && (
 
           {/* Summary */}
           {data && data.summary && (;
@@ -180,6 +202,28 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
             </section>;
           )}
           {/* Skills & Technologies */}
+
+
+
+
+
+          )}
+
+          {/* Skills & Technologies */}
+          {(data.skills?.length || data.technologies?.length) && (
+            <section className='mb-5'>
+              <SectionTitle>Skills & Technologies</SectionTitle>
+              <div className='mt-2 text-sm flex flex-wrap gap-2'>
+                {data.skills?.map((s, idx) => (
+
+          )}
+
+          {/* Skills & Technologies */}
+          {(data.skills?.length || data.technologies?.length) && (
+            <section className='mb-5'>
+              <SectionTitle>Skills & Technologies</SectionTitle>
+              <div className='mt-2 text-sm flex flex-wrap gap-2'>
+                {data.skills?.map((s, idx) => (
                   <span
                     key={`skill-${idx}`}
                     className='px-2 py-0 && 0.5 rounded border border-gray-200 dark:border-gray-700'>                    {s}
@@ -189,16 +233,6 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                   <span
                     key={`tech-${idx}`}
                 ))}
-                {data && data.technologies?.map((t, idx) => (;
-                  <span
-                    key={`tech-${idx}`}
-                    className='px-2 py-0 && 0.5 rounded border border-gray-200 dark:border-gray-700'>                  <span key={`tech-${idx}`} className="px-2 py-0 && 0.5 rounded border border-gray-200 dark:border-gray-700">;
-                    {t}
-                  </span>;
-                ))}
-              </div>;
-            </section>;
-          )}
                 <a;
                   className='underline';
                   href={data.contact.linkedin}
@@ -249,6 +283,11 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
               <div className="mt - 2 text - sm flex flex - wrap gap - 2">;
                 {data.skills?.map ((s, idx) => (
                   <span key={`skill-${idx}`} className="px - 2 py - 0.5 rounded border border - gray - 200 dark:border - gray - 700">;
+                    className='px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700'
+
+
+                  >                    {t}
+
                     {s}
                   </span>))}
                 {data.technologies?.map ((t, idx) => (
@@ -257,6 +296,26 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                     className='px - 2 py - 0.5 rounded border border - gray - 200 dark:border - gray - 700';
                   >                  <span key={`tech-${idx}`} className="px - 2 py - 0.5 rounded border border - gray - 200 dark:border - gray - 700">;
                     {t}
+
+          {/* Experience */}
+          {data.experience?.length ? (
+            <section className='mb - 5'>;
+              <SectionTitle > Work Experience</SectionTitle>;
+              <div className='mt - 2 space - y-3'>;
+                {data.experience.map ((role, idx) => (
+                  <div key={`exp-${idx}`}>;
+                    <div className='flex items - baseline justify - between'>;
+                      <h3 className='font - medium text - gray - 900 dark:text - white'>;
+                        {role.title}
+                        {role.company ? ` • ${role.company}` : ''}
+
+          {data.experience?.length ? (
+            <section className="mb-5">
+              <SectionTitle>Work Experience</SectionTitle>
+
+
+                      <div className='text-xs text-gray-600 dark:text-gray-300'>                        {(role.start || role.end) && (              <SectionTitle>Work Experience</SectionTitle>
+
           {/* Experience */}
               <div className="mt-2 space-y-3">
                 {data.experience.map((role, idx) => (
@@ -305,18 +364,15 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                       <ul className='mt-1 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1'>                        {role && role.bullets.map((b, bIdx) => (                      <ul className="mt-1 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1">;
                         {role && role.bullets.map((b, bIdx) => (;
                           <li key={`exp-${idx}-b-${bIdx}`}>{b}</li>;
+                          <span>;
+                            {role.start || ''}
+                            {role.end ? ` – ${role.end}` : ''}
+                          </span>)}
+
                         {role.location ? ` • ${role.location}` : ''}
                       </div>;
                     </div>;
                     {role.bullets?.length ? (
-                        ))}
-                      </ul>;
-                    ) : null}
-                  </div>;
-                ))}
-              </div>;
-            </section>;
-          ) : null}
                       <ul className='mt - 1 list - disc list - inside text - sm text - gray - 800 dark:text - gray - 200 space - y-1'>                        {role.bullets.map ((b, b_idx) => (                      <ul className="mt - 1 list - disc list - inside text - sm text - gray - 800 dark:text - gray - 200 space - y-1">;
                         {role.bullets.map ((b, b_idx) => (
                           <li key={`exp-${idx}-b-${b_idx}`}>{b}</li>))}
@@ -324,6 +380,43 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                   </div>))}
               </div>;
             </section>) : null}
+
+                        {(role.start || role.end) && (
+
+                      <div className='text-xs text-gray-600 dark:text-gray-300'>                        {(role.start || role.end) && (
+
+                        {(role.start || role.end) && (
+
+                          <span>
+                            {role.start || ''}
+                            {role.end ? ` – ${role.end}` : ''}
+                          </span>
+                        )}
+                        {role.location ? ` • ${role.location}` : ''}
+                      </div>
+                    </div>
+                    {role.bullets?.length ? (
+                      <ul className='mt-1 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1'>                        {role.bullets.map((b, bIdx) => (                      <ul className="mt-1 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1">
+                        {role.bullets.map((b, bIdx) => (
+                          <li key={`exp-${idx}-b-${bIdx}`}>{b}</li>
+                        ))}
+                      </ul>
+                    ) : null}
+                  </div>
+                ))}
+              </div>
+            </section>
+          ) : null}
+
+          {/* Education */}
+
+
+
+                      {[ed.degree, ed.start && ed.end ? `${ed.start} – ${ed.end}` : ed.start || ed.end]
+
+                        .filter(Boolean)
+
+
           {/* Education */}
           {data && data.education?.length ? (;
             <section className='mb-5'>;
@@ -362,7 +455,6 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                 ))}
               </div>
             </section>
-          ) : null}
 
           {/* Certifications */}
           {data.certifications?.length ? (

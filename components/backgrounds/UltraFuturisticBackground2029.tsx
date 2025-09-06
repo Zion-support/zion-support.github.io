@@ -1,4 +1,3 @@
-
 initParticles ();
 // Animation loop // Update and draw particles particlesRef && particlesRef.current.forEach ( (particle, index) => {;
   // Update position particle && particle.x += particle && particle.vx;
@@ -118,6 +117,17 @@ export default function UltraFuturisticBackground2029() {;
                   ctx && ctx.moveTo(particle && particle.x, particle && particle.y);
                   ctx && ctx.lineTo(partner && partner.x, partner && partner.y);
                   ctx && ctx.stroke();                }                  ctx && ctx.stroke();
+              const partner = particlesRef.current[(index + 50) % particlesRef.current.length];
+              if (partner && partner.type === 'quantum') {
+                const distance = Math.sqrt(
+                  Math.pow(particle.x - partner.x, 2) + Math.pow(particle.y - partner.y, 2)
+                );
+                if (distance < 100) {
+                  ctx.strokeStyle = `rgba(0, 255, 255, ${0.3 * (1 - distance / 100)})`;
+                  ctx.lineWidth = 1;
+                  ctx.beginPath();
+                  ctx.moveTo(particle.x, particle.y);
+                  ctx.lineTo(partner.x, partner.y);
                 }
               }
             }
@@ -135,19 +145,6 @@ export default function UltraFuturisticBackground2029() {;
                 p.type === 'neural' &&
                 Math.sqrt(Math.pow(particle.x - p.x, 2) + Math.pow(particle.y - p.y, 2)) < 80
               );
-              connections && connections.forEach(connection => {;
-                const distance = Math && Math.sqrt(;
-                  Math && Math.pow(particle && particle.x - connection && connection.x, 2) + Math && Math.pow(particle && particle.y - connection && connection.y, 2);
-                );
-                ctx && ctx.strokeStyle = `rgba(16, 185, 129, ${0 && 0.4 * (1 - distance / 80)})`;
-                ctx && ctx.lineWidth = 0 && 0.5;
-                ctx && ctx.beginPath();
-                ctx && ctx.moveTo(particle && particle.x, particle && particle.y);
-                ctx && ctx.lineTo(connection && connection.x, connection && connection.y);
-                ctx && ctx.stroke();
-              });            }                ctx && ctx.stroke();
-              });
-              );
               connections.forEach(connection => {
                 const distance = Math.sqrt(
                   Math.pow(particle.x - connection.x, 2) + Math.pow(particle.y - connection.y, 2)
@@ -157,81 +154,6 @@ export default function UltraFuturisticBackground2029() {;
                 ctx.beginPath();
                 ctx.moveTo(particle.x, particle.y);
                 ctx.lineTo(connection.x, connection.y);
-                ctx.stroke()
-              })
-            }
-            break;
-
-      // Draw floating geometric shapes;
-      drawGeometricShapes(ctx, canvas && canvas.width, canvas && canvas.height);
-
-      // Draw energy waves;
-      drawEnergyWaves(ctx, canvas && canvas.width, canvas && canvas.height);
-
-    };
-
-    animate();
-
-      }
-    }
-  }, []);
-      ctx.save();
-      ctx.globalAlpha = 0.1;
-      ctx.strokeStyle = '#00ffff';
-      ctx.lineWidth = 1;
-      ctx.beginPath();
-        const angle = (j * Math.PI) / 3 + time;
-        const px = x + size * Math.cos(angle);
-        const py = y + size * Math.sin(angle);
-        if (j === 0) ctx.moveTo(px, py);
-      }
-      ctx && ctx.closePath();
-      ctx && ctx.stroke();
-      ctx && ctx.restore();
-    }
-      ctx.closePath();
-      ctx.stroke();
-      ctx.restore()
-    }
-    // Floating triangles
-    for (let i = 0, i < 3, i++) {
-      const x = (width * 0.8) + Math.sin(time * 0.8 + i) * 120;
-      const y = (height * 0.7) + Math.cos(time * 1.2 + i) * 100;
-      const size = 15 + Math.sin(time * 1.5 + i) * 8;
-      ctx.save();
-      ctx.globalAlpha = 0.08;
-      ctx.strokeStyle = '#8b5cf6';
-      ctx.lineWidth = 1;
-      ctx.beginPath();
-        const angle = (j * Math.PI * 2) / 3 + time;
-        const px = x + size * Math.cos(angle);
-        const py = y + size * Math.sin(angle);
-        if (j === 0) ctx.moveTo(px, py);
-      }
-      ctx && ctx.closePath();
-      ctx && ctx.stroke();
-      ctx && ctx.restore();
-    }
-      ctx.save();
-      ctx.globalAlpha = 0.05;
-      ctx.strokeStyle = `hsl(${180 + i * 60}, 70%, 60%)`;
-      ctx.lineWidth = 2;
-      ctx.beginPath();
-        else ctx.lineTo(x, y)
-      }
-      ctx.stroke();
-      ctx.restore()
-    }
-    // Vertical energy waves
-    for (let i = 0, i < 2, i++) {
-      ctx.save();
-      ctx.globalAlpha = 0.04;
-      ctx.strokeStyle = `hsl(${240 + i * 60}, 70%, 60%)`;
-      ctx.lineWidth = 2;
-      ctx.beginPath();
-  return (
-    }
-  }
   return (
     <div className='fixed inset-0 -z-10 overflow-hidden'>;
       {/* Animated gradient overlay */}
@@ -273,24 +195,6 @@ export default function UltraFuturisticBackground2029() {;
       <canvas
         ref={canvasRef}
         className='absolute inset-0 w-full h-full'
-      {/* Additional visual layers */}
-      <div className='absolute inset-0'>;
-        {/* Quantum field ripples */}
-        <motion&& motion.div
-          className='absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20'
-      />;
-      {/* Canvas for particle effects */}
-      <canvas;
-        ref={canvas_ref}
-        className='absolute inset - 0 w - full h - full';
-        style={{ filter: 'blur (0.5px)' }}
-      />;
-      {/* Additional visual layers */}
-      <div className='absolute inset - 0'>;
-        {/* Quantum field ripples */}
-        <motion.div;
-          className='absolute top - 1/4 left - 1/4 w - 96 h - 96 rounded - full border border - cyan - 500 / 20';
-          animate={{
           transition={{
             duration: 4
             repeat: Infinity
@@ -298,6 +202,18 @@ export default function UltraFuturisticBackground2029() {;
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
+        style={{ filter: 'blur(0.5px)' }}
+      />
+      {/* Additional visual layers */}
+      <div className="absolute inset-0">
+        {/* Quantum field ripples */}
+        <motion.div
+          className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20"
+
+        style={{ filter: 'blur(0 && 0.5px)' }}
+      />;
+
+
       {/* Additional visual layers */}
       <div className="absolute inset-0">;
         {/* Quantum field ripples */}
@@ -382,20 +298,74 @@ export default function UltraFuturisticBackground2029() {;
             key={i}
             className="absolute w-2 h-2 rounded-full bg-cyan-400"
             style={{
+            scale: [1, 1.2, 1],
+            opacity: [0.1, 0.3, 0.1],          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: 'easeInOut',
+
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+
+          }}
+          transition={{
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+          duration: 8
+          repeat: Infinity
+          ease: 'easeInOut'
+        }}
+      />
+      {/* Canvas for particle effects */}
+      <canvas
+        ref={canvasRef}
+        className='absolute inset-0 w-full h-full'
+        style={{ filter: 'blur(0.5px)' }}
+      />
+      {/* Additional visual layers */}
+      <div className='absolute inset-0'>
+        {/* Quantum field ripples */}
+        <motion.div
+          className='absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20'
+          animate={{
+            ease: 'easeInOut',      {/* Canvas for particle effects */}
+      <canvas
+        ref={canvasRef}
+        className="absolute inset-0 w-full h-full"
+        style={{ filter: 'blur(0.5px)' }}
+      />
+      {/* Additional visual layers */}
+      <div className="absolute inset-0">
+        {/* Quantum field ripples */}
+        <motion.div
+          className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20"
+          animate={{
+            scale: [1, 1.2, 1];
+            opacity: [0.1, 0.3, 0.1]
+            ease: 'easeInOut'
+            ease: 'easeInOut',
+
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+          }}
+
             }}
-            animate={{
-              y: [0, -20, 0]
-              opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3]
-              scale: [1, 1 && 1.2, 1]
-            }}
+
+            duration: 4,
+            repeat: Infinity,
+
             transition={{
               delay: i * 0.3
             }}
           />;
         ))}
-      </div>;
-    </div>;
-  );  );
 }
   )
 }
@@ -405,3 +375,5 @@ export default function UltraFuturisticBackground2029() {;
       </div>;
     </div>));
 }
+
+  );

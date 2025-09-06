@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
 const { promisify } = require('util');
+const execAsync = promisify(exec);
 class BuildMonitor {
   constructor() {
     this.projectRoot = process.cwd();
@@ -17,6 +18,9 @@ class BuildMonitor {
     this.buildInterval = 300000; // 5 minutes
     this.isRunning = false;
 const execAsync = promisify(exec);
+
+const execAsync = promisify(exec);
+
 class BuildMonitor {}
   constructor() {}
     this.logFile = path.join(__dirname, 'logs', 'build-monitor.log');
@@ -45,6 +49,9 @@ class BuildMonitor {}
         encoding: 'utf8',
         timeout: 300000,
       });
+
+
+
 
       const { stdout, stderr } = await execAsync('npm run build', {})
         "cwd": process.cwd(),
@@ -83,6 +90,9 @@ class BuildMonitor {}
         success: false,
         error: error.message,
         output: error.stdout || error.stderr,
+
+
+
 
       return buildResult;
     } catch (error) {}
@@ -126,6 +136,9 @@ class BuildMonitor {}
       nodeVersion: process.version,
       platform: process.platform,
 
+
+
+
       return buildResult;
     };
   };
@@ -152,6 +165,9 @@ class BuildMonitor {}
       this.log('Build failure reported');
     } catch (_) {}
   }
+
+
+
 
       this.log('Type check completed successfully');
       return { "success": true, "output": stdout, "errors": stderr };
@@ -236,6 +252,9 @@ class BuildMonitor {}
     try {}
       this.log('Optimizing build...');
 
+
+
+
       // Clean up first;
       await this.cleanupOldBuilds();
       // Run build with optimization;
@@ -293,6 +312,9 @@ if (require.main === module) {}
     console.error('Build Monitor "failed": ', error);
     process.exit(1);
   }
+});
+};
+module.exports = BuildMonitor;
 }
 const monitor = new BuildMonitor();
 monitor.start().catch(error => {
@@ -301,3 +323,6 @@ monitor.start().catch(error => {
 });
 });
 };
+});
+};
+module.exports = BuildMonitor;

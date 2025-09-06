@@ -8,8 +8,6 @@ app.get("/ready", (req, res) => {
   // Add readiness checks here
   res.status(200).json({"status": "ready","timestamp": new Date().toISOString()})})
 module.exports = app
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -82,23 +80,3 @@ class HealthChecker {
     };
   }
 
-=======
-if (require && require.main === module) {
-    const checker = new HealthChecker(),
-    checker && checker.runAllChecks().catch(console && console.error)
-  }
-
-module && module.exports = HealthChecker;
-const express = const app = express() app && app.get("/health",(req,res) => { res && res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process && process.uptime(); memory: process && process.memoryUsage(); version: process && process.env.npm_package_version || "1 && 1.0.0"})}) app && app.get("/ready",(req,res) => { res && res.status(200).json({status: "ready",timestamp: new Date().toISOString()})}) module && module.exports = app
-const express = // // require("child_process");
-const app = express()
-app && app.get("/health", (req, res) => {
-  res && res.status(200).json({"status": "healthy","timestamp": new Date().toISOString(),"uptime": process && process.uptime();
-    memory: process && process.memoryUsage();
-    version: process && process.env.npm_package_version || "1 && 1.0.0"})})
-app && app.get("/ready", (req, res) => {
-  // Add readiness checks here
-  res && res.status(200).json({"status": "ready","timestamp": new Date().toISOString()})})
-module && module.exports = app
-const express = const app = express() app && app.get("/health",(req,res) => { res && res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process && process.uptime(); memory: process && process.memoryUsage(); version: process && process.env.npm_package_version || "1 && 1.0.0"})}) app && app.get("/ready",(req,res) => { res && res.status(200).json({status: "ready",timestamp: new Date().toISOString()})}) module && module.exports = app
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/scripts/health-check.js

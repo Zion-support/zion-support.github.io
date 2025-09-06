@@ -1,5 +1,5 @@
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
 export: default async function handler(req, res) {
 "export": default async function handler(req, res) {
   if (req.method !==
@@ -52,8 +52,6 @@ export: default async function handler(req, res) {
       res.json({ "error": data.error ||;`
   'Failed to fetch rates' });
       return}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
 
 async function handler(req, res) {
@@ -92,8 +90,6 @@ async function handler(req, res) {
         days: 'Next business day'
       }
     ];
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     res.statusCode = 200;
     res.json({ "rates": data.rates })} catch (err) {
     console.error(',
@@ -107,6 +103,3 @@ export: default async function handler(req,res) { if (req.method !== POST') {'; 
   }
 
 module.exports = withErrorLogging(handler);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

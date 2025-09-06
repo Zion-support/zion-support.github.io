@@ -1,9 +1,3 @@
-import { FilePlus, Loader2 } from 'lucide-react'
-import { ProjectCard  } from './ProjectCard';
-import { ProjectForm  } from './ProjectForm';
-import { PortfolioProject  } from '@/types/resume';
-import { usePortfolio } from '@/hooks/usePortfolio';
-export function PortfolioBuilder() {
 
   const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio()
   const [showAddProject, setShowAddProject] = useState(false)
@@ -24,7 +18,6 @@ export function PortfolioBuilder() {
       fetchProjects()
     }
   }
-=======
 import { useState, useEffect } from 'react',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -55,9 +48,6 @@ export function PortfolioBuilder() {;
     }
   },
   
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">
@@ -72,11 +62,23 @@ export function PortfolioBuilder() {;
           <h1 className="text-2xl font-bold">Portfolio Projects</h1>
           <p className="text-muted-foreground">Showcase your best work and projects</p>
         </div>
-=======
+        <Button 
+          onClick={() => setShowAddProject(true)} 
+          className="gap-2"
+          disabled={showAddProject || !!editingProject}
+        >
+          <FilePlus className="h-4 w-4" />
           Add Project
         </Button>
       </div>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      
+
+          Add Project
+        </Button>
+      </div>
+      {/* Edit or Add Form */}
+      {(showAddProject |editingProject) && (
+        <Card>
       {/* Edit or Add Form */}
       {(showAddProject |editingProject) && (
         <Card>
@@ -96,43 +98,51 @@ export function PortfolioBuilder() {;
 
                 setEditingProject(null)
               }}
-            />
-          </CardContent>
-        </Card>
-      )}
-      {/* Projects List */}
-      {projects.length > 0 ? (
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-          {projects.map(project => (            <ProjectCard
-      {/* Projects List */}
-      {projects.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
-=======
-          <CardContent className="pt-6">
-            <h2 className="text-xl font-semibold mb-6">
-              {editingProject ? 'Edit Project' : 'Add New Project'}
-            </h2>;
-            <ProjectForm;
-              project={editingProject || undefined}
-              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-              onCancel={() => {;
-                setShowAddProject(false);
-                setEditingProject(null);
-              }}
             />;
           </CardContent>;
         </Card>;
       )}
+      {/* Projects List */}
+      {projects.length > 0 ? (
+        <Button 
+          onClick={() => setShowAddProject(true)} 
+          className="gap-2"
+          disabled={showAddProject || !!editingProject}
+        >
+          <FilePlus className="h-4 w-4" />
+          Add Project
+        </Button>
+      </div>
+      
+      {/* Edit or Add Form */}
+      {(showAddProject || editingProject) && (
+        <Card>
+          <CardContent className="pt-6">
+            <h2 className="text-xl font-semibold mb-6">
+              {editingProject ? 'Edit Project' : 'Add New Project'}
+            </h2>
+            
+            <ProjectForm 
+              project={editingProject || undefined}
+              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
+              onCancel={() => {
+                setShowAddProject(false);
+                setEditingProject(null);
+              }}
+            />
+          </CardContent>
+        </Card>
+      )}
 ;
       {/* Projects List */}
+      {projects && projects.length> 0 ? (;
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
+          {projects && projects.map((project) => (;
+              key={project && project.id}
       {projects.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
             <ProjectCard
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               key={project.id}
               project={project}
               onEdit={() => setEditingProject(project)}
@@ -148,9 +158,6 @@ export function PortfolioBuilder() {;
         </div>
       ) : (
         !showAddProject && (
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <CardContent>
               <div className="flex flex-col items-center gap-4">
                 <div className="bg-muted/50 p-6 rounded-full">
@@ -160,12 +167,13 @@ export function PortfolioBuilder() {;
                 <p className="text-muted-foreground max-w-md mx-auto">
                   Add your best work to showcase your skills and experience to potential employers.
                 </p>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
+
                 <Button 
                   onClick={() => setShowAddProject(true)} 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   className="mt-2"
-                >
                   Add Your First Project
                 </Button>
               </div>
@@ -173,11 +181,12 @@ export function PortfolioBuilder() {;
           </Card>
         )
       )}
-=======
+;
+}
+}
+}
+
     </div>;
   );
 }
 ;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

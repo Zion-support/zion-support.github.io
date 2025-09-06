@@ -1,4 +1,3 @@
-=======
 
 import { useEffect, useState } from "react",
 import Link from "next/link",
@@ -8,23 +7,19 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge",
 import { useProjects } from "@/hooks/useProjects",
 import { Project } from "@/types/projects",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export function ActiveProjectsCard() {
+xport function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects();
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
   
   useEffect(() => {
     if (projects && !isLoading) {
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
   if (isLoading) {
     return (
       <Card>
         <CardHeader>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <BriefcaseIcon className="h-5 w-5 text-primary" />
             <span>Active Projects</span>
           </CardTitle>
@@ -33,7 +28,6 @@ export function ActiveProjectsCard() {
         <CardContent>
           <div className="space-y-2">
             {[1, 2].map(idx => (
-=======
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>
 import { useEffect, useState } from "react",;
 import Link from "next/link",;
@@ -73,38 +67,39 @@ export function ActiveProjectsCard() {;
         </CardContent>;
       </Card>;
     );
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+  }
+    );
+  }
+
+
+
+
   }
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (activeProjects.length === 0) {
     return (
       <Card>
         <CardHeader>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
             <BriefcaseIcon className="h-5 w-5 text-primary" />
-            <span>Active Projects</span>
           </CardTitle>
           <CardDescription>Your ongoing work</CardDescription>
         </CardHeader>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </CardContent>
       </Card>
     )
   }
+
+
+
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle className='flex items-center gap-2'>
-          <BriefcaseIcon className='h-5 w-5 text-primary' />          <span>Active Projects</span>
-        </CardTitle>
-        <CardDescription>Your ongoing work</CardDescription>
-      </CardHeader>
-      <CardContent className='space-y-4'>
+  }
+  return (
+
   return (
     <Card>
       <CardHeader>
@@ -145,7 +140,6 @@ export function ActiveProjectsCard() {;
               </span>
             </div>
             <Button size='sm' variant='outline' className='w-full mt-2' asChild>              <Link href={`/project/${project.id}`}>View Project</Link>            <Button size="sm" variant="outline" className="w-full mt-2" asChild>
-=======
   
   return (
     <Card>
@@ -173,13 +167,7 @@ export function ActiveProjectsCard() {;
               <span>Started {new Date(project.start_date).toLocaleDateString()}</span>
             </div>
             <Button size="sm" variant="outline" className="w-full mt-2" asChild>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <Link href={`/project/${project.id}`}>View Project</Link>
             </Button>
           </div>
         ))}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

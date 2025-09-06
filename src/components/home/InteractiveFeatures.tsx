@@ -1,3 +1,4 @@
+  style?: React.CSSProperties;
 import { cn } from '@/lib/utils';interface InteractiveFeaturesProps {
   className?: string
   style?: React.CSSProperties
@@ -10,7 +11,6 @@ export function InteractiveFeatures({
   style
 }: InteractiveFeaturesProps) {
   const [openIndex, setOpenIndex] = React.useState<number | null>(null)
-=======
 import React from "react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -25,7 +25,6 @@ interface InteractiveFeaturesProps {
 export function InteractiveFeatures({ className, style }: InteractiveFeaturesProps) {
   const [openIndex, setOpenIndex] = React.useState<number | null>(null),
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const features = [
     {
       title: "AI Talent Matching",
@@ -60,10 +59,9 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
     setOpenIndex((prev) => (prev === index ? null : index))
   },
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
+
+
     <section className={cn("py-16 bg-zion-blue-dark", className)} style={style}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
@@ -74,16 +72,10 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
             Hover or click a card to learn more about what Zion offers
           </p>
         </div>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               key={index}
               onMouseEnter={() => setOpenIndex(index)}
               onMouseLeave={() => setOpenIndex(null)}
               onClick={() => handleToggle(index)}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {feature.icon}
                 <div>
                   <CardTitle className="text-lg text-white">{feature.title}</CardTitle>
@@ -94,20 +86,18 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
               </CardHeader>
               <div
                 className={cn(
+                  'transition-all duration-300',
+
                   openIndex === index
                     ? 'max-h-48 opacity-100 p-6 pt-0'
                     : 'max-h-0 opacity-0 p-0'
                 )}              >
                 <CardContent className='text-sm text-zion-slate-light p-0'>
-=======
                   "transition-all duration-300",
                   openIndex === index ? "max-h-48 opacity-100 p-6 pt-0" : "max-h-0 opacity-0 p-0"
                 )}
               >
                 <CardContent className="text-sm text-zion-slate-light p-0">
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <p>{feature.details}</p>
                   <Button asChild variant="link" className="mt-3 p-0 h-auto text-primary">
                     <Link href={feature.link} className="flex items-center gap-1">
@@ -118,14 +108,16 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
               </div>
             </Card>
           ))}
-=======
+
+export default InteractiveFeatures;
+;
+}
+}
+
         </div>;
+export default InteractiveFeatures
+
+ursor/fix-website-loading-errors-and-merge-6662
       </div>;
     </section>;
   );
-}
-;
-export default InteractiveFeatures;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,37 +1,34 @@
-=======
-import { Input } from "@/components/ui/input",
-import { SearchIcon } from 'lucide-react'
-import { SearchFilterProps } from "@/types/filters",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="mb-6">
       <div className="relative">
         <label htmlFor="talent-search" className="sr-only">
           Search talents
         </label>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
         <Input
           id="talent-search"
           type="text"
           placeholder="Search talents..."
           value={searchTerm}
+
+
+
           onChange={(e) => setSearchTerm(e.target.value)}
           aria-describedby="talent-search-help"
           className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light"
         />
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           Type a name or skill to filter results
         </p>
       </div>
     </div>
-  )
-=======
+
+          onChange={e => setSearchTerm(e && e.target.value)}
+          aria-describedby='talent-search-help';
+          className='pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light';
+
+};
+;
 import { Input } from "@/components/ui/input",;
 import { SearchIcon } from 'lucide-react';
 import { SearchFilterProps } from "@/types/filters";
@@ -59,7 +56,3 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
     </div>;
   );
 }
-;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

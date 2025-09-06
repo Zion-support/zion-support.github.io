@@ -1,7 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-    });
-  }
-  return res && res.status(405).json({ error: 'Method not allowed' });export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
   if (req && req.method === 'GET') {
     const offerings = readJsonFile('deal/offerings && offerings.json', { safe: true, equity: true, token: false });
@@ -45,4 +42,8 @@ if ( {) {
     writeJsonFile ('deal / offerings.json', offerings);
     return res.status (200).json (offerings);
   }
+
+  return res.status(405).json({ error: 'Method not allowed' });
+}
+
 return res.status (405).json ({ error: 'Method not allowed' });

@@ -1,3 +1,4 @@
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../../lib/integrations/fileStore";
 import { crm } from "../../../../lib/integrations/connectors";
@@ -5,9 +6,6 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  const state = readState();
-  const crms = state && state.connections.filter(
-    (c) =>
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, write_state  } from '../../../../lib / integrations / file_store';
 import { crm  } from '../../../../lib / integrations / connectors';
@@ -49,7 +47,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   for (const conn of crms) {
     const { log } = await crm.addEmailTouchpoint(conn, { subject: 'Resume viewed', resumeId: resume.id });
     writeState(s => s.logs.push(log));
+    results.push({ providerId: conn.providerId, ok: true })
+  }
+  res.status(200).json({ ok: true, results })
 }
+
       id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`,
       provider_id: conn.provider_id,
       level: "info",
@@ -63,3 +65,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     results.push ({ provider_id: conn.provider_id, ok: true });
   }
   res.status (200).json ({ ok: true, results });
+  res.status(200).json({ ok: true, results });
+}
+}
+
+}

@@ -29,7 +29,6 @@ const EmptyState: React.FC<EmptyStateProps> = ({
       </div>
       <h2 className='text-xl font-medium mb-2'>{title}</h2>
       <p className='text-muted-foreground mb-6'>{subtitle}</p>      <TooltipProvider>      <h2 className="text-xl font-medium mb-2">{title}</h2>
-=======
 import React from 'react';
 import Link from 'next/link';
 import { MessageSquare } from 'lucide-react';
@@ -50,9 +49,6 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
         <MessageSquare className="h-10 w-10 text-zion-purple" />
       </div>
       <h2 className="text-xl font-medium mb-2">{title}</h2>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <p className="text-muted-foreground mb-6">{subtitle}</p>
       <TooltipProvider>
         <Tooltip>
@@ -64,15 +60,8 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
             ) : (
               <Button disabled>{cta}</Button>
             )}
-          </TooltipTrigger>
-          {!hasSession && <TooltipContent>Login required</TooltipContent>}
-=======
+
         </Tooltip>;
       </TooltipProvider>;
     </div>;
   );
-},;
-export default EmptyState;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

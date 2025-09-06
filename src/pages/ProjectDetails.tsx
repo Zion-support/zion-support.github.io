@@ -1,13 +1,10 @@
-import React, { useState, useEffect } from "react",
-import Link from 'next/link';
-import { useRouter  } from 'next/router';
-import { format } from "date-fns",
-import { useAuth } from "@/hooks/useAuth",
-import { useProjects } from "@/hooks/useProjects",
-import { SEO } from "@/components/SEO",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { Project, ProjectStatus } from "@/types/projects",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
@@ -16,6 +13,7 @@ import { Project, ProjectStatus } from "@/types/projects",
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
+
 
   Card
   CardContent
@@ -34,7 +32,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
   AlertDialogHeader
   AlertDialogTitle
   AlertDialogTrigger
-=======
 } from '@/components/ui/alert-dialog'
 import { Avatar } from '@/components/ui/avatar'
 import { Badge } from '@/components/ui/badge'
@@ -67,9 +64,6 @@ function ProjectDetailsContent() {
   const [isSubmittingNote, setIsSubmittingNote] = useState(false),
   const [activeTab, setActiveTab] = useState("details"),
   
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Load project data
   useEffect(() => {
     async function loadProject() {
@@ -77,7 +71,6 @@ function ProjectDetailsContent() {
       const projectData = await getProjectById(projectId)
       if (projectData) {
         setProject(projectData)
-=======
       if (!projectId) return,
       
       setIsLoading(true),
@@ -86,14 +79,10 @@ function ProjectDetailsContent() {
       if (projectData) {
         setProject(projectData),
         
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         // Now fetch notes
         fetchProjectNotes(projectId)
       } else {
         toast({
-=======
           title: "Project not found",
           description: "The requested project could not be found.",
           variant: "destructive"}),
@@ -166,11 +155,9 @@ function ProjectDetailsContent() {;
           description: "The requested project could not be found.",;
           variant: "destructive"}),;
         router.push("/dashboard");
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       }
       setIsLoading(false)
     }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       const { data, error } = await supabase
         .from("project_notes")
         .select(`
@@ -197,9 +184,6 @@ function ProjectDetailsContent() {;
     
     setIsSubmittingNote(true),
     
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     try {
       const { data, error } = await supabase
         .from("project_notes")
@@ -233,7 +217,6 @@ function ProjectDetailsContent() {;
         ...project
         status: newStatus
       })
-=======
           content: newNote})
         .select(),
       
@@ -267,9 +250,6 @@ function ProjectDetailsContent() {;
         ...project,
         status: newStatus}),
       
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       // If offer was accepted, show a special toast
       if (newStatus === "offer_accepted") {
         toast({
@@ -296,7 +276,6 @@ function ProjectDetailsContent() {;
         return <Badge variant='outline'>{status}</Badge>
     }
   }
-=======
           title: "Offer Accepted! 🎉",
           description: "The project is now in progress. Congratulations!"})
       }
@@ -321,9 +300,6 @@ function ProjectDetailsContent() {;
     }
   },
   
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (isLoading) {
     return (
       <div className="container mx-auto py-8">
@@ -346,9 +322,6 @@ function ProjectDetailsContent() {;
             <p className="text-muted-foreground mb-4">
               The project you're looking for doesn't exist or you don't have access to it.
             </p>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </Button>
           </CardContent>
         </Card>
@@ -382,13 +355,11 @@ function ProjectDetailsContent() {;
   const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),
   const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status),
   
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <SEO 
         title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} 
         description="View and manage your project details and collaboration."
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       />
       <main className="container mx-auto px-4 py-8">
         <div className="mb-6">
@@ -400,9 +371,6 @@ function ProjectDetailsContent() {;
                 </span>
               </div>
             </div>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Action Buttons Based on Role and Status */}
             <div className="space-x-2">
               {isTalent && isOfferPending && (
@@ -423,24 +391,18 @@ function ProjectDetailsContent() {;
                       </AlertDialogHeader>
                       <AlertDialogFooter>
                         <AlertDialogCancel>Cancel</AlertDialogCancel>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </AlertDialogAction>
                       </AlertDialogFooter>
                     </AlertDialogContent>
                   </AlertDialog>
-=======
                   
                   <Button variant="outline" onClick={() => handleStatusChange("changes_requested")}>
                     <MessageSquare className="mr-2 h-4 w-4" /> Request Changes
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </Button>
                 </>
               )}
               
               {(isClient || isTalent) && project.status === "in_progress" && (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 <AlertDialog>
                   <AlertDialogTrigger asChild>
                     <Button variant="default">
@@ -457,9 +419,6 @@ function ProjectDetailsContent() {;
                     </AlertDialogHeader>
                     <AlertDialogFooter>
                       <AlertDialogCancel>Cancel</AlertDialogCancel>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </AlertDialogAction>
                     </AlertDialogFooter>
                   </AlertDialogContent>
@@ -512,7 +471,6 @@ function ProjectDetailsContent() {;
                 )}
               </TabsList>
               <TabsContent value='details'>
-=======
               
               {(isClient || isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes(project.status) && (
                 <Button 
@@ -540,9 +498,6 @@ function ProjectDetailsContent() {;
               </TabsList>
               
               <TabsContent value="details">
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <Card>
                   <CardHeader>
                     <CardTitle>Project Scope</CardTitle>
@@ -558,18 +513,12 @@ function ProjectDetailsContent() {;
                           <p className="whitespace-pre-wrap">{project.scope_summary}</p>
                         </div>
                       </div>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <div>
                         <h3 className="font-semibold mb-2">Payment Terms</h3>
                         <Badge variant="outline" className="capitalize">
                           {project.payment_terms} Payment
                         </Badge>
                       </div>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <div>
                         <h3 className="font-semibold mb-2">Job Details</h3>
                         <div className="bg-muted/30 p-4 rounded-md">
@@ -580,9 +529,6 @@ function ProjectDetailsContent() {;
                   </CardContent>
                 </Card>
               </TabsContent>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <Card>
                   <CardHeader>
                     <CardTitle>Project Timeline</CardTitle>
@@ -599,9 +545,6 @@ function ProjectDetailsContent() {;
                           <p>{format(new Date(project.start_date), "PPP")}</p>
                         </div>
                       </div>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         <div>
                           <h3 className="font-semibold">Project Status</h3>
                           <div className="mt-1">
@@ -613,9 +556,6 @@ function ProjectDetailsContent() {;
                   </CardContent>
                 </Card>
               </TabsContent>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <Card>
                   <CardHeader>
                     <CardTitle>Project Documents</CardTitle>
@@ -634,6 +574,21 @@ function ProjectDetailsContent() {;
                               Uploaded when project was created
                             </p>
                           </div>
+                        )}
+
+                      </div>;
+
+                      {isOfferAccepted && (;
+                        <div>;
+                          <Textarea
+                            placeholder='Add a note or update to the project...'
+                            value={newNote}
+                            onChange={e => setNewNote(e && e.target.value)}
+                            className='min-h-[100px] mb-2'                          />;
+
+
+                                <span className="font-medium text-sm">
+                                  {note.created_by_profile?.display_name || "User"}
                         </div>
                         <Button variant="outline" size="sm" asChild>
                           <a href={project.agreement_url} target="_blank" rel="noopener noreferrer">
@@ -653,9 +608,6 @@ function ProjectDetailsContent() {;
                   </CardContent>
                 </Card>
               </TabsContent>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <Card>
                   <CardHeader>
                     <CardTitle>Project Notes</CardTitle>
@@ -667,16 +619,10 @@ function ProjectDetailsContent() {;
                     <div className="space-y-4">
                       <div className="space-y-4 max-h-[400px] overflow-y-auto mb-4">
                         {notes.length > 0 ? (
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                                   {note.created_by_profile?.avatar_url ? (
                                     <img
                                       src={note.created_by_profile.avatar_url}
                                       alt={note.created_by_profile.display_name}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                                   ) : (
                                     <User className="h-4 w-4" />
                                   )}
@@ -698,7 +644,8 @@ function ProjectDetailsContent() {;
                           </div>
                         )}
                       </div>
-=======
+
+
                       
                       {isOfferAccepted && (
                         <div>
@@ -708,11 +655,14 @@ function ProjectDetailsContent() {;
                             onChange={(e) => setNewNote(e.target.value)}
                             className="min-h-[100px] mb-2"
                           />
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
                           <Button
                             onClick={handleSubmitNote}
                             disabled={!newNote.trim() || isSubmittingNote}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+                          <Button
+                            onClick={handleSubmitNote}
+                            disabled={!newNote.trim() || isSubmittingNote}
                           >
                             {isSubmittingNote ? "Posting..." : "Post Note"}
                           </Button>
@@ -722,33 +672,135 @@ function ProjectDetailsContent() {;
                   </CardContent>
                 </Card>
               </TabsContent>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
                 <ProjectReviewSection project={project} />
               </TabsContent>
             </Tabs>
           </div>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
             <Card>
-              <CardHeader>
                 <CardTitle>Project Participants</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <Avatar className="h-10 w-10">
                       {project.talent_profile?.profile_picture_url ? (
                         <img
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       ) : (
                         <User className="h-6 w-6" />
+                      )}
+                    </Avatar>
+                    <div>
+                  <div className='flex items-start gap-4'>
+                    <Avatar className='h-10 w-10'>
+                        <Button variant='outline' size='sm' as_child>;
+                          <a;
+                            href={project.agreement_url}
+                            target='_blank';
+                            rel='noopener noreferrer';
+                          >;
+                            View;
+                          </a>;
+                        </Button>;
+                      </div>) : (
+                      <div className='text - center py - 8'>;
+                        <FileText className='h - 10 w - 10 text - muted - foreground mx - auto mb - 2' />;
+                        <h3 className='font - semibold'>No Documents Yet</h3>;
+                        <p className='text - sm text - muted - foreground'>;
+                          No documents have been uploaded to this project.;
+                        </p>;
+                      </div>)}
+                  </CardContent>;
+                </Card>;
+              </TabsContent>;
+              <TabsContent value='notes'>;
+                <Card>;
+                  <CardHeader>;
+                    <CardTitle > Project Notes</CardTitle>;
+                    <CardDescription > Shared notes and updates</CardDescription>;
+                  </CardHeader>;
+                  <CardContent>;
+                    <div className='space - y-4'>;
+                      <div className='space - y-4 max - h-[400px] overflow - y-auto mb - 4'>;
+                        {notes.length > 0 ? (
+                          notes.map (note => (
+                            <div;
+                              key={note.id}
+                              className='bg - muted / 30 p - 3 rounded - md';
+                            >;
+                              <div className='flex items - center gap - 2 mb - 2'>;
+                                <Avatar className='h - 6 w - 6'>;
+                                  {note.created_by_profile?.avatar_url ? (
+                                    <img;
+                                      src={note.created_by_profile.avatar_url}
+                                      alt={note.created_by_profile.display_name}
+                                      loading='lazy'                                    />) : (
+                                    <User className='h - 4 w - 4' />)}
+                                </Avatar>;
+                                <span className='font - medium text - sm'>;
+                                  {note.created_by_profile?.display_name ||;
+                                    'User'}
+                                </span>;
+                                <span className='text - xs text - muted - foreground'>;
+                                  {format (new Date (note.created_at), 'PPp')}
+                                </span>;
+                              </div>;
+                              <p className='text - sm whitespace - pre - wrap'>;
+                                {note.content}
+                              </p>;
+                            </div>))) : (
+                          <div className='text - center py - 8'>;
+                            <MessageSquare className='h - 8 w - 8 text - muted - foreground mx - auto mb - 2' />;
+                            <p className='text - muted - foreground'>;
+                              No notes yet. Add the first note to this project.;
+                            </p>;
+                          </div>)}
+                      </div>;
+                      {isOfferAccepted && (
+                        <div>;
+                          <Textarea;
+                            placeholder='Add a note or update to the project...';
+                            value={new_note}
+                            on_change={e => setNewNote (e.target.value)}
+                            className='min - h-[100px] mb - 2'                          />;
+                          <Button;
+                            on_click = {handleSubmitNote, }
+                            disabled = {!new_note.trim () || isSubmittingNote, }
+                          >;
+                            {isSubmittingNote ? 'Posting...' : 'Post Note'}
+                          </Button>;
+                        </div>)}
+                    </div>;
+                  </CardContent>;
+                </Card>;
+              </TabsContent>;
+              <TabsContent value='reviews'>;
+                <ProjectReviewSection project={project} />;
+              </TabsContent>;
+            </Tabs>;
+          </div>;
+          <div className='order - 1 lg:order - 2 lg:col - span - 1'>;
+            <Card>;
+              <CardHeader>;
+                <CardTitle > Project Participants</CardTitle>;
+              </CardHeader>;
+              <CardContent>;
+                <div className='space - y-6'>;
+                  <div className='flex items - start gap - 4'>;
+                    <Avatar className='h - 10 w - 10'>;
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <Avatar className="h-10 w-10">
+                      {project.talent_profile?.profile_picture_url ? (
+                        <img;
+                          src={project.talent_profile.profile_picture_url}
+                          alt={project.talent_profile.full_name}
+
+
+                      ) : (
+                        <User className='h-6 w-6' />
                       )}
                     </Avatar>
                     <div>
@@ -761,32 +813,22 @@ function ProjectDetailsContent() {;
                             )
                           }                        >
                           <MessageSquare className='mr-1 h-3 w-3' /> Message
-=======
                           variant="outline"
                           size="sm"
                           className="mt-2"
                           onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}
                         >
                           <MessageSquare className="mr-1 h-3 w-3" /> Message
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </Button>
                       )}
                     </div>
                   </div>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {project.talent_profile?.profile_picture_url ? (
-                        <img
+                        <img;
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       ) : (
-                        <User className="h-6 w-6" />
+                        <User className='h-6 w-6' />
                       )}
                     </Avatar>
                     <div>
@@ -794,42 +836,38 @@ function ProjectDetailsContent() {;
                       <p className="text-sm text-muted-foreground">Project Owner</p>
                       {isTalent && (
                         <Button
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
               <CardHeader>
-                <CardTitle>Project Status</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-2">
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium">Current Status:</span>
+                <div className='space-y-2'>
+                  <div className='flex justify-between items-center'>
+                    <span className='text-sm font-medium'>Current Status:</span>
                     <div>{getStatusBadge(project.status)}</div>
                   </div>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
                     </span>
                   </div>
                 </div>
               </CardContent>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Conditional Footer Based on Status */}
               {project.status === "changes_requested" && isClient && (
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">
                   <p className="text-sm text-amber-600 flex items-center gap-1">
                     <AlertCircle className="h-4 w-4" /> The talent has requested changes to this offer.
                   </p>
-=======
+
+
                   <Button 
                     variant="outline"
                     onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}
                     className="w-full"
                   >
                     <MessageSquare className="mr-2 h-4 w-4" /> Discuss Changes
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
                   </Button>
                 </CardFooter>
               )}
@@ -837,10 +875,36 @@ function ProjectDetailsContent() {;
               {project.status === "offer_sent" && isClient && (
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">
                   <p className="text-sm text-muted-foreground">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     Waiting for the talent to accept your offer.
                   </p>
                 </CardFooter>
+              )}
+              )}
+
+              {project && project.status === 'offer_sent' && isClient && (;
+                <CardFooter className='flex-col items-start gap-2 border-t pt-6'>;
+                  <p className='text-sm text-muted-foreground'>;
+                    Waiting for the talent to accept your offer.;
+                  </p>;
+                </CardFooter>;
+              )}
+
+              {project && project.status === 'completed' && (;
+                <CardFooter className='flex-col items-start gap-2 border-t pt-6'>;
+                  <p className='text-sm text-green-600 flex items-center gap-1'>;
+                    <CheckCircle2 className='h-4 w-4' /> This project has been;
+                    completed.;
+                  </p>;
+                </CardFooter>;
+              )}
+
+              {project && project.status === 'canceled' && (;
+                <CardFooter className='flex-col items-start gap-2 border-t pt-6'>;
+                  <p className='text-sm text-red-600 flex items-center gap-1'>;
+                    <XCircle className='h-4 w-4' /> This project has been;
+                    canceled.;
+                  </p>;
+                </CardFooter>;
               )}
             </Card>
           </div>
@@ -861,7 +925,6 @@ toast ({
 }finally {
   setIsSubmittingNote (false)
 }
-const handleStatusChange = async (newStatus: ProjectStatus) => {
   if (!project) return;
 const success = await updateProjectStatus (project.id, newStatus)
 if (success) {
@@ -959,19 +1022,19 @@ const ProjectDetails = () => {
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
                 <ul className="text-gray-600 space-y-2">
-                  <li>• Professional Solutions</li>
-                  <li>• Expert Implementation</li>
-                  <li>• 24/7 Support</li>
-                  <li>• Custom Development</li>
+                  <li> Professional Solutions</li>
+                  <li> Expert Implementation</li>
+                  <li> 24/7 Support</li>
+                  <li> Custom Development</li>
                 </ul>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
                 <ul className="text-gray-600 space-y-2">
-                  <li>• Industry Expertise</li>
-                  <li>• Proven Results</li>
-                  <li>• Scalable Solutions</li>
-                  <li>• Competitive Pricing</li>
+                  <li> Industry Expertise</li>
+                  <li> Proven Results</li>
+                  <li> Scalable Solutions</li>
+                  <li> Competitive Pricing</li>
                 </ul>
               </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -997,6 +1060,3 @@ export default function ProjectDetails() {;
   );
 }
 ;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

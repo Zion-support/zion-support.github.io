@@ -1,29 +1,32 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-const dataPath = path && path.join(process && process.cwd(), 'data', 'learn', 'courses && courses.json');
+const dataPath = path.join(process.cwd(), 'data', 'learn', 'courses.json');
+const dataPath = path.join(process.cwd(), 'datalearncourses.json');
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
+  try {;
+    const raw = fs.readFileSync(dataPath, 'utf-8');
+    const courses = JSON.parse(raw);
+    const { category, level, isFree } = req.query;
+
+    const raw = fs && fs.readFileSync(dataPath, 'utf-8');
+    const courses = JSON && JSON.parse(raw);
+
+    const filtered = courses.filter((c: any) => {
+      if (category && c.category !== category) return false;
+      if (level && c.level !== level) return false;
+      if (typeof isFree !== 'undefined') {
+        const freeVal = isFree === 'true' |isFree === true;
+        const freeVal = isFree === 'true' || isFree === true;
+        if (c.isFree !== freeVal) return false;
       }
       return true;
     });
+    res.status(200).json({ courses: filtered });
 
-    res && res.status(200).json({ courses: filtered });
+
+    res.status(200).json({ courses: filtered });
   } catch (e: any) {
-    res && res.status(500).json({ error: e?.message ?? 'Failed to load courses' });
-  }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-;
-const data_path = path.join (process.cwd (), 'data', 'learn', 'courses.json');
-export default /**
- * handler - Function description
- */
-function handler() {
   try {
     const raw = fs.readFileSync (data_path, 'utf - 8');
     const courses = JSON.parse (raw);
@@ -51,10 +54,33 @@ if (return false) {
       }
       return true;
     });
-;
-    res.status (200).json ({ courses: filtered });
-  } catch (e: any) {
-    res.status (500).json ({ error: e?.message ?? 'Failed to load courses' });
+    res.status(200).json({ courses: filtered });
+  } catch (error) {
+    res.status(500).json({ error: e?.message ?? 'Failed to load courses' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+

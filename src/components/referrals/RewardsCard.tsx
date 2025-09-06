@@ -1,28 +1,22 @@
 
-import { BadgeDollarSign, Badge } from 'lucide-react'
+
+
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { ReferralReward } from "@/types/referrals";
+import { formatDate } from "@/utils/referralUtils";
+import { BadgeDollarSign, Badge } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+
 interface RewardsCardProps {
   rewards: ReferralReward[]
+
   isLoading: boolean
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { ReferralReward } from "@/types/referrals"
-import { formatDate } from "@/utils/referralUtils"
-import { Badge } from '@/components/ui/badge'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-interface RewardsCardProps {
-
-  rewards: ReferralReward[]
-
   isLoading: boolean
 }
-export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
-  if (isLoading) {
-    return (
-      <Card>
-        <CardHeader>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function RewardsCard(): any ({ rewards, isLoading }: RewardsCardProps) {;
+  if (isLoading) {;
+
             Your Rewards
           </CardTitle>
           <CardDescription>Rewards earned from successful referrals</CardDescription>
@@ -33,50 +27,48 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
           </div>
         </CardContent>
       </Card>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
+
     )
   }
   if (rewards.length === 0) {
     return (
       <Card>
         <CardHeader>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+            Your Rewards
+          </CardTitle>
+          <CardDescription>
+            Rewards earned from successful referrals
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
             Your Rewards
           </CardTitle>
           <CardDescription>Rewards earned from successful referrals</CardDescription>
         </CardHeader>
         <CardContent>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className="flex flex-col items-center justify-center p-4 text-center">
-            <p className="text-muted-foreground">No rewards yet</p>
             <p className="text-sm text-muted-foreground mt-1">
               Refer users to earn rewards once they complete onboarding
             </p>
           </div>
         </CardContent>
       </Card>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   return (
     <Card>
       <CardHeader>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
           Your Rewards
         </CardTitle>
         <CardDescription>Rewards earned from successful referrals</CardDescription>
       </CardHeader>
       <CardContent>
-=======
+
         <div className="space-y-4">
           {rewards.map((reward, index) => (
             <div 
@@ -97,9 +89,6 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
     return (;
       <Card>;
         <CardHeader>;
-          <CardTitle className="flex items-center gap-2">;
-            <BadgeDollarSign className="h-5 w-5" />;
-            Your Rewards;
           </CardTitle>;
           <CardDescription>Rewards earned from successful referrals</CardDescription>;
         </CardHeader>;
@@ -131,27 +120,28 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
           </div>;
         </CardContent>;
       </Card>;
-    );
+    );  }    );
   }
-;
-  return (;
+  return (
     <Card>;
       <CardHeader>;
-        <CardTitle className="flex items-center gap-2">;
-          <BadgeDollarSign className="h-5 w-5" />;
+        <CardTitle className='flex items-center gap-2'>;
+          <BadgeDollarSign className='h-5 w-5' />;
           Your Rewards;
         </CardTitle>;
         <CardDescription>Rewards earned from successful referrals</CardDescription>;
       </CardHeader>;
       <CardContent>;
-        <div className="space-y-4">;
-          {rewards.map((reward, index) => (;
-            <div;
+        <div className='space-y-4'>          {rewards && rewards.map((reward, index) => (;
+            <div
               key={reward.id}
-              className={`flex justify-between items-start ${;
-                index !== rewards.length - 1 ? "border-b pb-3" : "";
-              }`}
-            >;
+        <div className="space-y-4">
+          {rewards.map((reward, index,) => (
+            <div
+              key = {reward.id,}
+              className={`flex justify-between items-start ${
+                index !== rewards && rewards.length - 1 ? 'border-b pb-3' : ''
+              }`}>;
               <div>;
                 <div className="flex items-center gap-2">;
                   {reward.reward_type === 'credit' ? (;
@@ -165,23 +155,15 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
                       : 'Visibility Boost'}
                   </p>;
                 </div>;
-                <p className="text-xs text-muted-foreground mt-1">;
-                  Earned on {formatDate(reward.created_at)}
                 </p>;
-                {reward.expires_at && (;
+                {reward && reward.expires_at && (;
+                  <p className='text-xs text-muted-foreground'>                    Expires on {formatDate(reward && reward.expires_at)}                <p className="text-xs text-muted-foreground mt-1">;
+                  Earned on {formatDate(reward && reward.created_at)}
+                </p>;
+                {reward && reward.expires_at && (;
                   <p className="text-xs text-muted-foreground">;
-                    Expires on {formatDate(reward.expires_at)}
                   </p>;
                 )}
               </div>;
             </div>;
           ))}
-        </div>;
-      </CardContent>;
-    </Card>;
-  );
-}
-;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

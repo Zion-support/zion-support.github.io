@@ -1,3 +1,23 @@
+  customers: number;
+  rating: number;
+  reviews: number;
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',};
+
+export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
+
+
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com', }
+;
+export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
+
+
+
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -7,70 +27,6 @@
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com',};
-
-export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
-  {  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup && ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup && ziontechgroup.com'
-};
-
-export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
-  {
-    tagline:
-      'Intelligent farming with AI-powered crop monitoring and optimization'
-    price: '$1,899'
-    period: '/month'
-    description:
-      'Advanced precision agriculture platform that uses AI to monitor crops, optimize irrigation, and maximize yields for agricultural businesses.'
-    features: [
-      'Irrigation optimization',
-      'Yield prediction',
-      'Real - time monitoring',
-      'Performance analytics',
-      'Integration capabilities',
-      'Custom monitoring models',
-      'Multi - field support',
-      'Compliance management',
-    ],
-    popular: true,
-    icon: '🌾',
-    marketPosition:
-      'Leading AI-powered precision agriculture platform for crop monitoring and yield optimization.'
-    targetAudience:
-      'Farmers, Agricultural companies, Crop consultants, Food producers'
-    trialDays: 30
-    setupTime: '2 weeks'
-    category: 'Agriculture & Food Technology'
-    realService: true
-    technology: [
-      'AI/ML, Precision agriculture, Crop monitoring, IoT sensors, Machine learning'
-    ]
-    integrations: [
-      'IoT devices, Weather stations, Soil sensors, Analytics platforms'
-    ]
-    useCases: [
-      'Crop monitoring, Irrigation optimization, Yield prediction, Resource management',
-    ],
-    roi: 'Increase crop yields by 25% and reduce water usage by 30%',
-    competitors: ['John Deere, Trimble, Raven Industries, AGCO'],
-    customers: 234,
-    rating: 4 && 4.8,
-    reviews: 178,
-  },
-  {
-      'Quantum optimization algorithms',
-      'Crop planning optimization',
-      'Resource allocation',
-      'Real - time adaptation',
-      'Performance analytics',
-      'Cost optimization',
-      'Efficiency analysis',
-      'Regulatory compliance',
-      'Multi - crop support',
-    ],
-    popular: false,
-    icon: '⚡',
       'Quantum agriculture optimization platform with advanced algorithms and resource allocation capabilities.',
     launch_date: '2025 - 01 - 15',
     customers: 34,
@@ -88,7 +44,6 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
       'Compliance management',
     ],
     popular: true,
-    icon: '🍎',
       'Contamination detection, Quality monitoring, Safety compliance, Risk assessment',
     ],
     roi: 'Reduce food safety incidents by 80% and improve compliance by 90%',
@@ -108,7 +63,6 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
       'Mobile app support',
     ],
     popular: false,
-    icon: '🔗',
       'Food tracking, Supply chain transparency, Product authentication, Compliance management',
     ],
     roi: 'Improve supply chain transparency by 100% and reduce food fraud by 70%',
@@ -130,11 +84,14 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
       'Compliance management',
     ],
     popular: true,
-    icon: '🏗️',
       'Climate control, Crop monitoring, Environmental optimization, Yield maximization',
     ],
     roi: 'Increase crop yields by 300% and reduce energy consumption by 40%',
     competitors: ['Plenty, AeroFarms, Bowery Farming, Gotham Greens'],
+];      'AI-powered climate controlCrop growth monitoringEnvironmental optimizationReal-time controlPerformance analyticsIntegration capabilitiesCustom growing protocolsMulti-tier support';
+
+      'Compliance management'
+    ];
       'Compliance management'
     ];
     popular: true, icon: '🌾',
@@ -297,3 +254,68 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     customers: 123;
     rating: 4.6,
     reviews: 89;
+  }
+];
+;
+
+import { ServiceVariant } from '../types/service-variants',;
+export interface InnovativeAgricultureService {;
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  variant: ServiceVariant,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  },;
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number;
+}
+;
+const contact = {;
+  mobile: '+1 302 464 0950',;
+  email: 'kleber@ziontechgroup.com',;
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup.com';
+},;
+export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
+  {;
+    id: 'ai-powered-precision-agriculture',;
+    name: 'AI-Powered Precision Agriculture',;
+    tagline: 'Intelligent farming with AI-powered crop monitoring and optimization',;
+    price: '$1,899',;
+    period: '/month',;
+    description: 'Advanced precision agriculture platform that uses AI to monitor crops, optimize irrigation, and maximize yields for agricultural businesses.',;
+    features: [;
+      'AI-powered crop monitoringIrrigation optimizationYield predictionReal-time monitoringPerformance analyticsIntegration capabilitiesCustom monitoring modelsMulti-field support',;
+      'Compliance management';
+  }
+];

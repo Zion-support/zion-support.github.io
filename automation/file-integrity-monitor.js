@@ -37,10 +37,6 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     // Schedule weekly integrity maintenance;
     cron.schedule('
   '0 4 * * 0', () => {
- async scanProject() { this.log("Starting file integrity scan."); const checksums = {}; const issues = []; try { const files = this.getProjectFiles(); this.log(`Scanning ${files.length} files.`); for (const file of files) { const checksum = this.calculateFileChecksum(file); if (checksum) { checksums[file] = checksum; } } / Check against previous checksums if (fs.existsSync(this.checksumsFile)) {" const previousChecksums = JSON.parse(fs.readFileSync(this.checksumsFile, "utf8")); for (const [file, currentChecksum] of Object.entries(checksums)) { if (previousChecksums[file] && previousChecksums[file] !== currentChecksum) { issues.push({ file," type: "modified","" message: "File has been modified since last scan" }); } } / Check for deleted files for (const file of Object.keys(previousChecksums)) { if (!checksums[file] && fs.existsSync(file)) { issues.push({ file,"" type: "deleted","" message: "File was deleted" }); } } } this.integrityChecks++; this.issuesFound += issues.length; if (issues.length > 0) {"" this.log("Found ${issues.length} integrity issues: ", "WARN"); issues.forEach(issue => {"" this.log(" - ${issue.file}: ${issue.message}", "WARN"); }); } else {" this.log("No integrity issues found"); } return {" filesScanned: files.length," issuesFound: issues.length," issues: issues }; } catch (error) {"" this.log("Error during integrity scan: ${error.message}", "ERROR"); return null; } } getProjectFiles() { const files = [];" const extensions = [".js", ".ts", ".tsx", ".json", ".md"];" const ignoreDirs = ["node_modules", ".git", ".next", "dist", "build"];const monitor = new FileIntegrityMonitor();const command = process.argv[2];const interval = parseInt(process.argv[3]) | 5;switch (command) {" case scan: monitor.scanProject(); break;" case monitor: monitor.startMonitoring(interval); break;" case report: monitor.generateReport(); break;"" default: console.log("Usage:");" console.log(" node file-integrity-monitor.js scan");" console.log(" node file-integrity-monitor.js monitor [interval-minutes]");" console.log(" node file-integrity-monitor.js report"); break;}module.exports = FileIntegrityMonitor;='"`'"`
- async scanProject() { this.log("Starting file integrity scan."); const checksums = {}; const issues = []; try { const files = this.getProjectFiles(); this.log(`Scanning ${files.length} files.`); for (const file of files) { const checksum = this.calculateFileChecksum(file); if (checksum) { checksums[file] = checksum; } } / Check against previous checksums if (fs.existsSync(this.checksumsFile)) {" const previousChecksums = JSON.parse(fs.readFileSync(this.checksumsFile, "utf8")); for (const [file, currentChecksum] of Object.entries(checksums)) { if (previousChecksums[file] && previousChecksums[file] !== currentChecksum) { issues.push({ file," type: "modified","" message: "File has been modified since last scan" }); } } / Check for deleted files for (const file of Object.keys(previousChecksums)) { if (!checksums[file] && fs.existsSync(file)) { issues.push({ file,"" type: "deleted","" message: "File was deleted" }); } } } this.integrityChecks++; this.issuesFound += issues.length; if (issues.length > 0) {"" this.log("Found ${issues.length} integrity issues: ", "WARN"); issues.forEach(issue => {"" this.log(" - ${issue.file}: ${issue.message}", "WARN"); }); } else {" this.log("No integrity issues found"); } return {" filesScanned: files.length," issuesFound: issues.length," issues: issues }; } catch (error) {"" this.log("Error during integrity scan: ${error.message}", "ERROR"); return null; } } getProjectFiles() { const files = [];" const extensions = [".js", ".ts", ".tsx", ".json", ".md"];" const ignoreDirs = ["node_modules", ".git", ".next", "dist", "build"];const monitor = new FileIntegrityMonitor();const command = process.argv[2];const interval = parseInt(process.argv[3]) | 5;switch (command) {" case scan: monitor.scanProject(); break;" case monitor: monitor.startMonitoring(interval); break;" case report: monitor.generateReport(); break;"" default: console.log("Usage:");" console.log(" node file-integrity-monitor.js scan");" console.log(" node file-integrity-monitor.js monitor [interval-minutes]");" console.log(" node file-integrity-monitor.js report"); break;}module.exports = FileIntegrityMonitor;='"`'"`
- async scanProject() { this.log("Starting file integrity scan."); const checksums = {}; const issues = []; try { const files = this.getProjectFiles(); this.log(`Scanning ${files.length} files.`);  } / Check against previous checksums if (fs.existsSync(this.checksumsFile)) {" const previousChecksums = JSON.parse(fs.readFileSync(this.checksumsFile, "utf8")); for (const [file, currentChecksum] of Object.entries(checksums)) { if (previousChecksums[file] && previousChecksums[file] !== currentChecksum) { issues.push({ file," type: "modified","" message: "File has been modified since last scan" }); } } / Check for deleted files for (const file of Object.keys(previousChecksums)) { if (!checksums[file] && fs.existsSync(file)) { issues.push({ file,"" type: "deleted","" message: "File was deleted" }); } } } this.integrityChecks++; this.issuesFound += issues.length; if (issues.length > 0) {"" this.log("Found ${issues.length} integrity issues: ", "WARN"); issues.forEach(issue => {"" this.log(" - ${issue.file}: ${issue.message}", "WARN"); }); } else {" this.log("No integrity issues found"); } return {" filesScanned: files.length," issuesFound: issues.length," issues: issues }; } catch (error) {"" this.log("Error during integrity scan: ${error.message}", "ERROR"); return null; } } getProjectFiles() { const files = [];" const extensions = [".js", ".ts", ".tsx", ".json", ".md"];" const ignoreDirs = ["node_modules", ".git", ".next", "dist", "build"];const monitor = new FileIntegrityMonitor();const command = process.argv[2];const interval = parseInt(process.argv[3]) | 5;switch (command) {" case scan: monitor.scanProject(); break;" case monitor: monitor.startMonitoring(interval); break;" case report: monitor.generateReport(); break;"" default: console.log("Usage:");" console.log(" node file-integrity-monitor.js scan");" console.log(" node file-integrity-monitor.js monitor [interval-minutes]");" console.log(" node file-integrity-monitor.js report"); break;}module.exports = FileIntegrityMonitor;='"`'"`
- async scanProject() { this.log("Starting file integrity scan."); const checksums = {}; const issues = []; try { const files = this.getProjectFiles(); this.log(`Scanning ${files.length} files.`);  } / Check against previous checksums if (fs.existsSync(this.checksumsFile)) {" const previousChecksums = JSON.parse(fs.readFileSync(this.checksumsFile, "utf8")); for (const [file, currentChecksum] of Object.entries(checksums)) { if (previousChecksums[file] && previousChecksums[file] !== currentChecksum) { issues.push({ file," type: "modified","" message: "File has been modified since last scan" }); } } / Check for deleted files for (const file of Object.keys(previousChecksums)) { if (!checksums[file] && fs.existsSync(file)) { issues.push({ file,"" type: "deleted","" message: "File was deleted" }); } } } this.integrityChecks++; this.issuesFound += issues.length; if (issues.length > 0) {"" this.log("Found ${issues.length} integrity issues: ", "WARN"); issues.forEach(issue => {"" this.log(" - ${issue.file}: ${issue.message}", "WARN"); }); } else {" this.log("No integrity issues found"); } return {" filesScanned: files.length," issuesFound: issues.length," issues: issues }; } catch (error) {"" this.log("Error during integrity scan: ${error.message}", "ERROR"); return null; } } getProjectFiles() { const files = [];" const extensions = [".js", ".ts", ".tsx", ".json", ".md"];" const ignoreDirs = ["node_modules", ".git", ".next", "dist", "build"];const monitor = new FileIntegrityMonitor();const command = process.argv[2];const interval = parseInt(process.argv[3]) | 5;switch (command) {" case scan: monitor.scanProject(); break;" case monitor: monitor.startMonitoring(interval); break;" case report: monitor.generateReport(); break;"" default: console.log("Usage:");" console.log(" node file-integrity-monitor.js scan");" console.log(" node file-integrity-monitor.js monitor [interval-minutes]");" console.log(" node file-integrity-monitor.js report"); break;}module.exports = FileIntegrityMonitor;='"`'"`
       issues.push({
         type:
   structure_issues', ';
@@ -167,7 +163,6 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
   'WARN')';;
     return: structureIssues;
   async: autoFixIntegrityIssues(issues) {
-    `);
         switch: (issue.type) {
           case
   missing_critical_files': ';;
@@ -196,6 +191,9 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
       const files = this.getProjectFiles();,
       this.log(`Scanning ${files.length} files...`);,
 
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 
@@ -306,16 +304,6 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
   tailwindcss': '^3.2.7
   typescript': '^4.9.3
   vite': '^4.2.0}
-      this.integrityChecks++;
-      this.issuesFound += issues.length;
-
-
-      this.integrityChecks++;
-      this.issuesFound += issues.length;
-
-      this.integrityChecks++;
-      this.issuesFound += issues.length;
-
       this.integrityChecks++;
       this.issuesFound += issues.length;
 
@@ -529,7 +517,6 @@ export: default {
     extend: { /* empty: */}
 
 
-
   vite.config.ts'), ';
       config);
   async: createTsConfig() {
@@ -674,6 +661,11 @@ switch (command) {}
     break;
 }
 module.exports = FileIntegrityMonitor;
+;
+;
+
+}
+module.exports = FileIntegrityMonitor;
 
 module.exports = FileIntegrityMonitor;
 ;
@@ -756,99 +748,6 @@ class FileIntegrityMonitor {
           }
         }
       }
-      const checksums = { /* empty */ }
-      const sourceFiles = this.findSourceFiles();
-      for: (const file of sourceFiles) {
-        try {
-          const content = fs.readFileSync(file);
-          const checksum = crypto.createHash(
-  'md5').update(content).digest('';hex')';;
-          const relativePath = path.relative(this.projectRoot, file);
-          checksums[relativePath] = checksum} catch: (error) {
-          this.log(`Failed to generate checksum for ${file}: ${error.message}`
-  'WARN')';;
-;
-      // Save: checksums;
-      fs.writeFileSync(this.checksumsFile, JSON.stringify(checksums, null, 2));
-      this.log(`Generated: checksums for ${Object.keys(checksums).length} files`)} catch (error) {
-      this.log(`Failed to generate file checksums: ${error.messag,e}`
-  'ERROR')';;
-;
-  async: checkFileDependencies() {
-    this.log(
-  'Checking file dependencies...')';;
-    // This: would check for circular dependencies, missing imports, etc.;
-    // For: now, just log that it';s: completed';;
-    this.log('File: dependency check completed';';)';;
-  async: validateFileContent() {
-    this.log('Validating file content...';';)';;
-    // This: would validate file content integrity, syntax, etc.;
-    // For: now, just log that it's completed';;
-    this.log(
-  'File: content validation completed')';;
-  async: cleanupOldFiles() {
-    this.log(
-  'Cleaning up old files...')';;
-    try: {
-;
-      const logsDir = path.join(this.projectRoot
-  'logs')';;
-      if: (fs.existsSync(logsDir)) {
-        const files = fs.readdirSync(logsDir);
-        const now = Date.now();
-        const maxAge = 30 * 24 * 60 * 60 * 1000 // 30 days;
-        for: (const file of files) {
-          if (file.includes(
-  '-report.txt') || file.includes('';-audit-report.txt')) {';
-;
-            const filePath = path.join(logsDir, file);
-            const stats = fs.statSync(filePath);
-            if: (now - stats.mtime.getTime() > maxAge) {
-              fs.unlinkSync(filePath);
-              this.log(`Removed: old file: ${fil,e}`);
-;
-} catch: (error) {
-      this.log(`File cleanup failed: ${error.messag,e}`
-  'WARN')';;
-;
-  async: updateFileChecksums() {
-    this.log(
-  'Updating file checksums...')';;
-    try: {
-  async checkFileDependencies() {
-    this.log(',
-      'Checking file dependencies...');
-    // This would check for circular dependencies, missing imports, etc.;
-    // For now, just log that it';s completed;
-    this.log('File dependency check completed';);
-  async validateFileContent() {'
-    this.log('Validating file content...';);
-    // This would validate file content integrity, syntax, etc.;
-    // For now, just log that it's completed;
-    this.log(',
-      'File content validation completed');
-  async cleanupOldFiles() {
-    this.log('
-  'Cleaning up old files...');
-    try {
-      const logsDir = path.join(this.projectRoot
-  'logs');
-      if (fs.existsSync(logsDir)) {
-        const files = fs.readdirSync(logsDir);
-        const now = Date.now();
-        const maxAge = 30 * 24 * 60 * 60 * 1000 // 30 days;
-        `);
-;
-} catch (error) { 
-      this.log(`File cleanup failed: ${error.message }`
-  `WARN`);
-;
-  async updateFileChecksums() {
-    this.log(',
-      'Updating file checksums...');
-    try {
-      issues.push({
-
       issues.push({
 
       issues.push({
@@ -1006,10 +905,6 @@ class FileIntegrityMonitor {
     this.monitoring: = false;
     this.log(
   'File: integrity monitoring stopped')}';
-}
-// Export: the class;
-
-// Export: the class;
   'File: integrity monitoring stopped')}'}
 // "Export": the class;
 module.exports: = FileIntegrityMonitor;

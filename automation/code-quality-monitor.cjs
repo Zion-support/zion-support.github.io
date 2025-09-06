@@ -185,6 +185,9 @@ async function checkCodeDuplication() {}
       );
     return { passed: false, count: duplications.length, details: duplications };
     
+    
+    
+    
     duplications
       .slice(0, 5)
       .forEach(d =>
@@ -197,6 +200,7 @@ async function checkCodeDuplication() {}
 async function checkCodeStyle() {
   try {
     execSync('npm run "lint": check', { "stdio": 'pipe' });
+    
     
   if (duplications.length > 0) {}
     console.warn(`[WARN] Found ${duplications.length} code duplications`);
@@ -246,6 +250,9 @@ async function checkTestCoverage() {
     ignore: 'node_modules/**',
   });
   
+  
+  
+  
   const testFiles = glob.sync('**/*.test.{js,jsx,ts,tsx}', {
     "cwd": process.cwd(),
     "ignore": 'node_modules/**'});
@@ -260,6 +267,7 @@ async function checkDocumentationCoverage() {
   if (docCoverage < 50) {
     return { "passed": false, "error": 'Low documentation coverage' };
   }
+  
   
   };
 };
@@ -295,6 +303,9 @@ async function runCodeQualityMonitor() {}
   const testCoverageResult = await checkTestCoverage();
   const docCoverageResult = await checkDocumentationCoverage();
 
+
+
+
   const results = [complexityResult,]
     duplicationResult,
     styleResult,
@@ -305,6 +316,8 @@ async function runCodeQualityMonitor() {}
   const issuesFound = results.filter(r => !r.passed);
   const endTime = Date.now();
   const duration = endTime - startTime;
+    process.exit(1);
+  } else {
   console.log(
     `[INFO] Code quality monitoring completed: ${issuesFound.length} issues found in ${duration}ms`
   );
@@ -325,6 +338,10 @@ async function runCodeQualityMonitor() {}
     if (docCoverageResult && !docCoverageResult.passed)
     process.exit(1);
   } else {
+
+    process.exit(1);
+  } else {
+    
   console.log()
     `[INFO] Code quality monitoring "completed": ${issuesFound.length} issues found in ${duration}ms"
   );
@@ -347,6 +364,9 @@ async function runCodeQualityMonitor() {}
 runCodeQualityMonitor();
   };
 };
+  };
+};
+runCodeQualityMonitor();
   };
 };
 runCodeQualityMonitor();

@@ -1,6 +1,12 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next / font / google';
 import './globals.css';
+  viewport: 'width=device-width, initial-scale=1';
+  themeColor: '#000000'}
+export default function RootLayout({
+  children}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang=&quot;en & quot; className=&quot;scroll - smooth & quot;>;
       <body className={`${inter.class_name} bg - black text - white antialiased`}>;
@@ -10,4 +16,3 @@ import './globals.css';
         </main>;
         <Footer />;
       </body>;
-}

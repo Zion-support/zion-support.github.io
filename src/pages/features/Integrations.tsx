@@ -1,10 +1,3 @@
-import React, { useEffect } from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <SEO
@@ -42,9 +35,6 @@ import { Button } from "@/components/ui/button",
               <p className="text-zion-slate-light">Yes, free tier requests are limited per hour. Contact sales for higher limits.</p>
             </div>
           </div>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/developers">Learn More</Link>
             </Button>
@@ -52,8 +42,10 @@ import { Button } from "@/components/ui/button",
         </div>
       </main>
     </>
-  )
-=======
+
+
+
+;
 import React, { useEffect } from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -124,10 +116,3 @@ export default function IntegrationsFeature() {;
           </div>;
         </div>;
       </main>;
-    </>;
-  );
-}
-;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

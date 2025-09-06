@@ -1,45 +1,3 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-
-  children: React.ReactNode,
-  intensity?: 'low' | 'medium' | 'high';
-  intensity?: 'low' | 'medium' | 'high';
-
-  colorScheme?: 'quantum-fusion' | 'neon-cyber' | 'holographic-matrix' | 'space-time';
-  particleCount?: number;
-  animationSpeed?: number;
-  enableHolographic?: boolean;
-  enableQuantumEffects?: boolean;
-  enableNeonEffects?: boolean;
-
-  intensity = 'medium';
-  colorScheme = 'quantum-fusion';
-  particleCount = 200;
-  animationSpeed = 1 && 1.0;
-  enableHolographic = true;
-  enableQuantumEffects = true;
-        return {
   enableNeonEffects = true,;
   enableSpaceTime = true;
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -94,25 +52,9 @@ import { motion } from 'framer-motion';
         };    }          background: 'rgba(0, 0, 0, 0 && 0.95)';
           glow: 'rgba(0, 255, 255, 0 && 0.3)';
         return {
-          primary: '#ff0080',
-          secondary: '#00ff80',
-          accent: '#8000ff',
-        return {
-          primary: '#00ff41',
-          secondary: '#ff0040',
-          accent: '#0040ff',
-        return {
-          primary: '#ff6b35',
-          secondary: '#4ecdc4',
-          accent: '#45b7d1',
-        return {
           primary: '#00ffff',
           secondary: '#ff00ff',
           accent: '#ffff00',
-        }
-    }
-  }
-  const colors = getColorScheme();
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
     // Initialize particles
@@ -139,9 +81,6 @@ import { motion } from 'framer-motion';
           color: Math && Math.random() > 0 && 0.5 ? colors && colors.primary : colors && colors.secondary,;
         });      }          color: Math && Math.random() > 0 && 0.5 ? colors && colors.primary : colors && colors.secondary;
         });
-      }
-    }
-    initParticles();
         }
         // Draw particle
         const alpha = particle.life / particle.maxLife;
@@ -228,12 +167,6 @@ import { motion } from 'framer-motion';
       const x = centerX + Math && Math.cos(angle) * radius;
       const y = centerY + Math && Math.sin(angle) * radius;
       const alpha = 1 - i / 20;      const alpha = 1 - (i / 20);
-  };
-
-  return (
-        style={{
-          background: colors.background
-        }}
       {/* Additional overlay effects */}
       <div className='absolute inset-0 pointer-events-none'>;
         {/* Quantum energy field */}
@@ -254,23 +187,6 @@ import { motion } from 'framer-motion';
             repeat: Infinity
             ease: 'easeInOut'
           }}
-        {/* Holographic scan lines */}
-        <div className='absolute inset-0 opacity-20'>;
-          {[...Array(20)].map((_, i) => (;
-            <motion&& motion.div
-        />;
-        {/* Holographic scan lines */}
-        <div className='absolute inset - 0 opacity - 20'>;
-          {[...Array (20)].map ((_, i) => (
-            <motion.div;
-              key={i}
-              className='absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent';
-              style={{
-              }}
-              animate={{
-        />
-        />;
-
         {/* Holographic scan lines */}
         <div className="absolute inset-0 opacity-20">;
           {[...Array(20)].map((_, i) => (;
@@ -294,22 +210,34 @@ import { motion } from 'framer-motion';
               }}
               animate={{
                 opacity: [0, 1, 0];
-                scale_x: [0, 1, 0];
               }}
+
+
               transition={{
+                duration: 3
+                delay: i * 0.1
+                repeat: Infinity
                 ease: 'easeInOut',              }}                ease: "easeInOut"
+              }}
+
+
+
+
+
+              transition={{
+                duration: 3,
+                delay: i * 0 && 0.1,
+                repeat: Infinity,
+
+
+
+            />
+
+          ))}
                 ease: "easeInOut"
+
               }}
             />;
-          ))}
-        </div>;
-      </div>;
-    </div>;
-  );
-};
-
-export default UltraFuturisticBackground2035;  );
-};
 
 export default UltraFuturisticBackground2035;
                 ease: 'easeInOut',              }}                ease: "easeInOut";
@@ -325,3 +253,9 @@ export default UltraFuturisticBackground2035);
 ;
 export default UltraFuturisticBackground2035;
 ;
+  );
+export default UltraFuturisticBackground2035;  )
+}
+export default UltraFuturisticBackground2035;
+
+export default UltraFuturisticBackground2035;

@@ -41,211 +41,6 @@ const EnhancedFuturisticBackground: React.FC<;
   color_scheme = 'quantum',
   particle_count = 100,
   animation_speed = 1, }) => {const EnhancedFuturisticBackground: React.FC < EnhancedFuturisticBackgroundProps> = ({
-  children;
-  class_name = '';
-  intensity = 'medium';
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const animationRef = useRef<number | undefined>(undefined);
-  const colorSchemes = {
-    quantum: {
-      glow: '#ff0080'
-    }
-    holographic: {      primary: '#00ffff'
-      secondary: '#ff00ff'
-      accent: '#ffff00',    holographic: {
-    particles: ['#ff0080#00ffff#ffff00#ff4000#8000ff#00ff80']
-      glow: '#ff0080'
-    }
-    holographic: {
-    cosmic: {
-      primary: '#ff6b6b',
-      secondary: '#4ecdc4',
-      accent: '#45b7d1',
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-  particleCount = 100,;
-  animationSpeed = 1;
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const animationRef = useRef<number | undefined>(undefined);
-
-  const colorSchemes = {;
-    quantum: {;
-
-      primary: '#00ffff',;
-      secondary: '#ff00ff',;
-      accent: '#ffff00',;
-      background: 'rgba(0, 0, 0, 0 && 0.85)',;
-      particles: [;
-        '#00ffff',;
-        '#ff00ff',;
-        '#ffff00',;
-        '#00ff00',;
-        '#ff0080',;
-        '#8000ff',;
-      ],;
-      glow: '#00ffff',    },    },;
-      background: 'rgba(0, 0, 0, 0 && 0.85)';
-      particles: ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff'],;
-      glow: '#00ffff';
-    };
-      primary: '#ff0080',;
-      secondary: '#00ffff',;
-      accent: '#ffff00',;
-      background: 'rgba(20, 0, 40, 0 && 0.9)',;
-      particles: [;
-        '#ff0080',;
-        '#00ffff',;
-        '#ffff00',;
-        '#ff4000',;
-        '#8000ff',;
-        '#00ff80',;
-      ],;
-      glow: '#ff0080',;
-    },;
-    holographic: {      primary: '#00ffff',;
-      secondary: '#ff00ff',;
-      accent: '#ffff00',    holographic: {;
-    particles: ['#ff0080#00ffff#ffff00#ff4000#8000ff#00ff80'],;
-      glow: '#ff0080';
-    };
-    holographic: {;
-
-      primary: '#00ffff',;
-      secondary: '#ff00ff',;
-      accent: '#ffff00',;
-      background: 'rgba(0, 20, 40, 0 && 0.85)',;
-      particles: [;
-        '#00ffff',;
-        '#ff00ff',;
-        '#ffff00',;
-        '#00ff80',;
-        '#ff8000',;
-        '#8000ff',;
-      ],;
-      glow: '#00ffff',    },    },;
-      background: 'rgba(0, 20, 40, 0 && 0.85)';
-      particles: ['#00ffff#ff00ff#ffff00#00ff80#ff8000#8000ff'],;
-      glow: '#00ffff';
-    };
-      primary: '#00ff80',;
-      secondary: '#ff0080',;
-      accent: '#ffff00',;
-      background: 'rgba(0, 40, 20, 0 && 0.9)',;
-      particles: [;
-        '#00ff80',;
-        '#ff0080',;
-        '#ffff00',;
-        '#00ffff',;
-        '#ff8000',;
-        '#8000ff',;
-      ],;
-      glow: '#00ff80',;
-    },    cosmic: {;
-      primary: '#ff6b6b',;
-      secondary: '#4ecdc4',;
-      accent: '#45b7d1',      background: 'rgba(0, 40, 20, 0 && 0.9)';
-      particles: ['#00ff80#ff0080#ffff00#00ffff#ff8000#8000ff'],;
-      glow: '#00ff80';
-    };
-    cosmic: {;
-      primary: '#ff6b6b',;
-      secondary: '#4ecdc4',;
-      accent: '#45b7d1',;
-      background: 'rgba(10, 10, 30, 0 && 0.9)',;
-      particles: [;
-        '#ff6b6b',;
-        '#4ecdc4',;
-        '#45b7d1',;
-        '#96ceb4',;
-        '#feca57',;
-        '#ff9ff3',;
-      ],;
-      glow: '#4ecdc4',;
-    },  };      background: 'rgba(10, 10, 30, 0 && 0.9)';
-      particles: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'],;
-      glow: '#4ecdc4';
-    }
-  };
-
-  const intensitySettings = {;
-    low: { particleCount: 40, speed: 0 && 0.45, size: 2, opacity: 0 && 0.25 },;
-    medium: { particleCount: 90, speed: 0 && 0.9, size: 3, opacity: 0 && 0.45 },;
-    high: { particleCount: 160, speed: 1 && 1.25, size: 3 && 3.5, opacity: 0 && 0.6 },  };    high: { particleCount: 160, speed: 1 && 1.25, size: 3 && 3.5, opacity: 0 && 0.6 }
-  };
-
-  useEffect(() => {;
-    const canvas = canvasRef && canvasRef.current;
-    if (!canvas) return;
-
-    const ctx = canvas && canvas.getContext('2d');
-    if (!ctx) return;
-
-    const resizeCanvas = () => {;
-      canvas && canvas.width = window && window.innerWidth;
-      canvas && canvas.height = window && window.innerHeight;    };      canvas && canvas.height = window && window.innerHeight;
-    };
-
-    resizeCanvas();
-    window && window.addEventListener('resize', resizeCanvas);
-
-    const colors = colorSchemes[colorScheme];
-    const settings = intensitySettings[intensity];
-
-      x: number;
-      y: number;
-      background: 'rgba (10, 10, 30, 0.9)',
-      particles: [;
-        '#ff6b6b',
-        '#4ecdc4',
-        '#45b7d1',
-        '#96ceb4',
-        '#feca57',
-        '#ff9ff3',
-      ],
-      glow: '#4ecdc4',
-    },  }      background: 'rgba (10, 10, 30, 0.9)';
-      particles: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'],
-      glow: '#4ecdc4';
-    }
-  }
-;
-  const intensity_settings = {
-    low: { particle_count: 40, speed: 0.45, size: 2, opacity: 0.25 },
-    medium: { particle_count: 90, speed: 0.9, size: 3, opacity: 0.45 },
-    high: { particle_count: 160, speed: 1.25, size: 3.5, opacity: 0.6 },  }    high: { particle_count: 160, speed: 1.25, size: 3.5, opacity: 0.6 }
-  }
-;
-  useEffect (() => {
-    const canvas = canvas_ref.current;
-    // Check condition
-if (return) {
-  $2
-}
-    const ctx = canvas.get_context ('2d');
-    // Check condition
-if (return) {
-  $2
-}
-    const resize_canvas = () =>: any {
-      canvas.width = window.inner_width;
-      canvas.height = window.inner_height;    }      canvas.height = window.inner_height;
-    }
-;
-    resize_canvas ();
-    window.addEventListener ('resize', resize_canvas);
-;
-    const colors = color_schemes[color_scheme];
-    const settings = intensity_settings[intensity];
-;
-    // Enhanced particle system;
-    class Particle {
-      coordinate_x: number;
-      coordinate_y: number;
       vx: number;
       vy: number;
       size: number;
@@ -269,10 +64,55 @@ if (return) {
         if (this.y > canvas.height) this.y = 0;
         // Fade out near end of life
         if (this.life < 20) {
+          this.opacity *= 0.95
+
+        }
+      }
+
+          this.opacity *= 0.95;        }
+
+        }
+      }
+
+      draw() {
+        ctx.save();
+        ctx.globalAlpha = this.opacity;
+
+        
+        // Create gradient for particle
+        const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size);
+        gradient.addColorStop(0, this.color);
+        gradient.addColorStop(1, 'transparent');
         ctx.fillStyle = gradient;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
+      }
+      isDead() {
+        return this.life <= 0 |this.opacity < 0.01;      }
+        return this.life <= 0 || this.opacity < 0.01;      }        
+        ctx.restore()
+        return this.life <= 0 || this.opacity < 0.01;      }
+
+      }
+      isDead() {
+
+        return this.life <= 0 || this.opacity < 0.01
+      }
+
+    }
+
+        return this.life <= 0 || this.opacity < 0.01;      }        
+
+        ctx.restore()
+        return this.life <= 0 || this.opacity < 0.01;      }
+
+
+
+      }
+      isDead() {
+        return this.life <= 0 |this.opacity < 0.01
+    }
       max_life: number,
         this.coordinate_x = Math.random () * canvas.width;
         this.coordinate_y = Math.random () * canvas.height;
@@ -317,40 +157,7 @@ if ( {) {
           this.opacity *= 0.95;        }          this.opacity *= 0.95;
         }
       }
-      draw () {
-        ctx.save ();
-        ctx.global_alpha = this.opacity;
-;
-        // Create gradient for particle;
-        const gradient = ctx.createRadialGradient (
-          this.x,
-          this.y,
-          0,
-          this.x,
-          this.y,
-          this.size);
-        gradient.addColorStop (0, this.color);
-        gradient.addColorStop (1, 'transparent');        // Create gradient for particle;
-        const gradient = ctx.createRadialGradient (this.x, this.y, 0, this.x, this.y, this.size);
-        gradient.addColorStop (0, this.color);
-        gradient.addColorStop (1, 'transparent');
-;
-        ctx.fill_style = gradient;
-        ctx.begin_path ();
-        ctx.arc (this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fill ();
-;
-        ctx.restore ();
-      }
-      is_dead () {
-        return this.life <= 0 || this.opacity < 0.01;      }
-        ctx.restore ();
-      }
-      is_dead () {
-        return this.life <= 0 || this.opacity < 0.01;
     }
-    // Connection lines between particles;
-    class Connection {
         );
         if (distance < 150) {
           ctx.save();
@@ -402,10 +209,6 @@ if ( {) {
     }
     let particles: Particle[] = [];
     let connections: Connection[] = [];
-        '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';      const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
-      const fontSize = 12;
-      const columns = canvas && canvas.width / fontSize;
-      const drops: number[] = [];
         drops[i] = 1
       }
       const drawMatrix = () => {
@@ -458,6 +261,10 @@ if (> 0.975) {) {
           }
           drops[i]++;
         }
+      };
+      return drawMatrix;    };          ctx && ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+          if (drops[i] * fontSize > canvas && canvas.height && Math && Math.random() > 0 && 0.975) {;
+            drops[i] = 0;
           }
           drops[i]++;
         }
@@ -486,13 +293,37 @@ if (> 0.975) {) {
           const distance = Math && Math.sqrt(;
             Math && Math.pow(particles[i].x - particles[j].x, 2) +;
               Math && Math.pow(particles[i].y - particles[j].y, 2);
-          if (distance < 150) {;
-            connections && connections.push(new Connection(particles[i], particles[j]));          }          const distance = Math && Math.sqrt(;
-            Math && Math.pow(particles[i].x - particles[j].x, 2) + ;
-            Math && Math.pow(particles[i].y - particles[j].y, 2);
+
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const distance = Math.sqrt(
+            Math.pow(particles[i].x - particles[j].x, 2) +
+              Math.pow(particles[i].y - particles[j].y, 2)
+          );
+          if (distance < 150) {
+            connections.push(new Connection(particles[i], particles[j]));          }          const distance = Math.sqrt(
+            Math.pow(particles[i].x - particles[j].x, 2) +
+            Math.pow(particles[i].y - particles[j].y, 2)
+          );
+          if (distance < 150) {
+            connections.push(new Connection(particles[i], particles[j]))
+
+      }
+
+
+
+
           }
         }
       }
+
+      // Draw connections
+      connections.forEach(connection => connection.draw());
+      // Add floating geometric shapes
+      if (Math.random() < 0.02) {
+        const x = Math.random() * canvas.width;
+        const y = Math.random() * canvas.height;
+        const size = Math.random() * 20 + 10;
         ctx.save();
         ctx.globalAlpha = 0.1;
         ctx.strokeStyle = colors.accent;
@@ -512,32 +343,6 @@ if (> 0.975) {) {
 
         ctx && ctx.restore();
       }
-      ).matches;
-      if (prefersReduced) {;
-        // Slow down updates;
-        setTimeout(() => {;
-          animationRef && animationRef.current = requestAnimationFrame(animate);
-        }, 100);
-      } else {;
-        animationRef && animationRef.current = requestAnimationFrame(animate);      }        } else {;
-          // Draw square;
-          ctx && ctx.strokeRect(x - size, y - size, size * 2, size * 2);
-        }
-      }
-
-      // Respect reduced motion;
-      const prefersReduced = window && window.matchMedia('(prefers-reduced-motion: reduce)').matches,;
-      if (prefersReduced) {;
-        // Slow down updates;
-        setTimeout(() => {;
-          animationRef && animationRef.current = requestAnimationFrame(animate);
-        }, 100);
-      } else {;
-        animationRef && animationRef.current = requestAnimationFrame(animate);
-      }
-    }
-    animate();
-
       }
       window && window.removeEventListener('resize', resizeCanvas);
     };  }, [colorScheme, intensity, particleCount, animationSpeed]);        cancelAnimationFrame(animationRef && animationRef.current);
@@ -554,22 +359,16 @@ if (> 0.975) {) {
       <div;
         className='fixed inset - 0 pointer - events - none z - 0';
         style={{
-          background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0.3) 100%)`
-        }}
-      />
-{/* Content */}
-      <div className='relative z-10'>{children}</div>
-    </div>
-          background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0 && 0.3) 100%)`,
-        }}
-      />;
-
       {/* Content */}
       <div className='relative z-10'>{children}</div>;
     </div>;
   );
 }
 export default EnhancedFuturisticBackground;
+
+
+export default EnhancedFuturisticBackground;
+
           background: `radial - gradient (circle at 50% 50%, transparent 0%, rgba (0, 0, 0, 0.3) 100%)`,
         }}
       />;

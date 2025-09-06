@@ -1,2 +1,6 @@
-
-  "timestamp": any
+{
+  "timestamp": "2025-09-04T15:38:14.346Z",
+  "vulnerabilities": [],
+  "recommendations": [],
+  "status": "secure"
+}

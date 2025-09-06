@@ -1,53 +1,26 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React, { useEffect, useMemo, useState } from 'react';
 import {;
   LineChart,;
   BarChart,;
   DonutChart,;
+} from '../components/salary/InsightCharts';
+type InsightResponse = {;
   recommendedHourlyUsd: number;
   recommendedMonthlyUsd: number;
   medianHourlyUsd: number;
   minHourlyUsd: number;
   maxHourlyUsd: number;
   confidence: number;
-  trend_monthly: { label: string; value: number }[];
-  regional_comparison: { region: string; medianHourlyUsd: number }[];
-  tags: string[];
+
+import { LineChart, BarChart, DonutChart } from '../components/salary/InsightCharts';
+type InsightResponse = {
+  recommendedHourlyUsd: number,
+  gpt_recommendation?: string;}  recommendedHourlyUsd: number,
+
   recommendedMonthlyUsd: number,
   medianHourlyUsd: number,
   minHourlyUsd: number,
   maxHourlyUsd: number,
   confidence: number,
-  gptRecommendation?: string;};  recommendedHourlyUsd: number,;
-  recommendedMonthlyUsd: number,;
-  medianHourlyUsd: number,;
-  minHourlyUsd: number,;
-  maxHourlyUsd: number,;
-  confidence: number,;
-  trendMonthly: { label: string, value: number }[],;
-  regionalComparison: { region: string, medianHourlyUsd: number }[],;
-  tags: string[],;
-  gptRecommendation?: string;
   const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
   const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
   const [region, setRegion] = useState('Remote, Global');
@@ -57,9 +30,6 @@ import {;
   const [data, setData] = useState<InsightResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-      try {
-        const { supabase } = await import('../utils/supabase/client');
-  }, []);
       });
       if (!res && res.ok) throw new Error('Failed to fetch insights');
       const json = (await res && res.json()) as InsightResponse;
@@ -70,10 +40,29 @@ import {;
       setError(e.message |'Unexpected error')
     } finally {
       setLoading(false)
+
+    } catch (e: any) {;
+      setError(e && e.message || 'Unexpected error');
+    } finally {;
+      setLoading(false);    }      if (!res && res.ok) throw new Error('Failed to fetch insights');
+      const json = (await res && res.json()) as InsightResponse;
+      setData(json);
+    } catch (e: any) {;
+      setError(e && e.message || 'Unexpected error');
+    } finally {;
+      setLoading(false);
+
     }
   }
 
   useEffect(() => {;
+
+      setLoading(false);    }
+
+    }
+  }
+
+  useEffect(() => {
     fetchInsights();
     // eslint-disable-next-line react-hooks/exhaustive-deps;
   }, []);
@@ -178,7 +167,22 @@ if ( {) {
       } catch {;
         // fall back;
       }
-        alert('Insight saved locally');
+      } catch {}
+    })();
+  }
+
+
+
+
+
+      } catch {}
+    })();
+  }
+
+  const donutData = useMemo(() => {
+    if (!data) return [] as { label: string; value: number }[];    const min = data.minHourlyUsd;      } catch {}
+        alert('Insight saved locally')
+      } catch {}
       } catch {}
     })();
   }
@@ -273,8 +277,6 @@ if (return [] as { label: string, value: number }[], ) {
                 Remote role;
               </label>;
             </div>;
-
-              {loading ? 'Calculating…' : 'Update Insights'}
               <button
                 onClick={saveInsight}
                 className='rounded border border-gray-300 dark:border-gray-700 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-900'>;
@@ -300,7 +302,6 @@ if (return [] as { label: string, value: number }[], ) {
               </button>            </div>;
           </div>;
         </div>;
-                {data ? `$${data.recommendedHourlyUsd}` : '—'}
               </div>;
             </div>;
             <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
@@ -312,8 +313,6 @@ if (return [] as { label: string, value: number }[], ) {
             <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
               <div className='text - xs text - gray - 500'>Median</div>;
               <div className='text - xl font - semibold'>;
-                {data ? `$${data.medianHourlyUsd}` : '—'}
-
           <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>;
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
               <div className='text-xs text-gray-500'>Recommended Hourly</div>;
@@ -390,6 +389,40 @@ if (return [] as { label: string, value: number }[], ) {
                 </div>;
               ) : (;
                 <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />                <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />;
+            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+              <h3 className="font-medium mb-3">Distribution</h3>
+              {data ? (
+                <div className="flex flex-col items-center gap-3">
+                  <DonutChart slices={donutData.map((d, i) => ({ label: d.label, value: d.value })) as any} />
+                  <div className="flex gap-2 flex-wrap justify-center text-xs">
+                    {donutData.map((d) => (
+                      <span key={d.label} className="rounded-full border border-gray-300 dark:border-gray-700 px-2 py-0.5">{d.label}</span>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+            </div>
+          </div>
+          {data?.gptRecommendation && (
+            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
+              <h3 className='font-medium mb-2'>GPT Recommendation</h3>
+              <p className='text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap'>
+                {data.gptRecommendation}
+              </p>            </div>
+          )}
+          {data && (            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+              )}
+
+
+
+
+
+            </div>
+          </div>
+          {data?.gptRecommendation && (
+
+            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+
               )}
               <h3 className="font-medium mb-2">GPT Recommendation</h3>
               <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap">{data.gptRecommendation}</p>
@@ -448,6 +481,10 @@ if (return [] as { label: string, value: number }[], ) {
               <p className="text - sm text - gray - 700 dark:text - gray - 300 whitespace - pre - wrap">{data.gpt_recommendation}</p>;
             </div>)}
           {data && (
+
+            </div>
+          )}
+
             <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
               <h3 className='font - medium mb - 3'>Signals</h3>;
               <div className='flex gap - 2 flex - wrap'>;

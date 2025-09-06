@@ -1,3 +1,17 @@
+
+import type { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+
+
+const UiUxDesignChat: NextPage = () => {
+  return (
+    <div>
+      <Head>
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -13,9 +27,7 @@ const UiUxDesignChat: NextPage = () => {;
         <a href="/services">Back to Services</a>
       </main>
     </div>
-=======
       </Head>;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
       <main>;
         <h1>UiUxDesignChat</h1>;
@@ -23,11 +35,9 @@ const UiUxDesignChat: NextPage = () => {;
         <a href="/services">Back to Services</a>;
       </main>;
     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
 export default UiUxDesignChat;
-=======
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -48,4 +58,3 @@ const UiUxDesignChat: NextPage = () => {
 ;
 export default UiUxDesignChat;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

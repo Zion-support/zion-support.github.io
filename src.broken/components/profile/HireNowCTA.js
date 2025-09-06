@@ -87,7 +87,6 @@ export function HireNowCTA("props": "any) {;
     </Card>)}
 ;
 export default HireNowCTA;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import React, { useState } from 'react';
 import { Button } from '../ui/Button';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/Card';
@@ -107,7 +106,6 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
     const handleSubmit = (props: any) => {
     });
     const handleSubmit = (e) => {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         e.preventDefault();
         if (onHire) {
             onHire(formData);
@@ -125,7 +123,6 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
         });
         setIsFormOpen(false);
     };
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     const handleChange = (e) => {
         setFormData(prev => ({
             ...prev,
@@ -189,4 +186,3 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
           </form>)}
       </CardContent>
     </Card>);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

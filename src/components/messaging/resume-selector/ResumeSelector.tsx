@@ -1,27 +1,17 @@
-
-import React, { useState, useEffect } from 'react',
-import { Button } from "@/components/ui/button",
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",
-import { Label } from "@/components/ui/label",
-import { Plus, Loader2 } from 'lucide-react'
-import { useResume } from "@/hooks/useResume",
-import { exportResumeToPDF } from "@/utils/pdfExport",
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Fetch resume data when component mounts
   useEffect(() => {
     const loadResumes = async () => {
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       try {
         await fetchResume()
       } catch (error) {
         logErrorToProduction('Error loading resumes:', { data: error })
       } finally {
         setIsLoading(false)
-=======
+  ;
+};
+  );
+};
+
 import React, { useState, useEffect } from 'react',;
 import { Button } from "@/components/ui/button",;
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",;
@@ -295,7 +285,3 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
     </div>
   )
 }
-;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

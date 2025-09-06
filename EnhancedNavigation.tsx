@@ -17,7 +17,6 @@ const EnhancedNavigation: React.FC = () => {
                   on_click={() => setIsOpen (false)}
                 >;
                   {item.name}
-=======
                 </Link>))}
             </div>;
           </div>)}
@@ -25,5 +24,3 @@ const EnhancedNavigation: React.FC = () => {
     </nav>);
 }
 ;
-export default EnhancedNavigation;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

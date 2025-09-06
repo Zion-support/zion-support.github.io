@@ -1,11 +1,3 @@
-import React, { useEffect } from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-import Link from 'next/link',
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <SEO
@@ -42,9 +34,6 @@ import Link from 'next/link',
               <p className="text-zion-slate-light">Yes, you can review and modify all suggestions before publishing.</p>
             </div>
           </div>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/open-app">Try ZionGPT Now</Link>
             </Button>
@@ -52,8 +41,11 @@ import Link from 'next/link',
         </div>
       </main>
     </>
-  )
-=======
+
+
+
+;
+}
 import React, { useEffect } from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -126,10 +118,3 @@ export default function AIPoweredContent() {;
           </div>;
         </div>;
       </main>;
-    </>;
-  );
-}
-;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

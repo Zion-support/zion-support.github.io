@@ -1,8 +1,23 @@
 export interface MarketTrend {
+export interface MarketTrend {;
+  id: string;
+  keyword: string;
+  searchVolume: number;
+  trendDirection: 'rising' | 'falling' | 'stable';
+  growthRate: number;
+  relatedKeywords: string[];
+
+  search_volume: number;
+  trend_direction: 'rising' | 'falling' | 'stable';
+  growth_rate: number;
+  related_keywords: string[];
+  market_opportunity: 'high' | 'medium' | 'low',
+  timestamp: Date;
+
+export interface MarketTrend {
   id: string;
   keyword: string;
 }
-export interface CompetitorAnalysis {
   id: string;
   competitor_name: string;
   website: string;
@@ -22,22 +37,21 @@ export interface MarketReport {
   title: string;
   industry: string;
   summary: string;
-  key_findings: string[];
-  market_size: number;
-  growth_projection: number;
-  recommendations: string[];
-}
-export interface MarketResearchRequest {
   industry: string;
   target_market: string;
   research_type: 'trends' | 'competitors' | 'segments' | 'comprehensive';
   timeframe: '7d' | '30d' | '90d' | '1y';
-}
-export interface MarketResearchResponse {
   success: boolean;
   data: {
     trends?: MarketTrend[];
     competitors?: CompetitorAnalysis[];
+export class AIMarketResearchService {;
+  private apiKey: string;
+
+  private baseUrl: string
+  constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
+    this.apiKey = apiKey
+    this.baseUrl = baseUrl
   }
   async analyzeMarketTrends(request: MarketResearchRequest): Promise<MarketTrend[]> {
     try {
@@ -69,8 +83,6 @@ export interface MarketResearchResponse {
   }
   async getRealTimeInsights(keyword: string): Promise<MarketTrend[]> {
     try {
-      const response = await fetch(`${this && this.baseUrl}/api/market-research/realtime?keyword=${encodeURIComponent(keyword)}`, {
-        headers: {
     } catch (error) {
       console && console.error('Error getting real-time insights:', error);
       throw error
@@ -93,7 +105,72 @@ export interface MarketResearchResponse {
 }
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY |'demo-key');
 
-=======
+  id: string,;
+  keyword: string,;
+  searchVolume: number,;
+  trendDirection: 'rising' | 'falling' | 'stable',;
+  growthRate: number,;
+  relatedKeywords: string[],;
+  marketOpportunity: 'high' | 'medium' | 'low',;
+  timestamp: Date;
+}
+;
+export interface CompetitorAnalysis {;
+  id: string,;
+  competitorName: string,;
+  website: string,;
+  marketShare: number,;
+  strengths: string[],;
+  weaknesses: string[],;
+  opportunities: string[],;
+  threats: string[],;
+  pricingStrategy: string,;
+  featureComparison: Record<string boolean>,;
+  socialMediaPresence: Record<string number>,;
+  lastUpdated: Date;
+}
+;
+export interface MarketSegment {;
+  id: string,;
+  name: string,;
+  size: number,;
+  growthRate: number,;
+  demographics: Record<string any>,;
+  psychographics: Record<string any>,;
+  buyingBehavior: Record<string any>,;
+  painPoints: string[],;
+  solutions: string[];
+}
+;
+export interface MarketReport {;
+  id: string,;
+  title: string,;
+  industry: string,;
+  summary: string,;
+  keyFindings: string[],;
+  marketSize: number,;
+  growthProjection: number,;
+  recommendations: string[],;
+  dataSources: string[],;
+  generatedAt: Date,;
+  expiresAt: Date;
+}
+;
+export interface MarketResearchRequest {;
+  industry: string,;
+  targetMarket: string,;
+  researchType: 'trends' | 'competitors' | 'segments' | 'comprehensive',;
+  timeframe: '7d' | '30d' | '90d' | '1y',;
+  includeHistoricalData: boolean,;
+  customMetrics?: string[];
+}
+;
+export interface MarketResearchResponse {;
+  success: boolean,;
+  data: {;
+    trends?: MarketTrend[],;
+    competitors?: CompetitorAnalysis[],;
+    segments?: MarketSegment[],;
     segments?: MarketSegment[],
     report?: MarketReport;
   }
@@ -263,4 +340,4 @@ if ( {) {
 }
 export const aiMarketResearchService = new AIMarketResearchService (process.env.MARKET_RESEARCH_API_KEY || 'demo - key');
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');

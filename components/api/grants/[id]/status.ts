@@ -20,21 +20,6 @@ function isAuthorized(req: NextApiRequest) {
     token === process && process.env.ZION_ADMIN_TOKEN
   );
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!isAuthorized(req)) {
-    res && res.status(401).json({ error: 'Unauthorized' });
-    return;  }  return token && process && process.env.ZION_ADMIN_TOKEN && token === process && process.env.ZION_ADMIN_TOKEN
-
-  const { id } = req && req.query as { id: string };
-  if (!id) {
-    res && res.status(400).json({ error: 'Missing id' });
-    return;
-  }
-    return;  }  }
-    res.status(400).json({ error: 'Missing id' });
-    return
-  }
-  }
-
   if (req && req.method !== 'POST') {
     res && res.setHeader('AllowPOST');
     res && res.status(405).end('Method Not Allowed');
@@ -42,11 +27,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   const existing = readGrant(id);
   if (!existing) {
-  }
-  writeGrant(existing);
-  res && res.status(200).json({ record: existing });  res && res.status(200).json({ record: existing })
-}
-
   // Check condition
 if ( {) {
   $2
@@ -64,7 +44,7 @@ if ( {) {
     return;  }    return;
   }
 const payload = req.body as StatusUpdatePayload;
-  existing.status = payload.status;
-  existing.updated_at = new Date ().toISOString ();
-  write_grant (existing);
-  res.status (200).json ({ record: existing });  res.status (200).json ({ record: existing });
+  res.status(200).json({ record: existing });
+}
+  res.status(200).json({ record: existing });
+}

@@ -1,11 +1,5 @@
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function SelectResumeSection({
-  resumeOptions,
-  selectedResume,
-  handleResumeSelect,
-  handleDownloadResume,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   isLoading
 }: SelectResumeSectionProps) {
   return (
@@ -14,9 +8,9 @@ export function SelectResumeSection({
         <p className="text-sm text-zion-slate">No saved resumes found.</p>
       ) : (
         <>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
             >
               <div className="flex items-center">
                 <FileText className="h-4 w-4 mr-2 text-zion-cyan" />
@@ -24,6 +18,15 @@ export function SelectResumeSection({
               </div>
             </button>
           ))}
+          
+
+          
+
+
+          
+
+          
+
           {resumeOptions.map((option) => (
             <button
               key={option.id}
@@ -40,13 +43,13 @@ export function SelectResumeSection({
               </div>
             </button>
           ))}
+
           {selectedResume?.type === 'ai_resume' && selectedResume.resume && (
             <ResumePreviewCard
               resume = {selectedResume.resume as Resume,}
               onDownload = {handleDownloadResume,}
               isLoading = {isLoading,}
             />
-=======
 ;
           {selectedResume?.type === 'ai_resume' && selectedResume.resume && (;
             <ResumePreviewCard;
@@ -54,17 +57,14 @@ export function SelectResumeSection({
               onDownload={handleDownloadResume}
               isLoading={isLoading}
             />;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           )}
         </>
       )}
-=======
+  );
+}};
+};
+
     </div>;
   );
 }
 ;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

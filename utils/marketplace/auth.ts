@@ -1,4 +1,3 @@
-import { NextApiRequest } from 'next';
       name: 'Test User'
     }
   }
@@ -7,6 +6,10 @@ import { NextApiRequest } from 'next';
 export function assertTalentOrClientForOffer(
   req: NextApiRequest
   offer: { clientId: string; talentSlug: string }
+  req: NextApiRequest,;
+  offer: { clientId: string; talentSlug: string },
+
+
   talentSlugHeader?: string
 ): DemoUser {
   const u = getDemoUser(req);
@@ -16,12 +19,47 @@ export function assertTalentOrClientForOffer(
     return u;
   const err = new Error('Not authorized for this offer');
   // @ts-ignore
-  const user = getUserFromRequest(req);
-  if (!user) {
-  }
-  return user;
+
+
+
+
+
+// Marketplace authentication utilities
+export interface MarketplaceUser {
+  id: string;
+  role: 'client' | 'talent' | 'admin';
+  email: string;
+  name: string;
+  slug: string;
+  isVerified: boolean;
+  profile?: {
+    bio?: string;
+    skills?: string[];
+    experience?: string;
+    portfolio?: string[];
+    hourlyRate?: number;
+    availability?: 'available' | 'busy' | 'unavailable';
+  };
+  business?: {
+    name: string;
+    industry: string;
+    size: 'startup' | 'small' | 'medium' | 'large' | 'enterprise';
+    website?: string;
+  };
+  createdAt: string;
+  lastActiveAt: string;
 }
-=======
+
+export interface AuthContext {
+  user: MarketplaceUser | null;
+  isAuthenticated: boolean;
+  permissions: string[];
+  sessionId?: string;
+}
+
+
+
+
 export function getUserFromRequest (req: any): User | null {
   // Mock implementation - in production, this would extract user from JWT or session;
   const auth_header = req.headers.authorization;
@@ -72,5 +110,3 @@ if ( {) {
   }
   return user;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

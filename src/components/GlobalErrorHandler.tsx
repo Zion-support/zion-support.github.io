@@ -1,40 +1,9 @@
-import React, {
-  createContext
-  useContext
-  useState
-  useCallback
-  ReactNode
-} from 'react'
-import { toast } from '@/hooks/use-toast'
-import { Button } from '@/components/ui/button'
-
-import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react'
-import * as Sentry from '@sentry/nextjs';
-import {logErrorToProduction} from '@/utils/productionLogger';
-interface ErrorContextType {
-  reportError: (error: Error, context?: any) => void;
   showRetryableError: (error: Error, retryAction?: () => void) => void;
   showNetworkError: (retryAction?: () => void) => void;
   showAuthError: (loginAction?: () => void) => void;
   clearAllErrors: () => void
 
-}, [])
-export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
-  const [retryCount, setRetryCount] = useState<Record<string, number>>({})
-  const reportError = useCallback((error: Error, context?: any,) => {
-    // Log to console for development
-    if (process.env.NODE_ENV === 'development') {
-      logErrorToProduction('Global Error Handler:', error, context)
-    }
-    // Report to Sentry for production
-    if (process.env.NODE_ENV === 'production') {
-      Sentry.withScope(scope => {        if (context) {
-          scope.setContext('errorContext', context)
-        }
-        scope.setLevel('error')
-        Sentry.captureException(error)
-      })
-    }
+
   }, [])
   const showRetryableError = useCallback(
     (error: Error, retryAction?: () => void) => {
@@ -88,7 +57,6 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
             label: 'Log In'
             onClick: loginAction
           }
-=======
 import { toast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
 import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react';
@@ -181,7 +149,8 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {;
     // Clear any active toasts would go here if the toast system supports it
   }, []),
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
   const contextValue: ErrorContextType = {
     reportError,
     showRetryableError,
@@ -189,22 +158,9 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {;
     showAuthError,
     clearAllErrors},
 
-  return (
-    <ErrorContext.Provider value={contextValue}>
-      {children}
-    </ErrorContext.Provider>;
-  );
-}
-;
-export function useGlobalErrorHandler(): ErrorContextType {;
-  const context = useContext(ErrorContext),;
-  if (!context) {;
-    throw new Error('useGlobalErrorHandler must be used within a GlobalErrorHandler');
-  }
-  return context;
-}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 // Helper function to convert technical errors to user-friendly messages
 function getErrorMessage(error: Error): string {
   const message = error.message.toLowerCase(),
@@ -297,6 +253,3 @@ export function useErrorHandler() {;
     handleApiError;
     handleAsyncOperation}
 } ;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

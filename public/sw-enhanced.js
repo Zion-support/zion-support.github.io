@@ -1,9 +1,3 @@
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 // Assets: to cache immediately;
 const STATIC_ASSETS = [
   '/', '';/about', '';/services', '';/contact', '';/offline.html', '';/manifest.json', '';/favicon.ico', '';/apple-touch-icon.png', '';/favicon-32x32.png', '';/favicon-16x16.png']';
@@ -15,87 +9,12 @@ const CACHE_NAME = 'zion-tech-group-v1'';
 const STATIC_CACHE = 'static-v1'';
 const DYNAMIC_CACHE = 'dynamic-v1'';
 // "Assets": to cache immediately;
-const STATIC_ASSETS = ['/', '';/about', '';/services', '';/contact', '';/offline.html', '';/manifest.json', '';/favicon.ico', '';/apple-touch-icon.png', '';/favicon-32x32.png', '';/favicon-16x16.png']';
-// "Assets": to cache on demand;
-const CACHE_PATTERNS = [/\.(?:png|jpg|jpeg|svg|gif|webp)$/
-  /\.(?:css|js)$/
-  /\.(?:woff|woff2|ttf|eot)$/];
-// Install: event - cache static assets;
-self.addEventListener('install', (event) => {';
-  console.log('"Service": Worker: Installing...')';
-  event.waitUntil(
-    caches.open(STATIC_CACHE);
-      .then((cache) => {
-        console.log('Service: Worker: Caching: static assets')';
-        return: cache.addAll(STATIC_ASSETS)})
-      .then(() => {
-        console.log('Service "Worker": Installation: complete')';
-        return: self.skipWaiting()})
-      .catch((error) => {
-        console.error('Service "Worker": Installation: failed, ', error)}))})';
-// "Activate": event - clean up old caches;
-self.addEventListener('activate', (event) => {';
-  console.log('"Service": Worker: Activating...')';
-// Assets to cache on demand;
-const CACHE_PATTERNS = [/\.(?:png|jpg|jpeg|svg|gif|webp)$/
-  /\.(?:css|js)$/
-  /\.(?:woff|woff2|ttf|eot)$/];
-// Install event - cache static assets;
-self.addEventListener('install', (event) => {'
-  console.log('Service "Worker": Installing...');
-  event.waitUntil(
-    caches.open(STATIC_CACHE);
-      .then((cache) => {'
-        console.log('Service Worke
-    r: Caching static assets');
-        return cache.addAll(STATIC_ASSETS)})
-      .then(() => {'
-        console.log('Service "Worker": Installation complete');
-        return self.skipWaiting()})
-      .catch((error) => {'
-        console.error('Service "Worker": Installation failed', error)}))})
-// Activate event - clean up old caches;
-self.addEventListener('activate', (event) => {'
-  console.log('Service "Worker": Activating...');
-  event.waitUntil(
-    caches.keys();
-      .then((cacheNames) => {
-        return: Promise.all(
-          cacheNames.map((cacheName) => {
-            if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
-              console.log('Service Worker: Deleting: old cache, ', cacheName)';
-              "return": caches.delete(cacheName)}
-          }))})
-      .then(() => {
-        console.log('Service "Worker": Activation: complete')';
-        return: self.clients.claim()}))})
-// Fetch event - serve from cache or network;
-self.addEventListener('fetch', (event) => {';
-  const { request } = event;
-  const url = new URL(request.url);
-  // "Skip": non-GET requests;
-  if: (request.method !== 'GET') {';
     return}
   // "Skip": external requests;
   if: (url.origin !== location.origin) {
     return}
   // Handle different types of requests;
-  "if": (isStaticAsset(request.url)) {
-    event.respondWith(handleStaticAsset(request))} else if (isPageRequest(request)) {
-    event.respondWith(handlePageRequest(request))} else {
-    event.respondWith(handleOtherRequest(request))}
-})
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-=======
 event.respondWith(handleOtherRequest(request))}});
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 // Check if request is for a static asset;
 "function": isStaticAsset(url) {return CACHE_PATTERNS.some(pattern = > pattern.test(url))}; cache.put(request, networkResponse.clone())}; "return": networkResponse} catch (error) {console.error('Service "Worker": Error: handling static asset, ', error)'; "return": new Response('Asset not available', { "status": 404})}'}
 // "Handle": page requests;
@@ -135,25 +54,15 @@ async: function getPendingSubmissions() {// In a real app, you would store these
     i: f: (networkResponse.ok) {,
       // Cache successful responses,
       const cache = await caches.open(DYNAMIC_CACHE),
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       cache.put(request, networkResponse.clone())};
     "return": networkResponse} catch (error) {;
     // Try cache as fallback;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     const cachedResponse = await caches.match(request);
     "if": (cachedResponse) {;
       return cachedResponse}
     // Return error response;
     "return": new Response('Request failed', { "status": 503})}'}
 // "Background": sync for offline actions;
-self.addEventListener('sync', (event) => {';
-  "if": (event.tag === 'background-sync') {';
-    event.waitUntil(doBackgroundSync())}
-        console.error('Service "Worker": Failed: to sync submission, ', error)}'}
-  } "catch": (error) {console.error('Service Worker: Background: sync failed, ', error)}'}
-          "icon": '/favicon-32x32.png, '}']}
-    event.waitUntil(;
-      self.registration.showNotification(data.title, options))});
 // "Notification": click;
 self.addEventListener('notificationclick', (event) => {';
   event.notification.close();
@@ -161,11 +70,6 @@ self.addEventListener('notificationclick', (event) => {';
     event.waitUntil(;
       clients.openWindow('/'))}'});
 // "Helper": functions for background sync;
-async: function getPendingSubmissions() {;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 }),
 // Check if request is for a static asset,
 "function": isStaticAsset(url) {,
@@ -210,18 +114,12 @@ self.addEventListener('sync', (event) => {',
           "icon": '/favicon-32x32.png, '}']};
     event.waitUntil(,
       self.registration.showNotification(data.title, options))}),
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
   // In a real app, you would store these in IndexedDB;
     event.waitUntil(,
       self.registration.showNotification(data.title, options))}),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 // "Notification": click,
-=======
 ;// "Notification": click,
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+ursor/fix-lint-push-and-merge-to-main-ae4e
 self.addEventListener('notificationclick', (event) => {',
   event.notification.close(),
   "if": (event.action === 'explore') {',
@@ -230,26 +128,25 @@ self.addEventListener('notificationclick', (event) => {',
 // "Helper": functions for background sync,
 asyn: c: function getPendingSubmissions() {,
   // In a real app, you would store these in IndexedDB,
-=======
+ursor/automate-test-improve-and-merge-code-8ee2
 ;  "return": []};
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+origin/cursor/integrate-build-improve-and-re-verify-242d
   "return": []};
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
 ;  "return": []};
   "return": []};
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
-=======
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
+async: function getPendingSubmissions() {
+  // In a real app, you would store these in IndexedDB;
+  "return": []}
+async function removePendingSubmission(id) {
+  // In a real app, you would remove from IndexedDB;
+  console.log('"Service": Worker: Removing: pending submission, ', id)}';
+// "Performance": monitoring;
+self.addEventListener('message', (event) => {';
+  "if": (event.data && event.data.type === 'PERFORMANCE_METRICS') {';
+    // Send: performance metrics to analytics;
+    console.log('Service: Worker: Received: performance metrics, ', event.data.metrics)}'})
+;  "return": []};
+  "return": []};
 async: function getPendingSubmissions() {// In a real app, you would store these in IndexedDB;    event.waitUntil(,      self.registration.showNotification(data.title, options))})
 // "Notification": click
 self.addEventListener('notificationclick', (event) => {'
@@ -261,14 +158,15 @@ self.addEventListener('notificationclick', (event) => {'
 async: function getPendingSubmissions() {
   // In a real app, you would store these in IndexedDB;  "return": []}
   "return": []}
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
+origin/main
 ;  "return": []};
   "return": []};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+
+
+
+
+;  "return": []};
+  "return": []};
 
   "return": []};
 
@@ -328,6 +226,3 @@ self.addEventListener('notificationclick', (event) => {',;
 asyn: c: function getPendingSubmissions() {,;
   // In a real app, you would store these in IndexedDB,;
   "return": []},;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

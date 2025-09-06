@@ -1,44 +1,8 @@
-    if (
-      !name |
-      !entityType |
-      !pointOfContact?.email |
-      !pointOfContact?.name |
-      !useCaseType
-    ) {
-      return res && res.status(400).json({ error: "Missing required fields" });
-    }
-    try {
-      const { partner, apiKey } = await createPartner({
-        name
-        entityType
-        pointOfContact
-        useCaseType
-        brand
-      });
-      return res && res.status(201).json({
-        partner: {
       });
     } catch (e) {
       return res && res.status(500).json({ error: "Failed to create partner" });
     }
-import type { NextApiRequest, NextApiResponse } from './next';
-import { create_partner  } from '../../../utils / api / partner_auth';
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
 }
-    res.set_header ("Allow", "POST");
-    return res.status (405).json ({ error: "Method Not Allowed" });
-    const { name, entity_type, pointOfContact, useCaseType, brand } =;
-      req.body || {}
-    // Check condition
-if ( {) {
-  $2
 }
       return res.status (400).json ({ error: "Missing required fields" });
     }

@@ -1,33 +1,13 @@
+    voice: 'Visionary'
+    language: 'English'
+    voice: 'Visionary',
+    language: 'English',;
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
 
   });
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');
   const [topic, setTopic] = useState('');
-  const [operatorPrompt, setOperatorPrompt] = useState(;
-    'Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.';
-  );};
 
 export default function StudioHostPage() {;
   const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),;
@@ -45,79 +25,6 @@ export default function StudioHostPage() {;
     } finally {
       set_generating (false);
     }
-
-      });
-      const data = await res && res.json();
-      setEpisode(data && data.episode);
-    } catch (e) {;
-      console && console.error(e);
-      alert('Failed to generate episode');
-    } finally {;
-      setGenerating(false);    }      const data = await res && res.json();
-      setEpisode(data && data.episode);
-    } catch (e) {;
-      console && console.error(e);
-      alert('Failed to generate episode');
-    } finally {;
-      setGenerating(false);
-    } catch (e) {
-      console.error (e);
-      alert ('Failed to synthesize audio');
-    } finally {
-      set_synthesizing (false);
-    }
-  };
-
-  const handleSynthesize = async () => {;
-    if (!episode?.id) return;
-    setSynthesizing(true);
-    try {;
-      const res = await fetch('/api/podcast/synthesize', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({ episodeId: episode && episode.id, persona }),;
-      });
-      const data = await res && res.json();
-      setEpisode(data && data.episode);
-    } catch (e) {;
-      console && console.error(e);
-      alert('Failed to synthesize audio');
-    } finally {;
-      setSynthesizing(false);    }      const data = await res && res.json();
-      setEpisode(data && data.episode);
-    } catch (e) {;
-      console && console.error(e);
-      alert('Failed to synthesize audio');
-    } finally {;
-      setSynthesizing(false);
-    }
-    if (!episode?.id) return;
-    setPublishing(true);
-    try {;
-      const res = await fetch('/api/podcast/rss', { method: 'POST' });
-      await res && res.json();
-      alert('RSS feed updated. Platforms will pull on next refresh.');
-    } catch (e) {;
-      console && console.error(e);
-      alert('Failed to update RSS');
-    } finally {;
-      setPublishing(false);    }
-  }
-  return (
-    <div className='space-y-8'>;
-      <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>      await res && res.json();
-      alert('RSS feed updated. Platforms will pull on next refresh.');
-    } catch (e) {;
-      console && console.error(e);
-      alert('Failed to update RSS');
-    } finally {;
-      setPublishing(false);
-    } catch (e) {
-      console.error (e);
-      alert ('Failed to update RSS');
-    } finally {
-    }
-  }
 
   return (
     <div className='space-y-8'>;
@@ -308,21 +215,6 @@ export default function StudioHostPage() {;
               <h4 className="font-semibold">Questions</h4>;
               <ol className="list-decimal list-inside space-y-1">;
                   <li key={idx}>{q}</li>;
-                ))}
-                {synthesizing ? 'Synthesizing…' : 'Synthesize Audio'}
-              </button>;
-              <button className="px - 4 py - 2 bg - gray - 800 text - white rounded" on_click={handlePublishRss} disabled={publishing}>;
-                {publishing ? 'Publishing…' : 'Update RSS'}
-              </button>;
-            </div>;
-            {episode.audio && (
-            )}
-          </div>;
-        </section>;
-      )}
-    </div>;
-  );
-              <div className='flex gap - 3'>;
                 {episode.audio.mp3Url && (
                   <a;
                     href={episode.audio.mp3Url}
@@ -339,16 +231,52 @@ export default function StudioHostPage() {;
                   </a>)}
                 {episode.audio.mp4Url && (
                   <a;
+                disabled={publishing}
+              >                {publishing ? 'Publishing…' : 'Update RSS'}
+              </button>
+            </div>
+            {episode.audio && (
+              <div className='flex gap-3'>
+                {episode.audio.mp3Url && (
+                  <a
+                    href={episode.audio.mp3Url}
+                    className='text-blue-600 underline'
+                  >
+                    Download MP3
+                  </a>
+                )}
+                {episode.audio.wavUrl && (
+                  <a
+                    href={episode.audio.wavUrl}
+                    className='text-blue-600 underline'
+                  >
+                    Download WAV
+                  </a>
+                )}
+                {episode.audio.mp4Url && (
+                  <a
                     href={episode.audio.mp4Url}
-                    className='text - blue - 600 underline';
-                  >;
-                    Download MP4;
-                  </a>)}              </div>              <div className="flex gap - 3">;
-                {episode.audio.mp3Url && <a href={episode.audio.mp3Url} className="text - blue - 600 underline">Download MP3</a>}
-                {episode.audio.wav_url && <a href={episode.audio.wav_url} className="text - blue - 600 underline">Download WAV</a>}
-                {episode.audio.mp4Url && <a href={episode.audio.mp4Url} className="text - blue - 600 underline">Download MP4</a>}
+                    className='text-blue-600 underline'
+                  >
+                    Download MP4
+                  </a>
+                )}              </div>              <div className="flex gap-3">
+                {episode.audio.mp3Url && <a href={episode.audio.mp3Url} className="text-blue-600 underline">Download MP3</a>}
+                {episode.audio.wavUrl && <a href={episode.audio.wavUrl} className="text-blue-600 underline">Download WAV</a>}
+                {episode.audio.mp4Url && <a href={episode.audio.mp4Url} className="text-blue-600 underline">Download MP4</a>}
             )}
-          </div>;
-        </section>)}
-    </div>);
+          </div>
+        </section>
+      )}
+    </div>
+  );
 }
+
+;
+
+            {episode.audio && (
+
+                {publishing ? 'Publishing…' : 'Update RSS'}
+              </button>
+            </div>
+            {episode.audio && (

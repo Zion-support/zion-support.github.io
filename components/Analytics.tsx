@@ -1,25 +1,3 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React, { useEffect } from 'react';
 const Analytics: React.FC < AnalyticsProps> = ({ tracking_id = 'G - XXXXXXXXXX' }) => {
   useEffect (() => {
     // Google Analytics 4;
@@ -122,6 +100,17 @@ if ( {) {
   }
   return (
     <Head>;
+          __html: `
+            // Performance monitoring
+            if ('performance' in window) {
+              window.addEventListener('load', function() {
+                setTimeout(function() {
+                  const perfData = performance.getEntriesByType('navigation')[0];
+                  if (perfData) {
+                    const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
+                    if (window.gtag) {
+                      window.gtag('event', 'timing_complete', {
+                      });
                     const loadTime = perfData && perfData.loadEventEnd - perfData && perfData.loadEventStart
                     if (window && window.gtag) {
                       window && window.gtag('event', 'timing_complete', {
@@ -129,7 +118,3 @@ if ( {) {
                         value: Math && Math.round(loadTime),
                       })
                     }
-                  }
-                }, 0)
-              })
-            }

@@ -1,3 +1,49 @@
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
+import {
+  Rocket
+  Brain
+  Atom
+  Globe
+  Zap
+  Sparkles
+  Shield
+  Target
+  Crown
+  Star
+  TrendingUp
+  ArrowRight
+  CheckCircle
+  DollarSign
+  Users
+  Clock
+  Award
+  Zap as ZapIcon
+  Search
+  Phone
+  Mail
+  MapPin
+  Heart
+  Leaf
+  Car
+  GraduationCap
+  Scale
+  Building
+  Factory
+  Camera
+  Video
+  Music
+  Gamepad2
+  Eye
+  Globe2
+  Satellite
+  Dna
+  Battery
+  Gamepad
+  Cpu as CpuIcon;} from 'lucide-react';import {
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
+
 import {
   Rocket,
   Brain,
@@ -37,22 +83,16 @@ import {
   Satellite,
   Dna,
   Battery,
+
+  Gamepad,;
+  Cpu as CpuIcon,;} from 'lucide-react';import {
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
+
+
   Target, Crown, Star, TrendingUp, ArrowRight;
   CheckCircle, DollarSign, Users, Clock, Award, Zap as ZapIcon;
   Search, Phone, Mail, MapPin, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2, Eye;
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
-import { cuttingEdge2028MicroSaas } from '../data/2028-cutting-edge-micro-saas';
-import { practicalBusinessSolutions2028 } from '../data/2028-practical-business-solutions';
-import { advancedAIAutonomousServices2028 } from '../data/2028-advanced-ai-autonomous-services';
-import { quantumSpaceInnovations2028 } from '../data/2028-quantum-space-innovations';
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-
-    visible: {
-      opacity: 1
       transition: {
   const allServices = [;
     ...cuttingEdge2028MicroSaas,;
@@ -218,7 +258,6 @@ import { quantumSpaceInnovations2028 } from '../data/2028-quantum-space-innovati
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-  return (
     <>;
       <Head>;
         <title>;
@@ -246,11 +285,6 @@ import { quantumSpaceInnovations2028 } from '../data/2028-quantum-space-innovati
           name='twitter:description'
           content='Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems.'
         />      </Head>        {/* Open Graph */}
-        <meta property="og:title" content="2029 Ultimate Services Showcase - Zion Tech Group" />;
-        <meta property="og:description" content="Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems." />;
-        <meta property="og:url" content="https://ziontechgroup && ziontechgroup.com/2029-ultimate-services-showcase" />;
-        <meta property="og:type" content="website" />;
-
         {/* Twitter */}
         <meta;
           name='description';
@@ -298,8 +332,10 @@ import { quantumSpaceInnovations2028 } from '../data/2028-quantum-space-innovati
         <meta name="twitter:title" content="2029 Ultimate Services Showcase - Zion Tech Group" />;
         <meta name="twitter:description" content="Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems." />;
       </Head>;
-              <Link
-                href="/contact"
+
+              >
+                Get Started Today
+              </Link>
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-2xl hover:shadow-cyan-500/25 text-lg">;
                 Get Started Today;
               </Link>;
@@ -310,7 +346,13 @@ import { quantumSpaceInnovations2028 } from '../data/2028-quantum-space-innovati
               >
                 View Pricing
               </Link>
-            </div>
+            {/* Stats */}
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{allServices.length}+</div>
+                <div className="text-gray-400">Revolutionary Services</div>
+              </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-emerald-400 mb-2">$500M+</div>
                 <div className="text-gray-400">Market Valuation</div>
@@ -327,10 +369,6 @@ import { quantumSpaceInnovations2028 } from '../data/2028-quantum-space-innovati
           </motion.div>
         </div>
       </section>
-                View Pricing;
-              </Link>;
-            </div>;
-
             {/* Stats */}
             <div className='grid grid-cols-2 md:grid-cols-4 gap-8 mt-16'>;
               <div className='text-center'>;
@@ -372,51 +410,130 @@ import { quantumSpaceInnovations2028 } from '../data/2028-quantum-space-innovati
           </motion && motion.div>;
         </div>;
       </section>;
-
-      {/* Filters Section */}
-            {/* Category Filter */}
-            <div className='flex flex-wrap items-center space-x-2'>;
-              {categories && categories.map(category => (                <button            {/* Search */}
-            <div className="relative w-full lg:w-96">;
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />;
               <input
                 type="text"
                 placeholder="Search services..."
                 value={searchTerm}
             {/* Category Filter */}
+            <div className='flex flex-wrap items-center space-x-2'>
+              {categories.map(category => (            <div className="flex flex-wrap items-center space-x-2">
+              {categories.map((category) => (
                 <button
-                  key={category && category.id}
-                  onClick={() => setSelectedCategory(category && category.id)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${;
-                    selectedCategory === category && category.id;
-                      ? `bg-gradient-to-r ${category && category.color} text-white shadow-lg`;
-                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50';
+
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+                    selectedCategory === category.id
+                      ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
+                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50'
+                  }`}
+
+
+              ))}
+            </div>
+
               ))}
             {/* Price Filter */}
-            <div className='flex items-center space-x-2'>;
-              {priceRanges && priceRanges.map(range => (                <button            <div className="flex items-center space-x-2">;
-              {priceRanges && priceRanges.map((range) => (;
+            <div className='flex items-center space-x-2'>
+              {priceRanges.map(range => (                <button            <div className="flex items-center space-x-2">
+              {priceRanges.map((range) => (
                 <button
-                  key={range && range.id}
-                  onClick={() => setSelectedPriceRange(range && range.id)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${;
-                    selectedPriceRange === range && range.id;
-                      ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg';
-                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50'                  }`}                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50';
                   }`}
                 >;
                   {range && range.name}
                 </button>;
               ))}
+
+                  key={range.id}
+                  onClick={() => setSelectedPriceRange(range.id)}
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+                    selectedPriceRange === range.id
+                      ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg'
+                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50'                  }`}                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50';
+                  }`}
+                >
+                  {range.name}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
             </div>;
           </div>;
         </div>;
       </section>;
+      {/* Services Grid */}
+
+
             variants={containerVariants}
             initial="hidden"
             animate="visible"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
-                  {/* Categories */}
+                    <div className="flex flex-wrap gap-2">
+                      {service.category.slice(0, 3).map((cat) => (
+                        <span
+                          key={cat}
+                          className="px-2 py-1 bg-gray-700/50 text-cyan-400 text-xs rounded-lg border border-cyan-500/20"
+                          {cat}
+                        </span>
+                      ))}
+                      {service.category.length > 3 && (
+                        <span className='px-2 py-1 bg-gray-700/50 text-gray-400 text-xs rounded-lg'>                          +{service.category.length - 3}                        <span className="px-2 py-1 bg-gray-700/50 text-gray-400 text-xs rounded-lg">
+                          +{service.category.length - 3}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                          className='px-2 py-1 bg-gray-700/50 text-cyan-400 text-xs rounded-lg border border-cyan-500/20'                        >
+
+
+                        >
+{cat}
+                        </span>;
+                      ))}
+
+                      {service.category.length > 3 && (
+                        <span className="px-2 py-1 bg-gray-700/50 text-gray-400 text-xs rounded-lg">
+                          +{service.category.length - 3}
+                        </span>
+
+                  {/* Features Preview */}
+                  <div className='mb-6'>
+                    <h4 className='text-sm font-semibold text-white mb-2'>
+                      Key Features:
+                    </h4>
+                    <ul className='space-y-1'>
+                      {service.features.slice(0, 3).map((feature, idx) => (
+                        <li
+                          key={idx}
+                          className='flex items-center space-x-2 text-sm text-gray-300'
+                        >
+                          <CheckCircle className='h-3 w-3 text-cyan-400 flex-shrink-0' />                          <span>{feature}</span>
+                        </li>
+                      ))}
+                      {service.features.length > 3 && (
+                        <li className='text-xs text-gray-500'>                          +{service.features.length - 3} more features                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
+                    <ul className="space-y-1">
+                      {service.features.slice(0, 3).map((feature, idx) => (
+                        <li key={idx} className="flex items-center space-x-2 text-sm text-gray-300">
+                          <CheckCircle className="h-3 w-3 text-cyan-400 flex-shrink-0" />
+                        </li>
+                      ))}
+                      {service.features.length > 3 && (
+                        <li className='text-xs text-gray-500'>                        <li className="text-xs text-gray-500">
+                          +{service.features.length - 3} more features
+                        </li>
+                      )}
+
+                    </div>;
+                  </div>;
+
+
+
+
                           {cat}
                         </span>;
                       ))}
@@ -452,6 +569,10 @@ import { quantumSpaceInnovations2028 } from '../data/2028-quantum-space-innovati
                           +{service && service.features.length - 3} more features;
                         </li>;
                       )}
+                  {/* Market Info */}
+
+                  <div className="mb-6 space-y-2">
+
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-gray-400">Market Size: </span>
                       <span className="text-emerald-400 font-medium">{service.marketSize}</span>
@@ -485,6 +606,17 @@ import { quantumSpaceInnovations2028 } from '../data/2028-quantum-space-innovati
                       Learn More;
                       <ArrowRight className='inline-block ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200' />                    </Link>;
                   </div>;
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          </motion && motion.div>;
+                  <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+
+
+
           {/* No Results */}
           {filteredServices && filteredServices.length === 0 && (;
             <div className='text-center py-20'>;
@@ -502,23 +634,17 @@ import { quantumSpaceInnovations2028 } from '../data/2028-quantum-space-innovati
                   setSearchTerm('');
                   setSelectedPriceRange('all');
                 }}
-                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'              >            <div className="text-center py-20">;
-              <div className="w-24 h-24 bg-gray-800/50 rounded-full flex items-center justify-center mx-auto mb-6">;
-                <Search className="w-12 h-12 text-gray-400" />;
-              </div>;
-              <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>;
-              <p className="text-gray-400 mb-8">Try adjusting your search criteria or browse all services</p>;
-                onClick={() => {;
+                onClick={() => {
                   setSelectedCategory('all');
                   setSearchTerm('');
-                  setSelectedPriceRange('all');
+                  setSelectedPriceRange('all')
                 }}
-                }}
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200";
-              >;
-                Reset Filters;
-              </button>;
-            </div>;
+                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+              >
+                Reset Filters
+              </button>
+            </div>
+          )}
           )}
       {/* Contact CTA */}
       <section className='py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20'>;
@@ -558,8 +684,6 @@ import { quantumSpaceInnovations2028 } from '../data/2028-quantum-space-innovati
           </motion.div>
         </div>
       </section>
-      <UltraFuturisticFooter2029 />
-    </>
               Join the future of technology with our revolutionary services.;
               Contact us today to discuss how we can help you achieve your;
               goals.;

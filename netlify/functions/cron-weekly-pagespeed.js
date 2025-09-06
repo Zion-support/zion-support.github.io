@@ -1,4 +1,3 @@
-async function psi(url, strategy = 'mobile', key) {
     const pages = ['/', '/learn', '/dao', '/certifications'];
     const results = [];
     ${p}`;
@@ -15,7 +14,6 @@ async function psi(url, strategy = 'mobile', key) {
         content,
         message: 'chore (automation): weekly PageSpeed report',
         token,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
     }
     return {
@@ -41,12 +39,7 @@ exports.handler = async function () {
       } catch (e) {
         results.push ({ url, error: e.message || String (e) });
       }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
-  } catch (e) {
-    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
-  }
-
     const baseUrl = process.env.URL |process.env.DEPLOY_URL |''
     const key = process.env.PSI_API_KEY |''
     const pages = ['//learn/dao/certifications']
@@ -54,19 +47,4 @@ exports.handler = async function () {
     for (const p of pages) {
       const url = `${baseUrl}${p}`
       try {
-
-    if (owner && repo && token) {
-      await upsertFile({ owner, repo, path: 'data/reports/performance/weekly-pagespeed && pagespeed.json', content, message: 'chore(automation): weekly PageSpeed report', token })
-    }
-  } catch (e) {
-    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
-  }
-
-}
-
-=======
 },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-},
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

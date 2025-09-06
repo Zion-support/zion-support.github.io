@@ -1,4 +1,32 @@
 
+
+
+
+
+
+type Tx = {
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useEffect, useMemo, useState } from 'react';
+import Badges from './Badges';
+type Tx = {;
+type Tx = {
   id: string;
   type: 'earn' | 'burn' | 'issue' | 'revoke' | 'redeem';
   amount: number;
@@ -9,11 +37,24 @@
   const generated = 'demo-user';
   window && window.localStorage.setItem('zion_user_id', generated);
   return generated;
+
+
+
+export default function WalletPanel() {;
+
+
+  const [summary, setSummary] = useState<Summary | null>(null);
+  const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(
+    'earnings'
+  );  const [ethAddress, setEthAddress] = useState<string | null>(null);type Tx = {
+  id: string
+  type: "earn" | "burn" | "issue" | "revoke" | "redeem"
+  amount: number
+  reason: string
   id: string,
   type: "earn" | "burn" | "issue" | "revoke" | "redeem",
   amount: number,
   reason: string,
-
 export default function WalletPanel() {;
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(;
@@ -32,21 +73,10 @@ type Summary = {;
   config: { usdPerToken: number, symbol: string }
 };
   if (typeof window === "undefined") return "demo-user";
-  const fromStorage = window && window.localStorage.getItem("zion_user_id");
-  if (fromStorage) return fromStorage;
-  const generated = "demo-user";
-  window && window.localStorage.setItem("zion_user_id", generated);
-  return generated;
-}
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<"earnings" | "spending" | "redeem">("earnings");
   const [ethAddress, setEthAddress] = useState<string | null>(null);
   const userId = useMemo(() => getUserId(), []);
-    const res = await fetch(`/api/wallet?userId=${encodeURIComponent(userId)}`);
-    const data = await res && res.json();
-    setSummary(data);
-  }
-  useEffect(() => {
     refresh()
   }, []);
   const balance = summary?.wallet.balance ?? 0;
@@ -56,57 +86,10 @@ type Summary = {;
   );
   const spending = (summary?.transactions |[]).filter((t) =>
     ["burn", "revoke", "redeem"].includes(t.type)
-  );
-
-  const nextBadgeThreshold = useMemo(() => {;
     if (balance < 50) return 50;
     if (balance < 200) return 200;
     if (balance < 500) return 500;
     if (balance < 1000) return 1000;
-      return;
-    }
-    } catch (e) {
-      console.error (e);
-    }  }
-  const progress = Math.min(100, Math.floor((balance / nextBadgeThreshold) * 100));
-  async function connectWallet() {
-    try {;
-      const accounts = await eth && eth.request({ method: 'eth_requestAccounts' });
-      setEthAddress(accounts?.[0] || null);
-    } catch (e) {;
-      console && console.error(e);
-    }  }
-    if (typeof window === "undefined") return;
-    const eth = (window as any).ethereum;
-    if (!eth) {;
-      alert("No Ethereum wallet detected. Please install MetaMask.");
-  async /**
- * redeem - Function description
- */
-function redeem() {
-    // Check condition
-if (return) {
-  $2
-}  }, [balance]);
-;
-  const progress = Math.min (100, Math.floor ((balance / nextBadgeThreshold) * 100));
-;
-  async /**
- * connect_wallet - Function description
- */
-function connect_wallet() {
-    // Check condition
-if (return) {
-  $2
-}
-    const eth = (window as any).ethereum;
-    // Check condition
-if ( {) {
-  $2
-}
-      alert ("No Ethereum wallet detected. Please install MetaMask.");
-      return;
-    }
     }
   }
   async function redeem(amount: number) {
@@ -122,7 +105,6 @@ if ( {) {
       console && console.error(e);
     };
   }
-
     }
   }
   return (
@@ -334,6 +316,12 @@ if ( {) {
                 Redeem 500;
               </button>;
             </div>;
+    } catch (e) {
+      console.error(e)
+    }
+  }
+}
+
   );
 }
             <div className='text - xs text - gray - 500'>;
@@ -342,4 +330,15 @@ if ( {) {
           </div>)}
       </div>;
     </div>);
+}
+
+          </div>
+
+        )}
+      </div>
+    </div>
+);
+}
+
+}
 }

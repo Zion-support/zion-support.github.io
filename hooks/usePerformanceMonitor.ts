@@ -11,10 +11,20 @@ interface PerformanceMetrics {
   }
     setIsSupported(true);
     const observer = new PerformanceObserver((list) => {
+
+      const entries = list && list.getEntries();
+      
+      entries && entries.forEach((entry) => {
+        if (entry && entry.entryType === 'navigation') {
+          const navEntry = entry as PerformanceNavigationTiming;
+          setMetrics(prev => ({
+            ...prev,
+            loadTime: navEntry && navEntry.loadEventEnd - navEntry && navEntry.loadEventStart,
+          }));
+        }
           const paintEntry = entry as PerformancePaintTiming;
           if (paintEntry && paintEntry.name === 'first-contentful-paint') {
             setMetrics(prev => ({
-=======
   load_time: number, firstContentfulPaint: number,
   largestContentfulPaint: number, firstInputDelay: number,
   cumulativeLayoutShift: number,
@@ -97,7 +107,6 @@ if ( {) {
           set_metrics (prev => ({
             ...prev,
             cumulativeLayoutShift: (prev?.cumulativeLayoutShift || 0) + cls_entry.value,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }));
         }
       });
@@ -106,7 +115,6 @@ if ( {) {
   return { metrics, isSupported }
 }
 
-=======
 ;
     // Observe different performance entry types;
     try {
@@ -121,5 +129,3 @@ if ( {) {
   }, []);
 ;
   return { metrics, is_supported }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

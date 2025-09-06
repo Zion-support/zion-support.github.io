@@ -360,3 +360,6 @@ if (require.main === module) {}
 });
 };
 module.exports = GitAutomation;
+module.exports = GitAutomation;
+module.exports = GitAutomation;
+module.exports = GitAutomation;

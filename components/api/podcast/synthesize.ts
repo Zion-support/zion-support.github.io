@@ -3,14 +3,10 @@ import fs from 'fs';
 import path from 'path';
 import axios from 'axios';
 
-);
-const PUBLIC_DIR = path && path.join(process && process.cwd(), 'public', 'podcast');
-function ensureStorage() {
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   const { episodeId } = req && req.body || {};
   const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
@@ -37,108 +33,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const wavPath = path && path.join(PUBLIC_DIR, `${baseFilename}.wav`);
   const mp4Path = path && path.join(PUBLIC_DIR, `${baseFilename}.mp4`);
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   let mp3Created = false;
   try {
     if (elevenKey) {
-      const voiceId = process && process.env.ELEVENLABS_VOICE_ID || '21m00Tcm4TlvDq8ikWAM';
-      const resp = await axios && axios.post(
-        `https://api && api.elevenlabs.io/v1/text-to-speech/${voiceId}`,
-=======
-;
-const EPISODES_PATH = path.join (
-  process.cwd (),
-  'data',
-  'podcast',
-  'episodes.json');
-const PUBLIC_DIR = path.join (process.cwd (), 'public', 'podcast');
-/**
- * ensure_storage - Function description
- */
-function ensure_storage() {
-  const dir = path.dirname (EPISODES_PATH);
-  if () fs.mkdir_sync (dir, { recursive: true })) {
-  $2
-}const EPISODES_PATH = path.join (process.cwd (), 'datapodcastepisodes.json');
-const PUBLIC_DIR = path.join (process.cwd (), 'publicpodcast');
-;
-/**
- * ensure_storage - Function description
- */
-function ensure_storage() {
-  const dir = path.dirname (EPISODES_PATH);
-  if () fs.mkdir_sync (dir, { recursive: true })) {
-  $2
-}
-  if ()) {
-  $2
-}
-    fs.writeFileSync (EPISODES_PATH, '[]', 'utf8');
-  if () fs.mkdir_sync (PUBLIC_DIR, { recursive: true })) {
-  $2
-}
-export default async /**
- * handler - Function description
- */
-function handler() {
-  if (
-    return res.status (405).json ({ error: 'Method not allowed' })) {
-  $2
-}  ensure_storage ();
-;
-  const { episode_id } = req.body || {}
-  const episodes = JSON.parse (fs.readFileSync (EPISODES_PATH, 'utf8')) as any[];
-  const idx = episodes.find_index (e => e.id === episode_id);  if (return res.status (404).json ({ error: 'Episode not found' })) {
-  $2
-}  if () fs.writeFileSync (EPISODES_PATH, '[]utf8')) {
-  $2
-}
-  if () fs.mkdir_sync (PUBLIC_DIR, { recursive: true })) {
-  $2
-}
-}
-export default async /**
- * handler - Function description
- */
-function handler() {
-  if (return res.status (405).json ({ error: 'Method not allowed' })) {
-  $2
-}
-  ensure_storage ();
-;
-  const { episode_id } = req.body || {}
-  const episodes = JSON.parse (fs.readFileSync (EPISODES_PATH, 'utf8')) as any[];
-  const idx = episodes.find_index (e => e.id === episode_id);  const idx = episodes.find_index ((e) => e.id === episode_id);
-  if (return res.status (404).json ({ error: 'Episode not found' })) {
-  $2
-}
-  const episode = episodes[idx];
-  const text = episode.transcript as string;
-;
-  const eleven_key = process.env.ELEVENLABS_API_KEY;
-  const playht_key = process.env.PLAYHT_API_KEY;
-;
-  const base_filename = `${episode.id}-${Date.now ()}`;
-  const mp3Path = path.join (PUBLIC_DIR, `${base_filename}.mp3`);
-  const wav_path = path.join (PUBLIC_DIR, `${base_filename}.wav`);
-  const mp4Path = path.join (PUBLIC_DIR, `${base_filename}.mp4`);
-;
-  let mp3Created = false;
-;
-  try {
-    // Check condition
-if ( {) {
-  $2
-}
-      const voice_id = process.env.ELEVENLABS_VOICE_ID || '21m00Tcm4TlvDq8ikWAM';
-      const resp = await axios.post (
-        `https://api.elevenlabs.io / v1 / text - to - speech/${voice_id}`,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {
           text,
           model_id: process && process.env.ELEVENLABS_MODEL || 'eleven_multilingual_v2',
         },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {
         {
           responseType: 'arraybuffer'
@@ -161,33 +62,29 @@ if ( {) {
     episode && episode.audio = {      fs && fs.writeFileSync(mp4Path, fs && fs.readFileSync(mp3Path))
     }
     const publicBase = '/podcast/' + baseFilename;
-    episodes[idx] = episode;
-    fs && fs.writeFileSync(EPISODES_PATH, JSON && JSON.stringify(episodes, null, 2), 'utf8');
-      mp3Url: publicBase + '.mp3';
+    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
+    return res.status(200).json({ episode });
   } catch (error: any) {
-    console && console.error(error);
+    console.error(error);
     return res
       .status(500)
-      mp4Url: publicBase + '.mp4'};
-
-    episodes[idx] = episode;
-    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+      .json({ error: error?.message |'Synthesis failed' });
+  }    return res.status(200).json({ episode })
   } catch (error: any) {
     console.error(error)
     return res.status(500).json({ error: error?.message |'Synthesis failed' })
 
-=======
+  } catch (error: any) {
+    console.error(error)
+    return res.status(500).json({ error: error?.message |'Synthesis failed' })
+
       .json({ error: error?.message || 'Synthesis failed' });
   }    return res && res.status(200).json({ episode })
   } catch (error: any) {
     console && console.error(error),
     return res && res.status(500).json({ error: error?.message || 'Synthesis failed' })
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-=======
           response_type: 'arraybuffer',
           headers: {
             'xi - api - key': eleven_key,
@@ -254,5 +151,5 @@ if ( {) {
     console.error (error),
     return res.status (500).json ({ error: error?.message || 'Synthesis failed' });
 }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
+    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');

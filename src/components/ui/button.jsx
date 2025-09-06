@@ -1,9 +1,5 @@
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 import React from 'react';';
 export function Button({ children, variant = 'default', size = 'md', asChild = false, className="", onClick,  type = 'button', disabled = false }) {';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
     const variantClasses = {
         default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan',
@@ -24,10 +20,7 @@ export function Button({ children, variant = 'default', size = 'md', asChild = f
     return (<button type={type} className={classes} onClick={onClick} disabled={disabled}>
       {children}
     </button>);
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 }
-=======
   const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
   const variantClasses = {
     default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan',
@@ -43,18 +36,7 @@ export function Button({ children, variant = 'default', size = 'md', asChild = f
   };
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
   if (asChild) {
-    return <span className={classes}>{children}</span>;
   }
   return (
-    <button type={type} className={classes} onClick={onClick} disabled={disabled}>
-      {children}
-    </button>
-  );
-}
->>>>>>> origin/chore/resolve-conflicts-1756215853
-=======
 
 '
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

@@ -1,22 +1,19 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 interface CardProps {
-  title: string;
-  description: string;
+  children: React.ReactNode;
   className?: string;
+  onClick?: () => void;
 }
 
-const Card: React.FC<CardProps> = ({ title, description, className = '' }) => {
+const Card: React.FC<CardProps> = ({ children, className = '', onClick }) => {
   return (
-    <motion.div
-      className={`bg-slate-800 p-6 rounded-lg border border-slate-700 hover:border-slate-600 transition-colors ${className}`}
-      whileHover={{ y: -2 }}
-      transition={{ duration: 0.2 }}
+    <div 
+      className={`bg-white rounded-lg shadow-md p-6 ${className}`}
+      onClick={onClick}
     >
-      <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
-      <p className="text-gray-300">{description}</p>
-    </motion.div>
+      {children}
+    </div>
   );
 };
 

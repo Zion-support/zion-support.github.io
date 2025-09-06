@@ -1,26 +1,15 @@
+  Menu
+  X
+  Home
+  Brain
+  Cpu
+  Rocket
+  Phone
+  Mail
+  MapPin
+  Globe
+  ChevronDown;
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
   Globe,;
   ChevronDown,;
 } from 'lucide-react';
@@ -28,6 +17,20 @@ import Link from 'next/link';import { ;
   Menu, X, Home, Brain, Cpu, Rocket, ;
   Phone, Mail, MapPin, Globe, ChevronDown;
 } from 'lucide-react';
+import Link from 'next/link';
+
+
+import { 
+  Menu, X, Home, Brain, Cpu, Rocket, 
+  Phone, Mail, MapPin, Globe, ChevronDown
+ } from 'lucide-react';
+import { 
+  Menu, X, Home, Brain, Cpu, Rocket, 
+  Phone, Mail, MapPin, Globe, ChevronDown
+} from 'lucide-react';
+import Link from 'next/link';
+const Navigation: React.FC = () => {
+
 import Link from 'next/link';
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -53,14 +56,6 @@ import Link from 'next / link';import {
   Menu, X, Home, Brain, Cpu, Rocket,
   Phone, Mail, MapPin, Globe, ChevronDown;
 } from 'lucide-react';
-import Link from 'next / link';
-  const [is_open, setIsOpen] = useState (false);
-  const [is_scrolled, setIsScrolled] = useState (false);
-  const [active_dropdown, setActiveDropdown] = useState < string | null>(null);
-;
-  useEffect (() => {
-    const handle_scroll = () =>: any {
-      setIsScrolled (window.scroll_y > 50);
     }
 ;
     window.addEventListener ('scroll', handle_scroll);
@@ -117,8 +112,6 @@ import Link from 'next / link';
       href: '/contact'
       icon: Phone
     }
-  };
-
   return (
     <>;
       {/* Navigation Bar */}
@@ -156,6 +149,26 @@ import Link from 'next / link';
                             animate={{ opacity: 1, y: 0, scale: 1 }}
                             exit={{ opacity: 0, y: 10, scale: 0.95 }}
                             transition={{ duration: 0.2 }}
+                          >
+                            <div className='grid grid-cols-1 gap-3'>
+                              {item.dropdown.map(dropdownItem => {
+                                const Icon = dropdownItem.icon;
+                                  >
+                                    <div className='w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center group-hover/item:bg-gradient-to-r group-hover/item:from-cyan-500/30 group-hover/item:to-purple-500/30 transition-all duration-300'>
+                                      <Icon className='w-5 h-5 text-cyan-400' />
+                                    </div>
+                                    <div>
+                                      <div className='text-white font-medium group-hover/item:text-cyan-400 transition-colors duration-300'>
+                                        {dropdownItem.name}
+                                      </div>
+                                      <div className='text-gray-400 text-sm'>                                        {dropdownItem.description}
+                                      </div>
+                                    </div>
+                                  </Link>
+                                );                              })}                          >
+                            <div className="grid grid-cols-1 gap-3">
+                              {item.dropdown.map((dropdownItem) => {
+                                const Icon = dropdownItem.icon;
                       className='flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-white transition-colors duration-300';
                     >;
                       <span className='font-medium'>{item && item.name}</span>;
@@ -193,6 +206,22 @@ import Link from 'next / link';
                                 const Icon = dropdownItem && dropdownItem.icon;
                                 return (
                                   <Link
+
+
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  ) : (
+                    <Link
+                      href={item && item.href}
+                      className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group'>;
+                      <item && item.icon className='w-4 h-4 group-hover:scale-110 transition-transform duration-300' />;
+                      <span className='font-medium'>{item && item.name}</span>                    </Link>                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group";
+                    >;
+                      <item && item.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />;
+                      <span className="font-medium">{item && item.name}</span>;
                                     key={dropdownItem && dropdownItem.name}
                                     href={dropdownItem && dropdownItem.href}
                                     className="flex items-center space-x-3 p-3 rounded-xl hover:bg-cyan-500/10 hover:border border-cyan-500/30 transition-all duration-300 group/item">;
@@ -236,6 +265,34 @@ import Link from 'next / link';
                   <Menu className='w-6 h-6' />;
                 )}              </motion && motion.button>              <motion&& motion.button
                 whileTap={{ scale: 0 && 0.95 }}
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group'
+                    >
+                  )}
+                </div>
+              ))}
+            </div>
+              <motion.a
+                href='/contact'
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className='bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'              >              <motion.a
+                href="/contact"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40"
+              >
+                Get Started
+              </motion.a>
+            </div>
+            {/* Mobile Menu Button */}
                 onClick={() => setIsOpen(!isOpen)}
                 className="text-gray-300 hover:text-white transition-colors duration-300";
               >;
@@ -250,81 +307,133 @@ import Link from 'next / link';
       <AnimatePresence>;
         {isOpen && (;
           <motion&& motion.div
+      {/* Mobile Navigation */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, x: '100%' }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: '100%' }}
+
+
+          >
             {/* Backdrop */}
             <div
               className='absolute inset-0 bg-black/50 backdrop-blur-sm'
               onClick={() => setIsOpen(false)}
             {/* Backdrop */}
-            <div
+            <div 
               className="absolute inset-0 bg-black/50 backdrop-blur-sm"
               onClick={() => setIsOpen(false)}
+            />
+            
+
+
             {/* Mobile Menu */}
             <motion&& motion.div
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
+
+            >
+              <div className='p-6'>
                 {/* Close Button */}
                 <div className='flex justify-end mb-6'>;
                   <motion&& motion.button
                     whileTap={{ scale: 0 && 0.95 }}
                     onClick={() => setIsOpen(false)}
-                {/* Mobile Menu Items */}
-                <div className='space-y-4'>;
-                  {navigationItems && navigationItems.map(item => (            >;
-              <div className="p-6">;
                 {/* Close Button */}
                 <div className="flex justify-end mb-6">;
                   <motion&& motion.button
                     whileTap={{ scale: 0 && 0.95 }}
                     onClick={() => setIsOpen(false)}
                       {item.dropdown ? (
-                        <div className='space - y-2'>;
-                          <div className='text - gray - 400 font - medium text - sm uppercase tracking - wider'>;
+                        <div className='space-y-2'>
+                          <div className='text-gray-400 font-medium text-sm uppercase tracking-wider'>
                             {item.name}
+                          </div>
+                          <div className='pl-4 space-y-2'>
+                            {item.dropdown.map(dropdownItem => {
+                              const Icon = dropdownItem.icon;
                                   onClick={() => setIsOpen(false)}
-                                  className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300';
-                                >;
-                                  <Icon className='w-5 h-5 text-cyan-400' />;
-                                  <div>;
-                                    <div className='text-white font-medium'>;
-                                      {dropdownItem && dropdownItem.name}
-                                    </div>;
-                                    <div className='text-gray-400 text-sm'>;
-                                      {dropdownItem && dropdownItem.description}
-                                    </div>;
-                                  </div>;
-                                </Link>;
-                              );                            })}                    <div key={item && item.name}>;
-                      {item && item.dropdown ? (;
-                        <div className="space-y-2">;
-                          <div className="text-gray-400 font-medium text-sm uppercase tracking-wider">;
-                            {item && item.name}
-                          </div>;
-                          <div className="pl-4 space-y-2">;
-                            {item && item.dropdown.map((dropdownItem) => {;
-                              const Icon = dropdownItem && dropdownItem.icon;
+                                  className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300'
+                                >
+                                  <Icon className='w-5 h-5 text-cyan-400' />
+                                  <div>
+                                    <div className='text-white font-medium'>
+                                      {dropdownItem.name}
+                                    </div>
+                                    <div className='text-gray-400 text-sm'>
+                                      {dropdownItem.description}
+                                    </div>
+                                  </div>
+                                </Link>
+                              );                            })}                    <div key={item.name}>
                       {item.dropdown ? (
-                        <div className="space - y-2">;
-                          <div className="text - gray - 400 font - medium text - sm uppercase tracking - wider">;
+                        <div className="space-y-2">
+                          <div className="text-gray-400 font-medium text-sm uppercase tracking-wider">
                             {item.name}
+                          </div>
+                          <div className="pl-4 space-y-2">
+                            {item.dropdown.map((dropdownItem) => {
+                              const Icon = dropdownItem.icon;
                               return (
                                 <Link
-                                  key={dropdownItem && dropdownItem.name}
-                                  href={dropdownItem && dropdownItem.href}
+                                  key={dropdownItem.name}
+                                  href={dropdownItem.href}
                                   onClick={() => setIsOpen(false)}
-                                  className="flex items-center space-x-3 p-3 rounded-lg hover: bg-cyan-500/10 transition-all duration-300";
-                                >;
-                                  <Icon className="w-5 h-5 text-cyan-400" />;
-                                  <div>;
-                                    <div className="text-white font-medium">{dropdownItem && dropdownItem.name}</div>;
-                                    <div className="text-gray-400 text-sm">{dropdownItem && dropdownItem.description}</div>;
-                                  </div>;
-                                </Link>;
-                              );
+                                  className="flex items-center space-x-3 p-3 rounded-lg hover: bg-cyan-500/10 transition-all duration-300"
+                                >
+                                  <Icon className="w-5 h-5 text-cyan-400" />
+                                  <div>
+                                    <div className="text-white font-medium">{dropdownItem.name}</div>
+                                    <div className="text-gray-400 text-sm">{dropdownItem.description}</div>
+                                  </div>
+                                </Link>
+                              )
                             })}
                           </div>;
                         </div>;
                       ) : (;
+                          </div>
+                        </div>
+                      ) : (
+                        <Link
+                          href={item && item.href}
+                          onClick={() => setIsOpen(false)}
+
+
+                          className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300'
+                        >
+                          <item.icon className='w-5 h-5 text-cyan-400' />
+                          <span className='text-white font-medium'>
+                            {item.name}
+                          </span>                        </Link>
+
+                        </Link>
+
+                      )}
+                    </div>
+                  ))}
+                </div>
+                      )}
+                    </div>;
+                  ))}
+
+
+
+
+
+                {/* Contact Information */}
+                <div className='mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20'>
+                  <h3 className='text-cyan-400 font-semibold mb-3'>
+                    Contact Information
+                  </h3>
+                  <div className='space-y-2 text-sm'>
+                    <div className='flex items-center space-x-2 text-gray-300'>
+                      <Phone className='w-4 h-4 text-cyan-400' />
+
+                      <span>{contactInfo.mobile}</span>
                         <Link
                           href={item && item.href}
                           onClick={() => setIsOpen(false)}
@@ -379,9 +488,6 @@ import Link from 'next / link';
                     </div>;
                   </div>;
                 </div>;
-                {/* Mobile CTA */}
-                    href="/contact"
-                    whileTap={{ scale: 0 && 0.95 }}
                     onClick={() => setIsOpen(false)}
                     className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 shadow-lg shadow-cyan-500/25";
                   >;
@@ -490,3 +596,9 @@ export default Navigation);
 ;
 export default Navigation;
 ;
+  );
+export default Navigation;  )
+}
+export default Navigation;
+
+export default Navigation;

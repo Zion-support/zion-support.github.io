@@ -1,14 +1,3 @@
-import { useEffect, useState } from "react",
-import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",
-import { Input } from "@/components/ui/input",
-import { Card } from "@/components/ui/card",
-import { Search } from 'lucide-react'
-import { ListingScoreCard } from "@/components/ListingScoreCard",
-import { captureException } from "@/utils/sentry",
-import Skeleton from "@/components/ui/skeleton",
-import { useDebounce } from "@/hooks/useDebounce",
-import { useIsMounted } from "@/hooks/useIsMounted",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const listingSchema = z.object({
   id: z.string(),
   title: z.string(),
@@ -141,7 +130,6 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
            item.category.toLowerCase().includes(searchQuery.toLowerCase())
   }),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-6">
       <div>
@@ -178,20 +166,3 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
                 : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
             }`}
             onClick={() => handleTypeSelect("equipment")}
-          >
-            <h4 className="font-medium text-white">Equipment</h4>
-            <p className="text-sm text-zion-slate-light">Servers, workstations, specialized hardware</p>
-          </Card>
-        </div>
-      </div>
-      
-      {formData.serviceType && (
-        <div className="space-y-4">
-          <h3 className="text-xl font-semibold text-white">Select a specific {formData.serviceType}</h3>
-          
-          <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
-            <Input
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

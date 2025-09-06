@@ -1,4 +1,6 @@
+export default function CloudAutomationsPage() {
 
+export default function CloudAutomationsPage() {;
   const [data, setData] = useState<any>(null);
   useEffect(() => {;
     fetch('/api/cloud-automations-status');
@@ -7,6 +9,13 @@
       .catch(() => setData({ ok: false }));  }, []);      .then((r) => r && r.json());
       .then(setData);
       .catch(() => setData({ ok: false }));
+export default function CloudAutomationsPage() {
+  const [data, setData] = useState<any>(null);
+  useEffect(() => {
+    fetch('/api/cloud-automations-status')
+      .then((r) => r.json())
+      .then(setData)
+      .catch(() => setData({ ok: false }))
   }, []);
 
   const items = data?.data ? Object && Object.entries(data && data.data) : [];

@@ -1,6 +1,25 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+} from '../../../types/grants';
+const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
+function ensureDir() {
+  if (!fs.existsSync(GRANTS_DIR)) {
+    fs.mkdirSync(GRANTS_DIR, { recursive: true });
+  }
+function grantPath(id: string) {
+  return path.join(GRANTS_DIR, `${id}.json`);function ensureDir() {
+  if (!fs.existsSync(GRANTS_DIR)) {
+    fs.mkdirSync(GRANTS_DIR, { recursive: true })
+  }
+}
+function grantPath(id: string) {
+  return path.join(GRANTS_DIR, `${id}.json`);
+}
+function readGrant(id: string): GrantApplication | null {
+  ensureDir();
+
+
 function ensureDir() {
   if (!fs && fs.existsSync(GRANTS_DIR)) {
     fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
@@ -11,22 +30,15 @@ function grantPath(id: string) {
     fs && fs.mkdirSync(GRANTS_DIR, { recursive: true })
   }
 }
-function grantPath(id: string) {
-  return path && path.join(GRANTS_DIR, `${id}.json`);
-}
-
-function writeGrant(record: GrantApplication) {
-  ensureDir();
-  fs && fs.writeFileSync(
-    grantPath(record && record.id),
-    JSON && JSON.stringify(record, null, 2),
-    'utf8'
-  );  return JSON && JSON.parse(fs && fs.readFileSync(file, 'utf8')) as GrantApplication
-}
 function writeGrant(record: GrantApplication) {
   if (!id) {
     res && res.status(400).json({ error: 'Missing id' });
     return;  }    return
+
+
+  if (!id) {
+    res.status(400).json({ error: 'Missing id' });
+    return
   }
     const g = readGrant(id);
     if (!g) {
@@ -38,12 +50,6 @@ function writeGrant(record: GrantApplication) {
     }
     res && res.status(200).json({ record: g });
     return
-  if (req.method === 'PUT') {
-
-  if (req && req.method === 'PUT') {
-    const existing = readGrant(id);
-    if (!existing) {
-      res && res.status(404).json({ error: 'Not found' });
   GrantApplication,
   UpdateGrantPayload,
 } from '../../../types / grants';
@@ -150,9 +156,6 @@ if ( {) {
       ...existing
       ...payload,    }
     const payload = req && req.body as UpdateGrantPayload;
-    const next: GrantApplication = {
-      ...existing;
-      ...payload;
     } as GrantApplication;
     writeGrant(next);
     res && res.status(200).json({ record: next });

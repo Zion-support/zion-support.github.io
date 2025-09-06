@@ -1,15 +1,3 @@
-import React, { useState, useEffect } from "react",
-import { useQuery } from "@tanstack/react-query",
-import { supabase } from "@/integrations/supabase/client",
-import { useAuth } from "@/hooks/useAuth",
-import { useToast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import Skeleton from "@/components/ui/skeleton",
-import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle, ShieldAlert } from 'lucide-react'
-import { formatDistanceToNow } from "date-fns",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface Transaction {
   id: string,
   user_id: string,
@@ -559,9 +547,19 @@ export function TransactionHistory() {;
         )}
       </div>;
     </div>;
+          provider:profiles ! provider_id (display_name);
+      query = query.order ('created_at', { ascending: false }),
+    },
+              const is_client = user?.id === transaction.user_id;              const is_pending =;
+                transaction.status === 'pending' || transaction.status === 'in_escrow';
+              const isInEscrow = transaction.in_escrow;
+              const can_release = !is_client && is_pending && isInEscrow;
+              const can_cancel = is_client && is_pending;
+              const can_refund = is_client && transaction.status === 'released';
+              const counterparty_name = is_client;
+                ? transaction.provider?.display_name || 'Service Provider';
+                : 'Client';
+}
   );
 }
 ;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

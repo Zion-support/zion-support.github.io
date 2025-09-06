@@ -1,9 +1,18 @@
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 import React from "react";
 import EnhancedLayout from "../../components/layout/EnhancedLayout";
 import dynamic from "next/dynamic";
 const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false })
 
+import React from "react",;
+import EnhancedLayout from "../../components/layout/EnhancedLayout",;
+import dynamic from "next/dynamic",;
+const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false }),
+
+import React from "react",
+import EnhancedLayout from "../../components/layout/EnhancedLayout",
+import dynamic from "next/dynamic",
+const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false }),
 export default function WalletPage() {
   return (
     <EnhancedLayout title="Your ZION$ Wallet">
@@ -12,7 +21,16 @@ export default function WalletPage() {
       </div>
     </EnhancedLayout>
   )
-=======
+import React from "react";
+import EnhancedLayout from "../../components/layout/EnhancedLayout";
+import dynamic from "next/dynamic";
+const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false });
+export default function WalletPage(req, res) {
+  try {
+  return (;
+
+}
+
 import React from './react';,
 import EnhancedLayout from "../../components / layout / EnhancedLayout",
 import dynamic from './next / dynamic';,
@@ -26,7 +44,5 @@ function WalletPage() {
       <div className="max - w-2xl mx - auto">;
         <WalletPanel />;
       </div>;
-    </EnhancedLayout>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+

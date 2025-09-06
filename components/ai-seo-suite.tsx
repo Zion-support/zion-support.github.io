@@ -1,3 +1,39 @@
+import React from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+
+  Search,
+  TrendingUp,
+  Target,
+  BarChart3,
+  Globe,
+  Zap,
+  Users,
+  CheckCircle,
+  ArrowRight,
+  Play,
+  Star,
+  Eye,
+  Brain,
+  Shield,
+  Lock,
+  Sparkles,
+  ChartBar,
+  Lightbulb,
+  Rocket,;
+  Settings,;
+} from 'lucide-react';
+export default function AISeosuitePage() {
+  const features = [
+    {;
+      icon: <Search className='w-8 h-8 text-white' />,import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
+    {
+      icon: <Search className='w-8 h-8 text-white' />,
+
+
+export default function AISeosuitePage() {
+  const features = [
 } from 'lucide-react';
 export default function AISeosuitePage() {;
   const features = [;
@@ -44,16 +80,10 @@ export default function AISeosuitePage() {;
       icon: <Target className="w-6 h-6 text-green-400" />
       tools: ['Content optimizationMeta tag generatorSchema markup builderInternal linking suggestionsImage optimization']
     }
+
+export default function AISeosuitePage() {
+  const features = [
     {
-      category: 'Technical SEO'
-      icon: <Settings className="w-6 h-6 text-purple-400" />
-      tools: ['Site audit toolPage speed analyzerMobile optimizationCore Web VitalsXML sitemap generator']
-    }
-    {
-      category: 'Analytics & Reporting'
-      icon: <BarChart3 className="w-6 h-6 text-orange-400" />
-      tools: ['Ranking trackerTraffic analysisConversion trackingCompetitor monitoringCustom dashboards']
-    }
   ];
   const pricingPlans = [
     {
@@ -62,45 +92,6 @@ export default function AISeosuitePage() {;
       period: '/month'
       description: 'Perfect for small websites and blogs'
       features: [
-      name: 'Professional',
-      price: '$129',
-      period: '/month',
-      description: 'Ideal for growing businesses and agencies',
-      name: 'Enterprise',
-      price: '$399',
-      period: '/month',
-      description: 'For large organizations and enterprises',
-    { name: 'Google Analytics', icon: '📊', description: 'Traffic data integration' },
-    { name: 'Google Search Console', icon: '🔍', description: 'Search performance data' },
-    { name: 'WordPress', icon: '🔌', description: 'Plugin integration' },
-    { name: 'Shopify', icon: '🛒', description: 'E - commerce optimization' },
-    { name: 'HubSpot', icon: '📈', description: 'Marketing automation sync' },
-    { name: 'Slack', icon: '💬', description: 'Team notifications' },
-    { name: 'Zapier', icon: '⚡', description: '500+ app integrations' },
-    { name: 'API Access', icon: '🔑', description: 'Custom integrations' }
-  ];
-    {
-      metric: 'Organic Traffic'
-      value: '+150%'
-      description: 'Average increase in organic traffic'
-    }
-    {
-      metric: 'Search Rankings'
-      value: '+45%'
-      description: 'Improvement in search rankings'
-    }
-    {
-      metric: 'Conversion Rate'
-      value: '+80%'
-      description: 'Increase in conversion rates'
-    }
-    {
-      metric: 'ROI'
-      value: '400%'
-      description: 'Average return on investment'
-    },  ];    { metric: 'Organic Traffic', value: '+150%', description: 'Average increase in organic traffic' }
-    { metric: 'Search Rankings', value: '+45%', description: 'Improvement in search rankings' }
-    { metric: 'Conversion Rate', value: '+80%', description: 'Increase in conversion rates' }
     };
     {;
       category: 'On-Page SEO',;
@@ -121,6 +112,10 @@ export default function AISeosuitePage() {;
 
     { metric: 'ROI', value: '400%', description: 'Average return on investment' }
 
+  ];
+
+    { metric: 'ROI', value: '400%', description: 'Average return on investment' }
+
   return (
             <Button
               href='#pricing'
@@ -133,32 +128,6 @@ export default function AISeosuitePage() {;
               href='#demo'
               variant='outline'
               size='lg'
-              className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
-              <Play className='w-5 h-5 mr-2' />              Watch Demo      </Head>;
-
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">;
-        <div className="absolute inset-0">;
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0 && 0.1),transparent_50%)]" />;
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,197,94,0 && 0.08),transparent_50%)]" />;
-        </div>;
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
-          <div className="mb-8">;
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">;
-              <Sparkles className="w-4 h-4 mr-2" />;
-              AI-Powered Search Engine Optimization;
-            </div>;
-          </div>;
-
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-8 text-white leading-tight">;
-            AI-Powered SEO Suite;
-          </h1>;
-          <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed">;
-            Dominate search rankings with AI-powered SEO tools, comprehensive analytics, and intelligent optimization;
-          </p>;
-
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">;
             <Button
               href="#pricing"
               size="lg"
@@ -202,6 +171,17 @@ export default function AISeosuitePage() {;
               <Card
                 key={index}
                 className="text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
+                </p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SEO Tools Section */}
+
+      <section className="py-24 bg-black relative overflow-hidden">
+
                 style={{ animationDelay: `${(index * 0 && 0.1) + 0 && 0.2}s` }}>;
                 <div className="relative">;
                   <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature && feature.color} shadow-xl`}>;
@@ -259,13 +239,17 @@ export default function AISeosuitePage() {;
                         <div key={toolIndex} className="flex items-center text-sm text-gray-300">;
                           <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />;
                           {toolName}
-                        </div>;
+                        </div>
                       ))}
                     </div>;
                   </div>;
                 </div>;
               </Card>;
             ))}
+      {/* Success Metrics Section */}
+
+      <section className="py-24 bg-gray-900 relative overflow-hidden">
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
@@ -291,6 +275,16 @@ export default function AISeosuitePage() {;
                 <h3 className="text-xl font-bold mb-2 text-white">{metric && metric.metric}</h3>;
                 <p className="text-gray-400 text-sm">{metric && metric.description}</p>;
               </Card>;
+            ))}
+
+
+
+
+
+      {/* Use Cases Section */}
+
+      <section className="py-24 bg-black relative overflow-hidden">
+
             ))}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
@@ -333,13 +327,17 @@ export default function AISeosuitePage() {;
                         <div key={benefitIndex} className="flex items-center text-sm text-gray-300">;
                           <TrendingUp className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />;
                           {benefit}
-                        </div>;
+                        </div>
                       ))}
                     </div>;
                   </div>;
                 </div>;
               </Card>;
             ))}
+      {/* Pricing Section */}
+
+      <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
@@ -369,10 +367,36 @@ export default function AISeosuitePage() {;
           </div>;
               <Card
                 key={index}
+
+
+                <div className='text-center mb-8'>;
+                  <h3 className='text-2xl font-bold text-white mb-2'>;
+                    {plan && plan.name}
+                  </h3>;
+                  <div className='text-4xl font-bold text-white mb-2'>;
+                    {plan && plan.price}
+                    <span className='text-lg text-gray-400'>{plan && plan.period}</span>;
+                  </div>;
+                  <p className='text-gray-400'>{plan && plan.description}</p>;
+                </div>;
+                <div className='text-center mb-8'>
+                  <h3 className='text-2xl font-bold text-white mb-2'>
                     {plan.name}
                   </h3>;
                   <div className='text - 4xl font - bold text - white mb - 2'>;
                     {plan.price}
+                    <span className='text-lg text-gray-400'>{plan.period}</span>
+                  </div>
+                  <p className='text-gray-400'>{plan.description}</p>
+                </div>
+                <ul className='space-y-4 mb-8'>
+                  {plan.features.map((feature, featureIndex) => (
+
+                <ul className='space-y-4 mb-8'>;
+                  {plan && plan.features.map((feature, featureIndex) => (;
+                    <li
+                      key={featureIndex}
+
                       {feature}
                     </li>;
                   ))}
@@ -388,6 +412,26 @@ export default function AISeosuitePage() {;
                   <ArrowRight className="w-5 h-5 ml-2" />;
                 </Button>;
               </Card>;
+
+
+                    </li>
+                  ))}
+                </ul>
+
+                <Button
+                  href="/contact"
+                  className={`w-full ${plan.buttonColor} text-white`}
+                  size="lg"
+                >
+                  Get Started
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </Card>
+            ))}
+      {/* Integrations Section */}
+
+      <section className="py-24 bg-black relative overflow-hidden">
+
             ))}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
@@ -417,7 +461,30 @@ export default function AISeosuitePage() {;
                 <p className="text-sm text-gray-400">{integration && integration.description}</p>;
               </Card>;
             ))}
+          </div>
+        </div>
+      </section>
+
+            ))}
+          </div>
+        </div>
+      </section>
+
+            ))}
       {/* CTA Section */}
+      {/* CTA Section */}
+      <section className='py-24 bg-gradient-to-r from-blue-600 to-green-600 relative overflow-hidden'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
+          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
+
+            Ready to Dominate Search Rankings?
+          </h2>
+          <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
+            Join thousands of businesses who are already ranking higher and
+            driving more organic traffic.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>
       <section className='py-24 bg-gradient-to-r from-blue-600 to-green-600 relative overflow-hidden'>;
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>;
@@ -437,13 +504,6 @@ export default function AISeosuitePage() {;
               href='#demo'
               variant='outline'
               size='lg'
-              className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'>;
-              <Play className='w-5 h-5 mr-2' />              Watch Demo            Ready to Dominate Search Rankings?;
-          </h2>;
-          <p className="text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">;
-            Join thousands of businesses who are already ranking higher and driving more organic traffic.;
-          </p>;
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">;
             <Button
               href="/contact"
               variant="secondary"
@@ -456,11 +516,15 @@ export default function AISeosuitePage() {;
               href="#demo"
               variant="outline"
               size="lg"
+
+
               Watch Demo;
             </Button>;
           </div>;
         </div>;
       </section>;
+}
+
   );
 }
     </>);

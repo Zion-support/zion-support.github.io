@@ -1,28 +1,4 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-
 type Props = {;
   room: Room | null;
   onLeave: () => void;
@@ -51,7 +27,6 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
       await room && room.localParticipant.setMicrophoneEnabled(!micEnabled);
     setMicEnabled(enabled);  };    const enabled = await room && room.localParticipant.setMicrophoneEnabled(!micEnabled);
     setMicEnabled(enabled);
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   };
 
   const toggleCam = async () => {;
@@ -61,12 +36,50 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
   };
 
   const toggleScreenShare = async () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (!room) return;
     try {;
       const enabled =;
         await room && room.localParticipant.setScreenShareEnabled(!sharing);
       setSharing(enabled);
+
+    } catch (e) {;
+      console && console.warn('Screen share failed', e);    }
+    try {
+      const enabled = await room.localParticipant.setScreenShareEnabled(!sharing);
+      setSharing(enabled)
+    } catch (e) {
+      console.warn('Screen share failed', e)
+  return (
+    <div className='flex items-center gap-3'>
+      <button
+        onClick={toggleMic}
+        className={`px-4 py-2 rounded ${accentClass} text-white`}
+      >
+      </button>
+      <button
+        onClick={toggleCam}
+        className={`px-4 py-2 rounded ${accentClass} text-white`}
+      >
+        {camEnabled ? 'Stop Video' : 'Start Video'}
+      </button>
+      <button
+        onClick={toggleScreenShare}
+        className='px-4 py-2 rounded bg-gray-700 text-white'
+      >
+        {sharing ? 'Stop Share' : 'Share Screen'}
+      </button>
+      <button
+        onClick={onLeave}
+        className='px-4 py-2 rounded bg-red-600 text-white'
+      >
+        Leave
+      </button>
+    </div>
+);
+}
+
+    }
+
   };
 
   return (      const enabled = await room && room.localParticipant.setScreenShareEnabled(!sharing);
@@ -74,27 +87,16 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
     } catch (e) {;
       console && console.warn('Screen share failed', e);
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
-=======
-    <div className="flex items-center gap-3">
-      <button onClick={toggleMic} className={`px-4 py-2 rounded ${accentClass} text-white`}>
-        {micEnabled ? 'Mute' : 'Unmute'}
-      </button>
-      <button onClick={toggleCam} className={`px-4 py-2 rounded ${accentClass} text-white`}>
-        {camEnabled ? 'Stop Video' : 'Start Video'}
-      </button>
-      <button onClick={toggleScreenShare} className="px-4 py-2 rounded bg-gray-700 text-white">
-        {sharing ? 'Stop Share' : 'Share Screen'}
-      </button>
-      <button onClick={onLeave} className="px-4 py-2 rounded bg-red-600 text-white">Leave</button>
-    </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+        className='px-4 py-2 rounded bg-red-600 text-white'>;
+        Leave;
+      </button>;
+    </div>;
+
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { Room } from 'livekit - client';
 type Props = {
   room: Room | null;
@@ -179,4 +181,3 @@ if (return) {
       </button>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

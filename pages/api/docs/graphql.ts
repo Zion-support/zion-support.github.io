@@ -1,3 +1,5 @@
+
+
 import type { NextApiRequest, NextApiResponse } from './next';
 import v1 from "../../../data / api - docs / v1";
 /**
@@ -18,3 +20,8 @@ function toSDL() {
   });
   return typedefs.join ("\n");
 }
+
+  res.status(200).send(toSDL());
+}
+
+

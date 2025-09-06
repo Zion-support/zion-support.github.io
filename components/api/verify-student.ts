@@ -2,17 +2,23 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs - extra';
 import path from 'path';
 import {
+} from '../../utils/api/partnerAuth';
+
+const TALENTS_FILE = path.join(
+  process.cwd()
+  'data'
+  'talents'
+  'talents.json'
 );
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-) {
   if (!auth) {
-    return res && res.status(401).json({ error: 'Unauthorized' });
+    return res.status(401).json({ error: 'Unauthorized' });
   }
-  if (!(await enforceRateLimit(auth && auth.apiKey))) {
-    await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 429);
-    return res && res.status(429).json({ error: 'Rate limit exceeded' });
+  if (!(await enforceRateLimit(auth.apiKey))) {
+    await recordRequest(req, res, auth.partner, auth.apiKey, started, 429);
+    return res.status(429).json({ error: 'Rate limit exceeded' });
   }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -30,16 +36,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 405);
     return res && res.status(405).json({ error: "Method Not Allowed" })
   }
-    : [];
-  const match = talents && talents.find(
-    (t: any) =>
   );
   const verified = Boolean(match && match.certificationStatus === 'completed');
   await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 200);
   return res && res.status(200).json({ verified });  return res && res.status(200).json({ verified })
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+
+
+  const started = Date.now();
+  const auth = await authenticateRequest(req);
+  if (!auth) {
+    return res.status(401).json({ error: "Unauthorized" });
+  }
   authenticate_request,
   enforceRateLimit,
   record_request,
@@ -127,5 +139,11 @@ await record_request (req, res, auth.partner, auth.api_key, started, 400);
   const verified = Boolean (match && match.certification_status === 'completed');
   await record_request (req, res, auth.partner, auth.api_key, started, 200);
   return res.status (200).json ({ verified });  return res.status (200).json ({ verified });
+
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+}
+  const { email, programTrack } = req.body || {};
+  if (!email) {
+    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
+}

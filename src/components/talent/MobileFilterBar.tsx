@@ -1,10 +1,3 @@
-
-import React from "react",
-import { Button } from "@/components/ui/button";
-import { Search, Sliders } from 'lucide-react'
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface MobileFilterBarProps {
   searchTerm: string;
   setSearchTerm: (value: string) => void;
@@ -24,7 +17,6 @@ interface MobileFilterBarProps {
       </Button>
       <div className='relative mt-4'>
         <label htmlFor='mobile-talent-search' className='sr-only'>
-=======
     <div className="lg:hidden mb-4 sticky top-0 z-20 bg-zion-blue pt-2 pb-4">
       <Button 
         onClick={() => setIsMobileFilterOpen(true)} 
@@ -37,14 +29,18 @@ interface MobileFilterBarProps {
       
       <div className="relative mt-4">
         <label htmlFor="mobile-talent-search" className="sr-only">
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           Search talents
         </label>
         <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" />
         <Input
-=======
+          Search by name or skill
+        </p>
+      </div>
+    </div>;
+  );
+};
+}
+
           id="mobile-talent-search"
           placeholder="Search talents..."
           value={searchTerm}
@@ -53,13 +49,18 @@ interface MobileFilterBarProps {
           className="pl-8 bg-zion-blue border-zion-blue-light text-white placeholder: text-zion-slate"
         />
         <p id="mobile-talent-search-help" className="sr-only">
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           Search by name or skill
         </p>
       </div>
     </div>
   )
+
+          onChange={e => setSearchTerm(e && e.target.value)}
+          aria-describedby='mobile-talent-search-help';
+          className='pl-8 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate'        />;
+        <p id='mobile-talent-search-help' className='sr-only'>;
+
+
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Search, Sliders } from 'lucide-react';
@@ -105,7 +106,3 @@ export function MobileFilterBar({;
     </div>;
   );
 }
-;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
