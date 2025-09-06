@@ -1,14 +1,5 @@
 import Link from 'next/link';
 
-<<<<<<< HEAD
-
-          <Link 
-            href="/services" 
-
-
-          <Link
-            href="/services"
-=======
 export default function HomePage() {
   return (
     <div className="min-h-screen">
@@ -21,23 +12,12 @@ export default function HomePage() {
           to help businesses scale, automate, and succeed in the digital age.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Link 
             href="/services" 
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus-visible:focus"
           >
             Explore Services
           </Link>
-<<<<<<< HEAD
-
-          <a 
-            href="https://ziontechgroup.com" 
-
-
-          <a
-            href="https://ziontechgroup.com"
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <a 
             href="https://ziontechgroup.com" 
             className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:border-gray-400 transition-colors focus-visible:focus"
@@ -48,18 +28,7 @@ export default function HomePage() {
       </section>
 
       <section className="py-12">
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-
-          <Card 
-            title="Micro SaaS" 
-            href="/services/micro-saas" 
-            description="End-to-end product engineering with billing, auth, analytics and growth." 
-            icon="🚀" 
-=======
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Card
             title="Micro SaaS"
             href="/services/micro-saas"
@@ -72,33 +41,11 @@ export default function HomePage() {
             description="LLM apps, RAG, agents, fine-tuning, evals, data pipelines and MLOps." 
             icon="🤖" 
           />
-<<<<<<< HEAD
-          <Card
-            title="IT Services"
-            href="/services/it-services"
-            description="Cloud migration, DevOps, SRE, security hardening and cost optimization."
-            icon="⚙️"
-          <Card 
-            title="Micro SaaS" 
-            href="/services/micro-saas" 
-            description="End-to-end product engineering with billing, auth, analytics and growth." 
-            icon="🚀" 
-          />
-          <Card 
-            title="AI Services" 
-            href="/services/ai-services" 
-            description="LLM apps, RAG, agents, fine-tuning, evals, data pipelines and MLOps." 
-            icon="🤖" 
-          />
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Card 
             title="IT Services" 
             href="/services/it-services" 
             description="Cloud migration, DevOps, SRE, security hardening and cost optimization." 
             icon="⚙️" 
-<<<<<<< HEAD
-=======
           />
           <Card
             title="Business Automation"
@@ -117,7 +64,6 @@ export default function HomePage() {
             href="/services/data-analytics"
             description="Advanced analytics and BI solutions that transform data into actionable insights."
             icon="📊"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           />
         </div>
       </section>
@@ -130,10 +76,21 @@ export default function HomePage() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<<<<<<< HEAD
-          <FeatureCard
-            title="Fast Delivery"
-            description="Rapid prototyping and deployment with modern tools and practices."
+          <FeatureCard 
+            title="Fast Delivery" 
+            description="Rapid prototyping and deployment with modern tools and practices." 
+          />
+          <FeatureCard 
+            title="Scalable Architecture" 
+            description="Built for growth with cloud-native, microservices architecture." 
+          />
+          <FeatureCard 
+            title="24/7 Support" 
+            description="Round-the-clock monitoring and support for your critical systems." 
+          />
+          <FeatureCard 
+            title="Cost Effective" 
+            description="Optimized solutions that reduce operational costs and improve efficiency." 
           />
         </div>
       </section>
@@ -165,71 +122,12 @@ export default function HomePage() {
           <div className="mt-6 text-sm text-gray-600">
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
           </div>
-
-          <FeatureCard 
-            title="Fast Delivery" 
-            description="Rapid prototyping and deployment with modern tools and practices." 
-          />
-          <FeatureCard 
-            title="Scalable Architecture" 
-            description="Built for growth with cloud-native, microservices architecture." 
-          />
-          <FeatureCard
-            title="Cost Effective"
-            description="Optimized solutions that reduce operational costs and improve efficiency."
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          <FeatureCard 
-            title="Fast Delivery" 
-            description="Rapid prototyping and deployment with modern tools and practices." 
-          />
-          <FeatureCard 
-            title="Scalable Architecture" 
-            description="Built for growth with cloud-native, microservices architecture." 
-          />
-          <FeatureCard 
-            title="24/7 Support" 
-            description="Round-the-clock monitoring and support for your critical systems." 
-          />
-          <FeatureCard 
-            title="Cost Effective" 
-            description="Optimized solutions that reduce operational costs and improve efficiency." 
-<<<<<<< HEAD
-          />
-          <FeatureCard 
-            title="Cost Effective" 
-            description="Optimized solutions that reduce operational costs and improve efficiency." 
-
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          />
         </div>
       </section>
     </div>
   );
 }
 
-<<<<<<< HEAD
-
-
-function Card({ title, description, href, icon }: { 
-  title: string; 
-  description: string; 
-  href: string; 
-  icon: string; 
-}) {
-  return (
-    <Link 
-      href={href} 
-
-
-function Card({ title, description, href, icon }: { title: string; description: string; href: string; icon: string }) {
-  return (
-    <Link
-      href={href}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 function Card({ title, description, href, icon }: { 
   title: string; 
   description: string; 
@@ -248,13 +146,6 @@ function Card({ title, description, href, icon }: {
   );
 }
 
-<<<<<<< HEAD
-
-
-function FeatureCard({ title, description }: { title: string; description: string }) {
-function FeatureCard({ title, description }: { title: string; description: string }) {
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 function FeatureCard({ title, description }: { 
   title: string; 
   description: string; 
@@ -265,8 +156,4 @@ function FeatureCard({ title, description }: {
       <p className="text-gray-600">{description}</p>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

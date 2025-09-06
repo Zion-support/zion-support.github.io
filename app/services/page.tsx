@@ -1,26 +1,9 @@
 import Link from "next/link";
 
-<<<<<<< HEAD
-export const metadata = {;
-  title: "Services | Zion Tech Group",;
-  description:;
-    "Comprehensive AI,micro SaaS,and IT services to help your business scale and succeed.",;
-
-
-    "Comprehensive AI,micro SaaS,and IT services to help your business scale and succeed.",;
-
-
-export const metadata = {
-  title: "Services | Zion Tech Group",
-  description: "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
-    "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
-    "Comprehensive AI,micro SaaS,and IT services to help your business scale and succeed.",;
-=======
 export const metadata = {
   title: "Services | Zion Tech Group",
   description:
     "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 };
 
 export default function ServicesOverviewPage() {
@@ -41,15 +24,6 @@ export default function ServicesOverviewPage() {
           title="Micro SaaS"
           description="End-to-end product development with billing, auth, and analytics"
           bullets={[
-<<<<<<< HEAD
-import Link from './next / link';
-export const metadata = {
-  title: "Services | Zion Tech Group",
-  description:;
-    "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
-}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             "Foundational architecture",
             "Billing + subscriptions",
             "Growth analytics",
@@ -61,18 +35,13 @@ export const metadata = {
           href="/services/ai-services"
           title="AI Services"
           description="LLM applications, RAG systems, and MLOps pipelines"
-<<<<<<< HEAD
           bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines", "Custom AI solutions"]}
-=======
-          bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           icon="🤖"
         />
         <ServiceCard
           href="/services/it-services"
           title="IT Services"
           description="Cloud migration, DevOps, and security solutions"
-<<<<<<< HEAD
           bullets={["Cloud migration", "DevOps + SRE", "Security", "Infrastructure management"]}
           icon="⚙️"
         />
@@ -89,9 +58,6 @@ export const metadata = {
           description="Penetration testing, security audits, and incident response"
           bullets={["Security assessment", "Penetration testing", "Compliance", "Incident response"]}
           icon="🔒"
-=======
-          bullets={["Cloud migration", "DevOps + SRE", "Security"]}
-          icon="⚙️"
         />
         <ServiceCard
           href="/services/automation-tools"
@@ -106,37 +72,10 @@ export const metadata = {
           description="Intelligent assistants that enhance productivity and automate complex tasks"
           bullets={["Code development", "Customer support", "Sales & marketing"]}
           icon="🧠"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         />
         <ServiceCard
           href="/services/data-analytics"
           title="Data Analytics"
-<<<<<<< HEAD
-          description="Business intelligence, data visualization, and machine learning"
-          bullets={["Data engineering", "BI dashboards", "Predictive analytics", "Data visualization"]}
-          icon="📊"
-        />
-        <ServiceCard
-          href="/services/ai-powered-tools"
-          title="AI-Powered Tools"
-          description="Cutting-edge AI micro SAAS tools for content, automation, and analytics"
-          bullets={["Content generation", "Business automation", "AI analytics"]}
-          icon="🤖"
-        />
-        <ServiceCard
-          href="/services/business-automation"
-          title="Business Automation"
-          description="Intelligent workflow automation and process optimization tools"
-          bullets={["Workflow automation", "Data processing", "Communication automation"]}
-          icon="⚡"
-        />
-        <ServiceCard
-          href="/services/industry-solutions"
-          title="Industry Solutions"
-          description="Specialized micro SAAS solutions for specific industries"
-          bullets={["Healthcare", "Financial services", "Real estate"]}
-          icon="🏢"
-=======
           description="Advanced analytics and BI solutions that transform data into insights"
           bullets={["Real-time dashboards", "Predictive analytics", "AI-powered insights"]}
           icon="📊"
@@ -287,7 +226,48 @@ export const metadata = {
           description="Intelligent human resources with AI recruitment and employee analytics"
           bullets={["AI recruitment", "Employee analytics", "Performance tracking", "Retention analysis"]}
           icon="👥"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        />
+        <ServiceCard
+          href="/services/ai-code-reviewer"
+          title="AI Code Reviewer"
+          description="Automated code review and quality analysis powered by AI"
+          bullets={["Intelligent analysis", "Bug detection", "Quality metrics", "Custom rules"]}
+          icon="🔍"
+        />
+        <ServiceCard
+          href="/services/ai-meeting-transcriber"
+          title="AI Meeting Transcriber"
+          description="Transform meetings into actionable insights with AI transcription"
+          bullets={["Real-time transcription", "Smart summarization", "Speaker ID", "Action items"]}
+          icon="🎤"
+        />
+        <ServiceCard
+          href="/services/ai-expense-tracker"
+          title="AI Expense Tracker"
+          description="Smart expense tracking and financial management powered by AI"
+          bullets={["Receipt scanning", "Auto-categorization", "Analytics", "Mobile app"]}
+          icon="💰"
+        />
+        <ServiceCard
+          href="/services/cloud-security-audit"
+          title="Cloud Security Audit"
+          description="Comprehensive cloud security assessment and compliance auditing"
+          bullets={["Infrastructure assessment", "Vulnerability scanning", "Compliance", "Detailed reporting"]}
+          icon="🛡️"
+        />
+        <ServiceCard
+          href="/services/devops-automation"
+          title="DevOps Automation"
+          description="Streamline development workflow with comprehensive automation solutions"
+          bullets={["CI/CD pipelines", "Infrastructure as Code", "Monitoring", "Security integration"]}
+          icon="🔄"
+        />
+        <ServiceCard
+          href="/services/ai-customer-insights"
+          title="AI Customer Insights"
+          description="Transform customer data into actionable insights with AI analytics"
+          bullets={["Behavioral analysis", "Predictive analytics", "Segmentation", "Sentiment analysis"]}
+          icon="🧠"
         />
       </div>
       <CTA />
@@ -311,65 +291,6 @@ function ServiceCard({
   return (
     <Link
       href={href}
-<<<<<<< HEAD
-      className="group border border - gray - 200 rounded - xl p - 8 block hover:border - blue - 300 hover:shadow - lg transition - all duration - 200 bg - white";
-    >;
-      {" "}
-      <div className="text - 4xl mb - 4">{icon}</div>{" "}
-      <h3 className="text - 2xl font - bold text - gray - 900 mb - 3 group - hover:text - blue - 600 transition - colors">;
-=======
-      className="group border border-gray-200 rounded-xl p-8 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
-    >
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        {title}
-      </h3>
-      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>
-      <ul className="text-gray-600 space-y-2">
-        {bullets.map((bullet) => (
-          <li key={bullet} className="flex items-center">
-            <span className="text-blue-500 mr-2">•</span> {bullet}
-          </li>
-        ))}
-      </ul>
-    </Link>
-  );
-}
-
-function CTA() {
-  return (
-<<<<<<< HEAD
-    <div className="bg - gradient - to - r from - blue - 50 to - indigo - 50 border border - blue - 200 rounded - xl p - 8 text - center">;
-      {" "}
-      <h3 className="text - 2xl font - bold text - gray - 900 mb - 4">;
-        Ready to Get Started?;
-      </h3>{" "}
-      <p className="text - gray - 600 mb - 6 max - w-2xl mx - auto">;
-        {" "}
-        Talk to our experts about your project. We'll help you choose the right;
-        service and create a custom solution for your business needs.{" "}
-      </p>{" "}
-      <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-        {" "}
-        <a;
-          href="tel:+13024640950";
-          className="bg - blue - 600 text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - blue - 700 transition - colors";
-        >;
-          {" "}
-          Call +1 302 464 0950{" "}
-        </a>{" "}
-        <a;
-          href="mailto:kleber@ziontechgroup.com";
-          className="border - 2 border - blue - 600 text - blue - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - blue - 600 hover:text - white transition - colors";
-        >;
-          {" "}
-          Email Us{" "}
-        </a>{" "}
-      </div>{" "}
-
-    </div>);
-
       className="group border border-gray-200 rounded-xl p-8 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
     >
       <div className="text-4xl mb-4">{icon}</div>
@@ -390,8 +311,6 @@ function CTA() {
 
 function CTA() {
   return (
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
       <h3 className="text-2xl font-bold text-gray-900 mb-4">
         Ready to Get Started?
@@ -414,13 +333,10 @@ function CTA() {
           Email Us
         </a>
       </div>
-<<<<<<< HEAD
-=======
       <div className="mt-4 text-sm text-gray-500">
         <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
         <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
       </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>
   );
 }
