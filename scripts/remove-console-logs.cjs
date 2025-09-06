@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { glob } = require('glob');
 
 /**
  * Script to remove console.log statements from production builds
@@ -51,14 +52,21 @@ function processFile(filePath) {
     
     if (removedCount > 0) {
       fs.writeFileSync(filePath, newContent, 'utf8');
-      console.log(`✓ ${filePath}: Removed ${removedCount} console statements`);
+      
       return removedCount}
     
     return 0} catch (error) {
     console.error(`✗ Error processing ${filePath}:`, error.message);
     return 0}
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
   let results = [];
   const list = fs.readdirSync(dir);
@@ -81,6 +89,10 @@ function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
 }
 
 function main() {
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-0033
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
   const srcDir = path.join(process.cwd(), 'src');
   const pagesDir = path.join(process.cwd(), 'pages');
   
@@ -91,27 +103,14 @@ function main() {
   let totalRemoved = 0;
   let filesProcessed = 0;
 
-  // Process src directory if it exists
-  if (fs.existsSync(srcDir)) {
-    const files = getAllFiles(srcDir);
+  for (const pattern of patterns) {
+    const files = await glob(pattern);
+    
     for (const file of files) {
       if (shouldProcessFile(file)) {
         const removed = processFile(file);
         totalRemoved += removed;
-        filesProcessed++;
-      }
-    }
-  }
-
-  // Process pages directory if it exists
-  if (fs.existsSync(pagesDir)) {
-    const files = getAllFiles(pagesDir);
-    for (const file of files) {
-      if (shouldProcessFile(file)) {
-        const removed = processFile(file);
-        totalRemoved += removed;
-        filesProcessed++;
-      }
+        filesProcessed++}
     }
   }
 
@@ -124,10 +123,21 @@ function main() {
   } else {
     console.log(`\n✨ No console statements found to remove.`);
   }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-0033
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 }
 
 if (require.main === module) {
-  main();
-}
+  main().catch(console.error)}
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 module.exports = { removeConsoleStatements, processFile };
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+
+module.exports = { removeConsoleStatements, processFile };
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

@@ -1,14 +1,37 @@
 import React from 'react';
 
 interface LoadingSpinnerProps {
-  // Add props here as needed
+  size?: 'sm' | 'md' | 'lg';
+  text?: string;
+  className?: string;
 }
 
-export default function LoadingSpinner({ }: LoadingSpinnerProps) {
+<<<<<<< HEAD
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+  size = 'md', 
+  text = 'Loading...', 
+  className = '' 
+=======
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  size = 'md',
+  text = 'Loading...',
+  className = '',
+>>>>>>> main
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12',
+  };
+
   return (
-    <div>
-      <h1>LoadingSpinner</h1>
-      <p>This component is currently under development.</p>
+    <div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>
+      <div className={`${sizeClasses[size]} border-4 border-gray-200 border-t-blue-500 rounded-full animate-spin`}></div>
+      {text && (
+        <p className="text-gray-600 text-sm font-medium">{text}</p>
+      )}
     </div>
   );
-}
+};
+
+export default LoadingSpinner;

@@ -1,1 +1,2 @@
-import React,{ memo } from 'react'; export const PerformanceOptimizedLoader = memo < LoadingSpinnerProps> ( ({}; import { motion } from 'framer-motion'; export default function Page() {; '}}}))''
+>>>>>>> origin/main
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

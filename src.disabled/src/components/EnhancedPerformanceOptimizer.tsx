@@ -1,1 +1,2 @@
-import React,{ useEffect,useState,useCallback,useMemo } from 'react'; import { motion, AnimatePresence, ; Zap, ; Gauge, ; HardDrive, ; Network, ; Cpu, ; HardDriveIcon, ; Battery, ; Wifi, ; WifiOff, ; RefreshCw, ; TrendingUp, ; TrendingDown, ; AlertTriangle, ; CheckCircle, ; Info } from 'lucide-react'; interface PerformanceMetrics {}; "fcp": 'number;'}''
+>>>>>>> origin/main
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

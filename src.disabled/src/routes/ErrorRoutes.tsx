@@ -1,1 +1,2 @@
-import React from 'react'; import { Route,Routes } from 'react-router-dom'; import { Suspense,lazy } from 'react'; import LoadingSpinner from '../components/LoadingSpinner'; const NotFound = lazy(() => import('../pages/NotFound')); const "ErrorRoutes": React.FC = () => {; return(<Suspense fallback={<LoadingSpinner />}> <Routes> <Route path="/404" element={<NotFound />} /> <Route path="*" element={<NotFound />} /> ></div> ></div> )}; export default ErrorRoutes;
+>>>>>>> origin/main
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

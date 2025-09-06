@@ -1,1 +1,2 @@
-import React from 'react'; const "BlogPage": React.FC = () => {}}; export default BlogPage;""
+>>>>>>> origin/main
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

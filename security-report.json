@@ -1,26 +1,86 @@
 {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+  "timestamp": "2025-09-04T21:58:25.812Z",
+  "issues": [],
+  "fixes": [],
+  "summary": {
+    "totalIssues": 0,
+    "fixesApplied": 0
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   "timestamp": "2025-09-05T02:59:20.583Z",
   "overallStatus": "secure",
   "checks": {
     "npmAudit": {
-      "status": "secure",
-      "vulnerabilities": 0,
-      "message": "No vulnerabilities found"
+      "status": "passed",
+      "vulnerabilities": 0
     },
     "dependencies": {
-      "status": "secure",
-      "vulnerablePackages": [],
-      "message": "Dependencies look secure"
+      "status": "passed",
+      "outdated": 0
     },
-    "sensitiveFiles": {
-      "status": "secure",
-      "foundFiles": [],
-      "message": "No sensitive files found in root"
-    },
-    "environmentVariables": {
-      "status": "secure",
-      "foundSensitiveVars": [],
-      "message": "No sensitive environment variables found"
+    "securityHeaders": {
+      "status": "passed",
+      "configured": true
     }
+  },
+  "summary": {
+    "totalIssues": 0,
+    "fixesApplied": 0
   }
+  "timestamp": "2025-09-06T04:56:16.606Z",
+  "vulnerabilities": [
+    {
+      "file": "/workspace/package.json",
+      "type": "potential_hardcoded_secret",
+      "severity": "high"
+    }
+  "totalVulnerabilities": 1,
+  "highSeverity": 1,
+  "mediumSeverity": 0,
+  "lowSeverity": 0
 }

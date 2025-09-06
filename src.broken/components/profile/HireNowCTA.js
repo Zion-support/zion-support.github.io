@@ -1,9 +1,9 @@
+<<<<<<< HEAD
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 import React, { useState } from 'react';
-import { Button } from '../ui/Button';
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/Card';
-import { Input } from '../ui/Input';
-import { Textarea } from '../ui/Textarea';
-import { DollarSign, MessageSquare } from 'lucide-react';
 export function HireNowCTA({ talentName, hourlyRate, onHire }) {
     const [isFormOpen, setIsFormOpen] = useState(false);
     const [formData, setFormData] = useState({
@@ -11,8 +11,11 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
         budget: '',
         startDate: '',
         message: ''
-    });
-    const handleSubmit = (e) => {
+<<<<<<< HEAD
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
         e.preventDefault();
         if (onHire) {
             onHire(formData);
@@ -22,10 +25,11 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
             projectDescription: '',
             budget: '',
             startDate: '',
-            message: ''
-        });
-        setIsFormOpen(false);
-    };
+<<<<<<< HEAD
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
     const handleChange = (e) => {
         setFormData(prev => ({
             ...prev,
@@ -93,4 +97,10 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
           </form>)}
       </CardContent>
     </Card>);
+<<<<<<< HEAD
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 }
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+}
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68

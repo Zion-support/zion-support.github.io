@@ -1,14 +1,39 @@
 import React from 'react';
+import Image from 'next/image';
 
 interface OptimizedImageProps {
-  // Add props here as needed
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  className?: string;
+  priority?: boolean;
+  quality?: number;
+  sizes?: string;
 }
 
-export default function OptimizedImage({ }: OptimizedImageProps) {
+const OptimizedImage: React.FC<OptimizedImageProps> = ({
+  src,
+  alt,
+  width,
+  height,
+  className = '',
+  priority = false,
+  quality = 75,
+  sizes = '100vw'
+}) => {
   return (
-    <div>
-      <h1>OptimizedImage</h1>
-      <p>This component is currently under development.</p>
-    </div>
+    <Image
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      className={className}
+      priority={priority}
+      quality={quality}
+      sizes={sizes}
+    />
   );
-}
+};
+
+export default OptimizedImage;

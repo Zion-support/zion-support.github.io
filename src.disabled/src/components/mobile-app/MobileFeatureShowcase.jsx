@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface MobileFeatureShowcaseProps {
   // Add props here as needed
 }
-
 export default function MobileFeatureShowcase({ }: MobileFeatureShowcaseProps) {
   return (
     <div>

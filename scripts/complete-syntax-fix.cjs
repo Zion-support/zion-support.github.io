@@ -1,8 +1,15 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 #!/usr/bin/env node
 
 const fs = require('fs');
 
-console.log('🔧 Complete Syntax Fix');
+console.log('🔧 Final Syntax Cleanup');
 console.log('======================');
 
 // Function to fix all remaining syntax errors
@@ -99,4 +106,4 @@ for (const file of filesToFix) {
 }
 
 console.log(`\n✅ Fixed ${totalFixed} files`);
-console.log('🎉 Complete syntax fix completed!');
+console.log('🎉 Final syntax cleanup completed!');

@@ -1,18 +1,99 @@
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-        if (!['node_modules', '.git', '.next', 'dist', 'build')]
-          const content = fs.readFileSync(filePath, 'utf8')
-          if (content.includes('') || content.includes('') || content.includes('>>>>>>>')
-          // Skip files that can'
-      // Skip files/directories that can'
-  resolved = resolved.replace(/\n?/g, '')
-  resolved = resolved.replace(/\n?/g, '')
-  resolved = resolved.replace(/[a-f0-9]+\n?/g, '')
-  console.log(' Searching for files with merge conflicts...')
-  const filesWithConflicts = findFilesWithConflicts('.')
-// console.log(' No merge conflicts found!')
-  console.log('\n Resolving merge conflicts...')
-      const originalContent = fs.readFileSync(filePath, 'utf8')
-        fs.writeFileSync(filePath, resolvedContent, 'utf8')
-    console.log('\n✨ Merge conflicts resolved! You can now commit the changes.')
+const fs = require('fs');
+const path = require('path');
+
+function fixMergeConflicts(filePath) {
+  try {
+<<<<<<< HEAD
+
+=======
+    const content = fs.readFileSync(filePath, 'utf8');
+    
+>>>>>>> cursor/automate-test-improve-and-merge-code-85f4
+    // Check if file has merge conflict markers
+    if (
+<<<<<<< HEAD
+=======
+      content.includes('
+      content.includes('') ||
+      content.includes('>>>>>>>')
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+    ) {
+      console.log(`Fixing merge conflicts: in: ${filePath}`);
+
+<<<<<<< HEAD
+=======
+      // Remove merge conflict markers and keep the content after 
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+      const lines = content.split('\n');
+      const fixedLines = [];
+      let inConflict = false;
+      let keepContent = false;
+
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+
+<<<<<<< HEAD
+=======
+        if (line.includes('
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+          inConflict = true;
+          keepContent = false;
+          continue;
+        }
+
+<<<<<<< HEAD
+=======
+        if (line.includes('')) {
+          keepContent = true;
+          continue;
+        }
+
+        if (line.includes('>>>>>>>')) {
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+          inConflict = false;
+          keepContent = false;
+          continue;
+        }
+
+        if (!inConflict || keepContent) {
+          fixedLines.push(line);
+        }
+      }
+
+      fs.writeFileSync(filePath, fixedLines.join('\n'), 'utf8');
+      return true;
+    }
+
+    return false;
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+function processDirectory(dirPath) {
+  const files = fs.readdirSync(dirPath);
+  let fixedCount = 0;
+
+  for (const file of files) {
+    const filePath = path.join(dirPath, file);
+    const stat = fs.statSync(filePath);
+
+    if (stat.isDirectory()) {
+      fixedCount += processDirectory(filePath);
+    } else if (
+      file.endsWith('.tsx') ||
+      file.endsWith('.ts') ||
+      file.endsWith('.jsx') ||
+      file.endsWith('.js')
+    ) {
+      if (fixMergeConflicts(filePath)) fixedCount++;
+    }
+  }
+
+  return fixedCount;
+}
+
+console.log('Starting comprehensive merge conflict fixes...');
+const fixedCount = processDirectory('.');
+console.log(`Fixed ${fixedCount} files`);

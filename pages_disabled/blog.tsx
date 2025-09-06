@@ -1,17 +1,14 @@
-import React from 'react'
+import * as React from 'react'
 import Head from 'next/head'
-import { motion } from 'framer-motion'
 import Layout from '../components/Layout'
 import Link from 'next/link'
 import Layout from '../components/Layout'
-import { motion } from 'framer-motion'
 
 const blogPosts = [
   { id: 1, title: 'The Future of AI in Business: 2025 Trends', excerpt: 'Explore AI trends transforming businesses.', author: 'Dr. Sarah Chen', date: '2024-01-15', readTime: '5 min read' },
   { id: 2, title: 'Micro SaaS: Building Scalable Solutions', excerpt: 'Build and scale micro SaaS apps.', author: 'Michael Rodriguez', date: '2024-01-12', readTime: '7 min read' }
 ]
 
-import { ArrowRight, Calendar, Filter, Search, User } from 'lucide-react'
 
 export default function BlogPage() {
   return (
@@ -133,24 +130,6 @@ export default function BlogPage() {
                       Categories
                     </h3>
                     <div className="space-y-2">
-<<<<<<<< HEAD:pages-disabled/blog.tsx.disabled
-<<<<<<< HEAD:pages/blog.tsx
-                      {categories.map((category) => (}
-                        <Link}
-                          key={category.name}
-                          href={`/blog/category/${category.name.toLowerCase().replace(/\s+/g, '-')}}
-=======
-                      {categories.map((category) => (
-                        <Link
-                          key={category.name}
-                          href={`/blog/category/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
->>>>>>> ff4fe8fcd43 (Add services-extended catalog with real offerings; fix critical utilities; quarantine broken pages for stability; build passes):pages-disabled/blog.tsx.disabled
-========
-                      {categories.map((category) => (
-                        <Link
-                          key={category.name}
-                          href={`/blog/category/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
->>>>>>>> cursor/expand-services-advertise-and-build-project-59da:pages_disabled/blog.tsx
                           className="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors"
                         >
                           <span className="text-gray-700">{category.name}</span>
@@ -186,12 +165,4 @@ export default function BlogPage() {
         </section>
       </div>
     </Layout>
-<<<<<<<< HEAD:pages-disabled/blog.tsx.disabled
-<<<<<<< HEAD:pages/blog.tsx
-=======
-  )
->>>>>>> ff4fe8fcd43 (Add services-extended catalog with real offerings; fix critical utilities; quarantine broken pages for stability; build passes):pages-disabled/blog.tsx.disabled
-========
-  )
->>>>>>>> cursor/expand-services-advertise-and-build-project-59da:pages_disabled/blog.tsx
 }

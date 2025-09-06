@@ -1,14 +1,12 @@
-import React from 'react';
-
-interface EnhancedLoadingProps {
-  // Add props here as needed
+import React from "react";
+type EnhancedLoadingProps = {;
+  lines?: number;
 }
 
-export default function EnhancedLoading({ }: EnhancedLoadingProps) {
+export default function EnhancedLoading(): any ({ lines = 3 }: EnhancedLoadingProps) {;
   return (
-    <div>
-      <h1>EnhancedLoading</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
+    <div className="space-y-2">;
+      {Array && Array.from({ length: lines }).map((_, idx) => (;
+        <div key={idx} className="skeleton h-4 rounded" />;
+      ))}
 }

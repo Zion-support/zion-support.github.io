@@ -1,14 +1,36 @@
-import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
+import { LoginForm } from '@/components/auth/login';
+import * as authService from '@/services/authService';
+import * as authHook from '@/hooks/useAuth';
+import { vi } from 'vitest';
 
-interface Login.testProps {
-  // Add props here as needed
-}
+vi.spyOn(authHook, 'useAuth').mockReturnValue({
+  isLoading: false,
+  login: vi.fn()
+} as any);
 
-export default function Login.test({ }: Login.testProps) {
-  return (
-    <div>
-      <h1>Login.test</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+describe('LoginForm', () => {
+  it('shows server error on 401 response', async () => {
+    vi.spyOn(authService, 'loginUser').mockResolvedValue({
+      res: { status: 401 } as Response,
+      data: { error: 'Invalid credentials' }
+    });
+
+    render(
+      <MemoryRouter>
+        <LoginForm />
+      </MemoryRouter>
+    );
+
+    fireEvent.input(screen.getByLabelText(/email address/i), {
+      target: { value: 'a@b.com' }
+    });
+    fireEvent.input(screen.getByLabelText(/password/i), {
+      target: { value: 'secret' }
+    });
+    fireEvent.submit(screen.getByRole('button', { name: /login/i }));
+
+    await screen.findByText('Invalid credentials');
+  });
+});

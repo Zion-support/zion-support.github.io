@@ -1,2 +1,2 @@
-import React from';react' "interface": CommunityVerifiedBadgeProps {'; endorsementCount: number; threshold?: number; className?: strin,g} const "CommunityVerifiedBadge": React.FC<CommunityVerifiedBadgeProps> = ({ endorsementCoun,t,"threshold": '= 3',className = ' }) => { if (endorsementCount < threshold) { return null'';';'}
-</CommunityVerifiedBadgeProps>'
+>>>>>>> origin/main
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

@@ -1,1 +1,2 @@
-import React from 'react'; const AIFinancialTrading = () => { return ( <div> <h1>AIFinancialTrading</h1> <p>Component placeholder</p> </div> )}; export default AIFinancialTrading;''
+>>>>>>> origin/main
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

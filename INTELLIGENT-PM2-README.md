@@ -7,35 +7,41 @@ This intelligent PM2 automation system provides advanced process management with
 ## Features
 
 ### 🤖 AI-Powered Process Management
+
 - Intelligent process scaling based on load and performance metrics
 - Predictive failure prevention using machine learning patterns
 - Automated process optimization and resource management
 
 ### 📊 Advanced Monitoring
+
 - Real-time system and process monitoring
 - Predictive analytics and trend analysis
 - Intelligent alerting with severity-based notifications
 - Comprehensive reporting and insights
 
 ### ⚖️ Smart Auto-Scaling
+
 - Dynamic scaling based on CPU, memory, and response time
 - Intelligent cooldown periods to prevent thrashing
 - Trend-based threshold adjustment
 - Resource-aware scaling decisions
 
 ### 🔧 Error Recovery System
+
 - Automated error detection and analysis
 - Intelligent recovery action selection
 - Pattern-based strategy learning
 - Self-healing capabilities
 
 ### 💾 Smart Resource Management
+
 - Intelligent memory and CPU optimization
 - Automated log and temporary file cleanup
 - Disk space management
 - Resource efficiency monitoring
 
 ### 🌐 Intelligent Dashboard
+
 - Real-time web-based monitoring dashboard
 - Interactive process management
 - Live metrics and alerts
@@ -44,21 +50,25 @@ This intelligent PM2 automation system provides advanced process management with
 ## Quick Start
 
 1. **Start the intelligent PM2 system:**
+
    ```bash
    ./start-intelligent-pm2-v3.sh
    ```
 
 2. **Monitor processes:**
+
    ```bash
    pm2 monit
    ```
 
 3. **View logs:**
+
    ```bash
    pm2 logs
    ```
 
 4. **Check status:**
+
    ```bash
    pm2 status
    ```
@@ -79,31 +89,37 @@ The system uses `ecosystem.intelligent-v3.cjs` as the main configuration file. K
 ## Intelligent Automation Scripts
 
 ### AI Process Manager (`scripts/intelligent/ai-process-manager.cjs`)
+
 - Manages process lifecycle with AI insights
 - Predicts failures and prevents issues
 - Optimizes process performance automatically
 
 ### Intelligent Monitor (`scripts/intelligent/intelligent-monitor.cjs`)
+
 - Monitors system and process metrics
 - Generates alerts and notifications
 - Provides performance insights
 
 ### Smart Auto-Scaler (`scripts/intelligent/smart-auto-scaler.cjs`)
+
 - Automatically scales processes based on load
 - Implements intelligent cooldown periods
 - Adjusts thresholds based on performance trends
 
 ### Error Recovery System (`scripts/intelligent/error-recovery-system.cjs`)
+
 - Detects and analyzes errors automatically
 - Executes recovery actions intelligently
 - Learns from successful recovery patterns
 
 ### Smart Resource Manager (`scripts/intelligent/smart-resource-manager.cjs`)
+
 - Optimizes memory and CPU usage
 - Manages disk space and cleanup
 - Monitors resource efficiency
 
 ### Dashboard System (`scripts/intelligent/dashboard-system.cjs`)
+
 - Provides web-based monitoring interface
 - Real-time metrics and alerts
 - Interactive process management
@@ -149,6 +165,7 @@ Run the comprehensive test suite:
 ```
 
 This will validate:
+
 - File existence and permissions
 - Syntax validation
 - Configuration correctness
@@ -164,6 +181,7 @@ Deploy the intelligent PM2 system:
 ```
 
 This will:
+
 - Create a feature branch
 - Test all configurations
 - Generate documentation
@@ -213,13 +231,13 @@ const scalingRules = {
   cpu: {
     scaleUp: 70,
     scaleDown: 30,
-    cooldown: 300000
+    cooldown: 300000,
   },
   memory: {
     scaleUp: 80,
     scaleDown: 40,
-    cooldown: 300000
-  }
+    cooldown: 300000,
+  },
 };
 ```
 
@@ -229,7 +247,7 @@ Add custom recovery actions in the error recovery system:
 
 ```javascript
 const recoveryStrategies = {
-  custom_error: ['restart', 'check_logs', 'escalate']
+  custom_error: ['restart', 'check_logs', 'escalate'],
 };
 ```
 
@@ -241,7 +259,7 @@ Modify dashboard settings:
 const dashboardConfig = {
   port: 3001,
   refreshInterval: 5000,
-  metricsRetention: 1000
+  metricsRetention: 1000,
 };
 ```
 
@@ -257,18 +275,21 @@ The dashboard system provides REST API endpoints:
 ## Performance Optimization
 
 ### Memory Optimization
+
 - Automatic garbage collection
 - Process restart on high memory usage
 - Memory leak detection
 - Heap usage monitoring
 
 ### CPU Optimization
+
 - Load-based scaling
 - Process optimization
 - CPU usage monitoring
 - Performance trend analysis
 
 ### Disk Optimization
+
 - Log file rotation
 - Temporary file cleanup
 - Old file compression
@@ -296,18 +317,21 @@ The system provides intelligent alerting for:
 ## Maintenance
 
 ### Daily Tasks
+
 - Monitor system health
 - Check alert reports
 - Review performance metrics
 - Verify process status
 
 ### Weekly Tasks
+
 - Analyze trend reports
 - Review scaling patterns
 - Check resource utilization
 - Update configurations
 
 ### Monthly Tasks
+
 - Review error patterns
 - Optimize thresholds
 - Update documentation
@@ -347,4 +371,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 **Zion Tech Group** - Intelligent PM2 Automation System v3.0
 
-*Empowering development with AI-driven process management and automation.*
+_Empowering development with AI-driven process management and automation._

@@ -1,14 +1,7 @@
-import React from 'react';
-
-interface AccessibilityPanelProps {
-  // Add props here as needed
-}
-
-export default function AccessibilityPanel({ }: AccessibilityPanelProps) {
-  return (
-    <div>
-      <h1>AccessibilityPanel</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+<<<<<<< HEAD
+import _React,{ useState,useEffect } from 'react'; import { motion,AnimatePresence } from 'framer-motion'; export const AccessibilityPanel = ({ isOpen,onToggle }) => {; const [settings,setSettings] = useState({; "highContrast": 'false',; "fontSize": '100',; "colorBlindness": 'none',; "reducedMotion": 'false',; "screenReader": 'false',; "keyboardNavigation": 'false',; "focusIndicator": 'true',; "colorBlindness": 'none'}); const [accessibilityScore,setAccessibilityScore] = useState(85); const [activeTab,setActiveTab] = useState('general'); useEffect(() => {}})
+=======
+import React,{ useState,useEffect } from \'react\'; import { motion,AnimatePresence } from \'framer-motion\'; export const AccessibilityPanel = ({ isOpen,onToggle }) => {; const [settings,setSettings] = useState({; \"highContrast\": \'false\',; \"fontSize\": \'100\',; \"colorBlindness\": \'none\',; \"reducedMotion\": \'false\',; \"screenReader\": \'false\',; \"keyboardNavigation\": \'false\',; \"focusIndicator\": \'true\',; \"colorBlindness\": \'none\'}); const [accessibilityScore,setAccessibilityScore] = useState(85); const [activeTab,setActiveTab] = useState(\'general\'); useEffect(() => {}})
+const React,{ useState,useEffect } from "react"; import { motion,AnimatePresence } from "framer-motion"; export const AccessibilityPanel = ({ isOpen,onToggle }) => {; const [settings,setSettings] = useState({; highContrast: "false",; fontSize: "100",; colorBlindness: "none",; reducedMotion: "false",; screenReader: "false",; keyboardNavigation: "false",; focusIndicator: "true",; colorBlindness: "none"}); const [accessibilityScore,setAccessibilityScore] = useState(85); const [activeTab,setActiveTab] = useState("general"); useEffect(() => {}})'"'"
+import _React,{ useState,useEffect } from 'react'; import { motion,AnimatePresence } from 'framer-motion'; export const AccessibilityPanel = ({ isOpen,onToggle }) => {; const [settings,setSettings] = useState({; "highContrast": 'false',; "fontSize": '100',; "colorBlindness": 'none',; "reducedMotion": 'false',; "screenReader": 'false',; "keyboardNavigation": 'false',; "focusIndicator": 'true',; "colorBlindness": 'none'}); const [accessibilityScore,setAccessibilityScore] = useState(85); const [activeTab,setActiveTab] = useState('general'); useEffect(() => {}})
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

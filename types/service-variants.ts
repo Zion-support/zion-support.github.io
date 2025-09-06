@@ -1,14 +1,27 @@
-import React from 'react';
+export type ServiceVariant = 
+  | 'default'
+  | 'holographic'
+  | 'quantum'
+  | 'cyberpunk'
+  | 'neural'
+  | 'quantum-holographic'
+  | 'quantum-advanced'
+  | 'quantum-cyberpunk'
+  | 'neural-holographic'
+  | 'cyberpunk-neural'
+  | 'advanced'
+  | 'premium'
+  | 'enterprise'
+  | 'custom';
 
-interface ServicevariantsProps {
-  // Add props here as needed
-}
-
-export default function Servicevariants({ }: ServicevariantsProps) {
-  return (
-    <div>
-      <h1>Servicevariants</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
+export interface ServiceVariantConfig {
+  name: string;
+  description: string;
+  features: string[];
+  pricing: {
+    monthly: number;
+    yearly: number;
+  };
+  popular?: boolean;
+  recommended?: boolean;
 }

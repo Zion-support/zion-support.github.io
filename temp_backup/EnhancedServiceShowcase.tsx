@@ -1,9 +1,6 @@
-import React from 'react';
-
 interface EnhancedServiceShowcaseProps {
   // Add props here as needed
 }
-
 export default function EnhancedServiceShowcase({ }: EnhancedServiceShowcaseProps) {
   return (
     <div>
@@ -11,4 +8,3 @@ export default function EnhancedServiceShowcase({ }: EnhancedServiceShowcaseProp
       <p>This component is currently under development.</p>
     </div>
   );
-}

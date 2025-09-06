@@ -1,14 +1,2 @@
-import React from 'react';
-
-interface AIMetaverseProps {
-  // Add props here as needed
-}
-
-export default function AIMetaverse({ }: AIMetaverseProps) {
-  return (
-    <div>
-      <h1>AIMetaverse</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+>>>>>>> origin/main
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

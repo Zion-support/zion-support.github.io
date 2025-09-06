@@ -1,42 +1,94 @@
-// Service finder utility
-// Provides a simple lookup across known service collections at runtime.
+<<<<<<< HEAD
 
-type BasicService = {
-  title: string;
-  description?: string;
-  category?: string;
-  pricing?: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+export interface Service {
+  id: string;
+  name: string;
+  description: string;
+  category: string;
+  price?: number;
+  features: string[];
+}
+export const findService = (query: string, services: Service[]): Service[] => {
+  const searchTerm = query.toLowerCase();
+  return services.filter(service => 
+    service.name.toLowerCase().includes(searchTerm) ||
+    service.description.toLowerCase().includes(searchTerm) ||
+    service.category.toLowerCase().includes(searchTerm)
+  );
 };
-
-// Lazy imports to avoid increasing bundle size unnecessarily
-async function loadCatalogs(): Promise<BasicService[][]> {
-  try {
-    const catalogs: BasicService[][] = [];
-    // Only import lightweight catalogs that definitely exist in the repo
-    const micro = await import('../pages/micro-saas');
-    const ai = await import('../pages/ai-services');
-    const it = await import('../pages/it-services');
-    // Defensive extraction for default/named exports
-    const microList: BasicService[] = (micro.microSaaSProducts || micro.default?.microSaaSProducts || []);
-    const aiList: BasicService[] = (ai.services || ai.default?.services || ai.aiServices || []);
-    const itList: BasicService[] = (it.itServices || it.default?.itServices || []);
-    catalogs.push(microList, aiList, itList);
-    return catalogs;
-  } catch {
-    return [];
-  }
-}
-
-export async function findService(serviceName: string): Promise<BasicService | null> {
-  if (!serviceName) return null;
-  const name = serviceName.toLowerCase();
-  const catalogs = await loadCatalogs();
-  for (const list of catalogs) {
-    for (const svc of list) {
-      if (svc?.title && svc.title.toLowerCase() === name) {
-        return svc;
-      }
-    }
-  }
+export const getServicesByCategory = (category: string, services: Service[]): Service[] => {
+  return services.filter(service => 
+    service.category.toLowerCase() === category.toLowerCase()
+  );
+};
+export default {
+  findService,
+  getServicesByCategory
+};
+// Service finder utility
+export const findService = ("_serviceName": string) => {
+  // Implementation placeholder
   return null;
-}
+};
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+export const findService = (_serviceName: string) => { return null};
+export const findService = (_serviceName: string) => { return null};
+export const findService = (_serviceName: string) => { return null};
+export const findService = (_serviceName: string) => { return null};
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+=======
+=======
+=======
+=======
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

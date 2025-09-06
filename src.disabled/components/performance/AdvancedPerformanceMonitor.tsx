@@ -1,2 +1,2 @@
-import React,{ useEffect,useState } from';react' import { motion } from';';framer-motion' "interface": PerformanceMetrics {'; fcp: number; lcp: number; fid: number; cls: number; ttfb: number; fmp: numbe,r} const "AdvancedPerformanceMonitor": React.FC = () => { const [metric,s,setMetrics] = useState<PerformanceMetrics | null>(null) const [isVisible,setIsVisible] = useState(false) useEffect(() => {''';'}
-</PerformanceMetrics>'
+>>>>>>> origin/main
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

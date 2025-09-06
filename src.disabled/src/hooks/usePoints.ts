@@ -1,14 +1,72 @@
-import React from 'react';
-
-interface UsePointsProps {
-  // Add props here as needed
+import { useEffect, useState, useCallback } from 'react'; // Added useCallback;
+import { supabase } from '@/integrations/supabase/client';
+import { useAuth } from '@/hooks/useAuth';
+ from '@/types/points';
+export function usePoints() {;
+  const { user } = useAuth();
+  const [ledger, setLedger] = useState<PointsLedgerEntry[]>([]);
+  const [balance, setBalance] = useState(0);
+  const [loading, setLoading] = useState(true);
+  const fetchLedger = useCallback(async () => { // Wrapped in useCallback;
+    if(!user?.id) {;
+      setLedger([]);
+      setBalance(0);
+      setLoading(false);
+      return}
+    setLoading(true);
+    const { data, error } = await supabase;
+      .from('points_ledger');
+      .select('*');
+      .eq('user_id', user && user.id);
+      .order('created_at', { "ascending": false });
+    if(!error && data) {;
+      const entries = data as PointsLedgerEntry[];
+      setLedger(entries);
+      const total = entries && entries.reduce((sum, e) => sum + e && e.delta, 0);
+      setBalance(total)} else if(error) {;
+      console && console.error("Error fetching "ledger": ", error);
+      setLedger([]); // Clear ledger on error;
+      setBalance(0);  // Clear balance on error}
+    setLoading(false)}, [user?.id]); // Dependency for fetchLedger;
+  useEffect(() => {}}}, []), []);
+    fetchLedger(); // Initial fetch;
+    const interval = setInterval(fetchLedger, 30000); // Subsequent fetches every 30s;
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useEffect,useState,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; import { useAuth } from '@/hooks/useAuth'; from '@/types/points'; export function usePoints() {; const { user } = useAuth(); const [ledger,setLedger] = useState<PointsLedgerEntry[]>([]); const [balance,setBalance] = useState(0); const [loading,setLoading] = useState(true); const fetchLedger = useCallback(async () => { if(!user?.id) {; setLedger([]); setBalance(0); setLoading(false); return;,} setLoading(true); const { data,error } = await supabase; .from('points_ledger'); .select('*'); .eq('user_id',user.id); .order('created_at',{ ascending: 'false' }); if(!error && data) {; const entries = data as PointsLedgerEntry[]; setLedger(entries); const total = entries.reduce((sum,e) => sum + e.delta,0); setBalance(total);,} else if(error) {; console.error("Error fetching ledger:",error); setLedger([]); setBalance(0)} setLoading(false);,},[user?.id]); useEffect(() => {}};,},[]);,[]); fetchLedger(); const interval = setInterval(fetchLedger,30000); return () => clearInterval(interval)},[fetchLedger]); return { ledger,balance,loading,fetchLedger };,}
+    return () => clearInterval(interval); // Cleanup interval on unmount}, [fetchLedger]); // Added fetchLedger to dependency array;
+  return { ledger, balance, loading, fetchLedger }}
+import { useEffect,useState,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; import { useAuth } from '@/hooks/useAuth'; from '@/types/points'; export function usePoints() {; const { user } = useAuth(); const [ledger,setLedger] = useState<PointsLedgerEntry[]>([]); const [balance,setBalance] = useState(0); const [loading,setLoading] = useState(true); const fetchLedger = useCallback(async () => { if(!user?.id) {; setLedger([]); setBalance(0); setLoading(false); return,} setLoading(true); const { data,error } = await supabase; .from('points_ledger'); .select('*'); .eq('user_id',user.id); .order('created_at',{ ascending: false }); if(!error && data) {; const entries = data as PointsLedgerEntry[]; setLedger(entries); const total = entries.reduce((sum,e) => sum + e.delta,0); setBalance(total),} else if(error) {; console.error("Error fetching ledger:",error); setLedger([]); setBalance(0)} setLoading(false),},[user?.id]); useEffect(() => {}},},[]),[]); fetchLedger(); const interval = setInterval(fetchLedger,30000); return () => clearInterval(interval)},[fetchLedger]); return { ledger,balance,loading,fetchLedger },}
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+    return () => clearInterval(interval); // Cleanup interval on unmount,
+}, [fetchLedger]); // Added fetchLedger to dependency array;
+  return { ledger, balance, loading, fetchLedger },
 }
+import { useEffect,useState,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; import { useAuth } from '@/hooks/useAuth'; from '@/types/points'; export function usePoints() {; const { user } = useAuth(); const [ledger,setLedger] = useState<PointsLedgerEntry[]>([]); const [balance,setBalance] = useState(0); const [loading,setLoading] = useState(true); const fetchLedger = useCallback(async () => { if(!user?.id) {; setLedger([]); setBalance(0); setLoading(false); return;,} setLoading(true); const { data,error } = await supabase; .from('points_ledger'); .select('*'); .eq('user_id',user && user.id); .order('created_at',{ ascending: 'false' }); if(!error && data) {; const entries = data as PointsLedgerEntry[]; setLedger(entries); const total = entries && entries.reduce((sum,e) => sum + e && e.delta,0); setBalance(total);,} else if(error) {; console && console.error("Error fetching ledger:",error); setLedger([]); setBalance(0)} setLoading(false);,},[user?.id]); useEffect(() => {}};,},[]);,[]); fetchLedger(); const interval = setInterval(fetchLedger,30000); return () => clearInterval(interval)},[fetchLedger]); return { ledger,balance,loading,fetchLedger };,}
+    return () => clearInterval(interval); // Cleanup interval on unmount}, [fetchLedger]); // Added fetchLedger to dependency array;
+  return { ledger, balance, loading, fetchLedger }}
+<<<<<<< HEAD
 
-export default function UsePoints({ }: UsePointsProps) {
-  return (
-    <div>
-      <h1>UsePoints</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+import { useEffect,useState,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; import { useAuth } from '@/hooks/useAuth'; from '@/types/points'; export function usePoints() {; const { user } = useAuth(); const [ledger,setLedger] = useState<PointsLedgerEntry[]>([]); const [balance,setBalance] = useState(0); const [loading,setLoading] = useState(true); const fetchLedger = useCallback(async () => { if(!user?.id) {; setLedger([]); setBalance(0); setLoading(false); return,} setLoading(true); const { data,error } = await supabase; .from('points_ledger'); .select('*'); .eq('user_id',user && user.id); .order('created_at',{ ascending: false }); if(!error && data) {; const entries = data as PointsLedgerEntry[]; setLedger(entries); const total = entries && entries.reduce((sum,e) => sum + e && e.delta,0); setBalance(total),} else if(error) {; console && console.error("Error fetching ledger:",error); setLedger([]); setBalance(0)} setLoading(false),},[user?.id]); useEffect(() => {}},},[]),[]); fetchLedger(); const interval = setInterval(fetchLedger,30000); return () => clearInterval(interval)},[fetchLedger]); return { ledger,balance,loading,fetchLedger },}
+import { useEffect,useState,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; import { useAuth } from '@/hooks/useAuth'; from '@/types/points'; export function usePoints() {; const { user } = useAuth(); const [ledger,setLedger] = useState<PointsLedgerEntry[]>([]); const [balance,setBalance] = useState(0); const [loading,setLoading] = useState(true); const fetchLedger = useCallback(async () => { if(!user?.id) {; setLedger([]); setBalance(0); setLoading(false); return,} setLoading(true); const { data,error } = await supabase; .from('points_ledger'); .select('*'); .eq('user_id',user && user.id); .order('created_at',{ ascending: false }); if(!error && data) {; const entries = data as PointsLedgerEntry[]; setLedger(entries); const total = entries && entries.reduce((sum,e) => sum + e && e.delta,0); setBalance(total),} else if(error) {; console && console.error("Error fetching ledger:",error); setLedger([]); setBalance(0)} setLoading(false),},[user?.id]); useEffect(() => {}},},[]),[]); fetchLedger(); const interval = setInterval(fetchLedger,30000); return () => clearInterval(interval)},[fetchLedger]); return { ledger,balance,loading,fetchLedger },}
+
+
+import { useEffect,useState,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; import { useAuth } from '@/hooks/useAuth'; from '@/types/points'; export function usePoints() {; const { user } = useAuth(); const [ledger,setLedger] = useState<PointsLedgerEntry[]>([]); const [balance,setBalance] = useState(0); const [loading,setLoading] = useState(true); const fetchLedger = useCallback(async () => { if(!user?.id) {; setLedger([]); setBalance(0); setLoading(false); return,} setLoading(true); const { data,error } = await supabase; .from('points_ledger'); .select('*'); .eq('user_id',user.id); .order('created_at',{ ascending: false }); if(!error && data) {; const entries = data as PointsLedgerEntry[]; setLedger(entries); const total = entries.reduce((sum,e) => sum + e.delta,0); setBalance(total),} else if(error) {; console.error("Error fetching ledger:",error); setLedger([]); setBalance(0)} setLoading(false),},[user?.id]); useEffect(() => {}},},[]),[]); fetchLedger(); const interval = setInterval(fetchLedger,30000); return () => clearInterval(interval)},[fetchLedger]); return { ledger,balance,loading,fetchLedger },}
+import { useEffect,useState,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; import { useAuth } from '@/hooks/useAuth'; from '@/types/points'; export function usePoints() {; const { user } = useAuth(); const [ledger,setLedger] = useState<PointsLedgerEntry[]>([]); const [balance,setBalance] = useState(0); const [loading,setLoading] = useState(true); const fetchLedger = useCallback(async () => { if(!user?.id) {; setLedger([]); setBalance(0); setLoading(false); return,} setLoading(true); const { data,error } = await supabase; .from('points_ledger'); .select('*'); .eq('user_id',user.id); .order('created_at',{ ascending: false }); if(!error && data) {; const entries = data as PointsLedgerEntry[]; setLedger(entries); const total = entries.reduce((sum,e) => sum + e.delta,0); setBalance(total),} else if(error) {; console.error("Error fetching ledger:",error); setLedger([]); setBalance(0)} setLoading(false),},[user?.id]); useEffect(() => {}},},[]),[]); fetchLedger(); const interval = setInterval(fetchLedger,30000); return () => clearInterval(interval)},[fetchLedger]); return { ledger,balance,loading,fetchLedger },}
+import { useEffect,useState,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; import { useAuth } from '@/hooks/useAuth'; from '@/types/points'; export function usePoints() {; const { user } = useAuth(); const [ledger,setLedger] = useState<PointsLedgerEntry[]>([]); const [balance,setBalance] = useState(0); const [loading,setLoading] = useState(true); const fetchLedger = useCallback(async () => { if(!user?.id) {; setLedger([]); setBalance(0); setLoading(false); return,} setLoading(true); const { data,error } = await supabase; .from('points_ledger'); .select('*'); .eq('user_id',user.id); .order('created_at',{ ascending: false }); if(!error && data) {; const entries = data as PointsLedgerEntry[]; setLedger(entries); const total = entries.reduce((sum,e) => sum + e.delta,0); setBalance(total),} else if(error) {; console.error("Error fetching ledger:",error); setLedger([]); setBalance(0)} setLoading(false),},[user?.id]); useEffect(() => {}},},[]),[]); fetchLedger(); const interval = setInterval(fetchLedger,30000); return () => clearInterval(interval)},[fetchLedger]); return { ledger,balance,loading,fetchLedger },}
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+import { useEffect,useState,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; import { useAuth } from '@/hooks/useAuth'; from '@/types/points'; export function usePoints() {; const { user } = useAuth(); const [ledger,setLedger] = useState<PointsLedgerEntry[]>([]); const [balance,setBalance] = useState(0); const [loading,setLoading] = useState(true); const fetchLedger = useCallback(async () => { if(!user?.id) {; setLedger([]); setBalance(0); setLoading(false); return;,} setLoading(true); const { data,error } = await supabase; .from('points_ledger'); .select('*'); .eq('user_id',user.id); .order('created_at',{ ascending: 'false' }); if(!error && data) {; const entries = data as PointsLedgerEntry[]; setLedger(entries); const total = entries.reduce((sum,e) => sum + e.delta,0); setBalance(total);,} else if(error) {; console.error("Error fetching ledger:",error); setLedger([]); setBalance(0)} setLoading(false);,},[user?.id]); useEffect(() => {}};,},[]);,[]); fetchLedger(); const interval = setInterval(fetchLedger,30000); return () => clearInterval(interval)},[fetchLedger]); return { ledger,balance,loading,fetchLedger };,}
+    return () => clearInterval(interval); // Cleanup interval on unmount}, [fetchLedger]); // Added fetchLedger to dependency array;
+  return { ledger, balance, loading, fetchLedger }}
+import { useEffect,useState,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; import { useAuth } from '@/hooks/useAuth'; from '@/types/points'; export function usePoints() {; const { user } = useAuth(); const [ledger,setLedger] = useState<PointsLedgerEntry[]>([]); const [balance,setBalance] = useState(0); const [loading,setLoading] = useState(true); const fetchLedger = useCallback(async () => { if(!user?.id) {; setLedger([]); setBalance(0); setLoading(false); return,} setLoading(true); const { data,error } = await supabase; .from('points_ledger'); .select('*'); .eq('user_id',user.id); .order('created_at',{ ascending: false }); if(!error && data) {; const entries = data as PointsLedgerEntry[]; setLedger(entries); const total = entries.reduce((sum,e) => sum + e.delta,0); setBalance(total),} else if(error) {; console.error("Error fetching ledger:",error); setLedger([]); setBalance(0)} setLoading(false),},[user?.id]); useEffect(() => {}},},[]),[]); fetchLedger(); const interval = setInterval(fetchLedger,30000); return () => clearInterval(interval)},[fetchLedger]); return { ledger,balance,loading,fetchLedger },}
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

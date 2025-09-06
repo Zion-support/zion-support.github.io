@@ -1,3 +1,2 @@
-import React,{ useEffect,useState } from "react" interface WebVitalsData { fcp?: number; lcp?: number; fid?: number; cls?: number; ttfb? number} export const "WebVitalsMonitor": React.FC = () => { const [vitals,setVitals] = useState<WebVitalsData>({}
-}); const [isVisible,setIsVisible] = useState(false); useEffect(() => { const optimizer = PerformanceOptimizer.getInstance(); optimizer.init();"}})"
-</WebVitalsData>"
+>>>>>>> origin/main
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

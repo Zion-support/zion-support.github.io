@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface ContentOptimizerProps {
   // Add props here as needed
 }
-
 export default function ContentOptimizer({ }: ContentOptimizerProps) {
   return (
     <div>

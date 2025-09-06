@@ -1,2 +1,2 @@
-import { cn } from '@/lib/utils'; function Skeleton({; className,; ...props}: React.HTMLAttributes<HTMLDivElement>) {; return(; <div";" className={cn("animate-pulse rounded-md bg-muted",className)}; {...props};" />;";" );";" };" export { Skeleton }";";"
-</HTMLDivElement>"
+>>>>>>> origin/main
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

@@ -1,1 +1,2 @@
-interface Filter {; "key": 'string; value: string; label: string;'} } interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {; "filters": 'Filter[]; onRemoveFilter: key: string void; onClearAll: : unknown void'} className="text-sm text-zion-slate-light "hover": text-zion-cyan transition-colors underline"; > Clear all; ></div> ></div> )} '";""
+>>>>>>> origin/main
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

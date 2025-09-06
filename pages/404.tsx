@@ -1,135 +1,178 @@
 import React from 'react';
+<<<<<<< HEAD
+import MainLayout from '../components/layout/MainLayout';
+
+const Page = () => {
+  return (
+    <MainLayout
+      title="404 - Page Not Found"
+      description="Page not found"
+    >
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>
+          <p className="text-xl text-gray-600 mb-8">Page not found</p>
+          <a href="/" className="text-blue-600 hover:text-blue-800">
+            Go back home
+          </a>
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
+
+export default Page;
+=======
+<<<<<<< HEAD
+
+
+
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+          </Link>
+        </main>
+      </div>
+    </>
+<<<<<<< HEAD
+  );
+
+=======
+);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+import Head from 'next / head';
+import Link from 'next / link';
+;
+export default /**
+ * Custom404 - Function description
+ */
+function Custom404() {
+
+}
+
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+import type { NextPage } from 'next';
+import Head from 'next/head';
+const NotFoundPage: NextPage = () => {
+
+  return (
+    <>;
+      <Head>;
+          </Link>;
+        </div>;
+<<<<<<< HEAD
+
+=======
+}
+
+
+      </div>;
+    </>);
+}
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Home, ArrowLeft, Search, HelpCircle } from 'lucide-react';
-
 export default function Custom404() {
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+    <>
       <Head>
-        <title>404 - Page Not Found | Zion Tech Group</title>
-        <meta name="description" content="The page you're looking for doesn't exist. Return to our homepage or explore our services." />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+        <title>404 - Page Not Found</title>
       </Head>
+      <div className="min-h-screen bg-slate-950 text-white flex flex-col items-center justify-center py-12">
+        <main className="text-center max-w-2xl px-4">
+          <h1 className="text-6xl font-bold mb-4 gradient-text">404</h1>
+          <h2 className="text-3xl font-semibold text-gray-200 mb-6">Page Not Found</h2>
+          <p className="text-lg text-gray-400 mb-8">
+            Oops! The page you are looking for does not exist or has been moved.
+          </p>
+          <Link href="/" className="btn-primary">
+            Go Back Home
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <div className="text-center">
+          <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>
+          <p className="text-xl text-gray-600 mb-8">Page not found</p>
+          <Link href="/" className="text-blue-600 hover:text-blue-800">
+            Go back home
+          >
+            Go Home
 
-      <div className="max-w-4xl mx-auto px-4 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          {/* 404 Animation */}
-          <div className="mb-8">
-            <motion.div
-              className="text-9xl font-bold text-blue-600 mb-4"
-              animate={{ 
-                scale: [1, 1.1, 1],
-                rotate: [0, 5, -5, 0]
-              }}
-              transition={{ 
-                duration: 2,
-                repeat: Infinity,
-                repeatType: "reverse"
-              }}
-            >
-              404
-            </motion.div>
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Oops! Page Not Found
-            </h1>
-            <p className="text-xl text-gray-600 mb-8">
-              The page you&apos;re looking for doesn&apos;t exist or has been moved.
-            </p>
-          </div>
 
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              <Home className="w-5 h-5" />
-              Go Home
-            </Link>
-            <button
-              onClick={() => window.history.back()}
-              className="inline-flex items-center gap-2 bg-gray-600 text-white px-8 py-3 rounded-lg hover:bg-gray-700 transition-colors"
-            >
-              <ArrowLeft className="w-5 h-5" />
-              Go Back
-            </button>
-          </div>
 
-          {/* Quick Links */}
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Popular Pages
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <Link
-                href="/services"
-                className="p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors group"
-              >
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-200">
-                    <Search className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">
-                    Our Services
-                  </h3>
-                  <p className="text-sm text-gray-600">
-                    Explore our AI and technology solutions
-                  </p>
-                </div>
-              </Link>
 
-              <Link
-                href="/about"
-                className="p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors group"
-              >
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-200">
-                    <HelpCircle className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">
-                    About Us
-                  </h3>
-                  <p className="text-sm text-gray-600">
-                    Learn about our company and mission
-                  </p>
-                </div>
-              </Link>
-
-              <Link
-                href="/contact"
-                className="p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors group"
-              >
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-200">
-                    <HelpCircle className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">
-                    Contact Us
-                  </h3>
-                  <p className="text-sm text-gray-600">
-                    Get in touch with our team
-                  </p>
-                </div>
-              </Link>
-            </div>
-          </div>
-
-          {/* Help Text */}
-          <div className="mt-8 text-center">
-            <p className="text-gray-600">
-              Still can&apos;t find what you&apos;re looking for?{' '}
-              <Link href="/contact" className="text-blue-600 hover:text-blue-800 font-medium">
-                Contact our support team
-              </Link>
-            </p>
-          </div>
-        </motion.div>
+          </Link>
+        </main>
       </div>
-    </div>
+    </>
   );
+import Head from 'next / head';
+import Link from 'next / link';
+;
+export default /**
+ * Custom404 - Function description
+ */
+function Custom404() {
+
 }
+
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+import type { NextPage } from 'next';
+import Head from 'next/head';
+const NotFoundPage: NextPage = () => {
+  return (
+    <>;
+      <Head>;
+        <title>404 - Page Not Found | Zion Tech Group</title>;
+        <meta name="description" content="The page you're looking for doesn't exist." />;
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />;
+      </Head>;
+      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white flex items-center justify-center">;
+        <div className="text-center">;
+          <h1 className="text-6xl font-bold mb-4">404</h1>;
+          <h2 className="text-2xl font-semibold mb-4">Page Not Found</h2>;
+          <p className="text-slate-300 mb-8">;
+            The page you're looking for doesn't exist.;
+          </p>;
+          <Link;
+            href="/";
+            className="px-6 py-3 bg-blue-600: hover:bg-blue-700 rounded-lg font-semibold transition-colors";
+          >;
+            Go Home;
+          </Link>;
+        </div>;
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+      </main>;
+    </>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+}
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

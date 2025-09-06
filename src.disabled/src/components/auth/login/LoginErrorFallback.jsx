@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface LoginErrorFallbackProps {
   // Add props here as needed
 }
-
 export default function LoginErrorFallback({ }: LoginErrorFallbackProps) {
   return (
     <div>
@@ -11,4 +9,3 @@ export default function LoginErrorFallback({ }: LoginErrorFallbackProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}

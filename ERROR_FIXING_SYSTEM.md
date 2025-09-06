@@ -115,12 +115,15 @@ pm2 monit
 The system generates several types of reports:
 
 ### JSON Reports
+
 - `enhanced-error-fixer-report.json` - Enhanced error fixer results
 - `comprehensive-error-fixer-report.json` - Comprehensive error fixer results
 - `master-error-fixer-report.json` - Master error fixer results
 
 ### Log Files
+
 All logs are stored in the `logs/` directory:
+
 - `logs/enhanced-error-fixer.log`
 - `logs/syntax-error-fixer.log`
 - `logs/import-cleaner.log`
@@ -131,6 +134,7 @@ All logs are stored in the `logs/` directory:
 ## 🔍 Error Types Fixed
 
 ### 1. Parsing Errors
+
 - Unterminated string literals
 - Missing commas in object literals
 - Missing parentheses
@@ -138,22 +142,26 @@ All logs are stored in the `logs/` directory:
 - Missing semicolons
 
 ### 2. Import/Export Issues
+
 - Missing semicolons in import statements
 - Unterminated import/export statements
 - Malformed default exports
 
 ### 3. JSX Syntax Errors
+
 - Multiple parent elements without fragments
 - Missing quotes around attributes
 - Malformed JSX expressions
 
 ### 4. TypeScript Errors
+
 - Empty object types
 - Incorrect `any` type usage
 - Missing type annotations
 - Property signature errors
 
 ### 5. ESLint Errors
+
 - Unused imports and variables
 - Unescaped entities in JSX
 - Unnecessary escape characters
@@ -232,29 +240,33 @@ The system uses two main PM2 configuration files:
 ### Common Issues
 
 1. **PM2 not found**
+
    ```bash
    npm install -g pm2
    ```
 
 2. **Permission denied**
+
    ```bash
    sudo chmod +x start-pm2-error-fixing.sh
    ```
 
 3. **Port already in use**
+
    ```bash
    # Check what's using the port
    lsof -i :3001
-   
+
    # Kill the process
    kill -9 <PID>
    ```
 
 4. **Log files too large**
+
    ```bash
    # Clear logs
    pm2 flush
-   
+
    # Or manually clear
    rm -rf logs/*
    ```

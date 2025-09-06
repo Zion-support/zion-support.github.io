@@ -1,6 +1,5 @@
-import React from 'react';
+import * as React from 'react';
 import MainLayout from '../components/layout/MainLayout';
-import { motion } from 'framer-motion';
 import {
   Eye, 
   Ear, 
@@ -173,7 +172,11 @@ export default function AccessibilityPage() {
     >
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20">
+:pages_disabled/accessibility.tsx
           <div className="container mx-auto px-4">
+        </section>
+          <div className="container mx-auto px-4">
+          </div>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -182,11 +185,17 @@ export default function AccessibilityPage() {
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+:pages_disabled/accessibility.tsx
                   Accessibility First
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
                 Building inclusive digital experiences that work for everyone
+                  Accessibility
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8">
+                Making technology accessible to everyone
               </p>
             </motion.div>
           </div>
@@ -421,18 +430,9 @@ export default function AccessibilityPage() {
                   <p className="text-gray-600 mb-6">
                     If you encounter any accessibility barriers or have suggestions for improvement, we want to hear from you. Your feedback helps us create better experiences for everyone.
                   </p>
-<<<<<<<< HEAD:pages_disabled/accessibility.tsx
-<<<<<<<< HEAD:pages-disabled/accessibility.tsx.disabled
-                </div>
-========
-                  <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-                    {standard.level}
-                  </span>
-                </motion.div>
->>>>>>>> cursor/expand-services-advertise-and-build-project-59da:pages_disabled/accessibility.tsx
 ========
                 </div>
->>>>>>>> a19edd82339f030d1486cb753755512ca6e7d150:pages-disabled/accessibility.tsx.disabled
+>:pages-disabled/accessibility.tsx.disabled
               </motion.div>
             </div>
           </div>
