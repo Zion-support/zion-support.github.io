@@ -2,11 +2,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Services | Zion Tech Group",
   description:
-<<<<<<< HEAD
     "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
-=======
-    "Comprehensive AI,micro SaaS,and IT services to help your business scale and succeed.",;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
 export default function ServicesOverviewPage() {
   return (
@@ -26,42 +22,50 @@ export default function ServicesOverviewPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         <ServiceCard
           href="/services/micro-saas"
-          title="Micro SaaS"
-          description="End-to-end product development with billing, auth, and analytics"
+          title="Micro SaaS Solutions"
+          description="Complete micro SaaS development from concept to scale with proven revenue models"
           bullets={[
-            "Foundational architecture"
-            "Billing + subscriptions"
-            "Growth analytics"
+            "AI-powered tools",
+            "Billing & subscriptions", 
+            "Growth analytics",
+            "Market validation"
           ]}
           icon="🚀"
         />
         <ServiceCard
           href="/services/ai-services"
-          title="AI Services"
-          description="LLM applications, RAG systems, and MLOps pipelines"
-          bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]}
+          title="AI & Machine Learning"
+          description="Cutting-edge AI solutions including LLMs, computer vision, and automation"
+          bullets={["LLM applications", "Computer vision", "RAG systems", "MLOps pipelines"]}
           icon="🤖"
         />
         <ServiceCard
           href="/services/it-services"
-          title="IT Services"
-          description="Cloud migration, DevOps, and security solutions"
-          bullets={["Cloud migration", "DevOps + SRE", "Security"]}
+          title="IT Infrastructure"
+          description="Cloud migration, DevOps, cybersecurity, and managed IT services"
+          bullets={["Cloud migration", "DevOps & SRE", "Cybersecurity", "24/7 support"]}
           icon="⚙️"
         />
         <ServiceCard
           href="/services/blockchain"
-          title="Blockchain"
+          title="Blockchain & Web3"
           description="Smart contracts, DeFi protocols, and Web3 applications"
-          bullets={["Smart contracts", "DeFi protocols", "NFT platforms"]}
+          bullets={["Smart contracts", "DeFi protocols", "NFT platforms", "Web3 integration"]}
           icon="⛓️"
         />
         <ServiceCard
           href="/services/data-analytics"
-          title="Data Analytics"
+          title="Data Analytics & BI"
           description="Business intelligence, predictive modeling, and real-time analytics"
-          bullets={["BI dashboards", "Predictive analytics", "Real-time insights"]}
+          bullets={["BI dashboards", "Predictive analytics", "Real-time insights", "Data visualization"]}
           icon="📊"
+        />
+        <ServiceCard
+          href="/contact"
+          title="Custom Solutions"
+          description="Tailored technology solutions for unique business challenges"
+          bullets={["Custom development", "System integration", "Digital transformation", "Consulting"]}
+          icon="💡"
         />
       </div>
       <CTA />{" "}
@@ -69,10 +73,10 @@ export default function ServicesOverviewPage() {
   );
 }
 function ServiceCard({
-  href
-  title
-  description
-  bullets
+  href,
+  title,
+  description,
+  bullets,
   icon
 }: {
   href: string;
