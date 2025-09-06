@@ -1,18 +1,12 @@
 import React from "react";
-import {MobileHeader} from "../components/common/MobileHeader";
-import {BottomNavigation} from "../components/common/BottomNavigation";
-import {ClientDashboard} from "../components/dashboard/ClientDashboard";
-import {TalentDashboard} from "../components/dashboard/TalentDashboard";
-import {useAuth} from "@/hooks/useAuth";
-export function MobileHome() {;
+import { MobileHeader } from "../components/common/MobileHeader";
+import { BottomNavigation } from "../components/common/BottomNavigation";
+import { ClientDashboard } from "../components/dashboard/ClientDashboard";
+import { TalentDashboard } from "../components/dashboard/TalentDashboard";
+import { useAuth } from "@/hooks/useAuth";
+export function MobileHome() {
   const { user } = useAuth();
-  const isClient = user?.userType === 'employer' || user?.userType === 'buyer';
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  return (
-=======
-
+  const isClient = user?.userType === "employer" || user?.userType === "buyer";
 
 =======
 
@@ -52,42 +46,12 @@ export function MobileHome() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-=======
       <main className="py-4">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      
-      <main className="py-4">
-import React from "react",;
-import { MobileHeader } from "../components/common/MobileHeader",;
-import { BottomNavigation } from "../components/common/BottomNavigation",;
-import { ClientDashboard } from "../components/dashboard/ClientDashboard",;
-import { TalentDashboard } from "../components/dashboard/TalentDashboard",;
-import { useAuth } from "@/hooks/useAuth",;
-export function MobileHome() {;
-  const { user } = useAuth();
-  const isClient = user?.userType === 'employer' || user?.userType === 'buyer';
-  return (;
-
-<<<<<<< HEAD
-    <div className="min-h-screen">;
-      <MobileHeader
-        title={isClient ? "Client Dashboard" : "Talent Dashboard"} 
-        showNotifications 
-        showSettings
-      />;
-
-      <main className="py-4">;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {isClient ? <ClientDashboard /> : <TalentDashboard />}
-      </main>;
+      </main>
 
-      <BottomNavigation />;
-    </div>;
+      <BottomNavigation />
+    </div>
   );
 }
 import React from './react';

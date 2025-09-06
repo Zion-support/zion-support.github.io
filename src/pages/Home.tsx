@@ -1,42 +1,28 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Header } from '../components/Header';
-import Footer from '../components/Footer';
-import { GradientHeading } from '../components/GradientHeading';
-import { Card, CardContent } from '../components/ui/card';
-import { Button } from '../components/ui/button';
-import { Badge } from '../components/ui/badge';
-=======
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { usePerformance } from '../hooks/usePerformance';
-import Testimonials from '../components/Testimonials';
-import BlogSection from '../components/BlogSection';
-import { trackScrollDepth, trackButtonClick } from '../utils/analytics';
-import ScrollAnimation from '../components/ScrollAnimation';
-import ParallaxSection from '../components/ParallaxSection';
-import TypingAnimation from '../components/TypingAnimation';
-import ParticleBackground from '../components/ParticleBackground';
-import { 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Users, 
-  Award, 
-  Globe,
-  Lightbulb,
-  Shield,
-  Zap,
-  Target
-=======
-  Zap,
-  Shield,
-  Globe,
-  Code,
-  Database,
-  Smartphone,
-  Cloud
-} from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+
+// Card component
+const Card = ({ title, href, description, icon }: { title: string; href: string; description: string; icon: string }) => (
+  <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+    <div className="text-4xl mb-4">{icon}</div>
+    <h3 className="text-xl font-semibold mb-2">{title}</h3>
+    <p className="text-gray-600 mb-4">{description}</p>
+    <Link 
+      to={href}
+      className="text-blue-600 hover:text-blue-800 font-medium"
+    >
+      Learn More →
+    </Link>
+  </div>
+);
+
+// FeatureCard component
+const FeatureCard = ({ title, description }: { title: string; description: string }) => (
+  <div className="text-center">
+    <h3 className="text-lg font-semibold mb-2">{title}</h3>
+    <p className="text-gray-600">{description}</p>
+  </div>
+);
 
 const Home: React.FC = () => {
   const features = [

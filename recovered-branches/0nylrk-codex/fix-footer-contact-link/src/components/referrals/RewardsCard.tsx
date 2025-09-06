@@ -26,7 +26,7 @@ import { BadgeDollarSign, Badge } from "lucide-react",
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface RewardsCardProps {
   rewards: ReferralReward[];
-  isLoading: boolean
+  isLoading: boolean;
 }
 export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
   if (isLoading) {
@@ -80,39 +80,6 @@ if ( {) {
   $2
 }
     return (
-      <Card>;
-        <CardHeader>;
-          <CardTitle className="flex items - center gap - 2">;
-            <BadgeDollarSign className="h - 5 w - 5" />;
-            Your Rewards;
-          </CardTitle>;
-          <CardDescription>;
-            Rewards earned from successful referrals;
-          </CardDescription>;
-        </CardHeader>;
-        <CardContent>;
-          <div className="flex items - center justify - center p - 4">;
-            <div className="h - 8 w - 8 animate - spin rounded - full border - 4 border - primary border - t-transparent" />;
-          </div>;
-        </CardContent>;
-      </Card>);
-  }
-<<<<<<< HEAD
-
-=======
-=======
-} from "@/components/ui/card";
-import { ReferralReward } from "@/types/referrals";
-import { formatDate } from "@/utils/referralUtils";
-import { BadgeDollarSign, Badge } from "lucide-react";
->>>>>>> main
-interface RewardsCardProps {
-  rewards: ReferralReward[];
-  isLoading: boolean;
-}
-export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
-  if (isLoading) {
-    return (
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
@@ -131,6 +98,7 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
       </Card>
     );
   }
+<<<<<<< HEAD
 
   if (rewards.length === 0) {
     return (
@@ -153,9 +121,6 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
           </div>
         </CardContent>
       </Card>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     );
   }
   return (
@@ -176,16 +141,6 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
               key={reward.id}
               className={`flex justify-between items-start ${
                 index !== rewards.length - 1 ? "border-b pb-3" : ""
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  )
-
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               }`}
             >
               <div>
@@ -215,22 +170,7 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
         </div>
       </CardContent>
     </Card>
-  )
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { ReferralReward } from "@/types/referrals",;
-import { formatDate } from "@/utils/referralUtils",;
-import { BadgeDollarSign, Badge } from "lucide-react",;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-interface RewardsCardProps {;
-  rewards: ReferralReward[],;
-  isLoading: boolean;
+  );
 }
 
 export function RewardsCard(): any ({ rewards, isLoading }: RewardsCardProps) {;
