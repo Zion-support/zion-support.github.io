@@ -1,26 +1,23 @@
-import React, { useState } from 'react';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { HelpCategoryList } from './HelpCategoryList';
-import { HelpArticleList } from './HelpArticleList';
-import { HelpArticleView } from './HelpArticleView';
-import { HELP_CATEGORIES } from './help-content';
-import { Search } from 'lucide-react';
-
+import React, { useState } from 'react'
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { HelpCategoryList } from './HelpCategoryList'
+import { HelpArticleList } from './HelpArticleList'
+import { HelpArticleView } from './HelpArticleView'
+import { HELP_CATEGORIES } from './help-content'
+import { Search } from 'lucide-react'
 export default function HelpCenter() {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
-
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
+  const [selectedArticle, setSelectedArticle] = useState<string | null>(null)
+  const [searchQuery, setSearchQuery] = useState('')
   const handleCategorySelect = (categoryId: string) => {
-    setSelectedCategory(categoryId);
-    setSelectedArticle(null);
-  };
-
+    setSelectedCategory(categoryId)
+    setSelectedArticle(null)
+  }
   const handleArticleSelect = (articleId: string) => {
-    setSelectedArticle(articleId);
-  };
+    setSelectedArticle(articleId)
+  }
 export default function HelpCenter() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null),
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null),
@@ -36,14 +33,12 @@ export default function HelpCenter() {
   },
   
   const handleBackToCategories = () => {
-    setSelectedCategory(null);
-    setSelectedArticle(null);
-  };
-
+    setSelectedCategory(null)
+    setSelectedArticle(null)
+  }
   const handleBackToArticles = () => {
-    setSelectedArticle(null);
-  };
-
+    setSelectedArticle(null)
+  }
   return (
     <>
       <div className='container mx-auto px-4 py-8'>
@@ -256,5 +251,5 @@ export default function HelpCenter() {
         </div>
       </div>
     </>
-  );
+  )
 }

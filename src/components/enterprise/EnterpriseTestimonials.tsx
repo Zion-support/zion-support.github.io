@@ -1,13 +1,12 @@
-import React from 'react';
-import { Quote } from 'lucide-react';
+import React from 'react'
+import { Quote } from 'lucide-react'
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
-  CarouselPrevious,;
-} from '@/components/ui/carousel';
-
+  CarouselPrevious,
+} from '@/components/ui/carousel'
 const testimonials = [
   {
     quote:
@@ -33,8 +32,7 @@ const testimonials = [
     company: 'FutureTech Systems',
     image: '/placeholder.svg',
   },
-];
-
+]
 export function EnterpriseTestimonials() {
   return (
     <section id='testimonials' className='py-20 px-4 md:px-6'>
@@ -106,5 +104,5 @@ export function EnterpriseTestimonials() {
         </Carousel>
       </div>
     </section>
-  );
+  )
 }

@@ -1,29 +1,27 @@
-import React from 'react';
+import React from 'react'
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
-  CardDescription,;
-} from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react';
-import Link from 'next/link';
+  CardDescription,
+} from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react'
+import Link from 'next/link'
 import { cn } from '@/lib/utils';interface InteractiveFeaturesProps {
   className?: string,
   style?: React.CSSProperties
 }
 
 interface InteractiveFeaturesProps {
-  className?: string;
-  style?: React.CSSProperties;
-
+  className?: string
+  style?: React.CSSProperties
 export function InteractiveFeatures({
   className,
   style,
 }: InteractiveFeaturesProps) {
-  const [openIndex, setOpenIndex] = React.useState<number | null>(null);
-
+  const [openIndex, setOpenIndex] = React.useState<number | null>(null)
   const features = [
     {
       title: 'AI Talent Matching',
@@ -59,11 +57,10 @@ export function InteractiveFeatures({
       icon: <Settings className='h-8 w-8 text-amber-700' />,
       link: '/equipment',
     },
-  ];
-
+  ]
   const handleToggle = (index: number) => {
-    setOpenIndex(prev => (prev === index ? null : index));
-  };
+    setOpenIndex(prev => (prev === index ? null : index))
+  }
   return (
     <section className={cn('py-16 bg-zion-blue-dark', className)} style={style}>
       <div className='container mx-auto px-4'>
@@ -122,6 +119,5 @@ export function InteractiveFeatures({
         </div>
       </div>
     </section>
-  );
-
-export default InteractiveFeatures;
+  )
+export default InteractiveFeatures

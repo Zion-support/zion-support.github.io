@@ -1,1 +1,60 @@
-import React from 'react'; const Pricing = () => { return ( <div className="min-h-screen bg-gray-50"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> Pricing </h1> <p className="text-xl text-gray-600"> Choose the perfect plan for your business needs. </p> </div> <div className="grid grid-cols-1 md:grid-cols-3 gap-8"> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-2">Basic</h3> <p className="text-3xl font-bold text-gray-900 mb-4">$99/month</p> <ul className="space-y-2 text-gray-600"> <li>Basic AI solutions</li> <li>Email support</li> <li>Standard security</li> </ul> <button className="w-full mt-4 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700"> Get Started </button> </div> <div className="bg-white p-6 rounded-lg shadow-md border-2 border-blue-600"> <h3 className="text-lg font-semibold text-gray-900 mb-2">Professional</h3> <p className="text-3xl font-bold text-gray-900 mb-4">$299/month</p> <ul className="space-y-2 text-gray-600"> <li>Advanced AI solutions</li> <li>Priority support</li> <li>Enhanced security</li> <li>Custom integrations</li> </ul> <button className="w-full mt-4 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700"> Get Started </button> </div> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-2">Enterprise</h3> <p className="text-3xl font-bold text-gray-900 mb-4">Custom</p> <ul className="space-y-2 text-gray-600"> <li>Full AI suite</li> <li>24/7 support</li> <li>Enterprise security</li> <li>Custom development</li> </ul> <button className="w-full mt-4 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700"> Contact Sales </button> </div> </div> </div> </div> )}; export default Pricing;
+import React from 'react'
+
+const Pricing = () => {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <div className="max-w-6xl mx-auto">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6 text-center">Pricing Plans</h1>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Starter</h3>
+              <div className="text-3xl font-bold text-gray-900 mb-6">$99/month</div>
+              <ul className="space-y-3 mb-8">
+                <li className="text-gray-600">Basic AI consultation</li>
+                <li className="text-gray-600">Email support</li>
+                <li className="text-gray-600">Monthly reports</li>
+                <li className="text-gray-600">Up to 5 users</li>
+              </ul>
+              <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
+                Get Started
+              </button>
+            </div>
+            
+            <div className="bg-white rounded-lg shadow-lg p-8 border-2 border-blue-600">
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Professional</h3>
+              <div className="text-3xl font-bold text-gray-900 mb-6">$299/month</div>
+              <ul className="space-y-3 mb-8">
+                <li className="text-gray-600">Advanced AI solutions</li>
+                <li className="text-gray-600">Priority support</li>
+                <li className="text-gray-600">Weekly reports</li>
+                <li className="text-gray-600">Up to 25 users</li>
+                <li className="text-gray-600">Custom integrations</li>
+              </ul>
+              <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
+                Get Started
+              </button>
+            </div>
+            
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Enterprise</h3>
+              <div className="text-3xl font-bold text-gray-900 mb-6">Custom</div>
+              <ul className="space-y-3 mb-8">
+                <li className="text-gray-600">Full AI platform</li>
+                <li className="text-gray-600">24/7 support</li>
+                <li className="text-gray-600">Real-time monitoring</li>
+                <li className="text-gray-600">Unlimited users</li>
+                <li className="text-gray-600">Dedicated account manager</li>
+              </ul>
+              <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Pricing

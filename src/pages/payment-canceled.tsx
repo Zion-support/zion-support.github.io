@@ -1,15 +1,9 @@
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import React from 'react';
-import { Button } from '@/components/ui/button';
-
+import React from 'react'
+import { Button } from '@/components/ui/button'
 import { useRouter } from 'next/router'; // Changed from useNavigate
 
 import { XCircle } from 'lucide-react'
-import React from 'react';
-import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/router', // Changed from useNavigate
-import { XCircle } from 'lucide-react';
 export default function PaymentCanceled() {
   const router = useRouter(), // Changed from navigate
   
@@ -38,9 +32,6 @@ export default function PaymentCanceled() {
             variant="outline"
             onClick={() => router.push('/dashboard')} // Changed to router.push
             className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
-import { useRouter } from 'next/router'; // Changed from useNavigate
-import { XCircle } from 'lucide-react';
-
 export default function PaymentCanceled() {
   const router = useRouter(); // Changed from navigate
 
@@ -81,7 +72,7 @@ export default function PaymentCanceled() {
           </Button>
         </div>
       </div>
-  );;
+  )
       </div>
-  );
+  )
 }

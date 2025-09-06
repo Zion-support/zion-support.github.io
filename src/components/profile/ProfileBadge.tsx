@@ -1,9 +1,9 @@
-import React from 'react';
-import { BadgeCheck, Star, Clock, Award } from 'lucide-react';
-import { cn } from '@/lib/utils';
-type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated';
+import React from 'react'
+import { BadgeCheck, Star, Clock, Award } from 'lucide-react'
+import { cn } from '@/lib/utils'
+type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated'
 interface ProfileBadgeProps {
-  type: BadgeType;
+  type: BadgeType
   className?: string;  type: BadgeType,
   className?: string
 }
@@ -29,27 +29,22 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       text: 'Top Rated',
       colors: 'bg-purple-500/20 text-purple-400',
     },
-  };
-
-  const { icon: Icon, text, colors } = badgeConfig[type];
-
-  
+  }
+  const { icon: Icon, text, colors } = badgeConfig[type]
     >
       <Icon className='w-3 h-3' />
       <span>{text}</span>
     </div>
-  );
-
-  type, className ;
-}: ProfileBadgeProps) {;
-  const badgeConfig = {;
-  verified: {;
-  const {;
-  icon: Icon,  text, colors ;
-}= badgeConfig[type];
-
-}> <Icon className="w-3 h-3" /> <span> {;
-  text ;
-}</span> ;
+  )
+  type, className 
+}: ProfileBadgeProps) {
+  const badgeConfig = {
+  verified: {
+  const {
+  icon: Icon,  text, colors 
+}= badgeConfig[type]
+}> <Icon className="w-3 h-3" /> <span> {
+  text 
+}</span> 
 }'"  )
 }

@@ -1,12 +1,11 @@
-import { GradientHeading } from './GradientHeading';
-import { FeatureCard } from './FeatureCard';
-import { Bot, Clock, Globe, TrendingDown } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { useTranslation } from 'react-i18next';
+import { GradientHeading } from './GradientHeading'
+import { FeatureCard } from './FeatureCard'
+import { Bot, Clock, Globe, TrendingDown } from 'lucide-react'
+import { cn } from '@/lib/utils'
+import { useTranslation } from 'react-i18next'
 interface BenefitsSectionProps {
-  className?: string;
-  style?: React.CSSProperties;
-
+  className?: string
+  style?: React.CSSProperties
 const getBenefits = (t: any,) => [
   {
     title: t('benefits.ai_matchmaking'),
@@ -28,13 +27,10 @@ const getBenefits = (t: any,) => [
     description: t('benefits.cost_reduction_desc'),
     icon: <TrendingDown className='w-8 h-8' />,
   },
-];
-
+]
 export function BenefitsSection({ className, style }: BenefitsSectionProps) {
-  const { t } = useTranslation();
-  const benefits = getBenefits(t);
-
-  
+  const { t } = useTranslation()
+  const benefits = getBenefits(t)
     >
       <div className='container mx-auto px-4'>
         <div className='text-center mb-16'>
@@ -59,36 +55,36 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
         </div>
       </div>
     </section>
-  );
+  )
 }
-;
-import React, { useState } from 'react';
-export /**;
-export default BenefitsSection;}}}}</motion.div></motion.div></motion.div>}
-import { GradientHeading } from './ui / GradientHeading';
-export default function Page() {;
-  {;
-";
-    title: "24/7 Support",";
-    description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.",";
-    icon: <Clock className="w-8 h-8"  />,";
-    color: "from-zion-blue to-zion-blue-dark",";
+
+import React, { useState } from 'react'
+export /**
+export default BenefitsSection }}}}</motion.div></motion.div></motion.div>}
+import { GradientHeading } from './ui / GradientHeading'
+export default function Page() {
+  {
+"
+    title: "24/7 Support","
+    description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.","
+    icon: <Clock className="w-8 h-8"  />,"
+    color: "from-zion-blue to-zion-blue-dark","
     bgColor: "from-zion-blue/20 to-zion-blue-dark/20","    stats: "99.9% Uptime",
-    features: [";
-      "Round-the-clock assistance",";
-      "Expert technical support",";
-      "Rapid response times",";
-      "Proactive monitoring" ];
+    features: ["
+      "Round-the-clock assistance","
+      "Expert technical support","
+      "Rapid response times","
+      "Proactive monitoring" ]
 },
-  {;
-";
-    title: "Cost Reduction",";
-    description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.",";
-    icon: <TrendingDown className="w-8 h-8"  />,";
-    color: "from-zion-green to-zion-green-dark",";
+  {
+"
+    title: "Cost Reduction","
+    description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.","
+    icon: <TrendingDown className="w-8 h-8"  />,"
+    color: "from-zion-green to-zion-green-dark","
     bgColor: "from-zion-green/20 to-zion-green-dark/20","    stats: "40% Cost Savings",
-    features: [";
-      "Direct provider connections",";
-      "Competitive pricing",";
-      "Bulk discount options",";
-      "Transparent cost structure" ];
+    features: ["
+      "Direct provider connections","
+      "Competitive pricing","
+      "Bulk discount options","
+      "Transparent cost structure" ]

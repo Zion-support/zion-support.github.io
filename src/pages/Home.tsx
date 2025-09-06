@@ -1,1 +1,41 @@
-import React from 'react'; const Home = () => { return ( <div className="min-h-screen bg-gray-50"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"> <div className="text-center"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> Welcome to Zion Tech Group </h1> <p className="text-xl text-gray-600 mb-8"> Leading technology solutions in AI,cybersecurity,cloud infrastructure,and digital transformation. </p> <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12"> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Solutions</h3> <p className="text-gray-600">Advanced artificial intelligence and machine learning services.</p> </div> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-2">Cybersecurity</h3> <p className="text-gray-600">Comprehensive security solutions to protect your business.</p> </div> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-2">Cloud Infrastructure</h3> <p className="text-gray-600">Scalable and secure cloud solutions for modern businesses.</p> </div> </div> </div> </div> </div> )}; export default Home;
+import React from 'react'
+
+const Home = () => {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-12">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Welcome to Zion Tech Group
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            AI & Technology Solutions for the modern world
+          </p>
+          <div className="bg-white rounded-lg shadow-lg p-8 max-w-2xl mx-auto">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Our Services</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="p-4 border border-gray-200 rounded-lg">
+                <h3 className="font-semibold text-gray-900">AI Services</h3>
+                <p className="text-gray-600 text-sm">Cutting-edge AI solutions</p>
+              </div>
+              <div className="p-4 border border-gray-200 rounded-lg">
+                <h3 className="font-semibold text-gray-900">IT Services</h3>
+                <p className="text-gray-600 text-sm">Comprehensive IT support</p>
+              </div>
+              <div className="p-4 border border-gray-200 rounded-lg">
+                <h3 className="font-semibold text-gray-900">Cloud Solutions</h3>
+                <p className="text-gray-600 text-sm">Scalable cloud infrastructure</p>
+              </div>
+              <div className="p-4 border border-gray-200 rounded-lg">
+                <h3 className="font-semibold text-gray-900">Cybersecurity</h3>
+                <p className="text-gray-600 text-sm">Protect your digital assets</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Home

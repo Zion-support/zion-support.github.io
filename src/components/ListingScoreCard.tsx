@@ -1,26 +1,23 @@
-import { cn } from '@/lib/utils';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { StarIcon } from 'lucide-react';
+import { cn } from '@/lib/utils'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { StarIcon } from 'lucide-react'
 import Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import useStateimport Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import useState
-import { Badge } from '@/components/ui/badge';
-import { Star } from 'lucide-react';
-
+import { Star } from 'lucide-react'
 interface ListingScoreCardProps {
-  title: string;
-  description: string;
-  image?: string;
-  category: string;
-  tags?: string[];
-  author?: string;
-  authorImage?: string;
-  aiScore?: number;
-  rating?: number;
-  reviewCount?: number;
-  className?: string;
-
+  title: string
+  description: string
+  image?: string
+  category: string
+  tags?: string[]
+  author?: string
+  authorImage?: string
+  aiScore?: number
+  rating?: number
+  reviewCount?: number
+  className?: string
 export function ListingScoreCard({
   title,
   description,
@@ -34,10 +31,8 @@ export function ListingScoreCard({
   reviewCount = 0,
   className,
 }: ListingScoreCardProps) {
-  const [mainImageError, setMainImageError] = useState(false);
-  const [authorImageError, setAuthorImageError] = useState(false);
-
-  
+  const [mainImageError, setMainImageError] = useState(false)
+  const [authorImageError, setAuthorImageError] = useState(false)
     >
       {image && !mainImageError && (
         <div className='h-48 w-full overflow-hidden relative'>
@@ -146,5 +141,5 @@ export function ListingScoreCard({
         )}
       </div>
     </div>
-  );
+  )
 }

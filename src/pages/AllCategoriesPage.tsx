@@ -1,8 +1,7 @@
-import { CategoryCard } from '@/components/CategoryCard';
-import { GradientHeading } from '@/components/GradientHeading';
-import ErrorBoundary from '@/components/GlobalErrorBoundary';
-import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
-
+import { CategoryCard } from '@/components/CategoryCard'
+import { GradientHeading } from '@/components/GradientHeading'
+import ErrorBoundary from '@/components/GlobalErrorBoundary'
+import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
 // Reusing the categories array from CategoriesSection.tsx
 // Ideally, this would come from a shared data source or API
 const categories = [
@@ -33,9 +32,7 @@ const categories = [
     link: '/innovation',
     color: undefined, // Let CategoryCard use default color
   },
-];
-
-
+]
 export default function AllCategoriesPage() {
   return (
     <div className='min-h-screen bg-zion-blue'>
@@ -90,5 +87,5 @@ export default function AllCategoriesPage() {
         </ErrorBoundary>
       </div>
     </div>
-  );
+  )
 }

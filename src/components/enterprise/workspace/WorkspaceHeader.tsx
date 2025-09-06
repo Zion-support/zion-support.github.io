@@ -1,10 +1,9 @@
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { type Company } from './CompanyDashboard';
-import { Bell, Users, Settings } from 'lucide-react';
+import React from 'react'
+import { Button } from '@/components/ui/button'
+import { type Company } from './CompanyDashboard'
+import { Bell, Users, Settings } from 'lucide-react'
 interface WorkspaceHeaderProps {
-  company: Company;
-
+  company: Company
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
   return (
     <div className='space-y-6'>
@@ -86,7 +85,7 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
           <div className='text-2xl font-medium'>12</div>        </div>
       </div>
     </div>
-  );
+  )
 }          </Button>
           <Button variant="outline" size="icon" aria-label="Team members">
             <Users className="h-4 w-4" />
@@ -112,5 +111,5 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
         </div>
       </div>
     </div>
-  );
+  )
 }

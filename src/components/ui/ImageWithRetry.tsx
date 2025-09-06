@@ -1,19 +1,18 @@
-import React, { useState } from 'react';
-import Image, { type ImageProps } from 'next/image';
-import { cn } from '@/lib/utils';
-
+import React, { useState } from 'react'
+import Image, { type ImageProps } from 'next/image'
+import { cn } from '@/lib/utils'
 interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
-  src: string;  alt?: string;
+  src: string;  alt?: string
   /** Source to use if the main src fails */
-  fallbackSrc?: string;
+  fallbackSrc?: string
   /** CSS class for the retry button */
   retryClassName?: string;interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
   src: string,
 interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
   src: string,
-  alt?: string;
+  alt?: string
   /** Source to use if the main src fails */
-  fallbackSrc?: string;
+  fallbackSrc?: string
   /** CSS class for the retry button */
   retryClassName?: string;  retryClassName?: string
 }
@@ -28,25 +27,20 @@ export function ImageWithRetry({
   className,
   retryClassName,
 }: ImageWithRetryProps) {
-  const [currentSrc, setCurrentSrc] = useState(src);
-  const [failed, setFailed] = useState(false);
-
+  const [currentSrc, setCurrentSrc] = useState(src)
+  const [failed, setFailed] = useState(false)
   const handleError = () => {
-    setFailed(true);
-    setCurrentSrc(fallbackSrc);  };
-
+    setFailed(true)
+    setCurrentSrc(fallbackSrc) }
   const handleRetry = () => {
-    setFailed(false);
-    setCurrentSrc(src);  };    setCurrentSrc(fallbackSrc)
-  };
-
+    setFailed(false)
+    setCurrentSrc(src) };    setCurrentSrc(fallbackSrc)
+  }
   const handleRetry = () => {
-    setFailed(false);
+    setFailed(false)
     setCurrentSrc(src);    setCurrentSrc(src)
-  };
-
-  const fill = !('width' in props) && !('height' in props);
-
+  }
+  const fill = !('width' in props) && !('height' in props)
   return (
     <div className='relative inline-block'>      <Image    <div className="relative inline-block">
       <Image
@@ -74,6 +68,5 @@ export function ImageWithRetry({
         </button>
       )}
     </div>
-  );
-
-export default ImageWithRetry;
+  )
+export default ImageWithRetry

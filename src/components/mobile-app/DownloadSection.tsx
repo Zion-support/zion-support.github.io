@@ -1,7 +1,7 @@
-};
-import React from "react";
-import { QrCodeIcon } from 'lucide-react'import { AppStoreButtons } from "./AppStoreButtons";
-import { logInfo } from '@/utils/productionLogger';
+}
+import React from "react"
+import { QrCodeIcon } from 'lucide-react'import { AppStoreButtons } from "./AppStoreButtons"
+import { logInfo } from '@/utils/productionLogger'
 export const DownloadSection: React.FC = () => {
 
   // These would typically come from environment variables or a config
@@ -45,5 +45,5 @@ export const DownloadSection: React.FC = () => {
       </div>
     </section>
   )
-};
+}
 "

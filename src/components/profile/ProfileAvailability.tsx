@@ -1,41 +1,35 @@
-import { Availability } from '@/types/profile';
-import { Badge } from '@/components/ui/badge';
-import { Calendar, Clock, Check } from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
-import { Calendar } from 'lucide-react';
-
+import { Availability } from '@/types/profile'
+import { Badge } from '@/components/ui/badge'
+import { Calendar, Clock, Check } from 'lucide-react'
+import { Calendar } from 'lucide-react'
 interface ProfileAvailabilityProps {
-  availability: Availability;
-
+  availability: Availability
 export function ProfileAvailability({
   availability,
 }: ProfileAvailabilityProps) {
   const getStatusColor = (status: 'available' | 'limited' | 'unavailable') => {
     switch (status) {
       case 'available':
-        return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30';
+        return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30'
       case 'limited':
-        return 'bg-amber-500/20 text-amber-400 border-amber-500/30';
+        return 'bg-amber-500/20 text-amber-400 border-amber-500/30'
       case 'unavailable':
-        return 'bg-rose-500/20 text-rose-400 border-rose-500/30';
+        return 'bg-rose-500/20 text-rose-400 border-rose-500/30'
       default:
-        return '';
+        return ''
     }
-  };
-
+  }
   const getStatusText = (status: 'available' | 'limited' | 'unavailable') => {
     switch (status) {
       case 'available':
-        return 'Available Now';
+        return 'Available Now'
       case 'limited':
-        return 'Limited Availability';
+        return 'Limited Availability'
       case 'unavailable':
-        return 'Currently Unavailable';
+        return 'Currently Unavailable'
       default:
-        return '';    }
-  };
-
-
+        return '' }
+  }
   return (
     <div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8'>
       <h3 className='text-xl font-bold text-white mb-4'>Availability</h3>
@@ -109,7 +103,7 @@ export function ProfileAvailability({
           </div>
         )}
     </div>
-  );;
+  )
                 </div>
               </div>
             ))}
@@ -117,5 +111,5 @@ export function ProfileAvailability({
         </div>
       )}
     </div>
-  );
+  )
 }
