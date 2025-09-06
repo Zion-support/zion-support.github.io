@@ -31,8 +31,7 @@ export default function EmptyState({
               <a>
                 <EnhancedButton size="md">{primaryAction.label}</EnhancedButton>
               </a>
-            </Link>
-          )}
+            </Link>          )}
           {secondaryAction && (
             <Link href={secondaryAction.href}>
               <a>
@@ -40,8 +39,7 @@ export default function EmptyState({
                   {secondaryAction.label}
                 </EnhancedButton>
               </a>
-            </Link>
-          )}
+            </Link>          )}
         </div>
       )}
     </div>

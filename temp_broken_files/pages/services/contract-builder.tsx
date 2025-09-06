@@ -1,4 +1,13 @@
-import React from 'react';
+import { useEffect } from 'react',;
+import { useRouter } from 'next/router',;
+;
+export default function ContractBuilderRedirect() {;
+  const router = useRouter(),;
+  useEffect(() => {;
+    router.replace('/automation/contract-builder'),;
+  }, [router]),;
+  return null,;
+}import React from 'react';
 export default function Page() {
   return (
     <main className="min-h-screen bg-black text-zinc-100 p-8">

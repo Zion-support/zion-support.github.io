@@ -123,7 +123,6 @@ body {
   background: rgba(255, 255, 255, 0.3);
 }
 
-<<<<<<< HEAD
 /* Typography enhancements */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
@@ -140,133 +139,7 @@ h2 {
 }
 
 h3 {
-  font-size: clamp(1.5rem, 3vw, 2rem);
-=======
-/* Animations */
-@keyframes fadeIn {
-  from { 
-    opacity: 0; 
-    transform: translateY(20px); 
-  }
-  to { 
-    opacity: 1; 
-    transform: translateY(0); 
-  }
-}
-
-@keyframes slideIn {
-  from { 
-    transform: translateX(-30px); 
-    opacity: 0; 
-  }
-  to { 
-    transform: translateX(0); 
-    opacity: 1; 
-  }
-}
-
-@keyframes slideInRight {
-  from { 
-    transform: translateX(30px); 
-    opacity: 0; 
-  }
-  to { 
-    transform: translateX(0); 
-    opacity: 1; 
-  }
-}
-
-@keyframes pulse {
-  0%, 100% { 
-    opacity: 1; 
-    transform: scale(1);
-  }
-  50% { 
-    opacity: 0.7; 
-    transform: scale(1.05);
-  }
-}
-
-@keyframes float {
-  0%, 100% { 
-    transform: translateY(0px); 
-  }
-  50% { 
-    transform: translateY(-10px); 
-  }
-}
-
-@keyframes glow {
-  0%, 100% { 
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); 
-  }
-  50% { 
-    box-shadow: 0 0 30px rgba(59, 130, 246, 0.6); 
-  }
-}
-
-.animate-fade-in {
-  animation: fadeIn 0.6s ease-out;
-}
-
-.animate-slide-in {
-  animation: slideIn 0.4s ease-out;
-}
-
-.animate-slide-in-right {
-  animation: slideInRight 0.4s ease-out;
-}
-
-.animate-pulse-slow {
-  animation: pulse 3s ease-in-out infinite;
-}
-
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
-
-.animate-glow {
-  animation: glow 2s ease-in-out infinite;
-}
-
-/* Stagger animations for lists */
-.animate-stagger > * {
-  opacity: 0;
-  animation: fadeIn 0.6s ease-out forwards;
-}
-
-.animate-stagger > *:nth-child(1) { animation-delay: 0.1s; }
-.animate-stagger > *:nth-child(2) { animation-delay: 0.2s; }
-.animate-stagger > *:nth-child(3) { animation-delay: 0.3s; }
-.animate-stagger > *:nth-child(4) { animation-delay: 0.4s; }
-.animate-stagger > *:nth-child(5) { animation-delay: 0.5s; }
-.animate-stagger > *:nth-child(6) { animation-delay: 0.6s; }
-
-/* Custom components */
-.btn-primary {
-  @apply px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 hover:shadow-lg hover:shadow-blue-500/25;
-}
-
-.btn-secondary {
-  @apply px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white font-semibold rounded-lg transition-all duration-300 border border-gray-600 hover:border-gray-500 hover:shadow-lg;
-}
-
-.btn-outline {
-  @apply px-6 py-3 bg-transparent hover:bg-white/10 text-white font-semibold rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 hover:shadow-lg;
-}
-
-.card {
-  @apply bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-white/20 hover:shadow-xl hover:shadow-black/20;
-}
-
-.card-hover {
-  @apply card hover:scale-105 hover:shadow-2xl;
-}
-
-.input-field {
-  @apply w-full bg-gray-900/50 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 hover:border-white/30;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2e5c
-}
+  font-size: clamp(1.5rem, 3vw, 2rem);}
 
 /* Gradient text utility */
 .gradient-text {
@@ -275,17 +148,7 @@ h3 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   background-size: 200% 200%;
-<<<<<<< HEAD
-  animation: shimmer 3s ease-in-out infinite;
-=======
-  animation: gradient-shift 3s ease-in-out infinite;
-}
-
-@keyframes gradient-shift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2e5c
-}
+  animation: shimmer 3s ease-in-out infinite;}
 
 /* Enhanced button styles */
 .btn-primary {
@@ -380,7 +243,6 @@ h3 {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-<<<<<<< HEAD
 /* Enhanced focus states */
 .focus-ring {
   @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black;
@@ -416,21 +278,10 @@ h3 {
 /* Custom selection color */
 ::selection {
   background: rgba(59, 130, 246, 0.3);
-  color: white;
-=======
-/* Performance optimizations */
-.will-change-transform {
-  will-change: transform;
-}
-
-.will-change-opacity {
-  will-change: opacity;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2e5c
-}
+  color: white;}
 
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
-<<<<<<< HEAD
   * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
@@ -438,17 +289,7 @@ h3 {
   }
   
   html {
-    scroll-behavior: auto;
-=======
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2e5c
-  }
+    scroll-behavior: auto;  }
 }
 
 /* High contrast mode support */
@@ -458,38 +299,10 @@ h3 {
     --border-hover: rgba(255, 255, 255, 0.5);
   }
   
-<<<<<<< HEAD
   .btn-primary {
     @apply border-2 border-white;
   }
   
   .btn-secondary {
-    @apply border-2 border-white;
-=======
-  .card {
-    border-width: 2px;
-  }
-  
-  .btn-primary,
-  .btn-secondary {
-    border-width: 2px;
-  }
-}
-
-/* Print styles */
-@media print {
-  .no-print {
-    display: none !important;
-  }
-  
-  body {
-    background: white !important;
-    color: black !important;
-  }
-  
-  .gradient-text {
-    color: black !important;
-    background: none !important;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2e5c
-  }
+    @apply border-2 border-white;  }
 }

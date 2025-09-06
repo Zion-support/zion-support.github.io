@@ -43,6 +43,7 @@ test.describe('Performance Tests', () => {
     });
     
     await page.waitForTimeout(2000);
+    // Should not have bundle size warnings
     expect(consoleMessages.length).toBe(0);
   });
   

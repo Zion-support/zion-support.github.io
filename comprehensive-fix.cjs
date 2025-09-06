@@ -1,5 +1,46 @@
 const fs = require('fs');
 const path = require('path');
+;
+// Function to fix common syntax issues;
+function fixFile(filePath) {;
+  try {;
+    let content = fs.readFileSync(filePath, 'utf8');
+;
+    // Fix common syntax patterns;
+    content = content;
+      // Fix function calls with missing semicolons;
+      .replace(/(\w+)\s*\(\s*\)\s*}/g, '$1();');
+      .replace(/(\w+)\s*\(\s*\)\s*,/g, '$1();');
+      // Fix missing semicolons after statements;
+      .replace(/(\w+)\s*\(\s*\)\s*$/gm, '$1();');
+      // Fix object method calls;
+      .replace(/(\w+)\s*\(\s*\)\s*}/g, '$1();');
+      // Fix missing semicolons in variable declarations;
+      .replace(/(const|let|var)\s+(\w+)\s*=\s*[^;]+$/gm, match => {;
+        if (!match.endsWith(';')) {;
+          return match + ';';
+        }
+        return match;
+      });
+      // Fix missing semicolons in function calls;
+      .replace(/(\w+)\s*\(\s*[^)]*\)\s*$/gm, match => {;
+        if (;
+          !match.endsWith(';') &&;
+          !match.includes('{') &&;
+          !match.includes('}');
+        ) {;
+          return match + ';';
+        }
+        return match;
+      });
+      // Fix malformed function calls;
+      .replace(/(\w+)\s*\(\s*\)\s*}/g, '$1();');
+      .replace(/(\w+)\s*\(\s*\)\s*,/g, '$1();');
+      // Fix missing semicolons in useEffect;
+      .replace(;
+        /useEffect\s*\(\s*\(\)\s*=>\s*\{[^}]*\}\s*,\s*\[\s*\]\s*\)\s*$/gm,;
+        match => {;
+          if (!match.endsWith(';')) {;            return match + ';';
 
 class ComprehensiveFixer {
   constructor() {
@@ -17,10 +58,7 @@ class ComprehensiveFixer {
       const originalContent = content;
 
       // Remove merge conflict markers completely
-      content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-      content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
-      content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-      
+      content = content.replace(/[\s\S]*?[\s\S]*?      content = content.replace(/[\s\S]*?      content = content.replace(/[\s\S]*?      
       // Fix common syntax issues
       content = content.replace(/\{_/g, '{');
       content = content.replace(/_}/g, '}');
@@ -233,43 +271,95 @@ class ComprehensiveFixer {
       } else if (entry.isFile() && (entry.name.endsWith('.tsx') || entry.name.endsWith('.ts') || entry.name.endsWith('.jsx') || entry.name.endsWith('.js'))) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>') || content.includes('{_') || content.includes('_}') || content.includes('_ ') || content.includes('&quot;') || content.includes('&amp;') || content.includes('&lt;') || content.includes('&gt;')) {
+          if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>') || content.includes('{_') || content.includes('_}') || content.includes('_ ') || content.includes('&quot;') || content.includes('&amp;') || content.includes('&lt;') || content.includes('&gt;')) {
             files.push(fullPath);
           }
         } catch (error) {
           // Skip files that can't be read
         }
-      }
-    }
-    
-    return files;
-  }
-
-  async run() {
-    this.log('Starting comprehensive fix...');
-    
-    const filesToFix = this.findFilesToFix('/workspace');
-    this.log(`Found ${filesToFix.length} files to fix`);
-    
-    for (const file of filesToFix) {
-      this.fixFile(file);
-    }
-    
-    this.log(`Fixed ${this.fixedFiles.length} files`);
-    this.log(`Encountered ${this.errors.length} errors`);
-    
-    if (this.errors.length > 0) {
-      this.log('Errors:');
-      this.errors.forEach(err => this.log(`  ${err.file}: ${err.error}`));
-    }
-    
-    return {
-      fixedFiles: this.fixedFiles,
-      errors: this.errors
-    };
-  }
+      );
+      // Fix missing semicolons in return statements;
+      .replace(/return\s+[^;]+$/gm, match => {;
+        if (;
+          !match.endsWith(';') &&;
+          !match.includes('{') &&;
+          !match.includes('}');
+        ) {;
+          return match + ';';
+        }
+        return match;
+      });
+      // Fix trailing commas in function calls;
+      .replace(/,\s*\)/g, ')');
+      .replace(/,\s*}/g, '}');
+      .replace(/,\s*]/g, ']');
+      // Fix multiple semicolons;
+      .replace(/;\s*;/g, ';');
+      // Fix missing semicolons in if statements;
+      .replace(/if\s*\([^)]+\)\s*\{[^}]*\}\s*$/gm, match => {;
+        if (!match.endsWith(';')) {;
+          return match + ';';
+        }
+        return match;
+      });
+      // Clean up extra whitespace;
+      .replace(/\n\s*\n\s*\n/g, '\n\n');
+      .replace(/^\s+$/gm, '');
+;
+    fs.writeFileSync(filePath, content);
+    console.log(`✅ Fixed ${filePath}`);
+    return true;
+  } catch (error) {;
+    console.error(`❌ Error fixing ${filePath} `, error.message);
+    return false;  }
 }
-
+;
+// List of files to fix;
+const filesToFix = [;
+  'components/Header.tsx',;
+  'components/OptimizedImage.tsx',;
+  'components/Sidebar.tsx',;
+  'components/SimpleLayout.tsx',;
+  'components/SkeletonLoader.tsx',;
+  'components/layout/EnhancedFooter.tsx',;
+  'components/layout/Footer.tsx',;
+  'components/layout/Header.tsx',;
+  'components/layout/Layout.tsx',;
+  'components/layout/MainLayout.tsx',;
+  'components/performance/LazyComponent.tsx',;
+  'components/performance/OptimizedImage.tsx',;
+  'components/ui/EnhancedMarketplaceCard.tsx',;
+  'components/ui/InteractiveNavigation.tsx',;
+  'components/ui/NotificationSystem.tsx',;  'components/Header.tsx',
+  'components/OptimizedImage.tsx',
+  'components/Sidebar.tsx',
+  'components/SimpleLayout.tsx',
+  'components/SkeletonLoader.tsx',
+  'components/layout/EnhancedFooter.tsx',
+  'components/layout/Footer.tsx',
+  'components/layout/Header.tsx',
+  'components/layout/Layout.tsx',
+  'components/layout/MainLayout.tsx',
+  'components/performance/LazyComponent.tsx',
+  'components/performance/OptimizedImage.tsx',
+  'components/ui/EnhancedMarketplaceCard.tsx',
+  'components/ui/InteractiveNavigation.tsx',
+  'components/ui/NotificationSystem.tsx',
+];
+;
+console.log('🔧 Starting comprehensive syntax fixes...');
+;
+let fixedCount = 0;
+filesToFix.forEach(file => {;
+  const fullPath = path.join('/workspace', file);
+  if (fs.existsSync(fullPath)) {;
+    if (fixFile(fullPath)) {;
+      fixedCount++;
+    }
+  }
+});
+;
+console.log(`\n🎉 Fixed ${fixedCount}/${filesToFix.length} files`);
 // Run the comprehensive fixer
 if (require.main === module) {
   const fixer = new ComprehensiveFixer();

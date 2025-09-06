@@ -17,7 +17,6 @@ export function ChatWidget({ roomId, recipientId, isOpen, onClose }: ChatWidgetP
   const { user } = useAuth();
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [text, setText] = useState('');
-<<<<<<< HEAD
   const socketRef = useRef<any>(null);
   const inputRef = useRef<HTMLTextAreaElement | null>(null);
 
@@ -44,24 +43,7 @@ export function ChatWidget({ roomId, recipientId, isOpen, onClose }: ChatWidgetP
       socket = (io as any)({ path: '/api/socket', transports: ['websocket'] });
       socketRef.current = socket;
       socket.emit('join-room', roomId);
-      socket.on('receive-message', (msg: Message) => {
-=======
-  const socketRef = useRef<any>();
-
-  useEffect(() => {
-    if (!isOpen) return;
-
-    if ("Notification" in window && Notification.permission === "default") {
-      Notification.requestPermission();
-    }
-
-    async function setup() {
-      const { io } = await import('socket.io-client');
-      socketRef.current = io({ path: '/api/socket', transports: ['websocket'] });
-      socketRef.current.emit('join-room', roomId);
-      socketRef.current.on('receive-message', (msg: ChatMessage) => {
->>>>>>> origin/74tfm8-codex/implement-instant-messaging-for-negotiations
-        setMessages(prev => [...prev, msg]);
+      socket.on('receive-message', (msg: Message) => {        setMessages(prev => [...prev, msg]);
         triggerNotification('New message', msg.content);
       });
     }
@@ -80,7 +62,6 @@ export function ChatWidget({ roomId, recipientId, isOpen, onClose }: ChatWidgetP
     }
   };
 
-<<<<<<< HEAD
   // Persist messages whenever they change while open
   useEffect(() => {
     if (!isOpen) return;
@@ -96,30 +77,11 @@ export function ChatWidget({ roomId, recipientId, isOpen, onClose }: ChatWidgetP
       handleSend();
     }
   };
-
-=======
->>>>>>> origin/74tfm8-codex/implement-instant-messaging-for-negotiations
-  const handleSend = () => {
-    if (!socketRef.current || !text.trim() || !user) return;
-    const msg: ChatMessage = {
-      id: Date.now().toString(),
-      sender_id: String(user.id),
-      recipient_id: recipientId,
-      content: text,
-      created_at: new Date().toISOString(),
-<<<<<<< HEAD
-      read: false
-=======
-      read: false,
->>>>>>> origin/74tfm8-codex/implement-instant-messaging-for-negotiations
     };
     socketRef.current.emit('send-message', { roomId, message: msg });
     setMessages(prev => [...prev, msg]);
     setText('');
-<<<<<<< HEAD
-=======
     // TODO: persist message via backend
->>>>>>> origin/74tfm8-codex/implement-instant-messaging-for-negotiations
   };
 
   if (!isOpen) return null;

@@ -1,4 +1,13 @@
-import React from 'react';
+import type { GetServerSideProps } from 'next',;
+;
+export const getServerSideProps:GetServerSideProps = async () => {;
+  return {;
+    redirect:{;
+      destination:'/media/kit',;
+      permanent:false}},;
+},;
+;
+export default function LaunchRedirect() { return null, }import React from 'react';
 export default function Page() {
   return (
     <main className="min-h-screen bg-black text-zinc-100 p-8">

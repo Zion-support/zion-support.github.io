@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src.broken/utils/offworld/orbitdb.ts
+:src.broken/utils/offworld/orbitdb.ts
 // Stub offworld orbitdb utility - placeholder for missing functionality
 export const createOrbitDB = async () => {
   // Placeholder implementation
@@ -9,7 +9,6 @@ export const connectToOrbitDB = async (id: string) => {
   // Placeholder implementation
   return { connected: true, success: true };
 };
-=======
 import type { IPFS } from 'ipfs-core-types';
 
 let createIpfsClient: any;
@@ -72,4 +71,3 @@ export async function editConstitution(stores: OrbitStores, change: { editor: st
   await stores.constitution.put({ _id: id, ...change, ts: change.ts || Date.now() });
   return true;
 }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6:src/utils/offworld/orbitdb.ts

@@ -10,7 +10,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 console.log('📊 Zion Tech Group - Monitoring Dashboard');
-console.log('=========================================');
+console.log('======');
 
 const monitoringData = {
     timestamp: new Date().toISOString(),
@@ -180,7 +180,7 @@ const reportPath = 'monitoring-data.json';
 fs.writeFileSync(reportPath, JSON.stringify(monitoringData, null, 2));
 
 console.log('\n📊 Monitoring Summary');
-console.log('=====================');
+console.log('');
 console.log(`Alerts: ${monitoringData.alerts.length}`);
 console.log(`System Status: ${monitoringData.alerts.length === 0 ? 'Healthy' : 'Needs Attention'}`);
 

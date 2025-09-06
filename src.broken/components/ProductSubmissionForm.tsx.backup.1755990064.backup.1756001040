@@ -1,8 +1,5 @@
 import React from 'react';
 export function ProductSubmissionForm() {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   const { user } = useAuth();
   const { toast } = useToast();
   const router = useRouter();
@@ -198,10 +195,6 @@ export function ProductSubmissionForm() {
       setIsSubmitting(false);
     }
   };
-
-=======
->>>>>>> origin/automation-error-fixes
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   return (
     <div>
       <h1>Component</h1>

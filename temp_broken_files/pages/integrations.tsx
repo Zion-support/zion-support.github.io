@@ -1,4 +1,11 @@
-import React from 'react';
+import { useEffect } from 'react',;
+import { useRouter } from 'next/router',;
+;
+export default function IntegrationsRedirect() {;
+  const router = useRouter(),;
+  useEffect(() => { router.replace('/admin/integrations'), }, [router]),;
+  return null,;
+}import React from 'react';
 export default function Page() {
   return (
     <main className="min-h-screen bg-black text-zinc-100 p-8">

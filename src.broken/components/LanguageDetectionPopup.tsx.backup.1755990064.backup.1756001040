@@ -1,8 +1,5 @@
 import React from 'react';
 export function LanguageDetectionPopup() {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   const [open, setOpen] = useState(false);
   const { t } = useTranslation();
   const { changeLanguage, currentLanguage, supportedLanguages } = useLanguage() as LanguageContextType;
@@ -35,10 +32,6 @@ export function LanguageDetectionPopup() {
     await changeLanguage(detectedLanguage);
     setOpen(false);
   };
-
-=======
->>>>>>> origin/automation-error-fixes
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   return (
     <div>
       <h1>Component</h1>

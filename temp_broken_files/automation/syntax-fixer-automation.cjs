@@ -100,8 +100,7 @@ class SyntaxFixerAutomation {
       const content = fs.readFileSync(filePath, 'utf8');
 
       const corruptionPatterns = [
-        />>>>>>> cursor/,
-        /""',';';'/,
+        /        /""',';';'/,
         /';';';'/,
         /""';';';'/,
         /,\s*$/,

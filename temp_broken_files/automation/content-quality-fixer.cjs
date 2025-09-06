@@ -16,13 +16,12 @@ class ContentQualityFixer {
 
   async fixContent() {
     console.log('🔧 Starting content quality fixes...');
-    
+
     try {
       // Fix common content issues
       await this.fixMarkdownFiles();
       await this.fixHTMLFiles();
       await this.fixTextFiles();
-      
       console.log(`✅ Content quality fixes completed. Fixed ${this.fixes.length} issues.`);
       return { success: true, fixes: this.fixes, issues: this.issues };
     } catch (error) {
@@ -33,7 +32,7 @@ class ContentQualityFixer {
 
   async fixMarkdownFiles() {
     const markdownFiles = this.findFiles('.md');
-    
+
     for (const file of markdownFiles) {
       try {
         let content = fs.readFileSync(file, 'utf8');
@@ -54,7 +53,7 @@ class ContentQualityFixer {
 
   async fixHTMLFiles() {
     const htmlFiles = this.findFiles('.html');
-    
+
     for (const file of htmlFiles) {
       try {
         let content = fs.readFileSync(file, 'utf8');
@@ -75,7 +74,7 @@ class ContentQualityFixer {
 
   async fixTextFiles() {
     const textFiles = this.findFiles('.txt');
-    
+
     for (const file of textFiles) {
       try {
         let content = fs.readFileSync(file, 'utf8');
@@ -96,14 +95,12 @@ class ContentQualityFixer {
 
   fixMarkdownContent(content) {
     // Fix multiple spaces
-    content = content.replace(/[ ]{2}/g, ' ');
-    
+    content = content.replace(/[ ]{2,}/g, ' ');
     // Fix line breaks
-    content = content.replace(/\n{3}/g, '\n\n');
+    content = content.replace(/\n{3,}/g, '\n\n');
     
     // Fix list formatting
     content = content.replace(/^\s*[-*+]\s+/gm, '- ');
-    
     return content;
   }
 
@@ -122,10 +119,9 @@ class ContentQualityFixer {
 
   fixTextContent(content) {
     // Fix multiple spaces
-    content = content.replace(/[ ]{2}/g, ' ');
-    
+    content = content.replace(/[ ]{2,}/g, ' ');
     // Fix line breaks
-    content = content.replace(/\n{3}/g, '\n\n');
+    content = content.replace(/\n{3,}/g, '\n\n');
     
     return content;
   }
@@ -149,12 +145,10 @@ class ContentQualityFixer {
         // Skip directories we can't access
       }
     };
-    
     searchDir('.');
     return files;
   }
 }
-
 // Run if called directly
 if (require.main === module) {
   const fixer = new ContentQualityFixer();

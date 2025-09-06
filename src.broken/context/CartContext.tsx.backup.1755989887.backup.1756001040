@@ -1,15 +1,6 @@
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
 import { CartContextType, CartItem, CartAction } from '@/types/cart';
-<<<<<<< HEAD
 import { safeStorage } from '@/utils/safeStorage';
-=======
-<<<<<<< HEAD
-import { saveCart, getCart } from '@/lib/db';
-=======
-import { safeStorage } from '@/utils/safeStorage';
->>>>>>> origin/8aozst-codex/implement-cart-functionality-with-react-context
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-
 interface CartState { items: CartItem[]; }
 
 const initialState: CartState = { items: [] };
@@ -34,15 +25,8 @@ function cartReducer(state: CartState, action: CartAction): CartState {
       return { items: state.items.filter(i => i.id !== action.payload) };
     case 'CLEAR_CART':
       return { items: [] };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     case 'SET_ITEMS':
-      return { items: action.payload };
-=======
->>>>>>> origin/8aozst-codex/implement-cart-functionality-with-react-context
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-    default:
+      return { items: action.payload };    default:
       return state;
   }
 }
@@ -56,9 +40,6 @@ export function useCart(): CartContextType {
 }
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   const [state, dispatch] = useReducer(cartReducer, initialState);
 
   useEffect(() => {
@@ -95,34 +76,5 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       logErrorToProduction('[CartProvider] Failed to persist cart to localStorage', { data: error });
     }
   }, [items]); // Dependency array ensures this runs when `items` from Redux changes.
-
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-  const [state, dispatch] = useReducer(
-    cartReducer,
-    initialState,
-    () => {
-      try {
-        const stored = safeStorage.getItem('cart');
-        return stored ? { items: JSON.parse(stored) as CartItem[] } : initialState;
-      } catch {
-        return initialState;
-      }
-    }
-  );
-
-  useEffect(() => {
-    safeStorage.setItem('cart', JSON.stringify(state.items));
-  }, [state.items]);
-
-  const value: CartContextType = {
-    items: state.items,
-    dispatch,
-  };
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/8aozst-codex/implement-cart-functionality-with-react-context
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }

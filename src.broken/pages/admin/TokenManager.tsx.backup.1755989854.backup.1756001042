@@ -48,19 +48,8 @@ export default function TokenManager() {
         description: 'Transaction processed'
       });
       fetchTransactions();
-<<<<<<< HEAD
     } catch (err: unknown) {
-      logErrorToProduction('Failed to process transaction:', { data: err });
-=======
-<<<<<<< HEAD
-    } else {
-      const err = res.data;
-=======
-    } catch (err: unknown) {
-      logErrorToProduction('Failed to process transaction:', { data: err });
->>>>>>> origin/4fu9r9-codex/check-logs-and-fix-errors
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-      toast({
+      logErrorToProduction('Failed to process transaction:', { data: err });      toast({
         title: 'Error',
         description: (typeof err === 'object' && err && 'message' in err ? (err as { message?: string }).message : 'Failed') || 'Unknown error occurred',
         variant: 'destructive'

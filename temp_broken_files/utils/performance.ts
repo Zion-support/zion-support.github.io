@@ -1,3 +1,13 @@
+
+};
+          observer.unobserve(image)};
+      };
+;
+}})),;
+;};
+          observer.unobserve(image)};
+      };
+}}));
 };
 export const lazyLoadImage = ("img": HTMLImageElemen t) => {,;
   const observer = new IntersectionObserver((entries) => {,;
@@ -8,4 +18,9 @@ export const lazyLoadImage = ("img": HTMLImageElemen t) => {,;
           image.src = image.dataset.src,',, ';
           image.classList.remove('lazy'),;
           observer.unobserve(image)};
+<<<<<<< HEAD:temp_broken_files/utils/performance.ts
       };"}})),'"
+=======
+      };
+}})),'"
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-e10e:src/utils/performance.ts

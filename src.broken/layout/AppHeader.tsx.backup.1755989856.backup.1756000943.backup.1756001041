@@ -3,45 +3,8 @@ import { useState } from 'react';
 import { useMessaging } from '@/context/MessagingContext';
 import { MainNavigation } from './MainNavigation';
 import { Logo } from '@/components/header/Logo';
-<<<<<<< HEAD
 import { Container } from '@/components/Container';
-import { useTranslation } from 'react-i18next';
-=======
->>>>>>> origin/4pkscj-codex/disable-theme-toggle-and-set-default-dark-theme
-import { Menu, X } from 'lucide-react';
-import { MobileMenu } from '@/components/header/MobileMenu';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-
-export function AppHeader() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const isMobile = useIsMobile();
-  
-  // Try to access the messaging context, but provide a fallback value if it's not available
-  let unreadCount = 0;
-  try {
-    const { unreadCount: count } = useMessaging();
-    unreadCount = count;
-  } catch (error) {
-    console.warn('Messaging context not available');
-  }
-  
-  return (
-    <>
-<<<<<<< HEAD
-      <header
-        style={{ "--nav-height": "64px" } as React.CSSProperties}
-        className={cn(
-          "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",
-          { "bg-red-500": mobileMenuOpen }
-        )}
-      >
-        <Container className="flex h-16 items-center">
-=======
-      <header className="sticky top-0 z-50 w-full border-b border-green-700/20 bg-gray-900/90 backdrop-blur-md">
-        <div className="container flex h-16 items-center px-4 sm:px-6">
->>>>>>> origin/4pkscj-codex/disable-theme-toggle-and-set-default-dark-theme
-          <Logo />
+import { useTranslation } from 'react-i18next';          <Logo />
           <div className="ml-6 flex-1 hidden md:block">
             <MainNavigation unreadCount={unreadCount} />
           </div>
@@ -62,7 +25,6 @@ export function AppHeader() {
               )}
             </button>
           </div>
-<<<<<<< HEAD
 
           <PointsBadge />
           {!isLoggedIn && (
@@ -99,12 +61,7 @@ export function AppHeader() {
               <UserMenu />
             </div>
           )}
-        </Container>
-=======
-          
-        </div>
->>>>>>> origin/4pkscj-codex/disable-theme-toggle-and-set-default-dark-theme
-      </header>
+        </Container>      </header>
       
       {/* Mobile menu - positioned outside of header to prevent overlap issues */}
       {mobileMenuOpen && (

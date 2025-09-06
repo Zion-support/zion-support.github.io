@@ -1,3 +1,8 @@
+};
+;
+,;
+export default nextConfig,;
+export default nextConfig;
 const nextConfig = {,
   reactStrictMode: true,
   compress: true,

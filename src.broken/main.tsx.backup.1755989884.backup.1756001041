@@ -42,9 +42,6 @@ const queryClient = new QueryClient({
   },
 });
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 function GlobalErrorFallback({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) {
   const { t } = useTranslation();
   React.useEffect(() => {
@@ -68,28 +65,12 @@ try {
       <HelmetProvider>
         <QueryClientProvider client={queryClient}>
           <SnackbarProvider maxSnack={3}>
-            <ToastInitializer />
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-// Render the app with proper provider structure
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <HelmetProvider>
-      <QueryClientProvider client={queryClient}>
-        <Provider store={store}>
-<<<<<<< HEAD
-=======
->>>>>>> origin/85f672-codex/implement-wishlist-functionality
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-          <WhitelabelProvider>
+            <ToastInitializer />          <WhitelabelProvider>
             <Router>
               <AuthProvider>
                 <NotificationProvider>
                   <AnalyticsProvider>
                     <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                       <ErrorBoundary FallbackComponent={GlobalErrorFallback}>
                         <ViewModeProvider>
                           <CartProvider>
@@ -101,28 +82,12 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
                           </CartProvider>
                         </ViewModeProvider>
                         <LanguageDetectionPopup />
-                      </ErrorBoundary>
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-                      <ViewModeProvider>
-                        <AppLayout>
-                          <App />
-                        </AppLayout>
-                      </ViewModeProvider>
-                      <LanguageDetectionPopup />
-<<<<<<< HEAD
-=======
->>>>>>> origin/85f672-codex/implement-wishlist-functionality
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-                    </LanguageProvider>
+                      </ErrorBoundary>                    </LanguageProvider>
                   </AnalyticsProvider>
                 </NotificationProvider>
               </AuthProvider>
             </Router>
           </WhitelabelProvider>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
           </SnackbarProvider>
         </QueryClientProvider>
       </HelmetProvider>
@@ -165,14 +130,3 @@ window.addEventListener('unhandledrejection', (e) => {
 });
 
 registerServiceWorker();
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-        </Provider>
-      </QueryClientProvider>
-    </HelmetProvider>
-  </React.StrictMode>,
-);
-<<<<<<< HEAD
-=======
->>>>>>> origin/85f672-codex/implement-wishlist-functionality
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3

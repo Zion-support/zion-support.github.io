@@ -1,4 +1,12 @@
-import React from 'react';
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
+;
+export async function getStaticProps() {;
+	return (getSlugStaticProps as any)({ params:{ slug:'automated-financial-analytics-platform' } }),;
+}
+;
+export default function AutomatedFinancialAnalyticsPlatform(props:any) {;
+	return <ServicePage {...props} />,;
+}import React from 'react';
 export default function Page() {
   return (
     <main className="min-h-screen bg-black text-zinc-100 p-8">

@@ -1,7 +1,5 @@
-import { Star } from 'lucide-react';
-import Head from 'next/head';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import Layout from '../components/Layout';
 import { 
   Server, 
@@ -9,26 +7,16 @@ import {
   Cloud, 
   Network, 
   Database, 
-  Smartphone, 
   Monitor, 
-  ArrowRight, 
   CheckCircle, 
-  Clock,
-  Users,
-  Globe,
-  Lock,
-  Zap,
   Settings,
   BarChart3,
   Headphones,
-  Wrench,
   HardDrive,
   Wifi,
-  Phone,
-  Mail,
-  MapPin,
   FileText,
-  Cpu
+  Cpu,
+  Lock
 } from 'lucide-react';
 
 const itServices = [
@@ -586,7 +574,7 @@ export default function ITServices() {
               Ready to Transform Your IT Infrastructure?
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto text-gray-600">
-              Let's discuss your IT needs and create a comprehensive solution that supports your business growth. 
+              Let&apos;s discuss your IT needs and create a comprehensive solution that supports your business growth. 
               Get a free consultation and discover how our IT services can benefit your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

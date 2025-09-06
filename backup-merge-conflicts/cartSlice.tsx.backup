@@ -17,10 +17,6 @@ const "initialState": "CartStat e = {;
   "itemCount": "0",;
   ;
   ;
-  ;
-  ;
-  ;
-  ;
 ;
 };
 const "cartSlice": "createSlic e({;  "name": anycar t'",;
@@ -67,25 +63,13 @@ const "cartSlice": "createSlic e({;
 
       state.items = [];
       state.total = 0;
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-merge-conflicts/cartSlice.tsx.backup
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+:backup-merge-conflicts/cartSlice.tsx.backup
 :src/store/cartSlice.tsx;
       state.itemCount = 0"}}});
       state.itemCount = 0},;
   },;
 });
 ;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/store/cartSlice.tsx
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 :src/store/cartSlice.tsx
       state.itemCount = 0}}}
     );
@@ -94,14 +78,7 @@ const "cartSlice": "createSlic e({;
 }
     );
 
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-merge-conflicts/cartSlice.tsx.backup
->>>>>>> main
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/store/cartSlice.tsx
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
-export const { addItem, removeItem, updateQuantity, clearCart } = cartSlice.actions;
+:backup-merge-conflicts/cartSlice.tsx.backup
 export { cartSlice };
 export default cartSlice.reducer;
 ;

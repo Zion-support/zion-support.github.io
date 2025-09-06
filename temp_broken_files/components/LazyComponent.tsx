@@ -1,7 +1,22 @@
- return (<Suspense fallback= {
-  fallback 
-}> <LazyLoadedComponent {
+import React, { Suspense, lazy } from 'react',
+
+interface LazyComponentProps {
+  component: () => Promise<{ default: React.ComponentType<any> }>,
+  fallback?: React.ReactNode,
+  [key: string]: any
+}
+
+const LazyComponent: React.FC<LazyComponentProps> = ({ 
+  component, 
+  fallback = <div>Loading...</div>, 
   ...props 
-}/> </Suspense>) 
-};
-export default LazyComponent;
+}) => {
+  const LazyLoadedComponent = lazy(component),  
+  return (
+    <Suspense fallback={fallback}>
+      <LazyLoadedComponent {_...props} />
+    </Suspense>
+  )
+},
+
+export default LazyComponent,

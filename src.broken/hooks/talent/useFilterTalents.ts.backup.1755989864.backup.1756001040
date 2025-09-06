@@ -1,8 +1,5 @@
 
 import { useState, useMemo } from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import type { TalentProfile } from '@/types/talent';
 
 export interface TalentFilterOptions {
@@ -37,23 +34,7 @@ export function useFilterTalents(
   );
   const [sortOption, setSortOption] = useState<string>(
     initial.sortOption || 'relevance'
-  );
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-import { TalentProfile } from '@/types/talent';
-export function useFilterTalents(talents: TalentProfile[] = []) {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
-  const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
-  const [selectedRegions, setSelectedRegions] = useState<string[]>([]);
-  const [priceRange, setPriceRange] = useState<[number, number]>([50, 200]);
-  const [experienceRange, setExperienceRange] = useState<[number, number]>([0, 15]);
-  const [sortOption, setSortOption] = useState<string>('relevance');
-<<<<<<< HEAD
-=======
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-  
+  );  
   const toggleSkill = (skill: string) => {
     setSelectedSkills(prev => 
       prev.includes(skill) 

@@ -10,7 +10,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 console.log('🔒 Zion Tech Group - Enhanced Security Scanner');
-console.log('==============================================');
+console.log('====');
 
 const securityReport = {
     timestamp: new Date().toISOString(),
@@ -141,7 +141,7 @@ const reportPath = 'enhanced-security-scan-report.json';
 fs.writeFileSync(reportPath, JSON.stringify(securityReport, null, 2));
 
 console.log('\n📊 Enhanced Security Scan Summary');
-console.log('==================================');
+console.log('======');
 console.log(`Total Checks: ${securityReport.summary.total}`);
 console.log(`✅ Passed: ${securityReport.summary.passed}`);
 console.log(`⚠️  Warnings: ${securityReport.summary.warnings}`);

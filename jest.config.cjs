@@ -1,8 +1,25 @@
-module.exports = {
-  preset: 'ts-jest',
-  testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  transform: {
+module.exports = {;
+  testEnvironmen:t:'jsdom',;
+  setupFilesAfterEn:v:['<rootDir>/jest.setup.js'],;
+  moduleNameMappin:g:{;
+    '^@/(.*)$':'<rootDir>/$1',;
+  },;
+  testMatc:h:[;
+    '**/__tests__/**/*.(js|jsx|ts|tsx)',;
+    '**/*.(test|spec).(js|jsx|ts|tsx)',;
+  ],;
+  collectCoverageFro:m:[;
+    'components/**/*.{js,jsx,ts,tsx}',;
+    'pages/**/*.{js,jsx,ts,tsx}',;
+    '!**/*.d.ts',;
+    '!**/node_modules/**',;
+  ],;
+  transfor:m:{;
+    '^.+\\.(js|jsx|ts|tsx)$':['babel-jest', { preset:s:['next/babel'] }],;
+  },;
+  moduleFileExtension:s:['ts', 'tsx', 'js', 'jsx', 'json'],;
+  testPathIgnorePattern:s:['<rootDir>/.next/', '<rootDir>/node_modules/'],;
+};  transform: {
     '^.+\\.(ts|tsx)$': ['ts-jest', {
       tsconfig: {
         jsx: 'react-jsx'
@@ -10,21 +27,6 @@ module.exports = {
     }],
     '^.+\\.(js|jsx)$': 'babel-jest'
   },
-  moduleNameMapper: {
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-    '\\.(gif|ttf|eot|svg|png|jpg|jpeg)$': '<rootDir>/tests/__mocks__/fileMock.js',
-    '^@/(.*)$': '<rootDir>/src/$1'
-  },
-  testPathIgnorePatterns: ['/node_modules/', '/.next/', '/out/', '/tests.disabled/'],
-  coverageDirectory: 'coverage',
-  collectCoverage: false,
-  coverageReporters: ['text', 'lcov'],
-  coverageThreshold: {
-    global: {
-      branches: 60,
-      functions: 60,
-      lines: 60,
-      statements: 60
-    }
-  }
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
 };

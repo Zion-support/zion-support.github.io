@@ -1,11 +1,103 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
+;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
-class PerformanceMonitor {
-  constructor() {
+;
+class PerformanceMonitor {;
+  constructor() {;
+    this.metrics = {;
+      buildTim:e:0,;
+      bundleSiz:e:0,;
+      memoryUsag:e:0,;
+      cpuUsag:e:0,;
+      lastUpdate:d:new Date().toISOString(),;    };
+    this.logFile = path.join(__dirname, 'logs', 'performance-monitor.log');
+    this.ensureLogDirectory();
+  }
+;
+  ensureLogDirectory() {;
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {;
+      fs.mkdirSync(logDir, { recursiv:e:true });    }
+  }
+;
+  log(message, level = 'INFO') {;
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
+    console.log(`[${level}] ${message}`);
+    fs.appendFileSync(this.logFile, logMessage);
+  }
+;
+  async monitorPerformance() {;
+    this.log('⚡ Starting performance monitoring...');
+;
+    try {;
+      // Monitor build time;
+      const buildTime = await this.measureBuildTime();
+      this.metrics.buildTime = buildTime;
+;
+      // Monitor bundle size;
+      const bundleSize = await this.measureBundleSize();
+      this.metrics.bundleSize = bundleSize;
+;
+      // Monitor memory usage;
+      const memoryUsage = process.memoryUsage();
+      this.metrics.memoryUsage = memoryUsage.heapUsed / 1024 / 1024; // MB;
+;
+      // Monitor CPU usage;
+      const cpuUsage = process.cpuUsage();
+      this.metrics.cpuUsage = cpuUsage.user / 1000000; // seconds;
+;
+      this.metrics.lastUpdated = new Date().toISOString();
+;
+      await this.saveMetrics();
+      await this.generatePerformanceReport();
+;
+      this.log('Performance monitoring completed');
+      return this.metrics;
+    } catch (error) {;
+      this.log(`Performance monitoring:failed:${error.message}`, 'ERROR');      return null;
+    }
+  }
+;
+  async measureBuildTime() {;
+    const startTime = Date.now();
+    try {;
+      execSync('npm run build', { stdi:o:'pipe', cw:d:process.cwd() });      return Date.now() - startTime;
+    } catch (error) {;
+      return -1; // Build failed;
+    }
+  }
+;
+  async measureBundleSize() {;
+    try {;
+      const buildDir = path.join(process.cwd(), '.next');
+      if (!fs.existsSync(buildDir)) {;
+        return 0;
+      }
+;
+      const getDirSize = dir => {;
+        let size = 0;
+        const files = fs.readdirSync(dir);
+;
+        files.forEach(file => {;
+          const filePath = path.join(dir, file);
+          const stat = fs.statSync(filePath);
+;
+          if (stat.isDirectory()) {;
+            size += getDirSize(filePath);
+          } else {;
+            size += stat.size;
+          }
+        });
+;
+        return size;
+      };
+;
+      return getDirSize(buildDir);
+    } catch (error) {;
+      return 0;
     this.projectRoot = process.cwd();
     this.metrics = {};
     this.performanceIssues = [];
@@ -46,28 +138,20 @@ class PerformanceMonitor {
       this.log(`❌ Build performance measurement failed: ${error.message}`);
     }
   }
-
-  async measureLintPerformance() {
-    this.log('🔍 Measuring lint performance...');
-    
-    try {
-      const startTime = Date.now();
-      
-      execSync('npm run lint', { 
-        stdio: 'pipe',
-        encoding: 'utf8'
-      });
-      
-      const endTime = Date.now();
-      const lintTime = endTime - startTime;
-      
-      this.metrics.lintTime = lintTime;
-      this.log(`Lint completed in ${lintTime}ms`);
-      
-    } catch (error) {
-      this.log(`❌ Lint performance measurement failed: ${error.message}`);
-    }
+;
+  async saveMetrics() {;
+    const metricsFile = path.join(;
+      __dirname,;
+      'reports',;
+      'performance-metrics.json';    );
+    fs.mkdirSync(path.dirname(metricsFile), { recursiv:e:true });
+    fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2));
   }
+;
+  async generatePerformanceReport() {;
+    const report = {;
+      ...this.metrics,;
+      recommendation:s:this.generateRecommendations(),;  }
 
   async measureTypeCheckPerformance() {
     this.log('📝 Measuring TypeScript type check performance...');
@@ -286,21 +370,50 @@ class PerformanceMonitor {
 
   generateReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      metrics: this.metrics,
-      performanceIssues: this.performanceIssues,
-      optimizations: this.optimizations,
-      summary: {
-        buildTime: this.metrics.buildTime || 0,
-        bundleSize: this.metrics.bundleSize || 0,
-        totalIssues: this.performanceIssues.length,
-        criticalIssues: this.performanceIssues.filter(i => i.severity === 'error').length,
-        warnings: this.performanceIssues.filter(i => i.severity === 'warning').length,
-        info: this.performanceIssues.filter(i => i.severity === 'info').length,
-        totalOptimizations: this.optimizations.length
-      }
-    };
-
+      ...this.metrics,
+      recommendations: this.generateRecommendations(),
+;
+    const reportFile = path.join(;
+      __dirname,;
+      'reports',;
+      'performance-report.json';    );
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+;
+    this.log(`Performance report:generated:${reportFile}`);  }
+;
+  generateRecommendations() {;
+    const recommendations = [];
+;
+    if (this.metrics.buildTime > 60000) {;
+      // 1 minute;
+      recommendations.push(;
+        'Consider optimizing build process - build time is high';
+      );
+    }
+;
+    if (this.metrics.bundleSize > 5000000) {;
+      // 5MB;
+      recommendations.push('Consider code splitting - bundle size is large');
+    }
+;
+    if (this.metrics.memoryUsage > 100) {;
+      // 100MB;
+      recommendations.push(;
+        'Consider memory optimization - high memory usage detected';
+      );
+    }
+;
+    return recommendations;
+  }
+}
+;
+// Run if called directly;
+if (require.main === module) {;
+  const monitor = new PerformanceMonitor();
+  monitor.monitorPerformance().catch(console.error);
+}
+;
+module.exports = PerformanceMonitor;
     const reportPath = path.join(this.projectRoot, 'performance-monitor-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`📊 Performance report saved to: ${reportPath}`);

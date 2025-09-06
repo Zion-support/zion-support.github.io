@@ -1,5 +1,4 @@
 const nextConfig = {
-=======
   assetPrefix,
   poweredByHeader: false,
   trailingSlash: false,
@@ -238,7 +237,6 @@ const nextConfig = {
     'remark-parse',
     'remark-rehype',
     'formik',
-=======
     'lodash',
     'lodash-es',
     'lodash/isPlainObject',
@@ -315,7 +313,6 @@ const nextConfig = {
           }),
         })
       );
-
 
     }
     

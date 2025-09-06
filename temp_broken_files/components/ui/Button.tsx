@@ -1,7 +1,5 @@
-import React from "react";
-import Link from "next/link";
-
-interface ButtonProps {
+import React from 'react',
+import Link from 'next/link',interface ButtonProps {
   children: React.ReactNode;
   href?: string;
   onClick?: () => void;
@@ -34,27 +32,22 @@ const Button: React.FC<ButtonProps> = ({
 
   const classes = `${baseClasses} ${variantClasses[variant]} ${className}`;
 
-  const content = <>{children}</>;
-
+  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`,
+  const _content = (
+    <>
+      {/* Shine effect for primary buttons */}
+      {variant === 'primary' && (
+        <div className=&quot;absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:translate-x-full transition-transform duration-1000&quot; />
+      )}
+      
+      {icon && iconPosition === 'left' && <span className=&quot;mr-2 transition-transform duration-200 group-hover:scale-110&quot;>{icon}</span>}
+      <span className=&quot;relative z-10&quot;>{children}</span>
+      {icon && iconPosition === 'right' && <span className=&quot;ml-2 transition-transform duration-200 group-hover:scale-110&quot;>{icon}</span>}    </>
+  ),
   if (href) {
     return (
       <Link href={href} className={classes} style={style}>
         {content}
       </Link>
-    );
-  }
-
-  return (
-    <button
-      type={type}
-      className={classes}
-      onClick={onClick}
-      disabled={disabled}
-      style={style}
-    >
-      {content}
-    </button>
-  );
-};
-
-export default Button;
+    )
+      </a>

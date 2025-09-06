@@ -1,4 +1,13 @@
 
+;
+};
+;
+,;
+;
+};
+};
+;
+
 // Environment security configuration,
 export const securityConfig = {,
   // Ensure sensitive environment variables are not exposed,

@@ -40,24 +40,7 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
   const [selected, setSelected] = useState<string>('');
 
   useEffect(() => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    if (!toAddress) return;
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-    if (
-      !toAddress ||
-      !toAddress.address ||
-      !toAddress.city ||
-      !toAddress.country
-    )
-      return;
-<<<<<<< HEAD
-=======
->>>>>>> origin/a12zhz-codex/support-metric--imperial-units
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-    const fetchRates = async () => {
+    if (!toAddress) return;    const fetchRates = async () => {
       setLoading(true);
       try {
         const res = await fetch('/api/shipping-rates', {
@@ -97,25 +80,8 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
           {rates.map(rate => (
             <label key={rate.id} className="flex items-center gap-2">
               <RadioGroupItem value={rate.id} />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
               <span>{`${rate.carrier} ${rate.service} - ${rate.rate} ${rate.currency}`}</span>
-              {rate.tax && <span className="ml-1 text-sm">(+{rate.tax} taxes)</span>}
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-              <span>
-                {`${rate.carrier} ${rate.service} - ${rate.rate} ${rate.currency}`}
-                {rate.delivery_days && ` (${rate.delivery_days}d)`}
-              </span>
-              {rate.tax && (
-                <span className="ml-1 text-sm">(+{rate.tax} taxes)</span>
-              )}
-<<<<<<< HEAD
-=======
->>>>>>> origin/a12zhz-codex/support-metric--imperial-units
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-            </label>
+              {rate.tax && <span className="ml-1 text-sm">(+{rate.tax} taxes)</span>}            </label>
           ))}
         </RadioGroup>
       )}

@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Cloud, Shield, Zap, CheckCircle, ArrowRight, BarChart3, Users, Settings, Database, Globe, Lock, Smartphone, Brain } from 'lucide-react';
-=======
-=======
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
@@ -24,11 +20,6 @@ import { Cloud,
   Brain;
 } from 'lucide-react';
 import Layout from "../../components/Layout";";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
 
 const phases = [;
   {}
@@ -340,8 +331,6 @@ export default function CloudMigrationPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Move to the Cloud?;
@@ -363,8 +352,6 @@ export default function CloudMigrationPage() {
         </section>;
       </div>;
     </Layout>;
-=======
-=======
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Move to the Cloud?

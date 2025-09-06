@@ -7,10 +7,3 @@ import _React from "react"; );}; export default ContentRoutes; export { ContentR
 import _React from "react"; );}; export default ContentRoutes; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes };
 
 import _React from "react"; );}; export default ContentRoutes; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes };
-<<<<<<< HEAD
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src.disabled/src/routes/ContentRoutes.jsx
-=======
-
-import _React from "react"; );}; export default ContentRoutes; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes };
-
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
