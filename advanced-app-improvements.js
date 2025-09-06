@@ -160,7 +160,7 @@ function createAdvancedCaching() {
   
   const cachingFiles = {
     'cache/redis-cache.js': `// Redis-based caching system
-export class RedisCache {
+class RedisCache {
   constructor(redisClient) {
     this.client = redisClient;
     this.defaultTTL = 3600; // 1 hour
@@ -208,7 +208,7 @@ export class RedisCache {
 }`,
     
     'cache/memory-cache.js': `// In-memory caching system
-export class MemoryCache {
+class MemoryCache {
   constructor(maxSize = 1000) {
     this.cache = new Map();
     this.maxSize = maxSize;
@@ -263,10 +263,11 @@ export class MemoryCache {
   }
 }
 
-export const redisCache = new RedisCache();
+const redisCache = new RedisCache();
   `,
+    
     'cache/memory-cache.js': `// Memory-based caching system
-export class MemoryCache {
+class MemoryCache {
   constructor(maxSize = 1000) {
     this.cache = new Map();
     this.accessTimes = new Map();
@@ -312,8 +313,8 @@ export class MemoryCache {
   }
 }
 
-export const memoryCache = new MemoryCache();
-  `
+const memoryCache = new MemoryCache();
+  `,
   };
 
   Object.entries(cachingFiles).forEach(([filename, content]) => {
@@ -331,7 +332,7 @@ function createAPIOptimization() {
   
   const apiFiles = {
     'api/rate-limiter.js': `// Rate limiting middleware
-export class RateLimiter {
+class RateLimiter {
   constructor(options = {}) {
     this.windowMs = options.windowMs || 60000; // 1 minute
     this.maxRequests = options.maxRequests || 100;
@@ -370,10 +371,10 @@ export class RateLimiter {
   }
 }
 
-export const rateLimiter = new RateLimiter();`,
+const rateLimiter = new RateLimiter();`,
     
     'api/response-optimizer.js': `// API response optimization
-export class ResponseOptimizer {
+class ResponseOptimizer {
   constructor() {
     this.compressionThreshold = 1024; // 1KB
   }
@@ -420,7 +421,7 @@ export class ResponseOptimizer {
   }
 }
 
-export const responseOptimizer = new ResponseOptimizer();
+const responseOptimizer = new ResponseOptimizer();
   };
 
   Object.entries(apiFiles).forEach(([filename, content]) => {
@@ -438,7 +439,7 @@ function createDatabaseOptimization() {
   
   const dbFiles = {
     'database/query-optimizer.js': `// Database query optimization
-export class QueryOptimizer {
+class QueryOptimizer {
   constructor() {
     this.queryCache = new Map();
     this.slowQueries = [];
@@ -501,10 +502,10 @@ export class QueryOptimizer {
   }
 }
 
-export const queryOptimizer = new QueryOptimizer();`,
+const queryOptimizer = new QueryOptimizer();`,
     
     'database/connection-pool.js': `// Database connection pooling
-export class ConnectionPool {
+class ConnectionPool {
   constructor(options = {}) {
     this.maxConnections = options.maxConnections || 10;
     this.minConnections = options.minConnections || 2;
@@ -567,7 +568,7 @@ export class ConnectionPool {
   }
 }
 
-export const connectionPool = new ConnectionPool();
+const connectionPool = new ConnectionPool();
   };
 
   Object.entries(dbFiles).forEach(([filename, content]) => {

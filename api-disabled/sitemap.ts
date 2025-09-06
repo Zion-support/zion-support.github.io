@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export {};
-<<<<<<< HEAD
-<<<<<<< HEAD
-module.exports = {};
-=======
-module.exports = {};
-=======
-module.exports = {};
-=======
-module.exports = {};
-=======
-module.exports = {};
+export default function sitemapHandler() {
+  // Sitemap handler functionality would go here
+  return {
+    generateSitemap: () => {
+      console.log('Sitemap generated');
+    }
+  };
+}

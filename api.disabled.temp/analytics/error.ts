@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export {};
-<<<<<<< HEAD
-<<<<<<< HEAD
-module.exports = {};
-=======
-module.exports = {};
-=======
-module.exports = {};
-=======
-module.exports = {};
-=======
-module.exports = {};
+export default function errorAnalytics() {
+  // Error analytics functionality would go here
+  return {
+    trackError: (error: Error) => {
+      console.error('Error tracked:', error);
+    }
+  };
+}
