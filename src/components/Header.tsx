@@ -2,6 +2,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { Menu, X } from 'lucide-react';
+
+interface HeaderProps {
+  onMenuClick: () => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+    onMenuClick();
+  };
+
+
 export default function Header() {
   return (
     <header className="bg-white shadow-sm border-b">
@@ -21,5 +36,8 @@ export default function Header() {
       </div>
     </header>
   );
-}
+
+};
+
+export default Header;
 
