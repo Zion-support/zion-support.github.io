@@ -1,8 +1,8 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from "next";
 
 function summarizeModules(
   modules: Record<string, boolean>,
-  bonus: Record<string, boolean>
+  bonus: Record<string, boolean>,
 ) {
   const active = [
     ...Object.entries(modules)
@@ -12,14 +12,14 @@ function summarizeModules(
       .filter(([, v]) => v)
       .map(([k]) => `/${k}`),
   ];
-  return active.length ? active.sort().join(', ') : 'None';
+  return active.length ? active.sort().join(", ") : "None";
 }
 
 function missionParagraph(
   region: string,
   instanceName: string,
   modules: Record<string, boolean>,
-  bonus: Record<string, boolean>
+  bonus: Record<string, boolean>,
 ) {
   const activeCount =
     Object.values(modules).filter(Boolean).length +
@@ -29,20 +29,20 @@ function missionParagraph(
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse,
 ) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method not allowed" });
   }
 
   try {
     const body = req.body || {};
     const {
       instanceName,
-      defaultLanguage = 'en',
+      defaultLanguage = "en",
       deploymentRegion,
       tokenActivation = false,
-      governanceMode = 'democratic',
+      governanceMode = "democratic",
       branding = {},
       modules = {},
       bonusModules = {},
@@ -50,44 +50,44 @@ export default async function handler(
 
     if (!instanceName || !deploymentRegion) {
       return res.status(400).json({
-        error: 'Missing required fields: instanceName, deploymentRegion',
+        error: "Missing required fields: instanceName, deploymentRegion",
       });
     }
 
     // Simulated provisioning operations
     const now = new Date().toISOString();
-    const provisionId = `zion-${instanceName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${Date.now()}`;
-    
+    const provisionId = `zion-${instanceName.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-${Date.now()}`;
+
     const outputActions = {
       zionGPT: {
         initialized: true,
-        routes: ['/gpt', '/gpt/router'],
-        agents: ['proposal-writer', 'resume-generator'],
+        routes: ["/gpt", "/gpt/router"],
+        agents: ["proposal-writer", "resume-generator"],
       },
       daoAndToken: {
-        token: tokenActivation ? 'ZION$' : 'disabled',
+        token: tokenActivation ? "ZION$" : "disabled",
         treasury: tokenActivation ? `${provisionId}-treasury` : null,
         governanceMode,
-        votingDashboard: '/dao',
+        votingDashboard: "/dao",
       },
       assets: {
-        whitepaper: '/whitepaper',
-        roadmap: '/roadmap',
+        whitepaper: "/whitepaper",
+        roadmap: "/roadmap",
         book: {
-          pdf: '/book/manifesto.pdf',
-          trailerScript: '/trailer/script',
+          pdf: "/book/manifesto.pdf",
+          trailerScript: "/trailer/script",
         },
-        summit: '/summit',
+        summit: "/summit",
       },
       publicPages: [
-        '/about',
-        '/manifesto',
-        '/constitution',
-        '/partners',
-        '/academy',
-        '/marketplace',
-        '/dao',
-        `/nation/${defaultLanguage || 'en'}`,
+        "/about",
+        "/manifesto",
+        "/constitution",
+        "/partners",
+        "/academy",
+        "/marketplace",
+        "/dao",
+        `/nation/${defaultLanguage || "en"}`,
       ],
     };
 
@@ -97,14 +97,14 @@ export default async function handler(
         deploymentRegion,
         instanceName,
         modules,
-        bonusModules
+        bonusModules,
       ),
     };
 
     const access = {
-      roles: ['Founder', 'Superadmin', 'DAO Multisig'],
+      roles: ["Founder", "Superadmin", "DAO Multisig"],
       export: {
-        type: 'application/json',
+        type: "application/json",
         href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`,
       },
     };
@@ -114,19 +114,19 @@ export default async function handler(
       provisionId,
       instanceName,
       region: deploymentRegion,
-      language: defaultLanguage || 'en',
+      language: defaultLanguage || "en",
       governanceMode,
       tokenActivation,
       branding,
       modules,
       bonusModules,
       createdAt: now,
-      version: 'Zion OS v1.0.0',
+      version: "Zion OS v1.0.0",
       outputActions,
       operator,
       access,
     });
   } catch (err: any) {
-    return res.status(500).json({ error: err.message || 'Internal error' });
+    return res.status(500).json({ error: err.message || "Internal error" });
   }
 }

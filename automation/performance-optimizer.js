@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 #!/usr/bin/env node;
   "fs");
   "path");
@@ -67,10 +62,6 @@ analyzeBundleSize() {
       return {
   optimized: 0, totalImages: 0, savings:;
   "0KB";
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   analyzeBundleSize() {}
     try {
       // Placeholder for bundle analysis}
@@ -99,11 +90,6 @@ analyzeBundleSize() {
     return ['example-unused-package'];',
   }
   generateRecommendations() {
-<<<<<<< HEAD
-=======;
-=======
-;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -154,16 +140,8 @@ class PerformanceOptimizer {ursor/migrate-github-actions-to-pm2-and-clean-up-559
     try {
       // Placeholder for bundle analysis
       return {
-<<<<<<< HEAD
   "totalSize": "2.1MB, "gzippedSize": ;
   "650KB"
-=======
-<<<<<<< HEAD
-=======
-  "totalSize": "2.1MB, "gzippedSize": ;
-  "650KB"
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 "totalSize": '2.1MB',
         "gzippedSize": '650KB',
         "recommendations": ['Consider code splitting', 'Remove unused dependencies']
@@ -181,19 +159,10 @@ class PerformanceOptimizer {ursor/migrate-github-actions-to-pm2-and-clean-up-559
     }
   }
   analyzeDependencies() {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   try {
   const packageJson = JSON.parse(fs.readFileSync(path.resolve(import.meta.url, "../package.json"), "utf8"));
       const dependencies = Object.keys(packageJson.dependencies || { /* empty */ });
       const devDependencies = Object.keys(packageJson.devDependencies || { /* empty */ });
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 try {
       const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../package.json'), 'utf8'));
       const dependencies = Object.keys(packageJson.dependencies || {});
@@ -213,11 +182,6 @@ try {
     return ['example-unused-package'];
   }
   generateRecommendations() {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   return [";Implement code splitting for better performanceOptimize images using WebP formatRemove unused dependencies,Enable gzip compression,Use React.memo for expensive components";
     // // // // // // // // console.log(;
   "Performance report:", report);
@@ -225,10 +189,6 @@ try {
 ;,
 });
 }}}}}}}}}}}}}}}
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     // // // // // // // // }
 })}}}}}}}}}}}}}}}
 return ['Implement code splitting for better performance',

@@ -1,16 +1,16 @@
-import { ProviderConnection, SyncLogEntry } from './types';
-import { v4 as uuidv4 } from 'uuid';
+import { ProviderConnection, SyncLogEntry } from "./types";
+import { v4 as uuidv4 } from "uuid";
 
 async function mockProviderCall<T>(
   connection: ProviderConnection,
   action: string,
-  details: Record<string, any>
+  details: Record<string, any>,
 ): Promise<{ log: SyncLogEntry; result: T }> {
   const log: SyncLogEntry = {
     id: uuidv4(),
     timestamp: Date.now(),
     providerId: connection.providerId,
-    level: 'info',
+    level: "info",
     action,
     details,
   };
@@ -22,23 +22,23 @@ async function mockProviderCall<T>(
 export const crm = {
   async syncContact(
     connection: ProviderConnection,
-    contact: Record<string, any>
+    contact: Record<string, any>,
   ) {
-    return mockProviderCall(connection, 'sync_contact', { contact });
+    return mockProviderCall(connection, "sync_contact", { contact });
   },
 
   async addEmailTouchpoint(
     connection: ProviderConnection,
-    touchpoint: Record<string, any>
+    touchpoint: Record<string, any>,
   ) {
-    return mockProviderCall(connection, 'add_email_touchpoint', { touchpoint });
+    return mockProviderCall(connection, "add_email_touchpoint", { touchpoint });
   },
 
   async addProjectNote(
     connection: ProviderConnection,
-    note: Record<string, any>
+    note: Record<string, any>,
   ) {
-    return mockProviderCall(connection, 'add_project_note', { note });
+    return mockProviderCall(connection, "add_project_note", { note });
   },
 };
 
@@ -46,8 +46,8 @@ export const crm = {
 export const ats = {
   async updateStatus(
     connection: ProviderConnection,
-    status: Record<string, any>
+    status: Record<string, any>,
   ) {
-    return mockProviderCall(connection, 'update_status', { status });
+    return mockProviderCall(connection, "update_status", { status });
   },
 };

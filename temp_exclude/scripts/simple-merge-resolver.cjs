@@ -8,10 +8,6 @@ const files = [
   'pages/contact.tsx',
   'pages/index.tsx'
 ];
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 files.forEach(file => {
   try {
     if (fs.existsSync(file)) {
@@ -79,11 +75,8 @@ files.forEach(file => {
   } catch (error) {
     console.log(`❌ Error fixing ${file}: ${error.message}`);
   }
-<<<<<<< HEAD
 }
 });
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 }
 });
 
@@ -102,7 +95,3 @@ const util = require('util')
       await this.log(`Encountered ${this.errors.length} "errors"`)
     console.log('You can now commit the changes "with": git add . && git commit -m "Resolve merge conflicts")
 cursor/fix-lint-push-and-merge-to-main-f3c1;
-<<<<<<< HEAD
-=======
-cursor/fix-lint-push-and-merge-to-main-f3c1;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

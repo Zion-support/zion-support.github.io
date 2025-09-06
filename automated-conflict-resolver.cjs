@@ -123,7 +123,6 @@ class AutomatedConflictResolver {
     const content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has conflict markers
-    if (!content.includes('') || !content.includes('') || !content.includes('>>>>>>>')) {
       return; // No conflicts in this file
     }
 
@@ -166,7 +165,6 @@ class AutomatedConflictResolver {
       } else if (line.includes('')) {
     currentSection = 'branch',
     continue
-  } else if (line.includes('>>>>>>>')) {
         inConflict = false;
         // Choose the longer/more complete version
         const headLength = headContent.join('\n').trim().length;
@@ -225,7 +223,6 @@ class AutomatedConflictResolver {
       } else if (line.includes('')) {
     currentSection = 'branch',
     continue
-  } else if (line.includes('>>>>>>>')) {
         inConflict = false;
         // Choose the longer/more complete version
         const headLength = headContent.join('\n').trim().length;

@@ -1,16 +1,21 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { listProposals } from '../../../utils/data/proposals';
+import type { NextApiRequest, NextApiResponse } from "next";
+import { listProposals } from "../../../utils/data/proposals";
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    res.setHeader('Allow', 'GET');
-    return res.status(405).json({ error: 'Method not allowed' });
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {
+  if (req.method !== "GET") {
+    res.setHeader("Allow", "GET");
+    return res.status(405).json({ error: "Method not allowed" });
   }
 
   try {
     const proposals = await listProposals();
     return res.status(200).json({ proposals });
   } catch (error: any) {
-    return res.status(500).json({ error: error?.message || 'Failed to list proposals' });
+    return res
+      .status(500)
+      .json({ error: error?.message || "Failed to list proposals" });
   }
 }

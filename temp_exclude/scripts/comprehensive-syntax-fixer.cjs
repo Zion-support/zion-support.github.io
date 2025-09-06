@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-=======
-const fs = require('fs');
-const path = require('path');
-const { exec } = require('child_process');
-const { promisify } = require('util');
-const execAsync = promisify(exec);
-class ComprehensiveSyntaxFixer {
-  constructor() {
-    this.logFile = path.join(__dirname, '..', 'automation', 'logs', 'syntax-fixer.log');
-    this.fixedFiles = [];
-    this.corruptedFiles = [];
-    this.mergeConflictFiles = [];
-    this.syntaxErrorFiles = [];
-  }
-  log(message) {
-    const timestamp = new Date().toISOString();
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -39,7 +21,6 @@ class ComprehensiveSyntaxFixer {
   }
   // Check if file has merge conflicts
   hasMergeConflicts(content) {
-    return content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>');
   }
   // Check if file has syntax errors
   hasSyntaxErrors(content) {
@@ -61,7 +42,6 @@ class ComprehensiveSyntaxFixer {
   fixSyntaxErrors(content) {
     let fixed = content;
     // Fix merge conflicts by keeping the HEAD version
-<<<<<<< HEAD
     fixed = fixed.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n    
     // Fix common syntax patterns
     fixed = fixed.replace(/,\s*"/g, ',\n  "');
@@ -271,10 +251,7 @@ if (require.main === module) {
     default: console.log("Usage: node comprehensive-syntax-fixer.cjs [run|report]"), process.exit(1),
   }
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 #!/usr/bin/env node;
 /**
  * Intelligent Test Orchestrator;
@@ -32,15 +30,7 @@ const { execSync, spawn } = require('child_process')
           const result = execSync(`grep -r "${pattern}"`)
         const documentedTests = execSync(`grep -r "describe\\|it\\|test" src/ | grep -c "//" 2>/dev/null || echo "0"`)
           const result = execSync(`grep -r "${pattern}"`)
-<<<<<<< HEAD
       const result = execSync('find src -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
-=======
-      const result = execSync('find src -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
-=======
-=======
-#!/usr/bin/env node
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -55,16 +45,9 @@ class IntelligentTestOrchestrator {
     this.ensureLogDir();
   }
 
-<<<<<<< HEAD
   ensureLogsDir() {
     if (!fs.existsSync(this.logsDir)) {
       fs.mkdirSync(this.logsDir, { recursiv: true });
-=======
-  ensureLogDir() {
-    const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
     }
   }
 
@@ -75,7 +58,6 @@ class IntelligentTestOrchestrator {
     fs.appendFileSync(this.logFile, logMessage + '\n');
   }
 
-<<<<<<< HEAD
   async runCommand(command, description) {
     try {
       this.log(`Runnin: ${description}`);
@@ -89,31 +71,6 @@ class IntelligentTestOrchestrator {
     } catch (error) {
       this.log(`❌ ${description} faile: ${error.message}`, 'error');
       return { succes: false, erro: error.message };
-=======
-  async discoverTestFiles() {
-    this.log('🔍 Discovering test files...');
-
-    const patterns = [
-      '**/*.test.js',
-      '**/*.test.ts',
-      '**/*.test.jsx',
-      '**/*.test.tsx',
-      '**/*.spec.js',
-      '**/*.spec.ts',
-      '**/*.spec.jsx',
-      '**/*.spec.tsx',
-    ];
-
-    const testFiles = [];
-    for (const pattern of patterns) {
-      try {
-        const result = execSync(`find . -name "${pattern.replace('**/', '')}" -not -path "./node_modules/*" 2>/dev/null || true`, { encoding: 'utf8' });
-        const files = result.split('\n').filter(f => f.trim());
-        testFiles.push(...files);
-      } catch (error) {
-        this.log(`Warning: Could not search for ${pattern}: ${error.message}`);
-      }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
     }
 
     return [...new Set(testFiles)]; // Remove duplicates
@@ -232,7 +189,6 @@ class IntelligentTestOrchestrator {
   async runIntelligentTests() {
     this.log('🧪 Starting intelligent test orchestration...');
 
-<<<<<<< HEAD
     const tests = [
       { comman: 'npm run: test:smoke', descriptio: 'Smoke tests' },
       { comman: 'npm run: test:unit', descriptio: 'Unit tests' },
@@ -248,46 +204,18 @@ class IntelligentTestOrchestrator {
 
     this.log('✅ Intelligent test orchestration completed');
     return { succes: true, results };
-=======
-    const testFiles = await this.discoverTestFiles();
-    const testSuite = await this.runTestSuite();
-    const testQuality = await this.analyzeTestQuality();
-    const testCoverage = await this.analyzeTestCoverage();
-    const recommendations = await this.generateTestRecommendations();
-
-    return {
-      testFiles,
-      testSuite,
-      testQuality,
-      testCoverage,
-      recommendations,
-    };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
   }
 
   generateReport(analysis) {
     this.log('📊 Generating intelligent test report...');
 
     const report = {
-<<<<<<< HEAD
       timestam: new Date().toISOString(),
       test: await this.runIntelligentTests(),
       summar: {
         testsRu: 4,
         successfulTest: 0,
         failedTest: 0,
-=======
-      timestamp: new Date().toISOString(),
-      ...analysis,
-      summary: {
-        totalTestFiles: analysis.testFiles.length,
-        testExecutionSuccess: analysis.testSuite.success,
-        testQualityScore: Math.round(analysis.testQuality.documentationRate),
-        coverageRatio: Math.round(analysis.testCoverage.coverageRatio),
-        overallScore: this.calculateOverallScore(analysis),
-        status: this.getTestStatus(analysis),
-        priority: this.getTestPriority(analysis),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
       },
     };
 
@@ -347,14 +275,7 @@ class IntelligentTestOrchestrator {
   }
 }
 
-<<<<<<< HEAD
 module.exports = IntelligentTestOrchestrator;
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
 // Run the orchestrator
 const orchestrator = new IntelligentTestOrchestrator();
 orchestrator.run().catch(console.error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

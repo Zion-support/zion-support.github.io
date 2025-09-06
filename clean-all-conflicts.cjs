@@ -1,15 +1,6 @@
 const fs = require('fs');
-<<<<<<< HEAD
-<<<<<<< HEAD
 const path = require('path');
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 const path = require('path');
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 const { execSync } = require('child_process');
 
 function findFilesWithConflicts() {
@@ -59,14 +50,7 @@ const conflictFiles = findFilesWithConflicts();
 console.log(`Found ${conflictFiles.length} files with merge conflicts`);
 
 conflictFiles.forEach(cleanMergeConflicts);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 const { execSync } = require('child_process');
 
 ;
@@ -74,11 +58,7 @@ function findFilesWithConflicts() {;
   try {;
     const result = execSync('find . -name "*.js" -o -name "*.ts" -o -name "*.tsx" -o -name "*.jsx" | grep -v node_modules | grep -v .git | xargs grep -l "<<<<<<< " 2>/dev/null || true', { encoding:'utf8' });
     return result.trim().split('\n').filter(line => line.trim().length > 0);
-<<<<<<< HEAD
   } catch {
-=======
-  } catch (error) {;
->>>>>>> 5105b916d1c77bc30b66b0e05cfa1d3e5af8d358
     console.log('No files with merge conflicts found');
     return [];
   }
@@ -123,12 +103,5 @@ console.log(`Found ${conflictFiles.length} files with merge conflicts`);
 ;
 conflictFiles.forEach(cleanMergeConflicts);
 ;
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 ;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 console.log('Cleaned all merge conflicts');

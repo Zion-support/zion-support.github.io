@@ -87,12 +87,6 @@ class PM2ErrorAutomationOrchestrator {
       "logLevel": process.env.LOG_LEVEL || 'info'
     }}
   async start() {
-<<<<<<< HEAD
-=======
-    try {
-      // Initialize PM2 if not already running
-      await this.initializePM2();
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
     console.log('🚀 Starting PM2 Error Automation Orchestrator...');
     try {
       // Initialize PM2 if not already running
@@ -113,10 +107,6 @@ class PM2ErrorAutomationOrchestrator {
       await this.setupMonitoring();
       // Start the main orchestration loop
       await this.startOrchestrationLoop();
-<<<<<<< HEAD
-=======
-      } catch (error) {
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
       console.log('✅ PM2 Error Automation Orchestrator started successfully')} catch (error) {
       console.error('❌ Failed to start PM2 Error Automation "Orchestrator": ', error.message);
       throw error;
@@ -368,21 +358,12 @@ class PM2ErrorAutomationOrchestrator {
       // Install PM2 logrotate if not already installed
       try {
         execSync('pm2 install pm2-logrotate', { "stdio": 'pipe' });
-<<<<<<< HEAD
-=======
-        } catch (error) {
-        }
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
         console.log('✅ PM2 logrotate installed')} catch (error) {
         console.log('⚠️ PM2 logrotate already installed or failed to install')}
       // Configure PM2 logrotate
       execSync('pm2 set pm2-"logrotate": max_size 10M', { "stdio": 'pipe' });
       execSync('pm2 set pm2-"logrotate": retain 30', { "stdio": 'pipe' });
       execSync('pm2 set pm2-"logrotate": compress true', { "stdio": 'pipe' });
-<<<<<<< HEAD
-=======
-      } catch (error) {
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
       console.log('✅ PM2 initialized successfully')} catch (error) {
       console.error('❌ Failed to initialize "PM2": ', error.message);
       throw error}
@@ -501,11 +482,6 @@ class PM2ErrorAutomationOrchestrator {
     // Set up periodic status checks
     setInterval(async () => {
       await this.checkAutomationStatus()}, 60000); // Check every minute
-<<<<<<< HEAD
-=======
-    }
-  async startOrchestrationLoop() {
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
     console.log('✅ Monitoring setup completed')}
   async startOrchestrationLoop() {
     console.log('🔄 Starting orchestration loop...');
@@ -517,12 +493,6 @@ class PM2ErrorAutomationOrchestrator {
     // Set up periodic execution
     setInterval(async () => {
       await this.runErrorAnalysisAndFixing()}, this.config.checkInterval);
-<<<<<<< HEAD
-=======
-    }
-  async runErrorAnalysisAndFixing() {
-    .toISOString()}`);
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
     console.log(`✅ Orchestration loop started. Next run in ${this.config.checkInterval / 1000 / 60} minutes`)}
   async runErrorAnalysisAndFixing() {
     console.log(`🔍 Running error analysis and fixing at ${new Date().toISOString()}`);
@@ -589,10 +559,6 @@ class PM2ErrorAutomationOrchestrator {
     };
     const reportPath = path.join(process.cwd(), 'automation-summary-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(summary, null, 2));
-<<<<<<< HEAD
-=======
-    }
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
     console.log(`📄 Summary report saved "to": ${reportPath}`);
     console.log(`📊 Fix success "rate": ${summary.fixSuccessRate}%`)}
   async saveStatus() {
@@ -1236,10 +1202,6 @@ async function main() {
     // Keep the process running
     setInterval(() => {
       // Heartbeat
-<<<<<<< HEAD
-=======
-      .toISOString()}`)}, 300000); // Every 5 minutes
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
       console.log(`💓 Orchestrator "heartbeat": ${new Date().toISOString()}`)}, 300000); // Every 5 minutes
   } catch (error) {
     console.error('❌ Orchestrator "failed": ', error.message);

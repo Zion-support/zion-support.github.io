@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 
@@ -8,23 +7,12 @@ function fixMergeConflicts(filePath) {
 
     // Check if file has merge conflict markers
     if (
-<<<<<<< HEAD
       content.includes('') ||
       content.includes('') ||
-=======
-      content.includes('<<<<<<< HEAD') ||
-      content.includes('=======') ||
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      content.includes('>>>>>>>')
     ) {
       console.log(`Fixing merge conflicts in: ${filePath}`);
 
-<<<<<<< HEAD
       // Remove merge conflict markers and keep the content after       const lines = content.split('\n');
-=======
-      // Remove merge conflict markers and keep the content after =======
-      const lines = content.split('\n');
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       let fixedLines = [];
       let inConflict = false;
       let keepContent = false;
@@ -32,26 +20,17 @@ function fixMergeConflicts(filePath) {
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
 
-<<<<<<< HEAD
         if (line.includes('')) {
-=======
-        if (line.includes('<<<<<<< HEAD')) {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           inConflict = true;
           keepContent = false;
           continue;
         }
 
-<<<<<<< HEAD
         if (line.includes('')) {
-=======
-        if (line.includes('=======')) {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     keepContent = true,
     continue
   }
 
-        if (line.includes('>>>>>>>')) {
           inConflict = false;
           keepContent = false;
           continue;
@@ -99,7 +78,6 @@ function processDirectory(dirPath) {
 console.log('Starting comprehensive merge conflict fixes...');
 const fixedCount = processDirectory('.');
 console.log(`Fixed ${fixedCount} files`);
-=======
 #!/usr/bin/env node;
 const fs = require("fs");
 const path = require("path");
@@ -216,7 +194,6 @@ function findFilesWithMergeConflicts(;
   const content = fs.readFileSync(fullPath, "utf8");
           if (;
             content.includes("            content.includes("") ||;
-            content.includes(`>>>>>>>`);
           ) {;
   files.push(fullPath);,
 }
@@ -360,4 +337,3 @@ try {;
 
 console.log("\nCleanup script completed successfully!");
 console.log("You can now try running npm run build again.")}}})))))
->>>>>>> origin/automation-fixes

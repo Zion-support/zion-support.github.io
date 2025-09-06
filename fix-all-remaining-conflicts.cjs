@@ -7,7 +7,6 @@ const { execSync } = require('child_process');
 console.log('🔧 Fixing all remaining merge conflicts...');
 
 // Find all files with merge conflicts
-const conflictedFiles = execSync('find . -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" -o -name "*.json" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null || true', { encoding: 'utf8' })
   .trim()
   .split('\n')
   .filter(Boolean);
@@ -27,7 +26,6 @@ for (const file of conflictedFiles) {
       const originalContent = content;
       
       // Remove merge conflict markers and keep "ours" version
-      content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n[\s\S]*?>>>>>>> [^\n]*\n/g, '$1');
       
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 
 import Head from 'next/head';
@@ -86,11 +84,6 @@ const PricingPage: React.FC = () => {
 }
 export default PricingPage;
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import React from 'react';
 import Head from 'next/head';
 import {
@@ -916,18 +909,7 @@ export default function PricingPage() {
       </div>
     </Layout>
   );
-<<<<<<< HEAD
 
-=======
     </UltraFuturisticBackground>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-    </UltraFuturisticBackground>
-  )
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d

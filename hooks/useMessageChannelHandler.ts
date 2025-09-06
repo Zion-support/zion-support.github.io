@@ -1,43 +1,50 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from "react";
 
 export const useMessageChannelHandler = () => {
   const [state, setState] = useState(null);
-  
+
   useEffect(() => {
     // Hook implementation
   }, []);
-  
+
   return { state, setState };
 };
 
-export default useMessageChannelHandler;import { useEffect, useCallback } from 'react';
+export default useMessageChannelHandler;
+import { useEffect, useCallback } from "react";
 
 // Define MessageEvent type if not available
 interface Event {
-  type: string, target: EventTarget | null,
+  type: string;
+  target: EventTarget | null;
 }
 interface MessageChannelHandlerProps {
-  onMessage?: (message: unknown) => void, onError?: (error: Error) => void,}
+  onMessage?: (message: unknown) => void;
+  onError?: (error: Error) => void;
+}
 
 export function useMessageChannelHandler({
   onMessage,
-  onError
+  onError,
 }: MessageChannelHandlerProps = {}) {
-  const handleMessage = useCallback((event: MessageEvent) => {
-    try {
-      if (onMessage) {
-        onMessage(event.data);
+  const handleMessage = useCallback(
+    (event: MessageEvent) => {
+      try {
+        if (onMessage) {
+          onMessage(event.data);
+        }
+      } catch (error) {
+        if (onError) {
+          onError(error as Error);
+        }
       }
-    } catch (error) {
-      if (onError) {
-        onError(error as Error);
-      }
-    }
-  }, [onMessage, onError]);
+    },
+    [onMessage, onError],
+  );
   useEffect(() => {
-    window.addEventListener('message', handleMessage);
+    window.addEventListener("message", handleMessage);
     return () => {
-      window.removeEventListener('message', handleMessage);
+      window.removeEventListener("message", handleMessage);
     };
   }, [handleMessage]);
 }

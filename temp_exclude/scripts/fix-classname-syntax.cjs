@@ -23,8 +23,4 @@ const fs = require('fs')
 const path = require('path')
 const glob = require('glob')
   log(message, type = 'INFO')
-<<<<<<< HEAD
       const fixedQuoted = quoted.replace(/"([a-z]+)"      const fixedQuoted = quoted.replace(/"([a-z]+)"
-=======
-      const fixedQuoted = quoted.replace(/"([a-z]+)"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

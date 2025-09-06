@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:data_backup/2025-added-ai-services.ts
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/data_backup/2025-added-ai-services.ts
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import type { InnovativeAIService } from "./innovative-ai-services"
 const contact = {
   "mobile": '+1 302 464 0950',

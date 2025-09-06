@@ -9,7 +9,6 @@ function fixComponentSyntax(filePath) {
     const originalContent = content;
     
     // Fix corrupted property names with colons
-<<<<<<< HEAD
     content = content.replace(/(\w+):\s*(\w+):\s*(\w+)/g, '$1: $2');
     content = content.replace(/(\w+):\s*(\w+):\s*(\w+)/g, '$1: $2');
     
@@ -30,13 +29,6 @@ function fixComponentSyntax(filePath) {
     content = content.replace(/(\w+):\s*(\w+):\s*(\w+)/g, '$1: $2');
     content = content.replace(/(\w+):\s*(\w+):\s*(\w+)/g, '$1: $2');
         // Clean up extra whitespace
-=======
-    // Fix const declarations with colons
-    content = content.replace(/const:\s*(\w+)/g, 'const $1');
-    
-    // Fix more general patterns
-    // Clean up extra whitespace
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     
     if (content !== originalContent) {
@@ -47,19 +39,10 @@ function fixComponentSyntax(filePath) {
     
     return false;
   } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
     console.error(`Error processing ${filePath}:`, error.message);    return false;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
     console.error(`Error processing ${filePath}:`, error.message);
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     console.error(`Error processing ${filePath} `, error.message);
     return false;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   }
 }
 

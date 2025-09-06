@@ -1,6 +1,4 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const fs = require('fs');
 const path = require('path');
@@ -151,10 +149,7 @@ class ComprehensiveSyntaxFixer {
         this.log(`✅ Fixed: ${filePath}`);
         return true;
       }      return false;
-=======
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-=======
 
 const fs = require('fs');
 const path = require('path');
@@ -238,9 +233,7 @@ class ComprehensiveSyntaxFixer {
         return true;
       }
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       return false;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     } catch (error) {
       this.errors.push({ file: filePath, error: error.message });
       this.log(`❌ Error fixing ${filePath}: ${error.message}`);
@@ -249,9 +242,7 @@ class ComprehensiveSyntaxFixer {
   }
 
   async findAndFixFiles() {
-<<<<<<< HEAD
     this.log('🔍 Finding files with syntax errors...');
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     
     const srcDir = path.join(this.projectRoot, 'src');
     const filesToFix = [];
@@ -283,8 +274,6 @@ class ComprehensiveSyntaxFixer {
 
   async run() {
     this.log('🚀 Starting Comprehensive Syntax Fixer');
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     
     const totalFiles = await this.findAndFixFiles();
     
@@ -314,26 +303,16 @@ fixer.run().catch(console.error);    }
   }
 }
 
-<<<<<<< HEAD
-=======
-      this.log(`❌ Comprehensive syntax fixing failed: ${error.message}`);
-      process.exit(1);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-=======
       this.log('🎉 Comprehensive syntax fixing completed successfully!');
       this.log(`📊 Fixed ${this.fixedFiles.length} files`);
       this.log(`❌ ${this.errors.length} errors encountered`);
     } catch (error) {
       this.log(`❌ Comprehensive syntax fixing failed: ${error.message}`);
       process.exit(1);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     }
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 // Main execution
 if (require.main === module) {
   const fixer = new ComprehensiveSyntaxFixer();
@@ -341,18 +320,9 @@ if (require.main === module) {
 }
 
 module.exports = ComprehensiveSyntaxFixer;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 // Run the syntax fixer
 const fixer = new ComprehensiveSyntaxFixer();
 fixer.run().catch(console.error);
 // Run the syntax fixer
 const fixer = new ComprehensiveSyntaxFixer();
 fixer.run().catch(console.error);
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

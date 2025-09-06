@@ -110,53 +110,23 @@ class SemicolonFixer {
       const endTime = new Date();
       const duration = endTime - this.startTime;
       
-<<<<<<< HEAD
-<<<<<<< HEAD
       this.log(`\n📊 Semicolon Fix Summary: `),
-=======
-<<<<<<< HEAD
       this.log(`\n📊 Semicolon Fix Summary: `),
-=======
-      this.log(`\n📊 Semicolon Fix Summary:`);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       this.log(`✅ Files fixed: ${this.fixedFiles.length}`);
       this.log(`❌ Errors: ${this.errors.length}`);
       this.log(`⏱️  Duration: ${duration}ms`);
       
       if (this.fixedFiles.length > 0) {
-<<<<<<< HEAD
-<<<<<<< HEAD
         this.log(`\n📁 Fixed files: `),
-=======
-<<<<<<< HEAD
         this.log(`\n📁 Fixed files: `),
-=======
-        this.log(`\n📁 Fixed files:`);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         this.fixedFiles.forEach(file => {
           this.log(`  - ${file}`);
         });
       }
       
       if (this.errors.length > 0) {
-<<<<<<< HEAD
-<<<<<<< HEAD
         this.log(`\n❌ Errors encountered: `),
-=======
-<<<<<<< HEAD
         this.log(`\n❌ Errors encountered: `),
-=======
-        this.log(`\n❌ Errors encountered:`);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         this.errors.forEach(error => {
           this.log(`  - ${error.file}: ${error.error}`);
         });

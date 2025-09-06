@@ -1,8 +1,8 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import Layout from './components/Layout';
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import Layout from "./components/Layout";
 import {
   BookOpen,
   Clock,
@@ -200,14 +200,15 @@ import {
   TiredFace2,
   SleepyFace2,
   YawningFace2,
-  DizzyFace2
-} from 'lucide-react';
+  DizzyFace2,
+} from "lucide-react";
 
 const guides = [
   {
     id: 1,
     title: "Getting Started with AI Development",
-    description: "Learn the fundamentals of AI development and how to build your first AI application.",
+    description:
+      "Learn the fundamentals of AI development and how to build your first AI application.",
     category: "AI Development",
     difficulty: "Beginner",
     readTime: "15 min read",
@@ -216,12 +217,13 @@ const guides = [
     students: 1250,
     image: "/images/guides/ai-development.jpg",
     icon: Brain,
-    tags: ["AI", "Machine Learning", "Python", "TensorFlow"]
+    tags: ["AI", "Machine Learning", "Python", "TensorFlow"],
   },
   {
     id: 2,
     title: "Cloud Infrastructure Setup",
-    description: "Complete guide to setting up scalable cloud infrastructure for your applications.",
+    description:
+      "Complete guide to setting up scalable cloud infrastructure for your applications.",
     category: "Cloud Computing",
     difficulty: "Intermediate",
     readTime: "25 min read",
@@ -230,12 +232,13 @@ const guides = [
     students: 980,
     image: "/images/guides/cloud-infrastructure.jpg",
     icon: Cloud,
-    tags: ["AWS", "Docker", "Kubernetes", "DevOps"]
+    tags: ["AWS", "Docker", "Kubernetes", "DevOps"],
   },
   {
     id: 3,
     title: "Cybersecurity Best Practices",
-    description: "Essential cybersecurity practices to protect your applications and data.",
+    description:
+      "Essential cybersecurity practices to protect your applications and data.",
     category: "Security",
     difficulty: "Advanced",
     readTime: "30 min read",
@@ -244,12 +247,13 @@ const guides = [
     students: 750,
     image: "/images/guides/cybersecurity.jpg",
     icon: Shield,
-    tags: ["Security", "Encryption", "Authentication", "Compliance"]
+    tags: ["Security", "Encryption", "Authentication", "Compliance"],
   },
   {
     id: 4,
     title: "Mobile App Development",
-    description: "Build cross-platform mobile applications with modern frameworks.",
+    description:
+      "Build cross-platform mobile applications with modern frameworks.",
     category: "Mobile Development",
     difficulty: "Intermediate",
     readTime: "20 min read",
@@ -258,12 +262,13 @@ const guides = [
     students: 1100,
     image: "/images/guides/mobile-development.jpg",
     icon: Smartphone,
-    tags: ["React Native", "Flutter", "iOS", "Android"]
+    tags: ["React Native", "Flutter", "iOS", "Android"],
   },
   {
     id: 5,
     title: "Database Design & Optimization",
-    description: "Learn database design principles and optimization techniques.",
+    description:
+      "Learn database design principles and optimization techniques.",
     category: "Database",
     difficulty: "Intermediate",
     readTime: "22 min read",
@@ -272,12 +277,13 @@ const guides = [
     students: 890,
     image: "/images/guides/database-design.jpg",
     icon: Database,
-    tags: ["SQL", "NoSQL", "Performance", "Scaling"]
+    tags: ["SQL", "NoSQL", "Performance", "Scaling"],
   },
   {
     id: 6,
     title: "Web Performance Optimization",
-    description: "Optimize your web applications for maximum performance and user experience.",
+    description:
+      "Optimize your web applications for maximum performance and user experience.",
     category: "Performance",
     difficulty: "Advanced",
     readTime: "18 min read",
@@ -286,8 +292,8 @@ const guides = [
     students: 650,
     image: "/images/guides/web-performance.jpg",
     icon: Zap,
-    tags: ["Performance", "Optimization", "Caching", "CDN"]
-  }
+    tags: ["Performance", "Optimization", "Caching", "CDN"],
+  },
 ];
 
 const categories = [
@@ -297,7 +303,7 @@ const categories = [
   { name: "Security", count: 1, icon: Shield },
   { name: "Mobile Development", count: 1, icon: Smartphone },
   { name: "Database", count: 1, icon: Database },
-  { name: "Performance", count: 1, icon: Zap }
+  { name: "Performance", count: 1, icon: Zap },
 ];
 
 export default function GuidesPage() {
@@ -305,7 +311,10 @@ export default function GuidesPage() {
     <Layout>
       <Head>
         <title>Guides & Tutorials - Zion Tech Group</title>
-        <meta name="description" content="Master the latest technologies with our comprehensive guides, tutorials, and best practices from industry experts." />
+        <meta
+          name="description"
+          content="Master the latest technologies with our comprehensive guides, tutorials, and best practices from industry experts."
+        />
       </Head>
 
       <div className="min-h-screen bg-gray-50">
@@ -322,7 +331,8 @@ export default function GuidesPage() {
                 Expert Guides & Tutorials
               </h1>
               <p className="text-xl mb-8 text-blue-100">
-                Master the latest technologies with our comprehensive guides, tutorials, and best practices from industry experts.
+                Master the latest technologies with our comprehensive guides,
+                tutorials, and best practices from industry experts.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -357,7 +367,8 @@ export default function GuidesPage() {
                 Explore by Category
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Find guides tailored to your specific technology interests and skill level.
+                Find guides tailored to your specific technology interests and
+                skill level.
               </p>
             </motion.div>
 
@@ -397,7 +408,8 @@ export default function GuidesPage() {
                 Featured Guides
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Hand-picked guides to help you master the most in-demand technologies.
+                Hand-picked guides to help you master the most in-demand
+                technologies.
               </p>
             </motion.div>
 
@@ -420,11 +432,15 @@ export default function GuidesPage() {
                       <span className="px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-600">
                         {guide.category}
                       </span>
-                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                        guide.difficulty === 'Beginner' ? 'bg-green-100 text-green-600' :
-                        guide.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-600' :
-                        'bg-red-100 text-red-600'
-                      }`}>
+                      <span
+                        className={`px-3 py-1 rounded-full text-sm font-medium ${
+                          guide.difficulty === "Beginner"
+                            ? "bg-green-100 text-green-600"
+                            : guide.difficulty === "Intermediate"
+                              ? "bg-yellow-100 text-yellow-600"
+                              : "bg-red-100 text-red-600"
+                        }`}
+                      >
                         {guide.difficulty}
                       </span>
                     </div>
@@ -445,9 +461,7 @@ export default function GuidesPage() {
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
                       {guide.title}
                     </h3>
-                    <p className="text-gray-600 mb-4">
-                      {guide.description}
-                    </p>
+                    <p className="text-gray-600 mb-4">{guide.description}</p>
 
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center">
@@ -457,8 +471,8 @@ export default function GuidesPage() {
                               key={i}
                               className={`w-4 h-4 ${
                                 i < Math.floor(guide.rating)
-                                  ? 'text-yellow-400'
-                                  : 'text-gray-300'
+                                  ? "text-yellow-400"
+                                  : "text-gray-300"
                               }`}
                               fill="currentColor"
                             />
@@ -516,7 +530,8 @@ export default function GuidesPage() {
                 Ready to Start Learning?
               </h2>
               <p className="text-xl mb-8 text-green-100">
-                Join thousands of developers who are already mastering new technologies with our guides.
+                Join thousands of developers who are already mastering new
+                technologies with our guides.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link

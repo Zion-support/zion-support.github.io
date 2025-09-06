@@ -61,11 +61,7 @@ const nextConfig = {}
 module.exports = nextConfig;";
       
       fs.writeFileSync(path.join(process.cwd(), 'next.config.js'), nextConfigContent);
-<<<<<<< HEAD
             
-=======
-      
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       console.log('Performance improvements completed')} catch (error) {}
       console.error('Performance improvement "failed": ', error.message)};
   };

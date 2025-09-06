@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:data_backup/2025-cutting-edge-micro-saas.ts
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/data_backup/2025-cutting-edge-micro-saas.ts
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 export const cuttingEdgeMicroSaasServices2025 = [{
     id:,
   customer-success-ai-pro',

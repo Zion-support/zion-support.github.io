@@ -1,60 +1,69 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Github } from 'lucide-react';
+import React from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Github,
+} from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
     services: [
-      { name: 'AI Services', href: '/ai-services' },
-      { name: 'IT Services', href: '/it-services' },
-      { name: 'Micro SaaS', href: '/micro-saas' },
-      { name: 'Cloud Solutions', href: '/cloud-solutions' },
-      { name: 'Cybersecurity', href: '/cybersecurity' },
-      { name: 'Database Solutions', href: '/database-solutions' }
+      { name: "AI Services", href: "/ai-services" },
+      { name: "IT Services", href: "/it-services" },
+      { name: "Micro SaaS", href: "/micro-saas" },
+      { name: "Cloud Solutions", href: "/cloud-solutions" },
+      { name: "Cybersecurity", href: "/cybersecurity" },
+      { name: "Database Solutions", href: "/database-solutions" },
     ],
     solutions: [
-      { name: 'Enterprise Solutions', href: '/enterprise-solutions' },
-      { name: 'Startup Solutions', href: '/startup-solutions' },
-      { name: 'Industries', href: '/industries' },
-      { name: 'Custom Development', href: '/custom-development' },
-      { name: 'Digital Transformation', href: '/digital-transformation' },
-      { name: 'Consulting', href: '/consulting' }
+      { name: "Enterprise Solutions", href: "/enterprise-solutions" },
+      { name: "Startup Solutions", href: "/startup-solutions" },
+      { name: "Industries", href: "/industries" },
+      { name: "Custom Development", href: "/custom-development" },
+      { name: "Digital Transformation", href: "/digital-transformation" },
+      { name: "Consulting", href: "/consulting" },
     ],
     company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Our Team', href: '/team' },
-      { name: 'Careers', href: '/careers' },
-      { name: 'Case Studies', href: '/case-studies' },
-      { name: 'News', href: '/news' },
-      { name: 'Partners', href: '/partners' }
+      { name: "About Us", href: "/about" },
+      { name: "Our Team", href: "/team" },
+      { name: "Careers", href: "/careers" },
+      { name: "Case Studies", href: "/case-studies" },
+      { name: "News", href: "/news" },
+      { name: "Partners", href: "/partners" },
     ],
     resources: [
-      { name: 'Blog', href: '/blog' },
-      { name: 'Documentation', href: '/docs' },
-      { name: 'API Documentation', href: '/docs/api' },
-      { name: 'Tutorials', href: '/tutorials' },
-      { name: 'White Papers', href: '/white-papers' },
-      { name: 'Webinars', href: '/webinars' }
+      { name: "Blog", href: "/blog" },
+      { name: "Documentation", href: "/docs" },
+      { name: "API Documentation", href: "/docs/api" },
+      { name: "Tutorials", href: "/tutorials" },
+      { name: "White Papers", href: "/white-papers" },
+      { name: "Webinars", href: "/webinars" },
     ],
     legal: [
-      { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Terms of Service', href: '/terms' },
-      { name: 'Cookie Policy', href: '/cookies' },
-      { name: 'Security', href: '/security' },
-      { name: 'Compliance', href: '/compliance' },
-      { name: 'Accessibility', href: '/accessibility' }
-    ]
+      { name: "Privacy Policy", href: "/privacy" },
+      { name: "Terms of Service", href: "/terms" },
+      { name: "Cookie Policy", href: "/cookies" },
+      { name: "Security", href: "/security" },
+      { name: "Compliance", href: "/compliance" },
+      { name: "Accessibility", href: "/accessibility" },
+    ],
   };
 
   const socialLinks = [
-    { name: 'Facebook', href: '#', icon: Facebook },
-    { name: 'Twitter', href: '#', icon: Twitter },
-    { name: 'LinkedIn', href: '#', icon: Linkedin },
-    { name: 'Instagram', href: '#', icon: Instagram },
-    { name: 'GitHub', href: '#', icon: Github }
+    { name: "Facebook", href: "#", icon: Facebook },
+    { name: "Twitter", href: "#", icon: Twitter },
+    { name: "LinkedIn", href: "#", icon: Linkedin },
+    { name: "Instagram", href: "#", icon: Instagram },
+    { name: "GitHub", href: "#", icon: Github },
   ];
 
   return (
@@ -75,7 +84,8 @@ const Footer = () => {
                 <span className="text-xl font-bold">Zion Tech Group</span>
               </div>
               <p className="text-gray-400 mb-6">
-                Leading provider of cutting-edge technology solutions, helping businesses transform and grow through innovation.
+                Leading provider of cutting-edge technology solutions, helping
+                businesses transform and grow through innovation.
               </p>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
@@ -105,7 +115,10 @@ const Footer = () => {
               <ul className="space-y-3">
                 {footerLinks.services.map((link, index) => (
                   <li key={index}>
-                    <Link href={link.href} className="text-gray-400 hover:text-white transition-colors">
+                    <Link
+                      href={link.href}
+                      className="text-gray-400 hover:text-white transition-colors"
+                    >
                       {link.name}
                     </Link>
                   </li>
@@ -125,7 +138,10 @@ const Footer = () => {
               <ul className="space-y-3">
                 {footerLinks.solutions.map((link, index) => (
                   <li key={index}>
-                    <Link href={link.href} className="text-gray-400 hover:text-white transition-colors">
+                    <Link
+                      href={link.href}
+                      className="text-gray-400 hover:text-white transition-colors"
+                    >
                       {link.name}
                     </Link>
                   </li>
@@ -145,7 +161,10 @@ const Footer = () => {
               <ul className="space-y-3">
                 {footerLinks.company.map((link, index) => (
                   <li key={index}>
-                    <Link href={link.href} className="text-gray-400 hover:text-white transition-colors">
+                    <Link
+                      href={link.href}
+                      className="text-gray-400 hover:text-white transition-colors"
+                    >
                       {link.name}
                     </Link>
                   </li>
@@ -165,18 +184,24 @@ const Footer = () => {
               <ul className="space-y-3 mb-8">
                 {footerLinks.resources.map((link, index) => (
                   <li key={index}>
-                    <Link href={link.href} className="text-gray-400 hover:text-white transition-colors">
+                    <Link
+                      href={link.href}
+                      className="text-gray-400 hover:text-white transition-colors"
+                    >
                       {link.name}
                     </Link>
                   </li>
                 ))}
               </ul>
-              
+
               <h3 className="text-lg font-semibold mb-6">Legal</h3>
               <ul className="space-y-3">
                 {footerLinks.legal.map((link, index) => (
                   <li key={index}>
-                    <Link href={link.href} className="text-gray-400 hover:text-white transition-colors">
+                    <Link
+                      href={link.href}
+                      className="text-gray-400 hover:text-white transition-colors"
+                    >
                       {link.name}
                     </Link>
                   </li>
@@ -197,7 +222,7 @@ const Footer = () => {
             >
               © {currentYear} Zion Tech Group. All rights reserved.
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
