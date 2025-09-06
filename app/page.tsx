@@ -65,6 +65,36 @@ export default function HomePage() {
             description="Advanced analytics and BI solutions that transform data into actionable insights."
             icon="📊"
           />
+          <Card
+            title="AI Code Reviewer"
+            href="/services/ai-code-reviewer"
+            description="Automated code review with AI-powered analysis, security scanning, and performance optimization."
+            icon="🔍"
+          />
+          <Card
+            title="Invoice Automation"
+            href="/services/invoice-automation"
+            description="AI-powered invoice processing and financial workflow automation for streamlined operations."
+            icon="📄"
+          />
+          <Card
+            title="Vulnerability Scanner"
+            href="/services/vulnerability-scanner"
+            description="Advanced security scanning with AI-powered threat detection and automated remediation."
+            icon="🛡️"
+          />
+          <Card
+            title="Team Collaboration"
+            href="/services/team-collaboration-hub"
+            description="AI-powered collaboration platform with intelligent project management and productivity analytics."
+            icon="👥"
+          />
+          <Card
+            title="SEO Analyzer"
+            href="/services/seo-analyzer"
+            description="Advanced SEO analysis with AI-powered optimization recommendations and competitor intelligence."
+            icon="📈"
+          />
         </div>
       </section>
 
