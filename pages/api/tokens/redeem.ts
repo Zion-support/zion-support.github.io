@@ -15,10 +15,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const reqs = readJson<any[]>('support/requests.json', []);
     const srid = `sr_${Math.random().toString(36).slice(2)}_${Date.now()}`;
     reqs.push({ id: srid, sessionId: account, reason: 'Premium support redemption', tag: 'premium_support', status: 'open', createdAt: Date.now() });
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     writeJson('support/requests.json', reqs)
   }
   return res.status(200).json({ ok: true, id })
-}
+=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { read_json, write_json } from '../../../utils / fs_db',
 ;
@@ -51,5 +52,5 @@ if ( {) {
   return res.status (200).json ({ ok: true, id });
 }
 ;
-
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

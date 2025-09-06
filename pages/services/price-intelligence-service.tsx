@@ -1,3 +1,4 @@
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 const PriceIntelligenceService: NextPage = () => {
   return (
     <div>
@@ -13,16 +14,9 @@ const PriceIntelligenceService: NextPage = () => {
       </main>
     </div>
   )
-
-},
-export default PriceIntelligenceService,
-
-},
-
-export default PriceIntelligenceService,
-
 }
 export default PriceIntelligenceService;
+=======
 import type { NextPage } from 'next',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -43,3 +37,5 @@ const PriceIntelligenceService: NextPage = () => {
     </div>);
 },
 export default PriceIntelligenceService,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

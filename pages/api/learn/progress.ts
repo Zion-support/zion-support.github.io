@@ -1,62 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-const usersPath = path.join(process.cwd(), 'datalearnusers.json');
-
-function readUsers() {
-  return JSON.parse(fs.readFileSync(usersPath, 'utf-8'))
-}
-
-function writeUsers(data: any) {
-  fs.writeFileSync(usersPath, JSON.stringify(data, null, 2))
-}
-
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    const users = readUsers(),
-    if (req && req.method === 'GET') {
-      const { userId = 'demo-user' } = req && req.query;
       const user = users[userId as string];
       return res && res.status(200).json({ progress: user?.progress ?? {} });
     }
-;
-/**
- * write_users - Function description
- */
-function write_users() {
-  fs.writeFileSync (users_path, JSON.stringify (data, null, 2));
-export default /**
- * handler - Function description
- */
-function handler() {
-  try {
-    const users = read_users (),
-    // Check condition
-if ( {) {
-  $2
-}
-      const { user_id = 'demo - user' } = req.query;
-      const user = users[user_id as string];
-      return res.status (200).json ({ progress: user?.progress ?? {} });
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      const {
-        user_id = 'demo - user',
-        course_id,
-        lesson_id,
-        percent,
-      } = req.body || {}
-      if (
-        return res.status (400).json ({ error: 'course_id required' })) {
-  $2
-}
-      const user = users[user_id] || {
-        user_id,
-        name: user_id,
-        slug: user_id,
         certifications: [],
         badges: [],
         boostInSearch: false,
@@ -69,24 +19,12 @@ if ( {) {
       writeUsers(users);
       return res && res.status(200).json({ ok: true, progress: courseProgress });
     }
-
-    res && res.setHeader('Allow', 'GET, POST');
-    return res && res.status(405).end('Method Not Allowed');
   } catch (e: any) {
     return res
       .status(500)
       .json({ error: e?.message ?? 'Failed to handle progress' });
   }
-      return res.status(200).json({ progress: user?.progress ?? {} })
-    }
-
-
-    res.setHeader('AllowGET, POST');
-    return res.status(405).end('Method Not Allowed')
-  } catch (e: any) {
-    return res.status(500).json({ error: e?.message ?? 'Failed to handle progress' })
-  }
-}
+=======
       }
       const course_progress = user.progress[course_id] || {
         completed_lessons: [],
@@ -115,3 +53,5 @@ if ( {) {
       .status (500);
       .json ({ error: e?.message ?? 'Failed to handle progress' });
   }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

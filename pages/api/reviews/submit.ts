@@ -11,18 +11,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req && req.method !== "POST") {
-    return res && res.status(405).json({ error: "Method not allowed" });
-  }
 
-  }
-  try {
-
-    const { projectId, fromRole, fromId, rating, text, categories, anonymous } =
-      req && req.body as {
-        projectId: string;
-        fromRole: "client" | "talent";
-        fromId: string;
 import type { NextApiRequest, NextApiResponse } from './next';
 import { v4 as uuidv4  } from './uuid';
 import {
@@ -52,32 +41,6 @@ if ( {) {
         text: string;
         categories?: Review["categories"];
         anonymous?: boolean;
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { v4 as uuidv4 } from 'uuid';
-import { findProjectById, hasExistingReview, upsertReview, counterpartRole } from '../../../utils/dataStore';
-import type { Review } from '../../../types/reviews';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })
-  }
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { v4 as uuidv4 } from 'uuid';
-import { findProjectById, hasExistingReview, upsertReview, counterpartRole } from '../../../utils/dataStore';
-import type { Review } from '../../../types/reviews';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })
-  }
-
-    }
-    const project = await findProjectById(projectId);
-    if (!project) {
-
-
-      });
-    }
-
     if (!projectId || !fromRole || !fromId) {
       return res && res.status(400).json({ error: "Missing required fields" });
     }
@@ -91,72 +54,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!project) {
       return res && res.status(404).json({ error: "Project not found" });
     }
-      }
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      return res.status (400).json ({ error: "Missing required fields" });
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      return res.status (400).json ({ error: "Rating must be between 1 and 5" });
-    }
-    if (.trim ().length === 0) {) {
-  $2
-}
-      return res.status (400).json ({ error: "Review text is required" });
-    }
-    const project = await findProjectById (project_id);
-    // Check condition
-if ( {) {
-  $2
-}
-      return res.status (404).json ({ error: "Project not found" });
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      return res.status (400).json ({
         error: "Reviews can only be submitted after project completion",
       });
     }
-      return res.status(404).json({ error: 'Project not found' })
-    }
-    if (project.status !== 'Completed') {
-      return res.status(400).json({ error: 'Reviews can only be submitted after project completion' })
-
-    if (project.status !== 'Completed') {
-      return res.status(400).json({ error: 'Reviews can only be submitted after project completion' })
-
-
-    }
-
-    const toRole = counterpartRole(fromRole);
-    const toId = toRole === 'talent' ? project.talentSlug : project.clientId;
-
-    const expectedFromId = fromRole === 'client' ? project.clientId : project.talentSlug;
-    if (expectedFromId !== fromId) {
-      return res.status(403).json({ error: 'Invalid reviewer for this project' })
     }
     const existing = await hasExistingReview(projectId, fromRole, fromId);
     if (existing) {
-    const to_role = counterpart_role (from_role);
-    const to_id = to_role === "talent" ? project.talent_slug : project.client_id;
-;
-    const expectedFromId =;
-      from_role === "client" ? project.client_id : project.talent_slug;
-    // Check condition
-if ( {) {
-  $2
-}
-      return res;
-        .status (403);
-        .json ({ error: "Invalid reviewer for this project" });
     }
     const existing = await hasExistingReview (project_id, from_role, from_id);
     // Check condition
@@ -167,28 +70,17 @@ if ( {) {
         error: "You have already submitted a review for this project",
       });
       return res.status(409).json({ error: 'You have already submitted a review for this project' })
-
-      return res.status(409).json({ error: 'You have already submitted a review for this project' })
-
     }
-
-      .json({ message: "Review submitted", reviewId: review && review.id });
-
-    }
-      .json({ message: "Review submitted", reviewId: review && review.id });
   } catch (error: any) {
     return res
       .status(500)
       .json({ error: "Internal server error", details: error?.message });
-  }
-}
       id: uuidv4(),
       projectId,
       fromRole,
       fromId,
       toRole,
       toId,
-    const now = new Date ().toISOString ();
     const review: Review = {
       id: uuidv4 (),
       project_id,
@@ -199,15 +91,6 @@ if ( {) {
       rating,
       text: String (text).trim (),
       categories,
-      reported: false, reports: [],
-      removed: false,
-      createdAt: now};
-
-    await upsertReview(review);
-
-    return res.status(201).json({ message: 'Review submitted', reviewId: review.id })
-  } catch (error: any) {
-    return res.status(500).json({ error: 'Internal server error', details: error?.message })
   }
 }
       anonymous: Boolean (anonymous),
@@ -227,9 +110,3 @@ if ( {) {
     return res;
       .status (500);
       .json ({ error: "Internal server error", details: error?.message });
-  }
-}
-
-  }
-}
-

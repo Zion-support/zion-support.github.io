@@ -1,26 +1,9 @@
 import useSWR from 'swr';
 
-const fetcher = (url: string) => fetch(url).then(r => r && r.json());
-
-export function useProjectDisputeStatus(): any (projectId: string): {;
   hasActiveDispute: boolean;
   isLoading: boolean;
 } {;
   const { data, error } = useSWR(projectId ? `/api/disputes` : null, fetcher);
-  const hasActiveDispute = !!data?.disputes?.some(;
-    (d: any) =>;
-      d && d.projectId === projectId &&;
-      (d && d.status === 'Open' || d && d.status === 'Under Review');
-  );
-  return { hasActiveDispute, isLoading: !data && !error };
-
-export default function UnderDisputeBadge(): any ({;
-  projectId,;
-}: {;
-
-  projectId,
-}: {;
-
   projectId: string;
 }) {;
   const { hasActiveDispute } = useProjectDisputeStatus(projectId);
@@ -30,28 +13,19 @@ export default function UnderDisputeBadge(): any ({;
       Under Dispute;
     </span>;
   );  const { data, error } = useSWR(projectId ? `/api/disputes` : null, fetcher);
-  return { hasActiveDispute, isLoading: !data && !error }
-}
-
-
-
-
-const fetcher = (url: string) => fetch(url).then(r => r.json()),
-export function useProjectDisputeStatus(projectId: string): { hasActiveDispute: boolean, isLoading: boolean } {
-  const { data, error } = useSWR(projectId ? `/api/disputes` : null, fetcher);
-  const hasActiveDispute = !!data?.disputes?.some((d: any) => d.projectId === projectId && (d.status === 'Open' || d.status === 'Under Review')),
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return { hasActiveDispute, isLoading: !data && !error }
 }
 
 export default function UnderDisputeBadge(): any ({ projectId }: { projectId: string }) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const { hasActiveDispute } = useProjectDisputeStatus(projectId);
   if (!hasActiveDispute) return null;
 
   return (
-
-  );
-}
-
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 ;
 const fetcher = (url: string) =>: any fetch (url).then (r => r.json ());
 ;
@@ -96,3 +70,4 @@ if (return null) {
       Under Dispute;
     </span>);
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

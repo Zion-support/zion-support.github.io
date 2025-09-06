@@ -55,6 +55,7 @@
               rel='noreferrer'
               className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>;
               <ExternalLink className='w-4 h-4' /> Puppeteer;
+=======
 export default /**
  * BrowserAutomationCloudPage - Function description
  */
@@ -120,13 +121,11 @@ function BrowserAutomationCloudPage() {
               className='inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300';
             >;
               <ExternalLink className='w - 4 h - 4' /> Puppeteer;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </a>;
           </div>;
         </section>;
       </main>;
-	const features = [
-		'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate limitsArtifacts: HAR, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API'
-	];
 
 		<>
 			<SEO title="Browser Automation Cloud" description="Parallel Playwright/Puppeteer automation at scale with queues, storage, and proxies." />
@@ -186,6 +185,10 @@ function BrowserAutomationCloudPage() {
 		</>;
 	),;
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
     </>);	return (
   <>;
   <SEO title="Browser Automation Cloud" description="Parallel Playwright / Puppeteer automation at scale with queues, storage, and proxies." />;
@@ -214,7 +217,4 @@ function BrowserAutomationCloudPage() {
   </main>;
   </>),
 }
-
-	),
-}
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

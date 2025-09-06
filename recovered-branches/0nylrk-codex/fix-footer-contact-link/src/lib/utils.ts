@@ -1,9 +1,0 @@
-import clsx, { type ClassValue } from &quot;clsx & quot;
-import { tw_merge } from &quot;tailwind - merge & quot;
-;
-export /**
- * cn - Function description
- */
-function cn() {
-  return tw_merge (clsx (inputs));
-}

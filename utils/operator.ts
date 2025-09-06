@@ -30,7 +30,7 @@ export const logSupportEventToOperator = (event: SupportEvent) =>
   operatorManager && operatorManager.logSupportEvent(event);
 
 export const getOperatorSessions = () => operatorManager && operatorManager.getOperatorSessions();
-export const getSupportEvents = () => operatorManager && operatorManager.getSupportEvents();
+=======
 export async function logSupportEventToOperator(
   event: OperatorEvent
 ): Promise<void> {
@@ -45,6 +45,8 @@ export async function tagOperatorSession(
 ): Promise<void> {
   return Promise.resolve();
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 // Operator utilities;
 export const operator = {
   // Add operator functionality here;
@@ -52,3 +54,5 @@ export const operator = {
   get_events: () => [],
   getEventById: (id: string) => null;
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

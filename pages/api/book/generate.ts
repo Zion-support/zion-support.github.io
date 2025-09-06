@@ -6,10 +6,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(405).json({ error: 'Method not allowed' })
     return
   }
-
-  const { meta, chapters } = req.body as { meta: any, chapters: { title: string, content?: string }[] };
-
-  const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) {
     // Fallback: return structured placeholders
     const drafted = chapters.map((c) => ({
@@ -18,6 +14,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(200).json({ chapters: drafted })
     return
   }
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     const completion = await client.chat.completions.create({
       model: 'gpt-4o-mini'
       messages: [
@@ -27,10 +24,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       temperature: 0.7
       });
     const text = completion.choices?.[0]?.message?.content || '';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     drafted.push({ title: ch.title, content: text })
   }
   res.status(200).json({ chapters: drafted })
-}
+=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import OpenAI from 'openai',
 export default async /**
@@ -49,9 +47,6 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-
-
-  }
 }
     // Fallback: return structured placeholders;
     const drafted = chapters.map ((c) => ({
@@ -76,3 +71,5 @@ if ( {) {
   }
   res.status (200).json ({ chapters: drafted });
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

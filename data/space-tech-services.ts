@@ -32,132 +32,12 @@ export interface SpaceTechService {
 
     website: string;
   }
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-;
-export const spaceTechServices: SpaceTechService[] = [;
-  {
-    id: 'space - mission - management - platform',
-    name: 'Space Mission Management Platform',
-    tagline: 'Complete space mission planning and execution platform',
-    price: '$5, 999',
-    period: '/month',
-    description:;
-      'Comprehensive space mission management platform that enables commercial space companies to plan, execute, and monitor space missions like NASA. Manage satellite operations, launch vehicles, and ground stations.',
-    features: [;
-      'Satellite mission planning',
-      'Orbital mechanics calculations',
-      'Real - time satellite tracking',
-      'Space weather monitoring',
-      'Launch vehicle integration',
-      'Ground station management',
-      'Space debris tracking',
-      'Mission analytics dashboard',
-      'Regulatory compliance tools',
-      'Multi - satellite operations',
-    ],
-    popular: true,
-    icon: '🚀',
-    marketPosition:
-      'Revolutionary technology with no direct competitors. SpaceX Starlink ($99/month) and OneWeb ($50/month) offer basic internet services. Our advantage: Complete mission management platform.'
-    targetAudience:
-      'Space companies, Satellite operators, Launch providers, Government agencies, Research institutions, Aerospace companies'
     trialDays: 30
     setupTime: '2 weeks'
     category: 'Space Technology'
     realService: true
     technology: [
-    color: 'from - cyan - 600 to - blue - 700',
-    text_color: 'text - cyan - 400',
-    link: 'https://ziontechgroup.com / space - technology',
-    market_position:;
-      'Revolutionary technology with no direct competitors. SpaceX Starlink ($99 / month) and OneWeb ($50 / month) offer basic internet services. Our advantage: Complete mission management platform.',
-    target_audience:;
-      'Space companies, Satellite operators, Launch providers, Government agencies, Research institutions, Aerospace companies',
-    trial_days: 30,
-    setup_time: '2 weeks',
-    category: 'Space Technology',
-    real_service: true,
-    technology: [;
-      'Orbital Mechanics',
-      'Satellite Tracking',
-      'Space Weather',
-      'React',
-      'Node && Node.js',
-      'PostgreSQL',
-      'Real - time Data',
-    ],
-    integrations: [
-      'Satellite networks'
-      'Launch providers'
-      'Ground stations'
-      'Weather services'
-      'Regulatory databases'
-      'Tracking systems'
-    ]
-    useCases: [
-      'Mission planning'
-      'Satellite operations'
-      'Launch coordination'
-      'Space monitoring'
-      'Regulatory compliance'
-      'Performance optimization'
-    ]
-    roi: 'Enable commercial space operations and reduce mission costs by 60%. ROI through operational efficiency and new revenue streams.'
-    competitors: ['SpaceX Starlink', 'OneWeb', 'Basic satellite services']
-    marketSize: '$469B space economy'
-    growthRate: '400% annual growth'
-    variant: 'space-futuristic'
-    contactInfo: {
-    integrations: [;
-      'Satellite networks',
-      'Launch providers',
-      'Ground stations',
-      'Weather services',
-      'Regulatory databases',
-      'Tracking systems',
-    ],
-    use_cases: [;
-      'Mission planning',
-      'Satellite operations',
-      'Launch coordination',
-      'Space monitoring',
-      'Regulatory compliance',
-      'Performance optimization',
-    ],
-    roi: 'Enable commercial space operations and reduce mission costs by 60%. ROI through operational efficiency and new revenue streams.',
-    competitors: ['SpaceX Starlink', 'OneWeb', 'Basic satellite services'],
-    market_size: '$469B space economy',
-    growth_rate: '400% annual growth',
-    variant: 'space - futuristic',
-    contact_info: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
-    },
-    real_implementation: true,
-    implementation_details:;
-      'Complete space mission platform with orbital calculations, satellite tracking, and mission management. Includes real - time monitoring and regulatory compliance.',
-    launch_date: '2024 - 01 - 15',
-    customers: 25,
-    rating: 5 && 5.0,
-    reviews: 12,
-  },
   {
-    id: 'satellite - constellation - management',
-    name: 'Satellite Constellation Management System',
-    tagline: 'Manage large satellite networks with AI - powered optimization',
-    price: '$3, 999',
-    period: '/month',
-    description:;
-      'Advanced satellite constellation management system that optimizes large networks of satellites for maximum coverage, efficiency, and performance. Manage thousands of satellites like SpaceX and OneWeb.',
-    features: [;
-      'Multi - satellite coordination',
       'Coverage optimization',
       'Interference management',
       'Power optimization',
@@ -179,18 +59,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     category: 'Space Technology'
     realService: true
     technology: [
-    color: 'from - blue - 600 to - indigo - 700',
-    text_color: 'text - blue - 400',
-    link: 'https://ziontechgroup.com / satellite - constellation',
-    market_position:;
-      'Revolutionary technology with no direct competitors. Traditional satellite management uses basic tools. Our advantage: AI - powered optimization and large - scale management.',
-    target_audience:;
-      'Satellite operators, Internet service providers, Telecommunications companies, Government agencies, Research institutions',
-    trial_days: 30,
-    setup_time: '1 week',
-    category: 'Space Technology',
-    real_service: true,
-    technology: [;
       'AI Optimization',
       'Satellite Networks',
       'Machine Learning',
@@ -220,27 +88,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     growthRate: '300% annual growth'
     variant: 'space-futuristic'
     contactInfo: {
-    integrations: [;
-      'Satellite networks',
-      'Ground stations',
-      'Internet infrastructure',
-      'Telecom systems',
-      'Monitoring tools',
-    ],
-    use_cases: [;
-      'Constellation management',
-      'Coverage optimization',
-      'Performance monitoring',
-      'Maintenance planning',
-      'Traffic management',
-      'Efficiency optimization',
-    ],
-    roi: 'Optimize satellite operations and reduce operational costs by 40%. ROI through efficiency gains and improved service quality.',
-    competitors: ['Traditional satellite management', 'Basic monitoring tools'],
-    market_size: '$150B satellite services market',
-    growth_rate: '300% annual growth',
-    variant: 'space - futuristic',
-    contact_info: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -255,15 +102,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     reviews: 20,
   },
   {
-    id: 'space - debris - monitoring - system',
-    name: 'Space Debris Monitoring & Avoidance System',
-    tagline: 'Protect satellites from space debris with AI - powered monitoring',
-    price: '$2, 499',
-    period: '/month',
-    description:;
-      'Advanced space debris monitoring system that tracks orbital debris and provides collision avoidance recommendations. Protect your satellites and ensure safe space operations.',
-    features: [;
-      'Real - time debris tracking',
       'Collision risk assessment',
       'Avoidance maneuver planning',
       'Debris catalog management',
@@ -285,18 +123,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     category: 'Space Technology'
     realService: true
     technology: [
-    color: 'from - green - 600 to - emerald - 700',
-    text_color: 'text - green - 400',
-    link: 'https://ziontechgroup.com / space - debris - monitoring',
-    market_position:;
-      'Revolutionary technology with no direct competitors. Basic debris tracking exists but lacks AI - powered risk assessment. Our advantage: Comprehensive monitoring and avoidance.',
-    target_audience:;
-      'Satellite operators, Space agencies, Launch providers, Insurance companies, Research institutions',
-    trial_days: 30,
-    setup_time: '1 week',
-    category: 'Space Technology',
-    real_service: true,
-    technology: [;
       'AI Risk Assessment',
       'Debris Tracking',
       'Machine Learning',
@@ -326,27 +152,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     growthRate: '250% annual growth'
     variant: 'space-futuristic'
     contactInfo: {
-    integrations: [;
-      'Satellite networks',
-      'Tracking systems',
-      'Launch providers',
-      'Insurance platforms',
-      'Research databases',
-    ],
-    use_cases: [;
-      'Debris monitoring',
-      'Collision avoidance',
-      'Risk assessment',
-      'Insurance underwriting',
-      'Research analysis',
-      'Safety planning',
-    ],
-    roi: 'Protect valuable satellites and reduce insurance costs by 30%. ROI through risk mitigation and asset protection.',
-    competitors: ['Basic debris tracking', 'Manual monitoring'],
-    market_size: '$50B space safety market',
-    growth_rate: '250% annual growth',
-    variant: 'space - futuristic',
-    contact_info: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -361,14 +166,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     reviews: 30,
   },
   {
-    id: 'space - weather - forecasting',
-    name: 'Space Weather Forecasting & Alert System',
-    tagline: 'Predict space weather events that impact satellite operations',
-    price: '$1, 999',
-    period: '/month',
-    description:;
-      'Advanced space weather forecasting system that predicts solar storms, radiation events, and other space weather phenomena that can impact satellite operations and communications.',
-    features: [;
       'Solar storm prediction',
       'Radiation event forecasting',
       'Geomagnetic storm alerts',
@@ -391,18 +188,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     category: 'Space Technology'
     realService: true
     technology: [
-    color: 'from - yellow - 600 to - orange - 700',
-    text_color: 'text - yellow - 400',
-    link: 'https://ziontechgroup.com / space - weather - forecasting',
-    market_position:;
-      'Revolutionary technology with no direct competitors. Basic space weather data exists but lacks predictive capabilities. Our advantage: AI - powered forecasting and impact assessment.',
-    target_audience:;
-      'Satellite operators, Telecommunications companies, Power grid operators, Aviation companies, Research institutions',
-    trial_days: 30,
-    setup_time: '1 week',
-    category: 'Space Technology',
-    real_service: true,
-    technology: [;
       'AI Forecasting',
       'Space Weather',
       'Machine Learning',
@@ -432,27 +217,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     growthRate: '200% annual growth'
     variant: 'space-futuristic'
     contactInfo: {
-    integrations: [;
-      'Solar observatories',
-      'Satellite networks',
-      'Power grids',
-      'Telecom systems',
-      'Aviation systems',
-    ],
-    use_cases: [;
-      'Weather forecasting',
-      'Impact assessment',
-      'Risk mitigation',
-      'Operational planning',
-      'Research analysis',
-      'Safety planning',
-    ],
-    roi: 'Prevent satellite damage and reduce operational disruptions. ROI through risk mitigation and operational continuity.',
-    competitors: ['Basic weather data', 'Manual monitoring'],
-    market_size: '$30B space weather market',
-    growth_rate: '200% annual growth',
-    variant: 'space - futuristic',
-    contact_info: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -467,14 +231,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     reviews: 40,
   },
   {
-    id: 'orbital - launch - coordination',
-    name: 'Orbital Launch Coordination Platform',
-    tagline: 'Coordinate complex orbital launches with precision timing',
-    price: '$4, 999',
-    period: '/month',
-    description:;
-      'Advanced orbital launch coordination platform that manages complex launch sequences, orbital insertions, and mission timing. Coordinate launches like SpaceX and NASA with precision.',
-    features: [;
       'Launch sequence management',
       'Orbital insertion planning',
       'Timing optimization',
@@ -497,18 +253,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     category: 'Space Technology'
     realService: true
     technology: [
-    color: 'from - red - 600 to - pink - 700',
-    text_color: 'text - red - 400',
-    link: 'https://ziontechgroup.com / orbital - launch - coordination',
-    market_position:;
-      'Revolutionary technology with no direct competitors. Basic launch coordination exists but lacks precision timing. Our advantage: Advanced coordination and optimization.',
-    target_audience:;
-      'Launch providers, Space agencies, Satellite operators, Government agencies, Research institutions',
-    trial_days: 30,
-    setup_time: '2 weeks',
-    category: 'Space Technology',
-    real_service: true,
-    technology: [;
       'Launch Coordination',
       'Orbital Mechanics',
       'Precision Timing',
@@ -538,27 +282,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     growthRate: '180% annual growth'
     variant: 'space-futuristic'
     contactInfo: {
-    integrations: [;
-      'Launch vehicles',
-      'Ground stations',
-      'Tracking systems',
-      'Mission control',
-      'Satellite networks',
-    ],
-    use_cases: [;
-      'Launch coordination',
-      'Mission planning',
-      'Timing optimization',
-      'Trajectory planning',
-      'Mission tracking',
-      'Performance analysis',
-    ],
-    roi: 'Improve launch success rates and reduce mission costs by 25%. ROI through operational efficiency and mission success.',
-    competitors: ['Basic coordination', 'Manual planning'],
-    market_size: '$20B launch services market',
-    growth_rate: '180% annual growth',
-    variant: 'space - futuristic',
-    contact_info: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -573,14 +296,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     reviews: 18,
   },
   {
-    id: 'ground - station - network - management',
-    name: 'Ground Station Network Management System',
-    tagline: 'Manage global ground station networks for satellite operations',
-    price: '$3, 499',
-    period: '/month',
-    description:;
-      'Advanced ground station network management system that coordinates global networks of ground stations for satellite communications, tracking, and control.',
-    features: [;
       'Global station coordination',
       'Network optimization',
       'Traffic routing',
@@ -603,18 +318,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     category: 'Space Technology'
     realService: true
     technology: [
-    color: 'from - emerald - 600 to - teal - 700',
-    text_color: 'text - emerald - 400',
-    link: 'https://ziontechgroup.com / ground - station - management',
-    market_position:;
-      'Revolutionary technology with no direct competitors. Basic ground station management exists but lacks network optimization. Our advantage: Global coordination and optimization.',
-    target_audience:;
-      'Satellite operators, Telecommunications companies, Space agencies, Research institutions, Commercial space companies',
-    trial_days: 30,
-    setup_time: '1 week',
-    category: 'Space Technology',
-    real_service: true,
-    technology: [;
       'Network Management',
       'Global Coordination',
       'AI Optimization',
@@ -644,27 +347,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     growthRate: '220% annual growth'
     variant: 'space-futuristic'
     contactInfo: {
-    integrations: [;
-      'Ground stations',
-      'Satellite networks',
-      'Telecom systems',
-      'Monitoring tools',
-      'Control systems',
-    ],
-    use_cases: [;
-      'Network management',
-      'Traffic optimization',
-      'Performance monitoring',
-      'Maintenance planning',
-      'Failover management',
-      'Global coordination',
-    ],
-    roi: 'Optimize ground station operations and reduce network costs by 35%. ROI through efficiency gains and improved reliability.',
-    competitors: ['Basic management', 'Manual coordination'],
-    market_size: '$25B ground station market',
-    growth_rate: '220% annual growth',
-    variant: 'space - futuristic',
-    contact_info: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -679,14 +361,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     reviews: 25,
   },
   {
-    id: 'space - research - data - platform',
-    name: 'Space Research Data & Analytics Platform',
-    tagline: 'Access and analyze space research data with AI - powered insights',
-    price: '$1, 499',
-    period: '/month',
-    description:;
-      'Comprehensive space research data platform that provides access to satellite imagery, space weather data, and research findings with AI - powered analysis and insights.',
-    features: [;
       'Satellite imagery access',
       'Space weather data',
       'Research database',
@@ -709,18 +383,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     category: 'Space Technology'
     realService: true
     technology: [
-    color: 'from - purple - 600 to - indigo - 700',
-    text_color: 'text - purple - 400',
-    link: 'https://ziontechgroup.com / space - research - data',
-    market_position:;
-      'Revolutionary technology with no direct competitors. Basic data access exists but lacks AI analysis. Our advantage: Comprehensive data and AI - powered insights.',
-    target_audience:;
-      'Researchers, Educational institutions, Government agencies, Space companies, Media organizations, Students',
-    trial_days: 30,
-    setup_time: '1 hour',
-    category: 'Space Technology',
-    real_service: true,
-    technology: [;
       'Data Analytics',
       'AI Analysis',
       'Satellite Data',
@@ -750,27 +412,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     growthRate: '180% annual growth'
     variant: 'space-futuristic'
     contactInfo: {
-    integrations: [;
-      'Satellite networks',
-      'Research databases',
-      'Educational platforms',
-      'Media systems',
-      'Government databases',
-    ],
-    use_cases: [;
-      'Research analysis',
-      'Educational content',
-      'Media reporting',
-      'Policy development',
-      'Scientific discovery',
-      'Data exploration',
-    ],
-    roi: 'Accelerate research and discovery through comprehensive data access and AI analysis. ROI through research efficiency and insights.',
-    competitors: ['Basic data access', 'Manual research'],
-    market_size: '$15B space research market',
-    growth_rate: '180% annual growth',
-    variant: 'space - futuristic',
-    contact_info: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -785,14 +426,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     reviews: 100,
   },
   {
-    id: 'space - commerce - platform',
-    name: 'Space Commerce & Trading Platform',
-    tagline: 'Trade space assets and services in a secure marketplace',
-    price: '$2, 999',
-    period: '/month',
-    description:;
-      'Revolutionary space commerce platform that enables trading of satellite capacity, launch services, and space assets in a secure, blockchain - powered marketplace.',
-    features: [;
       'Asset trading platform',
       'Smart contracts',
       'Secure payments',
@@ -815,18 +448,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     category: 'Space Technology'
     realService: true
     technology: [
-    color: 'from - violet - 600 to - purple - 700',
-    text_color: 'text - violet - 400',
-    link: 'https://ziontechgroup.com / space - commerce',
-    market_position:;
-      'Revolutionary technology with no direct competitors. Traditional space services use manual contracts. Our advantage: Automated trading and secure marketplace.',
-    target_audience:;
-      'Satellite operators, Launch providers, Space companies, Investors, Insurance companies, Government agencies',
-    trial_days: 30,
-    setup_time: '1 week',
-    category: 'Space Technology',
-    real_service: true,
-    technology: [;
       'Blockchain',
       'Smart Contracts',
       'Trading Platform',
@@ -856,27 +477,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     growthRate: '300% annual growth'
     variant: 'space-futuristic'
     contactInfo: {
-    integrations: [;
-      'Payment systems',
-      'Blockchain networks',
-      'Space services',
-      'Financial systems',
-      'Compliance platforms',
-    ],
-    use_cases: [;
-      'Asset trading',
-      'Service procurement',
-      'Capacity trading',
-      'Investment trading',
-      'Insurance trading',
-      'Market making',
-    ],
-    roi: 'Create new revenue streams through space asset trading and reduce transaction costs by 50%.',
-    competitors: ['Manual contracts', 'Traditional procurement'],
-    market_size: '$100B space services market',
-    growth_rate: '300% annual growth',
-    variant: 'space - futuristic',
-    contact_info: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -891,14 +491,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     reviews: 15,
   },
   {
-    id: 'space - education - platform',
-    name: 'Space Education & Training Platform',
-    tagline: 'Learn space technology and operations with interactive courses',
-    price: '$299',
-    period: '/month',
-    description:;
-      'Comprehensive space education platform that provides interactive courses, simulations, and training for space technology, operations, and careers.',
-    features: [;
       'Interactive courses',
       'Space simulations',
       'Virtual training',
@@ -921,18 +513,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     category: 'Space Technology'
     realService: true
     technology: [
-    color: 'from - indigo - 600 to - blue - 700',
-    text_color: 'text - indigo - 400',
-    link: 'https://ziontechgroup.com / space - education',
-    market_position:;
-      'Revolutionary technology with no direct competitors. Basic space education exists but lacks interactivity. Our advantage: Interactive courses and real - world simulations.',
-    target_audience:;
-      'Students, Professionals, Space enthusiasts, Educational institutions, Companies, Government agencies',
-    trial_days: 30,
-    setup_time: '1 hour',
-    category: 'Space Technology',
-    real_service: true,
-    technology: [;
       'Interactive Learning',
       'Virtual Reality',
       'AI Tutoring',
@@ -962,27 +542,6 @@ export const spaceTechServices: SpaceTechService[] = [;
     growthRate: '200% annual growth'
     variant: 'space-futuristic'
     contactInfo: {
-    integrations: [;
-      'Educational platforms',
-      'VR systems',
-      'Learning management',
-      'Career platforms',
-      'Social networks',
-    ],
-    use_cases: [;
-      'Space education',
-      'Career training',
-      'Skill development',
-      'Professional certification',
-      'Academic learning',
-      'Personal development',
-    ],
-    roi: 'Accelerate space education and career development through interactive learning. ROI through skill development and career advancement.',
-    competitors: ['Basic education', 'Traditional courses'],
-    market_size: '$8B space education market',
-    growth_rate: '200% annual growth',
-    variant: 'space - futuristic',
-    contact_info: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -998,58 +557,6 @@ export const spaceTechServices: SpaceTechService[] = [;
   },
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
-  id: string, name: string,
-  tagline: string, price: string,
-  period: string, description: string,
-  features: string[], popular: boolean,
-  icon: string, color: string,
-  textColor: string, link: string,
-  marketPosition: string, targetAudience: string,
-  trialDays: number, setupTime: string,
-  category: string, realService: boolean,
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string,
-  competitors: string[], marketSize: string,
-  growthRate: string, variant: string,
-  contactInfo: {
-      
-    mobile: string, email: string,
-    address: string,
-    website: string
-  
-    },
-    realImplementation: boolean, implementationDetails: string,
-  launchDate: string, customers: number,
-  rating: number,
-  reviews: number
-}
-
-export const spaceTechServices: SpaceTechService[] = [
-  {
-    id: 'space-mission-management-platform', name: 'Space Mission Management Platform',
-    tagline: 'Complete space mission planning and execution platform',
-    price: '$5,999',
-    period: '/month',
-    description: 'Comprehensive space mission management platform that enables commercial space companies to plan, execute, and monitor space missions like NASA. Manage satellite operations, launch vehicles, and ground stations.',
-    features: [
-      'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard';
-      'Regulatory compliance toolsMulti-satellite operations'
-    ];
-    popular: true, icon: '🚀',
-    color: 'from-cyan-600 to-blue-700', textColor: 'text-cyan-400',
-    link: 'https://ziontechgroup.com/space-technology', marketPosition: 'Revolutionary technology with no direct competitors. SpaceX Starlink ($99/month) and OneWeb ($50/month) offer basic internet services. Our advantage: Complete mission management platform.',
-    targetAudience: 'Space companies, Satellite operators, Launch providers, Government agencies, Research institutions, Aerospace companies',
-    trialDays: 30, setupTime: '2 weeks',
-    category: 'Space Technology', realService: true,
-    technology: ['Orbital MechanicsSatellite TrackingSpace WeatherReactNode.jsPostgreSQLReal-time Data'], integrations: ['Satellite networksLaunch providersGround stationsWeather servicesRegulatory databasesTracking systems'],
-    useCases: ['Mission planningSatellite operationsLaunch coordinationSpace monitoringRegulatory compliancePerformance optimization'], roi: 'Enable commercial space operations and reduce mission costs by 60%. ROI through operational efficiency and new revenue streams.',
-    competitors: ['SpaceX StarlinkOneWebBasic satellite services'], marketSize: '$469B space economy',
-    growthRate: '400% annual growth', variant: 'space-futuristic',
-    contactInfo: {
-      
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-
       address: '364 E Main St STE 1008 Middletown DE 19709',
     reviews: 250
       website: 'https://ziontechgroup.com';
@@ -1060,12 +567,5 @@ export const spaceTechServices: SpaceTechService[] = [
     customers: 500;
     rating: 4.9,
     reviews: 250;
-
-export interface SpaceTechService {;
-
   }
-
-];
-  }
-];
 ;

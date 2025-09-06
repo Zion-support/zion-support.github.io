@@ -3,7 +3,7 @@ import { readState } from "../../../utils/sync/storage";
 import { filterEventsByScope } from "../../../utils/sync/storage";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-
+  const state = readState()
   if (req.method === "GET") {
     const scope = state.config.scope
     const scopedEvents = filterEventsByScope(state.events, scope)
@@ -22,7 +22,7 @@ proposals: scopedEvents.filter((e) => e.type === "proposal").length
         leaderboard: scopedEvents.filter((e) => e.type === "leaderboard_entry").length}})
   }
   return res.status(405).json({ error: "Method not allowed" })
-}
+=======
 import type { NextApiRequest, NextApiResponse } from './next';,
 import { read_state  } from '../../../utils / sync / storage';,
 import { filterEventsByScope  } from '../../../utils / sync / storage';,
@@ -53,3 +53,5 @@ proposals: scoped_events.filter ((e) => e.type === "proposal").length,
   return res.status (405).json ({ error: "Method not allowed" });
 }
 ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -14,12 +14,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const current = tokenStore.getConfig();
     const updated = { ...current, ...body };
     tokenStore.setConfig(updated);
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     return res.status(200).json(updated)
   }
   return res.status(405).json({ error: "Method not allowed" })
 }
-
-
+=======
 import type { NextApiRequest, NextApiResponse } from './next';,
 import { get_config  } from '../../../../utils / token / service';,
 import { token_store  } from '../../../../utils / token / storage';,
@@ -46,3 +46,5 @@ const body = req.body || {},
   return res.status (405).json ({ error: "Method not allowed" });
 }
 ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -1,6 +1,9 @@
 
 export default function ReportsIndex() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
 export default function ReportsIndex() {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <div className='min-h-screen bg-slate-950 text-white'>;
       <main className='container mx-auto px-4 py-12 max-w-7xl'>;
@@ -25,13 +28,17 @@ export default function ReportsIndex() {
           </p>;
         </div>;
 
+        {/* Content Categorizer Component */}
+        <ContentCategorizer />;
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Back to Home */}
         <div className='mt-12 text-center'>;
           <Link
             href='/'
             className='inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200 transition-colors duration-200'>            ← Back to home        <div className="mt-12 text-center">;
           <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">;
+=======
 import Link from 'next / link';
 import ContentCategorizer from '../../components / ContentCategorizer';
 export default /**
@@ -73,34 +80,15 @@ function ReportsIndex() {
             className='inline - flex items - center gap - 2 text - cyan - 300 hover:text - cyan - 200 transition - colors duration - 200';
           >            ← Back to home        <div className="mt - 12 text - center">;
           <Link href="/" className="inline - flex items - center gap - 2 text - cyan - 300 hover: text - cyan - 200 transition - colors duration - 200">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             ← Back to home;
           </Link>;
         </div>;
       </main>;
-        <div className="mt-12 text-center">
-
-        {/* Content Categorizer Component */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <ContentCategorizer />;
-        {/* Back to Home */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <div className="mt-12 text-center">
-
-
-          <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">
-            ← Back to home
-          </Link>
-        </div>
-      </main>
-
-    </div>
   );
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
     </div>);
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

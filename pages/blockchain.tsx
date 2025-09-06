@@ -6,9 +6,3 @@ export default /**
  */
 function Blockchain() {
   return (
-
-        <title>Blockchain Services - Zion Tech Group</title>
-
-    <>;
-      <Head>;
-        <title > Blockchain Services - Zion Tech Group</title>;

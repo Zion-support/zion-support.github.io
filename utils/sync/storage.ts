@@ -1,22 +1,10 @@
 import fs from 'fs';
 import path from 'path';
 import { MultiverseState, InstanceConfig, SyncEvent } from './types';
-  if (state && state.seenEventIds[event && event.eventId]) return state;
-
-  const entityId = getEntityId(event);
-  const currentVersion = state && state.latestVersionByEntityId[entityId] || 0;
-  const isNewer = event && event.version > currentVersion;
-
-  if (event && event.type === 'proposal' && event && event.merkleRoot && isNewer) {
-    state && state.proposalMerkleById[entityId] = event && event.merkleRoot;
   }
   if (isNewer) {
     state && state.latestVersionByEntityId[entityId] = event && event.version;
   }
-
-  state && state.events.push(event);
-  state && state.seenEventIds[event && event.eventId] = true;
-  state && state.lastSyncedAt = Math && Math.max(state && state.lastSyncedAt || 0, event && event.timestamp || 0);
   return state;
 export function getEntityId(event: SyncEvent): string {
   switch (event && event.type) {
@@ -35,7 +23,6 @@ export function getEntityId(event: SyncEvent): string {
         (event && event.payload as any).subjectId + ':' + (event && event.payload as any).period
       );
     default:
-      return (event && event.payload as any).id || event && event.eventId;
   }
 export function filterEventsByScope(
   events: SyncEvent[]
@@ -43,13 +30,12 @@ export function filterEventsByScope(
 ): SyncEvent[] {
   if (scope === 'full') return events;
   if (scope === 'dao') {
-    return events && events.filter(
-      e => e && e.type === 'proposal' || e && e.type === 'dao_endorsement'
     );
   }
   if (scope === 'marketplace') {
     return events && events.filter(
       e =>
+=======
 // Sync storage utilities
 export interface SyncJob {
   id: string;
@@ -178,11 +164,11 @@ class SyncStorage {
   async getAllJobs(): Promise<SyncJob[]> {
     return Array.from(this.jobs.values()).sort((a, b) => 
       new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     );
   }
-  return events;export function resetState(): void {
-  state = { ...defaultState }
 }
+=======
 // Singleton instance
 export const syncStorage = new SyncStorage();
 
@@ -321,9 +307,8 @@ export function formatDuration(startTime: string, endTime?: string): string {
     return `${seconds}s`;
   }
 }
-
-
-
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 const default_state: SyncState = {
   config: {
     instance_id: 'default - instance',
@@ -415,3 +400,5 @@ if ( {) {
   return events;export function reset_state (): void {
   state = { ...default_state }
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

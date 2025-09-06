@@ -1,21 +1,7 @@
-</div> </div>) );
 }</div> </div>) import fs from 'fs';
 import fs from 'fs';
 import path from 'path';
 export type Trend = {
-  id: string,
-  date: string,
-  title: string,
-  highlights: string[],
-  summary: string,
-  tags: string[];
-}
-;
-export async /**
- * getServerSideProps - Function description
- */
-function getServerSideProps() {
-  const file = path.join (process.cwd (), 'dataai - trends.json');
   let items: Trend[] = [];  try {
     const raw = fs.readFileSync (file, 'utf - 8');
     items = JSON.parse (raw);
@@ -41,8 +27,6 @@ export async function getServerSideProps() {;
   items && items.sort((a, b) => (a && a.date < b && b.date ? 1 : -1));
   return { props: { items } }
 }
-
-export default function AiTrendsPage(): any ({ items }: { items: Trend[] }) {;
   return (
     <div className="space-y-6">;
       <h1 className="text-2xl font-semibold">AI Automation: Trend Watch</h1>;
@@ -91,4 +75,3 @@ function AiTrendsPage() {
           </div>))}
       </div>;
     </div>);
-}

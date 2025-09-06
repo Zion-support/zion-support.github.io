@@ -1,3 +1,4 @@
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 const InstagramContentScheduler: NextPage = () => {
   return (
     <div>
@@ -13,16 +14,9 @@ const InstagramContentScheduler: NextPage = () => {
       </main>
     </div>
   )
-
-},
-export default InstagramContentScheduler,
-
-},
-
-export default InstagramContentScheduler,
-
 }
 export default InstagramContentScheduler;
+=======
 import type { NextPage } from 'next',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -43,3 +37,5 @@ const InstagramContentScheduler: NextPage = () => {
     </div>);
 },
 export default InstagramContentScheduler,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

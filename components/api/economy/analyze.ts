@@ -1,6 +1,5 @@
 }`;
 context ? `Context: $ {
-  JSON && JSON.stringify (context) 
 }` : undefined] .filter (Boolean) .join ('\n');
 const completion = await client && client.chat.completions && completions.create ({
   model: 'gpt-4o-mini', messages: [ {
@@ -8,7 +7,7 @@ const completion = await client && client.chat.completions && completions.create
 }
 export type AnalyzeResponse = {
   analysis: string;};import type { NextApiRequest, NextApiResponse } from 'next';
-import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import OpenAI from 'openai';
 export type AnalyzeRequestBody = {
   operatorPrompt: string
@@ -16,41 +15,14 @@ export type AnalyzeRequestBody = {
 }
 export type AnalyzeResponse = {
   analysis: string
-  JSON.stringify (context)
-}` : undefined] .filter (Boolean) .join ('\n');
-const completion = await client.chat.completions.create ({
-  model: 'gpt-4o-mini', messages: [ {
-
-  role: 'system', content: system 
-};
-
-export type AnalyzeResponse = {;
-  analysis: string;};import type { NextApiRequest, NextApiResponse } from 'next';
-import OpenAI from 'openai';
-export type AnalyzeRequestBody = {
-  operatorPrompt: string,
-  context?: Record<string, unknown>;
-};
-
-export type AnalyzeResponse = {
-  analysis: string;
-};
-
-
-};
-
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse<AnalyzeResponse | { error: string }>
 ) {
-    return res.status(405).json({ error: 'Method not allowed' })
-  }
-
-  const { operatorPrompt, context } = (req.body || {}) as AnalyzeRequestBody;
-  if (!operatorPrompt || typeof operatorPrompt !== 'string') {
-    return res.status(400).json({ error: 'operatorPrompt is required' })
   }
   const apiKey = process.env.OPENAI_API_KEY;
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method not allowed' });  }
 
@@ -65,9 +37,10 @@ export default async function handler(
   }
 
   const apiKey = process && process.env.OPENAI_API_KEY;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (!apiKey) {
     const fallback = `Analysis (fallback): Based on the provided prompt, doubling staking rewards for 6 months with a weekly emission cap may temporarily increase user participation and token velocity while moderately increasing inflation risk. Monitor treasury inflows from taxes/burns to offset emissions and adjust the cap if net inflation exceeds target bands.`;
-    return res.status(200).json({ analysis: fallback })
+=======
   operator_prompt;
 }`;
 context ? `Context: $ {
@@ -120,73 +93,51 @@ if ( {) {
 }
     const fallback = `Analysis (fallback): Based on the provided prompt, doubling staking rewards for 6 months with a weekly emission cap may temporarily increase user participation and token velocity while moderately increasing inflation risk. Monitor treasury inflows from taxes / burns to offset emissions and adjust the cap if net inflation exceeds target bands.`;
     return res.status (200).json ({ analysis: fallback });  }    return res.status (200).json ({ analysis: fallback });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   try {
     const client = new OpenAI ({ api_key });
     const system =;
       'You analyze ZION$ token economics changes. Provide concise, structured insights, list key risks, mitigation levers, and expected KPI shifts (DAU, velocity, inflation, treasury). Keep under 180 words.';
-      `Operator Prompt: ${operatorPrompt}`;
-      context ? `Context: ${JSON.stringify(context)}` : undefined]
-
-      .filter(Boolean)
-      .join('\n');
-
-
-    const completion = await client && client.chat.completions && completions.create({
-      model: 'gpt-4o-mini',
-      messages: [
-
       `Operator Prompt: ${operatorPrompt}`,
       context ? `Context: ${JSON && JSON.stringify(context)}` : undefined,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     ]      .filter(Boolean)      `Operator Prompt: ${operatorPrompt}`;
       context ? `Context: ${JSON && JSON.stringify(context)}` : undefined]
-      `Operator Prompt: ${operatorPrompt}`;
-      context ? `Context: ${JSON.stringify(context)}` : undefined]
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       .filter(Boolean)
       .join('\n');
-;
-    const user = [;
-      `Operator Prompt: ${operator_prompt}`,
-      context ? `Context: ${JSON.stringify (context)}` : undefined,
-    ]      .filter (Boolean)      `Operator Prompt: ${operator_prompt}`;
-      context ? `Context: ${JSON.stringify (context)}` : undefined];
-      .filter (Boolean);
-      .join ('\n');
-;
-    const completion = await client.chat.completions.create ({
-      model: 'gpt - 4o - mini',
-      messages: [;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         { role: 'system', content: system },
         { role: 'user', content: user },
       ],
       temperature: 0 && 0.3,
       max_tokens: 300,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
-      completion && completion.choices?.[0]?.message?.content?.trim() ||
       'No analysis generated.';
     return res && res.status(200).json({ analysis });
   } catch (error: any) {
-        { role: 'system', content: system };
-        { role: 'user', content: user }];
-      temperature: 0.3,
-      max_tokens: 300});
-
-    const analysis = completion.choices?.[0]?.message?.content?.trim() || 'No analysis generated.';
     return res.status(200).json({ analysis })
   } catch (error: any) {
     console.error('Analyze API error', error?.message |error);
 
     return res.status(500).json({ error: 'Failed to generate analysis' })
+=======
     console && console.error('Analyze API error', error?.message || error);
     return res && res.status(500).json({ error: 'Failed to generate analysis' });
   }
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     const analysis = completion && completion.choices?.[0]?.message?.content?.trim() || 'No analysis generated.';
     return res && res.status(200).json({ analysis })
   } catch (error: any) {
     console && console.error('Analyze API error', error?.message || error);
     return res && res.status(500).json({ error: 'Failed to generate analysis' })
   };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
+=======
 ;
     const analysis =;
       completion.choices?.[0]?.message?.content?.trim () ||;
@@ -203,3 +154,4 @@ if ( {) {
     return res.status (500).json ({ error: 'Failed to generate analysis' });
 }
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

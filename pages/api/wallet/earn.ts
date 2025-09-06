@@ -6,8 +6,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { userId, amount, reason, metadata } = req.body |{}
   if (!userId |typeof amount !== "number" |!reason) {
     return res.status(400).json({ error: "userId, amount, reason required" })
+  }
+  try {
+    const tx = earnTokens(userId, Math.floor(amount), reason, metadata)
 
     return res.status(200).json({ tx })
+=======
 import type { NextApiRequest, NextApiResponse } from './next';,
 import { earn_tokens  } from '../../../utils / token / service';,
 export default /**
@@ -17,77 +21,11 @@ function handler() {
   if (return res.status (405).json ({ error: "Method not allowed" }), ) {
   $2
 }
-
-  };
-};
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import { earnTokens } from "../../../utils/token/service";
-export default function handler(req, res) {
-  try {
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-  const { userId, amount, reason, metadata } = req.body || {};
-  if (!userId || typeof amount !== "number" || !reason) {;
-    return res.status(400).json({ error: "userId, amount, reason required" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  try {
-    const tx = earnTokens(userId, Math.floor(amount), reason, metadata);
-    return res.status(200).json({ tx });
-  } catch (error) {
-    return res.status(400).json({ error: err.message });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-
-  }
-}
-
-  const { user_id, amount, reason, metadata } = req.body || {},
-  // Check condition
-if ( {) {
-  $2
-}
-    return res.status (400).json ({ error: "user_id, amount, reason required" });
-  }
-  try {
-    const tx = earn_tokens (user_id, Math.floor (amount), reason, metadata),
-    return res.status (200).json ({ tx });
   } catch (err: any) {
     return res.status (400).json ({ error: err.message });
   }
-}
+=======
 }
 ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

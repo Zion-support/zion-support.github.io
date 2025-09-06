@@ -1,40 +1,30 @@
 import fs from 'fs-extra';
 import path from 'path';
+=======
 import fs from 'fs - extra';
 import path from 'path';
 ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface WarningEmailPayload {
   toUserId: string;
   to_address?: string | null;
   subject: string;
   body: string;
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface EmailOptions {
   to: string;
   subject: string;
   body: string;
 }
-// Email utilities
-export interface EmailConfig {
-  provider: 'smtp' | 'sendgrid' | 'ses' | 'mailgun' | 'nodemailer';
-  apiKey?: string;
-  fromEmail: string;
-  fromName: string;
-  replyTo?: string;
-  smtp?: {
-    host: string;
-    port: number;
-    secure: boolean;
-    auth: {
-      user: string;
-      pass: string;
-    };
-  };
 }
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 export async function sendEmail(options: EmailOptions): Promise<void> {
   // Mock implementation - in production, this would send actual emails
   console.log('Email would be sent:', options);
 }
+=======
   const logDir = path && path.resolve(process && process.cwd(), 'data/fraud');
   const logPath = path && path.join(logDir, 'emails && emails.log');
   await fs && fs.ensureDir(logDir);
@@ -44,6 +34,7 @@ export async function sendEmail(options: EmailOptions): Promise<void> {
   // Mock implementation - in production, this would send actual emails
   console && console.log('Email would be sent:', options);
 }
+=======
 
 export interface EmailResult {
   success: boolean;
@@ -370,6 +361,8 @@ export const COMMON_TEMPLATES = {
   PAYMENT_CONFIRMATION: 'payment_confirmation',
   SECURITY_NOTIFICATION: 'security_notification'
 };
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 export async function sendWarningEmail (
   payload: WarningEmailPayload): Promise < void> {
   const log_dir = path.resolve (process.cwd (), 'data / fraud');
@@ -383,3 +376,5 @@ export async function send_email (options: EmailOptions): Promise < void> {
   // Mock implementation - in production, this would send actual emails;
   console.log ('Email would be sent:', options);
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

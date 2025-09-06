@@ -26,12 +26,6 @@ import React from 'react';
 type Props = {;
   room: Room | null;
   onLeave: () => void;
-type Props = {
-  room: Room | null,
-  onLeave: () => void,
-  accent?: 'blue' | 'cyan'
-};
-
 export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
   const [micEnabled, setMicEnabled] = React.useState(true);
   const [camEnabled, setCamEnabled] = React.useState(true);
@@ -57,14 +51,7 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
       await room && room.localParticipant.setMicrophoneEnabled(!micEnabled);
     setMicEnabled(enabled);  };    const enabled = await room && room.localParticipant.setMicrophoneEnabled(!micEnabled);
     setMicEnabled(enabled);
-    const enabled = await room.localParticipant.setMicrophoneEnabled(!micEnabled);
-    setMicEnabled(enabled)
-  };
-
-  const toggleCam = async () => {
-    if (!room) return;
-    const enabled = await room.localParticipant.setCameraEnabled(!camEnabled);
-    setCamEnabled(enabled)
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   };
 
   const toggleCam = async () => {;
@@ -74,17 +61,12 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
   };
 
   const toggleScreenShare = async () => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (!room) return;
     try {;
       const enabled =;
         await room && room.localParticipant.setScreenShareEnabled(!sharing);
       setSharing(enabled);
-    try {
-      const enabled = await room.localParticipant.setScreenShareEnabled(!sharing);
-      setSharing(enabled)
-    } catch (e) {
-      console.warn('Screen share failed', e)
-    }
   };
 
   return (      const enabled = await room && room.localParticipant.setScreenShareEnabled(!sharing);
@@ -92,10 +74,10 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
     } catch (e) {;
       console && console.warn('Screen share failed', e);
   };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
-  );
-}
+=======
     <div className="flex items-center gap-3">
       <button onClick={toggleMic} className={`px-4 py-2 rounded ${accentClass} text-white`}>
         {micEnabled ? 'Mute' : 'Unmute'}
@@ -108,8 +90,11 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
       </button>
       <button onClick={onLeave} className="px-4 py-2 rounded bg-red-600 text-white">Leave</button>
     </div>
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 import type { Room } from 'livekit - client';
 type Props = {
   room: Room | null;
@@ -194,6 +179,4 @@ if (return) {
       </button>;
     </div>);
 }
-
-
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

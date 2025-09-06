@@ -2,6 +2,7 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore - JSON import import data from '../../data/governance-pulse.json';
 export default function GovernancePulsePage() {
 
+  const items: any[] = (data?.items |[]).slice(0, 60)
 
   return (
     <EnhancedLayout>
@@ -23,7 +24,7 @@ export default function GovernancePulsePage() {
       </div>
     </EnhancedLayout>
   )
-}
+=======
 import EnhancedLayout from '../../components / layout / EnhancedLayout',
 // @ts - ignore - JSON import import data from '../../data / governance - pulse.json',
 export default /**
@@ -50,3 +51,5 @@ function GovernancePulsePage() {
       </div>;
     </EnhancedLayout>);
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

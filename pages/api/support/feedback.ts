@@ -1,6 +1,4 @@
 
-
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { articleId, helpful } = req.body as { articleId: string, helpful: boolean };
@@ -11,6 +9,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   writeJson('support/feedback.json', feedback);
   return res.status(200).json({ ok: true })
 }
+=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { read_json, write_json } from '../../../utils / fs_db',
 ;
@@ -31,3 +30,5 @@ function handler() {
   return res.status (200).json ({ ok: true });
 }
 ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

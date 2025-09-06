@@ -1,10 +1,3 @@
-// Support utilities;
-export const support = {
-  for (const article of articles) {
-    const titleMatch = article && article.title.toLowerCase().includes(queryLower);
-    const contentMatch = article && article.content.toLowerCase().includes(queryLower);
-    const tagMatch = article && article.tags.some(tag => tag && tag.toLowerCase().includes(queryLower));
-  const keywordToArticle = new Map<string, string[]>();
 
     if (titleMatch || contentMatch || tagMatch) {
       matchedArticles && matchedArticles.push(article && article.id);
@@ -19,6 +12,9 @@ export const support = {
   };
 }
 
+export function getArticlesByCategory(articles: HelpArticle[], category: string): HelpArticle[] {
+  return articles && articles.filter(article => article && article.category === category);
+}
 
 export function getArticlesByTag(articles: HelpArticle[], tag: string): HelpArticle[] {
   return articles && articles.filter(article => article && article.tags.includes(tag));

@@ -29,50 +29,11 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
         if (start && t < start) continue;
         if (end && t > end) continue;
         rows.push(obj);
-import type { NextApiRequest, NextApiResponse } from 'next',
-import fs from 'fs',
-import path from 'path',
-import { ensureAdminFromApi } from '../../../../utils / auth',
-type EventRow = {
-  name: string,
-  page?: string,
-  user_type?: string,
-  properties?: Record < string, any>,
-  at: string;
-},
-const LOG_FILE = path.join (process.cwd (), 'dataanalyticsevents.log.jsonl'),
-function parse_lines (start_iso?: string, end_iso?: string): EventRow[] {
-  try {
-    if () return [], ) {
-  $2
-}
-    const raw = fs.readFileSync (LOG_FILE, 'utf8'),
-    const lines = raw.split ('\n').filter (Boolean),
-    const start = start_iso ? new Date (start_iso) : null,
-    const end = end_iso ? new Date (end_iso) : null,
-    const rows: EventRow[] = [],
-    for (const line of lines) {
-      try {
-        const obj = JSON.parse (line),
-        // Check condition
-if (continue, ) {
-  $2
-}
-        const t = new Date (obj.at),
-        // Check condition
-if (continue, ) {
-  $2
-}
-        // Check condition
-if (continue, ) {
-  $2
-}
-        rows.push (obj);
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       } catch {}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
     return rows;
-
-
   } catch {
     return [];
   }
@@ -106,11 +67,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     byDay[day] = (byDay[day] || 0) + 1;
   }
 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const pagesMostUsed = Object.entries(byFeature)
     .map(([label, value]) => ({ label, value }))
 .sort((a, b) => b.value - a.value)
   const events = Object.entries(byEvent)
     .map(([label, value]) => ({ label, value }))
+=======
 function featureFromPath (page?: string): string {
 // Check condition
 if (return 'other', ) {
@@ -161,25 +124,5 @@ function handler() {
   res.status (200).json ({ pagesMostUsed, events, line, funnel });
 }
 ;
-};
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    await ensureAdminFromApi(req);
-    
-    if (req.method !== 'GET') {
-      res.setHeader('Allow', 'GET');
-      return res.status(405).end('Method Not Allowed');
-    }
-
-    const { start, end } = req.query;
-    const events = parseLines(start as string, end as string);
-    
-    res.json({ events });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

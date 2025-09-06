@@ -2,13 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
-const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
-
-function ensureStorage() {
-  const dir = path.dirname(EPISODES_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
-}
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 function ensureStorage() {
   const dir = path && path.dirname(EPISODES_PATH);
@@ -16,13 +10,11 @@ function ensureStorage() {
   if (!fs && fs.existsSync(EPISODES_PATH))
     fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
 
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
   ensureStorage();
-  const { episodeId } = req && req.body || {};
-  const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
-  const idx = episodes && episodes.findIndex(e => e && e.id === episodeId);  if (idx === -1) return res && res.status(404).json({ error: 'Episode not found' });
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
   ensureStorage();
@@ -39,8 +31,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         : episode?.timeMarkers?.closing |'15:00'
   }));    label: `Highlight ${i + 1}`;
     start: t;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
+=======
   const highlights = segments.map((t: string, i: number) => ({
     label: `Highlight ${i + 1}`;
     start: t,
@@ -52,6 +46,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   return res.status(200).json({ episode })
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 ;
 const EPISODES_PATH = path.join (
   process.cwd (),
@@ -131,10 +127,4 @@ function handler() {
 ;
 return res.status (200).json ({ episode });  return res.status (200).json ({ episode });
 }
-
-  return res.status(200).json({ episode });
-
-
-
-  return res.status(200).json({ episode });
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

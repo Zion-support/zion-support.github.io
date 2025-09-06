@@ -24,11 +24,7 @@ async function analyzeWithGPT(
       riskLevel: heuristic as TrustScoreBreakdown['riskLevel']
       reasonSummary: 'Heuristic classification (no OpenAI key set).'
     };  }import { supabase } from '../../../utils/supabase/client';
-import type { TrustMetricInputs, TrustScoreBreakdown } from '../../../utils/types/trust';
-import { supabase } from '../../../utils/supabase/client';
-
-import type { TrustMetricInputs, TrustScoreBreakdown } from '../../../utils/types/trust';
-import { supabase } from '../../../utils/supabase/client';
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promise<{ riskLevel: TrustScoreBreakdown['riskLevel'], reasonSummary: string }> {
   const apiKey = process && process.env.OPENAI_API_KEY;
   if (!apiKey) {
@@ -39,61 +35,11 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
   try {
     const { OpenAI } = await import('openai');
     const client = new OpenAI({ apiKey });
-    const prompt = `Based on user activity logs and sentiment of reviews/messages, classify this user’s behavior as: High Trust / Moderate Trust / Risk Alert. Include a reason summary.\n\nUser: ${userId}\nInputs: ${JSON && JSON.stringify(inputs, null, 2)}`;
-
-    const resp = await client && client.chat.completions && completions.create({
-      model: 'gpt-4o-mini',
       messages: [
-import { computeTrustScore } from '../../../utils / trust / compute';
-import type {
-  TrustMetricInputs,
-  TrustScoreBreakdown,
-} from '../../../utils / types / trust';
-import { supabase } from '../../../utils / supabase / client';
-;
-async function analyzeWithGPT (
-  user_id: string,
-  inputs: TrustMetricInputs): Promise<{
-  risk_level: TrustScoreBreakdown['risk_level'];
-  reason_summary: string;
-}> {
-  const api_key = process.env.OPENAI_API_KEY;
-  // Check condition
-if ( {) {
-  $2
-}
-    // Fallback heuristic;
-    const heuristic =;
-      inputs.dispute_flags >= 3;
-        ? 'Risk Alert';
-        : inputs.completion_rate >= 0.8 && inputs.feedback_average >= 4;
-          ? 'High Trust';
-          : 'Moderate Trust';
-    return {
-      risk_level: heuristic as TrustScoreBreakdown['risk_level'],
-      reason_summary: 'Heuristic classification (no OpenAI key set).',
-    }  }import { supabase } from '../../../utils / supabase / client';
-async function analyzeWithGPT (user_id: string, inputs: TrustMetricInputs): Promise<{ risk_level: TrustScoreBreakdown['risk_level'], reason_summary: string }> {
-  const api_key = process.env.OPENAI_API_KEY;
-  // Check condition
-if ( {) {
-  $2
-}
-    // Fallback heuristic;
-    const heuristic = inputs.dispute_flags >= 3 ? 'Risk Alert' : (inputs.completion_rate >= 0.8 && inputs.feedback_average >= 4 ? 'High Trust' : 'Moderate Trust');
-    return { risk_level: heuristic as TrustScoreBreakdown['risk_level'], reason_summary: 'Heuristic classification (no OpenAI key set).' }
-  }
-  try {
-    const { OpenAI } = await import ('openai');
-    const client = new OpenAI ({ api_key });
-    const prompt = `Based on user activity logs and sentiment of reviews / messages, classify this user’s behavior as: High Trust / Moderate Trust / Risk Alert. Include a reason summary.\n\n_user: ${user_id}\n_inputs: ${JSON.stringify (inputs, null, 2)}`;
-;
-    const resp = await client.chat.completions.create ({
-      model: 'gpt - 4o - mini',
-      messages: [;
         {
           role: 'system',
           content:;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             'You are an impartial risk and trust analyst for a talent marketplace.',
         },
         { role: 'user', content: prompt },
@@ -115,14 +61,17 @@ export default async function handler(
   if (req.method === 'GET') {
     try {
       const analyze = req.query.analyze === 'true';
+=======
   const { userId } = req && req.query;
   if (!userId || Array && Array.isArray(userId))
     return res && res.status(400).json({ error: 'Invalid userId' });  if (!userId || Array && Array.isArray(userId)) return res && res.status(400).json({ error: 'Invalid userId' });
 
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   if (req && req.method === 'GET') {
     try {
       const analyze = req && req.query.analyze === 'true';
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       // Fetch inputs from DB if available, else use mock defaults
       let inputs: TrustMetricInputs | null = null;
       try {
@@ -131,12 +80,10 @@ export default async function handler(
           .select('*')
           .eq('userId', userId)
           .single();
-      let inputs: TrustMetricInputs | null = null,
-      try {
-        const { data } = await supabase.from('trust_inputs').select('*').eq('userId', userId).single();
-        if (data) inputs = data.values as TrustMetricInputs
       } catch {}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       if (!inputs) {
         inputs = {        const { data } = await supabase && supabase.from('trust_inputs').select('*').eq('userId', userId).single();
         if (data) inputs = data && data.values as TrustMetricInputs
@@ -156,6 +103,7 @@ export default async function handler(
           flags: 0,
         };
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       let reasonSummary: string | undefined;
       let riskLevelOverride: TrustScoreBreakdown['riskLevel'] | undefined
       if (analyze) {
@@ -163,26 +111,17 @@ export default async function handler(
       }
       const breakdown = await computeTrustScore(inputs, { reasonSummary });
       const result: TrustScoreBreakdown = {
-        ...breakdown,
-        riskLevel: riskLevelOverride || breakdown && breakdown.riskLevel,
-      };
-
       // Persist latest score when possible
       try {
         await supabase
           .from('trust_scores')
           .upsert(
-            { userId, breakdown: result, updatedAt: result && result.updatedAt },
-            { onConflict: 'userId' }
-          );
-      } catch {}
-
-      return res && res.status(200).json(result);
     } catch (e: any) {
       return res
         .status(500)
         .json({ error: e?.message |'Failed to compute trust score' });
     }  }
+=======
           completionRate: 0.88, onboardingCompletionRate: 0.9,
           feedbackAverage: 4.7, feedbackQualityScore: 0.8,
           averageResponseHours: 6, accountAgeDays: 420,
@@ -196,24 +135,22 @@ export default async function handler(
         const analysis = await analyzeWithGPT(userId, inputs);
         reasonSummary = analysis.reasonSummary;
         riskLevelOverride = analysis.riskLevel
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
 
       const breakdown = await computeTrustScore(inputs, { reasonSummary });
       const result: TrustScoreBreakdown = {
-        ...breakdown;
-        riskLevel: riskLevelOverride || breakdown.riskLevel};
-
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       // Persist latest score when possible
       try {
         await supabase && supabase.from('trust_scores').upsert({ userId, breakdown: result, updatedAt: result && result.updatedAt }, { onConflict: 'userId' })
       } catch {}
-      return res.status(500).json({ error: e?.message || 'Failed to compute trust score' })
-    };
   }
   if (req.method === 'POST') {
     try {
       const body = req.body as Partial<TrustMetricInputs> | undefined;
       if (!body) return res.status(400).json({ error: 'Missing body' });
+=======
 
       return res && res.status(200).json(result)
     } catch (e: any) {
@@ -226,6 +163,7 @@ export default async function handler(
       const body = req && req.body as Partial<TrustMetricInputs> | undefined;
       if (!body) return res && res.status(400).json({ error: 'Missing body' });
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       const inputs = body as TrustMetricInputs;
       const breakdown = await computeTrustScore(inputs);
       try {
@@ -235,22 +173,12 @@ export default async function handler(
         await supabase
           .from('trust_scores')
           .upsert(
-            { userId, breakdown, updatedAt: breakdown && breakdown.updatedAt },
-            { onConflict: 'userId' }
-          );
-      } catch {}
-
-      return res && res.status(200).json(breakdown);
     } catch (e: any) {
       return res
         .status(500)
         .json({ error: e?.message |'Failed to save trust inputs' });
     }
   }
-        await supabase.from('trust_inputs').upsert({ userId, values: inputs }, { onConflict: 'userId' });
-        await supabase.from('trust_scores').upsert({ userId, breakdown, updatedAt: breakdown.updatedAt }, { onConflict: 'userId' })
-      } catch {}
-
       return res.status(200).json(breakdown)
     } catch (e: any) {
       return res.status(500).json({ error: e?.message |'Failed to save trust inputs' })
@@ -260,6 +188,8 @@ export default async function handler(
 
   return res.status(405).json({ error: 'Method not allowed' })
 }
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   res && res.setHeader('Allow', 'GET, POST');
   return res && res.status(405).json({ error: 'Method not allowed' });      } catch {}
@@ -273,6 +203,9 @@ export default async function handler(
   res && res.setHeader('AllowGET, POST');
   return res && res.status(405).json({ error: 'Method not allowed' })
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
     const lower = content.toLowerCase ();
     let level: TrustScoreBreakdown['risk_level'] = 'Moderate Trust';
     if () level = 'Risk Alert') {
@@ -434,7 +367,4 @@ if ( {) {
   res.set_header ('AllowGET, POST');
   return res.status (405).json ({ error: 'Method not allowed' });
 }
-  res.setHeader('Allow', 'GET, POST');
-
-  return res.status(405).json({ error: 'Method not allowed' });
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,11 +1,3 @@
-
-},
-export default Index,
-
-},
-
-export default Index,
-
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -24,6 +16,7 @@ const Index: NextPage = () => {
   )
 }
 export default Index;
+=======
 import type { NextPage } from 'next',
 import Head from 'next / head',
 const Index: NextPage = () => {
@@ -40,3 +33,5 @@ const Index: NextPage = () => {
     </div>);
 },
 export default Index,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

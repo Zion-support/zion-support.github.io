@@ -1,22 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import puppeteer from 'puppeteer';
-
-export const config = {
-  api: {
-    bodyParser: {
-      sizeLimit: '10mb'}}}
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' })
-    return
-  }
-  const { html, pageSize } = req.body as { html: string, pageSize?: 'A4' | 'LETTER' }
-  if (!html) {
-    res.status(400).json({ error: 'Missing html' })
-    return
-  }
-  const browser = await puppeteer.launch({
-    headless: true,
     args: ['--no-sandbox--disable-setuid-sandbox']});
 
   try {
@@ -32,7 +13,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try { await browser.close() } catch {}
     res.status(500).json({ error: e?.message |'Failed to render PDF' })
   }
-}
 import type { NextApiRequest, NextApiResponse } from 'next',
 import puppeteer from 'puppeteer',
 export const config = {
@@ -62,7 +42,6 @@ if ( {) {
     headless: true,
     args: ['--no - sandbox--disable - setuid - sandbox']}),
   try {
-    const page = await browser.new_page (),
     await page.set_content (html, { wait_until: 'networkidle0' }),
     const pdf_buffer = await page.pdf ({ format: page_size === 'A4' ? 'A4' : 'Letter', print_background: true }),
     await browser.close (),
@@ -72,6 +51,3 @@ if ( {) {
   } catch (e: any) {
     try { await browser.close () } catch {}
     res.status (500).json ({ error: e?.message || 'Failed to render PDF' });
-  }
-}
-

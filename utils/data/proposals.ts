@@ -4,6 +4,7 @@ export function updateProposalMeta(
   updater: (meta: ProposalMeta) => ProposalMeta
 ): ProposalMeta {
   ensureDirs();
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const metaPath = path.join(dataDir, id, 'meta.json');
   if (!fs.existsSync(metaPath)) throw new Error('Proposal not found');
   const current: ProposalMeta = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
@@ -18,6 +19,7 @@ export function listProposals(): ProposalMeta[] {
     .readdirSync(dataDir)
     .filter(f => fs.existsSync(path.join(dataDir, f, 'meta.json')));
   const metas: ProposalMeta[] = entries.map(id => {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     const metaPath = path.join(dataDir, id, 'meta.json');
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
   });
@@ -26,6 +28,7 @@ export function listProposals(): ProposalMeta[] {
 
 export function getProposal(id: string): ProposalMeta | null {
   try {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     const metaPath = path.join(dataDir, id, 'meta.json');
     if (!fs.existsSync(metaPath)) return null;
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
@@ -33,28 +36,14 @@ export function getProposal(id: string): ProposalMeta | null {
   }
 }
 
-
-
-  artifacts: {;
-
-    markdownPath?: string,;
-    jsonPath?: string,;
-    pdfPath?: string,;
-    ipfsCid?: string,;
-    ensRecordHash?: string,;
-    signature?: string;
-
 export function savePdf(id: string, pdfBytes: Uint8Array): string {
   ensureDirs();
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const publicProposalDir = path.join(publicDir, id);
   fs.mkdirSync(publicProposalDir, { recursive: true });
   const pdfPath = path.join(publicProposalDir, 'proposal.pdf');
   fs.writeFileSync(pdfPath, Buffer.from(pdfBytes));
   return `/proposals/${id}/proposal.pdf`;
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
 }
 
 export function updateArtifacts(
@@ -66,6 +55,7 @@ export function updateArtifacts(
     artifacts: { ...meta.artifacts, ...artifacts },
   }));
 }
+=======
 import fs from 'fs',
 import path from 'path',
 import { v4 as uuidv4 } from 'uuid',
@@ -178,12 +168,18 @@ export function get_proposal (id: string): ProposalMeta | null {
     return null;
   }
 }
-;
-
-export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {;
-  return updateProposalMeta(id, (meta) => ({;
+export function save_pdf (id: string, pdf_bytes: Uint8Array): string {
+  ensure_dirs (),
+  const publicProposalDir = path.join (public_dir, id),
+  fs.mkdir_sync (publicProposalDir, { recursive: true }),
+  const pdf_path = path.join (publicProposalDir, 'proposal.pdf'),
+  fs.writeFileSync (pdf_path, Buffer.from (pdf_bytes));
+  return `/proposals/${id}/proposal.pdf`;
+}
+export function update_artifacts (id: string, artifacts: Partial < ProposalMeta['artifacts']>): ProposalMeta {
+  return updateProposalMeta (id, (meta) => ({
     ...meta;
     artifacts: { ...meta.artifacts, ...artifacts }}));
-
-
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -1,5 +1,3 @@
-export default function handler(req, res) {
-  res.status(200).json({ message: "Checkout session created" })}
           price: priceId,
           quantity: quantity,
         },
@@ -29,7 +27,8 @@ export default function handler(req,res) { res.status(200).json({ message: "Chec
 export default function handler(req, res) {
   res.status(200).json({ "message": 'Checkout session created' });
 }
-export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
       url: session.url
     })
   } catch (err) {,
@@ -40,3 +39,4 @@ export default function handler(req,res) { res.status(200).json({ message: 'Chec
 };
 export default withErrorLogging(handler),
 ,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

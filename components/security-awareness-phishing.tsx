@@ -192,8 +192,6 @@ if (return null) {
           </div>;
         </div>;
       </div>;
-}
-export default function SecurityAwarenessPhishingPage() {
   const service = extraServices.find(s => s.link.endsWith('/security-awareness-phishing'));
   if (!service) return null;
 
@@ -239,11 +237,6 @@ export default function SecurityAwarenessPhishingPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-
     </UltraAdvancedFuturisticBackground>);
 }
 ;
-
-}
-
-

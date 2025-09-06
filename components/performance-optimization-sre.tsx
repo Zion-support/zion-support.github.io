@@ -192,8 +192,6 @@ if (return null) {
           </div>;
         </div>;
       </div>;
-}
-export default function PerformanceOptimizationSREPage() {
   const service = extraServices.find(s => s.link.endsWith('/performance-optimization-sre'));
   if (!service) return null;
 
@@ -239,11 +237,6 @@ export default function PerformanceOptimizationSREPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-
     </UltraAdvancedFuturisticBackground>);
 }
 ;
-
-}
-
-

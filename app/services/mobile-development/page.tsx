@@ -1,325 +1,367 @@
-export const metadata = { 
-  title: 'Mobile App Development | Zion Tech Group',
-  description: 'Professional mobile app development services for iOS, Android, and cross-platform applications with modern technologies.'
-}; 
+import Link from 'next/link';
 
-export default function MobileDevelopmentPage() { 
-  return ( 
+export const metadata = { 
+  title: 'Mobile Development Services | Zion Tech Group',
+  description: 'Native and cross-platform mobile app development services for iOS and Android, including React Native, Flutter, and native development.'
+};
+
+export default function MobileDevelopmentPage() {
+  return (
     <div className="animate-fade-in">
-      <section className="py-12">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Mobile App Development
-          </h1>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Professional mobile app development for iOS, Android, and cross-platform applications. 
-            We create engaging, high-performance mobile experiences that drive user engagement and business growth.
+      <section className="mb-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">Mobile Development Services</h1>
+        <p className="text-xl text-gray-600 mb-8 max-w-3xl">
+          Build powerful mobile applications that engage users and drive business growth. 
+          From native iOS/Android apps to cross-platform solutions, we deliver exceptional mobile experiences.
+        </p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <MobileServiceCard
+            title="Native iOS Development"
+            description="High-performance iOS apps built with Swift and SwiftUI for optimal user experience"
+            features={["Swift/SwiftUI", "Core Data", "Push notifications", "App Store optimization"]}
+            price="$20k-$60k"
+            timeline="4-12 weeks"
+            icon="📱"
+          />
+          <MobileServiceCard
+            title="Native Android Development"
+            description="Robust Android applications using Kotlin and Jetpack Compose for modern UI"
+            features={["Kotlin/Java", "Jetpack Compose", "Material Design", "Google Play optimization"]}
+            price="$18k-$55k"
+            timeline="4-12 weeks"
+            icon="🤖"
+          />
+          <MobileServiceCard
+            title="React Native Development"
+            description="Cross-platform mobile apps that work seamlessly on both iOS and Android"
+            features={["React Native", "Native modules", "Code sharing", "Hot reloading"]}
+            price="$15k-$45k"
+            timeline="3-10 weeks"
+            icon="⚛️"
+          />
+          <MobileServiceCard
+            title="Flutter Development"
+            description="Beautiful, fast mobile apps built with Google's Flutter framework"
+            features={["Dart language", "Widget-based UI", "Hot reload", "Material Design"]}
+            price="$16k-$48k"
+            timeline="3-10 weeks"
+            icon="🦋"
+          />
+          <MobileServiceCard
+            title="Progressive Web Apps (PWA)"
+            description="Web applications that provide native app-like experiences on mobile devices"
+            features={["Service workers", "Offline functionality", "Push notifications", "App-like UI"]}
+            price="$12k-$35k"
+            timeline="2-8 weeks"
+            icon="🌐"
+          />
+          <MobileServiceCard
+            title="Mobile App Maintenance"
+            description="Ongoing support, updates, and optimization for existing mobile applications"
+            features={["Bug fixes", "Feature updates", "Performance optimization", "OS compatibility"]}
+            price="$2k-$8k/month"
+            timeline="Ongoing"
+            icon="🔧"
+          />
+        </div>
+      </section>
+
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-8">Mobile Development Stack</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <MobileTechCard
+            title="iOS Development"
+            technologies={["Swift", "SwiftUI", "UIKit", "Core Data", "Xcode"]}
+            description="Native iOS app development"
+          />
+          <MobileTechCard
+            title="Android Development"
+            technologies={["Kotlin", "Java", "Jetpack Compose", "Room", "Android Studio"]}
+            description="Native Android app development"
+          />
+          <MobileTechCard
+            title="Cross-Platform"
+            technologies={["React Native", "Flutter", "Xamarin", "Ionic", "Cordova"]}
+            description="Multi-platform development"
+          />
+          <MobileTechCard
+            title="Backend & APIs"
+            technologies={["Node.js", "Python", "Firebase", "AWS", "GraphQL"]}
+            description="Mobile backend services"
+          />
+        </div>
+      </section>
+
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-8">Mobile App Types</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <AppTypeCard
+            type="E-commerce Apps"
+            description="Online shopping and marketplace applications with payment integration"
+            features={["Product catalog", "Shopping cart", "Payment processing", "Order tracking"]}
+            icon="🛒"
+          />
+          <AppTypeCard
+            type="Social Media Apps"
+            description="Social networking and community platforms with real-time features"
+            features={["User profiles", "News feeds", "Messaging", "Media sharing"]}
+            icon="👥"
+          />
+          <AppTypeCard
+            type="Business Apps"
+            description="Enterprise and productivity applications for business operations"
+            features={["CRM integration", "Document management", "Team collaboration", "Analytics"]}
+            icon="💼"
+          />
+          <AppTypeCard
+            type="Health & Fitness Apps"
+            description="Wellness and fitness tracking applications with health data integration"
+            features={["Activity tracking", "Health metrics", "Goal setting", "Progress monitoring"]}
+            icon="💪"
+          />
+          <AppTypeCard
+            type="Food & Delivery Apps"
+            description="Restaurant and food delivery applications with location services"
+            features={["Restaurant listings", "Menu browsing", "Order placement", "Delivery tracking"]}
+            icon="🍕"
+          />
+          <AppTypeCard
+            type="Gaming Apps"
+            description="Interactive gaming applications with engaging user experiences"
+            features={["Game mechanics", "Multiplayer support", "In-app purchases", "Leaderboards"]}
+            icon="🎮"
+          />
+        </div>
+      </section>
+
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-8">Development Process</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <MobileProcessStep
+            step="1"
+            title="Discovery & Planning"
+            description="Define app requirements, user stories, and technical architecture"
+            duration="1-2 weeks"
+          />
+          <MobileProcessStep
+            step="2"
+            title="Design & Prototyping"
+            description="Create wireframes, mockups, and interactive prototypes"
+            duration="2-4 weeks"
+          />
+          <MobileProcessStep
+            step="3"
+            title="Development & Testing"
+            description="Build the app, implement features, and conduct thorough testing"
+            duration="4-12 weeks"
+          />
+          <MobileProcessStep
+            step="4"
+            title="Launch & Optimization"
+            description="Deploy to app stores, monitor performance, and iterate based on feedback"
+            duration="1-2 weeks"
+          />
+        </div>
+      </section>
+
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-8">Pricing & Packages</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <MobilePricingCard
+            name="MVP App"
+            price="$15k–$35k"
+            duration="4–8 weeks"
+            features={[
+              "Core functionality",
+              "Basic UI/UX",
+              "One platform",
+              "Basic backend",
+              "App store submission"
+            ]}
+            recommended={false}
+          />
+          <MobilePricingCard
+            name="Full-Featured App"
+            price="$35k–$75k"
+            duration="8–16 weeks"
+            features={[
+              "Advanced features",
+              "Custom UI/UX",
+              "Cross-platform",
+              "Advanced backend",
+              "Analytics & monitoring"
+            ]}
+            recommended={true}
+          />
+          <MobilePricingCard
+            name="Enterprise App"
+            price="$75k+"
+            duration="12+ weeks"
+            features={[
+              "Complex functionality",
+              "Enterprise integration",
+              "Security features",
+              "Scalable architecture",
+              "Ongoing support"
+            ]}
+            recommended={false}
+          />
+        </div>
+      </section>
+
+      <section className="bg-gradient-to-r from-pink-50 to-rose-50 rounded-xl p-8">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Ready to Build Your Mobile App?</h2>
+        <p className="text-lg text-gray-600 mb-8 text-center max-w-3xl mx-auto">
+          Let's discuss your mobile app vision and create a solution that engages users 
+          and drives business growth across all mobile platforms.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="tel:+13024640950"
+            className="bg-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-pink-700 transition-colors text-center"
+          >
+            Call +1 302 464 0950
+          </a>
+          <a
+            href="mailto:kleber@ziontechgroup.com"
+            className="border-2 border-pink-600 text-pink-600 px-8 py-3 rounded-lg font-semibold hover:bg-pink-600 hover:text-white transition-colors text-center"
+          >
+            Email Us
+          </a>
+        </div>
+        <div className="mt-8 text-center">
+          <p className="text-sm text-gray-500">
+            📍 364 E Main St STE 1008, Middletown DE 19709
           </p>
         </div>
-
-        {/* Core Mobile Services */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Core Mobile Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <MobileServiceCard 
-              title="Native iOS Development" 
-              description="High-performance iOS apps using Swift and SwiftUI"
-              features={["Swift/SwiftUI", "Core Data", "Push notifications", "App Store optimization"]}
-              price="Starting at $15k"
-              icon="📱"
-            />
-            <MobileServiceCard 
-              title="Native Android Development" 
-              description="Robust Android apps using Kotlin and Jetpack Compose"
-              features={["Kotlin/Java", "Room database", "Material Design", "Play Store optimization"]}
-              price="Starting at $15k"
-              icon="🤖"
-            />
-            <MobileServiceCard 
-              title="Cross-Platform Development" 
-              description="Single codebase for iOS and Android using React Native or Flutter"
-              features={["React Native", "Flutter", "Code sharing", "Faster development"]}
-              price="Starting at $20k"
-              icon="🔄"
-            />
-            <MobileServiceCard 
-              title="Progressive Web Apps" 
-              description="Web apps that work like native mobile applications"
-              features={["PWA features", "Offline support", "Push notifications", "App-like experience"]}
-              price="Starting at $12k"
-              icon="🌐"
-            />
-            <MobileServiceCard 
-              title="Mobile Backend Development" 
-              description="Scalable backend services and APIs for mobile applications"
-              features={["RESTful APIs", "Real-time features", "Database design", "Cloud integration"]}
-              price="Starting at $18k"
-              icon="⚙️"
-            />
-            <MobileServiceCard 
-              title="App Maintenance & Support" 
-              description="Ongoing maintenance, updates, and technical support"
-              features={["Bug fixes", "Feature updates", "Performance optimization", "24/7 support"]}
-              price="Starting at $2k/mo"
-              icon="🔧"
-            />
-          </div>
-        </div>
-
-        {/* Specialized Mobile Solutions */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Specialized Solutions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <SpecializedMobileCard 
-              title="E-commerce Mobile Apps" 
-              description="Complete mobile shopping experiences with payment integration"
-              features={["Product catalogs", "Shopping cart", "Payment processing", "Order tracking"]}
-              price="$25k - $80k"
-              icon="🛒"
-            />
-            <SpecializedMobileCard 
-              title="Healthcare Mobile Apps" 
-              description="HIPAA-compliant mobile solutions for healthcare providers"
-              features={["Patient portals", "Telemedicine", "Health records", "Appointment booking"]}
-              price="$30k - $100k"
-              icon="🏥"
-            />
-            <SpecializedMobileCard 
-              title="FinTech Mobile Apps" 
-              description="Secure financial applications with advanced security features"
-              features={["Banking features", "Payment processing", "Biometric auth", "Fraud detection"]}
-              price="$35k - $120k"
-              icon="💰"
-            />
-            <SpecializedMobileCard 
-              title="Social & Communication Apps" 
-              description="Engaging social platforms and messaging applications"
-              features={["Real-time chat", "Media sharing", "User profiles", "Push notifications"]}
-              price="$28k - $90k"
-              icon="💬"
-            />
-          </div>
-        </div>
-
-        {/* Technical Stack */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Technical Expertise</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <TechStackCard 
-              title="Mobile Technologies" 
-              details={["iOS (Swift, SwiftUI)", "Android (Kotlin, Jetpack)", "React Native", "Flutter", "Xamarin", "Ionic"]} 
-            />
-            <TechStackCard 
-              title="Backend & APIs" 
-              details={["Node.js", "Python", "Java", "REST APIs", "GraphQL", "WebSocket"]} 
-            />
-            <TechStackCard 
-              title="Cloud & Services" 
-              details={["AWS", "Firebase", "MongoDB", "PostgreSQL", "Redis", "CDN"]} 
-            />
-          </div>
-        </div>
-
-        {/* App Categories */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">App Categories</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <AppCategoryCard 
-              title="Business Apps" 
-              description="Productivity and business management solutions"
-              price="$15k - $50k"
-              icon="💼"
-            />
-            <AppCategoryCard 
-              title="Gaming Apps" 
-              description="Interactive games and entertainment applications"
-              price="$20k - $80k"
-              icon="🎮"
-            />
-            <AppCategoryCard 
-              title="Educational Apps" 
-              description="Learning platforms and educational tools"
-              price="$18k - $60k"
-              icon="🎓"
-            />
-            <AppCategoryCard 
-              title="Lifestyle Apps" 
-              description="Health, fitness, and lifestyle applications"
-              price="$12k - $40k"
-              icon="🏃"
-            />
-          </div>
-        </div>
-
-        <Pricing />
-        <ContactSection />
       </section>
     </div>
-  ); 
-} 
+  );
+}
 
-function MobileServiceCard({ title, description, features, price, icon }: { 
-  title: string; 
-  description: string; 
-  features: string[]; 
+function MobileServiceCard({ title, description, features, price, timeline, icon }: {
+  title: string;
+  description: string;
+  features: string[];
   price: string;
+  timeline: string;
   icon: string;
-}) { 
-  return ( 
-    <div className="border border-gray-200 rounded-xl p-6 hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white">
+}) {
+  return (
+    <div className="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow bg-white">
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>
-      <ul className="text-gray-600 space-y-2 mb-4">
-        {features.map((feature) => (
-          <li key={feature} className="flex items-center">
-            <span className="text-blue-500 mr-2">•</span> {feature}
+      <p className="text-gray-600 mb-4">{description}</p>
+      <ul className="text-sm text-gray-600 space-y-2 mb-4">
+        {features.map((feature, index) => (
+          <li key={index} className="flex items-center">
+            <span className="text-pink-500 mr-2">✓</span> {feature}
           </li>
         ))}
       </ul>
-      <div className="text-lg font-semibold text-blue-600">{price}</div>
-    </div>
-  ); 
-} 
-
-function SpecializedMobileCard({ title, description, features, price, icon }: { 
-  title: string; 
-  description: string; 
-  features: string[]; 
-  price: string;
-  icon: string;
-}) { 
-  return ( 
-    <div className="border border-gray-200 rounded-xl p-8 hover:border-green-300 hover:shadow-lg transition-all duration-200 bg-white">
-      <div className="text-5xl mb-4">{icon}</div>
-      <h3 className="text-2xl font-bold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>
-      <ul className="text-gray-600 space-y-2 mb-6">
-        {features.map((feature) => (
-          <li key={feature} className="flex items-center">
-            <span className="text-green-500 mr-2">•</span> {feature}
-          </li>
-        ))}
-      </ul>
-      <div className="text-xl font-semibold text-green-600">{price}</div>
-    </div>
-  ); 
-} 
-
-function TechStackCard({ title, details }: { title: string; details: string[] }) { 
-  return ( 
-    <div className="border border-gray-200 rounded-xl p-6 bg-gray-50">
-      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
-      <ul className="text-gray-600 space-y-2">
-        {details.map((detail) => (
-          <li key={detail} className="flex items-center">
-            <span className="text-blue-500 mr-2">•</span> {detail}
-          </li>
-        ))}
-      </ul>
-    </div>
-  ); 
-} 
-
-function AppCategoryCard({ title, description, price, icon }: { 
-  title: string; 
-  description: string; 
-  price: string;
-  icon: string;
-}) { 
-  return ( 
-    <div className="border border-gray-200 rounded-xl p-6 hover:border-purple-300 hover:shadow-lg transition-all duration-200 bg-white text-center">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-lg font-bold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-600 mb-4 text-sm">{description}</p>
-      <div className="text-lg font-semibold text-purple-600">{price}</div>
-    </div>
-  ); 
-} 
-
-function Pricing() { 
-  return ( 
-    <div className="mb-16">
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Mobile Development Packages</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Plan 
-          name="MVP Development" 
-          price="$15k–$35k" 
-          duration="8–12 weeks"
-          features={["Core features", "Basic UI/UX", "Single platform", "Testing"]} 
-        />
-        <Plan 
-          name="Full App Development" 
-          price="$35k–$80k" 
-          duration="12–20 weeks"
-          features={["Complete features", "Custom UI/UX", "Both platforms", "Backend integration"]} 
-        />
-        <Plan 
-          name="Enterprise Solution" 
-          price="$80k+" 
-          duration="Custom timeline"
-          features={["Advanced features", "Custom design", "Scalable backend", "Ongoing support"]} 
-        />
+      <div className="flex justify-between items-center">
+        <span className="text-lg font-bold text-pink-600">{price}</span>
+        <span className="text-sm text-gray-500">{timeline}</span>
       </div>
     </div>
-  ); 
-} 
+  );
+}
 
-function Plan({ name, price, duration, features }: { 
-  name: string; 
-  price: string; 
-  duration: string;
-  features: string[]; 
-}) { 
-  return ( 
-    <div className="border border-gray-200 rounded-xl p-8 bg-white hover:border-blue-300 hover:shadow-lg transition-all duration-200">
-      <h4 className="text-2xl font-bold text-gray-900 mb-2">{name}</h4>
-      <div className="text-3xl font-bold text-blue-600 mb-2">{price}</div>
-      <div className="text-gray-600 mb-6">{duration}</div>
-      <ul className="text-gray-600 space-y-3">
-        {features.map((feature) => (
-          <li key={feature} className="flex items-center">
-            <span className="text-blue-500 mr-2">✓</span> {feature}
-          </li>
-        ))}
-      </ul>
-      <a 
-        href="tel:+13024640950" 
-        className="mt-6 block w-full bg-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-      >
-        Get Started
-      </a>
-    </div>
-  ); 
-} 
-
-function ContactSection() {
+function MobileTechCard({ title, technologies, description }: {
+  title: string;
+  technologies: string[];
+  description: string;
+}) {
   return (
-    <div className="bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-xl p-8 text-center">
-      <h3 className="text-3xl font-bold text-gray-900 mb-4">
-        Ready to Build Your Mobile App?
-      </h3>
-      <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
-        Let's discuss your mobile app idea and create a solution that engages users and drives business growth. 
-        Our team has developed 100+ successful mobile applications.
-      </p>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <a
-          href="tel:+13024640950"
-          className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg"
-        >
-          Call +1 302 464 0950
-        </a>
-        <a
-          href="mailto:kleber@ziontechgroup.com"
-          className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-lg"
-        >
-          Email Us
-        </a>
+    <div className="border border-gray-200 rounded-xl p-6 bg-white">
+      <h3 className="text-lg font-bold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600 mb-4 text-sm">{description}</p>
+      <div className="flex flex-wrap gap-2">
+        {technologies.map((tech, index) => (
+          <span key={index} className="bg-pink-100 text-pink-800 px-2 py-1 rounded-full text-xs">
+            {tech}
+          </span>
+        ))}
       </div>
-      <div className="mt-6 text-sm text-gray-500">
-        <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+    </div>
+  );
+}
+
+function AppTypeCard({ type, description, features, icon }: {
+  type: string;
+  description: string;
+  features: string[];
+  icon: string;
+}) {
+  return (
+    <div className="border border-gray-200 rounded-xl p-6 bg-white">
+      <div className="text-3xl mb-3">{icon}</div>
+      <h3 className="text-lg font-bold text-gray-900 mb-3">{type}</h3>
+      <p className="text-gray-600 mb-4 text-sm">{description}</p>
+      <ul className="space-y-2">
+        {features.map((feature, index) => (
+          <li key={index} className="text-sm text-gray-600 flex items-center">
+            <span className="text-pink-500 mr-2">•</span> {feature}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function MobileProcessStep({ step, title, description, duration }: {
+  step: string;
+  title: string;
+  description: string;
+  duration: string;
+}) {
+  return (
+    <div className="text-center">
+      <div className="w-12 h-12 bg-pink-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+        {step}
       </div>
+      <h3 className="text-lg font-bold text-gray-900 mb-2">{title}</h3>
+      <p className="text-gray-600 mb-2 text-sm">{description}</p>
+      <span className="text-pink-600 text-sm font-semibold">{duration}</span>
+    </div>
+  );
+}
+
+function MobilePricingCard({ name, price, duration, features, recommended }: {
+  name: string;
+  price: string;
+  duration: string;
+  features: string[];
+  recommended: boolean;
+}) {
+  return (
+    <div className={`border rounded-xl p-8 relative ${recommended ? 'border-pink-500 bg-pink-50' : 'border-gray-200 bg-white'}`}>
+      {recommended && (
+        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+          <span className="bg-pink-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+            Most Popular
+          </span>
+        </div>
+      )}
+      <h3 className="text-2xl font-bold text-gray-900 mb-2">{name}</h3>
+      <div className="text-3xl font-bold text-pink-600 mb-2">{price}</div>
+      <div className="text-gray-500 mb-6">{duration}</div>
+      <ul className="space-y-3">
+        {features.map((feature, index) => (
+          <li key={index} className="flex items-start">
+            <span className="text-pink-500 mr-3 mt-1">✓</span>
+            <span className="text-gray-600">{feature}</span>
+          </li>
+        ))}
+      </ul>
+      <button className={`w-full mt-6 py-3 rounded-lg font-semibold transition-colors ${
+        recommended 
+          ? 'bg-pink-600 text-white hover:bg-pink-700' 
+          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+      }`}>
+        Get Started
+      </button>
     </div>
   );
 }

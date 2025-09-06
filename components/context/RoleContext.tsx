@@ -8,30 +8,10 @@ import React, {;
 export type UserRole = 'client' | 'talent';
 
 type RoleContextValue = {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   role: UserRole;
   setRole: (role: UserRole) => void;}
 const RoleContext = createContext<RoleContextValue | undefined>(undefined);
-  create_context,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from 'react';
-export type UserRole = 'client' | 'talent';
-;
-type RoleContextValue = {
-  role: UserRole;
-  set_role: (role: UserRole) => void;}
-;
-const RoleContext = create_context < RoleContextValue | undefined>(undefined);
-;
-export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
-  children,
-}) => {  const [role, set_role] = useState < UserRole>('client');
-;
-  useEffect (() => {
-    try {import React, { create_context, useContext, useEffect, useMemo, useState } from 'react';
-;
 export type UserRole = 'client' | 'talent';
 ;
 type RoleContextValue = {
@@ -41,85 +21,47 @@ export const RoleProvider: React.FC<{ children: React && React.ReactNode }> = ({
 }) => {  const [role, setRole] = useState<UserRole>('client');
 
   useEffect(() => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     try {import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 export type UserRole = 'client' | 'talent';
-  role: UserRole;
-  set_role: (role: UserRole) => void;  role: UserRole,
-  set_role: (role: UserRole) => void;
-}
-;
-const RoleContext = create_context < RoleContextValue | undefined>(undefined);
-;
-      }
-    } catch {}
-  }, []);
-  useEffect(() => {
-    try {
-      if (typeof window !== 'undefined') {
-
-
-type RoleContextValue = {;
-  role: UserRole;
-  setRole: (role: UserRole) => void;  role: UserRole,;
-  setRole: (role: UserRole) => void;
-};
-
-const RoleContext = createContext<RoleContextValue | undefined>(undefined);
-
-export const RoleProvider: React.FC<{ children: React && React.ReactNode }> = ({;
-  children,;
-}) => {export const RoleProvider: React.FC<{ children: React && React.ReactNode }> = ({ children }) => {;
-  const [role, setRole] = useState<UserRole>('client');
-
-  useEffect(() => {;
-    try {;
-      const saved =;
-        typeof window !== 'undefined';
-          ? window && window.localStorage.getItem('zion_user_role');
-          : null;
-      if (saved === 'client' || saved === 'talent') {;
-        setRole(saved);      }      const saved = typeof window !== 'undefined' ? window && window.localStorage.getItem('zion_user_role') : null;
-      if (saved === 'client' || saved === 'talent') {;
-        setRole(saved);
-
 export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
   children
 }) => {export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-      const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion_user_role') : null;
-      if (saved === 'client' || saved === 'talent') {
-        setRole(saved)
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     } catch {}
   }, []);
-
-
-        window.localStorage.setItem('zion_user_role', role);      }
-
 
   useEffect(() => {;
     try {;
       if (typeof window !== 'undefined') {;
         window && window.localStorage.setItem('zion_user_role', role);      }        window && window.localStorage.setItem('zion_user_role', role);
+=======
   useEffect(() => {
     try {
       if (typeof window !== 'undefined') {
         window.localStorage.setItem('zion_user_role', role)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     } catch {}
   }, [role]);
   const value = useMemo(() => ({ role, setRole }), [role]);
-
-  return <RoleContext.Provider value={value}>{children}</RoleContext.Provider>
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 
 export function useRole(): any (): RoleContextValue {;
   const ctx = useContext(RoleContext);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (!ctx) throw new Error('useRole must be used within RoleProvider');
   return ctx;  return ctx;
 }
 
+=======
   return ctx
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
   const [role, set_role] = useState < UserRole>('client');
 ;
   useEffect (() => {
@@ -165,3 +107,4 @@ const ctx = useContext (RoleContext);
 }
   return ctx;  return ctx;
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

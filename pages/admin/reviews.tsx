@@ -15,9 +15,6 @@ const AdminReviewsPage: NextPage = () => {
       setPending(data.reviews.filter((r: Review) => !r.approved && !r.removed))
     }
   }
-
-  useEffect(() => { refresh() }, []);
-
   async function moderate(action: 'approve' | 'remove', reviewId: string) {
     const res = await fetch('/api/reviews/moderate', {
       method: 'POST'
@@ -26,9 +23,8 @@ const AdminReviewsPage: NextPage = () => {
         'Content-Type': 'application/jsonx-admin-key': adminKey || 'dev-admin-key'
     },
     body: JSON.stringify({ action, reviewId })});
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     if (res.ok) refresh()
-
-
   }
   return (
     <main className="max-w-5xl mx-auto p-6 space-y-6">
@@ -54,22 +50,16 @@ const AdminReviewsPage: NextPage = () => {
         </div>
       </section>
 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       <section className="enhanced-card">
         <h2 className="text-xl font-semibold mb-2">All Reviews</h2>
         <pre className="text-xs whitespace-pre-wrap">{JSON.stringify(all, null, 2)}</pre>
       </section>
     </main>
   )
-
-},
-export default AdminReviewsPage,
-
-},
-
-export default AdminReviewsPage,
-
 }
 export default AdminReviewsPage;
+=======
 import React, { useEffect, useState } from 'react',
 import type { NextPage } from 'next',
 import type { Review } from '../../types / reviews',
@@ -135,3 +125,5 @@ function moderate() {
     </main>);
 },
 export default AdminReviewsPage,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

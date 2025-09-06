@@ -1,4 +1,4 @@
-}
+=======
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
 export default /**
@@ -26,23 +26,5 @@ return (
     canonical="https: //ziontechgroup.com / retail - technology - solutions";
   />);
 }
-
-
-			pricePerMonthUSD={1999  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-			implementationWeeks="Implementation: 4–8 weeks"
-			roiNote="Lift gross margin 2–4 pts and reduce stockouts 10–20%"
-			features={[
-				"Demand forecasting and dynamic pricing",
-				"Assortment optimization and store clustering",
-				"Customer 360 and propensity modeling",
-				"Store ops: labor planning and task automation",
-				"Omni-channel journey orchestration",
-				"Integrations: POS, eCom, WMS, ESP, CDP"
-
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

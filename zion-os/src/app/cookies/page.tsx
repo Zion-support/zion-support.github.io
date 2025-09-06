@@ -1,6 +1,3 @@
-export default function CookiesPage() {;
-  return (;
-    <div className="min-h-screen py-20">;
 export default /**
  * CookiesPage - Function description
  */

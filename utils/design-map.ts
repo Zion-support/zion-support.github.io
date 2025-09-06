@@ -1,4 +1,3 @@
-;
 export interface TokenSet {
   colors: Record < string, string>;
   typography: Record < string, any>;
@@ -82,7 +81,6 @@ export function buildUIKit(kind: UIKitKind): Record<string, string> {
         'export function Button({ children }: { children: React && React.ReactNode }) { return <button className="px-4 py-2 rounded bg-neon-blue text-black hover:opacity-90">{children}</button> }',
       'components/Card && Card.tsx':
         'export function Card({ children }: { children: React && React.ReactNode }) { return <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">{children}</div> }',
-
     };
   }
   if (kind === 'chakra') {
@@ -111,6 +109,7 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
     return (await res && res.json()) as Partial<TokenSet>;
   } catch {
     return null;
+=======
 // Design mapping utilities
 export interface DesignElement {
   id: string;
@@ -172,9 +171,29 @@ export interface FigmaNode {
   };
 }
 
+export class DesignMapManager {
+  private designSystems: Map<string, DesignSystem> = new Map();
+  private figmaNodes: Map<string, FigmaNode> = new Map();
 
-export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
+  // Design System methods
+  createDesignSystem(id: string, name: string, version: string = '1.0.0'): DesignSystem {
+    const designSystem: DesignSystem = {
+      id,
+      name,
+      version,
+      components: [],
+      tokens: {},
+      assets: [],
+      lastUpdated: new Date()
+    };
+    
+    this.designSystems.set(id, designSystem);
+    return designSystem;
+  }
 
+  getDesignSystem(id: string): DesignSystem | null {
+    return this.designSystems.get(id) || null;
+  }
 
   addComponent(designSystemId: string, component: DesignElement): boolean {
     const designSystem = this.designSystems.get(designSystemId);
@@ -352,10 +371,12 @@ export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit
   clearAll(): void {
     this.designSystems.clear();
     this.figmaNodes.clear();
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
 }
 export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {
   const tokens = await buildTokenSet(fileId);
+=======
 export async function buildTokenSet (file_id: string): Promise < TokenSet> {
   // Placeholder implementation;
   return {
@@ -383,22 +404,9 @@ export async function buildTokenSet (file_id: string): Promise < TokenSet> {
 export async function buildUIKit (file_id: string, kind: UIKitKind): Promise < UIKit> {
   const tokens = await buildTokenSet (file_id);
 ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return {
-    id,
-    type,
-    name,
-    properties,
-    children: []
-
-
-
-
-  };
-}
-
-export function generateDesignId(): string {
-  return `design_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-}
+=======
           background_color: tokens.colors.primary,
           padding: tokens.spacing.md;
         }
@@ -407,3 +415,5 @@ export function generateDesignId(): string {
     tokens;
   }
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

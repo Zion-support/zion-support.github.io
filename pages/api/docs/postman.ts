@@ -1,7 +1,6 @@
 function toPostman() {
   return {
     info: {
-}
 
       { key: "baseUrl", value: "https://api.zion.os" }
       { key: "token", value: "" }
@@ -10,13 +9,13 @@ function toPostman() {
 
 }
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-  res && res.setHeader("Content-Type", "application/json");
-  res && res.status(200).json(toPostman());
 }
 
+=======
       
       name: 'Zion OS API',
       schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json'
+=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import v1 from "../../../data / api - docs / v1";
 /**
@@ -28,6 +27,7 @@ function to_postman() {
       name: "Zion OS API",
       schema:;
         "https://schema.getpostman.com / json / collection / v2.1.0 / collection.json",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     },
     item: v1.sections.flat_map ((section) =>;
       section.endpoints.map ((ep) => ({
@@ -40,6 +40,8 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Content-Typeapplication/json');
   res.status(200).json(toPostman())
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
           header: [;
             {
               key: "Authorization",
@@ -71,3 +73,4 @@ function handler() {
   res.set_header ("Content - Type", "application / json");
   res.status (200).json (to_postman ());
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

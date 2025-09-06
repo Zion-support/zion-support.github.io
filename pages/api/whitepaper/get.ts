@@ -1,5 +1,3 @@
-import { getShared } from './share';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query;
   if (!id || Array.isArray(id)) return res.status(400).json({ error: 'Missing id' });
   const entry = getShared(id);
@@ -23,8 +21,3 @@ function handler() {
   res.status (200).json ({ markdown: entry.markdown, public: entry.public, created_at: entry.created_at });
 }
 ;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-

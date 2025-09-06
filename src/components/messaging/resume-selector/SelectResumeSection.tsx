@@ -1,85 +1,11 @@
 
-interface SelectResumeSectionProps {;
-  resumeOptions: ResumeOption[];
-  selectedResume: ResumeOption | null;
-  handleResumeSelect: (resumeId: string) => void;
-  handleDownloadResume: () => void;
-  isLoading: boolean;
-export function SelectResumeSection(): any ({;
-  resumeOptions,;
-  selectedResume,;
-  handleResumeSelect,;
-  handleDownloadResume,;
-  isLoading,;
-}: SelectResumeSectionProps) {;
-  return (
-    <div className='space-y-2'>;
-      {resumeOptions && resumeOptions.length === 0 ? (;
-        <p className='text-sm text-zion-slate'>No saved resumes found.</p>;
-      ) : (;
-        <>;
-          {resumeOptions && resumeOptions.map(option => (            <button
-              key = {option && option.id,}
-              className={`w-full text-left p-3 rounded-md transition ${
-                selectedResume?.id === option && option.id
-                  ? 'bg-zion-purple/20 border border-zion-purple'
-                  : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50'
-              }`}
-              onClick = {(,) => handleResumeSelect(option && option.id),}
-            >;
-              <div className='flex items-center'>;
-                <FileText className='h-4 w-4 mr-2 text-zion-cyan' />;
-                <span className='text-white'>{option && option.title}</span>;
-              </div>;
-            </button>;
-          ))}
-            <button
-              key={option && option.id}
-              className={`w-full text-left p-3 rounded-md transition ${
-                selectedResume?.id === option && option.id 
-                  ? 'bg-zion-purple/20 border border-zion-purple' 
-                  : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50'
-              }`}
-              onClick={() => handleResumeSelect(option && option.id)}
-            >;
-              <div className="flex items-center">;
-                <FileText className="h-4 w-4 mr-2 text-zion-cyan" />;
-                <span className="text-white">{option && option.title}</span>;
-              </div>;
-            </button>;
-          ))}
-
-          {selectedResume?.type === 'ai_resume' && selectedResume && selectedResume.resume && (;
-            <ResumePreviewCard
-              resume = {selectedResume && selectedResume.resume as Resume,}
-              onDownload = {handleDownloadResume,}
-              isLoading = {isLoading,}
-            />;
-          )}
-        </>;
-      )}
-    </div>;
-  );
-}};
-
-}
-import React from 'react';
-import { FileText } from 'lucide-react'
-import { ResumeOption } from '../resume-selector/types';
-import { ResumePreviewCard } from './ResumePreviewCard';
-import { Resume } from '@/types/resume';
-interface SelectResumeSectionProps {
-  resumeOptions: ResumeOption[],
-  selectedResume: ResumeOption | null,
-  handleResumeSelect: (resumeId: string) => void, handleDownloadResume: () => void,
-  isLoading: boolean
-}
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function SelectResumeSection({
-  resumeOptions;
-  selectedResume;
-  handleResumeSelect;
-  handleDownloadResume;
+  resumeOptions,
+  selectedResume,
+  handleResumeSelect,
+  handleDownloadResume,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   isLoading
 }: SelectResumeSectionProps) {
   return (
@@ -88,21 +14,9 @@ export function SelectResumeSection({
         <p className="text-sm text-zion-slate">No saved resumes found.</p>
       ) : (
         <>
-
-
-
-          {resumeOptions.map((option) => (
-            <button
-              key={option.id}
-              className={`w-full text-left p-3 rounded-md transition ${
-                selectedResume?.id === option.id 
-                  ? 'bg-zion-purple/20 border border-zion-purple' 
-                  : 'bg-zion-blue-dark/30 hover: bg-zion-blue-dark/50',
-              }`}
-              onClick={() => handleResumeSelect(option.id)}
-
-
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div className="flex items-center">
                 <FileText className="h-4 w-4 mr-2 text-zion-cyan" />
@@ -110,11 +24,6 @@ export function SelectResumeSection({
               </div>
             </button>
           ))}
-
-          
-
-          
-
           {resumeOptions.map((option) => (
             <button
               key={option.id}
@@ -131,74 +40,31 @@ export function SelectResumeSection({
               </div>
             </button>
           ))}
-          
           {selectedResume?.type === 'ai_resume' && selectedResume.resume && (
             <ResumePreviewCard
+              resume = {selectedResume.resume as Resume,}
+              onDownload = {handleDownloadResume,}
+              isLoading = {isLoading,}
+            />
+=======
+;
+          {selectedResume?.type === 'ai_resume' && selectedResume.resume && (;
+            <ResumePreviewCard;
               resume={selectedResume.resume as Resume}
               onDownload={handleDownloadResume}
               isLoading={isLoading}
-            />
+            />;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           )}
         </>
       )}
-    </div>
+=======
+    </div>;
   );
 }
-import { FileText } from 'lucide-react';
-import { ResumeOption } from '../resume - selector / types';
-import { ResumePreviewCard } from './ResumePreviewCard';
-import { Resume } from '@/types / resume';
-interface SelectResumeSectionProps {
-  resume_options: ResumeOption[];
-  selected_resume: ResumeOption | null;
-  handleResumeSelect: (resume_id: string) => void;
-  handleDownloadResume: () => void;
-  is_loading: boolean;
-export /**
- * SelectResumeSection - Function description
- */
-function SelectResumeSection() {
-  return (
-    <div className='space - y-2'>;
-      {resume_options.length === 0 ? (
-        <p className='text - sm text - zion - slate'>No saved resumes found.</p>) : (
-        <>;
-          {resume_options.map (option => (            <button;
-              key = {option.id, }
-              className={`w - full text - left p - 3 rounded - md transition ${
-                selected_resume?.id === option.id;
-                  ? 'bg - zion - purple / 20 border border - zion - purple';
-                  : 'bg - zion - blue - dark / 30 hover:bg - zion - blue - dark / 50';
-              }`}
-              on_click = {(, ) => handleResumeSelect (option.id), }
-            >;
-              <div className='flex items - center'>;
-                <FileText className='h - 4 w - 4 mr - 2 text - zion - cyan' />;
-                <span className='text - white'>{option.title}</span>;
-              </div>;
-            </button>))}
-          {resume_options.map ((option) => (
-            <button;
-              key={option.id}
-              className={`w - full text - left p - 3 rounded - md transition ${
-                selected_resume?.id === option.id;
-                  ? 'bg - zion - purple / 20 border border - zion - purple';
-                  : 'bg - zion - blue - dark / 30 hover:bg - zion - blue - dark / 50';
-              }`}
-              on_click={() => handleResumeSelect (option.id)}
-            >;
-              <div className="flex items - center">;
-                <FileText className="h - 4 w - 4 mr - 2 text - zion - cyan" />;
-                <span className="text - white">{option.title}</span>;
-              </div>;
-            </button>))}
-          {selected_resume?.type === 'ai_resume' && selected_resume.resume && (
-            <ResumePreviewCard;
-              resume = {selected_resume.resume as Resume, }
-              on_download = {handleDownloadResume, }
-              is_loading = {is_loading, }
-            />)}
-        </>)}
-    </div>);
-}}
-}
+;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

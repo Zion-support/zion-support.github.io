@@ -1,46 +1,3 @@
-  // rudimentary skill tokenization
-  const tokens = lower.split(/[^a-z0-9+.#]/).filter(Boolean);
-  
-  return Array.from(found);
-
-function extractKeywords(text: string): string[] {
-  return text
-    .toLowerCase()
-    .replace(/[^a-z0-9\s]/g, ' ')
-    .split(/\s+/)
-    .filter(Boolean)
-    .filter(
-      w =>
-        w.length > 2 &&
-        ![
-          'show',
-          'me',
-          'with',
-          'and',
-          'for',
-          'the',
-          'a',
-          'an',
-          'to',
-          'by',
-          'of',
-          'under',
-          'over',
-          'in',
-        ].includes(w)
-    );
-}
-
-export async function parseQueryToFilters(
-  query: string
-): Promise<ParsedFilters> {
-  const base: ParsedFilters = {
-    type: extractType(query),
-    skills: extractSkills(query),
-    location: extractLocation(query),
-    availability: extractAvailability(query),
-    ...extractBudget(query),
-    keywords: extractKeywords(query),
   };
 
   const apiKey =
@@ -81,6 +38,7 @@ export async function parseQueryToFilters(
     };
   } catch {
     return base;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
 
   const words = query && query.toLowerCase().split(/\s+/);
@@ -112,7 +70,8 @@ export async function parseQueryToFilters(
   }
   
   return filters;
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
     keywords: [],
     skills: [],
     location: null,
@@ -127,18 +86,11 @@ export const search_all = (parsed: any, access: any) =>: any {
     talent: [],
     jobs: [],
     projects: [];
-
-  };
-};
-
-
-export const suggestDidYouMean = (query: string) => {
+  }
+}
+;
+export const suggestDidYouMean = (query: string) =>: any {
   // Add did you mean functionality here;
   return null;
-
-}
-
-
-}
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

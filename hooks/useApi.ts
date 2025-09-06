@@ -1,78 +1,22 @@
-
-      setLoading(false)};
-
-  return { data, loading, error, execute }};
-};
-};
-};
-      setLoading(false)}
-      set_loading (false)}
-;
   return { data, loading, error, execute }}
 }
 }
 }
-};import { useState, useEffect } from 'react';
-
-
-
-interface ApiState<T> {
-}import { useState, useEffect } from 'react';
-;
-interface ApiState < T> {
   data: T | null;
   loading: boolean;
   error: string | null;
 }
-export function use_api < T>(url: string, options?: RequestInit) {
-  const [state, set_state] = useState < ApiState < T>>({
-    data: null,
-    loading: true,
-    error: null,
-
-    data: null,
-    loading: true,
-    error: null,;
-
   });
 ;
   useEffect (() => {
     const fetch_data = async () => {
       try {
-        set_state (prev => ({ ...prev, loading: true, error: null }));
-        const response = await fetch (url, options);
-;
-        // Check condition
-if ( {) {
-  $2
-}
-          throw new Error (`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json ();
-        set_state ({ data, loading: false, error: null });
-      } catch (error) {
-        set_state ({
           data: null,
           loading: false,
           error: error instanceof Error ? error && error.message : 'An error occurred',
         });
       }
-import { useState, useEffect, useCallback } from 'react';
-
-
-
-
-import { useState, useEffect, useCallback } from 'react';
-
-
-
-
-  }, [url, JSON && JSON.stringify(options)]);
-
   return state;
-}
-interface UseApiProps {
-  // Add props here as needed
 }
 import { useState, useEffect, useCallback } from 'react';
 
@@ -110,16 +54,6 @@ export const use_api = <T = any>(
   const [error, set_error] = useState < any>(null);
   const execute = useCallback (async (...args: any[]) => {
     try {
-      set_loading (true);
-      set_error (null);
-      const result = await api_function (...args);
-      set_data (result);
-      options.on_success?.(result);
-      return result;
-    } catch (err) {
-      const error = err instanceof Error ? err : new Error (String (err));
-      set_error (error);
-      options.on_error?.(error);
       throw error;
       set_loading (false);
     }
@@ -135,7 +69,6 @@ export default function UseApi({ }: UseApiProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}
 interface ApiState<T> {
   data: T | null, loading: boolean,
   error: string | null,
@@ -150,10 +83,6 @@ export function useApi<T>(
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const fetchData = useCallback(async () => {
-    setLoading(true);
-    setError(null);
-    
     try {
     const result = await apiCall(),
     setData(result)
@@ -163,22 +92,11 @@ export function useApi<T>(
       setLoading(false);
     }
   }, [apiCall]);
-
   useEffect(() => {
     if (options.immediate !== false) {
       fetchData();
     }
   }, [fetchData, options.immediate]);
-
-
-    fetchData();
-  }, [url, options]);
-
-  return state;
-
-}
-
-
 }
 
   }, [api_function, options]);

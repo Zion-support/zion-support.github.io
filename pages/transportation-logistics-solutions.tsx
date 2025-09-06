@@ -16,14 +16,7 @@ export default function TransportationLogisticsSolutions() {
       </div>
     </>
   )
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-}
-}
+=======
 import React from 'react',
 import Head from 'next / head',
 export default /**
@@ -45,3 +38,5 @@ function TransportationLogisticsSolutions() {
       </div>;
     </>);
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

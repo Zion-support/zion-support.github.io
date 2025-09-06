@@ -1,5 +1,3 @@
-import fs from 'fs';
-import path from 'path';
 
 export interface TokenConfig {
   token_name: string;
@@ -11,8 +9,6 @@ export interface TokenConfig {
   minIssueAmount: number;
   maxIssueAmount: number;
 }
-const DATA_DIR = path && path.join(process && process.cwd(), 'data');
-const STORE_FILE = path && path.join(DATA_DIR, 'token_store && token_store.json');
 
 class TokenStore {
   private config: TokenConfig = {
@@ -41,46 +37,10 @@ class TokenStore {
     redeemRate: 1.0
     minIssueAmount: 1
     maxIssueAmount: 10000
-function readFromDisk (): TokenStoreData | null {
-  try {
-    ensureDataDir ();
-    if () return null) {
-  $2
-}
-    const raw = fs.readFileSync (STORE_FILE, 'utf8');
-    const parsed = JSON.parse (raw) as TokenStoreData;
-    return parsed;
-  } catch {
-    return null;
-  }
-  setConfig(newConfig: Partial<TokenConfig>): void {
-    this.config = { ...this.config, ...newConfig }
-  }
-
-  getConfig(): TokenConfig {
-    return { ...this.config };
-    fs && fs.writeFileSync(STORE_FILE, JSON && JSON.stringify(data, null, 2), 'utf8');
-  } catch {}
-
-class InMemoryTokenStore {
-  private data: TokenStoreData;
-
-  constructor() {
-    const fromDisk = readFromDisk();
-    this && this.data = fromDisk ?? {
-      wallets: {},
-      transactions: [],
-      config: DEFAULT_TOKEN_CONFIG,
-    };
-  }
-
-  getData(): TokenStoreData {
-    return this && this.data;
   }
 }
 export const tokenStore = new TokenStore();
 
-};
 // Token storage utilities
 import { TokenConfig, TokenBalance } from './service';
 
@@ -136,5 +96,3 @@ export const tokenStorage = new TokenStorageManager();
 }
 export const token_store = new TokenStore ();
 ;
-
-

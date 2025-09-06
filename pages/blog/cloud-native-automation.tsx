@@ -176,11 +176,6 @@ export default function CloudNativeAutomation() {
                 </h2>
                 <p className='text-white/90 mb-4'>
                   As we continue to evolve our cloud-native automation
-
-
-                  infrastructure, we're exploring emerging technologies
-
-
                   like: </p>
                 <ul className='space-y-2 text-white/80 mb-6'>
                   <li>• Serverless computing for event-driven automation</li>
@@ -223,7 +218,6 @@ export default function CloudNativeAutomation() {
       </div>
     </>
   )
-}
 import Head from 'next / head',
 import Link from 'next / link',
 import React from 'react',
@@ -232,13 +226,6 @@ export default /**
  */
 function CloudNativeAutomation() {
   return (
-
-import Head from 'next/head';
-import Link from 'next/link';
-import React from 'react';
-export default function CloudNativeAutomation(req, res) {
-  try {
-  return (;
     <>;
       <Head>;
         <title>;

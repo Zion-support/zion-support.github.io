@@ -1,4 +1,3 @@
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -20,21 +19,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const completion = await openai.chat.completions.create({
         model: 'gpt-4o-mini'
         messages: [
-          { role: 'system', content: system },
-          { role: 'user', content: `Translate this into ${langName} in a business-appropriate tone.\n\n${text}` }
-        ],
-        temperature: 0.2
-      });
-      const translated = completion.choices?.[0]?.message?.content?.trim() || '';
       results[lng] = translated
     }
     return res.status(200).json(results)
   } catch (err: any) {
     console.error('Translation error', err)
-
-    return res.status(500).json({ error: 'Translation failed' })
-  }
-}
 import type { NextApiRequest, NextApiResponse } from 'next',
 import OpenAI from 'openai',
 const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY }),
@@ -74,7 +63,3 @@ if (|| targets.length === 0) {) {
   } catch (err: any) {
     console.error ('Translation error', err),
     return res.status (500).json ({ error: 'Translation failed' });
-  }
-}
-
-

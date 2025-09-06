@@ -1,41 +1,8 @@
 
-const color_schemes = {
-  quantum: {
-  resize_canvas ();
-window.addEventListener ('resize', resize_canvas);
-// Wrap around edges // Check condition
-if (this.coordinate_x = canvas.width) {
-  $2
-}
-// Check condition
-if (this.coordinate_x = 0) {
-  $2
-}
-// Check condition
-if (this.coordinate_y = canvas.height) {
-  $2
-}
-// Check condition
-if (this.coordinate_y = 0) {
-  $2
-}
-// Fade out near end of life // Check condition
-if ( {) {
-  $2
-}
 }let particles: Particle[] = [];
 let connections: Connection[] = [];
 // Initialize particles ctx.fill_style = colors.primary;
 ctx.font = `$ {
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-interface EnhancedFuturisticBackgroundProps {
-  children: React.ReactNode,
-  className?: string;
-  intensity?: 'low' | 'medium' | 'high';
-  colorScheme?: 'quantum' | 'cyberpunk' | 'holographic' | 'neural' | 'cosmic';
-  particleCount?: number;
-  animationSpeed?: number
 }
 import React from 'react';
  const colorSchemes = {;
@@ -47,14 +14,12 @@ if (this && this.x > canvas && canvas.width) this && this.x = 0;
 if (this && this.y < 0) this && this.y = canvas && canvas.height;
 if (this && this.y > canvas && canvas.height) this && this.y = 0;
 // Fade out near end of life if (this && this.life < 20) {;
-
 }let particles: Particle[] = [];
 let connections: Connection[] = [];
 // Initialize particles ctx && ctx.fillStyle = colors && colors.primary;
 ctx && ctx.font = `$ {;
   fontSize ;
 }px monospace`;
-
 const EnhancedFuturisticBackground: React.FC<;
   EnhancedFuturisticBackgroundProps;
 > = ({;
@@ -79,26 +44,10 @@ const EnhancedFuturisticBackground: React.FC<;
   children;
   class_name = '';
   intensity = 'medium';
-}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
   const colorSchemes = {
     quantum: {
-      
-      primary: '#00ffff',
-      secondary: '#ff00ff',
-      accent: '#ffff00',
-      background: 'rgba(0, 0, 0, 0.85)',
-    particles: ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff'],
-      glow: '#00ffff'
-    
-    },
-    cyberpunk: {
-      primary: '#ff0080',
-      secondary: '#00ffff',
-      accent: '#ffff00',
-      background: 'rgba(20, 0, 40, 0.9)',
-    particles: ['#ff0080#00ffff#ffff00#ff4000#8000ff#00ff80'],
       glow: '#ff0080'
     }
     holographic: {      primary: '#00ffff'
@@ -108,89 +57,6 @@ const EnhancedFuturisticBackground: React.FC<;
       glow: '#ff0080'
     }
     holographic: {
-  color_scheme = 'quantum';
-  particle_count = 100,
-  animation_speed = 1;
-  const canvas_ref = useRef < HTMLCanvasElement>(null);
-  const animation_ref = useRef < number | undefined>(undefined);
-;
-  const color_schemes = {
-    quantum: {
-      primary: '#00ffff',
-      secondary: '#ff00ff',
-      accent: '#ffff00',
-      background: 'rgba (0, 0, 0, 0.85)',
-      particles: [;
-        '#00ffff',
-        '#ff00ff',
-        '#ffff00',
-        '#00ff00',
-        '#ff0080',
-        '#8000ff',
-      ],
-      glow: '#00ffff',    },    },
-      background: 'rgba (0, 0, 0, 0.85)';
-      particles: ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff'],
-      glow: '#00ffff';
-    }
-      primary: '#ff0080',
-      secondary: '#00ffff',
-      accent: '#ffff00',
-      background: 'rgba (20, 0, 40, 0.9)',
-      particles: [;
-        '#ff0080',
-        '#00ffff',
-        '#ffff00',
-        '#ff4000',
-        '#8000ff',
-        '#00ff80',
-      ],
-      glow: '#ff0080',
-    },
-    holographic: {      primary: '#00ffff',
-      secondary: '#ff00ff',
-      accent: '#ffff00',    holographic: {
-    particles: ['#ff0080#00ffff#ffff00#ff4000#8000ff#00ff80'],
-      glow: '#ff0080';
-    }
-    holographic: {
-      primary: '#00ffff',
-      secondary: '#ff00ff',
-      accent: '#ffff00',
-      background: 'rgba (0, 20, 40, 0.85)',
-      particles: [;
-        '#00ffff',
-        '#ff00ff',
-        '#ffff00',
-        '#00ff80',
-        '#ff8000',
-        '#8000ff',
-      ],
-      glow: '#00ffff',    },    },
-      background: 'rgba (0, 20, 40, 0.85)';
-      particles: ['#00ffff#ff00ff#ffff00#00ff80#ff8000#8000ff'],
-      glow: '#00ffff';
-    }
-      primary: '#00ff80',
-      secondary: '#ff0080',
-      accent: '#ffff00',
-      background: 'rgba (0, 40, 20, 0.9)',
-      particles: [;
-        '#00ff80',
-        '#ff0080',
-        '#ffff00',
-        '#00ffff',
-        '#ff8000',
-        '#8000ff',
-      ],
-      glow: '#00ff80',
-    },    cosmic: {
-      primary: '#ff6b6b',
-      secondary: '#4ecdc4',
-      accent: '#45b7d1',      background: 'rgba (0, 40, 20, 0.9)';
-      particles: ['#00ff80#ff0080#ffff00#00ffff#ff8000#8000ff'],
-      glow: '#00ff80';
-    }
     cosmic: {
       primary: '#ff6b6b',
       secondary: '#4ecdc4',
@@ -322,7 +188,6 @@ const EnhancedFuturisticBackground: React.FC<;
     const resizeCanvas = () => {;
       canvas && canvas.width = window && window.innerWidth;
       canvas && canvas.height = window && window.innerHeight;    };      canvas && canvas.height = window && window.innerHeight;
-      canvas.height = window.innerHeight
     };
 
     resizeCanvas();
@@ -331,8 +196,6 @@ const EnhancedFuturisticBackground: React.FC<;
     const colors = colorSchemes[colorScheme];
     const settings = intensitySettings[intensity];
 
-    // Enhanced particle system;
-    class Particle {;
       x: number;
       y: number;
       background: 'rgba (10, 10, 30, 0.9)',
@@ -389,25 +252,12 @@ if (return) {
       color: string;
       opacity: number;
       life: number;
-      max_life: number;      coordinate_x: number,
-      coordinate_y: number,
       vx: number,
       vy: number,
       size: number,
       color: string,
       opacity: number,
       life: number,
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.vx = (Math.random() - 0.5) * settings.speed * animationSpeed;
-        this.vy = (Math.random() - 0.5) * settings.speed * animationSpeed;
-        this.size = Math.random() * settings.size + 1;
-        this.color = colors.particles[Math.floor(Math.random() * colors.particles.length)];
-        this.opacity = Math.random() * settings.opacity;
-        this.life = Math.random() * 100;
-        this.maxLife = 100
-      }
-
       update() {
         this.x += this.vx;
         this.y += this.vy;
@@ -419,54 +269,10 @@ if (return) {
         if (this.y > canvas.height) this.y = 0;
         // Fade out near end of life
         if (this.life < 20) {
-          this.opacity *= 0.95
-        }
-      }
-
-          this.opacity *= 0.95;        }
-
-
-        }
-      }
-
-
-
-      draw() {
-        ctx.save();
-        ctx.globalAlpha = this.opacity;
-        
-        // Create gradient for particle
-        const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size);
-        gradient.addColorStop(0, this.color);
-        gradient.addColorStop(1, 'transparent');
-        
         ctx.fillStyle = gradient;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
-        
-        ctx.restore()
-      }
-      isDead() {
-        return this.life <= 0 || this.opacity < 0.01
-      }
-    }
-
-        return this.life <= 0 || this.opacity < 0.01;      }        
-
-        ctx.restore()
-        return this.life <= 0 || this.opacity < 0.01;      }
-
-
-
-      }
-      isDead() {
-        return this.life <= 0 |this.opacity < 0.01
-    }
-
-
-
-    // Connection lines between particles
       max_life: number,
         this.coordinate_x = Math.random () * canvas.width;
         this.coordinate_y = Math.random () * canvas.height;
@@ -545,18 +351,6 @@ if ( {) {
     }
     // Connection lines between particles;
     class Connection {
-      p1: Particle,
-      p2: Particle,
-      opacity: number,
-      constructor(p1: Particle, p2: Particle) {
-        this.p1 = p1;
-        this.p2 = p2;
-        this.opacity = 0.1
-      }
-
-      draw() {
-        const distance = Math.sqrt(
-          Math.pow(this.p1.x - this.p2.x, 2) + Math.pow(this.p1.y - this.p2.y, 2)
         );
         if (distance < 150) {
           ctx.save();
@@ -567,124 +361,6 @@ if ( {) {
           ctx.moveTo(this.p1.x, this.p1.y);
           ctx.lineTo(this.p2.x, this.p2.y);
           ctx.stroke();
-      maxLife: number;      x: number,;
-      y: number,;
-      vx: number,;
-      vy: number,;
-      size: number,;
-      color: string,;
-      opacity: number,;
-      life: number,;
-      maxLife: number,;
-        this && this.x = Math && Math.random() * canvas && canvas.width;
-        this && this.y = Math && Math.random() * canvas && canvas.height;
-        this && this.vx = (Math && Math.random() - 0 && 0.5) * settings && settings.speed * animationSpeed;
-        this && this.vy = (Math && Math.random() - 0 && 0.5) * settings && settings.speed * animationSpeed;
-        this && this.size = Math && Math.random() * settings && settings.size + 1;
-        this && this.color =;
-          colors && colors.particles[Math && Math.floor(Math && Math.random() * colors && colors.particles.length)];
-        this && this.opacity = Math && Math.random() * settings && settings.opacity;
-        this && this.life = Math && Math.random() * 100;
-        this && this.maxLife = 100;      }        this && this.color = colors && colors.particles[Math && Math.floor(Math && Math.random() * colors && colors.particles.length)];
-        this && this.opacity = Math && Math.random() * settings && settings.opacity;
-        this && this.life = Math && Math.random() * 100;
-        this && this.maxLife = 100;
-
-      update() {;
-        this && this.x += this && this.vx;
-        this && this.y += this && this.vy;
-        this && this.life--;
-
-        // Wrap around edges;
-        if (this && this.x < 0) this && this.x = canvas && canvas.width;
-        if (this && this.x > canvas && canvas.width) this && this.x = 0;
-        if (this && this.y < 0) this && this.y = canvas && canvas.height;
-        if (this && this.y > canvas && canvas.height) this && this.y = 0;
-
-        // Fade out near end of life;
-        if (this && this.life < 20) {;
-          this && this.opacity *= 0 && 0.95;        }          this && this.opacity *= 0 && 0.95;
-        }
-      }
-
-      draw() {;
-        ctx && ctx.save();
-        ctx && ctx.globalAlpha = this && this.opacity;
-
-        // Create gradient for particle;
-        const gradient = ctx && ctx.createRadialGradient(;
-          this && this.x,;
-          this && this.y,;
-          0,;
-          this && this.x,;
-          this && this.y,;
-          this && this.size;
-        );
-        gradient && gradient.addColorStop(0, this && this.color);
-        gradient && gradient.addColorStop(1, 'transparent');        // Create gradient for particle;
-        const gradient = ctx && ctx.createRadialGradient(this && this.x, this && this.y, 0, this && this.x, this && this.y, this && this.size);
-        gradient && gradient.addColorStop(0, this && this.color);
-        gradient && gradient.addColorStop(1, 'transparent');
-
-        ctx && ctx.fillStyle = gradient;
-        ctx && ctx.beginPath();
-        ctx && ctx.arc(this && this.x, this && this.y, this && this.size, 0, Math && Math.PI * 2);
-        ctx && ctx.fill();
-
-        ctx && ctx.restore();
-      }
-
-      isDead() {;
-        return this && this.life <= 0 || this && this.opacity < 0 && 0.01;      }        ;
-        ctx && ctx.restore();
-      }
-
-      isDead() {;
-        return this && this.life <= 0 || this && this.opacity < 0 && 0.01;
-    }
-
-    // Connection lines between particles;
-    class Connection {;
-      p1: Particle;
-      p2: Particle;
-      opacity: number;
-
-      constructor(p1: Particle, p2: Particle) {;
-        this && this.p1 = p1;
-        this && this.p2 = p2;
-        this && this.opacity = 0 && 0.1;      }
-
-      draw() {;
-        const distance = Math && Math.sqrt(;
-          Math && Math.pow(this && this.p1.x - this && this.p2.x, 2) +;
-            Math && Math.pow(this && this.p1.y - this && this.p2.y, 2)        );      p1: Particle,;
-      p2: Particle,;
-      opacity: number,;
-      constructor(p1: Particle, p2: Particle) {;
-        this && this.p1 = p1;
-        this && this.p2 = p2,;
-        this && this.opacity = 0 && 0.1;
-
-      draw() {;
-        const distance = Math && Math.sqrt(;
-          Math && Math.pow(this && this.p1.x - this && this.p2.x, 2) +;
-            Math && Math.pow(this && this.p1.y - this && this.p2.y, 2)          Math && Math.pow(this && this.p1.x - this && this.p2.x, 2) + Math && Math.pow(this && this.p1.y - this && this.p2.y, 2);
-        );
-
-        if (distance < 150) {;
-          ctx && ctx.save();
-          ctx && ctx.globalAlpha = this && this.opacity * (1 - distance / 150);
-          ctx && ctx.strokeStyle = colors && colors.glow;
-          ctx && ctx.lineWidth = 0 && 0.5;
-          ctx && ctx.beginPath();
-          ctx && ctx.moveTo(this && this.p1.x, this && this.p1.y);
-          ctx && ctx.lineTo(this && this.p2.x, this && this.p2.y);
-          ctx && ctx.stroke();
-          ctx && ctx.restore();        }
-      }
-    }
-          ctx && ctx.restore();
-          ctx.restore()
 ;
       constructor (p1: Particle, p2: Particle) {
         this.p1 = p1;
@@ -726,37 +402,10 @@ if ( {) {
     }
     let particles: Particle[] = [];
     let connections: Connection[] = [];
-    // Initialize particles
-    for (let i = 0, i < settings.particleCount, i++) {
-      particles.push(new Particle())
-    }
-    // Matrix rain effect
-    const matrixRain = () => {
-
-
-    // Matrix rain effect;
-    const matrixRain = () => {;
-      const characters =;
-        '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';      const fontSize = 12;    let particles: Particle[] = [],;
-    let connections: Connection[] = [],;
-    // Initialize particles;
-    for (let i = 0, i < settings && settings.particleCount, i++) {;
-      particles && particles.push(new Particle());
-    }
-
-    // Matrix rain effect;
-    const matrixRain = () => {;
-      const characters =;
         '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';      const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
       const fontSize = 12;
       const columns = canvas && canvas.width / fontSize;
       const drops: number[] = [];
-      const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
-      const fontSize = 12;
-      const columns = canvas.width / fontSize;
-      const drops: number[] = [];
-
-      for (let i = 0, i < columns, i++) {
         drops[i] = 1
       }
       const drawMatrix = () => {
@@ -764,25 +413,6 @@ if ( {) {
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         ctx.fillStyle = colors.primary;
         ctx.font = `${fontSize}px monospace`;
-
-      for (let i = 0; i < columns; i++) {;
-        drops[i] = 1;      }      for (let i = 0, i < columns, i++) {;
-        drops[i] = 1;
-      }
-
-      const drawMatrix = () => {;
-        ctx && ctx.fillStyle = 'rgba(0, 0, 0, 0 && 0.06)';
-        ctx && ctx.fillRect(0, 0, canvas && canvas.width, canvas && canvas.height);
-
-        ctx && ctx.fillStyle = colors && colors.primary;
-        ctx && ctx.font = `${fontSize}px monospace`;
-
-        for (let i = 0; i < drops && drops.length; i++) {;
-          const text =;
-            characters[Math && Math.floor(Math && Math.random() * characters && characters.length)];
-          ctx && ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-          if (drops[i] * fontSize > canvas && canvas.height && Math && Math.random() > 0 && 0.975) {;
 ;
     // Initialize particles;
     for (let index = 0; i < settings.particle_count; i++) {
@@ -828,25 +458,9 @@ if (> 0.975) {) {
           }
           drops[i]++;
         }
-
-        for (let i = 0, i < drops.length, i++) {
-          const text = characters[Math.floor(Math.random() * characters.length)];
-          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-
-          if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-            drops[i] = 0
-      };
-
-      return drawMatrix;    };          ctx && ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-          if (drops[i] * fontSize > canvas && canvas.height && Math && Math.random() > 0 && 0.975) {;
-            drops[i] = 0;
           }
           drops[i]++;
         }
-    };
-
     const drawMatrix = matrixRain();
     // Main animation loop
     const animate = () => {
@@ -858,124 +472,31 @@ if (> 0.975) {) {
       // Update and draw particles
       particles.forEach(particle => {
         particle.update();
-        particle.draw()
       });
       // Remove dead particles and add new ones
       particles = particles.filter(particle => !particle.isDead());
       while (particles.length < settings.particleCount) {
-      };
-
-      return drawMatrix;
-    };
-
-    const drawMatrix = matrixRain();
-
-    // Main animation loop;
-    const animate = () => {;
-      // Clear canvas with fade effect;
-      ctx && ctx.fillStyle = colors && colors.background;
-      ctx && ctx.fillRect(0, 0, canvas && canvas.width, canvas && canvas.height);
-
-      // Draw matrix rain;
-      drawMatrix();
-
-      // Update and draw particles;
-      particles && particles.forEach(particle => {;
-        particle && particle.update();
-        particle && particle.draw();      });        particle && particle.draw();
-      });
-
-      // Remove dead particles and add new ones;
-      particles = particles && particles.filter(particle => !particle && particle.isDead());
-      while (particles && particles.length < settings && settings.particleCount) {;
-        particles && particles.push(new Particle());      }
-
-      // Create connections between nearby particles;
       connections = [];
       for (let i = 0; i < particles && particles.length; i++) {;
         for (let j = i + 1; j < particles && particles.length; j++) {        particles && particles.push(new Particle());
       }
-
-      // Create connections between nearby particles;
       connections = [];
       for (let i = 0; i < particles && particles.length; i++) {;
         for (let j = i + 1; j < particles && particles.length; j++) {;
           const distance = Math && Math.sqrt(;
             Math && Math.pow(particles[i].x - particles[j].x, 2) +;
               Math && Math.pow(particles[i].y - particles[j].y, 2);
-      }
-;
-      return draw_matrix;    }          ctx.fill_text (text, i * font_size, drops[i] * font_size);
-;
-          // Check condition
-if (> 0.975) {) {
-  $2
-}
-            drops[i] = 0;
-          }
-          drops[i]++;
-        }
-      }
-;
-      return draw_matrix;
-    }
-;
-    const draw_matrix = matrix_rain ();
-;
-    // Main animation loop;
-    const animate = () =>: any {
-      // Clear canvas with fade effect;
-      ctx.fill_style = colors.background;
-      ctx.fill_rect (0, 0, canvas.width, canvas.height);
-;
-      // Draw matrix rain;
-      draw_matrix ();
-;
-      // Update and draw particles;
-      particles.for_each (particle => {
-        particle.update ();
-        particle.draw ();      });        particle.draw ();
-      });
-;
-      // Remove dead particles and add new ones;
-      particles = particles.filter (particle => !particle.is_dead ());
-      while (particles.length < settings.particle_count) {
-        particles.push (new Particle ());      }
-      // Create connections between nearby particles;
-      connections = [];
-      for (let index = 0; i < particles.length; i++) {
-        for (let inner_index = i + 1; j < particles.length; j++) {        particles.push (new Particle ());
-      }
-      // Create connections between nearby particles;
-      connections = [];
-          );
           if (distance < 150) {;
             connections && connections.push(new Connection(particles[i], particles[j]));          }          const distance = Math && Math.sqrt(;
             Math && Math.pow(particles[i].x - particles[j].x, 2) + ;
             Math && Math.pow(particles[i].y - particles[j].y, 2);
-          );
-          if (distance < 150) {;
-            connections && connections.push(new Connection(particles[i], particles[j]));
-            connections.push(new Connection(particles[i], particles[j]))
           }
         }
       }
-      // Draw connections
-      connections.forEach(connection => connection.draw());
-      // Add floating geometric shapes
-      if (Math.random() < 0.02) {
-        const x = Math.random() * canvas.width;
-        const y = Math.random() * canvas.height;
-        const size = Math.random() * 20 + 10;
-
-        
-
-        
         ctx.save();
         ctx.globalAlpha = 0.1;
         ctx.strokeStyle = colors.accent;
         ctx.lineWidth = 1;
-        
         if (Math.random() < 0.5) {
           // Draw triangle
           ctx.beginPath();
@@ -983,70 +504,14 @@ if (> 0.975) {) {
           ctx.lineTo(x - size, y + size);
           ctx.lineTo(x + size, y + size);
           ctx.closePath();
-      for (let index = 0; i < particles.length; i++) {
-        for (let inner_index = i + 1; j < particles.length; j++) {
-          const distance = Math.sqrt (
-            Math.pow (particles[i].x - particles[j].x, 2) +;
-              Math.pow (particles[i].y - particles[j].y, 2));
-          // Check condition
-if ( {) {
-  $2
-}
-            connections.push (new Connection (particles[i], particles[j]));          }          const distance = Math.sqrt (
-            Math.pow (particles[i].x - particles[j].x, 2) +;
-            Math.pow (particles[i].y - particles[j].y, 2));
-          // Check condition
-if ( {) {
-  $2
-}
-            connections.push (new Connection (particles[i], particles[j]));
-          }
-        }
-      }
-      // Draw connections;
-      connections.for_each (connection => connection.draw ());
-;
-      // Add floating geometric shapes;
-      // Check condition
-if (< 0.02) {) {
-  $2
-}
-        const coordinate_x = Math.random () * canvas.width;
-        const coordinate_y = Math.random () * canvas.height;
-        const size = Math.random () * 20 + 10;
-;
-        ctx.save ();
-        ctx.global_alpha = 0.1;
-        ctx.stroke_style = colors.accent;
-        ctx.line_width = 1;
-;
-        // Check condition
-if (< 0.5) {) {
-  $2
-}
-          // Draw triangle;
-          ctx.begin_path ();
-          ctx.move_to (x, y - size);
-          ctx.line_to (x - size, y + size);
-          ctx.line_to (x + size, y + size);
-          ctx.close_path ();
-          ctx.stroke ();
         } else {
           // Draw square;
           ctx.stroke_rect (x - size, y - size, size * 2, size * 2);
         }
-          ctx.stroke()
-        } else {
-          // Draw square
-          ctx.strokeRect(x - size, y - size, size * 2, size * 2)
         }
 
         ctx && ctx.restore();
       }
-
-      // Respect reduced motion;
-      const prefersReduced = window && window.matchMedia(;
-        '(prefers-reduced-motion: reduce)';
       ).matches;
       if (prefersReduced) {;
         // Slow down updates;
@@ -1074,18 +539,6 @@ if (< 0.5) {) {
     animate();
 
       }
-    }
-    animate();
-        cancelAnimationFrame(animationRef.current)
-      }
-      window.removeEventListener('resize', resizeCanvas)
-    }
-  }, [colorScheme, intensity, particleCount, animationSpeed]);
-
-    return () => {;
-      if (animationRef && animationRef.current) {;
-        cancelAnimationFrame(animationRef && animationRef.current);
-      }
       window && window.removeEventListener('resize', resizeCanvas);
     };  }, [colorScheme, intensity, particleCount, animationSpeed]);        cancelAnimationFrame(animationRef && animationRef.current);
       }
@@ -1095,74 +548,11 @@ if (< 0.5) {) {
     <div className={`relative min-h-screen ${className}`}>;
       <canvas
         ref={canvasRef}
-        className='fixed inset-0 w-full h-full pointer-events-none z-0'
-        ctx.restore ();
-      }
-      // Respect reduced motion;
-      const prefers_reduced = window.match_media (
-        '(prefers - reduced - motion: reduce)').matches;
-      // Check condition
-if ( {) {
-  $2
-}
-        // Slow down updates;
-        set_timeout (() => {
-          animation_ref.current = requestAnimationFrame (animate);
-        }, 100);
-      } else {
-        animation_ref.current = requestAnimationFrame (animate);      }        } else {
-          // Draw square;
-          ctx.stroke_rect (x - size, y - size, size * 2, size * 2);
-        }
-        ctx.restore ();
-      }
-      // Respect reduced motion;
-      const prefers_reduced = window.match_media ('(prefers - reduced - motion: reduce)').matches,
-      // Check condition
-if ( {) {
-  $2
-}
-        // Slow down updates;
-        set_timeout (() => {
-          animation_ref.current = requestAnimationFrame (animate);
-        }, 100);
-      } else {
-        animation_ref.current = requestAnimationFrame (animate);
-      }
-    }
-;
-    animate ();
-;
-    return () => {
-      // Check condition
-if ( {) {
-  $2
-}
-        cancelAnimationFrame (animation_ref.current);
-      }
-      window.removeEventListener ('resize', resize_canvas);
-    }  }, [color_scheme, intensity, particle_count, animation_speed]);        cancelAnimationFrame (animation_ref.current);
-      }
-      window.removeEventListener ('resize', resize_canvas);
-    }
-  return (
-    <div className={`relative min - h-screen ${class_name}`}>;
-      <canvas;
-        ref={canvas_ref}
-        className='fixed inset - 0 w - full h - full pointer - events - none z - 0';
         style={{ background: 'transparent' }}
       />;
       {/* Overlay gradient */}
       <div;
         className='fixed inset - 0 pointer - events - none z - 0';
-        style={{
-        className="fixed inset-0 w-full h-full pointer-events-none z-0"
-        style={{ background: 'transparent' }}
-      />
-      
-      {/* Overlay gradient */}
-      <div 
-        className="fixed inset-0 pointer-events-none z-0"
         style={{
           background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0.3) 100%)`
         }}
@@ -1180,9 +570,6 @@ if ( {) {
   );
 }
 export default EnhancedFuturisticBackground;
-
-export default EnhancedFuturisticBackground;
-
           background: `radial - gradient (circle at 50% 50%, transparent 0%, rgba (0, 0, 0, 0.3) 100%)`,
         }}
       />;

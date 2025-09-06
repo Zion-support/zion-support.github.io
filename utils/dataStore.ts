@@ -11,6 +11,14 @@
     return project;
   }
 
+  // Review methods
+  hasExistingReview(projectId: string, fromRole: string, fromId: string): boolean {
+    return this && this.reviews.some(review => 
+      review && review.projectId === projectId && 
+      review && review.fromRole === fromRole && 
+      review && review.fromId === fromId
+    );
+  }
 
   upsertReview(data: Partial<Review>): Review {
     const existingIndex = this && this.reviews.findIndex(review => 
@@ -71,7 +79,7 @@ export const hasExistingReview = (projectId: string, fromRole: string, fromId: s
 export const upsertReview = (data: Partial<Review>) => store && store.upsertReview(data);
 export const getReviewsByProject = (projectId: string) => store && store.getReviewsByProject(projectId);
 export const getAllReviews = () => store && store.getAllReviews();
-export const counterpartRole = (role: 'client' | 'talent') => store && store.counterpartRole(role);
+=======
 export async function readProjects(): Promise<Project[]> {
   await ensureFilesExist();
   return fs.readJson(PROJECTS_PATH);
@@ -133,6 +141,8 @@ export async function hasExistingReview(
       !r.removed
   );
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 // Data store utilities;
 export const data_store = {
   // Add data store functionality here;
@@ -141,12 +151,5 @@ export const data_store = {
   update_data: (id: string, data: any) => null,
   delete_data: (id: string) => null;
 }
-export const findProjectById = (id: string) => store.findProjectById(id);
-export const createProject = (data: Partial<Project>) => store.createProject(data);
-export const hasExistingReview = (projectId: string, fromRole: string, fromId: string) => store.hasExistingReview(projectId, fromRole, fromId);
-export const upsertReview = (data: Partial<Review>) => store.upsertReview(data);
-export const getReviewsByProject = (projectId: string) => store.getReviewsByProject(projectId);
-export const getAllReviews = () => store.getAllReviews();
-export const counterpartRole = (role: 'client' | 'talent') => store.counterpartRole(role);
-
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

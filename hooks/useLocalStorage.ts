@@ -1,32 +1,8 @@
-    try {;
-      const item = window && window.localStorage.getItem(key);
-      return item ? JSON && JSON.parse(item) :initialValue} catch (error) {;
-      console && console.error(`Error reading localStorage key "${key}":`, error);
-      return initialValue};
-  });
-  const setValue = (valu:e:T | ((va:l:T) => T)) => {;
-    try {;
-      const valueToStore = value instanceof Function ? value(storedValue) :value;import { useState, useEffect } from 'react';
-
-export function useLocalStorage<T>(key: string, initialValue: T) {
-  // Get from local storage then parse stored json or return initialValue
 
 interface UseLocalStorageProps {
   // Add props here as needed
 }
 
-
-};
-
-export const useLocalStorage = <T>(key: string, initialValue: T) => {
-  const [storedValue, setStoredValue] = useState<T>(() => {
-
-
-
-
-interface UseLocalStorageProps {
-  // Add props here as needed
-}
 };
 export const useLocalStorage = <T>(key: string, initialValue: T) => {
   const [storedValue, setStoredValue] = useState<T>(() => {
@@ -39,7 +15,6 @@ export const useLocalStorage = <T>(ke:y:string, initialValu:e:T) => {const [stor
   });
   const setValue = (valu:e:T | ((va:l:T) => T)) => {try {;
       const valueToStore = value instanceof Function ? value(storedValue) :value;import { useState, useEffect } from 'react';
-export function useLocalStorage<T>(key: string, initialValue: T) {
 // Get from local storage then parse stored json or return initialValue
 interface UseLocalStorageProps {
   // Add props here as needed
@@ -64,54 +39,6 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
       }
     } catch (error) {
       // eslint-disable-next-line no-console
-      console && console.error(`Error setting localStorage key "${key}":`, error);
-
-  };
-
-  return [storedValue, setValue] as const;
-}
-      console && console.error(`Error setting localStorage key "${key}":`, error)};
-};
-};
-};
-
-
-};
-
-
-
-}
-
-
-}
-
-
-
-}
-}
-
-      console.error(`Error setting localStorage key "${key}":`, error)}
-  }
-  return [storedValue, setValue] as const}
-
-;
-
-      console.error(`Error setting localStorage key "${key}":`, error)};
-  };
-  return [storedValue, setValue] as const};
-};
-};
-};
-
-};
-export default useLocalStorage;
-
-  };
-  return [storedValue, setValue] as const};
-};
-};
-};
-}
       console.error(`Error setting localStorage key "${key}":`, error)}
   }
   return [storedValue, setValue] as const}

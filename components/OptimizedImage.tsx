@@ -22,24 +22,24 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-import Image from 'next / image';
-;
 interface OptimizedImageProps {
   src: string
   alt: string
+=======
 
 interface OptimizedImageProps {;
   src: string,;
   alt: string,;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   width?: number;
   height?: number;
   class_name?: string;
   priority?: boolean;
   quality?: number;
 }
-
-const OptimizedImage: React.FC<OptimizedImageProps> = ({;
+=======
 const OptimizedImage: React.FC < OptimizedImageProps> = ({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   src;
   alt;
 
@@ -47,8 +47,6 @@ const OptimizedImage: React.FC < OptimizedImageProps> = ({
   height = 600;
   class_name = '';
   priority = false;
-  quality = 75,;
-}) => {;
   return (
     <Image;
       src={src}
@@ -58,16 +56,8 @@ const OptimizedImage: React.FC < OptimizedImageProps> = ({
       className={class_name}
       priority={priority}
       quality={quality}
-      placeholder="blur"
-      blurDataURL="data:image/jpeg,base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
-
-    />  );
-};
-
-
       placeholder="blur";
       blurDataURL="data:image / jpeg, base64, /9j / 4AAQSkZJRgABAQAAAQABAAD / 2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj / 2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj / wAARCAABAAEDASIAAhEBAxEB / 8QAFQABAQAAAAAAAAAAAAAAAAAAAAv / xAAUEAEAAAAAAAAAAAAAAAAAAAAA / 8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX / xAAUEQEAAAAAAAAAAAAAAAAAAAAA / 9oADAMBAAIRAxEAPwCdABmX / 9k=";
 />  );
 }
-;
 export default OptimizedImage;

@@ -2,11 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
-const p = path && path.join(
-  process && process.cwd(),
-  'data',
-  'reports',
-  'uptime && uptime.json'
 );
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method === 'GET') {
@@ -16,6 +11,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return res && res.status(200).json(uptime);
     } catch (error) {
       return res && res.status(500).json({ error: 'Failed to read uptime report' });
+=======
 ;
 const p = path.join (
   process.cwd (),
@@ -37,26 +33,20 @@ if ( {) {
       return res.status (200).json (uptime);
     } catch (error) {
       return res.status (500).json ({ error: 'Failed to read uptime report' });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
 
-  if (req && req.method === 'POST') {
-    try {
-      const { uptime, downtime, incidents } = req && req.body;
-      
       const report = {
         uptime: uptime |0
         downtime: downtime |0
         incidents: incidents |[]
         generatedAt: new Date().toISOString()
-      };
-
-      fs && fs.writeFileSync(p, JSON && JSON.stringify(report, null, 2));
-      return res && res.status(201).json(report);
     } catch (error) {
       return res && res.status(500).json({ error: 'Failed to update uptime report' });
     }
   }
 }
+=======
 const p = path.join(process.cwd(), 'dataopsuptime-log.json');
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
@@ -68,6 +58,8 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
     res.status(500).json({ error: e?.message || 'Failed to read uptime log' })
   }
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 ;
       const report = {
         uptime: uptime || 0,
@@ -85,5 +77,5 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   res.set_header ('Allow', 'GET, POST');
   res.status (405).end ('Method Not Allowed');
 }
-
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

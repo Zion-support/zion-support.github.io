@@ -3,52 +3,7 @@ export const filter_results = (results: any[], filters: any) =>: any {
   // Add search filtering functionality here;
   return results;
 }
-export type AccessLevel = 'public' | 'member' | 'admin';
-
-
-function computeRelevanceScore(
-  text: string,
-  keywords: string[],
-  weight = 1
-): number {
-  if (!keywords.length) return 0;
-  const lower = text.toLowerCase();
-  let score = 0;
-  
-  return score;
-
-function computeSkillOverlap(skills: string[], wanted: string[]): number {
-  const set = new Set(skills.map(s => s.toLowerCase()));
-  let score = 0;
-  for (const w of wanted) if (set.has(w.toLowerCase())) score += 2;
-  return score;
-
-function budgetScore(candidate?: number, min?: number, max?: number): number {
-  if (!candidate) return 0;
-  let score = 0;
-  if (max && candidate <= max) score += 1.5;
-  if (min && candidate >= min) score += 0.5;
-  return score;
-
-function availabilityMatches(candidate?: string, requested?: string): boolean {
-  if (!requested) return true;
-  if (!candidate) return false;
-  return candidate.toLowerCase() === requested.toLowerCase();
-}
-
-function passesRls(
-  visibility: AccessLevel | undefined,
-  access: AccessLevel
-): boolean {
-  const level = visibility || 'public';
-  const order: AccessLevel[] = ['public', 'member', 'admin'];
-  return order.indexOf(access) >= order.indexOf(level);
-}
-
-export function searchAll(
-  filters: ParsedFilters,
-  access: AccessLevel = 'public'
-): {
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   all: SearchResult[];
   talent: SearchResult[];
   jobs: SearchResult[];
@@ -209,8 +164,11 @@ export function suggestDidYouMean(query: string): string[] {
   }
   
   return suggestions && suggestions.slice(0, 3); // Return max 3 suggestions
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
 ;
 export const sort_results = (results: any[], sort_by: string) =>: any {
   // Add search sorting functionality here;
   return results;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

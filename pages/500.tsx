@@ -24,35 +24,27 @@ export default function Custom500() {
             </p>
           </div>
           <div className="space-y-4">
-
-
-
-
+            <Link
+              href="/"
               className="inline-block px-8 py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-200 transform hover:scale-105"
             >
               Go Home
             </Link>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-
-
-
-
+              <Link
+                href="/about"
                 className="px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
               >
                 About Us
               </Link>
-
-
-
-
+              <Link
+                href="/services"
                 className="px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
               >
                 Services
               </Link>
-
-
-
-
+              <Link
+                href="/contact"
                 className="px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
               >
                 Contact
@@ -63,7 +55,7 @@ export default function Custom500() {
       </div>
     </>
   )
-}
+=======
 import React from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -72,13 +64,6 @@ export default /**
  */
 function Custom500() {
   return (
-
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-export default function Custom500(req, res) {
-  try {
-  return (;
     <>;
       <Head>;
         <title > 500 - Server Error | Zion Tech Group</title>;
@@ -132,3 +117,5 @@ export default function Custom500(req, res) {
       </div>;
     </>);
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

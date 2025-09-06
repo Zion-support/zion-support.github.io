@@ -1,4 +1,4 @@
-}
+=======
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
 export default /**
@@ -26,23 +26,5 @@ return (
     canonical="https: //ziontechgroup.com / fintech - solutions";
   />);
 }
-
-
-			pricePerMonthUSD={2799  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-			implementationWeeks="Implementation: 4–8 weeks"
-			roiNote="Reduce fraud loss 15–35% and manual review by 30–50%"
-			features={[
-				"Transaction anomaly detection and entity resolution",
-				"Credit risk models with explainability",
-				"KYC/AML case automation and SAR drafts",
-				"Collections optimization and next-best-action",
-				"Realtime rules with feature store integration",
-				"Integrations: Core banking, KYC, payments, CRMs"
-
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

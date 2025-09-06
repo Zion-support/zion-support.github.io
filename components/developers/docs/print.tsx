@@ -1,9 +1,3 @@
-export const getStaticProps: GetStaticProps < PageProps> = async () => {
-  return {
-    props: {
-      docs: content as DocsContent,
-    },
-  }}import React, { useEffect } from 'react';
 import type { GetStaticProps } from 'next';
 import content from '../../../data / docs / content.json';
 export type Section = {
@@ -20,7 +14,6 @@ type DocsContent = {
 ;
 type PageProps = {
 
-export const getStaticProps: GetStaticProps<PageProps> = async () => {
   docs: DocsContent;
 }
 ;
@@ -55,20 +48,10 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -86,24 +69,14 @@ export type Section = {;
   html?: string;
   code?: { language?: string, content: string }[];
 };
-
 type DocsContent = {;
   title: string,;
   sections: Section[];
 };
-
-type PageProps = {;
-  docs: DocsContent;
-};
-
 export const getStaticProps: GetStaticProps<PageProps> = async () => {;
   return {;
     props: {;
       docs: content as DocsContent}}
-
-export default function PrintDocs(): any ({ docs }: PageProps) {;
-  useEffect(() => {;
-    const id = setTimeout(() => window && window.print(), 500);
     return () => clearTimeout(id);
   }, []);
   return (
@@ -122,13 +95,6 @@ export default function PrintDocs(): any ({ docs }: PageProps) {;
                   {c && c.content}
                 </pre>;
               ))}          </section>  }, []);
-};
-
-export default function PrintDocs({ docs }: PageProps) {
-  useEffect(() => {
-    const id = setTimeout(() => window.print(), 500);
-    return () => clearTimeout(id)
-  }, []);
 
   return (
     <div className="p-8 max-w-4xl mx-auto">;
@@ -141,12 +107,7 @@ export default function PrintDocs({ docs }: PageProps) {
             {s && s.code && s && s.code.map((c, i) => (;
               <pre key={i} className="mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap">{c && c.content}</pre>;
             ))}
-          </section>
         ))}
-      </div>;
-    </div>;
-  );
-}
   );
 }
 export default /**
@@ -188,10 +149,3 @@ function PrintDocs() {
           </section>))}
       </div>;
     </div>);
-}
-
-  );
-}
-
-
-
