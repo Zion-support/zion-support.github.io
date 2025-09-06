@@ -90,11 +90,27 @@ const Pricing: React.FC = () => {
   ];
 
   const servicePricing = [
+    { name: 'AI Services', starting: '$5,000', monthly: '$2,000' },
+    { name: 'Cybersecurity', starting: '$3,000', monthly: '$1,500' },
+    { name: 'Cloud Migration', starting: '$10,000', monthly: '$3,000' },
+    { name: 'DevOps & SRE', starting: '$8,000', monthly: '$2,500' },
+    { name: 'Mobile Development', starting: '$15,000', monthly: '$5,000' },
+    { name: 'Data Analytics', starting: '$7,000', monthly: '$2,000' },
+    { name: 'Blockchain', starting: '$20,000', monthly: '$8,000' },
+    { name: 'IT Support', starting: '$2,000', monthly: '$1,000' }
+  ];
+
+  const monthlySupport = [
     {
-      service: "Micro SaaS Development",
-      starting: "$5,000",
-      monthly: "$2,500",
-      description: "End-to-end product development with billing, auth, and analytics"
+      name: 'Basic Support',
+      hours: '10 hours',
+      price: '$500',
+      features: [
+        'Email Support',
+        'Basic Troubleshooting',
+        'System Monitoring',
+        'Monthly Reports'
+      ]
     },
   ];
 
@@ -133,7 +149,6 @@ const Pricing: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
 
       {/* Pricing Cards */}
       <div className="py-20">
@@ -198,7 +213,6 @@ const Pricing: React.FC = () => {
             ))}
           </div>
         </div>
-      </div>
 
       {/* FAQ Section */}
       <div className="py-20 bg-white">

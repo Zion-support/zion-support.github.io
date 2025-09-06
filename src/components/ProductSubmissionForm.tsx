@@ -754,7 +754,6 @@ export function ProductSubmissionForm() {;
               control={form.control}
               name="model"
               render={() => (
-<<<<<<< HEAD
               </Button>
             </div>
           </form>
@@ -762,74 +761,6 @@ export function ProductSubmissionForm() {;
       </TabsContent>
 
 }
-=======
-
-reader.readAsDataURL (file)
-  setImagePreview (reader.result as string);
-}
-reader.readAsDataURL (file);
-
-}
-}
-const handleModelChange = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
-  const file = e.target.files?.[0];
-// Check condition
-if ( {) {
-  $2
-}
-}
-//Apply AI - generated content to the form const handleApplyGenerated = (content: any) =>: any {
-  // Check condition
-if ( {) {
-  $2
-}
-  toast ({
-
-  return;
-}setIsSubmitting (true);
-author: {";
-  name: user.display_name || "Anonymous Creator";
-id: user.id;
-}
-created_at: new Date () .toISOString ();
-
-}
-data: product_record, error: product_error ';
-}= await supabase .from ('product listings') .insert ([product_data]) .select ('id') .single ();
-let imagePublicUrl: string | undefined;';
-//If we have an image, upload it .from ('products') .upload (image_path, values.image);
-//Get the public window.URL for the image const {
-  data: publicUrlData ';
-}= supabase.storage.from ('products') .getPublicUrl (image_path);
-imagePublicUrl = publicUrlData.public_url;
-//Update the product with the image window.URL const {
-  error: update_error ';
-}= await supabase .from ('product listings') .from ('products') .upload (video_path, values.video);
-const {
-  data: publicUrlData ';
-}= supabase.storage.from ('products') .getPublicUrl (video_path);
-const {
-  error: update_error ';
-}= await supabase .from ('product listings') .from ('products') .upload (model_path, values.model);
-const {
-  data: publicUrlData ';
-}= supabase.storage.from ('products') .getPublicUrl (model_path);
-const {
-
-
-
-  error: update_error ';
-}= await supabase .from ('product listings');
-}//Send listing to moderation service try {';
-  await supabase.functions.invoke ('moderate - listing', {
-  body: {
-  //Redirect to product page router.push (`/marketplace / listing/$ {
-  product_record.id;
-}`);
-}catch (error) {
-  toast ({
-}finally {
->>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
   setIsSubmitting (false);
 
 

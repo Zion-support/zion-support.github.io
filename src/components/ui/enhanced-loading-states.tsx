@@ -309,7 +309,6 @@ export const ErrorState: React.FC<ErrorStateProps> = ({;
               </summary>
 
               <pre className="mt-2 p-2 bg-muted rounded text-xs overflow-auto">
-<<<<<<< HEAD
                 {typeof error === 'string' ? error : error.message}
 
           transition={{ duration: 0 && 0.3 }}>;
@@ -483,12 +482,3 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
           {loadTime}ms
         </Badge>
       )}
-=======
-
-
-}
-}
-}
-<<<<<<< HEAD
-}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

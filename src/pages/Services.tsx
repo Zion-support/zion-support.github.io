@@ -1,4 +1,153 @@
 import React from 'react';
+=======
+import { Link } from 'react-router-dom';
+import { 
+  Brain, 
+  Shield, 
+  Cloud, 
+  Smartphone, 
+  Database, 
+  Lock, 
+  Server, 
+  Code,
+  Zap,
+  BarChart3,
+  Globe,
+  Cpu
+} from 'lucide-react';
+
+const Services = () => {
+  const services = [
+    {
+      name: 'AI Services',
+      description: 'Transform your business with cutting-edge artificial intelligence solutions.',
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500',
+      features: [
+        'Machine Learning Models',
+        'Natural Language Processing',
+        'Computer Vision',
+        'Predictive Analytics',
+        'AI Strategy Consulting',
+        'Custom AI Solutions'
+      ],
+      price: '$5,000 - $50,000',
+      href: '/services/ai'
+    },
+    {
+      name: 'Cybersecurity',
+      description: 'Protect your digital assets with comprehensive security solutions.',
+      icon: Shield,
+      color: 'from-red-500 to-orange-500',
+      features: [
+        'Security Audits',
+        'Threat Detection',
+        'Compliance Management',
+        'Penetration Testing',
+        'Security Training',
+        'Incident Response'
+      ],
+      price: '$3,000 - $30,000',
+      href: '/services/cybersecurity'
+    },
+    {
+      name: 'Cloud Migration',
+      description: 'Seamlessly migrate to the cloud with our expert guidance.',
+      icon: Cloud,
+      color: 'from-blue-500 to-cyan-500',
+      features: [
+        'AWS Migration',
+        'Azure Migration',
+        'GCP Migration',
+        'Hybrid Cloud Solutions',
+        'Cost Optimization',
+        'Security Implementation'
+      ],
+      price: '$10,000 - $100,000',
+      href: '/services/cloud-migration'
+    },
+    {
+      name: 'DevOps & SRE',
+      description: 'Streamline your development and operations with modern DevOps practices.',
+      icon: Server,
+      color: 'from-green-500 to-teal-500',
+      features: [
+        'CI/CD Pipeline Setup',
+        'Infrastructure as Code',
+        'Monitoring & Alerting',
+        'Container Orchestration',
+        'Site Reliability Engineering',
+        'Performance Optimization'
+      ],
+      price: '$8,000 - $80,000',
+      href: '/services/devops'
+    },
+    {
+      name: 'Mobile Development',
+      description: 'Create powerful mobile applications for iOS and Android platforms.',
+      icon: Smartphone,
+      color: 'from-indigo-500 to-purple-500',
+      features: [
+        'Native iOS Apps',
+        'Native Android Apps',
+        'Cross-Platform Solutions',
+        'UI/UX Design',
+        'App Store Optimization',
+        'Maintenance & Support'
+      ],
+      price: '$15,000 - $150,000',
+      href: '/services/mobile-development'
+    },
+    {
+      name: 'Data Analytics',
+      description: 'Unlock insights from your data with advanced analytics solutions.',
+      icon: BarChart3,
+      color: 'from-yellow-500 to-orange-500',
+      features: [
+        'Business Intelligence',
+        'Data Warehousing',
+        'Real-time Analytics',
+        'Machine Learning Models',
+        'Data Visualization',
+        'Predictive Modeling'
+      ],
+      price: '$7,000 - $70,000',
+      href: '/services/data-analytics'
+    },
+    {
+      name: 'Blockchain',
+      description: 'Leverage blockchain technology for secure and transparent solutions.',
+      icon: Lock,
+      color: 'from-gray-600 to-gray-800',
+      features: [
+        'Smart Contracts',
+        'DeFi Applications',
+        'NFT Platforms',
+        'Supply Chain Solutions',
+        'Digital Identity',
+        'Tokenization'
+      ],
+      price: '$20,000 - $200,000',
+      href: '/services/blockchain'
+    },
+    {
+      name: 'IT Support',
+      description: 'Comprehensive IT support and maintenance services.',
+      icon: Cpu,
+      color: 'from-emerald-500 to-green-500',
+      features: [
+        '24/7 Technical Support',
+        'System Maintenance',
+        'Network Management',
+        'Hardware Support',
+        'Software Updates',
+        'Troubleshooting'
+      ],
+      price: '$2,000 - $20,000',
+      href: '/services/it-support'
+    }
+  ];
+>>>>>>> origin/main
 
 const ServicesPage: React.FC = () => {
   return (
@@ -113,16 +262,17 @@ const ServicesPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-2xl"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
             >
               Get Free Consultation
             </Link>
             <Link
               to="/pricing"
-              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold text-lg"
+              className="border border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
             >
               View Pricing
             </Link>
+<<<<<<< HEAD
           </div>
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         </div>

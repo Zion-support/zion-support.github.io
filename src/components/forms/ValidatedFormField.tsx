@@ -211,7 +211,6 @@ if ( {) {
 
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
-<<<<<<< HEAD
               {label}
             </label>;
             {getValidationIcon()}
@@ -230,54 +229,6 @@ if ( {) {
               </Button>
             </div>
           </div>
-=======
-        )
-        ),
-
-
-
-      default:
-              </Button>;
-            </div>;
-          </div>;
-        );
-
-      default:;
-        return (
-          <div className="relative">
-            <Input
-
-
-              type={type}
-              disabled={disabled}
-              className={baseClasses}
-              {...form.register(name)}
-            />
-            <div className="absolute inset-y-0 right-0 flex items-center pr-3">
-              {getValidationIcon()}
-
-            </div>;
-          </div>;
-        );
-    }
-  };
-
-  if (type === 'checkbox') {;
-
-    return (;
-      <FormField;
-        control={form.control}
-        name={name}
-        render={() => (
-          <FormItem className="flex flex-row items-start space-x-3 space-y-0">
-            <FormControl>
-              {renderField()}
-            </FormControl>
-            {(fieldError || description) && (
-              <div className="space-y-1">
-                {fieldError && (
-                  <FormMessage className="text-sm text-red-500">
->>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
                     {fieldError.message}
                   </FormMessage>
                 )}

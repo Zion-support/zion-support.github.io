@@ -139,7 +139,6 @@ if (return blurDataURL) {
           onLoad={handleLoad}
           onError={handleError}
 
-<<<<<<< HEAD
             isLoading ? 'opacity-0' : 'opacity-100'
           ),}
 
@@ -157,6 +156,3 @@ if (return blurDataURL) {
       )}
       {/* Lazy loading placeholder */}
       {!isInView && lazy && !priority && (
-=======
-}
->>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

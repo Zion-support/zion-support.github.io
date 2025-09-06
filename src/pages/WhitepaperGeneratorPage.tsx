@@ -1157,7 +1157,6 @@ import { Send } from 'lucide-react', // Added Send icon
               )}
             </div>
           )}
-<<<<<<< HEAD
 
           {/* Submit to Counsel Button */}
           {sections.length > 0 && (
@@ -1268,47 +1267,6 @@ import { Send } from 'lucide-react', // Added Send icon
                 key={section.id}
                 title={section.title}
                 content={section.content}
-=======
-                onContentChange={newContent =>
-                  handleSectionContentChange(section.id, newContent)
-                }              />
-                onContentChange={(newContent) => handleSectionContentChange(section.id, newContent)}
-              />;
-
-            ))}
-          </div>
-        )}
-        {rawDraft && (
-          <div className='mt-6 p-3 border rounded-md'>
-            <Button
-              onClick={() => setShowRawDraft(!showRawDraft)}
-              variant='outline'
-              size='sm'
-              className='w-full'
-            >
-              {showRawDraft ? 'Hide' : 'Show'} Raw Generated Text            </Button>
-            {showRawDraft && (
-              <pre className='mt-2 p-2 bg-gray-50 text-xs whitespace-pre-wrap break-all max-h-60 overflow-y-auto rounded'>
-                {rawDraft}
-              </pre>
-            )}
-          </div>
-            <div className="mt-6 p-3 border rounded-md">
-            <Button onClick={() => setShowRawDraft(!showRawDraft)} variant="outline" size="sm" className="w-full">
-                {showRawDraft ? 'Hide' : 'Show'} Raw Generated Text
-            </Button>
-            {showRawDraft && (
-                <pre className="mt-2 p-2 bg-gray-50 text-xs whitespace-pre-wrap break-all max-h-60 overflow-y-auto rounded">
-                {rawDraft}
-                </pre>;
-            )}
-            </div>;
-
-        )}
-      </div>
-      {/* Right Column: Preview Panel - Pass ref here */}
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 '";
 ;

@@ -330,7 +330,6 @@ function DetailsStep() {;
 function RequirementsStep() {
   const [skills, setSkills] = useState<string[]>([
     "React", "TypeScript", "Node.js"
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   const removeSkill = (skill: string) => {
@@ -467,40 +466,6 @@ function PreviewStep() {
         <CardContent className="p-4">
           <h3 className="font-bold text-lg">Senior React Developer</h3>
           <p className="text-muted-foreground">TechCorp Inc. • Remote • Full-time</p>
-=======
-          
-
-
-          <div className="flex gap-2 my-3">
-            <Badge variant="outline">React</Badge>
-            <Badge variant="outline">TypeScript</Badge>
-            <Badge variant="outline">Node.js</Badge>
-          </div>
-          
-
-
-          <div className="space-y-1 text-sm mt-4">
-            <p className="font-medium">Salary Range:</p>
-            <p>$80,000 - $120,000 USD / year</p>
-          </div>
-          
-
-
-          <div className="space-y-1 text-sm mt-3">
-            <p className="font-medium">Experience Level:</p>
-            <p>Senior</p>
-          </div>
-          
-
-
-          <div className="space-y-1 text-sm mt-3">
-            <p className="font-medium">Application Deadline:</p>
-            <p>December 15, 2023</p>
-          </div>
-          
-
-
->>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
           <div className="mt-4 pt-3 border-t border-border">
             <h4 className="font-medium mb-2">Description</h4>
             <p className="text-sm">We are looking for a skilled React developer to help us build out our new customer-facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p>

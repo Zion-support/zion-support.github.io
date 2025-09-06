@@ -112,7 +112,6 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
             </p>
           </div>
 
-<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -155,15 +154,6 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
 
           {/* Quick Setup Steps */}
 
-=======
-
-
-          <div className="border-t pt-6">
-            <h3 className="font-semibold text-gray-900 mb-3">Quick Setup Steps:</h3>
-            <ol className="space-y-3 text-sm">
-              <li className="flex items-start gap-3">
-                <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">1</span>
->>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
                 <div>
                   <strong>Create Auth0 Account:</strong>
                   <br />

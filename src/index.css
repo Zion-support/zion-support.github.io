@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 /* index.css - Global styles */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 >>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
+=======
+>>>>>>> origin/main
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

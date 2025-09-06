@@ -38,7 +38,6 @@ import {
   DialogHeader,
   DialogTitle,
 
-<<<<<<< HEAD
   DialogTrigger} from "@/components/ui/dialog",
 import { Textarea } from "@/components/ui/textarea",
 interface ReviewCardProps {
@@ -82,53 +81,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
               ) : (
                 <AvatarFallback>
 
-=======
-    <div className='border rounded - lg p - 4 bg - card'>;
-      <div className='flex justify - between items - start mb - 3'>;
-        <div className='flex items - center gap - 3'>;
-          {review.is_anonymous ? (
-
-  }
-      </div>;
-    );
-  },;
-
-  const getInitials = (name: string,) => {;
-    return name;
-      .split(" ");
-      .map((n,) => n[0]);
-      .join("");
-      .toUpperCase();
-      .substring(0, 2);
-  };
-
-  return (
-
-
-              )}
-            </Avatar>;
-          )}
-
-    <div className="border rounded-lg p-4 bg-card">
-      <div className="flex justify-between items-start mb-3">
-        <div className="flex items-center gap-3">
-    <div className="border rounded - lg p - 4 bg - card">;
-      <div className="flex justify - between items - start mb - 3">;
-        <div className="flex items - center gap - 3">;
-
-          {review.is_anonymous ? (
-            <Avatar>;
-              <AvatarFallback className="bg - muted">;
-                <User className="h - 4 w - 4" />;
-              </AvatarFallback>;
-            </Avatar>) : (
-            <Avatar>;
-              {review.reviewer_profile?.avatar_url ? (
-
-                <AvatarImage src={review && review.reviewer_profile.avatar_url} alt={review && review.reviewer_profile.display_name} />;
-              ) : (;
-                <AvatarFallback>;
->>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
                   {review && review.reviewer_profile?.display_name ? ;
                     getInitials(review && review.reviewer_profile.display_name) : "??"}
 

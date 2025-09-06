@@ -391,7 +391,6 @@ export function WebhooksManager() {;
   },
 
   const resetWebhookForm = () => {
-<<<<<<< HEAD
   }
   // Event type options
   const eventOptions: {
@@ -554,28 +553,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                         >
                           {event.label}
-=======
-                          <span className='block text-xs text-zinc-400 mt-1'>
-                            {event.description}
-                          </span>                        </Label>                          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                        >
-                          {event.label}
-                          <span className="block text-xs text-zinc-400 mt-1">{event.description}</span>
-                          <span className="block text-xs text-zinc-400 mt-1">{event.description}</span>
-                        </Label>
-
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-                </Button>
-              </DialogFooter>
-            </DialogContent>
-          </Dialog>
-        </div>
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
