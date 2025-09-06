@@ -3,8 +3,6 @@ import ServiceCard from '../components/ServiceCard';
 import Card from '../components/Card';
 import { Link } from 'react-router-dom';
 
-
-import { Link } from 'react-router-dom';
 const Services: React.FC = () => {
   const services = [
     {
@@ -50,6 +48,7 @@ const Services: React.FC = () => {
       color: "from-indigo-500 to-purple-600"
     }
   ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
@@ -60,157 +59,49 @@ const Services: React.FC = () => {
             Comprehensive technology solutions designed to accelerate your digital transformation and drive business growth.
           </p>
         </div>
-const Services: React.FC = () => {
-  return (
-    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-extrabold mb-6 animate-fade-in">
-            Our Services
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-slide-up">
-            Comprehensive technology solutions designed to transform your business 
-            and drive innovation across all sectors.
+      </div>
+
+      {/* Services Grid */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <ServiceCard
+              key={index}
+              title={service.title}
+              description={service.description}
+              features={service.features}
+              icon={service.icon}
+              color={service.color}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="bg-gray-900 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let's discuss how our services can help transform your business.
           </p>
-        </div>
-
-
-        {/* Service Categories */}
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold text-center mb-12">Service Categories</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
-                <div className={`h-2 bg-gradient-to-r ${service.color} rounded-t-2xl`}></div>
-                <div className="p-8">
-                  <div className="text-4xl mb-4">{service.icon}</div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-700">
-                        <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    to="/contact"
-                    className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${service.color} text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}
-                  >
-                    Learn More
-                    <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Industry Solutions */}
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-12">Industry Solutions</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-blue-600">1</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Discovery</h3>
-              <p className="text-gray-600">We analyze your business needs and challenges to understand your goals.</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-purple-600">2</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Strategy</h3>
-              <p className="text-gray-600">We develop a comprehensive strategy tailored to your specific requirements.</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-green-600">3</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Development</h3>
-              <p className="text-gray-600">Our expert team builds and implements your solution with precision.</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-orange-600">4</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Support</h3>
-              <p className="text-gray-600">We provide ongoing support and optimization to ensure your success.</p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🎓</span>
-              </div>
-              <h3 className="text-lg font-semibold">Education</h3>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🏛️</span>
-              </div>
-              <h3 className="text-lg font-semibold">Government</h3>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-            <p className="text-xl text-blue-100 mb-8">Let's discuss how our services can help transform your business.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
-                className="bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-2xl"
-              >
-                Get Free Consultation
-              </Link>
-              <Link 
-                to="/pricing" 
-                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold text-lg"
-              >
-                View Pricing
-              </Link>
-            </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
+            >
+              Get a Quote
+            </Link>
+            <Link
+              to="/pricing"
+              className="border border-gray-300 hover:border-gray-400 text-gray-300 hover:text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
+            >
+              View Pricing
+            </Link>
           </div>
         </div>
       </div>
     </div>
-const Services: React.FC = () => {;
-  return (
-    <div className="min-h-screen bg-gray-50">;
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">Our Services</h1>;
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-          <div className="bg-white p-6 rounded-lg shadow">;
-            <h3 className="text-xl font-semibold mb-4">AI Services</h3>;
-            <p className="text-gray-600">Cutting-edge AI solutions for your business.</p>;
-          </div>;
-          <div className="bg-white p-6 rounded-lg shadow">;
-            <h3 className="text-xl font-semibold mb-4">IT Services</h3>;
-            <p className="text-gray-600">Comprehensive IT solutions and support.</p>;
-          </div>;
-          <div className="bg-white p-6 rounded-lg shadow">;
-            <h3 className="text-xl font-semibold mb-4">Cloud Solutions</h3>;
-            <p className="text-gray-600">Scalable cloud infrastructure and services.</p>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
-
 };
-;
-export default Services;
 
+export default Services;
