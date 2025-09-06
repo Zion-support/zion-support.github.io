@@ -1,14 +1,9 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export function middleware(request: NextRequest) {
-=======
 export function middleware(_request: NextRequest) {
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+
   return NextResponse.next();
-=======
 export function middleware(_request: NextRequest) {
   const response = NextResponse.next();
 
@@ -35,7 +30,7 @@ export function middleware(_request: NextRequest) {
   response.headers.set('Content-Security-Policy', csp);
 
   return response;
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
 
 export const config = {

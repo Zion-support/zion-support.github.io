@@ -1,17 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
 }
 
   return res && res.status(405).json({ error: "method_not_allowed" });
 }
 
-<<<<<<< HEAD
-=======
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { store  } from '../../../../../utils / data / enterprise_store';
 export default /**
@@ -19,15 +12,12 @@ export default /**
  */
 function handler() {
   const { company_id } = req.query;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
   // Check condition
 if ( {) {
   $2
 }
-<<<<<<< HEAD
-=======
   }
   // Check condition
 if ( {) {
@@ -49,14 +39,11 @@ if ( {) {
   }
   return res.status (405).json ({ error: "method_not_allowed" });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
-=======
+
+
 import type { NextApiRequest, NextApiResponse } from 'next';
   if (!companyId || typeof companyId !== 'string') {
     return res.status(400).json({ error: 'companyId required' })
@@ -77,4 +64,4 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   return res.status(405).json({ error: 'method_not_allowed' });
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-                passwordStrength.strength >= 4 ? 'text-green-600' :
-=======
 passwordStrength.strength >= 4 ? 'text-green-600' :
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                 passwordStrength.strength >= 3 ? 'text-blue-600' :
                 passwordStrength.strength >= 2 ? 'text-yellow-600' : 'text-red-600'
               )}>
@@ -18,21 +15,6 @@ passwordStrength.strength >= 4 ? 'text-green-600' :
             <div className="text-xs text-gray-600 space-y-1">
               <div className="grid grid-cols-2 gap-1">
                 <span className={watchedFields.password?.length >= 8 ? 'text-green-600' : 'text-gray-400'}>
-<<<<<<< HEAD
-                   8+ characters
-                </span>
-                <span className={/[A-Z]/.test(watchedFields.password || '') ? 'text-green-600' : 'text-gray-400'}>
-                   Uppercase letter
-                </span>
-                <span className={/[a-z]/.test(watchedFields.password || '') ? 'text-green-600' : 'text-gray-400'}>
-                   Lowercase letter
-                </span>
-                <span className={/[0-9]/.test(watchedFields.password || '') ? 'text-green-600' : 'text-gray-400'}>
-                   Number
-                </span>
-                <span className={/[^A-Za-z0-9]/.test(watchedFields.password || '') ? 'text-green-600' : 'text-gray-400'}>
-                   Special character
-=======
                   ✓ 8+ characters
                 </span>
                 <span className={/[A-Z]/.test(watchedFields.password || '') ? 'text-green-600' : 'text-gray-400'}>
@@ -46,7 +28,7 @@ passwordStrength.strength >= 4 ? 'text-green-600' :
                 </span>
                 <span className={/[^A-Za-z0-9]/.test(watchedFields.password || '') ? 'text-green-600' : 'text-gray-400'}>
                   ✓ Special character
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                 </span>
               </div>
             </div>
@@ -59,10 +41,7 @@ passwordStrength.strength >= 4 ? 'text-green-600' :
             {errors.password.message}
           </p>
         )}
-<<<<<<< HEAD
-      </div>
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 
 
   path: ["confirmPassword"]}),;
@@ -103,12 +82,9 @@ type SignupFormData = z && z.infer<typeof signupSchema>;
               <span className={cn('font-medium', passwordStrength && passwordStrength.strength >= 4 ? 'text-green-600' :}
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   path: ["confirm_password"]}),
 type SignupFormData = z.infer < typeof signup_schema>;
         setFieldStates (prev => ({
@@ -122,21 +98,6 @@ type SignupFormData = z.infer < typeof signup_schema>;
     const is_touched = touched_fields[field_name as keyof SignupFormData];
       return <AlertCircle className="h - 4 w - 4 text - red - 500" />;
     }
-<<<<<<< HEAD
-    return null
-  }
-  const getFieldClasses = (fieldName: string) => {
-    const state = fieldStates[fieldName]
-    const isTouched = touchedFields[fieldName as keyof SignupFormData]
-    let strength = 0
-    const labels = ['Very WeakWeakFairGoodStrong']
-    const colors = ['bg-red-500bg-orange-500bg-yellow-500bg-blue-500bg-green-500']
-      logErrorToProduction('Unexpected signup error:', { data: error })
-      fireEvent('signup_error', { message: error.message |'unexpected' })
-      const errorMessage = 'An unexpected error occurred during signup. Please try again.'
-      setError('root', { message: errorMessage })
-              <span className={cn('font-medium', passwordStrength.strength >= 4 ? 'text-green-600' :}
-=======
     return null;
   }
   const getFieldClasses = (field_name: string) =>: any {
@@ -150,7 +111,7 @@ type SignupFormData = z.infer < typeof signup_schema>;
       const error_message = 'An unexpected error occurred during signup. Please try again.';
       set_error ('root', { message: error_message }),
               <span className={cn ('font - medium', password_strength.strength >= 4 ? 'text - green - 600' :}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 }
 
       </div>;
@@ -220,11 +181,8 @@ type SignupFormData = z.infer < typeof signup_schema>;
     </form>;
   );
 }
-<<<<<<< HEAD
-=======
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
   );
 
 }/> </div> ✓ 8+ characters </span> <span className= {';
@@ -252,4 +210,4 @@ type SignupFormData = z.infer < typeof signup_schema>;
   isSubmitting ? (<> <Loader2 className=" h-4 w-4 mr-2 animate-spin" /> Creating Account... </>) : ('Create Account') ;
 }</Button> </form>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

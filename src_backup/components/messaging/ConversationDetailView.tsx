@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    src = {activeConversation && activeConversation.context_data.image_url,}
-                    alt = {activeConversation && activeConversation.context_data.title || "Context",}
-
-  const { user } = useAuth()
-  const {
-    activeConversation
-    activeMessages
-    sendMessage
-
-=======
 import React, { useState, useEffect, useRef } from 'react';
 import { format  } from 'date-fns';
 import { MessageSquare } from 'lucide-react'
@@ -26,7 +14,7 @@ export function ConversationDetailView() {
     activeConversation;
     activeMessages;
     sendMessage;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     loadMessages
   } = useMessaging();
   const [messageText, setMessageText] = useState('');
@@ -118,7 +106,6 @@ export function ConversationDetailView() {
             ref={inputRef}
           />
           <Button 
-=======
 import React, { useState, useEffect, useRef } from 'react';
 import { format } from 'date-fns';
 import { MessageSquare } from 'lucide-react';
@@ -253,43 +240,16 @@ export function ConversationDetailView() {
             disabled={isSending}
           />
           <Button
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
             type="submit"
             disabled={!newMessage.trim() || isSending}
           >
             {isSending ? 'Sending...' : 'Send'}
           </Button>
         </form>
-<<<<<<< HEAD
-      <div className="p-3 border-t border-zion-purple/20">;
-        <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
-          <textarea;
-            value={messageText}
-            onChange={(e) => setMessageText(e.target.value)}
-            onKeyDown={handleKeyDown}
-            placeholder="Type a message...";
-            className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus:outline-none focus:ring-2 focus:ring-zion-cyan";
-            ref={inputRef}
-          />;
-          <Button;
-            type="submit";
-            className="bg-zion-purple hover: bg-zion-purple-dark text-white";
-          >;
-
-            Send;
-          </Button>;
-        </form>;
-      </div>;
-}
-;
-=======
       </div>
     </div>
   );
-<<<<<<< HEAD
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
 });
 <AvatarImage src= {;
@@ -319,4 +279,4 @@ export function ConversationDetailView() {
   messagesEndRef ;
 }/> </div> /> <Button > Send </Button> </form> </div> </div>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

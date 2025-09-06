@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 import { ServiceVariant } from '../types / service - variants';
 
@@ -9,7 +5,6 @@ export interface Innovative2026AIService {
 
   {
 
-=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -23,53 +18,10 @@ export interface Innovative2026AIService {
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  contactInfo: {
-<<<<<<< HEAD
-      
-    mobile: string, email: string,
-    address: string,
-    website: string
-  
-    },
-    realImplementation: boolean, implementationDetails: string,
-  launchDate: string, customers: number,
-  rating: number,
-  reviews: number
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-}
-      'Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.'
-    launchDate: '2025-06-20'
-    customers: 1900
-    rating: 4.8
-    reviews: 950
-      'Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.',
-    launchDate: '2025-06-20',
-    customers: 1900,
-    rating: 4.8,
-    reviews: 950,;
-  },];
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails: 'Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.';
-    launchDate: '2025-06-20';
-    customers: 1900;
-    rating: 4.8
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
-    reviews: 950
-  }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  contactInfo: {
+
 }
 
 export const innovative2026AIServices: Innovative2026AIService[] = [
@@ -79,7 +31,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     id: 'ai-business-intelligence-suite', name: 'AI Business Intelligence Suite',
     tagline: 'Transform data into actionable insights with AI', price: '$299',
     period: '/month',
-=======
     mobile: string;
     email: string;
     address: string;
@@ -95,53 +46,17 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     tagline: 'Transform data into actionable insights with AI';
     price: '$299';
     period: '/month';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     description: 'Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, predicts outcomes, and provides actionable recommendations in real-time.',
     features: [
       'AI-powered data analysis and visualizationPredictive analytics and forecastingNatural language query interfaceAutomated report generationReal-time dashboard updatesCustom KPI tracking and alertsData integration from 100+ sourcesAdvanced machine learning models';
       'Collaborative workspace for teamsMobile app for on-the-go insights'
     ];
-<<<<<<< HEAD
-    popular: true, icon: '🧠',
-    color: 'from-blue-600 to-purple-700', textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/ai-business-intelligence',
-    marketPosition: 'Competitive with Tableau ($70-70), Power BI ($9.99-20), and Looker ($500+). Our advantage: AI-powered insights, predictive analytics, and natural language queries.',
-    targetAudience: 'Business analysts, Data scientists, Executives, Marketing teams, Sales teams, Operations managers',
-    trialDays: 21, setupTime: '2 hours',
-    category: 'AI & Business Intelligence', realService: true,
-    technology: ['PythonTensorFlowReactNode.jsPostgreSQLRedisAWSDocker'], integrations: ['SalesforceHubSpotGoogle AnalyticsShopifyQuickBooksSlackMicrosoft Teams'],
-    useCases: ['Sales performance analysisCustomer behavior insightsMarket trend predictionOperational efficiency optimizationFinancial forecastingRisk assessment'], roi: 'Average customer sees 450% ROI within 6 months through improved decision-making and operational efficiency.',
-    competitors: ['TableauPower BILookerQlikSisense'], marketSize: '$29.9B market',
-    growthRate: '220% annual growth', variant: 'ai-futuristic',
-    contactInfo: {
-      
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    reviews: 950
-      website: 'https://ziontechgroup.com';
-    }
-    real_implementation: true,
-    implementation_details: 'Enterprise - grade sales intelligence platform with AI - powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.';
-    launch_date: '2025 - 06 - 20';
-    customers: 1900;
-    rating: 4.8,
-    reviews: 950;
-<<<<<<< HEAD
-];
-=======
-<<<<<<< HEAD
-];
-=======
 
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/integrate-build-improve-and-re-verify-2156
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026AIService {;
   id: string,;
@@ -404,20 +319,13 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     customers: 1900,;
     rating: 4.8;
     reviews: 950;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
   }
 ];
-<<<<<<< HEAD
-  }
-;
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
     popular: true;
     icon: '🧠';
     color: 'from-blue-600 to-purple-700';
@@ -802,4 +710,4 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     reviews: 950
   }
 ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

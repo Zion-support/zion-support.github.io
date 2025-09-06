@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-if (isLoading) {
-    return (
-      <div className="flex justify-center items-center h-64">;
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />;
-      </div>;
-    );
-  }
-
-
-  
-
-
-  if (error) {
-
-  if (error) {;
-=======
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { useResume } from '@/hooks/useResume';
@@ -57,7 +40,7 @@ export function ResumeWizard() {
   // Use the extracted hook for progress calculation
   const progress = null;
   if (isLoading) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     return (
       <div className="flex justify-center items-center h-64">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
@@ -111,17 +94,11 @@ export function ResumeWizard() {
 
 
   return (
-<<<<<<< HEAD
-    <div className="space-y-6">;
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">;
-        <h1 className="text-2xl font-bold">Resume Builder</h1>;
-        <div className="flex gap-4 flex-wrap items-center">;
-=======
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <h1 className="text-2xl font-bold">Resume Builder</h1>
         <div className="flex gap-4 flex-wrap items-center">
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
           {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
 
 
@@ -226,18 +203,11 @@ if ( {) {
                 onPrevStep = {prevStep,}
               />
             )}
-<<<<<<< HEAD
-
-          </Tabs>;
-        </CardContent>;
-      </Card>;
-    </div>;
-=======
           </Tabs>
         </CardContent>
       </Card>
     </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   );
 
 };
@@ -248,92 +218,12 @@ if ( {) {
 }</AlertDescription> </Alert>) ;
 
 }if (showNewResumeForm) {;
-<<<<<<< HEAD
-
-=======
   
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   () => setShowNewResumeForm (false) ;
 }isLoading= {;
   isLoading ;
 }/>) ;
-<<<<<<< HEAD
-}> <FilePlus className="h-4 w-4" /> Create New </Button> </div> </div> <Card> </div> <Tabsvalue= {
-  activeTab 
-}onValueChange= {
-  setActiveTab 
-}> <ResumeStepssteps= {
-  RESUME STEPS 
-}activeTab= {
-  activeTab 
-}onChange= {
-  setActiveTab 
-}/> {;
-  resume && (<ResumeStepContentactiveTab= {
-  activeTab 
-      <Card>;
-        <CardContent className="pt - 6">;
-          <div className="flex flex - col sm:flex - row justify - between items - start sm:items - center gap - 4 mb - 6">;
-            <h2 className="text - xl font - semibold">{resume?.basic_info?.title || 'My Resume'}</h2>;
-            <ResumeProgress resume={resume} progress={progress} />;
-          </div>;
-          <Tabs value={active_tab} onValueChange={setActiveTab}>;
-            <ResumeSteps;
-              steps = {RESUME_STEPS, }
-              active_tab = {active_tab, }
-              on_change = {setActiveTab, }
-            />;
-            {resume && (
-              <ResumeStepContent;
-                active_tab = {active_tab, }
-                resume = {resume as Resume, }
-                onNextStep = {next_step, }
-                onPrevStep = {prev_step, }
-              />)}
-          </Tabs>;
-        </CardContent>;
-      </Card>;
-    </div>);
-}
-}
-<AlertTitle > Error</AlertTitle> <AlertDescription> {
-  error;
-}</AlertDescription> </Alert>);
-}// Check condition
-if ( {) {
-  $2
-}
-  () => setShowNewResumeForm (false);
-}is_loading= {
-  is_loading;
-}/>);
-}> <FilePlus className="h - 4 w - 4" /> Create New </Button> </div> </div> <Card> </div> <Tabs value= {
-  active_tab;
-}onValueChange= {
-  setActiveTab;
-}> <ResumeSteps steps= {
-  RESUME STEPS;
-}active_tab= {
-  active_tab;
-}on_change= {
-  setActiveTab;
-}/> {
-  resume && (<ResumeStepContent active_tab= {
-  active_tab;
-
-}resume= {
-  resume as Resume;
-}onNextStep= {
-  next_step;
-}onPrevStep= {
-
-
-
-  prev_step;
-}/>);
-}</Tabs> </CardContent> </Card> </div>);
-}'"}
-=======
 }> <FilePlus className="h-4 w-4" /> Create New </Button> </div> </div> <Card> </div> <Tabs value= {;
   activeTab ;
 }onValueChange= {;
@@ -356,4 +246,4 @@ if ( {) {
 }/>) ;
 }</Tabs> </CardContent> </Card> </div>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

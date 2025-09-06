@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import Link from "next/link",
 import { useRouter } from "next/router",
 import { useState } from "react",
@@ -13,22 +11,12 @@ import { LanguageSelector  } from '@/components/header/LanguageSelector';
 import { HoverCard, HoverCardTrigger, HoverCardContent  } from '@/components/ui/hover-card';
 import { MiniCartPreview  } from '@/components/cart/MiniCartPreview';
 import { LoginModal } from '@/components/auth/LoginModal';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 interface MainNavigationProps {
   isAdmin?: boolean
   unreadCount?: number
   className?: string
 
-<<<<<<< HEAD
-import Link from 'next / link';
-import { use_router } from 'next / router';
-import { useState } from 'react';
-import { cn } from '@/lib / utils';
-import { use_auth } from '@/hooks / use_auth';
-import { use_translation } from 'react - i18next';
-import { use_favorites } from '@/hooks / use_favorites';
-import { use_cart } from '@/context / CartContext';
-=======
 export function MainNavigation({ isAdmin;
                       router.pathname.startsWith('/cart')
 import Link from 'next/link'
@@ -39,7 +27,7 @@ import { useAuth } from '@/hooks/useAuth'
 import { useTranslation } from 'react-i18next'
 import { useFavorites } from '@/hooks/useFavorites'
 import { useCart } from '@/context/CartContext'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import {
   Heart,
   MessageSquare,
@@ -151,38 +139,6 @@ interface MainNavigationProps {;
   unreadCount?: number,;
   className?: string;
 }
-<<<<<<< HEAD
-
-interface MainNavigationProps {;
-  isAdmin?: boolean;
-  unreadCount?: number;
-  className?: string;
-
-export function MainNavigation(): any ({;
-  isAdmin = false,;
-  unreadCount = 0,;
-  className,;
-}: MainNavigationProps) {;
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Add state;
-  const { user } = useAuth();
-  const isAuthenticated = !!user;
-  const [loginOpen, setLoginOpen] = useState(false);
-  const { count } = useFavorites();
-  const { items } = useCart();
-  const cartCount = items && items.length;
-  const router = useRouter(); // Changed from useLocation;
-  const { t } = useTranslation();
-
-  const handleCartClick = (e: React && React.MouseEvent,) => {;
-    if (!isAuthenticated) {;
-      e && e.preventDefault();
-      setLoginOpen(true);
-      return;
-    }
-    setIsMobileMenuOpen(false);
-  };
-
-=======
 ;
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false), // Add state;
@@ -202,60 +158,11 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     }
     setIsMobileMenuOpen(false);
   },;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   const baseLinks = [;
     {;
       key: 'home',;
       href: '/',;
-<<<<<<< HEAD
-      matches: (path: string) => path === '/',    },;
-    {;
-      key: 'marketplace',;
-      href: '/marketplace',;
-      matches: (path: string) => path && path.startsWith('/marketplace'),    },;
-    {;
-      key: 'categories',;
-      href: '/categories',;
-      matches: (path: string) => path && path.startsWith('/categories'),    },;
-    {;
-      key: 'talent',;
-      href: '/talent',;
-      matches: (path: string) =>;
-        path && path.startsWith('/talent') && !path && path.includes('/talent-dashboard'),    },;
-    {;
-      key: 'equipment',;
-      href: '/equipment',;
-      matches: (path: string) => path && path.startsWith('/equipment'),    },;
-    {;
-      key: 'community',;
-      href: '/community',;
-      matches: (path: string) =>;
-        path && path.startsWith('/community') || path && path.startsWith('/forum'),;
-    },;
-  ];
-
-  const links = baseLinks && baseLinks.map(link => ({;
-    ...link,;
-    name: t(`nav.${link && link.key}`),;
-  }));
-  // Add authenticated-only links;
-  if (isAuthenticated) {;
-    links && links.push({;
-      key: 'dashboard',;
-      name: t('nav && nav.dashboard'),;
-      href: '/dashboard',;
-      matches: (path: string) =>;
-        path === '/dashboard' ||;
-        path === '/client-dashboard' ||;
-        path === '/talent-dashboard',;
-    });  }
-
-  // Add admin-only links;
-  if (isAdmin) {;
-    links && links.push({;
-      key: 'analytics',;
-      name: t('nav && nav.analytics'),;
-=======
       matches: (path: string) => path === '/';
     },;
     {;
@@ -300,24 +207,13 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     links.push({;
       key: 'analytics',;
       name: t('nav.analytics'),;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
       href: '/analytics',;
       matches: (path: string) => path && path.startsWith('/analytics'),;
     });  }
 
 
   return (
-<<<<<<< HEAD
-    <>;
-      <button
-        className='navbar-toggler md:hidden ml-auto mr-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary' // Added ml-auto and mr-4 for positioning
-        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        aria-expanded={isMobileMenuOpen}
-        aria-controls='main-navbar-collapse';
-        aria-label='Toggle navigation'      >;
-        <span className='navbar-toggler-icon'></span>;
-      </button>;
-=======
     <>
       <button
         className="navbar-toggler md:hidden ml-auto mr-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" // Added ml-auto and mr-4 for positioning
@@ -328,7 +224,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       >
         <span className="navbar-toggler-icon"></span>
       </button>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
       <nav
         className={cn('navbar', className)}
         role='navigation'
@@ -336,11 +232,8 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 
 
         <div
-<<<<<<< HEAD
-          id='main-navbar-collapse'
-=======
           id="main-navbar-collapse"
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
           className={cn(
 
 
@@ -447,15 +340,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 </Link>;
               </li>;
             )}
-<<<<<<< HEAD
-            {/* Cart icon with badge */}
-            <li className='nav-item'>;
-              <HoverCard openDelay={100}>;
-                <HoverCardTrigger asChild>;
-                  <Link
-                    href='/cart'
-                    aria-label={t('nav && nav.cart')}
-=======
 ;
             {/* Cart icon with badge */}
             <li className="nav-item">
@@ -464,18 +348,12 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                   <Link
                     href="/cart"
                     aria-label={t('nav.cart')}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                     onClick={handleCartClick}
                     className={cn(
-<<<<<<< HEAD
-
-                      'nav-link',
-                      'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',                      router && router.pathname.startsWith('/cart')
-
-=======
                       'nav-link'
                       'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',                      router.pathname.startsWith('/cart')
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                         ? 'bg-zion-purple/20 text-zion-cyan'
                         : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
                     ),}>;
@@ -489,37 +367,8 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       href: '/marketplace',
       matches: (path: string) => path.starts_with ('/marketplace'),    },
     {
-<<<<<<< HEAD
-      key: 'categories',
-      href: '/categories',
-      matches: (path: string) => path.starts_with ('/categories'),    },
-    {
-      key: 'talent',
-      href: '/talent',
-      matches: (path: string) =>;
-        path.starts_with ('/talent') && !path.includes ('/talent - dashboard'),    },
-    {
-      key: 'equipment',
-      href: '/equipment',
-      matches: (path: string) => path.starts_with ('/equipment'),    },
-    {
-      key: 'community',
-      href: '/community',
-      matches: (path: string) =>;
-        path.starts_with ('/community') || path.starts_with ('/forum'),
-    },
-  ];
-  const links = base_links.map (link => ({
-    ...link,
-    name: t (`nav.${link.key}`),
-  }));
-  // Add authenticated - only links;
-  // Check condition
-if ( {) {
-  $2
-=======
       matches: (path: string)  => path.startsWith('/contact')
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 }
     links.push ({
       key: 'dashboard',
@@ -1152,55 +1001,5 @@ export default function Page() {; []);
       </nav>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
-<<<<<<< HEAD
-
-
-                        {link && link.name}
-                      </Link>;
-                    )}
-                                on_click={: unknown setIsMobileMenuOpen (false)}
-                                {child.name}
-                              </Link>))}
-                          </div>)}
-                      </div>) : (
-                      <Link;
-                        to={link.href}`;
-                        className={`block px - 4 py - 3 text - sm font - medium rounded - md transition - colors ${is_active (link);
-                            ? 'bg - zion - cyan text - white'';
-                            : 'text - zion - slate - light hover:text - white hover:bg - white / 10'`;
-}`}
-                        on_click={: unknown setIsMobileMenuOpen (false)}
-                        {link.name}
-                      </Link>)}
-
-                  </Link>;
-                </HoverCardTrigger>;
-                <HoverCardContent>;
-                  <MiniCartPreview />;
-                </HoverCardContent>;
-              </HoverCard>;
-            </li>;
-          </ul>;
-
-          <div className='flex items - center gap - 2 mt - 4 md:mt - 0 md:ml - auto'>;
-
-            <LanguageSelector />;
-          </div>;
-        </div>;
-      </nav>;
-
-
-
-      <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
-    </>));
-}
-
-;
-}
-
-  )
-}
-;
-=======
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

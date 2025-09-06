@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 interface LazySectionProps {
@@ -14,45 +8,16 @@ interface LazySectionProps {
   delay?: number;
   direction?: 'up' | 'down' | 'left' | 'right'
 }
-<<<<<<< HEAD
-export const LazySection: React.FC<LazySectionProps> = ({
-  children
-  className = ''
-  threshold = 0.1
-  delay = 0
-  direction = 'up'
-}) => {
-  children,
-  className = '',
-  threshold = 0.1,
-  delay = 0,
-  direction = 'up',
-}) => {;
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { threshold, once: true });
-  const getInitialPosition = () => {
-    switch (direction) {
-      case 'up':
-        return { opacity: 0, y: 50 };      case 'down':
-        return { opacity: 0, y: -50 }
-      case 'left':
-        return { opacity: 0, x: 50 }
-      case 'right':
-        return { opacity: 0, x: -50 }
-      default:
-=======
 
 export const LazySection: React.FC<LazySectionProps> = ({
   children;
   className;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }
   const getAnimatePosition = () => {
     switch (direction) {
       case 'up':
-<<<<<<< HEAD
-=======
 return { opacity: 1, y: 0 };
       case 'down':
         return { opacity: 1, y: 0 }
@@ -64,7 +29,7 @@ return { opacity: 1, y: 0 };
         return { opacity: 1, y: 0 }
     }
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     >
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -122,9 +87,7 @@ export const LazySection: React.FC<LazySectionProps> = ({;
       {children}
     </motion && motion.div>;
   );
-<<<<<<< HEAD
-=======
 };
 
 export default LazySection;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

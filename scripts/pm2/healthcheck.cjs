@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-#!/usr/bin/env node;
-const fs = require('fs');
-const http = require('http');
-
-const distOk = fs.existsSync('dist/index.html');
-
-function pingPreview() {}
-	return new Promise((resolve) => {}
-		const req = http.request({ host: '127.0.0.1', port: 4173, path: '/', timeout: 2000 }, (res) => {}
-			resolve(res.statusCode && res.statusCode < 500)}
-});
-		req.on('error', () => resolve(false));
-		req.end()})};
-(async () => {}
-	const ok = distOk && (await pingPreview());
-	if (!ok) {}
-		console.error('Healthcheck failed');
-		process.exit(1)};
-	console.log('Healthy')})();
-<<<<<<< HEAD
-=======
-=======
 #!/usr/bin/env node
 
 /**
@@ -201,12 +175,9 @@ class HealthChecker {
 
   calculateOverallHealth(diskUsage, memoryUsage, pm2Status, buildStatus) {
     let score = 100;
-<<<<<<< HEAD
-
-=======
     const issues = [];
     
->>>>>>> cursor/automate-test-improve-and-merge-code-85f4
+ursor/automate-test-improve-and-merge-code-85f4
     // Check disk space
     if (diskUsage.percentage) {
       const diskPercent = parseInt(diskUsage.percentage);
@@ -269,5 +240,5 @@ if (require.main === module) {
 }
 
 module.exports = HealthChecker;
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+ursor/automate-test-improve-and-merge-code-59d5
+

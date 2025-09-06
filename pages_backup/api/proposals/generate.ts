@@ -1,24 +1,13 @@
-<<<<<<< HEAD
-
-  try {
-    const {
-<<<<<<< HEAD
-      target_institution,
-      type,
-      regional_scope,
-      budgetOrResolution,
-=======
       target_institution
       type
       regional_scope
       budgetOrResolution
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
       language = 'en'
     } = req.body || {};
 
     const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
     const userPrompt = promptAssist ||
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { OpenAI } from '[^']*';
 import { createProposal } from '[^']*';
@@ -47,49 +36,31 @@ language = 'en',
     const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
     const userPrompt =
       promptAssist ||
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       `Write a proposal for ${targetInstitution} on ${type} in ${regionalScope}. Budget/Resolution: ${budgetOrResolution}. Include metrics, social outcomes, and DAO-based governance logic.`;
 
     const completion = await openai.chat.completions.create({
       model: process.env.OPENAI_MODEL || 'gpt-4o-mini'
       messages: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-      ],
-      temperature: 0.3
-    });
-      title,
-      target_institution,
-      type,
-      regional_scope,
-      budgetOrResolution,
-=======
       ]
       temperature: 0.3
-=======
         { role: 'system', content: SYSTEM_PROMPT },
 { role: 'user', content: userPrompt },
       ],
       temperature: 0.3,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     });
       title
       target_institution
       type
       regional_scope
       budgetOrResolution
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-
-
-    return res.status(200).json({ meta, markdown: contentMarkdown })
-=======
       supportingMultiverses
       contentMarkdown
       language
     });
     return res.status(200).json({ meta, markdown: contentMarkdown });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Failed to generate proposal' })
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -97,15 +68,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   }
 }
-<<<<<<< HEAD
-      supporting_multiverses,
-      content_markdown,
-      language,
-=======
       supporting_multiverses
       content_markdown
       language
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     });
 ;
     return res.status (200).json ({ meta, markdown: content_markdown });
@@ -124,9 +90,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       .status(500)
       .json({ error: error?.message || "Failed to generate proposal" });
   }
-<<<<<<< HEAD
-}
-=======
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 
-
-
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
 export const advancedITInfrastructureExpansion2025V2 = [
   {
 
@@ -18,7 +10,6 @@ export const advancedITInfrastructureExpansion2025V2 = [
     pricing: '$399 / month',
       'Automated deployment',
       'Self - healing infrastructure',
-=======
 name: 'Autonomous DevOps Platform',
     description: 'Self-managing DevOps automation platform',
     category: 'Cloud & FinOps',
@@ -26,382 +17,11 @@ name: 'Autonomous DevOps Platform',
     features: [
       'Automated deployment',
       'Self-healing infrastructure',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       'Performance optimization',
       'Cost management',
     ],
   },
-<<<<<<< HEAD
-  {
-    name: 'Autonomous IT Operations',
-    description: 'AI - powered IT operations automation',
-    category: 'Cloud & FinOps',
-    pricing: '$499 / month',
-    features: [;
-      'Incident automation',
-      'Predictive maintenance',
-      'Resource optimization',
-      'Performance monitoring',
-    ],
-  },
-  {
-    name: 'Autonomous Vehicle AI',
-    description: 'AI - powered autonomous vehicle systems',
-    category: 'Transportation',
-    pricing: '$899 / month',
-    features: [;
-      'Vehicle control systems',
-      'Safety monitoring',
-      'Route optimization',
-      'Performance analytics',
-    ],
-  },
-  {
-    name: 'Blockchain Enterprise Platform',
-    description: 'Enterprise - grade blockchain infrastructure',
-    category: 'Financial Services',
-    pricing: '$649 / month',
-    features: [;
-      'Smart contract management',
-      'Consensus mechanisms',
-      'Security protocols',
-      'Scalability solutions',
-    ],
-  },
-  {
-    name: 'Blockchain Infrastructure',
-    description: 'Scalable blockchain infrastructure services',
-    category: 'Financial Services',
-    pricing: '$449 / month',
-    features: [;
-      'Node management',
-      'Network security',
-      'Performance optimization',
-      'Monitoring tools',
-    ],
-  },
-  {
-    name: 'Brain - Computer Interface',
-    description: 'Advanced brain - computer interface technology',
-    category: 'Healthcare',
-    pricing: '$1299 / month',
-    features: [;
-      'Neural signal processing',
-      'Interface protocols',
-      'Safety systems',
-      'Performance metrics',
-    ],
-  },
-  {
-    name: 'Compliance Automation',
-    description: 'Automated compliance management platform',
-    category: 'Cybersecurity',
-    pricing: '$379 / month',
-    features: [;
-      'Regulatory tracking',
-      'Automated reporting',
-      'Audit management',
-      'Compliance monitoring',
-    ],
-  },
-  {
-    name: 'Customer Intelligence Platform',
-    description: 'Comprehensive customer intelligence solution',
-    category: 'AI & Data',
-    pricing: '$299 / month',
-    features: [;
-      'Customer analytics',
-      'Behavior tracking',
-      'Segmentation tools',
-      'Insight generation',
-    ],
-  },
-  {
-    name: 'Data Analytics',
-    description: 'Advanced data analytics platform',
-    category: 'AI & Data',
-    pricing: '$249 / month',
-    features: [;
-      'Data processing',
-      'Visualization tools',
-      'Statistical analysis',
-      'Reporting automation',
-    ],
-  },
-  {
-    name: 'DevOps Automation',
-    description: 'Comprehensive DevOps automation platform',
-    category: 'Cloud & FinOps',
-    pricing: '$329 / month',
-    features: [;
-      'CI / CD pipelines',
-      'Infrastructure as code',
-      'Automated testing',
-      'Deployment management',
-    ],
-  },
-  {
-    name: 'Edge Computing',
-    description: 'Edge computing infrastructure platform',
-    category: 'Cloud & FinOps',
-    pricing: '$279 / month',
-    features: [;
-      'Edge node management',
-      'Latency optimization',
-      'Resource distribution',
-      'Performance monitoring',
-    ],
-  },
-  {
-    name: 'Industrial Automation AI',
-    description: 'AI - powered industrial automation',
-    category: 'Manufacturing',
-    pricing: '$599 / month',
-    features: [;
-      'Process automation',
-      'Quality control',
-      'Predictive maintenance',
-      'Performance optimization',
-    ],
-  },
-  {
-    name: 'Interplanetary Communication',
-    description: 'Advanced interplanetary communication systems',
-    category: 'Space Technology',
-    pricing: '$1499 / month',
-    features: [;
-      'Deep space communication',
-      'Signal processing',
-      'Network management',
-      'Reliability monitoring',
-    ],
-  },
-  {
-    name: 'IT Asset Management',
-    description: 'Comprehensive IT asset management platform',
-    category: 'Cloud & FinOps',
-    pricing: '$199 / month',
-    features: [;
-      'Asset tracking',
-      'Lifecycle management',
-      'Cost optimization',
-      'Compliance reporting',
-    ],
-  },
-  {
-    name: 'Marketing AI Platform',
-    description: 'AI - powered marketing automation platform',
-    category: 'AI & Data',
-    pricing: '$349 / month',
-    features: [;
-      'Campaign automation',
-      'Personalization',
-      'Performance tracking',
-      'ROI optimization',
-    ],
-  },
-  {
-    name: 'Metaverse Development Studio Pro',
-    description: 'Professional metaverse development platform',
-    category: 'Metaverse',
-    pricing: '$799 / month',
-    features: [;
-      '3D modeling tools',
-      'Virtual world creation',
-      'User interaction systems',
-      'Performance optimization',
-    ],
-  },
-  {
-    name: 'Metaverse Digital Reality Platform',
-    description: 'Advanced metaverse platform infrastructure',
-    category: 'Metaverse',
-    pricing: '$649 / month',
-    features: [;
-      'Virtual environment hosting',
-      'User management',
-      'Content creation tools',
-      'Analytics platform',
-    ],
-  },
-  {
-    name: 'Mobile Web Solutions',
-    description: 'Mobile - first web development platform',
-    category: 'Developer Tools',
-    pricing: '$179 / month',
-    features: [;
-      'Responsive design',
-      'Performance optimization',
-      'Mobile analytics',
-      'User experience tools',
-    ],
-  },
-  {
-    name: 'Multi - Cloud Management',
-    description: 'Unified multi - cloud management platform',
-    category: 'Cloud & FinOps',
-    pricing: '$429 / month',
-    features: [;
-      'Cloud orchestration',
-      'Cost optimization',
-      'Security management',
-      'Performance monitoring',
-    ],
-  },
-  {
-    name: 'Network Automation',
-    description: 'Intelligent network automation platform',
-    category: 'Cloud & FinOps',
-    pricing: '$299 / month',
-    features: [;
-      'Network provisioning',
-      'Configuration management',
-      'Performance optimization',
-      'Security automation',
-    ],
-  },
-  {
-    name: 'Neural Finance AI',
-    description: 'AI - powered financial neural networks',
-    category: 'Financial Services',
-    pricing: '$549 / month',
-    features: [;
-      'Neural network training',
-      'Financial modeling',
-      'Risk assessment',
-      'Performance optimization',
-    ],
-  },
-  {
-    name: 'Orbital Computing',
-    description: 'Space - based computing infrastructure',
-    category: 'Space Technology',
-    pricing: '$1199 / month',
-    features: [;
-      'Satellite computing',
-      'Orbital data processing',
-      'Communication systems',
-      'Performance monitoring',
-    ],
-  },
-  {
-    name: 'Quantum AI Fusion',
-    description: 'Quantum - AI hybrid computing platform',
-    category: 'Quantum Computing',
-    pricing: '$899 / month',
-    features: [;
-      'Quantum algorithms',
-      'AI integration',
-      'Hybrid optimization',
-      'Performance analytics',
-    ],
-  },
-  {
-    name: 'Quantum Bio - Computing',
-    description: 'Quantum biological computing systems',
-    category: 'Quantum Computing',
-    pricing: '$1099 / month',
-    features: [;
-      'Biological algorithms',
-      'Quantum processing',
-      'Bio - computing integration',
-      'Performance optimization',
-    ],
-  },
-  {
-    name: 'Quantum Compliance Automation',
-    description: 'Quantum - powered compliance automation',
-    category: 'Quantum Computing',
-    pricing: '$649 / month',
-    features: [;
-      'Quantum algorithms',
-      'Compliance automation',
-      'Risk assessment',
-      'Performance monitoring',
-    ],
-  },
-  {
-    name: 'Quantum Creativity Studio',
-    description: 'Quantum - powered creative platform',
-    category: 'Quantum Computing',
-    pricing: '$749 / month',
-    features: [;
-      'Quantum algorithms',
-      'Creative tools',
-      'Performance optimization',
-      'Analytics platform',
-    ],
-  },
-  {
-    name: 'Quantum CRM Suite',
-    description: 'Quantum - powered customer relationship management',
-    category: 'Quantum Computing',
-    pricing: '$599 / month',
-    features: [;
-      'Quantum algorithms',
-      'CRM functionality',
-      'Performance optimization',
-      'Analytics tools',
-    ],
-  },
-  {
-    name: 'Quantum Data Center',
-    description: 'Quantum computing data center infrastructure',
-    category: 'Quantum Computing',
-    pricing: '$1299 / month',
-    features: [;
-      'Quantum hardware',
-      'Cooling systems',
-      'Security protocols',
-      'Performance monitoring',
-    ],
-  },
-  {
-    name: 'Quantum Encryption Gateway',
-    description: 'Quantum - powered encryption gateway',
-    category: 'Quantum Computing',
-    pricing: '$799 / month',
-    features: [;
-      'Quantum encryption',
-      'Security protocols',
-      'Performance optimization',
-      'Monitoring tools',
-    ],
-  },
-  {
-    name: 'Quantum Energy Optimization',
-    description: 'Quantum - powered energy optimization',
-    category: 'Energy',
-    pricing: '$699 / month',
-    features: [;
-      'Quantum algorithms',
-      'Energy modeling',
-      'Optimization tools',
-      'Performance analytics',
-    ],
-  },
-  {
-    name: 'Quantum Financial Intelligence',
-    description: 'Quantum - powered financial intelligence',
-    category: 'Quantum Computing',
-    pricing: '$849 / month',
-    features: [;
-      'Quantum algorithms',
-      'Financial modeling',
-      'Risk assessment',
-      'Performance optimization',
-    ],
-  },
-  {
-<<<<<<< HEAD
-    features: [
-      'Identity verification'
-      'Access control'
-      'Threat detection'
-      'Performance monitoring'
-    ]
-  }
-=======
     name: 'Quantum Identity Verification',
     description: 'Quantum - powered identity verification',
     category: 'Quantum Computing',
@@ -635,7 +255,6 @@ name: 'Autonomous DevOps Platform',
     category: 'Space Technology',
     pricing: '$749 / month',
     features: [;
-=======
   {
     name: 'Autonomous IT Operations',
     description: 'AI-powered IT operations automation',
@@ -1230,7 +849,7 @@ name: 'Autonomous DevOps Platform',
     category: 'Space Technology',
     pricing: '$749/month',
     features: [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       'Resource mapping',
       'Intelligence analysis',
       'Planning tools',
@@ -1238,45 +857,22 @@ name: 'Autonomous DevOps Platform',
     ],
   },
   {
-<<<<<<< HEAD
-    name: 'Zero - Trust Security',
-    description: 'Comprehensive zero - trust security platform',
-    category: 'Cybersecurity',
-    pricing: '$599 / month',
-    features: [;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
     name: 'Zero-Trust Security',
     description: 'Comprehensive zero-trust security platform',
     category: 'Cybersecurity',
     pricing: '$599/month',
     features: [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       'Identity verification',
       'Access control',
       'Threat detection',
       'Performance monitoring',
     ],
-<<<<<<< HEAD
-];      'Identity verificationAccess controlThreat detectionPerformance monitoring'
-    ]
-
-<<<<<<< HEAD
-export const advancedITInfrastructureExpansion2025V2 = [;
-  {;
-    name: 'Autonomous DevOps Platform',;
-    description: 'Self-managing DevOps automation platform',;
-    category: 'Cloud & FinOps',;
-    pricing: '$399/month',;
-    features: [;
-      'Automated deploymentSelf-healing infrastructurePerformance optimizationCost management';
-=======
-=======
 ];      'Identity verification_access control_threat detection_performance monitoring';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
     ];
 
   },;
@@ -1738,19 +1334,15 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     features: [;
       'Identity verificationAccess controlThreat detectionPerformance monitoring';
     ];
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 ;
-=======
 
-=======
 export const advancedITInfrastructureExpansion2025V2 = [;
   {;
     name: 'Autonomous DevOps Platform',;
@@ -2219,15 +1811,12 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     features: [;
       'Identity verificationAccess controlThreat detectionPerformance monitoring';
     ];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
+
+
   },
 ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

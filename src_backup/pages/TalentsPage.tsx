@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-
-import { useRouter } from 'next/router',
-import { useState, useEffect, useCallback, useMemo } from 'react',
-import { motion, AnimatePresence } from 'framer-motion',
-
-import { ArrowUp, Filter, SortAsc, Users, TrendingUp, Star, Verified, MapPin } from 'lucide-react'
-import { generateAITalents, getTalentMarketStats, getRecommendedTalents  } from '@/utils/talentAutoFeedAlgorithm';
-import { TALENT_PROFILES  } from '@/data/talentData';
-import { TalentProfile  } from '@/types/talent';
-import { SkeletonCard  } from '@/components/ui/skeleton';
-import { Button  } from '@/components/ui/button';
-import { Badge  } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
-=======
 import { useRouter } from 'next/router';
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -38,7 +23,7 @@ import { SkeletonCard } from '@/components/ui/skeleton';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import Spinner from '@/components/ui/spinner';
 // Market insights component for talents
 const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
@@ -63,8 +48,6 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
     )
   }
 
-<<<<<<< HEAD
-=======
   );
 
 }animate= {;
@@ -169,4 +152,4 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
 }> <ArrowUp className=" h-5 w-5 text-primary-foreground" /> </motion.button>) ;
 }</AnimatePresence> </div>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

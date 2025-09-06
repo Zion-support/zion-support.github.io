@@ -1,74 +1,34 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
 export type Real2036InnovativeService = {
   id: string, name: string,
   tagline: string, description: string,
   category: string, price: string,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export type Real2036InnovativeService = {
   id: string;
-=======
 export type Real2036InnovativeService = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
   tagline: string;
   description: string;
   category: string;
   price: string;
   period?: string;
-<<<<<<< HEAD
-  features: string[], link: string,
-  launchDate?: string;
-  rating?: number;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   features: string[];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
   link: string;
   launchDate?: string;
   rating?: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   marketSize?: string;
   targetAudience?: string;
   competitiveAdvantage?: string;
   integration?: string[];
-<<<<<<< HEAD
-
-  useCases?: string[]
-};
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       'Advanced AI-powered business intelligence platform that automatically analyzes data patterns, generates predictive insights, and creates interactive dashboards for strategic decision-making.',
   link: string;  launch_date?: string;  rating?: number;
   market_size?: string;
@@ -86,11 +46,9 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
     tagline: 'Transform raw data into actionable business insights with AI',
     description:;
       'Advanced AI - powered business intelligence platform that automatically analyzes data patterns, generates predictive insights, and creates interactive dashboards for strategic decision - making.',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
     category: 'AI & Data',
     price: '$299',
     period: '/month',
@@ -103,23 +61,12 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
       'Custom dashboard builder',
       'Mobile - responsive interface',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     link: 'https://ziontechgroup.com / services / ai - business - intelligence - platform - pro',
     launch_date: '2036 - 01 - 20',
     rating: 4.8,
@@ -151,18 +98,9 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
       'Enterprise - grade quantum - secure communication platform that leverages quantum key distribution (QKD) to provide unbreakable encryption for sensitive communications.',    category: 'Quantum Technology',
     price: '$1, 999',
     period: '/month',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    features: [;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
       'Quantum key distribution (QKD)',
       'End - to - end quantum encryption',
       'Multi - party secure communication',
@@ -172,16 +110,10 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
       '24 / 7 quantum network monitoring',
       'Custom deployment options',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
       'AI-powered incident detection',
-=======
     link: 'https://ziontechgroup.com / services / quantum - secure - communication - enterprise',
     launch_date: '2036 - 01 - 25',
     rating: 4.9,
@@ -216,14 +148,9 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
     period: '/month',
     features: [;
       'AI - powered incident detection',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
       'Automated problem resolution',
       'Self - healing infrastructure',
       'Predictive maintenance',
@@ -232,16 +159,9 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
       'Performance optimization',
       'Comprehensive monitoring',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com / services / autonomous - devops - platform - enterprise',
     launch_date: '2036 - 01 - 30',
     rating: 4.7,
@@ -276,14 +196,9 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
     price: '$1, 499',
     period: '/month',
     features: [;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
       'Satellite performance analytics',
       'Orbital mechanics calculations',
       'Space weather monitoring',
@@ -293,16 +208,10 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
       '3D visualization tools',
       'Custom reporting engine',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
       'AI-powered threat detection',
-=======
     link: 'https://ziontechgroup.com / services / space - technology - analytics - platform',
     launch_date: '2036 - 02 - 05',
     rating: 4.6,
@@ -335,14 +244,9 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
     period: '/month',
     features: [;
       'AI - powered threat detection',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
       'Behavioral analysis',
       'Automated incident response',
       'Threat intelligence feeds',
@@ -351,16 +255,9 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
       '24 / 7 monitoring',
       'Custom security policies',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com / services / ai - cybersecurity - suite - enterprise',
     launch_date: '2036 - 02 - 10',
     rating: 4.8,
@@ -393,14 +290,9 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
     price: '$2, 499',
     period: '/month',
     features: [;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
       'Quantum algorithm optimization',
       'Hybrid quantum - classical ML',
       'Quantum neural networks',
@@ -410,16 +302,9 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
       'Performance benchmarking',
       'Expert consultation',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com / services / quantum - machine - learning - platform',
     launch_date: '2036 - 02 - 15',
     rating: 4.9,
@@ -453,14 +338,9 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
     price: '$599',
     period: '/month',
     features: [;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
       'Intelligent workload distribution',
       'Real - time optimization',
       'Multi - edge coordination',
@@ -470,16 +350,10 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
       'Monitoring and analytics',
       'Custom edge policies',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
       'AI-powered personalization',
-=======
     link: 'https://ziontechgroup.com / services / edge - computing - orchestration - enterprise',
     launch_date: '2036 - 02 - 20',
     rating: 4.7,
@@ -513,14 +387,9 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
     period: '/month',
     features: [;
       'AI - powered personalization',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
       'Omnichannel experience management',
       'Predictive customer behavior',
       'Automated customer service',
@@ -529,16 +398,10 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
       'A / B testing automation',
       'Performance analytics',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
       'Multi-chain support',
-=======
     link: 'https://ziontechgroup.com / services / ai - customer - experience - platform',
     launch_date: '2036 - 02 - 25',
     rating: 4.8,
@@ -573,14 +436,9 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
     period: '/month',
     features: [;
       'Multi - chain support',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
       'Smart contract development',
       'Deployment automation',
       'Security auditing',
@@ -589,16 +447,10 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
       'Compliance tools',
       'Developer APIs',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
       'AI-powered quality control',
-=======
     link: 'https://ziontechgroup.com / services / blockchain - infrastructure - enterprise',
     launch_date: '2036 - 03 - 01',
     rating: 4.6,
@@ -632,14 +484,9 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
     period: '/month',
     features: [;
       'AI - powered quality control',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
       'Predictive maintenance',
       'Autonomous robotics',
       'Production optimization',
@@ -648,16 +495,9 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
       'Custom workflows',
       'Performance analytics',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com / services / autonomous - manufacturing - platform',
     launch_date: '2036 - 03 - 05',
     rating: 4.7,
@@ -690,14 +530,9 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
     price: '$1, 399',
     period: '/month',
     features: [;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
       'Quantum encryption protocols',
       'Quantum - resistant algorithms',
       'Real - time threat detection',
@@ -707,16 +542,10 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
       '24 / 7 monitoring',
       'Custom security policies',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
       'AI-powered image analysis',
-=======
     link: 'https://ziontechgroup.com / services / quantum - internet - security - gateway',
     launch_date: '2036 - 03 - 10',
     rating: 4.9,
@@ -750,14 +579,9 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
     period: '/month',
     features: [;
       'AI - powered image analysis',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
       'Symptom assessment',
       'Treatment recommendations',
       'Patient data integration',
@@ -766,16 +590,9 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
       'Custom AI models',
       'Expert consultation',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com / services / ai - healthcare - diagnostics - platform',
     launch_date: '2036 - 03 - 15',
     rating: 4.8,
@@ -806,14 +623,9 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
     price: '$3, 999',
     period: '/month',
     features: [;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
       'Resource mapping algorithms',
       'Mining operation management',
       'Robotic control systems',
@@ -823,16 +635,9 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
       'Environmental impact assessment',
       'Custom mining strategies',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com / services / space - resource - mining - platform',
     launch_date: '2036 - 03 - 20',
     rating: 4.7,
@@ -863,14 +668,9 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
     price: '$4, 999',
     period: '/month',
     features: [;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
       'Quantum market analysis',
       'High - frequency trading',
       'Risk management',
@@ -880,16 +680,9 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
       'Custom algorithms',
       'Performance analytics',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com / services / quantum - financial - trading - platform',
     launch_date: '2036 - 03 - 25',
     rating: 4.9,
@@ -912,22 +705,8 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
   },
   // AI - Powered Supply Chain Optimization;
   {
-<<<<<<< HEAD
-    id: 'ai - supply - chain - optimization - platform',
-    name: 'AI Supply Chain Optimization Platform',
-    tagline: 'Intelligent supply chain management and optimization',
-    description:;
-      'Comprehensive platform that uses AI to optimize supply chain operations, predict demand, manage inventory, and improve logistics efficiency.',
-    category: 'AI & Data',
-    price: '$699',
-    period: '/month',
-    features: [;
 
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
       'Demand forecasting',
       'Inventory optimization',
       'Route optimization',
@@ -937,21 +716,15 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
       'Performance analytics',
       'Custom workflows',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     rating: 4 && 4.7;
     marketSize: '$28 && 28.4B',
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   useCases?: string[];};  useCases?: string[]
 }
-=======
 useCases?: string[];
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export const real2036InnovativeServices: Real2036InnovativeService[] = [
   // AI-Powered Business Intelligence
   {
@@ -1536,7 +1309,7 @@ id: 'ai-business-intelligence-platform-pro',
   }
   // AI-Powered Supply Chain Optimization
   {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
     id: 'ai-supply-chain-optimization-platform'
     name: 'AI Supply Chain Optimization Platform'
     tagline: 'Intelligent supply chain management and optimization'
@@ -1571,53 +1344,15 @@ id: 'ai-business-intelligence-platform-pro',
       'Cloud services'
     ]
     useCases: [
-<<<<<<< HEAD
-];      'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentReal-time trackingPerformance analyticsCustom workflows'
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
     ];
     link: 'https://ziontechgroup && ziontechgroup.com/services/ai-supply-chain-optimization-platform';
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     ];
     link: 'https://ziontechgroup.com/services/ai-supply-chain-optimization-platform';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
     launchDate: '2036-03-30';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-    ];
-    link: 'https://ziontechgroup.com/services/quantum-financial-trading-platform', launchDate: '2036-03-25',
-    rating: 4.9, marketSize: '$7.8B',
-    targetAudience: 'Investment banks, Hedge funds, Trading firms',
-    competitiveAdvantage: 'Quantum advantage, High-frequency capabilities, Advanced algorithms',
-    integration: ['Trading platformsMarket data feedsRisk systemsCompliance platforms'],
-    useCases: ['Algorithmic tradingRisk managementPortfolio optimizationMarket analysis']
-  };
-
-  // AI-Powered Supply Chain Optimization
-  {
-    id: 'ai-supply-chain-optimization-platform', name: 'AI Supply Chain Optimization Platform',
-    tagline: 'Intelligent supply chain management and optimization',
-    description: 'Comprehensive platform that uses AI to optimize supply chain operations, predict demand, manage inventory, and improve logistics efficiency.',
-    category: 'AI & Data', price: '$699',
-    period: '/month',
-    features: [
-      'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentReal-time trackingPerformance analyticsCustom workflows'
-    ];
-    link: 'https://ziontechgroup.com/services/ai-supply-chain-optimization-platform', launchDate: '2036-03-30',
-    rating: 4.7, marketSize: '$28.4B',
-    targetAudience: 'Manufacturing companies, Retail businesses, Logistics providers',
-    competitiveAdvantage: 'AI optimization, Real-time insights, Comprehensive coverage',
-    integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services'],
-    useCases: ['Demand planningInventory managementLogistics optimizationRisk management']
-  }
-];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     link: 'https://ziontechgroup.com / services / ai - supply - chain - optimization - platform',
     launch_date: '2036 - 03 - 30',
     rating: 4.7,
@@ -1634,47 +1369,22 @@ id: 'ai-business-intelligence-platform-pro',
       'Cloud services',
     ],
     use_cases: [;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       'Demand planning',
       'Inventory management',
       'Logistics optimization',
       'Risk management',
     ],
   },
-<<<<<<< HEAD
-];      'Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_real - time tracking_performance analytics_custom workflows';
-    ];
-    link: 'https://ziontechgroup.com / services / ai - supply - chain - optimization - platform';
-    launch_date: '2036 - 03 - 30';
-    rating: 4.7;
-    market_size: '$28.4B',
-    target_audience: 'Manufacturing companies, Retail businesses, Logistics providers';
-    competitive_advantage: 'AI optimization, Real - time insights, Comprehensive coverage';
-    integration: ['ERP systemsWMS platformsTMS solutionsIoT devices_cloud services'],
-    use_cases: ['Demand planning_inventory management_logistics optimization_risk management'];
-  }
-];
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     rating: 4.7;
     marketSize: '$28.4B'
     targetAudience: 'Manufacturing companies, Retail businesses, Logistics providers';
     competitiveAdvantage: 'AI optimization, Real-time insights, Comprehensive coverage';
     integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services']
     useCases: ['Demand planningInventory managementLogistics optimizationRisk management']
-<<<<<<< HEAD
-  }
-];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-export type Real2036InnovativeService = {;
-=======
     features: [;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 
       'Quantum key distribution (QKD)',
       'End - to - end quantum encryption',
@@ -1754,16 +1464,8 @@ export type Real2036InnovativeService = {;
     useCases: ['Demand planningInventory managementLogistics optimizationRisk management']
   }
 ];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
 
 export type Real2036InnovativeService = {;
   id: string,;
@@ -2101,21 +1803,14 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
 
   }
 ];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+
 export type Real2036InnovativeService = {;
 
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
 ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

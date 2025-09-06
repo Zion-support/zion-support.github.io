@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 import React from "react",
 import Link from "next/link",
@@ -13,7 +10,7 @@ import React from "react"
 import Link from "next/link"
 import { ArrowRight, Phone } from 'lucide-react'import { Button } from "@/components/ui/button"
 import { AppStoreButtons } from "./AppStoreButtons"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export const MobileAppHero: React.FC = () => {
   // These would come from environment variables or a config
   const appStoreUrl = "#", // Replace with actual App Store URL when available
@@ -38,10 +35,9 @@ export const MobileAppHero: React.FC = () => {
             </div>
             <Link href="/open-app">
               <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover:bg-white/10">
-=======
 <Link href="/open-app">
               <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover: bg-white/10">
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                 Open App
                 <ArrowRight size={20} />
               </Button>
@@ -49,18 +45,14 @@ export const MobileAppHero: React.FC = () => {
           </div>
 
 
-<<<<<<< HEAD
-=======
           
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
           <div className="flex-1 flex justify-center">
             <div className="relative w-64 h-auto">
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
               <Phone className="w-full h-auto text-white" />
-<<<<<<< HEAD
-=======
 
   // These would come from environment variables or a config;
   const appStoreUrl = "#", // Replace with actual App Store URL when available;
@@ -100,7 +92,7 @@ export const MobileAppHero: React.FC = () => {
         </div>;
       </div>;
     </section>);
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 }
 
 
@@ -113,10 +105,8 @@ import { AppStoreButtons } from "./AppStoreButtons";
   );
 };
 ";
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 import React from "react",;
 import Link from "next/link",;
 import { ArrowRight, Phone } from 'lucide-react';
@@ -164,13 +154,6 @@ export const MobileAppHero: React.FC = () => {;
 };
 
 "
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
 ";
-=======
-";
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
+origin/cursor/automate-test-improve-and-merge-code-2533

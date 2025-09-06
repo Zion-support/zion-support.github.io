@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-import { Calendar, Clock, Video } from 'lucide-react'
-import { format, isAfter, parseISO, startOfDay } from "date-fns";
-function InterviewsContent() {
-      if (!grouped[dateKey]) {
-        grouped[dateKey] = []
-      }
-      grouped[dateKey].push(interview)
-    return Object.entries(groupedInterviews)
-      .sort(
-        ([dateA], [dateB]) =>
-          parseISO(dateA).getTime() - parseISO(dateB).getTime()
-      )
-      .map(([date, interviews]) => (
-            ))}
-          </div>
-        </div>
-      ))
-
-=======
 import React, { useEffect, useState } from 'react';
 import { useInterviews } from '@/hooks/useInterviews';
 import { Interview } from '@/types/interview';
@@ -45,7 +25,7 @@ function InterviewsContent() {
   useEffect(() => {
     // Modified to handle Promise<Interview[]> return type
     const loadInterviews = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>;
       <SEO
@@ -151,18 +131,6 @@ function InterviewsContent() {
                 </p>
               </div>
             )}
-<<<<<<< HEAD
-          </TabsContent>;
-        </Tabs>;
-      </main>;
-    </>;
-  );
-    <ProtectedRoute>;
-      <InterviewsContent />;
-    </ProtectedRoute>;
-  );
-}
-=======
           </TabsContent>
         </Tabs>
       </main>
@@ -174,4 +142,4 @@ export default function Interviews() {
       <InterviewsContent />
     </ProtectedRoute>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

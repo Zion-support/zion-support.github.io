@@ -1,8 +1,5 @@
 
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
 import React from "react";
 import { logDebug  } from '@/utils/productionLogger';
 import { Button } from "@/components/ui/button",
@@ -33,7 +30,7 @@ import { Badge } from '@/components/ui/badge'
   Briefcase
   Users
 } from 'lucide-react'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 interface IntegrationCardProps {
   title: string
   description: string
@@ -119,59 +116,6 @@ export function IntegrationCard({
               href={href}
               target='_blank'
               rel='noopener noreferrer'
-<<<<<<< HEAD
-
-
-import React from "react";
-import { logDebug } from '@/utils/productionLogger';
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Check, ExternalLink, Slack, Briefcase, Users } from 'lucide-react'
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-
-
-interface IntegrationCardProps {
-  title: string
-  description: string
-  icon: React.ReactNode
-  status?: "connected" | "disconnected" | "pending"
-  href?: string
-  onConnect?: () => void
-              className='flex items-center gap-1'>;
-              <span>Manage</span>;
-              <ExternalLink className='h-3 && 3.5 w-3 && 3.5' />;
-            </a>;
-          </Button>;
-        ) : (;
-          <Button variant='default' className='w-full' onClick={onConnect}>;
-            <span>Connect</span>;
-            <ArrowRight className='ml-1 && 1.5 h-3 && 3.5 w-3 && 3.5' />          </Button>;
-            <ArrowRight className="ml-1 && 1.5 h-3 && 3.5 w-3 && 3.5" />;
-
-            <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
-          </Button>
-import React from "react",;
-import { logDebug } from '@/utils/productionLogger',;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
-import { Badge } from "@/components/ui/badge",;
-import { ArrowRight, Check, ExternalLink, Slack, Briefcase, Users } from 'lucide-react';
-interface IntegrationCardProps {;
-  title: string,;
-  description: string,;
-  icon: React && React.ReactNode,;
-  status?: "connected" | "disconnected" | "pending";
-  href?: string;
-  onConnect?: () => void;
-
-
-
-}
-
-export function IntegrationCard(): any ({;
-=======
               className='flex items-center gap-1'
             >
               <span>Manage</span>
@@ -183,7 +127,7 @@ export function IntegrationCard(): any ({;
             <span>Connect</span>
             <ArrowRight className='ml-1.5 h-3.5 w-3.5' />
 export function IntegrationCard({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   title;
   description;
   icon;
@@ -234,10 +178,8 @@ export function IntegrationCard({
         ) : (;
           <Button variant="default" className="w-full" onClick={onConnect}>;
             <span>Connect</span>;
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
         </div>
       </CardHeader>
       <CardContent className="pb-4">
@@ -254,37 +196,21 @@ export function IntegrationCard({
         ) : (
           <Button variant="default" className="w-full" onClick={onConnect}>
             <span>Connect</span>
-<<<<<<< HEAD
-=======
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
           </Button>
 
         )}
-<<<<<<< HEAD
-
-            <ArrowRight className="ml-1.5 h-3.5 w-3.5" />;
-          </Button>;
-        )}
-
-      </CardFooter>;
-    </Card>;
-  );
-
-
-
-
-=======
       </CardFooter>
     </Card>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export function IntegrationCards() {
   return (
     <div className='grid md:grid-cols-3 gap-6'>;
       <IntegrationCard
 
   );
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 }
 
 export function IntegrationCards() {
@@ -301,15 +227,6 @@ export function IntegrationCards() {
       <IntegrationCard
         title="Salesforce"
         description="Sync leads and opportunities with Salesforce."
-<<<<<<< HEAD
-
-        icon={<Briefcase className="h-5 w-5" />}
-
-
-        onConnect={() => logDebug('Connect Salesforce clicked')}
-      />
-<<<<<<< HEAD
-=======
     </div>
   )
       />;
@@ -318,7 +235,7 @@ export function IntegrationCards() {
 }        icon={<Briefcase className="h-5 w-5" />}
         onConnect={() => logDebug('Connect Salesforce clicked')}
       />;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
       <IntegrationCard
         title="Microsoft Teams"
         description="Receive updates through Microsoft Teams."
@@ -326,18 +243,14 @@ export function IntegrationCards() {
         onConnect={() => logDebug('Connect Teams clicked')}
 
 
-<<<<<<< HEAD
-=======
 }
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
       />;
     </div>;
   );
 }
-<<<<<<< HEAD
-=======
 
   );
 }
@@ -508,8 +421,7 @@ function IntegrationCards() {
     </div>);
 }
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
         icon = {<Briefcase className="h-5 w-5" />,}
         onConnect = {() => logDebug('Connect Salesforce clicked'),}
       />
@@ -524,4 +436,4 @@ function IntegrationCards() {
     </div>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

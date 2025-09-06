@@ -1,33 +1,8 @@
-<<<<<<< HEAD
- 
-
-
- 
-
-
-export const getStaticProps: GetStaticProps<Props> = async () => {
-;
-}
-type Props = { pypi: Item[], crates: Item[], github: { [key: string]: Item[] } },
-export const getStaticProps: GetStaticProps < Props> = async () => {
-  try {
-    const file = path.join (process.cwd (), 'publicautomationtech - radar.json');
-    const raw = fs.readFileSync (file, 'utf8');
-    const data = JSON.parse (raw);
-    return {
-      props: {
-      revalidate: 7200}
-  } catch {;
-    return { props: { pypi: [], crates: [], github: {} }, revalidate: 7200 }
-  }
-  const langs = Object.keys(github);
-
-=======
 import fs from 'fs',
 import path from 'path';
 import type { GetStaticProps } from 'next';
 type Item = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-8">
       <header className="space-y-2">
@@ -124,8 +99,4 @@ function TechRadar() {
     </div>
 );
 }
-<<<<<<< HEAD
-  );
-}
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

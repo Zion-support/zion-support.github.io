@@ -1,11 +1,7 @@
   userId: string;
-<<<<<<< HEAD
-  averageRating?: number;
-  ratingCount?: number
-=======
    averageRating?: number;
    ratingCount?: number} export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) { const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews() const [ratingDistribution, setRatingDistribution] = useState<Record <number, number" >>({})"
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
 
 export function ProfileRatings({ userId, averageRating;

@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 import { supabase as supabaseClient  } from '@/utils/supabase/client';
 import { TALENT_PROFILES as LOCAL  } from '@/data/talent';
 import type { TalentProfile } from '@/utils/types/talent';
@@ -11,7 +9,7 @@ const hasSupabase =
 const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS |'en,es,de,fr,pt,ja,zh')
   .split(',')
   .map(x => x.trim());
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -27,19 +25,6 @@ export default async function handler(
       }
       return res && res.status(200).json({ items: LOCAL });
     } catch (e: any) {
-<<<<<<< HEAD
-      return res && res.status(500).json({ error: e && e.message });
-    }  }
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req && req.method === 'GET') {
-    try {
-        } as any);
-        // Check condition
-if (throw error) {
-  $2
-}
-        return res.status (201).json ({ slug: item.slug });
-=======
       return res.status(500).json({ error: e.message });
     }
   }
@@ -134,21 +119,16 @@ id: item.id,
         } as any);
         if (error) throw error;
         return res.status(201).json({ slug: item.slug });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       }
       // Fallback: return the slug as if saved;
       return res.status (201).json ({ slug: item.slug });
     } catch (e: any) {
       return res.status (500).json ({ error: e.message });
     }
-<<<<<<< HEAD
-    .end('Method Not Allowed');  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
-}
-}
-=======
   }
 return res
     .setHeader('Allow', 'GET, POST')
     .status(405)
     .end('Method Not Allowed');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

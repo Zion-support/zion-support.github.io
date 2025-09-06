@@ -1,30 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
 
-<<<<<<< HEAD
-const Page = () => {
-  return (
-    <MainLayout
-      title="Team - Zion Tech Group"
-      description="Meet our team"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Team</h1>
-          <p className="text-xl text-gray-600">Coming soon...</p>
-        </div>
-      </div>
-    </MainLayout>
-  );
-};
-
-export default Page;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import React from "react";
 import Head from "next/head";
@@ -43,10 +17,9 @@ import { motion } from "framer-motion";
   Code,
 } from "lucide-react";
 import Layout from "../components/Layout";
-=======
 import React from 'react';
 import SEO from '../components/SEO';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 const teamMembers = [
   {
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -336,12 +309,9 @@ const teamMembers = [;
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"],;
   },;
 ];
-<<<<<<< HEAD
-
-=======
 export default function TeamPage() {
   return (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     <Layout
       title="Our Team - Zion Tech Group"
       description="Meet our expert team of technology professionals. Experienced engineers, data scientists, and business leaders dedicated to delivering exceptional results."
@@ -828,47 +798,8 @@ export default /**
  */
 function TeamPage() {
   return (
-<<<<<<< HEAD
-    <>;
-      <SEO;
-        title="Our Team | Zion Tech Group";
-        description="Meet the leadership team at Zion Tech Group.";
-        canonical="/team";
-      />;
-      <div className="container mx - auto px - 4 py - 16">;
-        <h1 className="text - 4xl font - bold mb - 4">Our Team</h1>;
-        <p className="text - gray - 300 mb - 8">;
-          Profiles coming soon. For inquiries, contact us.;
-        </p>;
-      </div>;
-    </>);
-  return (
-    <>;
-      <SEO;
-        title="Our Team | Zion Tech Group";
-        description="Meet the leadership team at Zion Tech Group.";
-        canonical="/team";
-      />;
-      <div className="container mx - auto px - 4 py - 16">;
-        <h1 className="text - 4xl font - bold mb - 4">Our Team</h1>;
-        <p className="text - gray - 300 mb - 8">;
-          Profiles coming soon. For inquiries, contact us.;
-        </p>;
-      </div>;
-    </>);
-;
-}
 
 
-}
-
-;
-
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
     <>
       <SEO
         title="Our Team | Zion Tech Group"
@@ -882,7 +813,6 @@ function TeamPage() {
         </p>
       </div>
     </>
-=======
 export default function Team() {
   const teamMembers = [
     {
@@ -1045,6 +975,6 @@ export default function Team() {
       
       <Footer />
 </>
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

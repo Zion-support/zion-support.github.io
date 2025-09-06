@@ -1,19 +1,12 @@
 import React, { useState } from 'react';
 import { useAutoTranslate } from '../../hooks/useAutoTranslate';
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/components/admin/TranslationPreview.tsx
-
-const defaultTargets = ['enptesar']
-=======
 const defaultTargets = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533:components/admin/TranslationPreview.tsx
+origin/cursor/automate-test-improve-and-merge-code-2533:components/admin/TranslationPreview.tsx
 export default function TranslationPreview() {
   const [text, setText] = useState('')
   const [targets, setTargets] = useState<string[]>(defaultTargets)
   const { translations, loading, error } = useAutoTranslate(text, targets)
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/components/admin/TranslationPreview.tsx
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533:components/admin/TranslationPreview.tsx
+origin/cursor/automate-test-improve-and-merge-code-2533:components/admin/TranslationPreview.tsx
   return (
 <div className='space-y-4'>
       <h2 className='text-lg font-semibold'>Translation Preview</h2>
@@ -23,11 +16,6 @@ export default function TranslationPreview() {
         value={text}
         onChange={e => setText(e.target.value)}
       />
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/components/admin/TranslationPreview.tsx
-      <div className="text-sm text-gray-500">{loading ? 'Translating' : error ? `Error: ${error}` : 'Ready'}</div>
-      <div className="grid md:grid-cols-2 gap-4">
-        {targets.map((lng) => (
-=======
       <div className='text-sm text-gray-500'>
         {loading ? 'Translating…' : error ? `Error: ${error}` : 'Ready'}
       </div>
@@ -38,13 +26,11 @@ export default function TranslationPreview() {
             <div className='whitespace-pre-wrap text-sm min-h-[4rem]'>
               {translations[lng] || (lng === 'en' ? text : '')}
             </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533:components/admin/TranslationPreview.tsx
+origin/cursor/automate-test-improve-and-merge-code-2533:components/admin/TranslationPreview.tsx
           </div>
         ))}
       </div>
     </div>
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/components/admin/TranslationPreview.tsx
-=======
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533:components/admin/TranslationPreview.tsx
+origin/cursor/automate-test-improve-and-merge-code-2533:components/admin/TranslationPreview.tsx

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import React from "react";
 import { 
@@ -38,7 +36,7 @@ import { Separator } from "@/components/ui/separator"
 import { QuoteStatusBadge } from "./QuoteStatusBadge"
 import type { QuoteRequest } from "@/types/quotes"
 import {format} from "date-fns"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 interface QuoteDetailsProps {
   quote: QuoteRequest | null
   isOpen: boolean
@@ -65,21 +63,13 @@ interface QuoteDetailsProps {;
   isOpen: boolean,;
   onClose: () => void;
 }
-<<<<<<< HEAD
-
-export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
-  if (!quote) return null;
-
-  const formatDate = (dateString?: string) => {;
-    if (!dateString) return 'Not specified';    try {;
-=======
 ;
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
   if (!quote) return null,;
   const formatDate = (dateString?: string) => {;
     if (!dateString) return 'Not specified',;
     try {;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
       return format(new Date(dateString), 'PPP');
     } catch (e) {;
       return dateString;
@@ -408,8 +398,5 @@ if (return 'Not specified') {
 }` : 'Not specified');
 }</div> </CardContent> </Card> </div> </DialogContent> </Dialog>);
 }
-<<<<<<< HEAD
-'";
-=======
 '"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

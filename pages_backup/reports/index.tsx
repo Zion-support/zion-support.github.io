@@ -21,9 +21,6 @@ export default function Reports() {
   const [pagespeed, setPagespeed] = useState<any>({});
   useEffect(() => {
     Promise.all([
-<<<<<<< HEAD
-
-=======
       fetch('/api/reports/uptime').then((r) => r.json()).then(setUptime);
       fetch('/api/reports/seo').then((r) => r.json()).then(setSeo);
       fetch('/api/reports/links').then((r) => r.json()).then(setLinks);
@@ -34,7 +31,7 @@ export default function Reports() {
   }, []),
 
   const lastUptime = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       fetch('/api/reports/uptime')
         .then(r => r.json())
         .then(setUptime)
@@ -55,10 +52,7 @@ export default function Reports() {
         .then(setPagespeed)
     ]).catch(() => {});  }, []);
   const lastUptime = uptime[uptime.length - 1];
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 <div className='space-y-6'>
       <div>
@@ -239,11 +233,6 @@ function Reports() {
           <div className="font-medium mb-1">Changelog (weekly)</div>
           <div className="text-sm text-gray-600">Commits: {changelog?.totalCommits || 0}</div>
         </div>
-<<<<<<< HEAD
-
-
-
-=======
         <div className='border rounded p-4'>
           <div className='font-medium mb-1'>SEO (weekly)</div>
           <div className='text-sm text-gray-600'>
@@ -277,4 +266,4 @@ function Reports() {
       </section>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

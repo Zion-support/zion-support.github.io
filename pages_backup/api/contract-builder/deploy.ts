@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',;
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 import { Interface } from 'ethers',;
 // Simple ABI for demonstration (release/refund)
 const abi = [
@@ -15,17 +11,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   const { bytecode, constructorArgs } = req.body |{}
   if (!bytecode |!constructorArgs) {
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
     return res.status(400).json({ error: 'bytecode and constructorArgs are required' })
-=======
 import { Interface } from '[^']*';
 // Simple ABI for demonstration (release/refund)
 const abi = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
   try {
     const iface = new Interface(abi)
@@ -33,26 +25,6 @@ const abi = null;
     const tx = {
       data: bytecode + data.slice(2)
       // gas and value are intentionally left for client to estimate via MetaMask
-<<<<<<< HEAD
-
-  try {
-    const iface = new Interface(abi)
-    const data = iface.encodeDeploy(constructorArgs)
-    const tx = {
-      data: bytecode + data.slice(2)
-      // gas and value are intentionally left for client to estimate via MetaMask
-    }
-    return res.status(200).json({ abi, tx })
-  } catch (e: any) {
-    return res.status(400).json({ error: e?.message || 'Failed to prepare deployment tx' })
-  };
-};
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { Interface } from 'ethers';
-// Simple ABI for demonstration (release/refund);
-import { Interface } from 'ethers';
-// Simple ABI for demonstration (release/refund);
-=======
     };
 return res.status(200).json({ abi, tx });
   } catch (e: any) {
@@ -60,7 +32,7 @@ return res.status(200).json({ abi, tx });
       .status(400)
       .json({ error: e?.message || 'Failed to prepare deployment tx' });
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
     return res.status(200).json({ abi, tx })
   } catch (e: any) {
@@ -69,14 +41,11 @@ return res.status(200).json({ abi, tx });
 
 }
 
-<<<<<<< HEAD
-=======
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { Interface } from 'ethers'
 // Simple ABI for demonstration (release / refund);
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
 const abi = [;
   'constructor (address _client, address _talent, address _token, uint256 _totalAmount, string _projectTitle)function release () externalfunction refund () externalfunction client () view returns (address)function talent () view returns (address)function total_amount () view returns (uint256)';
 ]
@@ -107,27 +76,20 @@ if ( {) {
     return res.status (200).json ({ abi, tx });
   } catch (e: any) {
     return res.status (400).json ({ error: e?.message || 'Failed to prepare deployment tx' });
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
   }
 }
 
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
 
 
   }
 
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+ursor/fix-website-loading-errors-and-merge-6662
 ;
   const { bytecode, constructorArgs } = req.body || {};
   if (!bytecode || !constructorArgs) {;
@@ -159,7 +121,6 @@ if ( {) {
   }
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
+

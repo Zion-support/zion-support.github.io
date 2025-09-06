@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-    <>;
-=======
 import { SEO } from '@/components/SEO';
 import { ApplicationsTracker } from '@/components/jobs/applications';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
@@ -12,7 +9,7 @@ function ApplicationStatusTrackerContent() {
   const isMobile = null;
   return (
     <>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       <SEO
         title='Application Status Tracker | Zion AI Marketplace'
         description='Track the status of your job applications in the Zion AI marketplace.'
@@ -67,14 +64,6 @@ function ApplicationStatusTrackerContent() {
         </div>
       </div>
     </>
-<<<<<<< HEAD
-    <ProtectedRoute>;
-      <ApplicationStatusTrackerContent />;
-    </ProtectedRoute>;
-  );
-}
-;
-=======
   );
 }
 
@@ -84,4 +73,4 @@ export default function ApplicationStatusTracker() {
       <ApplicationStatusTrackerContent />
     </ProtectedRoute>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-      </ul>
-      <div className="mt-4 p-4 rounded border">
-        <h2 className="font-medium mb-2">Smart CTA</h2>
-        <p>Invite your AI audience to earn & help them get hired.</p>
-      </div>
-    </div>
-  )
-}
-=======
 export default function BrandKit() {
   return (
 <div className='space-y-4'>
@@ -22,4 +12,4 @@ export default function BrandKit() {
       </div>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

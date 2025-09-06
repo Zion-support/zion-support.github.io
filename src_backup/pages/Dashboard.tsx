@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react',
 import dynamic from 'next/dynamic',
 import { useAuth } from "@/hooks/useAuth",
@@ -41,7 +38,7 @@ import { useFavorites } from '@/hooks/useFavorites'
 import { useToast } from '@/hooks/use-toast'
 import { EmptyState } from '@/components/ui/empty-state'
 import Link from 'next/link'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 // Lazy load heavy components to prevent router abort
 const CommunityDiscussion = dynamic(
   () =>
@@ -437,13 +434,6 @@ export default function Dashboard() {;
                       <Settings size={16} className='text-zion-purple' />
                       Send Onboarding Nudge
                     </Button>
-<<<<<<< HEAD
-                      Send System Alert;
-                    </Button>;
-                  </div>;
-                </div>;
-              </div>;
-=======
                     <Button
                       className='w-full flex items-center justify-center gap-2'
                       variant='outline'
@@ -482,7 +472,7 @@ export default function Dashboard() {;
               <div className='bg-zion-blue-dark rounded-xl p-6'>
                 <h3 className='text-lg font-bold text-white mb-4 flex items-center'>
                   <Bell size={18} className='mr-2 text-zion-cyan' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   Recent Notifications
                 </h3>
                 <div className="space-y-4">
@@ -709,40 +699,6 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue"> <div className
 }className="text - zion - purple" /> async () => {
   try {
   const {
-<<<<<<< HEAD
-
-                        className='text-zion-purple underline'>;
-                        View all;
-                      </Link>;
-
-;
-                        ))}
-                      </ul>
-                    )}
-                        ))}
-                      </ul>
-                    )}
-                    <div className="mt-2 text-right">;
-                      <Link href="/wishlist" className="text-zion-purple underline">View all</Link>;
-                    </div>;
-                  </div>;
-                  <div className="bg-zion-blue-dark rounded-xl p-6">;
-                    <h3 className="text-lg font-bold text-white mb-4 flex items-center">;
-                      <Key className="mr-2" size={18} /> API Keys;
-                    </h3>;
-                    <ApiKeysManager />;
-                  </div>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-      <GuidedTour role={roleForTour} />;
-    </>;
-  );
-}
-=======
 import React from 'react';
 
 const Dashboard: React.FC = () => {
@@ -757,8 +713,7 @@ const Dashboard: React.FC = () => {
 };
 
 export default Dashboard;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
   createSystemNotification
 }= await loadNotificationFunctions ()
 await createSystemNotification ({'"
@@ -825,4 +780,4 @@ toast ({"
   roleForTour
 }/> </>)
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

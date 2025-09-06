@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-
-<<<<<<< HEAD
-=======
 interface SEOProps {
   title?: string;
   description?: string;
@@ -38,9 +31,8 @@ export default function SEO({
     </Head>
   );
 }
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 import React from './react';
 import Head from './next / head';
 ;
@@ -76,11 +68,8 @@ export default function SEO({
 export default SEO;
 }
 export default SEO;
-<<<<<<< HEAD
-=======
->>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+
 import React from 'react';
 import Head from 'next/head';
 
@@ -157,4 +146,4 @@ const SEO: React.FC<SEOProps> = ({
 };
 
 export default SEO;
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

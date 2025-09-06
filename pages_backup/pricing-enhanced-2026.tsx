@@ -1,52 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import { motion, AnimatePresence } from 'framer-motion',;
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity } from 'lucide-react',;
-import Button from '../components/ui/Button',;
-import Card from '../components/ui/Card',;
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',;
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard',;
-import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices } from '../data/enhanced-real-micro-saas-services',;
-import { nextGenerationAIServices } from '../data/next-generation-ai-services',;
-import { cuttingEdgeITServices } from '../data/cutting-edge-it-services',;
-import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2',;
-import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2',;
-import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2',;
-import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2',;
-import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-v3',;
-import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3',;
-import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3',;
-export default function PricingEnhanced2026Page() {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
-  const [selectedPlan, setSelectedPlan] = useState<string | null>(null),
-
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  },
-
-  const popularServices = getPopularServices(),
-  
-  // Combine all services for comprehensive pricing
-  const allServices = [
-    ...enhancedRealMicroSaasServices,
-    ...nextGenerationAIServices,
-    ...cuttingEdgeITServices,
-    ...innovativeMicroSaasV2Services,
-    ...innovative2026MicroSaasServicesV2,
-    ...emergingTech2026ServicesV2,
-    ...enterpriseIT2026ServicesV2,
-    ...innovative2026AIServicesV3,
-    ...emergingTech2026ServicesV3,
-    ...enterpriseIT2026ServicesV3
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity } from 'lucide-react';
-=======
 import {
   Check,
   Star,
@@ -107,7 +58,7 @@ import {
   Crown,
   Infinity,;
 } from 'lucide-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -126,9 +77,6 @@ import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-
 import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-v3';
 import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3';
 import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3';
-<<<<<<< HEAD
-  ],
-=======
 export default function PricingEnhanced2026Page() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(
     'monthly'
@@ -248,7 +196,7 @@ services: [
     },
   ];
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
     {
@@ -258,18 +206,6 @@ services: [
       period: billingCycle === 'monthly' ? '/month' : '/month'
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
-<<<<<<< HEAD
-        'Mobile App AccessAPI Access (1000 calls/month)'
-      ]
-      icon: <Sparkles className="w-8 h-8" />
-      variant: 'quantum' as const
-      popular: false
-      cta: 'Start Free Trial'
-      color: 'from-blue-500 to-indigo-600'
-
-    };
-
-=======
 'Access to 100+ Core Services',
         'Basic AI Integration',
         'Standard Support (24/7)',
@@ -287,7 +223,7 @@ services: [
       cta: 'Start Free Trial',
       color: 'from-blue-500 to-indigo-600',
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     {
       name: 'Professional'
       description: 'Ideal for growing businesses and teams'
@@ -295,18 +231,6 @@ services: [
       period: billingCycle === 'monthly' ? '/month' : '/month'
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
-<<<<<<< HEAD
-        'Custom IntegrationsAPI Access (10,000 calls/month)Users Collaboration ToolsAdvanced Workflow Automation'
-      ]
-      icon: <Star className="w-8 h-8" />
-      variant: 'holographic' as const
-      popular: true
-      cta: 'Start Free Trial'
-      color: 'from-purple-500 to-pink-600'
-
-    };
-
-=======
 'Access to 500+ Services',
         'Advanced AI & Quantum Features',
         'Priority Support (24/7)',
@@ -326,7 +250,7 @@ services: [
       cta: 'Start Free Trial',
       color: 'from-purple-500 to-pink-600',
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     {
       name: 'Enterprise'
       description: 'For large organizations and enterprises'
@@ -334,18 +258,6 @@ services: [
       period: billingCycle === 'monthly' ? '/month' : '/month'
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
-<<<<<<< HEAD
-        'Custom DevelopmentUnlimited API AccessAdvanced Users ManagementWhite-label SolutionsCustom SLA AgreementsOn-site Implementation'
-      ]
-      icon: <Crown className="w-8 h-8" />
-      variant: 'quantum-advanced' as const
-      popular: false
-      cta: 'Contact Sales'
-      color: 'from-yellow-500 to-orange-600'
-    }
-      color: 'from-green-500 to-emerald-600'
-    }
-=======
 'Access to ALL Services (1000+)',
         'Full AI & Quantum Suite',
         'Dedicated Support Users',
@@ -385,7 +297,7 @@ description:
       icon: '📈',
       color: 'from-green-500 to-emerald-600',
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     {
       name: 'Zero Trust Network Architecture 2026',
       price: '$6,999/month',
@@ -414,18 +326,6 @@ description:
       color: 'from-blue-500 to-cyan-600',
     },
     {
-<<<<<<< HEAD
-      name: 'Quantum Internet Security Platform'
-      price: '$4,999/month'
-      description: 'Unbreakable quantum encryption for the future internet'
-      features: ['Quantum key distributionPost-quantum cryptographyReal-time threat detection']
-      link: 'https://ziontechgroup.com/services/quantum-internet-security-platform'
-      icon: '🔐'
-      color: 'from-blue-500 to-cyan-600'
-    }
-  ]
-
-=======
       name: 'Quantum Internet Security Platform',
       price: '$4,999/month',
       description: 'Unbreakable quantum encryption for the future internet',
@@ -491,7 +391,7 @@ description:
         </Head>
         {/* Enhanced Header Section */}
         <div className='relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <UltraFuturisticBackground variant="holographic" intensity="high">
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden">
@@ -530,65 +430,15 @@ description:
 }
         <div className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <motion.div
-<<<<<<< HEAD
-            initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            className="max-w-7xl mx-auto text-center"
-=======
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 className='max-w-7xl mx-auto text-center'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6'>
               Enhanced 2026 Pricing
             </h1>
-<<<<<<< HEAD
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your business with our comprehensive collection of innovative AI, quantum computing, and enterprise IT services. 
-
-              Achieve remarkable ROI with transparent, competitive pricing.
-            </p>
-            className="max - w-7xl mx - auto text - center";
-          >;
-            <h1 className="text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent mb - 6">;
-              Enhanced 2026 Pricing;
-            </h1>;
-            <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto">;
-              Transform your business with our comprehensive collection of innovative AI, quantum computing, and enterprise IT services.;
-              Achieve remarkable ROI with transparent, competitive pricing.;
-            </p>;
-            {/* Billing Cycle Toggle */}
-              Transform your business with our comprehensive collection of innovative AI, quantum computing, and enterprise IT services.
-              Achieve remarkable ROI with transparent, competitive pricing.
-            </p>
-            {/* Billing Cycle Toggle */}
-            {/* Billing Cycle Toggle */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
-
-            <div className="flex items-center justify-center space-x-4 mb-8">
-              <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly</span>
-=======
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
               Transform your business with our comprehensive collection of
               innovative AI, quantum computing, and enterprise IT services.
@@ -601,7 +451,7 @@ className='max-w-7xl mx-auto text-center'
               >
                 Monthly
               </span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <button
                 onClick={() =>
                   setBillingCycle(
@@ -618,26 +468,6 @@ billingCycle === 'yearly'
                       ? 'translate-x-8'
                       : 'translate-x-1'
                   }`}
-<<<<<<< HEAD
-            <div className="flex items - center justify - center space - x-4 mb - 8">;
-              <span className={`text - lg ${billing_cycle === 'monthly' ? 'text - white' : 'text - gray - 400'}`}>Monthly</span>;
-              <button;
-                on_click={() => setBillingCycle (billing_cycle === 'monthly' ? 'yearly' : 'monthly')}
-                className={`relative inline - flex h - 8 w - 16 items - center rounded - full transition - colors ${
-                  billing_cycle === 'yearly' ? 'bg - cyan - 600' : 'bg - gray - 600';
-                }`}
-              >;
-                <span;
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 max-w-2xl mx-auto">
-              <h3 className="text-xl font-semibold text-cyan-400 mb-4">Need Custom Pricing?</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-                <div className="flex items-center justify-center space-x-2">
-                  <Phone className="w-4 h-4 text-purple-400" />
-=======
                 />
               </button>
               <span
@@ -654,7 +484,7 @@ billingCycle === 'yearly'
               <div className='grid grid-cols-1 md:grid-cols-3 gap-4 text-sm'>
                 <div className='flex items-center justify-center space-x-2'>
                   <Phone className='w-4 h-4 text-purple-400' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <span>{contactInfo.mobile}</span>
                 </div>
                 <div className='flex items-center justify-center space-x-2'>
@@ -669,16 +499,11 @@ billingCycle === 'yearly'
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
-        <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-=======
         {/* Enhanced Pricing Tiers */}
 <div className='relative z-10 px-4 sm:px-6 lg:px-8 mb-20'>
           <div className='max-w-7xl mx-auto'>
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               {pricingTiers.map((tier, index) => (
                 <motion.div
                   key={tier.name}
@@ -700,21 +525,6 @@ className='relative'
 }
                   >
                     {tier.popular && (
-<<<<<<< HEAD
-
-
-
-                    
-
-                    )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    <div className="p-8 text-center">
-                      <div className="flex justify-center mb-4">
-                        <div className={`p-3 rounded-full bg-gradient-to-r ${tier.color}`}>
-=======
 <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
                         <div className='bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
                           Most Popular
@@ -726,7 +536,7 @@ className='relative'
                         <div
                           className={`p-3 rounded-full bg-gradient-to-r ${tier.color}`}
                         >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                           {tier.icon}
                         </div>
                       </div>
@@ -742,14 +552,11 @@ className='relative'
                         </span>
                         <span className='text-gray-400'>{tier.period}</span>
                         {tier.savings && (
-<<<<<<< HEAD
-                          <div className="text-sm text-green-400 mt-1">{tier.savings}</div>
-=======
                           <div className='text-sm text-green-400 mt-1'>
                             {tier.savings}
                           </div>
                         )}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>
 
                       <ul className='text-left space-y-3 mb-8'>
@@ -760,38 +567,6 @@ className='relative'
                           </li>
                         ))}
                       </ul>
-<<<<<<< HEAD
-                                             <Button
-                                                   variant="primary"
-                         size="lg"
-                         className="w-full"
-                         onClick={() => {
-                           if (tier.name === 'Enterprise') {
-                             window.open(`mailto:${contactInfo.email}?subject=Enterprise Pricing Inquiry`, '_blank')
-                           } else {
-                             window.open(`mailto:${contactInfo.email}?subject=Start Free Trial - ${tier.name}`, '_blank')
-              initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              className="text-center mb-12"
-=======
 
                       <Button
                         variant='primary'
@@ -829,7 +604,7 @@ className='relative'
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 className='text-center mb-12'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>
                 Service Categories & Pricing
@@ -860,17 +635,6 @@ className='text-center mb-12'
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-
-
-                      </ul>
-
-
-                      <Button
-                        variant="primary"
-                        size="sm"
-                        className="w-full"
-=======
                 >
 <UltraFuturisticCard
                     variant='quantum-advanced'
@@ -922,7 +686,7 @@ className='text-center mb-12'
                             '_blank'
                           )
                         }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       >
                         View Services
                         <ArrowRight className='w-4 h-4 ml-2' />
@@ -931,52 +695,6 @@ className='text-center mb-12'
                   </UltraFuturisticCard>
                 </motion.div>
         {/* Featured Services Showcase */}
-<<<<<<< HEAD
-        <div className="relative z - 10 px - 4 sm:px - 6 lg:px - 8 mb - 20">;
-          <div className="max - w-7xl mx - auto">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </div>;
-          </div>;
-        </div>;
-        {/* Featured Services Showcase */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              className="text-center mb-12"
-=======
 <div className='relative z-10 px-4 sm:px-6 lg:px-8 mb-20'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
@@ -985,7 +703,7 @@ className='text-center mb-12'
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 className='text-center mb-12'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>
                 Featured Services
@@ -1016,18 +734,6 @@ className='text-center mb-12'
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-
-
-                      </ul>
-
-
-                      <div className="flex space-x-2">
-                        <Button
-                          variant="primary"
-                          size="sm"
-                          className="flex-1"
-=======
                 >
 <UltraFuturisticCard variant='holographic' className='h-full'>
                     <div className='p-6'>
@@ -1067,37 +773,12 @@ className='text-center mb-12'
                           size='sm'
                           className='flex-1'
                           onClick={() => window.open(service.link, '_blank')}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                         >
                           Learn More
                           <ArrowRight className='w-4 h-4 ml-1' />
                         </Button>
                         <Button
-<<<<<<< HEAD
-                          variant="secondary"
-                          size="sm"
-              initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              className="bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 text-center"
-=======
                           variant='secondary'
                           size='sm'
                           onClick={() =>
@@ -1126,7 +807,7 @@ className='text-center mb-12'
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 className='bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 text-center'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
                 Ready to Transform Your Business?
@@ -1138,10 +819,6 @@ className='bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 ba
               </p>
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <Button
-<<<<<<< HEAD
-                  variant="primary"
-                  size="lg"
-=======
                   variant='primary'
                   size='lg'
                   onClick={() =>
@@ -1150,22 +827,18 @@ className='bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 ba
                       '_blank'
                     )
                   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   <Mail className='w-5 h-5 mr-2' />
                   Schedule Consultation
                 </Button>
                 <Button
-<<<<<<< HEAD
-                  variant="secondary"
-                  size="lg"
-=======
                   variant='secondary'
                   size='lg'
                   onClick={() =>
                     window.open(`tel:${contactInfo.mobile}`, '_blank')
                   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   <Phone className='w-5 h-5 mr-2' />
                   Call Now
@@ -1182,54 +855,5 @@ className='bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 ba
         </div>
       </div>
     </UltraFuturisticBackground>
-<<<<<<< HEAD
-  )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-}
-
-              className="bg - gradient - to - r from - cyan - 900 / 50 via - purple - 900 / 50 to - pink - 900 / 50 backdrop - blur - sm rounded - 2xl p - 8 border border - cyan - 500 / 30 text - center";
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
-                Ready to Transform Your Business?;
-              </h2>;
-              <p className="text - xl text - gray - 300 mb - 8">;
-                Join thousands of businesses already using our innovative services to gain competitive advantages and achieve remarkable ROI.;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <Button;
-                  variant="primary";
-                  size="lg";
-                  on_click={() => window.open (`mailto:${contact_info.email}?subject = Business Transformation Consultation`, '_blank')}
-                >;
-                  <Mail className="w - 5 h - 5 mr - 2" />;
-                  Schedule Consultation;
-                </Button>;
-                <Button;
-                  variant="secondary";
-                  size="lg";
-                  on_click={() => window.open (`tel:${contact_info.mobile}`, '_blank')}
-                >;
-                  <Phone className="w - 5 h - 5 mr - 2" />;
-                  Call Now;
-                </Button>;
-              </div>;
-              <div className="mt - 8 text - sm text - gray - 400">;
-                <p > Contact: {contact_info.mobile} | {contact_info.email}</p>;
-                <p>{contact_info.address}</p>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </div>;
-      </div>;
-    </UltraFuturisticBackground>);
-}
-
-
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

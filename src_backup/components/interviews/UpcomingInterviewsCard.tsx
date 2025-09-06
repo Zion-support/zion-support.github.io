@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-        // Filter for confirmed interviews in the future
-=======
 // Filter for confirmed interviews in the future
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
         const upcoming = interviews
           .filter(
             interview =>
@@ -24,10 +20,8 @@
         logErrorToProduction('Error loading upcoming interviews:', {
           data: error
         })
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
           .sort((a, b) => 
             parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
           )
@@ -75,8 +69,6 @@ import { useInterviews } from "@/hooks/useInterviews",;
 import { Interview } from "@/types/interview",;
 import { format, isPast, parseISO } from "date-fns",;
 import Link from "next/link",;
-<<<<<<< HEAD
-=======
 import { Calendar, Clock, Video } from 'lucide-react';
 import { Avatar } from '@/components / ui / avatar';
 import { logErrorToProduction } from '@/utils / production_logger';
@@ -113,9 +105,8 @@ function UpcomingInterviewsCard() {
     }
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
+origin/cursor/automate-test-improve-and-merge-code-2533
 import React, { useEffect, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -124,9 +115,6 @@ import { Interview } from '@/types/interview';
 import { format, isPast, parseISO } from 'date-fns';
 import Link from 'next/link';
 import { Calendar, Clock, Video } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { Avatar } from '@/components/ui/avatar';
 import { logErrorToProduction } from '@/utils/productionLogger';
 export function UpcomingInterviewsCard() {;
@@ -182,13 +170,11 @@ if ( {) {
         <CardHeader>;
           <CardTitle className='text - lg flex items - center'>;
             <Video className='h - 5 w - 5 mr - 2 text - zion - purple' />;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
             Upcoming Interviews;
           </CardTitle>;
         </CardHeader>;
         <CardContent>;
-<<<<<<< HEAD
-=======
 
           </div>;
         </CardContent>;
@@ -197,7 +183,7 @@ if ( {) {
 
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   }
   if (upcomingInterviews.length === 0) {
     return (
@@ -221,18 +207,6 @@ if ( {) {
         </CardContent>
       </Card>
     )
-<<<<<<< HEAD
-    <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
-      <CardHeader>
-        <CardTitle className="text-lg flex items-center">
-          <Video className="h-5 w-5 mr-2 text-zion-purple" />
-          Upcoming Interviews
-        </CardTitle>
-      </CardHeader>
-      <CardContent>
-        <div className="space-y-4">
-          {upcomingInterviews.map(interview => {
-=======
           </div>;
         </CardContent>;
       </Card>;
@@ -263,7 +237,7 @@ if ( {) {
     );
   }
   return (
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 
 
 
@@ -280,7 +254,6 @@ if ( {) {
 
 
 
-=======
 import { Avatar } from '@/components/ui/avatar';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
@@ -291,7 +264,7 @@ export function UpcomingInterviewsCard() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     const loadInterviews = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             return (
               <div key={interview.id} className="flex items-center gap-3">
                 <Avatar className="h-10 w-10 bg-zion-purple/10">
@@ -306,20 +279,16 @@ export function UpcomingInterviewsCard() {
                     </div>
                   )}
                 </Avatar>
-<<<<<<< HEAD
-=======
                 <div className="flex-1">
                   <div className="flex justify-between items-start">
                     <p className="font-medium line-clamp-1">
                       {interview.title || "Interview"}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                     </p>
                     {isStartingSoon && (
                       <span className='text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse'>
                         Soon
                       </span>
-<<<<<<< HEAD
-=======
     <Card className='bg-zion-blue-dark/40 border-zion-blue-light'>;
       <CardHeader>;
         <CardTitle className='text-lg flex items-center'>;
@@ -392,7 +361,7 @@ export function UpcomingInterviewsCard() {
             );
           })}
         </div>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
         
         <div className="mt-4 pt-3 border-t border-zion-blue-light/40">
           <Button asChild size="sm" variant="outline" className="w-full">
@@ -405,10 +374,6 @@ export function UpcomingInterviewsCard() {
         </div>
       </CardContent>
     </Card>
-<<<<<<< HEAD
-  )
-<<<<<<< HEAD
-=======
                   </div>;
                 </div>;
               </div>;
@@ -535,7 +500,6 @@ if ( {) {
 }
 
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

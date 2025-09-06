@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { useState } from 'react';
 import { Briefcase, Star, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 import { useState } from "react";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import { Briefcase, Star, User } from 'lucide-react'
 import { Button } from "@/components/ui/button";
 interface UserTypeOption {
@@ -14,8 +11,6 @@ export function UserTypeSelection({
   onSelect
   selectedType
 }: UserTypeSelectionProps) {
-<<<<<<< HEAD
-=======
 id: 'serviceProvider'
       name: 'Service Provider'
       description: 'I want to offer services on the platform'
@@ -59,7 +54,7 @@ import { Button } from "@/components/ui/button";
 interface UserTypeOption {
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   const userTypes: UserTypeOption[] = [
     {
       id: "serviceProvider",
@@ -74,19 +69,11 @@ interface UserTypeOption {
       icon: Star
     },
     {
-<<<<<<< HEAD
-      id: "client",
-      name: "Client",
-      description: "I want to discover and hire talent or services",
-      icon: User
-    }
-  ],
-=======
 
 
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 
   return (
 
@@ -167,7 +154,6 @@ interface UserTypeOption {
           const Icon = type.icon,
           const isSelected = selectedType === type.id,
           
-=======
   const userTypes: UserTypeOption[] = [
     {
       id: "serviceProvider";
@@ -191,35 +177,19 @@ interface UserTypeOption {
 
   return (
     <div className;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           return (
             <Button
               key={type.id}
               onClick={() => onSelect(type.id)}
-<<<<<<< HEAD
-              variant="outline"
-              className={`h-auto flex flex-col items-center justify-center p-6 space-y-3 border ${
-                isSelected 
-                  ? "border-zion-purple bg-zion-purple/10 text-zion-purple" 
-                  : "border-zion-blue-light hover:border-zion-cyan/50 text-white"
-<<<<<<< HEAD
-    <div className="space-y-6">
-      <div className="text-center mb-6">
-        <h3 className="text-2xl font-bold text-white">Choose your role</h3>
-        <p className="text-zion-slate-light mt-2">
-          This helps us personalize your experience
-        </p>
-      </div>
-=======
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
               variant='outline'              className={`h-auto flex flex-col items-center justify-center p-6 space-y-3 border ${
                 isSelected
                   ? 'border-zion-purple bg-zion-purple/10 text-zion-purple'
                   : 'border-zion-blue-light hover:border-zion-cyan/50 text-white'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               }`}
             >
               <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>
@@ -239,8 +209,6 @@ interface UserTypeOption {;
   description: string,;
   icon: React.ElementType;
 }
-<<<<<<< HEAD
-=======
 ;
 interface UserTypeSelectionProps {;
   onSelect: (userType: "serviceProvider" | "talent" | "client") => void,;
@@ -302,14 +270,8 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
               </div>;
             </Button>;
           );
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
         })}
-<<<<<<< HEAD
-      </div>;
-    </div>;
-  );
-<<<<<<< HEAD
-=======
 
 
 
@@ -319,9 +281,8 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
 
 }
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
       </div>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

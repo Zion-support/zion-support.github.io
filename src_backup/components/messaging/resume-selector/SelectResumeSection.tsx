@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export function SelectResumeSection({
-=======
 import React from 'react';
 import { FileText } from 'lucide-react';
 import { ResumeOption } from '../resume-selector/types';
@@ -25,7 +20,7 @@ export function SelectResumeSection({
   selectedResume;
   handleResumeSelect;
   handleDownloadResume;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   isLoading
 }: SelectResumeSectionProps) {
   return (
@@ -94,7 +89,6 @@ export function SelectResumeSection({
   );
 }
 ;
-=======
 import React from 'react';
 import { FileText } from 'lucide-react';
 
@@ -149,58 +143,5 @@ const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({
       </div>
     </div>
   );
-<<<<<<< HEAD
-};
-
-interface SelectResumeSectionProps {
-  resumes: ResumeOption[];
-  selectedResume: ResumeOption | null;
-  onSelectResume: (resume: ResumeOption) => void;
-  onUploadNew: () => void;
 }
-
-export const SelectResumeSection: React.FC<SelectResumeSectionProps> = ({
-  resumes,
-  selectedResume,
-  onSelectResume,
-  onUploadNew,
-}) => {
-  return (
-    <div className="space-y-4">
-      <div className="flex items-center justify-between">
-        <h3 className="text-lg font-semibold">Select Resume</h3>
-        <button
-          onClick={onUploadNew}
-          className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
-        >
-          Upload New
-        </button>
-      </div>
-      
-      {resumes.length === 0 ? (
-        <div className="text-center py-8">
-          <FileText className="mx-auto h-12 w-12 text-gray-400" />
-          <h3 className="mt-2 text-sm font-medium text-gray-900">No resumes found</h3>
-          <p className="mt-1 text-sm text-gray-500">
-            Upload your first resume to get started.
-          </p>
-        </div>
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {resumes.map((resume) => (
-            <ResumePreviewCard
-              key={resume.id}
-              resume={resume}
-              isSelected={selectedResume?.id === resume.id}
-              onSelect={onSelectResume}
-            />
-          ))}
-        </div>
-      )}
-    </div>
-  );
-};
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

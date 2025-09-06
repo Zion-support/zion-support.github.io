@@ -1,13 +1,9 @@
 import { useRouter  } from 'next/router';
 import {useRouter} from 'next/router';
 import useSWR from 'swr';
-<<<<<<< HEAD
-
-import {useEffect, useState} from 'react';
-=======
 import { useEffect, useState } from 'react';
 const fetcher = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 export default function EditJobPage() {
 export default function EditJobPage() {;
@@ -38,42 +34,6 @@ export default function EditJobPage(req, res) {
   const [category, setCategory] = useState('');
   useEffect(() => {
     if (job) {
-<<<<<<< HEAD
-      setTitle(job.title |'');
-      setDescription(job.description |'');
-      setCategory(job.category |'');    }
-
-      setTitle(job.title || '');
-      setDescription(job.description || '');
-      setCategory(job.category || '')
-    }
-
-  }, [job]);
-  async function save() {
-    await fetch(`/api/jobs/${id}`, {
-
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ title, description, category })});
-    router.push('/client/dashboard')
-  }
-
-
-  useEffect(() => {;
-    if (job) {;
-      setTitle(job && job.title || '');
-      setDescription(job && job.description || '');
-      setCategory(job && job.category || '');    }
-  }, [job]);
-
-  async function save() {;
-    await fetch(`/api/jobs/${id}`, {;
-      method: 'PATCH',;
-      headers: { 'Content-Type': 'application/json' },;
-  return (
-    <div className="max-w-2xl mx-auto space-y-4">
-      <h1 className="text-2xl font-semibold">Edit Job</h1>
-=======
       setTitle(job.title || '');
       setDescription(job.description || '');
 setCategory(job.category || '');
@@ -92,7 +52,7 @@ body: JSON.stringify({ title, description, category }),
   return (
 <div className='max-w-2xl mx-auto space-y-4'>
       <h1 className='text-2xl font-semibold'>Edit Job</h1>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       <div>
         <label className="block text-sm font-medium">Title</label>
         <input className="mt-1 w-full border rounded p-2" value={title} onChange={(e) => setTitle(e.target.value)} />
@@ -109,27 +69,5 @@ body: JSON.stringify({ title, description, category }),
         <button className="px-4 py-2 rounded bg-black text-white" onClick={save}>Save</button>
       </div>
     </div>
-<<<<<<< HEAD
-
-  )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      body: JSON && JSON.stringify({ title, description, category }),;
-    });
-    router && router.push('/client/dashboard');  }
-
-  if (!job) return <div>Loading…</div>;
-
-
-
-  return (
-
-
-
-
-=======
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

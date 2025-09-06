@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-interface NotificationProps {
-  type: 'message' | 'order' | 'default';
-}
-}
-return <Badge className="bg - blue - 500">Message</Badge>;
-      return <Badge className="bg - orange - 500">Order</Badge>;    default:;
-      return <Badge variant="outline">Notification</Badge>;
-import React, { useState, useEffect } from 'react';
-import { Bell, Check, X, AlertCircle, Info, CheckCircle } from 'lucide-react';
-=======
 import React, { useState } from 'react';
 import { useNotifications } from '@/context/notifications/NotificationContext';
 import {
@@ -31,22 +20,14 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from '@/hooks/use-toast';
 
-<<<<<<< HEAD
-
-
-
-
-
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 interface Notification {
   id: string;
   type: 'message' | 'order' | 'system' | 'promotion';
@@ -56,36 +37,9 @@ interface Notification {
   read: boolean;
   action_url?: string;
 }
-<<<<<<< HEAD
-
-
-
-
-import React, { useState } from 'react',;
-import { useNotifications } from '@/context/notifications/NotificationContext',;
-import {;
-  NotificationType,;
-  NotificationContextType} from '@/context/notifications',;
-import { formatDistanceToNow } from 'date-fns',;
-import { Bell, Check, Trash2, ChevronRight, CheckCircle, AlertCircle, MessageCircle, Briefcase, UserCheck, Settings, Package } from 'lucide-react';
-import { Button } from '@/components/ui/button',;
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',;
-import { Badge } from '@/components/ui/badge',;
-import Skeleton from '@/components/ui/skeleton',;
-import { SEO } from '@/components/SEO',;
-import { useRouter } from 'next/router',;
-import { cn } from '@/lib/utils',;
-const getNotificationIcon = (;
-  type: NotificationType,;
-  className: string = 'h-5 w-5') => {;
-  switch (type) {;
-
-;
-const getNotificationIcon = (type: string) =>: any {
-=======
 }
 const getNotificationIcon = (type: string) => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   switch (type) {
     case 'message':;
       return <Bell className="h - 4 w - 4 text - blue - 500" />;
@@ -102,8 +56,6 @@ const getNotificationIcon = (type: string) => {
     default:;
       return <Badge variant="outline">Notification</Badge>;
   }
-<<<<<<< HEAD
-=======
 }
 export default function Notifications() {
   const { user } = useAuth();
@@ -254,4 +206,4 @@ export default function Notifications() {
     </div>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,57 +1,8 @@
-<<<<<<< HEAD
-
-
- 
-
-
-
-import fs from 'fs';
-import path from 'path';
-import type { GetStaticProps } from 'next';
-type Broken = { url: string, page: string, status: number },
-interface Report { generatedAt: string, pagesScanned: number, brokenLinks: Broken[], pagesWithOgIssues: number, ogIssues: { page: string, missing: string[] }[] }
-
-type Props = { report: Report | null },
-
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  try {
-    const file = path.join(process.cwd(), 'publicautomationsite-validator.json');
-    const raw = fs.readFileSync(file, 'utf8');
-    const data = JSON.parse(raw);
-};
-type Props = { report: Report | null },;
-export const getStaticProps: GetStaticProps<Props> = async () => {;
-  try {;
-    const file = path && path.join(process && process.cwd(), 'publicautomationsite-validator && validator.json');
-    const raw = fs && fs.readFileSync(file, 'utf8');
-    const data = JSON && JSON.parse(raw);
-;
-}
-type Props = { report: Report | null },
-export const getStaticProps: GetStaticProps < Props> = async () => {
-  try {
-    const file = path.join (process.cwd (), 'publicautomationsite - validator.json');
-    const raw = fs.readFileSync (file, 'utf8');
-    const data = JSON.parse (raw);
-    return { props: { report: data }, revalidate: 21600 }
-  } catch {;
-    return { props: { report: null }, revalidate: 21600 }
-  }
-export default function SiteValidator(): any ({ report }: Props) {;
-
-
-};
-
-
-export default function SiteValidator({ report }: Props) {
-export default function SiteValidator({ report }: Props) {;
-  if (!report) return <div>No validation report yet.</div>;
-=======
 import fs from 'fs',
 import path from 'path';
 import type { GetStaticProps } from 'next';
 type Broken = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-6">;
       <header className="space-y-1">;
@@ -124,8 +75,4 @@ if (return <div > No validation report yet.</div>) {
     </div>
 );
 }
-<<<<<<< HEAD
-  );
-}
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

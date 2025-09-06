@@ -1,25 +1,6 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-<<<<<<< HEAD
-// @ts-ignore
-import data from '../../data/remote-roles.json';
-import EnhancedLayout from '../../components/layout/EnhancedLayout',;
-// @ts-ignore
-import data from '../../data/remote-roles.json',;
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
-// @ts-ignore;
-import data from '../../data/remote-roles.json',
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
-// @ts-ignore;
-import data from '../../data/remote-roles.json',
-
-
-export default function RemoteRolesPage() {
-
-  const items: any[] = (data?.items |[]).slice(0, 60)
-
-=======
   const items: any[] = (data?.items || []).slice(0, 60);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -35,32 +16,6 @@ export default function RemoteRolesPage() {
         </ul>
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
-  );
-};
-
-                {it.position} — {it.company  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              </Link>
-              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">{it.location} · {(it.tags || []).join(', ')}</div>
-            </li>
-          ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        </ul>;
-      </div>;
-    </EnhancedLayout>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-=======
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

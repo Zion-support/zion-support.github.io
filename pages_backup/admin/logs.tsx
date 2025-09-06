@@ -2,161 +2,18 @@ import { useState, useEffect  } from 'react';
 import { GetServerSideProps  } from 'next';
 import fs from 'fs',
 import path from 'path';
-<<<<<<< HEAD
-
-import { useState, useEffect } from 'react';
-import { GetServerSideProps } from 'next';
-import {useState, useEffect} from 'react';
-import {GetServerSideProps} from 'next';
-import { useState, useEffect } from 'react';
-import { GetServerSideProps } from 'next';
-import {useState, useEffect} from 'react';
-import {GetServerSideProps} from 'next';
-import { useState, useEffect } from 'react';
-import { GetServerSideProps } from 'next';
-
-
-import fs from 'fs';
-import path from 'path';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-  SelectValue;
-} from '@/components/ui/select';
-import {
-  AlertTriangle
-  Info
-  AlertCircle
-  XCircle
-  Search
-  Download
-  RefreshCw;
-  SelectTrigger,;
-  SelectValue,;
-} from '@/components/ui/select';
-import {;
-  AlertTriangle,;
-  Info,;
-  AlertCircle,;
-  XCircle,;
-  Search,;
-  Download,;
-  RefreshCw,;
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,;
-  SelectValue,;
-} from '@/components/ui/select';
-import {
-  AlertTriangle,
-  Info,
-  AlertCircle,
-  XCircle,
-  Search,
-  Download,;
-  RefreshCw,;
-} from 'lucide-react';
-
-
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
-import { Badge } from '@/components / ui / badge';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components / ui / select';
-import {
-  AlertTriangle,
-  Info,
-  AlertCircle,
-  XCircle,
-  Search,
-
-import fs from 'fs';
-import path from 'path';
-
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-} from 'lucide-react';
-
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw } from 'lucide-react';
-=======
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
 import { Badge  } from '@/components/ui/badge';
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
 import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw  } from 'lucide-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface LogEntry {
 interface LogEntry {;
   id: string;
   timestamp: string;
-<<<<<<< HEAD
-  stack?: string;
-  url?: string;
-  userAgent?: string;
-  userId?: string;
-  error?: {
-  error?: {;
-    name: string;
-    message: string;
-    stack?: string;
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw } from 'lucide-react';
-import { logErrorToProduction } from '@/utils/productionLogger';
-interface LogEntry {
-  id: string;
-  timestamp: string;
-  level: 'debug' | 'info' | 'warn' | 'error' | 'critical',;
-  message: string;
-  category: string;
-  context?: Record<string, unknown>,;
-  stack?: string,;
-  url?: string,;
-  userAgent?: string,;
-  userId?: string,;
-  sessionId: string;
-  source: 'client' | 'server' | 'middleware' | 'api',;
-  component?: string,;
-  feature?: string,;
-  error?: {;
-    name: string;
-    message: string;
-    stack?: string,;
-    cause?: unknown;
-  },;
-  performance?: {;
-    memory?: number,;
-    timing?: number,;
-    fps?: number;
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-interface LogsPageProps {;
-=======
   level: 'debug' | 'info' | 'warn' | 'error' | 'critical';
   message: string;
   category: string;
@@ -170,22 +27,11 @@ interface LogsPageProps {;
 }
 
 interface LogsPageProps {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   logs: LogEntry[];
   errorCount: number;
   warningCount: number;
   totalCount: number;
-<<<<<<< HEAD
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
-  switch (level) {
-    case 'debug':
-      return <Info className="h-4 w-4 text-blue-500" />,
-=======
   lastUpdated: string
 }
 
@@ -195,7 +41,7 @@ const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
   switch (level) {
     case 'debug':
 return <Info className='h-4 w-4 text-blue-500' />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     case 'info':
       return <Info className="h-4 w-4 text-green-500" />,
     case 'warn':
@@ -203,83 +49,12 @@ return <Info className='h-4 w-4 text-blue-500' />;
     case 'error':
       return <AlertCircle className="h-4 w-4 text-red-500" />,
     case 'critical':
-<<<<<<< HEAD
-  logs: initialLogs
-  errorCount
-  warningCount
-  totalCount
-  lastUpdated
-  logs: initialLogs,
-  errorCount,
-  warningCount,
-  totalCount,
-  lastUpdated,;
-}: LogsPageProps) {  const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
-      return <XCircle className="h-4 w-4 text-red-700" />,
-    default: return <Info className="h-4 w-4 text-gray-500" />
-;
-const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {;
-  switch (level) {;
-    case 'debug':;
-const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {;
-  const colors = {;
-    debug: 'bg-blue-100 text-blue-800',;
-    info: 'bg-green-100 text-green-800',;
-    warn: 'bg-yellow-100 text-yellow-800',;
-    error: 'bg-red-100 text-red-800',;
-    critical: 'bg-red-200 text-red-900',;
-  };
-
-  return <Badge className={colors[level]}>{level && level.toUpperCase()}</Badge>;
-};
-
-export default function LogsPage(): any ({;
-  logs: initialLogs,;
-  errorCount,;
-  warningCount,;
-  totalCount,;
-  lastUpdated,;
-}: LogsPageProps) {  const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
-
-    cause?: unknown
-  };
-  performance?: {
-    memory?: number;
-    timing?: number;
-    fps?: number
-  }
-}
-
-interface LogsPageProps {
-  logs: LogEntry[],
-  errorCount: number,
-  warningCount: number,
-  totalCount: number,
-  lastUpdated: string
-}
-
-const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
-  switch (level) {
-    case 'debug':
-      return <Info className="h-4 w-4 text-blue-500" />;
-    case 'info':
-      return <Info className="h-4 w-4 text-green-500" />;
-    case 'warn':
-      return <AlertTriangle className="h-4 w-4 text-yellow-500" />;
-    case 'error':
-      return <AlertCircle className="h-4 w-4 text-red-500" />;
-    case 'critical':
-      return <XCircle className="h-4 w-4 text-red-700" />;
-    default: return <Info className="h-4 w-4 text-gray-500" />
-  }
-};
-=======
       return <XCircle className='h-4 w-4 text-red-700' />;
     default:
       return <Info className='h-4 w-4 text-gray-500' />;
   }
 ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {
   const colors = {
@@ -287,17 +62,6 @@ const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {
     info: 'bg-green-100 text-green-800',
     warn: 'bg-yellow-100 text-yellow-800',
     error: 'bg-red-100 text-red-800',
-<<<<<<< HEAD
-    critical: 'bg-red-200 text-red-900'},
-  return (
-    <Badge className={colors[level]}>
-      {level.toUpperCase()}
-    </Badge>
-  )
-};
-
-export default function LogsPage({ logs: initialLogs, errorCount, warningCount, totalCount, lastUpdated }: LogsPageProps) {
-=======
 critical: 'bg-red-200 text-red-900',
   };
 
@@ -310,7 +74,7 @@ export default function LogsPage({
   totalCount,
   lastUpdated,
 }: LogsPageProps) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
   const [filteredLogs, setFilteredLogs] = useState<LogEntry[]>(initialLogs);
   const [searchTerm, setSearchTerm] = useState('');
@@ -319,15 +83,8 @@ export default function LogsPage({
   const [sourceFilter, setSourceFilter] = useState<string>('all');
   const [isLoading, setIsLoading] = useState(false);
 
-<<<<<<< HEAD
-
-
-
-
-  const categories = Array.from(new Set(logs.map(log => log.category))).filter(
-=======
 const categories = Array.from(new Set(logs.map(log => log.category))).filter(
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     Boolean
 
   const categories = Array && Array.from(new Set(logs && logs.map(log => log && log.category))).filter(;
@@ -346,15 +103,12 @@ const categories = Array.from(new Set(logs.map(log => log.category))).filter(
       case 'warn': return 'bg-yellow-100 text-yellow-800';
       case 'error': return 'bg-red-100 text-red-800';
       case 'critical': return 'bg-red-200 text-red-900';
-<<<<<<< HEAD
-      default: return 'bg-gray-100 text-gray-800';    }
-=======
       default: return 'bg-gray-100 text-gray-800';
     }
   };
 
   const exportLogs = () => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     const dataStr = JSON.stringify(filteredLogs, null, 2);
 const dataUri =
       'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
@@ -550,47 +304,6 @@ const parts = [];
             <Info className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-<<<<<<< HEAD
-            <div className="text-2xl font-bold">{totalCount}</div>
-            <p className="text-xs text-muted-foreground">All log entries</p>
-          </CardContent>
-        </Card>
-        <Card>
-
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Errors</CardTitle>
-            <XCircle className="h-4 w-4 text-red-500" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold text-red-600">{errorCount}</div>
-            <p className="text-xs text-muted-foreground">Critical & error logs</p>
-          </CardContent>
-
-        </Card>
-        <Card>
-
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Warnings</CardTitle>
-            <AlertTriangle className="h-4 w-4 text-yellow-500" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold text-yellow-600">{warningCount}</div>
-            <p className="text-xs text-muted-foreground">Warning logs</p>
-          </CardContent>
-
-        </Card>
-        <Card>
-
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Last Updated</CardTitle>
-            <RefreshCw className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-sm font-medium">{formatTimestamp(lastUpdated)}</div>
-            <p className="text-xs text-muted-foreground">Data freshness</p>
-          </CardContent>
-
-=======
             <div className='text-2xl font-bold'>{totalCount}</div>
             <p className='text-xs text-muted-foreground'>All log entries</p>
           </CardContent>
@@ -630,7 +343,7 @@ const parts = [];
             </div>
             <p className='text-xs text-muted-foreground'>Data freshness</p>
           </CardContent>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         </Card>
       </div>
       {/* Filters */}
@@ -644,8 +357,6 @@ const parts = [];
           <CardTitle>Filters</CardTitle>
         </CardHeader>
         <CardContent>
-<<<<<<< HEAD
-=======
 <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
             <div className='relative'>
               <Search className='absolute left-2 top-2.5 h-4 w-4 text-muted-foreground' />
@@ -657,14 +368,11 @@ const parts = [];
               />
             </div>
             <Select value={levelFilter} onValueChange={setLevelFilter}>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <SelectTrigger>
                 <SelectValue placeholder="All levels" />
               </SelectTrigger>
               <SelectContent>
-<<<<<<< HEAD
-              <SelectTrigger>
-=======
                 <SelectItem value='all'>All Levels</SelectItem>
                 <SelectItem value='debug'>Debug</SelectItem>
                 <SelectItem value='info'>Info</SelectItem>
@@ -676,38 +384,22 @@ const parts = [];
             <Select value={categoryFilter} onValueChange={setCategoryFilter}>
               <SelectTrigger>
 <SelectValue placeholder='All categories' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value='all'>All Categories</SelectItem>
                 {categories.map(category => (
-<<<<<<< HEAD
-              <SelectTrigger>
-                <SelectValue placeholder="All categories" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">All Categories</SelectItem>
-                {categories.map(category => (
-                  <SelectItem key={category} value={category}>{category}</SelectItem>
-=======
                   <SelectItem key={category} value={category}>
                     {category}
                   </SelectItem>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 ))}
               </SelectContent>
             </Select>
             <Select value={sourceFilter} onValueChange={setSourceFilter}>
               <SelectTrigger>
-<<<<<<< HEAD
-
-                onChange={e => setSearchTerm(e && e.target.value)}
-              />;
-            </div>;
-                <SelectValue placeholder="All sources" />
-=======
 <SelectValue placeholder='All sources' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All Sources</SelectItem>
@@ -787,11 +479,8 @@ const parts = [];
           <CardTitle>Log Entries ({filteredLogs.length})</CardTitle>
         </CardHeader>
         <CardContent>
-<<<<<<< HEAD
-          <div className="space-y-4">
-=======
 <div className='space-y-4'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             {filteredLogs.length > 0 ? (
               filteredLogs.map((log) => (
                 <div key={log.id} className="border rounded-lg p-4 space-y-2">
@@ -808,28 +497,6 @@ const parts = [];
                       <summary className="cursor-pointer text-muted-foreground hover:text-foreground">
                         View Context
                       </summary>
-<<<<<<< HEAD
-
-
-
-
-                      <pre className="mt-2 p-2 bg-muted rounded text-xs overflow-x-auto">
-                        {JSON.stringify(log.context, null, 2)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      </pre>;
-                    </details>;
-                  )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  {log.error && (
-                    <details className="text-xs">
-                      <summary className="cursor-pointer text-red-600 hover:text-red-800">
-=======
                       <pre className='mt-2 p-2 bg-muted rounded text-xs overflow-x-auto'>
                         {JSON.stringify(log.context, null, 2)}
                       </pre>
@@ -838,7 +505,7 @@ const parts = [];
 {log.error && (
                     <details className='text-xs'>
                       <summary className='cursor-pointer text-red-600 hover:text-red-800'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                         View Error Details
                       </summary>
                       <div className="mt-2 p-2 bg-red-50 rounded">
@@ -849,56 +516,6 @@ const parts = [];
                             <summary className="cursor-pointer">Stack Trace</summary>
                             <pre className="mt-1 text-xs overflow-x-auto">{log.error.stack}</pre>
                           </details>
-<<<<<<< HEAD
-
-
-                </div>
-              ))
-            ) : (
-              <div className="text-center text-muted-foreground py-8">
-                No logs found matching the current filters.
-              </div>
-            )}
-          </div>;
-        </div>;
-      </main>;
-    </>;
-  );
-            }
-          }
-        } catch (fileError) {;
-                            </pre>;
-                          </details>)}
-                        <div className="flex items - center justify - between text - xs text - gray - 500">;
-                          <div>;
-                            {log.session_id && <span > Session: {log.session_id}</span>}
-                            {log.user_id && <span> • User: {log.user_id}</span>}
-                          </div>;
-                          {log.performance && (
-                            <div>{format_performance (log.performance)}</div>)}
-                        </div>;
-                      </div>;
-                      <div className="text - xs text - gray - 500 ml - 4">;
-                        {new Date (log.timestamp).toLocaleString ()}
-                      </div>;
-                    </details>)}
-                  <div className='flex items - center justify - between text - xs text - muted - foreground'>                    <div>;
-                      Session: {log.session_id}
-                      {log.user_id && ` • User: ${log.user_id}`}
-                    </div>;
-                  </div>;
-                  {log.url && (
-                    <div className='text - xs text - muted - foreground truncate'>                      URL: {log.url}
-                    </div>)}
-                </div>))) : (
-              <div className='text - center text - muted - foreground py - 8'>                No logs found matching the current filters.;
-              </div>)}
-          </div>;
-        </div>;
-      </main>;
-    </>);
-}
-=======
                         )}
                         <div className="flex items-center justify-between text-xs text-gray-500">
                           <div>
@@ -942,17 +559,14 @@ const parts = [];
   );
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export const getServerSideProps: GetServerSideProps = async () => {
   try {
     const logs_dir = path.join (process.cwd (), 'logs');
     const logs: LogEntry[] = [];
-<<<<<<< HEAD
-              // Skip malformed log entries;
-=======
 
               // Skip malformed log entries
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             }
           }
         } catch (file_error) {
@@ -960,8 +574,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
         }
       }
     }
-<<<<<<< HEAD
-=======
     // Sort logs by timestamp (newest first)
 logs.sort(
       (a, b) =>
@@ -972,25 +584,11 @@ logs.sort(
       log => log.level === 'error' || log.level === 'critical'
     ).length;
     const warningCount = logs.filter(log => log.level === 'warn').length;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     const totalCount = logs.length;
     return {
       props: {
         logs: logs.slice(0, 1000), // Limit to most recent 1000 logs
-<<<<<<< HEAD
-    }
-  } catch (error) {
-    logErrorToProduction ('Error reading logs:', error);    return {
-      props: {
-        logs: []
-        errorCount: 0
-        warningCount: 0
-        totalCount: 0
-        lastUpdated: new Date().toISOString()
-      }
-    }
-
-=======
 errorCount,
         warningCount,
         totalCount,
@@ -1001,132 +599,14 @@ errorCount,
     logErrorToProduction('Error reading logs:', error);
     return {
       props: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         logs: [],
         errorCount: 0,
         warningCount: 0,
         totalCount: 0,
-<<<<<<< HEAD
-        lastUpdated: new Date().toISOString(),
-      },
-    };
-            )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>;
-        </CardContent>;
-      </Card>;
-    </div>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-export const getServerSideProps: GetServerSideProps = async () => {;
-  try {
-    const logsDir = path.join(process.cwd(), 'logs'),;
-    const logs: LogEntry[] = [];
-    // Read all log files;
-    if (fs.existsSync(logsDir)) {;
-      const files = fs.readdirSync(logsDir);
-      const logFiles = files.filter(file => file.endsWith('.log'));
-      for (const file of logFiles) {;
-        try {
-          const filePath = path.join(logsDir, file);
-          const content = fs.readFileSync(filePath, 'utf-8');
-          const lines = content.split('\n').filter(line => line.trim());
-          for (const line of lines) {;
-            try {
-              const logEntry = JSON.parse(line);
-              logs.push(logEntry);
-            } catch (error) {
-              // Skip malformed log entries;
-              } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        } catch (error) {
-          // Skip problematic files;
-          } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-    // Sort logs by timestamp (newest first);
-    logs && logs.sort(;
-      (a, b) =>;
-        new Date(b && b.timestamp).getTime() - new Date(a && a.timestamp).getTime();
-    );
-
-    // Calculate statistics;
-    const errorCount = logs && logs.filter(;
-      log => log && log.level === 'error' || log && log.level === 'critical';
-    ).length;    const warningCount = logs && logs.filter(log => log && log.level === 'warn').length;
-    const totalCount = logs && logs.length;
-
-    return {;
-      props: {;
-        logs: logs && logs.slice(0, 1000), // Limit to most recent 1000 logs;
-        errorCount,;
-        warningCount,;
-        totalCount,;
-        lastUpdated: new Date().toISOString(),;
-      },;
-    };
-  } catch (error) {;
-    logErrorToProduction('Error reading logs:', error);    return {;
-      props: {;
-        logs: [],;
-        errorCount: 0,;
-        warningCount: 0,;
-        totalCount: 0,;
-        lastUpdated: new Date().toISOString(),;
-      },;
-    };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  }
-  }
-}
-};
-
-        errorCount;
-        warningCount;
-        totalCount;
-        lastUpdated: new Date().toISOString()}}
-  } catch (error) {
-            logErrorToProduction('Error reading logs:', error);
-    return {
-      props: {
-        logs: [],
-
-  }
-}
-;
-=======
 lastUpdated: new Date().toISOString(),
       },
     };
   }
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

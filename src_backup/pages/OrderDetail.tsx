@@ -1,63 +1,4 @@
 import Link from 'next/link';
-<<<<<<< HEAD
-interface OrderItem {
-  id: string;
-  name: string;
-  quantity: number;
-  price: number;
-  image?: string;
-}
-interface Order {
-  id: string;
-  order_id: string;
-  date: string;
-  status: 'pending' | 'processing' | 'shipped' | 'delivered' | 'cancelled';
-  total: number;
-  items: OrderItem[];
-  shipping_address: {
-    name: string;
-    street: string;
-    city: string;
-    state: string;
-    zip_code: string;
-    country: string;
-  }
-  switch (status) {
-    case 'delivered':;
-      return <CheckCircle className="h - 4 w - 4" />;
-    case 'shipped':;
-      return <Package className="h - 4 w - 4" />;
-    case 'processing':;
-      return <Clock className="h - 4 w - 4" />;
-    default:;
-      return <Clock className="h - 4 w - 4" />;
-  }
-  const router = useRouter();
-  const { user } = useAuth();
-  const [order, setOrder] = useState<Order | null>(null);
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    // Mock data - replace with actual API call
-    const mockOrder: Order = {
-      id: router.query.id as string |'1'
-      orderId: 'ORD-2024-001'
-      date: '2024-01-15'
-      status: 'shipped'
-      total: 299.99
-      items: [
-        {
-          id: '1'
-          name: 'Premium Web Development Service'
-          quantity: 1
-          price: 299.99
-        }
-    }
-    setOrder(mockOrder);
-    setLoading(false);
-  }, [router.query.id]);
-  if (loading) {
-
-=======
 import { useRouter  } from 'next/router';
 import { Button  } from '@/components/ui/button';
 import { Clipboard } from 'lucide-react'
@@ -71,7 +12,7 @@ import { OrderTimeline } from '@/components/orders/OrderTimeline';
 export default function OrderDetailPage() {
   const router = null;
   if (isLoading || !order) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     return (
       <div className="container mx - auto px - 4 py - 8">;
         <div className="animate - pulse">;
@@ -402,11 +343,6 @@ export default function OrderDetailPage() {;
 
 
       </div>
-<<<<<<< HEAD
-    )
-  }
-
-=======
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

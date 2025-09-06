@@ -1,39 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import Layout from '../components/Layout';
-import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
-
-<<<<<<< HEAD
-const apiFeatures = [
-  {
-    icon: Code,
-    title: 'RESTful API',
-    description: 'Clean, intuitive REST API endpoints for easy integration',
-    features: ['RESTful design', 'JSON responses', 'HTTP status codes', 'Error handling']
-  },
-  {
-    icon: Shield,
-    title: 'Security',
-    description: 'Enterprise-grade security with authentication and encryption',
-    features: ['JWT authentication', 'Rate limiting', 'HTTPS encryption', 'API key management']
-  },
-  {
-    icon: Zap,
-    title: 'Performance',
-    description: 'High-performance API with caching and optimization',
-    features: ['Response caching', 'CDN integration', 'Load balancing', 'Real-time updates']
-  },
-  {
-    icon: Book,
-    title: 'Documentation',
-    description: 'Comprehensive documentation with examples and guides',
-    features: ['Interactive docs', 'Code examples', 'SDK libraries', 'Developer support']
-  }
-];
-=======
 export default function API() {
   const apiEndpoints = [
     {
@@ -141,33 +105,10 @@ console.log(deployment.url);`, description: 'Deploy your application to the clou
       requests: 'Unlimited', burst: '1,000/minute', features: ['Unlimited access', 'Dedicated support', 'Custom limits']
     }
   ];
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 export default function APIPage() {
   return (
-<<<<<<< HEAD
-    <Layout
-      title="API - Zion Tech Group"
-      description="Powerful APIs for integrating with Zion Tech Group services. Build amazing applications with our developer-friendly APIs."
-      keywords="API, REST API, developer tools, integration, SDK"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-        <div className="container mx-auto px-4 py-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              API Services
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Powerful APIs for integrating with Zion Tech Group services. 
-              Build amazing applications with our developer-friendly APIs.
-            </p>
-          </motion.div>
-=======
     <>
       <Head>
         <title>API Reference - Zion Tech Group</title>
@@ -202,7 +143,7 @@ export default function APIPage() {
             </div>
           </div>
         </section>
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {apiFeatures.map((feature, index) => (
@@ -232,15 +173,6 @@ export default function APIPage() {
             ))}
           </div>
 
-<<<<<<< HEAD
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="bg-blue-600 rounded-xl p-8 text-center"
-          >
-            <h2 className="text-3xl font-bold text-white mb-4">
-=======
         {/* API Endpoints */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -422,7 +354,7 @@ export default function APIPage() {
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               Ready to Get Started?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -444,8 +376,7 @@ export default function APIPage() {
             </div>
           </motion.div>
         </div>
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   Code,
   Check,
   Globe,
@@ -725,50 +656,8 @@ export default function APIPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-      </div>
-    </Layout>
-        {/* CTA Section */}
-        <section className="py - 20 bg - gradient - to - r from - indigo - 600 to - purple - 600 text - white">;
-          <div className="container mx - auto px - 4">;
-            <motion.div;
-              className="text - center";
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
-                Ready to Get Started?;
-              </h2>;
-              <p className="text - xl text - indigo - 100 mb - 8 max - w-3xl mx - auto">;
-                Start building with our APIs today. Get your API key and begin;
-                integrating with our powerful services.;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <a;
-                  href="/contact";
-                  className="px - 8 py - 4 bg - white text - indigo - 600 rounded - lg hover:shadow - lg transition - all duration - 300 font - semibold";
-                >;
-                  Get API Key;
-                </a>;
-                <a;
-                  href="/docs";
-                  className="px - 8 py - 4 border - 2 border - white text - white rounded - lg hover:bg - white hover:text - indigo - 600 transition - all duration - 300 font - semibold";
-                >;
-                  View Documentation;
-                </a>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </MainLayout>);
-}
-=======
       </main>
 </>
   );
 }
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

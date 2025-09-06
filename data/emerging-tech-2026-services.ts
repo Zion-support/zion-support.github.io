@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 import { ServiceVariant } from '../types / service - variants';
 
@@ -9,7 +5,6 @@ export interface EmergingTech2026Service {
 
   {
 
-=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -23,96 +18,10 @@ export interface EmergingTech2026Service {
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  contactInfo: {
-<<<<<<< HEAD
-      
-    mobile: string, email: string,
-    address: string,
-    website: string
-  
-    },
-    realImplementation: boolean, implementationDetails: string,
-  launchDate: string, customers: number,
-  rating: number,
-  reviews: number
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-}
-      'Advanced quantum energy platform with energy optimization, renewable energy management, and smart grid capabilities. Includes real-time monitoring and predictive analytics.'
-    launchDate: '2026-04-20'
-    customers: 180
-    rating: 4.8
-    reviews: 120
-  }
-      'Advanced quantum energy platform with energy optimization, renewable energy management, and smart grid capabilities. Includes real-time monitoring and predictive analytics.',
-    launchDate: '2026-04-20',
-    customers: 180,
-    rating: 4.8,
-    reviews: 120,
-  },;
-];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails: 'Advanced quantum energy platform with energy optimization, renewable energy management, and smart grid capabilities. Includes real-time monitoring and predictive analytics.';
-    launchDate: '2026-04-20';
-    customers: 180;
-    rating: 4.8
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
-    reviews: 120
-  }
-];
-import { ServiceVariant } from '../types/service-variants',;
-export interface EmergingTech2026Service {;
-  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,;
-  period: string,;
-  description: string,;
-  features: string[],;
-  popular: boolean,;
-  icon: string,;
-  color: string,;
-  textColor: string,;
-  link: string,;
-  marketPosition: string,;
-  targetAudience: string,;
-  trialDays: number,;
-  setupTime: string,;
-  category: string,;
-  realService: boolean,;
-  technology: string[],;
-  integrations: string[],;
-  useCases: string[],;
-  roi: string,;
-  competitors: string[],;
-  marketSize: string,;
-  growthRate: string,;
-  variant: ServiceVariant,;
-  contactInfo: {;
-    mobile: string,;
-    email: string,;
-    address: string,;
-    website: string;
-  },;
-  realImplementation: boolean,;
-  implementationDetails: string,;
-  launchDate: string,;
-  customers: number,;
-  rating: number,;
-  reviews: number;
-}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  contactInfo: {
+
 }
 
 export const emergingTech2026Services: EmergingTech2026Service[] = [
@@ -142,11 +51,11 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -155,16 +64,11 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     customers: 180;
     rating: 4.8,
     reviews: 120;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/integrate-build-improve-and-re-verify-2156
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTech2026Service {;
   id: string,;
@@ -561,22 +465,13 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
     customers: 180,;
     rating: 4.8;
     reviews: 120;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-;
-=======
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
     mobile: string;
     email: string;
     address: string;
@@ -1226,4 +1121,4 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
     reviews: 120
   }
 ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

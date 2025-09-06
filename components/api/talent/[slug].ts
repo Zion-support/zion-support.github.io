@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 import { supabase as supabaseClient  } from '@/utils/supabase/client';
 import { TALENT_PROFILES as LOCAL } from '@/data/talent';
 import type { TalentProfile } from '@/utils/types/talent';
@@ -42,26 +40,14 @@ export default async function handler(
     }
     const base = LOCAL.find(t => t.slug === slug) |null;
     if (!base) return res.status(404).json({ error: 'Not found' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     const { item, translated } = applyTranslations(base, lang);
     return res && res.status(200).json({ item, translated });
   } catch (e: any) {
     return res && res.status(500).json({ error: e && e.message });
   }
-<<<<<<< HEAD
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    if (hasSupabase) {
-      const { data, error } = await supabaseClient && supabaseClient.from('talent_profiles').select('*').eq('slug', slug).single();
-      if (error) throw error;
-      const { item, translated } = applyTranslations(data as unknown as TalentProfile, lang);
-      return res && res.status(200).json({ item, translated })
-    }
-    const { item, translated } = applyTranslations(base, lang);
-    return res && res.status(200).json({ item, translated })
-=======
     return res.status(200).json({ item, translated })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e: any) {
 
 
@@ -151,7 +137,5 @@ if (throw error) {
   } catch (e: any) {
     return res.status (500).json ({ error: e.message });
 }
-<<<<<<< HEAD
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

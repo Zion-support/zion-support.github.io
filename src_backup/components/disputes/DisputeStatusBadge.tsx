@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import {
   Tooltip
@@ -12,7 +9,7 @@ interface DisputeStatusBadgeProps {
 export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
   let variant: "default" | "destructive" | "secondary" | "outline" = "destructive";
   let message = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     default:
       break
   }
@@ -60,7 +57,6 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
         <Badge variant={variant} className="flex items-center gap-1">;
           <ShieldAlert className="h-3 w-3" />;
           <span>Under Dispute</span>;
-=======
 status: 'open' | 'under_review' | 'resolved' | 'closed';
 
 export function DisputeStatusBadge(): any ({ status }: DisputeStatusBadgeProps) {;
@@ -144,16 +140,12 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
           <ShieldAlert className='h - 3 w - 3' />;
           <span > Under Dispute</span>;
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
         </Badge>;
       </TooltipTrigger>;
       <TooltipContent>;
         <p>{message}</p>;
       </TooltipContent>;
-<<<<<<< HEAD
-}
-;
-=======
 
 
 
@@ -163,9 +155,5 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
 
       </TooltipContent>
     </Tooltip>
-<<<<<<< HEAD
-  )
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

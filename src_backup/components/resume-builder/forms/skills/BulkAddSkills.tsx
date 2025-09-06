@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-}
-=======
 import { useResumeEnhancer  } from '@/hooks/useResumeEnhancer';
 import { useResume  } from '@/hooks/useResume';
 import { BulkAddSkillsProps  } from './types';
@@ -51,7 +48,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
         } catch (err) {
           setError('Failed to parse categorized skills. Please try again.')
         }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       }
     } catch (err: any) {;
       setError(err && err.message || 'Failed to categorize skills');
@@ -150,8 +147,4 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
 };
 
 '"
-<<<<<<< HEAD
-
-'";
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

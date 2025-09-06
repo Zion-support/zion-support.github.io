@@ -1,16 +1,11 @@
-<<<<<<< HEAD
-=======
 }
 
   return res && res.status(405).json({ error: "method_not_allowed" });
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
 import type { NextApiRequest, NextApiResponse } from './next';
 import { store  } from '../../../../../utils / data / enterprise_store';
 import type { EnterpriseRole } from "../../../../../utils / types / enterprise";
@@ -89,40 +84,17 @@ import { store } from "../../../../../utils/data/enterpriseStore";
 import type { EnterpriseRole } from "../../../../../utils/types/enterprise";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { companyId } = req.query;
-<<<<<<< HEAD
-
-  if (!companyId |typeof companyId !== "string") {
-    return res.status(400).json({ error: "companyId required" });
-  }
-  const company = store.getCompanyById(companyId);
-  if (!company) return res.status(404).json({ error: "Company not found" });
-  if (req.method === "GET") {
-    return res.status(200).json(company.members);
-  }
-}
-    const { name, email, role } = req.body || {}
-    if (
-      return res.status (400).json ({ error: "name and email required" })) {
-  $2
-}
-    const r: EnterpriseRole = role || "viewer";
-=======
     const member = store.add_member (company_id, name, email, r);
     return res.status (201).json (member);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
   }
   // Check condition
 if ( {) {
   $2
 }
-<<<<<<< HEAD
-=======
-=======
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ members: [] });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -189,13 +161,10 @@ if ( {) {
       .status (ok ? 200 : 404);
       .json (ok ? { success: true } : { error: "member_not_found" });
   }
-=======
   return res.status (405).json ({ error: "method_not_allowed" });
 }
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
 
 
     const member = store.addMember(companyId, name, email, r);
@@ -213,8 +182,7 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 ;
   if (req.method === 'GET') {
     const { memberId, role } = req.body || {};
@@ -227,13 +195,12 @@ if ( {) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-=======
   if (!companyId || typeof companyId !== 'string') {
     return res.status(400).json({ error: 'companyId required' })
   }
   const company = null;
     return res.status(ok ? 200 : 404).json(ok ? { success: true } : { error: 'member_not_found' })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
   } catch (error) {
@@ -244,48 +211,12 @@ if ( {) {
 ;
   if (req.method === 'GET') {
     const { memberId } = req.query;
-<<<<<<< HEAD
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-    const ok = store.removeMember(companyId, memberId);
-    return res.status(ok ? 200 : 404).json(ok ? { success: true } : { error: 'member_not_found' });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  return res.status(405).json({ error: 'method_not_allowed' });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+ursor/fix-website-loading-errors-and-merge-6662
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+
+
 if (!memberId || typeof memberId !== 'string')
       return res.status(400).json({ error: 'memberId required' });
     const ok = store.removeMember(companyId, memberId);
@@ -297,4 +228,4 @@ if (!memberId || typeof memberId !== 'string')
   return res.status(405).json({ error: 'method_not_allowed' });
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

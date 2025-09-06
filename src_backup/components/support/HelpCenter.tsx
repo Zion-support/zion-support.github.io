@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import { Search } from 'lucide-react'
-=======
 import React, { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -11,7 +8,7 @@ import { HelpArticleView } from './HelpArticleView';
 import { HELP_CATEGORIES } from './help-content';
 import { Search } from 'lucide-react';
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default function HelpCenter() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null)
@@ -42,147 +39,17 @@ function HelpCenter() {
   const handleArticleSelect = (articleId: string) => {
     setSelectedArticle(articleId)
   }
-<<<<<<< HEAD
 
-export default /**
- * HelpCenter - Function description
- */
-function HelpCenter() {
-  const [selected_category, setSelectedCategory] = useState < string | null>(null),
-  const [selected_article, setSelectedArticle] = useState < string | null>(null),
-  const [search_query, setSearchQuery] = useState (""),
-  const handleCategorySelect = (category_id: string, ) =>: any {
-    setSelectedCategory (category_id),
-    setSelectedArticle (null);
-  },
-  const handleArticleSelect = (article_id: string, ) =>: any {
-    setSelectedArticle (article_id);
-  },
-  const handleBackToCategories = () =>: any {
-    setSelectedCategory (null);
-    setSelectedArticle (null);
-
-  }
-  const handleBackToArticles = () =>: any {
-    setSelectedArticle (null);
-  }
-
-
-
-  return (
-
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { HelpCategoryList } from './HelpCategoryList';
-import { HelpArticleList } from './HelpArticleList';
-import { HelpArticleView } from './HelpArticleView';
-import { HELP_CATEGORIES } from './help-content';
-
-          
-          <div className="relative mb-8">
-            <Input
-              placeholder="Search for help articles..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-10"
-            />
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-          </div>
-          
-          <Tabs defaultValue="articles" className="mb-8">
-            <TabsList className="w-full grid grid-cols-3 mb-6">
-              <TabsTrigger value="articles">Articles</TabsTrigger>
-              <TabsTrigger value="faq">FAQ</TabsTrigger>
-              <TabsTrigger value="contact">Contact Us</TabsTrigger>
-            </TabsList>
-            
-            <TabsContent value="articles">
-              {!selectedCategory && !selectedArticle && (
-                <HelpCategoryList 
-                  categories={HELP_CATEGORIES} 
-import React, { useState } from "react",;
-import { Input } from "@/components/ui/input",;
-import { Button } from "@/components/ui/button",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { HelpCategoryList } from "./HelpCategoryList",;
-import { HelpArticleList } from "./HelpArticleList",;
-import { HelpArticleView } from "./HelpArticleView",;
-import { HELP_CATEGORIES } from "./help-content",;
-import { Search } from 'lucide-react';
-<<<<<<< HEAD
-
-export default function HelpCenter() {;
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
-
-  const handleCategorySelect = (categoryId: string) => {;
-    setSelectedCategory(categoryId);
-    setSelectedArticle(null);
-  };
-
-  const handleArticleSelect = (articleId: string) => {;
-    setSelectedArticle(articleId);
-  };
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function HelpCenter() {;
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null),;
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null),;
   const [searchQuery, setSearchQuery] = useState(""),;
-<<<<<<< HEAD
-
-  const handleCategorySelect = (categoryId: string,) => {;
-    setSelectedCategory(categoryId),;
-    setSelectedArticle(null);
-  },;
-
-  const handleArticleSelect = (articleId: string,) => {;
-    setSelectedArticle(articleId);
-  },;
-
-  const handleBackToCategories = () => {;
-    setSelectedCategory(null);
-    setSelectedArticle(null);
-  };
-
-  const handleBackToArticles = () => {;
-    setSelectedArticle(null);
-  };
-
-=======
 export default function HelpCenter() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   const handleCategorySelect = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>;
       <div className='container mx-auto px-4 py-8'>;
@@ -193,7 +60,6 @@ export default function HelpCenter() {
           <p className='text-zion-slate-light mb-6'>;
             Find answers to common questions or get in touch with our support;
             team.;
-=======
   const handleCategorySelect = (categoryId: string) => {;
     setSelectedCategory(categoryId),;
     setSelectedArticle(null);
@@ -217,7 +83,7 @@ export default function HelpCenter() {
           </h1>;
           <p className="text-zion-slate-light mb-6">;
             Find answers to common questions or get in touch with our support team.;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
           </p>;
 
           <div className='relative mb-8'>;
@@ -346,20 +212,10 @@ export default function HelpCenter() {
                 
                 <div className="space-y-6">
                   <div>
-<<<<<<< HEAD
-                    <h3 className='font-medium text-zion-cyan mb-2'>
-                      How do I hire someone on Zion?
-                    </h3>
-                    <p className='text-zion-slate-light'>
-                      To hire talent on Zion, post a job or project, review
-                      matches or applications, interview candidates through our
-                      platform, and extend an offer. Our secure payment system
-                      protects both parties throughout the engagement.
-=======
                     <h3 className="font-medium text-zion-cyan mb-2">How does the AI matching work?</h3>
                     <p className="text-zion-slate-light">
                       Our AI matching algorithm analyzes your requirements and preferences to match you with the most compatible talent or services. The process takes into account skills, experience, availability, and past performance to ensure optimal results.
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                     </p>
                   </div>
 
@@ -368,20 +224,10 @@ export default function HelpCenter() {
 
 
                   <div>
-<<<<<<< HEAD
-                    <h3 className='font-medium text-zion-cyan mb-2'>
-                      What are the payment terms?
-                    </h3>
-                    <p className='text-zion-slate-light'>
-                      Zion offers flexible payment options including
-                      milestone-based payments, hourly rates, or fixed project
-                      fees. Funds are held in escrow until deliverables are
-                      approved, ensuring security for both clients and talent.
-=======
                     <h3 className="font-medium text-zion-cyan mb-2">How do I hire someone on Zion?</h3>
                     <p className="text-zion-slate-light">
                       To hire talent on Zion, post a job or project, review matches or applications, interview candidates through our platform, and extend an offer. Our secure payment system protects both parties throughout the engagement.
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                     </p>
                   </div>
 
@@ -540,11 +386,8 @@ export default function HelpCenter() {
                       </div>
                       <a href="mailto:support@ziontechgroup.com" className="text-zion-cyan hover:underline">
                         support@ziontechgroup.com
-<<<<<<< HEAD
-                      </a>
-=======
                       </Link>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                     </div>
 
                         href='mailto:support@ziontechgroup && ziontechgroup.com'
@@ -706,8 +549,5 @@ export default function HelpCenter() {
 
       </div>
     </>
-<<<<<<< HEAD
-  )
-=======
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

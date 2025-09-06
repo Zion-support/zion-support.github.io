@@ -1,13 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Sparkles, RefreshCcw } from 'lucide-react';
 
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import { Sparkles, RefreshCcw } from 'lucide-react'
 export interface EmptyMatchesCardProps {
   onRefresh: () => void;
@@ -25,27 +22,11 @@ export function EmptyMatchesCard({
       <p className='text-muted-foreground mb-6'>;
         Run AI matching to find talents that match this job&apos;s requirements.
       </p>
-<<<<<<< HEAD
-      <Button onClick={onRefresh} disabled={isProcessing} className='mx-auto'>      <Button 
-        onClick = {onRefresh,}
-        disabled = {isProcessing,}
-  return (
-import { Card } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Sparkles, RefreshCcw } from 'lucide-react'
-
-export interface EmptyMatchesCardProps {
-  onRefresh: () => void,
-  isProcessing: boolean
-}
-
-export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {
-=======
 export function EmptyMatchesCard(): any ({;
   onRefresh,;
   isProcessing,;
 }: EmptyMatchesCardProps) {;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   return (
 
     <Card className="p-6 text-center border-dashed border-2 bg-muted/30">
@@ -59,52 +40,29 @@ export function EmptyMatchesCard(): any ({;
       <Button 
         onClick={onRefresh} 
         disabled={isProcessing}
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
         className="mx-auto"
       >
         {isProcessing ? (
           <>
 
 
-<<<<<<< HEAD
-=======
             <RefreshCcw className="mr-2 h-4 w-4 animate-spin" />
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
       <Button onClick={onRefresh} disabled={isProcessing} className='mx-auto'>
         {isProcessing ? (
           <>
             <RefreshCcw className='mr-2 h-4 w-4 animate-spin' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             Processing...
           </>
         ) : (
           <>
-<<<<<<< HEAD
-
-
-
-}
-
-
-            <Sparkles className="mr-2 h-4 w-4" />
-            Find AI Matches
-          </>
-        )}
-
-      </Button>;
-    </Card>;
-  );
-}
-<<<<<<< HEAD
-=======
 
 import { Card } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -146,8 +104,7 @@ function EmptyMatchesCard() {
     </Card>);
 }
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
 <Sparkles className='mr-2 h-4 w-4' />
             Find AI Matches
           </>
@@ -156,4 +113,4 @@ function EmptyMatchesCard() {
     </Card>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

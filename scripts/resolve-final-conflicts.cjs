@@ -3,25 +3,19 @@
 const fs = require('fs');
 const { execSync } = require('child_process');
 
-<<<<<<< HEAD:backup-problematic-files/scripts/final-build-fix.cjs
-<<<<<<< HEAD:scripts/resolve-final-conflicts.cjs
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358:scripts/resolve-final-conflicts.cjs
+:scripts/resolve-final-conflicts.cjs
 console.log('🔧 Resolving Final Conflicts');
 console.log('============================');
 
 // Function to resolve merge conflicts by keeping the first version
 function resolveMergeConflicts(content) {
   return content
-    .replace(/>>>>>>> [a-f0-9]+/g, '');
+    .replace(/[a-f0-9]+/g, '');
 }
-<<<<<<< HEAD:backup-problematic-files/scripts/final-build-fix.cjs
-=======
 console.log('🔧 Final Build Fix');
 console.log('====');
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:backup-problematic-files/scripts/final-build-fix.cjs
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358:scripts/resolve-final-conflicts.cjs
+:backup-problematic-files/scripts/final-build-fix.cjs
+:scripts/resolve-final-conflicts.cjs
 
 // Function to fix all remaining syntax errors
 function fixAllSyntax(content) {
@@ -101,12 +95,6 @@ for (const file of filesToFix) {
     }
 
     let content = fs.readFileSync(file, 'utf8');
-<<<<<<< HEAD:backup-problematic-files/scripts/final-build-fix.cjs
-<<<<<<< HEAD:scripts/resolve-final-conflicts.cjs
-    let modified = false;
-
-    // Check for merge conflict markers
-=======
     const originalContent = content;
     
     content = fixAllSyntax(content);
@@ -157,9 +145,8 @@ try {
 }
 
 console.log('\n🎉 Final build fix completed!');
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:backup-problematic-files/scripts/final-build-fix.cjs
-=======
+:backup-problematic-files/scripts/final-build-fix.cjs
     let modified = false;
 
     // Check for merge conflict markers
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358:scripts/resolve-final-conflicts.cjs
+:scripts/resolve-final-conflicts.cjs

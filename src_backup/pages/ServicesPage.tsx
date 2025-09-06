@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { useState, useEffect, useCallback, useMemo  } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { useRouter  } from 'next/router';
@@ -299,4 +297,4 @@ const ServicesPage: React.FC = () => {
 }> <ArrowUp className="h-5 w-5 text-primary-foreground" /> </motion.button>) ;
 }</AnimatePresence> </div>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

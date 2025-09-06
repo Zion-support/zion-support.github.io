@@ -1,59 +1,6 @@
-<<<<<<< HEAD
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import axios from "axios";
-
-import { readState, writeState, upsertEvent, getEntityId } from "../../../utils/sync/storage";
-import { verifySignature } from "../../../utils/sync/signature";
-import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle";
-import { SyncEvent } from "../../../utils/sync/types";
-function isAllowedByScope(stateType: string, scope: string): boolean {
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import axios from "axios";
-import {readState, writeState, upsertEvent, getEntityId} from "../../../utils/sync/storage";
-import {verifySignature} from "../../../utils/sync/signature";
-import {computeMerkleRootFromVotes} from "../../../utils/sync/merkle";
-import {SyncEvent} from "../../../utils/sync/types";
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default async function handler(req, res) {
-  try {
-  res.status(200).json({ message: 'Event published' });
-import type { NextApiRequest, NextApiResponse } from "next"
-import axios from "axios"
-import { readState, writeState, upsertEvent, getEntityId } from "../../../utils/sync/storage"
-import { verifySignature } from "../../../utils/sync/signature"
-import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle"
-import { SyncEvent } from "../../../utils/sync/types"
-function isAllowedByScope(stateType: string, scope: string): boolean {
-  if (scope === "full") return true
-  if (scope === "dao") return stateType === "proposal" || stateType === "dao_endorsement"
-  if (scope === "marketplace") return stateType === "token_transfer" || stateType === "talent_mobility" || stateType === "leaderboard_entry"
-  return true
-}
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
-  const state = readState();
-  if (!state.config.optIn |state.config.paused) {
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
-
-  const state = readState();
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-export default async function handler(req, res) {
-  try {
-<<<<<<< HEAD
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
-  const state = readState(),
-=======
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
   const state = readState()
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   if (!state.config.optIn || state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
@@ -123,9 +70,8 @@ export default async function handler(req, res) {
     }
     const computed = computeMerkleRootFromVotes(votes);
     if (computed !== providedRoot) {
-=======
   if (scope;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }
   const entityId = getEntityId(event);
@@ -162,56 +108,19 @@ export default async function handler(req, res) {
     const localBody = { ...event, propagate: false };
 const baseSignature = require('../../../utils/sync/signature');
     const sig = baseSignature.signPayload(localBody);
-<<<<<<< HEAD
-    if (sig) headers["x-zion-signature"] = sig;
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  const entityId = getEntityId(event)
-  const currentState = readState()
-  upsertEvent(currentState, event)
-  writeState(currentState)
-  const alreadyPropagated = payload.propagate === false
-  if (!alreadyPropagated && currentState.config.peers.length > 0) {
-<<<<<<< HEAD
-    const headers: Record<string, string> = {},
-    const localBody = { ...event, propagate: false },
-    const baseSignature = require("../../../utils/sync/signature"),
-    const sig = baseSignature.signPayload(localBody),
-    if (sig) headers["x-zion-signature"] = sig,
-=======
     const headers: Record<string, string> = {}
     const localBody = { ...event, propagate: false }
     const baseSignature = require("../../../utils/sync/signature")
     const sig = baseSignature.signPayload(localBody)
     if (sig) headers["x-zion-signature"] = sig
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     await Promise.all(
       currentState.config.peers
         .filter((p) => !p.paused)
         .map(async (peer) => {
 
-<<<<<<< HEAD
-          const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
-=======
           const url = new URL("/api/sync/publish", peer.baseUrl).toString()
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
           try {
 };
 ;
@@ -281,7 +190,6 @@ if (headers["x - zion - signature"] = sig) {
           }
         }));
   }
-=======
     if (sig) headers['x-zion-signature'] = sig;
 
     await Promise.all(
@@ -303,4 +211,4 @@ if (headers["x - zion - signature"] = sig) {
   return res.status(200).json({ status: 'accepted', entityId });
 
 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 import React, { useState } from "react";
 import {
@@ -61,7 +58,7 @@ import { toast } from "@/hooks/use-toast"
 export function TeamManagement() {
   const [isAddingMember, setIsAddingMember] = useState(false)
   const [newMemberEmail, setNewMemberEmail] = useState('')
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   // Mock team members data
   const teamMembers = [
     {
@@ -94,9 +91,8 @@ export function TeamManagement() {
       lastActive: "3 days ago"}],
 
   const handleAddMember = () => {
-=======
 const handleAddMember = () => {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     // In a real app, this would make an API call to add the member
     if (!newMemberEmail) {
       toast({
@@ -133,8 +129,6 @@ const handleAddMember = () => {
       title: 'Invitation resent'
       description: `A new invitation has been sent to ${memberEmail}`
     })
-<<<<<<< HEAD
-=======
   Table,
   TableBody,
   TableCell,
@@ -224,58 +218,7 @@ if ( {) {
     setNewMemberEmail ('');
     setIsAddingMember (false);
   }
-<<<<<<< HEAD
-  const handleRemoveMember = (_memberId: number, ) =>: any {
-    // In a real app, this would make an API call to remove the member;
-    toast ({
-      title: 'Team member removed',
-      description: 'The team member has been removed from your workspace.',
-    });
-  }
-  const handleResendInvite = (member_email: string, ) =>: any {
-    // In a real app, this would make an API call to resend the invitation;
-    toast ({
-      title: 'Invitation resent',
-      description: `A new invitation has been sent to ${member_email}`,
-    });
-  }
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-        title: "Email required",
-        description: "Please enter an email address for the new team member.",
-        variant: "destructive"}),
-      return
-    }
-
-    toast({
-
-      title: "Invitation sent",
-      description: `An invitation has been sent to ${newMemberEmail}`}),
-
-    setNewMemberEmail(""),
-    setIsAddingMember(false)
-  },
-
-  const handleRemoveMember = (_memberId: number) => {
-    // In a real app, this would make an API call to remove the member
-    toast({
-      title: "Team member removed",
-      description: "The team member has been removed from your workspace."})
-  },
-
-  const handleResendInvite = (memberEmail: string) => {
-    // In a real app, this would make an API call to resend the invitation
-    toast({
-      title: "Invitation resent",
-      description: `A new invitation has been sent to ${memberEmail}`})
-  },
-
-
-
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
@@ -650,9 +593,6 @@ export function TeamManagement() {;
                 </TableCell>;
               </TableRow>;
             ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 
@@ -721,8 +661,7 @@ export function TeamManagement() {;
 }'"}
 }
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
           </TableBody>
         </Table>
       </div>
@@ -754,4 +693,4 @@ export function TeamManagement() {;
 }</div> </TableCell> </TableRow>) ) ;
 }</TableBody> </Table> </div> </div>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

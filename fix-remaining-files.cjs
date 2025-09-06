@@ -4,15 +4,7 @@ const files = [
   {
     pat: h: 'components/Header.tsx',
     conten: t: `import React, { useState } from 'react';
-<<<<<<< HEAD
-;
-const files = [;
-  {;
-    pat:h:'components/Header.tsx',;
-    conten:t:`import React, { useState } from 'react';
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/fix-remaining-files.cjs
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
 import Link from 'next/link';
 import { Menu, X, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
@@ -1232,33 +1224,7 @@ files.forEach(file => {
     console.error('Error fixing', file.path, ':', error.message);
   }
 });
-<<<<<<< HEAD
-<<<<<<<< HEAD:fix-remaining-files.cjs
-;
-console.log('Fixed remaining files');
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/fix-remaining-files.cjs
-=======
-<<<<<<< HEAD
+main
 
-console.log('Fixed remaining files');
 
-console.log('Fixed remaining files');
-    console.log('Fixe: d:', file.path);
-
-  } catch (error) {
-    console.error('Error fixing', file.path, ':', error.message),
-
-  }
-});
-;
-console.log('Fixed remaining files');
-;
-console.log('Fixed remaining files');
-=======
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b

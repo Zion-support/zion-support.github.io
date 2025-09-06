@@ -1,31 +1,19 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
 export default function Page() {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
+
   return (
     <div className='min-h-screen bg-slate-950 text-white'>;
       <Head>;
         <title>Innovation Insight — 2025-08-14 21-47</title>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import Head from 'next/head';
 export default function Page() {
   return (
     <div className='min-h-screen bg-slate-950 text-white'>
       <Head>
         <title>Innovation Insight — 2025-08-14 21-47</title>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
         <meta
           name='description'
           content='An inventive insight derived from autonomous research.'
@@ -48,19 +36,10 @@ export default function Page() {
           className='mt-4'
           dangerouslySetInnerHTML={{
             __html:
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
               '<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/newsroom</a></li></ul>',;
 
-=======
-              '<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/newsroom</a></li></ul>',;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
           }}
         />;
         <p className='mt-6 text-white/60 text-sm'>;
@@ -69,20 +48,12 @@ export default function Page() {
       </main>;
     </div>;
   );export default function Page() {;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               '<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup.com/newsroom</a></li></ul>',
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
           }}
         />
         <p className='mt-6 text-white/60 text-sm'>
@@ -100,26 +71,15 @@ export default function Page() {
   );export default function Page() {
   return (
 
-<<<<<<< HEAD
 export default function Page() {
-  return (
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+origin/cursor/integrate-build-improve-and-re-verify-2156
+
 export default function Page() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-export default function Page() {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
   return (
 
 }
 
-<<<<<<< HEAD
-=======
-=======
 export default function Page() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">;
@@ -138,12 +98,11 @@ export default function Page() {
     </div>;
   );
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
 export default function Page() {
   return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
 import Head from 'next / head';
 export default /**
  * Page - Function description
@@ -202,18 +161,9 @@ function Page() {
       </main>;
     </div>);
 }
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
       <Head>
@@ -240,19 +190,10 @@ function Page() {
         </p>
       </main>
     </div>
-<<<<<<< HEAD
-    </div>;
-  );export default function Page() {
-  return (
-
-export default function Page() {
-  return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Innovation Insight — 2025-08-14 21-47</title>
@@ -266,21 +207,13 @@ export default function Page() {
         <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<ul class=\"list-disc pl-6\"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/newsroom\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com/newsroom</a></li></ul>" }} />
         <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Content Factory.</p>
       </main>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+ursor/fix-website-loading-errors-and-merge-6662
     </div>
   );
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
     </div>;
   );
 }
@@ -293,14 +226,8 @@ export default function Page() {
 }
 ;
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,17 +1,11 @@
-<<<<<<< HEAD
 
 
-=======
 
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile, writeJsonFile } from "../../../utils/db";
 import type { Job } from "../../../utils/types";
 import { rateLimit } from "../../../utils/rateLimit";
 import { getRequestUserEmail, isAdminEmail } from "../../../utils/auth";
-<<<<<<< HEAD
-=======
 
 
 const FILE = "jobs && jobs.json";
@@ -23,16 +17,14 @@ const FILE = "jobs.json";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
   if (!rateLimit(req, res)) return;
   const { id } = req && req.query;
   const jobs = readJsonFile<Job[]>(FILE, []);
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
   if (idx === -1) {
     res && res.status(404).json({ error: "Job not found" });
     return;
@@ -56,8 +48,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     }
     const {
 
-<<<<<<< HEAD
-=======
       title
       description
       category
@@ -123,7 +113,7 @@ if (job.status = status as Job["status"]) {
     res.status (200).json ({ job });
     return;
   }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
@@ -176,7 +166,6 @@ export default function handler(req, res) {
 }
 ;
   if (req.method === 'GET') {
-=======
 const idx = jobs.findIndex(j => j.id === id);
 
   if (idx === -1) {
@@ -189,7 +178,7 @@ const idx = jobs.findIndex(j => j.id === id);
 return;
   }
   if (req.method === "GET") {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     res.status(200).json({ job: jobs[idx] });
     return;
     } catch (error) {
@@ -211,16 +200,6 @@ return;
     const job = jobs[idx];
     const isOwner = userEmail && userEmail === job.clientEmail;
     if (!isOwner && !isAdminEmail(userEmail)) {;
-<<<<<<< HEAD
-      title,
-      description,
-      category,
-      required_skills,
-      budgetMinUsd,
-      budgetMaxUsd,
-      deliveryDeadlineIso,
-      status,
-=======
       title
       description
       category
@@ -229,7 +208,7 @@ return;
       budgetMaxUsd
       deliveryDeadlineIso
       status
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 
       res.status(403).json({ error: 'Forbidden' });
       return
@@ -245,11 +224,8 @@ return;
     if (typeof budgetMaxUsd === 'number' || budgetMaxUsd === null) job.budgetMaxUsd = budgetMaxUsd ?? undefined;
     if (typeof deliveryDeadlineIso === 'string' || deliveryDeadlineIso === null) job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined;
     if (typeof status === 'string') job.status = status as Job['status'];
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
     job.updatedAtIso = new Date().toISOString();
     jobs[idx] = job,;
     writeJsonFile<Job[]>(FILE, jobs),;
@@ -277,13 +253,9 @@ return;
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
+
   }
 }
   } catch (error) {
@@ -291,7 +263,6 @@ return;
     return res.status(500).json({ error: "Internal server error" });
   }
 
-=======
 }
 
   if (req.method === "PATCH") {
@@ -302,25 +273,9 @@ return;
       res.status(403).json({ error: 'Forbidden' });
 return;
     }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 
     const {
-<<<<<<< HEAD
-      title
-      description
-      category
-      requiredSkills
-      budgetMinUsd
-      budgetMaxUsd
-      deliveryDeadlineIso
-      status
-    } = req.body || {};
-    if (typeof title === "string") job.title = title;
-    if (typeof description === "string") job.description = description;
-    if (typeof category === "string") job.category = category;
-    if (Array.isArray(requiredSkills))
-=======
       title,
       description,
       category,
@@ -335,7 +290,7 @@ return;
     if (typeof description === 'string') job.description = description;
     if (typeof category === 'string') job.category = category;
 if (Array.isArray(requiredSkills))
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       job.requiredSkills = requiredSkills.map(String);
     if (typeof budgetMinUsd === "number" || budgetMinUsd === null)
       job.budgetMinUsd = budgetMinUsd ?? undefined;
@@ -343,11 +298,8 @@ if (Array.isArray(requiredSkills))
       job.budgetMaxUsd = budgetMaxUsd ?? undefined;
     if (typeof deliveryDeadlineIso === "string" || deliveryDeadlineIso === null)
       job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined;
-<<<<<<< HEAD
-    if (typeof status === "string") job.status = status as Job["status"];
-=======
     if (typeof status === 'string') job.status = status as Job['status'];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
     job.updatedAtIso = new Date().toISOString();
     jobs[idx] = job;
@@ -357,20 +309,11 @@ if (Array.isArray(requiredSkills))
 return;
   }
 
-<<<<<<< HEAD
-res.setHeader("Allow", "GET, PATCH");
-  res.status(405).end("Method Not Allowed");
-}
-}
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+
+
   res.setHeader('Allow', 'GET, PATCH');
   res.status(405).end('Method Not Allowed');
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

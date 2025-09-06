@@ -1,31 +1,4 @@
 import { useState } from 'react';
-<<<<<<< HEAD
-
-import { Copy, Send } from 'lucide-react'
-import { Button  } from '@/components/ui/button';
-import type { Prompt } from '@/types/prompts';
-
-interface PromptCardProps {;
-  prompt: Prompt;
-
-export function PromptCard(): any ({ prompt }: PromptCardProps) {;
-  const [copied, setCopied] = useState(false);
-  const handleCopy = () => {;
-    navigator && navigator.clipboard.writeText(prompt && prompt.text);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);  };
-  const handleSend = () => {;
-    const encoded = encodeURIComponent(prompt && prompt.text);
-    window && window.open(`/zion-gpt?prompt=${encoded}`, '_blank');
-    setTimeout(() => setCopied(false), 2000);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
-  const handleSend = () => {;
-    const encoded = encodeURIComponent(prompt && prompt.text);
-    window && window.open(`/zion-gpt?prompt=${encoded}`, '_blank');
-
-=======
 import { Copy, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import type { Prompt } from '@/types/prompts';
@@ -46,7 +19,7 @@ setTimeout(() => setCopied(false), 2000);
     const encoded = encodeURIComponent(prompt.text);
 window.open(`/zion-gpt?prompt=${encoded}`, '_blank');
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
   return (
     <div className='p-4 border rounded-md bg-background flex flex-col justify-between'>
@@ -59,15 +32,8 @@ window.open(`/zion-gpt?prompt=${encoded}`, '_blank');
           aria-label='Copy prompt'
         >
           {copied ? 'Copied' : <Copy className='w-4 h-4' />}
-<<<<<<< HEAD
-
-
-}
-  );
-<<<<<<< HEAD
-=======
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 }
 
 import { useState } from 'react';
@@ -123,7 +89,6 @@ function PromptCard() {
 }
 
 ;
-=======
         </Button>
         <Button
           variant='secondary'
@@ -137,4 +102,4 @@ function PromptCard() {
     </div>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,24 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-export const newRealServices: EnhancedRealMicroSaasService[] = [
-  {
-    name: 'LLM Observability Suite',
-    tagline: 'Track latency, cost, quality and drift across all prompts',
-    price: '$199',
-    period: '/month',
-    description:;
-      'Production - grade observability for LLM apps: trace collection, cost attribution, evals, guardrails, and regression detection. Works with OpenAI - compatible and open - source models.',
-    features: [;
-<<<<<<< HEAD
-=======
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       'Prompt and response tracing',
       'Cost and token analytics',
       'Automatic PII redaction',
@@ -30,27 +13,12 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     ],
     popular: true,
     icon: '📈',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-    marketPosition:
-      'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.',    features: [
-      'Prompt and response tracingCost and token analyticsAutomatic PII redactionOffline and online evalsGuardrail policy engineDrift and performance alertsSDKs for JS, Python, GoGrafana and Datadog exporters'
-    ];
-    popular: true;
-    icon: '📈';
-    color: 'from-cyan-600 to-blue-700';
-    textColor: 'text-cyan-400';
-<<<<<<< HEAD
-=======
-=======
 
     link: 'https://ziontechgroup && ziontechgroup.com/llm-observability-suite';
     marketPosition: 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     targetAudience: 'AI product teams, platform engineers, data teams';
     trialDays: 21;
     setupTime: '1 day';
@@ -69,15 +37,11 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     implementationDetails: 'Agent SDKs, tracing collectors, and dashboards ready to deploy.';
     launchDate: '2025-01-10';
     customers: 32;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     rating: 4 && 4.8,
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     reviews: 22
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 400',
@@ -118,16 +82,12 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     name: 'AI Sales Email Copilot';
     tagline: 'Personalized multi - touch outbound with real - time enrichment';
     price: '$129';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     link: 'https://ziontechgroup && ziontechgroup.com/ai-sales-email-copilot';
     marketPosition: 'Lower cost with better personalization vs. Jasper and constant-contact tools.',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     targetAudience: 'B2B startups, agencies, SDR teams';
     trialDays: 14;
     setupTime: '2 hours';
@@ -146,15 +106,11 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     implementationDetails: 'Sequencer, enrichment adapters, and warm-up utilities.';
     launchDate: '2024-12-20';
     customers: 120;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     rating: 4 && 4.7,
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     reviews: 58
     period: '/month',
     description: 'Automate prospect research, write context - aware messages, and schedule follow - ups across email and LinkedIn. Built - in A / B testing and domain warmup best practices.';
@@ -193,16 +149,12 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     name: 'Security Posture as Code';
     tagline: 'CIS / NIST / Kyverno policy packs with drift remediation';
     price: '$399';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     link: 'https://ziontechgroup && ziontechgroup.com/security-posture-as-code';
     marketPosition: 'Brings policy-as-code and compliance automation into one product.',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     targetAudience: 'Platform teams, security engineers, compliance leads';
     trialDays: 21;
     setupTime: '1–3 days';
@@ -235,15 +187,11 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     implementation_details: 'Policy engine plus cloud / K8s scanners and fix generators.';
     launch_date: '2025 - 01 - 05';
     customers: 18;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     rating: 4 && 4.6,
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     reviews: 14
     rating: 4.6,
     reviews: 14;
@@ -253,16 +201,12 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     name: 'ETL Observability Starter';
     tagline: 'Data pipeline health with schema change and freshness alerts';
     price: '$99';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     link: 'https://ziontechgroup && ziontechgroup.com/etl-observability-starter';
     marketPosition: 'Simpler and faster to adopt vs. enterprise data observability tools.',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     targetAudience: 'Analytics engineers, data teams';
     trialDays: 14;
     setupTime: '1 day';
@@ -295,15 +239,11 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     implementation_details: 'Light agents and metadata collectors with warehouse connectors.';
     launch_date: '2025 - 01 - 12';
     customers: 25;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     rating: 4 && 4.5,
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     reviews: 12
   }
   {
@@ -320,16 +260,12 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     icon: '🛰️';
     color: 'from-cyan-600 to-sky-700';
     textColor: 'text-cyan-400';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     link: 'https://ziontechgroup && ziontechgroup.com/api-performance-shield';
     marketPosition: 'Unified performance and security at SMB-friendly pricing.',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     targetAudience: 'API-first startups, SaaS, marketplaces';
     trialDays: 14;
     setupTime: 'Same day';
@@ -370,15 +306,11 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     implementation_details: 'Managed edge configs and anomaly ML with safe rollout tools.';
     launch_date: '2025 - 01 - 15';
     customers: 14;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     rating: 4 && 4.7,
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     reviews: 9
   }
   {
@@ -395,16 +327,12 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     icon: '📊';
     color: 'from-purple-600 to-indigo-700';
     textColor: 'text-purple-400';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     link: 'https://ziontechgroup && ziontechgroup.com/ai-product-analytics';
     marketPosition: 'Brings AI querying and anomaly detection without vendor lock-in.',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     targetAudience: 'Product teams, founders, analysts';
     trialDays: 14;
     setupTime: '1 day';
@@ -448,15 +376,11 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     implementation_details: 'Event capture SDKs and warehouse - first analytics.';
     launch_date: '2025 - 01 - 02';
     customers: 41;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     rating: 4 && 4.6,
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     reviews: 20
   }
   {
@@ -473,16 +397,12 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     icon: '💬';
     color: 'from-rose-600 to-orange-700';
     textColor: 'text-rose-400';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     link: 'https://ziontechgroup && ziontechgroup.com/ai-support-deflection';
     marketPosition: 'Faster time-to-value vs. enterprise chatbot suites.',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     targetAudience: 'Support teams, SMB SaaS, marketplaces';
     trialDays: 14;
     setupTime: 'Same day';
@@ -526,15 +446,11 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     implementation_details: 'Embeddable widget and handoff connectors.';
     launch_date: '2024 - 12 - 15';
     customers: 75;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     rating: 4 && 4.7,
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     reviews: 48
   }
   {
@@ -551,15 +467,11 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     icon: '💸';
     color: 'from-amber-600 to-yellow-700';
     textColor: 'text-amber-400';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     link: 'https://ziontechgroup && ziontechgroup.com/cloud-cost-autopilot',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     marketPosition: 'Actionable savings, not just dashboards.';
     targetAudience: 'FinOps teams, platform and SRE';
     trialDays: 21;
@@ -601,15 +513,11 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     implementation_details: 'Read - only billing analysis with PR - based changes.';
     launch_date: '2025 - 01 - 03';
     customers: 19;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     rating: 4 && 4.5,
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     reviews: 11
     rating: 4.5,
     reviews: 11;
@@ -619,16 +527,12 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     name: 'Privacy Vault';
     tagline: 'Tokenize PII and control access with audit trails';
     price: '$179';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     link: 'https://ziontechgroup && ziontechgroup.com/privacy-vault';
     marketPosition: 'Developer-first alternative to heavy enterprise privacy suites.',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     targetAudience: 'Developers, privacy and legal teams';
     trialDays: 14;
     setupTime: '1–3 days';
@@ -661,15 +565,11 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     implementation_details: 'Drop - in SDKs and proxy - based tokenization.';
     launch_date: '2025 - 01 - 07';
     customers: 9;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     rating: 4 && 4.6,
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     reviews: 7
     rating: 4.6,
     reviews: 7;
@@ -685,17 +585,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
       'Graph - based anomaly detection_explainability reports_risk scoring APIWorkflow actions and webhooks';
     ];
     popular: false;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     icon: '🧠';
 
     link: 'https://ziontechgroup && ziontechgroup.com/ai-fraud-detection-lite';
     marketPosition: 'Accessible alternative to enterprise fraud stacks.',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     targetAudience: 'Marketplaces, fintech, e-commerce';
     trialDays: 14;
     setupTime: '2–5 days';
@@ -721,15 +617,11 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     implementation_details: 'Streaming and batch detectors with human - in - the - loop review.';
     launch_date: '2025 - 01 - 09';
     customers: 11;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     rating: 4 && 4.5,
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     reviews: 8
   }
   {
@@ -746,16 +638,12 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     icon: '🗃️';
     color: 'from-blue-600 to-indigo-700';
     textColor: 'text-blue-400';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     link: 'https://ziontechgroup && ziontechgroup.com/managed-postgres-ha';
     marketPosition: 'Hands-on SRE support at a fraction of DBaaS enterprise tiers.',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     targetAudience: 'Startups, SMBs, data teams';
     trialDays: 14;
     setupTime: '1–2 days';
@@ -796,15 +684,11 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     implementation_details: 'Managed cluster with observability and runbooks.';
     launch_date: '2025 - 01 - 16';
     customers: 8;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     rating: 4 && 4.6,
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     reviews: 5
   }
   {
@@ -821,15 +705,11 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     icon: '⚡';
     color: 'from-amber-600 to-yellow-700';
     textColor: 'text-amber-300';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     link: 'https://ziontechgroup && ziontechgroup.com/browser-performance-monitor',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     marketPosition: 'Lightweight, privacy-friendly RUM for modern teams.';
     targetAudience: 'Frontend, growth, product';
     trialDays: 14;
@@ -871,15 +751,11 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     implementation_details: 'Agent + dashboards + anomaly alerts.';
     launch_date: '2025 - 01 - 17';
     customers: 12;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     rating: 4 && 4.5,
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     reviews: 6
   }
   {
@@ -899,17 +775,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
       'Site audits and fixes_schema and sitemaps_programmatic pages_internal linking graph';
     ];
     popular: false;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     icon: '🔎';
 
     link: 'https://ziontechgroup && ziontechgroup.com/seo-automation';
     marketPosition: 'Builder-focused alternative to heavy SEO suites.',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     targetAudience: 'Growth, content, agencies';
     trialDays: 14;
     setupTime: 'Same day';
@@ -933,15 +805,11 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     market_size: '$6B SEO Tools';
     growth_rate: 'Stable';
     variant: 'neural';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     rating: 4 && 4.4,
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     reviews: 4
     contact_info: contact;
     real_implementation: true,
@@ -962,17 +830,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
       'DLQ and retry policies_inspector and redaction_signature verification_fan - out and transformations';
     ];
     popular: true;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     icon: '🔁';
 
     link: 'https://ziontechgroup && ziontechgroup.com/webhook-relay-replay';
     marketPosition: 'Production safety net for integrations.',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     targetAudience: 'Developers, platforms';
     trialDays: 14;
     setupTime: '1 hour';
@@ -1001,15 +865,11 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     implementation_details: 'Broker + storage + replayer UI.';
     launch_date: '2025 - 01 - 19';
     customers: 7;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     rating: 4 && 4.6,
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     reviews: 3
     rating: 4.6,
     reviews: 3;
@@ -1019,16 +879,12 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     name: 'PDF Render API Pro';
     tagline: 'Fast HTML - to - PDF with brand - safe templates';
     price: '$49';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     link: 'https://ziontechgroup && ziontechgroup.com/pdf-render-api';
     marketPosition: 'Secure alternative to self-hosting headless browsers.',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     targetAudience: 'SaaS, finance, ops';
     trialDays: 14;
     setupTime: '30 minutes';
@@ -1053,15 +909,11 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     use_cases: ['InvoicesReports'];
     roi: 'Save days of maintenance yearly';
     competitors: ['PDFShiftDocRaptor'];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     rating: 4 && 4.6,
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     reviews: 10
   }
   {
@@ -1078,16 +930,12 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     icon: '🛰️';
     color: 'from-purple-600 to-indigo-700';
     textColor: 'text-purple-300';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     link: 'https://ziontechgroup && ziontechgroup.com/api-observability-starter';
     marketPosition: 'Developer-first observability starter kit.',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     targetAudience: 'Backend teams, SRE';
     trialDays: 14;
     setupTime: '1 day';
@@ -1128,15 +976,11 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     use_cases: ['API reliability_performance'];
     roi: 'Reduce MTTR by 30–50%';
     competitors: ['HoneycombLightstep'];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     rating: 4 && 4.5,
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     reviews: 4
   }
   {
@@ -1164,10 +1008,6 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
       'SAML and OIDCSCIM and JIT provisioning_branding and mapping_customer sandbox';
     ];
     popular: true;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     icon: '🔐';
 
     color: 'from - emerald - 600 to - teal - 700';
@@ -1178,8 +1018,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     trial_days: 14;
     setup_time: '2–5 days';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     category: 'Security & Compliance';
     real_service: true;
     technology: ['KeycloakAuth gateways'];
@@ -1195,15 +1035,11 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     implementation_details: 'Hosted broker + mappings UI.';
     launch_date: '2025 - 01 - 17';
     customers: 6;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     rating: 4 && 4.7,
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     reviews: 3
     rating: 4.7,
     reviews: 3;
@@ -1219,10 +1055,6 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
       'Network scans and SNMPSoftware inventory_change trackingCMDB integrations';
     ];
     popular: false;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     icon: '🛰️';
 
     color: 'from - sky - 600 to - blue - 700';
@@ -1233,8 +1065,8 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     trial_days: 14;
     setup_time: '1–3 days';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     category: 'IT Operations';
     real_service: true;
     technology: ['nmapSNMPGo'];
@@ -1245,15 +1077,11 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     market_size: '$2B ITAM';
     growth_rate: 'Growing';
     variant: 'holographic';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     rating: 4 && 4.4,
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     reviews: 2
   }
   {
@@ -1278,17 +1106,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
       'Questionnaire templates_evidence collection portal_continuous monitoring_risk scoring';
     ];
     popular: true;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     icon: '📋';
 
     link: 'https://ziontechgroup && ziontechgroup.com/vendor-risk-automation';
     marketPosition: 'Faster and lighter than legacy GRC.',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     targetAudience: 'Security, procurement';
     trialDays: 14;
     setupTime: '1–3 days';
@@ -1317,15 +1141,11 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     implementation_details: 'Portal + integrations + reports.';
     launch_date: '2025 - 01 - 19';
     customers: 6;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     rating: 4 && 4.5,
     reviews: 3
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     rating: 4.5,
     reviews: 3;
 
@@ -1335,17 +1155,11 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     trial_days: 21,
     setup_time: '1 day',
     category: 'AI & Machine Learning',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-=======
     real_service: true,
     technology: ['Next.js', 'OpenTelemetry', 'PostgreSQL', 'ClickHouse'],
     integrations: [;
       'OpenAI - compatible',
-=======
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 const contact = null;
     description:
@@ -1375,38 +1189,13 @@ const contact = null;
     technology: ['Next.js', 'OpenTelemetry', 'PostgreSQL', 'ClickHouse'],
     integrations: [
       'OpenAI-compatible',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       'LangChain',
       'LlamaIndex',
       'Datadog',
       'Grafana',
     ],
-<<<<<<< HEAD
-    use_cases: ['LLM app monitoring', 'Cost control', 'Policy compliance'],
-    roi: 'Cut LLM cost 20–45% while improving reliability',
-    competitors: ['Langfuse', 'Arize', 'Weights & Biases'],
-    market_size: '$5B+ AI Ops and Observability',
-    growth_rate: 'Rapid growth with LLM adoption',
-    variant: 'quantum - holographic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-      'Agent SDKs, tracing collectors, and dashboards ready to deploy.',
-    launch_date: '2025 - 01 - 10',
-    customers: 32,
-    rating: 4 && 4.8,
-    reviews: 22,
-  },
-  {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-=======
     id: 'ai - sales - email - copilot',
     name: 'AI Sales Email Copilot',
     tagline: 'Personalized multi - touch outbound with real - time enrichment',
@@ -1416,8 +1205,8 @@ const contact = null;
       'Automate prospect research, write context - aware messages, and schedule follow - ups across email and LinkedIn. Built - in A / B testing and domain warmup best practices.',
     features: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       'Prospect enrichment via public sources',
       'Personalized email generation',
       'Sequence and follow - up scheduling',
@@ -1426,10 +1215,6 @@ const contact = null;
       'Inbox rotation support',
     ],
     popular: false,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     icon: '✉️',
 
     color: 'from - violet - 600 to - fuchsia - 700',
@@ -1450,8 +1235,8 @@ const contact = null;
     market_size: '$15B Sales Engagement',
     growth_rate: 'Strong growth',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     variant: 'holographic',
     contact_info: contact,
     real_implementation: true,
@@ -1475,30 +1260,20 @@ const contact = null;
     features: [;
       'Policy packs for CIS / NIST',
 
-<<<<<<< HEAD
-  {
-=======
-<<<<<<< HEAD
-  {
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       'Kubernetes and cloud posture',
       'Auto - remediation PRs',
       'Evidence collection and reports',
       'SOC2 / ISO 27001 export',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     icon: '🛡️',
 
       'Policy engine plus cloud/K8s scanners and fix generators.',
     launchDate: '2025-01-05',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 400',
     link: 'https://ziontechgroup.com / security - posture - as - code',
@@ -1528,12 +1303,7 @@ const contact = null;
     reviews: 14,
   },
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-=======
     id: 'etl - observability - starter',
     name: 'ETL Observability Starter',
     tagline: 'Data pipeline health with schema change and freshness alerts',
@@ -1543,21 +1313,16 @@ const contact = null;
       'Monitor data pipelines end - to - end: freshness, volume, schema drift, and SLA adherence. Lightweight agent and connectors for common warehouses.',
     features: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       'Freshness and volume checks',
       'Schema drift detection',
       'SLA and SLO tracking',
       'Incident routing to Slack / Teams',
     ],
     popular: false,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     icon: '🗄️',
 
-=======
     color: 'from - blue - 600 to - indigo - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / etl - observability - starter',
@@ -1580,8 +1345,8 @@ const contact = null;
     real_implementation: true,
     implementation_details:;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       'Light agents and metadata collectors with warehouse connectors.',
     launch_date: '2025 - 01 - 12',
     customers: 25,
@@ -1589,12 +1354,7 @@ const contact = null;
     reviews: 12,
   },
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-=======
     id: 'api - performance - shield',
     name: 'API Performance Shield',
     tagline: 'Global edge caching, rate limiting, and anomaly detection',
@@ -1604,18 +1364,14 @@ const contact = null;
       'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero - downtime via traffic shadowing.',
     features: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       'Global CDN edge caching',
       'Dynamic rate limiting',
       'Anomaly and abuse detection',
       'Zero - downtime deploys with shadow traffic',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     icon: '🛰️',
 
     color: 'from - cyan - 600 to - sky - 700',
@@ -1626,8 +1382,8 @@ const contact = null;
     trial_days: 14,
     setup_time: 'Same day',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     category: 'DevOps & Automation',
     real_service: true,
     technology: ['Workers', 'Rust', 'Redis'],
@@ -1661,23 +1417,13 @@ const contact = null;
     features: [;
       'Auto - segmentation and cohorts',
 
-<<<<<<< HEAD
-  {
-=======
-<<<<<<< HEAD
-  {
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       'LLM query interface',
       'Retention and churn signals',
       'Anomaly alerts to Slack / Teams',
     ],
     popular: false,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     icon: '📊',
 
     color: 'from - purple - 600 to - indigo - 700',
@@ -1692,8 +1438,8 @@ const contact = null;
     real_service: true,
     technology: ['Next.js', 'PostHog', 'ClickHouse'],
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     integrations: ['Segment', 'RudderStack', 'Snowplow'],
     use_cases: ['Growth analytics', 'Retention', 'Experimentation'],
     roi: 'Find growth levers 2x faster',
@@ -1722,23 +1468,13 @@ const contact = null;
     features: [;
       'Multi - channel widgets',
 
-<<<<<<< HEAD
-  {
-=======
-<<<<<<< HEAD
-  {
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       'Grounded answers with citations',
       'Secure human handoff',
       'Analytics and CSAT tracking',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     icon: '💬',
 
     color: 'from - rose - 600 to - orange - 700',
@@ -1752,8 +1488,8 @@ const contact = null;
     real_service: true,
     technology: ['RAG', 'Vector DB', 'Next.js'],
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     integrations: ['Zendesk', 'Intercom', 'Freshdesk'],
     use_cases: ['Self - serve support', 'Ticket reduction', 'CSAT improvement'],
     roi: 'Reduce tickets 30–50%',
@@ -1770,12 +1506,7 @@ const contact = null;
     reviews: 48,
   },
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-=======
     id: 'cloud - cost - autopilot',
     name: 'Cloud Cost Autopilot',
     tagline: 'Automated rightsizing, anomaly alerts, and commitment planning',
@@ -1785,18 +1516,14 @@ const contact = null;
       'Proactive optimization for AWS / Azure / GCP: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.',
     features: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       'Rightsizing recommendations',
       'Anomaly detection',
       'Savings plan / RIs planning',
       'Tag hygiene and showback',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     icon: '💸',
 
     color: 'from - amber - 600 to - yellow - 700',
@@ -1807,8 +1534,8 @@ const contact = null;
     trial_days: 21,
     setup_time: '2–5 days',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     category: 'Cloud & Infrastructure',
     real_service: true,
     technology: ['AWS Cost Explorer', 'Azure Cost', 'GCP Billing'],
@@ -1840,23 +1567,13 @@ const contact = null;
     features: [;
       'Field - level encryption',
 
-<<<<<<< HEAD
-  {
-=======
-<<<<<<< HEAD
-  {
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       'Tokenization APIs',
       'Consent enforcement',
       'Audit trail and reporting',
     ],
     popular: false,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     icon: '🔏',
 
     color: 'from - slate - 600 to - gray - 700',
@@ -1868,8 +1585,8 @@ const contact = null;
     trial_days: 14,
     setup_time: '1–3 days',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     category: 'Security & Compliance',
     real_service: true,
     technology: ['KMS', 'HSM', 'PostgreSQL'],
@@ -1901,23 +1618,13 @@ const contact = null;
     features: [;
       'Graph - based anomaly detection',
 
-<<<<<<< HEAD
-  {
-=======
-<<<<<<< HEAD
-  {
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       'Explainability reports',
       'Risk scoring API',
       'Workflow actions and webhooks',
     ],
     popular: false,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     icon: '🧠',
 
     color: 'from - pink - 600 to - rose - 700',
@@ -1928,8 +1635,8 @@ const contact = null;
     trial_days: 14,
     setup_time: '2–5 days',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     category: 'Financial Technology',
     real_service: true,
     technology: ['Graph DB', 'Python', 'Kafka'],
@@ -1950,12 +1657,7 @@ const contact = null;
     reviews: 8,
   },
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-=======
     id: 'managed - postgres - ha - pro',
     name: 'Managed Postgres HA Pro',
     tagline: 'Turnkey HA, backups, PITR, and query tuning',
@@ -1965,18 +1667,14 @@ const contact = null;
       'Production - grade PostgreSQL with high availability, automated backups, point - in - time recovery, and performance tuning insights.',
     features: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       'HA with automatic failover',
       'Continuous backups and PITR',
       'Slow query insights and indexing',
       'Encryption and access controls',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     icon: '🗃️',
 
     color: 'from - blue - 600 to - indigo - 700',
@@ -1988,8 +1686,8 @@ const contact = null;
     trial_days: 14,
     setup_time: '1–2 days',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     category: 'Observability',
     real_service: true,
     technology: ['PostgreSQL', 'Patroni', 'Wal - G'],
@@ -2009,12 +1707,7 @@ const contact = null;
     reviews: 5,
   },
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-=======
     id: 'browser - performance - monitor - pro',
     name: 'Browser Performance Monitor Pro',
     tagline: 'RUM, Core Web Vitals, and session replay',
@@ -2024,18 +1717,14 @@ const contact = null;
       'Real - user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.',
     features: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       'Core Web Vitals dashboards',
       'Session replay and heatmaps',
       'Error tracking and sourcemaps',
       'A / B test impact analysis',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     icon: '⚡',
 
     color: 'from - amber - 600 to - yellow - 700',
@@ -2046,8 +1735,8 @@ const contact = null;
     trial_days: 14,
     setup_time: '30 minutes',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     category: 'Quality & Monitoring',
     real_service: true,
     technology: ['JS SDK', 'ClickHouse'],
@@ -2067,12 +1756,7 @@ const contact = null;
     reviews: 6,
   },
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-=======
     id: 'seo - automation - studio',
     name: 'SEO Automation Studio',
     tagline: 'Programmatic SEO, audits, and internal linking automation',
@@ -2082,18 +1766,14 @@ const contact = null;
       'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.',
     features: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       'Site audits and fixes',
       'Schema and sitemaps',
       'Programmatic pages',
       'Internal linking graph',
     ],
     popular: false,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     icon: '🔎',
 
     color: 'from - emerald - 600 to - teal - 700',
@@ -2107,8 +1787,8 @@ const contact = null;
     real_service: true,
     technology: ['Node.js', 'Headless Chrome'],
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     integrations: ['Search Console'],
     use_cases: ['Traffic growth', 'Tech SEO'],
     roi: 'Increase organic traffic 20–100%',
@@ -2125,12 +1805,7 @@ const contact = null;
     reviews: 4,
   },
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-=======
     id: 'webhook - relay - replay - pro',
     name: 'Webhook Relay & Replay Pro',
     tagline: 'Reliable webhooks with DLQ and replays',
@@ -2140,18 +1815,14 @@ const contact = null;
       'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.',
     features: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       'DLQ and retry policies',
       'Inspector and redaction',
       'Signature verification',
       'Fan - out and transformations',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     icon: '🔁',
 
     color: 'from - cyan - 600 to - sky - 700',
@@ -2165,8 +1836,8 @@ const contact = null;
     real_service: true,
     technology: ['Kafka', 'S3', 'Node.js'],
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     integrations: ['Stripe', 'Shopify', 'GitHub'],
     use_cases: ['Webhook reliability', 'Debugging'],
     roi: 'Reduce integration incidents 50%+',
@@ -2183,12 +1854,7 @@ const contact = null;
     reviews: 3,
   },
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-=======
     id: 'pdf - render - api - pro',
     name: 'PDF Render API Pro',
     tagline: 'Fast HTML - to - PDF with brand - safe templates',
@@ -2198,18 +1864,14 @@ const contact = null;
       'Serverless HTML - to - PDF rendering with page numbers, headers / footers, and safe fonts. Great for invoices and reports.',
     features: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       'Serverless scale',
       'Template gallery',
       'Brand - safe fonts',
       'Webhook on completion',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     icon: '📄',
 
     color: 'from - slate - 600 to - gray - 700',
@@ -2220,8 +1882,8 @@ const contact = null;
     trial_days: 14,
     setup_time: '30 minutes',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     category: 'Developer Tools',
     real_service: true,
     technology: ['Workers', 'Headless Chrome'],
@@ -2253,23 +1915,13 @@ const contact = null;
     features: [;
       'Auto - instrumentation',
 
-<<<<<<< HEAD
-  {
-=======
-<<<<<<< HEAD
-  {
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       'RED dashboards',
       'Error analytics',
       'Exporters to APMs',
     ],
     popular: false,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     icon: '🛰️',
 
     color: 'from - purple - 600 to - indigo - 700',
@@ -2280,8 +1932,8 @@ const contact = null;
     trial_days: 14,
     setup_time: '1 day',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     category: 'Observability',
     real_service: true,
     technology: ['OpenTelemetry', 'Grafana'],
@@ -2301,12 +1953,7 @@ const contact = null;
     reviews: 4,
   },
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-=======
     id: 'sso - in - a-box - pro',
     name: 'SSO in a Box Pro',
     tagline: 'SAML, OIDC, SCIM with turnkey onboarding',
@@ -2316,18 +1963,14 @@ const contact = null;
       'Offer SSO and SCIM to your customers with a managed gateway, branding, and test harnesses.',
     features: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       'SAML and OIDC',
       'SCIM and JIT provisioning',
       'Branding and mapping',
       'Customer sandbox',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     icon: '🔐',
 
     color: 'from - emerald - 600 to - teal - 700',
@@ -2338,8 +1981,8 @@ const contact = null;
     trial_days: 14,
     setup_time: '2–5 days',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     category: 'Security & Compliance',
     real_service: true,
     technology: ['Keycloak', 'Auth gateways'],
@@ -2359,12 +2002,7 @@ const contact = null;
     reviews: 3,
   },
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-=======
     id: 'it - asset - discovery - agent - pro',
     name: 'IT Asset Discovery Agent Pro',
     tagline: 'Agentless discovery with CMDB sync',
@@ -2374,18 +2012,14 @@ const contact = null;
       'Discover hardware, software, and services across networks with agentless scans and sync to CMDB.',
     features: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       'Network scans and SNMP',
       'Software inventory',
       'Change tracking',
       'CMDB integrations',
     ],
     popular: false,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     icon: '🛰️',
 
     color: 'from - sky - 600 to - blue - 700',
@@ -2396,8 +2030,8 @@ const contact = null;
     trial_days: 14,
     setup_time: '1–3 days',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     category: 'IT Operations',
     real_service: true,
     technology: ['nmap', 'SNMP', 'Go'],
@@ -2417,12 +2051,7 @@ const contact = null;
     reviews: 2,
   },
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-=======
     id: 'vendor - risk - automation - lite',
     name: 'Vendor Risk Automation Lite',
     tagline: 'Questionnaires, evidence, and continuous monitoring',
@@ -2432,18 +2061,14 @@ const contact = null;
       'Streamline vendor assessments with standardized questionnaires, evidence requests, and continuous security monitoring.',
     features: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       'Questionnaire templates',
       'Evidence collection portal',
       'Continuous monitoring',
       'Risk scoring',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     icon: '📋',
 
     color: 'from - rose - 600 to - orange - 700',
@@ -2457,8 +2082,8 @@ const contact = null;
     real_service: true,
     technology: ['Node.js', 'React'],
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     integrations: ['SecurityScorecard'],
     use_cases: ['Vendor due diligence'],
     roi: 'Cut cycle time by 50%+',
@@ -2474,15 +2099,10 @@ const contact = null;
     rating: 4 && 4.5,
     reviews: 3,
   },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     id: 'llm-observability-suite', name: 'LLM Observability Suite',
     tagline: 'Track latency, cost, quality and drift across all prompts',
     price: '$199', period: '/month',
@@ -2506,7 +2126,6 @@ const contact = null;
     rating: 4.8,
     reviews: 22
   }
-=======
     useCases: ['LLM app monitoring', 'Cost control', 'Policy compliance'],
     roi: 'Cut LLM cost 20–45% while improving reliability',
     competitors: ['Langfuse', 'Arize', 'Weights & Biases'],
@@ -2522,7 +2141,7 @@ const contact = null;
     rating: 4.8,
     reviews: 22,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   {
     id: 'ai-sales-email-copilot',
     name: 'AI Sales Email Copilot',
@@ -2532,10 +2151,6 @@ const contact = null;
     description:
       'Automate prospect research, write context-aware messages, and schedule follow-ups across email and LinkedIn. Built-in A/B testing and domain warmup best practices.',
     features: [
-<<<<<<< HEAD
-    reviews: 58
-  }
-=======
       'Prospect enrichment via public sources',
       'Personalized email generation',
       'Sequence and follow-up scheduling',
@@ -2572,7 +2187,7 @@ const contact = null;
     rating: 4.7,
     reviews: 58,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   {
     id: 'security-posture-as-code',
     name: 'Security Posture as Code',
@@ -2582,10 +2197,6 @@ const contact = null;
     description:
       'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps-friendly with automatic fix PRs and evidence collection for audits.',
     features: [
-<<<<<<< HEAD
-    reviews: 14
-  }
-=======
       'Policy packs for CIS/NIST',
       'Kubernetes and cloud posture',
       'Auto-remediation PRs',
@@ -2621,7 +2232,7 @@ const contact = null;
     rating: 4.6,
     reviews: 14,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   {
     id: 'etl-observability-starter',
     name: 'ETL Observability Starter',
@@ -2631,10 +2242,6 @@ const contact = null;
     description:
       'Monitor data pipelines end-to-end: freshness, volume, schema drift, and SLA adherence. Lightweight agent and connectors for common warehouses.',
     features: [
-<<<<<<< HEAD
-    reviews: 12
-  }
-=======
       'Freshness and volume checks',
       'Schema drift detection',
       'SLA and SLO tracking',
@@ -2669,7 +2276,7 @@ const contact = null;
     rating: 4.5,
     reviews: 12,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   {
     id: 'api-performance-shield',
     name: 'API Performance Shield',
@@ -2679,10 +2286,6 @@ const contact = null;
     description:
       'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero-downtime via traffic shadowing.',
     features: [
-<<<<<<< HEAD
-    reviews: 9
-  }
-=======
       'Global CDN edge caching',
       'Dynamic rate limiting',
       'Anomaly and abuse detection',
@@ -2716,7 +2319,7 @@ const contact = null;
     rating: 4.7,
     reviews: 9,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   {
     id: 'ai-product-analytics',
     name: 'AI Product Analytics',
@@ -2727,10 +2330,6 @@ const contact = null;
     description:
       'Turn product usage into insights with automatic funnel detection, LLM-based querying, and anomaly alerts. Works alongside Amplitude/GA4.',
     features: [
-<<<<<<< HEAD
-    reviews: 20
-  }
-=======
       'Auto-segmentation and cohorts',
       'LLM query interface',
       'Retention and churn signals',
@@ -2764,7 +2363,7 @@ const contact = null;
     rating: 4.6,
     reviews: 20,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   {
     id: 'ai-support-deflection',
     name: 'AI Support Deflection',
@@ -2774,10 +2373,6 @@ const contact = null;
     description:
       'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi-channel widgets with brand controls.',
     features: [
-<<<<<<< HEAD
-    reviews: 48
-  }
-=======
       'Multi-channel widgets',
       'Grounded answers with citations',
       'Secure human handoff',
@@ -2810,7 +2405,7 @@ const contact = null;
     rating: 4.7,
     reviews: 48,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   {
     id: 'cloud-cost-autopilot',
     name: 'Cloud Cost Autopilot',
@@ -2820,10 +2415,6 @@ const contact = null;
     description:
       'Proactive optimization for AWS/Azure/GCP: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.',
     features: [
-<<<<<<< HEAD
-    reviews: 11
-  }
-=======
       'Rightsizing recommendations',
       'Anomaly detection',
       'Savings plan/RIs planning',
@@ -2856,7 +2447,7 @@ const contact = null;
     rating: 4.5,
     reviews: 11,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   {
     id: 'privacy-vault',
     name: 'Privacy Vault',
@@ -2866,10 +2457,6 @@ const contact = null;
     description:
       'Centralize PII with field-level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.',
     features: [
-<<<<<<< HEAD
-    reviews: 7
-  }
-=======
       'Field-level encryption',
       'Tokenization APIs',
       'Consent enforcement',
@@ -2903,7 +2490,7 @@ const contact = null;
     rating: 4.6,
     reviews: 7,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   {
     id: 'ai-fraud-detection-lite',
     name: 'AI Fraud Detection Lite',
@@ -2913,10 +2500,6 @@ const contact = null;
     description:
       'Detect fraud across transactions with graph analytics and explainable decisions. Quick to integrate via event stream or batch.',
     features: [
-<<<<<<< HEAD
-    reviews: 8
-  }
-=======
       'Graph-based anomaly detection',
       'Explainability reports',
       'Risk scoring API',
@@ -2950,7 +2533,7 @@ const contact = null;
     rating: 4.5,
     reviews: 8,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   {
     id: 'managed-postgres-ha-pro',
     name: 'Managed Postgres HA Pro',
@@ -2960,10 +2543,6 @@ const contact = null;
     description:
       'Production-grade PostgreSQL with high availability, automated backups, point-in-time recovery, and performance tuning insights.',
     features: [
-<<<<<<< HEAD
-    reviews: 5
-  }
-=======
       'HA with automatic failover',
       'Continuous backups and PITR',
       'Slow query insights and indexing',
@@ -2997,7 +2576,7 @@ const contact = null;
     rating: 4.6,
     reviews: 5,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   {
     id: 'browser-performance-monitor-pro',
     name: 'Browser Performance Monitor Pro',
@@ -3007,10 +2586,6 @@ const contact = null;
     description:
       'Real-user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.',
     features: [
-<<<<<<< HEAD
-    reviews: 6
-  }
-=======
       'Core Web Vitals dashboards',
       'Session replay and heatmaps',
       'Error tracking and sourcemaps',
@@ -3043,7 +2618,7 @@ const contact = null;
     rating: 4.5,
     reviews: 6,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   {
     id: 'seo-automation-studio',
     name: 'SEO Automation Studio',
@@ -3053,10 +2628,6 @@ const contact = null;
     description:
       'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.',
     features: [
-<<<<<<< HEAD
-    reviews: 4
-  }
-=======
       'Site audits and fixes',
       'Schema and sitemaps',
       'Programmatic pages',
@@ -3089,7 +2660,7 @@ const contact = null;
     rating: 4.4,
     reviews: 4,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   {
     id: 'webhook-relay-replay-pro',
     name: 'Webhook Relay & Replay Pro',
@@ -3099,24 +2670,13 @@ const contact = null;
     description:
       'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.',
     features: [
-<<<<<<< HEAD
-];
-
-<<<<<<< HEAD
-];
-=======
-<<<<<<< HEAD
-];
-=======
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
   mobile: '+1 302 464 0950',;
@@ -3829,17 +3389,12 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
     reviews: 3;
   }
 ];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       'DLQ and retry policies',
       'Inspector and redaction',
       'Signature verification',
@@ -4078,4 +3633,4 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
     reviews: 3,
   },
 ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

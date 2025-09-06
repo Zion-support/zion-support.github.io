@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-  customers: number;
-  rating: number;
-  reviews: number;
-=======
-<<<<<<< HEAD
-  customers: number;
-  rating: number;
-  reviews: number;
-=======
 
 import { ServiceVariant } from '../types / service - variants';
 
@@ -24,34 +13,18 @@ export interface InnovativeAgricultureService {
 
 ;
 const contact = {
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',};
 
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
-
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com', }
-;
-export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -64,12 +37,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com',};
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -105,14 +73,13 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
   website: 'https://ziontechgroup && ziontechgroup.com'
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+origin/cursor/automate-test-improve-and-merge-code-382a
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
   {
 
 
   {
 
-=======
     id: 'quantum - agriculture - optimization',
     name: 'Quantum Agriculture Optimization',
     tagline:;
@@ -127,7 +94,6 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
       'Crop planning optimization',
       'Resource allocation',
       'Real - time adaptation',
-=======
 import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeAgricultureService {
   id: string;
@@ -238,18 +204,11 @@ const contact = null;
       'Crop planning optimization',
       'Resource allocation',
       'Real-time adaptation',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       'Performance analytics',
       'Cost optimization',
       'Efficiency analysis',
       'Regulatory compliance',
-<<<<<<< HEAD
-      'Multi - crop support',
-    ],
-    popular: false,
-    icon: '⚡',
-
-=======
       'Multi-crop support',
     ],
     popular: false,
@@ -272,64 +231,18 @@ const contact = null;
       'Agricultural databases, Weather systems, Soil analysis tools, Analytics platforms',
     ],
     useCases: [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       'Crop planning, Resource allocation, Efficiency optimization, Cost reduction',
     ],
     roi: 'Improve agricultural efficiency by 40% and reduce resource waste by 50%',
     competitors: ['D-Wave, Rigetti, IBM Quantum, Google Quantum'],
-<<<<<<< HEAD
-    marketSize: '$9 && 9.8B+ quantum agriculture market',
-=======
     marketSize: '$9.8B+ quantum agriculture market',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     growthRate: '380% YoY',
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
     implementationDetails:
-<<<<<<< HEAD
-    color: 'from - blue - 600 to - indigo - 700',
-    text_color: 'text - blue - 400',
-    link: 'https://ziontechgroup.com / quantum - agriculture - optimization',
-    market_position:;
-      'Advanced quantum computing platform for agriculture optimization and resource allocation.',
-    target_audience:;
-      'Large agricultural companies, Food producers, Agricultural research institutions, Government agencies',
-    trial_days: 60,
-    setup_time: '2 months',
-    category: 'Agriculture & Food Technology',
-    real_service: true,
-    technology: [;
-      'Quantum computing, Agriculture optimization, Resource allocation, Planning algorithms, Python',
-    ],
-    integrations: [;
-      'Agricultural databases, Weather systems, Soil analysis tools, Analytics platforms',
-    ],
-    use_cases: [;
-      'Crop planning, Resource allocation, Efficiency optimization, Cost reduction',
-    ],
-    roi: 'Improve agricultural efficiency by 40% and reduce resource waste by 50%',
-    competitors: ['D - Wave, Rigetti, IBM Quantum, Google Quantum'],
-    market_size: '$9.8B+ quantum agriculture market',
-    growth_rate: '380% YoY',
-    variant: 'ai - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-      'Quantum agriculture optimization platform with advanced algorithms and resource allocation capabilities.',
-    launch_date: '2025 - 01 - 15',
-    customers: 34,
-    rating: 4 && 4.6,
-    reviews: 26,
-  },
-  {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
       'AI-powered contamination detection',
     id: 'ai - powered - food - safety - monitoring',
@@ -343,8 +256,8 @@ const contact = null;
     features: [;
       'AI - powered contamination detection',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       'Quality monitoring',
       'Safety compliance',
       'Real - time alerts',
@@ -355,13 +268,8 @@ const contact = null;
       'Compliance management',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     icon: '🍎',
 
-=======
     color: 'from - red - 600 to - pink - 700',
     text_color: 'text - red - 400',
     link: 'https://ziontechgroup.com / ai - powered - food - safety - monitoring',
@@ -381,9 +289,8 @@ const contact = null;
     ],
     use_cases: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       'Quantum agriculture optimization platform with advanced algorithms and resource allocation capabilities.',
     launchDate: '2025-01-15',
     customers: 34,
@@ -430,16 +337,11 @@ const contact = null;
       'Food safety systems, Quality control tools, Compliance databases, Analytics platforms',
     ],
     useCases: [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       'Contamination detection, Quality monitoring, Safety compliance, Risk assessment',
     ],
     roi: 'Reduce food safety incidents by 80% and improve compliance by 90%',
     competitors: ['FoodLogiQ, SafetyChain, TraceGains, FoodShield'],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     market_size: '$15.6B+ food safety market',
     growth_rate: '220% YoY',
@@ -450,17 +352,13 @@ const contact = null;
       'AI - powered food safety monitoring platform with intelligent contamination detection and quality control capabilities.',
     launch_date: '2025 - 01 - 20',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     customers: 189,
     rating: 4 && 4.7,
     reviews: 145,
   },
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
       'Blockchain-based tracking',
     id: 'blockchain - food - traceability',
@@ -474,15 +372,14 @@ const contact = null;
     features: [;
       'Blockchain - based tracking',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       'Supply chain transparency',
       'Product authentication',
       'Real - time monitoring',
       'Compliance verification',
       'Performance analytics',
       'Multi - party collaboration',
-=======
     marketSize: '$15.6B+ food safety market',
     growthRate: '220% YoY',
     variant: 'ai-futuristic',
@@ -512,19 +409,13 @@ const contact = null;
       'Compliance verification',
       'Performance analytics',
       'Multi-party collaboration',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       'API integration',
       'Mobile app support',
     ],
     popular: false,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     icon: '🔗',
 
-=======
     color: 'from - purple - 600 to - violet - 700',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / blockchain - food - traceability',
@@ -543,9 +434,8 @@ const contact = null;
     ],
     use_cases: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     icon: '🔗',
     color: 'from-purple-600 to-violet-700',
     textColor: 'text-purple-400',
@@ -564,16 +454,11 @@ const contact = null;
       'Supply chain systems, IoT devices, QR codes, Payment platforms',
     ],
     useCases: [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       'Food tracking, Supply chain transparency, Product authentication, Compliance management',
     ],
     roi: 'Improve supply chain transparency by 100% and reduce food fraud by 70%',
     competitors: ['IBM Food Trust, VeChain, OriginTrail, Provenance'],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     market_size: '$18.4B+ food traceability market',
     growth_rate: '320% YoY',
@@ -582,8 +467,8 @@ const contact = null;
     real_implementation: true,
     implementation_details:;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       'Blockchain food traceability platform with supply chain tracking and product authentication capabilities.',
     launch_date: '2025 - 01 - 26',
     customers: 89,
@@ -591,10 +476,6 @@ const contact = null;
     reviews: 67,
   },
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
       'AI-powered climate control',
     id: 'ai - powered - vertical - farming',
@@ -608,8 +489,8 @@ const contact = null;
     features: [;
       'AI - powered climate control',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       'Crop growth monitoring',
       'Environmental optimization',
       'Real - time control',
@@ -620,13 +501,8 @@ const contact = null;
       'Compliance management',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     icon: '🏗️',
 
-=======
     color: 'from - orange - 600 to - red - 700',
     text_color: 'text - orange - 400',
     link: 'https://ziontechgroup.com / ai - powered - vertical - farming',
@@ -646,9 +522,8 @@ const contact = null;
     ],
     use_cases: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     marketSize: '$18.4B+ food traceability market',
     growthRate: '320% YoY',
     variant: 'ai-futuristic',
@@ -701,22 +576,16 @@ const contact = null;
       'Climate control systems, IoT devices, Lighting systems, Analytics platforms',
     ],
     useCases: [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       'Climate control, Crop monitoring, Environmental optimization, Yield maximization',
     ],
     roi: 'Increase crop yields by 300% and reduce energy consumption by 40%',
     competitors: ['Plenty, AeroFarms, Bowery Farming, Gotham Greens'],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 
 
       'AI-powered vertical farming platform with intelligent climate control and crop optimization capabilities.',
     launchDate: '2025-02-02',
-=======
     market_size: '$9.3B+ vertical farming market',
     growth_rate: '280% YoY',
     variant: 'ai - futuristic',
@@ -732,23 +601,19 @@ const contact = null;
   },;
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
 ];      'AI-powered climate controlCrop growth monitoringEnvironmental optimizationReal-time controlPerformance analyticsIntegration capabilitiesCustom growing protocolsMulti-tier support';
 
       'Compliance management'
     ];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     popular: true;
     icon: '🏗️';
     color: 'from-orange-600 to-red-700';
     textColor: 'text-orange-400';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       'Compliance management'
     ];
     popular: true, icon: '🌾',
@@ -882,28 +747,17 @@ const contact = null;
     implementationDetails: 'AI-powered vertical farming platform with intelligent climate control and crop optimization capabilities.';
     launchDate: '2025-02-02';
     customers: 123;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     rating: 4 && 4.6,
 
     reviews: 89
-<<<<<<< HEAD
-  }
-];
-
-
-=======
     rating: 4.6
     reviews: 89
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
 ];      'AI - powered climate control_crop growth monitoring_environmental optimization_real - time control_performance analytics_integration capabilities_custom growing protocols_multi - tier support';
       'Compliance management';
     ];
@@ -933,22 +787,17 @@ const contact = null;
     customers: 123;
     rating: 4.6,
     reviews: 89;
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 ;
-=======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeAgricultureService {;
   id: string,;
@@ -1008,8 +857,6 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     features: [;
       'AI-powered crop monitoringIrrigation optimizationYield predictionReal-time monitoringPerformance analyticsIntegration capabilitiesCustom monitoring modelsMulti-field support',;
       'Compliance management';
-<<<<<<< HEAD
-=======
     ],;
     popular: true,;
     icon: '🌾',;
@@ -1189,16 +1036,13 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     customers: 123,;
     rating: 4.6;
     reviews: 89;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
+
+
     marketSize: '$9.3B+ vertical farming market',
     growthRate: '280% YoY',
     variant: 'ai-futuristic',
@@ -1212,4 +1056,4 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     reviews: 89,
   },
 ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

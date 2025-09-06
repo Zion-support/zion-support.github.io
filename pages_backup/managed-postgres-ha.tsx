@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/managed-postgres-ha'));
-  if (!service) return null;
-
-
-import React from 'react',;
-import Head from 'next/head',;
-import { Phone, Mail, MapPin, Check, ArrowRight, Database, Star } from 'lucide-react',;
-import Layout from '../components/layout/Layout',;
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',;
-import React from 'react'
-import Head from 'next/head'
-import { Phone, Mail, MapPin, Check, ArrowRight, Database, Star } from 'lucide-react',
-import Layout from '../components/layout/Layout'
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
-export default function ManagedPostgresHAPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/managed-postgres-ha'))
-  if (!service) return null,
-=======
 import {
   Phone,
   Mail,
@@ -37,7 +17,7 @@ export default function ManagedPostgresHAPage() {
   );
   if (!service) return null;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Layout>
       <Head>
@@ -65,9 +45,6 @@ export default function ManagedPostgresHAPage() {
               <p className='text-slate-300 mb-6'>{service.description}</p>
               <ul className='grid grid-cols-1 md:grid-cols-2 gap-3'>
                 {service.features.slice(0, 12).map((feat, i) => (
-<<<<<<< HEAD
-                  <li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-emerald-400 mt-0.5"><Check /><span>{feat}</span></li>
-=======
                   <li
                     key={i}
                     className='flex items-start space-x-3 text-slate-200 w-5 h-5 text-emerald-400 mt-0.5'
@@ -76,7 +53,7 @@ export default function ManagedPostgresHAPage() {
                     <span>{feat}</span>
                   </li>
                 ))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </ul>
             </div>
             <div className='bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit'>
@@ -96,8 +73,6 @@ export default function ManagedPostgresHAPage() {
                   {service.rating.toFixed(1)}
                 </div>
               </div>
-<<<<<<< HEAD
-=======
               <a
                 href='/contact'
                 className='w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2'
@@ -130,24 +105,12 @@ export default function ManagedPostgresHAPage() {
                     {service.contactInfo.address}
                   </a>
                 </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
           </div>
         </div>
       </div>
     </Layout>
-<<<<<<< HEAD
-  )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-;
-;
-
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

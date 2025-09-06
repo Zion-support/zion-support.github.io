@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-
-
-import fs from 'fs',;
-import path from 'path',;
-import Link from 'next/link',;
-
-
-function list(dir: string, baseDir: string) {
-
-
-  return items.map((name) => {
-    const full = path.join(dir, name)
-    const rel = path.relative(baseDir, full)
-    const stat = fs.statSync(full)
-    return { name, rel, isDir: stat.isDirectory() }
-  })
-  const sections = fs.existsSync(base)
-    ? list(base, base).map((entry) => ({
-        title: entry.name
-        items: entry.isDir ? list(path.join(base, entry.name), base) : []}))
-    : []
-
-=======
   const items = fs.readdirSync(dir);
   return items.map(name => {
     const full = path.join(dir, name);
@@ -68,7 +44,7 @@ export default function DocsIndex({
                     target='_blank'
                     rel='noreferrer'
                   >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return { props: { sections }, revalidate: 600 }
 import fs from 'fs';
 import path from 'path';
@@ -117,42 +93,5 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
         ))}
       </div>
     </div>
-<<<<<<< HEAD
-                  </a>;
-                </li>))}
-            </ul>;
-          </div>))}
-      </div>;
-    </div>);
-}
-  );
-};
-                    {it.rel  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  </Link>
-                </li>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </ul>;
-          </div>;
-        ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      </div>;
-    </div>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,31 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-import MainLayout from '../components/layout/MainLayout';
-
-const Page = () => {
-  return (
-    <MainLayout
-      title="Case Studies - Zion Tech Group"
-      description="Success stories and case studies from our clients"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Case Studies</h1>
-          <p className="text-xl text-gray-600">Coming soon...</p>
-        </div>
-      </div>
-    </MainLayout>
-  );
-};
-
-<<<<<<< HEAD
-=======
 export default Page;
-=======
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
   ArrowRight
@@ -130,7 +106,6 @@ const stats = [
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
 
-=======
 import React from 'react',
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -150,7 +125,7 @@ export default function CaseStudiesPage() {
           </div>
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -489,19 +464,6 @@ import Head from 'next/head';
 
 import Head from 'next/head';
 
-<<<<<<< HEAD
-
-
-
-  return (
-    <Layout>;
-      <Head>;
-        <title>Case Studies | Zion Tech Group</title>;
-        <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/case-studies' />;
-        <meta
-          name='description'
-          content='Proven outcomes across AI, IT, and micro SaaS deployments.'
-=======
 export default function CaseStudies() {
   const caseStudies = [
     {
@@ -626,125 +588,12 @@ export default function CaseStudies() {
             </div>
           </div>
         </section>
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-
-
-<<<<<<< HEAD
-
-import Head from 'next/head';
-
-
-import Head from 'next/head';
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 
 
 
-  );
-
- </Head> </section> </Layout>
-<<<<<<< HEAD
-export default function CaseStudiesPage() {
-import Layout from '../components/layout/Layout';
-export default function CaseStudiesPage() {
-	return (
-		<Layout>
-			<Head>
-				<title>Case Studies | Zion Tech Group</title>
-				<link rel="canonical" href="https://ziontechgroup.com/case-studies" />
-				<meta name="description" content="Proven outcomes across AI, IT, and micro SaaS deployments." />
-			</Head>
-			<section className="container mx-auto px-4 py-24">
-				<h1 className="text-4xl md: text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">Case Studies</h1>
-				<p className="text-gray-300">Proven outcomes and detailed success stories. Coming soon.</p>
-			</section>
-		</Layout>
-	)
-}
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-export default function CaseStudiesPage(req, res) {
-  try {
-	return (;
-
-        />;
-      </Head>;
-      <section className='container mx-auto px-4 py-24'>;
-        <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6'>;
-          Case Studies;
-        </h1>;
-        <p className='text-gray-300'>;
-          Proven outcomes and detailed success stories. Coming soon.;
-        </p>;
-      </section>;
-    </Layout>;
-  );
-
- </Head> </section> </Layout> ;
-	return (
-		<Layout>;
-			<Head>;
-				<title>Case Studies | Zion Tech Group</title>;
-				<link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/case-studies" />;
-				<meta name="description" content="Proven outcomes across AI, IT, and micro SaaS deployments." />;
-			</Head>;
-			<section className="container mx-auto px-4 py-24">;
-				<h1 className="text-4xl md: text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">Case Studies</h1>;
-				<p className="text-gray-300">Proven outcomes and detailed success stories. Coming soon.</p>;
-			</section>;
-		</Layout>;
-	);
-}
-
-        {/* CTA Section */}
-        <section className="py - 20 bg - gradient - to - r from - green - 600 to - teal - 600 text - white">;
-          <div className="container mx - auto px - 4">;
-            <motion.div;
-              className="text - center";
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
-                Ready to Start Your Success Story?;
-              </h2>;
-              <p className="text - xl text - green - 100 mb - 8 max - w-3xl mx - auto">;
-                Let's work together to create your own success story.;
-                Contact us today to discuss your project.;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <a;
-                  href="/contact";
-                  className="px - 8 py - 4 bg - white text - green - 600 rounded - lg hover:shadow - lg transition - all duration - 300 font - semibold";
-                >;
-                  Start Your Project;
-                </a>;
-                <a;
-                  href="/services";
-                  className="px - 8 py - 4 border - 2 border - white text - white rounded - lg hover:bg - white hover:text - green - 600 transition - all duration - 300 font - semibold";
-                >;
-                  Explore Our Services;
-                </a>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </MainLayout>);
-}
-import Link from 'next / link';
-import Layout from '../components / Layout';
-;
-
-
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
+origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Case Studies */}
         <section id="case-studies" className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
@@ -889,4 +738,4 @@ import Layout from '../components / Layout';
 </>
   );
 }
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

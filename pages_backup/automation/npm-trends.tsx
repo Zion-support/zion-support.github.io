@@ -1,25 +1,6 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-<<<<<<< HEAD
-// @ts-ignore
-import data from '../../data/npm-trends.json';
-import EnhancedLayout from '../../components/layout/EnhancedLayout',;
-// @ts-ignore
-import data from '../../data/npm-trends.json',;
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
-// @ts-ignore;
-import data from '../../data/npm-trends.json',
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
-// @ts-ignore;
-import data from '../../data/npm-trends.json',
-
-
-export default function NpmTrendsPage() {
-
-  const items: any[] = (data?.items |[]).slice(0, 50)
-
-=======
   const items: any[] = (data?.items || []).slice(0, 50);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -36,33 +17,6 @@ export default function NpmTrendsPage() {
         </ul>
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
-  );
-};
-
-                {it.name  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              </Link>
-              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">v{it.version} · Score {Math.round((it.score || 0) * 100) / 100}</div>
-              <p className="mt-2 text-sm text-gray-700 dark:text-gray-200">{it.description}</p>
-            </li>
-          ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        </ul>;
-      </div>;
-    </EnhancedLayout>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-=======
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

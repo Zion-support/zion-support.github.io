@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router'; // Changed from useNavigate
 import Link from 'next/link';
@@ -27,7 +25,7 @@ export default function TalentDirectory() {
                             setCurrentPage(
                               Math.min(totalPages, currentPage + 1)
                             )
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                           }}
                         />
                       </PaginationItem>
@@ -38,21 +36,6 @@ export default function TalentDirectory() {
             </ErrorBoundary>
           </div>
 
-<<<<<<< HEAD
-
-  const is_admin = user?.user_type === 'admin';
-  const paginated_talents = filtered_talents;
-  const page_key = `talent - directory-${route_key}-${router.as_path}`);
-}
-  );
-}
-
-        </div>;
-      </div>;
-    </div>;
-  );
-}
-=======
           {/* Mobile filter sidebar */}
           {isMobileFilterOpen && (
             <div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex">
@@ -149,4 +132,4 @@ export default function TalentDirectory() {
 }/> </div> </div>) ;
 }</div> </div> </div>) ;
 }"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

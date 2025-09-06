@@ -18,109 +18,10 @@ import { TalentProfile } from "@/types/talent";
 import { RatingStars  } from '@/components/RatingStars';
 import { useAuth  } from '@/context/auth/AuthProvider';
 import { useCart } from '@/context/CartContext';
-<<<<<<< HEAD
-
-
-import { TalentProfile } from "@/types/talent",
-import { RatingStars } from '@/components/RatingStars',
-import { useAuth } from '@/context/auth/AuthProvider',
-import { useCart } from '@/context/CartContext',
-
-
-export interface TalentCardProps {
-
-  talent: TalentProfile
-  onViewProfile: (id: string,) => void
-  onRequestHire: (talent: TalentProfile,) => void
-  isAuthenticated: boolean
-
-
-import React from 'react',;
-import { useRouter } from 'next/router',;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardFooter } from "@/components/ui/card",;
-import { MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
-import { FavoriteButton } from "@/components/FavoriteButton",;
-import { TalentProfile } from "@/types/talent",;
-import { RatingStars } from '@/components/RatingStars',;
-import { useAuth } from '@/context/auth/AuthProvider',;
-import { useCart } from '@/context/CartContext',;
-export interface TalentCardProps {;
-  talent: TalentProfile,;
-  onViewProfile: (id: string) => void,;
-  onRequestHire: (talent: TalentProfile) => void,;
-  isAuthenticated: boolean;
-
-
-}
-const TalentCardComponent = ({
-  talent
-  onViewProfile
-  onRequestHire
-  isAuthenticated
-}: TalentCardProps,) => {
-  const router = useRouter()
-  const handleViewProfile = () => {
-    // Navigate directly to the talent profile
-    router.push(`/talent/${talent.id}`)
-    // Also call the onViewProfile callback if provided
-    if (onViewProfile) {
-      onViewProfile(talent.id)
-    }
-
-
-
-
-  const handleRequestHire = (e: React.MouseEvent,) => {
-    e.preventDefault()
-    e.stopPropagation()
-    if (onRequestHire) {
-      onRequestHire(talent)
-    }
-
-
-  },
-
-
-
-
-  // Extract skills - limit to 5 for display
-  const skills = talent.skills?.slice(0, 5) |[]
-export interface TalentCardProps {;
-  talent: TalentProfile,;
-  onViewProfile: (id: string,) => void,;
-  onRequestHire: (talent: TalentProfile,) => void,;
-  isAuthenticated: boolean;
-}
-
-const TalentCardComponent = ({;
-  talent,;
-  onViewProfile,;
-  onRequestHire,;
-  isAuthenticated;
-}: TalentCardProps,) => {;
-  const router = useRouter(),;
-
-  const handleViewProfile = () => {;
-    // Navigate directly to the talent profile;
-    router && router.push(`/talent/${talent && talent.id}`),;
-
-    // Also call the onViewProfile callback if provided;
-    if (onViewProfile) {;
-      onViewProfile(talent && talent.id);
-    }
-  },;
-<<<<<<< HEAD
-
-  const handleRequestHire = (e: React && React.MouseEvent,) => {;
-    e && e.preventDefault(),;
-    e && e.stopPropagation(),;
-=======
   const handleRequestHire = (e: React.MouseEvent) => {;
     e.preventDefault(),;
     e.stopPropagation(),;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     if (onRequestHire) {;
       onRequestHire(talent);
     }
@@ -147,15 +48,10 @@ const TalentCardComponent = ({;
       <div className="p-6">
         <div className="flex items-start">
           {/* Avatar */}
-<<<<<<< HEAD
-          <div className="relative mr-4">;
-            <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">;
-              {talent && talent.profile_picture_url ? (;
-=======
           <div className="relative mr-4">
             <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">
               {talent.profile_picture_url ? (
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                 <img
 
 
@@ -199,21 +95,6 @@ const TalentCardComponent = ({;
             
 
             {/* Location & Availability */}
-<<<<<<< HEAD
-            <div className="mt-2 flex flex-wrap gap-3 text-sm">;
-              {talent && talent.location && (;
-                <div className="flex items-center text-zion-slate-light">;
-                  <MapPin className="h-4 w-4 mr-1" />;
-                  <span>{talent && talent.location}</span>;
-                </div>;
-              )}
-              {talent && talent.availability_type && (;
-                <div className="flex items-center text-zion-slate-light">;
-                  <Clock className="h-4 w-4 mr-1" />;
-                  <span>{talent && talent.availability_type}</span>;
-                </div>;
-              )}
-=======
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
               {talent.location && (
                 <div className="flex items-center text-zion-slate-light">
@@ -227,7 +108,7 @@ const TalentCardComponent = ({;
                   <span>{talent.availability_type}</span>
                 </div>
               )}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 
 
             </div>;
@@ -269,13 +150,9 @@ const TalentCardComponent = ({;
                 </span>;
 
               )}
-<<<<<<< HEAD
-            </div>;
-          </div>;
-=======
             </div>
           </div>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
         )}
 
 
@@ -508,9 +385,8 @@ TalentCard.displayName = 'TalentCard',
 
 export const TalentCard = React.memo(TalentCardComponent),
 TalentCard.displayName = 'TalentCard',
-=======
 export interface TalentCardProps {
   );
 };
 "
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

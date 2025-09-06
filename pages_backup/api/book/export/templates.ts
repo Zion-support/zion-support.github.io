@@ -1,23 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+ursor/fix-website-loading-errors-and-merge-6662
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 ;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+
 
 const templates = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 const templates = {
   lulu: {
     sizes: [
@@ -43,10 +36,6 @@ const templates = {
       { name: 'Large Square', widthIn: 12, heightIn: 12, bleedIn: 0.125, marginIn: 0.75 }]}
   amazon: {
     sizes: [
-<<<<<<< HEAD
-      { name: 'US Trade', widthIn: 6, heightIn: 9, bleedIn: 0.125, marginIn: 0.75 }
-      { name: 'Letter', widthIn: 8.5, heightIn: 11, bleedIn: 0.125, marginIn: 0.75 }]}}
-=======
       {
         name: 'US Trade',
         widthIn: 6,
@@ -67,7 +56,7 @@ const templates = {
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json(templates);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json(templates);
@@ -95,12 +84,9 @@ export default function handler(req, res) {
   }
 }
 }
-=======
 
 
 
 
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+

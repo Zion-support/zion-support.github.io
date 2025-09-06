@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-      }
-
-      return (
-=======
 }
       return (
 
@@ -58,7 +52,7 @@ if ( {) {
 
               </AlertDescription>;
             </Alert>;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
         <div className="flex min-h-screen items-center justify-center p-4">
           <div className="w-full max-w-md space-y-4">
             <Alert variant="destructive">
@@ -66,8 +60,6 @@ if ( {) {
                 {isNetworkError ? (
                   <WifiOff className="h-4 w-4" />
                 ) : (
-<<<<<<< HEAD
-=======
 
                   <RefreshCw className="h-4 w-4" />
                 )}
@@ -75,7 +67,7 @@ if ( {) {
                   {isNetworkError ? 'Connection Problem' : 'Something went wrong'}
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                 </AlertTitle>
               </div>
               <AlertDescription className="mt-2">
@@ -90,23 +82,19 @@ if ( {) {
                 )}
               </AlertDescription>
             </Alert>
-<<<<<<< HEAD
-=======
 
 
             <div className='flex flex-col gap-2'>;
               <Button
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                 onClick={this.handleRetry}
                 disabled={this.state.isRetrying}
                 className="w-full"
               >
-<<<<<<< HEAD
-=======
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                 {this.state.isRetrying ? (
                   <>
                     <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
@@ -120,15 +108,13 @@ if ( {) {
                 )}
 
 
-<<<<<<< HEAD
-=======
                 variant="outline"
                 onClick={() => window.location.reload()}
                 className="w-full"
               >
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                 Reload Page
               </Button>
             </div>
@@ -138,9 +124,6 @@ if ( {) {
                 <span>Offline</span>
               </div>
             )}
-<<<<<<< HEAD
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-=======
               <AlertDescription className='mt - 2'>;
                 {isNetworkError;
                   ? !this.state.is_online;
@@ -222,18 +205,16 @@ export const useApiErrorHandler = () =>: any {
                 </pre>;
               </details>;
             )}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
               <details className="mt-4 rounded border p-2 text-xs">
                 <summary className="cursor-pointer font-medium">
                   Debug Info (Development Only)
                 </summary>
-<<<<<<< HEAD
-=======
 
                 <pre className="mt-2 whitespace-pre-wrap break-all">
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>
@@ -262,8 +243,6 @@ export const useApiErrorHandler = () => {;
   };
   return { handleApiError };
 };
-<<<<<<< HEAD
-=======
   return { handleApiError }
 
 
@@ -275,8 +254,7 @@ export const useApiErrorHandler = () => {;
 
 
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
 import React, { Component, ReactNode } from 'react';
 import { QueryClient  } from '@tanstack/react-query';
 import * as Sentry from '@sentry/nextjs';
@@ -297,4 +275,4 @@ interface ApiErrorBoundaryProps {
 
   return { handleApiError };
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

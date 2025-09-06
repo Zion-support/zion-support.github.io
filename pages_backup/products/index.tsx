@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import MainLayout from '../../components/layout/MainLayout';
-
-const Page = () => {
-  return (
-    <MainLayout
-      title="Products - Zion Tech Group"
-      description="Our products and solutions"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Products</h1>
-          <p className="text-xl text-gray-600">Coming soon...</p>
-        </div>
-      </div>
-    </MainLayout>
-  );
-};
-
-export default Page;
-=======
 
 
 class ErrorBoundary extends React.Component {
@@ -486,12 +463,9 @@ export default Index,
       </div>;
     </Layout>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+
 import type { NextPage } from 'next';
 import Head from 'next/head';
 const Index: NextPage;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

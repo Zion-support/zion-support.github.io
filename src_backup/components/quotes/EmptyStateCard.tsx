@@ -4,27 +4,8 @@ import { Card, CardContent } from "@/components/ui/card",
 import React from "react"
 import { Card, CardContent } from "@/components/ui/card"
 
-<<<<<<< HEAD
-import { MessageSquare, ArchiveIcon } from 'lucide-react'
-
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
-import React from './react';
-import { Card, CardContent  } from '@/components / ui / card';
-import { MessageSquare, ArchiveIcon } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
-type EmptyStateCardProps = {
-
-import { MessageSquare, ArchiveIcon } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { MessageSquare, ArchiveIcon } from 'lucide-react';
-type EmptyStateCardProps = {;
-  type: 'active' | 'archived';
-<<<<<<< HEAD
-};
-
-=======
 },;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
   const isActive = type === 'active';  ;
 
@@ -107,6 +88,5 @@ export const EmptyStateCard: React.FC < EmptyStateCardProps> = ({ type }) => {
 }
 
 };
-=======
 type EmptyStateCardProps = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

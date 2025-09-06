@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import React, { useMemo, useState } from 'react';
 import AIAssistant from '../../components/ui/AIAssistant';
 const NewProposal: NextPage;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div>
       <Head>
@@ -47,31 +44,12 @@ const NewProposal: NextPage;
       <div className='mt-6 flex items-center justify-between'>
         <h2 className='text-lg font-semibold'>Proposal / Cover Letter</h2>
         <AIAssistant
-<<<<<<< HEAD
-          buttonLabel="Generate Pitch Based on Profile & Job"
-          title="Generate Proposal"
-          defaultPrompt={pitchPrompt  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          onAccept={setCoverLetter  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          authorizationToken={operatorToken  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
           buttonLabel='Generate Pitch Based on Profile & Job'
           title='Generate Proposal'
           defaultPrompt={pitchPrompt}
           onAccept={setCoverLetter}
           authorizationToken={operatorToken}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         />
       </div>
 <textarea
@@ -81,26 +59,8 @@ const NewProposal: NextPage;
         className='mt-2 w-full rounded-md border p-3'
       />
     </div>
-<<<<<<< HEAD
-  )
-
-},
-export default NewProposal,
-},
-
-},
-export default NewProposal,
-
-},
-export default NewProposal,
-},
-
-export default NewProposal,;
-export default NewProposal,
-
-=======
   );
 };
 
 export default NewProposal;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

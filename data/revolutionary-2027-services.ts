@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  id: string;
-=======
 export interface Revolutionary2027Service {
 id: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
   tagline: string;
   price: string;
@@ -19,43 +12,16 @@ id: string;
   contactInfo: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
-export interface Revolutionary2027Service {;
-    address: string;
-  };
-  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,;
-  description: string,;
-  features: string[],;
-  link: string,;
-  category: string,;
-  realImplementation: boolean,;
-  contactInfo: {;
-    mobile: string,;
-    email: string,;
-    address: string;
-  }
-}
-<<<<<<< HEAD
-=======
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -64,23 +30,6 @@ export interface Revolutionary2027Service {;
   contactInfo: {
 export const revolutionary2027Services: Revolutionary2027Service[] = [
   {
-<<<<<<< HEAD
-    id: "2027-revolutionary-service", name: "2027 Revolutionary Service Platform",
-    tagline: "Revolutionary services for 2027", price: "$299/month",
-    description: "Revolutionary service platform that transforms how businesses operate in 2027.",
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-    id: '2027-revolutionary-service'
-    name: '2027 Revolutionary Service Platform'
-    tagline: 'Revolutionary services for 2027'
-    price: '$299/month'
-    description:
-      'Revolutionary service platform that transforms how businesses operate in 2027.'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
     address: string
   }
 }
@@ -92,19 +41,11 @@ export const revolutionary2027Services: Revolutionary2027Service[] = [
     tagline: "Revolutionary services for 2027";
     price: "$299/month";
     description: "Revolutionary service platform that transforms how businesses operate in 2027.";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     features: [
       "Revolutionary services";
       "Transformative capabilities";
       "Advanced technology";
-<<<<<<< HEAD
-      "Innovation platform";
-      "Future-ready solutions"
-    ];
-    link: "/services/2027-revolutionary-service", category: "Revolutionary 2027 Services",
-    realImplementation: true,
-    contactInfo: {
-=======
       "Innovation platform",
       "Future-ready solutions"
     ],
@@ -114,29 +55,11 @@ export const revolutionary2027Services: Revolutionary2027Service[] = [
     contactInfo: {
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
-<<<<<<< HEAD
-      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709";
-    }
-  }
-];
-;
-=======
-=======
     id: "2027-revolutionary-service",
     name: "2027 Revolutionary Service Platform",
     tagline: "Revolutionary services for 2027",
@@ -153,29 +76,15 @@ export const revolutionary2027Services: Revolutionary2027Service[] = [
     category: "Revolutionary 2027 Services",
     realImplementation: true,
     contactInfo: {
-<<<<<<< HEAD
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-=======
-<<<<<<< HEAD
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  },;
-];      mobile: "+1 302 464 0950";
-      email: "kleber@ziontechgroup.com";
-=======
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/automate-test-improve-and-merge-code-2533

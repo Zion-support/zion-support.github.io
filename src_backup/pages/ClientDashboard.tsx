@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-      const firstJob = jobs[0],
-      if (firstJob) {
-        setSelectedJobId(firstJob.id),
-        setSelectedJobTitle(firstJob.title)
-      }
-    }
-  }, [jobs, selectedJobId]),
-  const showAdvanced =;
-    onboardingStatus && onboardingStatus.jobPosted &&;
-    onboardingStatus && onboardingStatus.inviteSent &&;
-    onboardingStatus && onboardingStatus.responseReceived;
-
-  const handleJobSelect = (jobId: string, jobTitle: string) => {
-    setSelectedJobId(jobId),
-    setSelectedJobTitle(jobTitle)
-  },
-
-=======
 import { useState, useEffect } from 'react';
 import { JobsList } from '@/components/jobs/JobsList';
 import { Button } from '@/components/ui/button';
@@ -49,7 +30,7 @@ function ClientDashboardContent() {
   const [selectedJobId, setSelectedJobId] = useState<string | null>(null),
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>(""),
   const isMobile = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
 
@@ -199,8 +180,6 @@ function ClientDashboardContent() {
       </main>;
     </>);
 }
-<<<<<<< HEAD
-=======
 export default function ClientDashboard() {
   return (
     <ProtectedRoute>
@@ -242,4 +221,4 @@ return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Mana
 }</div> </div> </div> </div> </main> </>) ;
 }export default function ClientDashboard () {;
   return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

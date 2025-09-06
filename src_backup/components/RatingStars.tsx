@@ -12,8 +12,6 @@ export function RatingStars({ value;
             />
           )
         }
-<<<<<<< HEAD
-=======
 
 
         if (i === filled && half) {;
@@ -21,7 +19,7 @@ export function RatingStars({ value;
             <StarHalf;
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
               key={i}
               className="h-4 w-4 fill-zion-cyan text-zion-cyan"
             />
@@ -31,13 +29,6 @@ export function RatingStars({ value;
       })}
       {typeof count === 'number' && (
         <span className="text-xs ml-1">({count})</span>
-<<<<<<< HEAD
-      )}
-    </div>
-<<<<<<< HEAD
-  )
-}
-=======
 
 
               className="h-4 w-4 fill-zion-cyan text-zion-cyan";
@@ -67,8 +58,7 @@ export function RatingStars({ value;
 }
 
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
   );
 
 }) ;
@@ -78,4 +68,4 @@ export function RatingStars({ value;
 }) </span> ;
 }</div>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

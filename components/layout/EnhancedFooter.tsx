@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ursor/automate-test-fix-improve-and-merge-code-48f3
   return (    <footer className='bg-gray-900 text-white'>
       {/* Main Footer Content */}
@@ -181,7 +179,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
     </footer>
   )
 }
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 
 

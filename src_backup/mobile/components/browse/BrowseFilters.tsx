@@ -1,215 +1,7 @@
-<<<<<<< HEAD
-return (
-    <div className='space-y-3'>;
-      <div className='flex justify-between items-center px-4'>;
-        <div className='flex items-center gap-2 overflow-x-auto py-1 hide-scrollbar'>;
-          <Sheet>;
-            <SheetTrigger asChild>;
-              <Button variant='outline' size='sm' className='gap-1'>;
-                <Filter className='h-3 && 3.5 w-3 && 3.5' />;
-                Filter;
-              </Button>;
-            </SheetTrigger>;
-            <SheetContent side='bottom' className='h-[85vh] rounded-t-xl'>;
-              <SheetHeader>;
-                <SheetTitle>;
-                  Filter {type === 'jobs' ? 'Jobs' : 'Talents'}
-
-                </SheetTitle>;
-              </SheetHeader>;
-
-              <div className='py-6 space-y-6'>;
-                {type === 'jobs' ? (;
-                  <>;
-                    <div className='space-y-2'>;
-                      <Label>Job Type</Label>;
-                      <div className='flex gap-2 flex-wrap'>;
-
-                        <Badge
-                          variant='outline'
-                          className='cursor-pointer hover:bg-primary/5'>;
-                          Full Time;
-                        </Badge>;
-                        <Badge
-                          variant='outline'
-                          className='cursor-pointer hover:bg-primary/5'>;
-                          Part Time;
-                        </Badge>;
-                        <Badge
-                          variant='outline'
-                          className='cursor-pointer hover:bg-primary/5'>;
-                          Contract;
-                        </Badge>;
-                        <Badge
-                          variant='outline'
-
-                          className='cursor-pointer hover:bg-primary/5'>;
-import React, { useState } from 'react';
-import { Button } from '@/components / ui / button';
-import { Slider } from '@/components / ui / slider';
-import { Switch } from '@/components / ui / switch';
-import { Input } from '@/components / ui / input';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components / ui / select';
-import { X, Filter } from 'lucide-react';
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetFooter,
-  SheetTrigger,
-} from '@/components / ui / sheet';
-import { Badge } from '@/components / ui / badge';
-import { Label } from '@/components / ui / label';
-interface BrowseFiltersProps {
-  type: 'jobs' | 'talents';
-export /**
- * BrowseFilters - Function description
- */
-function BrowseFilters() {
-  const [active_filters, setActiveFilters] = useState < string[]>([]);
-  const add_filter = (filter: string) =>: any {    if () {) {
-  $2
-}
-      setActiveFilters ([...active_filters, filter]);
-    }
-  }
-  const remove_filter = (filter: string) =>: any {
-    setActiveFilters (active_filters.filter (function => f !== filter));
-  }
-  return (
-    <div className='space - y-3'>;
-      <div className='flex justify - between items - center px - 4'>;
-        <div className='flex items - center gap - 2 overflow - x-auto py - 1 hide - scrollbar'>;
-          <Sheet>;
-            <SheetTrigger as_child>;
-              <Button variant='outline' size='sm' className='gap - 1'>;
-                <Filter className='h - 3.5 w - 3.5' />;
-                Filter;
-              </Button>;
-            </SheetTrigger>;
-            <SheetContent side='bottom' className='h-[85vh] rounded - t-xl'>;
-              <SheetHeader>;
-                <SheetTitle>;
-                  Filter {type === 'jobs' ? 'Jobs' : 'Talents'}
-                </SheetTitle>;
-              </SheetHeader>;
-              <div className='py - 6 space - y-6'>;
-                {type === 'jobs' ? (
-                  <>;
-                    <div className='space - y-2'>;
-                      <Label > Job Type</Label>;
-                      <div className='flex gap - 2 flex - wrap'>;
-                        <Badge;
-                          variant='outline';
-                          className='cursor - pointer hover:bg - primary / 5';
-                        >;
-                          Full Time;
-                        </Badge>;
-                        <Badge;
-                          variant='outline';
-                          className='cursor - pointer hover:bg - primary / 5';
-                        >;
-                          Part Time;
-                        </Badge>;
-                        <Badge;
-                          variant='outline';
-                          className='cursor - pointer hover:bg - primary / 5';
-                        >;
-                          Contract;
-                        </Badge>;
-                        <Badge;
-                          variant='outline';
-                          className='cursor - pointer hover:bg - primary / 5';
-                        >;
-
-                          Freelance;
-                        </Badge>;
-                      </div>;
-                    </div>;
-
-                    <div className='space - y-2'>;
-                      <Label > Experience Level</Label>;
-                      <div className='flex gap - 2 flex - wrap'>;
-                        <Badge;
-                          variant='outline';
-                          className='cursor - pointer hover:bg - primary / 5';
-                        >;
-                          Entry Level;
-                        </Badge>;
-                        <Badge;
-                          variant='outline';
-                          className='cursor - pointer hover:bg - primary / 5';
-                        >;
-                          Mid Level;
-                        </Badge>;
-                        <Badge;
-                          variant='outline';
-                          className='cursor - pointer hover:bg - primary / 5';
-                        >;
-
-                          Senior;
-                        </Badge>;
-                      </div>;
-                    </div>;
-
-                          className='cursor-pointer hover:bg-primary/5'>;
-                  </>) : (
-                  <>;
-                    <div className='space - y-2'>;
-                      <Label > Specialization</Label>;
-                      <div className='flex gap - 2 flex - wrap'>;
-                        <Badge;
-                          variant='outline';
-                          className='cursor - pointer hover:bg - primary / 5';
-                        >;
-                          Developer;
-                        </Badge>;
-                        <Badge;
-                          variant='outline';
-                          className='cursor - pointer hover:bg - primary / 5';
-                        >;
-                          Designer;
-                        </Badge>;
-                        <Badge;
-                          variant='outline';
-                          className='cursor - pointer hover:bg - primary / 5';
-                        >;
-                          Marketing;
-                        </Badge>;
-                        <Badge;
-                          variant='outline';
-                          className='cursor - pointer hover:bg - primary / 5';
-                        >;
-
-                          Content;
-                        </Badge>;
-                      </div>;
-                    </div>;
-
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Slider } from "@/components/ui/slider",
-import { Switch } from "@/components/ui/switch",
-import { Input } from "@/components/ui/input",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-
-
-
-import { X, Filter } from 'lucide-react'
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
-import { Badge } from "@/components/ui/badge",
-import { Label } from "@/components/ui/label",
-=======
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
 import { Badge } from "@/components/ui/badge",
 import { Label } from "@/components/ui/label";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 interface BrowseFiltersProps {
 
 
@@ -309,17 +101,11 @@ interface BrowseFiltersProps {
 
 
                   <Label>Salary Range</Label>
-<<<<<<< HEAD
-                  <div className='flex gap-4 items-center'>
-                    <Input placeholder='Min' type='number' className='w-full' />
-                    <span>to</span>
-                    <Input placeholder='Max' type='number' className='w-full' />
-=======
                   <div className="flex gap-4 items-center">
                     <Input placeholder="Min" type="number" className="w-full" />
                     <span>to</span>
                     <Input placeholder="Max" type="number" className="w-full" />
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                   </div>
                 </div>
 
@@ -525,35 +311,8 @@ interface BrowseFiltersProps {
               />
             </Badge>
           ))}
-<<<<<<< HEAD
-
-        </div>;
-      </div>;
-    </div>;
-  );
-}
-
-
-
-          {active_filters.map (filter => (
-            <Badge;
-              key={filter}
-              variant='secondary';
-              className='flex items - center gap - 1';
-            >;
-              {filter}
-              <X;
-                className='h - 3 w - 3 cursor - pointer';
-                on_click={() => remove_filter (filter)}              />;
-            </Badge>))}
-        </div>;
-      </div>;
-    </div>);
-}
-;
-=======
         </div>
       </div>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

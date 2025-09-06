@@ -33,24 +33,6 @@ export const metadata = {
   },
 };
 
-<<<<<<< HEAD
-export const metadata: Metadata = {
-  title: 'Zion Tech Group - Enterprise AI & IT Solutions',
-  description: 'Leading provider of AI-powered business solutions, automation tools, and digital transformation services. Enterprise-grade AI, micro SaaS, and IT solutions.',
-  keywords: 'AI solutions, micro SaaS, IT services, blockchain, cybersecurity, cloud services, business automation, digital transformation, software development, tech consulting',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'Zion Tech Group - Enterprise AI & IT Solutions',
-    description: 'Leading provider of AI-powered business solutions, automation tools, and digital transformation services.',
-    type: 'website',
-    locale: 'en_US',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Zion Tech Group - Enterprise AI & IT Solutions',
-    description: 'Leading provider of AI-powered business solutions, automation tools, and digital transformation services.',
-  },
-=======
 function Header() {
   return (
     <header className="border-b border-gray-200 sticky top-0 z-50 bg-white shadow-sm">
@@ -71,7 +53,7 @@ function Header() {
       </nav>
     </header>
   );
->>>>>>> 8fd25f885ef5f7c479ebfaa3c8ff4946200161f8
+
 }
 
 function Footer() {
@@ -115,21 +97,13 @@ function Footer() {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-<<<<<<< HEAD
-      <body className={inter.className}>
-        <div className="min-h-screen bg-gray-50">
-          <main className="container mx-auto px-4 py-8">
-            {children}
-          </main>
-        </div>
-=======
       <body className="min-h-screen bg-white text-gray-900">
         <Header />
         <main className="max-w-6xl mx-auto px-4 py-6 min-h-screen">
           {children}
         </main>
         <Footer />
->>>>>>> 8fd25f885ef5f7c479ebfaa3c8ff4946200161f8
+
       </body>
     </html>
   );

@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-
-import { useEffect, useState } from 'react';
-
-=======
 import { useEffect, useState  } from 'react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default function CloudAutomationHub() {
   const [logs, setLogs] = useState<any[]>([])
   useEffect(() => {
@@ -20,10 +15,8 @@ ursor/fix-lint-push-and-merge-to-main-ce13
       .then((r) => r.json())
       .then((d) => setLogs(d.logs |[]))
       .catch(() => setLogs([]))
-<<<<<<< HEAD
-=======
   }, []);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-6">
       <div>
@@ -57,43 +50,5 @@ ursor/fix-lint-push-and-merge-to-main-ce13
       </div>
     </div>
   )
-<<<<<<< HEAD
-import { useEffect, useState } from 'react';
-export default function CloudAutomationHub(req, res) {
-  try {
-  const [logs, setLogs] = useState<any[]>([]);
-  useEffect(() => {;
-    fetch('/api/automation/cloud-logs');
-      .then((r) => r.json());
-      .then((d) => setLogs(d.logs || []));
-      .catch(() => setLogs([]));
-  }, []);
-  return (;
-    <div className="space-y-6">;
-
 }
-
-import { useEffect, useState } from 'react',
-;
-export default /**
- * CloudAutomationHub - Function description
- */
-function CloudAutomationHub() {
-  const [logs, set_logs] = useState < any[]>([]),
-  useEffect (() => {
-    fetch ('/api / automation / cloud - logs');
-      .then ((r) => r.json ());
-      .then ((d) => set_logs (d.logs || []));
-      .catch (() => set_logs ([]));
-  }, []),
-  return (
-    <div className="space - y-6">;
-      <div>;
-      </div>;
-    </div>);
-}
-
-
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

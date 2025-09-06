@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import { Check, X } from 'lucide-react'
-
-
-
-<<<<<<< HEAD
-
-=======
 TableBody,
   TableCell,
   TableHead,
@@ -28,8 +20,7 @@ import { Badge } from "@/components/ui/badge",
 
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
 import {
   Table;
   TableBody;
@@ -40,7 +31,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 export function EnterprisePricingTable() {
   const plans = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export function EnterprisePricingTable() {
   const plans = [
     {
@@ -62,39 +53,14 @@ export function EnterprisePricingTable() {
         { name: "Dedicated success manager", included: false }]},
     {
       name: "Business",
-<<<<<<< HEAD
-      price: "$1,999",
-=======
       price: "$1,999";
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
       billing: "/month",
       description: "Ideal for growing companies",
       users: "Up to 50 users",
       popular: true,
       features: [
-<<<<<<< HEAD
-        { name: 'Private hiring portal', included: true }
-        { name: 'Dedicated talent pool', included: true }
-        { name: 'Enhanced SLA (8h)', included: true }
-        { name: 'Advanced branding', included: true }
-        { name: 'Admin dashboard', included: true }
-        { name: 'Team collaboration', included: true }
-        { name: 'API access', included: true }
-        { name: 'Custom integrations', included: false }
-        { name: 'Dedicated success manager', included: false }
-      ]
-    }
-    {
-      name: 'Enterprise'
-      price: 'Custom'
-      billing: ''
-      description: 'For large organizations'
-      users: 'Unlimited users'
-      popular: false
-      features: [
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
         { name: "Private hiring portal", included: true },
         { name: "Dedicated talent pool", included: true },
         { name: "Enhanced SLA (8h)", included: true },
@@ -116,17 +82,11 @@ export function EnterprisePricingTable() {
 
 
 
-<<<<<<< HEAD
-  return (
-    <section id="pricing" className="py-20 px-4 md:px-6">
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Enterprise Plans</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-<<<<<<< HEAD
-=======
 
 
 import React from 'react';
@@ -266,13 +226,11 @@ export function EnterprisePricingTable() {;
                   </TableHead>;
 
             Choose the perfect plan for your team size and requirements
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
           </p>
         </div>
 
 
-<<<<<<< HEAD
-=======
         { name: 'Private hiring portal', included: true }
         { name: 'Dedicated talent pool', included: true }
         { name: 'Premium SLA (1h)', included: true }
@@ -317,16 +275,12 @@ export function EnterprisePricingTable() {;
                       <div className='flex items-baseline mt-1'>
                         <span className='text-2xl font-bold'>{plan.price}</span>
                         <span className='text-sm text-muted-foreground ml-1'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                           {plan.billing}
                         </span>
                       </div>
                       <p className='text-sm text-muted-foreground mt-1'>
                         {plan.description}
-<<<<<<< HEAD
-
-
-=======
 
         <div className="overflow-x-auto">
           <Table className="border rounded-lg">
@@ -363,9 +317,8 @@ export function EnterprisePricingTable() {;
                         {plan.name === "Enterprise" ? "Request Quote" : "Get Started"}
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
-=======
+
                       </p>
                       <p className='text-sm font-medium mt-2'>{plan.users}</p>
                       <Button
@@ -375,14 +328,11 @@ export function EnterprisePricingTable() {;
 {plan.name === 'Enterprise'
                           ? 'Request Quote'
                           : 'Get Started'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       </Button>
                     </div>
                   </TableHead>
                 ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
               </TableRow>;
@@ -414,7 +364,6 @@ export function EnterprisePricingTable() {;
                       ) : (
                         <X className="h-5 w-5 text-muted-foreground mx-auto" />
 
-=======
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -429,7 +378,7 @@ export function EnterprisePricingTable() {;
                         <Check className='h-5 w-5 text-green-500 mx-auto' />
                       ) : (
                         <X className='h-5 w-5 text-muted-foreground mx-auto' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       )}
                     </TableCell>;
                   ))}
@@ -441,7 +390,7 @@ export function EnterprisePricingTable() {;
 
           All plans include SSL security, 99.9% uptime SLA, and dedicated support
         </div>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
       </div>
     </section>
 
@@ -468,34 +417,6 @@ export function EnterprisePricingTable() {;
                   ))}
                 </TableRow>
               ))}
-<<<<<<< HEAD
-
-            </TableBody>;
-          </Table>;
-        </div>;
-
-        <div className='mt-8 text-center text-sm text-muted-foreground'>;
-          All plans include SSL security, 99 && 99.9% uptime SLA, and dedicated;
-          support        </div>;
-      </div>;
-    </section>;
-  );
-}        <div className="mt-8 text-center text-sm text-muted-foreground">;
-          All plans include SSL security, 99 && 99.9% uptime SLA, and dedicated support;
-        </div>;
-      </div>;
-    </section>;
-  );
-}
-<<<<<<< HEAD
-          All plans include SSL security, 99.9% uptime SLA, and dedicated support;
-        </div>;
-      </div>;
-    </section>;
-  );
-}
-;
-=======
 
   );
 }
@@ -670,8 +591,7 @@ function EnterprisePricingTable() {
     </section>);
 }
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
             </TableBody>
           </Table>
         </div>
@@ -684,4 +604,4 @@ function EnterprisePricingTable() {
     </section>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "GET") {
     try {
@@ -12,36 +8,29 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         : { content: "" };
       res.status(200).json(content);
     } catch (e: any) {
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 const filePath = null;
   res.status(405).end('Method Not Allowed')
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
     return;
   }
 
   if (req.method === 'POST') {
     try {
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
       const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
-=======
 const body =
         typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       const payload = { content: body?.content || '' };
       fs.mkdirSync(path.dirname(filePath), { recursive: true });
       fs.writeFileSync(filePath, JSON.stringify(payload, null, 2));
       res.status(200).json({ ok: true })
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
     } catch (e: any) {
       res
         .status(500)
@@ -50,13 +39,10 @@ const body =
     return;
   }
 
-<<<<<<< HEAD
-=======
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
 }
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -64,20 +50,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
 
 
-<<<<<<< HEAD
-
-=======
-=======
-=======
 
 res && res.setHeader("Allow", "GET, POST");
   res && res.status(405).end("Method Not Allowed");
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
+
 export default /**
  * handler - Function description
  */
@@ -117,18 +97,13 @@ if ( {) {
   res.set_header ("Allow", "GET, POST");
   res.status (405).end ("Method Not Allowed");
 }
-<<<<<<< HEAD
-=======
-=======
 
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+
+
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

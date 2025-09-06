@@ -3,23 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-<<<<<<< HEAD
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "seo:generate": "node scripts/generate-dynamic-sitemap.js"
-  },
-  "dependencies": {
-=======
-    "dev": "vite",
-    "build": "vite build",
     "build:netlify": "node scripts/build-with-error-handling.js",
     "prebuild": "echo \"Starting build...\"",
-    "export": "vite build",
-    "start": "vite preview --port 4173",
+    "export": "next build",
+    "start": "next start",
     "postbuild": "echo \"Build completed\"",
-    "lint": "eslint .",
+    "lint": "next lint",
     "lint:fix": "eslint . --fix",
     "lint:check": "eslint . --max-warnings 0",
     "type-check": "tsc --noEmit",
@@ -31,7 +22,8 @@
     "check": "npm run lint && npm run type-check && npm run test:smoke",
     "clean": "rm -rf .next out dist",
     "precommit": "npm run check",
-    "prepare": "echo 'Husky prepare script disabled'"
+    "prepare": "echo 'Husky prepare script disabled'",
+    "seo:generate": "node scripts/generate-dynamic-sitemap.js"
   },
   "dependencies": {
     "@fastify/cors": "^11.1.0",
@@ -71,38 +63,10 @@
     "@stripe/stripe-js": "^7.9.0",
     "@sendgrid/mail": "^8.1.5",
     "@supabase/ssr": "^0.6.1",
->>>>>>> 8fd25f885ef5f7c479ebfaa3c8ff4946200161f8
     "@supabase/supabase-js": "^2.57.2",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/typography": "^0.5.16",
-<<<<<<< HEAD
-    "framer-motion": "^12.23.12",
-    "lucide-react": "^0.536.0",
-    "next": "^14.0.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
-  },
-  "devDependencies": {
-    "@types/node": "^20.0.0",
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
-    "autoprefixer": "^10.4.16",
-    "eslint": "^8.0.0",
-    "eslint-config-next": "^14.0.0",
-    "postcss": "^8.4.32",
-    "tailwindcss": "^3.4.0",
-    "typescript": "^5.0.0"
-  },
-  "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=8.0.0"
-  }
-}
-=======
-    "@types/node": "^22.10.2",
-    "@types/react": "^18.3.17",
-    "@types/react-dom": "^18.3.5",
     "framer-motion": "^12.23.12",
     "lucide-react": "^0.536.0",
     "next": "^14.2.32",
@@ -118,6 +82,9 @@
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
     "@types/jest": "^29.5.14",
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.17",
+    "@types/react-dom": "^18.3.5",
     "@typescript-eslint/eslint-plugin": "^8.42.0",
     "@typescript-eslint/parser": "^8.42.0",
     "@vitejs/plugin-react": "^5.0.2",
@@ -172,4 +139,3 @@
   "author": "Zion Tech Group",
   "license": "MIT"
 }
->>>>>>> 8fd25f885ef5f7c479ebfaa3c8ff4946200161f8

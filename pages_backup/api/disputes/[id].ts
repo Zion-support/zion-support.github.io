@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById } from "../../../utils/fsdb";
@@ -40,9 +36,7 @@ export default async function handler(
     return res && res.status(400).json({ error: "Invalid id" });
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getDisputeById } from '[^']*';
 import { parseUserFromRequest, ensureInvolvedOrAdmin } from '[^']*';
@@ -53,27 +47,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const user = null;
   return res.status(405).end('Method Not Allowed')
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const user = parseUserFromRequest(req);
 
   if (req && req.method === "GET") {
     const dispute = await getDisputeById(id);
     if (!dispute) return res.status(404).json({ error: "Dispute not found" });
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
   res.setHeader("Allow", "GET");
   return res.status(405).end("Method Not Allowed");
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
 }
 
 
 
-=======
-=======
 
       return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" });
       ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId)
@@ -85,7 +73,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res && res.setHeader("Allow", "GET");
   return res && res.status(405).end("Method Not Allowed");
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getDisputeById  } from '../../../utils / fsdb';
 import {
@@ -111,7 +99,6 @@ if ( {) {
 
 
 
-=======
     const dispute = await getDisputeById (id);
     if (return res.status (404).json ({ error: "Dispute not found" })) {
   $2
@@ -128,10 +115,9 @@ if ( {) {
 }
 
 
-=======
 }
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['GET']);
@@ -194,16 +180,12 @@ function handler() {
 if ( {) {
   $2
 }
-=======
 
 
 
 
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+
 ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
     } catch (e: any) {
       return res.status(e.statusCode |403).json({ error: "Forbidden" });
@@ -215,4 +197,4 @@ ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
   return res.status(405).end('Method Not Allowed');
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

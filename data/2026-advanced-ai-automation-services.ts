@@ -1,16 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
 import { ServiceVariant } from '../types/service-variants';
 export interface AdvancedAIAutomationService {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   id: string;
   name: string;
   tagline: string;
@@ -41,17 +35,6 @@ export interface AdvancedAIAutomationService {
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  customers: number;
-  rating: number;
-  reviews: number;
-=======
-<<<<<<< HEAD
-  customers: number;
-  rating: number;
-  reviews: number;
-=======
     website: string;
   }
 
@@ -65,34 +48,18 @@ export interface AdvancedAIAutomationService {
 
 ;
 const contact = {
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',};
 
 export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
-
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com', }
-;
-export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -105,11 +72,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com',};
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
     website: string
   },
   realImplementation: boolean;
@@ -121,7 +83,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 }
 
 const contact = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     tagline:
       'Fully autonomous business process optimization with zero human intervention'
     price: '$1,299'
@@ -158,9 +120,7 @@ const contact = null;
       'Autonomous process discovery and mapping',
       'Real - time optimization algorithms',
       'Cross - departmental coordination',
-=======
 
-=======
 export interface AdvancedAIAutomationService {
   id: string, name: string,
   tagline: string, price: string,
@@ -197,7 +157,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   website: 'https://ziontechgroup && ziontechgroup.com'
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+origin/cursor/automate-test-improve-and-merge-code-382a
 export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   {
 
@@ -205,34 +165,18 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'Autonomous process discovery and mapping',
       'Real-time optimization algorithms',
       'Cross-departmental coordination',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
       'Predictive maintenance scheduling',
       'Resource allocation optimization',
       'Performance analytics dashboard',
       'Automated decision making',
       'Process improvement suggestions',
       'Integration with existing systems',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      '24 / 7 autonomous operation',
-    ],
-    popular: true,
-    icon: '🤖',
-
-    link: 'https://ziontechgroup.com/ai-autonomous-business-processor',
-    marketPosition:;
-      'First autonomous business processor; competes with traditional BPM tools like Pega and Appian.',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     targetAudience: [
       'Enterprise companies'
       'manufacturing'
@@ -245,16 +189,12 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     category: 'AI & Automation'
     realService: true
     technology: [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
       'GPT-4, Claude 3, LangChain, Python, React, Node && Node.js, PostgreSQL, Redis',
     ],
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     integrations: [
       'SAP, Oracle, Salesforce, Microsoft Dynamics, Slack, Teams, Jira'
     ]
@@ -272,11 +212,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     contactInfo: contact
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
       'Multi-tenant SaaS with autonomous AI orchestration, process mining, and optimization engine.',
     launchDate: '2026-01-15',
@@ -319,23 +254,18 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'Multi - tenant SaaS with autonomous AI orchestration, process mining, and optimization engine.',
     launch_date: '2026 - 01 - 15',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     customers: 89,
     rating: 4 && 4.8,
     reviews: 156,
   },
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
       'Predict business outcomes with 99 && 99.7% accuracy using advanced AI algorithms',
     price: '$899',
     period: '/month',
 
-=======
       'Multi-tenant SaaS with autonomous AI orchestration, process mining, and optimization engine.',
     launchDate: '2026-01-15',
     customers: 89,
@@ -349,35 +279,14 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'Predict business outcomes with 99.7% accuracy using advanced AI algorithms',
     price: '$899',
     period: '/month',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     description:
       'Enterprise-grade predictive analytics platform that forecasts business outcomes, market trends, and operational risks with unprecedented accuracy using advanced machine learning.',
     features: [
-<<<<<<< HEAD
-
-      '99 && 99.7% prediction accuracy',
-      'Real-time data processing',
-      'Multi-dimensional forecasting',
-    id: 'ai - predictive - enterprise - analytics',
-    name: 'AI Predictive Enterprise Analytics',
-    tagline:;
-      'Predict business outcomes with 99.7% accuracy using advanced AI algorithms',
-    price: '$899',
-    period: '/month',
-    description:;
-      'Enterprise - grade predictive analytics platform that forecasts business outcomes, market trends, and operational risks with unprecedented accuracy using advanced machine learning.',
-    features: [;
-      '99.7% prediction accuracy',
-      'Real - time data processing',
-      'Multi - dimensional forecasting',
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
       '99.7% prediction accuracy',
       'Real-time data processing',
       'Multi-dimensional forecasting',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       'Risk assessment algorithms',
       'Market trend analysis',
       'Custom model training',
@@ -387,19 +296,13 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'Executive dashboard',
     ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     icon: '🔮',
 
       'TensorFlow, PyTorch, Scikit-learn, Python, React, Node && Node.js, Apache Kafka, ClickHouse',
     ],
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     icon: '🔮',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-400',
@@ -419,7 +322,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     technology: [
       'TensorFlow, PyTorch, Scikit-learn, Python, React, Node.js, Apache Kafka, ClickHouse',
     ],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     integrations: [
       'Salesforce, SAP, Oracle, Microsoft, AWS, Google Cloud, Azure',
     ],
@@ -437,11 +340,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     contactInfo: contact,
     realImplementation: true,
     implementationDetails:
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
       'Enterprise SaaS with advanced ML models, real-time processing, and predictive algorithms.',
     launchDate: '2026-02-01',
@@ -483,19 +381,14 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'Enterprise SaaS with advanced ML models, real - time processing, and predictive algorithms.',
     launch_date: '2026 - 02 - 01',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     customers: 234,
     rating: 4 && 4.9,
     reviews: 312,
   },
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-=======
     id: 'ai - autonomous - customer - success',
     name: 'AI Autonomous Customer Success',
     tagline:;
@@ -506,9 +399,8 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'AI - powered customer success platform that automatically identifies at - risk customers, predicts churn, and implements retention strategies without human intervention.',
     features: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       'Enterprise SaaS with advanced ML models, real-time processing, and predictive algorithms.',
     launchDate: '2026-02-01',
     customers: 234,
@@ -525,7 +417,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     description:
       'AI-powered customer success platform that automatically identifies at-risk customers, predicts churn, and implements retention strategies without human intervention.',
     features: [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       'Automatic churn prediction',
       'Personalized retention strategies',
       'Customer health scoring',
@@ -538,19 +430,13 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'Integration with CRM systems',
     ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     icon: '🎯',
 
       'GPT-4, Claude 3, Python, React, Node && Node.js, PostgreSQL, Redis, Elasticsearch',
     ],
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     icon: '🎯',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
@@ -570,18 +456,12 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     technology: [
       'GPT-4, Claude 3, Python, React, Node.js, PostgreSQL, Redis, Elasticsearch',
     ],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     integrations: [
       'Salesforce, HubSpot, Pipedrive, Intercom, Zendesk, Slack, Teams',
     ],
     useCases: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-=======
     color: 'from - green - 600 to - emerald - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / ai - autonomous - customer - success',
@@ -605,21 +485,15 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     ],
     use_cases: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+origin/cursor/automate-test-improve-and-merge-code-2533
       'SaaS customer retention',
       'Subscription management',
       'Customer support automation',
       'Revenue optimization',
     ],
     roi: 'Increase customer retention by 35% and reduce churn by 60%.',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     competitors: ['Gainsight, Totango, ChurnZero, Customer.io'],
     market_size: '$8B+ customer success market',
@@ -631,17 +505,13 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'Multi - tenant SaaS with AI customer intelligence, automated workflows, and retention engine.',
     launch_date: '2026 - 01 - 20',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     customers: 167,
     rating: 4 && 4.7,
     reviews: 203,
   },
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
       'Cross-channel campaign coordination',
     id: 'ai - autonomous - marketing - orchestrator',
@@ -655,12 +525,11 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     features: [;
       'Cross - channel campaign coordination',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       'Autonomous budget optimization',
       'Real - time performance tracking',
       'A / B testing automation',
-=======
     competitors: ['Gainsight, Totango, ChurnZero, Customer.io'],
     marketSize: '$8B+ customer success market',
     growthRate: '140% YoY',
@@ -688,28 +557,18 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'Autonomous budget optimization',
       'Real-time performance tracking',
       'A/B testing automation',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       'Audience segmentation AI',
       'Content personalization',
       'ROI maximization algorithms',
       'Predictive analytics',
-<<<<<<< HEAD
-      'Multi - platform integration',
-      'Automated reporting',
-    ],
-    popular: true,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     icon: '📢',
 
       'GPT-4, Claude 3, Python, React, Node && Node.js, PostgreSQL, Redis, Apache Kafka',
     ],
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       'Multi-platform integration',
       'Automated reporting',
     ],
@@ -733,7 +592,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     technology: [
       'GPT-4, Claude 3, Python, React, Node.js, PostgreSQL, Redis, Apache Kafka',
     ],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     integrations: [
       'Google Ads, Facebook Ads, LinkedIn Ads, Twitter Ads, HubSpot, Salesforce, Mailchimp',
     ],
@@ -751,11 +610,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     contactInfo: contact,
     realImplementation: true,
     implementationDetails:
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
       'Enterprise SaaS with AI marketing intelligence, cross-channel coordination, and optimization engine.',
     launchDate: '2026-02-15',
@@ -797,19 +651,14 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'Enterprise SaaS with AI marketing intelligence, cross - channel coordination, and optimization engine.',
     launch_date: '2026 - 02 - 15',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     customers: 145,
     rating: 4 && 4.8,
     reviews: 189,
   },
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-=======
     id: 'ai - autonomous - sales - intelligence',
     name: 'AI Autonomous Sales Intelligence',
     tagline:;
@@ -820,9 +669,8 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'Intelligent sales platform that autonomously identifies high - value prospects, qualifies leads, and nurtures them through the sales funnel using advanced AI and behavioral analysis.',
     features: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       'Enterprise SaaS with AI marketing intelligence, cross-channel coordination, and optimization engine.',
     launchDate: '2026-02-15',
     customers: 145,
@@ -839,7 +687,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     description:
       'Intelligent sales platform that autonomously identifies high-value prospects, qualifies leads, and nurtures them through the sales funnel using advanced AI and behavioral analysis.',
     features: [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       'Automatic lead scoring',
       'Behavioral analysis',
       'Predictive lead qualification',
@@ -852,19 +700,13 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'CRM integration',
     ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     icon: '💰',
 
       'GPT-4, Claude 3, Python, React, Node && Node.js, PostgreSQL, Redis, Elasticsearch',
     ],
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     icon: '💰',
     color: 'from-yellow-600 to-orange-700',
     textColor: 'text-yellow-400',
@@ -884,7 +726,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     technology: [
       'GPT-4, Claude 3, Python, React, Node.js, PostgreSQL, Redis, Elasticsearch',
     ],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     integrations: [
       'Salesforce, HubSpot, Pipedrive, LinkedIn Sales Navigator, Zoom, Calendly',
     ],
@@ -902,11 +744,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     contactInfo: contact,
     realImplementation: true,
     implementationDetails:
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
       'Multi-tenant SaaS with AI sales intelligence, lead scoring, and nurturing automation.',
     launchDate: '2026-01-25',
@@ -948,18 +785,13 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'Multi - tenant SaaS with AI sales intelligence, lead scoring, and nurturing automation.',
     launch_date: '2026 - 01 - 25',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     customers: 198,
     rating: 4 && 4.9,
     reviews: 267,
   },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-=======
     id: 'ai-autonomous-business-processor', name: 'AI Autonomous Business Processor',
     tagline: 'Fully autonomous business process optimization with zero human intervention',
     price: '$1,299',
@@ -1081,39 +913,31 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     features: [
       'Automatic lead scoringBehavioral analysisPredictive lead qualificationPersonalized nurturing sequencesSales forecasting AIPipeline optimizationCompetitor intelligenceMarket opportunity detection';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       'ROI trackingCRM integration'
     ];
     popular: true;
     icon: '💰';
     color: 'from-yellow-600 to-orange-700';
     textColor: 'text-yellow-400';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     link: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-sales-intelligence',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     marketPosition: 'First autonomous sales intelligence platform, competes with SalesLoft, Outreach, and HubSpot Sales.';
     targetAudience: ['Sales teamsB2B companiesenterprise softwareconsulting firms'];
     trialDays: 14;
     setupTime: '1 week';
     category: 'AI & Sales';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     realService: true,
     technology: ['GPT-4, Claude 3, Python, React, Node && Node.js, PostgreSQL, Redis, Elasticsearch'];
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     integrations: ['Salesforce, HubSpot, Pipedrive, LinkedIn Sales Navigator, Zoom, Calendly'];
     useCases: ['Lead generationSales qualificationPipeline managementRevenue optimization'];
     roi: 'Increase sales conversion rates by 45% and reduce sales cycle by 30%.'
@@ -1126,28 +950,17 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     implementationDetails: 'Multi-tenant SaaS with AI sales intelligence, lead scoring, and nurturing automation.';
     launchDate: '2026-01-25';
     customers: 198;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     rating: 4 && 4.9,
 
     reviews: 267
-<<<<<<< HEAD
-  }
-];
-
-
-=======
     rating: 4.9
     reviews: 267
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
 ];      'Automatic lead scoring_behavioral analysis_predictive lead qualification_personalized nurturing sequences_sales forecasting AIPipeline optimization_competitor intelligence_market opportunity detection';
       'ROI trackingCRM integration';
     ];
@@ -1177,22 +990,17 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     customers: 198;
     rating: 4.9,
     reviews: 267;
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 ;
-=======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedAIAutomationService {;
   id: string,;
@@ -1404,8 +1212,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     features: [;
       'Automatic lead scoringBehavioral analysisPredictive lead qualificationPersonalized nurturing sequencesSales forecasting AIPipeline optimizationCompetitor intelligenceMarket opportunity detection',;
       'ROI trackingCRM integration';
-<<<<<<< HEAD
-=======
     ],;
     popular: true,;
     icon: '💰',;
@@ -1433,16 +1239,13 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     customers: 198,;
     rating: 4.9;
     reviews: 267;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
+
+
       'Multi-tenant SaaS with AI sales intelligence, lead scoring, and nurturing automation.',
     launchDate: '2026-01-25',
     customers: 198,
@@ -1450,4 +1253,4 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     reviews: 267,
   },
 ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

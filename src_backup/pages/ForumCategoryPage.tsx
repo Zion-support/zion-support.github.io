@@ -1,15 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "project-help": {
-    id: "project-help"
-    name: "Project Help"
-    description: "Get help with your ongoing projects and collaboration."
-    adminOnly: false
-    icon: "MessageSquare"
-  "feedback": {
-=======
 "feedback": {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     id: "feedback"
     name: "Feedback & Feature Requests"
     description: "Share your feedback and suggest new features."
@@ -17,22 +7,16 @@
     icon: "FileText"
 
 
-<<<<<<< HEAD
-=======
   },
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   "announcements": {
     id: "announcements"
     name: "Announcements"
     description: "Official announcements from the Zion team."
     adminOnly: true
     icon: "Megaphone"
-<<<<<<< HEAD
-
-
-=======
 import { log_info } from '@/utils / production_logger';
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react';
 // Mock category data;
@@ -62,7 +46,7 @@ function CategoryContent({
   IconComponent,
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   user}: {
   categoryId: string
   category: ForumCategoryInfo
@@ -78,21 +62,17 @@ function CategoryContent({
   // Filter posts by category from context data
   const categoryPosts = [
     ...featuredPosts.filter(post => post.categoryId === categoryId),
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     ...recentPosts.filter(post => post.categoryId === categoryId)
   ].filter((post, index, self) => 
     // Remove duplicates by id
     index === self.findIndex(p => p.id === post.id)
 
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   // Apply search filter
   const filteredPosts = searchQuery
     ? categoryPosts.filter(post =>
@@ -100,11 +80,9 @@ function CategoryContent({
         post.content.toLowerCase().includes(searchQuery.toLowerCase()) |
         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       )
-<<<<<<< HEAD
-=======
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   const handleFollow = () => {
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),
@@ -115,12 +93,10 @@ function CategoryContent({
   const { isFollowed, follow, unfollow } = useFollowedCategories(),
   const { toast } = useToast(),
 
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   const handleFollow = () => {
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' })
@@ -131,11 +107,9 @@ import React from 'react';
 import { logInfo } from '@/utils/productionLogger';
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react';
 import { logInfo } from '@/utils/productionLogger';
-<<<<<<< HEAD
-=======
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 import { useState, useEffect } from "react",;
 import Link from "next/link",;
 import { useRouter } from "next/router",;
@@ -163,18 +137,14 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {;
     description: "Tips, strategies, and questions about getting hired on the platform.",;
     adminOnly: false,;
     icon: "Briefcase";
-<<<<<<< HEAD
-=======
   },;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   "project-help": {;
     id: "project-help",;
     name: "Project Help",;
     description: "Get help with your ongoing projects and collaboration.",;
     adminOnly: false,;
     icon: "MessageSquare";
-<<<<<<< HEAD
-=======
   },;
   "ai-tools": {;
     id: "ai-tools",;
@@ -183,17 +153,15 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {;
     adminOnly: false,;
     icon: "Code";
   },;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   "feedback": {;
     id: "feedback",;
     name: "Feedback & Feature Requests",;
     description: "Share your feedback and suggest new features.",;
     adminOnly: false,;
     icon: "FileText";
-<<<<<<< HEAD
-=======
   },;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   "announcements": {;
     id: "announcements",;
     name: "Announcements",;
@@ -201,9 +169,6 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {;
     adminOnly: true,;
     icon: "Megaphone";
   }
-<<<<<<< HEAD
-      return;
-=======
 },;
 const iconMap = {;
   "Briefcase": Briefcase,;
@@ -251,34 +216,13 @@ function CategoryContent({;
 
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     }
     if (isFollowed(categoryId)) {
       unfollow(categoryId)
     } else {
       follow(categoryId)
     }
-<<<<<<< HEAD
-  );
-}
-;
-export default function ForumCategoryPage() {;
-  const router = useRouter(),;
-  const { categoryId } = router.query as { categoryId: string },;
-  const { user } = useAuth(),;
-  // Check if the category exists and user has access;
-  const category = categoryId ? categoriesInfo[categoryId] : null,;
-  const IconComponent = category ? iconMap[category.icon as keyof typeof iconMap] : null,;
-  // Check access for admin-only categories;
-  const hasAccess = category && (;
-    !category.adminOnly ||;
-    (user && (user.userType === 'admin' || user.role === 'admin'));
-  );
-  logInfo('CategoryContent - categoryId:', { data: categoryId }),;
-  logInfo('CategoryContent - categoryPosts:', { data: categoryPosts }),;
-  logInfo('CategoryContent - filteredPosts:', { data: filteredPosts }),;
-<<<<<<< HEAD
-=======
   return (;
     <div className="container py-8">;
       <div className="flex items-center gap-3 mb-6">;
@@ -361,14 +305,13 @@ if ( {) {
   );
 }
 ;
-=======
 
   };
 
   logInfo('CategoryContent - categoryId:', { data: categoryId }),;
   logInfo('CategoryContent - categoryPosts:', { data: categoryPosts }),;
   logInfo('CategoryContent - filteredPosts:', { data: filteredPosts }),;
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+
   const category = categoryId ? categoriesInfo[categoryId] : null;
   const IconComponent = category ? iconMap[category && category.icon as keyof typeof iconMap] : null;
 
@@ -376,11 +319,8 @@ if ( {) {
   );
 
 }
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-=======
+
+
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -432,4 +372,4 @@ This category is only accessible to administrators. </p> <Button asChild> <Link 
 }'"
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

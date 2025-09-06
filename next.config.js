@@ -9,12 +9,6 @@ const nextConfig = {
   },
   experimental: {
     esmExternals: false
-<<<<<<< HEAD:next.config.js
-  }
-};
-
-module.exports = nextConfig;
-=======
   },
   images: {
     domains: ['ziontechgroup.com', 'localhost', 'images.unsplash.com', 'via.placeholder.com'],
@@ -53,4 +47,3 @@ module.exports = nextConfig;
 };
 
 module.exports = nextConfig;
->>>>>>> 8fd25f885ef5f7c479ebfaa3c8ff4946200161f8:next.config.cjs

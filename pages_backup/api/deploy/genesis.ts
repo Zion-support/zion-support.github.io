@@ -1,19 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
-    res.status(405).end('Method Not Allowed');
-    return;
-  }
-
-=======
 
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 function summarizeModules(
   modules: Record<string, boolean>
   bonus: Record<string, boolean>
@@ -24,11 +11,8 @@ function summarizeModules(
       .filter(([, v]) => v)
       .map(([k]) => `/${k}`)
   ];
-<<<<<<< HEAD
-  return active && active.length ? active && active.sort().join(", ") : "None";
-=======
   return active.length ? active.sort().join(', ') : 'None';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 function missionParagraph(
@@ -47,29 +31,15 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
-=======
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
   try {
 
     const body = req && req.body || {};
 
     const {
-<<<<<<< HEAD
-
-      instanceName
-      defaultLanguage = "en"
-      deploymentRegion
-      tokenActivation = false
-      governanceMode = "democratic"
-      branding = {}
-      modules = {}
-      bonusModules = {}
-
-=======
       instanceName,
 defaultLanguage = 'en',
       deploymentRegion,
@@ -78,7 +48,7 @@ defaultLanguage = 'en',
       branding = {},
       modules = {},
       bonusModules = {},
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     } = body;
 
 
@@ -197,52 +167,16 @@ if ( {) {
         instanceName,
         modules,
         bonusModules
-<<<<<<< HEAD
-      )
-    }
-          pdf: "/book / manifesto.pdf"
-          trailer_script: "/trailer / script"
-        }
-        summit: "/summit"
-      }
-      public_pages: [;
-        "/about"
-        "/manifesto"
-        "/constitution"
-        "/partners"
-        "/academy"
-        "/marketplace"
-        "/dao"
-        `/nation/${default_language || "en"}`
-      ]
-    }
-;
-    const operator = {
-      activeModulesSummary: summarize_modules (modules, bonus_modules)
-      mission: mission_paragraph (
-        deployment_region
-        instance_name
-        modules
-        bonus_modules
-      )
-    }
-;
-=======
       ),
     };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     const access = {
       roles: ['Founder', 'Superadmin', 'DAO Multisig'],
       export: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      operator,
-      access,
-=======
       operator
       access
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     });
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -258,7 +192,6 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-=======
         type: 'application/json',
         href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`,
       },
@@ -285,7 +218,7 @@ version: 'Zion OS v1.0.0',
     return res.status(500).json({ error: err.message || 'Internal error' });
   } catch (err: any) {
     return res.status(500).json({ error: err.message |"Internal error" });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
   }
@@ -307,27 +240,16 @@ version: 'Zion OS v1.0.0',
     return res.status(500).json({ error: err.message || 'Internal error' })
   }
 }
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+
   try {
     const body = req.body || {};
     const {
-<<<<<<< HEAD
-      instanceName,
-<<<<<<< HEAD
-      tokenActivation
-    } = body;
-
-    const now = new Date().toISOString();
-    const provisionId = `zion-${instanceName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${Date.now()}`;
-    
-=======
       defaultLanguage,
       deploymentRegion,
       tokenActivation,
       governanceMode,
       branding,
       modules = {},
-=======
       instanceName
       defaultLanguage
       deploymentRegion
@@ -335,7 +257,7 @@ version: 'Zion OS v1.0.0',
       governanceMode
       branding
       modules = {}
->>>>>>> main
+main
       bonusModules = {  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -370,7 +292,7 @@ version: 'Zion OS v1.0.0',
     // Simulated provisioning operations – replace with real infra hooks later
     const now = new Date().toISOString();
     const provisionId = `zion-${instanceName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${Date.now()}`;
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+
     const outputActions = {
       zionGPT: {
         initialized: true
@@ -393,21 +315,6 @@ version: 'Zion OS v1.0.0',
       }
       publicPages: []
     };
-<<<<<<< HEAD
-
-    res.status(200).json({
-      success: true,
-      provisionId,
-      outputActions,
-      timestamp: now
-    });
-    return;
-  } catch (_error) {
-    res.status(500).json({ error: 'Failed to process genesis request' });
-    return;
-  }
-}
-=======
     res.status(200).json({
       success: true
       provisionId
@@ -560,4 +467,4 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+

@@ -1,28 +1,13 @@
-<<<<<<< HEAD
-
-import type { NextApiRequest, NextApiResponse } from "next";
-export const config = {
-  api: {
-import type { NextApiRequest, NextApiResponse } from "next";
-export const config = {
-  api: {
-    responseLimit: false
-  },;
-};
-
-=======
 responseLimit: false,
   },
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {;
   const { companyId, invoiceId } = req.query;
-<<<<<<< HEAD
-=======
 
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -30,9 +15,8 @@ export const config = {
   api: {
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
   if (
     !companyId |
     typeof companyId !== "string" |
@@ -42,10 +26,6 @@ export const config = {
     return res && res.status(400).json({ error: "companyId and invoiceId required" });
   }
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
   if (req.method !== 'GET')
     return res.status(405).json({ error: 'method_not_allowed' });
 
@@ -58,22 +38,12 @@ res.setHeader('Content-Type', 'application/pdf');
   res.setHeader(
     "Content-Disposition"
     `attachment; filename="invoice-${invoiceId}.pdf"`
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   );
   res.status(200).send(pdfBuffer);
 
 }
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ invoice: 'PDF buffer' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-export const config = {;
-  api: {;
-    responseLimit: false}};
 
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { companyId, invoiceId } = req.query;
   if (!companyId || typeof companyId !== 'string' || !invoiceId || typeof invoiceId !== 'string') {
@@ -81,23 +51,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   if (req.method !== 'GET') return res.status(405).json({ error: 'method_not_allowed' });
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
   // Minimal PDF bytes (single-page PDF saying Invoice). This is a static placeholder.
   const pdfBase64 =
     'JVBERi0xLjMKJcTl8uXrp/Og0MTGCjEgMCBvYmoKPDwKL1BhZ2VzIDIgMCBSCj4+CmVuZG9iagoKMiAwIG9iago8PAovS2lkcyBbMyAwIFJdCi9Db3VudCAxCj4+CmVuZG9iagoKMyAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDIgMCBSCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdCi9Db250ZW50cyA0IDAgUgo+PgplbmRvYmoKCjQgMCBvYmoKPDwKL0xlbmd0aCA1NQogPj4Kc3RyZWFtCkJUIC9GMSAyNCBUZgovVGYgMTIwIDEyMCBUZAooSW52b2ljZSAjKElELSB7aW52b2ljZUlkfSkpIFQKRVQKZW5kc3RyZWFtCmVuZG9iagp4cmVmCjAgNQowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwMTYgMDAwMDAgbiAKMDAwMDAwMDA2NiAwMDAwMCBuIAowMDAwMDAwMTY0IDAwMDAwIG4gCjAwMDAwMDAyNjggMDAwMDAgbiAKdHJhaWxlcgo8PAovUm9vdCAxIDAgUgovU2l6ZSA1Cj4+CnN0YXJ0eHJlZgozNzIKJSVFT0Y=';
   const pdfBuffer = Buffer.from(pdfBase64, 'base64');
-<<<<<<< HEAD
-=======
   res.setHeader('Content-Typeapplication/pdf');
   res.setHeader('Content-Disposition', `attachment, filename="invoice-${invoiceId}.pdf"`);
   res.status(200).send(pdfBuffer)
 
 }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 
 import type { NextApiRequest, NextApiResponse } from './next';
 export const config = {
@@ -105,8 +70,6 @@ export const config = {
     response_limit: false
   }
 }
-<<<<<<< HEAD
-=======
 ;
 export default async /**
  * handler - Function description
@@ -162,21 +125,15 @@ export const config = {
     response_limit: false
   }
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+ursor/fix-website-loading-errors-and-merge-6662
+
+
+
+origin/cursor/automate-test-improve-and-merge-code-2533

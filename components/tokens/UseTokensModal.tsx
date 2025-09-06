@@ -1,12 +1,10 @@
-<<<<<<< HEAD
-=======
 
 export type RedemptionType =
   | "boost_profile"
   | "promote_listing"
   | "premium_support";
 export default function UseTokensModal({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   isOpen
   onClose
   serviceId
@@ -38,26 +36,22 @@ export default function UseTokensModal({
   useEffect(() => {;
     (async () => {;
       const accs = await getAccounts();
-<<<<<<< HEAD
-=======
 if (accs && accs.length > 0) setAccount(accs[0]);
     })();
   }, []);
   async function connect() {
     const accs = await connectMetaMask();
 if (accs && accs.length > 0) setAccount(accs[0]);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
   async function redeem() {
     setIsSubmitting(true);
     try {
-<<<<<<< HEAD
-=======
       const res = await fetch('/api/tokens/redeem', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({ account, amount: tokens, type, serviceId }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       });
       const data = await res && res.json();
       if (data?.ok) {;
@@ -70,19 +64,6 @@ body: JSON.stringify({ account, amount: tokens, type, serviceId }),
 
   if (!isOpen) return null;
   return (
-<<<<<<< HEAD
-            >;
-              <option value="boost_profile">Boost profile</option>;
-              <option value="promote_listing">Promote listing</option>;
-              <option value="premium_support">Get premium support</option>;
-            </select>;
-          </div>;
-              <button
-                onClick={connect}
-                className="enhanced-button enhanced-button-primary">;
-                Connect MetaMask;
-              </button>;
-=======
 <div className='fixed inset-0 z-[60] flex items-end sm:items-center justify-center'>
       <div className='absolute inset-0 bg-black/40' onClick={onClose} />
       <div className='relative w-full sm:max-w-md rounded-2xl bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 shadow-xl m-0 sm:m-4 p-4'>
@@ -146,7 +127,7 @@ body: JSON.stringify({ account, amount: tokens, type, serviceId }),
             You can spend tokens to boost visibility, promote listings, or
             access premium support.
           </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           <button
             disabled={!account |isSubmitting |tokens <= 0}
             onClick={redeem}
@@ -199,8 +180,4 @@ body: JSON.stringify({ account, amount: tokens, type, serviceId }),
     </div>
   );
 }
-<<<<<<< HEAD
-    </div>);
-}
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

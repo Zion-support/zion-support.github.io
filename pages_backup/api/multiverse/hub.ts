@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readState } from "../../../utils/sync/storage";
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState } from "../../../utils/sync/storage",;
 
-
-=======
-import type { NextApiRequest, NextApiResponse } from "next",;
-import { readState } from "../../../utils/sync/storage",;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const state = readState()
@@ -26,13 +17,9 @@ lastSyncedAt: state.lastSyncedAt})
 
 }
 
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from './next';,
-import { read_state  } from '../../../utils / sync / storage';,
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state  } from '../../../utils / sync / storage';
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 export default async /**
  * handler - Function description
  */
@@ -47,8 +34,7 @@ if ( {) {
       instance_id: state.config.instance_id
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -64,10 +50,9 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-=======
   const state = null;
       lastSyncedAt: state.lastSyncedAt})
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
   } catch (error) {
@@ -84,84 +69,28 @@ export default async function handler(req, res) {
     return res.status(200).json({
       route: "/multiverse/hub"
       instanceId: state.config.instanceId
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
       route: "/multiverse/hub",
       instanceId: state.config.instanceId,
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
       peers: state.config.peers,
       scope: state.config.scope,
       opt_in: state.config.opt_in,
       paused: state.config.paused,
-<<<<<<< HEAD
-=======
-=======
       peers: state.config.peers
       scope: state.config.scope
       opt_in: state.config.opt_in
       paused: state.config.paused
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+main
+
       lastSyncedAt: state.lastSyncedAt})
   }
 
   return res.status(405).json({ error: "Method not allowed" })
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readState } from "../../../utils/sync/storage";
-export default async function handler(req, res) {
-  try {
-  const state = readState();
-  if (req.method === "GET") {;
-    return res.status(200).json({;
-      route: "/multiverse/hub";
-      instanceId: state.config.instanceId;
-      peers: state.config.peers;
-      scope: state.config.scope,;
-      optIn: state.config.optIn;
-      paused: state.config.paused;
-      lastSyncedAt: state.lastSyncedAt});
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  return res.status(405).json({ error: "Method not allowed" });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-}
-
-
-
-
-=======
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+

@@ -1,260 +1,29 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-<<<<<<< HEAD
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 /**
  * SEO Optimizer
  * Automatically optimizes SEO for the application
  */
-<<<<<<< HEAD
+origin/automation-improvements-final
 
-=======
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const { execSync } = require('child_process');
->>>>>>> origin/main
+origin/main
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-console.log('🔍 Starting SEO Optimizer...');
 
-class SEOOptimizer {
-  constructor() {
-    this.reportsDir = path.join(process.cwd(), 'automation-reports');
-    this.ensureReportsDir();
-  }
-
-  ensureReportsDir() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
-  }
-
-  log(message) {
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
-
-  async optimizeSEO() {
-    const seoOptimizations = [
-      { name: 'Sitemap Generation', command: 'npm run sitemap:generate', description: 'Generating sitemap for search engines' },
-      { name: 'Search Index', command: 'npm run search:index', description: 'Generating search index' },
-      { name: 'Meta Tags Check', command: 'npm run test:accessibility', description: 'Checking meta tags and accessibility' },
-      { name: 'Robots.txt Check', command: 'ls -la public/robots.txt', description: 'Checking robots.txt file' }
-    ];
-
-    const results = [];
-    let successfulOptimizations = 0;
-
-    for (const optimization of seoOptimizations) {
-      try {
-        this.log(`🔧 Running ${optimization.name}...`);
-        this.log(`📝 ${optimization.description}`);
-        
-        execSync(optimization.command, { stdio: 'pipe' });
-        
-        console.log(`✅ ${optimization.name} completed successfully`);
-        results.push({ 
-          name: optimization.name, 
-          status: 'success', 
-          description: optimization.description,
-          error: null 
-        });
-        successfulOptimizations++;
-      } catch (error) {
-        console.log(`❌ ${optimization.name} failed`);
-        results.push({ 
-          name: optimization.name, 
-          status: 'failed', 
-          description: optimization.description,
-          error: error.message 
-        });
-      }
-    }
-
-    const report = {
-      timestamp: new Date().toISOString(),
-      totalOptimizations: seoOptimizations.length,
-      successfulOptimizations,
-      failedOptimizations: seoOptimizations.length - successfulOptimizations,
-      results,
-      seoScore: Math.round((successfulOptimizations / seoOptimizations.length) * 100)
-    };
-
-    const reportPath = path.join(this.reportsDir, 'seo-optimization-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    this.log(`📊 SEO optimization completed! Report saved to: ${reportPath}`);
-    this.log(`🔍 SEO Score: ${report.seoScore}% (${successfulOptimizations}/${seoOptimizations.length} optimizations successful)`);
-    
-    return report;
-  }
-}
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-        
-      }
-    }},
-  {
-    "name": 'Sitemap Check',
-    "action": () => {
-      
-      const sitemapPath = path.join(process.cwd(), 'public', 'sitemap.xml');
-      if (fs.existsSync(sitemapPath)) {
-        
-      } else {
-        
-      }
-    }},
-  {
-    "name": 'Robots.txt Check',
-    "action": () => {
-      
-      const robotsPath = path.join(process.cwd(), 'public', 'robots.txt');
-      if (fs.existsSync(robotsPath)) {
-        
-      } else {
-        
-      }
-    }},
-  {
-    "name": 'Structured Data Check',
-    "action": () => {
-      
-      const pagesDir = path.join(process.cwd(), 'pages');
-      if (fs.existsSync(pagesDir)) {
-        const pages = fs
-          .readdirSync(pagesDir)
-          .filter(file => file.endsWith('.tsx'));
-        let structuredDataCount = 0;
-
-        pages.forEach(page => {
-          const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
-          if (
-            content.includes('application/ld+json') ||
-            content.includes('schema.org')
-          ) {
-            structuredDataCount++;
-          }
-        });
-
-        
-      }
-    }},
-  {
-    "name": 'Alt Text Check',
-    "action": () => {
-      
-      const pagesDir = path.join(process.cwd(), 'pages');
-      if (fs.existsSync(pagesDir)) {
-        const pages = fs
-          .readdirSync(pagesDir)
-          .filter(file => file.endsWith('.tsx'));
-        let imagesWithAlt = 0;
-        let totalImages = 0;
-
-        pages.forEach(page => {
-          const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
-          const imgTags = content.match(/<img[^>]*>/g) || [];
-          totalImages += imgTags.length;
-
-          imgTags.forEach(img => {
-            if (img.includes('alt=')) {
-              imagesWithAlt++;
-            }
-          });
-        });
-
-        
-      }
-    }},
-  {
-    "name": 'Heading Structure Check',
-    "action": () => {
-      
-      const pagesDir = path.join(process.cwd(), 'pages');
-      if (fs.existsSync(pagesDir)) {
-        const pages = fs
-          .readdirSync(pagesDir)
-          .filter(file => file.endsWith('.tsx'));
-        let h1Count = 0;
-        let h2Count = 0;
-
-        pages.forEach(page => {
-          const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
-          h1Count += (content.match(/<h1[^>]*>/g) || []).length;
-          h2Count += (content.match(/<h2[^>]*>/g) || []).length;
-        });
-
-        
-      }
-    }},
-];
-
-// Run SEO checks
-let successCount = 0;
-let totalCount = seoChecks.length;
-
-for (const check of seoChecks) {
-  try {
-    
-    check.action();
-    
-    successCount++;
-  } catch (error) {
-    
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node
-=======
   }
 }
 
 
 
 
->>>>>>> main
+main
 // Generate SEO report
 const report = {
   "timestamp": new Date().toISOString(),
@@ -274,13 +43,8 @@ if (!fs.existsSync(reportsDir)) {
 const reportFile = path.join(reportsDir, `seo-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -291,23 +55,17 @@ console.log(' SEO Optimizer Starting...\n')
     "name"
     "name"
     "name"
-<<<<<<< HEAD
-    "status"
-=======
-<<<<<<< HEAD
-    "status"
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
 /**
  * SEO Optimizer
  * Automatically optimizes SEO for the application
  */
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 class SEOOptimizer {
   constructor() {
     this.logFile = path.join(__dirname, 'logs', 'seo-optimizer.log');
@@ -425,45 +183,12 @@ class SEOOptimizer {
     }, 6 * 60 * 60 * 1000);
 
     this.log('🔄 SEO Optimizer is running. Optimization every 6 hours.');
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+
   }
 }
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-// Generate SEO report
-const report = {
-  "timestamp": new Date().toISOString(),
-  "checks": seoChecks.map(check => ({
-    name: check.name,
-    "status": 'completed'})),
-  "summary": {
-    total: totalCount,
-    "successful": successCount,
-    "failed": totalCount - successCount}};
-
-const reportsDir = path.join(process.cwd(), 'automation-reports');
-if (!fs.existsSync(reportsDir)) {
-  fs.mkdirSync(reportsDir, { "recursive": true });
-}
-
-const reportFile = path.join(reportsDir, `seo-report-${Date.now()}.json`);
-fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -475,22 +200,14 @@ console.log(' SEO Optimizer Starting...\n')
     "name"
     "name"
     "status"
-=======
 #!/usr/bin/env node
-=======
-=======
-<<<<<<< HEAD
-=======
 // Run SEO optimization
 const optimizer = new SEOOptimizer();
 optimizer.optimizeSEO().catch(console.error);
-=======
     "status"
-=======
-=======
 #!/usr/bin/env node
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+main
+
 /**
  * SEO Optimizer
  * Automatically optimizes SEO for the application
@@ -619,21 +336,10 @@ class SEOOptimizer {
   }
 }
 
-<<<<<<< HEAD
-// Run if called directly
-if (require.main === module) {
-  const optimizer = new SEOOptimizer();
-  optimizer.start().catch(console.error);
-}
 
-module.exports = SEOOptimizer;
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
 // Run if called directly
 if (require.main === module) {
   const optimizer = new SEOOptimizer();
@@ -642,30 +348,12 @@ if (require.main === module) {
 module.exports = SEOOptimizer;
 
 module.exports = SEOOptimizer;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-
-// Run SEO optimization
-const optimizer = new SEOOptimizer();
-<<<<<<< HEAD
-optimizer.optimize().catch(console.error);
-=======
-<<<<<<< HEAD
-optimizer.optimize().catch(console.error);
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
 optimizer.optimizeSEO().catch(console.error);
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/main
+origin/automation-improvements-final
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
+

@@ -1,13 +1,10 @@
 import Head from 'next/head';
-<<<<<<< HEAD
-
-=======
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Search  } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function AIMarketResearchPage() {
   const service = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import {
   Phone
   Mail
@@ -198,48 +195,21 @@ if (return null) {
 
 export default function AIMarketResearchPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
-<<<<<<< HEAD
-    s.link.endsWith('/ai-market-research');
-  );  if (!service) return null;
-
-
-
-
-export default function AIMarketResearchPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-market-research'));
-  if (!service) return null;
-
-
-
-import React from 'react'
-import Head from 'next/head'
-import { Phone, Mail, MapPin, Check, ArrowRight, Star, Search } from 'lucide-react',
-import Layout from '../components/layout/Layout'
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
-
-
-export default function AIMarketResearchPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-market-research'))
-  if (!service) return null,
-=======
     s.link.endsWith('/ai-market-research')
   );
   if (!service) return null;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Layout>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
-<<<<<<< HEAD
-        <link rel="canonical" href="https://ziontechgroup.com/ai-market-research" />
-=======
 <meta name='description' content={service.description} />
         <link
           rel='canonical'
           href='https://ziontechgroup.com/ai-market-research'
         />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
@@ -253,22 +223,6 @@ export default function AIMarketResearchPage() {
               <p className="text-slate-300 mb-6">{service.description}</p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {service.features.slice(0, 12).map((feat, i) => (
-<<<<<<< HEAD
-
-
-
-}
-
-
-      </div>
-    </Layout>
-  )
-}
-
-
-
-
-=======
                   <li
                     key={i}
                     className='flex items-start space-x-3 text-slate-200 w-5 h-5 text-indigo-400 mt-0.5'
@@ -337,4 +291,4 @@ export default function AIMarketResearchPage() {
       </main>
     </Layout>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

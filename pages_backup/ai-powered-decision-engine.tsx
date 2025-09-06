@@ -1,20 +1,6 @@
-<<<<<<< HEAD
-			pricePerMonthUSD={279}
-			implementationWeeks="3-7 days"
-			roiNote="Teams report 2–5x ROI via faster, consistent decisions and uplift from experimentation"
-			features={[
-				"Policy and risk decisioning with constraints"
-				"Online experimentation (A/B, multi-armed bandits)"
-				"Explainability and audit trails"
-				"Rules + ML hybrid strategies"
-				"Real-time feature engineering and caching"
-				"Integrations: Kafka, Snowflake, Redis, REST/gRPC"
-				"Drift monitoring and alerts"
-
-=======
 import React from 'react';
 			title;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 				"Versioned strategies with canary rollouts"
 			]}
 			industries={["Fintech", "SaaS", "Marketplaces", "Logistics"]}
@@ -53,14 +39,5 @@ import React from 'react';
 			canonical="https: //ziontechgroup.com/ai-powered-decision-engine"
 		/>
 	)
-<<<<<<< HEAD
-			canonical="https: //ziontechgroup.com/ai-powered-decision-engine";
-		/>;
-	);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }

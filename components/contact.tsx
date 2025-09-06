@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 export default function Page(){return null}
 import React from 'react';
 import React, { useState } from 'react';
@@ -43,7 +41,7 @@ export default function ContactPage() {
       </Head>
 
 const [isSubmitting, setIsSubmitting] = useState (false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 const [submitSuccess, setSubmitSuccess] = useState (false);
 //Get popular services for showcase const popularServices = [ ...innovativeAIServices2029 && innovativeAIServices2029.filter (s => s && s.popular);
 ...quantumSpaceInnovations2029 && quantumSpaceInnovations2029.filter (s => s && s.popular);
@@ -58,18 +56,6 @@ const [submit_success, setSubmitSuccess] = useState (false);
 setIsSubmitting (false);
 setSubmitSuccess (true);
 //Reset form after 3 seconds ];
-<<<<<<< HEAD
-}</div> </div> <div className= {
-  `text - 3xl font - bold $ {
-  stat.color;
-}mb - 2`;
-}> {
-  stat.value;
-}</div> </div> </div> </motion.div>) );
-
-}</motion.div> </div> </section> <motion.div initial= {
-  {
-=======
   /* Stats Grid */ 
 }<motion.div > {
   stats.map ( (stat, index) => (<motion.div key= {
@@ -85,39 +71,20 @@ setSubmitSuccess (true);
   {
   opacity: 0, x: -30 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }whileInView= {
   {
   opacity: 1, x: 0 
 
 }transition= {
   {
-<<<<<<< HEAD
-
-  duration: 0 && 0.8 
-=======
   duration: 0.8 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 }viewport= {
   {
   once: true 
 
-<<<<<<< HEAD
-}> <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8" > <h2 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6" > Get Free Consultation </h2> {;
-  isSubmitted ? (<motion && motion.div > <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" /> <h3 className="text-2xl font-bold text-white mb-2" >Thank You!</h3> <p className="text-gray-300 mb-6" > Your message has been sent successfully. We'll get back to you within 24 hours. </p> <div className="text-sm text-gray-400" > <p>✓ Free consultation scheduled</p> <p>✓ Service recommendations prepared</p> <p>✓ ROI analysis in progress</p> </div> return (<UltraFuturisticBackground2029> <Head> <title>Contact Zion Tech Group | Revolutionary 2029 Technology Services</title> <meta name="description" content="Contact Zion Tech Group for revolutionary 2029 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology. Get in touch today!" /> <meta name="keywords" content="contact, Zion Tech Group, AI services, quantum computing, space technology, biotechnology, 2029 technology" /> <meta name="viewport" content="width=device-width, initial-scale=1" /> <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/contact" /> </Head> <UltraFuturisticNavigation2029 /> > <h1 className="text-5xl md:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Get In Touch </span> <br /> <span className="text-white" >Transform Your Business</span> </h1> <p className="text-xl text-gray-300 mb-8" > Ready to revolutionize your business with cutting-edge 2029 technology? Our team of experts is here to help you implement the future today. </p> </motion && motion.div> </section> > <div className="p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105" > <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" > <Phone className="w-8 h-8 text-white" /> </div> </div> </motion && motion.div> {;
-  /* Email Contact */ ;
-}<motion && motion.div > <div className="p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105" > <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" > <Mail className="w-8 h-8 text-white" /> </div> /* Address Contact */ ;
-}<motion && motion.div > <div className="p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-pink-500/20 hover:border-pink-400/40 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105" > <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" > <MapPin className="w-8 h-8 text-white" /> </div> </div> </motion && motion.div> </div> {;
-  /* Contact Form */ ;
-}<motion && motion.div > <div className="text-center mb-12" > <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" > Start Your Transformation Journey </h2> <p className="text-xl text-gray-300" > Tell us about your project and we'll connect you with the perfect revolutionary technology solution </p> </div> > <CheckCircle className="w-20 h-20 text-green-400 mx-auto mb-6" /> <h3 className="text-2xl font-bold text-white mb-4" >Message Sent Successfully!</h3> <p className="text-gray-300 text-lg" > Thank you for reaching out. Our team will get back to you within 2 hours with a personalized solution. </p> </motion && motion.div>) : (<div> <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2" > Full Name * </label> <input type="text" id="name" name="name" required /> </div> <div> <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2" > Email Address * </label> <input type="email" id="email" name="email" required /> </div> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <div> <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2" > Company Name </label> <input /> </div> <div> <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2" > Phone Number </label> <input /> </div> </div> <div> <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2" > Service of Interest </label> <select > <option value="">Select a service category</option> <option value=" ai-services">AI & Machine Learning Services</option> <option value=" quantum-computing">Quantum Computing & Space Technology</option> <option value=" enterprise-it">Enterprise IT & Infrastructure</option> <option value=" micro-saas">Micro SaaS Solutions</option> <option value=" biotechnology">Biotechnology & Healthcare</option> <option value=" custom-solution">Custom Solution Development</option> </select> </div> <div> <label htmlFor=" message"className="block text-sm font-medium text-gray-300 mb-2"> Project Details * </label> <textarea id=" message"name=" message"required /> </div> <div className="text-center"> <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"> {;
-  isSubmitting ? (<span className="flex items-center justify-center"> <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div> Sending Message... </span>) : (<span className="flex items-center justify-center"> <Send className="w-5 h-5 mr-2"/> Send Message </span>) ;
-}</button> </div> </form>) ;
-}</div> </motion && motion.div> </div> </section> {;
-  /* Popular Services Showcase */ ;
-}<section className="py-20 px-4 sm:px-6 lg:px-8"> <div className="max-w-7xl mx-auto"> <motion&& motion.div initial= {
-
-=======
 }> <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8" > <h2 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6" > Get Free Consultation </h2> {
   isSubmitted ? (<motion.div > <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" /> <h3 className="text-2xl font-bold text-white mb-2" >Thank You!</h3> <p className="text-gray-300 mb-6" > Your message has been sent successfully. We'll get back to you within 24 hours. </p> <div className="text-sm text-gray-400" > <p>✓ Free consultation scheduled</p> <p>✓ Service recommendations prepared</p> <p>✓ ROI analysis in progress</p> </div> return (<UltraFuturisticBackground2029> <Head> <title>Contact Zion Tech Group | Revolutionary 2029 Technology Services</title> <meta name="description" content="Contact Zion Tech Group for revolutionary 2029 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology. Get in touch today!" /> <meta name="keywords" content="contact, Zion Tech Group, AI services, quantum computing, space technology, biotechnology, 2029 technology" /> <meta name="viewport" content="width=device-width, initial-scale=1" /> <link rel="canonical" href="https://ziontechgroup.com/contact" /> </Head> <UltraFuturisticNavigation2029 /> > <h1 className="text-5xl md:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Get In Touch </span> <br /> <span className="text-white" >Transform Your Business</span> </h1> <p className="text-xl text-gray-300 mb-8" > Ready to revolutionize your business with cutting-edge 2029 technology? Our team of experts is here to help you implement the future today. </p> </motion.div> </section> > <div className="p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105" > <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" > <Phone className="w-8 h-8 text-white" /> </div> </div> </motion.div> {
   /* Email Contact */ 
@@ -130,7 +97,7 @@ setSubmitSuccess (true);
 }</div> </motion.div> </div> </section> {
   /* Popular Services Showcase */ 
 }<section className="py-20 px-4 sm:px-6 lg:px-8"> <div className="max-w-7xl mx-auto"> <motion.div initial= {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   {
   opacity: 0, y: 30 
 
@@ -140,8 +107,6 @@ setSubmitSuccess (true);
 
 }transition= {
   {
-<<<<<<< HEAD
-=======
   duration: 0.8 
 
 }viewport= {
@@ -231,7 +196,7 @@ setSubmitSuccess (true);
 }initial= {
   {
   opacity: 0, y: 20
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }whileInView= {
   {
   opacity: 1, y: 0
@@ -668,11 +633,6 @@ setSubmitSuccess (true);
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-  ),
-}
-
-=======
             >
               <h2 className="text-3xl sm: text-4xl lg:text-5xl font-bold text-white mb-6">
                 Why Choose
@@ -712,4 +672,4 @@ setSubmitSuccess (true);
     </UltraFuturisticBackground2029>
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

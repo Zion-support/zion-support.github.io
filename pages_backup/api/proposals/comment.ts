@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import fs from "fs-extra";
-import path from "path";
-const FILE_PATH = path && path.join(process && process.cwd(), "dataproposalscomments && dataproposalscomments.json");
-=======
 const FILE_PATH = path.join(
   process.cwd(),
   'data',
@@ -12,7 +5,7 @@ const FILE_PATH = path.join(
   'comments.json'
 );
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 async function ensure() {
   await fs && fs.ensureFile(FILE_PATH);
   try {
@@ -38,20 +31,8 @@ export default async function handler(
     const body = req.body |{}
     const data = await fs.readJson(FILE_PATH);
     const comment = {
-<<<<<<< HEAD
-      id: Date.now().toString()
-      proposalId: body.proposalId
-      region: body.region |"Global"
-      author: body.author |"anon"
-      text: body.text |""
-      createdAt: new Date().toISOString()
-    }
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
@@ -80,109 +61,28 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
     const data = await fs.readJson(FILE_PATH);
     const comment = {
-<<<<<<< HEAD
-      id: Date.now().toString(),
-=======
 id: Date.now().toString(),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       proposalId: body.proposalId,
       region: body.region || 'Global',
       author: body.author || 'anon',
       text: body.text || '',
-<<<<<<< HEAD
-=======
       id: Date.now().toString(), proposalId: body.proposalId
       region: body.region || 'Global', author: body.author || 'anon'
-=======
       id: Date.now().toString()
       proposalId: body.proposalId
       region: body.region || 'Global'
       author: body.author || 'anon'
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
       text: body.text || ''
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
       createdAt: new Date().toISOString()
-=======
       createdAt: new Date().toISOString(),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     };
     data.comments.push(comment);
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res.status(201).json(comment);
-<<<<<<< HEAD
-
-  }
-}
-res.status(405).json({ error: "Method not allowed" });
-}
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs-extra';
-import path from 'path';
-const FILE_PATH = path.join(process.cwd(), 'dataproposalscomments.json'),;
-async function ensure() {;
-  await fs.ensureFile(FILE_PATH);
-  try { await fs.readJson(FILE_PATH) } catch { await fs.writeJson(FILE_PATH, { comments: [] }, { spaces: 2 })   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-  res.status(405).json({ error: 'Method not allowed' })
-}
-import type { NextApiRequest, NextApiResponse } from './next';
-import fs from './fs - extra';
-import path from './path';
-const FILE_PATH = path.join (process.cwd (), "dataproposalscomments.json");
-async /**
- * ensure - Function description
- */
-function ensure() {
-  await fs.ensure_file (FILE_PATH);
-  try {
-    await fs.read_json (FILE_PATH);
-  } catch {
-    await fs.write_json (FILE_PATH, { comments: [] }, { spaces: 2 });
-  }
-}
-export default async /**
- * handler - Function description
- */
-function handler() {
-  await ensure ();
-  // Check condition
-if ( {) {
-  $2
-}
-    const data = await fs.read_json (FILE_PATH);
-    return res.status (200).json (data);
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    const body = req.body || {}
-    const data = await fs.read_json (FILE_PATH);
-    const comment = {
-      id: Date.now ().to_string ()
-      proposal_id: body.proposal_id
-      region: body.region || "Global"
-      author: body.author || "anon"
-      text: body.text || ""
-      created_at: new Date ().toISOString ()
-    }
-    data.comments.push (comment);
-    await fs.write_json (FILE_PATH, data, { spaces: 2 });
-    return res.status (201).json (comment);
-  }
-  res.status (405).json ({ error: "Method not allowed" });
-}
-<<<<<<< HEAD
-=======
-=======
     data.comments.push(comment);
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res.status(201).json(comment);
@@ -288,13 +188,11 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+
+
   }
   res.status(405).json({ error: 'Method not allowed' });
 
 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-
-
-  Rocket, Target, TrendingUp, Users, CheckCircle,
-  ArrowRight, Star, Award, Clock, DollarSign,
-  Building2, Gauge, BarChart3, Settings, Workflow
-} from 'lucide-react',
-=======
   Bot,
   Brain,
   Cpu,
@@ -29,19 +21,11 @@
   Workflow,;
 } from 'lucide-react';
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 const AutonomousBusinessOperationsPlatform = () => {
   const features = [
     {
       icon: Bot,
-<<<<<<< HEAD
-      title: "AI Autonomous Management",
-      description: "Fully autonomous business operations with intelligent decision-making",
-
-
-      description: "Automated production lines, quality control, and supply chain management"
-    }
-=======
 title: 'AI Autonomous Management',
       description:
         'Fully autonomous business operations with intelligent decision-making',
@@ -86,7 +70,7 @@ title: 'Manufacturing',
       description:
         'Automated production lines, quality control, and supply chain management',
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     {
       title: 'Healthcare',
       description:
@@ -98,134 +82,6 @@ title: 'Manufacturing',
         'Automated trading, risk management, and compliance monitoring',
     },
     {
-<<<<<<< HEAD
-      title: "Retail"
-      description: "Inventory management, customer service, and sales optimization"
-    }
-import React from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import { motion } from 'framer-motion',;
-import { 
-  Bot, Brain, Cpu, Zap, Shield, Globe, 
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import {
-  Bot, Brain, Cpu, Zap, Shield, Globe,
-  Rocket, Target, TrendingUp, Users, CheckCircle,
-  ArrowRight, Star, Award, Clock, DollarSign,
-  Building2, Gauge, BarChart3, Settings, Workflow
-} from 'lucide-react',
-const AutonomousBusinessOperationsPlatform = () => {
-  const features = [
-    {
-      icon: Bot,
-      title: "AI Autonomous Management",
-      description: "Fully autonomous business operations with intelligent decision-making",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      icon: Brain,
-      title: "Cognitive Business Intelligence",
-      description: "Advanced AI that understands and optimizes your business processes",
-
-      color: "from-purple-500 to-pink-500"
-
-    },
-    {
-      icon: Workflow,
-      title: "Automated Workflows",
-      description: "Seamless automation of complex business processes and operations",
-
-      color: "from-emerald-500 to-teal-500"
-
-    },
-    {
-      icon: Shield,
-      title: "Intelligent Security",
-
-      description: "AI-powered security monitoring and threat prevention",
-      color: "from-red-500 to-orange-500"
-    }
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],
-  const capabilities = [
-    "24/7 autonomous operation",
-    "Real-time decision making",
-
-    "Predictive analytics",
-    "Process optimization",
-    "Resource management",
-    "Performance monitoring",
-    "Risk assessment",
-
-
-
-    "Compliance automation"
-  ],
-
-
-  const industries = [
-    {
-      title: "Manufacturing",
-      description: "Automated production lines, quality control, and supply chain management"
-    },
-    {
-      title: "Healthcare",
-      description: "Patient care automation, medical device management, and administrative tasks"
-    },
-    {
-      title: "Finance",
-      description: "Automated trading, risk management, and compliance monitoring"
-    },
-    {
-      title: "Retail",
-      description: "Inventory management, customer service, and sales optimization"
-    }
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],
-  const benefits = [
-    {
-      icon: TrendingUp,
-      title: "Increased Efficiency",
-      value: "300%",
-      description: "Boost in operational efficiency"
-    },
-    {
-      icon: DollarSign,
-      title: "Cost Reduction",
-      value: "40%",
-      description: "Reduction in operational costs"
-    },
-    {
-      icon: Clock,
-      title: "Time Savings",
-      value: "80%",
-      description: "Faster decision making"
-    },
-    {
-      icon: Users,
-      title: "Team Productivity",
-      value: "250%",
-      description: "Increase in team productivity"
-    }
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],
-=======
       title: 'Retail',
       description:
         'Inventory management, customer service, and sales optimization',
@@ -259,7 +115,7 @@ title: 'Increased Efficiency',
     },
   ];
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>
       <Head>
@@ -286,76 +142,19 @@ title: 'Increased Efficiency',
           content='https://ziontechgroup.com/autonomous-business-operations-platform'
         />
       </Head>
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        {/* Hero Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-=======
 
       <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900'>
         {/* Hero Section */}
         <section className='relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8'>
           <div className='absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20'></div>
           <div className='relative max-w-7xl mx-auto text-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
                 Transform your business with AI-powered autonomous operations that work 24/7
                 Transform your business with AI-powered autonomous operations that work 24/7,
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-      description: "Boost in operational efficiency";
-    },
-    {
-      icon: DollarSign,
-      title: "Cost Reduction",
-      value: "40%",
-      description: "Reduction in operational costs";
-    },
-    {
-      icon: Clock,
-      title: "Time Savings",
-      value: "80%",
-      description: "Faster decision making";
-    },
-    {
-      icon: Users,
-      title: "Team Productivity",
-      value: "250%",
-      description: "Increase in team productivity";
-    }
-  ],
-  return (
-    <>;
-      <Head>;
-        <title > Autonomous Business Operations Platform - Zion Tech Group</title>;
-        <meta name="description" content="Revolutionary AI - powered autonomous business operations platform that manages your entire business with intelligent automation and decision - making capabilities." />;
-        <meta name="keywords" content="autonomous business, AI automation, business operations, intelligent automation, process optimization" />;
-        <meta property="og:title" content="Autonomous Business Operations Platform - Zion Tech Group" />;
-        <meta property="og:description" content="Revolutionary AI - powered autonomous business operations platform." />;
-        <meta property="og:type" content="website" />;
-        <meta property="og:url" content="https://ziontechgroup.com / autonomous - business - operations - platform" />;
-      </Head>;
-      <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900">;
-        {/* Hero Section */}
-        <section className="relative overflow - hidden py - 20 px - 4 sm:px - 6 lg:px - 8">;
-          <div className="absolute inset - 0 bg - gradient - to - r from - blue - 600 / 20 to - cyan - 600 / 20"></div>;
-          <div className="relative max - w-7xl mx - auto text - center">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-                Transform your business with AI-powered autonomous operations that work 24/7, 
-                Transform your business with AI-powered autonomous operations that work 24/7,
-                making intelligent decisions and optimizing every aspect of your business.
-=======
             >
 <div className='flex justify-center mb-6'>
                 <div className='p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full'>
@@ -372,7 +171,7 @@ title: 'Increased Efficiency',
                 Transform your business with AI-powered autonomous operations
                 that work 24/7, making intelligent decisions and optimizing
                 every aspect of your business.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <Link
@@ -393,34 +192,6 @@ title: 'Increased Efficiency',
           </div>
         </section>
         {/* Features Section */}
-<<<<<<< HEAD
-        {/* Features Section */}
-        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
-          <div className="max - w-7xl mx - auto">;
-            <motion.div;
-
-              initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              className="text-center mb-16"
-=======
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
@@ -429,7 +200,7 @@ title: 'Increased Efficiency',
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
                 Revolutionary Features
@@ -439,14 +210,11 @@ className='text-center mb-16'
                 cutting-edge platform
               </p>
             </motion.div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
               {features.map((feature, index) => (
                 <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -459,47 +227,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
                   >
                     <feature.icon className='w-6 h-6 text-white' />
                   </div>
-<<<<<<< HEAD
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-400">{feature.description}</p>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </div>;
-          </div>;
-        </section>;
-        {/* Capabilities Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              className="text-center mb-16"
-=======
                   <h3 className='text-xl font-semibold text-white mb-3'>
                     {feature.title}
                   </h3>
@@ -518,7 +245,7 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
                 Advanced Capabilities
@@ -528,14 +255,11 @@ className='text-center mb-16'
                 business operations
               </p>
             </motion.div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-=======
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
               {capabilities.map((capability, index) => (
                 <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   key={index}
                   initial={{ opacity: 0, coordinate_x: -20 }}
                   whileInView={{ opacity: 1, coordinate_x: 0 }}
@@ -543,47 +267,6 @@ className='text-center mb-16'
                   viewport={{ once: true }}
 className='flex items-center space-x-3'
                 >
-<<<<<<< HEAD
-                  <CheckCircle className="w-6 h-6 text-blue-400 flex-shrink-0" />
-                  <span className="text-gray-300">{capability}</span>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </div>;
-          </div>;
-        </section>;
-        {/* Benefits Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              className="text-center mb-16"
-=======
                   <CheckCircle className='w-6 h-6 text-blue-400 flex-shrink-0' />
                   <span className='text-gray-300'>{capability}</span>
                 </motion.div>
@@ -600,7 +283,7 @@ className='flex items-center space-x-3'
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
                 Measurable Results
@@ -609,13 +292,11 @@ className='text-center mb-16'
                 See the real impact of autonomous operations on your business
               </p>
             </motion.div>
-<<<<<<< HEAD
-=======
 
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
               {benefits.map((benefit, index) => (
                 <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -627,48 +308,6 @@ className='text-center'
                     <div className='inline-flex p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg mb-4'>
                       <benefit.icon className='w-8 h-8 text-white' />
                     </div>
-<<<<<<< HEAD
-                    <div className="text-3xl font-bold text-blue-400 mb-2">{benefit.value}</div>
-                    <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
-                    <p className="text-gray-400 text-sm">{benefit.description}</p>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </div>;
-          </div>;
-        </section>;
-        {/* Industries Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              className="text-center mb-16"
-=======
                     <div className='text-3xl font-bold text-blue-400 mb-2'>
                       {benefit.value}
                     </div>
@@ -693,7 +332,7 @@ className='text-center'
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
                 Industry Applications
@@ -703,14 +342,11 @@ className='text-center mb-16'
                 automation
               </p>
             </motion.div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-=======
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
               {industries.map((industry, index) => (
                 <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -725,23 +361,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl bo
                     {industry.description}
                   </p>
                 </motion.div>
-<<<<<<< HEAD
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </div>;
-          </div>;
-        </section>;
-        {/* CTA Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-=======
               ))}
             </div>
           </div>
@@ -749,7 +368,7 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl bo
         {/* CTA Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
@@ -802,38 +421,4 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl bo
 );
 };
 export default AutonomousBusinessOperationsPlatform;
-<<<<<<< HEAD
-
-},
-
-export default AutonomousBusinessOperationsPlatform,;
-;
-export default AutonomousBusinessOperationsPlatform,
-            >;
-              <h2 className="text - 3xl md: text - 4xl font - bold text - white mb - 6">;
-                Ready to Automate Your Business?;
-              </h2>;
-              <p className="text - xl text - gray - 400 mb - 8">;
-                Join the autonomous business revolution and transform your operations today;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <Link href="/contact" className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - blue - 500 to - cyan - 500 text - white font - semibold rounded - lg hover:from - blue - 600 hover:to - cyan - 600 transition - all duration - 200 text - lg">;
-                  Start Automation;
-                  <Bot className="ml - 2 w - 6 h - 6" />;
-                </Link>;
-                  Explore All Services;
-                </Link>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </>);
-},
-export default AutonomousBusinessOperationsPlatform,
-;
-
-},
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

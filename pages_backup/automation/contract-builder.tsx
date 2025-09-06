@@ -1,176 +1,9 @@
-<<<<<<< HEAD
-import React, { useEffect, useMemo, useState } from 'react',;
-import DatePicker from 'react-datepicker',;
-import { useRouter } from 'next/router',;
-type PaymentType = 'hourly' | 'fixed',
-
-
-import React, { useEffect, useMemo, useState } from 'react';
-import DatePicker from 'react-datepicker';
-import { useRouter } from 'next/router';
-type PaymentType = 'hourly' | 'fixed'
-export default function ContractBuilderPage() {
-  const router = useRouter()
-  const [talentName, setTalentName] = useState('')
-  const [projectName, setProjectName] = useState('')
-  const [scopeSummary, setScopeSummary] = useState('')
-  const [startDate, setStartDate] = useState<Date | null>(null)
-  const [endDate, setEndDate] = useState<Date | null>(null)
-  const [paymentType, setPaymentType] = useState<PaymentType>('hourly')
-  const [currency, setCurrency] = useState('USD')
-  const [hourlyRate, setHourlyRate] = useState<number>(100)
-  const [weeklyHourCap, setWeeklyHourCap] = useState<number | ''>('')
-  const [fixedAmount, setFixedAmount] = useState<number>(5000)
-  const [milestoneSummary, setMilestoneSummary] = useState('')
-  const [paymentSchedule, setPaymentSchedule] = useState('Net 15 on invoice')
-  const [nda, setNda] = useState(true)
-  const [ipTransfer, setIpTransfer] = useState(true)
-  const [governingLaw, setGoverningLaw] = useState('Delaware, USA')
-  const [revisionRounds, setRevisionRounds] = useState<number>(2)
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState<string | null>(null)
-  const [contract, setContract] = useState<string>('')
-  useEffect(() => {
-    if (!router.isReady) return
-    const { talent, project } = router.query as { talent?: string, project?: string }
-    if (talent && !talentName) setTalentName(decodeURIComponent(talent))
-    if (project && !projectName) setProjectName(decodeURIComponent(project))
-  }, [router.isReady, router.query, talentName, projectName])
-  const canSubmit = useMemo(() => {
-    return (
-      talentName.trim().length > 0 &&
-      projectName.trim().length > 0 &&
-      scopeSummary.trim().length > 0 &&
-      !!startDate &&
-      !!endDate &&
-      (paymentType === 'hourly' ? hourlyRate > 0 : fixedAmount > 0)
-    )
-  async function submitForm(event: React.FormEvent) {
-    event.preventDefault()
-    if (!canSubmit) return
-    setLoading(true)
-    setError(null)
-    setContract('')
-    try {
-      const body = {
-        talentName
-        projectName
-        scopeSummary
-        startDate: startDate?.toISOString().slice(0, 10)
-        endDate: endDate?.toISOString().slice(0, 10)
-        payment:
-          paymentType === 'hourly'
-            ? {
-                type: 'hourly'
-                currency
-                hourlyRate
-                weeklyHourCap: typeof weeklyHourCap === 'number' ? weeklyHourCap : undefined
-                paymentSchedule}
-            : {
-                type: 'fixed'
-                currency
-                totalAmount: fixedAmount
-                milestoneSummary: milestoneSummary |undefined
-                paymentSchedule}
-        clauses: {
-          nda
-          ipTransfer}
-        governingLaw
-        revisionRounds}
-      const res = await fetch('/api/ai-contract', {
-        method: 'POST'
-        headers: {
-          'Content-Type': 'application/json'}
-        body: JSON.stringify(body)})
-      if (!res.ok) {
-        const data = await res.json().catch(() => ({}))
-        throw new Error(data?.error |`Request failed: ${res.status}`)
-      }
-      const data = (await res.json()) as { contract: string }
-      setContract(data.contract)
-    } catch (e: any) {
-      setError(e?.message |'Failed to generate contract')
-    } finally {
-      set_loading (false);
-    }
-  }
-
-    setLoading(true),
-    setError(null),
-    setContract(''),
-
-import React, { useEffect, useMemo, useState } from 'react';
-import DatePicker from 'react-datepicker';
-import { useRouter } from 'next/router';
-type PaymentType = 'hourly' | 'fixed';
-export default function ContractBuilderPage(req, res) {
-  try {
-  const router = useRouter();
-  const [talentName, setTalentName] = useState('');
-  const [projectName, setProjectName] = useState('');
-  const [scopeSummary, setScopeSummary] = useState('');
-  const [startDate, setStartDate] = useState<Date | null>(null);
-  const [endDate, setEndDate] = useState<Date | null>(null);
-  const [paymentType, setPaymentType] = useState<PaymentType>('hourly');
-  const [currency, setCurrency] = useState('USD');
-  const [hourlyRate, setHourlyRate] = useState<number>(100);
-  const [weeklyHourCap, setWeeklyHourCap] = useState<number | ''>('');
-  const [fixedAmount, setFixedAmount] = useState<number>(5000);
-  const [milestoneSummary, setMilestoneSummary] = useState('');
-  const [paymentSchedule, setPaymentSchedule] = useState('Net 15 on invoice');
-  const [nda, setNda] = useState(true);
-  const [ipTransfer, setIpTransfer] = useState(true);
-  const [governingLaw, setGoverningLaw] = useState('Delaware, USA');
-  const [revisionRounds, setRevisionRounds] = useState<number>(2);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [contract, setContract] = useState<string>('');
-  useEffect(() => {;
-    if (!router.isReady) return,;
-    const { talent, project } = router.query as { talent?: string, project?: string },;
-    if (talent && !talentName) setTalentName(decodeURIComponent(talent)),;
-    if (project && !projectName) setProjectName(decodeURIComponent(project));
-  }, [router.isReady, router.query, talentName, projectName]),;
-  const canSubmit = useMemo(() => {;
-    return (;
-      talentName.trim().length > 0 &&;
-      projectName.trim().length > 0 &&;
-      scopeSummary.trim().length > 0 &&;
-      !!startDate &&;
-      !!endDate &&;
-      (paymentType === 'hourly' ? hourlyRate > 0 : fixedAmount > 0);
-    );
-  }, [talentName, projectName, scopeSummary, startDate, endDate, paymentType, hourlyRate, fixedAmount]),;
-  async function submitForm(event: React.FormEvent) {;
-    event.preventDefault(),;
-    if (!canSubmit) return,;
-    setLoading(true);
-    setError(null);
-    setContract('');
-    try {
-      const body = {;
-        talentName;
-        projectName;
-        scopeSummary;
-        startDate: startDate?.toISOString().slice(0, 10);
-        endDate: endDate?.toISOString().slice(0, 10);
-        payment:;
-          paymentType === 'hourly';
-            ? {;
-                type: 'hourly',;
-                currency,;
-                hourlyRate,;
-                weeklyHourCap: typeof weeklyHourCap === 'number' ? weeklyHourCap : undefined,;
-                paymentSchedule  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-=======
 import React, { useEffect, useMemo, useState } from 'react',
 import DatePicker from 'react-datepicker';
 import { useRouter } from 'next/router';
 type PaymentType = any;
     URL.revokeObjectURL(url)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
   return (
     <div className="max-w-5xl mx-auto">
@@ -420,30 +253,6 @@ if (return, ) {
             </div>
           </div>
           <article className="prose dark:prose-invert max-w-none whitespace-pre-wrap bg-white dark:bg-black p-6 rounded-lg border border-gray-200 dark:border-neutral-800">
-<<<<<<< HEAD
-
-  );
-};
-
-            {contract  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </article>;
-        </div>;
-      )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    </div>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-=======
             {contract}
           </article>
         </div>
@@ -451,4 +260,4 @@ if (return, ) {
     </div>
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

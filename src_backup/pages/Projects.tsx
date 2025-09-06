@@ -1,35 +1,12 @@
-<<<<<<< HEAD
-} from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import Link from 'next/link';
-import { Clock, Briefcase } from 'lucide-react';
-} from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
-import Link from 'next/link'
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import React from "react",
 import { useProjects } from "@/hooks/useProjects",
 import { SEO } from "@/components/SEO",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
-import { Badge } from "@/components/ui/badge",
-import Link from "next/link",
-
-
-import { Clock, Briefcase } from 'lucide-react'
-
-import React from 'react'
-import { useProjects } from '@/hooks/useProjects'
-import { SEO } from '@/components/SEO'
-=======
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import {
   Card
   CardContent
@@ -41,13 +18,6 @@ import {
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import Link from 'next/link'
-<<<<<<< HEAD
-
-import { Clock, Briefcase } from 'lucide-react'
-function ProjectsContent() { const { projects, isLoading  } = useProjects()
-function ProjectsContent() {
-
-=======
 import { Clock, Briefcase } from 'lucide-react'
 function ProjectsContent() { const { projects, isLoading  } = useProjects()
 function ProjectsContent() {
@@ -65,56 +35,20 @@ function ProjectsContent() {
             All of your current and past projects
           </p>
         </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         {isLoading ? (
         ) : projects.length === 0 ? (
           <p>You don't have any projects yet.</p>
         ) : (
-<<<<<<< HEAD
-          <div className="grid gap-6">
-            {projects.map((project) => (
-
-          <div className="grid gap-6">
-            {projects.map((project) => (
-          <div className="grid gap-6">
-            {projects.map((project) => (
-=======
 <div className='grid gap-6'>
             {projects.map(project => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <Card key={project.id}>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Briefcase className="h-5 w-5 text-primary" />
                     <span>{project.job?.title || "Project"}</span>
                   </CardTitle>
-<<<<<<< HEAD
-                  <CardDescription className="flex items-center gap-2 mt-1">
-                    <Badge variant="outline">{project.status}</Badge>
-                    <span className="flex items-center gap-1 text-xs text-muted-foreground">
-                      <Clock className="h-3 w-3" />
-                      Started {new Date(project.start_date).toLocaleDateString()}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                    {project.job?.description || "Project details"}
-                  </p>
-                </CardContent>
-                <CardFooter>
-                  <Button asChild variant="outline" className="w-full">
-            ))}
-          </div>
-        )}
-      </main>;
-    </>;
-  );
-}
-;
-export default function Projects() {;
-  return <ProjectsContent />;
-};
-}
-=======
                   <CardDescription className='flex items-center gap-2 mt-1'>
                     <Badge variant='outline'>{project.status}</Badge>
                     <span className='flex items-center gap-1 text-xs text-muted-foreground'>
@@ -143,4 +77,4 @@ export default function Projects() {;
   );
 export default function Projects() {
   return <ProjectsContent />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

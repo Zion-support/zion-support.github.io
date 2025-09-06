@@ -1,39 +1,21 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
 export interface EmergingTechInnovationService {
-=======
-<<<<<<< HEAD
-export interface EmergingTechInnovationService {
+
 
 export interface EmergingTechInnovationService {;
-=======
+ursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-export interface EmergingTechInnovationService {
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-
-<<<<<<< HEAD
-=======
 export interface EmergingTechInnovationService {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-<<<<<<< HEAD
-export interface EmergingTechInnovationService {
 
-=======
-=======
-export interface EmergingTechInnovationService {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
 import { ServiceVariant } from '../types/service-variants';
 export interface EmergingTechInnovation {
 export interface EmergingTechInnovationService {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   id: string;
   name: string;
   tagline: string;
@@ -64,11 +46,6 @@ export interface EmergingTechInnovationService {
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     website: string;
   }
 
@@ -76,25 +53,19 @@ export interface EmergingTechInnovationService {
   implementation_details: string;
   launch_date: string;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     website: string
   },
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   customers: number;
   rating: number;
   reviews: number;
   benefits: string[];
   capabilities: string[];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
   market_advantage: string;
 ;
@@ -104,8 +75,8 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com', }  mobile: '+1 302 464 0950';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
@@ -117,16 +88,11 @@ const contact = {
   email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   marketAdvantage: string
 }
 
 const contact = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     tagline:
       'Next-generation quantum internet infrastructure for unbreakable communication'
     price: '$6,999'
@@ -582,12 +548,7 @@ const contact = null;
       'Only quantum-powered cybersecurity platform with proven AI integration',
   },
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
-=======
 export interface EmergingTechInnovation {
   id: string, name: string,
   tagline: string, price: string,
@@ -616,8 +577,8 @@ export interface EmergingTechInnovation {
 const contact = {
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
 
       'Only quantum-powered cybersecurity platform with proven AI integration',
   },;
@@ -1097,25 +1058,15 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
 
     ];
     market_advantage: 'Only quantum - powered cybersecurity platform with proven AI integration';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
 
       'Only quantum-powered cybersecurity platform with proven AI integration',
   },;
 ];      'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting'
     ];
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechInnovation {;
   id: string,;
@@ -1583,21 +1534,16 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration';
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
   }
 ];
 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechInnovation {;
   id: string,;
@@ -2063,44 +2009,12 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
       'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting';
     ];
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration';
-<<<<<<< HEAD
+
+
   }
 ];
-    benefits: [;
-      '90% faster threat detection',
-      '70% reduction in false positives',
-      'Quantum advantage',
-      'AI - driven intelligence',
-      '24 / 7 monitoring',
-    ],
-    capabilities: [;
-      'Quantum threat detection',
-      'AI behavioral analysis',
-      'Autonomous response',
-      'Quantum encryption',
-      'Threat hunting',
-    ],
-    market_advantage:;
-      'Only quantum - powered cybersecurity platform with proven AI integration',
-  },
-];      'Quantum threat detectionAI behavioral analysis_autonomous response_quantum encryption_threat hunting';
-    ];
-    market_advantage: 'Only quantum - powered cybersecurity platform with proven AI integration';
-  }
-];
-;
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  }
-];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+origin/cursor/automate-test-improve-and-merge-code-2533

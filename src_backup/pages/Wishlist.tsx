@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-=======
 import { useFavorites  } from '@/hooks/useFavorites';
 import { X } from 'lucide-react'
 import { MARKETPLACE_LISTINGS  } from '@/data/marketplaceData';
@@ -16,7 +10,7 @@ import { toast  } from '@/hooks/use-toast';
 import { useAuth } from '@/hooks/useAuth';
 import { useRouter } from 'next/router', // Changed from useNavigate
 import { useEffect } from 'react', // Added useEffect
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
@@ -142,16 +136,9 @@ export default function WishlistPage() {;
           })}
         </div>;
       )}
-<<<<<<< HEAD
-    </div>;
-  );
 }
-;
-=======
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-=======
+
+
     </div>
   );
 
@@ -177,4 +164,4 @@ export default function WishlistPage() {;
 }</div>) ;
 }</div>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,48 +1,9 @@
 import { ApiDocsSpec } from './types';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  ]
-}
-export default v1;
-
-  ];
-
-<<<<<<< HEAD
-=======
-=======
 
 const baseUrl = 'https://api && api.zion.os';
-=======
-<<<<<<< HEAD
-=======
 
 
 const v1: ApiDocsSpec = {
-<<<<<<< HEAD
-  product: 'Zion OS'
-  versions: ['v1']
-  defaultVersion: 'v1'
-  lastUpdatedIso: new Date().toISOString()
-  sections: [
-const base_url = 'https://api.zion.os';
-;
-const v1: ApiDocsSpec = {
-  product: 'Zion OS',
-  versions: ['v1'],
-  default_version: 'v1',
-  lastUpdatedIso: new Date ().toISOString (),
-  sections: [;
-    {
-
-      id: 'auth',
-      title: 'Auth (JWT, OAuth, Wallet)',
-
-          ],
-          versions: ['v1']
-=======
   openapi: '3.0.0',
   info: {
     title: 'Zion OS API',
@@ -63,13 +24,8 @@ const v1: ApiDocsSpec = {
               }
             }
           }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-        }
-<<<<<<< HEAD
-      ]
-    },
 
-=======
+        }
 id: 'auth-login-jwt',
           title: 'JWT Login',
           description: 'Obtain a JWT by providing credentials.',
@@ -128,7 +84,7 @@ id: 'auth-login-jwt',
       ],
     },
     {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       id: 'talent'
       title: 'Talent Profiles'
 
@@ -144,19 +100,6 @@ id: 'auth-login-jwt',
           params: { talentId: 'The UUID of the talent' }
           responseBodySchema: { type: 'object', properties: { id: { type: 'string' }, name: { type: 'string' }, skills: { type: 'array', items: { type: 'string' } } } }
           samples: [
-<<<<<<< HEAD
-
-            { language: 'curl', code: `curl -X POST ${baseUrl}/v1/messages -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{"to":"USER123","body":"Hello"}'` },
-            { language: 'javascript', code: `await fetch('${baseUrl}/v1/messages', { method: 'POST', headers: { Authorization: 'Bearer <token>', 'Content-Type': 'application/json' }, body: JSON && JSON.stringify({ to: 'USER123', body: 'Hello' }) }).then(r => r && r.json())` },
-            { language: 'python', code: `import requests\nrequests && nrequests.post('${baseUrl}/v1/messages', json={'to':'USER123','body':'Hello'}, headers={'Authorization':'Bearer <token>'}).json()` }
-
-          ],
-          versions: ['v1']
-        }
-      ]
-    },
-
-=======
             {
               language: 'curl',
               code: `curl '${baseUrl}/v1/talent/123' -H 'Authorization: Bearer <token>'`,
@@ -175,7 +118,7 @@ id: 'auth-login-jwt',
       ],
     },
     {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       id: 'jobs'
       title: 'Job Listings'
 
@@ -191,10 +134,6 @@ id: 'auth-login-jwt',
           query: { q: 'Search text', status: 'open|closed' }
           responseBodySchema: { type: 'object', properties: { items: { type: 'array', items: { type: 'object' } }, nextPage: { type: 'string' } } }
           samples: [
-<<<<<<< HEAD
-
-
-=======
 
 
 const baseUrl = 'https://api.zion.os';
@@ -224,9 +163,9 @@ const v1: ApiDocsSpec = {
             }
           }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
         }
       ];
     }
@@ -236,28 +175,14 @@ const v1: ApiDocsSpec = {
             { language: 'python', code: `import requests\nrequests ;
 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   ];
 
   }
-<<<<<<< HEAD
-=======
-=======
-=======
-=======
 
-  ];
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
-  }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 };
 export default v1;
   ];
@@ -265,15 +190,10 @@ export default v1;
 ;
 export default v1;
 ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
             {
               language: 'curl',
               code: `curl '${baseUrl}/v1/jobs?q=engineer&status=open' -H 'Authorization: Bearer <token>'`,
@@ -483,4 +403,4 @@ export default v1;
 };
 
 export default v1;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -96,13 +96,9 @@ import { Send } from 'lucide-react', // Added Send icon
 import { toast } from "sonner",
 import { logErrorToProduction } from '@/utils/productionLogger',
 interface WhitepaperSection {
-<<<<<<< HEAD
-  id: string,
-  title: string,
-=======
   id: string;
   title: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   content: string
 import React, { useState, useEffect, useCallback } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -132,13 +128,6 @@ import { Trash2, Download, Share2 } from 'lucide-react';
       // A better approach for very long content is to paginate in jsPDF directly.;
       // For now, we capture what's visible or rely on html2canvas's capabilities with scroll.;
 
-<<<<<<< HEAD
-      pdf.save(`${slugify(tokenName || 'whitepaper')}_whitepaper.pdf`)
-
-    } catch (e: any) {
-      logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error downloading PDF' }),
-      setError("Failed to download PDF file. " + e.message)
-=======
 interface DistributionItem {
   id: string;
   name: string;
@@ -256,7 +245,7 @@ if (section.title.toLowerCase().includes('token distribution')) {
         { message: 'Error downloading Markdown' }
       )
       setError('Failed to download Markdown file. ' + e.message)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     } finally {
       setIsDownloading(false)
     }
@@ -784,9 +773,6 @@ if (section.title.toLowerCase().includes('token distribution')) {
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-export default WhitepaperGeneratorPage;
-=======
 export default WhitepaperGeneratorPage
 '"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

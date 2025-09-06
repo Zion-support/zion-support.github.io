@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react';
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from 'lucide-react'
@@ -34,7 +31,7 @@ import { Notification, NotificationType } from '@/context/notifications'
 }) => {
       className={cn(
                   onMarkAsRead(notification.id); import React from 'react'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -113,7 +110,6 @@ export const getTypeIcon = (type: NotificationType) => {;
     case 'order_status':;
       return <span className="text-orange-500">📦</span>,;
     default:;
-=======
 import React from 'react';
 import { Check, Trash2, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -142,7 +138,7 @@ export const getTypeIcon = (type: NotificationType) => {
     case 'project_update':
       return <span className="text-orange-500">📦</span>;
     default:
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
       return <span className="text-gray-500">📣</span>;
   }
 }
@@ -164,82 +160,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
     if (notification.action_url) {
       router.push(notification.action_url), // Changed to router.push
     }
-<<<<<<< HEAD
-  return (<div
-      className = {cn(
-        'p-3 border-b border-zion-blue-light relative group'
-        !notification.read ? 'bg-zion-blue-dark/30' : ''),}
-  },;
-  return (;
-    <div;
-      className={cn(;
-        'p-3 border-b border-zion-blue-light relative group',;
-        !notification.read ? 'bg-zion-blue-dark/30' : '')}
-
-
-
-    >
-      <div className="flex items-start gap-2">
-        <div className="text-xl">{getTypeIcon(notification.type)}</div>
-        <div className="flex-1">
-          <div className="flex justify-between items-center mb-1">
-            <h4 className="font-medium text-white">
-            </h4>
-            {!notification.read && (
-              <Badge className="bg-zion-cyan text-xs">New</Badge>
-            )}
-          </div>
-          <p className="text-sm text-zion-slate-light">
-          </p>
-          <div className="flex justify-between items-center mt-1">
-            <p className="text-xs text-zion-slate">
-              {notification.created_at
-                ? formatDistanceToNow(new Date(notification.created_at), {
-                    addSuffix: true})
-                : 'Just now'}
-            </p>
-            {notification.action_url && notification.action_text && (
-              <Button
-                variant="link"
-                size="sm"
-                className="text-zion-cyan p-0 h-auto"
-                {notification.action_text}
-                <ChevronRight className="h-3 w-3 ml-1" />
-              </Button>
-            )}
-          </div>
-        </div>
-      </div>
-      {/* Action buttons that appear on hover */}
-      <div className="absolute right-2 top-2 opacity-0 group-hover: opacity-100 transition-opacity flex gap-1">;
-        <TooltipProvider>;
-          <Tooltip>;
-            <TooltipTrigger asChild>;
-              <Button
-                variant="ghost"
-                size="icon"
-                className="h-6 w-6"
-
-
-                onClick={(e) => {
-                onClick={(e) => {
-
-
-                  e.stopPropagation(),
-                  onMarkAsRead(notification.id)
-                }}
-                aria-label="Mark as read"
-              >
-                <Check className="h-3.5 w-3.5 text-green-400" />
-              </Button>
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Mark as read</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-        <TooltipProvider>
-=======
   };
 
   const handleMarkAsRead = (e: React.MouseEvent) => {
@@ -318,7 +238,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
             </Tooltip>
           )}
           
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
           <Tooltip>
             <TooltipTrigger asChild>
               <Button
@@ -334,28 +254,12 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
               <p>Dismiss</p>
             </TooltipContent>
           </Tooltip>
-<<<<<<< HEAD
-        </TooltipProvider>
-
-
-
-
-    </div>);
-},
-;
-
-      </div>
-    </div>
-<<<<<<< HEAD
-  )
-=======
         </div>
       </div>
     </TooltipProvider>
   );
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
   );
 };
 interface NotificationItemProps {;
@@ -377,4 +281,4 @@ onDismiss ;
 }</div> </div> </div> h-3.5 w-3.5 text-green-400"/> </Button> </TooltipTrigger> <TooltipContent> <p>Mark as read</p> </TooltipContent> </Tooltip> </TooltipProvider> <TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button > <Trash2 className=" h-3.5 w-3.5 text-red-400" /> </Button> </TooltipTrigger> <TooltipContent> <p>Dismiss</p> </TooltipContent> </Tooltip> </TooltipProvider> </div> </div>) ;
 };
 '"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

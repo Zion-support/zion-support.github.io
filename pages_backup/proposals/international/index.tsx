@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-
-      const res = await fetch('/api/proposals/list');
-      const data = await res.json();
-      setItems(data.proposals || []);
-
-      setLoading(false)
-    })()
-  }, [])
-  async function updateStatus(id: string, status: string) {
-    await fetch('/api/proposals/status', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id, status }) })
-    const res = await fetch('/api/proposals/list')
-    const data = await res.json()
-    setItems(data.proposals |[])
-
-=======
 import React, { useEffect, useState } from 'react';
 export default function InternationalProposals() {
       const res = await fetch('/api/proposals/list');
@@ -109,7 +93,7 @@ setLoading(false);
       )}
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
     await fetch('/api/proposals/status', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id, status }) }),
     const res = await fetch('/api/proposals/list'),
@@ -175,32 +159,6 @@ export default function InternationalProposals(req, res) {
         </div>
       )}
     </div>
-<<<<<<< HEAD
-  );
-};
-          ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          {!items.length && <div className="opacity-70">No proposals yet.</div>  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        </div>
-      )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    </div>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-=======
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,35 +1,25 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 interface ReplyFormProps {;
   onSubmit: (content: string) => Promise<void>;
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 import { useState } from 'react'
 import { useForm, ControllerRenderProps } from 'react-hook-form'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
-<<<<<<< HEAD
-=======
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
 import { useState } from 'react';
 import { useForm, ControllerRenderProps } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
   FormMessage,;
 } from '@/components/ui/form';
 import { Card, CardContent } from '@/components/ui/card';
@@ -46,14 +36,12 @@ import {
   FormMessage
 } from "@/components/ui/form",
 import { Card, CardContent } from "@/components/ui/card";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>;
   parentId?: string
 interface ReplyFormValues {
   content: string
-<<<<<<< HEAD
-=======
 
 
 
@@ -61,26 +49,19 @@ interface ReplyFormValues {
 interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>;
   parentId?: string
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 
       content: '',;
     },;
   });
   const handleSubmit = async (values: ReplyFormValues) => {;
 
-<<<<<<< HEAD
-interface ReplyFormProps {
-  onSubmit: (content: string) => Promise<void>;
-  parentId?: string
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     setIsSubmitting(true);    try {
       await onSubmit(values.content)
       form.reset()
     } finally {
       setIsSubmitting(false)
-<<<<<<< HEAD
-=======
   parentId?: string;
 interface ReplyFormValues {;
   content: string;
@@ -155,17 +136,15 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
 
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   return (
     <Card>
       <CardContent className="pt-6">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(handleSubmit)}>
             <FormField
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
               control={form.control}
               name="content"
               render={({ field }: { field: ControllerRenderProps<ReplyFormValues "content"> }) => (
@@ -224,28 +203,10 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
         </Form>;
       </CardContent>;
     </Card>);
-<<<<<<< HEAD
-              )}
-            />
-            <div className="mt-4 flex justify-end">
-              <Button type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Post Reply"}
-              </Button>
-            </div>
-          </form>
-        </Form>
-      </CardContent>
-    </Card>
-  )
-}
 }
 export default ReplyForm;
-=======
-}
-export default ReplyForm;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
   );
 };
 export default ReplyForm;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
