@@ -30,12 +30,12 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
     if (!user) {
       toast.error("You must be logged in to apply"),
       router.push(`/login?returnTo=${encodeURIComponent(`/jobs/${job.id}`)}`)
-      return
+      return;
     }
     
     if (!coverLetter.trim()) {
       setError("Please provide a cover letter")
-      return
+      return;
     }
     
     setIsSubmitting(true)
@@ -189,7 +189,6 @@ handleSubmit
 }return null
 }) 
 }</SelectContent> </Select> > Create Resume </Button> </div>) "
-}</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application") 
-}</Button> </div> </form>) 
+}</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application") ;
+}</Button> </div> </form>) ;
 }"};
-;

@@ -7,10 +7,10 @@ import Link from 'next/link'
 export default function SearchFeature() {
   const schema = {
     '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: 'Advanced Search',
+    '@type': 'WebPage',;
+    name: 'Advanced Search',;
     description:;
-      'Quickly locate products, services and talent using intelligent search filters.',;
+      'Quickly locate products, services and talent using intelligent search filters.';
     url: 'https://app.ziontechgroup.com/features/search',  };    "@context": "https://schema.org"
     "@type": "WebPage"
     "name": "Advanced Search",

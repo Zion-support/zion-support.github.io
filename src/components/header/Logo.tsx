@@ -43,9 +43,8 @@ export function Logo({ customLogo }: LogoProps) {
         className='h-8'
         width={32}
         height={32}
-      />
-    </Link>
+      />;
+    </Link>;
   );
 };
-;
 }

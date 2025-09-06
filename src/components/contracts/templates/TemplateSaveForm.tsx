@@ -43,7 +43,7 @@ export function TemplateSaveForm({
     },
   })
   const onSubmit = async (values: FormValues) => {    if (!currentValues && !editTemplate) {
-      return
+      return;
     }
 
     setSaving(true)
@@ -139,7 +139,6 @@ try {
 }/> <FormField >Set as default template</FormLabel> <FormControl> <Switch /> </FormControl> <FormMessage /> </FormItem>) "
 }/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (`$ {"
   editTemplate ? "Update" : "Save" 
-}Template`) 
-}</Button> </div> </form> </Form>) 
+}Template`) ;
+}</Button> </div> </form> </Form>) ;
 }"};
-;

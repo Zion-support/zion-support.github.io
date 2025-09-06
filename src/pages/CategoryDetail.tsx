@@ -70,14 +70,14 @@ function generateInnovationListing(index: number): ProductListing {
     }
     'developer-tools': {
       title: "Developer Tools",
-      description: "AI-powered coding assistance and automation",
+      description: "AI-powered coding assistance and automation",;
       icon: <Code className="w-6 h-6" />;
     };          icon: <Bot className="w-6 h-6" />},
 
         setCategory(currentCategory)
         innovationCounterRef.current = 0
     : 'Category | Zion Marketplace'
-  const seoDescription =
+  const seoDescription = null;
     category.description || 'Explore listings in this category.'
   return (
     <>

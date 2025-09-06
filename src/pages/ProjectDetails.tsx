@@ -6,7 +6,7 @@ import { useAuth } from '@/hooks/useAuth'
 import { useProjects } from '@/hooks/useProjects'
 import { SEO } from '@/components/SEO'
 import { ProtectedRoute } from '@/components/ProtectedRoute'
-import { Project, ProjectStatus } from '@/types/projects'
+import { Project, ProjectStatus } from '@/types/projects';
 import { Button } from '@/components/ui/button';
 import { logErrorToProduction } from '@/utils/productionLogger'; import Link from 'next/link'
 import { format } from "date-fns"
@@ -68,7 +68,7 @@ function ProjectDetailsContent() {
   // Load project data
   useEffect((,) => {
     async function loadProject() {
-      if (!projectId) return
+      if (!projectId) return;
       setIsLoading(true)
       const projectData = await getProjectById(projectId)
       if (projectData) {
@@ -113,7 +113,7 @@ function ProjectDetailsContent() {
     }
   }
   const handleSubmitNote = async () => {
-    if (!newNote.trim() || !project || !user) return
+    if (!newNote.trim() || !project || !user) return;
     setIsSubmittingNote(true)
     try {
       const { data, error } = await supabase
@@ -144,7 +144,7 @@ function ProjectDetailsContent() {
     }
   }
   const handleStatusChange = async (newStatus: ProjectStatus) => {
-    if (!project) return
+    if (!project) return;
     const success = await updateProjectStatus(project.id, newStatus)
     if (success) {
       setProject({
@@ -711,16 +711,15 @@ toast ({
   setIsSubmittingNote (false) 
 }
 const handleStatusChange = async (newStatus: ProjectStatus) => {
-  if (!project) return
+  if (!project) return;
 const success = await updateProjectStatus (project.id, newStatus)
 if (success) {
   setProject ({
   ...project
 status: newStatus 
 })
-//If offer was accepted, show a special toast if (newStatus === "offer accepted") {
-  toast ({;
-};"
+//If offer was accepted, show a special toast if (newStatus === "offer accepted") {;
+  toast ({};"
 case "offer accepted": return <Badge className="bg-green-100 text-green-800">Offer Accepted</Badge>;"
 case "changes requested": return <Badge variant="secondary">Changes Requested</Badge>;"
 case "in progress": return <Badge className="bg-blue-100 text-blue-800">In Progress</Badge>;"
@@ -832,8 +831,7 @@ const ProjectDetails = () => {
               <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
                 Contact Us
               </Link>
-            </div>
-    </>
+            </div>;
+    </>;
   );
 };
-;

@@ -60,8 +60,8 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
       setSelectedCategory('All Categories')
       setPosts([...initialPosts])
     }
-  }, [router.asPath, initialPosts])
-  // useEffect(() => {
+  }, [router.asPath, initialPosts]);
+  // useEffect(() => {;
   //   const interval = setInterval(() => {;
   //     setPosts(prev => [...prev, generateRandomBlogPost()]);
   //   }, 120000); // every 2 minutes
@@ -86,7 +86,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   // Filter blog posts based on selected category only.
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
-    const matchesCategory =
+    const matchesCategory = null;
       selectedCategory === 'All Categories' ||
       post.category === selectedCategory
     return matchesCategory
@@ -407,8 +407,8 @@ export default function Blog() {
       excerpt: &quot,Understanding the latest quantum computing advances and their practical applications in solving complex business problems.&quot,
       author: &quot,Prof. Michael Rodriguez&quot,
       date: &quot,2025-01-12&quot,
-      readTime: &quot,12 min read&quot,
-      category: &quot,Quantum Computing&quot,;
+      readTime: &quot,12 min read&quot,;
+      category: &quot,Quantum Computing&quot;
       tags: [&quot,Quantum&quot, &quot;Computing&quot, &quot;Innovation&quot],
       image: &quot,/api/placeholder/600/400&quot,"
       title: "Quantum Computing Breakthrough: What It Means for Your Business", excerpt: "Understanding the latest quantum computing advances and their practical applications in solving complex business problems.","

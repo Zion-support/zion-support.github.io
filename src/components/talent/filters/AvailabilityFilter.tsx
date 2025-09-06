@@ -85,7 +85,6 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
 }className="flex items-center" > <Checkbox > {
   option.label 
 }</label> </div>) ) 
-}</div>) 
-}</div>) 
+}</div>) ;
+}</div>) ;
 }"};
-;

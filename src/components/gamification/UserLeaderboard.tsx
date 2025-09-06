@@ -53,8 +53,7 @@ export function UserLeaderboard({ entries }: UserLeaderboardProps) {
           ))}
         </div>
       </CardContent>
-    </Card>
-  )
+    </Card>;
+  );
 };
-;
 }

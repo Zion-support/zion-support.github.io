@@ -17,7 +17,7 @@ import { LanguageSelector } from '@/components/header/LanguageSelector'
   HoverCard,
   HoverCardTrigger,
   HoverCardContent,
-} from '@/components/ui/hover-card'
+} from '@/components/ui/hover-card';
 import { MiniCartPreview } from '@/components/cart/MiniCartPreview';
 import { LoginModal } from '@/components/auth/LoginModal'; import { LanguageSelector } from '@/components/header/LanguageSelector'
 import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card'
@@ -33,9 +33,9 @@ interface MainNavigationProps {
   unreadCount?: number
   className?: string
 export function MainNavigation({
-  isAdmin = false,
-  unreadCount = 0,
-  className,;
+  isAdmin = false,;
+  unreadCount = 0,;
+  className;
 }: MainNavigationProps) {;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Add state
   const { user } = useAuth()
@@ -50,7 +50,7 @@ export function MainNavigation({
     if (!isAuthenticated) {
       e.preventDefault()
       setLoginOpen(true)
-      return
+      return;
     }
     setIsMobileMenuOpen(false)
   }
@@ -387,8 +387,8 @@ export default function Page() { [])
                           className={`w-full flex items-center justify-between px-4 py-3 text-left text-sm font-medium rounded-md transition-colors ${isActive(link)
                               ? 'bg-zion-cyan text-white''
                               : 'text-zion-slate-light hover:text-white hover:bg-white/10'`
-}`}
-
+}`};
+;
                           {link.name}'`;
                           <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}  />                        </button>;
                         {activeDropdown === link.key && (;"

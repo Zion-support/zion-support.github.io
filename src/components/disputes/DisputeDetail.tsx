@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 import { useDisputes } from '@/hooks/useDisputes';
 import { logErrorToProduction } from '@/utils/productionLogger'; import { useRouter } from 'next/router'
 import { useDisputes } from "@/hooks/useDisputes"
@@ -57,7 +57,7 @@ export function DisputeDetail() {
   // Check if user is admin (placeholder - implement proper admin check)
   const isAdmin = user?.userType === 'admin'
   useEffect(() => {
-    if (!disputeId) return
+    if (!disputeId) return;
     const loadDisputeData = async () => {
       setIsLoading(true)
       try {
@@ -65,7 +65,7 @@ export function DisputeDetail() {
         if (!disputeData) {
           toast.error('Dispute not found')
           router.push('/dashboard/disputes')
-          return
+          return;
         }
         setDispute(disputeData)
         const messagesData = await getDisputeMessages(disputeId)
@@ -80,7 +80,7 @@ export function DisputeDetail() {
     loadDisputeData()
   }, [disputeId, getDisputeById, getDisputeMessages, router])
   const handleStatusChange = async (status: DisputeStatus) => {
-    if (!disputeId) return
+    if (!disputeId) return;
     const success = await updateDisputeStatus(disputeId, status)
     if (success) {
       // Update the dispute object with the new status
@@ -90,10 +90,10 @@ export function DisputeDetail() {
     }
   }
   const handleResolveDispute = async () => {
-    if (!disputeId) return
+    if (!disputeId) return;
     if (!resolution.summary) {
       toast.error('Please provide a resolution summary')
-      return
+      return;
     }
 
     const success = await resolveDispute(disputeId, {
@@ -113,7 +113,7 @@ export function DisputeDetail() {
     }
   }
   const handleSendMessage = async () => {
-    if (!disputeId || !message.trim()) return
+    if (!disputeId || !message.trim()) return;
     setIsSending(true)
     try {
       const success = await addDisputeMessage(disputeId, message, isAdmin)
@@ -154,8 +154,8 @@ export function DisputeDetail() {
   const getStatusBadgeVariant = (status: DisputeStatus,) => {
     switch (status) {
       case 'open':
-        return 'default'
-      case 'under_review':
+        return 'default';
+      case 'under_review':;
         return 'secondary';
       case 'resolved':;
         return 'outline'; // Changed from "success" to "outline"
@@ -672,7 +672,7 @@ export function DisputeDetail() {
 }, [disputeId, getDisputeById, getDisputeMessages, router])
 }
 const handleResolveDispute = async () => {
-  if (!disputeId) return
+  if (!disputeId) return;
 if (!resolution.summary) {
 }const success = await resolveDispute (disputeId, {
   summary: resolution.summary
@@ -686,7 +686,7 @@ resolved at: new Date () .toISOString ()
 }else {
 }
 const handleSendMessage = async () => {
-  if (!disputeId || !message.trim () ) return
+  if (!disputeId || !message.trim () ) return;
 try {
 }catch (error) {
   logErrorToProduction ('Error sending message:', {

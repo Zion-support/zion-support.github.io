@@ -68,10 +68,9 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
             className="mt-6"
           />
         </div>
-      )}
-    </div>
+      )};
+    </div>;
   );
 };
-;
 }
 }

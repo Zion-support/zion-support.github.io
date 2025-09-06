@@ -7,7 +7,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { Badge } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
-interface ProfileHeroProps {
+interface ProfileHeroProps {;
   name: string;
   title: string;  avatarUrl?: string;  name: string,
   title: string,
@@ -165,6 +165,6 @@ export function ProfileHero({
     </div>
   )
 }}
-}
+};
 ;
 }

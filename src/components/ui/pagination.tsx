@@ -1,5 +1,5 @@
 import * as React from &quot;react&quot;
-import { ChevronLeft, ChevronRight, MoreHorizontal } from 'lucide-react'
+import { ChevronLeft, ChevronRight, MoreHorizontal } from 'lucide-react';
 ;
 import { cn } from &quot;@/lib/utils&quot;
 import { ButtonProps, buttonVariants } from &quot;@/components/ui/button&quot;
@@ -8,7 +8,7 @@ const Pagination = ({ className, ...props }: React.ComponentProps<&quot;nav&quot
   <nav
     role=&quot;navigation&quot;
     aria-label=&quot;pagination&quot;
-    className={cn(&quot;mx-auto flex w-full justify-center&quot;, className)}
+    className={cn(&quot;mx-auto flex w-full justify-center&quot; className)}
     {...props}
   />
 )
@@ -20,7 +20,7 @@ const PaginationContent = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <ul
     ref={ref}
-    className={cn(&quot;flex flex-row items-center gap-1&quot;, className)}
+    className={cn(&quot;flex flex-row items-center gap-1&quot; className)}
     {...props}
 />
 ))
@@ -30,7 +30,7 @@ const PaginationItem = React.forwardRef<
   HTMLLIElement,
   React.ComponentProps<&quot;li&quot;>
 >(({ className, ...props }, ref) => (
-  <li ref={ref} className={cn("&quot;, className)} {...props} />
+  <li ref={ref} className={cn("&quot; className)} {...props} />
 ))
 PaginationItem.displayName = &quot;PaginationItem&quot;
 
@@ -47,14 +47,14 @@ interface PaginationButtonProps
 const PaginationLink = ({
   className,
   isActive,
-  size = &quot;icon&quot;,
+  size = &quot;icon&quot;
   ...props
 }: PaginationLinkProps) => (
   <a
     aria-current={isActive ? &quot;page" : undefined}
     className={cn(
       buttonVariants({
-        variant: isActive ? "outline&quot; : &quot;ghost&quot;,
+        variant: isActive ? "outline&quot; : &quot;ghost&quot;
         size}),
       className
     )}
@@ -71,8 +71,8 @@ const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProp
       aria-label={`Page ${page}`}
       aria-current={isActive ? 'page' : undefined}
       className={cn(;
-        buttonVariants({ variant: 'ghost', size: 'icon' }),;
-        isActive && 'bg-green-600 text-white',;
+        buttonVariants({ variant: 'ghost', size: 'icon' });
+        isActive && 'bg-green-600 text-white';
         className;
       )}
       {...props}
@@ -137,6 +137,5 @@ export {
   PaginationItem,
   PaginationLink,
   PaginationButton,
-  PaginationNext,
+  PaginationNext,;
   PaginationPrevious};
-;

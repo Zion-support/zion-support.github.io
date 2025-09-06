@@ -79,8 +79,7 @@ export default ReputationDisplay
       </div>
     </div>
   )
-}
-export default ReputationDisplay
+};
+export default ReputationDisplay;
 ';
-;
 }

@@ -87,8 +87,8 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
               </div>
             </Link>
 import React, { useState } from 'react'
-import { motion  } from 'framer-motion'
-export default function Page() {"
+import { motion  } from 'framer-motion';
+export default function Page() {";
     { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" },";
     { name: "Innovation", count: 10, color: "from-green-500 to-teal-500" },";
     { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };      scale: 1,
@@ -261,5 +261,5 @@ export default function Page() {"
   )
 export default QuickAccess }
 
-export default QuickAccess
+export default QuickAccess;
 ;

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react'
 import {
   Tooltip
-  TooltipContent
+  TooltipContent;
   TooltipProvider;
   TooltipTrigger} from "@/components/ui/tooltip"; import { useToast } from "@/hooks/use-toast"
 import { useAuth } from "@/hooks/useAuth"
@@ -25,14 +25,13 @@ export function OnChainExport() {
           description: "Please install MetaMask or another Ethereum wallet to use this feature",
           variant: "destructive"
         })
-        return
+        return;
       }
       
       // Request accounts
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
-      const address = accounts[0]
-}
+      const address = accounts[0];
+};
   );
 };
-;
 }

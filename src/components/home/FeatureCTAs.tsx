@@ -27,7 +27,7 @@ import { useTranslation } from 'react-i18next'
 import { cn } from '@/lib/utils'
 interface FeatureCTAsProps {
   className?: string
-  style?: React.CSSProperties
+  style?: React.CSSProperties;
 export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
   const { t } = useTranslation();  const features = [    {
       key: 'ai_talent_matching',

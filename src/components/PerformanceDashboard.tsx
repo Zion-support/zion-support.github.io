@@ -256,8 +256,7 @@ const PerformanceDashboard: React.FC = () => {
     </div>
   )
 }
-export default PerformanceDashboard
-export default PerformanceDashboard, 
-export default PerformanceDashboard,;
-;
+export default PerformanceDashboard;
+export default PerformanceDashboard, ;
+export default PerformanceDashboard;
 }

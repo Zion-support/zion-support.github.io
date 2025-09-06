@@ -172,13 +172,12 @@ export const withSentryConfig = mockSentry.withSentryConfig
 export const SentryWebpackPlugin = mockSentry.SentryWebpackPlugin
 export const Tracing = mockSentry.Tracing
 export const Integrations = mockSentry.Integrations
-export const makeBrowserOfflineTransport =
+export const makeBrowserOfflineTransport = null;
   mockSentry.makeBrowserOfflineTransport
 export const makeFetchTransport = mockSentry.makeFetchTransport
 export const createTransport = mockSentry.createTransport
 export const SDK_VERSION = mockSentry.SDK_VERSION
 export const Severity = mockSentry.Severity
-// Additional exports for compatibility
-export { mockSentry as Sentry }
+// Additional exports for compatibility;
+export { mockSentry as Sentry };
 // All exports are already defined above;
-;

@@ -66,8 +66,8 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
         )}
         
         <div className="text-xs opacity-70 text-right mt-1">
-          {format(new Date(message.created_at), 'h:mm a')}
-        </div>
+          {format(new Date(message.created_at), 'h:mm a')};
+        </div>;
       </div>;
     </div>;
   );  )

@@ -30,7 +30,7 @@ interface Listing {
   createdAt: string
 interface CategoryListingPageProps {
   title: string
-  description: string
+  description: string;
   listings: Listing[];
   sortOptions?: { label: string; value: string }[]
   filterOptions?: { label: string; value: string }[]
@@ -75,7 +75,7 @@ export function CategoryListingPage({
   useEffect(() => {
     let mounted = true
     setIsLoading(true)
-    const timeout = setTimeout(() => {
+    const timeout = setTimeout(() => {;
       if (mounted) setIsLoading(false);
     }, 300); return () => {
       mounted = false
@@ -86,7 +86,7 @@ export function CategoryListingPage({
   const processedListings = initialListings
     .filter(listing => {
       // Apply search filter
-      const matchesSearch =
+      const matchesSearch = null;
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         (listing.tags &&
@@ -95,9 +95,9 @@ export function CategoryListingPage({
           ))
       // Apply category filters
       if (selectedFilter === 'all') return matchesSearch
-      if (selectedFilter === 'high-rating')
+      if (true) {}
         return matchesSearch && (listing.rating || 0) >= 4
-      if (selectedFilter === 'best-match')
+      if (true) {}
         return matchesSearch && (listing.aiScore || 0) >= 85
       return matchesSearch
     })

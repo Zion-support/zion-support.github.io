@@ -11,8 +11,8 @@ import { Textarea } from '@/components/ui/textarea'
   Select,
   SelectContent,
   SelectItem,
-  SelectTrigger,
-  SelectValue,;
+  SelectTrigger,;
+  SelectValue;
 } from '@/components/ui/select'; import { Checkbox } from '@/components/ui/checkbox'
 import { cn } from '@/lib/utils'
 import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react'
@@ -37,7 +37,7 @@ interface ValidatedFormFieldProps {
     | 'select'
     | 'checkbox'
   placeholder?: string
-  description?: string
+  description?: string;
   validation?: ValidationRule;
   options?: { value: string; label: string }[]
   form: any; // React Hook Form control
@@ -73,7 +73,7 @@ export function ValidatedFormField({
   useEffect((,) => {
     if (!fieldValue || !isTouched) {
       setValidationState('idle')
-      return
+      return;
     }
 
     if (debounceTimer) {
@@ -328,6 +328,5 @@ export const commonValidations = {
 }
     }
   }},
-    }
-  }},
-;
+    };
+  }};

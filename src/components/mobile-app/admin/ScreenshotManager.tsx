@@ -23,8 +23,8 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     }
   }
   const addScreenshots = (files: File[],) => {
-    // Filter for image files only
-    const imageFiles = files.filter(file => file.type.startsWith('image/'))
+    // Filter for image files only;
+    const imageFiles = files.filter(file => file.type.startsWith('image/'));
     const maxScreenshots = platform === "ios" ? 10 : 8;
     const availableSlots = maxScreenshots - screenshots.length;
 };    // Limit the number of screenshots
@@ -33,7 +33,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     
     if (availableSlots <= 0) {
       toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`),
-      return
+      return;
     }
     
     const filesToAdd = imageFiles.slice(0, availableSlots),
@@ -146,5 +146,4 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       </CardContent>
     </Card>
   )
-},
-;
+};

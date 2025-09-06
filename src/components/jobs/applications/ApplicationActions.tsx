@@ -99,8 +99,7 @@ export function ApplicationActions({
           Contact
         </Link>
       </Button>
-    </div>
-  )
+    </div>;
+  );
 };
-;
 }

@@ -177,9 +177,8 @@ export function IntegrationCards() {
         icon = {<Users className="h-5 w-5" />,}
         onConnect = {() => logDebug('Connect Teams clicked'),}
       />
-    </div>
-  )
+    </div>;
+  );
 };
-;
 }
 }

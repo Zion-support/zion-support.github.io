@@ -7,7 +7,7 @@ import {
   CardDescription,
 } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react'
+import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';interface InteractiveFeaturesProps {
   className?: string,
@@ -120,7 +120,7 @@ export function InteractiveFeatures({
       </div>
     </section>
   )
-export default InteractiveFeatures
+export default InteractiveFeatures;
 ;
 }
 }

@@ -103,8 +103,8 @@ export function ServiceProviderRegistrationForm() {
   const handleServiceKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
       e.preventDefault()
-      handleAddService() }
-  }
+      handleAddService() };
+  };
   // Handle avatar upload;
   const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {;
     const file = e.target.files?.[0];    if (file) {
@@ -124,7 +124,7 @@ export function ServiceProviderRegistrationForm() {
         description:
           'Please provide at least a detailed bio before generating enhanced content.',
       })
-      return
+      return;
     }
 
     try {
@@ -210,7 +210,7 @@ export function ServiceProviderRegistrationForm() {
         description: 'Please add at least one service to your profile.',
         variant: 'destructive',
       })
-      return
+      return;
     }
 
     setIsSubmitting(true)
@@ -806,7 +806,7 @@ reader.onloadend = () => {
 }
 reader.readAsDataURL (file) 
 }
-//Generate enhanced profile with AI return
+//Generate enhanced profile with AI return;
 }//Call the Supabase Edge Function const {
   data, error 
 }= await supabase.functions.invoke ('service-profile-enhancer', {
@@ -833,7 +833,7 @@ if (newServices.length > 0) {
 //Handle form submission const onSubmit = async (values: ServiceFormValues) => {
   if (serviceTags.length === 0) {
   toast ({
-  return
+  return;
 }setIsSubmitting (true)
 try {
   //For actual implementation with Supabase if (!user?.id) {

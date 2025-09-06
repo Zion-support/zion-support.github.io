@@ -88,8 +88,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
         </div>
       </CardContent>
     </Card>
-  )
-}
-"},
-;
+  );
+};
+"};
 };

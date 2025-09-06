@@ -95,8 +95,7 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
         onClose = {() => setIsHireModalOpen(false),}
         userDetails = {userProfile,}
       />
-    </>
-  )
+    </>;
+  );
 };
-;
 }

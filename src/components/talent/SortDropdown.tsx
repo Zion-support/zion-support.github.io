@@ -80,10 +80,9 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>
-    </DropdownMenu>
-  )
+    </DropdownMenu>;
+  );
 };
-;
 }
 }
 }

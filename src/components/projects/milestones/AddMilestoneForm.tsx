@@ -16,7 +16,7 @@ import {
   FormMessage} from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
-  Popover
+  Popover;
   PopoverContent;
   PopoverTrigger} from '@/components/ui/popover'; import { AIMilestoneGenerator } from './AIMilestoneGenerator'
 import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator'
@@ -48,9 +48,9 @@ export function AddMilestoneForm({
   const form = useForm<MilestoneFormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      title: '',
-      description: '',
-      amount: 0}}),;
+      title: '',;
+      description: '',;
+      amount: 0}});
   const handleSubmit = (values: MilestoneFormValues) => {;
     onSubmit(values);    form.reset()
   }
@@ -65,7 +65,7 @@ export function AddMilestoneForm({
           due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,
           amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
         })
-        return
+        return;
       }
     }
 

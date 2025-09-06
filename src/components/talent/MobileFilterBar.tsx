@@ -36,8 +36,7 @@ export function MobileFilterBar({
           Search by name or skill
         </p>
       </div>
-    </div>
-  )
+    </div>;
+  );
 };
-;
 }

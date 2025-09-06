@@ -136,10 +136,9 @@ export function ReferralLink({
             </Button>
           </div>
         </div>
-      </CardFooter>
-    </Card>
+      </CardFooter>;
+    </Card>;
   );
 };
-;
 }
 }

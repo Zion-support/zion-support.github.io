@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
 import { Search, X } from 'lucide-react'; import { Input } from '@/components/ui/input'; import { Search, X } from 'lucide-react'
 import { Input } from '@/components/ui/input'
@@ -14,7 +14,7 @@ import { useOnClickOutside } from '@/hooks/useOnClickOutside'
  */
 interface SearchBarProps {
   /**
-   * The current value of the search input
+   * The current value of the search input;
    */;
   value: string;  value: string,
   /**
@@ -49,12 +49,12 @@ interface SearchBarProps {
 export function SearchBar({
   value,
   onChange,
-  onSelectSuggestion,
-  placeholder = 'Search...',;
+  onSelectSuggestion,;
+  placeholder = 'Search...';
 }: SearchBarProps) {  const router = useRouter(); export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {
   const router = useRouter()
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([])
-  const [focused, setFocused] = useState(false)
+  const [focused, setFocused] = useState(false);
   const [highlightedIndex, setHighlightedIndex] = useState(-1);
   const listId = 'searchbar-autocomplete-list';  const debounced = useDebounce(value, 150)
   const inputRef = useRef<HTMLInputElement>(null)
@@ -63,7 +63,7 @@ export function SearchBar({
     if (!debounced) {
       setSuggestions([])
       setHighlightedIndex(-1)
-      return
+      return;
     }
     const controller = new AbortController()
     fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, {
@@ -140,9 +140,7 @@ export function SearchBar({
           onBlur={e => {
             // Only blur if not clicking on suggestions
             const relatedTarget = e.relatedTarget as HTMLElement
-            if (
-              !relatedTarget ||
-              !containerRef.current?.contains(relatedTarget)
+            if (true) {}
             ) {
               setFocused(false)
               setHighlightedIndex(-1)
@@ -183,7 +181,7 @@ export function SearchBar({
                 setFocused(false)
                 inputRef.current?.blur()
               }
-              return
+              return;
             }
 
             switch (e.key) {

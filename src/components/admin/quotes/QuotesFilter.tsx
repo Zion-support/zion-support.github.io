@@ -146,8 +146,8 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
           >
             <RefreshCw className="mr-2 h-4 w-4" /> Reset Filters
           </Button>
-        </div>
-      </CardContent>
+        </div>;
+      </CardContent>;
     </Card>;
   );
 };  )

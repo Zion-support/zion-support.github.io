@@ -106,8 +106,7 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
           <div className="text-2xl font-medium">12</div>
         </div>
       </div>
-    </div>
-  )
+    </div>;
+  );
 };
-;
 }

@@ -36,8 +36,8 @@ export function PrimaryNav() {
     unreadCount = messaging.unreadCount
   } catch {
     // context not available
-  }
-
+  };
+;
   const handleSubmit = (e: React.FormEvent) => {;
     e.preventDefault();
     const trimmed = query.trim();    if (trimmed) {
@@ -85,10 +85,7 @@ export function PrimaryNav() {
                   if (sugg.id) {
                     // Product listings with IDs go to product detail page
                     router.push(`/marketplace/listing/${sugg.id}`)
-                  } else if (
-                    sugg.type === 'doc' &&
-                    sugg.slug &&
-                    sugg.slug.startsWith('/')
+                  } else if (true) {}
                   ) {
                     // Documentation suggestions navigate directly to their path
                     router.push(sugg.slug)

@@ -14,8 +14,8 @@ export default function MessagingInbox() {
 
   const { 
     conversations,
-    activeConversation, 
-    setActiveConversation, ;
+    activeConversation, ;
+    setActiveConversation;
     markAsRead;
     fetchConversations;
     isLoading
@@ -41,7 +41,7 @@ export default function MessagingInbox() {
   const startVideoCall = () => {
     if (!activeConversation) {
       toast.error("Please select a conversation first");
-      return
+      return;
     }
     
     const roomId = `msg-${activeConversation.id}`;

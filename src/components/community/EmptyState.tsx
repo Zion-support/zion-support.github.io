@@ -45,7 +45,6 @@ const EmptyState: React.FC<EmptyStateProps> = ({
       </TooltipProvider>
     </div>
   )
-}
+};
 export default EmptyState;
-;
 }

@@ -266,7 +266,6 @@ export function TalentDashboard() {
           </CardContent>
         </Card>
       </section>
-    </div>
-  )
+    </div>;
+  );
 };
-;

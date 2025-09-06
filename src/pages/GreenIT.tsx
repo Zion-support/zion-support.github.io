@@ -612,8 +612,8 @@ export default function GreenIT(...args: unknown[]): unknown {
       ],
       savings: 'Time and resource savings',
       implementation: '6 - 8 weeks',
-      pricing: 'Starting from $8,000'
-}
+      pricing: 'Starting from $8,000';
+};
   ];
 export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
   const [expandedSection, setExpandedSection] = useState<string | null>(null);'
@@ -1072,6 +1072,5 @@ export { GreenIT }
 export { GreenIT }
 export { GreenIT }
 export { GreenIT }
-export { GreenIT, GreenIT }
+export { GreenIT, GreenIT };
 };
-;

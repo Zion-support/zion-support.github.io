@@ -58,7 +58,7 @@ export function TemplateList({
     if (!user) {
       const currentPath = router.asPath,
       router.push(`/auth/login?returnTo=${encodeURIComponent(currentPath)}`)
-      return
+      return;
     }
     await setDefaultTemplate.mutateAsync(templateId)
   }
@@ -180,7 +180,7 @@ const handleSetDefault = async (templateId: string) => {
 router.push (`/auth/login?returnTo=$ {
   encodeURIComponent (currentPath) 
 }`)
-return 
+return;
 }await setDefaultTemplate.mutateAsync (templateId) 
 }
 <CardContent className="p-4"> <div className="flex items-center justify-between"> <div className="space-y-1"> <div className="flex items-center gap-2"> <h3 className="font-medium"> {
@@ -201,7 +201,6 @@ return
 }onOpenChange= {
   () => setTemplateToDelete (null) "
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction className="bg-destructive text-destructive-foreground hover:bg-destructive/90" onClick={
-  handleDeleteConfirm 
-}> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>) 
+  handleDeleteConfirm ;
+}> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>) ;
 }'"};
-;

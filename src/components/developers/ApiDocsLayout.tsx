@@ -21,9 +21,9 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
   const navigationItems = [
    { title: "Getting Started", path: "/developers/docs/getting-started" },
     { title: "API Reference", path: "/developers/docs/reference" },
-    { title: "Webhooks", path: "/developers/docs/webhooks" },
-    { title: "Sample Code", path: "/docs/sample-code" },
-    { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }],;
+    { title: "Webhooks", path: "/developers/docs/webhooks" },;
+    { title: "Sample Code", path: "/docs/sample-code" },;
+    { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }];
   const handleSelectSuggestion = (suggestion: SearchSuggestion) => {;
     const path = getDocsSearchPath(suggestion.text);    if (path) {
       router.push(path)
@@ -94,5 +94,5 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
 }<div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12"> {
   children 
 }</div> </div>) 
-}export default ApiDocsLayout
+}export default ApiDocsLayout;
 "export default ApiDocsLayout;

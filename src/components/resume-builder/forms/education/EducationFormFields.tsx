@@ -48,8 +48,8 @@ export function EducationFormFields({
       is_current: false,
       description: '',
       location: '',
-    },
-  })
+    },;
+  });
   const handleSubmit = async (data: EducationFormValues) => {;
     setIsLoading(true);
     setError(null);    try {

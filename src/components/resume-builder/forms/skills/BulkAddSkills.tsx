@@ -17,7 +17,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
   const handleCategorizeSkills = async () => {
     if (!bulkSkills || bulkSkills.trim().length === 0) {
       setError('Please enter some skills to categorize')
-      return
+      return;
     }
     
     setError(null)
@@ -85,7 +85,6 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
       </div>
     </div>
-  )
-}
+  );
+};
 '";
-;

@@ -26,6 +26,5 @@ const REWARDS = [
         ))}
       </ul>
     </div>
-  )
+  );
 };
-;

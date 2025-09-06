@@ -122,7 +122,7 @@ export class ApiErrorBoundary extends Component<
   render() {
     if (this.state.hasError) {
       // Check if it's a network-related error
-      const isNetworkError =
+      const isNetworkError = null;
         this.state.error?.message?.includes('fetch') ||
         this.state.error?.message?.includes('network') ||
         this.state.error?.message?.includes('timeout') ||
@@ -218,7 +218,6 @@ export const useApiErrorHandler = () => {
   return { handleApiError }
 }
   return { handleApiError }
-}, 
-  return { handleApiError }
-},;
-;
+}, ;
+  return { handleApiError };
+};

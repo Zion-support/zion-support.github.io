@@ -19,7 +19,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
   const [isLoading, setIsLoading] = useState(true)
   useEffect((,) => {
     const fetchJobs = async () => {
-      if (!user) return
+      if (!user) return;
       try {
         let query = supabase
           .from("jobs")
@@ -139,8 +139,8 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
               </Button>
             </div>
           </CardFooter>
-        </Card>
-      ))}
+        </Card>;
+      ))};
     </div>;
   );
 };"

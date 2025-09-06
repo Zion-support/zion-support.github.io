@@ -19,7 +19,7 @@ type ChangelogEntry = {
   }
   const handleRemoveEntry = (id: string) => {
     setEntries(entries.filter(entry => entry.id !== id)),
-  }
+  };
   );
 };  const handleRemoveEntry = (id: string,) => {
     setEntries(entries.filter(entry => entry.id !== id))
@@ -99,5 +99,4 @@ type ChangelogEntry = {
       </CardContent>
     </Card>
   )
-},
-;
+};

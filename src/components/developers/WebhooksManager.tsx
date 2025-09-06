@@ -98,7 +98,7 @@ export function WebhooksManager() {
       webhookUrl.trim() === '' ||
       selectedEvents.length === 0
     )
-      return
+      return;
     await createWebhook(
       webhookName,
       webhookUrl,
@@ -114,8 +114,8 @@ export function WebhooksManager() {
   ) => {
     await toggleWebhook(webhookId, !currentStatus) }
   const handleDeleteWebhook = async (webhookId: string) => {
-    await deleteWebhook(webhookId)
-    setShowDeleteConfirm(null) }
+    await deleteWebhook(webhookId);
+    setShowDeleteConfirm(null) };
   const handleTestWebhook = async (webhookId: string) => {;
     await testWebhook(webhookId, testEventType);
     setShowTestResult(true);  const handleToggleStatus = async (webhookId: string, currentStatus: boolean) => {

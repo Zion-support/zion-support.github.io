@@ -50,7 +50,6 @@ export function TalentCardContent({
         </p>
       </div>
       <TalentCardSkills skills={skills} />
-    </div>
-  )
+    </div>;
+  );
 };
-;

@@ -11,7 +11,7 @@ import { Globe, Server, Clock, MapPin, Check } from 'lucide-react'
 import { CountryPricing } from '@/data/onsiteServicePricing'
 interface CountryServiceCardProps {
   country: CountryPricing
-  onSelect: (country: CountryPricing) => void
+  onSelect: (country: CountryPricing) => void;
   onQuote?: (country: CountryPricing) => void;
   isPopular?: boolean; import Link from 'next/link'
 import { Badge } from "@/components/ui/badge"
@@ -148,9 +148,8 @@ export function CountryServiceCard({
         >
           <Link href='/contact'>Contact Sales</Link>
         </Button>
-      </CardFooter>
-    </Card>
+      </CardFooter>;
+    </Card>;
   );
 };
-;
 }

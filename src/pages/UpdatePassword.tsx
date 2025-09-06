@@ -10,7 +10,7 @@ import {
   Form
   FormControl
   FormField
-  FormItem
+  FormItem;
   FormLabel;
   FormMessage} from "@/components/ui/form"; import { toast } from "@/hooks/use-toast"
 import { cleanupAuthState } from "@/utils/authUtils"
@@ -29,6 +29,5 @@ const updatePasswordSchema = z
 
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>
 }
-  )
+  );
 };
-;

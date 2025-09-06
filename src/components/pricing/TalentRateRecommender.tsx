@@ -35,7 +35,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
   const { user } = useAuth()
   const generateSuggestion = async () => {
     if (skills.length === 0 || yearsExperience <= 0) {
-      return
+      return;
     }
 
     setIsLoading(true)
@@ -107,8 +107,7 @@ return (<div className="space-y-4" > <div> {"
 }rateType= {
   rateType 
 }/>) 
-}</div> </div>) 
-}
-'"},
-;
+}</div> </div>) ;
+};
+'"};
 };

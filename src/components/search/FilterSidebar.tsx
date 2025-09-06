@@ -74,7 +74,7 @@ export function FilterSidebar({
             </div>
           ))}
         </div>
-      </div>
-    </>
+      </div>;
+    </>;
   )};
 '"`;

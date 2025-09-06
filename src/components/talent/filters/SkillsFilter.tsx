@@ -104,11 +104,10 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
             </div>
           ))}
         </div>
-      )}
-    </div>
+      )};
+    </div>;
   );
 };
-;
 }
 }
 }

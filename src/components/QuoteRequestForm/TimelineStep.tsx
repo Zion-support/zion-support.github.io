@@ -123,8 +123,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
           )}
         </div>
       </div>
-    </div>
-  )
+    </div>;
+  );
 };
-;
 }

@@ -27,7 +27,7 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
             : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."
           }
         </p>
-      </CardContent>
-    </Card>
+      </CardContent>;
+    </Card>;
   );
 };

@@ -103,7 +103,7 @@ export {
   DialogTrigger,
   DialogContent,
   DialogHeader,
-  DialogFooter,
-  DialogTitle,
-  DialogDescription,;
+  DialogFooter,;
+  DialogTitle,;
+  DialogDescription;
 };

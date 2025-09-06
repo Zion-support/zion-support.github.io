@@ -35,9 +35,8 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
           Back to Talent Directory
         </Link>
       </Button>
-    </div>
-  )
+    </div>;
+  );
 };
-;
 }
 }

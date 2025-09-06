@@ -72,7 +72,7 @@ export function AIListingGenerator({
         description: 'Please provide at least a title and category.',
         variant: 'destructive',
       })
-      return
+      return;
     }
 
     setIsLoading(true)
@@ -286,8 +286,8 @@ export function AIListingGenerator({
     </div>
   )
   target: {
-  value: string 
-}, field: string) => {
+  value: string ;
+}, field: string) => {;
   switch (field) {;
   case 'title': setTitle (e.target.value);
 break;'
@@ -298,7 +298,7 @@ break;'
 case 'targetAudience': const handleGenerate = async () => {
   if (!title || !category) {
   toast ({
-  return
+  return;
 }setIsLoading (true)
 }catch (error) {'
   logErrorToProduction ('Error generating content:', {

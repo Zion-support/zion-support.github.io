@@ -10,7 +10,7 @@ import {
 } from '@/components/ui/card'
 import { Textarea } from '@/components/ui/textarea'
 import { Check, Pencil } from 'lucide-react'
-interface GeneratedDescriptionDisplayProps {
+interface GeneratedDescriptionDisplayProps {;
   description: string;
   onSave: (editedDescription: string) => void;interface GeneratedDescriptionDisplayProps {
   description: string,
@@ -89,6 +89,5 @@ export function GeneratedDescriptionDisplay({
   handleSave "
 }className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>) 
 }</Card>) 
-}'"
+}'";
 };
-;

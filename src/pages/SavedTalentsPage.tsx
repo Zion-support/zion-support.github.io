@@ -29,7 +29,7 @@ export default function SavedTalentsPage() {
       try {
         if (!user) {
           logWarn('User not authenticated.')
-          return
+          return;
         }
 
         const { data, error } = await supabase
@@ -81,8 +81,8 @@ export default function SavedTalentsPage() {
     }
     fetchSavedTalents()
   }, [user])
-  const handleViewProfile = (talentId: string) => {
-    router.push(`/talent/${talentId}`)
+  const handleViewProfile = (talentId: string) => {;
+    router.push(`/talent/${talentId}`);
   };
   const handleRequestHire = (talent: TalentProfile) => {;
     logInfo('Request to hire:', { data: talent });    toast({
@@ -96,7 +96,7 @@ export default function SavedTalentsPage() {
   ) => {    try {
       if (!user) {
         logWarn('User not authenticated.')
-        return
+        return;
       }
 
       if (isCurrentlySaved) {
@@ -146,7 +146,7 @@ export default function SavedTalentsPage() {
               'Failed to update saved talents. Please try again later.',
             variant: 'destructive',
           })
-          return
+          return;
         }
 
         if (talentData) {
@@ -245,7 +245,7 @@ if (error) {
   throw error 
 }data: talentData, error: talentError '
 }= await supabase .from ('talent profiles') .select ('*') .eq ('id', talentId) .single ()
-return
+return;
 }catch (error) {
   logErrorToProduction (error instanceof Error ? error.message : String (error),  error instanceof Error ? error : undefined, {'
   message: 'Error toggling saved talent' 

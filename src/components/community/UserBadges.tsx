@@ -17,7 +17,7 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
     <div className="flex flex-wrap gap-2">
       {badges.map((badge,) => {
         // Get the correct icon component based on the badge's icon name
-        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy
+        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy;
 export default UserBadges;
 }
 }

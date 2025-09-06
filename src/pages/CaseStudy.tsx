@@ -12,7 +12,7 @@ import {  Breadcrumb,
 } from '@/components/ui/breadcrumb'
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
 import { getBreadcrumbsForPath } from '@/utils/routeUtils'
-export default function CaseStudy() {
+export default function CaseStudy() {;
   const router = useRouter();
   const slug = router.query.slug as string;
   const study = CASE_STUDIES.find(s => s.slug === slug);  const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`);  Breadcrumb,
@@ -122,10 +122,9 @@ export default function CaseStudy() {
           </p>
         </div>
       </div>
-    </>
-  )
+    </>;
+  );
 };
-;
 }
 }
 }

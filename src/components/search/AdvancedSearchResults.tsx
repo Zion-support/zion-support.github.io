@@ -95,7 +95,7 @@ const SearchResultCard: React.FC<{
       router.push(result.url)
     }
   }
-  const cardClass =
+  const cardClass = null;
     viewMode === 'grid'
       ? 'bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer'
       : 'bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer flex gap-4'
@@ -338,8 +338,8 @@ export const AdvancedSearchResults: React.FC = () => {
     maxPrice: 10000,
     minRating: 0,
     sort: 'relevance',
-  })
-  const suggestions = generateSearchSuggestions()
+  });
+  const suggestions = generateSearchSuggestions();
   // Extract available categories from results for filter;
   const availableCategories = useMemo(() => {;
     const categories = new Set<string>();    results.forEach(result => {
@@ -362,7 +362,7 @@ export const AdvancedSearchResults: React.FC = () => {
   ) => {    if (!term.trim()) {
       setResults([])
       setTotalCount(0)
-      return
+      return;
     }
 
     setLoading(true)
@@ -441,7 +441,7 @@ export const AdvancedSearchResults: React.FC = () => {
     }
   }
   // Active filters count
-  const activeFiltersCount =
+  const activeFiltersCount = null;
     filters.types.length +
     (filters.category ? 1 : 0) +
     (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) +
@@ -624,7 +624,7 @@ export default AdvancedSearchResults
 }</div> </div> <li>• Try different keywords</li> <li>• Check your spelling</li> <li>• Use fewer filters</li> <li>• Search for broader terms</li> </ul> </div> </div> </div>) 
 }
 //Main Search Results Page Component setTotalCount (data.totalCount)
-setCurrentPage (data.page)
+setCurrentPage (data.page);
 setHasMore (data.hasMore);
 //Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) + (filters.minRating > 0 ? 1 : 0);"
 }> <SelectTrigger className="w-40" > <SelectValue /> </SelectTrigger> <SelectContent> <SelectItem value="relevance" >Relevance</SelectItem> <SelectItem value="price asc" >Price: Low to High</SelectItem> <SelectItem value="price desc" >Price: High to Low</SelectItem> <SelectItem value="rating" >Highest Rated</SelectItem> </SelectContent> </Select> > <GridIcon className="h-4 w-4" /> </Button> <Button > <List className="h-4 w-4" /> </Button> </div> {
@@ -677,6 +677,5 @@ setHasMore (data.hasMore);
 }
 export default AdvancedSearchResults
 '"
-export default AdvancedSearchResults, 
-export default AdvancedSearchResults,
-;
+export default AdvancedSearchResults, ;
+export default AdvancedSearchResults;

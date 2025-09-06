@@ -29,7 +29,7 @@ const SignupSchema = Yup.object({
     [true],
     'You must accept the terms and conditions'
   ),
-})
+});
 export default function Signup() {;
   const router = useRouter(); // Changed from navigate
   const [loading, setLoading] = useState(false)
@@ -56,9 +56,7 @@ export default function Signup() {;
       logErrorToProduction('Auth service health check failed', { data: err })
       setAuthServiceAvailable(false)
       // Set a more specific error message based on the error type
-      if (
-        err.code === 'NETWORK_ERROR' ||
-        err.message?.includes('Network Error')
+      if (true) {}
       ) {
         setHealthCheckError('Network connection issues detected')
       } else if (err.response?.status === 500) {
@@ -173,7 +171,7 @@ export default function Signup() {;
         })
         const status = err.response?.status
         // Try both 'error' and 'message' fields for compatibility
-        const errorMsg =
+        const errorMsg = null;
           err.response?.data?.error ||
           err.response?.data?.message ||
           'Signup failed. Please try again.'
@@ -610,8 +608,8 @@ export default function Signup() {
       password: ",
       confirmPassword: ",
       termsAccepted: false,,
-},,
-}) as UseFormReturn<SignupFormValues>
+},,;
+}) as UseFormReturn<SignupFormValues>;
   // Form submission handler;
   const onSubmit = async (data: SignupFormValues) => {;
     if (isSubmitting) return; // Prevent multiple submissions
@@ -626,7 +624,7 @@ export default function Signup() {
       if (res.status === 409 && resData?.code === 'EMAIL_EXISTS') {
         form.setError('email', { message: resData.message })
         toast.error('Email already registered – please login.')
-        return
+        return;
 }
 
       // Check for successful response
@@ -646,7 +644,7 @@ export default function Signup() {
           console.error("Error setting session:", sessionError)
           form.setError("root", { message: sessionError.message || "Failed to set session. Please try logging in." })
           toast.error(sessionError.message || "Failed to set session. Please try logging in.")
-          return
+          return;
 }
         // The onAuthStateChange listener in AuthProvider should now handle
         // updating user state and navigating if necessary for other cases.
@@ -659,7 +657,7 @@ export default function Signup() {
         form.setError("root", { message: "Registration complete, but an unexpected issue occurred. Please try logging in." })
         toast.error("Registration complete, but an unexpected issue occurred. Please try logging in manually.")
         // Potentially navigate to login or show a more specific error
-        return
+        return;
 }
 
       // Subscribe user to Mailchimp if opted in (only if registration is fully complete, not pending verification)
@@ -748,6 +746,5 @@ const Signup = () => {
             </div>
     </>  )
 }
-}}
+}};
 };
-;

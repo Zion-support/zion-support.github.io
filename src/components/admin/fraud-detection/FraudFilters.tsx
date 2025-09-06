@@ -74,5 +74,5 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
   )
 }
 '"},
-
+;
 };

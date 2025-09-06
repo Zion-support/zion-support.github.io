@@ -14,7 +14,7 @@ import {
 import { User, Mail, MapPin, CreditCard } from 'lucide-react'
 import { isProdDomain } from '@/utils/getStripe'
 interface GuestCheckoutModalProps {
-  open: boolean
+  open: boolean;
   onOpenChange: (open: boolean) => void;
   onSubmit: (details: { email: string; address: string }) => void
 export default function GuestCheckoutModal({
@@ -29,7 +29,7 @@ export default function GuestCheckoutModal({
     e.preventDefault()
     if (!email || !address) {
       alert('Please fill in all required fields')
-      return
+      return;
     }
 
     setIsSubmitting(true)
@@ -124,6 +124,5 @@ export default function GuestCheckoutModal({
       </DialogContent>
     </Dialog>
   )
-}
 };
-;
+};

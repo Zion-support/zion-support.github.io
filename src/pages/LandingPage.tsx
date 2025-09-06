@@ -24,8 +24,8 @@ import {
   Search,
   MessageSquare,
   Sparkles,
-  BarChart3,
-  Smartphone,;
+  BarChart3,;
+  Smartphone;
 } from 'lucide-react';
 export default function LandingPage() {;
   const { t } = useTranslation();

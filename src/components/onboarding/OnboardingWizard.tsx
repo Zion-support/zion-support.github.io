@@ -36,8 +36,8 @@ interface OnboardingWizardProps {
 export function OnboardingWizard({
   type,
   onComplete,
-  onSkip,
-  className,
+  onSkip,;
+  className,;
 }: OnboardingWizardProps) {;
   const [currentStep, setCurrentStep] = useState(0);
   const router = useRouter(); // Changed from useNavigate to useRouter
@@ -119,7 +119,7 @@ export function OnboardingWizard({
   // Navigate to the specified URL
   const handleAction = () => {
     const currentStepData = steps[currentStep]
-    if (!currentStepData) return
+    if (!currentStepData) return;
     if (currentStep < steps.length - 1) {
       router.push(currentStepData.action.url); // Changed to router.push
       setCurrentStep(currentStep + 1)

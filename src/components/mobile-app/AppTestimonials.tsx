@@ -105,8 +105,8 @@ export const AppTestimonials: React.FC = () => {
           ))}
         </div>
       </div>
-    </section>
-  )
+    </section>;
+  );
 };
 {";
   name: "Sarah Williams";"
@@ -128,5 +128,5 @@ export const AppTestimonials: React.FC = () => {"
 }
 '"},
 
-  )
+  );
 };

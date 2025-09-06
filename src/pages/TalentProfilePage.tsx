@@ -59,10 +59,10 @@ export default function TalentProfilePage() {
         userType: null, // Default empty string since userDetails doesn't have this property
         profileComplete: false, // Default value since userDetails doesn't have this property
         created_at: new Date().toISOString(), // Default value since userDetails doesn't have this property
-        updated_at: new Date().toISOString(), // Default value since userDetails doesn't have this property
-        role: '', // Default empty string since userDetails doesn't have this property
-        name: '',;
-        points: 0,;
+        updated_at: new Date().toISOString(), // Default value since userDetails doesn't have this property;
+        role: '', // Default empty string since userDetails doesn't have this property;
+        name: '';
+        points: 0;
       };  const userProfile: UserProfile = user ? {
     id: user.id || '',
     displayName: user.displayName || '',
@@ -112,10 +112,10 @@ export default function TalentProfilePage() {
         variant: 'default',
       })
       router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`)
-      return
+      return;
     }
     setIsHireModalOpen(true) };      router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`)
-      return
+      return;
     }
     setIsHireModalOpen(true)
   }
@@ -126,7 +126,7 @@ export default function TalentProfilePage() {
         description: 'Please sign in to message this talent.',
         variant: 'default',
       })
-      return
+      return;
     }
     setIsMessageModalOpen(true)
   }
@@ -184,13 +184,13 @@ export default function TalentProfilePage() {
     </>
   )
 }, [error])
-return
+return;
 }setIsHireModalOpen (true) 
 }
 const handleMessageTalent = () => {
   if (!isAuthenticated) {
   toast ({
-  return
+  return;
 }setIsMessageModalOpen (true) 
 }
 return (<> <SEO title= {

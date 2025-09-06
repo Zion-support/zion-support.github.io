@@ -57,8 +57,7 @@ export function BillingHeader() {
   ) <p className="text-muted-foreground">
         Manage your subscription, view invoice history, and update payment methods.
       </p>
-    </div>
-  )
+    </div>;
+  );
 };
-;
 }

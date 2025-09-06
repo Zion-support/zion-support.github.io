@@ -26,7 +26,7 @@ export function ApiPlayground({
   }
   const sendRequest = async () => {
     // For API documentation, use current domain if NEXT_PUBLIC_API_URL is not set
-    const baseUrl =
+    const baseUrl = null;
       process.env.NEXT_PUBLIC_API_URL ||
       (typeof window !== 'undefined' ? window.location.origin : '')
     let url = `${baseUrl}${path}`
@@ -144,8 +144,7 @@ if (contentType?.includes ('application/json') ) {
   /> {
   params.map ( (p) => (<Input key= {
   p.name 
-}</div>) 
-}export default ApiPlayground
+}</div>) ;
+}export default ApiPlayground;
 '";
-;
 }

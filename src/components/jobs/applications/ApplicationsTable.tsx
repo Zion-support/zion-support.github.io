@@ -1,4 +1,4 @@
-import { format } from 'date-fns'
+import { format } from 'date-fns';
 import { JobApplication } from '@/types/jobs';
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed
 import { ClickableBadge } from '@/components/ui/clickable-badge'
@@ -11,7 +11,7 @@ import {  Table,
 } from '@/components/ui/table'
 import { ApplicationActions } from './ApplicationActions'
 import { StatusBadge } from './StatusBadge'
-import { Briefcase, User } from 'lucide-react'
+import { Briefcase, User } from 'lucide-react';
 import { HireConfirmationModal } from '@/components/hiring-tracker/HireConfirmationModal';
 import React, { useState } from 'react'; // Import React and useState
 import { toast } from '@/hooks/use-toast';
@@ -179,7 +179,7 @@ export function ApplicationsTable({
   () => setAvatarError (true) 
 }priority= {
   false "
-}h-4 w-4"/>) 
+}h-4 w-4"/>) ;
 }</AvatarPrimitive>) ;
 };"
 return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</TableHead> <TableHead className="hidden md:table-cell" >Status</TableHead> <TableHead className="hidden lg:table-cell" >Match Score</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {

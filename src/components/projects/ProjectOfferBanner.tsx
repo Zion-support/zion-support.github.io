@@ -14,8 +14,8 @@ export function ProjectOfferBanner() {
   useEffect((,) => {
     if (projects && !isLoading) {
       const offers = projects.filter(p => p.status === 'offer_sent')
-      setPendingOffers(offers)
-    }
+      setPendingOffers(offers);
+    };
   }, [projects, isLoading]);
   const handleDismiss = (projectId: string, e: React.MouseEvent) => {;
     e.stopPropagation();    setDismissed(prev => {

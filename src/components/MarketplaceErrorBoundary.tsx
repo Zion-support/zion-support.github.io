@@ -107,10 +107,9 @@ export function MarketplaceErrorBoundary({
       onError={handleError}
     >
       {children}
-    </ErrorBoundary>
-  )
+    </ErrorBoundary>;
+  );
 } ;
-;
 }
 }
 }

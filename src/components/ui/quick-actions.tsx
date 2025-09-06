@@ -29,8 +29,8 @@ export function QuickActions() {
   if (!isAllowed) {
     return null
   }
-
-  const [isVisible, setIsVisible] = useState(false)
+;
+  const [isVisible, setIsVisible] = useState(false);
   const [isProcessing, setIsProcessing] = useState<string | null>(null);
   const executeAction = async (actionId: string, action: () => void) => {;
     setIsProcessing(actionId);    try {

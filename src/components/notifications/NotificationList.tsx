@@ -64,7 +64,6 @@ export const NotificationList: React.FC<NotificationListProps> = ({
         ))
       )}
     </ScrollArea>
-  )
-}
+  );
+};
 ";
-;

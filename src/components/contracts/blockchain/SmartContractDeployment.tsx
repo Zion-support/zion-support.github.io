@@ -30,7 +30,7 @@ export function SmartContractDeployment({
   const handleDeployContract = async () => {
     if (deploymentOptions.deployToChain && !deploymentOptions.walletAddress) {
       toast.error("Please enter a wallet address for blockchain deployment")
-      return
+      return;
     }
     
     try {
@@ -69,8 +69,8 @@ export function SmartContractDeployment({
         <div className="space-y-4">
           <div className="flex items-center space-x-2">
             <Switch
-              id="deploy-blockchain"
-              aria-label="Deploy to blockchain"
+              id="deploy-blockchain";
+              aria-label="Deploy to blockchain";
               checked={deploymentOptions.deployToChain};
               onCheckedChange={(checked) => setDeploymentOptions({;
                 ...deploymentOptions;                deployToChain: checked

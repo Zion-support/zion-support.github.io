@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 export function SocialShareSection() {
   const { t } = useTranslation()
   // Current URL is not available during SSR, guard with typeof check
-  const shareUrl =
+  const shareUrl = null;
     typeof window !== 'undefined'
       ? encodeURIComponent(window.location.href)
       : ''
@@ -109,8 +109,7 @@ export function SocialShareSection() {
   toast ({
   title: t ('errors.failed to copy')
 })
-}
-}</div> </div> </div> </section>) 
+};
+}</div> </div> </div> </section>) ;
 }'";
 };
-;

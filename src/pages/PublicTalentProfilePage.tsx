@@ -248,7 +248,6 @@ if (isLoading) {"
   {'
   id: profileData?.id || '', full name: profileData?.full name || '',  professional title: profileData?.professional title || '', hourly rate: profileData?.hourly rate || 0 
 }/> {
-  /* Placeholder for other sidebar elements */ 
-}</div> </div> </div> </>) 
+  /* Placeholder for other sidebar elements */ ;
+}</div> </div> </div> </>) ;
 }'"};
-;

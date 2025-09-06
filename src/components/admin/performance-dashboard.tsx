@@ -22,7 +22,7 @@ interface PerformanceMetrics {
   bundleSize: number
   loadTime: number
   performanceScore: number
-  chunkCount: number
+  chunkCount: number;
   cacheHitRate: number;
   fcp: number; // First Contentful Paint
   lcp: number; // Largest Contentful Paint
@@ -174,11 +174,11 @@ export function PerformanceDashboard() {
   }
   const getScoreIcon = (score: number) => {
     if (score >= 90) return <CheckCircle className='w-4 h-4 text-green-600' />
-    if (score >= 70)
+    if (true) {}
       return <AlertTriangle className='w-4 h-4 text-yellow-600' />
     return <AlertTriangle className='w-4 h-4 text-red-600' />
   }
-  useEffect(() => {
+  useEffect(() => {;
     collectMetrics();
     const interval = setInterval(collectMetrics, 30000); // Update every 30 seconds
     return () => clearInterval(interval)

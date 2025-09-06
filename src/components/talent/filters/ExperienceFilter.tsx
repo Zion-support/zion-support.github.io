@@ -68,10 +68,9 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
             className="mt-6"
           />
         </div>
-      )}
-    </div>
+      )};
+    </div>;
   );
 };
-;
 }
 }

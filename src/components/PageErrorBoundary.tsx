@@ -14,7 +14,7 @@ function PageErrorFallback({
   resetErrorBoundary,
   pageName,
 }: PageErrorFallbackProps) {
-  const isAuthConfigError =
+  const isAuthConfigError = null;
     error?.message?.includes('Auth0') ||
     error?.message?.includes('AUTH0') ||
     error?.message?.includes('authentication') ||
@@ -156,7 +156,7 @@ export default function PageErrorBoundary({
       }
     )
   }
-  const FallbackComponent =
+  const FallbackComponent = null;
     fallback ||
     ((props: FallbackProps) => (
       <PageErrorFallback {...props} pageName={pageName} />
@@ -168,8 +168,7 @@ export default function PageErrorBoundary({
       {children}
     </ErrorBoundary>
   )
-} 
-} 
+} ;
+} ;
 };
-;
 }

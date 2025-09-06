@@ -6,8 +6,8 @@ import {
   RefreshCw,
   Wifi,
   WifiOff,
-  Clock,
-  Zap,;
+  Clock,;
+  Zap;
 } from 'lucide-react'; import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -400,10 +400,9 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
       {itemCount && <span>{itemCount} items loaded</span>}
     </div>
   )
-}
-}
 };
-;
+};
+};
 }
 }
 }

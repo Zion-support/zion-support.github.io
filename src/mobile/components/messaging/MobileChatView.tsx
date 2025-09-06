@@ -169,10 +169,9 @@ export function MobileChatView({
             <Send className='h-5 w-5' />
           </Button>
         </div>
-      </div>
-    </div>
+      </div>;
+    </div>;
   );
 };
-;
 }
 }

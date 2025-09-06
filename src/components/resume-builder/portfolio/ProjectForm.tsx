@@ -3,15 +3,15 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
+import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { logErrorToProduction } from '@/utils/productionLogger'; import {
   Form,
   FormControl,
   FormField,
   FormItem,
-  FormLabel,
-  FormMessage,;
+  FormLabel,;
+  FormMessage;
 } from '@/components/ui/form'; import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react'
 import { PortfolioProject } from '@/types/resume'
 import { usePortfolio } from '@/hooks/usePortfolio'
@@ -59,7 +59,7 @@ export function ProjectForm({
     },
   })
   const onSubmit = async (data: ProjectFormValues) => {
-    if (!user) return
+    if (!user) return;
     setIsLoading(true)
     try {
       const projectData: PortfolioProject = {
@@ -214,8 +214,7 @@ export function ProjectForm({
           </Button>
         </div>
       </form>
-    </Form>
-  )
+    </Form>;
+  );
 };
 };
-;

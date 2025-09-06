@@ -175,10 +175,9 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
             </Card>
           ))}
         </div>
-      </section>
-    </div>
+      </section>;
+    </div>;
   );
 };
-;
 }
 }

@@ -34,8 +34,8 @@ export function PartnerReferralLinks() {
     copyReferralLink,
     shareOnSocialMedia,
   } = useReferrals()
-  const [isDialogOpen, setIsDialogOpen] = useState(false)
-  const [selectedCampaign, setSelectedCampaign] = useState<string>('default')
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [selectedCampaign, setSelectedCampaign] = useState<string>('default');
   const [customParam, setCustomParam] = useState<string>('');
   const [generatedLinks, setGeneratedLinks] = useState<;
     { name: string; link: string }[]

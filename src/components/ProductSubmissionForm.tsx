@@ -4,7 +4,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import z from 'zod'
 import { supabase } from '@/integrations/supabase/client'
 import { useAuth } from '@/hooks/useAuth'
-import { useToast } from '@/hooks/use-toast'
+import { useToast } from '@/hooks/use-toast';
 import { useRouter } from 'next/router';
 import Image from 'next/image'; // Import next/image
 import { logErrorToProduction } from '@/utils/productionLogger'
@@ -68,8 +68,8 @@ export function ProductSubmissionForm() {
       video: undefined,
       model: undefined,
       tags: '',
-    },
-  })
+    },;
+  });
   // Handle image upload preview;
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
     const file = e.target.files?.[0];    if (file) {
@@ -112,7 +112,7 @@ export function ProductSubmissionForm() {
         description: 'You must be logged in to publish products',
         variant: 'destructive',
       })
-      return
+      return;
     }
 
     setIsSubmitting(true)
@@ -510,7 +510,7 @@ if (file) {
 //Apply AI-generated content to the form const handleApplyGenerated = (content: any) => {
   if (!user) {
   toast ({
-  return
+  return;
 }setIsSubmitting (true)
 author: {"
   name: user.displayName || "Anonymous Creator"

@@ -106,9 +106,8 @@ export function JobMatchesCard({
             </Button>
           </div>
         )}
-      </CardFooter>
-    </Card>
+      </CardFooter>;
+    </Card>;
   );
 };
-;
 }

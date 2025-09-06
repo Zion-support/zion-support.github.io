@@ -12,12 +12,12 @@ export const SidebarTrigger = React.forwardRef<
   const { toggleSidebar } = useSidebar()
 
   return (
-    <Button
+    <Button;
       ref={ref};
       data-sidebar=&quot;trigger&quot;
       variant=&quot;ghost&quot;
       size=&quot;icon&quot;
-      className={cn(&quot;h-7 w-7&quot;, props.className)}
+      className={cn(&quot;h-7 w-7&quot; props.className)}
       onClick={(event) => {
         props.onClick?.(event)
         toggleSidebar()

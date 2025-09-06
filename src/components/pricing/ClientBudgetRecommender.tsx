@@ -14,7 +14,7 @@ interface ClientBudgetRecommenderProps {
   jobTitle: string
   category: string
   timeline?: string
-  scope?: string
+  scope?: string;
   experienceLevel?: string;
   onSuggestionApplied: (minValue: number, maxValue: number) => void;interface ClientBudgetRecommenderProps {
   jobTitle: string,
@@ -40,14 +40,14 @@ export const ClientBudgetRecommender: React.FC<
   const { user } = useAuth()
   const generateSuggestion = async () => {
     if (!jobTitle || !category) {
-      return
+      return;
     }
 
     setIsLoading(true)
     try {
       const params: ClientBudgetParams = {
-        jobTitle,
-        category,;
+        jobTitle,;
+        category;
       };        jobTitle
         category}
       if (timeline) params.timeline = timeline

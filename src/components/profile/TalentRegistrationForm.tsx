@@ -65,7 +65,7 @@ interface CategorizedSkills {
   programming: string[]
   devops: string[]
   platforms: string[]
-  softSkills: string[]
+  softSkills: string[];
   other: string[];
 });"
 availability: z.enum (["available", "limited", "unavailable"])
@@ -118,7 +118,7 @@ export function TalentRegistrationForm() {
       e.preventDefault()
       handleAddSkill() }
   }
-  // Handle avatar upload
+  // Handle avatar upload;
   const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {;
     const file = e.target.files?.[0];    if (file) {
       const reader = new FileReader()
@@ -137,7 +137,7 @@ export function TalentRegistrationForm() {
         description:
           'Please provide at least a detailed bio before generating enhanced content.',
       })
-      return
+      return;
     }
 
     try {
@@ -215,10 +215,7 @@ export function TalentRegistrationForm() {
       Object.values(allCategorizedSkills).forEach(categorySkills => {
         if (Array.isArray(categorySkills)) {
           categorySkills.forEach(skill => {
-            if (
-              typeof skill === 'string' &&
-              skill &&
-              !skillTags.includes(skill)
+            if (true) {}
             ) {
               newSkills.push(skill)
             }
@@ -281,7 +278,7 @@ export function TalentRegistrationForm() {
         description: 'Please add at least one skill to your profile.',
         variant: 'destructive',
       })
-      return
+      return;
     }
 
     setIsSubmitting(true)
@@ -825,7 +822,7 @@ export function TalentRegistrationForm() {
     </div>
   )
 }
-//Generate enhanced profile with AI return
+//Generate enhanced profile with AI return;
 }//Call the Supabase Edge Function const {
   data, error '
 }= await supabase.functions.invoke ('talent-profile-enhancer', {
@@ -873,7 +870,7 @@ if (Array.isArray (categorySkills) ) {
 //Handle form submission const onSubmit = async (values: TalentFormValues) => {
   if (skillTags.length === 0) {
   toast ({
-  return
+  return;
 }setIsSubmitting (true)
 try {
   //For actual implementation with Supabase if (!user?.id) {

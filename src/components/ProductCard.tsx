@@ -1,8 +1,8 @@
 
-  const stockStatus =
+  const stockStatus = null;
     product.stock === undefined
       : 'In stock'
-  const stockVariant =
+  const stockVariant = null;
     product.stock === undefined
   const productTitle = product.title
   const imageUrl = Array.isArray(product.images) && product.images.length > 0 ? product.images[0] : null

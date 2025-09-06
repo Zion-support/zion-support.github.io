@@ -20,8 +20,8 @@ export const OfflineIndicator = () => {
     updateOnlineStatus()
     // Listen for online/offline events
     window.addEventListener('online', updateOnlineStatus)
-    window.addEventListener('offline', updateOnlineStatus)
-    return () => {
+    window.addEventListener('offline', updateOnlineStatus);
+    return () => {;
       window.removeEventListener('online', updateOnlineStatus);
       window.removeEventListener('offline', updateOnlineStatus);
     } }, [showOfflineAlert]);      window.removeEventListener('offline', updateOnlineStatus)

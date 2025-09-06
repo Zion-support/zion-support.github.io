@@ -1,6 +1,6 @@
 import React from 'react'
 import { cn } from '@/lib/utils'
-import { Badge } from '@/components/ui/badge'
+import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import Image from 'next/image';interface ListingCardProps {
   id?: string,
@@ -37,7 +37,7 @@ export function ListingCard({
 }: ListingCardProps) {
   // Generate a profile ID based on the listing data
   // In a real app, this would be a proper ID from the database
-  const profileId =
+  const profileId = null;
     id || (profileType === 'service' ? 'service-provider-1' : 'talent-1')
       >
       {images && images.length > 0 && images[0] && (
@@ -105,7 +105,6 @@ export function ListingCard({
         )}
       </div>
     </Link>
-  )
-};
-;"}) })"
+  );
+};"}) })"
 }

@@ -4,8 +4,8 @@ import {
   AlertTriangle,
   ExternalLink,
   RefreshCw,
-  Settings,
-  CheckCircle,;
+  Settings,;
+  CheckCircle;
 } from 'lucide-react'; import { Button } from '@/components/ui/button'; import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Alert, AlertDescription } from '@/components/ui/alert'
@@ -307,9 +307,8 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
       </div>
     </div>
   )
-export default AuthConfigurationError }
-
-export default AuthConfigurationError,;
+export default AuthConfigurationError };
 ;
+export default AuthConfigurationError;
 }
 }

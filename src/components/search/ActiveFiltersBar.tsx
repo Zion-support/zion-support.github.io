@@ -156,7 +156,7 @@ interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
         className="text-sm text-zion-slate-light hover: text-zion-cyan transition-colors underline"
       >
         Clear all
-      </button>
-    </div>
+      </button>;
+    </div>;
   )};
 '";

@@ -117,8 +117,7 @@ export function ConversationDetailView() {
             Send
           </Button>
         </form>
-      </div>
-    </div>
+      </div>;
+    </div>;
   );
 };
-;

@@ -13,8 +13,7 @@ export function ApiLogs() {
   const [currentPage, setCurrentPage] = useState(0)
   const hasNextPage = currentPage < totalPages - 1
   const hasPrevPage = currentPage > 0
-  )
-}
   );
 };
-;
+  );
+};

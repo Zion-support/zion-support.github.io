@@ -155,9 +155,8 @@ export function ZapierIntegration() {
             </div>
           </div>
         </CardContent>
-      </Card>
-    </div>
+      </Card>;
+    </div>;
   );
 };
-;
 }

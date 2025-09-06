@@ -75,7 +75,7 @@ export const ReplyCard = ({
           </Button>
         )}
       </CardFooter>
-    </Card>
-  )
+    </Card>;
+  );
 };
 export default ReplyCard;

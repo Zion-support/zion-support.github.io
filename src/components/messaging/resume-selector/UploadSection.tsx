@@ -53,9 +53,8 @@ export function UploadSection({
           </div>
         </div>
       )}
-    </div>
-  )
+    </div>;
+  );
 };
-;
 }
 }

@@ -46,8 +46,7 @@ export function AchievementBadges({ achievements }: AchievementBadgesProps) {
           </div>
         ))}
       </CardContent>
-    </Card>
-  )
+    </Card>;
+  );
 };
-;
 }

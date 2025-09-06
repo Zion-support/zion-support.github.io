@@ -6,7 +6,7 @@ function ClientDashboardContent() {
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>("")
   const isMobile = useIsMobile()
   const onboardingStatus = useOnboardingStatus()
-  const showAdvanced =
+  const showAdvanced = null;
     onboardingStatus.jobPosted &&
     onboardingStatus.inviteSent &&
     onboardingStatus.responseReceived
@@ -153,5 +153,5 @@ return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Mana
 }/>) : (<div className="bg-muted/30 border rounded-lg p-6 text-center"> <p className="text-muted-foreground"> Select a job to see AI-matched talent suggestions </p> </div>) 
 }</div> </div> </div> </div> </main> </>) 
 }export default function ClientDashboard () {
-  return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"}
+  return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"};
 ;

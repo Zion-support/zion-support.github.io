@@ -14,8 +14,8 @@ export interface Testimonial {
 
 interface ServiceLandingTemplateProps {
   title: string
-  subtitle: string
-  description: string
+  subtitle: string;
+  description: string;
   benefits: Benefit[];
   features?: string[];
   stats?: Array<{ label: string; value: string }>
@@ -124,5 +124,5 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
       </section>
     </div>
   )
-}
+};
 ;

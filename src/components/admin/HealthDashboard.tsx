@@ -69,7 +69,7 @@ const HealthDashboard: React.FC = () => {
     }
   }
   useEffect(() => {
-    fetchHealthData()
+    fetchHealthData();
     if (autoRefresh) {;
       const interval = setInterval(fetchHealthData, 30000); // Refresh every 30 seconds
       return () => clearInterval(interval)
@@ -90,7 +90,7 @@ const HealthDashboard: React.FC = () => {
     }
   }
   const getStatusBadge = (status: string) => {
-    const variant =
+    const variant = null;
       status === 'healthy'
         ? 'default'
         : status === 'warning'
@@ -419,7 +419,6 @@ const HealthDashboard: React.FC = () => {
   )
 }
 export default HealthDashboard
-export default HealthDashboard, 
-export default HealthDashboard,
-;
+export default HealthDashboard, ;
+export default HealthDashboard;
 }

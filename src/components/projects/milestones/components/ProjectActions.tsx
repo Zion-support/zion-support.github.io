@@ -44,7 +44,6 @@ export function ProjectActions({
           Add Milestone
         </Button>
       )}
-    </div>
-  )
+    </div>;
+  );
 };
-;

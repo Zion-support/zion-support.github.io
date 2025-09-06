@@ -3,7 +3,7 @@ import { Header } from '@/components/Header'
 import { SEO } from '@/components/SEO'
 import { GradientHeading } from '@/components/GradientHeading'
 import { Button } from '@/components/ui/button'
-import Link from 'next/link'
+import Link from 'next/link';
 import { useFeatureUsage } from '@/hooks/useFeatureUsage';
 import { useAdvancedOnboardingStatus } from '@/hooks/useAdvancedOnboardingStatus'; import Link from 'next/link'
 import { useFeatureUsage } from "@/hooks/useFeatureUsage"
@@ -58,8 +58,8 @@ export default function AIPoweredContent() {
           <div className='relative w-full h-auto aspect-video mb-12 mx-auto rounded-lg shadow-xl overflow-hidden'>
             <img
               src='https://placehold.co/800x400'
-              alt='Screenshot of ZionGPT content tool'
-              className='object-cover'
+              alt='Screenshot of ZionGPT content tool';
+              className='object-cover';
             />;
           </div>;
           <h2 className='text-2xl font-bold mb-4'>Benefits &amp; Use Cases</h2>

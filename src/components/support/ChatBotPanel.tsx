@@ -47,7 +47,7 @@ export function ChatBotPanel() {
     }
   }, [])
   const handleSendMessage = async (text: string = inputValue) => {
-    if (!text.trim()) return
+    if (!text.trim()) return;
       timestamp: new Date()},
     
         timestamp: new Date()},
@@ -62,8 +62,7 @@ export function ChatBotPanel() {
   const handleQuickReply = (text: string,) => {
     handleSendMessage(text)
   }
-  )
-}
   );
 };
-;
+  );
+};

@@ -70,10 +70,9 @@ export default function BlogPost() {
         setRelatedPosts(related)
         setIsLoading(false)
         return } catch (err) {
-        logErrorToProduction('Failed to fetch blog post', { data: err })
-        setError('Failed to load article')
+        logErrorToProduction('Failed to fetch blog post', { data: err });
+        setError('Failed to load article');
       };
-;
       const currentPost = BLOG_POSTS.find(p => p.slug === slug);      if (currentPost) {
         setPost(currentPost)
         const related = BLOG_POSTS.filter(
@@ -641,8 +640,7 @@ export default function BlogPost() {return ("
           Professional BlogPost services to help your business grow.
         </p>
       </div>
-  )
-}
+  );
 };
 };
-;
+};

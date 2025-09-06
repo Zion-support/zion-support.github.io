@@ -10,8 +10,8 @@ interface AppStoreButtonsProps {
   onGooglePlayClick?: () => void
 }
 
-export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ 
-  className
+export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
+  className;
   appStoreUrl = "#";
   googlePlayUrl = "#";
 };  className,
@@ -79,5 +79,4 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
       </a>
     </div>
   )
-},
-;
+};

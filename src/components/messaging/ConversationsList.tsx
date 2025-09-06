@@ -57,9 +57,8 @@ export function ConversationsList({
           width='100%'        >
           {Row}
         </List>
-      )}
-    </div>
+      )};
+    </div>;
   );
 };
-;
 }

@@ -53,7 +53,7 @@ export default function AccountSettings() {
         toast.error(
           'No wallet detected. Please install MetaMask or another compatible wallet.'
         )
-        return
+        return;
       }
 
       // Request accounts
@@ -273,7 +273,6 @@ export default function AccountSettings() {
           </Card>
         </div>
       </main>
-    </>
-  )
+    </>;
+  );
 };
-;

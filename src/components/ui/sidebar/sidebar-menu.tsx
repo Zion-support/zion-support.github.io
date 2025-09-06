@@ -18,8 +18,8 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
     return(<button
         ref={ref}
 SidebarMenuItem.displayName = "SidebarMenuItem"
-export { SidebarMenuItem, SidebarMenuGroup }
-export { SidebarMenuItem, SidebarMenuGroup }
+export { SidebarMenuItem, SidebarMenuGroup };
+export { SidebarMenuItem, SidebarMenuGroup };
 };
 export { SidebarMenuItem, SidebarMenuGroup };
 }

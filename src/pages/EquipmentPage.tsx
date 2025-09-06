@@ -8,6 +8,5 @@ export default function EquipmentPage() {
     <EquipmentErrorBoundary>
       <EquipmentPageContent />
     </EquipmentErrorBoundary>
-  )
+  );
 };
-;

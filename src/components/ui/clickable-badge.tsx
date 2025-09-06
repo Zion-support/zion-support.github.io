@@ -70,8 +70,7 @@ export function ClickableBadge({
           <X className="h-3 w-3" />
         </button>
       )}
-    </div>
-  )
+    </div>;
+  );
 };
-;
 }

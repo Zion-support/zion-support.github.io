@@ -42,7 +42,7 @@ export default function PartnerManager() {
   useEffect((,) => {
     if (!isAuthenticated) {
       router.push('/auth/login?returnTo=' + encodeURIComponent('/admin/partners'))
-      return
+      return;
     }
 
     fetchPartners()
@@ -62,9 +62,8 @@ export default function PartnerManager() {
       default:
         return <Badge variant="outline">{status}</Badge>
   partners, 
-  isLoading, 
-  onViewDetails, }
+  isLoading, ;
+  onViewDetails, };
   );
 };
-;
 }

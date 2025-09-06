@@ -76,7 +76,6 @@ export function ReviewStats({
       )}
     </div>
   )
-}</div>) 
-}</div>) 
+}</div>) ;
+}</div>) ;
 }"};
-;

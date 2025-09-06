@@ -48,10 +48,9 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
         <TooltipContent>
           <p>{label}</p>
         </TooltipContent>
-      </Tooltip>
-    </TooltipProvider>
+      </Tooltip>;
+    </TooltipProvider>;
   );
 };
-;
 }
 }

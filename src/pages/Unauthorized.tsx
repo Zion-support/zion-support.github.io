@@ -43,8 +43,7 @@ export default function Unauthorized() {
             </Link>
           </div>
         </div>
-      </div>
-    </>
+      </div>;
+    </>;
   );
 };
-;

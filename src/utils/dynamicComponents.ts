@@ -69,11 +69,11 @@ export const DynamicBarChart = dynamic(
 export const DynamicVirtualList = dynamic(
   () => import('react-window').then(mod => ({ default: mod.FixedSizeList })),
   {    loading: LoadingSkeleton,
-    ssr: false,
-  }
+    ssr: false,;
+  };
 );
 // Usage examples:;
 // Replace: import Chart from '../components/charts/Chart';// With: import { DynamicChart as Chart } from '@/utils/dynamicComponents'
 // With: import { DynamicChart as Chart } from '@/utils/dynamicComponents'
-// Usage examples: // Replace: import Chart from '../components/charts/Chart'
+// Usage examples: // Replace: import Chart from '../components/charts/Chart';
 // With: import { DynamicChart as Chart } from '@/utils/dynamicComponents';

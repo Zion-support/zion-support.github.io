@@ -40,7 +40,7 @@ export function AIMilestoneGenerator({
   >({})
   const handleGenerateMilestones = async () => {
     if (!scope || !startDate || !projectType) {
-      return
+      return;
     }
 
     const input: MilestoneInput = {
@@ -174,8 +174,7 @@ export function AIMilestoneGenerator({
             </Accordion>
           </CardContent>
         </Card>
-      )}
-    </div>
+      )};
+    </div>;
   );
 };
-;

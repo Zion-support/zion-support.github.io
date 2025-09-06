@@ -44,9 +44,8 @@ export function PromptCard({ prompt }: PromptCardProps) {
 }        <Button variant="secondary" size="sm" onClick={handleSend} aria-label="Send to ZionGPT">
           <Send className="w-4 h-4" />
         </Button>
-      </div>
-    </div>
+      </div>;
+    </div>;
   );
 };
-;
 }

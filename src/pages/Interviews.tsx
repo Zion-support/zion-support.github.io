@@ -194,10 +194,9 @@ export default function Interviews() {
   return (
     <ProtectedRoute>
       <InterviewsContent />
-    </ProtectedRoute>
-  )
+    </ProtectedRoute>;
+  );
 };
 };
-;
 }
 }

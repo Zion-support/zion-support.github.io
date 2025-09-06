@@ -81,8 +81,7 @@ export function ReferralLeaderboard() {
             </div>
           ))}
         </div>
-      </CardContent>
-    </Card>
+      </CardContent>;
+    </Card>;
   );
 };
-;

@@ -61,8 +61,7 @@ export function RaiseDisputeButton({
             onDisputeCreated={handleDisputeCreated}
             onCancel={() => setIsDialogOpen(false)}          />
         </DialogContent>
-      </Dialog>
-    </>
+      </Dialog>;
+    </>;
   );
 };
-;

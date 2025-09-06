@@ -27,7 +27,7 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {  retu
     </Card>
   )
 }
-"},
-
+"},;
+;
   );
 };

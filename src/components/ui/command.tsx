@@ -128,7 +128,7 @@ export {
   CommandList,
   CommandEmpty,
   CommandGroup,
-  CommandItem,
-  CommandShortcut,
-  CommandSeparator,;
+  CommandItem,;
+  CommandShortcut,;
+  CommandSeparator;
 };

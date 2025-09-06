@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Draggable } from '@/lib/dnd-stub'
 import { formatDistanceToNow } from 'date-fns'
 import Link from 'next/link'
-import { JobApplication } from '@/types/jobs'
+import { JobApplication } from '@/types/jobs';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed to avoid conflict
 import { Button } from '@/components/ui/button'
@@ -15,8 +15,8 @@ import {
   FileText,
   MoreVertical,
   Calendar,
-  AlertTriangle,
-  BriefcaseIcon,;
+  AlertTriangle,;
+  BriefcaseIcon;
 } from 'lucide-react';// Local stub is used in place of the @hello-pangea/dnd package which isn't
 // available in this environment.
 import { Draggable } from "@/lib/dnd-stub"
@@ -34,7 +34,7 @@ import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, B
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 import { ScoreBadge } from '@/components/jobs/applications/ScoreBadge'
-import { toast } from '@/hooks/use-toast'
+import { toast } from '@/hooks/use-toast';
 import { HireConfirmationModal } from './HireConfirmationModal';
 import Image from 'next/image'; // Import next/image
 interface CandidateCardProps {
@@ -46,7 +46,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
   const [showHireModal, setShowHireModal] = useState(false)
   const [avatarError, setAvatarError] = useState(false)
   // Check if application is stalled (no activity for 7 days)
-  const isStalled =
+  const isStalled = null;
     application.updated_at &&
     new Date(application.updated_at).getTime() <
       Date.now() - 7 * 24 * 60 * 60 * 1000
@@ -301,5 +301,5 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
 }onConfirm= {
   handleHireConfirmed 
 }/> </>) 
-}'"}
+}'"};
 ;

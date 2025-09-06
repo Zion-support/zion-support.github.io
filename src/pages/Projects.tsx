@@ -84,10 +84,9 @@ function ProjectsContent() {
   )
 export default function Projects() {
   return <ProjectsContent /> }
-
-export default function Projects() {
+;
+export default function Projects() {;
   return <ProjectsContent />;
 };
-;
 }
 }

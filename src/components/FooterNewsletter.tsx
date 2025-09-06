@@ -14,18 +14,18 @@ export function FooterNewsletter(): React.ReactElement {
 } finally {
       setIsSubmitting(false) 
       // console.error('Newsletter subscription failed:', error)} finally {
-  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-  const lastSubmit = useRef(0)
+  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const lastSubmit = useRef(0);
   const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault();
     if (honeypot) return; // ignore bots
     const now = Date.now()
-    if (now - lastSubmit.current < 1000) return
+    if (now - lastSubmit.current < 1000) return;
     lastSubmit.current = now
     const trimmedEmail = email.trim()
     if (!EMAIL_REGEX.test(trimmedEmail)) {
       setEmailError('Please enter a valid email address.')
-      return
+      return;
     } else {
       setEmailError('')
     }
@@ -56,7 +56,7 @@ export function FooterNewsletter(): React.ReactElement {
       } else {
         logErrorToProduction('Newsletter subscription failed:', { data: data })
         // Use a more specific error message if available from API, otherwise generic
-        const errorMessage =
+        const errorMessage = null;
           data.error || 'Subscription failed. Please try again.'
         toast.error(errorMessage, { id: `${uniqueToastIdBase}-api-error` })
       }

@@ -11,7 +11,7 @@ interface ActiveFiltersProps {
   toggleRegion: (region: string) => void
   priceRange: [number, number]
   setPriceRange: (range: [number, number]) => void
-  experienceRange: [number, number]
+  experienceRange: [number, number];
   setExperienceRange: (range: [number, number]) => void;
   clearFilters: () => void;interface ActiveFiltersProps {
   selectedSkills: string[],
@@ -41,7 +41,7 @@ export function ActiveFilters({
   clearFilters,
 }: ActiveFiltersProps) {
   // Check if any filters are active
-  const hasActiveFilters =
+  const hasActiveFilters = null;
     selectedSkills.length > 0 ||
     selectedAvailability.length > 0 ||
     selectedRegions.length > 0 ||
@@ -113,7 +113,6 @@ export function ActiveFilters({
         Clear All
       </Button>
     </div>
-  )
+  );
 };
-;
 }

@@ -84,10 +84,9 @@ export function QuickActions() {
             </Button>
           ))}
         </div>
-      </CardContent>
-    </Card>
+      </CardContent>;
+    </Card>;
   );
 };
-;
 }
 }

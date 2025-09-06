@@ -77,7 +77,6 @@ export function SocialLogin() {
         </Button>
         <Web3Login />
       </div>
-    </div>
-  )
+    </div>;
+  );
 };
-;

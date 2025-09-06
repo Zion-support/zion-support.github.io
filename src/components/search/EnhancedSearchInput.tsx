@@ -6,8 +6,8 @@ interface EnhancedSearchInputProps {
   /**
    * Optional callback when a suggestion is selected. This allows parent
    * components to perform actions such as navigation.
-   */
-  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,;
+   */;
+  onSelectSuggestion?: (suggestion: SearchSuggestion) => void;
   placeholder?: string;  /**
    * Optional list of fallback suggestions (e.g. recent searches).
    * If provided, these will be shown when the input is empty.
@@ -20,7 +20,7 @@ export function EnhancedSearchInput({
   onChange
   onSelectSuggestion
   placeholder = "Search..."
-  searchSuggestions
+  searchSuggestions;
 }: EnhancedSearchInputProps) {;
 import React, { useState, useEffect, useRef, useCallback, useMemo } from "react"; // Added useMemo
 import { Search, X  } from 'lucide-react'
@@ -50,7 +50,7 @@ export function EnhancedSearchInput({
       debounce(async (query: string,) => {
         if (!query.trim()) {
           setApiSuggestions([]),
-          return
+          return;
         }
 
         setLoading(true)
@@ -86,7 +86,7 @@ export function EnhancedSearchInput({
         (searchSuggestions || []).filter(s => s.type === 'recent')
       )
       setHighlightedIndex(-1)
-      return
+      return;
     }
 
     const controller = new AbortController()
@@ -155,7 +155,7 @@ export function EnhancedSearchInput({
     () => debounce((currentValue: string, suggestions: SearchSuggestion[]) => {
       if(!currentValue) {
         setFilteredSuggestions(suggestions.filter(s => s.type === 'recent'))
-        return
+        return;
 }
 
       const filtered = suggestions.filter(suggestion =>
@@ -171,8 +171,8 @@ export function EnhancedSearchInput({
     [setFilteredSuggestions] // setFilteredSuggestions from useState is stable
   )
   useEffect(() => {
-  // TODO: Add dependencies if needed
-  return () => {
+  // TODO: Add dependencies if needed;
+  return () => {;
     // Cleanup function;
 };
 }, []); [])
@@ -214,7 +214,7 @@ export function EnhancedSearchInput({
         setHighlightedIndex(-1)
         inputRef.current?.blur()
 }
-      return
+      return;
 }
 
     switch(e.key) {

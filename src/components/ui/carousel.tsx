@@ -1,6 +1,6 @@
 import * as React from &quot;react&quot;
 import useEmblaCarousel from &quot;embla-carousel-react&quot;
-import { ArrowLeft, ArrowRight } from 'lucide-react'
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 ;
 import { cn } from &quot;@/lib/utils&quot;
 import { Button } from &quot;@/components/ui/button&quot;
@@ -37,7 +37,7 @@ const Carousel = React.forwardRef<
 >(
   (
     {
-      orientation = &quot;horizontal&quot;,
+      orientation = &quot;horizontal&quot;
       opts,
       setApi,
       plugins,
@@ -58,7 +58,7 @@ const Carousel = React.forwardRef<
 
     const onSelect = React.useCallback((api: CarouselApi) => {
       if (!api) {
-        return
+        return;
       }
 
       setCanScrollPrev(api.canScrollPrev())
@@ -82,7 +82,7 @@ const Carousel = React.forwardRef<
           event.preventDefault()
           scrollNext()
         }
-      },;
+      };
       [scrollPrev, scrollNext];
     );
     React.useEffect(() => {;
@@ -97,11 +97,11 @@ const Carousel = React.forwardRef<
         return;
       }
 onSelect(api)
-      api.on(&quot;reInit&quot;, onSelect)
-      api.on(&quot;select&quot;, onSelect)
+      api.on(&quot;reInit&quot; onSelect)
+      api.on(&quot;select&quot; onSelect)
 
       return () => {
-        api?.off(&quot;select&quot;, onSelect)
+        api?.off(&quot;select&quot; onSelect)
       }
     }, [api, onSelect])
 
@@ -121,7 +121,7 @@ onSelect(api)
         <div;
           ref={ref}
           onKeyDownCapture={handleKeyDown}
-className={cn(&quot;relative&quot;, className)}
+className={cn(&quot;relative&quot; className)}
           role=&quot;region&quot;
           aria-roledescription=&quot;carousel&quot;
           {...props}
@@ -145,10 +145,10 @@ const CarouselContent = React.forwardRef<
       <div
         ref={ref}
         className={cn(
-          &quot;flex&quot;,
+          &quot;flex&quot;
           orientation === &quot;horizontal&quot;
             ? &quot;-ml-4 snap-x snap-mandatory&quot;
-            : &quot;-mt-4 flex-col snap-y snap-mandatory&quot;,
+            : &quot;-mt-4 flex-col snap-y snap-mandatory&quot;
           className
         )}
         {...props}
@@ -170,8 +170,8 @@ const CarouselItem = React.forwardRef<
       role=&quot;group&quot;
       aria-roledescription=&quot;slide&quot;
       className={cn(
-        &quot;min-w-0 shrink-0 grow-0 basis-full snap-start&quot;,
-        orientation === &quot;horizontal&quot; ? &quot;pl-4&quot; : &quot;pt-4&quot;,
+        &quot;min-w-0 shrink-0 grow-0 basis-full snap-start&quot;
+        orientation === &quot;horizontal&quot; ? &quot;pl-4&quot; : &quot;pt-4&quot;
         className
       )}
       {...props}
@@ -183,7 +183,7 @@ CarouselItem.displayName = &quot;CarouselItem&quot;
 const CarouselPrevious = React.forwardRef<
   HTMLButtonElement,
   React.ComponentProps<typeof Button>
->(({ className, variant = &quot;outline&quot;, size = &quot;icon&quot;, ...props }, ref) => {
+>(({ className, variant = &quot;outline&quot; size = &quot;icon&quot; ...props }, ref) => {
   const { orientation, scrollPrev, canScrollPrev } = useCarousel()
 
   return (
@@ -192,10 +192,10 @@ const CarouselPrevious = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        &quot;absolute h-8 w-8 rounded-full&quot;,
+        &quot;absolute h-8 w-8 rounded-full&quot;
         orientation === &quot;horizontal&quot;
           ? &quot;left-1 sm:left-2 md:-left-12 top-1/2 -translate-y-1/2&quot;
-          : &quot;top-1 sm:top-2 md:-top-12 left-1/2 -translate-x-1/2 rotate-90&quot;,
+          : &quot;top-1 sm:top-2 md:-top-12 left-1/2 -translate-x-1/2 rotate-90&quot;
         className
       )}
       disabled={!canScrollPrev}
@@ -212,7 +212,7 @@ CarouselPrevious.displayName = &quot;CarouselPrevious&quot;
 const CarouselNext = React.forwardRef<
   HTMLButtonElement,
   React.ComponentProps<typeof Button>
->(({ className, variant = &quot;outline&quot;, size = &quot;icon&quot;, ...props }, ref) => {
+>(({ className, variant = &quot;outline&quot; size = &quot;icon&quot; ...props }, ref) => {
   const { orientation, scrollNext, canScrollNext } = useCarousel()
 
   return (
@@ -221,10 +221,10 @@ const CarouselNext = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        &quot;absolute h-8 w-8 rounded-full&quot;,
+        &quot;absolute h-8 w-8 rounded-full&quot;
         orientation === &quot;horizontal&quot;
           ? &quot;right-1 sm:right-2 md:-right-12 top-1/2 -translate-y-1/2&quot;
-          : &quot;bottom-1 sm:bottom-2 md:-bottom-12 left-1/2 -translate-x-1/2 rotate-90&quot;,
+          : &quot;bottom-1 sm:bottom-2 md:-bottom-12 left-1/2 -translate-x-1/2 rotate-90&quot;
         className
       )}
       disabled={!canScrollNext}
@@ -243,6 +243,5 @@ export {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselPrevious,
+  CarouselPrevious,;
   CarouselNext};
-;

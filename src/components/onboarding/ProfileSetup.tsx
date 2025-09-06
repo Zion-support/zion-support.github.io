@@ -119,8 +119,8 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
           >
             Complete Profile
           </Button>
-        </form>
-      </Form>
+        </form>;
+      </Form>;
     </div>;
   );
 case "talent": return "Talent";"

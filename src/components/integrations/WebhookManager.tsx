@@ -35,9 +35,9 @@ export function WebhookManager() {
   const [newWebhook, setNewWebhook] = useState({
     name: '',
     url: '',
-    selectedEvent: '' as WebhookEventType,
-    eventTypes: [] as WebhookEventType[],
-    secret: '',;
+    selectedEvent: '' as WebhookEventType,;
+    eventTypes: [] as WebhookEventType[],;
+    secret: '';
   });
   const eventOptions: { value: WebhookEventType; label: string }[] = [
     { value: 'new_application', label: 'New Application Received' },
@@ -49,10 +49,10 @@ export function WebhookManager() {
     fetchWebhooks()
   }, [])
   const handleAddEvent = () => {
-    if (!newWebhook.selectedEvent) return
+    if (!newWebhook.selectedEvent) return;
     if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
       toast.error('This event is already added')
-      return
+      return;
     }
 
     setNewWebhook({
@@ -73,7 +73,7 @@ export function WebhookManager() {
       newWebhook.eventTypes.length === 0
     ) {
       toast.error('Please fill in all required fields')
-      return
+      return;
     }
 
     await createWebhook(

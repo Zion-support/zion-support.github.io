@@ -87,8 +87,8 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
             label: 'Log In',
             onClick: loginAction,
           }
-        : undefined,
-    })
+        : undefined,;
+    });
   }, []);
   const clearAllErrors = useCallback(() => {;
     setRetryCount({});    // Clear any active toasts would go here if the toast system supports it
@@ -204,8 +204,8 @@ export function useErrorHandler() {
   )
   return {
     reportError,
-    handleApiError,
-    handleAsyncOperation,;
+    handleApiError,;
+    handleAsyncOperation;
   };    reportError
     handleApiError
     handleAsyncOperation}

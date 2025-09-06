@@ -61,14 +61,14 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         if (error) {
           setIsScoring(false),
           toast.error("Failed to check scoring status"),
-          return
+          return;
         }
         
         if (data.scored_at) {
           setIsScoring(false),
           toast.success("Resume scoring completed"),
           if (onScoreUpdated) onScoreUpdated(data as JobApplication),
-          return
+          return;
         }
         
         if (attempts < maxAttempts) {
@@ -210,7 +210,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
           </div>
         )}
       </CardContent>
-    </Card>
-  )
+    </Card>;
+  );
 };
-;

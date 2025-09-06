@@ -115,8 +115,7 @@ export function ITServicePricingTable() {
             )}
           </TableBody>
         </Table>
-      </div>
-    </div>
+      </div>;
+    </div>;
   );
 };
-;

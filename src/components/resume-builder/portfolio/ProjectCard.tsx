@@ -17,7 +17,7 @@ import { Edit, Trash2, Github, Link, FileText } from 'lucide-react'
 import Image from 'next/image'
 import { PortfolioProject } from '@/types/resume'
 interface ProjectCardProps {
-  project: PortfolioProject
+  project: PortfolioProject;
   onEdit: (project: PortfolioProject) => void;
   onDelete: (projectId: string) => void; import Image from 'next/image'
 interface ProjectCardProps {
@@ -175,10 +175,9 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
-      </AlertDialog>
-    </Card>
+      </AlertDialog>;
+    </Card>;
   );
 };
-;
 }
 }

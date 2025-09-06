@@ -146,11 +146,10 @@ export function TeamActivity() {
           Next
         </Button>
       </div>
-    </div>
-  )
+    </div>;
+  );
 };
-const getCategoryBadge = (category: string) => {;
-};"
+const getCategoryBadge = (category: string) => {};"
   activities.map ( (activity) => (<TableRow key= {
   activity.id 
 }> </TableCell> </TableRow>) ) "

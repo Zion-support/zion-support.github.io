@@ -98,7 +98,6 @@ export function MyApplications() {
           </CardContent>
         </Card>
       ))}
-    </div>
-  )
+    </div>;
+  );
 };
-;

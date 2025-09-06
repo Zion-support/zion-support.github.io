@@ -3,8 +3,8 @@ import {
   Card,
   CardContent,
   CardHeader,
-  CardTitle,
-  CardFooter,;
+  CardTitle,;
+  CardFooter;
 } from '@/components/ui/card'; import React, { useState } from 'react'
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card'
 import { Textarea } from '@/components/ui/textarea'
@@ -156,8 +156,7 @@ export function AIEnhancementPanel({
           )}
           <Button onClick={handleApply}>Apply to Form</Button>
         </CardFooter>
-      )}
-    </Card>
+      )};
+    </Card>;
   );
 };
-;

@@ -89,8 +89,7 @@ export function GlobalServiceSection() {
             Get Your Free Commercial Proposal
           </Button>
         </div>
-      </div>
-    </section>
+      </div>;
+    </section>;
   );
 };
-;

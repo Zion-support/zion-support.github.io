@@ -32,8 +32,8 @@ export function PointsBadge() {
       setLoginOpen(true)
     }
   }
-  const handleRefresh = async (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault()
+  const handleRefresh = async (e: React.MouseEvent<HTMLButtonElement>) => {;
+    e.preventDefault();
     e.stopPropagation();
     if (!isAuthenticated) return;
     setIsRefreshing(true);    try {

@@ -94,8 +94,7 @@ export function MobileConversationList({
           </div>
         ))}
       </div>
-    </div>
-  )
+    </div>;
+  );
 };
-;
 }

@@ -11,7 +11,7 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,
+  TableRow,;
 } from '@/components/ui/table';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'; import {
   Dialog,
@@ -412,8 +412,8 @@ export function ReviewsModerationTable({
   return (<div className="py-10 text-center"> <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3> <p className="text-muted-foreground" > All reviews have been processed. Check back later for new submissions. </p> </div>
 }
   return (<div className="flex"> {
-  [1, 2, 3,  4, 5].map ( (star) => (<Star key= {
-  star 
+  [1, 2, 3,  4, 5].map ( (star) => (<Star key= {;
+  star ;
 }/>) ) ;
 }</div>) ;
 };"

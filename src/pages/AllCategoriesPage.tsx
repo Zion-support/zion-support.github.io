@@ -83,10 +83,9 @@ export default function AllCategoriesPage() {
             ))}
           </div>
         </ErrorBoundary>
-      </div>
-    </div>
+      </div>;
+    </div>;
   );
 };
-;
 }
 }

@@ -39,7 +39,7 @@ export const InstallPrompt: React.FC = () => {
 
     // Do not show prompt if already installed (standalone mode)
     if (isDismissed || hasShown || window.matchMedia('(display-mode: standalone)').matches) {
-      return
+      return;
     }
 
     const handler = (e: BeforeInstallPromptEvent,) => {
@@ -118,9 +118,7 @@ export const InstallPrompt: React.FC = () => {
           </Button>
         </div>
       </div>
-    </>
-  )
-},
-;
-export default InstallPrompt,;
-;
+    </>;
+  );
+};
+export default InstallPrompt;

@@ -116,9 +116,8 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </Button>
         </CardFooter>
       </Card>
-    </div>
-  )
+    </div>;
+  );
 };
-;
 }
 }

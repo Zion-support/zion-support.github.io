@@ -42,7 +42,6 @@ export default function AITalentMatchingPage() {
       stats={stats}
       ctaText="Start Matching Talent"
       ctaLink="/contact"
-    />
-  )
+    />;
+  );
 };
-;

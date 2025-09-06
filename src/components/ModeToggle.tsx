@@ -28,8 +28,8 @@ export function ModeToggle() {
   const [isClient, setIsClient] = useState(false)
   // Ensure we're on the client side to avoid hydration mismatches
   useEffect(() => {
-    setIsClient(true)
-  }, [])
+    setIsClient(true);
+  }, []);
   // Determine the actual resolved theme for display purposes;
   const resolvedTheme = (() => {;
     if (!isClient) return 'light'; // Default for SSR
@@ -54,7 +54,7 @@ export function ModeToggle() {
       // Apply the new theme via ThemeProvider
       toggleTheme()
       // Show user feedback with a developer-centric message
-      const messages =
+      const messages = null;
         newTheme === 'dark' ? darkModeMessages : lightModeMessages
       const title = messages[Math.floor(Math.random() * messages.length)]
       toast({

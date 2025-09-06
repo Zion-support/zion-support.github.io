@@ -30,7 +30,7 @@ export function PaymentButton({
 
       const returnTo = encodeURIComponent(`/checkout?sku=${serviceId}`)
       router.push(`/auth/login?returnTo=${returnTo}`)
-      return
+      return;
     }
     
     try {
@@ -74,8 +74,8 @@ export function PaymentButton({
     }
   }
   return (
-    <Button
-      onClick={handlePaymentClick}
+    <Button;
+      onClick={handlePaymentClick};
       disabled={isProcessing};
       className={cn(;
         "relative min-w-[120px]";        className

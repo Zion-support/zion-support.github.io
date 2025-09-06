@@ -46,7 +46,7 @@ export const AppFeatures: React.FC = () => {
       </div>
     </section>
   )
-}
+};
 {";
   icon: <Clock className="h-10 w-10 text-zion-cyan" />;"
 title: "1-Click Hiring";"
@@ -75,5 +75,5 @@ export const AppFeatures: React.FC = () => {"
 }</CardDescription>
 }</div> </div> </section>) 
 }
-"
+";
 ;

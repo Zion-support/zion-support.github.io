@@ -66,7 +66,6 @@ export function SupportWidget() {
           <ChatBotPanel />
         </div>
       )}
-    </>
-  )
+    </>;
+  );
 };
-;

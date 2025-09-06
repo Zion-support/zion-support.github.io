@@ -79,9 +79,8 @@ export default function EquipmentRecommendations() {
           <div key={listing.id} className="break-inside-avoid mb-4">
           </div>
         ))}
-      </div>
-    </div>
+      </div>;
+    </div>;
   );
 };
-;
 }

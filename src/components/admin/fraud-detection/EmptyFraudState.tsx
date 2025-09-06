@@ -49,7 +49,6 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
       {hasFilters && (
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
       )}
-    </div>
-  )
+    </div>;
+  );
 };
-;

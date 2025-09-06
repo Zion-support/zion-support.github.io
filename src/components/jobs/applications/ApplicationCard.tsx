@@ -23,7 +23,7 @@ import { toast } from 'sonner'
 import { useState } from "react"
 import { formatDistanceToNow } from "date-fns"
 import { JobApplication } from "@/types/jobs"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download } from 'lucide-react'; import Link from "next/link"
 import { StatusBadge } from "./StatusBadge"
@@ -232,10 +232,9 @@ default: return (<Card className="overflow-hidden" > <CardHeader className="pb-3
   application.match score && (<div> <h4 className="text-sm font-medium mb-1" >Match Score</h4> <div className="flex items-center" > <div className="h-6 w-6 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center text-xs font-medium" > {
   application.match score "
 }% </div> <span className="ml-2 text-xs text-muted-foreground" >Relevance to job requirements</span> </div> </div>) 
-}</div>) "
-}</CardContent> <Button variant="outline" size="sm" asChild > </Link> </Button> </div> </div> <Button variant="secondary" size="sm" className="w-full" asChild > </Link> </Button> </CardFooter> </Card>) 
+}</div>) ";
+}</CardContent> <Button variant="outline" size="sm" asChild > </Link> </Button> </div> </div> <Button variant="secondary" size="sm" className="w-full" asChild > </Link> </Button> </CardFooter> </Card>) ;
 }";
 };
-;
 }
 }

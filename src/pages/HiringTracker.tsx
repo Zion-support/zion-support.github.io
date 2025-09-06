@@ -74,8 +74,7 @@ function HiringTrackerContent() {
 export default function HiringTracker() {
   return (
     <ProtectedRoute>
-      <HiringTrackerContent />
-    </ProtectedRoute>
+      <HiringTrackerContent />;
+    </ProtectedRoute>;
   );
 };
-;

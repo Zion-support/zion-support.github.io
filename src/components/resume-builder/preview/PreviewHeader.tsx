@@ -80,7 +80,6 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
           Add to Profile
         </Button>
       </div>
-    </div>
-  )
+    </div>;
+  );
 };
-;

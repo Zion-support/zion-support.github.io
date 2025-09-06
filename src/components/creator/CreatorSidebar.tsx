@@ -5,8 +5,8 @@ import {
   Home,
   Mail,
   Search,
-  Settings,
-  Users,;
+  Settings,;
+  Users;
 } from 'lucide-react'; import {
   Sidebar,
   SidebarContent,
@@ -81,7 +81,6 @@ export function AppSidebar() {
           </SidebarMenuItem>
         </SidebarGroup>
       </SidebarContent>
-    </Sidebar>
-  )
+    </Sidebar>;
+  );
 };
-;

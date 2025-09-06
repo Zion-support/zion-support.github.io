@@ -25,7 +25,7 @@ export function AIEnhancementButton({
   const handleEnhance = async () => {
     if (!currentContent || currentContent.trim().length < 10) {
       setError('Please enter at least some basic content before enhancing')
-      return
+      return;
     }
 
     setError(null)
@@ -50,8 +50,8 @@ export function AIEnhancementButton({
       {isEnhancing ? (
         <Loader2 className='h-3 w-3 animate-spin' />
       ) : (
-        <Sparkles className='h-3 w-3' />
-      )}
+        <Sparkles className='h-3 w-3' />;
+      )};
       <span className='text-xs'>{buttonText}</span>;
     </Button>;
   );      onClick={handleEnhance}

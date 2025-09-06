@@ -45,7 +45,6 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
       )}
     </div>
   )
-  )
-}
+  );
 };
-;
+};

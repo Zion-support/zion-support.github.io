@@ -18,8 +18,8 @@ const handleCopyClick = async () => {
   await navigator.clipboard.writeText (code)
 setCopied (true)
 setTimeout ( () => {
-  setCopied (false) 
-}, 2000) 
+  setCopied (false) ;
+}, 2000) ;
 };
 }> <pre className= {";
   cn ("p-4 overflow-auto";"
@@ -71,7 +71,7 @@ export function CodeBlock({
       )}
     </div>
   )
-export default CodeBlock
+export default CodeBlock;
 ;
 }
 }

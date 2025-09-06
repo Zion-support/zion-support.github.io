@@ -32,16 +32,16 @@ export function BundleAnalyzer() {
   const [shouldShow, setShouldShow] = useState(false)
   useEffect((,) => {
     // Only show in development or when explicitly enabled
-    const show =
+    const show = null;
       process.env.NODE_ENV === 'development' ||
       localStorage.getItem('bundle-analyzer') === 'true'
     setShouldShow(show)
-    if (!show) return
+    if (!show) return;
     setIsVisible(true)
     collectBundleInfo()
   }, [])
   const collectBundleInfo = async () => {
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined') return;
     setIsCollecting(true)
     try {
       // Get performance entries for script resources
@@ -73,14 +73,14 @@ export function BundleAnalyzer() {
       })
       // Estimate gzipped size (roughly 70% of original)
       const gzippedSize = totalSize * 0.7
-      const cacheHitRate =
+      const cacheHitRate = null;
         chunkData.filter(chunk => chunk.cached).length / chunkData.length
       setBundleInfo({
         totalSize,
         gzippedSize,
-        chunkCount: chunkData.length,
-        loadTime: totalLoadTime / chunkData.length,
-        cacheHitRate: cacheHitRate * 100,;
+        chunkCount: chunkData.length,;
+        loadTime: totalLoadTime / chunkData.length,;
+        cacheHitRate: cacheHitRate * 100;
       });
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
       logErrorToProduction('Failed to collect bundle info:', { data: error })

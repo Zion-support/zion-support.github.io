@@ -237,8 +237,8 @@ export const SitemapPage: React.FC = () => {
             <a href="/contact" className="text-cyan-400 hover:text-cyan-300 transition-colors">
               Contact us
             </a>{' '}
-            for assistance.
-          </p>
+            for assistance.;
+          </p>;
         </div>;
       </div>;
     </div>;) }

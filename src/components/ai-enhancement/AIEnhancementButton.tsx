@@ -8,7 +8,7 @@ interface AIEnhancementButtonProps {
   options: AIEnhancementOptions,
   onEnhanced: (enhancedContent: string) => void,
   buttonText?: string
-  className?: string
+  className?: string;
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";  contentLength?: number
 }
@@ -33,7 +33,7 @@ export function AIEnhancementButton({
         description: `Please enter at least ${contentLength} characters before enhancing.`,
         variant: "destructive"
       })
-      return
+      return;
     }
     
     const enhancedContent = await enhanceContent(options)
@@ -116,7 +116,7 @@ export function AIEnhancementButton({
         <Sparkles className="h-4 w-4" />
       )}
       <span className="text-xs">{buttonText}</span>
-    </Button>
+    </Button>;
   );
 };"
 <Button type="button" variant="ghost" size="sm" onClick={

@@ -38,5 +38,4 @@
       </PopoverContent>
     </Popover>
   )
-},
-;
+};

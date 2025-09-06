@@ -79,7 +79,7 @@ function CategoryContent({
   const handleFollow = () => {
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),
-      return
+      return;
     }
     if (isFollowed(categoryId)) {
       unfollow(categoryId)
@@ -93,6 +93,5 @@ function CategoryContent({
   const category = categoryId ? categoriesInfo[categoryId] : null
   const IconComponent = category ? iconMap[category.icon as keyof typeof iconMap] : null
 }
-  )
+  );
 };
-;

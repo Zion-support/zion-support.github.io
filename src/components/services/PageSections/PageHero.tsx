@@ -78,7 +78,6 @@ export function PageHero() {
           <p className="text-zion-slate-light">Clear per-incident pricing includes transportation and first hour onsite</p>
         </div>
       </div>
-    </div>
-  )
+    </div>;
+  );
 };
-;

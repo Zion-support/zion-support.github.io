@@ -1,6 +1,6 @@
 
 export default function ProfileDetail() {
-  // useParams is typed as `any` in this environment due to missing type
+  // useParams is typed as `any` in this environment due to missing type;
   // definitions, so avoid passing a type argument to prevent TS2347.;
   const router = useRouter();
   const profileId = router.query.profileId as string;
@@ -15,7 +15,7 @@ export default function ProfileDetail() {
       try {
         if (!profileId) {
           setError("Profile ID is missing.");
-          return
+          return;
         }
 
         const { data, error } = await supabase
@@ -30,7 +30,7 @@ export default function ProfileDetail() {
 
         if (!data) {
           setError("Profile not found.");
-          return
+          return;
         }
 
         setProfileData(data)

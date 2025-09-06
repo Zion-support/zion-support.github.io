@@ -182,11 +182,10 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
             </div>
           </CardContent>
         </Card>
-      ))}
-    </div>
+      ))};
+    </div>;
   );
 };
-;
 }
 }
 }

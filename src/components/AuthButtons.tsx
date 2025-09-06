@@ -102,9 +102,8 @@ export function AuthButtons({
             <>Email Login</>
           )}
         </Button>
-      )}
-    </div>
+      )};
+    </div>;
   );
 };
-;
 }

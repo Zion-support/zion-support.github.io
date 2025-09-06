@@ -122,8 +122,7 @@ export function ProductGallery({
             />          </div>
         </DialogContent>
       )}
-    </Dialog>
-  )
+    </Dialog>;
+  );
 };
 };
-;

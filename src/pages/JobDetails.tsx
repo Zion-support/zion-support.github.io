@@ -8,9 +8,9 @@ import {
   Calendar,
   Clock,
   DollarSign,
-  Tag,
-  Users,;
-  Briefcase,;
+  Tag,;
+  Users;
+  Briefcase;
 } from 'lucide-react';import { formatDistanceToNow } from 'date-fns';
 import { toast } from 'sonner';
 import { useAuth } from '@/hooks/useAuth';

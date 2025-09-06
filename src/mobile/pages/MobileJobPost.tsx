@@ -337,8 +337,8 @@ function PreviewStep() {
             <p className="text-sm">We are looking for a skilled React developer to help us build out our new customer-facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p>
           </div>
         </CardContent>
-      </Card>
-      <Button variant="outline" className="w-full">Edit Job Post</Button>
+      </Card>;
+      <Button variant="outline" className="w-full">Edit Job Post</Button>;
     </div>;
   );
 };"

@@ -79,7 +79,6 @@ export function OnboardingTracker({
   !step.completed && step.action && (<Button asChild variant=" ghost"size=" sm"className=" text-zion-purple hover:text-zion-cyan hover:bg-zion-blue" > <Link href= {
   step.link 
 }> </Link> </Button>) 
-}</div>) ) 
-}</div> </div>) 
+}</div>) ) ;
+}</div> </div>) ;
 }"};
-;

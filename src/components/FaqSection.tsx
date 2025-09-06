@@ -141,9 +141,8 @@ export function FaqSection() {
             ))}
           </Accordion>
         </div>
-      </div>
-    </section>
+      </div>;
+    </section>;
   );
 };
-;
 }

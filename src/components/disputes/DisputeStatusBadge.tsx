@@ -38,9 +38,8 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
       </TooltipTrigger>
       <TooltipContent>
         <p>{message}</p>
-      </TooltipContent>
-    </Tooltip>
+      </TooltipContent>;
+    </Tooltip>;
   );
 };
-;
 }

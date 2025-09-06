@@ -42,8 +42,7 @@ export function TokenDisplay() {
             </div>
           </div>
         )}
-      </CardContent>
-    </Card>
+      </CardContent>;
+    </Card>;
   );
 };
-;

@@ -123,8 +123,8 @@ headers=headers) data = response.json () print (data) `
 }responseExamples= {
   {
   success: ` {
-}` 
-}'
+}` ;
+}';
 }/> <EndpointSection deadline: '2025-06-30T23:59:59Z' ;
 }) ;
 });'
@@ -333,7 +333,7 @@ print(data)`,
     },
     deadline: '2025-06-30T23:59:59Z'
   })
-})
+});
 const data = await response.json();
 logInfo(data);`,
                 python: `import requests
@@ -418,7 +418,7 @@ print(data)`,
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
   }
-})
+});
 const data = await response.json();
 logInfo(data);`,
                 python: `import requests
@@ -480,7 +480,7 @@ const response = await fetch(\`https://api.ziontechgroup.com/v1/talent/\${talent
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
   }
-})
+});
 const data = await response.json();
 logInfo(data);`,
                 python: `import requests
@@ -620,7 +620,7 @@ print(data)`,
     requester_name: 'John Doe',
     requester_email: 'john@example.com'
   })
-})
+});
 const data = await response.json();
 logInfo(data);`,
                 python: `import requests
@@ -701,7 +701,7 @@ print(data)`,
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
   }
-})
+});
 const data = await response.json();
 logInfo(data);`,
                 python: `import requests
@@ -785,7 +785,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   // Process the webhook event
   const event = JSON.parse(payload)
   logInfo('Received valid webhook:', { data: event })
-  // Respond to acknowledge receipt
+  // Respond to acknowledge receipt;
   res.status(200).send('Webhook received');
 });`}
                 language='javascript'

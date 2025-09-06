@@ -9,7 +9,7 @@ interface AIListingFormProps {
     title: string
     category: string
     keyFeatures: string
-    targetAudience: string
+    targetAudience: string;
   }) => void;
   isLoading: boolean;  initialValues?: {
     title?: string
@@ -56,7 +56,7 @@ export function AIListingForm({
         title: 'Missing required fields',
         description: 'Please provide at least a title and category.',
         variant: 'destructive',
-      return
+      return;
     }
 
     onSubmit({
@@ -193,13 +193,12 @@ export function AIListingForm({
 }: AIListingFormProps) {
   if (!title || !category) {
   toast ({
-  return
+  return;
 }/> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {"
   isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>) 
 }</Button> </div>) 
-}'"
+}'";
 };
-;
 }
 }
 }

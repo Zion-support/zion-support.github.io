@@ -37,8 +37,7 @@ export function TalentCardHeader({
         </div>
         <p className='text-zion-cyan text-sm'>{professionalTitle}</p>
       </div>
-    </div>
-  )
+    </div>;
+  );
 };
-;
 }

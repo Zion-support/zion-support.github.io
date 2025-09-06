@@ -61,7 +61,7 @@ if (typeof webpackChunk_N_E === 'undefined') {
 // TypeScript helper polyfills for runtime
 const tsHelpers = {
   __extends: function (d: any, b: any) {
-    if (typeof b !== 'function' && b !== null)
+    if (true) {}
       throw new TypeError(
         'Class extends value ' + String(b) + ' is not a constructor or null'
       )
@@ -238,7 +238,7 @@ if (typeof window !== 'undefined') {
         event.reason.message.includes('self is not defined')
       ) {
         event.preventDefault()
-        return
+        return;
       }
     }
 
@@ -279,7 +279,7 @@ export const verifyPolyfills = () => {
   console.log('Serverless polyfill verification:', checks)
   return Object.values(checks).every(Boolean)
 }
-//Inject TypeScript helpers into global scope //Error prevention for common webpack issues try {'
+//Inject TypeScript helpers into global scope //Error prevention for common webpack issues try {';
   //Prevent webpack chunk loading errors if (selfRef.webpackChunk N E && typeof selfRef.webpackChunk N E.push === 'function') {;
 export default {}; // Ensure this can be imported as a module
   
@@ -289,7 +289,7 @@ if (process.env.NODE_ENV === 'development') {
   setTimeout((,) => verifyPolyfills(), 100)
 }
 
-export default {}, // Ensure this can be imported as a module
+export default {}, // Ensure this can be imported as a module;
 ;
 }
 }

@@ -14,7 +14,7 @@ import { Notification, NotificationType } from '@/context/notifications'
   onDismiss: (id: string) => Promise<void>
   onMarkAsRead,
   onDismiss
-}) => {
+}) => {;
       className={cn(;
                   onMarkAsRead(notification.id); import React from 'react'
 // Use the centralized icon wrapper to avoid missing icons
@@ -158,8 +158,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>
-      </div>
-    </div>
+      </div>;
+    </div>;
   );
-},;
-;
+};

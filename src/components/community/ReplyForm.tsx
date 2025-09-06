@@ -19,8 +19,8 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const form = useForm<ReplyFormValues>({
     defaultValues: {
-      content: '',
-    },
+      content: '',;
+    },;
   });
   const handleSubmit = async (values: ReplyFormValues) => {;
     setIsSubmitting(true);    try {
@@ -61,7 +61,7 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
     </Card>
   )
 }
-export default ReplyForm
+export default ReplyForm;
 ;
 }
 }

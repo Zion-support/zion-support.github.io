@@ -31,8 +31,8 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   onUploadDeliverable
   isSubmitting
   onApprove,
-  onReject
-}) => {
+  onReject;
+}) => {;
   const [showAddForm, setShowAddForm] = useState(false);
   const handleSubmit = async (data: any) => {;
     await onCreateMilestone(data);    setShowAddForm(false)

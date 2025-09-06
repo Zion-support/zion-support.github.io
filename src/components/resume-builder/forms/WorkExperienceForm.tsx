@@ -12,8 +12,8 @@ import {
   FormControl,
   FormField,
   FormItem,
-  FormLabel,
-  FormMessage,;
+  FormLabel,;
+  FormMessage;
 } from '@/components/ui/form'; import { WorkExperience } from '@/types/resume'
 import { Loader2, Edit, Trash2 } from 'lucide-react'
 import { useResume } from '@/hooks/useResume'
@@ -98,8 +98,8 @@ export function WorkExperienceForm({
         setEditingId(null)
       }
     } catch (err: any) {
-      setError(err.message || 'An error occurred')
-    }
+      setError(err.message || 'An error occurred');
+    };
   };
   const handleEdit = (work: WorkExperience) => {;
     setEditingId(work.id!);    form.reset({

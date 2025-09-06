@@ -31,7 +31,7 @@ export function TalentCardSaveButton({
       })
       const returnTo = encodeURIComponent(router.asPath)
       router.push(`/auth/login?returnTo=${returnTo}`)
-      return
+      return;
     }
 
     setLocalIsSaved(!localIsSaved)
@@ -57,8 +57,7 @@ export function TalentCardSaveButton({
   )
 }variant: "default" 
 }) 
-}
-}/> </button>) 
+};
+}/> </button>) ;
 }";
 };
-;

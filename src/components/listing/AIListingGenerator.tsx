@@ -158,9 +158,8 @@ return (<div className="space-y-6" > <Card className="border border-zion-blue-li
   handleApply 
 }/>) 
 }</div>) 
-}'"
+}'";
 };
-;
 }
 }
 }

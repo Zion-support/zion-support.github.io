@@ -34,7 +34,7 @@ function TalentDashboardContent() {
   const { user } = useAuth()
   const [activeTab, setActiveTab] = useState('job-matches')
   const onboardingStatus = useOnboardingStatus()
-  const showAdvanced =
+  const showAdvanced = null;
     onboardingStatus.profileCompleted &&
     onboardingStatus.skillsAdded &&
     onboardingStatus.availabilitySet &&
@@ -211,8 +211,7 @@ function TalentDashboardContent() {
 export default function TalentDashboard() {
   return (
     <ProtectedRoute>
-      <TalentDashboardContent />
-    </ProtectedRoute>
+      <TalentDashboardContent />;
+    </ProtectedRoute>;
   );
 };
-;

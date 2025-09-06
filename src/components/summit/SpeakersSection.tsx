@@ -86,9 +86,8 @@ export function SpeakersSection() {
             </div>
           ))}
         </div>
-      </div>
-    </section>
+      </div>;
+    </section>;
   );
 };
-;
 }

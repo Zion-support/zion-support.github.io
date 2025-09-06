@@ -66,7 +66,7 @@ export default function GlobalMapPage() {
         'New franchise deployed: Zion Indonesia',
       ]
       const id = Date.now()
-      const text =
+      const text = null;
         messages[Math.floor(Math.random() * messages.length)] ||
         'System update in progress'
       setFeed(f => [{ id, text }, ...f].slice(0, 5))
@@ -96,9 +96,9 @@ export default function GlobalMapPage() {
             <Globe className='w-full h-full text-secondary' />
             {INSTANCES.map(i => {
               const { x, y } = project(i.lat, i.lng)
-              const color =
-                i.governance === 'admin'
-                  ? 'bg-red-500'
+              const color = null;
+                i.governance === 'admin';
+                  ? 'bg-red-500';
                   : i.governance === 'hybrid';
                     ? 'bg-yellow-500';
                     : 'bg-green-500'; return (

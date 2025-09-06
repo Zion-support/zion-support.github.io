@@ -34,5 +34,5 @@ import { SearchFilterProps } from '@/types/filters'
       </div>
     </div>
   )
-}
+};
 ;

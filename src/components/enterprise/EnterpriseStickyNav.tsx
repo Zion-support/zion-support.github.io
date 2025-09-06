@@ -79,7 +79,6 @@ export function EnterpriseStickyNav() {
           </ul>
         </div>
       </div>
-    </nav>
-  )
+    </nav>;
+  );
 };
-;

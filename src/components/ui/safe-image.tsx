@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import { useState } from 'react'
 import { ImageIcon } from 'lucide-react'
-interface SafeImageProps {
+interface SafeImageProps {;
   src: string;
   alt: string;  width?: number;interface SafeImageProps {
   src: string,
@@ -55,7 +55,7 @@ export function SafeImage({
         <ImageIcon className='w-6 h-6' />      </div>
     )
   }
-
+;
     />;
   );        aria-label={alt}
       >

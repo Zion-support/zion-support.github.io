@@ -88,5 +88,5 @@ export function Steps({ currentStep, className, children }: StepsProps) {
     </div>
   )
 }/> </div> </div> </div>) 
-}"}
+}"};
 ;

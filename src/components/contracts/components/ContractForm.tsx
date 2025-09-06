@@ -28,8 +28,7 @@ export type ContractFormValues = z.infer<typeof formSchema>
         values, 
         talent, 
         clientName, 
-  
-}
+  ;
+};
   );
 };
-;

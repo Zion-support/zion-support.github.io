@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { useToast } from '@/hooks/use-toast'
 import axios from 'axios'
-import { Loader2 } from 'lucide-react'
+import { Loader2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { logErrorToProduction } from '@/utils/productionLogger'; export function ITServiceRequestHero() { export function ITServiceRequestHero(...args[]):  {
   const [location, setLocation] = useState("")
@@ -44,7 +44,7 @@ import { logErrorToProduction } from '@/utils/productionLogger'; export function
   const features = [{ icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" },
     { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },
     { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },
-    { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" }
+    { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" };
   ];
 import { motion  } from 'framer-motion';
 import { Link  } from 'react-router-dom';"
@@ -78,7 +78,7 @@ export function ITServiceRequestHero() {
         description: 'Name, email and location are required.',
         variant: 'destructive',
       })
-      return
+      return;
     }
 
     setIsSubmitting(true)
@@ -220,7 +220,7 @@ export function ITServiceRequestHero() {
 }catch (err: any) {
   logErrorToProduction (err)
 toast ({
-}finally {
+}finally {;
   setIsSubmitting (false) ;
 };"
 py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020617) ]" > <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center" > <div className="md:h-full md:flex md:flex-col md:items-center md:justify-center" > <GradientHeading className="mb-6 text-4xl md:text-5xl text-center" > 24x7 Global IT Onsite Services </GradientHeading> <p className="text-lg text-zion-slate-light mb-8 max-w-md text-center" > Worldwide coverage and rapid dispatch of certified technicians. </p> </div> <div className="bg-zion-blue-light p-6 rounded-lg shadow-lg w-full max-w-md md:ml-auto" > <div className="flex flex-col md:flex-row items-center gap-4" > <Image <Input type="email" value= {

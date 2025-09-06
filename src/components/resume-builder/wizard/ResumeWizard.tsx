@@ -164,7 +164,6 @@ export function ResumeWizard() {
   nextStep 
 }onPrevStep= {
   prevStep 
-}/>) 
-}</Tabs> </CardContent> </Card> </div>) 
+}/>) ;
+}</Tabs> </CardContent> </Card> </div>) ;
 }'"};
-;

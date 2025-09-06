@@ -51,8 +51,8 @@ export const ExportToCSV = ({
               ? `"${cell.replace(/"/g, '""')}"`
               : cell
           )
-          .join(',')
-      ),
+          .join(',');
+      ),;
     ].join('\n');
     // Create download link;
     const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' })
@@ -142,7 +142,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     </Button>
   )
 }
-'"},
-
+'"},;
+;
   );
 };

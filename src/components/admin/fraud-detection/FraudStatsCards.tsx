@@ -55,7 +55,6 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
         </CardHeader>
       </Card>
     </div>
-  )
-}
+  );
+};
 ";
-;

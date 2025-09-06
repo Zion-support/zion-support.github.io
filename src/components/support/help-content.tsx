@@ -174,7 +174,6 @@ id: 'dispute-prevention',
         lastUpdated: '2023-12-05',
         tags: ['prevention', 'best practices', 'communication'],
       },
-    ],
-  },
+    ],;
+  },;
 ];
-;

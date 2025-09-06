@@ -186,7 +186,6 @@ export function UsageStats() {
         </div>
         <Button>Contact Us</Button>
       </div>
-    </div>
-  )
+    </div>;
+  );
 }"};
-;

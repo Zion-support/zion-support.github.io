@@ -1,6 +1,6 @@
   const isGuest = !auth?.isAuthenticated
   const handleSendMessage = async (messageContent: string) => {
-    if (!messageContent.trim()) return
+    if (!messageContent.trim()) return;
 import React, {
   useState,
   useEffect,
@@ -102,14 +102,14 @@ export function ChatAssistant({
     valueOrFn: Message[] | ((val: Message[],) => Message[]),
   ) => {
     if (isGuest) {
-      const newMessages =
+      const newMessages = null;
         valueOrFn instanceof Function
           ? valueOrFn(displayGuestMessages)
           : valueOrFn,
       setDisplayGuestMessages(newMessages),
       setStoredGuestMessages(newMessages), // Always update localStorage for guests
     } else {
-      const newMessages =
+      const newMessages = null;
         valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn,
       setLoggedInMessages(newMessages)
     }
@@ -299,7 +299,6 @@ export function ChatAssistant({
         </div>
       )}
     </div>
-  )
-}
+  );
 };
-;
+};

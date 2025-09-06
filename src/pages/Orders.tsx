@@ -6,9 +6,8 @@ import {
   Table,
   TableBody,
   TableCell,
-  TableHead,
-  TableHeader,
-;
+  TableHead,;
+  TableHeader;
 } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
 import Skeleton from '@/components/ui/skeleton';

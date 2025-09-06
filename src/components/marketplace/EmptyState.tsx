@@ -81,9 +81,9 @@ const defaultContent = {
 export function EmptyState({
   type,
   title,
-  description,
-  action,
-  icon,;
+  description,;
+  action,;
+  icon;
 }: EmptyStateProps) {;
   const { t } = useTranslation();  const content = defaultContent[type]
   const content = defaultContent[type]
@@ -169,7 +169,7 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
       />
   )
 } 
-}
+};
 ;
 }
 }

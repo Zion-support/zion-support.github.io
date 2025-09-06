@@ -232,7 +232,6 @@ export function FeatureHighlights() {
       </div>
     </section>
   )}
-
-'"`
-);
 ;
+'"`;
+);

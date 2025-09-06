@@ -56,5 +56,5 @@ export const MobileFeatureShowcase: React.FC = () => {
   )
 }
 '"},
-
+;
 };

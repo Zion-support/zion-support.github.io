@@ -20,7 +20,7 @@ interface MilestoneCardProps {
   description?: string
   amount: number
   status: string
-  dueDate?: string
+  dueDate?: string;
   onApprove?: (id: string) => Promise<void>;
   onReject?: (id: string) => Promise<void>; import React from 'react'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
@@ -144,7 +144,6 @@ export function MilestoneCard({
           )}
         </div>
       </CardFooter>
-    </Card>
-  )
+    </Card>;
+  );
 };
-;

@@ -13,7 +13,7 @@ onMatchSelect?: (match: any) => void
 className?: string 
 }if (!query.trim () ) {
   toast ({
-  return
+  return;
 }setIsMatchmaking (true)
 setHasSearched (true)
 serviceType
@@ -23,7 +23,7 @@ serviceType
   data: error 
 })
 toast ({
-  //Set empty matches to show no results found UI setMatches ([]) 
+  //Set empty matches to show no results found UI setMatches ([]) ;
 }finally {;
   setIsMatchmaking (false) ; import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
 interface AIMatchmakerProps {
@@ -48,7 +48,7 @@ export function AIMatchmaker({
         description: "Tell us what you're looking for so we can find matches.",
         variant: 'destructive',
       })
-      return
+      return;
     }
 
     setIsMatchmaking(true)
@@ -90,8 +90,8 @@ export function AIMatchmaker({
     >
       <CardHeader className='pb-2'>
         <CardTitle className='flex items-center text-white'>
-          <Sparkles className='h-5 w-5 mr-2 text-zion-cyan' />
-          AI Matchmaker
+          <Sparkles className='h-5 w-5 mr-2 text-zion-cyan' />;
+          AI Matchmaker;
         </CardTitle>;
         <p className='text-sm text-zion-slate-light'>;
           Describe what you&apos;re looking for and our AI will find the best

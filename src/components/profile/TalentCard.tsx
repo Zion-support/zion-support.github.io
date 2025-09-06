@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
-import Link from 'next/link'
+import Link from 'next/link';
 import { TalentProfile } from '@/types/talent';
 import Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import React and useState
@@ -222,9 +222,8 @@ export function TalentCard({
         </div>
       </div>
     </Card>
-  )
+  );
 };
-;
 }
 }
 }

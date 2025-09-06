@@ -10,8 +10,8 @@ import {
   Filter,
   SortAsc,
   Sparkles,
-  TrendingUp,
-  Star,;
+  TrendingUp,;
+  Star;
 } from 'lucide-react';
 import { SkeletonCard } from '@/components/ui/skeleton';
 import { ErrorState } from '@/components/jobs/applications/ErrorState';
@@ -66,7 +66,7 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
           <div className='text-sm text-muted-foreground'>Categories</div>
         </div>
       </div>
-    </CardContent>
+    </CardContent>;
   </Card>;
 );
 
@@ -573,7 +573,7 @@ export default function Marketplace() {;
       <AuthModal
         isOpen = {isAuthModalOpen,}
         onClose = {(,) => setIsAuthModalOpen(false),}
-        returnUrl={router.asPath} // Pass current path for better UX on return
+        returnUrl={router.asPath} // Pass current path for better UX on return;
       />
       {/* Header */}
       <motion.div

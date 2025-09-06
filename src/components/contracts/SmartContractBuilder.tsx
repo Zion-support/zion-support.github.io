@@ -33,7 +33,7 @@ export function SmartContractBuilder({
   // Convert ContractFormValues to contract content string
   
   const handleDeployContract = async () => {
-    if (!generatedContract) return
+    if (!generatedContract) return;
     try {
       setDeployStatus('deploying')
       const contractInfo = await deploySmartContract(generatedContract, deployOptions)
@@ -78,7 +78,7 @@ const ESCROW_AGREEMENT_ABI: ethers.InterfaceAbi = [// From Ownable
 ]
 interface SmartContractBuilderProps {
   isOpen: boolean
-  onClose: () => void
+  onClose: () => void;
   talent: TalentProfile;
   clientName: string; // Assuming clientName is passed as a prop
   onContractGenerated?: (contractContent: string) => void; // For Solidity
@@ -109,7 +109,7 @@ export function SmartContractBuilder({
   const [deployOptions, setDeployOptions] = useState<DeploymentOptions>({
     network: 'ethereum', // Default network
     useEscrow: true,
-    deployToChain: false // Default to not deploying to chain immediately
+    deployToChain: false // Default to not deploying to chain immediately;
 });
   const [deployStatus, setDeployStatus] = useState<string>(''); // e.g., 'deploying', 'deployed', 'error'
   const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null); // Existing from Solidity part

@@ -75,11 +75,10 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
             )}
           </CardContent>
         </Card>
-      ))}
-    </div>
+      ))};
+    </div>;
   );
 };
-;
 }
 }
 }

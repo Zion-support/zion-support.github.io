@@ -3,8 +3,8 @@ import FocusLock from 'react-focus-lock'
 import {
   Dialog,
   DialogContent,
-  DialogHeader,
-  DialogTitle,;
+  DialogHeader,;
+  DialogTitle;
 } from '@/components/ui/dialog'; import { Button } from '@/components/ui/button'; import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
   Dialog
@@ -21,7 +21,7 @@ import { Input } from '@/components/ui/input'
   FormMessage,
 } from '@/components/ui/form'
 import { useForm, type Resolver } from 'react-hook-form'
-import { yupResolver } from '@hookform/resolvers/yup'
+import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { SendIcon, Mail } from 'lucide-react'; import api from '@/services/apiClient'
 import { toast } from '@/hooks/use-toast'
@@ -91,7 +91,7 @@ export function ContactPublisherModal({  isOpen,  isOpen,
   const handleSend = async () => {
     if (!user) {
       setLoginOpen(true)
-      return
+      return;
     }
     const values = form.getValues()
     setIsSubmitting(true)
@@ -263,8 +263,7 @@ export function ContactPublisherModal({  isOpen,  isOpen,
       </FocusLock>
     </Dialog>
     <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
-    </>
-  ) </>
+    </>;
+  ) </>;
   );
 };
-;

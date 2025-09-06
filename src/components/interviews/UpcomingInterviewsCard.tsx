@@ -23,8 +23,8 @@ export function UpcomingInterviewsCard() {
               interview.status === 'confirmed' &&
               !isPast(parseISO(interview.scheduled_date))
           )
-          .sort(
-            (a, b) =>
+          .sort(;
+            (a, b) =>;
               parseISO(a.scheduled_date).getTime() -;
               parseISO(b.scheduled_date).getTime()          );
           .slice(0, 3); // Take only the next 3 interviews
@@ -105,7 +105,7 @@ export function UpcomingInterviewsCard() {
             const formattedDate = format(interviewDate, 'EEE, MMM d')
             const formattedTime = format(interviewDate, 'h:mm a')
             // Determine if interview is happening soon (within 30 minutes)            const now = new Date()
-            const isStartingSoon =
+            const isStartingSoon = null;
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
               interviewDate.getTime() > now.getTime()
             return (

@@ -68,7 +68,7 @@ export function isDevelopment(): boolean {
 export function isProduction(): boolean {
   return getEnv('NODE_ENV') === 'production'
 // Export the polyfilled process object
-export const processEnv =
+export const processEnv = null;
   typeof (globalThis as any).process !== 'undefined'
     ? (globalThis as any).process.env
     : {
@@ -79,7 +79,7 @@ export const processEnv =
       }
 console.log('✅ Environment polyfill loaded successfully')
 export default safeEnv
-export default safeEnv
+export default safeEnv;
 export default safeEnv;
 }
 }

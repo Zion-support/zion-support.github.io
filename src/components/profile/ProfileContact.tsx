@@ -19,8 +19,8 @@ export function ProfileContact({
   const handleSendMessage = (e: React.FormEvent) => {
     e.preventDefault()
     setIsSending(true)
-    // Here would be the actual API call to send the message
-    setTimeout(() => {
+    // Here would be the actual API call to send the message;
+    setTimeout(() => {;
       setIsSending(false);
       setMessage('');
       setSubject('');      toast({

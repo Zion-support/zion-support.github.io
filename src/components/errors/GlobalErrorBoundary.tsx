@@ -27,7 +27,7 @@ interface ErrorBoundaryProps {
   fallback?: ReactNode
   onError?: (error: Error, errorInfo: ErrorInfo) => void
   enableRetry?: boolean
-  maxRetries?: number
+  maxRetries?: number;
   showReportButton?: boolean;
   context?: string;  enableRetry?: boolean
   maxRetries?: number
@@ -102,7 +102,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     Sentry.withScope(scope => {
       scope.setTag(
         'errorBoundary',
-        this.props.context || 'GlobalErrorBoundary'
+        this.props.context || 'GlobalErrorBoundary';
       );
       scope.setLevel('error');      scope.setContext('errorInfo', {
         componentStack: errorInfo.componentStack,
@@ -287,11 +287,11 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
 
   private retry = () => {
     if (this.state.retryCount >= (this.props.maxRetries || 3)) {
-      return
+      return;
     }
 
     const retryDelay = Math.pow(2, this.state.retryCount) * 1000; // Exponential backoff
-      return
+      return;
     }
 
     const retryDelay = Math.pow(2, this.state.retryCount) * 1000 // Exponential backoff
@@ -332,9 +332,8 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     }
   }
   private reportError = async () => {
-    if (!this.state.error || !this.state.errorId) return
-    if (!this.state.error || !this.state.errorId) return
-
+    if (!this.state.error || !this.state.errorId) return;
+    if (!this.state.error || !this.state.errorId) return;
     try {
       await navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
       // Could show a toast notification here
@@ -344,8 +343,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
   }
 
   private reportError = async () => {
-    if (!this.state.error || !this.state.errorId) return
-
+    if (!this.state.error || !this.state.errorId) return;
     try {
       // Report to your error reporting service
       const response = await fetch('/api/error-report', {
@@ -396,7 +394,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
 
       const severity = this.getErrorSeverity(this.state.error)
       const suggestion = this.getErrorSuggestion(this.state.error)
-      const canRetry =
+      const canRetry = null;
         this.props.enableRetry !== false &&
         this.state.retryCount < (this.props.maxRetries || 3)
       return (
@@ -628,5 +626,5 @@ export default GlobalErrorBoundary
   return WrappedComponent
 }
 
-export default GlobalErrorBoundary
+export default GlobalErrorBoundary;
 ;

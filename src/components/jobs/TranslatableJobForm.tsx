@@ -45,10 +45,10 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         description: t('translation.add_content_first'),
         variant: "destructive"
       })
-      return
+      return;
           variant: "destructive"
       })
-      return
+      return;
         title: t('translation.translation_success'),
         description: t('translation.content_translated')
       })
@@ -63,8 +63,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   }
   // Ensure all translations are available
   const ensureAllTranslations = async () => {
-    const promises = []
-}
+    const promises = [];
+};
   );
 };
-;

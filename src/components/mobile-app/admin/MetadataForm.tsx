@@ -17,8 +17,8 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
       if (value && !keywords.includes(value)) {
         setValue("keywords", [...keywords, value])
         e.currentTarget.value = ""
-      }
-    }
+      };
+    };
   };
   const maxDescriptionLength = platform === "ios" ? 4000 : 4000;
 };  const removeKeyword = (keyword: string,) => {
@@ -147,5 +147,4 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
       </CardContent>
     </Card>
   )
-},
-;
+};

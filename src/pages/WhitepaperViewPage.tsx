@@ -41,7 +41,7 @@ const WhitepaperViewPage: React.FC = () => {
       if (!id) {
         setError("No whitepaper ID provided."),
         setLoading(false),
-        return
+        return;
       }
       setLoading(true),
       setError(null),
@@ -131,6 +131,5 @@ const WhitepaperViewPage: React.FC = () => {
     </div>
   )
 },
-
-export default WhitepaperViewPage,;
 ;
+export default WhitepaperViewPage;

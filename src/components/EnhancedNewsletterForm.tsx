@@ -14,12 +14,12 @@ export function EnhancedNewsletterForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     const now = Date.now()
-    if (now - lastSubmit.current < 1000) return
+    if (now - lastSubmit.current < 1000) return;
     lastSubmit.current = now
     const trimmed = email.trim()
     if (!EMAIL_REGEX.test(trimmed)) {
       toast.error('Invalid email')
-      return
+      return;
     }
 
     setIsSubmitting(true)
@@ -65,8 +65,8 @@ export function EnhancedNewsletterForm() {
           </p>
         </div>
       </div>
-      {isSubmitted ? (
-        <div className='text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40'>
+      {isSubmitted ? (;
+        <div className='text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40'>;
           <p className='text-white font-medium'>Thank you for subscribing!</p>;
           <p className='text-zion-slate-light mt-1'>;
             We&apos;ll keep you updated with the latest from Zion.

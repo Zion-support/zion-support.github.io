@@ -415,8 +415,7 @@ export default function ZionHireAI() {
             </Button>
           </div>
         </section>
-      </main>
-    </>
+      </main>;
+    </>;
   );
 };
-;

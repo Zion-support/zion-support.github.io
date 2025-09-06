@@ -77,9 +77,8 @@ export function EnterpriseFeatures() {
             </div>
           ))}
         </div>
-      </div>
-    </section>
+      </div>;
+    </section>;
   );
 };
-;
 }

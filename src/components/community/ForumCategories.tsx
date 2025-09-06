@@ -50,7 +50,7 @@ export const ForumCategories = () => {
     category => !category.adminOnly || isAdmin
   )
   return (
-    <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">
+    <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">;
       {visibleCategories.map((category) => {;
         const Icon = iconMap[category.icon as keyof typeof iconMap]; return (
           <Link key={category.id} href={`/community/category/${category.id}`}>
@@ -74,5 +74,5 @@ export const ForumCategories = () => {
 export default ForumCategories
 "
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin'
-export default ForumCategories
+export default ForumCategories;
 ;

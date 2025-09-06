@@ -136,8 +136,7 @@ function ExperienceStep() {
   }
   const removeSkill = (id: string,) => {
     setSkills(skills.filter(skill => skill.id !== id))
-  }
-}
+  };
+};
   );
 };
-;

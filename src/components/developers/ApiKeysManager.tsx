@@ -68,18 +68,18 @@ export function ApiKeysManager() {
     fetchApiKeys()
   })
   const handleCreateKey = async () => {
-    if (keyName.trim() === '' || selectedScopes.length === 0) return
+    if (keyName.trim() === '' || selectedScopes.length === 0) return;
     await createApiKey(keyName, selectedScopes)
     setShowCreateDialog(false)
-    setKeyName('')
-    setSelectedScopes([]) }
+    setKeyName('');
+    setSelectedScopes([]) };
   const handleRegenerateKey = async (keyId: string) => {;
     await regenerateApiKey(keyId);
     setShowRegenerateConfirm(null);  useState(() => {
     fetchApiKeys()
   })
   const handleCreateKey = async () => {
-    if (keyName.trim() === "" || selectedScopes.length === 0) return
+    if (keyName.trim() === "" || selectedScopes.length === 0) return;
     await createApiKey(keyName, selectedScopes)
     setShowCreateDialog(false)
     setKeyName("")

@@ -24,8 +24,8 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   )
   const [proposalLink, setProposalLink] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [activeTab, setActiveTab] = useState<string>("message")
-  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null)
+  const [activeTab, setActiveTab] = useState<string>("message");
+  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
   const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
   const handleResumeSelected = (resume: ResumeOption) => {;
     setSelectedResume(resume);    setSelectedResumeId(resume.id)
@@ -37,7 +37,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
         description: "Please enter a message before applying.",
         variant: "destructive"
       })
-      return
+      return;
     }
     
     try {
@@ -161,7 +161,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   )
   if (!message.trim () ) {
   toast ({
-  return
+  return;
 }//First submit the application to the job applications table const applicationSuccess = await applyToJob (job.id, message, selectedResume && selectedResume.type === 'ai resume'? selectedResumeId || undefined : undefined, selectedResume && selectedResume.type === 'custom upload'? selectedResume.file : undefined)
 if (!applicationSuccess) {
 }//Format message with proposal link if provided let fullMessage = message

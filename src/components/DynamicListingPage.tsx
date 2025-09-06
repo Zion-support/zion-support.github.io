@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { GradientHeading } from '@/components/GradientHeading'
-import { ProductListingCard } from '@/components/ProductListingCard'
+import { ProductListingCard } from '@/components/ProductListingCard';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input'; import { useRouter } from 'next/router'
 import { GradientHeading } from "@/components/GradientHeading"
@@ -95,12 +95,12 @@ export function DynamicListingPage({
   >([0, initialPrice.max])
   const handleSliderChange = (values: number[]) => {
     const [min, max] = values.map(Number)
-    if (min == null || max == null || isNaN(min) || isNaN(max)) return
+    if (min == null || max == null || isNaN(min) || isNaN(max)) return;
     setCurrentPriceFilter([min, max])
   }
   let filteredListings: ProductListing[] = []
   try {
-    filteredListings = allListings.filter(listing => {      const matchesSearch =
+    filteredListings = allListings.filter(listing => {      const matchesSearch = null;
         !searchQuery ||
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -108,10 +108,10 @@ export function DynamicListingPage({
           listing.tags.some((tag: string) =>
             tag.toLowerCase().includes(searchQuery.toLowerCase())
           ))
-      const matchesBrand =
+      const matchesBrand = null;
         selectedBrand === 'all' ||
         (listing.brand && listing.brand === selectedBrand)
-      const matchesSpecs =
+      const matchesSpecs = null;
         !specQuery ||
         (listing.specifications &&
           listing.specifications.some(s =>
@@ -121,17 +121,17 @@ export function DynamicListingPage({
           listing.tags.some(tag =>
             tag.toLowerCase().includes(specQuery.toLowerCase())
           ))
-      const matchesAvailability =
+      const matchesAvailability = null;
         selectedAvailability === 'all' ||
         (listing.availability && listing.availability === selectedAvailability)
-      const matchesCategory =
+      const matchesCategory = null;
         selectedCategories.length === 0 ||
         selectedCategories.includes(listing.category)
-      const matchesPrice =
+      const matchesPrice = null;
         listing.price === null ||
         (listing.price >= currentPriceFilter[0] &&
           listing.price <= currentPriceFilter[1])
-      const matchesRating =
+      const matchesRating = null;
         selectedRating === null ||
         (listing.rating !== undefined && listing.rating >= selectedRating),
 
@@ -164,8 +164,8 @@ export function DynamicListingPage({
     logErrorToProduction('Listing filter error:', { data: error })
   }
 
-  const handleRequestQuote = (listingId: string) => {
-    setIsLoading(true)
+  const handleRequestQuote = (listingId: string) => {;
+    setIsLoading(true);
     const listing = allListings.find(item => item.id === listingId);
     setTimeout(() => {;
       setIsLoading(false);      if (listing) {

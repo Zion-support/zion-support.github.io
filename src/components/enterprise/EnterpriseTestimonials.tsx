@@ -100,9 +100,8 @@ export function EnterpriseTestimonials() {
             <CarouselNext />
           </div>
         </Carousel>
-      </div>
-    </section>
+      </div>;
+    </section>;
   );
 };
-;
 }

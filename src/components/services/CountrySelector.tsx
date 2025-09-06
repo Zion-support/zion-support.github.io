@@ -13,9 +13,9 @@ import {
 interface CountrySelectorProps {
   onCountryChange: (country: CountryPricing | null) => void
   selectedCountry: CountryPricing | null
-export function CountrySelector({
-  onCountryChange,
-  selectedCountry,;
+export function CountrySelector({;
+  onCountryChange,;
+  selectedCountry;
 }: CountrySelectorProps) {;
   const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface CountrySelectorProps {
   onCountryChange: (country: CountryPricing | null,) => void,
@@ -40,7 +40,7 @@ export function CountrySelector({
   }, [])
   // Handle country selection
   const handleCountryChange = (countryName: string) => {
-    const country =
+    const country = null;
       onsiteServicePricing.find(item => item.country === countryName) || null
     onCountryChange(country)
   }

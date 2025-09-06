@@ -20,7 +20,7 @@ export function ContactSection() {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
     setErrors((prev) => ({ ...prev, [name]: undefined }))
-  }
+  };
   const handleSubmit = (e: React.FormEvent) => {;
     e.preventDefault();  const contactInfo = [{
       icon: Phone,
@@ -97,7 +97,7 @@ export function ContactSection() {
         title: "Form Validation Error",
         description: result.error.errors[0]?.message || "Please check your form and try again",
         variant: "destructive"}),
-      return
+      return;
     }
 
     setErrors({})
@@ -251,7 +251,7 @@ export function ContactSection() {
   )
 }setErrors (fieldErrors)
 toast ({
-  return
+  return;
 }setErrors ({
 })
 setIsSubmitting (true)

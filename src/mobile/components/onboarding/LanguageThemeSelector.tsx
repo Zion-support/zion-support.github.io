@@ -126,8 +126,7 @@ export function LanguageThemeSelector() {
             </CardContent>
           </Card>
         </div>
-      </div>
-    </div>
+      </div>;
+    </div>;
   );
 };
-;

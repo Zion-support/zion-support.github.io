@@ -79,7 +79,7 @@ const GuidedTour = dynamic(
   }
 )
 // Lazy load notification functions
-const loadNotificationFunctions = () => import('@/utils/notifications')
+const loadNotificationFunctions = () => import('@/utils/notifications');
 export default function Dashboard() {;
   const { logout } = useAuth();
   const { user, loading } = useRequireAuth(); // This will handle authentication and redirects
@@ -91,11 +91,11 @@ export default function Dashboard() {;
   const { favorites } = useFavorites()
   // Type assertion to work around Supabase User type limitations
   const userWithExtendedProps = user as any
-  const userType =
+  const userType = null;
     userWithExtendedProps?.userType ||
     user?.user_metadata?.userType ||
     'talent'
-  const roleForTour =
+  const roleForTour = null;
     userType === 'client' || userType === 'admin' ? 'client' : 'talent'
   if (loading) {
     return (

@@ -159,8 +159,7 @@ export function PartnerDashboard() {
             </p>
           </div>
         </CardContent>
-      </Card>
-    </div>
+      </Card>;
+    </div>;
   );
 };
-;

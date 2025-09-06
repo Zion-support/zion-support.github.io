@@ -1,4 +1,4 @@
-import React, { memo, useMemo, useCallback } from 'react'
+import React, { memo, useMemo, useCallback } from 'react';
 // Higher-order component for performance optimization;
 export const withPerformanceOptimization = <P extends object>(; Component: React.ComponentType<P>, options: {, memo?: boolean; memoDeps?: (props: P) = > any[]; displayName?: string} = {}
 ) = > {const { memo: useMemo = true, memoDeps, displayName } = options; let OptimizedComponent = Component; if (useMemo) {OptimizedComponent = memo(Component, (prevProps, nextProps) = > {; if (memoDeps) {; const prevDeps = memoDeps(prevProps); const nextDeps = memoDeps(nextProps); return prevDeps.every((dep, index) = > dep = = = nextDeps[index])}; return false, // Always re-render if no custom comparison})}; if (displayName) {OptimizedComponent.displayName = displayName}; return OptimizedComponent}
@@ -6,7 +6,7 @@ export const withPerformanceOptimization = <P extends object>(; Component: React
 export const useExpensiveCalculation = <T>(; calculation: () = > T, deps: React.DependencyList,
 ): T = > {return useMemo(calculation, deps)}
 // Hook for stable callbacks
-export const useStableCallback = <T extends (...args: any[]) = > any>(, callback: T, deps: React.DependencyList, ): T = > {, return useCallback(callback, deps)}}
+export const useStableCallback = <T extends (...args: any[]) = > any>(, callback: T, deps: React.DependencyList, ): T = > {, return useCallback(callback, deps)}};
 // Lazy loading wrapper with intersection observer;
 export const LazyLoadWrapper: React.FC<{, children: React.ReactNode, fallback?: React.ReactNode; threshold?: number; rootMargin?: string}>  = ({ children, fallback = null, threshold = 0.1; rootMargin = '50px' }) = > {const [isVisible, setIsVisible] = React.useState(false); const [hasLoaded, setHasLoaded] = React.useState(false); const ref = React.useRef<HTMLDivElement>(null); React.useEffect(() = > {; const observer = new IntersectionObserver(; ([entry]) = > {; if (entry.isIntersecting && !hasLoaded) {; setIsVisible(true); setHasLoaded(true)}} { threshold, rootMargin }; ); if (ref.current) {observer.observe(ref.current)}; return () = > observer.disconnect()}, [threshold, rootMargin, hasLoaded]); return ( <div ref = {ref}>, {isVisible ? children: fallback}, </div>)}
 // Image optimization component
@@ -41,7 +41,7 @@ export const usePerformanceMetrics = () => {
   })
   const recordRender = useCallback((renderTime: number) => {, setMetrics(prev => ({,
       renderCount: prev.renderCount + 1, lastRenderTime: renderTime,
-      averageRenderTime: (prev.averageRenderTime * prev.renderCount + renderTime) / (prev.renderCount + 1),
+      averageRenderTime: (prev.averageRenderTime * prev.renderCount + renderTime) / (prev.renderCount + 1),;
     }));
   }, []); return { metrics, recordRender }
 }

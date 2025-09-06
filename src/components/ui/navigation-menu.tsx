@@ -112,7 +112,7 @@ export {
   NavigationMenuItem,
   NavigationMenuContent,
   NavigationMenuTrigger,
-  NavigationMenuLink,
-  NavigationMenuIndicator,
-  NavigationMenuViewport,;
+  NavigationMenuLink,;
+  NavigationMenuIndicator,;
+  NavigationMenuViewport;
 };

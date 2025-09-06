@@ -104,10 +104,9 @@ export function ProfileAvailability({
             ))}
           </div>
         </div>
-      )}
-    </div>
+      )};
+    </div>;
   );
 };
-;
 }
 }

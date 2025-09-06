@@ -5,7 +5,7 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button'; import { Gift, ArrowRight, ExternalLink } from 'lucide-react'
   Dialog,
@@ -17,7 +17,7 @@ import { Button } from '@/components/ui/button'; import { Gift, ArrowRight, Exte
 } from '@/components/ui/dialog'
 type RewardOption = {
   id: string
-title: string
+title: string;
 description: string;
 cost: number;'
 type: 'credit' | 'feature' | 'course' 
@@ -50,7 +50,7 @@ export function RedeemTokensCard() {
   const { wallet, spendTokens } = useWallet()
   const [open, setOpen] = useState(false)
   const handleRedeem = async (option: RewardOption) => {
-    if (!wallet || wallet.balance < option.cost) return
+    if (!wallet || wallet.balance < option.cost) return;
     await spendTokens(option.cost, `Redeemed: ${option.title}`)
     setOpen(false)
   }
@@ -123,6 +123,5 @@ export function RedeemTokensCard() {
         </Dialog>
       </CardContent>
     </Card>
-  )
+  );
 };
-;

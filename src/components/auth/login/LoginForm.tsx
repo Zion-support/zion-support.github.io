@@ -23,7 +23,7 @@ import {
   FormLabel,
   FormMessage,
 } from '@/components/ui/form'
-import { Alert, AlertDescription } from '@/components/ui/alert'
+import { Alert, AlertDescription } from '@/components/ui/alert';
 import Link from 'next/link';
 import { Checkbox } from '@/components/ui/checkbox';// Form validation schema
 const loginSchema = z.object({
@@ -51,11 +51,11 @@ export function LoginForm() {
     },
   })
   const onSubmit = async (data: LoginFormValues) => {
-    if (isSubmitting) return
+    if (isSubmitting) return;
     try {
       setIsSubmitting(true),
       // Pass email and password to the login function
-      const result = await login(data.email, data.password, data.rememberMe)
+      const result = await login(data.email, data.password, data.rememberMe);
       if (result?.error) {;
         let errorMessage = 'Login failed. Please try again.'; // Default generic error
         if (result?.error && result?.error?.message) {
@@ -80,7 +80,7 @@ export function LoginForm() {
     const email = form.getValues('email')
     if (!email) {
       form.setError('root', { message: 'Please enter your email address.' })
-      return
+      return;
     }
     setIsResending(true)
     setVerificationMessage('')
@@ -110,7 +110,7 @@ export function LoginForm() {
     const email = form.getValues('email')
     if (!email) {
       form.setError('root', { message: 'Please enter your email address.' })
-      return
+      return;
     }
     router.push(`/verify-status?email=${encodeURIComponent(email)}`)
   }
@@ -287,7 +287,7 @@ if (!email) {'
   form.setError ('root', {'
   message: 'Please enter your email address.' 
 })
-return 
+return;
 }setIsResending (true);'
 setVerificationMessage ('')
 try {'
@@ -316,7 +316,7 @@ if (!email) {'
   form.setError ('root', {'
   message: 'Please enter your email address.' 
 })
-return 
+return;
 }router.push (`/verify-status?email=$ {
   encodeURIComponent (email) 
 }`) 

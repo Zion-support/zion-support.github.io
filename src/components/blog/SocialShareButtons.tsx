@@ -5,7 +5,7 @@ import { toast } from '@/hooks/use-toast'
 interface SocialShareButtonsProps {
   title: string
 export function SocialShareButtons({ title }: SocialShareButtonsProps) {
-  const shareUrl =
+  const shareUrl = null;
     typeof window !== 'undefined'
       ? encodeURIComponent(window.location.href)
       : ''
@@ -29,7 +29,7 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
     )
   }
   const copyLink = () => {
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined') return;
     navigator.clipboard
       .writeText(window.location.href)
       .then(() => toast.success('Link copied to clipboard'))
@@ -70,8 +70,7 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
           <span>{btn.label}</span>
         </Button>
       ))}
-    </div>
-  )
+    </div>;
+  );
 };
 };
-;

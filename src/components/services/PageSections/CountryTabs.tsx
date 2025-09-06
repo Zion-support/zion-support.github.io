@@ -136,8 +136,7 @@ export function CountryTabs({
       </TabsContent>
     </Tabs>
   )
-  )
-}
   );
 };
-;
+  );
+};

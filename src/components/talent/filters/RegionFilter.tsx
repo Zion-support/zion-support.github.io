@@ -91,7 +91,6 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
 }className="flex items-center" > <Checkbox > {
   region.label 
 }</label> </div>) ) 
-}</div>) 
-}</div>) 
+}</div>) ;
+}</div>) ;
 }"};
-;

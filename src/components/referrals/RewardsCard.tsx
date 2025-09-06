@@ -135,9 +135,8 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
           ))}
         </div>
       </CardContent>
-    </Card>
-  )
+    </Card>;
+  );
 };
-;
 }
 }

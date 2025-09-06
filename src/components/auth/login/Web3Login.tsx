@@ -14,7 +14,7 @@ export function Web3Login() {
     if (!isWalletSystemAvailable) {
       toast("Web3 login unavailable", {
         description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."}),
-      return
+      return;
     }
 
     try {
@@ -24,7 +24,7 @@ export function Web3Login() {
       if (!ethereum) {
         toast("Web3 wallet not found", {
           description: "Please install MetaMask or another compatible wallet."}),
-        return
+        return;
       }
       
       await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow
@@ -40,8 +40,7 @@ export function Web3Login() {
   const buttonDisabled = isLoading || !isWalletSystemAvailable
   const buttonTitle = !isWalletSystemAvailable
     ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured."
-    : ""
-}
+    : "";
+};
   );
 };
-;

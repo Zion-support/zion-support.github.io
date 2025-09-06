@@ -909,8 +909,8 @@ export const Icon: React.FC<IconProps> = ({
     logWarn(`Icon "${name}" not found.`)
     return null
   }
-
-  // Render the dynamically selected Lucide icon component
+;
+  // Render the dynamically selected Lucide icon component;
   return <LucideIconComponent size={size} className={className} {...props} />;
 };
 export default Icon; // Default export the Icon component;
@@ -918,5 +918,5 @@ export const Icons = iconMap; // Export the map if you need to refer to availabl
 export default Icon, // Default export the Icon component
 export const Icons = iconMap, // Export the map if you need to refer to available icons
 export default Icon, // Default export the Icon component
-export const Icons = iconMap, // Export the map if you need to refer to available icons
+export const Icons = iconMap, // Export the map if you need to refer to available icons;
 ;

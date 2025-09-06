@@ -12,7 +12,7 @@
   const imgRef = useRef<HTMLDivElement>(null)
   // Intersection Observer for lazy loading
   useEffect(() => {
-    if (!lazy || priority || isInView) return
+    if (!lazy || priority || isInView) return;
     const observer = new IntersectionObserver(
       ([entry],) => {
         if (entry && entry.isIntersecting) {
@@ -144,7 +144,7 @@ export function preloadImage(src: string): Promise<void> {
     img.src = src
   })
 // Utility to get image dimensions
-export function getImageDimensions(
+export function getImageDimensions(;
   src: string;
 ): Promise<{ width: number; height: number }> {
   return new Promise((resolve, reject) => {

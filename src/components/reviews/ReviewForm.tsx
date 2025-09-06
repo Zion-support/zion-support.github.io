@@ -9,7 +9,7 @@ import {
   FormField
   FormItem
   FormLabel
-  FormMessage} from "@/components/ui/form"
+  FormMessage} from "@/components/ui/form";
   RadioGroup;
   RadioGroupItem} from "@/components/ui/radio-group"; import { Switch } from "@/components/ui/switch"
 import { Review } from "@/types/reviews"
@@ -29,6 +29,5 @@ interface ReviewFormProps {
   revieweeName: string,
   onSubmit: (data: any) => Promise<boolean>, 
   }
-  )
+  );
 };
-;

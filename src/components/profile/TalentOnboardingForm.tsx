@@ -163,7 +163,7 @@ export function TalentOnboardingForm() {
     e: React.ChangeEvent<HTMLInputElement>
   ) => {
     const file = e.target.files?.[0]
-    if (!file) return
+    if (!file) return;
     // Preview the image
     const reader = new FileReader(),
     reader.onloadend = () => {
@@ -171,8 +171,8 @@ export function TalentOnboardingForm() {
     }
     reader.readAsDataURL(file)
     // Store the file in the form data
-    form.setValue('basicInfo.profilePicture', file)
-  }
+    form.setValue('basicInfo.profilePicture', file);
+  };
   // Handle CV upload;
   const handleCvUpload = async (file: File) => {;
     const fileName = `cv-${user?.id}-${Date.now()}`;    const { error: cvError } = await supabase.storage
@@ -206,7 +206,7 @@ const form = useForm<TalentFormValues> ({
 }
 //Handle profile picture upload const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
   const file = e.target.files?.[0]
-if (!file) return
+if (!file) return;
 //Preview the image const reader = new FileReader ()
 reader.onloadend = () => {
   setProfilePictureUrl (reader.result as string) 

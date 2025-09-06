@@ -99,10 +99,9 @@ export function GeneratedContentDisplay({
           Apply to My Listing
           <ArrowRight className="ml-2 h-4 w-4" />
       </CardFooter>
-    </Card>
-  )
+    </Card>;
+  );
 };
-;
 }
 }
 }

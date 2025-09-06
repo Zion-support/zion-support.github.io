@@ -73,7 +73,7 @@ export function TeamManagement() {
         description: 'Please enter an email address for the new team member.',
         variant: 'destructive',
       })
-      return
+      return;
     }
 
     toast({
@@ -221,11 +221,10 @@ export function TeamManagement() {
         </Table>
       </div>
     </div>
-  )
-  //In a real app, this would make an API call to remove the member toast ({
+  );
+  //In a real app, this would make an API call to remove the member toast ({;
 };
-  //In a real app, this would make an API call to resend the invitation toast ({;
-};"
+  //In a real app, this would make an API call to resend the invitation toast ({};"
   handleAddMember "
 }>Send Invitation</Button> </DialogFooter> </DialogContent> </Dialog> </div> <div className=" rounded-md border"> <Table> <TableHeader> <TableRow> <TableHead>Name</TableHead> <TableHead>Role</TableHead> <TableHead>Status</TableHead> <TableHead>Last Active</TableHead> <TableHead className=" text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
   teamMembers.map ( (member) => (<TableRow key= {

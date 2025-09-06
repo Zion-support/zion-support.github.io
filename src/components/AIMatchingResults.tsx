@@ -10,7 +10,7 @@ import { cn } from '@/lib/utils'
 interface AIMatchingResultsProps {
   matches: MatchResultItem[]
   onSelectMatch?: (match: MatchResultItem) => void
-  isLoading?: boolean
+  isLoading?: boolean;
   projectDescription?: string;
   serviceType?: string;interface AIMatchingResultsProps {
   matches: MatchResultItem[],
@@ -199,6 +199,6 @@ export function AIMatchingResults({
       </Tabs>
     </div>
   )
-}
+};
 ;
 }

@@ -16,12 +16,12 @@ import { ProfileContact } from '@/components/profile/ProfileContact';
 import {
   Dialog,
   DialogContent,
-  DialogHeader,
-  DialogTitle,;
+  DialogHeader,;
+  DialogTitle;
 } from '@/components/ui/dialog';
 import { useCurrency } from '@/hooks/useCurrency';
 export default function ListingDetail() {
-  // useParams may be untyped in this environment, so avoid passing a
+  // useParams may be untyped in this environment, so avoid passing a;
   // type argument and cast the result instead to prevent TS2347 errors.;
   const router = useRouter();
   const id = router.query.id as string;  const [selectedImageIndex, setSelectedImageIndex] = useState(0);  const [isLoading, setIsLoading] = useState(false);

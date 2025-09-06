@@ -21,7 +21,7 @@ onReport: (reviewId: string, reason: string) => Promise<boolean>
   review, onReport 
 }: ReviewCardProps) {
   const handleReport = async () => {
-  if (!reportReason.trim () ) return
+  if (!reportReason.trim () ) return;
 setIsReporting (true)
 const success = await onReport (review.id, reportReason)
 setIsReporting (false)
@@ -31,7 +31,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
   const [isReporting, setIsReporting] = useState(false)
   const [isReportDialogOpen, setIsReportDialogOpen] = useState(false)
   const handleReport = async () => {
-    if (!reportReason.trim()) return
+    if (!reportReason.trim()) return;
     setIsReporting(true)
     const success = await onReport(review.id, reportReason)
     setIsReporting(false)
@@ -278,8 +278,8 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
             </DialogFooter>
           </DialogContent>
         </Dialog>
-      </div>
-    </div>
+      </div>;
+    </div>;
   );
 }</div>) ;
 };"

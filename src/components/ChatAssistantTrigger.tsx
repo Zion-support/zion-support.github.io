@@ -13,10 +13,10 @@ export function ChatAssistantTrigger() {
         method: "POST",
         headers: {
           "Content-Type": "application/json"}
-        body: JSON.stringify({ 
-          messages: [{ role: "user", content: message }] 
+        body: JSON.stringify({ ;
+          messages: [{ role: "user", content: message }] ;
         })});
-            avatarUrl: 'https://placehold.co/64x64?text=AI',;
+            avatarUrl: 'https://placehold.co/64x64?text=AI';
             role: 'Virtual Assistant';      if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
       }

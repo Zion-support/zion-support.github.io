@@ -15,7 +15,7 @@ import {
   AlertTriangle,
   ArrowLeft,
 } from 'lucide-react'
-import { toast } from '@/hooks/use-toast'
+import { toast } from '@/hooks/use-toast';
 import { useAuth } from '@/hooks/useAuth';
 import { getStripe } from '@/utils/getStripe'; import { useRouter } from 'next/router'
 import { Badge } from "@/components/ui/badge"
@@ -56,7 +56,7 @@ warranty?: string
 returnPolicy?: string 
 }return {
   id: item.id, name: item.title, description: item.description, brand: item.brand || 'Unknown', category: item.category, subcategory: item.subcategory, images: item.images || ['https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'], price: item.price || 0, currency: item.currency || '$', rating: item.rating, reviewCount: item.reviewCount, inStock: item.availability === 'In Stock' || !item.availability, expectedShipping: item.availability || 'In Stock',  specifications: (item.specifications || []) .map ( (spec) => ({'
-  name: spec, value: '' 
+  name: spec, value: '' ;
 }) );
 features: item.tags || [];'
 warranty: '1 Year Manufacturer Warranty';'
@@ -114,7 +114,7 @@ export default function EquipmentDetail() {
       if (!id) {
         setLoading(false)
         setError('No equipment ID provided')
-        return
+        return;
       }
 
       try {
@@ -125,7 +125,7 @@ export default function EquipmentDetail() {
         if (equipmentFromSample) {
           setEquipment(equipmentFromSample)
           setLoading(false)
-          return
+          return;
         }
 
         // Try to get from sessionStorage (for dynamically generated equipment)
@@ -148,7 +148,7 @@ export default function EquipmentDetail() {
 
               setEquipment(equipmentData)
               setLoading(false)
-              return
+              return;
             }
           } catch (storageError) {
             logErrorToProduction('Error reading from sessionStorage:', {
@@ -176,7 +176,7 @@ export default function EquipmentDetail() {
         description: 'Please log in to add items to cart',
         variant: 'destructive',
       })
-      return
+      return;
     }
 
     setIsAdding(true)
@@ -563,6 +563,5 @@ return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen
   equipment.returnPolicy 
 }</p> </div> </div>) 
 }</div> </motion.div> </div> </div> </div> </>) 
-}'"}
-;
+}'"};
 ;

@@ -75,7 +75,7 @@ export function InterviewRequestForm({
         description: 'Please log in to schedule an interview',
         variant: 'destructive',
       })
-      return
+      return;
     }
 
     setIsSubmitting(true)
@@ -380,8 +380,8 @@ export function InterviewRequestForm({
   logErrorToProduction ('Failed to schedule interview:', {
   data: error 
 })
-toast ({
-}finally {
+toast ({;
+}finally {;
   setIsSubmitting (false) ;
 }";
 }const timeSlots = [ "09:00", "09:30", "10:00", "10:30", "11:00", "11:30";"

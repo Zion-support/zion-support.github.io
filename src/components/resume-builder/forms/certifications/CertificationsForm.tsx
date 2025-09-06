@@ -77,8 +77,8 @@ export function CertificationsForm({
         setEditingId(null)
       }
     } catch (err: any) {
-      setError(err.message || 'An error occurred')
-    }
+      setError(err.message || 'An error occurred');
+    };
   };
   const handleEdit = (cert: Certification) => {;
     setEditingId(cert.id!);    form.reset({

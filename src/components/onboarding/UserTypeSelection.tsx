@@ -68,10 +68,9 @@ export function UserTypeSelection({
             </Button>
           )
         })}
-      </div>
-    </div>
+      </div>;
+    </div>;
   );
 };
-;
 }
 }

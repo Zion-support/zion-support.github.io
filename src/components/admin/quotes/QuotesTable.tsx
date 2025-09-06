@@ -6,13 +6,13 @@ import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'import {
   TableBody, 
   TableCell, 
   TableHead, 
-  TableHeader, 
+  TableHeader, ;
   TableRow ;
 } from "@/components/ui/table"; import { Button } from "@/components/ui/button"
 import { 
   DropdownMenu
   DropdownMenuContent, 
-  DropdownMenuItem, 
+  DropdownMenuItem, ;
   DropdownMenuTrigger ;
 } from "@/components/ui/dropdown-menu"; import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge"
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes"
@@ -180,7 +180,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
         </TableBody>
       </Table>
     </div>
-  )
-}
+  );
+};
 '";
-;

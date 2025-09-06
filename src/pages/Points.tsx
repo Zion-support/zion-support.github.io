@@ -5,17 +5,17 @@ import {
   Users,
   ShoppingBag,
   MessageSquare,
-  TrendingUp,
-  History,;
+  TrendingUp,;
+  History;
 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardHeader,;
-  CardTitle,;
+  CardDescription,;
+  CardHeader;
+  CardTitle;
 } from '@/components/ui/card';import { Button } from '@/components/ui/button';import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';

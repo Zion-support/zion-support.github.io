@@ -255,8 +255,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
             </Badge>
           ))}
         </div>
-      </div>
-    </div>
+      </div>;
+    </div>;
   );
 };
-;

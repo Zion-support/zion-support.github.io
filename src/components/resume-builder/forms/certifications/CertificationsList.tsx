@@ -114,10 +114,9 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
           </CardContent>
         </Card>
       ))}
-    </div>
-  )
+    </div>;
+  );
 };
-;
 }
 }
 }

@@ -43,8 +43,8 @@ export default function SearchPage() {
   const router = useRouterReady(), // Use our custom hook
   const [query, setQuery] = useState("")
   const [results, setResults] = useState<SearchResult[]>([])
-  const [loading, setLoading] = useState(false)
-  const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
+  const [loading, setLoading] = useState(false);
+  const suggestions: SearchSuggestion[] = generateSearchSuggestions(),;
   // Force re-render and reset state when route changes;
   const routeKey = useRouteChange(() => {;
     setResults([]);    setLoading(false)
@@ -58,7 +58,7 @@ export default function SearchPage() {
   const marketplaceResults = [...productResults, ...talentResults]
   // Sync query with URL parameter changes
   useEffect(() => {
-    if (!router.isReady) return
+    if (!router.isReady) return;
     const urlQuery = (router.query.q as string) || ""
     if (urlQuery !== query) {
       setQuery(urlQuery)
@@ -67,7 +67,7 @@ export default function SearchPage() {
 
   // Fetch results when query changes
   useEffect(() => {
-    if (!router.isReady) return
+    if (!router.isReady) return;
     if (query.trim()) {
       fetchResults(query.trim())
     } else {
@@ -78,7 +78,7 @@ export default function SearchPage() {
   const fetchResults = async (term: string,) => {
     if (!term.trim()) {
       setResults([]),
-      return
+      return;
     }
 
     setLoading(true)
@@ -232,7 +232,7 @@ export default function SearchPage() {
   )
   setQuery (urlQuery) 
 }, [router.isReady, router.query.q]), //Fixed dependency array //Fetch results when query changes useEffect ( () => {
-  if (!router.isReady) return
+  if (!router.isReady) return;
 if (query.trim () ) {
   fetchResults (query.trim () ) 
 }else {
@@ -240,7 +240,7 @@ if (query.trim () ) {
 }, [router.isReady, query]), //Fixed dependency array const fetchResults = async (term: string) => {
   if (!term.trim () ) {
   setResults ([])
-return 
+return;
 }setLoading (true)
 try {
   const res = await fetch (`/api/search?query=$ {

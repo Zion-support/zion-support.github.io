@@ -115,10 +115,9 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
             )}
           </Button>
         </DialogFooter>
-      </form>
-    </Form>
+      </form>;
+    </Form>;
   );
 };
-;
 }
 }

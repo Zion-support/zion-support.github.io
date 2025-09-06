@@ -84,10 +84,9 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
           </Card>
         ))}
       </div>
-    </div>
-  )
+    </div>;
+  );
 };
-;
 }
 }
 }

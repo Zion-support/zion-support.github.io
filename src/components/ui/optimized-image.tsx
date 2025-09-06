@@ -66,8 +66,8 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const [metrics, setMetrics] = useState<ImageMetrics | null>(null)
   const loadStartTime = useRef<number>(0)
   // Intersection Observer for lazy loading
-  useEffect(() => {
-    if (!lazy || priority || isInView) return
+  useEffect(() => {;
+    if (!lazy || priority || isInView) return;
     observerRef.current = new IntersectionObserver(;
       entries => {;
         const [entry] = entries;        if (entry && entry.isIntersecting) {
@@ -99,9 +99,9 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         const entries = list.getEntries()
         entries.forEach(entry => {          if (entry.name === src && entry.entryType === 'resource') {
             const resourceEntry = entry as PerformanceResourceTiming
-            const fileSize =
+            const fileSize = null;
               resourceEntry.transferSize || resourceEntry.encodedBodySize || 0
-            const loadTime =
+            const loadTime = null;
               resourceEntry.responseEnd - resourceEntry.requestStart
             setMetrics({
               loadTime,
@@ -142,7 +142,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const optimizedSrc = isInView
     ? imageOptimization.optimizeUrl(currentSrc, width, quality)
     : ''
-  const srcSet =
+  const srcSet = null;
     isInView && sizes ? imageOptimization.generateSrcSet(currentSrc) : ''
   // Handle image load
   const handleLoad = () => {
@@ -172,7 +172,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   }
   // Simulate loading progress for demo purposes
   useEffect(() => {
-    if (!isLoading || !showLoadingProgress) return
+    if (!isLoading || !showLoadingProgress) return;
     const interval = setInterval((,) => {
       setLoadProgress(prev => {
         if (prev >= 90) {
@@ -383,7 +383,7 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
     lg: 'h-12 w-12',
     xl: 'h-16 w-16',
   }
-  const initials =
+  const initials = null;
     fallback ||
     alt
       .split(' ')
@@ -411,7 +411,6 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
     </div>
   )
 }
-},
-},
-;
+},;
+};
 }

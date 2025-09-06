@@ -30,10 +30,9 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
         setIsLoading(false)
       }
     }
-            return
+            return;
       }
-  
-}
+  ;
+};
   );
 };
-;

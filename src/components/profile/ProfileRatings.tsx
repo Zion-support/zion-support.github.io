@@ -153,10 +153,9 @@ export function ProfileRatings({
 }isLoading= {
   isLoading 
 }onReportReview= {
-  reportReview 
-}/> </TabsContent> </Tabs> </div> </div> </div>) 
+  reportReview ;
+}/> </TabsContent> </Tabs> </div> </div> </div>) ;
 }"};
-;
 }
 }
 }

@@ -19,8 +19,8 @@ export function SignUpForm() {
   const [signupMode, setSignupMode] = useState(true)
   const [error, setError] = useState("")
   const [fieldErrors, setFieldErrors] = useState<{ email?: string, password?: string, name?: string }>({})
-  const [showVerificationMessage, setShowVerificationMessage] = useState(false)
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const [showVerificationMessage, setShowVerificationMessage] = useState(false);
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
     setError("");    setFieldErrors(prev => ({ ...prev, [name]: "" }))
@@ -52,7 +52,7 @@ export function SignUpForm() {
     if (Object.keys(errors).length > 0) {
       setFieldErrors(errors)
       setIsLoading(false)
-      return
+      return;
     }
     
     try {

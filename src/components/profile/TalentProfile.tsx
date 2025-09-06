@@ -33,13 +33,13 @@ export function TalentProfile({
     message: `${profile.professional_title} with ${profile.years_experience} years of experience`,
   }
   // Create proper skills array for ProfileSkills component
-  const skillsArray =
+  const skillsArray = null;
     profile.skills?.map(skill => ({
       name: skill,
       level: 3, // Default level since we don't have this data
     })) || []
   // Create proper projects array for ProfileProjects component
-  const projectsArray =
+  const projectsArray = null;
     profile.key_projects?.map((proj, i) => ({
       id: `project-${i}`,
       title: proj.title,
@@ -129,9 +129,8 @@ export function TalentProfile({
             </div>
           )}
         </div>
-      </div>
-    </div>
+      </div>;
+    </div>;
   );
 };
-;
 }

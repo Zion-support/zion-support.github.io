@@ -75,9 +75,8 @@ export function ResumePreviewCard({
           </div>
         )}
       </CardContent>
-    </Card>
-  )
+    </Card>;
+  );
 };
-;
 }
 }

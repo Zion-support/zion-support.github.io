@@ -169,8 +169,7 @@ export function EnterprisePricingTable() {
 }        <div className="mt-8 text-center text-sm text-muted-foreground">
           All plans include SSL security, 99.9% uptime SLA, and dedicated support
         </div>
-      </div>
-    </section>
+      </div>;
+    </section>;
   );
 };
-;

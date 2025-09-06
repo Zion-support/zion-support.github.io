@@ -83,7 +83,7 @@ export default function Page() {
     color: "from-zion-green to-zion-green-dark","
     bgColor: "from-zion-green/20 to-zion-green-dark/20","    stats: "40% Cost Savings",
     features: ["
-      "Direct provider connections","
-      "Competitive pricing","
+      "Direct provider connections",";
+      "Competitive pricing",";
       "Bulk discount options",";
       "Transparent cost structure" ];

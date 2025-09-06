@@ -4,12 +4,12 @@ import { useRouter } from 'next/router'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { ProductListing } from '@/types/listings'
-import { DollarSign } from 'lucide-react'
+import { DollarSign } from 'lucide-react';
 import { RatingStars } from '@/components/RatingStars';
 import { FavoriteButton } from '@/components/FavoriteButton'; import { useDispatch } from 'react-redux'
 import type { AppDispatch } from '@/store'
 import { addItem } from '@/store/cartSlice'
-import { toast } from '@/hooks/use-toast'
+import { toast } from '@/hooks/use-toast';
 import { useCurrency } from '@/hooks/useCurrency';
 import Image from 'next/image'; // Import next/image
 
@@ -32,7 +32,7 @@ const ProductListingCardComponent = ({
       : '/placeholder.svg'
   )
   const [imageError, setImageError] = useState(false)
-  const stockStatus =
+  const stockStatus = null;
     listing.stock === undefined
       ? 'In stock'
       : listing.stock <= 0
@@ -40,7 +40,7 @@ const ProductListingCardComponent = ({
         : listing.stock <= 5
           ? 'Low stock'
           : 'In stock'
-  const stockVariant =
+  const stockVariant = null;
     listing.stock === undefined
       ? 'success'
       : listing.stock <= 0
@@ -82,7 +82,7 @@ const ProductListingCardComponent = ({
         description: 'Product information is incomplete',
         variant: 'destructive',
       })
-      return
+      return;
     }
 
     router.push(`${detailBasePath}/${listing.id}`)
@@ -318,7 +318,7 @@ const handleImageError = () => {
 setImageError (true) 
 };'
 //Debug logging for development if (process.env.NODE ENV === 'development') {
-  return
+  return;
 }
 }> {
   /* Image */ 
@@ -383,7 +383,7 @@ ProductListingCard.displayName = 'ProductListingCard'
                 Request Quote
               </Button>) }
           </div>
-        </div>
+        </div>;
       </div>;
     </div>;) }
 export default React.memo(ProductListingCard)
@@ -395,5 +395,5 @@ export default ProductListingCard
 export default ProductListingCard
 export default ProductListingCard
 '"`
-export const ProductListingCard = React.memo(ProductListingCardComponent)
+export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';

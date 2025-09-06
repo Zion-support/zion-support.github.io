@@ -19,7 +19,7 @@ interface QuoteDetailsProps {
   onClose: () => void
 }
 
-export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
+export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
   if (!quote) return null;
   const formatDate = (dateString?: string) => {;
     if (!dateString) return 'Not specified';    try {

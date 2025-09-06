@@ -49,9 +49,8 @@ export function QuoteRequestForm() {
   })
   const updateFormData = (data: Partial<QuoteFormData>,) => {
     setFormData(prev => ({
-      ...prev
-}
+      ...prev;
+};
   );
 };
-;
 }

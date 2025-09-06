@@ -65,8 +65,7 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
         </CardContent>
       </Card>
     </div>
-  )
-}
-"},
-;
+  );
+};
+"};
 };

@@ -229,8 +229,8 @@ style
 categories: fetchedCategories, //Rename prop for clarity 
 }: CategoriesSectionProps) {
   const {
-  t 
-}= useTranslation ()
+  t ;
+}= useTranslation ();
 const defaultCategories = getDefaultCategories (t);
 //Use fetchedCategories if provided, otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({;
   id: cat.id;"

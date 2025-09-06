@@ -22,7 +22,7 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
     value === 'Pending' ||
     value === 'In Progress' ||
     value === 'Submitted' ||
-    value === 'Approved' ||
+    value === 'Approved' ||;
     value === 'Paid';
   );export interface MilestoneAttachment {;
   id: string;

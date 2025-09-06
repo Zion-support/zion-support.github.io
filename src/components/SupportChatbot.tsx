@@ -67,13 +67,13 @@ export function SupportChatbot() {
         })
         if (!res.ok) throw new Error(`API error: ${res.status}`)
         const data = await res.json().catch(() => ({}))
-        const message =
+        const message = null;
           data.message ||
           data.choices?.[0]?.message?.content ||
           data.choices?.[0]?.text ||
           data.completion ||
           ''
-        const finalMsg =
+        const finalMsg = null;
           message.trim() ||
           FALLBACK_RESPONSES[
             Math.floor(Math.random() * FALLBACK_RESPONSES.length)
@@ -98,8 +98,8 @@ export function SupportChatbot() {
         let buffer = ''
         let accumulated = ''
         while (!done) {
-          const result = await reader.read()
-          done = result.done
+          const result = await reader.read();
+          done = result.done;
           buffer += decoder.decode(result.value || new Uint8Array());
           const lines = buffer.split('\n');
           for (let i = 0; i < lines.length - 1; i++) {
@@ -113,7 +113,7 @@ export function SupportChatbot() {
               }
               try {
                 const json = JSON.parse(line)
-                const token =
+                const token = null;
                   json.choices?.[0]?.delta?.content ||
                   json.choices?.[0]?.text ||
                   ''
@@ -132,7 +132,7 @@ export function SupportChatbot() {
           }
           buffer = lines[lines.length - 1] || ''
         }
-        const final =
+        const final = null;
           accumulated.trim() ||
           FALLBACK_RESPONSES[
             Math.floor(Math.random() * FALLBACK_RESPONSES.length)
@@ -145,7 +145,7 @@ export function SupportChatbot() {
     } catch (err) {
       logErrorToProduction('Chatbot error:', { data: err })
       // Provide a helpful fallback response instead of generic error
-      const fallbackResponse =
+      const fallbackResponse = null;
         FALLBACK_RESPONSES[
           Math.floor(Math.random() * FALLBACK_RESPONSES.length)
         ] ||

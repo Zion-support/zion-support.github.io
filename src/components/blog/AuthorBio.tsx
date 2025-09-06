@@ -57,7 +57,6 @@ export function AuthorBio({ author }: AuthorBioProps) {
   author.title 
 }</p>
 }<p> {
-  author.bio 
-}</p>
+  author.bio ;
+}</p>;
 }'"};
-;

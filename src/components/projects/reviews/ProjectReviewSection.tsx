@@ -111,8 +111,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
           onClose = {(,) => setIsReviewModalOpen(false),}
         />
       )}
-    </Card>
-  )
+    </Card>;
+  );
 };
 };
-;

@@ -234,9 +234,8 @@ export default function HelpCenter() {
             </TabsContent>
           </Tabs>
         </div>
-      </div>
-    </>
+      </div>;
+    </>;
   );
 };
-;
 }
