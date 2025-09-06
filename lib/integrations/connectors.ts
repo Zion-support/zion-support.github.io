@@ -1,250 +1,87 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import { ProviderConnection, SyncLogEntry } from './types';
-import { v4 as uuidv4 } from 'uuid';
-import { ProviderConnection, SyncLogEntry } from "./types";
-import { v4 as uuidv4 } from "uuid";
-import { ProviderConnection, SyncLogEntry } from './types';
-import { v4 as uuidv4 } from 'uuid';
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+// Integration connectors
 
+import { IntegrationConfig, IntegrationResponse, ApiEndpoint } from './types';
 
+export class BaseConnector {
+  protected config: IntegrationConfig;
 
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-import { ProviderConnection, SyncLogEntry } from "./types";
-import { v4 as uuidv4 } from "uuid";
-async function mockProviderCall<T>(
-  connection: ProviderConnection
-  action: string
-  details: Record<string, any>
-): Promise<{ log: SyncLogEntry; result: T }> {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-=======
-  async syncContact(
-    connection: ProviderConnection
-    contact: Record<string, any>
-  ) {
-    return mockProviderCall(connection, "sync_contact", { contact });
-  }
-  async addEmailTouchpoint(
-    connection: ProviderConnection
-    touchpoint: Record<string, any>
-  ) {
-    return mockProviderCall(connection, "add_email_touchpoint", { touchpoint });
-  }
-  async addProjectNote(
-    connection: ProviderConnection
-    note: Record<string, any>
-  ) {
-    return mockProviderCall(connection, "add_project_note", { note });
-  }
-}
-// ATS actions
-export const ats = {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  const log: SyncLogEntry = {
-    id: uuidv4(),
-    timestamp: Date.now(),
-    providerId: connection.providerId,
-    level: 'info',
-    action,
-  return { log, result: { ok: true } as unknown as T };
-import { ProviderConnection, SyncLogEntry  } from './types';
-import { v4 as uuidv4  } from './uuid';
-;
-async function mockProviderCall < T>(
-  connection: ProviderConnection,
-  action: string,
-  details: Record < string, any>,
-): Promise<{ log: SyncLogEntry; result: T }> {
-  const log: SyncLogEntry = {
-    id: uuidv4 (),
-    timestamp: Date.now (),
-    provider_id: connection.provider_id,
-    level: "info",
-    action,
-    details,
-  }
-;
-  // In a real implementation, call provider SDK / API here using connection.access_token;
-  return { log, result: { ok: true } as unknown as T }
-}
-// CRM actions;
-export const crm = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-  async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
-    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  constructor(config: IntegrationConfig) {
+    this.config = config;
   }
 
-};
+  async connect(): Promise<IntegrationResponse> {
+    throw new Error('Connect method must be implemented');
+  }
 
-// ATS actions
-export const ats = {
-<<<<<<< HEAD
+  async disconnect(): Promise<IntegrationResponse> {
+    throw new Error('Disconnect method must be implemented');
+  }
 
-  async pushApplicant($2) {
-    return simulateAction($3);
-  },
-  async uploadResume($2) {
-    return simulateAction($3);
-  },
-  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
-    return simulateAction(connection, 'ats.updateStatus', { change })
-  }};
+  async test(): Promise<IntegrationResponse> {
+    throw new Error('Test method must be implemented');
+  }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
-  async updateStatus(
-    connection: ProviderConnection
-    status: Record<string, any>
-  ) {
-    connection: ProviderConnection,
-    status: Record<string, any>,
-  ) {;
-    return mockProviderCall(connection, "update_status", { status });
+  protected async makeRequest(endpoint: ApiEndpoint): Promise<any> {
+    const response = await fetch(endpoint.url, {
+      method: endpoint.method,
+      headers: {
+        'Content-Type': 'application/json',
+        ...endpoint.headers,
+      },
+      body: endpoint.body ? JSON.stringify(endpoint.body) : undefined,
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    return response.json();
   }
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  async sync_contact (
-    connection: ProviderConnection,
-    contact: Record < string, any>,
-  ) {
-    return mockProviderCall (connection, "sync_contact", { contact });
-  },
-  async addEmailTouchpoint (
-    connection: ProviderConnection,
-    touchpoint: Record < string, any>,
-  ) {
-    return mockProviderCall (connection, "add_email_touchpoint", { touchpoint });
-  },
-  async addProjectNote (
-    connection: ProviderConnection,
-    note: Record < string, any>,
-  ) {
-    return mockProviderCall (connection, "add_project_note", { note });
-  },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  const log: SyncLogEntry = {
-    id: uuidv4()
-    timestamp: Date.now()
-    providerId: connection.providerId
-    level: "info"
-    action
-    details
+
+export class SlackConnector extends BaseConnector {
+  async connect(): Promise<IntegrationResponse> {
+    try {
+      // Test Slack API connection
+      const response = await this.makeRequest({
+        url: 'https://slack.com/api/auth.test',
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${this.config.credentials.token}`,
+        },
+      });
+
+      return {
+        success: response.ok,
+        data: response,
+      };
+    } catch (error) {
+      return {
+        success: false,
+        error: error instanceof Error ? error.message : 'Unknown error',
+      };
+    }
   }
-  // In a real implementation, call provider SDK/API here using connection.accessToken
-  return { log, result: { ok: true } as unknown as T }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-}
-;
-// ATS actions;
-export const ats = {
-  async update_status (
-    connection: ProviderConnection,
-    status: Record < string, any>,
-  ) {
-    return mockProviderCall (connection, "update_status", { status });
-  },
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+  async disconnect(): Promise<IntegrationResponse> {
+    return { success: true };
+  }
+
+  async test(): Promise<IntegrationResponse> {
+    return this.connect();
+  }
 }
-;
-// ATS actions;
-export const ats = {
-  async update_status (
-    connection: ProviderConnection,
-    status: Record < string, any>,
-  ) {
-    return mockProviderCall (connection, "update_status", { status });
-  },
+
+export class WebhookConnector extends BaseConnector {
+  async connect(): Promise<IntegrationResponse> {
+    return { success: true };
+  }
+
+  async disconnect(): Promise<IntegrationResponse> {
+    return { success: true };
+  }
+
+  async test(): Promise<IntegrationResponse> {
+    return { success: true };
+  }
 }
-;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-  async createCandidate(
-    connection: ProviderConnection,
-    candidate: Record<string, any>
-  ) {
-    return executeProviderAction(connection, 'createCandidate', { candidate });
-  },
-};
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-// Email actions
-export const email = {
-  async sendNotification(
-    connection: ProviderConnection,
-    notification: Record<string, any>
-  ) {
-    return executeProviderAction(connection, 'sendNotification', { notification });
-  },
-};
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
