@@ -6,6 +6,6 @@ const ImageWithRetry = ({ className }) => {
       <h1>ImageWithRetry</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

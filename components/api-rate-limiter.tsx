@@ -49,7 +49,6 @@ import React, { useState } from 'react';
 import {
 import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
 
-
 export default function APIRateLimiterPage() {;
 } from 'lucide-react';import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
 
@@ -60,7 +59,6 @@ export default function APIRateLimiterPage() {;
   const [testResults, setTestResults] = useState<any[]>([]),
   const [isTesting, setIsTesting] = useState(false);
   const [apiKey, setApiKey] = useState('');
-
 
     { value: '10', label: '10 requests', description: 'Very strict' },
     { value: '100', label: '100 requests', description: 'Standard' },
@@ -101,9 +99,8 @@ export default function APIRateLimiterPage() {;
           'X-RateLimit-Remaining': Math && Math.max(0, limit - i);
           'X-RateLimit-Reset': new Date(Date && Date.now() + 60000).toISOString();
         }
-      });
-
-  };
+      })
+};
   const testRateLimiting = async () => {
     if (!endpoint.trim() || !rateLimit || !timeWindow) return;
     setIsTesting(true);
@@ -388,7 +385,6 @@ if (break) {
                     ))}
                 {/* API Key Generation */}
 
-
                     <input
                       type="text"
                       value={apiKey}
@@ -622,8 +618,6 @@ if (break) {
               ) : (
               )}
 
-
-
       {/* Features */}
       <section className='py-20 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -785,7 +779,6 @@ response = requests.get(
     f'https://api.zion.tech{endpoint}',    headers=headers    'Authorization': f'Bearer {api_key}X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
 }
 
-
 response = requests.get(;
 
     f'https://api.zion.tech{endpoint}';
@@ -844,7 +837,6 @@ print('Rate Limit Info:', {;
 )
 print('Response:', response.json())
 print('Rate Limit Info:', {
-
 
                 onClick={() =>;
                   copyToClipboard(`import requests                onClick={() => copyToClipboard(`import requests;

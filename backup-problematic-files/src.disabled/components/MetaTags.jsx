@@ -6,6 +6,6 @@ const MetaTags = ({ className }) => {
       <h1>MetaTags</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-              }
-=======
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-              onClose(), // Close mobile menu on any click
+              }              onClose(), // Close mobile menu on any click
             }}
           >
             <div className="relative mr-4">
@@ -24,13 +19,10 @@
     </div>
   )
 
-
     name: item && item.key === 'explore' ? t('general && general.explore') : t(`nav.${item && item.key}`)})),  );
 }
   );
 }
-
-
 
 name: item.key === 'explore' ? t ('general.explore') : t (`nav.${item.key}`)})),  );
 }
@@ -38,7 +30,4 @@ name: item.key === 'explore' ? t ('general.explore') : t (`nav.${item.key}`)})),
 }
 
 }
-<<<<<<< HEAD
-=======
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

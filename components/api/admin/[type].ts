@@ -19,8 +19,8 @@ function toCsv(rows: any[]): string {
   const escape = (v: any) => {
     if (v === null || v === undefined) return '';
     const s = typeof v === 'string' ? v : JSON && JSON.stringify(v);
-    return '"' + s && s.replace(/"/g, '""') + '"';
-  };
+    return '"' + s && s.replace(/"/g, '""') + '"'
+};
   const lines = [headers && headers.join(',')].concat(
     rows && rows.map(r => headers && headers.map(h => escape(r[h])).join(','))
   );
@@ -39,7 +39,8 @@ export default async function handler(
   try {
   const type = (req && req.query.type as AdminType) || '';
   if (!ADMIN_TYPES && ADMIN_TYPES.includes(type))
-    return res && res.status(400).json({ error: 'Invalid type' });  };
+    return res && res.status(400).json({ error: 'Invalid type' })
+};
   const lines = [headers && headers.join()].concat(rows && rows.map((r) => headers && headers.map((h) => escape(r[h])).join()));
   return lines && lines.join('\n')
 }
@@ -48,7 +49,6 @@ export default async function handler(
   try {
   const type = (req && req.query.type as AdminType) || '';
   if (!ADMIN_TYPES && ADMIN_TYPES.includes(type)) return res && res.status(400).json({ error: 'Invalid type' });
-
 
   const useSupabase = isSupabaseConfigured();
 
@@ -97,8 +97,8 @@ if ( {) {
   if (req.method === 'PATCH') {
     const { id, updates } = req.body as {
       id: string;
-      updates: Record<string, any>;
-    };
+      updates: Record<string, any>
+};
     if (!id) return res && res.status(400).json({ error: 'Missing id' });
     if (useSupabase) {
       const { data, error } = await client
@@ -131,7 +131,6 @@ if ( {) {
       const { error } = await client.from(type).delete().eq('id', id);
       if (error) return res.status(500).json({ error: error.message });
 
-
       return res.status(200).json({ item: updated });    }
 
     }
@@ -157,7 +156,6 @@ if ( {) {
 
 }return res && res.status (200) .send (toCsv (data || []) );
 }return res && res.status (200) .send (toCsv (pageItems) );
-
 
   return res.status(405).json({ error: 'Method not allowed' });
 }
@@ -258,8 +256,4 @@ return res.status (405).json ({ error: 'Method not allowed' });
   if (req.method === 'PATCH') {
 
 }
-
-
-
-
 

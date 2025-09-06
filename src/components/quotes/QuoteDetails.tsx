@@ -3,7 +3,6 @@ interface QuoteDetailsProps {
   isOpen: boolean
   onClose: () => void
 
-
 };
 import React from "react";
 import { ;
@@ -24,36 +23,23 @@ interface QuoteDetailsProps {;
   isOpen: boolean,;
   onClose: () => void;
 }
-<<<<<<< HEAD
 
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
   if (!quote) return null;
 
   const formatDate = (dateString?: string) => {;
-    if (!dateString) return 'Not specified';    try {;
-=======
-;
-export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
-  if (!quote) return null,;
-  const formatDate = (dateString?: string) => {;
-    if (!dateString) return 'Not specified',;
-    try {;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-      return format(new Date(dateString), 'PPP');
+    if (!dateString) return 'Not specified';    try {;      return format(new Date(dateString), 'PPP');
     } catch (e) {;
       return dateString;
     }
   }
 
-
   return (
-
 
         
         <Separator className="my-4" />
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
 
           <Card>
             <CardContent className="pt-6">
@@ -71,9 +57,7 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
             </CardContent>
           </Card>
 
-
           
-
 
           <Card>
             <CardContent className="pt-6">
@@ -92,18 +76,14 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
           </Card>
         </div>
 
-
         
-
 
         <Card className="mt-6">
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-3">Project Details</h3>
             <p className="mb-4">{quote.project_summary}</p>
 
-
             
-
 
             {quote.project_description && (
               <>
@@ -112,9 +92,7 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
               </>
             )}
 
-
             
-
 
             <div className="mt-6 flex items-center gap-2">
               <DollarSign className="h-4 w-4 text-gray-500" />
@@ -129,9 +107,7 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
           </CardContent>
         </Card>
 
-
         
-
 
         <div className="mt-6 flex justify-end">
           <Button onClick={onClose}>Close</Button>
@@ -218,7 +194,7 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
         </div>;
       </DialogContent>;
     </Dialog>;
-  );
+  )
 };
 
   (open) => !open && onClose () ;
@@ -238,9 +214,8 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
 }` : quote && quote.budget min ? `$$ {;
   quote && quote.budget min ';
 }` : 'Not specified') ;
-}</div> </CardContent> </Card> </div> </DialogContent> </Dialog>) ;
+}</div> </CardContent> </Card> </div> </DialogContent> </Dialog>) 
 };
-
 
 import React from './react';
 import {
@@ -278,9 +253,9 @@ if (return 'Not specified') {
   }
   return (
     <Dialog open={is_open} onOpenChange={(open, ) => !open && on_close ()}>;
-      <DialogContent className="max - w-3xl max - h-[90vh] overflow - y-auto">;
+      <DialogContent className="max - w-3xl max - h-[90vh] overflow-y-auto">;
         <DialogHeader>;
-          <DialogTitle className="text - 2xl flex items - center justify - between">;
+          <DialogTitle className="text - 2xl flex items - center justify-between">;
             <span>{quote.project_name}</span>;
             <QuoteStatusBadge status={quote.status} />;
           </DialogTitle>;
@@ -288,51 +263,51 @@ if (return 'Not specified') {
             Quote request submitted on {format_date (quote.created_at)}
           </DialogDescription>;
         </DialogHeader>;
-        <Separator className="my - 4" />;
-        <div className="grid grid - cols - 1 md: grid - cols - 2 gap - 6">;
+        <Separator className="my-4" />;
+        <div className="grid grid - cols - 1 md: grid - cols - 2 gap-6">;
           <Card>;
-            <CardContent className="pt - 6">;
-              <h3 className="text - lg font - medium mb - 3">Requester Information</h3>;
-              <div className="space - y-2">;
-                <div className="flex items - center gap - 2">;
-                  <User className="h - 4 w - 4 text - gray - 500" />;
+            <CardContent className="pt-6">;
+              <h3 className="text - lg font - medium mb-3">Requester Information</h3>;
+              <div className="space-y-2">;
+                <div className="flex items - center gap-2">;
+                  <User className="h - 4 w - 4 text - gray-500" />;
                   <span>{quote.requester_name}</span>;
                 </div>;
-                <div className="flex items - center gap - 2">;
-                  <Mail className="h - 4 w - 4 text - gray - 500" />;
+                <div className="flex items - center gap-2">;
+                  <Mail className="h - 4 w - 4 text - gray-500" />;
                   <span>{quote.requester_email}</span>;
                 </div>;
               </div>;
             </CardContent>;
           </Card>;
           <Card>;
-            <CardContent className="pt - 6">;
-              <h3 className="text - lg font - medium mb - 3">Project Timeline</h3>;
-              <div className="space - y-2">;
-                <div className="flex items - center gap - 2">;
-                  <Calendar className="h - 4 w - 4 text - gray - 500" />;
+            <CardContent className="pt-6">;
+              <h3 className="text - lg font - medium mb-3">Project Timeline</h3>;
+              <div className="space-y-2">;
+                <div className="flex items - center gap-2">;
+                  <Calendar className="h - 4 w - 4 text - gray-500" />;
                   <span > Start date: {format_date (quote.start_date)}</span>;
                 </div>;
-                <div className="flex items - center gap - 2">;
-                  <Clock className="h - 4 w - 4 text - gray - 500" />;
+                <div className="flex items - center gap-2">;
+                  <Clock className="h - 4 w - 4 text - gray-500" />;
                   <span > Timeline: {quote.timeline}</span>;
                 </div>;
               </div>;
             </CardContent>;
           </Card>;
         </div>;
-        <Card className="mt - 6">;
-          <CardContent className="pt - 6">;
-            <h3 className="text - lg font - medium mb - 3">Project Details</h3>;
-            <p className="mb - 4">{quote.project_summary}</p>;
+        <Card className="mt-6">;
+          <CardContent className="pt-6">;
+            <h3 className="text - lg font - medium mb-3">Project Details</h3>;
+            <p className="mb-4">{quote.project_summary}</p>;
             {quote.project_description && (
               <>;
-                <h4 className="font - medium mt - 4">Additional Details</h4>;
+                <h4 className="font - medium mt-4">Additional Details</h4>;
                 <p>{quote.project_description}</p>;
               </>)}
-            <div className="mt - 6 flex items - center gap - 2">;
-              <DollarSign className="h - 4 w - 4 text - gray - 500" />;
-              <span className="font - medium">Budget: </span>;
+            <div className="mt - 6 flex items - center gap-2">;
+              <DollarSign className="h - 4 w - 4 text - gray-500" />;
+              <span className="font-medium">Budget: </span>;
               {quote.budget_display ||;
               (quote.budget_min && quote.budget_max;
                 ? `$${quote.budget_min} - $${quote.budget_max}`;
@@ -342,20 +317,20 @@ if (return 'Not specified') {
             </div>;
           </CardContent>;
         </Card>;
-        <div className="mt - 6 flex justify - end">;
+        <div className="mt - 6 flex justify-end">;
           <Button on_click={on_close}>Close</Button>;
         </div>;
       </DialogContent>;
     </Dialog>);
 }
   (open) => !open && on_close ();
-}> <DialogContent className="max - w-3xl max - h-[90vh] overflow - y-auto" > <DialogHeader> <DialogTitle className="text - 2xl flex items - center justify - between" > <span> {
+}> <DialogContent className="max - w-3xl max - h-[90vh] overflow-y-auto" > <DialogHeader> <DialogTitle className="text - 2xl flex items - center justify-between" > <span> {
   quote.project name;
 }</span> <QuoteStatusBadge status= {
   quote.status;
 }/> format_date (quote.created at) ";
-}</DialogDescription> </DialogHeader> <Separator className="my - 4" /> <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6" > <Card> </div> </div> </CardContent> </Card> <Card> </div> </div> </CardContent> </Card> </div> {";
-  quote.project description && (<> <h4 className="font - medium mt - 4" >Additional Details</h4> <p> {
+}</DialogDescription> </DialogHeader> <Separator className="my-4" /> <div className="grid grid - cols - 1 md:grid - cols - 2 gap-6" > <Card> </div> </div> </CardContent> </Card> <Card> </div> </div> </CardContent> </Card> </div> {";
+  quote.project description && (<> <h4 className="font - medium mt-4" >Additional Details</h4> <p> {
   quote.project description;
 }</p> </>);
 }(quote.budget min && quote.budget max ? `$$ {

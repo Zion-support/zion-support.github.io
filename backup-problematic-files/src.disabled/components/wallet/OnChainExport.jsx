@@ -6,6 +6,6 @@ const OnChainExport = ({ className }) => {
       <h1>OnChainExport</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

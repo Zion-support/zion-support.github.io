@@ -25,9 +25,6 @@ export default async function handler(
       .delete()
       .eq('user_id', userId);
 
-
-
-
     if (error) return res && res.status(200).json({ ok: true });
 
     return res && res.status(200).json({ ok: true });

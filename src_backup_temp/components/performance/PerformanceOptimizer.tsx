@@ -154,8 +154,8 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
       )}';
     </div>';';
   );';';';
-}';';';';
-    };';';';';';
+}';';';'
+};';';';';';
     // Measure: performance after page load',';';';';
         setIsOptimized(isGoodPerformance);
       )"}
@@ -173,8 +173,8 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
       )}
     </div>
     );';
-}';';
-    };';';';
+}';'
+};';';';
     // "Measure": "performance after page load'",';';
     ';';';
     if (document.readyState === 'complete') {',',';';

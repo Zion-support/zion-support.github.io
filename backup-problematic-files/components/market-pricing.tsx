@@ -66,8 +66,8 @@ export default function MarketPricing() {;
     'ai-consciousness': {;
       marketSize: '$45.2B',;
       growthRate: '+28.4%',;
-      growthTrend: 'up',;
-      description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.',;
+      growthTrend: 'up',,
+  description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.',;
       competitors: [;
         {;
           name: 'OpenAI',;
@@ -104,8 +104,8 @@ export default function MarketPricing() {;
     'quantum-computing': {;
       marketSize: '$8.7B',;
       growthRate: '+45.2%',;
-      growthTrend: 'up',;
-      description: 'Quantum computing market is rapidly expanding with breakthroughs in qubit stability and error correction.',;
+      growthTrend: 'up',,
+  description: 'Quantum computing market is rapidly expanding with breakthroughs in qubit stability and error correction.',;
       competitors: [;
         {;
           name: 'IBM',;
@@ -142,8 +142,8 @@ export default function MarketPricing() {;
     'autonomous-systems': {;
       marketSize: '$23.1B',;
       growthRate: '+34.7%',;
-      growthTrend: 'up',;
-      description: 'Autonomous systems market is growing rapidly with increasing automation in business processes.',;
+      growthTrend: 'up',,
+  description: 'Autonomous systems market is growing rapidly with increasing automation in business processes.',;
       competitors: [;
         {;
           name: 'UiPath',;
@@ -180,8 +180,8 @@ export default function MarketPricing() {;
     'enterprise-it': {;
       marketSize: '$1.2T',;
       growthRate: '+12.3%',;
-      growthTrend: 'up',;
-      description: 'Enterprise IT market continues steady growth with digital transformation initiatives.',;
+      growthTrend: 'up',,
+  description: 'Enterprise IT market continues steady growth with digital transformation initiatives.',;
       competitors: [;
         {;
           name: 'Microsoft',;
@@ -1099,6 +1099,6 @@ export default MarketPricing,
         </div>;
       </section>;
     </div>;
-  );
+  )
 };
 export default MarketPricing;

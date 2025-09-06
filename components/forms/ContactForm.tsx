@@ -1,6 +1,5 @@
 
 
-
 import {;
   Mail,;
   Phone,;
@@ -43,8 +42,8 @@ const ContactForm: React.FC = () => {;
   >('idle');
       ...formData;
       [e && e.target.name]: e && e.target.value;
-    });
-  };
+    })
+};
     // Simulate API call;
     try {;
       await new Promise(resolve => setTimeout(resolve, 2000));
@@ -84,8 +83,8 @@ const ContactForm: React.FC = () => {;
     },    {;
       icon: Phone,;
       title: 'Call Us',;
-      content: '+1 (555) 123-4567',      href: 'mailto:contact@ziontechgroup && ziontechgroup.com';
-    };
+      content: '+1 (555) 123-4567',      href: 'mailto:contact@ziontechgroup && ziontechgroup.com'
+};
     {;
       icon: Phone,;
       title: 'Call Us',;
@@ -97,7 +96,6 @@ const ContactForm: React.FC = () => {;
       content: '123 Tech Street, Innovation City, IC 12345',;
       href: '#',;
     },;
-
 
   return (
     <section className='py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden'>
@@ -392,11 +390,11 @@ export default ContactForm;
                     name="service";
                     value={form_data.service}
                     on_change={handle_change}
-                    className="w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white focus:outline - none focus:border - blue - 500 transition - colors";
+                    className="w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white focus:outline - none focus:border - blue-500 transition-colors";
                   >;
                     <option value="">Select a service</option>;
                     {services.map ((service) => (
-                      <option key={service} value={service} className="bg - gray - 800 text - white">;
+                      <option key={service} value={service} className="bg - gray-800 text-white">;
                         {service}
                       </option>))}
                   </select>;
@@ -415,7 +413,7 @@ export default ContactForm;
                     required;
                     rows={5}
                     className='w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition - colors resize - none';
-                    placeholder='Tell us about your project or inquiry...'                  />                  <label html_for="message" className="block text - white font - medium mb - 2" html_for="input-;
+                    placeholder='Tell us about your project or inquiry...'                  />                  <label html_for="message" className="block text - white font-medium mb-2" html_for="input-;
                     Message *;
                   ">;
                     Message *;
@@ -427,7 +425,7 @@ export default ContactForm;
                     required;
                     rows={5}
                     className='w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition - colors resize - none';
-                    placeholder='Tell us about your project or inquiry...'                    className="w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition - colors resize - none";
+                    placeholder='Tell us about your project or inquiry...'                    className="w - full px - 4 py - 3 bg - white / 10 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500 transition-colors resize-none";
                     placeholder="Tell us about your project or inquiry...";
                   />;
                 </div>;
@@ -437,9 +435,9 @@ export default ContactForm;
                     animate={{ opacity: 1, coordinate_y: 0 }}
                     className='flex items - center space - x-2 text - red - 400 bg - red - 400 / 10 border border - red - 400 / 20 rounded - lg p - 4';
                   >;
-                    <AlertCircle className='w - 5 h - 5' />                    <span > Something went wrong. Please try again.</span>                    className="flex items - center space - x-2 text - red - 400 bg - red - 400 / 10 border border - red - 400 / 20 rounded - lg p - 4";
+                    <AlertCircle className='w - 5 h - 5' />                    <span > Something went wrong. Please try again.</span>                    className="flex items - center space - x-2 text - red - 400 bg - red - 400 / 10 border border - red - 400 / 20 rounded-lg p-4";
                   >;
-                    <AlertCircle className="w - 5 h - 5" />;
+                    <AlertCircle className="w-5 h-5" />;
                     <span > Something went wrong. Please try again.</span>;
                   </motion.div>)}
                 <button;
@@ -453,15 +451,15 @@ export default ContactForm;
                     </>) : (
                     <>;
                       <Send className='w - 5 h - 5' />                      <span > Send Message</span>                  disabled={is_submitting}
-                  className="w - full bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 4 rounded - xl font - semibold text - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 300 shadow - lg hover:shadow - xl transform hover:-translate - y-1 disabled:opacity - 50 disabled:cursor - not - allowed disabled:transform - none flex items - center justify - center space - x-2";
+                  className="w - full bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 4 rounded - xl font - semibold text - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 300 shadow - lg hover:shadow - xl transform hover:-translate - y-1 disabled:opacity - 50 disabled:cursor - not - allowed disabled:transform - none flex items - center justify-center space-x-2";
                 >;
                   {is_submitting ? (
                     <>;
-                      <div className="w - 5 h - 5 border - 2 border - white / 30 border - t-white rounded - full animate - spin" />;
+                      <div className="w - 5 h - 5 border - 2 border - white / 30 border - t-white rounded-full animate-spin" />;
                       <span > Sending...</span>;
                     </>) : (
                     <>;
-                      <Send className='w - 5 h - 5' />                      <Send className="w - 5 h - 5" />;
+                      <Send className='w - 5 h - 5' />                      <Send className="w-5 h-5" />;
                       <span > Send Message</span>;
                     </>)}
                 </button>;

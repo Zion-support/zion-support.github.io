@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Sparkles, RefreshCcw } from 'lucide-react'
 export interface EmptyMatchesCardProps {
   onRefresh: () => void;
@@ -29,14 +28,7 @@ export interface EmptyMatchesCardProps {
   isProcessing: boolean
 }
 
-export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {
-=======
-export function EmptyMatchesCard(): any ({;
-  onRefresh,;
-  isProcessing,;
-}: EmptyMatchesCardProps) {;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  return (
+export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {  return (
 
     <Card className="p-6 text-center border-dashed border-2 bg-muted/30">
       <div className="mb-4 flex justify-center">
@@ -49,33 +41,17 @@ export function EmptyMatchesCard(): any ({;
       <Button 
         onClick={onRefresh} 
         disabled={isProcessing}
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         className="mx-auto"
       >
         {isProcessing ? (
           <>
 
-
-<<<<<<< HEAD
-=======
-            <RefreshCcw className="mr-2 h-4 w-4 animate-spin" />
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-            Processing...
           </>
         ) : (
           <>
 
-
-
 }
-
 
             <Sparkles className="mr-2 h-4 w-4" />
             Find AI Matches
@@ -86,8 +62,6 @@ export function EmptyMatchesCard(): any ({;
     </Card>;
   );
 }
-<<<<<<< HEAD
-=======
 
 import { Card } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -111,22 +85,21 @@ function EmptyMatchesCard() {
       <Button on_click={on_refresh} disabled={is_processing} className='mx - auto'>      <Button;
         on_click = {on_refresh, }
         disabled = {is_processing, }
-        className="mx - auto";
+        className="mx-auto";
       >;
         {is_processing ? (
           <>;
             <RefreshCcw className='mr - 2 h - 4 w - 4 animate - spin' />            Processing...;
           </>) : (
           <>;
-            <Sparkles className='mr - 2 h - 4 w - 4' />            Find AI Matches            <RefreshCcw className="mr - 2 h - 4 w - 4 animate - spin" />;
+            <Sparkles className='mr - 2 h - 4 w - 4' />            Find AI Matches            <RefreshCcw className="mr - 2 h - 4 w - 4 animate-spin" />;
             Processing...;
           </>) : (
           <>;
-            <Sparkles className='mr - 2 h - 4 w - 4' />            <Sparkles className="mr - 2 h - 4 w - 4" />;
+            <Sparkles className='mr - 2 h - 4 w - 4' />            <Sparkles className="mr - 2 h - 4 w-4" />;
             Find AI Matches;
           </>)}
       </Button>;
     </Card>);
 }
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

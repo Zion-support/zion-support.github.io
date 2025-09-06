@@ -10,30 +10,30 @@ const OptimizedImage: React.FC < OptimizedImageProps> = ({
   alt;
 
   width = 800;
-  height = 600;
+  height = 600;  return (
 =======
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 interface OptimizedImageProps {
-  src: string,
-  alt: string,
-  width?: number,
-  height?: number,
-  className?: string,
-  priority?: boolean,
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  className?: string;
+  priority?: boolean;
   quality?: number;
-};
+}
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
   width = 800,
   height = 600,
-  className = '',
+  className = "",
   priority = false,
-  quality = 75
+  quality = 75,
 }) => {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
     <Image
       src={src}
       alt={alt}
@@ -52,4 +52,4 @@ export default OptimizedImage;
 };
 
 export default OptimizedImage;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3

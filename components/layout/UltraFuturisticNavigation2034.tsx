@@ -305,10 +305,7 @@ const quickLinks = [
   { name: 'Status', href: '/status', icon: Activity }
 ];
 
-
-
 export default function UltraFuturisticNavigation2034() {;
-
 
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -382,15 +379,17 @@ export default function UltraFuturisticNavigation2034() {;
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {;
     const handleScroll = () => {;
-      setIsScrolled(window && window.scrollY > 50);
-    };
+      setIsScrolled(window && window.scrollY > 50)
+};
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
-  }, []);
-  };
+  }, [])
+};
 
   const closeDropdown = () => {;
-    setActiveDropdown(null);  };    };
+    setActiveDropdown(null)
+}
+};
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -398,7 +397,6 @@ export default function UltraFuturisticNavigation2034() {;
   return (
     <>;
       {/* Top Contact Bar */}
-
 
                 {contactInfo.mobile}
               </span>
@@ -710,15 +708,15 @@ function UltraFuturisticNavigation2034() {
           </div>                {contact_info.mobile}
               </span>;
             </div>;
-            <div className="flex items - center space - x-2">;
-              <Mail className="w - 4 h - 4 text - blue - 400" />;
-              <span className="hover:text - blue - 400 transition - colors">;
+            <div className="flex items-center space-x-2">;
+              <Mail className="w - 4 h - 4 text-blue-400" />;
+              <span className="hover:text - blue-400 transition-colors">;
                 {contact_info.email}
               </span>;
             </div>;
-            <div className="flex items - center space - x-2">;
-              <MapPin className="w - 4 h - 4 text - purple - 400" />;
-              <span className="hover:text - purple - 400 transition - colors">;
+            <div className="flex items-center space-x-2">;
+              <MapPin className="w - 4 h - 4 text-purple-400" />;
+              <span className="hover:text - purple-400 transition-colors">;
                 {contact_info.address}
               </span>;
             </div>;
@@ -732,14 +730,14 @@ function UltraFuturisticNavigation2034() {
               <Users className='w - 4 h - 4 text - green - 400' />;
               <span className='text - green - 400 font - semibold'>;
                 50K+ Customers;
-              </span>            </div>          <div className="flex items - center space - x-4">;
-            <div className="flex items - center space - x-2">;
-              <Star className="w - 4 h - 4 text - yellow - 400" />;
-              <span className="text - yellow - 400 font - semibold">5.0 Rating</span>;
+              </span>            </div>          <div className="flex items-center space-x-4">;
+            <div className="flex items-center space-x-2">;
+              <Star className="w - 4 h - 4 text-yellow-400" />;
+              <span className="text - yellow-400 font-semibold">5.0 Rating</span>;
             </div>;
-            <div className="flex items - center space - x-2">;
-              <Users className="w - 4 h - 4 text - green - 400" />;
-              <span className="text - green - 400 font - semibold">50K+ Customers</span>;
+            <div className="flex items-center space-x-2">;
+              <Users className="w - 4 h - 4 text-green-400" />;
+              <span className="text - green-400 font-semibold">50K+ Customers</span>;
           </div>;
         </div>;
       </div>;
@@ -757,8 +755,8 @@ function UltraFuturisticNavigation2034() {
           ? 'bg - black / 90 backdrop - blur - xl border - b border - cyan - 500 / 20';
           : 'bg - transparent';
       }`}>;
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-          <div className="flex items - center justify - between h - 20">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px-6 lg:px-8">;
+          <div className="flex items - center justify-between h-20">;
             <motion.div;
               initial={{ opacity: 0, coordinate_x: -20 }}
               animate={{ opacity: 1, coordinate_x: 0 }}
@@ -781,16 +779,16 @@ function UltraFuturisticNavigation2034() {
             </motion.div>;
             {/* Desktop Navigation */}            >;
               <div className="relative">;
-                <div className="w - 12 h - 12 bg - gradient - to - r from - cyan - 500 via - blue - 500 to - purple - 500 rounded - xl flex items - center justify - center">;
-                  <Rocket className="w - 7 h - 7 text - white" />;
+                <div className="w - 12 h - 12 bg - gradient - to - r from - cyan - 500 via - blue - 500 to - purple - 500 rounded - xl flex items-center justify-center">;
+                  <Rocket className="w - 7 h-7 text-white" />;
                 </div>;
-                <div className="absolute -inset - 1 bg - gradient - to - r from - cyan - 500 via - blue - 500 to - purple - 500 rounded - xl blur opacity - 30 animate - pulse"></div>;
+                <div className="absolute -inset - 1 bg - gradient - to - r from - cyan - 500 via - blue - 500 to - purple - 500 rounded - xl blur opacity-30 animate-pulse"></div>;
               </div>;
               <div>;
-                <h1 className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - blue - 400 to - purple - 400 bg - clip - text text - transparent">;
+                <h1 className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - blue - 400 to - purple - 400 bg - clip-text text-transparent">;
                   Zion Tech Group;
                 </h1>;
-                <p className="text - xs text - gray - 400">Future Technology Solutions</p>;
+                <p className="text - xs text-gray-400">Future Technology Solutions</p>;
               </div>;
             </motion.div>;
             {/* Desktop Navigation */}
@@ -802,12 +800,12 @@ function UltraFuturisticNavigation2034() {
                   className='text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 font - medium'                >;
                   {link.name}
                 </Link>))}
-            <div className="hidden lg:flex items - center space - x-8">;
+            <div className="hidden lg:flex items-center space-x-8">;
               {quick_links.map ((link) => (
                 <Link;
                   key={link.name}
                   href={link.href}
-                  className="text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 font - medium";
+                  className="text - gray - 300 hover:text - cyan - 400 transition - colors duration-200 font-medium";
                   {link.name}
                 </Link>))}
               {/* Services Dropdown */}
@@ -839,26 +837,26 @@ function UltraFuturisticNavigation2034() {
                               href={service.href}
                               className='block text - xs text - gray - 300 hover:text - cyan - 400 transition - colors'                            >              {/* Services Dropdown */}
               <div className="relative group">;
-                <button className="flex items - center space - x-1 text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 font - medium">;
+                <button className="flex items - center space - x-1 text - gray - 300 hover:text - cyan - 400 transition - colors duration-200 font-medium">;
                   <span > Services</span>;
-                  <ChevronDown className="w - 4 h - 4" />;
+                  <ChevronDown className="w-4 h-4" />;
                 </button>;
-                <div className="absolute top - full left - 0 w - 96 bg - black / 95 backdrop - blur - xl border border - cyan - 500 / 20 rounded - xl p - 4 opacity - 0 invisible group - hover:opacity - 100 group - hover:visible transition - all duration - 300 transform translate - y-2 group - hover:translate - y-0">;
-                  <div className="grid grid - cols - 2 gap - 4">;
+                <div className="absolute top - full left - 0 w - 96 bg - black / 95 backdrop - blur - xl border border - cyan - 500 / 20 rounded - xl p - 4 opacity - 0 invisible group - hover:opacity - 100 group - hover:visible transition - all duration - 300 transform translate - y-2 group-hover:translate-y-0">;
+                  <div className="grid grid - cols-2 gap-4">;
                     {service_categories.slice (0, 4).map ((category) => (
-                      <div key={category.title} className="p - 3 rounded - lg hover:bg - cyan - 500 / 10 transition - colors">;
-                        <div className="flex items - center space - x-2 mb - 2">;
-                          <category.icon className="w - 5 h - 5 text - cyan - 400" />;
-                          <h3 className="text - sm font - semibold text - white">{category.title.split (' ')[0]}</h3>;
+                      <div key={category.title} className="p - 3 rounded - lg hover:bg - cyan-500 / 10 transition-colors">;
+                        <div className="flex items - center space-x-2 mb-2">;
+                          <category.icon className="w - 5 h - 5 text-cyan-400" />;
+                          <h3 className="text - sm font-semibold text-white">{category.title.split (' ')[0]}</h3>;
                         </div>;
-                        <p className="text - xs text - gray - 400 mb - 2">{category.description}</p>;
-                        <div className="space - y-1">;
+                        <p className="text - xs text - gray-400 mb-2">{category.description}</p>;
+                        <div className="space-y-1">;
                           {category.services.slice (0, 2).map ((service) => (
                             <Link;
 
                               key={service.name}
                               href={service.href}
-                              className="block text - xs text - gray - 300 hover:text - cyan - 400 transition - colors";
+                              className="block text - xs text - gray - 300 hover:text - cyan-400 transition-colors";
                             >;
                               {service.name}
                           ))}
@@ -905,7 +903,6 @@ function UltraFuturisticNavigation2034() {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
 
-
                     </button>
                     <AnimatePresence>
                       {activeDropdown === category.title && (
@@ -943,14 +940,14 @@ function UltraFuturisticNavigation2034() {
                               key={service.name}
                               href={service.href}
                               on_click={() => setIsOpen (false)}
-                              className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                            >                          className="mt - 3 ml - 4 space - y-2";
+                              className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                            >                          className="mt - 3 ml-4 space-y-2";
                         >;
                           {category.services.map ((service) => (
                             <Link;
                               key={service.name}
                               href={service.href}
                               on_click={() => setIsOpen (false)}
-                              className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                              className="block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors";
+                              className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                              className="block text - sm text - gray - 400 hover:text - cyan-400 transition-colors";
                             >;
                               {service.name}
                             </Link>))}
@@ -963,7 +960,7 @@ function UltraFuturisticNavigation2034() {
                   className='block w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 font - medium text - center'                >                <Link;
                   href="/contact";
                   on_click={() => setIsOpen (false)}
-                  className="block w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 font - medium text - center";
+                  className="block w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 font-medium text-center";
                 >;
                   Get Started;
                 </Link>;
@@ -983,7 +980,7 @@ function UltraFuturisticNavigation2034() {
       </nav>;
       {/* Spacer for fixed navigation */}
       <div className='h - 20'></div>;
-    </>);      <div className="h - 20"></div>;
+    </>);      <div className="h-20"></div>;
     </>);
 }
 

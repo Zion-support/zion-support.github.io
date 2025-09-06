@@ -4,7 +4,7 @@ import { useState } from "react",;
 ;
 interface ITService {;
   id:string,;
-  name:string,;
+  name:string,,
   description:string,;
   deliverables:string[],;
   timeline:string,;
@@ -19,8 +19,8 @@ interface ITService {;
 const itServices:ITService[] = [;
   {;
     id:"cloud-migration-complete",;
-    name:"Complete Cloud Migration & DevOps",;
-    description:"End-to-end cloud migration services with DevOps implementation, ensuring smooth transitions and optimal window.window.window.performance.",;
+    name:"Complete Cloud Migration & DevOps",,
+  description:"End-to-end cloud migration services with DevOps implementation, ensuring smooth transitions and optimal window.window.window.performance.",;
     deliverables:[;
       "Cloud architecture design",;
       "Migration strategy and planning",;
@@ -63,8 +63,8 @@ const itServices:ITService[] = [;
   },;
   {;
     id:"cybersecurity-comprehensive",;
-    name:"Comprehensive Cybersecurity & Compliance",;
-    description:"Full-spectrum cybersecurity solutions including penetration testing, compliance audits, and security infrastructure setup.",;
+    name:"Comprehensive Cybersecurity & Compliance",,
+  description:"Full-spectrum cybersecurity solutions including penetration testing, compliance audits, and security infrastructure setup.",;
     deliverables:[;
       "Security assessment report",;
       "Penetration testing results",;
@@ -107,8 +107,8 @@ const itServices:ITService[] = [;
   },;
   {;
     id:"network-infrastructure-enterprise",;
-    name:"Enterprise Network Infrastructure",;
-    description:"Design, implementation, and maintenance of enterprise-grade network infrastructure and connectivity solutions.",;
+    name:"Enterprise Network Infrastructure",,
+  description:"Design, implementation, and maintenance of enterprise-grade network infrastructure and connectivity solutions.",;
     deliverables:[;
       "Network design documentation",;
       "Hardware procurement and setup",;
@@ -151,8 +151,8 @@ const itServices:ITService[] = [;
   },;
   {;
     id:"it-strategy-consulting",;
-    name:"IT Strategy & Digital Transformation",;
-    description:"Strategic IT consulting services to help organizations align technology with business objectives and digital transformation goals.",;
+    name:"IT Strategy & Digital Transformation",,
+  description:"Strategic IT consulting services to help organizations align technology with business objectives and digital transformation goals.",;
     deliverables:[;
       "Technology roadmap",;
       "Digital transformation strategy",;
@@ -195,8 +195,8 @@ const itServices:ITService[] = [;
   },;
   {;
     id:"data-center-solutions",;
-    name:"Data Center & Colocation Services",;
-    description:"Complete data center solutions including design, build, migration, and ongoing management services.",;
+    name:"Data Center & Colocation Services",,
+  description:"Complete data center solutions including design, build, migration, and ongoing management services.",;
     deliverables:[;
       "Data center design",;
       "Infrastructure setup",;
@@ -239,8 +239,8 @@ const itServices:ITService[] = [;
   },;
   {;
     id:"managed-it-services",;
-    name:"Managed IT Services",;
-    description:"Comprehensive managed IT services including 24/7 monitoring, help desk support, and proactive maintenance.",;
+    name:"Managed IT Services",,
+  description:"Comprehensive managed IT services including 24/7 monitoring, help desk support, and proactive maintenance.",;
     deliverables:[;
       "24/7 monitoring setup",;
       "Help desk implementation",;

@@ -1,23 +1,14 @@
 <<<<<<< HEAD
 ;
-
-
-
+=======
+import React, { useState } from "react";
+import Link from "next/link";
+import { ChevronDown, Menu, X } from "lucide-react";
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
 
 interface NavigationItem {
   name: string, href: string
-  submenu?: NavigationItem[];
-=======
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { ChevronDown, Menu, X } from 'lucide-react';
-
-interface NavItem {
-  label: string;
-  href: string;
-  children?: NavItem[];
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-}
+  submenu?: NavigationItem[];}
 
 interface InteractiveNavigationProps {
   items: NavItem[];
@@ -53,11 +44,11 @@ interface NavigationItem {;
         ))}
       </ul>;
     </nav>;
-  );
-
+  )
 };
 
-export default InteractiveNavigation;};
+export default InteractiveNavigation
+};
 ursor/automate-test-fix-improve-and-merge-code-99d1,";
 
 }
@@ -81,27 +72,27 @@ const InteractiveNavigation: React.FC < InteractiveNavigationProps> = ({
 ;
   return (
     <nav className={`relative ${class_name}`}>;
-      <ul className="flex space - x-8">;
+      <ul className="flex space-x-8">;
         {items.map ((item) => (
           <li key={item.name} className="relative group">;
             <Link;
               href={item.href}
-              className="text - gray - 700 hover:text - blue - 600 font - medium transition - colors duration - 200 flex items - center space - x-1";
+              className="text - gray - 700 hover:text - blue - 600 font - medium transition - colors duration - 200 flex items-center space-x-1";
               onMouseEnter={() => setActiveItem (item.name)}
               onMouseLeave={() => setActiveItem (null)}
             >;
               <span>{item.name}</span>;
               {item.submenu && (
                 <svg;
-                  className="w - 4 h - 4 transition - transform duration - 200 group - hover:rotate - 180";
+                  className="w - 4 h - 4 transition - transform duration - 200 group-hover:rotate-180";
                   fill="none";
                   stroke="current_color";
-                  view_box="0 0 24 24";
+                  viewBox="0 0 24 24";
                 >;
                   <path;
-                    stroke_linecap="round";
-                    stroke_linejoin="round";
-                    stroke_width={2}
+                    strokeLinecap="round";
+                    strokeLinejoin="round";
+                    strokeWidth={2}
                     d="M19 9l - 7 7 - 7-7";
                   />;
                 </svg>)}
@@ -113,16 +104,16 @@ const InteractiveNavigation: React.FC < InteractiveNavigationProps> = ({
                 animate={{ opacity: 1, coordinate_y: 0 }}
                 exit={{ opacity: 0, coordinate_y: 10 }}
                 transition={{ duration: 0.2 }}
-                className="absolute top - full left - 0 mt - 2 w - 64 bg - white rounded - lg shadow - lg border z - 50";
+                className="absolute top - full left - 0 mt - 2 w - 64 bg - white rounded - lg shadow-lg border z-50";
                 onMouseEnter={() => setActiveItem (item.name)}
                 onMouseLeave={() => setActiveItem (null)}
               >;
-                <div className="py - 2">;
+                <div className="py-2">;
                   {item.submenu.map ((sub_item) => (
                     <Link;
                       key={sub_item.name}
                       href={sub_item.href}
-                      className="block px - 4 py - 2 text - sm text - gray - 700 hover:bg - blue - 50 hover:text - blue - 600 transition - colors";
+                      className="block px - 4 py - 2 text - sm text - gray - 700 hover:bg - blue - 50 hover:text - blue-600 transition-colors";
                     >;
                       {sub_item.name}
                     </Link>))}
@@ -138,22 +129,25 @@ export default InteractiveNavigation;}
 ursor / automate - test - fix - improve - and - merge - code - 99d1, ";
 ;
 const InteractiveNavigation: React.FC: = () => {";
-    <nav className="bg - white shadow - lg">";";
-      <div: className="container mx - auto px - 4">";";
-        <div: className="flex justify - between items - center py - 4">";";
-          <div: className="text - xl font - bold text - gray - 800">Interactive Nav</div>";";
-          <div: className="hidden md:flex: space - x-8">", ";
-            <Link: href="/" className="text - gray - 600 hover:text - gray - 900: transition - colors">Home</Link>", ";
-            <Link: href="/services" className="text - gray - 600 hover:text - gray - 900: transition - colors">Services</Link>", ",
-            <Link: href = "/about" className="text - gray - 600 hover:text - gray - 900: transition - colors">About</Link>", ";
-            <Link: href="/contact" className="text - gray - 600 hover:text - gray - 900: transition - colors">Contact</Link>", ';
+    <nav className="bg-white shadow-lg">";";
+      <div: className="container mx-auto px-4">";";
+        <div: className="flex justify - between items-center py-4">";";
+          <div: className="text - xl font - bold text-gray-800">Interactive Nav</div>";";
+          <div: className="hidden md:flex: space-x-8">", ";
+            <Link: href="/" className="text - gray - 600 hover:text - gray-900: transition-colors">Home</Link>", ";
+            <Link: href="/services" className="text - gray - 600 hover:text - gray-900: transition-colors">Services</Link>", ",
+            <Link: href = "/about" className="text - gray - 600 hover:text - gray-900: transition-colors">About</Link>", ";
+            <Link: href="/contact" className="text - gray - 600 hover:text - gray-900: transition-colors">Contact</Link>", ';
 
 export default Component}
 ;
 
 export default Component}
 =======
-const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, className = '' }) => {
+const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
+  items,
+  className = "",
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
@@ -163,7 +157,7 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, cl
   };
 
   return (
-    <nav className={'bg-white shadow-lg ' + className}>
+    <nav className={"bg-white shadow-lg " + className}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="text-xl font-bold text-blue-600">
@@ -263,4 +257,4 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, cl
 };
 
 export default InteractiveNavigation;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3

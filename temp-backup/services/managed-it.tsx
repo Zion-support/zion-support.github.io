@@ -47,4 +47,3 @@ export default function Managedit(): any ({ }: ManageditProps) {;
     </div>;
   );
 
-

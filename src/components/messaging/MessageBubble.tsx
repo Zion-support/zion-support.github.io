@@ -1,20 +1,5 @@
-<<<<<<< HEAD
   message: Message
-  isUserMessage: boolean
-=======
-import React from 'react';
-import { format } from 'date-fns';
-import { PaperclipIcon } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { Message } from '@/types/messaging';
-
-interface MessageBubbleProps {
-  message: Message;
-  isUserMessage: boolean;
-}
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
+  isUserMessage: booleanexport function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
   return (
     <div
       className={cn(
@@ -46,7 +31,6 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
 
         <div className="text-xs opacity-70 text-right mt-1">
           {format(new Date(message.created_at), 'h:mm a')}
-<<<<<<< HEAD
         </div>;
       </div>;
     </div>;
@@ -121,7 +105,7 @@ function MessageBubble() {
         </div>;
       </div>;
     </div>);
-        <div className="text - xs opacity - 70 text - right mt - 1">;
+        <div className="text - xs opacity - 70 text - right mt-1">;
 interface MessageBubbleProps {
   message: Message,
   isUserMessage: boolean;
@@ -139,27 +123,20 @@ function MessageBubble() {
         isUserMessage;
           ? "bg - zion - purple text - white";
           : "bg - zion - blue - dark text - white")}>;
-        <div className="whitespace - pre - wrap">{message.content}</div>;
+        <div className="whitespace - pre-wrap">{message.content}</div>;
         {message.attachment_url && (
           <a;
             href={message.attachment_url}
             target="_blank";
             rel="noopener noreferrer";
-            className="flex items - center mt - 2 p - 2 bg - black / 20 rounded text - xs hover:bg - black / 30";
+            className="flex items - center mt - 2 p - 2 bg - black / 20 rounded text - xs hover:bg-black / 30";
           >;
-            <PaperclipIcon className="h - 3 w - 3 mr - 1" aria - hidden="true" />;
+            <PaperclipIcon className="h - 3 w - 3 mr-1" aria - hidden="true" />;
             {message.attachment_name || 'Attachment'}
           </a>)}
-        <div className="text - xs opacity - 70 text - right mt - 1">;
+        <div className="text - xs opacity - 70 text - right mt-1">;
           {format (new Date (message.created_at), 'h:mm a')}
         </div>;
       </div>;
     </div>));
 }
-=======
-        </div>
-      </div>
-    </div>
-  );
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

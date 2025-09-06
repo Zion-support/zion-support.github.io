@@ -275,8 +275,8 @@ const MOCK_SUPPORT_REQUESTS = [;
     setSearchQuery("");
     setStatusFilter(null);
     setPriorityFilter(null);
-    setCategoryFilter(null);
-  };
+    setCategoryFilter(null)
+};
   return (
     <AppLayout>;
       <SEO
@@ -341,9 +341,7 @@ const MOCK_SUPPORT_REQUESTS = [;
                   placeholder="Search by ID, user or issue..."
                   value={searchQuery}
 
-
               <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
-
 
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Status" />
@@ -356,9 +354,7 @@ const MOCK_SUPPORT_REQUESTS = [;
                 </SelectContent>
               </Select>
 
-
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
-
 
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Priority" />
@@ -371,9 +367,7 @@ const MOCK_SUPPORT_REQUESTS = [;
                 </SelectContent>
               </Select>
 
-
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
-
 
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Category" />

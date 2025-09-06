@@ -13,9 +13,6 @@ if (idx === -1) return res.status(404).json({ error: 'Not found' });
   writeAll(items);
 }
 
-
-
-
 ;
 const REQUESTS_PATH = path.join (process.cwd (), 'data', 'requests.json');
 ;

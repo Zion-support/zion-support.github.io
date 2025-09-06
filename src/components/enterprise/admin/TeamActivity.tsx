@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {
 
   Table
@@ -87,17 +86,12 @@ export function TeamActivity() {
 
   const getCategoryBadge = (category: string) => {
     const categoryStyles: Record<string { variant: "default" | "outline" | "secondary" | "destructive" }> = {
-      jobs: { variant: "default" },
-=======
-jobs: { variant: "default" },
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-      candidates: { variant: "outline" },
+      jobs: { variant: "default" },      candidates: { variant: "outline" },
       team: { variant: "secondary" },
       billing: { variant: "destructive" }},
 
-
-    return <Badge variant={style && style.variant}>{category}</Badge>;
-  };
+    return <Badge variant={style && style.variant}>{category}</Badge>
+};
 
 import React from "react";
 import {;
@@ -191,23 +185,18 @@ export function TeamActivity() {;
       team: { variant: "secondary" },;
       billing: { variant: "destructive" }},;
     const style = categoryStyles[category] || { variant: "default" as const },;
-    return <Badge variant={style && style.variant}>{category}</Badge>;
-  };
-
+    return <Badge variant={style && style.variant}>{category}</Badge>
+};
 
     const style = categoryStyles[category] || { variant: "default" as const },
     return <Badge variant={style.variant}>{category}</Badge>
 
-
-
-
-
   return (
 
-    <div className="space - y-6">;
-      <div className="flex items - center justify - between">;
-        <h3 className="text - xl font - medium">Recent Team Activity</h3>;
-        <div className="flex items - center gap - 2">;
+    <div className="space-y-6">;
+      <div className="flex items - center justify-between">;
+        <h3 className="text - xl font-medium">Recent Team Activity</h3>;
+        <div className="flex items - center gap-2">;
 
 import React from "react",;
 import {;
@@ -290,8 +279,8 @@ export function TeamActivity() {;
       team: { variant: "secondary" },;
       billing: { variant: "destructive" }},;
     const style = categoryStyles[category] || { variant: "default" as const };
-    return <Badge variant={style.variant}>{category}</Badge>;
-  };
+    return <Badge variant={style.variant}>{category}</Badge>
+};
   return (;
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
@@ -299,19 +288,19 @@ export function TeamActivity() {;
         <div className="flex items-center gap-2">;
 
           <div className="relative">;
-            <Search className="absolute left - 2.5 top - 2.5 h - 4 w - 4 text - muted - foreground" />;
+            <Search className="absolute left - 2.5 top - 2.5 h - 4 w - 4 text - muted-foreground" />;
             <Input;
               type="search";
               placeholder="Search activities...";
-              className="w-[200px] md:w-[300px] pl - 9";
+              className="w-[200px] md:w-[300px] pl-9";
             />;
           </div>;
-          <Button variant="outline" size="icon" className="h - 10 w - 10" aria - label="Filter by date">;
-            <CalendarIcon className="h - 4 w - 4" />;
+          <Button variant="outline" size="icon" className="h - 10 w-10" aria - label="Filter by date">;
+            <CalendarIcon className="h - 4 w-4" />;
           </Button>;
         </div>;
       </div>;
-      <div className="rounded - md border">;
+      <div className="rounded-md border">;
         <Table>;
           <TableHeader>;
             <TableRow>;
@@ -325,24 +314,24 @@ export function TeamActivity() {;
           <TableBody>;
             {activities.map ((activity, ) => (
               <TableRow key={activity.id}>;
-                <TableCell className="font - medium">{activity.user}</TableCell>;
+                <TableCell className="font-medium">{activity.user}</TableCell>;
                 <TableCell>{activity.action}</TableCell>;
                 <TableCell>;
-                  <span className="font - medium">{activity.target}</span>;
+                  <span className="font-medium">{activity.target}</span>;
                 </TableCell>;
                 <TableCell>{getCategoryBadge (activity.category)}</TableCell>;
-                <TableCell className="text - muted - foreground">;
+                <TableCell className="text - muted-foreground">;
                   {format_date (activity.timestamp)}
                 </TableCell>;
               </TableRow>))}
           </TableBody>;
         </Table>;
       </div>;
-      <div className="flex items - center justify - between">;
+      <div className="flex items - center justify-between">;
         <Button variant="outline" size="sm">;
           Previous;
         </Button>;
-        <div className="text - sm text - muted - foreground">;
+        <div className="text - sm text - muted-foreground">;
           Page 1 of 10;
         </div>;
         <Button variant="outline" size="sm">;
@@ -387,7 +376,7 @@ const getCategoryBadge = (category: string) =>: any {
 
   activity.id;
 }> </TableCell> </TableRow>) ) ";
-}</TableBody> </Table> </div> <div className="flex items - center justify - between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text - sm text - muted - foreground" > Page 1 of 10 </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>);
+}</TableBody> </Table> </div> <div className="flex items - center justify-between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text - sm text - muted-foreground" > Page 1 of 10 </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>);
 }"}
 
                   {formatDate(activity.timestamp)}
@@ -410,7 +399,4 @@ const getCategoryBadge = (category: string) =>: any {
         <Button variant="outline" size="sm">
           Next
         </Button>
-<<<<<<< HEAD
-=======
       </div>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

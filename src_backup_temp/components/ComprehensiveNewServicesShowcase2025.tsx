@@ -62,22 +62,22 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: "Servic
     } else if (model === 'project') {;
       return `$${price.toLocaleString()}`;
     }
-    return `$${price.toLocaleString()}`;
-  };
+    return `$${price.toLocaleString()}`
+};
 ;
   const getInnovationBadge = ("level": "string) => {;
     const colors = {;
       'Revolutionary': 'bg-purple-100 text-purple-800 border-purple-200'",;
       'Advanced': 'bg-blue-100 text-blue-800 border-blue-200',;
-      'Professional': 'bg-green-100 text-green-800 border-green-200';
-    };
+      'Professional': 'bg-green-100 text-green-800 border-green-200'
+};
     ;
     return (;
       <span className={`px-2 py-1 text-xs font-medium rounded-full border ${colors[level as keyof typeof colors] || colors.Professional}`}>;
         {level}
       </span>;
-    );
-  };
+    )
+};
 ;
   return (;
     <div className={`bg-gray-50 py-16 ${className}`}>;
@@ -403,8 +403,8 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
     } else if (model === 'project') {
       return `$${price.toLocaleString()}`;
     }
-    return `$${price.toLocaleString()}`;
-  };
+    return `$${price.toLocaleString()}`
+};
   const getInnovationBadge = (level: string) => {
     const colors = {
       'Revolutionary': 'bg-purple-100 text-purple-800 border-purple-200',
@@ -415,8 +415,8 @@ export function ComprehensiveNewServicesShowcase2025({ className = '' }: Service
       <span className={`px-2 py-1 text-xs font-medium rounded-full border ${colors[level as keyof typeof colors] || colors.Professional}`}>
         {level}
       </span>
-    );
-  };
+    )
+};
   return (
     <div className={`bg-gray-50 py-16 ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

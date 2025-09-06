@@ -18,17 +18,6 @@
 ; const quality_tests = [;
     ; { cmd:"npm run lint: check", desc: "Lint check" } { cmd:"npm run format: check", desc: "Format check" },
     { cmd:"npm run test: coverage", desc: "Test coverage" }
-;
-    } catch (error) {,;
-      this.log(`❌ Automation runner: failed: ${error.message}`, "ERROR"),;
-      throw error;
-    }
-  }
-},;
-,;
-// Main execution,;
-if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
-  const runner = new ComprehensiveAutomationRunner(),;
 =======
 #!/usr/bin/env node;
 import fs from "fs";
@@ -56,6 +45,7 @@ class ComprehensiveAutomationRunner {;
       };
     });
 };
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
 ;
   log(message, level = "INFO") {;
     const timestamp = new Date().toISOString();
@@ -254,6 +244,15 @@ class ComprehensiveAutomationRunner {;
     } catch (error) {;
       this.log(`❌ Automation runner failed: ${error.message}`, "ERROR");
       throw error;
+<<<<<<< HEAD
+    }
+  }
+},;
+,;
+// Main execution,;
+if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
+  const runner = new ComprehensiveAutomationRunner(),;  runner.runAll().catch(console.error)
+=======
 };
 };
 };
@@ -261,8 +260,8 @@ class ComprehensiveAutomationRunner {;
 // Main execution;
 if (import.meta.url === `file: //${process.argv[1]}`) {;
   const runner = new ComprehensiveAutomationRunner();
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   runner.runAll().catch(console.error);
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
 };
 ;
 export default ComprehensiveAutomationRunner;
@@ -287,9 +286,15 @@ class ComprehensiveAutomationRunner {,
       linting: {},
       performance: {},
       security: {},
+<<<<<<< HEAD
+      overall: { status: "unknown", score: 0 }
+}
+};
+=======
       overall: { status: "unknown", score: 0 };
     };
       };
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
     }),
   };
 ,
@@ -318,9 +323,15 @@ class ComprehensiveAutomationRunner {,
         success: false,
         error: error.message,
         output: error.stdout?.toString() || error.stderr?.toString() || "",
+<<<<<<< HEAD
+      }
+}
+};
+=======
       };
     };
   };
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
 ,
   async runBuildTests() {,
     this.log("=== RUNNING BUILD TESTS ==="),
@@ -335,8 +346,13 @@ class ComprehensiveAutomationRunner {,
     for (const test of buildTests) {,
       const result = await this.runCommand(test.cmd, test.desc),
       this.results.builds[test.desc] = result,
+<<<<<<< HEAD
+    }
+};
+=======
     };
   };
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
 ,
   async runPerformanceTests() {,
     this.log("=== RUNNING PERFORMANCE TESTS ==="),
@@ -349,8 +365,13 @@ class ComprehensiveAutomationRunner {,
     for (const test of perfTests) {,
       const result = await this.runCommand(test.cmd, test.desc),
       this.results.performance[test.desc] = result,
+<<<<<<< HEAD
+    }
+};
+=======
     };
   };
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
 ,
   async runSecurityTests() {,
     this.log("=== RUNNING SECURITY TESTS ==="),
@@ -363,8 +384,13 @@ class ComprehensiveAutomationRunner {,
     for (const test of securityTests) {,
       const result = await this.runCommand(test.cmd, test.desc),
       this.results.security[test.desc] = result,
+<<<<<<< HEAD
+    }
+};
+=======
     };
   };
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
 ,
   async runQualityTests() {,
     this.log("=== RUNNING QUALITY TESTS ==="),
@@ -378,8 +404,13 @@ class ComprehensiveAutomationRunner {,
     for (const test of qualityTests) {,
       const result = await this.runCommand(test.cmd, test.desc),
       this.results.tests[test.desc] = result,
+<<<<<<< HEAD
+    }
+};
+=======
     };
   };
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
 ,
   calculateOverallScore() {,
     let totalScore = 0,
@@ -490,8 +521,13 @@ class ComprehensiveAutomationRunner {,
     } catch (error) {,
       this.log(`❌ Automation runner failed: ${error.message}`, "ERROR"),
       throw error,
+<<<<<<< HEAD
+    }
+}
+=======
     };
   };
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
 };
 ,
 // Main execution,
@@ -555,4 +591,4 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
 export default ComprehensiveAutomationRunner;
 
 =======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3

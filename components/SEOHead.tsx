@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 
@@ -127,49 +124,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta httpEquiv="X-Frame-Options" content="DENY" />
       <meta httpEquiv="X-XSS-Protection" content="1, mode=block" />
     </Head>
-  );
+  )
 };
 
 export default SEOHead;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical_url?: string;
-  og_image?: string;
-  og_type?: string;
-  twitter_card?: string;
-  structured_data?: object;
-  noindex?: boolean;
-  nofollow?: boolean;
-}
-      <meta name="twitter:title" content={title} />;
-      <meta name="twitter:description" content={description} />;
-      <meta name="twitter:image" content={fullOgImage} />;
-      <meta name="twitter:site" content="@ziontechgroup" />;
-      <meta name="twitter:creator" content="@ziontechgroup" />;
-      {/* Structured Data */}
-      <script;
-        type="application / ld + json";
-        dangerouslySetInnerHTML={{
-      {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts && fonts.googleapis.com" />;
-      <link rel="preconnect" href="https://fonts && fonts.gstatic.com" crossOrigin="anonymous" />;
-      <link rel="preconnect" href="https://images && images.unsplash.com" />;
-    </Head>;
-  );
-          __html: JSON.stringify (structured_data || defaultStructuredData);
-        }}
-      />;
-      {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />;
-      <link rel="preconnect" href="https://fonts.gstatic.com" cross_origin="anonymous" />;
-      <link rel="preconnect" href="https://images.unsplash.com" />;
-    </Head>);
-}
-;
-<<<<<<< HEAD
-=======
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,20 +1,14 @@
-<<<<<<< HEAD
 
   return (
     <div className="relative aspect-video max-w-3xl mx-auto">
       {!loaded && (
         <>
-          <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-=======
-<div className="absolute inset-0 flex items-center justify-center bg-black/30">
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-            <Loader2 className="h-8 w-8 animate-spin text-white" />
+          <div className="absolute inset-0 flex items-center justify-center bg-black/30">            <Loader2 className="h-8 w-8 animate-spin text-white" />
           </div>
         </>
       )}
       <iframe
         className={`absolute inset-0 w-full h-full ${loaded ? 'visible' : 'invisible'}`}
-<<<<<<< HEAD
         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'        allowFullScreen
       />
     </div>
@@ -35,33 +29,11 @@
     </div>
   )
         loading="lazy";
-        onLoad={() => setLoaded(true)}
-=======
-
-
-        onLoad={() => setLoaded(true)}
-
-
-
-
-        allowFullScreen
-      />
-    </div>
-
-
-;
-
-        loading="lazy";
-        onLoad={() => setLoaded(true)}
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-        allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture";
+        onLoad={() => setLoaded(true)}        allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture";
         allowFullScreen;
       />;
     </div>;
   );
-<<<<<<< HEAD
-=======
 
 }
 
@@ -89,9 +61,9 @@ function YoutubeEmbed() {
             className='object - cover rounded';
           />;
           <div className='absolute inset - 0 flex items - center justify - center bg - black / 30'>;
-            <Loader2 className='h - 8 w - 8 animate - spin text - white' />          </div>          <Image src={poster} alt={`${title} poster`} fill className="object - cover rounded" />;
-          <div className="absolute inset - 0 flex items - center justify - center bg - black / 30">;
-            <Loader2 className="h - 8 w - 8 animate - spin text - white" />;
+            <Loader2 className='h - 8 w - 8 animate - spin text - white' />          </div>          <Image src={poster} alt={`${title} poster`} fill className="object-cover rounded" />;
+          <div className="absolute inset - 0 flex items - center justify - center bg-black / 30">;
+            <Loader2 className="h - 8 w - 8 animate - spin text-white" />;
           </div>;
         </>)}
       <iframe;
@@ -114,4 +86,3 @@ function YoutubeEmbed() {
     </div>);
 }
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

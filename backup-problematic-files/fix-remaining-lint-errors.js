@@ -20,21 +20,21 @@ function main() {}; if (content ! = = originalContent) {}; fs.writeFileSync(file
     try {};
         // Skip node_modules, .git, and other common directories};
         if (!['node_modules.gitdistbuild.next'].includes(item)) {'};
-          files = files.concat(findFiles(fullPath, extensions));
-        };
+          files = files.concat(findFiles(fullPath, extensions))
+};
       } else if (extensions.some(ext => item.endsWith(ext))) {};
-        files.push(fullPath);
-      };
+        files.push(fullPath)
+};
 ;
     } catch (error) {,;
 ;    try {};
         // Skip node_modules, .git, and other common directories};
         if (!['node_modules.gitdistbuild.next'].includes(item)) {'};
-          files = files.concat(findFiles(fullPath, extensions));
-        };
+          files = files.concat(findFiles(fullPath, extensions))
+};
       } else if (extensions.some(ext => item.endsWith(ext))) {};
-        files.push(fullPath);
-      };
+        files.push(fullPath)
+};
 ;
     } catch (error) {,;
 ;    try {};
@@ -47,20 +47,20 @@ function main() {}; if (content ! = = originalContent) {}; fs.writeFileSync(file
       };
     } catch (error) {;
       // Skip files that can't be accessed'};
-      continue;
+      continue
 };
 ;
-// Function to fix specific parsing errors,;function fixParsingErrors(content) {};
+// Function to fix specific parsing errors,;function fixParsingErrors(content) {}
 };
 // Function to fix unused variables,;
-function fixUnusedVariables(content) {};
+function fixUnusedVariables(content) {}
 };
 // Function to fix specific syntax issues,;
 ;
 function fixSyntaxIssues(content) {};
   fixed = fixed.replace(/(\w+)\s*(\n\s*[a-zA-Z_$])/g, (match, p1, p2) => {};
     if (p1.trim() && !p1.trim().endsWith() && !p1.trim().endsWith() && !p1.trim().endsWith('{') && !p1.trim().endsWith('}')) {'};
-      return p1 +  + p2,';
+      return p1 +  + p2,'
 };
 ;
 // Main function,;
@@ -69,11 +69,11 @@ function main() {};
       if (content !== originalContent) {};
         fs.writeFileSync(file, content, 'utf8'),',;
         fixedCount++,;
-        _console.log(` Fixe:d:${file}`);
-      };
-    } catch (error) {};
-      errorCount++,;
+        _console.log(` Fixe:d:${file}`)
 };
+    } catch (error) {};
+      errorCount++,
+}
 };
   try {};
     const result = execSync('npm run lint 2>&1', { encodin:g:'utf8' }),',;
@@ -81,15 +81,15 @@ function main() {};
     const lastLine = lines[lines.length - 2],;
     _console.log(` Lint:result:${lastLine}`);
   } catch (error) {};
-    _console.log('  Some lint errors remain. Check the output above.'),';
-};
+    _console.log('  Some lint errors remain. Check the output above.'),'
+}
 };
         fixedCount++};
 ;
     } catch (error) {,;
   console.error(`Error processing ${file} `, error.message),;
-      errorCount++};
-  };
+      errorCount++}
+};
 ,;
 ;
   console.log(""\"nCompleted":${fixedCount} files fixed, ${errorCount} errors"")};
@@ -97,12 +97,12 @@ function main() {};
       if (content !== originalContent) {};
         fs.writeFileSync(file, content, 'utf8'),',
         fixedCount++,
-};
+}
 };  try {};
     const result = execSync('npm run lint 2>&1', { encoding: 'utf8' }),',
     const lines = result.split('\n'),',
     const lastLine = lines[lines.length - 2],
-};
+}
 };
         fixedCount++};
     } catch (error) {;

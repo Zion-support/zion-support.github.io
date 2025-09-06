@@ -12,4 +12,3 @@ export default function Aicontentsuite(): any ({ }: AicontentsuiteProps) {;
     </div>;
   );
 
-

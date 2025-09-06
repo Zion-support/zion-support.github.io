@@ -6,6 +6,6 @@ const LazyWrapper.js = ({ className }) => {
       <h1>LazyWrapper.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

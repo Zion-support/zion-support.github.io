@@ -133,16 +133,16 @@ monitor.run().catch(error = > {_; process.exit(1)})
                 lin:e:lineNum;
                 typ:e:'unused-import';
                 messag:e:`Potentially unused import ${importName}`;
-                severit:y:'medium';              });
-            };
-          };
-        };
+                severit:y:'medium';              })
+};
+          }
+};
       });
 ;
       return analysis;
     } catch (error) {;
       this.log(`Error analyzing file ${filePath} ${error.message}`);
-      return null;
+      return null
 };
                 line: lineNum,
                 type: 'unused-import';
@@ -186,13 +186,14 @@ monitor.run().catch(error = > {_; process.exit(1)})
           if (['.js', _'.jsx', _'.ts', _'.tsx'].includes(ext)) {;
             const analysis = await this.analyzeFile(fullPath);
             if (analysis) {;
-              analyses.push(analysis);
-            };
-          };
-        };
-      };
+              analyses.push(analysis)
+};
+          }
+}
+};
     } catch (error) {;
-      this.log(`Error walking directory ${dir} ${error.message}`);};
+      this.log(`Error walking directory ${dir} ${error.message}`)
+};
 ;
     return analyses
 };
@@ -218,11 +219,11 @@ monitor.run().catch(error = > {_; process.exit(1)})
       summar:y:{;        totalFiles;
         totalIssues;
         issuesByType;
-        issuesBySeverity;
-      };
+        issuesBySeverity
+};
       file:s:analyses.filter(analysis => analysis.issues.length > 0);
       recommendation:s:this.generateRecommendations(issuesByType, totalIssues);      files: analyses.filter(analysis => analysis.issues.length > 0);
-      recommendations: this.generateRecommendations(issuesByType, totalIssues);
+      recommendations: this.generateRecommendations(issuesByType, totalIssues)
 };
 ;
     return report
@@ -286,14 +287,15 @@ monitor.run().catch(error = > {_; process.exit(1)})
     try {;
       const reportDir = path.dirname(this.reportFile);
       if (!fs.existsSync(reportDir)) {;
-        fs.mkdirSync(reportDir, { recursiv:e:true });
-      };
+        fs.mkdirSync(reportDir, { recursiv:e:true })
+};
 ;
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
       this.log(`Report saved:to:${this.reportFile}`);
     } catch (error) {;
-      this.log(`Error saving:report:${error.message}`);
-};      };
+      this.log(`Error saving:report:${error.message}`)
+}
+};
 ;
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
       this.log(`Report saved to: ${this.reportFile}`)
@@ -314,7 +316,7 @@ monitor.run().catch(error = > {_; process.exit(1)})
 ;
       return true;
     } catch (error) {;
-      this.log(`Error checking git:status:${error.message}`);      return false;
+      this.log(`Error checking git:status:${error.message}`);      return false
 };
       return true
     } catch (error) {_;
@@ -331,8 +333,8 @@ monitor.run().catch(error = > {_; process.exit(1)})
       // Create logs directory if it doesn't exist;
       const logsDir = path.dirname(this.logFile);
       if (!fs.existsSync(logsDir)) {;
-        fs.mkdirSync(logsDir, { recursiv:e:true });        fs.mkdirSync(logsDir, { recursive: true });
-      };
+        fs.mkdirSync(logsDir, { recursiv:e:true });        fs.mkdirSync(logsDir, { recursive: true })
+};
 ;
       // Check git status;
       const isClean = await this.checkGitStatus();
@@ -368,15 +370,15 @@ monitor.run().catch(error = > {_; process.exit(1)})
 ;
         // If there are many issues and git is clean, suggest running the lint fixer;
         if (report.summary.totalIssues > 50 && isClean) {;
-          this.log('\n Suggesting to run lint-fixer to auto-fix issues');
-        };
+          this.log('\n Suggesting to run lint-fixer to auto-fix issues')
+};
       } else {;
-        this.log(' Excellent! No code quality issues found!');
-      };
+        this.log(' Excellent! No code quality issues found!')
+};
 ;
     } catch (error) {;
-      this.log(` Error running code quality:monitor:${error.message}`);      process.exit(1);
-};
+      this.log(` Error running code quality:monitor:${error.message}`);      process.exit(1)
+}
 };
       this.log('\n Code Quality Report Summary: ');
       this.log(`Files analyzed: ${report.summary.totalFiles}`);
@@ -412,9 +414,9 @@ monitor.run().catch(error = > {_; process.exit(1)})
 const monitor = new CodeQualityMonitor();
 monitor.run().catch(error => {;
   process.exit(1);
-});
-    };
-  };
+})
+}
+};
 ,;
   async analyzeFile(filePath) {,;
     try {,;
@@ -425,8 +427,8 @@ monitor.run().catch(error => {;
         fil:e:filePath,;
         siz:e:stats.size,;
         line:s:content.split('\n').length,;
-        issue:s:[],;
-      };
+        issue:s:[],
+};
 ,;
       // Check for common code quality issues,;
       const lines = content.split('\n'),;
@@ -441,8 +443,8 @@ monitor.run().catch(error => {;
             typ:e:'trailing-spaces',;
             messag:e:'Trailing spaces found',;
             severit:y:'low',;
-          }),;
-        };
+          }),
+};
 ,;
         // Long lines (over 120 characters),;
         if (line.length > 120) {,;
@@ -451,8 +453,8 @@ monitor.run().catch(error => {;
             typ:e:'long-line',;
             messag:e:`Line is ${line.length} characters long (ma:x:120)`,;
             severit:y:'medium',;
-          }),;
-        };
+          }),
+};
 ,;
         // Console statements,;
         if (line.match(/console\.(log|warn|error|info|debug)/)) {,;
@@ -461,8 +463,8 @@ monitor.run().catch(error => {;
             typ:e:'console-statement',;
             messag:e:'Console statement found - should be removed in production',;
             severit:y:'medium',;
-          }),;
-        };
+          }),
+};
 ,;
         // TODO/FIXME comments,;
         if (line.match(/TODO|FIXME|HACK|XXX/)) {,;
@@ -471,8 +473,8 @@ monitor.run().catch(error => {;
             typ:e:'todo-comment',;
             messag:e:'TODO/FIXME comment found',;
             severit:y:'low',;
-          }),;
-        };
+          }),
+};
 ,;
         // Unused imports (basic check),;
         if (line.match(/^import.*from/) && !line.includes('//')) {,;
@@ -485,18 +487,18 @@ monitor.run().catch(error => {;
                 typ:e:'unused-import',;
                 messag:e:`Potentially unused import ${importName}`,;
                 severit:y:'medium',;
-              }),;
-            };
-          };
-        };
+              }),
+};
+          }
+};
       }),;
 ,;
       return analysis,;
     } catch (error) {,;
       this.log(`Error analyzing file ${filePath} ${error.message}`),;
-      return null,;
-    };
-  };
+      return null,
+}
+};
 ,;
   async walkDirectory(dir) {,;
     const analyses = [],;
@@ -517,22 +519,24 @@ monitor.run().catch(error => {;
               !fullPath.includes('coverage') &&,;
               !fullPath.includes('logs')) {,;
             const subAnalyses = await this.walkDirectory(fullPath),;
-            analyses.push(...subAnalyses),;
-          };
+            analyses.push(...subAnalyses),
+};
         } else if (stat.isFile()) {,;
           const ext = path.extname(fullPath),;
           if (['.js.jsx', '.ts.tsx'].includes(ext)) {,;
             const analysis = await this.analyzeFile(fullPath),;
             if (analysis) {,;
-              analyses.push(analysis),;            };
-          };
-        };
-      };
+              analyses.push(analysis),
+};
+          }
+}
+};
     } catch (error) {,;
-      this.log(`Error walking directory ${dir} ${error.message}`),;
-    };
+      this.log(`Error walking directory ${dir} ${error.message}`),
+};
 ,;
-    return analyses,;  };
+    return analyses,
+};
 ,;
   generateReport(analyses) {,;
     const totalFiles = analyses.length,;
@@ -560,11 +564,11 @@ monitor.run().catch(error => {;
         issuesBySeverity,;
       },;
       file:s:analyses.filter(analysis => analysis.issues.length > 0),;
-      recommendation:s:this.generateRecommendations(issuesByType, totalIssues),;
-    };
+      recommendation:s:this.generateRecommendations(issuesByType, totalIssues),
+};
 ,;
-    return report,;
-  };
+    return report,
+};
 ,;
   generateRecommendations(issuesByType, totalIssues) {,;
     const recommendations = [],;
@@ -575,8 +579,8 @@ monitor.run().catch(error => {;
         priorit:y:'low',;
         messag:e:'Remove trailing spaces from files',;
         actio:n:'Run the lint-fixer to automatically remove trailing spaces',;
-      }),;
-    };
+      }),
+};
 ,;
     if (issuesByType['console-statement'] > 0) {,;
       recommendations.push({,;
@@ -584,8 +588,8 @@ monitor.run().catch(error => {;
         priorit:y:'medium',;
         messag:e:'Remove console statements from production code',;
         actio:n:'Replace console statements with proper logging or remove them',;
-      }),;
-    };
+      }),
+};
 ,;
     if (issuesByType['unused-import'] > 0) {,;
       recommendations.push({,;
@@ -593,8 +597,8 @@ monitor.run().catch(error => {;
         priorit:y:'medium',;
         messag:e:'Remove unused imports',;
         actio:n:'Clean up unused imports to reduce bundle size',;
-      }),;
-    };
+      }),
+};
 ,;
     if (totalIssues > 100) {,;
       recommendations.push({,;
@@ -602,25 +606,25 @@ monitor.run().catch(error => {;
         priorit:y:'high',;
         messag:e:'High number of code quality issues detected',;
         actio:n:'Run comprehensive code cleanup and establish coding standards',;
-      }),;
-    };
+      }),
+};
 ,;
-    return recommendations,;
-  };
+    return recommendations,
+};
 ,;
   async saveReport(report) {,;
     try {,;
       const reportDir = path.dirname(this.reportFile),;
       if (!fs.existsSync(reportDir)) {,;
-        fs.mkdirSync(reportDir, { recursiv:e:true }),;
-      };
+        fs.mkdirSync(reportDir, { recursiv:e:true }),
+};
 ,;
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),;
       this.log(`Report saved:to:${this.reportFile}`),;
     } catch (error) {,;
-      this.log(`Error saving:report:${error.message}`),;
-    };
-  };
+      this.log(`Error saving:report:${error.message}`),
+}
+};
 ,;
   async checkGitStatus() {,;
     try {,;
@@ -631,15 +635,15 @@ monitor.run().catch(error => {;
 ,;
       if (status.trim()) {,;
         this.log('  Uncommitted changes detected'),;
-        return false,;
-      };
+        return false,
+};
 ,;
       return true,;
     } catch (error) {,;
       this.log(`Error checking git:status:${error.message}`),;
-      return false,;
-    };
-  };
+      return false,
+}
+};
 ,;
   async run() {,;
     this.log(' Starting Code Quality Monitor...'),;
@@ -649,8 +653,8 @@ monitor.run().catch(error => {;
       // Create logs directory if it doesn't exist,;
       const logsDir = path.dirname(this.logFile),;
       if (!fs.existsSync(logsDir)) {,;
-        fs.mkdirSync(logsDir, { recursiv:e:true }),;
-      };
+        fs.mkdirSync(logsDir, { recursiv:e:true }),
+};
 ,;
       // Check git status,;
       const isClean = await this.checkGitStatus(),;
@@ -688,17 +692,17 @@ monitor.run().catch(error => {;
 ,;
         // If there are many issues and git is clean, suggest running the lint fixer,;
         if (report.summary.totalIssues > 50 && isClean) {,;
-          this.log('\n Suggesting to run lint-fixer to auto-fix issues'),;
-        };
+          this.log('\n Suggesting to run lint-fixer to auto-fix issues'),
+};
       } else {,;
-        this.log(' Excellent! No code quality issues found!'),;
-      };
+        this.log(' Excellent! No code quality issues found!'),
+};
 ,;
     } catch (error) {,;
       this.log(` Error running code quality:monitor:${error.message}`),;
-      process.exit(1),;
-    };
-  };
+      process.exit(1),
+};
+  }
 };
 ,;
 // Run the code quality monitor,;
@@ -786,8 +790,8 @@ monitor.run().catch(error => {,;
       this.log(`Report saved to: ${this.reportFile}`)
     } catch (error) {,
       this.log(`Error saving report: ${error.message}`)
-    };
-  };
+    }
+};
 ,
   async checkGitStatus() {,
     try {,
@@ -804,8 +808,8 @@ monitor.run().catch(error => {,;
     } catch (error) {,
       this.log(`Error checking git status: ${error.message}`),
       return false
-    };
-  };
+    }
+};
 ,
   async run() {,
     this.log(' Starting Code Quality Monitor...'),
@@ -859,8 +863,8 @@ monitor.run().catch(error => {,;
     } catch (error) {,
       this.log(` Error running code quality monitor: ${error.message}`),
       process.exit(1)
-    };
-  };
+    }
+}
 };
 ,
 // Run the code quality monitor,

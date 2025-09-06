@@ -6,6 +6,6 @@ const TalentCard = ({ className }) => {
       <h1>TalentCard</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

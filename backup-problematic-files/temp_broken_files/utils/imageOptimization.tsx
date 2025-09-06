@@ -206,10 +206,10 @@ export function getImageDimensions(src:string):Promise<{ width:number, height:nu
 }, [lazy, priority, isInView]);
 //Generate WebP-compatible src const getOptimizedSrc = (originalSrc: string) => {;
   //If it's already optimized or external,  return as-is if (originalSrc.startsWith ('http') || originalSrc.includes ('/ next/image') ) {;
-  //For internal images, Next.js will handle optimization return originalSrc;
+  //For internal images, Next.js will handle optimization return originalSrc
 };';
 <defs> <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"> <stop offset="0%" style="stop-color:#f3f4f6, stop-opacity:1" /> <stop offset="100%" style="stop-color:#e5e7eb, stop-opacity:1" /> 100%"height=" 100%"fill=" url (#grad) "/> </svg>`) .toString ('base64') ;
-}` ;
+}` 
 };
 return (<div ref= {;
   imgRef ;

@@ -28,8 +28,6 @@ import {
   Bot
   BarChart3
 
-
-
   Code;
   Database,
   Globe,
@@ -58,9 +56,6 @@ import {
       responseTime: '<20ms'
     }
 
-
-
-
         free: '1,000 operations/month',
         pro: '$119/month',
         enterprise: 'Custom',
@@ -88,8 +83,8 @@ import {
 export default function ApiToolsPage() {;
   const apiTools = [;
     {;
-      icon: <Code className='w-8 h-8 text-white' />,;
-      description:;
+      icon: <Code className='w-8 h-8 text-white' />,,
+  description:;
         'Generate production-ready code in multiple languages using natural language descriptions and AI.',;
       features: [;
         'Support for 20+ programming languages',;
@@ -114,8 +109,8 @@ export default function ApiToolsPage() {;
     },
     {
       icon: <Database className='w-8 h-8 text-white' />,;
-      title: 'DataSync API - Real-time Data Synchronization',;
-      description:;
+      title: 'DataSync API - Real-time Data Synchronization',,
+  description:;
         'Seamlessly sync data across multiple databases, applications, and cloud services in real-time.',;
       features: [;
         'Multi-database support (PostgreSQL, MySQL, MongoDB)',;
@@ -140,8 +135,8 @@ export default function ApiToolsPage() {;
     },
     {
       icon: <Globe className='w-8 h-8 text-white' />,;
-      title: 'GeoAPI - Advanced Geospatial Services',;
-      description:;
+      title: 'GeoAPI - Advanced Geospatial Services',,
+  description:;
         'Comprehensive geolocation, mapping, and spatial analysis APIs for location-based applications.',;
       features: [;
         'Global geocoding and reverse geocoding',;
@@ -166,8 +161,8 @@ export default function ApiToolsPage() {;
     },
     {
       icon: <Shield className='w-8 h-8 text-white' />,;
-      title: 'AuthGuard API - Enterprise Authentication',;
-      description:;
+      title: 'AuthGuard API - Enterprise Authentication',,
+  description:;
         'Secure, scalable authentication and authorization system with advanced security features.',;
       features: [;
         'Multi-factor authentication (MFA)',;
@@ -192,8 +187,8 @@ export default function ApiToolsPage() {;
     },
     {
       icon: <Zap className='w-8 h-8 text-white' />,;
-      title: 'WebhookHub - Intelligent Webhook Management',;
-      description:;
+      title: 'WebhookHub - Intelligent Webhook Management',,
+  description:;
         'Reliable webhook delivery, retry logic, and event processing for modern applications.',;
       features: [;
         'Guaranteed webhook delivery with retry logic',;
@@ -218,8 +213,8 @@ export default function ApiToolsPage() {;
     },
     {
       icon: <Bot className='w-8 h-8 text-white' />,;
-      title: 'NLP API - Natural Language Processing',;
-      description:;
+      title: 'NLP API - Natural Language Processing',,
+  description:;
         'Advanced text analysis, sentiment detection, and language understanding capabilities.',;
       features: [;
         'Text classification and categorization',;
@@ -244,8 +239,8 @@ export default function ApiToolsPage() {;
     },
     {
       icon: <BarChart3 className='w-8 h-8 text-white' />,;
-      title: 'Analytics API - Business Intelligence',;
-      description:;
+      title: 'Analytics API - Business Intelligence',,
+  description:;
         'Comprehensive analytics and reporting APIs for data-driven decision making.',;
       features: [;
         'Real-time data aggregation and analysis',;
@@ -270,8 +265,8 @@ export default function ApiToolsPage() {;
     },
     {
       icon: <Lock className='w-8 h-8 text-white' />,;
-      title: 'EncryptAPI - Data Encryption Services',;
-      description:;
+      title: 'EncryptAPI - Data Encryption Services',,
+  description:;
         'Enterprise-grade encryption, hashing, and cryptographic operations for secure applications.',;
       features: [;
         'AES-256 encryption and decryption',;
@@ -597,11 +592,7 @@ function ApiToolsPage() {
                 ? 'All API Tools'
                 : `${selectedCategory} APIs`}
 
-
-
-
       {/* API Tools Grid */}
-
 
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -727,7 +718,6 @@ function ApiToolsPage() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
             <h2 className='text-3xl sm:text-4xl font-bold mb-6 text-white'>
-
 
               Developer Resources
             </h2>

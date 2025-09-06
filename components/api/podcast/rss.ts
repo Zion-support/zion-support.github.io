@@ -6,7 +6,6 @@ function ensureStorage() {
   if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
 
-
 function ensureStorage() {
 
   const dir = path.dirname(EPISODES_PATH);
@@ -49,7 +48,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   siteUrl
 }/media/podcast</link> <language>en-us</language> <itunes:author>Zion</itunes:author> <description>Zion interviews builders, founders, and contributors.</description> $ {
 }
-
 
   fs.writeFileSync(RSS_PATH, xml, 'utf8');
   return res.status(200).json({ ok: true, path: '/podcast.xml' })

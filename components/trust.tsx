@@ -4,7 +4,6 @@ import TrustBadge from '../components/ui/TrustBadge';
 import TrustRadar from '../components/ui/TrustRadar';
 import RiskIndicator from '../components/ui/RiskIndicator';
 
-
   const [loading, setLoading] = useState<boolean>(true);
   const [showLogic, setShowLogic] = useState<boolean>(false);
   useEffect(() => {
@@ -29,7 +28,6 @@ import RiskIndicator from '../components/ui/RiskIndicator';
   }, [userId]);
     <EnhancedLayout>    await fetch('/api/trust/appeal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, message, contactEmail }) });
     alert('Appeal submitted');
-
 
     form && form.reset();
 
@@ -61,12 +59,9 @@ import RiskIndicator from '../components/ui/RiskIndicator';
                     {data.components.map((c: any) => (
                       <li key={c.key} className="flex justify-between">
 
-
   }
   return (
     <EnhancedLayout>
-
-
 
                       </li>
 
@@ -211,11 +206,11 @@ function submit_appeal() {
                 on_change={() => setShowLogic (!show_logic)}
               />{' '}
               Transparent logic;
-            </label>          </div>      <div className="space - y-6">;
-        <div className="flex items - center justify - between">;
-          <h1 className="text - 2xl font - semibold">Trust & Reputation</h1>;
-          <div className="flex items - center gap - 3">;
-            <label className="text - sm inline - flex items - center gap - 2"><input type="checkbox" checked={show_logic} on_change={() => setShowLogic (!show_logic)} /> Transparent logic</label>;
+            </label>          </div>      <div className="space-y-6">;
+        <div className="flex items-center justify-between">;
+          <h1 className="text-2xl font-semibold">Trust & Reputation</h1>;
+          <div className="flex items-center gap-3">;
+            <label className="text - sm inline - flex items-center gap-2"><input type="checkbox" checked={show_logic} on_change={() => setShowLogic (!show_logic)} /> Transparent logic</label>;
         </div>;
         {loading && <div > Loading...</div>}
         {!loading && data && (
@@ -250,16 +245,16 @@ function submit_appeal() {
                           {c.weighted.to_fixed (3)}
                         </span>                      </li>                <RiskIndicator status={data.risk_level} />;
               </div>;
-              <div className="bg - white dark:bg - gray - 900 rounded border p - 4">;
-                <h2 className="font - medium mb - 2">Trust Metrics</h2>;
+              <div className="bg - white dark:bg - gray-900 rounded border p-4">;
+                <h2 className="font-medium mb-2">Trust Metrics</h2>;
                 <TrustRadar metrics={(data.components || []).map ((c: any) => ({ label: c.key, value: Math.round (c.raw * 100) }))} />;
               </div>;
               {show_logic && (
-                <div className="bg - white dark:bg - gray - 900 rounded border p - 4 text - sm">;
-                  <h3 className="font - medium mb - 2">Score Breakdown</h3>;
-                  <ul className="space - y-1">;
+                <div className="bg - white dark:bg - gray - 900 rounded border p-4 text-sm">;
+                  <h3 className="font-medium mb-2">Score Breakdown</h3>;
+                  <ul className="space-y-1">;
                     {data.components.map ((c: any) => (
-                      <li key={c.key} className="flex justify - between">;
+                      <li key={c.key} className="flex justify-between">;
                         <span>{c.key}</span>;
                         <span>{Math.round (c.raw * 100)} / weighted {c.weighted.to_fixed (3)}</span>;
                       </li>))}
@@ -268,7 +263,7 @@ function submit_appeal() {
               {data.reason_summary && (
                 <div className='bg - blue - 50 dark:bg - blue - 900 / 20 border border - blue - 200 dark:border - blue - 800 rounded p - 3 text - sm whitespace - pre - wrap'>                  <strong > Operator GPT Analysis:</strong> {data.reason_summary}
                 </div>)}
-            </div>                <div className="bg - blue - 50 dark:bg - blue - 900 / 20 border border - blue - 200 dark:border - blue - 800 rounded p - 3 text - sm whitespace - pre - wrap">;
+            </div>                <div className="bg - blue - 50 dark:bg - blue - 900 / 20 border border - blue - 200 dark:border - blue - 800 rounded p - 3 text - sm whitespace-pre-wrap">;
                   <strong > Operator GPT Analysis:</strong> {data.reason_summary}
                 </div>)}
             </div>;
@@ -310,12 +305,12 @@ function submit_appeal() {
                       type='submit';
                     >;
                       Submit Appeal;
-                    </button>                  </form>                <div className="bg - white dark:bg - gray - 900 rounded border p - 4 space - y-3">;
-                  <h3 className="font - medium">Appeal Score</h3>;
-                  <form on_submit={submit_appeal} className="space - y-2">;
-                    <input name="email" type="email" placeholder="Contact email" className="w - full border rounded px - 2 py - 1 text - sm" />;
-                    <textarea name="message" placeholder="Explain why your score should be reconsidered" className="w - full border rounded px - 2 py - 1 text - sm" rows={4} required />;
-                    <button className="text - sm px - 3 py - 1 rounded bg - blue - 600 text - white" type="submit">Submit Appeal</button>;
+                    </button>                  </form>                <div className="bg - white dark:bg - gray - 900 rounded border p-4 space-y-3">;
+                  <h3 className="font-medium">Appeal Score</h3>;
+                  <form on_submit={submit_appeal} className="space-y-2">;
+                    <input name="email" type="email" placeholder="Contact email" className="w - full border rounded px - 2 py-1 text-sm" />;
+                    <textarea name="message" placeholder="Explain why your score should be reconsidered" className="w - full border rounded px - 2 py-1 text-sm" rows={4} required />;
+                    <button className="text - sm px - 3 py - 1 rounded bg - blue-600 text-white" type="submit">Submit Appeal</button>;
                 </div>)}
             </div>;
           </div>)}

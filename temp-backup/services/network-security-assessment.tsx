@@ -47,4 +47,3 @@ export default function Networksecurityassessment(): any ({ }: Networksecurityas
     </div>;
   );
 
-

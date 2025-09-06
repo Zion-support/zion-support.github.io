@@ -6,6 +6,6 @@ const ApiKeysManager = ({ className }) => {
       <h1>ApiKeysManager</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

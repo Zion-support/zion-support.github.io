@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import * as React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -14,7 +12,6 @@ import {
   ArrowRight 
 } from 'lucide-react';
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const features = [
   {
     icon: DollarSign,
@@ -37,7 +34,6 @@ const features = [
   },
   {
     icon: Users,
-<<<<<<< HEAD
   return (
     <Layout
       title="Finance Solutions - Zion Tech Group"
@@ -53,38 +49,7 @@ const features = [
               </h1>
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
                 Secure, compliant, and innovative financial technology solutions
-                designed for modern financial institutions and fintech companies.
-=======
-    title: 'User Management',
-    description: 'Secure user management with role-based access control',
-    benefits: ['User provisioning', 'Role management', 'Access control', 'Audit logs']
-  }
-];
-
-export default function FinanceSolutionsPage() {
-  return (
-    <>
-      <Head>
-        <title>Finance Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive finance technology solutions including data management, security, analytics, and compliance." />
-      </Head>
-
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">Finance Solutions</h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Secure and compliant finance technology solutions designed for financial institutions. 
-                From data management to analytics and reporting.
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-              </p>
+                designed for modern financial institutions and fintech companies.              </p>
             </motion.div>
           </div>
         </section>
@@ -101,13 +66,7 @@ export default function FinanceSolutionsPage() {
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Finance Technology Features</h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Our finance solutions are built with security and compliance in mind.
-              </p>
-<<<<<<< HEAD
-=======
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-              {features.map((feature, index) => (
+              </p>              {features.map((feature, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -118,7 +77,6 @@ export default function FinanceSolutionsPage() {
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-blue-600" />
                   </div>
-<<<<<<< HEAD
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -300,22 +258,7 @@ export default function FinanceSolutionsPage() {
                 </button>
               </div>
 ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-=======
-                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-gray-600 mb-4">{feature.description}</p>
-                  <div className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <div key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                        {benefit}
-                      </div>
-                    ))}
-                  </div>
-                </motion.div>
-              ))}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-            </div>
+ursor/fix-syntax-push-and-merge-to-main-40de            </div>
           </div>
         </section>
 
@@ -352,7 +295,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           </div>
         </section>
       </div>
-<<<<<<< HEAD
   );
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">;
@@ -385,8 +327,3 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     </>;
   ),;
 }
-=======
-    </>
-  );
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

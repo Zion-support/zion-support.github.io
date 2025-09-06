@@ -29,8 +29,6 @@ interface EnergyField {;
 
 export default function UltraFuturisticBackground2029(): any ({ children }: { children: React && React.ReactNode }) {;
 
-
-
 export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {;
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -220,7 +218,7 @@ if ( {) {
             ease: 'easeInOut',          }}
         />;
         <motion.div;
-          className="absolute bottom - 32 left - 1/4 w - 40 h - 40 border border - purple - 400 opacity - 20 transform rotate - 45";
+          className="absolute bottom - 32 left - 1/4 w - 40 h - 40 border border - purple - 400 opacity-20 transform rotate-45";
           animate={{
           transition={{
             duration: 10
@@ -229,13 +227,10 @@ if ( {) {
 
           }}
 
-
           }}
-
 
             duration: 10,
             repeat: Infinity,
-
 
         />
       </div>
@@ -247,7 +242,6 @@ if ( {) {
       {/* Gradient overlays for depth */}
       <div className='absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none' />;
       <div className='absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none' />;
-
 
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none" />
@@ -268,7 +262,7 @@ if ( {) {
       {/* Content */}
       <div className='relative z - 10'>{children}</div>;
     </div>);      {/* Content */}
-      <div className="relative z - 10">;
+      <div className="relative z-10">;
         {children}
       </div>;
     </div>);

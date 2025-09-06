@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }
 import React, { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -41,8 +40,8 @@ export function TenantsList() {;
       logErrorToProduction('Error loading tenants:', { data: error }),;
       toast({;
         variant: 'destructive',;
-        title: 'Failed to load tenants',;
-        description: error.message});
+        title: 'Failed to load tenants',,
+  description: error.message});
     } finally {;
       setIsLoading(false);
     }
@@ -59,14 +58,14 @@ export function TenantsList() {;
         (t as any).id === (tenant as any).id ? { ...t, is_active: !(t as any).is_active } : t;
       )),;
       toast({;
-        title: `Tenant ${(tenant as any).is_active ? 'deactivated' : 'activated'}`,;
-        description: `${(tenant as any).brand_name} has been ${(tenant as any).is_active ? 'deactivated' : 'activated'} successfully.`});
+        title: `Tenant ${(tenant as any).is_active ? 'deactivated' : 'activated'}`,,
+  description: `${(tenant as any).brand_name} has been ${(tenant as any).is_active ? 'deactivated' : 'activated'} successfully.`});
     } catch (error: any) {;
       logErrorToProduction('Error toggling tenant status:', { data: error }),;
       toast({;
         variant: 'destructive',;
-        title: 'Failed to update tenant',;
-        description: error.message});
+        title: 'Failed to update tenant',,
+  description: error.message});
     }
   },;
   const verifyDns = async (tenant: WhitelabelTenant) => {;
@@ -83,28 +82,16 @@ export function TenantsList() {;
         (t as any).id === (tenant as any).id ? { ...t, dns_verified: true } : t;
       )),;
       toast({;
-        title: 'DNS verified',;
-        description: `Custom domain for ${(tenant as any).brand_name} has been verified.`});
+        title: 'DNS verified',,
+  description: `Custom domain for ${(tenant as any).brand_name} has been verified.`});
     } catch (error: any) {;
       logErrorToProduction('Error verifying DNS:', { data: error }),;
       toast({;
         variant: 'destructive',;
-        title: 'Failed to verify DNS';
-        description: error.message});
+        title: 'Failed to verify DNS',
+  description: error.message});
     }
   },
 
 }
 ;
-=======
-.order('created_at', { ascending: false }),;
-
-}
-
-
-
-        .order ('created_at', { ascending: false }),
-}
-}
-;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

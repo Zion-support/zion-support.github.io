@@ -30,9 +30,9 @@ import { logErrorToProduction } from '@/utils/productionLogger';export function 
       y: 0,;
       transition: {;
         duration: 0 && 0.6,;
-        staggerChildren: 0 && 0.2;
+        staggerChildren: 0 && 0.2
 };
-};
+}
 };
   const itemVariants = {;
   hidden: { opacity: 0,;
@@ -41,7 +41,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';export function 
     visible: {;
       opacity: 1,;
       y: 0,;
-      transition: { duration: 0 && 0.5 };
+      transition: { duration: 0 && 0.5 }
 };
 };
   const features = [{ icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" },;
@@ -80,13 +80,12 @@ export function ITServiceRequestHero() {;
     e && e.preventDefault();
     if (!name || !email || !location) {;
       toast({;
-        title: 'Missing Information',;
-        description: 'Name, email and location are required.',;
+        title: 'Missing Information',,
+  description: 'Name, email and location are required.',;
         variant: 'destructive',;
       });
       return;
     }
-
 
 import React, { useState } from 'react';
 import Image from 'next / image';
@@ -152,11 +151,11 @@ export /**
  */
 function ITServiceRequestHero() {
   return (";
-    <section className="py - 20 bg - gradient - to - br from - blue - 900 via - slate - 900 to - purple - 900 relative overflow - hidden">;
+    <section className="py - 20 bg - gradient - to - br from - blue - 900 via - slate - 900 to - purple - 900 relative overflow-hidden">;
       {/* Background Elements */}";
-      <div className="absolute inset - 0">";
-        <div className="absolute top - 0 left - 0 w - 96 h - 96 bg - blue - 500 / 10 rounded - full blur - 3xl"></div>";
-        <div className="absolute bottom - 0 right - 0 w - 96 h - 96 bg - purple - 500 / 10 rounded - full blur - 3xl"></div>;
+      <div className="absolute inset-0">";
+        <div className="absolute top - 0 left - 0 w - 96 h - 96 bg - blue - 500 / 10 rounded - full blur-3xl"></div>";
+        <div className="absolute bottom - 0 right - 0 w - 96 h - 96 bg - purple - 500 / 10 rounded - full blur-3xl"></div>;
       </div>;
 export /**
  * ITServiceRequestHero - Function description
@@ -187,8 +186,6 @@ if ( {) {
     setIsSubmitting (true);
     setIsSubmitting(true),
 
-
-
     try {
       const res = await axios.post ('/api / onsite - request', {
         name,
@@ -196,8 +193,6 @@ if ( {) {
         phone,
         company,
         location,
-
-
 
       }
     } catch (err: any) {
@@ -214,10 +209,6 @@ if ( {) {
       setIsSubmitting (false);
     }
   }
-
-
-
-
 
   return (
     <section
@@ -273,15 +264,11 @@ if ( {) {
               </p>
               <Input
 
-
-
               />
               <p className='text-xs text-zion-slate-light'>
                 {t(
                   'onsite_form.email_helper'
                   "We'll confirm your request here."
-<<<<<<< HEAD
-=======
                 onChange={e => setEmail(e && e.target.value)}
                 className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'                required;
               />;
@@ -289,7 +276,6 @@ if ( {) {
                 {t(;
                   'onsite_form && onsite_form.email_helper',;
                   "We'll confirm your request here.";
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 )}
               </p>;
               <Input
@@ -344,13 +330,10 @@ if ( {) {
                   <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
                 )}
 
-
-
               />
               <p className="text-xs text-zion-slate-light">{t('onsite_form.location_helperWhere do you need on-site support?')}</p>
               <Textarea
                 value={details}
-
 
                 {isSubmitting && (
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -361,10 +344,8 @@ if ( {) {
             </form>
           </div>
 
-
           <p className="text-xs text-center text-zion-slate-light mt-3">
             {t('onsite_form.privacy_noticeRest assured, your personal information stays private. We use it only to coordinate service and never share details outside our secure scheduling system with anyone.')}
-
 
           </p>
         </div>
@@ -471,11 +452,8 @@ if ( {) {
 toast ({
 }finally {
 
-
 }finally {;
-  setIsSubmitting (false) ;
-
-
+  setIsSubmitting (false) 
 };"
 py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020617) ]" > <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center" > <div className="md:h-full md:flex md:flex-col md:items-center md:justify-center" > <GradientHeading className="mb-6 text-4xl md:text-5xl text-center" > 24x7 Global IT Onsite Services </GradientHeading> <p className="text-lg text-zion-slate-light mb-8 max-w-md text-center" > Worldwide coverage and rapid dispatch of certified technicians. </p> </div> <div className="bg-zion-blue-light p-6 rounded-lg shadow-lg w-full max-w-md md:ml-auto" > <div className="flex flex-col md:flex-row items-center gap-4" > <Image <Input type="email" value= {
   email
@@ -508,13 +486,6 @@ py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020
 
 }
 }
-<<<<<<< HEAD
-=======
-
-;
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-import React, { useState } from "react",;
 import Image from "next/image",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -539,8 +510,8 @@ export function ITServiceRequestHero() {;
     e.preventDefault(),;
     if (!name || !email || !location) {;
       toast({;
-        title: "Missing Information",;
-        description: "Name, email and location are required.",;
+        title: "Missing Information",,
+  description: "Name, email and location are required.",;
         variant: "destructive"}),;
       return;
     }
@@ -556,8 +527,8 @@ export function ITServiceRequestHero() {;
         details}),;
       if (res.status === 200) {;
         toast({;
-          title: "Request received",;
-          description: "We've received your request. Our team will reach out shortly."}),;
+          title: "Request received",,
+  description: "We've received your request. Our team will reach out shortly."}),;
         setName(""),;
         setEmail(""),;
         setPhone(""),;
@@ -568,8 +539,8 @@ export function ITServiceRequestHero() {;
     } catch (err: any) {;
       logErrorToProduction(err),;
       toast({;
-        title: "Submission Failed",;
-        description: "There was an error submitting your request.";
+        title: "Submission Failed",,
+  description: "There was an error submitting your request.";
         variant: "destructive"});
     } finally {;
       setIsSubmitting(false);
@@ -667,7 +638,7 @@ export function ITServiceRequestHero() {;
 toast ({;
 
 }finally {;
-  setIsSubmitting (false) ;
+  setIsSubmitting (false) 
 };";
 py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020617) ]" > <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center" > <div className="md:h-full md:flex md:flex-col md:items-center md:justify-center" > <GradientHeading className="mb-6 text-4xl md:text-5xl text-center" > 24x7 Global IT Onsite Services </GradientHeading> <p className="text-lg text-zion-slate-light mb-8 max-w-md text-center" > Worldwide coverage and rapid dispatch of certified technicians. </p> </div> <div className="bg-zion-blue-light p-6 rounded-lg shadow-lg w-full max-w-md md:ml-auto" > <div className="flex flex-col md:flex-row items-center gap-4" > <Image<Input type="email" value= {
   email 
@@ -698,43 +669,38 @@ py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020
 }Request Service </Button> </form> </div> ;
 }'";
 }
-<<<<<<< HEAD
-=======
 }
-
-
 
   setIsSubmitting (false);
 }";
-py - 16 md:py - 24 border - b border - zion - purple / 20 bg-[radial - gradient (#0f172a, #020617) ]" > <div className="container mx - auto px - 4 grid grid - cols - 1 md:grid - cols - 2 gap - 12 items - center" > <div className="md:h - full md:flex md:flex - col md:items - center md:justify - center" > <GradientHeading className="mb - 6 text - 4xl md:text - 5xl text - center" > 24x7 Global IT Onsite Services </GradientHeading> <p className="text - lg text - zion - slate - light mb - 8 max - w-md text - center" > Worldwide coverage and rapid dispatch of certified technicians. </p> </div> <div className="bg - zion - blue - light p - 6 rounded - lg shadow - lg w - full max - w-md md:ml - auto" > <div className="flex flex - col md:flex - row items - center gap - 4" > <Image <Input type="email" value= {
+py - 16 md:py - 24 border - b border - zion - purple / 20 bg-[radial - gradient (#0f172a, #020617) ]" > <div className="container mx - auto px - 4 grid grid - cols - 1 md:grid - cols - 2 gap - 12 items-center" > <div className="md:h - full md:flex md:flex - col md:items - center md:justify-center" > <GradientHeading className="mb - 6 text - 4xl md:text - 5xl text-center" > 24x7 Global IT Onsite Services </GradientHeading> <p className="text - lg text - zion - slate - light mb - 8 max - w-md text-center" > Worldwide coverage and rapid dispatch of certified technicians. </p> </div> <div className="bg - zion - blue - light p - 6 rounded - lg shadow - lg w - full max - w-md md:ml-auto" > <div className="flex flex - col md:flex - row items - center gap-4" > <Image <Input type="email" value= {
   email;
 }on_change= {
   (e) => set_email (e.target.value) ";
-}className="bg - zion - blue - dark border - zion - blue - light focus:border - zion - purple focus:ring - zion - purple text - white" required /> <p className="text - xs text - zion - slate - light" > {";
+}className="bg - zion - blue - dark border - zion - blue - light focus:border - zion - purple focus:ring - zion - purple text-white" required /> <p className="text - xs text - zion - slate-light" > {";
   t ('onsite form.email helper', "We'll confirm your request here.");
 }</p> <Input value= {
   phone;
 }on_change= {
   (e) => set_phone (e.target.value) ";
-}className="bg - zion - blue - dark border - zion - blue - light focus:border - zion - purple focus:ring - zion - purple text - white" /> <Input value= {
+}className="bg - zion - blue - dark border - zion - blue - light focus:border - zion - purple focus:ring - zion - purple text-white" /> <Input value= {
   company;
 }on_change= {
   (e) => set_company (e.target.value) ";
-}className="bg - zion - blue - dark border - zion - blue - light focus:border - zion - purple focus:ring - zion - purple text - white" /> <Input value= {
+}className="bg - zion - blue - dark border - zion - blue - light focus:border - zion - purple focus:ring - zion - purple text-white" /> <Input value= {
   location;
 }on_change= {
   (e) => set_location (e.target.value) ";
-}className="bg - zion - blue - dark border - zion - blue - light focus:border - zion - purple focus:ring - zion - purple text - white" required /> <Textarea value= {
+}className="bg - zion - blue - dark border - zion - blue - light focus:border - zion - purple focus:ring - zion - purple text-white" required /> <Textarea value= {
   details;
 }on_change= {
   (e) => set_details (e.target.value) ";
-}className="bg - zion - blue - dark border - zion - blue - light focus:border - zion - purple focus:ring - zion - purple text - white min - h-[80px]" /> <Button type="submit" disabled= {
+}className="bg - zion - blue - dark border - zion - blue - light focus:border - zion - purple focus:ring - zion - purple text - white min-h-[80px]" /> <Button type="submit" disabled= {
   is_submitting ";
-}className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - lg py - 3 px - 6 transition - transform hover:scale - 105" > {";
-  is_submitting && (<Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
+}className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - lg py - 3 px - 6 transition - transform hover:scale-105" > {";
+  is_submitting && (<Loader2 className="mr - 2 h - 4 w - 4 animate-spin" />;
 }Request Service </Button> </form> </div>;
 }'";
 }
 }
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

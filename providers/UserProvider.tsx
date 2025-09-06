@@ -1,22 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
-<<<<<<< HEAD
-=======
-import React, {;
-  createContext,;
-  useContext,;
-  useEffect,;
-  useMemo,;
-  useState,;} from 'react';} from 'react';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export type UserRole = 'client' | 'talent';
 
 export type User = {
@@ -26,7 +11,7 @@ export type User = {
   role: UserRole;
   avatar?: string;
   createdAt: string;
-  updatedAt: string;
+  updatedAt: string
 };
 
 export interface UserContextType {
@@ -44,7 +29,7 @@ export const useUser = () => {
   if (context === undefined) {
     throw new Error('useUser must be used within a UserProvider');
   }
-  return context;
+  return context
 };
 
 interface UserProviderProps {
@@ -94,8 +79,8 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
 
   const logout = (): void => {
     setUser(null);
-    localStorage.removeItem('user');
-  };
+    localStorage.removeItem('user')
+};
 
   const updateUser = async (userData: Partial<User>): Promise<void> => {
     if (!user) return;
@@ -107,8 +92,8 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
     };
     
     setUser(updatedUser);
-    localStorage.setItem('user', JSON.stringify(updatedUser));
-  };
+    localStorage.setItem('user', JSON.stringify(updatedUser))
+};
 
   const contextValue = useMemo(
     () => ({
@@ -121,14 +106,7 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
     [user, loading]
   );
 
-  return <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>;
+  return <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>
 };
 
-<<<<<<< HEAD
 export default UserProvider;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-export default UserProvider;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

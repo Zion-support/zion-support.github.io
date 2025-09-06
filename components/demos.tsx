@@ -12,10 +12,6 @@ import {
   Play;
 } from 'lucide-react';import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play } from 'lucide-react';
 
-
-
-
-
 export default function DemosPage() {
   const [activeDemo, setActiveDemo] = useState<string>('email-validator');
   const demos = [
@@ -208,7 +204,7 @@ export default function DemosPage() {;
               {activeDemoData?.description}
               {activeDemoData?.title}
             </h2>;
-            <p className="text - lg text - gray - 400 max - w-2xl mx - auto">;
+            <p className="text - lg text - gray - 400 max-w-2xl mx-auto">;
               {activeDemoData?.description}
         </div>
       </section>
@@ -262,7 +258,6 @@ export default function DemosPage() {;
             <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-orange-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl bg-orange-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
                 <BarChart3 className='w-8 h-8 text-orange-400' />              <p className="text-gray-400 leading-relaxed">
-
 
                 See exact request/response formats for easy integration
               </p>
@@ -373,7 +368,7 @@ export default function DemosPage() {;
             <p className='text-lg text-gray-400 max-w-3xl mx-auto'>;
             </p>;
           </div>;
-          <div className='animate - fade - in'>{activeDemoData?.component}</div>          <div className="animate - fade - in">;
+          <div className='animate - fade - in'>{activeDemoData?.component}</div>          <div className="animate-fade-in">;
             {activeDemoData?.component}
           </div>;
         </div>;

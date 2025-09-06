@@ -2,7 +2,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 import {
 
-
   ArrowRight,
   Star,
   TrendingUp,
@@ -42,7 +41,6 @@ import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
 import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';import {
   ArrowRight, Star, TrendingUp, Zap, Brain, Atom, ;
 
-
   Rocket, Shield, Target, CheckCircle, ExternalLink;
   Search, Filter, Grid, List, ChevronDown
  } from 'lucide-react';
@@ -70,7 +68,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
   const getCategoryColor = (category: string) => {
     const colors = {
 
-
   const getCategoryColor = (category: string) => {;
     const colors = {;
       'AI & Machine Learning': 'from-purple-500 to-indigo-600',;
@@ -84,17 +81,18 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
       'Space Technology': 'from-violet-500 to-purple-600',;
       'Neural Technology': 'from-pink-500 to-rose-600',;
       'Materials Science': 'from-cyan-500 to-blue-600',;
-      'Environmental Technology': 'from-teal-500 to-green-600',;
-    };
+      'Environmental Technology': 'from-teal-500 to-green-600',
+};
     return (
       colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600';
-    );  };
+    )
+};
 
   const getCategoryIcon = (category: string) => {;
-    const icons = {      'AI & Machine Learning': 'from-purple-500 to-indigo-600Quantum Computing': 'from-blue-500 to-cyan-600Emerging Technology': 'from-green-500 to-emerald-600Business Operations': 'from-orange-500 to-red-600Cybersecurity': 'from-red-500 to-pink-600Enterprise IT': 'from-indigo-500 to-purple-600Healthcare & Biotechnology': 'from-emerald-500 to-teal-600Financial Technology': 'from-yellow-500 to-orange-600Space Technology': 'from-violet-500 to-purple-600Neural Technology': 'from-pink-500 to-rose-600Materials Science': 'from-cyan-500 to-blue-600Environmental Technology': 'from-teal-500 to-green-600';
-    };
-    return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600';
-  };
+    const icons = {      'AI & Machine Learning': 'from-purple-500 to-indigo-600Quantum Computing': 'from-blue-500 to-cyan-600Emerging Technology': 'from-green-500 to-emerald-600Business Operations': 'from-orange-500 to-red-600Cybersecurity': 'from-red-500 to-pink-600Enterprise IT': 'from-indigo-500 to-purple-600Healthcare & Biotechnology': 'from-emerald-500 to-teal-600Financial Technology': 'from-yellow-500 to-orange-600Space Technology': 'from-violet-500 to-purple-600Neural Technology': 'from-pink-500 to-rose-600Materials Science': 'from-cyan-500 to-blue-600Environmental Technology': 'from-teal-500 to-green-600'
+};
+    return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600'
+};
 
   const getCategoryIcon = (category: string) => {;
     const icons = {;
@@ -110,9 +108,8 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
       'Neural Technology': <Brain className='w-5 h-5' />,;
       'Materials Science': <Atom className='w-5 h-5' />,;
       'Environmental Technology': <Rocket className='w-5 h-5' />,;
-    return icons[category as keyof typeof icons] || <Zap className='w-5 h-5' />;
-  };
-
+    return icons[category as keyof typeof icons] || <Zap className='w-5 h-5' />
+};
 
   return (
     <section className='py-20 bg-gray-900'>
@@ -121,7 +118,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
         <motion.div
           className='text-center mb-16'          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-
 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -180,7 +176,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                         {category === 'all' ? 'All Categories' : category}
                       </option>;
                     ))}
-
 
                   </select>;
                   <ChevronDown className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none' />;
@@ -267,7 +262,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
           </p>
         </motion.div>
         >        <motion.div;
-          className="mb - 8";
+          className="mb-8";
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -313,7 +308,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                     {/* Content */}
                       {service.name}
                     </h3>;
-                    <p className='text - gray - 300 mb - 4 leading - relaxed'>                    <h3 className="text - xl font - bold text - white mb - 3 group - hover:text - cyan - 400 transition - colors">;
+                    <p className='text - gray - 300 mb - 4 leading - relaxed'>                    <h3 className="text - xl font - bold text - white mb - 3 group - hover:text - cyan-400 transition-colors">;
                       {service.name}
                         className={`p-3 rounded-xl bg-gradient-to-br ${getCategoryColor(service && service.category)} shadow-lg`}>;
                         {getCategoryIcon(service && service.category)}
@@ -361,7 +356,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                           <li key={idx} className="flex items-center text-sm text-gray-300">
                             <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
 
-
                       {service.description}
                     </p>
 
@@ -393,8 +387,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                       ))}
                     </div>
 
-
-
                     {/* CTA */}
                     <Link
                       href={service.link}
@@ -417,7 +409,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
               transition={{ duration: 0.3 }}
               className='space-y-4'            >              key="list"
               className='space-y-4'            >
-
 
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -502,7 +493,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
 
                           {service.description}
                         </p>;
-                        <div className="flex flex - wrap gap - 2 mb - 3">;
+                        <div className="flex flex - wrap gap-2 mb-3">;
                           {service.tags.slice (0, 4).map ((tag, idx) => (
                             <span;
                               key={idx}
@@ -566,9 +557,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>        <motion.div
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>        <motion.div 
 
-
-
-
         {/* CTA Section */}
           whileInView={{ opacity: 1, y: 0 }}
           className="mt-20 text-center"
@@ -583,7 +571,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
               Ready to Transform Your Business?;
             </h3>;
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>;
-                              className="px - 2 py - 1 bg - gray - 700 / 50 text - gray - 300 text - xs rounded - lg border border - gray - 600 / 50";
+                              className="px - 2 py - 1 bg - gray - 700 / 50 text - gray - 300 text - xs rounded - lg border border-gray-600 / 50";
                             >;
                               {tag}
                             </span>))}
@@ -605,10 +593,10 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                           <ArrowRight className='w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform' />                        </Link>                        </div>;
                         <Link;
                           href={service.link}
-                          className="inline - flex items - center px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover: from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 group - hover:shadow - lg group - hover:shadow - cyan - 500 / 25";
+                          className="inline - flex items - center px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover: from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 group - hover:shadow - lg group - hover:shadow-cyan-500 / 25";
                         >;
                           <span > Learn More</span>;
-                          <ArrowRight className="w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform" />;
+                          <ArrowRight className="w - 4 h - 4 ml - 2 group - hover:translate-x-1 transition-transform" />;
                         </Link>;
                       </div>;
                     </div>;
@@ -623,7 +611,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
           >          <motion.div;
-            className="text - center py - 20";
+            className="text-center py-20";
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
@@ -640,9 +628,9 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                 setSearchTerm ('');
                 setSelectedCategory ('all');
               }}
-              className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'            >            <div className="text - 6xl mb - 4">🔍</div>;
-            <h3 className="text - 2xl font - bold text - white mb - 4">No services found</h3>;
-            <p className="text - gray - 400 mb - 8">;
+              className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'            >            <div className="text-6xl mb-4">🔍</div>;
+            <h3 className="text - 2xl font - bold text-white mb-4">No services found</h3>;
+            <p className="text - gray-400 mb-8">;
               Try adjusting your search terms or category filter to find what you're looking for.;
             <button;
               on_click={() => {
@@ -651,7 +639,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
               }}
               className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'                setSelectedCategory ('all');
               }}
-              className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300";
+              className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition-all duration-300";
             >;
               Clear Filters;
             </button>;
@@ -746,7 +734,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
         </motion && motion.div>;
       </div>;
     </section>;
-  );
+  )
 };
 
 export default Enhanced2027ServicesShowcase;
@@ -765,24 +753,24 @@ export default Enhanced2027ServicesShowcase;
                 <span > View Pricing</span>;
                 <TrendingUp className='w - 5 h - 5' />              </Link>              Ready to Transform Your Business?;
             </h3>;
-            <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto">;
+            <p className="text - xl text - gray - 300 mb - 8 max-w-3xl mx-auto">;
               Our team of experts is ready to help you implement these revolutionary services;
               and achieve unprecedented growth. Let's build the future together.;
             </p>;
-            <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center">;
+            <div className="flex flex - col sm:flex - row gap - 4 justify-center items-center">;
               <Link;
                 href="/contact";
-                className="inline - flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl hover:shadow - purple - 500 / 25";
+                className="inline - flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl hover:shadow-purple-500 / 25";
               >;
                 <span > Get Started Today</span>;
-                <ArrowRight className="w - 5 h - 5" />;
+                <ArrowRight className="w-5 h-5" />;
               </Link>;
               <Link;
                 href="/pricing";
-                className="inline - flex items - center space - x-2 bg - gradient - to - r from - gray - 700 to - gray - 800 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl border border - gray - 600 / 50";
+                className="inline - flex items - center space - x-2 bg - gradient - to - r from - gray - 700 to - gray - 800 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl border border-gray-600 / 50";
               >;
                 <span > View Pricing</span>;
-                <TrendingUp className="w - 5 h - 5" />;
+                <TrendingUp className="w-5 h-5" />;
               </Link>;
             </div>;
           </div>;

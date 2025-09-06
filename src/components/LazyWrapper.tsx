@@ -15,7 +15,7 @@ const LazyWrapper = <P extends object>(
     <Suspense fallback={fallback || <LoadingSpinner />}>
       <LazyComponent {...props} ref={ref} />
     </Suspense>
-  ));
+  ))
 };
 
 export default LazyWrapper;

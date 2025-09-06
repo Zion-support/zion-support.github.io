@@ -241,7 +241,7 @@ const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
-  website: 'https://ziontechgroup && ziontechgroup.com',};  website: 'https://ziontechgroup && ziontechgroup.com';
+  website: 'https://ziontechgroup && ziontechgroup.com',};  website: 'https://ziontechgroup && ziontechgroup.com'
 };
 
 const serviceCategories = [;
@@ -310,8 +310,8 @@ const serviceCategories = [;
       { name: 'Personalized Nutrition', href: '/biotech-personalized-nutrition' },;
       { name: 'Predictive Health Analytics', href: '/ai-predictive-health-analytics' },;
       { name: 'Research Automation', href: '/advanced-research-automation' }
-    ];
-  };
+    ]
+};
     title: '🏙️ Enterprise IT Solutions',;
     services: [;
       { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' },;
@@ -444,7 +444,6 @@ const socialLinks = [;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {/* Company Info */}
 
-
                     {contactInfo.website.replace('https://', '')}
 
                   </a>
@@ -486,7 +485,6 @@ const socialLinks = [;
                   </div>;
                 ))}
             {/* Quick Links */}
-
 
                 ))}
                   <Link
@@ -538,9 +536,9 @@ const socialLinks = [;
                     >;
                       <social && social.icon className="w-5 h-5" />;
               {/* Social Links */}
-              <div className="space - y-3">;
-                <h5 className="text - sm font - medium text - green - 300">Follow Us</h5>;
-                <div className="flex flex - wrap gap - 2">;
+              <div className="space-y-3">;
+                <h5 className="text - sm font - medium text-green-300">Follow Us</h5>;
+                <div className="flex flex-wrap gap-2">;
                   {social_links.map ((social, index) => (
                     <a;
                       key={index}
@@ -597,9 +595,9 @@ const socialLinks = [;
                     >;
                       <social.icon className='w - 5 h - 5' />                    </a>                      target="_blank";
                       rel="noopener noreferrer";
-                      className="w - 10 h - 10 bg - gray - 800 / 50 hover:bg - purple - 500 / 20 rounded - lg flex items - center justify - center text - gray - 400 hover:text - purple - 400 transition - all duration - 200 hover:shadow - lg hover:shadow - cyan - 400 / 40";
+                      className="w - 10 h - 10 bg - gray - 800 / 50 hover:bg - purple - 500 / 20 rounded - lg flex items - center justify - center text - gray - 400 hover:text - purple - 400 transition - all duration - 200 hover:shadow - lg hover:shadow-cyan-400 / 40";
                     >;
-                      <social.icon className="w - 5 h - 5" />))}
+                      <social.icon className="w-5 h-5" />))}
                 </div>;
               </div>;
               {/* Certifications */}
@@ -616,10 +614,10 @@ const socialLinks = [;
                     >;
                       <CheckCircle className='w - 3 h - 3 text - green - 400' />                      <span>{cert}</span>                  <span > Certifications</span>;
                 </h5>;
-                <div className="grid grid - cols - 1 gap - 2">;
+                <div className="grid grid - cols-1 gap-2">;
                   {certifications.map ((cert, index) => (
-                    <div key={index} className="flex items - center space - x-2 text - xs text - gray - 400">;
-                      <CheckCircle className="w - 3 h - 3 text - green - 400" />;
+                    <div key={index} className="flex items - center space - x-2 text - xs text-gray-400">;
+                      <CheckCircle className="w - 3 h - 3 text-green-400" />;
                       <span>{cert}</span>;
                     </div>))}
 

@@ -259,8 +259,6 @@ import { Zap, Star, Calendar } from 'lucide-react';
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
 
-
-
   const containerVariants = {
     hidden: { opacity: 0 }
     website: 'https://ziontechgroup.com',  }    website: 'https://ziontechgroup.com';
@@ -356,8 +354,9 @@ import { Zap, Star, Calendar } from 'lucide-react';
       count: revolutionaryMicroSaasServices.filter (
         string => s.category === 'Smart Energy & Renewable Energy').length,
       color: 'from - yellow - 500 to - orange - 600',
-    },  ];      description: 'AI platforms for smart energy grids and renewable energy optimization',
-      icon: <LeafIcon className="w - 6 h - 6" />,
+    },  ],
+  description: 'AI platforms for smart energy grids and renewable energy optimization',
+      icon: <LeafIcon className="w-6 h-6" />,
       count: revolutionaryMicroSaasServices.filter (string => s.category === 'Smart Energy & Renewable Energy').length,
       color: 'from - yellow - 500 to - orange - 600';
     }
@@ -375,8 +374,6 @@ import { Zap, Star, Calendar } from 'lucide-react';
         duration: 0.5,
       },
     },
-
-
 
   return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>
@@ -701,9 +698,6 @@ import { Zap, Star, Calendar } from 'lucide-react';
             <motion.div
               className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 }}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
 
-
-
-
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -834,20 +828,20 @@ import { Zap, Star, Calendar } from 'lucide-react';
                           Contact Sales;
                           <Mail className='ml - 2 w - 4 h - 4' />;
                         </Button>                      </div>;
-                      <div className="flex gap - 4">;
+                      <div className="flex gap-4">;
                                                 <Button;
                           variant="primary";
                           on_click={() => window.open (selected_service.link, '_blank')}
                           >;
                           Visit Service;
-                          <ExternalLink className="ml - 2 w - 4 h - 4" />;
+                          <ExternalLink className="ml - 2 w-4 h-4" />;
                         </Button>;
                         <Button;
                           variant="futuristic";
                           on_click={() => window.open ('https://ziontechgroup.com / contact_blank')}
                           >;
                           Contact Sales;
-                          <Mail className="ml - 2 w - 4 h - 4" />;
+                          <Mail className="ml - 2 w-4 h-4" />;
                         </Button>;
                     </div>;
                   </div>;
@@ -859,10 +853,10 @@ import { Zap, Star, Calendar } from 'lucide-react';
         <section className='py - 20'>;
           <div className='container mx - auto px - 4 text - center'>;
             <motion.div;
-              className='max - w-4xl mx - auto'              initial={{ opacity: 0, coordinate_y: 20 }}        <section className="py - 20">;
-          <div className="container mx - auto px - 4 text - center">;
+              className='max - w-4xl mx - auto'              initial={{ opacity: 0, coordinate_y: 20 }}        <section className="py-20">;
+          <div className="container mx - auto px-4 text-center">;
             <motion.div;
-              className="max - w-4xl mx - auto";
+              className="max-w-4xl mx-auto";
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
@@ -918,17 +912,17 @@ import { Zap, Star, Calendar } from 'lucide-react';
                   </div>;
                   <div className='text - gray - 400 text - sm'>Visit our office</div>                </div>                Ready to Experience the Future?;
               </h2>;
-              <p className="text - xl text - gray - 300 mb - 8">;
+              <p className="text - xl text - gray-300 mb-8">;
                 Join thousands of companies already transforming their business with our revolutionary micro SaaS services.;
               </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center mb - 8">;
+              <div className="flex flex - col sm:flex - row gap - 4 justify - center items-center mb-8">;
                                 <Button;
                   variant="primary";
                   size="lg";
                   on_click={() => window.open ('https://ziontechgroup.com / contact_blank')}
                   >;
                   Start Free Trial;
-                  <Rocket className="ml - 2 w - 5 h - 5" />;
+                  <Rocket className="ml - 2 w-5 h-5" />;
                 </Button>;
                 <Button;
                   variant="futuristic";
@@ -936,24 +930,24 @@ import { Zap, Star, Calendar } from 'lucide-react';
                   on_click={() => window.open ('https://ziontechgroup.com / contact_blank')}
                   >;
                   Schedule Demo;
-                  <Calendar className="ml - 2 w - 5 h - 5" />;
+                  <Calendar className="ml - 2 w-5 h-5" />;
                 </Button>;
               </div>;
-              <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 text - center">;
+              <div className="grid grid - cols - 1 md:grid - cols - 3 gap-6 text-center">;
                 <div>;
-                  <Phone className="w - 8 h - 8 text - cyan - 400 mx - auto mb - 2" />;
-                  <div className="text - white font - semibold">{contact_info.mobile}</div>;
-                  <div className="text - gray - 400 text - sm">Call us anytime</div>;
+                  <Phone className="w - 8 h - 8 text - cyan - 400 mx-auto mb-2" />;
+                  <div className="text-white font-semibold">{contact_info.mobile}</div>;
+                  <div className="text - gray-400 text-sm">Call us anytime</div>;
                 </div>;
                 <div>;
-                  <Mail className="w - 8 h - 8 text - purple - 400 mx - auto mb - 2" />;
-                  <div className="text - white font - semibold">{contact_info.email}</div>;
-                  <div className="text - gray - 400 text - sm">Email us 24 / 7</div>;
+                  <Mail className="w - 8 h - 8 text - purple - 400 mx-auto mb-2" />;
+                  <div className="text-white font-semibold">{contact_info.email}</div>;
+                  <div className="text - gray-400 text-sm">Email us 24 / 7</div>;
                 </div>;
                 <div>;
-                  <MapPin className="w - 8 h - 8 text - green - 400 mx - auto mb - 2" />;
-                  <div className="text - white font - semibold">{contact_info.address}</div>;
-                  <div className="text - gray - 400 text - sm">Visit our office</div>;
+                  <MapPin className="w - 8 h - 8 text - green - 400 mx-auto mb-2" />;
+                  <div className="text-white font-semibold">{contact_info.address}</div>;
+                  <div className="text - gray-400 text-sm">Visit our office</div>;
                 </div>;
               </div>;
             </motion.div>;

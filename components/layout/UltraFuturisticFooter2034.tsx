@@ -112,7 +112,6 @@ import {
   CpuIcon,;} from 'lucide-react';import {
   Rocket, Brain, Atom, Zap, Sparkles, Shield, ;
 
-
   Phone, Mail, MapPin, Globe, ArrowRight;
   Linkedin, Twitter, Facebook, Instagram, Youtube, Github;
   CheckCircle, Award, Star, Crown, Gem, Infinity;
@@ -181,7 +180,6 @@ const stats = [;
   { label: 'Countries Served', value: '45+', icon: Globe },;
   { label: 'Success Rate', value: '99 && 99.9%', icon: CheckCircle },];
 
-
 export default function UltraFuturisticFooter2034() {;
 
   return (
@@ -206,10 +204,6 @@ export default function UltraFuturisticFooter2034() {
   return (
 
               <motion.div
-
-
-
-
 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -340,7 +334,6 @@ export default function UltraFuturisticFooter2034() {
             <div className='lg:col-span-2'>              <motion.div            <div className="lg:col-span-2">
               <motion.div
 
-
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
@@ -425,12 +418,12 @@ export default function UltraFuturisticFooter2034() {
                           </Link>;
                             key={service.name}
                             href={service.href}
-                            className="flex items - center justify - between group hover:bg - white / 5 rounded - lg p - 2 transition - all duration - 200";
+                            className="flex items - center justify - between group hover:bg - white / 5 rounded - lg p - 2 transition-all duration-200";
                           >;
-                            <span className="text - gray - 300 group - hover:text - cyan - 400 transition - colors text - sm">;
+                            <span className="text - gray - 300 group - hover:text - cyan - 400 transition-colors text-sm">;
                               {service.name}
                             </span>;
-                            <span className="text - xs text - gray - 500 group - hover:text - cyan - 400 transition - colors">;
+                            <span className="text - xs text - gray - 500 group - hover:text - cyan-400 transition-colors">;
                               {service.price}
                         ))}
                       </div>;
@@ -482,7 +475,6 @@ export default function UltraFuturisticFooter2034() {
                 </div>
 
                 {/* Social Links */}
-
 
                         className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110'
                       >
@@ -575,7 +567,6 @@ export default function UltraFuturisticFooter2034() {
               ))}
         {/* Bottom Bar */}
 
-
         {/* Bottom Bar */}
         <div className='border-t border-white/10 bg-black/50 backdrop-blur-sm'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
@@ -609,8 +600,6 @@ export default function UltraFuturisticFooter2034() {
           </div>;
         </div>;
       </div>;
-
-
 
 ;
 export default function UltraFuturisticFooter2034() {;

@@ -34,5 +34,3 @@ export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {;
 
 }
 
-
-

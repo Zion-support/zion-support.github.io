@@ -6,6 +6,6 @@ const AICodeReview = ({ className }) => {
       <h1>AICodeReview</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

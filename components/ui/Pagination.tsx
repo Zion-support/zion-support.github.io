@@ -146,23 +146,23 @@ if (return null) {
       {current_page > 1 ? (
         <Link;
           href={`${base_url}?page=${current_page - 1}`}
-          className="flex items - center px - 3 py - 2 text - sm font - medium text - gray - 500 bg - white border border - gray - 300 rounded - lg hover:bg - gray - 50 hover:text - gray - 700 transition - colors">;
-          <ChevronLeft className="w - 4 h - 4 mr - 1" />;
+          className="flex items - center px - 3 py - 2 text - sm font - medium text - gray - 500 bg - white border border - gray - 300 rounded - lg hover:bg - gray - 50 hover:text - gray-700 transition-colors">;
+          <ChevronLeft className="w - 4 h-4 mr-1" />;
           Previous;
         </Link>) : (
-        <span className="flex items - center px - 3 py - 2 text - sm font - medium text - gray - 300 bg - gray - 100 border border - gray - 200 rounded - lg cursor - not - allowed">;
-          <ChevronLeft className="w - 4 h - 4 mr - 1" />;
+        <span className="flex items - center px - 3 py - 2 text - sm font - medium text - gray - 300 bg - gray - 100 border border - gray - 200 rounded - lg cursor-not-allowed">;
+          <ChevronLeft className="w - 4 h-4 mr-1" />;
           Previous;
         </span>)}
       {/* Page Numbers */}
-      <div className="flex items - center space - x-1">;
+      <div className="flex items-center space-x-1">;
         {getPageNumbers ().map ((page, index) => {
           // Check condition
 if ( {) {
   $2
 }
             return (
-              <span key={index} className="px - 3 py - 2 text - sm text - gray - 500">;
+              <span key={index} className="px - 3 py - 2 text - sm text-gray-500">;
                 ...;
               </span>);
 }
@@ -187,16 +187,16 @@ if ( {) {
       {current_page < total_pages ? (
         <Link;
           href={`${base_url}?page=${current_page + 1}`}
-          className="flex items - center px - 3 py - 2 text - sm font - medium text - gray - 500 bg - white border border - gray - 300 rounded - lg hover:bg - gray - 50 hover:text - gray - 700 transition - colors">;
+          className="flex items - center px - 3 py - 2 text - sm font - medium text - gray - 500 bg - white border border - gray - 300 rounded - lg hover:bg - gray - 50 hover:text - gray-700 transition-colors">;
           Next;
-          <ChevronRight className="w - 4 h - 4 ml - 1" />;
+          <ChevronRight className="w - 4 h-4 ml-1" />;
         </Link>) : (
-        <span className="flex items - center px - 3 py - 2 text - sm font - medium text - gray - 300 bg - gray - 100 border border - gray - 200 rounded - lg cursor - not - allowed">;
+        <span className="flex items - center px - 3 py - 2 text - sm font - medium text - gray - 300 bg - gray - 100 border border - gray - 200 rounded - lg cursor-not-allowed">;
           Next;
 }
 }
 }
-          <ChevronRight className="w - 4 h - 4 ml - 1" />;
+          <ChevronRight className="w - 4 h-4 ml-1" />;
         </span>)}
     </nav>);
 }

@@ -2,7 +2,6 @@
 
 export const formatDate = (date: Date | string | number, format: string = 'medium'): string => {;
 
-
   const dateObj = new Date(date);
   switch (format) {
     case 'short':
@@ -87,7 +86,6 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
       }
     default: return dateObj && dateObj.toLocaleDateString()
   }
-
 
 },
 };
@@ -227,5 +225,5 @@ if ( {) {
   }
   return seconds <= 5 ? 'just now' : `${Math.floor (seconds)} seconds ago`;
 }
-;
+
 };

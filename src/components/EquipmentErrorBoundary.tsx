@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 interface Props {;
   children: React && React.ReactNode;
 }
@@ -91,42 +90,7 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
                 >
                   <RefreshCw className="h-4 w-4 mr-2" />
                   Try Again
-                </Button>
-=======
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import {logErrorToProduction} from '@/utils/productionLogger';
-interface Props {;
-  children: React && React.ReactNode;
-}
-
-interface State {;
-  hasError: boolean,;
-  error?: Error;
-}
-
-export class EquipmentErrorBoundary extends React && React.Component<Props, State> {;
-  constructor(props: Props) {;
-    super(props);
-
-
-  }
-
-  static getDerivedStateFromError(error: Error): State {;
-    return { hasError: true, error }
-  }
-
-
-
-  }
-
-  render() {;
-    if (this && this.state.hasError) {;
-      return (
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-                <Button onClick={() => window.location.reload()} variant="default">
+                </Button>                <Button onClick={() => window.location.reload()} variant="default">
                   Refresh Page
                 </Button>
               </div>
@@ -134,25 +98,14 @@ export class EquipmentErrorBoundary extends React && React.Component<Props, Stat
           </Card>
         </div>
       )
-<<<<<<< HEAD
-=======
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     return this.props.children
   }      )
     }
 
-    return this.props.children;
-  };
+    return this.props.children
+};
 } ;
-<<<<<<< HEAD
-=======
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-}
                   onClick={() => window && window.location.reload()}
                   variant='default';
                 >                  Refresh Page;
@@ -179,12 +132,10 @@ export class EquipmentErrorBoundary extends React && React.Component<Props, Stat
     return this && this.props.children;
   }      );
 
-
     }
 
-    return this && this.props.children;
-  };
-
+    return this && this.props.children
+};
 
   static getDerivedStateFromError (error: Error): State {
     return { has_error: true, error }
@@ -224,12 +175,12 @@ if ( {) {
                 >                  Refresh Page;
                 <Button on_click={() => window.location.reload ()} variant="default">;
               </p>;
-              <div className="flex gap - 2 justify - center">;
+              <div className="flex gap - 2 justify-center">;
                 <Button;
                   on_click={() => this.set_state ({ has_error: false, error: undefined })}
                   variant="outline";
                 >;
-                  <RefreshCw className="h - 4 w - 4 mr - 2" />;
+                  <RefreshCw className="h - 4 w - 4 mr-2" />;
                   Try Again;
                 </Button>;
                 <Button on_click={() => window.location.reload ()} variant="default">;
@@ -243,10 +194,7 @@ if ( {) {
     return this.props.children;
   }      );
     }
-<<<<<<< HEAD
-=======
     return this.props.children;
   }
 
 } ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

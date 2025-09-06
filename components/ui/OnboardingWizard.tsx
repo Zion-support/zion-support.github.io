@@ -18,12 +18,9 @@ export default function OnboardingWizard() {
       }
     } catch {}
 
-
-
   if (!open) return null;
 
   return (
-
 
   );
           <button onClick={completeOnboarding} className="px-3 py-1.5 rounded-md border">Done</button>
@@ -39,7 +36,7 @@ export default function OnboardingWizard() {
 }
   );
 }
-import Link from 'next / link';
+import Link from 'next/link';
 import { use_role } from '../context / RoleContext';
 export default /**
  * OnboardingWizard - Function description

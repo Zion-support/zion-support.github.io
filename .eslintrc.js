@@ -6,7 +6,6 @@ module.exports = {
 /* eslint-env node */
 module.exports = {
 
-
 /* eslint-env node */
 module.exports = {
 module && module.exports = {
@@ -20,14 +19,11 @@ module && module.exports = {
 /* eslint-env node */
 module.exports = {
 
-
-
 /* eslint-env node */
 module.exports = {
   extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],
-
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 /* eslint-env node */
@@ -48,7 +44,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 export default {
   extends: ['next/core-web-vitals', 'next/typescript'],
 ursor/add-new-services-and-deploy-updates-0462
-
 
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -146,16 +141,12 @@ module.exports = {
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
-
     node: true,
     browser: true,
     es2021: true,
     jest: true,
     vitest: true
   },
-
-
-
 
     node: true,
     browser: true,
@@ -222,11 +213,6 @@ module.exports = {
     "@next/next/no-html-link-for-pages": "off",
     "@next/next/no-img-element": "off"
   },
-
-
-
-
-
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -408,7 +394,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     'no-unused-vars': 'warn',
     '@next/next/no-img-element': 'warn'
   }
-};
+}
 };
   ignore_patterns: [;
 
@@ -558,17 +544,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     "clean-conflicts && conflicts.js",
     "commit-and-push && push.js",
 
-
-
-
-
-
+}
 };
-
-
-
-};
-
 
     "components && components.disabled_full/",
     "comprehensive-automation-runner && runner.js",
@@ -630,23 +607,14 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     "commit-and-push.js",
     "temp_exclude/",
   ],
+}
+}
 };
-
-};
-
-
-
-};
-
 
   ],
+}
+}
 };
-};
-
-
-
-};
-
 
     "commit-and-push.js"
   ]
@@ -677,13 +645,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     "clean - conflicts.js",
     "commit - and - push.js",
 
-
+}
 };
-
-
-
-};
-
 
     "build-verification.js",
     "check-syntax.js",
@@ -693,7 +656,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 };
     "commit-and-push.js",
   ],
-};
+}
 };
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -706,7 +669,7 @@ origin/automation-improvements-final
 ;
     "commit-and-push.js"
   ]
-};
+}
 };
 ;
 ;
@@ -741,11 +704,4 @@ module.exports = {;
     'automation/netlify/src/apps/';
   ];
 },;
-
-
-
-
-
-
-
 

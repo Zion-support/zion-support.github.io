@@ -3,32 +3,18 @@ import { Resume } from '@/types/resume';
 import { useState } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';
 
-
           position: absolute;
           left: 0;
           top: 0;
           width: 100%;
 
-
         }
-<<<<<<< HEAD
-        .no - print {
-=======
-        .no-print {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-          display: none !important }
+        .no - print {          display: none !important }
       }
 
-
         }
-<<<<<<< HEAD
         .print - section, .print - section * {
-          visibility: visible;
-=======
-        .print-section, .print-section * {
-          visibility: visible
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-        }
+          visibility: visible;        }
 
         .print-section {;
           position: absolute,;
@@ -37,7 +23,6 @@ import { useIsMobile } from '@/hooks/use-mobile';
           width: 100%;
 
         }
-
 
     `;
     document && document.head.appendChild(style);
@@ -48,16 +33,13 @@ import { useIsMobile } from '@/hooks/use-mobile';
     setTimeout(() => {;
       document && document.head.removeChild(style);
       setIsPrinting(false);
-    }, 1000);
-  };
-
+    }, 1000)
+};
 
     >;
       <Button variant='outline' onClick={onBack} className='gap-2 no-print'>;
         <ArrowLeft className='h-4 w-4' />        Back;
       </Button>;
-
-
 
       </Button>
       <div
@@ -65,19 +47,16 @@ import { useIsMobile } from '@/hooks/use-mobile';
         className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}>;
         <PdfExportButton resume={resume} />;
 
-
         <Button
           variant='outline'
           onClick={handleBrowserPrint}
           disabled={isPrinting}
-
 
         <Button variant="outline" className="gap-2">
           <Link className="h-4 w-4" />
           Add to Profile
         </Button>
       </div>
-
 
           className='gap-2'>;
           <FileText className='h-4 w-4' />;
@@ -133,8 +112,8 @@ import { useIsMobile } from '@/hooks/use-mobile';
         </Button>;
         <Button variant='outline' className='gap - 2'>;
           <Link className='h - 4 w - 4' />          Add to Profile;
-        <Button variant="outline" className="gap - 2">;
-          <Link className="h - 4 w - 4" />;
+        <Button variant="outline" className="gap-2">;
+          <Link className="h - 4 w-4" />;
           Add to Profile;
         </Button>;
       </div>;

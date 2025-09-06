@@ -54,7 +54,7 @@ interface User {
   role: 'admin' | 'user' | 'guest'}
 interface Service {
   "id": string;
-  name: string;
+  name: string,
   description: string;
   price: number;
   category: string}

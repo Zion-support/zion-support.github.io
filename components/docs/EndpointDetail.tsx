@@ -1,7 +1,6 @@
 
 import TryItConsole from './TryItConsole';
 
-
   endpoint,
 }: {;
 
@@ -46,8 +45,6 @@ import TryItConsole from './TryItConsole';
           <div className="font-medium mb-2">Rate Limits</div>
           <ul className="list-disc pl-5 text-sm text-high-contrast-muted">
 
-
-
           </ul>
         </div>
       )}
@@ -67,7 +64,6 @@ import TryItConsole from './TryItConsole';
           <ul className="list-disc pl-5 text-sm text-high-contrast-muted">;
             {endpoint && endpoint.rateLimits.map((r, idx) => (;
               <li key={idx}>{r && r.tier}: {r && r.limitPerMinute}/min{r && r.burst ? `, burst ${r && r.burst}` : ''}</li>;
-
 
             ))}
           </ul>;
@@ -121,15 +117,15 @@ import TryItConsole from './TryItConsole';
       <div>;
         <div className='font - medium mb - 2'>Code Examples</div>        <CodeSamples samples={endpoint.samples} />;
       </div>;
-      <div>        <div className="text - xl font - semibold text - high - contrast">{endpoint.title}</div>;
-        <div className="text - sm text - high - contrast - muted">{endpoint.description}</div>;
-        <div className="mt - 2 inline - flex items - center gap - 2 text - xs">;
-          <span className="px - 2 py - 0.5 rounded bg - high - contrast - tertiary border border - high - contrast - secondary">{endpoint.method}</span>;
-          <code className="px - 2 py - 0.5 rounded bg - high - contrast - tertiary border border - high - contrast - secondary">{endpoint.path}</code>;
-          <span className="px - 2 py - 0.5 rounded bg - high - contrast - tertiary border border - high - contrast - secondary">{endpoint.visibility}</span>;
+      <div>        <div className="text - xl font - semibold text-high-contrast">{endpoint.title}</div>;
+        <div className="text - sm text - high-contrast-muted">{endpoint.description}</div>;
+        <div className="mt - 2 inline - flex items - center gap-2 text-xs">;
+          <span className="px - 2 py - 0.5 rounded bg - high - contrast - tertiary border border - high-contrast-secondary">{endpoint.method}</span>;
+          <code className="px - 2 py - 0.5 rounded bg - high - contrast - tertiary border border - high-contrast-secondary">{endpoint.path}</code>;
+          <span className="px - 2 py - 0.5 rounded bg - high - contrast - tertiary border border - high-contrast-secondary">{endpoint.visibility}</span>;
       </div>;
       <div>;
-        <div className='font - medium mb - 2'>Code Examples</div>        <div className="font - medium mb - 2">Code Examples</div>;
+        <div className='font - medium mb - 2'>Code Examples</div>        <div className="font-medium mb-2">Code Examples</div>;
         <CodeSamples samples={endpoint.samples} />;
       </div>;
       <div>;
@@ -154,8 +150,8 @@ import TryItConsole from './TryItConsole';
               </li>            ))}      </div>;
       {(endpoint.rate_limits && endpoint.rate_limits.length > 0) && (
         <div>;
-          <div className="font - medium mb - 2">Rate Limits</div>;
-          <ul className="list - disc pl - 5 text - sm text - high - contrast - muted">;
+          <div className="font-medium mb-2">Rate Limits</div>;
+          <ul className="list - disc pl - 5 text - sm text - high-contrast-muted">;
             {endpoint.rate_limits.map ((r, idx) => (
               <li key={idx}>{r.tier}: {r.limitPerMinute}/min{r.burst ? `, burst ${r.burst}` : ''}</li>))}
           </ul>;
@@ -167,8 +163,8 @@ import TryItConsole from './TryItConsole';
             {endpoint.errors.map (e => (
               <li key={e.code}>;
                 <strong>{e.code}</strong> ({e.http_status}) - {e.message}
-              </li>            ))}          <div className="font - medium mb - 2">Error Codes</div>;
-          <ul className="list - disc pl - 5 text - sm text - high - contrast - muted">;
+              </li>            ))}          <div className="font-medium mb-2">Error Codes</div>;
+          <ul className="list - disc pl - 5 text - sm text - high-contrast-muted">;
             {endpoint.errors.map ((e) => (
               <li key={e.code}><strong>{e.code}</strong> ({e.http_status}) - {e.message}</li>;
           </ul>;

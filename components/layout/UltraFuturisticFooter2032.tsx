@@ -80,7 +80,6 @@ import {
   Star as StarIcon,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom, ;
 
-
   Rocket, Shield, Cpu, Target, Microscope, Users;
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, ArrowRight, Heart, Star, Award, CheckCircle;
@@ -434,50 +433,50 @@ const mainNavigationRoutes = [;
   {;
     name: 'Home',;
     href: '/',;
-    icon: Home,;
-    description: 'Welcome to Zion Tech Group',;
+    icon: Home,,
+  description: 'Welcome to Zion Tech Group',;
   },;
   {;
     name: 'Services',;
     href: '/services',;
-    icon: Briefcase,;
-    description: 'Our comprehensive service portfolio',;
+    icon: Briefcase,,
+  description: 'Our comprehensive service portfolio',;
   },;
   {;
     name: 'Solutions',;
     href: '/solutions',;
-    icon: TargetIcon,;
-    description: 'Tailored solutions for your business',;
+    icon: TargetIcon,,
+  description: 'Tailored solutions for your business',;
   },;
   {;
     name: 'Pricing',;
     href: '/pricing',;
-    icon: DollarSign,;
-    description: 'Transparent pricing and packages',;
+    icon: DollarSign,,
+  description: 'Transparent pricing and packages',;
   },;
   {;
     name: 'Resources',;
     href: '/resources',;
-    icon: BookOpen,;
-    description: 'Knowledge base and documentation',;
+    icon: BookOpen,,
+  description: 'Knowledge base and documentation',;
   },;
   {;
     name: 'Case Studies',;
     href: '/case-studies',;
-    icon: Users,;
-    description: 'Success stories and implementations',;
+    icon: Users,,
+  description: 'Success stories and implementations',;
   },;
   {;
     name: 'Blog',;
     href: '/blog',;
-    icon: MessageCircle,;
-    description: 'Latest insights and updates',;
+    icon: MessageCircle,,
+  description: 'Latest insights and updates',;
   },;
   {;
     name: 'Contact',;
     href: '/contact',;
-    icon: MessageCircle,;
-    description: 'Get in touch with our team',;
+    icon: MessageCircle,,
+  description: 'Get in touch with our team',;
   },];  { name: 'Home', href: '/', icon: Home, description: 'Welcome to Zion Tech Group' },;
   { name: 'Services', href: '/services', icon: Briefcase, description: 'Our comprehensive service portfolio' },;
   { name: 'Solutions', href: '/solutions', icon: TargetIcon, description: 'Tailored solutions for your business' },;
@@ -532,8 +531,8 @@ const serviceCategories = [;
       { name: 'Quantum Internet Security', href: '/quantum-internet-security-gateway' },;
       { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform' },;
       { name: 'Quantum Creativity Studio', href: '/quantum-creativity-studio' }
-    ];
-  };
+    ]
+};
     title: '🏙️ 2032 Enterprise IT Solutions',;
     services: [;
       { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' },;
@@ -606,50 +605,50 @@ const quickLinks = [;
   {;
     name: '2032 Services',;
     href: '/2032-futuristic-services-showcase',;
-    icon: Star,;
-    description: 'Revolutionary 2032 services',;
+    icon: Star,,
+  description: 'Revolutionary 2032 services',;
   },;
   {;
     name: 'Enhanced Pricing',;
     href: '/enhanced-market-pricing-2032',;
-    icon: DollarSign,;
-    description: 'Comprehensive pricing analysis',;
+    icon: DollarSign,,
+  description: 'Comprehensive pricing analysis',;
   },;
   {;
     name: 'Market Pricing',;
     href: '/market-pricing',;
-    icon: DollarSign,;
-    description: 'Competitive pricing references',;
+    icon: DollarSign,,
+  description: 'Competitive pricing references',;
   },;
   {;
     name: 'Enhanced Services',;
     href: '/enhanced-services-showcase',;
-    icon: Star,;
-    description: 'Premium service showcase',;
+    icon: Star,,
+  description: 'Premium service showcase',;
   },;
   {;
     name: 'Revolutionary 2026',;
     href: '/revolutionary-2026-services',;
-    icon: TrendingUp,;
-    description: '2026 breakthrough services',;
+    icon: TrendingUp,,
+  description: '2026 breakthrough services',;
   },;
   {;
     name: 'Ultimate 2026',;
     href: '/ultimate-2026-services-showcase',;
-    icon: Target,;
-    description: 'Ultimate service portfolio',;
+    icon: Target,,
+  description: 'Ultimate service portfolio',;
   },;
   {;
     name: 'News & Updates',;
     href: '/news',;
-    icon: MessageCircle,;
-    description: 'Latest company news',;
+    icon: MessageCircle,,
+  description: 'Latest company news',;
   },;
   {;
     name: 'Support',;
     href: '/support',;
-    icon: Users,;
-    description: 'Technical support and help',;
+    icon: Users,,
+  description: 'Technical support and help',;
   },];  { name: '2032 Services', href: '/2032-futuristic-services-showcase', icon: Star, description: 'Revolutionary 2032 services' },;
   { name: 'Enhanced Pricing', href: '/enhanced-market-pricing-2032', icon: DollarSign, description: 'Comprehensive pricing analysis' },;
   { name: 'Market Pricing', href: '/market-pricing', icon: DollarSign, description: 'Competitive pricing references' },;
@@ -746,14 +745,12 @@ export default function UltraFuturisticFooter2032() {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">;
             {/* Company Info */}
 
-
 };
 
 export default function UltraFuturisticFooter2032() {
   return (
 
                     {contactInfo.website}
-
 
                     {contactInfo.website}
 
@@ -848,9 +845,9 @@ export default function UltraFuturisticFooter2032() {
               </h3>;
 
               {/* Quick Links */}
-              <div className="mb - 8">;
-                <h4 className="text - lg font - medium text - white mb - 4">Quick Links</h4>;
-                <ul className="space - y-2">;
+              <div className="mb-8">;
+                <h4 className="text - lg font - medium text-white mb-4">Quick Links</h4>;
+                <ul className="space-y-2">;
                   {quick_links.map ((link, index) => (
                     <li key={index}>;
                       <Link;
@@ -916,7 +913,6 @@ export default function UltraFuturisticFooter2032() {
                   ))}
                 </ul>
               </div>
-
 
               {/* Social Links */}
               <div>;
@@ -1036,7 +1032,6 @@ export default function UltraFuturisticFooter2032() {
 
   );
 
-
 }
   );
 }
@@ -1057,10 +1052,10 @@ export default function UltraFuturisticFooter2032() {
 }        <motion.button;
           while_hover={{ scale: 1.1 }}
           while_tap={{ scale: 0.9 }}
-          className="w - 14 h - 14 bg - gradient - to - r from - cyan - 500 to - purple - 500 rounded - full shadow - 2xl shadow - cyan - 500 / 30 hover:shadow - cyan - 500 / 50 transition - all duration - 300 flex items - center justify - center text - white";
+          className="w - 14 h - 14 bg - gradient - to - r from - cyan - 500 to - purple - 500 rounded - full shadow - 2xl shadow - cyan - 500 / 30 hover:shadow - cyan - 500 / 50 transition - all duration - 300 flex items - center justify-center text-white";
           on_click={() => window.scroll_to ({ top: 0, behavior: 'smooth' })}
         >;
-          <ArrowRight className="w - 6 h - 6 transform rotate-[-90deg]" />;
+          <ArrowRight className="w-6 h-6 transform rotate-[-90deg]" />;
         </motion.button>;
       </div>;
     </footer>);

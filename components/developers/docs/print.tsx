@@ -29,7 +29,8 @@ export const getStaticProps: GetStaticProps < PageProps> = async () => {
     props: {
       docs: content as DocsContent
     }
-  };};import React, { useEffect } from 'react';
+  }
+};import React, { useEffect } from 'react';
 import type { GetStaticProps } from 'next';
 import content from '../../../data/docs/content.json';
 export type Section = {
@@ -69,19 +70,20 @@ class ErrorBoundary extends React.Component {
   return {;
     props: {;
       docs: content as DocsContent,;
-    },;
-  };};import React, { useEffect } from 'react';
+    },
+}
+};import React, { useEffect } from 'react';
 import type { GetStaticProps } from 'next';
 import content from '../../../data/docs/content ;
 export type Section = {;
   id: string,;
   title: string,;
   html?: string;
-  code?: { language?: string, content: string }[];
+  code?: { language?: string, content: string }[]
 };
 type DocsContent = {;
   title: string,;
-  sections: Section[];
+  sections: Section[]
 };
 export const getStaticProps: GetStaticProps<PageProps> = async () => {;
   return {;
@@ -104,7 +106,7 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {;
                   className='mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap'>;
                   {c && c.content}
                 </pre>;
-              ))}          </section>  }, []);
+              ))}          </section>  }, [])
 };
 export default function PrintDocs({ docs }: PageProps) {
   useEffect(() => {
@@ -151,15 +153,15 @@ function PrintDocs() {
                 </pre>))}          </section>  }, []);
 ;
   return (
-    <div className="p - 8 max - w-4xl mx - auto">;
-      <h1 className="text - 3xl font - bold mb - 6">{docs.title}</h1>;
-      <div className="space - y-8">;
+    <div className="p - 8 max-w-4xl mx-auto">;
+      <h1 className="text - 3xl font-bold mb-6">{docs.title}</h1>;
+      <div className="space-y-8">;
         {docs.sections.map ((s) => (
           <section key={s.id}>;
-            <h2 className="text - 2xl font - semibold mb - 2">{s.title}</h2>;
+            <h2 className="text - 2xl font-semibold mb-2">{s.title}</h2>;
             {s.html && <div dangerouslySetInnerHTML={{ __html: s.html }} />}
             {s.code && s.code.map ((c, i) => (
-              <pre key={i} className="mt - 4 p - 4 bg - gray - 100 text - xs whitespace - pre - wrap">{c.content}</pre>))}
+              <pre key={i} className="mt - 4 p - 4 bg - gray - 100 text - xs whitespace-pre-wrap">{c.content}</pre>))}
           </section>))}
       </div>;
     </div>);
@@ -171,6 +173,4 @@ function PrintDocs() {
 
   );
 }
-
-
 

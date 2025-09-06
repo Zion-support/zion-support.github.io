@@ -10,7 +10,7 @@ const Ai-healthcare-platform: React.FC<Ai-healthcare-platformProps> = ({ classNa
       <h1>Ai-healthcare-platform</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 
 export default Ai-healthcare-platform;

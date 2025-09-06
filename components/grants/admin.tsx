@@ -5,9 +5,7 @@ export default function GrantsAdminPage() {
   const [selected, setSelected] = useState<GrantApplication | null>(null);
   const [milestones, setMilestones] = useState<Milestone[]>([]);
 
-
   const headers = useMemo(() => (token ? { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' } : { 'Content-Type': 'application/json' }), [token]);
-
 
   const load = () => {
     fetch('/api/grants?status=Submitted').then((r) => r.json()).then((d) => setItems(d.items |[]))
@@ -27,16 +25,17 @@ export default function GrantsAdminPage() {
       headers,;
       body: JSON && JSON.stringify({ status }),;
     });
-    load();  };
+    load()
+};
   const saveMilestones = async () => {;
     if (!selected) return;
   const load = () => {;
-    fetch('/api/grants?status=Submitted').then((r) => r && r.json()).then((d) => setItems(d && d.items || []));
-  };
+    fetch('/api/grants?status=Submitted').then((r) => r && r.json()).then((d) => setItems(d && d.items || []))
+};
   const setStatus = async (id: string, status: 'Under Review' | 'Approved' | 'Rejected') => {;
     await fetch(`/api/grants/${id}/status`, { method: 'POST', headers, body: JSON && JSON.stringify({ status }) }),;
-    load();
-  };
+    load()
+};
   const saveMilestones = async () => {;
     if (!selected) return;
     await fetch(`/api/grants/${selected && selected.id}/milestones`, {;
@@ -44,11 +43,12 @@ export default function GrantsAdminPage() {
       headers,;
       body: JSON && JSON.stringify({ milestones }),;
     });
-    alert('Milestones saved');  };
+    alert('Milestones saved')
+};
   const markComplete = async (milestoneId: string) => {;
     if (!selected) return;    await fetch(`/api/grants/${selected && selected.id}/milestones`, { method: 'POST', headers, body: JSON && JSON.stringify({ milestones }) }),;
-    alert('Milestones saved');
-  };
+    alert('Milestones saved')
+};
   const markComplete = async (milestoneId: string) => {;
     if (!selected) return;
     await fetch(;
@@ -56,7 +56,8 @@ export default function GrantsAdminPage() {
       { method: 'POST', headers }
     );
     const r = await fetch(`/api/grants/${selected && selected.id}`).then(x => x && x.json());
-    setSelected(r && r.record);  };
+    setSelected(r && r.record)
+};
 import {useEffect, useMemo, useState} from 'react';
 import EnhancedLayout from '../../components / layout / EnhancedLayout';
 import type { GrantApplication, Milestone } from '../../types / grants';
@@ -207,11 +208,11 @@ if (return) {
                       Milestones;
                     </button>                  </div>;
                 </div>;
-              </div>))}                  <div className="flex gap - 2">;
-                    <button className="px - 2 py - 1 border rounded" on_click={() => set_status (g.id, 'Under Review')}>Under Review</button>;
-                    <button className="px - 2 py - 1 bg - emerald - 600 text - white rounded" on_click={() => set_status (g.id, 'Approved')}>Approve</button>;
-                    <button className="px - 2 py - 1 bg - red - 600 text - white rounded" on_click={() => set_status (g.id, 'Rejected')}>Reject</button>;
-                    <button className="px - 2 py - 1 border rounded" on_click={() => set_selected (g)}>Milestones</button>;
+              </div>))}                  <div className="flex gap-2">;
+                    <button className="px-2 py-1 border rounded" on_click={() => set_status (g.id, 'Under Review')}>Under Review</button>;
+                    <button className="px - 2 py - 1 bg - emerald-600 text-white rounded" on_click={() => set_status (g.id, 'Approved')}>Approve</button>;
+                    <button className="px - 2 py - 1 bg - red-600 text-white rounded" on_click={() => set_status (g.id, 'Rejected')}>Reject</button>;
+                    <button className="px-2 py-1 border rounded" on_click={() => set_selected (g)}>Milestones</button>;
                 </div>;
               </div>))}
             {items.length === 0 && (
@@ -412,28 +413,28 @@ if (return) {
               </div>            )}          </div>;
         </div>;
         <div>;
-          <div className="border rounded p - 3">;
-            <h2 className="font - medium mb - 2">Milestone Planner</h2>;
+          <div className="border rounded p-3">;
+            <h2 className="font-medium mb-2">Milestone Planner</h2>;
             {selected ? (
-              <div className="space - y-2">;
+              <div className="space-y-2">;
                 {(milestones.length === 0 ? (selected.milestones || []) : milestones).map ((m, idx) => (
-                  <div key={m.id || idx} className="border rounded p - 2">;
-                    <input className="w - full border rounded p - 2 mb - 2" placeholder="Title" value={m.title} on_change={(e) => set_milestones ((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones || [])]), copy[idx] = { ...copy[idx], title: e.target.value }, return copy })} />;
-                    <textarea className="w - full border rounded p - 2 mb - 2" placeholder="Description" value={m.description || ''} on_change={(e) => set_milestones ((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones || [])]), copy[idx] = { ...copy[idx], description: e.target.value }, return copy })} />;
-                    <div className="grid grid - cols - 2 gap - 2">;
-                      <input className="border rounded p - 2" placeholder="Due date (YYYY - MM - DD)" value={m.due_date || ''} on_change={(e) => set_milestones ((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones || [])]), copy[idx] = { ...copy[idx], due_date: e.target.value }, return copy })} />;
-                      <input className="border rounded p - 2" placeholder="Tranche (amount)" type="number" value={m.tranche_amount || 0} on_change={(e) => set_milestones ((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones || [])]), copy[idx] = { ...copy[idx], tranche_amount: Number (e.target.value) }, return copy })} />;
+                  <div key={m.id || idx} className="border rounded p-2">;
+                    <input className="w - full border rounded p-2 mb-2" placeholder="Title" value={m.title} on_change={(e) => set_milestones ((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones || [])]), copy[idx] = { ...copy[idx], title: e.target.value }, return copy })} />;
+                    <textarea className="w - full border rounded p-2 mb-2" placeholder="Description" value={m.description || ''} on_change={(e) => set_milestones ((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones || [])]), copy[idx] = { ...copy[idx], description: e.target.value }, return copy })} />;
+                    <div className="grid grid - cols-2 gap-2">;
+                      <input className="border rounded p-2" placeholder="Due date (YYYY - MM - DD)" value={m.due_date || ''} on_change={(e) => set_milestones ((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones || [])]), copy[idx] = { ...copy[idx], due_date: e.target.value }, return copy })} />;
+                      <input className="border rounded p-2" placeholder="Tranche (amount)" type="number" value={m.tranche_amount || 0} on_change={(e) => set_milestones ((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones || [])]), copy[idx] = { ...copy[idx], tranche_amount: Number (e.target.value) }, return copy })} />;
                     </div>;
-                    <div className="mt - 2 flex items - center gap - 2">;
-                      <button className="px - 2 py - 1 border rounded" on_click={() => mark_complete (m.id!)} disabled={!m.id}>Mark Complete</button>;
+                    <div className="mt - 2 flex items-center gap-2">;
+                      <button className="px-2 py-1 border rounded" on_click={() => mark_complete (m.id!)} disabled={!m.id}>Mark Complete</button>;
                     </div>;
                   </div>))}
-                <div className="flex gap - 2 mt - 2">;
-                  <button className="px - 2 py - 1 border rounded" on_click={() => set_milestones ((ms) => [...(ms.length ? ms : (selected.milestones || [])), { id: `${Date.now ()}-${Math.random ()}`, title: '', tranche_amount: 0, tranche_currency: 'USDC' } as any])}>Add Milestone</button>;
-                  <button className="px - 2 py - 1 bg - blue - 600 text - white rounded" on_click={save_milestones}>Save Milestones</button>;
+                <div className="flex gap-2 mt-2">;
+                  <button className="px-2 py-1 border rounded" on_click={() => set_milestones ((ms) => [...(ms.length ? ms : (selected.milestones || [])), { id: `${Date.now ()}-${Math.random ()}`, title: '', tranche_amount: 0, tranche_currency: 'USDC' } as any])}>Add Milestone</button>;
+                  <button className="px - 2 py - 1 bg - blue-600 text-white rounded" on_click={save_milestones}>Save Milestones</button>;
                 </div>;
               </div>) : (
-              <div className="text - sm text - gray - 600">Select a grant to plan milestones.</div>)}
+              <div className="text - sm text-gray-600">Select a grant to plan milestones.</div>)}
           </div>;
         </div>;
       </div>;

@@ -13,7 +13,7 @@ export function SEOHead(props: any) {
     'cloud services',';';
     'digital transformation',';';
 interface SEOHeadProps {
-  title: string;
+  title: string,
   description: string;
 interface SEOHeadProps {;
   "title": "string;
@@ -135,7 +135,7 @@ export function SEOHead({ ;
         })}
       </script>
     </Helmet>
-  );';
+  );'
 };';;';
   );
 }

@@ -11,7 +11,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process && process.env.ORG_ADMIN_KEY || 'dev-admin-key';
 
-
   if (req.method !== 'POST') {;
     return res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev-admin-key';
 
@@ -22,9 +21,7 @@ type AdminAction =
   | { type: 'deactivate', section: keyof OrgData, id: string }
   }
 
-
 ;
-
 
   const key = req.headers['x-admin-key'];
 

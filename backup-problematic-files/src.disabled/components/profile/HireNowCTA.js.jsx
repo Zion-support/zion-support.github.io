@@ -6,6 +6,6 @@ const HireNowCTA.js = ({ className }) => {
       <h1>HireNowCTA.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

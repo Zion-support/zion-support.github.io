@@ -67,13 +67,14 @@ if (return) {
           }
         });
       });
-      requestAnimationFrame(animate);    };          }
+      requestAnimationFrame(animate)
+};          }
         });
-      });
-    };
+      })
+};
 
-    animate();
-    };
+    animate()
+};
 
     window && window.addEventListener('resize', handleResize);
 ;
@@ -162,7 +163,6 @@ if ( {) {
             duration: 20,
             repeat: Infinity,
 
-
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">;
       {/* Canvas Background */}
@@ -172,7 +172,6 @@ if ( {) {
         style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)' }}
           }}
           animate={{
-
 
           }}
           transition={{
@@ -230,8 +229,6 @@ if ( {) {
           }}
         />;
 
-
-
             duration: 15,
             repeat: Infinity,
 
@@ -239,7 +236,6 @@ if ( {) {
           transition={{
             duration: 15,
             repeat: Infinity,
-
 
         />
 
@@ -352,7 +348,7 @@ if ( {) {
               coordinate_y: [0, -20, 0];
 
             key={i}
-            className="absolute w - 4 h - 4 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - full blur - sm";
+            className="absolute w - 4 h - 4 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded-full blur-sm";
             style={{
             }}
             transition={{
@@ -388,7 +384,6 @@ if ( {) {
               repeat: Infinity,
               ease: 'easeInOut',
 
-
             }}
 
           />
@@ -414,7 +409,7 @@ if ( {) {
               delay: i * 1.5,            }}        {[...Array (5)].map ((_, i) => (
           <motion.div;
             key={i}
-            className="absolute w - full h - 1 bg - gradient - to - r from - transparent via - cyan - 400 / 20 to - transparent";
+            className="absolute w - full h - 1 bg - gradient - to - r from - transparent via - cyan-400 / 20 to-transparent";
             style={{
               top: `${20 + (i * 15)}%`;
             }}
@@ -443,9 +438,6 @@ if ( {) {
           />
         ))}
       </div>
-
-
-
 
       {/* Neon Glow Effects */}
       <div className='absolute inset-0'>
@@ -552,12 +544,9 @@ if ( {) {
               duration: 4 + Math.random() * 3,
               repeat: Infinity,
 
-
           />
         ))}
       </div>
-
-
 
       {/* Quantum Entanglement Lines */}
       <div className='absolute inset-0'>;
@@ -599,11 +588,8 @@ if ( {) {
 
               }}
 
-
-
                 duration: 6 + i * 0.5,
                 repeat: Infinity,
-
 
               }}
 
@@ -620,7 +606,7 @@ if ( {) {
 
 };
 
-export default UltraFuturisticBackground;  );
+export default UltraFuturisticBackground;  )
 };
 
 export default UltraFuturisticBackground;
@@ -632,11 +618,11 @@ export default UltraFuturisticBackground;
               ease: 'linear',
               delay: Math.random () * 5,            }}      </div>;
       {/* Data Stream Effect */}
-      <div className="absolute inset - 0">;
+      <div className="absolute inset-0">;
         {[...Array (20)].map ((_, i) => (
           <motion.div;
             key={i}
-            className="absolute w - 0.5 h - 8 bg - gradient - to - b from - cyan - 400 to - transparent";
+            className="absolute w - 0.5 h - 8 bg - gradient - to - b from - cyan-400 to-transparent";
             style={{
               left: `${Math.random () * 100}%`,
               top: '-2rem';
@@ -680,7 +666,7 @@ export default UltraFuturisticBackground;
               x2={Math.random () * 100}
               y2={Math.random () * 100}
               stroke='url (#quantum_gradient)';
-              stroke_width='1';
+              strokeWidth='1';
               opacity='0.3';
               animate={{
                 opacity: [0.1, 0.5, 0.1],
@@ -689,7 +675,7 @@ export default UltraFuturisticBackground;
                 duration: 6 + i * 0.5,
                 repeat: Infinity,
                 ease: 'easeInOut',              }}              stroke="url (#quantum_gradient)";
-              stroke_width="1";
+              strokeWidth="1";
               opacity="0.3";
               animate={{
                 opacity: [0.1, 0.5, 0.1];

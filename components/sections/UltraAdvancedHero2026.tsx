@@ -37,11 +37,10 @@ export default function UltraAdvancedHero2026() {
 
   };
 
-
   const containerVariants = {
     hidden: { opacity: 0 }
 import {motion} from 'framer-motion';
-import Link from 'next / link';
+import Link from 'next/link';
 import {
   ArrowRight,
   Star,
@@ -121,10 +120,6 @@ function UltraAdvancedHero2026() {
             <br />;
             <span className='text-white'>is Now</span>;
           </motion && motion.h1>;
-
-
-
-
 
           {/* Subheading */}
           <motion&& motion.p
@@ -499,7 +494,7 @@ function UltraAdvancedHero2026() {
             repeat: Infinity,
             ease: "easeInOut";
           }}
-          className="absolute top - 20 right - 20 text - 6xl opacity - 20";
+          className="absolute top - 20 right - 20 text-6xl opacity-20";
         >;
           🚀;
         </motion.div>;
@@ -513,7 +508,7 @@ function UltraAdvancedHero2026() {
             repeat: Infinity,
             ease: "easeInOut";
           }}
-          className="absolute bottom - 20 left - 20 text - 6xl opacity - 20";
+          className="absolute bottom - 20 left - 20 text-6xl opacity-20";
         >;
           ⚛️;
         </motion.div>;
@@ -527,7 +522,7 @@ function UltraAdvancedHero2026() {
             repeat: Infinity,
             ease: "easeInOut";
           }}
-          className="absolute top - 1/3 left - 10 text - 5xl opacity - 20";
+          className="absolute top - 1/3 left - 10 text-5xl opacity-20";
         >;
           🧠;
         </motion.div>;
@@ -541,7 +536,7 @@ function UltraAdvancedHero2026() {
             repeat: Infinity,
             ease: "easeInOut";
           }}
-          className="absolute bottom - 1/3 right - 10 text - 5xl opacity - 20";
+          className="absolute bottom - 1/3 right - 10 text-5xl opacity-20";
         >;
           🌐;
         </motion.div>;

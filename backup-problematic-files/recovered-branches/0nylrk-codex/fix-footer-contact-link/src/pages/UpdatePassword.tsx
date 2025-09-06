@@ -85,8 +85,8 @@ export default function UpdatePassword() {;
 ;
       if (error) {;
         toast({;
-          title:"Password update failed",;
-          description:error.message,;
+          title:"Password update failed",,
+  description:error.message,;
           variant:"destructive"}),;
         setError(error.message),;
         return,;
@@ -95,8 +95,8 @@ export default function UpdatePassword() {;
       // Show success message and clean up auth state;
       setSuccess(true),;
       toast({;
-        title:"Password updated successfully",;
-        description:"You can now log in with your new password."}),;
+        title:"Password updated successfully",,
+  description:"You can now log in with your new password."}),;
 ;
       // Clean auth state and redirect after a delay;
       cleanupAuthState(),;
@@ -106,8 +106,8 @@ export default function UpdatePassword() {;
     } catch (error:any) {;
       console.error("Password update error:", error),;
       toast({;
-        title:"Password update failed",;
-        description:error.message || "An unexpected error occurred",;
+        title:"Password update failed",,
+  description:error.message || "An unexpected error occurred",;
         variant:"destructive"}),;
       setError(error.message || "An unexpected error occurred"),;
     } finally {;
@@ -264,8 +264,8 @@ refresh token: ''
 });
 if (error) {
   toast ({
-  title: "Password update failed";
-description: error.message;
+  title: "Password update failed",
+  description: error.message;
 setError (error.message);
 return;
 }//Show success message and clean up auth state //Clean auth state and redirect after a delay cleanupAuthState ();

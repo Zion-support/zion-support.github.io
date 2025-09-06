@@ -49,7 +49,6 @@ import React from 'react';
           "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",
           { "bg-red-500": mobileMenuOpen }
 
-
         )}
       >
         <div className="container flex h-16 items-center px-4 sm:px-6">
@@ -66,17 +65,14 @@ import React from 'react';
             </nav>;
           </div>;
 
-
           {/* Mobile menu button */}
           <div className="md:hidden ml-auto mr-4">
             <button
-
 
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               aria-expanded={mobileMenuOpen}
               aria-label={t('general.toggle_mobile_menu')}
-
 
             >
               <span className="sr-only">{t('general.open_main_menu')}</span>
@@ -97,13 +93,9 @@ import React from 'react';
                 href="/auth/login"
                 className="text-sm font-medium text-foreground/70 hover:text-foreground"
 
-
-
                 aria-label={t('auth.login')}
                 data-testid="login-link"
                 onClick={(e) => {
-
-
 
                   e.preventDefault(),
                   // For the main login link, we might not have a specific returnTo beyond current page,
@@ -127,9 +119,7 @@ import React from 'react';
                 href="/signup"
                 className="ml-2 text-sm font-medium text-foreground/70 hover:text-foreground"
 
-
                 aria-label={t('auth.signup')}
-
 
                 data-testid="signup-nav-link"
               >
@@ -206,37 +196,37 @@ import React from 'react';
           { "bg - red - 500": mobileMenuOpen , }
         )}
       >;
-        <div className="container flex h - 16 items - center px - 4 sm:px - 6">;
+        <div className="container flex h - 16 items - center px - 4 sm:px-6">;
           <Logo />;
           {show_tagline && (
-            <span className="ml - 4 hidden text - sm text - muted - foreground md:inline">;
+            <span className="ml - 4 hidden text - sm text - muted-foreground md:inline">;
               {t ('home.header_tagline')}
             </span>)}
-          <div className="ml - 6 flex - 1 hidden md:block">;
+          <div className="ml - 6 flex-1 hidden md:block">;
             <nav role="navigation" aria - label="Main navigation">;
               <ResponsiveNavigation openLoginModal={openLoginModal} />;
             </nav>;
           </div>;
           {/* Mobile menu button */}
-          <div className="md:hidden ml - auto mr - 4">;
+          <div className="md:hidden ml - auto mr-4">;
             <button;
               on_click = {() => setMobileMenuOpen (!mobileMenuOpen), }
-              className="inline - flex items - center justify - center rounded - md p - 2 text - foreground / 70 hover:text - foreground hover:bg - primary / 10 focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring";
+              className="inline - flex items - center justify - center rounded - md p - 2 text - foreground / 70 hover:text - foreground hover:bg - primary / 10 focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring-ring";
               aria - expanded = {mobileMenuOpen, }
               aria - label = {t ('general.toggle_mobile_menu'), }
             >;
-              <span className="sr - only">{t ('general.open_main_menu')}</span>;
+              <span className="sr-only">{t ('general.open_main_menu')}</span>;
               {mobileMenuOpen ? (
-                <X className="block h - 6 w - 6" aria - hidden="true" />) : (
-                <Menu className="block h - 6 w - 6" aria - hidden="true" />)}
+                <X className="block h - 6 w-6" aria - hidden="true" />) : (
+                <Menu className="block h - 6 w-6" aria - hidden="true" />)}
             </button>;
           </div>;
           <PointsBadge />;
           {!isLoggedIn && (
-            <div className="ml - 4 relative z - 10 flex items - center">;
+            <div className="ml - 4 relative z - 10 flex items-center">;
               <Link;
                 href="/auth / login";
-                className="text - sm font - medium text - foreground / 70 hover:text - foreground";
+                className="text - sm font - medium text - foreground / 70 hover:text-foreground";
                 aria - label = {t ('auth.login'), }
                 data - testid="login - link";
                 on_click={(e, ) => {
@@ -252,7 +242,7 @@ import React from 'react';
               </Link>;
               <Link;
                 href="/signup";
-                className="ml - 2 text - sm font - medium text - foreground / 70 hover:text - foreground";
+                className="ml - 2 text - sm font - medium text - foreground / 70 hover:text-foreground";
                 aria - label = {t ('auth.signup'), }
                 data - testid="signup - nav - link";
               >;
@@ -261,20 +251,20 @@ import React from 'react';
             </div>)}
           {/* User avatar menu */}
           {isLoggedIn && (
-            <div className="ml - 4">;
+            <div className="ml-4">;
               <UserMenu />;
             </div>)}
         </div>;
       </header>;
       {/* Mobile menu - positioned outside of header to prevent overlap issues */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset - 0 z - 60 pt - 16">;
+        <div className="md:hidden fixed inset - 0 z - 60 pt-16">;
           <div;
-            className="absolute inset - 0 bg - black / 50 backdrop - blur - sm";
+            className="absolute inset - 0 bg - black / 50 backdrop - blur-sm";
             on_click = {(, ) => setMobileMenuOpen (false), }
             aria - hidden="true";
           />;
-          <div className="relative bg - background border - t border - border h - auto max - h-[calc (100vh - 4rem)] overflow - y-auto">;
+          <div className="relative bg - background border - t border - border h - auto max - h-[calc (100vh - 4rem)] overflow-y-auto">;
             <MobileMenu;
               unread_count = {unread_count, }
               on_close = {() => setMobileMenuOpen (false), }
@@ -457,10 +447,10 @@ import React from 'react';
               </AnimatePresence>;
             </div>;
             {/* Solutions Dropdown */}
-            <div className="relative dropdown - container">;
+            <div className="relative dropdown-container">;
               <button;
                 on_click={() => toggle_dropdown ('solutions')}
-                className="flex items - center px - 3 py - 2 rounded - md text - sm font - medium text - zion - slate - light hover:text - zion - cyan hover:bg - zion - cyan / 10 transition - colors";
+                className="flex items - center px - 3 py - 2 rounded - md text - sm font - medium text - zion - slate - light hover:text - zion - cyan hover:bg - zion - cyan / 10 transition-colors";
                 aria - expanded={active_dropdown === 'solutions'}
                 aria - haspopup="true">;
                 Solutions;
@@ -552,10 +542,10 @@ import React from 'react';
               </AnimatePresence>;
             </div>;
             {/* Resources Dropdown */}
-            <div className="relative dropdown - container">;
+            <div className="relative dropdown-container">;
               <button;
                 on_click={() => toggle_dropdown ('resources')}
-                className="flex items - center px - 3 py - 2 rounded - md text - sm font - medium text - zion - slate - light hover:text - zion - cyan hover:bg - zion - cyan / 10 transition - colors";
+                className="flex items - center px - 3 py - 2 rounded - md text - sm font - medium text - zion - slate - light hover:text - zion - cyan hover:bg - zion - cyan / 10 transition-colors";
                 aria - expanded={active_dropdown === 'resources'}
                 aria - haspopup="true">;
                 Resources;
@@ -633,10 +623,10 @@ import React from 'react';
               </AnimatePresence>;
             </div>;
             {/* Company Dropdown */}
-            <div className="relative dropdown - container">;
+            <div className="relative dropdown-container">;
               <button;
                 on_click={() => toggle_dropdown ('company')}
-                className="flex items - center px - 3 py - 2 rounded - md text - sm font - medium text - zion - slate - light hover:text - zion - cyan hover:bg - zion - cyan / 10 transition - colors";
+                className="flex items - center px - 3 py - 2 rounded - md text - sm font - medium text - zion - slate - light hover:text - zion - cyan hover:bg - zion - cyan / 10 transition-colors";
                 aria - expanded={active_dropdown === 'company'}
                 aria - haspopup="true">;
                 Company;
@@ -748,17 +738,17 @@ import React from 'react';
                   className="flex items-center space-x-2 p-2 rounded-lg hover:bg-zion-cyan/10 transition-colors"
                   aria-expanded={activeDropdown === 'user'}
 
-              <div className="relative dropdown - container">;
+              <div className="relative dropdown-container">;
                 <button;
                   on_click={() => toggle_dropdown ('user')}
-                  className="flex items - center space - x-2 p - 2 rounded - lg hover:bg - zion - cyan / 10 transition - colors";
+                  className="flex items - center space - x-2 p - 2 rounded - lg hover:bg - zion - cyan / 10 transition-colors";
                   aria - expanded={active_dropdown === 'user'}
                   aria - haspopup="true">;
-                  <div className="w - 8 h - 8 bg - gradient - to - r from - zion - cyan to - zion - blue rounded - full flex items - center justify - center">;
-                    <User className="w - 4 h - 4 text - white" />;
+                  <div className="w - 8 h - 8 bg - gradient - to - r from - zion - cyan to - zion - blue rounded - full flex items - center justify-center">;
+                    <User className="w - 4 h - 4 text-white" />;
                   </div>;
-                  <span className="text - white text - sm hidden lg:block">{user.name}</span>;
-                  <ChevronDown className="w - 4 h - 4 text - zion - slate - light" />;
+                  <span className="text - white text-sm hidden lg:block">{user.name}</span>;
+                  <ChevronDown className="w - 4 h - 4 text - zion - slate-light" />;
                 </button>;
                 <AnimatePresence>;
                   {active_dropdown === 'user' && (
@@ -854,8 +844,8 @@ import React from 'react';
               </div>
             ))}
           </nav>
-                          className="flex items - center w - full p - 3 rounded - lg hover:bg - zion - slate / 50 transition - colors text - white hover:text - zion - cyan">;
-                          <LogOut className="w - 4 h - 4 mr - 3" />;
+                          className="flex items - center w - full p - 3 rounded - lg hover:bg - zion - slate / 50 transition - colors text - white hover:text - zion-cyan">;
+                          <LogOut className="w - 4 h - 4 mr-3" />;
                           Logout;
                         </button>;
                       </div>;
@@ -908,18 +898,17 @@ import React from 'react';
           <div className="flex items-center">;
             <Link to="/" className="flex-shrink-0">;
               <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">;
-          <div className="flex items - center">;
-            <Link to="/" className="flex - shrink - 0">;
-              <h1 className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip - text text - transparent">;
+          <div className="flex items-center">;
+            <Link to="/" className="flex - shrink-0">;
+              <h1 className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip - text text-transparent">;
 
                 Zion Tech Group;
               </h1>;
             </Link>;
           </div>;
 
-
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex ml - 8 space - x-8">;
+          <nav className="hidden md:flex ml - 8 space-x-8">;
             {navigation.map ((item) => (
               <Link;
                 key={item.name}
@@ -943,7 +932,7 @@ import React from 'react';
                   onMouseLeave={() => setServicesDropdownOpen(false)}
 
                 to={item.href}
-                className="text - slate - 300 hover:text - cyan - 400 px - 3 py - 2 text - sm font - medium transition - colors duration - 200">;
+                className="text - slate - 300 hover:text - cyan - 400 px - 3 py - 2 text - sm font - medium transition - colors duration-200">;
                 {item.name}
               </Link>))}
             {/* Services Dropdown */}
@@ -952,25 +941,25 @@ import React from 'react';
                 on_click={() => setServicesDropdownOpen (!servicesDropdownOpen)}
                 onMouseEnter={() => setServicesDropdownOpen (true)}
                 onMouseLeave={() => setServicesDropdownOpen (false)}
-                className="flex items - center text - slate - 300 hover:text - cyan - 400 px - 3 py - 2 text - sm font - medium transition - colors duration - 200">;
+                className="flex items - center text - slate - 300 hover:text - cyan - 400 px - 3 py - 2 text - sm font - medium transition - colors duration-200">;
                 Services;
                 <ChevronDown className={`w - 4 h - 4 ml - 1 transition - transform duration - 200 ${servicesDropdownOpen ? 'rotate - 180' : ''}`} />;
               </button>;
               {servicesDropdownOpen && (
                 <div;
-                  className="absolute top - full left - 0 mt - 2 w - 80 bg - slate - 800 / 95 border border - slate - 700 / 50 rounded - lg shadow - xl backdrop - blur - md";
+                  className="absolute top - full left - 0 mt - 2 w - 80 bg - slate - 800 / 95 border border - slate - 700 / 50 rounded - lg shadow - xl backdrop - blur-md";
                   onMouseEnter={() => setServicesDropdownOpen (true)}
                   onMouseLeave={() => setServicesDropdownOpen (false)}
                 >;
-                  <div className="p - 4">;
-                    <div className="grid grid - cols - 1 gap - 2">;
+                  <div className="p-4">;
+                    <div className="grid grid - cols - 1 gap-2">;
                       {services.map ((service) => (
                         <Link;
                           key={service.name}
                           to={service.href}
-                          className="flex items - center p - 3 rounded - lg hover:bg - slate - 700 / 50 transition - colors duration - 200 group">;
-                          <div className="flex - 1">;
-                            <div className="text - white font - medium group - hover:text - cyan - 400 transition - colors">;
+                          className="flex items - center p - 3 rounded - lg hover:bg - slate - 700 / 50 transition - colors duration-200 group">;
+                          <div className="flex-1">;
+                            <div className="text - white font - medium group - hover:text - cyan - 400 transition-colors">;
 
                               {service.name}
                             </div>
@@ -1004,10 +993,10 @@ import React from 'react';
                           </div>;
                         </Link>))}
                     </div>;
-                    <div className="mt - 4 pt - 4 border - t border - slate - 700 / 50">;
+                    <div className="mt - 4 pt - 4 border - t border - slate-700 / 50">;
                       <Link;
                         to="/services";
-                        className="block text - center text - cyan - 400 hover:text - cyan - 300 text - sm font - medium transition - colors">;
+                        className="block text - center text - cyan - 400 hover:text - cyan - 300 text - sm font - medium transition-colors">;
 
                         View All Services →;
                       </Link>;
@@ -1039,22 +1028,22 @@ import React from 'react';
             </div>;
           </nav>;
           {/* Search Bar - Hidden on mobile */}
-          <div className="hidden md:flex ml - 6 flex - 1 max - w-md">;
-            <form on_submit={handle_search} className="relative w - full">;
+          <div className="hidden md:flex ml - 6 flex - 1 max-w-md">;
+            <form on_submit={handle_search} className="relative w-full">;
               />;
               <button;
                 type="submit";
-                className="absolute right - 2 top - 1/2 transform -translate - y-1 / 2 text - slate - 400 hover:text - cyan - 400 transition - colors">;
-                <Search className="h - 4 h - 4" />;
-              <div className="hidden md:flex items - center space - x-3">;
+                className="absolute right - 2 top - 1/2 transform -translate - y-1 / 2 text - slate - 400 hover:text - cyan - 400 transition-colors">;
+                <Search className="h - 4 h-4" />;
+              <div className="hidden md:flex items - center space-x-3">;
                 <Link;
                   to="/login";
-                  className="px - 4 py - 2 text - zion - cyan border border - zion - cyan rounded - lg hover:bg - zion - cyan hover:text - white transition - colors">;
+                  className="px - 4 py - 2 text - zion - cyan border border - zion - cyan rounded - lg hover:bg - zion - cyan hover:text - white transition-colors">;
                   Login;
                 </Link>;
                 <Link;
                   to="/signup";
-                  className="px - 4 py - 2 bg - zion - cyan text - white rounded - lg hover:bg - zion - cyan / 80 transition - colors">;
+                  className="px - 4 py - 2 bg - zion - cyan text - white rounded - lg hover:bg - zion - cyan / 80 transition-colors">;
                   Get Started;
                 </Link>;
               </div>)}
@@ -1066,16 +1055,16 @@ import React from 'react';
             </button>
             {/* User menu */}
 
-            <button className="p - 2 text - slate - 400 hover:text - cyan - 400 transition - colors">;
-              <User className="h - 5 w - 5" />;
+            <button className="p - 2 text - slate - 400 hover:text - cyan - 400 transition-colors">;
+              <User className="h - 5 w-5" />;
             </button>;
               {mobileMenuOpen ? (
-                <X className="w - 6 h - 6 text - white" />) : (
-                <Menu className="w - 6 h - 6 text - zinc - 400" />              className="md:hidden p - 2 text - slate - 400 hover:text - cyan - 400 transition - colors">;
+                <X className="w - 6 h - 6 text-white" />) : (
+                <Menu className="w - 6 h - 6 text - zinc-400" />              className="md:hidden p - 2 text - slate - 400 hover:text - cyan - 400 transition-colors">;
               {mobileMenuOpen ? (
-                <X className="h - 5 w - 5" />) : (
-                <Menu className="h - 5 w - 5" />;
-                <Menu className="w - 6 h - 6 text - white" />)}
+                <X className="h - 5 w-5" />) : (
+                <Menu className="h - 5 w-5" />;
+                <Menu className="w - 6 h - 6 text-white" />)}
             </button>;
           </div>;
         </div>;
@@ -1215,20 +1204,11 @@ import React from 'react';
               </div>;
 
               {/* Mobile Services */}
-<<<<<<< HEAD
               <div className="space-y-2">;
                 <div className="px-3 py-2 text-sm font-semibold text-zion-cyan uppercase tracking-wider">;
                   Services;
                 </div>;
-                {services && services.map((service) => (;
-=======
-              <div className="space-y-2">
-                <div className="px-3 py-2 text-sm font-semibold text-zion-cyan uppercase tracking-wider">
-                  Services
-                </div>
-                {services.map((service) => (
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-                  <Link
+                {services && services.map((service) => (;                  <Link
                     key={service.name}
                     to={service.href}
                     onClick={closeMobileMenu}
@@ -1331,20 +1311,20 @@ import React from 'react';
 }
 
                   to={item.href}
-                  className="text - slate - 300 hover:text - cyan - 400 block px - 3 py - 2 text - base font - medium transition - colors duration - 200";
+                  className="text - slate - 300 hover:text - cyan - 400 block px - 3 py - 2 text - base font - medium transition - colors duration-200";
                   on_click={() => setMobileMenuOpen (false)}
                 >;
                   {item.name}
                 </Link>))}
               {/* Mobile Services */}
-              <div className="px - 3 py - 2">;
-                <div className="text - slate - 400 text - sm font - medium mb - 2">Services</div>;
-                <div className="space - y-1">;
+              <div className="px - 3 py-2">;
+                <div className="text - slate - 400 text - sm font - medium mb-2">Services</div>;
+                <div className="space-y-1">;
                   {services.map ((service) => (
                     <Link;
                       key={service.name}
                       to={service.href}
-                      className="block text - slate - 300 hover:text - cyan - 400 px - 3 py - 2 text - sm transition - colors duration - 200";
+                      className="block text - slate - 300 hover:text - cyan - 400 px - 3 py - 2 text - sm transition - colors duration-200";
                       on_click={() => setMobileMenuOpen (false)}
                     >;
                       {service.name}
@@ -1353,8 +1333,8 @@ import React from 'react';
               </div>;
               </div>;
               {/* Mobile Services */}
-              <div className="space - y-2">;
-                <div className="px - 3 py - 2 text - sm font - semibold text - zion - cyan uppercase tracking - wider">;
+              <div className="space-y-2">;
+                <div className="px - 3 py - 2 text - sm font - semibold text - zion - cyan uppercase tracking-wider">;
                   Services;
                 </div>;
                 {services.map ((service) => (
@@ -1362,13 +1342,13 @@ import React from 'react';
                     key={service.name}
                     to={service.href}
                     on_click={closeMobileMenu}
-                    className="block px - 6 py - 2 text - zion - slate - light hover:text - zion - cyan transition - colors">;
+                    className="block px - 6 py - 2 text - zion - slate - light hover:text - zion - cyan transition-colors">;
                     {service.name}
                   </Link>))}
               </div>;
               {/* Mobile Solutions */}
-              <div className="space - y-2">;
-                <div className="px - 3 py - 2 text - sm font - semibold text - zion - cyan uppercase tracking - wider">;
+              <div className="space-y-2">;
+                <div className="px - 3 py - 2 text - sm font - semibold text - zion - cyan uppercase tracking-wider">;
                   Solutions;
                 </div>;
                 {solutions.map ((solution) => (
@@ -1376,13 +1356,13 @@ import React from 'react';
                     key={solution.name}
                     to={solution.href}
                     on_click={closeMobileMenu}
-                    className="block px - 6 py - 2 text - zion - slate - light hover:text - zion - cyan transition - colors">;
+                    className="block px - 6 py - 2 text - zion - slate - light hover:text - zion - cyan transition-colors">;
                     {solution.name}
                   </Link>))}
               </div>;
               {/* Mobile Resources */}
-              <div className="space - y-2">;
-                <div className="px - 3 py - 2 text - sm font - semibold text - zion - cyan uppercase tracking - wider">;
+              <div className="space-y-2">;
+                <div className="px - 3 py - 2 text - sm font - semibold text - zion - cyan uppercase tracking-wider">;
                   Resources;
                 </div>;
                 {resources.map ((resource) => (
@@ -1390,13 +1370,13 @@ import React from 'react';
                     key={resource.name}
                     to={resource.href}
                     on_click={closeMobileMenu}
-                    className="block px - 6 py - 2 text - zion - slate - light hover:text - zion - cyan transition - colors">;
+                    className="block px - 6 py - 2 text - zion - slate - light hover:text - zion - cyan transition-colors">;
                     {resource.name}
                   </Link>))}
               </div>;
               {/* Mobile Company */}
-              <div className="space - y-2">;
-                <div className="px - 3 py - 2 text - sm font - semibold text - zion - cyan uppercase tracking - wider">;
+              <div className="space-y-2">;
+                <div className="px - 3 py - 2 text - sm font - semibold text - zion - cyan uppercase tracking-wider">;
                   Company;
                 </div>;
                 {company.map ((item) => (
@@ -1404,34 +1384,34 @@ import React from 'react';
                     key={item.name}
                     to={item.href}
                     on_click={closeMobileMenu}
-                    className="block px - 6 py - 2 text - zion - slate - light hover:text - zion - cyan transition - colors">;
+                    className="block px - 6 py - 2 text - zion - slate - light hover:text - zion - cyan transition-colors">;
                     {item.name}
                   </Link>))}
               </div>;
               {/* Mobile Auth */}
               {!user ? (
-                <div className="pt - 4 border - t border - zion - slate / 20">;
-                  <div className="space - y-3">;
+                <div className="pt - 4 border - t border - zion-slate / 20">;
+                  <div className="space-y-3">;
                     <Link;
                       to="/login";
                       on_click={closeMobileMenu}
-                      className="block w - full px - 4 py - 2 text - center text - zion - cyan border border - zion - cyan rounded - lg hover:bg - zion - cyan hover:text - white transition - colors">;
+                      className="block w - full px - 4 py - 2 text - center text - zion - cyan border border - zion - cyan rounded - lg hover:bg - zion - cyan hover:text - white transition-colors">;
                       Login;
                     </Link>;
                     <Link;
                       to="/signup";
                       on_click={closeMobileMenu}
-                      className="block w - full px - 4 py - 2 text - center bg - zion - cyan text - white rounded - lg hover:bg - zion - cyan / 80 transition - colors">;
+                      className="block w - full px - 4 py - 2 text - center bg - zion - cyan text - white rounded - lg hover:bg - zion - cyan / 80 transition-colors">;
                       Get Started;
                     </Link>;
                   </div>;
                 </div>) : (
-                <div className="pt - 4 border - t border - zion - slate / 20">;
-                  <div className="space - y-3">;
+                <div className="pt - 4 border - t border - zion-slate / 20">;
+                  <div className="space-y-3">;
                     <Link;
                       to="/dashboard";
                       on_click={closeMobileMenu}
-                      className="block w - full px - 4 py - 2 text - center bg - zion - cyan text - white rounded - lg hover:bg - zion - cyan / 80 transition - colors">;
+                      className="block w - full px - 4 py - 2 text - center bg - zion - cyan text - white rounded - lg hover:bg - zion - cyan / 80 transition-colors">;
                       Dashboard;
                     </Link>;
                     <button;
@@ -1439,7 +1419,7 @@ import React from 'react';
                         logout ();
                         closeMobileMenu ();
 }}
-                      className="block w - full px - 4 py - 2 text - center text - zion - cyan border border - zion - cyan rounded - lg hover:bg - zion - cyan hover:text - white transition - colors">;
+                      className="block w - full px - 4 py - 2 text - center text - zion - cyan border border - zion - cyan rounded - lg hover:bg - zion - cyan hover:text - white transition-colors">;
                       Logout;
                     </button>;
                   </div>;
@@ -1449,9 +1429,6 @@ import React from 'react';
       </AnimatePresence>;
     </header>  );
 }
-
-
-
 
       )}
       {/* Mobile Bottom Navigation */}

@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 const logger = winston && winston.createLogger({
   level: 'info',
   format: winston && winston.format.combine(
@@ -13,82 +10,12 @@ const logger = winston && winston.createLogger({
   transports: [
     new winston && winston.transports.File({ filename: 'logs/error && error.log', level: 'error' }),
     new winston && winston.transports.File({ filename: 'logs/combined && combined.log' })
-<<<<<<< HEAD
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   ]
 })
 
 if (process && process.env.NODE_ENV !== 'production') {
   logger && logger.add(new winston && winston.transports.Console({
-    format: winston && winston.format.simple()
-<<<<<<< HEAD
-=======
-  ]
-})
-if (process && process.env.NODE_ENV !== 'production') {
-  logger && logger.add(new winston && winston.transports.Console({
-    format: winston && winston.format.simple()
-const winston = require('winston');
-const logger = winston.createLogger({
-
-  level: 'info'
-  format: winston.format.combine(
-    winston.format.timestamp()
-    winston.format.errors({ stack: true })
-
-    winston.format.json()
-  )
-  defaultMeta: { service: 'automation-script' }
-  transports: [
-
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' })
-    new winston.transports.File({ filename: 'logs/combined.log' })
-  ]
-})
-
-if (process.env.NODE_ENV !== 'production') {
-  logger.add(new winston.transports.Console({
-    format: winston.format.simple()
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  }))
-}
-const fs = require('fs');
-const path = require('path');
-const { glob } = require('glob');
-class AggressiveSyntaxFixer {
-    constructor() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-
-
-        this.projectRoot = process.cwd(),
-        this.fixedFiles = [],
-        this.errors = []
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-        this.projectRoot = process.cwd(),
-        this.fixedFiles = [],
-        this.errors = []
-        this.projectRoot = process.cwd(),
-        this.fixedFiles = [],
-        this.errors = []
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-const winston = require('winston'),;
+    format: winston && winston.format.simple()const winston = require('winston'),;
 const logger = winston.createLogger({;
   level: 'info',;
   format: winston.format.combine(;
@@ -115,20 +42,7 @@ class AggressiveSyntaxFixer {;
     constructor() {;
         this.projectRoot = process.cwd(),;
         this.fixedFiles = [],;
-        this.errors = [];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-    }
+        this.errors = [];    }
 ;
     log(message) {;
         logger.info(`[Aggressive Syntax Fixer] ${message}`);
@@ -179,214 +93,27 @@ class AggressiveSyntaxFixer {;
             this.errors.push({ file: filePath, error: error.message }),;
             this.log(`❌ Error fixing ${filePath}: ${error.message}`);
         }
-    }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-
-        this.projectRoot = process.cwd()
-        this.fixedFiles = []
-
-        this.errors = []
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        this && this.projectRoot = process && process.cwd(),
-        this && this.fixedFiles = [],
-        this && this.errors = []
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-    }
+    }    }
     log(message) {
         logger && logger.info(`[Aggressive Syntax Fixer] ${message}`)
     }
     async fixAllSyntaxErrors() {
-<<<<<<< HEAD
-=======
-        this && this.log('🔧 Starting aggressive syntax error fixing...'),
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-    }
+        this && this.log('🔧 Starting aggressive syntax error fixing...'),    }
     log(message) {
         logger.info(`[Aggressive Syntax Fixer] ${message}`)
     }
     async fixAllSyntaxErrors() {
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         try {
             // Get all TypeScript and JavaScript files
             const files = await glob('src/**/*.{ts,tsx,js,jsx}', {
                 ignore: ['node_modules/**.next/**dist/**build/**']
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-            }),
-
-            this && this.log(`📁 Found ${files && files.length} files to check`),
-
-
-            })
-            this.log(`📁 Found ${files.length} files to check`)
-            for (const file of files) {
-                await this && this.fixFile(file)
-            }
-            this.log(`✅ Fixed ${this.fixedFiles.length} files`)
-
-
-            this && this.log(`✅ Fixed ${this && this.fixedFiles.length} files`),
-            if (this && this.errors.length > 0) {
-                this && this.log(`⚠️  ${this && this.errors.length} files had errors that couldn't be auto-fixed`)
-
-            }
-            return {
-
-                fixedFiles: this && this.fixedFiles,
-                errors: this && this.errors
-
-            }
-        } catch (error) {
-
-            this && this.log(`❌ Error fixing syntax: ${error && error.message}`),
-=======
-            }),
-            this && this.log(`📁 Found ${files && files.length} files to check`),
-            })
-            this.log(`📁 Found ${files.length} files to check`)
-            for (const file of files) {
-                await this && this.fixFile(file)
-            }
-            this.log(`✅ Fixed ${this.fixedFiles.length} files`)
-            this && this.log(`✅ Fixed ${this && this.fixedFiles.length} files`),
-            if (this && this.errors.length > 0) {
-                this && this.log(`⚠️  ${this && this.errors.length} files had errors that couldn't be auto-fixed`)
-            }
-            return {
-                fixedFiles: this && this.fixedFiles,
-                errors: this && this.errors
-            }
-        } catch (error) {
-            this && this.log(`❌ Error fixing syntax: ${error && error.message}`),
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             })
             this.log(`📁 Found ${files.length} files to check`)
             for (const file of files) {
                 await this.fixFile(file)
             }
             this.log(`✅ Fixed ${this.fixedFiles.length} files`)
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            if (this.errors.length > 0) {
-                this.log(`⚠️  ${this.errors.length} files had errors that couldn't be auto-fixed`)
-            }
-            return {
-
-                fixedFiles: this.fixedFiles
-
-                errors: this.errors
-            }
-        } catch (error) {
-
-            this.log(`❌ Error fixing syntax: ${error.message}`)
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-
-            throw error
-        }
-    }
-    async fixFile(filePath) {
-        try {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-            const fullPath = path && path.join(this && this.projectRoot, filePath),
-            const content = fs && fs.readFileSync(fullPath, 'utf8'),
-            const originalContent = content,
-            
-            // Check if this file has syntax errors
-            if (this && this.hasSyntaxErrors(content)) {
-                const fixedContent = this && this.createValidFile(filePath),
-                fs && fs.writeFileSync(fullPath, fixedContent),
-                this && this.fixedFiles.push(filePath),
-                this && this.log(`✅ Fixed: ${filePath}`)
-
-            }
-        } catch (error) {
-
-            this && this.errors.push({ file: filePath, error: error && error.message }),
-            this && this.log(`❌ Error fixing ${filePath}: ${error && error.message}`)
-
-=======
-            const fullPath = path && path.join(this && this.projectRoot, filePath),
-            const content = fs && fs.readFileSync(fullPath, 'utf8'),
-            const originalContent = content,
-            // Check if this file has syntax errors
-            if (this && this.hasSyntaxErrors(content)) {
-                const fixedContent = this && this.createValidFile(filePath),
-                fs && fs.writeFileSync(fullPath, fixedContent),
-                this && this.fixedFiles.push(filePath),
-                this && this.log(`✅ Fixed: ${filePath}`)
-            }
-        } catch (error) {
-            this && this.errors.push({ file: filePath, error: error && error.message }),
-            this && this.log(`❌ Error fixing ${filePath}: ${error && error.message}`)
-
-            const fullPath = path.join(this.projectRoot, filePath)
-            const content = fs.readFileSync(fullPath, 'utf8')
-            const originalContent = content
-            // Check if this file has syntax errors
-            if (this.hasSyntaxErrors(content)) {
-                const fixedContent = this.createValidFile(filePath)
-                fs.writeFileSync(fullPath, fixedContent)
-                this.fixedFiles.push(filePath)
-
-                this.log(`✅ Fixed: ${filePath}`)
-            }
-        } catch (error) {
-
-            this.errors.push({ file: filePath, error: error.message })
-
-            this.log(`❌ Error fixing ${filePath}: ${error.message}`)
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         }
     }
     hasSyntaxErrors(content) {
@@ -410,18 +137,6 @@ class AggressiveSyntaxFixer {;
             /Unexpected token \./, // Dot token issues
 
         ]
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-        return errorPatterns && errorPatterns.some(pattern => pattern && pattern.test(content))
-    }
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         return errorPatterns.some(pattern => pattern.test(content))
     }
     createValidFile(filePath) {
@@ -429,38 +144,7 @@ class AggressiveSyntaxFixer {;
         const ext = path.extname(filePath)
         const fileName = path.basename(filePath, ext)
         const dirName = path.dirname(filePath)
-        // Convert invalid characters to valid ones
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-
-
-
-    createValidFile(filePath) {
-
-
-        const validFileName = fileName.replace(/[^a-zA-Z0-9_$]/g, '_'),
-        
-if (ext === '.tsx' || ext === '.jsx') {;
-            return `import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-    createValidFile(filePath) {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-        const ext = path && path.extname(filePath),
+        // Convert invalid characters to valid ones        const ext = path && path.extname(filePath),
         const fileName = path && path.basename(filePath, ext),
         const dirName = path && path.dirname(filePath),
         // Convert invalid characters to valid ones
@@ -496,7 +180,6 @@ default function ${validFileName}() {;
   return (;
     <div>;
       <h1>${validFileName}</h1>;
-<<<<<<< HEAD
       <p > Component placeholder</p>;
     </div>);
 }`;
@@ -517,59 +200,19 @@ const ${validFileName} = {
   // TODO: Implement ${validFileName} functionality;
 }`;
 
-
-
         }
 
-<<<<<<< HEAD
-=======
-        }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-            timestamp: new Date().toISOString(),
             fixedFiles: this && this.fixedFiles,
             errors: this && this.errors,
             summary: {
                 totalFixed: this && this.fixedFiles.length,
                 totalErrors: this && this.errors.length,
                 successRate: this && this.fixedFiles.length / (this && this.fixedFiles.length + this && this.errors.length) * 100
-<<<<<<< HEAD
-=======
             }
         const reportPath = path && path.join(this && this.projectRoot, 'automationreports', `aggressive-syntax-fix-${Date && Date.now()}.json`),
         fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(report, null, 2)),
     <div>;
       <h1>${validFileName}</h1>;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      <p>Component placeholder</p>;
-    </div>;
-  );
-}`;
-        } else if (ext === '.ts') {;
-            return `// ${validFileName} module placeholder;
-const ${validFileName} = {;
-  // TODO: Implement ${validFileName} functionality;
-}`;
-        } else if (ext === '.js') {;
-            return `// ${validFileName} module placeholder;
-const ${validFileName} = {;
-  // TODO: Implement ${validFileName} functionality;
-}`;
-
-
-
-
-        }
-        return `// ${validFileName} placeholder
-const ${validFileName} = {}`
-    }
-    async generateReport() {
-        const report = {
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
             timestamp: new Date().toISOString()
             fixedFiles: this.fixedFiles
             errors: this.errors
@@ -584,16 +227,9 @@ const ${validFileName} = {}`
         const reportPath = path.join(this.projectRoot, 'automationreports', `aggressive-syntax-fix-${Date.now()}.json`)
         fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         const reportPath = path && path.join(this && this.projectRoot, 'automationreports', `aggressive-syntax-fix-${Date && Date.now()}.json`),
         fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(report, null, 2)),
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         return report
     }
 }
@@ -602,26 +238,10 @@ async function main() {
 
     const fixer = new AggressiveSyntaxFixer()
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        const result = await fixer.fixAllSyntaxErrors()
-        const report = await fixer.generateReport()
-        logger.info('\n📊 Aggressive Syntax Fix Report: ')
-        logger.info(`Files Fixed: ${report.summary.totalFixed}`)
-        logger.info(`Errors: ${report.summary.totalErrors}`)
-        logger.info(`Success Rate: ${report.summary.successRate.toFixed(1)}%`)
-        if (result.fixedFiles.length > 0) {
-            logger.info('\n✅ Fixed Files: ')
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
             result.fixedFiles.forEach(file => logger.info(`  - ${file}`))
         }
         if (result.errors.length > 0) {
-
-
 
   // Add cleanup logic here
   process.exit(0)
@@ -630,153 +250,6 @@ process.on('SIGTERM', () => {
 ;
 ;
 module.exports = AggressiveSyntaxFixer,;
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-
-        const result = await fixer && fixer.fixAllSyntaxErrors(),
-        const report = await fixer && fixer.generateReport(),
-        
-        logger && logger.info('\n📊 Aggressive Syntax Fix Report: '),
-        logger && logger.info(`Files Fixed: ${report && report.summary.totalFixed}`),
-        logger && logger.info(`Errors: ${report && report.summary.totalErrors}`),
-        logger && logger.info(`Success Rate: ${report && report.summary.successRate && successRate.toFixed(1)}%`),
-        
-        if (result && result.fixedFiles.length > 0) {
-            logger && logger.info('\n✅ Fixed Files: '),
-            result && result.fixedFiles.forEach(file => logger && logger.info(`  - ${file}`))
-        }
-        
-        if (result && result.errors.length > 0) {
-            logger && logger.info('\n❌ Files with Errors: '),
-            result && result.errors.forEach(({ file, error }) => logger && logger.info(`  - ${file}: ${error}`))
-        }
-        
-        process && process.exit(0)
-    } catch (error) {
-        logger && logger.error('❌ Aggressive syntax fixing failed:', error && error.message),
-        process && process.exit(1)
-    }
-}
-
-if (require && require.main === module) {
-    main()
-}
-
-module && module.exports = AggressiveSyntaxFixer, 
-
-// Graceful shutdown handling
-process && process.on('SIGINT', () => {
-  console && console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  // // // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
-
-  // Add cleanup logic here
-  process && process.exit(0)
-}),
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-
-<<<<<<< HEAD
-=======
-  // Add cleanup logic here
-  process && process.exit(0)
-}),
-process && process.on('SIGTERM', () => {
-  console && console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
-  // Add cleanup logic here
-  process && process.exit(0)
-}),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        return `// ${validFileName} placeholder;
-const ${validFileName} = {}`;
-    }
-    async generate_report () {
-        const report = {
-            timestamp: new Date ().toISOString (),
-            fixed_files: this.fixed_files,
-            errors: this.errors,
-            summary: {
-                total_fixed: this.fixed_files.length,
-                total_errors: this.errors.length,
-                success_rate: this.fixed_files.length / (this.fixed_files.length + this.errors.length) * 100;
-            }
-        },
-        const report_path = path.join (this.project_root, 'automationreports', `aggressive - syntax - fix-${Date.now ()}.json`),
-        fs.writeFileSync (report_path, JSON.stringify (report, null, 2)),
-        return report;
-    }
-}
-// Main execution;
-async /**
- * main - Function description
- */
-function main() {
-    const fixer = new AggressiveSyntaxFixer (),
-    try {
-        const result = await fixer.fixAllSyntaxErrors (),
-        const report = await fixer.generate_report (),
-        logger.info ('\n📊 Aggressive Syntax Fix Report: '),
-        logger.info (`Files Fixed: ${report.summary.total_fixed}`),
-        logger.info (`Errors: ${report.summary.total_errors}`),
-        logger.info (`Success Rate: ${report.summary.success_rate.to_fixed (1)}%`),
-        // Check condition
-if ( {) {
-  $2
-}
-            logger.info ('\n✅ Fixed Files: '),
-            result.fixed_files.for_each (file => logger.info (`  - ${file}`));
-        }
-        // Check condition
-if ( {) {
-  $2
-}
-            logger.info ('\n❌ Files with Errors: '),
-            result.errors.for_each (({ file, error }) => logger.info (`  - ${file}: ${error}`));
-        }
-        process.exit (0);
-    } catch (error) {
-        logger.error ('❌ Aggressive syntax fixing failed:', error.message),
-        process.exit (1);
-    }
-}
-// Check condition
-if ( {) {
-  $2
-}
-    main ();
-}
-module.exports = AggressiveSyntaxFixer,
-// Graceful shutdown handling;
-process.on ('SIGINT', () => {
-  console.log ('\n🛑 Received SIGINT, shutting down gracefully...'),
-  // Add cleanup logic here;
-  process.exit (0);
-}),
-process.on ('SIGTERM', () => {
-;
-module.exports = AggressiveSyntaxFixer,;
-// Graceful shutdown handling;
-process.on('SIGINT', () => {;
-  // // // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),;
-  // Add cleanup logic here;
-<<<<<<< HEAD
-  process.exit (0);
-}),
-;
-
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
 const winston = require('winston'),;
 ;
 const logger = winston.createLogger({;
@@ -979,8 +452,6 @@ if (require.main === module) {;
 ;
 module.exports = AggressiveSyntaxFixer, ;
 ;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   process.exit(0);
 }),;
 process.on('SIGTERM', () => {;
@@ -988,10 +459,4 @@ process.on('SIGTERM', () => {;
   // Add cleanup logic here;
   process.exit(0);
 });
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

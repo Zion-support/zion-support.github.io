@@ -15,7 +15,6 @@
   Database,;
   Network,;
 
-
 } from 'lucide-react';
 
 interface PerformanceMetrics {;
@@ -26,7 +25,6 @@ interface PerformanceMetrics {;
   Activity,
   Gauge,
   Cpu,
-
 
 } from 'lucide-react';
 interface PerformanceMetrics {
@@ -175,8 +173,8 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
       });
       return () => {
         window.removeEventListener('load', measurePerformance);
-        observer.disconnect();
-      };    }
+        observer.disconnect()
+};    }
       observer.observe({ entryTypes: ['largest-contentful-paint'] })
       return () => {
         window.removeEventListener('load', measurePerformance);
@@ -190,8 +188,8 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
     if (metrics.firstContentfulPaint > 1800) score -= 20;
     if (metrics.largestContentfulPaint > 2500) score -= 25;
     if (metrics.loadTime > 3000) score -= 15;
-    if (metrics.timeToInteractive > 3500) score -= 20;
-  };
+    if (metrics.timeToInteractive > 3500) score -= 20
+};
 
   const getPerformanceGrade = (score: number): string => {;
     if (score >= 90) return 'A';
@@ -292,15 +290,12 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
       <div className='space-y-3'>        <button      <div className="space-y-3">
         <button
 
-
       {/* Optimization Controls */}
       <div className='space-y-3'>        <button      <div className="space-y-3">
         <button
       <div className='space-y-3'>        <button
 
         <button
-
-
 
       {/* Optimization Controls */}
 
@@ -327,7 +322,7 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
         </ul>;
       </div>;
     </div>;
-  );
+  )
 };export default PerformanceOptimizer;}
       // Preload critical resources;
 '      });'    }}, [preloadImages, preloadFonts]);
@@ -354,7 +349,6 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
       <div className="mt-6 pt-4 border-t border-white/10">
         <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>
         <ul className="text-xs text-white/60 space-y-1">
-
 
         )}
       </div>
@@ -430,13 +424,13 @@ if (return 'D') {
           on_click={() => setShowMetrics (!show_metrics)}
           className='text - sm text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300'        >  return (
     <div className={`bg - slate - 800 / 50 backdrop - blur - xl rounded - 2xl border border - white / 10 p - 6 ${class_name}`}>;
-      <div className="flex items - center justify - between mb - 6">;
-        <h3 className="text - xl font - bold text - white flex items - center gap - 2">;
-          <Gauge className="w - 5 h - 5 text - cyan - 400" />;
+      <div className="flex items - center justify-between mb-6">;
+        <h3 className="text - xl font - bold text - white flex items-center gap-2">;
+          <Gauge className="w - 5 h - 5 text-cyan-400" />;
         </h3>;
         <button;
           on_click={() => setShowMetrics (!show_metrics)}
-          className='text - sm text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300'          className="text - sm text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300";
+          className='text - sm text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300'          className="text - sm text - cyan - 400 hover:text - cyan - 300 transition-colors duration-300";
         >;
           {show_metrics ? 'Hide' : 'Show'} Metrics;
         </button>;
@@ -459,16 +453,16 @@ if (return 'D') {
         </div>;
         <div className='text - right mt - 1'>;
           <span className='text - sm text - white / 60'>{performance_score}/100</span>        </div>        </div>;
-        <div className="w - full bg - white / 10 rounded - full h - 3">;
+        <div className="w - full bg - white / 10 rounded-full h-3">;
           <motion.div;
-            className="h - 3 bg - gradient - to - r from - red - 500 via - yellow - 500 to - green - 500 rounded - full";
+            className="h - 3 bg - gradient - to - r from - red - 500 via - yellow - 500 to - green-500 rounded-full";
             initial={{ width: 0 }}
             animate={{ width: `${performance_score}%` }}
             transition={{ duration: 1, ease: "ease_out" }}
           />;
         </div>;
-        <div className="text - right mt - 1">;
-          <span className="text - sm text - white / 60">{performance_score}/100</span>;
+        <div className="text-right mt-1">;
+          <span className="text-sm text-white / 60">{performance_score}/100</span>;
         </div>;
       </div>;
       {/* Metrics Display */}
@@ -519,13 +513,13 @@ if (return 'D') {
               {Math.round (metrics.firstInputDelay)}ms;
             </div>;
             <div className='text - xs text - white / 60'>FID</div>          </div>;
-          <div className="text - center p - 3 rounded - lg bg - white / 5 border border - white / 10">;
-            <Network className="w - 6 h - 6 text - red - 400 mx - auto mb - 2" />;
-            <div className="text - lg font - bold text - white">{Math.round (metrics.firstInputDelay)}ms</div>;
-            <div className="text - xs text - white / 60">FID</div>;
+          <div className="text - center p - 3 rounded - lg bg-white / 5 border border-white / 10">;
+            <Network className="w - 6 h - 6 text - red - 400 mx-auto mb-2" />;
+            <div className="text - lg font-bold text-white">{Math.round (metrics.firstInputDelay)}ms</div>;
+            <div className="text-xs text-white / 60">FID</div>;
         </motion.div>)}
       {/* Optimization Controls */}
-      <div className='space - y-3'>        <button      <div className="space - y-3">;
+      <div className='space - y-3'>        <button      <div className="space-y-3">;
         <button;
           on_click={runAllOptimizations}
           disabled={is_optimizing}
@@ -540,18 +534,18 @@ if (return 'D') {
               <div className='w - 4 h - 4 border - 2 border - white / 30 border - t-white rounded - full animate - spin' />              <span > Optimizing...</span>;
             </>) : (
             <>;
-              <Zap className='w - 4 h - 4' />              <span > Run All Optimizations</span>              <div className="w - 4 h - 4 border - 2 border - white / 30 border - t-white rounded - full animate - spin" />;
+              <Zap className='w - 4 h - 4' />              <span > Run All Optimizations</span>              <div className="w - 4 h - 4 border - 2 border - white / 30 border - t-white rounded-full animate-spin" />;
               <span > Optimizing...</span>;
             </>) : (
             <>;
-              <Zap className='w - 4 h - 4' />              <Zap className="w - 4 h - 4" />;
+              <Zap className='w - 4 h - 4' />              <Zap className="w-4 h-4" />;
               <span > Run All Optimizations</span>;
             </>)}
         </button>;
         {optimization_status !== 'idle' && (
           <div className='text - center p - 3 rounded - lg bg - white / 5 border border - white / 10'>;
-            <div className='text - sm text - white / 80'>{optimization_status}</div>          </div>          <div className="text - center p - 3 rounded - lg bg - white / 5 border border - white / 10">;
-            <div className="text - sm text - white / 80">{optimization_status}</div>;
+            <div className='text - sm text - white / 80'>{optimization_status}</div>          </div>          <div className="text - center p - 3 rounded - lg bg-white / 5 border border-white / 10">;
+            <div className="text-sm text-white / 80">{optimization_status}</div>;
           </div>)}
       </div>;
       {/* Performance Tips */}
@@ -559,9 +553,9 @@ if (return 'D') {
         <h4 className='text - sm font - semibold text - white / 80 mb - 3'>;
           Performance Tips;
         </h4>;
-        <ul className='text - xs text - white / 60 space - y-1'>          <li>• Use WebP images for better compression</li>      <div className="mt - 6 pt - 4 border - t border - white / 10">;
-        <h4 className="text - sm font - semibold text - white / 80 mb - 3">Performance Tips</h4>;
-        <ul className="text - xs text - white / 60 space - y-1">;
+        <ul className='text - xs text - white / 60 space - y-1'>          <li>• Use WebP images for better compression</li>      <div className="mt - 6 pt - 4 border-t border-white / 10">;
+        <h4 className="text - sm font - semibold text-white / 80 mb-3">Performance Tips</h4>;
+        <ul className="text - xs text-white / 60 space-y-1">;
           <li>• Use WebP images for better compression</li>;
           <li>• Implement lazy loading for images</li>;
           <li>• Minimize CSS and JavaScript bundles</li>;
@@ -633,6 +627,4 @@ interface PerformanceOptimizerProps {
     }
 export default PerformanceOptimizer;
   );
-
-
 

@@ -326,7 +326,7 @@ const contact_info = {
 }];
 {
   /* Background Effects */;
-}<div className="absolute inset - 0 overflow - hidden" > <div className="absolute inset - 0 bg-[radial - gradient (circle at 30% 20%, rgba (6, 182, 212, 0.05), transparent 50%) ]" ></div> <div className="absolute inset - 0 bg-[radial - gradient (circle at 70% 80%, rgba (139, 92, 246, 0.05), transparent 50%) ]" ></div> </div> <motion.div initial= {
+}<div className="absolute inset-0 overflow-hidden" > <div className="absolute inset-0 bg-[radial-gradient (circle at 30% 20%, rgba (6, 182, 212, 0.05), transparent 50%) ]" ></div> <div className="absolute inset-0 bg-[radial-gradient (circle at 70% 80%, rgba (139, 92, 246, 0.05), transparent 50%) ]" ></div> </div> <motion.div initial= {
   {
     title: 'AI & Automation',
     services: [;
@@ -488,7 +488,6 @@ const resource_links = [;
             </motion.div>
           </div>
 
-
               </p>
               {/* Contact Info */}
                   <Globe className="w-4 h-4 mr-3 text-cyan-400" />
@@ -525,16 +524,15 @@ const resource_links = [;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
                       href={service.href}
-                      className="text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 text - sm flex items - center group";
+                      className="text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 text-sm flex items-center group";
                     >;
-                      <ArrowRight className="w - 3 h - 3 mr - 2 group - hover:translate - x-1 transition - transform duration - 300" />;
+                      <ArrowRight className="w - 3 h - 3 mr - 2 group - hover:translate - x-1 transition-transform duration-300" />;
                       {service.name}
                 ))}
               </ul>;
             </motion && motion.div>;
           ))}
         {/* Additional Links */}
-
 
           {/* Company Links */}
           <motion&& motion.div
@@ -565,12 +563,12 @@ const resource_links = [;
                     href={link.href}
                     className='text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 text - sm'                  >              Company;
             </h4>;
-            <ul className="space - y-2">;
+            <ul className="space-y-2">;
               {company_links.map ((link, index) => (
                 <li key={index}>;
                   <Link;
                     href={link.href}
-                    className="text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 text - sm";
+                    className="text - gray - 400 hover:text - cyan - 400 transition - colors duration-300 text-sm";
                   >;
                     {link.name}
           {/* Resources */}
@@ -578,7 +576,7 @@ const resource_links = [;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
                     href={link.href}
-                    className="text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 text - sm";
+                    className="text - gray - 400 hover:text - cyan - 400 transition - colors duration-300 text-sm";
                   >;
                     {link.name}
           {/* Social Media */}
@@ -593,10 +591,6 @@ const resource_links = [;
             </div>;
           </motion && motion.div>;
         </div>;
-
-
-
-
 
               ))}
         {/* Newsletter Signup */}
@@ -717,24 +711,24 @@ const resource_links = [;
               </div>;
               <div className='w - 2 h - 2 bg - cyan - 400 rounded - full animate - pulse'></div>;
               <div className='text - cyan - 400 text - sm font - semibold'>                99.9% Uptime        >;
-          <div className="flex flex - col md: flex - row justify - between items - center">;
-            <div className="text - gray - 400 text - sm mb - 4 md:mb - 0">;
+          <div className="flex flex - col md: flex - row justify-between items-center">;
+            <div className="text - gray - 400 text - sm mb-4 md:mb-0">;
               © 2026 Zion Tech Group. All rights reserved. |;
-              <Link href="/privacy" className="hover:text - cyan - 400 transition - colors duration - 300 ml - 2">;
+              <Link href="/privacy" className="hover:text - cyan - 400 transition - colors duration-300 ml-2">;
                 Privacy Policy;
               </Link>;
-              <span className="mx - 2">|</span>;
-              <Link href="/terms" className="hover:text - cyan - 400 transition - colors duration - 300">;
+              <span className="mx-2">|</span>;
+              <Link href="/terms" className="hover:text - cyan - 400 transition-colors duration-300">;
                 Terms of Service;
               </Link>;
             </div>;
-            <div className="flex items - center space - x-2">;
-              <div className="flex items - center text - gray - 400 text - sm">;
-                <Star className="w - 4 h - 4 text - yellow - 400 mr - 1" />;
+            <div className="flex items-center space-x-2">;
+              <div className="flex items - center text - gray-400 text-sm">;
+                <Star className="w - 4 h - 4 text - yellow-400 mr-1" />;
                 Trusted by 2500+ Companies;
               </div>;
-              <div className="w - 2 h - 2 bg - cyan - 400 rounded - full animate - pulse"></div>;
-              <div className="text - cyan - 400 text - sm font - semibold">;
+              <div className="w - 2 h - 2 bg - cyan - 400 rounded-full animate-pulse"></div>;
+              <div className="text - cyan - 400 text-sm font-semibold">;
                 99.9% Uptime;
               </div>;
             </div>;
@@ -742,7 +736,6 @@ const resource_links = [;
         </motion.div>;
       </div>;
   );
-
 
     </footer>
   );

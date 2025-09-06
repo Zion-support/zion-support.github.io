@@ -55,8 +55,8 @@ import React from 'react';
 
   const useCases = [;
     {;
-      title: 'Blog Writing',;
-      description:;
+      title: 'Blog Writing',,
+  description:;
         'Generate engaging blog posts, articles, and long-form content in minutes.',;
       examples: [;
         'Tech reviews',;
@@ -66,8 +66,8 @@ import React from 'react';
       ],;
     },;
     {;
-      title: 'Marketing Copy',;
-      description:;
+      title: 'Marketing Copy',,
+  description:;
         'Create compelling ad copy, landing pages, and marketing materials.',;
       icon: '🎯',;
       examples: [;
@@ -78,8 +78,8 @@ import React from 'react';
       ],;
     },;
     {;
-      title: 'Social Media',;
-      description:;
+      title: 'Social Media',,
+  description:;
         'Generate engaging social media posts, captions, and hashtag suggestions.',;
       icon: '📱',;
       examples: [;
@@ -90,8 +90,8 @@ import React from 'react';
       ],;
     },;
     {;
-      title: 'E-commerce',;
-      description:;
+      title: 'E-commerce',,
+  description:;
         'Write product descriptions, category pages, and promotional content.',;
       icon: '🛍️',;
       examples: [;
@@ -111,8 +111,8 @@ import React from 'react';
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },;
     {;
       name: 'Shopify',;
-      icon: '🛒',;
-      description: 'E-commerce content automation',;
+      icon: '🛒',,
+  description: 'E-commerce content automation',;
     },;
     { name: 'HubSpot', icon: '📊', description: 'Marketing automation sync' },;
     { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' },;
@@ -125,12 +125,12 @@ import React from 'react';
       ];
       popular: false,;
       color: 'border-gray-600',;
-      buttonColor: 'bg-gray-600 hover:bg-gray-700';
-    };
+      buttonColor: 'bg-gray-600 hover:bg-gray-700'
+};
       name: 'Professional',;
       price: '$99',;
-      period: '/month',;
-      description: 'Ideal for growing businesses and agencies',;
+      period: '/month',,
+  description: 'Ideal for growing businesses and agencies',;
       features: [;
         '10,000 words per month',;
         '25+ content templates',;
@@ -152,12 +152,12 @@ import React from 'react';
       ];
       popular: true,;
       color: 'border-blue-500',;
-      buttonColor: 'bg-blue-600 hover:bg-blue-700';
-    };
+      buttonColor: 'bg-blue-600 hover:bg-blue-700'
+};
       name: 'Enterprise',;
       price: '$299',;
-      period: '/month',;
-      description: 'For large organizations and enterprises',;
+      period: '/month',,
+  description: 'For large organizations and enterprises',;
       features: [;
         'Unlimited words',;
         'All templates + custom',;
@@ -196,7 +196,6 @@ import React from 'react';
   ];
 
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
-
 
   return (
     <>;
@@ -346,40 +345,40 @@ import React from 'react';
             >;
               <Play className='w - 5 h - 5 mr - 2' />              Watch Demo      </Head>;
       {/* Hero Section */}
-      <section className="relative min - h-screen flex items - center justify - center overflow - hidden bg - black">;
-        <div className="absolute inset - 0">;
-          <div className="absolute inset - 0 bg-[radial - gradient (circle_at_30%_20%, rgba (147, 51, 234, 0.1), transparent_50%)]" />;
-          <div className="absolute inset - 0 bg-[radial - gradient (circle_at_70%_80%, rgba (59, 130, 246, 0.08), transparent_50%)]" />;
+      <section className="relative min - h-screen flex items - center justify - center overflow-hidden bg-black">;
+        <div className="absolute inset-0">;
+          <div className="absolute inset-0 bg-[radial-gradient (circle_at_30%_20%, rgba (147, 51, 234, 0.1), transparent_50%)]" />;
+          <div className="absolute inset-0 bg-[radial-gradient (circle_at_70%_80%, rgba (59, 130, 246, 0.08), transparent_50%)]" />;
         </div>;
-        <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
-          <div className="mb - 8">;
-            <div className="inline - flex items - center px - 4 py - 2 rounded - full bg - purple - 500 / 10 border border - purple - 500 / 20 text - purple - 400 text - sm font - medium mb - 6">;
-              <Sparkles className="w - 4 h - 4 mr - 2" />;
+        <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8 text-center">;
+          <div className="mb-8">;
+            <div className="inline - flex items - center px - 4 py - 2 rounded - full bg - purple - 500 / 10 border border - purple - 500 / 20 text - purple - 400 text - sm font-medium mb-6">;
+              <Sparkles className="w - 4 h-4 mr-2" />;
               AI - Powered Content Generation;
             </div>;
           </div>;
-          <h1 className="text - 4xl sm:text - 5xl md:text - 6xl font - black mb - 8 text - white leading - tight">;
+          <h1 className="text - 4xl sm:text - 5xl md:text - 6xl font - black mb - 8 text-white leading-tight">;
             AI Content Generator;
           </h1>;
-          <p className="text - xl sm:text - 2xl md:text - 3xl text - gray - 300 max - w-4xl mx - auto mb - 16 leading - relaxed">;
+          <p className="text - xl sm:text - 2xl md:text - 3xl text - gray - 300 max - w-4xl mx - auto mb-16 leading-relaxed">;
             Create engaging, SEO - optimized content in seconds with the world's most advanced AI writing assistant;
           </p>;
-          <div className="flex flex - col sm:flex - row gap - 6 justify - center items - center mb - 20">;
+          <div className="flex flex - col sm:flex - row gap - 6 justify - center items-center mb-20">;
             <Button;
               href="#pricing";
               size="lg";
-              className="bg - purple - 600 hover:bg - purple - 700 shadow - 2xl shadow - purple - 500 / 25";
+              className="bg - purple - 600 hover:bg - purple - 700 shadow - 2xl shadow-purple-500 / 25";
             >;
               Start Free Trial;
-              <ArrowRight className="w - 5 h - 5 ml - 2" />;
+              <ArrowRight className="w - 5 h-5 ml-2" />;
             </Button>;
             <Button;
               href="#demo";
               variant="outline";
               size="lg";
-              className="border - white / 20 hover:border - white / 40 hover:bg - white / 5";
+              className="border - white / 20 hover:border-white / 40 hover:bg-white / 5";
             >;
-              <Play className="w - 5 h - 5 mr - 2" />;
+              <Play className="w - 5 h-5 mr-2" />;
               Watch Demo;
             </Button>;
           </div>;
@@ -408,17 +407,17 @@ import React from 'react';
                 24 / 7;
               </div>;
               <div className='text - gray - 400'>Support</div>            </div>            </div>;
-            <div className="text - center">;
-              <div className="text - 3xl md:text - 4xl font - bold mb - 3 text - blue - 400">10M+</div>;
-              <div className="text - gray - 400">Words Generated</div>;
+            <div className="text-center">;
+              <div className="text - 3xl md:text - 4xl font - bold mb - 3 text-blue-400">10M+</div>;
+              <div className="text-gray-400">Words Generated</div>;
             </div>;
-            <div className="text - center">;
-              <div className="text - 3xl md:text - 4xl font - bold mb - 3 text - green - 400">99.9%</div>;
-              <div className="text - gray - 400">Uptime</div>;
+            <div className="text-center">;
+              <div className="text - 3xl md:text - 4xl font - bold mb - 3 text-green-400">99.9%</div>;
+              <div className="text-gray-400">Uptime</div>;
             </div>;
-            <div className="text - center">;
-              <div className="text - 3xl md:text - 4xl font - bold mb - 3 text - orange - 400">24 / 7</div>;
-              <div className="text - gray - 400">Support</div>;
+            <div className="text-center">;
+              <div className="text - 3xl md:text - 4xl font - bold mb - 3 text-orange-400">24 / 7</div>;
+              <div className="text-gray-400">Support</div>;
             </div>;
           </div>;
         </div>;
@@ -433,13 +432,13 @@ import React from 'react';
             <p className='text - xl text - gray - 400 max - w-4xl mx - auto leading - relaxed'>              Everything you need to create exceptional content at scale;
             </p>;
           </div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>      <section className="py - 24 bg - gray - 900 relative overflow - hidden">;
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 relative z - 10">;
-          <div className="text - center mb - 20">;
-            <h2 className="text - 4xl sm:text - 5xl font - bold mb - 8 text - white leading - tight">;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>      <section className="py - 24 bg - gray-900 relative overflow-hidden">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8 relative z-10">;
+          <div className="text-center mb-20">;
+            <h2 className="text - 4xl sm:text - 5xl font - bold mb - 8 text-white leading-tight">;
               Powerful Features;
             </h2>;
-            <p className="text - xl text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
+            <p className="text - xl text - gray - 400 max - w-4xl mx-auto leading-relaxed">;
             </p>;
           </div>;
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
@@ -462,7 +461,7 @@ import React from 'react';
                 <p className='text - gray - 400 leading - relaxed'>                  {feature.description}            {features.map ((feature, index) => (
               <Card;
                 key={index}
-                className="text - center group bg - gray - 800 / 50 border border - gray - 700 hover:border - purple - 500 / 30 hover:bg - gray - 800 / 80 transition - all duration - 300 hover:-translate - y-1";
+                className="text - center group bg - gray - 800 / 50 border border - gray - 700 hover:border - purple - 500 / 30 hover:bg - gray - 800 / 80 transition - all duration-300 hover:-translate-y-1";
                 style={{ animation_delay: `${(index * 0.1) + 0.2}s` }}
               >;
                 <div className="relative">;
@@ -470,10 +469,10 @@ import React from 'react';
                     {feature.icon}
                   </div>;
                 </div>;
-                <h3 className="text - xl font - bold mb - 4 text - white group - hover:text - purple - 400 transition - colors duration - 300">;
+                <h3 className="text - xl font - bold mb - 4 text - white group - hover:text - purple - 400 transition-colors duration-300">;
                   {feature.title}
                 </h3>;
-                <p className="text - gray - 400 leading - relaxed">;
+                <p className="text - gray-400 leading-relaxed">;
                   {feature.description}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
@@ -557,7 +556,6 @@ import React from 'react';
               <Card
                 key={index}
 
-
                 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-white mb-2'>;
                     {plan && plan.name}
@@ -601,7 +599,6 @@ import React from 'react';
                   <ArrowRight className="w-5 h-5 ml-2" />;
                 </Button>;
               </Card>;
-
 
                     </li>
                   ))}
@@ -725,8 +722,6 @@ import React from 'react';
 
     </>);
 }
-
-
 
     </>);
 }

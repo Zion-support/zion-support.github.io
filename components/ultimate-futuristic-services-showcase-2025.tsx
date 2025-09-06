@@ -132,7 +132,6 @@ import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic
 
 export default function UltimateFuturisticServicesShowcase2025() {;
 
-
 export default function UltimateFuturisticServicesShowcase2025() {;
 
 export default function UltimateFuturisticServicesShowcase2025() {;
@@ -201,15 +200,12 @@ export default function UltimateFuturisticServicesShowcase2025() {;
         </div>;
       </section>;
 
-
       {/* Search and Filter Section */}
-
 
       {/* Search and Filter Section */}
       <section className='py-12 bg-gradient-to-r from-black via-purple-900/10 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
-
 
               ))}
       {/* Search and Filter Section */}
@@ -346,8 +342,8 @@ export default function UltimateFuturisticServicesShowcase2025() {;
               view_mode === 'grid';
                 ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8';
                 : 'space - y-6';
-            }          >      <section className="py - 16">;
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
+            }          >      <section className="py-16">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px-6 lg:px-8">;
           <motion.div;
             variants={container_variants}
             initial="hidden";
@@ -426,9 +422,6 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                     <span className='text-white font-medium'>
                       {service.setupTime}
                     </span>
-
-
-
 
                   </div>
                   <div className='text-gray-400'>
@@ -556,7 +549,6 @@ export default function UltimateFuturisticServicesShowcase2025() {;
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
 
-
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -605,7 +597,7 @@ export default function UltimateFuturisticServicesShowcase2025() {;
 }
   );
 }
-                      <div className='text - sm text - purple - 400 mt - 2'>                      <div className="text - sm text - purple - 400 mt - 2">;
+                      <div className='text - sm text - purple - 400 mt - 2'>                      <div className="text - sm text - purple-400 mt-2">;
                         +{service.features.length - 4} more features;
                       </div>)}
                   </div>;
@@ -640,20 +632,20 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                     </span>                  </div>;
                 </div>;
                 {/* ROI and Market Info */}                  </div>;
-                  <div className="text - gray - 400">;
+                  <div className="text-gray-400">;
                     <span className="block">Trial</span>;
-                    <span className="text - white font - medium">{service.trial_days} days</span>;
+                    <span className="text-white font-medium">{service.trial_days} days</span>;
                   </div>;
-                  <div className="text - gray - 400">;
+                  <div className="text-gray-400">;
                     <span className="block">Rating</span>;
-                    <div className="flex items - center">;
-                      <span className="text - white font - medium mr - 1">{service.rating}</span>;
-                      <Star className="w - 4 h - 4 text - yellow - 400 fill - current" />;
+                    <div className="flex items-center">;
+                      <span className="text - white font-medium mr-1">{service.rating}</span>;
+                      <Star className="w - 4 h - 4 text - yellow-400 fill-current" />;
                     </div>;
                   </div>;
-                  <div className="text - gray - 400">;
+                  <div className="text-gray-400">;
                     <span className="block">Customers</span>;
-                    <span className="text - white font - medium">{service.customers}+</span>;
+                    <span className="text-white font-medium">{service.customers}+</span>;
                   </div>;
                 </div>;
                 {/* ROI and Market Info */}
@@ -667,13 +659,13 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                       <span className='font - semibold text - white'>;
                         Market Size:;
                       </span>{' '}
-                      {service.market_size}                    </div>                <div className="mb - 6 p - 4 bg - gradient - to - r from - purple - 500 / 10 to - pink - 500 / 10 rounded - lg border border - purple - 500 / 20">;
-                  <div className="text - sm">;
-                    <div className="text - gray - 300 mb - 2">;
-                      <span className="font - semibold text - white">ROI: </span> {service.roi}
+                      {service.market_size}                    </div>                <div className="mb - 6 p - 4 bg - gradient - to - r from - purple - 500 / 10 to - pink - 500 / 10 rounded - lg border border-purple-500 / 20">;
+                  <div className="text-sm">;
+                    <div className="text - gray-300 mb-2">;
+                      <span className="font-semibold text-white">ROI: </span> {service.roi}
                     </div>;
-                    <div className="text - gray - 300">;
-                      <span className="font - semibold text - white">Market Size: </span> {service.market_size}
+                    <div className="text-gray-300">;
+                      <span className="font-semibold text-white">Market Size: </span> {service.market_size}
                   </div>;
                 </div>;
                 {/* Action Buttons */}
@@ -691,12 +683,12 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                 <div className='mt - 6 pt - 6 border - t border - white / 10'>;
                   <div className='text - center text - sm text - gray - 400'>                  <Link;
                     href={service.link}
-                    className="flex - 1 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold py - 3 px - 6 rounded - lg text - center hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300 transform hover:scale - 105";
+                    className="flex - 1 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold py - 3 px - 6 rounded - lg text - center hover:from - purple - 600 hover:to - pink - 600 transition - all duration-300 transform hover:scale-105";
                   >;
                     Get Started;
                   </Link>;
-                  <button className="px - 4 py - 3 border border - white / 20 text - white rounded - lg hover:border - purple - 500 / 50 transition - colors">;
-                    <Eye className="w - 5 h - 5" />;
+                  <button className="px - 4 py - 3 border border - white / 20 text - white rounded - lg hover:border - purple-500 / 50 transition-colors">;
+                    <Eye className="w-5 h-5" />;
                   </button>;
                 </div>;
                 {/* Contact Info */}
@@ -716,13 +708,13 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                         className='flex items - center text - purple - 400 hover:text - purple - 300';
                       >;
                         <Mail className='w - 4 h - 4 mr - 1' />                        {contact_info.email}                    <p > Contact us for custom pricing and implementation</p>;
-                    <div className="flex items - center justify - center space - x-4 mt - 2">;
-                      <a href={`tel:${contact_info.mobile}`} className="flex items - center text - purple - 400 hover:text - purple - 300">;
-                        <Phone className="w - 4 h - 4 mr - 1" />;
+                    <div className="flex items - center justify - center space-x-4 mt-2">;
+                      <a href={`tel:${contact_info.mobile}`} className="flex items - center text - purple - 400 hover:text-purple-300">;
+                        <Phone className="w - 4 h-4 mr-1" />;
                         {contact_info.mobile}
                       </a>;
-                      <a href={`mailto:${contact_info.email}`} className="flex items - center text - purple - 400 hover:text - purple - 300">;
-                        <Mail className="w - 4 h - 4 mr - 1" />;
+                      <a href={`mailto:${contact_info.email}`} className="flex items - center text - purple - 400 hover:text-purple-300">;
+                        <Mail className="w - 4 h-4 mr-1" />;
                         {contact_info.email}
                       </a>;
                     </div>;
@@ -750,7 +742,7 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                   setSearchTerm ('');
                   setSelectedCategory ('all');
                 }}
-                className="bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold py - 3 px - 6 rounded - lg hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300";
+                className="bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold py - 3 px - 6 rounded - lg hover:from - purple - 600 hover:to - pink - 600 transition-all duration-300";
               >;
                 Clear Filters;
               </button>;
@@ -759,8 +751,8 @@ export default function UltimateFuturisticServicesShowcase2025() {;
       </section>;
       {/* CTA Section */}
       <section className='py - 20 bg - gradient - to - r from - purple - 900 / 20 via - black to - pink - 900 / 20'>;
-        <div className='max - w-4xl mx - auto text - center px - 4 sm:px - 6 lg:px - 8'>          <motion.div      <section className="py - 20 bg - gradient - to - r from - purple - 900 / 20 via - black to - pink - 900 / 20">;
-        <div className="max - w-4xl mx - auto text - center px - 4 sm:px - 6 lg:px - 8">;
+        <div className='max - w-4xl mx - auto text - center px - 4 sm:px - 6 lg:px - 8'>          <motion.div      <section className="py - 20 bg - gradient - to - r from - purple - 900 / 20 via - black to-pink-900 / 20">;
+        <div className="max - w-4xl mx - auto text - center px - 4 sm:px-6 lg:px-8">;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -785,21 +777,21 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                 href='/pricing';
                 className='border border - white / 20 text - white font - semibold py - 4 px - 8 rounded - lg text - lg hover:border - purple - 500 / 50 transition - colors'              >              Ready to Experience the Future?;
             </h2>;
-            <p className="text - xl text - gray - 300 mb - 8">;
+            <p className="text - xl text - gray-300 mb-8">;
               Transform your business with our revolutionary futuristic services.;
               Get in touch with our experts to discuss your specific needs and implementation strategy.;
             </p>;
-            <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+            <div className="flex flex - col sm:flex - row gap-4 justify-center">;
               <Link;
                 href="/contact";
-                className="bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold py - 4 px - 8 rounded - lg text - lg hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300 transform hover:scale - 105";
+                className="bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold py - 4 px - 8 rounded - lg text - lg hover:from - purple - 600 hover:to - pink - 600 transition - all duration-300 transform hover:scale-105";
               >;
                 Contact Our Experts;
               </Link>;
               <Link;
                 href='/pricing';
                 className='border border - white / 20 text - white font - semibold py - 4 px - 8 rounded - lg text - lg hover:border - purple - 500 / 50 transition - colors'                href="/pricing";
-                className="border border - white / 20 text - white font - semibold py - 4 px - 8 rounded - lg text - lg hover:border - purple - 500 / 50 transition - colors";
+                className="border border - white / 20 text - white font - semibold py - 4 px - 8 rounded - lg text - lg hover:border - purple-500 / 50 transition-colors";
               >;
                 View Pricing;
               </Link>;

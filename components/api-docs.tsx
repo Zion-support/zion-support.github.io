@@ -1,6 +1,5 @@
-import { GetServerSideProps } from 'next';
-
-  };      permanent: true}}
+import { GetServerSideProps } from 'next'
+};      permanent: true}}
 
 export default function ApiDocsRedirect() {;
   return null;
@@ -15,7 +14,6 @@ export default /**
  * ApiDocsRedirect - Function description
  */
 function ApiDocsRedirect() {
-
 
 }
 ;

@@ -85,11 +85,10 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
 
         {/* Header */}
 
-
         <motion.div
   const formatPrice = (price: string) => {;
-    return price && price.replace('$', '').replace(, '');
-  };
+    return price && price.replace('$', '').replace(, '')
+};
 
   return (
         {/* Header */}
@@ -266,9 +265,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
           </div>;
         </motion && motion.div>;
 
-
-
-
         {/* Search and Filters */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -320,9 +316,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
           </div>;
         </motion && motion.div>;
 
-
-
-
         {/* Category Filter */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -361,13 +354,13 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                 <motion.div
                 <span className='text - xs bg - white / 20 px - 2 py - 1 rounded - full'>;
                   {category.count}
-                </span>              </button>                <span className="text - xs bg - white / 20 px - 2 py - 1 rounded - full">{category.count}</span>;
+                </span>              </button>                <span className="text - xs bg - white / 20 px - 2 py-1 rounded-full">{category.count}</span>;
               </button>))}
           </div>;
         </motion.div>;
         {/* Services Display */}
         {view_mode === 'grid' ? (
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            <AnimatePresence>          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            <AnimatePresence>          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-3 gap-8">;
             <AnimatePresence>;
               {filtered_services.map ((service, index) => (
                 <motion.div;
@@ -419,7 +412,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
 
                     <h3 className="text-xl font-bold text-white mb-2">{service && service.name}</h3>;
                     <p className="text-white/70 text-sm mb-4">{service && service.tagline}</p>;
-
 
                     {/* Stats */}
                     <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
@@ -482,7 +474,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                         <div className="text-xs text-white/60">Trial</div>;
                       </div>;
                     </div>;
-
 
                     {/* CTA */}
                     <a
@@ -714,12 +705,9 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
 
         )}
 
-
             </p>          </motion.div>
 
           </motion.div>
-
-
 
         )}
 
@@ -760,7 +748,6 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
       </div>
     </section>
 }
-
 
                 Call +1 302 464 0950;
               </a>;

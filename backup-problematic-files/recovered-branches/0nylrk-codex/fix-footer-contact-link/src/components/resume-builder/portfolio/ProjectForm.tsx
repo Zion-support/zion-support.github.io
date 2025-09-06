@@ -20,7 +20,7 @@ import { useAuth } from '@/hooks/useAuth',;
 ;
 // Define schema for form validation;
 const projectSchema = z.object({;
-  title:z.string().min(1, 'Project title is required'),;
+  title:z.string().min(1, 'Project title is required'),,
   description:z.string().optional(),;
   technologies:z.string().optional(),;
   image_url:z.string().optional(),;
@@ -49,8 +49,8 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
   const form = useForm<ProjectFormValues>({;
     resolver:zodResolver(projectSchema),;
     defaultValues:{;
-      title:project?.title || '',;
-      description:project?.description || '',;
+      title:project?.title || '',,
+  description:project?.description || '',;
       technologies:project?.technologies ? project.technologies.join() :'',;
       image_url:project?.image_url || '',;
       github_url:project?.github_url || '',;
@@ -65,8 +65,8 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
     ;
     try {;
       const projectData:PortfolioProject = {;
-        title:data.title,;
-        description:data.description,;
+        title:data.title,,
+  description:data.description,;
         technologies:data.technologies ? ;
           data.technologies.split().map(tech => tech.trim()) :[],;
         image_url:data.image_url,;

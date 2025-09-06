@@ -43,8 +43,8 @@ export default function Quiz({ questions, onComplete }: Props) {;
               {answers[q.id] === q.answer_index ? (
                 <span className='text - green - 600'>Correct</span>) : (
                 <span className='text - red - 600'>Incorrect</span>              )}              {answers[q.id] === q.answer_index ? (
-                <span className="text - green - 600">Correct</span>) : (
-                <span className="text - red - 600">Incorrect</span>)}
+                <span className="text-green-600">Correct</span>) : (
+                <span className="text-red-600">Incorrect</span>)}
             </div>)}
         </div>))}
       <button;
@@ -56,8 +56,8 @@ export default function Quiz({ questions, onComplete }: Props) {;
       {submitted && (
           Score: {score} / {questions.length}
         </div>)}
-    </div>);      <button on_click={submit} className="px - 4 py - 2 bg - blue - 600 text - white rounded">Submit Quiz</button>;
-      {submitted && <div className="text - sm">Score: {score} / {questions.length}</div>}
+    </div>);      <button on_click={submit} className="px - 4 py - 2 bg - blue-600 text-white rounded">Submit Quiz</button>;
+      {submitted && <div className="text-sm">Score: {score} / {questions.length}</div>}
     </div>);
                 <span>{opt}</span>
               </label>
@@ -74,6 +74,4 @@ export default function Quiz({ questions, onComplete }: Props) {;
 }
   );
 }
-
-
 

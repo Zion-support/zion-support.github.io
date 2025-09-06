@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
 import {Switch} from '@/components/ui/switch';
 import {Button} from '@/components/ui/button';
@@ -19,22 +18,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Switch } from '@/components/ui/switch',
 import { Button } from '@/components/ui/button',
 import { Label } from '@/components/ui/label',
-import { ShieldAlert, Info } from 'lucide-react',
-=======
-import React, { useState } from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Switch } from "@/components/ui/switch";
-import { Button } from "@/components/ui/button";
-import { Label } from "@/components/ui/label";
-import { ShieldAlert, Info } from "lucide-react";
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-import {
+import { ShieldAlert, Info } from 'lucide-react',import {
   Accordion,
   AccordionContent,
   AccordionItem,
@@ -44,43 +28,24 @@ import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 export function FraudDetectionSettings() {
-<<<<<<< HEAD
   const { user } = useAuth(),
   const [messageScanningEnabled, setMessageScanningEnabled] = useState(true),
   const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true),
   const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true),
   const [isSaving, setIsSaving] = useState(false),
-  
-=======
-  const { user } = useAuth();
-  const [messageScanningEnabled, setMessageScanningEnabled] = useState(true);
-  const [activityMonitoringEnabled, setActivityMonitoringEnabled] =
-    useState(true);
-  const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true);
-  const [isSaving, setIsSaving] = useState(false);
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  const handleSavePreferences = async () => {
+    const handleSavePreferences = async () => {
     if (!user?.id) return;
     setIsSaving(true);
     try {
       // In a real implementation, we would save these preferences to the database
       // For now, we'll just simulate a successful save
-<<<<<<< HEAD
-=======
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       toast({
         title: "Settings saved",
         description: "Your fraud detection preferences have been updated.",
       });
     } catch (error) {
-<<<<<<< HEAD
-=======
-      console.error("Error saving preferences:", error);
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-      toast({
         title: "Error",
         description: "Failed to save your preferences. Please try again.",
         variant: "destructive",
@@ -88,18 +53,9 @@ export function FraudDetectionSettings() {
     } finally {
       setIsSaving(false);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
   },
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  return (
     <Card className="mb-8">
       <CardHeader className="space-y-1">
         <div className="flex items-center gap-2">
@@ -124,7 +80,6 @@ export function FraudDetectionSettings() {
                   material
                 </p>
               </div>
-<<<<<<< HEAD
   const handleSavePreferences = async () => {;
     if (!user?.id) return;
     setIsSaving(true);
@@ -133,13 +88,13 @@ export function FraudDetectionSettings() {
       // For now, we'll just simulate a successful save;
       await new Promise(resolve => setTimeout(resolve, 1000));
       toast({;
-        title: "Settings saved",;
-        description: "Your fraud detection preferences have been updated."});
+        title: "Settings saved",,
+  description: "Your fraud detection preferences have been updated."});
     } catch (error) {;
       console && console.error('Error saving preferences:', error);
       toast({;
-        title: "Error",;
-        description: "Failed to save your preferences. Please try again.",;
+        title: "Error",,
+  description: "Failed to save your preferences. Please try again.",;
         variant: "destructive"});
     } finally {;
       setIsSaving(false);
@@ -179,13 +134,13 @@ export function FraudDetectionSettings() {;
       await new Promise(resolve => setTimeout(resolve, 1000)),;
       ;
       toast({;
-        title:"Settings saved",;
-        description:"Your fraud detection preferences have been updated."}),;
+        title:"Settings saved",,
+  description:"Your fraud detection preferences have been updated."}),;
     } catch (error) {;
       console.error('Error saving preferences:', error),;
       toast({;
-        title:"Error",;
-        description:"Failed to save your preferences. Please try again.",;
+        title:"Error",,
+  description:"Failed to save your preferences. Please try again.",;
         variant:"destructive"}),;
     } finally {;
       setIsSaving(false),;
@@ -218,45 +173,7 @@ export function FraudDetectionSettings() {;
               <Switch;
                 id="message-scanning";
                 checked={messageScanningEnabled}
-                onCheckedChange={setMessageScanningEnabled}
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-              <Switch
-                id="message-scanning"
-                checked={messageScanningEnabled}
-                onCheckedChange={setMessageScanningEnabled}
-              />
-            </div>
-
-            <div className="flex items-center justify-between">
-              <div>
-                <Label className="font-medium" htmlFor="activity-monitoring">
-                  Activity Monitoring
-                </Label>
-                <p className="text-sm text-muted-foreground">
-                  Monitor account activity for suspicious patterns
-                </p>
-              </div>
-<<<<<<< HEAD
-              />;
-            </div>;
-            ;
-            <div className="flex items-center justify-between">;
-              <div>;
-                <Label className="font-medium" htmlFor="activity-monitoring">;
-                  Activity Monitoring;
-                </Label>;
-                <p className="text-sm text-muted-foreground">;
-                  Monitor account activity for suspicious patterns;
-                </p>;
-              </div>;
-              <Switch;
-                id="activity-monitoring";
-                checked={activityMonitoringEnabled}
-                onCheckedChange={setActivityMonitoringEnabled}
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-              <Switch
+                onCheckedChange={setMessageScanningEnabled}              <Switch
                 id="activity-monitoring"
                 checked={activityMonitoringEnabled}
                 onCheckedChange={setActivityMonitoringEnabled}
@@ -272,7 +189,6 @@ export function FraudDetectionSettings() {;
                   Use AI to analyze content and behavior for potential fraud
                 </p>
               </div>
-<<<<<<< HEAD
               />;
             </div>;
             ;
@@ -288,63 +204,7 @@ export function FraudDetectionSettings() {;
               <Switch;
                 id="ai-analysis";
                 checked={aiAnalysisEnabled}
-                onCheckedChange={setAiAnalysisEnabled}
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-              <Switch
-                id="ai-analysis"
-                checked={aiAnalysisEnabled}
-                onCheckedChange={setAiAnalysisEnabled}
-              />
-            </div>
-          </div>
-
-          <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="item-1">
-              <AccordionTrigger className="text-sm font-medium">
-                <div className="flex items-center gap-2">
-                  <Info className="h-4 w-4" />
-                  About Fraud Detection
-                </div>
-              </AccordionTrigger>
-              <AccordionContent className="text-sm text-muted-foreground">
-                <p className="mb-2">
-                  The Zion AI Marketplace uses automated fraud detection systems
-                  to protect our community. This includes:
-                </p>
-                <ul className="list-disc pl-5 space-y-1 mb-2">
-                  <li>Pattern detection in messages and job postings</li>
-                  <li>AI-powered content analysis</li>
-                  <li>Monitoring for suspicious account activities</li>
-                </ul>
-                <p>
-                  You can opt out of some of these protections, but this may
-                  limit your ability to use certain platform features. We
-                  prioritize keeping our marketplace safe while respecting your
-                  privacy.
-                </p>
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-
-          <div className="pt-2">
-            <Button
-              onClick={handleSavePreferences}
-              disabled={isSaving}
-              className="bg-zion-purple hover:bg-zion-purple-light"
-            >
-              {isSaving ? "Saving..." : "Save Preferences"}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-            </Button>
+                onCheckedChange={setAiAnalysisEnabled}            </Button>
           </div>
         </div>
       </CardContent>
@@ -352,7 +212,6 @@ export function FraudDetectionSettings() {;
   );
 }
 
-<<<<<<< HEAD
     setIsSaving(true);
     try {;
       // In a real implementation, we would save these preferences to the database;
@@ -360,13 +219,13 @@ export function FraudDetectionSettings() {;
       await new Promise(resolve => setTimeout(resolve, 1000));
 
       toast({;
-        title: "Settings saved",;
-        description: "Your fraud detection preferences have been updated."});
+        title: "Settings saved",,
+  description: "Your fraud detection preferences have been updated."});
     } catch (error) {;
       console && console.error('Error saving preferences:', error);
       toast({;
-        title: "Error",;
-        description: "Failed to save your preferences. Please try again.",;
+        title: "Error",,
+  description: "Failed to save your preferences. Please try again.",;
         variant: "destructive"});
     } finally {;
       setIsSaving(false);
@@ -391,46 +250,9 @@ export function FraudDetectionSettings() {;
           </div>;
         </div>;
       </CardContent>;
-=======
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-
-  )
-=======
+  )  )
   )
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-    </Card>;
-  ),; export function FraudDetectionSettings () {
-  const {
-  user 
-}= useAuth ();
-const [messageScanningEnabled, setMessageScanningEnabled] = useState (true);
-const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState (true);
-const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState (true);
-const [isSaving, setIsSaving] = useState (false);
-const handleSavePreferences = async () => {
-  if (!user?.id) return;
-try {
-  
-}catch (error) {
-  console.error ('Error saving preferences:', error);
-toast ({
-  
-}finally {
-  setIsSaving (false) 
-}
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-  )
-  )
-
-<<<<<<< HEAD
 };
 mb-8"> <CardHeader className=" space-y-1"> <div className=" flex items-center gap-2"> <ShieldAlert className=" h-5 w-5 text-amber-500"/> <CardTitle className=" text-xl">Fraud & Abuse Protection</CardTitle> </div> <CardDescription> Configure privacy settings related to fraud detection and abuse prevention on the platform </CardDescription> </CardHeader> <CardContent> <div className=" space-y-6"> <div className=" space-y-4"> <div className=" flex items-center justify-between"> <div> <Label className=" font-medium"htmlFor=" message-scanning"> Message Content Scanning </Label> <p className=" text-sm text-muted-foreground"> Scan message content for potentially harmful or abusive material </p> </div> <Switch /> </div> <div className=" flex items-center justify-between"> <div> <Label className=" font-medium"htmlFor=" activity-monitoring"> Activity Monitoring </Label> <p className=" text-sm text-muted-foreground"> Monitor account activity for suspicious patterns </p> </div> <Switch /> </div> <div className=" flex items-center justify-between"> <div> <Label className=" font-medium"htmlFor=" ai-analysis"> AI-powered Analysis </Label> <p className=" text-sm text-muted-foreground"> Use AI to analyze content and behavior for potential fraud </p> </div> <Switch /> </div> </div> <Accordion type=" single"collapsible className=" w-full"> <AccordionItem value=" item-1"> <AccordionTrigger className=" text-sm font-medium"> <div className=" flex items-center gap-2"> <Info className=" h-4 w-4"/> About Fraud Detection </div> </AccordionTrigger> <AccordionContent className=" text-sm text-muted-foreground"> <p className=" mb-2"> The Zion AI Marketplace uses automated fraud detection systems to protect our community. This includes: </p> <ul className=" list-disc pl-5 space-y-1 mb-2"> <li>Pattern detection in messages and job postings</li> <li>AI-powered content analysis</li> <li>Monitoring for suspicious account activities</li> </ul> <p> You can opt out of some of these protections, but this may limit your ability to use certain platform features. We prioritize keeping our marketplace safe while respecting your privacy. </p> </AccordionContent> </AccordionItem> </Accordion> <div className=" pt-2" > <Button </Button> </div> </div> </CardContent> </Card>) 
 }
@@ -438,6 +260,3 @@ mb-8"> <CardHeader className=" space-y-1"> <div className=" flex items-center ga
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

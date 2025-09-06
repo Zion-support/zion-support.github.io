@@ -1,136 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-import {useState, useEffect} from "react";
-import {Star} from "lucide-react";
-import {ReviewStats} from "@/components/reviews/ReviewStats";
-import {ReviewsList} from "@/components/reviews/ReviewsList";
-import {useReviews} from "@/hooks/useReviews";
-import {Button} from "@/components/ui/button";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-interface ProfileRatingsProps {
-  userId: string;
-  averageRating?: number;
-  ratingCount?: number;
-}
-
-<<<<<<< HEAD
-
-interface ProfileRatingsProps {
-  userId: string,
-  averageRating?: number,
-  ratingCount?: number
-=======
-export function ProfileRatings({
-  userId,
-  averageRating = 0,
-  ratingCount = 0,
-}: ProfileRatingsProps) {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews();
-  const [ratingDistribution, setRatingDistribution] = useState<
-    Record<number, number>
-  >({});
-
-  // Calculate rating distribution
-  useEffect(() => {
-    if (reviews.length > 0) {
-      const distribution: Record<number, number> = {
-        1: 0,
-        2: 0,
-        3: 0,
-        4: 0,
-        5: 0,
-      };
-
-      reviews.forEach((review) => {
-        if (review.rating >= 1 && review.rating <= 5) {
-          distribution[review.rating] = (distribution[review.rating] || 0) + 1;
-        }
-      });
-
-      setRatingDistribution(distribution);
-    }
-  }, [reviews]);
-<<<<<<< HEAD
-import { useState, useEffect } from "react",;
-import { Star } from "lucide-react",;
-import { ReviewStats } from "@/components/reviews/ReviewStats",;
-import { ReviewsList } from "@/components/reviews/ReviewsList",;
-import { useReviews } from "@/hooks/useReviews",;
-import { Button } from "@/components/ui/button",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-interface ProfileRatingsProps {;
-  userId: string,;
-  averageRating?: number,;
-  ratingCount?: number;
-}
-;
-export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) {;
-  const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews(),;
-  const [ratingDistribution, setRatingDistribution] = useState<Record<number number>>({}),;
-  // Calculate rating distribution;
-  useEffect(() => {;
-    if (reviews.length > 0) {;
-      const distribution: Record<number number> = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 },;
-      reviews.forEach((review) => {;
-        if (review.rating >= 1 && review.rating <= 5) {;
-          distribution[review.rating] = (distribution[review.rating] || 0) + 1;
-        }
-      }),;
-      setRatingDistribution(distribution);
-    }
-  }, [reviews]),
-  
-=======
-<<<<<<< HEAD
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  // Fetch reviews when component mounts
-  useEffect(() => {
-    fetchUserReviews(userId);
-  }, [userId]);
-
-  return (
-    <div className="space-y-6">;
-      <div className="flex flex-col md:flex-row gap-6">;
-        <div className="md:w-1/3">;
-<<<<<<< HEAD
-=======
-=======
-
-  // Fetch reviews when component mounts
-  useEffect(() => {
-    fetchUserReviews(userId);
-  }, [userId]);
-
->>>>>>> main
-  return (
-    <div className="space-y-6">
-      <div className="flex flex-col md:flex-row gap-6">
-        <div className="md:w-1/3">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-          <ReviewStats
-            averageRating={averageRating}
-            totalReviews={ratingCount}
-            ratingDistribution={ratingDistribution}
-<<<<<<< HEAD
-=======
-          />
-        </div>
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-        <div className="md:w-2/3">
           <Tabs defaultValue="all">
             <TabsList className="mb-4">
               <TabsTrigger value="all">
@@ -145,13 +12,6 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
                 reviews={reviews}
                 isLoading={isLoading}
                 onReportReview={reportReview}
-<<<<<<< HEAD
-=======
-              />
-            </TabsContent>
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-            <TabsContent value="positive">
               <ReviewsList
                 reviews={reviews && reviews.filter((r) => r && r.rating >= 4)}
                 isLoading={isLoading}
@@ -172,7 +32,6 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
     </div>
   );
 }
-<<<<<<< HEAD
 ;
   // Fetch reviews when component mounts;
   useEffect (() => {
@@ -180,18 +39,18 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
   }, [user_id]);
 ;
   return (
-    <div className="space - y-6">;
-      <div className="flex flex - col md:flex - row gap - 6">;
-        <div className="md:w - 1/3">;
+    <div className="space-y-6">;
+      <div className="flex flex - col md:flex - row gap-6">;
+        <div className="md:w-1/3">;
           <ReviewStats;
             average_rating={average_rating}
             total_reviews={rating_count}
             rating_distribution={rating_distribution}
           />;
         </div>;
-        <div className="md:w - 2/3">;
+        <div className="md:w-2/3">;
           <Tabs default_value="all">;
-            <TabsList className="mb - 4">;
+            <TabsList className="mb-4">;
               <TabsTrigger value="all">;
                 All Reviews ({reviews.length});
               </TabsTrigger>;
@@ -222,16 +81,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             </TabsContent>;
           </Tabs>;
         </div>;
-      </div>;
-=======
-
-=======
-
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-    </div>;
+      </div>;    </div>;
   ),; interface ProfileRatingsProps {
   userId: string;
 averageRating?: number;
@@ -292,7 +142,3 @@ reviews.forEach ( (review) => {
 }
 ;
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

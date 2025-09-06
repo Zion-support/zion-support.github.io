@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -8,7 +6,7 @@ import { Download } from 'lucide-react';
 
 interface Resume {
   id: string;
-  title: string;
+  title: string,
   description: string;
   lastModified: string;
   fileSize: string;
@@ -42,7 +40,6 @@ export const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({
     }
   };
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <Card
       className={`cursor-pointer transition-all duration-200 hover:shadow-md ${
@@ -53,7 +50,6 @@ export const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({
       onClick={() => onSelect(resume)}
     >
       <CardContent className="p-4">
-<<<<<<< HEAD
         <div className="flex justify-between items-start mb-2">
           <div>
             <h4 className="font-medium text-white">{resume.basic_info.title}</h4>
@@ -100,58 +96,6 @@ export const ResumePreviewCard: React.FC<ResumePreviewCardProps> = ({
         )}
       </CardContent>;
     </Card>;
-  );
+  )
 };
 }
-=======
-        <div className="flex items-start justify-between mb-3">
-          <div className="flex-1">
-            <h3 className="font-semibold text-gray-900 mb-1">
-              {resume.title}
-            </h3>
-            <p className="text-sm text-gray-600 mb-2">
-              {resume.description}
-            </p>
-          </div>
-          {resume.status && (
-            <Badge className={getStatusColor(resume.status)}>
-              {resume.status}
-            </Badge>
-          )}
-        </div>
-
-        <div className="flex items-center justify-between text-sm text-gray-500 mb-3">
-          <span>Modified: {resume.lastModified}</span>
-          <span>{resume.fileSize}</span>
-        </div>
-
-        <div className="flex items-center space-x-2">
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={(e) => {
-              e.stopPropagation();
-              onDownload(resume);
-            }}
-            className="flex-1"
-          >
-            <Download className="h-4 w-4 mr-2" />
-            Download
-          </Button>
-          <Button
-            variant={isSelected ? 'default' : 'outline'}
-            size="sm"
-            onClick={(e) => {
-              e.stopPropagation();
-              onSelect(resume);
-            }}
-            className="flex-1"
-          >
-            {isSelected ? 'Selected' : 'Select'}
-          </Button>
-        </div>
-      </CardContent>
-    </Card>
-  );
-};
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

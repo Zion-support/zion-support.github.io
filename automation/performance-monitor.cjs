@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -22,6 +25,7 @@
  * Performance Monitor - PM2 Automation Script;
  * Monitors application performance and optimizes when needed;
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
@@ -59,6 +63,16 @@ class PerformanceMonitor {}
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+=======
+=======
+#!/usr/bin/env node
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+
+>>>>>>> main
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
 
 class PerformanceMonitor {
   constructor() {
@@ -66,6 +80,7 @@ class PerformanceMonitor {
     this.ensureLogsDir();
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
@@ -82,7 +97,23 @@ class PerformanceMonitor {
     };
   };
   log(message) {}
+=======
+  ensureLogsDir() {
+    if (!fs.existsSync(this.logsDir)) {
+      fs.mkdirSync(this.logsDir, { recursive: true });
+    }
+  }
+
+  log(message, type = 'info') {
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
+    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
+    console.log(logMessage);
+    
+    const logFile = path.join(this.logsDir, 'performance-monitor.log');
+    fs.appendFileSync(logFile, logMessage + '\n');
+=======
 =======
   ensureLogsDir() {
     if (!fs.existsSync(this.logsDir)) {
@@ -406,6 +437,7 @@ class PerformanceMonitor {
         global.gc();
         this.log('Garbage collection performed');
 <<<<<<< HEAD
+<<<<<<< HEAD
       }
     } catch (error) {
       this.log(`Memory optimization failed: ${error.message}`);
@@ -544,6 +576,14 @@ class PerformanceMonitor {
       
       const performance = {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> main
+      }
+      
+      const performance = {
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
         timestamp: new Date().toISOString(),
         buildTime: buildTime,
         bundleSize: bundleSize,
@@ -815,4 +855,7 @@ monitor.run().catch(console.error);
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3

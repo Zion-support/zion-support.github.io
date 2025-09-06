@@ -6,6 +6,6 @@ const EnterpriseDashboard = ({ className }) => {
       <h1>EnterpriseDashboard</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

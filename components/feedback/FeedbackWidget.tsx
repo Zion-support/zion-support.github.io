@@ -205,9 +205,9 @@ if ( {) {
           <div className='flex items - center gap - 2'>;
             <button;
               type='button'              on_click={() => set_rating (rating === 'up' ? null : 'up')}      {submitted ? (
-        <div className="text - sm text - emerald - 700 dark:text - emerald - 300">Thanks for your feedback!</div>) : (
-        <div className="space - y-3">;
-          <div className="flex items - center gap - 2">;
+        <div className="text - sm text - emerald - 700 dark:text-emerald-300">Thanks for your feedback!</div>) : (
+        <div className="space-y-3">;
+          <div className="flex items-center gap-2">;
             <button;
               type="button";
               on_click={() => set_rating (rating === 'up' ? null : 'up')}
@@ -242,12 +242,12 @@ if ( {) {
               className='rounded - md bg - black text - white dark:bg - white dark:text - black px - 3 py - 1.5 text - sm';
             >              {submitting ? 'Submitting…' : 'Submit feedback'}            value={comment}
             on_change={(e) => set_comment (e.target.value.slice (0, 2000))}
-            className="w - full rounded - md border px - 3 py - 2 text - sm";
+            className="w - full rounded - md border px - 3 py-2 text-sm";
             rows={3}
           />;
-          {error && <div className="text - xs text - red - 600">{error}</div>}
+          {error && <div className="text - xs text-red-600">{error}</div>}
           <div>;
-            <button on_click={submit} disabled={submitting} className="rounded - md bg - black text - white dark:bg - white dark:text - black px - 3 py - 1.5 text - sm">;
+            <button on_click={submit} disabled={submitting} className="rounded - md bg - black text - white dark:bg - white dark:text - black px - 3 py-1.5 text-sm">;
               {submitting ? 'Submitting…' : 'Submit feedback'}
             </button>;
           </div>;

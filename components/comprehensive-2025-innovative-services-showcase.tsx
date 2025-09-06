@@ -35,8 +35,8 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
 
   const getCategoryColor = (category: string) => {;
     const cat = categories && categories.find(c => c && c.name === category);
-    return cat ? cat && cat.color : 'from-gray-500 to-gray-600';    return cat ? cat && cat.color : 'from-gray-500 to-gray-600';
-  };
+    return cat ? cat && cat.color : 'from-gray-500 to-gray-600';    return cat ? cat && cat.color : 'from-gray-500 to-gray-600'
+};
 
   return (
     <Layout>
@@ -208,12 +208,12 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
             animate={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             className='space - y-6'          >;
-        <div className="text - center max - w-6xl mx - auto relative z - 10">;
+        <div className="text - center max - w-6xl mx-auto relative z-10">;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 20 }}
             animate={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
-            className='space - y-6'            className="space - y-6";
+            className='space - y-6'            className="space-y-6";
           >;
             {/* Enhanced Company Badge */}
             <motion.div;
@@ -257,8 +257,6 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
               Pioneering the future with cutting-edge micro SAAS services, quantum computing solutions, and autonomous AI platforms
             </p>
             
-
-
 
             {/* Enhanced Stats */}
             <motion&& motion.div
@@ -341,12 +339,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
 
               
 
-
-
-
-
               
-
 
                 >
             className='text-center mb-16'>;
@@ -429,21 +422,21 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                 <div className='text - gray - 300 text - sm'>;
                   Future Possibilities;
                 </div>              </div>            >;
-              <div className="p - 4 group hover:bg - white / 5 rounded - xl transition - all duration - 300 border border - cyan - 400 / 20">;
-                <div className="text - 3xl font - bold text - cyan - 400 mb - 2 group - hover:text - cyan - 300 transition - colors">50+</div>;
-                <div className="text - gray - 300 text - sm">Innovative Services</div>;
+              <div className="p - 4 group hover:bg - white / 5 rounded - xl transition - all duration - 300 border border-cyan-400 / 20">;
+                <div className="text - 3xl font - bold text - cyan - 400 mb - 2 group - hover:text - cyan-300 transition-colors">50+</div>;
+                <div className="text - gray-300 text-sm">Innovative Services</div>;
               </div>;
-              <div className="p - 4 group hover:bg - white / 5 rounded - xl transition - all duration - 300 border border - blue - 400 / 20">;
-                <div className="text - 3xl font - bold text - blue - 400 mb - 2 group - hover:text - blue - 300 transition - colors">100+</div>;
-                <div className="text - gray - 300 text - sm">Quantum Solutions</div>;
+              <div className="p - 4 group hover:bg - white / 5 rounded - xl transition - all duration - 300 border border-blue-400 / 20">;
+                <div className="text - 3xl font - bold text - blue - 400 mb - 2 group - hover:text - blue-300 transition-colors">100+</div>;
+                <div className="text - gray-300 text-sm">Quantum Solutions</div>;
               </div>;
-              <div className="p - 4 group hover:bg - white / 5 rounded - xl transition - all duration - 300 border border - purple - 400 / 20">;
-                <div className="text - 3xl font - bold text - purple - 400 mb - 2 group - hover:text - purple - 300 transition - colors">24 / 7</div>;
-                <div className="text - gray - 300 text - sm">Autonomous Operations</div>;
+              <div className="p - 4 group hover:bg - white / 5 rounded - xl transition - all duration - 300 border border-purple-400 / 20">;
+                <div className="text - 3xl font - bold text - purple - 400 mb - 2 group - hover:text - purple-300 transition-colors">24 / 7</div>;
+                <div className="text - gray-300 text-sm">Autonomous Operations</div>;
               </div>;
-              <div className="p - 4 group hover:bg - white / 5 rounded - xl transition - all duration - 300 border border - green - 400 / 20">;
-                <div className="text - 3xl font - bold text - green - 400 mb - 2 group - hover:text - green - 300 transition - colors">∞</div>;
-                <div className="text - gray - 300 text - sm">Future Possibilities</div>;
+              <div className="p - 4 group hover:bg - white / 5 rounded - xl transition - all duration - 300 border border-green-400 / 20">;
+                <div className="text - 3xl font - bold text - green - 400 mb - 2 group - hover:text - green-300 transition-colors">∞</div>;
+                <div className="text - gray-300 text-sm">Future Possibilities</div>;
               </div>;
             </motion.div>;
           </motion.div>;
@@ -452,9 +445,9 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
       {/* Services Categories */}
       <section className='py - 20 px - 4 bg - black / 30 relative'>;
         <div className='absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 5 to - purple - 500 / 5'></div>;
-        <div className='max - w-7xl mx - auto relative z - 10'>          <motion.div      <section className="py - 20 px - 4 bg - black / 30 relative">;
-        <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 5 to - purple - 500 / 5"></div>;
-        <div className="max - w-7xl mx - auto relative z - 10">;
+        <div className='max - w-7xl mx - auto relative z - 10'>          <motion.div      <section className="py - 20 px-4 bg-black / 30 relative">;
+        <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 5 to-purple-500 / 5"></div>;
+        <div className="max - w-7xl mx-auto relative z-10">;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -504,8 +497,6 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
           </div>;
         </div>;
       </section>;
-
-
 
       {/* Featured Services */}
       <section className='py-20 px-4'>;
@@ -566,12 +557,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
 
               
 
-
-
-
-
               
-
 
                 >
                   <div className='p-6 rounded-xl bg-gradient-to-br from-gray-900/30 to-gray-800/30 border border-white/5 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-xl backdrop-blur-sm'>
@@ -623,7 +609,6 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
       <section className="py-20 px-4 bg-black/30 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5"></div>
         <div className="max-w-7xl mx-auto relative z-10">
-
 
           <motion.div
 
@@ -683,7 +668,6 @@ export default Comprehensive2025InnovativeServicesShowcase;
 }
 export default Comprehensive2025InnovativeServicesShowcase;
 export default Comprehensive2025InnovativeServicesShowcase;
-
 
 }
 ;

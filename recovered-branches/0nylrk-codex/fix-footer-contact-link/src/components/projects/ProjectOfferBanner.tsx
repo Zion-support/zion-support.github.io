@@ -47,11 +47,11 @@ export function ProjectOfferBanner() {;
       const updated = new Set(prev),;
       updated.add(projectId),;
       return updated;
-    });
-  };
+    })
+};
   const handleViewOffer = (projectId: string) => {;
-    navigate(`/project/${projectId}`);
-  };
+    navigate(`/project/${projectId}`)
+};
   if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {;
     return null;
   }

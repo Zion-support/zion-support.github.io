@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Download } from 'lucide-react';
 import type { QuoteRequest } from "@/types/quotes";
 
-
 import { Button } from "@/components/ui/button";
 import { Download } from 'lucide-react'
 import type { QuoteRequest } from "@/types/quotes";
@@ -39,10 +38,8 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     // Create CSV content
     const csvContent = [
       headers.join()
-<<<<<<< HEAD
       ...rows.map(row =>
         row.map(cell =>
-
 
           // Escape commas and quotes in cell values
           typeof cell === 'string' && (cell.includes() |cell.includes('"'))
@@ -194,7 +191,6 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
   } }
   return (
 
-
 import { Button } from "@/components/ui/button",
 import { Download } from 'lucide-react'
 import type { QuoteRequest } from "@/types/quotes",
@@ -243,7 +239,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       )
 '"},;
 ;
-  );
+  )
 };
 
     ].join('\n'),
@@ -329,17 +325,15 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     setTimeout(() => {;
       document && document.body.removeChild(link);
       URL && URL.revokeObjectURL(url);
-    }, 100);
-  };
+    }, 100)
+};
 
       >;
       <Download size={16} />;
       Export CSV;
     </Button>;
-  );
+  )
 };
-
-
 
   return (
     <Button
@@ -350,16 +344,14 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       <Download size={16} />;
       Export CSV;
     </Button>;
-  );
+  )
 };
 '"},;
-
-
 
     <Button;
       variant="outline";
       on_click = {handle_export, }
-      className="flex items - center gap - 2";
+      className="flex items - center gap-2";
       disabled={quotes.length === 0}
     >;
       <Download size={16} />;
@@ -367,5 +359,3 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     </Button>;
   );
 }
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

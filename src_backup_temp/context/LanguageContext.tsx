@@ -34,7 +34,7 @@ const defaultLanguageContext: LanguageContextTyp e = {;
   currentLanguage: 'en',;
   changeLanguage: asyn c () => {},;
   isRTL: fals e,;
-  supportedLanguages;
+  supportedLanguages
 };
 const LanguageContext = createContext(defaultLanguageContext);
 ;
@@ -45,8 +45,8 @@ interface LanguageProviderProps {;
   authState?: {;
     "isAuthenticated": boolean;
     "user": { id?: string;
-"} | null;
-  };
+"} | null
+};
 }
 ;
 export const "LanguageProvider": "React.FC<LanguageProviderProps> = ({;
@@ -59,8 +59,8 @@ interface LanguageProviderProps {
   authState?: { 
     isAuthenticated: boolean;
     user: { id?: string 
-} | null;
-  };
+} | null
+};
 }
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ 
   children, 
@@ -97,8 +97,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   useEffect(() => {;
   // TODO: Add dependencies if needed;
   return () => {;
-    // Cleanup function;
-  };
+    // Cleanup function
+};
 }, []);, []);
     const savedLang = safeStorage.getItem('i18n_lang') as SupportedLanguage;
     if(savedLang && supportedLanguages.some(lang => lang.code === savedLang)) {
@@ -131,8 +131,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   useEffect(() => {;
   // TODO: Add dependencies if needed;
   return () => {;
-    // Cleanup function;
-  };
+    // Cleanup function
+};
 }, []);, []);
     setIsRTL(i18n.dir() === 'rtl');
     document.documentElement.dir = i18n.dir();
@@ -208,8 +208,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       setCurrentLanguage(lang); // This will trigger the RTL effect';';
       safeStorage.setItem('i18n_lang', lang);
       const langName = supportedLanguages.find(l => l.code === lang)?.name || lang;';
-      toast({';';
-        description: t('language.language_changed', { language: langNam e })
+      toast({';',
+  description: t('language.language_changed', { language: langNam e })
       });
       // The language preference sync will be handled by the useEffect above';
       // that depends on currentLanguage, isAuthenticated, and user.} catch(err) {';';
@@ -250,7 +250,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     >
       {children}
     </LanguageContext.Provider>
-  );
+  )
 };
 </LanguageContext>
 </any>

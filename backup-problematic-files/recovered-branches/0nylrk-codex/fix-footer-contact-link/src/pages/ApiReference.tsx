@@ -12,16 +12,16 @@ export function ApiReference() {;
     {;
       id:"get-jobs",;
       method:"GET",;
-      path:"/api/jobs",;
-      description:"Retrieve a list of job postings with optional filtering",;
+      path:"/api/jobs",,
+  description:"Retrieve a list of job postings with optional filtering",;
       parameters:[;
         { name:"status", type:"string", description:"Filter by job status (open, closed, draft)" },;
         { name:"category", type:"string", description:"Filter by job category" },;
         { name:"limit", type:"integer", description:"Number of results per page (default:20, max:100)" },;
         { name:"offset", type:"integer", description:"Pagination offset (default:0)" }],;
       responses:{;
-        "200":{;
-          description:"A list of jobs",;
+        "200":{,
+  description:"A list of jobs",;
           example:`{;
   "jobs":[;
     {;
@@ -44,15 +44,15 @@ export function ApiReference() {;
   "offset":0;
 }`;
         },;
-        "401":{;
-          description:"Unauthorized",;
+        "401":{,
+  description:"Unauthorized",;
           example:`{;
   "error":"invalid_token",;
   "message":"The provided API key is invalid or expired";
 }`;
         },;
-        "429":{;
-          description:"Rate limit exceeded",;
+        "429":{,
+  description:"Rate limit exceeded",;
           example:`{;
   "error":"rate_limit_exceeded",;
   "message":"Rate limit exceeded. Please try again in 60 seconds",;
@@ -67,8 +67,8 @@ export function ApiReference() {;
     {;
       id:"post-jobs",;
       method:"POST",;
-      path:"/api/jobs",;
-      description:"Create a new job posting",;
+      path:"/api/jobs",,
+  description:"Create a new job posting",;
       parameters:[;
         { name:"title", type:"string", required:true, description:"Job title" },;
         { name:"description", type:"string", required:true, description:"Detailed job description" },;
@@ -77,8 +77,8 @@ export function ApiReference() {;
         { name:"skills", type:"array", description:"Array of required skills" },;
         { name:"deadline", type:"string", description:"Application deadline (ISO date format)" }],;
       responses:{;
-        "201":{;
-          description:"Job created successfully",;
+        "201":{,
+  description:"Job created successfully",;
           example:`{;
   "id":"job-456",;
   "title":"UX Designer",;
@@ -93,8 +93,8 @@ export function ApiReference() {;
   "created_at":"2023-05-15T10:12:00Z";
 }`;
         },;
-        "400":{;
-          description:"Bad request",;
+        "400":{,
+  description:"Bad request",;
           example:`{;
   "error":"validation_error",;
   "message":"Invalid input",;
@@ -127,8 +127,8 @@ export function ApiReference() {;
     {;
       id:"get-talent",;
       method:"GET",;
-      path:"/api/talent",;
-      description:"Search for talent profiles with optional filtering",;
+      path:"/api/talent",,
+  description:"Search for talent profiles with optional filtering",;
       parameters:[;
         { name:"skills", type:"string", description:"Comma-separated list of skills" },;
         { name:"category", type:"string", description:"Filter by talent category" },;
@@ -138,8 +138,8 @@ export function ApiReference() {;
         { name:"limit", type:"integer", description:"Number of results per page (default:20, max:100)" },;
         { name:"offset", type:"integer", description:"Pagination offset (default:0)" }],;
       responses:{;
-        "200":{;
-          description:"A list of talent profiles",;
+        "200":{,
+  description:"A list of talent profiles",;
           example:`{;
   "talent":[;
     {;
@@ -312,8 +312,7 @@ export function ApiReference() {;
     </ApiDocsLayout>;
   ),;}
 ;
-export default ApiReference,;
- 
+export default ApiReference,
 };
 //More jobs... ];
 "count" : 42;

@@ -23,7 +23,7 @@ const "StatsSection": "React.FC<StatsSectionProps> = ({ stats "}) => {;
     if (isInView) {;
 interface Stat {
   number: string;
-  label: string;
+  label: string,
   description: string;
   avatar: string;
 icon: React.ComponentType<{ className?: string}>;
@@ -270,7 +270,7 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
         </div>;
       </div>;
     </section>;
-  );
+  )
 };
 export default StatsSection;}}}}};
 </motion>

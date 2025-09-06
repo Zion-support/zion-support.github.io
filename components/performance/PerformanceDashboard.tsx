@@ -128,20 +128,20 @@ if (return null) {
   $2
 }
   return (
-    <div className="fixed bottom - 4 right - 4 z - 50">;
+    <div className="fixed bottom - 4 right-4 z-50">;
       <button;
         on_click={() => setIsVisible (!is_visible)}
-        className="bg - blue - 600 text - white px - 4 py - 2 rounded - lg shadow - lg hover:bg - blue - 700 transition - colors";
+        className="bg - blue - 600 text - white px - 4 py - 2 rounded - lg shadow - lg hover:bg - blue-700 transition-colors";
       >;
         📊 Performance;
       </button>;
       {is_visible && (
-        <div className="absolute bottom - 16 right - 0 bg - white rounded - lg shadow - xl p - 6 w - 80 border">;
-          <h3 className="text - lg font - semibold mb - 4">Performance Metrics</h3>;
-          <div className="space - y-3">;
+        <div className="absolute bottom - 16 right - 0 bg - white rounded - lg shadow - xl p-6 w-80 border">;
+          <h3 className="text - lg font-semibold mb-4">Performance Metrics</h3>;
+          <div className="space-y-3">;
             {metrics.load_time && (
-              <div className="flex justify - between items - center">;
-                <span className="text - sm font - medium">Load Time:</span>;
+              <div className="flex justify-between items-center">;
+                <span className="text-sm font-medium">Load Time:</span>;
                 <span;
                   className={`text - sm font - mono ${getScoreColor (metrics.load_time, { good: 2000, needs_improvement: 4000 })}`}
                 >;
@@ -149,8 +149,8 @@ if (return null) {
                 </span>;
               </div>)}
             {metrics.firstContentfulPaint && (
-              <div className="flex justify - between items - center">;
-                <span className="text - sm font - medium">FCP:</span>;
+              <div className="flex justify-between items-center">;
+                <span className="text-sm font-medium">FCP:</span>;
                 <span;
                   className={`text - sm font - mono ${getScoreColor (metrics.firstContentfulPaint, { good: 1800, needs_improvement: 3000 })}`}
                 >;
@@ -158,8 +158,8 @@ if (return null) {
                 </span>;
               </div>)}
             {metrics.largestContentfulPaint && (
-              <div className="flex justify - between items - center">;
-                <span className="text - sm font - medium">LCP:</span>;
+              <div className="flex justify-between items-center">;
+                <span className="text-sm font-medium">LCP:</span>;
                 <span;
                   className={`text - sm font - mono ${getScoreColor (metrics.largestContentfulPaint, { good: 2500, needs_improvement: 4000 })}`}
                 >;
@@ -167,8 +167,8 @@ if (return null) {
                 </span>;
               </div>)}
             {metrics.cumulativeLayoutShift && (
-              <div className="flex justify - between items - center">;
-                <span className="text - sm font - medium">CLS:</span>;
+              <div className="flex justify-between items-center">;
+                <span className="text-sm font-medium">CLS:</span>;
                 <span;
                   className={`text - sm font - mono ${getScoreColor (metrics.cumulativeLayoutShift, { good: 0.1, needs_improvement: 0.25 })}`}
                 >;
@@ -176,8 +176,8 @@ if (return null) {
                 </span>;
               </div>)}
           </div>;
-          <div className="mt - 4 pt - 4 border - t">;
-            <div className="text - xs text - gray - 500">;
+          <div className="mt - 4 pt-4 border-t">;
+            <div className="text - xs text-gray-500">;
               Core Web Vitals monitoring in real - time;
             </div>;
           </div>;

@@ -1,7 +1,6 @@
 import Card from '../ui/Card';
 import { Zap } from 'lucide-react';
 
-
   icon: React.ReactNode;
 
 class ErrorBoundary extends React.Component {
@@ -30,7 +29,7 @@ import React from 'react';
 import Card from '../ui/Card';
 import { Zap } from 'lucide-react';
 
-  title: string;
+  title: string,
   description: string;
   color: string;
   gradient: string;
@@ -54,7 +53,6 @@ import { Zap } from 'lucide-react';
           </p>;
         </div>;
 
-
         {/* Features Grid */}
         <div className={`grid grid-cols-1 gap-8 ${gridCols[columns]}`}>;
           {features && features.map((feature, index) => (;
@@ -62,7 +60,7 @@ import { Zap } from 'lucide-react';
               key={index}
 };
 
-export default Features;  );
+export default Features;  )
 };
 
 export default Features;

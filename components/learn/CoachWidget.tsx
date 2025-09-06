@@ -11,7 +11,6 @@
   }
   return (
 
-
   return (      });
     }
   }
@@ -76,8 +75,4 @@ function ask() {
     </div>);
     }
   }
-
-
-
-
 

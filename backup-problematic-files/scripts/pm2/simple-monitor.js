@@ -52,7 +52,8 @@ class SimpleMonitor {}
         loadAverage: os && os.loadavg(),
         platform: os && os.platform(),
         nodeVersion: process && process.version,
-;      };,
+
+};,
       return health;
       
     } catch (error) {}

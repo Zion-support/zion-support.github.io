@@ -3,10 +3,8 @@ return (
       <button
         onClick={toggleSection}
 
-
         className="flex w-full items-center justify-between text-white font-medium"
       >
-
 
         <span>Region</span>
         {expanded ? (
@@ -41,7 +39,6 @@ function RegionFilter() {
           <ChevronDown className='h - 4 w - 4 text - zion - slate - light' />)}
       </button>;
 
-
       
 
       {expanded && (
@@ -58,8 +55,6 @@ function RegionFilter() {
   { id: "South America", label: "South America" },
   { id: "Australia", label: "Australia" },
 
-
-
       {expanded && (;
         <div className='mt-4 space-y-2'>;
           {REGION_OPTIONS && REGION_OPTIONS.map(region => (;
@@ -70,27 +65,17 @@ function RegionFilter() {
             <div key={region && region.id} className="flex items-center">;
 
 import { ChevronDown, ChevronUp } from 'lucide-react';
-<<<<<<< HEAD
 import { Checkbox } from "@/components/ui/checkbox";
-import { RegionFilterProps } from "@/types/filters";
-=======
-import { Checkbox } from "@/components/ui/checkbox",;
-import { RegionFilterProps } from "@/types/filters",;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-const REGION_OPTIONS = [;
+import { RegionFilterProps } from "@/types/filters";const REGION_OPTIONS = [;
   { id: "North America", label: "North America" },;
   { id: "Europe", label: "Europe" },;
   { id: "Asia", label: "Asia" },;
   { id: "South America", label: "South America" },;
   { id: "Australia", label: "Australia" },;
 
-
-
-
   { id: "Africa", label: "Africa" }
 ]
 
-<<<<<<< HEAD
 export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen }: RegionFilterProps) {;
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
@@ -101,23 +86,7 @@ export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, 
         {expanded ? (;
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />;
         ) : (;
-          <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
-=======
-export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen }: RegionFilterProps) {
-  return (
-    <div className="mb-6 border-b border-zion-blue-light pb-6">
-      <button
-        onClick={toggleSection}
-        className="flex w-full items-center justify-between text-white font-medium"
-      >
-        <span>Region</span>
-        {expanded ? (
-          <ChevronUp className="h-4 w-4 text-zion-slate-light" />
-        ) : (
-          <ChevronDown className="h-4 w-4 text-zion-slate-light" />
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-        )}
-
+          <ChevronDown className="h-4 w-4 text-zion-slate-light" />;        )}
 
               <Checkbox
                 id={`region-${region && region.id}`}
@@ -137,13 +106,8 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
                 id={`region-${region.id}`}
                 checked={selectedRegions.includes(region.id)}
                 onCheckedChange={() => toggleRegion(region.id)}
-<<<<<<< HEAD
                 className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
-              />
-=======
-                className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'              />
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-              <label
+              />              <label
                 htmlFor={`region-${region.id}`}
 
           ))}
@@ -167,7 +131,7 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
 
                 checked={selected_regions.includes (region.id)}
                 onCheckedChange={() => toggle_region (region.id)}
-            <div key={region.id} className="flex items - center">;
+            <div key={region.id} className="flex items-center">;
 import { Checkbox  } from '@/components / ui / checkbox';
 import { RegionFilterProps  } from '@/types / filters';
 const REGION_OPTIONS = [;
@@ -183,20 +147,20 @@ export /**
  */
 function RegionFilter() {
   return (
-    <div className="mb - 6 border - b border - zion - blue - light pb - 6">;
+    <div className="mb - 6 border - b border - zion - blue - light pb-6">;
       <button;
         on_click={toggle_section}
-        className="flex w - full items - center justify - between text - white font - medium";
+        className="flex w - full items - center justify - between text - white font-medium";
       >;
         <span > Region</span>;
         {expanded ? (
-          <ChevronUp className="h - 4 w - 4 text - zion - slate - light" />) : (
-          <ChevronDown className="h - 4 w - 4 text - zion - slate - light" />)}
+          <ChevronUp className="h - 4 w - 4 text - zion - slate-light" />) : (
+          <ChevronDown className="h - 4 w - 4 text - zion - slate-light" />)}
       </button>;
       {expanded && (
-        <div className="mt - 4 space - y-2">;
+        <div className="mt - 4 space-y-2">;
           {REGION_OPTIONS.map (region => (
-            <div key={region.id} className="flex items - center">;
+            <div key={region.id} className="flex items-center">;
               <Checkbox;
                 id={`region-${region.id}`}
                 checked={selected_regions.includes (region.id)}
@@ -205,7 +169,7 @@ function RegionFilter() {
               <label;
                 html_for={`region-${region.id}`}
                 className='ml - 2 text - sm text - zion - slate - light cursor - pointer';
-              >                {region.label}                className="ml - 2 text - sm text - zion - slate - light cursor - pointer";
+              >                {region.label}                className="ml - 2 text - sm text - zion - slate - light cursor-pointer";
               html_for="input-;
                 {region.label}
               ">;
@@ -214,11 +178,11 @@ function RegionFilter() {
         </div>)}
     </div>);
   toggle_section;
-}className="flex w - full items - center justify - between text - white font - medium" > <span > Region</span>) : (<ChevronDown className="h - 4 w - 4 text - zion - slate - light" />);
+}className="flex w - full items - center justify - between text - white font-medium" > <span > Region</span>) : (<ChevronDown className="h - 4 w - 4 text - zion - slate-light" />);
 }</button> {
   REGION OPTIONS.map (region => (<div key= {
   region.id ";
-}className="flex items - center" > <Checkbox > {
+}className="flex items-center" > <Checkbox > {
   region.label;
 }</label> </div>) );
 }</div>);

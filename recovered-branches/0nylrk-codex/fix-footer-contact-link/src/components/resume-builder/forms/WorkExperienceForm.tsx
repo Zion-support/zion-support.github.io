@@ -53,10 +53,7 @@ interface WorkExperienceFormProps {
   onBack: () => void
 }
 
-
-
 export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
-
 
   const { addWorkExperience, updateWorkExperience, deleteWorkExperience, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
@@ -107,10 +104,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
       setError(err.message |'An error occurred')
     }
 
-
   };
-
-
 
   const handleEdit = (work: WorkExperience) => {
     setEditingId(work.id!);
@@ -123,7 +117,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     if (confirm('Are you sure you want to delete this work experience?')) {
       await deleteWorkExperience(id)
     }
-
 
   };
 
@@ -280,7 +273,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
               name="description";
               render={({ field }) => (
                 <FormItem>;
-                  <FormLabel className="flex justify - between">;
+                  <FormLabel className="flex justify-between">;
                     <span > Job Description</span>;
                     <AIEnhancementButton;
                       current_content={field.value || ''}
@@ -292,7 +285,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                   <FormControl>;
                     <Textarea;
                       placeholder="Describe your responsibilities and accomplishments...";
-                      className="min - h-[100px]";
+                      className="min-h-[100px]";
                       {...field}
                     />;
                   </FormControl>;
@@ -311,8 +304,8 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                       company_name: '',;
                       role_title: '',;
                       start_date: format(new Date(), 'yyyy-MM-dd');
-                      is_current: false,;
-                      description: '',;
+                      is_current: false,,
+  description: '',;
                       location: ''});
                   } else {;
                     onBack();

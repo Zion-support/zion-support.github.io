@@ -1,4 +1,3 @@
-<<<<<<< HEAD
             }).trim(),
 ,
             const commitCount = execSync(`git rev-list --count origin/${branchName}`, {,
@@ -304,30 +303,7 @@
 ;
     } catch (error) {,;
       this.log(`❌ Error running git workflow: monitor: ${error.message}`),;
-      process.exit(1);
-=======
-#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-class GitWorkflow {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'logs/pm2/git-workflow.log');
-    this.reportFile = path.join(this.projectRoot, 'logs/pm2/git-workflow-report.json');
-    this.startTime = Date.now();
-  }
-
-  log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;
-    try {
-      fs.appendFileSync(this.logFile, logMessage);
-    } catch (error) {
-      console.error('Error writing to log file: ', error.message);
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-    }
+      process.exit(1);    }
   }
 
   async checkGitStatus() {
@@ -374,8 +350,6 @@ class GitWorkflow {
       }).trim().split('\n');
       const branchInfo = [];
 
-<<<<<<< HEAD
-=======
       for (const branch of branches) {
         const branchName = branch.replace('origin/', '').trim();
         if (branchName && !branchName.includes('HEAD')) {
@@ -630,4 +604,3 @@ if (require.main === module) {
 }
 
 module.exports = GitWorkflow;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

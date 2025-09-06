@@ -6,6 +6,6 @@ const ITOnsiteServicesPage = ({ className }) => {
       <h1>ITOnsiteServicesPage</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

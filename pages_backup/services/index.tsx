@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
 const ServicesIndex: NextPage = () => {
   const services = [
     {
@@ -169,36 +168,36 @@ const ServicesIndex: NextPage = () => {
   ];
   const itServices = [;
     {;
-      name: "Cloud Migration & Architecture",;
-      description: "Complete cloud transformation with AWS, Azure, and Google Cloud expertise",;
+      name: "Cloud Migration & Architecture",,
+  description: "Complete cloud transformation with AWS, Azure, and Google Cloud expertise",;
       features: ["Multi-cloud strategy", "Security implementation", "Cost optimization", "24/7 monitoring"],;
       pricing: "Starting at $5,000/project",;
       link: "/services/cloud-migration";
     },;
     {;
-      name: "Cybersecurity Solutions",;
-      description: "Comprehensive security assessment, implementation, and ongoing protection",;
+      name: "Cybersecurity Solutions",,
+  description: "Comprehensive security assessment, implementation, and ongoing protection",;
       features: ["Security audits", "Penetration testing", "Compliance management", "Incident response"],;
       pricing: "Starting at $3,000/month",;
       link: "/services/cybersecurity-solutions";
     },;
     {;
-      name: "DevOps & CI/CD Implementation",;
-      description: "Automated deployment pipelines and infrastructure as code solutions",;
+      name: "DevOps & CI/CD Implementation",,
+  description: "Automated deployment pipelines and infrastructure as code solutions",;
       features: ["CI/CD pipelines", "Infrastructure automation", "Monitoring setup", "Performance optimization"],;
       pricing: "Starting at $4,000/month",;
       link: "/services/devops-implementation";
     },;
     {;
-      name: "Database Design & Optimization",;
-      description: "High-performance database architecture and optimization services",;
+      name: "Database Design & Optimization",,
+  description: "High-performance database architecture and optimization services",;
       features: ["Database design", "Performance tuning", "Backup strategies", "Scalability planning"],;
       pricing: "Starting at $2,500/project",;
       link: "/services/database-optimization";
     },;
     {;
-      name: "API Development & Integration",;
-      description: "Custom API development and third-party system integration",;
+      name: "API Development & Integration",,
+  description: "Custom API development and third-party system integration",;
       features: ["RESTful APIs", "GraphQL", "Microservices", "Documentation"],;
       pricing: "Starting at $3,500/project",;
       link: "/services/api-development";
@@ -206,97 +205,46 @@ const ServicesIndex: NextPage = () => {
   ];
   const aiServices = [;
     {;
-      name: "Custom AI Model Development",;
-      description: "Tailored machine learning models for your specific business needs",;
+      name: "Custom AI Model Development",,
+  description: "Tailored machine learning models for your specific business needs",;
       features: ["Custom model training", "Data preprocessing", "Model deployment", "Performance monitoring"],;
       pricing: "Starting at $8,000/project",;
       link: "/services/custom-ai-models";
     },;
     {;
-      name: "Natural Language Processing",;
-      description: "Advanced NLP solutions for text analysis, chatbots, and content generation",;
+      name: "Natural Language Processing",,
+  description: "Advanced NLP solutions for text analysis, chatbots, and content generation",;
       features: ["Text analysis", "Chatbot development", "Content generation", "Sentiment analysis"],;
       pricing: "Starting at $4,500/project",;
       link: "/services/nlp-solutions";
     },;
     {;
-      name: "Computer Vision Solutions",;
-      description: "Image and video analysis with object detection and recognition capabilities",;
+      name: "Computer Vision Solutions",,
+  description: "Image and video analysis with object detection and recognition capabilities",;
       features: ["Object detection", "Image classification", "Video analysis", "Real-time processing"],;
       pricing: "Starting at $6,000/project",;
       link: "/services/computer-vision";
     },;
     {;
-      name: "Predictive Analytics Platform",;
-      description: "Advanced forecasting and predictive modeling for business intelligence",;
+      name: "Predictive Analytics Platform",,
+  description: "Advanced forecasting and predictive modeling for business intelligence",;
       features: ["Time series forecasting", "Risk assessment", "Trend analysis", "Automated insights"],;
       pricing: "Starting at $5,500/month",;
       link: "/services/predictive-analytics";
     },;
     {;
-      name: "AI-Powered Automation",;
-      description: "Intelligent process automation to streamline business operations",;
+      name: "AI-Powered Automation",,
+  description: "Intelligent process automation to streamline business operations",;
       features: ["Process mapping", "Workflow automation", "Decision trees", "Integration capabilities"],;
       pricing: "Starting at $3,000/month",;
       link: "/services/ai-automation";
     }
-  ];
-=======
-import { motion } from 'framer-motion';
-import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
-
-const services = [
-  {
-    id: 'ai-development',
-    title: 'AI Development',
-    description: 'Custom AI solutions tailored to your business needs',
-    icon: Brain,
-    features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-    pricing: 'Starting at $5,000/month',
-    icon: '🤖',
-    link: '/ai-services'
-  },
-  {
-    id: 'cloud-services',
-    title: 'Cloud Services',
-    description: 'Scalable cloud infrastructure and migration services',
-    icon: Cloud,
-    features: ['Cloud Migration', 'Infrastructure Setup', 'Auto-scaling', 'Cost Optimization'],
-    pricing: 'Starting at $2,000/month',
-    icon: '☁️',
-    link: '/services/cloud'
-  },
-  {
-    id: 'cybersecurity',
-    title: 'Cybersecurity',
-    description: 'Comprehensive security solutions to protect your business',
-    icon: Shield,
-    features: ['Threat Detection', 'Security Audits', 'Data Protection', 'Compliance'],
-    pricing: 'Starting at $1,500/month',
-    icon: '🔒',
-    link: '/services/cybersecurity'
-  },
-  {
-    id: 'data-analytics',
-    title: 'Data Analytics',
-    description: 'Transform data into actionable business insights',
-    icon: BarChart3,
-    features: ['Business Intelligence', 'Predictive Analytics', 'Data Visualization', 'Reporting'],
-    pricing: 'Starting at $1,800/month',
-    icon: '📊',
-    link: '/services/data-analytics'
-  }
-];
-
-export default function ServicesIndex() {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  return (
+  ];  return (
     <>
       <Head>
         <title>Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive technology services including AI development, cloud services, cybersecurity, and data analytics solutions." />
       </Head>
-<<<<<<< HEAD
                     Learn More
                   </Link>
                 </div>
@@ -317,7 +265,6 @@ export default function ServicesIndex() {
             </Link>
           </div>
         </section>
-
 
                     Learn More
                   </Link>
@@ -346,7 +293,7 @@ export default function ServicesIndex() {
         </section>;
       </main>;
     </div>;
-  );
+  )
 };
 export default ServicesIndex;
 
@@ -558,12 +505,7 @@ export default ServicesIndex;
                   <span className="text-lg font-semibold text-green-600">{service && service.pricing}</span>;
                   <Link href={service && service.link} className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">;
 
-      <div className="min-h-screen bg-gray-50">;
-=======
-
-      <div className="min-h-screen bg-gray-50">
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-        {/* Hero Section */}
+      <div className="min-h-screen bg-gray-50">;        {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
@@ -608,64 +550,12 @@ export default ServicesIndex;
                     ))}
                   </div>
                   <Link
-<<<<<<< HEAD
       </main>;
     </div>;
-  ),;
+  ),
 };
 
 export default ServicesIndex;
       </div>;
     </>;
   );
-
-=======
-                    href={service.link}
-                    className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                  >
-                    Learn More
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Link>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-blue-600">
-          <div className="max-w-7xl mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Let's discuss how our services can help you achieve your goals.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
-                >
-                  Get Started
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-                <Link
-                  href="/about"
-                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
-                >
-                  Learn More
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -36,39 +36,39 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     };
 
     const handleMouseDown = () => {
-      document.body.classList.remove('keyboard-navigation');
-    };
+      document.body.classList.remove('keyboard-navigation')
+};
 
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('mousedown', handleMouseDown);
 
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown);
-    };
+      document.removeEventListener('mousedown', handleMouseDown)
+};
   }, [fontSize]);
 
   const toggleHighContrast = () => {
     setIsHighContrast(!isHighContrast);
-    document.documentElement.classList.toggle('high-contrast');
-  };
+    document.documentElement.classList.toggle('high-contrast')
+};
 
   const toggleReducedMotion = () => {
     setIsReducedMotion(!isReducedMotion);
-    document.documentElement.classList.toggle('reduce-motion');
-  };
+    document.documentElement.classList.toggle('reduce-motion')
+};
 
   const increaseFontSize = () => {
     const newSize = Math.min(fontSize + 2, 24);
     setFontSize(newSize);
-    document.documentElement.style.setProperty('--font-size', `${newSize}px`);
-  };
+    document.documentElement.style.setProperty('--font-size', `${newSize}px`)
+};
 
   const decreaseFontSize = () => {
     const newSize = Math.max(fontSize - 2, 12);
     setFontSize(newSize);
-    document.documentElement.style.setProperty('--font-size', `${newSize}px`);
-  };
+    document.documentElement.style.setProperty('--font-size', `${newSize}px`)
+};
 
   return (
     <>
@@ -119,7 +119,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       
       {children}
     </>
-  );
+  )
 };
 
 export default AccessibilityEnhancer;

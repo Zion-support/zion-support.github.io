@@ -32,7 +32,6 @@ export function ProfileProjects(): any ({ projects }: ProfileProjectsProps) {;
               </div>
             )}
 
-<<<<<<< HEAD
 <CardContent className="p-4">
               <h4 className="text-white font-medium mb-2">{project.title}</h4>
 import { Card, CardContent } from "@/components/ui/card",;
@@ -71,12 +70,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
               {project.tags && project.tags.length > 0 && (;
                 <div className="flex flex-wrap gap-1 mb-2">;
                   {project.tags.map((tag, i) => (;
-                    <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">;
-=======
-            <CardContent className="p-4">
-              <h4 className="text-white font-medium mb-2">{project.title}</h4>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-              <p className="text-zion-slate text-sm mb-3 line-clamp-2">
+                    <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">;              <p className="text-zion-slate text-sm mb-3 line-clamp-2">
                 {project.description}
               </p>
 
@@ -93,10 +87,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
                   ))}
                 </div>;
               )}
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <div className="text-xs text-zion-slate-light mt-2">
                 {project.date}
               </div>
@@ -105,10 +96,5 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
         ))}
       </div>
     </div>
-<<<<<<< HEAD
-  )
-=======
-  );
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-}
+  )}
 ;

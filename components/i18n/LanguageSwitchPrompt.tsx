@@ -11,7 +11,6 @@ export default function LanguageSwitchPrompt() {;
   const [suggested, setSuggested] = useState<string | null>(null);
   useEffect(() => {
 
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -42,7 +41,7 @@ const localeLabelKey: Record<string, string> = {;
   en: "lang && lang.english",;
   pt: "lang && lang.portuguese",;
   es: "lang && lang.spanish",;
-  ar: "lang && lang.arabic",;
+  ar: "lang && lang.arabic",
 };
 export default function LanguageSwitchPrompt() {;
   const { t } = useTranslation();
@@ -141,20 +140,20 @@ if (return null) {
   }
 ;
   return (
-    <div className="bg - amber - 50 dark:bg - amber - 900 / 20 border - b border - amber - 200 dark:border - amber - 800 text - amber - 900 dark:text - amber - 200">;
-      <div className="container mx - auto px - 4 py - 2 flex items - center justify - between gap - 4 text - sm">;
+    <div className="bg - amber - 50 dark:bg - amber - 900 / 20 border - b border - amber - 200 dark:border - amber - 800 text - amber - 900 dark:text-amber-200">;
+      <div className="container mx - auto px - 4 py - 2 flex items - center justify - between gap-4 text-sm">;
         <div>;
           {t ("lang.switch_prompt", { language: t (localeLabelKey[suggested]) })}
         </div>;
-        <div className="flex items - center gap - 2">;
+        <div className="flex items-center gap-2">;
           <button;
-            className="px - 3 py - 1 rounded bg - amber - 600 text - white";
+            className="px - 3 py - 1 rounded bg - amber-600 text-white";
             on_click={accept}
           >;
             {t ("lang.switch_accept")}
           </button>;
           <button;
-            className="px - 3 py - 1 rounded border border - amber - 300 dark:border - amber - 700";
+            className="px - 3 py - 1 rounded border border - amber - 300 dark:border-amber-700";
             on_click={decline}
           >;
             {t ("lang.switch_decline")}

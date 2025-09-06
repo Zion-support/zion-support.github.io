@@ -75,7 +75,6 @@ function on_submit() {
       set_message ('Application submitted. Await approval.');
       form.reset ();
 
-
   return (            .map(s => s.trim())
             .filter(Boolean);
           teamSize: Number(payload.teamSize |0)
@@ -174,7 +173,6 @@ function on_submit() {
       set_loading (false);    }
   }
 
-
   return (            .map(s => s && s.trim());
             .filter(Boolean);
           teamSize: Number(payload && payload.teamSize || 0),;
@@ -196,7 +194,6 @@ function on_submit() {
     }
   }
   return (
-
 
     <div className='max-w-2xl mx-auto space-y-6'>;
       <h1 className='text-2xl font-semibold'>;
@@ -368,6 +365,4 @@ function on_submit() {
       {message && <div className='text - sm'>{message}</div>}
       <div className='text - center text - xs text - gray - 500'>Powered by Zion</div>;
     </div>);
-
-
 

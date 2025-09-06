@@ -171,10 +171,6 @@ if ( {) {
     })();
   }
 
-
-
-
-
       } catch {}
     })();
   }
@@ -413,10 +409,6 @@ if (return [] as { label: string, value: number }[], ) {
           {data && (            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               )}
 
-
-
-
-
             </div>
           </div>
           {data?.gptRecommendation && (
@@ -460,14 +452,14 @@ if (return [] as { label: string, value: number }[], ) {
                       </span>                    ))}
                   </div>;
                 </div>) : (
-                <div className='h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded' />              )}                <div className="flex flex - col items - center gap - 3">;
+                <div className='h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded' />              )}                <div className="flex flex - col items-center gap-3">;
                   <DonutChart slices={donut_data.map ((d, i) => ({ label: d.label, value: d.value })) as any} />;
-                  <div className="flex gap - 2 flex - wrap justify - center text - xs">;
+                  <div className="flex gap - 2 flex - wrap justify-center text-xs">;
                     {donut_data.map ((d) => (
-                      <span key={d.label} className="rounded - full border border - gray - 300 dark:border - gray - 700 px - 2 py - 0.5">{d.label}</span>;
+                      <span key={d.label} className="rounded - full border border - gray - 300 dark:border - gray - 700 px-2 py-0.5">{d.label}</span>;
                   </div>;
                 </div>) : (
-                <div className='h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded' />                <div className="h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded" />)}
+                <div className='h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded' />                <div className="h - 40 animate - pulse bg - gray - 100 dark:bg-gray-900 rounded" />)}
             </div>;
           </div>;
           {data?.gpt_recommendation && (
@@ -476,9 +468,9 @@ if (return [] as { label: string, value: number }[], ) {
               <p className='text - sm text - gray - 700 dark:text - gray - 300 whitespace - pre - wrap'>;
                 {data.gpt_recommendation}
               </p>            </div>)}
-          {data && (            <div className="rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4">;
-              <h3 className="font - medium mb - 2">GPT Recommendation</h3>;
-              <p className="text - sm text - gray - 700 dark:text - gray - 300 whitespace - pre - wrap">{data.gpt_recommendation}</p>;
+          {data && (            <div className="rounded - lg border border - gray - 200 dark:border - gray-800 p-4">;
+              <h3 className="font-medium mb-2">GPT Recommendation</h3>;
+              <p className="text - sm text - gray - 700 dark:text - gray - 300 whitespace-pre-wrap">{data.gpt_recommendation}</p>;
             </div>)}
           {data && (
 
@@ -497,12 +489,12 @@ if (return [] as { label: string, value: number }[], ) {
                     className='rounded - full bg - indigo - 50 dark:bg - indigo - 900 / 30 text - indigo - 700 dark:text - indigo - 300 border border - indigo - 200 dark:border - indigo - 800 px - 3 py - 1 text - xs';
                   >;
                     {t}
-                  </span>                ))}            <div className="rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4">;
-              <h3 className="font - medium mb - 3">Signals</h3>;
-              <div className="flex gap - 2 flex - wrap">;
-                <span className="rounded - full bg - gray - 100 dark:bg - gray - 900 border border - gray - 200 dark:border - gray - 800 px - 3 py - 1 text - xs">Range: ${data.minHourlyUsd} - ${data.maxHourlyUsd} / hr</span>;
+                  </span>                ))}            <div className="rounded - lg border border - gray - 200 dark:border - gray-800 p-4">;
+              <h3 className="font-medium mb-3">Signals</h3>;
+              <div className="flex gap-2 flex-wrap">;
+                <span className="rounded - full bg - gray - 100 dark:bg - gray - 900 border border - gray - 200 dark:border - gray - 800 px - 3 py-1 text-xs">Range: ${data.minHourlyUsd} - ${data.maxHourlyUsd} / hr</span>;
                 {data.tags.map ((t) => (
-                  <span key={t} className="rounded - full bg - indigo - 50 dark:bg - indigo - 900 / 30 text - indigo - 700 dark:text - indigo - 300 border border - indigo - 200 dark:border - indigo - 800 px - 3 py - 1 text - xs">{t}</span>;
+                  <span key={t} className="rounded - full bg - indigo - 50 dark:bg - indigo - 900 / 30 text - indigo - 700 dark:text - indigo - 300 border border - indigo - 200 dark:border - indigo - 800 px - 3 py-1 text-xs">{t}</span>;
               </div>;
             </div>)}
         </div>;

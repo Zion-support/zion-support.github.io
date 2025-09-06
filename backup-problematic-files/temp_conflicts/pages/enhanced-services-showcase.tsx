@@ -133,20 +133,20 @@ export default function EnhancedServicesShowcase() {;
 ;
   const featuredServices = [;
     {;
-      title:' ArrowRight-Generation AI Services',;
-      description:'Revolutionary AI platforms that push the boundaries of what\'s possible',;
+      title:' ArrowRight-Generation AI Services',,
+  description:'Revolutionary AI platforms that push the boundaries of what\'s possible',;
       services:nextGenerationAIServices.slice(0, 3),;
       color:'from-purple-500 to-pink-600';
     },;
     {;
-      title:' Cutting-Edge IT Infrastructure',;
-      description:'Advanced infrastructure solutions for the modern enterprise',;
+      title:' Cutting-Edge IT Infrastructure',,
+  description:'Advanced infrastructure solutions for the modern enterprise',;
       services:cuttingEdgeITServices.slice(0, 3),;
       color:'from-blue-500 to-cyan-600';
     },;
     {;
-      title:' Innovative Micro SaaS Solutions',;
-      description:'Creative and practical SaaS tools for every business need',;
+      title:' Innovative Micro SaaS Solutions',,
+  description:'Creative and practical SaaS tools for every business need',;
       services:innovativeMicroSaasV2Services.slice(0, 3),;
       color:'from-green-500 to-emerald-600';
     }

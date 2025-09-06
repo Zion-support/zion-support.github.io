@@ -82,7 +82,7 @@ interface Stat {
   id: string;
   icon: React.ComponentType < any>;
   value: string;
-  label: string;
+  label: string,
   description: string;
   color: string;
   gradient: string
@@ -93,8 +93,8 @@ const stats: Sta t[] = [{';
     id: 'clients',';
     icon: User s,';';
     value: '500+',';';
-    label: 'Global Clients',';';
-    description: 'Serving businesses across 50+ countries',';';
+    label: 'Global Clients',';',
+  description: 'Serving businesses across 50+ countries',';';
     color: 'zion-cyan',';';
 const stats: Sta t[] = [{
     id: 'clients',
@@ -153,8 +153,8 @@ const stats: Sta t[] = [{;
     id: 'clients',;
     icon: User s,;
     value: '500+',;
-    label: 'Global Clients',;
-    description: 'Serving businesses across 50+ countries',;
+    label: 'Global Clients',,
+  description: 'Serving businesses across 50+ countries',;
     color: 'zion-cyan',;
     gradient: 'from-zion-cyan to-zion-blue';
   },;
@@ -162,8 +162,8 @@ const stats: Sta t[] = [{;
     id: 'uptime',;
     icon: Shiel d,;
     value: '99.99%',;
-    label: 'Uptime Guarantee',;
-    description: 'Enterprise-grade reliability and performance',;
+    label: 'Uptime Guarantee',,
+  description: 'Enterprise-grade reliability and performance',;
     color: 'zion-purple',;
     gradient: 'from-zion-purple to-zion-cyan';
   },;
@@ -171,8 +171,8 @@ const stats: Sta t[] = [{;
     id: 'roi',;
     icon: TrendingU p,;
     value: '600%',;
-    label: 'Average ROI',;
-    description: 'Proven business impact and cost savings',;
+    label: 'Average ROI',,
+  description: 'Proven business impact and cost savings',;
     color: 'zion-blue',;
     gradient: 'from-zion-blue to-zion-purple';
   },;
@@ -180,8 +180,8 @@ const stats: Sta t[] = [{;
     id: 'satisfaction',;
     icon: Sta r,;
     value: '4.9/5',;
-    label: 'Client Satisfaction',;
-    description: 'Consistently exceeding expectations',;
+    label: 'Client Satisfaction',,
+  description: 'Consistently exceeding expectations',;
     color: 'zion-cyan',;
     gradient: 'from-zion-cyan to-zion-purple';
   },;
@@ -189,8 +189,8 @@ const stats: Sta t[] = [{;
     id: 'innovation',;
     icon: Za p,;
     value: '50+',;
-    label: 'Patents & Innovations',;
-    description: 'Leading edge technology development',;
+    label: 'Patents & Innovations',,
+  description: 'Leading edge technology development',;
     color: 'zion-purple',;
     gradient: 'from-zion-purple to-zion-blue';
   },;
@@ -198,8 +198,8 @@ const stats: Sta t[] = [{;
     id: 'growth',;
     icon: Rocke t,;
     value: '300%',;
-    label: 'Annual Growth',;
-    description: 'Rapidly expanding global presence',;
+    label: 'Annual Growth',,
+  description: 'Rapidly expanding global presence',;
     color: 'zion-blue',;
     gradient: 'from-zion-blue to-zion-cyan';
 ];

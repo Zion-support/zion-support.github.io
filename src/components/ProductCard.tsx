@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 const stockStatus =;
     product && product.stock === undefined;
       : 'In stock';
@@ -14,12 +12,10 @@ const stockStatus =;
   const isMobile = useMediaQuery('(max-width: 768px)'),;
   const isTablet = useMediaQuery('(max-width: 1200px)'),;
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
 
   );
 }
-<<<<<<< HEAD
     product.stock === undefined;
       ? 'success';
       : product.stock <= 0;
@@ -53,16 +49,16 @@ const stockStatus =;
   const addToCart = () => {;
     if (!isAuthenticated) {;
       toast({;
-        title: 'Login Required',;
-        description: 'Please log in to add items to your cart.',;
+        title: 'Login Required',,
+  description: 'Please log in to add items to your cart.',;
         variant: 'destructive'}),;
       router.push(`/auth/login?returnTo=${encodeURIComponent(router.asPath)}`),;
       return;
     }
     dispatch(addItem({ id: product.id, title: productTitle, price: product.price ?? 0 })),;
     toast({;
-      title: 'Added to cart',;
-      description: `${productTitle} has been added to your cart`,;
+      title: 'Added to cart',,
+  description: `${productTitle} has been added to your cart`,;
       action: {;
         label: 'View Cart',;
         onClick: () => router.push('/cart')}});
@@ -199,24 +195,3 @@ const stockStatus =;
   );
 }
 ;
-=======
-
-  );
-}
-
-  const stock_status =;
-    product.stock === undefined;
-      : 'In stock';
-  const stock_variant =;
-    product.stock === undefined;
-  const product_title = product.title;
-  const image_url = Array.is_array (product.images) && product.images.length > 0 ? product.images[0] : null;
-  const imageAltText = product_title;
-  const is_mobile = useMediaQuery ('(max - width: 768px)'),
-  const is_tablet = useMediaQuery ('(max - width: 1200px)'),
-  const image_sizes = is_mobile ? '100vw' : is_tablet ? '50vw' : '33vw');
-}
-  );
-}
-;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

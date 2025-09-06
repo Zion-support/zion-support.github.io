@@ -138,11 +138,11 @@ if ( {) {
             ease: 'easeInOut',          }}  }, []);
 ;
   return (
-    <div className="fixed inset - 0 pointer - events - none overflow - hidden z - 0">;
+    <div className="fixed inset - 0 pointer - events - none overflow-hidden z-0">;
       {/* Canvas for particle effects */}
       <canvas;
         ref={canvas_ref}
-        className="absolute inset - 0 w - full h - full";
+        className="absolute inset - 0 w-full h-full";
         style={{ background: 'transparent' }}
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 via-cyan-900/20 to-black">;
@@ -154,9 +154,9 @@ if ( {) {
             ]
       />;
       {/* Animated gradient background */}
-      <div className="absolute inset - 0 bg - gradient - to - br from - black via - purple - 900 / 20 via - cyan - 900 / 20 to - black">;
+      <div className="absolute inset - 0 bg - gradient - to - br from - black via - purple - 900 / 20 via - cyan-900 / 20 to-black">;
         <motion.div;
-          className="absolute inset - 0 opacity - 30";
+          className="absolute inset-0 opacity-30";
           animate={{
             background: [;
               'radial - gradient (circle at 20% 80%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)radial - gradient (circle at 80% 20%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)radial - gradient (circle at 40% 40%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)radial - gradient (circle at 20% 80%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)';
@@ -184,10 +184,8 @@ if ( {) {
         />
       </div>
 
-
             duration: 20,
             repeat: Infinity,
-
 
             duration: 20,
             repeat: Infinity,
@@ -273,7 +271,7 @@ if ( {) {
             `
             backgroundSize: '50px 50px'
             ease: 'linear',          }}        <motion.div;
-          className="absolute inset - 0";
+          className="absolute inset-0";
           style={{
             background_image: `;
               linear - gradient (rgba (0, 255, 255, 0.1) 1px, transparent 1px);
@@ -310,9 +308,7 @@ if ( {) {
         />;
       </div>;
 
-
       {/* Quantum energy waves */}
-
 
           }}
       {/* Quantum energy waves */}
@@ -359,12 +355,10 @@ if ( {) {
             duration: 8,
             repeat: Infinity,
 
-
         />
       </div>
 
       {/* Holographic elements */}
-
 
         animate={{
         transition={{
@@ -414,7 +408,7 @@ if ( {) {
               opacity: [0, 1, 0],            }}        {Array.from ({ length: 8 }).map ((_, i) => (
           <motion.div;
             key={i}
-            className="absolute w - 1 h - 1 bg - cyan - 400 / 40 rounded - full";
+            className="absolute w - 1 h - 1 bg - cyan-400 / 40 rounded-full";
             style={{
             transition={{
               delay: i * 0 && 0.3,
@@ -456,7 +450,6 @@ if ( {) {
               repeat: Infinity,
               delay: i * 0.3,
 
-
         {Array.from({ length: 5 }).map((_, i) => (
           <motion.div
 
@@ -478,7 +471,7 @@ if ( {) {
         {Array.from ({ length: 5 }).map ((_, i) => (
           <motion.div;
             key={i}
-            className="absolute w - 0.5 h - 20 bg - gradient - to - b from - cyan - 400 / 60 to - transparent";
+            className="absolute w - 0.5 h - 20 bg - gradient - to - b from - cyan-400 / 60 to-transparent";
             style={{
               left: `${15 + (i * 15)}%`,
               top: '-20px';
@@ -490,23 +483,17 @@ if ( {) {
               ease: 'linear',            }}              ease: "linear"
             }}
 
-
-
-
             transition={{
               duration: 4,
               repeat: Infinity,
               delay: i * 0.8,
               ease: 'linear',            }}
 
-
-
-
           />
         ))}
       </div>;
     </div>;
-  );
+  )
 };
 
 export default UltraFuturisticBackground2029;  );
@@ -523,7 +510,7 @@ export default UltraFuturisticBackground2029;  );
         ))}
 };
 
-export default UltraFuturisticBackground2029;  );
+export default UltraFuturisticBackground2029;  )
 };
 export default UltraFuturisticBackground2029;
               delay: i * 0.8,
@@ -537,8 +524,6 @@ export default UltraFuturisticBackground2029;
 export default UltraFuturisticBackground2029);
 }
 ;
-export default UltraFuturisticBackground2029;
-
+export default UltraFuturisticBackground2029
 };
-
 

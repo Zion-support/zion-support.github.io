@@ -6,6 +6,6 @@ const AIContentCreationRevolution.js = ({ className }) => {
       <h1>AIContentCreationRevolution.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

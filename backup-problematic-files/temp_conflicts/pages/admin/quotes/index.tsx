@@ -5,7 +5,7 @@ export type QuoteRequest = {;
   name:string,;
   email:string,;
   budget:string,;
-  timeline:string,;
+  timeline:string,,
   description:string,;
   talentSlug:string | null,;
   aiSummary:string,;

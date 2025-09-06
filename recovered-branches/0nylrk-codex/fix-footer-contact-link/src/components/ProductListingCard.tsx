@@ -1,179 +1,17 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-import React from 'react';
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-import {useNavigate} from "react-router-dom";
+import React from 'react';import {useNavigate} from "react-router-dom";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {ProductListing} from "@/types/listings";
-import {Star, DollarSign} from "lucide-react";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-interface ProductListingCardProps {;
-  listing: ProductListing,;
-
-  view?: 'grid' | 'list';
-  onRequestQuote?: (id: string) => void;
-}
-
-
-export function ProductListingCard(): any ({ ;
-  listing, ;
-
-=======
-  view?: 'grid' | 'list';
-  onRequestQuote?: (id: string) => void;
-}
-export function ProductListingCard(): any ({ ;
-  listing, ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  view = 'grid';
-  onRequestQuote;
-}: ProductListingCardProps) {;
-  const isGrid = view === 'grid';
-  const navigate = useNavigate();
-<<<<<<< HEAD
-
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-import { useNavigate } from "react-router-dom",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { ProductListing } from "@/types/listings";
-import { Star, DollarSign } from "lucide-react";
-interface ProductListingCardProps {
-
-interface ProductListingCardProps {;
-  listing: ProductListing,;
-
-  view?: 'grid' | 'list';
-  onRequestQuote?: (id: string) => void;
-}
-  view = 'grid';
-  onRequestQuote;
-}: ProductListingCardProps) {;
-  const isGrid = view === 'grid';
-  const navigate = useNavigate();
-<<<<<<< HEAD
-  // Get the first image or use a placeholder
-  const imageUrl = listing.images && listing.images.length > 0
-    ? listing.images[0]
-    : '/placeholder.svg';
-import { ProductListing } from "@/types/listings",
-import { Star, DollarSign } from "lucide-react",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-interface ProductListingCardProps {
-  listing: ProductListing,
-  view?: 'grid' | 'list',
-  onRequestQuote?: (id: string) => void
-}
-
-export function ProductListingCard({ 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  listing, 
-  view = 'grid',
-
-=======
-  listing, 
-  view = 'grid',
-
-  listing, ;
-  view = 'grid';
-  listing, 
-  view = 'grid',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  onRequestQuote
+import {Star, DollarSign} from "lucide-react";  onRequestQuote
 }: ProductListingCardProps) {
   const isGrid = view === 'grid',
   const navigate = useNavigate(),
   
-  // Get the first image or use a placeholder
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const imageUrl = listing.images && listing.images.length > 0 
-    ? listing.images[0] 
-    : '/placeholder.svg',
-    
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  // Format price display
+  // Get the first image or use a placeholder  // Format price display
   const formatPrice = () => {
     if (listing.price === null) return "Custom pricing";
-    return `${listing.currency}${listing.price.toLocaleString()}`
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-import { use_navigate } from './react-router-dom';
-import { Badge } from '@/components / ui / badge';
-import { Button } from '@/components / ui / button';
-import { ProductListing } from '@/types / listings';
-import { Star, DollarSign } from './lucide-react';
-interface ProductListingCardProps {
-  listing: ProductListing,
-  view?: 'grid' | 'list';
-<<<<<<< HEAD
-=======
-
-=======
-
-    
-  // Format price display
-  const formatPrice = () => {
-    if (listing.price === null) return "Custom pricing",
-    return `${listing.currency}${listing.price.toLocaleString()}`
-  }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  // Handle image loading errors
-  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
-    e.currentTarget.src = '/placeholder.svg'
-  }
-  // Handle navigating to listing detail
-  const handleViewListing = () => {
-    navigate(`/listing/${listing.id}`)
-  }
-  // Handle request quote button click
-  const handleRequestQuote = (e: React.MouseEvent) => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    e.preventDefault();
-    e.stopPropagation()
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  },
+    return `${listing.currency}${listing.price.toLocaleString()}`  },
 
   // Handle image loading errors
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
@@ -190,23 +28,6 @@ interface ProductListingCardProps {
     e.preventDefault(),
     e.stopPropagation(),
     
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    if (onRequestQuote) {
-      onRequestQuote(listing.id)
-    } else {
-      // Default behavior if no handler provided
-      navigate(`/request-quote?listing=${listing.id}`)
-<<<<<<< HEAD
-
-=======
-    }
-  }
-  return (
-    <div className={`bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer`} onClick={handleViewListing}>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useNavigate } from "react-router-dom",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -215,7 +36,6 @@ import { Star, DollarSign } from "lucide-react",;
 interface ProductListingCardProps {;
   listing: ProductListing,;
   view?: 'grid' | 'list',;
-<<<<<<< HEAD
 
   onRequestQuote?: (id: string) => void;
 }
@@ -259,61 +79,20 @@ if ( {) {
   $2
 }
       onRequestQuote (listing.id);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-    } else {
       // Default behavior if no handler provided;
       navigate (`/request - quote?listing=${listing.id}`);
     }
   }
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  // Get the first image or use a placeholder;
-  const imageUrl = listing && listing.images && listing && listing.images.length > 0 ;
-    ? listing && listing.images[0] ;
-    : '/placeholder && placeholder.svg';
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   // Format price display;
   const formatPrice = () => {;
     if (listing && listing.price === null) return "Custom pricing";
-    return `${listing && listing.currency}${listing && listing.price.toLocaleString()}`;
-  };
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  // Handle image loading errors;
-  const handleImageError = (e: React && React.SyntheticEvent<HTMLImageElement>) => {;
-    e && e.currentTarget.src = '/placeholder && placeholder.svg';
-  };
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+    return `${listing && listing.currency}${listing && listing.price.toLocaleString()}`
+};
   // Handle navigating to listing detail;
   const handleViewListing = () => {;
-    navigate(`/listing/${listing && listing.id}`);
-  };
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  // Handle request quote button click;
-  const handleRequestQuote = (e: React && React.MouseEvent) => {;
-    e && e.preventDefault();
-    e && e.stopPropagation(),;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+    navigate(`/listing/${listing && listing.id}`)
+};
     if (onRequestQuote) {;
       onRequestQuote(listing && listing.id);
     } else {;
@@ -321,157 +100,8 @@ if ( {) {
       navigate(`/request-quote?listing=${listing && listing.id}`);
     }
   };
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  return (
-    <div className={`bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer`} onClick={handleViewListing}>;
-
-
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Image */}
-
-=======
-      {/* Image */}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      <div className={isGrid ? 'block w-full' : 'block w-1/3'} onClick={handleViewListing}>;
-        <div className={`relative ${isGrid ? 'h-48' : 'h-full'}`}>;
-          <img
-            src={imageUrl} 
-            alt={listing && listing.title}
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-      {/* Image */}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-            className="w-full h-full object-cover"
-            onError={handleImageError}
-          />;
-          {listing && listing.featured && (;
-            <Badge className="absolute top-2 right-2 bg-zion-purple text-white border-none">;
-              Featured;
-            </Badge>;
-          )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        </div>;
-      </div>;
-
-
-=======
-        </div>;
-      </div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      {/* Content */}
-      <div className={`flex flex-col justify-between ${isGrid ? 'p-4 flex-1' : 'p-4 flex-1'}`}>
-        <div>
-          {/* Category & Rating */}
-          <div className="flex justify-between items-center mb-2">;
-            <Badge variant="outline" className="bg-zion-blue-light/20 text-zion-slate-light border-zion-blue-light">;
-              {listing && listing.category}
-            </Badge>;
-            {listing && listing.rating && (;
-              <div className="flex items-center text-zion-slate-light">;
-                <Star className="h-4 w-4 fill-zion-cyan text-zion-cyan mr-1" />;
-                <span>{listing && listing.rating}</span>;
-                {listing && listing.reviewCount && (;
-                  <span className="text-xs ml-1">({listing && listing.reviewCount})</span>;
-                )}
-              </div>;
-            )}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-  onRequestQuote?: (id: string) => void;
-}
-;
-export function ProductListingCard({;
-  listing,;
-  view = 'grid',;
-  onRequestQuote;
-}: ProductListingCardProps) {;
-  const isGrid = view === 'grid',;
-  const navigate = useNavigate(),;
-  // Get the first image or use a placeholder;
-  const imageUrl = listing.images && listing.images.length > 0;
-    ? listing.images[0];
-    : '/placeholder.svg',;
-  // Format price display;
-  const formatPrice = () => {;
-    if (listing.price === null) return "Custom pricing",;
-    return `${listing.currency}${listing.price.toLocaleString()}`;
-  },;
-  // Handle image loading errors;
-  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {;
-    e.currentTarget.src = '/placeholder.svg';
-  },;
-  // Handle navigating to listing detail;
-  const handleViewListing = () => {;
-    navigate(`/listing/${listing.id}`);
-  },;
-  // Handle request quote button click;
-  const handleRequestQuote = (e: React.MouseEvent) => {;
-    e.preventDefault(),;
-    e.stopPropagation(),;
-    if (onRequestQuote) {;
-      onRequestQuote(listing.id);
-    } else {;
-      // Default behavior if no handler provided;
-      navigate(`/request-quote?listing=${listing.id}`);
-    }
-  };
-  return (;
-    <div className={`bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer`} onClick={handleViewListing}>;
-      {/* Image */}
-      <div className={isGrid ? 'block w-full' : 'block w-1/3'} onClick={handleViewListing}>
-        <div className={`relative ${isGrid ? 'h-48' : 'h-full'}`}>
-          <img
-            src={imageUrl}
-            alt={listing.title}
-            className="w-full h-full object-cover"
-            onError={handleImageError}
-          />
-          {listing.featured && (
-            <Badge className="absolute top-2 right-2 bg-zion-purple text-white border-none">
-              Featured
-            </Badge>
-          )}
-        </div>
-      </div>
-      {/* Content */}
-      <div className={`flex flex-col justify-between ${isGrid ? 'p-4 flex-1' : 'p-4 flex-1'}`}>
-        <div>
-          {/* Category & Rating */}
-          <div className="flex justify-between items-center mb-2">
-            <Badge variant="outline" className="bg-zion-blue-light/20 text-zion-slate-light border-zion-blue-light">
-              {listing.category}
-            </Badge>
-            {listing.rating && (
-              <div className="flex items-center text-zion-slate-light">
-                <Star className="h-4 w-4 fill-zion-cyan text-zion-cyan mr-1" />
-                <span>{listing.rating}</span>
-                {listing.reviewCount && (
-                  <span className="text-xs ml-1">({listing.reviewCount})</span>
-                )}
-              </div>
-            )}
-          </div>
-          </div>;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           {/* Title & Description */}
           <div onClick={handleViewListing} className="block">
             <h3 className="text-lg font-semibold text-white mb-2 hover:text-zion-cyan transition-colors">
@@ -514,8 +144,6 @@ export function ProductListingCard({;
             <Button
               size="sm"
               onClick={(e) => {
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
   return (
     <div className={`bg - zion - blue - dark border border - zion - blue - light rounded - lg overflow - hidden flex ${is_grid ? 'flex - col' : 'flex - row'} cursor - pointer`} on_click={handleViewListing}>;
@@ -525,11 +153,11 @@ export function ProductListingCard({;
           <img;
             src={image_url}
             alt={listing.title}
-            className="w - full h - full object - cover";
+            className="w - full h - full object-cover";
             on_error={handleImageError}
           />;
           {listing.featured && (
-            <Badge className="absolute top - 2 right - 2 bg - zion - purple text - white border - none">;
+            <Badge className="absolute top - 2 right - 2 bg - zion - purple text - white border-none">;
               Featured;
             </Badge>)}
         </div>;
@@ -538,54 +166,26 @@ export function ProductListingCard({;
       <div className={`flex flex - col justify - between ${is_grid ? 'p - 4 flex - 1' : 'p - 4 flex - 1'}`}>;
         <div>;
           {/* Category & Rating */}
-          <div className="flex justify - between items - center mb - 2">;
-            <Badge variant="outline" className="bg - zion - blue - light / 20 text - zion - slate - light border - zion - blue - light">;
+          <div className="flex justify - between items - center mb-2">;
+            <Badge variant="outline" className="bg - zion - blue - light / 20 text - zion - slate - light border - zion - blue-light">;
               {listing.category}
             </Badge>;
             {listing.rating && (
-              <div className="flex items - center text - zion - slate - light">;
-                <Star className="h - 4 w - 4 fill - zion - cyan text - zion - cyan mr - 1" />;
+              <div className="flex items - center text - zion - slate-light">;
+                <Star className="h - 4 w - 4 fill - zion - cyan text - zion - cyan mr-1" />;
                 <span>{listing.rating}</span>;
                 {listing.review_count && (
-                  <span className="text - xs ml - 1">({listing.review_count})</span>)}
+                  <span className="text - xs ml-1">({listing.review_count})</span>)}
               </div>)}
           </div>;
-<<<<<<< HEAD
-
-=======
-
-          </div>;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
-          </div>;
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-                e.stopPropagation();
-
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           {/* Title & Description */}
           <div on_click={handleViewListing} className="block">;
-            <h3 className="text - lg font - semibold text - white mb - 2 hover:text - zion - cyan transition - colors">;
+            <h3 className="text - lg font - semibold text - white mb - 2 hover:text - zion - cyan transition-colors">;
               {listing.title}
             </h3>;
           </div>;
-          <p className="text - sm text - zion - slate line - clamp - 2 mb - 4">;
+          <p className="text - sm text - zion - slate line - clamp - 2 mb-4">;
             {listing.description}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-          </div>;
 
           {/* Title & Description */}
           <div onClick={handleViewListing} className="block">;
@@ -604,408 +204,22 @@ export function ProductListingCard({;
                 <span
                   key={idx} 
                   className="text-xs text-zion-slate bg-zion-blue-light/20 px-2 py-1 rounded-full">;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   {tag}
                 </span>;
               ))}
             </div>;
           )}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-        </div>;
-
-
-=======
-        </div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-        {/* Footer with price and button */}
-        <div className="flex items-center justify-between mt-auto pt-3 border-t border-zion-blue-light">;
-          <div className="text-sm font-medium">;
-            {listing && listing.price !== null ? (;
-              <div className="flex items-center text-zion-purple">;
-                <DollarSign className="h-4 w-4 mr-1" />;
-                {formatPrice()}
-              </div>;
-            ) : (;
-              <span className="text-zion-slate-light">;
-                {formatPrice()}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-                e.stopPropagation(),
-=======
-              </span>;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-            )}
-
-
-                e.stopPropagation(),
-
-
-=======
-                e.stopPropagation();
-
-                e.stopPropagation(),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
-                e.stopPropagation(),
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-                navigate(`/listing/${listing.id}`)
+        </div>;                navigate(`/listing/${listing.id}`)
               }}
               className="bg-zion-purple hover:bg-zion-purple-dark text-white"
             >
               Buy Now
             </Button>
             {onRequestQuote && (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-              </span>;
-            )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-          </div>;
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-          <div className="flex gap-2">;
-            <Button
-              size="sm" 
-              onClick={(e) => {;
-                e && e.stopPropagation();
-                navigate(`/listing/${listing && listing.id}`);
-              }}
-              className="bg-zion-purple hover:bg-zion-purple-dark text-white";
-            >;
-              Buy Now;
-            </Button>;
-            {onRequestQuote && (;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <Button
                 size="sm"
                 variant="outline"
                 onClick={handleRequestQuote}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">;
-=======
-import { useNavigate } from "react-router-dom",;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { ProductListing } from "@/types/listings",;
-import { Star, DollarSign } from "lucide-react",;
-;
-interface ProductListingCardProps {;
-  listing:ProductListing,;
-  view?:'grid' | 'list',;
-  onRequestQuote?:(id:string) => void;
-}
-;
-export function ProductListingCard({ ;
-  listing, ;
-  view = 'grid',;
-  onRequestQuote;
-} ProductListingCardProps) {;
-  const isGrid = view === 'grid',;
-  const navigate = useNavigate(),;
-  ;
-  // Get the first image or use a placeholder;
-  const imageUrl = listing.images && listing.images.length > 0 ;
-    ? listing.images[0] ;
-    :'/placeholder.svg',;
-    ;
-  // Format price display;
-  const formatPrice = () => {;
-    if (listing.price === null) return "Custom pricing",;
-    return `${listing.currency}${listing.price.toLocaleString()}`,;
-  },;
-;
-  // Handle image loading errors;
-  const handleImageError = (e:React.SyntheticEvent<HTMLImageElement>) => {;
-    e.currentTarget.src = '/placeholder.svg';
-  },;
-  ;
-  // Handle navigating to listing detail;
-  const handleViewListing = () => {;
-    navigate(`/listing/${listing.id}`),;
-  },;
-  ;
-  // Handle request quote button click;
-  const handleRequestQuote = (e:React.MouseEvent) => {;
-    e.preventDefault(),;
-    e.stopPropagation(),;
-    ;
-    if (onRequestQuote) {;
-      onRequestQuote(listing.id);
-    } else {;
-      // Default behavior if no handler provided;
-      navigate(`/request-quote?listing=${listing.id}`),;
-    }
-  },;
-  ;
-  return (;
-    <div className={`bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' :'flex-row'} cursor-pointer`} onClick={handleViewListing}>;
-      {/* Image */}
-      <div className={isGrid ? 'block w-full' :'block w-1/3'} onClick={handleViewListing}>;
-        <div className={`relative ${isGrid ? 'h-48' :'h-full'}`}>;
-          <img ;
-            src={imageUrl} ;
-            alt={listing.title}
-            className="w-full h-full object-cover";
-            onError={handleImageError}
-          />;
-          {listing.featured && (;
-            <Badge className="absolute top-2 right-2 bg-zion-purple text-white border-none">;
-              Featured;
-            </Badge>;
-          )}
-        </div>;
-      </div>;
-      ;
-      {/* Content */}
-      <div className={`flex flex-col justify-between ${isGrid ? 'p-4 flex-1' :'p-4 flex-1'}`}>;
-        <div>;
-          {/* Category & Rating */}
-          <div className="flex justify-between items-center mb-2">;
-            <Badge variant="outline" className="bg-zion-blue-light/20 text-zion-slate-light border-zion-blue-light">;
-              {listing.category}
-            </Badge>;
-            {listing.rating && (;
-              <div className="flex items-center text-zion-slate-light">;
-                <Star className="h-4 w-4 fill-zion-cyan text-zion-cyan mr-1" />;
-                <span>{listing.rating}</span>;
-                {listing.reviewCount && (;
-                  <span className="text-xs ml-1">({listing.reviewCount})</span>;
-                )}
-              </div>;            )}
-          </div>;
-          ;
-          {/* Title & Description */}
-          <div onClick={handleViewListing} className="block">;
-            <h3 className="text-lg font-semibold text-white mb-2 hover:text-zion-cyan transition-colors">;
-              {listing.title}
-            </h3>;
-          </div>;
-          <p className="text-sm text-zion-slate line-clamp-2 mb-4">;            {listing.description}
-          </p>;
-          ;
-          {/* Tags */}
-          {listing.tags && listing.tags.length > 0 && (;
-            <div className="flex flex-wrap gap-1 mb-4">;
-              {listing.tags.map((tag, idx) => (;
-                <span ;
-                  key={idx} ;
-                  className="text-xs text-zion-slate bg-zion-blue-light/20 px-2 py-1 rounded-full";
-                >;
-                  {tag}
-                </span>;              ))}
-            </div>;
-          )}
-        </div>;
-        ;
-        {/* Footer with price and button */}
-        <div className="flex items-center justify-between mt-auto pt-3 border-t border-zion-blue-light">;
-          <div className="text-sm font-medium">;
-            {listing.price !== null ? (;
-              <div className="flex items-center text-zion-purple">;
-                <DollarSign className="h-4 w-4 mr-1" />;
-                {formatPrice()}
-              </div>;
-            ) :(;
-              <span className="text-zion-slate-light">;
-                {formatPrice()}
-              </span>;
-            )}
-          </div>;
-          ;
-          <div className="flex gap-2">;
-            <Button ;
-              size="sm" ;
-              onClick={(e) => {;
-                e.stopPropagation(),;
-                navigate(`/listing/${listing.id}`),;
-              }}
-              className="bg-zion-purple hover:bg-zion-purple-dark text-white";
-            >;
-              Buy Now;
-            </Button>;
-            ;
-            {onRequestQuote && (;
-              <Button ;
-                size="sm";
-                variant="outline" ;
-                onClick={handleRequestQuote}
-                className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
-              >;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-                Request Quote;
-              </Button>;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-            )}
-          </div>;
-        </div>;
-      </div>;
-    </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  );
-          </p>;
-          {/* Tags */}
-          {listing.tags && listing.tags.length > 0 && (
-            <div className="flex flex - wrap gap - 1 mb - 4">;
-              {listing.tags.map ((tag, idx) => (
-                <span;
-                  key={idx}
-                  className="text - xs text - zion - slate bg - zion - blue - light / 20 px - 2 py - 1 rounded - full";
-                >;
-                  {tag}
-                </span>))}
-            </div>)}
-        </div>;
-        {/* Footer with price and button */}
-        <div className="flex items - center justify - between mt - auto pt - 3 border - t border - zion - blue - light">;
-          <div className="text - sm font - medium">;
-            {listing.price !== null ? (
-              <div className="flex items - center text - zion - purple">;
-                <DollarSign className="h - 4 w - 4 mr - 1" />;
-                {format_price ()}
-              </div>) : (
-              <span className="text - zion - slate - light">;
-                {format_price ()}
-              </span>)}
-          </div>;
-          <div className="flex gap - 2">;
-            <Button;
-              size="sm";
-              on_click={(e) => {
-                e.stop_propagation ();
-                navigate (`/listing/${listing.id}`);
-              }}
-              className="bg - zion - purple hover:bg - zion - purple - dark text - white";
-            >;
-              Buy Now;
-            </Button>;
-            {onRequestQuote && (
-              <Button;
-                size="sm";
-                variant="outline";
-                on_click={handleRequestQuote}
-                className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
-              >;
-                Request Quote;
-              </Button>)}
-          </div>;
-        </div>;
-      </div>;
-    </div>);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-  ),; interface ProductListingCardProps {
-  listing: ProductListing;
-view?: 'grid' | 'list';
-onRequestQuote?: (id: string) => void 
-}export function ProductListingCard ({
-  listing;
-view = 'grid';
-onRequestQuote 
-}: ProductListingCardProps) {
-  const isGrid = view === 'grid';
-const navigate = useNavigate ();
-//Format price display 
-};
-}
-};
-return (<div className= {
-  `bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden flex $ {
-  isGrid ? 'flex-col' : 'flex-row' 
-}cursor-pointer` 
-}onClick= {
-  handleViewListing 
-}> {
-  /* Image */ 
-}<div className= {
-  isGrid ? 'block w-full' : 'block w-1/3' 
-}onClick= {
-  handleViewListing 
-}> <div className= {
-  `relative $ {
-  isGrid ? 'h-48' : 'h-full' 
-}` 
-}> <img Featured </Badge>) 
-}</div> </div> {
-  /* Content */ 
-}<div className= {
-  `flex flex-col justify-between $ {
-  isGrid ? 'p-4 flex-1' : 'p-4 flex-1' 
-}` 
-}> <div>) 
-}</div>) 
-}</div> <span key= {
-  idx 
-}className="text-xs text-zion-slate bg-zion-blue-light/20 px-2 py-1 rounded-full" > {
-  tag 
-}</span>) ) 
-}</div>) 
-}</div> </span>) 
-}</div> <div className="flex gap-2" > <Button 
-}
-}className="bg-zion-purple hover:bg-zion-purple-dark text-white" > Buy Now </Button> {
-  onRequestQuote && (<Button size="sm" variant="outline" onClick= {
-  handleRequestQuote 
-}className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" > Request Quote </Button>) 
-}</div> </div> </div> </div>) 
-                className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-              >
-                Request Quote
-              </Button>
-            )}
-          </div>
-        </div>
-      </div>
-    </div>
-  )
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-}
+                className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">;                Request Quote;
+              </Button>;}

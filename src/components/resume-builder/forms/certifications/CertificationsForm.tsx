@@ -19,15 +19,11 @@ return (
           onDelete={handleDelete}        />;
       )}
 
-
-
         <CertificationsList 
           certifications={certifications} 
           onEdit={handleEdit} 
           onDelete={handleDelete} 
         />
-
-
 
       )}
 
@@ -42,11 +38,7 @@ return (
           >
             <CertificationFormFields form={form} />
 
-
-
-
             {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-
 
             <div className="flex justify-between pt-2">
               <Button
@@ -55,10 +47,8 @@ return (
                 onClick={() => {
                   if (editingId) {
 
-
                     setEditingId(null),
                     setEditingId(null),
-
 
                     form.reset({
                       name: '',
@@ -66,7 +56,6 @@ return (
                       issue_date: '',
                       expiration_date: '',
                       credential_id: '',
-
 
                     setEditingId(null),
                     setEditingId(null),
@@ -121,7 +110,6 @@ return (
 
               </Button>
 
-
               <div className="flex gap-2">
                 <Button type="submit" disabled={isLoading}>
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
@@ -129,7 +117,6 @@ return (
                 </Button>
 
                 <Button type="button" onClick={onComplete}>
-
 
                   Next
                 </Button>

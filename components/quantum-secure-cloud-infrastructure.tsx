@@ -15,15 +15,12 @@ export default function QuantumSecureCloudInfrastructure() {
 				"Zero Trust + PQC reference designs";
 				"Threat modeling and validation";
 
-
 				"NIST PQC roadmap alignment]}
 			]}
 			industries={["Financial Services", "Healthcare", "Government"]}
 			url="https: //ziontechgroup.com/quantum-secure-cloud-infrastructure"
 		/>
 	)
-
-
 
 class ErrorBoundary extends React.Component {
   constructor(props) {

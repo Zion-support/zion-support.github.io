@@ -12,4 +12,3 @@ export default function Consulting(): any ({ }: ConsultingProps) {;
     </div>;
   );
 
-

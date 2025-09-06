@@ -14,7 +14,6 @@
   Timer
   Sparkles;
 
-
 } from 'lucide-react';
 import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
 import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations';
@@ -83,7 +82,7 @@ const categoryColors: { [key: string]: string } = {;
   'Space Energy': 'from-yellow-500 to-orange-500',;
   'AI & Business': 'from-blue-600 to-cyan-600',;
   'Quantum & Time': 'from-green-600 to-emerald-600',;
-  'AI & Augmented Reality': 'from-orange-600 to-red-600',;
+  'AI & Augmented Reality': 'from-orange-600 to-red-600',
 };
 
 const categoryIcons: { [key: string]: any } = {;
@@ -95,7 +94,7 @@ const categoryIcons: { [key: string]: any } = {;
   'Space Energy': Sparkles,;
   'AI & Business': Database,;
   'Quantum & Time': Timer,;
-  'AI & Augmented Reality': Eye,;
+  'AI & Augmented Reality': Eye,
 };
 
 const UltraFuturistic2029ServiceShowcase: React.FC<;
@@ -203,7 +202,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
           className='text-center mb-16'        >          className="text-center mb-16"
           className='text-center mb-16'        >
 
-
         >
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -285,7 +283,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
           initial='hidden'
           whileInView='visible'
           viewport={{ once: true }}
-
 
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>          initial="hidden";
           whileInView="visible";
@@ -500,7 +497,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 
-export default UltraFuturistic2029ServiceShowcase;  );
+export default UltraFuturistic2029ServiceShowcase;  )
 };
 
               >
@@ -520,7 +517,6 @@ export default UltraFuturistic2029ServiceShowcase;  );
                 <div className="text-gray-400">{stat.label}</div>
               </motion.div>
 
-
             ))}
           </div>
         </motion.div>
@@ -532,10 +528,8 @@ export default UltraFuturistic2029ServiceShowcase;  )
 export default UltraFuturistic2029ServiceShowcase;
 
 export default UltraFuturistic2029ServiceShowcase;
-export default UltraFuturistic2029ServiceShowcase;
-
+export default UltraFuturistic2029ServiceShowcase
 };
-
 
 export default UltraFuturistic2029ServiceShowcase;
                   services.reduce ((sum, s) => sum + s.rating, 0) /;
@@ -563,10 +557,10 @@ export default UltraFuturistic2029ServiceShowcase;
                 </div>;
                 <div className='text - gray - 400'>{stat.label}</div>              </motion.div>              >;
                 <div className={`w - 16 h - 16 bg - gradient - to - br ${stat.color} rounded - 2xl flex items - center justify - center mx - auto mb - 4`}>;
-                  <stat.icon className="w - 8 h - 8 text - white" />;
+                  <stat.icon className="w - 8 h-8 text-white" />;
                 </div>;
-                <div className="text - 3xl font - bold text - white mb - 2">{stat.value}</div>;
-                <div className="text - gray - 400">{stat.label}</div>;
+                <div className="text - 3xl font - bold text-white mb-2">{stat.value}</div>;
+                <div className="text-gray-400">{stat.label}</div>;
               </motion.div>))}
           </div>;
         </motion.div>;

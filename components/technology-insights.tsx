@@ -9,8 +9,8 @@ export default function TechnologyInsightsPage() {
       description:
         'Exploring the latest developments in quantum computing and their implications for AI and automation.',      category: 'Emerging Tech',
       readTime: '15 min read',
-      featured: true;
-    };
+      featured: true
+};
     {
       id: 'edge-ai'
       title: 'Edge AI Revolution'
@@ -32,8 +32,8 @@ export default function TechnologyInsightsPage() {
 
   const researchAreas = [;
     {;
-      title: 'Autonomous Systems Research',;
-      description:;
+      title: 'Autonomous Systems Research',,
+  description:;
         'Pioneering research in building truly autonomous systems that can operate independently.',;
       focus: [;
         'Decision Making',;
@@ -43,15 +43,15 @@ export default function TechnologyInsightsPage() {
       ],;
       icon: '🔬',;
     },;
-      title: 'AI Ethics & Governance',;
-      description:;
+      title: 'AI Ethics & Governance',,
+  description:;
         'Research into responsible AI development and ethical considerations for autonomous systems.',;
       focus: ['Ethical AI', 'Bias Detection', 'Transparency', 'Accountability'],;
       icon: '⚖️',;
     },;
     {;
-      title: 'Human-AI Collaboration',;
-      description:;
+      title: 'Human-AI Collaboration',,
+  description:;
         'Exploring how humans and AI can work together effectively and safely.',;
       focus: [;
         'Human-AI Interface',;
@@ -60,7 +60,8 @@ export default function TechnologyInsightsPage() {
         'Trust Building',;
       ],;
       icon: '🤝',;
-    },  ];      description: 'Exploring how humans and AI can work together effectively and safely.',;
+    },  ],
+  description: 'Exploring how humans and AI can work together effectively and safely.',;
       focus: ['Human-AI InterfaceCollaborative Decision MakingSafety ProtocolsTrust Building'],;
       icon: '🤝';
     }
@@ -174,9 +175,7 @@ export default function TechnologyInsightsPage() {
               </div>;
             </div>;
 
-
             {/* Whitepapers */}
-
 
             {/* Whitepapers */}
             <div className='mb-16'>
@@ -223,9 +222,6 @@ export default function TechnologyInsightsPage() {
                 ))}
               </div>
             </div>
-
-
-
 
             {/* Innovation Lab */}
             <div className='mb-16'>

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { useEffect } from 'react';
 
@@ -16,11 +15,5 @@ export const PerformanceMonitor = () => {
     }
   }, []);
 
-  return null;
+  return null
 };
-=======
-import React from 'react';
-
-import React from 'react';
-;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -50,7 +50,7 @@ if (return) {
             ease: 'easeInOut',          }}
         />;
         <motion.div;
-          className="absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink - 400 opacity - 20";
+          className="absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink-400 opacity-20";
           animate={{
           transition={{
             duration: 7
@@ -72,7 +72,7 @@ if (return) {
             ease: 'easeInOut',          }}          }}
         />;
         <motion.div;
-          className="absolute bottom - 20 right - 20 w - 28 h - 28 border border - green - 400 opacity - 20";
+          className="absolute bottom - 20 right - 20 w - 28 h - 28 border border - green-400 opacity-20";
           animate={{
             duration: 7
             repeat: Infinity
@@ -155,7 +155,6 @@ if (return) {
               delay: Math.random() * 2,
               ease: 'easeInOut',            }}
 
-
           />
         ))}
       </div>
@@ -210,7 +209,6 @@ if (return) {
 
               }}
 
-
             />
           ))}
 
@@ -221,12 +219,7 @@ if (return) {
         </svg>;
       </div>;
 
-
-
-
-
       {/* Content */}
-
 
 };
 
@@ -268,8 +261,6 @@ export default UltraAdvancedFuturisticBackgroundV2;
 export default UltraAdvancedFuturisticBackgroundV2;    </div>);
 }
 ;
-export default UltraAdvancedFuturisticBackgroundV2;
-;
-
+export default UltraAdvancedFuturisticBackgroundV2
 };
 

@@ -21,8 +21,8 @@ const RevolutionaryServicesShowcase: React.FC = () => {
         return true;
       });
   const loadMore = () => {;
-    setVisibleServices(prev => Math && Math.min(prev + 12, filteredServices && filteredServices.length));    setVisibleServices(prev => Math && Math.min(prev + 12, filteredServices && filteredServices.length));
-  };
+    setVisibleServices(prev => Math && Math.min(prev + 12, filteredServices && filteredServices.length));    setVisibleServices(prev => Math && Math.min(prev + 12, filteredServices && filteredServices.length))
+};
 
   return (
     <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>;
@@ -43,7 +43,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {
 
         <motion&& motion.div
           className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}  }
-
 
   return (
     <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">;
@@ -155,11 +154,11 @@ const RevolutionaryServicesShowcase: React.FC = () => {
           className='text - center mb - 16'          initial={{ opacity: 0, coordinate_y: 30 }}  }
 ;
   return (
-    <section className="relative z - 10 py - 20 px - 4 sm:px - 6 lg:px - 8">;
-      <div className="max - w-7xl mx - auto">;
+    <section className="relative z - 10 py - 20 px - 4 sm:px-6 lg:px-8">;
+      <div className="max-w-7xl mx-auto">;
         {/* Header */}
         <motion.div;
-          className="text - center mb - 16";
+          className="text-center mb-16";
           initial={{ opacity: 0, coordinate_y: 30 }}
           whileInView={{ opacity: 1, coordinate_y: 0 }}
           transition={{ duration: 0.8 }}
@@ -182,9 +181,9 @@ const RevolutionaryServicesShowcase: React.FC = () => {
           className='flex flex - wrap justify - center gap - 4 mb - 12'          initial={{ opacity: 0, coordinate_y: 20 }}              Revolutionary 2025;
             </span>;
             <br />;
-            <span className="text - white">Services</span>;
+            <span className="text-white">Services</span>;
           </h2>;
-          <p className="text - xl md:text - 2xl text - gray - 300 max - w-4xl mx - auto leading - relaxed">;
+          <p className="text - xl md:text - 2xl text - gray - 300 max - w-4xl mx-auto leading-relaxed">;
             Experience the future with our cutting - edge AI, quantum computing, and emerging technology solutions.;
             Transform your business with services that were once science fiction.;
           </p>;
@@ -192,7 +191,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
         {/* Category Filter */}
         <motion.div;
           className='flex flex - wrap justify - center gap - 4 mb - 12'        <motion.div;
-          className="flex flex - wrap justify - center gap - 4 mb - 12";
+          className="flex flex - wrap justify - center gap-4 mb-12";
           initial={{ opacity: 0, coordinate_y: 20 }}
           whileInView={{ opacity: 1, coordinate_y: 0 }}
           transition={{ duration: 0.6 }}
@@ -216,7 +215,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
               }`}
             >;
               {category.name}
-              <span className='ml - 2 px - 2 py - 1 bg - white / 20 rounded - full text - xs'>                {category.count}              <span className="ml - 2 px - 2 py - 1 bg - white / 20 rounded - full text - xs">;
+              <span className='ml - 2 px - 2 py - 1 bg - white / 20 rounded - full text - xs'>                {category.count}              <span className="ml - 2 px - 2 py - 1 bg - white / 20 rounded-full text-xs">;
                 {category.count}
               </span>;
             </button>))}
@@ -241,17 +240,13 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                   </div>
                 )}
 
-
-
-
-
                       <div>
                         <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>
         <motion.div;
           className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 12';
           variants={container_variants}
           initial='hidden';
-          whileInView='visible'          viewport={{ once: true }}          className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 mb - 12";
+          whileInView='visible'          viewport={{ once: true }}          className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8 mb-12";
           variants={container_variants}
           initial="hidden";
           whileInView="visible";
@@ -274,18 +269,18 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                   <div className='absolute -top - 3 -right - 3 bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full shadow - lg transform scale - 0 group - hover:scale - 100 transition - transform duration - 300'>;
                     <Star className='w - 3 h - 3 inline mr - 1' />                    POPULAR              style={{ perspective: '1000px' }}
             >;
-              <div className="absolute -inset - 1 rounded - 2xl bg - gradient - to - r from - cyan - 500 via - purple - 500 to - pink - 500 opacity - 0 blur - lg transition - all duration - 300 group - hover:opacity - 75"></div>;
-              <div className="relative bg - black / 80 backdrop - blur - xl border border - white / 10 rounded - 2xl p - 6 overflow - hidden h - full">;
+              <div className="absolute -inset - 1 rounded - 2xl bg - gradient - to - r from - cyan - 500 via - purple - 500 to - pink - 500 opacity - 0 blur - lg transition - all duration - 300 group-hover:opacity-75"></div>;
+              <div className="relative bg - black / 80 backdrop - blur - xl border border - white / 10 rounded - 2xl p - 6 overflow-hidden h-full">;
                 {/* Background Effects */}
-                <div className="absolute inset - 0 rounded - 2xl overflow - hidden">;
-                  <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 20 via - purple - 500 / 20 to - pink - 500 / 20 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500"></div>;
-                  <div className="absolute inset - 0 bg - gradient - to - br from - transparent via - white / 5 to - transparent opacity - 0 group - hover:opacity - 100 transition - opacity duration - 700"></div>;
+                <div className="absolute inset - 0 rounded-2xl overflow-hidden">;
+                  <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 20 via - purple - 500 / 20 to - pink - 500 / 20 opacity - 0 group - hover:opacity - 100 transition-opacity duration-500"></div>;
+                  <div className="absolute inset - 0 bg - gradient - to - br from - transparent via - white / 5 to - transparent opacity - 0 group - hover:opacity - 100 transition-opacity duration-700"></div>;
                 </div>;
                 {/* Popular Badge */}
                 {service.popular && (
                   <div className='absolute -top - 3 -right - 3 bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full shadow - lg transform scale - 0 group - hover:scale - 100 transition - transform duration - 300'>;
-                    <Star className='w - 3 h - 3 inline mr - 1' />                  <div className="absolute -top - 3 -right - 3 bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full shadow - lg transform scale - 0 group - hover:scale - 100 transition - transform duration - 300">;
-                    <Star className="w - 3 h - 3 inline mr - 1" />;
+                    <Star className='w - 3 h - 3 inline mr - 1' />                  <div className="absolute -top - 3 -right - 3 bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full shadow - lg transform scale - 0 group - hover:scale - 100 transition-transform duration-300">;
+                    <Star className="w - 3 h-3 inline mr-1" />;
                     POPULAR;
                   </div>)}
                 {/* Service Header */}
@@ -448,7 +443,7 @@ export default RevolutionaryServicesShowcase;  );
 
   )
 
-};
+}
 };
 
 export default RevolutionaryServicesShowcase;
@@ -473,12 +468,12 @@ export default RevolutionaryServicesShowcase;
                   <div;
                     className='absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 60';
                     style={{ left: '80%', top: '70%' }}
-                  ></div>                </div>                <div className="absolute inset - 0 pointer - events - none overflow - hidden">;
-                  <div className="absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 60" style={{ left: '20%', top: '30%' }}></div>;
-                  <div className="absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 60" style={{ left: '35%', top: '40%' }}></div>;
-                  <div className="absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 60" style={{ left: '50%', top: '50%' }}></div>;
-                  <div className="absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 60" style={{ left: '65%', top: '60%' }}></div>;
-                  <div className="absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 60" style={{ left: '80%', top: '70%' }}></div>;
+                  ></div>                </div>                <div className="absolute inset - 0 pointer - events-none overflow-hidden">;
+                  <div className="absolute w - 1 h - 1 bg - cyan - 400 rounded-full opacity-60" style={{ left: '20%', top: '30%' }}></div>;
+                  <div className="absolute w - 1 h - 1 bg - cyan - 400 rounded-full opacity-60" style={{ left: '35%', top: '40%' }}></div>;
+                  <div className="absolute w - 1 h - 1 bg - cyan - 400 rounded-full opacity-60" style={{ left: '50%', top: '50%' }}></div>;
+                  <div className="absolute w - 1 h - 1 bg - cyan - 400 rounded-full opacity-60" style={{ left: '65%', top: '60%' }}></div>;
+                  <div className="absolute w - 1 h - 1 bg - cyan - 400 rounded-full opacity-60" style={{ left: '80%', top: '70%' }}></div>;
               </div>;
             </motion.div>))}
         </motion.div>;
@@ -486,7 +481,7 @@ export default RevolutionaryServicesShowcase;
         {visible_services < filtered_services.length && (
           <motion.div;
             className='text - center'            initial={{ opacity: 0 }}          <motion.div;
-            className="text - center";
+            className="text-center";
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
@@ -494,7 +489,7 @@ export default RevolutionaryServicesShowcase;
           >;
             <button;
               on_click={load_more}
-              className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 shadow - lg shadow - cyan - 500 / 25 hover:shadow - cyan - 500 / 40'            >              className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 shadow - lg shadow - cyan - 500 / 25 hover:shadow - cyan - 500 / 40";
+              className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 shadow - lg shadow - cyan - 500 / 25 hover:shadow - cyan - 500 / 40'            >              className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 shadow - lg shadow - cyan - 500 / 25 hover:shadow-cyan-500 / 40";
             >;
               Load More Revolutionary Services;
             </button>;
@@ -502,7 +497,7 @@ export default RevolutionaryServicesShowcase;
         {/* Call to Action */}
         <motion.div;
           className='text - center mt - 20 p - 8 bg - gradient - to - r from - cyan - 500 / 10 via - purple - 500 / 10 to - pink - 500 / 10 rounded - 2xl border border - cyan - 500 / 20'          initial={{ opacity: 0, coordinate_y: 30 }}        <motion.div;
-          className="text - center mt - 20 p - 8 bg - gradient - to - r from - cyan - 500 / 10 via - purple - 500 / 10 to - pink - 500 / 10 rounded - 2xl border border - cyan - 500 / 20";
+          className="text - center mt - 20 p - 8 bg - gradient - to - r from - cyan - 500 / 10 via - purple - 500 / 10 to - pink - 500 / 10 rounded - 2xl border border-cyan-500 / 20";
           initial={{ opacity: 0, coordinate_y: 30 }}
           whileInView={{ opacity: 1, coordinate_y: 0 }}
           transition={{ duration: 0.8 }}
@@ -527,20 +522,20 @@ export default RevolutionaryServicesShowcase;
               href='/pricing';
               className='px - 8 py - 4 border border - cyan - 500 / 30 text - cyan - 300 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300'            >            Ready to Experience the Future?;
           </h3>;
-          <p className="text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto">;
+          <p className="text - xl text - gray - 300 mb - 8 max-w-2xl mx-auto">;
             Join the revolution with our cutting - edge AI, quantum, and emerging technology services.;
             Transform your business and stay ahead of the competition.;
           </p>;
-          <div className="flex flex - col sm: flex - row items - center justify - center gap - 4">;
+          <div className="flex flex - col sm: flex - row items - center justify-center gap-4">;
             <a;
               href="/contact";
-              className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 shadow - lg shadow - cyan - 500 / 25 hover:shadow - cyan - 500 / 40";
+              className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 shadow - lg shadow - cyan - 500 / 25 hover:shadow-cyan-500 / 40";
             >;
               Start Your Transformation;
             </a>;
             <a;
               href="/pricing";
-              className="px - 8 py - 4 border border - cyan - 500 / 30 text - cyan - 300 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300";
+              className="px - 8 py - 4 border border - cyan - 500 / 30 text - cyan - 300 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition-all duration-300";
             >;
               View Pricing;
             </a>;
@@ -555,8 +550,6 @@ export default RevolutionaryServicesShowcase);
 ;
 export default RevolutionaryServicesShowcase;
 
-export default RevolutionaryServicesShowcase;
-
+export default RevolutionaryServicesShowcase
 };
-
 

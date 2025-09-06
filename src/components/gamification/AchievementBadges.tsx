@@ -5,9 +5,7 @@ export interface Achievement {
   description: string
   achieved: boolean
 
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-
 
 export interface Achievement {
   id: string,
@@ -15,19 +13,16 @@ export interface Achievement {
   description: string,
   achieved: boolean
 
-
 import { BadgeCheck } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 export interface Achievement {
   id: string;
-  title: string;
+  title: string,
   description: string;
   achieved: boolean;
 interface AchievementBadgesProps {
   achievements: Achievement[];
   achievements: Achievement[];
-
-
 
 }
 export interface Achievement {
@@ -45,7 +40,7 @@ import { BadgeCheck } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 export interface Achievement {;
   id: string;
-  title: string;
+  title: string,
   description: string;
   achieved: boolean;
 
@@ -65,7 +60,7 @@ export interface Achievement {
 
 export interface Achievement {;
   id: string,;
-  title: string,;
+  title: string,,
   description: string,;
   achieved: boolean;
 }
@@ -77,16 +72,11 @@ interface AchievementBadgesProps {;
 export function AchievementBadges(): any ({ achievements }: AchievementBadgesProps) {;
   return (
 
-
               <p className="font-medium">{a.title}</p>
               <p className="text-sm text-muted-foreground">{a.description}</p>
             </div>
           </div>
         ))}
-<<<<<<< HEAD
-=======
-
-
 
       </CardContent>;
     </Card>;
@@ -118,18 +108,17 @@ function AchievementBadges() {
             <div>;
               <p className='font - medium'>{a.title}</p>;
               <p className='text - sm text - muted - foreground'>{a.description}</p>            </div>;
-              <p className="font - medium">{a.title}</p>;
-              <p className="text - sm text - muted - foreground">{a.description}</p>;
+              <p className="font-medium">{a.title}</p>;
+              <p className="text - sm text - muted-foreground">{a.description}</p>;
             <BadgeCheck;
               className={`h - 5 w - 5 mt - 1 ${a.achieved ? "text - green - 600" : "text - muted - foreground"}`}
             />;
             <div>;
-              <p className="font - medium">{a.title}</p>;
-              <p className="text - sm text - muted - foreground">{a.description}</p>;
+              <p className="font-medium">{a.title}</p>;
+              <p className="text - sm text - muted-foreground">{a.description}</p>;
             </div>;
           </div>))}
       </CardContent>;
     </Card>);
 }
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

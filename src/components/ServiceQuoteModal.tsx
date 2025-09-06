@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 ...formData;            startDate: startDate?.toISOString(),
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
             endDate: endDate?.toISOString()}
         }
@@ -10,8 +7,6 @@
 }
 }
 
-
-
 ...form_data;            start_date: start_date?.toISOString (),
             end_date: end_date?.toISOString ()}
         }
@@ -19,14 +14,6 @@
 }
 }
 
-<<<<<<< HEAD
-=======
-
-
-;
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-import { useState } from 'react',
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -202,8 +189,6 @@ interface ServiceQuoteModalProps {;
   service: ProductListing | null;
 }
 ;
-<<<<<<< HEAD
-=======
 const BUDGET_RANGES = [;
   { label: "Less than $5,000", value: "0-5000" },;
   { label: "$5,000 - $10,000", value: "5000-10000" },;
@@ -216,8 +201,8 @@ const TIMELINE_OPTIONS = [;
   { label: "3-6 months", value: "3-6months" },;
   { label: "6+ months", value: "6+months" }],;
 export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteModalProps) {;
-  const [formData, setFormData] = useState({;
-    description: '',;
+  const [formData, setFormData] = useState({,
+  description: '',;
     email: '',;
     budget: BUDGET_RANGES[0]?.value || '0-5000',;
     timeframe: TIMELINE_OPTIONS[0]?.value || 'lt-1month'}),;
@@ -249,12 +234,12 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
       if (error) throw error,;
       // Show success message;
       toast({;
-        title: "Quote Request Submitted!",;
-        description: "We've sent your request to the service provider. They will contact you soon."}),;
+        title: "Quote Request Submitted!",,
+  description: "We've sent your request to the service provider. They will contact you soon."}),;
       // Close the modal and reset form;
       onOpenChange(false),;
-      setFormData({;
-        description: '',;
+      setFormData({,
+  description: '',;
         email: '',;
         budget: BUDGET_RANGES[0]?.value || '0-5000',;
         timeframe: TIMELINE_OPTIONS[0]?.value || 'lt-1month'}),;
@@ -264,8 +249,8 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
     } catch (error) {;
       logErrorToProduction('Error submitting quote:', { data: error }),;
       toast({;
-        title: "Error",;
-        description: "There was an error submitting your quote request. Please try again.",;
+        title: "Error",,
+  description: "There was an error submitting your quote request. Please try again.",;
         variant: "destructive"});
     } finally {;
       setIsSubmitting(false);
@@ -506,4 +491,3 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
   );
 }
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

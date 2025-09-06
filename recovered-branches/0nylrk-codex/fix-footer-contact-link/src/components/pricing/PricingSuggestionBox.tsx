@@ -35,7 +35,6 @@ import {PricingSuggestion} from "@/services/pricingSuggestionService";
   isLoading: boolean
   onApplySuggestion: () => void
 
-
   rateType}) => {
   if (isLoading) {
     return (
@@ -79,13 +78,7 @@ interface PricingSuggestionBoxProps {;
     return null
   }
 
-
-
   }
-
-
-
-
 
   const confidenceColor = {
     High: "bg-green-100 text-green-800"

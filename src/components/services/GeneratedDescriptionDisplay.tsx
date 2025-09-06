@@ -11,9 +11,9 @@ import {;
 import { Textarea } from '@/components/ui/textarea';
 import { Check, Pencil } from 'lucide-react';
 
-interface GeneratedDescriptionDisplayProps {;
+interface GeneratedDescriptionDisplayProps {,
   description: string;
-  onSave: (editedDescription: string) => void;interface GeneratedDescriptionDisplayProps {;
+  onSave: (editedDescription: string) => void;interface GeneratedDescriptionDisplayProps {,
   description: string,;
   onSave: (editedDescription: string,) => void;
 }
@@ -30,21 +30,12 @@ export function GeneratedDescriptionDisplay(): any ({;
     onSave(editedDescription);
     setIsEditing(false);
     toast({;
-      title: 'Description Saved',;
-      description: 'Your edited description has been saved.',;
-    });
-  };
+      title: 'Description Saved',,
+  description: 'Your edited description has been saved.',;
+    })
+};
 
   return (
-
-
-
-
-
-
-
-
-
 
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -76,7 +67,7 @@ import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card",;
 import { Textarea } from "@/components/ui/textarea",;
 import { Check, Pencil } from 'lucide-react';
-interface GeneratedDescriptionDisplayProps {;
+interface GeneratedDescriptionDisplayProps {,
   description: string,;
   onSave: (editedDescription: string) => void;
 }
@@ -92,10 +83,10 @@ export function GeneratedDescriptionDisplay({;
     onSave(editedDescription),;
     setIsEditing(false),;
     toast({;
-      title: "Description Saved";
-      description: "Your edited description has been saved.";
-    });
-  };
+      title: "Description Saved",
+  description: "Your edited description has been saved.";
+    })
+};
   return (;
     <Card className="border border-zion-blue-light bg-zion-blue-dark">;
       <CardHeader>;
@@ -147,26 +138,17 @@ export function GeneratedDescriptionDisplay({;
         ) : (
           <div className="bg-zion-blue p-4 rounded-md text-white min-h-[300px] whitespace-pre-wrap">
 
-
             {editedDescription}
           </div>
         )}
 
-
-
       </CardContent>;
       {isEditing && (;
         <CardFooter>;
-<<<<<<< HEAD
-          <Button
-=======
-          <Button;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-            onClick={handleSave}
+          <Button            onClick={handleSave}
 
             className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"
           >
-
 
             Save Changes
           </Button>
@@ -175,7 +157,7 @@ export function GeneratedDescriptionDisplay({;
 
 }className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>) 
 }</Card>) 
-}'";
+}'"
 };
 
     </Card>;
@@ -193,9 +175,6 @@ export function GeneratedDescriptionDisplay({;
 }</Card>) ;
 }'";
 }
-
-
-
 
         {is_editing ? (
           <Textarea;
@@ -215,7 +194,7 @@ export function GeneratedDescriptionDisplay({;
           </Button>;
         </CardFooter>)}
     </Card>);
-  is_editing ? (<> <Check className="h - 4 w - 4 mr - 1" /> Done </>) : (<> <Pencil className="h - 4 w - 4 mr - 1" /> Edit </>);
+  is_editing ? (<> <Check className="h - 4 w - 4 mr-1" /> Done </>) : (<> <Pencil className="h - 4 w - 4 mr-1" /> Edit </>);
 }</Button> </CardTitle> </CardHeader> <CardContent> {
   is_editing ? (<Textarea value= {
   edited_description;
@@ -223,7 +202,7 @@ export function GeneratedDescriptionDisplay({;
 }</CardContent> {
   is_editing && (<CardFooter> <Button on_click={
   handle_save ";
-}className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan text - white" > Save Changes </Button> </CardFooter>);
+}className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan text-white" > Save Changes </Button> </CardFooter>);
 }</Card>);
 }'";
 }

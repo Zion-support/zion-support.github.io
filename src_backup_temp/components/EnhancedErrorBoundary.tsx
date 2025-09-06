@@ -33,8 +33,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {;
     return {;
       "hasError": true;
       error;
-      "errorId": `error_${Date.now()"}_${Math.random().toString(36).substr(2, 9)}`;
-    };
+      "errorId": `error_${Date.now()"}_${Math.random().toString(36).substr(2, 9)}`
+};
   }
   componentDidCatch("error": "Error", "errorInfo": "ErrorInfo) {;
     this.setState({;
@@ -173,12 +173,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   };
 ;
   private handleReload = () => {;
-    window.location.reload();
-  };
+    window.location.reload()
+};
 ;
   private handleGoHome = () => {;
-    window.location.href = '/';
-  };
+    window.location.href = '/'
+};
 ;
   private handleReportBug = () => {;
     const errorDetails = {;
@@ -194,8 +194,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     const body = `Error "Details": "\n${JSON.stringify(errorDetails", null, 2)}`;
     const mailtoLink = `"mailto": "support@ziontechgroup.com?subject=${encodeURIComponent(subject)"}&body=${encodeURIComponent(body)}`;
     ;
-    window.open(mailtoLink);
-  };
+    window.open(mailtoLink)
+};
 ;
   render() {;
     if (this.state.hasError) {;
@@ -286,8 +286,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }
   };
   handleReload = () => {
-    window.location.reload();
-  };
+    window.location.reload()
+};
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
@@ -390,7 +390,7 @@ export const withErrorBoundary = <P extends object>(;
   );
 ;
   WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
-  return WrappedComponent;
+  return WrappedComponent
 };
 ;
 // Hook for error reporting;
@@ -417,7 +417,7 @@ export const useErrorReporting = () => {;
     console.error('Error "reported":', errorReport);
   }, []);
 ;
-  return { reportError };
+  return { reportError }
 };
 ;
 export default EnhancedErrorBoundary;
@@ -675,7 +675,7 @@ export const withErrorBoundary = <P extends object>(
     </EnhancedErrorBoundary>
   );
   WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
-  return WrappedComponent;
+  return WrappedComponent
 };
 // Hook for error reporting
 export const useErrorReporting = () => {
@@ -699,7 +699,7 @@ export const useErrorReporting = () => {
     }
     console.error('Error reported:', errorReport);
   }, []);
-  return { reportError };
+  return { reportError }
 };
 export default EnhancedErrorBoundary;
 </motion>

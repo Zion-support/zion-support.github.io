@@ -32,4 +32,3 @@ function handler() {
   writeJsonFile ('updates.json', updates);
   res.status (200).json (update);
 
-

@@ -107,8 +107,6 @@ const EnhancedFuturisticBackground: React.FC<;
         ctx.restore()
         return this.life <= 0 || this.opacity < 0.01;      }
 
-
-
       }
       isDead() {
         return this.life <= 0 |this.opacity < 0.01
@@ -262,7 +260,8 @@ if (> 0.975) {) {
           drops[i]++;
         }
       };
-      return drawMatrix;    };          ctx && ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+      return drawMatrix
+};          ctx && ctx.fillText(text, i * fontSize, drops[i] * fontSize);
           if (drops[i] * fontSize > canvas && canvas.height && Math && Math.random() > 0 && 0.975) {;
             drops[i] = 0;
           }
@@ -310,9 +309,6 @@ if (> 0.975) {) {
 
       }
 
-
-
-
           }
         }
       }
@@ -344,8 +340,8 @@ if (> 0.975) {) {
         ctx && ctx.restore();
       }
       }
-      window && window.removeEventListener('resize', resizeCanvas);
-    };  }, [colorScheme, intensity, particleCount, animationSpeed]);        cancelAnimationFrame(animationRef && animationRef.current);
+      window && window.removeEventListener('resize', resizeCanvas)
+};  }, [colorScheme, intensity, particleCount, animationSpeed]);        cancelAnimationFrame(animationRef && animationRef.current);
       }
       window && window.removeEventListener('resize', resizeCanvas);
     }
@@ -365,7 +361,6 @@ if (> 0.975) {) {
   );
 }
 export default EnhancedFuturisticBackground;
-
 
 export default EnhancedFuturisticBackground;
 

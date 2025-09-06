@@ -1,38 +1,54 @@
-import React from 'react';
-import Link from 'next/link';
-
-export const metadata = { 
-  title: 'Advanced Data Analytics & BI | Zion Tech Group',
-  description: 'Transform your data into actionable insights with advanced analytics, real-time dashboards, and AI-powered business intelligence solutions.',
-  keywords: 'data analytics, business intelligence, data visualization, predictive analytics, data engineering'
+export const metadata = {
+  title: 'Data Analytics | Zion Tech Group',
+  description: 'Professional data analytics services for your business needs.',
+  keywords: 'data-analytics, services, business, technology'
 };
 
-export default function DataAnalyticsPage() {
+export default function ServicePage() {
   return (
-    <div className="space-y-16">
-      <section className="text-center py-16 bg-gradient-to-br from-purple-50 to-indigo-100 rounded-lg">
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-          Data Analytics & BI
-        </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Transform your data into actionable insights with advanced analytics, 
-          real-time dashboards, and AI-powered business intelligence solutions.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="mailto:kleber@ziontechgroup.com?subject=Data Analytics Inquiry"
-            className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
-          >
-            Get Analytics Consultation
-          </a>
-          <a
-            href="tel:+13024640950"
-            className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Data Analytics
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional data analytics services for your business needs.
+          </p>
         </div>
-      </section>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-4">Feature 1</h3>
+            <p className="text-gray-300 mb-6">Description of the first key feature.</p>
+            <ul className="space-y-2 text-gray-300">
+              <li>• Benefit 1</li>
+              <li>• Benefit 2</li>
+              <li>• Benefit 3</li>
+            </ul>
+          </div>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-4">Feature 2</h3>
+            <p className="text-gray-300 mb-6">Description of the second key feature.</p>
+            <ul className="space-y-2 text-gray-300">
+              <li>• Benefit 1</li>
+              <li>• Benefit 2</li>
+              <li>• Benefit 3</li>
+            </ul>
+          </div>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-4">Feature 3</h3>
+            <p className="text-gray-300 mb-6">Description of the third key feature.</p>
+            <ul className="space-y-2 text-gray-300">
+              <li>• Benefit 1</li>
+              <li>• Benefit 2</li>
+              <li>• Benefit 3</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

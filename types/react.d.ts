@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*;
   Minimal React type declarations.;
   ---------------------------------------------------------------------------;
@@ -12,7 +11,6 @@ declare module "react" {
     type: T,
     props: P,
     key: React.Key | null;
-
 
   the code-base.  If you have `@types/react` available in `node_modules`,;
   TypeScript will prefer those and ignore this file, because paths declared in;
@@ -130,7 +128,6 @@ declare namespace React {;
   }
 }
 
-
   }
 }
   TypeScript will prefer those and ignore this file, because paths declared in;
@@ -138,12 +135,3 @@ declare namespace React {;
 */;
   }
 }
-=======
-import 'react';
-
-declare module 'react' {
-  interface CSSProperties {
-    [key: `--${string}`]: string | number;
-  }
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -19,15 +19,14 @@ interface EnhancedHero2026Props {;
   Globe,
   Brain,
 
-
 } from 'lucide-react';
 interface EnhancedHero2026Props {
   contact_info: {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string
+};
   serviceStats: {;
   Rocket,;
   CheckCircle,;
@@ -83,8 +82,8 @@ interface EnhancedHero2026Props {
         duration: 0 && 0.6,;
         ease: 'easeOut' as const,;
       },;
-    },;
-  };
+    },
+};
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>;
       {/* Enhanced Background Elements */}
@@ -123,8 +122,6 @@ interface EnhancedHero2026Props {
               ease: 'easeInOut',
               delay: Math && Math.random() * 2,            }}  }
 
-
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">;
       {/* Enhanced Background Elements */}
@@ -146,17 +143,17 @@ interface EnhancedHero2026Props {
               delay: Math.random () * 2,            }}  }
 ;
   return (
-    <section className="relative min - h-screen flex items - center justify - center overflow - hidden">;
+    <section className="relative min - h-screen flex items - center justify-center overflow-hidden">;
       {/* Enhanced Background Elements */}
-      <div className="absolute inset - 0 bg - gradient - to - br from - slate - 900 via - purple - 900 / 20 to - slate - 900" />;
-      <div className="absolute inset - 0 bg-[radial - gradient (circle_at_20%_80%, rgba (120, 119, 198, 0.4), transparent_50%)]" />;
-      <div className="absolute inset - 0 bg-[radial - gradient (circle_at_80%_20%, rgba (120, 119, 198, 0.4), transparent_50%)]" />;
+      <div className="absolute inset - 0 bg - gradient - to - br from - slate - 900 via - purple - 900 / 20 to-slate-900" />;
+      <div className="absolute inset-0 bg-[radial-gradient (circle_at_20%_80%, rgba (120, 119, 198, 0.4), transparent_50%)]" />;
+      <div className="absolute inset-0 bg-[radial-gradient (circle_at_80%_20%, rgba (120, 119, 198, 0.4), transparent_50%)]" />;
       {/* Floating Elements */}
-      <div className="absolute inset - 0 pointer - events - none">;
+      <div className="absolute inset - 0 pointer-events-none">;
         {Array.from ({ length: 20 }).map ((_, i) => (
           <motion.div;
             key={i}
-            className="absolute w - 2 h - 2 bg - cyan - 400 / 30 rounded - full";
+            className="absolute w - 2 h - 2 bg - cyan-400 / 30 rounded-full";
             style={{
 
               duration: 3 + Math.random() * 2,
@@ -202,8 +199,6 @@ interface EnhancedHero2026Props {
             }}
 
             }}
-
-
 
           />
 
@@ -265,13 +260,11 @@ interface EnhancedHero2026Props {
                 <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </Button>
 
-
           {/* Enhanced CTA Section */}
 
               
               <Button 
                 href="/contact" 
-
 
               <Button 
                 href="/contact" 
@@ -360,17 +353,17 @@ interface EnhancedHero2026Props {
                 size='xl';
                 className='text - xl px - 12 py - 6 bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 600 hover:to - purple - 700 shadow - 2xl hover:shadow - purple - 500 / 30 border - 0 group';
               >              >;
-                <span className="flex items - center">;
-                  <Rocket className="mr - 3 w - 7 h - 7 group - hover:rotate - 12 transition - transform" />;
+                <span className="flex items-center">;
+                  <Rocket className="mr - 3 w - 7 h - 7 group - hover:rotate-12 transition-transform" />;
                   Explore All Services;
                 </span>;
-                <ArrowRight className="ml - 3 w - 6 h - 6 group - hover:translate - x-1 transition - transform" />;
+                <ArrowRight className="ml - 3 w - 6 h - 6 group - hover:translate-x-1 transition-transform" />;
               </Button>;
               <Button;
                 href="/contact";
                 variant="secondary";
                 size="xl";
-                className="text - xl px - 12 py - 6 bg - gradient - to - r from - slate - 800 to - slate - 700 hover:from - slate - 700 hover:to - slate - 600 border - slate - 600 hover:border - slate - 500 shadow - 2xl";
+                className="text - xl px - 12 py - 6 bg - gradient - to - r from - slate - 800 to - slate - 700 hover:from - slate - 700 hover:to - slate - 600 border - slate - 600 hover:border - slate-500 shadow-2xl";
               >;
                 <span className='flex items - center'>;
                   <Rocket className='mr - 3 w - 7 h - 7 group - hover:rotate - 12 transition - transform' />;
@@ -385,8 +378,8 @@ interface EnhancedHero2026Props {
                 className='text - xl px - 12 py - 6 bg - gradient - to - r from - slate - 800 to - slate - 700 hover:from - slate - 700 hover:to - slate - 600 border - slate - 600 hover:border - slate - 500 shadow - 2xl';
               >;
                 <span className='flex items - center'>;
-                  <Shield className='mr - 3 w - 7 h - 7' />                  Get Expert Consultation                <span className="flex items - center">;
-                  <Shield className="mr - 3 w - 7 h - 7" />;
+                  <Shield className='mr - 3 w - 7 h - 7' />                  Get Expert Consultation                <span className="flex items-center">;
+                  <Shield className="mr - 3 w-7 h-7" />;
                   Get Expert Consultation;
                 </span>;
               </Button>;
@@ -398,8 +391,8 @@ interface EnhancedHero2026Props {
                 <span > 5000+ Happy Customers</span>;
               </div>                <span > 5000+ Happy Customers</span>;
               </div>;
-              <div className="flex items - center space - x-2">;
-                <CheckCircle className="w - 5 h - 5 text - green - 400" />;
+              <div className="flex items-center space-x-2">;
+                <CheckCircle className="w - 5 h - 5 text-green-400" />;
                 <span > 99.9% Uptime Guarantee</span>;
               </div>;
               <div className='flex items - center space - x-2'>;
@@ -407,8 +400,8 @@ interface EnhancedHero2026Props {
                 <span > 99.9% Uptime Guarantee</span>;
               </div>;
               <div className='flex items - center space - x-2'>;
-                <CheckCircle className='w - 5 h - 5 text - green - 400' />                <span > 24 / 7 Expert Support</span>              <div className="flex items - center space - x-2">;
-                <CheckCircle className="w - 5 h - 5 text - green - 400" />;
+                <CheckCircle className='w - 5 h - 5 text - green - 400' />                <span > 24 / 7 Expert Support</span>              <div className="flex items-center space-x-2">;
+                <CheckCircle className="w - 5 h - 5 text-green-400" />;
                 <span > 24 / 7 Expert Support</span>;
               </div>;
             </div>;
@@ -438,24 +431,24 @@ interface EnhancedHero2026Props {
               <div className='text - center'>;
                 <div className='text - cyan - 400 font - medium'>Website</div>;
                 <div className='text - white'>{contact_info.website}</div>              </div>            variants={item_variants}
-            className="bg - gradient - to - r from - slate - 800 / 50 to - slate - 900 / 50 backdrop - blur - xl border border - slate - 700 / 50 rounded - 2xl p - 6 max - w-2xl mx - auto";
+            className="bg - gradient - to - r from - slate - 800 / 50 to - slate - 900 / 50 backdrop - blur - xl border border - slate - 700 / 50 rounded - 2xl p - 6 max-w-2xl mx-auto";
           >;
-            <div className="text - center mb - 4">;
-              <h3 className="text - lg font - semibold text - white mb - 2">Ready to Get Started?</h3>;
-              <p className="text - gray - 300 text - sm">Contact our team of experts today</p>;
+            <div className="text-center mb-4">;
+              <h3 className="text - lg font - semibold text-white mb-2">Ready to Get Started?</h3>;
+              <p className="text - gray-300 text-sm">Contact our team of experts today</p>;
             </div>;
-            <div className="grid grid - cols - 1 sm:grid - cols - 3 gap - 4 text - sm">;
-              <div className="text - center">;
-                <div className="text - cyan - 400 font - medium">Phone</div>;
-                <div className="text - white">{contact_info.mobile}</div>;
+            <div className="grid grid - cols - 1 sm:grid - cols - 3 gap-4 text-sm">;
+              <div className="text-center">;
+                <div className="text - cyan-400 font-medium">Phone</div>;
+                <div className="text-white">{contact_info.mobile}</div>;
               </div>;
-              <div className="text - center">;
-                <div className="text - cyan - 400 font - medium">Email</div>;
-                <div className="text - white">{contact_info.email}</div>;
+              <div className="text-center">;
+                <div className="text - cyan-400 font-medium">Email</div>;
+                <div className="text-white">{contact_info.email}</div>;
               </div>;
-              <div className="text - center">;
-                <div className="text - cyan - 400 font - medium">Website</div>;
-                <div className="text - white">{contact_info.website}</div>;
+              <div className="text-center">;
+                <div className="text - cyan-400 font-medium">Website</div>;
+                <div className="text-white">{contact_info.website}</div>;
               </div>;
             </div>;
           </motion.div>;

@@ -1,5 +1,12 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js"
+<<<<<<< HEAD
+=======
+  "/ai-services": "pages/ai-services.html",
+  "/it-services": "pages/it-services.html",
+  "/micro-saas": "pages/micro-saas.html",
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
+  "/_document": "pages/_document.js",
+  "/404": "pages/404.html"
 }

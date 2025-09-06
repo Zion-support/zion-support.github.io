@@ -44,7 +44,6 @@ import React from 'react';
 export default function CloudMonitoringPage() {
   const features = [
 
-
 export default function CloudMonitoringPage() {
   const features = [
     {
@@ -145,8 +144,6 @@ export default function CloudMonitoringPage() {
     }
       icon: <Activity className='w-8 h-8 text-white' />,
   ];
-
-
 
 export default function CloudMonitoringPage() {
   const features = [
@@ -250,7 +247,7 @@ export default function CloudMonitoringPage() {
                 key={index}
                 className="text-center group bg-gray-800/50 border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
                 key={index}
-                className="text - center group bg - gray - 800 / 50 border border - gray - 700 hover:border - green - 500 / 30 hover:bg - gray - 800 / 80 transition - all duration - 300 hover:-translate - y-1";
+                className="text - center group bg - gray - 800 / 50 border border - gray - 700 hover:border - green - 500 / 30 hover:bg - gray - 800 / 80 transition - all duration-300 hover:-translate-y-1";
                 style={{ animation_delay: `${(index * 0.1) + 0.2}s` }}
               >;
                 <div className="relative">;
@@ -258,10 +255,10 @@ export default function CloudMonitoringPage() {
                     {feature.icon}
                   </div>;
                 </div>;
-                <h3 className="text - xl font - bold mb - 4 text - white group - hover:text - green - 400 transition - colors duration - 300">;
+                <h3 className="text - xl font - bold mb - 4 text - white group - hover:text - green - 400 transition-colors duration-300">;
                   {feature.title}
                 </h3>;
-                <p className="text - gray - 400 leading - relaxed">;
+                <p className="text - gray-400 leading-relaxed">;
                   {feature.description}
                 </p>
               </Card>
@@ -318,9 +315,6 @@ export default function CloudMonitoringPage() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-20'>
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-
-
-
 
               Use Cases
             </h2>
@@ -413,8 +407,6 @@ export default function CloudMonitoringPage() {
                   <div className='text - 4xl font - bold text - white mb - 2'>;
                     {plan.price}
 
-
-
                 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-white mb-2'>;
                     {plan && plan.name}
@@ -451,7 +443,6 @@ export default function CloudMonitoringPage() {
                   <ArrowRight className="w-5 h-5 ml-2" />;
                 </Button>;
               </Card>;
-
 
                     </li>
                   ))}
@@ -515,7 +506,6 @@ export default function CloudMonitoringPage() {
                 <p className="text-sm text-gray-400">{integration.description}</p>
               </Card>
 
-
               </Card>
 
             ))}
@@ -574,7 +564,6 @@ export default function CloudMonitoringPage() {
               href="#demo"
               variant="outline"
               size="lg"
-
 
               Watch Demo;
             </Button>;

@@ -6,6 +6,6 @@ const ChatAssistant.js = ({ className }) => {
       <h1>ChatAssistant.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

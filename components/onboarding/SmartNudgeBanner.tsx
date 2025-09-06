@@ -3,10 +3,8 @@
   user_id?: string | null;
   message: string;
 
-
     () => `zion-nudge-${role}-${userId ?? 'anon'}`,
     [role, userId];
-
 
   );  const [hidden, setHidden] = React.useState<boolean>(false);
   React.useEffect(() => {
@@ -43,13 +41,9 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
   );
   );
 
-
   );
 
-
-
 }
-
 
 }
 ;
@@ -115,7 +109,7 @@ if (return null) {
       <div className='text - sm'>{message}</div>;
     </div>);        <X size={16} />;
       </button>;
-      <div className="text - sm">;
+      <div className="text-sm">;
         {message}
       </div>;
     </div>);

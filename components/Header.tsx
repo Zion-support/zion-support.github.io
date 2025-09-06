@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -19,8 +18,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-
-
 
 "use client";
 "use client";
@@ -144,16 +141,6 @@ export default function Header() {;
           </button>
         </div>
         {/* Mobile Menu */}
-=======
-<<<<<<< HEAD
-'use client';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -233,76 +220,12 @@ const Header = () => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name);
-  };
+    setActiveDropdown(activeDropdown === name ? null : name)
+};
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
-<<<<<<< HEAD
 
-
-
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-      {/* Top Bar */}
-      <div className="bg-blue-900 text-white py-2">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm">
-            <div className="flex items-center space-x-6 mb-2 md:mb-0">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4" />
-                <span>+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-4 h-4" />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-            </div>
-            <div className="flex items-center space-x-2">
-              <MapPin className="w-4 h-4" />
-              <span>364 E Main St STE 1008, Middletown, DE 19709</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      {/* Main Navigation */}
-      <nav className="container mx-auto px-4 py-4">
-        <div className="flex justify-between items-center">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">Z</span>
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold text-gray-900">Zion Tech Group</h1>
-              <p className="text-sm text-gray-600">AI & Technology Solutions</p>
-            </div>
-          </Link>
-          
-          {/* Desktop Navigation */}
-<<<<<<< HEAD
-origin/automation-improvements-final
-          </div>
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex space-x-8">
-            {navigation.map((item) => (
-ursor/integrate-build-improve-and-re-verify-8f7d
-          <nav className="hidden md:flex space-x-8">
-          <nav className="hidden lg:flex space-x-8">
-origin/main
-            {navigation.map((item) => (
-          <nav className="hidden lg:flex space-x-8">;
-            {navigation && navigation.map((item) => (;
-              <Link
-                key={item && item.name}
-                href={item && item.href}
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
-                {item && item.name}
-              </Link>;
-            ))}
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <div className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
@@ -398,7 +321,6 @@ origin/main
                         </Link>
                       ))}
                     </div>
-<<<<<<< HEAD
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -452,8 +374,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
           </nav>;
 
-
-
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4 text-sm text-gray-600">
             <div className="flex items-center">
@@ -471,7 +391,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
             <button
               onClick={toggleMenu}
               className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
-
 
           {/* Desktop CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">;
@@ -610,31 +529,31 @@ ursor/integrate-build-improve-and-re-verify-8f7d
   }
 ;
   return (
-    <header className="bg - white shadow - lg sticky top - 0 z - 50">;
-      <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-        <div className="flex justify - between items - center h - 16">;
+    <header className="bg - white shadow - lg sticky top-0 z-50">;
+      <div className="max - w-7xl mx - auto px - 4 sm:px-6 lg:px-8">;
+        <div className="flex justify - between items-center h-16">;
           {/* Logo */}
-          <div className="flex - shrink - 0">;
-            <Link href="/" className="text - 2xl font - bold text - blue - 600">;
+          <div className="flex-shrink-0">;
+            <Link href="/" className="text - 2xl font - bold text-blue-600">;
               Zion Tech Group;
             </Link>;
           </div>;
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex space - x-8">;
+          <nav className="hidden lg:flex space-x-8">;
             {navigation.map ((item) => (
               <Link;
                 key={item.name}
                 href={item.href}
-                className="text - gray - 700 hover:text - blue - 600 font - medium transition - colors";
+                className="text - gray - 700 hover:text - blue - 600 font-medium transition-colors";
               >;
                 {item.name}
               </Link>))}
           </nav>;
           {/* Desktop CTA Button */}
-          <div className="hidden lg:flex items - center space - x-4">;
+          <div className="hidden lg:flex items-center space-x-4">;
             <Link;
               href="/contact";
-              className="bg - blue - 600 hover:bg - blue - 700 text - white px - 6 py - 2 rounded - lg font - medium transition - colors duration - 200";
+              className="bg - blue - 600 hover:bg - blue - 700 text - white px - 6 py - 2 rounded - lg font - medium transition-colors duration-200";
             >;
               Get Started;
             </Link>;
@@ -642,11 +561,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
           {/* Mobile Menu Button */}
           <button;
             on_click={toggle_menu}
-            className="lg:hidden p - 2 rounded - lg transition - colors duration - 200 text - gray - 700 hover:bg - gray - 100";
+            className="lg:hidden p - 2 rounded - lg transition - colors duration - 200 text - gray - 700 hover:bg-gray-100";
           >;
             {isMenuOpen ? (
-              <X className="h - 6 w - 6" />) : (
-              <Menu className="h - 6 w - 6" />)}
+              <X className="h-6 w-6" />) : (
+              <Menu className="h-6 w-6" />)}
           </button>;
         </div>;
         {/* Mobile Menu */}
@@ -656,22 +575,22 @@ ursor/integrate-build-improve-and-re-verify-8f7d
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden bg - white shadow - lg";
+              className="lg:hidden bg-white shadow-lg";
             >;
-              <div className="px - 4 py - 6 space - y-4">;
+              <div className="px - 4 py-6 space-y-4">;
                 {navigation.map ((item) => (
                   <Link;
                     key={item.name}
                     href={item.href}
                     on_click={close_menu}
-                    className="block text - gray - 700 hover:text - blue - 600 font - medium";
+                    className="block text - gray - 700 hover:text - blue-600 font-medium";
                   >;
                     {item.name}
                   </Link>))}
                 <Link;
                   href="/contact";
                   on_click={close_menu}
-                  className="block w - full bg - blue - 600 hover:bg - blue - 700 text - white text - center px - 6 py - 3 rounded - lg font - medium transition - colors duration - 200";
+                  className="block w - full bg - blue - 600 hover:bg - blue - 700 text - white text - center px - 6 py - 3 rounded - lg font - medium transition-colors duration-200";
                 >;
                   Get Started;
                 </Link>;
@@ -679,39 +598,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
             </motion.div>)}
         </AnimatePresence>;
       </div>;
-    </header>);
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-                  )}
-                </div>
-              ))}
-              <div className="mt-4 pt-4 border-t border-gray-200">
-                <Link
-                  href="/contact"
-                  className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Get Started
-                </Link>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </nav>
-    </header>
-  );
-};
-
-<<<<<<< HEAD
-export default Header;
-=======
-export default Header;
-}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-import React, { useState, useEffect } from 'react';
+    </header>);import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -754,13 +641,13 @@ export default function Header() {
   useEffect(() => {
     const handleRouteChange = () => {
       setMobileMenuOpen(false);
-      setActiveDropdown(null);
-    };
+      setActiveDropdown(null)
+};
 
     router.events.on('routeChangeStart', handleRouteChange);
     return () => {
-      router.events.off('routeChangeStart', handleRouteChange);
-    };
+      router.events.off('routeChangeStart', handleRouteChange)
+};
   }, [router.events]);
 
   return (
@@ -856,8 +743,6 @@ export default function Header() {
     </header>
   );
 }
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
@@ -866,8 +751,8 @@ const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+    setIsMenuOpen(!isMenuOpen)
+};
 
   return (
     <header className="bg-white shadow-lg">
@@ -932,13 +817,7 @@ const Header: React.FC = () => {
         )}
       </nav>
     </header>
-  );
+  )
 };
 
 export default Header;
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

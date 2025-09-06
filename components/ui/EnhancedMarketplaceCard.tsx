@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 
 interface EnhancedMarketplaceCardProps {
-  title: string;
+  title: string,
   description: string;
   price?: string;
   image?: string;
@@ -132,29 +128,10 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
         </div>
       </div>
     </Link>
-  );
+  )
 };
 
 export default EnhancedMarketplaceCard;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-        <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
-      </div>;
-      <p className="text-sm text-gray-600 mb-4">{description}</p>;
-      <div className="mt-auto flex items-center justify-between">;
-        {price && <span className="text-sm font-medium text-blue-600">{price}</span>}
-import Link from 'next/link';
-import Image from 'next/image';
-interface EnhancedMarketplaceCardProps {
-  title: string, description: string
-  price?: string;
-  href: string, image?: string
-=======
-import React from 'react';
-import { Star, Heart, ShoppingCart } from 'lucide-react';
->>>>>>> main
-
-<<<<<<< HEAD
 interface EnhancedMarketplaceCardProps {;
   title: string, description: string,;
   price?: string;
@@ -225,96 +202,5 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({;
               {price}
             </span>;
           )}
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-interface MarketplaceCardProps {
-  title: string;
-  description: string;
-  price: number;
-  rating: number;
-  image: string;
-  onAddToCart?: () => void;
-  onFavorite?: () => void;
-}
-<<<<<<< HEAD
-const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
-          <div className="text-sm text-gray-500 group-hover:text-blue-600 transition-colors">;
-            Learn more →;
-          </div>;
-        </div>;
-      </div>;
-    </Link>;
-interface MarketplaceCardProps {;
-  title: string,;
-  description: string,;
-  price: number,;
-  rating: number,;
-  image: string,;
-  onAddToCart?: () => void;
-  on_favorite?: () => void;
-}
-  title;
-  description;
-  price;
-  rating;
-  image;
-  onAddToCart;
-  );
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-
-<<<<<<< HEAD
 }
 export default EnhancedMarketplaceCard;
-<<<<<<< HEAD
-=======
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
-=======
-const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
-  title,
-  description,
-  price,
-  rating,
-  image,
-  onAddToCart,
-  onFavorite
-}) => {
-  return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-      <div className="relative">
-        <img src={image} alt={title} className="w-full h-48 object-cover" />
-        <button
-          onClick={onFavorite}
-          className="absolute top-2 right-2 p-2 bg-white rounded-full shadow-md hover:bg-gray-100"
-        >
-          <Heart className="w-4 h-4 text-gray-600" />
-        </button>
-      </div>
-      
-      <div className="p-4">
-        <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
-        <p className="text-gray-600 text-sm mb-3">{description}</p>
-        
-        <div className="flex items-center justify-between mb-3">
-          <div className="flex items-center">
-            <Star className="w-4 h-4 text-yellow-400 fill-current" />
-            <span className="text-sm text-gray-600 ml-1">{rating}</span>
-          </div>
-          <span className="text-lg font-bold text-blue-600">$ + {price}</span>
-        </div>
-        
-        <button
-          onClick={onAddToCart}
-          className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 flex items-center justify-center"
-        >
-          <ShoppingCart className="w-4 h-4 mr-2" />
-          Add to Cart
-        </button>
-      </div>
-    </div>
-  );
-};
-
-export default EnhancedMarketplaceCard;
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

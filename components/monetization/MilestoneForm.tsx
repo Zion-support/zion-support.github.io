@@ -8,8 +8,10 @@ type Props = {
     description?: string;
     dueDate: string;
     amountUsd: number;
-  }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
-  }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
+  }) => Promise<void> | void
+};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
+  }) => Promise<void> | void
+};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [dueDate, setDueDate] = useState('');
@@ -36,9 +38,9 @@ type Props = {
           value={description}
           onChange={(e) => setDescription(e && e.target.value)}
         <label className='block text - sm font - medium'>Description</label>      <div>;
-        <label className="block text - sm font - medium" html_for="input - Title">Title</label>;
+        <label className="block text-sm font-medium" html_for="input - Title">Title</label>;
         <input;
-          className="mt - 1 w - full rounded border px - 3 py - 2";
+          className="mt - 1 w - full rounded border px-3 py-2";
           value={title}
           on_change={(e) => set_title (e.target.value)}
           placeholder="Phase 1 – Backend Setup";
@@ -78,7 +80,7 @@ type Props = {
       <button;
         type='submit';
         className='bg - blue - 600 text - white px - 4 py - 2 rounded hover:bg - blue - 700 disabled:opacity - 50'        disabled={loading}        type="submit";
-        className="bg - blue - 600 text - white px - 4 py - 2 rounded hover:bg - blue - 700 disabled:opacity - 50";
+        className="bg - blue - 600 text - white px - 4 py - 2 rounded hover:bg - blue-700 disabled:opacity-50";
         disabled={loading}
       >;
         {loading ? 'Adding...' : 'Add Milestone'}

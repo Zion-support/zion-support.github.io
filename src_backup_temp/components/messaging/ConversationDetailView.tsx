@@ -10,8 +10,8 @@ export default function Page("props": "any) {;
   }, [activeMessages]);
 ;
   const scrollToBottom = ("props": "any) => {;
-    messagesEndRef.current?.scrollIntoView({ "behavior": 'smooth' "});
-  };
+    messagesEndRef.current?.scrollIntoView({ "behavior": 'smooth' "})
+};
 ;
   const handleSendMessage = async("e": "React.FormEvent) => {;
     e.preventDefault();
@@ -32,16 +32,16 @@ export default function Page(props: any) {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   const scrollToBottom = (props: any) => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' }
-    );
-  };
+    )
+};
   const handleSendMessage = async(e: React.FormEvent) => {
     e.preventDefault();
     if(!messageText.trim() || !activeConversation) return;
     ';
     await sendMessage(activeConversation.id, messageText);';';
     await sendMessage(activeConversation.id, messageText);
-    setMessageText('');
-  };
+    setMessageText('')
+};
   if(!activeConversation) {
     return (
         <div className="flex-1 flex flex-col items-center justify-center p-8">
@@ -52,8 +52,8 @@ export default function Page(props: any) {
       </div>
 ;
     await sendMessage(activeConversation.id, messageText);
-    setMessageText('');
-  };
+    setMessageText('')
+};
 ;
   if(!activeConversation) {;
     return (<div className="flex-1 flex flex-col items-center justify-center p-8">;

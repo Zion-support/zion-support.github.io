@@ -62,7 +62,7 @@ const Button = ({
   }
 
     </button>;
-  );
+  )
 };
 
   class_name = '';

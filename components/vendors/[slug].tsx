@@ -12,7 +12,6 @@ type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
 export default function VendorProfilePage({ vendor }: Props) {;
 type Props = { vendor: Vendor | null };
 
-
 export default function VendorProfilePage({ vendor }: Props) {
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -146,7 +145,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
   const slug = String(ctx.params?.slug || '');
   const { getVendorBySlug } = await import('../../utils/vendor-store');
   const vendor = slug ? getVendorBySlug(slug) || null : null;
-  return { props: { vendor } };
+  return { props: { vendor } }
 };            {loading ? 'Submitting...' : 'Send'}
           </button>
           {message && <div className="text-sm">{message}</div>}
@@ -167,9 +166,8 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;
 }
 
   const vendor = slug ? getVendorBySlug(slug) || null : null;
-  return { props: { vendor } };
+  return { props: { vendor } }
 };
+}
 };
-};
-
 

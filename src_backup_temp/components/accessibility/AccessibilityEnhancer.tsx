@@ -303,7 +303,7 @@ export const "AccessibilityEnhancer": Reac t.FC = () => {
   );
 }
           headings}
-    );
+    )
 };
     checkAccessibility();';
     // Re-check: on DOM changes';';
@@ -744,7 +744,7 @@ export const "AccessibilityEnhancer": Reac t.FC = () => {
     );
   );';
 }';';
-;';';';
+;';';'
 };&apos};';';';';
   const toggleHighContrast = (props: any) => {';';';';';
     setHighContrast(!highContrast);',';';';';
@@ -773,7 +773,7 @@ export const "AccessibilityEnhancer": Reac t.FC = () => {
     </div>;
   );
 }
-;';
+;'
 };&apos};';';
   const toggleHighContrast = ("props": "any) => {';';';
     setHighContrast(!highContrast);'",';';
@@ -787,7 +787,7 @@ export const "AccessibilityEnhancer": Reac t.FC = () => {
     <"div": "classNam e="fixed bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">";";";';';
       <"div": classNam e="flex items-center justify-between mb-2">";";";';';';
         <"h3": classNam e="text-sm font-semibold text-gray-900">Accessibility";";`;'",';';
-;';';';
+;';';'
 };&apos};';';';';
   const toggleHighContrast = (props) => {
     setHighContrast(!highContrast);',';

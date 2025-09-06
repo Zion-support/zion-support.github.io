@@ -16,8 +16,6 @@
   Award
   Phone;
 
-
-
   CheckCircle,
   ArrowRight,
   Star,
@@ -69,7 +67,6 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
           transition={{ duration: 0.8 }}
           className='text-center mb-16'
 
-
         >
           <h2 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6'>
             Revolutionary 2025 Services
@@ -101,9 +98,6 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
             Discover our comprehensive suite of cutting-edge micro SAAS services, IT solutions, and AI innovations designed to transform your business and drive success in the digital age.;
           </p>;
         </motion && motion.div>;
-
-
-
 
         {/* Service Categories */}
         <motion&& motion.div
@@ -145,7 +139,7 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
               {/* Category Header */}
                     {category.title}
                   </h3>;
-                  <p className="text - gray - 400 text - lg">;
+                  <p className="text - gray-400 text-lg">;
                     {category.description}
                   <p className='text-gray-400 text-lg'>                    {category.description}
 
@@ -172,8 +166,6 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>                {category.services.map((service, serviceIndex) => (              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>                {category.services.map((service, serviceIndex) => (
 
-
-
                 {category.services.map((service, serviceIndex) => (
                   <motion.div
                     key={service.id}
@@ -184,7 +176,7 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
                 </div>;
               </div>;
               {/* Services Grid */}
-              <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>                {category.services.map ((service, service_index) => (              <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
+              <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>                {category.services.map ((service, service_index) => (              <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-3 gap-6">;
                 {category.services.map ((service, service_index) => (
                   <motion.div;
                     key={service.id}
@@ -200,11 +192,11 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
                       </h4>;
                       <p className='text - gray - 400 text - sm leading - relaxed'>                        {service.description}                  >;
                     {/* Service Header */}
-                    <div className="mb - 4">;
-                      <h4 className="text - xl font - semibold text - white mb - 2 group - hover:text - purple - 300 transition - colors">;
+                    <div className="mb-4">;
+                      <h4 className="text - xl font - semibold text - white mb - 2 group - hover:text - purple-300 transition-colors">;
                         {service.name}
                       </h4>;
-                      <p className="text - gray - 400 text - sm leading - relaxed">;
+                      <p className="text - gray - 400 text-sm leading-relaxed">;
                         {service.description}
 
                   >
@@ -255,10 +247,6 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
                         )}
                       </ul>
                     </div>
-
-
-
-
 
                     {/* Pricing */}
 
@@ -416,16 +404,16 @@ export default ComprehensiveServicesShowcase2025;
                               {feature}
                             </li>))}
                         {service.features && service.features.length > 3 && (
-                          <li className='text - xs text - gray - 500 italic'>                            +{service.features.length - 3} more features                    <div className="mb - 4">;
-                      <h5 className="text - sm font - medium text - purple - 300 mb - 2">Key Features:</h5>;
-                      <ul className="space - y-1">;
+                          <li className='text - xs text - gray - 500 italic'>                            +{service.features.length - 3} more features                    <div className="mb-4">;
+                      <h5 className="text - sm font - medium text - purple-300 mb-2">Key Features:</h5>;
+                      <ul className="space-y-1">;
                         {service.features?.slice (0, 3).map ((feature, feature_index) => (
-                          <li key={feature_index} className="flex items - center text - xs text - gray - 400">;
-                            <CheckCircle className="w - 3 h - 3 text - green - 400 mr - 2 flex - shrink - 0" />;
+                          <li key={feature_index} className="flex items - center text - xs text-gray-400">;
+                            <CheckCircle className="w - 3 h - 3 text - green - 400 mr - 2 flex-shrink-0" />;
                             {feature}
                           </li>))}
                         {service.features && service.features.length > 3 && (
-                          <li className="text - xs text - gray - 500 italic">;
+                          <li className="text - xs text-gray-500 italic">;
                           </li>)}
                       </ul>;
                     </div>;
@@ -440,14 +428,14 @@ export default ComprehensiveServicesShowcase2025;
                           {service.period}
                         </span>;
                       </div>;
-                      <div className='text - xs text - gray - 500 mt - 1'>                        Market position: {service.market_position}                    <div className="mb - 4">;
-                      <div className="flex items - center justify - between">;
-                        <span className="text - sm text - gray - 400">Starting from:</span>;
-                        <span className="text - lg font - bold text - green - 400">;
+                      <div className='text - xs text - gray - 500 mt - 1'>                        Market position: {service.market_position}                    <div className="mb-4">;
+                      <div className="flex items-center justify-between">;
+                        <span className="text - sm text-gray-400">Starting from:</span>;
+                        <span className="text - lg font - bold text-green-400">;
                           {service.price}{service.period}
                         </span>;
                       </div>;
-                      <div className="text - xs text - gray - 500 mt - 1">;
+                      <div className="text - xs text - gray-500 mt-1">;
                       </div>;
                     </div>;
                     {/* ROI */}
@@ -460,14 +448,14 @@ export default ComprehensiveServicesShowcase2025;
                           <TrendingUp className='w - 3 h - 3 text - blue - 400 mr - 2 flex - shrink - 0' />;
                           {service.roi}
                         </div>;
-                        <div className='text - xs text - gray - 500'>                          Setup time: {service.setup_time}                    <div className="mb - 4">;
-                      <h5 className="text - sm font - medium text - purple - 300 mb - 2">ROI & Benefits:</h5>;
-                      <div className="text - xs text - gray - 400">;
-                        <div className="flex items - center mb - 1">;
-                          <TrendingUp className="w - 3 h - 3 text - blue - 400 mr - 2 flex - shrink - 0" />;
+                        <div className='text - xs text - gray - 500'>                          Setup time: {service.setup_time}                    <div className="mb-4">;
+                      <h5 className="text - sm font - medium text - purple-300 mb-2">ROI & Benefits:</h5>;
+                      <div className="text - xs text-gray-400">;
+                        <div className="flex items-center mb-1">;
+                          <TrendingUp className="w - 3 h - 3 text - blue - 400 mr - 2 flex-shrink-0" />;
                           {service.roi}
                         </div>;
-                        <div className="text - xs text - gray - 500">;
+                        <div className="text - xs text-gray-500">;
                         </div>;
                       </div>;
                     </div>;
@@ -488,13 +476,13 @@ export default ComprehensiveServicesShowcase2025;
                             </span>))}                      </div>;
                     </div>;
                     {/* CTA Button */}
-                    <div className='mt - 6'>                    <div className="mb - 4">;
-                      <h5 className="text - sm font - medium text - purple - 300 mb - 2">Perfect for:</h5>;
-                      <div className="flex flex - wrap gap - 1">;
+                    <div className='mt - 6'>                    <div className="mb-4">;
+                      <h5 className="text - sm font - medium text - purple-300 mb-2">Perfect for:</h5>;
+                      <div className="flex flex-wrap gap-1">;
                         {service.use_cases?.slice (0, 3).map ((use_case, useCaseIndex) => (
                           <span;
                             key={useCaseIndex}
-                            className="px - 2 py - 1 bg - slate - 700 / 50 text - xs text - gray - 300 rounded - full";
+                            className="px - 2 py - 1 bg - slate - 700 / 50 text - xs text - gray-300 rounded-full";
                           >;
                             {use_case}
                           </span>))}
@@ -511,14 +499,14 @@ export default ComprehensiveServicesShowcase2025;
                     {/* Hover Effect Overlay */}
                     <div className='absolute inset - 0 bg - gradient - to - r from - purple - 600 / 10 to - pink - 600 / 10 rounded - 2xl opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300 pointer - events - none' />                  </motion.div>                      <a;
                         href={service.link}
-                        className="inline - flex items - center justify - center w - full px - 4 py - 2 bg - gradient - to - r from - purple - 600 to - pink - 600 text - white text - sm font - medium rounded - lg hover:from - purple - 700 hover:to - pink - 700 transition - all duration - 200 transform hover:shadow - xl hover:shadow - cyan - 500 / 30";
+                        className="inline - flex items - center justify - center w - full px - 4 py - 2 bg - gradient - to - r from - purple - 600 to - pink - 600 text - white text - sm font - medium rounded - lg hover:from - purple - 700 hover:to - pink - 700 transition - all duration - 200 transform hover:shadow - xl hover:shadow-cyan-500 / 30";
                       >;
                         Learn More;
-                        <ArrowRight className="w - 4 h - 4 ml - 2" />;
+                        <ArrowRight className="w - 4 h-4 ml-2" />;
                       </a>;
                     </div>;
                     {/* Hover Effect Overlay */}
-                    <div className='absolute inset - 0 bg - gradient - to - r from - purple - 600 / 10 to - pink - 600 / 10 rounded - 2xl opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300 pointer - events - none' />                    <div className="absolute inset - 0 bg - gradient - to - r from - purple - 600 / 10 to - pink - 600 / 10 rounded - 2xl opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300 pointer - events - none" />;
+                    <div className='absolute inset - 0 bg - gradient - to - r from - purple - 600 / 10 to - pink - 600 / 10 rounded - 2xl opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300 pointer - events - none' />                    <div className="absolute inset - 0 bg - gradient - to - r from - purple - 600 / 10 to - pink - 600 / 10 rounded - 2xl opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300 pointer-events-none" />;
                   </motion.div>))}
               </div>;
             </motion.div>))}
@@ -552,27 +540,27 @@ export default ComprehensiveServicesShowcase2025;
               >;
                 Call +1 302 464 0950;
                 <Phone className='w - 5 h - 5 ml - 2' />              </a>        >;
-          <div className="bg - gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - xl rounded - 3xl p - 8 border border - purple - 500 / 30">;
-            <h3 className="text - 3xl font - bold text - white mb - 4">;
+          <div className="bg - gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - xl rounded - 3xl p - 8 border border-purple-500 / 30">;
+            <h3 className="text - 3xl font - bold text-white mb-4">;
               Ready to Transform Your Business?;
             </h3>;
-            <p className="text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto">;
+            <p className="text - xl text - gray - 300 mb - 8 max-w-2xl mx-auto">;
               Join thousands of businesses already leveraging our cutting - edge solutions to drive innovation, efficiency, and growth.;
             </p>;
-            <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
+            <div className="flex flex - col sm: flex - row gap-4 justify-center">;
               <a;
                 href="https://ziontechgroup.com / contact";
-                className="inline - flex items - center justify - center px - 8 py - 3 bg - gradient - to - r from - purple - 600 to - pink - 600 text - white font - semibold rounded - xl hover:from - purple - 700 hover:to - pink - 700 transition - all duration - 200 transform hover:shadow - xl hover:shadow - cyan - 500 / 30";
+                className="inline - flex items - center justify - center px - 8 py - 3 bg - gradient - to - r from - purple - 600 to - pink - 600 text - white font - semibold rounded - xl hover:from - purple - 700 hover:to - pink - 700 transition - all duration - 200 transform hover:shadow - xl hover:shadow-cyan-500 / 30";
               >;
                 Get Started Today;
-                <Rocket className="w - 5 h - 5 ml - 2" />;
+                <Rocket className="w - 5 h-5 ml-2" />;
               </a>;
               <a;
                 href="tel:+13024640950";
-                className="inline - flex items - center justify - center px - 8 py - 3 bg - slate - 700 / 50 text - white font - semibold rounded - xl hover:bg - slate - 600 / 50 transition - all duration - 200 border border - slate - 600";
+                className="inline - flex items - center justify - center px - 8 py - 3 bg - slate - 700 / 50 text - white font - semibold rounded - xl hover:bg - slate - 600 / 50 transition - all duration - 200 border border-slate-600";
               >;
                 Call +1 302 464 0950;
-                <Phone className="w - 5 h - 5 ml - 2" />;
+                <Phone className="w - 5 h-5 ml-2" />;
               </a>;
             </div>;
           </div>;

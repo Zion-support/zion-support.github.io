@@ -23,7 +23,6 @@ import React from 'react';
 import { useEffect, useMemo, useState } from 'react';
 export default function RequestToHirePage() {
 
-
 export default function RequestToHirePage() {;
   const router = useRouter();
   const { talent } = router.query as { talent?: string }
@@ -31,7 +30,6 @@ export default function RequestToHirePage() {;
     () => TALENT_PROFILES.find(t => t.slug === talent)
     [talent]
   );export default function RequestToHirePage() {;
-
 
   const router = useRouter();
   const { talent } = router.query as { talent?: string }
@@ -55,13 +53,14 @@ export default function RequestToHirePage() {;
     name: '',;
     email: '',;
     budget: '',;
-    timeline: '',;
-    description: '',;
+    timeline: '',,
+  description: '',;
   });
   const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState<null| { id: string message: string }>(;
     null;
-  );  const [error, setError] = useState<string | null>(null);    description: ''}),;
+  );  const [error, setError] = useState<string | null>(null),
+  description: ''}),;
   const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState<null | { id: string, message: string }>(null),;
   const [error, setError] = useState<string | null>(null);
@@ -178,7 +177,8 @@ export default function RequestToHirePage() {;
   });
   const [submitting, set_submitting] = useState (false);
   const [result, set_result] = useState < null | { id: string; message: string }>(
-    null);  const [error, set_error] = useState < string | null>(null);    description: ''}),
+    null);  const [error, set_error] = useState < string | null>(null),
+  description: ''}),
   const [submitting, set_submitting] = useState (false);
   const [result, set_result] = useState < null | { id: string, message: string }>(null),
   const [error, set_error] = useState < string | null>(null);
@@ -302,31 +302,31 @@ if ( {) {
         >          {submitting ? 'Submitting…' : 'Submit Request'}      </div>);
   }
   return (
-    <div className="max - w-xl mx - auto">;
-      <h1 className="text - 2xl font - semibold mb - 4">Request to Hire{selected ? ` — ${selected.name}` : ''}</h1>;
-      <form className="space - y-4" on_submit={on_submit}>;
+    <div className="max-w-xl mx-auto">;
+      <h1 className="text - 2xl font-semibold mb-4">Request to Hire{selected ? ` — ${selected.name}` : ''}</h1>;
+      <form className="space-y-4" on_submit={on_submit}>;
         <div>;
-          <label className="block text - sm font - medium mb - 1" html_for="input - Your Name">Your Name</label>;
-          <input className="w - full border rounded px - 3 py - 2" value={form.name} on_change={(e) => set_form ({ ...form, name: e.target.value })} />;
+          <label className="block text - sm font-medium mb-1" html_for="input - Your Name">Your Name</label>;
+          <input className="w - full border rounded px-3 py-2" value={form.name} on_change={(e) => set_form ({ ...form, name: e.target.value })} />;
         </div>;
         <div>;
-          <label className="block text - sm font - medium mb - 1" html_for="input - Email">Email</label>;
-          <input type="email" className="w - full border rounded px - 3 py - 2" value={form.email} on_change={(e) => set_form ({ ...form, email: e.target.value })} />;
+          <label className="block text - sm font-medium mb-1" html_for="input - Email">Email</label>;
+          <input type="email" className="w - full border rounded px-3 py-2" value={form.email} on_change={(e) => set_form ({ ...form, email: e.target.value })} />;
         </div>;
         <div>;
-          <label className="block text - sm font - medium mb - 1" html_for="input - Budget (USD)">Budget (USD)</label>;
-          <input className="w - full border rounded px - 3 py - 2" placeholder="$5, 000" value={form.budget} on_change={(e) => set_form ({ ...form, budget: e.target.value })} />;
+          <label className="block text - sm font-medium mb-1" html_for="input - Budget (USD)">Budget (USD)</label>;
+          <input className="w - full border rounded px-3 py-2" placeholder="$5, 000" value={form.budget} on_change={(e) => set_form ({ ...form, budget: e.target.value })} />;
         </div>;
         <div>;
-          <label className="block text - sm font - medium mb - 1" html_for="input - Timeline">Timeline</label>;
-          <input className="w - full border rounded px - 3 py - 2" placeholder="2 - 3 months" value={form.timeline} on_change={(e) => set_form ({ ...form, timeline: e.target.value })} />;
+          <label className="block text - sm font-medium mb-1" html_for="input - Timeline">Timeline</label>;
+          <input className="w - full border rounded px-3 py-2" placeholder="2 - 3 months" value={form.timeline} on_change={(e) => set_form ({ ...form, timeline: e.target.value })} />;
         </div>;
         <div>;
-          <label className="block text - sm font - medium mb - 1" html_for="input - Project Description">Project Description</label>;
-          <textarea className="w - full border rounded px - 3 py - 2" rows={5} value={form.description} on_change={(e) => set_form ({ ...form, description: e.target.value })} />;
+          <label className="block text - sm font-medium mb-1" html_for="input - Project Description">Project Description</label>;
+          <textarea className="w - full border rounded px-3 py-2" rows={5} value={form.description} on_change={(e) => set_form ({ ...form, description: e.target.value })} />;
         </div>;
-        {error && <div className="text - sm text - red - 600">{error}</div>}
-        <button disabled={submitting} className="px - 4 py - 2 rounded bg - black text - white">;
+        {error && <div className="text - sm text-red-600">{error}</div>}
+        <button disabled={submitting} className="px - 4 py - 2 rounded bg-black text-white">;
           {submitting ? 'Submitting…' : 'Submit Request'}
         </button>;
       </form>;

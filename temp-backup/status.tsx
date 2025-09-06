@@ -47,4 +47,3 @@ export default function Status(): any ({ }: StatusProps) {;
     </div>;
   );
 
-

@@ -11,7 +11,6 @@
 import {
 import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 
-
 export default function PasswordCheckerPage() {;
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -26,14 +25,12 @@ export default function PasswordCheckerPage() {;
 import {
 import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 
-
 export default function PasswordCheckerPage() {;
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [strength, setStrength] = useState(0);
   const [strengthText, setStrengthText] = useState('');
   const [strengthColor, setStrengthColor] = useState('');
-
 
       analyzePassword(password);
     } else {
@@ -109,9 +106,8 @@ export default function PasswordCheckerPage() {;
     if (strength >= 90) return 'bg-green-500';
     if (strength >= 70) return 'bg-green-400';
     if (strength >= 50) return 'bg-yellow-400';
-    if (strength >= 30) return 'bg-orange-400';
-
-  };
+    if (strength >= 30) return 'bg-orange-400'
+};
 
   const getCheckIcon = (passed: boolean) => {;
     return passed ? (;
@@ -140,9 +136,6 @@ export default function PasswordCheckerPage() {;
           content='Advanced password strength analyzer with security recommendations.'
         />
       </Head>
-
-
-
 
       {/* Hero Section */}
       <section className='pt-32 pb-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900'>
@@ -266,8 +259,8 @@ if (return 'bg - orange - 400') {
   const getCheckIcon = (passed: boolean) =>: any {
     return passed ? (
       <CheckCircle className='w - 5 h - 5 text - green - 400' />) : (
-      <XCircle className='w - 5 h - 5 text - red - 400' />);      <CheckCircle className="w - 5 h - 5 text - green - 400" />) : (
-      <XCircle className="w - 5 h - 5 text - red - 400" />);
+      <XCircle className='w - 5 h - 5 text - red - 400' />);      <CheckCircle className="w - 5 h - 5 text-green-400" />) : (
+      <XCircle className="w - 5 h - 5 text-red-400" />);
   return (
     <>;
       <Head>;
@@ -302,18 +295,18 @@ if (return 'bg - orange - 400') {
             Get detailed feedback, suggestions, and generate strong passwords to;
             protect your accounts and data.          </p>      </Head>;
       {/* Hero Section */}
-      <section className="pt - 32 pb - 20 bg - gradient - to - br from - indigo - 900 via - purple - 900 to - pink - 900">;
-        <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 text - center">;
-          <div className="mb - 8">;
-            <div className="inline - flex items - center px - 4 py - 2 rounded - full bg - indigo - 500 / 20 border border - indigo - 400 / 30 text - indigo - 300 text - sm font - medium mb - 6">;
-              <Lock className="w - 4 h - 4 mr - 2" />;
+      <section className="pt - 32 pb - 20 bg - gradient - to - br from - indigo - 900 via - purple - 900 to-pink-900">;
+        <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px-8 text-center">;
+          <div className="mb-8">;
+            <div className="inline - flex items - center px - 4 py - 2 rounded - full bg - indigo - 500 / 20 border border - indigo - 400 / 30 text - indigo - 300 text - sm font-medium mb-6">;
+              <Lock className="w - 4 h-4 mr-2" />;
               Password Security & Analysis;
             </div>;
           </div>;
-          <h1 className="text - 4xl sm:text - 5xl lg:text - 6xl font - bold text - white mb - 8 leading - tight">;
+          <h1 className="text - 4xl sm:text - 5xl lg:text - 6xl font - bold text - white mb-8 leading-tight">;
             Password Strength Checker;
           </h1>;
-          <p className="text - xl text - indigo - 200 max - w-4xl mx - auto leading - relaxed">;
+          <p className="text - xl text - indigo - 200 max - w-4xl mx-auto leading-relaxed">;
             Analyze your password security with our advanced strength checker. Get detailed feedback,
             suggestions, and generate strong passwords to protect your accounts and data.;
           </p>;
@@ -361,21 +354,21 @@ if (return 'bg - orange - 400') {
                         <EyeOff className='w - 5 h - 5' />) : (
                         <Eye className='w - 5 h - 5' />)}                    </button>              Check Your Password Strength;
             </h2>;
-            <p className="text - xl text - gray - 400 max - w-3xl mx - auto">;
+            <p className="text - xl text - gray - 400 max-w-3xl mx-auto">;
               Our advanced security analyzer evaluates multiple factors to determine password strength and security.;
             </p>;
           </div>;
-          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8">;
+          <div className="grid grid - cols - 1 lg:grid - cols-2 gap-8">;
             {/* Input Form */}
-            <Card className="p - 8 bg - gray - 800 border border - gray - 700">;
-              <h3 className="text - 2xl font - bold text - white mb - 6 flex items - center">;
-                <Lock className="w - 6 h - 6 mr - 3 text - indigo - 400" />;
+            <Card className="p - 8 bg - gray - 800 border border-gray-700">;
+              <h3 className="text - 2xl font - bold text - white mb-6 flex items-center">;
+                <Lock className="w - 6 h - 6 mr - 3 text-indigo-400" />;
                 Password Analysis;
               </h3>;
-              <div className="space - y-6">;
+              <div className="space-y-6">;
                 {/* Password Input */}
                 <div>;
-                  <label className="block text - sm font - medium text - gray - 300 mb - 2" html_for="input-;
+                  <label className="block text - sm font - medium text - gray-300 mb-2" html_for="input-;
                     Enter Password;
                   ">;
                     Enter Password;
@@ -428,9 +421,6 @@ if (return 'bg - orange - 400') {
                     <div className='w-full bg-gray-700 rounded-full h-3'>;
                       <div                        className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}                <div className="space-y-6">;
                   {/* Strength Score */}
-
-
-
 
                       <div 
                         className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}
@@ -489,14 +479,14 @@ if (return 'bg - orange - 400') {
                       value={password}
                       on_change={(e) => set_password (e.target.value)}
                       placeholder="Type your password here...";
-                      className="w - full px - 4 py - 3 pr - 12 bg - gray - 700 border border - gray - 600 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - indigo - 500 focus:border - transparent";
+                      className="w - full px - 4 py - 3 pr - 12 bg - gray - 700 border border - gray - 600 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - indigo-500 focus:border-transparent";
                     />;
                     <button;
                       type="button";
                       on_click={() => setShowPassword (!show_password)}
-                      className="absolute inset - y-0 right - 0 pr - 3 flex items - center text - gray - 400 hover:text - white";
+                      className="absolute inset - y-0 right - 0 pr - 3 flex items - center text - gray-400 hover:text-white";
                     >;
-                      {show_password ? <EyeOff className="w - 5 h - 5" /> : <Eye className="w - 5 h - 5" />}
+                      {show_password ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                     </button>;
                   </div>;
                 </div>;
@@ -506,9 +496,9 @@ if (return 'bg - orange - 400') {
                     on_click={generateStrongPassword}
                     className='w - full bg - gradient - to - r from - indigo - 600 to - purple - 600 hover:from - indigo - 700 hover:to - purple - 700 text - white py - 3 text - lg font - semibold';
                   >;
-                    <RefreshCw className='w - 5 h - 5 mr - 2' />                    Generate Strong Password                    className="w - full bg - gradient - to - r from - indigo - 600 to - purple - 600 hover:from - indigo - 700 hover:to - purple - 700 text - white py - 3 text - lg font - semibold";
+                    <RefreshCw className='w - 5 h - 5 mr - 2' />                    Generate Strong Password                    className="w - full bg - gradient - to - r from - indigo - 600 to - purple - 600 hover:from - indigo - 700 hover:to - purple - 700 text - white py - 3 text-lg font-semibold";
                   >;
-                    <RefreshCw className="w - 5 h - 5 mr - 2" />;
+                    <RefreshCw className="w - 5 h-5 mr-2" />;
                     Generate Strong Password;
                   </Button>;
                 </div>;
@@ -533,17 +523,17 @@ if (return 'bg - orange - 400') {
                         on_click={() => copyToClipboard (generated_password)}
                         variant="outline";
                         size="sm";
-                        className="border - gray - 600 text - gray - 300 hover:bg - gray - 600";
+                        className="border - gray - 600 text - gray - 300 hover:bg-gray-600";
                       >;
-                        <Copy className="w - 4 h - 4 mr - 2" />;
+                        <Copy className="w - 4 h-4 mr-2" />;
                         Copy;
                       </Button>;
                     </div>;
-                    <div className="mt - 2 p - 2 bg - gray - 800 rounded text - sm font - mono text - white break - all">;
+                    <div className="mt - 2 p - 2 bg - gray - 800 rounded text - sm font - mono text-white break-all">;
                       {generated_password}
                     </div>;
                   </div>)}
-                <div className='text - sm text - gray - 400'>                  <p>• Real - time strength analysis</p>                <div className="text - sm text - gray - 400">;
+                <div className='text - sm text - gray - 400'>                  <p>• Real - time strength analysis</p>                <div className="text - sm text-gray-400">;
                   <p>• Real - time strength analysis</p>;
                   <p>• Multiple security criteria</p>;
                   <p>• Detailed feedback and suggestions</p>;
@@ -556,9 +546,9 @@ if (return 'bg - orange - 400') {
               <h3 className='text - 2xl font - bold text - white mb - 6 flex items - center'>;
                 <Shield className='w - 6 h - 6 mr - 3 text - purple - 400' />                Security Analysis;
               </h3>;
-              {password ? (            <Card className="p - 8 bg - gray - 800 border border - gray - 700">;
-              <h3 className="text - 2xl font - bold text - white mb - 6 flex items - center">;
-                <Shield className="w - 6 h - 6 mr - 3 text - purple - 400" />;
+              {password ? (            <Card className="p - 8 bg - gray - 800 border border-gray-700">;
+              <h3 className="text - 2xl font - bold text - white mb-6 flex items-center">;
+                <Shield className="w - 6 h - 6 mr - 3 text-purple-400" />;
                 Security Analysis;
               </h3>;
               {password ? (
@@ -573,16 +563,16 @@ if (return 'bg - orange - 400') {
                       </span>;
                     </div>;
                     <div className='w - full bg - gray - 700 rounded - full h - 3'>;
-                      <div                        className={`h - 3 rounded - full transition - all duration - 300 ${getStrengthBarColor ()}`}                <div className="space - y-6">;
+                      <div                        className={`h - 3 rounded - full transition - all duration - 300 ${getStrengthBarColor ()}`}                <div className="space-y-6">;
                   {/* Strength Score */}
                   <div>;
-                    <div className="flex items - center justify - between mb - 2">;
-                      <span className="text - sm text - gray - 300">Password Strength:</span>;
+                    <div className="flex items - center justify-between mb-2">;
+                      <span className="text - sm text-gray-300">Password Strength:</span>;
                         {strength_text} ({strength}/100);
                       </span>;
                     </div>;
                     <div className='w - full bg - gray - 700 rounded - full h - 3'>;
-                      <div                    <div className="w - full bg - gray - 700 rounded - full h - 3">;
+                      <div                    <div className="w - full bg - gray - 700 rounded-full h-3">;
                       <div;
                         className={`h - 3 rounded - full transition - all duration - 300 ${getStrengthBarColor ()}`}
                         style={{ width: `${strength}%` }}
@@ -601,7 +591,7 @@ if (return 'bg - orange - 400') {
                           <span;
                             className={`text - sm ${passed ? 'text - green - 400' : 'text - red - 400'}`}
                           >                            {key === 'length' && 'At least 8 characters'}                      {Object.entries (checks).map (([key, passed]) => (
-                        <div key={key} className="flex items - center space - x-3">;
+                        <div key={key} className="flex items-center space-x-3">;
                           {getCheckIcon (passed)}
                           <span className={`text - sm ${passed ? 'text - green - 400' : 'text - red - 400'}`}>;
                             {key === 'length' && 'At least 8 characters'}
@@ -611,7 +601,6 @@ if (return 'bg - orange - 400') {
                             {key === 'symbols' && 'Contains special character'}
                     </div>;
                   </div>;
-
 
                   {/* Suggestions */}
                             </span>                          </div>
@@ -663,10 +652,6 @@ if (return 'bg - orange - 400') {
                       </div>;
                     </div>;
                   )}
-
-
-
-
 
       {/* Features */}
 

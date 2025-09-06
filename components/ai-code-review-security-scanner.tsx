@@ -148,23 +148,16 @@ import {
                   <p className="text-gray-300">{feature.description}</p>
                 </motion.div>
 
-
               ))}
             </div>
           </div>
         </section>
-
-
 
               ))}
 
             </div>;
           </div>;
         </section>;
-
-
-
-
 
               ))}
         {/* Pricing Section */}
@@ -255,8 +248,8 @@ import {
                 {;
                   name: 'Starter',;
                   price: '$299',;
-                  period: '/month',;
-                  description:;
+                  period: '/month',,
+  description:;
                     'Perfect for small development teams and startups',;
                   features: [;
                     'Up to 10 developers',;
@@ -271,8 +264,8 @@ import {
                 {;
                   name: 'Professional',;
                   price: '$799',;
-                  period: '/month',;
-                  description: 'Ideal for growing development teams',;
+                  period: '/month',,
+  description: 'Ideal for growing development teams',;
                   features: [;
                     'Up to 50 developers',;
                     'Advanced security scanning',;
@@ -288,8 +281,8 @@ import {
                 {;
                   name: 'Enterprise',;
                   price: '$1,999',;
-                  period: '/month',;
-                  description:;
+                  period: '/month',,
+  description:;
                     'For large organizations with complex security needs',;
                   features: [;
                     'Unlimited developers',;
@@ -381,7 +374,6 @@ import {
                       </li>;
                     ))}
 
-
                         {feature}
                       </li>
                     ))}
@@ -417,24 +409,24 @@ import {
                 {[;
                   {;
                     icon: <Shield className='w-8 h-8' />,;
-                    title: 'Reduce Security Vulnerabilities by 85%',;
-                    description:;
+                    title: 'Reduce Security Vulnerabilities by 85%',,
+  description:;
                       'Our AI algorithms detect security issues that traditional scanners miss, significantly reducing your attack surface.',;
                   },;
                   {;
                     icon: <Zap className='w-8 h-8' />,;
-                    title: 'Speed Up Code Review Process by 70%',;
-                    description:;
+                    title: 'Speed Up Code Review Process by 70%',,
+  description:;
                       'Automated analysis and intelligent suggestions help developers identify and fix issues faster than manual review.',;
                   },;
                   {;
                     icon: <TrendingUp className='w-8 h-8' />,;
-                    title: 'Improve Code Quality & Maintainability',;
-                    description:;
+                    title: 'Improve Code Quality & Maintainability',,
+  description:;
                       'AI-powered insights help maintain consistent code standards and improve overall codebase health.',;
                   },                ].map((benefit, index) => (                    icon: <TrendingUp className="w-8 h-8" />,;
-                    title: "Improve Code Quality & Maintainability",;
-                    description: "AI-powered insights help maintain consistent code standards and improve overall codebase health.";
+                    title: "Improve Code Quality & Maintainability",,
+  description: "AI-powered insights help maintain consistent code standards and improve overall codebase health.";
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -523,24 +515,24 @@ import {
               <div className='space-y-8'>;
                   {;
                     icon: <CheckCircle className='w-8 h-8' />,;
-                    title: 'Ensure Compliance with Security Standards',;
-                    description:;
+                    title: 'Ensure Compliance with Security Standards',,
+  description:;
                       'Meet SOC2, ISO27001, and other compliance requirements with automated security testing and reporting.',;
                   },;
                   {;
                     icon: <Users className='w-8 h-8' />,;
-                    title: 'Reduce Technical Debt & Bugs',;
-                    description:;
+                    title: 'Reduce Technical Debt & Bugs',,
+  description:;
                       'Proactive identification of code quality issues prevents technical debt accumulation and reduces production bugs.',;
                   },;
                   {;
                     icon: <Star className='w-8 h-8' />,;
-                    title: 'Enable Faster Development Cycles',;
-                    description:;
+                    title: 'Enable Faster Development Cycles',,
+  description:;
                       'Confident code deployment with automated security validation accelerates your development and release processes.',;
                   },                ].map((benefit, index) => (                    icon: <Star className="w-8 h-8" />,;
-                    title: "Enable Faster Development Cycles",;
-                    description: "Confident code deployment with automated security validation accelerates your development and release processes.";
+                    title: "Enable Faster Development Cycles",,
+  description: "Confident code deployment with automated security validation accelerates your development and release processes.";
 
                   }
                   <motion&& motion.div
@@ -579,8 +571,8 @@ import {
               initial={{ opacity: 0, coordinate_y: 20 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
-              className='text - center mb - 16'        <section className="py - 20">;
-          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
+              className='text - center mb - 16'        <section className="py-20">;
+          <div className="max - w-7xl mx - auto px - 4 sm:px-6 lg:px-8">;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 20 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -622,16 +614,12 @@ import {
                   <h3 className="text-white font-semibold">{useCase}</h3>
                 </motion.div>
 
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 
-
                 </motion.div>
-
-
 
               ))}
         {/* CTA Section */}
@@ -644,11 +632,9 @@ import {
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
-
         {/* CTA Section */}
         <section className='py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion.div
-
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -734,18 +720,18 @@ export default AICodeReviewSecurityScanner;
                     <Users className='w - 6 h - 6' />;
                   </div>;
                   <h3 className='text - white font - semibold'>{use_case}</h3>                </motion.div>                >;
-                  <div className="w - 12 h - 12 bg - gradient - to - r from - blue - 500 to - purple - 600 rounded - lg flex items - center justify - center text - white mx - auto mb - 4">;
-                    <Users className="w - 6 h - 6" />;
+                  <div className="w - 12 h - 12 bg - gradient - to - r from - blue - 500 to - purple - 600 rounded - lg flex items - center justify - center text - white mx-auto mb-4">;
+                    <Users className="w-6 h-6" />;
                   </div>;
-                  <h3 className="text - white font - semibold">{use_case}</h3>;
+                  <h3 className="text-white font-semibold">{use_case}</h3>;
                 </motion.div>))}
             </div>;
           </div>;
         </section>;
         {/* CTA Section */}
         <section className='py - 20 bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20'>;
-          <div className='max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>            <motion.div        <section className="py - 20 bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20">;
-          <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
+          <div className='max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>            <motion.div        <section className="py - 20 bg - gradient - to - r from - blue - 600 / 20 to-purple-600 / 20">;
+          <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px-8 text-center">;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 20 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -776,23 +762,23 @@ export default AICodeReviewSecurityScanner;
                 </motion.button>;
               </div>                Ready to Secure Your Code?;
               </h2>;
-              <p className="text - xl text - gray - 300 mb - 8">;
+              <p className="text - xl text - gray-300 mb-8">;
                 Join thousands of development teams who trust our AI - powered platform to protect their applications;
                 and improve code quality. Start your free trial today.;
               </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+              <div className="flex flex - col sm:flex - row gap-4 justify-center">;
                 <motion.button;
                   while_hover={{ scale: 1.05 }}
                   while_tap={{ scale: 0.95 }}
-                  className="px - 8 py - 4 bg - gradient - to - r from - blue - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - blue - 600 hover:to - purple - 700 transition - all duration - 300 flex items - center justify - center";
+                  className="px - 8 py - 4 bg - gradient - to - r from - blue - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - blue - 600 hover:to - purple - 700 transition - all duration - 300 flex items-center justify-center";
                 >;
                   Start Free Trial;
-                  <ArrowRight className="ml - 2 w - 5 h - 5" />;
+                  <ArrowRight className="ml - 2 w-5 h-5" />;
                 </motion.button>;
                 <motion.button;
                   while_hover={{ scale: 1.05 }}
                   while_tap={{ scale: 0.95 }}
-                  className="px - 8 py - 4 border border - white / 20 text - white font - semibold rounded - xl hover:bg - white / 10 transition - all duration - 300";
+                  className="px - 8 py - 4 border border - white / 20 text - white font - semibold rounded - xl hover:bg - white / 10 transition-all duration-300";
                 >;
                   Contact Sales;
                 </motion.button>;
@@ -801,7 +787,7 @@ export default AICodeReviewSecurityScanner;
                 <p>;
                   14 - day free trial • No credit card required • Cancel anytime;
                 </p>              </div>;
-              <div className="mt - 8 text - gray - 400">;
+              <div className="mt - 8 text-gray-400">;
                 <p > 14 - day free trial • No credit card required • Cancel anytime</p>;
               </div>;
             </motion.div>;
@@ -809,8 +795,8 @@ export default AICodeReviewSecurityScanner;
         </section>;
         {/* Contact Information */}
         <section className='py - 16 bg - white / 5'>;
-          <div className='max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>            <motion.div        <section className="py - 16 bg - white / 5">;
-          <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
+          <div className='max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>            <motion.div        <section className="py-16 bg-white / 5">;
+          <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px-8 text-center">;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 20 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -842,25 +828,25 @@ export default AICodeReviewSecurityScanner;
                     <Award className='w - 6 h - 6' />;
                   </div>;
                   <h4 className='text - white font - semibold mb - 2'>Address</h4>                  <p > 364 E Main St STE 1008</p>                <div>;
-                  <div className="w - 12 h - 12 bg - gradient - to - r from - blue - 500 to - purple - 600 rounded - lg flex items - center justify - center text - white mx - auto mb - 4">;
-                    <Users className="w - 6 h - 6" />;
+                  <div className="w - 12 h - 12 bg - gradient - to - r from - blue - 500 to - purple - 600 rounded - lg flex items - center justify - center text - white mx-auto mb-4">;
+                    <Users className="w-6 h-6" />;
                   </div>;
-                  <h4 className="text - white font - semibold mb - 2">Contact Us</h4>;
+                  <h4 className="text - white font-semibold mb-2">Contact Us</h4>;
                   <p > Mobile: +1 302 464 0950</p>;
                   <p > Email: kleber@ziontechgroup.com</p>;
                 </div>;
                 <div>;
-                  <div className="w - 12 h - 12 bg - gradient - to - r from - blue - 500 to - purple - 600 rounded - lg flex items - center justify - center text - white mx - auto mb - 4">;
-                    <Globe className="w - 6 h - 6" />;
+                  <div className="w - 12 h - 12 bg - gradient - to - r from - blue - 500 to - purple - 600 rounded - lg flex items - center justify - center text - white mx-auto mb-4">;
+                    <Globe className="w-6 h-6" />;
                   </div>;
-                  <h4 className="text - white font - semibold mb - 2">Visit Our Website</h4>;
+                  <h4 className="text - white font-semibold mb-2">Visit Our Website</h4>;
                   <p > https://ziontechgroup.com</p>;
                 </div>;
                 <div>;
-                  <div className="w - 12 h - 12 bg - gradient - to - r from - blue - 500 to - purple - 600 rounded - lg flex items - center justify - center text - white mx - auto mb - 4">;
-                    <Award className="w - 6 h - 6" />;
+                  <div className="w - 12 h - 12 bg - gradient - to - r from - blue - 500 to - purple - 600 rounded - lg flex items - center justify - center text - white mx-auto mb-4">;
+                    <Award className="w-6 h-6" />;
                   </div>;
-                  <h4 className="text - white font - semibold mb - 2">Address</h4>;
+                  <h4 className="text - white font-semibold mb-2">Address</h4>;
                   <p > 364 E Main St STE 1008</p>;
                   <p > Middletown DE 19709</p>;
                 </div>;
@@ -877,8 +863,6 @@ export default AICodeReviewSecurityScanner);
 ;
 export default AICodeReviewSecurityScanner;
 
-export default AICodeReviewSecurityScanner;
-
+export default AICodeReviewSecurityScanner
 };
-
 

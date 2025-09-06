@@ -12,7 +12,6 @@ import { Zap, Star } from 'lucide-react';
 export default function APITestingSuitePage() {;
 } from 'lucide-react';
 
-
 import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTriangle, Clock, Database } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Zap, Star } from 'lucide-react';
@@ -32,32 +31,32 @@ export default function APITestingSuitePage() {
       features: [
   const features = [;
     {;
-      icon: <Code className='w-8 h-8 text-white' />,;
-      description:;
+      icon: <Code className='w-8 h-8 text-white' />,,
+  description:;
         'Test REST, GraphQL, and SOAP APIs with automated test suites and real-time monitoring.',;
       color: 'bg-gradient-to-br from-indigo-500 to-purple-600',;
       gradient: 'from-indigo-400 to-purple-500',;
     },;
     {;
       icon: <Zap className='w-8 h-8 text-white' />,;
-      title: 'Performance Testing',;
-      description:;
+      title: 'Performance Testing',,
+  description:;
         'Load testing, stress testing, and performance benchmarking for your APIs.',;
       color: 'bg-gradient-to-br from-orange-500 to-red-600',;
       gradient: 'from-orange-400 to-red-500',;
     },;
     {;
       icon: <Shield className='w-8 h-8 text-white' />,;
-      title: 'Security Testing',;
-      description:;
+      title: 'Security Testing',,
+  description:;
         'Automated security testing including authentication, authorization, and vulnerability scanning.',;
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',;
       gradient: 'from-green-400 to-emerald-500',;
     },;
     {;
       icon: <BarChart3 className='w-8 h-8 text-white' />,;
-      title: 'Real-Time Monitoring',;
-      description:;
+      title: 'Real-Time Monitoring',,
+  description:;
         '24/7 API monitoring with instant alerts for downtime, errors, and performance issues.',;
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',;
       gradient: 'from-blue-400 to-cyan-500',;
@@ -154,7 +153,8 @@ function APITestingSuitePage() {
         'Data flow validation',
         'Error propagation',
       ],
-    },  ];      description: 'Test how your APIs integrate with other systems and services.',
+    },  ],
+  description: 'Test how your APIs integrate with other systems and services.',
       tests: ['End - to - end workflows_third - party integrations_data flow validation_error propagation'];
     }
   ];
@@ -283,7 +283,6 @@ function APITestingSuitePage() {
           Monitoring Tool;
         </title>;
 
-
         recommendations: [
           'Consider implementing response caching for better performance'
           'Monitor response times during peak usage'
@@ -291,7 +290,8 @@ function APITestingSuitePage() {
         ]
       });
       setIsTesting(false);
-    }, 3000);  };        recommendations: [
+    }, 3000)
+};        recommendations: [
           'Consider implementing response caching for better performanceMonitor response times during peak usageImplement rate limiting headers for better API documentation'
         ]
       });
@@ -337,7 +337,6 @@ function APITestingSuitePage() {
             suite. Functional, performance, and security testing for REST
             GraphQL, and SOAP APIs. Ensure your APIs are reliable, fast, and
             secure.
-
 
           </p>
           {/* API Testing Form */}
@@ -418,18 +417,11 @@ function APITestingSuitePage() {
               </Card>
             ))}
 
-
-
-
       {/* Test Types Section */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-
-
-
-
 
               Comprehensive Testing Coverage
             </h2>
@@ -630,10 +622,6 @@ function APITestingSuitePage() {
                 </div>
               </Card>
 
-
-
-
-
               {/* Performance Metrics */}
               <Card className='border-gradient-indigo'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -645,9 +633,6 @@ function APITestingSuitePage() {
                     <span className='text-indigo-400 font-bold'>
                       {testResults.responseTime}
                     </span>
-
-
-
 
                   </div>
                   <div className='flex justify-between items-center'>
@@ -711,7 +696,6 @@ function APITestingSuitePage() {
         </section>;
       )}
 
-
               Simple Pricing
       {/* Pricing Section */}
             </h2>
@@ -747,23 +731,23 @@ function APITestingSuitePage() {
                     >;
                       <CheckCircle className='w - 4 h - 4 text - indigo - 400 mr - 3 flex - shrink - 0' />                      {test}              Comprehensive Testing Coverage;
             </h2>;
-            <p className="text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
+            <p className="text - responsive - md text - gray - 400 max - w-4xl mx-auto leading-relaxed">;
               We cover all aspects of API testing to ensure your APIs meet the highest standards of quality and reliability.;
             </p>;
           </div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">;
+          <div className="grid grid - cols - 1 md:grid - cols-2 gap-8">;
             {test_types.map ((type, index) => (
               <Card;
                 key={index}
-                className="card - hover border - gradient - indigo";
+                className="card - hover border-gradient-indigo";
                 style={{ animation_delay: `${index * 0.1}s` }}
               >;
-                <h3 className="text - xl font - bold mb - 4 text - white">{type.name}</h3>;
-                <p className="text - gray - 400 mb - 6">{type.description}</p>;
-                <ul className="space - y-2">;
+                <h3 className="text - xl font - bold mb-4 text-white">{type.name}</h3>;
+                <p className="text - gray-400 mb-6">{type.description}</p>;
+                <ul className="space-y-2">;
                   {type.tests.map ((test, test_index) => (
-                    <li key={test_index} className="flex items - center text - gray - 300">;
-                      <CheckCircle className="w - 4 h - 4 text - indigo - 400 mr - 3 flex - shrink - 0" />;
+                    <li key={test_index} className="flex items - center text-gray-300">;
+                      <CheckCircle className="w - 4 h - 4 text - indigo - 400 mr - 3 flex-shrink-0" />;
                       {test}
                     </li>))}
                 </ul>;
@@ -807,26 +791,26 @@ function APITestingSuitePage() {
                       {test_results.status_code}
                     </span>                  </div>                API Test Results;
               </h2>;
-              <p className="text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
+              <p className="text - responsive - md text - gray - 400 max - w-4xl mx-auto leading-relaxed">;
                 Here's a sample API test result. Get comprehensive insights for your own API endpoints.;
               </p>;
             </div>;
-            <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mb - 8">;
+            <div className="grid grid - cols - 1 lg:grid - cols - 3 gap-8 mb-8">;
               {/* Summary Card */}
-              <Card className="border - gradient - indigo text - center">;
-                <h3 className="text - 2xl font - bold mb - 6 text - white">Test Summary</h3>;
-                <div className="space - y-4">;
-                  <div className="flex justify - between items - center">;
-                    <span className="text - gray - 400">Status</span>;
-                    <span className="text - green - 400 font - bold">Success</span>;
+              <Card className="border - gradient-indigo text-center">;
+                <h3 className="text - 2xl font - bold mb-6 text-white">Test Summary</h3>;
+                <div className="space-y-4">;
+                  <div className="flex justify-between items-center">;
+                    <span className="text-gray-400">Status</span>;
+                    <span className="text - green-400 font-bold">Success</span>;
                   </div>;
-                  <div className="flex justify - between items - center">;
-                    <span className="text - gray - 400">Response Time</span>;
-                    <span className="text - indigo - 400 font - bold">{test_results.response_time}</span>;
+                  <div className="flex justify-between items-center">;
+                    <span className="text-gray-400">Response Time</span>;
+                    <span className="text - indigo-400 font-bold">{test_results.response_time}</span>;
                   </div>;
-                  <div className="flex justify - between items - center">;
-                    <span className="text - gray - 400">Status Code</span>;
-                    <span className="text - green - 400 font - bold">{test_results.status_code}</span>;
+                  <div className="flex justify-between items-center">;
+                    <span className="text-gray-400">Status Code</span>;
+                    <span className="text - green-400 font-bold">{test_results.status_code}</span>;
                   </div>;
                 </div>;
               </Card>;
@@ -855,15 +839,15 @@ function APITestingSuitePage() {
                         <span className='text - xs text - gray - 400'>;
                           {test.value}
                         </span>                      </div>                  {test_results.tests.map ((test, index) => (
-                    <div key={index} className="flex items - center justify - between">;
-                      <span className="text - gray - 300 text - sm">{test.name}</span>;
-                      <div className="flex items - center space - x-2">;
+                    <div key={index} className="flex items-center justify-between">;
+                      <span className="text - gray-300 text-sm">{test.name}</span>;
+                      <div className="flex items-center space-x-2">;
                         <span className={`text - xs px - 2 py - 1 rounded ${
                           test.status === 'pass' ? 'bg - green - 500 / 20 text - green - 400' : 'bg - red - 500 / 20 text - red - 400';
                         }`}>;
                           {test.status}
                         </span>;
-                        <span className="text - xs text - gray - 400">{test.value}</span>;
+                        <span className="text - xs text-gray-400">{test.value}</span>;
                       </div>;
                     </div>))}
                 </div>;
@@ -891,17 +875,17 @@ function APITestingSuitePage() {
                   <div className='flex justify - between items - center'>;
                     <span className='text - gray - 400'>Uptime</span>;
                     <span className='text - green - 400 font - bold'>24 / 7</span>                  </div>                  </div>;
-                  <div className="flex justify - between items - center">;
-                    <span className="text - gray - 400">Throughput</span>;
-                    <span className="text - green - 400 font - bold">High</span>;
+                  <div className="flex justify-between items-center">;
+                    <span className="text-gray-400">Throughput</span>;
+                    <span className="text - green-400 font-bold">High</span>;
                   </div>;
-                  <div className="flex justify - between items - center">;
-                    <span className="text - gray - 400">Reliability</span>;
-                    <span className="text - green - 400 font - bold">99.9%</span>;
+                  <div className="flex justify-between items-center">;
+                    <span className="text-gray-400">Reliability</span>;
+                    <span className="text - green-400 font-bold">99.9%</span>;
                   </div>;
-                  <div className="flex justify - between items - center">;
-                    <span className="text - gray - 400">Uptime</span>;
-                    <span className="text - green - 400 font - bold">24 / 7</span>;
+                  <div className="flex justify-between items-center">;
+                    <span className="text-gray-400">Uptime</span>;
+                    <span className="text - green-400 font-bold">24 / 7</span>;
                   </div>;
                 </div>;
               </Card>;
@@ -915,13 +899,13 @@ function APITestingSuitePage() {
                 {test_results.recommendations.map ((rec, index) => (
                   <div key={index} className='flex items - start space - x-3'>;
                     <CheckCircle className='w - 5 h - 5 text - indigo - 400 mt - 1 flex - shrink - 0' />;
-                    <span className='text - gray - 300'>{rec}</span>                  </div>            <Card className="border - gradient - indigo">;
-              <h3 className="text - 2xl font - bold mb - 6 text - white">Optimization Recommendations</h3>;
-              <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+                    <span className='text - gray - 300'>{rec}</span>                  </div>            <Card className="border-gradient-indigo">;
+              <h3 className="text - 2xl font - bold mb-6 text-white">Optimization Recommendations</h3>;
+              <div className="grid grid - cols - 1 md:grid - cols-2 gap-4">;
                 {test_results.recommendations.map ((rec, index) => (
-                  <div key={index} className="flex items - start space - x-3">;
-                    <CheckCircle className="w - 5 h - 5 text - indigo - 400 mt - 1 flex - shrink - 0" />;
-                    <span className="text - gray - 300">{rec}</span>))}
+                  <div key={index} className="flex items-start space-x-3">;
+                    <CheckCircle className="w - 5 h - 5 text - indigo - 400 mt - 1 flex-shrink-0" />;
+                    <span className="text-gray-300">{rec}</span>))}
               </div>;
             </Card>;
           </div>;
@@ -965,7 +949,6 @@ function APITestingSuitePage() {
           </div>
         </div>
       </section>
-
 
               </Card>
                   className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}>;

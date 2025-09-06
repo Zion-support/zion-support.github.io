@@ -6,6 +6,6 @@ const DisputeDetailPage = ({ className }) => {
       <h1>DisputeDetailPage</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

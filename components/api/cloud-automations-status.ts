@@ -3,10 +3,8 @@ import fs from 'fs';
 import path from 'path';
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 
-
   const dir = path.resolve(process.cwd(), "data/cloud-automations");
   const data: Record<string, any> = {}
-
 
   try {
     if (fs.existsSync(dir)) {
@@ -18,5 +16,4 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
       }
     }
   } catch (e) {
-
 

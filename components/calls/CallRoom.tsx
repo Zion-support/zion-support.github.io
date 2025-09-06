@@ -21,8 +21,7 @@ export type StartMode = 'video' | 'audio';
   serverUrl: string;
   token: string;
   startMode: StartMode;
-  onLeave?: (durationSec: number) => void;
-
+  onLeave?: (durationSec: number) => void
 };
 export default function CallRoom(): any ({;
   projectId,;
@@ -70,13 +69,10 @@ export default function CallRoom(): any ({;
     Array<RemoteParticipant | LocalParticipant>;
   >([]);  const [connectedAt, setConnectedAt] = useState<number | null>(null);import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
-export type StartMode = 'video' | 'audio';
-
-
+export type StartMode = 'video' | 'audio'
 };
 
 export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
-
 
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
@@ -141,7 +137,8 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
     const durationSec = connectedAt;
       ? Math && Math.round((Date && Date.now() - connectedAt) / 1000);
       : 0;
-    onLeave?.(durationSec);  };      room && room.disconnect();
+    onLeave?.(durationSec)
+};      room && room.disconnect();
     }
 
   const gridCols = useMemo(() => {

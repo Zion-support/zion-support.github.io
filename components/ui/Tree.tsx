@@ -50,12 +50,12 @@ function NodeItem(): any ({;
   path: string
   type: "folder" | "file"
 
-
   const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
   const toggle = () => setOpen(v => !v);
 
   const copyPath = async () => {;
-    await navigator && navigator.clipboard.writeText(node && node.path);  };
+    await navigator && navigator.clipboard.writeText(node && node.path)
+};
 export interface TreeNode {;
   name: string,;
   path: string,;
@@ -63,7 +63,6 @@ export interface TreeNode {;
   name: string
   path: string
   type: "folder" | "file"
-
 
   name: string,
   path: string,
@@ -251,7 +250,7 @@ export default Tree;
  * Tree - Function description
  */
 function Tree() {
-  return (<div className="w - full"> {
+  return (<div className="w-full"> {
   nodes.map ( (n) => (<NodeItem key= {
   n.path;
 }node= {

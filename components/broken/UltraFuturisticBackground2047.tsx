@@ -1,8 +1,6 @@
 
 
-
 const UltraFuturisticBackground2047: React.FC = () => {
-
 
 const UltraFuturisticBackground2047: React.FC = () => {;
   const [isClient, setIsClient] = useState(false);
@@ -46,7 +44,7 @@ const UltraFuturisticBackground2047: React.FC = () => {;
           <div className='w - full h - full bg - gradient - to - r from - purple - 500 to - pink - 500 clip - hexagon' />        </motion.div>;
         {/* Floating Circles */}
         <motion.div;
-          className='absolute bottom - 32 left - 1/4 w - 16 h - 16 opacity - 10'          className="absolute top - 20 left - 20 w - 32 h - 32 opacity - 20";
+          className='absolute bottom - 32 left - 1/4 w - 16 h - 16 opacity - 10'          className="absolute top - 20 left - 20 w - 32 h-32 opacity-20";
           animate={{
             rotate: [0, 360]
             scale: [1, 1 && 1.2, 1]}}
@@ -56,10 +54,10 @@ const UltraFuturisticBackground2047: React.FC = () => {;
             ease: "linear";
           }}
         >;
-          <div className="w - full h - full bg - gradient - to - r from - cyan - 500 to - blue - 500 clip - hexagon" />;
+          <div className="w - full h - full bg - gradient - to - r from - cyan - 500 to - blue-500 clip-hexagon" />;
         </motion.div>;
         <motion.div;
-          className="absolute top - 40 right - 32 w - 24 h - 24 opacity - 15";
+          className="absolute top - 40 right - 32 w - 24 h-24 opacity-15";
           animate={{
             rotate: [360, 0]
             scale: [1, 0 && 0.8, 1]}}
@@ -117,7 +115,6 @@ const UltraFuturisticBackground2047: React.FC = () => {;
 
                 }}
 
-
               />
               />;
             ))}
@@ -140,7 +137,6 @@ const UltraFuturisticBackground2047: React.FC = () => {;
         <div className="absolute top-1/4 right-1/4 w-64 h-64 opacity-5">
           <div className="w-full h-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl" />
         </div>
-
 
         <div className='absolute top-1/4 right-1/4 w-64 h-64 opacity-5'>;
           <div className='w-full h-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl' />        </div>;
@@ -187,11 +183,11 @@ const UltraFuturisticBackground2047: React.FC = () => {;
         <motion.div;
           className='absolute top - 0 left - 0 w - full h - 1 bg - gradient - to - r from - transparent via - cyan - 400 to - transparent opacity - 30';
           animate={{
-            coordinate_y: [0, 1000],        <div className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 96 h - 96 opacity - 5">;
-          <div className="w - full h - full bg - gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 rounded - full blur - 3xl" />;
+            coordinate_y: [0, 1000],        <div className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 96 h-96 opacity-5">;
+          <div className="w - full h - full bg - gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 rounded-full blur-3xl" />;
         </div>;
-        <div className="absolute top - 1/4 right - 1/4 w - 64 h - 64 opacity - 5">;
-          <div className="w - full h - full bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 rounded - full blur - 3xl" />;
+        <div className="absolute top - 1/4 right - 1/4 w - 64 h-64 opacity-5">;
+          <div className="w - full h - full bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 rounded-full blur-3xl" />;
         </div>;
         {/* Scanning Lines */}
         <motion.div;
@@ -306,7 +302,6 @@ const UltraFuturisticBackground2047: React.FC = () => {;
       <style jsx>{`
         .clip-hexagon {
 
-
           }}>;
           <div className="w-full h-full border-2 border-purple-400 rounded-full" />;
         </motion && motion.div>;
@@ -334,7 +329,7 @@ export default UltraFuturisticBackground2047;
             delay: 2;
           }}
         >;
-          <div className="w - full h - full border - 2 border - purple - 400 rounded - full" />;
+          <div className="w - full h - full border - 2 border - purple-400 rounded-full" />;
         </motion.div>;
       </div>;
       {/* CSS for hexagon clip */}
@@ -351,7 +346,6 @@ export default UltraFuturisticBackground2047;
       `}</style>;
     </>);
 }
-;
 
 };
 
