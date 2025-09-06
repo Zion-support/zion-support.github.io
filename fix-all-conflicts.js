@@ -16,19 +16,11 @@ function resolveConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
-    if (!content.includes('<<<<<<< HEAD')) {
-      return true; // No conflicts
-    }
-    
-    console.log(`Resolving conflicts in ${filePath}...`);
-    
-    // Replace merge conflict markers with incoming changes
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
+    if (!content.includes('([\s\S]*?)
     
     // Remove any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+    content = content.replace(/[\s\S]*?
+    content = content.replace(/[\s\S]*?
     
     // Write the resolved content back
     fs.writeFileSync(filePath, content);
@@ -42,7 +34,7 @@ function resolveConflicts(filePath) {
 }
 
 // Get all files with merge conflicts
-const findConflicts = execSync('find . -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" -o -name "*.json" -o -name "*.md" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null || true', { encoding: 'utf8' });
+const findConflicts = execSync('find . -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" -o -name "*.json" -o -name "*.md" | xargs grep -l "" 2>/dev/null || true', { encoding: 'utf8' });
 const conflictFiles = findConflicts.split('\n').filter(file => file && file !== '');
 
 console.log(`Found ${conflictFiles.length} files with merge conflicts`);

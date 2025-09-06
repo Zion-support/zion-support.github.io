@@ -302,12 +302,9 @@ const ProductsIndex: NextPage = () => {
   );
 };
 
-<<<<<<< HEAD
-export default ProductsIndex;
-  )
-=======
+
 export default ProductsIndex;  )
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+
 };
 
 export default Index;
