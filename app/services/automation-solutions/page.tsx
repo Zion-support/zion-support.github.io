@@ -291,7 +291,7 @@ function ContactSection() {
           Ready to Automate Your Business?
         </h3>
         <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-          Let's identify automation opportunities and implement solutions that
+          Let&apos;s identify automation opportunities and implement solutions that
           save time and reduce costs. Our automation experts have delivered 150+
           successful automation projects.
         </p>

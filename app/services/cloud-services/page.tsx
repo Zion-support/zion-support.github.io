@@ -339,7 +339,7 @@ function ContactSection() {
           Ready to Move to the Cloud?
         </h3>
         <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-          Let's discuss how cloud solutions can transform your business
+          Let&apos;s discuss how cloud solutions can transform your business
           infrastructure. Our cloud experts have migrated 150+ organizations to
           the cloud successfully.
         </p>

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+
 
 export const metadata = {
   title: 'AI Data Analytics | Zion Tech Group',
@@ -152,7 +152,7 @@ export default function AIDataAnalyticsPage() {
 
       <div className="text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-6">
-          Unlock Your Data's Potential
+          Unlock Your Data&apos;s Potential
         </h2>
         <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
           Join 800+ businesses using our AI Data Analytics platform to make

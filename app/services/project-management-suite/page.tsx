@@ -241,7 +241,7 @@ function ContactSection() {
         Ready to Streamline Your Project Management?
       </h3>
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Let's discuss your project management needs and create a solution that
+        Let&apos;s discuss your project management needs and create a solution that
         boosts team productivity and project success.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">

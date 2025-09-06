@@ -3,110 +3,22 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-<<<<<<< HEAD
-    "dev": "vite",
-    "build": "vite build",
-    "prebuild": "echo \"Starting build...\"",
-    "export": "vite build",
-    "start": "vite preview --port 4173",
-    "postbuild": "echo \"Build completed\"",
-    "lint": "eslint .",
-=======
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
+    "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "lint:check": "eslint . --max-warnings 0",
     "type-check": "tsc --noEmit",
-    "test": "jest --config jest.config.cjs",
-<<<<<<< HEAD
-    "test:smoke": "jest --config jest.config.smoke.cjs --passWithNoTests",
-    "test:watch": "jest --watch --config jest.config.ts",
-    "test:coverage": "jest --coverage --config jest.config.ts",
-    "test:unit": "jest -c jest.config.ts --runInBand",
-    "verify": "npm run type-check && npm run build && npm run test:smoke",
-    "check": "npm run lint && npm run type-check && npm run test:smoke",
-    "clean": "rm -rf .next out dist",
-    "precommit": "npm run check",
-    "prepare": "echo 'Husky prepare script disabled'",
-    "deploy": "npm run build && npm run start",
-    "deploy:netlify": "npm run build && netlify deploy --prod",
-    "deploy:vercel": "npm run build && vercel --prod",
-    "analyze": "npm run build && npx bundle-analyzer dist/assets/*.js",
-    "health": "node scripts/health-check.js",
-    "security": "npm audit && npm run security:scan",
-    "security:scan": "node scripts/security-audit.js",
-    "performance": "npm run build && node scripts/performance-audit.js",
-    "accessibility": "node scripts/accessibility-audit.js",
-    "seo": "node scripts/seo-audit.js",
-    "backup": "node scripts/backup.js",
-    "restore": "node scripts/restore.js",
-    "monitor": "node scripts/monitor.js",
-    "logs": "pm2 logs",
-    "status": "pm2 status",
-    "restart": "pm2 restart all",
-    "stop": "pm2 stop all",
-    "start:pm2": "pm2 start ecosystem.config.cjs",
-    "dev:pm2": "pm2 start ecosystem.config.cjs --watch",
-    "prod:pm2": "pm2 start ecosystem.config.cjs --env production"
+    "test": "jest --config jest.config.cjs"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.8.1",
-    "@radix-ui/react-accordion": "^1.1.2",
-    "@radix-ui/react-dialog": "^1.0.5",
-    "lucide-react": "^0.263.1",
-    "clsx": "^1.2.1",
-    "tailwind-merge": "^1.14.0"
-  },
-  "devDependencies": {
-    "@types/react": "^18.2.15",
-    "@types/react-dom": "^18.2.7",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
-    "@vitejs/plugin-react": "^4.0.3",
-    "autoprefixer": "^10.4.14",
-    "eslint": "^8.45.0",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-react": "^7.33.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "jest": "^29.6.2",
-    "postcss": "^8.4.27",
-    "tailwindcss": "^3.3.3",
-    "typescript": "^5.1.6",
-    "vite": "^4.4.5"
-  }
-=======
-    "test:watch": "jest --watch --config jest.config.cjs",
-    "test:coverage": "jest --coverage --config jest.config.cjs"
-  },
-  "dependencies": {
-    "next": "^15.5.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "@types/node": "^22.10.2",
-    "@types/react": "^18.3.17",
-    "@types/react-dom": "^18.3.5",
-    "typescript": "^5.9.2",
-    "tailwindcss": "^3.4.17",
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.5.0"
+    "next": "^15.5.2"
   },
   "devDependencies": {
-    "eslint": "^9.17.0",
-    "eslint-config-next": "^15.5.2",
-    "@types/jest": "^29.5.14",
-    "jest": "^29.7.0",
-    "jest-environment-jsdom": "^29.7.0"
-  },
-  "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=8.0.0"
-  },
-  "author": "Zion Tech Group",
-  "license": "MIT"
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
+    "eslint": "^9.35.0",
+    "typescript": "^5.9.2"
+  }
 }
