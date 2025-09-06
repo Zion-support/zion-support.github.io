@@ -27,7 +27,6 @@ import React from "react";
 import Layout from "../components/Layout";
 export default function AIServices() {
   return (
-<Layout
 import Link from 'next/link',
 import Head from 'next/head';
 import { useState, useEffect  } from 'react';

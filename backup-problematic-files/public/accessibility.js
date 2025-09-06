@@ -1,10 +1,3 @@
-  // Add high contrast mode support;
-  "addHighContrastMode": () => {
-
-  const style = document.create_element ("style");
-    style.text_content = ";
-      @media (prefers - contrast: high) {
-
   * {
   background - color: white !important;
           color: black !important;

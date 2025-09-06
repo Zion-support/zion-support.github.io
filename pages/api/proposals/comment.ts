@@ -51,8 +51,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const data = await fs.readJson(FILE_PATH);
     return res.status(200).json(data)
   }
-  if (req.method === 'POST') {
-    const body = req.body || {};
     const data = await fs.readJson(FILE_PATH);
     const comment = {
       id: Date.now().toString(),

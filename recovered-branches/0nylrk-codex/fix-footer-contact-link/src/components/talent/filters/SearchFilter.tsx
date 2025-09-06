@@ -1,18 +1,11 @@
 import {Input} from "@/components/ui/input";
 import {SearchIcon} from "lucide-react";
 import {SearchFilterProps} from "@/types/filters";
-import { Input } from "@/components/ui/input",
-import { SearchIcon } from "lucide-react";
-import { SearchFilterProps } from "@/types/filters";
-import { SearchIcon } from "lucide-react",
-import { SearchFilterProps } from "@/types/filters",
-import {Input} from "@/components/ui/input";
-import {SearchIcon} from "lucide-react";
-import {SearchFilterProps} from "@/types/filters";
 export function SearchFilter(): any ({ searchTerm, setSearchTerm }: SearchFilterProps) {;
 
-
-
+import { Input } from "@/components/ui/input";
+import { SearchIcon } from "lucide-react";
+import { SearchFilterProps } from "@/types/filters";
 export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
   return (
     <div className="mb-6">;
@@ -35,12 +28,11 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
           placeholder="Search talents...";
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-
-          onChange={(e) => setSearchTerm(e && e.target.value)}
           className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light";
         />;
       </div>;
     </div>;
+  );
 }
 
 import { Input  } from '@/components / ui / input';

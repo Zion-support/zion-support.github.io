@@ -20,7 +20,7 @@ export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOn
             onMouseLeave={() => !readOnly && setHovered(null)}
             onClick={() => !readOnly && onChange(star)}
             aria-label={`${star} star`}
-          >
+>;
             <svg
               xmlns='http://www.w3.org/2000/svg'
               width={size}
@@ -40,9 +40,6 @@ export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOn
       })}
     </div>
   );
-}
-export default StarRating;              width={size}
-              height={size}
               viewBox="0 0 24 24"
               fill={active ? 'gold' : 'none'}
               stroke={active ? 'gold' : 'currentColor'}

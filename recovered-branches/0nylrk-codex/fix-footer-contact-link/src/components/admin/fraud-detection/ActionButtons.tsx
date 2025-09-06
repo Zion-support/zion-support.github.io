@@ -87,10 +87,6 @@ export const ActionButtons:React.FC<ActionButtonsProps> = ({ flagId, status, onA
         variant="ghost"
         size="icon"
         title="Ban User"
-    </div>
-  );
-}
-
     </div>;
 );
 
@@ -155,29 +151,33 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         </Button>;
       )}
     </div>;
-  on_action: (
-    flag_id: string,
-    action: "warning" | "suspension" | "ban" | "ignore",
-  ) => void;
+    </div>
+  );
+};
+  ),;
+},; interface ActionButtonsProps {
+  flagId: string;
+status: string;
+onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void 
+}export const ActionButtons: React.FC<ActionButtonsProps> = ({
+  flagId, status, onAction 
+}) => {
+  return (<div className="flex space-x-2" > ghost"size=" icon"title=" View Details"onClick= {
+  () => alert (" View details (would open a detailed view) ") 
+}> <Eye className=" h-4 w-4"/> </Button> <Button > <Info className=" h-4 w-4"/> </Button> <Button > <AlertTriangle className=" h-4 w-4"/> </Button> <Button > <Ban className=" h-4 w-4" /> </Button> > Ignore </Button>) 
+}</div>) 
+};
+onClick={() => onAction(flagId, "ignore")}
+        >
+          Ignore
+        </Button>
+      )}
+</div>
+  );
+
 }
 
-      <Button;
-        variant="ghost";
-        size="icon";
-        title="View Details";
-      </Button>;
-      <Button;
-        variant="ghost";
-        size="icon";
-        title="Send Warning";
-      </Button>;
-      <Button;
-        variant="ghost";
-        size="icon";
-        title="Suspend User";
-      </Button>;
-      <Button;
-        variant="ghost";
-        size="icon";
-        title="Ban User";
+};
+
+  );
 };

@@ -117,7 +117,6 @@ export default function ${service_name}() {
     "Optimize resource utilization",
     "Scale operations efficiently",
     "Maximize ROI and efficiency"];
-
   const use_cases = ["Software Development",
     "E - commerce & Retail",
     "Financial Services",
@@ -128,11 +127,6 @@ export default function ${service_name}() {
   "name": "Starter",
       "price": "$299 / mo",
       "details": ["Up to 10 users", "Basic features", "Email support", "Standard SLA"]},
-
-    {
-
-  "name": "Professional",
-
           </p>;
         </div>;
       </section>;

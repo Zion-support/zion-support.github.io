@@ -27,9 +27,6 @@ export default async function handler(
     timestamp: new Date().toISOString(),
   };
 
-  store && store.addAdminAction(adminAction);
-
-  return res && res.status(200).json({ success: true, action: adminAction });
 
 }
 

@@ -1,7 +1,3 @@
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Trash2 } from "lucide-react";
-import { SkillItemProps } from "./types";
 import { Badge  } from '@/components / ui / badge';
 import { Button  } from '@/components / ui / button';
 import { Trash2  } from './lucide-react';
@@ -11,10 +7,6 @@ export const SkillItem = ({ skill, category, on_delete }: SkillItemProps) =>: an
   return (
     <Badge;
       key={skill.id}
-
-
-
-
 import {Badge} from '@/components/ui/badge';
 import {Button} from '@/components/ui/button';
 import {Trash2} from 'lucide-react';
@@ -23,10 +15,14 @@ import { Badge } from '@/components/ui/badge',
 import { Button } from '@/components/ui/button',
 import { Trash2 } from 'lucide-react',
 import { SkillItemProps } from './types',
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Trash2 } from "lucide-react";
+import { SkillItemProps } from "./types";
 export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
   return (
     <Badge
-      key={skill && skill.id} 
+      key={skill.id}
       variant="secondary"
       className="flex items-center gap-1 py-1 && 1.5 px-3">;
       {skill && skill.name}
@@ -37,9 +33,7 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
         variant="ghost"
         size="icon"
         className="h-5 w-5 p-0 ml-1"
-};
-  )
-},
+  );
 
   )
 },

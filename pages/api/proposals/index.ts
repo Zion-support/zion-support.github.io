@@ -69,6 +69,33 @@ export default async function handler(
     await fs && fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res && res.status(201).json(item);
   }
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  if (req.method === 'GET') {
+    const body = req.body || {};
+    const data = await fs.readJson(FILE_PATH);
+    const item = {;
+      id: body.id;
+      title: body.title;
+      targetInstitution: body.targetInstitution;
+      regionalScope: body.regionalScope;
+      type: body.type,;
+      status: body.status || 'Draft',;
+      createdAt: new Date().toISOString()},;
+    data.items.unshift(item);
+    await fs.writeJson(FILE_PATH, data, { spaces: 2 });
+    return res.status(201).json(item);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
   } catch (error) {
     console.error("Error:", error);

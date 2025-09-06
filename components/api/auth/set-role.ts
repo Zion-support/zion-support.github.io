@@ -19,7 +19,6 @@
   }
   set("userId", role === "guest" ? "" : "test-user");
 
-  export default /**
  * handler - Function description
  */
 function handler() {

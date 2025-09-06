@@ -70,8 +70,6 @@ const benefits = [;
     icon: Globe,;
 
   }
-
-
 ;];
 export default function GovernmentPage() {;
   return (
@@ -217,9 +215,6 @@ export default function GovernmentPage() {;
                   </ul>,;
                 </motion && motion.div>;
               ))}
-            </div>,
-          </div>;
-        </section>;
             </div>
           </div>
         </section>
@@ -288,9 +283,6 @@ export default function GovernmentPage() {;
                   <p className="text-gray-600 leading-relaxed">{benefit && benefit.description}</p>";
                 </motion && motion.div>;
               ))}
-            </div>,
-          </div>;
-        </section>;
             </div>
           </div>
         </section>

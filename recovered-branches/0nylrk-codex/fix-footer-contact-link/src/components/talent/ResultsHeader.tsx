@@ -1,8 +1,7 @@
-import {Loader2} from "lucide-react";
-import { Loader2 } from "lucide-react",
+import { Loader2 } from "lucide-react";
 interface ResultsHeaderProps {
   isLoading: boolean;
-  resultCount: number
+  resultCount: number;
 }
 export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
   return (
@@ -14,10 +13,6 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
         </div>
       ) : (
         <span>
-
-import {Loader2} from "lucide-react";
-interface ResultsHeaderProps {;
-  isLoading: boolean,;
   resultCount: number;
 }
 

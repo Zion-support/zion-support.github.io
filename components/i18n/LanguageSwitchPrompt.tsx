@@ -73,6 +73,7 @@ export default function LanguageSwitchPrompt() {;
         </div>;
       </div>;
     </div>;
+  );
 }
 import React, { useEffect, useState } from './react';
 import { use_translation  } from './react - i18next';

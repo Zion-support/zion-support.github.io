@@ -1,19 +1,3 @@
-import { useState } from "react";
-import { Star } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import {
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-} from "@/components/ui/card";
-import { ReviewsList } from "@/components/reviews/ReviewsList";
-import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal";
-import { useReviews } from "@/hooks/useReviews";
-
-import { Project } from "@/types/projects";
-import { useAuth } from "@/hooks/useAuth";
 import {useState} from "react";
 import {Star} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -44,15 +28,25 @@ import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal",
 import { useReviews } from "@/hooks/useReviews",
 import { Project } from "@/types/projects",
 import { useAuth } from "@/hooks/useAuth",
+import { useState } from "react";
+import { Star } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { ReviewsList } from "@/components/reviews/ReviewsList";
+import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal";
+import { useReviews } from "@/hooks/useReviews";
+import { Project } from "@/types/projects";
+import { useAuth } from "@/hooks/useAuth";
 interface ProjectReviewSectionProps {
   project: Project;
 }
 
-
-
-  const { user } = useAuth(),
-  const { reviews, userReview, isLoading, reportReview } = useReviews(project.id),
-  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false),
   
   const isCompleted = project.status === "completed",
   const isClient = user?.id === project.client_id,
@@ -107,6 +101,44 @@ interface ProjectReviewSectionProps {
                       {userReview.status === "approved"
                         ? "published"
                         : "pending approval"}
+                {canLeaveReview ? (
+                  <div className="bg-muted/20 rounded-lg p-4 text-center">
+                    <h3 className="font-medium mb-2">Share your experience</h3>
+                    <p className="text-sm text-muted-foreground mb-3">
+                      Your review will help build a trustworthy community
+                    </p>
+                    <Button onClick={() => setIsReviewModalOpen(true)}>
+                      Leave Review
+                    </Button>
+                  </div>
+                ) : hasLeftReview ? (
+                  <div className="bg-muted/20 rounded-lg p-4 text-center">
+                    <h3 className="font-medium mb-2">
+                      Thank you for your review!
+                    </h3>
+                    <p className="text-sm text-muted-foreground mb-3">
+                      Your review is{" "}
+                      {userReview.status === "approved"
+                        ? "published"
+                        : "pending approval"}
+                    </p>
+                    {userReview.status === "pending" && (
+                      <Button
+                        variant="outline"
+                        onClick={() => setIsReviewModalOpen(true)}
+                      >
+                        Edit Review
+                      </Button>
+import {useState} from "react";
+import {Star} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {ReviewsList} from "@/components/reviews/ReviewsList";
+import {LeaveReviewModal} from "@/components/reviews/LeaveReviewModal";
+import {useReviews} from "@/hooks/useReviews";
+import {Project} from "@/types/projects";
+import {useAuth} from "@/hooks/useAuth";
+
 import { useState } from "react",;
 import { Star } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -178,6 +210,11 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
               reviews={reviews}
               isLoading={isLoading}
               onReportReview={reportReview}
+      {/* Review Modal */}
+      {(isClient || isTalent) && (;
+
+      {(isClient || isTalent) && (
+
         <LeaveReviewModal
           projectId={project && project.id}
           revieweeId={revieweeId}

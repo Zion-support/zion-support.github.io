@@ -32,8 +32,8 @@ import { useLanguage, SupportedLanguage } from '@/context/LanguageContext',
 export function LanguageSelector() {
   const { t } = useTranslation();
   const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();
-  const { t } = useTranslation(),
-  const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage(),
+} from "@/components/ui/dropdown-menu";
+import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 
   return (
     <DropdownMenu>;

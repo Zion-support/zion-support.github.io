@@ -1,10 +1,5 @@
 
 
-
-export default function AvatarDropdown() {_const { user, _logout} = useUser()
-
-  const [open, setOpen] = useState(false)
-  if (!user) return null
     <div className=&quot;relative&quot;>
       <button onClick={() => setOpen(o => !o)} className=&quot;h-8 w-8 rounded-full bg-gradient-to-br from-indigo-500 to-cyan-500 text-white text-xs font-semibold grid place-items-center ring-1 ring-white/40&quot;>
         {user.name.split(' ').map(n => n[0]).slice(0,2).join('')}

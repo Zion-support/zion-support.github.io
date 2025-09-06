@@ -304,8 +304,6 @@ const ServicesIndex: NextPage = () => {
                 </div>;
               </div>;
             ))}
-          </div>;
-        </section>;
 
         {/* CTA Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-12 text-center text-white">;
@@ -578,7 +576,6 @@ export default ServicesIndex;
     </div>;
   ),;
 };
-export default ServicesIndex;
 
 export default ServicesIndex;
       </div>;

@@ -1,14 +1,3 @@
-import {
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormMessage
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-
-import { Control } from "react-hook-form";
-import { BasicInfoFormData } from "./schema";
 
   FormField,
 
@@ -20,6 +9,19 @@ import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/comp
 import { Input } from "@/components/ui/input",
 import { Control } from "react-hook-form",
 import { BasicInfoFormData } from "./schema",
+import {
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Control } from "react-hook-form";
+import { BasicInfoFormData } from "./schema";
+interface PersonalInfoFieldsProps {
+  control: Control<BasicInfoFormData>;
+}
 
 
 
@@ -62,47 +64,3 @@ function PersonalInfoFields() {
       <FormField
         control={control}
         name="title"
-        render={({ field }) => (;
-          <FormItem>;
-            <FormLabel>Professional Title</FormLabel>;
-          </FormItem>)}
-      />;
-      <FormField;
-        control={control}
-        name="title";
-        render={({ field }) => (
-      <FormField
-        control={control}
-        name="email"
-        render={({ field }) => (;
-          <FormItem>;
-            <FormLabel>Email</FormLabel>;
-            <FormControl>;
-              <Input type="email" placeholder="john@example && example.com" {...field} />;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>;
-        )}
-        render={({ field }) => (
-          <FormItem>;
-            <FormLabel > Email</FormLabel>;
-            <FormControl>;
-              <Input type="email" placeholder="john@example.com" {...field} />;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>)}
-      />;
-      <FormField;
-        control={control}
-        name="email";
-        render={({ field }) => (
-          <FormItem>;
-            <FormLabel > Phone</FormLabel>;
-            <FormControl>;
-              <Input placeholder="+1 234 567 8900" {...field} />;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>)}
-      />;
-    </div>);
-}

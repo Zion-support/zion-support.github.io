@@ -20,17 +20,11 @@ try {
     // Ensure clean working directory
     const status = execSync('git status --porcelain', { encoding: 'utf8' });
     if (status && status.trim()) {
-    try {
-        exec_sync ('git pull origin main');
-    } catch (error) {
-
         console && console.log('⚠️  Merge conflicts detected. Resolving...');
         // Find files with merge conflicts
         const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
         if (conflictFiles && conflictFiles.trim()) {
             console && console.log('Found merge conflicts in:', conflictFiles && conflictFiles.trim());
-            
-
             // Resolve conflicts by accepting our version
             const files = conflictFiles && conflictFiles.trim().split('\n');
             for (const file of files) {

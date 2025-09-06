@@ -3,12 +3,6 @@
 jest.mock("next/router", () => ({
   useRouter() {
     return {
-// Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', {
-  writable: true,
-  value: jest.fn().mockImplementation(query => ({
-    dispatchEvent: jest.fn()
-  }))
 });
 
 // Mock IntersectionObserver

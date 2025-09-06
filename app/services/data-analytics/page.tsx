@@ -215,7 +215,7 @@ function DataAnalyticsTechStack({ title, technologies }: {
             {tech}
           </span>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
@@ -322,19 +322,3 @@ function CTASection() {
       </div>
     </div>
   );
-}
-  );
-}
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="tel:+13024640950"
-          >
-            Call +1 302 464 0950
-          </a>
-          <a
-            href="mailto:kleber@ziontechgroup.com"
-          >
-            Email Us
-          </a>
-        </div>

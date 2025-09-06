@@ -78,23 +78,6 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
         rows={1}
         disabled={disabled}
   );
-);
-      />;
-      <Button;
-        type="submit";
-        className="bg - zion - purple hover:bg - zion - purple - light text - white rounded - full p - 2 h - 10 w - 10 flex items - center justify - center";
-        disabled={!message.trim () || disabled}
-      >;
-        <Send className="h - 5 w - 5" />;
-      </Button>;
-    </form>);
-}
-
-);
-  )
-
-}
-  )
 }
   )
 }

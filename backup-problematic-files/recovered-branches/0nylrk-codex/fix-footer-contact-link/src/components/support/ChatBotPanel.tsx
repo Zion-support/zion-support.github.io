@@ -327,8 +327,6 @@ id: `user-$ {
 }`;
 content: text;
 setIsLoading (true);
-  id: `bot-$ {
-  Date.now () 
 }`;
 //After 3 failed attempts, suggest escalation if (failedAttempts >= 2) {
   setFailedAttempts ( (prev) => prev + 1);
@@ -393,13 +391,6 @@ timestamp: new Date ()
 }]);
 //In a real implementation, this would trigger a live chat request 
 };
-  setMessages ( (prev) => [ ...prev, {
-  id: `user-$ {
-  Date.now () 
-}`;
-content: "I'd like to email support";
-sender: "user";
-timestamp: new Date () 
 };
 timestamp: new Date () 
 }]) 

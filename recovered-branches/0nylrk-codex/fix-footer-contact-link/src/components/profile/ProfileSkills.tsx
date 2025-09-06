@@ -1,16 +1,5 @@
-import { Badge } from "@/components/ui/badge";
-import { ProfileSkill } from "@/types/profile";
 import { Badge } from "@/components/ui/badge",
 import { ProfileSkill } from "@/types/profile",
-import {Badge} from "@/components/ui/badge";
-import {ProfileSkill} from "@/types/profile";
-import { Badge } from "@/components/ui/badge",
-import { ProfileSkill } from "@/types/profile",
-
-
-import { Badge } from "@/components/ui/badge",
-import { ProfileSkill } from "@/types/profile",
-
 import {Badge} from "@/components/ui/badge";
 import {ProfileSkill} from "@/types/profile";
 import { Badge } from "@/components/ui/badge",
@@ -34,10 +23,6 @@ export function ProfileSkills({ skills }: ProfileSkillsProps) {
                 </span>
               )}
             </div>
-              <div
-                className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan"
-              <div 
-                className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan" 
                 style={{ width: `${(skill.level / 5) * 100}%` }}
               />
             </div>
@@ -45,8 +30,6 @@ export function ProfileSkills({ skills }: ProfileSkillsProps) {
         ))}
       </div>
     </div>
-              <div 
-                className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan" 
   )
 import { Badge } from "@/components/ui/badge",;
 import { ProfileSkill } from "@/types/profile";

@@ -3,7 +3,6 @@
     if (dev) {
       config.watchOptions = {
         ignored: [
-    }
     // Exclude apps directory from compilation
     config.module.rules.push({
       test: /\.(ts|tsx|js|jsx)$/

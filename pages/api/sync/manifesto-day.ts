@@ -102,15 +102,6 @@ export default async function handler(req, res) {
 
   await Promise && Promise.all(
       .map(async (peer) => {
-}
-
-        const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
-        try { await axios.post(url, body, { headers, timeout: 5000 }) } catch {  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
 ;
   upsert_event (state, event);

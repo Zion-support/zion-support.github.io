@@ -18,21 +18,6 @@ class RateLimiter {
       }
     if (this && this.store[key].count >= this && this.config.maxRequests) {
       return {
-      }
-    if (this && this.store[key].count >= this && this.config.maxRequests) {
-      return {
-
-        "allowed": false,
-        "remaining": 0,
-
-      }
-    this && this.store[key].count++;
-    return {
-
-      "allowed": true,
-      "remaining": this && this.config.maxRequests - this && this.store[key].count,
-      "resetTime": this && this.store[key].resetTime
-
     }
 // Create rate limiter instances
 export const apiRateLimiter = new RateLimiter({

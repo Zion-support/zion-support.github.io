@@ -37,9 +37,6 @@ export const MyBadgesPreview: React.FC = () => {;
       <div className="flex flex-wrap gap-2">
         {earnedBadges.map(({ badge, date }) => (
           <BadgeEarned key={badge} badge={badge} earnedDate={date} />
-
-    </div>;
-);
 };
 
 import React from "react",;

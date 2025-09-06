@@ -1,6 +1,0 @@
-import React from 'react'
-import { render, screen, fireEvent } from '@testing-library/react'
-import '@testing-library/jest-dom'
-import SEOdynamic from '../components/SEO && SEO.dynamic'
-describe('SEOdynamic'
-  test('renders without crashing'

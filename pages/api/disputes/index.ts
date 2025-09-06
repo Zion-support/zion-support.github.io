@@ -81,32 +81,6 @@ export default async function handler(
     return res && res.status(201).json({ dispute });
   }
 
-
-}
-
-
-      project_id: String (project_id),
-      entity_type,
-      entity_id,
-      clientUserId: String (clientUserId),
-      talentUserId: String (talentUserId),
-      created_at: now,
-      updated_at: now,
-      status: "Open",
-      reason: reason as DisputeReason,
-      reason_details,
-      description,
-      attachments: [],
-      messages: [],
-    }
-;
-    await create_dispute (dispute);
-    return res.status (201).json ({ dispute });
-  }
-  res.set_header ("Allow", "GET, POST");
-  return res.status (405).end ("Method Not Allowed");
-}
-res.setHeader("Allow", "GET,POST");
   return res.status(405).end("Method Not Allowed");
 }
 

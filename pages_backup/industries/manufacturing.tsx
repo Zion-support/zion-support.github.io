@@ -70,8 +70,6 @@ const benefits = [;
     icon: BarChart3,;
 
   }
-
-
 ;];
 export default function ManufacturingPage() {;
   return (

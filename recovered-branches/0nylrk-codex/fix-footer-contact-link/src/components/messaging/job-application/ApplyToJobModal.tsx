@@ -2,7 +2,6 @@
   DialogContent,
   DialogDescription,
   DialogHeader,
-DialogTitle,;
 } from "@/components/ui/dialog";
 import { ApplyForm } from "./ApplyForm";
 import { ApplyToJobModalProps } from "./types";

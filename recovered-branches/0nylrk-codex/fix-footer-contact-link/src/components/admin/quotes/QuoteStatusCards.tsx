@@ -64,9 +64,6 @@ interface QuoteStatusCardsProps {
           <p className="text-sm text-zion-slate-light">Finalized or declined quotes</p>
         </CardContent>
       </Card>
-  );
-}
-
   )
 },
 import React from "react",;
@@ -114,6 +111,14 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({;
           </p>;
         </CardContent>;
       </Card>;
-  );
+};
+
+
+export default QuoteStatusCards;
+
+    </div>);
+}
+;
+    closed: number;};
 }
 

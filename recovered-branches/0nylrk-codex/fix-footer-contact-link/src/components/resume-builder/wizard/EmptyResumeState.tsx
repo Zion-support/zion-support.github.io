@@ -1,10 +1,7 @@
-import { Card, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { FilePlus } from "lucide-react";
 import { EmptyResumeProps } from "./types";
-
-import { FilePlus } from "lucide-react",
-import { EmptyResumeProps } from "./types",
 export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
   return (
     <Card className="w-full max-w-2xl mx-auto">
@@ -21,11 +18,11 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
         </div>
       </CardContent>
     </Card>
+  );
+};
 
-import {Card, CardContent} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {FilePlus} from "lucide-react";
-import {EmptyResumeProps} from "./types";
+  );
+}
 
 };
 

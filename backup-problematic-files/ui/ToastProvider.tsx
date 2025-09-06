@@ -26,30 +26,6 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
 
   const addToast = useCallback((toast: Omit<Toast, 'id'>) => {
     const id = `${Date.now()}_${Math.random().toString(36).slice(2)}`
-export type ToastContextValue = {
-  toasts: Toast[];
-  add_toast: (toast: Omit < Toast, 'id'>) => string;
-  remove_toast: (id: string) => void;
-  clear_toasts: () => void;
-}
-const ToastContext = create_context < ToastContextValue | undefined>(undefined);
-export /**
- * ToastProvider - Function description
- */
-function ToastProvider() {
-  const [toasts, set_toasts] = useState < Toast[]>([]);
-  const remove_toast = useCallback ((id: string) => {
-    set_toasts (prev => prev.filter (t => t.id !== id));
-  }, []);
-  const add_toast = useCallback ((toast: Omit < Toast, 'id'>) => {
-    const id = `${Date.now ()}_${Math.random ().to_string (36).slice (2)}`;
-    const item: Toast = { id, variant: 'default', duration_ms: 4000, ...toast }
-    set_toasts (prev => [...prev, item]);
-    // Check condition
-if ( {) {
-  $2
-}
-      set_timeout (() => remove_toast (id), item.duration_ms);
     }
     return id;
   }, [remove_toast]);
@@ -74,8 +50,5 @@ if ( {) {
                       {t.actionLabel}
                     </button>;
                   )}
-        </AnimatePresence>;
-      </div>;
-    </ToastContext.Provider>);
   return ctx;
 }

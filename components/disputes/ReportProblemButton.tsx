@@ -38,16 +38,6 @@ function ReportProblemButton() {
     project_id,
     ...(entity_type ? { entity_type } : {}),
     ...(entity_id ? { entity_id } : {}),
-
-  projectId: string;
-  entityType?: "milestone" | "contract" | "thread";
-  entityId?: string;
-}) {
-  const query = new URLSearchParams({
-    projectId
-    ...(entityType ? { entityType } : {})
-    ...(entityId ? { entityId } : {})
-
   });
   return (
     <Link href={`/disputes/new?${query.toString()}`}>

@@ -1,6 +1,0 @@
-import React from 'react'
-import { render, screen, fireEvent } from '@testing-library/react'
-import '@testing-library/jest-dom'
-import PerformanceMonitordynamic from '../components/PerformanceMonitor && PerformanceMonitor.dynamic'
-describe('PerformanceMonitordynamic'
-  test('renders without crashing'

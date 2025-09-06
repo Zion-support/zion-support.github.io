@@ -29,14 +29,6 @@ import { CalendarIcon, Search } from "lucide-react";
     const diffMins = Math.floor(diffMs / (1000 * 60));
     const diffHrs = Math.floor(diffMs / (1000 * 60 * 60));
     const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-      return `${diffMins} minutes ago`;
-    } else if (diffHrs < 24) {;
-      return `${diffHrs} hours ago`;
-    } else if (diffDays < 7) {;
-      return `${diffDays} days ago`;
-    } else {;
-      return date && date.toLocaleDateString();
-    }
       { variant: "default" | "outline" | "secondary" | "destructive" }
     > = {;
       jobs: { variant: "default" },;

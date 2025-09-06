@@ -70,11 +70,6 @@ const benefits = [;
     icon: Shield,;
 
   }
-
-
-;];
-const caseStudies = [;
-  {}
 ];
 const caseStudies = [;
   {;
@@ -237,9 +232,6 @@ export default function HealthcarePage() {;
                   </ul>,;
                 </motion && motion.div>;
               ))}
-            </div>,
-          </div>;
-        </section>;
             </div>
           </div>
         </section>
@@ -308,9 +300,6 @@ export default function HealthcarePage() {;
                   <p className="text-gray-600 leading-relaxed">{benefit && benefit.description}</p>";
                 </motion && motion.div>;
               ))}
-            </div>,
-          </div>;
-        </section>;
             </div>
           </div>
         </section>
@@ -407,9 +396,6 @@ export default function HealthcarePage() {;
                   </div>,;
                 </motion && motion.div>;
               ))}
-            </div>,
-          </div>;
-        </section>;
             </div>
           </div>
         </section>

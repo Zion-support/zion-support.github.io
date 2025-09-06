@@ -94,11 +94,3 @@ quote.budget min
   quote.budget min 
 }` : 'Not specified');
 quote.timeline;
-quote.status;
-new Date (quote.created at) .toLocaleDateString () ]);
-//Create CSV content //Create download link className="flex items-center gap-2" disabled= {
-  quotes.length === 0 
-}> <Download size= {
-  16 
-}/> Export CSV </Button>) 
-};

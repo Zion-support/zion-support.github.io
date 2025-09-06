@@ -7,12 +7,6 @@ export interface HelpArticle {;
   id: string;
   title: string;
   content: string;
-  lastUpdated: string,
-  tags: string[]
-  lastUpdated: string;
-tags: string[]
-}
-export interface HelpCategory {
 }
 
 export interface HelpCategory {;
@@ -32,9 +26,6 @@ export interface SupportTicket {;
   message: string;
   status: "open" | "in - progress" | "resolved" | "closed";
   priority: "low" | "medium" | "high";
-
-  created_at: string;
-  updated_at: string;
 }
 
 import { ReactNode } from "react",

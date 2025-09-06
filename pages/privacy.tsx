@@ -826,9 +826,6 @@ const PrivacyPage: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
-<p className="text-sm text-gray-600 mt-8">
-                <p className="text-sm text-gray-600 mt-8">
                   Last updated: January 2024
                 </p>
               </div>
@@ -910,6 +907,8 @@ export default PrivacyPage;
 
 
 
+
+
                 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Contact Us</h2>;
                 <p className="mb - 6">;
                   If you have any questions about this Privacy Policy, please;
@@ -936,10 +935,3 @@ export default PrivacyPage;
 <p className="text - sm text - gray - 600 mt - 8">;
                   Last updated: January 2024;
                 </p>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </MainLayout>);
-}

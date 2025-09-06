@@ -23,11 +23,6 @@
       'react-router-dom',
       'framer-motion',
       'lucide-react',
-    },
-  },
-  css: {
-    devSourcemap: false,
-  },
   },
   preview: {
     port: 4173,

@@ -65,88 +65,6 @@ function ComprehensiveServicesShowcase2025V2() {
     ...innovativeITServices2025ExpansionV2,
     ...innovativeAIServices2025ExpansionV2,
     ...industrySpecificSolutions2025V2,
-    ...emergingTechBreakthroughs2025V2,  ];    ...innovativeMicroSaas2025ExpansionV2;
-    ...innovativeITServices2025ExpansionV2;
-    ...innovativeAIServices2025ExpansionV2;
-    ...industrySpecificSolutions2025V2;
-
-    ...emergingTechBreakthroughs2025V2;
-
-  const serviceCategories = [;
-    {;
-      id: 'micro-saas',;
-      name: 'Innovative Micro SAAS',;
-      icon: <Smartphone className='w-8 h-8' />,;
-      color: 'from-blue-500 to-cyan-500',;
-      services: innovativeMicroSaas2025ExpansionV2,;
-      description: 'Cutting-edge micro SAAS solutions for modern businesses',      color: 'from-blue-500 to-cyan-500',;
-      services: innovativeMicroSaas2025ExpansionV2,;
-      description: 'Cutting-edge micro SAAS solutions for modern businesses';
-    };
-    {;
-      id: 'it-infrastructure',;
-      name: 'IT Infrastructure Services',;
-      icon: <Cloud className="w-8 h-8" />,;
-      color: 'from-purple-500 to-pink-500',;
-      services: innovativeITServices2025ExpansionV2,;
-      description: 'Advanced IT infrastructure and security solutions';
-    };
-    {;
-      id: 'ai-services',;
-      name: 'AI & Machine Learning',;
-      icon: <Brain className="w-8 h-8" />,;
-      color: 'from-green-500 to-emerald-500',;
-      services: innovativeAIServices2025ExpansionV2,;
-      description: 'Intelligent AI solutions for business transformation';
-    };
-    {;
-      id: 'industry-solutions',;
-      name: 'Industry Solutions',;
-      icon: <Building className="w-8 h-8" />,;
-      color: 'from-orange-500 to-red-500',;
-      services: industrySpecificSolutions2025V2,;
-      description: 'Specialized solutions for specific industries';
-    };
-    {;
-      id: 'emerging-tech',;
-      name: 'Emerging Technology',;
-      icon: <Atom className="w-8 h-8" />,;
-      color: 'from-indigo-500 to-purple-500',;
-      services: emergingTechBreakthroughs2025V2,;
-      description: 'Breakthrough technologies of the future',;
-    },;
-    {;
-      id: 'it-infrastructure',;
-      name: 'IT Infrastructure Services',;
-      icon: <Cloud className='w-8 h-8' />,;
-      color: 'from-purple-500 to-pink-500',;
-      services: innovativeITServices2025ExpansionV2,;
-      description: 'Advanced IT infrastructure and security solutions',;
-    },;
-    {;
-      id: 'ai-services',;
-      name: 'AI & Machine Learning',;
-      icon: <Brain className='w-8 h-8' />,;
-      color: 'from-green-500 to-emerald-500',;
-      services: innovativeAIServices2025ExpansionV2,;
-      description: 'Intelligent AI solutions for business transformation',;
-    },;
-    {;
-      id: 'industry-solutions',;
-      name: 'Industry Solutions',;
-      icon: <Building className='w-8 h-8' />,;
-      color: 'from-orange-500 to-red-500',;
-      services: industrySpecificSolutions2025V2,;
-      description: 'Specialized solutions for specific industries',;
-    },;
-    {;
-      id: 'emerging-tech',;
-      name: 'Emerging Technology',;
-      icon: <Atom className='w-8 h-8' />,;
-      color: 'from-indigo-500 to-purple-500',;
-      services: emergingTechBreakthroughs2025V2,;
-      description: 'Breakthrough technologies of the future',;
-    },  ];      description: 'Breakthrough technologies of the future';
     }
   ];
 
@@ -227,9 +145,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
 
-            initial={_{ opacity: 0, _y: 30}}
-            animate={_{ opacity: 1, _y: 0}}
-            transition={_{ duration: 0.8}}
           >
             2025 V2 Comprehensive
             <br />
@@ -541,7 +456,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
                   {category.services.map (service => (
                     <motion.div;
                       key={service.id}
-
                       className="bg-black/30 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105"
                       whileHover={_{ y: -5}}
                     >
@@ -581,30 +495,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
             initial="initial";
             whileInView="animate";
             viewport={{ once: true }}
-
-                      </p>;
-                      <div className='space - y-3 mb - 6'>;
-                        <div className='flex items - center text - sm text - cyan - 400'>;
-                          <TrendingUp className='w - 4 h - 4 mr - 2' />;
-                          {service.market_size}
-                        </div>;
-                        <div className='flex items - center text - sm text - green - 400'>;
-                          <Star className='w - 4 h - 4 mr - 2' />;
-                          {service.growth_rate}
-                        </div>;
-                      </div>;
-                      <div className='mb - 6'>;
-                        <div className='text - 2xl font - bold text - white mb - 2'>;
-                          Starting at{' '}
-                          {(service as any).pricing?.starter || service.price}
-                        </div>;
-                        <div className='text - sm text - gray - 400'>;
-                          {(service as any).pricing?.professional;
-                            ? `Professional: ${(service as any).pricing.professional} | Enterprise: ${(service as any).pricing.enterprise}`;
-                            : `${service.price} ${service.period}`}
-                        </div>;
-                      </div>;
-                      <a;
                         href={`/services/${service.slug}`}
                         className='inline - flex items - center text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 200';
                       >;
@@ -704,6 +594,21 @@ export default function ComprehensiveServicesShowcase2025V2() {
                 </div>;
               </motion && motion.div>;
             ))}
+
+        <div className="max-w-7xl mx-auto">
+          <motion.h2
+            className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
+
+
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            Market Impact & Growth
+          </motion.h2>
+          <motion.div
+            className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'            initial={{ opacity: 0, y: 20 }}
+          <motion.div
           </motion.div>
         </div>
       </section>
@@ -788,7 +693,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-
 
       {_/* Market Statistics */}
       <section className="py-20 px-4 bg-black/20">

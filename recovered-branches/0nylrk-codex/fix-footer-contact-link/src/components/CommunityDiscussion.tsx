@@ -153,7 +153,6 @@ const initialPosts: DiscussionPost[] = [;
             </div>;
           </CardContent>;
 
-);
                 </AvatarFallback>;
               </Avatar>;
               <div>;
@@ -181,5 +180,6 @@ const initialPosts: DiscussionPost[] = [;
         homepage.;
       </div>;
     </div>;
+  );
   );
 };

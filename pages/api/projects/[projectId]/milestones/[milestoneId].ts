@@ -70,16 +70,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       }
       if (status === 'Paid') {
         body.paidAt = new Date().toISOString()
-      return;
-    }
-    res && res.status(200).json({ milestone: updated });
-    return;
-  }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
   res.setHeader('AllowPATCH');
   res.status(405).end('Method Not Allowed')
 }

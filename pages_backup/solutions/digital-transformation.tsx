@@ -33,8 +33,6 @@ import React from 'react';
       title="Digital Transformation - Zion Tech Group""
       description="Complete digital transformation solutions to modernize your business and drive innovation."">;
       <div className="min-h-screen bg-gray-50">";
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 text-white py-20">";
           <div className="container mx-auto px-4">";
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}

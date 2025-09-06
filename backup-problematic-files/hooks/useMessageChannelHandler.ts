@@ -3,9 +3,6 @@ interface Event {
   target: EventTarget | null;
 }
 type EventListener = (event: Event) => void;
-
-;
-
 interface EventTarget {
   addEventListener (type: string, listener: EventListener): void;
   removeEventListener (type: string, listener: EventListener): void;
@@ -51,4 +48,3 @@ if ( {) {
     [onMessage, onError]
   );
   useEffect(() => {
-

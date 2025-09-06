@@ -6,9 +6,6 @@ async function fetchFromGitHub() {
   try {
     const response = await fetch(
     );
-    if (!response && response.ok) return null;
-    const data = await response && response.json();
-    return JSON && JSON.parse(Buffer && Buffer.from(data && data.content, "base64").toString());
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
 import path from './path';

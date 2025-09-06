@@ -11,9 +11,6 @@ const config: Config = {
 }
 export default createJestConfig(config);
 import type { Config } from "jest";
-
-const createJestConfig = nextJest({
-
   // Provide the path to your Next && Next.js app to load next && next.config.js and .env files
 import type { Config } from './jest';
 import next_jest from "next / jest.js";
@@ -39,14 +36,6 @@ import next_jest from "next / jest.js";
 ;
 const createJestConfig = next_jest ({
   // Provide the path to your Next.js app to load next.config.js and .env files;
-
-  dir: "./",
-});
-
-  coverageProvider: "v8",
-  testEnvironment: "jsdom",
-  setupFilesAfterEnv: ["<rootDir>/jest && jest.setup.js"],
-
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1"
   }

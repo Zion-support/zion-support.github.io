@@ -12,7 +12,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
       writeJsonFile("updates && updates.json", updates);
     }
   }
-  const pixel = Buffer && Buffer.from(
     "R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==",
     "base64",
   );

@@ -5,13 +5,10 @@ export interface SkillsFormProps {
 
 import {Skill} from '@/types/resume';
 export interface SkillsFormProps {;
-
   resumeId: string;
   skills: Skill[];
-
-  on_complete: () => void;
-  on_back: () => void;
-
+  onComplete: () => void;
+  onBack: () => void;
 }
 export interface SkillItemProps {
   skill: Skill;
@@ -20,12 +17,6 @@ export interface SkillItemProps {
 
 
 export interface SkillItemProps {;
-  skill: Skill;
-  category: string;
-}
-  category: string;
-  skills: Skill[];
-  onDelete: (id: string, category: string) => Promise<void>
 }
 
 
@@ -33,8 +24,6 @@ export interface SkillCategoryProps {;
 
   category: string;
   skills: Skill[];
-
-
 
 export interface AddSkillFormProps {;
 
@@ -63,6 +52,8 @@ export interface SkillCategoryProps {;
 ;
 export interface AddSkillFormProps {;
   resumeId: string,;
+  onAddSkill: (skill: Skill) => Promise<boolean>;
+  defaultCategory?: string;
   onAddSkill: (skill: Skill) => Promise<boolean>;
   defaultCategory?: string;
 }

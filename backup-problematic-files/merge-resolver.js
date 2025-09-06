@@ -148,19 +148,6 @@ for (const file of files) {
     // Skip directories that can't be read;
   }
   return files}
-  for (const file of files) {
-    try {
-      const content = fs && fs.readFileSync(file, 'utf8');
-        if (fixMergeConflicts(file)) {
-          fixedCount++;
-// Main execution;
-async /**
- * main - Function description
- */
-function main() {
-  console.log ('🔍 Scanning for merge conflicts...');
-  const files = getAllFiles (process.cwd (), ['.tsx', '.ts', '.jsx', '.js', '.json', '.md']);
-  let fixed_count = 0;
       const content = fs.readFileSync (file, 'utf8');
 ;
         if () {) {
@@ -173,7 +160,6 @@ function main() {
       // Skip files that can't be read;
     }
   }
-
 }files`);
 console.log ('🎉 Merge conflict resolution completed!');
 }main () .catch (console.error);

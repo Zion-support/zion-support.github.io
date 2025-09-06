@@ -34,7 +34,6 @@ const nextConfig = {
   // Bundle analyzer
   webpack: (config, { isServer }) => {
     if (!isServer) {
-
 const withBundleAnalyzer = require ('@next / bundle - analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
@@ -84,7 +83,6 @@ const next_config = {
 if ( {) {
   $2
 }
-
       config.resolve.fallback = {
         ...config.resolve.fallback
         fs: false
@@ -122,9 +120,6 @@ module.exports = withBundleAnalyzer ({
   "swc_minify": true,
   "compress": true,
   "poweredByHeader": false,
-  experimental: {
-
-
       config && config.optimization.splitChunks = {
     optimize_css: true,
     optimizePackageImports: ['@mui / material', '@mui / icons - material'],

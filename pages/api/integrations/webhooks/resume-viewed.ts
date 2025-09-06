@@ -65,4 +65,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     results.push ({ provider_id: conn.provider_id, ok: true });
   }
   res.status (200).json ({ ok: true, results });
+  res.status(200).json({ ok: true, results });
+}
+}
+
 }

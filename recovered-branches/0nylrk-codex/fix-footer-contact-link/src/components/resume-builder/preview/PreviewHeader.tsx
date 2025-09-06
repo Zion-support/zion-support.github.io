@@ -12,16 +12,9 @@ import {useState} from 'react';
 import {useIsMobile} from '@/hooks/use-mobile';
 interface PreviewHeaderProps {
   resume: Resume;
-  onBack: () => void
+  onBack: () => void;
 }
 
-
-export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
-
-
-  const [isPrinting, setIsPrinting] = useState(false);
-
-  const isMobile = useIsMobile();
   const handleBrowserPrint = () => {
     setIsPrinting(true);
     // Inject print-specific CSS only for the duration of printing
@@ -42,8 +35,6 @@ interface PreviewHeaderProps {;
 }
 ;
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
-  const [isPrinting, setIsPrinting] = useState(false),;
-  const isMobile = useIsMobile(),;
   const handleBrowserPrint = () => {;
     setIsPrinting(true);
 
@@ -108,16 +99,6 @@ function PreviewHeader() {
         }
         .no - print {
           display: none !important;
-    // Trigger print dialog
-    window.print();
-    // Remove the temporary style element after printing
-    setTimeout(() => {
-      document.head.removeChild(style);
-      setIsPrinting(false);
-    }, 1000);
-  }
-    `,
-    document.head.appendChild(style),
     `,
     document.head.appendChild(style),
 
@@ -158,9 +139,6 @@ function PreviewHeader() {
         </Button>
       </div>
     </div>
-    document.head.append_child (style);
-;
-    `;
     document.head.append_child (style);
 ;
     // Trigger print dialog;

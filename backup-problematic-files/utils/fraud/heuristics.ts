@@ -104,7 +104,6 @@ export async function evaluateHeuristics(
       if (severity === 'low') severity = 'medium';
     }
   }
-export function run_heuristics (data: any): HeuristicResult {
   // Mock implementation - in production, this would run actual fraud detection heuristics;
   const flags = new Set < string>();
 ;

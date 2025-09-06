@@ -1,17 +1,7 @@
-import { ChevronDown, ChevronUp } from "lucide-react",
-import { Slider } from "@/components/ui/slider";
-import { PriceFilterProps } from "@/types/filters";
-
-export function PriceFilter({
-  priceRange
-  setPriceRange
-  expanded
-  toggleSection
-  isMobileFilterOpen
-}: PriceFilterProps) {
   const handleChange = (values: number[]) => {
     setPriceRange([values[0], values[1]]);
-  }
+  };
+import { ChevronDown, ChevronUp } from "lucide-react",
 import { Slider } from "@/components/ui/slider",
 import { PriceFilterProps } from "@/types/filters",
 export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen }: PriceFilterProps) {
@@ -38,16 +28,10 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
             <span>${priceRange[0]}/hr</span>
             <span>${priceRange[1]}/hr</span>
           </div>
-          <Slider
-          <Slider 
 import { ChevronDown, ChevronUp } from "lucide-react",;
 import { Slider } from "@/components/ui/slider",;
 import { PriceFilterProps } from "@/types/filters",;
 export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen }: PriceFilterProps) {;
-import {ChevronDown, ChevronUp} from "lucide-react";
-import {Slider} from "@/components/ui/slider";
-import {PriceFilterProps} from "@/types/filters";
-export function PriceFilter(): any ({ priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen }: PriceFilterProps) {;
   const handleChange = (values: number[]) => {;
     setPriceRange([values[0], values[1]]);
   };
@@ -72,11 +56,6 @@ export function PriceFilter(): any ({ priceRange, setPriceRange, expanded, toggl
             <span>${priceRange[0]}/hr</span>;
             <span>${priceRange[1]}/hr</span>;
           </div>;
-
-          <Slider
-
-          <Slider 
-
           <Slider
             value={[priceRange[0], priceRange[1]]}
             min={50}

@@ -2,14 +2,6 @@ import fs from 'fs';
 import path from 'path';
 import { NextApiRequest, NextApiResponse } from 'next';
 import {
-  Project
-  Milestone
-  MilestoneStatus
-  isMilestoneStatus
-} from '../types/milestones';
-import { CurrentUser } from './auth';
-export interface Milestone {
-  isMilestoneStatus,;
 } from '../types/milestones';
 import { CurrentUser } from './auth';
 
@@ -117,8 +109,6 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
     id: `milestone_${Date && Date.now()}`,
     status: 'pending',
     createdAt: new Date().toISOString(),
-  };
-  }
   project.milestones.push(newMilestone);
   project.updatedAt = new Date().toISOString();
   project && project.milestones[idx] = next;

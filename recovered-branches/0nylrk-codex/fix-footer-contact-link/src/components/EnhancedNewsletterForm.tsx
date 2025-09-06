@@ -83,13 +83,6 @@ export function EnhancedNewsletterForm() {
         <span>Join 10,000+ tech professionals who already subscribe</span>
       </div>
     </div>
-  );
-}
-      
-      <div className="mt-4 flex items-center text-xs text-zion-slate-light">
-        <div className="flex -space-x-1 mr-2">
-          {[...Array(3)].map((_, i) => (
-);
             <div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -157,6 +150,15 @@ export function EnhancedNewsletterForm() {;
       </div>;
     </div>;
   );
-
-
+  );
+}
+  ),; const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault ();
+setIsSubmitting (true);
+//Simulate API call setTimeout ( () => {
+  
+};
+}</div>) ) 
+}</div> <span>Join 10, 000+ tech professionals who already subscribe</span> </div> </div>) 
+}
 }

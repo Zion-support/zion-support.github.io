@@ -47,33 +47,18 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
+import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
+import { toast } from "@/hooks/use-toast";
+import { HireConfirmationModal } from "./HireConfirmationModal";
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",
 import { toast } from "@/hooks/use-toast",
 import { HireConfirmationModal } from "./HireConfirmationModal",
-
-
-
-
 interface CandidateCardProps {
-  application: JobApplication,
+  application: JobApplication;
   index: number
 }
-
-export function CandidateCard({ application, index }: CandidateCardProps) {;
-  const [showNotes, setShowNotes] = useState(false);
-  const [notes, setNotes] = useState(application.notes || "");
-  const [showHireModal, setShowHireModal] = useState(false);
-
-export function CandidateCard({ application, index }: CandidateCardProps) {
-  const [showNotes, setShowNotes] = useState(false);
-  const [notes, setNotes] = useState(application.notes |"");
-  const [showHireModal, setShowHireModal] = useState(false);
-  // Check if application is stalled (no activity for 7 days)
-
-
-
-
 
   const handleSaveNotes = () => {
     // Here you would save the notes to the database

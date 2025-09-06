@@ -74,19 +74,3 @@ isAuthenticated: boolean
 profileName;
 isSaved;
 onToggleSave;
-isAuthenticated 
-}: TalentCardSaveButtonProps) {
-  const {
-  toast 
-}= useToast ();
-const [localIsSaved, setLocalIsSaved] = React.useState (isSaved);
-//Handle save toggle const handleSaveToggle = (e: React.MouseEvent) => {
-  e.stopPropagation ();
-if (!isAuthenticated) {
-  toast ({
-  return;
-}variant: "default" 
-}) 
-};
-}/> </button>) 
-}

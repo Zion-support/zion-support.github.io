@@ -34,11 +34,6 @@ export default async function handler(
       job_id: match.job_id,
       note: `Talent ${match.talent_id} matched. ${match.summary || ""}`.trim (),
     });
-    write_state ((s) => s.logs.push (log));
-  }
-  res.status (200).json ({ ok: true, event_id });
-}
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });

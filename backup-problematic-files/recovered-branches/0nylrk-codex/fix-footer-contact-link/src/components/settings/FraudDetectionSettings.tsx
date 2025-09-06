@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react',;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Switch } from '@/components/ui/switch',;
@@ -144,10 +143,6 @@ export function FraudDetectionSettings() {;
         </div>;
       </CardContent>;
     </Card>;
-  ),; export function FraudDetectionSettings () {
-  const {
-  user 
-}= useAuth ();
 const [messageScanningEnabled, setMessageScanningEnabled] = useState (true);
 const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState (true);
 const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState (true);
