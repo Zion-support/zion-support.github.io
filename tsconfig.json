@@ -4,21 +4,15 @@
     "lib": [
       "dom",
       "dom.iterable",
-      "es6",
-      "es2017",
-      "es2018",
-      "es2019",
-      "es2020",
-      "es2021",
-      "es2022"
+      "ES2020"
     ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "ESNext",
-    "moduleResolution": "node",
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -30,14 +24,8 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"],
-      "@/components/*": ["./components/*"],
-      "@/pages/*": ["./pages/*"],
-      "@/styles/*": ["./styles/*"],
-      "@/utils/*": ["./utils/*"],
-      "@/types/*": ["./types/*"]
-    },
-    "allowSyntheticDefaultImports": true
+      "@/*": ["./*"]
+    }
   },
   "include": [
     "next-env.d.ts",
