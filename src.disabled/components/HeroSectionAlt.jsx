@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,8 @@
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 ' \' \"export\": const HeroSectionAlt = () => { const containerVariants = { hidden: { opacity: 0},\"visible\": { opacity: 1,\"transition\": { staggerChildren: 0.,2,\"delayChildren\": \'0 && 0.1\'} const itemVariants = { \"hidden\": { y: 3,0,\"opacity\": \'0\'},\"visible\": { y: 0,\"opacity\": \'1\',\"transition\": { duration: 0.,8,\' \"ease\": \'easeOut\'} const floatingVariants = { \''\';\'"\";
 =======
 ' ' "export": const HeroSectionAlt = () => { const containerVariants = { hidden: { opacity: 0},"visible": { opacity: 1,"transition": { staggerChildren: 0.,2,"delayChildren": '0.1'} const itemVariants = { "hidden": { y: 3,0,"opacity": '0'},"visible": { y: 0,"opacity": '1',"transition": { duration: 0.,8,' "ease": 'easeOut'} const floatingVariants = { ''';'"";""}' \' \"export\": const HeroSectionAlt = () => { const containerVariants = { hidden: { opacity: 0},\"visible\": { opacity: 1,\"transition\": { staggerChildren: 0.,2,\"delayChildren\": \'0 && 0.1\'} const itemVariants = { \"hidden\": { y: 3,0,\"opacity\": \'0\'},\"visible\": { y: 0,\"opacity\": \'1\',\"transition\": { duration: 0.,8,\' \"ease\": \'easeOut\'} const floatingVariants = { \''\';\'"\";
@@ -21,6 +24,7 @@
 
 ' ' "export": const HeroSectionAlt = () => { const containerVariants = { hidden: { opacity: 0},"visible": { opacity: 1,"transition": { staggerChildren: 0.,2,"delayChildren": '0 && 0.1'} const itemVariants = { "hidden": { y: 3,0,"opacity": '0'},"visible": { y: 0,"opacity": '1',"transition": { duration: 0.,8,' "ease": 'easeOut'} const floatingVariants = { ''';'"";""}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -58,3 +62,8 @@
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+' \' \"export\": const HeroSectionAlt = () => { const containerVariants = { hidden: { opacity: 0},\"visible\": { opacity: 1,\"transition\": { staggerChildren: 0.,2,\"delayChildren\": \'0.1\'} const itemVariants = { \"hidden\": { y: 3,0,\"opacity\": \'0\'},\"visible\": { y: 0,\"opacity\": \'1\',\"transition\": { duration: 0.,8,\' \"ease\": \'easeOut\'} const floatingVariants = { \''\';\'"\";
+" " export: const HeroSectionAlt = () => { const containerVariants = { hidden: { opacity: 0},visible: { opacity: 1,transition: { staggerChildren: 0.,2,delayChildren: "0.1"} const itemVariants = { hidden: { y: 3,0,opacity: "0"},visible: { y: 0,opacity: "1",transition: { duration: 0.,8," ease: "easeOut"} const floatingVariants = { """;""";"""
+' ' "export": const HeroSectionAlt = () => { const containerVariants = { hidden: { opacity: 0},"visible": { opacity: 1,"transition": { staggerChildren: 0.,2,"delayChildren": '0.1'} const itemVariants = { "hidden": { y: 3,0,"opacity": '0'},"visible": { y: 0,"opacity": '1',"transition": { duration: 0.,8,' "ease": 'easeOut'} const floatingVariants = { ''';'"";""}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

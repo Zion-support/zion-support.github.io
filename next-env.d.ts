@@ -25,10 +25,14 @@
 /// <reference types="next/image-types/global" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 /// <reference path="./.next/types/routes.d.ts" />
 
 // NOTE: This file should not be edited
 // see https://nextjs.org/docs/pages/api-reference/config/typescript for more information.
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -78,3 +82,5 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 // NOTE: This file should not be edited
 // see https://nextjs.org/docs/app/building-your-application/configuring/typescript for more information.
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

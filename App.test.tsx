@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import App from './App';
@@ -75,10 +76,18 @@ import React from 'react';
 
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <<<<<<< HEAD
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
+import App from './App';
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 describe('App', () => {
   it('renders without crashing', () => {
     render(<App />);
     expect(screen.getByRole('main')).toBeInTheDocument();
+<<<<<<< HEAD
   });
 <<<<<<< HEAD
 });
@@ -116,6 +125,8 @@ import App from './src/App';
 describe('App', () => {
   it('renders without crashing', () => {
     render(<App />);
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   });
 
   it('renders the main content', () => {
@@ -133,11 +144,9 @@ describe('App', () => {
 
   it('handles user interactions', () => {
     render(<App />);
-    // Add interaction tests here
-=======
     expect(screen.getByText(/Welcome to Zion Tech/i)).toBeInTheDocument();
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -205,3 +214,6 @@ describe('App', () => {
 =======
 });
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+});
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

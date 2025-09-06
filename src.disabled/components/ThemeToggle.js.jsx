@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,6 +11,12 @@ import _React from';react' const ThemeToggle = () => { const [isDark,setIsDark] 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from\';react\' const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {\''\';
 const React from";react" const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {""";""
+=======
+import React from\';react\' const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {\''\';
+const React from";react" const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {""";""
+
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import React from\';react\' const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {\''\';
 const React from";react" const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {""";""
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -20,6 +27,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React from\';react\' const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {\''\';
 const React from";react" const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {""";""
 :temp_exclude/src.disabled/components/ThemeToggle.js.jsx
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -57,3 +65,8 @@ import React from\';react\' const ThemeToggle = () => { const [isDark,setIsDark]
 const React from";react" const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {""";""
 import _React from';react' const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {''';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React from\';react\' const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {\''\';
+const React from";react" const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {""";""
+import _React from';react' const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {''';
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

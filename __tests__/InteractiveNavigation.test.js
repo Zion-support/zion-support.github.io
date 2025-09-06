@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -11,10 +12,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
-import _React from 'react"  import '@testing-library/jest-dom import InteractiveNavigation from '../components/InteractiveNavigation" describe('InteractiveNavigation',() => {' test('renders without crashing',() => {' render(<InteractiveNavigation / / />) expect(screen.getByTestId("interactivenavigation")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<InteractiveNavigation / / />) }) test('handles user interactions',() => {' render(<InteractiveNavigation / / />) }) test('applies correct styling',() => {' render(<InteractiveNavigation / / />) }) })
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import _React from 'react"  import '@testing-library/jest-dom import InteractiveNavigation from '../components/InteractiveNavigation" describe('InteractiveNavigation',() => {' test('renders without crashing',() => {' render(<InteractiveNavigation / / />) expect(screen.getByTestId("interactivenavigation")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<InteractiveNavigation / / />) }) test('handles user interactions',() => {' render(<InteractiveNavigation / / />) }) test('applies correct styling',() => {' render(<InteractiveNavigation / / />) }) })
+import _React from 'react"  import '@testing-library/jest-dom import InteractiveNavigation from '../components/InteractiveNavigation" describe('InteractiveNavigation',() => {' test('renders without crashing',() => {' render(<InteractiveNavigation / / />) expect(screen.getByTestId("interactivenavigation")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<InteractiveNavigation / / />) }) test('handles user interactions',() => {' render(<InteractiveNavigation / / />) }) test('applies correct styling',() => {' render(<InteractiveNavigation / / />) }) })
+<<<<<<< HEAD
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 =======
 =======
@@ -32,6 +34,10 @@ import _React from 'react"  import '@testing-library/jest-dom import Interactive
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import InteractiveNavigation from "./components/InteractiveNavigation" describe("InteractiveNavigation",() => {" test("renders without crashing",() => {" render(<InteractiveNavigation / / />) expect(screen.getByTestId("interactivenavigation")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<InteractiveNavigation / / />) }) test("handles user interactions",() => {" render(<InteractiveNavigation / / />) }) test("applies correct styling",() => {" render(<InteractiveNavigation / / />) }) })'"'"
 import _React from 'react"  import '@testing-library/jest-dom import InteractiveNavigation from '../components/InteractiveNavigation" describe('InteractiveNavigation',() => {' test('renders without crashing',() => {' render(<InteractiveNavigation / / />) expect(screen.getByTestId("interactivenavigation")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<InteractiveNavigation / / />) }) test('handles user interactions',() => {' render(<InteractiveNavigation / / />) }) test('applies correct styling',() => {' render(<InteractiveNavigation / / />) }) })
 import _React from 'react"  import '@testing-library/jest-dom import InteractiveNavigation from '../components/InteractiveNavigation" describe('InteractiveNavigation',() => {' test('renders without crashing',() => {' render(<InteractiveNavigation / / />) expect(screen.getByTestId("interactivenavigation")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<InteractiveNavigation / / />) }) test('handles user interactions',() => {' render(<InteractiveNavigation / / />) }) test('applies correct styling',() => {' render(<InteractiveNavigation / / />) }) })
@@ -40,6 +46,7 @@ import _React from 'react"  import '@testing-library/jest-dom import Interactive
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/fix-syntax-push-and-merge-to-main-40de
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -64,10 +71,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
-import _React from 'react"  import '@testing-library/jest-dom import InteractiveNavigation from '../components/InteractiveNavigation" describe('InteractiveNavigation',() => {' test('renders without crashing',() => {' render(<InteractiveNavigation / / />) expect(screen.getByTestId("interactivenavigation")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<InteractiveNavigation / / />) }) test('handles user interactions',() => {' render(<InteractiveNavigation / / />) }) test('applies correct styling',() => {' render(<InteractiveNavigation / / />) }) })
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import _React from 'react"  import '@testing-library/jest-dom import InteractiveNavigation from '../components/InteractiveNavigation" describe('InteractiveNavigation',() => {' test('renders without crashing',() => {' render(<InteractiveNavigation / / />) expect(screen.getByTestId("interactivenavigation")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<InteractiveNavigation / / />) }) test('handles user interactions',() => {' render(<InteractiveNavigation / / />) }) test('applies correct styling',() => {' render(<InteractiveNavigation / / />) }) })
+import _React from 'react"  import '@testing-library/jest-dom import InteractiveNavigation from '../components/InteractiveNavigation" describe('InteractiveNavigation',() => {' test('renders without crashing',() => {' render(<InteractiveNavigation / / />) expect(screen.getByTestId("interactivenavigation")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<InteractiveNavigation / / />) }) test('handles user interactions',() => {' render(<InteractiveNavigation / / />) }) test('applies correct styling',() => {' render(<InteractiveNavigation / / />) }) })
+<<<<<<< HEAD
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 <<<<<<< HEAD
@@ -78,3 +86,5 @@ import _React from 'react"  import '@testing-library/jest-dom import Interactive
 =======
 import _React from 'react"  import '@testing-library/jest-dom import InteractiveNavigation from '../components/InteractiveNavigation" describe('InteractiveNavigation',() => {' test('renders without crashing',() => {' render(<InteractiveNavigation / / />) expect(screen.getByTestId("interactivenavigation")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<InteractiveNavigation / / />) }) test('handles user interactions',() => {' render(<InteractiveNavigation / / />) }) test('applies correct styling',() => {' render(<InteractiveNavigation / / />) }) })
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

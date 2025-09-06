@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/src/components/PerformanceOptimizations.js.jsx
 ;,\"});\"})\"; \"
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -20,6 +21,11 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;,\"});\"})\"; \"
+=======
+;,\"});\"})\"; \"
+
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 ;,\"});\"})\"; \"
 ;,\"});\"})\"; \"
 :src.disabled/src/components/PerformanceOptimizations.js.jsx
@@ -30,6 +36,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ;,\"});\"})\"; \"
 ;,"});"})"; """
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 <<<<<<< HEAD
@@ -39,3 +46,5 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

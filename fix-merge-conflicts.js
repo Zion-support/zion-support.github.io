@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }; traverse(dir); return files};
@@ -118,24 +119,90 @@ for (const file of conflictedFiles) {
   fixMergeConflicts(file)}
 console.log('Merge conflict resolution complete!');
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); content = content.replace(/[\s\S]*?[\s\S]*?}}
-// Main execution
-console.log('Starting merge conflict fix...');
-const srcPath = path.join(__dirname, 'src');
-const fixedCount = fixFilesInDirectory(srcPath);
-console.log(`Fixed ${fixedCount} files with merge conflicts.`);
+=======
+const fs = require('fs');
+const path = require('path');
 
-// Also fix specific problematic files
-const problematicFiles = [
-  'src/pages/About.tsx',
-  'src/pages/Home.tsx',
-  'src/pages/Index.tsx'
-];
+function findFilesWithConflicts(dir) {
+  const files = [];
 
-for (const file of problematicFiles) {
-  if (fs.existsSync(file)) {
-    fixMergeConflicts(file);
+  function scanDirectory(currentDir) {
+    try {
+      const items = fs.readdirSync(currentDir);
+
+      for (const item of items) {
+        const fullPath = path.join(currentDir, item);
+
+        try {
+          const stat = fs.statSync(fullPath);
+
+          if (stat.isDirectory()) {
+            // Skip certain directories
+            if (!['node_modules', '.git', 'dist', 'build', 'coverage'].includes(item)) {
+              scanDirectory(fullPath);
+            }
+          } else if (stat.isFile()) {
+            // Check for common source file extensions
+            const ext = path.extname(item);
+            if (['.js', '.jsx', '.ts', '.tsx', '.json', '.md'].includes(ext)) {
+              try {
+                const content = fs.readFileSync(fullPath, 'utf8');
+                if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
+                  files.push(fullPath);
+                }
+              } catch (error) {
+                // Skip files that can't be read
+              }
+            }
+          }
+        } catch (error) {
+          // Skip broken symlinks or inaccessible files
+          continue;
+        }
+      }
+    } catch (error) {
+      // Skip directories that can't be read
+      return;
+    }
+  }
+
+  scanDirectory(dir);
+  return files;
+}
+
+function resolveConflicts(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Remove merge conflict markers and keep the main branch version
+    content = content.replace(/    
+    // Remove any remaining conflict markers
+    content = content.replace(/    content = content.replace(/\n?/g, '');
+    content = content.replace(/    
+    fs.writeFileSync(filePath, content, 'utf8');
+    console.log(`Fixed conflicts in: ${filePath}`);
+    return true;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+// Main execution
+const workspaceDir = process.cwd();
+console.log('Scanning for files with merge conflicts...');
+
+const filesWithConflicts = findFilesWithConflicts(workspaceDir);
+console.log(`Found ${filesWithConflicts.length} files with conflicts`);
+
+let fixedCount = 0;
+for (const file of filesWithConflicts) {
+  if (resolveConflicts(file)) {
+    fixedCount++;
+  }
+}
+<<<<<<< HEAD
 console.log(`Fixed merge conflicts in ${fixedCount} files`);
 // Run TypeScript check to see remaining errors
 console.log('\nRunning TypeScript check...');
@@ -168,3 +235,7 @@ console.log('\nMerge conflict fixing complete!'),;
 console.log(`Fixed merge conflicts in ${fixedCount} files`),;
 ,),;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+console.log(`Fixed conflicts in ${fixedCount} files`);
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

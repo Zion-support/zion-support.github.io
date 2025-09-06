@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/AccessibilityEnhancer.test.tsx.backup
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
@@ -21,6 +22,8 @@ import { describe, it, expect, vi } from 'vitest';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer'
@@ -38,6 +41,7 @@ describe('AccessibilityEnhancer'
     fireEvent.keyDown(element, { "key"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     fireEvent.keyDown(element, { "key";
 =======
     fireEvent.keyDown(element, { "key"
@@ -50,6 +54,9 @@ describe('AccessibilityEnhancer'
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    fireEvent.keyDown(element, { "key";
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 
 describe('AccessibilityEnhancer', () => {
@@ -151,9 +158,8 @@ describe('AccessibilityEnhancer', () => {
     const element = screen.getByRole('button');
     expect(element).toHaveAttribute('tabindex', '-1');
   });
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 });
+<<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
 });
@@ -193,3 +199,5 @@ describe('AccessibilityEnhancer'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

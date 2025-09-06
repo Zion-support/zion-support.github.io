@@ -39,6 +39,7 @@ Object.entries(seoChecks).forEach(([name, check]) => {
 console.log('🎉 SEO monitoring completed!');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/scripts/seo-monitor-enhanced.js
 ========
 <<<<<<< HEAD:scripts/seo-monitor-enhanced.js
@@ -68,6 +69,14 @@ console.log('🔍 Enhanced SEO Monitor Starting...'); const seoChecks = { metaTa
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+console.log('🔍 Enhanced SEO Monitor Starting...'); const seoChecks = { metaTags: () => { console.log('🏷️ Checking meta tags...'); return true},sitemap: () => { console.log('🗺️ Checking sitemap...'); return true},robots: () => { console.log('🤖 Checking robots.txt...'); return true} }; Object.entries(seoChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 SEO monitoring completed!');
+
+console.log('🔍 Enhanced SEO Monitor Starting...'); const seoChecks = { metaTags: () => { console.log('🏷️ Checking meta tags...'); return true},sitemap: () => { console.log('🗺️ Checking sitemap...'); return true},robots: () => { console.log('🤖 Checking robots.txt...'); return true} }; Object.entries(seoChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 SEO monitoring completed!');
+console.log('🔍 Enhanced SEO Monitor Starting...'); const seoChecks = { metaTags: () => { console.log('🏷️ Checking meta tags...'); return true},sitemap: () => { console.log('🗺️ Checking sitemap...'); return true},robots: () => { console.log('🤖 Checking robots.txt...'); return true} }; Object.entries(seoChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 SEO monitoring completed!');
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 console.log('🔍 Enhanced SEO Monitor Starting...'); const seoChecks = { metaTags: () => { console.log('🏷️ Checking meta tags...'); return true},sitemap: () => { console.log('🗺️ Checking sitemap...'); return true},robots: () => { console.log('🤖 Checking robots.txt...'); return true} }; Object.entries(seoChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 SEO monitoring completed!');
 console.log('🔍 Enhanced SEO Monitor Starting...'); const seoChecks = { metaTags: () => { console.log('🏷️ Checking meta tags...'); return true},sitemap: () => { console.log('🗺️ Checking sitemap...'); return true},robots: () => { console.log('🤖 Checking robots.txt...'); return true} }; Object.entries(seoChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 SEO monitoring completed!');
 <<<<<<<< HEAD:backup-problematic-files/scripts/seo-monitor-enhanced.js

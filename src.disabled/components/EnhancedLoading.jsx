@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -18,6 +19,10 @@
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 <<<<<<< HEAD
+=======
+'const EnhancedLoading = ({ variant = 'spinner',size = 'md',text,className = &apos; }) => {&apos; const sizeClasses = { "sm": 'w: - 4 h - 4,',"md": 'w: - 8 h - 8,',' "lg": 'w: - 12 h - 12,',''';"";
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 'const EnhancedLoading = ({ variant = 'spinner',size = 'md',text,className = &apos; }) => {&apos; const sizeClasses = { "sm": 'w: - 4 h - 4,',"md": 'w: - 8 h - 8,',' "lg": 'w: - 12 h - 12,',''';"";
 =======
 'const EnhancedLoading = ({ variant = 'spinner',size = 'md',text,className = &apos; }) => {&apos; const sizeClasses = { "sm": 'w: - 4 h - 4,',"md": 'w: - 8 h - 8,',' "lg": 'w: - 12 h - 12,',''';"";======='const EnhancedLoading = ({ variant = 'spinner',size = 'md',text,className = &apos; }) => {&apos; const sizeClasses = { "sm": 'w: - 4 h - 4,',"md": 'w: - 8 h - 8,',' "lg": 'w: - 12 h - 12,',''';"";
@@ -30,9 +35,8 @@
 'const EnhancedLoading = ({ variant = 'spinner',size = 'md',text,className = ' }) => {' const sizeClasses = { "sm": 'w: - 4 h - 4,',"md": 'w: - 8 h - 8,',' "lg": 'w: - 12 h - 12,',''';"";
 <<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 :src.disabled/components/EnhancedLoading.jsx
@@ -42,12 +46,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 'const EnhancedLoading = ({ variant = 'spinner',size = 'md',text,className = &apos; }) => {&apos; const sizeClasses = { "sm": 'w: - 4 h - 4,',"md": 'w: - 8 h - 8,',' "lg": 'w: - 12 h - 12,',''';"";
 'const EnhancedLoading = ({ variant = 'spinner',size = 'md',text,className = &apos; }) => {&apos; const sizeClasses = { "sm": 'w: - 4 h - 4,',"md": 'w: - 8 h - 8,',' "lg": 'w: - 12 h - 12,',''';"";
 ursor/add-new-services-and-deploy-updates-0462
 'const EnhancedLoading = ({ variant = \'spinner\',size = \'md\',text,className = \' }) => {\' const sizeClasses = { \"sm\": \'w: - 4 h - 4,\',\"md\": \'w: - 8 h - 8,\',\' \"lg\": \'w: - 12 h - 12,\',\''\';\"";
 "const EnhancedLoading = ({ variant = "spinner",size = "md",text,className = " }) => {" const sizeClasses = { sm: "w: - 4 h - 4,",md: "w: - 8 h - 8,"," lg: "w: - 12 h - 12,",""";"";"""
 'const EnhancedLoading = ({ variant = 'spinner',size = 'md',text,className = ' }) => {' const sizeClasses = { "sm": 'w: - 4 h - 4,',"md": 'w: - 8 h - 8,',' "lg": 'w: - 12 h - 12,',''';"";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 :temp_exclude/src.disabled/components/EnhancedLoading.jsx
@@ -86,3 +93,5 @@ ursor/add-new-services-and-deploy-updates-0462
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

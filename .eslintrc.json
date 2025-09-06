@@ -5,7 +5,6 @@
 =======
 <<<<<<< HEAD
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
-<<<<<<< HEAD
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
@@ -36,24 +35,23 @@ origin/automation-improvements-final
 =======
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
 origin/automation-improvements-final
+<<<<<<< HEAD
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
   "env": {
     "browser": true,
     "node": true,
     "es6": true,
-<<<<<<< HEAD
     "jest": true
     "es6": true,
     "jest": true
     "es6": true,
     "jest": true
-=======
-    "jest": true,
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     "es2021": true
   },
   "globals": {
@@ -66,8 +64,11 @@ origin/automation-improvements-final
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     "es6": true,
     "jest": true
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -76,6 +77,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -87,13 +89,14 @@ origin/automation-improvements-final
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   },
   "rules": {
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-explicit-any": "warn",
     "react/no-unescaped-entities": "off",
     "react-hooks/exhaustive-deps": "warn",
-<<<<<<< HEAD
     "no-console": "warn"
     "react/no-unescaped-entities": "off",
     "react-hooks/exhaustive-deps": "warn",
@@ -114,6 +117,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+<<<<<<< HEAD
 =======
     "no-console": "warn",
     "react/react-in-jsx-scope": "off",
@@ -149,6 +153,8 @@ origin/automation-improvements-final
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   },
   "ignorePatterns": [
     "node_modules/",
@@ -222,7 +228,6 @@ origin/automation-improvements-final
     "pages.__backup/",
     "pages-disabled/",
     "pages.disabled_auto/"
-<<<<<<< HEAD
     "pages.disabled_auto/",
     "zion_academy/",
     "pm2-automation/",
@@ -487,6 +492,7 @@ origin/automation-improvements-final
     "pages.disabled_auto/"
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -500,5 +506,7 @@ origin/automation-improvements-final
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   ]
 }

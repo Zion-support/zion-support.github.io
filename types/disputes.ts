@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved';
 =======
 <<<<<<< HEAD
@@ -23,6 +24,8 @@ export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 export type DisputeReason =
   | 'Scope Disagreement'
   | 'Quality Issues'
@@ -120,6 +123,7 @@ export type UserSummary = {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export type DisputeAttachment = {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
   fileName: string;
@@ -202,6 +206,8 @@ export type UserSummary = {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 export interface Dispute {
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   id: string;
 =======
 export type DisputeAttachment = {  id: string;
@@ -218,6 +224,7 @@ export type DisputeAttachment = {  id: string;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface DisputeResolution {
   disputeId: string;
   resolution: string;
@@ -231,3 +238,9 @@ export interface DisputeResolution {
 }
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  role: 'admin' | 'client' | 'talent';
+}
+};
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

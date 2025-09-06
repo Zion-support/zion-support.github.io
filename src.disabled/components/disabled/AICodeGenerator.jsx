@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/components/disabled/AICodeGenerator.jsx
 import React,{ useState,useCallback } from\';react\' import { motion,AnimatePresence } from\';\';framer-motion\' import { Code,Sparkles,Eye,Zap,TestTube,FileText,Download,Copy,CheckCircle,AlertCircle,Brain,Settings,Play,Save,Share2 } from\';\';lucide-react\' const AICodeGenerator = () => { const [activeTab,setActiveTab] = useState(\'';generate\') const [generatedCode,setGeneratedCode] = useState(\'';\';) const [customCode,setCustomCode] = useState(\'') const [copied,setCopied] = useState(false) const [isGenerating,setIsGenerating] = useState(false) \'';
 const React,{ useState,useCallback } from";react" import { motion,AnimatePresence } from";";framer-motion" import { Code,Sparkles,Eye,Zap,TestTube,FileText,Download,Copy,CheckCircle,AlertCircle,Brain,Settings,Play,Save,Share2 } from";";lucide-react" const AICodeGenerator = () => { const [activeTab,setActiveTab] = useState("";generate") const [generatedCode,setGeneratedCode] = useState("";";) const [customCode,setCustomCode] = useState("") const [copied,setCopied] = useState(false) const [isGenerating,setIsGenerating] = useState(false) "";''"
@@ -26,6 +27,8 @@ import _React,{ useState,useCallback } from';react' import { motion,AnimatePrese
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 
 :src.disabled/components/disabled/AICodeGenerator.jsx
@@ -35,13 +38,8 @@ import _React,{ useState,useCallback } from';react' import { motion,AnimatePrese
 
 import _React,{ useState,useCallback } from';react' import { motion,AnimatePresence } from';';framer-motion' import { Code,Sparkles,Eye,Zap,TestTube,FileText,Download,Copy,CheckCircle,AlertCircle,Brain,Settings,Play,Save,Share2 } from';';lucide-react' const AICodeGenerator = () => { const [activeTab,setActiveTab] = useState('';generate') const [generatedCode,setGeneratedCode] = useState('', ') const [customCode,setCustomCode] = useState('') const [copied,setCopied] = useState(false) const [isGenerating,setIsGenerating] = useState(false) '';
 import _React,{ useState,useCallback } from';react' import { motion,AnimatePresence } from';';framer-motion' import { Code,Sparkles,Eye,Zap,TestTube,FileText,Download,Copy,CheckCircle,AlertCircle,Brain,Settings,Play,Save,Share2 } from';';lucide-react' const AICodeGenerator = () => { const [activeTab,setActiveTab] = useState('';generate') const [generatedCode,setGeneratedCode] = useState('';';) const [customCode,setCustomCode] = useState('') const [copied,setCopied] = useState(false) const [isGenerating,setIsGenerating] = useState(false) '';
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 import _React,{ useState,useCallback } from';react' import { motion,AnimatePresence } from';';framer-motion' import { Code,Sparkles,Eye,Zap,TestTube,FileText,Download,Copy,CheckCircle,AlertCircle,Brain,Settings,Play,Save,Share2 } from';';lucide-react' const AICodeGenerator = () => { const [activeTab,setActiveTab] = useState('';generate') const [generatedCode,setGeneratedCode] = useState('';';) const [customCode,setCustomCode] = useState('') const [copied,setCopied] = useState(false) const [isGenerating,setIsGenerating] = useState(false) '';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import React,{ useState,useCallback } from\';react\' import { motion,AnimatePresence } from\';\';framer-motion\' import { Code,Sparkles,Eye,Zap,TestTube,FileText,Download,Copy,CheckCircle,AlertCircle,Brain,Settings,Play,Save,Share2 } from\';\';lucide-react\' const AICodeGenerator = () => { const [activeTab,setActiveTab] = useState(\'';generate\') const [generatedCode,setGeneratedCode] = useState(\'';\';) const [customCode,setCustomCode] = useState(\'') const [copied,setCopied] = useState(false) const [isGenerating,setIsGenerating] = useState(false) \'';
@@ -55,3 +53,5 @@ import _React,{ useState,useCallback } from';react' import { motion,AnimatePrese
 =======
 import _React,{ useState,useCallback } from';react' import { motion,AnimatePresence } from';';framer-motion' import { Code,Sparkles,Eye,Zap,TestTube,FileText,Download,Copy,CheckCircle,AlertCircle,Brain,Settings,Play,Save,Share2 } from';';lucide-react' const AICodeGenerator = () => { const [activeTab,setActiveTab] = useState('';generate') const [generatedCode,setGeneratedCode] = useState('';';) const [customCode,setCustomCode] = useState('') const [copied,setCopied] = useState(false) const [isGenerating,setIsGenerating] = useState(false) '';=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

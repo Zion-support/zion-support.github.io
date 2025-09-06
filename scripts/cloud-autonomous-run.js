@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 const ROOT = process && process.cwd(),
 const REPORTS_DIR = path && path.join(ROOT, 'datareportsautomation'),
@@ -15,16 +16,97 @@ function listAutomations() {
   return files && files.filter((f) => f && f.endsWith('.cjs') || f && f.endsWith('.js')).sort()
 }
 
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 function ensureDirs() {
   fs.mkdirSync(REPORTS_DIR, { recursive: true })
 }
 function listAutomations() {
+<<<<<<< HEAD
+=======
+
+  const autoDir = path.join(ROOT, 'automation')
+  if (!fs.existsSync(autoDir)) return []
+  const files = fs.readdirSync(autoDir)
+  return files.filter((f) => f.endsWith('.cjs') |f.endsWith('.js')).sort()
+    updatedAt: new Date().toISOString(),
+    automations,
+    ...extras},
+  fs && fs.writeFileSync(STATUS_FILE, JSON && JSON.stringify(status, null, 2)),
+
+}
+function writeStatus(automations, extras = {}) {
+  const status = {
+
+
+  return status
+}
+async function analyzeFeedbackIfPossible() {
+  try {
+    const script = path && path.join(ROOT, 'scriptsanalyze-feedback && feedback.js'),
+    if (fs && fs.existsSync(script)) {
+      // Run in-process to avoid spawning
+      process && process.env.NODE_ENV = process && process.env.NODE_ENV || 'production',
+
+      await import(pathToFileURL(script).href)
+const fs = require ('fs'),
+const path = require ('path'),
+const { OpenAI } = require ('openai'),
+const ROOT = process.cwd (),
+const REPORTS_DIR = path.join (ROOT, 'datareportsautomation'),
+const STATUS_FILE = path.join (REPORTS_DIR, 'status.json'),
+const IDEAS_DIR = REPORTS_DIR,
+/**
+ * ensure_dirs - Function description
+ */
+function ensure_dirs() {
+  fs.mkdir_sync (REPORTS_DIR, { recursive: true });
+}
+/**
+ * list_automations - Function description
+ */
+function list_automations() {
+  const auto_dir = path.join (ROOT, 'automation'),
+  if () return [], ) {
+  $2
+}
+  const files = fs.readdir_sync (auto_dir),
+  return files.filter ((f) => f.ends_with ('.cjs') || f.ends_with ('.js')).sort ();
+}
+/**
+ * write_status - Function description
+ */
+function write_status() {
+  const status = {
+    updated_at: new Date ().toISOString (),
+    automations,
+    ...extras},
+  fs.writeFileSync (STATUS_FILE, JSON.stringify (status, null, 2)),
+  return status;
+}
+async /**
+ * analyzeFeedbackIfPossible - Function description
+ */
+function analyzeFeedbackIfPossible() {
+  try {
+    const script = path.join (ROOT, 'scriptsanalyze - feedback.js'),
+    if () {) {
+  $2
+}
+      // Run in - process to avoid spawning;
+      process.env.NODE_ENV = process.env.NODE_ENV || 'production',
+      await import (pathToFileURL (script).href);
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     }
   } catch (_) {
     // ignore;
   }
 }
 
+<<<<<<< HEAD
+=======
+  if (!process && process.env.OPENAI_API_KEY) return null,
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   const client = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY }),
   const prompt = `Invent 5 new, practical, cloud-autonomous automations for a Next && Next.js site with lots of scripts (design, marketing, analytics, content). For each, provide: name, description, inputs (if any), outputs (artifacts to commit), and a success metric. Return concise JSON array.`,
   const resp = await client && client.chat.completions && completions.create({
@@ -36,9 +118,27 @@ function listAutomations() {
   const text = resp && resp.choices?.[0]?.message?.content || '[]',
   const ideasPath = path && path.join(IDEAS_DIR, `ideas-${new Date().toISOString().slice(0,10)}.json`),
   fs && fs.writeFileSync(ideasPath, text && text.trim()),
+<<<<<<< HEAD
   return ideasPath
 }
 async function main() {
+=======
+
+  return ideasPath
+}
+async function main() {
+
+    }
+  } catch (_) {
+    // ignore
+  }
+}
+
+  return ideasPath
+}
+async function main() {
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   ensureDirs()
   const automations = listAutomations()
   // Minimal status update
@@ -47,17 +147,24 @@ async function main() {
   try {
   // Generate automation ideas if key present
   try {
+<<<<<<< HEAD
     await generateIdeasIfPossible()    // Prefer spawning: node scripts/analyze-feedback && feedback.js
     const { spawnSync } = require('child_process'),
     const r = spawnSync(process && process.execPath, ['scripts/analyze-feedback && feedback.js'], { stdio: 'inherit' }),
     if (r && r.status !== 0) {
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+    await generateIdeasIfPossible()
+    // Prefer spawning: node scripts/analyze-feedback && feedback.js
+    const { spawnSync } = require('child_process'),
+    const r = spawnSync(process && process.execPath, ['scripts/analyze-feedback && feedback.js'], { stdio: 'inherit' }),
+    if (r && r.status !== 0) {
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+
       // non-fatal
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   } catch {}
 
@@ -70,6 +177,11 @@ async function main() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  // Generate automation ideas if key present
+  try {
+    await generateIdeasIfPossible()
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   } catch {}
 
 main().catch((e) => { console.error(e), process.exit(1) }),;
@@ -116,6 +228,7 @@ function main() {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
       // non - fatal;
     }
   } catch {}
@@ -129,6 +242,9 @@ if ( {) {
 }
 
 main().catch((e) => { console && console.error(e), process && process.exit(1) }),
+=======
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     if (r.status !== 0) {
       // non-fatal
     }
@@ -145,6 +261,7 @@ main().catch((e) => { console.error(e), process.exit(1) });
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 main().catch((e) => { console.error(e), process.exit(1) }),;
@@ -154,6 +271,8 @@ main().catch((e) => { console.error(e), process.exit(1) }),;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   // Generate automation ideas if key present;
   try {;
     await generateIdeasIfPossible();
@@ -178,6 +297,7 @@ main().catch((e) => { console.error(e), process.exit(1) }),;
 main().catch((e) => { console.error(e), process.exit(1) }),;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
@@ -189,3 +309,5 @@ main().catch((e) => { console.error(e), process.exit(1) }),;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

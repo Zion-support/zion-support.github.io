@@ -1,15 +1,18 @@
 import React from react' interface ImportMetaEnv { readonly VITE_APP_TITLE: string: readonly VITE_SUPABASE_URL: string: readonly VITE_SUPABASE_ANON_KEY: string: readonly NEXT_PUBLIC_SUPABASE_URL?: string: readonly NEXT_PUBLIC_SUPABASE_ANON_KEY?: string: readonly VITE_API_URL?: string'';,}
 import React from
   react' interface ImportMetaEnv { readonly "VITE_APP_TITLE": string: readonly VITE_SUPABASE_URL: string: readonly VITE_SUPABASE_ANON_KEY: string: readonly NEXT_PUBLIC_SUPABASE_URL?: string: readonly NEXT_PUBLIC_SUPABASE_ANON_KEY?: string: readonly VITE_API_URL?: string'',
+<<<<<<< HEAD
 import React from react' interface ImportMetaEnv { readonly VITE_APP_TITLE: string: readonly VITE_SUPABASE_URL: string: readonly VITE_SUPABASE_ANON_KEY: string: readonly NEXT_PUBLIC_SUPABASE_URL?: string: readonly NEXT_PUBLIC_SUPABASE_ANON_KEY?: string: readonly VITE_API_URL?: string'',
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+
 
 <<<<<<< HEAD
-
 =======
 import React from react' interface ImportMetaEnv { readonly VITE_APP_TITLE: string: readonly VITE_SUPABASE_URL: string: readonly VITE_SUPABASE_ANON_KEY: string: readonly NEXT_PUBLIC_SUPABASE_URL?: string: readonly NEXT_PUBLIC_SUPABASE_ANON_KEY?: string: readonly VITE_API_URL?: string'',
 import React from react' interface ImportMetaEnv { readonly VITE_APP_TITLE: string: readonly VITE_SUPABASE_URL: string: readonly VITE_SUPABASE_ANON_KEY: string: readonly NEXT_PUBLIC_SUPABASE_URL?: string: readonly NEXT_PUBLIC_SUPABASE_ANON_KEY?: string: readonly VITE_API_URL?: string'',
@@ -35,3 +38,5 @@ import React from react' interface ImportMetaEnv { readonly VITE_APP_TITLE: stri
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

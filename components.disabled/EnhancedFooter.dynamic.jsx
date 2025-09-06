@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 const EnhancedFooter = dynamic(() => import(\"./EnhancedFooter\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default EnhancedFooter\' ,
@@ -26,43 +27,20 @@ const EnhancedFooter = dynamic(() => import("./EnhancedFooter"),{'; "loading": (
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+const EnhancedFooter = dynamic(() => import("./EnhancedFooter"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedFooter' ,'
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 </p>'
-=======
-</p>'
->>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
-=======
-</p>'
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
-=======
-</p>'
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 </p>'
 
 
-=======
-</p>'
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-=======
+
 </p>'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
+
+
+</p>'
+
 </p>'
 =======
 </p>'</p>'
@@ -80,6 +58,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -93,20 +72,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
-</p>'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
-<<<<<<< HEAD
-=======
-const EnhancedFooter = dynamic(() => import("./EnhancedFooter"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedFooter' ,'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 </p>'
-=======
 </p>'
+</p>'
+<<<<<<< HEAD
 >>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
 =======
 </p>'
@@ -125,3 +96,5 @@ const EnhancedFooter = dynamic(() => import("./EnhancedFooter"),{'; "loading": (
 const EnhancedFooter = dynamic(() => import("./EnhancedFooter"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedFooter' ,'
 </p>'</p>'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

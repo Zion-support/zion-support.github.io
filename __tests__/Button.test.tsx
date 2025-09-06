@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -29,6 +30,8 @@ const React from "react"; import { render,screen } from "@testing-library/react"
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -39,15 +42,10 @@ describe('Button', () => {
     render(<Button />);
     expect(screen.getByTestId('button')).toBeInTheDocument();
   });
-<<<<<<< HEAD
 });
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 });
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
-=======
 import _React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import Button from '../components/Button'; describe('Button',() => { test('renders without crashing',() => { render(<Button />); expect(screen.getByRole('main')).toBeInTheDocument()}); test('displays correct content',() => { render(<Button />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
+<<<<<<< HEAD
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <<<<<<< HEAD
 =======
@@ -62,3 +60,5 @@ import _React from 'react'; import { render,screen } from '@testing-library/reac
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

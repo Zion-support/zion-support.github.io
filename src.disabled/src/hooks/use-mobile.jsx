@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,8 @@ import _React from "react"; import { useState,useEffect } from "react" export fu
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 =======
 import _React from "react"; import { useState,useEffect } from "react" export function useIsMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => { const checkIsMobile = () => { setIsMobile(window.innerWidth < 768)} checkIsMobile() window.addEventListener("resize",checkIsMobile) return () => window.removeEventListener("resize",checkIsMobile)},[]) return isMobile}"; ); export default Component;
@@ -44,6 +47,7 @@ const React from "react"; import { useState,useEffect } from "react" export func
 
 import _React from "react"; import { useState,useEffect } from "react" export function useIsMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => { const checkIsMobile = () => { setIsMobile(window && window.innerWidth < 768)} checkIsMobile() window && window.addEventListener("resize",checkIsMobile) return () => window ; ); export default Component;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -81,3 +85,8 @@ import _React from "react"; import { useState,useEffect } from "react" export fu
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React from \"react\"; import { useState,useEffect } from \"react\" export function useIsMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => { const checkIsMobile = () => { setIsMobile(window.innerWidth < 768)} checkIsMobile() window.addEventListener(\"resize\",checkIsMobile) return () => window.removeEventListener(\"resize\",checkIsMobile)},[]) return isMobile}\"; ); export default Component;
+const React from "react"; import { useState,useEffect } from "react" export function useIsMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => { const checkIsMobile = () => { setIsMobile(window.innerWidth < 768)} checkIsMobile() window.addEventListener("resize",checkIsMobile) return () => window.removeEventListener("resize",checkIsMobile)},[]) return isMobile}"; ); export default Component;""
+import _React from "react"; import { useState,useEffect } from "react" export function useIsMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => { const checkIsMobile = () => { setIsMobile(window.innerWidth < 768)} checkIsMobile() window.addEventListener("resize",checkIsMobile) return () => window.removeEventListener("resize",checkIsMobile)},[]) return isMobile}"; ); export default Component;
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

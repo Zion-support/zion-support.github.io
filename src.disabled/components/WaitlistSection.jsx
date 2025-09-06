@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -16,16 +17,15 @@ export: function WaitlistSection () { const [email,setEmail] = useState (") cons
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+"export": function WaitlistSection () { const [email,setEmail] = useState (') const handleSubmit = (e) => { e.preventDefault () '';"";""}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 "export": function WaitlistSection () { const [email,setEmail] = useState (') const handleSubmit = (e) => { e.preventDefault () '';"";""}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -85,3 +85,10 @@ export: function WaitlistSection () { const [email,setEmail] = useState (") cons
 "export": function WaitlistSection () { const [email,setEmail] = useState (') const handleSubmit = (e) => { e && e.preventDefault () '';"";""}
 "export": function WaitlistSection () { const [email,setEmail] = useState (') const handleSubmit = (e) => { e && e.preventDefault () '';"";""}"export": function WaitlistSection () { const [email,setEmail] = useState (') const handleSubmit = (e) => { e && e.preventDefault () '';"";""}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+"export\": function WaitlistSection () { const [email,setEmail] = useState (\') const handleSubmit = e => { e && e.preventDefault () \'';\"";
+export: function WaitlistSection () { const [email,setEmail] = useState (") const handleSubmit = e => { e && e.preventDefault () "";"";"""
+"export": function WaitlistSection () { const [email,setEmail] = useState (') const handleSubmit = (e) => { e && e.preventDefault () '';"";""}
+"export": function WaitlistSection () { const [email,setEmail] = useState (') const handleSubmit = (e) => { e && e.preventDefault () '';"";""}
+"export": function WaitlistSection () { const [email,setEmail] = useState (') const handleSubmit = (e) => { e && e.preventDefault () '';"";""}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

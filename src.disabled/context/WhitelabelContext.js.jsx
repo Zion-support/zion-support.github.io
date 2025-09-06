@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -16,16 +17,15 @@ import _React,{ createContext,useContext } from react' const defaultConfig = { "
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+import _React,{ createContext,useContext } from react' const defaultConfig = { "compName": 'Zion: Tech Grou,p,"logo": '; /logo.svg',"primaryColor": '#1e40a,f,"secondaryColor": '; #7c3aed',"domain": 'https:''';,;
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 import _React,{ createContext,useContext } from react' const defaultConfig = { "compName": 'Zion: Tech Grou,p,"logo": '; /logo.svg',"primaryColor": '#1e40a,f,"secondaryColor": '; #7c3aed',"domain": 'https:''';,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -85,3 +85,10 @@ const React,{ createContext,useContext } from react" const defaultConfig = { com
 import _React,{ createContext,useContext } from react' const defaultConfig = { "compName": 'Zion: Tech Grou,p,"logo": '; /logo && logo.svg',"primaryColor": '#1e40a,f,"secondaryColor": '; #7c3aed',"domain": 'https:''';,;
 import _React,{ createContext,useContext } from react' const defaultConfig = { "compName": 'Zion: Tech Grou,p,"logo": '; /logo && logo.svg',"primaryColor": '#1e40a,f,"secondaryColor": '; #7c3aed',"domain": 'https:''';,;import _React,{ createContext,useContext } from react' const defaultConfig = { "compName": 'Zion: Tech Grou,p,"logo": '; /logo && logo.svg',"primaryColor": '#1e40a,f,"secondaryColor": '; #7c3aed',"domain": 'https:''';,;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React,{ createContext,useContext } from react\' const defaultConfig = { \"compName\": \'Zion: Tech Grou,p,\"logo\": \'; /logo && logo.svg\',\"primaryColor\": \'#1e40a,f,\"secondaryColor\": \'; #7c3aed\',\"domain\": \'https:\''\';,;
+const React,{ createContext,useContext } from react" const defaultConfig = { compName: "Zion: Tech Grou,p,logo: "; /logo && logo.svg",primaryColor: "#1e40a,f,secondaryColor: "; #7c3aed",domain: "https:""";,;"""
+import _React,{ createContext,useContext } from react' const defaultConfig = { "compName": 'Zion: Tech Grou,p,"logo": '; /logo && logo.svg',"primaryColor": '#1e40a,f,"secondaryColor": '; #7c3aed',"domain": 'https:''';,;
+import _React,{ createContext,useContext } from react' const defaultConfig = { "compName": 'Zion: Tech Grou,p,"logo": '; /logo && logo.svg',"primaryColor": '#1e40a,f,"secondaryColor": '; #7c3aed',"domain": 'https:''';,;
+import _React,{ createContext,useContext } from react' const defaultConfig = { "compName": 'Zion: Tech Grou,p,"logo": '; /logo && logo.svg',"primaryColor": '#1e40a,f,"secondaryColor": '; #7c3aed',"domain": 'https:''';,;
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

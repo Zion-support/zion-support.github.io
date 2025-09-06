@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -12,6 +13,9 @@
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 const fs = require ('fs'),
 console.log ('🔧 Fixing site loading issues...'),
 // Fix Next.js configuration;
@@ -22,6 +26,7 @@ const next_config = {
   typescript: { ignoreBuildErrors: true },
   page_extensions: ['tsxtsjsxjs'],
   images: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -38,6 +43,8 @@ const fs = require('fs');
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 console.log('🔧 Fixing site loading issues...');
 // Fix Next.js configuration;
 const nextConfig = `/** @type {import('next').NextConfig} */;
@@ -68,10 +75,13 @@ const fs = require('fs'),;
 <<<<<<< HEAD
 const fs = require('fs');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 const fs = require ('fs'),
 console.log ('🔧 Fixing site loading issues...'),
@@ -83,18 +93,24 @@ const next_config = {
   typescript: { ignoreBuildErrors: true },
   page_extensions: ['tsxtsjsxjs'],
   images: {
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 =======
-
 =======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
+
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 console.log('🔧 Fixing site loading issues...'),;
 // Fix Next.js configuration;
 const nextConfig = `/** @type {import('next').NextConfig} */;
 const nextConfig = {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -109,10 +125,13 @@ const nextConfig = {;
   reactStrictMode: true;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   reactStrictMode: true,;
   reactStrictMode: true;
 
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 <<<<<<< HEAD
@@ -122,10 +141,14 @@ const nextConfig = {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   eslint: { ignoreDuringBuilds: true },;
   typescript: { ignoreBuildErrors: true },;
   pageExtensions: ['tsxtsjsxjs'],;
   images: {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     domains: ["localhost", "ziontechgroup.com"];
@@ -133,6 +156,8 @@ const nextConfig = {;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   },
   output: 'standalone',
   trailing_slash: false,
@@ -154,6 +179,7 @@ const emptyFiles = [;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   },;
   output: 'standalone',;
@@ -171,14 +197,19 @@ const emptyFiles = [;
 ];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 ],;
 ];
 
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 emptyFiles.forEach(file => {;
   if (fs.existsSync(file) && fs.statSync(file).size === 0) {;
     fs.unlinkSync(file),;
@@ -186,12 +217,16 @@ emptyFiles.forEach(file => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
   }
 }),
 console.log ('🎉 Site fixes completed!'),
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 <<<<<<< HEAD
 =======
@@ -260,3 +295,5 @@ const nextConfig = {;],;
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

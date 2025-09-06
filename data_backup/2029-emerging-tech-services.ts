@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26,6 +27,8 @@
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 export interface EmergingTechService2029 {
   "id": string;
   name: string;
@@ -63,6 +66,7 @@ address: string};export const "emergingTechServices2029": EmergingTechService202
 <<<<<<< HEAD
 export interface EmergingTechService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const emergingTechServices2029: EmergingTechService2029[] = [ { id: "2029-emerging-tech-service",name: "2029 Emerging Tech Service Platform",tagline: "Emerging tech services for 2029",price: "$399/month",description: "Advanced platform showcasing emerging technology services and innovations for 2029.",features[ "Emerging tech services","Innovation platform","Future capabilities","Advanced features","Expert insights" ],link: "/services/2029-emerging-tech-service",category: "Emerging Tech Services 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
 export interface EmergingTechService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const emergingTechServices2029: EmergingTechService2029[] = [ { id: "2029-emerging-tech-service",name: "2029 Emerging Tech Service Platform",tagline: "Emerging tech services for 2029",price: "$399/month",description: "Advanced platform showcasing emerging technology services and innovations for 2029.",features[ "Emerging tech services","Innovation platform","Future capabilities","Advanced features","Expert insights" ],link: "/services/2029-emerging-tech-service",category: "Emerging Tech Services 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -198,6 +202,8 @@ export interface EmergingTechService2029 { id: string; name: string; tagline: st
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 export interface EmergingTechService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const emergingTechServices2029: EmergingTechService2029[] = [ { id: "2029-emerging-tech-service",name: "2029 Emerging Tech Service Platform",tagline: "Emerging tech services for 2029",price: "$399/month",description: "Advanced platform showcasing emerging technology services and innovations for 2029.",features[ "Emerging tech services","Innovation platform","Future capabilities","Advanced features","Expert insights" ],link: "/services/2029-emerging-tech-service",category: "Emerging Tech Services 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 export interface EmergingTechService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const emergingTechServices2029: EmergingTechService2029[] = [ { id: "2029-emerging-tech-service",name: "2029 Emerging Tech Service Platform",tagline: "Emerging tech services for 2029",price: "$399/month",description: "Advanced platform showcasing emerging technology services and innovations for 2029.",features[ "Emerging tech services","Innovation platform","Future capabilities","Advanced features","Expert insights" ],link: "/services/2029-emerging-tech-service",category: "Emerging Tech Services 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
 export interface EmergingTechService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const emergingTechServices2029: EmergingTechService2029[] = [ { id: "2029-emerging-tech-service",name: "2029 Emerging Tech Service Platform",tagline: "Emerging tech services for 2029",price: "$399/month",description: "Advanced platform showcasing emerging technology services and innovations for 2029.",features[ "Emerging tech services","Innovation platform","Future capabilities","Advanced features","Expert insights" ],link: "/services/2029-emerging-tech-service",category: "Emerging Tech Services 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
 export interface EmergingTechService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const emergingTechServices2029: EmergingTechService2029[] = [ { id: "2029-emerging-tech-service",name: "2029 Emerging Tech Service Platform",tagline: "Emerging tech services for 2029",price: "$399/month",description: "Advanced platform showcasing emerging technology services and innovations for 2029.",features[ "Emerging tech services","Innovation platform","Future capabilities","Advanced features","Expert insights" ],link: "/services/2029-emerging-tech-service",category: "Emerging Tech Services 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
@@ -247,6 +253,7 @@ address: string};export const "emergingTechServices2029": EmergingTechService202
       "address": "364 E Main St STE 1008 Middletown DE 19709"
 ]}}}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
@@ -254,3 +261,8 @@ address: string};export const "emergingTechServices2029": EmergingTechService202
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export interface EmergingTechService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const emergingTechServices2029: EmergingTechService2029[] = [ { id: "2029-emerging-tech-service",name: "2029 Emerging Tech Service Platform",tagline: "Emerging tech services for 2029",price: "$399/month",description: "Advanced platform showcasing emerging technology services and innovations for 2029.",features[ "Emerging tech services","Innovation platform","Future capabilities","Advanced features","Expert insights" ],link: "/services/2029-emerging-tech-service",category: "Emerging Tech Services 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface EmergingTechService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const emergingTechServices2029: EmergingTechService2029[] = [ { id: "2029-emerging-tech-service",name: "2029 Emerging Tech Service Platform",tagline: "Emerging tech services for 2029",price: "$399/month",description: "Advanced platform showcasing emerging technology services and innovations for 2029.",features[ "Emerging tech services","Innovation platform","Future capabilities","Advanced features","Expert insights" ],link: "/services/2029-emerging-tech-service",category: "Emerging Tech Services 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface EmergingTechService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const emergingTechServices2029: EmergingTechService2029[] = [ { id: "2029-emerging-tech-service",name: "2029 Emerging Tech Service Platform",tagline: "Emerging tech services for 2029",price: "$399/month",description: "Advanced platform showcasing emerging technology services and innovations for 2029.",features[ "Emerging tech services","Innovation platform","Future capabilities","Advanced features","Expert insights" ],link: "/services/2029-emerging-tech-service",category: "Emerging Tech Services 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

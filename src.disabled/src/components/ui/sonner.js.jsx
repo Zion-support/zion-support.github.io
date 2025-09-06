@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,8 @@ import _React from 'react'; import { Toaster as Sonner } from "sonner"; import {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import React from \'react\'; import { Toaster as Sonner } from \"sonner\"; import { useTheme } from \"../ThemeProvider\"; const Toaster = ({ ...props }) => {; const { theme = \"system\" } = useTheme(); return (<Sonnertheme={theme} className=\"toaster group\" toastOptions = { { \"classNames\": { toast: \"group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg\", \"description\": \"group-[.toast]:text-muted-foreground\", \"actionButton\": \"group-[.toast]:bg-primary group-[.toast]:text-primary-foreground\", \"cancelButton\": \"group-[.toast]:bg-muted group-[.toast]:text-muted-foreground\",},}} {...props}/>)}; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster };
 =======
 import _React from 'react'; import { Toaster as Sonner } from "sonner"; import { useTheme } from "../ThemeProvider"; const Toaster = ({ ...props }) => {; const { theme = "system" } = useTheme(); return (<Sonner theme={theme} className="toaster group" toastOptions = {; {; "classNames": {; toast: "group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg",; "description": "group-[.toast]:text-muted-foreground",; "actionButton": "group-[.toast]:bg-primary group-[.toast]:text-primary-foreground",; "cancelButton": "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground",;},;}} {...props}/>)}; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster };import React from \'react\'; import { Toaster as Sonner } from \"sonner\"; import { useTheme } from \"../ThemeProvider\"; const Toaster = ({ ...props }) => {; const { theme = \"system\" } = useTheme(); return (<Sonnertheme={theme} className=\"toaster group\" toastOptions = { { \"classNames\": { toast: \"group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg\", \"description\": \"group-[.toast]:text-muted-foreground\", \"actionButton\": \"group-[.toast]:bg-primary group-[.toast]:text-primary-foreground\", \"cancelButton\": \"group-[.toast]:bg-muted group-[.toast]:text-muted-foreground\",},}} {...props}/>)}; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster };
@@ -21,6 +24,7 @@ const React from "react"; import { Toaster as Sonner } from "sonner"; import { u
 
 import _React from 'react'; import { Toaster as Sonner } from "sonner"; import { useTheme } from "../ThemeProvider"; const Toaster = ({ ...props }) => {; const { theme = "system" } = useTheme(); return (<Sonnertheme={theme} className="toaster group" toastOptions = { { "classNames": { toast: "group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg", "description": "group-[.toast]:text-muted-foreground", "actionButton": "group-[.toast]:bg-primary group-[.toast]:text-primary-foreground", "cancelButton": "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground",},}} {...props}/>)}; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -58,3 +62,8 @@ import _React from 'react'; import { Toaster as Sonner } from "sonner"; import {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React from \'react\'; import { Toaster as Sonner } from \"sonner\"; import { useTheme } from \"../ThemeProvider\"; const Toaster = ({ ...props }) => {; const { theme = \"system\" } = useTheme(); return (<Sonner theme={theme} className=\"toaster group\" toastOptions = {; {; \"classNames\": {; toast: \"group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg\",; \"description\": \"group-[.toast]:text-muted-foreground\",; \"actionButton\": \"group-[.toast]:bg-primary group-[.toast]:text-primary-foreground\",; \"cancelButton\": \"group-[.toast]:bg-muted group-[.toast]:text-muted-foreground\",;},;}} {...props}/>)}; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster };
+const React from "react"; import { Toaster as Sonner } from "sonner"; import { useTheme } from "./ThemeProvider"; const Toaster = ({ .props }) => {; const { theme = "system" } = useTheme(); return (<Sonner theme={theme} className="toaster group" toastOptions = {; {; classNames: {; toast: "group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg",; description: "group-[.toast]:text-muted-foreground",; actionButton: "group-[.toast]:bg-primary group-[.toast]:text-primary-foreground",; cancelButton: "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground",;},;}} {.props}/>)}; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster };'"'"
+import _React from 'react'; import { Toaster as Sonner } from "sonner"; import { useTheme } from "../ThemeProvider"; const Toaster = ({ ...props }) => {; const { theme = "system" } = useTheme(); return (<Sonner theme={theme} className="toaster group" toastOptions = {; {; "classNames": {; toast: "group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg",; "description": "group-[.toast]:text-muted-foreground",; "actionButton": "group-[.toast]:bg-primary group-[.toast]:text-primary-foreground",; "cancelButton": "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground",;},;}} {...props}/>)}; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster }; export { Toaster };
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

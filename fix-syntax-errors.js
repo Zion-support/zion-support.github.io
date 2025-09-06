@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }},
@@ -96,11 +97,14 @@ files.forEach((file) => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
         }
         return match;
       },
     );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -163,6 +167,8 @@ if (&&) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
           modified = true;
           return match + ";";
         }
@@ -170,6 +176,7 @@ if (&&) {
       },
     );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -228,11 +235,16 @@ console.log(`\nTotal files fixed: ${totalFixed}`);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 });
 
 console.log(`\nTotal files fixed: ${totalFixed}`);
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 }},
 ,
 // Run all fixes,
@@ -245,6 +257,7 @@ fixCareers();
 console.log('🎉 Syntax error fixes completed');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -255,6 +268,8 @@ console.log('🎉 Syntax error fixes completed');
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 // Run all fixes,
 fixFooter(),
 fixAccessibility(),
@@ -270,6 +285,7 @@ fixAiServices(),;
 fixApiDocs(),;
 fixCareers(),;
 // // // console.log('🎉 Syntax error fixes completed'),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -293,6 +309,9 @@ fixCareers(),;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}},
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 #!/usr/bin/env node
 
@@ -360,6 +379,9 @@ const main = () => {
 
 main();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+<<<<<<< HEAD
 =======
 }},
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

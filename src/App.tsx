@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -16,6 +17,8 @@
 
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import React from 'react';
 
 export default function App() {
@@ -79,19 +82,15 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import ToastContainer from './components/ToastContainer';
 import { ThemeProvider } from './components/ThemeProvider';
 import ScrollToTop from './components/ScrollToTop';
-import BackToTop from './components/BackToTop';
-import About from './pages/About';
-import Services from './pages/Services';
-import Contact from './pages/Contact';
-import Home from './pages/Home';
-import Pricing from './pages/Pricing';
+import { BackToTopButton } from './components/BackToTopButton';
+// Pages are handled by Next.js in the app directory
 
 function App() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
+<<<<<<< HEAD
 
 import React, { Suspense, lazy } from 'react';
 import Footer from './components/Footer';
@@ -117,10 +116,31 @@ const SolutionsPage = lazy(() => import('./pages/Solutions').then(module => ({ d
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/pricing" element={<Pricing />} />
               </Routes>
+=======
+    <ThemeProvider>
+      <ErrorBoundary>
+        <Router>
+          <ScrollToTop />
+          <div className="min-h-screen flex flex-col">
+            <Header />
+            <main className="flex-1">
+              <div className="min-h-screen flex items-center justify-center">
+                <div className="text-center">
+                  <h1 className="text-4xl font-bold text-gray-900 mb-4">
+                    Zion Tech Group
+                  </h1>
+                  <p className="text-xl text-gray-600 mb-8">
+                    AI, Micro SaaS, and IT Services
+                  </p>
+                  <p className="text-gray-500">
+                    This is a Vite-based React application. The main pages are handled by Next.js in the app directory.
+                  </p>
+                </div>
+              </div>
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
             </main>
             <Footer />
-            <ToastContainer />
-            <BackToTop />
+            <BackToTopButton />
           </div>
         </Router>
       </ErrorBoundary>
@@ -131,6 +151,7 @@ const SolutionsPage = lazy(() => import('./pages/Solutions').then(module => ({ d
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -193,3 +214,6 @@ export default App;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+export default App;
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

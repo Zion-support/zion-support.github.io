@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: true }); let cleanedCount = 0; for (const file of scriptFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') ) { if (removeFile(file)) { cleanedCount++} } } } function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: true }); let cleanedCount = 0; for (const file of rootFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.includes('process_') || file.includes('resolve_') || file.includes('fix_') || file.includes('final_') || file.includes('comprehensive_') || file.includes('aggressive_') || file.includes('targeted_') || file.includes('merge_') || file.includes('smart_merge_') || file.includes('quick_conflict_') || file.includes('process-') || file.includes('resolve-') || file.includes('fix-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.endsWith('.txt') || file.endsWith('.log') || file.endsWith('.cjs') || file.endsWith('.js') || file.endsWith('.sh') ) { if (removeFile(file)) { cleanedCount++} } } } function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: true }); let cleanedCount = 0; for (const file of reportFiles) { if ( !file.includes('performance-report.json') && !file.includes('quality-report.json') && !file.includes('security-audit-report.json') ) { if (removeFile(file)) { cleanedCount++} } } } function main() {  cleanScripts(); cleanRootFiles(); cleanReportFiles(); let totalRemoved = 0; for (const pattern of CLEANUP_PATTERNS) { const files = glob.sync(pattern,{ nodir: false }); for (const file of files) { if (shouldRemoveFile(file)) { if (removeFile(file)) { totalRemoved++} } } }        } main();
+<<<<<<< HEAD
 =======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: true }); let cleanedCount = 0; for (const file of scriptFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') ) { if (removeFile(file)) { cleanedCount++} } } } function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: true }); let cleanedCount = 0; for (const file of rootFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.includes('process_') || file.includes('resolve_') || file.includes('fix_') || file.includes('final_') || file.includes('comprehensive_') || file.includes('aggressive_') || file.includes('targeted_') || file.includes('merge_') || file.includes('smart_merge_') || file.includes('quick_conflict_') || file.includes('process-') || file.includes('resolve-') || file.includes('fix-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.endsWith('.txt') || file.endsWith('.log') || file.endsWith('.cjs') || file.endsWith('.js') || file.endsWith('.sh') ) { if (removeFile(file)) { cleanedCount++} } } } function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: true }); let cleanedCount = 0; for (const file of reportFiles) { if ( !file.includes('performance-report.json') && !file.includes('quality-report.json') && !file.includes('security-audit-report.json') ) { if (removeFile(file)) { cleanedCount++} } } } function main() {  cleanScripts(); cleanRootFiles(); cleanReportFiles(); let totalRemoved = 0; for (const pattern of CLEANUP_PATTERNS) { const files = glob.sync(pattern,{ nodir: false }); for (const file of files) { if (shouldRemoveFile(file)) { if (removeFile(file)) { totalRemoved++} } } }        } main();
 #!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: true }); let cleanedCount = 0;  } } } function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: true }); let cleanedCount = 0;  } } } function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: true }); let cleanedCount = 0;  } } } function main() {  cleanScripts(); cleanRootFiles(); cleanReportFiles(); let totalRemoved = 0; );  } } }        } main();
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 #!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: true }); let cleanedCount = 0;  } } } function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: true }); let cleanedCount = 0;  } } } function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: true }); let cleanedCount = 0;  } } } function main() {  cleanScripts(); cleanRootFiles(); cleanReportFiles(); let totalRemoved = 0; );  } } }        } main();
@@ -18,6 +21,9 @@
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: true }); let cleanedCount = 0; for (const file of scriptFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') ) { if (removeFile(file)) { cleanedCount++} } } } function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: true }); let cleanedCount = 0; for (const file of rootFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.includes('process_') || file.includes('resolve_') || file.includes('fix_') || file.includes('final_') || file.includes('comprehensive_') || file.includes('aggressive_') || file.includes('targeted_') || file.includes('merge_') || file.includes('smart_merge_') || file.includes('quick_conflict_') || file.includes('process-') || file.includes('resolve-') || file.includes('fix-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.endsWith('.txt') || file.endsWith('.log') || file.endsWith('.cjs') || file.endsWith('.js') || file.endsWith('.sh') ) { if (removeFile(file)) { cleanedCount++} } } } function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: true }); let cleanedCount = 0; for (const file of reportFiles) { if ( !file.includes('performance-report.json') && !file.includes('quality-report.json') && !file.includes('security-audit-report.json') ) { if (removeFile(file)) { cleanedCount++} } } } function main() {  cleanScripts(); cleanRootFiles(); cleanReportFiles(); let totalRemoved = 0; for (const pattern of CLEANUP_PATTERNS) { const files = glob.sync(pattern,{ nodir: false }); for (const file of files) { if (shouldRemoveFile(file)) { if (removeFile(file)) { totalRemoved++} } } }        } main();
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 #!/usr/bin/env node
 import fs from 'fs';
 import path from 'path';
@@ -113,16 +119,19 @@ function shouldKeepFile(filePath) {
   // Check if file matches keep patterns
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   for (const pattern of KEEP_PATTERNS) {
     if (glob.minimatch(filePath, pattern)) {
       return true}
-=======
   
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -137,6 +146,11 @@ function shouldKeepFile(filePath) {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+  for (const pattern of KEEP_PATTERNS) {
+    if (glob.minimatch(filePath, pattern)) {
+      return true}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   }
 =======
 #!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: true }); let cleanedCount = 0; for (const file of scriptFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') ) { if (removeFile(file)) { cleanedCount++} } } } function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: true }); let cleanedCount = 0; for (const file of rootFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.includes('process_') || file.includes('resolve_') || file.includes('fix_') || file.includes('final_') || file.includes('comprehensive_') || file.includes('aggressive_') || file.includes('targeted_') || file.includes('merge_') || file.includes('smart_merge_') || file.includes('quick_conflict_') || file.includes('process-') || file.includes('resolve-') || file.includes('fix-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.endsWith('.txt') || file.endsWith('.log') || file.endsWith('.cjs') || file.endsWith('.js') || file.endsWith('.sh') ) { if (removeFile(file)) { cleanedCount++} } } } function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: true }); let cleanedCount = 0; for (const file of reportFiles) { if ( !file.includes('performance-report.json') && !file.includes('quality-report.json') && !file.includes('security-audit-report.json') ) { if (removeFile(file)) { cleanedCount++} } } } function main() {  cleanScripts(); cleanRootFiles(); cleanReportFiles(); let totalRemoved = 0; for (const pattern of CLEANUP_PATTERNS) { const files = glob.sync(pattern,{ nodir: false }); for (const file of files) { if (shouldRemoveFile(file)) { if (removeFile(file)) { totalRemoved++} } } }        } main();#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: true }); let cleanedCount = 0;  } } } function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: true }); let cleanedCount = 0;  } } } function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: true }); let cleanedCount = 0;  } } } function main() {  cleanScripts(); cleanRootFiles(); cleanReportFiles(); let totalRemoved = 0; );  } } }        } main();  }
@@ -150,16 +164,19 @@ function shouldRemoveFile(filePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   for (const pattern of CLEANUP_PATTERNS) {
     if (glob.minimatch(filePath, pattern)) {
       return true}
-=======
   
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -174,6 +191,11 @@ function shouldRemoveFile(filePath) {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+  for (const pattern of CLEANUP_PATTERNS) {
+    if (glob.minimatch(filePath, pattern)) {
+      return true}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   }
   return false}
 function removeFile(filePath) {
@@ -187,11 +209,9 @@ function removeFile(filePath) {
     return true} catch (error) {
     console.error(`❌ Error removing ${filePath}:`, error.message);
     return false}
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
 
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 
@@ -206,6 +226,9 @@ function removeFile(filePath) {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 function cleanScripts() {
 =======
   for (const pattern of CLEANUP_PATTERNS) {
@@ -220,6 +243,7 @@ function cleanScripts() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -230,6 +254,8 @@ function cleanScripts() {
   
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   for (const file of scriptFiles) {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -244,6 +270,7 @@ function cleanScripts() {
     ) {
       if (removeFile(file)) {
         cleanedCount++}
+<<<<<<< HEAD
   
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -254,6 +281,8 @@ function cleanScripts() {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -262,6 +291,7 @@ function cleanScripts() {
 function cleanRootFiles() {
   const rootFiles = glob.sync('*', { "nodir": true });
   let cleanedCount = 0;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -275,6 +305,8 @@ function cleanRootFiles() {
   
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   for (const file of rootFiles) {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -317,6 +349,7 @@ function cleanRootFiles() {
     ) {
       if (removeFile(file)) {
         cleanedCount++}
+<<<<<<< HEAD
   
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -327,6 +360,8 @@ function cleanRootFiles() {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -335,6 +370,7 @@ function cleanRootFiles() {
 function cleanReportFiles() {
   const reportFiles = glob.sync('**/*-report.json', { "nodir": true });
   let cleanedCount = 0;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -348,6 +384,8 @@ function cleanReportFiles() {
   
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   for (const file of reportFiles) {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -359,6 +397,7 @@ function cleanReportFiles() {
     ) {
       if (removeFile(file)) {
         cleanedCount++}
+<<<<<<< HEAD
   
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -369,6 +408,8 @@ function cleanReportFiles() {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -387,6 +428,7 @@ function main() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   );
 
@@ -396,6 +438,8 @@ function main() {
     
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   for (const pattern of CLEANUP_PATTERNS) {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -404,6 +448,7 @@ function main() {
       if (shouldRemoveFile(file)) {
         if (removeFile(file)) {
           totalRemoved++}
+<<<<<<< HEAD
   );
     
 <<<<<<< HEAD
@@ -415,6 +460,8 @@ function main() {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
       }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -431,6 +478,7 @@ function main() {
 main();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -442,39 +490,33 @@ main();
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: 'true' }); let cleanedCount = 0; for (const file of scriptFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary script files`)} function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: 'true' }); let cleanedCount = 0; for (const file of rootFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.includes('process_') || file.includes('resolve_') || file.includes('fix_') || file.includes('final_') || file.includes('comprehensive_') || file.includes('aggressive_') || file.includes('targeted_') || file.includes('merge_') || file.includes('smart_merge_') || file.includes('quick_conflict_') || file.includes('process-') || file.includes('resolve-') || file.includes('fix-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.endsWith('.txt') || file.endsWith('.log') || file.endsWith('.cjs') || file.endsWith('.js') || file.endsWith('.sh') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary root files`)} function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: 'true' }); let cleanedCount = 0; for (const file of reportFiles) { if ( !file.includes('performance-report.json') && !file.includes('quality-report.json') && !file.includes('security-audit-report.json') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary report files`)} function main() { console.log('🧹 Starting repository cleanup...'); cleanScripts(); cleanRootFiles(); cleanReportFiles(); let totalRemoved = 0; for (const pattern of CLEANUP_PATTERNS) { const files = glob.sync(pattern,{ nodir: 'false' }); for (const file of files) { if (shouldRemoveFile(file)) { if (removeFile(file)) { totalRemoved++} } } } console.log(`\n📊 Cleanup Summary:`); console.log(` Total items removed: ${totalRemoved}`); console.log('\n✨ Repository cleanup completed!'); console.log('\n📝 Next steps:'); console.log(' 1. Run: npm install'); console.log(' 2. Run: npm run build'); console.log(' 3. Test the application'); console.log(' 4. Commit the changes')} main();
 #!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: true }); let cleanedCount = 0; for (const file of scriptFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary script files`)} function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: true }); let cleanedCount = 0; for (const file of rootFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.includes('process_') || file.includes('resolve_') || file.includes('fix_') || file.includes('final_') || file.includes('comprehensive_') || file.includes('aggressive_') || file.includes('targeted_') || file.includes('merge_') || file.includes('smart_merge_') || file.includes('quick_conflict_') || file.includes('process-') || file.includes('resolve-') || file.includes('fix-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.endsWith('.txt') || file.endsWith('.log') || file.endsWith('.cjs') || file.endsWith('.js') || file.endsWith('.sh') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary root files`)} function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: true }); let cleanedCount = 0; for (const file of reportFiles) { if ( !file.includes('performance-report.json') && !file.includes('quality-report.json') && !file.includes('security-audit-report.json') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary report files`)} function main() { console.log('🧹 Starting repository cleanup...'); cleanScripts(); cleanRootFiles(); cleanReportFiles(); let totalRemoved = 0; for (const pattern of CLEANUP_PATTERNS) { const files = glob.sync(pattern,{ nodir: false }); for (const file of files) { if (shouldRemoveFile(file)) { if (removeFile(file)) { totalRemoved++} } } } console.log(`\n📊 Cleanup Summary:`); console.log(` Total items removed: ${totalRemoved}`); console.log('\n✨ Repository cleanup completed!'); console.log('\n📝 Next steps:'); console.log(' 1. Run: npm install'); console.log(' 2. Run: npm run build'); console.log(' 3. Test the application'); console.log(' 4. Commit the changes')} main();
+=======
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: 'true' }); let cleanedCount = 0; for (const file of scriptFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary script files`)} function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: 'true' }); let cleanedCount = 0; for (const file of rootFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.includes('process_') || file.includes('resolve_') || file.includes('fix_') || file.includes('final_') || file.includes('comprehensive_') || file.includes('aggressive_') || file.includes('targeted_') || file.includes('merge_') || file.includes('smart_merge_') || file.includes('quick_conflict_') || file.includes('process-') || file.includes('resolve-') || file.includes('fix-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.endsWith('.txt') || file.endsWith('.log') || file.endsWith('.cjs') || file.endsWith('.js') || file.endsWith('.sh') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary root files`)} function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: 'true' }); let cleanedCount = 0; for (const file of reportFiles) { if ( !file.includes('performance-report.json') && !file.includes('quality-report.json') && !file.includes('security-audit-report.json') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary report files`)} function main() { console.log('🧹 Starting repository cleanup...'); cleanScripts(); cleanRootFiles(); cleanReportFiles(); let totalRemoved = 0; for (const pattern of CLEANUP_PATTERNS) { const files = glob.sync(pattern,{ nodir: 'false' }); for (const file of files) { if (shouldRemoveFile(file)) { if (removeFile(file)) { totalRemoved++} } } } console.log(`\n📊 Cleanup Summary:`); console.log(` Total items removed: ${totalRemoved}`); console.log('\n✨ Repository cleanup completed!'); console.log('\n📝 Next steps:'); console.log(' 1. Run: npm install'); console.log(' 2. Run: npm run build'); console.log(' 3. Test the application'); console.log(' 4. Commit the changes')} main();
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: true }); let cleanedCount = 0; for (const file of scriptFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary script files`)} function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: true }); let cleanedCount = 0; for (const file of rootFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.includes('process_') || file.includes('resolve_') || file.includes('fix_') || file.includes('final_') || file.includes('comprehensive_') || file.includes('aggressive_') || file.includes('targeted_') || file.includes('merge_') || file.includes('smart_merge_') || file.includes('quick_conflict_') || file.includes('process-') || file.includes('resolve-') || file.includes('fix-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.endsWith('.txt') || file.endsWith('.log') || file.endsWith('.cjs') || file.endsWith('.js') || file.endsWith('.sh') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary root files`)} function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: true }); let cleanedCount = 0; for (const file of reportFiles) { if ( !file.includes('performance-report.json') && !file.includes('quality-report.json') && !file.includes('security-audit-report.json') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary report files`)} function main() { console.log('🧹 Starting repository cleanup...'); cleanScripts(); cleanRootFiles(); cleanReportFiles(); let totalRemoved = 0; for (const pattern of CLEANUP_PATTERNS) { const files = glob.sync(pattern,{ nodir: false }); for (const file of files) { if (shouldRemoveFile(file)) { if (removeFile(file)) { totalRemoved++} } } } console.log(`\n📊 Cleanup Summary:`); console.log(` Total items removed: ${totalRemoved}`); console.log('\n✨ Repository cleanup completed!'); console.log('\n📝 Next steps:'); console.log(' 1. Run: npm install'); console.log(' 2. Run: npm run build'); console.log(' 3. Test the application'); console.log(' 4. Commit the changes')} main();
+
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 #!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: true }); let cleanedCount = 0; for (const file of scriptFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary script files`)} function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: true }); let cleanedCount = 0; for (const file of rootFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.includes('process_') || file.includes('resolve_') || file.includes('fix_') || file.includes('final_') || file.includes('comprehensive_') || file.includes('aggressive_') || file.includes('targeted_') || file.includes('merge_') || file.includes('smart_merge_') || file.includes('quick_conflict_') || file.includes('process-') || file.includes('resolve-') || file.includes('fix-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.endsWith('.txt') || file.endsWith('.log') || file.endsWith('.cjs') || file.endsWith('.js') || file.endsWith('.sh') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary root files`)} function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: true }); let cleanedCount = 0; for (const file of reportFiles) { if ( !file.includes('performance-report.json') && !file.includes('quality-report.json') && !file.includes('security-audit-report.json') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary report files`)} function main() { console.log('🧹 Starting repository cleanup...'); cleanScripts(); cleanRootFiles(); cleanReportFiles(); let totalRemoved = 0; for (const pattern of CLEANUP_PATTERNS) { const files = glob.sync(pattern,{ nodir: false }); for (const file of files) { if (shouldRemoveFile(file)) { if (removeFile(file)) { totalRemoved++} } } } console.log(`\n📊 Cleanup Summary:`); console.log(` Total items removed: ${totalRemoved}`); console.log('\n✨ Repository cleanup completed!'); console.log('\n📝 Next steps:'); console.log(' 1. Run: npm install'); console.log(' 2. Run: npm run build'); console.log(' 3. Test the application'); console.log(' 4. Commit the changes')} main();
 #!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: true }); let cleanedCount = 0; for (const file of scriptFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary script files`)} function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: true }); let cleanedCount = 0; for (const file of rootFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.includes('process_') || file.includes('resolve_') || file.includes('fix_') || file.includes('final_') || file.includes('comprehensive_') || file.includes('aggressive_') || file.includes('targeted_') || file.includes('merge_') || file.includes('smart_merge_') || file.includes('quick_conflict_') || file.includes('process-') || file.includes('resolve-') || file.includes('fix-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.endsWith('.txt') || file.endsWith('.log') || file.endsWith('.cjs') || file.endsWith('.js') || file.endsWith('.sh') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary root files`)} function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: true }); let cleanedCount = 0; for (const file of reportFiles) { if ( !file.includes('performance-report.json') && !file.includes('quality-report.json') && !file.includes('security-audit-report.json') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary report files`)} function main() { console.log('🧹 Starting repository cleanup...'); cleanScripts(); cleanRootFiles(); cleanReportFiles(); let totalRemoved = 0; for (const pattern of CLEANUP_PATTERNS) { const files = glob.sync(pattern,{ nodir: false }); for (const file of files) { if (shouldRemoveFile(file)) { if (removeFile(file)) { totalRemoved++} } } } console.log(`\n📊 Cleanup Summary:`); console.log(` Total items removed: ${totalRemoved}`); console.log('\n✨ Repository cleanup completed!'); console.log('\n📝 Next steps:'); console.log(' 1. Run: npm install'); console.log(' 2. Run: npm run build'); console.log(' 3. Test the application'); console.log(' 4. Commit the changes')} main();
 #!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: true }); let cleanedCount = 0; for (const file of scriptFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary script files`)} function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: true }); let cleanedCount = 0; for (const file of rootFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.includes('process_') || file.includes('resolve_') || file.includes('fix_') || file.includes('final_') || file.includes('comprehensive_') || file.includes('aggressive_') || file.includes('targeted_') || file.includes('merge_') || file.includes('smart_merge_') || file.includes('quick_conflict_') || file.includes('process-') || file.includes('resolve-') || file.includes('fix-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.endsWith('.txt') || file.endsWith('.log') || file.endsWith('.cjs') || file.endsWith('.js') || file.endsWith('.sh') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary root files`)} function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: true }); let cleanedCount = 0; for (const file of reportFiles) { if ( !file.includes('performance-report.json') && !file.includes('quality-report.json') && !file.includes('security-audit-report.json') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary report files`)} function main() { console.log('🧹 Starting repository cleanup...'); cleanScripts(); cleanRootFiles(); cleanReportFiles(); let totalRemoved = 0; for (const pattern of CLEANUP_PATTERNS) { const files = glob.sync(pattern,{ nodir: false }); for (const file of files) { if (shouldRemoveFile(file)) { if (removeFile(file)) { totalRemoved++} } } } console.log(`\n📊 Cleanup Summary:`); console.log(` Total items removed: ${totalRemoved}`); console.log('\n✨ Repository cleanup completed!'); console.log('\n📝 Next steps:'); console.log(' 1. Run: npm install'); console.log(' 2. Run: npm run build'); console.log(' 3. Test the application'); console.log(' 4. Commit the changes')} main();
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 #!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: 'true' }); let cleanedCount = 0;  } } console.log(`🧹 Cleaned ${cleanedCount} temporary script files`)} function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: 'true' }); let cleanedCount = 0;  } } console.log(`🧹 Cleaned ${cleanedCount} temporary root files`)} function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: 'true' }); let cleanedCount = 0;  } } console.log(`🧹 Cleaned ${cleanedCount} temporary report files`)} function main() { console.log('🧹 Starting repository cleanup...'); cleanScripts(); cleanRootFiles(); cleanReportFiles(); let totalRemoved = 0; );  } } } console.log(`\n📊 Cleanup Summary:`); console.log(` Total items removed: ${totalRemoved}`); console.log('\n✨ Repository cleanup completed!'); console.log('\n📝 Next steps:'); console.log(' 1. Run: npm install'); console.log(' 2. Run: npm run build'); console.log(' 3. Test the application'); console.log(' 4. Commit the changes')} main();
 #!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: true }); let cleanedCount = 0;  } } console.log(`🧹 Cleaned ${cleanedCount} temporary script files`)} function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: true }); let cleanedCount = 0;  } } console.log(`🧹 Cleaned ${cleanedCount} temporary root files`)} function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: true }); let cleanedCount = 0;  } } console.log(`🧹 Cleaned ${cleanedCount} temporary report files`)} function main() { console.log('🧹 Starting repository cleanup...'); cleanScripts(); cleanRootFiles(); cleanReportFiles(); let totalRemoved = 0; );  } } } console.log(`\n📊 Cleanup Summary:`); console.log(` Total items removed: ${totalRemoved}`); console.log('\n✨ Repository cleanup completed!'); console.log('\n📝 Next steps:'); console.log(' 1. Run: npm install'); console.log(' 2. Run: npm run build'); console.log(' 3. Test the application'); console.log(' 4. Commit the changes')} main();
 #!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: true }); let cleanedCount = 0;  } } console.log(`🧹 Cleaned ${cleanedCount} temporary script files`)} function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: true }); let cleanedCount = 0;  } } console.log(`🧹 Cleaned ${cleanedCount} temporary root files`)} function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: true }); let cleanedCount = 0;  } } console.log(`🧹 Cleaned ${cleanedCount} temporary report files`)} function main() { console.log('🧹 Starting repository cleanup...'); cleanScripts(); cleanRootFiles(); cleanReportFiles(); let totalRemoved = 0; );  } } } console.log(`\n📊 Cleanup Summary:`); console.log(` Total items removed: ${totalRemoved}`); console.log('\n✨ Repository cleanup completed!'); console.log('\n📝 Next steps:'); console.log(' 1. Run: npm install'); console.log(' 2. Run: npm run build'); console.log(' 3. Test the application'); console.log(' 4. Commit the changes')} main();
 #!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: true }); let cleanedCount = 0;  } } console.log(`🧹 Cleaned ${cleanedCount} temporary script files`)} function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: true }); let cleanedCount = 0;  } } console.log(`🧹 Cleaned ${cleanedCount} temporary root files`)} function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: true }); let cleanedCount = 0;  } } console.log(`🧹 Cleaned ${cleanedCount} temporary report files`)} function main() { console.log('🧹 Starting repository cleanup...'); cleanScripts(); cleanRootFiles(); cleanReportFiles(); let totalRemoved = 0; );  } } } console.log(`\n📊 Cleanup Summary:`); console.log(` Total items removed: ${totalRemoved}`); console.log('\n✨ Repository cleanup completed!'); console.log('\n📝 Next steps:'); console.log(' 1. Run: npm install'); console.log(' 2. Run: npm run build'); console.log(' 3. Test the application'); console.log(' 4. Commit the changes')} main();
 #!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: true }); let cleanedCount = 0;  } } console.log(`🧹 Cleaned ${cleanedCount} temporary script files`)} function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: true }); let cleanedCount = 0;  } } console.log(`🧹 Cleaned ${cleanedCount} temporary root files`)} function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: true }); let cleanedCount = 0;  } } console.log(`🧹 Cleaned ${cleanedCount} temporary report files`)} function main() { console.log('🧹 Starting repository cleanup...'); cleanScripts(); cleanRootFiles(); cleanReportFiles(); let totalRemoved = 0; );  } } } console.log(`\n📊 Cleanup Summary:`); console.log(` Total items removed: ${totalRemoved}`); console.log('\n✨ Repository cleanup completed!'); console.log('\n📝 Next steps:'); console.log(' 1. Run: npm install'); console.log(' 2. Run: npm run build'); console.log(' 3. Test the application'); console.log(' 4. Commit the changes')} main();
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-========
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: true }); let cleanedCount = 0; for (const file of scriptFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary script files`)} function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: true }); let cleanedCount = 0; for (const file of rootFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.includes('process_') || file.includes('resolve_') || file.includes('fix_') || file.includes('final_') || file.includes('comprehensive_') || file.includes('aggressive_') || file.includes('targeted_') || file.includes('merge_') || file.includes('smart_merge_') || file.includes('quick_conflict_') || file.includes('process-') || file.includes('resolve-') || file.includes('fix-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.endsWith('.txt') || file.endsWith('.log') || file.endsWith('.cjs') || file.endsWith('.js') || file.endsWith('.sh') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary root files`)} function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: true }); let cleanedCount = 0; for (const file of reportFiles) { if ( !file.includes('performance-report.json') && !file.includes('quality-report.json') && !file.includes('security-audit-report.json') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary report files`)} function main() { console.log('🧹 Starting repository cleanup...'); cleanScripts(); cleanRootFiles(); cleanReportFiles(); let totalRemoved = 0; for (const pattern of CLEANUP_PATTERNS) { const files = glob.sync(pattern,{ nodir: false }); for (const file of files) { if (shouldRemoveFile(file)) { if (removeFile(file)) { totalRemoved++} } } } console.log(`\n📊 Cleanup Summary:`); console.log(` Total items removed: ${totalRemoved}`); console.log('\n✨ Repository cleanup completed!'); console.log('\n📝 Next steps:'); console.log(' 1. Run: npm install'); console.log(' 2. Run: npm run build'); console.log(' 3. Test the application'); console.log(' 4. Commit the changes')} main();
-=======
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: true }); let cleanedCount = 0; for (const file of scriptFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary script files`)} function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: true }); let cleanedCount = 0; for (const file of rootFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.includes('process_') || file.includes('resolve_') || file.includes('fix_') || file.includes('final_') || file.includes('comprehensive_') || file.includes('aggressive_') || file.includes('targeted_') || file.includes('merge_') || file.includes('smart_merge_') || file.includes('quick_conflict_') || file.includes('process-') || file.includes('resolve-') || file.includes('fix-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.endsWith('.txt') || file.endsWith('.log') || file.endsWith('.cjs') || file.endsWith('.js') || file.endsWith('.sh') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary root files`)} function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: true }); let cleanedCount = 0; for (const file of reportFiles) { if ( !file.includes('performance-report.json') && !file.includes('quality-report.json') && !file.includes('security-audit-report.json') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary report files`)} function main() { console.log('🧹 Starting repository cleanup...'); cleanScripts(); cleanRootFiles(); cleanReportFiles(); let totalRemoved = 0; for (const pattern of CLEANUP_PATTERNS) { const files = glob.sync(pattern,{ nodir: false }); for (const file of files) { if (shouldRemoveFile(file)) { if (removeFile(file)) { totalRemoved++} } } } console.log(`\n📊 Cleanup Summary:`); console.log(` Total items removed: ${totalRemoved}`); console.log('\n✨ Repository cleanup completed!'); console.log('\n📝 Next steps:'); console.log(' 1. Run: npm install'); console.log(' 2. Run: npm run build'); console.log(' 3. Test the application'); console.log(' 4. Commit the changes')} main();
-=======
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: true }); let cleanedCount = 0; for (const file of scriptFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary script files`)} function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: true }); let cleanedCount = 0; for (const file of rootFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.includes('process_') || file.includes('resolve_') || file.includes('fix_') || file.includes('final_') || file.includes('comprehensive_') || file.includes('aggressive_') || file.includes('targeted_') || file.includes('merge_') || file.includes('smart_merge_') || file.includes('quick_conflict_') || file.includes('process-') || file.includes('resolve-') || file.includes('fix-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.endsWith('.txt') || file.endsWith('.log') || file.endsWith('.cjs') || file.endsWith('.js') || file.endsWith('.sh') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary root files`)} function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: true }); let cleanedCount = 0; for (const file of reportFiles) { if ( !file.includes('performance-report.json') && !file.includes('quality-report.json') && !file.includes('security-audit-report.json') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary report files`)} function main() { console.log('🧹 Starting repository cleanup...'); cleanScripts(); cleanRootFiles(); cleanReportFiles(); let totalRemoved = 0; for (const pattern of CLEANUP_PATTERNS) { const files = glob.sync(pattern,{ nodir: false }); for (const file of files) { if (shouldRemoveFile(file)) { if (removeFile(file)) { totalRemoved++} } } } console.log(`\n📊 Cleanup Summary:`); console.log(` Total items removed: ${totalRemoved}`); console.log('\n✨ Repository cleanup completed!'); console.log('\n📝 Next steps:'); console.log(' 1. Run: npm install'); console.log(' 2. Run: npm run build'); console.log(' 3. Test the application'); console.log(' 4. Commit the changes')} main();
-=======
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: true }); let cleanedCount = 0; for (const file of scriptFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary script files`)} function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: true }); let cleanedCount = 0; for (const file of rootFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.includes('process_') || file.includes('resolve_') || file.includes('fix_') || file.includes('final_') || file.includes('comprehensive_') || file.includes('aggressive_') || file.includes('targeted_') || file.includes('merge_') || file.includes('smart_merge_') || file.includes('quick_conflict_') || file.includes('process-') || file.includes('resolve-') || file.includes('fix-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.endsWith('.txt') || file.endsWith('.log') || file.endsWith('.cjs') || file.endsWith('.js') || file.endsWith('.sh') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary root files`)} function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: true }); let cleanedCount = 0; for (const file of reportFiles) { if ( !file.includes('performance-report.json') && !file.includes('quality-report.json') && !file.includes('security-audit-report.json') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary report files`)} function main() { console.log('🧹 Starting repository cleanup...'); cleanScripts(); cleanRootFiles(); cleanReportFiles(); let totalRemoved = 0; for (const pattern of CLEANUP_PATTERNS) { const files = glob.sync(pattern,{ nodir: false }); for (const file of files) { if (shouldRemoveFile(file)) { if (removeFile(file)) { totalRemoved++} } } } console.log(`\n📊 Cleanup Summary:`); console.log(` Total items removed: ${totalRemoved}`); console.log('\n✨ Repository cleanup completed!'); console.log('\n📝 Next steps:'); console.log(' 1. Run: npm install'); console.log(' 2. Run: npm run build'); console.log(' 3. Test the application'); console.log(' 4. Commit the changes')} main();
->>>>>>>> main:corrupted_backup/cleanup-repository.js
-=======
 #!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: 'true' }); let cleanedCount = 0; for (const file of scriptFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary script files`)} function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: 'true' }); let cleanedCount = 0; for (const file of rootFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.includes('process_') || file.includes('resolve_') || file.includes('fix_') || file.includes('final_') || file.includes('comprehensive_') || file.includes('aggressive_') || file.includes('targeted_') || file.includes('merge_') || file.includes('smart_merge_') || file.includes('quick_conflict_') || file.includes('process-') || file.includes('resolve-') || file.includes('fix-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.endsWith('.txt') || file.endsWith('.log') || file.endsWith('.cjs') || file.endsWith('.js') || file.endsWith('.sh') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary root files`)} function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: 'true' }); let cleanedCount = 0; for (const file of reportFiles) { if ( !file.includes('performance-report.json') && !file.includes('quality-report.json') && !file.includes('security-audit-report.json') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary report files`)} function main() { console.log('🧹 Starting repository cleanup...'); cleanScripts(); cleanRootFiles(); cleanReportFiles(); let totalRemoved = 0; for (const pattern of CLEANUP_PATTERNS) { const files = glob.sync(pattern,{ nodir: 'false' }); for (const file of files) { if (shouldRemoveFile(file)) { if (removeFile(file)) { totalRemoved++} } } } console.log(`\n📊 Cleanup Summary:`); console.log(` Total items removed: ${totalRemoved}`); console.log('\n✨ Repository cleanup completed!'); console.log('\n📝 Next steps:'); console.log(' 1. Run: npm install'); console.log(' 2. Run: npm run build'); console.log(' 3. Test the application'); console.log(' 4. Commit the changes')} main();
 #!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: true }); let cleanedCount = 0; for (const file of scriptFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary script files`)} function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: true }); let cleanedCount = 0; for (const file of rootFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.includes('process_') || file.includes('resolve_') || file.includes('fix_') || file.includes('final_') || file.includes('comprehensive_') || file.includes('aggressive_') || file.includes('targeted_') || file.includes('merge_') || file.includes('smart_merge_') || file.includes('quick_conflict_') || file.includes('process-') || file.includes('resolve-') || file.includes('fix-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.endsWith('.txt') || file.endsWith('.log') || file.endsWith('.cjs') || file.endsWith('.js') || file.endsWith('.sh') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary root files`)} function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: true }); let cleanedCount = 0; for (const file of reportFiles) { if ( !file.includes('performance-report.json') && !file.includes('quality-report.json') && !file.includes('security-audit-report.json') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary report files`)} function main() { console.log('🧹 Starting repository cleanup...'); cleanScripts(); cleanRootFiles(); cleanReportFiles(); let totalRemoved = 0; for (const pattern of CLEANUP_PATTERNS) { const files = glob.sync(pattern,{ nodir: false }); for (const file of files) { if (shouldRemoveFile(file)) { if (removeFile(file)) { totalRemoved++} } } } console.log(`\n📊 Cleanup Summary:`); console.log(` Total items removed: ${totalRemoved}`); console.log('\n✨ Repository cleanup completed!'); console.log('\n📝 Next steps:'); console.log(' 1. Run: npm install'); console.log(' 2. Run: npm run build'); console.log(' 3. Test the application'); console.log(' 4. Commit the changes')} main();
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
@@ -487,3 +529,5 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

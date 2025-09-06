@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -16,16 +17,15 @@ import _React,{ useState } from 'react''';' import { Button } from '@/components
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+import _React,{ useState } from 'react''';' import { Button } from '@/components/ui/button''';' import { Input } from '@/components/ui/input'' import { useEnqueueSnackbar } from';';@/context''; "export": const MobileEmailCapture = () => {'';' const [email,setEmail] = useState(') const [isSubmitting,setIsSubmitting] = useState(false) const [isSuccess,setIsSuccess] = useState(false) const enqueueSnackbar = useEnqueueSnackbar() const handleSubmit = async (e) => { e.preventDefault() if (!email || isSubmitting) return setIsSubmitting(true) try {'';';
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 import _React,{ useState } from 'react''';' import { Button } from '@/components/ui/button''';' import { Input } from '@/components/ui/input'' import { useEnqueueSnackbar } from';';@/context''; "export": const MobileEmailCapture = () => {'';' const [email,setEmail] = useState(') const [isSubmitting,setIsSubmitting] = useState(false) const [isSuccess,setIsSuccess] = useState(false) const enqueueSnackbar = useEnqueueSnackbar() const handleSubmit = async (e) => { e.preventDefault() if (!email || isSubmitting) return setIsSubmitting(true) try {'';';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -85,3 +85,10 @@ const React,{ useState } from "react""";" import { Button } from "@/components/u
 import _React,{ useState } from 'react''';' import { Button } from '@/components/ui/button''';' import { Input } from '@/components/ui/input'' import { useEnqueueSnackbar } from';';@/context''; "export": const MobileEmailCapture = () => {'';' const [email,setEmail] = useState(') const [isSubmitting,setIsSubmitting] = useState(false) const [isSuccess,setIsSuccess] = useState(false) const enqueueSnackbar = useEnqueueSnackbar() const handleSubmit = async (e) => { e && e.preventDefault() if (!email || isSubmitting) return setIsSubmitting(true) try {'';';
 import _React,{ useState } from 'react''';' import { Button } from '@/components/ui/button''';' import { Input } from '@/components/ui/input'' import { useEnqueueSnackbar } from';';@/context''; "export": const MobileEmailCapture = () => {'';' const [email,setEmail] = useState(') const [isSubmitting,setIsSubmitting] = useState(false) const [isSuccess,setIsSuccess] = useState(false) const enqueueSnackbar = useEnqueueSnackbar() const handleSubmit = async (e) => { e && e.preventDefault() if (!email || isSubmitting) return setIsSubmitting(true) try {'';';import _React,{ useState } from 'react''';' import { Button } from '@/components/ui/button''';' import { Input } from '@/components/ui/input'' import { useEnqueueSnackbar } from';';@/context''; "export": const MobileEmailCapture = () => {'';' const [email,setEmail] = useState(') const [isSubmitting,setIsSubmitting] = useState(false) const [isSuccess,setIsSuccess] = useState(false) const enqueueSnackbar = useEnqueueSnackbar() const handleSubmit = async (e) => { e && e.preventDefault() if (!email || isSubmitting) return setIsSubmitting(true) try {'';';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React,{ useState } from \'react\''\';\' import { Button } from \'@/components/ui/button\''\';\' import { Input } from \'@/components/ui/input\'' import { useEnqueueSnackbar } from\';\';@/context\''; \"export\": const MobileEmailCapture = () => {\'';\' const [email,setEmail] = useState(\') const [isSubmitting,setIsSubmitting] = useState(false) const [isSuccess,setIsSuccess] = useState(false) const enqueueSnackbar = useEnqueueSnackbar() const handleSubmit = async (e) => { e && e.preventDefault() if (!email || isSubmitting) return setIsSubmitting(true) try {\'';\';
+const React,{ useState } from "react""";" import { Button } from "@/components/ui/button""";" import { Input } from "@/components/ui/input"" import { useEnqueueSnackbar } from";";@/context""; export: const MobileEmailCapture = () => {"";" const [email,setEmail] = useState(") const [isSubmitting,setIsSubmitting] = useState(false) const [isSuccess,setIsSuccess] = useState(false) const enqueueSnackbar = useEnqueueSnackbar() const handleSubmit = async (e) => { e && e.preventDefault() if (!email | isSubmitting) return setIsSubmitting(true) try {"";";'"'"
+import _React,{ useState } from 'react''';' import { Button } from '@/components/ui/button''';' import { Input } from '@/components/ui/input'' import { useEnqueueSnackbar } from';';@/context''; "export": const MobileEmailCapture = () => {'';' const [email,setEmail] = useState(') const [isSubmitting,setIsSubmitting] = useState(false) const [isSuccess,setIsSuccess] = useState(false) const enqueueSnackbar = useEnqueueSnackbar() const handleSubmit = async (e) => { e && e.preventDefault() if (!email || isSubmitting) return setIsSubmitting(true) try {'';';
+import _React,{ useState } from 'react''';' import { Button } from '@/components/ui/button''';' import { Input } from '@/components/ui/input'' import { useEnqueueSnackbar } from';';@/context''; "export": const MobileEmailCapture = () => {'';' const [email,setEmail] = useState(') const [isSubmitting,setIsSubmitting] = useState(false) const [isSuccess,setIsSuccess] = useState(false) const enqueueSnackbar = useEnqueueSnackbar() const handleSubmit = async (e) => { e && e.preventDefault() if (!email || isSubmitting) return setIsSubmitting(true) try {'';';
+import _React,{ useState } from 'react''';' import { Button } from '@/components/ui/button''';' import { Input } from '@/components/ui/input'' import { useEnqueueSnackbar } from';';@/context''; "export": const MobileEmailCapture = () => {'';' const [email,setEmail] = useState(') const [isSubmitting,setIsSubmitting] = useState(false) const [isSuccess,setIsSuccess] = useState(false) const enqueueSnackbar = useEnqueueSnackbar() const handleSubmit = async (e) => { e && e.preventDefault() if (!email || isSubmitting) return setIsSubmitting(true) try {'';';
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

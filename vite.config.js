@@ -31,6 +31,7 @@ export default defineConfig({
     host: true,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   },
+<<<<<<< HEAD
   server: {
     port: 3000,
     open: true,
@@ -58,6 +59,8 @@ export default defineConfig({
 =======
     host: true
   },
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   build: {
     outDir: "dist",
     sourcemap: true,
@@ -65,6 +68,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
+<<<<<<< HEAD
 <<<<<<< HEAD
           vendor: ['react', 'react-dom'],
           ui: ['framer-motion', 'lucide-react'],
@@ -99,14 +103,28 @@ export default defineConfig({
 =======
 =======
         drop_debugger: true,
+=======
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+        },
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
       },
     },
   },
-  optimizeDeps: {
-    include: ["react", "react-dom", "framer-motion", "lucide-react"],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
   },
+<<<<<<< HEAD
 });
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom'],
+  },
+});
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

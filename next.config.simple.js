@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 /** @type {import ('next').NextConfig} */;
 const next_config = {
 <<<<<<< HEAD
@@ -10,6 +11,8 @@ const next_config = {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 
   reactStrictMode: true,
@@ -17,8 +20,6 @@ const next_config = {
   poweredByHeader: false,
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
-<<<<<<< HEAD
-<<<<<<< HEAD
   page_extensions: ['tsx', 'ts', 'jsx', 'js'],
   // Image optimization;
   images: {
@@ -26,11 +27,8 @@ const next_config = {
     formats: ['image / webp', 'image / avif'],
   },
   // Output configuration;
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+<<<<<<< HEAD
 =======
   pageExtensions: ["tsx", "ts", "jsx", "js"],
 
@@ -40,6 +38,8 @@ const next_config = {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   // Image optimization
   images: {
     domains: [
@@ -50,15 +50,7 @@ const next_config = {
     ],
     formats: ["image/webp", "image/avif"],
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   // Output configuration
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-<<<<<<< HEAD
-  // Output configuration
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   output: 'standalone',
 
   // Trailing slash
@@ -69,8 +61,6 @@ const next_config = {
   assetPrefix: '',
   // Generate ETags
   generateEtags: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
   // Dist directory
   distDir: '.next',
 };
@@ -81,10 +71,6 @@ module.exports = nextConfig;
 module.exports = nextConfig;
 =======
 
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
   // Output configuration
   output: "standalone",
@@ -101,33 +87,32 @@ module.exports = nextConfig;
   // Generate ETags
   generateEtags: true,
 
->>>>>>> main
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   // Dist directory
   distDir: ".next",
 };
 
 
-<<<<<<< HEAD
 module.exports = nextConfig;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 module.exports = nextConfig;
 module.exports = nextConfig;
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

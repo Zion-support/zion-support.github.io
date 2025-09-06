@@ -23,6 +23,9 @@
     lru-cache "^10.4.3"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 "@axe-core/cli@^4.10.2":
   version "4.10.2"
   resolved "https://registry.npmjs.org/@axe-core/cli/-/cli-4.10.2.tgz"
@@ -52,6 +55,7 @@
     axe-core "~4.10.3"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.27.1":
@@ -62,6 +66,9 @@
 =======
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.27.1":
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+"@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.27.1":
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   version "7.27.1"
   resolved "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.27.1.tgz"
   integrity sha512-cjQ7ZlQ0Mv3b47hABuTevyTuYN4i+loJKGeV9flcCgIK37cCXRh+L1bd3iBHlynerhQ7BhCkn2BPbQUL+rGqFg==
@@ -955,11 +962,15 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 "@babel/runtime@^7.12.5", "@babel/runtime@^7.21.0", "@babel/runtime@^7.27.6":
 =======
 "@babel/runtime@^7.12.5", "@babel/runtime@^7.21.0", "@babel/runtime@^7.26.9", "@babel/runtime@^7.27.6":
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+"@babel/runtime@^7.12.5", "@babel/runtime@^7.21.0", "@babel/runtime@^7.27.6":
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   version "7.28.4"
   resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.28.4.tgz"
   integrity sha512-Q/N6JNWvIvPnLDvjlE1OUBLPQHH6l3CltCEsHIujp45zQUSSh8K+gHnaEX45yAT1nyngnINhvWtzN+Nb9D8RAQ==
@@ -1344,15 +1355,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 "@esbuild/linux-x64@^0.25.9", "@esbuild/linux-x64@0.25.9":
   version "0.25.9"
   resolved "https://registry.npmjs.org/@esbuild/linux-x64/-/linux-x64-0.25.9.tgz"
   integrity sha512-iSwByxzRe48YVkmpbgoxVzn76BXjlYFXC7NvLYq+b+kDjyyk30J0JY47DIn8z1MO3K0oSl9fZoRmZPQI4Hklzg==
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1361,6 +1376,8 @@
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 "@eslint-community/eslint-utils@^4.7.0", "@eslint-community/eslint-utils@^4.8.0":
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -1399,6 +1416,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@eslint/js@8.57.1":
 =======
 "@eslint/js@^8.57.1":
@@ -1421,6 +1439,9 @@
 =======
 "@eslint/js@9.35.0":
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+"@eslint/js@^9.35.0", "@eslint/js@9.35.0":
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   version "9.35.0"
   resolved "https://registry.npmjs.org/@eslint/js/-/js-9.35.0.tgz"
   integrity sha512-30iXE9whjlILfWobBkNerJo+TXYsgVM5ERQwMcMKCHckHflCmf7wXDAHlARoWnh0s1U72WqlbeyE7iAcCzuCPw==
@@ -2404,12 +2425,16 @@
     webpack-bundle-analyzer "4.7.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 "@next/env@15.5.2":
   version "15.5.2"
   resolved "https://registry.npmjs.org/@next/env/-/env-15.5.2.tgz"
   integrity sha512-Qe06ew4zt12LeO6N7j8/nULSOe3fMXE4dM6xgpBQNvdzyK1sv5y4oAP3bq4LamrvGCZtmRYnW8URFCeX5nFgGg==
 
 "@next/eslint-plugin-next@^15.5.2":
+<<<<<<< HEAD
 =======
 "@next/env@15.5.2":
   version "15.5.2"
@@ -2426,6 +2451,8 @@
 
 "@next/eslint-plugin-next@^15.5.2":
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   version "15.5.2"
   resolved "https://registry.npmjs.org/@next/eslint-plugin-next/-/eslint-plugin-next-15.5.2.tgz"
   integrity sha512-lkLrRVxcftuOsJNhWatf1P2hNVfh98k/omQHrCEPPriUypR6RcS13IvLdIrEvkm9AH2Nu2YpR5vLqBuy6twH3Q==
@@ -2434,18 +2461,23 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 "@next/eslint-plugin-next@14.2.32":
 =======
 "@next/eslint-plugin-next@^14.2.32", "@next/eslint-plugin-next@14.2.32":
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+"@next/eslint-plugin-next@14.2.32":
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   version "14.2.32"
   resolved "https://registry.npmjs.org/@next/eslint-plugin-next/-/eslint-plugin-next-14.2.32.tgz"
   integrity sha512-tyZMX8g4cWg/uPW4NxiJK13t62Pab47SKGJGVZJa6YtFwtfrXovH4j1n9tdpRdXW03PGQBugYEVGM7OhWfytdA==
   dependencies:
     glob "10.3.10"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2459,6 +2491,9 @@
 =======
 "@next/swc-linux-x64-gnu@^15.5.2", "@next/swc-linux-x64-gnu@14.2.32":
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+"@next/swc-linux-x64-gnu@^15.5.2", "@next/swc-linux-x64-gnu@15.5.2":
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   version "15.5.2"
   resolved "https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-15.5.2.tgz"
   integrity sha512-o1RV/KOODQh6dM6ZRJGZbc+MOAHww33Vbs5JC9Mp1gDk8cpEO+cYC/l7rweiEalkSm5/1WGa4zY7xrNwObN4+Q==
@@ -2785,6 +2820,7 @@
   integrity sha512-QNqXyfVS2wm9hweSYD2O7F0G06uurj9kZ96TRQE5Y9hU7+tgdZwIkbAKc5Ocy1HxEY2kuDQa6cQ1WRs/O5LFKA==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 "@pm2/agent@~2.1.1":
   version "2.1.1"
@@ -2837,6 +2873,8 @@
     debug "^4.3.1"
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 "@polka/url@^1.0.0-next.20":
   version "1.0.0-next.29"
   resolved "https://registry.npmjs.org/@polka/url/-/url-1.0.0-next.29.tgz"
@@ -3778,9 +3816,12 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 "@reduxjs/toolkit@^2.9.0":
   version "2.9.0"
   resolved "https://registry.npmjs.org/@reduxjs/toolkit/-/toolkit-2.9.0.tgz"
@@ -3792,9 +3833,12 @@
     redux "^5.0.1"
     redux-thunk "^3.1.0"
     reselect "^5.1.0"
+<<<<<<< HEAD
 =======
   resolved "https://registry.npmjs.org/@radix-ui/rect/-/rect-1.1.1.tgz"
   integrity sha512-HPwpGIzkl28mWyZqG52jiqDJ12waP11Pa1lGoiyUkIEuMLBP0oeK/C89esbXrxsky5we7dfd8U58nm0SgAWpVw==
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 <<<<<<< HEAD
 =======
@@ -3848,11 +3892,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 "@sendgrid/client@^8.1.5":
   version "8.1.5"
   resolved "https://registry.npmjs.org/@sendgrid/client/-/client-8.1.5.tgz"
@@ -3878,6 +3925,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -3891,6 +3939,8 @@
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 "@sentry/core@9.46.0":
   version "9.46.0"
   resolved "https://registry.npmjs.org/@sentry/core/-/core-9.46.0.tgz"
@@ -3976,14 +4026,20 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 "@standard-schema/spec@^1.0.0":
   version "1.0.0"
   resolved "https://registry.npmjs.org/@standard-schema/spec/-/spec-1.0.0.tgz"
   integrity sha512-m2bOd0f2RT9k8QJx1JN85cZYyH1RqFBdlwtkSlf4tBDYLCiiZnv1fIIwacK6cqwXavOydf0NPToMQgpKq+dVlA==
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 "@standard-schema/utils@^0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@standard-schema/utils/-/utils-0.3.0.tgz#3d5e608f16c2390c10528e98e59aef6bf73cae7b"
@@ -3992,17 +4048,23 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 "@stripe/stripe-js@^7.9.0":
   version "7.9.0"
   resolved "https://registry.npmjs.org/@stripe/stripe-js/-/stripe-js-7.9.0.tgz"
   integrity sha512-ggs5k+/0FUJcIgNY08aZTqpBTtbExkJMYMLSMwyucrhtWexVOEY1KJmhBsxf+E/Q15f5rbwBpj+t0t2AW2oCsQ==
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 "@supabase/auth-js@2.71.1":
   version "2.71.1"
   resolved "https://registry.yarnpkg.com/@supabase/auth-js/-/auth-js-2.71.1.tgz#349802c3b8275d62437e755ba73bd0cd8c26cd93"
@@ -4083,6 +4145,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
     tslib "^2.8.0"
+<<<<<<< HEAD
 =======
     "@swc/counter" "^0.1.3"
     tslib "^2.4.0"
@@ -4092,6 +4155,8 @@
 =======
     tslib "^2.8.0"
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 "@tailwindcss/aspect-ratio@^0.4.2":
   version "0.4.2"
@@ -4367,6 +4432,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@types/node@*":
   version "24.3.1"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-24.3.1.tgz#b0a3fb2afed0ef98e8d7f06d46ef6349047709f3"
@@ -4403,6 +4469,8 @@
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 "@types/mysql@2.15.26":
   version "2.15.26"
   resolved "https://registry.npmjs.org/@types/mysql/-/mysql-2.15.26.tgz"
@@ -4411,6 +4479,7 @@
     "@types/node" "*"
 
 "@types/node@*", "@types/node@>=13.7.0":
+<<<<<<< HEAD
   version "18.19.124"
   resolved "https://registry.npmjs.org/@types/node/-/node-18.19.124.tgz"
   integrity sha512-hY4YWZFLs3ku6D2Gqo3RchTd9VRCcrjqp/I0mmohYeUVA5Y8eCXKJEasHxLAJVZRJuQogfd1GiJ9lgogBgKeuQ==
@@ -4425,6 +4494,14 @@
   integrity sha512-VWDCbrLeVXJM9fihYodcLiIv0ku+AlOa/TQ1SvYOaBuyrSKgEcro95LJyIsJ4vSo6BXIxOKxiJAat04CmST9Fw==
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+  version "24.3.1"
+  resolved "https://registry.npmjs.org/@types/node/-/node-24.3.1.tgz"
+  integrity sha512-3vXmQDXy+woz+gnrTvuvNrPzekOi+Ds0ReMxw0LzBiK3a+1k0kQn9f2NWk+lgD4rJehFUmYy2gMhJ2ZI+7YP9g==
+  dependencies:
+    undici-types "~7.10.0"
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 "@types/pg-pool@2.0.6":
   version "2.0.6"
   resolved "https://registry.npmjs.org/@types/pg-pool/-/pg-pool-2.0.6.tgz"
@@ -4470,12 +4547,15 @@
     undici-types "~6.21.0"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+<<<<<<< HEAD
 "@types/prop-types@*":
   version "15.7.15"
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.15.tgz#e6e5a86d602beaca71ce5163fadf5f95d70931c7"
   integrity sha512-F6bEyamV9jKGAFBEmlQnesRPGOQqS2+Uwi0Em15xenOxHaf2hv6L8YCVn3rPdPJOiJfPiCnLIRyvwVaqMY3MIw==
 
 <<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 "@types/react-datepicker@^6.2.0":
   version "6.2.0"
   resolved "https://registry.yarnpkg.com/@types/react-datepicker/-/react-datepicker-6.2.0.tgz#1c93c10d12d1d683eacf46a82e35b953cd0da117"
@@ -4485,6 +4565,7 @@
     "@types/react" "*"
     date-fns "^3.3.1"
 
+<<<<<<< HEAD
 "@types/react-dom@^18.3.7":
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -4547,6 +4628,13 @@
   integrity sha512-0dLEBsA1kI3OezMBF8nSsb7Nk19ZnsyE1LLhB8r27KbgU5H4pvuqZLdtE+aUkJVoXgTVuA+iLIwmZ0TuK4tx6A==
   dependencies:
     "@types/prop-types" "*"
+=======
+"@types/react@*":
+  version "19.1.12"
+  resolved "https://registry.npmjs.org/@types/react/-/react-19.1.12.tgz"
+  integrity sha512-cMoR+FoAf/Jyq6+Df2/Z41jISvGZZ2eTlnsaJRptmZ76Caldwy1odD4xTr/gNV9VLj0AWgg/nmkevIyUfIIq5w==
+  dependencies:
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     csstype "^3.0.2"
 
 <<<<<<< HEAD
@@ -5011,11 +5099,15 @@ acorn@^8.1.0, acorn@^8.11.0, acorn@^8.15.0, acorn@^8.8.1:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 agent-base@^7.1.0, agent-base@^7.1.2:
 =======
 agent-base@^7.0.2, agent-base@^7.1.0, agent-base@^7.1.2:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+agent-base@^7.1.0, agent-base@^7.1.2:
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   version "7.1.4"
   resolved "https://registry.npmjs.org/agent-base/-/agent-base-7.1.4.tgz"
   integrity sha512-MnA+YT8fwfJPgBx3m60MNqakm30XOkyIoH1y6huTQvC0PwZG7ki8NacLBcrPbNoo8vEZy7Jpuk7+jMO+CUovTQ==
@@ -5050,6 +5142,7 @@ ajv-formats@^3.0.1:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ajv@^6.12.4, ajv@^6.12.6:
 =======
 ajv@^6.12.4:
@@ -5060,6 +5153,9 @@ ajv@^6.12.4:
 =======
 ajv@^6.12.4, ajv@^6.12.6:
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+ajv@^6.12.4, ajv@^6.12.6:
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   version "6.12.6"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.12.6.tgz#baf5a62e802b07d977034586f8c3baf5adf26df4"
   integrity sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==
@@ -5096,6 +5192,7 @@ ajv@^8.12.0:
     require-from-string "^2.0.2"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 amp-message@~0.1.1:
@@ -5112,6 +5209,8 @@ amp@~0.3.1, amp@0.3.1:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 ansi-colors@^4.1.1:
   version "4.1.3"
@@ -5201,6 +5300,7 @@ anymatch@^3.0.3, anymatch@~3.1.2:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 arch@^2.1.0:
   version "2.2.0"
@@ -5215,6 +5315,8 @@ archive-type@^4.0.0:
     file-type "^4.2.0"
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 arg@^4.1.0:
   version "4.1.3"
   resolved "https://registry.yarnpkg.com/arg/-/arg-4.1.3.tgz#269fc7ad5b8e42cb63c896d5666017261c144089"
@@ -5242,7 +5344,10 @@ aria-hidden@^1.2.4:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 aria-query@^5.0.0, aria-query@5.3.0:
   version "5.3.0"
   resolved "https://registry.npmjs.org/aria-query/-/aria-query-5.3.0.tgz"
@@ -5254,9 +5359,12 @@ aria-query@^5.0.0, aria-query@5.3.0:
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 aria-query@^5.3.2:
+<<<<<<< HEAD
 =======
 aria-query@^5.0.0, aria-query@^5.3.2:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   version "5.3.2"
   resolved "https://registry.yarnpkg.com/aria-query/-/aria-query-5.3.2.tgz#93f81a43480e33a338f19163a3d10a50c01dcd59"
   integrity sha512-COROpnaoap1E2F000S62r6A60uHZnmlvomhfyT2DlTcrY1OrBKn2UhH7qn5wTC9zMvD0AY7csdPSNwKP+7WiQw==
@@ -5454,16 +5562,20 @@ aws-sdk@^2.1692.0:
 
 axe-core@^4.10.0, axe-core@^4.10.3, axe-core@~4.10.3:
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 =======
 axe-core@^4.10.0:
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   version "4.10.3"
   resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.10.3.tgz#04145965ac7894faddbac30861e5d8f11bfd14fc"
   integrity sha512-Xm7bpRXnDSX2YE2YFfBk2FnF0ep6tmG7xPh8iHee8MIcrgq762Nkce856dYtJYLkuIoYZvGfTs/PbZhideTcEg==
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5486,6 +5598,9 @@ axios@^1.11.0, axios@^1.7.4, axios@^1.8.2:
 =======
 axios@^1.11.0, axios@^1.8.2:
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+axios@^1.11.0, axios@^1.7.4, axios@^1.8.2:
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/axios/-/axios-1.11.0.tgz#c2ec219e35e414c025b2095e8b8280278478fdb6"
   integrity sha512-1Lx3WLFQWm3ooKDYZD1eXmoGO9fxYQjrycfHFC8P0sCfQVXyROp0p9PFWBehewBOdCwHc+f/b8I0fMto5eSfwA==
@@ -5630,6 +5745,7 @@ balanced-match@^1.0.0:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 base64-js@^1.3.0:
 =======
 base64-js@^1.0.2, base64-js@^1.3.0:
@@ -5645,6 +5761,9 @@ base64-js@^1.0.2, base64-js@^1.3.0, base64-js@^1.3.1:
 =======
 base64-js@^1.0.2, base64-js@^1.3.0:
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+base64-js@^1.0.2, base64-js@^1.3.0:
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.5.1.tgz#1b1b440160a5bf7ad40b650f095963481903930a"
   integrity sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==
@@ -5654,6 +5773,7 @@ bignumber.js@^9.0.0:
   resolved "https://registry.yarnpkg.com/bignumber.js/-/bignumber.js-9.3.1.tgz#759c5aaddf2ffdc4f154f7b493e1c8770f88c4d7"
   integrity sha512-Ko0uX15oIUS7wJ3Rb30Fs6SkVbLmPBAKdlm7q9+ak9bbIeFf0MwuBsQV6z7+X768/cHsfg+WlysDWJcmthjsjQ==
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 bin-build@^3.0.0:
@@ -5707,11 +5827,14 @@ bin-wrapper@^4.0.0, bin-wrapper@^4.0.1:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 binary-extensions@^2.0.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-2.3.0.tgz#f6e14a97858d327252200242d4ccfe522c445522"
   integrity sha512-Ceh+7ox5qe7LJuLHoY0feh3pHuUDHAcRUeyL2VYghZwfpkNIy/+8Ocg0a3UuSoYzavmylwuLWQOf3hl0jjMMIw==
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 body-parser@^2.2.0:
@@ -5721,6 +5844,11 @@ body-parser@^2.2.0:
 =======
   resolved "https://registry.npmjs.org/body-parser/-/body-parser-2.2.0.tgz"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+body-parser@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.npmjs.org/body-parser/-/body-parser-2.2.0.tgz"
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   integrity sha512-02qvAaxv8tp7fBa/mw1ga98OGm+eCbqzJOKoRt70sLmfEEi+jyBYVTDGfCL/k06/4EMk/z01gCe7HoCH/f2LTg==
   dependencies:
     bytes "^3.1.2"
@@ -5732,6 +5860,7 @@ body-parser@^2.2.0:
     qs "^6.14.0"
     raw-body "^3.0.0"
     type-is "^2.0.0"
+<<<<<<< HEAD
 =======
 bl@^1.0.0:
   version "1.2.3"
@@ -5751,6 +5880,8 @@ bodec@^0.1.0:
   resolved "https://registry.npmjs.org/bodec/-/bodec-0.1.0.tgz"
   integrity sha512-Ylo+MAo5BDUq1KA3f3R/MFhh+g8cnHmo8bz3YPGhI1znrMaf77ol1sfvYJzsw3nTE+Y2GryfDxBaR+AqpAkEHQ==
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 boolbase@^1.0.0:
   version "1.0.0"
@@ -5829,6 +5960,7 @@ bson@^6.10.4:
   integrity sha512-WIsKqkSC0ABoBJuT1LEX+2HEvNmNKKgnTAyd0fL8qzK4SH2i9NXg+t08YtdZp/V9IZ33cxe3iV4yM0qg8lMQng==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"
@@ -5844,6 +5976,8 @@ buffer-alloc@^1.2.0:
     buffer-fill "^1.0.0"
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 buffer-crc32@~0.2.3:
   version "0.2.13"
   resolved "https://registry.npmjs.org/buffer-crc32/-/buffer-crc32-0.2.13.tgz"
@@ -5872,6 +6006,7 @@ buffer-from@^1.0.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 buffer@^5.2.1:
   version "5.7.1"
@@ -5882,6 +6017,8 @@ buffer@^5.2.1:
     ieee754 "^1.1.13"
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 buffer@4.9.2:
   version "4.9.2"
   resolved "https://registry.npmjs.org/buffer/-/buffer-4.9.2.tgz"
@@ -5891,6 +6028,7 @@ buffer@4.9.2:
     ieee754 "^1.1.4"
     isarray "^1.0.0"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5914,6 +6052,8 @@ cacheable-request@^2.1.1:
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 bytes@^3.1.2, bytes@3.1.2:
   version "3.1.2"
   resolved "https://registry.npmjs.org/bytes/-/bytes-3.1.2.tgz"
@@ -5983,6 +6123,7 @@ caniuse-lite@^1.0.30001579, caniuse-lite@^1.0.30001702, caniuse-lite@^1.0.300017
   integrity sha512-QGUGitqsc8ARjLdgAfxETDhRbJ0REsP6O3I96TAth/mVjh2cYzN2u+3AzPP3aVSm2FehEItaJw1xd+IGBXWeSw==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 chalk@^4.0.0:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.1.2.tgz#aac4e2b7734a740867aeb16bf02aad556a1e7a01"
@@ -5997,6 +6138,8 @@ caw@^2.0.0, caw@^2.0.1:
     tunnel-agent "^0.6.0"
     url-to-options "^1.0.1"
 
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 chalk@^4.0.0:
   version "4.1.2"
   resolved "https://registry.npmjs.org/chalk/-/chalk-4.1.2.tgz"
@@ -6006,6 +6149,7 @@ chalk@^4.0.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -6025,6 +6169,16 @@ chalk@^4.1.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
+=======
+chalk@^4.1.0:
+  version "4.1.2"
+  resolved "https://registry.npmjs.org/chalk/-/chalk-4.1.2.tgz"
+  integrity sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==
+  dependencies:
+    ansi-styles "^4.1.0"
+    supports-color "^7.1.0"
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 chalk@^4.1.2:
   version "4.1.2"
   resolved "https://registry.npmjs.org/chalk/-/chalk-4.1.2.tgz"
@@ -6191,6 +6345,7 @@ cliui@^8.0.1:
 
 clsx@^2.0.0, clsx@^2.1.1:
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 clone-response@1.0.2:
@@ -6200,6 +6355,8 @@ clsx@^1.2.1:
   resolved "https://registry.npmjs.org/clsx/-/clsx-1.2.1.tgz"
   integrity sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   version "2.1.1"
   resolved "https://registry.npmjs.org/clsx/-/clsx-2.1.1.tgz"
   integrity sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==
@@ -6253,18 +6410,25 @@ color@^4.2.3:
     color-convert "^2.0.1"
     color-string "^1.9.0"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 colors@^1.4.0:
   version "1.4.0"
   resolved "https://registry.npmjs.org/colors/-/colors-1.4.0.tgz"
   integrity sha512-a+UqTh4kgZg/SlGvfbzDHpgRu7AAQOmmqRHJnxhRZICKFUT91brVhNNt58CMWU9PsBbv3PDCZUHbVxuDiH2mtA==
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -6291,6 +6455,7 @@ commander@^2.20.0:
   integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 commander@^2.8.1:
@@ -6301,6 +6466,8 @@ commander@^2.8.1:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 commander@^4.0.0:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/commander/-/commander-4.1.1.tgz#9fd602bd936294e9e9ef46a3f4d6964044b18068"
@@ -6318,31 +6485,33 @@ commander@^7.2.0:
   integrity sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 commander@^9.4.1:
   version "9.5.0"
   resolved "https://registry.npmjs.org/commander/-/commander-9.5.0.tgz"
   integrity sha512-KRs7WVDKg86PWiuAqhDrAQnTXZKraVcCc6vFdL14qrZ/DcWwuRo7VoiYXalXO7S5GKpqYiVEwCbgFDfxNHKJBQ==
-
-commander@2.15.1:
-  version "2.15.1"
-  resolved "https://registry.npmjs.org/commander/-/commander-2.15.1.tgz"
-  integrity sha512-VlfT9F3V0v+jr4yxPc5gg9s62/fIVWsd2Bk2iD435um1NlGMYdVCq+MjcXnhYq2icNOizHr1kK+5TI6H0Hy0ag==
 
 compare-versions@^6.1.0:
   version "6.1.1"
   resolved "https://registry.npmjs.org/compare-versions/-/compare-versions-6.1.1.tgz"
   integrity sha512-4hm4VPpIecmlg59CHXnRDnqGplJFrbLG4aFEl5vl6cK1u76ws3LLvX7ikFnTDl5vo39sjWD6AaDPYodJp/NNHg==
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
   integrity sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -6360,6 +6529,8 @@ config-chain@^1.1.11:
     proto-list "~1.2.1"
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 configstore@^7.0.0:
   version "7.0.0"
   resolved "https://registry.npmjs.org/configstore/-/configstore-7.0.0.tgz"
@@ -6371,6 +6542,9 @@ configstore@^7.0.0:
     xdg-basedir "^5.1.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 content-disposition@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/content-disposition/-/content-disposition-1.0.0.tgz"
@@ -6631,6 +6805,7 @@ csstype@^3.0.2:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 culvert@^0.1.2:
@@ -6653,6 +6828,8 @@ cwebp-bin@^8.0.0:
   integrity sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 "d3-array@2 - 3":
   version "3.2.4"
   resolved "https://registry.npmjs.org/d3-array/-/d3-array-3.2.4.tgz"
@@ -6767,6 +6944,7 @@ date-fns@^4.1.0:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 debug@4, debug@^4.1.0, debug@^4.3.1, debug@^4.3.2, debug@^4.3.4, debug@^4.3.5, debug@^4.4.0, debug@^4.4.1:
   version "4.4.1"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.4.1.tgz#e5a8bc6cbc4c6cd3e64308b0693a3d4fa550189b"
@@ -6799,6 +6977,8 @@ debug@^3.2.6:
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 debug@^3.2.7:
   version "3.2.7"
   resolved "https://registry.npmjs.org/debug/-/debug-3.2.7.tgz"
@@ -6806,6 +6986,7 @@ debug@^3.2.7:
   dependencies:
     ms "^2.1.1"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -6821,6 +7002,9 @@ debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, debug@^4.3.2, debug@^4.3.4, debug@^4.4
 =======
 debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, debug@^4.3.2, debug@^4.3.4, debug@^4.3.5, debug@^4.4.0, debug@^4.4.1, debug@4:
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, debug@^4.3.2, debug@^4.3.4, debug@^4.3.5, debug@^4.4.0, debug@^4.4.1, debug@4:
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   version "4.4.1"
   resolved "https://registry.npmjs.org/debug/-/debug-4.4.1.tgz"
   integrity sha512-KcKCqiftBJcZr++7ykoDIEwSa3XWowTfNPo92BYxjXiyYEVrUQh2aLyhxBCwww+heortUFxEJYcRzosstTEBYQ==
@@ -6828,8 +7012,18 @@ debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, debug@^4.3.2, debug@^4.3.4, debug@^4.3
     ms "^2.1.3"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 decimal.js@^10.4.2:
 =======
+=======
+debug@4.3.1:
+  version "4.3.1"
+  resolved "https://registry.npmjs.org/debug/-/debug-4.3.1.tgz"
+  integrity sha512-doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ==
+  dependencies:
+    ms "2.1.2"
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 decimal.js@^10.4.3, decimal.js@^10.5.0:
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   version "10.6.0"
@@ -6902,6 +7096,7 @@ delayed-stream@~1.0.0:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 depd@2.0.0, depd@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/depd/-/depd-2.0.0.tgz#b696163cc757560d09cf22cc8fad1571b79e76df"
@@ -6911,16 +7106,21 @@ detect-libc@^2.0.4:
 =======
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 depd@^2.0.0, depd@2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/depd/-/depd-2.0.0.tgz"
   integrity sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 dequal@^2.0.3:
   version "2.0.3"
   resolved "https://registry.npmjs.org/dequal/-/dequal-2.0.3.tgz"
@@ -7068,6 +7268,7 @@ domutils@^3.0.1, domutils@^3.2.1, domutils@^3.2.2:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 dot-prop@^8.0.2:
@@ -7078,6 +7279,8 @@ dot-prop@^8.0.2:
     type-fest "^3.8.0"
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 dot-prop@^9.0.0:
   version "9.0.0"
   resolved "https://registry.npmjs.org/dot-prop/-/dot-prop-9.0.0.tgz"
@@ -7103,6 +7306,7 @@ domexception@^4.0.0:
     webidl-conversions "^7.0.0"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -7142,6 +7346,8 @@ download@^7.1.0:
     pify "^3.0.0"
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 dunder-proto@^1.0.0, dunder-proto@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/dunder-proto/-/dunder-proto-1.0.1.tgz#d7ae667e1dc83482f8b70fd0f6eefc50da30f58a"
@@ -7158,11 +7364,14 @@ duplexer@^0.1.2:
   version "0.1.2"
   resolved "https://registry.npmjs.org/duplexer/-/duplexer-0.1.2.tgz"
   integrity sha512-jtD6YG370ZCIi/9GTaJKQxWTZD045+4R4hTk/x1UyoqadyJ9x9CgSi1RlVDQF8U2sxLLSnFkCaMihqljHIWgMg==
+<<<<<<< HEAD
 
 duplexer3@^0.1.4:
   version "0.1.5"
   resolved "https://registry.npmjs.org/duplexer3/-/duplexer3-0.1.5.tgz"
   integrity sha512-1A8za6ws41LQgv9HrE/66jyC5yuSjQ3L/KOpFtoBilsAK2iA2wuS5rTt1OCzIvtS2V7nVmedsUU+DGRcjBmOYA==
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 duplexify@^4.1.3:
@@ -7192,6 +7401,7 @@ ecdsa-sig-formatter@1.0.11, ecdsa-sig-formatter@^1.0.11:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ee-first@1.1.1:
   version "1.1.1"
 <<<<<<< HEAD
@@ -7206,12 +7416,17 @@ ee-first@1.1.1:
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 ee-first@1.1.1:
   version "1.1.1"
   resolved "https://registry.npmjs.org/ee-first/-/ee-first-1.1.1.tgz"
   integrity sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 electron-to-chromium@^1.5.211:
   version "1.5.214"
   resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.5.214.tgz"
@@ -7229,8 +7444,11 @@ emoji-regex@^9.2.2:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 encodeurl@^2.0.0:
   version "2.0.0"
 <<<<<<< HEAD
@@ -7250,6 +7468,7 @@ encoding-sniffer@^0.2.1:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 end-of-stream@^1.4.1:
 =======
 end-of-stream@^1.1.0, end-of-stream@^1.4.1:
@@ -7257,6 +7476,9 @@ end-of-stream@^1.1.0, end-of-stream@^1.4.1:
 =======
 end-of-stream@^1.0.0, end-of-stream@^1.1.0, end-of-stream@^1.4.1:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+end-of-stream@^1.1.0, end-of-stream@^1.4.1:
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   version "1.4.5"
   resolved "https://registry.yarnpkg.com/end-of-stream/-/end-of-stream-1.4.5.tgz#7344d711dea40e0b74abc2ed49778743ccedb08c"
   integrity sha512-ooEGc6HP26xXq/N+GCGOT0JKCLDGrq2bQUZrQ7gyrJiZANJ/8YDTxTpQBXGMn+WbIQXNVpyWymm7KYVICQnyOg==
@@ -7482,6 +7704,7 @@ escalade@^3.1.1, escalade@^3.2.0:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 escape-html@^1.0.3:
   version "1.0.3"
 <<<<<<< HEAD
@@ -7500,6 +7723,8 @@ escape-string-regexp@^1.0.2:
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 escape-html@^1.0.3:
   version "1.0.3"
   resolved "https://registry.npmjs.org/escape-html/-/escape-html-1.0.3.tgz"
@@ -7824,6 +8049,7 @@ esutils@^2.0.2:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 etag@^1.8.1:
   version "1.8.1"
 <<<<<<< HEAD
@@ -7836,12 +8062,17 @@ etag@^1.8.1:
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 etag@^1.8.1:
   version "1.8.1"
   resolved "https://registry.npmjs.org/etag/-/etag-1.8.1.tgz"
   integrity sha512-aIL5Fx7mawVa300al2BnEE4iNvo1qETxLrPI/o05L7z6go7fCw1J6EQmbK4FmJ2AS7kgVF/KEZWufBfdClMcPg==
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 event-target-shim@^5.0.0:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/event-target-shim/-/event-target-shim-5.0.1.tgz#5d4d3ebdf9583d63a5333ce2deb7480ab2b05789"
@@ -7861,7 +8092,10 @@ events@1.1.1:
   resolved "https://registry.npmjs.org/events/-/events-1.1.1.tgz"
   integrity sha512-kEcvvCBByWXGnZy6JUlgAp2gBIUjfCAV6P6TgT1/aaQKcmuAEC4OZTV1I4EWQLz2gxZw76atuVyvHhTxvi0Flw==
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 eventsource-parser@^3.0.0, eventsource-parser@^3.0.1:
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/eventsource-parser/-/eventsource-parser-3.0.6.tgz#292e165e34cacbc936c3c92719ef326d4aeb4e90"
@@ -7875,7 +8109,10 @@ eventsource@^3.0.2:
     eventsource-parser "^3.0.1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 execa@^5.1.1:
   version "5.1.1"
   resolved "https://registry.npmjs.org/execa/-/execa-5.1.1.tgz"
@@ -8129,6 +8366,7 @@ extract-zip@^2.0.1:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 extrareqp2@^1.0.0:
   version "1.0.0"
@@ -8140,6 +8378,8 @@ extrareqp2@^1.0.0:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 fast-decode-uri-component@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/fast-decode-uri-component/-/fast-decode-uri-component-1.0.1.tgz"
@@ -8156,6 +8396,7 @@ fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   resolved "https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz"
   integrity sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8183,6 +8424,8 @@ fast-equals@^5.0.1:
   integrity sha512-V7/RktU11J3I36Nwq2JnZEM7tNm17eBJz+u25qdxBZeCKiX6BkVSZQjwWIr+IobgnZy+ag73tTZgZi7tr0LrBw==
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 fast-fifo@^1.2.0, fast-fifo@^1.3.2:
   version "1.3.2"
   resolved "https://registry.npmjs.org/fast-fifo/-/fast-fifo-1.3.2.tgz"
@@ -8192,10 +8435,14 @@ fast-fifo@^1.2.0, fast-fifo@^1.3.2:
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 fast-glob@^3.3.2:
 =======
 fast-glob@^3.3.2, fast-glob@^3.3.3:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+fast-glob@^3.3.2:
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   version "3.3.3"
   resolved "https://registry.yarnpkg.com/fast-glob/-/fast-glob-3.3.3.tgz#d06d585ce8dba90a16b0505c543c3ccfb3aeb818"
   integrity sha512-7MptL8U0cqcFdzIzwOTHoilX9x5BrNqye7Z/LuC7kCMRio1EMSyqRK3BEAUD7sXRq4iT4AzTVuZdhgQ2TCvYLg==
@@ -8209,8 +8456,11 @@ fast-glob@^3.3.2, fast-glob@^3.3.3:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 fast-json-stable-stringify@^2.0.0:
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 fast-glob@3.3.1:
   version "3.3.1"
   resolved "https://registry.npmjs.org/fast-glob/-/fast-glob-3.3.1.tgz"
@@ -8221,12 +8471,15 @@ fast-glob@3.3.1:
     glob-parent "^5.1.2"
     merge2 "^1.3.0"
     micromatch "^4.0.4"
+<<<<<<< HEAD
 =======
 fast-json-patch@^3.1.0:
   version "3.1.1"
   resolved "https://registry.npmjs.org/fast-json-patch/-/fast-json-patch-3.1.1.tgz"
   integrity sha512-vf6IHUX2SBcA+5/+4883dsIjpBTqmfBjmYiWK1savxQmFk4JfBMLa7ynTYOs1Rolp/T1betJxHiGD3g1Mn8lUQ==
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 fast-json-stable-stringify@^2.0.0, fast-json-stable-stringify@^2.1.0, fast-json-stable-stringify@2.x:
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -8268,6 +8521,7 @@ fast-levenshtein@^2.0.6:
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 fastq@^1.6.0:
 =======
 =======
@@ -8282,6 +8536,8 @@ fast-png@^6.2.0:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 
 <<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 fast-querystring@^1.0.0:
   version "1.1.2"
   resolved "https://registry.npmjs.org/fast-querystring/-/fast-querystring-1.1.2.tgz"
@@ -8366,6 +8622,7 @@ fd-slicer@~1.1.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 fdir@^6.4.4, fdir@^6.5.0:
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -8377,6 +8634,9 @@ fdir@^6.5.0:
 =======
 fdir@^6.5.0:
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+fdir@^6.4.4, fdir@^6.5.0:
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   version "6.5.0"
   resolved "https://registry.yarnpkg.com/fdir/-/fdir-6.5.0.tgz#ed2ab967a331ade62f18d077dae192684d50d350"
   integrity sha512-tIbYtZbucOs0BRGqPJkshJUYdL+SDH7dVM8gjy+ERp3WAUjLEFJE+02kanyHtwjWOnwrKYBiwAmM0p4kLJAnXg==
@@ -8405,6 +8665,7 @@ file-entry-cache@^8.0.0:
     flat-cache "^3.0.4"
 =======
     flat-cache "^4.0.0"
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -8468,6 +8729,8 @@ filenamify@^2.0.0:
     strip-outer "^1.0.0"
     trim-repeated "^1.0.0"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 fill-range@^7.1.1:
   version "7.1.1"
@@ -8479,8 +8742,11 @@ fill-range@^7.1.1:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 finalhandler@^2.1.0:
   version "2.1.0"
 <<<<<<< HEAD
@@ -8505,10 +8771,13 @@ finalhandler@^2.1.0:
     statuses "^2.0.1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 find-my-way@^9.0.0:
   version "9.3.0"
   resolved "https://registry.npmjs.org/find-my-way/-/find-my-way-9.3.0.tgz"
@@ -8625,16 +8894,22 @@ forwarded-parse@2.1.2:
   integrity sha512-alTFZZQDKMporBH77856pXgzhEzaUVmLCDk+egLgIgHst3Tpndzz8MnKe+GzRJRfvVdn69HhpW7cmXzvtLvJAw==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 forwarded@0.2.0:
   version "0.2.0"
   resolved "https://registry.npmjs.org/forwarded/-/forwarded-0.2.0.tgz"
   integrity sha512-buRG0fpBtRHSTCOASe6hD258tEubFoRLb4ZNA6NxMVHNw2gOcwHo9wyablzMzOA5z9xA9L1KNjk/Nt6MT9aYow==
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 fraction.js@^4.3.7:
   version "4.3.7"
   resolved "https://registry.yarnpkg.com/fraction.js/-/fraction.js-4.3.7.tgz#06ca0085157e42fda7f9e726e79fefc4068840f7"
@@ -8643,11 +8918,14 @@ fraction.js@^4.3.7:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 framer-motion@^12.23.12:
   version "12.23.12"
   resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-12.23.12.tgz#80cf6fd7c111073a0c558e336c85ca36cca80d3d"
   integrity sha512-6e78rdVtnBvlEVgu6eFEAgG9v3wLnYEboM8I5O5EXvfKC8gxGQB8wXJdhkMy10iVcn05jl6CNw7/HTsTCfwcWg==
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 framer-motion@^10.18.0:
   version "10.18.0"
   resolved "https://registry.npmjs.org/framer-motion/-/framer-motion-10.18.0.tgz"
@@ -8674,10 +8952,14 @@ framer-motion@^12.23.12:
     "@emotion/is-prop-valid" "^0.8.2"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 fresh@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/fresh/-/fresh-2.0.0.tgz"
   integrity sha512-Rx/WycZ60HOaqLKAi6cHRKKI7zxWbJ31MhntmtwMoaTeF7XFH9hhBp8vITaMidfljRQ6eYWCKkaTK+ykVJHP2A==
+<<<<<<< HEAD
 
 fresh@^2.0.0:
   version "2.0.0"
@@ -8697,6 +8979,8 @@ fs-constants@^1.0.0:
   resolved "https://registry.npmjs.org/fs-constants/-/fs-constants-1.0.0.tgz"
   integrity sha512-y6OAwoSIf7FyjMIv94u+b5rdheZEjzR63GTyZJm5qh4Bi+2YgwLCcI/fPFZkL5PSixOt6ZNKm+w+Hfp/Bciwow==
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 fs-extra@^11.3.1:
   version "11.3.1"
@@ -8742,6 +9026,7 @@ function-bind@^1.1.2:
   integrity sha512-7XHNxH7qX9xG5mIwxkhumTox/MIRNcOgDrxWsMt2pAr23WHp6MrRlN7FBSFpCpr+oVO0F744iUgR82nJMfG2SA==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 function-timeout@^1.0.1:
   version "1.0.2"
@@ -8749,6 +9034,8 @@ function-timeout@^1.0.1:
   integrity sha512-939eZS4gJ3htTHAldmyyuzlrD58P03fHG49v2JfFXbV6OhvZKRC9j2yAtdHw/zrp2zXHuv05zMIy40F0ge7spA==
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 function.prototype.name@^1.1.6, function.prototype.name@^1.1.8:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/function.prototype.name/-/function.prototype.name-1.1.8.tgz#e68e1df7b259a5c949eeef95cdbde53edffabb78"
@@ -8829,6 +9116,7 @@ get-proto@^1.0.0, get-proto@^1.0.1:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 get-proxy@^2.0.0:
@@ -8859,6 +9147,8 @@ get-stream@^4.0.0:
     pump "^3.0.0"
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 get-stream@^5.1.0:
   version "5.2.0"
   resolved "https://registry.npmjs.org/get-stream/-/get-stream-5.2.0.tgz"
@@ -8873,6 +9163,7 @@ get-stream@^6.0.0:
   resolved "https://registry.npmjs.org/get-stream/-/get-stream-6.0.1.tgz"
   integrity sha512-ts6Wi+2j3jQjqi70w5AlN8DFnkSwC+MqmxEzdEALB2qXZYV3X/b1CTfgPLGJNMeAWxdPfU8FO1ms3NUfaHCPYg==
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -8900,6 +9191,8 @@ get-stream@3.0.0:
   integrity sha512-GlhdIUuVakc8SJ6kK0zAFbiGzRFzNnY4jUuEbV9UROo4Y+0Ny4fjvcZFVTeDA4odpFyOQzaw6hXukJSq/f28sQ==
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 get-symbol-description@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/get-symbol-description/-/get-symbol-description-1.1.0.tgz#7bdd54e0befe8ffc9f3b4e203220d9f1e881b6ee"
@@ -8971,6 +9264,7 @@ glob@^11.0.3:
     package-json-from-dist "^1.0.0"
     path-scurry "^2.0.0"
 
+<<<<<<< HEAD
 glob@^7.1.3:
 =======
 glob@^7.1.3, glob@^7.1.4:
@@ -8993,6 +9287,8 @@ globals@^13.19.0:
   resolved "https://registry.npmjs.org/globals/-/globals-13.24.0.tgz"
   integrity sha512-AhO5QUcj8llrbG09iWhPU2B204J1xnPeL8kQmVorSsy+Sjj1sk8gIyh6cUocGmH4L0UuhAJy+hJMRA4mgA4mFQ==
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 glob@^7.1.4:
   version "7.2.3"
   resolved "https://registry.npmjs.org/glob/-/glob-7.2.3.tgz"
@@ -9003,8 +9299,11 @@ glob@^7.1.4:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 glob@10.3.10:
   version "10.3.10"
   resolved "https://registry.npmjs.org/glob/-/glob-10.3.10.tgz"
@@ -9047,6 +9346,7 @@ globalthis@^1.0.4:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 globby@^14.0.1:
@@ -9062,6 +9362,8 @@ globby@^14.0.1:
     unicorn-magic "^0.3.0"
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 goober@^2.1.16:
   version "2.1.16"
   resolved "https://registry.npmjs.org/goober/-/goober-2.1.16.tgz"
@@ -9124,6 +9426,7 @@ gopd@^1.0.1, gopd@^1.2.0:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 graceful-fs@^4.1.6, graceful-fs@^4.2.0:
 =======
 graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.11, graceful-fs@^4.2.4, graceful-fs@^4.2.9:
@@ -9177,6 +9480,9 @@ graceful-fs@^4.1.10, graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.11
 =======
 graceful-fs@^4.2.9:
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.11, graceful-fs@^4.2.4, graceful-fs@^4.2.9:
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   version "4.2.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.11.tgz#4183e4e8bf08bb6e05bbb2f7d2e0c8f712ca40e3"
   integrity sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==
@@ -9249,6 +9555,7 @@ has-proto@^1.2.0:
     dunder-proto "^1.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 has-symbol-support-x@^1.4.1:
   version "1.4.2"
@@ -9256,6 +9563,8 @@ has-symbol-support-x@^1.4.1:
   integrity sha512-3ToOva++HaW+eCpgqZrCfN51IPB+7bJNVT6CUATzueB5Heb8o6Nam0V3HG5dlDvZU1Gn5QLcbahiKw/XVk5JJw==
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 has-symbols@^1.0.3, has-symbols@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/has-symbols/-/has-symbols-1.1.0.tgz#fc9c6a783a084951d0b971fe1018de813707a338"
@@ -9331,8 +9640,11 @@ http-errors@2.0.0, http-errors@^2.0.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 3f7c15facc9823ab5565fbace7f3bee3dce9111e
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 http-errors@^2.0.0, http-errors@2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/http-errors/-/http-errors-2.0.0.tgz"
@@ -9343,12 +9655,15 @@ http-errors@^2.0.0, http-errors@2.0.0:
     setprototypeof "1.2.0"
     statuses "2.0.1"
     toidentifier "1.0.1"
+<<<<<<< HEAD
 =======
 http-cache-semantics@3.8.1:
   version "3.8.1"
   resolved "https://registry.npmjs.org/http-cache-semantics/-/http-cache-semantics-3.8.1.tgz"
   integrity sha512-5ai2iksyV8ZXmnZhHH4rWPoxxistEexSi5936zIQ1bnNTW5VnA85B6P/VpXiRM017IgRvb2kKo1a//y+0wSp3w==
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 http-link-header@^1.1.1:
   version "1.1.3"
@@ -9417,6 +9732,7 @@ human-signals@^2.1.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 human-signals@^3.0.1:
   version "3.0.1"
@@ -9436,6 +9752,8 @@ iconv-lite@^0.4.4:
     safer-buffer ">= 2.1.2 < 3"
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 iconv-lite@^0.6.3, iconv-lite@0.6.3:
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -9469,6 +9787,7 @@ identity-obj-proxy@^3.0.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   version "1.2.1"
   resolved "https://registry.npmjs.org/ieee754/-/ieee754-1.2.1.tgz"
   integrity sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==
@@ -9477,11 +9796,15 @@ ieee754@^1.1.4, ieee754@1.1.13:
 =======
 ieee754@^1.1.13, ieee754@^1.1.4, ieee754@1.1.13:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+ieee754@^1.1.4, ieee754@1.1.13:
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   version "1.1.13"
   resolved "https://registry.npmjs.org/ieee754/-/ieee754-1.1.13.tgz"
   integrity sha512-4vf7I2LYV/HaWerSo3XmlMkp5eZ83i+/CDluXi/IGTs/O1sejBNhTtnxzmRZfvOUqj7lZjqHkeTvpgSFDlWZTg==
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ieee754@^1.2.1:
@@ -9490,6 +9813,8 @@ ieee754@^1.2.1:
   integrity sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 ignore@^5.2.0:
 =======
 ignore-loader@^0.1.2:
@@ -9511,6 +9836,7 @@ ignore@^7.0.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 ignore@^7.0.3:
@@ -9524,11 +9850,14 @@ image-dimensions@^2.3.0:
   integrity sha512-0SscKWh1jtXJStcsQHRLrE4Sgxd1y+g3E/28hiY1JElNfYX54MLjilwlU1AsfCmr/EdQPET4fewtbzuYNutJsQ==
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 image-ssim@^0.2.0:
   version "0.2.0"
   resolved "https://registry.npmjs.org/image-ssim/-/image-ssim-0.2.0.tgz"
   integrity sha512-W7+sO6/yhxy83L0G7xR8YAc5Z5QFtYEXXRV6EaE8tuYBZJnA3gVgp3q7X7muhLZVodeb9UfvjSbwt9VJwjIYAg==
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -9581,6 +9910,8 @@ imagemin@^9.0.1:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 immediate@~3.0.5:
   version "3.0.6"
   resolved "https://registry.npmjs.org/immediate/-/immediate-3.0.6.tgz"
@@ -9588,17 +9919,23 @@ immediate@~3.0.5:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 immer@^10.0.3:
   version "10.1.3"
   resolved "https://registry.npmjs.org/immer/-/immer-10.1.3.tgz"
   integrity sha512-tmjF/k8QDKydUlm3mZU+tjM6zeq9/fFpPqH9SzWmBnVVKsPBg/V66qsMwb3/Bo90cgUN+ghdVBess+hPsxUyRw==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import-fresh@^3.2.1, import-fresh@^3.3.1:
 =======
 import-fresh@^3.2.1:
@@ -9630,6 +9967,7 @@ import-in-the-middle@^1.14.2, import-in-the-middle@^1.8.1:
     module-details-from-path "^1.0.3"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import-lazy@^3.1.0:
   version "3.1.0"
@@ -9637,6 +9975,8 @@ import-lazy@^3.1.0:
   integrity sha512-8/gvXvX2JMn0F+CDlSC4l6kOmVaLOO3XLkksI7CI3Ud95KDYJuYur2b9P/PUt/i/pDAMd/DulQsNbbbmRRsDIQ==
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import-local@^3.2.0:
 =======
 import-local@^3.0.2:
@@ -9666,6 +10006,7 @@ inflight@^1.0.4:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 inherits@2, inherits@2.0.4, inherits@^2.0.3:
 =======
 inherits@^2.0.3, inherits@~2.0.3, inherits@2, inherits@2.0.4:
@@ -9679,6 +10020,9 @@ inherits@2:
 =======
 inherits@^2.0.3, inherits@~2.0.3, inherits@2, inherits@2.0.4:
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+inherits@^2.0.3, inherits@~2.0.3, inherits@2, inherits@2.0.4:
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.4.tgz#0fa2c64f932917c3433a0ded55363aae37416b7c"
   integrity sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
@@ -9690,6 +10034,7 @@ inherits@2.0.3:
   integrity sha512-x00IRNXNy63jwGkJmzPigoySHbaqpNuzKbBOmzK+g2OdZpQ9w+sxCN+VSB3ja7IAge2OP2qpfxTjeNcyjmW1uw==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ini@^1.3.4, ini@^1.3.5:
   version "1.3.8"
@@ -9699,6 +10044,8 @@ ini@^1.3.4, ini@^1.3.5:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 internal-slot@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/internal-slot/-/internal-slot-1.1.0.tgz#1eac91762947d2f7056bc838d93e13b2e9604961"
@@ -9734,6 +10081,7 @@ intl-messageformat@^10.5.3:
     tslib "^2.8.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 into-stream@^3.1.0:
   version "3.1.0"
@@ -9744,6 +10092,8 @@ into-stream@^3.1.0:
     p-is-promise "^1.1.0"
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 invariant@^2.2.4:
   version "2.2.4"
   resolved "https://registry.npmjs.org/invariant/-/invariant-2.2.4.tgz"
@@ -9767,13 +10117,19 @@ ipaddr.js@^2.1.0:
   integrity sha512-Ag3wB2o37wslZS19hZqorUnrnzSkpOVy+IiiDEiTqNubEYpYuHWIf6K4psgN2ZWKExS4xhVCrRVfb/wfW8fWJA==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 ipaddr.js@1.9.1:
   version "1.9.1"
   resolved "https://registry.npmjs.org/ipaddr.js/-/ipaddr.js-1.9.1.tgz"
   integrity sha512-0KI/607xoxSToH7GjN1FfSbLoU0+btTicjsQSWQlh/hZykN8KpmMf7uYwPW3R+akZ6R/w18ZlXSHBYXiYUPO3g==
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 is-arguments@^1.0.4:
   version "1.2.0"
   resolved "https://registry.npmjs.org/is-arguments/-/is-arguments-1.2.0.tgz"
@@ -9856,6 +10212,7 @@ is-core-module@^2.13.0, is-core-module@^2.16.0, is-core-module@^2.16.1:
     hasown "^2.0.2"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 is-cwebp-readable@^3.0.0:
   version "3.0.0"
@@ -9865,6 +10222,8 @@ is-cwebp-readable@^3.0.0:
     file-type "^10.5.0"
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 is-data-view@^1.0.1, is-data-view@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/is-data-view/-/is-data-view-1.0.2.tgz#bae0a41b9688986c2188dda6657e56b8f9e63b8e"
@@ -9952,6 +10311,7 @@ is-glob@^4.0.0, is-glob@^4.0.1, is-glob@^4.0.3, is-glob@~4.0.1:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 is-ip@^3.1.0:
   version "3.1.0"
   resolved "https://registry.npmjs.org/is-ip/-/is-ip-3.1.0.tgz"
@@ -9988,6 +10348,8 @@ is-jpg@^3.0.0:
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 is-map@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/is-map/-/is-map-2.0.3.tgz#ede96b7fe1e270b3c4465e3a465658764926d62e"
@@ -10011,6 +10373,7 @@ is-number@^7.0.0:
   resolved "https://registry.yarnpkg.com/is-number/-/is-number-7.0.0.tgz#7535345b896734d5f80c4d06c50955527a14f12b"
   integrity sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 is-path-inside@^3.0.3:
@@ -10040,6 +10403,8 @@ is-png@^3.0.1:
   integrity sha512-8TqC8+bdsm3YkpI2aECCDycFDl1hTB0HMVRnP3xRRa3Tqx2oVE7sBi1G6CuO9IqEyWSzbBZr1mGqdb3it9h/pg==
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 is-potential-custom-element-name@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/is-potential-custom-element-name/-/is-potential-custom-element-name-1.0.1.tgz"
@@ -10092,6 +10457,11 @@ is-typed-array@^1.1.13, is-typed-array@^1.1.14, is-typed-array@^1.1.15:
   dependencies:
     which-typed-array "^1.1.16"
 
+is-url@^1.2.4:
+  version "1.2.4"
+  resolved "https://registry.npmjs.org/is-url/-/is-url-1.2.4.tgz"
+  integrity sha512-ITvGim8FhRiYe4IQ5uHSkj7pVaPDrCTkNd3yq3cV7iZAcJdHTUMPMEHcqSOy9xZ9qFenQCvi+2wjH9a1nXqHww==
+
 is-weakmap@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/is-weakmap/-/is-weakmap-2.0.2.tgz#bf72615d649dfe5f699079c54b83e47d1ae19cfd"
@@ -10123,6 +10493,9 @@ is-wsl@^2.2.0:
     is-docker "^2.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 is2@^2.0.6:
   version "2.0.9"
   resolved "https://registry.npmjs.org/is2/-/is2-2.0.9.tgz"
@@ -10131,6 +10504,7 @@ is2@^2.0.6:
     deep-is "^0.1.3"
     ip-regex "^4.1.0"
     is-url "^1.2.4"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -10143,6 +10517,10 @@ isarray@^1.0.0, isarray@~1.0.0:
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 isarray@^1.0.0, isarray@~1.0.0:
+=======
+
+isarray@^1.0.0, isarray@~1.0.0:
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   version "1.0.0"
   resolved "https://registry.npmjs.org/isarray/-/isarray-1.0.0.tgz"
   integrity sha512-VLghIWNM6ELQzo7zwmcg0NmTVyWKYjvIeM83yjp0wRDTmUnrM678fQbcKBo6n2CJEF0szoG//ytg+TKla89ALQ==
@@ -10219,6 +10597,7 @@ istanbul-reports@^3.1.3:
     istanbul-lib-report "^3.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 isurl@^1.0.0-alpha5:
@@ -10230,6 +10609,8 @@ isurl@^1.0.0-alpha5:
     is-object "^1.0.1"
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 iterator.prototype@^1.1.4:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/iterator.prototype/-/iterator.prototype-1.1.5.tgz#12c959a29de32de0aa3bbbb801f4d777066dae39"
@@ -10686,6 +11067,7 @@ jpeg-js@^0.4.1, jpeg-js@^0.4.4:
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 js-git@^0.7.8:
   version "0.7.8"
@@ -10700,6 +11082,8 @@ js-git@^0.7.8:
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 js-library-detector@^6.7.0:
   version "6.7.0"
   resolved "https://registry.npmjs.org/js-library-detector/-/js-library-detector-6.7.0.tgz"
@@ -10785,6 +11169,7 @@ json-bigint@^1.0.0:
     bignumber.js "^9.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 json-buffer@3.0.0:
   version "3.0.0"
@@ -10794,6 +11179,8 @@ json-buffer@3.0.0:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 json-buffer@3.0.1:
   version "3.0.1"
   resolved "https://registry.npmjs.org/json-buffer/-/json-buffer-3.0.1.tgz"
@@ -10863,7 +11250,10 @@ jsonfile@^6.0.1:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 jszip@^3.10.1:
   version "3.10.1"
   resolved "https://registry.npmjs.org/jszip/-/jszip-3.10.1.tgz"
@@ -10874,7 +11264,10 @@ jszip@^3.10.1:
     readable-stream "~2.3.6"
     setimmediate "^1.0.5"
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 jwa@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/jwa/-/jwa-2.0.1.tgz#bf8176d1ad0cd72e0f3f58338595a13e110bc804"
@@ -10954,11 +11347,14 @@ levn@^0.4.1:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 lie@~3.3.0:
   version "3.3.0"
   resolved "https://registry.npmjs.org/lie/-/lie-3.3.0.tgz"
@@ -11131,11 +11527,15 @@ lodash.merge@^4.6.2:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 lodash@^4.17.20:
 =======
 lodash@^4.17.14, lodash@^4.17.20:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+lodash@^4.17.20:
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   version "4.17.21"
   resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
@@ -11169,6 +11569,7 @@ loose-envify@^1.1.0, loose-envify@^1.4.0:
     js-tokens "^3.0.0 || ^4.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 lowercase-keys@^1.0.0:
   version "1.0.1"
@@ -11181,6 +11582,8 @@ lowercase-keys@1.0.0:
   integrity sha512-RPlX0+PHuvxVDZ7xX+EBVAp4RsVxP/TdDSN2mJYdiq1Lc4Hz7EUSjUI7RZrKKlmrIzVhf6Jo2stj7++gVarS0A==
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 lru-cache@^10.2.0:
   version "10.4.3"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-10.4.3.tgz#410fc8a17b70e598013df257c2446b7f3383f119"
@@ -11230,15 +11633,21 @@ luxon@^3.7.1:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 make-error@^1.1.1:
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 lz-string@^1.5.0:
   version "1.5.0"
   resolved "https://registry.npmjs.org/lz-string/-/lz-string-1.5.0.tgz"
   integrity sha512-h5bgJWpxJNswbU7qCrV0tIKQCaS3blPDrqKWx+QxzuzL1zGUzij9XCWLrSLsJPu5t+eWA/ycetzYAO5IOMcWAQ==
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 magic-string@^0.30.18:
   version "0.30.18"
   resolved "https://registry.npmjs.org/magic-string/-/magic-string-0.30.18.tgz"
@@ -11253,6 +11662,7 @@ lucide-react@^0.263.1:
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 make-dir@^1.0.0, make-dir@^1.2.0:
   version "1.3.0"
@@ -11262,6 +11672,8 @@ make-dir@^1.0.0, make-dir@^1.2.0:
     pify "^3.0.0"
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 make-dir@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/make-dir/-/make-dir-4.0.0.tgz"
@@ -11307,8 +11719,11 @@ math-intrinsics@^1.1.0:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 media-typer@^1.1.0:
   version "1.1.0"
 <<<<<<< HEAD
@@ -11320,8 +11735,11 @@ merge-descriptors@^2.0.0:
   resolved "https://registry.npmjs.org/media-typer/-/media-typer-1.1.0.tgz"
   integrity sha512-aisnrDP4GNe06UcKFnV5bfMNPBUw4jsLGaWwWfnH3v02GnBuXX2MCVn5RbrWo0j3pczUilYblq7fQ7Nw2t5XKw==
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 memory-pager@^1.0.2:
   version "1.5.0"
   resolved "https://registry.npmjs.org/memory-pager/-/memory-pager-1.5.0.tgz"
@@ -11420,6 +11838,7 @@ mimic-fn@^2.1.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 mimic-fn@^4.0.0:
   version "4.0.0"
@@ -11432,6 +11851,8 @@ mimic-response@^1.0.0:
   integrity sha512-j5EctnkH7amfV/q5Hgmoal1g2QHFJRraOtmx0JpIqkxhBhI/lJSl1nMpQ45hVarwNETOoWEimndZ4QK0RHxuxQ==
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 min-indent@^1.0.0:
   version "1.0.1"
   resolved "https://registry.npmjs.org/min-indent/-/min-indent-1.0.1.tgz"
@@ -11455,7 +11876,13 @@ minimatch@^10.0.3:
   version "10.0.3"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-10.0.3.tgz#cf7a0314a16c4d9ab73a7730a0e8e3c3502d47aa"
   integrity sha512-IPZ167aShDZZUMdRk66cyQAW3qr0WzbHkPdMYa8bzZhlHhO3jALbKdxcaak7W9FfT2rZNpQuUu4Od7ILEpXSaw==
+<<<<<<< HEAD
 =======
+=======
+  dependencies:
+    "@isaacs/brace-expansion" "^5.0.0"
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 minimatch@^3.0.4, minimatch@^3.1.1, minimatch@^3.1.2:
   version "3.1.2"
   resolved "https://registry.npmjs.org/minimatch/-/minimatch-3.1.2.tgz"
@@ -11575,6 +12002,7 @@ mkdirp@^3.0.1:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 mkdirp@1.0.4:
   version "1.0.4"
@@ -11584,6 +12012,8 @@ mkdirp@1.0.4:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 module-details-from-path@^1.0.3:
   version "1.0.4"
   resolved "https://registry.npmjs.org/module-details-from-path/-/module-details-from-path-1.0.4.tgz"
@@ -11598,10 +12028,14 @@ mongodb-connection-string-url@^3.0.0:
     whatwg-url "^14.1.0 || ^13.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 mongodb@^6.19.0:
 =======
 mongodb@*, mongodb@^6.19.0:
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+mongodb@^6.19.0:
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   version "6.19.0"
   resolved "https://registry.npmjs.org/mongodb/-/mongodb-6.19.0.tgz"
   integrity sha512-H3GtYujOJdeKIMLKBT9PwlDhGrQfplABNF1G904w6r5ZXKWyv77aB0X9B+rhmaAwjtllHzaEkvi9mkGVZxs2Bw==
@@ -11610,6 +12044,7 @@ mongodb@*, mongodb@^6.19.0:
     bson "^6.10.4"
     mongodb-connection-string-url "^3.0.0"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 mozjpeg@^8.0.0:
@@ -11621,10 +12056,13 @@ mozjpeg@^8.0.0:
     bin-wrapper "^4.0.0"
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 mrmime@^1.0.0:
   version "1.0.1"
   resolved "https://registry.npmjs.org/mrmime/-/mrmime-1.0.1.tgz"
   integrity sha512-hzzEagAgDyoU1Q6yg5uI+AorQgdvMCur3FcKf7NhMKWsaYg+RnbTyHRa/9IlLF9rf455MOCtcqqrQQ83pPP7Uw==
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -11642,6 +12080,8 @@ motion-utils@^12.23.6:
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 ms@^2.1.1, ms@^2.1.3:
   version "2.1.3"
@@ -11655,10 +12095,14 @@ ms@^2.1.1, ms@^2.1.3:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 ms@2.1.2:
   version "2.1.2"
   resolved "https://registry.npmjs.org/ms/-/ms-2.1.2.tgz"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -11673,6 +12117,9 @@ mute-stream@~0.0.4:
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 mz@^2.7.0:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/mz/-/mz-2.7.0.tgz#95008057a56cafadc2bc63dde7f9ff6955948e32"
@@ -11700,6 +12147,7 @@ natural-compare@^1.4.0:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 negotiator@^1.0.0:
   version "1.0.0"
 <<<<<<< HEAD
@@ -11724,6 +12172,8 @@ needle@2.4.0:
     "@swc/helpers" "0.5.15"
 =======
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 negotiator@^1.0.0:
   version "1.0.0"
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -11742,6 +12192,7 @@ netmask@^2.0.2:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 next@^14.2.5:
   version "14.2.32"
   resolved "https://registry.npmjs.org/next/-/next-14.2.32.tgz"
@@ -11749,10 +12200,13 @@ next@^14.2.5:
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 next@^15.5.2:
   version "15.5.2"
   resolved "https://registry.npmjs.org/next/-/next-15.5.2.tgz"
   integrity sha512-H8Otr7abj1glFhbGnvUt3gz++0AF1+QoCXEBmd/6aKbfdFwrn0LpA836Ed5+00va/7HQSDD+mOoVhn3tNy3e/Q==
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
   dependencies:
@@ -11761,6 +12215,8 @@ next@^15.5.2:
     busboy "1.6.0"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   dependencies:
     "@next/env" "15.5.2"
     "@swc/helpers" "0.5.15"
@@ -11785,6 +12241,7 @@ next@^15.5.2:
     sharp "^0.34.3"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 node-bin-setup@^1.0.0:
@@ -11799,6 +12256,8 @@ nice-try@^1.0.4:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 node-cron@^4.2.1:
   version "4.2.1"
@@ -11861,6 +12320,7 @@ normalize-range@^0.1.2:
   integrity sha512-bdok/XvKII3nUpklnV6P2hxtMNrCboOjAcyBuQnWEhO665FwrSNRxU+AqpsyvO6LgGYPspN+lu5CLtw4jPRKNA==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 normalize-url@2.0.1:
   version "2.0.1"
@@ -11886,6 +12346,8 @@ npm-run-path@^2.0.0:
   dependencies:
     path-key "^2.0.0"
 
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 npm-run-path@^4.0.1:
   version "4.0.1"
   resolved "https://registry.npmjs.org/npm-run-path/-/npm-run-path-4.0.1.tgz"
@@ -11920,6 +12382,7 @@ nwsapi@^2.2.12, nwsapi@^2.2.16:
   integrity sha512-ujSMe1OWVn55euT1ihwCI1ZcAaAU3nxUiDwfDQldc51ZXaB9m2AyOn6/jh1BLe2t/G8xd6uKG1UBF2aZJeg2SQ==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 object-assign@^4, object-assign@^4.0.1, object-assign@^4.1.1:
 =======
@@ -11933,6 +12396,9 @@ nwsapi@^2.2.2:
 
 object-assign@^4.0.1, object-assign@^4.1.1:
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+object-assign@^4, object-assign@^4.0.1, object-assign@^4.1.1:
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
   integrity sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==
@@ -12024,8 +12490,11 @@ on-exit-leak-free@^2.1.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 on-finished@^2.4.1:
   version "2.4.1"
   resolved "https://registry.npmjs.org/on-finished/-/on-finished-2.4.1.tgz"
@@ -12058,6 +12527,7 @@ onetime@^5.1.2:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 onetime@^6.0.0:
   version "6.0.0"
@@ -12067,6 +12537,8 @@ onetime@^6.0.0:
     mimic-fn "^4.0.0"
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 open@^8.4.0:
   version "8.4.2"
   resolved "https://registry.npmjs.org/open/-/open-8.4.2.tgz"
@@ -12118,6 +12590,7 @@ own-keys@^1.0.1:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 p-limit@^3.0.2:
 =======
 =======
@@ -12156,6 +12629,8 @@ p-is-promise@^1.1.0:
   integrity sha512-zL7VE4JVS2IFSkR2GQKDSPEVxkoH43/p7oEnwpdCndKYJO0HVeRB7fA8TJwuLOTBREtK0ea8eHaxdwcpob5dmg==
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 p-limit@^2.2.0:
   version "2.3.0"
   resolved "https://registry.npmjs.org/p-limit/-/p-limit-2.3.0.tgz"
@@ -12177,6 +12652,7 @@ p-locate@^5.0.0:
   integrity sha512-LaNjtRWUBY++zB5nE/NwcaoMylSPk+S+ZHNB1TzdbMJMny6dynpAGt7X/tl/QYq3TIeE6nxHppbo2LGymrG5Pw==
   dependencies:
     p-limit "^3.0.2"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -12212,6 +12688,8 @@ p-timeout@^2.0.1:
   integrity sha512-88em58dDVB/KzPEx1X0N3LwFfYZPyDc4B6eF38M1rk9VTZMbxXXgjugz8mmwpS9Ox4BDZ+t6t3QP5+/gazweIA==
   dependencies:
     p-finally "^1.0.0"
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 p-try@^2.0.0:
@@ -12254,6 +12732,7 @@ package-json-from-dist@^1.0.0:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 pako@^0.2.5:
@@ -12269,11 +12748,14 @@ pako@^2.1.0:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 pako@~1.0.2:
   version "1.0.11"
   resolved "https://registry.npmjs.org/pako/-/pako-1.0.11.tgz"
   integrity sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -12283,6 +12765,8 @@ pako@~1.0.2:
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 parent-module@^1.0.0:
   version "1.0.1"
   resolved "https://registry.npmjs.org/parent-module/-/parent-module-1.0.1.tgz"
@@ -12422,6 +12906,7 @@ path@^0.12.7:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 picocolors@^1.0.0, picocolors@^1.1.1:
 =======
 =======
@@ -12431,6 +12916,8 @@ peek-readable@^5.3.1:
   integrity sha512-peBp3qZyuS6cNIJ2akRNG1uo1WJ1d0wTxg/fxMdZ0BqCVhx242bSFHM9eNqflfJVS9SsgkzgT/1UgnsurBOTMg==
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 pend@~1.2.0:
   version "1.2.0"
   resolved "https://registry.npmjs.org/pend/-/pend-1.2.0.tgz"
@@ -12458,6 +12945,7 @@ pg-types@^2.2.0:
     postgres-interval "^1.1.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 picocolors@^1.0.0, picocolors@^1.1.1, picocolors@1.1.1:
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -12471,6 +12959,9 @@ path-type@^4.0.0:
 
 picocolors@^1.0.0, picocolors@^1.1.1:
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+picocolors@^1.0.0, picocolors@^1.1.1, picocolors@1.1.1:
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   version "1.1.1"
   resolved "https://registry.npmjs.org/picocolors/-/picocolors-1.1.1.tgz"
   integrity sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==
@@ -12486,6 +12977,7 @@ picomatch@^4.0.3:
   integrity sha512-5gTmgEY/sqK6gFXLIsQNH19lWb4ebPDLA4SdLP7dsWkIXHWlG66oPuVvXSGFPppYZz8ZDZq0dYYrbHfBCVUb1Q==
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 pidusage@~3.0:
@@ -12504,6 +12996,8 @@ pify@^2.2.0:
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 pify@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
@@ -12552,8 +13046,11 @@ pirates@^4.0.1, pirates@^4.0.4:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 pkce-challenge@^5.0.0:
   version "5.0.0"
 <<<<<<< HEAD
@@ -12565,10 +13062,13 @@ pkce-challenge@^5.0.0:
   integrity sha512-ueGLflrrnvwB3xuo/uGob5pd5FN7l0MsLf0Z87o/UQmRtwjvfylfc9MurIxRAWywCYTgrvpXBcqjV4OfCYGCIQ==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 pkg-dir@^4.2.0:
   version "4.2.0"
   resolved "https://registry.npmjs.org/pkg-dir/-/pkg-dir-4.2.0.tgz"
@@ -12576,6 +13076,7 @@ pkg-dir@^4.2.0:
   dependencies:
     find-up "^4.0.0"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -12661,6 +13162,8 @@ pngquant-bin@^9.0.0:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 possible-typed-array-names@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/possible-typed-array-names/-/possible-typed-array-names-1.1.0.tgz#93e3582bc0e5426586d9d07b79ee40fc841de4ae"
@@ -13102,6 +13605,7 @@ prelude-ls@^1.2.1:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 prettier@^3.0.3:
 =======
@@ -13120,11 +13624,17 @@ prettier@^3.6.2:
 =======
 prettier@^3.0.3:
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+prettier@^3.0.3:
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   version "3.6.2"
   resolved "https://registry.npmjs.org/prettier/-/prettier-3.6.2.tgz"
   integrity sha512-I7AIg5boAr5R0FFtJ6rCfD+LFsWHp81dolrFD8S79U9tb8Az2nGrJncnMSnys+bpQJfRUzqs9hnA81OAA3hCuQ==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 pretty-format@^27.0.2:
   version "27.5.1"
   resolved "https://registry.npmjs.org/pretty-format/-/pretty-format-27.5.1.tgz"
@@ -13148,9 +13658,12 @@ pretty-format@^29.0.0, pretty-format@^29.7.0:
 
 <<<<<<< HEAD
 pretty-format@^29.7.0:
+<<<<<<< HEAD
 =======
 pretty-format@^29.0.0, pretty-format@^29.7.0:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   version "29.7.0"
   resolved "https://registry.npmjs.org/pretty-format/-/pretty-format-29.7.0.tgz"
   integrity sha512-Pdlw/oPxN+aXdmM9R00JVC9WVFoCLTKJvDVLgmJ+qAffBMxsV85l/Lu7sNx4zSzPyoL2euImuEwHhOXdEgNFZQ==
@@ -13203,6 +13716,7 @@ progress@^2.0.3:
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 prompts@^2.4.2:
 =======
 prompts@^2.0.1:
@@ -13217,6 +13731,12 @@ promptly@^2:
   resolved "https://registry.npmjs.org/promptly/-/promptly-2.2.0.tgz"
   integrity sha512-aC9j+BZsRSSzEsXBNBwDnAxujdx19HycZoKgRgzWnS8eOHg1asuf9heuLprfbe739zY3IdUQx+Egv6Jn135WHA==
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+prompts@^2.4.2:
+  version "2.4.2"
+  resolved "https://registry.npmjs.org/prompts/-/prompts-2.4.2.tgz"
+  integrity sha512-NxNv/kLguCA7p3jE8oL2aEBsrJWgAakBpgmgK6lpPWV+WuOmY6r2/zbAVnP+T8bQlA0nzHXSJSJW0Hq7ylaD2Q==
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   dependencies:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
@@ -13232,6 +13752,7 @@ prop-types@^15.8.1:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 proto-list@~1.2.1:
   version "1.2.4"
@@ -13239,6 +13760,8 @@ proto-list@~1.2.1:
   integrity sha512-vtK/94akxsTMhe0/cbfpR+syPuszcuwhqVjJq26CuNDgFGj682oRBXOP5MJpv2r7JtE8MsiepGIqvvOTBwn2vA==
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 proto3-json-serializer@^3.0.0:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/proto3-json-serializer/-/proto3-json-serializer-3.0.2.tgz#945fc4ff1e48329b534f8f2f95683bc1bf1c4a3e"
@@ -13266,8 +13789,11 @@ protobufjs@^7.2.5, protobufjs@^7.4.0, protobufjs@^7.5.3:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 proxy-addr@^2.0.7:
   version "2.0.7"
 <<<<<<< HEAD
@@ -13284,12 +13810,16 @@ proxy-addr@^2.0.7:
     ipaddr.js "1.9.1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 proxy-agent@^6.4.0, proxy-agent@^6.5.0:
 =======
 proxy-agent@^6.5.0:
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+proxy-agent@^6.4.0, proxy-agent@^6.5.0:
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   version "6.5.0"
   resolved "https://registry.npmjs.org/proxy-agent/-/proxy-agent-6.5.0.tgz"
   integrity sha512-TmatMXdr2KlRiA2CyDu8GqR8EjahTG3aY3nXjdzFyoZbmB8hrBsTyMezhULIXKnC0jpfjlmiZ3+EaCzoInSu/A==
@@ -13305,6 +13835,7 @@ proxy-agent@^6.5.0:
     socks-proxy-agent "^8.0.5"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 proxy-agent@~6.4.0:
@@ -13324,6 +13855,8 @@ proxy-agent@~6.4.0:
     socks-proxy-agent "^8.0.2"
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 proxy-from-env@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/proxy-from-env/-/proxy-from-env-1.1.0.tgz#e102f16ca355424865755d2c9e8ea4f24d58c3e2"
@@ -13351,6 +13884,7 @@ punycode@^2.1.0, punycode@^2.1.1, punycode@^2.3.1:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 qs@^6.14.0:
   version "6.14.0"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.14.0.tgz#c63fa40680d2c5c941412a0e899c89af60c0a930"
@@ -13362,6 +13896,8 @@ qs@^6.14.0:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 punycode@1.3.2:
   version "1.3.2"
   resolved "https://registry.npmjs.org/punycode/-/punycode-1.3.2.tgz"
@@ -13386,14 +13922,18 @@ pure-rand@^7.0.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 qs@^6.14.0:
   version "6.14.0"
   resolved "https://registry.npmjs.org/qs/-/qs-6.14.0.tgz"
   integrity sha512-YWWTjgABSKcvs/nWBi9PycY/JiPJqOD4JA6o9Sej2AtvSGarXxKC3OQSk4pAarbdQlKAh5D4FCQkJNkW+GAn3w==
   dependencies:
     side-channel "^1.1.0"
+<<<<<<< HEAD
 =======
 query-string@^5.0.1:
   version "5.1.1"
@@ -13404,6 +13944,8 @@ query-string@^5.0.1:
     object-assign "^4.1.0"
     strict-uri-encode "^1.0.0"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 querystring@0.2.0:
   version "0.2.0"
@@ -13447,6 +13989,9 @@ quick-format-unescaped@^4.0.3:
   integrity sha512-tYC1Q1hgyRuHgloV/YXs2w15unPVh8qfu/qCTfhTYamaw7fyhumKa2yGpdSo87vY32rIclj+4fWYQXUMs9EHvg==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 range-parser@^1.2.1:
   version "1.2.1"
   resolved "https://registry.npmjs.org/range-parser/-/range-parser-1.2.1.tgz"
@@ -13463,8 +14008,11 @@ raw-body@^3.0.0:
     iconv-lite "0.7.0"
     unpipe "1.0.0"
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 react-datepicker@^8.4.0:
   version "8.7.0"
   resolved "https://registry.yarnpkg.com/react-datepicker/-/react-datepicker-8.7.0.tgz#30a70c43dcc7b46c8253e504c1a51cb20c82e782"
@@ -13547,14 +14095,18 @@ react-is@^16.13.1:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 react-is@^17.0.1:
   version "17.0.2"
   resolved "https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
@@ -13562,6 +14114,8 @@ react-is@^17.0.1:
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 react-is@^18.0.0:
   version "18.3.1"
   resolved "https://registry.npmjs.org/react-is/-/react-is-18.3.1.tgz"
@@ -13608,13 +14162,17 @@ react-remove-scroll@^2.6.3:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 react-router-dom@^7.8.2:
   version "7.8.2"
   resolved "https://registry.npmjs.org/react-router-dom/-/react-router-dom-7.8.2.tgz"
   integrity sha512-Z4VM5mKDipal2jQ385H6UBhiiEDlnJPx6jyWsTYoZQdl5TrjxEV2a9yl3Fi60NBJxYzOTGTTHXPi0pdizvTwow==
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 react-router-dom@^6.8.1:
@@ -13633,6 +14191,8 @@ react-router@6.30.1:
   dependencies:
     "@remix-run/router" "1.23.0"
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   dependencies:
     react-router "7.8.2"
 
@@ -13643,7 +14203,10 @@ react-router@7.8.2:
   dependencies:
     cookie "^1.0.1"
     set-cookie-parser "^2.6.0"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 react-style-singleton@^2.2.2, react-style-singleton@^2.2.3:
@@ -13666,6 +14229,7 @@ read-cache@^1.0.0:
   dependencies:
     pify "^2.3.0"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -13716,6 +14280,8 @@ readable-stream@^2.3.5:
     util-deprecate "~1.0.1"
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 readable-stream@^3.1.1:
   version "3.6.2"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-3.6.2.tgz#56a9b36ea965c00c5a93ef31eb111a0f11056967"
@@ -13772,6 +14338,9 @@ redent@^3.0.0:
     strip-indent "^3.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 redux-thunk@^3.1.0:
   version "3.1.0"
   resolved "https://registry.npmjs.org/redux-thunk/-/redux-thunk-3.1.0.tgz"
@@ -13782,11 +14351,14 @@ redux@^5.0.1:
   resolved "https://registry.npmjs.org/redux/-/redux-5.0.1.tgz"
   integrity sha512-M9/ELqF6fy8FwmkpnF0S3YKOqMyoWJ4+CS5Efg2ct3oY9daQvd/Pc71FpGZsVsbl3Cpb+IIcjBDUnnyBdQbq4w==
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 reflect.getprototypeof@^1.0.6, reflect.getprototypeof@^1.0.9:
   version "1.0.10"
   resolved "https://registry.yarnpkg.com/reflect.getprototypeof/-/reflect.getprototypeof-1.0.10.tgz#c629219e78a3316d8b604c765ef68996964e7bf9"
@@ -13813,6 +14385,38 @@ regexp.prototype.flags@^1.5.3, regexp.prototype.flags@^1.5.4:
     gopd "^1.2.0"
     set-function-name "^2.0.2"
 
+<<<<<<< HEAD
+=======
+regexpu-core@^6.2.0:
+  version "6.2.0"
+  resolved "https://registry.npmjs.org/regexpu-core/-/regexpu-core-6.2.0.tgz"
+  integrity sha512-H66BPQMrv+V16t8xtmq+UC0CBpiTBA60V8ibS1QVReIp8T1z8hwFxqcGzm9K6lgsN7sB5edVH8a+ze6Fqm4weA==
+  dependencies:
+    regenerate "^1.4.2"
+    regenerate-unicode-properties "^10.2.0"
+    regjsgen "^0.8.0"
+    regjsparser "^0.12.0"
+    unicode-match-property-ecmascript "^2.0.0"
+    unicode-match-property-value-ecmascript "^2.1.0"
+
+regjsgen@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.npmjs.org/regjsgen/-/regjsgen-0.8.0.tgz"
+  integrity sha512-RvwtGe3d7LvWiDQXeQw8p5asZUmfU1G/l6WbUXeHta7Y2PEIvBTwH6E2EfmYUK8pxcxEdEmaomqyp0vZZ7C+3Q==
+
+regjsparser@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.npmjs.org/regjsparser/-/regjsparser-0.12.0.tgz"
+  integrity sha512-cnE+y8bz4NhMjISKbgeVJtqNbtf5QpjZP+Bslo+UqkIt9QPnX9q095eiRRASJG1/tz6dlNr6Z5NsBiWYokp6EQ==
+  dependencies:
+    jsesc "~3.0.2"
+
+requestidlecallback@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.npmjs.org/requestidlecallback/-/requestidlecallback-0.3.0.tgz"
+  integrity sha512-TWHFkT7S9p7IxLC5A1hYmAYQx2Eb9w1skrXmQ+dS1URyvR8tenMLl4lHbqEOUnpEYxNKpkVMXUgknVpBZWXXfQ==
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 require-directory@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/require-directory/-/require-directory-2.1.1.tgz#8c64ad5fd30dab1c976e2344ffe7f792a6a6df42"
@@ -13844,16 +14448,22 @@ requires-port@^1.0.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 reselect@^5.1.0:
   version "5.1.1"
   resolved "https://registry.npmjs.org/reselect/-/reselect-5.1.1.tgz"
   integrity sha512-K/BG6eIky/SBpzfHZv/dd+9JBFiS4SWV7FIujVyJRux6e45+73RaUHXLmIR1f7WOMaQ0U1km6qwklRQxpJJY0w==
+<<<<<<< HEAD
 =======
 reserved-identifiers@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/reserved-identifiers/-/reserved-identifiers-1.0.0.tgz"
   integrity sha512-h0bP2Katmvf3hv4Z3WtDl4+6xt/OglQ2Xa6TnhZ/Rm9/7IH1crXQqMwD4J2ngKBonVv+fB55zfGgNDAmsevLVQ==
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -13878,6 +14488,7 @@ resolve-pkg-maps@^1.0.0:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 resolve@^1.1.7, resolve@^1.22.10, resolve@^1.22.4, resolve@^1.22.8:
 =======
 resolve@^1.1.7, resolve@^1.22.1, resolve@^1.22.10, resolve@^1.22.4, resolve@^1.22.8:
@@ -13893,6 +14504,9 @@ resolve@^1.1.7, resolve@^1.20.0, resolve@^1.22.4, resolve@^1.22.8:
 =======
 resolve@^1.1.7, resolve@^1.22.10, resolve@^1.22.4, resolve@^1.22.8:
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+resolve@^1.1.7, resolve@^1.22.10, resolve@^1.22.4, resolve@^1.22.8:
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   version "1.22.10"
   resolved "https://registry.npmjs.org/resolve/-/resolve-1.22.10.tgz"
   integrity sha512-NPRy+/ncIMeDlTAsuqwKIiferiawhefFJtkNSW0qZJEqMEb+qBt/77B/jGeeek+F0uOeN05CDa6HXbbIgtVX4w==
@@ -13909,6 +14523,7 @@ resolve@^2.0.0-next.5:
     is-core-module "^2.13.0"
     path-parse "^1.0.7"
     supports-preserve-symlinks-flag "^1.0.0"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13921,6 +14536,8 @@ responselike@1.0.2:
   integrity sha512-/Fpe5guzJk1gPqdJLJR5u7eG/gNY4nImjbRDaVWVMRhne55TCmj2i9Q+54PBRfatRC8v/rIiv9BN0pMd9OV5EQ==
   dependencies:
     lowercase-keys "^1.0.0"
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 ret@~0.5.0:
@@ -13971,6 +14588,7 @@ rfdc@^1.2.0, rfdc@^1.3.1:
   integrity sha512-q1b3N5QkRUWUl7iyylaaj3kOpIT0N2i9MqIEQXP73GVsN9cw3fdx8X63cEmWhJGi2PPCF23Ijp7ktmd39rawIA==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 rimraf@^2.5.4:
   version "2.7.1"
@@ -13980,6 +14598,8 @@ rimraf@^2.5.4:
     glob "^7.1.3"
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 robots-parser@^3.0.1:
   version "3.0.1"
   resolved "https://registry.npmjs.org/robots-parser/-/robots-parser-3.0.1.tgz"
@@ -14050,6 +14670,7 @@ run-parallel@^1.1.9:
     queue-microtask "^1.2.2"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 run-series@^1.1.8:
   version "1.1.9"
@@ -14057,6 +14678,8 @@ run-series@^1.1.8:
   integrity sha512-Arc4hUN896vjkqCYrUXquBFtRZdv1PfLbTYP71efP6butxyQ0kWpiNJyAgsxscmQg1cqvHY32/UCBzXedTpU2g==
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 safe-array-concat@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/safe-array-concat/-/safe-array-concat-1.1.3.tgz#c9e54ec4f603b0bbb8e7e5007a5ee7aecd1538c3"
@@ -14079,15 +14702,21 @@ safe-buffer@^5.0.1, safe-buffer@~5.2.0, safe-buffer@5.2.1:
   integrity sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.2"
   resolved "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.1.2.tgz"
   integrity sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 safe-push-apply@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/safe-push-apply/-/safe-push-apply-1.0.0.tgz#01850e981c1602d398c85081f360e4e6d03d27f5"
@@ -14135,6 +14764,7 @@ safe-stable-stringify@^2.3.1:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 scheduler@^0.26.0:
   version "0.26.0"
   resolved "https://registry.npmjs.org/scheduler/-/scheduler-0.26.0.tgz"
@@ -14149,6 +14779,8 @@ sax@^1.2.4:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 sax@>=0.6.0, sax@1.2.1:
   version "1.2.1"
   resolved "https://registry.npmjs.org/sax/-/sax-1.2.1.tgz"
@@ -14184,6 +14816,7 @@ selenium-webdriver@~4.22.0:
     jszip "^3.10.1"
     tmp "^0.2.3"
     ws ">=8.16.0"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 semver@^6.3.0:
@@ -14191,6 +14824,8 @@ semver@^6.3.0:
   resolved "https://registry.npmjs.org/semver/-/semver-6.3.1.tgz"
   integrity sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 semver@^6.3.1:
   version "6.3.1"
@@ -14246,6 +14881,7 @@ semver@^7.7.2:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 send@^1.1.0, send@^1.2.0:
@@ -14259,6 +14895,12 @@ semver@~7.5.0:
   resolved "https://registry.npmjs.org/semver/-/semver-7.5.4.tgz"
   integrity sha512-1bCSESV6Pv+i21Hvpxp3Dx+pSD8lIPt8uVjRrxAUt/nbswYc+tK6Y2btiULjd4+fnq15PX+nqQDC7Oft7WkwcA==
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+send@^1.1.0, send@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.npmjs.org/send/-/send-1.2.0.tgz"
+  integrity sha512-uaW0WwXKpL9blXE2o0bRhoL2EGXIrZxQ2ZQ4mgcfoBxdFmQold+qWsD2jLrfZ0trjKL6vOw0j//eAwcALFjKSw==
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   dependencies:
     debug "^4.3.5"
     encodeurl "^2.0.0"
@@ -14339,6 +14981,7 @@ set-proto@^1.0.0:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 setprototypeof@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/setprototypeof/-/setprototypeof-1.2.0.tgz#66c9a24a73f9fc28cbe66b09fed3d33dcaf1b424"
@@ -14348,6 +14991,8 @@ setprototypeof@1.2.0:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 setimmediate@^1.0.5:
   version "1.0.5"
   resolved "https://registry.npmjs.org/setimmediate/-/setimmediate-1.0.5.tgz"
@@ -14355,15 +15000,21 @@ setimmediate@^1.0.5:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 setprototypeof@1.2.0:
   version "1.2.0"
   resolved "https://registry.npmjs.org/setprototypeof/-/setprototypeof-1.2.0.tgz"
   integrity sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 shallowequal@^1.1.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/shallowequal/-/shallowequal-1.1.0.tgz"
@@ -14402,6 +15053,7 @@ sharp@^0.34.3:
     "@img/sharp-win32-ia32" "0.34.3"
     "@img/sharp-win32-x64" "0.34.3"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 shebang-command@^1.2.0:
@@ -14411,6 +15063,8 @@ shebang-command@^1.2.0:
   dependencies:
     shebang-regex "^1.0.0"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -14430,6 +15084,7 @@ shebang-regex@^3.0.0:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 shimmer@^1.2.1:
 =======
@@ -14438,6 +15093,9 @@ shimmer@^1.2.0, shimmer@^1.2.1:
 =======
 shimmer@^1.2.1:
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+shimmer@^1.2.1:
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   version "1.2.1"
   resolved "https://registry.npmjs.org/shimmer/-/shimmer-1.2.1.tgz"
   integrity sha512-sQTKC1Re/rM6XyFM6fIAGHRPVGvyXfgzIDvzoq608vM+jeyVD0Tu1E6Np0Kc2zAIFWIj963V2800iF/9LPieQw==
@@ -14484,6 +15142,7 @@ side-channel@^1.1.0:
     side-channel-list "^1.0.0"
     side-channel-map "^1.0.1"
     side-channel-weakmap "^1.0.2"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -14493,6 +15152,8 @@ signal-exit@^3.0.0:
   version "3.0.7"
   resolved "https://registry.npmjs.org/signal-exit/-/signal-exit-3.0.7.tgz"
   integrity sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 signal-exit@^3.0.3:
 =======
@@ -14541,15 +15202,21 @@ sirv@^1.0.7:
     totalist "^1.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 sisteransi@^1.0.5:
   version "1.0.5"
   resolved "https://registry.npmjs.org/sisteransi/-/sisteransi-1.0.5.tgz"
   integrity sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 slash@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/slash/-/slash-3.0.0.tgz"
@@ -14591,6 +15258,7 @@ sonner@^2.0.7:
   integrity sha512-W6ZN4p58k8aDKA4XPcx2hpIQXBRAgyiWVkYhT7CvK6D3iAu7xjvVyhQHg2/iaKJZ1XVJ4r7XuwGL+WGEK37i9w==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 sort-keys-length@^1.0.0:
@@ -14617,6 +15285,8 @@ sort-keys@^2.0.0:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 source-map-js@^1.0.2, source-map-js@^1.2.1:
   version "1.2.1"
   resolved "https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.1.tgz"
@@ -14649,6 +15319,9 @@ source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.1:
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 sparse-bitfield@^3.0.3:
   version "3.0.3"
   resolved "https://registry.npmjs.org/sparse-bitfield/-/sparse-bitfield-3.0.3.tgz"
@@ -14671,19 +15344,25 @@ split2@^4.0.0:
   integrity sha512-UcjcJOWknrNkF6PLX83qcHM6KHgVKNkV62Y8a5uYDVv9ydGQVwAHMKqHdJje1VTWpljG0WYpCDhrCdAOYH4TWg==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 sprintf-js@~1.0.2:
   version "1.0.3"
   resolved "https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.0.3.tgz"
   integrity sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 stable-hash@^0.0.5:
   version "0.0.5"
   resolved "https://registry.npmjs.org/stable-hash/-/stable-hash-0.0.5.tgz"
@@ -14709,7 +15388,10 @@ stack-utils@^2.0.3:
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 statuses@^2.0.1:
   version "2.0.2"
   resolved "https://registry.npmjs.org/statuses/-/statuses-2.0.2.tgz"
@@ -14720,7 +15402,10 @@ statuses@2.0.1:
   resolved "https://registry.npmjs.org/statuses/-/statuses-2.0.1.tgz"
   integrity sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 stop-iteration-iterator@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/stop-iteration-iterator/-/stop-iteration-iterator-1.1.0.tgz#f481ff70a548f6124d0312c3aa14cbfa7aa542ad"
@@ -14745,6 +15430,7 @@ stream-shift@^1.0.2:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 streamsearch@^1.1.0:
   version "1.1.0"
@@ -14755,6 +15441,8 @@ streamsearch@^1.1.0:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 streamx@^2.15.0:
   version "2.22.1"
   resolved "https://registry.npmjs.org/streamx/-/streamx-2.22.1.tgz"
@@ -14766,6 +15454,7 @@ streamx@^2.15.0:
     bare-events "^2.2.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 strict-uri-encode@^1.0.0:
   version "1.1.0"
@@ -14773,6 +15462,8 @@ strict-uri-encode@^1.0.0:
   integrity sha512-R3f198pcvnB+5IpnBlRkphuE9n46WyVl8I39W/ZUTZLz4nqSP/oLYUrcnJrw462Ds8he4YKMov2efsTIw1BDGQ==
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 string_decoder@^1.1.1:
   version "1.3.0"
   resolved "https://registry.npmjs.org/string_decoder/-/string_decoder-1.3.0.tgz"
@@ -14952,6 +15643,7 @@ strip-json-comments@^3.1.1:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 stubs@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/stubs/-/stubs-3.0.0.tgz#e8d2ba1fa9c90570303c030b6900f7d5f89abe5b"
@@ -14984,6 +15676,8 @@ strtok3@^9.0.1:
     peek-readable "^5.3.1"
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 stubborn-fs@^1.2.5:
   version "1.2.5"
   resolved "https://registry.npmjs.org/stubborn-fs/-/stubborn-fs-1.2.5.tgz"
@@ -14996,6 +15690,7 @@ stubs@^3.0.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 styled-jsx@5.1.1:
   version "5.1.1"
   resolved "https://registry.npmjs.org/styled-jsx/-/styled-jsx-5.1.1.tgz"
@@ -15003,16 +15698,21 @@ styled-jsx@5.1.1:
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 styled-jsx@5.1.6:
   version "5.1.6"
   resolved "https://registry.npmjs.org/styled-jsx/-/styled-jsx-5.1.6.tgz"
   integrity sha512-qSVyDTeMotdvQYoHWLNGwRFJHC+i+ZvdBRYosOFgC+Wg1vx4frN2/RG/NA7SYqqvKNLf39P2LSRA2pu6n0XYZA==
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   dependencies:
     client-only "0.0.1"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -15186,9 +15886,12 @@ tcp-port-used@^1.0.2:
     is2 "^2.0.6"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 teeny-request@^10.0.0:
   version "10.1.0"
   resolved "https://registry.yarnpkg.com/teeny-request/-/teeny-request-10.1.0.tgz#02a4e246bd97e508c75342a5d83b64189ed851df"
@@ -15226,6 +15929,7 @@ text-decoder@^1.1.0:
     b4a "^1.6.4"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 text-segmentation@^1.0.3:
@@ -15238,6 +15942,8 @@ text-segmentation@^1.0.3:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 thenify-all@^1.0.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/thenify-all/-/thenify-all-1.6.0.tgz#1a1918d402d8fc3f98fbf234db0bcc8cc10e9726"
@@ -15289,6 +15995,7 @@ thread-stream@^3.0.0:
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   dependencies:
 <<<<<<< HEAD
+<<<<<<< HEAD
     real-require "^0.2.0"
 
 <<<<<<< HEAD
@@ -15326,6 +16033,17 @@ tinyglobby@^0.2.13, tinyglobby@^0.2.14:
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     fdir "^6.5.0"
     picomatch "^4.0.3"
+=======
+    real-require "^0.2.0"
+
+tinyglobby@^0.2.13, tinyglobby@^0.2.14:
+  version "0.2.14"
+  resolved "https://registry.npmjs.org/tinyglobby/-/tinyglobby-0.2.14.tgz"
+  integrity sha512-tX5e7OM1HnYr2+a2C/4V0htOcSQcoSTH9KgJnVvNm5zm/cyEWKJ7j7YutsH9CxMdtOkkLFy2AHrMci9IM8IPZQ==
+  dependencies:
+    fdir "^6.4.4"
+    picomatch "^4.0.2"
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 tldts-core@^6.1.86:
   version "6.1.86"
@@ -15355,10 +16073,13 @@ tmp@^0.2.3:
   version "0.2.5"
   resolved "https://registry.npmjs.org/tmp/-/tmp-0.2.5.tgz"
   integrity sha512-voyz6MApa1rQGUxT3E+BK7/ROe8itEx7vD8/HEvt4xwXucvQ5G5oeEiHkmHZJuBO21RpOf+YYm9MOivj709jow==
+<<<<<<< HEAD
 =======
     fdir "^6.5.0"
     picomatch "^4.0.3"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 tmpl@1.0.5:
   version "1.0.5"
@@ -15366,6 +16087,7 @@ tmpl@1.0.5:
   integrity sha512-3f0uOEAQwIqGuWW2MVzYg8fV/QNnc/IpuJNG837rLuczAaLVHslWHZQj4IGiEl5Hs3kkbhwL9Ab7Hrsmuj+Smw==
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 to-buffer@^1.1.1:
@@ -15378,6 +16100,8 @@ to-buffer@^1.1.1:
     typed-array-buffer "^1.0.3"
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 to-regex-range@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/to-regex-range/-/to-regex-range-5.0.1.tgz#1648c44aae7c8d988a326018ed72f5b4dd0392e4"
@@ -15401,10 +16125,14 @@ toad-cache@^3.7.0:
   integrity sha512-/m8M+2BJUpoJdgAHoG+baCwBT+tf2VraSfkBgl0Y00qIWt41DJ8R5B8nsEw0I58YwF5IZH6z24/2TobDKnqSWw==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 toidentifier@1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/toidentifier/-/toidentifier-1.0.1.tgz"
   integrity sha512-o5sSPKEkg/DIQNmH43V0/uerLrpzVedkUh8tGNvaeXpfpuwjKenlSox/2O/BTlZUtEe+JG7s5YhEz608PlAHRA==
+<<<<<<< HEAD
 =======
 token-types@^6.0.0:
   version "6.1.1"
@@ -15415,6 +16143,8 @@ token-types@^6.0.0:
     "@tokenizer/token" "^0.3.0"
     ieee754 "^1.2.1"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 totalist@^1.0.0:
   version "1.1.0"
@@ -15456,6 +16186,7 @@ tr46@~0.0.3:
   integrity sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 trim-repeated@^1.0.0:
   version "1.0.0"
@@ -15465,6 +16196,8 @@ trim-repeated@^1.0.0:
     escape-string-regexp "^1.0.2"
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 ts-api-utils@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/ts-api-utils/-/ts-api-utils-2.1.0.tgz#595f7094e46eed364c13fd23e75f9513d29baf91"
@@ -15484,9 +16217,12 @@ ts-interface-checker@^0.1.9:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 ts-jest@^29.4.1:
   version "29.4.1"
   resolved "https://registry.npmjs.org/ts-jest/-/ts-jest-29.4.1.tgz"
@@ -15552,6 +16288,7 @@ tslib@^2.0.0, tslib@^2.1.0, tslib@^2.4.0, tslib@^2.8.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 tslib@1.9.3:
   version "1.9.3"
@@ -15573,6 +16310,8 @@ tv4@^1.3.0:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 type-check@^0.4.0, type-check@~0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/type-check/-/type-check-0.4.0.tgz#07b8203bfa7056c0657050e3ccd2c37730bab8f1"
@@ -15602,6 +16341,7 @@ type-fest@^0.21.3:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 type-fest@^3.8.0:
   version "3.13.1"
@@ -15609,6 +16349,8 @@ type-fest@^3.8.0:
   integrity sha512-tLq3bSNx+xSpwvAJnzrK0Ep5CLNWjvFTOp71URMaAEWBfRb9nnJiBoUe0tF8bI4ZFO3omgBR6NvnbzVUT3Ly4g==
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 type-fest@^4.18.2:
   version "4.41.0"
   resolved "https://registry.npmjs.org/type-fest/-/type-fest-4.41.0.tgz"
@@ -15702,6 +16444,7 @@ typescript@^5.9.2:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 uint8array-extras@^1.1.0, uint8array-extras@^1.3.0:
@@ -15757,6 +16500,8 @@ uint8arrays@^5.0.2:
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 unbox-primitive@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/unbox-primitive/-/unbox-primitive-1.1.0.tgz#8d9d2c9edeea8460c7f35033a88867944934d1e2"
@@ -15767,6 +16512,7 @@ unbox-primitive@^1.1.0:
     has-symbols "^1.1.0"
     which-boxed-primitive "^1.1.1"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -15783,6 +16529,12 @@ undici-types@~5.26.4:
   version "5.26.5"
   resolved "https://registry.npmjs.org/undici-types/-/undici-types-5.26.5.tgz"
   integrity sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==
+=======
+undici-types@~7.10.0:
+  version "7.10.0"
+  resolved "https://registry.npmjs.org/undici-types/-/undici-types-7.10.0.tgz"
+  integrity sha512-t5Fy/nfn+14LuOc2KNYg75vZqClpAiqscVvMygNnlsHBFpSXdJaYtXMcdNLpl/Qvc3P2cB3s6lOV51nqsFq4ag==
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -15911,6 +16663,7 @@ uri-js@^4.2.2:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 url-parse-lax@^1.0.0:
@@ -15928,6 +16681,8 @@ url-parse-lax@^3.0.0:
     prepend-http "^2.0.0"
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 url-parse@^1.5.3:
   version "1.5.10"
   resolved "https://registry.npmjs.org/url-parse/-/url-parse-1.5.10.tgz"
@@ -15938,6 +16693,7 @@ url-parse@^1.5.3:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 url-to-options@^1.0.1:
   version "1.0.1"
@@ -15945,6 +16701,8 @@ url-to-options@^1.0.1:
   integrity sha512-0kQLIzG4fdk/G5NONku64rSH/x32NOA39LVQqlK8Le6lvTF6GGRJpqaQFGgU+CLwySIqBSMdwYM0sYcW9f6P4A==
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 url@0.10.3:
   version "0.10.3"
   resolved "https://registry.npmjs.org/url/-/url-0.10.3.tgz"
@@ -15982,6 +16740,7 @@ use-sync-external-store@^1.4.0, use-sync-external-store@^1.5.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 util-deprecate@^1.0.1, util-deprecate@^1.0.2:
 =======
 util-deprecate@^1.0.1, util-deprecate@^1.0.2, util-deprecate@~1.0.1:
@@ -15992,6 +16751,9 @@ util-deprecate@^1.0.2:
 =======
 util-deprecate@^1.0.1, util-deprecate@^1.0.2, util-deprecate@~1.0.1:
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+util-deprecate@^1.0.1, util-deprecate@^1.0.2, util-deprecate@~1.0.1:
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==
@@ -16007,11 +16769,14 @@ util@^0.10.3:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 util@^0.12.4:
   version "0.12.5"
   resolved "https://registry.npmjs.org/util/-/util-0.12.5.tgz"
@@ -16024,6 +16789,7 @@ util@^0.12.4:
     which-typed-array "^1.1.2"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 utrie@^1.0.2:
@@ -16034,11 +16800,14 @@ utrie@^1.0.2:
     base64-arraybuffer "^1.0.2"
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 uuid@^11.1.0:
   version "11.1.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-11.1.0.tgz#9549028be1753bb934fc96e2bca09bb4105ae912"
   integrity sha512-0/A9rDy9P7cJ+8w1c9WD9V//9Wj15Ce2MPz8Ri6032usz+NfePxx5AcN3bN+r6ZL6jEo066/yNYB3tn4pQEx+A==
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -16052,14 +16821,19 @@ uuid@^3.0.1:
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 uuid@8.0.0:
   version "8.0.0"
   resolved "https://registry.npmjs.org/uuid/-/uuid-8.0.0.tgz"
   integrity sha512-jOXGuXZAWdsTH7eZLtyXMqUb9EcWMGZNbL9YcGBJl4MH4nrxHmZJhEHvyLFrkxo+28uLb/NYRcStH48fnD0Vzw==
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 v8-compile-cache-lib@^3.0.1:
   version "3.0.1"
@@ -16084,11 +16858,14 @@ v8-to-istanbul@^9.0.1:
     convert-source-map "^2.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 w3c-xmlserializer@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/w3c-xmlserializer/-/w3c-xmlserializer-4.0.0.tgz"
   integrity sha512-d+BFHzbiCx6zGfz0HyQ6Rg69w9k19nviJspaj4yNscGjrHu94sVP+aRm75yEbCh+r2/yR+7q6hux9LVtbuTGBw==
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 vary@^1, vary@^1.1.2:
   version "1.1.2"
   resolved "https://registry.npmjs.org/vary/-/vary-1.1.2.tgz"
@@ -16264,6 +17041,7 @@ which-typed-array@^1.1.16, which-typed-array@^1.1.19:
     gopd "^1.2.0"
     has-tostringtag "^1.0.2"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 which@^1.2.9:
@@ -16273,6 +17051,8 @@ which@^1.2.9:
   dependencies:
     isexe "^2.0.0"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 which@^2.0.1:
   version "2.0.2"
@@ -16349,16 +17129,20 @@ ws@^7.3.1:
 
 ws@^8.18.0, ws@^8.18.2, ws@^8.18.3, ws@>=8.16.0:
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 =======
 ws@^8.11.0:
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   version "8.18.3"
   resolved "https://registry.yarnpkg.com/ws/-/ws-8.18.3.tgz#b56b88abffde62791c639170400c93dcb0c95472"
   integrity sha512-PEIGCY5tSlUt50cqyMXfCzX+oOPqN0vuGqWzbcJ2xvnkzkq46oOpz7dQaTDBdfICb4N14+GARUDw2XV2N4tvzg==
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -16370,6 +17154,8 @@ ws@~7.5.10:
   integrity sha512-+dbF1tHwZpXcbOJdVOkzLDxZP1ailvSxM6ZweXTegylPny803bFhA+vqBYw4s31NSAk4S2Qz+AKXK9a4wkdjcQ==
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 xdg-basedir@^5.1.0:
   version "5.1.0"
   resolved "https://registry.npmjs.org/xdg-basedir/-/xdg-basedir-5.1.0.tgz"
@@ -16426,6 +17212,7 @@ yallist@^3.0.2:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 yallist@^4.0.0:
@@ -16434,6 +17221,8 @@ yallist@^4.0.0:
   integrity sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 yallist@^5.0.0:
   version "5.0.0"
   resolved "https://registry.npmjs.org/yallist/-/yallist-5.0.0.tgz"
@@ -16491,11 +17280,15 @@ yargs@^17.3.1:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 yauzl@^2.10.0:
 =======
 yauzl@^2.10.0, yauzl@^2.4.2:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+yauzl@^2.10.0:
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   version "2.10.0"
   resolved "https://registry.npmjs.org/yauzl/-/yauzl-2.10.0.tgz"
   integrity sha512-p4a9I6X6nu6IhoGmBqAcbJy1mlC4j27vEPZX9F4L4/vZT3Lyq1VkFHw/V/PUcB9Buo+DG3iHkT0x3Qya58zc3g==
@@ -16520,6 +17313,9 @@ yocto-queue@^0.1.0:
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 zod-to-json-schema@^3.23.5, zod-to-json-schema@^3.24.1:
   version "3.24.6"

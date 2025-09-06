@@ -5,6 +5,7 @@
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 };
@@ -16,6 +17,8 @@ const fixApi = () => {
 
     // Ensure proper closing structure
 
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
       content += '\n\nexport default function API() {\n  return (\n    <div>\n      <h1>API Documentation</h1>\n    </div>\n  );\n}';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

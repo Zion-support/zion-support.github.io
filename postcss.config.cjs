@@ -1,5 +1,20 @@
 module.exports = {
+<<<<<<< HEAD
   plugins: {    autoprefixer: {},
+=======
+  plugins: {
+<<<<<<< HEAD
+<<<<<<<< HEAD:postcss.config.cjs
+    tailwindcss: {},
+========
+>>>>>>>> 205f16ce4ac3a8c2ac0b2e278708c4357550db22:postcss.config.js
+    autoprefixer: {},
+  },
+}
+=======
+    tailwindcss: {},
+    autoprefixer: {},
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26,7 +41,12 @@ module.exports = {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> 205f16ce4ac3a8c2ac0b2e278708c4357550db22
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

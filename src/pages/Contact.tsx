@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from 'react',;
 import { Header } from '@/components/Header',;
 import { SEO } from '@/components/SEO',;
@@ -693,47 +694,24 @@ const Contact: React.FC = () => {
                 </div>
               </div>
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import React from 'react';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
-import { Card } from '../components/ui/Card';
-import { Button } from '../components/ui/Button';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import SEO from '../components/SEO';
-import ScrollAnimation from '../components/ScrollAnimation';
 
-const Contact: React.FC = () => {
+export default function ContactPage() {
   return (
-    <>
-      <SEO
-        title="Contact Us - Zion Tech Group"
-        description="Get in touch with Zion Tech Group for AI and technology solutions. Contact our expert team for a free consultation."
-        keywords="contact, consultation, AI services, technology solutions, get in touch"
-        url="/contact"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Header />
-        
-        <main>
-          {/* Hero Section */}
-          <section className="pt-20 pb-16 px-4">
-            <div className="max-w-7xl mx-auto">
-              <ScrollAnimation animation="slideUp" delay={0.2}>
-                <div className="text-center mb-16">
-                  <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-                    Get In <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Touch</span>
-                  </h1>
-                  <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                    Ready to transform your business? Let's discuss your project and discover 
-                    how our solutions can accelerate your growth.
-                  </p>
-                </div>
-              </ScrollAnimation>
->>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
-            </div>
-          </section>
+    <div className="space-y-16">
+      <section className="text-center py-16 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          Contact Us
+        </h1>
+        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Ready to transform your business with cutting-edge technology? 
+          Get in touch with our team of experts today.
+        </p>
+      </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             {/* Quick Response */}
             <div className="bg-blue-50 rounded-lg p-6">
@@ -790,9 +768,21 @@ const Contact: React.FC = () => {
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="Your full name"
                     />
+=======
+      <section className="py-12">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Contact Information */}
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">Get in Touch</h2>
+              <div className="space-y-8">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <span className="text-2xl">📞</span>
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
                   </div>
-
                   <div>
+<<<<<<< HEAD
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                       Email Address *
 =======
@@ -839,8 +829,30 @@ const Contact: React.FC = () => {
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="Your company name"
                     />
+=======
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Phone</h3>
+                    <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-800 text-lg">
+                      +1 302 464 0950
+                    </a>
+                    <p className="text-gray-600">Available 24/7 for urgent matters</p>
                   </div>
+                </div>
 
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                    <span className="text-2xl">📧</span>
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Email</h3>
+                    <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-800 text-lg">
+                      kleber@ziontechgroup.com
+                    </a>
+                    <p className="text-gray-600">We'll respond within 24 hours</p>
+                  </div>
+                </div>
+
+<<<<<<< HEAD
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                       Phone Number
@@ -858,7 +870,91 @@ const Contact: React.FC = () => {
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="(555) 123-4567"
                     />
+=======
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                    <span className="text-2xl">📍</span>
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
                   </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Address</h3>
+                    <p className="text-gray-600 text-lg">
+                      364 E Main St STE 1008<br />
+                      Middletown DE 19709
+                    </p>
+                    <p className="text-gray-600">United States</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-12">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Why Choose Us?</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                    <span>1000+ successful projects delivered</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                    <span>24/7 technical support</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                    <span>Enterprise-grade security</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                    <span>Custom solutions for every need</span>
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                    <span>Proven track record of success</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Contact Form */}
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">Send us a Message</h2>
+              <form className="space-y-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    Full Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Your full name"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="your.email@example.com"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="+1 (555) 123-4567"
+                  />
                 </div>
 
                 <div>
@@ -871,19 +967,24 @@ const Contact: React.FC = () => {
                   <select
                     id="service"
                     name="service"
+<<<<<<< HEAD
                     value={formData.service}
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     onChange={handleChange}
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
                     <option value="">Select a service</option>
-                    <option value="ai-solutions">AI Solutions</option>
+                    <option value="ai-services">AI Services</option>
+                    <option value="micro-saas">Micro SaaS Solutions</option>
                     <option value="it-services">IT Services</option>
-                    <option value="cloud-solutions">Cloud Solutions</option>
+                    <option value="cloud-services">Cloud Services</option>
                     <option value="cybersecurity">Cybersecurity</option>
+<<<<<<< HEAD
                     <option value="data-analytics">Data Analytics</option>
                     <option value="digital-transformation">Digital Transformation</option>
 <<<<<<< HEAD
@@ -891,10 +992,14 @@ const Contact: React.FC = () => {
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     <option value="consulting">Consulting</option>
+=======
+                    <option value="blockchain">Blockchain Solutions</option>
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
                     <option value="other">Other</option>
                   </select>
                 </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             <div className="mt-8">
@@ -990,10 +1095,16 @@ const Contact: React.FC = () => {
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     Message *
+=======
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                    Message
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
                   </label>
                   <textarea
                     id="message"
                     name="message"
+<<<<<<< HEAD
                     value={formData.message}
 <<<<<<< HEAD
 =======
@@ -1001,34 +1112,29 @@ const Contact: React.FC = () => {
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                     onChange={handleChange}
                     required
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
                     rows={6}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Tell us about your project or how we can help you..."
-                  />
+                    placeholder="Tell us about your project or requirements..."
+                  ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center justify-center"
+                  className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                 >
-                  {isSubmitting ? (
-                    <>
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                      Sending...
-                    </>
-                  ) : (
-                    <>
-                      <Send className="h-5 w-5 mr-2" />
-                      Send Message
-                    </>
-                  )}
+                  Send Message
                 </button>
               </form>
+<<<<<<< HEAD
             )}
 <<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+            </div>
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
           </div>
 =======
 
@@ -1036,6 +1142,7 @@ const Contact: React.FC = () => {
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         </div>
+<<<<<<< HEAD
 =======
           {/* Contact Form & Info */}
           <section className="py-20">
@@ -1248,3 +1355,9 @@ export default Contact;
 };
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+      </section>
+    </div>
+  );
+}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -18,6 +19,8 @@ import _React from 'react'; export const ErrorPage = ({} statusCode = 404,'; tit
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -47,6 +50,7 @@ const React from "react"; export const ErrorPage = ({} statusCode = 404,"; title
 import _React from 'react'; export const ErrorPage = ({} statusCode = 404,'; title = 'Page Not Found','; message = 'The page you are looking for does not exist.'}) => {} return (); <div className="min-h-screen bg-zion-blue flex items-center justify-center"> <div className="text-center text-white"> <h1 className="text-6xl font-bold mb-4">{statusCode}</h1> <h2 className="text-2xl font-semibold mb-4">{title}</h2> <p className="text-lg mb-8 max-w-md mx-auto">{message}</p> <div className="space-x-4"> <Button asChild">"; <Link to="/">Go Home</Link>"; </Button>""; <Button variant="outline" asChild">"; <Link to="/contact">Contact Support></div> ></div> ></div> );} };"; export default ErrorPage; export default ErrorPage"";"; """;"; """; "; )}"; export default ErrorPage&apos,&quot;&quot,; export default ErrorPage&apos,"; &apos;&apos,&apos,&quot;"&quot;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 import React from \'react\'; export const ErrorPage = ({} statusCode = 404,\'; title = \'Page Not Found\',\'; message = \'The page you are looking for does not exist.\'}) => {} return(); <div className=\"min-h-screen bg-zion-blue flex items-center justify-center\"> <div className=\"text-center text-white\"> <h1 className=\"text-6xl font-bold mb-4\">{statusCode}</h1> <h2 className=\"text-2xl font-semibold mb-4\">{title}</h2> <p className=\"text-lg mb-8 max-w-md mx-auto\">{message}</p> <div className=\"space-x-4\"> <Button asChild\">\"; <Link to=\"/\">Go Home</Link>\"; </Button>\""; <Button variant=\"outline\" asChild\">\"; <Link to=\"/contact\">Contact Support></div> ></div> ></div> );} };\"; export default ErrorPage; export default ErrorPage\"";\"; \""\";\"; \""\"; \"; )}\"; export default ErrorPage&apos,"&quot,; export default ErrorPage&apos,\"; '&apos,&apos,"\""
@@ -74,3 +78,5 @@ import _React from 'react'; export const ErrorPage = ({} statusCode = 404,'; tit
 =======
 import _React from 'react'; export const ErrorPage = ({} statusCode = 404,'; title = 'Page Not Found','; message = 'The page you are looking for does not exist.'}) => {} return(); <div className="min-h-screen bg-zion-blue flex items-center justify-center"> <div className="text-center text-white"> <h1 className="text-6xl font-bold mb-4">{statusCode}</h1> <h2 className="text-2xl font-semibold mb-4">{title}</h2> <p className="text-lg mb-8 max-w-md mx-auto">{message}</p> <div className="space-x-4"> <Button asChild">"; <Link to="/">Go Home</Link>"; </Button>""; <Button variant="outline" asChild">"; <Link to="/contact">Contact Support></div> ></div> ></div> );} };"; export default ErrorPage; export default ErrorPage"";"; """;"; """; "; )}"; export default ErrorPage&apos,&quot;&quot,; export default ErrorPage&apos,"; &apos;&apos,&apos,&quot;"&quot;=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

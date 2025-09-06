@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -16,16 +17,15 @@
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+"import { ;" PlusIcon,XMarkIcon,ChatBubbleLeftRightIcon,PhoneIcon,EnvelopeIcon } from '@heroicons/react/24/outline';"const FloatingActionButton = ({ className = " }) => {" const [isOpen,setIsOpen] = useState(false); const toggleMenu = () => setIsOpen(!isOpen); const actionItems = [; { "icon": 'ChatBubbleLeftRightIcon',"label": "Live Chat"," "action": () => window.open("https:")]"}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 "import { ;" PlusIcon,XMarkIcon,ChatBubbleLeftRightIcon,PhoneIcon,EnvelopeIcon } from '@heroicons/react/24/outline';"const FloatingActionButton = ({ className = " }) => {" const [isOpen,setIsOpen] = useState(false); const toggleMenu = () => setIsOpen(!isOpen); const actionItems = [; { "icon": 'ChatBubbleLeftRightIcon',"label": "Live Chat"," "action": () => window.open("https:")]"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -85,3 +85,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 "import { ;" PlusIcon,XMarkIcon,ChatBubbleLeftRightIcon,PhoneIcon,EnvelopeIcon } from '@heroicons/react/24/outline';"const FloatingActionButton = ({ className = " }) => {" const [isOpen,setIsOpen] = useState(false); const toggleMenu = () => setIsOpen(!isOpen); const actionItems = [; { "icon": 'ChatBubbleLeftRightIcon',"label": "Live Chat"," "action": () => window && window.open("https:")]"}
 "import { ;" PlusIcon,XMarkIcon,ChatBubbleLeftRightIcon,PhoneIcon,EnvelopeIcon } from '@heroicons/react/24/outline';"const FloatingActionButton = ({ className = " }) => {" const [isOpen,setIsOpen] = useState(false); const toggleMenu = () => setIsOpen(!isOpen); const actionItems = [; { "icon": 'ChatBubbleLeftRightIcon',"label": "Live Chat"," "action": () => window && window.open("https:")]"}"import { ;" PlusIcon,XMarkIcon,ChatBubbleLeftRightIcon,PhoneIcon,EnvelopeIcon } from '@heroicons/react/24/outline';"const FloatingActionButton = ({ className = " }) => {" const [isOpen,setIsOpen] = useState(false); const toggleMenu = () => setIsOpen(!isOpen); const actionItems = [; { "icon": 'ChatBubbleLeftRightIcon',"label": "Live Chat"," "action": () => window && window.open("https:")]"}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+'const FloatingActionButton = ({ className = \' }) => {\' const [isOpen,setIsOpen] = useState (false) const toggleMenu = () => setIsOpen (!isOpen) const actionItems = [ { \"icon\": \'MessageCircl\',e,\"label\": \'Live: Chat,\',\' \"action\": () => window && window.open: (\'https:\''\'"\",;
+"const FloatingActionButton = ({ className = " }) => {" const [isOpen,setIsOpen] = useState (false) const toggleMenu = () => setIsOpen (!isOpen) const actionItems = [ { icon: "MessageCircl",e,label: "Live: Chat,"," action: () => window && window.open: ("https:""""",;'"'"
+"import { ;" PlusIcon,XMarkIcon,ChatBubbleLeftRightIcon,PhoneIcon,EnvelopeIcon } from '@heroicons/react/24/outline';"const FloatingActionButton = ({ className = " }) => {" const [isOpen,setIsOpen] = useState(false); const toggleMenu = () => setIsOpen(!isOpen); const actionItems = [; { "icon": 'ChatBubbleLeftRightIcon',"label": "Live Chat"," "action": () => window && window.open("https:")]"}
+"import { ;" PlusIcon,XMarkIcon,ChatBubbleLeftRightIcon,PhoneIcon,EnvelopeIcon } from '@heroicons/react/24/outline';"const FloatingActionButton = ({ className = " }) => {" const [isOpen,setIsOpen] = useState(false); const toggleMenu = () => setIsOpen(!isOpen); const actionItems = [; { "icon": 'ChatBubbleLeftRightIcon',"label": "Live Chat"," "action": () => window && window.open("https:")]"}
+"import { ;" PlusIcon,XMarkIcon,ChatBubbleLeftRightIcon,PhoneIcon,EnvelopeIcon } from '@heroicons/react/24/outline';"const FloatingActionButton = ({ className = " }) => {" const [isOpen,setIsOpen] = useState(false); const toggleMenu = () => setIsOpen(!isOpen); const actionItems = [; { "icon": 'ChatBubbleLeftRightIcon',"label": "Live Chat"," "action": () => window && window.open("https:")]"}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

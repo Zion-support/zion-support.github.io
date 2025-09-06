@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 import fs from "fs";
 import path from "path";
@@ -12,6 +13,8 @@ function fixDoubleCommas(filePath) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     // Fix double commas in import statements
 
     // Fix double commas in import statements;
@@ -19,9 +22,12 @@ function fixDoubleCommas(filePath) {
     const fixedContent = content.replace(doubleCommaRegex, ",");
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
     const fixedContent = content && content.replace(doubleCommaRegex, ",");
 

@@ -1,5 +1,6 @@
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/talent/ErrorBanner.js.jsx
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/talent/ErrorBanner.js.jsx
+<<<<<<< HEAD:backup-problematic-files/src.disabled/components/talent/ErrorBanner.js.jsx
 <<<<<<< HEAD:backup-merge-conflicts/ErrorBanner.jsx.backup
 =======
 <<<<<<< HEAD
@@ -7,10 +8,14 @@
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:src.disabled/components/talent/ErrorBanner.js.jsx
+=======
+"export function ErrorBanner({ msg }) {" return (); <div className="p-4 bg-red-500/20 text-red-400 text-center rounded-md">" {msg}" </div> )} ";"""
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:src.disabled/components/talent/ErrorBanner.js.jsx
 "export function ErrorBanner({ msg }) {\" return (); <div className=\"p-4 bg-red-500/20 text-red-400 text-center rounded-md\">\" {msg}\" </div> )} \";\"
 :backup-merge-conflicts/ErrorBanner.jsx.backup"export function ErrorBanner({ msg }) {" return (); <div className="p-4 bg-red-500/20 text-red-400 text-center rounded-md">" {msg}" </div> )} ";"""
 
 "export function ErrorBanner({ msg }) {" return (); <div className="p-4 bg-red-500/20 text-red-400 text-center rounded-md">" {msg}" </div> )} ";"""
+<<<<<<< HEAD:backup-problematic-files/src.disabled/components/talent/ErrorBanner.js.jsx
 =======
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/talent/ErrorBanner.js.jsx
 <<<<<<< HEAD
@@ -41,3 +46,5 @@
 =======
 "export function ErrorBanner({ msg }) {" return (); <div className="p-4 bg-red-500/20 text-red-400 text-center rounded-md">" {msg}" </div> )} ";"""
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/components/talent/ErrorBanner.js.jsx
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:src.disabled/components/talent/ErrorBanner.js.jsx

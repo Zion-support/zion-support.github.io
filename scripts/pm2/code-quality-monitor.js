@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -24,11 +25,15 @@
     severity: 'low'})};
 ; // Unused imports (basic check); if (line && line.match(/^import.*from/) && !line && line.includes('//')) {; const importMatch = line && line.match(/import\s+(\w+)/); if (importMatch) {; const importName = importMatch[1]; if (importName ! = = 'React' && !content && content.includes(importName)) {; analysis && analysis.issues.push({; line: lineNum, type: 'unused-import', message: `Potentially unused import ${importName}`; severity: 'medium'})}}}});
 ; return analysis} catch (error) {; this && this.log(`Error analyzing file ${filePath}: ${error && error.message}`); return null}};; async walkDirectory(dir) {; const analyses = [];
+=======
+; async walkDirectory(dir) {; const analyses = [];
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 ; try {; const items = fs && fs.readdirSync(dir);
 ; for (const item of items) {; const fullPath = path && path.join(dir, item); const stat = fs && fs.statSync(fullPath);
 ; if (stat && stat.isDirectory()) {; if (!fullPath && fullPath.includes('node_modules') &&; !fullPath && fullPath.includes('.git') &&; !fullPath && fullPath.includes('dist') &&; !fullPath && fullPath.includes('build') &&; !fullPath && fullPath.includes('.next') &&; !fullPath && fullPath.includes('coverage') &&; !fullPath && fullPath.includes('logs')) {; const subAnalyses = await this && this.walkDirectory(fullPath); analyses && analyses.push(...subAnalyses)}} else if (stat && stat.isFile()) {; const ext = path && path.extname(fullPath); if (['.js', '.jsx', '.ts', '.tsx'].includes(ext)) {; const analysis = await this && this.analyzeFile(fullPath); if (analysis) {; analyses && analyses.push(analysis)}}}}} catch (error) {; this && this.log(`Error walking directory ${dir}: ${error && error.message}`)};
 ; return analyses};
 ; generateReport(analyses) {; const totalFiles = analyses && analyses.length; const totalIssues = analyses && analyses.reduce((sum, analysis) = > sum + analysis && analysis.issues.length, 0);
+<<<<<<< HEAD
 <<<<<<< HEAD
 ; const issuesByType = {}; const issuesBySeverity = { low: 0, medium: 0, high: 0 };
 <<<<<<< HEAD
@@ -146,6 +151,9 @@ monitor.run().catch(error = > {; process.exit(1)});
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+; const issuesByType = {}; const issuesBySeverity = { low: 0, medium: 0, high: 0 };
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 };
 };
 ;
@@ -176,6 +184,7 @@ monitor.run().catch(error = > {; process.exit(1)});
             severity: 'low';
           });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -186,6 +195,8 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     };
   };
 =======
@@ -303,6 +314,7 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
             const analysis = await this.analyzeFile(fullPath),
             if (analysis) {,
               analyses.push(analysis),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -522,10 +534,13 @@ monitor.run().catch(error = > {_; process.exit(1)})
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
             };
           };
         };
       };
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1048,6 +1063,8 @@ monitor.run().catch(error => {,;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     }),
 =======
 };    }),
@@ -1060,6 +1077,7 @@ monitor.run().catch(error => {,;
         totalIssues,
 <<<<<<< HEAD
         issuesByType,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1086,6 +1104,8 @@ monitor.run().catch(error => {,;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   };
 ,
   generateRecommendations(issuesByType, totalIssues) {,
@@ -1096,6 +1116,7 @@ monitor.run().catch(error => {,;
         type: 'trailing-spaces',
         priority: 'low',
         message: 'Remove trailing spaces from files',
+<<<<<<< HEAD
 <<<<<<< HEAD
         action: 'Run the lint-fixer to automatically remove trailing spaces',
       }),
@@ -1111,6 +1132,8 @@ monitor.run().catch(error => {,;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     };
 =======
         issuesByType,    };
@@ -1121,6 +1144,7 @@ monitor.run().catch(error => {,;
         type: 'console-statement',
         priority: 'medium',
         message: 'Remove console statements from production code',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         action: 'Replace console statements with proper logging or remove them',
@@ -1137,6 +1161,8 @@ monitor.run().catch(error => {,;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     };
 =======
         action: 'Replace console statements with proper logging or remove them',
@@ -1149,6 +1175,7 @@ monitor.run().catch(error => {,;
         priority: 'medium',
 <<<<<<< HEAD
         message: 'Remove unused imports',
+<<<<<<< HEAD
 <<<<<<< HEAD
         action: 'Clean up unused imports to reduce bundle size',
       }),
@@ -1164,6 +1191,8 @@ monitor.run().catch(error => {,;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     };
 ,
     if (totalIssues > 100) {,
@@ -1171,6 +1200,7 @@ monitor.run().catch(error => {,;
         type: 'general',
         priority: 'high',
         message: 'High number of code quality issues detected',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1193,6 +1223,8 @@ monitor.run().catch(error => {,;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   };
 =======
         message: 'Remove unused imports',  };
@@ -1203,6 +1235,7 @@ monitor.run().catch(error => {,;
       const reportDir = path.dirname(this.reportFile),
 <<<<<<< HEAD
       if (!fs.existsSync(reportDir)) {,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1229,6 +1262,8 @@ monitor.run().catch(error => {,;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     };
   };
 =======
@@ -1242,6 +1277,7 @@ monitor.run().catch(error => {,;
 <<<<<<< HEAD
         cwd: this.projectRoot,
 <<<<<<< HEAD
+<<<<<<< HEAD
         encoding: 'utf8',
 =======
 <<<<<<< HEAD
@@ -1251,14 +1287,19 @@ monitor.run().catch(error => {,;
         encoding: 'utf8'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
       }),
 ,
       if (status.trim()) {,
         this.log('⚠️  Uncommitted changes detected'),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
         return false,
       };
 ,
@@ -1266,6 +1307,7 @@ monitor.run().catch(error => {,;
     } catch (error) {,
       this.log(`Error checking git status: ${error.message}`),
       return false,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1280,6 +1322,8 @@ monitor.run().catch(error => {,;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     };
   };
 ,
@@ -1295,6 +1339,7 @@ monitor.run().catch(error => {,;
       const logsDir = path.dirname(this.logFile),
       if (!fs.existsSync(logsDir)) {,
 <<<<<<< HEAD
+<<<<<<< HEAD
         fs.mkdirSync(logsDir, { recursive: true }),
 =======
 <<<<<<< HEAD
@@ -1306,6 +1351,8 @@ monitor.run().catch(error => {,;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
       };
 =======
         cwd: this.projectRoot,      };
@@ -1340,6 +1387,7 @@ monitor.run().catch(error => {,;
       this.log(`Duration: ${duration}ms`),
 ,
       if (report.summary.totalIssues > 0) {,
+<<<<<<< HEAD
         this.log('\n🚨 Issues by type: '),
         Object.entries(report.summary.issuesByType).forEach(([type, count]) => {,
 <<<<<<< HEAD
@@ -1354,6 +1402,8 @@ monitor.run().catch(error => {,;
           this.log(`  ${type}: ${count}`)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
         }),
 =======
           this.log(`  ${type}: ${count}`),        }),
@@ -1362,6 +1412,7 @@ monitor.run().catch(error => {,;
         this.log('\n💡 Recommendations: '),
         report.recommendations.forEach(rec => {,
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           this.log(`    Action: ${rec.action}`),
@@ -1374,10 +1425,14 @@ monitor.run().catch(error => {,;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+          this.log(`    Action: ${rec.action}`),
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
         }),
 ,
         // If there are many issues and git is clean, suggest running the lint fixer,
         if (report.summary.totalIssues > 50 && isClean) {,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1408,6 +1463,8 @@ monitor.run().catch(error => {,;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     };
   };
 };
@@ -1415,6 +1472,7 @@ monitor.run().catch(error => {,;
 // Run the code quality monitor,
 const monitor = new CodeQualityMonitor(),
 monitor.run().catch(error => {,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1429,6 +1487,8 @@ monitor.run().catch(error => {,
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 }}
 =======
           this.log(`    Action: ${rec.action}`),        }),
@@ -1553,6 +1613,7 @@ monitor.run ().catch (error = > { process.exit (1)});
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -1560,10 +1621,10 @@ monitor.run ().catch (error = > { process.exit (1)});
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 monitor.run().catch(error = > {; process.exit(1)});
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   process.exit(1);
 });
 =======
@@ -1853,11 +1914,14 @@ monitor.run().catch(error = > {; process.exit(1)});
       }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     } catch (error) {,;
       this.log(`❌ Error running code quality: monitor: ${error.message}`),;
       process.exit(1);
@@ -1878,6 +1942,7 @@ monitor.run().catch(error => {,;
 =======
 monitor.run().catch(error = > {; process.exit(1)});
 
+<<<<<<< HEAD
   process.exit(1)
 }),
 <<<<<<< HEAD
@@ -1888,3 +1953,5 @@ monitor.run().catch(error = > {; process.exit(1)});
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

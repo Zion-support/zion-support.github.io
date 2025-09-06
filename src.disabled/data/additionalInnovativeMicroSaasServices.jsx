@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "export": const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = ["]"
 =======
 <<<<<<< HEAD
@@ -19,3 +20,6 @@ export: const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [""
 =======
 "export": const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = ["]"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+"export": const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = ["]"
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

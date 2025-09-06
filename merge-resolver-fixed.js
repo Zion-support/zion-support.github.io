@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 console.log('🔧 Starting Merge Conflict Resolution');
@@ -8,6 +9,8 @@ console.log('🔧 Starting Merge Conflict Resolution');
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -37,6 +40,7 @@ if ( {) {
   $2
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       fs.writeFileSync (file_path, content, 'utf8'),
@@ -60,6 +64,13 @@ const fs = require('fs');
 const path = require('path');
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+const fs = require('fs'),;
+const path = require('path'),;
+const fs = require('fs');
+const path = require('path');
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 const fs = require ('fs'),
 const path = require ('path'),
@@ -183,11 +194,29 @@ function fixMergeConflicts(filePath) {;
   } catch (error) {;
     console.log(`❌ Error fixing ${filePath}: ${error.message}`),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+    return false;
+  }
+}
+;
+// Function to get all files recursively;
+function getAllFiles(dir, extensions) {;
+  let files = [];
+  try {;
+    content = content.replace(/    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`);
+      return true;
+    }
+    return false;
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   } catch (error) {
     console.log(`❌ Error fixing ${filePath}: ${error.message}`);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -222,7 +251,10 @@ function getAllFiles(dir, extensions) {;
   try {;
 =======
   try {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     const items = fs.readdirSync(dir);
 =======
     let content = fs.readFileSync (file_path, 'utf8'),
@@ -363,6 +395,9 @@ for (const file of files) {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 // Main execution;
 <<<<<<< HEAD
 =======
@@ -417,6 +452,7 @@ if (|| content.includes (') {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Main execution;
 async function main() {;
   console.log('🔍 Scanning for merge conflicts...'),;
@@ -467,6 +503,9 @@ async function main() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 ;  let fixedCount = 0;
+=======
+  let fixedCount = 0;
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   for (const file of files) {;
     try {;
       const content = fs.readFileSync(file, 'utf8'),;
@@ -483,6 +522,7 @@ async function main() {;
   console.log(`✅ Fixed merge conflicts in ${fixedCount} files`);
   console.log('🎉 Merge conflict resolution completed!');
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ;
@@ -516,3 +556,9 @@ main().catch(console.error);
 main().catch(console.error),;
 main().catch(console.error),;main().catch(console.error);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;
+main().catch(console.error),;
+main().catch(console.error),;
+main().catch(console.error);
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from "react",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -179,6 +180,10 @@ import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-cf89
 =======
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+=======
+import React, { useState } from 'react';
+import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 <<<<<<< HEAD
 
@@ -194,8 +199,37 @@ import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 =======
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData)
+      });
+
+      if (!response.ok) {
+        const data = await response.json().catch(() => ({}));
+        throw new Error(data.error || "Failed to send message");
+      }
+
+      setSubmitted(true);
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      setTimeout(() => setSubmitted(false), 3000);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Failed to send message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -204,6 +238,7 @@ import { Mail, Phone, MapPin, Clock } from 'lucide-react';
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -221,6 +256,11 @@ import { Mail, Phone, MapPin, Clock } from 'lucide-react';
             Ready to transform your business with cutting-edge technology? 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             Let's discuss how we can help you achieve your goals.
+=======
+          <p className="text-xl text-blue-200 max-w-2xl mx-auto">
+            Ready to transform your business with cutting-edge technology? 
+            Let&apos;s discuss how we can help you achieve your goals.
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
           </p>
         </div>
 
@@ -299,6 +339,7 @@ import { Mail, Phone, MapPin, Clock } from 'lucide-react';
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address
                   </label>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -725,10 +766,13 @@ if ( {) {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
                   <input
                     type="email"
                     id="email"
                     name="email"
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-cf89
 =======
@@ -736,6 +780,9 @@ if ( {) {
                     className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
 =======
+=======
+                    required
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
                     value={formData.email}
                     onChange={handleChange}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -744,6 +791,7 @@ if ( {) {
                     placeholder="your.email@example.com"
                   />
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -769,6 +817,9 @@ if ( {) {
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+              </div>
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 =======
               </div>
@@ -794,6 +845,7 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
 <<<<<<< HEAD
@@ -812,6 +864,10 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-cf89
 =======
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+=======
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium mb-2">
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
                   Message *
 =======
               
@@ -827,6 +883,7 @@ if ( {) {
                   required
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
                   rows={6}
@@ -840,6 +897,8 @@ if ( {) {
 <<<<<<< HEAD
                   placeholder="Tell us about your project or how we can help..."
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
                   rows={5}
                   value={formData.message}
                   onChange={handleChange}
@@ -851,6 +910,7 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 />
               </div>
+<<<<<<< HEAD
               
               <button
                 type="submit"
@@ -866,6 +926,11 @@ if ( {) {
               </button>
 =======
 <<<<<<< HEAD
+=======
+
+              <button
+                type="submit"
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
                 disabled={isSubmitting}
                 className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
               >
@@ -874,7 +939,7 @@ if ( {) {
 
               {submitted && (
                 <div className="text-center p-4 bg-green-600/20 border border-green-500 rounded-lg">
-                  <p className="text-green-300">Thank you! We'll be in touch soon.</p>
+                  <p className="text-green-300">Thank you! We&apos;ll be in touch soon.</p>
                 </div>
               )}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-cf89
@@ -886,6 +951,7 @@ if ( {) {
   );
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -975,3 +1041,6 @@ export default ContactSection;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+export default ContactSection;
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

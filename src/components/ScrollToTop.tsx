@@ -13,11 +13,6 @@ const ScrollToTop: React.FC = () => {
       }
     };
 
-<<<<<<< HEAD
-    window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
-  }, []);
-
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -38,8 +33,11 @@ const ScrollToTop: React.FC = () => {
       <ChevronUp className="w-6 h-6 group-hover:scale-110 transition-transform duration-200" />
     </button>
   );
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 };
 
 export default ScrollToTop;

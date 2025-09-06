@@ -33,6 +33,7 @@ files.for_each ((file) => {
         return match.replace (",", ";");
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -49,6 +50,12 @@ files.for_each ((file) => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+    content = content.replace(;
+      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
       (match) => {
         return match.replace(";", ";");
       }
@@ -74,12 +81,15 @@ files.for_each ((file) => {
           return match.trim() + ";";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
         }
         return match;
       }

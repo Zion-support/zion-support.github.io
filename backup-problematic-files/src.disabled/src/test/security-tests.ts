@@ -126,13 +126,19 @@ export const securityTests = {
   },
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 export const securityTests = { checkVulnerabilities: async () => { const vulnerabilities = []; const xssPatterns = [ /innerHTMLs*=/,/dangerouslySetInnerHTML/,/evals*(/,/Functions*(/ ]; const csrfPatterns = [ /fetchs*(/,/axioss*./,/XMLHttpRequest/ ]; return { xss: vulnerabilities.filter(v => xssPatterns.some(p => p.test(v))),csrf: vulnerabilities.filter(v => csrfPatterns.some(p => p.test(v))) }} };
 export const securityTests = { checkVulnerabilities: async () => { const vulnerabilities = []; const xssPatterns = [ /innerHTMLs*=/,/dangerouslySetInnerHTML/,/evals*(/,/Functions*(/ ]; const csrfPatterns = [ /fetchs*(/,/axioss*./,/XMLHttpRequest/ ]; return { xss: vulnerabilities && vulnerabilities.filter(v => xssPatterns && xssPatterns.some(p => p && p.test(v))),csrf: vulnerabilities && vulnerabilities.filter(v => csrfPatterns && csrfPatterns.some(p => p && p.test(v))) }} };
 export const securityTests = { checkVulnerabilities: async () => { const vulnerabilities = []; const xssPatterns = [ /innerHTMLs*=/,/dangerouslySetInnerHTML/,/evals*(/,/Functions*(/ ]; const csrfPatterns = [ /fetchs*(/,/axioss*./,/XMLHttpRequest/ ]; return { xss: vulnerabilities && vulnerabilities.filter(v => xssPatterns && xssPatterns.some(p => p && p.test(v))),csrf: vulnerabilities && vulnerabilities.filter(v => csrfPatterns && csrfPatterns.some(p => p && p.test(v))) }} };
 export const securityTests = { checkVulnerabilities: async () => { const vulnerabilities = []; const xssPatterns = [ /innerHTMLs*=/,/dangerouslySetInnerHTML/,/evals*(/,/Functions*(/ ]; const csrfPatterns = [ /fetchs*(/,/axioss*./,/XMLHttpRequest/ ]; return { xss: vulnerabilities && vulnerabilities.filter(v => xssPatterns && xssPatterns.some(p => p && p.test(v))),csrf: vulnerabilities && vulnerabilities.filter(v => csrfPatterns && csrfPatterns.some(p => p && p.test(v))) }} };
+<<<<<<< HEAD
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

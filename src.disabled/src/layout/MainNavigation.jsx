@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from \"react\"} ); \"export default ComponentName;\"
 const React from "react"} ); "export default ComponentName;"""
 import _React from "react"} ); "export default ComponentName;"
@@ -9,3 +10,6 @@ import _React from "react"} ); "export default ComponentName;"
 =======
 import _React from "react"} ); "export default ComponentName;"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import _React from "react"} ); "export default ComponentName;"
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

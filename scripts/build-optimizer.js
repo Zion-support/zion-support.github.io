@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -14,12 +15,14 @@
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
-
-
 =======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+
+
 import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process';  const cleanBuild = () => {  const dirsToClean = ['.next','out','dist']; dirsToClean.forEach(dir => { if (fs.existsSync(dir)) { fs.rmSync(dir,{ "recursive": 'true',"force": 'true' }) } })} const optimizeImages = () => {  } const generateStaticAssets = () => {  try { execSync('npm run build',{ "stdio": 'inherit' }) } catch (error) { console.error('❌ Failed to generate static "assets": ',error.message)} } const runOptimizations = () => { cleanBuild(); optimizeImages(); generateStaticAssets(); } runOptimizations();
 const fs from "fs"; import path from "path"; import { execSync } from "child_process"; console.log(" Running build optimizations."); const cleanBuild = () => { console.log(" Cleaning previous builds."); const dirsToClean = [".next","out","dist"]; dirsToClean.forEach(dir => { if (fs.existsSync(dir)) { fs.rmSync(dir,{ recursive: "true",force: "true" }) console.log(` Cleaned ${dir}`)} })} const optimizeImages = () => { console.log(" Optimizing images."); console.log(" Images optimized")} const generateStaticAssets = () => { console.log(" Generating static assets."); try { execSync("npm run build",{ stdio: "inherit" }) console.log(" Static assets generated")} catch (error) { console.error(" Failed to generate static assets: ",error.message)} } const runOptimizations = () => { cleanBuild(); optimizeImages(); generateStaticAssets(); console.log(" Build optimizations completed!")} runOptimizations();'"`'"`
 import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process'; _console.log('🔨 Running build optimizations...'); const cleanBuild = () => { _console.log('🧹 Cleaning previous builds...'); const dirsToClean = ['.next','out','dist']; dirsToClean.forEach(dir => { if (fs.existsSync(dir)) { fs.rmSync(dir,{ "recursive": 'true',"force": 'true' }) _console.log(`✅ Cleaned ${dir}`)} })} const optimizeImages = () => { _console.log('🖼️ Optimizing images...'); _console.log('✅ Images optimized')} const generateStaticAssets = () => { _console.log('📄 Generating static assets...'); try { execSync('npm run build',{ "stdio": 'inherit' }) _console.log('✅ Static assets generated')} catch (error) { _console.error('❌ Failed to generate static "assets": ',error.message)} } const runOptimizations = () => { cleanBuild(); optimizeImages(); generateStaticAssets(); _console.log('🎉 Build optimizations completed!')} runOptimizations();
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process';  const cleanBuild = () => {  const dirsToClean = ['.next','out','dist']; dirsToClean.forEach(dir => { if (fs.existsSync(dir)) { fs.rmSync(dir,{ "recursive": 'true',"force": 'true' }) } })} const optimizeImages = () => {  } const generateStaticAssets = () => {  try { execSync('npm run build',{ "stdio": 'inherit' }) } catch (error) { console.error('❌ Failed to generate static "assets": ',error.message)} } const runOptimizations = () => { cleanBuild(); optimizeImages(); generateStaticAssets(); } runOptimizations();
@@ -28,6 +31,8 @@ import fs from 'fs'; import path from 'path'; import { execSync } from 'child_pr
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process';  const cleanBuild = () => {  const dirsToClean = ['.next','out','dist']; dirsToClean.forEach(dir => { if (fs.existsSync(dir)) { fs.rmSync(dir,{ "recursive": 'true',"force": 'true' }) } })} const optimizeImages = () => {  } const generateStaticAssets = () => {  try { execSync('npm run build',{ "stdio": 'inherit' }) } catch (error) { console.error('❌ Failed to generate static "assets": ',error.message)} } const runOptimizations = () => { cleanBuild(); optimizeImages(); generateStaticAssets(); } runOptimizations();
 const fs from "fs"; import path from "path"; import { execSync } from "child_process"; console.log(" Running build optimizations."); const cleanBuild = () => { console.log(" Cleaning previous builds."); const dirsToClean = [".next","out","dist"]; dirsToClean.forEach(dir => { if (fs.existsSync(dir)) { fs.rmSync(dir,{ recursive: "true",force: "true" }) console.log(` Cleaned ${dir}`)} })} const optimizeImages = () => { console.log(" Optimizing images."); console.log(" Images optimized")} const generateStaticAssets = () => { console.log(" Generating static assets."); try { execSync("npm run build",{ stdio: "inherit" }) console.log(" Static assets generated")} catch (error) { console.error(" Failed to generate static assets: ",error.message)} } const runOptimizations = () => { cleanBuild(); optimizeImages(); generateStaticAssets(); console.log(" Build optimizations completed!")} runOptimizations();'"`'"`
 import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process'; _console.log('🔨 Running build optimizations...'); const cleanBuild = () => { _console.log('🧹 Cleaning previous builds...'); const dirsToClean = ['.next','out','dist']; dirsToClean.forEach(dir => { if (fs.existsSync(dir)) { fs.rmSync(dir,{ "recursive": 'true',"force": 'true' }) _console.log(`✅ Cleaned ${dir}`)} })} const optimizeImages = () => { _console.log('🖼️ Optimizing images...'); _console.log('✅ Images optimized')} const generateStaticAssets = () => { _console.log('📄 Generating static assets...'); try { execSync('npm run build',{ "stdio": 'inherit' }) _console.log('✅ Static assets generated')} catch (error) { _console.error('❌ Failed to generate static "assets": ',error.message)} } const runOptimizations = () => { cleanBuild(); optimizeImages(); generateStaticAssets(); _console.log('🎉 Build optimizations completed!')} runOptimizations();
@@ -40,6 +45,7 @@ import fs from 'fs'; import path from 'path'; import { execSync } from 'child_pr
 const fs from "fs"; import path from "path"; import { execSync } from "child_process"; console.log(" Running build optimizations."); const cleanBuild = () => { console.log(" Cleaning previous builds."); const dirsToClean = [".next","out","dist"]; dirsToClean.forEach(dir => { if (fs.existsSync(dir)) { fs.rmSync(dir,{ recursive: "true",force: "true" }) console.log(` Cleaned ${dir}`)} })} const optimizeImages = () => { console.log(" Optimizing images."); console.log(" Images optimized")} const generateStaticAssets = () => { console.log(" Generating static assets."); try { execSync("npm run build",{ stdio: "inherit" }) console.log(" Static assets generated")} catch (error) { console.error(" Failed to generate static assets: ",error.message)} } const runOptimizations = () => { cleanBuild(); optimizeImages(); generateStaticAssets(); console.log(" Build optimizations completed!")} runOptimizations();'"`'"`
 import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process'; _console.log('🔨 Running build optimizations...'); const cleanBuild = () => { _console.log('🧹 Cleaning previous builds...'); const dirsToClean = ['.next','out','dist']; dirsToClean.forEach(dir => { if (fs.existsSync(dir)) { fs.rmSync(dir,{ "recursive": 'true',"force": 'true' }) _console.log(`✅ Cleaned ${dir}`)} })} const optimizeImages = () => { _console.log('🖼️ Optimizing images...'); _console.log('✅ Images optimized')} const generateStaticAssets = () => { _console.log('📄 Generating static assets...'); try { execSync('npm run build',{ "stdio": 'inherit' }) _console.log('✅ Static assets generated')} catch (error) { _console.error('❌ Failed to generate static "assets": ',error.message)} } const runOptimizations = () => { cleanBuild(); optimizeImages(); generateStaticAssets(); _console.log('🎉 Build optimizations completed!')} runOptimizations();
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -63,3 +69,5 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

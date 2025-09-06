@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 class ErrorBoundary extends React.Component {
@@ -78,6 +79,11 @@ import Image from 'next/image';
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+import React from "react";
+import Image from "next/image";
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 interface OptimizedImageProps {
   src: string;
   alt: string;
@@ -88,7 +94,10 @@ interface OptimizedImageProps {
   quality?: number;
   sizes?: string;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   src,
   alt,
   width,
@@ -98,13 +107,39 @@ interface OptimizedImageProps {
   quality = 75,
   sizes = "100vw",
 }) => {
+<<<<<<< HEAD
 
+=======
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <Image;
+        src={src}
+        alt={alt}
+        fill;
+        className={class_name}
+        priority={priority}
+        sizes={sizes}
+        quality={quality}
+        style={style}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
       src={src}
       alt={alt}
       width={width}
       height={height}
       className={className}
       priority={priority}
+<<<<<<< HEAD
+=======
+      sizes={sizes}
+  );
+}
+export default OptimizedImage;
+      quality={quality}
+      style={style}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 <<<<<<< HEAD
 quality={quality}
@@ -112,6 +147,7 @@ quality={quality}
   );
 }
 =======
+<<<<<<< HEAD
       quality={quality}
       sizes={sizes}
     />
@@ -133,3 +169,7 @@ export default OptimizedImage;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+export default OptimizedImage;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

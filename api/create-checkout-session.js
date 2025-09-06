@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function handler(req, res) {
   res.status(200).json({ message: "Checkout session created" })}          price: priceId,
 =======
@@ -25,21 +26,16 @@ export default function handler(req, res) {
 =======
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
   res.status(200).json({ message: 'Checkout session created' });
 }
 export default function handler(req, res) {
   res.status(200).json({ "message": 'Checkout session created' });
 }
-<<<<<<< HEAD
 export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> main
-=======
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 import Stripe from 'stripe';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
@@ -76,13 +72,11 @@ async function handler(req, res) {
       success_url: `${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${req.headers.origin}/cancel`,
     });
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
+<<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     res.statusCode = 200;
     res.json({ 
       success: true, 
@@ -94,8 +88,6 @@ async function handler(req, res) {
     res.statusCode = 500;
     res.json({ error: err.message || 'Checkout session creation failed' });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -107,6 +99,7 @@ export default withErrorLogging(handler);      url: session.url
 }
 
 export default withErrorLogging(handler);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
@@ -127,6 +120,8 @@ export default function handler(req,res) { res.status(200).json({ message: 'Chec
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 export default function handler(req, res) {
   res.status(200).json({ message: "Checkout session created" })}
@@ -137,10 +132,13 @@ export default function handler(req, res) {
   res.status(200).json({ "message": 'Checkout session created' });
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
       url: session.url
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -157,6 +155,7 @@ export default withErrorLogging(handler),
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ,
 =======
 =======
@@ -168,12 +167,15 @@ export default withErrorLogging(handler),
 ,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default withErrorLogging(handler);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -200,3 +202,5 @@ export default function handler(req,res) { res.status(200).json({ message: 'Chec
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }
 };
 }
@@ -37,11 +38,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 export const messageChannelHandler = {
-  sendMessage: (message: string) => {},
-  receiveMessage: (callback: (message: string) => void) => {},
   sendMessage: (message: any) => {},
   receiveMessage: (callback: any) => {},
+<<<<<<< HEAD
 <<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -171,3 +173,6 @@ export default MessageChannelHandler;
 =======
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+};
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

@@ -34,19 +34,25 @@ export function usePoints() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import { useEffect,useState,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; import { useAuth } from '@/hooks/useAuth'; from '@/types/points'; export function usePoints() {; const { user } = useAuth(); const [ledger,setLedger] = useState<PointsLedgerEntry[]>([]); const [balance,setBalance] = useState(0); const [loading,setLoading] = useState(true); const fetchLedger = useCallback(async () => { if(!user?.id) {; setLedger([]); setBalance(0); setLoading(false); return;,} setLoading(true); const { data,error } = await supabase; .from('points_ledger'); .select('*'); .eq('user_id',user.id); .order('created_at',{ ascending: 'false' }); if(!error && data) {; const entries = data as PointsLedgerEntry[]; setLedger(entries); const total = entries.reduce((sum,e) => sum + e.delta,0); setBalance(total);,} else if(error) {; console.error("Error fetching ledger:",error); setLedger([]); setBalance(0)} setLoading(false);,},[user?.id]); useEffect(() => {}};,},[]);,[]); fetchLedger(); const interval = setInterval(fetchLedger,30000); return () => clearInterval(interval)},[fetchLedger]); return { ledger,balance,loading,fetchLedger };,}
     return () => clearInterval(interval); // Cleanup interval on unmount}, [fetchLedger]); // Added fetchLedger to dependency array;
   return { ledger, balance, loading, fetchLedger }}
 import { useEffect,useState,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; import { useAuth } from '@/hooks/useAuth'; from '@/types/points'; export function usePoints() {; const { user } = useAuth(); const [ledger,setLedger] = useState<PointsLedgerEntry[]>([]); const [balance,setBalance] = useState(0); const [loading,setLoading] = useState(true); const fetchLedger = useCallback(async () => { if(!user?.id) {; setLedger([]); setBalance(0); setLoading(false); return,} setLoading(true); const { data,error } = await supabase; .from('points_ledger'); .select('*'); .eq('user_id',user.id); .order('created_at',{ ascending: false }); if(!error && data) {; const entries = data as PointsLedgerEntry[]; setLedger(entries); const total = entries.reduce((sum,e) => sum + e.delta,0); setBalance(total),} else if(error) {; console.error("Error fetching ledger:",error); setLedger([]); setBalance(0)} setLoading(false),},[user?.id]); useEffect(() => {}},},[]),[]); fetchLedger(); const interval = setInterval(fetchLedger,30000); return () => clearInterval(interval)},[fetchLedger]); return { ledger,balance,loading,fetchLedger },}
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     return () => clearInterval(interval); // Cleanup interval on unmount,
 =======
 import { useEffect,useState,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; import { useAuth } from '@/hooks/useAuth'; from '@/types/points'; export function usePoints() {; const { user } = useAuth(); const [ledger,setLedger] = useState<PointsLedgerEntry[]>([]); const [balance,setBalance] = useState(0); const [loading,setLoading] = useState(true); const fetchLedger = useCallback(async () => { if(!user?.id) {; setLedger([]); setBalance(0); setLoading(false); return;,} setLoading(true); const { data,error } = await supabase; .from('points_ledger'); .select('*'); .eq('user_id',user.id); .order('created_at',{ ascending: 'false' }); if(!error && data) {; const entries = data as PointsLedgerEntry[]; setLedger(entries); const total = entries.reduce((sum,e) => sum + e.delta,0); setBalance(total);,} else if(error) {; console.error("Error fetching ledger:",error); setLedger([]); setBalance(0)} setLoading(false);,},[user?.id]); useEffect(() => {}};,},[]);,[]); fetchLedger(); const interval = setInterval(fetchLedger,30000); return () => clearInterval(interval)},[fetchLedger]); return { ledger,balance,loading,fetchLedger };,}
@@ -71,6 +77,7 @@ ursor/add-new-services-and-deploy-updates-0462
 <<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -91,3 +98,5 @@ import { useEffect,useState,useCallback } from 'react'; import { supabase } from
 =======
 ursor/fix-syntax-push-and-merge-to-main-40de=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

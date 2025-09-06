@@ -15,6 +15,7 @@ function fixImportSyntax(filePath) {
     });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Fix missing commas in import statements
 
     // Fix missing commas in import statements;
@@ -22,6 +23,8 @@ function fixImportSyntax(filePath) {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 
 
@@ -41,6 +44,7 @@ function fixImportSyntax(filePath) {
         .split(/\s+/)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         .filter((item) => item.trim());
         .join(", ");
@@ -52,6 +56,8 @@ function fixImportSyntax(filePath) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     // Fix function parameter syntax errors
     content = content.replace(
       /function\s*\(([^)]+)\)\s*{/g

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/src.disabled/components/PasswordStrengthMeter.jsx
 <<<<<<< HEAD:backup-merge-conflicts/PasswordStrengthMeter.jsx.backup
 :backup-merge-conflicts/PasswordStrengthMeter.jsx.backup
 import { ; calculatePasswordStrength,getStrengthLabel } from \'@/utils/passwordStrength\';\"export function PasswordStrengthMeter({ password }) {\" const score = calculatePasswordStrength(password); const value = (score / 4) * 100; const label = getStrengthLabel(score); return (); <div className=\"mt-2\" aria-live=\"polite\">\" <Progress value={value} className=\"h-2\" />\" <p className=\"text-xs text-zion-slate-light mt-1\">{label}</p>\" </div>\" )} \";\"import { ; calculatePasswordStrength,getStrengthLabel } from '@/utils/passwordStrength';"export function PasswordStrengthMeter({ password }) {" const score = calculatePasswordStrength(password); const value = (score / 4) * 100; const label = getStrengthLabel(score); return (); <div className="mt-2" aria-live="polite">" <Progress value={value} className="h-2" />" <p className="text-xs text-zion-slate-light mt-1">{label}</p>" </div>" )} ";"""
@@ -12,3 +13,6 @@ const { ; calculatePasswordStrength,getStrengthLabel } from "@/utils/passwordStr
 import { ; calculatePasswordStrength,getStrengthLabel } from '@/utils/passwordStrength';"export function PasswordStrengthMeter({ password }) {" const score = calculatePasswordStrength(password); const value = (score / 4) * 100; const label = getStrengthLabel(score); return (); <div className="mt-2" aria-live="polite">" <Progress value={value} className="h-2" />" <p className="text-xs text-zion-slate-light mt-1">{label}</p>" </div>" )} ";"""
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:src.disabled/components/PasswordStrengthMeter.jsx
+=======
+import { ; calculatePasswordStrength,getStrengthLabel } from '@/utils/passwordStrength';"export function PasswordStrengthMeter({ password }) {" const score = calculatePasswordStrength(password); const value = (score / 4) * 100; const label = getStrengthLabel(score); return (); <div className="mt-2" aria-live="polite">" <Progress value={value} className="h-2" />" <p className="text-xs text-zion-slate-light mt-1">{label}</p>" </div>" )} ";"""
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:src.disabled/components/PasswordStrengthMeter.jsx

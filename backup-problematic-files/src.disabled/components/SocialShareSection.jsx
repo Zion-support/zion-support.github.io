@@ -1,4 +1,5 @@
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/SocialShareSection.jsx
+<<<<<<< HEAD:backup-problematic-files/src.disabled/components/SocialShareSection.jsx
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/SocialShareSection.jsx
 "export": function SocialShareSection () { const socialPlatforms = [' { name: 'Twitter,',"icon": ',"url": ',"https": '''";",;"]"}
@@ -42,3 +43,9 @@ export: function SocialShareSection () { const socialPlatforms = [ { name: "Twit
 =======
 "export": function SocialShareSection () { const socialPlatforms = [' { name: 'Twitter,',"icon": ',"url": ',"https": '''";",;"]"}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/components/SocialShareSection.jsx
+=======
+"export": function SocialShareSection () { const socialPlatforms = [' { name: 'Twitter,',"icon": ',"url": ',"https": '''";",;"]"}
+"export\": function SocialShareSection () { const socialPlatforms = [ { name: \'Twitter,\',\"icon\": \',\"url\": \',\"https\": \''\";\",;
+export: function SocialShareSection () { const socialPlatforms = [ { name: "Twitter,",icon: ",url: ",https: """;",;'"'"
+"export": function SocialShareSection () { const socialPlatforms = [' { name: 'Twitter,',"icon": ',"url": ',"https": '''";",;"]"}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:src.disabled/components/SocialShareSection.jsx

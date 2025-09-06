@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default OptimizedImage;
 =======
@@ -39,6 +40,10 @@ import Image from "next/image";
 =======
 >>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React from "react";
+import Image from "next/image";
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 interface OptimizedImageProps {
   src: string;
   alt: string;
@@ -58,6 +63,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   quality = 75,
 }) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -65,12 +71,15 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   return (
     <Image
       src={src}
       alt={alt}
       width={width}
       height={height}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -100,6 +109,8 @@ export default OptimizedImage;
 export default OptimizedImage;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
       className={className}
       priority={priority}
       quality={quality}
@@ -109,7 +120,9 @@ export default OptimizedImage;
   );
 };
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 export default OptimizedImage;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -123,3 +136,5 @@ export default OptimizedImage;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

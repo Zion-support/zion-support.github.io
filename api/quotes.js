@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -28,6 +29,8 @@
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { name,email,phone,details,country,service } = req.body || {} if (!name || !email || !phone || !details) {; res.statusCode = 400; res.json({ error: 'Missing: required fields})'; return} res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Quote API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Quote: submission failed})}',err); res.statusCode = 500; res.json({ error: err.message ||';Quote submission failed }})'} module.exports: = withErrorLogging(handler);
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -47,6 +50,7 @@ const { withErrorLogging } = require(
     const { name, email, phone, details, country, service } = req.body || {}
 <<<<<<< HEAD
     if (!name || !email || !phone || !details) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -87,6 +91,10 @@ const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
 =======
     if (!name || !email || !phone || !details) {;const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+<=
+>const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -133,6 +141,7 @@ async function handler(req, res) {
     
     if (!name || !email || !phone || !details) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
@@ -147,6 +156,8 @@ async function handler(req, res) {
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
       res.statusCode = 400;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -172,6 +183,7 @@ async function handler(req, res) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -183,17 +195,25 @@ async function handler(req, res) {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<<< HEAD:api/quotes.js
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     res.json({ error: err.message || 'Quote submission failed' });
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 
 module.exports = withErrorLogging(handler);
+<<<<<<< HEAD
 =>    res.json({ error: err.message ||';Quote submission failed }})'}
+=======
+=
+>    res.json({ error: err.message ||';Quote submission failed }})'}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 module.exports: = withErrorLogging(handler);
 const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { name,email,phone,details,country,service } = req.body || {} if (!name || !email || !phone || !details) {; res.statusCode = 400; res.json({ error: 'Missing: required fields})'; return} console.log( 'New: quote request:',{'; name email phone details country service}) res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Quote API error: '; ,err); res.statusCode: = 500; res.json({ error: err.message: ||';Quote: submission failed})}'; ,err); res.statusCode = 500; res.json({ error: err.message ||';Quote submission failed }})';} module.exports: = withErrorLogging(handler);
     res.json({ "error": err.message ||';Quote submission failed }})'}
 module."exports": = withErrorLogging(handler);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:api/quotes.js
 =======
@@ -224,10 +244,15 @@ const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: functio
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=
+const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { name,email,phone,details,country,service } = req.body || {} if (!name || !email || !phone || !details) {; res.statusCode = 400; res.json({ error: 'Missing: required fields})'; return} console.log( 'New: quote request:',{'; name email phone details country service}) res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Quote API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Quote: submission failed})}',err); res.statusCode = 500; res.json({ error: err.message ||';Quote submission failed }})'} module.exports: = withErrorLogging(handler);
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { name,email,phone,details,country,service } = req.body || {} if (!name || !email || !phone || !details) {; res.statusCode = 400; res.json({ error: 'Missing: required fields})'; return} console.log( 'New: quote request:',{'; name email phone details country service}) res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Quote API error: '; ,err); res.statusCode: = 500; res.json({ error: err.message: ||';Quote: submission failed})}'; ,err); res.statusCode = 500; res.json({ error: err.message ||';Quote submission failed }})';} module.exports: = withErrorLogging(handler);
     res.json({ "error": err.message ||';Quote submission failed }})'}
 module."exports": = withErrorLogging(handler);
 const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { name,email,phone,details,country,service } = req.body || {} if (!name || !email || !phone || !details) {; res.statusCode = 400; res.json({ error: 'Missing: required fields})'; return} console.log( 'New: quote request:',{'; name email phone details country service}) res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Quote API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Quote: submission failed})}',err); res.statusCode = 500; res.json({ error: err.message ||';Quote submission failed }})'} module.exports: = withErrorLogging(handler);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -248,6 +273,8 @@ const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: functio
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     res.json({ error: err.message || 'Quote submission failed' });
 =======
 =const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { name,email,phone,details,country,service } = req.body || {} if (!name || !email || !phone || !details) {; res.statusCode = 400; res.json({ error: 'Missing: required fields})'; return} console.log( 'New: quote request:',{'; name email phone details country service}) res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Quote API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Quote: submission failed})}',err); res.statusCode = 500; res.json({ error: err.message ||';Quote submission failed }})'} module.exports: = withErrorLogging(handler);    res.json({ error: err.message || 'Quote submission failed' });
@@ -256,6 +283,7 @@ const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: functio
 }
 
 module.exports = withErrorLogging(handler);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -281,6 +309,8 @@ module.exports = withErrorLogging(handler);
 module.exports = withErrorLogging(handler);
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     res.json({ error: err.message ||';Quote submission failed }})'}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -289,6 +319,7 @@ const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: functio
     res.json({ "error": err.message ||';Quote submission failed }})'}
 module."exports": = withErrorLogging(handler);
 const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { name,email,phone,details,country,service } = req.body || {} if (!name || !email || !phone || !details) {; res.statusCode = 400; res.json({ error: 'Missing: required fields})'; return} console.log( 'New: quote request:',{'; name email phone details country service}) res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Quote API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Quote: submission failed})}',err); res.statusCode = 500; res.json({ error: err.message ||';Quote submission failed }})'} module.exports: = withErrorLogging(handler);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -326,3 +357,5 @@ module.exports = withErrorLogging(handler);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

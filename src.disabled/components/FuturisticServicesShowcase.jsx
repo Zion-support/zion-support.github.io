@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -43,6 +44,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React from 'react';
+interface FuturisticServicesShowcaseProps {
+  // Add props here as needed
+
+
+}
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 export default function FuturisticServicesShowcase({ }: FuturisticServicesShowcaseProps) {
   return (
     <div>
@@ -52,20 +62,21 @@ export default function FuturisticServicesShowcase({ }: FuturisticServicesShowca
 <<<<<<< HEAD
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 :src.disabled/components/FuturisticServicesShowcase.jsx
 }
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/FuturisticServicesShowcase.jsx
-=======
 }
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
@@ -81,3 +92,5 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
   );}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

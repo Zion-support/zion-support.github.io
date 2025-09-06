@@ -220,6 +220,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 
@@ -308,3 +309,6 @@ code {
   }
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

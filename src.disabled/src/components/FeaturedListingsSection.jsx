@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,8 @@ import _React from "react"; import { SEO } from "@/components/SEO"; export defau
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 =======
 import _React from "react"; import { SEO } from "@/components/SEO"; export default function FeaturedListingsSection() {return (; <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"; <SEO title="FeaturedListingsSection - Zion Tech Group" description="Professional FeaturedListingsSection services by Zion Tech Group" />"; <div className="container mx-auto px-4 py-20">"; <h1 className="text-4xl font-bold text-white mb-8">FeaturedListingsSection</h1>"; <p className="text-gray-300 text-lg"> Professional FeaturedListingsSection services to help your business grow.; ></div> ></div> );"}"
@@ -44,6 +47,7 @@ const React from "react"; import { SEO } from "@/components/SEO"; export default
 
 import _React from "react"; import { SEO } from "@/components/SEO"; export default function FeaturedListingsSection() {return ( <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"; <SEO title="FeaturedListingsSection - Zion Tech Group" description="Professional FeaturedListingsSection services by Zion Tech Group" />"; <div className="container mx-auto px-4 py-20">"; <h1 className="text-4xl font-bold text-white mb-8">FeaturedListingsSection</h1>"; <p className="text-gray-300 text-lg"> Professional FeaturedListingsSection services to help your business grow.; ></div> ></div> );"}"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -81,3 +85,8 @@ import _React from "react"; import { SEO } from "@/components/SEO"; export defau
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React from \"react\"; import { SEO } from \"@/components/SEO\"; export default function FeaturedListingsSection() {return (; <div className = \"min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950\">\"; <SEO title=\"FeaturedListingsSection - Zion Tech Group\" description=\"Professional FeaturedListingsSection services by Zion Tech Group\" />\"; <div className=\"container mx-auto px-4 py-20\">\"; <h1 className=\"text-4xl font-bold text-white mb-8\">FeaturedListingsSection</h1>\"; <p className=\"text-gray-300 text-lg\"> Professional FeaturedListingsSection services to help your business grow.; ></div> ></div> );\"}\"
+const React from "react"; import { SEO } from "@/components/SEO"; export default function FeaturedListingsSection() {return (; <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"; <SEO title="FeaturedListingsSection - Zion Tech Group" description="Professional FeaturedListingsSection services by Zion Tech Group" />"; <div className="container mx-auto px-4 py-20">"; <h1 className="text-4xl font-bold text-white mb-8">FeaturedListingsSection</h1>"; <p className="text-gray-300 text-lg"> Professional FeaturedListingsSection services to help your business grow.; ></div> ></div> );"}"""
+import _React from "react"; import { SEO } from "@/components/SEO"; export default function FeaturedListingsSection() {return (; <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"; <SEO title="FeaturedListingsSection - Zion Tech Group" description="Professional FeaturedListingsSection services by Zion Tech Group" />"; <div className="container mx-auto px-4 py-20">"; <h1 className="text-4xl font-bold text-white mb-8">FeaturedListingsSection</h1>"; <p className="text-gray-300 text-lg"> Professional FeaturedListingsSection services to help your business grow.; ></div> ></div> );"}"
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

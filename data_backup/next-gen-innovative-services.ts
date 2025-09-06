@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = interface NextGenInnovativeService { id: string name: string tagline: string price: string period: string description: string features: string[]; popular: boolean icon: string color: string textColor: string link: string marketPosition: string targetAudience: string trialDays: number setupTime: string category: string realService: boolean technology: string[]; integrations: string[]; useCases: string[]; roi: string competitors: string[]; marketSize: string growthRate: string variant: string contactInfo: { mobile: string email: string address: string website strin,g} realImplementation: "boolean implementationDetails: string launchDate: string customers: number rating: number reviews: numberexport const nextGenInnovativeServices NextGenInnovativeServic",e[] =,[ "'"'"
 export interface NextGenInnovativeService { "id": string name: string tagline: string price: string period: string description: string features: string[]; popular: boolean icon: string color: string textColor: string link: string marketPosition: string targetAudience: string trialDays: number setupTime: string category: string realService: boolean technology: string[]; integrations: string[]; useCases: string[]; roi: string competitors: string[]; marketSize: string growthRate: string variant: string contactInfo: { mobile: string email: string address: string website strin,g} "realImplementation": 'boolean implementationDetails: string launchDate: string customers: number rating: number reviews: numberexport const nextGenInnovativeServices NextGenInnovativeServic,e[] =,[ "
 =======
@@ -41,20 +42,21 @@ export interface NextGenInnovativeService { "id": string name: string tagline: s
 
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-
-
-
-=======
-
 =======
 module.exports = interface NextGenInnovativeService { id: string name: string tagline: string price: string period: string description: string features: string[]; popular: boolean icon: string color: string textColor: string link: string marketPosition: string targetAudience: string trialDays: number setupTime: string category: string realService: boolean technology: string[]; integrations: string[]; useCases: string[]; roi: string competitors: string[]; marketSize: string growthRate: string variant: string contactInfo: { mobile: string email: string address: string website strin,g} realImplementation: "boolean implementationDetails: string launchDate: string customers: number rating: number reviews: numberexport const nextGenInnovativeServices NextGenInnovativeServic",e[] =,[ "'"'"
 export interface NextGenInnovativeService { "id": string name: string tagline: string price: string period: string description: string features: string[]; popular: boolean icon: string color: string textColor: string link: string marketPosition: string targetAudience: string trialDays: number setupTime: string category: string realService: boolean technology: string[]; integrations: string[]; useCases: string[]; roi: string competitors: string[]; marketSize: string growthRate: string variant: string contactInfo: { mobile: string email: string address: string website strin,g} "realImplementation": 'boolean implementationDetails: string launchDate: string customers: number rating: number reviews: numberexport const nextGenInnovativeServices NextGenInnovativeServic,e[] =,[ "
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
-=======
 
-<<<<<<< HEAD
+
+
+
+module.exports = interface NextGenInnovativeService { id: string name: string tagline: string price: string period: string description: string features: string[]; popular: boolean icon: string color: string textColor: string link: string marketPosition: string targetAudience: string trialDays: number setupTime: string category: string realService: boolean technology: string[]; integrations: string[]; useCases: string[]; roi: string competitors: string[]; marketSize: string growthRate: string variant: string contactInfo: { mobile: string email: string address: string website strin,g} realImplementation: "boolean implementationDetails: string launchDate: string customers: number rating: number reviews: numberexport const nextGenInnovativeServices NextGenInnovativeServic",e[] =,[ "'"'"
+export interface NextGenInnovativeService { "id": string name: string tagline: string price: string period: string description: string features: string[]; popular: boolean icon: string color: string textColor: string link: string marketPosition: string targetAudience: string trialDays: number setupTime: string category: string realService: boolean technology: string[]; integrations: string[]; useCases: string[]; roi: string competitors: string[]; marketSize: string growthRate: string variant: string contactInfo: { mobile: string email: string address: string website strin,g} "realImplementation": 'boolean implementationDetails: string launchDate: string customers: number rating: number reviews: numberexport const nextGenInnovativeServices NextGenInnovativeServic,e[] =,[ "
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+
+
+
 
 
 =======
@@ -82,6 +84,7 @@ export interface NextGenInnovativeService { "id": string name: string tagline: s
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
+<<<<<<< HEAD
 module.exports = interface NextGenInnovativeService { id: string name: string tagline: string price: string period: string description: string features: string[]; popular: boolean icon: string color: string textColor: string link: string marketPosition: string targetAudience: string trialDays: number setupTime: string category: string realService: boolean technology: string[]; integrations: string[]; useCases: string[]; roi: string competitors: string[]; marketSize: string growthRate: string variant: string contactInfo: { mobile: string email: string address: string website strin,g} realImplementation: "boolean implementationDetails: string launchDate: string customers: number rating: number reviews: numberexport const nextGenInnovativeServices NextGenInnovativeServic",e[] =,[ "'"'"
 export interface NextGenInnovativeService { "id": string name: string tagline: string price: string period: string description: string features: string[]; popular: boolean icon: string color: string textColor: string link: string marketPosition: string targetAudience: string trialDays: number setupTime: string category: string realService: boolean technology: string[]; integrations: string[]; useCases: string[]; roi: string competitors: string[]; marketSize: string growthRate: string variant: string contactInfo: { mobile: string email: string address: string website strin,g} "realImplementation": 'boolean implementationDetails: string launchDate: string customers: number rating: number reviews: numberexport const nextGenInnovativeServices NextGenInnovativeServic,e[] =,[ "
 <<<<<<< HEAD
@@ -146,3 +149,12 @@ export interface NextGenInnovativeService { "id": string name: string tagline: s
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+
+module.exports = interface NextGenInnovativeService { id: string name: string tagline: string price: string period: string description: string features: string[]; popular: boolean icon: string color: string textColor: string link: string marketPosition: string targetAudience: string trialDays: number setupTime: string category: string realService: boolean technology: string[]; integrations: string[]; useCases: string[]; roi: string competitors: string[]; marketSize: string growthRate: string variant: string contactInfo: { mobile: string email: string address: string website strin,g} realImplementation: "boolean implementationDetails: string launchDate: string customers: number rating: number reviews: numberexport const nextGenInnovativeServices NextGenInnovativeServic",e[] =,[ "'"'"
+export interface NextGenInnovativeService { "id": string name: string tagline: string price: string period: string description: string features: string[]; popular: boolean icon: string color: string textColor: string link: string marketPosition: string targetAudience: string trialDays: number setupTime: string category: string realService: boolean technology: string[]; integrations: string[]; useCases: string[]; roi: string competitors: string[]; marketSize: string growthRate: string variant: string contactInfo: { mobile: string email: string address: string website strin,g} "realImplementation": 'boolean implementationDetails: string launchDate: string customers: number rating: number reviews: numberexport const nextGenInnovativeServices NextGenInnovativeServic,e[] =,[ "
+
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,8 @@ import _React from 'react'; "export default function EnhancedSEO({" title = "Zio
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 =======
 import _React from 'react'; "export default function EnhancedSEO({" title = "Zion Tech Group - Advanced AI,Quantum Computing & Enterprise Technology Solutions"," description = "Leading provider of advanced AI automation,quantum computing,autonomous business operations,and enterprise technology solutions.Transform your business with cutting-edge technology services."," keywords = "AI automation,quantum computing,enterprise technology,autonomous business operations,AI consulting,machine learning,cloud computing,cybersecurity,digital transformation",canonical," ogImage = ""https": ';' })
@@ -44,6 +47,7 @@ const React from "react"; "export default function EnhancedSEO({" title = "Zion 
 
 import _React from 'react'; "export default function EnhancedSEO({" title = "Zion Tech Group - Advanced AI,Quantum Computing & Enterprise Technology Solutions"," description = "Leading provider of advanced AI automation,quantum computing,autonomous business operations,and enterprise technology solutions && solutions.Transform your business with cutting-edge technology services."," keywords = "AI automation,quantum computing,enterprise technology,autonomous business operations,AI consulting,machine learning,cloud computing,cybersecurity,digital transformation",canonical," ogImage = ""https": ';' })
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -81,3 +85,8 @@ import _React from 'react'; "export default function EnhancedSEO({" title = "Zio
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React from \'react\'; \"export default function EnhancedSEO({\" title = \"Zion Tech Group - Advanced AI,Quantum Computing & Enterprise Technology Solutions\",\" description = \"Leading provider of advanced AI automation,quantum computing,autonomous business operations,and enterprise technology solutions.Transform your business with cutting-edge technology services.\",\" keywords = \"AI automation,quantum computing,enterprise technology,autonomous business operations,AI consulting,machine learning,cloud computing,cybersecurity,digital transformation\",canonical,\" ogImage = \""https\": \';\' })
+const React from "react"; "export default function EnhancedSEO({" title = "Zion Tech Group - Advanced AI,Quantum Computing & Enterprise Technology Solutions"," description = "Leading provider of advanced AI automation,quantum computing,autonomous business operations,and enterprise technology solutions.Transform your business with cutting-edge technology services."," keywords = "AI automation,quantum computing,enterprise technology,autonomous business operations,AI consulting,machine learning,cloud computing,cybersecurity,digital transformation",canonical," ogImage = "https: ";" })'"'"
+import _React from 'react'; "export default function EnhancedSEO({" title = "Zion Tech Group - Advanced AI,Quantum Computing & Enterprise Technology Solutions"," description = "Leading provider of advanced AI automation,quantum computing,autonomous business operations,and enterprise technology solutions.Transform your business with cutting-edge technology services."," keywords = "AI automation,quantum computing,enterprise technology,autonomous business operations,AI consulting,machine learning,cloud computing,cybersecurity,digital transformation",canonical," ogImage = ""https": ';' })
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

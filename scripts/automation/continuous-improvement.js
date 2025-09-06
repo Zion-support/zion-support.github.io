@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 #!/usr/bin/env node,"}),"}) import { execSync } from,"}),"}) 'child_process',"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) const __dirname = path.dirname(__filename),"}),"}) '🚀 Starting continuous improvement automation...'),"}),"}) ,"}),"}) '🚀 Starting continuous improvement automation...'),"}),"}) const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000; async function runContinuousImprovement() {,"}),"}) try {,"}),"}) 📋 Checking for pending improvements...'),"}),"}) '🔍 Running quality checks...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run lint',{ stdio: 'inherit }),"}),"}) ✅ Linting completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Linting issues found but continuing...'),"}),"}) '🧪 Running tests...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm test',{ stdio: 'inherit }),"}),"}) ✅ Tests completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Tests failed but continuing...'),"}),"}) '📦 Checking for outdated dependencies...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm outdated',{ stdio: 'inherit }),"}),"}) } catch (error) {,"}),"}) ✅ All dependencies are up to date'),"}),"}) '📊 Generating performance report...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run build',{ stdio: 'inherit }),"}),"}) ✅ Build completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Build failed but continuing...'),"}),"}) '📦 Analyzing bundle size...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'node scripts/analyze-bundle.js',{ stdio: 'inherit }),"}),"}) ✅ Bundle analysis completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Bundle analysis failed but continuing...'),"}),"}) '📋 Checking for pending improvements...'),"}),"}) '🔍 Running quality checks...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run lint',{ stdio: 'inherit }),"}),"}) ✅ Linting completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Linting issues found but continuing...'),"}),"}) }"}),"}) '🧪 Running tests...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm test',{ stdio: 'inherit }),"}),"}) ✅ Tests completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Tests failed but continuing...'),"}),"}) }"}),"}) '📦 Checking for outdated dependencies...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm outdated',{ stdio: 'inherit }),"}),"}) } catch (error) {,"}),"}) ✅ All dependencies are up to date'),"}),"}) }"}),"}) '📊 Generating performance report...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run build',{ stdio: 'inherit }),"}),"}) ✅ Build completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Build failed but continuing...'),"}),"}) }"}),"}) '📦 Analyzing bundle size...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'node scripts/analyze-bundle.js',{ stdio: 'inherit }),"}),"}) ✅ Bundle analysis completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Bundle analysis failed but continuing...'),"}),"}) }"}),"}) ,"}),"}) status: 'completed,"}),"}) },"}),"}) ,"}),"}) const reportPath = path.join(process.cwd(),,"}),"}) 'continuous-improvement-report.json'),"}),"}) fs.writeFileSync(reportPath,JSON.stringify(report,null,2)),"}),"}) '✅ Continuous improvement completed successfully'),"}),"}) } catch (error) {,"}),"}) '❌ Continuous improvement failed:',error.message),"}),"}) '✅ Continuous improvement completed successfully'),"}),"}) } catch (error) {,"}),"}) '❌ Continuous improvement failed: ,"}),"}) ,error.message),"}),"}) ,"}),"}) 't exit,just log the error and continue,"}),"}) async function runContinuous() {,"}),"}) ,"}),"}) await runContinuousImprovement(),"}),"}) setInterval(async () => {,"}),"}) await runContinuousImprovement(),"}),"}) },AUTOMATION_INTERVAL),"}),"}) }"}),"}) process.on('SIGINT,"}),"}) ',() => {,"}),"}) '),"}),"}) ,"}),"}) process.on('SIGINT,"}),"}) ',() => {,"}),"}) '),"}),"}) process.exit(0),"}),"}) }),"}),"}) process.on('SIGTERM,"}),"}) ',() => {,"}),"}) '),"}),"}) ,"}),"}) '),"}),"}) process.exit(0),"}),"}) }),"}),"}) runContinuous().catch(error => {,"}),"}) ,"}),"}) process.exit(1),"}),"}) }),"}),"}) }}}}}}}}"}),"}) const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000 async function runContinuousImprovement() { try {',📋 Checking for pending improvements...`); `🔍 Running quality checks...`); try { execSync( `npm run lint',{ stdio: 'inherit }) ✅ Linting completed')} catch (error) { '⚠️ Linting issues found but continuing...'); '🧪 Running tests...'); try { execSync( 'npm test',{ stdio: 'inherit }) ✅ Tests completed')} catch (error) { '⚠️ Tests failed but continuing...'); '📦 Checking for outdated dependencies...'); try { execSync( 'npm outdated',{ stdio: 'inherit })} catch (error) { ✅ All dependencies are up to date'); '📊 Generating performance report...'); try { execSync( 'npm run build',{ stdio: 'inherit }) ✅ Build completed')} catch (error) { '⚠️ Build failed but continuing...'); '📦 Analyzing bundle size...'); try { execSync( 'node scripts/analyze-bundle.js',{ stdio: `inherit }) ✅ Bundle analysis completed`)} catch (error) { `⚠️ Bundle analysis failed but continuing...`); `📋 Checking for pending improvements...`); `🔍 Running quality checks...`); try { execSync(','npm run lint',{ stdio: 'inherit }); ✅ Linting completed')} catch (error) { '⚠️ Linting issues found but continuing...') } '🧪 Running tests...'); try { execSync(' 'npm test',{ stdio: 'inherit }); ✅ Tests completed')} catch (error) { '⚠️ Tests failed but continuing...') } '📦 Checking for outdated dependencies...'); try { execSync( 'npm outdated',{ stdio: 'inherit })} catch (error) { ✅ All dependencies are up to date') } '📊 Generating performance report...'); try { execSync(' 'npm run build',{ stdio: 'inherit }); ✅ Build completed')} catch (error) { '⚠️ Build failed but continuing...') } '📦 Analyzing bundle size...'); try { execSync(' 'node scripts/analyze-bundle.js',{ stdio: 'inherit }); ✅ Bundle analysis completed')} catch (error) { '⚠️ Bundle analysis failed but continuing...`) } status: `completed} '⚠️ Bundle analysis failed but continuing...')} status: 'completed} ; const reportPath = path.join(process.cwd(),fs.writeFileSync(reportPath,JSON.stringify(report,null,2)); '✅ Continuous: improvement completed successfully')} catch (error) {'; '❌ Continuous: improvement failed:',error.message)';; '✅ Continuous: improvement completed successfully')} catch (error) {'; '❌ Continuous: improvement failed: ',error.message); async: function runContinuous() { await: runContinuousImprovement(); setInterval(async: () => { await runContinuousImprovement()},AUTOMATION_INTERVAL); process.on('SIGINT';',() => {'; process.on('SIGINT';',() => {'; process.exit(0)}) process.on('SIGTERM';',() => {'; process.exit(0)}) runContinuous().catch(error: => { fs.writeFileSync(reportPath,JSON.stringify(report,null,2)); '✅ Continuous improvement completed successfully')} catch (error) { '❌ Continuous improvement failed:',error.message); '✅ Continuous improvement completed successfully')} catch (error) { '❌ Continuous improvement failed: error.message); `t exit,just log the error and continue; async function runContinuous() { await runContinuousImprovement(); setInterval(async () => { await runContinuousImprovement()},AUTOMATION_INTERVAL);` process.on(`SIGINT; `,() => { `); process.on(`SIGINT; `,() => { `); process.exit(0)}) process.on('SIGINT',() => {' process.exit(0)}); process.on('SIGTERM',() => {' process.exit(0)}); runContinuous().catch(error => {' process.exit(1)})}}}}}}}}
 =======
@@ -23,6 +24,9 @@
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+#!/usr/bin/env node,"}),"}) import { execSync } from,"}),"}) 'child_process',"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) const __dirname = path.dirname(__filename),"}),"}) '🚀 Starting continuous improvement automation...'),"}),"}) ,"}),"}) '🚀 Starting continuous improvement automation...'),"}),"}) const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000; async function runContinuousImprovement() {,"}),"}) try {,"}),"}) 📋 Checking for pending improvements...'),"}),"}) '🔍 Running quality checks...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run lint',{ stdio: 'inherit }),"}),"}) ✅ Linting completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Linting issues found but continuing...'),"}),"}) '🧪 Running tests...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm test',{ stdio: 'inherit }),"}),"}) ✅ Tests completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Tests failed but continuing...'),"}),"}) '📦 Checking for outdated dependencies...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm outdated',{ stdio: 'inherit }),"}),"}) } catch (error) {,"}),"}) ✅ All dependencies are up to date'),"}),"}) '📊 Generating performance report...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run build',{ stdio: 'inherit }),"}),"}) ✅ Build completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Build failed but continuing...'),"}),"}) '📦 Analyzing bundle size...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'node scripts/analyze-bundle.js',{ stdio: 'inherit }),"}),"}) ✅ Bundle analysis completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Bundle analysis failed but continuing...'),"}),"}) '📋 Checking for pending improvements...'),"}),"}) '🔍 Running quality checks...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run lint',{ stdio: 'inherit }),"}),"}) ✅ Linting completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Linting issues found but continuing...'),"}),"}) }"}),"}) '🧪 Running tests...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm test',{ stdio: 'inherit }),"}),"}) ✅ Tests completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Tests failed but continuing...'),"}),"}) }"}),"}) '📦 Checking for outdated dependencies...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm outdated',{ stdio: 'inherit }),"}),"}) } catch (error) {,"}),"}) ✅ All dependencies are up to date'),"}),"}) }"}),"}) '📊 Generating performance report...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run build',{ stdio: 'inherit }),"}),"}) ✅ Build completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Build failed but continuing...'),"}),"}) }"}),"}) '📦 Analyzing bundle size...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'node scripts/analyze-bundle.js',{ stdio: 'inherit }),"}),"}) ✅ Bundle analysis completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Bundle analysis failed but continuing...'),"}),"}) }"}),"}) ,"}),"}) status: 'completed,"}),"}) },"}),"}) ,"}),"}) const reportPath = path.join(process.cwd(),,"}),"}) 'continuous-improvement-report.json'),"}),"}) fs.writeFileSync(reportPath,JSON.stringify(report,null,2)),"}),"}) '✅ Continuous improvement completed successfully'),"}),"}) } catch (error) {,"}),"}) '❌ Continuous improvement failed:',error.message),"}),"}) '✅ Continuous improvement completed successfully'),"}),"}) } catch (error) {,"}),"}) '❌ Continuous improvement failed: ,"}),"}) ,error.message),"}),"}) ,"}),"}) 't exit,just log the error and continue,"}),"}) async function runContinuous() {,"}),"}) ,"}),"}) await runContinuousImprovement(),"}),"}) setInterval(async () => {,"}),"}) await runContinuousImprovement(),"}),"}) },AUTOMATION_INTERVAL),"}),"}) }"}),"}) process.on('SIGINT,"}),"}) ',() => {,"}),"}) '),"}),"}) ,"}),"}) process.on('SIGINT,"}),"}) ',() => {,"}),"}) '),"}),"}) process.exit(0),"}),"}) }),"}),"}) process.on('SIGTERM,"}),"}) ',() => {,"}),"}) '),"}),"}) ,"}),"}) '),"}),"}) process.exit(0),"}),"}) }),"}),"}) runContinuous().catch(error => {,"}),"}) ,"}),"}) process.exit(1),"}),"}) }),"}),"}) }}}}}}}}"}),"}) const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000 async function runContinuousImprovement() { try {',📋 Checking for pending improvements...`); `🔍 Running quality checks...`); try { execSync( `npm run lint',{ stdio: 'inherit }) ✅ Linting completed')} catch (error) { '⚠️ Linting issues found but continuing...'); '🧪 Running tests...'); try { execSync( 'npm test',{ stdio: 'inherit }) ✅ Tests completed')} catch (error) { '⚠️ Tests failed but continuing...'); '📦 Checking for outdated dependencies...'); try { execSync( 'npm outdated',{ stdio: 'inherit })} catch (error) { ✅ All dependencies are up to date'); '📊 Generating performance report...'); try { execSync( 'npm run build',{ stdio: 'inherit }) ✅ Build completed')} catch (error) { '⚠️ Build failed but continuing...'); '📦 Analyzing bundle size...'); try { execSync( 'node scripts/analyze-bundle.js',{ stdio: `inherit }) ✅ Bundle analysis completed`)} catch (error) { `⚠️ Bundle analysis failed but continuing...`); `📋 Checking for pending improvements...`); `🔍 Running quality checks...`); try { execSync(','npm run lint',{ stdio: 'inherit }); ✅ Linting completed')} catch (error) { '⚠️ Linting issues found but continuing...') } '🧪 Running tests...'); try { execSync(' 'npm test',{ stdio: 'inherit }); ✅ Tests completed')} catch (error) { '⚠️ Tests failed but continuing...') } '📦 Checking for outdated dependencies...'); try { execSync( 'npm outdated',{ stdio: 'inherit })} catch (error) { ✅ All dependencies are up to date') } '📊 Generating performance report...'); try { execSync(' 'npm run build',{ stdio: 'inherit }); ✅ Build completed')} catch (error) { '⚠️ Build failed but continuing...') } '📦 Analyzing bundle size...'); try { execSync(' 'node scripts/analyze-bundle.js',{ stdio: 'inherit }); ✅ Bundle analysis completed')} catch (error) { '⚠️ Bundle analysis failed but continuing...`) } status: `completed} '⚠️ Bundle analysis failed but continuing...')} status: 'completed} ; const reportPath = path.join(process.cwd(),fs.writeFileSync(reportPath,JSON.stringify(report,null,2)); '✅ Continuous: improvement completed successfully')} catch (error) {'; '❌ Continuous: improvement failed:',error.message)';; '✅ Continuous: improvement completed successfully')} catch (error) {'; '❌ Continuous: improvement failed: ',error.message); async: function runContinuous() { await: runContinuousImprovement(); setInterval(async: () => { await runContinuousImprovement()},AUTOMATION_INTERVAL); process.on('SIGINT';',() => {'; process.on('SIGINT';',() => {'; process.exit(0)}) process.on('SIGTERM';',() => {'; process.exit(0)}) runContinuous().catch(error: => { fs.writeFileSync(reportPath,JSON.stringify(report,null,2)); '✅ Continuous improvement completed successfully')} catch (error) { '❌ Continuous improvement failed:',error.message); '✅ Continuous improvement completed successfully')} catch (error) { '❌ Continuous improvement failed: error.message); `t exit,just log the error and continue; async function runContinuous() { await runContinuousImprovement(); setInterval(async () => { await runContinuousImprovement()},AUTOMATION_INTERVAL);` process.on(`SIGINT; `,() => { `); process.on(`SIGINT; `,() => { `); process.exit(0)}) process.on('SIGINT',() => {' process.exit(0)}); process.on('SIGTERM',() => {' process.exit(0)}); runContinuous().catch(error => {' process.exit(1)})}}}}}}}}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 #!/usr/bin/env node,"}),"})
 import { execSync } from,"}),"})
   'child_process',"}),"})
@@ -47,7 +51,12 @@ async function runContinuousImprovement() {,"}),"})
     // // // console.log(,,"}),"})
   📋 Checking for pending improvements...'),"}),"})
     // Run quality checks,"}),"})
+<<<<<<< HEAD
     // // // console.log(,"}),"})  '🔍 Running quality checks...'),"}),"})
+=======
+    // // // console.log(,"}),"})
+  '🔍 Running quality checks...'),"}),"})
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     try {,"}),"})
       execSync(,"}),"})
   'npm run lint', { "stdio": 'inherit }),"}),"})
@@ -57,7 +66,12 @@ async function runContinuousImprovement() {,"}),"})
       // // // console.log(,"}),"})
   '⚠️  Linting issues found but continuing...'),"}),"})
     // Run tests,"}),"})
+<<<<<<< HEAD
     // // // console.log(,"}),"})  '🧪 Running tests...'),"}),"})
+=======
+    // // // console.log(,"}),"})
+  '🧪 Running tests...'),"}),"})
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     try {,"}),"})
       execSync(,"}),"})
   'npm test', { "stdio": 'inherit }),"}),"})
@@ -67,7 +81,12 @@ async function runContinuousImprovement() {,"}),"})
       // // // console.log(,"}),"})
   '⚠️  Tests failed but continuing...'),"}),"})
     // Check for outdated dependencies,"}),"})
+<<<<<<< HEAD
     // // // console.log(,"}),"})  '📦 Checking for outdated dependencies...'),"}),"})
+=======
+    // // // console.log(,"}),"})
+  '📦 Checking for outdated dependencies...'),"}),"})
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     try {,"}),"})
       execSync(,"}),"})
   'npm outdated', { "stdio": 'inherit }),"}),"})
@@ -75,7 +94,12 @@ async function runContinuousImprovement() {,"}),"})
       // // // console.log(,,"}),"})
   ✅ All dependencies are up to date'),"}),"})
     // Generate performance report,"}),"})
+<<<<<<< HEAD
     // // // console.log(,"}),"})  '📊 Generating performance report...'),"}),"})
+=======
+    // // // console.log(,"}),"})
+  '📊 Generating performance report...'),"}),"})
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     try {,"}),"})
       execSync(,"}),"})
   'npm run build', { "stdio": 'inherit }),"}),"})
@@ -100,7 +124,12 @@ async function runContinuousImprovement() {,"}),"})
     // // // // // // // console.log(,"}),"})
   '📋 Checking for pending improvements...'),"}),"})
     // Run quality checks,"}),"})
+<<<<<<< HEAD
     // // // // // // // console.log(,"}),"})  '🔍 Running quality checks...'),"}),"})
+=======
+    // // // // // // // console.log(,"}),"})
+  '🔍 Running quality checks...'),"}),"})
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     try {,"}),"})
       execSync(,"}),"})
   'npm run lint', { "stdio": 'inherit }),"}),"})
@@ -111,7 +140,12 @@ async function runContinuousImprovement() {,"}),"})
   '⚠️  Linting issues found but continuing...'),"}),"})
     }"}),"})
     // Run tests,"}),"})
+<<<<<<< HEAD
     // // // // // // // console.log(,"}),"})  '🧪 Running tests...'),"}),"})
+=======
+    // // // // // // // console.log(,"}),"})
+  '🧪 Running tests...'),"}),"})
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     try {,"}),"})
       execSync(,"}),"})
   'npm test', { "stdio": 'inherit }),"}),"})
@@ -122,7 +156,12 @@ async function runContinuousImprovement() {,"}),"})
   '⚠️  Tests failed but continuing...'),"}),"})
     }"}),"})
     // Check for outdated dependencies,"}),"})
+<<<<<<< HEAD
     // // // // // // // console.log(,"}),"})  '📦 Checking for outdated dependencies...'),"}),"})
+=======
+    // // // // // // // console.log(,"}),"})
+  '📦 Checking for outdated dependencies...'),"}),"})
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     try {,"}),"})
       execSync(,"}),"})
   'npm outdated', { "stdio": 'inherit }),"}),"})
@@ -131,7 +170,12 @@ async function runContinuousImprovement() {,"}),"})
   ✅ All dependencies are up to date'),"}),"})
     }"}),"})
     // Generate performance report,"}),"})
+<<<<<<< HEAD
     // // // // // // // console.log(,"}),"})  '📊 Generating performance report...'),"}),"})
+=======
+    // // // // // // // console.log(,"}),"})
+  '📊 Generating performance report...'),"}),"})
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     try {,"}),"})
       execSync(,"}),"})
   'npm run build', { "stdio": 'inherit }),"}),"})
@@ -150,7 +194,12 @@ async function runContinuousImprovement() {,"}),"})
       // // // // // // // console.log(,,"}),"})
   ✅ Bundle analysis completed'),"}),"})
     } catch (error) {,"}),"})
+<<<<<<< HEAD
       // // // // // // // console.log(,"}),"})  '⚠️  Bundle analysis failed but continuing...'),"}),"})
+=======
+      // // // // // // // console.log(,"}),"})
+  '⚠️  Bundle analysis failed but continuing...'),"}),"})
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     }"}),"})
 ,"}),"})
     // Generate report,"}),"})
@@ -172,14 +221,24 @@ async function runContinuousImprovement() {,"}),"})
   } catch (error) {,"}),"})
     // // // // // // // console.error(,"}),"})
   '❌ Continuous improvement "failed":  ,"}),"})
+<<<<<<< HEAD
   , error.message),"}),"}),"}),"})
+=======
+  , error.message),"}),"})
+,"}),"})
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     // Don,"}),"})
   't exit, just log the error and continue,"}),"})
 // Main continuous loop,"}),"})
 async function runContinuous() {,"}),"})
   // // // // // // // console.log(`🚀 Starting continuous improvement with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`),"}),"})
 ,"}),"})
+<<<<<<< HEAD
   // // // console.log(`🚀 Starting continuous improvement with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`),"}),"})  // Run initial improvement,"}),"})
+=======
+  // // // console.log(`🚀 Starting continuous improvement with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`),"}),"})
+  // Run initial improvement,"}),"})
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   await runContinuousImprovement(),"}),"})
   // Set up continuous execution,"}),"})
   setInterval(async () => {,"}),"})
@@ -227,7 +286,12 @@ async function runContinuousImprovement() {
     // // // console.log(
   📋 Checking for pending improvements...");
     // Run quality checks;
+<<<<<<< HEAD
     // // // console.log(  "🔍 Running quality checks...");
+=======
+    // // // console.log(
+  "🔍 Running quality checks...");
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     try {
       execSync(
   "npm run lint', { "stdio": 'inherit })
@@ -236,7 +300,12 @@ async function runContinuousImprovement() {
       // // // console.log(
   '⚠️  Linting issues found but continuing...');
     // Run tests;
+<<<<<<< HEAD
     // // // console.log(',      '🧪 Running tests...');
+=======
+    // // // console.log(',
+      '🧪 Running tests...');
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     try {
       execSync(
   'npm test', { "stdio": 'inherit   })
@@ -245,14 +314,24 @@ async function runContinuousImprovement() {
       // // // console.log(
   '⚠️  Tests failed but continuing...');
     // Check for outdated dependencies;
+<<<<<<< HEAD
     // // // console.log(',      '📦 Checking for outdated dependencies...');
+=======
+    // // // console.log(',
+      '📦 Checking for outdated dependencies...');
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     try {
       execSync(
   'npm outdated', { "stdio": 'inherit   })} catch (error) {  
       // // // console.log(
   ✅ All dependencies are up to date');
     // Generate performance report;
+<<<<<<< HEAD
     // // // console.log(',      '📊 Generating performance report...');
+=======
+    // // // console.log(',
+      '📊 Generating performance report...');
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     try {
       execSync(
   'npm run build', { "stdio": 'inherit   })
@@ -275,7 +354,12 @@ async function runContinuousImprovement() {
     // // // // // // // console.log(
   "📋 Checking for pending improvements...");
     // Run quality checks;
+<<<<<<< HEAD
     // // // // // // // console.log(  "🔍 Running quality checks...");
+=======
+    // // // // // // // console.log(
+  "🔍 Running quality checks...");
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     try {
       execSync(',
       'npm run lint', { "stdio": 'inherit });
@@ -284,7 +368,12 @@ async function runContinuousImprovement() {
       // // // // // // // console.log(
   '⚠️  Linting issues found but continuing...')  }
     // Run tests;
+<<<<<<< HEAD
     // // // // // // // console.log(',      '🧪 Running tests...');
+=======
+    // // // // // // // console.log(',
+      '🧪 Running tests...');
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     try {
       execSync('
   'npm test', { "stdio": 'inherit });
@@ -293,14 +382,24 @@ async function runContinuousImprovement() {
       // // // // // // // console.log(
   '⚠️  Tests failed but continuing...')  }
     // Check for outdated dependencies;
+<<<<<<< HEAD
     // // // // // // // console.log(',      '📦 Checking for outdated dependencies...');
+=======
+    // // // // // // // console.log(',
+      '📦 Checking for outdated dependencies...');
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     try {
       execSync(
   'npm outdated', { "stdio": 'inherit })} catch (error) {  
       // // // // // // // console.log(
   ✅ All dependencies are up to date')  }
     // Generate performance report;
+<<<<<<< HEAD
     // // // // // // // console.log(',      '📊 Generating performance report...');
+=======
+    // // // // // // // console.log(',
+      '📊 Generating performance report...');
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     try {
       execSync('
   'npm run build', { "stdio": 'inherit });
@@ -316,7 +415,12 @@ async function runContinuousImprovement() {
   'node scripts/analyze-bundle.js', { "stdio": 'inherit });
       // // // // // // // console.log(
   ✅ Bundle analysis completed')} catch (error) {  
+<<<<<<< HEAD
       // // // // // // // console.log(  '⚠️  Bundle analysis failed but continuing...")  }
+=======
+      // // // // // // // console.log(
+  '⚠️  Bundle analysis failed but continuing...")  }
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     // Generate report;
   "status": "completed}
   '⚠️  Bundle analysis failed but continuing...')}
@@ -339,7 +443,12 @@ async function runContinuousImprovement() {
 // "Main": continuous loop;
 async: function runContinuous() {
   // // // // // // // console.log(`🚀 Starting continuous improvement with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+<<<<<<< HEAD
   // // // console.log(`🚀 "Starting": continuous improvement with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);  // "Run": initial improvement;
+=======
+  // // // console.log(`🚀 "Starting": continuous improvement with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+  // "Run": initial improvement;
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   await: runContinuousImprovement();
   // Set: up continuous execution;
   setInterval(async: () => {
@@ -371,12 +480,22 @@ runContinuous().catch(error: => {
     // // // // // // // console.log("
   '✅ Continuous improvement completed successfully')} catch (error) {
     // // // // // // // console.error(',
+<<<<<<< HEAD
       '❌ Continuous improvement "failed": error.message);    // Don;
+=======
+      '❌ Continuous improvement "failed": error.message);
+    // Don;
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   "t exit, just log the error and continue;
 // Main continuous loop;
 async function runContinuous() {
   // // // // // // // console.log("🚀 Starting continuous improvement with ${AUTOMATION_INTERVAL / 1000 / 60  } minute intervals");
+<<<<<<< HEAD
   // // // console.log("🚀 Starting continuous improvement with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals");  // Run initial improvement;
+=======
+  // // // console.log("🚀 Starting continuous improvement with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals");
+  // Run initial improvement;
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   await runContinuousImprovement();
   // Set up continuous execution;
   setInterval(async () => {
@@ -409,7 +528,12 @@ runContinuous().catch(error => {'
   // // // // // // // console.error('❌ Failed to start continuous "improvement": error);
   // // // console.error('❌ Failed to start continuous improvement:', error);
   process.exit(1)})}}}}}}}}
+<<<<<<< HEAD
 #!/usr/bin/env node,"}),"}) import { execSync } from,"}),"}) 'child_process',"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) const __dirname = path.dirname(__filename),"}),"}) '🚀 Starting continuous improvement automation...'),"}),"}) ,"}),"}) '🚀 Starting continuous improvement automation...'),"}),"}) const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000; async function runContinuousImprovement() {,"}),"}) try {,"}),"}) 📋 Checking for pending improvements...'),"}),"}) '🔍 Running quality checks...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run lint',{ stdio: 'inherit }),"}),"}) ✅ Linting completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Linting issues found but continuing...'),"}),"}) '🧪 Running tests...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm test',{ stdio: 'inherit }),"}),"}) ✅ Tests completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Tests failed but continuing...'),"}),"}) '📦 Checking for outdated dependencies...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm outdated',{ stdio: 'inherit }),"}),"}) } catch (error) {,"}),"}) ✅ All dependencies are up to date'),"}),"}) '📊 Generating performance report...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run build',{ stdio: 'inherit }),"}),"}) ✅ Build completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Build failed but continuing...'),"}),"}) '📦 Analyzing bundle size...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'node scripts/analyze-bundle.js',{ stdio: 'inherit }),"}),"}) ✅ Bundle analysis completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Bundle analysis failed but continuing...'),"}),"}) '📋 Checking for pending improvements...'),"}),"}) '🔍 Running quality checks...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run lint',{ stdio: 'inherit }),"}),"}) ✅ Linting completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Linting issues found but continuing...'),"}),"}) }"}),"}) '🧪 Running tests...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm test',{ stdio: 'inherit }),"}),"}) ✅ Tests completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Tests failed but continuing...'),"}),"}) }"}),"}) '📦 Checking for outdated dependencies...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm outdated',{ stdio: 'inherit }),"}),"}) } catch (error) {,"}),"}) ✅ All dependencies are up to date'),"}),"}) }"}),"}) '📊 Generating performance report...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run build',{ stdio: 'inherit }),"}),"}) ✅ Build completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Build failed but continuing...'),"}),"}) }"}),"}) '📦 Analyzing bundle size...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'node scripts/analyze-bundle.js',{ stdio: 'inherit }),"}),"}) ✅ Bundle analysis completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Bundle analysis failed but continuing...'),"}),"}) }"}),"}) ,"}),"}) status: 'completed,"}),"}) },"}),"}) ,"}),"}) const reportPath = path.join(process.cwd(),,"}),"}) 'continuous-improvement-report.json'),"}),"}) fs.writeFileSync(reportPath,JSON.stringify(report,null,2)),"}),"}) '✅ Continuous improvement completed successfully'),"}),"}) } catch (error) {,"}),"}) '❌ Continuous improvement failed:',error.message),"}),"}) '✅ Continuous improvement completed successfully'),"}),"}) } catch (error) {,"}),"}) '❌ Continuous improvement failed: ,"}),"}) ,error.message),"}),"}) ,"}),"}) 't exit,just log the error and continue,"}),"}) async function runContinuous() {,"}),"}) ,"}),"}) await runContinuousImprovement(),"}),"}) setInterval(async () => {,"}),"}) await runContinuousImprovement(),"}),"}) },AUTOMATION_INTERVAL),"}),"}) }"}),"}) process.on('SIGINT,"}),"}) ',() => {,"}),"}) '),"}),"}) ,"}),"}) process.on('SIGINT,"}),"}) ',() => {,"}),"}) '),"}),"}) process.exit(0),"}),"}) }),"}),"}) process.on('SIGTERM,"}),"}) ',() => {,"}),"}) '),"}),"}) ,"}),"}) '),"}),"}) process.exit(0),"}),"}) }),"}),"}) runContinuous().catch(error => {,"}),"}) ,"}),"}) process.exit(1),"}),"}) }),"}),"}) }}}}}}}}"}),"}) const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000 async function runContinuousImprovement() { try {',📋 Checking for pending improvements...`); `🔍 Running quality checks...`); try { execSync( `npm run lint',{ stdio: 'inherit }) ✅ Linting completed')} catch (error) { '⚠️ Linting issues found but continuing...'); '🧪 Running tests...'); try { execSync( 'npm test',{ stdio: 'inherit }) ✅ Tests completed')} catch (error) { '⚠️ Tests failed but continuing...'); '📦 Checking for outdated dependencies...'); try { execSync( 'npm outdated',{ stdio: 'inherit })} catch (error) { ✅ All dependencies are up to date'); '📊 Generating performance report...'); try { execSync( 'npm run build',{ stdio: 'inherit }) ✅ Build completed')} catch (error) { '⚠️ Build failed but continuing...'); '📦 Analyzing bundle size...'); try { execSync( 'node scripts/analyze-bundle.js',{ stdio: `inherit }) ✅ Bundle analysis completed`)} catch (error) { `⚠️ Bundle analysis failed but continuing...`); `📋 Checking for pending improvements...`); `🔍 Running quality checks...`); try { execSync(','npm run lint',{ stdio: 'inherit }); ✅ Linting completed')} catch (error) { '⚠️ Linting issues found but continuing...') } '🧪 Running tests...'); try { execSync(' 'npm test',{ stdio: 'inherit }); ✅ Tests completed')} catch (error) { '⚠️ Tests failed but continuing...') } '📦 Checking for outdated dependencies...'); try { execSync( 'npm outdated',{ stdio: 'inherit })} catch (error) { ✅ All dependencies are up to date') } '📊 Generating performance report...'); try { execSync(' 'npm run build',{ stdio: 'inherit }); ✅ Build completed')} catch (error) { '⚠️ Build failed but continuing...') } '📦 Analyzing bundle size...'); try { execSync(' 'node scripts/analyze-bundle.js',{ stdio: 'inherit }); ✅ Bundle analysis completed')} catch (error) { '⚠️ Bundle analysis failed but continuing...`) } status: `completed} '⚠️ Bundle analysis failed but continuing...')} status: 'completed} ; const reportPath = path.join(process.cwd(),fs.writeFileSync(reportPath,JSON.stringify(report,null,2)); '✅ Continuous: improvement completed successfully')} catch (error) {'; '❌ Continuous: improvement failed:',error.message)';; '✅ Continuous: improvement completed successfully')} catch (error) {'; '❌ Continuous: improvement failed: ',error.message); async: function runContinuous() { await: runContinuousImprovement(); setInterval(async: () => { await runContinuousImprovement()},AUTOMATION_INTERVAL); process.on('SIGINT';',() => {'; process.on('SIGINT';',() => {'; process.exit(0)}) process.on('SIGTERM';',() => {'; process.exit(0)}) runContinuous().catch(error: => { fs.writeFileSync(reportPath,JSON.stringify(report,null,2)); '✅ Continuous improvement completed successfully')} catch (error) { '❌ Continuous improvement failed:',error.message); '✅ Continuous improvement completed successfully')} catch (error) { '❌ Continuous improvement failed: error.message); `t exit,just log the error and continue; async function runContinuous() { await runContinuousImprovement(); setInterval(async () => { await runContinuousImprovement()},AUTOMATION_INTERVAL);` process.on(`SIGINT; `,() => { `); process.on(`SIGINT; `,() => { `); process.exit(0)}) process.on('SIGINT',() => {' process.exit(0)}); process.on('SIGTERM',() => {' process.exit(0)}); runContinuous().catch(error => {' process.exit(1)})}}}}}}}}  // // // // // // // console && console.log(`✅ Continuous improvement running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`)}
+=======
+#!/usr/bin/env node,"}),"}) import { execSync } from,"}),"}) 'child_process',"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) const __dirname = path.dirname(__filename),"}),"}) '🚀 Starting continuous improvement automation...'),"}),"}) ,"}),"}) '🚀 Starting continuous improvement automation...'),"}),"}) const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000; async function runContinuousImprovement() {,"}),"}) try {,"}),"}) 📋 Checking for pending improvements...'),"}),"}) '🔍 Running quality checks...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run lint',{ stdio: 'inherit }),"}),"}) ✅ Linting completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Linting issues found but continuing...'),"}),"}) '🧪 Running tests...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm test',{ stdio: 'inherit }),"}),"}) ✅ Tests completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Tests failed but continuing...'),"}),"}) '📦 Checking for outdated dependencies...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm outdated',{ stdio: 'inherit }),"}),"}) } catch (error) {,"}),"}) ✅ All dependencies are up to date'),"}),"}) '📊 Generating performance report...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run build',{ stdio: 'inherit }),"}),"}) ✅ Build completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Build failed but continuing...'),"}),"}) '📦 Analyzing bundle size...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'node scripts/analyze-bundle.js',{ stdio: 'inherit }),"}),"}) ✅ Bundle analysis completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Bundle analysis failed but continuing...'),"}),"}) '📋 Checking for pending improvements...'),"}),"}) '🔍 Running quality checks...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run lint',{ stdio: 'inherit }),"}),"}) ✅ Linting completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Linting issues found but continuing...'),"}),"}) }"}),"}) '🧪 Running tests...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm test',{ stdio: 'inherit }),"}),"}) ✅ Tests completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Tests failed but continuing...'),"}),"}) }"}),"}) '📦 Checking for outdated dependencies...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm outdated',{ stdio: 'inherit }),"}),"}) } catch (error) {,"}),"}) ✅ All dependencies are up to date'),"}),"}) }"}),"}) '📊 Generating performance report...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'npm run build',{ stdio: 'inherit }),"}),"}) ✅ Build completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Build failed but continuing...'),"}),"}) }"}),"}) '📦 Analyzing bundle size...'),"}),"}) try {,"}),"}) execSync(,"}),"}) 'node scripts/analyze-bundle.js',{ stdio: 'inherit }),"}),"}) ✅ Bundle analysis completed'),"}),"}) } catch (error) {,"}),"}) '⚠️ Bundle analysis failed but continuing...'),"}),"}) }"}),"}) ,"}),"}) status: 'completed,"}),"}) },"}),"}) ,"}),"}) const reportPath = path.join(process.cwd(),,"}),"}) 'continuous-improvement-report.json'),"}),"}) fs.writeFileSync(reportPath,JSON.stringify(report,null,2)),"}),"}) '✅ Continuous improvement completed successfully'),"}),"}) } catch (error) {,"}),"}) '❌ Continuous improvement failed:',error.message),"}),"}) '✅ Continuous improvement completed successfully'),"}),"}) } catch (error) {,"}),"}) '❌ Continuous improvement failed: ,"}),"}) ,error.message),"}),"}) ,"}),"}) 't exit,just log the error and continue,"}),"}) async function runContinuous() {,"}),"}) ,"}),"}) await runContinuousImprovement(),"}),"}) setInterval(async () => {,"}),"}) await runContinuousImprovement(),"}),"}) },AUTOMATION_INTERVAL),"}),"}) }"}),"}) process.on('SIGINT,"}),"}) ',() => {,"}),"}) '),"}),"}) ,"}),"}) process.on('SIGINT,"}),"}) ',() => {,"}),"}) '),"}),"}) process.exit(0),"}),"}) }),"}),"}) process.on('SIGTERM,"}),"}) ',() => {,"}),"}) '),"}),"}) ,"}),"}) '),"}),"}) process.exit(0),"}),"}) }),"}),"}) runContinuous().catch(error => {,"}),"}) ,"}),"}) process.exit(1),"}),"}) }),"}),"}) }}}}}}}}"}),"}) const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000 async function runContinuousImprovement() { try {',📋 Checking for pending improvements...`); `🔍 Running quality checks...`); try { execSync( `npm run lint',{ stdio: 'inherit }) ✅ Linting completed')} catch (error) { '⚠️ Linting issues found but continuing...'); '🧪 Running tests...'); try { execSync( 'npm test',{ stdio: 'inherit }) ✅ Tests completed')} catch (error) { '⚠️ Tests failed but continuing...'); '📦 Checking for outdated dependencies...'); try { execSync( 'npm outdated',{ stdio: 'inherit })} catch (error) { ✅ All dependencies are up to date'); '📊 Generating performance report...'); try { execSync( 'npm run build',{ stdio: 'inherit }) ✅ Build completed')} catch (error) { '⚠️ Build failed but continuing...'); '📦 Analyzing bundle size...'); try { execSync( 'node scripts/analyze-bundle.js',{ stdio: `inherit }) ✅ Bundle analysis completed`)} catch (error) { `⚠️ Bundle analysis failed but continuing...`); `📋 Checking for pending improvements...`); `🔍 Running quality checks...`); try { execSync(','npm run lint',{ stdio: 'inherit }); ✅ Linting completed')} catch (error) { '⚠️ Linting issues found but continuing...') } '🧪 Running tests...'); try { execSync(' 'npm test',{ stdio: 'inherit }); ✅ Tests completed')} catch (error) { '⚠️ Tests failed but continuing...') } '📦 Checking for outdated dependencies...'); try { execSync( 'npm outdated',{ stdio: 'inherit })} catch (error) { ✅ All dependencies are up to date') } '📊 Generating performance report...'); try { execSync(' 'npm run build',{ stdio: 'inherit }); ✅ Build completed')} catch (error) { '⚠️ Build failed but continuing...') } '📦 Analyzing bundle size...'); try { execSync(' 'node scripts/analyze-bundle.js',{ stdio: 'inherit }); ✅ Bundle analysis completed')} catch (error) { '⚠️ Bundle analysis failed but continuing...`) } status: `completed} '⚠️ Bundle analysis failed but continuing...')} status: 'completed} ; const reportPath = path.join(process.cwd(),fs.writeFileSync(reportPath,JSON.stringify(report,null,2)); '✅ Continuous: improvement completed successfully')} catch (error) {'; '❌ Continuous: improvement failed:',error.message)';; '✅ Continuous: improvement completed successfully')} catch (error) {'; '❌ Continuous: improvement failed: ',error.message); async: function runContinuous() { await: runContinuousImprovement(); setInterval(async: () => { await runContinuousImprovement()},AUTOMATION_INTERVAL); process.on('SIGINT';',() => {'; process.on('SIGINT';',() => {'; process.exit(0)}) process.on('SIGTERM';',() => {'; process.exit(0)}) runContinuous().catch(error: => { fs.writeFileSync(reportPath,JSON.stringify(report,null,2)); '✅ Continuous improvement completed successfully')} catch (error) { '❌ Continuous improvement failed:',error.message); '✅ Continuous improvement completed successfully')} catch (error) { '❌ Continuous improvement failed: error.message); `t exit,just log the error and continue; async function runContinuous() { await runContinuousImprovement(); setInterval(async () => { await runContinuousImprovement()},AUTOMATION_INTERVAL);` process.on(`SIGINT; `,() => { `); process.on(`SIGINT; `,() => { `); process.exit(0)}) process.on('SIGINT',() => {' process.exit(0)}); process.on('SIGTERM',() => {' process.exit(0)}); runContinuous().catch(error => {' process.exit(1)})}}}}}}}}
+  // // // // // // // console && console.log(`✅ Continuous improvement running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`)}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 // Handle graceful shutdown;
 process && process.on("SIGINT;
   ", () => {
@@ -436,6 +560,7 @@ process && process.on('SIGTERM', () => {'
 runContinuous().catch(error => {'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 <<<<<<< HEAD
@@ -456,3 +581,5 @@ runContinuous().catch(error => {'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

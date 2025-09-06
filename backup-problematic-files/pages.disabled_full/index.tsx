@@ -24,6 +24,7 @@ const Index: React.FC<IndexProps> = ({ className }) => {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -31,3 +32,5 @@ const Index: React.FC<IndexProps> = ({ className }) => {
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages.disabled_full/index.tsx
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

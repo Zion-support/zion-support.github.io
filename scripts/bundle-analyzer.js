@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -14,16 +15,13 @@
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-
-
-<<<<<<< HEAD
 =======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -40,10 +38,13 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 const { BundleAnalyzerPlugin } from "webpack-bundle-analyzer"; const withBundleAnalyzer = (nextConfig = {}) => { return { .nextConfig,webpack: (config,{ dev,isServer }) => { if (process.env.ANALYZE === "true") { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: "false",reportFilename: isServer ? "server-bundle.html" : "client-bundle.html"}) )} if (nextConfig.webpack) { return nextConfig.webpack(config,{ dev,isServer })} return config}} } module.exports = withBundleAnalyzer;'"'"
 import React from 'react';
 interface BundleanalyzerProps {
   // Add props here as needed
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -54,15 +55,14 @@ interface BundleanalyzerProps {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 }
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+}
+
 <<<<<<< HEAD
-
-
-}
-
 <<<<<<< HEAD
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -80,6 +80,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 export default function Bundleanalyzer({ }: BundleanalyzerProps) {
   return (
     <div>
@@ -87,6 +89,7 @@ export default function Bundleanalyzer({ }: BundleanalyzerProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -105,13 +108,12 @@ export default function Bundleanalyzer({ }: BundleanalyzerProps) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 <<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 }
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+}
+
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -122,6 +124,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 <<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
@@ -141,3 +144,5 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,8 @@ import _React from 'react'; "export default function ReplyForm({" onSubmit,place
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 =======
 import _React from 'react'; "export default function ReplyForm({" onSubmit,placeholder = "Write your reply..."}) {" const [content,setContent] = useState(");" const handleSubmit = e => {"; e.preventDefault(); if(content.trim()) { onSubmit(content); setContent(");" }" }; return(); <form onSubmit={handleSubmit} className="mt-4">" <textarea" value={content} onChange={e => setContent(e.target.value)} placeholder={placeholder}" className="w-full px-3 py-2 bg-white/20 border border-zion-slate-light rounded-md text-white placeholder-zion-slate-light "focus": outline-none focus:ring-2 focus:ring-zion-cyan resize-none" rows={3}" />" <div className="mt-2 flex justify-end">" <Button type="submit" disabled={!content.trim()}>" Post Reply" </Button> </div> </form> )} ";";
@@ -44,6 +47,7 @@ const React from "react"; "export default function ReplyForm({" onSubmit,placeho
 
 import _React from 'react'; "export default function ReplyForm({" onSubmit,placeholder = "Write your reply..."}) {" const [content,setContent] = useState(");" const handleSubmit = e => {"; e && e.preventDefault(); if(content && content.trim()) { onSubmit(content); setContent(");" }" }; return (); <form onSubmit={handleSubmit} className="mt-4">" <textarea" value={content} onChange={e => setContent(e && e.target.value)} placeholder={placeholder}" className="w-full px-3 py-2 bg-white/20 border border-zion-slate-light rounded-md text-white placeholder-zion-slate-light "focus": outline-none focus:ring-2 focus:ring-zion-cyan resize-none" rows={3}" />" <div className="mt-2 flex justify-end">" <Button type="submit" disabled={!content && content.trim()}>" Post Reply" </Button> </div> </form> )} ";";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -81,3 +85,8 @@ import _React from 'react'; "export default function ReplyForm({" onSubmit,place
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React from \'react\'; \"export default function ReplyForm({\" onSubmit,placeholder = \"Write your reply...\"}) {\" const [content,setContent] = useState(\");\" const handleSubmit = e => {\"; e.preventDefault(); if(content.trim()) { onSubmit(content); setContent(\");\" }\" }; return(); <form onSubmit={handleSubmit} className=\"mt-4\">\" <textarea\" value={content} onChange={e => setContent(e.target.value)} placeholder={placeholder}\" className=\"w-full px-3 py-2 bg-white/20 border border-zion-slate-light rounded-md text-white placeholder-zion-slate-light \"focus\": outline-none focus:ring-2 focus:ring-zion-cyan resize-none\" rows={3}\" />\" <div className=\"mt-2 flex justify-end\">\" <Button type=\"submit\" disabled={!content.trim()}>\" Post Reply\" </Button> </div> </form> )} \";\";
+const React from "react"; "export default function ReplyForm({" onSubmit,placeholder = "Write your reply."}) {" const [content,setContent] = useState(");" const handleSubmit = e => {"; e.preventDefault(); if(content.trim()) { onSubmit(content); setContent(");" }" }; return(); <form onSubmit={handleSubmit} className="mt-4">" <textarea" value={content} onChange={e => setContent(e.target.value)} placeholder={placeholder}" className="w-full px-3 py-2 bg-white/20 border border-zion-slate-light rounded-md text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-cyan resize-none" rows={3}" />" <div className="mt-2 flex justify-end">" <Button type="submit" disabled={!content.trim()}>" Post Reply" </Button> </div> </form> )} ";";'"'"
+import _React from 'react'; "export default function ReplyForm({" onSubmit,placeholder = "Write your reply..."}) {" const [content,setContent] = useState(");" const handleSubmit = e => {"; e.preventDefault(); if(content.trim()) { onSubmit(content); setContent(");" }" }; return(); <form onSubmit={handleSubmit} className="mt-4">" <textarea" value={content} onChange={e => setContent(e.target.value)} placeholder={placeholder}" className="w-full px-3 py-2 bg-white/20 border border-zion-slate-light rounded-md text-white placeholder-zion-slate-light "focus": outline-none focus:ring-2 focus:ring-zion-cyan resize-none" rows={3}" />" <div className="mt-2 flex justify-end">" <Button type="submit" disabled={!content.trim()}>" Post Reply" </Button> </div> </form> )} ";";
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

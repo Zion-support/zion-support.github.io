@@ -1,30 +1,25 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 ' ' ' "export": function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) '';";";""}
-=======
-:src.disabled/components/ChatAssistantTrigger.js.jsx
-" " " export: function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) "";";";"""
-' ' ' "export": function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) '';";";""}
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 :src && src.disabled/components/ChatAssistantTrigger && ChatAssistantTrigger.js.jsx
 
 " " " export: function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) "";";";"""
+<<<<<<< HEAD
 :src.disabled/components/ChatAssistantTrigger.js.jsx
 " " " export: function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) "";";";"""
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/ChatAssistantTrigger.jsx
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 :src && src.disabled/components/ChatAssistantTrigger && ChatAssistantTrigger.js.jsx
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -37,6 +32,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 :src.disabled/components/ChatAssistantTrigger.js.jsx
 " " " export: function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) "";";";"""
 :temp_exclude/src.disabled/components/ChatAssistantTrigger.jsx
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ' ' ' "export": function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) '';";";""}
@@ -66,3 +62,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 " " " export: function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) "";";";"""
 ' ' ' "export": function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) '';";";""}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+' ' ' "export": function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) '';";";""}
+:src.disabled/components/ChatAssistantTrigger.js.jsx
+" " " export: function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) "";";";"""
+' ' ' "export": function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) '';";";""}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

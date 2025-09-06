@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/components/FuturisticAnimatedBackground.jsx
 "export\": const FuturisticAnimatedBackground = ({ className = \',intensity = \'medium\',colorScheme = \'multi\' }) => { const canvasRef = useRef (null) const animationRef = useRef () useEffect ( () => { \''\';\'"\";
 export: const FuturisticAnimatedBackground = ({ className = ",intensity = "medium",colorScheme = "multi" }) => { const canvasRef = useRef (null) const animationRef = useRef () useEffect ( () => { """;""";"""
@@ -16,6 +17,8 @@ import React from';react' "export": const FuturisticAnimatedBackground = ({ clas
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 
 =======
@@ -25,6 +28,7 @@ import React from';react' "export": const FuturisticAnimatedBackground = ({ clas
 import React from';react' "export": const FuturisticAnimatedBackground = ({ className = ',intensity = 'medium',colorScheme = 'multi'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext('2d') if (!ctx) return'';';''}
 import React from';react' "export": const FuturisticAnimatedBackground = ({ className = ',intensity = 'medium',colorScheme = 'multi'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext('2d') if (!ctx) return'';';''}
 import React from';react' "export": const FuturisticAnimatedBackground = ({ className = ',intensity = 'medium',colorScheme = 'multi'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext('2d') if (!ctx) return'';';''}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -55,3 +59,6 @@ import React from';react' "export": const FuturisticAnimatedBackground = ({ clas
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React from';react' "export": const FuturisticAnimatedBackground = ({ className = ',intensity = 'medium',colorScheme = 'multi'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext('2d') if (!ctx) return'';';''}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

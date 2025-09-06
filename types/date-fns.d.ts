@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare module "date-fns" {;
 =======
 <<<<<<< HEAD
@@ -26,6 +27,8 @@ declare module "date-fns" {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   // Minimal typing for the `format` helper we use in the codebase.  The real;
   // package provides far richer typings – this is only a safety-net so that;
   // isolated compilation doesn't fail if `@types/date-fns` isn't installed.;
@@ -48,6 +51,7 @@ declare module "date-fns" {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -87,3 +91,5 @@ declare module 'date-fns' {
     return res.status(500).json({ error: "Internal server error" });
   }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

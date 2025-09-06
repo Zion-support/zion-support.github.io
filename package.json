@@ -1,7 +1,9 @@
 {
-  "name": "ziontechgroup-site",
-  "version": "1.0.0",
+  "name": "bolt.new.zion.app",
+  "version": "0.1.0",
+  "private": true,
   "type": "module",
+<<<<<<< HEAD
   "scripts": {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -557,10 +559,13 @@
     "vite": "^7.1.4"
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   },
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   "engines": {
     "node": ">=18.0.0",
     "npm": ">=8.0.0"
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
   "author": "Zion Tech Group",
   "license": "MIT"
@@ -602,3 +607,31 @@
   "license": "MIT"
 }
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.57.2",
+    "framer-motion": "^12.23.12",
+    "lucide-react": "^0.536.0",
+    "next": "^14.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^14.0.0",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.0.0"
+  }
+}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

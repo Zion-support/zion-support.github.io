@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import js from '@eslint/js';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,12 +21,16 @@ import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import nextPlugin from '@next/eslint-plugin-next';
+=======
+const { FlatCompat } = require('@eslint/eslintrc');
+const js = require('@eslint/js');
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 const compat = new FlatCompat({
-  baseDirectory: import.meta.dirname,
+  baseDirectory: __dirname,
   recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
 });
+<<<<<<< HEAD
 =======
 import globals from 'globals';
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -156,10 +161,13 @@ import typescript from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 import globals from 'globals';
 >>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
-export default [
+module.exports = [
   ...compat.extends('next/core-web-vitals'),
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -521,79 +529,28 @@ export default [
       "**/automation/**/*.js",
       "**/pm2/**/*.js"
     ],
-    languageOptions: {
-      ecmaVersion: 2021,
-      sourceType: "script",
-      globals: {
-        ...globals.node,
 =======
-      'coverage/**',
-      '*.config.js',
-      '*.config.cjs',
-      '*.config.ts'
-    ],
-    languageOptions: {
-      ecmaVersion: 2020,
-      sourceType: 'module',
-      parser: tsparser,
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-        ...globals.es2020,
-      },
-    },
-    plugins: {
-      '@typescript-eslint': tseslint,
-      'react': react,
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-      'jsx-a11y': jsxA11y,
-    },
     rules: {
-      ...tseslint.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      ...jsxA11y.configs.recommended.rules,
-      'react/react-in-jsx-scope': 'off',
-      'react/prop-types': 'off',
-      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-      '@typescript-eslint/no-explicit-any': 'warn',
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true },
-      ],
-      'jsx-a11y/alt-text': 'warn',
-      'jsx-a11y/aria-role': 'warn',
-      'jsx-a11y/heading-has-content': 'warn',
-      'jsx-a11y/img-redundant-alt': 'warn',
-      'jsx-a11y/no-access-key': 'warn',
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'warn'
     },
-    settings: {
-      react: {
-        version: 'detect',
-      },
-    },
-  },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
-  {
-    files: ['**/*.js'],
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
       globals: {
+        window: 'readonly',
+        document: 'readonly',
         console: 'readonly',
         process: 'readonly',
         Buffer: 'readonly',
+        global: 'readonly',
         __dirname: 'readonly',
         __filename: 'readonly',
-        global: 'readonly',
         module: 'readonly',
         require: 'readonly',
+<<<<<<< HEAD
         exports: 'readonly',
       },
     },
@@ -1192,3 +1149,10 @@ export default [
 =======
 ];
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+        exports: 'readonly'
+      }
+    }
+  }
+];
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

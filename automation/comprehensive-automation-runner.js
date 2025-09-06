@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -270,6 +271,8 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
   const runner = new ComprehensiveAutomationRunner(),;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 #!/usr/bin/env node;
 import fs from "fs";
 import path from "path";
@@ -555,7 +558,6 @@ class ComprehensiveAutomationRunner {;
     } catch (error) {;
       this.log(`❌ Automation runner failed: ${error.message}`, "ERROR");
       throw error;
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 };
 };
 };
@@ -563,10 +565,6 @@ class ComprehensiveAutomationRunner {;
 // Main execution;
 if (import.meta.url === `file: //${process.argv[1]}`) {;
   const runner = new ComprehensiveAutomationRunner();
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
   runner.runAll().catch(console.error);
 };
 ;
@@ -888,6 +886,7 @@ if (import.meta.url === `file: //${process.argv[1]}`) {,
 export default ComprehensiveAutomationRunner,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -1018,3 +1017,5 @@ export default ComprehensiveAutomationRunner;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

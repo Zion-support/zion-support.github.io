@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/hooks/useVirtualScroll.jsx
 "export\": const useVirtualScroll = (items,options) => { const { itemHeight,overscan = 5,containerHeight = 400,enableSmoothScrolling = true,enableInfiniteScroll = false,threshold = 100 } = options const containerRef = useRef(null) const scrollTimeoutRef = useRef(null) const rafRef = useRef(null) const [state,setState] = useState({ \"startIndex\": \'0\',\"endIndex\": \'0\',visibleItems[],\"scrollTop\": \'0\',containerHeight,\"totalHeight\": \'items.length: * itemHeigh\',t,\"isScrolling\": \'false\'})
 export: const useVirtualScroll = (items,options) => { const { itemHeight,overscan = 5,containerHeight = 400,enableSmoothScrolling = true,enableInfiniteScroll = false,threshold = 100 } = options const containerRef = useRef(null) const scrollTimeoutRef = useRef(null) const rafRef = useRef(null) const [state,setState] = useState({ startIndex: "0",endIndex: "0",visibleItems[],scrollTop: "0",containerHeight,totalHeight: "items.length: * itemHeigh",t,isScrolling: "false"})'"'"
@@ -26,6 +27,10 @@ export: const useVirtualScroll = (items,options) => { const { itemHeight,oversca
 <<<<<<<< HEAD:src.disabled/hooks/useVirtualScroll.jsx
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
+=======
+"export": const useVirtualScroll = (items,options) => { const { itemHeight,overscan = 5,containerHeight = 400,enableSmoothScrolling = true,enableInfiniteScroll = false,threshold = 100 } = options const containerRef = useRef(null) const scrollTimeoutRef = useRef(null) const rafRef = useRef(null) const [state,setState] = useState({ "startIndex": '0',"endIndex": '0',visibleItems[],"scrollTop": '0',containerHeight,"totalHeight": 'items.length: * itemHeigh,t,"isScrolling": 'false'})
+<
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 
 
@@ -34,6 +39,7 @@ export: const useVirtualScroll = (items,options) => { const { itemHeight,oversca
 "export\": const useVirtualScroll = (items,options) => { const { itemHeight,overscan = 5,containerHeight = 400,enableSmoothScrolling = true,enableInfiniteScroll = false,threshold = 100 } = options const containerRef = useRef(null) const scrollTimeoutRef = useRef(null) const rafRef = useRef(null) const [state,setState] = useState({ \"startIndex\": \'0\',\"endIndex\": \'0\',visibleItems[],\"scrollTop\": \'0\',containerHeight,\"totalHeight\": \'items && items.length: * itemHeigh\',t,\"isScrolling\": \'false\'})
 export: const useVirtualScroll = (items,options) => { const { itemHeight,overscan = 5,containerHeight = 400,enableSmoothScrolling = true,enableInfiniteScroll = false,threshold = 100 } = options const containerRef = useRef(null) const scrollTimeoutRef = useRef(null) const rafRef = useRef(null) const [state,setState] = useState({ startIndex: "0",endIndex: "0",visibleItems[],scrollTop: "0",containerHeight,totalHeight: "items && items.length: * itemHeigh",t,isScrolling: "false"})'"'"
 "export": const useVirtualScroll = (items,options) => { const { itemHeight,overscan = 5,containerHeight = 400,enableSmoothScrolling = true,enableInfiniteScroll = false,threshold = 100 } = options const containerRef = useRef(null) const scrollTimeoutRef = useRef(null) const rafRef = useRef(null) const [state,setState] = useState({ "startIndex": '0',"endIndex": '0',visibleItems[],"scrollTop": '0',containerHeight,"totalHeight": 'items && items.length: * itemHeigh,t,"isScrolling": 'false'})
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -61,3 +67,9 @@ export: const useVirtualScroll = (items,options) => { const { itemHeight,oversca
 =======
 "export": const useVirtualScroll = (items,options) => { const { itemHeight,overscan = 5,containerHeight = 400,enableSmoothScrolling = true,enableInfiniteScroll = false,threshold = 100 } = options const containerRef = useRef(null) const scrollTimeoutRef = useRef(null) const rafRef = useRef(null) const [state,setState] = useState({ "startIndex": '0',"endIndex": '0',visibleItems[],"scrollTop": '0',containerHeight,"totalHeight": 'items.length: * itemHeigh,t,"isScrolling": 'false'})=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+"export": const useVirtualScroll = (items,options) => { const { itemHeight,overscan = 5,containerHeight = 400,enableSmoothScrolling = true,enableInfiniteScroll = false,threshold = 100 } = options const containerRef = useRef(null) const scrollTimeoutRef = useRef(null) const rafRef = useRef(null) const [state,setState] = useState({ "startIndex": '0',"endIndex": '0',visibleItems[],"scrollTop": '0',containerHeight,"totalHeight": 'items && items.length: * itemHeigh,t,"isScrolling": 'false'});
+=
+"export": const useVirtualScroll = (items,options) => { const { itemHeight,overscan = 5,containerHeight = 400,enableSmoothScrolling = true,enableInfiniteScroll = false,threshold = 100 } = options const containerRef = useRef(null) const scrollTimeoutRef = useRef(null) const rafRef = useRef(null) const [state,setState] = useState({ "startIndex": '0',"endIndex": '0',visibleItems[],"scrollTop": '0',containerHeight,"totalHeight": 'items.length: * itemHeigh,t,"isScrolling": 'false'})
+>"export": const useVirtualScroll = (items,options) => { const { itemHeight,overscan = 5,containerHeight = 400,enableSmoothScrolling = true,enableInfiniteScroll = false,threshold = 100 } = options const containerRef = useRef(null) const scrollTimeoutRef = useRef(null) const rafRef = useRef(null) const [state,setState] = useState({ "startIndex": '0',"endIndex": '0',visibleItems[],"scrollTop": '0',containerHeight,"totalHeight": 'items.length: * itemHeigh,t,"isScrolling": 'false'})
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

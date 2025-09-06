@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,8 @@
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -20,6 +23,7 @@
 import React from 'react';
 
 import { render, screen } from '@testing-library/react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -34,12 +38,15 @@ import { render, screen } from '@testing-library/react';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import App from '../src/App';
 describe('App', () => {
   it('renders without crashing', () => {
     render(<App />);
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -67,6 +74,16 @@ describe('App', () => {
 
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+  it('has proper heading structure', () => {
+    render(<App />);
+    const heading = screen.getByRole('heading', { level: 1 });
+    expect(heading).toBeInTheDocument();
+  });
+});
+
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -78,6 +95,7 @@ describe('App', () => {
   });
 });
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -91,6 +109,9 @@ describe('App', () => {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+});
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import { render, screen } from '@testing-library/react'
 import App from '../src/App'
 describe('App'
@@ -118,6 +139,7 @@ describe("App", () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
@@ -135,16 +157,15 @@ describe("App", () => {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   it('has proper heading structure', () => {
     render(<App />);
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
     const heading = screen.getByRole('heading', { level: 1 });
     expect(heading).toBeInTheDocument();
   });
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
@@ -160,3 +181,5 @@ describe("App", () => {
   it('has proper heading structure', () => {
     render(<App />);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

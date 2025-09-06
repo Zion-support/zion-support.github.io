@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8,15 +9,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
-import _React from 'react';  import '@testing-library/jest-dom'; import MainLayoutdynamic from '../components/MainLayout.dynamic'; describe('MainLayoutdynamic',() => { test('renders without crashing',() => { render(<MainLayoutdynamic />); expect(screen.getByTestId('mainlayout.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<MainLayoutdynamic />)}); test('handles user interactions',() => { render(<MainLayoutdynamic />)}); test('applies correct styling',() => { render(<MainLayoutdynamic />)})});
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import _React from 'react';  import '@testing-library/jest-dom'; import MainLayoutdynamic from '../components/MainLayout.dynamic'; describe('MainLayoutdynamic',() => { test('renders without crashing',() => { render(<MainLayoutdynamic />); expect(screen.getByTestId('mainlayout.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<MainLayoutdynamic />)}); test('handles user interactions',() => { render(<MainLayoutdynamic />)}); test('applies correct styling',() => { render(<MainLayoutdynamic />)})});
+import _React from 'react';  import '@testing-library/jest-dom'; import MainLayoutdynamic from '../components/MainLayout.dynamic'; describe('MainLayoutdynamic',() => { test('renders without crashing',() => { render(<MainLayoutdynamic />); expect(screen.getByTestId('mainlayout.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<MainLayoutdynamic />)}); test('handles user interactions',() => { render(<MainLayoutdynamic />)}); test('applies correct styling',() => { render(<MainLayoutdynamic />)})});
+<<<<<<< HEAD
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -41,6 +45,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import MainLayout from '../components/MainLayout.dynamic';
+<<<<<<< HEAD
 =======
 
 
@@ -56,6 +61,8 @@ import React from 'react';
 =======
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -65,15 +72,15 @@ describe('MainLayoutdynamic'
 
 });
 
-=======
     expect(screen && screen.getByTestId('mainlayout ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import MainLayoutdynamic from "./components/MainLayout ; describe('MainLayoutdynamic', () => { test("renders without crashing",() => { render(<MainLayoutdynamic />); expect(screen && screen.getByTestId("mainlayout && mainlayout.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<MainLayoutdynamic />)}); test("handles user interactions",() => { render(<MainLayoutdynamic />)}); test("applies correct styling"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 import _React from 'react';  import '@testing-library/jest-dom'; import MainLayoutdynamic from '../components/MainLayout.dynamic'; describe('MainLayoutdynamic',() => { test('renders without crashing',() => { render(<MainLayoutdynamic />); expect(screen.getByTestId('mainlayout.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<MainLayoutdynamic />)}); test('handles user interactions',() => { render(<MainLayoutdynamic />)}); test('applies correct styling',() => { render(<MainLayoutdynamic />)})});
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 describe('MainLayout', () => {
   test('renders without crashing', () => {
     render(<MainLayout />);
@@ -83,6 +90,7 @@ describe('MainLayout', () => {
   test('displays correct content', () => {
 <<<<<<< HEAD
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -94,6 +102,8 @@ describe('MainLayout', () => {
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import { render, screen } from '@testing - library / react';
 import '@testing - library / jest - dom';
 import MainLayout from '../components / MainLayout.dynamic';
@@ -105,14 +115,9 @@ describe ('MainLayout', () => {
   test ('displays correct content', () => {
     // Test content display;
 });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 import _React from 'react';  import '@testing-library/jest-dom'; import MainLayoutdynamic from '../components/MainLayout.dynamic'; describe('MainLayoutdynamic',() => { test('renders without crashing',() => { render(<MainLayoutdynamic />); expect(screen.getByTestId('mainlayout.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<MainLayoutdynamic />)}); test('handles user interactions',() => { render(<MainLayoutdynamic />)}); test('applies correct styling',() => { render(<MainLayoutdynamic />)})});
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
 import _React from 'react';  import '@testing-library/jest-dom'; import MainLayoutdynamic from '../components/MainLayout.dynamic'; describe('MainLayoutdynamic',() => { test('renders without crashing',() => { render(<MainLayoutdynamic />); expect(screen.getByTestId('mainlayout.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<MainLayoutdynamic />)}); test('handles user interactions',() => { render(<MainLayoutdynamic />)}); test('applies correct styling',() => { render(<MainLayoutdynamic />)})});
+<<<<<<< HEAD
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -126,3 +131,5 @@ import _React from 'react';  import '@testing-library/jest-dom'; import MainLayo
 =======
 });
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

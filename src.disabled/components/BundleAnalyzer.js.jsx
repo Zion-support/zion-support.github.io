@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/components/BundleAnalyzer.js.jsx
 "export\": const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState (\'overview\') \';\"";
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -20,6 +21,11 @@ export: const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (fals
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 "export\": const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState (\'overview\') \';\"";
+=======
+"export\": const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState (\'overview\') \';\"";
+
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 "export\": const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState (\'overview\') \';\"";
 "export\": const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState (\'overview\') \';\"";
 :src.disabled/components/BundleAnalyzer.js.jsx
@@ -30,6 +36,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 "export\": const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState (\'overview\') \';\"";
 export: const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ("overview") ";"";"""
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 <<<<<<< HEAD
@@ -39,3 +46,5 @@ export: const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (fals
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

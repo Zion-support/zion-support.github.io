@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,8 @@ import _React from 'react'; import { Link } from 'react-router-dom'; import { Ma
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 =======
 import _React from 'react'; import { Link } from 'react-router-dom'; import { MainNavigation } from "header/MainNavigation.tsx"; export function Header() {; return (; <header className="bg-white shadow-sm border-b border-gray-200"> <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8"> <div className="flex justify-between items-center h-16"> <div className="flex items-center"> <Link to="/" className="flex-shrink-0"> <h1 className="text-2xl font-bold text-zion-purple">Zion Tech Group></div> ></div> ></div> <MainNavigation /> ></div> ></div> ></div> );} export default Header;
@@ -44,6 +47,7 @@ const React from "react"; import { Link } from "react-router-dom"; import { Main
 
 import _React from 'react'; import { Link } from 'react-router-dom'; import { MainNavigation } from "header/MainNavigation ; export function Header() {; return ( <header className="bg-white shadow-sm border-b border-gray-200"> <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8"> <div className="flex justify-between items-center h-16"> <div className="flex items-center"> <Link to="/" className="flex-shrink-0"> <h1 className="text-2xl font-bold text-zion-purple">Zion Tech Group></div> ></div> ></div> <MainNavigation /> ></div> ></div> ></div> );} export default Header;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -81,3 +85,8 @@ import _React from 'react'; import { Link } from 'react-router-dom'; import { Ma
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React from \'react\'; import { Link } from \'react-router-dom\'; import { MainNavigation } from \"header/MainNavigation.tsx\"; export function Header() {; return (; <header className=\"bg-white shadow-sm border-b border-gray-200\"> <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\"> <div className=\"flex justify-between items-center h-16\"> <div className=\"flex items-center\"> <Link to=\"/\" className=\"flex-shrink-0\"> <h1 className=\"text-2xl font-bold text-zion-purple\">Zion Tech Group></div> ></div> ></div> <MainNavigation /> ></div> ></div> ></div> );} export default Header;
+const React from "react"; import { Link } from "react-router-dom"; import { MainNavigation } from "header/MainNavigation.tsx"; export function Header() {; return (; <header className="bg-white shadow-sm border-b border-gray-200"> <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"> <div className="flex justify-between items-center h-16"> <div className="flex items-center"> <Link to="/" className="flex-shrink-0"> <h1 className="text-2xl font-bold text-zion-purple">Zion Tech Group></div> ></div> ></div> <MainNavigation /> ></div> ></div> ></div> );} export default Header;'"'"
+import _React from 'react'; import { Link } from 'react-router-dom'; import { MainNavigation } from "header/MainNavigation.tsx"; export function Header() {; return (; <header className="bg-white shadow-sm border-b border-gray-200"> <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8"> <div className="flex justify-between items-center h-16"> <div className="flex items-center"> <Link to="/" className="flex-shrink-0"> <h1 className="text-2xl font-bold text-zion-purple">Zion Tech Group></div> ></div> ></div> <MainNavigation /> ></div> ></div> ></div> );} export default Header;
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

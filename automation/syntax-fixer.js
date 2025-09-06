@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -30,6 +31,8 @@
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 // Main execution;
 if (import.meta.url = = = `file: //${process.argv[1]}`) {const fixer = new SyntaxFixer(); fixer.run().catch(console.error)}
 export default SyntaxFixer;
@@ -39,6 +42,7 @@ export default SyntaxFixer;
     files.forEach(file => {;
       try {;
         let content = fs.readFileSync(file, "utf8");
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -112,6 +116,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 // Main execution;
 // Check condition
 if ( {) {
@@ -325,6 +331,7 @@ if ( {) {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -342,6 +349,8 @@ if ( {) {
 <<<<<<< HEAD
 ;
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   async run() {this.log("🚀 Starting Syntax Fixer");
     try {;
       await this.fixSyntaxErrors();
@@ -357,6 +366,7 @@ if (import.meta.url === `file: //${process.argv[1]}`) {const fixer = new SyntaxF
 }
 export default SyntaxFixer;
     })
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -415,6 +425,8 @@ this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
           modified = true
 =======
 ;          modified = true
@@ -428,6 +440,7 @@ this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
         }
 <<<<<<< HEAD
       } catch (error) {,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -444,11 +457,14 @@ this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
       }
     })
   },
 ,
   getSourceFiles() {,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -463,6 +479,8 @@ this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 ,
     if (fs.existsSync(srcDir)) {,
       const walkDir = (dir) => {,
@@ -474,7 +492,10 @@ this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
           if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {,
             walkDir(fullPath)
           } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,
+<<<<<<< HEAD
 
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
             files.push(fullPath)
 =======
       } catch (error) {,            files.push(fullPath)
@@ -485,6 +506,7 @@ this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
       walkDir(srcDir)
     }
     return files
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -524,15 +546,23 @@ this.log("=" * 50),
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       this.log(`🎯 Syntax Fixer completed. Fixes: applied: ${this.fixesApplied}`)
 
+=======
+this.log("=" * 50),
+      this.log(`🎯 Syntax Fixer completed. Fixes: applied: ${this.fixesApplied}`)
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     } catch (error) {
       this.log(`❌ Syntax Fixer: failed: ${error.message}`, "ERROR")
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 ursor/fix-lint-push-and-merge-to-main-28da
 
 ;
 
+<<<<<<< HEAD
 =======
 =======
 
@@ -557,6 +587,8 @@ export default SyntaxFixer,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 ;
     });
   },;
@@ -658,6 +690,7 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
 },;
 ;
 export default SyntaxFixer;
+<<<<<<< HEAD
 =======
 
 
@@ -672,3 +705,5 @@ export default SyntaxFixer;
 =======
 this.log("=" * 50)this.log("=" * 50),      this.log(`🎯 Syntax Fixer completed. Fixes: applied: ${this.fixesApplied}`)
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,8 @@ import _React from 'react'; import { cn } from "../../lib/utils"; const Textarea
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import React from \'react\'; import { cn } from \"../../lib/utils\"; const Textarea = React && React.forwardRef(({ className,...props },ref) => {; return ( <textarea className = { cn( \'flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background \"placeholder\": text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50\', className )} ref={ref} {...props} />; )}); Textarea && Textarea.displayName = \'Textarea\'; export { Textarea };\";
 =======
 import _React from 'react'; import { cn } from "../../lib/utils"; const Textarea = _React.forwardRef(({ className,...props },ref) => {; return(; <textarea; className = {; cn(; 'flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background "placeholder": text-muted-foreground focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50,; className; )}; ref={ref}; {...props}; />; )}); Textarea.displayName = 'Textarea'; export { Textarea };";import React from \'react\'; import { cn } from \"../../lib/utils\"; const Textarea = React && React.forwardRef(({ className,...props },ref) => {; return ( <textarea className = { cn( \'flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background \"placeholder\": text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50\', className )} ref={ref} {...props} />; )}); Textarea && Textarea.displayName = \'Textarea\'; export { Textarea };\";
@@ -21,6 +24,7 @@ const React from "react"; import { cn } from "././lib/utils"; const Textarea = R
 
 import _React from 'react'; import { cn } from "../../lib/utils"; const Textarea = _React && _React.forwardRef(({ className,...props },ref) => {; return ( <textarea className = { cn( 'flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background "placeholder": text-muted-foreground focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50, className )} ref={ref} {...props} />; )}); Textarea && Textarea.displayName = 'Textarea'; export { Textarea };";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -58,3 +62,8 @@ import _React from 'react'; import { cn } from "../../lib/utils"; const Textarea
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React from \'react\'; import { cn } from \"../../lib/utils\"; const Textarea = React.forwardRef(({ className,...props },ref) => {; return(; <textarea; className = {; cn(; \'flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background \"placeholder\": text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50\',; className; )}; ref={ref}; {...props}; />; )}); Textarea.displayName = \'Textarea\'; export { Textarea };\";
+const React from "react"; import { cn } from "././lib/utils"; const Textarea = React.forwardRef(({ className,.props },ref) => {; return(; <textarea; className = {; cn(; "flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder: text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",; className; )}; ref={ref}; {.props}; />; )}); Textarea.displayName = "Textarea"; export { Textarea };";'"'"
+import _React from 'react'; import { cn } from "../../lib/utils"; const Textarea = _React.forwardRef(({ className,...props },ref) => {; return(; <textarea; className = {; cn(; 'flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background "placeholder": text-muted-foreground focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50,; className; )}; ref={ref}; {...props}; />; )}); Textarea.displayName = 'Textarea'; export { Textarea };";
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

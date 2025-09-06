@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -23,6 +24,8 @@ describe("App Smoke Tests", () => {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import React from 'react';
 import { render } from '@testing-library/react';
 import App from './App';
@@ -37,6 +40,7 @@ describe('App Smoke Tests', () => {
 <<<<<<< HEAD
     expect(container.firstChild).toBeTruthy();
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -47,3 +51,7 @@ describe('App Smoke Tests', () => {
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   });
 });
+=======
+  });
+});
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

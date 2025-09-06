@@ -8,9 +8,9 @@ const createJestConfig = nextJest({
   dir: './',
 });
 
-const customJestConfig = {
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+const config = {
   testEnvironment: 'jsdom',
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
@@ -44,6 +44,7 @@ const customJestConfig = {
     '<rootDir>/corrupted_backup/',
     '<rootDir>/temp_*/',
   ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
@@ -83,11 +84,23 @@ const customJestConfig = {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+=======
+  coverageThreshold: {
+    global: {
+      branches: 70,
+      functions: 70,
+      lines: 70,
+      statements: 70,
+    },
+  },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   verbose: true,
   collectCoverage: false,
   testTimeout: 30000,
 };
 
+<<<<<<< HEAD
 module.exports = createJestConfig(customJestConfig);
 <<<<<<< HEAD
 =======
@@ -108,3 +121,6 @@ module.exports = createJestConfig(config);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+module.exports = createJestConfig(config);
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

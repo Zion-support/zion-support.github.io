@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,8 @@ import _React,{ createContext,useContext,useState } from 'react'; const Messagin
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import React,{ createContext,useContext,useState } from \'react\'; const MessagingProvider({ children }) {} const [messages,setMessages] = useState([]); const sendMessage = (content) => {} const newMessage = {} \"id\": Date && Date.now().toString(),; content,; \"timestamp\": new Date(),; \"isRead\": \'false\',; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider };
 =======
 import _React,{ createContext,useContext,useState } from 'react'; const MessagingProvider({ children }) {} const [messages,setMessages] = useState([]); const sendMessage = (content) => {} const newMessage = {} "id": Date.now().toString(),; content,; "timestamp": new Date(),; "isRead": 'false',; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider };import React,{ createContext,useContext,useState } from \'react\'; const MessagingProvider({ children }) {} const [messages,setMessages] = useState([]); const sendMessage = (content) => {} const newMessage = {} \"id\": Date && Date.now().toString(),; content,; \"timestamp\": new Date(),; \"isRead\": \'false\',; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider };
@@ -21,6 +24,7 @@ const React,{ createContext,useContext,useState } from "react"; const MessagingP
 
 import _React,{ createContext,useContext,useState } from 'react'; const MessagingProvider({ children }) {} const [messages,setMessages] = useState([]); const sendMessage = (content) => {} const newMessage = {} "id": Date && Date.now().toString(),; content,; "timestamp": new Date(),; "isRead": 'false',; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -58,3 +62,8 @@ import _React,{ createContext,useContext,useState } from 'react'; const Messagin
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React,{ createContext,useContext,useState } from \'react\'; const MessagingProvider({ children }) {} const [messages,setMessages] = useState([]); const sendMessage = (content) => {} const newMessage = {} \"id\": Date.now().toString(),; content,; \"timestamp\": new Date(),; \"isRead\": \'false\',; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider };
+const React,{ createContext,useContext,useState } from "react"; const MessagingProvider({ children }) {} const [messages,setMessages] = useState([]); const sendMessage = (content) => {} const newMessage = {} id: Date.now().toString(),; content,; timestamp: new Date(),; isRead: "false",; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider };'"'"
+import _React,{ createContext,useContext,useState } from 'react'; const MessagingProvider({ children }) {} const [messages,setMessages] = useState([]); const sendMessage = (content) => {} const newMessage = {} "id": Date.now().toString(),; content,; "timestamp": new Date(),; "isRead": 'false',; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider };
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,8 @@ import _React from 'react';'''; import { motion } from 'framer-motion'; const Ta
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 =======
 import _React from 'react';'''; import { motion } from 'framer-motion'; const Tabs = ({ tabs,activeTab,onTabChange }) => {} return(); <div className="w-full"> <div className="flex space-x-1 bg-gray-100 p-1 rounded-lg"> {}; onClick={() => onTabChange(tab.id)} className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-all duration-200 ${} '; ''; '''`; activeTab === tab.id'''"'"; ? 'bg-white text-gray-900 shadow-sm'''"'"'"; : 'text-gray-600 "hover": text-gray-900'"""";}"} > {tab.label} ></div> ))} ></div> <div>Broken JSX</div> className="mt-4"> {tabs.find(tab => tab.id === activeTab)?.content} ></div> ></div> )
@@ -51,6 +54,7 @@ import _React from 'react';'''; import { motion } from 'framer-motion'; const Ta
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -85,3 +89,8 @@ import _React from 'react';'''; import { motion } from 'framer-motion'; const Ta
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React from \'react\';\''\'; import { motion } from \'framer-motion\'; const Tabs = ({ tabs,activeTab,onTabChange }) => {} return(); <div className=\"w-full\"> <div className=\"flex space-x-1 bg-gray-100 p-1 rounded-lg\"> {}; onClick={() => onTabChange(tab.id)} className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-all duration-200 ${} \'; \''; \''\'`; activeTab === tab.id\''\'"\'"; ? \'bg-white text-gray-900 shadow-sm\''\'"\'"\'"; : \'text-gray-600 \"hover\": text-gray-900\'"\""\";}\"} > {tab.label} ></div> ))} ></div> <div>Broken JSX</div> className=\"mt-4\"> {tabs.find(tab => tab.id === activeTab)?.content} ></div> ></div> );}; export default Tabs; export { Tabs }; export { Tabs }; export { Tabs }; export { Tabs }; export { Tabs };
+const React from "react";"""; import { motion } from "framer-motion"; const Tabs = ({ tabs,activeTab,onTabChange }) => {} return(); <div className="w-full"> <div className="flex space-x-1 bg-gray-100 p-1 rounded-lg"> {}; onClick={() => onTabChange(tab.id)} className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-all duration-200 ${} "; ""; """`; activeTab === tab.id""""""; ? "bg-white text-gray-900 shadow-sm""""""""; : "text-gray-600 hover: text-gray-900""""";}"} > {tab.label} ></div> ))} ></div> <div>Broken JSX</div> className="mt-4"> {tabs.find(tab => tab.id === activeTab)?.content} ></div> ></div> );}; export default Tabs; export { Tabs }; export { Tabs }; export { Tabs }; export { Tabs }; export { Tabs };""`"`
+import _React from 'react';'''; import { motion } from 'framer-motion'; const Tabs = ({ tabs,activeTab,onTabChange }) => {} return(); <div className="w-full"> <div className="flex space-x-1 bg-gray-100 p-1 rounded-lg"> {}; onClick={() => onTabChange(tab.id)} className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-all duration-200 ${} '; ''; '''`; activeTab === tab.id'''"'"; ? 'bg-white text-gray-900 shadow-sm'''"'"'"; : 'text-gray-600 "hover": text-gray-900'"""";}"} > {tab.label} ></div> ))} ></div> <div>Broken JSX</div> className="mt-4"> {tabs.find(tab => tab.id === activeTab)?.content} ></div> ></div> );}; export default Tabs; export { Tabs }; export { Tabs }; export { Tabs }; export { Tabs }; export { Tabs };
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

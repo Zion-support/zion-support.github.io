@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -47,21 +48,22 @@ describe('Footerdynamic', () => {
 });
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Footerdynamic from "./components/Footer.dynamic"; describe("Footerdynamic",() => { test("renders without crashing",() => { render(<Footerdynamic />); expect(screen.getByTestId("footer.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Footerdynamic />)}); test("handles user interactions",() => { render(<Footerdynamic />)}); test("applies correct styling",() => { render(<Footerdynamic />)})});''"
 
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import _React from 'react';  import '@testing-library/jest-dom'; import Footerdynamic from '../components/Footer.dynamic'; describe('Footerdynamic',() => { test('renders without crashing',() => { render(<Footerdynamic />); expect(screen.getByTestId('footer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Footerdynamic />)}); test('handles user interactions',() => { render(<Footerdynamic />)}); test('applies correct styling',() => { render(<Footerdynamic />)})});
 import _React from 'react';  import '@testing-library/jest-dom'; import Footerdynamic from '../components/Footer.dynamic'; describe('Footerdynamic',() => { test('renders without crashing',() => { render(<Footerdynamic />); expect(screen.getByTestId('footer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Footerdynamic />)}); test('handles user interactions',() => { render(<Footerdynamic />)}); test('applies correct styling',() => { render(<Footerdynamic />)})});
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 import _React from 'react';  import '@testing-library/jest-dom'; import Footerdynamic from '../components/Footer.dynamic'; describe('Footerdynamic',() => { test('renders without crashing',() => { render(<Footerdynamic />); expect(screen.getByTestId('footer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Footerdynamic />)}); test('handles user interactions',() => { render(<Footerdynamic />)}); test('applies correct styling',() => { render(<Footerdynamic />)})});
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -74,6 +76,7 @@ describe('Footerdynamic'
   test('applies correct styling'
 <<<<<<< HEAD
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Footerdynamic from "./components/Footer.dynamic"; describe('Footerdynamic', () => { test("renders without crashing",() => { render(<Footerdynamic />); expect(screen.getByTestId("footer.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Footerdynamic />)}); test("handles user interactions",() => { render(<Footerdynamic />)}); test("applies correct styling"
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -97,10 +100,11 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
-import _React from 'react';  import '@testing-library/jest-dom'; import Footerdynamic from '../components/Footer.dynamic'; describe('Footerdynamic',() => { test('renders without crashing',() => { render(<Footerdynamic />); expect(screen.getByTestId('footer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Footerdynamic />)}); test('handles user interactions',() => { render(<Footerdynamic />)}); test('applies correct styling',() => { render(<Footerdynamic />)})});
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import _React from 'react';  import '@testing-library/jest-dom'; import Footerdynamic from '../components/Footer.dynamic'; describe('Footerdynamic',() => { test('renders without crashing',() => { render(<Footerdynamic />); expect(screen.getByTestId('footer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Footerdynamic />)}); test('handles user interactions',() => { render(<Footerdynamic />)}); test('applies correct styling',() => { render(<Footerdynamic />)})});
+import _React from 'react';  import '@testing-library/jest-dom'; import Footerdynamic from '../components/Footer.dynamic'; describe('Footerdynamic',() => { test('renders without crashing',() => { render(<Footerdynamic />); expect(screen.getByTestId('footer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Footerdynamic />)}); test('handles user interactions',() => { render(<Footerdynamic />)}); test('applies correct styling',() => { render(<Footerdynamic />)})});
+<<<<<<< HEAD
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -114,3 +118,5 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Footerdy
 =======
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Footerdynamic from "./components/Footer.dynamic"; describe('Footerdynamic', () => { test("renders without crashing",() => { render(<Footerdynamic />); expect(screen.getByTestId("footer.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Footerdynamic />)}); test("handles user interactions",() => { render(<Footerdynamic />)}); test("applies correct styling"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

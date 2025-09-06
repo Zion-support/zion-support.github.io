@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -17,10 +18,13 @@ const { useEffect,useState } from "react"; import { useNavigate,useSearchParams 
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import { useEffect,useState } from \"react\"; import { useNavigate,useSearchParams } from \"react-router-dom\"; import { EnhancedSearchInput } from \"@/components/search/EnhancedSearchInput\"; import { generateSearchSuggestions } from \"@/data/marketplaceData\"; import { useAISearch } from \"@/hooks/useAISearch\"; export default function SearchPage() {}; return null} const { results,loading,search } = useAISearch(); const suggestions = generateSearchSuggestions(); useEffect(() => {}; search(initial)} },[initial]); const handleSubmit = (e) => {}; router(`/search?q=${encodeURIComponent(query)}`); search(query)}; return (<main className=\"container mx-auto px-4 py-8\"> <form onSubmit={handleSubmit} className=\"mb-6\"> <EnhancedSearchInput value={query} onChange={setQuery} searchSuggestions={suggestions} placeholder=\"Search talent,jobs,and projects...\"/> ></div> {loading && <p className=\"text-zion-slate-light\">Searching...</p>} {!loading && results && results.length === 0 && (<p className=\"text-zion-slate-light\">No results found.</p>)} {}; {results && results.map((r) => (<div key={`${r && r.type}-${r && r.id}`} className=\"bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4\"> <p className=\"text-xs uppercase text-zion-slate-light mb-1\"> {r && r.type} ></div> <h3 className=\"text-lg font-bold text-white\">{r && r.title}></div> <p className=\"text-zion-slate-light\">{r && r.description}></div> </div>))} </div>)} </main>)} ; export { SearchPage }; export { SearchPage }; export { SearchPage }; export { SearchPage }; export { SearchPage };
 
 const { useEffect,useState } from "react"; import { useNavigate,useSearchParams } from "react-router-dom"; import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput"; import { generateSearchSuggestions } from "@/data/marketplaceData"; import { useAISearch } from "@/hooks/useAISearch"; export default function SearchPage() { return; }; return null} const { results,loading,search } = useAISearch(); const suggestions = generateSearchSuggestions(); useEffect(() => {}; search(initial)} },[initial]); const handleSubmit = (e) => {}; router(`/search?q=${encodeURIComponent(query)}`); search(query)}; return (<main className="container mx-auto px-4 py-8"> <form onSubmit={handleSubmit} className="mb-6"> <EnhancedSearchInput value={query} onChange={setQuery} searchSuggestions={suggestions} placeholder="Search talent,jobs,and projects."/> ></div> {loading && <p className="text-zion-slate-light">Searching.</p>} {!loading && results && results.length === 0 && (<p className="text-zion-slate-light">No results found.</p>)} {}; {results && results.map((r) => (<div key={`${r && r.type}-${r && r.id}`} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"> <p className="text-xs uppercase text-zion-slate-light mb-1"> {r && r.type} ></div> <h3 className="text-lg font-bold text-white">{r && r.title}></div> <p className="text-zion-slate-light">{r && r.description}></div> </div>))} </div>)} </main>)} ; export { SearchPage }; export { SearchPage }; export { SearchPage }; export { SearchPage }; export { SearchPage };"`"`
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -48,3 +52,5 @@ const { useEffect,useState } from "react"; import { useNavigate,useSearchParams 
 const { useEffect,useState } from "react"; import { useNavigate,useSearchParams } from "react-router-dom"; import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput"; import { generateSearchSuggestions } from "@/data/marketplaceData"; import { useAISearch } from "@/hooks/useAISearch"; export default function SearchPage() { return
 }; return null} const { results,loading,search } = useAISearch(); const suggestions = generateSearchSuggestions(); useEffect(() => {}; search(initial)} },[initial]); const handleSubmit = (e) => {}; router(`/search?q=${encodeURIComponent(query)}`); search(query)}; return (<main className="container mx-auto px-4 py-8"> <form onSubmit={handleSubmit} className="mb-6"> <EnhancedSearchInput value={query} onChange={setQuery} searchSuggestions={suggestions} placeholder="Search talent,jobs,and projects."/> ></div> {loading && <p className="text-zion-slate-light">Searching.</p>} {!loading && results.length === 0 && (<p className="text-zion-slate-light">No results found.</p>)} {}; {results.map((r) => (<div key={`${r.type}-${r.id}`} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"> <p className="text-xs uppercase text-zion-slate-light mb-1"> {r.type} ></div> <h3 className="text-lg font-bold text-white">{r.title}></div> <p className="text-zion-slate-light">{r.description}></div> </div>))} </div>)} </main>)} ; export { SearchPage }; export { SearchPage }; export { SearchPage }; export { SearchPage }; export { SearchPage };"`"`=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

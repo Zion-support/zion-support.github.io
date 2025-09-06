@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React, { createContext, useContext, useState, ReactNode } from "react";
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -25,6 +26,9 @@ interface AccessibilityContextType {
 import React, { createContext, useContext, ReactNode } from 'react';
 >>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React, { createContext, useContext, ReactNode } from "react";
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 interface AccessibilityContextType {
 
@@ -43,8 +47,12 @@ import React, { createContext, useContext, ReactNode } from "react";
 interface AccessibilityContextType {
   announceToScreenReader: (message: string) => void;
   setFocus: (elementId: string) => void;
+<<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
@@ -68,6 +76,7 @@ interface AccessibilityProviderProps {
   children: ReactNode;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
@@ -108,6 +117,11 @@ interface AccessibilityProviderProps {;
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
 >>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
+  children,
+}) => {
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   const announceToScreenReader = (message: string) => {
     const liveRegion = document.getElementById("live-region");
     if (liveRegion) {
@@ -122,6 +136,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     }
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -156,6 +171,8 @@ const AccessibilityContext = createContext<;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   return (
     <AccessibilityContext.Provider value={{ announceToScreenReader, setFocus }}>
       {children}
@@ -229,9 +246,24 @@ export const AccessibilityProvider: React.FC < AccessibilityProviderProps> = ({
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+};
+
+export const useAccessibility = () => {
+  const context = useContext(AccessibilityContext);
+  if (context === undefined) {
+    throw new Error(
+      "useAccessibility must be used within an AccessibilityProvider",
+    );
+  }
+  return context;
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

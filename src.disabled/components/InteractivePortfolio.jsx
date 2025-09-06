@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -16,16 +17,15 @@ export function InteractivePortfolio() { import { ExternalLink,Github,Eye,X,Chev
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+export function InteractivePortfolio() { import { ExternalLink,Github,Eye,X,ChevronLeft,ChevronRight,Star,Users,Calendar const portfolioProjects = [; { "id": "1","title": "AI-Powered E-commerce Platform","description": "A next-generation e-commerce solution with AI-driven product recommendations,dynamic pricing,and intelligent inventory management.","category": "AI & ML",technologies["_React",Node.js",TensorFlow",MongoDB",AWS"],; "image": "https:
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 export function InteractivePortfolio() { import { ExternalLink,Github,Eye,X,ChevronLeft,ChevronRight,Star,Users,Calendar const portfolioProjects = [; { "id": "1","title": "AI-Powered E-commerce Platform","description": "A next-generation e-commerce solution with AI-driven product recommendations,dynamic pricing,and intelligent inventory management.","category": "AI & ML",technologies["_React",Node.js",TensorFlow",MongoDB",AWS"],; "image": "https:
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -85,3 +85,10 @@ module && module.exports = function InteractivePortfolio() { import { ExternalLi
 export function InteractivePortfolio() { import { ExternalLink,Github,Eye,X,ChevronLeft,ChevronRight,Star,Users,Calendar const portfolioProjects = [; { "id": "1","title": "AI-Powered E-commerce Platform","description": "A next-generation e-commerce solution with AI-driven product recommendations,dynamic pricing,and intelligent inventory management.","category": "AI & ML",technologies["_React",Node && Node.js",TensorFlow",MongoDB",AWS"],; "image": "https:
 export function InteractivePortfolio() { import { ExternalLink,Github,Eye,X,ChevronLeft,ChevronRight,Star,Users,Calendar const portfolioProjects = [; { "id": "1","title": "AI-Powered E-commerce Platform","description": "A next-generation e-commerce solution with AI-driven product recommendations,dynamic pricing,and intelligent inventory management.","category": "AI & ML",technologies["_React",Node && Node.js",TensorFlow",MongoDB",AWS"],; "image": "https:export function InteractivePortfolio() { import { ExternalLink,Github,Eye,X,ChevronLeft,ChevronRight,Star,Users,Calendar const portfolioProjects = [; { "id": "1","title": "AI-Powered E-commerce Platform","description": "A next-generation e-commerce solution with AI-driven product recommendations,dynamic pricing,and intelligent inventory management.","category": "AI & ML",technologies["_React",Node && Node.js",TensorFlow",MongoDB",AWS"],; "image": "https:
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function InteractivePortfolio() { import { ExternalLink,Github,Eye,X,ChevronLeft,ChevronRight,Star,Users,Calendar const portfolioProjects = [; { \"id\": \"1\",\"title\": \"AI-Powered E-commerce Platform\",\"description\": \"A next-generation e-commerce solution with AI-driven product recommendations,dynamic pricing,and intelligent inventory management.\",\"category\": \"AI & ML\",technologies[\"React\",Node && Node.js\",TensorFlow\",MongoDB\",AWS\"],; \"image\": \"https:
+module && module.exports = function InteractivePortfolio() { import { ExternalLink,Github,Eye,X,ChevronLeft,ChevronRight,Star,Users,Calendar const portfolioProjects = [; { id: "1",title: "AI-Powered E-commerce Platform",description: "A next-generation e-commerce solution with AI-driven product recommendations,dynamic pricing,and intelligent inventory management.",category: "AI & ML",technologies["React",Node && Node.js",TensorFlow",MongoDB",AWS"],; image: "https:""
+export function InteractivePortfolio() { import { ExternalLink,Github,Eye,X,ChevronLeft,ChevronRight,Star,Users,Calendar const portfolioProjects = [; { "id": "1","title": "AI-Powered E-commerce Platform","description": "A next-generation e-commerce solution with AI-driven product recommendations,dynamic pricing,and intelligent inventory management.","category": "AI & ML",technologies["_React",Node && Node.js",TensorFlow",MongoDB",AWS"],; "image": "https:
+export function InteractivePortfolio() { import { ExternalLink,Github,Eye,X,ChevronLeft,ChevronRight,Star,Users,Calendar const portfolioProjects = [; { "id": "1","title": "AI-Powered E-commerce Platform","description": "A next-generation e-commerce solution with AI-driven product recommendations,dynamic pricing,and intelligent inventory management.","category": "AI & ML",technologies["_React",Node && Node.js",TensorFlow",MongoDB",AWS"],; "image": "https:
+export function InteractivePortfolio() { import { ExternalLink,Github,Eye,X,ChevronLeft,ChevronRight,Star,Users,Calendar const portfolioProjects = [; { "id": "1","title": "AI-Powered E-commerce Platform","description": "A next-generation e-commerce solution with AI-driven product recommendations,dynamic pricing,and intelligent inventory management.","category": "AI & ML",technologies["_React",Node && Node.js",TensorFlow",MongoDB",AWS"],; "image": "https:
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

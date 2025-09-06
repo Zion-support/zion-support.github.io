@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -34,10 +35,13 @@ describe('community category listing',() => { it('displays posts in Getting Hire
 describe("community category listing",() => { it("displays posts in Getting Hired category",() => { cy.visit("/community/getting-hired"); cy.get("[data-testid="post-card"]") .its("length") .should("be.greaterThan",0)})});'"'"
 describe('community category listing',() => { it('displays posts in Getting Hired category',() => { cy.visit('/community/getting-hired'); cy.get('[data-testid="post-card"]') .its('length') .should('be.greaterThan',0)})}});''
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 });''
 });''
 });''
 });''
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
@@ -60,10 +64,13 @@ describe('community category listing',() => { it('displays posts in Getting Hire
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 });''
 });''
 });''
 });''
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -80,12 +87,13 @@ describe('community category listing',() => { it('displays posts in Getting Hire
 });''
 =======
 >>>>>>> main
-});''
-});''
 =======
-<<<<<<< HEAD
 });''
-<<<<<<< HEAD
+});''
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+});''
+});''
+});''
 });''
 });''
 describe ('community category listing', () => {
@@ -99,6 +107,7 @@ describe ("community category listing", () => { it ("displays posts in Getting H
 describe ('community category listing', () => { it ('displays posts in Getting Hired category', () => { cy.visit ('/community / getting - hired'); cy.get ('[data - testid="post - card"]') .its ('length') .should ('be.greater_than', 0)})}
 });'';
 });'';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -152,3 +161,8 @@ describe ('community category listing', () => { it ('displays posts in Getting H
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+});''
+});''
+});''
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -57,6 +58,8 @@ console.log('🔍 Checking for problematic files...'),;
 const fs = require('fs');
 const path = require('path');
 
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 console.log('🔍 Debugging Next.js project structure...');
 
 // Check if we're in a valid Next.js project
@@ -163,21 +166,28 @@ console.log('🔍 Checking for problematic files...'),;
 const problematicFiles = [];
 const problematicFiles = [],;
 const problematicFiles = [];
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 const problematicFiles = [],;
 const problematicFiles = [];
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 const allFiles = getAllFiles('.', ['.tsx.ts.jsx.js']),;
 for (const file of allFiles) {;
   try {;
     const content = fs.readFileSync(file, 'utf8'),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -189,10 +199,13 @@ for (const file of allFiles) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     if (content.includes('') || content.includes('
 }
 }
     if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {;
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -201,6 +214,9 @@ for (const file of allFiles) {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       problematicFiles.push(file);
+=======
+    if (content.includes('      problematicFiles.push(file);
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     }
   } catch (error) {
     // Skip files that can't be read
@@ -232,6 +248,7 @@ function getAllFiles(dir, extensions) {
   return files;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -254,3 +271,8 @@ console.log('✅ Debug completed');
 ;
 console.log('✅ Debug completed'),;console.log('✅ Debug completed');
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;
+console.log('✅ Debug completed'),;
+console.log('✅ Debug completed');
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

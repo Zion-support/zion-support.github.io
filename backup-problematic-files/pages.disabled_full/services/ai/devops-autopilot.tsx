@@ -27,6 +27,7 @@ const Devops-autopilot: React.FC<Devops-autopilotProps> = ({ className }) => {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -34,3 +35,5 @@ const Devops-autopilot: React.FC<Devops-autopilotProps> = ({ className }) => {
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages.disabled_full/services/ai/devops-autopilot.tsx
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

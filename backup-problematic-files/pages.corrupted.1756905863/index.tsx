@@ -33,6 +33,7 @@ const Index: React.FC<IndexProps> = ({ className }) => {
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/pages.corrupted.1756905863/index.tsx
 }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/main
@@ -49,3 +50,5 @@ const Index: React.FC<IndexProps> = ({ className }) => {
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

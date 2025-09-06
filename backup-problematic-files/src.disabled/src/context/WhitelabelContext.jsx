@@ -1,4 +1,5 @@
 <<<<<<< HEAD:backup-problematic-files/src.disabled/src/context/WhitelabelContext.jsx
+<<<<<<< HEAD:backup-problematic-files/src.disabled/src/context/WhitelabelContext.jsx
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/src.disabled/src/context/WhitelabelContext.jsx
 <<<<<<< HEAD:backup-problematic-files/src.disabled/src/context/WhitelabelContext.jsx
@@ -48,3 +49,6 @@ import _React,{ createContext,useContext } from "react" const defaultConfig = {}
 const React,{ createContext,useContext } from "react" const defaultConfig = {};const defaultConfig = {}""
 import _React,{ createContext,useContext } from "react" const defaultConfig = {};const defaultConfig = {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/src/context/WhitelabelContext.jsx
+=======
+import _React,{ createContext,useContext } from "react" const defaultConfig = {};const defaultConfig = {}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:src.disabled/src/context/WhitelabelContext.jsx

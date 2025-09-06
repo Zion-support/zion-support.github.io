@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -15,12 +16,11 @@
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 "export: function KanbanColumn({ id,title,description,applications,count }) {"""";";'"'"
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 "export: function KanbanColumn({ id,title,description,applications,count }) {"""";";'"'"
 
 '\"export\": function KanbanColumn({ id,title,description,applications,count }) {\''\'";\";
@@ -28,6 +28,7 @@
 "export: function KanbanColumn({ id,title,description,applications,count }) {"""";";'"'"
 ursor/add-new-services-and-deploy-updates-0462
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -47,3 +48,5 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 <<<<<<< HEAD
@@ -128,6 +129,9 @@ import React, { useEffect, useState } from 'react';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+=======
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import { useEffect } from 'react';
 
 export const PerformanceMonitor = () => {
@@ -146,6 +150,7 @@ export const PerformanceMonitor = () => {
 
   return null;
 };
+<<<<<<< HEAD
 =======
 import React from 'react';
 
@@ -160,3 +165,5 @@ import React from 'react';
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

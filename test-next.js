@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -14,6 +15,9 @@
 const { execSync } = require('child_process');
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+const { execSync } = require('child_process');
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 console.log('Testing Next.js installation...');
 try {// Check if Next.js is installed;
   const nextVersion = execSync('npx next --version', { encoding: 'utf8' });
@@ -25,6 +29,7 @@ try {// Check if Next.js is installed;
 } catch (error) {console.error('Error:', error.message);
 const { execSync } = require('child_process'),;
 const { execSync } = require('child_process');
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -44,6 +49,9 @@ const { execSync } = require('child_process');
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 console.log('Testing Next.js installation...'),;
 try {;
   // Check if Next.js is installed;

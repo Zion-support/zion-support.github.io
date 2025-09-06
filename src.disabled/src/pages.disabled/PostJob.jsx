@@ -21,10 +21,23 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
+=======
+import React from 'react';
+interface PostJobProps {
+  // Add props here as needed
+
+
+}
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import React from 'react';
 interface PostJobProps {
   // Add props here as needed
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -44,12 +57,16 @@ export default function PostJob({ }: PostJobProps) {
 =======
 >export default function PostJob({ }: PostJobProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>export default function PostJob({ }: PostJobProps) {
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   return (
     <div>
       <h1>PostJob</h1>
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -65,10 +82,14 @@ export default function PostJob({ }: PostJobProps) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 :src.disabled/src/pages.disabled/PostJob.jsx
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/src/pages.disabled/PostJob.jsx
@@ -113,6 +134,9 @@ ursor/add-new-services-and-deploy-updates-0462
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 :src.pages.disabled/PostJob.jsx
 =======
 =======:src.pages.disabled/PostJob.jsx
@@ -123,6 +147,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 }
 :temp_exclude/src.pages.disabled/PostJob.jsx
+<<<<<<< HEAD
+=======
+}
+
+
+
+
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 :src.pages.disabled/PostJob.jsx
 }
@@ -130,6 +163,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -145,3 +179,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+=
+}
+>
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

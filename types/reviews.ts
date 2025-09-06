@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -23,6 +24,8 @@ export type ReviewRole = 'client' | 'talent',;
 export type ReviewCategoryScores = {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 export type ProjectStatus = 'InProgress' | 'Completed';
 export type Project = {;
   id: string;
@@ -205,6 +208,7 @@ export type ReviewsSummary = {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export type ProjectStatus = 'InProgress' | 'Completed',
 export type Project = {
+<<<<<<< HEAD
   id: string,
   client_id: string, // slug for client / user;
   talent_slug: string, // slug from TALENT_PROFILES;
@@ -325,6 +329,8 @@ export type ReviewRole = 'client' | 'talent';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 export interface Review {
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   id: string;
 =======
 export type ProjectStatus = 'InProgress' | 'Completed';
@@ -434,4 +440,7 @@ export type ReviewsSummary = {
 
 }
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

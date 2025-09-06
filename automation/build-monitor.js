@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -17,6 +18,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
@@ -25,6 +28,7 @@ const execAsync = promisify(exec);
 class BuildMonitor {
 <<<<<<< HEAD
   constructor() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -203,6 +207,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     this.isRunning = false;
 =======
   constructor() {    this.isRunning = false;
@@ -226,6 +232,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -234,13 +241,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
+
+
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const report = {
@@ -318,6 +324,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   async checkBuildStatus() {
     try {
       this.log('info', 'Checking build status...');
@@ -337,6 +345,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         this.log('warn', 'No build found, triggering build...');
         await this.triggerBuild();
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       
@@ -371,11 +380,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> main
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
-      
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
       
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+      
+      
+<<<<<<< HEAD
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <<<<<<< HEAD
 =======
@@ -387,6 +397,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
       return true;
     } catch (error) {
       this.log('error', `Build check failed: ${error.message}`);
@@ -587,6 +599,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 const monitor = new BuildMonitor();
 if (require.main === module) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   const monitor = new BuildMonitor();
   monitor.run().catch(console.error);
   const monitor = new BuildMonitor();
@@ -627,6 +640,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   const command = process.argv[2];
 =======
             
@@ -656,6 +671,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       console.log('Usage: node build-monitor.js [start|stop|status|check|build|stats]');
   }
 }
+<<<<<<< HEAD
 module.exports = BuildMonitor;
 <<<<<<< HEAD
 =======
@@ -676,6 +692,10 @@ module.exports = BuildMonitor;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 const fs = require('fs);
 const path = require('path'),
   const { execSync } = require(child_process');
@@ -811,6 +831,7 @@ class BuildMonitor {
 if (require.main === module) {
   const monitor = new BuildMonitor(),
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 <<<<<<< HEAD
@@ -823,12 +844,13 @@ module.exports = BuildMonitor;
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-
-module.exports = BuildMonitor;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+
+
 module.exports = BuildMonitor;
+module.exports = BuildMonitor;
+<<<<<<< HEAD
 >>>>>>> main
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -838,3 +860,5 @@ module.exports = BuildMonitor;
 =======
 module.exports = BuildMonitor;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

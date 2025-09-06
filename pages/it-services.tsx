@@ -2680,6 +2680,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
         <link rel='canonical' href={`${contact.site}/it-services`} />
       </Head>
 
+<<<<<<< HEAD
       <ErrorBoundary level='page'>
         <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>
           {/* Hero Section */}
@@ -2809,6 +2810,23 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
               <h1 
                 className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                 100+ Comprehensive IT Solutions
+=======
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Modernize Your IT Infrastructure?
+              </h2>
+              <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
+                Transform your technology infrastructure with our comprehensive IT services. From cloud migration to cybersecurity, 
+                we&apos;ll help you build a robust, secure, and scalable IT environment.
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
               </p>
               <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                 Transform your business with our enterprise-grade IT services. From cloud infrastructure 

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,6 +11,12 @@ import _React from';react' const MobileNavigation = ({ isOpen,onToggle }) => { c
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from\';react\' const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(\') const location = useLocation() const menuRef = useRef(null)\'';\';
 const React from";react" const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(") const location = useLocation() const menuRef = useRef(null)"";";''"
+=======
+import React from\';react\' const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(\') const location = useLocation() const menuRef = useRef(null)\'';\';
+const React from";react" const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(") const location = useLocation() const menuRef = useRef(null)"";";''"
+
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import React from\';react\' const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(\') const location = useLocation() const menuRef = useRef(null)\'';\';
 const React from";react" const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(") const location = useLocation() const menuRef = useRef(null)"";";''"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -20,6 +27,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React from\';react\' const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(\') const location = useLocation() const menuRef = useRef(null)\'';\';
 const React from";react" const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(") const location = useLocation() const menuRef = useRef(null)"";";''"
 :temp_exclude/src.disabled/components/MobileNavigation.js.jsx
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -51,3 +59,8 @@ import React from\';react\' const MobileNavigation = ({ isOpen,onToggle }) => { 
 const React from";react" const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(") const location = useLocation() const menuRef = useRef(null)"";";''"
 =======import _React from';react' const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(') const location = useLocation() const menuRef = useRef(null)'';';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React from\';react\' const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(\') const location = useLocation() const menuRef = useRef(null)\'';\';
+const React from";react" const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(") const location = useLocation() const menuRef = useRef(null)"";";''"
+import _React from';react' const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(') const location = useLocation() const menuRef = useRef(null)'';';
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

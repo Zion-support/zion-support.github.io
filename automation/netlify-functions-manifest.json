@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -39,22 +40,18 @@
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   "generatedAt": "2025-08-26T13:27:56.076Z",
   "functions": [];
 }
-=======
-  "generatedAt": "2025-08-26T13:57:08.259Z",
-=======
-  "generatedAt": "2025-08-26T12:40:09.094Z",
->>>>>>> origin/chore/build-fixes
   "functions": [],
   "note": "Placeholder manifest generated because scripts/generate-netlify-functions-manifest.cjs was missing."
 }
->>>>>>> origin/chore/build-setup
-=======
   "generatedAt": "2025-08-26T22:07:00.945Z",
   "functions": []
 }
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-build-nav-links
 <<<<<<< HEAD
 >>>>>>> main
@@ -71,3 +68,5 @@
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

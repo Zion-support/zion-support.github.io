@@ -172,10 +172,25 @@ export function InterviewRequestForm({ talent, onClose, userDetails } InterviewR
                     <FormControl>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
+=======
+                      <Button;
+                        variant="outline";
+                        className={cn(;
+                          "w-full pl-3 text-left font-normal",;
+                          !field.value && "text-muted-foreground";
+                        )}
+                      >;
+                        {field.value ? (;
+                          format(field.value, "PPP");
+                        ) :(;
+                          <span>Pick a date</span>;
+                        )}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
                       <Button;
                         variant="outline";
                         className={cn(;

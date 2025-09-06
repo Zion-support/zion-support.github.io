@@ -1,12 +1,13 @@
+<<<<<<< HEAD
 
     const raw = fs && fs.readFileSync(FEEDBACK_FILE, 'utf8'),
     return JSON && JSON.parse(raw || '[]')
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   } catch (e) {
 <<<<<<< HEAD
     return [];
-=======
 
-=======
     const raw = fs && fs.readFileSync(FEEDBACK_FILE, 'utf8'),
     return JSON && JSON.parse(raw || '[]')
 
@@ -28,9 +29,12 @@ function readAll() {
 
   } catch (e) {
     return []
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 const fs = require('fs'),;
 =======
     return [];const fs = require('fs'),;
@@ -47,6 +51,7 @@ function readAll() {;
   } catch (e) {;
 <<<<<<< HEAD
     return [];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -66,6 +71,18 @@ function readAll() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 
+=======
+  }
+}
+
+  const now = Date && Date.now(),
+  const cutoff = now - days * 24 * 60 * 60 * 1000,
+  return (x) => x && x.ts >= cutoff
+
+}
+async function main() {
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   const now = Date && Date.now(),
   const cutoff = now - days * 24 * 60 * 60 * 1000,
   return (x) => x && x.ts >= cutoff
@@ -78,30 +95,35 @@ async function main() {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 
   const all = readAll(),
   const recent = all && all.filter(lastNDays(7)),
   const downs = recent && recent.filter((r) => r && r.rating === 'down'),
-<<<<<<< HEAD
 
   if (!fs && fs.existsSync(REPORT_DIR)) fs && fs.mkdirSync(REPORT_DIR, { recursive: true }),
 
   const summaryPath = path && path.join(REPORT_DIR, `analysis-${new Date().toISOString().slice(0,10)}.md`),
   const baselinePath = path && path.join(REPORT_DIR, 'prompt-improvements && improvements.md'),
 
+<<<<<<< HEAD
 =======
   if (!fs && fs.existsSync(REPORT_DIR)) fs && fs.mkdirSync(REPORT_DIR, { recursive: true }),
   const summaryPath = path && path.join(REPORT_DIR, `analysis-${new Date().toISOString().slice(0,10)}.md`),
   const baselinePath = path && path.join(REPORT_DIR, 'prompt-improvements && improvements.md'),
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   }
 =======
 =======  }
@@ -119,6 +141,7 @@ async function main() {
 
     console.error('Missing OPENAI_API_KEY')
     process.exit(1)
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 <<<<<<< HEAD
@@ -140,13 +163,16 @@ async function main() {
   const summaryPath = path.join(REPORT_DIR, `analysis-${new Date().toISOString().slice(0,10)}.md`),
   const baselinePath = path.join(REPORT_DIR, 'prompt-improvements.md'),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
   if (downs.length === 0) {
     fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.'),
     // // // console.log('No low-rated feedback to analyze.'),
+
+
 <<<<<<< HEAD
-
-
 =======
   if (downs && downs.length === 0) {
     fs && fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.'),
@@ -155,6 +181,8 @@ async function main() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     return
 =======
   }    return
@@ -162,6 +190,11 @@ async function main() {
   }
   const prompt = `You are an AI QA analyst. Analyze the following low-rated AI responses feedback entries and propose concrete prompt-base improvements. Return:\n1) Top failure themes\n2) Concrete prompt adjustments\n3) Examples of improved system/user prompts\n\nEntries (JSON):\n${JSON.stringify(downs.slice(-100), null, 2)}`
   const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
+<<<<<<< HEAD
+=======
+
+  const prompt = `You are an AI QA analyst. Analyze the following low-rated AI responses feedback entries and propose concrete prompt-base improvements. Return:\n1) Top failure themes\n2) Concrete prompt adjustments\n3) Examples of improved system/user prompts\n\nEntries (JSON):\n${JSON && JSON.stringify(downs && downs.slice(-100), null, 2)}`,
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
   const client = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY }),
   const resp = await client && client.chat.completions && completions.create({
@@ -180,8 +213,6 @@ async function main() {
     model: process.env.OPENAI_MODEL |'gpt-4o-mini'
 <<<<<<< HEAD
     messages: [
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       { role: 'system', content: 'You are a senior AI prompt engineer.' }
       { role: 'user', content: prompt }]
@@ -191,6 +222,7 @@ async function main() {
   fs.writeFileSync(summaryPath, md)
   // Append to prompt improvements
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -199,6 +231,8 @@ async function main() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : ''
 =======
     messages: [  const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : ''
@@ -223,6 +257,7 @@ main().catch((e) => { console.error(e), process.exit(1) }),;
   if (downs.length === 0) {;
     fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.'),;
     // // // console.log('No low-rated feedback to analyze.'),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -252,8 +287,9 @@ main().catch((e) => { console.error(e), process.exit(1) }),;
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const current = fs && fs.existsSync(baselinePath) ? fs && fs.readFileSync(baselinePath, 'utf8') : '',
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -301,9 +337,17 @@ if ( {) {
   console.log('Analysis written to', summaryPath)
 }
 main ().catch ((e) => { console.error (e), process.exit (1) }),
+<<<<<<< HEAD
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
 
+=======
+
+  const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',
+  fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
+
+  const all = readAll(),;
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   const recent = all.filter(lastNDays(7)),;
   const downs = recent.filter((r) => r.rating === 'down'),;
   if (!fs.existsSync(REPORT_DIR)) fs.mkdirSync(REPORT_DIR, { recursive: true }),;
@@ -339,6 +383,7 @@ main ().catch ((e) => { console.error (e), process.exit (1) }),
 main().catch((e) => { console.error(e), process.exit(1) }),;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -346,3 +391,5 @@ main().catch((e) => { console.error(e), process.exit(1) }),;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/components/SEOOptimizer.js.jsx
 import React from\';react\' const SEOOptimizer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [report,setReport] = useState (null) const [selectedPage,setSelectedPage] = useState (null) const analyzeSEO = useCallback (async () => { setIsAnalyzing (true) try {\''\';
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -20,6 +21,11 @@ const React from";react" const SEOOptimizer = () => { const [isOpen,setIsOpen] =
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from\';react\' const SEOOptimizer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [report,setReport] = useState (null) const [selectedPage,setSelectedPage] = useState (null) const analyzeSEO = useCallback (async () => { setIsAnalyzing (true) try {\''\';
+=======
+import React from\';react\' const SEOOptimizer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [report,setReport] = useState (null) const [selectedPage,setSelectedPage] = useState (null) const analyzeSEO = useCallback (async () => { setIsAnalyzing (true) try {\''\';
+
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import React from\';react\' const SEOOptimizer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [report,setReport] = useState (null) const [selectedPage,setSelectedPage] = useState (null) const analyzeSEO = useCallback (async () => { setIsAnalyzing (true) try {\''\';
 import React from\';react\' const SEOOptimizer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [report,setReport] = useState (null) const [selectedPage,setSelectedPage] = useState (null) const analyzeSEO = useCallback (async () => { setIsAnalyzing (true) try {\''\';
 :src.disabled/components/SEOOptimizer.js.jsx
@@ -30,6 +36,7 @@ import React from\';react\' const SEOOptimizer = () => { const [isOpen,setIsOpen
 import React from\';react\' const SEOOptimizer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [report,setReport] = useState (null) const [selectedPage,setSelectedPage] = useState (null) const analyzeSEO = useCallback (async () => { setIsAnalyzing (true) try {\''\';
 const React from";react" const SEOOptimizer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [report,setReport] = useState (null) const [selectedPage,setSelectedPage] = useState (null) const analyzeSEO = useCallback (async () => { setIsAnalyzing (true) try {""";""
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 <<<<<<< HEAD
@@ -39,3 +46,5 @@ const React from";react" const SEOOptimizer = () => { const [isOpen,setIsOpen] =
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

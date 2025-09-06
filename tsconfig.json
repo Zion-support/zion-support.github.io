@@ -2,11 +2,14 @@
   "compilerOptions": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "target": "es5",
     "lib": ["dom", "dom.iterable", "es6"],
 =======
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     "target": "ES2020",
     "lib": [
       "dom",
@@ -20,9 +23,12 @@
       "es2022"
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -46,6 +52,7 @@
     ],
     "baseUrl": ".",
     "paths": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -91,6 +98,8 @@
 =======
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
       "@/*": ["./*"],
       "@/components/*": ["./components/*"],
       "@/pages/*": ["./pages/*"],
@@ -99,6 +108,7 @@
       "@/types/*": ["./types/*"]
     }
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
@@ -110,6 +120,8 @@
   },
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   "include": [
     "next-env.d.ts",
     "**/*.ts",
@@ -120,8 +132,12 @@
     "node_modules"
   ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 }
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

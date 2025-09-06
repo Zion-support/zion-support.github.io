@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
@@ -19,6 +20,8 @@ files && files.forEach((file) => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 
     // Fix import statements missing semicolons;

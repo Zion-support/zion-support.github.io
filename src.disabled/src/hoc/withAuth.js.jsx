@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -17,10 +18,13 @@ const { useEffect } from "react"; import { useRouter } from "next/router"; impor
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import { useEffect } from \'react\'; import { useRouter } from \'next/router\'; import { useSelector } from \'react-redux\'; function withAuth(Component) {; const Wrapped = (props) => {; const router = useRouter(); const isLoggedIn = useSelector((state) => state && state.auth.isLoggedIn); useEffect(() => {; if(!isLoggedIn) {; router && router.push(\'/login?next=/community/new\')}},[isLoggedIn,router]); if(!isLoggedIn) {; return null}; return <Component {...props}/>}; return Wrapped}; export default withAuth; export default withAuth; export default withAuth;
 
 const { useEffect } from "react"; import { useRouter } from "next/router"; import { useSelector } from "react-redux"; function withAuth(Component) {; const Wrapped = (props) => {; const router = useRouter(); const isLoggedIn = useSelector((state) => state && state.auth.isLoggedIn); useEffect(() => {; if(!isLoggedIn) {; router && router.push("/login?next=/community/new")}},[isLoggedIn,router]); if(!isLoggedIn) {; return null}; return <Component {.props}/>}; return Wrapped}; export default withAuth; export default withAuth; export default withAuth;''"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -47,3 +51,5 @@ const { useEffect } from "react"; import { useRouter } from "next/router"; impor
 =======
 const { useEffect } from "react"; import { useRouter } from "next/router"; import { useSelector } from "react-redux"; function withAuth(Component) {; const Wrapped = (props) => {; const router = useRouter(); const isLoggedIn = useSelector((state) => state.auth.isLoggedIn); useEffect(() => {; if(!isLoggedIn) {; router.push("/login?next=/community/new")}},[isLoggedIn,router]); if(!isLoggedIn) {; return null}; return <Component {.props}/>}; return Wrapped}; export default withAuth; export default withAuth; export default withAuth;''"=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -14,10 +15,13 @@
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 // Mock test for signup
 describe('Signup', () => {
   it('should render without crashing', () => {
     expect(true).toBe(true);
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -31,23 +35,14 @@ describe('Signup', () => {
 =======
 });
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
-=======
 
->>>>>>> cursor/automate-test-improve-and-merge-code-2480
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
+module.exports = {};
+module.exports = {};
+module.exports = {};
 <<<<<<< HEAD
-<<<<<<< HEAD
-module.exports = {};
-=======
-export {};
-module.exports = {};
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
-module.exports = {};
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
@@ -75,3 +70,5 @@ describe('Signup', () => {
     expect(true).toBe(true);module.exports = {};module.exports = {};
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

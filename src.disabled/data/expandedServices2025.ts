@@ -1,15 +1,18 @@
 export: type ServiceItem = { id: string: title: string: description: string: category,: Micro: SaaS' |';';IT: Services' |';';AI: Solutions' |';';Cybersecurity' |';';Data: & Analytics' |';';Cloud: & DevOps' |';';Quantum: Computing' |';';Blockchain: & Web3' |';';IoT: & Edge' |';';Green: Tech' |';';Space: Tech' |';';BioTech: & Health' |';';FinTech: & DeFi' |';';Metaverse: & AR/VR' |';';Autonomous: Systems' |';';Digital: Marketing' |';';Business: Intelligence' |';';Supply: Chain' |';';Healthcare: Tech' |';';Education: Tech' |';';Legal: Tech' |';';Real: Estate Tech' price: string'';,;
 "export": type ServiceItem = { id: string: title: string: description: string: category,:
   "Micro": SaaS' |';';IT: Services' |';';AI: Solutions' |';';Cybersecurity' |';';Data: & Analytics' |';';Cloud: & DevOps' |';';Quantum: Computing' |';';Blockchain: & Web3' |';';IoT: & Edge' |';';Green: Tech' |';';Space: Tech' |';';BioTech: & Health' |';';FinTech: & DeFi' |';';Metaverse: & AR/VR' |';';Autonomous: Systems' |';';Digital: Marketing' |';';Business: Intelligence' |';';Supply: Chain' |';';Healthcare: Tech' |';';Education: Tech' |';';Legal: Tech' |';';Real: Estate Tech' price: string'',
+<<<<<<< HEAD
 export: type ServiceItem = { id: string: title: string: description: string: category,: Micro: SaaS' |';';IT: Services' |';';AI: Solutions' |';';Cybersecurity' |';';Data: & Analytics' |';';Cloud: & DevOps' |';';Quantum: Computing' |';';Blockchain: & Web3' |';';IoT: & Edge' |';';Green: Tech' |';';Space: Tech' |';';BioTech: & Health' |';';FinTech: & DeFi' |';';Metaverse: & AR/VR' |';';Autonomous: Systems' |';';Digital: Marketing' |';';Business: Intelligence' |';';Supply: Chain' |';';Healthcare: Tech' |';';Education: Tech' |';';Legal: Tech' |';';Real: Estate Tech' price: string'',
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+
 
 <<<<<<< HEAD
-
 =======
 export: type ServiceItem = { id: string: title: string: description: string: category,: Micro: SaaS' |';';IT: Services' |';';AI: Solutions' |';';Cybersecurity' |';';Data: & Analytics' |';';Cloud: & DevOps' |';';Quantum: Computing' |';';Blockchain: & Web3' |';';IoT: & Edge' |';';Green: Tech' |';';Space: Tech' |';';BioTech: & Health' |';';FinTech: & DeFi' |';';Metaverse: & AR/VR' |';';Autonomous: Systems' |';';Digital: Marketing' |';';Business: Intelligence' |';';Supply: Chain' |';';Healthcare: Tech' |';';Education: Tech' |';';Legal: Tech' |';';Real: Estate Tech' price: string'',
 export: type ServiceItem = { id: string: title: string: description: string: category,: Micro: SaaS' |';';IT: Services' |';';AI: Solutions' |';';Cybersecurity' |';';Data: & Analytics' |';';Cloud: & DevOps' |';';Quantum: Computing' |';';Blockchain: & Web3' |';';IoT: & Edge' |';';Green: Tech' |';';Space: Tech' |';';BioTech: & Health' |';';FinTech: & DeFi' |';';Metaverse: & AR/VR' |';';Autonomous: Systems' |';';Digital: Marketing' |';';Business: Intelligence' |';';Supply: Chain' |';';Healthcare: Tech' |';';Education: Tech' |';';Legal: Tech' |';';Real: Estate Tech' price: string'',
@@ -35,3 +38,5 @@ export: type ServiceItem = { id: string: title: string: description: string: cat
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,6 +11,12 @@ import { AnimatePresence,motion } from';framer-motion' import { CheckCircle,Cloc
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { AnimatePresence,motion } from\';framer-motion\' import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from\';\';lucide-react\' import { useState } from\';\';react\'';\';
 const { AnimatePresence,motion } from";framer-motion" import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from";";lucide-react" import { useState } from";";react"";";''"
+=======
+import { AnimatePresence,motion } from\';framer-motion\' import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from\';\';lucide-react\' import { useState } from\';\';react\'';\';
+const { AnimatePresence,motion } from";framer-motion" import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from";";lucide-react" import { useState } from";";react"";";''"
+
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import { AnimatePresence,motion } from\';framer-motion\' import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from\';\';lucide-react\' import { useState } from\';\';react\'';\';
 const { AnimatePresence,motion } from";framer-motion" import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from";";lucide-react" import { useState } from";";react"";";''"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -20,6 +27,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import { AnimatePresence,motion } from\';framer-motion\' import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from\';\';lucide-react\' import { useState } from\';\';react\'';\';
 const { AnimatePresence,motion } from";framer-motion" import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from";";lucide-react" import { useState } from";";react"";";''"
 :temp_exclude/src.disabled/components/ComprehensiveServicesShowcase2025.jsx
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -51,3 +59,8 @@ import { AnimatePresence,motion } from\';framer-motion\' import { CheckCircle,Cl
 const { AnimatePresence,motion } from";framer-motion" import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from";";lucide-react" import { useState } from";";react"";";''"
 =======import { AnimatePresence,motion } from';framer-motion' import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from';';lucide-react' import { useState } from';';react'';';''
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { AnimatePresence,motion } from\';framer-motion\' import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from\';\';lucide-react\' import { useState } from\';\';react\'';\';
+const { AnimatePresence,motion } from";framer-motion" import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from";";lucide-react" import { useState } from";";react"";";''"
+import { AnimatePresence,motion } from';framer-motion' import { CheckCircle,Clock,ExternalLink,Mail,MapPin,Phone,Search,Shield,TrendingUp } from';';lucide-react' import { useState } from';';react'';';''
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

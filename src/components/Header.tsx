@@ -168,6 +168,7 @@ const Header: React.FC = () => {
 =======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { Menu, X, Phone, Mail, MapPin } from 'lucide-react';
 
 <<<<<<< HEAD
@@ -251,6 +252,69 @@ const Header = () => {
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
 =======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { Menu, X, Search } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
+import SearchModal from './SearchModal';
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+import { Menu, X } from 'lucide-react';
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+
+const Header: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navigation = [
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Services', href: '/services' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Contact', href: '/contact' }
+  ];
+
+<<<<<<< HEAD
+=======
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+import Button from './Button';
+
+const Header: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+=======
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+
+  return (
+    <header className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700 sticky top-0 z-50">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">Z</span>
+            </div>
+            <span className="text-xl font-bold text-white">Zion Tech Group</span>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-8">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className="text-gray-300 hover:text-white transition-colors"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
           {/* Mobile Menu Button */}
           <button
             className="md:hidden text-gray-300 hover:text-white"
@@ -266,6 +330,7 @@ const Header = () => {
         {/* Mobile Navigation */}
 <<<<<<< HEAD
         {isMenuOpen && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -351,6 +416,8 @@ const Header = () => {
             </div>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
           <div className="md:hidden py-4 border-t border-slate-700">
             <nav className="flex flex-col space-y-4">
               {navigation.map((item) => (
@@ -364,6 +431,7 @@ const Header = () => {
                 </Link>
               ))}
             </nav>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </div>
         )}
@@ -781,6 +849,11 @@ export default Header;
           </div>
         )}
       </nav>
+=======
+          </div>
+        )}
+      </div>
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     </header>
   );
 };
@@ -788,6 +861,9 @@ export default Header;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 <<<<<<< HEAD
 export default Header;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
@@ -804,6 +880,7 @@ export default Header;
 export default Header;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
@@ -814,3 +891,9 @@ export default Header;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+export default Header;
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

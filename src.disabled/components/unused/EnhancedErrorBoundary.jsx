@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -16,16 +17,15 @@ import React,{ Component } from';react' import { motion } from';';framer-motion'
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+import React,{ Component } from';react' import { motion } from';';framer-motion' import { ExclamationTriangleIcon,ArrowPathIcon,HomeIcon,DocumentTextIcon,BugAntIcon } from';';@heroicons/react/24/outline' "class": EnhancedErrorBoundary extends Component { constructor(props) { super(props) this.state = { hasError: fals,e,"error": 'nul',l,"errorInfo": 'nul',l,"errorId": 'nul',l,"showStackTrace": 'false'}} "static": getDerivedStateFromError(error) { return { hasError: tru,e,error,"errorId": this.generateErrorId()}} componentDidCatch(error,errorInfo) { this.setState({ "errorInfo": ''})'';''
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 import React,{ Component } from';react' import { motion } from';';framer-motion' import { ExclamationTriangleIcon,ArrowPathIcon,HomeIcon,DocumentTextIcon,BugAntIcon } from';';@heroicons/react/24/outline' "class": EnhancedErrorBoundary extends Component { constructor(props) { super(props) this.state = { hasError: fals,e,"error": 'nul',l,"errorInfo": 'nul',l,"errorId": 'nul',l,"showStackTrace": 'false'}} "static": getDerivedStateFromError(error) { return { hasError: tru,e,error,"errorId": this.generateErrorId()}} componentDidCatch(error,errorInfo) { this.setState({ "errorInfo": ''})'';''
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -85,3 +85,10 @@ class: EnhancedErrorBoundary extends Component { constructor(props) { super(prop
 import React,{ Component } from';react' import { motion } from';';framer-motion' import { ExclamationTriangleIcon,ArrowPathIcon,HomeIcon,DocumentTextIcon,BugAntIcon } from';';@heroicons/react/24/outline' "class": EnhancedErrorBoundary extends Component { constructor(props) { super(props) this && this.state = { hasError: fals,e,"error": 'nul',l,"errorInfo": 'nul',l,"errorId": 'nul',l,"showStackTrace": 'false'}} "static": getDerivedStateFromError(error) { return { hasError: tru,e,error,"errorId": this && this.generateErrorId()}} componentDidCatch(error,errorInfo) { this && this.setState({ "errorInfo": ''})'';''
 import React,{ Component } from';react' import { motion } from';';framer-motion' import { ExclamationTriangleIcon,ArrowPathIcon,HomeIcon,DocumentTextIcon,BugAntIcon } from';';@heroicons/react/24/outline' "class": EnhancedErrorBoundary extends Component { constructor(props) { super(props) this && this.state = { hasError: fals,e,"error": 'nul',l,"errorInfo": 'nul',l,"errorId": 'nul',l,"showStackTrace": 'false'}} "static": getDerivedStateFromError(error) { return { hasError: tru,e,error,"errorId": this && this.generateErrorId()}} componentDidCatch(error,errorInfo) { this && this.setState({ "errorInfo": ''})'';''import React,{ Component } from';react' import { motion } from';';framer-motion' import { ExclamationTriangleIcon,ArrowPathIcon,HomeIcon,DocumentTextIcon,BugAntIcon } from';';@heroicons/react/24/outline' "class": EnhancedErrorBoundary extends Component { constructor(props) { super(props) this && this.state = { hasError: fals,e,"error": 'nul',l,"errorInfo": 'nul',l,"errorId": 'nul',l,"showStackTrace": 'false'}} "static": getDerivedStateFromError(error) { return { hasError: tru,e,error,"errorId": this && this.generateErrorId()}} componentDidCatch(error,errorInfo) { this && this.setState({ "errorInfo": ''})'';''
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+"class\": EnhancedErrorBoundary extends Component { constructor(props) { super(props) this && this.state = { hasError: fals,e,\"error\": \'nul\',l,\"errorInfo\": \'nul\',l,\"errorId\": \'nul\',l,\"showStackTrace\": \'false\'}} \"static\": getDerivedStateFromError(error) { return { hasError: tru,e,error,\"errorId\": this && this.generateErrorId()}} componentDidCatch(error,errorInfo) { this && this.setState({ \"errorInfo\": \''})
+class: EnhancedErrorBoundary extends Component { constructor(props) { super(props) this && this.state = { hasError: fals,e,error: "nul",l,errorInfo: "nul",l,errorId: "nul",l,showStackTrace: "false"}} static: getDerivedStateFromError(error) { return { hasError: tru,e,error,errorId: this && this.generateErrorId()}} componentDidCatch(error,errorInfo) { this && this.setState({ errorInfo: ""})'"'"
+import React,{ Component } from';react' import { motion } from';';framer-motion' import { ExclamationTriangleIcon,ArrowPathIcon,HomeIcon,DocumentTextIcon,BugAntIcon } from';';@heroicons/react/24/outline' "class": EnhancedErrorBoundary extends Component { constructor(props) { super(props) this && this.state = { hasError: fals,e,"error": 'nul',l,"errorInfo": 'nul',l,"errorId": 'nul',l,"showStackTrace": 'false'}} "static": getDerivedStateFromError(error) { return { hasError: tru,e,error,"errorId": this && this.generateErrorId()}} componentDidCatch(error,errorInfo) { this && this.setState({ "errorInfo": ''})'';''
+import React,{ Component } from';react' import { motion } from';';framer-motion' import { ExclamationTriangleIcon,ArrowPathIcon,HomeIcon,DocumentTextIcon,BugAntIcon } from';';@heroicons/react/24/outline' "class": EnhancedErrorBoundary extends Component { constructor(props) { super(props) this && this.state = { hasError: fals,e,"error": 'nul',l,"errorInfo": 'nul',l,"errorId": 'nul',l,"showStackTrace": 'false'}} "static": getDerivedStateFromError(error) { return { hasError: tru,e,error,"errorId": this && this.generateErrorId()}} componentDidCatch(error,errorInfo) { this && this.setState({ "errorInfo": ''})'';''
+import React,{ Component } from';react' import { motion } from';';framer-motion' import { ExclamationTriangleIcon,ArrowPathIcon,HomeIcon,DocumentTextIcon,BugAntIcon } from';';@heroicons/react/24/outline' "class": EnhancedErrorBoundary extends Component { constructor(props) { super(props) this && this.state = { hasError: fals,e,"error": 'nul',l,"errorInfo": 'nul',l,"errorId": 'nul',l,"showStackTrace": 'false'}} "static": getDerivedStateFromError(error) { return { hasError: tru,e,error,"errorId": this && this.generateErrorId()}} componentDidCatch(error,errorInfo) { this && this.setState({ "errorInfo": ''})'';''
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

@@ -20,11 +20,6 @@
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 }
   ],
@@ -155,26 +150,6 @@
   ],
   "recommendations": [
     {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "type": "file_permissions",
-      "message": "package.json is world-readable",
-      "severity": "medium"
-    },
-    {
-      "type": "file_permissions",
-      "message": "package-lock.json is world-readable",
-      "severity": "medium"
-    }
-  ],
-  "summary": {
-    "totalVulnerabilities": 0,
-    "totalRecommendations": 2,
-    "securityScore": 90,
-    "status": "good"
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
 }
   ],
@@ -302,16 +277,11 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
   ],
   "recommendations": [
     {
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       "priority": "high",
       "category": "dependencies",
       "message": "Update dependencies with known vulnerabilities",
@@ -360,6 +330,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -373,3 +344,5 @@
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

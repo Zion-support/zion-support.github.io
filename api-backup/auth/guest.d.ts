@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 declare const _default: import('@/utils/withErrorLogging').ApiHandler;
@@ -9,6 +10,9 @@ export default _default;
 =======
 import * as React from 'react';
 >>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+=======
+import React from 'react';
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 declare const _default: import('@/utils/withErrorLogging').ApiHandler;
 =======
 import React from 'react';declare const _default: import('@/utils/withErrorLogging').ApiHandler;

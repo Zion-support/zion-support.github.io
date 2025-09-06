@@ -1,4 +1,5 @@
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/talent/TalentGrid.jsx
+<<<<<<< HEAD:backup-problematic-files/src.disabled/components/talent/TalentGrid.jsx
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/talent/TalentGrid.jsx
 =======
@@ -35,3 +36,7 @@
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:src.disabled/components/talent/TalentGrid.jsx
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/components/talent/TalentGrid.jsx
+=======
+' \"export\": function TalentGrid({ talents,isLoading,onTalentClick,isAuthenticated,viewProfile,clearFilters,handleBook,handleMessage }) { \''\'";\";
+" export: function TalentGrid({ talents,isLoading,onTalentClick,isAuthenticated,viewProfile,clearFilters,handleBook,handleMessage }) { """";";'"'"
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:src.disabled/components/talent/TalentGrid.jsx

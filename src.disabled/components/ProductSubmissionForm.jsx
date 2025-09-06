@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,6 +11,12 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ' \' \' \' \' \' \' \' \' \' import { Sparkles\''\";\";
 " " " " " " " " " " import { Sparkles""";";'"'"
+=======
+' \' \' \' \' \' \' \' \' \' import { Sparkles\''\";\";
+" " " " " " " " " " import { Sparkles""";";'"'"
+
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 ' \' \' \' \' \' \' \' \' \' import { Sparkles\''\";\";
 " " " " " " " " " " import { Sparkles""";";'"'"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -20,6 +27,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ' \' \' \' \' \' \' \' \' \' import { Sparkles\''\";\";
 " " " " " " " " " " import { Sparkles""";";'"'"
 :temp_exclude/src.disabled/components/ProductSubmissionForm.jsx
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -57,3 +65,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 " " " " " " " " " " import { Sparkles""";";'"'"
 ' ' ' ' ' ' ' ' ' '''";";""
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+' \' \' \' \' \' \' \' \' \' import { Sparkles\''\";\";
+" " " " " " " " " " import { Sparkles""";";'"'"
+' ' ' ' ' ' ' ' ' '''";";""
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

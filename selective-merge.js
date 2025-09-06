@@ -1,9 +1,26 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import { execSync } from "child_process";
 
 console.log("🔧 Performing selective merge of main source files...");
 
 // List of main source directories to merge
+<<<<<<< HEAD
 const mainSourceDirs = [  'pages/',
+=======
+const mainSourceDirs = [
+#!/usr / bin / env node;
+import {exec_sync} from 'child_process';
+;
+console.log ('🔧 Performing selective merge of main source files...');
+;
+// List of main source directories to merge;
+const mainSourceDirs = [;
+
+  'pages/',
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   'components/',
   'utils/',
   'types/',
@@ -79,7 +96,11 @@ const mergeSpecificFiles = () =>: any {
 
     return true;
   } catch (error) {
+<<<<<<< HEAD
     console.error("Error in selective merge:", error.message);    } catch (error) {
+=======
+    } catch (error) {
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
       console && console.error('Error committing changes:', error && error.message);
     }
   } else {

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const { ProductListing } from "@/types/listings"; export const EMERGING_TECHNOLOGY_SERVICES_2027: "ProductListing[] = [","});"})"@/types/listings&apos;&apos,export const EMERGING_TECHNOLOGY_SERVICES_2027: "ProductListing[] = [","export const EMERGING_TECHNOLOGY_SERVICES_2027: "ProductListing[] = [",""""
 import { ProductListing } from "@/types/listings"; export const "EMERGING_TECHNOLOGY_SERVICES_2027": 'ProductListing[] = [',,"}
 });"})'@/types/listings&apos;&apos,export const "EMERGING_TECHNOLOGY_SERVICES_2027": 'ProductListing[] = [',"export const "EMERGING_TECHNOLOGY_SERVICES_2027": 'ProductListing[] = [',""]"
@@ -13,3 +14,5 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

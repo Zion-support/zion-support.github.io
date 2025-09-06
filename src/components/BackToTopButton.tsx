@@ -35,6 +35,7 @@ export function BackToTopButton() {
 =======
 import { ArrowUp } from 'lucide-react';
 import { useEffect, useState } from 'react';
+<<<<<<< HEAD
 import { useEffect, useState  } from './react';
 export /**
  * BackToTopButton - Function description
@@ -101,6 +102,14 @@ export function BackToTopButton() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+export function BackToTopButton() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const updateVisibility = () => {
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
       setVisible(window.scrollY > 400);
     };
     updateVisibility();
@@ -122,6 +131,7 @@ export function BackToTopButton() {;
       className={`fixed bottom-6 right-6 z-[60] rounded-full bg-primary text-primary-foreground p-2 shadow transition-opacity md:bottom-8 md:right-8 ${
         visible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -145,3 +155,10 @@ export function BackToTopButton() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+    >
+      <ArrowUp className="h-4 w-4" />
+    </button>
+  );
+}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

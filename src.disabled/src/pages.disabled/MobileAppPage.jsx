@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/src/pages.disabled/MobileAppPage.jsx
 =======
 <<<<<<< HEAD
@@ -17,6 +18,9 @@ import _React from "react"; import SEO from "@/components/SEO"; import { MobileA
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+import _React from "react"; import SEO from "@/components/SEO"; import { MobileAppHero } from "@/components/mobile-app/MobileAppHero"; import { AppFeatures } from "@/components/mobile-app/AppFeatures"; import { AppScreenshots } from "@/components/mobile-app/AppScreenshots"; import { AppTestimonials } from "@/components/mobile-app/AppTestimonials"; import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner"; import { DownloadSection } from "@/components/mobile-app/DownloadSection"; const MobileAppPage = () => {}}; return (<SEO title="Zion AI Marketplace App" description="Hire top AI talent or find global IT jobs on the go. Download the Zion app now." keywords="AI freelancer app,hire tech,find IT jobs,tech marketplace app,mobile AI jobs"/> ,; <MobileAppHero /> ,; <AppFeatures /> ,; <AppScreenshots /> ,; <AppTestimonials /> ,; <DownloadSection /> ,; <AppStoreBanner />)}; export default MobileAppPage; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage };
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from \"react\"; import SEO from \"@/components/SEO\"; import { MobileAppHero } from \"@/components/mobile-app/MobileAppHero\"; import { AppFeatures } from \"@/components/mobile-app/AppFeatures\"; import { AppScreenshots } from \"@/components/mobile-app/AppScreenshots\"; import { AppTestimonials } from \"@/components/mobile-app/AppTestimonials\"; import { AppStoreBanner } from \"@/components/mobile-app/AppStoreBanner\"; import { DownloadSection } from \"@/components/mobile-app/DownloadSection\"; const MobileAppPage = () => {}}; return (<SEO title=\"Zion AI Marketplace App\" description=\"Hire top AI talent or find global IT jobs on the go. Download the Zion app now.\" keywords=\"AI freelancer app,hire tech,find IT jobs,tech marketplace app,mobile AI jobs\"/> ,; <MobileAppHero /> ,; <AppFeatures /> ,; <AppScreenshots /> ,; <AppTestimonials /> ,; <DownloadSection /> ,; <AppStoreBanner />)}; export default MobileAppPage; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage };
@@ -49,6 +53,7 @@ class ErrorBoundary extends React.Component {
 }
 import _React from "react"; import SEO from "@/components/SEO"; import { MobileAppHero } from "@/components/mobile-app/MobileAppHero"; import { AppFeatures } from "@/components/mobile-app/AppFeatures"; import { AppScreenshots } from "@/components/mobile-app/AppScreenshots"; import { AppTestimonials } from "@/components/mobile-app/AppTestimonials"; import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner"; import { DownloadSection } from "@/components/mobile-app/DownloadSection"; const MobileAppPage = () => {}}; return (<SEO title="Zion AI Marketplace App" description="Hire top AI talent or find global IT jobs on the go. Download the Zion app now." keywords="AI freelancer app,hire tech,find IT jobs,tech marketplace app,mobile AI jobs"/> ,; <MobileAppHero /> ,; <AppFeatures /> ,; <AppScreenshots /> ,; <AppTestimonials /> ,; <DownloadSection /> ,; <AppStoreBanner />)}; export default MobileAppPage; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage };
 import _React from "react"; import SEO from "@/components/SEO"; import { MobileAppHero } from "@/components/mobile-app/MobileAppHero"; import { AppFeatures } from "@/components/mobile-app/AppFeatures"; import { AppScreenshots } from "@/components/mobile-app/AppScreenshots"; import { AppTestimonials } from "@/components/mobile-app/AppTestimonials"; import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner"; import { DownloadSection } from "@/components/mobile-app/DownloadSection"; const MobileAppPage = () => {}}; return (<SEO title="Zion AI Marketplace App" description="Hire top AI talent or find global IT jobs on the go. Download the Zion app now." keywords="AI freelancer app,hire tech,find IT jobs,tech marketplace app,mobile AI jobs"/> ,; <MobileAppHero /> ,; <AppFeatures /> ,; <AppScreenshots /> ,; <AppTestimonials /> ,; <DownloadSection /> ,; <AppStoreBanner />)}; export default MobileAppPage; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -93,3 +98,5 @@ import _React from "react"; import SEO from "@/components/SEO"; import { MobileA
 =======
 import _React from "react"; import SEO from "@/components/SEO"; import { MobileAppHero } from "@/components/mobile-app/MobileAppHero"; import { AppFeatures } from "@/components/mobile-app/AppFeatures"; import { AppScreenshots } from "@/components/mobile-app/AppScreenshots"; import { AppTestimonials } from "@/components/mobile-app/AppTestimonials"; import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner"; import { DownloadSection } from "@/components/mobile-app/DownloadSection"; const MobileAppPage = () => {}}; return (<SEO title="Zion AI Marketplace App" description="Hire top AI talent or find global IT jobs on the go. Download the Zion app now." keywords="AI freelancer app,hire tech,find IT jobs,tech marketplace app,mobile AI jobs"/> ,; <MobileAppHero /> ,; <AppFeatures /> ,; <AppScreenshots /> ,; <AppTestimonials /> ,; <DownloadSection /> ,; <AppStoreBanner />)}; export default MobileAppPage; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage }; export { MobileAppPage };=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

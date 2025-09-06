@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -49,14 +50,14 @@ const nextConfig = {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 /** @type {import ('next').NextConfig} */;
 const next_config = {
   reactStrictMode: true,
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
-<<<<<<< HEAD
-<<<<<<< HEAD
   page_extensions: ['tsx', 'ts', 'jsx', 'js'],
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   images: {
@@ -70,6 +71,7 @@ const next_config = {
 module.exports = next_config;
 ;
 
+<<<<<<< HEAD
 =======
 
     domains: ["localhost", "ziontechgroup.com"],
@@ -77,25 +79,30 @@ module.exports = next_config;
   output: 'standalone',
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   trailingSlash: false,
   distDir: '.next',
 };
 
-<<<<<<< HEAD
 module.exports = nextConfig;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+module.exports = nextConfig;
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   pageExtensions: ["tsx", "ts", "jsx", "js"],
   images: {
     domains: ["localhost", "ziontechgroup.com"],
   },
   output: "standalone",
   trailingSlash: false,
-<<<<<<< HEAD
   distDir: '.next',
 =======
     return config;  trailingSlash: false,
@@ -111,6 +118,7 @@ export default nextConfig;
 <<<<<<< HEAD
 const nextConfig = {,
   reactStrictMode: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -149,10 +157,13 @@ const nextConfig = {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   compress: true,
   poweredByHeader: false,
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -242,18 +253,14 @@ module.exports = nextConfig;
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 module.exports = nextConfig;
 module.exports = nextConfig;
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
   distDir: ".next",
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   trailingSlash: true,
   
@@ -344,11 +351,11 @@ module.exports = nextConfig;
         permanent: true,
       },
     ];
->>>>>>> 380d5be269a380502c5b88f5cbeaaaacd40bbf12
   }
 };
 
 export default nextConfig;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
@@ -451,3 +458,8 @@ module.exports = nextConfig;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+module.exports = nextConfig;
+module.exports = nextConfig;
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

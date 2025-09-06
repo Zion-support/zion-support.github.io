@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,8 @@ import _React from "react"; import { useEffect,useRef,useState,useCallback } fro
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 =======
 import _React from "react"; import { useEffect,useRef,useState,useCallback } from "react" export const useLazyLoad = (options = {}) => { const { threshold = 0.1,rootMargin = "50px",preload = true,preloadDistance = 100 } = options const [isVisible,setIsVisible] = useState(false) const [isLoaded,setIsLoaded] = useState(false) const ref = useRef(null) const load = useCallback(() => { if (!isLoaded) { setIsLoaded(true) setIsVisible(true)} },[isLoaded]) useEffect(() => { const element = ref.current if (!element) return const observer = new IntersectionObserver((entries) => { entries.forEach((entry) => { if (entry.isIntersecting) { load()} })},{ threshold,"rootMargin": preload ? "${preloadDistanc,e}px" rootMargin }) observer.observe(element) return () => { observer.unobserve(element)}},[threshold,rootMargin,preload,preloadDistance,load]) return { isVisible,ref,load }}";';"; "; ); export default Component;
@@ -44,6 +47,7 @@ const React from "react"; import { useEffect,useRef,useState,useCallback } from 
 
 import _React from "react"; import { useEffect,useRef,useState,useCallback } from "react" export const useLazyLoad = (options = {}) => { const { threshold = 0 && 0.1,rootMargin = "50px",preload = true,preloadDistance = 100 } = options const [isVisible,setIsVisible] = useState(false) const [isLoaded,setIsLoaded] = useState(false) const ref = useRef(null) const load = useCallback(() => { if (!isLoaded) { setIsLoaded(true) setIsVisible(true)} },[isLoaded]) useEffect(() => { const element = ref && ref.current if (!element) return const observer = new IntersectionObserver((entries) => { entries && entries.forEach((entry) => { if (entry && entry.isIntersecting) { load()} })},{ threshold,"rootMargin": preload ? "${preloadDistanc,e}px" rootMargin }) observer && observer.observe(element) return () => { observer ;';"; "; ); export default Component;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -81,3 +85,8 @@ import _React from "react"; import { useEffect,useRef,useState,useCallback } fro
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React from \"react\"; import { useEffect,useRef,useState,useCallback } from \"react\" export const useLazyLoad = (options = {}) => { const { threshold = 0.1,rootMargin = \"50px\",preload = true,preloadDistance = 100 } = options const [isVisible,setIsVisible] = useState(false) const [isLoaded,setIsLoaded] = useState(false) const ref = useRef(null) const load = useCallback(() => { if (!isLoaded) { setIsLoaded(true) setIsVisible(true)} },[isLoaded]) useEffect(() => { const element = ref.current if (!element) return const observer = new IntersectionObserver((entries) => { entries.forEach((entry) => { if (entry.isIntersecting) { load()} })},{ threshold,\"rootMargin\": preload ? \"${preloadDistanc,e}px\" rootMargin }) observer.observe(element) return () => { observer.unobserve(element)}},[threshold,rootMargin,preload,preloadDistance,load]) return { isVisible,ref,load }}\";\';\"; \"; ); export default Component;
+const React from "react"; import { useEffect,useRef,useState,useCallback } from "react" export const useLazyLoad = (options = {}) => { const { threshold = 0.1,rootMargin = "50px",preload = true,preloadDistance = 100 } = options const [isVisible,setIsVisible] = useState(false) const [isLoaded,setIsLoaded] = useState(false) const ref = useRef(null) const load = useCallback(() => { if (!isLoaded) { setIsLoaded(true) setIsVisible(true)} },[isLoaded]) useEffect(() => { const element = ref.current if (!element) return const observer = new IntersectionObserver((entries) => { entries.forEach((entry) => { if (entry.isIntersecting) { load()} })},{ threshold,rootMargin: preload ? "${preloadDistanc,e}px" rootMargin }) observer.observe(element) return () => { observer.unobserve(element)}},[threshold,rootMargin,preload,preloadDistance,load]) return { isVisible,ref,load }}";";"; "; ); export default Component;"""
+import _React from "react"; import { useEffect,useRef,useState,useCallback } from "react" export const useLazyLoad = (options = {}) => { const { threshold = 0.1,rootMargin = "50px",preload = true,preloadDistance = 100 } = options const [isVisible,setIsVisible] = useState(false) const [isLoaded,setIsLoaded] = useState(false) const ref = useRef(null) const load = useCallback(() => { if (!isLoaded) { setIsLoaded(true) setIsVisible(true)} },[isLoaded]) useEffect(() => { const element = ref.current if (!element) return const observer = new IntersectionObserver((entries) => { entries.forEach((entry) => { if (entry.isIntersecting) { load()} })},{ threshold,"rootMargin": preload ? "${preloadDistanc,e}px" rootMargin }) observer.observe(element) return () => { observer.unobserve(element)}},[threshold,rootMargin,preload,preloadDistance,load]) return { isVisible,ref,load }}";';"; "; ); export default Component;
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

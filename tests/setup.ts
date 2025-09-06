@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import '@testing-library/jest-dom';
 import { cleanup } from '@testing-library/react';
 import { vi, afterEach } from 'vitest';
@@ -20,6 +21,8 @@ afterEach(() => {;
 });
 =======
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import React from 'react';
 =======
 // Mock Next.js router
@@ -70,10 +73,13 @@ export default function Setup({ }: SetupProps) {
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 // Mock ResizeObserver;
 global.ResizeObserver = class ResizeObserver {
   observe () { /* do nothing */ }
@@ -110,6 +116,7 @@ global.window.scroll_to = vi.fn (), // vi should be globally available;
   advanceTimersByTime: vi.advanceTimersByTime.bind(vi);
   runAllTimers: vi.runAllTimers.bind(vi);
   // Reset / clear mocks;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   resetAllMocks: vi.resetAllMocks.bind(vi);
@@ -168,3 +175,5 @@ global.ResizeObserver = class ResizeObserver {
 // Mock window.scrollTo
 global.window.scrollTo = jest.fn();
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

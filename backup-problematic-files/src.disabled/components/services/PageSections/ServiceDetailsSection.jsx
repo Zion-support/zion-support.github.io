@@ -1,5 +1,6 @@
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/services/PageSections/ServiceDetailsSection.jsx
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/services/PageSections/ServiceDetailsSection.jsx
+<<<<<<< HEAD:backup-problematic-files/src.disabled/components/services/PageSections/ServiceDetailsSection.jsx
 <<<<<<< HEAD:backup-merge-conflicts/ServiceDetailsSection.jsx.backup
 'import { Check,Clock,Users,Shield,Star,ArrowRight,ChevronDown,ChevronUp export const ServiceDetailsSection = ({ services = [] }) => {\'';\''\"";'import { Check,Clock,Users,Shield,Star,ArrowRight,ChevronDown,ChevronUp export const ServiceDetailsSection = ({ services = [] }) => {'';''"";""}
 
@@ -43,3 +44,9 @@
 =======
 'import { Check,Clock,Users,Shield,Star,ArrowRight,ChevronDown,ChevronUp export const ServiceDetailsSection = ({ services = [] }) => {'';''"";""}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/components/services/PageSections/ServiceDetailsSection.jsx
+=======
+'import { Check,Clock,Users,Shield,Star,ArrowRight,ChevronDown,ChevronUp export const ServiceDetailsSection = ({ services = [] }) => {'';''"";""}
+'import { Check,Clock,Users,Shield,Star,ArrowRight,ChevronDown,ChevronUp export const ServiceDetailsSection = ({ services = [] }) => {\'';\''\"";
+"import { Check,Clock,Users,Shield,Star,ArrowRight,ChevronDown,ChevronUp export const ServiceDetailsSection = ({ services = [] }) => {"";"""";"""
+'import { Check,Clock,Users,Shield,Star,ArrowRight,ChevronDown,ChevronUp export const ServiceDetailsSection = ({ services = [] }) => {'';''"";""}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:src.disabled/components/services/PageSections/ServiceDetailsSection.jsx

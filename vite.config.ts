@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { defineConfig, splitVendorChunkPlugin } from 'vite';
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import react from '@vitejs/plugin-react';
@@ -366,6 +367,14 @@ export default defineConfig({
     include: /src\/.*\.[jt]sx?$/,
     exclude: []
   },
+=======
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   server: {
     port: 3000,
     host: true
@@ -373,6 +382,7 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: true
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
 })
@@ -397,3 +407,17 @@ export default defineConfig({
 =======
 })
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  },
+  resolve: {
+    alias: {
+      '@': '/workspace/src'
+    }
+  },
+  css: {
+    postcss: {
+      plugins: []
+    }
+  }
+})
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

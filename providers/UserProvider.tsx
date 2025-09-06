@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -21,6 +22,10 @@ import React, { createContext, useContext, useEffect, useMemo, useState } from '
 
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
+=======
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 export type UserRole = 'client' | 'talent';
 
 export type User = {
@@ -303,16 +308,17 @@ export function useUser() {;
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
-export default UserProvider;
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 export default UserProvider;
+export default UserProvider;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -321,3 +327,5 @@ export default UserProvider;
 
 export default UserProvider;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

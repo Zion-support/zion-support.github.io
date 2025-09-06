@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :src.disabled/components/CollaborativeTextEditor.js.jsx
 ' \"export\": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = \',enableAI = true,enableCollaboration = true,enableVersioning = true,className = \',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ \"enableTracking\": \'tru\',e,\"enableUserBehaviorTracking\": \'true\'}) const [editorState,setEditorState] = useState ({ \"content\": \'initialConten\',t,\"selection\": { start: 0,\"end\": \'0\',\"text\": \'},\"version\": \'0\',changes[],suggestions[],conflicts[] }) const [showSuggestions] = useState (true) const [showCollaborators,setShowCollaborators] = useState (false) const [isProcessing,setIsProcessing] = useState (false) const [lastSaved,setLastSaved] = useState (null) const editorRef = useRef (null) const collaborationRef = useRef (null) \';\"";
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -20,6 +21,11 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ' \"export\": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = \',enableAI = true,enableCollaboration = true,enableVersioning = true,className = \',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ \"enableTracking\": \'tru\',e,\"enableUserBehaviorTracking\": \'true\'}) const [editorState,setEditorState] = useState ({ \"content\": \'initialConten\',t,\"selection\": { start: 0,\"end\": \'0\',\"text\": \'},\"version\": \'0\',changes[],suggestions[],conflicts[] }) const [showSuggestions] = useState (true) const [showCollaborators,setShowCollaborators] = useState (false) const [isProcessing,setIsProcessing] = useState (false) const [lastSaved,setLastSaved] = useState (null) const editorRef = useRef (null) const collaborationRef = useRef (null) \';\"";
+=======
+' \"export\": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = \',enableAI = true,enableCollaboration = true,enableVersioning = true,className = \',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ \"enableTracking\": \'tru\',e,\"enableUserBehaviorTracking\": \'true\'}) const [editorState,setEditorState] = useState ({ \"content\": \'initialConten\',t,\"selection\": { start: 0,\"end\": \'0\',\"text\": \'},\"version\": \'0\',changes[],suggestions[],conflicts[] }) const [showSuggestions] = useState (true) const [showCollaborators,setShowCollaborators] = useState (false) const [isProcessing,setIsProcessing] = useState (false) const [lastSaved,setLastSaved] = useState (null) const editorRef = useRef (null) const collaborationRef = useRef (null) \';\"";
+
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 ' \"export\": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = \',enableAI = true,enableCollaboration = true,enableVersioning = true,className = \',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ \"enableTracking\": \'tru\',e,\"enableUserBehaviorTracking\": \'true\'}) const [editorState,setEditorState] = useState ({ \"content\": \'initialConten\',t,\"selection\": { start: 0,\"end\": \'0\',\"text\": \'},\"version\": \'0\',changes[],suggestions[],conflicts[] }) const [showSuggestions] = useState (true) const [showCollaborators,setShowCollaborators] = useState (false) const [isProcessing,setIsProcessing] = useState (false) const [lastSaved,setLastSaved] = useState (null) const editorRef = useRef (null) const collaborationRef = useRef (null) \';\"";
 ' \"export\": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = \',enableAI = true,enableCollaboration = true,enableVersioning = true,className = \',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ \"enableTracking\": \'tru\',e,\"enableUserBehaviorTracking\": \'true\'}) const [editorState,setEditorState] = useState ({ \"content\": \'initialConten\',t,\"selection\": { start: 0,\"end\": \'0\',\"text\": \'},\"version\": \'0\',changes[],suggestions[],conflicts[] }) const [showSuggestions] = useState (true) const [showCollaborators,setShowCollaborators] = useState (false) const [isProcessing,setIsProcessing] = useState (false) const [lastSaved,setLastSaved] = useState (null) const editorRef = useRef (null) const collaborationRef = useRef (null) \';\"";
 :src.disabled/components/CollaborativeTextEditor.js.jsx
@@ -30,6 +36,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ' \"export\": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = \',enableAI = true,enableCollaboration = true,enableVersioning = true,className = \',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ \"enableTracking\": \'tru\',e,\"enableUserBehaviorTracking\": \'true\'}) const [editorState,setEditorState] = useState ({ \"content\": \'initialConten\',t,\"selection\": { start: 0,\"end\": \'0\',\"text\": \'},\"version\": \'0\',changes[],suggestions[],conflicts[] }) const [showSuggestions] = useState (true) const [showCollaborators,setShowCollaborators] = useState (false) const [isProcessing,setIsProcessing] = useState (false) const [lastSaved,setLastSaved] = useState (null) const editorRef = useRef (null) const collaborationRef = useRef (null) \';\"";
 " export: const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = ",enableAI = true,enableCollaboration = true,enableVersioning = true,className = ",onSave,onExport }) => { const { trackEvent } = useAnalytics ({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [editorState,setEditorState] = useState ({ content: "initialConten",t,selection: { start: 0,end: "0",text: "},version: "0",changes[],suggestions[],conflicts[] }) const [showSuggestions] = useState (true) const [showCollaborators,setShowCollaborators] = useState (false) const [isProcessing,setIsProcessing] = useState (false) const [lastSaved,setLastSaved] = useState (null) const editorRef = useRef (null) const collaborationRef = useRef (null) ";"";"""
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 <<<<<<< HEAD
@@ -39,3 +46,5 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

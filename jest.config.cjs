@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = {
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
@@ -17,6 +18,8 @@ module.exports = {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 const nextJest = require('next/jest')
 
 const createJestConfig = nextJest({
@@ -27,12 +30,15 @@ const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jsdom',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1',
+    '^@/(.*)$': '<rootDir>/$1',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
   },
 <<<<<<< HEAD
@@ -49,16 +55,20 @@ const customJestConfig = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   testMatch: [
     '<rootDir>/__tests__/**/*.(js|jsx|ts|tsx)',
-    '<rootDir>/src/**/*.(test|spec).(js|jsx|ts|tsx)'
+    '<rootDir>/**/*.(test|spec).(js|jsx|ts|tsx)'
   ],
   collectCoverageFrom: [
+<<<<<<< HEAD
     'src/**/*.{js,jsx,ts,tsx}',
     '!src/**/*.d.ts',
     '!src/index.tsx',
@@ -88,10 +98,14 @@ const customJestConfig = {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   collectCoverageFrom: [
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     'components/**/*.{js,jsx,ts,tsx}',
     'pages/**/*.{js,jsx,ts,tsx}',
+    'app/**/*.{js,jsx,ts,tsx}',
     'utils/**/*.{js,jsx,ts,tsx}',
     '!**/node_modules/**',
+    '!**/*.d.ts',
   ],
   testPathIgnorePatterns: [
     '<rootDir>/.next/',
@@ -109,7 +123,29 @@ const customJestConfig = {
     '<rootDir>/backup*/',
     '<rootDir>/corrupted_backup/',
     '<rootDir>/temp_*/',
+    '<rootDir>/temp_exclude/',
+    '<rootDir>/temp_backup/',
+    '<rootDir>/temp_components/',
+    '<rootDir>/temp_conflicts/',
+    '<rootDir>/temp_working/',
+    '<rootDir>/src.disabled/',
+    '<rootDir>/components.disabled/',
+    '<rootDir>/components.disabled_full/',
+    '<rootDir>/contracts.disabled/',
+    '<rootDir>/data.disabled/',
+    '<rootDir>/api.disabled/',
+    '<rootDir>/api.disabled.temp/',
+    '<rootDir>/cypress_backup/',
+    '<rootDir>/data_backup/',
+    '<rootDir>/apps.backup/',
+    '<rootDir>/automation_backup/',
+    '<rootDir>/backup/',
+    '<rootDir>/backups/',
+    '<rootDir>/corrupted_backup/',
+    '<rootDir>/corrupted-files-backup/',
+    '<rootDir>/broken_files_backup/',
   ],
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -119,6 +155,12 @@ module.exports = createJestConfig(customJestConfig)
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+=======
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+  verbose: true,
+  collectCoverage: false,
+  testTimeout: 10000,
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   coverageReporters: ['text', 'lcov'],
   coverageThreshold: {
     global: {
@@ -128,6 +170,7 @@ module.exports = createJestConfig(customJestConfig)
       statements: 60
     }
   }
+<<<<<<< HEAD
 };
 >>>>>>> main
 <<<<<<< HEAD
@@ -138,3 +181,8 @@ module.exports = createJestConfig(customJestConfig)
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+
+module.exports = createJestConfig(customJestConfig)
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*;
   Minimal React type declarations.;
   ---------------------------------------------------------------------------;
@@ -27,6 +28,8 @@
 import 'react';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 /*;
   Minimal React type declarations.;
   ---------------------------------------------------------------------------;
@@ -177,6 +180,7 @@ declare namespace React {;
   } & Record<string, unknown>;
   export default React;
 }
+<<<<<<< HEAD
 declare namespace React {// Keep JSX namespace for intrinsic elements – this prevents "JSX.IntrinsicElements";
   // errors when `@types/react` is not present.;
   export interface IntrinsicElements {;
@@ -431,3 +435,5 @@ declare namespace React {;
 =======
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

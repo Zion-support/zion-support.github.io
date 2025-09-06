@@ -8,6 +8,7 @@ export type AiScores = {;
 };
 export type FlaggedContent = {;
   id: string;
+<<<<<<< HEAD
   contentType: ContentType;
   contentId: string;
   userId: string;
@@ -45,11 +46,18 @@ export interface ModerationAction {;
 export interface ModerationResult {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   id: string;
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   content: string;
   status: 'approved' | 'rejected' | 'pending';
   reason?: string;
   moderatedBy?: string;
+<<<<<<< HEAD
   moderatedAt: Date;;
+=======
+  moderatedAt: Date;
+;
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 export interface ModerationAction {
   id: string;
   type: "approve" | "remove" | "warn" | "ban";
@@ -57,7 +65,12 @@ export interface ModerationAction {
   targetType: "post" | "comment" | "user";
   adminId: string;
   reason?: string;
+<<<<<<< HEAD
   createdAt: string;}
+=======
+  createdAt: string;
+}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 }
 export interface ModerationFlag {
 
@@ -73,6 +86,7 @@ export interface ModerationFlag {;
   updatedAt: string;
   adminNotes?: string;
 }
+<<<<<<< HEAD
 
 export interface ModerationRule {
   id: string;
@@ -169,6 +183,11 @@ ursor/fix-syntax-push-and-merge-to-main-7db5
 }
 export interface ModerationFlag {
 =======
+=======
+
+}
+export interface ModerationFlag {
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 }
 
 
@@ -176,6 +195,7 @@ export interface ModerationFlag {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
+<<<<<<< HEAD
   type: 'spam' | 'inappropriate' | 'harassment' | 'other';
   content: string;
   reporter_id: string;
@@ -192,12 +212,15 @@ export interface ModerationFlag {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   name: string;
   pattern: string;
   action: 'approve' | 'reject' | 'flag';
   severity: 'low' | 'medium' | 'high';
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -218,3 +241,5 @@ export interface ModerationFlag {;
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,8 @@
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 ' \' \' \"export\": function PerformanceMonitor({ enabled = true,\"showDetails\": \'_showDetails: = fals\',e,autoRefresh = true,refreshInterval = 1000,onAlert,className = \' }) {} const [isExpanded,setIsExpanded] = useState(false) const [isMinimized,setIsMinimized] = useState(false) const [showSettings,setShowSettings] = useState(false) const [metrics,setMetrics] = useState({} \"fps\": \'6\',0,\"memory\": { used: 0,\"total\": \'0\',\"percentage\": \'0\'},\"renderTime\": \'0\',\"networkLatency\": \'0\',\"cpuUsage\": \'0\',\"diskUsage\": \'0\',\"timestamp\": Date && Date.now()}) const [alerts,setAlerts] = useState([]) const [thresholds,setThresholds] = useState({} \"fps\": \'3\',0,\"memory\": \'8\',0,\"renderTime\": \'1\',6,\"networkLatency\": \'10\',0,\"cpuUsage\": \'7\',0,\"diskUsage\": \'85\'})\';\";\";
 =======
 ' ' ' "export": function PerformanceMonitor({ enabled = true,"showDetails": '_showDetails: = fals,e,autoRefresh = true,refreshInterval = 1000,onAlert,className = ' }) {} const [isExpanded,setIsExpanded] = useState(false) const [isMinimized,setIsMinimized] = useState(false) const [showSettings,setShowSettings] = useState(false) const [metrics,setMetrics] = useState({} "fps": '6',0,"memory": { used: 0,"total": '0',"percentage": '0'},"renderTime": '0',"networkLatency": '0',"cpuUsage": '0',"diskUsage": '0',"timestamp": Date.now()}) const [alerts,setAlerts] = useState([]) const [thresholds,setThresholds] = useState({} "fps": '3',0,"memory": '8',0,"renderTime": '1',6,"networkLatency": '10',0,"cpuUsage": '7',0,"diskUsage": '85'})';";";' \' \' \"export\": function PerformanceMonitor({ enabled = true,\"showDetails\": \'_showDetails: = fals\',e,autoRefresh = true,refreshInterval = 1000,onAlert,className = \' }) {} const [isExpanded,setIsExpanded] = useState(false) const [isMinimized,setIsMinimized] = useState(false) const [showSettings,setShowSettings] = useState(false) const [metrics,setMetrics] = useState({} \"fps\": \'6\',0,\"memory\": { used: 0,\"total\": \'0\',\"percentage\": \'0\'},\"renderTime\": \'0\',\"networkLatency\": \'0\',\"cpuUsage\": \'0\',\"diskUsage\": \'0\',\"timestamp\": Date && Date.now()}) const [alerts,setAlerts] = useState([]) const [thresholds,setThresholds] = useState({} \"fps\": \'3\',0,\"memory\": \'8\',0,\"renderTime\": \'1\',6,\"networkLatency\": \'10\',0,\"cpuUsage\": \'7\',0,\"diskUsage\": \'85\'})\';\";\";
@@ -21,6 +24,7 @@
 
 ' ' ' "export": function PerformanceMonitor({ enabled = true,"showDetails": '_showDetails: = fals,e,autoRefresh = true,refreshInterval = 1000,onAlert,className = ' }) {} const [isExpanded,setIsExpanded] = useState(false) const [isMinimized,setIsMinimized] = useState(false) const [showSettings,setShowSettings] = useState(false) const [metrics,setMetrics] = useState({} "fps": '6',0,"memory": { used: 0,"total": '0',"percentage": '0'},"renderTime": '0',"networkLatency": '0',"cpuUsage": '0',"diskUsage": '0',"timestamp": Date && Date.now()}) const [alerts,setAlerts] = useState([]) const [thresholds,setThresholds] = useState({} "fps": '3',0,"memory": '8',0,"renderTime": '1',6,"networkLatency": '10',0,"cpuUsage": '7',0,"diskUsage": '85'})';";";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -58,3 +62,8 @@
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+' \' \' \"export\": function PerformanceMonitor({ enabled = true,\"showDetails\": \'_showDetails: = fals\',e,autoRefresh = true,refreshInterval = 1000,onAlert,className = \' }) {} const [isExpanded,setIsExpanded] = useState(false) const [isMinimized,setIsMinimized] = useState(false) const [showSettings,setShowSettings] = useState(false) const [metrics,setMetrics] = useState({} \"fps\": \'6\',0,\"memory\": { used: 0,\"total\": \'0\',\"percentage\": \'0\'},\"renderTime\": \'0\',\"networkLatency\": \'0\',\"cpuUsage\": \'0\',\"diskUsage\": \'0\',\"timestamp\": Date.now()}) const [alerts,setAlerts] = useState([]) const [thresholds,setThresholds] = useState({} \"fps\": \'3\',0,\"memory\": \'8\',0,\"renderTime\": \'1\',6,\"networkLatency\": \'10\',0,\"cpuUsage\": \'7\',0,\"diskUsage\": \'85\'})\';\";\";
+" " " export: function PerformanceMonitor({ enabled = true,showDetails: "_showDetails: = fals",e,autoRefresh = true,refreshInterval = 1000,onAlert,className = " }) {} const [isExpanded,setIsExpanded] = useState(false) const [isMinimized,setIsMinimized] = useState(false) const [showSettings,setShowSettings] = useState(false) const [metrics,setMetrics] = useState({} fps: "6",0,memory: { used: 0,total: "0",percentage: "0"},renderTime: "0",networkLatency: "0",cpuUsage: "0",diskUsage: "0",timestamp: Date.now()}) const [alerts,setAlerts] = useState([]) const [thresholds,setThresholds] = useState({} fps: "3",0,memory: "8",0,renderTime: "1",6,networkLatency: "10",0,cpuUsage: "7",0,diskUsage: "85"})";";";"""
+' ' ' "export": function PerformanceMonitor({ enabled = true,"showDetails": '_showDetails: = fals,e,autoRefresh = true,refreshInterval = 1000,onAlert,className = ' }) {} const [isExpanded,setIsExpanded] = useState(false) const [isMinimized,setIsMinimized] = useState(false) const [showSettings,setShowSettings] = useState(false) const [metrics,setMetrics] = useState({} "fps": '6',0,"memory": { used: 0,"total": '0',"percentage": '0'},"renderTime": '0',"networkLatency": '0',"cpuUsage": '0',"diskUsage": '0',"timestamp": Date.now()}) const [alerts,setAlerts] = useState([]) const [thresholds,setThresholds] = useState({} "fps": '3',0,"memory": '8',0,"renderTime": '1',6,"networkLatency": '10',0,"cpuUsage": '7',0,"diskUsage": '85'})';";";
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

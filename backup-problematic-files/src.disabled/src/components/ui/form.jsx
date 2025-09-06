@@ -1,4 +1,5 @@
 <<<<<<< HEAD:backup-problematic-files/src.disabled/src/components/ui/form.jsx
+<<<<<<< HEAD:backup-problematic-files/src.disabled/src/components/ui/form.jsx
 <<<<<<< HEAD:backup-merge-conflicts/form.jsx.backup
 
 
@@ -22,3 +23,6 @@ import _React from 'react'; import _React from "react"; export const Form = ({ c
 import React from \'react\'
 const React from "react"; import React from "react"; export const Form = ({ children,.props }) => {} "; export const FormControl = ({ children,className = }) => {};"; "; export const FormLabel = ({ children,className = }) => {};"; "; export const FormMessage = ({ className = }) => {}; return <div className="{className}"> <div>Broken JSX
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/src/components/ui/form.jsx
+=======
+import _React from 'react'; import _React from "react"; export const Form = ({ children,...props }) => {} "; export const FormControl = ({ children,className = }) => {};"; "; export const FormLabel = ({ children,className = }) => {};"; "; export const FormMessage = ({ className = }) => {}; return <div className="{className}"> <div>Broken JSX</div>
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:src.disabled/src/components/ui/form.jsx

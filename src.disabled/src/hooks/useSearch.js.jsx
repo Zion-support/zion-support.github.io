@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -17,10 +18,13 @@ const { useState,useEffect,useCallback,useMemo } from "react"; export const useS
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import { useState,useEffect,useCallback,useMemo } from \"react\"; export const useSearch = (data,options) => {; const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options; const [searchState,setSearchState] = useState({; \"query\": filters: {},\"sortBy\": null sortOrder: \"asc\" results: data isLoading: false totalResults: data && data.length}); const [debouncedQuery,setDebouncedQuery] = useState();\");} \"export default ComponentName;\"
 
 const { useState,useEffect,useCallback,useMemo } from "react"; export const useSearch = (data,options) => {; const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options; const [searchState,setSearchState] = useState({; query: filters: {},sortBy: null sortOrder: "asc" results: data isLoading: false totalResults: data && data.length}); const [debouncedQuery,setDebouncedQuery] = useState();");} "export default ComponentName;"""
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -47,3 +51,5 @@ const { useState,useEffect,useCallback,useMemo } from "react"; export const useS
 =======
 const { useState,useEffect,useCallback,useMemo } from "react"; export const useSearch = (data,options) => {; const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options; const [searchState,setSearchState] = useState({; query: filters: {},sortBy: null sortOrder: "asc" results: data isLoading: false totalResults: data.length}); const [debouncedQuery,setDebouncedQuery] = useState();");} "export default ComponentName;"""=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

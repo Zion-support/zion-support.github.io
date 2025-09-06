@@ -33,6 +33,7 @@ const Ai-solutions: React.FC<Ai-solutionsProps> = ({ className }) => {
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/pages.corrupted.1756905863/services/ai-solutions.tsx
 }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/main
@@ -49,3 +50,5 @@ const Ai-solutions: React.FC<Ai-solutionsProps> = ({ className }) => {
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

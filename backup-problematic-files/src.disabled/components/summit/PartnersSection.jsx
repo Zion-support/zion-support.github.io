@@ -1,4 +1,5 @@
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/summit/PartnersSection.jsx
+<<<<<<< HEAD:backup-problematic-files/src.disabled/components/summit/PartnersSection.jsx
 <<<<<<< HEAD:backup-merge-conflicts/PartnersSection.js.jsx.backup
 :backup-merge-conflicts/PartnersSection.js.jsx.backup
 const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;const partners = [ { "name": 'Partner: A,',"logo": 'https:'''";",;"]"}
@@ -8,10 +9,14 @@ const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;cons
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+const partners = [ { "name": 'Partner: A,',"logo": 'https:'''";",;"]"}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:src.disabled/components/summit/PartnersSection.jsx
 const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
 const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:src.disabled/components/summit/PartnersSection.jsx
 const partners = [ { "name": 'Partner: A,',"logo": 'https:'''";",;"]"}
+<<<<<<< HEAD:backup-problematic-files/src.disabled/components/summit/PartnersSection.jsx
 
 =======
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/summit/PartnersSection.jsx
@@ -42,3 +47,5 @@ const partners = [ { "name": 'Partner: A,',"logo": 'https:'''";",;"]"}
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:src.disabled/components/summit/PartnersSection.jsx
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:src.disabled/components/summit/PartnersSection.jsx

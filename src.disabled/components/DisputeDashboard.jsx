@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -23,6 +27,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface DisputeDashboardProps {
   // Add props here as needed
+<<<<<<< HEAD
 
 }
 
@@ -53,6 +58,12 @@ interface DisputeDashboardProps {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+}
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 export default function DisputeDashboard({ }: DisputeDashboardProps) {
 =======
 =======export default function DisputeDashboard({ }: DisputeDashboardProps) {
@@ -65,6 +76,7 @@ export default function DisputeDashboard({ }: DisputeDashboardProps) {
 <<<<<<< HEAD
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -76,14 +88,15 @@ export default function DisputeDashboard({ }: DisputeDashboardProps) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 :src.disabled/components/DisputeDashboard.jsx
 }
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/DisputeDashboard.jsx
-=======
 }
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
@@ -109,3 +122,5 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
   );}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

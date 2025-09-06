@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 =======
@@ -16,74 +17,49 @@ import Link from 'next/link';
   disabled = false,
   style
 }) => {
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-54a3
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from "react"
+import React from 'react';
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
-interface ButtonProps {
-  className?: string;
-  size?: "sm" | "md" | "lg";
-  variant?: "default" | "outline" | "ghost";
-  children: React.ReactNode;
-  onClick?: () => void;
-  type?: "button" | "submit" | "reset";
-  disabled?: boolean;
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link';
+  size?: 'default' | 'sm' | 'lg' | 'icon';
+  asChild?: boolean;
 }
 
 export function Button({ 
-  className = "", 
-  size = "md", 
-  variant = "default", 
   children, 
+  variant = 'default', 
+  size = 'default', 
+  asChild = false, 
+  className = "", 
   ...props 
 }: ButtonProps) {
-  const baseClasses = "inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
-  
-  const sizeClasses = {
-    sm: "h-9 px-3 text-sm",
-    md: "h-10 px-4 py-2",
-    lg: "h-11 px-8 text-lg"
-  }
+  const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none';
   
   const variantClasses = {
-    default: "bg-blue-600 text-white hover:bg-blue-700",
-    outline: "border border-gray-300 bg-white hover:bg-gray-50",
-    ghost: "hover:bg-gray-100"
-  }
+    default: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
+    destructive: 'bg-red-600 text-white hover:bg-red-700 focus:ring-red-500',
+    outline: 'border border-gray-300 bg-transparent hover:bg-gray-50 focus:ring-blue-500',
+    secondary: 'bg-gray-100 text-gray-900 hover:bg-gray-200 focus:ring-gray-500',
+    ghost: 'hover:bg-gray-100 focus:ring-gray-500',
+    link: 'text-blue-600 underline-offset-4 hover:underline focus:ring-blue-500'
+  };
+  
+  const sizeClasses = {
+    default: 'h-10 px-4 py-2',
+    sm: 'h-9 px-3 text-sm',
+    lg: 'h-11 px-8',
+    icon: 'h-10 w-10'
+  };
+  
+  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
   
   return (
-    <button
-      className={`${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${className}`}
-      {...props}
-    >
+    <button className={classes} {...props}>
       {children}
     </button>
+<<<<<<< HEAD
   )
 }
 =======
@@ -362,3 +338,7 @@ export default Button;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+  );
+}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

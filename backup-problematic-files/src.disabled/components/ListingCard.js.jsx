@@ -1,5 +1,6 @@
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/ListingCard.js.jsx
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/ListingCard.js.jsx
+<<<<<<< HEAD:backup-problematic-files/src.disabled/components/ListingCard.js.jsx
 <<<<<<< HEAD:backup-merge-conflicts/ListingCard.js.jsx.backup
 =======
 <<<<<<< HEAD
@@ -7,10 +8,14 @@
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:src.disabled/components/ListingCard.js.jsx
+=======
+"export: function ListingCard ({" id,title,description,images,category,tags,author,className,profileType = "service"}) {""""";";'"'"
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:src.disabled/components/ListingCard.js.jsx
 '\"export\": function ListingCard ({\' id,title,description,images,category,tags,author,className,profileType = \'service\'}) {\''\''\";\";
 :backup-merge-conflicts/ListingCard.js.jsx.backup"export: function ListingCard ({" id,title,description,images,category,tags,author,className,profileType = "service"}) {""""";";'"'"
 
 "export: function ListingCard ({" id,title,description,images,category,tags,author,className,profileType = "service"}) {""""";";'"'"
+<<<<<<< HEAD:backup-problematic-files/src.disabled/components/ListingCard.js.jsx
 =======
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/ListingCard.js.jsx
 <<<<<<< HEAD
@@ -41,3 +46,5 @@
 =======
 "export: function ListingCard ({" id,title,description,images,category,tags,author,className,profileType = "service"}) {""""";";'"'"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/components/ListingCard.js.jsx
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:src.disabled/components/ListingCard.js.jsx

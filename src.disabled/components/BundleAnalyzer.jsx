@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,6 +11,12 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState (\'overview\') \'';\'"\";
 const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ("overview") "";""";"""
+=======
+import { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState (\'overview\') \'';\'"\";
+const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ("overview") "";""";"""
+
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState (\'overview\') \'';\'"\";
 const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ("overview") "";""";"""
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -20,6 +27,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState (\'overview\') \'';\'"\";
 const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ("overview") "";""";"""
 :temp_exclude/src.disabled/components/BundleAnalyzer.jsx
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -57,3 +65,8 @@ import { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,Refresh
 const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ("overview") "";""";"""
 "export": const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ('overview') ';"";""}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState (\'overview\') \'';\'"\";
+const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ("overview") "";""";"""
+"export": const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ('overview') ';"";""}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

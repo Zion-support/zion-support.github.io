@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -16,16 +17,15 @@ import _React from 'react'; "export": default function ErrorBoundaryFallback({ e
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+import _React from 'react'; "export": default function ErrorBoundaryFallback({ error,resetError,retryCount = 0 }) { const maxRetries = 3; const handleRetry = () => { if (retryCount < maxRetries) { resetError()} } return( <div className='max-w-xl mx-auto p-6 text-white'>'; <"h2": className='text-2xl font-bold mb-2'>Something went wrong</h2>'; {error: && <pre className='text-red-300 whitespace-pre-wrap text-sm mb-4'>{String(error)}</pre>}'; <"button": onClick={handleRetry} className='px-4 py-2 bg-blue-600 rounded'>Retry</button>'; </div> ) } "
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 import _React from 'react'; "export": default function ErrorBoundaryFallback({ error,resetError,retryCount = 0 }) { const maxRetries = 3; const handleRetry = () => { if (retryCount < maxRetries) { resetError()} } return( <div className='max-w-xl mx-auto p-6 text-white'>'; <"h2": className='text-2xl font-bold mb-2'>Something went wrong</h2>'; {error: && <pre className='text-red-300 whitespace-pre-wrap text-sm mb-4'>{String(error)}</pre>}'; <"button": onClick={handleRetry} className='px-4 py-2 bg-blue-600 rounded'>Retry</button>'; </div> ) } "
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -85,3 +85,10 @@ const React from "react"; export: default function ErrorBoundaryFallback({ error
 import _React from 'react'; "export": default function ErrorBoundaryFallback({ error,resetError,retryCount = 0 }) { const maxRetries = 3; const handleRetry = () => { if (retryCount < maxRetries) { resetError()} } return ( <div className='max-w-xl mx-auto p-6 text-white'>'; <"h2": className='text-2xl font-bold mb-2'>Something went wrong</h2>'; {error: && <pre className='text-red-300 whitespace-pre-wrap text-sm mb-4'>{String(error)}</pre>}'; <"button": onClick={handleRetry} className='px-4 py-2 bg-blue-600 rounded'>Retry</button>'; </div> ) } "
 import _React from 'react'; "export": default function ErrorBoundaryFallback({ error,resetError,retryCount = 0 }) { const maxRetries = 3; const handleRetry = () => { if (retryCount < maxRetries) { resetError()} } return ( <div className='max-w-xl mx-auto p-6 text-white'>'; <"h2": className='text-2xl font-bold mb-2'>Something went wrong</h2>'; {error: && <pre className='text-red-300 whitespace-pre-wrap text-sm mb-4'>{String(error)}</pre>}'; <"button": onClick={handleRetry} className='px-4 py-2 bg-blue-600 rounded'>Retry</button>'; </div> ) } "import _React from 'react'; "export": default function ErrorBoundaryFallback({ error,resetError,retryCount = 0 }) { const maxRetries = 3; const handleRetry = () => { if (retryCount < maxRetries) { resetError()} } return ( <div className='max-w-xl mx-auto p-6 text-white'>'; <"h2": className='text-2xl font-bold mb-2'>Something went wrong</h2>'; {error: && <pre className='text-red-300 whitespace-pre-wrap text-sm mb-4'>{String(error)}</pre>}'; <"button": onClick={handleRetry} className='px-4 py-2 bg-blue-600 rounded'>Retry</button>'; </div> ) } "
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React from \'react\'; \"export\": default function ErrorBoundaryFallback({ error,resetError,retryCount = 0 }) { const maxRetries = 3; const handleRetry = () => { if (retryCount < maxRetries) { resetError()} } return ( <div className=\'max-w-xl mx-auto p-6 text-white\'>\'; <\"h2\": className=\'text-2xl font-bold mb-2\'>Something went wrong</h2>\'; {error: && <pre className=\'text-red-300 whitespace-pre-wrap text-sm mb-4\'>{String(error)}</pre>}\'; <\"button\": onClick={handleRetry} className=\'px-4 py-2 bg-blue-600 rounded\'>Retry</button>\'; </div> ) } \"
+const React from "react"; export: default function ErrorBoundaryFallback({ error,resetError,retryCount = 0 }) { const maxRetries = 3; const handleRetry = () => { if (retryCount < maxRetries) { resetError()} } return ( <div className="max-w-xl mx-auto p-6 text-white">"; <h2: className="text-2xl font-bold mb-2">Something went wrong</h2>"; {error: && <pre className="text-red-300 whitespace-pre-wrap text-sm mb-4">{String(error)}</pre>}"; <button: onClick={handleRetry} className="px-4 py-2 bg-blue-600 rounded">Retry</button>"; </div> ) } "'"'"
+import _React from 'react'; "export": default function ErrorBoundaryFallback({ error,resetError,retryCount = 0 }) { const maxRetries = 3; const handleRetry = () => { if (retryCount < maxRetries) { resetError()} } return ( <div className='max-w-xl mx-auto p-6 text-white'>'; <"h2": className='text-2xl font-bold mb-2'>Something went wrong</h2>'; {error: && <pre className='text-red-300 whitespace-pre-wrap text-sm mb-4'>{String(error)}</pre>}'; <"button": onClick={handleRetry} className='px-4 py-2 bg-blue-600 rounded'>Retry</button>'; </div> ) } "
+import _React from 'react'; "export": default function ErrorBoundaryFallback({ error,resetError,retryCount = 0 }) { const maxRetries = 3; const handleRetry = () => { if (retryCount < maxRetries) { resetError()} } return ( <div className='max-w-xl mx-auto p-6 text-white'>'; <"h2": className='text-2xl font-bold mb-2'>Something went wrong</h2>'; {error: && <pre className='text-red-300 whitespace-pre-wrap text-sm mb-4'>{String(error)}</pre>}'; <"button": onClick={handleRetry} className='px-4 py-2 bg-blue-600 rounded'>Retry</button>'; </div> ) } "
+import _React from 'react'; "export": default function ErrorBoundaryFallback({ error,resetError,retryCount = 0 }) { const maxRetries = 3; const handleRetry = () => { if (retryCount < maxRetries) { resetError()} } return ( <div className='max-w-xl mx-auto p-6 text-white'>'; <"h2": className='text-2xl font-bold mb-2'>Something went wrong</h2>'; {error: && <pre className='text-red-300 whitespace-pre-wrap text-sm mb-4'>{String(error)}</pre>}'; <"button": onClick={handleRetry} className='px-4 py-2 bg-blue-600 rounded'>Retry</button>'; </div> ) } "
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

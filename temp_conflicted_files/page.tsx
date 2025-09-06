@@ -1,6 +1,5 @@
-import Link from 'next/link';
-
 export const metadata = {
+<<<<<<< HEAD:temp_conflicted_files/page.tsx
 <<<<<<< HEAD
   title: "AI Customer Insights | Zion Tech Group",
   description: "Transform customer data into actionable insights with AI-powered analytics. Understand customer behavior, preferences, and trends.",
@@ -9,11 +8,17 @@ export const metadata = {
   description:
     'Unlock customer behavior insights with AI-powered analytics, sentiment analysis, and predictive modeling. Drive growth with data-driven decisions.',
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+  title: 'AI Customer Insights | Zion Tech Group',
+  description: 'Transform customer data into actionable insights with AI-powered analytics. Understand customer behavior, preferences, and trends.',
+  keywords: 'AI customer insights, customer analytics, behavior analysis, sentiment analysis, predictive analytics',
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:app/services/ai-customer-insights/page.tsx
 };
 
 export default function AICustomerInsightsPage() {
   return (
     <div className="animate-fade-in">
+<<<<<<< HEAD:temp_conflicted_files/page.tsx
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">
           AI Customer Insights
@@ -65,9 +70,93 @@ export default function AICustomerInsightsPage() {
               title="Recommendation Engine"
               description="Personalized product and content recommendations based on individual customer preferences and behavior."
 =======
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+=======
+      <section className="py-12">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            AI Customer Insights
+          </h1>
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            Transform customer data into actionable insights with AI-powered analytics. 
+            Understand customer behavior, preferences, and trends to drive better 
+            business decisions and improve customer experience.
+          </p>
+        </div>
+
+        {/* Key Features */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Key Features
           </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="text-center p-6 bg-white rounded-lg shadow-md">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">📊</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Data Integration</h3>
+              <p className="text-gray-600">Connect multiple data sources for comprehensive customer view</p>
+            </div>
+            <div className="text-center p-6 bg-white rounded-lg shadow-md">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🎯</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Behavior Analysis</h3>
+              <p className="text-gray-600">AI-powered analysis of customer behavior patterns and preferences</p>
+            </div>
+            <div className="text-center p-6 bg-white rounded-lg shadow-md">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🔮</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Predictive Analytics</h3>
+              <p className="text-gray-600">Predict future customer behavior and identify opportunities</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Benefits */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Business Benefits
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">📈</span>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">25% Higher Retention</h3>
+              <p className="text-gray-600">AI insights help identify and prevent customer churn</p>
+            </div>
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">💰</span>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">40% Revenue Increase</h3>
+              <p className="text-gray-600">Better targeting and personalization drive higher revenue</p>
+            </div>
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🎯</span>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Better Targeting</h3>
+              <p className="text-gray-600">Precise customer segmentation and personalized experiences</p>
+            </div>
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">⚡</span>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Real-time Insights</h3>
+              <p className="text-gray-600">Instant access to customer insights and trends</p>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center py-16 bg-blue-50 rounded-lg">
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:app/services/ai-customer-insights/page.tsx
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Ready to Unlock Customer Insights?
+          </h2>
+<<<<<<< HEAD:temp_conflicted_files/page.tsx
           <div className="space-y-6">
             <FeatureItem
               icon="🧠"
@@ -342,110 +431,22 @@ export default function AICustomerInsightsPage() {
           Transform your customer data into competitive advantage with AI-powered insights and analytics.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="tel:+13024640950"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
-          <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-          >
-            Email Us
-          </a>
-        </div>
-        <div className="mt-4 text-sm text-gray-500">
-          <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-        </div>
-      </div>
 =======
-      <div className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-          Key Benefits
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <BenefitCard
-            icon="📈"
-            title="30% Revenue Increase"
-            description="Data-driven strategies typically increase revenue by 30% within 6 months"
-          />
-          <BenefitCard
-            icon="🎯"
-            title="50% Better Targeting"
-            description="AI-powered segmentation improves marketing campaign effectiveness by 50%"
-          />
-          <BenefitCard
-            icon="💰"
-            title="25% Cost Reduction"
-            description="Optimized marketing spend and reduced churn lower customer acquisition costs"
-          />
-          <BenefitCard
-            icon="⚡"
-            title="Real-time Insights"
-            description="Instant access to customer insights for immediate decision making"
-          />
-          <BenefitCard
-            icon="🔍"
-            title="Deep Understanding"
-            description="Comprehensive view of customer behavior across all touchpoints"
-          />
-          <BenefitCard
-            icon="🚀"
-            title="Competitive Advantage"
-            description="Stay ahead with predictive insights and proactive customer management"
-          />
+          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            Start your free trial today and discover the power of AI-driven customer analytics.
+          </p>
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:app/services/ai-customer-insights/page.tsx
+          <a
+            href="mailto:kleber@ziontechgroup.com?subject=AI Customer Insights Inquiry"
+            className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Get Started Today
+          </a>
         </div>
-      </div>
-
-      <div className="bg-gradient-to-r from-purple-50 to-teal-50 border border-purple-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
-          Data Sources
-        </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <DataSourceCard name="CRM Systems" icon="👥" />
-          <DataSourceCard name="E-commerce" icon="🛒" />
-          <DataSourceCard name="Social Media" icon="📱" />
-          <DataSourceCard name="Email Marketing" icon="📧" />
-          <DataSourceCard name="Website Analytics" icon="🌐" />
-          <DataSourceCard name="Customer Support" icon="🎧" />
-          <DataSourceCard name="Mobile Apps" icon="📱" />
-          <DataSourceCard name="Surveys" icon="📋" />
-        </div>
-      </div>
-
-      <div className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-          Use Cases
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <UseCaseCard
-            icon="🛍️"
-            title="E-commerce Optimization"
-            description="Online retailers optimizing product recommendations, pricing, and customer experience"
-          />
-          <UseCaseCard
-            icon="🏢"
-            title="SaaS Customer Success"
-            description="Software companies improving user onboarding, feature adoption, and retention"
-          />
-          <UseCaseCard
-            icon="🏦"
-            title="Financial Services"
-            description="Banks and fintech companies managing customer relationships and risk"
-          />
-          <UseCaseCard
-            icon="🏥"
-            title="Healthcare Analytics"
-            description="Healthcare providers improving patient engagement and outcomes"
-          />
-        </div>
-      </div>
-
-      <CTA />
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+      </section>
     </div>
   );
+<<<<<<< HEAD:temp_conflicted_files/page.tsx
 }
 
 <<<<<<< HEAD
@@ -662,3 +663,6 @@ function CTA() {
   );
 }
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:app/services/ai-customer-insights/page.tsx

@@ -17,14 +17,17 @@ export: interface Listing { id: string; title: string,
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export: interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: numbe,r} location: string ,
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+
 
 <<<<<<< HEAD
-
 =======
 export: interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: numbe,r} location: string ,
 export: interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: numbe,r} location: string ,
@@ -52,3 +55,5 @@ export: interface Listing { id: string; title: string; description: string; pric
 export: interface Listing { id: string; title: string,
   description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: numbe,r} location: string ,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

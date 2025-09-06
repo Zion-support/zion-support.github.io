@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -12,10 +13,16 @@ import { useState,useEffect } from 'react'; ; interface User { id: string; email
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { useState,useEffect } from 'react'; ; interface User { id: 'string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string' }; interface AuthTokens { accessToken: 'string | null; refreshToken: string | null' }; export const useAuthState[,React.Dispatch<React.SetStateAction<any>>] = () => {; const [user,setUser] = useState<any>(null); const [isLoading,setIsLoading] = useState(true); const [onboardingStep,setOnboardingStep] = useState(0); const [tokens,setTokens] = useState<any>({; accessToken: 'null',; refreshToken: 'null;' }); ; useEffect(() => {}})
+import { useState, useEffect } from 'react'; interface User { "id": string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string  }; interface AuthTokens { "accessToken": string | null; refreshToken: string | null  }; export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = () => {; const [user, setUser] = useState<any>(null); const [isLoading, setIsLoading] = useState(true); const [onboardingStep, setOnboardingStep] = useState(0); const [tokens, setTokens] = useState<any>({; "accessToken": null, "refreshToken": null}); useEffect(() => {}})
+import { useState,useEffect } from 'react'; ; interface User { id: string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string }; interface AuthTokens { accessToken: string | null; refreshToken: string | null }; export const useAuthState[,React.Dispatch<React.SetStateAction<any>>] = () => {; const [user,setUser] = useState<any>(null); const [isLoading,setIsLoading] = useState(true); const [onboardingStep,setOnboardingStep] = useState(0); const [tokens,setTokens] = useState<any>({; accessToken: null,refreshToken: null}); ; useEffect(() => {}})
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import { useState, useEffect } from 'react'; ; interface User { id: string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string  }; interface AuthTokens { accessToken: string | null; refreshToken: string | null  }; export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = () => {; const [user, setUser] = useState<any>(null); const [isLoading, setIsLoading] = useState(true); const [onboardingStep, setOnboardingStep] = useState(0); const [tokens, setTokens] = useState<any>({; accessToken: null, refreshToken: null}); ; useEffect(() => {}})
 import { useState,useEffect } from 'react'; ; interface User { id: 'string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string' }; interface AuthTokens { accessToken: 'string | null; refreshToken: string | null' }; export const useAuthState[,React.Dispatch<React.SetStateAction<any>>] = () => {; const [user,setUser] = useState<any>(null); const [isLoading,setIsLoading] = useState(true); const [onboardingStep,setOnboardingStep] = useState(0); const [tokens,setTokens] = useState<any>({; accessToken: 'null',; refreshToken: 'null;' }); ; useEffect(() => {}})
 import { useState, useEffect } from 'react'; interface User { "id": string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string  }; interface AuthTokens { "accessToken": string | null; refreshToken: string | null  }; export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = () => {; const [user, setUser] = useState<any>(null); const [isLoading, setIsLoading] = useState(true); const [onboardingStep, setOnboardingStep] = useState(0); const [tokens, setTokens] = useState<any>({; "accessToken": null, "refreshToken": null}); useEffect(() => {}})
 
+<<<<<<< HEAD
 =======
 
 
@@ -56,3 +63,5 @@ import { useState,useEffect } from 'react'; ; interface User { id: string; email
 import { useState,useEffect } from 'react'; ; interface User { id: 'string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string' }; interface AuthTokens { accessToken: 'string | null; refreshToken: string | null' }; export const useAuthState[,React.Dispatch<React.SetStateAction<any>>] = () => {; const [user,setUser] = useState<any>(null); const [isLoading,setIsLoading] = useState(true); const [onboardingStep,setOnboardingStep] = useState(0); const [tokens,setTokens] = useState<any>({; accessToken: 'null',; refreshToken: 'null;' }); ; useEffect(() => {}})
 import { useState, useEffect } from 'react'; interface User { "id": string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string  }; interface AuthTokens { "accessToken": string | null; refreshToken: string | null  }; export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = () => {; const [user, setUser] = useState<any>(null); const [isLoading, setIsLoading] = useState(true); const [onboardingStep, setOnboardingStep] = useState(0); const [tokens, setTokens] = useState<any>({; "accessToken": null, "refreshToken": null}); useEffect(() => {}})
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

@@ -1,5 +1,6 @@
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/profile/AvatarUpload.js.jsx
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/profile/AvatarUpload.js.jsx
+<<<<<<< HEAD:backup-problematic-files/src.disabled/components/profile/AvatarUpload.js.jsx
 <<<<<<< HEAD:backup-merge-conflicts/AvatarUpload.js.jsx.backup
 =======
 <<<<<<< HEAD
@@ -7,10 +8,14 @@
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:src.disabled/components/profile/AvatarUpload.js.jsx
+=======
+"export: function AvatarUpload({ value,onChange }) {" const [url,setUrl] = useState(value) const handleUpload = result => {"";""";"""
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:src.disabled/components/profile/AvatarUpload.js.jsx
 '\"export\": function AvatarUpload({ value,onChange }) {\' const [url,setUrl] = useState(value) const handleUpload = result => {\'';\'"\";
 :backup-merge-conflicts/AvatarUpload.js.jsx.backup"export: function AvatarUpload({ value,onChange }) {" const [url,setUrl] = useState(value) const handleUpload = result => {"";""";"""
 
 "export: function AvatarUpload({ value,onChange }) {" const [url,setUrl] = useState(value) const handleUpload = result => {"";""";"""
+<<<<<<< HEAD:backup-problematic-files/src.disabled/components/profile/AvatarUpload.js.jsx
 =======
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/profile/AvatarUpload.js.jsx
 <<<<<<< HEAD
@@ -41,3 +46,5 @@
 =======
 "export: function AvatarUpload({ value,onChange }) {" const [url,setUrl] = useState(value) const handleUpload = result => {"";""";"""
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/components/profile/AvatarUpload.js.jsx
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:src.disabled/components/profile/AvatarUpload.js.jsx

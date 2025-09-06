@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,8 @@ import _React from 'react'; const LazyWrapper = ({ children,threshold = 0.1,clas
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import React from \'react\'; const LazyWrapper = ({ children,threshold = 0 && 0.1,className = \",loadingVariant = \"default\",loadingText = \"Loading...\",loadingSize = \"md\"}) => { const [isLoaded,setIsLoaded] = useState(false); const [isInView,setIsInView] = useState(false); const ref = useRef(null); const inView = useInView(ref,{ \"amount\": \'threshold\' }); useEffect(() => {}}}})
 =======
 import _React from 'react'; const LazyWrapper = ({ children,threshold = 0.1,className = ",loadingVariant = "default",loadingText = "Loading...",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false); const [isInView,setIsInView] = useState(false); const ref = useRef(null); const inView = useInView(ref,{ "amount": 'threshold' }); useEffect(() => {}}}})import React from \'react\'; const LazyWrapper = ({ children,threshold = 0 && 0.1,className = \",loadingVariant = \"default\",loadingText = \"Loading...\",loadingSize = \"md\"}) => { const [isLoaded,setIsLoaded] = useState(false); const [isInView,setIsInView] = useState(false); const ref = useRef(null); const inView = useInView(ref,{ \"amount\": \'threshold\' }); useEffect(() => {}}}})
@@ -21,6 +24,7 @@ const React from "react"; const LazyWrapper = ({ children,threshold = 0 && 0.1,c
 
 import _React from 'react'; const LazyWrapper = ({ children,threshold = 0 && 0.1,className = ",loadingVariant = "default",loadingText = "Loading...",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false); const [isInView,setIsInView] = useState(false); const ref = useRef(null); const inView = useInView(ref,{ "amount": 'threshold' }); useEffect(() => {}}}})
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -58,3 +62,8 @@ import _React from 'react'; const LazyWrapper = ({ children,threshold = 0.1,clas
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React from \'react\'; const LazyWrapper = ({ children,threshold = 0.1,className = \",loadingVariant = \"default\",loadingText = \"Loading...\",loadingSize = \"md\"}) => { const [isLoaded,setIsLoaded] = useState(false); const [isInView,setIsInView] = useState(false); const ref = useRef(null); const inView = useInView(ref,{ \"amount\": \'threshold\' }); useEffect(() => {}}}})
+const React from "react"; const LazyWrapper = ({ children,threshold = 0.1,className = ",loadingVariant = "default",loadingText = "Loading.",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false); const [isInView,setIsInView] = useState(false); const ref = useRef(null); const inView = useInView(ref,{ amount: "threshold" }); useEffect(() => {}}}})'"'"
+import _React from 'react'; const LazyWrapper = ({ children,threshold = 0.1,className = ",loadingVariant = "default",loadingText = "Loading...",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false); const [isInView,setIsInView] = useState(false); const ref = useRef(null); const inView = useInView(ref,{ "amount": 'threshold' }); useEffect(() => {}}}})
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

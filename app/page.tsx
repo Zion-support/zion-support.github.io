@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from 'next/link';
 
 <<<<<<< HEAD
@@ -88,6 +89,19 @@ export default function Home() {
   );
 }
 
+=======
+import React from "react";
+import Link from "next/link";
+
+interface CardProps {
+  title: string;
+  href: string;
+  description: string;
+  bullets?: string[];
+  icon?: string;
+}
+
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 function ServiceCard({
   title,
   href,
@@ -136,6 +150,7 @@ export default function HomePage() {
             href="/services"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -149,10 +164,13 @@ export default function HomePage() {
           <Link 
             href="/services" 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus-visible:focus"
           >
             Explore Services
           </Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -171,10 +189,13 @@ export default function HomePage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
           <a
             href="https://ziontechgroup.com"
             target="_blank"
             rel="noopener noreferrer"
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
 =======
@@ -195,10 +216,16 @@ export default function HomePage() {
 =======
             Visit Main Site
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+            className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:border-gray-400 transition-colors focus-visible:focus"
+          >
+            Visit Main Site
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
           </a>
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -279,6 +306,10 @@ export default function HomePage() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       {/* Featured Services */}
       <section className="py-12">
+=======
+      {/* Featured Services */}
+      <section className="py-12">
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Our Core Services
@@ -328,23 +359,24 @@ export default function HomePage() {
             ]}
             icon="💻"
           />
-          <Card
+          <ServiceCard
             title="Blockchain"
             href="/services/blockchain"
             description="Smart contracts, DeFi protocols, NFT platforms and Web3 solutions."
             icon="⛓️"
           />
-          <Card
+          <ServiceCard
             title="Cybersecurity"
             href="/services/cybersecurity"
             description="Penetration testing, security audits, compliance and incident response."
             icon="🔒"
           />
-          <Card
+          <ServiceCard
             title="Cloud Services"
             href="/services/cloud-services"
             description="Cloud migration, architecture, and optimization across AWS, Azure, and GCP."
             icon="☁️"
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -357,6 +389,8 @@ export default function HomePage() {
             description="Cloud migration, DevOps, SRE, security hardening and cost optimization." 
             icon="⚙️" 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
           />
         </div>
       </section>
@@ -373,6 +407,7 @@ export default function HomePage() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -430,6 +465,8 @@ export default function HomePage() {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
           <div className="text-center p-6">
             <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">⚡</span>
@@ -477,6 +514,7 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Contact CTA */}
       <section className="py-12">
         <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
@@ -754,3 +792,25 @@ function FeatureCard({
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      {/* CTA Section */}
+      <section className="text-center py-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6">
+          Ready to Transform Your Business?
+        </h2>
+        <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+          Let's discuss your project and create a custom solution that drives
+          real business value. Our team has delivered 1000+ successful
+          projects across various industries.
+        </p>
+        <Link
+          href="/contact"
+          className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+        >
+          Get Started Today
+        </Link>
+      </section>
+    </div>
+  );
+}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

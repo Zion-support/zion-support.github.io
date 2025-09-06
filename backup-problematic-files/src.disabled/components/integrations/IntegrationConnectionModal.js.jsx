@@ -1,4 +1,5 @@
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/integrations/IntegrationConnectionModal.js.jsx
+<<<<<<< HEAD:backup-problematic-files/src.disabled/components/integrations/IntegrationConnectionModal.js.jsx
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/integrations/IntegrationConnectionModal.js.jsx
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/integrations/IntegrationConnectionModal.js.jsx
@@ -39,3 +40,6 @@
  ' ' ' "export": function IntegrationConnectionModal({ isOpen,onClose,integration }) { const [isConnecting,setIsConnecting] = useState(false) const [syncSettings,setSyncSettings] = useState({ "autoCreateContacts": 'tru',e,"pushNotes": 'fals',e,"syncJobDetails": 'tru',e,"syncApplicantData": 'true'}) const handleConnectOAuth = () => { setIsConnecting(true)'
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/components/integrations/IntegrationConnectionModal.jsx
+=======
+' ' ' ' "export": function IntegrationConnectionModal({ isOpen,onClose,integration }) { const [isConnecting,setIsConnecting] = useState(false) const [syncSettings,setSyncSettings] = useState({ "autoCreateContacts": 'tru',e,"pushNotes": 'fals',e,"syncJobDetails": 'tru',e,"syncApplicantData": 'true'}) const handleConnectOAuth = () => { setIsConnecting(true)';"";""}
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:src.disabled/components/integrations/IntegrationConnectionModal.jsx

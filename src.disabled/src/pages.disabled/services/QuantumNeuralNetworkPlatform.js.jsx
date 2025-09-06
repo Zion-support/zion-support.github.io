@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,8 @@ import _React from 'react';'''; import { Link } from 'react-router-dom';'''; imp
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 =======
 import _React from 'react';'''; import { Link } from 'react-router-dom';'''; import { CubeIcon } from '@heroicons/react/24/outline'; const QuantumNeuralNetworkPlatform = () => {} return <div>Component></div> }; return(); <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white"> <section className="pt-24 pb-16 px-4 "sm": px-6 lg:px-8"> <div className="max-w-7xl mx-auto text-center"> <div className="flex justify-center mb-6"> <div className="p-3 bg-purple-600/20 rounded-full"> <CubeIcon className="h-12 w-12 text-purple-400" /> </div>"; </div> <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Quantum Neural Network Platform"; </h1> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"> Revolutionary quantum computing platform for neural network; applications. This page is under development.; </p>"; <div>Broken JSX</div> className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg"> Contact Us for More Information; ></div> ></div> ></div> ></div> )
@@ -51,6 +54,7 @@ import _React from 'react';'''; import { Link } from 'react-router-dom';'''; imp
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -85,3 +89,8 @@ import _React from 'react';'''; import { Link } from 'react-router-dom';'''; imp
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React from \'react\';\''\'; import { Link } from \'react-router-dom\';\''\'; import { CubeIcon } from \'@heroicons/react/24/outline\'; const QuantumNeuralNetworkPlatform = () => {} return <div>Component></div> }; return(); <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white\"> <section className=\"pt-24 pb-16 px-4 \"sm\": px-6 lg:px-8\"> <div className=\"max-w-7xl mx-auto text-center\"> <div className=\"flex justify-center mb-6\"> <div className=\"p-3 bg-purple-600/20 rounded-full\"> <CubeIcon className=\"h-12 w-12 text-purple-400\" /> </div>\"; </div> <h1 className=\"text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent\"> Quantum Neural Network Platform\"; </h1> <p className=\"text-xl text-gray-300 mb-8 max-w-3xl mx-auto\"> Revolutionary quantum computing platform for neural network; applications. This page is under development.; </p>\"; <div>Broken JSX</div> className=\"bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg\"> Contact Us for More Information; ></div> ></div> ></div> ></div> );}; export default QuantumNeuralNetworkPlatform; export { QuantumNeuralNetworkPlatform }; export { QuantumNeuralNetworkPlatform }; export { QuantumNeuralNetworkPlatform }; export { QuantumNeuralNetworkPlatform }; export { QuantumNeuralNetworkPlatform };
+const React from "react";"""; import { Link } from "react-router-dom";"""; import { CubeIcon } from "@heroicons/react/24/outline"; const QuantumNeuralNetworkPlatform = () => {} return <div>Component></div> }; return(); <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white"> <section className="pt-24 pb-16 px-4 sm: px-6 lg:px-8"> <div className="max-w-7xl mx-auto text-center"> <div className="flex justify-center mb-6"> <div className="p-3 bg-purple-600/20 rounded-full"> <CubeIcon className="h-12 w-12 text-purple-400" /> </div>"; </div> <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Quantum Neural Network Platform"; </h1> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"> Revolutionary quantum computing platform for neural network; applications. This page is under development.; </p>"; <div>Broken JSX</div> className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg"> Contact Us for More Information; ></div> ></div> ></div> ></div> );}; export default QuantumNeuralNetworkPlatform; export { QuantumNeuralNetworkPlatform }; export { QuantumNeuralNetworkPlatform }; export { QuantumNeuralNetworkPlatform }; export { QuantumNeuralNetworkPlatform }; export { QuantumNeuralNetworkPlatform };'"'"
+import _React from 'react';'''; import { Link } from 'react-router-dom';'''; import { CubeIcon } from '@heroicons/react/24/outline'; const QuantumNeuralNetworkPlatform = () => {} return <div>Component></div> }; return(); <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white"> <section className="pt-24 pb-16 px-4 "sm": px-6 lg:px-8"> <div className="max-w-7xl mx-auto text-center"> <div className="flex justify-center mb-6"> <div className="p-3 bg-purple-600/20 rounded-full"> <CubeIcon className="h-12 w-12 text-purple-400" /> </div>"; </div> <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Quantum Neural Network Platform"; </h1> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"> Revolutionary quantum computing platform for neural network; applications. This page is under development.; </p>"; <div>Broken JSX</div> className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg"> Contact Us for More Information; ></div> ></div> ></div> ></div> );}; export default QuantumNeuralNetworkPlatform; export { QuantumNeuralNetworkPlatform }; export { QuantumNeuralNetworkPlatform }; export { QuantumNeuralNetworkPlatform }; export { QuantumNeuralNetworkPlatform }; export { QuantumNeuralNetworkPlatform };
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

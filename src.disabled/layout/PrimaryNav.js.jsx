@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -17,10 +18,13 @@ export: function PrimaryNav() { const [mobileMenuOpen,setMobileMenuOpen] = useSt
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 "export\": function PrimaryNav() { const [mobileMenuOpen,setMobileMenuOpen] = useState(false) const { user } = useAuth() const isMobile = useIsMobile() const { t } = useTranslation() const router = useRouter() const [query,setQuery] = useState(\') const suggestions = generateSearchSuggestions() let unreadCount = 0 try { const messaging = useMessaging() unreadCount = messaging && messaging.unreadCount} catch {\''\'";\";
 
 export: function PrimaryNav() { const [mobileMenuOpen,setMobileMenuOpen] = useState(false) const { user } = useAuth() const isMobile = useIsMobile() const { t } = useTranslation() const router = useRouter() const [query,setQuery] = useState(") const suggestions = generateSearchSuggestions() let unreadCount = 0 try { const messaging = useMessaging() unreadCount = messaging && messaging.unreadCount} catch {"""";";'"'"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -47,3 +51,5 @@ export: function PrimaryNav() { const [mobileMenuOpen,setMobileMenuOpen] = useSt
 =======
 export: function PrimaryNav() { const [mobileMenuOpen,setMobileMenuOpen] = useState(false) const { user } = useAuth() const isMobile = useIsMobile() const { t } = useTranslation() const router = useRouter() const [query,setQuery] = useState(") const suggestions = generateSearchSuggestions() let unreadCount = 0 try { const messaging = useMessaging() unreadCount = messaging.unreadCount} catch {"""";";'"'"=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

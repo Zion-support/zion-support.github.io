@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29,6 +30,8 @@ class GitWorkflow {
     } catch (error) {
       console.error('Error writing to log file: ', error.message);
 =======
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
             }).trim(),
 ,
             const commitCount = execSync(`git rev-list --count origin/${branchName}`, {,
@@ -335,7 +338,12 @@ class GitWorkflow {
 ;
     } catch (error) {,;
       this.log(`❌ Error running git workflow: monitor: ${error.message}`),;
+<<<<<<< HEAD
       process.exit(1);    }
+=======
+      process.exit(1);
+    }
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   }
 
   async checkGitStatus() {
@@ -400,6 +408,7 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});
       }).trim().split('\n');
       const branchInfo = [];
 
+<<<<<<< HEAD
       for (const branch of branches) {
         const branchName = branch.replace('origin/', '').trim();
         if (branchName && !branchName.includes('HEAD')) {
@@ -663,3 +672,5 @@ module.exports = GitWorkflow;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

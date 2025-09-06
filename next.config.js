@@ -3,11 +3,14 @@ const nextConfig = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   reactStrictMode: false,
   trailingSlash: true,
   output: 'export',
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   compress: true,
   poweredByHeader: false,
   generateEtags: true,
@@ -25,8 +28,8 @@ const nextConfig = {
     minimumCacheTTL: 60,
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-<<<<<<< HEAD
     domains: ['images.unsplash.com', 'via.placeholder.com']
+<<<<<<< HEAD
 =======
     domains: ['images.unsplash.com', 'via.placeholder.com'],
     remotePatterns: [
@@ -36,10 +39,13 @@ const nextConfig = {
       },
     ],
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   },
   eslint: {
     ignoreDuringBuilds: true
   },
+<<<<<<< HEAD
 =======
   reactStrictMode: true,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -63,12 +69,45 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  typescript: {
+    ignoreBuildErrors: true
+  },
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['@radix-ui/react-icons'],
+  },
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   async redirects() {
     return [
       { source: '/api-documentation', destination: '/api-docs', permanent: true },
       { source: '/ai-consciousness-evolution-2025', destination: '/ai-consciousness-evolution-2029', permanent: false }
     ];
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  },
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin',
+          },
+        ],
+      },
+    ];
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   },
   webpack: (config, { dev, isServer }) => {
     if (dev) {
@@ -122,11 +161,12 @@ const nextConfig = {
             test: /[\\/]node_modules[\\/]/,
             name: 'vendors',
             chunks: 'all',
-          },
-        },
-      };
+          }
+        }
+      }
     }
 
+<<<<<<< HEAD
     // Add custom webpack rule to ignore apps directory
     config.module.rules.push({
       test: /\.(ts|tsx|js|jsx)$/,
@@ -165,6 +205,8 @@ const nextConfig = {
     ];
   },
   webpack: (config, { isServer }) => {
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     // Handle problematic files
     config.module.rules.push({
       test: /\.(js|jsx|ts|tsx)$/,
@@ -173,6 +215,13 @@ const nextConfig = {
         /backup/,
         /disabled/
       ],
+      use: 'ignore-loader'
+    });
+
+    // Add custom webpack rule to ignore apps directory
+    config.module.rules.push({
+      test: /\.(ts|tsx|js|jsx)$/,
+      include: /apps\//,
       use: 'ignore-loader'
     });
 
@@ -185,9 +234,10 @@ const nextConfig = {
         tls: false,
       };
     }
-
+    
     return config;
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
   env: {
     CUSTOM_KEY: process.env.CUSTOM_KEY,
@@ -227,10 +277,14 @@ const nextConfig = {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+=======
+  serverExternalPackages: ['sharp']
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 };
 
 <<<<<<< HEAD
 module.exports = nextConfig;
+<<<<<<< HEAD
 =======
 export default nextConfig;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -258,3 +312,5 @@ export default nextConfig;
 
 export default nextConfig;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
