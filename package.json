@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+"dev": "vite",
+    "build": "vite build",
     "build:netlify": "node scripts/build-with-error-handling.js",
     "prebuild": "echo \"Starting build...\"",
     "export": "vite build",
@@ -297,14 +297,13 @@
     "@radix-ui/react-toast": "^1.1.5",
     "@radix-ui/react-toggle": "^1.0.3",
     "@radix-ui/react-tooltip": "^1.0.7",
-<<<<<<< HEAD
-    "@reduxjs/toolkit": "^2.8.2",
-    "@stripe/stripe-js": "^2.3.0",
-    "@sendgrid/mail": "^8.1.5",
-=======
+"@reduxjs/toolkit": "^2.9.0",
+    "@stripe/stripe-js": "^7.9.0",
+
     "@reduxjs/toolkit": "^2.9.0",
     "@stripe/stripe-js": "^7.9.0",
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+    "@sendgrid/mail": "^8.1.5",
+
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.57.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
@@ -360,16 +359,14 @@
     "sonner": "^2.0.7",
     "swr": "^2.3.6",
     "tailwind-merge": "^3.3.1",
-<<<<<<< HEAD
-    "tailwindcss-animate": "^1.0.7"
-=======
+
     "tailwindcss-animate": "^1.0.7",
     "uuid": "^11.1.0",
     "web-vitals": "^5.1.0"
   },
   "optionalDependencies": {
     "@esbuild/linux-x64": "^0.25.9"
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
   },
   "devDependencies": {
     "@axe-core/cli": "^4.10.2",
@@ -413,27 +410,26 @@
     "terser": "^5.43.1",
     "ts-jest": "^29.4.1",
     "ts-node": "^10.9.2",
-<<<<<<< HEAD
-    "typescript": "^5.9.2"
-=======
-    "typescript": "^5.9.2",
+"typescript": "^5.9.2",
     "vite": "^7.1.4",
     "web-vitals": "^5.1.0"
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+    "typescript": "^5.9.2",
+    "vite": "^7.1.4"
+
   },
   "engines": {
     "node": ">=18.0.0",
     "npm": ">=10.0.0"
   },
-<<<<<<< HEAD
-=======
+
   "postcss": {
     "plugins": {
       "tailwindcss": {},
       "autoprefixer": {}
     }
   },
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Zion-Holdings/zion.app.git"

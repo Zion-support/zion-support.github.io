@@ -43,7 +43,13 @@ status = 200
     X-Permitted-Cross-Domain-Policies = "none"
     Origin-Agent-Cluster = "?1"
 
-# Static redirects for exported site
+# SPA fallback for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Static redirects for specific routes
 [[redirects]]
 from = "/ai-customer-success-platform"
 to = "/services/ai-customer-success-platform/"

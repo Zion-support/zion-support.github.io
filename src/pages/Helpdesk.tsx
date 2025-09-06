@@ -1,56 +1,34 @@
-import React from "react";
-const Helpdesk = () => {
+import React from 'react';
+import Card from '../components/Card';
+
+const Helpdesk: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
-      {" "}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {" "}
-        <div className="text-center mb-12">
-          {" "}
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            {" "}
-            Helpdesk{" "}
-          </h1>{" "}
-          <p className="text-xl text-gray-600">
-            {" "}
-            Get the support you need,when you need it.{" "}
-          </p>{" "}
-        </div>{" "}
+    <div className="min-h-screen bg-gray-50 py-16">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">Helpdesk</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Get technical support and assistance for all your needs.
+          </p>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {" "}
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            {" "}
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              Technical Support
-            </h3>{" "}
-            <p className="text-gray-600 mb-4">
-              Get help with technical issues and troubleshooting.
-            </p>{" "}
-            <span className="text-sm text-blue-600">Contact Support</span>{" "}
-          </div>{" "}
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            {" "}
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              Account Support
-            </h3>{" "}
-            <p className="text-gray-600 mb-4">
-              Assistance with account management and billing.
-            </p>{" "}
-            <span className="text-sm text-blue-600">Contact Support</span>{" "}
-          </div>{" "}
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            {" "}
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              General Inquiries
-            </h3>{" "}
-            <p className="text-gray-600 mb-4">
-              Questions about our services and solutions.
-            </p>{" "}
-            <span className="text-sm text-blue-600">Contact Support</span>{" "}
-          </div>{" "}
-        </div>{" "}
-      </div>{" "}
+          <Card title="Technical Issues" description="Resolve technical problems and bugs." />
+          <Card title="Account Support" description="Help with account management and billing." />
+          <Card title="Feature Requests" description="Request new features and improvements." />
+        </div>
+
+        <div className="text-center mt-12">
+          <a 
+            href="/contact" 
+            className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Submit Ticket
+          </a>
+        </div>
+      </div>
     </div>
   );
 };
+
 export default Helpdesk;

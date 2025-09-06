@@ -1,19 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Heart, Building, ShoppingCart, Settings, BookOpen, Shield, ArrowRight, CheckCircle, Star, Zap, Users, Globe, BarChart3, Brain, Network, Cloud } from 'lucide-react';
-import Layout from '../components/Layout';
-=======
 import React from "react";
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
-=======
+
 <<<<<<< HEAD:pages/industries.tsx
 import React from 'react';
-=======
+
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -21,7 +11,7 @@ import { Heart, Building, ShoppingCart, Settings, BookOpen, Shield, ArrowRight, 
 import React from 'react';
 import Head from 'next/head';';
 import Link from 'next/link';';
->>>>>>> main:pages_disabled/industries.tsx
+
 import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
 import { 
@@ -42,7 +32,7 @@ import {
   Settings
 } from 'lucide-react';
 
-=======
+
   Settings, 
   BookOpen, 
   Shield, 
@@ -71,7 +61,7 @@ import {
   Network,
   Cloud;
 } from 'lucide-react';
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+
 
 const industries = [;
   {}
@@ -268,39 +258,13 @@ export default function IndustriesPage() {
             className="text-center mb-16"";
   Cloud
 } from 'lucide-react';
-<<<<<<< HEAD
-=======
->>>>>>> main:pages_disabled/industries.tsx
->>>>>>> origin/cursor/add-new-services-and-deploy-updates-0b97
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+
+
+
 const industries = [
   {
     title: 'Healthcare',
     icon: Heart,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    description: 'AI-powered medical solutions and healthcare technology',
-    services: ['Medical AI', 'Health Analytics', 'Telemedicine', 'Patient Management'],
-    color: 'from-red-500 to-pink-600'
-  },
-  {
-    id: 2,
-    name: 'Financial Services',
-    icon: Building,
-    description: 'Secure financial technology and banking solutions',
-    services: ['Fintech', 'Blockchain', 'Risk Management', 'Payment Systems'],
-    color: 'from-blue-500 to-indigo-600'
-  },
-  {
-    id: 3,
-    name: 'E-commerce',
-    icon: ShoppingCart,
-    description: 'Online retail and marketplace solutions',
-    services: ['E-commerce Platforms', 'Payment Processing', 'Inventory Management', 'Customer Analytics'],
-    color: 'from-green-500 to-teal-600'
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
     description: 'AI-powered diagnostics, medical imaging, drug discovery, and patient care solutions.',
     color: 'from-red-500 to-pink-500',
     services: [
@@ -403,66 +367,16 @@ const industries = [
       'Personalized Education',
       'Improved Learning Outcomes',
       'Automated Grading',
-<<<<<<< HEAD
-      'Enhanced Engagement'
-    ],
-    caseStudy: 'Improved student performance by 25% in a university program',
-    pricing: 'Starting at $5,000/setup'
-  },
-  {
-    title: 'Government',
-    icon: Shield,
-    description: 'Citizen services, data analytics, cybersecurity, and digital transformation solutions.',
-    color: 'from-gray-600 to-slate-600',
-    services: [
-      'Citizen Services Portal',
-      'Data Analytics Platform',
-      'Cybersecurity Solutions',
-      'Digital Transformation',
-      'Compliance Management',
-      'Public Safety AI'
-    ],
-    benefits: [
-      'Improved Citizen Services',
-      'Enhanced Security',
-      'Better Data Insights',
-      'Streamlined Operations'
-    ],
-    caseStudy: 'Streamlined citizen services for a state government',
-    pricing: 'Starting at $25,000/project'
-=======
-      'Virtual Classrooms',
+'Virtual Classrooms',
       'Learning Management Systems',
       'Educational Content Generation'
     ]
->>>>>>> origin/cursor/add-new-services-and-deploy-updates-0b97
   },
   {
     id: 4,
     name: 'Manufacturing',
     icon: Settings,
-<<<<<<< HEAD
-    description: 'Industrial automation and smart manufacturing',
-    services: ['IoT Solutions', 'Predictive Maintenance', 'Quality Control', 'Supply Chain'],
-    color: 'from-orange-500 to-red-600'
-  },
-  {
-    id: 5,
-    name: 'Education',
-    icon: BookOpen,
-    description: 'Educational technology and learning platforms',
-    services: ['Learning Management', 'Virtual Classrooms', 'Student Analytics', 'Content Management'],
-    color: 'from-purple-500 to-pink-600'
-  },
-  {
-    id: 6,
-    name: 'Government',
-    icon: Shield,
-    description: 'Public sector technology and digital transformation',
-    services: ['Digital Services', 'Data Management', 'Citizen Portals', 'Security Solutions'],
-    color: 'from-gray-500 to-blue-600'
-=======
-    description: 'Smart manufacturing solutions with predictive maintenance and quality control.',
+description: 'Smart manufacturing solutions with predictive maintenance and quality control.',
     color: 'from-orange-500 to-red-500',
     services: [
       'Predictive Maintenance',
@@ -514,8 +428,7 @@ const industries = [
       'Policy Analysis Tools',
       'Smart City Solutions'
     ]
->>>>>>> origin/cursor/add-new-services-and-deploy-updates-0b97
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+
   }
 ];
 const technologies = [
@@ -528,26 +441,6 @@ const technologies = [
 ];
 export default function IndustriesPage() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    <Layout
-      title="Industries We Serve - Zion Tech Group"
-      description="Discover how we help businesses across various industries transform with innovative technology solutions."
-      keywords="industries, healthcare, finance, e-commerce, manufacturing, education, government"
-    >
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
-          </div>
-          
-          <div className="container mx-auto px-4 relative z-10">
-=======
 <<<<<<< HEAD:pages/industries.tsx
     <Layout
       title="Industries We Serve - Zion Tech Group"
@@ -558,22 +451,11 @@ export default function IndustriesPage() {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
           <div className="container mx-auto px-4">
->>>>>>> origin/cursor/add-new-services-and-deploy-updates-0b97
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Industries We <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Serve</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                We provide specialized technology solutions across diverse industries, 
-                helping businesses transform and thrive in the digital age.
-=======
-              className="text-center max-w-4xl mx-auto"
+className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
                 Industries We <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Serve</span>
@@ -581,15 +463,11 @@ export default function IndustriesPage() {
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
                 We provide specialized AI and technology solutions across multiple industries, 
                 helping organizations transform their operations and achieve their goals.
->>>>>>> origin/cursor/add-new-services-and-deploy-updates-0b97
               </p>
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-
-        {/* Industries Grid */}
+{/* Industries Grid */}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -709,8 +587,7 @@ export default function IndustriesPage() {
         </section>
       </div>
     </Layout>
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <Head>
         <title>Industry Solutions - Zion Tech Group</title>
@@ -767,10 +644,8 @@ export default function IndustriesPage() {
               We understand the unique challenges and opportunities in each industry. Our solutions are designed to address specific sector needs while driving innovation and growth.;
             </p>;
           </motion.div>;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/add-new-services-and-deploy-updates-0b97
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+
+
 
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">";
             {industries.map((industry, index) => {}
@@ -1040,55 +915,16 @@ export default function IndustriesPage() {
                 Learn About Our Expertise
               </Link>
             </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Ready to Transform Your Industry?
-              </h2>
-              <p className="text-xl mb-8 max-w-2xl mx-auto">
-                Let's discuss how our industry-specific solutions can help your business 
-                achieve its goals and stay ahead of the competition.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold inline-flex items-center justify-center">
-                  <ArrowRight className="w-5 h-5 mr-2" />
-                  Get Industry Consultation
-                </button>
-                <button className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
-                  View Case Studies
-                </button>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </Layout>
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
           </motion.div>
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-=======
->>>>>>> main:pages_disabled/industries.tsx
->>>>>>> origin/cursor/add-new-services-and-deploy-updates-0b97
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+
+
+
   );
 }
-=======
+
     <div className={className || ""}>
       <h1>Industries</h1>
       <p>This component is under development.</p>
@@ -1097,4 +933,4 @@ export default function IndustriesPage() {
 };
 
 export default Industries;
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+

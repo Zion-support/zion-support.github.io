@@ -1,21 +1,6 @@
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  compress: true,
-  poweredByHeader: false,
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-<<<<<<< HEAD
-  experimental: {
-    optimizeCss: true,
-    scrollRestoration: true,
-    optimizePackageImports: ['lucide-react', 'framer-motion']
-  },
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   trailingSlash: true,
   images: {
@@ -30,33 +15,9 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 31536000,
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY'
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff'
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin'
-          }
-        ]
-      }
-    ]
-  },
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
   webpack: (config, { dev, isServer }) => {
     if (dev) {
       config.watchOptions = {
@@ -99,11 +60,7 @@ const nextConfig = {
         aggregateTimeout: 300,
       };
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-    if (!dev && !isServer) {
+if (!dev && !isServer) {
       config.optimization.splitChunks = {
         chunks: 'all',
         cacheGroups: {
@@ -115,9 +72,8 @@ const nextConfig = {
         }
       }
     }
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
     
     // Exclude apps directory from compilation
     config.module.rules.push({
@@ -127,14 +83,7 @@ const nextConfig = {
     });
     
     return config;
-<<<<<<< HEAD
-  }
-};
-<<<<<<< HEAD
-
-module.exports = nextConfig;
-=======
-  },
+},
   
   // Security headers
   async headers() {
@@ -163,8 +112,43 @@ module.exports = nextConfig;
     ]
   }
 };
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
 
 export default nextConfig;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+	reactStrictMode: false,
+	trailingSlash: true,
+	output: 'export',
+	images: {
+		unoptimized: true
+	},
+	eslint: {
+		ignoreDuringBuilds: true
+	},
+	async redirects() {
+		return [
+			{ source: '/api-documentation', destination: '/api-docs', permanent: true },
+			{ source: '/ai-consciousness-evolution-2025', destination: '/ai-consciousness-evolution-2029', permanent: false }
+		];
+	},
+	webpack: (config, { isServer }) => {
+		// Exclude problematic directories from webpack compilation
+		config.watchOptions = {
+			...config.watchOptions,
+			ignored: ['**/apps/**', '**/temp_conflicts/**', '**/node_modules/**']
+		};
+
+		// Add custom webpack rule to ignore apps directory
+		config.module.rules.push({
+			test: /\.(ts|tsx|js|jsx)$/,
+			include: /apps\//,
+			use: 'ignore-loader'
+		});
+
+		return config;
+	}
+};
+
+export default nextConfig;
+

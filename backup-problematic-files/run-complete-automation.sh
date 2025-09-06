@@ -71,25 +71,12 @@ echo "🔒 Phase 3: Security & Performance"
 echo "====="
 
 # Security scan
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:run-complete-automation.sh
-run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
 
-=======
-=======
 <<<<<<< HEAD:backup-problematic-files/run-complete-automation.sh
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/run-complete-automation.sh
-<<<<<<< HEAD
-=======
 run_with_log "Security Scanner" "node scripts/security-audit.cjs"
 run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
-=======
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
 run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
 
 run_with_log "Security Scanner" "node scripts/security-audit.cjs"
@@ -99,30 +86,19 @@ run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scan
 run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
 
 run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
-=======
-run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:run-complete-automation.sh
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:backup-problematic-files/run-complete-automation.sh
-=======
-=======
+
+
 run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
 
->>>>>>> main:run-complete-automation.sh
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+
+
+
+run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
+
+
+
 # Security audit
 run_optional "Security Audit" "node scripts/security-audit.cjs"
 

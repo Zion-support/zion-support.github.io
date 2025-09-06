@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 <<<<<<< HEAD:backup-problematic-files/pages_disabled/accessibility.tsx
 import React from 'react';
-=======
+
 import * as React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 import {
@@ -21,8 +18,7 @@ import {
   FileText,
   Settings
 } from 'lucide-react';
->>>>>>> main:pages_disabled/accessibility.tsx
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
 
 interface AccessibilityProps {
   className?: string;

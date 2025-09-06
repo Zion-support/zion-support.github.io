@@ -1,17 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { Component, ReactNode, ErrorInfo } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-=======
+
 import React, { Component, ReactNode } from 'react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-cf6c
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+import React, { Component, ReactNode } from 'react';
+
 
 interface Props {
   children: ReactNode;
@@ -19,28 +12,22 @@ interface Props {
   fallback?: ReactNode;
 }
 
-=======
-interface Props {
-  children: ReactNode;
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 interface State {
-=======
+
 import React from 'react';
 
 interface ErrorBoundaryState {
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
   hasError: boolean;
   error?: Error;
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-=======
+
 interface ErrorBoundaryProps {
   children: React.ReactNode;
   fallback?: React.ComponentType<{ error?: Error }>;
@@ -48,50 +35,42 @@ interface ErrorBoundaryProps {
 
 class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
     super(props);
     this.state = { hasError: false };
   }
-<<<<<<< HEAD
 
   static getDerivedStateFromError(error: Error): ErrorBoundaryState {
     return { hasError: true, error };
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-
-=======
-  static getDerivedStateFromError(error: Error): State {
+static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+
     console.error('ErrorBoundary caught an error:', error, errorInfo);
-    this.setState({ error, errorInfo });
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
   render() {
     if (this.state.hasError) {
-      const FallbackComponent = this.props.fallback;
-      return FallbackComponent ? <FallbackComponent error={this.state.error} /> : (
-        <div className="error-boundary">
-          <h2>Something went wrong.</h2>
-          <p>Please refresh the page and try again.</p>
+return (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Something went wrong</h1>
+            <p className="text-gray-600 mb-8">We're sorry, but something unexpected happened.</p>
+            <button
+              onClick={() => window.location.reload()}
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Reload Page
+            </button>
+          </div>
         </div>
       );
     }
 
-<<<<<<< HEAD
-    return this.props.children;
-  }
-}
-
-<<<<<<< HEAD
-export default ErrorBoundary;
-=======
-<<<<<<< HEAD
-=======
 export default ErrorBoundary
     return { hasError: true, error };
   };
@@ -160,8 +139,14 @@ export { ErrorBoundary };
   }
 }
 export default ErrorBoundary;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
+
+
 export default ErrorBoundary;
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+    return this.props.children;
+  }
+}
+
+export default ErrorBoundary;
+
