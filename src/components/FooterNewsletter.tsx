@@ -1,13 +1,22 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+{/* Honeypot field */}
+      <input
+
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 import React, { useState, useRef } from 'react';
-import { Input  } from '@/components/ui/input';
-import { Button  } from '@/components/ui/button';
-import { useToast  } from '@/hooks/use-toast';
-import React, { useState, useRef } from 'react'
-import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
-import { useToast } from '@/hooks/use-toast'
-import { Loader2 } from 'lucide-react'
-import {logErrorToProduction} from '@/utils/productionLogger';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { useToast } from '@/hooks/use-toast';
+import { Loader2 } from 'lucide-react';
+import { logErrorToProduction } from '@/utils/productionLogger';
 export function FooterNewsletter(): React.ReactElement {
 
   const [email, setEmail] = useState('')
@@ -218,14 +227,62 @@ export function FooterNewsletter(): React.ReactElement {;
       {emailError && <p className="text-red-500 text-sm mt-1">{emailError}</p>}
       {/* Honeypot field */}
       <input
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+      {/* Honeypot field */}
+{/* Honeypot field */}
+      <input
+        type="text"
+        name="honeypot"
+        value={honeypot}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+{/* Honeypot field */}
+      <input
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
         onChange={e => setHoneypot(e && e.target.value)}
         tabIndex={-1}
         autoComplete='off';
         style={{ display: 'none' }}
       />;
+<<<<<<< HEAD
       <Button
         type="submit"
         disabled={isSubmitting}
+=======
+<<<<<<< HEAD
+      <Button
+        type="submit"
+        disabled={isSubmitting}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+      <Button
+        type="submit"
+        disabled={isSubmitting}
+
+<<<<<<< HEAD
+=======
+      <Button
+        type="submit"
+        disabled={isSubmitting}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
         className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple'>;
 
         type="text"
@@ -236,6 +293,15 @@ export function FooterNewsletter(): React.ReactElement {;
         tabIndex={-1}
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
         type='text'
         type="text"
         value={honeypot}
@@ -266,6 +332,15 @@ export function FooterNewsletter(): React.ReactElement {;
         value={honeypot}
         onChange={e => setHoneypot(e.target.value)}
         tabIndex={-1}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
         autoComplete="off"
         style={{ display: 'none' }}
       />
@@ -277,6 +352,17 @@ export function FooterNewsletter(): React.ReactElement {;
       >;
         {isSubmitting ? (;
           <>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <Loader2 className='h-4 w-4 mr-2 animate-spin' />;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
             Subscribing...;
           </>;
         ) : (;
@@ -388,6 +474,15 @@ export function FooterNewsletter():React.ReactElement {;
           <>;
             <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
             <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
             Subscribing...;
           </>;
         ) : (;
@@ -395,8 +490,33 @@ export function FooterNewsletter():React.ReactElement {;
         )}
       </Button>;
     </form>;
+<<<<<<< HEAD
   );
 } ;
+=======
+<<<<<<< HEAD
+  );
+} ;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  );
+} ;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 } ;
 
 import React, { useState, useRef } from 'react';
@@ -521,6 +641,17 @@ if ( {) {
     </form>);
 }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 
 
 };
@@ -534,3 +665,13 @@ return (<form id="footer-newsletter-form" aria-label="Newsletter sign-up" onSubm
 } ;
 }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main

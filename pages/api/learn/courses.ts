@@ -2,39 +2,34 @@ import { NextApiRequest, NextApiResponse } from "next";
 
 const mockCourses = [
   {
-    id: "1",
-    title: "Introduction to Web Development",
-    description: "Learn the basics of HTML, CSS, and JavaScript",
-    duration: "4 weeks",
-    level: "beginner",
-    rating: 4.5,
-    students: 1200,
-  },
+    id: "1"
+    title: "Introduction to Web Development"
+    description: "Learn the basics of HTML, CSS, and JavaScript"
+    duration: "4 weeks"
+    level: "beginner"
+    rating: 4.5
+    students: 1200
+  }
   {
-    id: "2",
-    title: "Advanced React Patterns",
-    description: "Master advanced React concepts and patterns",
-    duration: "6 weeks",
-    level: "intermediate",
-    rating: 4.8,
-    students: 800,
-  },
+    id: "2"
+    title: "Advanced React Patterns"
+    description: "Master advanced React concepts and patterns"
+    duration: "6 weeks"
+    level: "intermediate"
+    rating: 4.8
+    students: 800
+  }
   {
-    id: "3",
-    title: "Full-Stack Development",
-    description: "Build complete web applications from scratch",
-    duration: "12 weeks",
-    level: "advanced",
-    rating: 4.7,
-    students: 500,
-  },
+    id: "3"
+    title: "Full-Stack Development"
+    description: "Build complete web applications from scratch"
+    duration: "12 weeks"
+    level: "advanced"
+    rating: 4.7
+    students: 500
+  }
 ];
 
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "GET") {
     res.setHeader("Allow", "GET");
@@ -58,7 +53,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
             .includes(search.toString().toLowerCase()) ||
           course.description
             .toLowerCase()
-            .includes(search.toString().toLowerCase()),
+            .includes(search.toString().toLowerCase())
       );
     }
 

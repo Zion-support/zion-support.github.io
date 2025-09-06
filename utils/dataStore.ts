@@ -88,6 +88,10 @@ class DataStore {
     return this.projects.find((project) => project.id === id);
   }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
   createProject(data: Partial<Project>): Project {
     const project: Project = {
       id: Math.random().toString(36).substr(2, 9),
@@ -100,6 +104,13 @@ class DataStore {
     this.projects.push(project);
     return project;
   }
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 
   // Review methods
   hasExistingReview(
@@ -115,6 +126,10 @@ class DataStore {
     );
   }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
   upsertReview(data: Partial<Review>): Review {
     const existingIndex = this.reviews.findIndex(
       (review) =>
@@ -165,6 +180,26 @@ class DataStore {
   counterpartRole(role: "client" | "talent"): "client" | "talent" {
     return role === "client" ? "talent" : "client";
   }
+<<<<<<< HEAD
+=======
+=======
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+// Data store utilities;
+export const data_store = {
+  // Add data store functionality here;
+  get_data: () => [],
+  set_data: (data: any) => null,
+  update_data: (id: string, data: any) => null,
+  delete_data: (id: string) => null;
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -293,5 +328,30 @@ export const upsertReview = (data: Partial<Review>) => store.upsertReview(data);
 export const getReviewsByProject = (projectId: string) =>
   store.getReviewsByProject(projectId);
 export const getAllReviews = () => store.getAllReviews();
+<<<<<<< HEAD
 export const counterpartRole = (role: "client" | "talent") =>
   store.counterpartRole(role);
+=======
+<<<<<<< HEAD
+export const counterpartRole = (role: "client" | "talent") =>
+  store.counterpartRole(role);
+=======
+export const counterpartRole = (role: 'client' | 'talent') => store.counterpartRole(role);
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main

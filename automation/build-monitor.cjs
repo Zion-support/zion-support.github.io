@@ -28,6 +28,13 @@ const { exec } = require('child_process');
 const { promisify } = require('util');
 <<<<<<< HEAD
 <<<<<<< HEAD
+
+const execAsync = promisify(exec);
+
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 const execAsync = promisify(exec);
 =======
 <<<<<<< HEAD
@@ -57,6 +64,9 @@ const execAsync = promisify(exec);
 const execAsync = promisify(exec);
 
 <<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -69,6 +79,7 @@ const execAsync = promisify(exec);
 const execAsync = promisify(exec);
 
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 class BuildMonitor {}
   constructor() {}
     this.logFile = path.join(__dirname, 'logs', 'build-monitor.log');
@@ -116,6 +127,9 @@ class BuildMonitor {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -124,6 +138,7 @@ class BuildMonitor {}
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
       execSync('npm run clean', {
         cwd: this.projectRoot,
         stdio: 'ignore',
@@ -139,6 +154,10 @@ class BuildMonitor {}
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -156,6 +175,10 @@ class BuildMonitor {}
       const endTime = Date.now();
       const duration = endTime - startTime;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
       this.lastBuild = {
         timestamp: new Date().toISOString(),
         success: true,
@@ -164,6 +187,10 @@ class BuildMonitor {}
 
       const endTime = Date.now();
       const duration = endTime - startTime;
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 <<<<<<< HEAD
 =======
@@ -192,6 +219,9 @@ class BuildMonitor {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -200,6 +230,7 @@ class BuildMonitor {}
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
       this.log(`Build completed successfully in ${buildTime}ms`);
       await this.saveBuildReport();
     } catch (error) {
@@ -213,6 +244,10 @@ class BuildMonitor {}
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -241,6 +276,9 @@ class BuildMonitor {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -249,6 +287,7 @@ class BuildMonitor {}
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   async handleBuildFailure(error) {
     this.log('Handling build failure...');
     try {
@@ -279,6 +318,10 @@ class BuildMonitor {}
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -300,6 +343,9 @@ class BuildMonitor {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -308,6 +354,7 @@ class BuildMonitor {}
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   async reportBuildFailure(error) {
     try {
       const failureReport = {
@@ -328,6 +375,10 @@ class BuildMonitor {}
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -427,6 +478,11 @@ class BuildMonitor {}
     try {}
       this.log('Optimizing build...');
 <<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -435,10 +491,14 @@ class BuildMonitor {}
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -447,6 +507,7 @@ class BuildMonitor {}
 =======
 
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
       // Clean up first;
       await this.cleanupOldBuilds();
 
@@ -514,6 +575,12 @@ if (require.main === module) {}
 <<<<<<< HEAD
 });
 };
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+});
+};
 module.exports = BuildMonitor;
 =======
 <<<<<<< HEAD
@@ -534,6 +601,9 @@ monitor.start().catch(error => {
 };
 });
 };
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 module.exports = BuildMonitor;
 <<<<<<< HEAD
 =======
@@ -546,5 +616,6 @@ module.exports = BuildMonitor;
 =======
 });
 };
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 module.exports = BuildMonitor;
 >>>>>>> main

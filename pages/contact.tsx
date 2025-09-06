@@ -1,10 +1,45 @@
 <<<<<<< HEAD
-=======
 import React from 'react';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
-import MainLayout from '../src/components/layout/MainLayout';
->>>>>>> main
+import MainLayout from '../components/layout/MainLayout';
+
+export default function ContactPage() {
+  return (
+    <MainLayout
+      title="Contact - Zion Tech Group"
+      description="Get in touch with Zion Tech Group for all your technology needs"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Contact Us</h1>
+          <p className="text-xl text-gray-600 mb-8">We'd love to hear from you!</p>
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
+                <p className="text-gray-600">+1 302 464 0950</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
+                <p className="text-gray-600">kleber@ziontechgroup.com</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Address</h3>
+                <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </MainLayout>
+  );
+}
+=======
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+
+=======
 
 
 class ErrorBoundary extends React.Component {
@@ -42,12 +77,6 @@ origin/automation-improvements-final
 import Head from 'next/head';
 import { useState } from 'react';
 import { ContactInfo } from '../types';
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -107,35 +136,78 @@ export default function Contact() {
 }
   };
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Get in touch with our team for your technology needs.
 import React from 'react';
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from "react";
 import Layout from "../components/Layout";
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
 export default function Contact() {
   return (
     <>
       <Head>
+<<<<<<< HEAD
+        <title>Contact - Zion Tech Group</title>
+        <meta name="description" content="Get in touch with Zion Tech Group for your AI and IT needs" />
+      </Head>
+      <main className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-gray-900 mb-4">Contact Us</h1>
+            <p className="text-xl text-gray-600">Ready to start your AI transformation journey?</p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-12">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
+                  <p className="text-gray-600">contact@ziontechgroup.com</p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
+                  <p className="text-gray-600">+1 (555) 123-4567</p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Address</h3>
+                  <p className="text-gray-600">
+                    123 Tech Street<br />
+                    San Francisco, CA 94105
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
+              <form className="space-y-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                  <input type="text" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent" />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                  <input type="email" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent" />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                  <textarea rows={4} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"></textarea>
+                </div>
+                <button type="submit" className="w-full bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+    </>
+  );
+=======
         <title>Contact Us - Zion Tech Group</title>
         <meta name="description" content="Get in touch with Zion Tech Group for advanced IT solutions and AI services." />
       </Head>
@@ -163,16 +235,6 @@ export default function Contact() {
       </div>
     </>
   );
-<<<<<<< HEAD
-=======
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import Head from 'next/head';
 
 const ContactPage: React.FC = () => {
@@ -181,14 +243,6 @@ const ContactPage: React.FC = () => {
       <Head>
         <title>Contact Us - Zion Tech Group</title>
         <meta
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-name='description'
-=======
-          name='description'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           content='Get in touch with Zion Tech Group for innovative micro SaaS, AI services, and IT solutions. Contact us for a free consultation.'
         />
         <meta
@@ -264,82 +318,6 @@ name='description'
                   <ContactForm />
                 </div>
               </div>
-<<<<<<< HEAD
-=======
-=======
-
-}
-=======
-
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-      description="Get in touch with Zion Tech Group for your technology needs. Contact us for AI services, IT solutions, and more.">;
-      <div className="min-h-screen bg-gray-50 py-20">;
-        <div className="container mx-auto px-4">;
-          <div className="text-center mb-12">;
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">;
-              Contact Us;
-            </h1>;
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-              Get in touch with our team for your technology needs.;
-            </p>;
-          </div>;
-          <div className="text-center">;
-            <p className="text-gray-600">Contact page is under construction.</p>;
-          </div>;
-        </div>;
-      </div>;
-    </Layout>;
-
-  );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
-
-    </>
-
-  );
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-}
-import React from './react';
-import Layout from "../components / Layout";
-;
-export default /**
- * Contact - Function description
- */
-function Contact() {
-  return (
-    <Layout;
-      title="Contact Us - Zion Tech Group";
-      description="Get in touch with Zion Tech Group for your technology needs. Contact us for AI services, IT solutions, and more.";
-    >;
-      <div className="min - h-screen bg - gray - 50 py - 20">;
-        <div className="container mx - auto px - 4">;
-          <div className="text - center mb - 12">;
-            <h1 className="text - 4xl font - bold text - gray - 900 mb - 4">;
-              Contact Us;
-            </h1>;
-            <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
-              Get in touch with our team for your technology needs.;
-            </p>;
-          </div>;
-          <div className="text - center">;
-            <p className="text - gray - 600">Contact page is under construction.</p>;
-          </div>;
-        </div>;
-      </div>;
-    </Layout>);
-}
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <>
       <Head>
         <title>Contact Us - Zion Tech Group</title>
@@ -651,132 +629,14 @@ function Contact() {
                   </li>
                 </ul>
               </div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    </Layout>;
-=======
-    </>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  );
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
-=======
-}
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-    <MainLayout
-      title="Contact - Zion Tech Group"
-      description="Get in touch with Zion Tech Group for all your technology needs"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Contact Us</h1>
-          <p className="text-xl text-gray-600 mb-8">We'd love to hear from you!</p>
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
-                <p className="text-gray-600">+1 302 464 0950</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
-                <p className="text-gray-600">kleber@ziontechgroup.com</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Address</h3>
-                <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </MainLayout>
-  );
-}
-=======
-import Head from 'next/head';
-
-export default function Contact() {
-  return (
-    <>
-      <Head>
-        <title>Contact - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for your AI and IT needs" />
-      </Head>
-      <main className="min-h-screen bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-gray-900 mb-4">Contact Us</h1>
-            <p className="text-xl text-gray-600">Ready to start your AI transformation journey?</p>
-          </div>
-          
-          <div className="grid lg:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
-                  <p className="text-gray-600">contact@ziontechgroup.com</p>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
-                  <p className="text-gray-600">+1 (555) 123-4567</p>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Address</h3>
-                  <p className="text-gray-600">
-                    123 Tech Street<br />
-                    San Francisco, CA 94105
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
-              <form className="space-y-6">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
-                  <input type="text" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                  <input type="email" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                  <textarea rows={4} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"></textarea>
-                </div>
-                <button type="submit" className="w-full bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
-                  Send Message
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </main>
-    </>
-  );
-}
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> main
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

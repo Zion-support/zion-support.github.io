@@ -1,6 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
   const ip =
     (req.headers["x-forwarded-for"] as string)?.split(",")[0]?.trim() ||
@@ -22,6 +26,15 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
 
   if (current.count >= RATE_LIMIT_MAX_REQUESTS) {
     res.status(429).json({ error: "Too Many Requests" });
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
     return false;
   }
 

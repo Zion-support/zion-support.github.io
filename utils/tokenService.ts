@@ -1,8 +1,27 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 import {
   addTransaction,
   getAllTransactions,
   getUserBalance,
 } from "./tokenStore";
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { addTransaction, getAllTransactions, getUserBalance } from './tokenStore';
+export function issueTokens(userId: string, amount: number, reason: string) {
+  return addTransaction({
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 
   const actualAmount = Math && Math.min(amount, currentBalance);
   
