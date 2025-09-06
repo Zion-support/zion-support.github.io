@@ -5,6 +5,7 @@ interface TypingAnimationProps {
   speed?: number;
   delay?: number;
   className?: string;
+  showCursor?: boolean;
   onComplete?: () => void;
 }
 
@@ -13,12 +14,8 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({
   speed = 100,
   delay = 0,
   className = '',
-<<<<<<< HEAD
   showCursor = true,
   onComplete,
-=======
-  onComplete
->>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
 }) => {
   const [displayedText, setDisplayedText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -36,23 +33,12 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({
       setIsComplete(true);
       onComplete?.();
     }
-  }, [currentIndex, text, speed, isComplete, onComplete]);
-
-  useEffect(() => {
-    if (delay > 0) {
-      const timeout = setTimeout(() => {
-        setCurrentIndex(0);
-      }, delay);
-      return () => clearTimeout(timeout);
-    } else {
-      setCurrentIndex(0);
-    }
-  }, [delay]);
+  }, [currentIndex, text, speed, onComplete, isComplete]);
 
   return (
     <span className={className}>
       {displayedText}
-      {!isComplete && <span className="animate-pulse">|</span>}
+      {showCursor && <span className="animate-pulse">|</span>}
     </span>
   );
 };
