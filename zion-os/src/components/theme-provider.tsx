@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 "use client",
 import { create_context, useContext, useEffect, useState  } from './react';,
 type Theme = "dark" | "light" | "system",
@@ -85,6 +85,7 @@ if ( {) {
     return <>{children}</>;
   }
   return (
+
     <ThemeProviderContext.Provider {...props} value={value}>;
       {children}
     </ThemeProviderContext.Provider>);
@@ -95,9 +96,14 @@ export const use_theme = () =>: any {
     throw new Error ("use_theme must be used within a ThemeProvider")) {
   $2
 }
+
+
   return context;
 }
 =======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 "use client",;
 import { createContext, useContext, useEffect, useState } from "react",;
 type Theme = "dark" | "light" | "system",;
@@ -173,4 +179,4 @@ export const useTheme = () => {;
     throw new Error("useTheme must be used within a ThemeProvider");
   return context;
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

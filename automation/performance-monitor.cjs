@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -45,6 +43,9 @@ class PerformanceMonitor {}
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 #!/usr/bin/env node
 const fs = require('fs');
@@ -63,15 +64,6 @@ class PerformanceMonitor {
     this.ensureLogDirectory();
   }
   ensureLogDirectory() {
-<<<<<<< HEAD
-    const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
-    }
-  }
-  log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
-=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -85,6 +77,8 @@ class PerformanceMonitor {
   };
   log(message) {}
     const timestamp = new Date().toISOString();
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -184,6 +178,9 @@ class PerformanceMonitor {
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
     console.log(`[${level}] ${message}`);
@@ -216,14 +213,11 @@ class PerformanceMonitor {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     } catch (error) {
       this.log(`Failed to get build metrics: ${error.message}`);
       return { error: error.message };
     }
   }
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -277,14 +271,11 @@ class PerformanceMonitor {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     } catch (error) {
       this.log(`Failed to get bundle metrics: ${error.message}`);
       return { error: error.message };
     }
   }
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -416,12 +407,6 @@ class PerformanceMonitor {
           } else {
             size += stat.size;
           }
-<<<<<<< HEAD
-        });
-        return size;
-      };
-      return getDirSize(buildDir);
-=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -431,7 +416,6 @@ class PerformanceMonitor {
         this.log('Bundle analysis completed');
       }
       await this.optimizeBuild();
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     } catch (error) {
       this.log(`Build size optimization failed: ${error.message}`);
     }
@@ -466,43 +450,11 @@ class PerformanceMonitor {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const report = {
       lastCheck: this.lastCheck,
       projectRoot: this.projectRoot,
       recommendations: this.getPerformanceRecommendations(),
     };
-<<<<<<< HEAD
-    const reportFile = path.join(
-      __dirname,
-      'reports',
-      'performance-report.json'
-    );
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    this.log(`Performance report generated: ${reportFile}`);
-  }
-  generateRecommendations() {
-    const recommendations = [];
-    if (this.metrics.buildTime > 60000) {
-      // 1 minute
-      recommendations.push(
-        'Consider optimizing build process - build time is high'
-      );
-    }
-    if (this.metrics.bundleSize > 5000000) {
-      // 5MB
-      recommendations.push('Consider code splitting - bundle size is large');
-    }
-    if (this.metrics.memoryUsage > 100) {
-      // 100MB
-      recommendations.push(
-        'Consider memory optimization - high memory usage detected'
-      );
-    }
-    return recommendations;
-  }
-}
-=======
     try {
       fs.writeFileSync(
         this.performanceReportFile,
@@ -726,4 +678,3 @@ module.exports = PerformanceMonitor;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

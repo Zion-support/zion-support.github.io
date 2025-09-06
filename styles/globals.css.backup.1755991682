@@ -203,8 +203,6 @@ h3 {
 }
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -223,7 +221,6 @@ h3 {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 /* New Futuristic Effects */
 
 /* Holographic effect */
@@ -419,9 +416,6 @@ h3 {
 
 .glitch::before,
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -430,7 +424,6 @@ h3 {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 .glitch::after {
 
 <<<<<<< HEAD
@@ -514,7 +507,6 @@ h3 {
 .glitch::after {  content: attr(data-text);
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   position: absolute;
   top: 0;
   left: 0;
@@ -522,8 +514,6 @@ h3 {
   height: 100%;
 }
 
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -558,15 +548,12 @@ h3 {
 <<<<<<< HEAD
 =======
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 .glitch::before {
   animation: glitch-1 2s infinite;
   color: #ff0000;
   z-index: -1;
 }
 
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -579,7 +566,6 @@ h3 {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 .glitch::after {
   animation: glitch-2 2s infinite;
   color: #00ff00;
@@ -595,8 +581,6 @@ h3 {
 }
 
 @keyframes glitch-1 {
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -618,9 +602,6 @@ h3 {
   0%, 100% { transform: translate(0); }
   20% { transform: translate(-2px, 2px); }
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -642,10 +623,7 @@ h3 {
   80% { transform: translate(-2px, 2px); }
 
   0%, 100% { transform: translate(0); }  20% { transform: translate(-2px, 2px); }
-<<<<<<< HEAD
-=======
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   40% { transform: translate(-2px, -2px); }
   60% { transform: translate(2px, 2px); }
   80% { transform: translate(2px, -2px); }
@@ -657,9 +635,6 @@ h3 {
   40% { transform: translate(2px, 2px); }
   60% { transform: translate(-2px, -2px); }
   80% { transform: translate(-2px, 2px); }
-<<<<<<< HEAD
-
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -672,7 +647,6 @@ h3 {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 
 /* Enhanced component styles */
@@ -696,15 +670,12 @@ h3 {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 .button::before {
 
 <<<<<<< HEAD
@@ -742,7 +713,6 @@ h3 {
 .button::before {  content: '';
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   position: absolute;
   top: 0;
   left: -100%;
@@ -757,8 +727,6 @@ h3 {
   transition: left 0.5s ease;
 }
 
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -778,7 +746,6 @@ h3 {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 .button:hover::before {
   left: 100%;
 }
@@ -792,9 +759,6 @@ h3 {
 .futuristic-text {
   background: linear-gradient(45deg, #3b82f6, #8b5cf6, #06b6d4, #10b981);
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -803,7 +767,6 @@ h3 {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   background-size: 300% 300%;
 
 <<<<<<< HEAD
@@ -1010,14 +973,11 @@ h3 {
   background-size: 300% 300%;  -webkit-background-clip: text;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: gradientShift 3s ease infinite;
 }
 
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1037,7 +997,6 @@ h3 {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 @keyframes textGradient {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -1098,9 +1057,6 @@ h3 {
   .quantum-tunnel,
   .floating-orbs,
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1109,7 +1065,6 @@ h3 {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   .matrix-rain {
 
 <<<<<<< HEAD
@@ -1187,11 +1142,7 @@ h3 {
 
   }
   .matrix-rain {    background: none !important;
-<<<<<<< HEAD
-
-=======
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
   
   .quantum-particles::before {
@@ -1245,9 +1196,9 @@ h3 {
   }
   
 <<<<<<< HEAD
-.cyber-grid {
-background-size: 15px 15px;  }
-
+  .cyber-grid {
+<<<<<<< HEAD
+    background-size: 15px 15px;
 =======
 <<<<<<< HEAD
   .cyber-grid {
@@ -1260,9 +1211,6 @@ background-size: 15px 15px;  }
     border: 1px solid #000 !important;
 
   }
-<<<<<<< HEAD
-
-=======
 =======
     background-size: 15px 15px;  }
 <<<<<<< HEAD
@@ -1277,7 +1225,6 @@ background-size: 15px 15px;  }
     background-size: 15px 15px;  }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 
 /* Dark mode enhancements */

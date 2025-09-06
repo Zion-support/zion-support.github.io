@@ -17,24 +17,14 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
-interface AnalyticsProps {
-  // Add props here as needed
-export default function Analytics({ }: AnalyticsProps) {
-=======
 
 const Analytics = ({ className }) => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <div className={className || ''}>
       <h1>Analytics</h1>
       <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
 };
 
 export default Analytics;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-// console.log(' Starting Bundle Analysis...')
-    console.log(' Analyzing bundle size...')
-    execSync('npx @next/bundle-analyzer', { "stdio"})
-        "recommendations"
-    console.error(' Bundle analysis "failed")
-=======
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -91,4 +80,3 @@ class BundleAnalyzer {
 const analyzer = new BundleAnalyzer();
 analyzer.analyzeBundle();
 analyzer.generateReport();
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

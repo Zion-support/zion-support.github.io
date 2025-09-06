@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -161,7 +159,6 @@ const fs = require("fs");"const path = require("path");"const { exec } = require
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
@@ -185,12 +182,16 @@ class GitAutomation {}
     const logMessage = `[${timestamp}] ${message}\n`;
     );
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    const logMessage = `[${timestamp}] ${message}\n`;
+    );
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const logMessage = `[${timestamp}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -400,9 +401,6 @@ if (require.main === module) {}
 module.exports = GitAutomation;
 =======
 <<<<<<< HEAD
-module.exports = GitAutomation;
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 module.exports = GitAutomation;
 =======
@@ -413,4 +411,3 @@ module.exports = GitAutomation;
 module.exports = GitAutomation;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

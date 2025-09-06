@@ -1,3 +1,4 @@
+
 if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { OpenAI } from 'openai';
@@ -18,6 +19,8 @@ function handler() {
     return res.status (405).json ({ error: "Method not allowed" })) {
   $2
 }
+
+>>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
   try {
     const {
       target_institution,
@@ -26,21 +29,18 @@ function handler() {
       budgetOrResolution,
       supporting_multiverses = [],
       title = "Zion DAO Proposal",
+
+
+    const userPrompt =
+
+      promptAssist |
+
+      `Write a proposal for ${targetInstitution} on ${type} in ${regionalScope}. Budget/Resolution: ${budgetOrResolution}. Include metrics, social outcomes, and DAO-based governance logic.`;
+
     const completion = await openai && openai.chat.completions && completions.create({
       model: process && process.env.OPENAI_MODEL || "gpt-4o-mini",
       messages: [
-      prompt_assist,
-      language = "en",
-    } = req.body || {}
-;
-    const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY });
-    const user_prompt =;
-      prompt_assist ||;
-      `Write a proposal for ${target_institution} on ${type} in ${regional_scope}. Budget / Resolution: ${budgetOrResolution}. Include metrics, social outcomes, and DAO - based governance logic.`;
-;
-    const completion = await openai.chat.completions.create ({
-      model: process.env.OPENAI_MODEL || "gpt - 4o - mini",
-      messages: [;
+
         { role: "system", content: SYSTEM_PROMPT },
         { role: "user", content: user_prompt },
       ],
@@ -48,6 +48,8 @@ function handler() {
     });
     const contentMarkdown =
       completion && completion.choices?.[0]?.message?.content || "# Proposal Draft\n\nTBD";
+
+
     const meta = createProposal({
       title
       targetInstitution
@@ -58,12 +60,15 @@ function handler() {
       contentMarkdown
       language
     });
+
     return res && res.status(200).json({ meta, markdown: contentMarkdown });
+
   } catch (error: any) {
     return res
       .status(500)
       .json({ error: error?.message |"Failed to generate proposal" });
 }
+
 }
 
   try {
@@ -76,57 +81,44 @@ function handler() {
       title = 'Zion DAO Proposal',
       promptAssist,
 
+
       language = 'en'
     } = req.body || {};
     const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
     const userPrompt = promptAssist ||
       `Write a proposal for ${targetInstitution} on ${type} in ${regionalScope}. Budget/Resolution: ${budgetOrResolution}. Include metrics, social outcomes, and DAO-based governance logic.`;
+
     const completion = await openai.chat.completions.create({
       model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
       messages: [
+
 { role: 'system', content: SYSTEM_PROMPT },
 
 { role: 'user', content: userPrompt }
+
       ],
       temperature: 0.3
     });
+
 ;
     const content_markdown =;
       completion.choices?.[0]?.message?.content || "# Proposal Draft\n\nTBD";
 ;
     const meta = create_proposal ({
+
       title,
       target_institution,
       type,
       regional_scope,
       budgetOrResolution,
-      supporting_multiverses,
-      content_markdown,
-      language,
-    });
-;
-    return res.status (200).json ({ meta, markdown: content_markdown });
-  } catch (error: any) {
-    return res;
-      .status (500);
-      .json ({ error: error?.message || "Failed to generate proposal" });
-      ],
-      temperature: 0.3
-    });
-const contentMarkdown = completion.choices?.[0]?.message?.content || '# Proposal Draft\n\nTBD';
-    const meta = createProposal({
-      title,
-    targetInstitution,
-      type,
-    regionalScope,
-      budgetOrResolution,
-    supportingMultiverses,
-      contentMarkdown,
-      language
-    });
-return res.status(200).json({ meta, markdown: contentMarkdown })
+
+
+    return res.status(200).json({ meta, markdown: contentMarkdown })
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Failed to generate proposal' })
 
   }
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+

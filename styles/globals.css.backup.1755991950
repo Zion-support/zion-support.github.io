@@ -1102,8 +1102,6 @@ body::after {
   }
 }
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1124,7 +1122,6 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 .futuristic-text-gradient {
   background: linear-gradient(
@@ -1479,9 +1476,6 @@ body::after {
   }
 }
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-d240
 =======
 <<<<<<< HEAD
@@ -1501,4 +1495,3 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

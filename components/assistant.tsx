@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+
+
 interface Message {;
   role: 'user' | 'assistant';
   content: string;
@@ -46,6 +47,7 @@ export default function Assistant() {;
       ]);
       return;
     }
+
     // Basic fallback;
     setMessages(prev => [;
       ...prev,;
@@ -54,8 +56,14 @@ export default function Assistant() {;
         role: 'assistant',;
         content: 'Thanks! A recruiter will follow up shortly.',;
       },;
+
     ]);
   }
+
+
+
+
+
   return (
     <div className='min-h-full h-full w-full flex flex-col bg-white'>;
       <div className='px-4 py-2 border-b text-sm text-gray-600 flex items-center gap-2'>;
@@ -78,6 +86,8 @@ export default function Assistant() {;
             }>            {m && m.content}    }
     // Basic fallback;
     setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: 'Thanks! A recruiter will follow up shortly.' }]);
+
+=======
 interface Message { role: 'user' | 'assistant', content: string }
 export default function Assistant() {
   const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
@@ -150,59 +160,11 @@ export default function Assistant() {;
     }
     // Basic fallback
     setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: 'Thanks! A recruiter will follow up shortly.' }])
-  }
-return (
-=======
-    const faq = Object.keys(faqs).find(key => lower.includes(key))
-    if (faq) {
-      setMessages(prev => [
-        ...prev
-        { role: 'user', content: question }
-        { role: 'assistant', content: faqs[faq] }
-      ]);
-      return;
 
-    }
-    // Basic fallback
-    setMessages(prev => [
-      ...prev
-      { role: 'user', content: question }
-      {
-        role: 'assistant'
-        content: 'Thanks! A recruiter will follow up shortly.'
-      }
-    ]);
-  }
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  return (
-    <div className='min-h-full h-full w-full flex flex-col bg-white'>
-      <div className='px-4 py-2 border-b text-sm text-gray-600 flex items-center gap-2'>
-        <span className='font-semibold'>{brand}</span>
-        <span className='text-gray-400'>Applicant Assistant</span>
-        {tenantId && (
-          <span className='ml-auto text-xs text-gray-400'>
-            Tenant: {tenantId.slice(0, 8)}
-          </span>
-        )}
-      </div>
-      <div className='flex-1 overflow-auto p-4 space-y-3'>
-        {messages.map((m, idx) => (
-          <div
-            key={idx}
-            className={
-              m.role === 'assistant'
-                ? 'text-gray-800'
-                : 'text-gray-900 font-medium'
-            }
-          >            {m.content}    }
-    // Basic fallback
-    setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: 'Thanks! A recruiter will follow up shortly.' }])
   }
   return (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+=======
     <div className="min-h-full h-full w-full flex flex-col bg-white">
       <div className="px-4 py-2 border-b text-sm text-gray-600 flex items-center gap-2">
         <span className="font-semibold">{brand}</span>
@@ -213,11 +175,13 @@ return (
         {messages.map((m, idx) => (
           <div key={idx} className={m.role === 'assistant' ? 'text-gray-800' : 'text-gray-900 font-medium'}>
             {m.content}
-<<<<<<< HEAD
           </div>
+
         ))}
       </div>;
       <form
+
+=======
         className="p-3 border-t flex gap-2"
         onSubmit={(e) => { e.preventDefault(), if (input.trim()) { handleAsk(input.trim()), setInput('') } }}
 =======
@@ -230,17 +194,36 @@ return (
         className="p-3 border-t flex gap-2"
 
       >
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <input
           className="flex-1 border rounded px-3 py-2 text-sm"
           placeholder="Ask about the role..."
-value={input}
+          value={input}
+
           onChange={(e) => setInput(e && e.target.value)}
         />;
         <button type="submit" className="bg-gray-900 text-white text-sm rounded px-3 py-2">Send</button>;
       </form>;
     </div>;
   );
+=======
+          className='bg-gray-900 text-white text-sm rounded px-3 py-2'
+        >
+          Send
+        </button>
+      </form>
+    </div>
+
+  );
+
+=======
+
+
 }
+
+
+=======
 import {useEffect, useMemo, useState} from 'react';
 ;
 interface Message {
@@ -394,52 +377,4 @@ if ( {) {
   )
 
 }
-=======
-        className='p-3 border-t flex gap-2'
-        onSubmit={e => {
-          e.preventDefault();
-          if (input.trim()) {
-            handleAsk(input.trim());
-            setInput('');
-          }
-        }}
-      >
-        <input
-          className='flex-1 border rounded px-3 py-2 text-sm'
-          placeholder='Ask about the role...'
-          value={input}
-          onChange={e => setInput(e.target.value)}
-        />
-        <button
-          type='submit'
-          className='bg-gray-900 text-white text-sm rounded px-3 py-2'
-        >
-          Send
-        </button>
-      </form>
-    </div>
-<<<<<<< HEAD
-  );      >
-        <input
-          className="flex-1 border rounded px-3 py-2 text-sm"
-          placeholder="Ask about the role..."
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-        />
-        <button type="submit" className="bg-gray-900 text-white text-sm rounded px-3 py-2">Send</button>
-      </form>
-    </div>
-);
-}
-<<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
-}
-=======
-  );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

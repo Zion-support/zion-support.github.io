@@ -1,9 +1,20 @@
-<<<<<<< HEAD
-import React from 'react';'
-import { render, screen } from '@testing-library/react';'
-import '@testing-library/jest-dom';'
-import SecurityDashboard from '../components/SecurityDashboard.dynamic';'
-describe('SecurityDashboard', () => {'
+
+
+
+
+import React from 'react'
+import { render, screen, fireEvent } from '@testing-library/react'
+import '@testing-library/jest-dom'
+import SecurityDashboarddynamic from '../components/SecurityDashboard && SecurityDashboard.dynamic'
+describe('SecurityDashboarddynamic'
+  test('renders without crashing'
+
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import SecurityDashboard from '../components/SecurityDashboard.dynamic';
+
+describe('SecurityDashboard', () => {
   test('renders without crashing', () => {
     render(<SecurityDashboard />);'
     expect(screen.getByTestId('securitydashboard.dynamic')).toBeInTheDocument();
@@ -64,15 +75,16 @@ describe('SecurityDashboarddynamic', () => {
     render(<SecurityDashboarddynamic />);
   });
 });
-const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SecurityDashboarddynamic from "./components/SecurityDashboard.dynamic"; describe("SecurityDashboarddynamic",() => { test("renders without crashing",() => { render(<SecurityDashboarddynamic />); expect(screen.getByTestId("securitydashboard.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SecurityDashboarddynamic />)}); test("handles user interactions",() => { render(<SecurityDashboarddynamic />)}); test("applies correct styling",() => { render(<SecurityDashboarddynamic />)})});''"
-<<<<<<< HEAD
-import _React from 'react';  import '@testing-library/jest-dom'; import SecurityDashboarddynamic from '../components/SecurityDashboard.dynamic'; describe('SecurityDashboarddynamic',() => { test('renders without crashing',() => { render(<SecurityDashboarddynamic />); expect(screen.getByTestId('securitydashboard.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SecurityDashboarddynamic />)}); test('handles user interactions',() => { render(<SecurityDashboarddynamic />)}); test('applies correct styling',() => { render(<SecurityDashboarddynamic />)})});
+
 =======
-import _React from 'react';  import '@testing-library/jest-dom'; import SecurityDashboarddynamic from '../components/SecurityDashboard.dynamic'; describe('SecurityDashboarddynamic',() => { test('renders without crashing',() => { render(<SecurityDashboarddynamic />); expect(screen.getByTestId('securitydashboard.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SecurityDashboarddynamic />)}); test('handles user interactions',() => { render(<SecurityDashboarddynamic />)}); test('applies correct styling',() => { render(<SecurityDashboarddynamic />)})});
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+    expect(screen.getByTestId('securitydashboard.dynamic'
+  test('displays correct content'
+  test('handles user interactions'
+  test('applies correct styling'
+
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SecurityDashboarddynamic from "./components/SecurityDashboard.dynamic"; describe('SecurityDashboarddynamic', () => { test("renders without crashing",() => { render(<SecurityDashboarddynamic />); expect(screen.getByTestId("securitydashboard.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SecurityDashboarddynamic />)}); test("handles user interactions",() => { render(<SecurityDashboarddynamic />)}); test("applies correct styling"
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

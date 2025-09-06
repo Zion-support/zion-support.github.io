@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28,12 +32,18 @@
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -300,7 +310,6 @@ fixer.run().catch(console.error)
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // console.log(' Comprehensive Syntax Fixer v2.0')
 console.log('==')
         "pattern"
@@ -341,6 +350,18 @@ console.log('==')
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    console.log('\n� Report saved "to")    console.log('\n� Report saved "to")
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
+    console.log('\n� Report saved "to")
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
+<<<<<<< HEAD
     console.log('\n� Report saved "to")    console.log('\n� Report saved "to")
 =======
     console.log('\n� Report saved "to")
@@ -361,4 +382,3 @@ console.log('==')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

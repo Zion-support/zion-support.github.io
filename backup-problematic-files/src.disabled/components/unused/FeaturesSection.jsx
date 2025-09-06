@@ -17,24 +17,14 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
-interface FeaturesSectionProps {
-  // Add props here as needed
-export default function FeaturesSection({ }: FeaturesSectionProps) {
-=======
 
 const FeaturesSection = ({ className }) => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <div className={className || ''}>
       <h1>FeaturesSection</h1>
       <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
 };
 
 export default FeaturesSection;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

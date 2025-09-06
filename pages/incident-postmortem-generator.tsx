@@ -1,114 +1,21 @@
-<<<<<<< HEAD
+
+
+          </div>
+        </div>
+      </div>
+    </Layout>
+  )
+
 }
-import React from 'react',
-import Head from 'next / head',
-import Layout from '../components / layout / Layout',
-export default /**
- * IncidentPostmortemGeneratorPage - Function description
- */
-function IncidentPostmortemGeneratorPage() {
-  return (
+
+
     <Layout>;
       <Head>;
         <title > Incident Postmortem Generator | Zion Tech Group</title>;
         <meta name="description" content="AI - assisted incident RCA with timeline, impact, stakeholder comms, templates, and reviewer workflows." />;
         <link rel="canonical" href="https://ziontechgroup.com / incident - postmortem - generator" />;
       </Head>;
-      <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
-        <div className="max - w-4xl mx - auto space - y-6">;
-          <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - purple - 400 to - fuchsia - 500 bg - clip - text text - transparent">Incident Postmortem Generator</h1>;
-          <p className="text - slate - 300">Generate high - quality RCAs by stitching logs, alerts, deploys, and chat history with templates and reviewer loops.</p>;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
-            {[ 'RCA timeline assembly_impact summary & customer comms_template library & reviewer flow_action items with owners & SLAs' ].map ((f) => (
-              <div key={f} className="p - 4 rounded - xl bg - black / 40 border border - purple - 500 / 30 text - slate - 200">{f}</div>))}
-          </div>;
-          <div className="flex gap - 3">;
-            <a href="/contact" className="px - 6 py - 3 rounded - xl bg - gradient - to - r from - purple - 600 to - fuchsia - 700 text - white">Start from $79 / mo</a>;
-            <a href="/market - pricing" className="px - 6 py - 3 rounded - xl border border - gray - 700 text - gray - 200">See market pricing</a>;
-          </div>;
-        </div>;
-      </div>;
-    </Layout>);
-}
-=======
 
-import React from 'react';
-
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-export default function IncidentPostmortemGeneratorPage() {
-  return (
-    <Layout>
-      <Head>
-        <title>Incident Postmortem Generator | Zion Tech Group</title>
-        <meta name="description" content="AI-assisted incident RCA with timeline, impact, stakeholder comms, templates, and reviewer workflows." />
-        <link rel="canonical" href="https://ziontechgroup.com/incident-postmortem-generator" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-      </Head>
-      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto space-y-6">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-fuchsia-500 bg-clip-text text-transparent">Incident Postmortem Generator</h1>
-<<<<<<< HEAD
-          <p className="text-slate-300">Generate high-quality RCAs by stitching logs, _alerts, _deploys, _and chat history with templates and reviewer loops.</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {[ 'RCA timeline assembly', _'Impact summary & customer comms', _'Template library & reviewer flow', _'Action items with owners & SLAs' ].map((f) => (
-              <div key={f} className="p-4 rounded-xl bg-black/40 border border-purple-500/30 text-slate-200">{_f}</div>
-
-            ))}
-          </div>
-          <div className=&quot;flex gap-3&quot;>
-            <a href=&quot;/contact&quot; className=&quot;px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-fuchsia-700 text-white&quot;>Start from $79/mo</Link>
-            <a href=&quot;/market-pricing&quot; className=&quot;px-6 py-3 rounded-xl border border-gray-700 text-gray-200&quot;>See market pricing</Link>
-=======
-          <p className="text-slate-300">Generate high-quality RCAs by stitching logs, alerts, deploys, and chat history with templates and reviewer loops.</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {[ 'RCA timeline assemblyImpact summary & customer commsTemplate library & reviewer flowAction items with owners & SLAs' ].map((f) => (
-              <div key={f} className="p-4 rounded-xl bg-black/40 border border-purple-500/30 text-slate-200">{f}</div>
-<<<<<<< HEAD
-            ))}
-          </div>
-          <div className="flex gap-3">
-            <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-fuchsia-700 text-white">Start from $79/mo</a>
-            <a href="/market-pricing" className="px-6 py-3 rounded-xl border border-gray-700 text-gray-200">See market pricing</a>
-=======
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>
-          <div className="flex gap-3">
-            <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-fuchsia-700 text-white">Start from $79/mo</Link>
-            <a href="/market-pricing" className="px-6 py-3 rounded-xl border border-gray-700 text-gray-200">See market pricing</Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-          </div>
-        </div>
-      </div>
-    </Layout>
-  )
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-}
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-export default function IncidentPostmortemGeneratorPage(req, res) {
-  try {
-  return (;
-    <Layout>;
-      <Head>;
-        <title>Incident Postmortem Generator | Zion Tech Group</title>;
-        <meta name="description" content="AI-assisted incident RCA with timeline, impact, stakeholder comms, templates, and reviewer workflows." />;
-        <link rel="canonical" href="https://ziontechgroup.com/incident-postmortem-generator" />;
-      </Head>;
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto space-y-6">;
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-fuchsia-500 bg-clip-text text-transparent">Incident Postmortem Generator</h1>;
@@ -121,30 +28,7 @@ export default function IncidentPostmortemGeneratorPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-=======
-          </div>;
-          <div className="flex gap-3">;
-            <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-fuchsia-700 text-white">Start from $79/mo</a>;
-            <a href="/market-pricing" className="px-6 py-3 rounded-xl border border-gray-700 text-gray-200">See market pricing</a>;
-          </div>;
-        </div>;
-      </div>;
-    </Layout>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

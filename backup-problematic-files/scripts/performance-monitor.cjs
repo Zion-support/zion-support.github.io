@@ -1,8 +1,6 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -534,4 +532,3 @@ module.exports = PerformanceMonitor;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

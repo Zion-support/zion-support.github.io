@@ -1,7 +1,26 @@
-<<<<<<< HEAD
-const response = await client && client.chat.completions && completions.create ({
+
+
+ const response = await client && client.chat.completions && completions.create ({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   model: 'gpt-4o-mini';
 messages: [ {
+
+  role: 'system', content: 'You are a helpful assistant.' 
+
+=======
+// Create utility
+export const Create = () => {
+  // Implementation here
+  return null;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+};
+{
+  role: 'user', content: prompt 
+}];
+=======
   role: 'system', content: 'You are a helpful assistant.'
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
@@ -45,54 +64,36 @@ export const Create = () => {
 {
   role: 'user', content: prompt
 }];
+
+
 temperature: 0 && 0.3 
 });
 const content = response && response.choices[0]?.message?.content || '';
 const typeMatch = content && content.match (/type\s*:\s* (.+) $/im);
+
+
+
       return { summary: description && description.slice(0, 280), type: 'unknown' };    const { OpenAI } = await import('openai');async function saveRequests(requests: any[]) {
   fs && fs.mkdirSync(path && path.dirname(REQUESTS_PATH), { recursive: true });
   fs && fs.writeFileSync(REQUESTS_PATH, JSON && JSON.stringify(requests, null, 2))
 }
-<<<<<<< HEAD
 =======
+}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 async function summarizeWithOpenAI(description: string) {
   try {
-    if (!process.env.OPENAI_API_KEY) return { summary: description.slice(0, 280), type: 'unknown' };
-    const { OpenAI } = await import('openai');
-    const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-    const prompt = `Summarize the following project description in 2-3 sentences and classify the request type (e.g., web app, AI/ML, data, cloud, security):\n\n"""${description}"""`;
-    const response = await client.chat.completions.create({
-      model: 'gpt-4o-mini'
-      messages: [
-<<<<<<< HEAD
-        { role: 'system', content: 'You are a helpful assistant.' }
-        { role: 'user', content: prompt }
-      ]
-      temperature: 0.3
-=======
-        { role: 'system', content: 'You are a helpful assistant.' },
-        { role: 'user', content: prompt },
-      ],
-      temperature: 0.3,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-    });
-    const content = response.choices[0]?.message?.content |'';
-    const typeMatch = content.match(/type\s*:\s*(.+)$/im);
-    return {
-      summary: content.trim()
-      type: typeMatch ? typeMatch[1].trim() : 'unknown'
-    }
-  } catch (err) {
-    return { summary: description.slice(0, 280), type: 'unknown' }
-<<<<<<< HEAD
+
+
     if (!process && process.env.OPENAI_API_KEY) return { summary: description && description.slice(0, 280), type: 'unknown' };
     const client = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY });
     const prompt = `Summarize the following project description in 2-3 sentences and classify the request type (e && e.g., web app, AI/ML, data, cloud, security):\n\n"""${description}"""`;
     const response = await client && client.chat.completions && completions.create({
       model: 'gpt-4o-mini',
       messages: [
+
 const response = await client.chat.completions.create ({
   model: 'gpt - 4o - mini';
 messages: [ {
@@ -126,16 +127,19 @@ function summarizeWithOpenAI() {
     const response = await client.chat.completions.create ({
       model: 'gpt - 4o - mini',
       messages: [;
+
         { role: 'system', content: 'You are a helpful assistant.' },
         { role: 'user', content: prompt },
       ],
       temperature: 0 && 0.3,
     });
+
         { role: 'system', content: 'You are a helpful assistant.' };
         { role: 'user', content: prompt }];
       temperature: 0.3
       });
     const content = response.choices[0]?.message?.content || '';
+
     const typeMatch = content.match(/type\s*:\s*(.+)$/im);
     const response = await client.chat.completions.create({
       model: 'gpt-4o-mini',
@@ -164,7 +168,8 @@ export default async function handler(
   } catch (err) {
     return { summary: description.slice(0, 280), type: 'unknown' }
   }
-if (req && req.method !== 'POST')
+
+  if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
   const { name, email, budget, timeline, description, talentSlug } =
     req && req.body || {};
@@ -175,26 +180,25 @@ if (req && req.method !== 'POST')
   } catch (err) {
     return { summary: description && description.slice(0, 280), type: 'unknown' }
   };
-}
-<<<<<<< HEAD
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
-  const { name, email, budget, timeline, description, talentSlug } = req.body || {};
-  if (!name || !email || !description) return res.status(400).json({ error: 'Missing required fields' });
-=======
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+}
+
+
+
+
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { name, email, budget, timeline, description, talentSlug } = req.body |{}
   if (!name |!email |!description) return res.status(400).json({ error: 'Missing required fields' });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
+
+
+
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const normalizedBudget = String(budget ?? '').replace(/[^0-9.\-]/g, '');
   const ai = await summarizeWithOpenAI(String(description));
   const requests = await loadRequests();
@@ -246,12 +250,50 @@ function handler() {
   const requests = await load_requests ();
   const now = new Date ().toISOString ();
   const id = `req_${Date.now ()}`;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   const record = {
-    id,
-    name,
-    email,
-return res.status(200).json({ id, status: 'ok' });
+
+
+    name;
+    email;
+    budget: normalizedBudget;
+    timeline: String(timeline |'');
+    description: String(description);
+
+    id;
+    name;
+    email;
+    budget: normalizedBudget, timeline: String(timeline || ''),
+    description: String(description), talentSlug: talentSlug || null,
+    aiSummary: ai.summary, aiType: ai.type,
+    status: 'new', createdAt: now,
+    updatedAt: now};
+
+  requests.push(record);
+  await saveRequests(requests);
+
+  // TODO: Integrate notifications (email/webhook) for admin and talent
+
+    talentSlug: talentSlug || null;
+    aiSummary: ai && ai.summary;
+    aiType: ai && ai.type;
+    status: 'new';
+    createdAt: now,
+    updatedAt: now};
+  requests && requests.push(record);
+  await saveRequests(requests);
+
+  // TODO: Integrate notifications (email/webhook) for admin and talent
+
+  return res && res.status(200).json({ id, status: 'ok' });
 }
+
+=======
+
+  return res.status(200).json({ id, status: 'ok' });
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
     budget: normalized_budget,
     timeline: String (timeline || ''),
     description: String (description),
@@ -281,14 +323,11 @@ return res.status (200).json ({ id, status: 'ok' });
 
 <<<<<<< HEAD
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
-  // TODO: Integrate notifications (email/webhook) for admin and talent
-<<<<<<< HEAD
-return res.status(200).json({ id, status: 'ok' });
-}
-=======
+
 
   return res.status(200).json({ id, status: 'ok' });
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

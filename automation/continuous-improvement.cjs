@@ -1,8 +1,6 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -33,7 +31,6 @@ class ContinuousImprovement {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 #!/usr/bin/env node;
 ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
 cursor/website-audit-and-update-with-deployment-76dc;
@@ -57,8 +54,6 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
   };
   log(message) {}
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -107,7 +102,6 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const logMessage = `[${timestamp}] ${message}\n`;`
 console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
@@ -137,8 +131,6 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
     } catch (error) {}
       this.log(`Dependency check "failed": ${error.message}`);
       return false;
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -232,7 +224,6 @@ improvement.run().catch(console.error);
 module.exports = ContinuousImprovement;
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Run the automation
 if (require.main === module) {
   const automation = new ContinuousImprovement();
@@ -240,12 +231,9 @@ if (require.main === module) {
 }
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     };
   };
 cursor/fix-lint-push-and-merge-to-main-f3c1;
@@ -324,9 +312,6 @@ module.exports = ContinuousImprovement;
 <<<<<<< HEAD
 module.exports = ContinuousImprovement;
 =======
-<<<<<<< HEAD
-module.exports = ContinuousImprovement;
-=======
 module.exports = ContinuousImprovement;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -341,4 +326,3 @@ module.exports = ContinuousImprovement;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

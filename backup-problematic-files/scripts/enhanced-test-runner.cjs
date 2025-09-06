@@ -15,7 +15,6 @@
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -24,6 +23,9 @@ console.log('🧪 Enhanced Test Runner v2.0');
 console.log('');
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -42,7 +44,6 @@ console.log('');
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const testReport = {}
   "timestamp": new Date().toISOString(),
   "sessionId": Date.now().toString(),
@@ -73,7 +74,6 @@ async function runJestTests() {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`)};
 async function runJestTests() {}
   log('info', 'Running Jest tests');
@@ -294,4 +294,3 @@ main();
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

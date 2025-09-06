@@ -1,5 +1,24 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
+
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+import { setSessionCookie } from '../../../utils/adminAuth';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {;
+    res.status(405).json({ error: 'Method Not Allowed' });
+
+    return;  }export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {;
+    res.status(405).json({ error: 'Method Not Allowed' });
+
+
+    return
+
+  const { username, password } = req.body |{}
+  const envUser = process.env.ADMIN_USERNAME |'kleber@ziontechgroup.com';
+  const envPass = process.env.ADMIN_PASSWORD |'Tw2.R5u&2!sDfeW';
+=======
   if (req && req.method !== 'POST') {
     res && res.status(405).json({ error: 'Method Not Allowed' });
     return;  }export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -36,7 +55,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } else {
     res && res.status(401).json({ error: 'Invalid credentials' });
   }
-}
+
+
+=======
 import { setSessionCookie } from '../../../utils / admin_auth';
 export default /**
  * handler - Function description
@@ -81,3 +102,4 @@ if ( {) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

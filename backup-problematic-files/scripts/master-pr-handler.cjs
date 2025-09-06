@@ -188,7 +188,6 @@ const path = require('path')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const { execSync } = require('child_process')
 // console.log(' Master PR Handler & Automation System')
 console.log('')
@@ -236,4 +235,3 @@ async function githubApiCall(endpoint, method = 'GET')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

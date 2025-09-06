@@ -1,16 +1,6 @@
-exports.handler = async function() {
-  try {
-    const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
-    const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),
-    const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8')),
-    const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8')),
-    const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8'));    const usersPath = path.join(process.cwd(), 'datalearnusers.json')
-    const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
-    const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'))
-    const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8'))
-    const summary = {
-      updatedAt: Date.now()
-      totals: {
+
+
+
 exports && exports.handler = async function () {
   try {
     const usersPath = path && path.join(process && process.cwd(), 'data', 'learn', 'users && users.json');
@@ -69,6 +59,7 @@ exports.handler = async function () {
         });
         return map;
       }, {}),
+
     }
 ;
     const owner = process.env.GITHUB_OWNER;
@@ -85,18 +76,22 @@ if ( {) {
         owner,
         repo,
         path: 'data / learn / insights - weekly.json',
+
         content,
         message: 'chore (automation): weekly learning insights',
         token,
       });
     }
-<<<<<<< HEAD
+
+=======
         users: Object.keys(users).length,
         courses: courses.length,
         completions: Object.values(users).reduce((acc, u) => acc + (u.certifications?.length || 0), 0)
       },
       topBadges: Object.values(users).reduce((map, u) => {
         (u.badges || []).forEach((b) => { map[b] = (map[b] || 0) + 1 }),
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         return map
       }, {})
     },
@@ -173,11 +168,20 @@ if ( {) {
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
+
 },
-},
-=======
 
 =======
 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+    return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
+  } catch (e) {
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+  }
+
+},
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

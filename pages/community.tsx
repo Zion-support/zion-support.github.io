@@ -1,24 +1,6 @@
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-export default function CommunityPage() {;
+
+
+
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
       <Head>;
@@ -135,6 +117,7 @@ function CommunityPage() {
               .;
             </p>;
           </div>;
+
           <div className='p - 6 rounded - 2xl bg - white / 5 border border - white / 10'>;
             <h2 className='text - white text - xl font - semibold mb - 2'>Follow Us</h2>;
             <ul className='text - slate - 300 space - y-1'>;
@@ -145,37 +128,45 @@ function CommunityPage() {
                   target='_blank';
                   rel='noopener noreferrer';
                 >;
+
                   LinkedIn;
                 </a>;
               </li>;
               <li>;
+
                 <a;
                   className='text - cyan - 400';
                   href='https://github.com / Zion - Holdings';
                   target='_blank';
                   rel='noopener noreferrer';
                 >;
+
                   GitHub;
                 </a>;
               </li>;
               <li>;
+
                 <a;
                   className='text - cyan - 400';
                   href='https://instagram.com / ziontechgroup';
                   target='_blank';
                   rel='noopener noreferrer';
                 >;
+
                   Instagram;
                 </a>;
               </li>;
               <li>;
+
                   rel='noopener noreferrer'>;
+=======
                 <a;
                   className='text - cyan - 400';
                   href='https://youtube.com/@ziontechgroup';
                   target='_blank';
                   rel='noopener noreferrer';
                 >;
+
                   YouTube;
                 </a>;
               </li>;
@@ -183,64 +174,13 @@ function CommunityPage() {
           </div>;
         </div>;
       </div>;
+
+
 =======
-                href='mailto: kleber@ziontechgroup.com'
-              >
-                kleber@ziontechgroup.com
-              </a>
-              .
-            </p>
-          </div>
-          <div className='p-6 rounded-2xl bg-white/5 border border-white/10'>
-            <h2 className='text-white text-xl font-semibold mb-2'>Follow Us</h2>
-            <ul className='text-slate-300 space-y-1'>
-              <li>
-                <a
-                  className='text-cyan-400'
-                  href='https://linkedin.com/company/ziontechgroup'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  LinkedIn
-                </a>
-              </li>
-              <li>
-                <a
-                  className='text-cyan-400'
-                  href='https://github.com/Zion-Holdings'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a
-                  className='text-cyan-400'
-                  href='https://instagram.com/ziontechgroup'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  Instagram
-                </a>
-              </li>
-              <li>
-                <a
-                  className='text-cyan-400'
-                  href='https://youtube.com/@ziontechgroup'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  YouTube
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>;
-  );
-<<<<<<< HEAD
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
 }
@@ -316,52 +256,14 @@ export default function CommunityPage() {
 	)
 <<<<<<< HEAD
 }
-</div>);
+
+    </div>);
 ;
 
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
-import React from 'react';
-import Head from 'next/head';
-export default function CommunityPage(req, res) {
-  try {
-	return (;
-		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
-			<Head>;
-				<title>Community | Zion Tech Group</title>;
-				<meta name="description" content="Community forum and resources for Zion Tech Group users" />;
-				<link rel="canonical" href="https://ziontechgroup.com/community" />;
-				<meta name="description" content="Join the Zion Tech Group community and stay updated." />;
-			</Head>;
-			<div className="max-w-5xl mx-auto space-y-8">;
-				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Community</h1>;
-				<p className="text-slate-300">Join our community. Ask questions, share solutions, and learn best practices.</p>;
-				<div className="grid md: grid-cols-2 gap-6">;
-					<div className="p-6 rounded-2xl bg-white/5 border border-white/10">;
-						<h2 className="text-white text-xl font-semibold mb-2">Get Help</h2>;
-						<p className="text-slate-300">Visit the <a className="text-cyan-400 underline" href="/support">Support Center</a> or email <a className="text-purple-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p>;
-					</div>;
-					<div className="p-6 rounded-2xl bg-white/5 border border-white/10">;
-						<h2 className="text-white text-xl font-semibold mb-2">Follow Us</h2>;
-						<ul className="text-slate-300 space-y-1">;
-							<li><a className="text-cyan-400" href="https://linkedin.com/company/ziontechgroup" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>;
-							<li><a className="text-cyan-400" href="https://github.com/Zion-Holdings" target="_blank" rel="noopener noreferrer">GitHub</a></li>;
-							<li><a className="text-cyan-400" href="https://instagram.com/ziontechgroup" target="_blank" rel="noopener noreferrer">Instagram</a></li>;
-							<li><a className="text-cyan-400" href="https://youtube.com/@ziontechgroup" target="_blank" rel="noopener noreferrer">YouTube</a></li>;
-						</ul>;
-					</div>;
-				</div>;
-			</div>;
-		</div>;
-	);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

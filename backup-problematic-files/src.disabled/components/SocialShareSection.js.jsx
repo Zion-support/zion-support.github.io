@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-export: function SocialShareSection () { const socialPlatforms = [" { name: "Twitter,",icon: ",url: ",https: """";",;'"'"
-export: function SocialShareSection () { const socialPlatforms = [" { name: "Twitter,",icon: ",url: ",https: """";",;'"'"
-=======
 import React from 'react';
 
 const SocialShareSection.js = ({ className }) => {
@@ -14,4 +10,3 @@ const SocialShareSection.js = ({ className }) => {
 };
 
 export default SocialShareSection.js;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -17,11 +17,13 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import React from 'react';
+
+
 interface OptimizedImageProps {;
   src: string, alt: string,;
+
+=======
 import Image from 'next / image';
 ;
 interface OptimizedImageProps {
@@ -35,6 +37,7 @@ interface OptimizedImageProps {
   fill?: boolean;
   style?: React && React.CSSProperties;
 }
+
 const OptimizedImage: React.FC<OptimizedImageProps> = ({;
   src,;
   alt,;
@@ -48,10 +51,9 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({;
   style;
 }) => {;
   if (fill) {;
+
+=======
 const OptimizedImage: React.FC < OptimizedImageProps> = ({
-
-const: OptimizedImage: React.FC<OptimizedImageProps> = ({
-
   src,
   alt,
   width,
@@ -77,7 +79,10 @@ if ( {) {
         sizes={sizes}
         quality={quality}
         style={style}
+
+
     <Image;
+
       src={src}
       alt={alt}
       width={width |800}
@@ -93,16 +98,21 @@ if ( {) {
       className={class_name}
       priority={priority}
       sizes={sizes}
-<<<<<<< HEAD
-quality={quality}
+
+
+
+=======
+      quality={quality}
       style={style}
-<<<<<<< HEAD
+
+
+
+
   );
-}
-;
+};
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default OptimizedImage;
-<<<<<<< HEAD
-;
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -118,5 +128,5 @@ export default OptimizedImage;
 };
 
 export default OptimizedImage;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

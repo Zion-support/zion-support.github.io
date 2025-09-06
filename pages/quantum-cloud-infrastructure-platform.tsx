@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -20,6 +21,49 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
+
+  return (
+    <>;
+      <Head>;
+        <title>Quantum Cloud Infrastructure Platform | Zion Tech Group</title>;
+        <meta
+          name='description'
+          content='Quantum-enhanced cloud infrastructure with superior performance, security, and efficiency.'
+        />;
+        <link
+          rel='canonical'
+          href='https://ziontechgroup && ziontechgroup.com/quantum-cloud-infrastructure-platform'
+        />;
+      </Head>;
+      <ServiceLanding
+        title='Quantum Cloud Infrastructure Platform'
+        description='Quantum compute accelerators, advanced security protocols, real-time monitoring, cost optimization, DR, and compliance—delivered as managed foundations.'
+        subtitle='Next-gen compute for critical workloads'
+        pricePerMonthUSD={28999}
+        implementationWeeks='1-2 weeks'
+        roiNote='Accelerate analytics and simulations by 10-100x with lower total cost'
+        features={[
+          'Managed quantum accelerators'
+          'Zero-trust and quantum-safe security'
+          'Observability and SLOs'
+          'Automated cost controls'
+          'Cross-region DR and backup'
+          'Compliance and audit kits'
+        ]}
+        industries={[
+          'Financial Services'
+          'Life Sciences'
+          'Government'
+          'Energy'
+          'Media'
+        ]}
+        canonical='https: //ziontechgroup && ziontechgroup.com/quantum-cloud-infrastructure-platform'
+      />;
+    </>;
+  );
+
+
+=======
 export default function QuantumCloudInfrastructurePlatformPage() {
 	return (
 		<>
@@ -49,6 +93,8 @@ features={[
 		</>
 	)
 }
+
+=======
 import React from 'react';
 import Head from 'next / head';
 import ServiceLanding from '../components / sections / ServiceLanding';
@@ -104,83 +150,13 @@ export default function QuantumCloudInfrastructurePlatformPage() {
           'Energy',
           'Media',
         ]}
-<<<<<<< HEAD
         canonical='https: //ziontechgroup.com / quantum - cloud - infrastructure - platform';
       />;
     </>);
 ;
-			/>
-		</>
-	)
-}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
 
-=======
-        canonical='https: //ziontechgroup.com/quantum-cloud-infrastructure-platform'
-      />
-    </>;
-  );
 
-<<<<<<< HEAD
-=======
-=======
-}
-=======
-import React from 'react',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import Head from 'next/head',
-import ServiceLanding from '../components/sections/ServiceLanding',
-export default function QuantumCloudInfrastructurePlatformPage() {
-	return (
-		<>
-			<Head>
-				<title>Quantum Cloud Infrastructure Platform | Zion Tech Group</title>
-				<meta name="description" content="Quantum-enhanced cloud infrastructure with superior performance, security, and efficiency." />
-				<link rel="canonical" href="https://ziontechgroup.com/quantum-cloud-infrastructure-platform" />
-			</Head>
-			<ServiceLanding
-				title="Quantum Cloud Infrastructure Platform"
-				description="Quantum compute accelerators, advanced security protocols, real-time monitoring, cost optimization, DR, and compliance—delivered as managed foundations."
-				subtitle="Next-gen compute for critical workloads"
-				pricePerMonthUSD={28999  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-				implementationWeeks="1-2 weeks"
-				roiNote="Accelerate analytics and simulations by 10-100x with lower total cost"
-				features={[
-					"Managed quantum accelerators",
-					"Zero-trust and quantum-safe security",
-					"Observability and SLOs",
-					"Automated cost controls",
-					"Cross-region DR and backup",
-					"Compliance and audit kits"
-				]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-				industries={["Financial Services", "Life Sciences", "Government", "Energy", "Media"]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-				canonical="https: //ziontechgroup.com/quantum-cloud-infrastructure-platform"
-			/>
-		</>
-	)
-				canonical="https: //ziontechgroup.com/quantum-cloud-infrastructure-platform";
-			/>;
-		</>;
-	);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

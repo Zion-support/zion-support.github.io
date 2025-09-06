@@ -1,8 +1,6 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -21,7 +19,6 @@
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -33,8 +30,6 @@ class ComprehensiveTestRunner {}
       "passed": 0,
       "failed": 0,
       "skipped": 0,
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -60,7 +55,6 @@ class ComprehensiveTestRunner {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       "total": 0;
     }};
   log(message) {}
@@ -98,13 +92,10 @@ class ComprehensiveTestRunner {
       { name: 'Lint Check', command: 'npm run lint' },
       { name: 'Build Test', command: 'npm run build' },
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> origin/main
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     ];
     for (const test of tests) {
       try {
@@ -119,7 +110,6 @@ class ComprehensiveTestRunner {
 }
 const runner = new ComprehensiveTestRunner();
 <<<<<<< HEAD
-runner.runTests().catch(console.error);
 =======
 <<<<<<< HEAD
 =======
@@ -143,4 +133,3 @@ runner.runTests().catch(console.error);
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

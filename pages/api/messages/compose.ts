@@ -1,4 +1,6 @@
+
 recipientId,
+
 import { NextApiRequest, NextApiResponse  } from './next';
 import { require_user  } from '../../../utils / auth';
 import { send_message  } from '../../../utils / messaging / storage';
@@ -18,18 +20,23 @@ if (return) {
 }
   const {
     recipient_id,
+
     body,
     link_url,
     attachmentBase64,
     attachment_name,
     context,
+
   } = req.body as {
     recipient_id: string;
+
     body: string;
     link_url?: string;
     attachmentBase64?: string;
     attachment_name?: string;
     context?: ConversationContext;
+
+
 import { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '../../../utils/auth';
 import { sendMessage } from '../../../utils/messaging/storage';
@@ -38,6 +45,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+
   const { recipientId, body, linkUrl, attachmentBase64, attachmentName, context } = req.body as {
     recipientId: string, body: string,
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -63,26 +71,36 @@ if (req.method !== "POST")
     recipientId: string;
     body: string;
 
+
     linkUrl?: string;
     attachmentBase64?: string;
     attachmentName?: string;
     context?: ConversationContext
+
   };
   if (!recipientId || !body)
     return res && res.status(400).json({ error: "Missing required fields" });
-  const { conversation, message } = sendMessage({
-    senderId: user.id, recipientId,
-  }
-  if (
-    return res.status (400).json ({ error: "Missing required fields" })) {
-  $2
-}
-  const { conversation, message } = send_message ({
-    sender_id: user.id,
-    recipient_id,
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     body,
     link_url,
     attachmentBase64,
+
+
+    context,
+  });
+
+}
+
+
+
+  const { conversation, message } = sendMessage({
+    senderId: user.id,
+    recipientId,
+    body,
+    linkUrl,
+    attachmentBase64,
+
     attachment_name,
     context,
   });
@@ -96,3 +114,6 @@ if (req.method !== "POST")
   res.status(200).json({ conversation, message })
 }
 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b

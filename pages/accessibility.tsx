@@ -17,48 +17,29 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import Link from 'next/link';
+import MainLayout from '../components/layout/MainLayout';
+=======
 import Link from 'next / link';
 import MainLayout from '../components / layout / MainLayout';
 import { motion } from 'framer-motion';
+
   Eye,
   Ear,
   Hand,
   Brain,
   CheckCircle,
 =======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-import Link from 'next/link';
-import MainLayout from '../components/layout/MainLayout';
-import { motion } from 'framer-motion';
-import {
-<<<<<<< HEAD
-  Eye
-  Ear
-  Hand
-  Brain
-  CheckCircle
-  AlertTriangle
-  Globe
-  Users
-  Shield
-  Zap
-  FileText
-  Settings
-=======
+
   Eye, 
   Ear, 
   Hand, 
   Brain, 
   CheckCircle, 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   AlertTriangle,
   Globe,
   Users,
@@ -66,13 +47,13 @@ import {
   Zap,
   FileText,
   Settings;
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
+
 } from 'lucide-react';
 const accessibility_features = [;
   {
+
 import {;
   Eye, ;
   Ear, ;
@@ -229,27 +210,23 @@ const accessibilityGuidelines = [;
       "No seizure-inducing content",;
       "Customizable timing";
     ];
+
   }
 ];
+
+=======
 import Head from 'next/head';
 import Layout from '../components/Layout';
-<<<<<<< HEAD
-export default function AccessibilityPage() {
-export default function AccessibilityPage() {;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
-<<<<<<< HEAD
+
+
+
 =======
->>>>>>> origin/main
-=======
+
 >>>>>>> origin/automation-improvements-final
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+
 export default function AccessibilityPage() {
 =======
 interface AccessibilityProps {
@@ -269,7 +246,16 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            </motion.div>
+          </div>
+        </section>
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
+=======
               transition={{ duration: 0 && 0.8 }}
               className="text-center max-w-4xl mx-auto">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
@@ -461,6 +447,7 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
@@ -473,6 +460,7 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {accessibilityGuidelines && accessibilityGuidelines.map((category, index) => (;
                 <motion&& motion.div
+
                   key={index}
                   className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-all duration-300"
                   initial={{ opacity: 0, y: 30 }}
@@ -492,9 +480,17 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
                   </ul>;
                 </motion && motion.div>;
               ))}
+
             </div>
           </div>
         </section>
+
+=======
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </div>
     </MainLayout>
             </div>;

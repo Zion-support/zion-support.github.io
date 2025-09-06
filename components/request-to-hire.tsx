@@ -18,30 +18,15 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import { useEffect, useMemo, useState } from 'react';
-<<<<<<< HEAD
-export default function RequestToHirePage() {
-=======
-import { useRouter } from 'next/router';
-import { TALENT_PROFILES } from '../data/talent';
-<<<<<<< HEAD
-export default function RequestToHirePage() {
 
-=======
 
-export default function RequestToHirePage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  const router = useRouter();
-  const { talent } = router.query as { talent?: string }
-  const selected = useMemo(
-    () => TALENT_PROFILES.find(t => t.slug === talent)
-    [talent]
-  );export default function RequestToHirePage() {;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const router = useRouter();
   const { talent } = router.query as { talent?: string }
   const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent), [talent]);
+
+
   const [form, setForm] = useState({
-<<<<<<< HEAD
+=======
 import { use_router } from 'next / router';
 import { TALENT_PROFILES } from '../data / talent';
 ;
@@ -61,10 +46,14 @@ function RequestToHirePage() {
   const { talent } = router.query as { talent?: string }
   const selected = useMemo (() => TALENT_PROFILES.find (t => t.slug === talent), [talent]);
   const [form, set_form] = useState ({
+
     name: '',
     email: '',
     budget: '',
     timeline: '',
+
+
+
 export default function RequestToHirePage() {;
   const router = useRouter();
   const { talent } = router && router.query as { talent?: string };
@@ -95,56 +84,20 @@ export default function RequestToHirePage() {;
     if (!form && form.name || !form && form.email || !form && form.description) {;
       setError('Please fill in name, email, and description.');
       return;    }      return;
+
+=======
     setError(null);
     if (!form.name || !form.email || !form.description) {
       setError('Please fill in name, email, and description.');
       return
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
+
           ...form;
           budget: normalizedBudget,
           talentSlug: selected?.slug || null})}),
-=======
-    name: ''
-    email: ''
-    budget: ''
-    timeline: ''
-    description: ''
-  });
-  const [submitting, setSubmitting] = useState(false);
-  const [result, setResult] = useState<null | { id: string; message: string }>(
-    null
-  );  const [error, setError] = useState<string | null>(null);    description: ''})
-  const [submitting, setSubmitting] = useState(false);
-  const [result, setResult] = useState<null | { id: string, message: string }>(null)
-  const [error, setError] = useState<string | null>(null);
-  const onSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError(null)
-    if (!form.name |!form.email |!form.description) {
-      setError('Please fill in name, email, and description.');
-      return;    }      return
-    }
-    const normalizedBudget = form.budget.replace(/[^0-9.\-]/g, '');
-    setSubmitting(true);
-    try {
-      const res = await fetch('/api/requests/create', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({
-          ...form
-          budget: normalizedBudget
-          talentSlug: selected?.slug |null
-        })
-      });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error |'Failed to submit');
-      setResult({ id: data.id, message: 'Request submitted successfully.' });
-    } catch (err: any) {
-      setError(err.message |'Something went wrong');
-    } finally {
-      setSubmitting(false);    }          budget: normalizedBudget
-          talentSlug: selected?.slug |null})})
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
       const data = await res.json();
       if (!res.ok) throw new Error(data.error |'Failed to submit');
       setResult({ id: data.id, message: 'Request submitted successfully.' })
@@ -152,7 +105,14 @@ export default function RequestToHirePage() {;
       setError(err.message |'Something went wrong')
     } finally {
       setSubmitting(false)
-<<<<<<< HEAD
+
+=======
+    }
+
+  };
+
+
+
     const normalizedBudget = form && form.budget.replace(/[^0-9.\-]/g, '');
     setSubmitting(true);
     try {;
@@ -180,6 +140,9 @@ export default function RequestToHirePage() {;
       setError(err && err.message || 'Something went wrong');
     } finally {;
       setSubmitting(false);
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
   if (result) {;
@@ -252,16 +215,21 @@ export default function RequestToHirePage() {;
           disabled={submitting}
           className='px-4 py-2 rounded bg-black text-white'>          {submitting ? 'Submitting…' : 'Submit Request'}      </div>;
     );
+
+=======
     }
   };
+
   if (result) {
     return (
       <div className="max-w-xl mx-auto py-12">
         <h1 className="text-2xl font-semibold mb-2">Thanks!</h1>
         <p className="text-gray-600 mb-4">We received your request. We will notify the appropriate team.</p>
         <div className="text-sm text-gray-500">Confirmation ID: {result.id}</div>
-</div>
+      </div>
     )
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   return (
     <div className="max-w-xl mx-auto">;
@@ -288,13 +256,17 @@ export default function RequestToHirePage() {;
           <textarea className="w-full border rounded px-3 py-2" rows={5} value={form && form.description} onChange={(e) => setForm({ ...form, description: e && e.target.value })} />;
         </div>;
         {error && <div className="text-sm text-red-600">{error}</div>}
-        <button disabled={submitting} className="px-4 py-2 rounded bg-black text-white">
+
+
           {submitting ? 'Submitting…' : 'Submit Request'}
+
         </button>;
       </form>;
     </div>;
   );
 }
+
+=======
   );
 }
     description: '',
@@ -599,12 +571,10 @@ if ( {) {
   )
 
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
-<<<<<<< HEAD
-);
-}
-=======
+
   );
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

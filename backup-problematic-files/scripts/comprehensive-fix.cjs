@@ -11,7 +11,6 @@
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -29,7 +28,6 @@ const path = require('path');
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 console.log('🔧 Comprehensive fix for all files...');
 // List of problematic files
 const filesToFix = [
@@ -53,7 +51,6 @@ const filesToFix = [
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 function fixFile(filePath) {
   try {
     if (!fs.existsSync(filePath)) {
@@ -196,7 +193,6 @@ function main() {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     // Fix common syntax issues
     content = content.replace(/md: text-2xl/g, 'md:text-2xl');
     content = content.replace(/import MainLayout from '\.\.\/components\/layout\/MainLayout';[\s\S]*?const blogPosts/g, 'const blogPosts');
@@ -241,4 +237,3 @@ console.log(`\n🎉 Fixed ${fixedCount}/${filesToFix.length} files`);
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

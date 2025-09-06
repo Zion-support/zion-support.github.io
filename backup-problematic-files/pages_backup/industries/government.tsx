@@ -626,32 +626,6 @@ export default function GovernmentPage() {
       </div>
     </Layout>
   );
-<<<<<<< HEAD
-            >;
-              <h2 className="text-4xl md: text-5xl font-bold mb-6">;
-                Ready to Transform Government?;
-              </h2>;
-              <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">;
-                Let our government technology experts help you implement solutions that enhance;
-                citizen services and improve operational efficiency.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <Link href="/contact" className="px-8 py-4 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">;
-                  Start Your Government Project;
-                </Link>;
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold">;
-                  Learn About Our Expertise;
-                </Link>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>;
-  ),;
-}
-=======
 };
 
 export default Government;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

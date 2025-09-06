@@ -3,8 +3,6 @@
 @tailwind utilities;
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -23,7 +21,6 @@
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 html { color-scheme: dark; }
 body { @apply bg-gray-950 text-gray-100; }
 
@@ -31,9 +28,6 @@ code { @apply font-mono; }
 
 /* Import Modern Design System */
 @import './modern-design-system.css';
-<<<<<<< HEAD
-
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -97,7 +91,6 @@ code { @apply font-mono; }
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 /* Base styles */
 @layer base {
   html {
@@ -213,8 +206,6 @@ code { @apply font-mono; }
 }
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -233,7 +224,6 @@ code { @apply font-mono; }
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -537,8 +527,6 @@ code { @apply font-mono; }
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -603,14 +591,11 @@ h3 {
   box-shadow:     0 0 5px currentColor,
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     0 0 10px currentColor,
     0 0 15px currentColor,
     0 0 20px currentColor;
 }
 
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -630,7 +615,6 @@ h3 {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 .neon-glow-cyan {
   color: var(--neon-cyan);
   text-shadow: 0 0 5px var(--neon-cyan);
@@ -730,15 +714,12 @@ h3 {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 .futuristic-button::before {
 
 <<<<<<< HEAD
@@ -834,14 +815,10 @@ a:hover {
 .futuristic-button::before {  content: '';
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   position: absolute;
   bottom: 0;
   left: -100%;
   width: 100%;
-<<<<<<< HEAD
-
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -861,7 +838,6 @@ a:hover {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   transition: left var(--animation-slow) ease;
@@ -1144,9 +1120,6 @@ a:hover {
   }
 }
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1179,7 +1152,6 @@ a:hover {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -1205,9 +1177,6 @@ a:hover {
 
 /* Focus styles */
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1226,7 +1195,6 @@ a:hover {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 .focus-cyber:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
@@ -1240,11 +1208,6 @@ a:hover {
 .focus-holographic:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.5);
-<<<<<<< HEAD
-
-}
-}
-=======
 <<<<<<< HEAD
 }
 =======
@@ -1265,7 +1228,6 @@ a:hover {
 }
 <<<<<<< HEAD
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 /* Futuristic animations */
 @keyframes float {
@@ -1661,4 +1623,3 @@ a:hover {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

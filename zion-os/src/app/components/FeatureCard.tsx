@@ -1,4 +1,24 @@
-<<<<<<< HEAD
+
+
+interface FeatureCardProps {;
+  icon: string,;
+  title: string,;
+  description: string,;
+  features: string[],;
+  gradient: string,;
+
+
+  className?: string;
+}
+export default function FeatureCard({
+  icon
+  title
+  description
+  features
+  gradient
+  className = ''
+}: FeatureCardProps) {
+
 interface FeatureCardProps {
   icon: string,
   title: string,
@@ -28,6 +48,7 @@ export default /**
  * FeatureCard - Function description
  */
 function FeatureCard() {
+
   return (
 <<<<<<< HEAD
     <div className={`feature - card group ${class_name}`}>;
@@ -40,14 +61,12 @@ function FeatureCard() {
         {features.map ((feature, index) => (
           <li key={index}>• {feature}</li>))}
 =======
+  return (
     <div className={`feature-card group ${className}`}>
-<<<<<<< HEAD
-      <div className={`w-12 h-12 ${gradient} rounded-lg flex items-center justify-center mb-4`}>;
-        <span className=&quot;text-white text-xl&quot;>{icon}</span>
-=======
+
       <div className={`w-12 h-12 ${gradient} rounded-lg flex items-center justify-center mb-4`}>
         <span className="text-white text-xl">{icon}</span>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
       </div>
       <h3 className="text-xl font-semibold mb-3">{title}</h3>
       <p className="text-white/70 mb-4">{description}</p>
@@ -55,7 +74,7 @@ function FeatureCard() {
         {features.map((feature, index) => (
           <li key={index}>• {feature}</li>
         ))}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </ul>;
     </div>);
 }

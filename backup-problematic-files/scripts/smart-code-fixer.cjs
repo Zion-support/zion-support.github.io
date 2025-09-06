@@ -15,7 +15,6 @@
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -24,6 +23,9 @@ console.log('🔧 Smart Code Fixer');
 console.log('=====');
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -42,7 +44,6 @@ console.log('=====');
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Function to fix unescaped entities only in JSX content
 function fixUnescapedEntities(content) {
   // Only replace single quotes that are not in import statements or string literals
@@ -136,7 +137,6 @@ function fixFiles() {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   // Fix console.log statements in production files
   if (filePath.includes('pages/') || filePath.includes('components/')) {
     content = content.replace(/console\.log\([^)]*\);?/g, '');
@@ -172,7 +172,6 @@ function runBuildTest() {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   // Fix missing semicolons
   content = content.replace(/([^;}])\n\s*}/g, '$1;\n}');
   if (content !== content.replace(/([^;}])\n\s*}/g, '$1;\n}')) {
@@ -301,7 +300,6 @@ function main() {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const files = findFiles(targetDir);
   console.log(`📁 Found ${files.length} files to process`);
   let fixedCount = 0;
@@ -347,4 +345,3 @@ module.exports = { processFile, fixSpecificIssues, fixUnescapedEntities };
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

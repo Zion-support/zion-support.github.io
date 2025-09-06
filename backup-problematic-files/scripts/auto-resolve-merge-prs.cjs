@@ -15,7 +15,6 @@
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -93,7 +92,6 @@ async function main() {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   if (dirty && dirty.split('\n').filter(Boolean).length) {}
     console.log('Local changes detected, stashing...');
     try { sh('git stash push -u -m "auto-resolve-temp"'); stashed = true} catch {};
@@ -126,7 +124,6 @@ async function main() {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     console.log(`\nProcessing PR #${pr.number}: ${pr.title} [${head} -> ${base}]`);
     try {}
       // Checkout PR branch;
@@ -174,7 +171,6 @@ main().catch(err => { console.error('"Error": ', err.message); process.exit(1)})
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         console.log(`Merged PR #${pr.number}`)} else {`}
         console.log(`Skipped PR #${pr.number}: ${result && result.message ? result.message : 'not merged'}`)};
     } catch (e) {}
@@ -207,4 +203,3 @@ main().catch(err => { console.error('"Error": ', err.message); process.exit(1)}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

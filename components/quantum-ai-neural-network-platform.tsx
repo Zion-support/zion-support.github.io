@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -18,91 +18,10 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-import { motion } from 'framer-motion';
-import {;
-  Atom,;
-  Brain,;
-  Zap,;
-  Shield,;
-  Users,;
-  Target,;
-  ArrowRight,;
-  Check,;
-  Star,;
-  Globe,;
-  Cpu,;
-  Network,;
-} from 'lucide-react';
-const QuantumAINeuralNetworkPlatform: React.FC = () => {;
-  const features = [;
-    'Quantum-enhanced neural network architecture',;
-    'Superposition-based learning algorithms',;
-    'Quantum entanglement optimization',;
-    'Quantum-classical hybrid training',;
-    'Quantum error correction protocols',;
-    'Multi-dimensional quantum states',;
-    'Quantum memory management',;
-    'Quantum coherence preservation',;
-    'Quantum measurement optimization',;
-    'Cross-platform quantum synchronization',;
-  ];
-  const benefits = [;
-    'Exponential computational power',;
-    'Quantum advantage in AI training',;
-    'Enhanced pattern recognition',;
-    'Faster convergence rates',;
-    'Quantum-secure AI operations',;
-  ];
-  const pricing = {;
-    starter: '$999/month',;
-    professional: '$1,999/month',;
-    enterprise: 'Custom pricing',;
-  };
-  return (
-    <div className='min-h-screen bg-black text-white'>;
-=======
-import React from 'react';
 
 import { motion } from 'framer-motion';
-import {
-<<<<<<< HEAD
-  Atom
-  Brain
-  Zap
-  Shield
-  Users
-  Target
-  ArrowRight
-  Check
-  Star
-  Globe
-  Cpu
-  Network;
-=======
-  Atom,
-  Brain,
-  Zap,
-  Shield,
-  Users,
-  Target,
-  ArrowRight,
-  Check,
-  Star,
-  Globe,
-  Cpu,;
-  Network,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-} from 'lucide-react';
-<<<<<<< HEAD
-=======
 
-import SEO from '../components/SEO';
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const QuantumAINeuralNetworkPlatform: React.FC = () => {
   const features = [
     'Quantum-enhanced neural network architecture'
@@ -128,6 +47,52 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
     professional: '$1,999/month'
     enterprise: 'Custom pricing'
   }
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+import {;
+  Atom,;
+  Brain,;
+  Zap,;
+  Shield,;
+  Users,;
+  Target,;
+  ArrowRight,;
+  Check,;
+  Star,;
+  Globe,;
+  Cpu,;
+  Network,;
+} from 'lucide-react';
+
+const QuantumAINeuralNetworkPlatform: React.FC = () => {;
+  const features = [;
+    'Quantum-enhanced neural network architecture',;
+    'Superposition-based learning algorithms',;
+    'Quantum entanglement optimization',;
+    'Quantum-classical hybrid training',;
+    'Quantum error correction protocols',;
+    'Multi-dimensional quantum states',;
+    'Quantum memory management',;
+    'Quantum coherence preservation',;
+    'Quantum measurement optimization',;
+    'Cross-platform quantum synchronization',;
+  ];
+
+  const benefits = [;
+    'Exponential computational power',;
+    'Quantum advantage in AI training',;
+    'Enhanced pattern recognition',;
+    'Faster convergence rates',;
+    'Quantum-secure AI operations',;
+  ];
+
+  const pricing = {;
+    starter: '$999/month',;
+    professional: '$1,999/month',;
+    enterprise: 'Custom pricing',;
+  };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className='min-h-screen bg-black text-white'>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -141,7 +106,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
           'AI platform'
           'quantum advantage'
         ]}
-<<<<<<< HEAD
+
 import { Atom, Brain, Zap, Shield, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react';
 import SEO from '../components/SEO';
 const QuantumAINeuralNetworkPlatform: React.FC = () => {
@@ -157,6 +122,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
     "Quantum measurement optimization";
     "Cross-platform quantum synchronization"
   ];
+
   const benefits = [
     "Exponential computational power";
     "Quantum advantage in AI training";
@@ -164,11 +130,13 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
     "Faster convergence rates";
     "Quantum-secure AI operations"
   ];
+
   const pricing = {
     starter: "$999/month",
     professional: "$1,999/month";
     enterprise: "Custom pricing"
   };
+
   return (
     <div className="min-h-screen bg-black text-white">
       <SEO 
@@ -176,71 +144,20 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
         description="Revolutionary quantum-powered AI neural network platform with exponential computational power and quantum advantage."
         keywords={["quantum AI", "neural networks", "quantum computing", "AI platform", "quantum advantage"]}
       />
+      
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-cyan-900/20 to-indigo-900/20"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-  return (
-    <div className=&quot;min-h-screen bg-black text-white&quot;>
-      <SEO 
-        title=&quot;Quantum AI Neural Network Platform 2045 | Zion Tech Group&quot;
-        description=&quot;Revolutionary quantum-powered AI neural network platform with exponential computational power and quantum advantage.&quot;
-        keywords={[&quot;quantum AI&quot;, &quot;neural networks&quot;, &quot;quantum computing&quot;, &quot;AI platform&quot;, &quot;quantum advantage&quot;]}
-      />
-      
-      {/* Hero Section */}
-      <section className=&quot;relative py-20 overflow-hidden&quot;>
-        <div className=&quot;absolute inset-0 bg-gradient-to-br from-blue-900/20 via-cyan-900/20 to-indigo-900/20&quot;></div>
-        <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]&quot;></div>
         
-        <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
-
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-className="text-center"
+            className="text-center"
           >
-=======
-      />
-      {/* Hero Section */}
-      <section className='relative py-20 overflow-hidden'>
-        <div className='absolute inset-0 bg-gradient-to-br from-blue-900/20 via-cyan-900/20 to-indigo-900/20'></div>
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]'></div>
-        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className='text-center'      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-cyan-900/20 to-indigo-900/20"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className='text-center'
-          >
-            <div className='flex justify-center mb-6'>
-              <div className='w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center'>
-                <Atom className='w-10 h-10 text-white' />
-              </div>
-            </div>
-            <h1 className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent'>
-              Quantum AI Neural Network Platform 2045
-            </h1>
-            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
-              Experience the future of AI with quantum-powered neural networks
-              that deliver exponential computational power, quantum advantage
-              and unprecedented learning capabilities.
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className='px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-2xl shadow-blue-500/25'              >          >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center">
                 <Atom className="w-10 h-10 text-white" />
@@ -264,11 +181,9 @@ className="text-center"
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD
-className="px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-300"
-=======
-                className='px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-300'              >                className="px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-300"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+                className="px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-300"
+
               >
                 Schedule Demo
               </motion.button>
@@ -276,8 +191,9 @@ className="px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rou
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-/>;
+
+      />;
+
       {/* Hero Section */}
       <section className='relative py-20 overflow-hidden'>;
         <div className='absolute inset-0 bg-gradient-to-br from-blue-900/20 via-cyan-900/20 to-indigo-900/20'></div>;
@@ -343,11 +259,24 @@ className="px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rou
           </motion && motion.div>;
         </div>;
       </section>;
+
+
       {/* Features Section */}
       <section className='py-20 bg-gray-900/50'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gray-900/50">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
+=======
+      {/* Features Section */}
+      <section className='py-20 bg-gray-900/50'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gray-900/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
   Atom,
@@ -480,35 +409,12 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
-      {/* Features Section */}
-      <section className="py-20 bg-gray-900/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-className="text-center mb-16"
-          >
-=======
-            className='text-center mb-16'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-6'>
               Quantum-Powered Features
@@ -530,6 +436,7 @@ className="text-center mb-16"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
+
             transition={{ duration: 0 && 0.8 }}
             className='text-center mb-16'>;
             <h2 className='text-4xl md:text-5xl font-bold mb-6'>;
@@ -551,33 +458,56 @@ className="text-center mb-16"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {features && features.map((feature, index) => (;
               <motion&& motion.div
-            className='text - center mb - 16';
-          >;
-            <h2 className='text - 4xl md:text - 5xl font - bold mb - 6'>;
-              Quantum - Powered Features;
-            </h2>;
-            <p className='text - xl text - gray - 400 max - w-3xl mx - auto'>;
-              Harness the power of quantum mechanics to revolutionize AI neural;
-              network performance and capabilities.;
-            </p>;
-          </motion.div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            {features.map ((feature, index) => (          >;
-            <h2 className="text - 4xl md:text - 5xl font - bold mb - 6">;
-              Quantum - Powered Features;
-            </h2>;
-            <p className="text - xl text - gray - 400 max - w-3xl mx - auto">;
-              Harness the power of quantum mechanics to revolutionize AI neural network performance and capabilities.;
-            </p>;
-          </motion.div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-            {features.map ((feature, index) => (
-              <motion.div;
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={index}
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-<<<<<<< HEAD
+
+
+              >
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
+                  <Check className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold mb-2">{feature}</h3>
+              </motion.div>
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            ))}
+
+          </div>;
+        </div>;
+      </section>;
+
+
+      {/* Benefits Section */}
+      <section className='py-20'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20">;
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+          <motion&& motion.div
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* Benefits Section */}
+      <section className='py-20'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+=======
                 className='bg - gray - 800 / 50 border border - blue - 500 / 20 rounded - xl p - 6 hover:border - blue - 500 / 40 transition - all duration - 300';
               >;
                 <div className='w - 12 h - 12 bg - gradient - to - br from - blue - 500 to - cyan - 500 rounded - lg flex items - center justify - center mb - 4'>;
@@ -600,10 +530,7 @@ className="text-center mb-16"
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
-=======
-                className='bg-gray-800/50 border border-blue-500/20 rounded-xl p-6 hover:border-blue-500/40 transition-all duration-300'
-<<<<<<< HEAD
-=======
+
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -657,26 +584,17 @@ className="text-center mb-16"
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
             className="text-center mb-16"
-=======
-            className='text-center mb-16'
-          >
-            <h2 className='text-4xl md:text-5xl font-bold mb-6'>              Quantum Advantage Benefits
-            </h2>
-          </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {benefits.map((benefit, index) => (            className="text-center mb-16"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Quantum Advantage Benefits
             </h2>
           </motion.div>
-<<<<<<< HEAD
+
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
             {benefits.map((benefit, index) => (
               <motion.div
             transition={{ duration: 0 && 0.8 }}
@@ -693,24 +611,15 @@ className="text-center mb-16"
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {benefits && benefits.map((benefit, index) => (;
               <motion&& motion.div
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-<<<<<<< HEAD
-className="text-center"
-              >
-=======
-                className='text-center'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
               >
                 <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4'>
                   <Star className='w-8 h-8 text-white' />
@@ -722,69 +631,48 @@ className="text-center"
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{benefit}</h3>
               </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
-<<<<<<< HEAD
+
           </div>;
         </div>;
       </section>;
+
+
       {/* Pricing Section */}
       <section className='py-20 bg-gray-900/50'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gray-900/50">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-=======
-          </div>
-        </div>
-      </section>
-<<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Pricing Section */}
-      <section className="py-20 bg-gray-900/50">
+      <section className='py-20 bg-gray-900/50'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-className="text-center mb-16"
-          >
-=======
-            className='text-center mb-16'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-6'>
               Pricing Plans
@@ -827,6 +715,9 @@ className="text-center mb-16"
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             {Object && Object.entries(pricing).map(([plan, price], index) => (;
               <motion&& motion.div
+
+
+=======
             className='text - center mb - 16';
           >;
             <h2 className='text - 4xl md:text - 5xl font - bold mb - 6'>              Quantum Advantage Benefits;
@@ -890,30 +781,21 @@ className="text-center mb-16"
           <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
             {Object.entries (pricing).map (([plan, price], index) => (
               <motion.div;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={plan}
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 viewport={{ once: true }}
-                  plan === 'professional' 
-                    ? 'border-blue-500/50 bg-blue-900/20' 
-                    : 'border-gray-600/50'
-                }`}
-              >
-                <h3 className="text-2xl font-bold mb-4 capitalize">{plan}</h3>
-                <div className="text-4xl font-bold mb-6">{price}</div>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300"
-                >
-                  Get Started
-                </motion.button>
-              </motion.div>
+
+
             ))}
-<<<<<<< HEAD
-</div>;
+
+          </div>;
         </div>;
       </section>;
+
+
       {/* CTA Section */}
       <section className='py-20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion && motion.div      <section className="py-20">;
@@ -948,31 +830,20 @@ className="text-center mb-16"
       </section>;
     </div>;
   );
-=======
-          </div>
-        </div>
-      </section>
-<<<<<<< HEAD
+
 =======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
       {/* CTA Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -987,12 +858,7 @@ className="text-center mb-16"
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD
-className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover: from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-2xl shadow-blue-500/25"
-
-=======
-              className='px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-2xl shadow-blue-500/25'              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover: from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-2xl shadow-blue-500/25"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover: from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-2xl shadow-blue-500/25"
             >
               Start Your Quantum Journey Today
             </motion.button>
@@ -1000,12 +866,9 @@ className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  )
-};
-export default QuantumAINeuralNetworkPlatform;  );
-};
-export default QuantumAINeuralNetworkPlatform;
+
+
+=======
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`bg - gray - 800 / 50 border rounded - xl p - 8 ${
                   plan === 'professional';
@@ -1076,27 +939,12 @@ export default QuantumAINeuralNetworkPlatform);
 ;
 export default QuantumAINeuralNetworkPlatform;
 ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   );
-<<<<<<< HEAD
-}
-=======
+
 };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export default QuantumAINeuralNetworkPlatform;  )
-}
-export default QuantumAINeuralNetworkPlatform;
 
-<<<<<<< HEAD
-=======
-export default QuantumAINeuralNetworkPlatform;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-export default QuantumAINeuralNetworkPlatform;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

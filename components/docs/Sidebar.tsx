@@ -1,9 +1,8 @@
-<<<<<<< HEAD
-import {ApiDocsSpec, Visibility} from '../../data / api - docs / types';
-interface SidebarProps {
-import {ApiDocsSpec, Visibility} from '../../data/api-docs/types';
-interface SidebarProps {;
+
+
+
   spec: ApiDocsSpec;
+
 export default function Sidebar(): any ({;
   spec,;
   activeEndpointId,;
@@ -13,6 +12,7 @@ export default function Sidebar(): any ({;
   visibilityFilter,;
   onChangeVisibility,;
 }: SidebarProps) {;
+
   return (
     <aside className='w-72 shrink-0 h-full overflow-auto border-r border-high-contrast-secondary p-3 space-y-4 bg-high-contrast-secondary'>;
       <div>;
@@ -57,6 +57,7 @@ export default function Sidebar({
 <<<<<<< HEAD
             >;
               {v}
+
 interface SidebarProps {
   spec: ApiDocsSpec,
   activeEndpointId?: string;
@@ -71,14 +72,18 @@ export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, sele
     <aside className="w-72 shrink-0 h-full overflow-auto border-r border-high-contrast-secondary p-3 space-y-4 bg-high-contrast-secondary">
       <div>
         <div className="text-lg font-semibold">Zion OS API</div>
+
         <div className="text-xs text-high-contrast-muted">Version</div>
         <div className="flex gap-2 mt-2 flex-wrap">
-{spec.versions.map((v) => (
+          {spec.versions.map((v) => (
             <button key={v} onClick={() => onChangeVersion(v)} className={`px-2 py-1 rounded border text-xs ${selectedVersion === v ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-high-contrast-secondary'}`}>{v}</button>
+
           ))}
+
         </div>
       </div>
       <div>
+
         <div className="text-xs text-high-contrast-muted mb-1">Publish Mode</div>
         <select className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm" value={visibilityFilter} onChange={(e) => onChangeVisibility(e.target.value as any)}>
           <option value="all">All</option>
@@ -86,45 +91,7 @@ export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, sele
           <option value="partner">Partner-only</option>
           <option value="internal">Internal</option>
         </select>
-      </div>
-=======
-            >
-              {v}
-            </button>          ))}        <div className="text-lg font-semibold">Zion OS API</div>
-        <div className="text-xs text-high-contrast-muted">Version</div>
-        <div className="flex gap-2 mt-2 flex-wrap">
-          {spec.versions.map((v) => (
-            <button key={v} onClick={() => onChangeVersion(v)} className={`px-2 py-1 rounded border text-xs ${selectedVersion === v ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-high-contrast-secondary'}`}>{v}</button>
-        </div>
-      </div>
-      <div>
-        <div className='text-xs text-high-contrast-muted mb-1'>
-          Publish Mode
-        </div>
-        <select
-          className='w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm'
-          value={visibilityFilter}
-          onChange={e => onChangeVisibility(e.target.value as any)}
-        >
-          <option value='all'>All</option>
-          <option value='public'>Public</option>
-          <option value='partner'>Partner-only</option>
-          <option value='internal'>Internal</option>
-        </select>
-      </div>
-      <nav className='space-y-3'>
-        {spec.sections.map(section => (
-          <div key={section.id}>
-            <div className='text-sm font-medium mb-1'>{section.title}</div>
-            <ul className='space-y-1'>
-              {section.endpoints
-                .filter(e => e.versions.includes(selectedVersion))
-                .filter(e =>
-                  visibilityFilter === 'all'
-                    ? true
-                    : e.visibility === visibilityFilter
-                )
-                .map(e => (                  <li key={e.id}>        </select>
+
       </div>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <nav className="space-y-3">
@@ -184,6 +151,9 @@ export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, sele
                 .filter((e) => visibilityFilter === 'all' ? true : e && e.visibility === visibilityFilter);
                 .map((e) => (;
                   <li key={e && e.id}>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                    <button
+
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     <button
@@ -195,14 +165,16 @@ export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, sele
                       <span className="font-mono">{e.path}</span>
                     </button>
                   </li>
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 ))}
             </ul>;
           </div>;
         ))}
-      </nav>;
-    </aside>;
-  );
+
 }
+
+=======
   onSelectEndpoint: (endpoint_id: string) => void;
   selected_version: string;
   onChangeVersion: (v: string) => void;
@@ -334,26 +306,12 @@ function Sidebar() {
   )
 
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
-<<<<<<< HEAD
-    </aside>;
-  );
-}
+      </nav>
 
-}
-}
-}
-}
-=======
     </aside>
   );
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

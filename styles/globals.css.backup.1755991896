@@ -48,9 +48,6 @@
   --holographic-wave: 0 0 200px rgba(139, 92, 246, 0.12);
   --cyberpunk-pulse: 0 0 180px rgba(236, 73, 153, 0.1);
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -80,13 +77,6 @@
   --quantum-entanglement-advanced: 0 0 250px rgba(139, 92, 246, 0.1);
   --holographic-matrix-advanced: 0 0 300px rgba(139, 92, 246, 0.08);
 <<<<<<< HEAD
-
---neural-quantum-cyberpunk: 0 0 220px rgba(16, 185, 129, 0.2);
-
-  --neural-quantum-cyberpunk: 0 0 220px rgba(16, 185, 129, 0.2);
-
-=======
-<<<<<<< HEAD
   --neural-quantum-cyberpunk: 0 0 220px rgba(16, 185, 129, 0.2);
 =======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9967
@@ -103,7 +93,6 @@
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 
 /* Base styles */
@@ -261,10 +250,6 @@ body::after {
   position: fixed;
   top: 0;
 <<<<<<< HEAD
---neural-quantum-cyberpunk: 0 0 220px rgba(16, 185, 129, 0.2);  top: 0;
-
-=======
-<<<<<<< HEAD
 =======
   --neural-quantum-cyberpunk: 0 0 220px rgba(16, 185, 129, 0.2);  top: 0;
 <<<<<<< HEAD
@@ -279,14 +264,10 @@ body::after {
   --neural-quantum-cyberpunk: 0 0 220px rgba(16, 185, 129, 0.2);  top: 0;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   left: 0;
   width: 100%;
   height: 100%;
   background-image: 
-<<<<<<< HEAD
-
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -297,7 +278,6 @@ body::after {
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
   background-size: 50px 50px;
@@ -322,15 +302,11 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-image: 
-<<<<<<< HEAD
-
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -345,7 +321,6 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     radial-gradient(2px 2px at 20px 30px, #3b82f6, transparent),
     radial-gradient(2px 2px at 40px 70px, #8b5cf6, transparent),
     radial-gradient(1px 1px at 90px 40px, #06b6d4, transparent),
@@ -355,9 +330,6 @@ body::after {
   background-size: 200px 100px;
   animation: particle-float 20s linear infinite;
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -366,7 +338,6 @@ body::after {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   opacity: 0.3;
 
 <<<<<<< HEAD
@@ -484,14 +455,6 @@ body::after {
 /* Enhanced Animations */
 @keyframes backgroundFloat {
   opacity: 0.3;}
-<<<<<<< HEAD
-
-}
-
-/* Enhanced Animations */
-@keyframes backgroundFloat {
-
-=======
 >>>>>>> main
 
 /* Enhanced Animations */
@@ -512,7 +475,6 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   0%, 100% {
     transform: translateY(0px) rotate(0deg);
   }
@@ -861,9 +823,6 @@ h3 {
 @media (prefers-color-scheme: dark) {
   .futuristic-card {
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -872,7 +831,6 @@ h3 {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     background: rgba(0, 0, 0, 0.3);
 
 <<<<<<< HEAD
@@ -1235,7 +1193,6 @@ h3 {
   .quantum-grid {
     background-size: 25px 25px;
 <<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
   
   .holographic-matrix {
@@ -1250,9 +1207,6 @@ h3 {
     background-size: 100px 100px;
 
   }
-<<<<<<< HEAD
-
-=======
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
@@ -1270,7 +1224,6 @@ h3 {
     background: rgba(0, 0, 0, 0.3);  }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 
 /* High Contrast Mode */
@@ -1293,8 +1246,6 @@ h3 {
   }
 }
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1315,7 +1266,6 @@ h3 {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 /* Enhanced Focus States */
 .quantum-button:focus,
@@ -1350,9 +1300,6 @@ h3 {
   }
 }
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9967
 =======
 <<<<<<< HEAD
@@ -1372,4 +1319,3 @@ h3 {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

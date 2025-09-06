@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import {useWallet} from '@/hooks/useWallet';
-import {Card, CardContent, CardHeader, CardTitle, CardDescription} from '@/components/ui/card';
-import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs';
-import {BadgeDollarSign} from 'lucide-react';
-export default function WalletPage() {;
-  const { wallet, transactions, loading } = useWallet();
-  return (
-=======
 
 import { useWallet } from '@/hooks/useWallet',;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card',;
@@ -17,7 +8,6 @@ export default function WalletPage() {;
   const { wallet, transactions, loading } = useWallet(),;
 ;
   return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <div className="container max-w-4xl py-10">;
       <h1 className="text-3xl font-bold mb-6 flex items-center gap-2">;
         <BadgeDollarSign className="h-6 w-6" /> Wallet;
@@ -32,75 +22,18 @@ export default function WalletPage() {;
         <CardContent>;
           {loading ? (;
             <div className="h-8 w-8 rounded-full border-4 border-primary border-t-transparent animate-spin" />;
-<<<<<<< HEAD
-          ) : (;
-=======
           ) :(;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <p className="text-2xl font-bold">{wallet?.balance ?? 0} ZION$</p>;
           )}
         </CardContent>;
       </Card>;
-<<<<<<< HEAD
-      <Tabs defaultValue="earnings">;
-        <TabsList className="grid w-full grid-cols-2 mb-4">;
-import {use_wallet} from '@/hooks / use_wallet';
-import {Card, CardContent, CardHeader, CardTitle, CardDescription} from '@/components / ui / card';
-import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components / ui / tabs';
-import {BadgeDollarSign} from 'lucide-react';
-export default /**
- * WalletPage - Function description
- */
-function WalletPage() {
-  const { wallet, transactions, loading } = use_wallet ();
-;
-  return (
-    <div className="container max - w-4xl py - 10">;
-      <h1 className="text - 3xl font - bold mb - 6 flex items - center gap - 2">;
-        <BadgeDollarSign className="h - 6 w - 6" /> Wallet;
-      </h1>;
-      <Card className="mb - 6">;
-        <CardHeader>;
-          <CardTitle className="flex items - center gap - 2">;
-            <BadgeDollarSign className="h - 5 w - 5" /> Balance;
-          </CardTitle>;
-          <CardDescription > Your current ZION$ balance</CardDescription>;
-        </CardHeader>;
-        <CardContent>;
-          {loading ? (
-            <div className="h - 8 w - 8 rounded - full border - 4 border - primary border - t-transparent animate - spin" />) : (
-            <p className="text - 2xl font - bold">{wallet?.balance ?? 0} ZION$</p>)}
-        </CardContent>;
-      </Card>;
-      <Tabs default_value="earnings">;
-        <TabsList className="grid w - full grid - cols - 2 mb - 4">;
-=======
 ;
       <Tabs defaultValue="earnings">;
         <TabsList className="grid w-full grid-cols-2 mb-4">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <TabsTrigger value="earnings">Earnings</TabsTrigger>;
           <TabsTrigger value="spending">Spending</TabsTrigger>;
         </TabsList>;
         <TabsContent value="earnings">;
-<<<<<<< HEAD
-        </TabsContent>;
-        <TabsContent value="spending">;
-          {transactions && transactions.filter(t => t && t.transaction_type === 'burn').length === 0 ? (;
-            <p className="text-muted-foreground">No spending yet</p>;
-          ) : (;
-            <ul className="space-y-2">;
-              {transactions && transactions.filter(t => t && t.transaction_type === 'burn').map(t => (;
-                <li key={t && t.id} className="flex justify-between border-b py-2">;
-                  <span>{t && t.reason || 'Purchase'}</span>;
-                  <span className="font-medium">-{t && t.amount} ZION$</span>;
-                </li>;
-              ))}
-            </ul>;
-          )}
-        </TabsContent>;
-      </Tabs>;
-=======
           {transactions.filter(t => t.transaction_type === 'earn').length === 0 ? (;
             <p className="text-muted-foreground">No earnings yet</p>;
           ) :(;
@@ -128,46 +61,12 @@ function WalletPage() {
         </TabsContent>;
       </Tabs>;
 ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <div className="mt-8">;
         <h2 className="text-xl font-semibold mb-2">On-chain Export (Beta)</h2>;
         <p className="text-sm text-muted-foreground mb-4">Export your ZION$ to an external crypto wallet.</p>;
         <button className="px-4 py-2 bg-zion-purple text-white rounded-md">Connect Wallet</button>;
       </div>;
     </div>;
-<<<<<<< HEAD
-  );
-}
-          {transactions.filter (t => t.transaction_type === 'earn').length === 0 ? (
-            <p className="text - muted - foreground">No earnings yet</p>) : (
-            <ul className="space - y-2">;
-              {transactions.filter (t => t.transaction_type === 'earn').map (t => (
-                <li key={t.id} className="flex justify - between border - b py - 2">;
-                  <span>{t.reason || 'Reward'}</span>;
-                  <span className="font - medium">+{t.amount} ZION$</span>;
-                </li>))}
-            </ul>)}
-        </TabsContent>;
-        <TabsContent value="spending">;
-          {transactions.filter (t => t.transaction_type === 'burn').length === 0 ? (
-            <p className="text - muted - foreground">No spending yet</p>) : (
-            <ul className="space - y-2">;
-              {transactions.filter (t => t.transaction_type === 'burn').map (t => (
-                <li key={t.id} className="flex justify - between border - b py - 2">;
-                  <span>{t.reason || 'Purchase'}</span>;
-                  <span className="font - medium">-{t.amount} ZION$</span>;
-                </li>))}
-            </ul>)}
-        </TabsContent>;
-      </Tabs>;
-      <div className="mt - 8">;
-        <h2 className="text - xl font - semibold mb - 2">On - chain Export (Beta)</h2>;
-        <p className="text - sm text - muted - foreground mb - 4">Export your ZION$ to an external crypto wallet.</p>;
-        <button className="px - 4 py - 2 bg - zion - purple text - white rounded - md">Connect Wallet</button>;
-      </div>;
-    </div>);
-}
-=======
   ),;}
  return (<div className="container max-w-4xl py-10" > <h1 className="text-3xl font-bold mb-6 flex items-center gap-2" > <BadgeDollarSign className="h-6 w-6" /> Wallet </h1> <Card className="mb-6" > <CardHeader> <CardTitle className="flex items-center gap-2" > <BadgeDollarSign className="h-5 w-5" /> Balance </CardTitle> <CardDescription>Your current ZION$ balance</CardDescription> </CardHeader> <CardContent>) : (<p className="text-2xl font-bold" > {
   wallet?.balance ?? 0 
@@ -180,4 +79,3 @@ function WalletPage() {
 }</ul>) 
 }</TabsContent> </Tabs> </div> </div>) 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

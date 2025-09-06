@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -35,7 +33,6 @@
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")""
       ""system": {        memory: {},        cpu": {},";        "process"
       "application": {"buildSize": 0,        "bundleSize": 0,,"loadTime": 0,,"}
@@ -44,6 +41,13 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
 const fs = require("child_process")
 const path = require("path")
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -156,7 +160,6 @@ async collectSystemMetrics() {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       "timestamp"
         "cpu"
         "process"
@@ -187,6 +190,13 @@ const { execSync } = require("child_process")
       const nodeModulesPath = path.join(this.projectRoot, "node_modules")
       const srcPath = path.join(this.projectRoot, "src")
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -268,7 +278,6 @@ const { execSync } = require("child_process")
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   getDirectorySize(dirPath) {
     let totalSize = 0
     if (!fs.existsSync(dirPath)) return 0
@@ -560,7 +569,6 @@ class PerformanceMonitor {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       this.metrics.application.fileCounts = {"source": this.countFiles(srcPath, [".ts", ".tsx", ".js", ".jsx"]),"components": this.countFiles(path.join(srcPath, "components"), [".tsx", ".jsx"]),"pages": this.countFiles(path.join(srcPath, "pages"), [".tsx", ".jsx"}]
       console.log(" Application metrics collected")
       console.warn("⚠  Could not collect application "metrics": ")
@@ -632,6 +640,18 @@ class PerformanceMonitor {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  console.error("Fatal "error": ")  console.error("Fatal "error": ")
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
+  console.error("Fatal "error": ")
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
+<<<<<<< HEAD
   console.error("Fatal "error": ")  console.error("Fatal "error": ")
 =======
   console.error("Fatal "error": ")
@@ -652,4 +672,3 @@ class PerformanceMonitor {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

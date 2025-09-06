@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -18,6 +18,13 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
+
+
+import {supportedLocales, isRtl} from '../../utils/i18n';
+
+
+const localeToFlag: Record<string, string> = {
+
   en: 'us',
   pt: 'br',
   es: 'es',
@@ -27,47 +34,18 @@ const localeLabelKey: Record<string, string> = {
   pt: 'lang.portuguese',
   es: 'lang.spanish',
   ar: 'lang.arabic'},
-=======
-import React, { useState } from 'react';
-import { useTranslation  } from 'react-i18next';
-import i18n from '../../utils/i18n';
-<<<<<<< HEAD
-import { supportedLocales, isRtl } from '../../utils/i18n';
-=======
-import {supportedLocales, isRtl} from '../../utils/i18n';
-<<<<<<< HEAD
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-const localeToFlag: Record<string, string> = {
-
-  en: 'us'
-  pt: 'br'
-  es: 'es'
-  ar: 'sa'
-};  ar: 'sa'}
-const localeLabelKey: Record<string, string> = {
-<<<<<<< HEAD
-  en: 'lang.english'
-  pt: 'lang.portuguese'
-  es: 'lang.spanish'
-  ar: 'lang.arabic'
-};  ar: 'lang.arabic'}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export default function LanguageSwitcher() {
 =======
+
   en: 'lang.english',
   pt: 'lang.portuguese',
   es: 'lang.spanish',
   ar: 'lang.arabic',
 };  ar: 'lang.arabic'},
 export default function LanguageSwitcher() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const current = i18n.resolvedLanguage |i18n.language |'en';
@@ -76,6 +54,7 @@ export default function LanguageSwitcher() {;
     localStorage.setItem('preferredLanguage', lng);
     document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
     document.documentElement.setAttribute('lang', lng);
+
 import {supportedLocales, isRtl} from '../../utils/i18n';
 const localeToFlag: Record<string, string> = {;
   en: 'us',;
@@ -98,6 +77,7 @@ export default function LanguageSwitcher() {;
     localStorage && localStorage.setItem('preferredLanguage', lng);
     document && document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
     document && document.documentElement.setAttribute('lang', lng);
+
     setOpen(false);
   }
   return (
@@ -107,9 +87,11 @@ export default function LanguageSwitcher() {;
         aria-expanded={open}
         className='flex items-center gap-2 px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800'
         onClick={() => setOpen(v => !v)}
+
       >;
         <span className={`fi fi-${localeToFlag[current] || 'us'}`}></span>;
         <span>{t(localeLabelKey[current] || 'lang && lang.english')}</span>;
+
         <svg
           width='16'
           height='16'
@@ -131,10 +113,12 @@ export default function LanguageSwitcher() {;
             <li key={lng}>;
               <button
                 role='option'
+
                 aria-selected={current && current.startsWith(lng)}
                 className='w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900'                onClick={() => changeLanguage(lng)}  };
-    setOpen(false)
-  };
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
   return (
     <div className="relative">;
       <button
@@ -142,7 +126,7 @@ export default function LanguageSwitcher() {;
         aria-expanded={open}
         className="flex items-center gap-2 px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800"
         onClick={() => setOpen((v) => !v)}
-<<<<<<< HEAD
+
       >;
         <span className={`fi fi-${localeToFlag[current] || 'us'}`}></span>;
         <span>{t(localeLabelKey[current] || 'lang && lang.english')}</span>;
@@ -152,6 +136,7 @@ export default function LanguageSwitcher() {;
         <ul role="listbox" className="absolute right-0 mt-2 w-48 bg-white dark:bg-black border border-gray-200 dark:border-gray-800 rounded shadow-lg z-50">;
           {supportedLocales && supportedLocales.map((lng) => (;
             <li key={lng}>;
+
               <button
                 role="option"
                 aria-selected={current && current.startsWith(lng)}
@@ -165,9 +150,12 @@ export default function LanguageSwitcher() {;
           ))}
         </ul>;
       )}
+
     </div>;
   );
 }
+
+=======
     </div>
   );
 }
@@ -298,12 +286,11 @@ function LanguageSwitcher() {
   )
 
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
-<<<<<<< HEAD
-);
-}
-=======
+    </div>
+
   );
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node
 const { execSync } = require('child_process')
 =======
@@ -287,7 +289,6 @@ const { execSync } = require('child_process')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 function run(cmd) {
   return execSync(cmd, { stdio: 'inherit' })
 }
@@ -342,9 +343,6 @@ if (require.main === module) {
   }
 }
 <<<<<<< HEAD
-module.exports = { run, currentBranch, commitAll, push, mergeIntoMain }
-=======
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -374,4 +372,3 @@ module.exports = { run, currentBranch, commitAll, push, mergeIntoMain }
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

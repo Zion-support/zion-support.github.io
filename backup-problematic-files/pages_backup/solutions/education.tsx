@@ -1020,40 +1020,6 @@ export default function EducationSolutionsPage() {;
 <<<<<<< HEAD
     </Layout>
   );
-        {/* CTA Section */}
-        <section className="py-20 bg-gray-900 text-white">;
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">;
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">;
-              Ready to Transform Education?;
-            </h2>;
-            <p className="text-xl mb-8 max-w-3xl mx-auto">;
-              Contact our education solutions team to discuss your specific requirements;
-              and discover how we can help enhance your educational institution.;
-            </p>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <button className="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">;
-                Contact Education Team;
-              </button>;
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors">;
-                Download Education Brochure;
-              </button>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>;
-    </Layout>;
-    </>;
-    </Layout>;
-    </>;
-    </Layout>;
-  );
-    </>;
-  ),;
-}
-=======
-  );
 };
 
 export default Education;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

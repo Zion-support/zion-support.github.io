@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import {Button} from "@/components/ui/button";
-import {Link} from "react-router-dom";
-import {ArrowLeft} from "lucide-react";
-interface ProfileErrorStateProps {;
-  error: string | null;
-}
-export function ProfileErrorState(): any ({ error }: ProfileErrorStateProps) {;
-  return (
-    <div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4">;
-      <div className="text-red-400 mb-4 text-xl">{error || "Something went wrong"}</div>;
-      <Button asChild>;
-        <Link to="/talents" className="bg-zion-purple hover: bg-zion-purple-dark">;
-=======
 
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
@@ -29,43 +14,11 @@ export function ProfileErrorState({ error } ProfileErrorStateProps) {;
       <div className="text-red-400 mb-4 text-xl">{error || "Something went wrong"}</div>;
       <Button asChild>;
         <Link to="/talents" className="bg-zion-purple hover:bg-zion-purple-dark">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <ArrowLeft className="mr-2 h-4 w-4" />;
           Back to Talent Directory;
         </Link>;
       </Button>;
     </div>;
-<<<<<<< HEAD
-  );
-}
-import React from './react';
-import { Button  } from '@/components / ui / button';
-import { Link  } from './react-router-dom';
-import { ArrowLeft  } from './lucide-react';
-interface ProfileErrorStateProps {
-  error: string | null;
-}
-export /**
- * ProfileErrorState - Function description
- */
-function ProfileErrorState() {
-  return (
-    <div className="min - h-screen bg - zion - blue flex flex - col justify - center items - center p - 4">;
-      <div className="text - red - 400 mb - 4 text - xl">;
-        {error || "Something went wrong"}
-      </div>;
-      <Button as_child>;
-        <Link;
-          to="/talents";
-          className="bg - zion - purple hover: bg - zion - purple - dark";
-        >;
-          <ArrowLeft className="mr - 2 h - 4 w - 4" />;
-          Back to Talent Directory;
-        </Link>;
-      </Button>;
-    </div>);
-}
-=======
   );}
  interface ProfileErrorStateProps {
   error: string | null 
@@ -76,4 +29,3 @@ function ProfileErrorState() {
   error || "Something went wrong" 
 }</div> 
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

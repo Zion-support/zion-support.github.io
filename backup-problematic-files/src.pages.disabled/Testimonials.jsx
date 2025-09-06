@@ -17,14 +17,8 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
-interface TestimonialsProps {
-  // Add props here as needed
-export default function Testimonials({ }: TestimonialsProps) {
-=======
 
 const Testimonials = ({ className }) => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <div className={className || ''}>
       <h1>Testimonials</h1>

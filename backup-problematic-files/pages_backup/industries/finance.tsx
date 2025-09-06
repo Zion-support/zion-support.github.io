@@ -629,32 +629,6 @@ export default function FinancePage() {
       </div>
     </Layout>
   );
-<<<<<<< HEAD
-            >;
-              <h2 className="text-4xl md: text-5xl font-bold mb-6">;
-                Ready to Transform Financial Services?;
-              </h2>;
-              <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">;
-                Let our fintech experts help you implement cutting-edge financial technology;
-                solutions that enhance security and efficiency.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">;
-                  Start Your Fintech Project;
-                </Link>;
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">;
-                  Learn About Our Expertise;
-                </Link>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>;
-  ),;
-}
-=======
 };
 
 export default Finance;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -1,7 +1,4 @@
 <<<<<<< HEAD
-import React from 'react';
-=======
-<<<<<<< HEAD
 import { Code, Book, Zap, Shield, Globe, Database, Server, Lock, CheckCircle, ArrowRight } from 'lucide-react';
 =======
 <<<<<<< HEAD:pages/api.tsx
@@ -20,14 +17,10 @@ import { Code, Book, Zap, Shield, Globe, ArrowRight, CheckCircle } from 'lucide-
 import { Code, Book, Zap, Shield, Globe, Database, Server, Lock, CheckCircle, ArrowRight } from 'lucide-react';
 >>>>>>> main
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 const apiServices = [
   {
     title: 'RESTful API',
-<<<<<<< HEAD
-description: 'Clean, intuitive REST API design with comprehensive documentation.',
-=======
 <<<<<<< HEAD
     description: 'Clean, intuitive REST API design',
 =======
@@ -37,14 +30,10 @@ description: 'Clean, intuitive REST API design with comprehensive documentation.
     description: 'Clean, intuitive REST API design',
 >>>>>>> main
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     icon: Globe,
     features: ['RESTful Design', 'JSON Responses', 'HTTP Status Codes', 'Error Handling']
   },
   {
-<<<<<<< HEAD
-title: 'GraphQL Support',
-=======
 <<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
@@ -141,7 +130,6 @@ import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de:pages/api.tsx.backup
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export default function APIPage() {
   const apiFeatures = [
     {
@@ -169,12 +157,6 @@ export default function APIPage() {
       features: ["OAuth 2.0", "API Keys", "SSL/TLS Encryption"]
     }
   ];
-<<<<<<< HEAD
-return (
-    <Layout
-      title="API Reference - Zion Tech Group"
-      description="Comprehensive API documentation and reference for integrating with Zion Tech Group services."
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages/api.tsx
@@ -305,7 +287,6 @@ export default function API() {
                 </Link>
 =======
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
   return (
     <Layout>
@@ -341,18 +322,16 @@ export default function API() {
                   Get API Key
                 </a>
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 =======
 >>>>>>> main
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </div>
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -380,9 +359,7 @@ export default function API() {
               viewport={{ once: true }}
 <<<<<<< HEAD
 =======
-=======
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Features Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -409,13 +386,9 @@ export default function API() {
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <feature.icon className="w-8 h-8 text-blue-600" />
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 =======
 >>>>>>> main
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   </div>
                   <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
@@ -427,21 +400,14 @@ export default function API() {
 <<<<<<< HEAD
 
 =======
-<<<<<<< HEAD
-
-=======
 >>>>>>> cursor/expand-services-advertise-and-build-project-9473
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       </li>
                     ))}
                   </ul>
                 </motion.div>
               ))}
             </div>
-<<<<<<< HEAD
-
-=======
 <<<<<<< HEAD
           </div>
         </section>
@@ -474,7 +440,6 @@ export default function API() {
     </>
 =======
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     title: 'GraphQL API',
     description: 'Flexible GraphQL API for complex queries',
     icon: Code,
@@ -493,8 +458,6 @@ export default function API() {
     features: ['JavaScript/TypeScript', 'Python', 'Java', 'C#/.NET']
   }
 ];
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 
 export default function APIPage() {
@@ -732,17 +695,11 @@ export default function APIPage() {
                       {feature.features.map((item, itemIndex) => (
                         <li key={itemIndex} className="flex items-center text-sm text-gray-600">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-<<<<<<< HEAD
-=======
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                           {item}
                         </li>
                       ))}
                     </ul>
-<<<<<<< HEAD
-</motion.div>
-=======
 <<<<<<< HEAD
                   </div>
 
@@ -910,13 +867,9 @@ export default function APIPage() {
 <<<<<<< HEAD
 
 =======
-<<<<<<< HEAD
-
-=======
 >>>>>>> main
 =======
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
@@ -944,8 +897,6 @@ export default function APIPage() {
                   className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
                 >
                   View AI Services
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 =======
@@ -1018,17 +969,12 @@ export default function APIPage() {
                   View Documentation
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </a>
               </div>
             </motion.div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-</Layout>
-
-=======
 <<<<<<< HEAD
     </Layout>
 
@@ -1042,6 +988,5 @@ export default function APIPage() {
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de:pages/api.tsx.backup
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   );
 }

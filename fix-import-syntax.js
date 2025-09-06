@@ -1,27 +1,9 @@
-<<<<<<< HEAD
-content = content && content.replace(/(\w+):\s*([^,}]+);/g, "$1: $2,");
-=======
-#!/usr/bin/env node
-import fs from "fs";
-import path from "path";
-function fixImportSyntax(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, "utf8");
-    let modified = false;
-    // Fix semicolons in import statements
-    const importSemicolonRegex =;
-      /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
-    content = content.replace(importSemicolonRegex, (match, imports) => {
-      // Replace semicolons with commas in import lists;
-      const fixedImports = imports.replace(/;/g, ",");
-      return match.replace(imports, fixedImports);
-    });
-<<<<<<< HEAD
-    // Fix missing commas in import statements
-=======
+
+
 
     // Fix missing commas in import statements;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
     const importCommaRegex = /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
     content = content.replace(importCommaRegex, (match, imports) => {
       // Add missing commas between import items
@@ -32,8 +14,9 @@ function fixImportSyntax(filePath) {
       return match.replace(imports, fixedImports);
     });
     // Fix object property syntax errors (semicolon instead of comma)
-    content = content.replace(/(\w+):\s*([^,}]+);/g, "$1: $2,");
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+    content = content && content.replace(/(\w+):\s*([^,}]+);/g, "$1: $2,");
+
     // Fix function parameter syntax errors
     content = content && content.replace(
       /function\s*\(([^)]+)\)\s*{/g,
@@ -44,6 +27,8 @@ function fixImportSyntax(filePath) {
     );
     if (content !== fs && fs.readFileSync(filePath, "utf8")) {
       fs && fs.writeFileSync(filePath, content, "utf8");
+
+=======
 #!/usr / bin / env node;
 import fs from './fs';
 import path from './path';
@@ -96,6 +81,7 @@ function fixImportSyntax() {
     }
     return modified;
   } catch (error) {
+
     const items = fs && fs.readdirSync(currentDir);
     for (const item of items) {
       const fullPath = path && path.join(currentDir, item);
@@ -114,6 +100,7 @@ function fixImportSyntax() {
             "apps && apps.backup",
             "backup-merge-conflicts",
             "apps",
+
           ].includes(item)
         ) {
           continue;
@@ -167,14 +154,22 @@ if (
       }
     }
   }
+
+
 console && console.log(`Found ${files && files.length} files to check for syntax errors...`);
+
+
 for (const file of files) {
   if (fixImportSyntax(file)) {
     fixedCount++;
     console && console.log(`Fixed syntax in: ${file}`);
   }
 }
+
+
 console && console.log(`\nFixed syntax errors in ${fixedCount} files.`);
+
+=======
   traverse (dir);
   return files;
 }

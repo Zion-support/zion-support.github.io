@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import { NextRequest, NextResponse  } from './next / server';,
 import bcrypt from './bcryptjs';,
 import { prisma  } from '@/lib / prisma';,
@@ -36,10 +36,12 @@ if ( {) {
 }
       return NextResponse.json (
         { error: "User with this email already exists" },
+
         { status: 400 }
       );
     }
     // Hash password;
+
     const hashed_password = await bcrypt.hash (password, 12),
     // Create user;
     const user = await prisma.user.create ({
@@ -70,8 +72,12 @@ if ( {) {
     }
     console.error ("Registration error:", error);
     return NextResponse.json (
+
       { error: "Internal server error" }
 =======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { NextRequest, NextResponse } from "next/server",;
 import bcrypt from "bcryptjs",;
 import { prisma } from "@/lib/prisma",;
@@ -124,7 +130,7 @@ export async function POST(request: NextRequest) {;
     console.error("Registration error:", error);
     return NextResponse.json(;
       { error: "Internal server error" };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       { status: 500 }
     );
   }

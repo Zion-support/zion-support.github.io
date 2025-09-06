@@ -3,8 +3,6 @@
 @tailwind utilities;
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -23,20 +21,10 @@
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 /* Import Inter font for modern typography */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
 
-<<<<<<< HEAD
-/* CSS Variables for modern theming */
-
-:root {
-/* CSS Variables for modern theming */:root {
-
-:root {
-
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -69,7 +57,6 @@
 /* CSS Variables for modern theming */:root {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   --background: #000000;
   --foreground: #ffffff;
   --primary: #3b82f6;
@@ -132,10 +119,7 @@
 }
 
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 /* Enhanced Selection */
 ::selection {
   background: rgba(0, 255, 255, 0.4);
@@ -306,9 +290,6 @@ input, textarea, select {
   padding: 0.75rem 1rem;
 
   color: white;
-<<<<<<< HEAD
-
-=======
 =======
 <<<<<<< HEAD
 =======
@@ -499,7 +480,6 @@ input, textarea, select {
   background: rgba(0, 255, 255, 0.4);  color: white;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
 }
 

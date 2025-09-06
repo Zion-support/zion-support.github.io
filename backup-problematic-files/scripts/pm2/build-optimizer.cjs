@@ -1,4 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -334,17 +341,11 @@ optimizer.run().catch(error => {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 #!/usr/bin/env node;
 /**
  * PM2 Build Optimizer Service;
  * Optimizes build process and bundle size;
  */
-<<<<<<< HEAD
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -394,7 +395,6 @@ const path = require('path');
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 class BuildOptimizer {}
   constructor() {}
     this.processName = process.env.PM2_PROCESS_NAME || 'build-optimizer';
@@ -415,6 +415,10 @@ class BuildOptimizer {}
   log(message) {}
     const timestamp = new Date().toISOString();
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -446,7 +450,6 @@ class BuildOptimizer {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -457,6 +460,21 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+      
+      
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      
+      
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
       
@@ -484,7 +502,6 @@ class BuildOptimizer {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       const distDir = 'dist';
       if (!fs.existsSync(distDir)) {}
         this.log('No dist directory found, running build first...');
@@ -497,9 +514,6 @@ class BuildOptimizer {}
         return total + stats.size;
       }, 0);
 <<<<<<< HEAD
-      this.log(`Total bundle "size": ${(totalSize / 1024 / 1024).toFixed(2)} MB`);
-=======
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -538,7 +552,6 @@ class BuildOptimizer {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       return {}
         totalSize,
         "totalSizeMB": (totalSize / 1024 / 1024).toFixed(2),
@@ -558,6 +571,21 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+    
+    
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+    
+    
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
     
@@ -585,7 +613,6 @@ class BuildOptimizer {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const scanDir = (currentDir) => {}
       try {}
         const items = fs.readdirSync(currentDir);
@@ -595,6 +622,21 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+          
+          
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+          
+          
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
           
@@ -622,7 +664,6 @@ class BuildOptimizer {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           if (stat.isDirectory()) {}
             scanDir(itemPath);
           } else if (stat.isFile() && this.isBundleFile(item)) {}
@@ -641,6 +682,21 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
 
@@ -668,7 +724,6 @@ class BuildOptimizer {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     scanDir(dir);
     return files;
   };
@@ -682,6 +737,21 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+      
+      
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      
+      
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
       
@@ -709,7 +779,6 @@ class BuildOptimizer {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       // Clean previous build;
       if (fs.existsSync('dist')) {}
         fs.rmSync('dist', { "recursive": true, "force": true }
@@ -721,6 +790,21 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+      
+      
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      
+      
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
       
@@ -748,7 +832,6 @@ class BuildOptimizer {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       execSync(buildCommand, { })
         "stdio": 'pipe',
         "cwd": process.cwd();
@@ -757,6 +840,21 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
 
@@ -784,7 +882,6 @@ class BuildOptimizer {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       this.log('Build optimization completed');
       return { "success": true };
     } catch (error) {}
@@ -798,6 +895,21 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+    
+    
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+    
+    
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
     
@@ -825,7 +937,6 @@ class BuildOptimizer {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     // Add optimization flags if supported;
     if (buildScript.includes('vite')) {}
       return `${buildScript} --minify`;`
@@ -844,6 +955,21 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+      
+      
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      
+      
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
       
@@ -871,7 +997,6 @@ class BuildOptimizer {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       // This is a simplified check - in practice, you'd analyze the bundle;
       const distDir = 'dist';
       if (!fs.existsSync(distDir)) {}
@@ -883,6 +1008,21 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
 
@@ -910,7 +1050,6 @@ class BuildOptimizer {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       for (const file of bundleFiles) {}
         try {}
           const content = fs.readFileSync(file.path, 'utf8');
@@ -926,6 +1065,21 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+      
+      
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      
+      
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
       
@@ -953,7 +1107,6 @@ class BuildOptimizer {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       return {}
         "checked": true,
         "unusedCodeFiles": unusedCodeFound,
@@ -974,6 +1127,21 @@ class BuildOptimizer {}
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+      
+      
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      
+      
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
       
@@ -1001,7 +1169,6 @@ class BuildOptimizer {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       const distDir = 'dist';
       if (!fs.existsSync(distDir)) {}
         return { "checked": false, "error": 'No dist directory found' };
@@ -1009,9 +1176,6 @@ class BuildOptimizer {}
       const bundleFiles = this.getBundleFiles(distDir);
       const chunkFiles = bundleFiles.filter(f => f.name.includes('chunk') || f.name.includes('vendor'));
 <<<<<<< HEAD
-      this.log(`Found ${chunkFiles.length} chunk files`);
-=======
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       
@@ -1050,7 +1214,6 @@ class BuildOptimizer {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       return {}
         "checked": true,
         "chunkFiles": chunkFiles.length,
@@ -1077,10 +1240,6 @@ class BuildOptimizer {}
         "minification": this.minification;
       };
     };
-<<<<<<< HEAD
-    const reportFile = path.join(__dirname, '../../logs/pm2/build-optimizer-report.json');
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1127,14 +1286,11 @@ class BuildOptimizer {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     this.log(`Build optimization report "generated": ${reportFile}`);
     return report;
   };
   async start() {}
     this.log(`${this.processName} started`);
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1147,13 +1303,17 @@ class BuildOptimizer {}
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     try {}
       const report = await this.generateReport();
       if (report.optimization.success) {}
         this.log('Build optimization completed successfully');
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -1191,7 +1351,6 @@ class BuildOptimizer {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         if (report.bundleAnalysis.totalSizeMB) {}
           this.log(`Final bundle "size": ${report.bundleAnalysis.totalSizeMB} MB`);
         };
@@ -1246,4 +1405,3 @@ module.exports = BuildOptimizer;module.exports = BuildOptimizer;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

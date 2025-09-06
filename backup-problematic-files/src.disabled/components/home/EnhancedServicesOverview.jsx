@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import _React from';react''';'';
-import _React from';react''';'';
-=======
 import React from 'react';
 
 const EnhancedServicesOverview = ({ className }) => {
@@ -14,4 +10,3 @@ const EnhancedServicesOverview = ({ className }) => {
 };
 
 export default EnhancedServicesOverview;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

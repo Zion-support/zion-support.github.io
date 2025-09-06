@@ -29,8 +29,4 @@ export default function LoadingFallback({ }: LoadingFallbackProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD:backup-problematic-files/src.disabled/components/ui/LoadingFallback.jsx
 }
-=======
-}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:src.disabled/components/ui/LoadingFallback.jsx

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-talentId, ;
-=======
 import React from 'react',;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -37,27 +34,6 @@ export function JobMatchCard({ ;
   location, ;
   category, ;
   matchPercent, ;
-<<<<<<< HEAD
-}
-  talentId
-  name
-  title
-  company
-  avatar
-  location
-  category
-  matchPercent
-}
-}
-  talent_id,
-  name,
-  title,
-  company,
-  avatar,
-  location,
-  category,
-  match_percent,
-=======
   skills,;
   onApply, ;
   onViewDetails, ;
@@ -199,7 +175,6 @@ onInvite ;
 const handleViewDetails = () => {;
   if (onViewDetails) {;
   onViewDetails (matchId) ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 };
 const handleInvite = () => {;

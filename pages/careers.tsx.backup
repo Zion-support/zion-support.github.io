@@ -3,9 +3,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { 
 <<<<<<< HEAD
-Heart, 
-=======
-<<<<<<< HEAD
   MapPin, 
   Clock, 
   Users, 
@@ -31,17 +28,11 @@ Heart,
   Clock,
   Users,
   CheckCircle
-<<<<<<< HEAD
-=======
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 } from 'lucide-react';
 
 const jobOpenings = [
   {
-<<<<<<< HEAD
-id: 1,
-=======
 <<<<<<< HEAD
     title: 'Senior AI Engineer',
     location: 'Remote / Delaware',
@@ -115,18 +106,12 @@ id: 1,
       'Excellent communication skills'
     ],
     benefits: ['Competitive salary', 'Health insurance', 'Remote work', 'Learning budget', 'Certification support']
-<<<<<<< HEAD
-=======
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 ];
 
 const benefits = [
   {
-<<<<<<< HEAD
-icon: Heart,
-=======
 <<<<<<< HEAD
   return (
     <Layout
@@ -201,18 +186,12 @@ icon: Heart,
     icon: Globe,
     title: "Global Impact",
     description: "Work on projects that make a difference worldwide"
-<<<<<<< HEAD
-=======
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 ];
 
 export default function Careers() {
   return (
-<<<<<<< HEAD
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-=======
 <<<<<<< HEAD
     <>
       <Head>
@@ -360,17 +339,11 @@ export default function Careers() {
                 </button>
               </motion.div>
             ))}
-<<<<<<< HEAD
-=======
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-{/* Benefits Section */}
-=======
 <<<<<<< HEAD
         {/* Job Openings */}
         <section className="py-16 px-4">
@@ -556,9 +529,6 @@ export default function Careers() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-=======
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   );
 }

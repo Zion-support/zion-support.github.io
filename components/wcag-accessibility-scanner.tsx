@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -17,12 +17,12 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import React from 'react';
 import Head from 'next / head';
 import {Phone, Mail, MapPin, Check, ArrowRight, Eye} from 'lucide-react';
-<<<<<<< HEAD
+
+
+
 export default function WCAGScannerPage() {;
   const service = extraServices && extraServices.find(s =>;
     s && s.link.endsWith('/wcag-accessibility-scanner');
@@ -211,7 +211,11 @@ if (return null) {
           </div>;
         </div>;
       </div>;
+
+=======
 }
+
+=======
 import { Star } from 'lucide-react';
 export default function WCAGScannerPage() {
 =======
@@ -236,8 +240,7 @@ export default function WCAGScannerPage() {;
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
-<<<<<<< HEAD
-<meta name="description" content={service.description} />
+        <meta name="description" content={service.description} />
         <link rel="canonical" href="https://ziontechgroup.com/wcag-accessibility-scanner" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -341,35 +344,22 @@ export default function WCAGScannerPage() {;
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
-<<<<<<< HEAD
               </div>
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-<<<<<<< HEAD
-);
-}
+  );
+
     </UltraAdvancedFuturisticBackground>);
 }
 ;
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
-  );
-<<<<<<< HEAD
-}
-=======
+
 }
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-;
-}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

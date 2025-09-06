@@ -1,61 +1,15 @@
-<<<<<<< HEAD
+
+
+
+
 'use client';
-] ;
-}];
-</div> </div> </div> </div> {;
-  /* Main Navigation */ ;
-}<navclassName= {
-  `fixed top-0 left-0 right-0 z-50 transition-all duration-300 $ {
-  isScrolled ? 'bg-gray-900/95 backdrop-blur-md border-b border-gray-700/50' </div> <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300" ></div> </div> <div> <h1 className="text-xl font-bold text-white" >Zion Tech Group</h1> <p className="text-xs text-gray-400" >Innovation • Intelligence • Impact</p> </div> </a> </button> {;
-  /* Submenu */ ;
-}<AnimatePresence> <spankey= {
-  service 
-}className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md"> {;
-  service ;
-}</span>) ) ;
-}+ {;
-  subitem && subitem.services.length - 2 ;
-}more </span>) ;
-}</div>) ;
-}</div> </div> </a>) ) ;
-}</div> </motion && motion.div>) ;
-}</AnimatePresence> </div>) ) ;
-}</div> <Link href="/pricing" className="px-6 py-2 text-gray-300 hover:text-white transition-colors duration-200" > Pricing </a> <Link href="/contact" className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Get Started </a> </div> {;
-  /* Mobile Menu Button */ ;
-}<button </button> </div> </div> </nav> {;
-  /* Mobile Menu */ ;
-}<AnimatePresence> {;
-  isOpen && (<motion&& motion.div {
-  item && item.badge 
-}</span>) ;
-}</div> <ChevronDownclassName= {
-  `w-4 h-4 transition-transform duration-200 $ {
-  activeDropdown === item && item.name ? 'rotate-180' : '' 
-}` 
-}/> </button> > {;
-  item && item.children?.map ( (child) => (<Linkkey= {
-  child && child.name 
-}</span> </a>) ) ;
-}</motion && motion.div>) ;
-}</div>) ) ;
-}> Get Started </a> className="fixed inset-0 z-50 lg:hidden" > {;
-  /* Backdrop */ ;
-}<div > <X className="w-6 h-6" /> </button> </div> </div> <ChevronDownclassName= {
-  `w-4 h-4 text-gray-400 transition-transform duration-200 $ {
-  activeSubmenu === item && item.name ? 'rotate-180': '' 
-}` 
-}/> </button> {;
-  /* Mobile Submenu */ ;
-}<AnimatePresence> > {;
-  item && item.submenu?.map ( (subitem) => (<Linkkey= {
-  subitem && subitem.name 
-}) ) 
-}</motion && motion.div>) ;
-}</AnimatePresence> </div>) ) ;
-}</div> > View Pricing </a> <Link > Contact Us </a> </div> </div> </div> </div> </div> </div> </motion && motion.div>) ;
-}</AnimatePresence> </>) ;
+
+
 };export default EnhancedNavigation2025;
 export default function EnhancedNavigation2025() {;
+
+=======
+
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -421,85 +375,27 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709'
 };
 export default function EnhancedNavigation2025() {
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-'use client';
-]
-}];
-</div> </div> </div> </div> {
-  /* Main Navigation */
-}<nav className= {
-  `fixed top-0 left-0 right-0 z-50 transition-all duration-300 $ {
-  isScrolled ? 'bg-gray-900/95 backdrop-blur-md border-b border-gray-700/50' </div> <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300" ></div> </div> <div> <h1 className="text-xl font-bold text-white" >Zion Tech Group</h1> <p className="text-xs text-gray-400" >Innovation • Intelligence • Impact</p> </div> </a> </button> {
-  /* Submenu */
-}<AnimatePresence> <span key= {
-  service
-}className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md" > {
-  service
-}</span>) )
-}+ {
-  subitem.services.length - 2
-}more </span>)
-}</div>)
-}</div> </div> </a>) )
-}</div> </motion.div>)
-}</AnimatePresence> </div>) )
-}</div> <Link href="/pricing" className="px-6 py-2 text-gray-300 hover:text-white transition-colors duration-200" > Pricing </a> <Link href="/contact" className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Get Started </a> </div> {
-  /* Mobile Menu Button */
-}<button </button> </div> </div> </nav> {
-  /* Mobile Menu */
-}<AnimatePresence> {
-  isOpen && (<motion.div {
-  item.badge
-}</span>)
-}</div> <ChevronDown className= {
-  `w-4 h-4 transition-transform duration-200 $ {
-  activeDropdown === item.name ? 'rotate-180' : ''
-}`
-}/> </button> > {
-  item.children?.map ( (child) => (<Link key= {
-  child.name
-}</span> </a>) )
-}</motion.div>)
-}</div>) )
-}> Get Started </a> className="fixed inset-0 z-50 lg:hidden" > {
-  /* Backdrop */
-}<div > <X className="w-6 h-6" /> </button> </div> </div> <ChevronDown className= {
-  `w-4 h-4 text-gray-400 transition-transform duration-200 $ {
-  activeSubmenu === item.name ? 'rotate-180': ''
-}`
-}/> </button> {
-  /* Mobile Submenu */
-}<AnimatePresence> > {
-  item.submenu?.map ( (subitem) => (<Link key= {
-  subitem.name
-}) )
-}</motion.div>)
-}</AnimatePresence> </div>) )
-}</div> > View Pricing </a> <Link > Contact Us </a> </div> </div> </div> </div> </div> </div> </motion.div>)
-}</AnimatePresence> </>)
-};export default EnhancedNavigation2025;
-export default function EnhancedNavigation2025() {;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
+
+
   useEffect(() => {;
     const handleScroll = () => {;
       setIsScrolled(window && window.scrollY > 20);
     };
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
+
   }, []);
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
   return (
     <>;
       {/* Top Contact Bar */}
-<<<<<<< HEAD
+
       <div className="bg-gradient-to-r from-cyan-900 to-purple-900 text-white py-2">;
         <div className="container mx-auto px-4">;
           <div className="flex flex-col sm:flex-row justify-between items-center text-sm">;
@@ -524,11 +420,13 @@ export default function EnhancedNavigation2025() {;
       <navclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
           ? 'bg-gray-900/95 backdrop-blur-md border-b border-gray-700/50' 
+
           : 'bg-transparent'
       }`}>;
         <div className="container mx-auto px-4">;
           <div className="flex items-center justify-between h-20">;
             {/* Logo */}
+
             <Link href="/" className="flex items-center space-x-3 group">;
               <div className="relative">;
                 <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">;
@@ -541,11 +439,14 @@ export default function EnhancedNavigation2025() {;
                 <p className="text-xs text-gray-400">Innovation • Intelligence • Impact</p>;
               </div>;
             </Link>;
+
+
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">;
               {navigationItems && navigationItems.map((item) => (;
                 <div key={item && item.name} className="relative group">;
                   <button
+
                     onClick={() => setActiveSubmenu(activeSubmenu === item && item.name ? null : item && item.name)}
                     className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2";
                   >;
@@ -555,6 +456,14 @@ export default function EnhancedNavigation2025() {;
                       activeSubmenu === item && item.name ? 'rotate-180' : ''
                     }`} />;
                   </button>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {/* Submenu */}
                   <AnimatePresence>;
                     {activeSubmenu === item && item.name && (;
@@ -566,88 +475,10 @@ export default function EnhancedNavigation2025() {;
                         className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-2xl shadow-2xl overflow-hidden">;
                         <div className="p-6">;
                           {item && item.submenu?.map((subitem) => (;
-=======
-      <div className="bg-gradient-to-r from-cyan-900 to-purple-900 text-white py-2">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col sm:flex-row justify-between items-center text-sm">
-            <div className="flex items-center gap-4 mb-2 sm:mb-0">
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-cyan-300" />
-                <span>{contactInfo.phone}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-purple-300" />
-                <span>{contactInfo.email}</span>
-              </div>
-            </div>
-            <div className="flex items-center gap-2">
-              <MapPin className="w-4 h-4 text-green-300" />
-              <span className="text-xs">{contactInfo.address}</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Main Navigation */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-gray-900/95 backdrop-blur-md border-b border-gray-700/50'
-          : 'bg-transparent'
-      }`}>
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <Link href="/" className="flex items-center space-x-3 group">
-              <div className="relative">
-                <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Star className="w-6 h-6 text-white" />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
-              </div>
-              <div>
-                <h1 className="text-xl font-bold text-white">Zion Tech Group</h1>
-                <p className="text-xs text-gray-400">Innovation • Intelligence • Impact</p>
-              </div>
-            </Link>
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
-              {navigationItems.map((item) => (
-                <div key={item.name} className="relative group">
-                  <button
-                    onClick={() => setActiveSubmenu(activeSubmenu === item.name ? null : item.name)}
-                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"
-                  >
-                    <item.icon className="w-4 h-4" />
-                    <span>{item.name}</span>
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                      activeSubmenu === item.name ? 'rotate-180' : ''
-                    }`} />
-                  </button>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                  {/* Submenu */}
-                  <AnimatePresence>
-                    {activeSubmenu === item.name && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 10 }}
-                        transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-2xl shadow-2xl overflow-hidden"
-                      >
-                        <div className="p-6">
-                          {item.submenu?.map((subitem) => (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                             <Link
                               key={subitem && subitem.name}
                               href={subitem && subitem.href}
                               onClick={() => setActiveSubmenu(null)}
-<<<<<<< HEAD
                               className="group block p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200 mb-2 last:mb-0";
                             >;
                               <div className="flex items-start space-x-3">;
@@ -696,29 +527,16 @@ export default function EnhancedNavigation2025() {;
                                           {service}
                                         </span>;
                                       ))}
-<<<<<<< HEAD
                                       {subitem && subitem.services.length > 2 && (;
                                         <span className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md">;
                                           +{subitem && subitem.services.length - 2} more;
                                         </span>;
-=======
-                                      {subitem.services.length > 2 && (
-                                        <span className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md">
-                                          +{subitem.services.length - 2} more
-                                        </span>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                                       )}
                                     </div>;
                                   )}
-<<<<<<< HEAD
                                 </div>;
                               </div>;
                             </Link>;
-=======
-                                </div>
-                              </div>
-                            </Link>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                           ))}
                         </div>;
                       </motion && motion.div>;
@@ -726,23 +544,18 @@ export default function EnhancedNavigation2025() {;
                   </AnimatePresence>;
                 </div>;
               ))}
-<<<<<<< HEAD
+
             </div>;
-            {/* CTA Buttons */}
-            <div className="hidden lg:flex items-center space-x-4">;
-=======
-            </div>
-<<<<<<< HEAD
+
+
 =======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* CTA Buttons */}
-            <div className="hidden lg:flex items-center space-x-4">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+            <div className="hidden lg:flex items-center space-x-4">;
               <Link
                 href="/pricing"
                 className="px-6 py-2 text-gray-300 hover:text-white transition-colors duration-200">;
@@ -750,32 +563,26 @@ export default function EnhancedNavigation2025() {;
               </Link>;
               <Link
                 href="/contact"
-<<<<<<< HEAD
+
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">;
                 Get Started;
               </Link>;
             </div>;
-=======
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Get Started
-              </Link>
-            </div>
-<<<<<<< HEAD
+
+
 =======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
               className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200">;
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-<<<<<<< HEAD
+
+=======
 ];
 }];
 </div> </div> </div> </div> {
@@ -981,78 +788,49 @@ function EnhancedNavigation2025() {
               className="lg:hidden p - 2 text - gray - 300 hover:text - white transition - colors duration - 200";
             >;
               {is_open ? <X className="w - 6 h - 6" /> : <Menu className="w - 6 h - 6" />}
+
             </button>;
           </div>;
         </div>;
       </nav>;
-                    </div>;
-                    <ChevronDownclassName={`w-4 h-4 transition-transform duration-200 ${
-                      activeDropdown === item && item.name ? 'rotate-180' : ''
-                    }`} />;
-                  </button>;
-                  {activeDropdown === item && item.name && (;
-                    <motion&& motion.div
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {/* Mobile Menu */}
+      <AnimatePresence>;
+        {isOpen && (;
+          <motion&& motion.div
+            initial={{ opacity: 0, x: '100%' }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: '100%' }}
+            transition={{ duration: 0 && 0.3 }}
+                      {item && item.badge && (
+                        <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full">;
+                          {item && item.badge}
+                        </span>;
+                      )}
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  {activeDropdown === item.name && (
+                    <motion.div
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0 && 0.2 }}
                       className="ml-8 mt-2 space-y-2">;
                       {item && item.children?.map((child) => (;
-=======
-            </button>
-          </div>
-        </div>
-      </nav>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
-            transition={{ duration: 0.3 }}
-                      {item.badge && (
-                        <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full">
-                          {item.badge}
-                        </span>
-                      )}
-                    </div>
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                      activeDropdown === item.name ? 'rotate-180' : ''
-                    }`} />
-                  </button>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                  {activeDropdown === item.name && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.2 }}
-                      className="ml-8 mt-2 space-y-2"
-                    >
-                      {item.children?.map((child) => (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         <Link
                           key={child && child.name}
                           href={child && child.href}
                           className="block px-4 py-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-200"
                           onClick={() => setIsOpen(false)}
-<<<<<<< HEAD
                           className="block p-2 text-gray-300 hover:text-white transition-colors text-sm";
                         >;
                           <subItem && subItem.icon className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200" />;
@@ -1060,31 +838,18 @@ function EnhancedNavigation2025() {
                             {subItem && subItem.name}
                           </span>;
                         </Link>;
-=======
-                          className="block p-2 text-gray-300 hover:text-white transition-colors text-sm"
-                        >
-                          <subItem.icon className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200" />
-                          <span className="text-gray-300 group-hover:text-white transition-colors duration-200">
-                            {subItem.name}
-                          </span>
-                        </Link>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       ))}
                     </motion && motion.div>;
                   )}
                 </div>;
               ))}
-<<<<<<< HEAD
+
+
+
+
+
               {/* Mobile CTA */}
               <div className="pt-4">;
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-              {/* Mobile CTA */}
-              <div className="pt-4">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <Link
                   href="/contact"
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300"
@@ -1098,19 +863,16 @@ function EnhancedNavigation2025() {
             <div
               className="absolute inset-0 bg-black/50 backdrop-blur-sm"
               onClick={closeMenu}
-<<<<<<< HEAD
+
             />;
+
+
 =======
-            />
-<<<<<<< HEAD
-=======
+
             
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Menu Panel */}
             <div className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-md border-l border-gray-700/50 overflow-y-auto">;
               <div className="p-6">;
@@ -1118,16 +880,19 @@ function EnhancedNavigation2025() {
                 <div className="flex justify-end mb-6">;
                   <button
                     onClick={closeMenu}
+
                     className="p-2 text-gray-400 hover:text-white transition-colors duration-200">;
                     <X className="w-6 h-6" />;
                   </button>;
                 </div>;
+
+
                 {/* Mobile Navigation Items */}
-<<<<<<< HEAD
                 <div className="space-y-4">;
                   {navigationItems && navigationItems.map((item) => (;
                     <div key={item && item.name}>;
                       <button
+
                         onClick={() => setActiveSubmenu(activeSubmenu === item && item.name ? null : item && item.name)}
                         className="flex items-center justify-between w-full text-left p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200";
                       >;
@@ -1139,6 +904,14 @@ function EnhancedNavigation2025() {
                           activeSubmenu === item && item.name ? 'rotate-180' : ''
                         }`} />;
                       </button>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       {/* Mobile Submenu */}
                       <AnimatePresence>;
                         {activeSubmenu === item && item.name && (;
@@ -1163,7 +936,16 @@ function EnhancedNavigation2025() {
                       </AnimatePresence>;
                     </div>;
                   ))}
+
                 </div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Mobile CTA */}
                 <div className="mt-8 space-y-4">;
                   <Link
@@ -1175,10 +957,13 @@ function EnhancedNavigation2025() {
                   <Link
                     href="/contact"
                     onClick={closeMenu}
+
                     className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">;
                     Contact Us;
                   </Link>;
                 </div>;
+
+
                 {/* Mobile Contact Info */}
                 <div className="mt-8 pt-6 border-t border-gray-700/50">;
                   <div className="space-y-3 text-sm">;
@@ -1367,13 +1152,49 @@ className="ml - 8 space - y-2";
                 </div>;
               </div>;
             </div>;
+
+                {/* Mobile Contact Info */}
+                <div className="mt-8 pt-6 border-t border-gray-700/50">
+                  <div className="space-y-3 text-sm">
+                    <div className="flex items-center space-x-3 text-gray-400">
+                      <Phone className="w-4 h-4 text-cyan-400" />
+                      <span>{contactInfo.phone}</span>
+                    </div>
+                    <div className="flex items-center space-x-3 text-gray-400">
+                      <Mail className="w-4 h-4 text-purple-400" />
+                      <span>{contactInfo.email}</span>
+                    </div>
+                    <div className="flex items-start space-x-3 text-gray-400">
+                      <MapPin className="w-4 h-4 text-green-400 mt-0.5" />
+                      <span className="text-xs">{contactInfo.address}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {/* Spacer for fixed navigation */}
+      <div className="h-20" />
+    </>
+  )
+}
+
+
       </AnimatePresence>;
       {/* Spacer for fixed navigation */}
       <div className="h-20" />;
     </>;
   );
 };
-export default EnhancedNavigation2025;
+
+=======
           </motion.div>)}
       </AnimatePresence>;
 =======
@@ -1458,6 +1279,5 @@ export default EnhancedNavigation2025;
 }
 <<<<<<< HEAD
 ;
-=======
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

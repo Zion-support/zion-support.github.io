@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -17,12 +18,10 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
-<<<<<<< HEAD
 
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React from "react";
 type EnhancedLoadingProps = {;
   lines?: number;
@@ -33,8 +32,7 @@ export default function EnhancedLoading(): any ({ lines = 3 }: EnhancedLoadingPr
       {Array && Array.from({ length: lines }).map((_, idx) => (;
         <div key={idx} className="skeleton h-4 rounded" />;
       ))}
-    </div>;
-  );
+
 import React from './react';
 type EnhancedLoadingProps = {
   lines?: number;
@@ -49,21 +47,14 @@ function EnhancedLoading() {
       {Array.from ({ length: lines }).map ((_, idx) => (
         <div key={idx} className="skeleton h - 4 rounded" />))}
     </div>);
-      ))}
-<<<<<<< HEAD
-    </div>;
-=======
-    </div>
-<<<<<<< HEAD
-  )
 
 }
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+    </div>
+
   );
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

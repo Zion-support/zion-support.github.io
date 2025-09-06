@@ -17,24 +17,14 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
-interface CommunityProfilePageProps {
-  // Add props here as needed
-export default function CommunityProfilePage({ }: CommunityProfilePageProps) {
-=======
 
 const CommunityProfilePage = ({ className }) => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <div className={className || ''}>
       <h1>CommunityProfilePage</h1>
       <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
 };
 
 export default CommunityProfilePage;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -1,4 +1,15 @@
-<<<<<<< HEAD
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default function Revolutionary2026ServicesPage() {
+  return (
+    <>
+      <Head>
+        <title>Revolutionary 2026 Services - Zion Tech Group</title>
+
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -23,6 +34,70 @@ import Revolutionary2026UltimateNavigation from '../components / layout / Revolu
 import Revolutionary2026UltimateHero from '../components / sections / Revolutionary2026UltimateHero';
 import Revolutionary2026UltimateServicesShowcase from '../components / sections / Revolutionary2026UltimateServicesShowcase';
 import {Phone, Mail} from 'lucide-react';
+
+        <meta
+          name='description'
+          content='Experience the future with our cutting-edge AI, quantum computing, and emerging technology services. Transform your business with autonomous intelligence and quantum-powered solutions.'
+        />;
+        <meta
+          name='keywords'
+          content='AI services, quantum computing, emerging technology, healthcare biotech, fintech blockchain, 2026 technology, Zion Tech Group'
+
+        />;
+        <meta name='viewport' content='width=device-width, initial-scale=1' />;
+
+
+        {/* Open Graph */}
+        <meta
+          property='og:title'
+          content='Revolutionary 2026 Services - Zion Tech Group'
+        />;
+        <meta
+          property='og:description'
+          content='Experience the future with our cutting-edge AI, quantum computing, and emerging technology services.'
+        />;
+        <meta property='og:type' content='website' />;
+        <meta
+          property='og:url'
+          content='https://ziontechgroup && ziontechgroup.com/revolutionary-2026-services'
+        />;
+        <meta
+          property='og:image'
+
+          content='https://ziontechgroup && ziontechgroup.com/og-image-revolutionary-2026 && 2026.jpg'
+        />;
+
+
+        {/* Twitter */}
+        <meta name='twitter:card' content='summary_large_image' />;
+        <meta
+          name='twitter:title'
+          content='Revolutionary 2026 Services - Zion Tech Group'
+        />;
+        <meta
+          name='twitter:description'
+          content='Experience the future with our cutting-edge AI, quantum computing, and emerging technology services.'
+        />;
+        <meta
+          name='twitter:image'
+
+          content='https://ziontechgroup && ziontechgroup.com/og-image-revolutionary-2026 && 2026.jpg'
+        />;
+
+
+        {/* Additional Meta */}
+        <meta name='robots' content='index, follow' />;
+        <meta name='author' content='Zion Tech Group' />;
+        <meta name='contact' content='kleber@ziontechgroup && ziontechgroup.com' />;
+        <meta name='phone' content='+1 302 464 0950' />;
+        <meta
+          name='address'
+          content='364 E Main St STE 1008 Middletown DE 19709'
+
+        />;
+
+
+=======
 export default /**
  * Revolutionary2026ServicesPage - Function description
  */
@@ -82,157 +157,14 @@ function Revolutionary2026ServicesPage() {
           content='364 E Main St STE 1008 Middletown DE 19709';
         />;
         {/* Structured Data */}
-        <script;
-          type='application / ld + json';
-          dangerouslySetInnerHTML={{
+
             __html: JSON && JSON.stringify({
               '@context': 'https://schema && schema.org',
               '@type': 'Organization',
               name: 'Zion Tech Group',
               url: 'https://ziontechgroup && ziontechgroup.com',
               logo: 'https://ziontechgroup && ziontechgroup.com/logo && logo.png',
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-import Revolutionary2026UltimateNavigation from '../components/layout/Revolutionary2026UltimateNavigation';
-import Revolutionary2026UltimateHero from '../components/sections/Revolutionary2026UltimateHero';
-import Revolutionary2026UltimateServicesShowcase from '../components/sections/Revolutionary2026UltimateServicesShowcase';
-import {Phone, Mail} from 'lucide-react';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React from 'react',
-import Head from 'next/head',
-import Revolutionary2026UltimateNavigation from '../components/layout/Revolutionary2026UltimateNavigation',
-import Revolutionary2026UltimateHero from '../components/sections/Revolutionary2026UltimateHero',
-<<<<<<< HEAD
-import Revolutionary2026UltimateServicesShowcase from '../components/sections/Revolutionary2026UltimateServicesShowcase';
-import { Phone, Mail } from 'lucide-react';
-=======
-import Revolutionary2026UltimateServicesShowcase from '../components/sections/Revolutionary2026UltimateServicesShowcase',
-import { Phone, Mail } from 'lucide-react',
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export default function Revolutionary2026ServicesPage() {
-  return (
-    <>
-      <Head>
-        <title>Revolutionary 2026 Services - Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        <meta
-          name='description'
-          content='Experience the future with our cutting-edge AI, quantum computing, and emerging technology services. Transform your business with autonomous intelligence and quantum-powered solutions.'
-        />
-        <meta
-          name='keywords'
-          content='AI services, quantum computing, emerging technology, healthcare biotech, fintech blockchain, 2026 technology, Zion Tech Group'
-        />
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-        {/* Open Graph */}
-        <meta
-          property='og:title'
-          content='Revolutionary 2026 Services - Zion Tech Group'
-        />
-        <meta
-          property='og:description'
-          content='Experience the future with our cutting-edge AI, quantum computing, and emerging technology services.'
-        />
-        <meta property='og:type' content='website' />
-        <meta
-          property='og:url'
-          content='https://ziontechgroup.com/revolutionary-2026-services'
-        />
-        <meta
-          property='og:image'
-          content='https://ziontechgroup.com/og-image-revolutionary-2026.jpg'
-        />
-        {/* Twitter */}
-        <meta name='twitter:card' content='summary_large_image' />
-        <meta
-          name='twitter:title'
-          content='Revolutionary 2026 Services - Zion Tech Group'
-        />
-        <meta
-          name='twitter:description'
-          content='Experience the future with our cutting-edge AI, quantum computing, and emerging technology services.'
-        />
-        <meta
-          name='twitter:image'
-          content='https://ziontechgroup.com/og-image-revolutionary-2026.jpg'
-        />
-        {/* Additional Meta */}
-        <meta name='robots' content='index, follow' />
-        <meta name='author' content='Zion Tech Group' />
-        <meta name='contact' content='kleber@ziontechgroup.com' />
-        <meta name='phone' content='+1 302 464 0950' />
-        <meta
-          name='address'
-          content='364 E Main St STE 1008 Middletown DE 19709'
-        />
-        {/* Structured Data */}
-=======
-        <meta name="description" content="Experience the future with our cutting-edge AI, quantum computing, and emerging technology services. Transform your business with autonomous intelligence and quantum-powered solutions." />
-        <meta name="keywords" content="AI services, quantum computing, emerging technology, healthcare biotech, fintech blockchain, 2026 technology, Zion Tech Group" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* Open Graph */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <meta property="og:title" content="Revolutionary 2026 Services - Zion Tech Group" />
-        <meta property="og:description" content="Experience the future with our cutting-edge AI, quantum computing, and emerging technology services." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/revolutionary-2026-services" />
-        <meta property="og:image" content="https://ziontechgroup.com/og-image-revolutionary-2026.jpg" />
-        {/* Twitter */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Revolutionary 2026 Services - Zion Tech Group" />
-        <meta name="twitter:description" content="Experience the future with our cutting-edge AI, quantum computing, and emerging technology services." />
-        <meta name="twitter:image" content="https://ziontechgroup.com/og-image-revolutionary-2026.jpg" />
-        {/* Additional Meta */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Zion Tech Group" />
-        <meta name="contact" content="kleber@ziontechgroup.com" />
-        <meta name="phone" content="+1 302 464 0950" />
-        <meta name="address" content="364 E Main St STE 1008 Middletown DE 19709" />
-        {/* Structured Data */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-<<<<<<< HEAD
-              '@context': 'https://schema.org'
-              '@type': 'Organization'
-              name: 'Zion Tech Group'
-              url: 'https://ziontechgroup.com'
-              logo: 'https://ziontechgroup.com/logo.png'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               description:
                 'Revolutionary AI, quantum computing, and emerging technology services for 2026'
               address: {
@@ -244,7 +176,7 @@ export default function Revolutionary2026ServicesPage() {
                 addressCountry: 'US'
               }
               contactPoint: {
-<<<<<<< HEAD
+
         <meta name="description" content="Experience the future with our cutting-edge AI, quantum computing, and emerging technology services. Transform your business with autonomous intelligence and quantum-powered solutions." />
         <meta name="keywords" content="AI services, quantum computing, emerging technology, healthcare biotech, fintech blockchain, 2026 technology, Zion Tech Group" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -386,8 +318,10 @@ export default function Revolutionary2026ServicesPage() {_return (
                 We're not just another technology company. We're pioneers in the future of AI, quantum computing;
                 and emerging technologies, delivering revolutionary solutions that transform industries.
               </p>
+
             </div>
             {/* Features Grid */}
+
                 '@type': 'ContactPoint',
                 telephone: '+1-302-464-0950',
                 contactType: 'customer service',
@@ -467,6 +401,7 @@ export default function Revolutionary2026ServicesPage() {_return (
               ].map((feature, index) => (;
                 <div key={index} className='group'>;
                   <div className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-500 hover:transform hover:scale-105'>;
+
                     <div
                       className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${feature && feature.color} flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform`}>;
                       {feature && feature.icon}
@@ -478,29 +413,9 @@ export default function Revolutionary2026ServicesPage() {_return (
                       {feature && feature.description}
                     </p>                  </div>;
                 </div>;
+
               ))}
-            </div>;
-            {/* Call to Action */}
-            <div className='text-center'>;
-              <div className='bg-gradient-to-r from-purple-900/20 to-cyan-900/20 rounded-3xl p-12 border border-purple-500/20'>;
-                <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
-                  Ready to Experience the Future?;
-                </h3>;
-                <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>;
-                  Join thousands of forward-thinking companies already using our;
-                  revolutionary services to gain competitive advantages and;
-                  accelerate innovation.;
-                </p>;
-                <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-                  <a
-                    href='tel:+13024640950'
-                    className='bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 flex items-center justify-center gap-2'>;
-                    <Phone className='w-5 h-5' />;
-                    Call +1 302 464 0950;
-                  </a>;
-                  <a
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {[
+
                 {
                   icon: '🧠',
                   title: 'AI Consciousness',
@@ -707,14 +622,29 @@ color: 'from-indigo-500 to-purple-500'
                     <p className="text-gray-400 leading-relaxed">{feature.description}</p>
                   </div>
                 </div>
-<<<<<<< HEAD
-              ))}
-            </div>
-<<<<<<< HEAD
-{/* Call to Action */}
+
             <div className="text-center">
               <div className="bg-gradient-to-r from-purple-900/20 to-cyan-900/20 rounded-3xl p-12 border border-purple-500/20">
                 <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">
+=======
+
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </div>;
+            {/* Call to Action */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            <div className="text-center">
+              <div className="bg-gradient-to-r from-purple-900/20 to-cyan-900/20 rounded-3xl p-12 border border-purple-500/20">
+                <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   Ready to Experience the Future?
                 </h3>
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -776,19 +706,14 @@ color: 'from-indigo-500 to-purple-500'
                     Email Us
 <<<<<<< HEAD
                   </a>
-=======
-                  </Link>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </div>
               </div>
             </div>
           </div>
         </section>
       </main>
-<<<<<<< HEAD
-    </>
-<<<<<<< HEAD
-href='mailto:kleber@ziontechgroup && ziontechgroup.com'
+
+                    href='mailto:kleber@ziontechgroup && ziontechgroup.com'
                     className='border border-purple-500/50 text-purple-400 hover:bg-purple-500/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2'>;
                     <Mail className='w-5 h-5' />                    Email Us;
             __html: JSON.stringify ({
@@ -924,44 +849,8 @@ href='mailto:kleber@ziontechgroup && ziontechgroup.com'
                     className='border border - purple - 500 / 50 text - purple - 400 hover:bg - purple - 500 / 10 font - semibold py - 4 px - 8 rounded - xl transition - all duration - 300 flex items - center justify - center gap - 2';
                   >;
                     <Mail className='w - 5 h - 5' />                    Email Us;
-=======
-<<<<<<< HEAD
-  );
-=======
-=======
-<<<<<<< HEAD
-    </>;
-  );
 
-}
-=======
-    </>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  )
-            <div className="text-center">;
-              <div className="bg-gradient-to-r from-purple-900/20 to-cyan-900/20 rounded-3xl p-12 border border-purple-500/20">;
-                <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">;
-                  Ready to Experience the Future?;
-                </h3>;
-                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
-                  Join thousands of forward-thinking companies already using our revolutionary services;
-                  to gain competitive advantages and accelerate innovation.;
-                </p>;
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                  <a;
-                    href="tel:+13024640950";
-                    className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 flex items-center justify-center gap-2";
-                  >;
-                    <Phone className="w-5 h-5" />;
-                    Call +1 302 464 0950;
-                  </a>;
-                  <a;
-                    href="mailto:kleber@ziontechgroup.com";
-                    className="border border-purple-500/50 text-purple-400 hover:bg-purple-500/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2";
-                  >;
-                    <Mail className="w-5 h-5" />;
-                    Email Us;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   </a>;
                 </div>;
               </div>;
@@ -969,22 +858,15 @@ href='mailto:kleber@ziontechgroup && ziontechgroup.com'
           </div>;
         </section>;
       </main>;
-<<<<<<< HEAD
-  )
-}
+
+
+=======
     </>);
 ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
-    </>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

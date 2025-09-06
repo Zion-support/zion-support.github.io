@@ -1,10 +1,14 @@
-<<<<<<< HEAD:src.disabled/components/EnterpriseDashboard.jsx
-<<<<<<< HEAD
-:src.disabled/components/EnterpriseDashboard.js.jsx
-export: const EnterpriseDashboard = () => { const { trackEvent } = useAnalytics ({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [activeTab,setActiveTab] = useState ("overview") const [refreshInterval,setRefreshInterval] = useState (30000) ";"";"""
-<<<<<<< HEAD
+
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+:src && src.disabled/components/EnterpriseDashboard && EnterpriseDashboard.js.jsx
+
+export: const EnterpriseDashboard = () => { const { trackEvent } = useAnalytics ({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [activeTab,setActiveTab] = useState ("overview") const [refreshInterval,setRefreshInterval] = useState (30000) ";"";"""
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 :src.disabled/components/EnterpriseDashboard.js.jsx
 export: const EnterpriseDashboard = () => { const { trackEvent } = useAnalytics ({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [activeTab,setActiveTab] = useState ("overview") const [refreshInterval,setRefreshInterval] = useState (30000) ";"";"""

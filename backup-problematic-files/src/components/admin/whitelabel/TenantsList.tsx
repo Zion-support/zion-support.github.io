@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-.order('created_at', { ascending: false }),;
-}
-}
-        .order ('created_at', { ascending: false }),
-=======
 import React, { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import {logErrorToProduction} from '@/utils/productionLogger',;
@@ -244,7 +238,6 @@ export function TenantsList() {;
   error ;
 }= await supabase .from ('whitelabel tenants') if (error) throw error;
 //Update local state setTenants (tenants.map (t => ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 };
 const verifyDns = async (tenant: WhitelabelTenant) => {;

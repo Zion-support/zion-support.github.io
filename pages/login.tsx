@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -17,36 +18,27 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "./components/Layout";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from './components/Layout';
+
+=======
 import React, { useState } from './react';
 import Head from './next / head';
 import Link from './next / link';
 import { motion  } from './framer-motion';
 import Layout from "./components / Layout";
 import {
-<<<<<<< HEAD
+
 import {;
   Mail,;
   Lock,;
@@ -223,6 +215,8 @@ import {;
   SleepyFace2,;
   YawningFace2,;
   DizzyFace2,;
+
+} from "lucide-react";
 =======
 <<<<<<< HEAD
   Mail,
@@ -409,13 +403,13 @@ import {;
 } from "lucide-react";
   DizzyFace2
 } from 'lucide-react';
-<<<<<<< HEAD
-=======
 >>>>>>> origin/automation-improvements-final
-
 =======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
   Mail
   Lock
   Eye
@@ -592,26 +586,11 @@ import {;
   YawningFace2
   DizzyFace2
 } from "lucide-react";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-export default function LoginPage() {
-  const [formData, setFormData] = useState({
-<<<<<<< HEAD
-    email: ""
-    password: ""
-<<<<<<< HEAD
-export default function LoginPage() {;
-  const [formData, setFormData] = useState({;
-    email: "",;
-    password: "",;
+
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+
 } from './lucide-react';
 ;
 export default /**
@@ -629,28 +608,7 @@ function LoginPage() {
   const handleInputChange = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
     const { name, value } = e.target;
     setFormData ((prev) => ({
-=======
-=======
-    email: "",
-    password: "",;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  });
-  const [showPassword, setShowPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-  const [error, setError] = useState("");
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-<<<<<<< HEAD
-      ...prev
-      [name]: value
-=======
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
       ...prev,
       [name]: value,
   const [error, setError] = useState('');
@@ -664,8 +622,23 @@ function LoginPage() {
 <<<<<<< HEAD
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+export default function LoginPage() {
+  const [formData, setFormData] = useState({
+
+    email: "",
+    password: "",;
+
+  });
+  const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }));
   }
   const handleSubmit = async (e: React.FormEvent) => {
@@ -677,6 +650,8 @@ function LoginPage() {
       ...prev,;
       [name]: value,;
     }));
+
+
     try {;
       // Simulate API call;
 =======
@@ -695,16 +670,12 @@ function LoginPage() {
         // Redirect to dashboard or home page;
         window && window.location.href = "/";
       } else {;
+
         setError("Please fill in all fields");
       }
     } catch (err) {;
       setError("Login failed. Please try again.");
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
     setError('');
     try {
       // Simulate API call
@@ -718,7 +689,12 @@ function LoginPage() {
       }
     } catch (err) {
       setError('Login failed. Please try again.');
-<<<<<<< HEAD
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    } finally {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -729,22 +705,13 @@ function LoginPage() {
     }
   }
   return (
-<<<<<<< HEAD
-=======
-    <Layout>
-      <Head>
-        <title>Login - Zion Tech Group</title>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-        <meta
-          name="description"
-          content="Sign in to your Zion Tech Group account to access your dashboard and services."
-        />
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
         <meta name="description" content="Sign in to your Zion Tech Group account to access your dashboard and services." />
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </Head>
       <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
@@ -761,6 +728,7 @@ function LoginPage() {
               Sign in to your account
             </h2>
             <p className="mt-2 text-sm text-gray-600">
+
     <Layout>;
       <Head>;
         <title>Login - Zion Tech Group</title>;
@@ -783,26 +751,25 @@ function LoginPage() {
               Sign in to your account;
             </h2>;
             <p className="mt-2 text-sm text-gray-600">;
-              Or{" "}
-<<<<<<< HEAD
-              Or{' '}
-=======
-=======
-<<<<<<< HEAD
+
               Or{" "}
 =======
               Or{' '}
 >>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Link
                 href="/contact"
+
                 className="font-medium text-blue-600 hover:text-blue-500">;
                 contact us for access;
               </Link>;
             </p>;
           </motion && motion.div>;
           <motion&& motion.div
+
             className="mt-8 bg-white py-8 px-6 shadow-lg rounded-lg"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -818,22 +785,16 @@ function LoginPage() {
                   {error}
                 </motion && motion.div>;
               )}
-<<<<<<< HEAD
+
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+
 =======
-              <div>
-<<<<<<< HEAD
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-gray-700 mb-2"
-                >
-<<<<<<< HEAD
-=======
+
 =======
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
->>>>>>> origin/automation-improvements-final
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   Email address
                 </label>
                 <div className="relative">
@@ -860,28 +821,13 @@ function LoginPage() {
                     onChange={handleInputChange}
                     className="appearance-none relative block w-full pl-10 pr-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
                     placeholder="Enter your email"
-<<<<<<< HEAD
+
                 <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+
 =======
-                  />
-                </div>
-              </div>
-              <div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-                <label
-                  htmlFor="password"
-                  className="block text-sm font-medium text-gray-700 mb-2"
-                >
-<<<<<<< HEAD
-=======
-=======
-                <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   Password
                 </label>
                 <div className="relative">
@@ -922,35 +868,25 @@ function LoginPage() {
                     ) : (;
                       <Eye className="h-5 w-5 text-gray-400 hover:text-gray-600" />;
                     )}
+
                   </button>;
                 </div>;
               </div>;
               <div className="flex items-center justify-between">;
                 <div className="flex items-center">;
+
                   <input
                     id="remember-me"
                     name="remember-me"
                     type="checkbox"
                     className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-<<<<<<< HEAD
+
                   <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
+
 =======
-                  />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-                  <label
-                    htmlFor="remember-me"
-                    className="ml-2 block text-sm text-gray-900"
-                  >
-<<<<<<< HEAD
-=======
-=======
-                  <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     Remember me
                   </label>
                 </div>
@@ -1135,42 +1071,13 @@ if ( {) {
                   </Link>;
                 </div>;
               </div>;
-=======
-                <button
-                  type="submit"
-                  disabled={isLoading}
-                  className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-                >
-                  {isLoading ? (
-                    <div className="flex items-center">
-                      <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                      Signing in...
-                    </div>
-                  ) : (
-                    <div className="flex items-center">
-                      Sign in
-                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                    </div>
-                  )}
-                </button>
-              </div>
-            </form>
-            <div className="mt-6">
-              <div className="relative">
-                <div className="absolute inset-0 flex items-center">
-                  <div className="w-full border-t border-gray-300" />
-                </div>
-                <div className="relative flex justify-center text-sm">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-                  <span className="px-2 bg-white text-gray-500">
-                    Or continue with
-                  </span>
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
                   <span className="px-2 bg-white text-gray-500">Or continue with</span>
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
               </div>
               <div className="mt-6 grid grid-cols-2 gap-3">
@@ -1192,6 +1099,7 @@ if ( {) {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <p className="text-sm text-gray-600">
+
                 </button>;
               </div>;
             </form>;
@@ -1224,18 +1132,15 @@ if ( {) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
             <p className="text-sm text-gray-600">;
-              Don't have an account?{" "}
-<<<<<<< HEAD
-              Don't have an account?{' '}
-=======
-=======
-<<<<<<< HEAD
+
               Don't have an account?{" "}
 =======
               Don't have an account?{' '}
 >>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Link
                 href="/contact"
                 className="font-medium text-blue-600 hover:text-blue-500">;

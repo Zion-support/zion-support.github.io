@@ -1,4 +1,10 @@
-<<<<<<< HEAD
+
+
+
+
+import React from 'react;';
+import * as React from 'react';
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,6 +30,9 @@ interface SimpleLayoutProps {,;
   title: string,;
   description?: string,;
   children: React && React.ReactNode;
+=======
+
+
 };
 export default function SimpleLayout(): any ({ title, description, children }: SimpleLayoutProps) {,;
   return (,;
@@ -66,24 +75,9 @@ function SimpleLayout() {,
         <title>{title}</title>,
         {description && <meta name="description" content={description} />}
       </Head>,
-      {children}
-    </>);
-}
-<<<<<<< HEAD
-;
-=======
 
-=======
-};
-export default function SimpleLayout({ title, description, children }: SimpleLayoutProps) {,
-  return (,
-    <>,
-      <Head>,
-        <title>{title}</title>,;
-        {description && <meta name="description" content={description} />};
-      </Head>,
       {children};
     </>)
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+

@@ -2,8 +2,6 @@
 =======
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -45,7 +43,6 @@ class TestFileFixer {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -59,8 +56,6 @@ const path = require('path')
       .replace('.test.tsx', '')
       .replace('.test.ts', '')
       .replace('.test.jsx', '')
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -137,7 +132,6 @@ fixer
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       .replace('.test.js', '')
     return `import React from 'react'
 import { render, screen } from '@testing-library/react'
@@ -151,7 +145,6 @@ describe('${componentName}')
     this.log(' Starting Test File Fixer')
     console.log(' Test file fixing completed')
 <<<<<<< HEAD
-    console.error(' Test file fixing "failed")
 =======
 <<<<<<< HEAD
 =======
@@ -175,4 +168,3 @@ describe('${componentName}')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

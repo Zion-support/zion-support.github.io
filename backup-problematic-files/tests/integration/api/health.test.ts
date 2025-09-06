@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // Health.test utility
 export const Health.test = () => {
   // Implementation here

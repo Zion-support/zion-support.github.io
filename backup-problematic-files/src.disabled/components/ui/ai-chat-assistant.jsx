@@ -17,24 +17,14 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
-interface AichatassistantProps {
-  // Add props here as needed
-export default function Aichatassistant({ }: AichatassistantProps) {
-=======
 
 const Ai-chat-assistant = ({ className }) => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <div className={className || ''}>
       <h1>Ai-chat-assistant</h1>
       <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
 };
 
 export default Ai-chat-assistant;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

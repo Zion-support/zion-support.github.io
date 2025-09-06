@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-const inStandalone = window && window.matchMedia('(display-mode: standalone)').matches,;
-        description: 'Your browser does not support app installation.'}),;
-      return;
-    const in_standalone = window.match_media ('(display - mode: standalone)').matches,
-        description: 'Your browser does not support app installation.'}),
-      return;
-=======
 import React, { useEffect, useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Loader2 } from 'lucide-react';
@@ -88,4 +80,3 @@ return (Install App </Button> </div>) ;
 };
 export default PwaInstallButton;
 '
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

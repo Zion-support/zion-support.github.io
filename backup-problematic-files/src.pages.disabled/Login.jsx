@@ -8,7 +8,6 @@ export default function Login({ }: LoginProps) {
 import React from 'react';
 
 const Login = ({ className }) => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <div className={className || ''}>
       <h1>Login</h1>

@@ -1,4 +1,5 @@
 import React from 'react';
+
 ;
 const SEOEnhancer.dynamic = () => {
   return (
@@ -7,4 +8,5 @@ const SEOEnhancer.dynamic = () => {
     </div>);
 }
 ;
+
 export default SEOEnhancer.dynamic;

@@ -37,9 +37,6 @@
   --holographic-glow: 0 0 30px rgba(139, 92, 246, 0.6);
   --cyberpunk-glow: 0 0 25px rgba(236, 73, 153, 0.7);
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -58,7 +55,6 @@
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   --neural-pulse: 0 0 40px rgba(16, 185, 129, 0.4);
   --quantum-entanglement: 0 0 50px rgba(139, 92, 246, 0.3);
   --futuristic-shadow: 0 0 60px rgba(0, 255, 255, 0.3);
@@ -161,9 +157,6 @@
   .form-label {
     @apply block text-sm font-medium text-gray-700 mb-2;
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -172,7 +165,6 @@
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
 
@@ -209,10 +201,7 @@ border-radius: 4px;
   background: linear-gradient(45deg, var(--neon-purple), var(--neon-pink));
 
   }}
-<<<<<<< HEAD
-=======
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple));
@@ -222,9 +211,6 @@ border-radius: 4px;
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(45deg, var(--neon-purple), var(--neon-pink));
-<<<<<<< HEAD
-
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -237,7 +223,6 @@ border-radius: 4px;
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   box-shadow: var(--quantum-glow);
 }
 
@@ -297,11 +282,7 @@ h2 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 <<<<<<< HEAD
-
-background-clip: text;
-}
-  background-clip: text;}
-
+  background-clip: text;
 =======
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -323,8 +304,6 @@ background-clip: text;
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
 
 }
-<<<<<<< HEAD
-=======
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -351,7 +330,6 @@ background-clip: text;
   background-clip: text;}
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 /* Enhanced Body Styles */
 body {
@@ -401,9 +379,6 @@ body::after {
   width: 100%;
   height: 100%;
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -422,7 +397,6 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   background-image: 
     radial-gradient(2px 2px at 20px 30px, rgba(0, 255, 255, 0.8), transparent),
     radial-gradient(2px 2px at 40px 70px, rgba(139, 92, 246, 0.8), transparent),
@@ -438,15 +412,6 @@ body::after {
   background-size: 400px 100px;
   pointer-events: none;
   z-index: -1;
-<<<<<<< HEAD
-
-  animation: particleFloat 30s linear infinite;
-
-}
-  animation: particleFloat 30s linear infinite;}
-
-}
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -486,7 +451,6 @@ body::after {
   animation: particleFloat 30s linear infinite;}
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 /* Enhanced Quantum Grid */
 .quantum-grid {
@@ -614,9 +578,6 @@ body::after {
 /* Enhanced Animations */
 @keyframes backgroundFloat {
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -635,7 +596,6 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   0%, 100% { transform: translateY(0px) rotate(0deg); }
   25% { transform: translateY(-10px) rotate(1deg); }
   50% { transform: translateY(-5px) rotate(-1deg); }
@@ -714,9 +674,6 @@ body::after {
     linear-gradient(-45deg, transparent 40%, rgba(239, 68, 68, 0.05) 50%, transparent 60%);
   background-size: 100px 100px, 100px 100px, 200px 200px, 200px 200px;
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -725,7 +682,6 @@ body::after {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   animation: neuralPulse 20s ease-in-out infinite;
 
 <<<<<<< HEAD
@@ -832,14 +788,6 @@ body::after {
 @keyframes neuralPulse {
   0%, 100% { 
   animation: neuralPulse 20s ease-in-out infinite;}
-<<<<<<< HEAD
-
-}
-
-@keyframes neuralPulse {
-  0%, 100% { 
-
-=======
 >>>>>>> main
 
 @keyframes neuralPulse {
@@ -860,7 +808,6 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     background-size: 100px 100px, 100px 100px, 200px 200px, 200px 200px;
     opacity: 0.5;
   }
@@ -1013,9 +960,6 @@ body::after {
   }
   75% { 
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1024,7 +968,6 @@ body::after {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     transform: translateX(-20px) scale(1.1);
     opacity: 1;
   }
@@ -1040,7 +983,6 @@ body::after {
     box-shadow: 0 0 50px rgba(16, 185, 129, 0.8);
     opacity: 0.8;
 <<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
 
@@ -1066,8 +1008,6 @@ body::after {
   }
 }
 
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
   }
@@ -1115,7 +1055,6 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 @keyframes quantumEntanglement {
   0%, 100% { 
     transform: translateY(0) scale(1);
@@ -1137,11 +1076,6 @@ body::after {
 
 /* Enhanced Button Effects */
 <<<<<<< HEAD
-
-.quantum-button {
-
-=======
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1155,7 +1089,6 @@ body::after {
 /* Enhanced Particle Effects */
 .particle-bg {
 <<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   position: relative;
   overflow: hidden;
 }
@@ -1201,9 +1134,6 @@ body::after {
 .btn-futuristic {
 
   position: relative;
-<<<<<<< HEAD
-
-=======
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
@@ -1221,7 +1151,6 @@ body::after {
 .quantum-button {  position: relative;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   overflow: hidden;
   transition: all 0.3s ease;
 }
@@ -1274,16 +1203,6 @@ body::after {
   width: 100%;
   height: 100%;
 <<<<<<< HEAD
-
-  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.2), transparent);
-
-  transition: left 0.5s ease;
-  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.2), transparent);  transition: left 0.5s ease;
-
-  transition: left 0.5s ease;
-
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1316,15 +1235,12 @@ body::after {
   background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.2), transparent);  transition: left 0.5s ease;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 
 .futuristic-card:hover::before {
   left: 100%;
 }
 
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1344,7 +1260,6 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 .futuristic-card:hover {
   transform: translateY(-5px) scale(1.02);
   box-shadow: 
@@ -1491,11 +1406,6 @@ body::after {
   bottom: -50px;
   right: -50px;
 <<<<<<< HEAD
-
-  animation-delay: 3s;
-
-=======
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1510,7 +1420,6 @@ body::after {
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(0, 255, 255, 0.3);
 <<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 
 /* Enhanced Card Hover Effects */
@@ -1600,8 +1509,6 @@ body::after {
   filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.5));
 
 }
-<<<<<<< HEAD
-=======
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
@@ -1619,7 +1526,6 @@ body::after {
   animation-delay: 3s;}
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 @keyframes entanglement {
   0%, 100% { 
@@ -2170,9 +2076,6 @@ body::after {
 /* Enhanced responsive design */
 @media (max-width: 768px) {
 <<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -2191,7 +2094,6 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   .mobile-optimized {
     padding: 1rem;
     margin: 0.5rem;
@@ -2206,15 +2108,12 @@ body::after {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 /* Enhanced accessibility */
 
 <<<<<<< HEAD
@@ -2245,16 +2144,12 @@ body::after {
 /* Enhanced accessibility */@media (prefers-reduced-motion: reduce) {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   *,
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-<<<<<<< HEAD
-
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2274,7 +2169,6 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
 
@@ -2297,11 +2191,6 @@ body::after {
     background: #ffffff !important;
   }
 <<<<<<< HEAD
-
-}
-}
-=======
-<<<<<<< HEAD
 }
 =======
   }
@@ -2319,7 +2208,6 @@ body::after {
 }
 <<<<<<< HEAD
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 /* Enhanced Focus States */
 *:focus {
@@ -2359,4 +2247,3 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
