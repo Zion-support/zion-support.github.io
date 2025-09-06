@@ -167,7 +167,6 @@ if (typeof window !== 'undefined') {
     });
   });
 
-<<<<<<< HEAD
 // Create advanced caching system
 function createAdvancedCaching() {
   console.log('\n💾 Creating advanced caching system...');

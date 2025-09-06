@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-import path from 'path';
+import _path from 'path';
 
 console.log('🔧 Fixing all syntax errors...');
 
@@ -129,7 +129,7 @@ const main = () => {
   if (successCount > 0) {
     console.log('\n📝 Adding fixed files...');
     try {
-      const { execSync } = require('child_process');
+      const { execSync } = await import('child_process');
       execSync('git add .', { stdio: 'inherit' });
       console.log('✅ Files added to staging area');
     } catch (error) {
