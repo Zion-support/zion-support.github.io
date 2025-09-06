@@ -25,7 +25,6 @@ const formSchema = z.object({
 
   additionalClauses: z.array(z.string()).optional()}),
 
-<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -279,12 +278,3 @@ export function ContractForm({;
   );
 }
 ;
-=======
-export type ContractFormValues = z.infer<typeof formSchema>;
-
-        values, 
-        talent, 
-        clientName, 
-
-}
->>>>>>> main

@@ -64,7 +64,6 @@ export function FaqSection() {
             <h3 className='text-xl font-bold text-white'>Common Questions</h3>
           </div>
 
-<<<<<<< HEAD
 import { GradientHeading } from "./GradientHeading",
 import {
   Accordion,
@@ -190,30 +189,3 @@ export function FaqSection() {;
             {faqs.map((faq, index) => (;
               <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">;
                 <AccordionTrigger className="text-white hover:text-zion-cyan">;
-=======
->>>>>>> main
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className='text-zion-slate-light'>                  {faq.answer}
-
-                  {faq.answer}
-
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-<<<<<<< HEAD
-          </Accordion>;
-        </div>;
-      </div>;
-    </section>;
-  );
-}
-;
-=======
-          </Accordion>
-        </div>
-      </div>
-    </section>
-  );
-}
->>>>>>> main

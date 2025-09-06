@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link',;
 import { Heart } from 'lucide-react';
 import { useWishlist } from '@/hooks/useWishlist',;
@@ -100,22 +99,10 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
         imageUrl});
     }
   },
-=======
-const stockStatus =
-    product.stock === undefined
-      : 'In stock';
-
-  const stockVariant =
-    product.stock === undefined
-
-  const imageUrl = Array.isArray(product.images) && product.images.length > 0 ? product.images[0] : null;
-  const imageAltText = productTitle;
->>>>>>> main
 
   const isMobile = useMediaQuery('(max-width: 768px)'),
   const isTablet = useMediaQuery('(max-width: 1200px)'),
 
-<<<<<<< HEAD
   const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw',
 
   return (
@@ -234,9 +221,3 @@ const stockStatus =
   );
 }
 ;
-=======
-  const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
-
-  )
-}
->>>>>>> main

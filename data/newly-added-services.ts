@@ -1,7 +1,6 @@
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 
 const contact = {
-<<<<<<< HEAD
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1728,17 +1727,3 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   }
 ];
 
-=======
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',};
-
-export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
-  {
-
-};
-
-export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
-  {
->>>>>>> main

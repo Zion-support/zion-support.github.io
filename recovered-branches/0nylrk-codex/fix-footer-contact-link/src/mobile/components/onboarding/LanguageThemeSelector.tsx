@@ -1,23 +1,14 @@
 
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { useTheme } from "@/hooks/useTheme",
 import { Moon, Sun, Check } from "lucide-react",
 import { Card, CardContent } from "@/components/ui/card",
-=======
-import React, { useState } from "react";
-import {Button} from "@/components/ui/button";
-import {useTheme} from "@/hooks/useTheme";
-import {Moon, Sun, Check} from "lucide-react";
-import {Card, CardContent} from "@/components/ui/card";
->>>>>>> main
 
 interface Language {
   code: string,
   name: string,
   flag: string
-<<<<<<< HEAD
 }
 
 const languages: Language[] = [
@@ -88,35 +79,6 @@ export function LanguageThemeSelector() {;
                 selectedLanguage === language.code;
                   ? "border-primary bg-primary/5";
                   : "border-border hover:border-primary/40";
-=======
-}
-
-const languages: Language[] = [
-  { code: "en", name: "English", flag: "🇺🇸" },
-  { code: "es", name: "Español", flag: "🇪🇸" },
-  { code: "fr", name: "Français", flag: "🇫🇷" },
-  { code: "de", name: "Deutsch", flag: "🇩🇪" },
-  { code: "zh", name: "中文", flag: "🇨🇳" }],
-
-export function LanguageThemeSelector() {
-  const { theme, setTheme } = useTheme();
-  const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
-
-  return (
-    <div className="space-y-8 px-4">
-      <div className="space-y-2">
-        <h2 className="text-xl font-medium">Select your language</h2>
-        <p className="text-muted-foreground">Choose your preferred language</p>
-        
-        <div className="grid grid-cols-2 gap-3 mt-4">
-          {languages.map((language) => (
-            <Card 
-              key={language.code}
-              className={`cursor-pointer transition-all ${
-                selectedLanguage === language.code 
-                  ? "border-primary bg-primary/5" 
-                  : "border-border hover:border-primary/40"
->>>>>>> main
               }`}
               onClick={() => setSelectedLanguage(language.code)}
             >
@@ -170,20 +132,11 @@ export function LanguageThemeSelector() {
               {theme === 'dark' && (
                 <Check className="h-4 w-4 text-primary mt-2" />
               )}
-<<<<<<< HEAD
             </CardContent>;
           </Card>;
         </div>;
       </div>;
     </div>;
   );
-=======
-            </CardContent>
-          </Card>
-        </div>
-      </div>
-    </div>
-  )
->>>>>>> main
 }
 ;

@@ -1,10 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 
 function randomString(length: number): string {
-=======
-function randomString(length: number) {
->>>>>>> main
   const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   let res = '';
   const cryptoObj = require('crypto');
@@ -14,7 +10,6 @@ function randomString(length: number) {
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
   try {
     const nonce = randomString(16);
     res.setHeader('Set-Cookie', `siwe-nonce=${nonce}, HttpOnly, Path=/, SameSite=Lax`);
@@ -23,9 +18,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
-  const nonce = randomString(16);
-  res.setHeader('Set-Cookie', `siwe-nonce=${nonce}; HttpOnly; Path=/; SameSite=Lax`);
-  res.status(200).json({ nonce });
->>>>>>> main
 }

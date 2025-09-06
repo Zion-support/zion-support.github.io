@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { 
@@ -58,51 +57,11 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
         location},
 
       const result = await getTalentRateSuggestion(params),
-=======
-import React, { useState } from "react";
-import {Button} from "@/components/ui/button";
-import {getTalentRateSuggestion, PricingSuggestion, TalentRateParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
-import {PricingSuggestionBox} from "./PricingSuggestionBox";
-import {useAuth} from "@/hooks/useAuth";
-import {Sparkles} from "lucide-react";
-interface TalentRateRecommenderProps {
-  skills: string[],
-  yearsExperience: number,
-  location?: string;
-  onSuggestionApplied: (value: number) => void,
-  rateType: "hourly" | "fixed"
-}
-
-export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
-  skills;
-  yearsExperience;
-  location;
-  onSuggestionApplied,
-  rateType}) => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null);
-  const { user } = useAuth();
-
-  const generateSuggestion = async () => {
-    if (skills.length === 0 || yearsExperience <= 0) {
-      return
-    }
-
-    setIsLoading(true);
-    try {
-      const params: TalentRateParams = {
-        skills;
-        yearsExperience,
-        location};
-
-      const result = await getTalentRateSuggestion(params);
->>>>>>> main
       setSuggestion(result)
     } catch (error) {
       console.error("Error generating rate suggestion:", error)
     } finally {
       setIsLoading(false)
-<<<<<<< HEAD
 ;
     setIsLoading(true),;
     try {;
@@ -136,30 +95,6 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
       }
     }
   },
-=======
-    }
-  };
-
-  const handleApplySuggestion = () => {
-    if (suggestion) {
-      // We'll use the middle of the range as the suggested rate
-      const suggestedRate = Math.round((suggestion.minRate + suggestion.maxRate) / 2);
-      onSuggestionApplied(suggestedRate);
-      
-      // Track this suggestion application
-      if (user) {
-        trackPricingSuggestion({
-          userId: user.id,
-          suggestionType: 'talent',
-          suggestedMin: suggestion.minRate,
-          suggestedMax: suggestion.maxRate,
-          actualValue: suggestedRate,
-          accepted: true
-        })
-      }
-    }
-  };
->>>>>>> main
 
   return (
     <div className="space-y-4">
@@ -182,14 +117,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
             rateType={rateType}
           />
         )}
-<<<<<<< HEAD
       </div>;
     </div>;
   );
 };
-=======
-      </div>
-    </div>
-  )
-};
->>>>>>> main

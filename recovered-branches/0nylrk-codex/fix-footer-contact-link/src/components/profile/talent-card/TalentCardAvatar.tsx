@@ -1,17 +1,9 @@
 
-<<<<<<< HEAD
 import React from "react",
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 
 interface TalentCardAvatarProps {
   profilePicture?: string,
-=======
-import React from "react";
-import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
-
-interface TalentCardAvatarProps {
-  profilePicture?: string;
->>>>>>> main
   fullName: string
 }
 
@@ -23,11 +15,7 @@ export function TalentCardAvatar({ profilePicture, fullName }: TalentCardAvatarP
       .map(part => part[0])
       .join('')
       .toUpperCase()
-<<<<<<< HEAD
   },
-=======
-  };
->>>>>>> main
 
   return (
     <Avatar className="w-14 h-14 border-2 border-zion-blue-light">
@@ -36,7 +24,6 @@ export function TalentCardAvatar({ profilePicture, fullName }: TalentCardAvatarP
         alt={fullName} 
       />
       <AvatarFallback className="bg-zion-purple/20 text-zion-purple">
-<<<<<<< HEAD
 import React from "react",;
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
 interface TalentCardAvatarProps {;
@@ -64,11 +51,5 @@ export function TalentCardAvatar({ profilePicture, fullName }: TalentCardAvatarP
       </AvatarFallback>;
     </Avatar>;
   );
-=======
-        {getInitials(fullName)}
-      </AvatarFallback>
-    </Avatar>
-  )
->>>>>>> main
 }
 ;

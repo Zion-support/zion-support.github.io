@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -460,8 +459,3 @@ export default function TranslationManager() {;
   );
 }
 ;
-=======
-for (const lang of supportedLanguages.map(l => l.code)) {
-
-}
->>>>>>> main

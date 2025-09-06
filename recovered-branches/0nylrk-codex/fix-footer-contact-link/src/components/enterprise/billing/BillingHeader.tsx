@@ -1,26 +1,13 @@
-<<<<<<< HEAD
 
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Download, FileText, Mail, BarChart3 } from "lucide-react",
 import { Link } from "react-router-dom",
-=======
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Download, FileText, Mail, BarChart3 } from "lucide-react";
-import { Link } from "react-router-dom";
->>>>>>> main
 export function BillingHeader() {
   return (
     <div className="space-y-2">
       <div className="flex items-center justify-between">
-<<<<<<< HEAD
         <h1 className="text-3xl font-bold tracking-tight">Billing & Invoices</h1>
-=======
-        <h1 className="text-3xl font-bold tracking-tight">
-          Billing & Invoices
-        </h1>
->>>>>>> main
         <div className="flex gap-2">
           <Button variant="outline" size="sm" className="gap-1">
             <Download className="h-4 w-4" />
@@ -39,7 +26,6 @@ export function BillingHeader() {
         </div>
       </div>
       <p className="text-muted-foreground">
-<<<<<<< HEAD
         Manage your subscription, view invoice history, and update payment methods.
       </p>
     </div>
@@ -77,11 +63,3 @@ export function BillingHeader() {;
   );
 }
 ;
-=======
-        Manage your subscription, view invoice history, and update payment
-        methods.
-      </p>
-    </div>
-  );
-}
->>>>>>> main

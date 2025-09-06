@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
@@ -7,15 +6,6 @@ import { ContractFormValues } from "../components/ContractForm",
 interface Milestone {
   title: string,
   description: string,
-=======
-import {supabase} from "@/integrations/supabase/client";
-import {TalentProfile} from "@/types/talent";
-import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
-import {ContractFormValues} from "../components/ContractForm";
-interface Milestone {
-  title: string;
-  description: string;
->>>>>>> main
   dueDate: string,
   estimatedHours: number
 }
@@ -23,22 +13,14 @@ interface Milestone {
 export async function generateContract(
   values: ContractFormValues,
   talent: TalentProfile, 
-<<<<<<< HEAD
   clientName: string,
   generatedMilestones: GeneratedMilestone[]
 ): Promise<string> {
   const additionalClauses = values.additionalClauses || [],
-=======
-  clientName: string;
-  generatedMilestones: GeneratedMilestone[]
-): Promise<string> {
-  const additionalClauses = values.additionalClauses || [];
->>>>>>> main
   
   // Prepare milestone data if we have AI-generated milestones
   const milestoneData = generatedMilestones.length > 0 
     ? generatedMilestones.map(m => ({
-<<<<<<< HEAD
         title: m.title,
         description: m.description,
         dueDate: m.dueDate,
@@ -99,38 +81,12 @@ export async function generateContract(;
   });
   if (error) {;
     throw error;
-=======
-        title: m.title;
-        description: m.description;
-        dueDate: m.dueDate,
-        estimatedHours: m.estimatedHours
-      }))
-    : [];
-  
-  const { data, error } = await supabase.functions.invoke("generate-contract", {
-    body: {
-      talentName: talent.full_name;
-      clientName: clientName;
-      projectName: values.projectName;
-      scopeSummary: values.scopeSummary;
-      startDate: values.startDate.toISOString();
-      endDate: values.endDate?.toISOString();
-      paymentTerms: values.paymentTerms;
-      paymentAmount: values.paymentAmount;
-      additionalClauses: additionalClauses,
-      milestones: milestoneData}
-  });
-  
-  if (error) {
-    throw error
->>>>>>> main
   }
   
   if (data.success && data.contract) {
     return data.contract
   } else {
     throw new Error("Failed to generate contract")
-<<<<<<< HEAD
 ;
   if (data.success && data.contract) {;
     return data.contract;
@@ -139,7 +95,3 @@ export async function generateContract(;
   }
 }
 ;
-=======
-  }
-}
->>>>>>> main

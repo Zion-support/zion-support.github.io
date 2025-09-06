@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from "react",
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
@@ -9,17 +8,6 @@ import { AppScreenshots } from "@/components/mobile-app/AppScreenshots",
 import { AppTestimonials } from "@/components/mobile-app/AppTestimonials",
 import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner",
 import { DownloadSection } from "@/components/mobile-app/DownloadSection",
-=======
-import React from "react";
-import {AppLayout} from "@/layout/AppLayout";
-import {SEO} from "@/components/SEO";
-import {MobileAppHero} from "@/components/mobile-app/MobileAppHero";
-import {AppFeatures} from "@/components/mobile-app/AppFeatures";
-import {AppScreenshots} from "@/components/mobile-app/AppScreenshots";
-import {AppTestimonials} from "@/components/mobile-app/AppTestimonials";
-import {AppStoreBanner} from "@/components/mobile-app/AppStoreBanner";
-import {DownloadSection} from "@/components/mobile-app/DownloadSection";
->>>>>>> main
 const MobileAppPage: React.FC = () => {
   return (
     <AppLayout>
@@ -42,7 +30,6 @@ const MobileAppPage: React.FC = () => {
       <AppStoreBanner />
     </AppLayout>
   )
-<<<<<<< HEAD
 },
 
 export default MobileAppPage,
@@ -72,8 +59,4 @@ const MobileAppPage: React.FC = () => {;
     </AppLayout>;
   );
 },;
-=======
-};
-
->>>>>>> main
 export default MobileAppPage;

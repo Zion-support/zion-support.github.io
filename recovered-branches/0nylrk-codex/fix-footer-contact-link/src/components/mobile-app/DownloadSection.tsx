@@ -1,13 +1,7 @@
 
-<<<<<<< HEAD
 import React from "react",
 import { QrCodeIcon } from "lucide-react",
 import { AppStoreButtons } from "./AppStoreButtons",
-=======
-import React from "react";
-import {QrCodeIcon} from "lucide-react";
-import {AppStoreButtons} from "./AppStoreButtons";
->>>>>>> main
 export const DownloadSection: React.FC = () => {
   // These would typically come from environment variables or a config
   const appStoreUrl = "#", // Replace with actual App Store URL when available
@@ -26,7 +20,6 @@ export const DownloadSection: React.FC = () => {
               
               <AppStoreButtons 
                 className="mb-8" 
-<<<<<<< HEAD
 import React from "react",;
 import { QrCodeIcon } from "lucide-react",;
 import { AppStoreButtons } from "./AppStoreButtons",;
@@ -50,12 +43,6 @@ export const DownloadSection: React.FC = () => {;
                 googlePlayUrl={googlePlayUrl}
                 onAppStoreClick={() => // // // console.log("App Store button clicked")}
                 onGooglePlayClick={() => // // // console.log("Google Play button clicked")}
-=======
-                appStoreUrl={appStoreUrl}
-                googlePlayUrl={googlePlayUrl}
-                onAppStoreClick={() => console.log("App Store button clicked")}
-                onGooglePlayClick={() => console.log("Google Play button clicked")}
->>>>>>> main
               />
               
               <div className="text-sm text-gray-400">
@@ -67,7 +54,6 @@ export const DownloadSection: React.FC = () => {;
             <div className="flex-shrink-0 bg-white p-4 rounded-lg">
               <div className="w-36 h-36 flex items-center justify-center bg-white rounded-lg">
                 <QrCodeIcon className="w-full h-full p-2" />
-<<<<<<< HEAD
                 {/* This would be replaced with an actual QR code in production */}
               </div>
               <p className="text-center text-xs mt-2 text-zion-blue-dark">Scan to download</p>
@@ -96,17 +82,6 @@ export const DownloadSection: React.FC = () => {;
       </div>;
     </section>;
   );
-=======
-                {/* This would be replaced with an actual QR code in production */}
-              </div>
-              <p className="text-center text-xs mt-2 text-zion-blue-dark">Scan to download</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
->>>>>>> main
 };
 
 export default DownloadSection;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React, { useState, useRef, useEffect } from "react",
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
@@ -12,39 +11,12 @@ import { ChatMessage } from "./ChatMessage",
 import { QuickReplyButton } from "./QuickReplyButton",
 import { Send, Loader2 } from 'lucide-react'
 import { useTheme } from "@/hooks/useTheme",
-=======
-import React, { useState, useRef, useEffect } from "react";
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { Separator } from "@/components/ui/separator";
-import { toast } from "@/components/ui/use-toast";
-import { cn } from "@/lib/utils";
-import { ChatMessage } from "./ChatMessage";
-import { QuickReplyButton } from "./QuickReplyButton";
-
-import { useTheme } from "@/hooks/useTheme";
->>>>>>> main
 // Define suggested quick replies
 const QUICK_REPLIES = [
   { id: "hire", text: "How do I hire?" },
   { id: "match", text: "How do I get matched?" },
   { id: "billing", text: "Billing help" }],
-<<<<<<< HEAD
 
-=======
->>>>>>> main
-type Message = {
-  id: string,
-  content: string,
-  sender: "user" | "bot",
-  timestamp: Date
-<<<<<<< HEAD
-},
-=======
-};
->>>>>>> main
 
 export function ChatBotPanel() {
   const [messages, setMessages] = useState<Message[]>([
@@ -53,7 +25,6 @@ export function ChatBotPanel() {
       content: "Hi! How can I help you?",
       sender: "bot",
       timestamp: new Date()}]),
-<<<<<<< HEAD
   const [inputValue, setInputValue] = useState(""),
   const [isLoading, setIsLoading] = useState(false),
   const [failedAttempts, setFailedAttempts] = useState(0),
@@ -552,39 +523,3 @@ export function ChatBotPanel() {;
   );
 }
 ;
-=======
-  const [inputValue, setInputValue] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [failedAttempts, setFailedAttempts] = useState(0);
-  const scrollAreaRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const { theme } = useTheme();
-
-  // Auto-scroll to bottom when messages change
-  useEffect((,) => {
-    if (scrollAreaRef.current) {
-      scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight
-    }
-  }, [messages]);
-
-  // Focus input when component mounts
-  useEffect((,) => {
-    if (inputRef.current) {
-      inputRef.current.focus()
-    }
-  }, []);
-
-      timestamp: new Date()},
-
-      id: `bot-escalation-${Date.now()}`,
-      content: "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
-      sender: "bot",
-      timestamp: new Date()},
-
-  const handleQuickReply = (text: string,) => {
-    handleSendMessage(text)
-  };
-
-  )
-}
->>>>>>> main

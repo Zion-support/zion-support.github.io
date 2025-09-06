@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from 'lucide-react'
 import { Badge } from "@/types/community",
@@ -96,25 +95,4 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
     </div>;
   );
 };
-=======
-interface UserBadgesProps {
-  badges: Badge[]
-}
-
-const iconMap = {
-  Trophy;
-  Award;
-  BadgeCheck;
-  Star;
-  MessageSquare
-};
-
-  return (
-    <div className="flex flex-wrap gap-2">
-      {badges.map((badge,) => {
-        // Get the correct icon component based on the badge's icon name
-
-        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy;
-
->>>>>>> main
 export default UserBadges;

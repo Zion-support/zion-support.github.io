@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -159,15 +158,3 @@ export function JobMatchCard({;
   );
 }
 ;
-=======
-talentId, 
-  name, 
-  title, 
-  company, 
-  avatar, 
-  location, 
-  category, 
-  matchPercent, 
-
-}
->>>>>>> main

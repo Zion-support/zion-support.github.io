@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -8,23 +7,12 @@ import { supabase } from "@/integrations/supabase/client",
 import { AIListingForm } from "./AIListingForm",
 import { GeneratedContentDisplay } from "./GeneratedContentDisplay",
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
-=======
-import React, { useState } from "react";
-import {useToast} from "@/hooks/use-toast";
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
-import {Sparkles} from "lucide-react";
-import {supabase} from "@/integrations/supabase/client";
-import {AIListingForm} from "./AIListingForm";
-import {GeneratedContentDisplay} from "./GeneratedContentDisplay";
-import {LoadingContentSkeleton} from "./LoadingContentSkeleton";
->>>>>>> main
 interface GeneratedContent {
   description: string,
   tags: string[],
   suggestedPrice: {
     min: number,
     max: number
-<<<<<<< HEAD
   },
   keyPoints: string[]
 import React, { useState } from "react",;
@@ -77,47 +65,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       }),;
       if (error) {;
         throw new Error(error.message);
-=======
-  };
-  keyPoints: string[]
-}
-
-interface AIListingGeneratorProps {
-  onApplyGenerated?: (content: GeneratedContent) => void,
-  initialValues?: {
-    title?: string;
-    category?: string;
-    keyFeatures?: string;
-    targetAudience?: string
-  }
-}
-
-export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
-  const { toast } = useToast();
-  const [isLoading, setIsLoading] = useState(false);
-  const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null);
-
-  const handleGenerate = async ({
-    title;
-    category;
-    keyFeatures;
-    targetAudience
-  }: {
-    title: string,
-    category: string,
-    keyFeatures: string,
-    targetAudience: string
-  }) => {
-    setIsLoading(true);
-    
-    try {
-      const { data, error } = await supabase.functions.invoke('ai-listing-generator', {
-        body: { title, category, keyFeatures, targetAudience }
-      });
-
-      if (error) {
-        throw new Error(error.message)
->>>>>>> main
       }
 ;
       if (data.error) {;
@@ -149,11 +96,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         description: "The generated content has been applied to your listing."
       })
     }
-<<<<<<< HEAD
   },
-=======
-  };
->>>>>>> main
 
   return (
     <div className="space-y-6">
@@ -171,7 +114,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
           <AIListingForm 
             onSubmit={handleGenerate} 
             isLoading={isLoading} 
-<<<<<<< HEAD
 ;
       setGeneratedContent(data.generated),;
       toast({;
@@ -227,18 +169,3 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
   );
 }
 ;
-=======
-            initialValues={initialValues}
-          />
-        </CardContent>
-      </Card>
-
-      {isLoading && <LoadingContentSkeleton />}
-
-      {generatedContent && !isLoading && (
-        <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />
-      )}
-    </div>
-  )
-}
->>>>>>> main

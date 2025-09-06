@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React from "react",
 import { ClickableBadge } from "@/components/ui/clickable-badge",
@@ -19,39 +18,10 @@ interface ActiveFiltersProps {
   clearFilters: () => void
 }
 
-=======
->>>>>>> main
-export function ActiveFilters({
-  selectedSkills,
-  toggleSkill,
-  selectedAvailability,
-  toggleAvailability,
-  selectedRegions,
-  toggleRegion,
-  priceRange,
-  setPriceRange,
-  experienceRange,
-  setExperienceRange,
-<<<<<<< HEAD
-  clearFilters
-}: ActiveFiltersProps) {
-  // Check if any filters are active
-  const hasActiveFilters = 
-    selectedSkills.length > 0 || 
-    selectedAvailability.length > 0 || 
-=======
-  clearFilters,
-}: ActiveFiltersProps) {
-  // Check if any filters are active
-  const hasActiveFilters =
-    selectedSkills.length > 0 ||
-    selectedAvailability.length > 0 ||
->>>>>>> main
     selectedRegions.length > 0 ||
     experienceRange[0] !== 0 ||
     experienceRange[1] !== 15 ||
     priceRange[0] !== 50 ||
-<<<<<<< HEAD
     priceRange[1] !== 200,
   
   if (!hasActiveFilters) return null,
@@ -168,65 +138,10 @@ export function ActiveFilters({;
         size="sm" 
         onClick={clearFilters}
         className="h-7 text-xs text-zion-purple hover: text-zion-purple-light hover:bg-transparent"
-=======
-    priceRange[1] !== 200;
-
-  if (!hasActiveFilters) return null;
-
-  return (
-    <div className='mb-6 flex flex-wrap gap-2 items-center'>
-      <span className='text-zion-slate-light text-sm'>Active filters:</span>
-
-      {selectedSkills.map(skill => (
-
-        >
-          {skill}
-          <X className='h-3 w-3' />
-        </ClickableBadge>
-      ))}
-
-      {selectedAvailability.map(status => (
-
-        >
-          {status === 'full-time'
-            ? 'Full-time'
-            : status === 'part-time'
-              ? 'Part-time'
-              : 'Project-based'}
-          <X className='h-3 w-3' />
-        </ClickableBadge>
-      ))}
-
-      {selectedRegions.map(region => (
-
-        >
-          {region}
-          <X className='h-3 w-3' />
-        </ClickableBadge>
-      ))}
-
-      {(priceRange[0] !== 50 || priceRange[1] !== 200) && (
-
-        >
-          ${priceRange[0]}-${priceRange[1]}/hr
-          <X className='h-3 w-3' />
-        </ClickableBadge>
-      )}
-
-      {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (
-
-        >
-          {experienceRange[0]}-{experienceRange[1]} years
-          <X className='h-3 w-3' />
-        </ClickableBadge>
-      )}
-
->>>>>>> main
       >
         Clear All
       </Button>
     </div>
-<<<<<<< HEAD
   )
           <X className="h-3 w-3" />;
         </ClickableBadge>;
@@ -264,8 +179,3 @@ export function ActiveFilters({;
   );
 }
 ;
-=======
-  );
-
-}
->>>>>>> main

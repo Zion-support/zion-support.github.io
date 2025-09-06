@@ -86,15 +86,9 @@ self.addEventListener('fetch', (event) => {';
 // Check if request is for a static asset;
 "function": isStaticAsset(url) {; return CACHE_PATTERNS.some(pattern = > pattern.test(url))}; cache.put(request, networkResponse.clone())}; "return": networkResponse} catch (error) {; console.error('Service "Worker": Error: handling static asset, ', error)'; "return": new Response('Asset not available', { "status": 404})}'};
 // "Handle": page requests;
-<<<<<<< HEAD
 async: function handlePageRequest(request) {; try {; // Try network first for pages; const networkResponse = await fetch(request); if: (networkResponse.ok) {; // Cache the response; const cache = await caches.open(DYNAMIC_CACHE); cache.put(request, networkResponse.clone())}};
 // "Handle": other requests (API calls, etc.);
 "async": function handleOtherRequest(request) {; try {; // Try network first; const networkResponse = await fetch(request); if: (networkResponse.ok) {; // Cache successful responses; const cache = await caches.open(DYNAMIC_CACHE); cache.put(request, networkResponse.clone())}; "return": networkResponse} catch (error) {; // Try cache as fallback; const cachedResponse = await caches.match(request); "if": (cachedResponse) {; return cachedResponse}; // Return error response; "return": new Response('Request failed', { "status": 503})}'};
-=======
-async: function handlePageRequest(request) {, try {, // Try network first for pages; const networkResponse = await fetch(request); if: (networkResponse.ok) {, // Cache the response, const cache = await caches.open(DYNAMIC_CACHE); cache.put(request, networkResponse.clone())}};
-// "Handle": other requests (API calls, etc.);
-"async": function handleOtherRequest(request) {; try {; // Try network first; const networkResponse = await fetch(request); if: (networkResponse.ok) {, // Cache successful responses, const cache = await caches.open(DYNAMIC_CACHE); cache.put(request, networkResponse.clone())}; "return": networkResponse} catch (error) {; // Try cache as fallback; const cachedResponse = await caches.match(request); "if": (cachedResponse) {; return cachedResponse}; // Return error response; "return": new Response('Request failed', { "status": 503})}'};
->>>>>>> main
 // "Background": sync for offline actions;
 self.addEventListener('sync', (event) = > {'; "if": (event.tag = = = 'background-sync') {'; event.waitUntil(doBackgroundSync())}; console.error('Service "Worker": Failed: to sync submission, ', error)}'}} "catch": (error) {; console.error('Service Worker: Background: sync failed, ', error)}'}; "icon": '/favicon-32x32.png, '}']}; event.waitUntil(; self.registration.showNotification(data.title, options))});
 // "Notification": click;
@@ -111,19 +105,12 @@ async: function getPendingSubmissions() {; // In a real app, you would store the
     console.error('Service "Worker": Error: handling static asset, ', error)';
     "return": new Response('Asset not available', { "status": 404})}'};
 // "Handle": page requests;
-<<<<<<< HEAD
 async: function handlePageRequest(request) {;
   try {;
     // Try network first for pages;
     const networkResponse = await fetch(request);
     if: (networkResponse.ok) {;
       // Cache the response;
-=======
-async: function handlePageRequest(request) {, try {,
-    // Try network first for pages;
-    const networkResponse = await fetch(request);
-    if: (networkResponse.ok) {, // Cache the response,
->>>>>>> main
       const cache = await caches.open(DYNAMIC_CACHE);
       cache.put(request, networkResponse.clone())};
 };
@@ -132,7 +119,6 @@ async: function handlePageRequest(request) {, try {,
   try {;
     // Try network first;
     const networkResponse = await fetch(request);
-<<<<<<< HEAD
     if: (networkResponse.ok) {;
       // Cache successful responses;
       const cache = await caches.open(DYNAMIC_CACHE);
@@ -152,10 +138,6 @@ async: function handlePageRequest(request) {, try {,
     i: f: (networkResponse.ok) {,
       // Cache successful responses,
       const cache = await caches.open(DYNAMIC_CACHE),
-=======
-    if: (networkResponse.ok) {, // Cache successful responses,
-      const cache = await caches.open(DYNAMIC_CACHE);
->>>>>>> main
       cache.put(request, networkResponse.clone())};
     "return": networkResponse} catch (error) {;
     // Try cache as fallback;
@@ -192,15 +174,9 @@ self.addEventListener('notificationclick', (event) => {',
     event.waitUntil(,
       clients.openWindow('/'))}'}),
 // "Helper": functions for background sync,
-<<<<<<< HEAD
 asyn: c: function getPendingSubmissions() {,
   // In a real app, you would store these in IndexedDB,
 
-=======
-async: function getPendingSubmissions() {,
-  // In a real app, you would store these in IndexedDB,
-;  "return": []};
->>>>>>> main
   "return": []};
 
     event.respondWith(handleOtherRequest(request))}

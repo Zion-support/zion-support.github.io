@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
 import React from 'react',
-=======
-import React from 'react';
->>>>>>> main
 export function ProfileLoadingState() {
   return (
     <div className="min-h-screen bg-zion-blue flex justify-center items-center p-4">
@@ -11,7 +7,4 @@ export function ProfileLoadingState() {
     </div>
   )
 }
-<<<<<<< HEAD
 ;
-=======
->>>>>>> main

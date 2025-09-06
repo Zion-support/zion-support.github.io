@@ -1,13 +1,7 @@
 
-<<<<<<< HEAD
 import { GradientHeading } from "./GradientHeading",
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",
 import { Button } from "./ui/button",
-=======
-import {GradientHeading} from "./GradientHeading";
-import {Server, HardDrive, Network, Clock, Recycle, Truck} from "@/components/icons";
-import {Button} from "./ui/button";
->>>>>>> main
 const services = [
   {
     title: "Servers",
@@ -19,11 +13,7 @@ const services = [
     icon: <HardDrive className="h-10 w-10" />},
   {
     title: "Networking",
-<<<<<<< HEAD
     description: "Connectivity solutions including switches, routers, and network security devices",
-=======
-    description: "Connectivity solutions including switches, routers, and network security devices";
->>>>>>> main
     icon: <Network className="h-10 w-10" />},
   {
     title: "24x7x365 Support",
@@ -53,7 +43,6 @@ export function GlobalServiceSection() {
           {services.map((service, index) => (
             <div key={index} className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300">
               <div className="text-zion-cyan mb-4">
-<<<<<<< HEAD
                 {service.icon}
               </div>
               <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
@@ -112,35 +101,5 @@ export function GlobalServiceSection() {;
           {services.map((service, index) => (;
             <div key={index} className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300">;
               <div className="text-zion-cyan mb-4">;
-=======
->>>>>>> main
-                {service.icon}
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
-              <p className="text-zion-slate-light mb-4">{service.description}</p>
-            </div>
-          ))}
-<<<<<<< HEAD
-        </div>;
-        <div className="flex justify-center mt-12">;
-          <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">;
-            Get Your Free Commercial Proposal;
-          </Button>;
-        </div>;
-      </div>;
-    </section>;
-  );
-=======
-        </div>
-
-        <div className="flex justify-center mt-12">
-          <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">
-            Get Your Free Commercial Proposal
-          </Button>
-        </div>
-      </div>
-    </section>
-  )
->>>>>>> main
 }
 ;

@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { useState } from "react",
 import { Star } from "lucide-react",
 import { useForm } from "react-hook-form",
@@ -69,44 +68,6 @@ export function ReviewForm({
   defaultValues,
   isSubmitting}: ReviewFormProps) {
   const [hoveredStar, setHoveredStar] = useState<number>(0),
-=======
-import {useState} from "react";
-import {Star} from "lucide-react";
-import {useForm} from "react-hook-form";
-import {Button} from "@/components/ui/button";
-import {Textarea} from "@/components/ui/textarea";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {RadioGroup, RadioGroupItem} from "@/components/ui/radio-group";
-import {Switch} from "@/components/ui/switch";
-import {Review} from "@/types/reviews";
-interface ReviewFormValues {
-  rating?: number;
-  review_text?: string;
-  communication_rating?: number;
-  quality_rating?: number;
-  timeliness_rating?: number;
-  would_work_again?: boolean;
-  is_anonymous?: boolean
-}
-
-interface ReviewFormProps {
-  projectId: string,
-  revieweeId: string,
-  revieweeName: string,
-  onSubmit: (data: any) => Promise<boolean>, 
-  defaultValues?: Review;
-  isSubmitting: boolean
-}
-
-export function ReviewForm({
-  projectId;
-  revieweeId;
-  revieweeName;
-  onSubmit;
-  defaultValues;
-  isSubmitting}: ReviewFormProps) {
-  const [hoveredStar, setHoveredStar] = useState<number>(0);
->>>>>>> main
   
   const form = useForm<ReviewFormValues>({
     defaultValues: defaultValues ? {
@@ -124,7 +85,6 @@ export function ReviewForm({
       timeliness_rating: undefined,
       would_work_again: undefined,
       is_anonymous: false}
-<<<<<<< HEAD
   }),;
   const handleSubmit = async (values: ReviewFormValues) => {;
     const formattedData = {;
@@ -138,78 +98,15 @@ export function ReviewForm({
   },
   
   const watchRating = form.watch("rating"),
-=======
-  });
-  
-  const handleSubmit = async (values: ReviewFormValues) => {
-    const formattedData = {
-      ...values,
-      project_id: projectId,
-      reviewee_id: revieweeId},
-    
-    const success = await onSubmit(formattedData);
-    if (success) {
-      form.reset()
-    }
-  };
-  
-  const watchRating = form.watch("rating");
->>>>>>> main
   
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
-<<<<<<< HEAD
   },;
   const watchRating = form.watch("rating"),;
   return (;
     <Form {...form}>;
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">;
-=======
->>>>>>> main
-        {/* Main Rating */}
-        <FormField
-          control={form.control}
-          name="rating"
-          rules={{ required: "Rating is required" }}
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel className="block text-center mb-2">
-                How was your experience with {revieweeName}?
-              </FormLabel>
-              <FormControl>
-                <div className="flex justify-center gap-1">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <button
-                      key={star}
-                      type="button"
-                      onClick={() => field.onChange(star)}
-                      onMouseEnter={() => setHoveredStar(star)}
-                      onMouseLeave={() => setHoveredStar(0)}
-                      className="focus:outline-none transition-transform hover:scale-110"
-                    >
-                      <Star
-                        className={`h-10 w-10 ${
-                          star <= (hoveredStar || field.value || 0)
-                            ? "fill-yellow-400 text-yellow-400"
-                            : "text-gray-300"
-                        } transition-colors`}
-                      />
-                    </button>
-                  ))}
-                </div>
-              </FormControl>
-              <div className="text-center mt-1 h-5">
-                <FormMessage />
-              </div>
-            </FormItem>
-          )}
-<<<<<<< HEAD
-        />;
-=======
-        />
-        
->>>>>>> main
         {/* Review Text */}
         <FormField
           control={form.control}
@@ -232,12 +129,7 @@ export function ReviewForm({
               <FormMessage />
             </FormItem>
           )}
-<<<<<<< HEAD
         />;
-=======
-        />
-        
->>>>>>> main
         {/* Additional Rating Categories (only shown if main rating is provided) */}
         {watchRating > 0 && (
           <div className="space-y-6 border-t pt-6">
@@ -266,7 +158,6 @@ export function ReviewForm({
                           </FormControl>
                           <FormLabel className="cursor-pointer font-normal">
                             {value}
-<<<<<<< HEAD
                           </FormLabel>;
                         </FormItem>;
                       ))}
@@ -276,18 +167,6 @@ export function ReviewForm({
                 </FormItem>;
               )}
             />;
-=======
-                          </FormLabel>
-                        </FormItem>
-                      ))}
-                    </RadioGroup>
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            
->>>>>>> main
             {/* Quality */}
             <FormField
               control={form.control}
@@ -311,7 +190,6 @@ export function ReviewForm({
                           </FormControl>
                           <FormLabel className="cursor-pointer font-normal">
                             {value}
-<<<<<<< HEAD
                           </FormLabel>;
                         </FormItem>;
                       ))}
@@ -321,18 +199,6 @@ export function ReviewForm({
                 </FormItem>;
               )}
             />;
-=======
-                          </FormLabel>
-                        </FormItem>
-                      ))}
-                    </RadioGroup>
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            
->>>>>>> main
             {/* Timeliness */}
             <FormField
               control={form.control}
@@ -356,7 +222,6 @@ export function ReviewForm({
                           </FormControl>
                           <FormLabel className="cursor-pointer font-normal">
                             {value}
-<<<<<<< HEAD
                           </FormLabel>;
                         </FormItem>;
                       ))}
@@ -366,18 +231,6 @@ export function ReviewForm({
                 </FormItem>;
               )}
             />;
-=======
-                          </FormLabel>
-                        </FormItem>
-                      ))}
-                    </RadioGroup>
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            
->>>>>>> main
             {/* Would Work Again */}
             <FormField
               control={form.control}
@@ -401,17 +254,10 @@ export function ReviewForm({
                   <FormMessage />
                 </FormItem>
               )}
-<<<<<<< HEAD
             />;
           </div>;
         )}
 ;
-=======
-            />
-          </div>
-        )}
-        
->>>>>>> main
         {/* Anonymous Review */}
         <FormField
           control={form.control}
@@ -448,7 +294,4 @@ export function ReviewForm({
     </Form>
   )
 }
-<<<<<<< HEAD
 ;
-=======
->>>>>>> main

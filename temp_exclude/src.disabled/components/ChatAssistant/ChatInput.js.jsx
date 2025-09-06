@@ -1,14 +1,5 @@
-<<<<<<< HEAD:src.disabled/components/ChatAssistant/ChatInput.js.jsx
-<<<<<<< HEAD
-=======
+:src.disabled/components/ChatAssistant/ChatInput.js.jsx
 import React,{ useState,useRef,useEffect } from\';react\' import { Button } from \'../ui/Button\''\';\' import { Send } from \'lucide-react\' export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState(\'';\';) const inputRef = useRef(null) useEffect(() => {\'';
 const React,{ useState,useRef,useEffect } from";react" import { Button } from "./ui/Button""";" import { Send } from "lucide-react" export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState("";";) const inputRef = useRef(null) useEffect(() => {"";''"
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 import _React,{ useState,useRef,useEffect } from';react' import { Button } from '../ui/Button''';' import { Send } from 'lucide-react' export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState('';';) const inputRef = useRef(null) useEffect(() => {'';
-=======
-import _React,{ useState,useRef,useEffect } from';react' import { Button } from '../ui/Button''';' import { Send } from 'lucide-react' export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState('';';) const inputRef = useRef(null) useEffect(() => {'';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
-=======
 import _React,{ useState,useRef,useEffect } from';react' import { Button } from '../ui/Button''';' import { Send } from 'lucide-react' export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState('', ') const inputRef = useRef(null) useEffect(() => {'';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/src.disabled/components/ChatAssistant/ChatInput.js.jsx

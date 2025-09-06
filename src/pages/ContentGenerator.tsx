@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import { Header } from "@/components/Header",
 import { Button } from "@/components/ui/button",
@@ -454,6 +453,3 @@ export default function ContentGenerator() {;
   );
 }
 ;
-=======
-}
->>>>>>> main

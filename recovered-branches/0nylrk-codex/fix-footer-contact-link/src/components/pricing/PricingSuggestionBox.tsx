@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip",
@@ -7,21 +6,11 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { Loader2, Info, ThumbsUp } from "lucide-react",
 import { PricingSuggestion } from "@/services/pricingSuggestionService",
-=======
-import React from "react";
-import {Button} from "@/components/ui/button";
-import {TooltipProvider, Tooltip, TooltipTrigger, TooltipContent} from "@/components/ui/tooltip";
-import {Card, CardContent} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {Loader2, Info, ThumbsUp} from "lucide-react";
-import {PricingSuggestion} from "@/services/pricingSuggestionService";
->>>>>>> main
 interface PricingSuggestionBoxProps {
   suggestion: PricingSuggestion | null,
   isLoading: boolean,
   onApplySuggestion: () => void,
   rateType: "hourly" | "fixed"
-<<<<<<< HEAD
 }
 
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
@@ -78,32 +67,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
 ;
   if (!suggestion) {;
     return null;
-=======
-}
-
-export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
-  suggestion;
-  isLoading;
-  onApplySuggestion,
-  rateType}) => {
-  if (isLoading) {
-    return (
-      <Card className="border border-dashed border-muted">
-        <CardContent className="flex items-center justify-center p-6">
-          <div className="text-center">
-            <Loader2 className="h-10 w-10 animate-spin text-muted-foreground mx-auto mb-4" />
-            <p className="text-sm text-muted-foreground">
-              Generating optimal pricing suggestion...
-            </p>
-          </div>
-        </CardContent>
-      </Card>
-    )
-  }
-
-  if (!suggestion) {
-    return null
->>>>>>> main
   }
 
   const confidenceColor = {
@@ -160,7 +123,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
 },
 ;
   const confidenceColor = {;
@@ -212,8 +174,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
       </CardContent>;
     </Card>;
   );
-=======
->>>>>>> main
 };
 
 export default PricingSuggestionBox;

@@ -60,7 +60,6 @@ export function EnterpriseFeatures() {
 
             </div>
 
-<<<<<<< HEAD
 import React from "react",
 import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
 
@@ -173,11 +172,3 @@ export function EnterpriseFeatures() {;
   );
 }
 ;
-=======
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
->>>>>>> main

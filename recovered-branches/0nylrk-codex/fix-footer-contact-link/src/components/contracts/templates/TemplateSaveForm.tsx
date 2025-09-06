@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -17,30 +16,10 @@ const formSchema = z.object({
   isDefault: z.boolean().default(false)}),
 
 type FormValues = z.infer<typeof formSchema>,
-=======
-import {useState} from "react";
-import {useForm} from "react-hook-form";
-import {zodResolver} from "@hookform/resolvers/zod";
-import {z} from "zod";
-import {Loader2} from "lucide-react";
-import {ContractFormValues} from "@/components/contracts/components/ContractForm";
-import {ContractTemplate} from "@/types/contracts";
-import {useContractTemplates} from "@/hooks/useContractTemplates";
-import {Button} from "@/components/ui/button";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {Switch} from "@/components/ui/switch";
-const formSchema = z.object({
-  title: z.string().min(1, "Title is required");
-  isDefault: z.boolean().default(false)}),
-
-type FormValues = z.infer<typeof formSchema>;
->>>>>>> main
 
 interface TemplateSaveFormProps {
   onCancel: () => void,
   onComplete: () => void,
-<<<<<<< HEAD
   editTemplate?: ContractTemplate | null,
   currentValues?: ContractFormValues
 import { useState } from "react",;
@@ -104,53 +83,6 @@ export function TemplateSaveForm({;
       setSaving(false);
     }
   },
-=======
-  editTemplate?: ContractTemplate | null;
-  currentValues?: ContractFormValues
-}
-
-export function TemplateSaveForm({
-  onCancel;
-  onComplete;
-  editTemplate;
-  currentValues
-}: TemplateSaveFormProps) {
-  const [saving, setSaving] = useState(false);
-  const { createTemplate, updateTemplate } = useContractTemplates();
-  
-  const form = useForm<FormValues>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      title: editTemplate?.title || "",
-      isDefault: editTemplate?.is_default || false}}),
-  
-  const onSubmit = async (values: FormValues) => {
-    if (!currentValues && !editTemplate) {
-      return
-    }
-    
-    setSaving(true);
-    
-    try {
-      if (editTemplate) {
-        await updateTemplate.mutateAsync({
-          templateId: editTemplate.id,
-          title: values.title,
-          templateData: editTemplate.template_data,
-          isDefault: values.isDefault})
-      } else if (currentValues) {
-        await createTemplate.mutateAsync({
-          title: values.title,
-          templateData: currentValues,
-          isDefault: values.isDefault})
-      }
-      
-      onComplete()
-    } finally {
-      setSaving(false)
-    }
-  };
->>>>>>> main
   
   return (
     <Form {...form}>
@@ -167,14 +99,8 @@ export function TemplateSaveForm({
               <FormMessage />
             </FormItem>
           )}
-<<<<<<< HEAD
         />;
         <FormField;
-=======
-        />
-        
-        <FormField
->>>>>>> main
           control={form.control}
           name="isDefault"
           render={({ field }) => (
@@ -204,18 +130,10 @@ export function TemplateSaveForm({
             ) : (
               `${editTemplate ? "Update" : "Save"} Template`
             )}
-<<<<<<< HEAD
           </Button>;
         </div>;
       </form>;
     </Form>;
   );
-=======
-          </Button>
-        </div>
-      </form>
-    </Form>
-  )
->>>>>>> main
 }
 ;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface NextGenerationAIService {;
   id: string,;
   name: string,;
@@ -37,51 +36,10 @@ export interface NextGenerationAIService {;
   launchDate: string,;
   customers: number,;
   rating: number,;
-=======
-export interface NextGenerationAIService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
-  contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
->>>>>>> main
   reviews: number;
 }
 
 export const nextGenerationAIServices: NextGenerationAIService[] = [
-<<<<<<< HEAD
   // Advanced AI Agents & Autonomous Systems
   {
     id: 'ai-autonomous-business-agent',
@@ -93,26 +51,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     features: [
       'Autonomous decision-making engineNatural language business communicationMulti-platform task executionReal-time market analysisAutomated customer serviceFinancial decision automationSupply chain optimizationPredictive analytics',
       'Risk assessment and mitigationPerformance optimization'
-=======
-  {
-    id: 'ai-autonomous-agent',
-    name: 'AI Autonomous Agent',
-    tagline: 'Fully autonomous AI agent for business operations',
-    price: '$2,999',
-    period: '/month',
-    description: 'Advanced AI system with autonomous decision-making capabilities',
-    features: [
-      'Autonomous decision making',
-      'Natural language processing',
-      'Multi-platform integration',
-      'Safety protocols'
->>>>>>> main
     ],
     popular: true,
     icon: '🤖',
     color: 'from-blue-600 to-purple-700',
     textColor: 'text-blue-400',
-<<<<<<< HEAD
     link: 'https://ziontechgroup.com/ai-autonomous-business-agent',
     marketPosition: 'First-to-market autonomous business AI agent. No direct competitors in fully autonomous business operations.',
     targetAudience: 'Enterprise businesses, Startups, E-commerce companies, Service providers, Manufacturing companies',
@@ -136,50 +79,19 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     },
     realImplementation: true,
     implementationDetails: 'Advanced AI system with autonomous decision-making capabilities, natural language processing, and multi-platform integration. Includes safety protocols and human oversight options.',
-=======
-    link: '/ai-autonomous-agent',
-    marketPosition: 'Leading',
-    targetAudience: 'Enterprise businesses',
-    trialDays: 30,
-    setupTime: '2 hours',
-    category: 'AI & Automation',
-    realService: true,
-    technology: ['React', 'Node.js', 'OpenAI API', 'TensorFlow'],
-    integrations: ['Slack', 'Microsoft Teams', 'Salesforce'],
-    useCases: ['Customer service', 'Data analysis', 'Process automation'],
-    roi: '400%',
-    competitors: ['IBM Watson', 'Microsoft Azure AI'],
-    marketSize: '$2.5B',
-    growthRate: '35%',
-    variant: 'premium',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008, Middletown, DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'Fully implemented and operational',
->>>>>>> main
     launchDate: '2024-12-01',
     customers: 150,
     rating: 4.9,
     reviews: 89
   },
-<<<<<<< HEAD
 
   // Quantum AI Computing Platform
   {
     id: 'quantum-ai-computing-platform',
-=======
-  {
-    id: 'quantum-ai-computing',
->>>>>>> main
     name: 'Quantum AI Computing Platform',
     tagline: 'Quantum-powered AI computing for breakthrough discoveries',
     price: '$15,999',
     period: '/month',
-<<<<<<< HEAD
     description: 'Revolutionary quantum AI computing platform that combines quantum computing with artificial intelligence to solve previously unsolvable problems. Achieve computational breakthroughs in research, finance, and science.',
     features: [
       'Quantum AI algorithm optimizationHybrid quantum-classical computingQuantum machine learning modelsReal-time quantum simulationsQuantum cryptography integrationAdvanced quantum error correctionQuantum neural networksQuantum optimization algorithms',
@@ -1017,45 +929,5 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [;
     customers: 220,;
     rating: 4.7,;
     reviews: 125;
-=======
-    description: 'Revolutionary quantum computing platform for AI applications',
-    features: [
-      'Quantum algorithm optimization',
-      'Advanced pattern recognition',
-      'Quantum financial modeling',
-      'Breakthrough discovery tools'
-    ],
-    popular: false,
-    icon: '⚛️',
-    color: 'from-purple-600 to-pink-700',
-    textColor: 'text-purple-400',
-    link: '/quantum-ai-computing',
-    marketPosition: 'Innovative',
-    targetAudience: 'Research institutions',
-    trialDays: 14,
-    setupTime: '1 day',
-    category: 'Quantum Computing',
-    realService: true,
-    technology: ['Python', 'Qiskit', 'Quantum SDK'],
-    integrations: ['Jupyter', 'TensorFlow Quantum'],
-    useCases: ['Drug discovery', 'Financial modeling', 'Climate research'],
-    roi: '500%',
-    competitors: ['IBM Quantum', 'Google Quantum AI'],
-    marketSize: '$1.8B',
-    growthRate: '45%',
-    variant: 'enterprise',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008, Middletown, DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'Fully implemented and operational',
-    launchDate: '2024-11-15',
-    customers: 25,
-    rating: 4.8,
-    reviews: 12
->>>>>>> main
   }
 ];

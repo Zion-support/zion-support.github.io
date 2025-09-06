@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react',;
 import { Gift, RefreshCw } from 'lucide-react';
 import { usePoints } from '@/hooks/usePoints',;
@@ -55,60 +54,12 @@ export function PointsBadge() {;
               className="flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95"
             >
               <Gift className="h-4 w-4" aria-hidden="true" />
-=======
-import React, { useState } from 'react';
-import { Gift, RefreshCw } from 'lucide-react';
-import { usePoints } from '@/hooks/usePoints';
-import { useAuth } from '@/hooks/useAuth';
-import Link from 'next/link';
-
-export function PointsBadge() {
-  const { isAuthenticated } = useAuth();
-  const { ledger, balance, loading, fetchLedger } = usePoints();
-  const [loginOpen, setLoginOpen] = useState(false);
-  const [isRefreshing, setIsRefreshing] = useState(false);
-
-  const points = balance;
-
-  const breakdown = ledger.reduce(
-
-    },
-    { purchase: 0, post: 0, referral: 0 }
-  );
-
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>,) => {
-    if (!isAuthenticated) {
-      e.preventDefault();
-      setLoginOpen(true);
-    }
-  };
-
-    try {
-      await fetchLedger();
-    } catch (error) {
-      logErrorToProduction('Failed to refresh points:', { data: error });
-    } finally {
-      setIsRefreshing(false);
-    }
-  };
-
-  return (
-    <TooltipProvider>
-      <div className='flex items-center gap-1'>
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <Link
-
-            >
-              <Gift className='h-4 w-4' aria-hidden='true' />
->>>>>>> main
               <span>{`${points} pts`}</span>
             </Link>
           </TooltipTrigger>
           <TooltipContent>
             {isAuthenticated ? (
               <>
-<<<<<<< HEAD
                 <p className="text-sm font-medium">Point Breakdown</p>
                 {points === 0 && (
                   <p className="text-xs text-muted-foreground">
@@ -116,30 +67,16 @@ export function PointsBadge() {
                   </p>
                 )}
                 <ul className="text-xs mt-1 space-y-0.5">
-=======
-                <p className='text-sm font-medium'>Point Breakdown</p>
-                {points === 0 && (
-                  <p className='text-xs text-muted-foreground'>
-                    You haven't earned any points yet.
-                  </p>
-                )}
-                <ul className='text-xs mt-1 space-y-0.5'>
->>>>>>> main
                   <li>Purchases: {breakdown.purchase}</li>
                   <li>Posts: {breakdown.post}</li>
                   <li>Referrals: {breakdown.referral}</li>
                 </ul>
-<<<<<<< HEAD
                 <p className="text-xs mt-2 text-muted-foreground border-t pt-1">
-=======
-                <p className='text-xs mt-2 text-muted-foreground border-t pt-1'>
->>>>>>> main
                   Click to view full rewards program
                 </p>
               </>
             ) : (
               <>
-<<<<<<< HEAD
                 <p className="text-sm font-medium">Zion Rewards Program</p>
                 <p className="text-xs mt-1 text-muted-foreground">
                   • Sign up: 50 pts<br/>
@@ -148,34 +85,17 @@ export function PointsBadge() {
                   • Refer friends: 200 pts each
                 </p>
                 <p className="text-xs mt-2 text-muted-foreground border-t pt-1">
-=======
-                <p className='text-sm font-medium'>Zion Rewards Program</p>
-                <p className='text-xs mt-1 text-muted-foreground'>
-                  • Sign up: 50 pts
-                  <br />
-                  • First purchase: 100 pts
-                  <br />
-                  • Community posts: 25 pts each
-                  <br />• Refer friends: 200 pts each
-                </p>
-                <p className='text-xs mt-2 text-muted-foreground border-t pt-1'>
->>>>>>> main
                   Click to learn more and join!
                 </p>
               </>
             )}
           </TooltipContent>
         </Tooltip>
-<<<<<<< HEAD
         
-=======
-
->>>>>>> main
         {isAuthenticated && (
           <Tooltip>
             <TooltipTrigger asChild>
               <Button
-<<<<<<< HEAD
                 variant="ghost"
                 size="sm"
                 onClick={handleRefresh}
@@ -186,18 +106,10 @@ export function PointsBadge() {
                 <RefreshCw
                   className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}
                   aria-hidden="true"
-=======
-
-              >
-                <RefreshCw
-                  className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}
-                  aria-hidden='true'
->>>>>>> main
                 />
               </Button>
             </TooltipTrigger>
             <TooltipContent>
-<<<<<<< HEAD
               <p className="text-sm">Refresh points balance</p>
             </TooltipContent>
           </Tooltip>
@@ -210,16 +122,3 @@ export function PointsBadge() {
   );
 }
 ;
-=======
-              <p className='text-sm'>Refresh points balance</p>
-            </TooltipContent>
-          </Tooltip>
-        )}
-      </div>
-
-      {!isAuthenticated && (
-        <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
-      )}
-    </TooltipProvider>
-  );
->>>>>>> main

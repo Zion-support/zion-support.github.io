@@ -1,24 +1,15 @@
 
-<<<<<<< HEAD
 import { Droppable } from "react-beautiful-dnd",
 import { JobApplication } from "@/types/jobs",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { CandidateCard } from "./CandidateCard",
-=======
-import {Droppable} from "react-beautiful-dnd";
-import {JobApplication} from "@/types/jobs";
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {CandidateCard} from "./CandidateCard";
->>>>>>> main
 interface KanbanColumnProps {
   id: string,
   title: string,
   description: string,
   applications: JobApplication[],
   count: number
-<<<<<<< HEAD
 }
 
 export function KanbanColumn({
@@ -107,22 +98,6 @@ export function KanbanColumn({;
       case "rejected":;
         return "destructive",;
       default:;
-=======
-}
-
-export function KanbanColumn({
-  id;
-  title;
-  description;
-  applications;
-  count
-}: KanbanColumnProps) {
-  // Add color based on column type
-  const getBadgeVariant = (columnId: string) => {
-    switch (columnId) {
-      case "new": return "secondary";
-      case "shortlisted":
->>>>>>> main
         return "outline";
       case "interview":
         return "default";
@@ -133,7 +108,6 @@ export function KanbanColumn({
       default:
         return "outline"
     }
-<<<<<<< HEAD
   },;
   const getColumnBgColor = (columnId: string) => {;
     switch (columnId) {;
@@ -163,39 +137,6 @@ export function KanbanColumn({
             >;
               {applications.map((application, index) => (;
                 <CandidateCard;
-=======
-  };
-  
-  const getColumnBgColor = (columnId: string) => {
-    switch (columnId) {
-      case "hired": return "bg-green-50";
-      case "rejected":
-        return "bg-red-50",
-      default:
-        return "bg-muted/30"
-    }
-  };
-  
-  return (
-    <Card className={`${getColumnBgColor(id)} flex flex-col h-[calc(100vh-300px)] min-h-[500px]`}>
-      <CardHeader className="pb-2">
-        <div className="flex justify-between items-center">
-          <CardTitle className="text-base">{title}</CardTitle>
-          <Badge variant={getBadgeVariant(id) as any}>{count}</Badge>
-        </div>
-        <p className="text-xs text-muted-foreground">{description}</p>
-      </CardHeader>
-      <CardContent className="flex-grow p-3 overflow-y-auto">
-        <Droppable droppableId={id}>
-          {(provided) => (
-            <div
-              ref={provided.innerRef}
-              {...provided.droppableProps}
-              className="min-h-full space-y-2"
-            >
-              {applications.map((application, index) => (
-                <CandidateCard 
->>>>>>> main
                   key={application.id}
                   application={application}
                   index={index}
@@ -210,7 +151,6 @@ export function KanbanColumn({
                   </p>
                 </div>
               )}
-<<<<<<< HEAD
             </div>;
           )}
         </Droppable>;
@@ -219,12 +159,3 @@ export function KanbanColumn({
   );
 }
 ;
-=======
-            </div>
-          )}
-        </Droppable>
-      </CardContent>
-    </Card>
-  )
-}
->>>>>>> main

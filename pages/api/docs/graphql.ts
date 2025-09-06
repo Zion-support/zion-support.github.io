@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import v1 from '../../../data/api-docs/v1';
 function toSDL() {;
@@ -23,27 +22,4 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
-const typedefs = [
-  'type Query {',
-  '  hello: String',
-  '  user(id: ID!): User',
-  '}',
-  'type User {',
-  '  id: ID!',
-  '  name: String',
-  '  email: String',
-  '}'
-];
-
-function toSDL() {
-  return typedefs.join('\n');
-}
-
-export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-  res.setHeader("Content-Type", "text/plain");
-  res.status(200).send(toSDL());
->>>>>>> main
 }

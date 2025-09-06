@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useState } from "react",
 import { QuoteFormData } from "@/types/quotes",
 import { Card, CardContent } from "@/components/ui/card",
@@ -45,45 +44,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
         const results = await findMatches(
           queryString,
           formData.serviceType,
-=======
-import {useEffect, useState} from "react";
-import {QuoteFormData} from "@/types/quotes";
-import {Card, CardContent} from "@/components/ui/card";
-import {Label} from "@/components/ui/label";
-import {Textarea} from "@/components/ui/textarea";
-import {AIMatchingResults} from "@/components/AIMatchingResults";
-import {findMatches, MatchResult} from "@/lib/ai-matchmaking";
-import {toast} from "@/hooks/use-toast";
-interface SummaryStepProps {
-  formData: QuoteFormData,
-  updateFormData: (data: Partial<QuoteFormData>) => void
-}
-
-export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
-  const [isMatching, setIsMatching] = useState(false);
-  const [matches, setMatches] = useState<MatchResult[]>([]);
-  
-  // Run AI matching when the component mounts
-  useEffect(() => {
-    const runMatching = async () => {
-      if (!formData.projectDescription) return;
-      
-      setIsMatching(true);
-      try {
-        // Create a query string from the form data
-        const queryString = `
-          ${formData.projectName} 
-          ${formData.projectDescription} 
-          ${formData.serviceType} 
-          ${formData.budget.type === 'fixed' ? `budget ${formData.budget.amount}` : ''}
-          ${formData.timeline}
-        `;
-        
-        // Get AI matches
-        const results = await findMatches(
-          queryString;
-          formData.serviceType;
->>>>>>> main
           3
         );
         
@@ -97,11 +57,7 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
       } finally {
         setIsMatching(false)
       }
-<<<<<<< HEAD
     },
-=======
-    };
->>>>>>> main
     
     runMatching()
   }, [formData]);
@@ -116,17 +72,10 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
     toast({
       title: "Match Selected",
       description: `You've selected ${match.item.title}`})
-<<<<<<< HEAD
   },
   
   // Extract just the items from each MatchResult for the AIMatchingResults component
   const matchItems = matches.map(match => match.item),
-=======
-  };
-  
-  // Extract just the items from each MatchResult for the AIMatchingResults component
-  const matchItems = matches.map(match => match.item);
->>>>>>> main
   
   // Map the onSelectMatch handler to work with the item directly
   const handleItemSelect = (item: any) => {
@@ -135,17 +84,12 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
     if (matchResult) {
       handleSelectMatch(matchResult)
     }
-<<<<<<< HEAD
   },
-=======
-  };
->>>>>>> main
   
   return (
     <div className="space-y-6">
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>
       
-<<<<<<< HEAD
         `,;
         // Get AI matches;
         const results = await findMatches(;
@@ -191,21 +135,12 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>;
       {/* AI Matching Results */}
       <AIMatchingResults;
-=======
-      {/* AI Matching Results */}
-      <AIMatchingResults 
->>>>>>> main
         serviceType={formData.serviceType}
         projectDescription={formData.projectDescription}
         matches={matchItems}
         onSelectMatch={handleItemSelect}
         isLoading={isMatching}
-<<<<<<< HEAD
       />;
-=======
-      />
-      
->>>>>>> main
       {/* Service Information */}
       <div>
         <h4 className="text-lg font-medium text-white mb-2">Service Information</h4>
@@ -223,18 +158,10 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
                   <div className="text-white">{formData.specificItem.title}</div>
                 </div>
               )}
-<<<<<<< HEAD
             </div>;
           </CardContent>;
         </Card>;
       </div>;
-=======
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-      
->>>>>>> main
       {/* Project Details */}
       <div>
         <h4 className="text-lg font-medium text-white mb-2">Project Details</h4>
@@ -271,13 +198,8 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
                   <Label className="text-zion-slate-light">Start Date</Label>
                   <div className="text-white">
                     {formData.startDate.toLocaleDateString()}
-<<<<<<< HEAD
                   </div>;
                 </div>;
-=======
-                  </div>
-                </div>
->>>>>>> main
               )}
               
               {formData.endDate && (
@@ -285,7 +207,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
                   <Label className="text-zion-slate-light">End Date</Label>
                   <div className="text-white">
                     {formData.endDate.toLocaleDateString()}
-<<<<<<< HEAD
                   </div>;
                 </div>;
               )}
@@ -293,16 +214,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
           </CardContent>;
         </Card>;
       </div>;
-=======
-                  </div>
-                </div>
-              )}
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-      
->>>>>>> main
       {/* Budget */}
       <div>
         <h4 className="text-lg font-medium text-white mb-2">Budget</h4>
@@ -319,22 +230,12 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
                 <div className="text-white">
                   ${formData.budget.amount.toLocaleString()}
                   {formData.budget.maxAmount ? ` - $${formData.budget.maxAmount.toLocaleString()}` : ''}
-<<<<<<< HEAD
                 </div>;
               </div>;
             </div>;
           </CardContent>;
         </Card>;
       </div>;
-=======
-                </div>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-      
->>>>>>> main
       {/* Contact Information */}
       <div>
         <h4 className="text-lg font-medium text-white mb-2">Contact Information</h4>

@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -15,14 +14,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET' && req.method !== 'POST') {
-    res.status(405).end();
-    return;
-  }
-  
-  // TODO: Implement confirmation logic here
-  res.status(200).json({ message: 'Confirm endpoint placeholder' });
-} 
->>>>>>> main

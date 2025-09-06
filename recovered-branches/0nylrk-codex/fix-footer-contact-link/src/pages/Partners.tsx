@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -16,24 +15,6 @@ export default function Partners() {
   const [activeTab, setActiveTab] = useState("overview"),
   const { user, isAuthenticated } = useAuth(),
   const navigate = useNavigate(),
-=======
-import {Button} from "@/components/ui/button";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {CheckCircle, FileDown, FileText, PieChart, Users} from "lucide-react";
-import {useState} from "react";
-import {PartnerRegistrationForm} from "@/components/partners/PartnerRegistrationForm";
-import {PartnerReferralLinks} from "@/components/partners/PartnerReferralLinks";
-import {PartnerDashboard} from "@/components/partners/PartnerDashboard";
-import {PartnerLeaderboard} from "@/components/partners/PartnerLeaderboard";
-import {PartnerResources} from "@/components/partners/PartnerResources";
-import {useAuth} from "@/hooks/useAuth";
-import {useNavigate} from "react-router-dom";
-export default function Partners() {
-  const [activeTab, setActiveTab] = useState("overview");
-  const { user, isAuthenticated } = useAuth();
-  const navigate = useNavigate();
->>>>>>> main
 
   // If not authenticated, display partner program info and signup CTA
   if (!isAuthenticated) {
@@ -151,7 +132,6 @@ export default function Partners() {
           <Button 
             size="lg" 
             className="bg-zion-purple hover:bg-zion-purple-dark"
-<<<<<<< HEAD
             onClick={() => navigate('/signup')}
           >
             Apply to Join
@@ -301,23 +281,6 @@ export default function Partners() {;
         </div>;
       </div>;
     );
-=======
-            onClick={() => navigate('/signup')}
-          >
-            Apply to Join
-          </Button>
-          <Button 
-            size="lg" 
-            variant="outline" 
-            className="text-zion-cyan border-zion-cyan"
-            onClick={() => navigate('/login')}
-          >
-            Partner Login
-          </Button>
-        </div>
-      </div>
-    )
->>>>>>> main
   }
 
   // Authenticated user view - Partner Dashboard

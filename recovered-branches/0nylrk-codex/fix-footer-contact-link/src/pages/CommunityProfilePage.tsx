@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useParams, Link } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -14,22 +13,6 @@ import { CommunityUser, ForumPost, Badge as BadgeType } from "@/types/community"
 import PostCard from "@/components/community/PostCard",
 import UserBadges from "@/components/community/UserBadges",
 import ReputationDisplay from "@/components/community/ReputationDisplay",
-=======
-import {useState, useEffect} from "react";
-import {useParams, Link} from "react-router-dom";
-import {AppLayout} from "@/layout/AppLayout";
-import {SEO} from "@/components/SEO";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {Button} from "@/components/ui/button";
-import {Badge} from "@/components/ui/badge";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {formatDistanceToNow} from "date-fns";
-import {CommunityUser, ForumPost, Badge, as, BadgeType} from "@/types/community";
-import PostCard from "@/components/community/PostCard";
-import UserBadges from "@/components/community/UserBadges";
-import ReputationDisplay from "@/components/community/ReputationDisplay";
->>>>>>> main
 // Mock user data
 const mockUser: CommunityUser = {
   id: "user1",
@@ -46,29 +29,20 @@ const mockUser: CommunityUser = {
       description: "Provided 10 accepted answers",
       icon: "Award",
       color: "#10B981"
-<<<<<<< HEAD
     },
-=======
-    };
->>>>>>> main
     {
       id: "badge2",
       name: "Top Contributor",
       description: "Among the top 5% of contributors",
       icon: "Trophy",
       color: "#F59E0B"
-<<<<<<< HEAD
     },
-=======
-    };
->>>>>>> main
     {
       id: "badge3",
       name: "First Post",
       description: "Created your first forum post",
       icon: "Star",
       color: "#6366F1"
-<<<<<<< HEAD
     }
   ],
   isVerified: true,
@@ -308,110 +282,6 @@ export default function CommunityProfilePage() {;
   return (;
     <AppLayout>;
       <SEO;
-=======
-    }
-  ];
-  isVerified: true,
-  isModerator: false
-};
-
-// Mock posts by this user
-const userPosts: ForumPost[] = [
-  {
-    id: "1",
-    title: "Best practices for AI model fine-tuning",
-    content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...",
-    authorId: "user1",
-    authorName: "Alex Johnson",
-    authorAvatar: "https://i.pravatar.cc/150?img=3",
-    authorRole: "Verified Talent",
-    categoryId: "ai-tools",
-    tags: ["machine-learning", "fine-tuning", "gpt"];
-    createdAt: "2025-04-01T12:00:00Z",
-    updatedAt: "2025-04-01T12:00:00Z",
-    upvotes: 48,
-    downvotes: 2,
-    replyCount: 12,
-    isAnswered: true,
-    isFeatured: true
-  };
-  {
-    id: "11",
-    title: "How to structure an AI prompt for best results",
-    content: "After experimenting with different prompt formats, I've found these patterns to work consistently better...";
-    authorId: "user1",
-    authorName: "Alex Johnson",
-    authorAvatar: "https://i.pravatar.cc/150?img=3",
-    authorRole: "Verified Talent",
-    categoryId: "ai-tools",
-    tags: ["prompts", "techniques", "optimization"];
-    createdAt: "2025-03-20T14:25:00Z",
-    updatedAt: "2025-03-20T14:25:00Z",
-    upvotes: 36,
-    downvotes: 1,
-    replyCount: 8
-  };
-  {
-    id: "12",
-    title: "Setting up effective monitoring for AI systems",
-    content: "Here's my approach to monitoring AI systems in production environments...",
-    authorId: "user1",
-    authorName: "Alex Johnson",
-    authorAvatar: "https://i.pravatar.cc/150?img=3",
-    authorRole: "Verified Talent",
-    categoryId: "project-help",
-    tags: ["monitoring", "production", "devops"];
-    createdAt: "2025-03-12T09:30:00Z",
-    updatedAt: "2025-03-12T09:30:00Z",
-    upvotes: 24,
-    downvotes: 0,
-    replyCount: 6
-  }
-];
-
-export default function CommunityProfilePage() {
-  const { userId } = useParams();
-  const [user, setUser] = useState<CommunityUser | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [posts, setPosts] = useState<ForumPost[]>([]);
-  
-  useEffect(() => {
-    // In a real app, we would fetch the user data here
-    // For now, we'll just use the mock data
-    setUser(mockUser);
-    setPosts(userPosts);
-    setIsLoading(false)
-  }, [userId]);
-  
-  if (isLoading) {
-    return (
-      <AppLayout>
-        <div className="container py-8">
-          <div className="flex justify-center items-center h-64">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
-          </div>
-        </div>
-      </AppLayout>
-    )
-  }
-  
-  if (!user) {
-    return (
-      <AppLayout>
-        <div className="container py-8">
-          <h1>User not found</h1>
-          <Button asChild className="mt-4">
-            <Link to="/community">Back to Community</Link>
-          </Button>
-        </div>
-      </AppLayout>
-    )
-  }
-
-  return (
-    <AppLayout>
-      <SEO 
->>>>>>> main
         title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`}
         description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`}
         keywords={`community, forum, profile, user profile, ${user.name}`}
@@ -451,7 +321,6 @@ export default function CommunityProfilePage() {
                 {user.role && (
                   <Badge variant="outline" className="mt-1">
                     {user.role}
-<<<<<<< HEAD
                   </Badge>;
                 )}
                 {user.isModerator && (
@@ -683,128 +552,5 @@ export default function CommunityProfilePage() {
       </div>;
     </AppLayout>;
   );
-=======
-                  </Badge>
-                )}
-                {user.isModerator && (
-                  <Badge className="mt-2 bg-blue-500">Moderator</Badge>
-                )}
-              </CardHeader>
-              
-              <CardContent className="space-y-6">
-                <div>
-                  <h3 className="text-sm font-medium text-muted-foreground mb-2">Reputation</h3>
-                  <ReputationDisplay reputation={user.reputation} size="lg" />
-                </div>
-                
-                <div>
-                  <h3 className="text-sm font-medium text-muted-foreground mb-2">Badges</h3>
-                  <UserBadges badges={user.badges} />
-                </div>
-                
-                <div className="grid grid-cols-2 gap-4">
-                  <Card>
-                    <CardContent className="p-4 text-center">
-                      <div className="text-2xl font-bold">{user.postCount}</div>
-                      <p className="text-sm text-muted-foreground">Posts</p>
-                    </CardContent>
-                  </Card>
-                  <Card>
-                    <CardContent className="p-4 text-center">
-                      <div className="text-2xl font-bold">{user.replyCount}</div>
-                      <p className="text-sm text-muted-foreground">Replies</p>
-                    </CardContent>
-                  </Card>
-                </div>
-                
-                <div className="text-sm text-muted-foreground">
-                  <p>Member since April 2025</p>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-          
-          <div className="md:col-span-2">
-            <Tabs defaultValue="posts">
-              <TabsList>
-                <TabsTrigger value="posts">Posts</TabsTrigger>
-                <TabsTrigger value="activity">Recent Activity</TabsTrigger>
-              </TabsList>
-              
-              <TabsContent value="posts" className="mt-6">
-                <h2 className="text-xl font-bold mb-4">Posts by {user.name}</h2>
-                
-                {posts.length > 0 ? (
-                  <div className="space-y-4">
-                    {posts.map((post) => (
-                      <PostCard key={post.id} post={post} />
-                    ))}
-                  </div>
-                ) : (
-                  <Card>
-                    <CardContent className="p-6 text-center">
-                      <p className="text-muted-foreground">This user hasn't created any posts yet.</p>
-                    </CardContent>
-                  </Card>
-                )}
-              </TabsContent>
-              
-              <TabsContent value="activity" className="mt-6">
-                <h2 className="text-xl font-bold mb-4">Recent Activity</h2>
-                
-                <Card>
-                  <CardContent className="p-6">
-                    <ul className="space-y-4">
-                      <li className="flex items-start gap-4">
-                        <div className="min-w-fit text-sm text-muted-foreground">
-                          {formatDistanceToNow(new Date("2025-04-10T14:30:00Z"), { addSuffix: true })}
-                        </div>
-                        <div>
-                          <p>Replied to <Link to="/community/post/3" className="text-zion-purple hover:underline">Looking for feedback on my automated testing approach</Link></p>
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-4">
-                        <div className="min-w-fit text-sm text-muted-foreground">
-                          {formatDistanceToNow(new Date("2025-04-08T09:15:00Z"), { addSuffix: true })}
-                        </div>
-                        <div>
-                          <p>Earned badge <span className="font-medium">Top Contributor</span></p>
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-4">
-                        <div className="min-w-fit text-sm text-muted-foreground">
-                          {formatDistanceToNow(new Date("2025-04-05T16:40:00Z"), { addSuffix: true })}
-                        </div>
-                        <div>
-                          <p>Replied to <Link to="/community/post/7" className="text-zion-purple hover:underline">Comparing different vector embedding models</Link></p>
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-4">
-                        <div className="min-w-fit text-sm text-muted-foreground">
-                          {formatDistanceToNow(new Date("2025-04-01T12:00:00Z"), { addSuffix: true })}
-                        </div>
-                        <div>
-                          <p>Created post <Link to="/community/post/1" className="text-zion-purple hover:underline">Best practices for AI model fine-tuning</Link></p>
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-4">
-                        <div className="min-w-fit text-sm text-muted-foreground">
-                          {formatDistanceToNow(new Date("2025-03-25T08:20:00Z"), { addSuffix: true })}
-                        </div>
-                        <div>
-                          <p>Answer was accepted in <Link to="/community/post/15" className="text-zion-purple hover: underline">How to optimize RAG systems for better results</Link></p>
-                        </div>
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </TabsContent>
-            </Tabs>
-          </div>
-        </div>
-      </div>
-    </AppLayout>
-  )
->>>>>>> main
 }
 ;

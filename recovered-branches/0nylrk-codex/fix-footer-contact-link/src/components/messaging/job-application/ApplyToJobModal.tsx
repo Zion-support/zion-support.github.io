@@ -24,7 +24,6 @@ export function ApplyToJobModal({
           </DialogDescription>
         </DialogHeader>
 
-<<<<<<< HEAD
 import React from 'react',
 import {
   Dialog,
@@ -52,15 +51,6 @@ export function ApplyToJobModal({ job, isOpen, onClose, onApplySuccess }: ApplyT
         />;
       </DialogContent>;
     </Dialog>;
-=======
-        <ApplyForm
-          job={job}
-          onClose={onClose}
-          onApplySuccess={onApplySuccess}
-        />
-      </DialogContent>
-    </Dialog>
->>>>>>> main
   );
 }
 ;

@@ -1,6 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
 ;
 import React, { memo, useMemo, useCallback } from 'react',;
 ,;
@@ -351,12 +350,3 @@ export const usePerformanceMetrics = () => {;
 ,;
   return { metrics, recordRender };
 };'"
-=======
-export default function PerformanceOptimized() {
-  return (
-    <div className="performance-optimized">
-      <p>Performance Optimized Component</p>
-    </div>
-  );
-}
->>>>>>> 3e0b5e734e328fa6b9be04237a4c9f63bf064ddb

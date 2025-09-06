@@ -1,7 +1,6 @@
 interface WorkspaceHeaderProps {
   company: Company;
 
-<<<<<<< HEAD
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { type Company } from "./CompanyDashboard",
@@ -27,32 +26,10 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
           <div>
             <h1 className="text-3xl font-bold tracking-tight">{company.name} Workspace</h1>
             <p className="text-muted-foreground">
-=======
-export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
-  return (
-    <div className='space-y-6'>
-      <div className='flex items-center justify-between'>
-        <div className='flex items-center gap-4'>
-          <div className='h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border'>
-            <img
-
-            />
-          </div>
-          <div>
-            <h1 className='text-3xl font-bold tracking-tight'>
-              {company.name} Workspace
-            </h1>
-            <p className='text-muted-foreground'>              {company.plan} Plan · {company.teamSize} team members
-            </p>
-          </div>
-        </div>
-
->>>>>>> main
               {company.plan} Plan · {company.teamSize} team members
             </p>
           </div>
         </div>
-<<<<<<< HEAD
         
         <div className="flex items-center gap-2">
           <Button variant="outline" size="icon" aria-label="Notifications">
@@ -141,10 +118,3 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {;
   );
 }
 ;
-=======
-
-        </div>
-      </div>
-    </div>
-  );
->>>>>>> main

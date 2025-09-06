@@ -1,13 +1,7 @@
 
-<<<<<<< HEAD
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { QuoteRequestForm } from "@/components/QuoteRequestForm",
-=======
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {QuoteRequestForm} from "@/components/QuoteRequestForm";
->>>>>>> main
 export default function RequestQuote() {
   return (
     <>
@@ -18,7 +12,6 @@ export default function RequestQuote() {
       <Footer />
     </>
   )
-<<<<<<< HEAD
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { QuoteRequestForm } from "@/components/QuoteRequestForm";
@@ -34,6 +27,3 @@ export default function RequestQuote() {;
   );
 }
 ;
-=======
-}
->>>>>>> main

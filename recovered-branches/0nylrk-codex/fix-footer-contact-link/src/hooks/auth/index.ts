@@ -4,14 +4,7 @@ export const Index = () => {
   return null;
 };
 
-<<<<<<< HEAD
 export * from './useEmailAuth',;
 export * from './useProfileManagement',;
 export * from './useSocialAuth',;
 export * from './useLogout';
-=======
-export * from './useEmailAuth';
-export * from './useProfileManagement';
-export * from './useSocialAuth';
-export * from './useLogout';
->>>>>>> main

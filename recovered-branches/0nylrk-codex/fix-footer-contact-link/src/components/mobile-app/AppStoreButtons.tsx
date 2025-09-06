@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from "react",
 import { Apple, GithubIcon } from "lucide-react",
 import { cn } from "@/lib/utils",
@@ -8,35 +7,18 @@ interface AppStoreButtonsProps {
   appStoreUrl?: string,
   googlePlayUrl?: string,
   onAppStoreClick?: () => void,
-=======
-import React from "react";
-import {Apple, GithubIcon} from "lucide-react";
-import {cn} from "@/lib/utils";
-interface AppStoreButtonsProps {
-  className?: string;
-  appStoreUrl?: string;
-  googlePlayUrl?: string;
-  onAppStoreClick?: () => void;
->>>>>>> main
   onGooglePlayClick?: () => void
 }
 
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ 
-<<<<<<< HEAD
   className,
   appStoreUrl = "#",
   googlePlayUrl = "#",
-=======
-  className;
-  appStoreUrl = "#";
-  googlePlayUrl = "#";
->>>>>>> main
   onAppStoreClick,
   onGooglePlayClick
 }) => {
   const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (!appStoreUrl || appStoreUrl === "#") {
-<<<<<<< HEAD
       e.preventDefault(),
       // // // console.log("App Store download clicked"),
       onAppStoreClick?.()
@@ -50,21 +32,6 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
       onGooglePlayClick?.()
     }
   },
-=======
-      e.preventDefault();
-      console.log("App Store download clicked"),
-      onAppStoreClick?.()
-    }
-  };
-
-  const handleGooglePlayClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (!googlePlayUrl || googlePlayUrl === "#") {
-      e.preventDefault();
-      console.log("Google Play download clicked"),
-      onGooglePlayClick?.()
-    }
-  };
->>>>>>> main
 
   return (
     <div className={cn("flex flex-col sm:flex-row gap-4", className)}>
@@ -80,11 +47,7 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
           <div className="text-xs">Download on the</div>
           <div className="text-xl font-semibold">App Store</div>
         </div>
-<<<<<<< HEAD
       </Link>
-=======
-      </a>
->>>>>>> main
 
       <a 
         href={googlePlayUrl} 
@@ -107,7 +70,6 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
           <div className="text-xs">GET IT ON</div>
           <div className="text-xl font-semibold">Google Play</div>
         </div>
-<<<<<<< HEAD
       </Link>
     </div>
   )
@@ -183,11 +145,6 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({;
       </a>;
     </div>;
   );
-=======
-      </a>
-    </div>
-  )
->>>>>>> main
 };
 
 export default AppStoreButtons;

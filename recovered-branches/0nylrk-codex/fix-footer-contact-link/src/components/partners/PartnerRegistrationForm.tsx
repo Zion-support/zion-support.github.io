@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from "react",
 import { z } from "zod",
 import { useForm } from "react-hook-form",
@@ -12,21 +11,6 @@ import { Textarea } from "@/components/ui/textarea",
 import { toast } from "@/hooks/use-toast",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
-=======
-import {useState} from "react";
-import {z} from "zod";
-import {useForm} from "react-hook-form";
-import {zodResolver} from "@hookform/resolvers/zod";
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {Textarea} from "@/components/ui/textarea";
-import {toast} from "@/hooks/use-toast";
-import {useAuth} from "@/hooks/useAuth";
-import {supabase} from "@/integrations/supabase/client";
->>>>>>> main
 const partnerFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal("")),
@@ -39,19 +23,11 @@ const partnerFormSchema = z.object({
   payout_method: z.string(),
   bio: z.string().min(10, { message: "Bio must be at least 10 characters." }).max(500)}),
 
-<<<<<<< HEAD
 type PartnerFormValues = z.infer<typeof partnerFormSchema>,
 
 export function PartnerRegistrationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { user } = useAuth(),
-=======
-type PartnerFormValues = z.infer<typeof partnerFormSchema>;
-
-export function PartnerRegistrationForm() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { user } = useAuth();
->>>>>>> main
 
   const form = useForm<PartnerFormValues>({
     resolver: zodResolver(partnerFormSchema),
@@ -72,18 +48,13 @@ export function PartnerRegistrationForm() {
       .from('partner_profiles')
       .select('id')
       .eq('user_id', user.id)
-<<<<<<< HEAD
       .single(),
-=======
-      .single();
->>>>>>> main
 
     if (existingPartner) {
       toast({
         title: "Already registered",
         description: "You have already registered as a partner.",
         variant: "destructive"}),
-<<<<<<< HEAD
       setIsSubmitting(false),
       return true
     }
@@ -191,52 +162,6 @@ export function PartnerRegistrationForm() {;
         .select(),
 
       if (error) throw error,
-=======
-      setIsSubmitting(false);
-      return true
-    }
-    return false
-  };
-
-  async function onSubmit(data: PartnerFormValues) {
-    if (!user) {
-      toast({
-        title: "Authentication required",
-        description: "You must be logged in to register as a partner.",
-        variant: "destructive"}),
-      return
-    }
-
-    setIsSubmitting(true);
-    try {
-      // Check if they already have a partner profile
-      const hasExistingPartner = await checkExistingPartner();
-      if (hasExistingPartner) return;
-
-      // Insert new partner profile
-      const { data: newPartner, error } = await supabase
-        .from('partner_profiles')
-        .insert([
-          {
-            user_id: user.id,
-            name: data.name,
-            website: data.website || null,
-            social_media: {
-              twitter: data.twitter || null,
-              instagram: data.instagram || null,
-              youtube: data.youtube || null,
-              linkedin: data.linkedin || null},
-            niche: data.niche,
-            audience_size: data.audience_size,
-            payout_method: data.payout_method,
-            bio: data.bio,
-            status: 'pending', // Partners need approval
-          }
-        ])
-        .select();
-
-      if (error) throw error;
->>>>>>> main
 
       toast({
         title: "Application submitted!",
@@ -248,22 +173,14 @@ export function PartnerRegistrationForm() {;
         .from('referral_codes')
         .select('code')
         .eq('user_id', user.id)
-<<<<<<< HEAD
         .single(),
-=======
-        .single();
->>>>>>> main
 
       if (!existingCode) {
         await supabase.rpc('generate_referral_code', { user_id: user.id })
       }
 
     } catch (error: any) {
-<<<<<<< HEAD
       console.error('Error submitting partner application:', error),
-=======
-      console.error('Error submitting partner application:', error);
->>>>>>> main
       toast({
         title: "Submission failed",
         description: error.message || "There was a problem submitting your application.",
@@ -271,7 +188,6 @@ export function PartnerRegistrationForm() {;
     } finally {
       setIsSubmitting(false)
     }
-<<<<<<< HEAD
   }
 
   return (
@@ -321,50 +237,6 @@ export function PartnerRegistrationForm() {;
     } finally {;
       setIsSubmitting(false);
     }
-=======
->>>>>>> main
-  }
-
-  return (
-    <Card className="bg-zion-blue-dark border-zion-blue-light">
-      <CardHeader>
-        <CardTitle>Partner Registration</CardTitle>
-        <CardDescription>Register to become a Zion AI partner and start earning rewards</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-            <div className="space-y-4">
-              <FormField
-                control={form.control}
-<<<<<<< HEAD
-                name="name";
-                render={({ field }) => (;
-                  <FormItem>;
-                    <FormLabel>Name / Brand</FormLabel>;
-                    <FormControl>;
-                      <Input placeholder="Your name or brand name" {...field} />;
-                    </FormControl>;
-                    <FormMessage />;
-                  </FormItem>;
-                )}
-              />;
-              <FormField;
-=======
-                name="name"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Name / Brand</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Your name or brand name" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
->>>>>>> main
                 control={form.control}
                 name="website"
                 render={({ field }) => (
@@ -390,7 +262,6 @@ export function PartnerRegistrationForm() {;
                       </FormControl>
                       <FormMessage />
                     </FormItem>
-<<<<<<< HEAD
                   )}
                 />;
                 <FormField;
@@ -437,57 +308,6 @@ export function PartnerRegistrationForm() {;
                 />;
               </div>;
               <FormField;
-=======
-                  )}
-                />
-                
-                <FormField
-                  control={form.control}
-                  name="instagram"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Instagram (Optional)</FormLabel>
-                      <FormControl>
-                        <Input placeholder="@username" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
-
-              <div className="grid sm:grid-cols-2 gap-4">
-                <FormField
-                  control={form.control}
-                  name="youtube"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>YouTube (Optional)</FormLabel>
-                      <FormControl>
-                        <Input placeholder="Channel name or URL" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                
-                <FormField
-                  control={form.control}
-                  name="linkedin"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>LinkedIn (Optional)</FormLabel>
-                      <FormControl>
-                        <Input placeholder="Profile URL or username" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
-
-              <FormField
->>>>>>> main
                 control={form.control}
                 name="niche"
                 render={({ field }) => (
@@ -528,14 +348,8 @@ export function PartnerRegistrationForm() {;
                       <FormMessage />
                     </FormItem>
                   )}
-<<<<<<< HEAD
                 />;
                 <FormField;
-=======
-                />
-                
-                <FormField
->>>>>>> main
                   control={form.control}
                   name="payout_method"
                   render={({ field }) => (
@@ -557,16 +371,9 @@ export function PartnerRegistrationForm() {;
                       <FormMessage />
                     </FormItem>
                   )}
-<<<<<<< HEAD
                 />;
               </div>;
               <FormField;
-=======
-                />
-              </div>
-
-              <FormField
->>>>>>> main
                 control={form.control}
                 name="bio"
                 render={({ field }) => (

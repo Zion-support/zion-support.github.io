@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface EmergingTechService {;
   id: string,;
   name: string,;
@@ -523,73 +522,3 @@ export const emergingTechServices: EmergingTechService[] = [;
     reviews: 28;
   }
 ];
-=======
-export interface EmergingTechService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant:
-    | 'default'
-    | 'holographic'
-    | 'quantum'
-    | 'cyberpunk'
-    | 'neural'
-    | 'quantum-holographic'
-    | 'quantum-advanced'
-    | 'holographic-advanced'
-    | 'neural-quantum'
-    | 'quantum-cyberpunk'
-    | 'holographic-neural'
-    | 'quantum-holographic-advanced'
-    | 'quantum-matrix'
-    | 'neural-cyberpunk'
-    | 'holographic-quantum'
-    | 'quantum-neural-advanced'
-    | 'cyberpunk-holographic'
-    | 'quantum-space'
-    | 'ai-futuristic'
-    | 'quantum-entanglement'
-    | 'holographic-matrix'
-    | 'neural-quantum-cyberpunk';
-  contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-export const emergingTechServices: EmergingTechService[] = [
-  // Quantum Internet & Communication Services
-  {
-
-export const emergingTechServices: EmergingTechService[] = [
-  // Quantum Internet & Communication Services
-  {
->>>>>>> main

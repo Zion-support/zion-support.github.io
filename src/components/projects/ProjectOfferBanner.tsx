@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { useEffect, useState } from "react",
 import { useRouter } from 'next/router',
@@ -50,58 +49,15 @@ export function ProjectOfferBanner() {;
     return null;
   }
   
-=======
-import { useEffect, useState } from "react";
-import { useRouter } from 'next/router';
-
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { useProjects } from "@/hooks/useProjects";
-import { Project } from "@/types/projects";
-export function ProjectOfferBanner() {
-  const router = useRouter();
-  const { projects, isLoading } = useProjects();
-  const [pendingOffers, setPendingOffers] = useState<Project[]>([]);
-  const [dismissed, setDismissed] = useState<Set<string>>(new Set());
-
-  useEffect((,) => {
-    if (projects && !isLoading) {
-      const offers = projects.filter(p => p.status === 'offer_sent');
-      setPendingOffers(offers)
-    }
-  }, [projects, isLoading]);
-
-    setDismissed(prev => {
-      const updated = new Set(prev);
-      updated.add(projectId),
-      return updated
-    })
-  };
-
-  const handleViewOffer = (projectId: string,) => {
-    router.push(`/project/${projectId}`)
-  };
-
-  if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {
-    return null;
-  }
-
->>>>>>> main
   return (
     <div className="mb-6 space-y-3">
       {pendingOffers
         .filter(offer => !dismissed.has(offer.id))
         .map(offer => (
           <Card 
-<<<<<<< HEAD
             key={offer.id} 
             className="border-2 border-primary bg-primary/5"
             onClick={() => handleViewOffer(offer.id)}
-=======
-            key = {offer.id,}
-            className="border-2 border-primary bg-primary/5"
-            onClick = {(,) => handleViewOffer(offer.id),}
->>>>>>> main
           >
             <CardContent className="p-4 flex items-center justify-between">
               <div className="flex items-center gap-2">
@@ -115,11 +71,7 @@ export function ProjectOfferBanner() {
                   </p>
                 </div>
               </div>
-<<<<<<< HEAD
               
-=======
-
->>>>>>> main
               <div className="flex items-center gap-2">
                 <Button size="sm" className="whitespace-nowrap">
                   View Offer
@@ -127,11 +79,7 @@ export function ProjectOfferBanner() {
                 <Button 
                   size="sm" 
                   variant="ghost"
-<<<<<<< HEAD
                   onClick={(e) => handleDismiss(offer.id, e)}
-=======
-                  onClick = {(e,) => handleDismiss(offer.id, e),}
->>>>>>> main
                 >
                   <X className="h-4 w-4" />
                 </Button>
@@ -139,34 +87,7 @@ export function ProjectOfferBanner() {
             </CardContent>
           </Card>
         ))}
-<<<<<<< HEAD
     </div>;
   );
 }
 ;
-=======
-    </div>
-  );
-
-}, [projects, isLoading]);
-const handleDismiss = (projectId: string, e: React.MouseEvent) => {;
-  e.stopPropagation ();
-setDismissed (prev => {;
-  const updated = new Set (prev);
-updated.add (projectId);
-return updated;
-}) ;
-};
-const handleViewOffer = (projectId: string) => {;
-  router.push (`/project/$ {;
-  projectId ;
-}`) ;
-};
-if (isLoading || pendingOffers.length === 0 || pendingOffers.every (p => dismissed.has (p.id) ) ) {;
-  return null;
-}return (<div className="mb-6 space-y-3" > {;
-  pendingOffers offer.id ";
-}> <CardContent className="p-4 flex items-center justify-between" > <div className="flex items-center gap-2" > <div className="bg-primary/10 rounded-full p-2" > <Bell className="h-4 w-4 text-primary" /> </div> <div> </p> </div> </div> <div className="flex items-center gap-2" > <Button size="sm" className="whitespace-nowrap" > View Offer </Button> <Button > <X className="h-4 w-4" /> </Button> </div> </CardContent> </Card>) ) ;
-}</div>) ;
-}'"
->>>>>>> main

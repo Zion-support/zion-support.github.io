@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { TabsContent } from "@/components/ui/tabs",
 import { Resume } from "@/types/resume",
 import { BasicInfoForm } from '../forms/basic-info',
@@ -8,22 +7,11 @@ import { EducationForm } from '../forms/EducationForm',
 import { SkillsForm } from '../forms/SkillsForm',
 import { CertificationsForm } from '../forms/CertificationsForm',
 import { PreviewResume } from '../PreviewResume',
-=======
-import {TabsContent} from "@/components/ui/tabs";
-import {Resume} from "@/types/resume";
-import {BasicInfoForm} from '../forms/basic-info';
-import {WorkExperienceForm} from '../forms/WorkExperienceForm';
-import {EducationForm} from '../forms/EducationForm';
-import {SkillsForm} from '../forms/SkillsForm';
-import {CertificationsForm} from '../forms/CertificationsForm';
-import {PreviewResume} from '../PreviewResume';
->>>>>>> main
 interface ResumeStepContentProps {
   activeTab: string,
   resume: Resume,
   onNextStep: () => void,
   onPrevStep: () => void
-<<<<<<< HEAD
 }
 
 export const ResumeStepContent = ({ 
@@ -84,32 +72,6 @@ export const ResumeStepContent = ({;
       </TabsContent>;
       <TabsContent value="work-experience">;
         <WorkExperienceForm;
-=======
-}
-
-export const ResumeStepContent = ({ 
-  activeTab;
-  resume, 
-  onNextStep, 
-  onPrevStep 
-}: ResumeStepContentProps) => {
-  return (
-    <>
-      <TabsContent value="basic-info">
-        <BasicInfoForm 
-          resumeId={resume?.id!} 
-          initialData={resume?.basic_info}
-          onSave={(data) => {
-            // Here you would typically save the data to your backend
-            console.log("Saving basic info:", data)
-          }}
-          onComplete={onNextStep} 
-        />
-      </TabsContent>
-      
-      <TabsContent value="work-experience">
-        <WorkExperienceForm 
->>>>>>> main
           resumeId={resume?.id!}
           workExperiences={resume?.work_experience || []}
           onComplete={onNextStep}
@@ -148,16 +110,8 @@ export const ResumeStepContent = ({
         <PreviewResume 
           resume={resume as Resume} 
           onBack={onPrevStep}
-<<<<<<< HEAD
         />;
       </TabsContent>;
     </>;
   );
 };
-=======
-        />
-      </TabsContent>
-    </>
-  )
-};
->>>>>>> main

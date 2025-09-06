@@ -1,11 +1,6 @@
 
-<<<<<<< HEAD
 import { GradientHeading } from "@/components/GradientHeading",
 import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",
-=======
-import {GradientHeading} from "@/components/GradientHeading";
-import {EnhancedNewsletterForm} from "@/components/EnhancedNewsletterForm";
->>>>>>> main
 export function NewsletterSection() {
   return (
     <section className="py-20 bg-zion-blue-dark" id="newsletter">
@@ -22,7 +17,6 @@ export function NewsletterSection() {
       </div>
     </section>
   )
-<<<<<<< HEAD
 import { GradientHeading } from "@/components/GradientHeading",;
 import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
 export function NewsletterSection() {;
@@ -43,6 +37,3 @@ export function NewsletterSection() {;
   );
 }
 ;
-=======
-}
->>>>>>> main

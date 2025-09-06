@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
 import { useWallet as useAppWallet } from "../../../context/WalletContext.tsx", // Renamed to avoid conflict if useWallet hook is defined locally
 
-<<<<<<< HEAD
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { useAuth } from "@/hooks/useAuth",
@@ -16,22 +15,12 @@ export function Web3Login() {
   const { loginWithWeb3 } = useAuth(),
   const { isWalletSystemAvailable } = useAppWallet(),
   const [isLoading, setIsLoading] = useState(false),
-=======
-import { toast } from "sonner";
-import {logErrorToProduction} from '@/utils/productionLogger';
-export function Web3Login() {
-
-  const { loginWithWeb3 } = useAuth();
-  const { isWalletSystemAvailable } = useAppWallet();
-  const [isLoading, setIsLoading] = useState(false);
->>>>>>> main
 
   const handleWeb3Login = async () => {
     if (!isWalletSystemAvailable) {
       toast("Web3 login unavailable", {
         description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."}),
       return
-<<<<<<< HEAD
     }
 
     try {
@@ -173,35 +162,3 @@ export function Web3Login() {;
   );
 }
 ;
-=======
-    }
-
-    try {
-      setIsLoading(true);
-
-      // Check if Ethereum provider (e.g., MetaMask) is available
-      const ethereum = (window as any).ethereum;
-      if (!ethereum) {
-        toast("Web3 wallet not found", {
-          description: "Please install MetaMask or another compatible wallet."}),
-        return
-      }
-
-      await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow
-
-    } catch (error: any) {
-      toast("Login failed", {
-        description: error.message || "Failed to connect wallet. Please try again."}),
-      logErrorToProduction('Web3 login error:', { data: error })
-    } finally {
-      setIsLoading(false)
-    }
-  };
-
-  const buttonDisabled = isLoading || !isWalletSystemAvailable;
-  const buttonTitle = !isWalletSystemAvailable
-    ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured."
-    : "";
-
-}
->>>>>>> main

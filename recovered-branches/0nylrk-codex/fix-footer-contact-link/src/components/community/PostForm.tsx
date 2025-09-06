@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { 
@@ -21,22 +20,11 @@ import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
 import { Textarea } from "@/components/ui/textarea",
 import { ForumCategory } from "@/types/community",
-=======
-import {useState} from "react";
-import {useForm} from "react-hook-form";
-import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {Textarea} from "@/components/ui/textarea";
-import {ForumCategory} from "@/types/community";
->>>>>>> main
 interface PostFormValues {
   title: string,
   content: string,
   categoryId: ForumCategory,
   tags: string
-<<<<<<< HEAD
 import { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import {;
@@ -74,19 +62,6 @@ interface PostFormProps {;
 export const PostForm = ({
   initialValues,
   onSubmit,
-=======
-}
-
-interface PostFormProps {
-  initialValues?: Partial<PostFormValues>;
-  onSubmit: (values: PostFormValues) => void,
-  isEditing?: boolean
-}
-
-export const PostForm = ({
-  initialValues;
-  onSubmit;
->>>>>>> main
   isEditing = false
 }: PostFormProps) => {
   const form = useForm<PostFormValues>({
@@ -96,7 +71,6 @@ export const PostForm = ({
       categoryId: initialValues?.categoryId || "project-help",
       tags: initialValues?.tags || ""
     }
-<<<<<<< HEAD
   }),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
   const handleSubmit = async (values: PostFormValues) => {;
@@ -107,20 +81,6 @@ export const PostForm = ({
       setIsSubmitting(false);
     }
   },
-=======
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleSubmit = async (values: PostFormValues) => {
-    setIsSubmitting(true),
-    try {
-      await onSubmit(values)
-    } finally {
-      setIsSubmitting(false)
-    }
-  };
->>>>>>> main
 
   return (
     <Card>
@@ -142,14 +102,8 @@ export const PostForm = ({
                   <FormMessage />
                 </FormItem>
               )}
-<<<<<<< HEAD
             />;
             <FormField;
-=======
-            />
-            
-            <FormField
->>>>>>> main
               control={form.control}
               name="content"
               render={({ field }) => (
@@ -165,14 +119,8 @@ export const PostForm = ({
                   <FormMessage />
                 </FormItem>
               )}
-<<<<<<< HEAD
             />;
             <FormField;
-=======
-            />
-            
-            <FormField
->>>>>>> main
               control={form.control}
               name="categoryId"
               render={({ field }) => (
@@ -192,14 +140,8 @@ export const PostForm = ({
                   <FormMessage />
                 </FormItem>
               )}
-<<<<<<< HEAD
             />;
             <FormField;
-=======
-            />
-            
-            <FormField
->>>>>>> main
               control={form.control}
               name="tags"
               render={({ field }) => (
@@ -224,12 +166,6 @@ export const PostForm = ({
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
 },
 
 export default PostForm,
-=======
-};
-
-export default PostForm;
->>>>>>> main

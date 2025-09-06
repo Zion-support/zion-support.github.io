@@ -2,7 +2,6 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Sparkles, RefreshCcw } from "lucide-react";
 
-<<<<<<< HEAD
 import { Card } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Sparkles, RefreshCcw } from "lucide-react",
@@ -13,17 +12,6 @@ export interface EmptyMatchesCardProps {
 }
 
 export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {
-=======
-export interface EmptyMatchesCardProps {
-  onRefresh: () => void;
-  isProcessing: boolean;
-}
-
-export function EmptyMatchesCard({
-  onRefresh,
-  isProcessing,
-}: EmptyMatchesCardProps) {
->>>>>>> main
   return (
     <Card className="p-6 text-center border-dashed border-2 bg-muted/30">
       <div className="mb-4 flex justify-center">
@@ -33,15 +21,11 @@ export function EmptyMatchesCard({
       <p className="text-muted-foreground mb-6">
         Run AI matching to find talents that match this job's requirements.
       </p>
-<<<<<<< HEAD
       <Button 
         onClick={onRefresh} 
         disabled={isProcessing}
         className="mx-auto"
       >
-=======
-      <Button onClick={onRefresh} disabled={isProcessing} className="mx-auto">
->>>>>>> main
         {isProcessing ? (
           <>
             <RefreshCcw className="mr-2 h-4 w-4 animate-spin" />
@@ -52,7 +36,6 @@ export function EmptyMatchesCard({
             <Sparkles className="mr-2 h-4 w-4" />
             Find AI Matches
           </>
-<<<<<<< HEAD
 import { Card } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Sparkles, RefreshCcw } from "lucide-react",;
@@ -89,11 +72,6 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
         )}
       </Button>;
     </Card>;
-=======
-        )}
-      </Button>
-    </Card>
->>>>>>> main
   );
 }
 ;

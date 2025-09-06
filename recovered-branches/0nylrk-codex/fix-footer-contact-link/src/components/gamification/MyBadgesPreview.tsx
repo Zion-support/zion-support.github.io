@@ -2,7 +2,6 @@ import React from "react";
 import { BadgeEarned } from "./BadgeEarned";
 import { badgeList, BadgeKey } from "./badgeConfig";
 
-<<<<<<< HEAD
 import React from "react",
 import { BadgeEarned } from "./BadgeEarned",
 import { badgeList, BadgeKey } from "./badgeConfig",
@@ -12,14 +11,6 @@ const earnedBadges: { badge: BadgeKey, date: string }[] = [
   { badge: "first_listing", date: "2024-12-16" },
   { badge: "profile_complete", date: "2024-11-22" },
   { badge: "first_action", date: "2024-09-08" }],
-=======
-// Dummy data for demo: what badges this user earned (with fake dates)
-const earnedBadges: { badge: BadgeKey; date: string }[] = [
-  { badge: "first_listing", date: "2024-12-16" },
-  { badge: "profile_complete", date: "2024-11-22" },
-  { badge: "first_action", date: "2024-09-08" },
-];
->>>>>>> main
 
 export const MyBadgesPreview: React.FC = () => {
   return (
@@ -33,7 +24,6 @@ export const MyBadgesPreview: React.FC = () => {
       <div className="flex flex-wrap gap-2">
         {earnedBadges.map(({ badge, date }) => (
           <BadgeEarned key={badge} badge={badge} earnedDate={date} />
-<<<<<<< HEAD
 import React from "react",;
 import { BadgeEarned } from "./BadgeEarned",;
 import { badgeList, BadgeKey } from "./badgeConfig",;
@@ -54,19 +44,3 @@ export const MyBadgesPreview: React.FC = () => {;
       <div className="flex flex-wrap gap-2">;
         {earnedBadges.map(({ badge, date }) => (;
           <BadgeEarned key={badge} badge={badge} earnedDate={date} />;
-=======
->>>>>>> main
-        ))}
-      </div>
-      {/* Example progress for next badge */}
-      <div className="mt-3 text-xs text-zion-slate-light">
-        <span>Complete your profile for more rewards!</span>
-      </div>
-    </div>
-<<<<<<< HEAD
-  )
-},
-=======
-  );
-};
->>>>>>> main

@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -69,72 +68,6 @@ export function AddMilestoneForm({;
         amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount;
       }),;
       return;
-=======
-import React from 'react';
-import {useForm} from 'react-hook-form';
-import {zodResolver} from '@hookform/resolvers/zod';
-import {z} from 'zod';
-import {CalendarIcon, Loader2} from 'lucide-react';
-import {format} from 'date-fns';
-import {Button} from '@/components/ui/button';
-import {Calendar} from '@/components/ui/calendar';
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components/ui/form';
-import {Input} from '@/components/ui/input';
-import {Textarea} from '@/components/ui/textarea';
-import {Popover, PopoverContent, PopoverTrigger} from '@/components/ui/popover';
-import {AIMilestoneGenerator} from './AIMilestoneGenerator';
-import {GeneratedMilestone} from '@/hooks/useMilestoneGenerator';
-const formSchema = z.object({
-  title: z.string().min(1, 'Title is required');
-  description: z.string().optional(),
-  due_date: z.date().optional(),
-  amount: z.coerce.number().min(0, 'Amount must be greater than or equal to 0')});
-
-type MilestoneFormValues = z.infer<typeof formSchema>;
-
-interface AddMilestoneFormProps {
-  onSubmit: (data: MilestoneFormValues) => void,
-  isSubmitting: boolean,
-  onCancel?: () => void;
-  projectScope?: string;
-  projectStartDate?: string;
-  projectEndDate?: string;
-  projectType?: string
-}
-
-export function AddMilestoneForm({
-  onSubmit;
-  isSubmitting;
-  onCancel;
-  projectScope = '';
-  projectStartDate = '';
-  projectEndDate = null;
-  projectType = 'Other'
-}: AddMilestoneFormProps) {
-  const form = useForm<MilestoneFormValues>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      title: '',
-      description: '',
-      amount: 0}}),
-
-  const handleSubmit = (values: MilestoneFormValues) => {
-    onSubmit(values),
-    form.reset()
-  };
-
-  const handleAddMilestones = (milestones: GeneratedMilestone[]) => {
-    // If there's only one milestone, submit it directly
-    if (milestones.length === 1) {
-      const milestone = milestones[0];
-      onSubmit({
-        title: milestone.title,
-        description: milestone.description,
-        due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,
-        amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
-      });
-      return
->>>>>>> main
     }
 
     // If there are multiple milestones, submit them one by one
@@ -146,11 +79,7 @@ export function AddMilestoneForm({
         amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
       })
     })
-<<<<<<< HEAD
   },
-=======
-  };
->>>>>>> main
 
   const handleAddMilestone = (milestone: GeneratedMilestone) => {
     onSubmit({
@@ -159,11 +88,7 @@ export function AddMilestoneForm({
       due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,
       amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
     })
-<<<<<<< HEAD
   },
-=======
-  };
->>>>>>> main
 
   return (
     <div className="space-y-6">
@@ -192,7 +117,6 @@ export function AddMilestoneForm({
                 </FormControl>
                 <FormMessage />
               </FormItem>
-<<<<<<< HEAD
             )}
           />;
           <FormField;
@@ -213,29 +137,6 @@ export function AddMilestoneForm({
             )}
           />
 
-=======
-            )}
-          />
-
-          <FormField
-            control={form.control}
-            name="description"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Description (optional)</FormLabel>
-                <FormControl>
-                  <Textarea
-                    placeholder="Describe what needs to be delivered"
-                    className="min-h-[100px]"
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
->>>>>>> main
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FormField
               control={form.control}
@@ -267,7 +168,6 @@ export function AddMilestoneForm({
                         selected={field.value}
                         onSelect={field.onChange}
                         disabled={(date) => date < new Date()}
-<<<<<<< HEAD
                         initialFocus;
                       />;
                     </PopoverContent>;
@@ -295,36 +195,6 @@ export function AddMilestoneForm({
                 </FormItem>;
               )}
             />
-=======
-                        initialFocus
-                      />
-                    </PopoverContent>
-                  </Popover>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              control={form.control}
-              name="amount"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Amount ($)</FormLabel>
-                  <FormControl>
-                    <Input
-                      type="number"
-                      min="0"
-                      step="0.01"
-                      placeholder="0.00"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
->>>>>>> main
           </div>
 
           <div className="flex justify-end space-x-2 pt-4">
@@ -347,20 +217,11 @@ export function AddMilestoneForm({
               ) : (
                 "Add Milestone"
               )}
-<<<<<<< HEAD
             </Button>;
           </div>;
         </form>;
       </Form>;
     </div>;
   );
-=======
-            </Button>
-          </div>
-        </form>
-      </Form>
-    </div>
-  )
->>>>>>> main
 }
 ;

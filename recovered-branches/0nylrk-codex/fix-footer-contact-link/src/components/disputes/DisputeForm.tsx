@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -23,21 +22,6 @@ import { DisputeReason, disputeReasonLabels } from "@/types/disputes",
 import { useDisputes } from "@/hooks/useDisputes",
 import { toast } from "sonner",
 import { FileText } from "lucide-react",
-=======
-import React, { useState } from "react";
-import {useForm} from "react-hook-form";
-import {zodResolver} from "@hookform/resolvers/zod";
-import {z} from "zod";
-import {Button} from "@/components/ui/button";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {Textarea} from "@/components/ui/textarea";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {Input} from "@/components/ui/input";
-import {DisputeReason, disputeReasonLabels} from "@/types/disputes";
-import {useDisputes} from "@/hooks/useDisputes";
-import {toast} from "sonner";
-import {FileText} from "lucide-react";
->>>>>>> main
 const formSchema = z.object({
   reason_code: z.string()
     .min(1, { message: "Please select a reason for the dispute" }),
@@ -47,17 +31,10 @@ const formSchema = z.object({
 
 type DisputeFormProps = {
   projectId: string,
-<<<<<<< HEAD
   milestoneId?: string,
   onDisputeCreated?: (disputeId: string) => void,
   onCancel?: () => void
 },
-=======
-  milestoneId?: string;
-  onDisputeCreated?: (disputeId: string) => void,
-  onCancel?: () => void
-};
->>>>>>> main
 
 export function DisputeForm({ 
   projectId, 
@@ -65,15 +42,9 @@ export function DisputeForm({
   onDisputeCreated, 
   onCancel 
 }: DisputeFormProps) {
-<<<<<<< HEAD
   const { createDispute } = useDisputes(),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [files, setFiles] = useState<File[]>([]),
-=======
-  const { createDispute } = useDisputes();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [files, setFiles] = useState<File[]>([]);
->>>>>>> main
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -85,7 +56,6 @@ export function DisputeForm({
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
       const newFiles = Array.from(e.target.files),
-<<<<<<< HEAD
       setFiles(prev => [...prev, ...newFiles]),
       form.setValue("attachments", [...files, ...newFiles])
     }
@@ -97,19 +67,6 @@ export function DisputeForm({
     setFiles(newFiles),
     form.setValue("attachments", newFiles)
   },
-=======
-      setFiles(prev => [...prev, ...newFiles]);
-      form.setValue("attachments", [...files, ...newFiles])
-    }
-  };
-
-  const removeFile = (index: number) => {
-    const newFiles = [...files],
-    newFiles.splice(index, 1);
-    setFiles(newFiles);
-    form.setValue("attachments", newFiles)
-  };
->>>>>>> main
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
@@ -125,28 +82,17 @@ export function DisputeForm({
         // Future enhancement: Upload attachments
         // For now we just log the files that would be uploaded
         if (files.length > 0) {
-<<<<<<< HEAD
           // // // console.log(`Would upload ${files.length} files for dispute ${dispute.id}`)
         }
         
         toast.success("Your dispute has been submitted"),
-=======
-          console.log(`Would upload ${files.length} files for dispute ${dispute.id}`)
-        }
-        
-        toast.success("Your dispute has been submitted");
->>>>>>> main
         
         if (onDisputeCreated) {
           onDisputeCreated(dispute.id)
         }
       }
     } catch (error) {
-<<<<<<< HEAD
       console.error("Error submitting dispute:", error),
-=======
-      console.error("Error submitting dispute:", error);
->>>>>>> main
       toast.error("Failed to submit dispute. Please try again.")
     } finally {
       setIsSubmitting(false)
@@ -177,7 +123,6 @@ export function DisputeForm({
                   <SelectContent>
                     {Object.entries(disputeReasonLabels).map(([value, label]) => (
                       <SelectItem key={value} value={value}>{label}</SelectItem>
-<<<<<<< HEAD
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -301,17 +246,6 @@ export function DisputeForm({;
             )}
           />;
           <FormField;
-=======
-                    ))}
-                  </SelectContent>
-                </Select>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          
-          <FormField
->>>>>>> main
             control={form.control}
             name="description"
             render={({ field }) => (
@@ -322,17 +256,10 @@ export function DisputeForm({;
                     placeholder="Please provide specific details about the issue..."
                     className="min-h-[150px]"
                     {...field}
-<<<<<<< HEAD
                   />;
                 </FormControl>;
                 <FormMessage />;
               </FormItem>;
-=======
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
->>>>>>> main
             )}
           />
           
@@ -359,7 +286,6 @@ export function DisputeForm({;
                             variant="ghost" 
                             size="sm" 
                             onClick={() => removeFile(index)}
-<<<<<<< HEAD
                           >;
                             Remove;
                           </Button>;
@@ -367,15 +293,6 @@ export function DisputeForm({;
                       ))}
                     </ul>;
                   </div>;
-=======
-                          >
-                            Remove
-                          </Button>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
->>>>>>> main
                 )}
               </div>
             </FormControl>

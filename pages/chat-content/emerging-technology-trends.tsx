@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextPage } from 'next',
 import Head from 'next/head',
 const EmergingTechnologyTrends: NextPage = () => {
@@ -8,22 +7,11 @@ const EmergingTechnologyTrends: NextPage = () => {
         <title>EmergingTechnologyTrends - Zion Tech Solutions</title>
         <meta name="description" content="EmergingTechnologyTrends page" />
       </Head>
-=======
-import type { NextPage } from 'next';
-import Head from 'next/head';
->>>>>>> main
       <main>
         <h1>EmergingTechnologyTrends</h1>
         <p>This page is under construction.</p>
       </main>
     </div>
-<<<<<<< HEAD
   )
 },
 export default EmergingTechnologyTrends,
-=======
-  ),
-};
-
-export default EmergingTechnologyTrends;
->>>>>>> main

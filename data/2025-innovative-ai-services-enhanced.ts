@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeAIService2025 {;
   id: string,;
@@ -263,53 +262,3 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [;
     reviews: 89;
   }
 ];
-=======
-import { ServiceVariant } from '../types/service-variants';
-
-export interface InnovativeAIService2025 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string[];
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
-  contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
-  // AI Consciousness & Emotional Intelligence
-  {
-
-export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
-  // AI Consciousness & Emotional Intelligence
-  {
->>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import Link from 'next/link',
 import { useAuth } from '@/hooks/useAuth',
@@ -73,6 +72,3 @@ export const AvatarMenu: React.FC = () => {
 },
 
 export default AvatarMenu,
-=======
-export default AvatarMenu;
->>>>>>> main

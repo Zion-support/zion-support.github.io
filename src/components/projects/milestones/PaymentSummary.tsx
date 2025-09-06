@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React from 'react',;
 import { Milestone } from '@/hooks/useMilestones',;
@@ -21,25 +20,6 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
       (sum, m) => sum + parseFloat(m.amount.toString()), 
       0
     ).toFixed(2),
-=======
-interface PaymentSummaryProps {
-  milestones: Milestone[],
-  paymentTerms: string | null
-}
-
-export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms },) => {
-  const totalPayment = milestones.reduce(
-
-    0
-  ).toFixed(2);
-
-  const paidAmount = milestones
-    .filter(m => m.status === 'paid')
-    .reduce(
-
-      0
-    ).toFixed(2);
->>>>>>> main
 
   return (
     <Card className="mb-8 bg-muted/30">
@@ -49,38 +29,25 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
         </CardTitle>
       </CardHeader>
       <CardContent>
-<<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-=======
-        <div className="grid grid-cols-1 md: grid-cols-3 gap-6">
->>>>>>> main
           <div>
             <p className="text-sm text-muted-foreground mb-1">Total Payment</p>
             <p className="text-2xl font-semibold">
               ${totalPayment}
             </p>
           </div>
-<<<<<<< HEAD
           
-=======
-
->>>>>>> main
           <div>
             <p className="text-sm text-muted-foreground mb-1">Payment Terms</p>
             <p className="font-medium capitalize">
               {paymentTerms || "Not specified"}
             </p>
           </div>
-<<<<<<< HEAD
           
-=======
-
->>>>>>> main
           <div>
             <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
             <p className="font-medium">
               ${paidAmount}
-<<<<<<< HEAD
             </p>;
           </div>;
         </div>;
@@ -88,13 +55,3 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
     </Card>;
   );
 };
-=======
-            </p>
-          </div>
-        </div>
-      </CardContent>
-    </Card>
-  )
-};
-'"
->>>>>>> main

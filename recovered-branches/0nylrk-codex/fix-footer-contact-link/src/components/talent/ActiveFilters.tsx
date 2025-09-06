@@ -1,15 +1,8 @@
 
-<<<<<<< HEAD
 import React from "react",
 import { ClickableBadge } from "@/components/ui/clickable-badge",
 import { Button } from "@/components/ui/button",
 import { X } from "lucide-react",
-=======
-import React from "react";
-import {ClickableBadge} from "@/components/ui/clickable-badge";
-import {Button} from "@/components/ui/button";
-import {X} from "lucide-react";
->>>>>>> main
 interface ActiveFiltersProps {
   selectedSkills: string[],
   toggleSkill: (skill: string) => void,
@@ -17,7 +10,6 @@ interface ActiveFiltersProps {
   toggleAvailability: (status: string) => void,
   selectedRegions: string[],
   toggleRegion: (region: string) => void,
-<<<<<<< HEAD
   priceRange: [number, number],
   setPriceRange: (range: [number, number]) => void,
   experienceRange: [number, number],
@@ -108,55 +100,10 @@ export function ActiveFilters({;
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
           onClick={() => toggleSkill(skill)}
         >;
-=======
-  priceRange: [number, number];
-  setPriceRange: (range: [number, number]) => void;
-  experienceRange: [number, number];
-  setExperienceRange: (range: [number, number]) => void;
-  clearFilters: () => void
-}
-
-export function ActiveFilters({
-  selectedSkills;
-  toggleSkill;
-  selectedAvailability;
-  toggleAvailability;
-  selectedRegions;
-  toggleRegion;
-  priceRange;
-  setPriceRange;
-  experienceRange;
-  setExperienceRange;
-  clearFilters
-}: ActiveFiltersProps) {
-  // Check if any filters are active
-  const hasActiveFilters = 
-    selectedSkills.length > 0 || 
-    selectedAvailability.length > 0 || 
-    selectedRegions.length > 0 ||
-    experienceRange[0] !== 0 ||
-    experienceRange[1] !== 15 ||
-    priceRange[0] !== 50 ||
-    priceRange[1] !== 200;
-  
-  if (!hasActiveFilters) return null;
-
-  return (
-    <div className="mb-6 flex flex-wrap gap-2 items-center">
-      <span className="text-zion-slate-light text-sm">Active filters:</span>
-      
-      {selectedSkills.map(skill => (
-        <ClickableBadge 
-          key={skill}
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
-          onClick={() => toggleSkill(skill)}
-        >
->>>>>>> main
           {skill}
           <X className="h-3 w-3" />
         </ClickableBadge>
       ))}
-<<<<<<< HEAD
 ;
       {selectedAvailability.map(status => (;
         <ClickableBadge;
@@ -166,22 +113,10 @@ export function ActiveFilters({
         >;
           {status === 'full-time' ? 'Full-time' :;
            status === 'part-time' ? 'Part-time' :;
-=======
-      
-      {selectedAvailability.map(status => (
-        <ClickableBadge 
-          key={status}
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
-          onClick={() => toggleAvailability(status)}
-        >
-          {status === 'full-time' ? 'Full-time' :
-           status === 'part-time' ? 'Part-time' :
->>>>>>> main
            'Project-based'}
           <X className="h-3 w-3" />
         </ClickableBadge>
       ))}
-<<<<<<< HEAD
 ;
       {selectedRegions.map(region => (;
         <ClickableBadge;
@@ -189,15 +124,6 @@ export function ActiveFilters({
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => toggleRegion(region)}
         >;
-=======
-      
-      {selectedRegions.map(region => (
-        <ClickableBadge 
-          key={region}
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
-          onClick={() => toggleRegion(region)}
-        >
->>>>>>> main
           {region}
           <X className="h-3 w-3" />
         </ClickableBadge>
@@ -233,7 +159,6 @@ export function ActiveFilters({
       </Button>
     </div>
   )
-<<<<<<< HEAD
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
@@ -268,7 +193,5 @@ export function ActiveFilters({
       </Button>;
     </div>;
   );
-=======
->>>>>>> main
 }
 ;

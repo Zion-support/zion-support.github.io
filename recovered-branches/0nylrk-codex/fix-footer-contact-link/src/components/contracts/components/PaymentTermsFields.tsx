@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { UseFormReturn } from "react-hook-form",
 import { 
   FormField,
@@ -21,21 +20,10 @@ import { MilestoneSuggestions } from "@/components/projects/milestones/Milestone
 import { TalentProfile } from "@/types/talent",
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
 import { ContractFormValues } from "./ContractForm",
-=======
-import {UseFormReturn} from "react-hook-form";
-import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {MilestoneSuggestions} from "@/components/projects/milestones/MilestoneSuggestions";
-import {TalentProfile} from "@/types/talent";
-import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
-import {ContractFormValues} from "./ContractForm";
->>>>>>> main
 interface PaymentTermsFieldsProps {
   form: UseFormReturn<ContractFormValues>,
   talent: TalentProfile,
   handleMilestonesGenerated: (milestones: GeneratedMilestone[]) => void
-<<<<<<< HEAD
 }
 
 export function PaymentTermsFields({ 
@@ -102,19 +90,6 @@ export function PaymentTermsFields({;
     <>;
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
         <FormField;
-=======
-}
-
-export function PaymentTermsFields({ 
-  form;
-  talent;
-  handleMilestonesGenerated 
-}: PaymentTermsFieldsProps) {
-  return (
-    <>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <FormField
->>>>>>> main
           control={form.control}
           name="paymentTerms"
           render={({ field }) => (
@@ -135,14 +110,8 @@ export function PaymentTermsFields({
               <FormMessage />
             </FormItem>
           )}
-<<<<<<< HEAD
         />;
         <FormField;
-=======
-        />
-        
-        <FormField
->>>>>>> main
           control={form.control}
           name="paymentAmount"
           render={({ field }) => (
@@ -161,14 +130,8 @@ export function PaymentTermsFields({
               <FormMessage />
             </FormItem>
           )}
-<<<<<<< HEAD
         />;
       </div>;
-=======
-        />
-      </div>
-
->>>>>>> main
       {/* Project Milestones */}
       {form.watch("paymentTerms") === "milestone" && (
         <div className="pt-2">
@@ -183,12 +146,7 @@ export function PaymentTermsFields({
           />
         </div>
       )}
-<<<<<<< HEAD
     </>;
   );
-=======
-    </>
-  )
->>>>>>> main
 }
 ;

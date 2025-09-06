@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { Link } from "react-router-dom",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { useAuth } from "@/hooks/useAuth",
@@ -11,36 +10,21 @@ import {
   Megaphone
 } from "@/components/icons",
 import { ForumCategory, ForumCategoryInfo } from "@/types/community",
-=======
-import {Link} from "react-router-dom";
-import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
-import {useAuth} from "@/hooks/useAuth";
-import {MessageSquare, Briefcase, Code, FileText, Megaphone} from "@/components/icons";
-import {ForumCategory, ForumCategoryInfo} from "@/types/community";
->>>>>>> main
 
 const categories: ForumCategoryInfo[] = [
   {
     id: "getting-hired",
     name: "Getting Hired",
-<<<<<<< HEAD
     description: "Tips, strategies, and questions about getting hired on the platform.",
     adminOnly: false,
     icon: "Briefcase"
   },
-=======
-    description: "Tips, strategies, and questions about getting hired on the platform.";
-    adminOnly: false,
-    icon: "Briefcase"
-  };
->>>>>>> main
   {
     id: "project-help",
     name: "Project Help",
     description: "Get help with your ongoing projects and collaboration.",
     adminOnly: false,
     icon: "MessageSquare"
-<<<<<<< HEAD
   },
   {
     id: "ai-tools",
@@ -49,27 +33,13 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: false,
     icon: "Code"
   },
-=======
-  };
-  {
-    id: "ai-tools",
-    name: "AI Tools Discussion",
-    description: "Discuss AI tools, frameworks, and best practices.";
-    adminOnly: false,
-    icon: "Code"
-  };
->>>>>>> main
   {
     id: "feedback",
     name: "Feedback & Feature Requests",
     description: "Share your feedback and suggest new features.",
     adminOnly: false,
     icon: "FileText"
-<<<<<<< HEAD
   },
-=======
-  };
->>>>>>> main
   {
     id: "announcements",
     name: "Announcements",
@@ -77,7 +47,6 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: true,
     icon: "Megaphone"
   }
-<<<<<<< HEAD
 ],
 
 const iconMap = {
@@ -95,25 +64,6 @@ export const ForumCategories = () => {
   const visibleCategories = categories.filter(
     category => !category.adminOnly || isAdmin
   ),
-=======
-];
-
-const iconMap = {
-  Briefcase;
-  MessageSquare;
-  Code;
-  FileText;
-  Megaphone
-};
-
-export const ForumCategories = () => {
-  const { user } = useAuth();
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
-
-  const visibleCategories = categories.filter(
-    category => !category.adminOnly || isAdmin
-  );
->>>>>>> main
 
   return (
     <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">
@@ -134,7 +84,6 @@ export const ForumCategories = () => {
             </Card>
           </Link>
         )
-<<<<<<< HEAD
 import { Link } from "react-router-dom",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -220,11 +169,3 @@ export const ForumCategories = () => {;
   );
 };
 export default ForumCategories;
-=======
-      })}
-    </div>
-  )
-};
-
-export default ForumCategories;
->>>>>>> main

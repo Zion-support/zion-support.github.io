@@ -1,18 +1,11 @@
 
-<<<<<<< HEAD
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { HELP_CATEGORIES } from "./help-content",
-=======
-import React from "react";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {HELP_CATEGORIES} from "./help-content";
->>>>>>> main
 interface HelpArticleListProps {
   categoryId: string,
   onArticleSelect: (articleId: string) => void,
   searchQuery: string
-<<<<<<< HEAD
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { HELP_CATEGORIES } from "./help-content",;
@@ -26,15 +19,6 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
   const category = HELP_CATEGORIES.find(cat => cat.id === categoryId),;
   if (!category) {;
     return <div>Category not found</div>;
-=======
-}
-
-export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {
-  const category = HELP_CATEGORIES.find(cat => cat.id === categoryId);
-  
-  if (!category) {
-    return <div>Category not found</div>
->>>>>>> main
   }
   
   // Filter articles based on search query
@@ -44,11 +28,7 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
           article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
           article.content.toLowerCase().includes(searchQuery.toLowerCase())
       )
-<<<<<<< HEAD
     : category.articles,
-=======
-    : category.articles;
->>>>>>> main
   
   return (
     <div>
@@ -85,17 +65,10 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
               </CardContent>
             </Card>
           ))}
-<<<<<<< HEAD
         </div>;
       )}
     </div>;
   );
-=======
-        </div>
-      )}
-    </div>
-  )
->>>>>>> main
 }
 
 function formatDate(date: string): string {
@@ -104,7 +77,6 @@ function formatDate(date: string): string {
     month: "long",
     day: "numeric"
   })
-<<<<<<< HEAD
 ;
 function formatDate(date: string): string {;
   return new Date(date).toLocaleDateString("en-US", {;
@@ -114,6 +86,3 @@ function formatDate(date: string): string {;
   });
 }
 ;
-=======
-}
->>>>>>> main

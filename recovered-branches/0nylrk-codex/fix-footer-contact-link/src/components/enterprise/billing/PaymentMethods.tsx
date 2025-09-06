@@ -10,30 +10,11 @@ import {
 import { Button } from "@/components/ui/button";
 import { CreditCard, Plus, Trash } from "lucide-react";
 
-<<<<<<< HEAD
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { CreditCard, Plus, Trash } from "lucide-react",
 
-=======
->>>>>>> main
-export function PaymentMethods() {
-  // Mock payment methods
-  const paymentMethods = [
-    {
-      id: "pm-1",
-      type: "credit_card",
-      brand: "Visa",
-      last4: "4242",
-      expMonth: 12,
-      expYear: 2025,
-<<<<<<< HEAD
-      isDefault: true},
-=======
-      isDefault: true,
-    },
->>>>>>> main
     {
       id: "pm-2",
       type: "credit_card",
@@ -41,20 +22,13 @@ export function PaymentMethods() {
       last4: "8888",
       expMonth: 4,
       expYear: 2026,
-<<<<<<< HEAD
       isDefault: false}
   ],
-=======
-      isDefault: false,
-    },
-  ];
->>>>>>> main
 
   return (
     <Card>
       <CardHeader>
         <CardTitle>Payment Methods</CardTitle>
-<<<<<<< HEAD
         <CardDescription>Manage your payment methods for automatic billing</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
@@ -138,18 +112,6 @@ export function PaymentMethods() {;
             key={method.id}
             className={`flex items-center justify-between p-4 rounded-lg border ${;
               method.isDefault ? "bg-muted border-primary" : "border-border";
-=======
-        <CardDescription>
-          Manage your payment methods for automatic billing
-        </CardDescription>
-      </CardHeader>
-      <CardContent className="space-y-4">
-        {paymentMethods.map((method) => (
-          <div
-            key={method.id}
-            className={`flex items-center justify-between p-4 rounded-lg border ${
-              method.isDefault ? "bg-muted border-primary" : "border-border"
->>>>>>> main
             }`}
           >
             <div className="flex items-center space-x-4">
@@ -182,7 +144,6 @@ export function PaymentMethods() {;
             </div>
           </div>
         ))}
-<<<<<<< HEAD
       </CardContent>;
       <CardFooter>;
         <Button className="gap-1">;
@@ -191,16 +152,6 @@ export function PaymentMethods() {;
         </Button>;
       </CardFooter>;
     </Card>;
-=======
-      </CardContent>
-      <CardFooter>
-        <Button className="gap-1">
-          <Plus className="h-4 w-4" />
-          Add Payment Method
-        </Button>
-      </CardFooter>
-    </Card>
->>>>>>> main
   );
 }
 ;

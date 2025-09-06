@@ -3,7 +3,6 @@ import { toast } from '@/hooks/use-toast';
 interface AIEnhancementButtonProps {
   options: AIEnhancementOptions,
 
-<<<<<<< HEAD
 import { useState } from 'react',
 import { Button } from '@/components/ui/button',
 import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react'
@@ -91,53 +90,10 @@ export function AIEnhancementButton({;
       onEnhanced(generatedContent),
       setShowActions(false),
       setGeneratedContent(null),
-=======
-  contentLength?: number
-}
-
-export function AIEnhancementButton({
-  options;
-  onEnhanced;
-  buttonText = "Enhance with AI";
-  className;
-  variant = "ghost";
-  size = "sm";
-  contentLength = 10
-}: AIEnhancementButtonProps) {
-  const { enhanceContent, isEnhancing } = useAIContentEnhancer();
-  const [showActions, setShowActions] = useState(false);
-  const [generatedContent, setGeneratedContent] = useState<string | null>(null);
-
-  const handleEnhance = async () => {
-    if ((!options.content || options.content.trim().length < contentLength) && 
-        (!options.context || options.context.trim().length < contentLength)) {
-      toast({
-        title: "Not enough content",
-        description: `Please enter at least ${contentLength} characters before enhancing.`,
-        variant: "destructive"
-      });
-      return
-    }
-
-    const enhancedContent = await enhanceContent(options);
-
-    if (enhancedContent) {
-      setGeneratedContent(enhancedContent);
-      setShowActions(true)
-    }
-  };
-
-  const handleAccept = () => {
-    if (generatedContent) {
-      onEnhanced(generatedContent);
-      setShowActions(false);
-      setGeneratedContent(null);
->>>>>>> main
       toast({
         title: "Content applied",
         description: "AI-enhanced content has been applied."})
     }
-<<<<<<< HEAD
   },
   
   const handleRegenerate = async () => {
@@ -149,19 +105,6 @@ export function AIEnhancementButton({
     setGeneratedContent(null)
   },
   
-=======
-  };
-
-  const handleRegenerate = async () => {
-    await handleEnhance()
-  };
-
-  const handleCancel = () => {
-    setShowActions(false);
-    setGeneratedContent(null)
-  };
-
->>>>>>> main
   if (showActions) {
     return (
       <div className="flex gap-2 items-center">
@@ -169,11 +112,7 @@ export function AIEnhancementButton({
           type="button"
           variant="ghost"
           size="sm"
-<<<<<<< HEAD
           onClick={handleAccept}
-=======
-          onClick = {handleAccept,}
->>>>>>> main
           className="text-green-500 hover:text-green-700 hover:bg-green-100/20"
         >
           <Check className="h-4 w-4 mr-1" />
@@ -183,15 +122,9 @@ export function AIEnhancementButton({
           type="button"
           variant="ghost"
           size="sm"
-<<<<<<< HEAD
           onClick={handleRegenerate}
           className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20"
           disabled={isEnhancing}
-=======
-          onClick = {handleRegenerate,}
-          className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20"
-          disabled = {isEnhancing,}
->>>>>>> main
         >
           {isEnhancing ? (
             <Loader2 className="h-4 w-4 mr-1 animate-spin" />
@@ -204,18 +137,13 @@ export function AIEnhancementButton({
           type="button"
           variant="ghost"
           size="sm"
-<<<<<<< HEAD
           onClick={handleCancel}
-=======
-          onClick = {handleCancel,}
->>>>>>> main
           className="text-gray-500 hover: text-gray-700 hover:bg-gray-100/20"
         >
           <X className="h-4 w-4 mr-1" />
           Cancel
         </Button>
       </div>
-<<<<<<< HEAD
     )
   }
   
@@ -290,19 +218,6 @@ export function AIEnhancementButton({
       className={`gap-1 ${className}`}
       onClick={handleEnhance}
       disabled={isEnhancing}
-=======
-    ),
-  }
-
-  return (
-    <Button
-      type="button"
-      variant = {variant,}
-      size = {size,}
-      className={`gap-1 ${className}`}
-      onClick = {handleEnhance,}
-      disabled = {isEnhancing,}
->>>>>>> main
     >
       {isEnhancing ? (
         <Loader2 className="h-4 w-4 animate-spin" />
@@ -311,19 +226,6 @@ export function AIEnhancementButton({
       )}
       <span className="text-xs">{buttonText}</span>
     </Button>
-<<<<<<< HEAD
   )
 }
 ;
-=======
-  );
-
-};";
-<Button type="button" variant="ghost" size="sm" onClick={;
-  handleAccept ";
-}className="text-green-500 hover:text-green-700 hover:bg-green-100/20" > <Check className="h-4 w-4 mr-1" /> Apply </Button> <Button) : (<RefreshCw className="h-4 w-4 mr-1" />) ";
-}Regenerate </Button> <Button h-4 w-4 mr-1"/> Cancel </Button> </div>) ";
-}return (<Button) : (<Sparkles className=" h-4 w-4" />) ;
-}</Button>) ;
-}"
->>>>>>> main

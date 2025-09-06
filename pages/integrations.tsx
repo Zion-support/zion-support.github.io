@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 export default function IntegrationsRedirect(req, res) {
@@ -11,14 +10,3 @@ export default function IntegrationsRedirect(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
-import {useEffect} from 'react';
-import {useRouter} from 'next/router';
-
-export default function IntegrationsRedirect() {
-  const router = useRouter();
-  useEffect(() => {
-    router.replace('/admin/integrations');
-  }, [router]);
-  return null;
->>>>>>> main

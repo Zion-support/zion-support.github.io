@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import {
   Select,
   SelectContent,
@@ -7,10 +6,6 @@ import {
   SelectTrigger,
   SelectValue} from "@/components/ui/select",
 import { SortFilterProps } from "@/types/filters",
-=======
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {SortFilterProps} from "@/types/filters";
->>>>>>> main
 export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
   return (
     <div className="mb-6">
@@ -31,7 +26,6 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
       </Select>
     </div>
   )
-<<<<<<< HEAD
 import {;
   Select,;
   SelectContent,;
@@ -59,7 +53,5 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {;
       </Select>;
     </div>;
   );
-=======
->>>>>>> main
 }
 ;

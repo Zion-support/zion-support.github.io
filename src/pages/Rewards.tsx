@@ -1,13 +1,8 @@
-<<<<<<< HEAD
 import { Gift } from 'lucide-react'
-=======
-import { Gift } from 'lucide-react';
->>>>>>> main
 
 const REWARDS = [
   { id: 'coupon5', title: '$5 Coupon', cost: 500 },
   { id: 'premium-week', title: 'Premium Week', cost: 1000 },
-<<<<<<< HEAD
   { id: 'swag-pack', title: 'Swag Pack', cost: 2000 }],
 
 export default function RewardsPage() {
@@ -29,19 +24,3 @@ export default function RewardsPage() {
   );
 }
 ;
-=======
-
-            <div>
-              <p className='font-medium'>{r.title}</p>
-              <p className='text-sm text-muted-foreground'>{r.cost} pts</p>
-            </div>
-            <Gift className='h-5 w-5' />          </li>
-
-          </li>
-
-        ))}
-      </ul>
-    </div>
-  );
-}
->>>>>>> main

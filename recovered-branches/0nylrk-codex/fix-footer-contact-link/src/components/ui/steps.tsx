@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from "react",
 import { cn } from "@/lib/utils",
 import { CheckIcon } from "lucide-react",
@@ -62,30 +61,6 @@ export function Step({;
         {;
           "opacity-60": status === "incomplete"},;
         className;
-=======
-import React from "react";
-import {cn} from "@/lib/utils";
-import {CheckIcon} from "lucide-react";
-interface StepProps {
-  status: "incomplete" | "current" | "complete",
-  label: string,
-  description?: string;
-  className?: string
-}
-
-export function Step({
-  status;
-  label;
-  description;
-  className}: StepProps) {
-  return (
-    <li
-      className={cn(
-        "relative flex items-center";
-        {
-          "opacity-60": status === "incomplete"};
-        className
->>>>>>> main
       )}
     >
       <div
@@ -99,7 +74,6 @@ export function Step({
             "bg-zion-purple border-zion-purple text-white":
               status === "complete"}
         )}
-<<<<<<< HEAD
       >;
         {status === "complete" ? (;
           <CheckIcon className="h-5 w-5" />;
@@ -107,26 +81,13 @@ export function Step({
           <span>;
             {/* Step number would go here */}
           </span>;
-=======
-      >
-        {status === "complete" ? (
-          <CheckIcon className="h-5 w-5" />
-        ) : (
-          <span>
-            {/* Step number would go here */}
-          </span>
->>>>>>> main
         )}
       </div>
 
       <div className="ml-4 min-w-0">
         <h3
           className={cn("text-sm font-medium", {
-<<<<<<< HEAD
             "text-zion-slate-light": status === "incomplete",
-=======
-            "text-zion-slate-light": status === "incomplete";
->>>>>>> main
             "text-white": status === "current" || status === "complete"})}
         >
           {label}
@@ -134,7 +95,6 @@ export function Step({
         {description && (
           <p className="text-sm text-zion-slate-light">{description}</p>
         )}
-<<<<<<< HEAD
       </div>;
     </li>;
   );
@@ -148,27 +108,11 @@ interface StepsProps {;
 
 export function Steps({ currentStep, className, children }: StepsProps) {
   const childrenArray = React.Children.toArray(children),
-=======
-      </div>
-    </li>
-  )
-}
-
-interface StepsProps {
-  currentStep: number,
-  className?: string;
-  children: React.ReactNode
-}
-
-export function Steps({ currentStep, className, children }: StepsProps) {
-  const childrenArray = React.Children.toArray(children);
->>>>>>> main
   
   return (
     <div className={cn("w-full", className)}>
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">
         {React.Children.map(childrenArray, (child, index) => {
-<<<<<<< HEAD
           if (!React.isValidElement(child)) return null,
           
           let status: "incomplete" | "current" | "complete" = "incomplete",
@@ -213,28 +157,3 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
   );
 }
 ;
-=======
-          if (!React.isValidElement(child)) return null;
-          
-          let status: "incomplete" | "current" | "complete" = "incomplete",
-          if (index < currentStep) status = "complete";
-          if (index === currentStep) status = "current";
-          
-          return React.cloneElement(child as React.ReactElement<StepProps>, {
-            status})
-        })}
-      </ol>
-      
-      <div className="hidden md:flex md:mt-4">
-        <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">
-          <div
-            className="h-full bg-zion-purple transition-all"
-            style={{
-              width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
-          />
-        </div>
-      </div>
-    </div>
-  )
-}
->>>>>>> main

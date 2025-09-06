@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',;
@@ -26,35 +25,6 @@ export function MilestoneSuggestions({
 }: MilestoneSuggestionsProps) {
   const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator(),
   const [showSuggestions, setShowSuggestions] = useState(false),
-=======
-import React, { useState } from 'react';
-import {Button} from '@/components/ui/button';
-import {GeneratedMilestone, MilestoneInput, useMilestoneGenerator} from '@/hooks/useMilestoneGenerator';
-import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
-import {Loader2, Sparkles, Check} from 'lucide-react';
-import {Badge} from '@/components/ui/badge';
-import {format, parseISO} from 'date-fns';
-
-interface MilestoneSuggestionsProps {
-  projectName: string,
-  scopeSummary: string,
-  startDate: Date,
-  endDate?: Date;
-  projectType: string,
-  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
-}
-
-export function MilestoneSuggestions({
-  projectName;
-  scopeSummary;
-  startDate;
-  endDate;
-  projectType;
-  onMilestonesGenerated
-}: MilestoneSuggestionsProps) {
-  const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator();
-  const [showSuggestions, setShowSuggestions] = useState(false);
->>>>>>> main
 
   const handleGenerateMilestones = async () => {
     const input: MilestoneInput = {
@@ -62,7 +32,6 @@ export function MilestoneSuggestions({
       startDate: startDate.toISOString(),
       endDate: endDate ? endDate.toISOString() : null,
       projectType: projectType || "Other"
-<<<<<<< HEAD
     },
 
     const milestones = await generateMilestones(input),
@@ -104,27 +73,6 @@ export function MilestoneSuggestions({;
       return dateString;
     }
   },
-=======
-    };
-
-    const milestones = await generateMilestones(input);
-    
-    if (milestones.length > 0) {
-      setShowSuggestions(true);
-      if (onMilestonesGenerated) {
-        onMilestonesGenerated(milestones)
-      }
-    }
-  };
-
-  const formatDate = (dateString: string) => {
-    try {
-      return format(parseISO(dateString), 'MMM dd, yyyy')
-    } catch (error) {
-      return dateString
-    }
-  };
->>>>>>> main
 
   return (
     <div className="space-y-4">
@@ -146,11 +94,7 @@ export function MilestoneSuggestions({;
               Suggest Project Milestones with AI
             </>
           )}
-<<<<<<< HEAD
         </Button>;
-=======
-        </Button>
->>>>>>> main
       )}
 
       {showSuggestions && generatedMilestones.length > 0 && (
@@ -191,13 +135,7 @@ export function MilestoneSuggestions({;
           </CardContent>
         </Card>
       )}
-<<<<<<< HEAD
     </div>;
   );
 }
 ;
-=======
-    </div>
-  )
-}
->>>>>>> main

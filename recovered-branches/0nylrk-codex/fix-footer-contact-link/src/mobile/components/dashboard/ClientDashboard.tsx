@@ -1,19 +1,10 @@
 
-<<<<<<< HEAD
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from "lucide-react",
 import { Link } from "react-router-dom",
-=======
-import React from "react";
-import {Card, CardContent} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Badge} from "@/components/ui/badge";
-import {ChevronRight, Plus, UserCheck, FileText, Bell} from "lucide-react";
-import {Link} from "react-router-dom";
->>>>>>> main
 export function ClientDashboard() {
   return (
     <div className="space-y-6 px-4 pb-24">
@@ -176,7 +167,6 @@ export function ClientDashboard() {
       </section>
     </div>
   )
-<<<<<<< HEAD
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -336,6 +326,3 @@ export function ClientDashboard() {;
   );
 }
 ;
-=======
-}
->>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react'
 import EnhancedCard from '../../components/ui/EnhancedCard'
 import EnhancedButton from '../../components/ui/EnhancedButton'
@@ -15,7 +14,6 @@ export default function NewJobPage() {
       notify('Job posted! Invite talent to get responses.success')
     }, 800)
   },
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
   return (
     <div className="max-w-2xl mx-auto">
       <EnhancedCard>
@@ -42,15 +40,3 @@ export default function NewJobPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
-import {useState} from 'react';
-import EnhancedCard from '../../components/ui/EnhancedCard';
-import EnhancedButton from '../../components/ui/EnhancedButton';
-import EnhancedLoading from '../../components/ui/EnhancedLoading';
-import { useToast } from '../../components/ui/NotificationSystem';
-          </form>
-        )}
-      </EnhancedCard>
-    </div>
-  );
->>>>>>> main

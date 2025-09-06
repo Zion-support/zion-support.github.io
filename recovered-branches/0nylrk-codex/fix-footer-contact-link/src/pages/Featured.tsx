@@ -1,15 +1,8 @@
 
-<<<<<<< HEAD
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection",
 import { GradientHeading } from "@/components/GradientHeading",
-=======
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {FeaturedListingsSection} from "@/components/FeaturedListingsSection";
-import {GradientHeading} from "@/components/GradientHeading";
->>>>>>> main
 export default function Featured() {
   return (
     <>
@@ -26,7 +19,6 @@ export default function Featured() {
             </p>
           </div>
           
-<<<<<<< HEAD
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection",;
@@ -53,14 +45,5 @@ export default function Featured() {;
       <Footer />;
     </>;
   );
-=======
-          {/* Reuse the FeaturedListings component */}
-          <FeaturedListingsSection showTitle={false} />
-        </div>
-      </div>
-      <Footer />
-    </>
-  )
->>>>>>> main
 }
 ;

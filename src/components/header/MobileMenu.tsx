@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link',;
 import { useRouter } from 'next/router',;
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from 'lucide-react';
@@ -139,7 +138,3 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
   )
 }
 ;
-=======
-)
-}
->>>>>>> main

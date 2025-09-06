@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { Badge } from "@/components/ui/badge",
@@ -101,60 +100,6 @@ export function ProfileHero({;
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">;
                   {name.substring(0, 2).toUpperCase()}
                 </AvatarFallback>;
-=======
-import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
-import {AspectRatio} from "@/components/ui/aspect-ratio";
-import {Badge} from "@/components/ui/badge";
-import {Star} from "lucide-react";
-import {cn} from "@/lib/utils";
-interface ProfileHeroProps {
-  name: string,
-  title: string,
-  avatarUrl?: string;
-  coverImageUrl?: string;
-  location?: string;
-  rating?: number;
-  reviewCount?: number;
-  aiScore?: number;
-  profileType: 'service' | 'talent'
-}
-
-export function ProfileHero({
-  name;
-  title;
-  avatarUrl;
-  coverImageUrl;
-  location;
-  rating;
-  reviewCount;
-  aiScore;
-  profileType
-}: ProfileHeroProps) {
-  return (
-    <div className="w-full overflow-hidden">
-      <div className="relative">
-        <AspectRatio ratio={3/1} className="bg-zion-blue-light">
-          {coverImageUrl ? (
-            <img 
-              src={coverImageUrl} 
-              alt={`${name} cover`} 
-              className="w-full h-full object-cover" 
-            />
-          ) : (
-            <div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />
-          )}
-        </AspectRatio>
-        
-        <div className="container px-4 md:px-6">
-          <div className="flex flex-col md:flex-row md:items-end -mt-16 md:-mt-20 relative z-10 mb-6 md:mb-10">
-            <Avatar className="h-24 w-24 md:h-32 md:w-32 border-4 border-zion-blue-dark ring-2 ring-zion-purple/30">
-              {avatarUrl ? (
-                <AvatarImage src={avatarUrl} alt={name} />
-              ) : (
-                <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">
-                  {name.substring(0, 2).toUpperCase()}
-                </AvatarFallback>
->>>>>>> main
               )}
             </Avatar>
             
@@ -164,17 +109,10 @@ export function ProfileHero({
                 <Badge 
                   variant="outline" 
                   className={cn(
-<<<<<<< HEAD
                     "ml-2 border-zion-purple/50 text-zion-cyan",
                     profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
                   )}
                 >;
-=======
-                    "ml-2 border-zion-purple/50 text-zion-cyan";
-                    profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
-                  )}
-                >
->>>>>>> main
                   {profileType === 'service' ? 'Service Provider' : 'Talent'}
                 </Badge>
               </div>
@@ -193,11 +131,7 @@ export function ProfileHero({
                     {reviewCount && (
                       <span className="text-zion-slate-light text-sm">({reviewCount})</span>
                     )}
-<<<<<<< HEAD
                   </div>;
-=======
-                  </div>
->>>>>>> main
                 )}
                 
                 {aiScore && (
@@ -205,7 +139,6 @@ export function ProfileHero({
                     AI Match: {aiScore}%
                   </div>
                 )}
-<<<<<<< HEAD
               </div>;
             </div>;
           </div>;
@@ -213,14 +146,5 @@ export function ProfileHero({
       </div>;
     </div>;
   );
-=======
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
->>>>>>> main
 }
 ;

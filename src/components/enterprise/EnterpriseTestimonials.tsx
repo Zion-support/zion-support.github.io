@@ -63,7 +63,6 @@ export function EnterpriseTestimonials() {
                       <p className='font-bold'>{testimonial.author}</p>
                       <p className='text-sm text-muted-foreground'>                        {testimonial.title}, {testimonial.company}
 
-<<<<<<< HEAD
 import React from "react",
 import { Quote } from 'lucide-react'
 import {
@@ -187,36 +186,11 @@ export function EnterpriseTestimonials() {;
                     <div>;
                       <p className="font-bold">{testimonial.author}</p>;
                       <p className="text-sm text-muted-foreground">;
-=======
->>>>>>> main
-                        {testimonial.title}, {testimonial.company}
-
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-<<<<<<< HEAD
-          <div className="flex justify-center gap-2 mt-8">
-            <CarouselPrevious />
-=======
-          <div className='flex justify-center gap-2 mt-8'>            <CarouselPrevious />
-
-            <CarouselPrevious />
-
->>>>>>> main
             <CarouselNext />
           </div>
         </Carousel>
       </div>
     </section>
-<<<<<<< HEAD
   )
 }
 ;
-=======
-  );
-}
->>>>>>> main

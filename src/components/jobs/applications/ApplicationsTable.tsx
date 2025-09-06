@@ -1,18 +1,13 @@
-<<<<<<< HEAD
 import { format } from "date-fns",
 import { JobApplication } from "@/types/jobs",
 import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed
 import { ClickableBadge } from "@/components/ui/clickable-badge",
 import { 
   Table,
-=======
-Table,
->>>>>>> main
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-<<<<<<< HEAD
   TableRow
 } from "@/components/ui/table",
 import { ApplicationActions } from "./ApplicationActions",
@@ -80,51 +75,10 @@ export function ApplicationsTable({
   return (
     <>
       <div className="rounded-md border">
-=======
-
-  return (
-    <AvatarPrimitive className='h-8 w-8'>
-      {' '}
-      {/* Using Renamed AvatarPrimitive */}
-      {application.talent_profile?.profile_picture_url && !avatarError ? (
-        <Image
-          src = {application.talent_profile.profile_picture_url,}
-          alt = {talentName,}
-          width={32} // for h-8 w-8
-          height={32} // for h-8 w-8
-
-        />
-      ) : (
-        <User className='h-4 w-4' />
-      )}
-    </AvatarPrimitive>
-  );
-};
-
-export function ApplicationsTable({
-  applications,
-  processingId,
-  onViewApplication,
-  onStatusChange,
-  onViewScore,
-}: ApplicationsTableProps) {
-
-  const handleHireConfirmed = () => {
-    toast({
-      title: 'Hiring process initiated',
-      description: 'Offer has been sent to the talent.',
-    });
-  };
-
-  return (
-    <>
-      <div className='rounded-md border'>
->>>>>>> main
         <Table>
           <TableHeader>
             <TableRow>
               <TableHead>Candidate</TableHead>
-<<<<<<< HEAD
               <TableHead className="hidden md:table-cell">Applied</TableHead>
               <TableHead className="hidden md:table-cell">Status</TableHead>
               <TableHead className="hidden lg:table-cell">Match Score</TableHead>
@@ -143,35 +97,10 @@ export function ApplicationsTable({
                       </div>
                       <div className="text-xs text-muted-foreground mt-0.5">
                         {application.talent_profile?.professional_title || "Applicant"}
-=======
-              <TableHead className='hidden md:table-cell'>Applied</TableHead>
-              <TableHead className='hidden md:table-cell'>Status</TableHead>
-              <TableHead className='hidden lg:table-cell'>
-                Match Score
-              </TableHead>
-              <TableHead className='text-right'>Actions</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-
-              <TableRow key={application.id}>
-                <TableCell>
-                  <div className='flex items-center gap-3'>
-                    <ApplicationAvatar application={application} />{' '}
-                    {/* Use sub-component */}
-                    <div>
-                      <div className='font-medium'>
-                        {application.talent_profile?.full_name || 'Candidate'}
-                      </div>
-                      <div className='text-xs text-muted-foreground mt-0.5'>
-                        {application.talent_profile?.professional_title ||
-                          'Applicant'}
->>>>>>> main
                       </div>
                     </div>
                   </div>
                 </TableCell>
-<<<<<<< HEAD
                 <TableCell className="hidden md:table-cell">
                   {format(new Date(application.created_at), "PP")}
                 </TableCell>
@@ -184,20 +113,10 @@ export function ApplicationsTable({
                       variant="outline"
                       className="cursor-pointer"
                       onClick={() => onViewScore(application)}
-=======
-                <TableCell className='hidden md:table-cell'>
-                  {format(new Date(application.created_at), 'PP')}
-                </TableCell>
-                <TableCell className='hidden md:table-cell'>
-                  <StatusBadge status={application.status} />
-                </TableCell>
-
->>>>>>> main
                     >
                       {application.match_score}%
                     </ClickableBadge>
                   ) : (
-<<<<<<< HEAD
                     <span className="text-muted-foreground text-sm">Not scored</span>
                   )}
                 </TableCell>
@@ -359,81 +278,3 @@ export function ApplicationsTable({;
   );
 }
 ;
-=======
-                    <span className='text-muted-foreground text-sm'>
-                      Not scored
-                    </span>
-                  )}
-                </TableCell>
-
-                    >
-                      <Briefcase className='h-3 w-3 mr-1' /> Hire
-                    </ClickableBadge>
-                    <ApplicationActions
-                      application = {application,}
-                      processingId = {processingId,}
-                      onViewApplication = {onViewApplication,}
-                      onStatusChange = {onStatusChange,}
-                    />
-                  </div>
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </div>
-
-      <HireConfirmationModal
-        isOpen = {hireModalOpen,}
-        onClose = {() => setHireModalOpen(false),}
-        application = {selectedApplication || undefined,}
-        onConfirm = {handleHireConfirmed,}
-      />
-    </>
-  );
-
-  /* Using Renamed AvatarPrimitive */ ;
-}{;
-  application.talent profile?.profile picture url && !avatarError ? (<Image src= {;
-  application.talent profile.profile picture url ;
-}alt= {;
-  talentName ;
-}width= {;
-  32 ;
-}//for h-8 w-8 height= {;
-  32 ";
-}//for h-8 w-8 className="rounded-full object-cover" onError= {;
-  () => setAvatarError (true) ;
-}priority= {;
-  false ";
-}h-4 w-4"/>) ;
-}</AvatarPrimitive>) ;
-};";
-return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</TableHead> <TableHead className="hidden md:table-cell" >Status</TableHead> <TableHead className="hidden lg:table-cell" >Match Score</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {;
-  applications.map ( (application) => (<TableRow key= {;
-  application.id ;
-}> <TableCell> </div> </div> </div> </TableCell> onClick={;
-  () => onViewScore (application) ;
-}> {;
-  application.match score ";
-}% </ClickableBadge>) : (<span className="text-muted-foreground text-sm" >Not scored</span>) ";
-}</TableCell> <TableCell className="text-right" > <div className="flex items-center justify-end gap-2" > <ClickableBadge > <Briefcase className="h-3 w-3 mr-1" /> Hire </ClickableBadge> <ApplicationActions application= {;
-  application ;
-}processingId= {;
-  processingId ;
-}onViewApplication= {;
-  onViewApplication ;
-}onStatusChange= {;
-  onStatusChange ;
-}/> </div> </TableCell> </TableRow>) ) ;
-}</TableBody> </Table> </div> <HireConfirmationModal isOpen= {;
-  hireModalOpen ;
-}onClose= {;
-  () => setHireModalOpen (false) ;
-}application= {;
-  selectedApplication || undefined ;
-}onConfirm= {;
-  handleHireConfirmed ;
-}/> </>) ;
-}'"
->>>>>>> main

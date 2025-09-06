@@ -1,6 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
 ;
 import React, { useState } from 'react',;
 import Link from 'next/link',;
@@ -457,12 +456,3 @@ export default Header;
 };
 ,;
 export default Header,'"
-=======
-export default function Header() {
-  return (
-    <header className="bg-blue-600 text-white p-4">
-      <h1>Header Component</h1>
-    </header>
-  );
-}
->>>>>>> 3e0b5e734e328fa6b9be04237a4c9f63bf064ddb

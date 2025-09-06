@@ -1,13 +1,7 @@
 
-<<<<<<< HEAD
 import { ResumeBasicInfo } from '@/types/resume';
 interface ResumeBasicInfoSectionProps {;
   basicInfo: ResumeBasicInfo;
-=======
-import {ResumeBasicInfo} from '@/types/resume';
-interface ResumeBasicInfoSectionProps {
-  basicInfo: ResumeBasicInfo
->>>>>>> main
 }
 
 export function ResumeBasicInfoSection({ basicInfo }: ResumeBasicInfoSectionProps) {
@@ -17,12 +11,7 @@ export function ResumeBasicInfoSection({ basicInfo }: ResumeBasicInfoSectionProp
       {basicInfo.summary && (
         <p className="text-sm">{basicInfo.summary}</p>
       )}
-<<<<<<< HEAD
     </div>;
   );
-=======
-    </div>
-  )
->>>>>>> main
 }
 ;

@@ -1,19 +1,10 @@
 
-<<<<<<< HEAD
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form',;
 import { Input } from '@/components/ui/input',;
 import { UseFormReturn } from 'react-hook-form',;
 import { CertificationFormValues } from './types';
 interface CertificationFormFieldsProps {;
   form: UseFormReturn<CertificationFormValues>;
-=======
-import {FormField, FormItem, FormLabel, FormControl, FormMessage} from '@/components/ui/form';
-import {Input} from '@/components/ui/input';
-import {UseFormReturn} from 'react-hook-form';
-import {CertificationFormValues} from './types';
-interface CertificationFormFieldsProps {
-  form: UseFormReturn<CertificationFormValues>
->>>>>>> main
 }
 
 export function CertificationFormFields({ form }: CertificationFormFieldsProps) {
@@ -32,14 +23,8 @@ export function CertificationFormFields({ form }: CertificationFormFieldsProps) 
               <FormMessage />
             </FormItem>
           )}
-<<<<<<< HEAD
         />;
         <FormField;
-=======
-        />
-
-        <FormField
->>>>>>> main
           control={form.control}
           name="issuing_organization"
           render={({ field }) => (
@@ -56,13 +41,6 @@ export function CertificationFormFields({ form }: CertificationFormFieldsProps) 
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <FormField
-<<<<<<< HEAD
-          control={form.control}
-          name="issue_date"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Issue Date</FormLabel>
-=======
           control={form.control}
           name="issue_date"
           render={({ field }) => (
@@ -78,26 +56,6 @@ export function CertificationFormFields({ form }: CertificationFormFieldsProps) 
               <FormMessage />
             </FormItem>
           )}
-        />
-
-        <FormField
-          control={form.control}
-          name="expiration_date"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Expiration Date (Optional)</FormLabel>
->>>>>>> main
-              <FormControl>
-                <Input 
-                  type="date" 
-                  {...field}
-                  value={field.value || ''}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-<<<<<<< HEAD
         />;
         <FormField;
           control={form.control}
@@ -134,28 +92,6 @@ export function CertificationFormFields({ form }: CertificationFormFieldsProps) 
         />;
         <FormField;
           control={form.control}
-=======
-        />
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <FormField
-          control={form.control}
-          name="credential_id"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Credential ID (Optional)</FormLabel>
-              <FormControl>
-                <Input placeholder="ABC123XYZ" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-        <FormField
-          control={form.control}
->>>>>>> main
           name="credential_url"
           render={({ field }) => (
             <FormItem>
@@ -166,16 +102,9 @@ export function CertificationFormFields({ form }: CertificationFormFieldsProps) 
               <FormMessage />
             </FormItem>
           )}
-<<<<<<< HEAD
         />;
       </div>;
     </>;
   );
-=======
-        />
-      </div>
-    </>
-  )
->>>>>>> main
 }
 ;

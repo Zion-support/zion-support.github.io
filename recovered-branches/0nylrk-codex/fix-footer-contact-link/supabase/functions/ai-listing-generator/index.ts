@@ -1,24 +1,14 @@
 
-<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
-=======
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
-import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
-
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
->>>>>>> main
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
-<<<<<<< HEAD
   }
 
   try {
@@ -60,31 +50,6 @@ serve(async (req) => {;
       apiKey: Deno.env.get('OPENAI_API_KEY')}),;
     const openai = new OpenAIApi(configuration),;
     const prompt = `Generate an optimized marketplace listing for the following product:;
-=======
-  }
-
-  try {
-    const { title, category, keyFeatures, targetAudience } = await req.json();
-
-    if (!title || !category) {
-      return new Response(
-        JSON.stringify({ 
-          error: "Missing required fields: title and category are required" 
-        });
-        { 
-          status: 400, 
-          headers: { ...corsHeaders, "Content-Type": "application/json" } 
-        }
-      )
-    }
-
-    const configuration = new Configuration({
-      apiKey: Deno.env.get('OPENAI_API_KEY')});
-    const openai = new OpenAIApi(configuration);
-
-    const prompt = `Generate an optimized marketplace listing for the following product:
-    
->>>>>>> main
 Title: ${title}
 Category: ${category}
 Key Features: ${keyFeatures || "Not specified"}
@@ -96,7 +61,6 @@ Please create:
 3. A suggested price range based on the category and features
 4. A bulleted list of 3-5 key selling points
 
-<<<<<<< HEAD
 Format the response as a JSON object with the following structure:
 {
   "description": "The optimized description here...",
@@ -114,29 +78,10 @@ Format the response as a JSON object with the following structure:
     
     // Parse the JSON from the AI response
     let parsedResponse,
-=======
-Format the response as a JSON object with the following structure: {
-  "description": "The optimized description here...",
-  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"];
-  "suggestedPrice": { "min": number, "max": number };
-  "keyPoints": ["point1", "point2", "point3"]
-}`;
-
-    const completion = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
-      messages: [{ role: "user", content: prompt }];
-      temperature: 0.7});
-
-    const responseText = completion.choices[0].message.content;
-    
-    // Parse the JSON from the AI response
-    let parsedResponse;
->>>>>>> main
     try {
       // Extract the JSON content if it's wrapped in markdown code blocks
       const jsonMatch = responseText.match(/```(?:json)?\s*([\s\S]*?)\s*```/) || 
                         responseText.match(/({[\s\S]*})/) ||
-<<<<<<< HEAD
                         [null, responseText],
       
       const jsonString = jsonMatch[1].trim(),
@@ -150,21 +95,6 @@ Format the response as a JSON object with the following structure: {
         description: "An error occurred while generating the optimized description. Please try again.",
         tags: [],
         suggestedPrice: { min: 0, max: 0 },
-=======
-                        [null, responseText];
-      
-      const jsonString = jsonMatch[1].trim();
-      parsedResponse = JSON.parse(jsonString)
-    } catch (error) {
-      console.error("Failed to parse AI response as JSON:", error);
-      console.log("Raw response:", responseText);
-      
-      // Provide a fallback structured response
-      parsedResponse = {
-        description: "An error occurred while generating the optimized description. Please try again.";
-        tags: [],
-        suggestedPrice: { min: 0, max: 0 };
->>>>>>> main
         keyPoints: []
       }
     }
@@ -172,27 +102,18 @@ Format the response as a JSON object with the following structure: {
     return new Response(
       JSON.stringify({ 
         generated: parsedResponse
-<<<<<<< HEAD
       }),
-=======
-      });
->>>>>>> main
       { 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
       }
     )
   } catch (error) {
-<<<<<<< HEAD
     console.error("Error in AI listing generator:", error),
-=======
-    console.error("Error in AI listing generator:", error);
->>>>>>> main
     
     return new Response(
       JSON.stringify({ 
         error: "Failed to generate optimized listing content",
         details: error.message 
-<<<<<<< HEAD
       }),
       { 
         status: 500, 
@@ -260,13 +181,3 @@ Format the response as a JSON object with the following structure:;
     );
   }
 });
-=======
-      });
-      { 
-        status: 500, 
-        headers: { ...corsHeaders, "Content-Type": "application/json" } 
-      }
-    )
-  }
-});
->>>>>>> main

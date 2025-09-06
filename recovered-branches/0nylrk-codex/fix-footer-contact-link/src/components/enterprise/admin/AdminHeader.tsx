@@ -1,6 +1,5 @@
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx
 
-<<<<<<< HEAD
 import React from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
@@ -9,16 +8,6 @@ import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
 export function AdminHeader() {
   const { user } = useAuth(),
   const { company } = useCompanyWorkspace(),
-=======
-import React from "react";
-import {useAuth} from "@/hooks/useAuth";
-import {Button} from "@/components/ui/button";
-import {Download, Settings} from "lucide-react";
-import {useCompanyWorkspace} from "@/hooks/useCompanyWorkspace";
-export function AdminHeader() {
-  const { user } = useAuth();
-  const { company } = useCompanyWorkspace();
->>>>>>> main
 
   return (
     <div className="space-y-4">
@@ -76,7 +65,6 @@ export function AdminHeader() {
       </div>
     </div>
   )
-<<<<<<< HEAD
 import React from "react",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Button } from "@/components/ui/button",;
@@ -141,6 +129,3 @@ export function AdminHeader() {;
   );
 }
 ;
-=======
-}
->>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react',;
 import { useNotifications } from '@/context/notifications/NotificationContext',;
 import {;
@@ -280,9 +279,3 @@ export default function NotificationsPage() {
   );
 }
 ;
-=======
-default:
-      return <Badge variant="outline">Notification</Badge>
-
-}
->>>>>>> main

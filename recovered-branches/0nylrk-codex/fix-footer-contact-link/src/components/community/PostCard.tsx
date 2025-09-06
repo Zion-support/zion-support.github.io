@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { formatDistanceToNow } from "date-fns",
 import { Link } from "react-router-dom",
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react",
@@ -82,40 +81,6 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
         <div className="flex-1">;
           <div className="flex items-center">;
             <Link to={`/community/post/${post.id}`} className="font-semibold text-lg hover:text-zion-purple transition-colors">;
-=======
-import {formatDistanceToNow} from "date-fns";
-import {Link} from "react-router-dom";
-import {ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle} from "lucide-react";
-import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {Button} from "@/components/ui/button";
-import {cn} from "@/lib/utils";
-import {ForumPost} from "@/types/community";
-import {ProfileBadge} from "@/components/profile/ProfileBadge";
-interface PostCardProps {
-  post: ForumPost,
-  compact?: boolean
-}
-
-export const PostCard = ({ post, compact = false }: PostCardProps) => {
-  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
-
-  return (
-    <Card className={cn(
-      "transition-shadow hover: shadow-md";
-      post.isPinned && "border-zion-purple/50",
-      post.isFeatured && "bg-zion-purple/5"
-    )}>
-      <CardHeader className="flex flex-row items-start gap-4 space-y-0">
-        <Avatar className="h-10 w-10">
-          <AvatarImage src={post.authorAvatar} />
-          <AvatarFallback>{post.authorName.charAt(0)}</AvatarFallback>
-        </Avatar>
-        <div className="flex-1">
-          <div className="flex items-center">
-            <Link to={`/community/post/${post.id}`} className="font-semibold text-lg hover:text-zion-purple transition-colors">
->>>>>>> main
               {post.title}
             </Link>
             {post.isAnswered && (
@@ -130,18 +95,10 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
           </div>
           <div className="text-sm text-muted-foreground">
             Posted by {post.authorName} {timeAgo}
-<<<<<<< HEAD
           </div>;
           <div className="flex flex-wrap gap-2 mt-2">;
             {post.tags?.map(tag => (;
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
-=======
-          </div>
-          
-          <div className="flex flex-wrap gap-2 mt-2">
-            {post.tags?.map(tag => (
-              <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
->>>>>>> main
                 {tag}
               </Badge>
             ))}
@@ -178,17 +135,8 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
             <Badge className="bg-zion-purple">Featured</Badge>
           </div>
         )}
-<<<<<<< HEAD
       </CardFooter>;
     </Card>;
   );
 };
 export default PostCard;
-=======
-      </CardFooter>
-    </Card>
-  )
-};
-
-export default PostCard;
->>>>>>> main

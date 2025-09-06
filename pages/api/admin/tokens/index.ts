@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getAllTransactions } from "../../../../utils/token/service";
-<<<<<<< HEAD
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -20,11 +19,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { userId } = req.query;
-  const txs = getAllTransactions();
-  const filtered = typeof userId === "string" ? txs.filter((t) => t.userId === userId) : txs;
-  res.status(200).json({ transactions: filtered });
-}
->>>>>>> main

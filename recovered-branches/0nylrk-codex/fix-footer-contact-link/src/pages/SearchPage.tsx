@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { useEffect, useState } from "react",
 import { useNavigate, useSearchParams } from "react-router-dom",
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
@@ -13,27 +12,11 @@ export default function SearchPage() {
   const initial = params.get("q") || "",
   const [query, setQuery] = useState(initial),
   const { results, loading, search } = useAISearch(),
-=======
-import {useEffect, useState} from "react";
-import {useNavigate, useSearchParams} from "react-router-dom";
-import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
-import {generateSearchSuggestions} from "@/data/marketplaceData";
-import {SearchSuggestion} from "@/types/search";
-import {useAISearch} from "@/hooks/useAISearch";
-import {AppLayout} from "@/layout/AppLayout";
-export default function SearchPage() {
-  const [params] = useSearchParams();
-  const navigate = useNavigate();
-  const initial = params.get("q") || "";
-  const [query, setQuery] = useState(initial);
-  const { results, loading, search } = useAISearch();
->>>>>>> main
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
 
   useEffect(() => {
     if (initial) {
       search(initial)
-<<<<<<< HEAD
     }
   }, [initial]),
 
@@ -90,29 +73,6 @@ export default function SearchPage() {;
             placeholder="Search talent, jobs, and projects...";
           />;
         </form>;
-=======
-    }
-  }, [initial]);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault(),
-    navigate(`/search?q=${encodeURIComponent(query)}`);
-    search(query)
-  };
-
-  return (
-    <AppLayout>
-      <main className="container mx-auto px-4 py-8">
-        <form onSubmit={handleSubmit} className="mb-6">
-          <EnhancedSearchInput
-            value={query}
-            onChange={setQuery}
-            searchSuggestions={suggestions}
-            placeholder="Search talent, jobs, and projects..."
-          />
-        </form>
-
->>>>>>> main
         {loading && <p className="text-zion-slate-light">Searching...</p>}
         {!loading && results.length === 0 && (
           <p className="text-zion-slate-light">No results found.</p>
@@ -126,7 +86,6 @@ export default function SearchPage() {;
               >
                 <p className="text-xs uppercase text-zion-slate-light mb-1">
                   {r.type}
-<<<<<<< HEAD
                 </p>;
                 <h3 className="text-lg font-bold text-white">{r.title}</h3>;
                 <p className="text-zion-slate-light">{r.description}</p>;
@@ -137,17 +96,5 @@ export default function SearchPage() {;
       </main>;
     </AppLayout>;
   );
-=======
-                </p>
-                <h3 className="text-lg font-bold text-white">{r.title}</h3>
-                <p className="text-zion-slate-light">{r.description}</p>
-              </div>
-            ))}
-          </div>
-        )}
-      </main>
-    </AppLayout>
-  )
->>>>>>> main
 }
 ;

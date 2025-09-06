@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { Button } from "./ui/button",
 import { Input } from "./ui/input",
 import { GradientHeading } from "./GradientHeading",
@@ -11,30 +10,13 @@ export function QuoteFormSection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
     setIsSubmitting(true),
-=======
-import {Button} from "./ui/button";
-import {Input} from "./ui/input";
-import {GradientHeading} from "./GradientHeading";
-import {useState} from "react";
-export function QuoteFormSection() {
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
->>>>>>> main
     
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false),
       setIsSubmitted(true)
     }, 1000)
-<<<<<<< HEAD
   },
-=======
-  };
->>>>>>> main
 
   return (
     <section className="py-20 bg-zion-blue">
@@ -59,7 +41,6 @@ export function QuoteFormSection() {
                 Thank you for your interest in Zion's services. Our team will prepare your personalized commercial proposal and contact you shortly.
               </p>
               <Button 
-<<<<<<< HEAD
                 onClick={() => setIsSubmitted(false)}
                 variant="outline" 
                 className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
@@ -226,70 +207,6 @@ export function QuoteFormSection() {;
                   {["AI Products/Services", "IT Equipment", "Server Solutions", "Storage Solutions", "Networking", "24/7 Support", "Recycling Services"].map((item, index) => (;
                     <div key={index} className="flex items-center">;
                       <input;
-=======
-                onClick={() => setIsSubmitted(false)}
-                variant="outline" 
-                className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
-              >
-                Submit Another Request
-              </Button>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit}>
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-zion-slate-light mb-1">
-                    Name
-                  </label>
-                  <Input
-                    id="name"
-                    type="text"
-                    className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
-                    required
-                  />
-                </div>
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-zion-slate-light mb-1">
-                    Company
-                  </label>
-                  <Input
-                    id="company"
-                    type="text"
-                    className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1">
-                    Email
-                  </label>
-                  <Input
-                    id="email"
-                    type="email"
-                    className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
-                    required
-                  />
-                </div>
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-zion-slate-light mb-1">
-                    Phone
-                  </label>
-                  <Input
-                    id="phone"
-                    type="tel"
-                    className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
-                  />
-                </div>
-              </div>
-              
-              <div className="mt-6">
-                <label htmlFor="interest" className="block text-sm font-medium text-zion-slate-light mb-1">
-                  I'm interested in (select all that apply)
-                </label>
-                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 mt-2">
-                  {["AI Products/Services", "IT Equipment", "Server Solutions", "Storage Solutions", "Networking", "24/7 Support", "Recycling Services"].map((item, index) => (
-                    <div key={index} className="flex items-center">
-                      <input
->>>>>>> main
                         id={`interest-${index}`}
                         type="checkbox"
                         className="h-4 w-4 bg-zion-blue-dark border-zion-purple text-zion-purple focus:ring-zion-purple/50"
@@ -324,16 +241,9 @@ export function QuoteFormSection() {;
               </div>
             </form>
           )}
-<<<<<<< HEAD
         </div>;
       </div>;
     </section>;
   );
-=======
-        </div>
-      </div>
-    </section>
-  )
->>>>>>> main
 }
 ;

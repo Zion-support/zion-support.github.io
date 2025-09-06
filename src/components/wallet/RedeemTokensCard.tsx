@@ -1,20 +1,15 @@
-<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { useWallet } from "@/hooks/useWallet",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Gift, ArrowRight, ExternalLink } from 'lucide-react'
-=======
-import { Gift, ArrowRight, ExternalLink } from 'lucide-react';
->>>>>>> main
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
-<<<<<<< HEAD
   DialogTrigger} from "@/components/ui/dialog",
 
 type RewardOption = {
@@ -24,51 +19,27 @@ type RewardOption = {
   cost: number,
   type: 'credit' | 'feature' | 'course'
 },
-=======
-  DialogTrigger,;
-} from '@/components/ui/dialog';
-
-type RewardOption = {
-  id: string;
-title: string;
-description: string;
-cost: number;';
-type: 'credit' | 'feature' | 'course' ;
-};
->>>>>>> main
 
 const REWARD_OPTIONS: RewardOption[] = [
   {
     id: 'premium-week',
     title: 'Premium Week',
-<<<<<<< HEAD
     description: '7 days of premium features including top placement in search results',
     cost: 100,
     type: 'feature'
-=======
-    description:
-      '7 days of premium features including top placement in search results',
-    cost: 100,
-    type: 'feature',
->>>>>>> main
   },
   {
     id: 'resume-review',
     title: 'AI Resume Review',
     description: 'Get your resume analyzed and optimized by our AI',
     cost: 50,
-<<<<<<< HEAD
     type: 'feature'
-=======
-    type: 'feature',
->>>>>>> main
   },
   {
     id: 'platform-credit',
     title: '$5 Platform Credit',
     description: 'Get $5 credit to use on any paid service',
     cost: 100,
-<<<<<<< HEAD
     type: 'credit'
   }
 ],
@@ -83,47 +54,24 @@ export function RedeemTokensCard() {
     await spendTokens(option.cost, `Redeemed: ${option.title}`),
     setOpen(false)
   },
-=======
-    type: 'credit',
-  },
-];
-
-export function RedeemTokensCard() {
-  const { wallet, spendTokens } = useWallet();
-  const [open, setOpen] = useState(false);
->>>>>>> main
 
   return (
     <Card>
       <CardHeader>
-<<<<<<< HEAD
         <CardTitle className="flex items-center gap-2">
           <Gift className="h-5 w-5" /> Redeem Rewards
         </CardTitle>
         <CardDescription>Exchange your ZION$ for rewards and perks</CardDescription>
-=======
-        <CardTitle className='flex items-center gap-2'>
-          <Gift className='h-5 w-5' /> Redeem Rewards
-        </CardTitle>
-        <CardDescription>
-          Exchange your ZION$ for rewards and perks
-        </CardDescription>
->>>>>>> main
       </CardHeader>
       <CardContent>
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogTrigger asChild>
-<<<<<<< HEAD
             <Button className="w-full">View Available Rewards</Button>
-=======
-            <Button className='w-full'>View Available Rewards</Button>
->>>>>>> main
           </DialogTrigger>
           <DialogContent>
             <DialogHeader>
               <DialogTitle>Available Rewards</DialogTitle>
               <DialogDescription>
-<<<<<<< HEAD
                 Exchange your tokens for these rewards. You currently have {wallet?.balance || 0} ZION$.
               </DialogDescription>
             </DialogHeader>
@@ -143,51 +91,21 @@ export function RedeemTokensCard() {
                       onClick={() => handleRedeem(option)}
                     >
                       Redeem <ArrowRight className="ml-1 h-3 w-3" />
-=======
-                Exchange your tokens for these rewards. You currently have{' '}
-                {wallet?.balance || 0} ZION$.
-              </DialogDescription>
-            </DialogHeader>
-
-                  <div>
-                    <h3 className='font-medium'>{option.title}</h3>
-                    <p className='text-sm text-muted-foreground'>
-                      {option.description}
-                    </p>
-                  </div>
-
-                    >
-                      Redeem <ArrowRight className='ml-1 h-3 w-3' />
->>>>>>> main
                     </Button>
                   </div>
                 </div>
               ))}
             </div>
-<<<<<<< HEAD
             <div className="flex justify-between">
               <Button variant="outline" size="sm" onClick={() => setOpen(false)}>Close</Button>
               <Button variant="ghost" size="sm">
                 Learn More <ExternalLink className="ml-1 h-3 w-3" />
-=======
-            <div className='flex justify-between'>
-              <Button
-                variant='outline'
-                size='sm'
-                onClick={() => setOpen(false)}
-              >
-                Close
-              </Button>
-              <Button variant='ghost' size='sm'>
-                Learn More <ExternalLink className='ml-1 h-3 w-3' />
->>>>>>> main
               </Button>
             </div>
           </DialogContent>
         </Dialog>
       </CardContent>
     </Card>
-<<<<<<< HEAD
   )
 import React, { useState } from "react",;
 import { useWallet } from "@/hooks/useWallet",;
@@ -293,6 +211,3 @@ export function RedeemTokensCard() {;
   );
 }
 ;
-=======
-  );
->>>>>>> main

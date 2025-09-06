@@ -3,12 +3,7 @@ import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-<<<<<<< HEAD
 import next from '@next/eslint-plugin-next';
-=======
-import globals from 'globals';
-
->>>>>>> main
 export default [
   {
     ignores: [
@@ -54,8 +49,6 @@ export default [
   },
   js.configs.recommended,
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
     files: ["**/*.{js,jsx,ts,tsx}"],
     ignores: [
       '.next/**',
@@ -101,12 +94,7 @@ export default [
       '**/tools/**',
       '**/tests/**'
     ],
-=======
-    files: ['**/*.{js,jsx,ts,tsx}'],
->>>>>>> c30116f715bd9316985a762a4f8b8486604309f2
-=======
     files: ["**/*.{js,jsx}"],
->>>>>>> main
     languageOptions: {
       ecmaVersion: 2021,
       sourceType: "module",
@@ -129,7 +117,6 @@ export default [
           jsx: true,
         },
       },
-<<<<<<< HEAD
       globals: {
         // Browser globals
         window: 'readonly',
@@ -485,41 +472,5 @@ export default [;
       '*.old.**.disabled.**.broken.**.corrupted.*';
       '*.temp.*';
     ];
-=======
-    },
-    plugins: {
-
-    }
-  },
-  {
-    ignores: [
-      'node_modules/',
-      '.next/',
-      'out/',
-      'build/',
-      'dist/',
-      '*.config.js',
-      '*.config.cjs',
-      '*.config.mjs',
-      'src/pages/services/',
-      'src/pages/solutions/',
-      'src/pages/talent/',
-      'src/routes/',
-      'src/services/',
-      'src/store/',
-      'src/test/',
-      'src/utils/',
-      'tests/',
-      'tests.disabled/',
-      'types.disabled/',
-      'zion-os.disabled/',
-      'zion_academy/',
-      'temp_working/',
-      'test_build/',
-      'supabase/',
-      'working-automation-suite.cjs'
-
-    ]
->>>>>>> main
   }
 ];

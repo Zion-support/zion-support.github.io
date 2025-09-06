@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Loader2 } from 'lucide-react';
@@ -65,7 +64,3 @@ export const PwaInstallButton: React.FC = () => {;
 },
 
 export default PwaInstallButton,
-=======
-description: 'Your browser does not support app installation.'}),
-      return;
->>>>>>> main

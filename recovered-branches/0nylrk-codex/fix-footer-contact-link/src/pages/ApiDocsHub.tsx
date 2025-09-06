@@ -1,15 +1,8 @@
 
-<<<<<<< HEAD
 import React from "react",
 import { Link } from "react-router-dom",
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
-=======
-import React from "react";
-import {Link} from "react-router-dom";
-import {ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap} from "lucide-react";
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
->>>>>>> main
 export function ApiDocsHub() {
   const sections = [
     {
@@ -32,11 +25,7 @@ export function ApiDocsHub() {
       color: "from-green-500 to-emerald-500"},
     {
       title: "Sample Code",
-<<<<<<< HEAD
       description: "Examples in JavaScript, Python, and Node.js",
-=======
-      description: "Examples in JavaScript, Python, and Node.js";
->>>>>>> main
       icon: Zap,
       path: "/developers/docs/samples",
       color: "from-yellow-500 to-orange-500"},
@@ -59,7 +48,6 @@ export function ApiDocsHub() {
           {sections.map((section) => (
             <Link 
               key={section.path} 
-<<<<<<< HEAD
               to={section.path}
               className="block p-6 rounded-lg bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-all"
             >
@@ -139,63 +127,3 @@ export function ApiDocsHub() {;
           {sections.map((section) => (;
             <Link;
               key={section.path} ;
-=======
->>>>>>> main
-              to={section.path}
-              className="block p-6 rounded-lg bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-all"
-            >
-              <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${section.color} flex items-center justify-center mb-4`}>
-                <section.icon className="h-6 w-6 text-white" />
-              </div>
-              <h2 className="text-xl font-semibold text-white mb-2">{section.title}</h2>
-              <p className="text-zinc-400 mb-4">{section.description}</p>
-              <div className="flex items-center text-zion-cyan">
-                <span className="mr-2">View documentation</span>
-                <ArrowRight className="h-4 w-4" />
-              </div>
-            </Link>
-          ))}
-<<<<<<< HEAD
-        </div>;
-        <div className="mt-12 p-6 rounded-lg bg-zinc-900 border border-zinc-800">;
-          <h2 className="text-xl font-semibold text-white mb-4">Ready to get started?</h2>;
-          <p className="text-zinc-400 mb-6">;
-            To use the Zion AI Marketplace API, you'll need an API key. Visit your developer portal to create one.;
-          </p>;
-          <Link;
-            to="/developers/portal";
-            className="inline-flex items-center px-4 py-2 rounded-md bg-zion-purple text-white hover: bg-zion-purple/90 transition-colors";
-          >;
-            Go to Developer Portal;
-            <ArrowRight className="ml-2 h-4 w-4" />;
-          </Link>;
-        </div>;
-      </div>;
-    </ApiDocsLayout>;
-  );
-}
-;
-export default ApiDocsHub;
-=======
-        </div>
-
-        <div className="mt-12 p-6 rounded-lg bg-zinc-900 border border-zinc-800">
-          <h2 className="text-xl font-semibold text-white mb-4">Ready to get started?</h2>
-          <p className="text-zinc-400 mb-6">
-            To use the Zion AI Marketplace API, you'll need an API key. Visit your developer portal to create one.
-          </p>
-          <Link
-            to="/developers/portal"
-            className="inline-flex items-center px-4 py-2 rounded-md bg-zion-purple text-white hover: bg-zion-purple/90 transition-colors"
-          >
-            Go to Developer Portal
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Link>
-        </div>
-      </div>
-    </ApiDocsLayout>
-  )
-}
-
-export default ApiDocsHub;
->>>>>>> main

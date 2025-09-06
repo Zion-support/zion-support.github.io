@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { Suspense } from 'react',
 import { Routes, Route } from 'react-router-dom',
 import './App.css',
@@ -6,15 +5,6 @@ import { ThemeProvider } from "./components/ThemeProvider",
 import { WhitelabelProvider } from "./context/WhitelabelContext",
 import { Toaster } from "./components/ui/toaster",
 import { Toaster as SonnerToaster } from "./components/ui/sonner",
-=======
-import React, { Suspense } from "react";
-import { Routes, Route } from "react-router-dom";
-import "./App.css";
-import { ThemeProvider } from "./components/ThemeProvider";
-import { WhitelabelProvider } from "./context/WhitelabelContext";
-import { Toaster } from "./components/ui/toaster";
-import { Toaster, as, SonnerToaster } from "./components/ui/sonner";
->>>>>>> main
 import {
   AuthRoutes,
   DashboardRoutes,
@@ -26,7 +16,6 @@ import {
   ErrorRoutes,
   EnterpriseRoutes,
   CommunityRoutes,
-<<<<<<< HEAD
   DeveloperRoutes
 } from './routes',
 const Home = React.lazy(() => import('./pages/Home')),
@@ -61,45 +50,6 @@ const baseRoutes = [
   { path: '/open-app', element: <OpenAppRedirect /> },
   { path: '/community', element: <CommunityPage /> },
   { path: '/contact', element: <ContactPage /> }],
-=======
-  DeveloperRoutes,
-} from "./routes";
-const Home = React.lazy(() => import("./pages/Home"));
-const AIMatcherPage = React.lazy(() => import("./pages/AIMatcher"));
-const TalentDirectory = React.lazy(() => import("./pages/TalentDirectory"));
-const TalentsPage = React.lazy(() => import("./pages/TalentsPage"));
-const ServicesPage = React.lazy(() => import("./pages/ServicesPage"));
-const EquipmentPage = React.lazy(() => import("./pages/EquipmentPage"));
-const Analytics = React.lazy(() => import("./pages/Analytics"));
-const MobileLaunchPage = React.lazy(() => import("./pages/MobileLaunchPage"));
-const CommunityPage = React.lazy(() => import("./pages/CommunityPage"));
-const Categories = React.lazy(() => import("./pages/Categories"));
-const Login = React.lazy(() => import("./pages/Login"));
-const Signup = React.lazy(() => import("./pages/Signup"));
-const ITOnsiteServicesPage = React.lazy(
-  () => import("./pages/ITOnsiteServicesPage"),
-);
-const OpenAppRedirect = React.lazy(() => import("./pages/OpenAppRedirect"));
-const ContactPage = React.lazy(() => import("./pages/Contact"));
-
-const baseRoutes = [
-  { path: "/", element: <Home /> },
-  { path: "/match", element: <AIMatcherPage /> },
-  { path: "/login", element: <Login /> },
-  { path: "/signup", element: <Signup /> },
-  { path: "/talent", element: <TalentDirectory /> },
-  { path: "/talents", element: <TalentsPage /> },
-  { path: "/services", element: <ServicesPage /> },
-  { path: "/it-onsite-services", element: <ITOnsiteServicesPage /> },
-  { path: "/categories", element: <Categories /> },
-  { path: "/equipment", element: <EquipmentPage /> },
-  { path: "/analytics", element: <Analytics /> },
-  { path: "/mobile-launch", element: <MobileLaunchPage /> },
-  { path: "/open-app", element: <OpenAppRedirect /> },
-  { path: "/community", element: <CommunityPage /> },
-  { path: "/contact", element: <ContactPage /> },
-];
->>>>>>> main
 
 const App = () => {
   return (
@@ -127,7 +77,6 @@ const App = () => {
         <SonnerToaster position="top-right" />
       </ThemeProvider>
     </WhitelabelProvider>
-<<<<<<< HEAD
   )
 },
 
@@ -211,9 +160,4 @@ const App = () => {;
     </WhitelabelProvider>;
   );
 },;
-=======
-  );
-};
-
->>>>>>> main
 export default App;

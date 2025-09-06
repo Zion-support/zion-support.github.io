@@ -1,6 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
 ;
     };
   ],;
@@ -322,14 +321,3 @@ import React from 'react';
     </footer>";
       </div>,";
     </footer>",'"
-=======
-export default function FuturisticFooter() {
-  return (
-    <footer className="bg-gray-900 text-white p-4">
-      <div className="container mx-auto text-center">
-        <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
-      </div>
-    </footer>
-  );
-}
->>>>>>> 3e0b5e734e328fa6b9be04237a4c9f63bf064ddb

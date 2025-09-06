@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { useState } from 'react',;
 import { Card, CardContent, CardFooter } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -21,30 +20,6 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
     }
     setDeleteDialogOpen(false)
   },
-=======
-import {useState} from 'react';
-import {Card, CardContent, CardFooter} from '@/components/ui/card';
-import {Button} from '@/components/ui/button';
-import {Badge} from '@/components/ui/badge';
-import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from '@/components/ui/alert-dialog';
-import {Edit, Trash2, Github, Link, FileText} from 'lucide-react';
-import {PortfolioProject} from '@/types/resume';
-interface ProjectCardProps {
-  project: PortfolioProject,
-  onEdit: (project: PortfolioProject) => void,
-  onDelete: (projectId: string) => void
-}
-
-export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
-  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
-  
-  const handleDelete = () => {
-    if (project.id) {
-      onDelete(project.id)
-    }
-    setDeleteDialogOpen(false)
-  };
->>>>>>> main
   
   return (
     <Card className="h-full flex flex-col">
@@ -75,15 +50,9 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
               {project.technologies.map((tech, index) => (
                 <Badge key={index} variant="secondary" className="text-xs">
                   {tech}
-<<<<<<< HEAD
                 </Badge>;
               ))}
             </div>;
-=======
-                </Badge>
-              ))}
-            </div>
->>>>>>> main
           )}
         </div>
       </CardContent>
@@ -95,11 +64,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
               <Button variant="ghost" size="icon">
                 <Github className="h-4 w-4" />
               </Button>
-<<<<<<< HEAD
             </Link>
-=======
-            </a>
->>>>>>> main
           )}
           
           {project.demo_url && (
@@ -107,11 +72,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
               <Button variant="ghost" size="icon">
                 <Link className="h-4 w-4" />
               </Button>
-<<<<<<< HEAD
             </Link>
-=======
-            </a>
->>>>>>> main
           )}
         </div>
         

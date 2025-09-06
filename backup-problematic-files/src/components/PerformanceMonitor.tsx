@@ -1,6 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
         };
       };
 ;    };
@@ -116,12 +115,3 @@ import React from 'react';
           <button,;
             onClick={() => setIsVisible(false)};
 '"
-=======
-export default function PerformanceMonitor() {
-  return (
-    <div className="performance-monitor">
-      <p>Performance Monitor</p>
-    </div>
-  );
-}
->>>>>>> 3e0b5e734e328fa6b9be04237a4c9f63bf064ddb

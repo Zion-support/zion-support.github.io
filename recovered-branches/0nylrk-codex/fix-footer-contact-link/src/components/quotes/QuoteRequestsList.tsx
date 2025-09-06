@@ -1,15 +1,8 @@
 
-<<<<<<< HEAD
 import React from "react",
 import { QuoteRequestCard } from "./QuoteRequestCard",
 import { EmptyStateCard } from "./EmptyStateCard",
 import type { QuoteRequest } from "@/types/quotes",
-=======
-import React from "react";
-import {QuoteRequestCard} from "./QuoteRequestCard";
-import {EmptyStateCard} from "./EmptyStateCard";
-import type { QuoteRequest } from "@/types/quotes";
->>>>>>> main
 type QuoteRequestsListProps = {
   quotes: QuoteRequest[],
   isLoading: boolean,
@@ -17,7 +10,6 @@ type QuoteRequestsListProps = {
   onViewDetails: (quote: QuoteRequest) => void,
   onMarkAsResponded: (id: string) => void,
   onToggleArchive: (id: string, isArchived: boolean) => void
-<<<<<<< HEAD
 },
 
 export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
@@ -25,15 +17,6 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
   isLoading,
   isArchived,
   onViewDetails,
-=======
-};
-
-export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
-  quotes;
-  isLoading;
-  isArchived;
-  onViewDetails;
->>>>>>> main
   onMarkAsResponded,
   onToggleArchive
 }) => {
@@ -43,7 +26,6 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
         <p className="text-zion-slate-light">Loading {isArchived ? 'archived' : 'your'} hire requests...</p>
       </div>
     )
-<<<<<<< HEAD
 import React from "react",;
 import { QuoteRequestCard } from "./QuoteRequestCard",;
 import { EmptyStateCard } from "./EmptyStateCard",;
@@ -74,12 +56,6 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
 ;
   if (quotes.length === 0) {;
     return <EmptyStateCard type={isArchived ? 'archived' : 'active'} />;
-=======
-  }
-  
-  if (quotes.length === 0) {
-    return <EmptyStateCard type={isArchived ? 'archived' : 'active'} />
->>>>>>> main
   }
   
   return (
@@ -93,12 +69,6 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
           onToggleArchive={onToggleArchive}
         />
       ))}
-<<<<<<< HEAD
     </div>;
   );
 };
-=======
-    </div>
-  )
-};
->>>>>>> main

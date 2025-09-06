@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -29,36 +28,10 @@ const productSchema = z.object({
   price: z.string().refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
     message: "Price must be a valid number"}),
   category: z.string().min(1, "Please select a category"),
-=======
-import React from "react";
-import {useForm} from "react-hook-form";
-import {zodResolver} from "@hookform/resolvers/zod";
-import z from "zod";
-import {supabase} from "@/integrations/supabase/client";
-import {useAuth} from "@/hooks/useAuth";
-import {useToast} from "@/hooks/use-toast";
-import {useNavigate} from "react-router-dom";
-import {Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {Textarea} from "@/components/ui/textarea";
-import {AspectRatio} from "@/components/ui/aspect-ratio";
-import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
-import {AIListingGenerator} from "@/components/listing/AIListingGenerator";
-import {Sparkles} from "lucide-react";
-// Define the form schema with zod
-const productSchema = z.object({
-  title: z.string().min(3, "Title must be at least 3 characters");
-  description: z.string().min(10, "Description must be at least 10 characters");
-  price: z.string().refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
-    message: "Price must be a valid number"}),
-  category: z.string().min(1, "Please select a category");
->>>>>>> main
   image: z.instanceof(File).optional(),
   tags: z.string().optional()}),
 
 // Type for our form values
-<<<<<<< HEAD
 type ProductFormValues = z.infer<typeof productSchema>,
 
 export function ProductSubmissionForm() {
@@ -68,17 +41,6 @@ export function ProductSubmissionForm() {
   const [isSubmitting, setIsSubmitting] = React.useState(false),
   const [imagePreview, setImagePreview] = React.useState(null as string | null),
   const [activeTab, setActiveTab] = React.useState("manual"),
-=======
-type ProductFormValues = z.infer<typeof productSchema>;
-
-export function ProductSubmissionForm() {
-  const { user } = useAuth();
-  const { toast } = useToast();
-  const navigate = useNavigate();
-  const [isSubmitting, setIsSubmitting] = React.useState(false);
-  const [imagePreview, setImagePreview] = React.useState(null as string | null);
-  const [activeTab, setActiveTab] = React.useState("manual");
->>>>>>> main
   
   // Initialize the form
   const form = useForm<ProductFormValues>({
@@ -94,7 +56,6 @@ export function ProductSubmissionForm() {
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0],
     if (file) {
-<<<<<<< HEAD
       form.setValue("image", file),
       const reader = new FileReader(),
       reader.onloadend = () => {
@@ -116,29 +77,6 @@ export function ProductSubmissionForm() {
     // Switch to the manual tab to show applied content
     setActiveTab("manual")
   },
-=======
-      form.setValue("image", file);
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setImagePreview(reader.result as string)
-      };
-      reader.readAsDataURL(file)
-    }
-  };
-
-  // Apply AI-generated content to the form
-  const handleApplyGenerated = (content: any) => {
-    form.setValue("description", content.description);
-    form.setValue("tags", content.tags.join(", "));
-    
-    // Set a default price as the middle of the suggested range
-    const averagePrice = ((content.suggestedPrice.min + content.suggestedPrice.max) / 2).toFixed(2);
-    form.setValue("price", averagePrice);
-    
-    // Switch to the manual tab to show applied content
-    setActiveTab("manual")
-  };
->>>>>>> main
 
   // Handle form submission
   const onSubmit = async (values: ProductFormValues) => {
@@ -150,11 +88,7 @@ export function ProductSubmissionForm() {
       return
     }
 
-<<<<<<< HEAD
     setIsSubmitting(true),
-=======
-    setIsSubmitting(true);
->>>>>>> main
     
     try {
       // Create the product listing
@@ -164,11 +98,7 @@ export function ProductSubmissionForm() {
         price: parseFloat(values.price),
         category: values.category,
         currency: "USD", // Default currency
-<<<<<<< HEAD
         tags: values.tags ? values.tags.split(',').map(tag => tag.trim()) : [],
-=======
-        tags: values.tags ? values.tags.split(',').map(tag => tag.trim()) : [];
->>>>>>> main
         author: {
           name: user.displayName || "Anonymous Creator",
           id: user.id},
@@ -178,7 +108,6 @@ export function ProductSubmissionForm() {
         .from('product_listings')
         .insert([productData])
         .select('id')
-<<<<<<< HEAD
         .single(),
         
       if (productError) {
@@ -311,40 +240,6 @@ export function ProductSubmissionForm() {;
           .eq('id', productRecord.id),;
         if (updateError) {;
           throw new Error(updateError.message);
-=======
-        .single();
-        
-      if (productError) {
-        throw new Error(productError.message)
-      }
-
-      // If we have an image, upload it
-      if (values.image) {
-        const imagePath = `product_images/${productRecord.id}/${values.image.name}`;
-        const { error: uploadError } = await supabase.storage
-          .from('products')
-          .upload(imagePath, values.image);
-          
-        if (uploadError) {
-          throw new Error(uploadError.message)
-        }
-        
-        // Get the public URL for the image
-        const { data: publicUrlData } = supabase.storage
-          .from('products')
-          .getPublicUrl(imagePath);
-          
-        // Update the product with the image URL
-        const { error: updateError } = await supabase
-          .from('product_listings')
-          .update({ 
-            images: [publicUrlData.publicUrl]
-          })
-          .eq('id', productRecord.id);
-          
-        if (updateError) {
-          throw new Error(updateError.message)
->>>>>>> main
         }
       }
       
@@ -363,11 +258,7 @@ export function ProductSubmissionForm() {;
     } finally {
       setIsSubmitting(false)
     }
-<<<<<<< HEAD
   },
-=======
-  };
->>>>>>> main
 
   return (
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
@@ -398,7 +289,6 @@ export function ProductSubmissionForm() {;
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
-<<<<<<< HEAD
 ;
       // Show success message;
       toast({;
@@ -446,12 +336,6 @@ export function ProductSubmissionForm() {;
               )}
             />;
             <FormField;
-=======
-              )}
-            />
-
-            <FormField
->>>>>>> main
               control={form.control}
               name="description"
               render={({ field }) => (
@@ -488,14 +372,8 @@ export function ProductSubmissionForm() {;
                     <FormMessage />
                   </FormItem>
                 )}
-<<<<<<< HEAD
               />;
               <FormField;
-=======
-              />
-
-              <FormField
->>>>>>> main
                 control={form.control}
                 name="category"
                 render={({ field }) => (
@@ -518,16 +396,9 @@ export function ProductSubmissionForm() {;
                     <FormMessage />
                   </FormItem>
                 )}
-<<<<<<< HEAD
               />;
             </div>;
             <FormField;
-=======
-              />
-            </div>
-
-            <FormField
->>>>>>> main
               control={form.control}
               name="tags"
               render={({ field }) => (
@@ -542,14 +413,8 @@ export function ProductSubmissionForm() {;
                   <FormMessage />
                 </FormItem>
               )}
-<<<<<<< HEAD
             />;
             <FormField;
-=======
-            />
-
-            <FormField
->>>>>>> main
               control={form.control}
               name="image"
               render={() => (
@@ -579,11 +444,7 @@ export function ProductSubmissionForm() {;
                       </AspectRatio>
                     </div>
                   )}
-<<<<<<< HEAD
                 </FormItem>;
-=======
-                </FormItem>
->>>>>>> main
               )}
             />
 
@@ -607,15 +468,8 @@ export function ProductSubmissionForm() {;
             title: form.getValues("title"),
             category: form.getValues("category")
           }}
-<<<<<<< HEAD
         />;
       </TabsContent>;
     </Tabs>;
   );
-=======
-        />
-      </TabsContent>
-    </Tabs>
-  )
->>>>>>> main
 }

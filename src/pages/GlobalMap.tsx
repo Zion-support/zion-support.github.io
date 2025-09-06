@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react',;
 import { Header } from '@/components/Header',;
 import { NextSeo } from '@/components/NextSeo',;
@@ -86,87 +85,6 @@ export default function GlobalMapPage() {;
             {INSTANCES.map((i) => {
               const { x, y } = project(i.lat, i.lng),
               const color = i.governance === 'admin' ? 'bg-red-500' : i.governance === 'hybrid' ? 'bg-yellow-500' : 'bg-green-500',
-=======
-import React, { useEffect, useState } from 'react';
-import { Header } from '@/components/Header';
-import { NextSeo } from '@/components/NextSeo';
-import { Globe, MapPin } from 'lucide-react';
-
-interface Instance {
-  id: number;
-  name: string;
-  lat: number;
-  lng: number;
-  talent: number;
-  governance: 'admin' | 'hybrid' | 'vote';
-  votesPassed: number;
-  votesPending: number;
-  region: string;
-
-const INSTANCES: Instance[] = [
-  {
-    id: 1,
-    name: 'Zion LATAM',
-    lat: -15,
-    lng: -70,
-    talent: 120,
-    governance: 'hybrid',
-    votesPassed: 5,
-    votesPending: 1,
-    region: 'Latin America',
-  },
-  {
-    id: 2,
-    name: 'Zion Health',
-    lat: 37,
-    lng: -95,
-    talent: 200,
-    governance: 'admin',
-    votesPassed: 8,
-    votesPending: 2,
-    region: 'North America',
-  },
-  {
-    id: 3,
-    name: 'Zion Law',
-    lat: 51,
-    lng: 10,
-    talent: 150,
-    governance: 'vote',
-    votesPassed: 12,
-    votesPending: 3,
-    region: 'Europe',
-  },
-];
-
-interface FeedItem {
-  id: number;
-  text: string;
-
-export default function GlobalMapPage() {
-  const [feed, setFeed] = useState<FeedItem[]>([]);
-
-  useEffect((,) => {
-    const interval = setInterval((,) => {
-      const messages = [
-
-  const width = 800;
-  const height = 400;
-  function project(lat: number, lng: number) {
-    const x = ((lng + 180) / 360) * width;
-    const y = ((90 - lat) / 180) * height;
-    return { x, y };
-  }
-
-  return (
-    <div className='min-h-screen bg-background'>
-      <NextSeo
-        title='Global Zion Map'
-        description='Overview of Zion deployments'
-      />
-      <Header />
-
->>>>>>> main
               return (
                 <TooltipProvider key={i.id}>
                   <Tooltip>
@@ -175,21 +93,12 @@ export default function GlobalMapPage() {
                         className={`absolute ${color} rounded-full p-1`}
                         style={{ left: x, top: y }}
                       >
-<<<<<<< HEAD
                         <MapPin className="w-4 h-4 text-white" />
                       </div>
                     </TooltipTrigger>
                     <TooltipContent>
                       <div className="text-sm space-y-1">
                         <div className="font-semibold">{i.name}</div>
-=======
-                        <MapPin className='w-4 h-4 text-white' />
-                      </div>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                      <div className='text-sm space-y-1'>
-                        <div className='font-semibold'>{i.name}</div>
->>>>>>> main
                         <div>Talent: {i.talent}</div>
                         <div>Governance: {i.governance}</div>
                         <div>Passed Votes: {i.votesPassed}</div>
@@ -198,7 +107,6 @@ export default function GlobalMapPage() {
                     </TooltipContent>
                   </Tooltip>
                 </TooltipProvider>
-<<<<<<< HEAD
               )
             })}
           </div>
@@ -208,14 +116,6 @@ export default function GlobalMapPage() {
               <ul className="space-y-1">
                 {topRegions.map((r) => (
                   <li key={r.id} className="flex justify-between border-b pb-1">
-=======
-              );
-            })}
-          </div>
-          <div className='flex-1 space-y-6'>
-            <section>
-
->>>>>>> main
                     <span>{r.region}</span>
                     <span>{r.talent}</span>
                   </li>
@@ -223,7 +123,6 @@ export default function GlobalMapPage() {
               </ul>
             </section>
             <section>
-<<<<<<< HEAD
               <h2 className="text-xl font-semibold mb-2">Live Feed</h2>
               <ul className="space-y-1">
                 {feed.map((f) => (
@@ -238,14 +137,3 @@ export default function GlobalMapPage() {
   );
 }
 ;
-=======
-
-                ))}
-              </ul>
-            </section>
-          </div>
-        </div>
-      </main>
-    </div>
-  );
->>>>>>> main

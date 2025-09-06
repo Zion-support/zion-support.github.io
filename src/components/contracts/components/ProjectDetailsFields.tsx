@@ -1,7 +1,6 @@
 interface ProjectDetailsFieldsProps {
   form: UseFormReturn<ContractFormValues>;
 
-<<<<<<< HEAD
 import { format } from "date-fns",
 import { CalendarIcon } from 'lucide-react'
 import { UseFormReturn, ControllerRenderProps } from "react-hook-form",
@@ -49,22 +48,10 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
         control={form.control}
         name="projectName"
         render={({ field }: { field: ControllerRenderProps<ContractFormValues "projectName"> }) => (
-=======
-export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
-  return (
-    <>
-      <FormField
-
-        name="projectName"
-        render={({ field }: { field: ControllerRenderProps<ContractFormValues, "projectName"> },) => (
-        name="projectName"
-        render={({ field }: { field: ControllerRenderProps<ContractFormValues, "projectName"> }) => (
->>>>>>> main
           <FormItem>
             <FormLabel>Project Name</FormLabel>
             <FormControl>
               <Input placeholder="AI Website Development" {...field} />
-<<<<<<< HEAD
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -153,63 +140,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                         format(field.value, "PPP");
                       ) : (;
                         <span>Pick a date</span>;
-=======
-
-            </FormControl>
-
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-
-      <FormField
-        control={form.control}
-        name='scopeSummary'
-        render={({
-          field,
-        }: {
-          field: ControllerRenderProps<ContractFormValues, 'scopeSummary'>;
-        }) => (          <FormItem>
-            <FormLabel>Scope Summary</FormLabel>
-            <FormControl>
-              <Textarea
-                placeholder='Describe the project scope, deliverables, and expectations...'
-                className='min-h-[120px]'                {...field}
-
-              />
-            </FormControl>
-            <FormDescription>
-              Be specific about what is included and any limitations
-            </FormDescription>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-        <FormField
-          control={form.control}
-          name='startDate'
-          render={({
-            field,
-          }: {
-            field: ControllerRenderProps<ContractFormValues, 'startDate'>;
-          }) => (
-            <FormItem className='flex flex-col'>              <FormLabel>Start Date</FormLabel>
-
-              <FormLabel>Start Date</FormLabel>
-
-              <Popover>
-                <PopoverTrigger asChild>
-                  <FormControl>
-                    <Button
-
-                    >
-                      {field.value ? (
-                        format(field.value, 'PPP')
-                      ) : (
-                        <span>Pick a date</span>
->>>>>>> main
                       )}
                       <CalendarIcon className='ml-auto h-4 w-4 opacity-50' />
                     </Button>
@@ -226,7 +156,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
               <FormMessage />
             </FormItem>
           )}
-<<<<<<< HEAD
         />;
         <FormField;
           control={form.control}
@@ -234,27 +163,10 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
           render={({ field }: { field: ControllerRenderProps<ContractFormValues "endDate"> }) => (
             <FormItem className="flex flex-col">
               <FormLabel>End Date (Optional)</FormLabel>
-=======
-        />
-
-        <FormField
-          control={form.control}
-          name='endDate'
-          render={({
-            field,
-          }: {
-            field: ControllerRenderProps<ContractFormValues, 'endDate'>;
-          }) => (
-            <FormItem className='flex flex-col'>              <FormLabel>End Date (Optional)</FormLabel>
-
-              <FormLabel>End Date (Optional)</FormLabel>
-
->>>>>>> main
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
-<<<<<<< HEAD
                       variant={"outline"}
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
                     >
@@ -297,14 +209,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                         format(field.value, "PPP");
                       ) : (;
                         <span>Pick a date</span>;
-=======
-
-                    >
-                      {field.value ? (
-                        format(field.value, 'PPP')
-                      ) : (
-                        <span>Pick a date</span>
->>>>>>> main
                       )}
                       <CalendarIcon className='ml-auto h-4 w-4 opacity-50' />
                     </Button>
@@ -324,17 +228,9 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
               <FormMessage />
             </FormItem>
           )}
-<<<<<<< HEAD
         />;
       </div>;
     </>;
   );
 }
 ;
-=======
-        />
-      </div>
-    </>
-  );
-}
->>>>>>> main

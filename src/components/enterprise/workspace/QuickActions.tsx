@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -106,29 +105,6 @@ export function QuickActions() {;
             <Button;
               key={action.id}
               variant="outline";
-=======
-import React from 'react';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,;
-} from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { FileText, Plus, Search, Calendar } from 'lucide-react';
-export function QuickActions() {
-  const actions = [
-    {
-import React from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-
-export function QuickActions() {
-  const actions = [
-    {
-
->>>>>>> main
               className={`h-auto justify-start p-4 ${action.color}`}
             >
               <div className='flex flex-col items-start text-left'>
@@ -144,17 +120,9 @@ export function QuickActions() {
 
             </Button>
           ))}
-<<<<<<< HEAD
         </div>;
       </CardContent>;
     </Card>;
   );
 }
 ;
-=======
-        </div>
-      </CardContent>
-    </Card>
-  );
-}
->>>>>>> main

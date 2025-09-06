@@ -1,58 +1,32 @@
 
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Sparkles } from "lucide-react",
-=======
-import React, { useState } from "react";
-import {useToast} from "@/hooks/use-toast";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Textarea} from "@/components/ui/textarea";
-import {Sparkles} from "lucide-react";
->>>>>>> main
 interface AIListingFormProps {
   onSubmit: (formData: {
     title: string,
     category: string,
     keyFeatures: string,
     targetAudience: string
-<<<<<<< HEAD
   }) => void,
   isLoading: boolean,
   initialValues?: {
     title?: string,
     category?: string,
     keyFeatures?: string,
-=======
-  }) => void;
-  isLoading: boolean,
-  initialValues?: {
-    title?: string;
-    category?: string;
-    keyFeatures?: string;
->>>>>>> main
     targetAudience?: string
   }
 }
 
 export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {
-<<<<<<< HEAD
   const { toast } = useToast(),
   const [title, setTitle] = useState(initialValues.title || ""),
   const [category, setCategory] = useState(initialValues.category || ""),
   const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),
   const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),
-=======
-  const { toast } = useToast();
-  const [title, setTitle] = useState(initialValues.title || "");
-  const [category, setCategory] = useState(initialValues.category || "");
-  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || "");
-  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || "");
->>>>>>> main
 
   const handleSubmit = () => {
     if (!title || !category) {
@@ -60,30 +34,17 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
         title: "Missing required fields",
         description: "Please provide at least a title and category.",
         variant: "destructive"
-<<<<<<< HEAD
       }),
-=======
-      });
->>>>>>> main
       return
     }
 
     onSubmit({
-<<<<<<< HEAD
       title,
       category,
       keyFeatures,
       targetAudience
     })
   },
-=======
-      title;
-      category;
-      keyFeatures;
-      targetAudience
-    })
-  };
->>>>>>> main
 
   return (
     <div className="space-y-4">
@@ -128,7 +89,6 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
           onChange={(e) => setTargetAudience(e.target.value)}
           placeholder="e.g. Developers, Marketers, Startups"
           className="bg-zion-blue border border-zion-blue-light text-white"
-<<<<<<< HEAD
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -221,12 +181,6 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
         />;
       </div>;
       <Button;
-=======
-          disabled={isLoading}
-        />
-      </div>
-      <Button 
->>>>>>> main
         onClick={handleSubmit}
         disabled={isLoading || !title || !category}
         className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
@@ -239,15 +193,8 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
             Generate Optimized Content
           </>
         )}
-<<<<<<< HEAD
       </Button>;
     </div>;
   );
 }
 ;
-=======
-      </Button>
-    </div>
-  )
-}
->>>>>>> main

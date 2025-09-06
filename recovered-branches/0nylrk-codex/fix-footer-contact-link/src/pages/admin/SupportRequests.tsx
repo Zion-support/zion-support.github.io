@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
@@ -11,19 +10,6 @@ import { Badge } from "@/components/ui/badge",
 import { Search, Filter } from "lucide-react",
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
-=======
-import React, { useState } from "react";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Badge} from "@/components/ui/badge";
-import {Search, Filter} from "lucide-react";
-import {AppLayout} from "@/layout/AppLayout";
-import {SEO} from "@/components/SEO";
->>>>>>> main
 // Mock data for support requests
 const MOCK_SUPPORT_REQUESTS = [
   {
@@ -36,11 +22,7 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-15T14:30:00Z",
     lastUpdated: "2023-12-15T15:45:00Z",
     category: "authentication"
-<<<<<<< HEAD
   },
-=======
-  };
->>>>>>> main
   {
     id: "SR-1002",
     user: "sarah.smith@company.co",
@@ -51,11 +33,7 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-14T09:15:00Z",
     lastUpdated: "2023-12-15T13:20:00Z",
     category: "billing"
-<<<<<<< HEAD
   },
-=======
-  };
->>>>>>> main
   {
     id: "SR-1003",
     user: "tech.guru@startup.io",
@@ -66,11 +44,7 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-15T11:00:00Z",
     lastUpdated: "2023-12-15T11:00:00Z",
     category: "billing"
-<<<<<<< HEAD
   },
-=======
-  };
->>>>>>> main
   {
     id: "SR-1004",
     user: "developer@codelab.dev",
@@ -81,11 +55,7 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-13T16:45:00Z", 
     lastUpdated: "2023-12-13T16:45:00Z",
     category: "api"
-<<<<<<< HEAD
   },
-=======
-  };
->>>>>>> main
   {
     id: "SR-1005",
     user: "maria.rodriguez@design.co",
@@ -96,11 +66,7 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-12T10:30:00Z",
     lastUpdated: "2023-12-15T09:15:00Z",
     category: "disputes"
-<<<<<<< HEAD
   },
-=======
-  };
->>>>>>> main
   {
     id: "SR-1006",
     user: "alex.wong@datacompany.com",
@@ -111,11 +77,7 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-08T13:20:00Z",
     lastUpdated: "2023-12-15T08:30:00Z",
     category: "verification"
-<<<<<<< HEAD
   },
-=======
-  };
->>>>>>> main
   {
     id: "SR-1007",
     user: "jamie.taylor@tech.org",
@@ -126,7 +88,6 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-10T15:10:00Z",
     lastUpdated: "2023-12-13T11:25:00Z",
     category: "profile"
-<<<<<<< HEAD
   }
 ],
 
@@ -280,57 +241,6 @@ export default function SupportRequests() {;
     setPriorityFilter(null),
     setCategoryFilter(null)
   },
-=======
-  }
-];
-
-export default function SupportRequests() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [statusFilter, setStatusFilter] = useState<string | null>(null);
-  const [priorityFilter, setPriorityFilter] = useState<string | null>(null);
-  const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
-  
-  // Apply filters to the request data
-  const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
-    // Apply search query filter
-    if (searchQuery && 
-        !request.issue.toLowerCase().includes(searchQuery.toLowerCase()) &&
-        !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
-        !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
-      return false
-    }
-    
-    // Apply status filter
-    if (statusFilter && request.status !== statusFilter) {
-      return false
-    }
-    
-    // Apply priority filter
-    if (priorityFilter && request.priority !== priorityFilter) {
-      return false
-    }
-    
-    // Apply category filter
-    if (categoryFilter && request.category !== categoryFilter) {
-      return false
-    }
-    
-    return true
-  });
-  
-  // Count by status for the summary dashboard
-  const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length;
-  const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length;
-  const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
-  const totalCount = MOCK_SUPPORT_REQUESTS.length;
-  
-  const resetFilters = () => {
-    setSearchQuery("");
-    setStatusFilter(null);
-    setPriorityFilter(null);
-    setCategoryFilter(null)
-  };
->>>>>>> main
   
   return (
     <AppLayout>
@@ -356,7 +266,6 @@ export default function SupportRequests() {
           </div>
         </div>
         
-<<<<<<< HEAD
         {/* Status Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           <Card>
@@ -555,48 +464,6 @@ export default function SupportRequests() {
             <TabsTrigger value="need-response">Need Response</TabsTrigger>;
           </TabsList>;
           <TabsContent value="all" className="mt-6">;
-=======
-        {/* Status Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-          <Card>
-            <CardHeader className="pb-2">
-              <CardTitle className="text-2xl font-bold">{openCount}</CardTitle>
-              <CardDescription>Open Requests</CardDescription>
-            </CardHeader>
-          </Card>
-          
-          <Card>
-            <CardHeader className="pb-2">
-              <CardTitle className="text-2xl font-bold">{inProgressCount}</CardTitle>
-              <CardDescription>In Progress</CardDescription>
-            </CardHeader>
-          </Card>
-          
-          <Card>
-            <CardHeader className="pb-2">
-              <CardTitle className="text-2xl font-bold">{resolvedCount}</CardTitle>
-              <CardDescription>Resolved</CardDescription>
-            </CardHeader>
-          </Card>
-          
-          <Card>
-            <CardHeader className="pb-2">
-              <CardTitle className="text-2xl font-bold">{totalCount}</CardTitle>
-              <CardDescription>Total Requests</CardDescription>
-            </CardHeader>
-          </Card>
-        </div>
-        
-        <Tabs defaultValue="all" className="mb-8">
-          <TabsList>
-            <TabsTrigger value="all">All Requests</TabsTrigger>
-            <TabsTrigger value="escalated">Escalated</TabsTrigger>
-            <TabsTrigger value="ai-flagged">AI Flagged</TabsTrigger>
-            <TabsTrigger value="need-response">Need Response</TabsTrigger>
-          </TabsList>
-          
-          <TabsContent value="all" className="mt-6">
->>>>>>> main
             {/* Search and Filters */}
             <div className="flex flex-col md:flex-row gap-4 mb-6">
               <div className="relative flex-1">
@@ -605,7 +472,6 @@ export default function SupportRequests() {
                   placeholder="Search by ID, user or issue..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-<<<<<<< HEAD
                   className="pl-10";
                 />;
               </div>;
@@ -691,98 +557,6 @@ export default function SupportRequests() {
                               ? 'default';
                               : 'outline';
                           }>;
-=======
-                  className="pl-10"
-                />
-              </div>
-              
-              <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
-                <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Status" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="">All Statuses</SelectItem>
-                  <SelectItem value="open">Open</SelectItem>
-                  <SelectItem value="in-progress">In Progress</SelectItem>
-                  <SelectItem value="resolved">Resolved</SelectItem>
-                </SelectContent>
-              </Select>
-              
-              <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
-                <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Priority" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="">All Priorities</SelectItem>
-                  <SelectItem value="high">High</SelectItem>
-                  <SelectItem value="medium">Medium</SelectItem>
-                  <SelectItem value="low">Low</SelectItem>
-                </SelectContent>
-              </Select>
-              
-              <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
-                <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Category" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="">All Categories</SelectItem>
-                  <SelectItem value="authentication">Authentication</SelectItem>
-                  <SelectItem value="billing">Billing</SelectItem>
-                  <SelectItem value="api">API</SelectItem>
-                  <SelectItem value="disputes">Disputes</SelectItem>
-                  <SelectItem value="verification">Verification</SelectItem>
-                  <SelectItem value="profile">Profile</SelectItem>
-                </SelectContent>
-              </Select>
-              
-              <Button variant="outline" onClick={resetFilters} className="md:w-auto">
-                <Filter className="h-4 w-4 mr-2" /> Reset Filters
-              </Button>
-            </div>
-            
-            {/* Support Requests Table */}
-            <Card>
-              <CardContent className="p-0">
-                <Table>
-                  <TableHeader>
-                    <TableRow>
-                      <TableHead>ID</TableHead>
-                      <TableHead>User</TableHead>
-                      <TableHead>Issue</TableHead>
-                      <TableHead>Status</TableHead>
-                      <TableHead>Priority</TableHead>
-                      <TableHead>Category</TableHead>
-                      <TableHead>Created</TableHead>
-                      <TableHead>Last Updated</TableHead>
-                      <TableHead>Actions</TableHead>
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
-                    {filteredRequests.map((request) => (
-                      <TableRow key={request.id}>
-                        <TableCell className="font-medium">{request.id}</TableCell>
-                        <TableCell>{request.user}</TableCell>
-                        <TableCell className="max-w-xs truncate">{request.issue}</TableCell>
-                        <TableCell>
-                          <Badge variant={
-                            request.status === 'open' 
-                              ? 'default' 
-                              : request.status === 'in-progress' 
-                              ? 'secondary' 
-                              : 'outline'
-                          }>
-                            {request.status}
-                          </Badge>
-                        </TableCell>
-                        <TableCell>
-                          <Badge variant={
-                            request.priority === 'high' 
-                              ? 'destructive' 
-                              : request.priority === 'medium' 
-                              ? 'default' 
-                              : 'outline'
-                          }>
->>>>>>> main
                             {request.priority}
                           </Badge>
                         </TableCell>

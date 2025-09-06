@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useFavorites } from '@/hooks/useFavorites',;
 import { X } from 'lucide-react';
 import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData',;
@@ -123,6 +122,3 @@ export default function WishlistPage() {;
   );
 }
 ;
-=======
-}
->>>>>>> main

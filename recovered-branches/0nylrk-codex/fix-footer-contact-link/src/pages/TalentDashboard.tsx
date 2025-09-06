@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
@@ -21,29 +20,6 @@ import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingIntervie
 function TalentDashboardContent() {
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState("job-matches"),
-=======
-import {useState, useEffect} from "react";
-import {AppHeader} from "@/layout/AppHeader";
-import {Footer} from "@/components/Footer";
-import {Button} from "@/components/ui/button";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {Link} from "react-router-dom";
-import {SEO} from "@/components/SEO";
-import {BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, FileText, Inbox, Video} from "lucide-react";
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-import {SuggestedJobs} from "@/components/jobs/SuggestedJobs";
-import {useAuth} from "@/hooks/useAuth";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Avatar} from "@/components/ui/avatar";
-import {Badge} from "@/components/ui/badge";
-import {TalentOnboardingSteps} from "@/components/onboarding/TalentOnboardingSteps";
-import {MyApplications} from "@/components/jobs/MyApplications";
-import {ProjectOfferBanner} from "@/components/projects/ProjectOfferBanner";
-import {UpcomingInterviewsCard} from "@/components/interviews/UpcomingInterviewsCard";
-function TalentDashboardContent() {
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("job-matches");
->>>>>>> main
 
   return (
     <>
@@ -73,7 +49,6 @@ function TalentDashboardContent() {
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Project Offer Banner - Show pending offers */}
         <ProjectOfferBanner />
 
@@ -187,26 +162,9 @@ function TalentDashboardContent() {;
                         <img src={user.avatarUrl} alt={user.displayName || "User"} />;
                       ) : (;
                         <div className="flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase">;
-=======
-        {/* Project Offer Banner - Show pending offers */}
-        <ProjectOfferBanner />
-
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div>
-            <Card className="mb-8">
-              <CardHeader className="pb-2">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <Avatar className="h-12 w-12 border">
-                      {user?.avatarUrl ? (
-                        <img src={user.avatarUrl} alt={user.displayName || "User"} />
-                      ) : (
-                        <div className="flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase">
->>>>>>> main
                           {user?.displayName?.charAt(0) || "U"}
                         </div>
                       )}
-<<<<<<< HEAD
                     </Avatar>;
                     <div>;
                       <CardTitle>{user?.displayName || "User"}</CardTitle>;
@@ -242,46 +200,6 @@ function TalentDashboardContent() {;
             </Card>;
             {/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />;
-=======
-                    </Avatar>
-                    <div>
-                      <CardTitle>{user?.displayName || "User"}</CardTitle>
-                      <CardDescription>{user?.headline || "AI Professional"}</CardDescription>
-                    </div>
-                  </div>
-                  <Badge className="bg-green-100 text-green-800">Online</Badge>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-2 gap-4 mt-4">
-                  <div className="flex flex-col items-center p-3 bg-muted/30 rounded-md">
-                    <div className="flex items-center gap-1 text-lg font-bold">
-                      <Star className="h-4 w-4 text-yellow-500" />
-                      4.9
-                    </div>
-                    <span className="text-xs text-muted-foreground">Rating</span>
-                  </div>
-                  <div className="flex flex-col items-center p-3 bg-muted/30 rounded-md">
-                    <div className="text-lg font-bold">18</div>
-                    <span className="text-xs text-muted-foreground">Projects</span>
-                  </div>
-                </div>
-                
-                <div className="mt-4">
-                  <Button className="w-full" asChild>
-                    <Link to="/messages">
-                      <MessageSquare className="h-4 w-4 mr-2" />
-                      Messages
-                    </Link>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-            
-            {/* New Onboarding Progress Tracker */}
-            <TalentOnboardingSteps />
-            
->>>>>>> main
             {/* Upcoming Interviews Card */}
             <div className="mt-8">
               <UpcomingInterviewsCard />
@@ -359,7 +277,6 @@ function TalentDashboardContent() {;
       <Footer />
     </>
   )
-<<<<<<< HEAD
 }
 ;
 export default function TalentDashboard() {;
@@ -370,14 +287,3 @@ export default function TalentDashboard() {;
   );
 }
 ;
-=======
-}
-
-export default function TalentDashboard() {
-  return (
-    <ProtectedRoute>
-      <TalentDashboardContent />
-    </ProtectedRoute>
-  )
-}
->>>>>>> main

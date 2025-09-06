@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
@@ -53,64 +52,12 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
       setError(err.message || 'Failed to categorize skills');
     }
   },
-=======
-import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
-import { useResume } from '@/hooks/useResume';
-import { BulkAddSkillsProps } from './types';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Textarea } from '@/components/ui/textarea';
-
-  const handleCategorizeSkills = async () => {
-    if (!bulkSkills || bulkSkills.trim().length === 0) {
-      setError('Please enter some skills to categorize');
-      return
-    }
-
-    setError(null);
-    try {
-      const enhancedContent = await enhanceContent(
-        bulkSkills;
-        'skill-categorization'
-      );
-
-      if (enhancedContent) {
-        try {
-          // Parse the JSON response
-          const categorizedSkills = JSON.parse(enhancedContent);
-
-          // Add the categorized skills
-          for (const [category, skillsList] of Object.entries(categorizedSkills)) {
-            if (Array.isArray(skillsList)) {
-              for (const skillName of skillsList as string[]) {
-                await addSkill(resumeId, {
-                  name: skillName,
-                  category: category,
-                  proficiency: 3})
-              }
-            }
-          }
-
-          // Reset the form and bulk input
-          setBulkSkills('');
-
-          // Refresh the skills
-          await onSuccess()
-        } catch (err) {
-          setError('Failed to parse categorized skills. Please try again.')
-        }
-      }
-    } catch (err: any) {
-      setError(err.message || 'Failed to categorize skills')
-    }
-  };
->>>>>>> main
 
   return (
     <div className="bg-muted/40 p-6 rounded-lg">
       <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>
       <div className="space-y-4">
         <div className="space-y-2">
-<<<<<<< HEAD
           <label className="text-sm font-medium">Enter multiple skills (comma separated)</label>
           <Textarea 
             className="min-h-24"
@@ -122,20 +69,6 @@ import { Textarea } from '@/components/ui/textarea';
         <Button;
           onClick={handleCategorizeSkills}
           disabled={isEnhancing || !bulkSkills.trim()}
-=======
-          <label className="text-sm font-medium" htmlFor="input-Enter multiple skills (comma separated)">Enter multiple skills (comma separated)</label>
-          <Textarea 
-            className="min-h-24"
-            placeholder="Python, React, TypeScript, Project Management, Communication..."
-            value = {bulkSkills,}
-            onChange = {(e,) => setBulkSkills(e.target.value),}
-          />
-        </div>
-
-        <Button 
-          onClick = {handleCategorizeSkills,}
-          disabled = {isEnhancing || !bulkSkills.trim(),}
->>>>>>> main
           className="gap-2"
         >
           {isEnhancing ? (
@@ -145,26 +78,13 @@ import { Textarea } from '@/components/ui/textarea';
           )}
           Categorize with AI
         </Button>
-<<<<<<< HEAD
         
         <p className="text-xs text-muted-foreground mt-1">
           AI will identify skills and categorize them automatically. This may take a moment to process.
         </p>
         
-=======
-
-        <p className="text-xs text-muted-foreground mt-1">
-          AI will identify skills and categorize them automatically. This may take a moment to process.
-        </p>
-
->>>>>>> main
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
       </div>
     </div>
   )
-<<<<<<< HEAD
 },
-=======
-};
-'"
->>>>>>> main
